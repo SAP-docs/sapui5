@@ -14,7 +14,7 @@ For contributions, it's required that you have a GitHub account. For more inform
 We recommend using the SAPUI5 documentation in the SAPUI5 Demo Kit as a starting point for contributions:
 
 1. Open the [SAPUI5 Documentation](https://ui5.sap.com/#/topic).
-1. Choose *Edit* to suggest a change for the current page you see in the SAPUI5 Demo Kit.
+1. Choose *Edit on GitHub* to suggest a change for the current page you see in the SAPUI5 Demo Kit.
 
 If you only make a small contribution, that's the quickest way to propose a change. For larger contributions, we recommend forking this repository to work locally. The filenames in the [docs](docs) directory are created based on the title of the page in the SAPUI5 Demo Kit.
 
