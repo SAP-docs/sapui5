@@ -1,0 +1,72 @@
+name: Disallowed content checker
+
+# What the execution context is:
+# A pull request on the main branch. Only relevant for users who
+# don't have admin access on the repository.
+
+# What it does:
+# Checks to see if there are any files included in the pull request
+# that we cannot accept. Only files in the docs/ directory are open
+# to contribution.
+
+# Why we need it:
+# So the repository remains stable and we can focus on documentation
+# contributions.
+
+# What's important to know:
+# The filter used in the check_files_changed step is a negated one,
+# i.e. notice the use of the '!'. Read the filter like this: "The
+# disallowed files are any that DON'T match docs/**". 
+
+on:
+  pull_request_target:
+    branches: [main]
+
+jobs:
+  main:
+    runs-on: ubuntu-20.04
+    steps:
+
+      - id: token_gen
+        name: Generate app installation token
+        uses: machine-learning-apps/actions-app-token@0.21
+        with:
+          APP_PEM: ${{ secrets.SAP_CODOC_APP_PEM_BASE64 }}
+          APP_ID: ${{ secrets.SAP_CODOC_APP_ID }}
+
+      - id: checkout
+        name: Check out the repo
+        uses: actions/checkout@v2
+        with:
+          token: ${{ steps.token_gen.outputs.app_token }}
+
+      - id: auth_gh
+        name: Authenticate gh to repo
+        run: echo -n ${{ steps.token_gen.outputs.app_token }} | gh auth login --with-token
+
+      - id: determine_permission
+        name: Look up actor's repository permission level
+        run: |
+          permission="$(gh api --jq .permission "/repos/$GITHUB_REPOSITORY/collaborators/$GITHUB_ACTOR/permission")"
+          echo "repo_permission=$permission" >> $GITHUB_ENV
+
+      - id: check_files_changed
+        name: Checks if disallowed content has been changed
+        if: env.repo_permission != 'admin'
+        uses: dorny/paths-filter@v2
+        with:
+          list-files: 'shell'
+          filters: |
+            disallowed:
+              - '!docs/**'
+
+      - id: comment_on_disallowed
+        if: steps.check_files_changed.outputs.disallowed == 'true'
+        env:
+          DOCS_LOC: "/${{ github.repository }}/tree/${{ github.base_ref }}/docs"
+          REVERT_COMMAND: '`git checkout origin/main <filename>`'
+          DISALLOWED_FILES: ${{ steps.check_files_changed.outputs.disallowed_files }}
+        run: |
+          printf "🚨 Hi there. It looks like you've included some files in this pull request that we can't accept in a contribution. Only actual documentation content, which is managed in the [docs]($DOCS_LOC) directory, is open for contribution.\n\nThe disallowed files that you submitted are:\n\n$DISALLOWED_FILES.\n\nYou'll need to revert all of the files you changed in that list using [GitHub Desktop](https://docs.github.com/en/free-pro-team@latest/desktop/contributing-and-collaborating-using-github-desktop/reverting-a-commit) or $REVERT_COMMAND. Once you get those files reverted, we can continue with the review process." \
+          | gh pr comment ${{ github.event.pull_request.number }} --body-file -
+          exit 1
