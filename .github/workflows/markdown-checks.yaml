@@ -1,0 +1,60 @@
+name: Markdown linter
+
+# What the execution context is:
+# The creation of a pull request. Can also be triggered manually.
+
+# What it does:
+# Performs Markdown linting on the content of the pull request.
+
+# Why we need it:
+# To maintain a level of consistency in the markup content.
+
+# What's important to know:
+# As well as the rules defined in the configuration, a custom
+# rule is also employed to check title case.
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches: [main]
+    paths: 'docs/**'
+
+jobs:
+  main:
+    if: contains(github.repositoryUrl, 'github.com')
+    runs-on: ubuntu-20.04
+    steps:
+
+    - id: checkout_repo
+      name: Check out the repository content
+      uses: actions/checkout@v2
+
+    - id: check_files_changed
+      uses: dorny/paths-filter@v2
+      with:
+        list-files: 'escape'
+        filters: |
+          changed:
+            - 'docs/**'
+
+    - id: add_matcher
+      name: Add the matcher for markdownlint style message output
+      run: "echo ::add-matcher::.github/workflows/markdownlint/problem-matcher.json"
+
+    - id: install_linter
+      name: Install linting tool, custom rule and rule helpers
+      run: |
+        npm install \
+          --no-package-lock \
+          --no-save \
+          markdownlint-cli markdownlint-rule-titlecase markdownlint-rule-helpers
+
+    - id: run_linter
+      if: steps.check_files_changed.outputs.changed_files
+      name: Run linter with specific rules, on the docs/ content
+      run: |
+        npx markdownlint \
+          --config .github/workflows/markdownlint/config.yaml \
+          --rules .github/workflows/markdownlint/md901 \
+          --rules markdownlint-rule-titlecase \
+          ${{ steps.check_files_changed.outputs.changed_files }}

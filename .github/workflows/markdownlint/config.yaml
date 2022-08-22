@@ -1,0 +1,10 @@
+# All rules are inactive by default.
+default: false
+
+# These specific rules are active.
+# See https://github.com/DavidAnson/markdownlint#rules--aliases for details.
+no-reversed-links: true
+no-missing-space-atx: true
+no-multiple-space-atx: true
+titlecase-rule: true
+heading-increment-no-blockquote: true
