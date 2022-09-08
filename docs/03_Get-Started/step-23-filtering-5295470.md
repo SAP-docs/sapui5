@@ -1,0 +1,122 @@
+<!-- loio5295470d7eee46c1898ee46c1b9ad763 -->
+
+# Step 23: Filtering
+
+In this step, we add a search field for our product list and define a filter that represents the search term. When searching, the list is automatically updated to show only the items that match the search term.
+
+
+
+## Preview
+
+   
+  
+<a name="loio5295470d7eee46c1898ee46c1b9ad763__fig_r1j_pst_mr"/>A search field is displayed above the list
+
+ ![](images/SAPUI5_Walkthrough_Step_24_b59b3ed.png "A search field is displayed above the list") 
+
+
+
+<a name="loio5295470d7eee46c1898ee46c1b9ad763__section_qx5_wch_ycb"/>
+
+## Coding
+
+You can view and download all files at [Walkthrough - Step 23](https://ui5.sap.com/#/entity/sap.m.tutorial.walkthrough/sample/sap.m.tutorial.walkthrough.23).
+
+
+
+<a name="loio5295470d7eee46c1898ee46c1b9ad763__section_rx5_wch_ycb"/>
+
+## webapp/view/InvoiceList.view.xml
+
+```xml
+<mvc:View
+   controllerName="sap.ui.demo.walkthrough.controller.InvoiceList"
+   xmlns="sap.m"
+   xmlns:mvc="sap.ui.core.mvc">
+   <List
+      id="invoiceList"
+      class="sapUiResponsiveMargin"
+      width="auto"
+      items="{invoice>/Invoices}" >
+      <headerToolbar>
+         <Toolbar>
+            <Title text="{i18n>invoiceListTitle}"/>
+            <ToolbarSpacer/>
+            <SearchField width="50%" search=".onFilterInvoices"/>
+         </Toolbar>
+      </headerToolbar>
+      <items>
+         <ObjectListItem>
+		…
+         </ObjectListItem/>
+      </items>
+   </List>
+</mvc:View>
+```
+
+The view is extended by a search control that we add to the list of invoices. We also need to specify an ID `invoiceList` for the list control to be able to identify the list from the event handler function `onFilterInvoices` that we add to the search field. In addition, the search field is part of the list header and therefore, each change on the list binding will trigger a rerendering of the whole list, including the search field.
+
+The `headerToolbar` aggregation replaces the simple `title` property that we used before for our list header. A toolbar control is way more flexible and can be adjusted as you like. We are now displaying the title on the left side with a `sap.m.Title` control, a spacer, and the `sap.m.SearchField` on the right.
+
+
+
+## webapp/controller/InvoiceList.controller.js
+
+```js
+sap.ui.define([
+	"sap/ui/core/mvc/Controller",
+	"sap/ui/model/json/JSONModel",
+	"../model/formatter",
+	"sap/ui/model/Filter",
+	"sap/ui/model/FilterOperator"
+], function (Controller, JSONModel, formatter, Filter, FilterOperator) {
+	"use strict";
+	return Controller.extend("sap.ui.demo.walkthrough.controller.InvoiceList", {
+		formatter: formatter, 
+		onInit : function () {
+			var oViewModel = new JSONModel({
+				currency: "EUR"
+			});
+			this.getView().setModel(oViewModel, "view");
+		},
+		onFilterInvoices : function (oEvent) {
+
+			// build filter array
+			var aFilter = [];
+			var sQuery = oEvent.getParameter("query");
+			if (sQuery) {
+				aFilter.push(new Filter("ProductName", FilterOperator.Contains, sQuery));
+			}
+
+			// filter binding
+			var oList = this.byId("invoiceList");
+			var oBinding = oList.getBinding("items");
+			oBinding.filter(aFilter);
+		}
+	});
+});
+```
+
+We load two new dependencies for the filtering. The filter object will hold our configuration for the filter action and the `FilterOperator` is a helper type that we need in order to specify the filter.
+
+In the `onFilterInvoices` function we construct a filter object from the search string that the user has typed in the search field. Event handlers always receive an event argument that can be used to access the parameters that the event provides. In our case the search field defines a parameter `query` that we access by calling `getParameter(“query”)` on the `oEvent` parameter.
+
+If the query is not empty, we add a new filter object to the still empty array of filters. However, if the query is empty, we filter the binding with an empty array. This makes sure that we see all list elements again. We could also add more filters to the array, if we wanted to search more than one data field. In our example, we just search in the `ProductName` path and specify a filter operator that will search for the given query string.
+
+The list is accessed with the ID that we have specified in the view, because the control is automatically prefixed by the view ID, we need to ask the view for the control with the helper function `byId`. On the list control we access the binding of the aggregation `items` to filter it with our newly constructed filter object. This will automatically filter the list by our search string so that only the matching items are shown when the search is triggered. The filter operator `FilterOperator.Contains` is **not** case-sensitive.
+
+**Parent topic:** [Walkthrough](walkthrough-3da5f4b.md "In this tutorial we will introduce you to all major development paradigms of SAPUI5.")
+
+**Next:** [Step 22: Custom Formatters](step-22-custom-formatters-0f8626e.md "If we want to do a more complex logic for formatting properties of our data model, we can also write a custom formatting function. We will now add a localized status with a custom formatter, because the status in our data model is in a rather technical format.")
+
+**Previous:** [Step 24: Sorting and Grouping](step-24-sorting-and-grouping-c4b2a32.md "To make our list of invoices even more user-friendly, we sort it alphabetically instead of just showing the order from the data model. Additionally, we introduce groups and add the company that ships the products so that the data is easier to consume.")
+
+**Related Information**  
+
+
+[API Reference: `sap.ui.model.Filter`](https://ui5.sap.com/#/api/sap.ui.model.Filter)
+
+[API Reference: `sap.ui.model.FilterOperator`](https://ui5.sap.com/#/api/sap.ui.model.FilterOperator)
+
+[API Reference: `sap.m.SearchField`](https://ui5.sap.com/#/api/sap.m.SearchField)
+
