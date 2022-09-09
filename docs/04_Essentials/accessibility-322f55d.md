@@ -28,7 +28,7 @@ Accessibility refers to the possibility for everyone, including and especially p
 
 Accessibility is incorporated at two levels: framework and application level. Many features are available on the framework level and provided to app developers out of the box, which ensures consistency across all products. Some features need to be added or adapted according to the app-specific context and need to be considered when developing your app.
 
-Depending on your use case please refer to the corresponding accessibility chapter in the Developing Controls or Developing Apps sections in DemoKit.
+Depending on your use case please refer to the corresponding accessibility chapter in the Developing Controls or Developing Apps sections in Demo Kit.
 
 
 
