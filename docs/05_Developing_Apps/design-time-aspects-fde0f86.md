@@ -30,14 +30,3 @@ The SAPUI5 ABAP repository supports typical code pages for transferring of text 
 
 -   [Using an OData Service to Load Data to the SAPUI5 ABAP Repository](using-an-odata-service-to-load-data-to-the-sapui5-abap-repository-a883327.md)
 
--   **[View and Change Content of the SAPUI5 ABAP Repository](view-and-change-content-of-the-sapui5-abap-repository-41a2fde.md "You can create and change customer content in the SAPUI5 ABAP repository. You can also
-		retrieve content from the SAPUI5
-		ABAP repository to view it.")**  
-You can create and change customer content in the SAPUI5 ABAP repository. You can also retrieve content from the SAPUI5 ABAP repository to view it.
--   **[Virus Scan During Uploads to the SAPUI5 ABAP Repository](virus-scan-during-uploads-to-the-sapui5-abap-repository-b858d79.md "From SAP NetWeaver 7.0, SAP delivers the virus scan profile
-			/UI5/UI5_INFRA_APP/REP_DT_PUT for ABAP with the user interface add-on
-		for SAP NetWeaver. This virus scan profile is used to store files in the SAPUI5 ABAP repository.")**  
-From SAP NetWeaver 7.0, SAP delivers the virus scan profile `/UI5/UI5_INFRA_APP/REP_DT_PUT` for ABAP with the user interface add-on for SAP NetWeaver. This virus scan profile is used to store files in the SAPUI5 ABAP repository.
--   **[Perform Static Checks on SAPUI5 Apps](perform-static-checks-on-sapui5-apps-77b2d31.md "As of SAP Fiori technology release 1911, you can perform static checks on SAPUI5 apps that you have created.")**  
-As of SAP Fiori technology release 1911, you can perform static checks on SAPUI5 apps that you have created.
-

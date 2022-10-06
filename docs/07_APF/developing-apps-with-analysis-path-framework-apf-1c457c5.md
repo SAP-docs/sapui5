@@ -73,31 +73,6 @@ If you need more technical background information, see the following sections:
 
 ![](images/Image_Map_APF_Background_Information_c8a2f56.png)
 
--   **[Analytical Applications Based on APF](analytical-applications-based-on-apf-46467c5.md)**  
-
--   **[Setting Up APF and the APF Configuration Modeler](setting-up-apf-and-the-apf-configuration-modeler-d7b8e9e.md "")**  
-
--   **[Authorization Concept](authorization-concept-0a9e1a9.md "")**  
-
--   **[Enhancing an APF-Based Application](enhancing-an-apf-based-application-b247999.md "")**  
-
--   **[Creating Your Own Application](creating-your-own-application-efbc995.md "")**  
-
--   **[APF Configuration Modeler](apf-configuration-modeler-b57224b.md "")**  
-
--   **[Launching APF-Based Applications](launching-apf-based-applications-32a479d.md "")**  
-
--   **[Data Protection and Privacy](data-protection-and-privacy-36f3943.md "")**  
-
--   **[APF Modules](apf-modules-4b467c5.md)**  
-
--   **[Concepts](concepts-50467c5.md)**  
-
--   **[Configuration Files and Their Structure](configuration-files-and-their-structure-56467c5.md)**  
-
--   **[API Reference](api-reference-10bf855.md)**  
-
-
 **Related Information**  
 
 

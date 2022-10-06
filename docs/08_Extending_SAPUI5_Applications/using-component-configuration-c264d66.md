@@ -4,7 +4,7 @@
 
 SAPUI5 supports the extension of a base controller by merging the delivered standard controller with a custom controller on JavaScript object level.
 
-SAPUI5 supports two different extension variants. The latest and recommended variant is called [Controller Extension](../04_Essentials/using-controller-extension-21515f0.md). The old variant, called **Component Configuration** is described in the following section / subsections.
+SAPUI5 supports two different extension variants. The latest and recommended variant is called [Controller Extension](../04_Essentials/using-controller-extension-21515f0.md). The old variant called **Component Configuration** is described on the following pages.
 
 The SAPUI5 Component Configuration concept does not support hierarchical inheritance of methods within a chain of controllers. Instead, methods of the custom controller override any methods of the standard controller with the same name. The following controller lifecycle methods are, however, an exception to this rule: `onInit`, `onExit`, `onBeforeRendering`, `onAfterRendering`. For these methods, the controller methods of your custom application are called either after \(for `onInit` and `onAfterRendering`\), or before \(for `onExit` and `onBeforeRendering`\) the standard lifecycle methods.
 
@@ -78,23 +78,4 @@ The `doSomething` method of the new controller overwrites the `doSomething` meth
 The `doSomeStandardAction` method remains available without changes, as no method with the same name exists in the new controller.
 
 The `doSomeCustomAction` method is additionally available and you can use it, for example, in a view extension.
-
--   **[Example: Component Configuration](example-component-configuration-08608ef.md "The component configuration contains the information about the extension metadata and
-        the objects that are replaced or extended in the custom view or control.")**  
-The component configuration contains the information about the extension metadata and the objects that are replaced or extended in the custom view or control.
--   **[Providing Hooks in the Standard Controller](providing-hooks-in-the-standard-controller-8fbf4e7.md "Hooks are extension points in the controller code that are used to make controller
-		extensions more stable.")**  
-Hooks are extension points in the controller code that are used to make controller extensions more stable.
--   **[View Extension](view-extension-403c050.md "SAPUI5 uses extension
-        points for extending standard views with custom content. The assignment of a custom view to
-        an extension point is done in component customizing.")**  
-SAPUI5 uses extension points for extending standard views with custom content. The assignment of a custom view to an extension point is done in component customizing.
--   **[View Modification](view-modification-aa93e1c.md "For modifying views, control properties of standard views can be changed.")**  
-For modifying views, control properties of standard views can be changed.
--   **[View Replacement](view-replacement-98861cf.md "Views of a delivered standard application can be replaced to adapt the application to
-		the customer needs.")**  
-Views of a delivered standard application can be replaced to adapt the application to the customer needs.
--   **[Controller Replacement](controller-replacement-b0b14bf.md "Standard controller can be replaced by specifying a new controller name in a replacement
-		View and implementing this Controller.")**  
-Standard controller can be replaced by specifying a new controller name in a replacement View and implementing this Controller.
 

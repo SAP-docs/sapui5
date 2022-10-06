@@ -378,12 +378,6 @@ This JSON file defines the possible value of the `CurrencyCode`, the same values
 
 We have only listed a part of the `Products.json` entries since the actual values are not so relevant. Please note that for your convenience we have included additional properties in this file to make it easier to experiment with changes to the `metadata.xml`, and possibly of the `view.xml`, to allow for a more hands-on experience.
 
-**Parent topic:** [Smart Controls](smart-controls-64bde9a.md "In this tutorial you learn how to work with smart controls.")
-
-**Next:** [Step 4: Smart Form](step-4-smart-form-f712d30.md "The SmartForm control is used to obtain a form-like layout for several controls.")
-
-**Previous:** [Step 6: Table Personalization](step-6-table-personalization-1953149.md "Table personalization offers you a dedicated dialog to specify which columns in the table are visible and in which order, how the data is sorted, whether grouping of the data is active, and whether table entries are filtered.")
-
 **Related Information**  
 
 

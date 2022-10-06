@@ -30,7 +30,3 @@ For more information, check the following sections of the tutorials overview pag
 -   [Adapting Code to Your Development Environment](get-started-setup-tutorials-and-demo-apps-8b49fc1.md#loio8b49fc198bf04b2d9800fc37fecbb218__tutorials_adaptation)
 
 
-**Parent topic:** [Ice Cream Machine](ice-cream-machine-e5b7f8a.md "In this tutorial, we will show you how to use SAPUI5 controls like Generic Tiles, Micro Charts, and Process Flow.")
-
-**Previous:** [Step 2: KPI Tile and Chart Tile on the Start Page](step-2-kpi-tile-and-chart-tile-on-the-start-page-3981331.md "In this step, we will create our start page with the KPI Tile (GenericTile with NumericContent) and Chart Tile (GenericTile with MicroChart).")
-

@@ -165,19 +165,3 @@ Quick view cards display detailed information about a single record, in greater 
 </tr>
 </table>
 
--   **[Table Cards](table-cards-167bf7c.md "A table card displays a list of records in a 3-column table layout.")**  
-A table card displays a list of records in a 3-column table layout.
--   **[List Cards](list-cards-56f39e0.md "List cards display lists of records according to the configuration in the
-			com.sap.vocabularies.UI.v1.LineItem term. List cards display up to six
-		fields of data in each list item.  ")**  
-List cards display lists of records according to the configuration in the `com.sap.vocabularies.UI.v1.LineItem` term. List cards display up to six fields of data in each list item.
--   **[Link List Cards](link-list-cards-0326f91.md "Allows you to view a list of links with title, picture, icon, or subtitle.")**  
-Allows you to view a list of links with title, picture, icon, or subtitle.
--   **[Stack Cards](stack-cards-756c49c.md "Stack cards aggregate a set of cards of the same type, which are based on a common topic
-        or action. When clicked, up to 20 stacked cards can be displayed in the object
-        stream.")**  
-Stack cards aggregate a set of cards of the same type, which are based on a common topic or action. When clicked, up to 20 stacked cards can be displayed in the object stream.
--   **[Analytical Cards](analytical-cards-d7b0b42.md "Analytical cards let you view data in a variety of chart formats. The card is divided
-		into two areas (header and chart).")**  
-Analytical cards let you view data in a variety of chart formats. The card is divided into two areas \(header and chart\).
-

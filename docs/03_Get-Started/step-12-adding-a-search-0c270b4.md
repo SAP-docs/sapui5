@@ -104,12 +104,6 @@ sap.ui.define([
 
 To enable filtering, we extend the controller with a method that applies the search term entered in the search field to the list binding, similarly as we did for `InvoiceList.controller.js` in step 24 of the Walkthrough tutorial.
 
-**Parent topic:** [Testing](testing-291c912.md "In this tutorial we will test application functionality with the testing tools that are delivered with SAPUI5. At different steps of this tutorial you will write tests using QUnit, OPA5, and the OData V2 mock server. Additionally, you will learn about testing strategies, Test Driven Development (TDD), and much more.")
-
-**Next:** [Step 11: Testing User Input](step-11-testing-user-input-92959b1.md "In this step, we will write a test that simulates a user search. We will enter the search string into the search field and check if the correct results are shown in worklist table.")
-
-**Previous:** [Step 13: Testing User Interaction](step-13-testing-user-interaction-19ccd47.md "In this step we want to write a test that simulates user interaction with an icon tab bar. We want to change the tab and check if the correct content is shown.")
-
 **Related Information**  
 
 

@@ -281,9 +281,3 @@ Now, when running the application, the decision table will be rendered filled wi
 > });
 > ```
 
-**Parent topic:** [Decision Table](decision-table-c0184a0.md "Create a business logic by defining the conditions in decision table, which is associated with the expression language.")
-
-**Next:** [Step 1: Creating an Initial Rule Control](step-1-creating-an-initial-rule-control-e58a936.md "")
-
-**Previous:** [Step 3: Changing the Decision Table Configuration](step-3-changing-the-decision-table-configuration-4394320.md "")
-

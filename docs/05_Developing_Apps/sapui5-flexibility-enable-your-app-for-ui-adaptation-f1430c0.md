@@ -136,11 +136,6 @@ You can also check out our [Enabling UI Adaptation: Other Things to Consider](en
 
 For more information about how key user adaptation works for key users and how it gets enabled in the SAP Fiori launchpad, search for ***Adapting SAP Fiori UIs at Runtime*** and ***Enabling UI Adaptation at Runtime*** in the documentation for your [SAP NetWeaver](https://help.sap.com/viewer/p/SAP_NETWEAVER) version on the SAP Help Portal.
 
--   **[Enabling UI Adaptation: Other Things to Consider](enabling-ui-adaptation-other-things-to-consider-de9fd55.md "Find out how you can enable UI adaptation exactly how you need it.")**  
-Find out how you can enable UI adaptation exactly how you need it.
--   **[Troubleshooting](troubleshooting-3527428.md "Click the sections below, to find tips and solutions to some common problems.")**  
-Click the sections below, to find tips and solutions to some common problems.
-
 **Related Information**  
 
 

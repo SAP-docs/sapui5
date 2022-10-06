@@ -54,15 +54,3 @@ If SAPUI5 is configured for RTL mode, the SAPUI5 core performs the following ste
 
 
 
--   **[Right-to-Left Support Guidelines for Control Development](right-to-left-support-guidelines-for-control-development-c69c61d.md "SAPUI5 developers have to
-		consider the text directionality when implementing new controls. The following guidelines
-		explain how this can be done and highlight what you need to focus on. ")**  
-SAPUI5 developers have to consider the text directionality when implementing new controls. The following guidelines explain how this can be done and highlight what you need to focus on.
--   **[Programmatic Access to RTL](programmatic-access-to-rtl-8bb4723.md "")**  
-
--   **[Troubleshooting Common RTL Issues](troubleshooting-common-rtl-issues-5007967.md "The following table outlines some common issues that occur when implementing
-		right-to-left (RTL) support for SAPUI5
-		controls and
-		their solutions. ")**  
-The following table outlines some common issues that occur when implementing right-to-left \(RTL\) support for SAPUI5 controls and their solutions.
-

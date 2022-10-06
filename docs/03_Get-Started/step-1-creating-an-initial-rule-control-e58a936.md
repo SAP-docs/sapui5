@@ -45,9 +45,3 @@ The above code will place and render the `RuleBuilder` control in the view witho
 
 Now we need to connect the `ExpressionLanguage` object association to the `RuleBuilder`, which we do in the next step, and then the control loads its data via the OData model.
 
-**Parent topic:** [Decision Table](decision-table-c0184a0.md "Create a business logic by defining the conditions in decision table, which is associated with the expression language.")
-
-**Next:** [Features](features-f97c50c.md "")
-
-**Previous:** [Step 2: Associating the Expression Language for Decision Tables](step-2-associating-the-expression-language-for-decision-tables-33ef2b0.md "")
-

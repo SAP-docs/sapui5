@@ -154,9 +154,3 @@ sap.ui.define([
 
 The initial reviews data is pulled from the model data in the */model/data/Reviews.json* file that is included in the download materials for this tutorial.
 
-**Parent topic:** [Ice Cream Machine](ice-cream-machine-e5b7f8a.md "In this tutorial, we will show you how to use SAPUI5 controls like Generic Tiles, Micro Charts, and Process Flow.")
-
-**Next:** [Step 11: Process Flow](step-11-process-flow-452ff8c.md "In this step, we will create the ProcessFlow on the Production Process page.")
-
-**Previous:** [Step 13: Optimizing the Process Flow Layout](step-13-optimizing-the-process-flow-layout-b6ed1f8.md "In the last step, we will optimize the ProcessFlow layout.")
-

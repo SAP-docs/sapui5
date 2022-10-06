@@ -125,12 +125,6 @@ The binding of the value attribute is a simple binding example that contains onl
 -   Use Hungarian notation for variable names.
 
 
-**Parent topic:** [Walkthrough](walkthrough-3da5f4b.md "In this tutorial we will introduce you to all major development paradigms of SAPUI5.")
-
-**Next:** [Step 6: Modules](step-6-modules-f665d0d.md "In SAPUI5, resources are often referred to as modules. In this step, we replace the alert from the last exercise with a proper Message Toast from the sap.m library. The required modules are enabled to be loaded asynchronously.")
-
-**Previous:** [Step 8: Translatable Texts](step-8-translatable-texts-df86bfb.md "In this step we move the texts of our UI to a separate resource file.")
-
 **Related Information**  
 
 

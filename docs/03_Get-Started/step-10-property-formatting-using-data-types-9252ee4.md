@@ -153,12 +153,6 @@ salesAmount=Verk\u00e4ufe bis zum heutigen Datum
 
 Add the missing texts to the `properties` files. Please note that special characters \(non-Latin-1\) have to be entered by using Unicode escape characters.
 
-**Parent topic:** [Data Binding](data-binding-e531093.md "In this tutorial, we will explain the concepts of data binding in SAPUI5.")
-
-**Next:** [Step 9: Formatting Values](step-9-formatting-values-6fdf0ac.md "We also want to provide our users a way of contacting Harry Hawk. Therefore we will add a link that sends an e-mail to Harry. To achieve that we will convert our data in the model to match the sap.m.URLHelper.normalizeEmail API. As soon as the user changes the name, the e-mail will also change. We will need a custom formatter function for this.")
-
-**Previous:** [Step 11: Validation Using the Message Manager](step-11-validation-using-the-message-manager-b8c4e53.md "So far, we have created a currency field that can format itself correctly. The currency data type also has the ability to validate that user input adheres to to the requirements of a currency; however, data type validation functions are managed by SAPUI5, which of itself has no mechanism for reporting error messages back to the UI; therefore, we need a mechanism for reporting error messages raised by validation functions back to the user. In this step, we will connect the entire view to a feature known as the &quot;Message Manager&quot;. Once this connection is established, any validation error messages generated based on the user input will be passed to the message manager which in turn will connect them to the appropriate view and control that caused the error.")
-
 **Related Information**  
 
 

@@ -11,12 +11,3 @@ The following sections give information about the different data sources you can
 -   SAP S/4HANA
 
 
--   **[Data Sources](data-sources-bc14089.md "")**  
-
--   **[Implementation Information for SAP Business Suite powered by SAP HANA and SAP BW on SAP HANA](implementation-information-for-sap-business-suite-powered-by-sap-hana-and-sap-bw-on-sap-h-ecf70ad.md "")**  
-
--   **[Implementation Information for SAP S/4HANA](implementation-information-for-sap-s-4hana-57ae108.md "")**  
-
--   **[Administration Information for SAP S/4HANA Cloud](administration-information-for-sap-s-4hana-cloud-b098fd8.md "")**  
-
-

@@ -14,23 +14,6 @@ For more information on how to create layered controller extensions in SAP Web I
 
 By using key user adaptation, users with the key user authorization role can also make extensive UI changes for apps without having to change the code. For more information, see [SAPUI5 Flexibility: Enable Your App for UI Adaptation](../05_Developing_Apps/sapui5-flexibility-enable-your-app-for-ui-adaptation-f1430c0.md).
 
--   **[Using SAPUI5 Flexibility](using-sapui5-flexibility-72861c2.md "You can use SAPUI5 flexibility to extend your SAP Fiori apps.")**  
-You can use SAPUI5 flexibility to extend your SAP Fiori apps.
--   **[Using Component Configuration](using-component-configuration-c264d66.md "SAPUI5 supports the
-			extension of a base controller by merging the delivered standard controller with a
-			custom controller on JavaScript object level.")**  
-SAPUI5 supports the extension of a base controller by merging the delivered standard controller with a custom controller on JavaScript object level.
--   **[Localized Texts for Extended Apps](localized-texts-for-extended-apps-2edc3f9.md "You can add custom localized text files that contain additional texts or texts that
-		overwrite the original texts to the sap.ui.model.resource.ResourceModel
-	")**  
-You can add custom localized text files that contain additional texts or texts that overwrite the original texts to the `sap.ui.model.resource.ResourceModel` 
--   **[Caveats Regarding Stability Across Application Upgrades](caveats-regarding-stability-across-application-upgrades-aef3384.md "There are a few restrictions in the compatibility of custom applications that have to be
-		considered when extending SAPUI5 standard applications.")**  
-There are a few restrictions in the compatibility of custom applications that have to be considered when extending SAPUI5 standard applications.
--   **[Supportability](supportability-c44813d.md "In case of problems or errors in the custom application, several options exist that
-		support you in resolving the issues.")**  
-In case of problems or errors in the custom application, several options exist that support you in resolving the issues.
-
 **Related Information**  
 
 

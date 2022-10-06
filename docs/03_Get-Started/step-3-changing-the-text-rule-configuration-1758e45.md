@@ -54,7 +54,3 @@ The `enableSettings` option is `false` by default and can be set to `true` which
 
 Multiple `ElseIf` statements can also be configured in the condition.
 
-**Parent topic:** [Text Rule](text-rule-80e719a.md "Create a business logic by defining conditions (if, else if) in the form of text that has the result parts (then, else), which is associated with the rule expression language.")
-
-**Next:** [Step 2: Associating the Expression Language for Text Rules](step-2-associating-the-expression-language-for-text-rules-34d774f.md "")
-

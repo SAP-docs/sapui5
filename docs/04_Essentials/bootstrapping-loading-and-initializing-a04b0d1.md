@@ -160,21 +160,3 @@ File names that match this pattern are reserved for custom merged files used by 
 </tr>
 </table>
 
--   **[Standard Variant for Bootstrapping](standard-variant-for-bootstrapping-91f1f45.md "The standard variant for bootstrapping loads all JavaScript modules of a library in
-		advance with one single request for performance reasons.")**  
-The standard variant for bootstrapping loads all JavaScript modules of a library in advance with one single request for performance reasons.
--   **[Variant for Bootstrapping from Content Delivery Network](variant-for-bootstrapping-from-content-delivery-network-2d3eb2f.md "SAPUI5 can either be
-            loaded locally with a relative path from an SAP Web server or externally from a Content
-            Delivery Network (CDN).
-    ")**  
-SAPUI5 can either be loaded locally with a relative path from an SAP Web server or externally from a Content Delivery Network \(CDN\). 
--   **[noJQuery Variant for Bootstrapping](nojquery-variant-for-bootstrapping-91f1dd0.md "The noJQuery variant supports bootstrapping for an application that already
-        integrates jQuery or uses a different jQuery version than SAPUI5.")**  
-The noJQuery variant supports bootstrapping for an application that already integrates jQuery or uses a different jQuery version than SAPUI5.
--   **[Initialization Process](initialization-process-91f2c90.md#loio91f2c9076f4d1014b6dd926db0e91070 "The initialization process starts after SAPUI5 runtime is
-		loaded.")**  
-The initialization process starts after SAPUI5 runtime is loaded.
--   **[Configuration of the SAPUI5 Runtime](configuration-of-the-sapui5-runtime-91f08de.md "SAPUI5 provides several options for the configuration of the SAPUI5 runtime. The possible ways to provide input for the available
-		configuration options are described in detail.")**  
-SAPUI5 provides several options for the configuration of the SAPUI5 runtime. The possible ways to provide input for the available configuration options are described in detail.
-

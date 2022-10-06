@@ -50,7 +50,3 @@ You can view and download all files at [Flexible Column Layout App - Step 13](ht
 
 We set `maxColumnsCount` parameter of the `getHelper` method to `2`.
 
-**Parent topic:** [Flexible Column Layout App](flexible-column-layout-app-c4de2df.md "In this tutorial, we showcase how to structure your SAPUI5 app using the layout patterns that comply with the SAP Fiori design guidelines.")
-
-**Next:** [Step 12: Starting with Two Columns](step-12-starting-with-two-columns-a96fbe4.md "In this step, we set up the app to start with an initial layout of two columns.")
-

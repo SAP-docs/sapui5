@@ -354,10 +354,3 @@ Object Page
 
 For information about the `ExtensionAPI`, see [API Reference](https://ui5.sap.com/#/api/sap.fe.core.ExtensionAPI).
 
--   **[Using the SecuredExecution Method](using-the-securedexecution-method-6a39150.md "The API for developers of extensions for SAP Fiori elements provides the securedExecution method that can be used for
-		various purposes.")**  
-The API for developers of extensions for SAP Fiori elements provides the `securedExecution` method that can be used for various purposes.
--   **[Adding Custom Messages](adding-custom-messages-5a9a2a0.md "You can use the securedExecution method from the API for developers of template extensions to add and display custom
-		messages.")**  
-You can use the `securedExecution` method from the API for developers of template extensions to add and display custom messages.
-

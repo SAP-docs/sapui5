@@ -24,13 +24,20 @@ Because of the use of а third-party component some additional restrictions appl
 
 -   As of version 1.86, you can use TinyMCE version 5 with the `RichTextEditor`, by setting the following property: `editorType`: `sap.ui.richtexteditor.RichTextEditor.EDITORTYPE_TINYMCE5`. We recommend switching to the newer version, as v4 is no longer supported by TinyMCE and will not receive updates. For more information about the TinyMCE version 5, see [https://www.tiny.cloud/docs/release-notes/release-notes50/](https://www.tiny.cloud/docs/release-notes/release-notes50/).
 
-    As of version 1.98, the TinyMCE version 5 used in `sap.ui.richtexteditor.RichTextEditor` is TinyMCE 5.10.2.
+-   As of version 1.98, the TinyMCE version 5 used in `sap.ui.richtexteditor.RichTextEditor` is TinyMCE 5.10.2.
 
     If you are using the native API and want to trnasfer to version 5, follow the TinyMCE migration guide: [https://www.tiny.cloud/docs/migration-from-4x/](https://www.tiny.cloud/docs/migration-from-4x/)
 
--   Accessibility features that the wrapper control provides, like high-contrast themes and keyboard handling, are not fully available for the native toolbar.
+-   As of version 1.107, the native editor type is TinyMCE 6.
 
--   The third-party component TinyMCE does not fully support the High Contrast themes. The control, which internally uses TinyMCE, is thus also not compliant to this product standard. Applications, which embed the `RichTextEditor` control and use the high-contrast theme, will not have a full High Contrast support. Certain buttons, menus etc. are available in the correct theme, but many elements are still showing up with a normal, noncontrast style.
+    Also the default value of the `editorType` property is set to always point to the version of TinyMCE, that is recommended by SAPUI5. This is crucial for the application developers as using another version might lead to errors and malfunction of the application code. Any `RichTextEditor` which does not have the editorType property set up will automatically start using TinyMCE 6. Have in mind that this could cause some errors in the application, if there is an internal TinyMCE API usage that has been removed. Another potential error could be the usage of DOM selectors that don’t exist anymore, since there are also DOM changes that come with the new version.
+
+    > ### Note:  
+    > The default value of the `editorType` property will always point to the recommended version by UI5, therefore it will be subject to change in the future.
+
+    For more information abot the TinyMCE version 6, see [https://www.tiny.cloud/docs/release-notes/6.0-upcoming-changes/](https://www.tiny.cloud/docs/release-notes/6.0-upcoming-changes/). For detailed information on the migration to TinyMCE 6, see [https://www.tiny.cloud/docs/tinymce/6/migration-from-5x/](https://www.tiny.cloud/docs/tinymce/6/migration-from-5x/)
+
+-   Accessibility features that the wrapper control provides, like high-contrast themes and keyboard handling, are not fully available for the native toolbar.
 
 -   For the usage of high contrast themes TinyMCE relies on the Windows setting. Thus, if you want to use SAPUI5 high contrast theme and the `RichTextEditor` control, you need to turn on the high contrast mode setting of the OS.
 -   The `RichTextEditor` uses a third-party component, which might in some cases not be completely compatible with the way UI5's \(re-\)rendering mechanism works. **If you keep hidden instances of the control \(instances that are not visible in the DOM\), you might run into problems with some browser versions**. In this case, please make sure that you destroy the `RichTextEditor` instance instead of hiding it, and create a new one when you show it again.

@@ -53,6 +53,3 @@ You can check how our container padding classes work in the following sample [Sa
 
 If you have to apply responsive paddings over separate parts of the control according to the control width, see [Enabling Responsive Paddings According to the Control Width](enabling-responsive-paddings-according-to-the-control-width-3b718b5.md)
 
--   **[Enabling Responsive Paddings According to the Control Width](enabling-responsive-paddings-according-to-the-control-width-3b718b5.md "Apply responsive paddings over separate parts of the controls.")**  
-Apply responsive paddings over separate parts of the controls.
-

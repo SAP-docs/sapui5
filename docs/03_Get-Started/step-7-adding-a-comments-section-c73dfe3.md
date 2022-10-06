@@ -235,7 +235,3 @@ You can test the new features by navigating to the details page of any given pro
 
 Based on the initial app you have seen how easy it can be to generate or download initial code and to extend it according to your own requirements. This tutorial also illustrated how to communicate easily with an OData back end using the OData V2 model. Furthermore, it illustrated how to use the mock server with both generated mock data and more realistic data.
 
-**Parent topic:** [Worklist App](worklist-app-6a6a621.md "In this tutorial we will build an app using SAPUI5 that, for example, a shop owner can use to manage his product stock levels.")
-
-**Next:** [Step 6: Extending the Detail Page](step-6-extending-the-detail-page-b561d14.md "In this step, we will extend the detail page of our app to show more information of a given product with various UI controls. We will enrich the header area and display further attributes in an info panel for information about the supplier.")
-

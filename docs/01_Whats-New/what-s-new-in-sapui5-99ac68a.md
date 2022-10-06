@@ -16,12 +16,3 @@ Check the latest videos in the [SAPUI5 playlist](https://www.youtube.com/playlis
 
 
 
--   **[What's New in SAPUI5 1.106](what-s-new-in-sapui5-1-106-c70bb90.md "With
-		this release SAPUI5 is upgraded
-		from version 1.105 to 1.106.")**  
-With this release SAPUI5 is upgraded from version 1.105 to 1.106.
--   **[Previous Versions](previous-versions-6660a59.md "")**  
-
--   **[Change Log](change-log-a6a78b7.md "")**  
-
-

@@ -1281,14 +1281,3 @@ Center Aligned
 </tr>
 </table>
 
--   **[Configuring the Table Area](configuring-the-table-area-b408bfb.md "The LineItem annotation lets you configure the table header title
-		(label property) and the corresponding values (value property) for the column
-		items.")**  
-The `LineItem` annotation lets you configure the table header title \(label property\) and the corresponding values \(value property\) for the column items.
--   **[Configuring the Table Card Header Area \(Optional\)](configuring-the-table-card-header-area-optional-05887bd.md "You can configure the header area from the app descriptor file and
-		annotations.")**  
-You can configure the header area from the app descriptor file and annotations.
--   **[Customizing Table Card](customizing-table-card-9bc298e.md "You can customize the content on the table area with smart links, text alignment,
-		filtering or grouping information.")**  
-You can customize the content on the table area with smart links, text alignment, filtering or grouping information.
-

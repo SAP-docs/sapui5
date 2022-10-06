@@ -132,9 +132,3 @@ sap.ui.define([
 
 The *onNodePressed* event listener is set on the *onNode* event of the `ProcessFlow`. It is called when the user clicks on the *node*. The title text of the *node* will be displayed in the message toast.
 
-**Parent topic:** [Ice Cream Machine](ice-cream-machine-e5b7f8a.md "In this tutorial, we will show you how to use SAPUI5 controls like Generic Tiles, Micro Charts, and Process Flow.")
-
-**Next:** [Step 10: Line Micro Chart](step-10-line-micro-chart-819beea.md "In this step, we will create the LineMicroChart on the Production Process page.")
-
-**Previous:** [Step 12: Timeline](step-12-timeline-4f36786.md "Use this step to learn how to set up a page where your customers can post their reviews of the ice cream machine.")
-

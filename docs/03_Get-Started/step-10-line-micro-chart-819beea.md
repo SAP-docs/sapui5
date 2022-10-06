@@ -81,9 +81,3 @@ mvc:View
 
 You can find the information about the fill levels in the *points* aggregation of the `LineMicroChart` control. Property **x** of the `LineMicroChartPoint` contains the dimension of the chart and the time. Property **y** contains the fill level during the production process. The **threshold** property separates the records by their fill level into an upper and a lower layer. With the *color* property, we can apply a different color to each layer, depending on the specified threshold.
 
-**Parent topic:** [Ice Cream Machine](ice-cream-machine-e5b7f8a.md "In this tutorial, we will show you how to use SAPUI5 controls like Generic Tiles, Micro Charts, and Process Flow.")
-
-**Next:** [Step 9: Delta Micro Chart](step-9-delta-micro-chart-3973372.md "In this step, we will create the DeltaMicroChart on the Production Process page.")
-
-**Previous:** [Step 11: Process Flow](step-11-process-flow-452ff8c.md "In this step, we will create the ProcessFlow on the Production Process page.")
-

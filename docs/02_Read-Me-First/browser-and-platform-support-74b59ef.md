@@ -465,10 +465,3 @@ Legacy web applications using active browser plugins that require IE11 cannot ru
 
 In case you have legacy applications and you still need IE11 with an SAPUI5 version that no longer supports it, we recommend that you either use a dual browser strategy \(for example, your users use another supported browser in addition to IE11\) or you switch to Microsoft Edge \(Chromium\), which has an integrated Internet Explorer runtime mode.
 
--   **[Visual Degradations](visual-degradations-f08f296.md "Depending on the combination of device and browser, visual degradations may occur in
-		certain libraries.")**  
-Depending on the combination of device and browser, visual degradations may occur in certain libraries.
--   **[Keyboard Shortcuts for SAPUI5 Tools](keyboard-shortcuts-for-sapui5-tools-154844c.md "SAPUI5 provides tools for information, diagnostics and testing purposes that
-		are accessible via keyboard shortcuts.")**  
-SAPUI5 provides tools for information, diagnostics and testing purposes that are accessible via keyboard shortcuts.
-

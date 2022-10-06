@@ -417,10 +417,3 @@ You can define the property `NumberOfFractionalDigits` of annotation `NumberForm
 > }
 > ```
 
--   **[Rating Indicator Facet](rating-indicator-facet-bcc12cb.md "You can add a read-only rating indicator to the object page header.")**  
-You can add a read-only rating indicator to the object page header.
--   **[Progress Indicator Facet](progress-indicator-facet-3b5e01c.md "You can add a progress indicator to a header facet on the object page.")**  
-You can add a progress indicator to a header facet on the object page.
--   **[Key Value Facet](key-value-facet-c312735.md "")**  
-
-

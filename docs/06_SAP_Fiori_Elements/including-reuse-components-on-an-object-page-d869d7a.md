@@ -185,10 +185,3 @@ The following example embeds two reuse components:
 
 SAP Fiori elements for OData V4 uses the standard SAPUI5 reuse component visibility. If there is a value set for a sales order, for example, and you want the reuse component to be visible, use the following setting: `visible="{= !!${SalesOrder}"`.
 
--   **[Placing Reuse Component Instances on the Object Page](placing-reuse-component-instances-on-the-object-page-1ba7f88.md "Each reuse component instance defined for an object page belonging to an SAP Fiori elements-based app is realized by a
-		section.")**  
-Each reuse component instance defined for an object page belonging to an SAP Fiori elements-based app is realized by a section.
--   **[Developing Reuse Components](developing-reuse-components-6314fcd.md "Follow these guidelines when developing reuse components that are to be included as
-		sections in object pages.")**  
-Follow these guidelines when developing reuse components that are to be included as sections in object pages.
-

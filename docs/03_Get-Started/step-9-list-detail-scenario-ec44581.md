@@ -122,7 +122,7 @@ Afterwards the detail area is made visible and is resized.
 													</VBox>
 													<VBox class="sapUiMediumMarginBegin">
 														<ObjectAttribute text="{i18n>ageLabelText}"/>
-														<ObjectNumber number="{Age}" numberUnit="Years"/>
+														<ObjectNumber number="{Age}" unit="Years"/>
 													</VBox>
 												</FlexBox>
 										</semantic:headerContent>
@@ -271,12 +271,6 @@ nameLabelText=Name
 ```
 
 We add the missing texts to the properties file.
-
-**Parent topic:** [OData V4](odata-v4-bcdbde6.md "In this tutorial, we explore how features of OData V4 can be used in SAPUI5. We write a small app that consumes data from an OData V4 service to understand how to access, modify, aggregate, and filter data in an OData V4 model.")
-
-**Next:** [Step 8: OData Operations](step-8-odata-operations-a3e7cb6.md "Our OData service provides one OData operation: the ResetDataSource action. In this step, we add a button that resets all data changes we made during the tutorial to their original state using this action.")
-
-**Previous:** [Step 10: Enable Data Reuse](step-10-enable-data-reuse-e687dbd.md "In this step we avoid unnecessary back-end requests by preventing the destruction of data shown in the detail area when sorting or filtering the list.")
 
 **Related Information**  
 

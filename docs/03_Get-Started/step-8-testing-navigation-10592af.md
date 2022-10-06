@@ -253,12 +253,6 @@ To make navigation tests complete, we add the new journey to the `AllJourneys` f
 
 If you execute the tests now, you can see in the logs of the developer tools that OPA is waiting for the object page to be displayed. Of course, this will not happen as it is not yet implemented. But we already have a pretty good idea on how we will implement the feature in the next step
 
-**Parent topic:** [Testing](testing-291c912.md "In this tutorial we will test application functionality with the testing tools that are delivered with SAPUI5. At different steps of this tutorial you will write tests using QUnit, OPA5, and the OData V2 mock server. Additionally, you will learn about testing strategies, Test Driven Development (TDD), and much more.")
-
-**Next:** [Step 7: Changing the Table to a Growing Table](step-7-changing-the-table-to-a-growing-table-016e0d4.md "Let’s switch back to developing and add the missing feature for the test we implemented in the previous step. We will simply change the table to a growing table as this is a basic feature of the table. This will display a trigger at the end of the table that the user can click on to display more items.")
-
-**Previous:** [Step 9: Adding the Post Page](step-9-adding-the-post-page-4a9f063.md "Now that we have covered all kinds of tests for navigation, we introduce our Post page that shows details of a post in the bulletin board. To achieve this, we have to introduce a new view/controller pair and adjust the routing of the application.")
-
 **Related Information**  
 
 

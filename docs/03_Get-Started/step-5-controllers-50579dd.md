@@ -87,12 +87,6 @@ We define the app controller in its own file by extending the `Controller` objec
 -   Controller names always end with `*.controller.js`
 
 
-**Parent topic:** [Walkthrough](walkthrough-3da5f4b.md "In this tutorial we will introduce you to all major development paradigms of SAPUI5.")
-
-**Next:** [Step 4: XML Views](step-4-xml-views-1409791.md "Putting all our UI into the index.html file will very soon result in a messy setup and there is quite a bit of work ahead of us. So let’s do a first modularization by putting the sap.m.Text control into a dedicated view.")
-
-**Previous:** [Step 6: Modules](step-6-modules-f665d0d.md "In SAPUI5, resources are often referred to as modules. In this step, we replace the alert from the last exercise with a proper Message Toast from the sap.m library. The required modules are enabled to be loaded asynchronously.")
-
 **Related Information**  
 
 

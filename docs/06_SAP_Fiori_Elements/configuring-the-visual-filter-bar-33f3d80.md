@@ -87,12 +87,6 @@ You can also define charts against a draft-enabled entity. In this case only act
 > 
 > -   You can't configure visual filters for a filter field for which a custom filter has already been defined.
 
--   **[Visual Filters](visual-filters-1714720.md "An intuitive way of choosing filter values from an associated measure value.")**  
-An intuitive way of choosing filter values from an associated measure value.
--   **[Enhancing ValueList Annotations for Visual Filters](enhancing-valuelist-annotations-for-visual-filters-16d43eb.md "The value list annotation lets you map an entity to another entity that is associated with a different entity set. The value list
-		annotation defines the relationship between filter fields of the main entity set and the fields in the value help entity set.")**  
-The value list annotation lets you map an entity to another entity that is associated with a different entity set. The value list annotation defines the relationship between filter fields of the main entity set and the fields in the value help entity set.
-
 **Related Information**  
 
 

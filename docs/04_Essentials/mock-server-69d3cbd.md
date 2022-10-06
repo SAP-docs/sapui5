@@ -27,14 +27,6 @@ For more information on the OData V2 mock server, see the topics given below.
 
 The mock server functionality for OData V4 is included with CAP Node.js. For more information, see [https://cap.cloud.sap/docs/get-started/grow-as-you-go\#with-mocks](https://cap.cloud.sap/docs/get-started/grow-as-you-go#with-mocks).
 
--   **[OData Features Supported by the OData V2 Mock Server](odata-features-supported-by-the-odata-v2-mock-server-3459c37.md "List of OData version 2.0 features supported or not supported by the mock server")**  
-List of OData version 2.0 features supported or not supported by the mock server
--   **[OData V2 Mock Server: Frequently Asked Questions](odata-v2-mock-server-frequently-asked-questions-c9a91dd.md "")**  
-
--   **[Using Mock Data with the OData V2 Mock Server](using-mock-data-with-the-odata-v2-mock-server-a428d41.md "Mock Data can be used when you start the development of an app as well as for testing and problem solving when the data service is not
-		available or it requires effort to set up data services.")**  
-Mock Data can be used when you start the development of an app as well as for testing and problem solving when the data service is not available or it requires effort to set up data services.
-
 **Related Information**  
 
 

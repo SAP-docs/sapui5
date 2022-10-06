@@ -32,7 +32,3 @@ Here is a short overview of some of the rules of the default rule set:
 -   If the user selects an item from the `End` column \(which represents the third logical level of information\), the layout should change to `EndColumnFullScreen` and the forth \(then fifth, etc.\) logical level should again be displayed in the `End` column.
 
 
--   **[Main Methods](main-methods-933965b.md "Overview of the two main methods used in the
-			sap.f.FlexibleColumnLayoutSemanticHelper class.")**  
-Overview of the two main methods used in the `sap.f.FlexibleColumnLayoutSemanticHelper` class.
-

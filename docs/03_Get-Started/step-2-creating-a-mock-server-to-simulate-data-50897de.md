@@ -220,12 +220,6 @@ If the real service connection cannot be established, for example, when there is
 
 Just run the app now again with the `mockServer.html` file.. The list should now be populated with meet-ups from our mock data. You can also choose the button and see data.
 
-**Parent topic:** [OData V2 Mock Server](odata-v2-mock-server-3a9728e.md "In this tutorial, we will explore some advanced features of the OData V2 mock server.")
-
-**Next:** [Step 1: Initial App Without Data](step-1-initial-app-without-data-7a78f1b.md "We start with a simple app scenario with a list of items bound to an OData V2 service. Since the OData V2 service is not available yet on a real server, we will use the mock server to simulate both data and data calls.")
-
-**Previous:** [Step 3: Handling Custom URL Parameters](step-3-handling-custom-url-parameters-46c1ca4.md "In this step, we add the functionality to interpret URL parameters in our local mock server configuration.")
-
 **Related Information**  
 
 

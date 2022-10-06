@@ -31,12 +31,6 @@ You can define custom actions for:
 
 These custom actions are displayed as buttons on the UI. When the user selects the action, the system calls a handler function that can be implemented within a controller extension.
 
--   **[Enabling Actions Added Using Extension Points](enabling-actions-added-using-extension-points-dd78aca.md "You can control the
-        enablement
-        of actions added using extension points in the list report and object page through certain settings in the manifest.json
-        file.")**  
-You can control the enablement of actions added using extension points in the list report and object page through certain settings in the `manifest.json` file.
-
  <a name="task_q5c_vrl_d4b"/>
 
 <!-- task\_q5c\_vrl\_d4b -->
@@ -559,7 +553,7 @@ You can control the enablement of actions added using extension points in the li
     > ```xml
     > "<Action name>": {
     >      "press": "<handler function>",
-    >      "visible": <true|false>,
+    >      "visible": <true|false|handler function>,
     >      "enabled": <true|false|handler function>,
     >      "text": "<button text>",
     >      "position": {
@@ -772,8 +766,8 @@ You can control the enablement of actions added using extension points in the li
     >                                         "<ActionName>": {
     >                                             "press": "<ApplicationId.FolderName.ScriptFilename.methodName>",
     >                                             "text": "<button text>",
-    >                                             "enabled": <true|false>,
-    >                                             "visible": <true|false>
+    >                                             "enabled": <true|false|handler function>,
+    >                                             "visible": <true|false|handler function>
     >                                         }
     >                                     }
     >                                 }

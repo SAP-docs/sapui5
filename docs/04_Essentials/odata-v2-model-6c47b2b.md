@@ -727,23 +727,37 @@ The `refresh` function refreshes all data within an OData model. Each binding re
 
 ## Batch Processing
 
-The [`v2.ODataModel`](https://ui5.sap.com/#/api/sap.ui.model.odata.v2.ODataModel) supports batch processing \(`$batch`\) in two different ways:
+In batch processing, the `v2.ODataModel` sends one or more OData requests in a single $batch http request.
 
--   Default: All requests in a thread are collected and bundled in batch requests, meaning that request is sent in a timeout immediately after the current call stack is finished. This includes all manual CRUD requests as well as requests triggered by a binding.
+OData requests may be created implicitly by data bindings or explicitly by API calls from application code such as [`v2.ODataModel#read`](https://ui5.sap.com/#/api/sap.ui.model.odata.v2.ODataModel/methods/read). Batch processing has the following advantages:
 
--   Deferred: The requests are stored and can be submitted with a manual `submitChanges()` call by the application. This also includes all manual CRUD requests as well as requests triggered by a binding.
+1.  It improves performance by reducing the number of http requests when compared to sending each OData request as a separate http request.
+2.  It improves security, as OData request URLs, including any data references they may contain, are part of the http request body.
+
+For APIs triggering an OData request, as well as for context and list bindings, you can specify a `groupId` which represents the batch group to use. OData requests with the same `groupId` are then bundled in the same $batch request. If no `groupId` is specified, OData requests are assigned to the default batch group for bundling.
+
+A batch group may be either **immediate** or **deferred**; this determines the point in time at which the $batch request for the OData requests in this group is sent:
+
+-   **Immediate**: The OData requests created within a JavaScript task are collected and sent in a $batch request in a timeout immediately after the current call stack is finished.
+
+    By default, the OData model puts the following OData requests into the default batch group \(with batch group ID `undefined`\), which is immediate:
+
+    -   OData read requests triggered by bindings,
+    -   OData requests triggered by the following [`v2.ODataModel`](https://ui5.sap.com/#/api/sap.ui.model.odata.v2.ODataModel) API methods: `callFunction`, `create`, `read`, `refresh`, `remove`, and `update`.
+
+    For context and list bindings, as well as the methods mentioned above, you can specify a different group as a binding or method parameter.
+
+-   **Deferred**: The OData requests are stored, and the $batch request for them is only sent when the [`submitChanges`](https://ui5.sap.com/#/api/sap.ui.model.odata.v2.ODataModel/methods/submitChanges) model API is called with the corresponding `groupId` as parameter. If you do not specify a batch group ID when calling `submitChanges`, **all** deferred batch groups are submitted.
+
+    By default, the OData model puts the following OData requests into a deferred group with the batch group ID "`changes`":
+
+    -   Update requests triggered from bindings,
+    -   update requests created from the following API methods: `ODataModel#createEntry`, `ODataModel#setProperty`, and `sap.ui.model.odata.v2.Context#delete`.
 
 
-The model cannot decide how to bundle the requests. For this, SAPUI5 provides the `groupId`. For each Context and List Binding and each manual request, a `groupId` can be specified. All requests belonging to the same group are bundled into one batch request. Request without a `groupId` are bundled in the default batch group. You can use a `changeSetId` for changes. The same principle applies: Each change belonging to the same `changeSetId` is bundled into one `changeSet` in the batch request. Per default, all changes have their own `changeSet`.
+You can use the [`setDeferredGroups`](https://ui5.sap.com/#/api/sap.ui.model.odata.v2.ODataModel/methods/setDeferredGroups) API to define the batch group IDs which are deferred; all other group IDs are considered to be immediate.
 
-The OData V2 model automatically puts all change sets at the beginning of a batch request. All GET requests are put after it.
-
-You can use the `setDeferredGroups()` method to set a subset of previously defined groups to deferred.
-
-> ### Note:  
-> The same is also valid for `setChangeGroups()` and `getChangeGroups()`.
-
-All requests belonging to the `group` are then stored in a request queue. The deferred batch group must then be submitted manually by means of the `submitChanges()` method. If you do **not** specify a batch group ID when calling `submitChanges`, all deferred batch groups are submitted.
+Similar to the `groupId`, you can use a `changeSetId` for OData change requests: Each change belonging to the same `changeSetId` is bundled into one change set within the batch request. Per default, all changes have their own change set. The OData V2 model automatically puts all change sets at the beginning of a batch request. All GET requests are put after them. Use the [`setChangeGroups`](https://ui5.sap.com/#/api/sap.ui.model.odata.v2.ODataModel/methods/setChangeGroups) and [`getChangeGroups`](https://ui5.sap.com/#/api/sap.ui.model.odata.v2.ODataModel/methods/getChangeGroups) APIs to set or retrieve the batch group ID and change set ID per entity type.
 
 > ### Example:  
 > Set a subset of groups to deferred:

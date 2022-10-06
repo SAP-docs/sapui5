@@ -48,6 +48,3 @@ Start the application and put away your mouse.
 -   Can you execute all actions? \(Compare with what you can do with the mouse\)
 
 
--   **[Fast Navigation](fast-navigation-d23e2cf.md "Adjacent controls within the tab chain can be grouped for fast navigation using keyboard shortcuts.")**  
-Adjacent controls within the tab chain can be grouped for fast navigation using keyboard shortcuts.
-

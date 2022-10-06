@@ -348,9 +348,3 @@ We initialize the router and bind to its `onBeforeRouteMatched` event, and we in
 
 Finally, we add the routing configuration in the `manifest.json`.
 
-**Parent topic:** [Flexible Column Layout App](flexible-column-layout-app-c4de2df.md "In this tutorial, we showcase how to structure your SAPUI5 app using the layout patterns that comply with the SAP Fiori design guidelines.")
-
-**Next:** [Step 6: Adding a Floating Footer](step-6-adding-a-floating-footer-555ed73.md "In this step, we add a floating footer to the detail page.")
-
-**Previous:** [Step 8: Enhancing the Detail Page](step-8-enhancing-the-detail-page-e5ee491.md "With routing implemented, the model of the detail page is updated for each product. In this step, we enhance the detail page to show information specific for the selected product.")
-

@@ -174,13 +174,3 @@ For this tutorial, you will be creating a folder with the following files:
 
 ![](images/Tutorial_Rule_Builder_Control_Folder_Structure_9758b94.png)
 
--   **[Decision Table](decision-table-c0184a0.md "Create a business logic by defining the conditions in decision table, which is
-		associated with the expression language. ")**  
-Create a business logic by defining the conditions in decision table, which is associated with the expression language.
--   **[Text Rule](text-rule-80e719a.md "Create a business logic by defining conditions (if, else
-			if) in the form of text that has the result parts (then,
-			else), which is associated with the rule expression language. ")**  
-Create a business logic by defining conditions \(`if`, `else if`\) in the form of text that has the result parts \(`then`, `else`\), which is associated with the rule expression language.
--   **[Summary](summary-16cce29.md "")**  
-
-

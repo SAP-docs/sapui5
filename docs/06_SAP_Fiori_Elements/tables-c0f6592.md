@@ -166,6 +166,168 @@ You can exclude specific fields from the table personalization dialog in the lis
 
 For more information, see the *availability* property in the *Settings* table in the topic [Example: Adding Columns to a Responsive Table in the List Report](example-adding-columns-to-a-responsive-table-in-the-list-report-28e9570.md).
 
+
+
+### Handling of Search Restrictions
+
+The search restriction for a table is first looked up in the parent entity \(via `NavigationRestrictions` at the parent entity, with the `NavigationProperty` pointing to the association of the table entity\).
+
+-   Navigation Restrictions at Parent Entity
+
+    > ### Sample Code:  
+    > XML Annotation \(non-containment scenario\): /SalesOrderManage/\_Items
+    > 
+    > ```xml
+    > <Annotations Target="com.c_salesordermanage_sd.Container/SalesOrderManage">
+    >    <Annotation Term="Capabilities.NavigationRestrictions">
+    >       <Record>
+    >          <PropertyValue Property="RestrictedProperties">
+    >             <Collection>
+    >                <Record>
+    >                   <PropertyValue Property="NavigationProperty" NavigationPropertyPath="_Items" />
+    >                   <PropertyValue Property="SearchRestrictions">
+    >                      <Record>
+    >                         <PropertyValue Property="Searchable" Bool="false" />
+    >                      </Record>
+    >                   </PropertyValue>
+    >                </Record>
+    >             </Collection>
+    >          </PropertyValue>
+    >       </Record>
+    >    </Annotation>
+    > </Annotations>
+    > ```
+
+    > ### Sample Code:  
+    > ABAP CDS Annotation
+    > 
+    > No ABAP CDS annotation sample is available. Please use the local XML annotation.
+
+    > ### Sample Code:  
+    > CAP CDS Annotation \(non-containment scenario\)
+    > 
+    > ```
+    > entity SalesOrderManage @(
+    >    Capabilities:{
+    >       NavigationRestrictions:{
+    >          RestrictedProperties:[{
+    >             NavigationProperty : _Items,
+    >             SearchRestrictions : {Searchable : false}
+    >          }]
+    >       }
+    >    }
+    > )
+    > ```
+
+    In a containment scenario \(for example, where the main entity set is from a parameterized entity\), you can maintain the annotations as shown in the following sample code:
+
+    > ### Sample Code:  
+    > XML Annotation \(containment scenario\): /Customer/Set/\_PartnerItems
+    > 
+    > ```xml
+    > <Annotations Target="sap.fe.test.MyService.EntityContainer/Customer">
+    >    <Annotation Term="Capabilities.NavigationRestrictions">
+    >       <Record>
+    >          <PropertyValue Property="RestrictedProperties">
+    >             <Collection>
+    >                <Record>
+    >                   <PropertyValue Property="NavigationProperty" NavigationPropertyPath="Set/_PartnerItems" />
+    >                   <PropertyValue Property="SearchRestrictions">
+    >                      <Record>
+    >                         <PropertyValue Property="Searchable" Bool="false" />
+    >                      </Record>
+    >                   </PropertyValue>
+    >                </Record>
+    >             </Collection>
+    >          </PropertyValue>
+    >       </Record>
+    >    </Annotation>
+    > </Annotations>
+    > ```
+
+    > ### Sample Code:  
+    > ABAP CDS Annotation
+    > 
+    > No ABAP CDS annotation sample is available. Please use the local XML annotation.
+
+    > ### Sample Code:  
+    > CAP CDS Annotation \(containment scenario\)
+    > 
+    > ```
+    > service MyService {
+    >     @Capabilities.NavigationRestrictions.RestrictedProperties : [{
+    >         $Type              : 'Capabilities.NavigationPropertyRestriction',
+    >         NavigationProperty : 'Set/_PartnerItems',
+    >         SearchRestrictions : {Searchable : false}
+    >     }]
+    > }
+    > ```
+
+-   Restrictions Directly at Child Entity
+
+    If there is no search restriction defined at parent entity via the NavigationRestriction, then the search restriction defined directly on the table entity set \(child entity\) is considered.
+
+    > ### Sample Code:  
+    > XML Annotation \(non-containment scenario\): /SalesOrderManage/\_Items
+    > 
+    > ```xml
+    > <Annotations Target="com.c_salesordermanage_sd.Container/SalesOrderItem">
+    >    <Annotation Term="SAP__capabilities.SearchRestrictions">
+    >       <Record>
+    >          <PropertyValue Property="Searchable" Bool="false" />
+    >       </Record>
+    >    </Annotation>
+    > </Annotations>
+    > ```
+
+    > ### Sample Code:  
+    > ABAP CDS Annotation
+    > 
+    > No ABAP CDS annotation sample is available. Please use the local XML annotation.
+
+    > ### Sample Code:  
+    > CAP CDS Annotation \(non-containment scenario\)
+    > 
+    > ```
+    > entity SalesOrderItem @(
+    >    Capabilities:{
+    >       SearchRestrictions : {Searchable : false}
+    >    }
+    > )
+    > ```
+
+    In a containment scenario \(for example, where the main entity set is from a parameterized entity\), you can maintain the annotations as shown in the following sample code:
+
+    > ### Sample Code:  
+    > XML Annotation \(containment scenario\): /Customer/Set/\_PartnerItems
+    > 
+    > ```xml
+    > <Annotations Target="SAP__self.Container/ItemPartner">
+    >    <Annotation Term="SAP__capabilities.SearchRestrictions">
+    >       <Record>
+    >          <PropertyValue Property="Searchable" Bool="false" />
+    >       </Record>
+    >    </Annotation>
+    > </Annotations>
+    > ```
+
+    > ### Sample Code:  
+    > ABAP CDS Annotation
+    > 
+    > No ABAP CDS annotation sample is available. Please use the local XML annotation.
+
+    > ### Sample Code:  
+    > CAP CDS Annotation \(containment scenario\)
+    > 
+    > ```
+    > entity ItemPartner @(
+    >    Capabilities:{
+    >       SearchRestrictions : {Searchable : false}
+    >    }
+    > )
+    > ```
+
+
 **Related Information**  
 
 

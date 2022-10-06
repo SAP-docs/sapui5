@@ -185,7 +185,7 @@ The following code sample shows an example of how to set up your `manifest.json`
                                     "actions": {
                                         "<ActionName>": {
                                             "press": "<ApplicationId.FolderName.ScriptFilename.methodName>",
-                                            "visible": <true|false>
+                                            "visible": <true|false|handler function>,
                                             "enabled": <true|false|handler function>,
                                             "text": "{i18n>key}"                                         
                                         }
@@ -215,7 +215,7 @@ The following code sample shows an example of how to set up your `manifest.json`
                                     "actions": {
                                         "<ActionName>": {
                                             "press": "<ApplicationId.FolderName.ScriptFilename.methodName>",
-                                            "visible": <true|false>
+                                            "visible": <true|false|handler function>,
                                             "enabled": <true|false|handler function>,
                                             "text": "{i18n>key}"                                         
                                         }
@@ -256,7 +256,7 @@ To do so, set the property `enabled` of the action in the `manifest.json` as fol
 >                                     "actions": {
 >                                         "<ActionName>": {
 >                                             "press": "<ApplicationId.FolderName.ScriptFilename.methodName>",
->                                             "visible": <true|false>,
+>                                             "visible": <true|false|handler function>,
 >                                             "enabled": "{= ${ui>/editMode} === 'Editable'}",
 >                                             "text": "{i18n>key}"                                         
 >                                         }
@@ -266,5 +266,65 @@ To do so, set the property `enabled` of the action in the `manifest.json` as fol
 >                          }
 >                     }
 >                 }
+>             }
+>         }
+>     }
+> }
 > ```
+
+
+
+### Displaying Custom Action Buttons Depending on Custom Logic
+
+You can also control the visibility of actions via a custom handler \(this is similar to the 'enablement' use case\).
+
+> ### Sample Code:  
+> `manifest.json`: Configuration for Adjusting an Annotation-Based Action
+> 
+> ```json
+> 
+> {
+>     "sap.ui5": {
+>         "routing": {
+>             "targets": {
+>                 "<ObjectPageTargetName>": {
+>                     "options": {
+>                         "settings": {
+>                             "content": {
+>                                 "header": {
+>                                     "actions": {
+>                                         "<ActionName>": {
+>                                             "DataFieldForAction::com.c_salesordermanage_sd.ArchiveSalesOrder": {
+>                                             "visible": "SalesOrder.custom.CustomActions.visibleForCompletedOnly"
+>                                             }
+>                                         }
+>                                     }
+>                                 }
+>                              }
+>                         }
+>                     }
+>                 }
+>             }
+>         }
+>     }
+> }
+> ```
+
+> ### Sample Code:  
+> `CustomActions.js`
+> 
+> ```
+> visibleForCompletedOnly: function (oBindingContext) {
+>   if (oBindingContext) {
+>     return oBindingContext.requestObject("OverallSDProcessStatus").then(function (sStatus) {
+>       return sStatus === "C";
+>     });
+>   } else {
+>     return false;
+>   }
+> }
+> ```
+
+> ### Remember:  
+> Proceed carefuly if you want to display and hide actions based on dynamic behavior that can be influenced by end users. We strongly recommend to consult the SAP Fiori Design Guidelines at [https://experience.sap.com/fiori-design-web/ui-element-states/](https://experience.sap.com/fiori-design-web/ui-element-states/).
 

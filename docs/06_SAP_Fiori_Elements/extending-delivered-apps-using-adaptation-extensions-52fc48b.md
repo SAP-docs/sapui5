@@ -156,12 +156,6 @@ In SAP Web IDE, here's what you do:
     For information about adapting the UI in SAP Web IDE, choose *Help* \> *Documentation* \> *Developing* \> *Developing Web Applications* \> *SAPUI5 Visual Editor*.
 
 
--   **[Details of Extension Functions Used for Extending Delivered Apps](details-of-extension-functions-used-for-extending-delivered-apps-82630e5.md "In this document, you can find the details of all the extension functions that can be used for extending delivered apps using
-		adaptation extensions. ")**  
-In this document, you can find the details of all the extension functions that can be used for extending delivered apps using adaptation extensions.
--   **[Extending the Delivered Apps Manifest Using an Adaptation Project](extending-the-delivered-apps-manifest-using-an-adaptation-project-a2b24a6.md "You can extend the SAP-delivered list report and object page apps that are developed on SAP Fiori elements.")**  
-You can extend the SAP-delivered list report and object page apps that are developed on SAP Fiori elements.
-
 **Related Information**  
 
 

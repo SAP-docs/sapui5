@@ -32,9 +32,3 @@ You can view and download all files at [Rule Builder - Text Rule](https://ui5.sa
 
 ```
 
-**Parent topic:** [Text Rule](text-rule-80e719a.md "Create a business logic by defining conditions (if, else if) in the form of text that has the result parts (then, else), which is associated with the rule expression language.")
-
-**Next:** [Features](features-e603588.md "")
-
-**Previous:** [Step 2: Associating the Expression Language for Text Rules](step-2-associating-the-expression-language-for-text-rules-34d774f.md "")
-

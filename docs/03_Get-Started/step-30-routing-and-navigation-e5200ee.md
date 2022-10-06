@@ -283,12 +283,6 @@ You should now see the detail page when you click an item in the list of invoice
 -   Define the routing configuration in the descriptor
 
 
-**Parent topic:** [Walkthrough](walkthrough-3da5f4b.md "In this tutorial we will introduce you to all major development paradigms of SAPUI5.")
-
-**Next:** [Step 29: Debugging Tools](step-29-debugging-tools-1ff250c.md "Even though we have added a basic test coverage in the previous steps, it seems like we accidentally broke our app, because it does not display prices to our invoices anymore. We need to debug the issue and fix it before someone finds out.")
-
-**Previous:** [Step 31: Routing with Parameters](step-31-routing-with-parameters-2366345.md "We can now navigate between the overview and the detail page, but the actual item that we selected in the overview is not displayed on the detail page yet. A typical use case for our app is to show additional information for the selected item on the detail page.")
-
 **Related Information**  
 
 

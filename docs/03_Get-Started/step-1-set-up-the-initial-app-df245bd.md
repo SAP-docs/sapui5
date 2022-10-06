@@ -78,7 +78,3 @@ With the downloaded coding, you have an initial app with recommended settings th
 
 So far we have a basic app that does not really have any navigation or routing implemented. This will change in the next steps when we implement our first navigation features.
 
-**Parent topic:** [Navigation and Routing](navigation-and-routing-1b6dcd3.md "SAPUI5 comes with a powerful routing API that helps you control the state of your application efficiently. This tutorial will illustrate all major features and APIs related to navigation and routing in SAPUI5 apps by creating a simple and easy to understand mobile app. It represents a set of best practices for applying the navigation and routing features of SAPUI5 to your applications.")
-
-**Previous:** [Step 2: Enable Routing](step-2-enable-routing-cf3c57c.md "In this step we will modify the app and introduce routing. Instead of having the home page of the app hard coded we will configure a router to wire multiple views together when our app is called. The routing configuration controls the application flow when the user triggers a navigation action or opens a link to the application directly.")
-

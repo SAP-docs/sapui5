@@ -34,22 +34,3 @@ Overview page application instances consist of a UI component that extends the o
 
 For more information about the overview page plugin, see [Building an App](building-an-app-9834a0a.md). 
 
--   **[Descriptor Configuration for the Overview Page](descriptor-configuration-for-the-overview-page-f194b41.md "The descriptor file (manifest.json) is an application configuration
-		file that contains valid entries for initializing an application.")**  
-The descriptor file \(`manifest.json`\) is an application configuration file that contains valid entries for initializing an application.
--   **[Overview Page Card](overview-page-card-74332d5.md "A card is a smart component that uses UI annotation to render its content. It contains a
-		header area and  a footer area. ")**  
-A card is a smart component that uses UI annotation to render its content. It contains a header area and a footer area.
--   **[Annotations Used in Overview Pages](annotations-used-in-overview-pages-65731e6.md "This topic provides a list of the annotations used in overview pages. They are as
-		follows:")**  
-This topic provides a list of the annotations used in overview pages. They are as follows:
--   **[Configuring Overview Page App Extensions](configuring-overview-page-app-extensions-b240f61.md "Lets you customize the card and filter area to design a robust application.")**  
-Lets you customize the card and filter area to design a robust application.
--   **[Sharing Overview Pages](sharing-overview-pages-f9d88b5.md "Share your application as a tile on the SAP Fiori launchpad or by sending an email
-		link.")**  
-Share your application as a tile on the SAP Fiori launchpad or by sending an email link.
--   **[Customizing Overview Pages Using Runtime Capabilities](customizing-overview-pages-using-runtime-capabilities-5b1dd11.md "End users can customize their overview pages by rearranging cards and by hiding or
-		showing cards. They can also apply a filter to the displayed information, which will affect
-		all relevant cards.")**  
-End users can customize their overview pages by rearranging cards and by hiding or showing cards. They can also apply a filter to the displayed information, which will affect all relevant cards.
-

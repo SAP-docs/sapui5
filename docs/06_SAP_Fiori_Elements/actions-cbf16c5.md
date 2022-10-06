@@ -882,6 +882,8 @@ For the analytical list page, you can define actions in the chart toolbar. For m
 
 ### Actions Calling OData Function Imports
 
+**Bound Actions \(Context-Dependent\)**
+
 Context-dependent function imports provide an `sap:action-for` annotation defining the entity type for the required context.
 
 > ### Sample Code:  
@@ -891,6 +893,15 @@ Context-dependent function imports provide an `sap:action-for` annotation defini
 > EntitySet="C_STTA_SalesOrder_WD_20" m:HttpMethod="POST" sap:action-for="STTA_SALES_ORDER_WD_20_SRV.C_STTA_SalesOrder_WD_20Type"
 > sap:applicable-path="Setdisabledstatus_ac">
 > ```
+
+**Action Parameters for Bound Actions \(Context-Dependent\)**
+
+Bound actions can have parameters that are defined by the backend. If the name of the parameter matches with any property of the bound entity, then the value of that property is used from the selected row. In case of multi select, the action parameters are not filled with the selected context values.
+
+> ### Note:  
+> Bound action parameters that matches with the key properties of the bound entity are not displayed in the action parameter dialog.
+
+**Unbound Actions \(Context-Independent\)**
 
 Context-independent function imports don’t provide an `sap:action-for` annotation.
 
@@ -902,6 +913,10 @@ Context-independent function imports don’t provide an `sap:action-for` annotat
 > ```
 
 Context-independent actions calling OData function imports can be placed in the table and smart chart toolbars of the list report and the object page as determining actions in the list report or in the object page header.
+
+**Action Parameters for Unbound Actions \(Context-Independent\)**
+
+Unbound actions can have parameters that are defined by the backend. All the function import properties are displayed in the action parameter dialog. The action dialog displays a parameter as mandatory if it is marked `‘Nullable:false’` in the function import definition.
 
 > ### Note:  
 > You can also call function imports with or without input parameters using multiselection in tables.
@@ -1914,13 +1929,14 @@ For certain properties, you can overwrite the annotation-based values via the ma
 >         "actions": {
 >             "DataFieldForAction::com.c_salesordermanage_sd.CreateWithSalesOrderType": {
 >                 "enabled": "SalesOrder.custom.CustomActions.enabledIfTwoSelected"
+>                 "visible": "SalesOrder.custom.CustomActions.visibleIfAConditionIsTrue"
 >             }
 >         }
 >     }
 > }
 > ```
 
-The only behavior that you can override is enablement through the `enabled` property. As shown in the sample code above, you can combine this with a handler function. For more information, see [Adding Custom Actions Using Extension Points](adding-custom-actions-using-extension-points-7619517.md).
+You can override the enablement through the `enabled` property, and the visibility through the `visible` property. As shown in the sample code above, you can combine this with a handler function. For more information, see [Adding Custom Actions Using Extension Points](adding-custom-actions-using-extension-points-7619517.md).
 
 > ### Note:  
 > The functionality is currently only available as follows:
@@ -1937,8 +1953,11 @@ Add this function to `CustomActions.js`:
 > `CustomActions.js`
 > 
 > ```
-> enabledIfTwoSelected: function(oBindingContext, aSelectedContexts) {
->     return aSelectedContexts.length === 2;
+> enabledIfTwoSelected: function (oBindingContext, aSelectedContexts) {
+>   return aSelectedContexts.length === 2;
+> },
+> visibleIfAConditionIsTrue: function (oBindingContext, aSelectedContexts) {
+>   // Condition returning a Boolean value
 > }
 > ```
 

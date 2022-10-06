@@ -21,9 +21,3 @@ For more information about SAP Web IDE, see the documentation for SAP Web IDE on
 
 For more information, see [Building an App - Additional Option](building-an-app-additional-option-fbd6c96.md).
 
--   **[Building an App - Additional Option](building-an-app-additional-option-fbd6c96.md "In SAP Fiori elements for OData
-                            V2, you can also use SAP Web IDE to build UI applications when using SAP Fiori elements.")**  
-In SAP Fiori elements for OData V2, you can also use SAP Web IDE to build UI applications when using SAP Fiori elements.
--   **[Localization of UI Texts](localization-of-ui-texts-b8cb649.md "If necessary, you can replace standard UI texts for apps that you have created with SAP Fiori elements.")**  
-If necessary, you can replace standard UI texts for apps that you have created with SAP Fiori elements.
-

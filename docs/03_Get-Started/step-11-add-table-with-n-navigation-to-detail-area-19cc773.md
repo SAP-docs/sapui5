@@ -105,7 +105,3 @@ You can view and download all files at [OData V4 - Step 11](https://ui5.sap.com/
 
 We extend the detail area of the `appView` by adding a table after the `FlexBox`. To this table we add a data binding for friends. It is important that we set the `$$ownRequest` binding parameter to `true`, so that the table containing all friends of the selected user makes its own OData requests separate from the request for best friend and best friend's address.
 
-**Parent topic:** [OData V4](odata-v4-bcdbde6.md "In this tutorial, we explore how features of OData V4 can be used in SAPUI5. We write a small app that consumes data from an OData V4 service to understand how to access, modify, aggregate, and filter data in an OData V4 model.")
-
-**Next:** [Step 10: Enable Data Reuse](step-10-enable-data-reuse-e687dbd.md "In this step we avoid unnecessary back-end requests by preventing the destruction of data shown in the detail area when sorting or filtering the list.")
-

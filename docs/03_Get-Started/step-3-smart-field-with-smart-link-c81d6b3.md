@@ -177,12 +177,6 @@ As you would expect, one piece of configuration is found in the metadata, namely
 
 We list the content of this for reasons of completeness. We note that this JSON file only contains the data shown for the link, nothing related to the dialog.
 
-**Parent topic:** [Smart Controls](smart-controls-64bde9a.md "In this tutorial you learn how to work with smart controls.")
-
-**Next:** [Step 2: Smart Field with Value Help](step-2-smart-field-with-value-help-3361e27.md "You can use the SmartField control in combination with the ValueHelpDialog control that allow you to carry out a complex search in order to identify the value you are looking for.")
-
-**Previous:** [Step 4: Smart Form](step-4-smart-form-f712d30.md "The SmartForm control is used to obtain a form-like layout for several controls.")
-
 **Related Information**  
 
 

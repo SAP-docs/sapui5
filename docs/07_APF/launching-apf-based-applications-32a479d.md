@@ -13,8 +13,3 @@ You can launch an APF-based application in the following ways:
     You can use a Fiori app launcher tile to launch your APF-based application. However, this is not supported if you use the generic APF runtime application.
 
 
--   **[Configuring the SAP Smart Business KPI Tile](configuring-the-sap-smart-business-kpi-tile-374364e.md "")**  
-
--   **[Configuring the Fiori App Launcher Tile](configuring-the-fiori-app-launcher-tile-331413d.md "")**  
-
-

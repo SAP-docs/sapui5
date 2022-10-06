@@ -66,21 +66,6 @@ oText.setWidth("100px");
 
 The supported parameters are documented in the *API Reference* of the respective control.
 
--   **[Custom Data - Attaching Data Objects to Controls](custom-data-attaching-data-objects-to-controls-91f0c3e.md "SAPUI5 provides the
-			data() method to attach data objects to controls.")**  
-SAPUI5 provides the `data()` method to attach data objects to controls.
--   **[Using Predefined CSS Margin Classes](using-predefined-css-margin-classes-777168f.md "SAPUI5 gives you the option of adding spacing in between controls by adding a margin. A
-		margin clears an area around its respective control, outside of its border.")**  
-SAPUI5 gives you the option of adding spacing in between controls by adding a margin. A margin clears an area around its respective control, outside of its border.
--   **[Using Container Content Padding CSS Classes](using-container-content-padding-css-classes-c71f6df.md "For many container controls in SAPUI5, such as a Dialog or a
-		Page, you can define whether the container should have a padding within the content area. A
-		padding clears the area between the container layout and the controls that are displayed in
-		the content area. ")**  
-For many container controls in SAPUI5, such as a Dialog or a Page, you can define whether the container should have a padding within the content area. A padding clears the area between the container layout and the controls that are displayed in the content area.
--   **[Field Groups](field-groups-5b07753.md "Group of controls that belong together semantically. This group can be used, for
-		example, for validating the data consistency for the field group.")**  
-Group of controls that belong together semantically. This group can be used, for example, for validating the data consistency for the field group.
-
 **Related Information**  
 
 

@@ -201,16 +201,6 @@ An array of arbitrary controls.
 
 Again, the app provides an instance of `sap.uxap.ObjectPageDynamicHeaderTitle` as the value of the `headerTitle` aggregation and a list of controls for the `headerContent` aggregation \(`sap.uxap.ObjectPageLayout` uses internally `sap.uxap.ObjectPageDynamicHeaderContent` to lay out the controls\).
 
--   **[Object Page Classic Header](object-page-classic-header-0fecbce.md "Overview of the structure and features for
-		sap.uxap.ObjectPageLayout's classic header.")**  
-Overview of the structure and features for `sap.uxap.ObjectPageLayout`'s classic header.
--   **[Object Page Dynamic Header](object-page-dynamic-header-6e340c1.md "Overview of the structure and features for
-		sap.uxap.ObjectPageLayout's dynamic header.")**  
-Overview of the structure and features for `sap.uxap.ObjectPageLayout`'s dynamic header.
--   **[Object Page Headers Comparison](object-page-headers-comparison-9c9d94f.md "This section explains the differences and similarities between the two types of
-		header of the sap.uxap.ObjectPageLayout control.")**  
-This section explains the differences and similarities between the two types of header of the `sap.uxap.ObjectPageLayout` control.
-
 **Related Information**  
 
 

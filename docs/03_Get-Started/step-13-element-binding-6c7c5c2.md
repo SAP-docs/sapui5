@@ -181,12 +181,6 @@ Discontinued=Eingestellt
 
 Add the missing texts to the `properties` files.
 
-**Parent topic:** [Data Binding](data-binding-e531093.md "In this tutorial, we will explain the concepts of data binding in SAPUI5.")
-
-**Next:** [Step 12: Aggregation Binding Using Templates](step-12-aggregation-binding-using-templates-97830de.md "Aggregation binding (or &quot;list binding&quot;) allows a control to be bound to a list within the model data and allows relative binding to the list entries by its child controls.")
-
-**Previous:** [Step 14: Expression Binding](step-14-expression-binding-5cff8d1.md "Expression binding allows you to display a value on the screen that has been calculated from values found in some model object. This way simple formatting or calculations can be inserted directly into the data binding string. In this example, we will change the color of the price depending on whether it is above or below some arbitrary threshold. The threshold value is also stored in the JSON model.")
-
 **Related Information**  
 
 

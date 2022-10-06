@@ -194,25 +194,3 @@ This sample code is a selectable version of the code shown above for setting up 
 
 For information on display options for a object, see [Using Images, Initials, and Icons](using-images-initials-and-icons-5760b63.md).
 
--   **[Adapting the Object Page Header Title and Description](adapting-the-object-page-header-title-and-description-333f850.md "You can use annotations to adapt the object page header title and
-		description.")**  
-You can use annotations to adapt the object page header title and description.
--   **[Header Facets](header-facets-17dbd5b.md "You can include various types of header facets in your object page header, for example to display contact data or a rating
-        indicator.")**  
-You can include various types of header facets in your object page header, for example to display contact data or a rating indicator.
--   **[Enabling Actions in the Object Page Header](enabling-actions-in-the-object-page-header-5fe4396.md "You can enable generic actions in your object header.")**  
-You can enable generic actions in your object header.
--   **[Navigation from Header Facet Title](navigation-from-header-facet-title-fa0ca22.md "Applications can configure header facets so that end users can perform both in-page navigation and the navigation to an external
-		application.")**  
-Applications can configure header facets so that end users can perform both in-page navigation and the navigation to an external application.
--   **[UI Controls in Object Page Header](ui-controls-in-object-page-header-9297054.md "You can use various UI controls within the object page header.")**  
-You can use various UI controls within the object page header.
--   **[Toggling the Editability of Header Fields](toggling-the-editability-of-header-fields-c8a9a40.md "You can enable an option to make fields in the object page header editable.")**  
-You can enable an option to make fields in the object page header editable.
--   **[Adding Subpages](adding-subpages-5d49e31.md "You can add additional subpages based on the object page template to your app, and, if required, remove them again.")**  
-You can add additional subpages based on the object page template to your app, and, if required, remove them again.
--   **[Enabling the Related Apps Button](enabling-the-related-apps-button-8dcfe2e.md "By default, the Related Apps button is disabled on object pages
-		created with the object page template. If you want, you can enable this button, which allows
-		you to provide a link to any of the semantic object's navigation targets.")**  
-By default, the *Related Apps* button is disabled on object pages created with the object page template. If you want, you can enable this button, which allows you to provide a link to any of the semantic object's navigation targets.
-

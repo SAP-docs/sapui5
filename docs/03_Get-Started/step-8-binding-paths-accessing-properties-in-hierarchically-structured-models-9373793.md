@@ -77,7 +77,7 @@ The JSON model object now contains an additional sub-object called `address`. Wi
 <mvc:View
 	xmlns="sap.m"
 	xmlns:form="sap.ui.layout.form"
-				xmlns:l="sap.ui.layout"
+	xmlns:l="sap.ui.layout"
 	xmlns:mvc="sap.ui.core.mvc">
 	<Panel headerText="{i18n>panel1HeaderText}" class="sapUiResponsiveMargin" width="auto">
 		<form:SimpleForm editable="true" layout="ColumnLayout">
@@ -149,12 +149,6 @@ panel2HeaderText=Adressdetails
 > In the XML view, inside the curly brackets for the binding path of the `Text` element, notice that the first character is a forward slash. This is required for binding paths that make absolute references to properties in JSON and OData models, but must not be used for resource models. After the first forward slash character, the binding path syntax uses the object names and the property name separated by forward slash characters \(`{/address/street}`\).
 > 
 > As has been mentioned previously, all binding path names are case-sensitive.
-
-**Parent topic:** [Data Binding](data-binding-e531093.md "In this tutorial, we will explain the concepts of data binding in SAPUI5.")
-
-**Next:** [Step 7: \(Optional\) Resource Bundles and Multiple Languages](step-7-optional-resource-bundles-and-multiple-languages-4e593b4.md "The reason we have resource bundles is to allow an app to run in multiple languages without the need to change any code. To demonstrate this feature, we will create a German version of the app – in fact all we need to do is create a German version of the resource bundle file. In our code, the German locale needs to be activated for the ResourceModel.")
-
-**Previous:** [Step 9: Formatting Values](step-9-formatting-values-6fdf0ac.md "We also want to provide our users a way of contacting Harry Hawk. Therefore we will add a link that sends an e-mail to Harry. To achieve that we will convert our data in the model to match the sap.m.URLHelper.normalizeEmail API. As soon as the user changes the name, the e-mail will also change. We will need a custom formatter function for this.")
 
 **Related Information**  
 

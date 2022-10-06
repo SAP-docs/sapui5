@@ -59,9 +59,3 @@ You can view and download this step in the Demo Kit at [Ice Cream Machine - Step
 
 We need to create a new layout container for the tiles that we want to show. You do this to separate the two tile types and their alignment. These two tiles can be created in a similar way as the`GenericTiles`, except that the *mode* property must be set to `LineMode`.
 
-**Parent topic:** [Ice Cream Machine](ice-cream-machine-e5b7f8a.md "In this tutorial, we will show you how to use SAPUI5 controls like Generic Tiles, Micro Charts, and Process Flow.")
-
-**Next:** [Step 3: Launch Tile and Slide Tile](step-3-launch-tile-and-slide-tile-e1fc950.md "In this step, we will create a new Launch Tile (GenericTile with ImageContent) and a SlideTile.")
-
-**Previous:** [Step 5: Navigating from the Start Page to Other Pages](step-5-navigating-from-the-start-page-to-other-pages-258d174.md "In this step, we will show how to set up navigation using the standard routing pattern.")
-

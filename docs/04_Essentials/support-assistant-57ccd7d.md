@@ -41,7 +41,7 @@ The Support Assistant is enabled with the following URL parameter: `sap-ui-suppo
 
 You can also start the Support Assistant from the Technical Information Dialog.
 
-1.  Open the Technical Information Dialog by using the following [shortcut](../02_Read-Me-First/keyboard-shortcuts-for-sapui5-tools-154844c.md):  [Ctrl\] + [Shift\] + [Alt\] / [Option\] + [P\]  
+1.  Open the Technical Information Dialog by using the following [shortcut](../02_Read-Me-First/keyboard-shortcuts-for-sapui5-tools-154844c.md):  [Ctrl\] + [Shift\] + [Left-Alt\] / [Left-Option\] + [P\]  
 
 2.  Choose *Activate Support Assistant*.
 
@@ -71,15 +71,6 @@ All scopes and temporary rules can be stored in the local storage of your browse
 
 -   To learn more about creating your own rules see: [Rule Development Guide](rule-development-guide-cd356da.md)
 
-
--   **[Using the Support Assistant](using-the-support-assistant-12572ab.md "The user interface of the Support Assistant allows you to view the available rules and
-		load additional rulesets for an active application. You can also run an analysis and view
-		the issues identified. The results are available in the form of a consolidated report,
-		generated as an HTML document.")**  
-The user interface of the Support Assistant allows you to view the available rules and load additional rulesets for an active application. You can also run an analysis and view the issues identified. The results are available in the form of a consolidated report, generated as an HTML document.
--   **[Rule Development Guide](rule-development-guide-cd356da.md "The Support Assistant allows you to create custom rules and rulesets and test them on
-		your apps.")**  
-The Support Assistant allows you to create custom rules and rulesets and test them on your apps.
 
 **Related Information**  
 

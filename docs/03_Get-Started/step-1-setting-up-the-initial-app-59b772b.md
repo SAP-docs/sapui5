@@ -37,7 +37,3 @@ You should have the same files as displayed in the following figure:
 
  ![](images/Initial_File_Structure_Fiori_2_0_Tutorial_bc4395b.png "Folder structure with downloaded files") 
 
-**Parent topic:** [Flexible Column Layout App](flexible-column-layout-app-c4de2df.md "In this tutorial, we showcase how to structure your SAPUI5 app using the layout patterns that comply with the SAP Fiori design guidelines.")
-
-**Previous:** [Step 2: Creating an Empty Flexible Column Layout](step-2-creating-an-empty-flexible-column-layout-bf38e4d.md "In this step, we add an instance of the sap.f.FlexibleColumnLayout control in the main view of the app.")
-

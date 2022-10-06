@@ -263,10 +263,3 @@ You must define the `DataPoint` annotation to set the minimum and maximum values
 
 For more information about configuring charts, see [Configuring Charts](configuring-charts-c7c5a82.md).
 
--   **[Chart Cards Used in Overview Pages](chart-cards-used-in-overview-pages-68e62ad.md "This section describes the analytical chart cards you can use in overview pages. ")**  
-This section describes the analytical chart cards you can use in overview pages.
--   **[Configuring Charts](configuring-charts-c7c5a82.md "Developers configure the measures and dimensions displayed in charts by setting the
-		role property to the desired value per chart type. Additional definitions apply to all chart
-		types.")**  
-Developers configure the measures and dimensions displayed in charts by setting the role property to the desired value per chart type. Additional definitions apply to all chart types.
-

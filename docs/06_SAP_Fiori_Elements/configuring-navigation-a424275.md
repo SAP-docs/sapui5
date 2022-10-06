@@ -49,14 +49,3 @@ With SAP Fiori elements, the following navigation options are available and can 
 
 
 
--   **[Configuring External Navigation](configuring-external-navigation-1d4a0f9.md "This section describes the configuration options for navigating from an app (outbound)
-		and navigating to an app (inbound).")**  
-This section describes the configuration options for navigating from an app \(outbound\) and navigating to an app \(inbound\).
--   **[Configuring Internal Navigation](configuring-internal-navigation-2c65f07.md "SAP Fiori elements control the navigation within an app (internal navigation). This
-		section describes the configuration options that you have.")**  
-SAP Fiori elements control the navigation within an app \(internal navigation\). This section describes the configuration options that you have.
--   **[Changing Navigation to Object Page](changing-navigation-to-object-page-8bd546e.md "Navigation from the list report view to the object page in the same app is enabled by
-		default. If required, you can disable this navigation or replace it with navigation to
-		another app (external navigation).")**  
-Navigation from the list report view to the object page in the same app is enabled by default. If required, you can disable this navigation or replace it with navigation to another app \(external navigation\).
-

@@ -16,7 +16,3 @@ Please keep in mind that this optimization has an influence on the app performan
 
 For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.suite.ui.commons.ProcessFlow) in the Demo Kit.
 
-**Parent topic:** [Ice Cream Machine](ice-cream-machine-e5b7f8a.md "In this tutorial, we will show you how to use SAPUI5 controls like Generic Tiles, Micro Charts, and Process Flow.")
-
-**Next:** [Step 12: Timeline](step-12-timeline-4f36786.md "Use this step to learn how to set up a page where your customers can post their reviews of the ice cream machine.")
-

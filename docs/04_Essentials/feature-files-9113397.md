@@ -64,7 +64,3 @@ The following example shows the structure of a sample feature file :
     * instead of using keywords
 ```
 
--   **[Additional Options for Feature Files](additional-options-for-feature-files-a509db4.md "We recommend that you familiarize yourself with the following advanced concepts in
-		behavior-driven development with Gherkin.")**  
-We recommend that you familiarize yourself with the following advanced concepts in behavior-driven development with Gherkin.
-

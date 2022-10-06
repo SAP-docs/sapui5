@@ -191,29 +191,6 @@ SAP Fiori elements for OData V4 also supports the comparison micro chart.
 > 
 >  ![](images/Navigation_Property_d2168a4.png "Navigation Property ") 
 
--   **[Area Micro Chart](area-micro-chart-1467f2b.md "An area micro chart is a trend chart. ")**  
-An area micro chart is a trend chart.
--   **[Bullet Micro Chart](bullet-micro-chart-b915166.md "The bullet chart features a single, primary measure (for example, current year-to-date
-		revenue).")**  
-The bullet chart features a single, primary measure \(for example, current year-to-date revenue\).
--   **[Radial Micro Chart](radial-micro-chart-51eb569.md "Radial micro charts displays a single percentage value.")**  
-Radial micro charts displays a single percentage value.
--   **[Line Micro Chart](line-micro-chart-e5cb2af.md "A line chart is a basic type of chart used in many fields.")**  
-A line chart is a basic type of chart used in many fields.
--   **[Column Micro Chart](column-micro-chart-1a4ecb8.md "A column chart uses vertical bars to compare multiple values over time or across
-		categories. ")**  
-A column chart uses vertical bars to compare multiple values over time or across categories.
--   **[Harvey Micro Chart](harvey-micro-chart-de4f8bf.md "")**  
-
--   **[Stacked Bar Micro Chart](stacked-bar-micro-chart-9c93837.md "A stacked bar
-        micro chart displays all the values from the backend for the configured measure as a
-        percentage of the total measure value.")**  
-A stacked bar micro chart displays all the values from the backend for the configured measure as a percentage of the total measure value.
--   **[Comparison Micro Chart](comparison-micro-chart-9d126f1.md "A single measure value is shown against a maximum value.
-        Only the first three
-        values as received from the back end are shown.")**  
-A single measure value is shown against a maximum value. Only the first three values as received from the back end are shown.
-
 **Related Information**  
 
 

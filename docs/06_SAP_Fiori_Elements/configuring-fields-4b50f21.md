@@ -92,13 +92,3 @@ To validate unit of measurement fields without a related "value" field, use the 
 > 
 > ```
 
--   **[Different Representations of a Field](different-representations-of-a-field-c18ada4.md "Applications can control how the field is represented by using annotations or metadata.")**  
-Applications can control how the field is represented by using annotations or metadata.
--   **[Field Help](field-help-a5608ea.md "A field can be associated with a helper control, depending on how the field is configured.")**  
-A field can be associated with a helper control, depending on how the field is configured.
--   **[Grouping of Fields](grouping-of-fields-cb1748e.md "Application developers can group fields that should be shown together, such as various address fields (street name, house number, and
-        postal code).")**  
-Application developers can group fields that should be shown together, such as various address fields \(street name, house number, and postal code\).
--   **[Further Features of the Field](further-features-of-the-field-f49a0f7.md "Application developers can control important features of the field.")**  
-Application developers can control important features of the field.
-

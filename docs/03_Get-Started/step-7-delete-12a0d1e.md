@@ -184,12 +184,6 @@ deletionSuccessMessage=User deleted
 
 We add the missing texts to the properties file.
 
-**Parent topic:** [OData V4](odata-v4-bcdbde6.md "In this tutorial, we explore how features of OData V4 can be used in SAPUI5. We write a small app that consumes data from an OData V4 service to understand how to access, modify, aggregate, and filter data in an OData V4 model.")
-
-**Next:** [Step 6: Create and Edit](step-6-create-and-edit-b4f1266.md "In this step, we will make it possible to create and edit (update) user data from the user interface and send the data to the back end.")
-
-**Previous:** [Step 8: OData Operations](step-8-odata-operations-a3e7cb6.md "Our OData service provides one OData operation: the ResetDataSource action. In this step, we add a button that resets all data changes we made during the tutorial to their original state using this action.")
-
 **Related Information**  
 
 

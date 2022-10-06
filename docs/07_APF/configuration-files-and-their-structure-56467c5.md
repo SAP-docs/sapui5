@@ -47,10 +47,3 @@ The configuration options include the following tasks:
 
 The configuration options are explained in detail in the following sections.
 
--   **[Application Configuration in SAPUI5 1.28 and Prior Releases](application-configuration-in-sapui5-1-28-and-prior-releases-c9da7d5.md)**  
-
--   **[Descriptor \(manifest.json\)](descriptor-manifest-json-74038a5.md "")**  
-
--   **[Analytical Configuration](analytical-configuration-5a467c5.md)**  
-
-

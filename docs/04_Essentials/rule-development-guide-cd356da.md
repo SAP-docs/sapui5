@@ -16,20 +16,3 @@ The next subsections contain more detailed information on how to create new rule
 
 
 
--   **[Create a Ruleset for a Library](create-a-ruleset-for-a-library-b5a5135.md "The Support Assistant allows you to create your own ruleset.")**  
-The Support Assistant allows you to create your own ruleset.
--   **[Create a Rule](create-a-rule-c24569d.md "A rule consists of properties that test and advise on how possible issues can be
-		resolved and a check function that tests the application for a specific issue. To create a
-		rule, you need to set the properties and add a check function. ")**  
-A rule consists of properties that test and advise on how possible issues can be resolved and a check function that tests the application for a specific issue. To create a rule, you need to set the properties and add a check function.
--   **[Test a Rule](test-a-rule-f5e4fe6.md "After you create a rule, you can test it manually on an app. ")**  
-After you create a rule, you can test it manually on an app.
--   **[Common Rule Patterns](common-rule-patterns-3fc1412.md "The Support Assistant checks verify different aspects of your web application - from
-        the view/elements structure and control properties to the dynamic, data and event-driven
-        interactions. You can traverse the DOM tree, look at error logs during startup or check the
-        CSS.")**  
-The Support Assistant checks verify different aspects of your web application - from the view/elements structure and control properties to the dynamic, data and event-driven interactions. You can traverse the DOM tree, look at error logs during startup or check the CSS.
--   **[Guidelines and Best Practices](guidelines-and-best-practices-eaeea19.md "There are some general guidelines for writing succinct and meaningful rules to ensure
-		high quality, consistency and better usability of the reported issues.")**  
-There are some general guidelines for writing succinct and meaningful rules to ensure high quality, consistency and better usability of the reported issues.
-

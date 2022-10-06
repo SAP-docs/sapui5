@@ -94,12 +94,6 @@ We replace the instantiation of the `sap.m.Text` control by our new `App` XML vi
 -   Other XML namespaces use the last part of the SAP namespace as alias \(for example, `mvc` for `sap.ui.core.mvc`\)
 
 
-**Parent topic:** [Walkthrough](walkthrough-3da5f4b.md "In this tutorial we will introduce you to all major development paradigms of SAPUI5.")
-
-**Next:** [Step 3: Controls](step-3-controls-ddbceec.md "Now it is time to build our first little UI by replacing the “Hello World” text in the HTML body by the SAPUI5 control sap.m.Text. In the beginning, we will use the JavaScript control interface to set up the UI, the control instance is then placed into the HTML body.")
-
-**Previous:** [Step 5: Controllers](step-5-controllers-50579dd.md "In this step, we replace the text with a button and show the “Hello World” message when the button is pressed. The handling of the button's press event is implemented in the controller of the view.")
-
 **Related Information**  
 
 

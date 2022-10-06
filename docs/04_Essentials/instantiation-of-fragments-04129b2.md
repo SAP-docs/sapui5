@@ -63,25 +63,6 @@ The different methods used for the instantiation of a fragment have the followin
 > });
 > ```
 
--   **[Programmatically Instantiating JS Fragments](programmatically-instantiating-js-fragments-3cff5d0.md "For each fragment type, SAPUI5 provides a method that
-		can be used to programmatically instantiate a fragment.")**  
-For each fragment type, SAPUI5 provides a method that can be used to programmatically instantiate a fragment.
--   **[Programmatically Instantiating XML Fragments](programmatically-instantiating-xml-fragments-d6af195.md "For each fragment type, SAPUI5 provides a method that can be used to programmatically
-		instantiate a fragment.")**  
-For each fragment type, SAPUI5 provides a method that can be used to programmatically instantiate a fragment.
--   **[Programmatically Instantiating HTML Fragments](programmatically-instantiating-html-fragments-79e967d.md "For each fragment type, SAPUI5 provides a method that can be used to programmatically
-		instantiate a fragment.")**  
-For each fragment type, SAPUI5 provides a method that can be used to programmatically instantiate a fragment.
--   **[Instantiating Fragments in Declarative Views](instantiating-fragments-in-declarative-views-234320f.md "Example, how all three types of fragments can be instantiated in an XML
-		view.")**  
-Example, how all three types of fragments can be instantiated in an XML view.
--   **[Using Other Objects Instead of Controllers](using-other-objects-instead-of-controllers-c24ea6d.md "For the instantiation of fragments, the oController object must not necessarily be a
-		controller. It can also be another object.")**  
-For the instantiation of fragments, the oController object must not necessarily be a controller. It can also be another object.
--   **[Inline Definition and Instantiation of Fragments](inline-definition-and-instantiation-of-fragments-b807931.md "Instead of defining fragments externally in a separate file, they can also be defined
-		inline and can be instantiated immediately.")**  
-Instead of defining fragments externally in a separate file, they can also be defined inline and can be instantiated immediately.
-
 **Related Information**  
 
 

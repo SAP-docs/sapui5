@@ -96,12 +96,6 @@ sap.ui.define([
 
 Now, we create a new `index.js` script that will contain the application logic for this tutorial step. We do this to avoid having executable code directly in the HTML file for security reasons. This script will be called by the `index.html`. We defined it there as a module in a declarative way.
 
-**Parent topic:** [Walkthrough](walkthrough-3da5f4b.md "In this tutorial we will introduce you to all major development paradigms of SAPUI5.")
-
-**Next:** [Step 1: Hello World!](step-1-hello-world-2680aa9.md "As you know SAPUI5 is all about HTML5. Let’s get started with building a first “Hello World” with only HTML.")
-
-**Previous:** [Step 3: Controls](step-3-controls-ddbceec.md "Now it is time to build our first little UI by replacing the “Hello World” text in the HTML body by the SAPUI5 control sap.m.Text. In the beginning, we will use the JavaScript control interface to set up the UI, the control instance is then placed into the HTML body.")
-
 **Related Information**  
 
 

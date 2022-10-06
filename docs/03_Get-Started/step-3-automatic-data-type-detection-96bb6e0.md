@@ -100,12 +100,6 @@ To make the *First Name* optional, we remove the parameter `Nullable="false"` fr
 > ### Tip:  
 > To see the metadata of an OData service, you append the `$metadata` variable to the URL of the service. You can try this, for example, with [http://services.odata.org/TripPinRESTierService/](http://services.odata.org/TripPinRESTierService/) and [http://services.odata.org/TripPinRESTierService/$metadata](http://services.odata.org/TripPinRESTierService/$metadata)
 
-**Parent topic:** [OData V4](odata-v4-bcdbde6.md "In this tutorial, we explore how features of OData V4 can be used in SAPUI5. We write a small app that consumes data from an OData V4 service to understand how to access, modify, aggregate, and filter data in an OData V4 model.")
-
-**Next:** [Step 2: Data Access and Client-Server Communication](step-2-data-access-and-client-server-communication-e9de002.md "In this step, we see how the Table that is bound to the People entity set initially requests its data, and how the data can be refreshed. We use the Console tab in the browser developer tools to monitor the communication between the browser and the server. We see the initial request as well as the requests for refreshing the data.")
-
-**Previous:** [Step 4: Filtering, Sorting, and Counting](step-4-filtering-sorting-and-counting-426ff31.md "In this step, we add features to filter, sort, and count the user data by using the OData V4 model API to apply OData system query options $filter, $orderby, and $count.")
-
 **Related Information**  
 
 

@@ -29,16 +29,15 @@ When mixing XHTML and SAPUI5 controls, observe the following rules:
 
 ## Procedure
 
-1.  To mix SAPUI5 controls with native XHTML, you only need the XHTML namespace to use \(X\)HTML:
+To mix SAPUI5 controls with native XHTML, you only need the XHTML namespace to use \(X\)HTML:
 
-    ```xml
-    <mvc:View controllerName="sap.hcm.Address" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc"
-               xmlns:html="http://www.w3.org/1999/xhtml">
-       <Panel>
-          <Button text="Press Me. I am an SAPUI5 Button"/>
-          <html:button>No, press me. I am native HTML Button.</html:button>
-       </Panel>
-    </mvc:View>
-    ```
-
+```xml
+<mvc:View controllerName="sap.hcm.Address" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc"
+           xmlns:html="http://www.w3.org/1999/xhtml">
+   <Panel>
+      <Button text="Press Me. I am an SAPUI5 Button"/>
+      <html:button>No, press me. I am native HTML Button.</html:button>
+   </Panel>
+</mvc:View>
+```
 

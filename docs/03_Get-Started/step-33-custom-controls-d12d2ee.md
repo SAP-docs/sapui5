@@ -309,12 +309,6 @@ The resource bundle is extended with the confirmation message and the strings th
 -   Put custom controls in the `control` folder of your app.
 
 
-**Parent topic:** [Walkthrough](walkthrough-3da5f4b.md "In this tutorial we will introduce you to all major development paradigms of SAPUI5.")
-
-**Next:** [Step 32: Routing Back and History](step-32-routing-back-and-history-8ef57cf.md "Now we can navigate to our detail page and display an invoice, but we cannot go back to the overview page yet. We'll add a back button to the detail page and implement a function that shows our overview page again.")
-
-**Previous:** [Step 34: Responsiveness](step-34-responsiveness-a96e18b.md "In this step, we improve the responsiveness of our app. SAPUI5 applications can be run on phone, tablet, and desktop devices and we can configure the application to make best use of the screen estate for each scenario. Fortunately, SAPUI5 controls like the sap.m.Table already deliver a lot of features that we can use.")
-
 **Related Information**  
 
 

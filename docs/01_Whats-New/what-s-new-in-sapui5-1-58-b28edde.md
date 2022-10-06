@@ -329,10 +329,10 @@ Until now the *API Reference* tree displayed by default all APIs including depre
 
  ![](images/Demo_Kit_Deprecated_items_included_6d95e67.png) 
 
-**Parent topic:** [Previous Versions](previous-versions-6660a59.md "")
-
 **Related Information**  
 
+
+[What's New in SAPUI5 1.106](what-s-new-in-sapui5-1-106-c70bb90.md "With this release SAPUI5 is upgraded from version 1.105 to 1.106.")
 
 [What's New in SAPUI5 1.105](what-s-new-in-sapui5-1-105-5567dcc.md "With this release SAPUI5 is upgraded from version 1.104 to 1.105.")
 

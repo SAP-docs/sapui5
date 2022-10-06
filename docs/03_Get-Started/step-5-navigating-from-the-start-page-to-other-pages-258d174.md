@@ -109,9 +109,3 @@ sap.ui.define([
 
 `onNavToReviews` is called when the user clicks the third tile. It triggers the navigation to the view with the `Timeline`.
 
-**Parent topic:** [Ice Cream Machine](ice-cream-machine-e5b7f8a.md "In this tutorial, we will show you how to use SAPUI5 controls like Generic Tiles, Micro Charts, and Process Flow.")
-
-**Next:** [Step 4: Generic Tiles in Line Mode](step-4-generic-tiles-in-line-mode-10fa7fd.md "In this step, we will create two GenericTiles in line mode.")
-
-**Previous:** [Step 6: Chart Container](step-6-chart-container-9847648.md "In this step, we will use the ChartContainer control to display information in a detailed view.")
-

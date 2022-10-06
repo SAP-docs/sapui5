@@ -152,12 +152,6 @@ openDialogButtonText=Say Hello With Dialog
 
 We add a new text for the open button to the text bundle.
 
-**Parent topic:** [Walkthrough](walkthrough-3da5f4b.md "In this tutorial we will introduce you to all major development paradigms of SAPUI5.")
-
-**Next:** [Step 15: Nested Views](step-15-nested-views-df8c9c3.md "Our panel content is getting more and more complex and now it is time to move the panel content to a separate view. With that approach, the application structure is much easier to understand, and the individual parts of the app can be reused.")
-
-**Previous:** [Step 17: Fragment Callbacks](step-17-fragment-callbacks-354f98e.md "Now that we have integrated the dialog, it's time to add some user interaction. The user will definitely want to close the dialog again at some point, so we add a button to close the dialog and assign an event handler.")
-
 **Related Information**  
 
 

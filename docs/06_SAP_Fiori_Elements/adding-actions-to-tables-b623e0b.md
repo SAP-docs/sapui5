@@ -321,6 +321,13 @@ The following code sample shows how to create your annotations for line item act
 >       </Record>
 >       <Record Type="UI.DataFieldWithIntentBasedNavigation">
 >          <PropertyValue Property="Label" String="Weight (with IBN)" /
+> 
+> ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> ```
 > @UI.lineItem: [
 >   {
 >     label: 'Copy with new Supplier',
@@ -358,11 +365,6 @@ The following code sample shows how to create your annotations for line item act
 > 
 >   {
 > ```
-
-> ### Sample Code:  
-> ABAP CDS Annotation
-> 
-> No ABAP CDS annotation sample is available. Please use the local XML annotation.
 
 > ### Sample Code:  
 > CAP CDS Annotation

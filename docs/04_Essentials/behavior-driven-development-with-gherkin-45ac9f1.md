@@ -65,23 +65,6 @@ The Gherkin library contains the following parts:
     Convenience library for handling data tables and string normalization.
 
 
--   **[Feature Files](feature-files-9113397.md " Feature files are human-readable specifications that are also machine-readable.")**  
- Feature files are human-readable specifications that are also machine-readable.
--   **[Basic Example How to Use Gherkin](basic-example-how-to-use-gherkin-4b0c519.md "Like test-driven development (TDD), behavior-driven development (BDD) with Gherkin
-		encourages us to write more tests because you do it right from the beginning. Having more
-		tests makes it cheaper and easier to maintain the code over time. Let's dive into the
-		specifics using following an example.")**  
-Like test-driven development \(TDD\), behavior-driven development \(BDD\) with Gherkin encourages us to write more tests because you do it right from the beginning. Having more tests makes it cheaper and easier to maintain the code over time. Let's dive into the specifics using following an example.
--   **[Gherkin and OPA Page Objects](gherkin-and-opa-page-objects-c689cd8.md "Gherkin is compatible with the concept of OPA5 page objects.")**  
-Gherkin is compatible with the concept of OPA5 page objects.
--   **[Code Coverage](code-coverage-20737a4.md "It can be handy to calculate the code coverage of your integration tests, for example, to figure out whether you forgot to test something or to
-		provide statistics on your test quality.")**  
-It can be handy to calculate the code coverage of your integration tests, for example, to figure out whether you forgot to test something or to provide statistics on your test quality.
--   **[Logging](logging-ebcf60c.md "During testing with Gherkin, errors are logged to the test execution Web page. ")**  
-During testing with Gherkin, errors are logged to the test execution Web page.
--   **[Frequently Asked Questions](frequently-asked-questions-02ef39f.md "")**  
-
-
 **Related Information**  
 
 

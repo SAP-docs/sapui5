@@ -383,7 +383,3 @@ When you run SAPUI5 as an OSGi web bundle and reference the UI libraries as OSGi
     ```
 
 
--   **[SAPUI5 Library Location Used for Testing](sapui5-library-location-used-for-testing-61ee9ed.md "The location of the SAPUI5 library that is used for testing may differ depending on
-		several parameters.")**  
-The location of the SAPUI5 library that is used for testing may differ depending on several parameters.
-

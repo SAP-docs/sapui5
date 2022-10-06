@@ -162,12 +162,6 @@ Since the use of an escaped character is not so easy to read, the preferred appr
 
 The ampersand \(`&`\) character also has a high priority meaning to the XML parser. This character will always be interpreted to mean "The start of an escaped character". So if you wish to use the Boolean `AND` operator \(`&&`\) in a condition, you must escape both ampersand characters \(`&amp;&amp;`\).
 
-**Parent topic:** [Data Binding](data-binding-e531093.md "In this tutorial, we will explain the concepts of data binding in SAPUI5.")
-
-**Next:** [Step 13: Element Binding](step-13-element-binding-6c7c5c2.md "Now we want to do something with that newly generated list. In most cases you will use a list to allow the selection of an item and then show the details of that item elsewhere. In order to achieve this, we use a form with relatively bound controls and bind it to the selected entity via element binding.")
-
-**Previous:** [Step 15: Aggregation Binding Using a Factory Function](step-15-aggregation-binding-using-a-factory-function-284a036.md "Instead of hard-coding a single template control, we use a factory function to generate different controls based on the data received at runtime. This approach is much more flexible and allows complex or heterogeneous data to be displayed.")
-
 **Related Information**  
 
 

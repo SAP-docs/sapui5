@@ -136,9 +136,3 @@ sap.ui.define([
 
 In the `Master.controller.js`, we attach a `onListItemPress` function to the `press` handler, which changes the `layout` to `TwoColumnsBeginExpanded`. This means that there are going to be two columns, where the first one is larger than the second. For more information on the available layout types, see [Types of Layout](../10_More_About_Controls/types-of-layout-3b9f760.md).
 
-**Parent topic:** [Flexible Column Layout App](flexible-column-layout-app-c4de2df.md "In this tutorial, we showcase how to structure your SAPUI5 app using the layout patterns that comply with the SAP Fiori design guidelines.")
-
-**Next:** [Step 3: Using Dynamic Page for the Master View](step-3-using-dynamic-page-for-the-master-view-0830bce.md "In this step, we create the master view of the app using sap.f.DynamicPage control.")
-
-**Previous:** [Step 5: Using Object Page Layout as a Detail Page](step-5-using-object-page-layout-as-a-detail-page-d1ffe61.md "In this step, we add sap.uxap.ObjectPageLayout to the detail page to display more information about each product.")
-

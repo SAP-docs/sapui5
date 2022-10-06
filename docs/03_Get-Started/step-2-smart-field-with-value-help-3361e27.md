@@ -273,12 +273,6 @@ Since the product we show initially is the same as in step 1, there is no change
 
 In the newly added `Currency.json` file, we include the values needed for the currency entities.
 
-**Parent topic:** [Smart Controls](smart-controls-64bde9a.md "In this tutorial you learn how to work with smart controls.")
-
-**Next:** [Step 1: Smart Field](step-1-smart-field-ed8fda6.md "One important building block of smart controls is the SmartField control that, depending on the OData metadata defined, allows you to render other controls and, for example, define fields with certain attributes based on the metadata.")
-
-**Previous:** [Step 3: Smart Field with Smart Link](step-3-smart-field-with-smart-link-c81d6b3.md "We now show yet another but quite different feature of the SmartField control, SmartField used in combination with SmartLink, which allow you to embed a dialog with related cross-application links.")
-
 **Related Information**  
 
 

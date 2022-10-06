@@ -36,23 +36,3 @@ Creating an app with SAP Fiori elements generally consists of the following step
     For more information, see [Extending SAP Fiori Elements-Based Apps](extending-sap-fiori-elements-based-apps-358cf25.md).
 
 
--   **[Prerequisites for Using SAP Fiori Elements](prerequisites-for-using-sap-fiori-elements-f2344b5.md "To create an app using SAP Fiori elements, some prerequisites apply.")**  
-To create an app using SAP Fiori elements, some prerequisites apply.
--   **[Working With UI Annotations](working-with-ui-annotations-83c89cc.md "Vocabularies and annotations allow you to extend OData services by adding information about how to interpret the OData service and its
-		data. ")**  
-Vocabularies and annotations allow you to extend OData services by adding information about how to interpret the OData service and its data.
--   **[Building an App](building-an-app-9834a0a.md "You have several options to build UI applications when using SAP Fiori
-		elements.")**  
-You have several options to build UI applications when using SAP Fiori elements.
--   **[Configuring Navigation](configuring-navigation-a424275.md "SAP Fiori elements control the navigation within an app (internal navigation) and the
-		navigation to and from an app (external navigation).")**  
-SAP Fiori elements control the navigation within an app \(internal navigation\) and the navigation to and from an app \(external navigation\).
--   **[Extending SAP Fiori Elements-Based Apps](extending-sap-fiori-elements-based-apps-358cf25.md "You can extend your application if needed.")**  
-You can extend your application if needed.
--   **[Adapting the UI](adapting-the-ui-59bfd31.md "Both
-		application developers and key users can extend and customize
-		SAP Fiori applications.")**  
-Both application developers and key users can extend and customize SAP Fiori applications.
--   **[General Concepts and Configuration](general-concepts-and-configuration-3768c47.md "")**  
-
-

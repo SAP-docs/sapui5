@@ -142,12 +142,6 @@ mailBody=Wie geht es dir?
 
 And we add the missing texts to the `properties` files
 
-**Parent topic:** [Data Binding](data-binding-e531093.md "In this tutorial, we will explain the concepts of data binding in SAPUI5.")
-
-**Next:** [Step 8: Binding Paths: Accessing Properties in Hierarchically Structured Models](step-8-binding-paths-accessing-properties-in-hierarchically-structured-models-9373793.md "In step 6 , we stated that the fields in a resource model are arranged in a flat structure; in other words, there can be no hierarchy of properties; however, this is true only for resource models. The properties within JSON and OData models almost always are arranged in a hierarchical structure. Therefore, we should take a look at how to reference fields in a hierarchically structured model object.")
-
-**Previous:** [Step 10: Property Formatting Using Data Types](step-10-property-formatting-using-data-types-9252ee4.md "SAPUI5 provides a set of simple data types such as Boolean, Currency, Date and Float. These data types can then be applied to controls in order to ensure that the value presented on the screen is formatted correctly, and, if the field is open for input, that the value entered by the user adheres to the requirements of that data type. We will now add a new field called Sales Amount of type Currency.")
-
 **Related Information**  
 
 

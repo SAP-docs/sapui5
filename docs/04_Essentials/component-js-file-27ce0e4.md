@@ -31,15 +31,6 @@ We recommend to define the component metadata externally in the descriptor \(`ma
 
 We recommend to add the `sap.ui.core.IAsyncContentCreation` marker interface when defining a new component. Using this interface allows the component to be created fully asynchronously. This interface will implicitly set the component's `rootView` and router configuration to `async`. Nested views will also be handled asynchronously. Additionally, the error handling during the processing of views is stricter and will fail if a view definition contains errors, e.g. broken binding strings.
 
--   **[Component Metadata](component-metadata-0187ea5.md "The component class provides specific metadata for components by extending the
-			ManagedObject class. The UIComponent class provides
-		additional metadata for the configuration of user interfaces or the navigation between
-		views.")**  
-The component class provides specific metadata for components by extending the `ManagedObject` class. The `UIComponent` class provides additional metadata for the configuration of user interfaces or the navigation between views.
--   **[Methods Controlling the Initial Instantiation](methods-controlling-the-initial-instantiation-b430345.md "SAPUI5 provides two
-		methods for the initial instantiation of the component.")**  
-SAPUI5 provides two methods for the initial instantiation of the component.
-
 **Related Information**  
 
 

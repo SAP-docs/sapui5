@@ -101,12 +101,6 @@ The default value is `true` so the feature will not be visible
 
 You can hide header facets as shown below:
 
-   
-  
-<a name="loioca00ee45fe344a73998f482cb2e669bb__fig_lgg_rc2_rmb"/>Header Facets on Object Page
-
- ![](images/Header_Facets_OP1_e374fdb.png "Header Facets on Object Page") 
-
  ![](images/Header_Facets_OP2_d7d9852.png) 
 
 

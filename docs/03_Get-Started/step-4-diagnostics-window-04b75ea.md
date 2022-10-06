@@ -115,9 +115,3 @@ If you find a bug in your application, you can easily check whether it has alrea
 
 More features are waiting for you to discover in the *Diagnostics* window. For more information, see [Diagnostics](../04_Essentials/diagnostics-6ec18e8.md#loio6ec18e80b0ce47f290bc2645b0cc86e6).
 
-**Parent topic:** [Troubleshooting](troubleshooting-5661952.md "In this tutorial, we will show you some tools that will help you if you run into problems with your SAPUI5 app.")
-
-**Next:** [Step 3: Support Assistant](step-3-support-assistant-35f08e1.md "In this tutorial step, we will have a closer look at Support Assistant. You can use this tool to check whether your app is built according to the best practices with predefined rules.")
-
-**Previous:** [Step 5: UI5 Inspector](step-5-ui5-inspector-76e789e.md "In this tutorial step, we will have a closer look at UI5 Inspector - a plug-in specifically created for analyzing and debugging SAPUI5 code.")
-

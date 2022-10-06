@@ -164,19 +164,6 @@ The `beforeExport` event also provides the additional export settings defined by
 > ### Note:  
 > The dialog with additional export settings is available for the client export of `SmartTable` only. For the SAP Gateway export, only the regular dialog is available with no additional options for export settings.
 
--   **[Spreadsheet Export Configuration](spreadsheet-export-configuration-7e12e6b.md "To perform a spreadsheet export for any content other than SmartTable,
-		you have to set up the configuration for the columns and data sources, and you can configure
-		some other additional properties.")**  
-To perform a spreadsheet export for any content other than `SmartTable`, you have to set up the configuration for the columns and data sources, and you can configure some other additional properties.
--   **[Data Types for Spreadsheet Export](data-types-for-spreadsheet-export-283217d.md "Provides details about the data types supported by the spreadsheet export.")**  
-Provides details about the data types supported by the spreadsheet export.
--   **[SAP Gateway Export versus Client Export](sap-gateway-export-versus-client-export-e7f52f4.md "To decide which type of export to use, have a look at the following
-		criteria.")**  
-To decide which type of export to use, have a look at the following criteria.
--   **[Spreadsheet Export Restrictions](spreadsheet-export-restrictions-2c64148.md "There are some restrictions and features that are not supported when you use the
-		spreadsheet export.")**  
-There are some restrictions and features that are not supported when you use the spreadsheet export.
-
 **Related Information**  
 
 

@@ -109,12 +109,6 @@ dialogCloseButtonText=Ok
 
 The text bundle is extended by the new text for the dialog’s close button.
 
-**Parent topic:** [Walkthrough](walkthrough-3da5f4b.md "In this tutorial we will introduce you to all major development paradigms of SAPUI5.")
-
-**Next:** [Step 16: Dialogs and Fragments](step-16-dialogs-and-fragments-4da7298.md "In this step, we will take a closer look at another element which can be used to assemble views: the fragment.")
-
-**Previous:** [Step 18: Icons](step-18-icons-776f735.md "Our dialog is still pretty much empty. Since SAPUI5 is shipped with a large icon font that contains more than 500 icons, we will add an icon to greet our users when the dialog is opened.")
-
 **Related Information**  
 
 

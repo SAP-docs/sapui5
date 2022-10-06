@@ -290,12 +290,6 @@ We finally add the texts for the tab filters to the resource bundle. Copy the te
 
 Now run the app again and click the filter icons on top of the table. The products should be filtered according to the selection in the filter bar and the count should match the number of items displayed.
 
-**Parent topic:** [Worklist App](worklist-app-6a6a621.md "In this tutorial we will build an app using SAPUI5 that, for example, a shop owner can use to manage his product stock levels.")
-
-**Next:** [Step 3: Extending the Worklist Table](step-3-extending-the-worklist-table-84100bc.md "In this step, we will edit the worklist table to include additional columns for our manage product stocks scenario. We display the supplier, the product price, and the number of units on order for each product and format the values accordingly.")
-
-**Previous:** [Step 5: Adding Actions to the Worklist](step-5-adding-actions-to-the-worklist-2da220f.md "Now we can easily spot shortages on our stock, but we would also like to take action and resolve it. Either we can decide to remove the product until the shortage is resolved or order new items of the product. In this step, we will add these actions to the footer of the worklist table.")
-
 **Related Information**  
 
 

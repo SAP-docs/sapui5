@@ -105,18 +105,3 @@ Therefore, you have to decide whether you want to use static or dynamic dependen
 > ### Note:  
 > Many code samples in the SAPUI5 documentation use the `sap.ui.require` syntax even though we could also have used `sap.ui.define`.
 
--   **[Loading a Module](loading-a-module-d12024e.md "For loading (requiring) a module, SAPUI5, you use the
-			sap.ui.require function, which takes over the dependency resolution for
-		you.")**  
-For loading \(requiring\) a module, SAPUI5, you use the `sap.ui.require` function, which takes over the dependency resolution for you.
--   **[Multiple Module Locations](multiple-module-locations-1dfab2e.md "SAPUI5 supports multiple
-		module locations by means of the sap.ui.loader.config function.")**  
-SAPUI5 supports multiple module locations by means of the `sap.ui.loader.config` function.
--   **[Best Practices for Loading Modules](best-practices-for-loading-modules-00737d6.md "This section provides best practices for SAPUI5 module loading
-        patterns.")**  
-This section provides best practices for SAPUI5 module loading patterns.
--   **[Adapting to the Modularization of the Core](adapting-to-the-modularization-of-the-core-b8fdf0c.md "Small, predefined modules for specific purposes, providing standalone functionality can
-		be used any time SAPUI5 is
-		loaded.")**  
-Small, predefined modules for specific purposes, providing standalone functionality can be used any time SAPUI5 is loaded.
-

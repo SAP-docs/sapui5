@@ -17,9 +17,3 @@ The default text direction is left-to-right \(LTR\). This can be changed to righ
 
 SAPUI5 then sets the overall page direction to RTL. All SAPUI5 content is then displayed in RTL mode. Self-written controls and content has to be tested separately. If you require manual styles, provide a style specifically for the RTL case by using `html[dir=rtl]`.
 
--   **[API Properties for Right-to-Left Support in Text-Displaying Controls](api-properties-for-right-to-left-support-in-text-displaying-controls-7e7cd0a.md "Languages with right-to-left (RTL) text directionality keep the default directionality
-		of numeric values and texts in left-to-right (LTR) mode. To ensure correct handling, two API
-		properties have been introduced - textDirection and
-			textAlign.")**  
-Languages with right-to-left \(RTL\) text directionality keep the default directionality of numeric values and texts in left-to-right \(LTR\) mode. To ensure correct handling, two API properties have been introduced - `textDirection` and `textAlign`.
-

@@ -171,6 +171,3 @@ To add custom data objects to a control or an element in HTML views, use a speci
 <div data-sap-ui-type="sap.m.Button" data-text="This button is added dynamically" data-custom-data:my-key="myValue" data-custom-data:my-bound-key="{/mypath}"></div>
 ```
 
--   **[Writing Data to the HTML DOM as DATA-\* Attribute](writing-data-to-the-html-dom-as-data-attribute-1ef9fef.md "SAPUI5 supports writing custom data to the HTML DOM.")**  
-SAPUI5 supports writing custom data to the HTML DOM.
-

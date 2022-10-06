@@ -39,20 +39,3 @@ See [App Development Using SAP Business Application Studio](app-development-usin
 
 In general, you can use the JavaScript IDE of your choice. Some use cases as well as some former development environments are described in [Other Environments](other-environments-f0898e6.md).
 
--   **[App Development](app-development-b1fbe1a.md "There are several ways to develop OpenUI5
-		or SAPUI5
-		applications. Select the one that meets the requirements of your projects and your expectations best.")**  
-There are several ways to develop OpenUI5 or SAPUI5 applications. Select the one that meets the requirements of your projects and your expectations best.
--   **[Developing Apps with SAP Fiori Tools](developing-apps-with-sap-fiori-tools-a460a73.md "SAP Fiori tools is a set of extensions for SAP Business Application Studio and Visual Studio Code
-		that makes it faster and easier to develop basic SAP Fiori apps.")**  
-SAP Fiori tools is a set of extensions for SAP Business Application Studio and Visual Studio Code that makes it faster and easier to develop basic SAP Fiori apps.
--   **[App Development Using SAP Business Application Studio](app-development-using-sap-business-application-studio-6bbad66.md "Learn how you can use SAP Business Application Studio together with UI5 Tooling to develop
-		state-of-the-art UI5 apps.")**  
-Learn how you can use SAP Business Application Studio together with UI5 Tooling to develop state-of-the-art UI5 apps.
--   **[Developing OpenUI5](developing-openui5-ee8726a.md "This section provides information for the initial setup, development workflow, and how
-		tests are executed.")**  
-This section provides information for the initial setup, development workflow, and how tests are executed.
--   **[Other Environments](other-environments-f0898e6.md "This section contains information about other as well as former SAPUI5 development environments
-		ans scenarios.")**  
-This section contains information about other as well as former SAPUI5 development environments ans scenarios.
-

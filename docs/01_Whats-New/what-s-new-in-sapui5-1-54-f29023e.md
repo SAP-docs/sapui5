@@ -457,10 +457,10 @@ We received feedback that many examples throughout the documentation were outdat
 -   Performance improvements: We have enabled lazy loading for the methods in the *API Reference* and implemented other various optimizations. The performance of the app has improved as a result.
 
 
-**Parent topic:** [Previous Versions](previous-versions-6660a59.md "")
-
 **Related Information**  
 
+
+[What's New in SAPUI5 1.106](what-s-new-in-sapui5-1-106-c70bb90.md "With this release SAPUI5 is upgraded from version 1.105 to 1.106.")
 
 [What's New in SAPUI5 1.105](what-s-new-in-sapui5-1-105-5567dcc.md "With this release SAPUI5 is upgraded from version 1.104 to 1.105.")
 

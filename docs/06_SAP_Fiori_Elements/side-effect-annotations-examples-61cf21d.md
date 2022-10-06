@@ -383,6 +383,30 @@ You define side effects either in the \*`MPC_EXT` class or in the local annotati
 >     > </Annotations>
 >     > 
 >     > ```
+> 
+> -   Side Effect to Call `Triggeraction` without Refreshing Any Data\(No Target\)
+> 
+>     You can configure side effect to call the `TriggerAction` function import without refreshing any data, that is without any Targets \(`TargetProperties`/`TargetEntities`\).
+> 
+>     > ### Sample Code:  
+>     > XML Annotation
+>     > 
+>     > ```
+>     > <Annotations Target="STTA_SALES_ORDER_WD_20_SRV.C_STTA_SalesOrder_WD_20Type">
+>     >     <Annotation Term="com.sap.vocabularies.Common.v1.SideEffects" Qualifier="CalculatePrice">
+>     >         <Record>
+>     >             <PropertyValue Property="SourceProperties">
+>     >                 <Collection>
+>     >                     <PropertyPath>UnitPrice</PropertyPath>
+>     >                     <PropertyPath>ProductQuantity</PropertyPath>
+>     >                 </Collection>
+>     >             </PropertyValue>
+>     >             <PropertyValue Property="TriggerAction" String="STTA_SALES_ORDER_WD_20_SRV.STTA_SALES_ORDER_WD_20_SRV_Entities/CalculatePriceIncludingRegionalTax"/>
+>     >         </Record>
+>     >     </Annotation>
+>     > </Annotations>
+>     > 
+>     > ```
 
 
 

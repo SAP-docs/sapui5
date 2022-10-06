@@ -35,6 +35,8 @@ It is recommended to specify the target properties or target entities for global
 
 For newly generated apps, the \(design time\) default is `false`, that is, the project generation wizard generates `"forceGlobalRefresh": false`.
 
+Following is the sample code for global side effect with target fields and `TriggerAction`.
+
 
 
 > ### Sample Code:  

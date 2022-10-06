@@ -793,20 +793,6 @@ The possibility to use one of the predefined layout templates or to create a cus
 1\) By using the `customLayout` aggregation.  
  2\) Two-dimensional keyboard navigation is supported. Users can navigate through the contained controls using the arrow keys.
 
--   **[sap.f.GridContainer](sap-f-gridcontainer-cca5ee5.md "The GridContainer allows you to align tiles, cards or other controls
-		in configuration, such as an overview page.")**  
-The `GridContainer` allows you to align tiles, cards or other controls in configuration, such as an overview page.
--   **[sap.f.GridList](sap-f-gridlist-2fc256b.md "The GridList allows you to use different types of layouts
-		responsible for the positioning and responsiveness of the content.")**  
-The `GridList` allows you to use different types of layouts responsible for the positioning and responsiveness of the content.
--   **[sap.ui.layout.cssgrid.CSSGrid](sap-ui-layout-cssgrid-cssgrid-d6fc40b.md "The CSSGrid is a flexible layout, based on the two-dimensional,
-		browser-native grid system, using the standard CSS property display with
-		value grid. It allows for flexible positioning of user interface elements,
-		inside horizontal and vertical grid structures.")**  
-The `CSSGrid` is a flexible layout, based on the two-dimensional, browser-native grid system, using the standard CSS property `display` with value `grid`. It allows for flexible positioning of user interface elements, inside horizontal and vertical grid structures.
--   **[sap.ui.layout.Grid](sap-ui-layout-grid-43ae317.md "A flexible layout that positions its items in a 12-column flow layout.")**  
-A flexible layout that positions its items in a 12-column flow layout.
-
 **Related Information**  
 
 

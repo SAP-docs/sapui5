@@ -43,13 +43,6 @@ We recommended using a single SAP-wide KPI gallery based on the KPIs generated b
 
 To enable navigation for a KPI card, you need to define the semantic object, action, and KPI ID in the `UI.KPI` annotation. The KPI ID is passed to the target application as the `EvaluationId` for launching the smart business application.
 
--   **[Creating Key Performance Indicator Tags](creating-key-performance-indicator-tags-d80a360.md "The key performance indicator (KPI) tag is an abbreviated and clickable title with a
-		KPI value. ")**  
-The key performance indicator \(KPI\) tag is an abbreviated and clickable title with a KPI value.
--   **[Choosing Filter Modes](choosing-filter-modes-00c19e1.md "ALP offers compact and visual filter modes. You can choose to set filters from both
-		modes.")**  
-ALP offers compact and visual filter modes. You can choose to set filters from both modes.
-
 **Related Information**  
 
 

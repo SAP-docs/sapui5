@@ -97,9 +97,3 @@ You can customize the information in the link list to appear in the following wa
 > ### Note:  
 > In SAP Fiori elements for OData V4, add `sap.ovp.cards.v4.linklist` as the `template`. All other manifest settings are the same as in SAP Fiori elements for OData V2.
 
--   **[Configuring Static Link List Card](configuring-static-link-list-card-4e81b77.md "Lets you display static data (static links and images/icons) in the form of list
-		items.")**  
-Lets you display static data \(static links and images/icons\) in the form of list items.
--   **[Configuring Dynamic Link List Card](configuring-dynamic-link-list-card-675c514.md "Lets you display data (links and images/icons) in the form of list items.")**  
-Lets you display data \(links and images/icons\) in the form of list items.
-

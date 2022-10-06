@@ -187,9 +187,3 @@ formatJSONDate: function(date) {
 
 In the controller, we need to add the implementation of the *formatJSONDate* formatter function. Based on the language settings of your browser or local machine, the JSON date string is converted to a string that corresponds to the time and date settings.
 
-**Parent topic:** [Ice Cream Machine](ice-cream-machine-e5b7f8a.md "In this tutorial, we will show you how to use SAPUI5 controls like Generic Tiles, Micro Charts, and Process Flow.")
-
-**Next:** [Step 2: KPI Tile and Chart Tile on the Start Page](step-2-kpi-tile-and-chart-tile-on-the-start-page-3981331.md "In this step, we will create our start page with the KPI Tile (GenericTile with NumericContent) and Chart Tile (GenericTile with MicroChart).")
-
-**Previous:** [Step 4: Generic Tiles in Line Mode](step-4-generic-tiles-in-line-mode-10fa7fd.md "In this step, we will create two GenericTiles in line mode.")
-

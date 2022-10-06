@@ -53,18 +53,3 @@ If you reassign the BSP application on the ABAP server \(representing a single S
 > ### Note:  
 > Since the original language of the SAPUI5 ABAP repository serves as the source language of the texts, it's important that you use the same language for the creation of the repository that was used for the properties files. When you use the SAPUI5 repository team provider and create the BSP application manually, you have to choose the correct language on the logon screen.
 
--   **[Text Classification](text-classification-582ce93.md "Texts in a properties file are simple value key pairs separated by an equal sign (=) or
-		a comma (,). However, to enable proper translation for these texts, you have to classify the
-		texts with additional information, at least with the text type. You must place the
-		additional information in the line directly above the text element, beginning with the
-		number sign (#). ")**  
-Texts in a properties file are simple value key pairs separated by an equal sign \(=\) or a comma \(,\). However, to enable proper translation for these texts, you have to classify the texts with additional information, at least with the text type. You must place the additional information in the line directly above the text element, beginning with the number sign \(\#\).
--   **[How Translated Texts Are Accessed at Runtime](how-translated-texts-are-accessed-at-runtime-bab4e39.md "At runtime, the translated texts are read directly from the table of the SAPUI5 text repository and sent to
-		the browser.")**  
-At runtime, the translated texts are read directly from the table of the SAPUI5 text repository and sent to the browser.
--   **[Information for Translators](information-for-translators-17d242d.md "The following information is relevant for translators.")**  
-The following information is relevant for translators.
--   **[Placeholder Handling in Transaction SE63](placeholder-handling-in-transaction-se63-6cdc6eb.md "Source texts with placeholders are transformed when displayed in transaction
-			SE63.")**  
-Source texts with placeholders are transformed when displayed in transaction `SE63`.
-

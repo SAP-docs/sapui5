@@ -370,9 +370,3 @@ The most important point to keep in mind is that analytical annotations along wi
 
 We have only listed a part of the `Products.json` entries since the actual values are not so relevant. Please note that for your convenience we have included additional properties in this file to make it easier to experiment with changes of the `metadata.xml`, and possibly of the `view.xml`, to allow for a more hands-on experience.
 
-**Parent topic:** [Smart Controls](smart-controls-64bde9a.md "In this tutorial you learn how to work with smart controls.")
-
-**Next:** [Step 8: Page Variant Management](step-8-page-variant-management-b1d4d26.md "In this step, we will look at the page variant of the VariantManagement control, an enhanced function of the SmartVariantManagement control that can handle multiple smart controls.")
-
-**Previous:** [Summary](summary-ec59a20.md "Summary of the Smart Controls tutorial")
-

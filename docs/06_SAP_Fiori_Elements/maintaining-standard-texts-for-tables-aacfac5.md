@@ -2,7 +2,7 @@
 
 # Maintaining Standard Texts for Tables
 
-In a table, if the system does not find any entries when using the filter, standard UI texts are displayed, which you can adapt in the i18n file of your app.
+In a table, if the system does not find any entries when using the filter, standard UI texts are displayed which you can adapt in the i18n file of your app.
 
 The following UI texts are displayed by default:
 
@@ -25,13 +25,11 @@ The following UI texts are displayed by default:
 
 
 
-SAP Fiori elements for OData V2
-
 
 
 <a name="loioaacfac5e29904f26a04fc846545eea46__section_sjr_gxk_r4b"/>
 
-## Change Standard Texts
+## Changing Standard Texts
 
 
 
@@ -61,9 +59,9 @@ You can override the standard texts by adding these keys in the i18n file of the
 
 You can override the standard texts by adding these keys in the i18n file:
 
--   `T_OP_TABLE_AND_CHART_NO_DATA_TEXT`: Use this key to add a text when no filters are applied and no data is found. This is applicable only to the list report.
+-   `T_TABLE_AND_CHART_NO_DATA_TEXT`: Use this key to add a text when no filters are applied and no data is found. This is applicable only to the list report.
 
--   `T_OP_TABLE_AND_CHART_NO_DATA_TEXT_WITH_FILTER`: Use this key to add a text when filters are applied and no data is found.
+-   `T_TABLE_AND_CHART_NO_DATA_TEXT_WITH_FILTER`: Use this key to add a text when filters are applied and no data is found.
 
 
 
@@ -72,6 +70,5 @@ You can override the standard texts by adding these keys in the i18n file:
 
 ## Related Information
 
--   [Configuring Tables](configuring-tables-f4eb70f.md)
-
+[Configuring Tables](configuring-tables-f4eb70f.md)
 

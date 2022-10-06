@@ -224,10 +224,6 @@ As you can see, we now have four landmarks on our page. The top three landmarks 
 
 You've completed the walkthrough, good job! You should be familiar with all major development paradigms of SAPUI5 now. Our other tutorials focus on certain aspects of SAPUI5, so feel free to explore!
 
-**Parent topic:** [Walkthrough](walkthrough-3da5f4b.md "In this tutorial we will introduce you to all major development paradigms of SAPUI5.")
-
-**Next:** [Step 36: Content Density](step-36-content-density-d935dbf.md "In this step of our Walkthrough tutorial, we adjust the content density based on the user’s device. SAPUI5 contains different content densities allowing you to display larger controls for touch-enabled devices and a smaller, more compact design for devices that are operated by mouse. In our app, we will detect the device and adjust the density accordingly.")
-
 **Related Information**  
 
 

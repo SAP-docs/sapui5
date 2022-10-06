@@ -182,11 +182,6 @@ The `InsertRestrictions` on the table entity set is completely ignored when you 
 
 For more information, see the **Enablement of Operations** section in [Adding Actions to Tables](adding-actions-to-tables-b623e0b.md).
 
--   **[Enabling Object Creation Using the Dialog in the List Report](enabling-object-creation-using-the-dialog-in-the-list-report-ceb9284.md "You can enable the creation of objects that have a maximum of 8 data fields using a dialog in the list report page.")**  
-You can enable the creation of objects that have a maximum of 8 data fields using a dialog in the list report page.
--   **[Enabling Editing Using a Dialog \(Mass Edit\) in the List Report](enabling-editing-using-a-dialog-mass-edit-in-the-list-report-7cc4f04.md "You can edit a single object or multiple objects using a dialog in the list report page.")**  
-You can edit a single object or multiple objects using a dialog in the list report page.
-
 **Related Information**  
 
 

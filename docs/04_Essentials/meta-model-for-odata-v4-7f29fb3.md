@@ -163,12 +163,6 @@ Alternatively it can be called on an annotation holding an <code><a href="http:/
 
 The first `<template:with>` defines `entityType` to be the type of the set `BusinessPartnerList`. The `<template:repeat>` iterates over its annotation`com.sap.vocabularies.UI.v1.LineItem` \(a collection of records with type `com.sap.vocabularies.UI.v1.DataField`\). The record's property `Value` is assumed to be an `edm:Path` pointing to a property of the entity type. For this path the value list type is determined.
 
--   **[OData V4 Metadata JSON Format](odata-v4-metadata-json-format-87aac89.md "The OData V4 model provides access to metadata in a streamlined JSON format which is
-		described in the section below.")**  
-The OData V4 model provides access to metadata in a streamlined JSON format which is described in the section below.
--   **[Additional Annotation Files](additional-annotation-files-fd715d9.md "The OData V4 model supports loading of additional annotation files.")**  
-The OData V4 model supports loading of additional annotation files.
-
 **Related Information**  
 
 

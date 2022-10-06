@@ -386,8 +386,3 @@ The properties that determine which values are preselected in the filter. Select
 </tr>
 </table>
 
--   **[Filter Dependencies](filter-dependencies-0c5ae40.md "")**  
-
--   **[Use Cases for Configuring Filters](use-cases-for-configuring-filters-146f649.md "")**  
-
-

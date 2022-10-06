@@ -110,7 +110,7 @@ By default, all fields in the form are configured with `TextInEditModeSource = V
 
 ### Client Validation Against Value Help
 
-You can use the `ValueListForValidation` annotation to configure the values of certain fields entered in the UI. These annotations are checked at the client against the value help \(`ValueList`\) entity set associated to the field.
+You can use the `ValueListForValidation` annotation to configure the client side validation for value help fields in the object page forms. These annotations are checked at the client against the value help \(`ValueList`\) entity set associated to the field.
 
 You can use `ValueListForValidation` annotations under property level annotations:
 
@@ -128,7 +128,7 @@ You can use `ValueListForValidation` annotations under property level annotation
 > ```
 
 > ### Note:  
-> -   Ensure that the `ValueListForValidation` contains the qualifier of the `ValueList` to be used for validation.
+> -   `ValueListForValidation` works only in cases where no qualifier is set, that is `String=""`.
 > 
 > -   User input that does not match the entries in the `ValueListForValidation` aren't stored in the back end \(not even for drafts\).
 

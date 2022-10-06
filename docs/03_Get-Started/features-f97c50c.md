@@ -49,7 +49,3 @@ A label is a translatable name that can be provided to the project and its entit
 
 If the condition expression in a decision table is long, the complete expression will not be visible in the header of the decision table. You can provide a label as an identifier for the condition expression. You can also hover the mouse pointer over the label to view the complete expression.
 
-**Parent topic:** [Decision Table](decision-table-c0184a0.md "Create a business logic by defining the conditions in decision table, which is associated with the expression language.")
-
-**Previous:** [Step 1: Creating an Initial Rule Control](step-1-creating-an-initial-rule-control-e58a936.md "")
-

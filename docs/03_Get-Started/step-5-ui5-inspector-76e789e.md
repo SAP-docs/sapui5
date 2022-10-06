@@ -66,12 +66,6 @@ The app contains a *Do Something* button with meaningless icon \(`sap-icon://act
 5.  The changes that you make in the UI5 Inspector are only temporary, and the icon will be reset to the default when the page is reloaded. To make your change permanent, you have to change the app code.
 
 
-**Parent topic:** [Troubleshooting](troubleshooting-5661952.md "In this tutorial, we will show you some tools that will help you if you run into problems with your SAPUI5 app.")
-
-**Next:** [Step 4: Diagnostics Window](step-4-diagnostics-window-04b75ea.md "In this tutorial step, we have a closer look at the Diagnostics window. It offers a wealth of information including comprehensive technical information, a control tree, and debugging features.")
-
-**Previous:** [First-Aid Kit](first-aid-kit-38859a8.md "This section contains the most common issues that you might face when developing SAPUI5 apps and how to solve them.")
-
 **Related Information**  
 
 

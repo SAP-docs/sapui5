@@ -28,8 +28,3 @@ Internally, APF consists of the following submodules:
 
 The `sap.apf.core` module defines the foundation for analysis path processing. The `sap.apf.ui` module defines the UI and the rendering of the analysis path on the UI. It depends on the `sap.apf.core` module.
 
--   **[The Core Module \(sap.apf.core\)](the-core-module-sap-apf-core-d2da7d5.md)**  
-
--   **[The UI Module](the-ui-module-fcda7d5.md)**  
-
-

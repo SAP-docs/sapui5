@@ -372,32 +372,3 @@ To choose a tab visualization, you must use the `sectionLayout` property in the 
 > }
 > ```
 
--   **[Grouping of Fields](grouping-of-fields-7d7a0c4.md "Application developers can group fields that should be shown together, such as various address fields (street name, house number, and
-        postal code).")**  
-Application developers can group fields that should be shown together, such as various address fields \(street name, house number, and postal code\).
--   **[Controlling the Editability of Sections](controlling-the-editability-of-sections-5c8763f.md "You can control the editability of the fields of a child entity.")**  
-You can control the editability of the fields of a child entity.
--   **[Adding a Chart Facet](adding-a-chart-facet-6495eab.md "You can add a chart facet to a content section within the object page.")**  
-You can add a chart facet to a content section within the object page.
--   **[Adding a Contact Facet](adding-a-contact-facet-a6a8c0c.md "")**  
-
--   **[Address Facet in Sections](address-facet-in-sections-9eb3aae.md "If you add a UI.ReferenceFacet that points to an address annotation, an address facet is
-		displayed in the object page sections or in a quick view.")**  
-If you add a `UI.ReferenceFacet` that points to an address annotation, an address facet is displayed in the object page sections or in a quick view.
--   **[Showing and Hiding Content in Object Page Facets](showing-and-hiding-content-in-object-page-facets-9fcea86.md "You can
-		show
-		or hide reference facets on the UI using the Show More
-		and
-		Show Less
-		buttons,
-		and show or hide fields inside reference facets using the Show Details and Hide Details
-		buttons.")**  
-You can show or hide reference facets on the UI using the *Show More* and *Show Less* buttons, and show or hide fields inside reference facets using the *Show Details* and *Hide Details* buttons.
--   **[Adding Action Buttons to Forms in Sections](adding-action-buttons-to-forms-in-sections-e64efda.md "You can add action buttons to the forms contained in sections. These forms are indicated
-        by com.sap.vocabularies.UI.v1.FieldGroup. A form action button is then
-        displayed in the toolbar of the object page section that contains the form.")**  
-You can add action buttons to the forms contained in sections. These forms are indicated by `com.sap.vocabularies.UI.v1.FieldGroup`. A form action button is then displayed in the toolbar of the object page section that contains the form.
--   **[Displaying Fields in Smartforms on Small Devices](displaying-fields-in-smartforms-on-small-devices-0096cd2.md "SAP Fiori elements provide an
-		option to show or hide fields based on their importance in small screen devices. ")**  
-SAP Fiori elements provide an option to show or hide fields based on their importance in small screen devices.
-

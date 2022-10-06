@@ -44,6 +44,3 @@ SAPUI5 documentation version 1.71 is the last version of the SAPUI5 documentatio
 > ### Note:  
 > You can still use Eclipse as a development environment on its own, of course. Only the SAPUI5 Tools for Eclipse \(that is, the ABAP repository team provider and the app development tools have been retired.
 
--   **[App Development Using SAP Web IDE](app-development-using-sap-web-ide-13ced94.md "SAP Web IDE is a web-based development environment that is optimized for developing SAPUI5 complex apps using the latest innovations, developing and extending SAP Fiori apps, developing mobile hybrid apps, and extending SAP Web IDE with plug-ins and templates.")**  
-SAP Web IDE is a web-based development environment that is optimized for developing SAPUI5 complex apps using the latest innovations, developing and extending SAP Fiori apps, developing mobile hybrid apps, and extending SAP Web IDE with plug-ins and templates.
-

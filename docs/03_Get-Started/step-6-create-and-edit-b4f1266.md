@@ -403,12 +403,6 @@ changesSentMessage=User data sent to the server
 
 We add the new message texts.
 
-**Parent topic:** [OData V4](odata-v4-bcdbde6.md "In this tutorial, we explore how features of OData V4 can be used in SAPUI5. We write a small app that consumes data from an OData V4 service to understand how to access, modify, aggregate, and filter data in an OData V4 model.")
-
-**Next:** [Step 5: Batch Groups](step-5-batch-groups-ef2af49.md "In this step, we have a closer look at batch groups. Batch groups are used to group multiple requests into one server request to improve the overall performance.")
-
-**Previous:** [Step 7: Delete](step-7-delete-12a0d1e.md "In this step, we make it possible to delete user data.")
-
 **Related Information**  
 
 

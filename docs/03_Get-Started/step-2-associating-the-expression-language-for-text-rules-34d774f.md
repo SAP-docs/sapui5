@@ -260,9 +260,3 @@ The following are the code modifications that you can make to include additional
     > Vocabulary context is `ProjectId` by default and all the data objects of the given project are listed in autosuggestion. The possible contexts include `RuleserviceId`, `RuleId` and `ProjectId`.
 
 
-**Parent topic:** [Text Rule](text-rule-80e719a.md "Create a business logic by defining conditions (if, else if) in the form of text that has the result parts (then, else), which is associated with the rule expression language.")
-
-**Next:** [Step 1: Creating a Rule Control](step-1-creating-a-rule-control-eefe8c6.md "")
-
-**Previous:** [Step 3: Changing the Text Rule Configuration](step-3-changing-the-text-rule-configuration-1758e45.md "")
-

@@ -92,12 +92,6 @@ Two things are happening here:
 -   SAPUI5 automatically handles the transport of data both from the model to the controls, and back from the controls to the model. This is called two-way binding.
 
 
-**Parent topic:** [Data Binding](data-binding-e531093.md "In this tutorial, we will explain the concepts of data binding in SAPUI5.")
-
-**Next:** [Step 3: Create Property Binding](step-3-create-property-binding-d70e989.md "Although there is no visible difference, the text on the screen is now derived from model data.")
-
-**Previous:** [Step 5: One-Way Data Binding](step-5-one-way-data-binding-88756c0.md "In contrast to the two-way binding behavior shown above, one-way data binding is also possible. Here, data is transported in one direction only: from the model, through the binding instance to the consumer (usually the property of a control), but never in the other direction. In this example, we will change the previous example to use one-way data binding. This will illustrate how the flow of data from the user interface back to the model can be switched off if required.")
-
 **Related Information**  
 
 

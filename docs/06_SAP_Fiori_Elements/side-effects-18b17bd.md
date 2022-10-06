@@ -202,6 +202,8 @@ The following side effect annotations are supported:
 
     If you specify an empty target, the whole entity is updated.
 
+    If a trigger action is defined but the `TargetProperties` or `TargetEntities` are not defined, then only the trigger action is called.
+
 
  **Scenarios Where Side Effects Cannot be Triggered** 
 
@@ -328,11 +330,6 @@ You can find an example in the following sample code:
 >      </Record>
 > </Annotation>
 > ```
-
--   **[Side Effect Annotations: Examples](side-effect-annotations-examples-61cf21d.md "This topic provides some examples for annotating side effects.")**  
-This topic provides some examples for annotating side effects.
--   **[Using the Global Side Effect](using-the-global-side-effect-955ae31.md "Global side effects are the side effects that are defined without any source properties or source entities.")**  
-Global side effects are the side effects that are defined without any source properties or source entities.
 
 **Related Information**  
 

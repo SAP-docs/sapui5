@@ -92,12 +92,6 @@ Note that the field in error has a red border: ![](images/Tutorial_Data_Binding_
 
 However, the error message itself will only be displayed when that particular field has focus: ![](images/Tutorial_Data_Binding_Step_11_3_e67207b.png)
 
-**Parent topic:** [Data Binding](data-binding-e531093.md "In this tutorial, we will explain the concepts of data binding in SAPUI5.")
-
-**Next:** [Step 10: Property Formatting Using Data Types](step-10-property-formatting-using-data-types-9252ee4.md "SAPUI5 provides a set of simple data types such as Boolean, Currency, Date and Float. These data types can then be applied to controls in order to ensure that the value presented on the screen is formatted correctly, and, if the field is open for input, that the value entered by the user adheres to the requirements of that data type. We will now add a new field called Sales Amount of type Currency.")
-
-**Previous:** [Step 12: Aggregation Binding Using Templates](step-12-aggregation-binding-using-templates-97830de.md "Aggregation binding (or &quot;list binding&quot;) allows a control to be bound to a list within the model data and allows relative binding to the list entries by its child controls.")
-
 **Related Information**  
 
 

@@ -25,17 +25,3 @@ All examples and screenshots in this document use the **ThreeJs** rendering engi
 > 
 > Many new features do not work with the legacy DVL rendering engine. For example, most tools available in the drawer toolbar work only with ThreeJs rendering.
 
--   **[Native Viewport](native-viewport-ab5acd7.md "The Native Viewport control (sap.ui.vk.NativeViewport) provides a
-		rendering canvas for 2D images loaded into the Viewer application. ")**  
-The Native Viewport control \(`sap.ui.vk.NativeViewport`\) provides a rendering canvas for 2D images loaded into the Viewer application.
--   **[Scene Tree](scene-tree-ab70215.md "")**  
-
--   **[View Gallery](view-gallery-4717af4.md "")**  
-
--   **[Viewer](viewer-7f7d55d.md "This control is intended to help application developers include simple 3D visualisation
-		capability in their application by connecting, configuring and presenting the essential
-		Visualisation Toolkit controls as a single composite control.")**  
-This control is intended to help application developers include simple 3D visualisation capability in their application by connecting, configuring and presenting the essential Visualisation Toolkit controls as a single composite control.
--   **[Viewport](viewport-acd3467.md "")**  
-
-

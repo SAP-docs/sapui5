@@ -8,6 +8,9 @@ The `$$aggregation` binding parameter at [`sap.ui.model.odata.v4.ODataModel#bind
 
 Since 1.105.0, either a recursive hierarchy \(see below\) or \(pure\) data aggregation is supported, but no mix; `hierarchyQualifier` is the leading property that decides between these two use cases - **this is an experimental API**.
 
+> ### Note:  
+> Data aggregation or a recursive hierarchy cannot be combined with grouping via a list binding’s first sorter.For more information, see the `vGroup` parameter of [`sap.ui.model.Sorter`](https://ui5.sap.com/#/api/sap.ui.model.Sorter).
+
 
 
 <a name="loio7d914317c0b64c23824bf932cc8a4ae1__section_nxp_ycx_35b"/>

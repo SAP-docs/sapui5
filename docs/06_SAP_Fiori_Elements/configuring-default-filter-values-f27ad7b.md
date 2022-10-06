@@ -95,11 +95,6 @@ You can either provide the `UI.SelectionVariant` annotation directly, or as part
 > }
 > 
 > ```
-> 
-> > ### Note:  
-> > -   The default values coming from the `SelectionVariant` are considered on application load for standard variant. The default values do not persist if you switch to another variant and return to the standard variant.
-> > 
-> > -   If `DisplayCurrency` value is missing during navigation context, analytical list pages looks for this value from the SAP Fiori Launch Pad user default settings.
 
 
 
@@ -141,13 +136,13 @@ If only single values need to be applied for the filter fields, application deve
 > ### Note:  
 > 1.  If the `SelectionVariant` is provided, then this is used and the `Common.FilterDefaultValue` is ignored for all other filters.
 > 
-> 2.  The defaults via these annotations are only applied for the *Standard Variant*. When a user switches to other variants, the annotations are no longer considered.
+> 2.  The default values coming from the annotation are considered only on application load and only when the application is launched with a standard variant. The default values do not persist if you switch to another variant and return to the standard variant.
 > 
-> 3.  Ther filter values applied via the above logic are always cleared completely and overwritten by the incoming navigation context.
+> 3.  The filter values applied via the above logic are always cleared completely and overwritten by the incoming navigation context.
 > 
 > 4.  When adding a date value, be sure to use the YYYY-MM-DD format.
 > 
-> 5.  Note the special handling for DisplayCurrency field for which default values con also come from SAP Fiori launchpad \(FLP\). For more information, see section *Handling Default Values from SAP Fiori Launchpad \(FLP\)* in [Navigation to an App \(Inbound Navigation\)](navigation-to-an-app-inbound-navigation-c337d8b.md).
+> 5.  Note the special handling for `DisplayCurrency` field for which default values can also come from SAP Fiori launchpad \(FLP\). For more information, see section *Handling Default Values from SAP Fiori Launchpad \(FLP\)* in [Navigation to an App \(Inbound Navigation\)](navigation-to-an-app-inbound-navigation-c337d8b.md).
 > 
 > 6.  For the analytical list page in SAP Fiori elements for OData V2, you must set the manifest property `filterDefaultsFromSelectionVariant`: true to ensure the filter defaults from the SelectionVariant are considered.
 

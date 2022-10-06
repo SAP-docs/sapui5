@@ -187,9 +187,3 @@ mvc:View
 
 We are going to create another `ChartContainerContent` with a **table**. This table contains three columns that were created with the **Column** element with a **text** that will be shown in the header. The values were created with the `ColumnListItem` that has a *text* control with a bound *text* property for each cell.
 
-**Parent topic:** [Ice Cream Machine](ice-cream-machine-e5b7f8a.md "In this tutorial, we will show you how to use SAPUI5 controls like Generic Tiles, Micro Charts, and Process Flow.")
-
-**Next:** [Step 5: Navigating from the Start Page to Other Pages](step-5-navigating-from-the-start-page-to-other-pages-258d174.md "In this step, we will show how to set up navigation using the standard routing pattern.")
-
-**Previous:** [Step 7: Header Container and Radial Micro Chart](step-7-header-container-and-radial-micro-chart-5901590.md "In this step, we use the HeaderContainer and RadialMicroChart.")
-

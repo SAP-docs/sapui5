@@ -17,21 +17,3 @@ The Visual Interaction toolkit provides controls for the visualization of 3D mod
 > 
 > -   [Adapting Code to Your Development Environment](get-started-setup-tutorials-and-demo-apps-8b49fc1.md#loio8b49fc198bf04b2d9800fc37fecbb218__tutorials_adaptation)
 
--   **[Prerequisites](prerequisites-4bd6efb.md "Prerequisite steps for the 3D Viewer tutorial.")**  
-Prerequisite steps for the 3D Viewer tutorial.
--   **[Step 1: 3D Viewer With Single File Loading](step-1-3d-viewer-with-single-file-loading-0e21912.md "In this step, you will be creating a 3D Viewer application that allows a user to load
-        a single 2D image or 3D model that is stored locally or remotely.")**  
-In this step, you will be creating a 3D Viewer application that allows a user to load a single 2D image or 3D model that is stored locally or remotely.
--   **[Step 2: 3D Viewer With Multiple File Loading](step-2-3d-viewer-with-multiple-file-loading-80b0b57.md "In this step, you will be creating a Viewer application that allows a user to load
-        multiple 3D resources stored locally.")**  
-In this step, you will be creating a Viewer application that allows a user to load multiple 3D resources stored locally.
--   **[Step 3: 3D Viewer Using the Viewport Control](step-3-3d-viewer-using-the-viewport-control-112d7b4.md "In this step, you will be creating a 3D Viewer application using the
-            sap.ui.vk.Viewport control.")**  
-In this step, you will be creating a 3D Viewer application using the `sap.ui.vk.Viewport` control.
--   **[Step 4: Adding a Scene Tree](step-4-adding-a-scene-tree-773a008.md "In this step, you will be adding an sap.ui.vk.SceneTree control to
-        your 3D Viewer application.")**  
-In this step, you will be adding an `sap.ui.vk.SceneTree` control to your 3D Viewer application.
--   **[Step 5: Adding View Gallery](step-5-adding-view-gallery-ad2578a.md "In this step, you will be adding the sap.ui.vk.ViewGallery control
-        to a 3D Viewer application. ")**  
-In this step, you will be adding the `sap.ui.vk.ViewGallery` control to a 3D Viewer application.
-

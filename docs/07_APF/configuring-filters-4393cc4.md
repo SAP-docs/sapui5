@@ -27,8 +27,3 @@ For each configuration, you define whether you want to use individually configur
 > ### Note:  
 > When you switch between the two filter types or from one of the filter types to no filter, you lose the current settings. When you switch the filter type and then want to switch back again, you have to define your settings once more.
 
--   **[Individually Configured Filters](individually-configured-filters-f8c73e1.md "")**  
-
--   **[Smart Filter Bar](smart-filter-bar-594f111.md "")**  
-
-

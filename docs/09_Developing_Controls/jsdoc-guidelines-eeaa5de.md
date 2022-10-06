@@ -1242,10 +1242,3 @@ Refers to an annotation **within** a class
 </tr>
 </table>
 
--   **[JSDoc Visibility Tags](jsdoc-visibility-tags-b0d5fe2.md "Tags such as @public or @private allow you to control the visibility of the JSDoc
-		documentation.")**  
-Tags such as `@public` or `@private` allow you to control the visibility of the JSDoc documentation.
--   **[Common Pitfalls in JSDoc](common-pitfalls-in-jsdoc-30671a0.md "The use of the JSDoc toolkit has some pitfalls. By following the guidelines outlined
-		below, these issues can be avoided.")**  
-The use of the JSDoc toolkit has some pitfalls. By following the guidelines outlined below, these issues can be avoided.
-

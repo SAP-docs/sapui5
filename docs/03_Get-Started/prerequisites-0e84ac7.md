@@ -177,7 +177,3 @@ In this file we define the `MockServer` handling the server requests.
 > ### Note:  
 > You might notice the rather flat setup of the files that is different from the setup propagated in the *Walkthrough* tutorial where the `Model-View-Controller` paradigm is reflected in the folder structure. We have chosen the flat setup for this tutorial since our examples all have exactly **one** single file for the view and **one** single file for the controller. Additional folders would add a complexity that we would like to avoid.
 
-**Parent topic:** [Smart Controls](smart-controls-64bde9a.md "In this tutorial you learn how to work with smart controls.")
-
-**Previous:** [Step 1: Smart Field](step-1-smart-field-ed8fda6.md "One important building block of smart controls is the SmartField control that, depending on the OData metadata defined, allows you to render other controls and, for example, define fields with certain attributes based on the metadata.")
-

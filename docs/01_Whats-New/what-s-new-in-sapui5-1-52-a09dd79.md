@@ -536,10 +536,10 @@ APF has the following enhanced features:
     For more information, see [Creating Steps](../07_APF/creating-steps-9b35f53.md).
 
 
-**Parent topic:** [Previous Versions](previous-versions-6660a59.md "")
-
 **Related Information**  
 
+
+[What's New in SAPUI5 1.106](what-s-new-in-sapui5-1-106-c70bb90.md "With this release SAPUI5 is upgraded from version 1.105 to 1.106.")
 
 [What's New in SAPUI5 1.105](what-s-new-in-sapui5-1-105-5567dcc.md "With this release SAPUI5 is upgraded from version 1.104 to 1.105.")
 

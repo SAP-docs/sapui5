@@ -458,6 +458,26 @@ Use `ValueListForValidation` annotations under property level annotations:
 > </Annotations>
 > ```
 
+The following sample code shows an example for the usage of the annotation term `Common.ValueListForValidation` with a conditional expression binding:
+
+> ### Sample Code:  
+> `Common.ValueListForValidation` with conditional expression binding
+> 
+> ```
+> <Annotations Target="com.c_salesordermanage_sd.HeaderPartner/BusinessPartner">
+>     <Annotation Term="com.sap.vocabularies.Common.v1.ValueListForValidation">
+>         <If>
+>             <Eq>
+>                 <Path>PartnerFunction</Path>
+>                 <String>WE</String>
+>             </Eq>
+>             <String>BusinessPartner</String>
+>             <String />
+>         </If>
+>     </Annotation>
+> </Annotations>
+> ```
+
 > ### Note:  
 > -   Ensure that the `ValueListForValidation` contains the qualifier of the `ValueList` or `ValueListMapping` to be used for validation.
 > 
@@ -471,6 +491,8 @@ Use `ValueListForValidation` annotations under property level annotations:
 > 
 > 
 > -   For a conditional expression, ensure that the result contains only one qualifier that points to a valid `ValueList` or `ValueListMapping` at runtime.
+> 
+> -   The `ValueListForValidation` annotation with a conditional expression binding must have the If-Then-Else pattern.
 
 
 
@@ -1166,11 +1188,4 @@ The following screenshot shows an input field where a timezone has been specifie
 The following screenshot shows that the timezone is specified for the corresponding input field. The Date/Time Picker doesn't show any timezone in the dialog:
 
  ![](images/Input_Field_Without_a_Timezone_Dialog_b07bbe3.png) 
-
--   **[Value Help as a Dropdown List](value-help-as-a-dropdown-list-2a0a630.md "If your value help contains a fixed number of values, a dropdown list will be
-		rendered.")**  
-If your value help contains a fixed number of values, a dropdown list will be rendered.
--   **[In/Out Mappings in the ValueList Annotation](in-out-mappings-in-the-valuelist-annotation-4de40b3.md "You can use the In/Out mappings as part of the ValueList annotation for linking
-		purposes.")**  
-You can use the `In`/`Out` mappings as part of the `ValueList` annotation for linking purposes.
 

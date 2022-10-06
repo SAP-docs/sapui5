@@ -340,10 +340,10 @@ In the APF runtime, KPI values can now be displayed in the chart. A new button a
 
 We have improved the accessibility of our demo apps. In addition, we have updated our *Walkthrough* tutorial and added a new step. Developers can improve the accessibility of their Walkthrough app by adding ARIA elements \(landmarks\). For more information, see [Step 37: Accessibility](../03_Get-Started/step-37-accessibility-ff7cab1.md).
 
-**Parent topic:** [Previous Versions](previous-versions-6660a59.md "")
-
 **Related Information**  
 
+
+[What's New in SAPUI5 1.106](what-s-new-in-sapui5-1-106-c70bb90.md "With this release SAPUI5 is upgraded from version 1.105 to 1.106.")
 
 [What's New in SAPUI5 1.105](what-s-new-in-sapui5-1-105-5567dcc.md "With this release SAPUI5 is upgraded from version 1.104 to 1.105.")
 

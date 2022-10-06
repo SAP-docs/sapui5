@@ -161,12 +161,6 @@ When we now click the *Back* button, it works as expected and brings us back to 
 -   Think carefully about all navigation patterns in your application, otherwise the user might get stuck
 
 
-**Parent topic:** [Navigation and Routing](navigation-and-routing-1b6dcd3.md "SAPUI5 comes with a powerful routing API that helps you control the state of your application efficiently. This tutorial will illustrate all major features and APIs related to navigation and routing in SAPUI5 apps by creating a simple and easy to understand mobile app. It represents a set of best practices for applying the navigation and routing features of SAPUI5 to your applications.")
-
-**Next:** [Step 4: Add a Back Button to Not Found Page](step-4-add-a-back-button-to-not-found-page-66670b0.md "When we are on the Not Found page because of an invalid hash, we want to get back to our app to select another page. Therefore, we will add a Back button to the Not Found view and make sure that the user gets redirected to either the previous page or the overview page when the Back button is pressed.")
-
-**Previous:** [Step 6: Navigate to Routes with Hard-Coded Patterns](step-6-navigate-to-routes-with-hard-coded-patterns-782aac0.md "In this step, we'll create a second button on the home page, with which we can navigate to a simple list of employees. This example illustrates how to navigate to a route that has a hard-coded pattern.")
-
 **Related Information**  
 
 

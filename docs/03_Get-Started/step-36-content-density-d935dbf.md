@@ -159,12 +159,6 @@ You should now be familiar with the major development paradigms and concepts of 
 
 If you want to dive deeper into specific topics, you can use the other tutorials that show some of the aspects of this Walkthrough and advanced topics in more detail.
 
-**Parent topic:** [Walkthrough](walkthrough-3da5f4b.md "In this tutorial we will introduce you to all major development paradigms of SAPUI5.")
-
-**Next:** [Step 35: Device Adaptation](step-35-device-adaptation-d63a15e.md "We now configure the visibility and properties of controls based on the device that we run the application on. By making use of the sap.ui.Device API and defining a device model we will make the app look great on many devices.")
-
-**Previous:** [Step 37: Accessibility](step-37-accessibility-ff7cab1.md "As the last step in this tutorial, we are going to improve the accessibility of our app.")
-
 **Related Information**  
 
 

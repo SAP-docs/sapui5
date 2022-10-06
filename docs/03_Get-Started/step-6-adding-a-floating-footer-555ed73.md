@@ -143,9 +143,3 @@ sap.ui.define([
 
 Finally, we create the controller and add a simple function to it to show and hide the footer.
 
-**Parent topic:** [Flexible Column Layout App](flexible-column-layout-app-c4de2df.md "In this tutorial, we showcase how to structure your SAPUI5 app using the layout patterns that comply with the SAP Fiori design guidelines.")
-
-**Next:** [Step 5: Using Object Page Layout as a Detail Page](step-5-using-object-page-layout-as-a-detail-page-d1ffe61.md "In this step, we add sap.uxap.ObjectPageLayout to the detail page to display more information about each product.")
-
-**Previous:** [Step 7: Routing](step-7-routing-7f65131.md "In this step, we utilize the sap.f.routing.Router.")
-

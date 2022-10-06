@@ -142,16 +142,3 @@ The custom data key is “chartQualifier”. There are three different options s
 -   by calling data function
 -   by calling addCustomData function
 
--   **[Smart Bullet Micro Chart](smart-bullet-micro-chart-b28959d.md "The sap.ui.comp.smartmicrochart.SmartBulletMicroChart control
-		creates an sap.suite.ui.microchart.BulletMicroChart control based on OData
-		metadata. ")**  
-The `sap.ui.comp.smartmicrochart.SmartBulletMicroChart` control creates an `sap.suite.ui.microchart.BulletMicroChart` control based on OData metadata.
--   **[Smart Area Micro Chart](smart-area-micro-chart-283cdca.md "The sap.ui.comp.smartmicrochart.SmartAreaMicroChart control creates
-		an sap.suite.ui.microchart.AreaMicroChart control based on OData
-		metadata.")**  
-The `sap.ui.comp.smartmicrochart.SmartAreaMicroChart` control creates an `sap.suite.ui.microchart.AreaMicroChart` control based on OData metadata.
--   **[Smart Radial Micro Chart](smart-radial-micro-chart-f8b3103.md "The sap.ui.comp.smartmicrochart.SmartRadialMicroChart control
-		creates an sap.suite.ui.microchart.RadialMicroChart control based on OData
-		metadata.")**  
-The `sap.ui.comp.smartmicrochart.SmartRadialMicroChart` control creates an `sap.suite.ui.microchart.RadialMicroChart` control based on OData metadata.
-

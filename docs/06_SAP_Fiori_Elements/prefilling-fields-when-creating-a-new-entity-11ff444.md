@@ -53,6 +53,3 @@ Applications can define `NewAction` and its parameters to ensure that end users 
 > </Annotation>
 > ```
 
--   **[Validation of Required Fields in Non-draft Applications](validation-of-required-fields-in-non-draft-applications-400565b.md "")**  
-
-

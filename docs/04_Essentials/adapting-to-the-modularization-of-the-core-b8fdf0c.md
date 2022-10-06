@@ -33,11 +33,3 @@ To benefit from the improvements provided by the modules, perform the following 
 -   Do **not** use the global `sap.ui` factory functions. Instead, use their replacements, see [Legacy Factories Replacement](legacy-factories-replacement-491bd9c.md).
 
 
--   **[Legacy jQuery.sap Replacement](legacy-jquery-sap-replacement-a075ed8.md "Overview of the mapping of legacy APIs to the new APIs for the migration")**  
-Overview of the mapping of legacy APIs to the new APIs for the migration
--   **[Legacy Factories Replacement](legacy-factories-replacement-491bd9c.md "Overview of the replacement of global functions with the factory
-		functions")**  
-Overview of the replacement of global functions with the factory functions
--   **[Troubleshooting](troubleshooting-20f6ea7.md "")**  
-
-

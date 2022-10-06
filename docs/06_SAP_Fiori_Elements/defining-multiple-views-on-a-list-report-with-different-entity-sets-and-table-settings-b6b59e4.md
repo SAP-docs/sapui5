@@ -161,7 +161,7 @@ Each table display the data of an `entitySet` and reads a `SelectionVariant` \(S
 To define a `SelectionVariant` for `entityA` and a `SelectionPresentationVariant` for `entityB` that you want to display on each tab, for the entities that you want to show, proceed as shown in the sample code below:
 
 > ### Sample Code:  
-> SV and SPV for two `entitySets` - XML
+> XML Annotation for SV and SPV for two `entitySets`
 > 
 > ```
 > <Annotations Target="myService.entityB">
@@ -227,7 +227,7 @@ To define a `SelectionVariant` for `entityA` and a `SelectionPresentationVariant
 > ```
 
 > ### Sample Code:  
-> SV and SPV for two `entitySets` - CDS
+> CAP CDS Annotation for SV and SPV for two `entitySets`
 > 
 > ```
 > annotate entityB with @(
@@ -294,7 +294,7 @@ Once the SV and SPV are defined for the two `entitySets`, you must configure the
 >             "name": "sap.fe.templates.ListReport",
 >             "options": {
 >                 "settings": {
->                     "entitySet": "SecondDraft",
+>                     "entitySet": "entityA",
 >                     "views": {
 >                         "paths": [
 >                             {
@@ -303,7 +303,7 @@ Once the SV and SPV are defined for the two `entitySets`, you must configure the
 >                             },
 >                             {
 >                                 "key": "tab2",
->                                 "entitySet": "FirstDraft",
+>                                 "entitySet": "entityB",
 >                                 "annotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#One"
 >                             }
 >                         ]
@@ -318,6 +318,61 @@ Once the SV and SPV are defined for the two `entitySets`, you must configure the
 As a result, you can see the two tabs in the application:
 
  ![](images/Multiple_Entity_Sets_in_Multiple_Table_Mode_dac86fa.png) 
+
+**Defining Different Table Configurations Using `controlConfiguration`**
+
+You can define different table configurations for each entity set by prefixing the annotation key with the name of the entity set in the controlConfiguration of the `manifest.json`.
+
+The following sample code shows different personalization settings per table \(with no personalization for EntityA and a column personalization and a filter personalization for EntityB\):
+
+> ### Sample Code:  
+> `manifest.json`
+> 
+> ```
+> "targets": {
+>     "DraftList": {
+>         "type": "Component",
+>         "id": "DraftList",
+>         "name": "sap.fe.templates.ListReport",
+>         "options": {
+>             "settings": {
+>                 "entitySet": "EntityA",
+>                 "views": {
+>                     "paths": [
+>                         {
+>                             "key": "tab1",
+>                             "annotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant"
+>                         },
+>                         {
+>                             "key": "tab2",
+>                             "entitySet": "EntityB",
+>                             "annotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant"
+>                         }
+>                     ]
+>                 },
+>                 "controlConfiguration": {
+>                     "@com.sap.vocabularies.UI.v1.LineItem": {
+>                         "tableSettings": {
+>                             "personalization": false
+>                         }
+>                     },
+>                     "/EntityB/@com.sap.vocabularies.UI.v1.LineItem": {
+>                         "tableSettings": {
+>                             "personalization": {
+>                                 "column": true,
+>                                 "sort": false,
+>                                 "filter": true,
+>                                 "group": false
+>                             }
+>                         }
+>                     }
+>                 }
+>             }
+>         }
+>     },
+>     ...
+> }
+> ```
 
 
 

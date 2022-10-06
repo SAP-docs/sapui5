@@ -166,8 +166,3 @@ You can use densities in the following way:
     Also, keep in mind that the *Condensed* density has an effect on controls in the `sap.ui.table` library and their content only. If the density is set for controls outside of these tables, it will not have any effect on them.
 
 
--   **[How to Use Densities for Controls](how-to-use-densities-for-controls-13e6f3b.md "How content densities are set and how they can be used in the SAP Fiori launchpad is
-		explained and shown in the following code samples (using the Compact
-		density as an example).")**  
-How content densities are set and how they can be used in the SAP Fiori launchpad is explained and shown in the following code samples \(using the *Compact* density as an example\).
-

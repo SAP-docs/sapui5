@@ -6,7 +6,7 @@ The *Technical Information* dialog shows details of the SAPUI5 version currently
 
 To open the technical information dialog from within a supported desktop browser, use the following [shortcut](../02_Read-Me-First/keyboard-shortcuts-for-sapui5-tools-154844c.md):
 
-  [Ctrl\] + [Shift\] + [Alt\] / [Option\] + [P\] 
+  [Ctrl\] + [Shift\] + [Left-Alt\] / [Left-Option\] + [P\] 
 
 ![Technical Information Dialog](../03_Get-Started/images/Technical_Information_Dialog_SAPUI5_8cec8a2.png)
 

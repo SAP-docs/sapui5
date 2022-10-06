@@ -192,12 +192,6 @@ Finally, add the new string for the button tooltip to the resource bundle file. 
 > ### Note:  
 > As this feature covers both conversion and interaction parts, we could also have written an integration test for it to test the interaction part also. Feel free to add an integration test for this feature if you like, we will skip it here to focus on unit testing in this step.
 
-**Parent topic:** [Testing](testing-291c912.md "In this tutorial we will test application functionality with the testing tools that are delivered with SAPUI5. At different steps of this tutorial you will write tests using QUnit, OPA5, and the OData V2 mock server. Additionally, you will learn about testing strategies, Test Driven Development (TDD), and much more.")
-
-**Next:** [Step 4: Testing a New Module](step-4-testing-a-new-module-a5bb7a6.md "In the first unit test we have just extended the formatters module with a new function. Now we will write a unit test that will test the functionality of an entirely new module.")
-
-**Previous:** [Step 6: A First OPA Test](step-6-a-first-opa-test-1b47457.md "A bulletin board may contain many posts. We expect to have a high data load once it is officially released. Then, there might be performance issues and long loading times if we display all entries at the same time. Therefore we will introduce a feature that limits the initial display to 20 items. The user can then click on a more button to view more items. As with the unit test, we start by writing an integration test for this feature and then add the application functionality later.")
-
 **Related Information**  
 
 

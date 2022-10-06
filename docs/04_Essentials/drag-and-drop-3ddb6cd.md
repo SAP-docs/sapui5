@@ -60,16 +60,6 @@ If `dragEnter` is allowed, the user can now drop an object by releasing the mous
 > ### Note:  
 > The `DragAndDrop` handler does not provide any default drop handler implementation. This is up to the application developers.
 
--   **[Drag-and-Drop Configuration](drag-and-drop-configuration-56007f4.md "To use drag and drop, you have to provide the required configuration using the
-			dragDropConfig aggregation in
-		sap.ui.core.Element.")**  
-To use drag and drop, you have to provide the required configuration using the `dragDropConfig` aggregation in `sap.ui.core.Element`.
--   **[Drag-and-Drop Metadata](drag-and-drop-metadata-da7f3fc.md "To influence the drag-and-drop behavior, use the metadata definition of a
-		control.")**  
-To influence the drag-and-drop behavior, use the metadata definition of a control.
--   **[Drag-and-Drop Restrictions](drag-and-drop-restrictions-81e3f38.md "There are some known restrictions when using drag and drop.")**  
-There are some known restrictions when using drag and drop.
-
 **Related Information**  
 
 

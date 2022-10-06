@@ -103,9 +103,3 @@ sap.ui.define([
 
 This formatter takes the respective values and returns a string that will then be set as a property of the `DeltaMicroChart`.
 
-**Parent topic:** [Ice Cream Machine](ice-cream-machine-e5b7f8a.md "In this tutorial, we will show you how to use SAPUI5 controls like Generic Tiles, Micro Charts, and Process Flow.")
-
-**Next:** [Step 8: Comparison Micro Chart](step-8-comparison-micro-chart-3f586aa.md "In this step, we will create the ComparisonMicroChart on the Production Process page.")
-
-**Previous:** [Step 10: Line Micro Chart](step-10-line-micro-chart-819beea.md "In this step, we will create the LineMicroChart on the Production Process page.")
-

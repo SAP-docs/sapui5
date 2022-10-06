@@ -92,10 +92,6 @@ We load two UI controls - a button and a message toast - and place the button in
 
 Now, start the webserver, serve the sources of the \`webapp\` folder, and open the `index.html` file in your browser. When the button is pressed, a message toast with the "Hello World" message is shown at the bottom of the screen.
 
-**Parent topic:** [Quick Start](quick-start-592f36f.md "Unleash your SAPUI5 skills with this simple three-step tutorial. We start with a simple &quot;Hello World&quot; example, and convert it to a minimalist two-page app.")
-
-**Previous:** [Step 2: Steady...](step-2-steady-128214a.md "Now we extend our minimalist HTML page to a basic app with a view and a controller.")
-
 **Related Information**  
 
 

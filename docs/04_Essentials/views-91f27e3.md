@@ -31,31 +31,6 @@ A view can also be defined as a [typed view](typed-view-e6bb33d.md), representin
 > ### Note:  
 > Typed views are available since SAPUI5 1.88
 
--   **[XML View](xml-view-91f2928.md "The XML view type is defined in an XML file. The file name either ends with
-			.view.xml or as an XML string. The file name and the folder structure
-		together specify the name of the view that equals the SAPUI5 module name. ")**  
-The XML view type is defined in an XML file. The file name either ends with `.view.xml` or as an XML string. The file name and the folder structure together specify the name of the view that equals the SAPUI5 module name.
--   **[JSON View](json-view-91f2852.md "The JSON view type is defined in a file. The file name has to either end with
-			.view.json or as a JSON string. The file name and the folder structure
-		together specify the name of the view that equals the SAPUI5 module name within the
-		modularization concept.")**  
-The JSON view type is defined in a file. The file name has to either end with `.view.json` or as a JSON string. The file name and the folder structure together specify the name of the view that equals the SAPUI5 module name within the modularization concept.
--   **[Typed View](typed-view-e6bb33d.md "A view can also be defined by extending the sap.ui.core.mvc.View class. Such a view is referred to as a typed view. This
-		means the view definition represents its own view class.")**  
-A view can also be defined by extending the `sap.ui.core.mvc.View` class. Such a view is referred to as a typed view. This means the view definition represents its own view class.
--   **[HTML View](html-view-9756f47.md "An HTML View is defined by declarative HTML. Like the declarative support, the HTML
-		view supports embedded HTML. The view file ends with view.html, for example
-			myview.view.html.")**  
-An HTML View is defined by declarative HTML. Like the declarative support, the HTML view supports embedded HTML. The view file ends with `view.html`, for example `myview.view.html`.
--   **[Instantiating Views](instantiating-views-68d0e58.md "To instantiate views asychronously, SAPUI5 provides the factory
-		method View.create defined in module
-		sap/ui/core/mvc/View.")**  
-To instantiate views asychronously, SAPUI5 provides the factory method `View.create` defined in module `sap/ui/core/mvc/View`.
--   **[View Cloning](view-cloning-a575619.md "For normal controls, view cloning bases on control settings that are described by SAPUI5 metadata, such as
-		properties, aggregations, associations, and event handlers. The clone operation collects
-		these settings and creates a new instance.")**  
-For normal controls, view cloning bases on control settings that are described by SAPUI5 metadata, such as properties, aggregations, associations, and event handlers. The clone operation collects these settings and creates a new instance.
-
 **Related Information**  
 
 

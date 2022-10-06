@@ -87,12 +87,6 @@ To be able to access the currency code that is not part of our data model, we de
 -   Use data types instead of custom formatters whenever possible.
 
 
-**Parent topic:** [Walkthrough](walkthrough-3da5f4b.md "In this tutorial we will introduce you to all major development paradigms of SAPUI5.")
-
-**Next:** [Step 19: Aggregation Binding](step-19-aggregation-binding-bf71375.md "Now that we have established a good structure for our app, it's time to add some more functionality. We start exploring more features of data binding by adding some invoice data in JSON format that we display in a list below the panel.")
-
-**Previous:** [Step 21: Expression Binding](step-21-expression-binding-c98d573.md "Sometimes the predefined types of SAPUI5 are not flexible enough and you want to do a simple calculation or formatting in the view - that is where expressions are really helpful. We use them to format our price according to the current number in the data model.")
-
 **Related Information**  
 
 

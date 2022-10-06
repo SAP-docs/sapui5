@@ -194,18 +194,3 @@ Start a screen reader, start the application, walk through the application using
 -   Are screen updates like application messages, dialogs \(popups\), and similar dynamic content read correctly and at the right time?
 
 
--   **[Landmark API](landmark-api-fd7f9d4.md "The landmark API allows app developers to set different roles and labels that allow
-		users to access the sections of the page using the screen reader
-		functions/shortcuts.")**  
-The landmark API allows app developers to set different roles and labels that allow users to access the sections of the page using the screen reader functions/shortcuts.
--   **[Labeling and Tooltips](labeling-and-tooltips-329a029.md "The following guidelines help you properly label your controls in order to have good
-		accessibility.")**  
-The following guidelines help you properly label your controls in order to have good accessibility.
--   **[Invisible Messaging](invisible-messaging-b9a7d6f.md "The Invisible Message class provides a way to grammatically expose dynamic content
-		changes in a way that can be announced by screen readers.")**  
-The Invisible Message class provides a way to grammatically expose dynamic content changes in a way that can be announced by screen readers.
--   **[Dialogs, Popups, and Popovers](dialogs-popups-and-popovers-5709e73.md "SAPUI5 dialog controls can
-		serve different purposes within the application and are therefore handled differently by the
-		screen reader. ")**  
-SAPUI5 dialog controls can serve different purposes within the application and are therefore handled differently by the screen reader.
-

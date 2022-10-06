@@ -52,12 +52,6 @@ sap.ui.require([
 
 The `text` property of the `sap.m.Text` control is set to the value `{/greetingText}`. The curly brackets enclosing a binding path \(binding syntax\) are automatically interpreted as a binding. These binding instances are called `PropertyBindings`. In this case, the control's `text` property is bound to the `greetingText` property at the root of the default model, as the slash \(`/`\) at the beginning of the binding path denotes an absolute binding path.
 
-**Parent topic:** [Data Binding](data-binding-e531093.md "In this tutorial, we will explain the concepts of data binding in SAPUI5.")
-
-**Next:** [Step 2: Creating a Model](step-2-creating-a-model-5278bfd.md "In this step, we create a model as container for the data on which your application operates.")
-
-**Previous:** [Step 4: Two-Way Data Binding](step-4-two-way-data-binding-c72b922.md "In the examples used so far, we have used a read-only field to display the value of a model property. We will now change the user interface so that the first and last name fields are displayed using sap.m.Input fields and an additional check box control is used to enable or disable both input fields. This arrangement illustrates a feature known as &quot;two-way data binding&quot;. Now that the view contains more controls, we will also move the view definition into an XML file.")
-
 **Related Information**  
 
 

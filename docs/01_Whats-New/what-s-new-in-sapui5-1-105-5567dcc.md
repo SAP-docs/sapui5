@@ -47,6 +47,47 @@ Announcement
 </td>
 <td valign="top">
 
+**Deactivation of Default Time Zone Configuration Feature**
+
+We needed to deactivate the feature to configure the default time zone via the time zone configuration option in [`sap.ui.core.Configuration`](https://ui5.sap.com/#/api/sap.ui.core.Configuration) and the API method [`sap.ui.core.Configuration.setTimezone`](https://ui5.sap.com/#/api/sap.ui.core.Configuration/methods/setTimezone). Reason: There was a risk that dates are visualized by one day off. This wrong date might have been persisted to the back end.
+
+This feature was introduced with UI5 1.102.0. The following UI5 versions still contain this feature:
+
+-   1.102.0 to 1.102.5
+-   1.103
+-   1.104
+
+If you are on one of these releases, we recommend that you upgrade to a higher version where this feature is deactivated.
+
+We plan to bring this feature back in a different form at a later point in time.
+
+
+
+</td>
+<td valign="top">
+
+Deactivated as of:
+
+1.106
+
+1.105
+
+1.102.6
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Announcement
+
+
+
+</td>
+<td valign="top">
+
 **Reminder: Outdated SAPUI5 Versions to Be Removed from the CDN**
 
 For security reasons, SAPUI5 versions that are no longer maintained will be removed from the UI5 content delivery network \(CDN\) one year after their end of maintenance. If a version is still in maintenance, patches of that version that are older than one year will also be removed. We have noted that a number of customers are still using such outdated versions or patches. If this affects you, please note that once these versions or patches are removed, your applications will break. Please update to a more recent version or patch. For more information, see: [Removing Outdated UI5 Versions from UI5 CDN](https://blogs.sap.com/2021/01/26/removing-outdated-ui5-versions-from-ui5-cdn/) as well as the UI5 notifications in the Demo Kit.
@@ -365,10 +406,10 @@ The following changes and new features are available for SAP Fiori elements for 
 </tr>
 </table>
 
-**Parent topic:** [Previous Versions](previous-versions-6660a59.md "")
-
 **Related Information**  
 
+
+[What's New in SAPUI5 1.106](what-s-new-in-sapui5-1-106-c70bb90.md "With this release SAPUI5 is upgraded from version 1.105 to 1.106.")
 
 [What's New in SAPUI5 1.104](what-s-new-in-sapui5-1-104-f01ebd4.md "With this release SAPUI5 is upgraded from version 1.103 to 1.104.")
 

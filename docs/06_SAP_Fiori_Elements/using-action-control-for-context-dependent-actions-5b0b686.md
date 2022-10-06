@@ -22,6 +22,9 @@ If the condition, as defined by the applicable-path variable, is not fulfilled, 
 
 -   The action is disabled for header buttons in a table
 
+    > ### Note:  
+    > In addition to `sap:applicable-path`, it is not recommended to use `UI.Hidden` for `DataFieldForAction` within page header. If `UI.Hidden` is defined, it takes the precedence and may result in a deviation from the UX recommended behaviour for button visibility.
+
 
 > ### Sample Code:  
 > ```

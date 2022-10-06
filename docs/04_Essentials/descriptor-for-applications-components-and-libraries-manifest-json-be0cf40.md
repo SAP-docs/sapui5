@@ -1101,6 +1101,29 @@ Version 47
 
 </td>
 </tr>
+<tr>
+<td valign="top">
+
+Version 48
+
+
+
+</td>
+<td valign="top">
+
+\>=1.107
+
+
+
+</td>
+<td valign="top">
+
+1.47.0
+
+
+
+</td>
+</tr>
 </table>
 
 For more information on the new fields introduced in each version, check out [Migration Information for Upgrading the Descriptor File](migration-information-for-upgrading-the-descriptor-file-a110f76.md)
@@ -2665,7 +2688,7 @@ Current version of the `manifest.json`
 ```
 
 {
-    "_version": "1.46.0",
+    "_version": "1.47.0",
  
     "start_url": "index.html",
  
@@ -2917,7 +2940,7 @@ Current version of the `manifest.json`
             }]
         },
         "dependencies": {
-            "minUI5Version": "1.106.0",
+            "minUI5Version": "1.107.0",
             "libs": {
                 "sap.m": {
                     "minVersion": "1.34.0"
@@ -3130,32 +3153,6 @@ sap.ui.require(['sap/samples/Component'], function(SampleComponent) {
 	
 });
 ```
-
--   **[Migrating from Component Metadata to Descriptor](migrating-from-component-metadata-to-descriptor-e282db2.md "Overview, how the component metadata are mapped to the descriptor. ")**  
-Overview, how the component metadata are mapped to the descriptor.
--   **[Descriptor for Libraries](descriptor-for-libraries-b229914.md "The descriptor for libraries contains a subset of the attributes in the descriptor for
-		applications and components.")**  
-The descriptor for libraries contains a subset of the attributes in the descriptor for applications and components.
--   **[Descriptor for Components \(Inside Libraries\)](descriptor-for-components-inside-libraries-7701636.md "The descriptor for components contains a subset of the attributes in the descriptor
-		for applications ")**  
-The descriptor for components contains a subset of the attributes in the descriptor for applications
--   **[The resources.json File](the-resources-json-file-adcbcf8.md "The resources.json file lists all resources in a component or library folder. It resides next to each
-			manifest.json in the generated results.")**  
-The `resources.json` file lists all resources in a component or library folder. It resides next to each `manifest.json` in the generated results.
--   **[Creating a Descriptor File for Existing Apps](creating-a-descriptor-file-for-existing-apps-3a9baba.md "Detailed description of the steps needed to create a descriptor V2 for applications
-        file for an existing transactional app
-            created by the customer based on SAP Fiori.")**  
-Detailed description of the steps needed to create a descriptor V2 for applications file for an existing transactional app created by the customer based on SAP Fiori.
--   **[Descriptor Dependencies to Libraries and Components](descriptor-dependencies-to-libraries-and-components-8521ad1.md "Description of the performance-relevant attributes that are available for the descriptor
-		for applications, components and libraries")**  
-Description of the performance-relevant attributes that are available for the descriptor for applications, components and libraries
--   **[Manifest Model Preload](manifest-model-preload-26ba6a5.md "The preload flag  enables a preload mode for a model, thus improving
-		the startup performance of an app or component.")**  
-The `preload` flag enables a preload mode for a model, thus improving the startup performance of an app or component.
--   **[Enabling the Automatic SAP Fiori 2.0 Header Adaptation in the Descriptor](enabling-the-automatic-sap-fiori-2-0-header-adaptation-in-the-descriptor-0635156.md "Application developers can enable automatic adaptation of their existing applications
-		from the manifest.json app descriptor. This helps to easily convert applications to the new
-		look-and-feel of SAP Fiori 2.0. ")**  
-Application developers can enable automatic adaptation of their existing applications from the manifest.json app descriptor. This helps to easily convert applications to the new look-and-feel of SAP Fiori 2.0.
 
 [sap.ui.core.UIComponent](https://ui5.sap.com/#/api/sap.ui.core.UIComponent)
 

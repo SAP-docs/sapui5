@@ -39,7 +39,3 @@ End users can customize their overview pages in the following ways:
 -   Filter the information displayed in cards by defining the values or range of values to be displayed for a specific field. For example, display only orders for which the supply date has passed.
 
 
--   **[Key User Capabilities](key-user-capabilities-4966938.md "A key user is a special role that lets you perform user interface adaptation in overview
-		page application.")**  
-A key user is a special role that lets you perform user interface adaptation in overview page application.
-

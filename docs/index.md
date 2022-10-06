@@ -4,8 +4,9 @@ Demo Kit Version
 
 -   [SAPUI5: UI Development Toolkit for HTML5](sapui5-ui-development-toolkit-for-html5-95d113b.md)
     -   [What's New in SAPUI5](01_Whats-New/what-s-new-in-sapui5-99ac68a.md)
-        -   [What's New in SAPUI5 1.106](01_Whats-New/what-s-new-in-sapui5-1-106-c70bb90.md)
+        -   [What's New in SAPUI5 1.107](01_Whats-New/what-s-new-in-sapui5-1-107-b88b40e.md)
         -   [Previous Versions](01_Whats-New/previous-versions-6660a59.md)
+            -   [What's New in SAPUI5 1.106](01_Whats-New/what-s-new-in-sapui5-1-106-c70bb90.md)
             -   [What's New in SAPUI5 1.105](01_Whats-New/what-s-new-in-sapui5-1-105-5567dcc.md)
             -   [What's New in SAPUI5 1.104](01_Whats-New/what-s-new-in-sapui5-1-104-f01ebd4.md)
             -   [What's New in SAPUI5 1.103](01_Whats-New/what-s-new-in-sapui5-1-103-7534ae8.md)
@@ -1284,7 +1285,6 @@ Demo Kit Version
                 -   [Table Design](10_More_About_Controls/table-design-d3234bc.md)
                 -   [List and Table Events](10_More_About_Controls/list-and-table-events-35b8a94.md)
                 -   [Growing Feature for Table and List](10_More_About_Controls/growing-feature-for-table-and-list-9164ba7.md)
-                -   [Grouping in a Table](10_More_About_Controls/grouping-in-a-table-4c98cf1.md)
                 -   [Table Personalization](10_More_About_Controls/table-personalization-1c60212.md)
                 -   [Performance of Lists and Tables](10_More_About_Controls/performance-of-lists-and-tables-f6a1a0a.md)
             -   [Message Handling](10_More_About_Controls/message-handling-f5df293.md)

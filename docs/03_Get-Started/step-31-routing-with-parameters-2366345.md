@@ -158,12 +158,6 @@ The `bindElement` function is creating a binding context for a SAPUI5 control an
 -   Define the routing configuration in the `AppDescriptor`
 
 
-**Parent topic:** [Walkthrough](walkthrough-3da5f4b.md "In this tutorial we will introduce you to all major development paradigms of SAPUI5.")
-
-**Next:** [Step 30: Routing and Navigation](step-30-routing-and-navigation-e5200ee.md "So far, we have put all app content on one single page. As we add more and more features, we want to split the content and put it on separate pages.")
-
-**Previous:** [Step 32: Routing Back and History](step-32-routing-back-and-history-8ef57cf.md "Now we can navigate to our detail page and display an invoice, but we cannot go back to the overview page yet. We'll add a back button to the detail page and implement a function that shows our overview page again.")
-
 **Related Information**  
 
 

@@ -49,12 +49,6 @@ This Asynchronous Module Definition \(AMD\) syntax allows to clearly separate th
 -   Use the name of the artifact to load for naming the function parameters \(without namespace\).
 
 
-**Parent topic:** [Walkthrough](walkthrough-3da5f4b.md "In this tutorial we will introduce you to all major development paradigms of SAPUI5.")
-
-**Next:** [Step 5: Controllers](step-5-controllers-50579dd.md "In this step, we replace the text with a button and show the “Hello World” message when the button is pressed. The handling of the button's press event is implemented in the controller of the view.")
-
-**Previous:** [Step 7: JSON Model](step-7-json-model-70ef981.md "Now that we have set up the view and controller, it’s about time to think about the M in MVC.")
-
 **Related Information**  
 
 

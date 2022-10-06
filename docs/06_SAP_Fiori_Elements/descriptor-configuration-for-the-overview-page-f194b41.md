@@ -77,13 +77,3 @@ To load cards with specific requirements, define a default size as part of the c
 }
 ```
 
--   **[Configuring Dependencies to SAPUI5 Libraries](configuring-dependencies-to-sapui5-libraries-ef5f16b.md "To improve loading time, you can define dependencies to SAPUI5 libraries required by
-		your application. ")**  
-To improve loading time, you can define dependencies to SAPUI5 libraries required by your application.
--   **[Configuring the Global Filter](configuring-the-global-filter-73d9693.md "The global filter lets end users filter the data displayed on one or more
-		cards.")**  
-The global filter lets end users filter the data displayed on one or more cards.
--   **[Refresh Entity Sets in sap-keep-alive Mode in the Overview Pages](refresh-entity-sets-in-sap-keep-alive-mode-in-the-overview-pages-0c35c87.md "sap-keep-alive is an SAP Fiori launchpad feature that ensures that a view
-		is not destroyed in the view cache when navigating away from the application.")**  
-`sap-keep-alive` is an SAP Fiori launchpad feature that ensures that a view is not destroyed in the view cache when navigating away from the application.
-

@@ -139,22 +139,3 @@ If an application developer has defined header facets as stashed in the manifest
 
 For more information, see to [Adapting the UI](adapting-the-ui-59bfd31.md).
 
--   **[Enabling Simple Header Facets](enabling-simple-header-facets-9422074.md "If you want to display more content in your header facet, you can enable the simple
-		header facet.")**  
-If you want to display more content in your header facet, you can enable the simple header facet.
--   **[Plain Text Facet](plain-text-facet-1da0926.md)**  
-
--   **[Contact Facet](contact-facet-214dc25.md)**  
-
--   **[Micro Chart Facet](micro-chart-facet-e219fd0.md "You can add a MicroChart control to a facet within the header area on the object page.")**  
-You can add a `MicroChart` control to a facet within the header area on the object page.
--   **[Header Field Group](header-field-group-ff0ae0b.md)**  
-
--   **[Data Points](data-points-c2a389a.md)**  
-
--   **[Form Facet](form-facet-ebe05d5.md "You can add a form facet to the object page header. ")**  
-You can add a form facet to the object page header.
--   **[Address Facet in the Object Page Header](address-facet-in-the-object-page-header-0b73cbb.md "If you add a UI.ReferenceFacet that points to
-		an address annotation, an address facet is displayed in the object page header.")**  
-If you add a `UI.ReferenceFacet` that points to an address annotation, an address facet is displayed in the object page header.
-

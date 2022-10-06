@@ -253,10 +253,6 @@ There are additional tabs that can help you to analyze performance problems or m
 -   *Application* or *Resources*
 
 
-**Parent topic:** [Troubleshooting](troubleshooting-5661952.md "In this tutorial, we will show you some tools that will help you if you run into problems with your SAPUI5 app.")
-
-**Previous:** [Step 2: Technical Information Dialog](step-2-technical-information-dialog-63c97ef.md "In this tutorial step, we will have a closer look at the &quot;Technical Information Dialog&quot;. This tool comes in handy whenever you want to know the technical details of the running application, and also has some other useful features.")
-
 **Related Information**  
 
 

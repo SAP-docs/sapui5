@@ -50,34 +50,3 @@ To **change** an application that was shipped by SAP, you must first import the 
 
 A configuration that was created or enhanced using the APF Configuration Modeler is stored in a table. Each configuration has its own table entry with its own ID. At runtime, the configuration is read from the table, that is, JSON files are not used in this scenario.When you import the JSON file of a shipped application into the APF Configuration Modeler to enhance the application, the configuration is also written into a table.
 
--   **[Adding an Application](adding-an-application-1eef736.md "")**  
-
--   **[Creating a Configuration](creating-a-configuration-ae92e0f.md "")**  
-
--   **[Creating Categories](creating-categories-3a57f71.md "")**  
-
--   **[Creating Steps](creating-steps-9b35f53.md "")**  
-
--   **[Creating Hierarchical Steps](creating-hierarchical-steps-694956f.md "")**  
-
--   **[Creating Representations](creating-representations-41e2803.md "")**  
-
--   **[Configuring Filters](configuring-filters-4393cc4.md "")**  
-
--   **[Creating Navigation Targets](creating-navigation-targets-d5762bc.md "")**  
-
--   **[Executing a Configuration](executing-a-configuration-69bed7d.md "")**  
-
--   **[Deleting Objects](deleting-objects-c566b4b.md "")**  
-
--   **[Text Pool Cleanup](text-pool-cleanup-80fa245.md "")**  
-
--   **[Import](import-6528aa8.md "")**  
-
--   **[Export](export-7de4975.md "")**  
-
--   **[Transporting Configurations in SAP S/4HANA Cloud](transporting-configurations-in-sap-s-4hana-cloud-7d5e418.md "")**  
-
--   **[Translation](translation-4510c30.md "")**  
-
-

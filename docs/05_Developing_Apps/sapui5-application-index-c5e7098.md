@@ -28,24 +28,3 @@ The index contains the following:
 
 [Monitoring](monitoring-7b89328.md)
 
--   **[How is the Index Calculated?](how-is-the-index-calculated-8a4856a.md "The index is calculated by the report Calculation of SAPUI5 Application Index
-			for SAPUI5 Repositories (/UI5/APP_INDEX_CALCULATE). The
-		index is empty initially and needs to be calculated from scratch.")**  
-The index is calculated by the report *Calculation of SAPUI5 Application Index for SAPUI5 Repositories* \(`/UI5/APP_INDEX_CALCULATE`\). The index is empty initially and needs to be calculated from scratch.
--   **[Calculation Report - Automatic Run vs. Manual Scheduling](calculation-report-automatic-run-vs-manual-scheduling-fbce0ba.md "Changes to the content of the SAPUI5 ABAP repository require the
-		index to be updated using the calculation report /UI5/APP_INDEX_CALCULATE.
-		Depending on how the content of the repository is changed, the report is executed
-		automatically or you have to run it manually.")**  
-Changes to the content of the SAPUI5 ABAP repository require the index to be updated using the calculation report `/UI5/APP_INDEX_CALCULATE`. Depending on how the content of the repository is changed, the report is executed automatically or you have to run it manually.
--   **[Check Your SAPUI5 Application](check-your-sapui5-application-3dd3736.md "There are two checks you can do: Are my component IDs unique and valid? Does my app have
-		the necessary SAPUI5 ICF node or
-		are there unnecessary ICF nodes?")**  
-There are two checks you can do: Are my component IDs unique and valid? Does my app have the necessary SAPUI5 ICF node or are there unnecessary ICF nodes?
--   **[Calculation Issues](calculation-issues-d2babc9.md "Any issues during the calculation of the index are written as messages to the
-		application log.")**  
-Any issues during the calculation of the index are written as messages to the application log.
--   **[Monitoring](monitoring-7b89328.md "To monitor the execution of the report /UI5/APP_INDEX_CALCULATE and the
-		calculation results, you can use Computing Center Management System
-		(CCMS).")**  
-To monitor the execution of the report `/UI5/APP_INDEX_CALCULATE` and the calculation results, you can use Computing Center Management System \(CCMS\).
-

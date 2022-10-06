@@ -148,9 +148,3 @@ We adjust the `headerContent` so that the `sap.f.Avatar` displays the specific i
 
 We adjust the *General Information* section to display Product ID, Description and Supplier of the selected product.
 
-**Parent topic:** [Flexible Column Layout App](flexible-column-layout-app-c4de2df.md "In this tutorial, we showcase how to structure your SAPUI5 app using the layout patterns that comply with the SAP Fiori design guidelines.")
-
-**Next:** [Step 7: Routing](step-7-routing-7f65131.md "In this step, we utilize the sap.f.routing.Router.")
-
-**Previous:** [Step 9: Adding a Detail-Detail Page](step-9-adding-a-detail-detail-page-e4d21fd.md "In this step, we create a detail-detail page using sap.f.DynamicPage, which is opened by choosing a supplier from the detail page.")
-

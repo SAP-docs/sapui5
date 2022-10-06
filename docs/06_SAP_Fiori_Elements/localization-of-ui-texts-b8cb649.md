@@ -754,7 +754,7 @@ Delete the selected objects?
 </td>
 <td valign="top">
 
-Message text used in the confirmation message box when a user clicks the *Delete* button to delete multiple selected objects that have no title.
+Message text used in the confirmation message box when a user clicks the *Delete* button to delete multiple selected objects.
 
 
 
@@ -1459,7 +1459,7 @@ Text that is shown on a table and chart when a search is triggered but no data c
 </td>
 <td valign="top">
 
-There are no items for the selected filter criteria and table view.
+There are no items for the selected filter criteria and view.
 
 
 
@@ -2035,6 +2035,128 @@ Label of the action name in the action parameter dialog
 
 </td>
 </tr>
+<tr>
+<td valign="top">
+
+ `C_MASS_EDIT_CONFIRM_MESSAGE` 
+
+
+
+</td>
+<td valign="top">
+
+\{0\} of \{1\} \{3\} can't be edited.
+
+Do you want to edit the remaining \{2\} \{3\}?
+
+
+
+</td>
+<td valign="top">
+
+Text that is shown within the warning message box when some of the selected records in a mass edit scenario are not editable. \{0\} is the count of objects that are not editable. \{1\} is the total count of objects selected. \{2\} is the count of objects that can be edited. \{3\} is the value from `UI.HeaderInfo.TypeNamePlural`.
+
+
+
+</td>
+<td valign="top">
+
+ 
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `C_MASS_EDIT_CONFIRM_MESSAGE_DETAIL_REASON` 
+
+
+
+</td>
+<td valign="top">
+
+Selected \{0\} are excluded if:
+
+
+
+</td>
+<td valign="top">
+
+Text that is shown within warning message box when some of the selected objects in a mass edit scenario are not editable. \{0\} is the value from `UI.HeaderInfo.TypeNamePlural`.
+
+
+
+</td>
+<td valign="top">
+
+ 
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `C_MASS_EDIT_CONFIRM_MESSAGE_DETAIL_REASON_DRAFT` 
+
+
+
+</td>
+<td valign="top">
+
+Somebody is working on the \{0\} \(a draft exists or changes haven't been saved\).
+
+
+
+</td>
+<td valign="top">
+
+Text that is shown within the warning message box when some of the selected objects in a mass edit scenario are not editable. \{0\} is the value from `UI.HeaderInfo.TypeNamePlural`.
+
+
+
+</td>
+<td valign="top">
+
+ 
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `C_MASS_EDIT_CONFIRM_MESSAGE_DETAIL_REASON_NON_EDITABLE` 
+
+
+
+</td>
+<td valign="top">
+
+Editing isn't allowed for the \{0\}.
+
+
+
+</td>
+<td valign="top">
+
+Text that is shown within the warning message box when some of the selected objects in a mass edit scenario are not editable. \{0\} is the value from `UI.HeaderInfo.TypeNamePlural`.
+
+
+
+</td>
+<td valign="top">
+
+ 
+
+
+
+</td>
+</tr>
 </table>
 
 
@@ -2127,14 +2249,4 @@ If the action name is the same but the entity differs, then the second part of t
 
 > ### Example:  
 > `C_OPERATIONS_ACTION_CONFIRM_MESSAGE|_Items|ReturnInProcess=Can you please confirm if you really want to trigger the returns for the chosen items?` 
-
--   **[Support for Terminologies](support-for-terminologies-5f224ec.md "By defining terminologies together with additional resource bundles, an application can easily be switched from one scenario or industry
-		to another.")**  
-By defining terminologies together with additional resource bundles, an application can easily be switched from one scenario or industry to another.
--   **[Maintaining Standard Texts for Tables](maintaining-standard-texts-for-tables-aacfac5.md "In a table, if the system does not find any entries when using the filter, standard UI texts are displayed, which you can adapt in the
-		i18n file of your app.")**  
-In a table, if the system does not find any entries when using the filter, standard UI texts are displayed, which you can adapt in the i18n file of your app.
--   **[Maintaining Standard Texts for Charts](maintaining-standard-texts-for-charts-37cd601.md "For charts in analytical list pages, list reports, and object pages, if the system does not find any entries when using the filters,
-		standard UI texts are displayed, which you can adapt in the i18n file of your app.")**  
-For charts in analytical list pages, list reports, and object pages, if the system does not find any entries when using the filters, standard UI texts are displayed, which you can adapt in the i18n file of your app.
 

@@ -240,12 +240,6 @@ sortNone=the sequence on the server
 
 We add the missing texts to the properties file.
 
-**Parent topic:** [OData V4](odata-v4-bcdbde6.md "In this tutorial, we explore how features of OData V4 can be used in SAPUI5. We write a small app that consumes data from an OData V4 service to understand how to access, modify, aggregate, and filter data in an OData V4 model.")
-
-**Next:** [Step 3: Automatic Data Type Detection](step-3-automatic-data-type-detection-96bb6e0.md "In this step, we use the automatic data type detection of the OData V4 model to parse, validate, and format user entries. The service metadata contains type information for the properties of each entity.")
-
-**Previous:** [Step 5: Batch Groups](step-5-batch-groups-ef2af49.md "In this step, we have a closer look at batch groups. Batch groups are used to group multiple requests into one server request to improve the overall performance.")
-
 **Related Information**  
 
 

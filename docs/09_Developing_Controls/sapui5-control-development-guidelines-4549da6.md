@@ -104,7 +104,3 @@ With regard to the renderer, the following guidelines apply:
 -   `RenderManager.writeClasses()` must be called in the root HTML element of a control; otherwise `addStyleClass` does not work. this does not need to be used in subelements.
 
 
--   **[Control Development Guidelines: Theming/CSS](control-development-guidelines-theming-css-5e08ff9.md "For themes and CSS for control development in SAPUI5, the following
-		guidelines apply.")**  
-For themes and CSS for control development in SAPUI5, the following guidelines apply.
-

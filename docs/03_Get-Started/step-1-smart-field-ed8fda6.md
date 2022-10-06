@@ -128,12 +128,6 @@ The metadata document corresponds to the `$metadata` document of your OData serv
 
 Finally, we include the `Products.json` file \(as referred to in the `metadata.xml` as `EntitySet`\) in our example, which contains the data shown on the UI.
 
-**Parent topic:** [Smart Controls](smart-controls-64bde9a.md "In this tutorial you learn how to work with smart controls.")
-
-**Next:** [Prerequisites](prerequisites-0e84ac7.md "Preparation steps for the Smart Controls tutorial")
-
-**Previous:** [Step 2: Smart Field with Value Help](step-2-smart-field-with-value-help-3361e27.md "You can use the SmartField control in combination with the ValueHelpDialog control that allow you to carry out a complex search in order to identify the value you are looking for.")
-
 **Related Information**  
 
 

@@ -141,7 +141,3 @@ Continuing the example above, the following metadata demonstrates the relationsh
 > 
 > ```
 
--   **[Quick View Cards](quick-view-cards-c4bd35e.md "Quick view cards display detailed information about a single record, in greater depth
-		than would be displayed in a table or list. ")**  
-Quick view cards display detailed information about a single record, in greater depth than would be displayed in a table or list.
-

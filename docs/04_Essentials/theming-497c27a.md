@@ -48,23 +48,6 @@ For all these options, the CSS developer might reduce the styling effort and foc
     For more information, see [CSS Classes for Theme Parameters](css-classes-for-theme-parameters-ea08f53.md).
 
 
--   **[Setting Themes](setting-themes-e9fc648.md "You define which theme is used by your app either in the bootstrap, by using a URL
-		parameter, or by using method sap.ui.getCore.applyTheme.")**  
-You define which theme is used by your app either in the bootstrap, by using a URL parameter, or by using method `sap.ui.getCore.applyTheme`.
--   **[Enhanced Theming Concepts](enhanced-theming-concepts-45df6df.md "On top of pure CSS, SAPUI5
-		offers advanced theming concepts and functions which can be used optionally. These concepts
-		are outlined in detail below.")**  
-On top of pure CSS, SAPUI5 offers advanced theming concepts and functions which can be used optionally. These concepts are outlined in detail below.
--   **[Creating Themable User Interfaces](creating-themable-user-interfaces-a2c67ac.md "There are several things you should keep in mind to ensure that an application can
-		actually be themed.")**  
-There are several things you should keep in mind to ensure that an application can actually be themed.
--   **[CSS Classes for Theme Parameters](css-classes-for-theme-parameters-ea08f53.md "SAPUI5 provides a set of
-		essential adjustable colors behind the generic predefined CSS rules that enable custom
-		content to use the respective CSS classes for the required colors.")**  
-SAPUI5 provides a set of essential adjustable colors behind the generic predefined CSS rules that enable custom content to use the respective CSS classes for the required colors.
--   **[Theming FAQ](theming-faq-d0db4d5.md "Frequently asked questions regarding theming in SAPUI5")**  
-Frequently asked questions regarding theming in SAPUI5
-
 **Related Information**  
 
 

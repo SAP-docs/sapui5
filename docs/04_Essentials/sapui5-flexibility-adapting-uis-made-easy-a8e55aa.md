@@ -89,15 +89,6 @@ If you want to enable key user adaptation for an app that you developed yourself
 
 For a high-level overview on the different features for developers, key users, and end users, see [What is SAPUI5 Flexibility?](https://help.sap.com/viewer/UI5_Flex)
 
--   **[Layering Concept](layering-concept-9e63057.md "SAPUI5 flexibility uses a consistent layering concept to store the UI changes as
-		semantic delta information. This layering concept applies consistently to all users of SAPUI5 flexibility (end users, key users, and developers).")**  
-SAPUI5 flexibility uses a consistent layering concept to store the UI changes as semantic delta information. This layering concept applies consistently to all users of SAPUI5 flexibility \(end users, key users, and developers\).
--   **[Example: Layering of UI Changes](example-layering-of-ui-changes-17d2d4e.md "Here's an example of how the layering of UI changes based on SAPUI5 flexibility
-		works.")**  
-Here's an example of how the layering of UI changes based on SAPUI5 flexibility works.
--   **[Bootstrapping SAPUI5 Flexibility](bootstrapping-sapui5-flexibility-642dab2.md "You can define an alternative route from where to load SAPUI5 flexibility. ")**  
-You can define an alternative route from where to load SAPUI5 flexibility.
-
 **Related Information**  
 
 

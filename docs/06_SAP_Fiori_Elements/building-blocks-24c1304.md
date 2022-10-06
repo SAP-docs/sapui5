@@ -31,26 +31,3 @@ The building blocks provide a unified interface that creates an abstraction from
 
 For more information about building blocks as part of the flexible programming model, see [Flexible Programming Model](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/overview/introduction).
 
--   **[The Field Building Block](the-field-building-block-5260b9c.md "")**  
-
--   **[The Form Building Block](the-form-building-block-391aad2.md "")**  
-
--   **[The FormElement Building Block](the-formelement-building-block-b45f038.md "")**  
-
--   **[The Table Building Block](the-table-building-block-3801656.md "")**  
-
--   **[The FilterBar Building Block](the-filterbar-building-block-7838611.md "")**  
-
--   **[The FilterField Building Block](the-filterfield-building-block-2df7837.md "")**  
-
--   **[The MicroChart Building Block](the-microchart-building-block-74554b4.md "")**  
-
--   **[The Chart Building Block](the-chart-building-block-52d065a.md "")**  
-
--   **[The FlexibleColumnLayoutActions Building Block](the-flexiblecolumnlayoutactions-building-block-1ba680b.md "")**  
-
--   **[The Share Building Block](the-share-building-block-41b02df.md "")**  
-
--   **[The Paginator Building Block](the-paginator-building-block-997292b.md "")**  
-
-

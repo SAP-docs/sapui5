@@ -86,7 +86,3 @@ The user has to set the the `enum` type to `RuleFormat` for the DecisionTable to
 
 The value for the rule format is set at the time of rule creation to either basic or advanced mode depending on which the entire rule will be rendered based on basic mode or advanced mode.
 
-**Parent topic:** [Decision Table](decision-table-c0184a0.md "Create a business logic by defining the conditions in decision table, which is associated with the expression language.")
-
-**Next:** [Step 2: Associating the Expression Language for Decision Tables](step-2-associating-the-expression-language-for-decision-tables-33ef2b0.md "")
-

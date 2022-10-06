@@ -138,7 +138,7 @@ The `UI.Chart Description` property is used for the subtitle.
 
 ## `UI.DataPoint` Annotation
 
-The `UI.DataPoint` annotation can be used to add criticality to the chart measures.
+The `UI.DataPoint` annotation can be used to add criticality as well as minimum and maximum values to the chart measures.
 
 > ### Sample Code:  
 > XML Annotation
@@ -149,6 +149,8 @@ The `UI.DataPoint` annotation can be used to add criticality to the chart measur
 >             <PropertyValue Property="Value" Path="NetAmount"/>
 >             <PropertyValue Property="Title" String="Net Amount"/>
 >             <PropertyValue Property="Criticality" Path="Criticality"/>
+>             <PropertyValue Property="MaximumValue" Decimal="100"/>
+>             <PropertyValue Property="MinimumValue" Decimal="0"/>
 >       </Record>
 > </Annotation>
 > ```
@@ -160,6 +162,8 @@ The `UI.DataPoint` annotation can be used to add criticality to the chart measur
 > @UI.dataPoint: {
 >   title: 'Net Amount',
 >   criticality: 'Criticality'
+>   maximumValue: 100,
+>   minimumValue: 0
 > }
 > NetAmount;
 > 
@@ -174,6 +178,8 @@ The `UI.DataPoint` annotation can be used to add criticality to the chart measur
 >             Value       : NetAmount,
 >             Title       : 'Net Amount',
 >             Criticality : Criticality,
+>             MaximumValue : 100,
+>             MinimumValue : 0,
 >         }
 > 
 > ```

@@ -15,19 +15,6 @@ To support this, SAPUI5 provides two types of events:
 -   Events fired **on** the pages when they get shown or hidden by navigation.
 
 
--   **[Events Fired Centrally by the App or the NavContainer](events-fired-centrally-by-the-app-or-the-navcontainer-6ec0a7e.md "When NavContainer.to(…) or NavContainer.back(…) are
-		called, the NavContainer triggers events and the application can register
-		for this events. The navigate event is fired before the transition
-		animation starts, and the afterNavigate event is fired when the animation
-		has been completed.")**  
-When `NavContainer.to(…)` or `NavContainer.back(…)` are called, the `NavContainer` triggers events and the application can register for this events. The `navigate` event is fired before the transition animation starts, and the `afterNavigate` event is fired when the animation has been completed.
--   **[Events Fired on the Pages](events-fired-on-the-pages-b6ab31c.md "Events fired on the pages allow a decentral reaction to navigation.")**  
-Events fired on the pages allow a decentral reaction to navigation.
--   **[Passing Data when Navigating](passing-data-when-navigating-cddf7e5.md "When you use the to(…) and back(…) methods of the
-			NavContainer to trigger navigation, you can also give an optional
-		payload data object. ")**  
-When you use the `to(…)` and `back(…)` methods of the `NavContainer` to trigger navigation, you can also give an optional payload data object.
-
 **Related Information**  
 
 

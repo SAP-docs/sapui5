@@ -86,7 +86,3 @@ Now run the app again to see that the formatter is applied on the post date of t
 
 You should now be familiar with the major development paradigms and concepts of SAPUI5 and have created a very simple first app. You are now ready to build a proper app based on what you've learned.
 
-**Parent topic:** [Testing](testing-291c912.md "In this tutorial we will test application functionality with the testing tools that are delivered with SAPUI5. At different steps of this tutorial you will write tests using QUnit, OPA5, and the OData V2 mock server. Additionally, you will learn about testing strategies, Test Driven Development (TDD), and much more.")
-
-**Next:** [Step 15: Writing a Short Date Formatter Using TDD](step-15-writing-a-short-date-formatter-using-tdd-bc4114a.md "It's now time to improve the content of the Info tab. We want to see the Posted At date in a formatted way. Based on the age of the post, we either display the time, a textural representation of the day, or the date only.")
-

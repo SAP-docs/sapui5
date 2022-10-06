@@ -34,34 +34,6 @@ You can not only define one model for your applications, but define different ar
 
 A Web application should support several data sources, such as JSON, XML, Atom, or OData. However, the way in which data binding is defined and implemented within the UI controls should be independent of the respective data source. It is also possible to create a custom model implementation for data sources that are not yet covered by the framework or are domain-specific.
 
--   **[OData V2 Model](odata-v2-model-6c47b2b.md#loio6c47b2b39db9404582994070ec3d57a2 "The OData V2 Model enables binding of controls to data from OData
-		services.")**  
-The OData V2 Model enables binding of controls to data from OData services.
--   **[OData V4 Model](odata-v4-model-5de13cf.md "The sap.ui.model.odata.v4.ODataModel is the model implementation for
-		consuming an OData V4 service.")**  
-The `sap.ui.model.odata.v4.ODataModel` is the model implementation for consuming an OData V4 service.
--   **[JSON Model](json-model-96804e3.md#loio96804e3315ff440aa0a50fd290805116 "The JSON model can be used to bind controls to JavaScript object data, which is
-		usually serialized in the JSON format.")**  
-The JSON model can be used to bind controls to JavaScript object data, which is usually serialized in the JSON format.
--   **[XML Model](xml-model-a53e71d.md#loioa53e71d85fae4d0887a8b58431197a27 "The XML model allows to bind controls to XML data. It is a client-side model intended
-		for small datasets, which are completely available on the client. The XML model does not
-		contain mechanisms for server-based paging or loading of deltas. It supports two-way
-		binding.")**  
-The XML model allows to bind controls to XML data. It is a client-side model intended for small datasets, which are completely available on the client. The XML model does not contain mechanisms for server-based paging or loading of deltas. It supports two-way binding.
--   **[Resource Model](resource-model-91f122a.md#loio91f122a36f4d1014b6dd926db0e91070 "The resource model is used as a wrapper for resource bundles. In data binding you use the resource model instance, for example, to bind texts of
-		a control to language-dependent resource bundle properties.")**  
-The resource model is used as a wrapper for resource bundles. In data binding you use the resource model instance, for example, to bind texts of a control to language-dependent resource bundle properties.
--   **[Custom Model](custom-model-91f1c7e.md "Custom models can be used if none of the models provided by SAPUI5 is suitable for
-		the specific needs of an application.")**  
-Custom models can be used if none of the models provided by SAPUI5 is suitable for the specific needs of an application.
--   **[Assigning the Model to the UI](assigning-the-model-to-the-ui-91f0d1c.md "If you don't want to use a component or descriptor file, you have to assign the model
-		instance manually to the UI, before you can bind controls to this model
-		instance.")**  
-If you don't want to use a component or descriptor file, you have to assign the model instance manually to the UI, before you can bind controls to this model instance.
--   **[Setting the Default Binding Mode](setting-the-default-binding-mode-1a08f70.md "The default binding mode applies when a model instance is created. You can overwrite the
-		default binding mode after model creation.")**  
-The default binding mode applies when a model instance is created. You can overwrite the default binding mode after model creation.
-
 **Related Information**  
 
 

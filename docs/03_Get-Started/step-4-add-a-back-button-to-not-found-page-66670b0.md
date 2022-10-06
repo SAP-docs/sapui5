@@ -156,12 +156,6 @@ The same applies to our home controller, we also extend it with the base control
 -   Query the history and go to the home page if there is no history available for the current app
 
 
-**Parent topic:** [Navigation and Routing](navigation-and-routing-1b6dcd3.md "SAPUI5 comes with a powerful routing API that helps you control the state of your application efficiently. This tutorial will illustrate all major features and APIs related to navigation and routing in SAPUI5 apps by creating a simple and easy to understand mobile app. It represents a set of best practices for applying the navigation and routing features of SAPUI5 to your applications.")
-
-**Next:** [Step 3: Catch Invalid Hashes](step-3-catch-invalid-hashes-e047e05.md "Sometimes it is important to display an indication that the requested resource was not found. To give you an example: If a user tries to access an invalid pattern which does not match any of the configured routes, the user is notified that something went wrong. You might also know this as a “404” or Not Found Page from traditional web pages. In this step, we will implement a feature that detects invalid hashes and visualizes this in a nice way.")
-
-**Previous:** [Step 5: Display a Target Without Changing the Hash](step-5-display-a-target-without-changing-the-hash-d9efab3.md "In this step, you will learn more about targets and how to display a target from the routing configuration manually.")
-
 **Related Information**  
 
 

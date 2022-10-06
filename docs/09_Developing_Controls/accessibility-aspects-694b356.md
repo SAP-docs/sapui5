@@ -6,13 +6,6 @@ If you are developing SAPUI5 controls, you have to be aware of the accessibility
 
 In the following topics, we provide additional information for control developers on keyboard handling, high-contrast theming and other important accessibility aspects.
 
--   **[Keyboard Handling for SAPUI5 Controls for Developers](keyboard-handling-for-sapui5-controls-for-developers-3e631ad.md "As an application developer, you need to be aware of how the various accessibility aspects, like keyboard handling, are implemented and used. ")**  
-As an application developer, you need to be aware of how the various accessibility aspects, like keyboard handling, are implemented and used.
--   **[Screen Reader Support for SAPUI5 Controls](screen-reader-support-for-sapui5-controls-3853db3.md "SAPUI5 offers screen reader support in order to aid people with visual impairments. The implementation is based on the ARIA and HTML standards.")**  
-SAPUI5 offers screen reader support in order to aid people with visual impairments. The implementation is based on the ARIA and HTML standards.
--   **[Theming](theming-37c3392.md "Theming is an important aspect when developing a new control.")**  
-Theming is an important aspect when developing a new control.
-
 **Related Information**  
 
 

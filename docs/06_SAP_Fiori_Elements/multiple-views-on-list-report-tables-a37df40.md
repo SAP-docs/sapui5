@@ -133,16 +133,6 @@ Make the settings as shown in the following sample code:
 
 You can also define and configure custom views for a list report using a controller extension. For more information, see [Extension Points for Views in the List Report](extension-points-for-views-in-the-list-report-eb37203.md).
 
--   **[Defining Multiple Views on a List Report Table - Single Table Mode](defining-multiple-views-on-a-list-report-table-single-table-mode-0d390fe.md "You can define multiple views of a table and display them in single table mode. Users
-        can switch between views using a segmented button.")**  
-You can define multiple views of a table and display them in single table mode. Users can switch between views using a segmented button.
--   **[Defining Multiple Views on a List Report Table - Multiple Table Mode](defining-multiple-views-on-a-list-report-table-multiple-table-mode-37aeed7.md "You can define multiple views of a table and display them in multiple table mode.
-        Users can switch between views using an icon tab bar.")**  
-You can define multiple views of a table and display them in multiple table mode. Users can switch between views using an icon tab bar.
--   **[Defining Multiple Views on a List Report with Different Entity Sets and Table Settings](defining-multiple-views-on-a-list-report-with-different-entity-sets-and-table-settings-b6b59e4.md "You can configure your app to display data for different entity sets and table settings,
-		for example, sales orders or suppliers.")**  
-You can configure your app to display data for different entity sets and table settings, for example, sales orders or suppliers.
-
 **Related Information**  
 
 

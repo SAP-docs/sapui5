@@ -85,12 +85,6 @@ In this case we have bound the model object to the SAPUI5 core. This has been do
 
 The text that is displayed on the UI is still hard-coded and not taken from the model - we will bind the property `greetingText` to our UI control in the next step.
 
-**Parent topic:** [Data Binding](data-binding-e531093.md "In this tutorial, we will explain the concepts of data binding in SAPUI5.")
-
-**Next:** [Step 1: No Data Binding](step-1-no-data-binding-4cde849.md "In this step, we simply place some text on the screen using a standard sap.m.Text control. The text in this control is a hard-coded part of the control's definition; therefore, this is not an example of data binding!")
-
-**Previous:** [Step 3: Create Property Binding](step-3-create-property-binding-d70e989.md "Although there is no visible difference, the text on the screen is now derived from model data.")
-
 **Related Information**  
 
 

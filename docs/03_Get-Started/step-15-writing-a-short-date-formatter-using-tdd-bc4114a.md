@@ -525,9 +525,3 @@ In the implementation, we use a different `style` property for instantiating the
 
 Although our formatter depends on system time and locale settings, our tests are very easy to read and maintain. We wrote blackbox tests, providing only the input and expecting a certain output without knowing the implementation details. The `DateFormatter` does not actively resolve the dependencies to the system time and locale settings. Instead, it asks its creator to pass the dependencies along in the constructor. In the next step, we have to bring the pieces together.
 
-**Parent topic:** [Testing](testing-291c912.md "In this tutorial we will test application functionality with the testing tools that are delivered with SAPUI5. At different steps of this tutorial you will write tests using QUnit, OPA5, and the OData V2 mock server. Additionally, you will learn about testing strategies, Test Driven Development (TDD), and much more.")
-
-**Next:** [Step 14: Adding Tabs](step-14-adding-tabs-6e9c6bd.md "We want to display statistics for posts, for example, how many times it was viewed. To achieve this, we implement an icon tab bar with an Info tab and a Statistics tab. The existing content should be placed on the Info tab and the view count on the Statistics tab.")
-
-**Previous:** [Step 16: Adding the Date Formatter](step-16-adding-the-date-formatter-2ca583d.md "Our formatter does its job, but it is not yet used. In this step we will use it.")
-

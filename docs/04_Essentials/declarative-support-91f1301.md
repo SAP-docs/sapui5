@@ -189,29 +189,3 @@ Adds a style class to the control
 </tr>
 </table>
 
--   **[Enabling Declarative Support](enabling-declarative-support-91f17d6.md "Declarative support needs to be enabled in the HTML document by adding an attribute
-		to the SAPUI5 bootstrap script
-		tag.")**  
-Declarative support needs to be enabled in the HTML document by adding an attribute to the SAPUI5 bootstrap script tag.
--   **[Defining Controls](defining-controls-91f1539.md "For declarative support, define the controls in your HTML document as HTML
-		tags.")**  
-For declarative support, define the controls in your HTML document as HTML tags.
--   **[Declarative Support: Properties](declarative-support-properties-91f1619.md "For setting a property, define the property as a data attribute of the corresponding
-		HTML tag.")**  
-For setting a property, define the property as a data attribute of the corresponding HTML tag.
--   **[Declarative Support: Associations](declarative-support-associations-91f13d9.md "An association is defined as a data attribute of the HTML tag. Instead of passing the
-		reference to another control you define the ID of another control.")**  
-An association is defined as a data attribute of the HTML tag. Instead of passing the reference to another control you define the ID of another control.
--   **[Declarative Support: Events](declarative-support-events-91f15ad.md "The value of the event data attribute contains the name of a JavaScript function
-		which will be used as callback once the event has been triggered.")**  
-The value of the event data attribute contains the name of a JavaScript function which will be used as callback once the event has been triggered.
--   **[Declarative Support: Aggregations](declarative-support-aggregations-91f136c.md "Aggregation support is required to allow nested controls for layout containers and/or
-		add elements to a control, for example, for ComboBox.")**  
-Aggregation support is required to allow nested controls for layout containers and/or add elements to a control, for example, for `ComboBox`.
--   **[Declarative Support: Data Binding](declarative-support-data-binding-020990b.md "Declarative support in SAPUI5 also enables data
-		binding.")**  
-Declarative support in SAPUI5 also enables data binding.
--   **[Compiling Declarative HTML](compiling-declarative-html-91f1454.md "SAPUI5 provides a plugin for controls that are defined as declarative markup on
-		startup time.")**  
-SAPUI5 provides a plugin for controls that are defined as declarative markup on startup time.
-

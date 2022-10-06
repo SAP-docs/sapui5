@@ -224,9 +224,6 @@ false = The mapped filter property only is kept in the cumulative filter.
 </tr>
 </table>
 
--   **[The Hierarchical Step Object](the-hierarchical-step-object-f886aaf.md "")**  
-
-
 **Related Information**  
 
 

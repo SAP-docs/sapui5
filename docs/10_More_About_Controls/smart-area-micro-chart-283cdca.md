@@ -94,12 +94,3 @@ The control provides the *Title*, *Description* or *UnitOfMeasure* values retrie
     ```
 
 
--   **[Labels of the Chart](labels-of-the-chart-8664d4b.md "You can display a maximum of four labels.")**  
-You can display a maximum of four labels.
--   **[Formatting](formatting-8cd1dc3.md "The top labels are always formatted by the
-			sap.ui.core.format.NumberFormat.")**  
-The top labels are always formatted by the `sap.ui.core.format.NumberFormat`.
--   **[Label Colors of the Chart](label-colors-of-the-chart-aa4bf0f.md "You use the Criticality Calculation feature to control the color of the labels at the
-		top.")**  
-You use the Criticality Calculation feature to control the color of the labels at the top.
-

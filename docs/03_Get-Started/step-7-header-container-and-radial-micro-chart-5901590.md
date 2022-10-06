@@ -147,9 +147,3 @@ sap.ui.define([
 
 When the user clicks on the **Back** button, *onNavButtonPressed* is called and this triggers the navigation back to the start page view.
 
-**Parent topic:** [Ice Cream Machine](ice-cream-machine-e5b7f8a.md "In this tutorial, we will show you how to use SAPUI5 controls like Generic Tiles, Micro Charts, and Process Flow.")
-
-**Next:** [Step 6: Chart Container](step-6-chart-container-9847648.md "In this step, we will use the ChartContainer control to display information in a detailed view.")
-
-**Previous:** [Step 8: Comparison Micro Chart](step-8-comparison-micro-chart-3f586aa.md "In this step, we will create the ComparisonMicroChart on the Production Process page.")
-

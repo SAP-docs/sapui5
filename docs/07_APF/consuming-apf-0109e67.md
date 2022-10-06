@@ -136,9 +136,6 @@ var sValue = oFilter.getInternalFilter().getFilterTerms()[0].getValue();
 
 For any application extension, ensure that both the extension and its libraries are trustworthy.
 
--   **[Consuming APF in SAPUI5 1.28 and Prior Releases](consuming-apf-in-sapui5-1-28-and-prior-releases-47be855.md)**  
-
-
 **Related Information**  
 
 

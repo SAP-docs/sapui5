@@ -24,18 +24,3 @@ For more information about creating apps using SAP Web IDE, see the following de
 6.  [Using the Extension Wizard](using-the-extension-wizard-af3369a.md)
 
 
--   **[Creating a Project](creating-a-project-fe5bc65.md "In SAP Fiori elements for OData
-                            V2, you can also use SAP Web IDE to build UI applications when using SAP Fiori elements.")**  
-In SAP Fiori elements for OData V2, you can also use SAP Web IDE to build UI applications when using SAP Fiori elements.
--   **[Checking Folder Structure and Project Artifacts](checking-folder-structure-and-project-artifacts-f7abd1b.md "Once you have applied the template, the generated application is ready to
-    run.")**  
-Once you have applied the template, the generated application is ready to run.
--   **[Adding Cards to an Overview Page](adding-cards-to-an-overview-page-b891318.md "Add cards to populate the overview page that you created.")**  
-Add cards to populate the overview page that you created.
--   **[Further Post-Generation Steps](further-post-generation-steps-3fad794.md "To enable or modify certain default features for apps based on SAP Fiori elements, you
-		can modify the manifest.json file and adapt the annotations, after you
-		have generated the app.")**  
-To enable or modify certain default features for apps based on SAP Fiori elements, you can modify the `manifest.json` file and adapt the annotations, after you have generated the app.
--   **[Using the Extension Wizard](using-the-extension-wizard-af3369a.md "For list reports, object pages, and analytical list pages, you can use the extension wizard in SAP Web IDE to create app extensions. ")**  
-For list reports, object pages, and analytical list pages, you can use the extension wizard in SAP Web IDE to create app extensions.
-

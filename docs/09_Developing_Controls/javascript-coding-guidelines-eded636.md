@@ -471,10 +471,3 @@ For the creation of classes, the following rules and guidelines apply:
 
 For more information, see [Example for Defining a Class](example-for-defining-a-class-f6fba4c.md).
 
--   **[JavaScript Namespaces](javascript-namespaces-5a978fe.md "SAPUI5 modules such as
-		classes, components, and controls, should use a consistent qualified naming scheme. Each
-		module should reside in a unique namespace.")**  
-SAPUI5 modules such as classes, components, and controls, should use a consistent qualified naming scheme. Each module should reside in a unique namespace.
--   **[Example for Defining a Class](example-for-defining-a-class-f6fba4c.md "Full example of a class definition, including JSDoc")**  
-Full example of a class definition, including JSDoc
-

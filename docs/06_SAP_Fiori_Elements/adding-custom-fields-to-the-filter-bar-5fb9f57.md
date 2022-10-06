@@ -279,7 +279,3 @@ You can explore and work with the coding yourself. Check out our live example in
 > 
 > To support variant management handling, as well as app state handling, the value-providing property of the filter control that is used should be bound against the relative path "\{filterValues\>\}".
 
--   **[Adding Filterable Field to the Smart Filter Bar](adding-filterable-field-to-the-smart-filter-bar-3a51582.md "The following example shows the development steps for adding an additional filter to
-		the smart filter bar of the list report.")**  
-The following example shows the development steps for adding an additional filter to the smart filter bar of the list report.
-

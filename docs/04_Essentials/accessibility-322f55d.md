@@ -45,12 +45,6 @@ Depending on your use case please refer to the corresponding accessibility chapt
 -   Resizing: Developers should always consider the fact that the application could be zoomed to 200%, and everything should still be visible.
 -   APIs: The framework provides APIs to help app developers improve the accessibility in the context of their application.
 
--   **[SAPUI5 Accessibility Features](sapui5-accessibility-features-7048ca9.md "SAPUI5 supports many
-		accessibility features on a framework level.")**  
-SAPUI5 supports many accessibility features on a framework level.
--   **[Accessibility Support History](accessibility-support-history-accd68a.md "")**  
-
-
 **Related Information**  
 
 

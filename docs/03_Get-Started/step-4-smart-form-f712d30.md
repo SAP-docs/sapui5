@@ -158,12 +158,6 @@ With `Nullable="false"` we define that the field is mandatory and therefore cann
 
 We see that a few attributes have been changed and added to the JSON file, reflecting the fact that, in this step, more data is shown.
 
-**Parent topic:** [Smart Controls](smart-controls-64bde9a.md "In this tutorial you learn how to work with smart controls.")
-
-**Next:** [Step 3: Smart Field with Smart Link](step-3-smart-field-with-smart-link-c81d6b3.md "We now show yet another but quite different feature of the SmartField control, SmartField used in combination with SmartLink, which allow you to embed a dialog with related cross-application links.")
-
-**Previous:** [Step 5: Smart Filter Bar and Smart Table](step-5-smart-filter-bar-and-smart-table-1daa462.md "In this step, we will look at the SmartTable control along with the SmartFilterBar control that allow you to filter table entries.")
-
 **Related Information**  
 
 

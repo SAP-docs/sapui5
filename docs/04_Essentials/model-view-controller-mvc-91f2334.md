@@ -22,16 +22,3 @@ Views and controllers often form a 1:1 relationship, but it is also possible to 
 
 View and controller represent reusable units, and distributed development is highly supported.
 
--   **[Models](models-d2c8cf7.md "A model in the Model View Controller concept holds the data and provides methods to
-		retrieve the data from the database and to set and update data.")**  
-A model in the Model View Controller concept holds the data and provides methods to retrieve the data from the database and to set and update data.
--   **[Views](views-91f27e3.md "The view in the Model-View-Controller (MVC) concept is responsible for defining and rendering the UI. SAPUI5 supports predefined view types.")**  
-The view in the Model-View-Controller \(MVC\) concept is responsible for defining and rendering the UI. SAPUI5 supports predefined view types.
--   **[Controller](controller-121b8e6.md "A controller contains methods that define how models and views interact.")**  
-A controller contains methods that define how models and views interact.
--   **[Support for Unique IDs](support-for-unique-ids-91f28be.md "Stable IDs are used to identify and modify the controls within the controller during
-		runtime. However, if you reuse or nest these views, these stable IDs are no longer unique.
-		To avoid ambiguity, each view adds its own ID as prefix to all its child
-		controls.")**  
-Stable IDs are used to identify and modify the controls within the controller during runtime. However, if you reuse or nest these views, these stable IDs are no longer unique. To avoid ambiguity, each view adds its own ID as prefix to all its child controls.
-

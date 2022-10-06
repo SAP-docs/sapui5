@@ -183,6 +183,3 @@ An example of this is shown in the cookbook below \(events\).
 
 The most likely reason for this is that `sap.ui.getCore().applyChanges()` was not called. SAPUI5 does not render synchronously, but calling this function will render immediately.
 
--   **[Cookbook for Testing Controls with QUnit](cookbook-for-testing-controls-with-qunit-0ddcc60.md "")**  
-
-

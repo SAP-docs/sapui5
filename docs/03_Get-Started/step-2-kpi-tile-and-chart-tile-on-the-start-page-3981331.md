@@ -264,9 +264,3 @@ sap.ui.define([
 
 Since the production of our ice cream has already cost us a lot of money and the monetary values are very high, we need to provide custom data labels in order to have a neat chart design. The custom data labels can be added via the *actualValueLabel* and *targetValueLabel* properties that are set on the `BulletMicroChart`. In both instances, we use data binding with a custom formatter function from the *Startpage.controller.js* file to format the values using a standard SAPUI5 number formatter.
 
-**Parent topic:** [Ice Cream Machine](ice-cream-machine-e5b7f8a.md "In this tutorial, we will show you how to use SAPUI5 controls like Generic Tiles, Micro Charts, and Process Flow.")
-
-**Next:** [Step 1: Initial Application](step-1-initial-application-9631f53.md "In the first step, we will explain how to get started with a development environment.")
-
-**Previous:** [Step 3: Launch Tile and Slide Tile](step-3-launch-tile-and-slide-tile-e1fc950.md "In this step, we will create a new Launch Tile (GenericTile with ImageContent) and a SlideTile.")
-

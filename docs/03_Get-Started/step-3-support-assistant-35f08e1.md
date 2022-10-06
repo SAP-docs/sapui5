@@ -60,12 +60,6 @@ In this tutorial step, we will have a closer look at Support Assistant. You can 
 5.  Restart the app and start the analysis again. This issue should now be gone. We have intentionally hidden some more errors in the code - check and see if you can find and correct them.
 
 
-**Parent topic:** [Troubleshooting](troubleshooting-5661952.md "In this tutorial, we will show you some tools that will help you if you run into problems with your SAPUI5 app.")
-
-**Next:** [Step 2: Technical Information Dialog](step-2-technical-information-dialog-63c97ef.md "In this tutorial step, we will have a closer look at the &quot;Technical Information Dialog&quot;. This tool comes in handy whenever you want to know the technical details of the running application, and also has some other useful features.")
-
-**Previous:** [Step 4: Diagnostics Window](step-4-diagnostics-window-04b75ea.md "In this tutorial step, we have a closer look at the Diagnostics window. It offers a wealth of information including comprehensive technical information, a control tree, and debugging features.")
-
 **Related Information**  
 
 

@@ -574,6 +574,3 @@ The following image shows a *More Links* popover. Users can select actions to be
 -   Users can personalize the actions shown in the footer by selecting actions in the *More Links* popover.
 
 
--   **[Quick Views: Further Configuration Examples](quick-views-further-configuration-examples-1083035.md "You have various options for configuring quick views. This documentation provides some examples.")**  
-You have various options for configuring quick views. This documentation provides some examples.
-

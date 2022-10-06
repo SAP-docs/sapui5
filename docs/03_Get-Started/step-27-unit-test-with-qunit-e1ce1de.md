@@ -188,12 +188,6 @@ This script loads and executes our formatter. If we now open the `webapp/test/un
 -   All dependencies are replaced by stubs to test only the functionality in scope.
 
 
-**Parent topic:** [Walkthrough](walkthrough-3da5f4b.md "In this tutorial we will introduce you to all major development paradigms of SAPUI5.")
-
-**Next:** [Step 26: Mock Server Configuration](step-26-mock-server-configuration-bae9d90.md "We just ran our app against a real service, but for developing and testing our app we do not want to rely on the availability of the “real” service or put additional load on the system where the data service is located.")
-
-**Previous:** [Step 28: Integration Test with OPA](step-28-integration-test-with-opa-9bf4dce.md "If we want to test interaction patterns or more visual features of our app, we can also write an integration test.")
-
 **Related Information**  
 
 

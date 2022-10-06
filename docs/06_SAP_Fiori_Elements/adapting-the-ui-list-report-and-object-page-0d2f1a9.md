@@ -548,10 +548,3 @@ For more information, see [Creating a Binding Change](creating-a-binding-change-
 
 For more information about SAP Web IDE, see the documentation for SAP Web IDE on the SAP Help Portal at [https://help.sap.com/viewer/p/SAP\_Web\_IDE](https://help.sap.com/viewer/p/SAP_Web_IDE).
 
--   **[Creating a Binding Change](creating-a-binding-change-4754094.md " You can create property binding changes manually by using the UI Adaptation Editor.
-		Note that you can use only those properties whose data has already be retrieved by the
-		model. ")**  
- You can create property binding changes manually by using the UI Adaptation Editor. Note that you can use only those properties whose data has already be retrieved by the model.
--   **[Enabling an App for Key User Adaptation](enabling-an-app-for-key-user-adaptation-ccd45ba.md "Application developers can enable key users to make adaptations on the object page.")**  
-Application developers can enable key users to make adaptations on the object page.
-

@@ -34,7 +34,7 @@ Messages of this type allow users to retry the action that triggered the message
 
 <a name="loio239b1922758645e7b451e01ded7f56bc__section_otc_1xw_cnb"/>
 
-## SAP Fiori Elements for OData V2
+## Additional Features in SAP Fiori Elements for OData V2
 
 Transition messages are always shown in message dialog - this is true also in edit mode of an object page. Draft operations are handled like actions, for example, activate, prepare, or validate operations.
 
@@ -45,7 +45,7 @@ Transition messages are always shown in message dialog - this is true also in ed
 
 <a name="loio239b1922758645e7b451e01ded7f56bc__section_zxr_fxw_cnb"/>
 
-## SAP Fiori Elements for OData V4
+## Additional Features in SAP Fiori Elements for OData V4
 
 For more detailed information, see [Server Messages in the OData V4 Model](../04_Essentials/server-messages-in-the-odata-v4-model-fbe1cb5.md).
 
@@ -142,4 +142,10 @@ The message dialog consists of the following components:
 
      
 
+
+
+
+### Using Status Messages on the Object Page
+
+Based on information received from the back end, we show a message strip on the object page with a status message for the object whenever it’s relevant to the entire object \(and not to a child entity or a specific field, for example\). The color of the message strip is derived from the criticality of the message. You can hide the message strip or display a specific message using the `ExtensionAPI`. For more information about the `ObjectPage.ExtensionAPI`, see the [API Reference](https://ui5.sap.com/#/api/sap.fe.templates.ObjectPage.ExtensionAPI/methods/showMessages).
 

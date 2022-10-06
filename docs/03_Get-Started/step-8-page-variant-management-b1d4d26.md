@@ -137,9 +137,3 @@ The example shows the view management **without** a page variant.
 
 The example shows the view management **with** a page variant.
 
-**Parent topic:** [Smart Controls](smart-controls-64bde9a.md "In this tutorial you learn how to work with smart controls.")
-
-**Next:** [Step 7: View Management](step-7-view-management-97fc0ea.md "The VariantManagement control allows you to handle views and makes it possible for the user to persist changes carried out on the UI and then later retrieve these changes.")
-
-**Previous:** [Step 9: Smart Chart with Chart Personalization and View Management](step-9-smart-chart-with-chart-personalization-and-view-management-0219b11.md "In this step, we will look at the SmartChart control with the chart personalization and in combination with the VariantManagement control that allow you to use complex graphics along with other smart control features.")
-

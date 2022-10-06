@@ -22,7 +22,7 @@ Define custom filter view fragments, use view extensions and define extended fra
     "extends": {
         "extensions": {
              "sap.ui.controllerExtensions": { // Controller extension
-                 "sap.suite.ui.generic.template.AnalyticalListPage.controller.AnalyticalListPage": { // ALP app view to be extended with controller
+                 "sap.suite.ui.generic.template.AnalyticalListPage.view.AnalyticalListPage": { // ALP app view to be extended with controller
                    "controllerName": "my_app.ext.controller.AnalyticalListPageExt", // extended Controller declared using namespace
                        ... // Other custom controllers
                     ...

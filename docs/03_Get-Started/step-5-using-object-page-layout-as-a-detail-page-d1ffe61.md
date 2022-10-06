@@ -279,9 +279,3 @@ We add content in the `headerContent` aggregation. We're using `sap.f.Avatar` as
 
 Finally, we add page content in two separate sections with blocks. For more information, see [Object Page Blocks](../10_More_About_Controls/object-page-blocks-4527729.md).
 
-**Parent topic:** [Flexible Column Layout App](flexible-column-layout-app-c4de2df.md "In this tutorial, we showcase how to structure your SAPUI5 app using the layout patterns that comply with the SAP Fiori design guidelines.")
-
-**Next:** [Step 4: Adding a Detail Page](step-4-adding-a-detail-page-4e4315c.md "In this step, we add an empty detail page.")
-
-**Previous:** [Step 6: Adding a Floating Footer](step-6-adding-a-floating-footer-555ed73.md "In this step, we add a floating footer to the detail page.")
-

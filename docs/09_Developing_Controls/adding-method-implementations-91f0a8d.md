@@ -43,27 +43,3 @@ The following method names have a specific meaning and should be used accordingl
 > ### Note:  
 > When you modify the HTML of a control using the code in the control behavior file, make sure to escape any unchecked data you write with `sap.base.security.encodeXML(...)` to prevent cross-site-scripting issues. For more information, see [Cross-Site Scripting](../05_Developing_Apps/cross-site-scripting-91f0bd3.md).
 
--   **[Normal Methods](normal-methods-85738e3.md "Normal or public methods comprise all methods that do not belong to one of the special
-      method types.")**  
-Normal or public methods comprise all methods that do not belong to one of the special method types.
--   **[init\(\) Method](init-method-6d6b5bd.md "The init() method can be used to set up, for example, internal
-		variables or subcontrols of a composite control.")**  
-The `init()` method can be used to set up, for example, internal variables or subcontrols of a composite control.
--   **[exit\(\) Method](exit-method-d4ac0ed.md "The exit() method is used to clean up resources and to deregister event
-		handlers.")**  
-The `exit()` method is used to clean up resources and to deregister event handlers.
--   **[Event Handler Methods](event-handler-methods-bdf3e98.md "Event handler methods are invoked when an event occurs. Method names starting with
-			on are reserved for event handler methods.")**  
-Event handler methods are invoked when an event occurs. Method names starting with `on` are reserved for event handler methods.
--   **[Browser Events](browser-events-91f1b38.md "To react to browser events, a control needs to register for the event either explicitly,
-		or by implementing the event handler.")**  
-To react to browser events, a control needs to register for the event either explicitly, or by implementing the event handler.
--   **[Mobile Events](mobile-events-9860cd2.md "In addition to the general browser and control events you can access specific events for
-		touch-enabled devices. ")**  
-In addition to the general browser and control events you can access specific events for touch-enabled devices.
--   **[Devices Supporting both Mouse and Touch Input](devices-supporting-both-mouse-and-touch-input-1f9de72.md "Devices such as touch-enabled laptops support simultaneous mouse and touch input. As a control developer you have to take this into
-		consideration. ")**  
-Devices such as touch-enabled laptops support simultaneous mouse and touch input. As a control developer you have to take this into consideration.
--   **[Renderer Object](renderer-object-c9ab345.md "The renderer object is responsible for creating the HTML structure for the control.")**  
-The `renderer` object is responsible for creating the HTML structure for the control.
-

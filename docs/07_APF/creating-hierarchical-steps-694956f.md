@@ -373,6 +373,3 @@ Corner texts entered at step level are used as default for the corner texts at r
 
 When you change a specific corner text at step level, this change is reflected in the representation and at runtime only if the corresponding field has not yet been edited on representation level.
 
--   **[Tree Table](tree-table-600e3b8.md "")**  
-
-

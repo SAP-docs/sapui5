@@ -97,12 +97,6 @@ As mentioned above, we use the same content as in the previous step, so we refra
 
 To enable table personalization, we set `useTablePersonalisation` to `true`. As will become clear in the next section, you would typically use the table personalization together with view management since you can then also persist any changes done to the table.
 
-**Parent topic:** [Smart Controls](smart-controls-64bde9a.md "In this tutorial you learn how to work with smart controls.")
-
-**Next:** [Step 5: Smart Filter Bar and Smart Table](step-5-smart-filter-bar-and-smart-table-1daa462.md "In this step, we will look at the SmartTable control along with the SmartFilterBar control that allow you to filter table entries.")
-
-**Previous:** [Step 7: View Management](step-7-view-management-97fc0ea.md "The VariantManagement control allows you to handle views and makes it possible for the user to persist changes carried out on the UI and then later retrieve these changes.")
-
 **Related Information**  
 
 

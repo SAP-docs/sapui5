@@ -205,10 +205,3 @@ To display images or icons in the condensed list card, set the property `”imag
 > ### Note:  
 > In list card, an image control is used instead of avatar. For more information, see [Using Images, Initials, and Icons](using-images-initials-and-icons-5760b63.md).
 
--   **[Configuring the List Area](configuring-the-list-area-f57373d.md "")**  
-
--   **[Configuring the List Card Header Area](configuring-the-list-card-header-area-9f95bdc.md "Configure card header properties.")**  
-Configure card header properties.
--   **[Customizing List Card](customizing-list-card-7f65716.md "")**  
-
-

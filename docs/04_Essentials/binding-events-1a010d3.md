@@ -14,7 +14,7 @@ For applications, the OData V4 model supports the following events:
 
     -   The `dataRequested` event is fired directly after data has been requested from a back end.
 
-    -   The `dataReceived` event is fired after the back-end data has been processed. Note that the `dataReceived` event is also fired after a back-end request has failed. The error of the failed request is passed to the event handler as an `error` parameter.
+    -   The `dataReceived` event is fired after the back-end data has been processed. Note that the `dataReceived` event is also fired after a back-end request has failed. The error of the failed request is passed to the event handler as an `error` parameter. If multiple requests are processed within a single $batch \(or even a single change set\), the order of `dataReceived` events is not guaranteed. For requests which are not processed because a previous request failed, `error.cause` points to the root cause error - you should either ignore these events or unwrap the error to access the root cause immediately.
 
 
     An event handler attached to the binding can prevent the event from bubbling up to the model by calling [`oEvent.cancelBubble()`](https://ui5.sap.com/#/api/sap.ui.base.Event%23methods/cancelBubble).

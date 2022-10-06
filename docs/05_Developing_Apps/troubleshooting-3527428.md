@@ -20,7 +20,7 @@ A key user wants to visualize their UI changes, but the overview of visualizatio
 
 <a name="loio35274280504f42cd87cc4fd3d403ca91__section_gwc_l5d_zz"/>
 
-## I can't add a OData property
+## I can't add an OData property
 
 Check the following:
 

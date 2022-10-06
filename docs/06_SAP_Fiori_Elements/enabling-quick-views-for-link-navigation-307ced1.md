@@ -4,10 +4,6 @@
 
 You can enrich the popovers for link navigation with additional information to display quick views.
 
--   **[Configuring the Content of Quick Views](configuring-the-content-of-quick-views-c245ad7.md "You can configure the content area of the quick views to display specific
-		data.")**  
-You can configure the content area of the quick views to display specific data.
-
  <a name="task_v3l_y2y_xmb"/>
 
 <!-- task\_v3l\_y2y\_xmb -->

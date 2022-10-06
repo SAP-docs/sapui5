@@ -143,12 +143,6 @@ You can now call the unit tests and check the result. As in the previous step, t
 -   Organize the tests in the same file structure as the productive code
 
 
-**Parent topic:** [Testing](testing-291c912.md "In this tutorial we will test application functionality with the testing tools that are delivered with SAPUI5. At different steps of this tutorial you will write tests using QUnit, OPA5, and the OData V2 mock server. Additionally, you will learn about testing strategies, Test Driven Development (TDD), and much more.")
-
-**Next:** [Step 3: Adding the Price Formatter](step-3-adding-the-price-formatter-2bf4892.md "We will now take care of the implementation of the price formatter and make sure that the tests we wrote in the previous step run successfully.")
-
-**Previous:** [Step 5: Adding a Flag Button](step-5-adding-a-flag-button-69a25bf.md "Now that we have implemented the conversion tests, we add the corresponding functionality and show the button to flag a post in the app. The design team has specified that the flag feature should be implemented with a toggle button that has a flag icon.")
-
 **Related Information**  
 
 

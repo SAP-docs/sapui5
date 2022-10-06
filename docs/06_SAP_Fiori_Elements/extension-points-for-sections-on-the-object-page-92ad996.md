@@ -391,9 +391,3 @@ You can explore and work with the coding yourself. Check out our live example in
 > 
 > -   Don't forget to add your translations.
 
--   **[Adding a Section to an Object Page](adding-a-section-to-an-object-page-a357047.md "You can add an additional section to your object page, as described below.")**  
-You can add an additional section to your object page, as described below.
--   **[Adding Dynamic Side Content to Object Page Sections](adding-dynamic-side-content-to-object-page-sections-8e01a46.md "Sometimes  it might be necessary to add additional information  that is not available
-		with annotations to object page sections or subsections.")**  
-Sometimes it might be necessary to add additional information that is not available with annotations to object page sections or subsections.
-

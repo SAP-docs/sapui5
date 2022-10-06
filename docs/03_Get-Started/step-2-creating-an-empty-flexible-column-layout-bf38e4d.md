@@ -121,9 +121,3 @@ We create a new **`App.view.xml`** that contains an instance of the `sap.f.Flexi
 
 We set the `rootView` to point to the created `App.view.xml`.
 
-**Parent topic:** [Flexible Column Layout App](flexible-column-layout-app-c4de2df.md "In this tutorial, we showcase how to structure your SAPUI5 app using the layout patterns that comply with the SAP Fiori design guidelines.")
-
-**Next:** [Step 1: Setting Up the Initial App](step-1-setting-up-the-initial-app-59b772b.md "We start by setting up a basic SAPUI5 app for this tutorial.")
-
-**Previous:** [Step 3: Using Dynamic Page for the Master View](step-3-using-dynamic-page-for-the-master-view-0830bce.md "In this step, we create the master view of the app using sap.f.DynamicPage control.")
-

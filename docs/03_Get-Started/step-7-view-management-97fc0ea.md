@@ -187,12 +187,6 @@ sap.ui.define([
 </head>
 ```
 
-**Parent topic:** [Smart Controls](smart-controls-64bde9a.md "In this tutorial you learn how to work with smart controls.")
-
-**Next:** [Step 6: Table Personalization](step-6-table-personalization-1953149.md "Table personalization offers you a dedicated dialog to specify which columns in the table are visible and in which order, how the data is sorted, whether grouping of the data is active, and whether table entries are filtered.")
-
-**Previous:** [Step 8: Page Variant Management](step-8-page-variant-management-b1d4d26.md "In this step, we will look at the page variant of the VariantManagement control, an enhanced function of the SmartVariantManagement control that can handle multiple smart controls.")
-
 **Related Information**  
 
 

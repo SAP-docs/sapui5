@@ -123,11 +123,3 @@ App extensions allow customers and partners to introduce their own functionality
 > ### Note:  
 > This option is possible only for list report, object page, and analytical list page.
 
--   **[Extending Generated Apps Using App Extensions](extending-generated-apps-using-app-extensions-340cdb2.md "You can use framework extension points to extend your generated app during the creation
-		process.")**  
-You can use framework extension points to extend your generated app during the creation process.
--   **[Extending Delivered Apps Using Adaptation Extensions](extending-delivered-apps-using-adaptation-extensions-52fc48b.md "You can extend delivered apps based on SAP Fiori elements by using the SAPUI5 Visual Editor in SAP Web IDE.")**  
-You can extend delivered apps based on SAP Fiori elements by using the SAPUI5 Visual Editor in SAP Web IDE.
--   **[Extending Apps Using a Canvas Page](extending-apps-using-a-canvas-page-82c4b57.md "You can embed content into a canvas page within an app.")**  
-You can embed content into a canvas page within an app.
-

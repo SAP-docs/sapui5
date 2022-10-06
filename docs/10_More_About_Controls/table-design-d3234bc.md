@@ -184,3 +184,11 @@ This highlights the *Price* column in our example table, as shown below:
 
 ![](images/SAPUI5_Mobile_Table_Design_PriceColor_d90af7b.png)
 
+
+
+<a name="loiod3234bc1b7b64af99a3d6990039f7eed__section_qvp_n3z_z5b"/>
+
+## Grouping in a Table
+
+For more information about the related data binding, see [Sorting, Grouping, and Filtering for List Binding](../04_Essentials/sorting-grouping-and-filtering-for-list-binding-ec79a5d.md).
+

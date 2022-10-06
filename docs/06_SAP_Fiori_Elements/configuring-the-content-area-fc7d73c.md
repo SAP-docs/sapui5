@@ -33,18 +33,6 @@ The dynamic page header is pinnable when the app has a responsive table in deskt
 > 
 > Although the table is defaulted as responsive for all analytical list pages, the pin button is not available for 'S' size devices such as mobile phones.
 
--   **[Configuring the Table-Only View as the Default Option](configuring-the-table-only-view-as-the-default-option-d074e26.md "In this mode, the data is displayed in the table format.")**  
-In this mode, the data is displayed in the table format.
--   **[Configuring the Chart-Only View as the Default Option](configuring-the-chart-only-view-as-the-default-option-8e6e885.md "Uses
-        a chart that provides visual representation of analytical data. ")**  
-Uses a chart that provides visual representation of analytical data.
--   **[Hybrid View](hybrid-view-6615668.md "The hybrid view is the default data display mode in the ALP content area. It lets you view both analytical data (chart format) and
-		transactional data (table format).")**  
-The hybrid view is the default data display mode in the ALP content area. It lets you view both analytical data \(chart format\) and transactional data \(table format\).
--   **[Defining Multiple Views of a Table in an Analytical List Page](defining-multiple-views-of-a-table-in-an-analytical-list-page-664a79a.md "You can define multiple views of a table and display them in single table mode. Users
-		can switch between views using a segmented button.")**  
-You can define multiple views of a table and display them in single table mode. Users can switch between views using a segmented button.
-
 **Related Information**  
 
 

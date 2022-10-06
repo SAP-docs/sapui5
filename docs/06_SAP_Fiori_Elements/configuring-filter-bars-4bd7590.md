@@ -239,26 +239,118 @@ Here's an example of how the call to fetch results from the main entity set in t
 
 The call has to go through the `"Customer"` entity set by passing the values of all parameters to it. Then we have to call the entity set that holds the results \(in this case the `"Set"` entity set\).
 
-\- Specifying Filter Restrictions for the Main Entity Set Through Navigation Restrictions -
 
-Any restrictions for the main entity set have to be defined in the parameterized entity set \(in the example above, via the `"Customer"` entity set\) through navigation restrictions with a path pointing to the target entity type \(in our case `"Set"`, which points to `"CustomerType"`\). Here's a sample showing `FilterRestrictions`:
 
-> ### Sample Code:  
-> Specifying restrictions
-> 
-> ```
-> <Annotations Target="SAP__self.Container/Customer">
->     <Annotation Term="SAP__capabilities.NavigationRestrictions">
->         <Record>
->             <PropertyValue Property="RestrictedProperties">
->                 <Collection>
->                     <Record>
->                         <PropertyValue Property="NavigationProperty" NavigationPropertyPath="Set" />
->                         <PropertyValue Property="FilterRestrictions">
->                         <Record>
->                             ........
->                             ........
-> ```
+### Specifying Filter Restrictions for the Main Entity Set \(Parameterized Entities Only\)
+
+You can use one of the following two approaches:
+
+-   Filter Restrictions at Main Entity with `PropertyPath` Pointing to the Filter Field of the Main Entity
+
+    The restrictions can be defined at the main entity set with the property path pointing to the filter field or the main entity type \(containment\) \(for example, `SalesOrganization` from a previous example\) via the containment navigation \(`Set` in a previous example\)
+
+    > ### Sample Code:  
+    > XML Annotation: Filter restrictions with `PropertyPath` pointing to the filter field of the main entity set
+    > 
+    > ```xml
+    > <Annotations Target="SAP__self.Container/Customer">
+    >    <Record Type="SAP__capabilities.FilterRestrictionsType">
+    >       <PropertyValue Property="FilterExpressionRestrictions">
+    >          <Collection>
+    >             <Record Type="Capabilities.FilterExpressionRestrictionType">
+    >                <PropertyValue Property="Property" PropertyPath="Set/SalesOrganization" />
+    >                <PropertyValue Property="AllowedExpressions" String="MultiValue" />
+    >             </Record>
+    >          </Collection>
+    >       </PropertyValue>
+    >    </Record>
+    > </Annotations>
+    > ```
+
+    > ### Sample Code:  
+    > ABAP CDS Annotation
+    > 
+    > No ABAP CDS annotation sample is available. Please use the local XML annotation.
+
+    > ### Sample Code:  
+    > CAP CDS Annotation
+    > 
+    > ```
+    > entity Customer   @(
+    >     Capabilities : {
+    >         FilterRestrictions:{
+    >             $Type: 'Capabilities.FilterRestrictionsType',
+    >             FilterExpressionRestrictions: [{
+    >                 Property: 'Set/SalesOrganization',
+    >                 AllowedExpressions: 'MultiValue’
+    >             }]
+    >     }
+    > }
+    > ```
+
+-   Navigation Restrictions at Main Entity
+
+    The filter restrictions can be defined in the parameterized entity set \(in the previous example, via the ***"Customer"*** entity set\) through navigation restrictions with a path pointing to the target entity type, which is the containment navigation \(in our case ***"Set"***, which points to ***"CustomerType"***\).
+
+    > ### Sample Code:  
+    > XML Annotation: Filter Restrictions Using Navigation Restrictions
+    > 
+    > ```xml
+    > <Annotations Target="SAP__self.Container/Customer">
+    >    <Annotation Term="SAP__capabilities.NavigationRestrictions">
+    >       <Record>
+    >          <PropertyValue Property="RestrictedProperties">
+    >             <Collection>
+    >                <Record>
+    >                   <PropertyValue Property="NavigationProperty" NavigationPropertyPath="Set" />
+    >                      <PropertyValue Property="FilterRestrictions">
+    >                         <Record>
+    >                            ....
+    >                            ....
+    >                            <PropertyValue Property="FilterExpressionRestrictions">
+    >                               <Collection>
+    >                                  <Record>
+    >                                     <PropertyValue Property="Property" PropertyPath="SalesOrganization" />
+    >                                     <PropertyValue Property="AllowedExpressions" String="MultiValue" />
+    >                                  </Record>
+    >                               </Collection>
+    >                            </PropertyValue>
+    >                         </Record>
+    >                      </PropertyValue>
+    >                   </PropertyValue>
+    >                </Record>
+    >             </Collection>
+    >          </PropertyValue>
+    >       </Record>
+    >    </Annotation>
+    > </Annotations>
+    > ```
+
+    > ### Sample Code:  
+    > ABAP CDS Annotation
+    > 
+    > No ABAP CDS annotation sample is available. Please use the local XML annotation.
+
+    > ### Sample Code:  
+    > CAP CDS Annotation
+    > 
+    > ```
+    > service MyService {
+    >     @Capabilities.NavigationRestrictions.RestrictedProperties : [{
+    >         $Type              : 'Capabilities.NavigationPropertyRestriction',
+    >         NavigationProperty : 'Set',
+    >         FilterRestrictions : {
+    >             $Type                        : 'Capabilities.FilterRestrictionsType',
+    >             FilterExpressionRestrictions : [{
+    >                 $Type              : 'Capabilities.FilterExpressionRestrictionType',
+    >                 Property           : Set.SalesOrganization,
+    >                 AllowedExpressions : 'MultiValue'
+    >             }]
+    >         }
+    >     }]
+    > }
+    > ```
+
 
 > ### Restriction:  
 > -   Parameter support is currently only available for read-only services. For editable services, parameter support is currently unavailable because of back-end restrictions.
@@ -270,6 +362,8 @@ Any restrictions for the main entity set have to be defined in the parameterized
 > -   Parameters aren't supported if multiple view mode is used – unless single-table mode is used, where the data from all views comes from the same table that is part of the main entity set.
 > 
 > -   None of the navigation entity sets associated with the main entity set can be parameterized.
+> 
+> -   Sort restrictions aren't supported for first-level navigation entity sets when used within parameterized scenarios \(meaning when a root node is a parameterized entity\).
 
 
 
@@ -280,22 +374,4 @@ Any restrictions for the main entity set have to be defined in the parameterized
 For more information about how to configure filter bars, see [Adapting the Filter Bar](adapting-the-filter-bar-609c39a.md).
 
 For information about the initial loading of data, see [Loading Behavior Based on the Chosen Variant](loading-behavior-based-on-the-chosen-variant-9f4e119.md).
-
--   **[Enabling the Search Function](enabling-the-search-function-3cdebee.md "You can enable the Search function in the list report, for example.")**  
-You can enable the *Search* function in the list report, for example.
--   **[Enabling Semantic Operators in the Filter Bar](enabling-semantic-operators-in-the-filter-bar-fef65d0.md "You can use semantic date values, such as Today or Last Week, on the filter bar of list
-        report and analytical list page applications.")**  
-You can use semantic date values, such as *Today* or *Last Week*, on the filter bar of list report and analytical list page applications.
--   **[Configuring Default Filter Values](configuring-default-filter-values-f27ad7b.md "You can set default filter values for filter bar fields, for example.")**  
-You can set default filter values for filter bar fields, for example.
--   **[Defining Filter Facets](defining-filter-facets-89f63ef.md "You can use FilterFacets annotations to display filter groups in filter
-		bars.")**  
-You can use `FilterFacets` annotations to display filter groups in filter bars.
--   **[Adapting the Filter Bar](adapting-the-filter-bar-609c39a.md "You can define application-specific selection fields by using
-			com.sap.vocabularies.UI.v1.SelectionFields and field groups for the
-		filter popup.")**  
-You can define application-specific selection fields by using `com.sap.vocabularies.UI.v1.SelectionFields` and field groups for the filter popup.
--   **[Configuring Filter Fields](configuring-filter-fields-f5dcb29.md "Application developers can configure filter fields to ensure they only accept either a single value, multiple values, or a range of
-		values.")**  
-Application developers can configure filter fields to ensure they only accept either a single value, multiple values, or a range of values.
 

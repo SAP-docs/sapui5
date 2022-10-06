@@ -198,12 +198,6 @@ TDD methodology tells us to do the implementation as soon as the test fails and 
 -   Write unit tests for testing the logical correctness of your features
 
 
-**Parent topic:** [Testing](testing-291c912.md "In this tutorial we will test application functionality with the testing tools that are delivered with SAPUI5. At different steps of this tutorial you will write tests using QUnit, OPA5, and the OData V2 mock server. Additionally, you will learn about testing strategies, Test Driven Development (TDD), and much more.")
-
-**Next:** [Step 1: Overview and Testing Strategy](step-1-overview-and-testing-strategy-ab134ef.md "In this step, we will take a look at the prototype and define the test strategy for our app. The prototype already contains the infrastructure for unit and integration testing and a minimum set of tests and features.")
-
-**Previous:** [Step 3: Adding the Price Formatter](step-3-adding-the-price-formatter-2bf4892.md "We will now take care of the implementation of the price formatter and make sure that the tests we wrote in the previous step run successfully.")
-
 **Related Information**  
 
 

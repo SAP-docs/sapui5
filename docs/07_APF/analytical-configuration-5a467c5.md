@@ -240,30 +240,3 @@ The following rules apply when working with configuration objects in Analysis Pa
     > Customer modifications may conflict with the SAP namespace and can be overwritten when updates are imported.
 
 
--   **[The Configuration Root Object](the-configuration-root-object-3cda7d5.md)**  
-
--   **[The Step Object](the-step-object-4bda7d5.md)**  
-
--   **[The Request Object](the-request-object-33da7d5.md)**  
-
--   **[The Binding Object](the-binding-object-5e467c5.md)**  
-
--   **[The Representation Object](the-representation-object-6a467c5.md)**  
-
--   **[The Representation Type Object](the-representation-type-object-6f467c5.md)**  
-
--   **[The Facet Filter Object](the-facet-filter-object-2a43fbb.md "")**  
-
--   **[The Smart Filter Bar Object](the-smart-filter-bar-object-b96dbb6.md "")**  
-
--   **[The Navigation Target Object](the-navigation-target-object-5cfe2c1.md "")**  
-
--   **[The Configuration Header Object](the-configuration-header-object-44fa08b.md "")**  
-
--   **[The Category Object](the-category-object-62467c5.md)**  
-
--   **[The Label Object](the-label-object-66467c5.md)**  
-
--   **[The Thumbnail Object](the-thumbnail-object-c5da7d5.md)**  
-
-

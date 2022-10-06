@@ -281,7 +281,7 @@ You can see the result in the following chart:
 
 ### Enabling Aggregation in the Back End
 
-For charts to work, the entity set must support aggregation. SAP Fiori elements supports two types of aggregation: transformation aggregation and custom aggregation.
+For charts to work, the entity set must support aggregation. SAP Fiori elements supports transformation aggregation \(both standard aggregation methods and custom aggregation methods are supported\).
 
 -   Specifying Chart Dimensions and Measures
 
@@ -345,9 +345,9 @@ For charts to work, the entity set must support aggregation. SAP Fiori elements 
     > }
     > ```
 
--   Transformation Aggregation
+-   Transformation Aggregation that Uses Standard Aggregation Methods
 
-    In the metadata, such entity sets have the `Aggregation.ApplySupported` set and `Aggregation.ApplySupportedType` must be `Transformations`. The collection of `Analytics.AggregatedProperyt` must then list all the aggregatable measures/aggregation methods that are used.
+    In the metadata, such entity sets have the `Aggregation.ApplySupported` set. The collection of `Analytics.AggregatedProperty` must then list all the aggregatable measures/aggregation methods that are used.
 
     > ### Sample Code:  
     > XML Annotation
@@ -397,6 +397,8 @@ For charts to work, the entity set must support aggregation. SAP Fiori elements 
     >   }
     > });
     > ```
+
+    In the example above, `"NetPricing"` is the property in the entity on which the standard aggregation methods `"min"` and `"max"` are defined. The call to the back end asks for the min/max aggregation to be applied on `NetPricing` and to be returned as `"minPrice"`/`"maximumPrice"` for the client-side binding of the aggregated value.
 
     For more information, see [Transformation Aggregation](http://docs.oasis-open.org/odata/odata-data-aggregation-ext/v4.0/cs01/odata-data-aggregation-ext-v4.0-cs01.html#_Toc378326290).
 
@@ -488,7 +490,7 @@ For charts to work, the entity set must support aggregation. SAP Fiori elements 
     >     }
     > ```
 
--   Custom Aggregation
+-   Custom Aggregation that Uses Custom Aggregation Methods
 
     To use custom aggregation in the back end, application developers must ensure that the metadata has `Aggregation.ApplySupported` set and that the following annotations are enabled at entity set level:
 
@@ -561,8 +563,4 @@ For charts to work, the entity set must support aggregation. SAP Fiori elements 
 > -   The criticality via the `UI.CriticalityCalculation` annotation is currently not supported.
 > 
 > -   For CAP CDS versions 3 or lower, the chart doesn't load properly if the parent entity set is non-aggregate based.
-
--   **[Defining Actions in the Chart Toolbar](defining-actions-in-the-chart-toolbar-7d1fa83.md "You can add action buttons to the chart toolbar by defining the Actions
-          property in the annotation term UI.Chart. ")**  
-You can add action buttons to the chart toolbar by defining the `Actions` property in the annotation term `UI.Chart`.
 

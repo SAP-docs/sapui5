@@ -96,11 +96,15 @@ These annotation terms can be configured in the application manifest file, as sh
 > 
 > ```
 
--   **[Types of Cards](types-of-cards-8ed3f76.md "Overview pages may contain transactional cards, such as table, list, stack, quick view
-		cards, and analytical chart cards such as line, bubble, donut, column, and bullet chart
-		cards. ")**  
-Overview pages may contain transactional cards, such as table, list, stack, quick view cards, and analytical chart cards such as line, bubble, donut, column, and bullet chart cards.
--   **[Configuring Card Properties](configuring-card-properties-53b0791.md " This section provides the configuration items relevant for all overview page
-        cards.")**  
- This section provides the configuration items relevant for all overview page cards.
+
+
+<a name="loio74332d5d829b413f9d7c0950dc6a71d2__section_qhh_dkw_z5b"/>
+
+## Cards in *Insights*
+
+You can add and use cards within the *Insights* section of the new *My Home* in SAP S/4HANA Cloud. The objective of displaying cards on the entry page is to visualize charts, KPI´s and counters in form of interest cards. The analytical, list and table cards are supported and can be used in the *Insights* section of the entry page.
+
+To add a card to the *Insights* section, select the more option present on your card and choose *Add to Insights*. From the subsequent dialog box, you can add the selected card to your *Insights* section. You can update the *Title* and the *Subtitle* of the card before choosing *Add*.
+
+Note that you can add only eight cards to your *Insights* section at a given time. If eight cards are already being displayed, the selected card is added to *Edit Insights* dialog box. You can choose to select/deselect cards by editing the *Insights* section. For more information, see [*My Home* in SAP S/4HANA Cloud](https://help.sap.com/docs/SAP_S4HANA_CLOUD/4fc8d03390c342da8a60f8ee387bca1a/8a60279e8d2041b5ad8d3455fab0f3ef.html).
 

@@ -255,6 +255,3 @@ You must register the controller extension in the manifest as follows:
 
 If you have added custom view state handling, ensure that the overall app state is updated in case the state of the custom control changes. To do so, use the `ExtensionAPI`, which provides the function `updateAppState`.
 
--   **[Example: Custom State Handling](example-custom-state-handling-bafc1f9.md "This example shows how to implement inner app state handling for custom UI elements. ")**  
-This example shows how to implement inner app state handling for custom UI elements.
-

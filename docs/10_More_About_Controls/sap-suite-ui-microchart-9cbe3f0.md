@@ -41,14 +41,6 @@ With the new `sap.suite.ui.microchart` library, the available MicroChart control
     > -   `BulletChart` to `BulletMicroChart`
 
 
--   **[Radial Micro Chart](radial-micro-chart-aa93bdb.md "Displays a ring chart that represents a percentage value.")**  
-Displays a ring chart that represents a percentage value.
--   **[Line Micro Chart](line-micro-chart-bb5813c.md "Displays a series of values as segmented lines along a threshold line.")**  
-Displays a series of values as segmented lines along a threshold line.
--   **[Stacked Bar Micro Chart](stacked-bar-micro-chart-d4c48c8.md "The control shows a progress chart that displays the overall progress and a summary
-		of the items.")**  
-The control shows a progress chart that displays the overall progress and a summary of the items.
-
 **Related Information**  
 
 

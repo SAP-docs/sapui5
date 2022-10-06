@@ -72,9 +72,6 @@ oRm.openStart("div", oControl);
 
 ```
 
--   **[List of Supported CSS Classes](list-of-supported-css-classes-91a4946.md "Overview of the CSS classes currently supported by SAPUI5.")**  
-Overview of the CSS classes currently supported by SAPUI5.
-
 **Related Information**  
 
 

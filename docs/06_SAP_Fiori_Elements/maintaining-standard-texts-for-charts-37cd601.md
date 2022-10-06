@@ -50,9 +50,9 @@ You can override the standard texts using the following keys in the i18n file:
 
 You can override the standard texts using the following keys in the i18n file:
 
--   `T_OP_TABLE_AND_CHART_NO_DATA_TEXT`: Use this key to add a text when no filters are applied and no data is found. This is applicable only to the list report.
+-   `T_TABLE_AND_CHART_NO_DATA_TEXT`: Use this key to add a text when no filters are applied and no data is found. This is applicable only to the list report.
 
--   `T_OP_TABLE_AND_CHART_NO_DATA_TEXT_WITH_FILTER`: Use this key to add a text when filters are applied and no data is found.
+-   `T_TABLE_AND_CHART_NO_DATA_TEXT_WITH_FILTER`: Use this key to add a text when filters are applied and no data is found.
 
 
 

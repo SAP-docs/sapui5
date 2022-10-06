@@ -123,12 +123,6 @@ In the XML view, we use data binding to connect the button text to the `showHell
 -   Use Unicode escape sequences for special characters.
 
 
-**Parent topic:** [Walkthrough](walkthrough-3da5f4b.md "In this tutorial we will introduce you to all major development paradigms of SAPUI5.")
-
-**Next:** [Step 7: JSON Model](step-7-json-model-70ef981.md "Now that we have set up the view and controller, it’s about time to think about the M in MVC.")
-
-**Previous:** [Step 9: Component Configuration](step-9-component-configuration-4cfa608.md "After we have introduced all three parts of the Model-View-Controller (MVC) concept, we now come to another important structural aspect of SAPUI5.")
-
 **Related Information**  
 
 
