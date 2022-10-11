@@ -1,4 +1,5 @@
-[![REUSE status]()]()
+[![REUSE status](https://api.reuse.software/badge/github.com/SAP-docs/sapui5)](https://api.reuse.software/info/github.com/SAP-docs/sapui5)
+
 
 # Contributions to the SAPUI5 Documentation
 
