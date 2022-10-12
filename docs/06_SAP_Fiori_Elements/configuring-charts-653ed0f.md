@@ -57,9 +57,9 @@ The following code samples show how to create your annotations for the chart fac
 > @UI.facet: [
 >  {
 >   label: '{@i18n>@SalesData}',
->   type: #CHART_REFERENCE
->   purpose: #STANDARD
->   targetElement: '_productSalesData',
+>   type: #CHART_REFERENCE,
+>   purpose: #STANDARD,
+>   targetElement: '_productSalesData'
 >  }
 > ]  
 > ```
