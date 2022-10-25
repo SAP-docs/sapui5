@@ -42,7 +42,7 @@ SAP Fiori elements provides two extension methods for applications that run in `
 > List report extension implementing `sap-keep-alive` extension APIs
 > 
 > ```
-> return ControllerExtension.extend("SalesOrder.custom.LRExtend", {
+> return ControllerExtension.extend("SalesOrder.ext.LRExtend", {
 >     // this section allows to extend lifecycle hooks or override public methods of the base controller
 >     override: {
 >         viewState: {

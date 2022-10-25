@@ -149,14 +149,14 @@ The object page of the *Manage Products* app shows the new section *Product Desc
 
 In the editor of your choice, open the folder structure of the project where you want to make the adaptation and proceed as follows:
 
-1.  In the `webapp` folder, create a new subfolder called `custom`.
-2.  In the folder `custom`, create the file `CustomSection.view.xml`.
+1.  In the `webapp` folder, create a new subfolder called `ext`.
+2.  In the folder `ext`, create the file `CustomSection.view.xml`.
 3.  Define the view with its elements, in this example a `VerticalLayout` with several other controls is used. Bindings can be used as well.
 
     > ### Sample Code:  
     > ```xml
     > <core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:l="sap.ui.layout">
-    > 	<l:VerticalLayout core:require="{handler: 'SalesOrder/custom/CustomColumn'}">
+    > 	<l:VerticalLayout core:require="{handler: 'SalesOrder/ext/CustomColumn'}">
     > 		<Button text="Custom Button" press="handler.buttonPressed" />
     > 	</l:VerticalLayout>
     > </core:FragmentDefinition>
@@ -215,7 +215,7 @@ The extension appears within the `ObjectPage.view` before or after the defined s
 > 									"sections": {
 > 										"customSection": {
 > 											"type": "XMLFragment",
-> 											"name": "SalesOrder.custom.CustomSection",
+> 											"name": "SalesOrder.ext.CustomSection",
 > 											"title": "{i18n>customSection}",
 > 											"position": {
 > 												"placement": "Before",
@@ -224,7 +224,7 @@ The extension appears within the `ObjectPage.view` before or after the defined s
 > 										},
 > 										"anotherCustomSection": {
 > 											"type": "XMLFragment",
-> 											"name": "SalesOrder.custom.CustomFieldForm",
+> 											"name": "SalesOrder.ext.CustomFieldForm",
 > 											"title": "Field Form",
 > 											"position": {
 > 												"placement": "After",
