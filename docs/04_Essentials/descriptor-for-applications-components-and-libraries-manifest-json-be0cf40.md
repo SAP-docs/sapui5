@@ -1834,7 +1834,8 @@ Cross-navigation for specifying inbounds and outbounds
 
                 -   '`plain`': '`value`' is taken as a literal string value.
                 -   '`reference`': '`value`' is a reference to a parameter maintained in the SAP Fiori launchpad \(such as '`UserDefault.CostCenter`'. The parameter value is used on the outbound intent parameter.
-                -   '`regexp`': '`value`' matches the specified pattern.'`binding`': '`value`' is a binding path. The value from the model at the specified binding path will be used on the outbound intent parameter.
+                -   '`regexp`': '`value`' matches the specified pattern.
+				-   '`binding`': '`value`' is a binding path. The value from the model at the specified binding path will be used on the outbound intent parameter.
 
 
         -   `required`: Indicator whether parameter is required \(`true`, `false`\)
