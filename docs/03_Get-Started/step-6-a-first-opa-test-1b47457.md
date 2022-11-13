@@ -43,6 +43,7 @@ The journey uses another structuring element of OPA called “page object” tha
 
 > ### Note:  
 > When you first start writing tests, you may find it difficult to figure out the correct control locators. The *Test Recorder* tool can suggest a solution in the form of a code snippet. For most controls, it can find a combination of matchers that match a single control. Then, all you need to do is copy the code snippet to your OPA5 page object. For more information, see [Test Recorder](../04_Essentials/test-recorder-2535ef9.md).
+> However, if you have difficulties generating test journeys, *UI5 Journey Recorder* is a Chrome-Extension tool to record test journeys. The recorded journeys can be used to generate OPA5 test code. For more information, see [UI5 Journey Recorder](https://github.com/ui5-community/ui5-journey-recorder).
 
 
 
