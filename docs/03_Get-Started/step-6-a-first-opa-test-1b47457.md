@@ -227,6 +227,8 @@ Now run the `webapp/test/integration/opaTests.qunit.html` file and make sure tha
 
 [Test Recorder](../04_Essentials/test-recorder-2535ef9.md "The Test Recorder tool supports app developers who write integration and system tests.")
 
+[UI5 Journey Recorder](https://github.com/ui5-community/ui5-journey-recorder)
+
 [API Reference: `sap.ui.test.matchers`](https://ui5.sap.com/#/api/sap.ui.test.matchers)
 
 [API Reference: `sap.ui.test.Opa5`](https://ui5.sap.com/#/api/sap.ui.test.Opa5)
