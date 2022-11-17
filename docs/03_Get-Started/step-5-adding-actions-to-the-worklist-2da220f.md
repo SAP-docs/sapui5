@@ -10,7 +10,7 @@ Now we can easily spot shortages on our stock, but we would also like to take ac
 
    
   
-<a name="loio2da220ff496c4b0f9ce29208cbd089f3__fig_yn1_q4y_c5"/>Actions are now available in the footer bar
+**Actions are now available in the footer bar**
 
  ![](images/Tutorial_Worklist_Step_5_Preview_016d473.png "Actions are now available in the footer bar") 
 

@@ -10,7 +10,7 @@ Determining actions are used to trigger actions directly using the context of th
 
    
   
-<a name="loio1743323829e5474eb3829d2e9ab022ae__fig_bld_m3l_lw"/>Object Page: Determining Action in Footer
+**Object Page: Determining Action in Footer**
 
  ![](images/ObjectPage_DeterminingAction_5dc52f1.png "Object Page: Determining Action in Footer") 
 

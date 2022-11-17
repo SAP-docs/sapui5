@@ -220,7 +220,7 @@ There are two types of value help:
     
     ```
 
-    <a name="loioe6035883c54b4e2b94c022b6950398fd__table_fl4_dbz_lfb"/>Value List
+    **Value List**
 
 
     <table>

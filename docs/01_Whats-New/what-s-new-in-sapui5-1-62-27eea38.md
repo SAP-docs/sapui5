@@ -51,7 +51,7 @@ A card is a user experience design pattern that displays the most concise pieces
 
   
   
-<a name="loio27eea38eeb7b40d19d0dfe3ddf513175__fig_pfj_mhs_5fb"/>Analytical card
+**Analytical card**
 
  ![](images/Cards_3ff4cba.png "Analytical card") 
 

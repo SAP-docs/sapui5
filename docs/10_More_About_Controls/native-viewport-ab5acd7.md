@@ -55,7 +55,7 @@ Gestures such as pan and zoom are captured and processed by the `sap.ui.vk.Loco`
 
 In addition to mouse and touch gestures, keyboard shortcuts are available for navigating around the `NativeViewport` instance:
 
-<a name="loioab5acd7a755b4daca01c26616173b4fd__table_h3z_qmg_q5"/>Native Viewport keyboard shortcuts
+**Native Viewport keyboard shortcuts**
 
 
 <table>

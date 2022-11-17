@@ -12,13 +12,13 @@ A slider is a control that enables you to adjust values on a specified range. SA
 
    
   
-<a name="loio84ec82e7498345ccbfcd754d4578313b__fig_z5n_rkx_pdb"/>Slider
+**Slider**
 
  ![](images/Slider_18fb5f8.png "Slider") 
 
    
   
-<a name="loio84ec82e7498345ccbfcd754d4578313b__fig_tbk_skx_pdb"/>RangeSlider
+**RangeSlider**
 
  ![](images/RangeSlider_923cc5e.png "RangeSlider") 
 

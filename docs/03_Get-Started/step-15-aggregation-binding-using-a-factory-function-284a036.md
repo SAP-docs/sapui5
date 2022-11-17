@@ -10,7 +10,7 @@ Instead of hard-coding a single template control, we use a factory function to g
 
    
   
-<a name="loio284a036c8ff943238fb65bf5a2676fb7__fig_r1j_pst_mr"/>Controls generated based on data
+**Controls generated based on data**
 
  ![](images/Tutorial_Data_Binding_Step_15_db27ba8.png "Controls generated based on data") 
 

@@ -12,7 +12,7 @@ The `SmartForm` control is used to obtain a form-like layout for several control
 
    
   
-<a name="loiof712d30f9e2d4abd9670263f89542f2b__fig_r1j_pst_mr"/>Smart Form with Several Smart Fields \(Initial Read-Only Mode\)
+**Smart Form with Several Smart Fields \(Initial Read-Only Mode\)**
 
  ![](images/Smart_Controls_Tutorial_Step_04a_3127199.png "Smart Form with Several Smart Fields (Initial Read-Only Mode)") 
 
@@ -20,7 +20,7 @@ When you press the pencil icon, the dialog for `SmartForm` becomes editable:
 
    
   
-<a name="loiof712d30f9e2d4abd9670263f89542f2b__fig_ey3_klj_js"/>Smart Form with Several Smart Fields \(Edit Mode\)
+**Smart Form with Several Smart Fields \(Edit Mode\)**
 
  ![](images/Smart_Controls_Tutorial_Step_04b_0fd542d.png "Smart Form with Several Smart Fields (Edit Mode)") 
 

@@ -27,7 +27,7 @@ The table containing additional columns can look like this:
 
    
   
-<a name="task_yhy_gqg_d4b__fig_ztc_v1j_rz"/>Custom columns in a responsive table on the object page
+**Custom columns in a responsive table on the object page**
 
  ![](images/Custom_columns_in_responsive_table_on_object_page_fe17dac.png "Custom columns in a responsive table on the object page") 
 

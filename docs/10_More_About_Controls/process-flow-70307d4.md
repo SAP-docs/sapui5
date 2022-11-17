@@ -12,7 +12,7 @@ Process Flow is a complex control that enables you to display documents or other
 
    
   
-<a name="loio70307d4b63814dad9a95220e85a563dc__fig_vdm_fhk_5y"/>Process Flow Example
+**Process Flow Example**
 
  ![Process Flow Example](images/Process_Flow_05ab4f0.jpg "Process Flow Example") 
 

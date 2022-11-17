@@ -158,7 +158,7 @@ DELETE\_UNDELETABLE\_ITEMS=\{0\} of \{1\} items cannot be deleted.
 
 Only the keys given below are allowed to be overridden in the custom i18n file for deleting lines in a table:
 
-<a name="loio0d1fbf4f4d0048949f4335007fb5a856__table_dw1_lzh_gmb"/>Keys and Values
+**Keys and Values**
 
 
 <table>

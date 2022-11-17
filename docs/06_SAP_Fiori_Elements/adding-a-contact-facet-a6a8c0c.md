@@ -6,7 +6,7 @@ To render a contact list and contact facet, you add a `UI.ReferenceFacet` that p
 
    
   
-<a name="loioa6a8c0c4849b483eb10e87f6fdf9383c__fig_g4x_h1w_35"/>Object Page: Contacts
+**Object Page: Contacts**
 
  ![](images/ObjectPage_Contacts_076fb4d.png "Object Page: Contacts") 
 

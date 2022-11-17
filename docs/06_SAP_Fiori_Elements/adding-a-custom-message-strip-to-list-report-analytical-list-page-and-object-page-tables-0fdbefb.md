@@ -4,12 +4,6 @@
 
 You can show your custom texts in the message strip above the table.
 
-> ### Note:  
-> This topic is currently only applicable to SAP Fiori elements for OData V2.
-
-> ### Caution:  
-> We do not recommend using this extension API with the multiple view scenarios. We also do not support this for smart charts and lists.
-
 For the list report and analytical list page, you can choose to add a custom message as shown here:
 
 > ### Sample Code:  
@@ -41,23 +35,6 @@ When you have multiple tabs, you can choose to display the message only in a spe
 > 			or
 > 
 > this.extensionAPI.setCustomMessage(oMessage); 		        // Displays message on all the tabs
-> 
-> ```
-
-To add a custom message to the object page table, you must add the table ID as shown here:
-
-> ### Sample Code:  
-> ```
-> ObjectPageExtension.controller.js
-> onBeforeRebindTableExtension: function () {
->             if (this.extensionAPI.setCustomMessage) {
->                 var oMsg = {
->                     message: "Custom message on object page tab 1",
->                     type: sap.ui.core.MessageType.Success
->                 };
-> this.extensionAPI.setCustomMessage(oMsg,"STTASOMVLR::sap.suite.ui.generic.template.ObjectPage.view.Details::C_STTA_SalesOrder_WD_20--SalesOrderItemsID::Table");           
->             }
->         }
 > 
 > ```
 
@@ -98,6 +75,30 @@ There can be four types of messages:
 
 -   `sap.ui.core.MessageType.Information`
 
+
+
+
+## Additional Features in SAP Fiori Elements for OData V2
+
+To add a custom message to the object page table, you must add the table ID as shown here:
+
+> ### Sample Code:  
+> ```
+> ObjectPageExtension.controller.js
+> onBeforeRebindTableExtension: function () {
+>             if (this.extensionAPI.setCustomMessage) {
+>                 var oMsg = {
+>                     message: "Custom message on object page tab 1",
+>                     type: sap.ui.core.MessageType.Success
+>                 };
+> this.extensionAPI.setCustomMessage(oMsg,"STTASOMVLR::sap.suite.ui.generic.template.ObjectPage.view.Details::C_STTA_SalesOrder_WD_20--SalesOrderItemsID::Table");           
+>             }
+>         }
+> 
+> ```
+
+> ### Restriction:  
+> We don't recommend using this extension API with the multiple view scenarios. We also don't support this for smart charts and lists.
 
 **Related Information**  
 

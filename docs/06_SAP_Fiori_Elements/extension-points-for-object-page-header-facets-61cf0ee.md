@@ -258,7 +258,7 @@ In this example, the second header facet with the key `CustomHeaderFacet2` occur
 
 You can define your custom header facet by implementing an `xmlfragment` and using the following properties:
 
-<a name="loio61cf0ee828824903907464c80dd0d88c__table_w4x_dhb_snb"/>Properties of a Custom Header Facet
+**Properties of a Custom Header Facet**
 
 
 <table>
@@ -714,7 +714,7 @@ You reference the `fieldGroup` through the annotation path with the correspondin
 
 You can define your custom header fields by implementing an `xmlfragment` and using the following properties:
 
-<a name="loio61cf0ee828824903907464c80dd0d88c__table_hzf_ttb_snb"/>Properties of Custom Header Fields
+**Properties of Custom Header Fields**
 
 
 <table>

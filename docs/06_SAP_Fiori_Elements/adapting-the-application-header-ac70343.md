@@ -12,7 +12,7 @@ If required, you can change the application header that is generated from the SA
 
    
   
-<a name="loioac70343fdf16499e8b39d42cec7593be__fig_ufz_2dc_qmb"/>Application Header in List Report
+**Application Header in List Report**
 
  ![](images/Application_Header_Title_d6eb0e9.jpg "Application Header in List Report") 
 
@@ -26,7 +26,7 @@ To change the application header on the object page, change the `@UI.headerInfo.
 
    
   
-<a name="loioac70343fdf16499e8b39d42cec7593be__fig_zmb_hdc_qmb"/>Application Header on Object Page
+**Application Header on Object Page**
 
  ![](images/Object_Page_Header_b88d272.jpg "Application Header on Object Page") 
 

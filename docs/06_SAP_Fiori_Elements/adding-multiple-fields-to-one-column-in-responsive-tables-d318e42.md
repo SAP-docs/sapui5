@@ -150,7 +150,7 @@ The result looks like this:
 
    
   
-<a name="loiod318e423c7c14c98957fe0642b6fcf49__fig_sn4_kvn_5lb"/>Multiple IDs, Descriptions, and Action Buttons in a Table Column
+**Multiple IDs, Descriptions, and Action Buttons in a Table Column**
 
  ![](images/Multiple_IDs_93da960.png "Multiple IDs, Descriptions, and Action Buttons in a Table Column") 
 

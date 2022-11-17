@@ -12,7 +12,7 @@ In this step, we will encapsulate all UI assets in a component that is independe
 
    
   
-<a name="loio4cfa60872dca462cb87148ccd0d948ee__fig_r1j_pst_mr"/>An input field and a description displaying the value of the input field \(No visual changes to last step\)
+**An input field and a description displaying the value of the input field \(No visual changes to last step\)**
 
  ![](images/SAPUI5_Walkthrough_Step_07_to_10_e5a9bb4.png "An input field and a description displaying the value of the input field (No
 					visual changes to last step)") 
@@ -25,7 +25,7 @@ You can view and download all files at [Walkthrough - Step 9](https://ui5.sap.co
 
   
   
-<a name="loio4cfa60872dca462cb87148ccd0d948ee__fig_os4_mbp_ns"/>Folder Structure for this Step
+**Folder Structure for this Step**
 
  ![](images/SAPUI5_Walkthrough_Step_09_1e237a3.png "Folder Structure for this Step") 
 

@@ -654,7 +654,7 @@ You can use the `UI.TextArrangement` annotation to configure the display format 
     -   `TextSeparate`
 
 
-    <a name="loioa5608eabcc184aee99e1a7d88b28816c__table_lrb_kdk_nsb"/>Value Help with Dialog
+    **Value Help with Dialog**
 
 
     <table>
@@ -825,7 +825,7 @@ You can use the `UI.TextArrangement` annotation to configure the display format 
 
 -   Value Help with a Dropdown List \(`ValueListWithFixedValues`\)
 
-    <a name="loioa5608eabcc184aee99e1a7d88b28816c__table_fsl_32k_nsb"/>Value Help with Dropdown List
+    **Value Help with Dropdown List**
 
 
     <table>

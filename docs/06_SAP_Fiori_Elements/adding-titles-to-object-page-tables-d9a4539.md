@@ -90,7 +90,7 @@ The results look like this:
 
   
   
-<a name="loiod9a45394165e439595cf0006924b6996__fig_n4q_vjp_cnb"/>Title for single table in object page section
+**Title for single table in object page section**
 
  ![](images/Adding_Titles_to_Object_page_8920264.png "Title for single table in object page section") 
 

@@ -89,6 +89,9 @@ The *Mass Edit* button isn't enabled if the update restriction points to a path 
 >         Example:
 > 
 >         If `EmployeeID` is picked from the suggestion list and if there are two reporting lines \(two different `Managers`\) for this `EmployeeID`, the OUT mapping \(the `Manager` field\) cannot be populated with the correct value.
+> 
+> 
+> -   If *Mass Edit* is enabled for an object page and the service is ETag enabled, you must ensure that the ETag implementation is in `etag master`. This means the ETag value of the child entity doesn't depend on the ETag value of the parent \(that is, the root entity\).
 
 > ### Restriction:  
 > -   The following fields are currently not available in the *Mass Edit* dialog:

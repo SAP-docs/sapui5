@@ -586,7 +586,7 @@ ALP displays chart titles in the following order: <Measure Name\> by <Dimension 
 
 You can change the formatting of the text that appears on the visual filter chart axis labels, chart tooltips, and within the selected link \(if a chart context is selected\). The default view of the visual filter bar is based on the filter fields defined in the `TextArrangement` annotation and its type in the main entity set to change the text behavior like this:
 
-<a name="loio1714720cae984ad8b9d9111937e7cd38__table_zyg_kb4_wbb"/>
+****
 
 
 <table>
@@ -748,7 +748,7 @@ The IN/OUT parameter values take precedence over the `SelectionVariant` values f
 > 
 > If the `SelectionVariant` has date-based filter fields, you must specify the value in the format `"Z'. Ex:”2018-10-15T00:00:00Z"`, with the time part as zeroes and appended with 'Z'.
 
-<a name="loio1714720cae984ad8b9d9111937e7cd38__table_pkx_kxn_j2b"/>In/out parameter taking precedence
+**In/out parameter taking precedence**
 
 
 <table>
@@ -814,7 +814,7 @@ Specifying ***Analytical List Page*** as a value for the project in the filter b
 
 In SAP Fiori elements for OData V2, you can render the visual filter with a parametrized entity set as the collection path. To do so, you need to provide parameters in the `SelectionVariant` annotation. Any values added in the smart filter bar take priority over the `SelectionVariant` annotation values.
 
-<a name="loio1714720cae984ad8b9d9111937e7cd38__table_jng_vyn_j2b"/>
+****
 
 
 <table>
@@ -917,7 +917,7 @@ Do not show the same filter dimension with two or more different measures at the
 
 If the use case requires you to show a dimension with different measures, consider using an overview page instead.
 
-<a name="loio1714720cae984ad8b9d9111937e7cd38__table_xvf_wyy_ghb"/>
+****
 
 
 <table>

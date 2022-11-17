@@ -13,7 +13,7 @@ In SAP Fiori elements for OData V2, you can also use SAP Web IDE to build UI app
 As an app developer, you must define a configuration in SAP Web IDE. The main aspects are the destinations to the back-end metadata, navigation between pages, and page design \(as pages may contain several templates\).
 
 > ### Caution:  
-> SAP Web IDE is no longer available via SAP Business Technology Platform trial accounts. Any references to SAP Web IDE in this documentation are only relevant for you if you have access to SAP Web IDE through a productive SAP BTP account. Please consider SAP Business Application Studio as an alternative. See [App Development Using SAP Business Application Studio](../03_Get-Started/app-development-using-sap-business-application-studio-6bbad66.md).
+> SAP Web IDE is no longer available via SAP Business Technology Platform trial accounts. Any references to SAP Web IDE in this documentation are only relevant for you if you have access to SAP Web IDE through a productive SAP BTP account. Please consider SAP Business Application Studio as an alternative. See [App Development Using SAP Business Application Studio](../05_Developing_Apps/app-development-using-sap-business-application-studio-6bbad66.md).
 
 For more information about SAP Web IDE, see the documentation for SAP Web IDE on the SAP Help Portal at [https://help.sap.com/viewer/p/SAP\_Web\_IDE](https://help.sap.com/viewer/p/SAP_Web_IDE).
 
@@ -21,7 +21,7 @@ The following figure shows the application in SAP Web IDE that starts the wizard
 
   
   
-<a name="loiofe5bc65a220647f49ee575762d61d891__fig_xkj_g4b_4mb"/>Template Selection Screen in SAP Web IDE
+**Template Selection Screen in SAP Web IDE**
 
  ![](images/SAP_Fiori_Smart_Template_Application_3efd77b.png "Template Selection Screen in SAP Web IDE") 
 
@@ -36,7 +36,7 @@ The following figure shows the application in SAP Web IDE that starts the wizard
 -   You have access to SAP Web IDE 1.17 or higher.
 
     > ### Caution:  
-    > SAP Web IDE is no longer available via SAP Business Technology Platform trial accounts. Any references to SAP Web IDE in this documentation are only relevant for you if you have access to SAP Web IDE through a productive SAP BTP account. Please consider SAP Business Application Studio as an alternative. See [App Development Using SAP Business Application Studio](../03_Get-Started/app-development-using-sap-business-application-studio-6bbad66.md).
+    > SAP Web IDE is no longer available via SAP Business Technology Platform trial accounts. Any references to SAP Web IDE in this documentation are only relevant for you if you have access to SAP Web IDE through a productive SAP BTP account. Please consider SAP Business Application Studio as an alternative. See [App Development Using SAP Business Application Studio](../05_Developing_Apps/app-development-using-sap-business-application-studio-6bbad66.md).
 
     For more information about SAP Web IDE, see the documentation for SAP Web IDE on the SAP Help Portal at [https://help.sap.com/viewer/p/SAP\_Web\_IDE](https://help.sap.com/viewer/p/SAP_Web_IDE).
 

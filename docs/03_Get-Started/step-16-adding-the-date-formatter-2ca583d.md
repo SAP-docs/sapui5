@@ -10,7 +10,7 @@ Our formatter does its job, but it is not yet used. In this step we will use it.
 
    
   
-<a name="loio2ca583d6b9c24e4d8f189eada7c4b668__fig_r1j_pst_mr"/>Date formatter in action
+**Date formatter in action**
 
  ![](images/Tutorial_Testing_Step_16_9aa15b0.png "Date formatter in action") 
 

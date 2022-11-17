@@ -27,7 +27,7 @@ MyControl.prototype.setShowLogoutButton = function(show) {
 
 ## Allowed Property Types
 
-<a name="loioac56d92162ed47ff858fdf1ce26c18c4__table_gkp_kb2_2y"/>Built-in Types
+**Built-in Types**
 
 
 <table>
@@ -166,7 +166,7 @@ Can be any JavaScript function.
 </tr>
 </table>
 
-<a name="loioac56d92162ed47ff858fdf1ce26c18c4__table_lbg_fc2_2y"/>Derived Types
+**Derived Types**
 
 
 <table>

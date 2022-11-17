@@ -8,7 +8,7 @@ The goal of these controls is to ensure consistency of the user interfaces in th
 
    
   
-<a name="loiod8374d578a4c4f9498f9f14a6672c8bb__fig_s3m_bqq_dv"/>Basic Page Structure of a Tool
+**Basic Page Structure of a Tool**
 
  ![](images/General_page_structure_of_a_tool_1401097.png "Basic Page Structure of a Tool") 
 

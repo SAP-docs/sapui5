@@ -10,7 +10,7 @@ The *Employees* table displays employee data. However, the resumes of the employ
 
    
   
-<a name="loio877d57e3b5654b19a2d2e5190dc43b0d__fig_r1j_pst_mr"/>Navigation to an existing route from a table item
+**Navigation to an existing route from a table item**
 
  ![](images/Tutorial_Navigation_and_Routing_Step_15_d97fe6d.png "Navigation to an existing route from a table item") 
 

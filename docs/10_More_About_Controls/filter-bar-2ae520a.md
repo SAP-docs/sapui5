@@ -129,7 +129,7 @@ The `fetchVariant` has to return a JSON object. This is the information that is 
 
 The following table shows which controls are used by the filter bar controls to handle views:
 
-<a name="loio2ae520a67c44495ab5dbc69668c47a7f__table_z1p_2vb_zw"/>Controls for View Management Integration
+**Controls for View Management Integration**
 
 
 <table>

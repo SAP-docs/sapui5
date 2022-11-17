@@ -12,13 +12,13 @@ You can create apps using the following SAP Fiori elements floorplans:
 
        
       
-    <a name="loio797c3239b2a9491fa137e4998fd76aa7__fig_tr4_klt_1rb"/>List Report
+    **List Report**
 
      ![](images/Using_SAP_Fiori_Elements_Floorplans_List_Report_3e93d0e.png "List Report") 
 
        
       
-    <a name="loio797c3239b2a9491fa137e4998fd76aa7__fig_rhk_cmt_1rb"/>Object Page
+    **Object Page**
 
      ![](images/Using_SAP_Fiori_Elements_Floorplans_Object_Page_563b849.png "Object Page") 
 
@@ -28,7 +28,7 @@ You can create apps using the following SAP Fiori elements floorplans:
 
        
       
-    <a name="loio797c3239b2a9491fa137e4998fd76aa7__fig_vvz_j4t_1rb"/>Worklist
+    **Worklist**
 
      ![](images/Using_SAP_Fiori_Elements_Floorplans_Worklist_0393ce6.png "Worklist") 
 
@@ -38,7 +38,7 @@ You can create apps using the following SAP Fiori elements floorplans:
 
       
       
-    <a name="loio797c3239b2a9491fa137e4998fd76aa7__fig_x4r_x4t_1rb"/>Overview Page
+    **Overview Page**
 
      ![](images/Using_SAP_Fiori_Elements_Floorplans_Overview_Page_e83a616.png "Overview Page") 
 
@@ -48,7 +48,7 @@ You can create apps using the following SAP Fiori elements floorplans:
 
        
       
-    <a name="loio797c3239b2a9491fa137e4998fd76aa7__fig_ffj_f4t_1rb"/>Analytical List Page
+    **Analytical List Page**
 
      ![](images/Using_SAP_Fiori_Elements_Floorplans_Analytical_List_Page_897c8d0.png "Analytical List Page") 
 

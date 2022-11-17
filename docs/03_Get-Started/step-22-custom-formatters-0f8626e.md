@@ -10,7 +10,7 @@ If we want to do a more complex logic for formatting properties of our data mode
 
    
   
-<a name="loio0f8626ed7b7542ffaa44601828db20de__fig_r1j_pst_mr"/>A status is now displayed with a custom formatter
+**A status is now displayed with a custom formatter**
 
  ![](images/SAPUI5_Walkthrough_Step_23_7e0112d.png "A status is now displayed with a custom formatter") 
 

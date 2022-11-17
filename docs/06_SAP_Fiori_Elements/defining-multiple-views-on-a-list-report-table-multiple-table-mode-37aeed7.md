@@ -1246,7 +1246,7 @@ To define multiple views using multiple table mode, perform the following steps:
     > 31-}
     > ```
 
-    <a name="task_om1_nyy_cnb__table_yq4_43s_jrb"/>Settings
+    **Settings**
 
 
     <table>

@@ -374,7 +374,7 @@ The following changes and new features are available for SAP Fiori elements for 
 
 -   We've replaced some keys that can be overridden by application developers using the custom i18n file approach. If you're using any of the deprecated keys in the application resource bundles, replace them with the new ones.
 
-    <a name="loio5a184109b1ec44e7ab7e43d40ef56847__table_b3b_hgd_2tb"/>Changed i18n Keys
+    **Changed i18n Keys**
 
 
     <table>

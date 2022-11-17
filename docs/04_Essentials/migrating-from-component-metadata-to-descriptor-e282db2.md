@@ -9,7 +9,7 @@ For compatibility reasons, the mapping to the `manifest.json` file is done autom
 > ### Note:  
 > To benefit from the performance improvements that can be achieved by using “manifest first”, we recommend to migrate the component metadata to the descriptor \(`manifest.json`\). For more information about manifest first, see the *Manifest First Function* section in [Descriptor for Applications, Components, and Libraries \(manifest.json\)](descriptor-for-applications-components-and-libraries-manifest-json-be0cf40.md).
 
-<a name="loioe282db2865e94f69972c407469b801e9__table_ogz_llt_45"/>Mapping Table
+**Mapping Table**
 
 
 <table>

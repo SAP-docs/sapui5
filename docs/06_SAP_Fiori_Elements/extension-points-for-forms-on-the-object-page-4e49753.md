@@ -124,7 +124,7 @@ The form containing additional custom fields can look like this:
 
 You can define your custom fields by implementing an `xmlfragment` and using the following properties:
 
-<a name="loio4e49753530ad4a73a44a5f8efac238d6__table_i5l_mb2_14b"/>Properties of a Custom Field in a Form
+**Properties of a Custom Field in a Form**
 
 
 <table>

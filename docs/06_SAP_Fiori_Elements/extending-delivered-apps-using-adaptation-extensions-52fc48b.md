@@ -19,7 +19,7 @@ You can implement extension functions as part of a UI adaptation project by usin
 > The flexible column layout is not supported by the SAPUI5 Visual Editor in SAP Web IDE.
 
 > ### Caution:  
-> SAP Web IDE is no longer available via SAP Business Technology Platform trial accounts. Any references to SAP Web IDE in this documentation are only relevant for you if you have access to SAP Web IDE through a productive SAP BTP account. Please consider SAP Business Application Studio as an alternative. See [App Development Using SAP Business Application Studio](../03_Get-Started/app-development-using-sap-business-application-studio-6bbad66.md).
+> SAP Web IDE is no longer available via SAP Business Technology Platform trial accounts. Any references to SAP Web IDE in this documentation are only relevant for you if you have access to SAP Web IDE through a productive SAP BTP account. Please consider SAP Business Application Studio as an alternative. See [App Development Using SAP Business Application Studio](../05_Developing_Apps/app-development-using-sap-business-application-studio-6bbad66.md).
 
 You can try the adaptation extensions by creating an adaptation projecs using [Create the Adaptation Project](https://help.sap.com/viewer/DRAFT/bcbb716c051b427cbe8ec7fe8362c9e5/DEV2/en-US/ff97fe714edf42b78a1cbfc2996a0f25.html).
 
@@ -35,7 +35,7 @@ You can use adaptation extensions for these extension points:
 
            
           
-        <a name="loio52fc48b479314d0688be24f699778c47__fig_m3h_nzd_wfb"/>Adaptation Extension Options in the List Report
+        **Adaptation Extension Options in the List Report**
 
          ![](images/List_Report_Adaptation_extensions_d09b292.png "Adaptation Extension Options in the List Report") 
 
@@ -81,7 +81,7 @@ You can use adaptation extensions for these extension points:
 
            
           
-        <a name="loio52fc48b479314d0688be24f699778c47__fig_ufb_rzd_wfb"/>Adaptation Extension Options on the Object Page
+        **Adaptation Extension Options on the Object Page**
 
          ![](images/Object_Page_Adaptation_Extensions_07345eb.png "Adaptation Extension Options on the Object Page") 
 

@@ -14,7 +14,7 @@ Starting from the main UI, we can enter the different personalization possibilit
 
    
   
-<a name="loio19531496ec144fa1bc4adab5bc08527c__fig_r1j_pst_mr"/>Table Personalization
+**Table Personalization**
 
  ![](images/Smart_Controls_Tutorial_Step_06a_1623d1b.png "Table Personalization") 
 
@@ -22,31 +22,31 @@ After doing this, you see a popup with four different tabs:
 
    
   
-<a name="loio19531496ec144fa1bc4adab5bc08527c__fig_ywq_yzj_js"/>Settings Dialog: Column Visibility and Order
+**Settings Dialog: Column Visibility and Order**
 
  ![](images/Step6_popup1_new_33103eb.png "Settings Dialog: Column Visibility and Order") 
 
    
   
-<a name="loio19531496ec144fa1bc4adab5bc08527c__fig_y3r_yzj_js"/>Settings Dialog: Sorting
+**Settings Dialog: Sorting**
 
  ![](images/Step6_popup2_3a399e1.png "Settings Dialog: Sorting") 
 
    
   
-<a name="loio19531496ec144fa1bc4adab5bc08527c__fig_zrr_yzj_js"/>Settings Dialog: Filtering
+**Settings Dialog: Filtering**
 
  ![](images/Step6_popup3_2f682a9.png "Settings Dialog: Filtering") 
 
    
   
-<a name="loio19531496ec144fa1bc4adab5bc08527c__fig_ezr_yzj_js"/>Settings Dialog: Grouping
+**Settings Dialog: Grouping**
 
  ![](images/Step6_popup4_eb8fab9.png "Settings Dialog: Grouping") 
 
    
   
-<a name="loio19531496ec144fa1bc4adab5bc08527c__fig_zgs_yzj_js"/>Resulting View with Personalization Applied
+**Resulting View with Personalization Applied**
 
  ![](images/Smart_Controls_Tutorial_Step_06f_d018195.png "Resulting View with Personalization Applied") 
 

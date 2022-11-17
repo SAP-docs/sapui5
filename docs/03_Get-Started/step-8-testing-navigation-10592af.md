@@ -10,7 +10,7 @@
 
    
   
-<a name="loio10592affce3e4f1ba73c3125ee06e0b7__fig_r1j_pst_mr"/>We add an OPA test that selects an item from the table and navigates to the post page
+**We add an OPA test that selects an item from the table and navigates to the post page**
 
  ![](images/Tutorial_Testing_Step_08_cf3e0a6.png "We add an OPA test that selects an item from the table and navigates to the
 					post page") 

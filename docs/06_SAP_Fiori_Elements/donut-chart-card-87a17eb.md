@@ -55,7 +55,7 @@ You can pass filter conditions to target applications other than the dimensions 
 
   
   
-<a name="loio87a17ebef87c4b769783c57e50cc04c5__fig_whp_rjz_y4b"/>Example of a Donut Chart Card
+**Example of a Donut Chart Card**
 
  ![](images/Donut_Chart_0750575.png "Example of a Donut Chart Card") 
 

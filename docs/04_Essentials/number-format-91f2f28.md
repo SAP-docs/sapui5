@@ -136,7 +136,7 @@ To control the start the starting point of numbers which should be displyed in c
 
 -   `roundingMode`: defines a rounding behavior for discarding the digits after the maximum decimal digits defined by `maxFractionDigits` or `decimals`. Rounding will only be applied, if the formatting value is of type number.
 
-    <a name="loio91f2f2866f4d1014b6dd926db0e91070__table_wdt_rpl_2y"/>Rounding Modes \(with decimals parameter set to 1\)
+    **Rounding Modes \(with decimals parameter set to 1\)**
 
 
     <table>

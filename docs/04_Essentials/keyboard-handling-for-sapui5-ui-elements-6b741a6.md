@@ -12,7 +12,7 @@ Some users operate their computer almost exclusively with the keyboard. For thos
 
 In this topic we introduce the main keyboard combinations that are used by SAPUI5 UI elements.
 
-<a name="loio6b741a6133284bd78e897cef8b75f6d9__table_u1x_1dg_yq"/>Main Keyboard Combinations
+**Main Keyboard Combinations**
 
 
 <table>

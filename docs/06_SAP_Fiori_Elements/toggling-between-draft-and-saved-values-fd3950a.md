@@ -8,7 +8,7 @@ In SAP Fiori elements for OData V2 and SAP Fiori elements for OData V4, the draf
 
 The following table shows the system behavior for the list report and object page:
 
-<a name="loiofd3950a0b251439ab8cd4153d64844b6__table_zwj_dyz_fsb"/>
+****
 
 
 <table>

@@ -21,7 +21,7 @@ Ensure that you have the required user role. For more information, see [SAPUI5 F
 
 To enable the user interface adaptation mode, choose *Adapt UI* in the user actions menu.
 
-<a name="loio49669384ae424ace81667f22f69712b5__table_x11_hbq_kfb"/>User Interface Adaptation Features
+**User Interface Adaptation Features**
 
 
 <table>

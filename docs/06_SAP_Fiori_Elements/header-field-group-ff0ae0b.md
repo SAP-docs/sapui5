@@ -11,7 +11,7 @@ A field group defines the fields displayed within a specific reference facet. Fo
 
    
   
-<a name="loioff0ae0b200e0488d928f87a043c4c747__fig_wbl_kqq_4lb"/>Object Page: Header Field Group
+**Object Page: Header Field Group**
 
  ![](images/Header_Field_Group_379b975.png "Object Page: Header Field Group") 
 

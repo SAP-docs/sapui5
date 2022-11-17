@@ -115,7 +115,7 @@ The previous example configuration defines a custom page as the entry page of th
 
 You can define your custom pages by implementing an XML view and using the following properties:
 
-<a name="loioecdf1d6b2bda47b2accd369046c4936d__table_d4r_j35_3qb"/>Properties of a Custom Page
+**Properties of a Custom Page**
 
 
 <table>

@@ -18,7 +18,7 @@ The navigation target object defines applications that a user can navigate to fr
 
 The properties used in the navigation target object denote the following:
 
-<a name="loio5cfe2c19414f42abbc7a9a7363707ac3__table_lx1_qgz_qt"/>
+****
 
 
 <table>

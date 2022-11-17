@@ -16,7 +16,7 @@ The expression language objects are an association of the `RuleBuilder` object, 
 
    
   
-<a name="loio33ef2b0efda148afaa3270a08c3f5d9b__fig_jmj_j2p_rz"/>Decision Table with Guided Input
+**Decision Table with Guided Input**
 
  ![](images/decision_table1_40a97b4.png "Decision Table with Guided Input") 
 

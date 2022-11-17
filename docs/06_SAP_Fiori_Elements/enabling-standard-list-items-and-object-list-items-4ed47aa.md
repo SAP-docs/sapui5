@@ -86,7 +86,7 @@ You need to update the `manifest.json` file of the app as follows:
 
 Follow the guidelines mentioned in the following table for adding `DataFields` and `DataPoints` under the `UI.LineItem` annotation:
 
-<a name="loio4ed47aade93b4a24948f44b12b20c69b__table_gnr_jkl_4pb"/>
+****
 
 
 <table>
@@ -358,7 +358,7 @@ You need to update the `manifest.json` file of the app as follows:
 
 Follow the guidelines in the following table for adding `DataFields` and `DataPoints` under the `UI.LineItem` annotation:
 
-<a name="loio4ed47aade93b4a24948f44b12b20c69b__table_vn3_3ml_4pb"/>
+****
 
 
 <table>

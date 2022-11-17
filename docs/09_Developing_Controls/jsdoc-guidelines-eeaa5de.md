@@ -194,7 +194,7 @@ You can use inline and HTML tags in your comments.
 
 The table provides an overview of the most common inline and HTML tags.
 
-<a name="loioeeaa5de14e5f4fc1ac796bc0c1ada5fb__table_ezd_5yt_l2b"/>Inline and HTML Tags
+**Inline and HTML Tags**
 
 
 <table>
@@ -523,7 +523,7 @@ You can also use block tags in your comments.
 
 The table provides an overview of the most common block tags.
 
-<a name="loioeeaa5de14e5f4fc1ac796bc0c1ada5fb__table_krl_ffm_n2b"/>Block Tags
+**Block Tags**
 
 
 <table>
@@ -908,7 +908,7 @@ You can add a header for the example by using <caption\>.
 
 To refer to another entity within the *API Reference*, you can use `{@link}` in combination with the reference types shown in the table below.
 
-<a name="loioeeaa5de14e5f4fc1ac796bc0c1ada5fb__table_rkg_bds_kgb"/>Reference Types within API Reference
+**Reference Types within API Reference**
 
 
 <table>

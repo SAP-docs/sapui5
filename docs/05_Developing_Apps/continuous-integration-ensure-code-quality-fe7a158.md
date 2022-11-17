@@ -41,7 +41,7 @@ In an SAPUI5 project, the process, for example, can look like this:
 
   
   
-<a name="loiofe7a158313af4590ad60f844e5b43b80__fig_rgh_cfj_pbb"/>Code cannot be merged because automated tests failed
+**Code cannot be merged because automated tests failed**
 
  ![](images/CI_Workflow_b1c16e7.png "Code cannot be merged because automated tests failed") 
 

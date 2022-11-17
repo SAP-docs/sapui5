@@ -16,7 +16,7 @@ The common pattern is that the most important information describing the object,
 
    
   
-<a name="loiod2ef0099542d44dc868719d908e576d0__fig_odn_ypk_sbb"/>`sap.uxap.ObjectPageLayout` header in expanded state
+**sap.uxap.ObjectPageLayout header in expanded state**
 
  ![](images/ObjectPageLayout_Dynamic_Header_329ff57.png "sap.uxap.ObjectPageLayout header in expanded state") 
 
@@ -24,7 +24,7 @@ The following image shows the collapsed \(snapped\) header is where the Header C
 
    
   
-<a name="loiod2ef0099542d44dc868719d908e576d0__fig_odw_ypk_sbb"/>`sap.uxap.ObjectPageLayout` Header in Collapsed \(snapped\) State
+**sap.uxap.ObjectPageLayout Header in Collapsed \(snapped\) State**
 
  ![](images/ObjectPageLayout_dynamic_header_collapsed_f4ec6ba.png "sap.uxap.ObjectPageLayout Header in Collapsed (snapped)
 					State") 

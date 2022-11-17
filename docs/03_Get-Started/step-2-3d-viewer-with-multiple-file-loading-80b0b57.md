@@ -12,7 +12,7 @@ The content in this tutorial step references [Step 1: 3D Viewer With Single File
 
    
   
-<a name="loio80b0b57480e54a50a08daf468453aa33__fig_qgj_s4w_15"/>Viewer application with multiple file loading capability
+**Viewer application with multiple file loading capability**
 
  ![](images/3D_Viewer_Tutorial_Step_02_-_Preview_9425f9f.png "Viewer application with multiple file loading capability") 
 
@@ -365,7 +365,7 @@ Type in the file path of the VDS files into each of the input text fields, and c
 
    
   
-<a name="loio80b0b57480e54a50a08daf468453aa33__fig_n44_npw_15"/>Viewer application loaded with three VDS files
+**Viewer application loaded with three VDS files**
 
  ![](images/Image_SAPUI5_Viewer_2_50c1c17.png "Viewer application loaded with three VDS files") 
 

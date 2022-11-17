@@ -23,13 +23,13 @@ We will use the worklist template as a starting point for this tutorial and add 
 
    
   
-<a name="loio6a6a621c978145ad9eef2b221d2cf21d__fig_swx_sgp_zt"/>Start page of the app with list of products and actions
+**Start page of the app with list of products and actions**
 
  ![](images/Tutorial_Worklist_Step_5_Preview_016d473.png "Start page of the app with list of products and actions") 
 
    
   
-<a name="loio6a6a621c978145ad9eef2b221d2cf21d__fig_wnz_wgp_zt"/>Product detail page of the app
+**Product detail page of the app**
 
  ![](images/Tutorial_Worklist_Step_7_Preview_a517fe5.png "Product detail page of the app") 
 
@@ -51,5 +51,5 @@ We will use the worklist template as a starting point for this tutorial and add 
 
 [SAP Fiori design guidelines: Worklist Floorplans](https://experience.sap.com/fiori-design/floorplans/work-list/)
 
-[Developing Apps with SAP Fiori Tools](developing-apps-with-sap-fiori-tools-a460a73.md "SAP Fiori tools is a set of extensions for SAP Business Application Studio and Visual Studio Code that makes it faster and easier to develop basic SAP Fiori apps.")
+[Developing Apps with SAP Fiori Tools](../05_Developing_Apps/developing-apps-with-sap-fiori-tools-a460a73.md "SAP Fiori tools is a set of extensions for SAP Business Application Studio and Visual Studio Code that makes it faster and easier to develop basic SAP Fiori apps.")
 

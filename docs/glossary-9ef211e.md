@@ -2119,7 +2119,7 @@ text arrangement
 
 This annotation property controls the information shown on the interface for a field value of ID-type or ID field value, as shown here:
 
-<a name="loio9ef211e569ed4f819af904ba360ea7f6__table_v1q_zt2_ftb"/>
+****
 
 
 <table>

@@ -46,5 +46,5 @@ Note the following restrictions of OPA:
 **Related Information**  
 
 
-[Browser and Platform Support](../02_Read-Me-First/browser-and-platform-support-74b59ef.md "Browser and platform support for the SAPUI5 libraries on iOS, Android, macOS, and Windows platforms.")
+[Browser and Platform Support](../02_Read-Me-First/browser-and-platform-support-74b59ef.md "Here you can find information on the browser and platform support for the SAPUI5 libraries on iOS, Android, macOS, and Windows platforms.")
 

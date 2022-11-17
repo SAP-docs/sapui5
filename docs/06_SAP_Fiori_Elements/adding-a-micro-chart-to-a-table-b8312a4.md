@@ -8,7 +8,7 @@ To add a micro chart to a table, use the annotation term `UI.LineItem` and the c
 
    
   
-<a name="loiob8312a4adde54f33a89480dbe12d8632__fig_lzy_ntp_mx"/>Micro Chart in List Report
+**Micro Chart in List Report**
 
  ![](images/Micro_Chart_in_List_Report_b010c13.png "Micro Chart in List Report") 
 
@@ -528,7 +528,7 @@ The template doesn't currently support the use of navigation properties within t
 
   
   
-<a name="loiob8312a4adde54f33a89480dbe12d8632__fig_khh_pfx_kx"/>Navigation Property
+**Navigation Property**
 
  ![](images/Chart_Limitation_02debb6.png "Navigation Property") 
 

@@ -15,7 +15,7 @@ We haven’t thought about testing our interaction with the app yet, so in this 
 
    
   
-<a name="loio9bf4dce43b7943d0909cd6c58a933589__fig_r1j_pst_mr"/>An OPA test opens the "Hello" dialog from step 16
+**An OPA test opens the "Hello" dialog from step 16**
 
  ![](images/SAPUI5_Walkthrough_Step_29_108eccb.png "An OPA test opens the "Hello" dialog from step 16") 
 
@@ -27,7 +27,7 @@ You can view and download all files at [Walkthrough - Step 28](https://ui5.sap.c
 
    
   
-<a name="loio9bf4dce43b7943d0909cd6c58a933589__fig_rqr_hcp_ns"/>Folder Structure for this Step
+**Folder Structure for this Step**
 
  ![](images/SAPUI5_Walkthrough_Step_29_2_72406ab.png "Folder Structure for this Step") 
 

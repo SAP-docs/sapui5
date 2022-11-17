@@ -132,7 +132,7 @@ When you have created your specific application component, for example in SAP We
 Texts from the *Generic Application Component* can't be replaced.
 
 > ### Caution:  
-> SAP Web IDE is no longer available via SAP Business Technology Platform trial accounts. Any references to SAP Web IDE in this documentation are only relevant for you if you have access to SAP Web IDE through a productive SAP BTP account. Please consider SAP Business Application Studio as an alternative. See [App Development Using SAP Business Application Studio](../03_Get-Started/app-development-using-sap-business-application-studio-6bbad66.md).
+> SAP Web IDE is no longer available via SAP Business Technology Platform trial accounts. Any references to SAP Web IDE in this documentation are only relevant for you if you have access to SAP Web IDE through a productive SAP BTP account. Please consider SAP Business Application Studio as an alternative. See [App Development Using SAP Business Application Studio](../05_Developing_Apps/app-development-using-sap-business-application-studio-6bbad66.md).
 
 For more information about SAP Web IDE, see the documentation for SAP Web IDE on the SAP Help Portal at [https://help.sap.com/viewer/p/SAP\_Web\_IDE](https://help.sap.com/viewer/p/SAP_Web_IDE).
 
@@ -229,7 +229,7 @@ When you have created your specific application component, standard UI texts are
 
 Applications can currently choose to override any key from the list below. Check the last column in the following table for a recommendation about which default texts to override. Only the keys given in the table are allowed to be overridden by application developers using the custom i18n file approach:
 
-<a name="loiob8cb649973534f08a6047692f8c6830d__table_snl_wcj_cmb"/>Keys You Can Override
+**Keys You Can Override**
 
 
 <table>

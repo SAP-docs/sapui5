@@ -55,7 +55,7 @@ The visibility state of a node can be changed when the Viewport is connected to 
 
 In addition to using mouse and touch gestures to navigate the scene in a Viewport, keyboard shortcuts are available.
 
-<a name="loioacd34672ef33429e99a0247486e37c78__table_xls_12h_q5"/>Viewport keyboard shortcuts
+**Viewport keyboard shortcuts**
 
 
 <table>

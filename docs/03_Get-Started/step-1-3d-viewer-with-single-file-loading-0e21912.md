@@ -12,7 +12,7 @@ By the end of this step, you will have created a Viewer application that allows 
 
    
   
-<a name="loio0e219128fe564855b91ae50d7a29424b__fig_o4r_clw_15"/>Viewer application with single file loading functionality
+**Viewer application with single file loading functionality**
 
  ![](images/3D_Viewer_Tutorial_Step_01_-_Preview_d751e9e.png "Viewer application with single file loading functionality") 
 
@@ -365,7 +365,7 @@ Download the `cooper.vds` file from the *Samples*. Click the *Browse...* button,
 
    
   
-<a name="loio0e219128fe564855b91ae50d7a29424b__fig_inm_34w_15"/>Viewer application loaded with a single VDS file
+**Viewer application loaded with a single VDS file**
 
 ![Viewer application with single VDS file.](images/Imabe_SAPUI5_Viewer_1_fadda96.png)
 

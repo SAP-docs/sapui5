@@ -482,7 +482,7 @@ You can see what the result looks like in the following screenshot:
 
    
   
-<a name="copy7d7a0c467e944ac8bcac751f8ab1e342__fig_brd_xzt_rrb"/>`FieldGroup` Column "Sold-To Party" with Field Labels
+**FieldGroup Column "Sold-To Party" with Field Labels**
 
  ![](images/FieldGroup_Column_Sold-To_Party_with_Field_Labels_81e38b2.png "FieldGroup Column "Sold-To Party" with Field
                         Labels") 
@@ -638,14 +638,25 @@ For more information about how to find the right key for a column, see [Finding 
 > 
 > ```
 
+> ### Restriction:  
+> -   Connected fields can only be configured in sections that belong to a form, so connected fields cannot be configured in a header section.
+> 
+> -   Connected fields cannot be rendered in a table.
 
 
-### Restrictions
 
--   Connected fields can only be configured in sections that belong to a form, so connected fields cannot be configured in a header section.
+### Navigation with Semantically Connected Fields
 
--   Connected fields cannot be rendered in a table.
+You can render semantically connected fields as a link to enable navigation using these fields. Note that you need to define the navigation details for the data fields that make up the semantically connected fields \(that is, are part of the `ConnectedFields` annotation\).
 
+The following types of navigation are allowed:
+
+-   `DataFieldWithURL`
+-   `SemanticObject` associated with the data field
+-   `DataFieldWithIntentBasedNavigation` \(with `Action` as an optional term\)
+-   `DataFieldWithNavigationPath`
+
+For more information about how to configure navigation using fields, see [Navigation from an App \(Outbound Navigation\)](navigation-from-an-app-outbound-navigation-d782acf.md).
 
 
 
@@ -653,5 +664,5 @@ For more information about how to find the right key for a column, see [Finding 
 
 ## More Information
 
-For more information, see the section about [forms and form groups](https://experience.sap.com/fiori-design-web/form/), and about [forms in the object page](https://experience.sap.com/fiori-design-web/object-page/#forms) in the SAP Fiori design guidelines.
+For more information, see the section about [forms and form groups](https://experience.sap.com/fiori-design-web/form/), and about [forms in the object page](https://experience.sap.com/fiori-design-web/object-page/#forms) in the SAP Fiori design guidelinesc.
 

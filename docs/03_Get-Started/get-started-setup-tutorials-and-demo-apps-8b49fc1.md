@@ -12,7 +12,7 @@ Set up your development environment and go through our tutorials. They introduce
 
 -   You should be familiar with JavaScript.
 
--   Set up your [Development Environment](development-environment-7bb04e0.md).
+-   Set up your [Development Environment](../05_Developing_Apps/development-environment-7bb04e0.md).
 
 -   Set up a folder where you would place the application content. We will refer to this folder as the “app folder”.
 

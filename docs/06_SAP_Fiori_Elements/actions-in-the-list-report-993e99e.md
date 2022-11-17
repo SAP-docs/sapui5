@@ -28,7 +28,7 @@ For more information, see [Adding Actions to Tables](adding-actions-to-tables-b6
 
    
   
-<a name="loio993e99eae4414b73bc7afef9518c79bf__fig_ic5_fnp_qlb"/>Example: Table Toolbar Actions and Inline Actions
+**Example: Table Toolbar Actions and Inline Actions**
 
  ![](images/Actions_in_the_Table_Toolbar_856c5a4.jpg "Example: Table Toolbar Actions and Inline Actions") 
 

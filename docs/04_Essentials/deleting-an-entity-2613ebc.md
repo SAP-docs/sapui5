@@ -6,6 +6,8 @@ The `v4.Context.delete` method deletes an entity on the server and updates the u
 
 When you delete the entity from a list binding, the corresponding row is removed immediately, even if an [API group](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.SubmitMode) is used and the request waits for the [`submitBatch`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataModel%23methods/submitBatch). If the request fails, or the deletion is canceled via [`ODataModel#resetChanges`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataModel%23methods/resetChanges) or [`ODataListBinding#resetChanges`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataListBinding%23methods/resetChanges), the row is re-inserted.
 
+Bound messages targeting the entity, one of its properties, or its navigation properties, are also removed immediately; this applies to both state and transition messages. If you cancel the deletion, these messages are restored. If the deletion fails, only the state messages are restored; the transition messages are dropped to make room for new transition messages resulting from the failed deletion.
+
 When you delete the entity from a context binding, the binding and all dependent bindings lose the reference.
 
 **Example: Delete From a Table**

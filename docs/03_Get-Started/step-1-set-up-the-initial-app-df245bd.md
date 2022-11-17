@@ -12,7 +12,7 @@ The structure and data model created in this step will be used throughout the re
 
    
   
-<a name="loiodf245bd449a7470c8c2a0926ca8d78de__fig_r1j_pst_mr"/>Initial app with a simple button
+**Initial app with a simple button**
 
  ![](images/Tutorial_Navigation_and_Routing_Step_01a_2a2a284.png "Initial app with a simple button") 
 
@@ -28,7 +28,7 @@ You should have the same files as displayed in the following figure:
 
    
   
-<a name="loiodf245bd449a7470c8c2a0926ca8d78de__fig_chm_4jp_ls"/>Folder structure with downloaded files
+**Folder structure with downloaded files**
 
  ![](images/Tutorial_Navigation_and_Routing_Step_01b_cf75e00.png "Folder structure with downloaded files") 
 

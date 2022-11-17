@@ -48,7 +48,7 @@ Version 1.71 is the last SAPUI5 version for which we will update the [SAPUI5 Too
 > ### Caution:  
 > After the release of SAPUI5 1.71, the SAPUI5 Tools for Eclipse will no longer be maintained.
 
-We recommend that you use SAP Web IDE as the development environment for SAPUI5. For more information, see [App Development Using SAP Web IDE](../03_Get-Started/app-development-using-sap-web-ide-13ced94.md).
+We recommend that you use SAP Web IDE as the development environment for SAPUI5. For more information, see [App Development Using SAP Web IDE](../05_Developing_Apps/app-development-using-sap-web-ide-13ced94.md).
 
 
 

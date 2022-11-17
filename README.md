@@ -1,9 +1,8 @@
-[![REUSE status](https://api.reuse.software/badge/github.com/SAP-docs/sapui5)](https://api.reuse.software/info/github.com/SAP-docs/sapui5)
-
+[![REUSE status]()]()
 
 # Contributions to the SAPUI5 Documentation
 
-Found a mistake in our documentation? Always wanted to add a step in one of our procedures that could save many others much time? Then you're at the right place! All contributions made to the Markdown files in the [docs](docs) directory are reviewed, and if deemed valuable added to our [official documentation in the SAPUI5 Demo Kit](https://ui5.sap.com/#/topic). The easiest way is to start there, and choose _Edit on GitHub_ to find the right Markdown file to contribute to.
+Found a mistake in our documentation? Always wanted to add a step in one of our procedures that could save many others much time? Then you're at the right place! All contributions made to the Markdown files in the [docs](docs) directory are reviewed, and if deemed valuable be added to our [official documentation in the SAPUI5 Demo Kit](https://ui5.sap.com/#/topic). The easiest way is to start there, and choose _Edit on GitHub_ to find the right Markdown file to contribute to.
 
 ## Requirements
 

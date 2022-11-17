@@ -22,7 +22,7 @@ In your app's `manifest.json` file, under `sap.ui5` → `extends` → `extension
 
 You can specify the following information and extend the manifest files as described here:
 
-<a name="loioc3de5c0b3c5043a4b683151dab526b01__table_esn_v1f_ttb"/>
+****
 
 
 <table>

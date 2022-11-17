@@ -26,7 +26,7 @@ The minimum SAPUI5 version in which the Support Assistant is available is 1.44.1
 
        
       
-    <a name="loio473201b547734e0eb66612df5bae8553__fig_ixn_yl1_k1b"/>Technical Information Dialog: Support Assistant Settings
+    **Technical Information Dialog: Support Assistant Settings**
 
      ![](images/Support_Assistant_Older_Version_76e6ee0.png "Technical Information Dialog: Support Assistant Settings") 
 
@@ -47,7 +47,7 @@ The minimum SAPUI5 version in which the Support Assistant is available is 1.44.1
 
       
       
-    <a name="loio473201b547734e0eb66612df5bae8553__fig_r2j_2wz_n1b"/>Support Assistant - Multi-Version Support
+    **Support Assistant - Multi-Version Support**
 
      ![](images/Support_Assistant_Code_Injection_f976dcd.png "Support Assistant - Multi-Version Support") 
 

@@ -22,7 +22,7 @@ When dealing with incoming navigation, in addition to the navigation context pas
 
    
   
-<a name="loioc337d8bde8c544598969c8e4edaab262__fig_jp1_bm4_5lb"/>Handling Default Values from FLP
+**Handling Default Values from FLP**
 
  ![](images/Handling_Default_Values_from_FLP_9c2ee88.png "Handling Default Values from FLP") 
 

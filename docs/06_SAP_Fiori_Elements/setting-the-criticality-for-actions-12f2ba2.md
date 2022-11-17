@@ -56,7 +56,7 @@ Actions that are a part of table rows \(inline\), an object page header, and an 
 
 Two supported values for `Criticality` are:
 
-<a name="loio12f2ba26f0d74853a0707597844c2961__table_pz4_vj5_dnb"/>Criticality: Supported Values
+**Criticality: Supported Values**
 
 
 <table>

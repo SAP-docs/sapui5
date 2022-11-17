@@ -8,7 +8,7 @@ Before you start implementing your first test, you should think about how to tes
 
    
   
-<a name="loio7cdee404cac441888539ed7bfe076e57__fig_u2g_t2y_2t"/>Testing Pyramid
+**Testing Pyramid**
 
  ![](../03_Get-Started/images/Tutorial_Testing_Step_01_2_88758c3.png "Testing Pyramid") 
 
@@ -43,7 +43,7 @@ WebdriverIO \(WDIO\) is a hugely popular end-to-end testing framework. It can wo
 
 [Tutorial: Mock Server](../03_Get-Started/odata-v2-mock-server-3a9728e.md "In this tutorial, we will explore some advanced features of the OData V2 mock server.")
 
-[wdi5 Home Page](https://github.com/js-soft/wdi5)
+[wdi5 Home Page](https://ui5-community.github.io/wdi5)
 
 [Selenium Home Page](http://docs.seleniumhq.org/)
 

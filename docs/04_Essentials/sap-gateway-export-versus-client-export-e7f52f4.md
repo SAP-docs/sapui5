@@ -23,7 +23,7 @@ The `SmartTable` control offers the following types of exports:
 
 To find out which export suits your requirements best, check out the following table:
 
-<a name="loioe7f52f49994347cbadde95620238f3f8__table_nqm_cm2_lfb"/>SAP Gateway versus Client Export
+**SAP Gateway versus Client Export**
 
 
 <table>

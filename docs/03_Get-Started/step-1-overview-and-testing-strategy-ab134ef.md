@@ -13,7 +13,7 @@ In this step, we will take a look at the prototype and define the test strategy 
 
    
   
-<a name="loioab134ef3932c4b42898c79c10341e8b5__fig_r1j_pst_mr"/>The prototype app
+**The prototype app**
 
  ![](images/Tutorial_Testing_Step_01_7946d24.png "The prototype app") 
 
@@ -29,7 +29,7 @@ After downloading *Step 1*, you should have the following files:
 
    
   
-<a name="loioab134ef3932c4b42898c79c10341e8b5__fig_xvp_11y_2t"/>Folder structure with downloaded files
+**Folder structure with downloaded files**
 
  ![](images/Tutorial_Testing_Step_01_2_8007848.png "Folder structure with downloaded files") 
 
@@ -125,7 +125,7 @@ Before you start implementing your first test, you should think about how to tes
 
    
   
-<a name="loioab134ef3932c4b42898c79c10341e8b5__fig_u2g_t2y_2t"/>Testing pyramid
+**Testing pyramid**
 
  ![](images/Tutorial_Testing_Step_01_2_88758c3.png "Testing pyramid") 
 

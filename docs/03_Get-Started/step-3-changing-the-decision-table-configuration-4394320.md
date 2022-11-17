@@ -14,13 +14,13 @@ If you are using a data object with reference attributes as the result data obje
 
    
   
-<a name="loio43943208be8846b79bb2a83122d386be__fig_j3v_xvw_rz"/>Decision Table with Settings Button
+**Decision Table with Settings Button**
 
  ![](images/Settings_button_69098c1.png "Decision Table with Settings Button") 
 
    
   
-<a name="loio43943208be8846b79bb2a83122d386be__fig_t5f_zvw_rz"/>Decision Table Settings Dialog Box
+**Decision Table Settings Dialog Box**
 
  ![](images/Settings_dialog_0e02b97.png "Decision Table Settings Dialog Box") 
 

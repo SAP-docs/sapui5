@@ -9,7 +9,7 @@ The editing status filter is enabled by default in the list report page of draft
 
    
   
-<a name="loio8eb695ac473b4ab0a726e4021ce35cf4__fig_o24_vbd_r2b"/>Editing status filter
+**Editing status filter**
 
  ![](images/Editing_Status_Filter_d6891a2.png "Editing status filter") 
 

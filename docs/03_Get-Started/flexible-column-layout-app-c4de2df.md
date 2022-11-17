@@ -36,7 +36,7 @@ The app provides the following features:
 
    
   
-<a name="loioc4de2df385174e58a689d9847c7553bd__fig_r1j_pst_mr"/>Master-detail-detail pattern with `sap.f.FlexibleColumnLayout`, `sap.f.DynamicPage` and `sap.uxap.ObjectPageLayout`
+**Master-detail-detail pattern with sap.f.FlexibleColumnLayout, sap.f.DynamicPage and sap.uxap.ObjectPageLayout**
 
  ![](images/With_Semantic_Helper_Fiori_2_0_Tutorial_fd98e0d.gif "Master-detail-detail pattern with
 					sap.f.FlexibleColumnLayout, sap.f.DynamicPage

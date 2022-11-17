@@ -74,13 +74,35 @@ Additionally, you can use the synchronous method `ODataPropertyBinding.getValueL
 
 ## The `ValueList` Annotation
 
-There are two options to place the `ValueList` annotation:
+There are three options to place the `ValueList` annotation:
 
--   In the value list service \(the preferred way\): When adding a value list for a property, the OData service only contains an annotation with the property as target and the term com.sap.vocabularies.Common.v1.ValueListReferences pointing to the metadata of the value list service. The ValueList annotation itself is in the referenced service. It must not have the properties CollectionRoot and SearchSupported.
+-   In the value list service \(the preferred way\): When adding a value list for a property, the OData service only contains an annotation with the property as target and the term `com.sap.vocabularies.Common.v1.ValueListReferences` pointing to the metadata of the value list service. The `ValueList` annotation itself is in the referenced service. It must not have the properties`CollectionRoot` and `SearchSupported`.
 
--   In the OData service itself: In this case, the `ValueList` annotation must have the property `CollectionRoot` pointing to the metadata of the value list service. The annotation `com.sap.vocabularies.Common.v1.ValueListReferences` is not needed.
+-   In the OData service itself: In this case, the `ValueList` annotation must have the property `CollectionRoot` pointing to the metadata of the value list service. The annotation `com.sap.vocabularies.Common.v1.ValueListReferences` is not needed. The disadvantage of this solution is that all such value list information is preloaded when the application loads the root metadata at application start.
 
-    The disadvantage of this solution is that the complete value list information for all properties of the service is preloaded when the application is initialized.
+-   In a \(local\) annotation file: This is very similar to the previous option and allows you to **add** or **override** value list information by using a `new` or `existing` qualifier, respectively. If no `CollectionRoot` is present, the data service itself needs to provide the value list entity set! For overriding, make sure to use the proper `CollectionRoot`, that is the string value from the corresponding `com.sap.vocabularies.Common.v1.ValueListReferences` annotation.
+
+    **Example: Placing the `ValueList` Annotation in a Local Annotation File**
+
+    ```
+    <Annotations Target="com.sap.gateway.default.zui5_epm_sample.v0002.Product/Category">
+        <Annotation Term="SAP__common.ValueList" Qualifier="existing">
+            <Record>
+                <PropertyValue Property="Label" String="Category (Modified Mapping)" />
+                <PropertyValue Property="CollectionRoot" String="../../../../f4/sap/h_epm_pd_cats-sh/0001;ps='default-zui5_epm_sample-0002';va='com.sap.gateway.default.zui5_epm_sample.v0002.ET-PRODUCT.CATEGORY'/$metadata" />
+                <PropertyValue Property="CollectionPath" String="H_EPM_PD_CATS_SH_Set" />
+                <PropertyValue Property="Parameters">
+                    <Collection>
+                        <Record Type="SAP__common.ValueListParameterDisplayOnly">
+                            <PropertyValue Property="Label" String="Category" />
+                            <PropertyValue Property="ValueListProperty" String="CATEGORY" />
+                        </Record>
+                    </Collection>
+                </PropertyValue>
+            </Record>
+        </Annotation>
+    </Annotations>
+    ```
 
 
 **Related Information**  

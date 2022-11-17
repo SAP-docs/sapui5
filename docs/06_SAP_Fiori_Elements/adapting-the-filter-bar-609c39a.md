@@ -102,7 +102,7 @@ If the field groups don't contain all properties of the entity, the remaining pr
 
    
   
-<a name="loio609c39a7498541559dbef503c1ffd194__fig_gvg_wwm_kmb"/>List Report: Adapt Filters Popup
+**List Report: Adapt Filters Popup**
 
  ![](images/ListReport_FilterPopUp1_410e07f.png "List Report: Adapt Filters Popup") 
 
@@ -224,7 +224,7 @@ To override this behavior, use the `"@Org.OData.Capabilities.V1.FilterFunctions"
 
 SAP Fiori elements for OData V4 checks for the existence of the `tolower` filter function in the service metadata, and sets the case sensitivity for filtering as shown in the table below:
 
-<a name="loio609c39a7498541559dbef503c1ffd194__table_msb_51l_1rb"/>Case Sensitivity for FilterFunction
+**Case Sensitivity for FilterFunction**
 
 
 <table>

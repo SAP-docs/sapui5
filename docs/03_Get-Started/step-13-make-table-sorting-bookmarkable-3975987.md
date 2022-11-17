@@ -10,7 +10,7 @@ In this step, we will create a button at the top of the table which will change 
 
    
   
-<a name="loio39759878ae4f48dcad0cf34da1d299f0__fig_r1j_pst_mr"/>Bookmarkable search and sorting
+**Bookmarkable search and sorting**
 
  ![](images/Tutorial_Navigation_and_Routing_Step_13_7ec54ef.png "Bookmarkable search and sorting") 
 

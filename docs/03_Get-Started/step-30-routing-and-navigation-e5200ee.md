@@ -12,7 +12,7 @@ In this step, we will use the SAPUI5 navigation features to load and show a sepa
 
    
   
-<a name="loioe5200ee755f344c8aef8efcbab3308fb__fig_r1j_pst_mr"/>A second page is added to display the invoice
+**A second page is added to display the invoice**
 
  ![](images/SAPUI5_Walkthrough_Step_31_a1d85cc.png "A second page is added to display the invoice") 
 

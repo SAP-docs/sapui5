@@ -134,7 +134,7 @@ If the specified mode isn't suitable for the current draft state, there is no si
 </td>
 <td valign="top">
 
-You can use this value to automatically trigger an unbound action, when an app is started with this startup parameter during an external navigation scenario.The startup parameters must contain the mandatory specification of the unbound action and values for the inbound parameters of that action.
+You can use this value to automatically trigger an unbound action when an app is started with this startup parameter during an external navigation scenario.The startup parameters must contain the mandatory specification of the unbound action and values for the inbound parameters of that action.
 
 The target app must expose the unbound action. The following example shows how you can do this in the `manifest.json`:
 
@@ -154,7 +154,7 @@ The target app must expose the unbound action. The following example shows how y
 > 
 > ```
 
-This snippet shows two unbound actions `myCreate1` and `myCreate3` that are used by this feature. These actions are defined in the `metadata.xml` of the service as the following:
+This snippet shows two unbound actions `myCreate1` and `myCreate3` that are used by this feature. These actions are defined in the `metadata.xml` of the service as follows:
 
 > ### Sample Code:  
 > ```
@@ -201,11 +201,30 @@ The `preferredMode` parameter works as follows:
 
 -   Applications can also define `createWith:` followed by the desired action as the `preferredMode` value. In this case, this action is called when the app is opened in create mode.
 
+    If the specified action has parameters, then an action parameter dialog appears after navigation to the target application. If values are already available from the navigation context for some of the fields, these values are taken over into the dialog. This is shown in the following sample code:
+
     > ### Sample Code:  
     > ```
     > "preferredMode": {
     >      "defaultValue": {
     >           "value": "createWith:com.c_salesordermanage_sd.CreateWithSalesOrderType",
+    >           "format": "value"
+    >      }
+    > },
+    > ```
+
+-   Applications can also define `autoCreateWith:`, which works like `createWith:` except for the following behavior:
+
+    -   If values can be determined from the navigation context for all action parameters, the action parameter dialog is skipped after navigation.
+
+    -   If no value can be determined for at least one parameter, the action parameter dialog is still displayed and the provided values are taken over into the dialog fields.
+
+
+    > ### Sample Code:  
+    > ```
+    > "preferredMode": {
+    >      "defaultValue": {
+    >           "value": "autoCreateWith:com.c_salesordermanage_sd.CreateWithSalesOrderType",
     >           "format": "value"
     >      }
     > },
@@ -245,10 +264,10 @@ When `preferredMode=create` is used with URL parameter values, there's a differe
 
     If the manifest of the target application's object page is configured as shown in the sample code, an incoming URL like …`#SalesOrder-manage?preferredMode=create&SalesOrderType=OR&Supplier=ABC` results in only the part `SalesOrderType=OR` being passed to the back end in the create call. The "`Supplier`" value is ignored because it is not mentioned in the "`useForCreate`" setting.
 
--   For `NewAction()`-based create, the incoming value of the URL parameter is always applied to the matching fields \(exact technical name match\) in the action parameter dialog. If no matching field is configured, the URL parameter value is not passed. In this case the manifest setting "`useForCreate`" is not considered at all.
+-   For `NewAction()`-based create, the incoming value of the navigation context is always applied to the matching fields \(exact technical name match\) in the action parameter dialog. If no matching field is configured, the parameters from the navigation context are not passed. In this case the manifest setting "`useForCreate`" is not considered at all.
 
     > ### Note:  
-    > The URL parameter value is also passed for matching fields that are hidden, that is, the matching field is configured for the action parameter dialog in `NewAction()`, but not seen because of the `UI.Hidden` annotation.
+    > The parameter values in the navigation context are also passed for matching fields that are hidden, that is, the matching field is configured for the action parameter dialog in `NewAction()`, but not seen because of the `UI.Hidden` annotation.
 
 
 **Related Information**  

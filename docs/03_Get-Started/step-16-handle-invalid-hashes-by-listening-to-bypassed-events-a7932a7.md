@@ -10,7 +10,7 @@ So far we have created many useful routes in our app. In the very early steps we
 
    
   
-<a name="loioa7932a791adc4a58ae4693400801ea5f__fig_r1j_pst_mr"/>Console output for invalid hashes when listening to bypassed events
+**Console output for invalid hashes when listening to bypassed events**
 
  ![](images/Tutorial_Navigation_and_Routing_Step_16_6f2e76a.png "Console output for invalid hashes when listening to bypassed events") 
 

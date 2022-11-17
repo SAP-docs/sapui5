@@ -19,7 +19,7 @@ The content in this step builds on the code from [Step 3: 3D Viewer Using the Vi
 
    
   
-<a name="loio773a0088c5a54d0cbeb985c347cb643f__fig_fg1_sqw_15"/>Viewer application with a Viewport and a Scene Tree
+**Viewer application with a Viewport and a Scene Tree**
 
  ![](images/3D_Viewer_Tutorial_Step_04_-_Preview_a0d2e26.png "Viewer application with a Viewport and a Scene Tree") 
 
