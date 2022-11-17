@@ -29,5 +29,10 @@ Result
 
 The building blocks provide a unified interface that creates an abstraction from the underlying implementation. As such, they also do not exist at runtime, except for a dedicated API object that allows you to manipulate the controls that were created through a restricted set of APIs. Building blocks are like templates: depending on the bound data and the specified attributes, they result in different controls for representing your data.
 
+All building blocks contain the API properties contextPath and metaPath:
+
+- contextPath defines the path of the context. This setting is defined by the framework in case you use a Building Block in an extension point (for example if you add a custom column the context path is set to the tables' metaPath). If you use an absolute metaPath the contextPath is ignored.
+- the metaPath can be either relative to the contextPath or an absolute path. The target depends on the control and can be either a path in the metamodel  (for example entity set, property) or an annotation path (for example UI.LineItem, UI.Chart),
+
 For more information about building blocks as part of the flexible programming model, see [Flexible Programming Model](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/overview/introduction).
 
