@@ -10,7 +10,7 @@ To switch to mock mode, set the URL parameter `responderOn` to `true`. We recomm
 // module:model/Config
 sap.ui.define(["sap/base/util/UriParameters"], function(UriParameters) {
     return {
-        isMock: ("true" === UriParameters.fromUrl(window.location.href).get("responderOn"));
+        isMock: ("true" === UriParameters.fromURL(window.location.href).get("responderOn"));
     }
 });
 ```
