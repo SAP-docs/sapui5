@@ -568,8 +568,8 @@ These custom actions are displayed as buttons on the UI. When the user selects t
     > 
     > ```
     > "myCustomEnablement": {
-    >      "press": "SalesOrder.custom.CustomActions.navigateExternal",
-    >      "enabled": "SalesOrder.custom.CustomActions.enabledForCompletedOnly",
+    >      "press": "SalesOrder.ext.CustomActions.navigateExternal",
+    >      "enabled": "SalesOrder.ext.CustomActions.enabledForCompletedOnly",
     >      "text": "Enabled for Completed"
     > }
     > ```
@@ -705,7 +705,7 @@ These custom actions are displayed as buttons on the UI. When the user selects t
         >      "<NavigationPropertyFromRootEntityType>/@com.sap.vocabularies.UI.v1.LineItem": {
         >           "actions": {
         >                "myCustomAction": {
-        >                     "press": "TestApplication.custom.CustomActions.message"
+        >                     "press": "TestApplication.ext.CustomActions.message"
         >                     ....
         >                }
         >           }
@@ -713,9 +713,9 @@ These custom actions are displayed as buttons on the UI. When the user selects t
         > }
         > ```
 
-    2.  Create a folder called *custom* in the webapp folder of the application.
+    2.  Create a folder called *ext* in the webapp folder of the application.
 
-    3.  Create a file called *CustomActions.js* in the *custom* folder.
+    3.  Create a file called *CustomActions.js* in the *ext* folder.
 
     4.  Create a method called *message* in the *CustomActions.js* file.
 
@@ -905,7 +905,7 @@ These custom actions are displayed as buttons on the UI. When the user selects t
     >                                 "@com.sap.vocabularies.UI.v1.FieldGroup#OrderData": {
     >                                     "actions": {
     >                                         "customSectionAction": {
-    >                                             "press": "SalesOrder.custom.CustomActions.alert",
+    >                                             "press": "SalesOrder.ext.CustomActions.alert",
     >                                             "visible": true,
     >                                             "enabled": true,
     >                                             "text": "Alert",
@@ -915,7 +915,7 @@ These custom actions are displayed as buttons on the UI. When the user selects t
     >                                             }
     >                                         },
     >                                         "sectionAction2": {
-    >                                             "press": "SalesOrder.custom.CustomActions.accountDetails",
+    >                                             "press": "SalesOrder.ext.CustomActions.accountDetails",
     >                                             "visible": true,
     >                                             "enabled": true,
     >                                             "text": "Display account details",
@@ -952,14 +952,14 @@ These custom actions are displayed as buttons on the UI. When the user selects t
     >                             "@com.sap.vocabularies.UI.v1.FieldGroup#OrderData": {
     >                                 "actions": {
     >                                     "customSectionAction": {
-    >                                         "press": "SalesOrder.custom.CustomActions.alert",
+    >                                         "press": "SalesOrder.ext.CustomActions.alert",
     >                                         "visible": true,
     >                                         "enabled": false,
     >                                         "text": "Action on Form",
     >                                         "inline": true
     >                                     },
     >                                     "customSectionAction2": {
-    >                                         "press": "SalesOrder.custom.CustomActions.alert",
+    >                                         "press": "SalesOrder.ext.CustomActions.alert",
     >                                         "visible": true,
     >                                         "enabled": true,
     >                                         "text": "Action not on Form"

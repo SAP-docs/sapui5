@@ -110,10 +110,10 @@ The modification \(add/remove/change\) is achieved via the `adaptNavigationConte
     >         "extensions": {
     >             "sap.ui.controllerExtensions": {
     >                 "sap.fe.templates.ListReport.ListReportController": {
-    >                     "controllerName": "SalesOrder.custom.LRExtend"
+    >                     "controllerName": "SalesOrder.ext.LRExtend"
     >                 },
     >                 "sap.fe.templates.ObjectPage.ObjectPageController": {
-    >                     "controllerName": "SalesOrder.custom.OPExtend"
+    >                     "controllerName": "SalesOrder.ext.OPExtend"
     >                 }
     >             }
     >         }

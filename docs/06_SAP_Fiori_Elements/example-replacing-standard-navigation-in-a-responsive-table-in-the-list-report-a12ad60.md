@@ -160,10 +160,10 @@ Application developers can selectively change the target when chevron navigation
     >         "extensions": {
     >             "sap.ui.controllerExtensions": {
     >                 "sap.fe.templates.ListReport.ListReportController": {
-    >                     "controllerName": "SalesOrder.custom.LRExtend"
+    >                     "controllerName": "SalesOrder.ext.LRExtend"
     >                 },
     >                 "sap.fe.templates.ObjectPage.ObjectPageController": {
-    >                     "controllerName": "SalesOrder.custom.OPExtend"
+    >                     "controllerName": "SalesOrder.ext.OPExtend"
     >                 }
     >             }
     >         }
