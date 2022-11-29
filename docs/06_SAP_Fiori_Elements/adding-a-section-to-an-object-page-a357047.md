@@ -45,7 +45,7 @@ In the SAP Web IDE, open the folder structure of the Manage Products project and
 
 
 
-### Step 2: Add Section Title to the i18n File
+### Step 2: Add Section Title to the I18n File
 
 To make the section title translatable, add the text to the `i18n` file as follows:
 
@@ -181,7 +181,7 @@ In the editor of your choice, open the folder structure of the project where you
 
 
 
-### Step 2: Add Section Title to the i18n File
+### Step 2: Add Section Title to the I18n File
 
 To make the section title translatable, add the text to the `i18n` file as follows:
 
