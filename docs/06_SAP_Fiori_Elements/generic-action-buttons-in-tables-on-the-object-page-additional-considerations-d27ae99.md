@@ -14,7 +14,7 @@ The *Create* button is only displayed in the table toolbar when the object page 
 
    
   
-<a name="loiod27ae998a20a4dbead161e3e7c0ac2e8__fig_jgr_c2y_mmb"/>Create Button in Table Toolbar
+**Create Button in Table Toolbar**
 
  ![](images/CreatablePath_ObPTable_1d6a9b1.png "Create Button in Table Toolbar") 
 

@@ -22,7 +22,7 @@ To get rid of the prefixes, the instance method `View.byId()` can be used with t
 **Related Information**  
 
 
-[IDs in Declarative XML or HTML Fragments](ids-in-declarative-xml-or-html-fragments-0715706.md "If a fragment with a control ID is instantiated twice without giving an ID, a duplicate ID error occurs.")
+[IDs in Declarative Fragments](ids-in-declarative-fragments-0715706.md "If a fragment with a control ID is instantiated twice without giving an ID, a duplicate ID error occurs.")
 
 [IDs in JS Fragments](ids-in-js-fragments-896fa9a.md "The fragment logic of JS fragments cannot influence the IDs of controls that are created in the createContent() method.")
 

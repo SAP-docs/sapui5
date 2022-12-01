@@ -10,7 +10,7 @@ The image below shows the data points *Price* and *Availability* in the object p
 
   
   
-<a name="loioc2a389a11a704b00886440031a3d43f9__fig_jn2_rz4_lnb"/>Object Page: DataPoints
+**Object Page: DataPoints**
 
  ![](images/Object_Page_DataPoints_6eac05c.png "Object Page: DataPoints") 
 
@@ -180,7 +180,7 @@ Each `UI.DataPoint` annotation term must point to a qualifier, as shown below:
 
 For numerical data points, you can override the scale and precision defined in the metadata to display the decimal formatted value on the UI using the property `NumberOfFractionalDigits` of annotation `NumberFormat`.
 
-<a name="loioc2a389a11a704b00886440031a3d43f9__table_jjl_n5t_dnb"/>Numerical Data Points Values
+**Numerical Data Points Values**
 
 
 <table>

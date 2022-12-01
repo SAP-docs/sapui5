@@ -10,7 +10,7 @@ To make our list of invoices even more user-friendly, we sort it alphabetically 
 
    
   
-<a name="loioc4b2a32bb72f483faa173e890e48d812__fig_r1j_pst_mr"/>The list is now sorted and grouped by the shipping company
+**The list is now sorted and grouped by the shipping company**
 
  ![](images/SAPUI5_Walkthrough_Step_25_80771b1.png "The list is now sorted and grouped by the shipping company") 
 

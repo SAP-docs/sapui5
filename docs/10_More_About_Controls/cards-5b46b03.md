@@ -19,7 +19,7 @@ With the use of cards, you can group information, link to details, or present a 
 
 The following table provides an overview of the two main types of card controls in the SAPUI5 framework:
 
-<a name="loio5b46b03f024542ba802d99d67bc1a3f4__table_uzb_zmy_vs"/>Overview of Cards and Supported Features
+**Overview of Cards and Supported Features**
 
 
 <table>

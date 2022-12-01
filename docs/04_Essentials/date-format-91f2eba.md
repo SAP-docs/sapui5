@@ -65,7 +65,7 @@ oDateFormat.format(new Date()); //string in the same format as "Thu, Jan 29, 201
 
 The letters which can be included in this pattern are explained in the following table:
 
-<a name="loio91f2eba36f4d1014b6dd926db0e91070__table_i53_5gl_2y"/>Patterns
+**Patterns**
 
 
 <table>

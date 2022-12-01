@@ -10,7 +10,7 @@ We also want to provide our users a way of contacting Harry Hawk. Therefore we w
 
    
   
-<a name="loio6fdf0acd0bc24ffdad327cf7e6f9e7e0__fig_r1j_pst_mr"/>Address with e-mail link
+**Address with e-mail link**
 
  ![](images/Tutorial_Data_Binding_Step_9_1161575.png "Address with e-mail link") 
 

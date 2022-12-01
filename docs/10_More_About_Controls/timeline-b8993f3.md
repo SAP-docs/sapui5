@@ -16,7 +16,7 @@ The `Timeline` control shows information related to an object in chronological o
 
    
   
-<a name="loiob8993f310d3e451c8c81ce63f835b737__fig_msf_2vz_nz"/>Timeline Example
+**Timeline Example**
 
  ![Timeline Example](images/Timeline_Example_360b380.png "Timeline Example") 
 

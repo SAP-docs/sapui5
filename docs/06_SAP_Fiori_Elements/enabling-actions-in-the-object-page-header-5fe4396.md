@@ -10,7 +10,7 @@ All `com.sap.vocabularies.UI.v1.DataFieldForAction` within the unqualified `UI.I
 
    
   
-<a name="loio5fe439613f9c4e259015951594c423dc__fig_hqh_2wx_qmb"/>Object Page: Enable Actions in Header
+**Object Page: Enable Actions in Header**
 
  ![](images/Object_Page_Enable_Actions_in_Header_b506b5c.png "Object Page: Enable Actions in Header") 
 

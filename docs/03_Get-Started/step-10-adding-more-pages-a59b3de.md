@@ -12,7 +12,7 @@ In this step, we create an additional page that is displayed in a separate fulls
 
    
   
-<a name="loioa59b3de038874f879cf20bfc3287bd7c__fig_zfh_d31_12b"/>Additional page displayed in a separate fullscreen column
+**Additional page displayed in a separate fullscreen column**
 
  ![](images/More_Pages_Fiori_2_0_Tutorial_41f6ae1.gif "Additional page displayed in a separate fullscreen column") 
 

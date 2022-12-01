@@ -75,7 +75,7 @@ On mobile devices, the *Technical Information* dialog provides some additional f
 -   *Loaded Libraries* - Displays a list of the currently loaded libraries.
 -   *Loaded Modules* - Displays a collapsible list of the currently loaded modules.
 
-<a name="loiob5dcf47c7d4a4228ab40d77f835648e3__table_mr1_wbn_tv"/>Technical Information Dialog on Mobile Devices
+**Technical Information Dialog on Mobile Devices**
 
 
 <table>
@@ -127,7 +127,7 @@ To open the *Technical Information* dialog on your mobile device, proceed as fol
 
   
   
-<a name="loiob5dcf47c7d4a4228ab40d77f835648e3__fig_rlq_rlj_b1b"/>Gesture for opening the technical information dialog
+**Gesture for opening the technical information dialog**
 
 ![](images/SAPUI5_Mobile_Diagnostics_-_Opening_Gesture_df42057.png "Gesture for opening the technical information dialog")
 

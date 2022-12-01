@@ -13,7 +13,7 @@ The stacked column chart supports a color palette for semantic coloring.
 
    
   
-<a name="loioc54b815a908f423695d0e080d3830b7f__fig_plf_nlz_y4b"/>Example of a Stacked Column Chart
+**Example of a Stacked Column Chart**
 
  ![](../01_Whats-New/images/WhatsNew_138_OVP_StackedColumn_751363a.png "Example of a Stacked Column Chart") 
 

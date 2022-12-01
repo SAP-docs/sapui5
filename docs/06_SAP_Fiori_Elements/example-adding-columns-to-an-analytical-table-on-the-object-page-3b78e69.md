@@ -20,7 +20,7 @@ The table containing additional columns can look like this:
 
    
   
-<a name="loio3b78e695abde4c21a472cd9e2f1c9eb5__fig_x2g_rtc_sz"/>Custom columns in an analytical table on the object page
+**Custom columns in an analytical table on the object page**
 
  ![](images/Adding_Columns_to_an_Analytical_Table_on_the_Object_Page_508f303.png "Custom columns in an analytical table on the object page") 
 

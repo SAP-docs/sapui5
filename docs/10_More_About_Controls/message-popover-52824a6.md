@@ -19,7 +19,7 @@ The `MessagePopover` control displays a list of messages which can be further dr
 
    
   
-<a name="loio52824a6c316a413dbd7bd5f29522dce2__fig_plg_mg1_kv"/>Message Popover control
+**Message Popover control**
 
  ![](images/Message_Popover_a5667d8.png "Message Popover control") 
 
@@ -27,7 +27,7 @@ The `MessagePopover` also features the modes - collapsed \(showing only the type
 
    
   
-<a name="loio52824a6c316a413dbd7bd5f29522dce2__fig_qly_5g1_kv"/>Message Popover collapsed
+**Message Popover collapsed**
 
  ![](images/Message_Popover_collapsed_bd94678.png "Message Popover collapsed") 
 

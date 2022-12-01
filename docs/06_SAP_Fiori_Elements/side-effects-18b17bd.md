@@ -165,7 +165,7 @@ The following side effect annotations are supported:
 
 -   **Source properties**
 
-    If you use a value help, the side effect is triggered as soon as the value is set. However, if you are entering the value, the side effect is triggered when the focus moves away from the field. If the value help is used in combination with other input fields as a source for a side effect, then the side effect is triggered only when the focus moves away from the source field group.
+    If you use a value help, combo box, checkbox, date picker or date time picker, the side effect is triggered as soon as the value is set. However, if you are entering the value, the side effect is triggered when the focus moves away from the field. If the aforementioned controls are used in combination with other input fields as a source for a side effect, then the side effect is triggered only when the focus moves away from the source field group.
 
     **For SAP Fiori elements for OData V2:**
 

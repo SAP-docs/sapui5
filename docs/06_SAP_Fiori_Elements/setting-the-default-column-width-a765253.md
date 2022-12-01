@@ -8,7 +8,7 @@ SAP Fiori elements automatically calculates the default width of columns contain
 
 The default width of columns containing different controls/UI elements is as follows:
 
-<a name="loioa76525362b754354a85981a7389ca7af__table_zgd_lyt_y4b"/>
+****
 
 
 <table>

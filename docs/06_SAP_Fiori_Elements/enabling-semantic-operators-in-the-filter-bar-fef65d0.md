@@ -4,12 +4,12 @@
 
 You can use semantic date values, such as *Today* or *Last Week*, on the filter bar of list report and analytical list page applications.
 
-> ### Tip:  
-> Navigation to an external application always passes the actual date value that corresponds to the semantic date value that is used.
-
 
 
 ## Additional Features in SAP Fiori Elements for OData V2
+
+> ### Tip:  
+> Navigation to an external application always passes the actual date value that corresponds to the semantic date value that is used.
 
 The semantic date control can be enabled for the fields in the filter bar by setting the `useDateRange` flag to `true` in the manifest. By default, the value is `false` and date picker control is rendered by the filter bar.
 
@@ -140,9 +140,7 @@ The following types of settings exist, either at the property level or at the de
     > 
     > -   If you define the semantic date range feature by providing specific fields, you cannot render the fields from the navigation property of the leading entity set as a semantic date range in the filter bar.
     > 
-    > -   Semantic date range feature for the date fields with `sap:filter-restriction="single-value"` is not supported in the analytical list page.
-    > 
-    > -   Date time fields with filter restrictions as intervals are rendered as a date range control. Fields with `sap:filter-restriction="single-value"` are rendered as date pickers in both the list report and the analytical list page.
+    > -   `DateTimeOffset` fields with filter restrictions as intervals are rendered as a date range control. Fields with `sap:filter-restriction="single-value"` are rendered as date pickers in both the list report and the analytical list page.
 
 -   You can also set a default value for a semantic date range. The default value can be used together with `customdateRangeImplementation`, `filter`, or `selectedValues`. It can also be added without any filters. The default value should be part of the list of values for the field. For example, if you exclude `TOMORROW` as a value for the field `CreatedDate`, do not add `TOMORROW` as a `defaultValue`.
 
@@ -469,7 +467,7 @@ Here's a list of fully supported operators:
 
 If applications want to provide a default value for the semantic date field that requires an operator that needs a parameter value \(for example, an application developer wants to set NEXT "X" DAYS as the default operator and a default value for "X"\), the manifest must be configured accordingly. The following table provides the manifest settings for the various operators that need a parameter value:
 
-<a name="loiofef65d03d01a4b2baca28983a5449cf7__table_qw1_xd5_45b"/>Defining Default Values for Operators That Require Parameters
+**Defining Default Values for Operators That Require Parameters**
 
 
 <table>

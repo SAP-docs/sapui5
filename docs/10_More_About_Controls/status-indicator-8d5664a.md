@@ -22,7 +22,7 @@ The status indicator is best used in tiles, tables, and object pages.
 
    
   
-<a name="loio8d5664a644f14063aa05cc8d18aa56eb__fig_lr3_thv_4bb"/>Status Indicator Example
+**Status Indicator Example**
 
  ![Status Indicator Example](images/Status_Indicator_screenshot_5f85d40.png "Status Indicator Example") 
 

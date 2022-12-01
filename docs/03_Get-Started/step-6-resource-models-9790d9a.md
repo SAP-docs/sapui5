@@ -12,7 +12,7 @@ The example we used at the start of this tutorial was overly simplistic as we st
 
    
   
-<a name="loio9790d9aa686e4f818f2ad99057adb7ee__fig_r1j_pst_mr"/>Texts derived from the resource model \(No visual change to last step\)
+**Texts derived from the resource model \(No visual change to last step\)**
 
  ![](images/Tutorial_Data_Binding_Step_4_61d68f1.png "Texts derived from the resource model (No visual change to last step)") 
 

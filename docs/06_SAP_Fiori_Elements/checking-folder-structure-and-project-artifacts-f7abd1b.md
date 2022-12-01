@@ -10,7 +10,7 @@ The following artifacts are generated:
 
    
   
-Folder Structure for List Report and Object Page
+**Folder Structure for List Report and Object Page**
 
  ![](images/Smart_Templates_Folder_Structure_aeab6b5.png "Folder Structure for List Report and Object Page") 
 

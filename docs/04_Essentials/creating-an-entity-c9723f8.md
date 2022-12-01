@@ -100,7 +100,7 @@ You can create such an inline creation row by calling [`sap.ui.model.odata.v4.OD
 
    
   
-<a name="loioc9723f8265f644af91c0ed941e114d46__fig_klh_5kw_4cb"/>Internal States of an OData V4 Binding Context
+**Internal States of an OData V4 Binding Context**
 
  ![](images/Create_States_f359082.png "Internal States of an OData V4 Binding Context") 
 

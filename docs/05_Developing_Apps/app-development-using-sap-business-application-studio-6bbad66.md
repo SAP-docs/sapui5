@@ -43,7 +43,7 @@ If you do not have existing access to SAP Business Application Studio, you can g
 3.  [Create a Dev Space for SAP Fiori Apps](https://developers.sap.com/tutorials/appstudio-devspace-fiori-create.html)
 4.  [Create a Destination within the Cloud Foundry Environment](https://developers.sap.com/tutorials/cp-cf-create-destination.html)
 
-    Optional. This will create a destination within the SAP BTP Cloud Foundry environment so that you can access the free Northwind OData services. You need this to get sample data for some of our [Tutorials](get-started-setup-tutorials-and-demo-apps-8b49fc1.md)
+    Optional. This will create a destination within the SAP BTP Cloud Foundry environment so that you can access the free Northwind OData services. You need this to get sample data for some of our [Tutorials](../03_Get-Started/get-started-setup-tutorials-and-demo-apps-8b49fc1.md)
 
 5.  [Create an Empty SAPUI5 Project](https://developers.sap.com/tutorials/sapui5-101-create-project.html)
 

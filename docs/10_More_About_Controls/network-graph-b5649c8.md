@@ -18,7 +18,7 @@ This control supports both directed and undirected graphs, as well as graphs tha
 
    
   
-<a name="loiob5649c8de7f74739b66747dcc9356d0b__fig_chj_fxp_mbb"/>Network Graph Example
+**Network Graph Example**
 
  ![Network Graph Example](images/Network_Graph_screenshot_671dd30.png "Network Graph Example") 
 

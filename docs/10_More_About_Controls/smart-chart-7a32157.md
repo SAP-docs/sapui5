@@ -39,7 +39,7 @@ If the `showDownloadButton` property is set to `true`, you can download the part
 
 The following table shows a selection of the annotations used by the `SmartChart` control:
 
-<a name="loio7a32157697474864b041fa739fcc51ba__table_ctq_vyn_1v"/>Annotations
+**Annotations**
 
 
 <table>

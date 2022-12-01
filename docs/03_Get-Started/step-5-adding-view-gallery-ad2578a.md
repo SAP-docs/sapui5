@@ -17,7 +17,7 @@ The content in this step builds on the code from [Step 4: Adding a Scene Tree](s
 
    
   
-<a name="loioad2578a13a2e480185d973d8f55ff3d5__fig_ls5_jrw_15"/>Viewer application with a View Gallery, Viewport, and Scene Tree
+**Viewer application with a View Gallery, Viewport, and Scene Tree**
 
  ![](images/Image_SAPUI5_3D_Viewer_5_a0285c1.png "Viewer application with a View Gallery, Viewport, and Scene Tree") 
 

@@ -171,7 +171,7 @@ To define a section on UI level - you do this if you want to add a custom look a
 
 You can define your custom header fields by implementing an `xmlfragment` and using the following properties:
 
-<a name="loio92ad9968e41748aeb74971f7a08a91c8__table_i5l_mb2_14b"/>Properties of a Custom Section
+**Properties of a Custom Section**
 
 
 <table>

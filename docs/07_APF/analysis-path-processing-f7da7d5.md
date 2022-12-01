@@ -40,7 +40,7 @@ The relation between the objects described above is depicted in the following fi
 
    
   
-<a name="loiof7da7d53b5c19456e10000000a423f68__fig_v4k_v3x_l4"/>Runtime Objects of a Path
+**Runtime Objects of a Path**
 
  ![](images/Runtime_Objects_of_a_Path_c2f67ec.png "Runtime Objects of a Path") 
 

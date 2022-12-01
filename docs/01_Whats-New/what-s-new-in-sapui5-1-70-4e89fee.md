@@ -217,13 +217,13 @@ General features:
 
       
       
-    <a name="loio4e89fee547a24385826cddcfdf4df238__fig_cdk_qdt_w3b"/>Select All Checkbox
+    **Select All Checkbox**
 
      ![](images/MultiSelect_SelectAll_95bca00.jpg "Select All Checkbox") 
 
       
       
-    <a name="loio4e89fee547a24385826cddcfdf4df238__fig_sb4_tdt_w3b"/>Deselect All Arrow
+    **Deselect All Arrow**
 
      ![](images/MultiSelect_DeselectAll_449a6ae.jpg "Deselect All Arrow") 
 

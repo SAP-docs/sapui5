@@ -26,7 +26,7 @@ The View Gallery control can be divided into two parts; the top part of the cont
 
 The following table describes the functionality of each of the buttons or dropdown menus in the Step Navigation control:
 
-<a name="loio4717af4919e34245ba91905be4b57836__table_xfl_xym_25"/>Step Navigation buttons and dropdown menus
+**Step Navigation buttons and dropdown menus**
 
 
 <table>

@@ -67,7 +67,7 @@ Chart area configuration:
 
    
   
-<a name="loioc406c18b07224eb2a10fc792f547c629__fig_tqs_wlz_y4b"/>Example of a Dual Combination Chart Card
+**Example of a Dual Combination Chart Card**
 
  ![](images/Dual_Combination_Chart_Card_6fbcb2e.png "Example of a Dual Combination Chart Card") 
 

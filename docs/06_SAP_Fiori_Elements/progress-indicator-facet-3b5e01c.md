@@ -8,7 +8,7 @@ The progress indicator allows you to visually represent the level of completion 
 
    
   
-<a name="loio3b5e01c647f44ea98655b8c08feba780__fig_hbc_3xq_4lb"/>Progress Indicator in Object Page Header
+**Progress Indicator in Object Page Header**
 
  ![](images/ObjPageHeader_ProgIndicator_2e059aa.png "Progress Indicator in Object Page Header") 
 
@@ -16,7 +16,7 @@ As shown below, progress can be expressed either as a percentage or in absolute 
 
    
   
-<a name="loio3b5e01c647f44ea98655b8c08feba780__fig_jbc_3xq_4lb"/>Progress Indicator: Percent or Number
+**Progress Indicator: Percent or Number**
 
  ![](images/ProgIndicator_Percent_Number_73aaedf.png "Progress Indicator: Percent or Number") 
 
@@ -24,7 +24,7 @@ The progress indicator in the header facet is made up of sections to include a t
 
    
   
-<a name="loio3b5e01c647f44ea98655b8c08feba780__fig_lbc_3xq_4lb"/>Sections of Progress Indicator
+**Sections of Progress Indicator**
 
  ![](images/ObjPageHeader_ProgInd_Sections_767e59f.png "Sections of Progress Indicator") 
 
@@ -266,7 +266,7 @@ Note that the unit of measure can be annotated with `Unit` or `ISOCurrency` as s
 
            
           
-        <a name="loio3b5e01c647f44ea98655b8c08feba780__fig_qq1_gqm_bmb"/>Values in Progress Indicator
+        **Values in Progress Indicator**
 
          ![](images/ProgIndicator_SpecialValues_ec1bbd3.png "Values in Progress Indicator") 
 

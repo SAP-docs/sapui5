@@ -31,7 +31,7 @@ The table containing additional custom columns can look like this:
 
    
   
-<a name="task_r4q_j3g_d4b__fig_iyf_32g_tnb"/>Custom columns in responsive table
+**Custom columns in responsive table**
 
  ![](images/Add_columns_to_responsive_table_in_list_report_4efc171.png "Custom columns in responsive table") 
 

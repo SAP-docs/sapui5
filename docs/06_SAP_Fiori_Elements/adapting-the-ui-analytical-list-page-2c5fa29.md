@@ -16,7 +16,7 @@ You can also use [SAP Fiori tools](https://help.sap.com/viewer/product/SAP_FIORI
 > ### Note:  
 > Adapt the UI only for the use cases described here. Otherwise, control replacements might lead to changes that can no longer be applied.
 
-<a name="loio2c5fa29df37c4d13b5142ed7b484b274__table_bhy_pxw_dcb"/>
+****
 
 
 <table>
@@ -189,7 +189,7 @@ Use the following smart chart \(ID is `chart`, example C\_ContrItemMonitoringRes
 
 ## Adapting the UI: Chart
 
-<a name="loio2c5fa29df37c4d13b5142ed7b484b274__table_st5_xh5_jhb"/>
+****
 
 
 <table>
@@ -311,7 +311,7 @@ Controls the visibility of the legend button \(users can toggle the visibility o
 
 ### Values for Ignored Chart Type
 
-<a name="loio2c5fa29df37c4d13b5142ed7b484b274__table_j1w_shh_jkb"/>
+****
 
 
 <table>
@@ -819,7 +819,7 @@ horizontal\_waterfall
 
 ## Adapting the UI: Chart Toolbar
 
-<a name="loio2c5fa29df37c4d13b5142ed7b484b274__table_tx2_bbx_dcb"/>
+****
 
 
 <table>
@@ -879,7 +879,7 @@ Visibility: To drill down within the chart toolbar
 
 ## Adapting the UI: Table
 
-<a name="loio2c5fa29df37c4d13b5142ed7b484b274__table_off_nxz_dcb"/>
+****
 
 
 <table>
@@ -975,7 +975,7 @@ Show Row Count
 
 Each column of the smart table can also be tweaked in UI Adaptation \(sample ID is `C_ContrItemMonitoringResults--PurchaseContract`\). The smart table columns expose several properties for this purpose. Some of them are listed here:
 
-<a name="loio2c5fa29df37c4d13b5142ed7b484b274__table_epw_fzz_dcb"/>
+****
 
 
 <table>
@@ -1149,7 +1149,7 @@ Displays the total sum of a column
 
 Each button of the *Adapt Filters* dialog in Visual Filter mode can be tweaked via UI adaptation. The buttons and micro charts expose several properties for this purpose. Some of the button properties are listed here:
 
-<a name="loio2c5fa29df37c4d13b5142ed7b484b274__table_hck_k15_5mb"/>
+****
 
 
 <table>

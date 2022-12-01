@@ -15,7 +15,7 @@ Actually, every feature that we added to the app so far, would require a separat
 
    
   
-<a name="loioe1ce1de315994a02bf162f4b3b5a9f09__fig_r1j_pst_mr"/>A unit test for our formatters is now available
+**A unit test for our formatters is now available**
 
  ![](images/SAPUI5_Walkthrough_Step_28_a933bc8.png "A unit test for our formatters is now available") 
 
@@ -27,7 +27,7 @@ You can view and download all files at [Walkthrough - Step 27](https://ui5.sap.c
 
    
   
-<a name="loioe1ce1de315994a02bf162f4b3b5a9f09__fig_lbx_wcp_ns"/>Folder Structure for this Step
+**Folder Structure for this Step**
 
  ![](images/SAPUI5_Walkthrough_Step_28_2_1b5613a.png "Folder Structure for this Step") 
 

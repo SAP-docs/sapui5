@@ -16,7 +16,7 @@ The type `String` handles textual values within cells. Strings are usually not f
 
 It is possible to aggregate several property values into one column, for example, `firstname` and `lastname` are combined to `fullname`. This can be achieved by providing an array of property names within the `property` property of the column definition. In addition to that, the `template` property must be made available. This additional property has to be a non-empty string and can contain placeholders. A placeholder is a numerical index enclosed by curly brackets. The index must be greater than or equal zero and less than the length of the array that is assigned to the `property` property.
 
-<a name="loio283217d8f187401c8045723abc27e5e0__table_erc_scb_j3b"/>Details for `String`
+**Details for String**
 
 
 <table>
@@ -198,7 +198,7 @@ var exportConfiguration = {
 
 The type `Boolean` handles all variations of Boolean values. It allows for displaying these Boolean values in a pre-defined format. There are additional properties that are handled by this type to format their respective values. Since a `Boolean` type can be either `true` or `false`, the additional properties must be maintained for both cases for the type to take effect.
 
-<a name="loio283217d8f187401c8045723abc27e5e0__table_hrd_dnb_j3b"/>Details for `Boolean`
+**Details for Boolean**
 
 
 <table>
@@ -299,7 +299,7 @@ var exportConfiguration = {
 
 The type `Number` represents a simple numeric value without any specific formatting. The value is displayed the way it is. For further adjustment use the additional properties `scale`, `delimiter`, `unit`, and `unitProperty`.
 
-<a name="loio283217d8f187401c8045723abc27e5e0__table_ibn_v3n_n3b"/>Details for `Number`
+**Details for Number**
 
 
 <table>
@@ -584,7 +584,7 @@ var exportConfiguration = {
 
 The types `Date`, `DateTime`, and `Time` handle the date and time information. The application can pass additional parameters to adjust the visible representation of these types.
 
-<a name="loio283217d8f187401c8045723abc27e5e0__table_xpl_1fw_43b"/>Details for `Date`, `Time`, and `DateTime`
+**Details for Date, Time, and DateTime**
 
 
 <table>
@@ -1012,7 +1012,7 @@ Yes
 </td>
 <td valign="top">
 
-Defines whether the date and time information is exported based on the user's time zone. The default value is `true`.
+The date and time information is exported based on the UTC time zone. The default value is `true`. If this value is set to `false`, the date and time information will be exported in the user's local time zone.
 
 > ### Note:  
 > This property only affects the `DateTime` type.
@@ -1045,7 +1045,7 @@ Yes
 </td>
 <td valign="top">
 
-The date and time information is exported based on the given IANA \(Internet Assigned Numbers Authority\) time zone. Each cell contains a reference to the time zone that is applied. If no time zone is given or if the time zone is invalid, it will fall back on the user's local time zone. The default value is `undefined`.
+The date and time information is exported based on the given IANA \(Internet Assigned Numbers Authority\) time zone. Each cell contains a reference to the time zone that is applied. If no time zone is given or if the time zone is invalid, it will fall back on the user's local time zone or UTC, depending on the `utc` property of the column. The default value is `undefined`.
 
 > ### Note:  
 > This property only affects the `DateTime` type.
@@ -1164,7 +1164,7 @@ var exportConfiguration = {
 
 The type `Currency` handles currencies as an aggregation of a value and a particular UoM. This type might apply various styles on cell level because the scale of each currency cell depends on the corresponding UoM which in turn might vary for various cells in a currency column. The `Currency` type inherits from the `number` type but provides additional properties, including the `unitProperty` property as a mandatory property.
 
-<a name="loio283217d8f187401c8045723abc27e5e0__table_xb2_gqn_n3b"/>Details for `Currency`
+**Details for Currency**
 
 
 <table>
@@ -1315,7 +1315,7 @@ var exportConfiguration = {
 
 The type `Enumeration` is used for mapping values to a particular key. This is useful if your SAPUI5 application is using formatters instead of raw data to display meaningful content because formatters are not supported directly.
 
-<a name="loio283217d8f187401c8045723abc27e5e0__table_azy_w3x_43b"/>Details for `Enumeration`
+**Details for Enumeration**
 
 
 <table>
@@ -1417,7 +1417,7 @@ The type `BigNumber` is used to represent numbers that contain more than 15 digi
 
 The type `Percentage` represents numeric values that are transformed into percentage. The raw value 1 corresponds to 100%.
 
-<a name="loio283217d8f187401c8045723abc27e5e0__table_u4p_dlj_l4b"/>Details for `Percentage`
+**Details for Percentage**
 
 
 <table>

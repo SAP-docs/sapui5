@@ -16,7 +16,7 @@ The data of the app descriptor is stored in JSON format in the `manifest.json` f
 
 Every new version of SAPUI5 implies a new version of the app descriptor. In the following table, you can see how the SAPUI5 version is related to the descriptor version and the value of `_version.`
 
-<a name="loiobe0cf40f61184b358b5faedaec98b2da__table_lqj_xgh_1cb"/>App Descriptor Release and SAPUI5 Version
+**App Descriptor Release and SAPUI5 Version**
 
 
 <table>
@@ -1124,6 +1124,29 @@ Version 48
 
 </td>
 </tr>
+<tr>
+<td valign="top">
+
+Version 49
+
+
+
+</td>
+<td valign="top">
+
+\>=1.108
+
+
+
+</td>
+<td valign="top">
+
+1.48.0
+
+
+
+</td>
+</tr>
 </table>
 
 For more information on the new fields introduced in each version, check out [Migration Information for Upgrading the Descriptor File](migration-information-for-upgrading-the-descriptor-file-a110f76.md)
@@ -1291,7 +1314,7 @@ The content for the descriptor is contained in the following namespaces: `withou
 
 ## No Namespace
 
-<a name="loiobe0cf40f61184b358b5faedaec98b2da__table_crz_g5r_tr"/>Attributes in the `without` namespace
+**Attributes in the without namespace**
 
 
 <table>
@@ -1335,7 +1358,7 @@ Start page of your app, if available
 
 ## `sap.app`
 
-<a name="loiobe0cf40f61184b358b5faedaec98b2da__table_rvq_4fj_qr"/>Attributes in the mandatory `sap.app` namespace
+**Attributes in the mandatory sap.app namespace**
 
 
 <table>
@@ -1435,6 +1458,10 @@ The i18n property is an **optional** attribute and contains one of the following
     > The path to the i18n file must not exceed 100 characters.
 
 -   An object that has been defined as described in [Supported Locales and Fallback Chain](supported-locales-and-fallback-chain-ec753bc.md) and [Terminologies](terminologies-eba8d25.md).
+
+    > ### Note:  
+    > The `sap.app/i18n` section only supports terminologies for Components. Library descriptors **do not support** additional terminologies.
+
 
 If the manifest contains placeholders in `{{...}}` syntax, but no `i18n` attribute has been provided, the default value `i18n/i18n.properties` is used to request a ResourceBundle.
 
@@ -1879,7 +1906,7 @@ For a description of `resources.json`, see [The resources.json File](the-resourc
 
 ## `sap.ui`
 
-<a name="loiobe0cf40f61184b358b5faedaec98b2da__table_qw2_yhj_qr"/>Attributes in the mandatory `sap.ui` namespace
+**Attributes in the mandatory sap.ui namespace**
 
 
 <table>
@@ -1988,7 +2015,7 @@ Indicates whether an app shall run in full screen mode \(`true`\), or not \(`fal
 
 The `sap.ui5` namespace is aligned with the former concept of component metadata and contributes the following SAPUI5-specific attributes for the application descriptor, see [Migrating from Component Metadata to Descriptor](migrating-from-component-metadata-to-descriptor-e282db2.md) for more details.
 
-<a name="loiobe0cf40f61184b358b5faedaec98b2da__table_c32_chk_qr"/>Attributes in the `sap.ui5` namespace
+**Attributes in the sap.ui5 namespace**
 
 
 <table>
@@ -2097,6 +2124,9 @@ For more information see:[Using and Nesting Components](using-and-nesting-compon
 
 </td>
 <td valign="top">
+
+> ### Note:  
+> For component descriptors only. Libraries can not define models.
 
 Defines models that should be created or destroyed along the component's lifecycle. The key represents the model name. Use an empty string \(""\) for the default model.
 
@@ -2299,14 +2329,21 @@ An optional attribute that only has to be provided if your project is a variant 
 <tr>
 <td valign="top">
 
- `i18n` 
+ `library/i18n` 
 
 
 
 </td>
 <td valign="top">
 
-Determines if the library contains an i18n resource or not. If using a string instead of a boolean value, an alternative name for the i18n resource can be defined. Alternatively an object defined as described in [Supported Locales and Fallback Chain](supported-locales-and-fallback-chain-ec753bc.md).
+> ### Note:  
+> For library descriptors only.
+
+Determines whether the library contains an i18n resource. The value can be either a boolean, a string, or an object.
+
+A string value represents a bundle URL. Relative URLs are always resolved to the library origin. If no value is set, the default `messagebundle.properties` file is loaded.
+
+An object value can contain additional resource bundle configuration, e.g. terminologies and supported locales. For the supported features and for sample definitions, see the respective entries at [Terminologies](terminologies-eba8d25.md) \(without `bundleUrlRelativeTo`\) and [Supported Locales and Fallback Chain](supported-locales-and-fallback-chain-ec753bc.md) .
 
 > ### Note:  
 > This attribute is beneficial if the name of the main resource bundle \(properties file\) used by your UI5 library differs from the default name `messagebundle.properties`
@@ -2376,7 +2413,7 @@ Indicates whether SAPUI5 flexibility extension points are enabled for the corres
 
 ## `sap.platform.abap`
 
-<a name="loiobe0cf40f61184b358b5faedaec98b2da__table_tdx_sdt_tr"/>Attributes in the `sap.platform.abap` namespace
+**Attributes in the sap.platform.abap namespace**
 
 
 <table>
@@ -2420,7 +2457,7 @@ Specifies the app's URI in the ABAP system, for example `/sap/bc/ui5_ui5/sap/app
 
 ## `sap.platform.hcp`
 
-<a name="loiobe0cf40f61184b358b5faedaec98b2da__table_h5d_c2t_tr"/>Attributes in the `sap.platform.hcp` namespace
+**Attributes in the sap.platform.hcp namespace**
 
 
 <table>
@@ -2512,7 +2549,7 @@ Specifies the version of the deployed HTML5 application; filled during deploymen
 
 ## `sap.fiori`
 
-<a name="loiobe0cf40f61184b358b5faedaec98b2da__table_h31_l2t_tr"/>Attributes in the `sap.fiori` namespace
+**Attributes in the sap.fiori namespace**
 
 
 <table>
@@ -2588,7 +2625,7 @@ Indicates whether an app is an abstract \(generic\) app, which may not used dire
 
 ## `sap.card`
 
-<a name="loiobe0cf40f61184b358b5faedaec98b2da__table_fly_cmt_ngb"/>Attributes in the `sap.card` namespace
+**Attributes in the sap.card namespace**
 
 
 <table>
@@ -2685,10 +2722,13 @@ The newest flattened JSON schema is available on the SAP Open Source GitHub at [
 
 Current version of the `manifest.json`
 
+> ### Note:  
+> The following sample contains the **full scope of all available descriptor properties**. Some properties might not be applicable for all `manifest.json` variants. For example, the `sap.ui5/models` section is not supported for library descriptors. For more information, see the above listing of namespaces and properties.
+
 ```
 
 {
-    "_version": "1.47.0",
+    "_version": "1.48.0",
  
     "start_url": "index.html",
  
@@ -2940,7 +2980,7 @@ Current version of the `manifest.json`
             }]
         },
         "dependencies": {
-            "minUI5Version": "1.107.0",
+            "minUI5Version": "1.108.0",
             "libs": {
                 "sap.m": {
                     "minVersion": "1.34.0"

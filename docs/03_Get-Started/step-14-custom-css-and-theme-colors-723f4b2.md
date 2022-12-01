@@ -10,7 +10,7 @@ Sometimes we need to define some more fine-granular layouts and this is when we 
 
    
   
-<a name="loio723f4b2334e344c08269159797f6f796__fig_r1j_pst_mr"/>The space between the button and the input field is now smaller and the output text is bold
+**The space between the button and the input field is now smaller and the output text is bold**
 
  ![](images/SAPUI5_Walkthrough_Step_14_15_dc7fa70.png "The space between the button and the input field is now smaller and the
 					output text is bold") 

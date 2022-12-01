@@ -16,7 +16,7 @@ A terminology, such as "Travel" or "Sports", is a set of resource bundles / .pro
 
 The following table shows the configuration options that can be specified in the `manifest.json` descriptor file of your application or component. The configuration can be placed under either the `sap.app/i18n` or the `sap.ui5/models` section for models of type `sap.ui.model.resource.ResourceModel`.
 
-<a name="loioeba8d25a31ef416ead876e091e67824e__table_ConfigOptions"/>Configuration Options for Terminologies
+**Configuration Options for Terminologies**
 
 
 <table>
@@ -107,6 +107,9 @@ URL pointing to the `.properties` file of the main bundle.
 <td valign="top">
 
 The bundle URL can be resolved relative to either `manifest` \(default\) or `component`.
+
+> ### Note:  
+> This option is only available for a Component's `manifest.json`. Libraries do not support another reference point for a relative `bundleUrl`.
 
 
 
@@ -214,13 +217,15 @@ List of additional resource bundle configurations to enhance the main bundle. Ea
 > 
 > To prevent this behavior, you need to explicitly set the `supportedLocales` option to the actual valid set of supported languages for the back end.
 
-**Example:**
+
+
+### Example for Component resource models
 
 The following JSON excerpt is valid for models of type `sap.ui.model.resource.ResourceModel` inside the `manifest.json` in both the `sap.app/i18n` and the `sap.ui5/models` sections. For other models, the configuration must be placed in the `settings` property. For more information, see [Descriptor for Applications, Components, and Libraries \(manifest.json\)](descriptor-for-applications-components-and-libraries-manifest-json-be0cf40.md).
 
-The code block given below shows a sample configuration from the [Shop Administration Tool](https://ui5.sap.com/test-resources/sap/tnt/demokit/toolpageapp/webapp/index.html)*Shop Administration Tool* demo app in the SAPUI5 Demo Kit. It has the main resource bundle `i18n/i18n.properties` and the defined terminologies `sports`, `travel`, and `services`. The main bundle is enhanced with the additional resource bundles `reuse/appvar1/i18n/i18n.properties` and `reuse/appvar2/i18n/i18n.properties`. These enhancements also provide terminologies \(`appvar1`: "sports-soccer" and "travel-vehicles"; `appvar2`: "travel-bicycles"\).
+The code block given below shows a sample configuration from the [**Shop Administration Tool**](https://ui5.sap.com/test-resources/sap/tnt/demokit/toolpageapp/webapp/index.html) demo app in the SAPUI5 Demo Kit. It has the main resource bundle `i18n/i18n.properties` and the defined terminologies `sports`, `travel`, and `services`. The main bundle is enhanced with the additional resource bundles `reuse/appvar1/i18n/i18n.properties` and `reuse/appvar2/i18n/i18n.properties`. These enhancements also provide terminologies \(`appvar1`: "sports-soccer" and "travel-vehicles"; `appvar2`: "travel-bicycles"\).
 
-The second bundle with the bundleUrl `reuse/appvar2/i18n/i18n.properties` does not derive directly from the main resource bundle as you might think, but from the first enhancement. The list of resource bundle configurations provided with the `enhanceWith` attribute can be seen as an incremental list of derivations for resource bundles that starts from the main bundle. If there was a third enhancing bundle, it would derive from the second bundle, which in turn derives from the first enhancement, and so on:
+The second bundle with the bundleUrl `reuse/appvar2/i18n/i18n.properties` does not derive directly from the main resource bundle as you might think, but from the first enhancement. The list of resource bundle configurations provided with the `enhanceWith` attribute can be seen as an incremental list of derivations for resource bundles that starts from the main bundle. If there was a third enhancing bundle, it would derive from the second bundle, which in turn derives from the first enhancement, and so on.
 
 ```json
 
@@ -281,6 +286,46 @@ The second bundle with the bundleUrl `reuse/appvar2/i18n/i18n.properties` does n
     ]
 }
 ...
+```
+
+
+
+### Example for library resource bundles
+
+> ### Note:  
+> You can define a library's `ResourceBundle` in the `sap.ui5/library/i18n` section of a library's `manifest.json`. Contrary to a component's `ResourceModel`, a library's `ResourceBundle` cannot reference a bundle outside its own deployment unit. Each relative `bundleUrl` will always be resolved relative to the origin of the library itself.
+> 
+> The property `bundleUrlRelativeTo` is not supported for libraries; it will simply be ignored at runtime and should be omitted.
+
+```json
+{
+    ...
+    "sap.ui5": {
+        "library": {
+            "i18n": {
+                "bundleUrl": "i18n/i18n.properties",
+                "supportedLocales": ["en", "de"],
+                "fallbackLocale": "en",
+                "terminologies": {
+                    "sports": {
+                        "bundleUrl": "i18n/terminologies/sports/i18n.terminologies.sports.properties",
+                        "supportedLocales": ["en", "de"]
+                    },
+                    "travel": {
+                        "bundleUrl": "i18n/terminologies/travel/i18n.terminologies.travel.properties",
+                        "supportedLocales": ["en", "de"]
+                    },
+                    "services": {
+                        "bundleUrl": "i18n/terminologies/services/i18n.terminologies.services.properties",
+                        "supportedLocales": ["en", "de"]
+                    }
+                },
+                ...
+            }
+        }
+    }
+    ...
+}
 ```
 
 

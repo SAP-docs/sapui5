@@ -23,7 +23,7 @@ The extensions are made, for example, using manifest changes or SAPUI5 extension
 For list reports, object pages, and analytical list pages, you can either use the extension wizard in the SAP Web IDE to create app extensions or you can create them manually.
 
 > ### Caution:  
-> SAP Web IDE is no longer available via SAP Business Technology Platform trial accounts. Any references to SAP Web IDE in this documentation are only relevant for you if you have access to SAP Web IDE through a productive SAP BTP account. Please consider SAP Business Application Studio as an alternative. See [App Development Using SAP Business Application Studio](../03_Get-Started/app-development-using-sap-business-application-studio-6bbad66.md).
+> SAP Web IDE is no longer available via SAP Business Technology Platform trial accounts. Any references to SAP Web IDE in this documentation are only relevant for you if you have access to SAP Web IDE through a productive SAP BTP account. Please consider SAP Business Application Studio as an alternative. See [App Development Using SAP Business Application Studio](../05_Developing_Apps/app-development-using-sap-business-application-studio-6bbad66.md).
 
 You can use SAP Web IDE to add the following app extensions:
 

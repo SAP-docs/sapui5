@@ -40,7 +40,7 @@ The display of actions depends on which mode the user is in:
 
    
   
-<a name="loiof65e8b196335457cbfc891418ec25cfd__fig_ocj_1mh_nlb"/>Object Page: Action Triggered from Footer Bar \(Edit Mode\)
+**Object Page: Action Triggered from Footer Bar \(Edit Mode\)**
 
  ![](images/Object_Page_Footer_Bar_Edit_Mode_2c8767f.png "Object Page: Action Triggered from Footer Bar (Edit Mode)") 
 

@@ -31,7 +31,7 @@ The available semantic content is different buttons and selects. Each one can co
 
   
   
-<a name="loio4a97a07ec8f5441d901994d82eaab1f5__fig_dgh_yl2_zz"/>Semantic content at its default positions on the page.
+**Semantic content at its default positions on the page.**
 
  ![](images/sap_m_SemanticPage_master-detail_1632fd5.png "Semantic content at its default positions on the page.") 
 

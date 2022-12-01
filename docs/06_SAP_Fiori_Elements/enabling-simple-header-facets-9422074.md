@@ -16,7 +16,7 @@ The following figure shows a sample simple header facet:
 
    
   
-<a name="loio9422074471ef4db9a7ee6b519102f0d1__fig_ivh_lvm_qz"/>Simple Header Facet
+**Simple Header Facet**
 
  ![](images/Simple_Header_Facet_6bc65c5.png "Simple Header Facet") 
 

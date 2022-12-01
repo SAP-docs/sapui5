@@ -19,7 +19,7 @@ The `ObjectPageHeader` control consists of two main parts - Header Title and Hea
 
    
   
-<a name="loio0fecbce45e39406aa939bd25e89823f4__fig_tzt_2gw_1cb"/>Collapsing and Expanding the Header
+**Collapsing and Expanding the Header**
 
  ![](images/Collapsing_and_expanding_the_header_animation_4e08106.gif "Collapsing and Expanding the Header") 
 
@@ -31,7 +31,7 @@ This part of the header contains the basic information of the object.
 
    
   
-<a name="loio0fecbce45e39406aa939bd25e89823f4__fig_a5m_qmh_ccb"/>Navigation bar, Breadcrumbs and Actions in the Header Title
+**Navigation bar, Breadcrumbs and Actions in the Header Title**
 
  ![](images/ObejctPageHeaderTitle_-_NavigationBar_Breadcrumbs_and_Actions_b245922.png "Navigation bar, Breadcrumbs and Actions in the Header Title") 
 
@@ -41,7 +41,7 @@ The area below the navigation bar is reserved for breadcrumbs navigation on one 
 
    
   
-<a name="loio0fecbce45e39406aa939bd25e89823f4__fig_rqv_1vh_ccb"/>Title with Optional Indicators and Subtitle
+**Title with Optional Indicators and Subtitle**
 
  ![](images/HeaderTitle_Title_Subtitle_Indicators_553c7d7.png "Title with Optional Indicators and Subtitle") 
 
@@ -49,7 +49,7 @@ You can set title \(`objectTitle`\) and subtitle \(`objectSubtitle`\). On larger
 
 You can display several optional indicators right after the title. They are considered part of the title and when there is not enough space they are wrapped and moved to more lines along with the title text.
 
-<a name="loio0fecbce45e39406aa939bd25e89823f4__table_oxs_blm_2cb"/>Optional indicators in the title
+**Optional indicators in the title**
 
 
 <table>
@@ -158,7 +158,7 @@ You can show and hide both the markers \(*Favorite* and *Flagged*\) simultaneous
 
    
   
-<a name="loio0fecbce45e39406aa939bd25e89823f4__fig_uc4_2rh_ccb"/>Object Image in Circle and Square Shapes
+**Object Image in Circle and Square Shapes**
 
  ![](images/objectImageShape_-_Circle_and_Square_df92915.gif "Object Image in Circle and Square Shapes") 
 
@@ -179,7 +179,7 @@ With the use of the `sap.uxap.ObjectPageHeaderLayoutData` class, you can specify
 
    
   
-<a name="loio0fecbce45e39406aa939bd25e89823f4__fig_azb_j1n_ccb"/>Header Content with `sap.uxap.ObjectPageHeaderLayoutData` - large, middle and small-sized layout
+**Header Content with sap.uxap.ObjectPageHeaderLayoutData - large, middle and small-sized layout**
 
  ![](images/Header_Content_ObjectPageHeaderLayoutData_40e357c.gif "Header Content with sap.uxap.ObjectPageHeaderLayoutData -
 					large, middle and small-sized layout") 

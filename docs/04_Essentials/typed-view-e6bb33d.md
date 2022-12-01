@@ -8,12 +8,6 @@ A view can also be defined by extending the `sap.ui.core.mvc.View` class. Such a
 
 A typed view implements its own `View#createContent` method. It must either return one or several root controls that will be rendered as content of the view or a promise resolving with the view content.
 
-> ### Note:  
-> Typed Views are not supported for synchronous view types, such as:
-> 
-> -   `sap.ui.core.mvc.JSONView`
-> -   `sap.ui.core.mvc.HTMLView`
-
 
 
 <a name="loioe6bb33d076dc4f23be50c082c271b9f0__section_fx1_wqz_y4b"/>

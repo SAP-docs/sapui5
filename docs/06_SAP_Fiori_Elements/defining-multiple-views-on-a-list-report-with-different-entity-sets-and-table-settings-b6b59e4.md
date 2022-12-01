@@ -127,7 +127,7 @@ Different tabs on a List Report can render different table types. For example, f
 
    
   
-<a name="loiob6b59e4a4c3548cf83ff9c3b955d3ba3__fig_cm3_k5r_rkb"/>Example of a List Report page with two tabs of different table types
+**Example of a List Report page with two tabs of different table types**
 
  ![](images/list_report_entity_set_with_diff_table_types_1_bc2ec30.jpg " Example of a List Report page with two tabs of different table types ") 
 

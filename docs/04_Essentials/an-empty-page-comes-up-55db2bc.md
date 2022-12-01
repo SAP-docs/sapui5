@@ -15,7 +15,7 @@ You find yourself in one of these situations:
 
    
   
-The browser displays an empty page and an `Uncaught Error` is issued in the console
+**The browser displays an empty page and an Uncaught Error is issued in the console**
 
  ![](../03_Get-Started/images/FAK1_Empty_Page_Comes_Up_873b3c2.png "The browser displays an empty page and an Uncaught Error is issued in
 					the console") 

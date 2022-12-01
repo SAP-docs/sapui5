@@ -10,7 +10,7 @@ Our dialog is still pretty much empty. Since SAPUI5 is shipped with a large icon
 
    
   
-<a name="loio776f7352807e4f82b18176c8fbdc0c56__fig_r1j_pst_mr"/>An icon is now displayed in the dialog box
+**An icon is now displayed in the dialog box**
 
  ![](images/SAPUI5_Walkthrough_Step_18_bd57299.png "An icon is now displayed in the dialog box") 
 

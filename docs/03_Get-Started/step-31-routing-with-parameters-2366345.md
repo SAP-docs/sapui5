@@ -12,7 +12,7 @@ To make this work, we have to pass over the information which item has been sele
 
    
   
-<a name="loio2366345a94f64ec1a80f9d9ce50a59ef__fig_r1j_pst_mr"/>The selected invoice details are now shown in the details page
+**The selected invoice details are now shown in the details page**
 
  ![](images/SAPUI5_Walkthrough_Step_32_3a96173.png "The selected invoice details are now shown in the details page") 
 

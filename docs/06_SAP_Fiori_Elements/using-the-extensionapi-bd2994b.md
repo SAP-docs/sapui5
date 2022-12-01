@@ -149,7 +149,7 @@ For more information, see [ExtensionAPI](https://ui5.sap.com/#/api/sap.suite.ui.
 
 `invokeActions` method calls a particular action multiple times and submits changes to the back end.
 
-<a name="loiobd2994b69ef542998becbc69ab093f7e__table_ytv_nlf_5mb"/>Parameter Details
+**Parameter Details**
 
 
 <table>

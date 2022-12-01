@@ -61,7 +61,7 @@ The multi-input field is also available for tables.
 
    
   
-<a name="loio04ff5b1a81344a8e8169ea99630ff4e5__fig_z3x_3sn_lkb"/>Multi-Input Control on the Object Page Table
+**Multi-Input Control on the Object Page Table**
 
  ![](images/Smart_MultiInput_Control_on_the_Object_Page_Table_dcb027c.png "Multi-Input Control on the Object Page Table") 
 

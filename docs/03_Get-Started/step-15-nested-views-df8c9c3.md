@@ -10,7 +10,7 @@ Our panel content is getting more and more complex and now it is time to move th
 
    
   
-<a name="loiodf8c9c3d79b54c928855162bafcd88ee__fig_r1j_pst_mr"/>The panel content is now refactored to a separate view \(No visual changes to last step\)
+**The panel content is now refactored to a separate view \(No visual changes to last step\)**
 
  ![](images/SAPUI5_Walkthrough_Step_14_15_dc7fa70.png "The panel content is now refactored to a separate view (No visual changes to last
                step)") 

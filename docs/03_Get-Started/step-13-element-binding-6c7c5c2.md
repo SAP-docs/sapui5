@@ -10,7 +10,7 @@ Now we want to do something with that newly generated list. In most cases you wi
 
    
   
-<a name="loio6c7c5c266b534e7ea9a28f861dc515f5__fig_r1j_pst_mr"/>Element binding implemented, product details displayed per item
+**Element binding implemented, product details displayed per item**
 
  ![](images/Tutorial_Data_Binding_Step_13_872d2ed.png "Element binding implemented, product details displayed per item") 
 

@@ -8,7 +8,7 @@ The number of columns is equal to the number of measures in the annotation file.
 
    
   
-<a name="loio95f6aeb7eeb746ca94762f10f8217799__fig_qt3_3yb_z4b"/>Example of a Horizontal Bar Chart Card
+**Example of a Horizontal Bar Chart Card**
 
  ![](images/Example_of_a_Horizontal_Bar_Chart_Card_51ba955.png "Example of a Horizontal Bar Chart Card") 
 
@@ -29,7 +29,7 @@ The threshold values are taken from that data point annotations that are associa
 
   
   
-<a name="loio95f6aeb7eeb746ca94762f10f8217799__fig_l3t_3dc_z4b"/>Example of a Bar Chart Card with Semantic Coloring
+**Example of a Bar Chart Card with Semantic Coloring**
 
  ![](images/Example_of_a_Bar_Chart_Card_with_Semantic_Coloring_e9cc5d1.png "Example of a Bar Chart Card with Semantic Coloring") 
 
@@ -59,7 +59,7 @@ The measures can be maximizing, minimizing, or target, based on a threhold value
 
        
       
-    <a name="loio95f6aeb7eeb746ca94762f10f8217799__fig_crq_3cc_z4b"/>Example of a Maximizing Measure
+    **Example of a Maximizing Measure**
 
      ![](images/Example_of_a_Maximizing_Measure_3a30047.png "Example of a Maximizing Measure") 
 
@@ -72,7 +72,7 @@ The measures can be maximizing, minimizing, or target, based on a threhold value
 
        
       
-    <a name="loio95f6aeb7eeb746ca94762f10f8217799__fig_cqj_kcc_z4b"/>Example of a Minimizing Measure
+    **Example of a Minimizing Measure**
 
      ![](images/Example_of_a_Minimizing_Measure_9bef69b.png "Example of a Minimizing Measure") 
 
@@ -89,7 +89,7 @@ The measures can be maximizing, minimizing, or target, based on a threhold value
 
        
       
-    <a name="loio95f6aeb7eeb746ca94762f10f8217799__fig_kvp_5cc_z4b"/>Example of a Target Measure
+    **Example of a Target Measure**
 
      ![](images/Example_of_a_Target_Measure_7626b9d.png "Example of a Target Measure") 
 

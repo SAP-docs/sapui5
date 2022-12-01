@@ -158,13 +158,13 @@ The table containing the segmented buttons looks like this:
 
   
   
-<a name="loio5532c899e6e94137b18b8ee68df12efb__fig_xy2_wt4_gmb"/>Segmented button 1 selected
+**Segmented button 1 selected**
 
  ![](images/Segmented_Buttons_3d9da3f.png "Segmented button 1 selected") 
 
   
   
-<a name="loio5532c899e6e94137b18b8ee68df12efb__fig_zy2_wt4_gmb"/>Segmented button 2 selected
+**Segmented button 2 selected**
 
  ![](images/Segmented_Buttons_1_e1d19dc.png "Segmented button 2 selected") 
 

@@ -14,7 +14,7 @@ The anchor bar is an automatically generated internal menu that shows the titles
 
    
   
-<a name="loio370b67986497463187336fa130aebbf1__fig_znw_wpt_ncb"/>Anchor Bar with Sections and Subsections
+**Anchor Bar with Sections and Subsections**
 
  ![](images/AnchorBar_7023c14.png "Anchor Bar with Sections and Subsections") 
 

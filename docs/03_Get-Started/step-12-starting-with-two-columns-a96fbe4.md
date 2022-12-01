@@ -14,7 +14,7 @@ By default, the `FlexibleColumnLayout` starts off with one column. If your use c
 
    
   
-<a name="loioa96fbe44ae6544589a096041f99d38c2__fig_zfh_d31_12b"/>Initial layout with two columns
+**Initial layout with two columns**
 
  ![](images/Starting_with_Two_Columns_Fiori_2_0_Tutorial_18a03a8.png "Initial layout with two columns") 
 

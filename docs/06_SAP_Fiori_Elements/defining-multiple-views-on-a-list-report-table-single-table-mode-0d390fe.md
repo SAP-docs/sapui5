@@ -661,7 +661,7 @@ To define multiple views using single table mode, perform the following steps:
 
        
       
-    <a name="task_dfp_z5x_cmb__fig_xwn_4yx_cmb"/>Multiple Views on a List Report Table - Single Table Mode
+    **Multiple Views on a List Report Table - Single Table Mode**
 
      ![](images/Multiple_Views_on_a_List_Report_Table_ec09b05.png "Multiple Views on a List Report Table - Single Table Mode") 
 

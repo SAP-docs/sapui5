@@ -13,7 +13,7 @@ The following table shows which themes are available for the active SAPUI5 libra
 > ### Note:  
 > For more information about the *Quartz Dark* theme, see SAP Note [2982978](https://launchpad.support.sap.com/#/notes/2982978).
 
-<a name="loio38ff8c27b022475a92b591bcf6262551__table_prf_w4r_zy"/>Themes for Supported Libraries
+**Themes for Supported Libraries**
 
 
 <table>
@@ -756,7 +756,7 @@ The `sap_bluecrystal` theme is also no longer supported, but offers full coverag
 
 The `sap_belize` theme offers an initial implementation for the `sap.ui.commons` and the `sap.ui.ux3` library to allow for a smoother transition, but it is not supported for this library and will not be maintained. We recommend that you consider migrating your existing apps to actively developed libraries, such as `sap.m`, and use `sap_belize` as the default theme going forward.
 
-<a name="loio38ff8c27b022475a92b591bcf6262551__table_xpk_zqr_zy"/>Themes for the Deprecated Libraries `sap.ui.commons` and `sap.ui.ux3`
+**Themes for the Deprecated Libraries sap.ui.commons and sap.ui.ux3**
 
 
 <table>

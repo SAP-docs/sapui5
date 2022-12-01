@@ -10,7 +10,7 @@ In the examples used so far, we have used a read-only field to display the value
 
    
   
-<a name="loioc72b922fdb59422496661000165d7ff1__fig_r1j_pst_mr"/>Input fields can be enabled or disabled
+**Input fields can be enabled or disabled**
 
  ![](images/Tutorial_Data_Binding_Step_4_61d68f1.png "Input fields can be enabled or disabled") 
 

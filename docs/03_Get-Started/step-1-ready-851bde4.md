@@ -12,7 +12,7 @@ Let's get you ready for your journey! We bootstrap SAPUI5 in an HTML page and im
 
    
   
-<a name="loio851bde42e4e1410c96abbe402fa9128c__fig_vf2_vfl_4s"/>The browser shows a "Ready" button that triggers a "Hello World" message
+**The browser shows a "Ready" button that triggers a "Hello World" message**
 
  ![](images/Tutorial_Quick_Start_Step_1_9c157e9.png "The browser shows a "Ready" button that triggers a "Hello World" message") 
 
@@ -95,7 +95,7 @@ Now, start the webserver, serve the sources of the \`webapp\` folder, and open t
 **Related Information**  
 
 
-[Development Environment](development-environment-7bb04e0.md "This part of the documentation introduces you to some common and recommended use cases for the installation, configuration, and setup of SAPUI5 development environments.")
+[Development Environment](../05_Developing_Apps/development-environment-7bb04e0.md "This part of the documentation introduces you to some common and recommended use cases for the installation, configuration, and setup of SAPUI5 development environments.")
 
 [Variant for Bootstrapping from Content Delivery Network](../04_Essentials/variant-for-bootstrapping-from-content-delivery-network-2d3eb2f.md "SAPUI5 can either be loaded locally with a relative path from an SAP Web server or externally from a Content Delivery Network (CDN).")
 

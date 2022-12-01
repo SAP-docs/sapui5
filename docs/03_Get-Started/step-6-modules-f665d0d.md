@@ -10,7 +10,7 @@ In SAPUI5, resources are often referred to as modules. In this step, we replace 
 
    
   
-<a name="loiof665d0de4dba405f9af4294de824b03b__fig_r1j_pst_mr"/>A message toast displays the "Hello World" message
+**A message toast displays the "Hello World" message**
 
  ![](images/SAPUI5_Walkthrough_Step_06_7c11ea9.png "A message toast displays the "Hello World" message") 
 

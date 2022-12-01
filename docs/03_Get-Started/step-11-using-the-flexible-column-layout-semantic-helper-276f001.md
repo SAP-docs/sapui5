@@ -19,7 +19,7 @@ For more information, see [Flexible Column Layout Semantic Helper](../10_More_Ab
 
    
   
-<a name="loio276f001c5a934f6e8faedee6ea22aba1__fig_zfh_d31_12b"/>Master-detail-detail pattern using `sap.f.FlexibleColumnLayoutSemanticHelper`
+**Master-detail-detail pattern using sap.f.FlexibleColumnLayoutSemanticHelper**
 
  ![](images/With_Semantic_Helper_Fiori_2_0_Tutorial_fd98e0d.gif "Master-detail-detail pattern using
 						sap.f.FlexibleColumnLayoutSemanticHelper") 

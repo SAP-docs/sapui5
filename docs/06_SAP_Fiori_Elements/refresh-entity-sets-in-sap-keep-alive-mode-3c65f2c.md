@@ -22,7 +22,7 @@ You can configure the entity sets that you want to refresh. To do so, upon navig
 
 The following configurations are supported for entity sets:
 
-<a name="loio3c65f2cc630c472da8328a6f3c193683__table_yby_3rt_yqb"/>
+****
 
 
 <table>

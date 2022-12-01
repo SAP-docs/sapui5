@@ -14,7 +14,7 @@ The structure in this step will be used throughout the rest of this tutorial. Th
 
    
   
-<a name="loio59b772bfac5241b89c16b12395c1116c__fig_r1j_pst_mr"/>The basic SAPUI5 app
+**The basic SAPUI5 app**
 
  ![](images/Basic_UI5_App_Fiori_2_0_Tutorial_613be5a.png "The basic SAPUI5
 					app") 
@@ -33,7 +33,7 @@ You should have the same files as displayed in the following figure:
 
    
   
-<a name="loio59b772bfac5241b89c16b12395c1116c__fig_chm_4jp_ls"/>Folder structure with downloaded files
+**Folder structure with downloaded files**
 
  ![](images/Initial_File_Structure_Fiori_2_0_Tutorial_bc4395b.png "Folder structure with downloaded files") 
 

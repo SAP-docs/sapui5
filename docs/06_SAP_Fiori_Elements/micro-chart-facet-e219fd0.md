@@ -168,7 +168,7 @@ The unit of measure is used for the footer of the micro chart. An annotation for
 > 
 >    
 >   
-> <a name="loioe219fd0c85b842c69ac3a514e712ece5__fig_dvh_xx1_qmb"/>Navigation Property
+> **Navigation Property**
 > 
 >  ![](images/Chart_Limitation_02debb6.png "Navigation Property") 
 
@@ -187,7 +187,7 @@ SAP Fiori elements for OData V4 also supports the comparison micro chart.
 > 
 >    
 >   
-> <a name="loioe219fd0c85b842c69ac3a514e712ece5__fig_qlt_lx1_qmb"/>Navigation Property
+> **Navigation Property**
 > 
 >  ![](images/Navigation_Property_d2168a4.png "Navigation Property ") 
 

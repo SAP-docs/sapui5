@@ -291,7 +291,7 @@ The table containing additional custom columns can look like this:
 
   
   
-<a name="loiod525522c1bf54672ae4e02d66b38e60c__fig_py1_dlg_d4b"/>Custom Columns in a Table
+**Custom Columns in a Table**
 
  ![](images/Custom_Columns_00819cd.png "Custom Columns in a Table") 
 
@@ -413,7 +413,7 @@ The `manifest.json` sample code above enables you to add an additional column to
 
  ![](images/Custom_Button_bea7e9b.png) 
 
-<a name="loiod525522c1bf54672ae4e02d66b38e60c__table_ssw_r3g_tnb"/>Settings
+**Settings**
 
 
 <table>

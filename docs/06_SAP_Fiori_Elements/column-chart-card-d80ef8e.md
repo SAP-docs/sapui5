@@ -10,7 +10,7 @@ Column charts need to have at least one measure and one dimension. Irrespective 
 
    
   
-<a name="loiod80ef8e964cc48a69989fb61815e151d__fig_sxy_clz_y4b"/>Example of a Column Chart Card
+**Example of a Column Chart Card**
 
  ![](../01_Whats-New/images/WhatsNew_138_OVP_ColumnChart_d3b0ca9.png "Example of a Column Chart Card") 
 

@@ -12,7 +12,7 @@ In this step, we add an empty detail page.
 
    
   
-<a name="loio4e4315cef89e48ceb60b4dc12f5be2d2__fig_r1j_pst_mr"/>Master Page with Empty Detail Page
+**Master Page with Empty Detail Page**
 
  ![](images/Master_Page_with_Empty_Detail_Page_Fiori_2_0_Tutorial_10dec0c.gif "Master Page with Empty Detail Page") 
 

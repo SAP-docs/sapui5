@@ -12,7 +12,7 @@ In this step, we will make it possible to create and edit \(update\) user data f
 
    
   
-<a name="loiob4f12660538147f8839b05cb03f1d478__fig_sr1_wpw_4cb"/>Data can now be edited and added.
+**Data can now be edited and added.**
 
  ![](images/Tutorial_OData_V4_Step_6_baf7417.png "Data can now be edited and added.") 
 

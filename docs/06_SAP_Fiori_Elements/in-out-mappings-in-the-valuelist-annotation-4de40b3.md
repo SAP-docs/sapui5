@@ -179,7 +179,7 @@ The value help for these dimensions display values present in the main entity se
 
 Consider the following table in which all of the entity sets refer to the same business object using different dimension names.
 
-<a name="loio4de40b31324e4876a8421f6f642e0140__table_cl1_ndh_yx"/>
+****
 
 
 <table>

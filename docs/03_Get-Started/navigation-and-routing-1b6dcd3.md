@@ -26,7 +26,7 @@ We will create a simple app displaying the data of a company’s employees to sh
 
    
   
-<a name="loio1b6dcd39a6a74f528b27ddb22f15af0d__fig_uzp_dcp_ls"/>Page flow of the final app
+**Page flow of the final app**
 
  ![](images/Tutorial_Navigation_and_Routing_Screen_Flow_92cdce7.png "Page flow of the final app") 
 

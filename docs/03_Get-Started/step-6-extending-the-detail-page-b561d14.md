@@ -10,7 +10,7 @@ In this step, we will extend the detail page of our app to show more information
 
    
   
-<a name="loiob561d146f9114b029bd60fa26df09c6b__fig_z3h_cty_c5"/>Detail page with more product information
+**Detail page with more product information**
 
  ![](images/Tutorial_Worklist_Step_6_Preview_49780e4.png "Detail page with more product information") 
 

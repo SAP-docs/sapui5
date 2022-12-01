@@ -371,7 +371,7 @@ You define side effects either in the \*`MPC_EXT` class or in the local annotati
 >     >     <Annotation Term="com.sap.vocabularies.Common.v1.SideEffects" Qualifier="<Qualifier Name (Optional)>">
 >     >         <PropertyValue Property="SourceProperties">
 >     >             <Collection>
->     >                 <PropertyPath><1:1 Associated Navigation Property Name>/<Property Name></PropertyPath>
+>     >                 <PropertyPath><1:1 Associated Navigation Property Name.Ex:to_Rating/Rating>/<Property Name></PropertyPath>
 >     >             </Collection>
 >     >         </PropertyValue>
 >     >         <PropertyValue Property="TargetProperties">

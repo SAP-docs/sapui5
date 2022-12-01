@@ -13,7 +13,7 @@ You can select from several block tags to determine if and how the JSDoc documen
 
 The following table gives an overview over the available tags:
 
-<a name="loiob0d5fe2f1b0b497cbd67cd5a1d35fa4c__table_pbq_1lj_1nb"/>Tags for Visibility
+**Tags for Visibility**
 
 
 <table>

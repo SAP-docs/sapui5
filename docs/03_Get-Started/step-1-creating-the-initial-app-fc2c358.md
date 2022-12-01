@@ -12,7 +12,7 @@ In this step, we set up the initial app.
 
    
   
-<a name="loiofc2c35880ccf4282a6baf8ab861bc10e__fig_r1j_pst_mr"/>The worklist app
+**The worklist app**
 
  ![](images/Tutorial_Worklist_Step_01_Preview_60e42c8.png "The worklist app") 
 
@@ -39,7 +39,7 @@ With the downloaded code from the Demo Kit, you have an initial app structure wi
 
    
   
-<a name="loiofc2c35880ccf4282a6baf8ab861bc10e__fig_chm_4jp_ls"/>Folder structure of the initial project
+**Folder structure of the initial project**
 
  ![](images/Tutorial_Worklist_Step_01_Folders_7f6899e.png "Folder structure of the initial project") 
 

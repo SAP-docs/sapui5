@@ -20,7 +20,7 @@ You can influence the maximum number of visible lines by setting the `maxLines` 
 
 The Text control supports the rendering of new lines and the preservation of whitespace and tabs. Depending on whether you are using JavaScript or XML, or data binding, you need to consider specific aspects related to the definition of new lines and tabs.
 
-<a name="loiof94deb45de184a3a87850b75d610d9c0__table_mdn_gnp_tdb"/>sap.m.Text: New lines and tabs definition in the different use cases
+**sap.m.Text: New lines and tabs definition in the different use cases**
 
 
 <table>

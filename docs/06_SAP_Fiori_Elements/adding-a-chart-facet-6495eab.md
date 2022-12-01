@@ -16,7 +16,7 @@ To add a chart facet, use the `UI.Facet` term and include the `UI.ReferenceFacet
 
    
   
-<a name="loio6495eab00f5a459b893c3cc83b763b20__fig_epp_pd5_vv"/>Chart in Object Page
+**Chart in Object Page**
 
  ![](images/ObjectPage_SmartChart_69b1977.png "Chart in Object Page") 
 
@@ -32,7 +32,7 @@ The object page does not support the `UI.Chart` with qualifier \(see example bel
 
    
   
-<a name="loio6495eab00f5a459b893c3cc83b763b20__fig_dcw_pgx_kx"/>Navigation Property
+**Navigation Property**
 
  ![](images/Chart_Limitation_02debb6.png "Navigation Property") 
 

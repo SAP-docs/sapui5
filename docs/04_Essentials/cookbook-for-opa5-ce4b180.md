@@ -138,7 +138,7 @@ iShouldSeeMessageToastAppearance: function () {
 
 There are OPA5 rules that limit the ways you can use busy controls. Some OPA5 features prevent you from locating controls while they are busy. For example, actions require that the control is interactable and therefore not busy and `autoWait` ensures that all controls on the page are interactable. You can't test a control in its busy state when these features are enabled. You can always work with controls that are not busy as OPA5 either waits for them to become interactable \(and not busy\) or enforces no restrictions.
 
-<a name="loioce4b180d97064ad088a901b53ed48b21__table_p4x_bhr_p2b"/>The following table is a cheatsheet with the values for each OPA5 rule and the outcome for busy control testing:
+**The following table is a cheatsheet with the values for each OPA5 rule and the outcome for busy control testing:**
 
 
 <table>
