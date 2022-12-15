@@ -127,7 +127,7 @@ Add custom parameters for intent-based navigation to the target application.
         ```
         "extends": {
                 "extensions": {
-                        "sap.ui.controller.Extensions": {
+                        "sap.ui.controllerExtensions": {
                                 "sap.ovp.app.Main": {
                                                 "controllerName": "my_app.ext.controller.OverViewPageExt"
                                 }

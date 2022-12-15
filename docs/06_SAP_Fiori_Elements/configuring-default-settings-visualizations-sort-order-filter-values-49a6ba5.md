@@ -578,7 +578,7 @@ SAP Fiori elements uses the `UI.LineItem` annotation and the `UI.Chart` annotati
 
 -   For the list report, the `UI.Chart` annotation is only applicable when you use it within a multiple view scenario.
 
--   For the analytical list page, the `UI.Chart` is only supported for the chart in the main content area. You cannot use it within a multiple view scenario.
+-   For the analytical list page, the `UI.Chart` is only supported for the chart in the main content area. You can't use it within a multiple view scenario.
 
 
 For more information, see [Defining Multiple Views on a List Report Table - Multiple Table Mode](defining-multiple-views-on-a-list-report-table-multiple-table-mode-37aeed7.md) and [Defining Multiple Views on a List Report with Different Entity Sets and Table Settings](defining-multiple-views-on-a-list-report-with-different-entity-sets-and-table-settings-b6b59e4.md).
@@ -587,9 +587,9 @@ For more information, see [Defining Multiple Views on a List Report Table - Mult
 
 <a name="loio49a6ba5b8d6946208322a9f7e16837c2__section_mzt_mcw_sqb"/>
 
-## Configuring the Default Visualization and Sort Order
+## Configuring the Default Visualization
 
-To configure the default visualization and sort order, the `UI.SelectionPresentationVariant` must be defined against the main entity set.
+To configure the default visualization, the `UI.SelectionPresentationVariant` must be defined against the main entity set.
 
 Application developers can provide the path to the `UI.SelectionPresentationVariant` via the manifest.
 
@@ -605,9 +605,9 @@ SAP Fiori elements then checks in the annotation for the `UI.SelectionPresentati
 -   If a `UI.SelectionPresentationVariant` is **not** found, SAP Fiori elements raises an error and stops loading the application so that the application developer can ensure the correct annotations.
 
 
-If the application developer has not explicitly specified the `UI.SelectionPresentationVariant` to be used via the manifest entry, SAP Fiori elements looks for the default \(unqualified\) `UI.SelectionPresentationVariant` in the annotation. This can lead to the following situations:
+If the application developer hasn't explicitly specified the `UI.SelectionPresentationVariant` to be used via the manifest entry, SAP Fiori elements looks for the default \(unqualified\) `UI.SelectionPresentationVariant` in the annotation. This can lead to the following situations:
 
--   If a default `UI.SelectionPresentationVariant` is found, SAP Fiori elements uses the associated presentation variant and selection variant to determine the filter bar defaults for the table or chart. If no presentation variant is found, SAP Fiori elements raises an error and stops loading the application so that the application developer can ensure the correct annotations.
+-   If a default `UI.SelectionPresentationVariant` is found, SAP Fiori elements uses the associated presentation variant to determine the default visualization for the table or chart. If no presentation variant is found, SAP Fiori elements raises an error and stops loading the application so that the application developer can ensure the correct annotations.
 
 -   If a default `UI.SelectionPresentationVariant` is **not** found, SAP Fiori elements checks for the default presentation variant \(unqualified presentation variant\) and default selection variant \(unqualified selection variant\).
 
@@ -621,6 +621,9 @@ If the application developer has not explicitly specified the `UI.SelectionPrese
 
 
 
+
+> ### Restriction:  
+> In SAP Fiori elements for OData V4, the information provided in the section above isn't applicable to the object page, analytical list page \(ALP\), and charts in the list report.
 
 
 
@@ -714,7 +717,7 @@ Application developers can also specify the `SelectionVariant` or `PresentationV
 > ```
 
 > ### Note:  
-> In the multiple view layout for tables, the `UI.SelectionPresentationVariant` in the manifest will have no effect if it has already been configured for the multiple view scenario. If no `UI.SelectionPresentationVariant` is configured, that is, if only a selection variant is configured, as is the case for the single table mode, or also for a tab within the multiple view layout for tables, then the presentation variant is calculated based on the logic described above.
+> In the multiple view layout for tables, the `UI.SelectionPresentationVariant` in the manifest has no effect if it has already been configured for the multiple view scenario. If no `UI.SelectionPresentationVariant` is configured, that is, if only a selection variant is configured, as is the case for the single table mode, or also for a tab within the multiple view layout for tables, then the presentation variant is calculated based on the logic described.
 > 
 > For more information, see [Multiple Views on List Report Tables](multiple-views-on-list-report-tables-a37df40.md).
 
@@ -722,7 +725,9 @@ For more information about the `UI.SelectionPresentationVariant`, see the versio
 
 
 
-### Default Sort Order: Ascending/Descending
+<a name="loio49a6ba5b8d6946208322a9f7e16837c2__section_jvb_hvt_hvb"/>
+
+## Configuring the Default Sort Order
 
 You can define whether the default sort order for tables and charts is ascending or descending by using the `com.sap.vocabularies.UI.v1.PresentationVariant` annotation term and the `SortOrder` property.
 
@@ -822,7 +827,7 @@ For more information, see [Configuring Default Filter Values](configuring-defaul
 
 ## Additional Features in SAP Fiori Elements for OData V2
 
-Make the following setting in the `manifest.json` to specify the `SelectionPresentationVariant`, the `PresentationVariant` or the `SelectionVariant`:
+Make the following setting in the `manifest.json` to specify the `SelectionPresentationVariant`, the `PresentationVariant` or, the `SelectionVariant`:
 
 > ### Sample Code:  
 > ```

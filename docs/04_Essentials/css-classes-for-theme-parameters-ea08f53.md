@@ -17,11 +17,11 @@ HTML content like that might be created as part of the following:
 -   Plain static HTML or CSS content used in an application
 
 
-To resolve this problem, you can use CSS classes. There is a number of predefined CSS classes that are supplied with color values by LESS CSS parameters of the current theme. These classes can be used in custom HTML content and in custom controls. The names of the CSS classes are generic and derived from the respective theme parameter name. This makes it easier to use the classes, and the names created are not too long or conflict-prone.
+To resolve this problem, you can use CSS classes. There is a number of predefined CSS classes that are supplied with color values by LESS CSS parameters of the current theme. These classes can be used in custom HTML content and in custom controls. The names of the CSS classes are generic and mostly derived from the respective theme parameter name. This makes it easier to use the classes, and the names created are not too long or conflict-prone.
 
 
 
-The most straightforward example is the theme parameter `@sapUiText`. The theme parameter is mainly used for text colors, so the custom CSS rule sets the `color` property. Every parameter `sapUiXY` can be provided as a CSS class `sapThemeXY`. This suggests it is a theme color, and `sapTheme` is a new and reserved prefix for CSS classes.
+The most straightforward example is the theme parameter `@sapUiText`. The theme parameter is mainly used for text colors, so the custom CSS rule sets the `color` property.
 
 ```
    CSS

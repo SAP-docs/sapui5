@@ -286,7 +286,7 @@ If `RequiresContext` is true, then the button is disabled until a selection is m
 > 
 > ```
 > {    
->     semanticObject: ‘EPMProduct’,
+>     semanticObject: 'EPMProduct',
 >     semanticObjectAction: 'manage_st',
 >     label: 'IBNWithContext',
 >     requiresContext: true,

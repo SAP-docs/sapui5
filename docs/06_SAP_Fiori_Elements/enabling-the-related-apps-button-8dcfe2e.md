@@ -182,14 +182,7 @@ You can display multiple semantic objects under the *Related Apps* button in the
 >                         "relatedAppsSettings": {
 >                             "": {
 >                                 "semanticObject": "",
->                                 "semanticObjectAction": {
->                                     "0": {
->                                         "action": "STTASOWD20"
->                                     },
->                                     "1": {
->                                         "action": "trace"
->                                     }
->                                 }
+>                                 "semanticObjectAction": {}}
 >                             },
 >                             "EPMProduct": {
 >                                 "semanticObject": "EPMProduct"
@@ -217,9 +210,11 @@ You can display multiple semantic objects under the *Related Apps* button in the
 
 You must ensure that you define the same semantic object list object-key and there corresponding `semanticObject` value.
 
-In the mentioned code sample for `“semanticObject” : "EPMProduct"`, `semanticObjectAction` is not defined. In this case, all the `semanticObjectAction` excluding the ones with `SemanticObjectUnavailableActions` annotation are displayed in the related apps list.
+In the code sample for `"semanticObject" : "EPMProduct"`, `semanticObjectAction` is not defined. In this case, all the `semanticObjectAction` excluding the ones with `SemanticObjectUnavailableActions` annotation are displayed in the related apps list.
 
 If `semanticObjectAction` list is defined in the manifest as shown for `"semanticObject": "STTA_WD20"`, then only the ones defined in the list are shown in the related apps. In this case, `SemanticObjectUnavailableActions` annotation is not considered.
+
+If the `semanticObjectAction` list is defined in the manifest as an empty object such as `"semanticObjectAction":{}` provided in the sample code, then no action from the semantic object of the current application is considered.
 
 
 

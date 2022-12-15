@@ -70,14 +70,15 @@ The `ResourceModel` required for binding these texts is created during view inst
 2.  To bind this resource bundle content in XML views, insert the following code:
 
     ```xml
-    <core:View resourceBundleName="myBundle"
-               resourceBundleAlias="i18n" 
-               controllerName="sap.hcm.Address" xmlns="sap.m" xmlns:core="sap.ui.core"
-               xmlns:html="http://www.w3.org/1999/xhtml">
-       <Panel>
-          <Button text="{i18n>MY_TEXT}"/>
-       </Panel>
-    <core:View>
+    <mvc:View resourceBundleName="myBundle"
+        resourceBundleAlias="i18n" 
+        controllerName="sap.hcm.Address"
+        xmlns="sap.m"
+        xmlns:mvc="sap.ui.core.mvc">
+        <Panel>
+            <Button text="{i18n>MY_TEXT}"/>
+        </Panel>
+    <mvc:View>
     ```
 
 

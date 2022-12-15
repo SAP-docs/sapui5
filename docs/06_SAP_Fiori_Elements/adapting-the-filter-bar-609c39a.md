@@ -194,6 +194,9 @@ To include navigation properties for filtering you can directly define them with
 -   the single property `FullName` of the `Partner` association will be added to the filter adaptation \(unless it is marked as `Hidden` or `HiddenFilter`\)
 
 
+> ### Note:  
+> You can only define navigation properties with one level. Nested navigation properties aren't supported.
+
 
 
 ### Case Insensitive Filtering

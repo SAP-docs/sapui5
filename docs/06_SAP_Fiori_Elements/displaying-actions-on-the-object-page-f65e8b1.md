@@ -69,6 +69,12 @@ You can add criticality to an action button via annotations. For more informatio
 
 If an application has set the criticality for an action, that is, if app developers have defined semantic actions, these are automatically placed first. This means semantic actions are placed before generic actions \(like *Save* and *Edit*\) and in this case the generic actions are no longer automatically emphasized.
 
+
+
+### Changing the Order of Action Buttons Specified by an Application
+
+You can change the order of action buttons for both manifest-based actions and annotation-based actions. To do so, use `"position"` to define the placement of your action. For more information, see the *Additional Features in SAP Fiori elements for OData V4* section in [Adding Custom Actions Using Extension Points](adding-custom-actions-using-extension-points-7619517.md).
+
 **Related Information**  
 
 

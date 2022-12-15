@@ -6,11 +6,11 @@ In this tutorial, we showcase how to structure your SAPUI5 app using the layout 
 
 The app provides the following features:
 
--   An up-to-three-column layout based on the `sap.f.FlexibleColumnLayout` control. This layout has predefined layout types and defined routing between them that enables smooth navigation between the master-detail and master-detail-detail patterns of the app.
+-   An up-to-three-column layout based on the `sap.f.FlexibleColumnLayout` control. This layout has predefined layout types and defined routing between them that enables smooth navigation between the list-detail and list-detail-detail patterns of the app.
 
--   A master page based on the `sap.f.DynamicPage` control that lists the available products and has filtering and sorting options.
+-   A list page based on the `sap.f.DynamicPage` control that lists the available products and has filtering and sorting options.
 
--   A detail page based on the `sap.uxap.ObjectPageLayout` control containing detailed information about the selected object from the master page:
+-   A detail page based on the `sap.uxap.ObjectPageLayout` control containing detailed information about the selected object from the list page:
 
     -   It implements the dynamic header of the `ObjectPageLayout` control.
 
@@ -36,11 +36,11 @@ The app provides the following features:
 
    
   
-**Master-detail-detail pattern with sap.f.FlexibleColumnLayout, sap.f.DynamicPage and sap.uxap.ObjectPageLayout**
+**list-detail-detail pattern with sap.f.FlexibleColumnLayout, sap.f.DynamicPage and sap.uxap.ObjectPageLayout**
 
- ![](images/With_Semantic_Helper_Fiori_2_0_Tutorial_fd98e0d.gif "Master-detail-detail pattern with
-					sap.f.FlexibleColumnLayout, sap.f.DynamicPage
-					and sap.uxap.ObjectPageLayout") 
+ ![](images/With_Semantic_Helper_Fiori_2_0_Tutorial_fd98e0d.gif "list-detail-detail pattern with sap.f.FlexibleColumnLayout,
+						sap.f.DynamicPage and
+						sap.uxap.ObjectPageLayout") 
 
 
 

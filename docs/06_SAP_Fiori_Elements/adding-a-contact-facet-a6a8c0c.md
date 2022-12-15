@@ -173,7 +173,7 @@ The Contact annotation looks like this:
 >   LastName,
 > 
 >   @Semantics.address : { city: true }  
->   OrganizationRole,
+>   City,
 > 
 >   @Semantics.contact.photo: true
 >   EmployeePictureURL

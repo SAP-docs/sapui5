@@ -131,6 +131,1839 @@ When you have created your specific application component, for example in SAP We
 
 Texts from the *Generic Application Component* can't be replaced.
 
+Applications can choose to override any key that are mentioned in the following table. You can do so by using the custom i18n file approach.
+
+**Keys You Can Override**
+
+
+<table>
+<tr>
+<th valign="top">
+
+Key
+
+
+
+</th>
+<th valign="top">
+
+Default Text in SAP Fiori Elements
+
+
+
+</th>
+<th valign="top">
+
+Used In
+
+
+
+</th>
+</tr>
+<tr>
+<td valign="top" colspan="3">
+
+ **List Report Specific Key from `..>>ListReport>i18n`** 
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `CREATE_OBJECT` 
+
+
+
+</td>
+<td valign="top">
+
+Create
+
+
+
+</td>
+<td valign="top">
+
+Label for creating buttons in the list report.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `CREATE_DIALOG_TITLE` 
+
+
+
+</td>
+<td valign="top">
+
+New Object
+
+
+
+</td>
+<td valign="top">
+
+Title for the *Create* dialog if `createWithParameterDialog` is configured. Users can change titles to for example, “Create Order” or “Create Contract”.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `PARTIAL_UPDATE` 
+
+
+
+</td>
+<td valign="top">
+
+\{0\} of \{1\} objects updated ??
+
+
+
+</td>
+<td valign="top">
+
+Used in a message box that is displayed in the list report after a partial update, in case of mass edit.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `DIALOG_TITLE_NEW_ACTION_FOR_CREATE` 
+
+
+
+</td>
+<td valign="top">
+
+Create Object
+
+
+
+</td>
+<td valign="top">
+
+Title for the `NewAction` parameter dialog in the list report.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `DIALOG_ACTION_BUTTON_NEW_ACTION_FOR_CREATE` 
+
+
+
+</td>
+<td valign="top">
+
+Continue
+
+
+
+</td>
+<td valign="top">
+
+Label for a button within the `NewAction` parameter dialog in the list report.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="3">
+
+ **List Report Specific Key from `..>>lib>i18n`** 
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `ST_GENERIC_UNSAVED_CHANGES_CHECKBOX` 
+
+
+
+</td>
+<td valign="top">
+
+Also delete objects with unsaved changes.
+
+
+
+</td>
+<td valign="top">
+
+This message is displayed in a delete confirmation dialog when a user select multiple objects, out of which few have unsaved changes from other users. This confirmation dialog offers a check box to include or exclude the objects with unsaved changes from other users.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `ST_GENERIC_DELETE_SELECTED_PLURAL` 
+
+
+
+</td>
+<td valign="top">
+
+Delete the selected objects?
+
+
+
+</td>
+<td valign="top">
+
+Text displayed within the delete confirmation dialog that comes up when a user selects all active or own draft objects from the list report.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `ST_GENERIC_DELETE_UNSAVED_CHANGES` 
+
+
+
+</td>
+<td valign="top">
+
+Another user edited this object without saving the changes\\: \\n\{1\} \\n\\nDelete anyway?
+
+
+
+</td>
+<td valign="top">
+
+Text displayed within the delete confirmation dialog that comes up when a user selects an object that include unsaved changes made by another user. The user can still delete the object.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `ST_GENERIC_DELETE_UNSAVED_CHANGES_PLURAL` 
+
+
+
+</td>
+<td valign="top">
+
+Other users have edited the selected objects without saving the changes. \\n\\nDelete them anyway?
+
+
+
+</td>
+<td valign="top">
+
+Text displayed within the delete confirmation dialog that comes up when a user selects more than one object that includes unsaved changes made by another user. The user can still delete the object.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `ST_GENERIC_DELETE_LOCKED` 
+
+
+
+</td>
+<td valign="top">
+
+This object cannot be deleted. It is currently locked by \{1\}
+
+
+
+</td>
+<td valign="top">
+
+Message text used in the confirmation message box when a user selects an object that is locked by another user.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `ST_GENERIC_NOT_DELETABLE` 
+
+
+
+</td>
+<td valign="top">
+
+This object cannot be deleted.
+
+
+
+</td>
+<td valign="top">
+
+Message text used in the confirmation message box when a user tries to delete an object that is non-deleteable.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `ST_GENERIC_DELETE_LOCKED_PLURAL` 
+
+
+
+</td>
+<td valign="top">
+
+The selected objects are currently locked by other users and cannot be deleted.
+
+
+
+</td>
+<td valign="top">
+
+Message text used in the confirmation message box when a user select multiple objects that are all locked by another user and tries to delete them.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `ST_GENERIC_DELETE_UNDELETABLE` 
+
+
+
+</td>
+<td valign="top">
+
+\{0\} of \{1\} objects cannot be deleted.
+
+
+
+</td>
+<td valign="top">
+
+Text displayed within the delete confirmation dialog when a user tries to delete the selected records, out of which some objects can’t be deleted.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `ST_GENERIC_CURRENTLY_LOCKED_PLURAL` 
+
+
+
+</td>
+<td valign="top">
+
+\{0\} of \{1\} objects are currently locked by other users and cannot be deleted.
+
+
+
+</td>
+<td valign="top">
+
+Text displayed within the delete confirmation dialog when some of the selected objects are locked by other users and can’t be deleted.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `ST_GENERIC_DELETE_REMAINING` 
+
+
+
+</td>
+<td valign="top">
+
+Do you still want to delete the remaining object?
+
+
+
+</td>
+<td valign="top">
+
+Text displayed within the confirmation dialog when a user select some objects that are either locked or cannot be deleted. However, one of the selections can be deleted.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `ST_GENERIC_DELETE_REMAINING_PLURAL` 
+
+
+
+</td>
+<td valign="top">
+
+Do you still want to delete the remaining \{0\} objects?
+
+
+
+</td>
+<td valign="top">
+
+Text displayed within the confirmation dialog when a user select some objects that are either locked or cannot be deleted. However, one of the selections can be deleted.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `ST_GENERIC_DELETE_REMAINING_UNSAVED_CHANGES` 
+
+
+
+</td>
+<td valign="top">
+
+The remaining object has unsaved changes. \\n\\nDo you still want to delete it?
+
+
+
+</td>
+<td valign="top">
+
+Text displayed within the confirmation dialog when a user select some objects that are either locked or cannot be deleted. However, one of these selections can be deleted but it includes unsaved changes made by another user.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `ST_GENERIC_DELETE_REMAINING_UNSAVED_CHANGES_PLURAL` 
+
+
+
+</td>
+<td valign="top">
+
+The remaining objects have unsaved changes by other users. \\n\\nDo you still want to delete them?
+
+
+
+</td>
+<td valign="top">
+
+Text displayed within the confirmation dialog when a user select some objects that are either locked or cannot be deleted. However, one of these selections can be deleted but it includes unsaved changes made by another user.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `ST_GENERIC_DELETE_SUCCESS_PLURAL` 
+
+
+
+</td>
+<td valign="top">
+
+Objects were deleted
+
+
+
+</td>
+<td valign="top">
+
+Message toast text when deletion of multiple object is successful.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `ST_GENERIC_DELETE_ERROR` 
+
+
+
+</td>
+<td valign="top">
+
+The selected object cannot be deleted.
+
+
+
+</td>
+<td valign="top">
+
+Message toast text when object can’t be deleted from backend.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="3">
+
+ **Key from `..>>ObjectPage>i18n`** 
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `DRAFT_LOCK_EXPIRED` 
+
+
+
+</td>
+<td valign="top">
+
+Another user edited this object without saving the changes\\:\\n\\n \{0\} \\n\\n If you take over, any changes will be lost.
+
+
+
+</td>
+<td valign="top">
+
+Text displayed within the confirmation dialog when a user clicks *Edit* on the object page that was locked and the lock expired.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `OBJECT_SAVED` 
+
+
+
+</td>
+<td valign="top">
+
+Your changes have been saved
+
+
+
+</td>
+<td valign="top">
+
+Message toast text when a user choses to save and the object gets saved successfully.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `ITEM_CREATED` 
+
+
+
+</td>
+<td valign="top">
+
+Item created
+
+
+
+</td>
+<td valign="top">
+
+Message toast text when a user successfully creates a sub object or an item.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `WAITING_SMARTTABLE` 
+
+
+
+</td>
+<td valign="top">
+
+Please wait while the data is loading...
+
+
+
+</td>
+<td valign="top">
+
+Appears in the samrt table within the object page when data is loading.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `OBJECT_NOT_MODIFIED` 
+
+
+
+</td>
+<td valign="top">
+
+You haven\\u2019t made any changes
+
+
+
+</td>
+<td valign="top">
+
+Message toast text when a user clicks on *Save* and the object has no unsaved changes.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `OBJECT_CREATED` 
+
+
+
+</td>
+<td valign="top">
+
+Object was created.
+
+
+
+</td>
+<td valign="top">
+
+Message toast text when an object is successfully created.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `DELETE_WITH_OBJECTINFO` 
+
+
+
+</td>
+<td valign="top">
+
+Delete this object \(\{1\} \{2\}\)?
+
+
+
+</td>
+<td valign="top">
+
+Text displayed within the delete confirmation dialog with both the title and description is available for the object and the app is open in the fixed column layout mode.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `DELETE_WITH_OBJECTTITLE` 
+
+
+
+</td>
+<td valign="top">
+
+Delete Object \{0\}?
+
+
+
+</td>
+<td valign="top">
+
+Text displayed within the delete confirmation dialog when the app is open in the full screen mode and a title is available for the object.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `SHOW_SIDE_CONTENT` 
+
+
+
+</td>
+<td valign="top">
+
+Show Details
+
+
+
+</td>
+<td valign="top">
+
+Used as a label to show the side content button when the side content is hidden.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `HIDE_SIDE_CONTENT` 
+
+
+
+</td>
+<td valign="top">
+
+Hide Details
+
+
+
+</td>
+<td valign="top">
+
+Used as a label to hide the side content button when the side content is being displayed.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `DELETE_SELECTED_ITEM` 
+
+
+
+</td>
+<td valign="top">
+
+Delete Item?
+
+
+
+</td>
+<td valign="top">
+
+Text displayed within the delete confirmation dialog when a user select items \(that don't have a title and description defined in the sub object page\) from smart table in the object page, and press delete on the smart table toolbar.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `DELETE_SELECTED_ITEM_WITH_OBJECTINFO` 
+
+
+
+</td>
+<td valign="top">
+
+Delete Item \{1\} \(\{2\}\)?
+
+
+
+</td>
+<td valign="top">
+
+Text displayed within the delete confirmation dialog when the title and description is available and the sub object page is open in the flexible column layout mode.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `DELETE_SELECTED_ITEM_WITH_OBJECTTITLE` 
+
+
+
+</td>
+<td valign="top">
+
+Delete Item \{0\}?
+
+
+
+</td>
+<td valign="top">
+
+Text displayed within the delete confirmation dialog when a user select items in the object page smart table in the full screen mode, and the title is defined.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `DELETE_SELECTED_ITEMS` 
+
+
+
+</td>
+<td valign="top">
+
+Delete the selected items?
+
+
+
+</td>
+<td valign="top">
+
+Text displayed within the delete confirmation dialog when a user select items in the object page smart table and choose to delete it.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `DELETE_SUCCESS_PLURAL_WITH_COUNT` 
+
+
+
+</td>
+<td valign="top">
+
+\{0\} items have been deleted.
+
+
+
+</td>
+<td valign="top">
+
+Message toast text when a user successfully deletes multiple items from the object page smart table.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `DELETE_SUCCESS_WITH_COUNT` 
+
+
+
+</td>
+<td valign="top">
+
+\{0\} item has been deleted.
+
+
+
+</td>
+<td valign="top">
+
+Message toast text when a user successfully deletes a single item from the object page smart table.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `DELETE_ERROR_PLURAL_WITH_COUNT` 
+
+
+
+</td>
+<td valign="top">
+
+\{0\} items cannot been deleted.
+
+
+
+</td>
+<td valign="top">
+
+Text displayed when a few of the selected items cannot be deleted.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `DELETE_ERROR_WITH_COUNT` 
+
+
+
+</td>
+<td valign="top">
+
+\{0\} item cannot been deleted.
+
+
+
+</td>
+<td valign="top">
+
+Text displayed when a selected item cannot be deleted.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `DELETE_ERROR` 
+
+
+
+</td>
+<td valign="top">
+
+The selected item cannot be deleted.
+
+
+
+</td>
+<td valign="top">
+
+Text displayed when only one record was selected for deletion and the operation failed to excute.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `ITEM_DELETED` 
+
+
+
+</td>
+<td valign="top">
+
+Item deleted
+
+
+
+</td>
+<td valign="top">
+
+Message toast text when an item is successfully deleted from the object page table.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `DELETE_UNDELETABLE_ITEMS` 
+
+
+
+</td>
+<td valign="top">
+
+\{0\} of \{1\} items cannot be deleted.
+
+
+
+</td>
+<td valign="top">
+
+Message text used in the confirmation message box when a user has selected multiple items and a few cannot be deleted.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `DELETE_UNDELETABLE_ITEM` 
+
+
+
+</td>
+<td valign="top">
+
+This item cannot be deleted.
+
+
+
+</td>
+<td valign="top">
+
+Message text used in the confirmation message box when a user selects a signle item that cannot be deleted.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `ENTER_MANDATORY` 
+
+
+
+</td>
+<td valign="top">
+
+Enter a value for field: \{0\}
+
+
+
+</td>
+<td valign="top">
+
+Text displayed in a message popover when a user has configured the `InsertRestriction` annotation to make certain fields mandatory. This is applicable only in case of non-draft scenarios.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `ST_GENERIC_DRAFT_LOCKED_BY_USER` 
+
+
+
+</td>
+<td valign="top">
+
+Another user edited this object without saving the changes\\: \\n\{1\} \\nIf you take over, any changes will be lost.
+
+
+
+</td>
+<td valign="top">
+
+Text displayed within the confirmation dialog when a user selects an obejct to edit that is locked by another user.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="3">
+
+ **Object Page and Sub Object Page Keys from`..>>lib>i18n`** 
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `ST_GENERIC_DELETE_SELECTED` 
+
+
+
+</td>
+<td valign="top">
+
+Delete this object?
+
+
+
+</td>
+<td valign="top">
+
+Text displayed within the delete confirmation dialog when a user deletes an object \(without an object title\) by clicking *Delete* on the object page header.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `DELETE_WITH_OBJECTTITLE` 
+
+
+
+</td>
+<td valign="top">
+
+Delete Object \{0\}?
+
+
+
+</td>
+<td valign="top">
+
+Text displayed within the delete confirmation dialog when a user deletes an object that has a defined object title.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `ST_GENERIC_OBJECT_DELETED` 
+
+
+
+</td>
+<td valign="top">
+
+Object was deleted.
+
+
+
+</td>
+<td valign="top">
+
+Message toast text upon the successful deletion of the object.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="3">
+
+ **List Report and Object Page Keys from `..>>lib>i18n`** 
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `ST_GENERIC_LOCKED_OBJECT_POPOVER_TEXT` 
+
+
+
+</td>
+<td valign="top">
+
+You cannot edit this object at the moment \\nIt is locked by \{0\}
+
+
+
+</td>
+<td valign="top">
+
+Text displayed when a user tries editing an object that is locked by another user.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `ST_GENERIC_UNSAVED_OBJECT_POPOVER_TEXT` 
+
+
+
+</td>
+<td valign="top">
+
+This object has unsaved changes by \{0\}.
+
+
+
+</td>
+<td valign="top">
+
+When an object has unsaved change from another user, it is indicated by an icon shown in the key field column of the list report, and next to the title in the object page. When the user clicks on the icon, a pop up appears that is shown in this text.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `NEW_OBJECT` 
+
+
+
+</td>
+<td valign="top">
+
+Unnamed Object
+
+
+
+</td>
+<td valign="top">
+
+This is the header title for a newly created object.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `NOITEMS_SMARTTABLE` 
+
+
+
+</td>
+<td valign="top">
+
+No items available.
+
+
+
+</td>
+<td valign="top">
+
+No data text is displayed when there is no data available in the smart table of the object page.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `NOITEMS_SMARTTABLE_WITH_FILTER` 
+
+
+
+</td>
+<td valign="top">
+
+No items available. Try adjusting the search or filter parameters.
+
+
+
+</td>
+<td valign="top">
+
+Text displayed when there is no data available in the smart table of the object page after applying filter.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `NOITEMS_SMARTTABLE_WITH_FILTER_FOR_SEGMENTEDBUTTON` 
+
+
+
+</td>
+<td valign="top">
+
+There are no items for the selected filter criteria and table view.
+
+
+
+</td>
+<td valign="top">
+
+Text displayed when there is no data available in the smart table of the object page with segmented button.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `NOITEMS_SMARTCHART` 
+
+
+
+</td>
+<td valign="top">
+
+No data found.
+
+
+
+</td>
+<td valign="top">
+
+Text displayed in the object page chart when no data is found after the filters are applied.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `NOITEMS_LR_SMARTCHART` 
+
+
+
+</td>
+<td valign="top">
+
+There is no data for the selected filter criteria and chart view.
+
+
+
+</td>
+<td valign="top">
+
+Text displayed in the list report page chart when no data is found.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `NOITEMS_SMARTCHART_WITH_FILTER` 
+
+
+
+</td>
+<td valign="top">
+
+No data found. Try adjusting the filter parameters.
+
+
+
+</td>
+<td valign="top">
+
+Text displayed in the object page chart when no data is found after the filters are applied.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `SMARTCHART_INITIAL_NODATA` 
+
+
+
+</td>
+<td valign="top">
+
+To start, set the relevant filters.
+
+
+
+</td>
+<td valign="top">
+
+Text displayed in the list report page chart when the data load is triggered.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `NOITEMS_LR_SMARTTABLE` 
+
+
+
+</td>
+<td valign="top">
+
+No data found.
+
+
+
+</td>
+<td valign="top">
+
+Text displayed in the list report page chart when no data is found after clicking *Go* without setting any filters.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `NOITEMS_LR_SMARTTABLE_WITH_FILTER` 
+
+
+
+</td>
+<td valign="top">
+
+No data found. Try adjusting the search or filter criteria.
+
+
+
+</td>
+<td valign="top">
+
+Text displayed in the list report page table when no data is found after applying filters.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `NOITEMS_MULTIVIEW_LR_SMARTTABLE_WITH_FILTER` 
+
+
+
+</td>
+<td valign="top">
+
+There is no data for the selected filter criteria and table view.
+
+
+
+</td>
+<td valign="top">
+
+Text displayed in the list report page table when no data is found for a view in case of multi view application.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `ST_GENERIC_DELETE_WITH_WARNING_SUGGESTION_PLURAL` 
+
+
+
+</td>
+<td valign="top">
+
+Hint: To ignore warnings, delete the objects individually.
+
+
+
+</td>
+<td valign="top">
+
+Warning message text on the delete popover when a user tries to delete some of the selected objects in case of multi select delete.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `ST_GENERIC_NOT_DELETED_RECORDS` 
+
+
+
+</td>
+<td valign="top">
+
+\{0\} of \{1\} objects can't be deleted.
+
+
+
+</td>
+<td valign="top">
+
+Warning message text on the delete popover informing the user that some of the objects are not deletable as the deletion has failed at backend in case of multi select delete.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `ST_GENERIC_DELETE_ERROR_PLURAL` 
+
+
+
+</td>
+<td valign="top">
+
+Some of the objects you selected can't be deleted. Try deleting the objects individually instead.
+
+
+
+</td>
+<td valign="top">
+
+Warning message text on the delete popover in case of multi select delete, informing the user that the deletion has failed at backend for some of the objects and the complete batch is failed as a result of a generic error.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `ST_GENERIC_NOT_PROCESSED_RECORDS` 
+
+
+
+</td>
+<td valign="top">
+
+\{0\} of \{1\} objects can't be processed.
+
+
+
+</td>
+<td valign="top">
+
+Message text displayed in case of multi select function import actions, if the action fails at backend.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `ST_GENERIC_NOT_PROCESSED_RECORDS_PLURAL` 
+
+
+
+</td>
+<td valign="top">
+
+The selected objects can't be processed.
+
+
+
+</td>
+<td valign="top">
+
+Message text displayed in case of multi select function import actions, if the action fails at backend for some of the selected objects and as a result, the complete batch has failed.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `ST_GENERIC_ACTION_WITH_WARNING_SUGGESTION_PLURAL` 
+
+
+
+</td>
+<td valign="top">
+
+Hint: To ignore warnings, process the objects individually.
+
+
+
+</td>
+<td valign="top">
+
+Message text displayed in case of multi select function import actions, if the action shows a warning for some of the selected objects and as a result, the complete batch has failed.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `MESSAGE_SINGLE_VALUE_L_FORM` 
+
+
+
+</td>
+<td valign="top">
+
+The filter \\"\{0\}\\" isn't relevant for the tab \\"\{1\}\\". Setting this filter has no effect on the results.
+
+
+
+</td>
+<td valign="top">
+
+Text displayed in the message strip above the smart table in the list report when a user set filters that are not relevant for the selected tab in a multi view application, on a desktop or a large screen device.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `MESSAGE_SINGLE_VALUE_S_FORM` 
+
+
+
+</td>
+<td valign="top">
+
+You can''t filter by \\"\{0\}\\" on the \\"\{1\}\\" tab.
+
+
+
+</td>
+<td valign="top">
+
+Text displayed in the message strip above the smart table in the list report when a user set filters that are not relevant for the selected tab in a multi view application, on a mobile or a small screen device.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `MESSAGE_MULTIPLE_VALUES_L_FORM` 
+
+
+
+</td>
+<td valign="top">
+
+Some of the filters aren't relevant for the tab \\"\{1\}\\" \(\{0\}\). Settings these filters has no effect on the results.
+
+
+
+</td>
+<td valign="top">
+
+Text displayed in the message strip above the smart table in the list report when a user select a filter that is not relevant for the selected tab in a multi view application, on a desktop or a large screen device.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `MESSAGE_MULTIPLE_VALUES_S_FORM` 
+
+
+
+</td>
+<td valign="top">
+
+You can't use the following filters on the \\"\{1\}\\" tab\\: \\"\{0\}\\"
+
+
+
+</td>
+<td valign="top">
+
+Text displayed in the message strip above the smart table in the list report when a user select a filter that is not relevant for the selected tab in a multi view application, on a mobile or a small screen device.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `ST_KEEP_DRAFT_MESSAGE_EDIT` 
+
+
+
+</td>
+<td valign="top">
+
+You\\u2019ve made changes to this object.\\nWhat would you like to do?
+
+
+
+</td>
+<td valign="top">
+
+Text displayed within the discard confirmation dialog when a user navigates away from edit draft that has unsaved changes.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `ST_KEEP_DRAFT_MESSAGE_CREATE` 
+
+
+
+</td>
+<td valign="top">
+
+You haven\\u2019t created this object yet.\\nWhat would you like to do?
+
+
+
+</td>
+<td valign="top">
+
+Text displayed within the discard confirmation dialog when a user navigates away from a new draft that has unsaved changes.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="3">
+
+ **Key from `..>>AnalyticalPage>i18n`** 
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `NODATA_SMARTCHART_ALP` 
+
+
+
+</td>
+<td valign="top">
+
+To start, set the relevant filters
+
+
+
+</td>
+<td valign="top">
+
+No data text is displayed for on load of the smart chart.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `NODATA_SMARTTABLE_ALP` 
+
+
+
+</td>
+<td valign="top">
+
+To start, set the relevant filters
+
+
+
+</td>
+<td valign="top">
+
+No data text is displayed for on load of the smart table.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `MESSAGE_MULTIPLE_VALUES_L_FORM` 
+
+
+
+</td>
+<td valign="top">
+
+Some of the filters aren''t relevant for the tab \\"\{1\}\\" \(\{0\}\). Settings these filters has no effect on the results.
+
+
+
+</td>
+<td valign="top">
+
+Text displayed in the message strip when a user select filters and a few of them are not relevant for the selected tab in a multi view application, on a desktop or a large screen device.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `MESSAGE_MULTIPLE_VALUES_S_FORM` 
+
+
+
+</td>
+<td valign="top">
+
+You can''t use the following filters on the \\"\{1\}\\" tab\\: \\"\{0\}\\"
+
+
+
+</td>
+<td valign="top">
+
+Text displayed in the message strip when a user select filters and a few of them are not relevant for the selected tab in a multi view application, on a mobile or a small screen device.
+
+
+
+</td>
+</tr>
+</table>
+
 > ### Caution:  
 > SAP Web IDE is no longer available via SAP Business Technology Platform trial accounts. Any references to SAP Web IDE in this documentation are only relevant for you if you have access to SAP Web IDE through a productive SAP BTP account. Please consider SAP Business Application Studio as an alternative. See [App Development Using SAP Business Application Studio](../05_Developing_Apps/app-development-using-sap-business-application-studio-6bbad66.md).
 
@@ -416,7 +2249,9 @@ Applications can choose to overwrite the default message with the concrete actio
 <tr>
 <td valign="top">
 
- `C_EDIT_FLOW_GENERIC_LOCKED_OBJECT_POPOVER_TEXT_OWNER_INFO` 
+`M_FIELD_RUNTIME_DRAFT_POPOVER_LOCKED_BY_KNOWN`
+
+\(deprecated key: `C_EDIT_FLOW_GENERIC_LOCKED_OBJECT_POPOVER_TEXT_OWNER_INFO`\)
 
 
 
@@ -432,35 +2267,7 @@ This object is currently being edited by \{0\}.
 
 Draft information text displayed to a user for an object that is already being edited by another user, provided that the information about the owner is available.
 
-
-
-</td>
-<td valign="top">
-
-Applications should overwrite the default text with the concrete object that is being edited.
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
- `C_EDIT_FLOW_GENERIC_LOCKED_OBJECT_POPOVER_TEXT_ADDITIONAL_USER` 
-
-
-
-</td>
-<td valign="top">
-
-This object is currently being edited by another user.
-
-
-
-</td>
-<td valign="top">
-
-Draft information text displayed to a user for an object that is already being edited by another user, when no information about the owner is available.
+Parameter: \{0\} = user who is editing the object
 
 
 
@@ -476,7 +2283,39 @@ Applications should overwrite the default text with the concrete object that is 
 <tr>
 <td valign="top">
 
- `C_EDIT_FLOW_LAST_CHANGE_USER_TEXT_OWNER_INFO` 
+deprecated key: `C_EDIT_FLOW_GENERIC_LOCKED_OBJECT_POPOVER_TEXT_ADDITIONAL_USER` 
+
+
+
+</td>
+<td valign="top">
+
+This key has been depreciated. The scenario no longer occurs.
+
+
+
+</td>
+<td valign="top">
+
+Draft information text displayed to a user for an object that is already being edited by another user, provided that the information about the owner isn't available.
+
+
+
+</td>
+<td valign="top">
+
+Applications should overwrite the default text with the concrete object that is being edited.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`M_FIELD_RUNTIME_DRAFT_POPOVER_UNSAVED_CHANGES_BY_KNOWN`
+
+\(deprecated key: `C_EDIT_FLOW_LAST_CHANGE_USER_TEXT_OWNER_INFO`\)
 
 
 
@@ -492,6 +2331,8 @@ This object has unsaved changes made by \{0\}.
 
 Information about the user who has made the unsaved changes or who is currently editing the draft, provided that the information about the user making the changes is available.
 
+Parameter: \{0\} = user who is editing the object
+
 
 
 </td>
@@ -506,7 +2347,9 @@ Applications should overwrite the default text with the concrete object that is 
 <tr>
 <td valign="top">
 
- `C_EDIT_FLOW_LAST_CHANGE_USER_TEXT_ADDITIONAL_USER` 
+`M_FIELD_RUNTIME_DRAFT_POPOVER_UNSAVED_CHANGES_BY_UNKNOWN`
+
+\(deprecated key: `C_EDIT_FLOW_LAST_CHANGE_USER_TEXT_ADDITIONAL_USER`\)
 
 
 
@@ -536,14 +2379,14 @@ Applications should overwrite the default text with the concrete object that is 
 <tr>
 <td valign="top">
 
- `C_COMMON_APPLY_ERROR` 
+deprecated key: `C_COMMON_APPLY_ERROR` 
 
 
 
 </td>
 <td valign="top">
 
-An error occurred while submitting the changes. Please navigate back to discard the changes or try to submit the changes again.
+This key has been deprecated. The regular message handling flow will be invoked in case of any errors.
 
 
 
@@ -779,7 +2622,7 @@ Applications should overwrite the default text with the concrete objects.
 </td>
 <td valign="top">
 
-Another user edited this object without saving the changes: \{0\}.
+The selected object has unsaved changes by \{0\}.
 
 Delete anyway?
 
@@ -815,7 +2658,7 @@ Applications should overwrite the default text with the concrete object.
 </td>
 <td valign="top">
 
-Other users have edited the selected objects without saving the changes.
+The selected objects have unsaved changes by other users.
 
 Delete anyway?
 
@@ -913,7 +2756,7 @@ Applications should overwrite the default text with the concrete object.
 </td>
 <td valign="top">
 
-1 out of \{0\} objects cannot be deleted.
+1 out of \{0\} selected objects has delete restrictions so it cannot be deleted.
 
 
 
@@ -947,7 +2790,7 @@ Applications should overwrite the default text with the concrete object.
 </td>
 <td valign="top">
 
-\{0\} out of \{1\} objects cannot be deleted.
+\{0\} out of \{1\} objects are currently locked so they cannot be deleted.
 
 
 
@@ -1049,7 +2892,7 @@ Applications should overwrite the default text with the concrete object.
 </td>
 <td valign="top">
 
-The remaining object has unsaved changes made by another user.
+The remaining object has unsaved changes made by \{0\}.
 
 Do you still want to delete it?
 
@@ -1117,7 +2960,7 @@ Applications should overwrite the default text with the concrete object.
 </td>
 <td valign="top">
 
-Also delete object with unsaved changes?
+Also delete objects with unsaved changes by \{0\}?
 
 
 
@@ -1149,7 +2992,7 @@ Applications should overwrite the default text with the concrete object.
 </td>
 <td valign="top">
 
-Also delete objects with unsaved changes?
+Also delete objects with unsaved changes by other users?
 
 
 
@@ -2152,6 +3995,156 @@ Text that is shown within the warning message box when some of the selected obje
 <td valign="top">
 
  
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `C_TRANSACTION_HELPER_CONFIRM_DELETE_WITH_ALL_REMAINING_NON_DELETABLE` 
+
+
+
+</td>
+<td valign="top">
+
+The remaining objects have delete restrictions so they cannot be deleted.
+
+
+
+</td>
+<td valign="top">
+
+Text to indicate that all of the remaining objects cannot be deleted. This text is usually appended to text from another key which would indicate why some of the selected records cannot be deleted.
+
+
+
+</td>
+<td valign="top">
+
+Applications should overwrite the default text with the concrete objects.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `C_TRANSACTION_HELPER_CONFIRM_DELETE_ONLY_DRAFT_OF_NON_DELETABLE_ACTIVE` 
+
+
+
+</td>
+<td valign="top">
+
+Delete associated draft?
+
+
+
+</td>
+<td valign="top">
+
+Text to confirm with the user if the associated own draft of the selected object should be deleted when the object is non-deletable.
+
+
+
+</td>
+<td valign="top">
+
+Applications should overwrite the default text with the concrete objects.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `C_TRANSACTION_HELPER_CONFIRM_DELETE_ONLY_DRAFTS_OF_NON_DELETABLE_ACTIVE` 
+
+
+
+</td>
+<td valign="top">
+
+Delete associated drafts?
+
+
+
+</td>
+<td valign="top">
+
+Text to confirm with the user if the associated own draft of the selected object should be deleted when the object is non-deletable.
+
+
+
+</td>
+<td valign="top">
+
+Applications should overwrite the default text with the concrete objects.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `C_TRANSACTION_HELPER_CONFIRM_DELETE_DRAFT_OF_NON_DELETABLE_ACTIVE` 
+
+
+
+</td>
+<td valign="top">
+
+Also delete own draft of the non-deletable object?
+
+
+
+</td>
+<td valign="top">
+
+Text to confirm with the user if their own draft associated with the selected objects should be deleted when all of the selected objects are non-deletable.
+
+
+
+</td>
+<td valign="top">
+
+Applications should overwrite the default text with the concrete objects.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `C_TRANSACTION_HELPER_CONFIRM_DELETE_DRAFTS_OF_NON_DELETABLE_ACTIVE` 
+
+
+
+</td>
+<td valign="top">
+
+Also delete own drafts of the non-deletable objects?
+
+
+
+</td>
+<td valign="top">
+
+Text to confirm with the user if the associated own draft of the selected object should be deleted when there are many objects from the selected objects that are non-deletable but have their own draft.
+
+
+
+</td>
+<td valign="top">
+
+Applications should overwrite the default text with the concrete objects.
 
 
 
