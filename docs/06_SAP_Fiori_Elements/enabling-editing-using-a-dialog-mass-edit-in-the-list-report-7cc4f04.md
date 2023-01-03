@@ -4,9 +4,6 @@
 
 You can edit a single object or multiple objects using a dialog in the list report page.
 
-> ### Note:  
-> This topic is currently only applicable to SAP Fiori elements for OData V2.
-
 When you select multiple objects, and use mass edit dialog, the values entered are applied for all objects.
 
 When `multiEdit` is enabled, by default the dialog displays editable fields corresponding to columns that are currently displayed in the table. You can change the columns with table personalization. To enable, set the `multiEdit` property to `true` in the `manifest.json` file. When `multiEdit` is enabled, by default the dialog displays editable fields corresponding to columns that are currently displayed in the table. You can change the columns with table personalization.
