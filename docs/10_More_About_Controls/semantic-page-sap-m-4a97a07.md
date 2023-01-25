@@ -208,26 +208,26 @@ The `DetailPage` usually displays extended information for the item that was sel
                             navButtonPress="onNavButtonPress">
 
                           <semantic:customHeaderContent>
-                   <!—custom header controls go here -->
+                   <!-- custom header controls go here -->
                   <Button text="CustomHeaderBtn" press="onHeaderBtnPress"/>
                </semantic:customHeaderContent>
 
 
                <semantic:content>
-                   <!—custom page content goes here -->
+                   <!-- custom page content goes here -->
                   <semantic:AddAction press="onSemanticButtonPress"/>
                </semantic:content>
 
 
                           <semantic:customFooterContent>
-                   <!—custom footer controls go here -->
+                   <!-- custom footer controls go here -->
                   <Button text="CustomFooterBtn" press="onFooterBtnPress"/>
                   <OverflowToolbarButton icon="sap-icon://settings" text="Settings" press="onSettingsPress"/>
                </semantic:customFooterContent>
 
 
                           <semantic:customShareMenuContent>
-                   <!—custom share-menu controls go here -->
+                   <!-- custom share-menu controls go here -->
                   <Button text="CustomShareMenuBtn" press="onShareMenuBtnPress"/>
                </semantic: customShareMenuContent >
 
