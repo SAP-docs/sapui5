@@ -102,7 +102,7 @@ In some cases, you may need to display messages, even though no asynchronous ope
 >                         message: "Server says hello", 
 >                         target: "", 
 >                         persistent: true, 
->                         type: sap.ui.core.MessageType.Success 
+>                         type: sap.ui.core.MessageType.Success, 
 >                         code: "123" 
 >                      }) 
 >                   ); 
