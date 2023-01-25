@@ -20,7 +20,7 @@ The table containing additional columns can look like this:
 
    
   
-<a name="loiob903da5f037244629aa6462af2eb32ec__fig_pts_yvc_sz"/>Custom columns in tree table in the list report
+**Custom columns in tree table in the list report**
 
  ![](images/Adding_Columns_to_a_Tree_Table_in_the_List_Report_24fb6d5.png "Custom columns in tree table in the list report") 
 

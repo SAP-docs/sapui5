@@ -6,7 +6,7 @@ To define the line items of a table, use `com.sap.vocabularies.UI.v1.LineItem` a
 
    
   
-<a name="loiof0e1e1743bef4f519c34025ad4351f77__fig_irb_m5w_pv"/>List Report: LineItem of Root EntitySet
+**List Report: LineItem of Root EntitySet**
 
  ![](images/ListReport_LineItem_69a7c44.png "List Report: LineItem of Root EntitySet") 
 

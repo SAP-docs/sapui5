@@ -14,7 +14,7 @@ To enable the search function, `sap:searchable` must be set to `true` for the ro
 
   
   
-<a name="loio3cdebeebb04b4205908140242c9d6817__fig_rgp_mjh_b5"/>List Report: Search
+**List Report: Search**
 
  
 

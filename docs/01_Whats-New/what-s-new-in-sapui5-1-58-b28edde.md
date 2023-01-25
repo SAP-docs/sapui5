@@ -315,7 +315,7 @@ We have updated our recommendations for QUnit and OPA tests in the *Walkthrough*
 
 We have updated our *Master-Detail* template as well as our *Browse Orders* demo app. They now adhere to the SAP Fiori 2.0 guidelines and use the flexible column layout \(`sap.f.FlexibleColumnLayout`\) instead of the split app pattern. For more information, see:
 
--   [Developing Apps with SAP Fiori Tools](../03_Get-Started/developing-apps-with-sap-fiori-tools-a460a73.md)
+-   [Developing Apps with SAP Fiori Tools](../05_Developing_Apps/developing-apps-with-sap-fiori-tools-a460a73.md)
 
 -   [Browse Orders Demo App](https://ui5.sap.com/test-resources/sap/m/demokit/orderbrowser/webapp/test/mockServer.html)
 
@@ -331,6 +331,8 @@ Until now the *API Reference* tree displayed by default all APIs including depre
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.107](what-s-new-in-sapui5-1-107-b88b40e.md "With this release SAPUI5 is upgraded from version 1.106 to 1.107.")
 
 [What's New in SAPUI5 1.106](what-s-new-in-sapui5-1-106-c70bb90.md "With this release SAPUI5 is upgraded from version 1.105 to 1.106.")
 

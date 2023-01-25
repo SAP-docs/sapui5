@@ -6,7 +6,7 @@ You can display a maximum of four labels.
 
 The relationships between these four labels and their annotations are as follows:
 
-<a name="loio8664d4b534114cc1bf7c7a607840f98e__table_ajw_lmt_ny"/>Relationship of labels and their annotations
+**Relationship of labels and their annotations**
 
 
 <table>

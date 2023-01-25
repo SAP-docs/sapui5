@@ -12,7 +12,7 @@ We know that the OData V2 provider of this service implements a URL parameter th
 
    
   
-<a name="loio46c1ca4eb2804af6bfa371ad51c9b887__fig_lfn_3jq_st"/>Only the next three meet-ups are shown
+**Only the next three meet-ups are shown**
 
  ![](images/Tutorial_Mock_Server_Step_3_e65ccb2.png "Only the next three meet-ups are shown") 
 

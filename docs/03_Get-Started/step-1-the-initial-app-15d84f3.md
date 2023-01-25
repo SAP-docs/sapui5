@@ -14,7 +14,7 @@ The structure and data model created in this step will be used throughout this t
 
    
   
-<a name="loio15d84f36c0594cb2b3295aa1f55cb961__fig_tvr_vzd_gcb"/>Initial app with a simple table
+**Initial app with a simple table**
 
  ![](images/Tutorial_OData_V4_Step1_Preview_9d0182f.png "Initial app with a simple table") 
 
@@ -32,7 +32,7 @@ You should now have the following files:
 
   
   
-<a name="loio15d84f36c0594cb2b3295aa1f55cb961__fig_mdg_c12_gcb"/>Folder structure with downloaded files
+**Folder structure with downloaded files**
 
  ![](images/Tutorial_OData_V4_Step1_Folders_1406ea6.png "Folder structure with downloaded files") 
 

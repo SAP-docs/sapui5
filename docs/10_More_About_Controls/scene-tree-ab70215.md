@@ -46,7 +46,7 @@ When using the `sap.ui.vk.Viewer` control, the Scene Tree is enabled by default,
 
 The following table outlines what the Scene Tree button looks like in these different states:
 
-<a name="loioab7021546c72409d84eb97c6b1434e72__table_i33_mxm_25"/>Scene Tree button states
+**Scene Tree button states**
 
 
 <table>

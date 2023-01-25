@@ -10,7 +10,7 @@ We now add a search field to our bulletin board and define a filter that represe
 
    
   
-<a name="loio0c270b45dd904429ba634656e3a37a73__fig_k3l_yjj_sx"/>Search field
+**Search field**
 
  ![](images/Tutorial_Testing_Step_12_b012fdf.png "Search field") 
 

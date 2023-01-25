@@ -12,7 +12,7 @@ This system is the so-called back-end system that we will now simulate with an S
 
    
   
-<a name="loiobae9d90d2e9c4206889368f04edab508__fig_r1j_pst_mr"/>The list of invoices is now served by the Mock Server
+**The list of invoices is now served by the Mock Server**
 
  ![](images/SAPUI5_Walkthrough_Step_27_ccce9b3.png "The list of invoices is now served by the Mock Server") 
 
@@ -24,7 +24,7 @@ You can view and download all files at [Walkthrough - Step 26](https://ui5.sap.c
 
    
   
-<a name="loiobae9d90d2e9c4206889368f04edab508__fig_dhm_tbp_ns"/>Folder Structure for this Step
+**Folder Structure for this Step**
 
  ![](images/SAPUI5_Walkthrough_Step_27_2_7a5e2b0.png "Folder Structure for this Step") 
 
@@ -293,5 +293,5 @@ Try calling the app with the `index.html` file and the `mockServer.html` file to
 
 [API Reference: `sap.ui.core.util.MockServer`](https://ui5.sap.com/#/api/sap.ui.core.util.MockServer)
 
-[Create a Northwind Destination](create-a-northwind-destination-3a16c7a.md "Configure a destination in the SAP BTP Cockpit in order to bypass the same-origin policy of the browser.")
+[Create a Northwind Destination](../05_Developing_Apps/create-a-northwind-destination-3a16c7a.md "Configure a destination in the SAP BTP Cockpit in order to bypass the same-origin policy of the browser.")
 

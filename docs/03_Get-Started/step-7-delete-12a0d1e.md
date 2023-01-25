@@ -12,7 +12,7 @@ In this step, we make it possible to delete user data.
 
    
   
-<a name="loio12a0d1ef150a42ef81e9f07fe6407018__fig_m3r_hbx_4cb"/>A new *Delete User* button is added
+**A new Delete User button is added**
 
  ![](images/Tutorial_OData_V4_Step_7_32509f4.png "A new Delete User button is added") 
 

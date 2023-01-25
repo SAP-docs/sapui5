@@ -12,7 +12,7 @@ SAPUI5 supports multiple view types \(XML, HTML, JavaScript\). We choose XML as 
 
    
   
-<a name="loio1409791afe4747319a3b23a1e2fc7064__fig_r1j_pst_mr"/>The "Hello World" text is now displayed by a SAPUI5 control \(No visual changes to last step\)
+**The "Hello World" text is now displayed by a SAPUI5 control \(No visual changes to last step\)**
 
  ![](images/SAPUI5_Walkthrough_Step_04_c1d7d89.png "The "Hello World" text is now displayed by a SAPUI5 control (No
 					visual changes to last step)") 
@@ -77,7 +77,7 @@ We replace the instantiation of the `sap.m.Text` control by our new `App` XML vi
 > ### Note:  
 > From this step onwards, it is necessary to run the app on a Web server. We structure the app with multiple files that are loaded from the local file system. Without a Web server, this is prevented by the browser due to security reasons. If the error message "sap is not defined" appears in the developer tools of the browser, you need to check the `resource` path in the bootstrap.
 > 
-> Instead of installing a Web server you could use [UI5 Tooling](https://sap.github.io/ui5-tooling/) to start a local development server. See [Development Environment](development-environment-7bb04e0.md) for more information.
+> Instead of installing a Web server you could use [UI5 Tooling](https://sap.github.io/ui5-tooling/) to start a local development server. See [Development Environment](../05_Developing_Apps/development-environment-7bb04e0.md) for more information.
 
 
 

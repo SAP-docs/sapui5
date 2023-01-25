@@ -4,9 +4,9 @@
 
 The complete list of configuration options available in SAPUI5 can be found in the *API Reference* under `sap.ui.core.Configuration`. The following table shows a subset of the available configuration options.
 
-> ### Note:  
-> A subset of these configuration parameters can also be used as URL parameter \("URL:![YES](../02_Read-Me-First/images/Checked_Okay_3929e46.png)"\). The URL parameter name is composed of the name of the configuration option and the `sap-ui-` prefix, for example like `sap-ui-debug=true`.
-
+> ### Note:
+> - A subset of these configuration parameters can also be set through URL parameters \(when "by URL parameter" is ![YES](../02_Read-Me-First/images/Checked_Okay_3929e46.png)\). URL parameter names are composed of `sap-ui-` prefix together with the name of the configuration option, for example: `sap-ui-debug=true`.
+> - Some of the information provided here assumes that the `compatVersion` configuration option is set to the expected value; check it for more details.
 
 <table>
 <tr>
@@ -369,7 +369,7 @@ Type: `string`
 
 Default value: `complex`
 
-This configuration parameter defines whether the simple or the complex binding syntax is used. The parameter only affects bindings that are defined as strings, for example in the constructor of a control, or when specifying a binding in a declarative view, such as an XML view or HTML view.
+This configuration parameter defines whether the simple or the complex binding syntax is used. The parameter only affects bindings that are defined as strings, for example in the constructor of a control, or when specifying a binding in a declarative view, such as an XML view.
 
 
 

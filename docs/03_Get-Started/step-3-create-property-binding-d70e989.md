@@ -10,7 +10,7 @@ Although there is no visible difference, the text on the screen is now derived f
 
    
   
-<a name="loiod70e9894c09b4c27a98d4850d4e90f2c__fig_r1j_pst_mr"/>Screen with text derived from various sources \(No visual changes to last step\)
+**Screen with text derived from various sources \(No visual changes to last step\)**
 
  ![](images/Tutorial_Data_Binding_Step_1_6d391d5.png "Screen with text derived from various sources (No visual changes to last
 					step)") 

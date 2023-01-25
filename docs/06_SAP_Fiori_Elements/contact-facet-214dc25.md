@@ -210,7 +210,7 @@ In the example, the `UI.DataFieldForAnnotation` points to a contact annotation o
 
   
   
-<a name="loio214dc25fb47f42c6a0091dfe71e87950__fig_etg_hc3_nlb"/>Contact Facet![](images/Contact_Facet_d4576ed.png)
+**Contact Facet**
 
  
 

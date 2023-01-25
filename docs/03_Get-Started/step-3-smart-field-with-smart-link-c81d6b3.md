@@ -12,7 +12,7 @@ We will learn that a `SmartField` control in an XML view bound to an OData model
 
    
   
-<a name="loioc81d6b3382df43abb56e3468a2b5d22e__fig_r1j_pst_mr"/>Smart Field with Smart Link
+**Smart Field with Smart Link**
 
  ![](images/Smart_Controls_Tutorial_Step_01a_f74fd0e.png "Smart Field with Smart Link") 
 
@@ -20,7 +20,7 @@ When you choose the link, a dialog opens:
 
    
   
-<a name="loioc81d6b3382df43abb56e3468a2b5d22e__fig_w13_3jj_js"/>Dialog with Navigation Targets
+**Dialog with Navigation Targets**
 
  ![](images/Smart_Controls_Tutorial_Step_03b_fc22fa7.png "Dialog with Navigation Targets") 
 
@@ -28,7 +28,7 @@ When you choose *More Links*, a dialog opens where you can select the cross-appl
 
    
   
-<a name="loioc81d6b3382df43abb56e3468a2b5d22e__fig_dtg_2rh_dy"/>Link List
+**Link List**
 
  ![](images/Smart_Controls_Tutorial_Step_03c_408cba9.png "Link List") 
 
@@ -36,7 +36,7 @@ After your selection, the dialog looks like this:
 
    
   
-<a name="loioc81d6b3382df43abb56e3468a2b5d22e__fig_w1c_jm3_dy"/>Changed Links
+**Changed Links**
 
  ![](images/Smart_Controls_Tutorial_Step_03d_93c346e.png "Changed Links") 
 

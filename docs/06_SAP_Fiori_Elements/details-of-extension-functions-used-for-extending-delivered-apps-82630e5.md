@@ -7,7 +7,7 @@ In this document, you can find the details of all the extension functions that c
 > ### Note:  
 > This topic is currently only applicable to SAP Fiori elements for OData V2.
 
-<a name="loio82630e5a31b940b68ea1bd2ca44eeb9c__table_jyc_frt_fsb"/>Extension functions of list report, object page and overview page
+**Extension functions of list report, object page and overview page**
 
 
 <table>

@@ -18,7 +18,7 @@ We will build on this sample application in later steps of the 3D Viewer tutoria
 
    
   
-<a name="loio112d7b417e914a5a951abc6411d6f6c4__fig_mpz_5pw_15"/>Viewer application that consists solely of a Viewport
+**Viewer application that consists solely of a Viewport**
 
  ![](images/3D_Viewer_Tutorial_Step_03_-_Preview_2864ebc.png "Viewer application that consists solely of a Viewport") 
 

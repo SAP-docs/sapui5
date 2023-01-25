@@ -14,7 +14,7 @@ We would like to emphasize here that the response to the query input \(whether i
 
    
   
-<a name="loio3361e270c62c46c9893eaefb2966d62e__fig_r1j_pst_mr"/>Smart Field with Value Help
+**Smart Field with Value Help**
 
  ![](images/Smart_Controls_Tutorial_Step_02a_b78bc5d.png "Smart Field with Value Help") 
 
@@ -22,7 +22,7 @@ There is a small icon right next to the currency code. After pressing this icon 
 
    
   
-<a name="loio3361e270c62c46c9893eaefb2966d62e__fig_nfp_j53_js"/>Value Help
+**Value Help**
 
  ![](images/Smart_Controls_Tutorial_Step_02b_e9a36ea.jpg "Value Help") 
 

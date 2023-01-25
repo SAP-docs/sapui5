@@ -6,5 +6,4 @@ default: false
 no-reversed-links: true
 no-missing-space-atx: true
 no-multiple-space-atx: true
-titlecase-rule: true
 heading-increment-no-blockquote: true

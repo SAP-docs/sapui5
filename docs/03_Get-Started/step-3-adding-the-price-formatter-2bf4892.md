@@ -12,7 +12,7 @@ If the tests are passed, we can be sure that the formatter is formally correct b
 
    
   
-<a name="loio2bf4892527174264808076be32c1e1b0__fig_r1j_pst_mr"/>The price is now formatted with a semantic color
+**The price is now formatted with a semantic color**
 
  ![](images/Tutorial_Testing_Step_03_436054f.png "The price is now formatted with a semantic color") 
 

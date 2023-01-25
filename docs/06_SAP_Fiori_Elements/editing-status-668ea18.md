@@ -12,7 +12,7 @@ The editing status reflects the state of the object or entry in terms of the pro
 
 The list report allows users to view the editing status of the objects displayed. The editing status is calculated from the draft administrative data that is added in the back end.
 
-<a name="loio668ea184f58c4378a5394f54b4ae205d__table_rly_r5p_llb"/>Draft Administrative Data: Visualization
+**Draft Administrative Data: Visualization**
 
 
 <table>
@@ -118,7 +118,7 @@ A static filter attribute is available for all applications, which is added to t
 
 The drop-down values are as follows:
 
-<a name="loio668ea184f58c4378a5394f54b4ae205d__table_z3m_x5p_llb"/>Drop-Down Values
+**Drop-Down Values**
 
 
 <table>

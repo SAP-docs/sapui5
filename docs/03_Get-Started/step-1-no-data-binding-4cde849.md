@@ -10,7 +10,7 @@ In this step, we simply place some text on the screen using a standard `sap.m.Te
 
    
   
-<a name="loio4cde849dc18949b69bbe152a0aaa19c6__fig_r1j_pst_mr"/>Screen with text
+**Screen with text**
 
  ![](images/Tutorial_Data_Binding_Step_1_6d391d5.png "Screen with text") 
 

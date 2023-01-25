@@ -15,7 +15,7 @@ We haven’t thought about testing our interaction with the app yet, so in this 
 
    
   
-<a name="loio9bf4dce43b7943d0909cd6c58a933589__fig_r1j_pst_mr"/>An OPA test opens the "Hello" dialog from step 16
+**An OPA test opens the "Hello" dialog from step 16**
 
  ![](images/SAPUI5_Walkthrough_Step_29_108eccb.png "An OPA test opens the "Hello" dialog from step 16") 
 
@@ -27,7 +27,7 @@ You can view and download all files at [Walkthrough - Step 28](https://ui5.sap.c
 
    
   
-<a name="loio9bf4dce43b7943d0909cd6c58a933589__fig_rqr_hcp_ns"/>Folder Structure for this Step
+**Folder Structure for this Step**
 
  ![](images/SAPUI5_Walkthrough_Step_29_2_72406ab.png "Folder Structure for this Step") 
 
@@ -141,9 +141,7 @@ The implementation of the page object holds the helper functions we just called 
 
 In the actions section of the page object we define a function to click the "Hello" dialog button. This is done in OPA5 with a `waitFor` statement, it is basically a loop that checks for the conditions defined as parameters. If the conditions are met, the success callback is executed, if the test fails because the conditions have not been met, the text in the `errorMessage` property is displayed on the result page.
 
-We define a `waitFor` statement that checks for controls of type `sap.m.Button`. As soon as a button is found on the app page the success handler is executed and we use jQuery to trigger a `tap` event on the first button that we found. This should open the `HelloDialog` similar to clicking on the button manually.
-
-In the assertions section we define another `waitFor` statement that checks if a `sap.m.Dialog` control is existing in the DOM of the app. When the dialog has been found, the test is successful and we can immediately confirm by calling an `ok` statement with a meaningful message.
+In the assertions section we define a `waitFor` statement that checks if a `sap.m.Dialog` control is existing in the DOM of the app. When the dialog has been found, the test is successful and we can immediately confirm by calling an `ok` statement with a meaningful message.
 
 
 

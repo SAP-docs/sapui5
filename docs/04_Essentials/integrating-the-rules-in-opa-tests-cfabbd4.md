@@ -142,7 +142,7 @@ This special URL parameter could be used temporarily in cases when you extend an
 
        
       
-    <a name="loiocfabbd4dfc054936997d9d00916e1668__fig_wq5_lm1_k1b"/>OPA Test Results
+    **OPA Test Results**
 
      ![](images/Support_Assistant_OPA_report_2d0db16.png "OPA Test Results") 
 

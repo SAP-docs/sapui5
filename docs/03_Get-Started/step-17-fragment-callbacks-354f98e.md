@@ -10,7 +10,7 @@ Now that we have integrated the dialog, it's time to add some user interaction. 
 
    
   
-<a name="loio354f98ed2b514ba9960556333428d35e__fig_r1j_pst_mr"/>The dialog now has an "OK" button
+**The dialog now has an "OK" button**
 
  ![](images/SAPUI5_Walkthrough_Step_17_2a0aee6.png "The dialog now has an "OK" button") 
 

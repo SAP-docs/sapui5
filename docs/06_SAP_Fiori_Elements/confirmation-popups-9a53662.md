@@ -22,13 +22,13 @@ When you create or edit an object page in a draft-enabled application and decide
 
    
   
-<a name="loio9a536627a6a94de084b0605eb164d2c8__fig_asw_rsv_mtb"/>Create Mode
+**Create Mode**
 
  ![](images/Confirmation_Popup_for_Draft_Discard_-_Create_Mode_8e59d66.png "Create Mode") 
 
    
   
-<a name="loio9a536627a6a94de084b0605eb164d2c8__fig_zcx_wsv_mtb"/>Edit Mode
+**Edit Mode**
 
  ![](images/Confirmation_Popup_for_Discard_Draft_-_Edit_Mode_b43cd41.png "Edit Mode") 
 
@@ -211,9 +211,9 @@ Applications can turn off the discard draft confirmation popup for external navi
 > You must configure 412 messages from the back end as `transition` messages, not as `state` messages.
 
 > ### Restriction:  
-> Currently, the handling of 412 messages \("Precondition Failed" messages\) is not applied in the following scenarios:
+> The handling of 412 messages \("Precondition Failed" messages\) is not applied in the following scenarios:
 > 
-> -   if an action is triggered with multiple contexts \(for example, a user triggers a bound action on a table toolbar after having selected multiple objects in the table\)
+> -   if an action is triggered with multiple contexts \(for example, a user triggers a bound action on a table toolbar after having selected multiple objects in the table\) and the action is triggered with `UI.OperationGroupingType/ChangeSet`
 > 
 > -   when a record is deleted
 

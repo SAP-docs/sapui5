@@ -10,7 +10,7 @@ Expression binding allows you to display a value on the screen that has been cal
 
    
   
-<a name="loio5cff8d1c3fb84c5db7a00f2daca125af__fig_r1j_pst_mr"/>Values formatted
+**Values formatted**
 
  ![](images/Tutorial_Data_Binding_Step_14_b9fb758.png "Values formatted") 
 

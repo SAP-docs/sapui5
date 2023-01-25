@@ -8,7 +8,7 @@ The quick view can be displayed from the list report and the object page, as sho
 
    
   
-<a name="loio677fbde43a324f36aa9398b7f04e9896__fig_rzz_3xz_kmb"/>Displaying a Contact Quick View in a Table
+**Displaying a Contact Quick View in a Table**
 
  ![](images/Contact_Quick_View_47d4042.png "Displaying a Contact Quick View in a Table") 
 

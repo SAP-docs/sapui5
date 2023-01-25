@@ -65,7 +65,7 @@ oDateFormat.format(new Date()); //string in the same format as "Thu, Jan 29, 201
 
 The letters which can be included in this pattern are explained in the following table:
 
-<a name="loio91f2eba36f4d1014b6dd926db0e91070__table_i53_5gl_2y"/>Patterns
+**Patterns**
 
 
 <table>
@@ -127,7 +127,39 @@ year
 </td>
 <td valign="top">
 
-Same as `y`, but uses the ISO year-week calendar
+calendar year based on the calendar week
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `Q` 
+
+
+
+</td>
+<td valign="top">
+
+quarter number
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `q` 
+
+
+
+</td>
+<td valign="top">
+
+quarter number in stand-alone format
 
 
 
@@ -232,38 +264,6 @@ day number in month
 <tr>
 <td valign="top">
 
- `Q` 
-
-
-
-</td>
-<td valign="top">
-
-quarter number
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
- `q` 
-
-
-
-</td>
-<td valign="top">
-
-quarter number in stand-alone format
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
 \(`F`\)
 
 
@@ -336,6 +336,22 @@ day number of week
 <td valign="top">
 
 AM or PM
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `B` 
+
+
+
+</td>
+<td valign="top">
+
+flexible day period, e.g. "afternoon" or "midnight", for the time provided
 
 
 

@@ -104,7 +104,7 @@ The message popover consists of the following components:
 
        
       
-    <a name="loio239b1922758645e7b451e01ded7f56bc__fig_owt_2gb_llb"/>Message Popover: Chevron Navigation to Message Details![](images/Message_Popover_Chevron_Navigation_to_Details_671213a.png)
+    **Message Popover: Chevron Navigation to Message Details**
 
      
 
@@ -138,7 +138,7 @@ The message dialog consists of the following components:
 
        
       
-    <a name="loio239b1922758645e7b451e01ded7f56bc__fig_cv5_mhb_llb"/>Message Dialog: Chevron Navigation to Message Details![](images/Message_Dialog_Chevron_Navigation_to_Details_6971667.png)
+    **Message Dialog: Chevron Navigation to Message Details**
 
      
 

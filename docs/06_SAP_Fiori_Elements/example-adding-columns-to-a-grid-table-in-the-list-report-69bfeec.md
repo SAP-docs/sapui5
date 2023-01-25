@@ -20,7 +20,7 @@ The table containing additional columns can look like this:
 
    
   
-<a name="loio69bfeecb51154cf985a23b060d99cf40__fig_qdr_jqc_sz"/>Custom columns in a grid table in the list report
+**Custom columns in a grid table in the list report**
 
  ![](images/Adding_a_Column_to_a_Grid_Table_in_the_List_Report_819b2d2.png "Custom columns in a grid table in the list report") 
 

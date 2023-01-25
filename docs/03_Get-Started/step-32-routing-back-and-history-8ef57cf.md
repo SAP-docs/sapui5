@@ -10,7 +10,7 @@ Now we can navigate to our detail page and display an invoice, but we cannot go 
 
    
   
-<a name="loio8ef57cfd37b44f089f7e3b52d56597eb__fig_r1j_pst_mr"/>A back button is now displayed on the detail page
+**A back button is now displayed on the detail page**
 
  ![](images/SAPUI5_Walkthrough_Step_33_6e4426b.png "A back button is now displayed on the detail page") 
 

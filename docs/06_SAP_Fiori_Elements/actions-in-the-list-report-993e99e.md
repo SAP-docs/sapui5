@@ -28,7 +28,7 @@ For more information, see [Adding Actions to Tables](adding-actions-to-tables-b6
 
    
   
-<a name="loio993e99eae4414b73bc7afef9518c79bf__fig_ic5_fnp_qlb"/>Example: Table Toolbar Actions and Inline Actions
+**Example: Table Toolbar Actions and Inline Actions**
 
  ![](images/Actions_in_the_Table_Toolbar_856c5a4.jpg "Example: Table Toolbar Actions and Inline Actions") 
 
@@ -121,6 +121,23 @@ Make the following manifest setting to turn on draft creation with `newAction`:
 > ```
 
 For more information about actions, see [Adding Actions to Tables](adding-actions-to-tables-b623e0b.md).
+
+When a new function import has parameters, a popup appears upon clicking the *Create* button. You can define the title for the parameter dialog using the following annotation.
+
+> ### Sample Code:  
+> ```
+> 
+> <Annotations Target="SAP.FCLM_BAM_ACCOUNTWD_SRV_Entities/FunctionImportName">
+> <Annotation Term="Common.Label" String="Create"/>
+> </Annotations>
+> 
+> ```
+
+If the title is not defined in the annotation, the default title is displayed from the `DIALOG_TITLE_NEW_ACTION_FOR_CREATE` i18n key. Applications can modify the title by using the same i18n key. For more information, see [Localization of UI Texts](localization-of-ui-texts-b8cb649.md).
+
+The button label for the new action within the list page table toolbar is *Create* by default. However, applications can overwrite it by modifying the `CREATE_OBJECT` i18n key.
+
+The button within the dialog box says *Continue*. However, applications can overwrite it by modifying the `DIALOG_ACTION_BUTTON_NEW_ACTION_FOR_CREATE` i18n key.
 
 
 

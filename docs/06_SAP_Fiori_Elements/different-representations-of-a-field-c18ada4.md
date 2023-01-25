@@ -468,6 +468,12 @@ The text is cut off after 100 characters and a *More* link is shown, allowing us
 
 
 
+### Custom Length
+
+You can specify the maximum number of characters a text area can have using `textMaxLength`. When enabled, an indicator at the bottom of the text area shows the remaining number of characters. When it is exceeded, the user will see a notification.
+
+
+
 ### Manifest-Based Definition
 
 If you need to define your own custom length in a `FieldGroup` or a `LineItem`, their `controlConfiguration` has to be extended with a `"fields"` block or `"columns"` block in a structure, as shown in the following sample code:
@@ -540,29 +546,6 @@ Description
 
 
 </th>
-</tr>
-<tr>
-<td valign="top">
-
- 
-
-
-
-</td>
-<td valign="top">
-
- 
-
-
-
-</td>
-<td valign="top">
-
- 
-
-
-
-</td>
 </tr>
 <tr>
 <td valign="top">
@@ -656,7 +639,32 @@ Defines how the full text is displayed: either `"InPlace"` or `"Popover"`.
 
 </td>
 </tr>
+<tr>
+<td valign="top">
+
+`textMaxLength`
+
+
+
+</td>
+<td valign="top">
+
+String | Integer
+
+
+
+</td>
+<td valign="top">
+
+An integer value or a string containing an integer value that defines the maximum number of characters that can be entered in the text area. When this number is exceeded, the user sees a notification. If this value is not given, the maximum number of characters is not restricted.
+
+
+
+</td>
+</tr>
 </table>
+
+You can explore and work with the coding yourself. Check out the live example in the flexible programming model explorer at [Format Options](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/field/fieldFormatOptions).
 
 
 

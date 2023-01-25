@@ -104,7 +104,7 @@ When the framework makes the choice whether browser-native hyphenation or third-
 
    
   
-<a name="loio6322164936f047de941ec522b95d7b70__fig_ilz_gch_hfb"/>Hyphenation Workflow
+**Hyphenation Workflow**
 
  ![](images/Hyphenation_Diagram_6992c16.png "Hyphenation Workflow") 
 

@@ -53,7 +53,7 @@ Apart from the `property` property, a column definition can have additional prop
 
 The following table shows the different kind of properties.
 
-<a name="loio7e12e6b9154a4607be9d6072c72d609c__table_gg1_p31_j3b"/>Properties
+**Properties**
 
 
 <table>
@@ -307,7 +307,7 @@ var exportConfiguration = {
 
 Apart from the column configuration, data source configuration is the most important configuration for the export process. Data source configuration is mandatory. It can be a JSON array containing all data, a JSON object, `sap.ui.model.ListBinding`, or `sap.ui.model.TreeBinding` with the following properties:
 
-<a name="loio7e12e6b9154a4607be9d6072c72d609c__table_k2z_gr3_hfb"/>Data Source Configuration Properties
+**Data Source Configuration Properties**
 
 
 <table>
@@ -619,7 +619,7 @@ var exportConfiguration = {
 
 You can use the following properties:
 
-<a name="loio7e12e6b9154a4607be9d6072c72d609c__table_bqr_btb_kfb"/>Context Information Properties
+**Context Information Properties**
 
 
 <table>

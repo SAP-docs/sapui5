@@ -45,13 +45,13 @@ The `sap.m.SinglePlanningCalendar` is a new control designed to display the sche
 
    
   
-<a name="loiode4d50b6c0f649fa859e4657ff8557a6__fig_pfj_mhs_5fb"/>SinglePlanningCalendar Header Area
+**SinglePlanningCalendar Header Area**
 
  ![](images/SinglePlanningCalendar_Header_9406ea7.png "SinglePlanningCalendar Header Area") 
 
    
   
-<a name="loiode4d50b6c0f649fa859e4657ff8557a6__fig_pt5_d4r_1gb"/>SinglePlanningCalendar Meetings
+**SinglePlanningCalendar Meetings**
 
  ![](images/SinglePlanningCalendar_Meetings_b99c835.png "SinglePlanningCalendar Meetings") 
 
@@ -362,6 +362,8 @@ We have updated the *Tools* page and added two more blocks about the *Support As
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.107](what-s-new-in-sapui5-1-107-b88b40e.md "With this release SAPUI5 is upgraded from version 1.106 to 1.107.")
 
 [What's New in SAPUI5 1.106](what-s-new-in-sapui5-1-106-c70bb90.md "With this release SAPUI5 is upgraded from version 1.105 to 1.106.")
 

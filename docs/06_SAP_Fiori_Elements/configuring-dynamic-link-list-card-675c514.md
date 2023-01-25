@@ -245,7 +245,7 @@ Additionally, dynamic link list card supports contact annotation as default anno
     -   External navigation: Define `UI.LineItem` of type `WITH_URL`. The URL for this navigation is taken from the entity type field that is named in the line item’s `url` property.
 
 
-    <a name="loio675c514720f04b06a6fdf7be42901187__table_gym_22w_kfb"/>Navigation Behavior
+    **Navigation Behavior**
 
 
     <table>

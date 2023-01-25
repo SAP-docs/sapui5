@@ -10,6 +10,12 @@ These are the `type` properties available within `tableSettings`:
 -   `GridTable`
 -   `AnalyticalTable`
 
+
+
+<a name="loio7f844f1021cd4791b8f7408eac7c1cec__section_bqd_r2f_dmb"/>
+
+## Additional Features in SAP Fiori Elements for OData V2
+
 The following logic is used to determine the table type of an analytical list page \(ALP\) and a list report:
 
 -   If the table type is specified in the manifest:
@@ -30,12 +36,6 @@ The following logic is used to determine the table type of an analytical list pa
 
 > ### Tip:  
 > For more information about the guidelines and restrictions that apply to grid tables, see [SAP Fiori Design Guidelines](https://experience.sap.com/fiori-design-web/grid-table/).
-
-
-
-<a name="loio7f844f1021cd4791b8f7408eac7c1cec__section_bqd_r2f_dmb"/>
-
-## Additional Features in SAP Fiori Elements for OData V2
 
 In addition to using the `manifest.json` file, you can also use annotations to control which table type is rendered in the list report and on the object page.
 
@@ -136,6 +136,18 @@ Defining `tableTypes` under the settings is supported for backward compatibility
 <a name="loio7f844f1021cd4791b8f7408eac7c1cec__section_dw3_vks_mlb"/>
 
 ## Additional Features in SAP Fiori Elements for OData V4
+
+The following logic is used to determine the table type of an analytical list page \(ALP\) and a list report:
+
+-   If the table type is specified in the manifest:
+
+    If the table type is specified and set to analytical, but the `entitySet` doesn’t have analytical capabilities, a grid table is used as the fallback option. Otherwise, the table is created with the specified table type.
+
+-   If the table type is **not** specified in the manifest, the `ResponsiveTable` is used by default.
+
+
+> ### Tip:  
+> For more information about the guidelines and restrictions that apply to grid tables, see [SAP Fiori Design Guidelines](https://experience.sap.com/fiori-design-web/grid-table/).
 
 In the `manifest.json` file, you can control which table type is rendered in the list report and on the object page.
 

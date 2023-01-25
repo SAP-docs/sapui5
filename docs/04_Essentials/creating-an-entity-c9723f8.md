@@ -85,7 +85,7 @@ The `promise` returned by [`Context#created`](https://ui5.sap.com/#/api/sap.ui.m
 
 In some applications users need to be able to quickly enter a large amount of new records. A "Create" button or the related keyboard shortcut that needs to be explicitly pressed would slow down the user. To avoid this, the application could provide multiple **inline creation rows** in the table that are initially filled with default values and are not persisted in the back end.
 
-You can create such an inline creation row by calling [`sap.ui.model.odata.v4.ODataListBinding#create`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataListBinding/methods/create) with the `bInactive` parameter. Call it multiple times for multiple rows. These rows are called inactive because they are not sent to the server. Once the user modifies a property of such an inactive row, and the modification passes the client-side validation, a [`v4.ODataListBinding.createActivate`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataListBinding%23events/createActivate) event is fired and the row will be sent to the server with the next batch for the binding's update group. The event can be used to create a new inline creation row. While inactive, an inline creation row does not count as a pending change and does not contribute to the collection's count.
+You can create such an inline creation row by calling [`sap.ui.model.odata.v4.ODataListBinding#create`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataListBinding/methods/create) with the `bInactive` parameter. Call it multiple times for multiple rows. These rows are called inactive because they are not sent to the server. Once the user modifies a property of such an inactive row, and the modification passes the client-side validation, a [`v4.ODataListBinding.createActivate`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataListBinding%23events/createActivate) event is fired and the row will be sent to the server with the next batch for the binding's update group. You could use the event for additional custom validation, and it supports calling [`sap.ui.base.Event#preventDefault`](https://ui5.sap.com/#/api/sap.ui.base.Event/methods/preventDefault) to prevent the row from being sent to the server. You could use this, for example, to require certain properties to be set before sending the row to the server. The event can also be used to create a new inline creation row. While inactive, an inline creation row does not count as a pending change and does not contribute to the collection's count.
 
 
 
@@ -100,7 +100,7 @@ You can create such an inline creation row by calling [`sap.ui.model.odata.v4.OD
 
    
   
-<a name="loioc9723f8265f644af91c0ed941e114d46__fig_klh_5kw_4cb"/>Internal States of an OData V4 Binding Context
+**Internal States of an OData V4 Binding Context**
 
  ![](images/Create_States_f359082.png "Internal States of an OData V4 Binding Context") 
 

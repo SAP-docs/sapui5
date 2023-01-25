@@ -13,7 +13,7 @@ You can set the number of expanded levels for tables in List Reports and Analyti
 
 ## Expected Behavior of Table Types
 
-<a name="loiobc05d353d2c44854b1ea228b99e922a2__table_w52_35f_lkb"/>Table Types
+**Table Types**
 
 
 <table>

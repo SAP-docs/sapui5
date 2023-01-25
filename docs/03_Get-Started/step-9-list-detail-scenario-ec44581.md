@@ -12,7 +12,7 @@ In this step we add a detail area with additional information.
 
    
   
-<a name="loioec445816634f45eb88a7e559187dac46__fig_ybl_pdx_4cb"/>A detail area containing information about the selected user is added
+**A detail area containing information about the selected user is added**
 
  ![A list of users with an added detail area](images/Tut_OD4_Step_9_6e9025b.png "A detail area containing information about the selected user is added") 
 

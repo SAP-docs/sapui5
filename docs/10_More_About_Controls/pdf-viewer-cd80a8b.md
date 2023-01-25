@@ -16,7 +16,7 @@ The `PDFViewer` control displays PDF documents right inside your app. It can be 
 
    
   
-<a name="loiocd80a8bca4ac450b86547d78f0653330__fig_epr_skx_31b"/>PDF Viewer Example
+**PDF Viewer Example**
 
  ![PDF Viewer Example](images/PDF_Viewer_c4692b3.png "PDF Viewer Example") 
 

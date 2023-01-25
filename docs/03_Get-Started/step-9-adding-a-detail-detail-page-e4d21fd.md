@@ -12,7 +12,7 @@ In this step, we create a detail-detail page using `sap.f.DynamicPage`, which is
 
    
   
-<a name="loioe4d21fd03edb49da82cbaab9dbd274e8__fig_zfh_d31_12b"/>Detail-detail page displaying the name of the selected supplier
+**Detail-detail page displaying the name of the selected supplier**
 
  ![](images/DetailDetail_Page_Fiori_2_0_Tutorial_3046679.gif "Detail-detail page displaying the name of the selected supplier") 
 

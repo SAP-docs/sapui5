@@ -22,7 +22,7 @@ When dealing with incoming navigation, in addition to the navigation context pas
 
    
   
-<a name="loioc337d8bde8c544598969c8e4edaab262__fig_jp1_bm4_5lb"/>Handling Default Values from FLP
+**Handling Default Values from FLP**
 
  ![](images/Handling_Default_Values_from_FLP_9c2ee88.png "Handling Default Values from FLP") 
 
@@ -181,7 +181,7 @@ The following are some of the possible scenarios:
 
 ### Enabling Fullscreen Mode for Inbound Navigation in Flexible Column Layout Mode
 
-During inbound navigation to flexible column layout application, if the navigation context points to a unique object, you can open the object in fullscreen mode by adding the below configuration:
+During inbound navigation to flexible column layout application, if the navigation context points to a unique object, you can open the object in fullscreen mode by adding the configuration mentioned here. To experience better performance, set the `"defaultLayoutTypeIfExternalNavigation": "MidColumnFullScreen"` for the main objects and `"EndColumnFullScreen"` for sub-objects.
 
 > ### Sample Code:  
 > ```
@@ -192,6 +192,9 @@ During inbound navigation to flexible column layout application, if the navigati
 >                   "defaultLayoutTypeIfExternalNavigation": "MidColumnFullScreen",
 >                    "component": {
 >                      "name": "sap.suite.ui.generic.template.ObjectPage"
+> 						   "settings':{
+> 								"allowDeepLinking": true
+> 										 }
 >                     },
 >                     "pages": { 
 >         .....

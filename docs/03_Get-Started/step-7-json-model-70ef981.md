@@ -12,7 +12,7 @@ We will add an input field to our app, bind its value to the model, and bind the
 
    
   
-<a name="loio70ef981d350a495b940640801701c409__fig_r1j_pst_mr"/>An input field and a description displaying the value of the input field
+**An input field and a description displaying the value of the input field**
 
  ![](images/SAPUI5_Walkthrough_Step_07_to_10_e5a9bb4.png "An input field and a description displaying the value of the input
 					field") 

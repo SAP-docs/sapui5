@@ -22,7 +22,7 @@ You can configure the entity sets that you want to refresh. To do so, upon navig
 
 The following configurations are supported for entity sets:
 
-<a name="loio3c65f2cc630c472da8328a6f3c193683__table_yby_3rt_yqb"/>
+****
 
 
 <table>
@@ -257,7 +257,7 @@ The refresh mechanism is exactly the same as defined for the external navigation
 
 Applications can also configure refresh on back navigation when the navigation was triggered using smart link from the reuse component or an extension view.
 
-Following is a sample code on a `stStart` function of a resue component where extension API `setRefreshBehaviour` is used to refresh an entity set:
+Following is a sample code on a `stStart` function of a reuse component where extension API `setRefreshBehaviour` is used to refresh an entity set:
 
 > ### Sample Code:  
 > ```

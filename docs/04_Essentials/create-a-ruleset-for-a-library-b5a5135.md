@@ -37,7 +37,7 @@ A ruleset is a `library.support.js` file that defines an object `name` and `nice
 
 Here is an example of folder structure depending on the location of your ruleset:
 
-<a name="loiob5a51358b3574aea9143fa50ae4e0e2a__table_xgs_xmd_wbb"/>Ruleset Folder Structure
+**Ruleset Folder Structure**
 
 
 <table>

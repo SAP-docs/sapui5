@@ -87,7 +87,7 @@ The following navigation actions or events discard the entered data:
 
 Various checks can be executed. For example, check for the needed busy indicator or to see whether the data loss popup is needed. The following table contains the input parameters for the method used in the check, and the corresponding system behavior:
 
-<a name="loioa90c55840b144f2ebc2d836adbc1a54f__table_rzw_3vq_bz"/>Example parameters
+**Example parameters**
 
 
 <table>

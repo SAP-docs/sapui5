@@ -10,7 +10,7 @@ It can be used to express completion values either as a percentage or as absolut
 
    
   
-<a name="loio43f6f0faa1b64c5aa92bcde379be9054__fig_bsx_4sk_hmb"/>Progress Indicator
+**Progress Indicator**
 
  ![](images/ProgressIndicator_Tables_c6d1e04.png "Progress Indicator") 
 
@@ -102,7 +102,7 @@ If required, you can set up the progress bar so that it changes color to reflect
 
    
   
-<a name="loio43f6f0faa1b64c5aa92bcde379be9054__fig_awr_2rl_hmb"/>Progress Indicator: Colors Reflect State of Progress
+**Progress Indicator: Colors Reflect State of Progress**
 
  ![](images/Tables_ProgressIndicator_Color_5fc7265.png "Progress Indicator: Colors Reflect State of Progress") 
 

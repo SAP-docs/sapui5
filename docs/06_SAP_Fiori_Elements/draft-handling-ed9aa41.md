@@ -10,10 +10,8 @@ Drafts are used as follows:
 
 -   To prevent data loss if an app terminates unexpectedly
 
--   As a locking mechanism to prevent multiple users from editing the same object at the same time, and to inform users about unsaved changes by another user.
-
-
-When a user starts creating a new business entity or edits an existing one, a draft is created in the background. This enables field validation and dynamic field control \(showing additional fields based on user interaction\) and provides default values for fields based on recent data entry. A draft can be validated for consistency and completeness at any time. This returns a list of messages.
+-   
+When a user starts creating a new business entity or edits an existing one, a draft is created in the background. This enables field validation and dynamic field control \(showing additional fields based on user interaction\) and provides default values for fields based on recent data entry. A draft can be validated for consistency and completeness at any time. This returns a list of messages.As a locking mechanism to prevent multiple users from editing the same object at the same time, and to inform users about unsaved changes by another user.
 
 While the user is modifying a business entity, an indicator shows when a draft is saved implicitly. The user still needs to choose *Save* to incorporate the changes into an active business document.
 
@@ -31,7 +29,7 @@ When a user edits an object, the system behavior of the *Apply* button is as fol
 
 2.  The system creates a draft version of the object.
 
-3.  The user makes changes to the draft version of the object and navigates to a detail page. When *Apply* is chosen, the changes are applied to the draft.
+3.  The user makes changes to the draft version of the object and navigates to a detail page. When *Apply*As a locking mechanism to prevent multiple users from editing the same object at the same time, and to inform users about unsaved is chosen, the changes are applied to the draft.
 
 4.  When the user chooses *Save*, the changes are saved to the active version of the object.
 
@@ -54,13 +52,13 @@ Users can switch between the draft and saved version using:
 
    
   
-<a name="loioed9aa41c563a44b18701529c8327db4d__fig_pbl_rsm_mtb"/>Static/Classical Header
+**Static/Classical Header**
 
  ![](images/Static_or_Classic_Header_-_Draft_Handling_17f784f.png "Static/Classical Header") 
 
    
   
-<a name="loioed9aa41c563a44b18701529c8327db4d__fig_mnl_ntm_mtb"/>Dynamic Header
+**Dynamic Header**
 
  ![](images/Dynamic_Header_-_Draft_Handling_6c69105.png "Dynamic Header") 
 
@@ -83,6 +81,8 @@ This system behavior is also valid when using the *Apply* button. When choosing 
 
 ## Additional Features in SAP Fiori Elements for OData V2
 
+You can use keyboard shortcuts for common tasks.
+
 
 
 ### Prepare Draft for Activation by Pressing [Enter\]
@@ -92,6 +92,27 @@ On a draft version of a document, if you press [Enter\] on input fields, by defa
 The `PreparationAction` that is defined within the `DraftRoot` is called, even if you've pressed [Enter\] in the fields of the object page table, or in the subobject pages.
 
 The side effects, if configured, are also triggered upon pressing [Enter\]. The `PreparationAction` call is skipped if you've annotated `TriggerAction` in the global side effects under the corresponding entity. In this case, `TriggerAction` is called instead of `PreparationAction`. However, in case of side effects annotated with source properties and `TriggerAction`, `PreparationAction` call is not impacted. For more information, see [Using the Global Side Effect](using-the-global-side-effect-955ae31.md).
+
+
+
+<a name="loioed9aa41c563a44b18701529c8327db4d__section_oll_ghj_gvb"/>
+
+## Additional Features in SAP Fiori Elements for OData V4
+
+You can use a keyboard shortcut to execute a `PrepareAction` or global side effects in the draft mode.
+
+
+
+### Prepare Draft for Activation by Pressing [Enter\]
+
+On a draft version of a document, if you press [Enter\] on input fields, one of the following actions is triggered:
+
+-   Global side effects \(`SideEffects` without `SourceProperties` and `SourceEntities`\) are executed if these side effects are defined in the entity related to the field, that is, the page entity in a form or the table entity in a cell.
+
+-   If a `PreparedAction` is defined in the `DraftRoot` entity and the message is annotated, that `PreparedAction` is triggered and the messages are requested.
+
+
+For more information, see [Using the Global Side Effect](using-the-global-side-effect-955ae31.md).
 
 
 
@@ -105,6 +126,6 @@ The side effects, if configured, are also triggered upon pressing [Enter\]. The 
 
 -   [Confirmation Popups](confirmation-popups-9a53662.md)
 
--   [Using the Global Side Effect](using-the-global-side-effect-955ae31.md)
+-   [Using the Global Side Effect](using-the-global-side-effect-955ae31.md) and the live example in flexible programming model explorer at [Draft Validation](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/advancedFeatures/guidance/draftValidation)
 
 

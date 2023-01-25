@@ -231,6 +231,14 @@ The `"ParentService"` in the annotation sample is an alias defined for the main 
 
 
 
+### Title of the Value Help Dialog
+
+By default, the value help dialog uses the label annotation of the property as its title.
+
+Context-dependent value help uses the label defined in the `ValueList`. If no label is defined, the property label is used instead.
+
+
+
 ### Filter Fields Within the Value Help Dialog
 
 Use the `SelectionFields` annotation on the entity of the value help to define the filter fields that are to be displayed in the filter panel of the value help dialog. Application developers must ensure that all relevant fields are part of the `SelectionFields`.
@@ -265,59 +273,9 @@ For each filter expression type, the operators shown in the value help dialog de
 For `Date` and `DateTime` fields that have the filter expression type "Single Value", instead of the filter conditions dialog a `Date` or `DateTime` picker is shown directly in the filter field.
 
 > ### Note:  
-> The expression type "Single Range" for `Date` or `DateTime` fields currently results in a `Date` or `DateTime` picker control instead of the value help. To avoid this, use the filter expression type "MultiRange".
+> For a `Date` or `DateTime` field. value help is only available for fields marked with the `MultipleValue` or `MultipleRange` filter restrictions. Value help is not available for a `Date` field that is marked with `SingleValue` or `SingleRange`.
 
-To apply filter restrictions, use the following `FilterRestrictions` annotations:
-
-> ### Sample Code:  
-> XML Annotation
-> 
-> ```
-> <Annotations Target="com.c_salesordermanage_sd.EntityContainer/SalesOrderManage">
->     <Annotation Term="Capabilities.FilterRestrictions">
->         <Record Type="Capabilities.FilterRestrictionsType">
->             <PropertyValue Property="FilterExpressionRestrictions">
->                 <Collection>
->                     <Record Type="Capabilities.FilterExpressionRestrictionType">
->                         <PropertyValue Property="Property" PropertyPath="SoldToParty"/>
->                         <PropertyValue Property="AllowedExpressions" String="SingleValue"/>
->                     </Record>
->                     <Record Type="Capabilities.FilterExpressionRestrictionType">
->                         <PropertyValue Property="Property" PropertyPath="LastChangedDateTime"/>
->                         <PropertyValue Property="AllowedExpressions" String="MultiRange"/>
->                     </Record>
->                 </Collection>
->             </PropertyValue>
->         </Record>
-> </Annotation>
-> ```
-
-> ### Sample Code:  
-> ABAP CDS Annotation
-> 
-> No ABAP CDS annotation sample is available. Please use the local XML annotation.
-
-> ### Sample Code:  
-> CAP CDS Annotation
-> 
-> ```
-> entity SalesOrderManage @(
->     title : 'Manage Sales Order',
->     Capabilities.NavigationRestrictions : {RestrictedProperties : [{
->         NavigationProperty : _Item,
->         InsertRestrictions : {Insertable : true}
->     }]},
->     Capabilities.FilterRestrictions     : {FilterExpressionRestrictions : [{
->         Property          : 'SoldToParty',
->         AllowedExpressions : 'SingleValue'
->     },
->     {
->         Property          : 'LastChangedDateTime',
->         AllowedExpressions : 'MultiRange'
->     }
->     ]},
-> ...
-> ```
+For more information about filter restrictions, see [Configuring Filter Fields](configuring-filter-fields-f5dcb29.md).
 
 
 
@@ -367,11 +325,9 @@ Application developers can control the number of columns shown in the type-ahead
 
 
 
-### Sorting Within Value Help Dialogs and Type-Ahead Tables
+### Sorting Within Value Help Dialogs and Dropdown Lists
 
-A default sorting mechanism is applied to the first column of the value help table, as well as to the type-ahead table. Text-arrangement annotations for `TextOnly` are also taken into account: If the first column has a `TextOnly` annotation, the sorting is applied to the column to which the text arrangement refers.
-
-When using the importance annotation \(as explained in this topic\), please also apply this annotation to the first column to ensure that a proper sorting is still provided within the type-ahead list.
+A default sorting mechanism is applied to the first column of the value help table, as well as to the dropdown list. Text-arrangement annotations for `TextOnly` are also taken into account: If the first column has a `TextOnly` annotation, the sorting is applied to the column to which the text arrangement refers.
 
 You can change the sorting of the table using the `UI.PresentationVariant`.
 
@@ -413,10 +369,7 @@ You can change the sorting of the table using the `UI.PresentationVariant`.
 >         <Record Type="UI.PresentationVariantType">
 >             <PropertyValue Property="Visualizations">
 >                 <Collection>
->                     <AnnotationPath with a qualifier to sort a value help table or a
->                         type-ahead table.<Annotations Target="com.c_salesordermanage_sd.SalesOrderItem/Material">
->     <Annotation Term="Common.FieldControl" Path="fieldControlType_item"/>
->     <Annotation Term="Common.IsUpperCase" Bool="true"/>@UI.LineItem</AnnotationPath>
+>                     <AnnotationPath>@UI.LineItem</AnnotationPath>
 >                 </Collection>
 >             </PropertyValue>
 >             <PropertyValue Property="SortOrder">
@@ -609,17 +562,11 @@ The annotation `InitialValueIsSignificant` allows you to identify an initial val
 
 Some scenarios require more than one value help.
 
-> ### Example:  
-> If the partner function of the field is `"WE"`, the value help of the field `"BusinessPartner"` has a value help with qualifier `"BusinessPartner"` as well as a value help with qualifier `"SingleColumn"`. The value help without a qualifier is also maintained, but not determined in this case.
-
 > ### Sample Code:  
 > Multiple Value Help Dialogs
 > 
 > ```
 > <Annotations Target="com.c_salesordermanage_sd.HeaderPartner/BusinessPartner">
->     <Annotation Term="com.sap.vocabularies.Common.v1.ValueListRelevantQualifiers">
->         ...Definition of ValueListRelevantQualifiers...
->     </Annotation>
 >     <Annotation Term="Common.ValueList" Qualifier="BusinessPartner">
 >         ...Definition of ValueList...
 >     </Annotation>
@@ -631,9 +578,6 @@ Some scenarios require more than one value help.
 >     </Annotation>
 > </Annotations>
 > ```
-
-> ### Note:  
-> A collective search help currently does not support individual In/Out parameters for the different `ValueList` definitions. All `ValueList` definitions must have the same In/Out parameters.
 
 
 
@@ -654,7 +598,7 @@ You can use the `UI.TextArrangement` annotation to configure the display format 
     -   `TextSeparate`
 
 
-    <a name="loioa5608eabcc184aee99e1a7d88b28816c__table_lrb_kdk_nsb"/>Value Help with Dialog
+    **Value Help with Dialog**
 
 
     <table>
@@ -825,7 +769,7 @@ You can use the `UI.TextArrangement` annotation to configure the display format 
 
 -   Value Help with a Dropdown List \(`ValueListWithFixedValues`\)
 
-    <a name="loioa5608eabcc184aee99e1a7d88b28816c__table_fsl_32k_nsb"/>Value Help with Dropdown List
+    **Value Help with Dropdown List**
 
 
     <table>

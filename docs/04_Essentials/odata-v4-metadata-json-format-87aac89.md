@@ -239,7 +239,7 @@ The following JSON file represents the metadata document which corresponds to `G
 
 Constant and dynamic expressions are used as values for annotations. Their JSON representation is shown in the following two tables.
 
-<a name="loio87aac894a40640f89920d7b2a414499b__table_tyk_cqs_xv"/>Constant Expressions
+**Constant Expressions**
 
 
 <table>
@@ -430,7 +430,7 @@ Is represented by a JavaScript string literal.
 </tr>
 </table>
 
-<a name="loio87aac894a40640f89920d7b2a414499b__table_erw_2rs_xv"/>Dynamic Expressions
+**Dynamic Expressions**
 
 
 <table>

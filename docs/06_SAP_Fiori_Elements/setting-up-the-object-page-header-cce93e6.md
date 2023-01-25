@@ -113,7 +113,7 @@ Product title in SAP back-end systems
 
   
   
-<a name="loiocce93e6f067a4133a8430c4f5d7b8fc7__fig_dfk_44j_55"/>Object Page Header
+**Object Page Header**
 
  ![](images/Object_Page_Header_Main_Elements_698018b.png "Object Page Header") 
 

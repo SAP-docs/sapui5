@@ -17,7 +17,7 @@ The action buttons are displayed as shown below in the chart toolbar:
 
   
   
-<a name="loio7d1fa8399f714cf6a657ac5467a70d4a__fig_nzv_w34_qmb"/>Actions in Chart Toolbar
+**Actions in Chart Toolbar**
 
  ![](images/Actions_in_Smart_Chart_Toolbar_067d5d8.png "Actions in Chart Toolbar") 
 

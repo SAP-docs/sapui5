@@ -113,7 +113,7 @@ You can hide an entire section. To hide one subsection, you can hide content wit
 
    
   
-<a name="loioca00ee45fe344a73998f482cb2e669bb__fig_kkb_d22_rmb"/>Sections on Object Page
+**Sections on Object Page**
 
  ![](images/Section_Object_Page_1_4d0d970.png "Sections on Object Page") 
 
@@ -129,7 +129,7 @@ You can hide content in quick views, such as field groups like this:
 
    
   
-<a name="loioca00ee45fe344a73998f482cb2e669bb__fig_qwx_c3g_gmb"/>Field Groups in Quick Views on Object Page
+**Field Groups in Quick Views on Object Page**
 
  ![](images/Content_in_Quick_Views_1_5ee9d69.png "Field Groups in Quick Views on Object Page") 
 
@@ -147,7 +147,7 @@ You can hide DataField records, for example, UI.DataField, UI.DataFieldForAnnota
 
    
   
-<a name="loioca00ee45fe344a73998f482cb2e669bb__fig_dks_44g_gmb"/>DataField Records in Header Facets
+**DataField Records in Header Facets**
 
  ![](images/Header_Facets_1_ba72afc.png "DataField Records in Header Facets") 
 
@@ -163,7 +163,7 @@ You can hide DataField records, for example, UI.DataField, UI.DataFieldForAnnota
 
    
   
-<a name="loioca00ee45fe344a73998f482cb2e669bb__fig_khy_gh1_nmb"/>DataField Records in Facets
+**DataField Records in Facets**
 
  ![](images/DataField_Records_in_Facets_1_b6dea7a.png "DataField Records in Facets") 
 
@@ -193,7 +193,7 @@ In the following example, `STTA_C_MP_Product` is the entity set of the object pa
 
   
   
-<a name="loioca00ee45fe344a73998f482cb2e669bb__fig_yvs_tqg_gmb"/>DataField Records in Tables
+**DataField Records in Tables**
 
  ![](images/Data_Field_Records_Smart_Tables_74a9d75.png "DataField Records in Tables") 
 
@@ -229,7 +229,7 @@ If `UI.Hidden` is provided a static `true` value for any field, then the column 
 
   
   
-<a name="loioca00ee45fe344a73998f482cb2e669bb__fig_rkj_4rg_gmb"/>DataField Records in Tables
+**DataField Records in Tables**
 
  ![](images/DataFieldRecords1_bd2e691.png "DataField Records in Tables") 
 

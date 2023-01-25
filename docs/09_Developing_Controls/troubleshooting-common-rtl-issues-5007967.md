@@ -6,7 +6,7 @@ The following table outlines some common issues that occur when implementing rig
 
 
 
-<a name="loio50079678e0cc4c8298f764580fc223d3__table_d53_pj3_ns"/>RTL Issues and Solutions
+**RTL Issues and Solutions**
 
 
 <table>

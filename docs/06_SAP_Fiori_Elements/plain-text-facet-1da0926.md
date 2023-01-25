@@ -12,7 +12,7 @@ This is displayed as shown below within the object page header:
 
    
   
-<a name="loio1da0926a5d404c5586cd8b4f73d1cf4a__fig_e2l_y1c_3v"/>Plain Text Facet in Object Header
+**Plain Text Facet in Object Header**
 
  ![](images/Object_Page_Header_Plain_Text_Facet_c2970f8.png "Plain Text Facet in Object Header") 
 

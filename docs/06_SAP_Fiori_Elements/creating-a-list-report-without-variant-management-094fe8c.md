@@ -14,7 +14,7 @@ Without variant management, and with no custom title added, your app looks as fo
 
   
   
-<a name="loio094fe8c8d8ac4f0eb4724b1a52d2ad61__fig_gly_n3x_cnb"/>App without Variant Management
+**App without Variant Management**
 
  ![](images/Creating_Apps_without_Variant_Management_8b85684.jpg "App without Variant Management") 
 
@@ -22,7 +22,7 @@ Without variant management and with a custom title added, your app looks like th
 
   
   
-<a name="loio094fe8c8d8ac4f0eb4724b1a52d2ad61__fig_uly_n3x_cnb"/>App without Variant Management and with Custom Title
+**App without Variant Management and with Custom Title**
 
  
 
@@ -187,5 +187,5 @@ For more information, see [Managing Variants](managing-variants-8ce658e.md).
 **Related Information**  
 
 
-[Enabling Variant Management in the Object Page](enabling-variant-management-in-the-object-page-f26d42b.md "You can enable variant management in the object page.")
+[Enabling Variant Management in the Object Page](enabling-variant-management-in-the-object-page-f26d42b.md "The variant management is enabed by default for tables and charts on the object page. However, you can choose to disable it.")
 

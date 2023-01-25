@@ -10,7 +10,7 @@ In this step, we replace the text with a button and show the “Hello World” m
 
    
   
-<a name="loio50579ddf2c934ce789e056cfffe9efa9__fig_r1j_pst_mr"/>A *Say Hello* button is added
+**A Say Hello button is added**
 
  ![](images/SAPUI5_Walkthrough_Step_05_5717fb5.png "A Say Hello button is added") 
 

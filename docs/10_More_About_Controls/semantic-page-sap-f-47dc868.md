@@ -122,14 +122,14 @@ The left side contains the `messagesIndicator`, and the right side - `draftIndic
 Definition in an XML view:
 
 ```xml
-<core:View
-		xmlns:semantic="sap.f.semantic"
-			controllerName="mycompany.myController"
-			height="100%">
-	<semantic:SemanticPage id="mySemanticPage">
-		<!—semantic  page content specified  here -->
-	</semantic:SemanticPage >
-</core:View>
+<mvc:View xmlns:mvc="sap.ui.core.mvc"
+    xmlns:semantic="sap.f.semantic"
+    controllerName="mycompany.myController"
+    height="100%">
+    <semantic:SemanticPage id="mySemanticPage">
+        <!-- Semantic page content specified here -->
+    </semantic:SemanticPage >
+</mvc:View>
 ```
 
 Definition in JavaScript:

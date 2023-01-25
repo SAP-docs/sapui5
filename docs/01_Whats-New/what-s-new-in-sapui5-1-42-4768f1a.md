@@ -21,13 +21,13 @@ We now deploy new versions of SAPUI5 earlier to `https://ui5.sap.com/`. As soon 
 
       
       
-    <a name="loio4768f1ac7f0645929b4e9ea9981bb65e__fig_art_k25_mx"/>Expanded Mode
+    **Expanded Mode**
 
      ![](images/Whats_New_142_DynamicPageExpanded_b6e9d79.png "Expanded Mode") 
 
       
       
-    <a name="loio4768f1ac7f0645929b4e9ea9981bb65e__fig_pvc_l25_mx"/>Collapsed Mode
+    **Collapsed Mode**
 
      ![](images/WhatsNew_142_DynamicPageSnapped_a4eb968.png "Collapsed Mode") 
 
@@ -293,6 +293,8 @@ We have updated the following tutorials:
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.107](what-s-new-in-sapui5-1-107-b88b40e.md "With this release SAPUI5 is upgraded from version 1.106 to 1.107.")
 
 [What's New in SAPUI5 1.106](what-s-new-in-sapui5-1-106-c70bb90.md "With this release SAPUI5 is upgraded from version 1.105 to 1.106.")
 

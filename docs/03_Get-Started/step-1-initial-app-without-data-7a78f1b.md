@@ -16,7 +16,7 @@ Usually you start the development of an app with local mock data first. This way
 
    
   
-<a name="loio7a78f1b707c248fd9ec53dcb5f10814c__fig_wg3_bdq_st"/>The initial app
+**The initial app**
 
  ![](images/Tutorial_Mock_Server_Step_01_3a29b22.png "The initial app") 
 
@@ -32,7 +32,7 @@ You should have the same files as displayed in the following figure:
 
    
   
-<a name="loio7a78f1b707c248fd9ec53dcb5f10814c__fig_gsc_mld_tt"/>Folder structure with downloaded files
+**Folder structure with downloaded files**
 
  ![](images/Tutorial_Mock_Server_Step_1_Folders_026a908.png "Folder structure with downloaded files") 
 

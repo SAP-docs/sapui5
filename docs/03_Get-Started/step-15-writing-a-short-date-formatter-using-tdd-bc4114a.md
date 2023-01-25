@@ -10,13 +10,13 @@ It's now time to improve the content of the *Info* tab. We want to see the *Post
 
    
   
-<a name="loiobc4114a88e4d4ac1a0f53b2a7a92b226__fig_r1j_pst_mr"/>Unit tests of the formatter
+**Unit tests of the formatter**
 
  ![](images/Tutorial_Testing_Step_15_1_8ab2798.png "Unit tests of the formatter") 
 
 Depending on the current date, we distinguish four different formatting categories, as shown in the table below:
 
-<a name="loiobc4114a88e4d4ac1a0f53b2a7a92b226__table_hdp_fdd_jt"/>Formatting Categories
+**Formatting Categories**
 
 
 <table>
@@ -392,7 +392,6 @@ sap.ui.define([
 			} else if (iElapsedDays === 1) {
 				return "Yesterday";
 			}
-			return this.dateFormat.format(oDate);
 		},
 		_getElapsedDays : function(oDate) {
 			var iElapsedMilliseconds = this.now() - oDate.getTime();

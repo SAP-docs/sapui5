@@ -51,7 +51,7 @@ A card is a user experience design pattern that displays the most concise pieces
 
   
   
-<a name="loio27eea38eeb7b40d19d0dfe3ddf513175__fig_pfj_mhs_5fb"/>Analytical card
+**Analytical card**
 
  ![](images/Cards_3ff4cba.png "Analytical card") 
 
@@ -367,6 +367,8 @@ You can now switch the *Content Density* of the Demo Kit samples to *Condensed*.
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.107](what-s-new-in-sapui5-1-107-b88b40e.md "With this release SAPUI5 is upgraded from version 1.106 to 1.107.")
 
 [What's New in SAPUI5 1.106](what-s-new-in-sapui5-1-106-c70bb90.md "With this release SAPUI5 is upgraded from version 1.105 to 1.106.")
 

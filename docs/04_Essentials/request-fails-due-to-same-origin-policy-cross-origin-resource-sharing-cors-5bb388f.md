@@ -12,7 +12,7 @@ If you use a remote URL in your code, for example a remote OData service, such a
 
    
   
-<a name="loio5bb388fc289d44dca886c8fa25da466e__fig_jyf_f1k_c5"/>Violations of the same-origin policy in Google Chrome
+**Violations of the same-origin policy in Google Chrome**
 
  ![](../03_Get-Started/images/Tutorial_Walkthrough_Step_26_CORS_2c36d72.png "Violations of the same-origin policy in Google Chrome") 
 

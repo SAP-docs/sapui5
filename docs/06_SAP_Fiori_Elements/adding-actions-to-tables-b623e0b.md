@@ -242,7 +242,7 @@ Annotation-based actions can be inline actions. Inline actions are used to trigg
 
   
   
-<a name="loiob623e0bbbb2b4147b2d0516c463921a0__fig_ayd_sqb_2nb"/>Example: Actions in the Table Toolbar
+**Example: Actions in the Table Toolbar**
 
  ![](images/Actions_in_the_Table_Toolbar_856c5a4.jpg "Example: Actions in the Table Toolbar") 
 

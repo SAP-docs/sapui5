@@ -6,7 +6,7 @@ You use the Criticality Calculation feature to control the color of the labels a
 
 You cannot set the label color directly. The color of the labels at the bottom is unchangeable and will always be displayed with `ValueColor.Neutral`. The color of the labels at the top is calculated using the thresholds that are common for every Criticality Calculation across the Smart Micro Charts. For example:
 
-<a name="loioaa4bf0f6d2a943d9b9931db81421d523__table_r2h_2wt_ny"/>Thresholds
+**Thresholds**
 
 
 <table>
@@ -127,7 +127,7 @@ Negative
 </tr>
 </table>
 
-<a name="loioaa4bf0f6d2a943d9b9931db81421d523__table_dvf_qwt_ny"/>Resulting colors of different sample values in different Improvement Directions
+**Resulting colors of different sample values in different Improvement Directions**
 
 
 <table>

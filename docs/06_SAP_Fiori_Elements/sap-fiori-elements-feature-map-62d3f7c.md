@@ -40,7 +40,7 @@ You can use extension points to extend your generated app during the creation pr
 
 
 
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__table_xrc_jls_g3b"/>Feature List
+**Feature List**
 
 
 <table>
@@ -124,7 +124,7 @@ Analytical card
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_glq_wxn_wlb"/>Donut Chart
+**Donut Chart**
 
  
 
@@ -187,7 +187,7 @@ Add column to a table
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_ygc_hs4_j4b"/>Add column to a table
+**Add column to a table**
 
  ![](images/Add_column_to_a_table_019b848.png "Add column to a table") 
 
@@ -250,7 +250,7 @@ Add custom column
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_py1_dlg_d4b"/>Custom Columns in a Table
+**Custom Columns in a Table**
 
  ![](images/Custom_Columns_00819cd.png "Custom Columns in a Table") 
 
@@ -355,7 +355,7 @@ Analytical table
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_qsv_b53_jlb"/>Analytical Table
+**Analytical Table**
 
  ![](images/Analytical_Table_in_Compact_Mode_4d427f5.png "Analytical Table") 
 
@@ -411,7 +411,7 @@ Area micro chart
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_l5m_jrl_flb"/>Components of an Area Micro Chart
+**Components of an Area Micro Chart**
 
  ![](images/Area_Micro_Chart_8720cf8.png "Components of an Area Micro Chart") 
 
@@ -468,7 +468,7 @@ Avatar
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_m5p_wd2_ykb"/>Business Images
+**Business Images**
 
  ![](images/AvatarBusinessImages_8199863.png "Business Images") 
 
@@ -521,7 +521,7 @@ Breadcrumb
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_g3x_r3w_2lb"/>Navigation Bar, Breadcrumbs and Actions in Header Title of Object Page
+**Navigation Bar, Breadcrumbs and Actions in Header Title of Object Page**
 
  ![](images/Breadcrumb_5d56a97.jpg "Navigation Bar, Breadcrumbs and Actions in Header Title
 										of Object Page") 
@@ -646,7 +646,7 @@ Bullet chart
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_vk5_bkd_flb"/>Bullet Chart
+**Bullet Chart**
 
  ![](images/Bullet_Chart_08e0f82.jpg "Bullet Chart") 
 
@@ -702,7 +702,7 @@ Bullet micro chart
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_r5l_kmd_flb"/>Bullet Micro Chart
+**Bullet Micro Chart**
 
  ![](images/Bullet_Micro_Chart_daa43f5.jpg "Bullet Micro Chart") 
 
@@ -761,7 +761,7 @@ Busy indicator
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_z4x_rsl_flb"/>Busy Indicator
+**Busy Indicator**
 
  ![](images/Busy_Indicator_70da86b.jpg "Busy Indicator") 
 
@@ -814,7 +814,7 @@ Button/Action
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_enl_wxr_flb"/>Common Button Types
+**Common Button Types**
 
  ![](images/Common_Button_Types_05ad659.jpg "Common Button Types") 
 
@@ -879,7 +879,7 @@ Canvas page
 
    
   
-Canvas Page
+**Canvas Page**
 
  
 
@@ -1037,7 +1037,7 @@ Chart/Smart chart
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_p4b_vzr_flb"/>Common Chart Types
+**Common Chart Types**
 
  ![](images/Chart_Types_3174dbc.png "Common Chart Types") 
 
@@ -1088,7 +1088,7 @@ Checkbox
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_vg4_wgs_flb"/>Enabled Checkboxes
+**Enabled Checkboxes**
 
  ![](images/Enabled_Checkboxes_2104a89.png "Enabled Checkboxes") 
 
@@ -1142,7 +1142,7 @@ Overview page
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_zz4_qxg_blb"/>Target and Maximizing Measures
+**Target and Maximizing Measures**
 
  ![](images/Coloring_Cards_Based_on_Threshold_Values_89fadf9.png "Target and Maximizing Measures") 
 
@@ -1191,7 +1191,7 @@ Column chart
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_e4j_qgw_2lb"/>Column Chart Card
+**Column Chart Card**
 
  ![](images/Column_Chart_Cards_271710e.png "Column Chart Card") 
 
@@ -1336,7 +1336,7 @@ Combo box
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_hf2_53s_flb"/>Combobox with Autocomplete Function
+**Combobox with Autocomplete Function**
 
  ![](images/Combobox_with_Autocomplete-Function_c517f44.png "Combobox with Autocomplete Function") 
 
@@ -1391,7 +1391,7 @@ Contact quick view
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_wf2_tcb_2lb"/>Contact Quick View
+**Contact Quick View**
 
  ![](images/Feature_map_Contact_Quick_View_57923ca.jpg "Contact Quick View") 
 
@@ -1439,7 +1439,7 @@ Object page
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_t4v_hfw_vlb"/>Copy from Excel to Table
+**Copy from Excel to Table**
 
  ![](images/Feature_Map_Copy_Paste_bf1847b.png "Copy from Excel to Table") 
 
@@ -1492,7 +1492,7 @@ Cumulation \(Waterfall chart\)
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_ohr_4g2_flb"/>Cumulation \(Waterfall Chart\)
+**Cumulation \(Waterfall Chart\)**
 
  ![](images/Cumulation_Waterfall_Chart_8eed559.png "Cumulation (Waterfall Chart)") 
 
@@ -1543,7 +1543,7 @@ Currency
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_iz4_hks_flb"/>Examples of the Currency Control
+**Examples of the Currency Control**
 
  ![](images/Currency_Control_e2f31f9.png "Examples of the Currency Control") 
 
@@ -1597,7 +1597,7 @@ Overview page
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_kqr_gcg_zkb"/>Custom Cards
+**Custom Cards**
 
  ![](images/Custom_Card_31e0a61.jpg "Custom Cards") 
 
@@ -2059,7 +2059,7 @@ Date/time picker
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_usp_c4s_flb"/>Date/Time Picker
+**Date/Time Picker**
 
  ![](images/Date_Time_Picker_9de0e45.png "Date/Time Picker") 
 
@@ -2114,7 +2114,7 @@ Date picker
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_nyc_jps_flb"/>Date Picker with Footer
+**Date Picker with Footer**
 
  ![](images/Date_Picker_with_Footer_87d3846.png "Date Picker with Footer") 
 
@@ -2165,7 +2165,7 @@ Date range selection
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_lk4_gts_flb"/>Date Range Selection
+**Date Range Selection**
 
  ![](images/Date_Range_Selection_2c83f1c.png "Date Range Selection") 
 
@@ -2271,7 +2271,7 @@ Section *Default Values for Action Parameters* in the topic [Actions](actions-cb
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_ogh_qlg_wpb"/>Default Values for Action Parameter
+**Default Values for Action Parameter**
 
  ![](images/Default_Values_for_Action_Parameters_d77753a.png "Default Values for Action Parameter") 
 
@@ -2335,7 +2335,7 @@ Dialog box
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_gmn_1v3_jlb"/>Dialog
+**Dialog**
 
  ![](images/Dialog_Dragging_2a8512f.jpg "Dialog ") 
 
@@ -2398,7 +2398,7 @@ Direct edit
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_o4c_lqn_psb"/>Direct Edit
+**Direct Edit**
 
  ![](images/Image_Navigation_to_an_Object_Page_in_Edit_Mode_1_087686b.png "Direct Edit") 
 
@@ -2451,7 +2451,7 @@ Draft handling
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_vp3_52b_2lb"/>Draft Handling
+**Draft Handling**
 
  ![](images/feature_map_Draft_Handling_25f7ad7.jpg "Draft Handling") 
 
@@ -2501,7 +2501,7 @@ Dynamic page layout
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_qxr_whn_wlb"/>Dynamic page layout
+**Dynamic page layout**
 
  ![](images/Feature_map_Dynamic_page_layout_d0957c5.jpg "Dynamic page layout ") 
 
@@ -2554,7 +2554,7 @@ Editing status
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_rgj_pyl_wlb"/>Editing status
+**Editing status**
 
  ![](images/Feature_map_Editing_status_886d379.jpg "Editing status") 
 
@@ -2732,7 +2732,7 @@ Filter bar
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_hfp_2pl_flb"/>Filter Bar
+**Filter Bar**
 
  ![](images/Expanded_Filter_Bar_c3f0792.jpg "Filter Bar") 
 
@@ -2861,7 +2861,7 @@ Flexible column layout
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_lml_xw3_jlb"/>Flexible Column Layout
+**Flexible Column Layout**
 
  ![](images/Flexible_Column_Layout_03e717b.png "Flexible Column Layout") 
 
@@ -2959,7 +2959,7 @@ Footer toolbar
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_gcb_pzs_flb"/>Footer Toolbar
+**Footer Toolbar**
 
  ![](images/Footer_Toolbar_d28e3c8.png "Footer Toolbar") 
 
@@ -3009,7 +3009,7 @@ Form
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_ksq_53b_2lb"/>Mixed Form
+**Mixed Form**
 
  ![](images/Mixed_Form_4e3030b.jpg "Mixed Form") 
 
@@ -3077,7 +3077,7 @@ Overview page
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_fvw_4pg_wlb"/>Formatting numeric values
+**Formatting numeric values**
 
  ![](images/Feature_map_Formatting_numeric_values_db0cbcd.png "Formatting numeric values") 
 
@@ -3170,7 +3170,7 @@ Analytical list page \(OData V2\)
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_xhb_vg1_2lb"/>Generic Tag
+**Generic Tag**
 
  ![](images/Feature_map_Generic_Tag_1cbf80e.png "Generic Tag") 
 
@@ -3222,7 +3222,7 @@ Grid table
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_u4g_cy3_jlb"/>Grid Table
+**Grid Table**
 
  ![](images/Grid_Table_Schematic_Visualization_833396d.png "Grid Table") 
 
@@ -3281,7 +3281,7 @@ Header toolbar
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_igb_mnz_flb"/>Header Bar with Share Icon
+**Header Bar with Share Icon**
 
  ![](images/Header_Bar_with_Share_Icon_cc83b69.jpg "Header Bar with Share Icon") 
 
@@ -3340,7 +3340,7 @@ Highlighting line items based on criticality
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_k3r_gxv_2lb"/>Criticality of Line Items
+**Criticality of Line Items**
 
  ![](images/Criticality_of_Line_Items_2257ca0.jpg "Criticality of Line Items") 
 
@@ -3394,7 +3394,7 @@ Icon tab bar
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_t5l_5y3_jlb"/>Icon Tabs
+**Icon Tabs**
 
  ![](images/Icon_Tabs_4c3846d.png "Icon Tabs") 
 
@@ -3453,7 +3453,7 @@ Image
 
   
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_psl_1qz_flb"/>Image Used in a Dialog
+**Image Used in a Dialog**
 
  ![](images/Image_in_a_Dialog_1f7a3b3.png "Image Used in a Dialog") 
 
@@ -3509,7 +3509,7 @@ Object page
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_yl3_dnw_vlb"/>Inline Create
+**Inline Create**
 
  ![](images/FM_Inline_creation_of_table_entries_e545ac0.jpg "Inline Create") 
 
@@ -3562,7 +3562,7 @@ Input field
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_qb2_dtz_flb"/>Input
+**Input**
 
  ![](images/Input_Assistance_858d7ff.png "Input") 
 
@@ -3610,7 +3610,7 @@ Analytical list page
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_fct_ty1_2lb"/>Interactive Chart Types
+**Interactive Chart Types**
 
  ![](images/Feature_Map_interactive_chart_types_bc53d40.jpg "Interactive Chart Types") 
 
@@ -3801,7 +3801,7 @@ Label
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_cz2_ftk_wlb"/>Label
+**Label**
 
  ![](images/Feature_Map_Label_e819b35.png "Label") 
 
@@ -3852,7 +3852,7 @@ Line chart
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_oc5_k32_flb"/>Line Chart
+**Line Chart**
 
  ![](images/Line_Chart_with_Popover_5869caf.png "Line Chart ") 
 
@@ -3908,7 +3908,7 @@ Line micro chart
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_tzg_55z_flb"/>Line Micro Chart with Labels
+**Line Micro Chart with Labels**
 
  ![](images/Line_Micro_Chart_with_Labels_f9cd9f8.png "Line Micro Chart with Labels") 
 
@@ -3965,7 +3965,7 @@ Link
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_cfh_mwz_flb"/>Link
+**Link**
 
  ![](images/Link_Wrapping_and_Truncation_6f9d3bb.png "Link ") 
 
@@ -4013,7 +4013,7 @@ Overview page
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_dqw_zyg_blb"/>Carousel-Based View
+**Carousel-Based View**
 
  ![](images/Link_List_Card_d5bd193.jpg "Carousel-Based View") 
 
@@ -4064,7 +4064,7 @@ Add multiple fields to one column
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_ld5_ltr_y4b"/>Multiple Fields to One Column
+**Multiple Fields to One Column**
 
  ![](images/FE_Add_multiple_fields_to_one_column_ec3893b.png "Multiple Fields to One Column") 
 
@@ -4112,7 +4112,7 @@ Display text and ID for value help
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_bn1_ktr_y4b"/>Text and ID for Value Help
+**Text and ID for Value Help**
 
  ![](images/FEATURE_MAP_FE_Displaying_Text_and_ID_for_Value_Help_049f2d6.png "Text and ID for Value Help") 
 
@@ -4165,7 +4165,7 @@ Semantic date range on filter bar
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_cvq_3tr_y4b"/>Semantic Date Range on Filter Bar
+**Semantic Date Range on Filter Bar**
 
  ![](images/FEATURE_MAP_FE_Semantic_Date_Range_on_Filter_Bar_8668c2b.png "Semantic Date Range on Filter Bar") 
 
@@ -4215,7 +4215,7 @@ Overview page
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_eqk_k1h_blb"/>List Card
+**List Card**
 
  ![](images/List_Card_3767c22.png "List Card") 
 
@@ -4263,7 +4263,7 @@ Overview page
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_bf2_qhl_wlb"/>Manage Cards
+**Manage Cards**
 
  ![](images/Feature_map_manage_cards_3b5d696.jpg "Manage Cards") 
 
@@ -4313,7 +4313,7 @@ Mass edit
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_bjp_52y_gsb"/>Mass Edit
+**Mass Edit**
 
  ![](images/Image_Map_Mass_Edit_9cf3272.png "Mass Edit") 
 
@@ -4376,7 +4376,7 @@ Menu button
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_t4v_14b_2lb"/>Menu Buttons
+**Menu Buttons**
 
  ![](images/Menu_Buttons_0629a79.jpg "Menu Buttons") 
 
@@ -4427,7 +4427,7 @@ Message box
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_wgw_s45_glb"/>Message Box
+**Message Box**
 
  ![](images/Message_Box_8514163.png "Message Box") 
 
@@ -4480,7 +4480,7 @@ Message page
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_pv2_jq5_glb"/>Message Page
+**Message Page**
 
  ![](images/Message_Page_1598cfe.jpg "Message Page") 
 
@@ -4529,7 +4529,7 @@ Message popover
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_c1p_xyv_2lb"/>Message Popover with Filter
+**Message Popover with Filter**
 
  ![](images/Message_Popover_with_Filter_c945eaf.jpg "Message Popover with Filter") 
 
@@ -4580,7 +4580,7 @@ Message toast
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_g2v_kt5_glb"/>Message Toast
+**Message Toast**
 
  ![](images/Message_Toast_with_Item_Cound_655a388.png "Message Toast") 
 
@@ -4689,7 +4689,7 @@ Micro chart/Smart micro chart
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_rrl_jtb_jlb"/>Comparison Micro Chart
+**Comparison Micro Chart**
 
  ![](images/Comparison_Micro_Chart_7ad7a7b.png "Comparison Micro Chart") 
 
@@ -4741,7 +4741,7 @@ Multi-combo box
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_e1s_z1j_jlb"/>Multi-combo Box
+**Multi-combo Box**
 
  ![](images/Multi-Combo_Box_8daedf3.png "Multi-combo Box") 
 
@@ -4792,7 +4792,7 @@ Multi-input field
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_vnk_2dv_glb"/>Multi-Input Field
+**Multi-Input Field**
 
  ![](images/Expanded_Multi-Selection_62b8761.png "Multi-Input Field") 
 
@@ -4841,7 +4841,7 @@ Multiple selection of lines in tables
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_dgl_g3m_wlb"/>Multiple selection of lines in tables
+**Multiple selection of lines in tables**
 
  ![](images/Feature_map_Multiple_selection_of_lines_in_tables_5d8fb93.jpg "Multiple selection of lines in tables ") 
 
@@ -4889,7 +4889,7 @@ List report
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_f3y_2mg_wlb"/>Multiple views on list report tables
+**Multiple views on list report tables**
 
  ![](images/Feature_map_Multiple_views_on_list_report_tables_891cf38.jpg "Multiple views on list report tables ") 
 
@@ -4940,7 +4940,7 @@ Navigation
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_j1z_1sv_glb"/>Deep Link Navigation Flow
+**Deep Link Navigation Flow**
 
  ![](images/Deep_Link_Navigation_Flow_e489ff5.png "Deep Link Navigation Flow") 
 
@@ -5052,7 +5052,7 @@ P13n dialog
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_csw_zbj_jlb"/>P13n Dialog
+**P13n Dialog**
 
  ![](images/P13n_Dialog_39cd18d.jpg " P13n Dialog") 
 
@@ -5154,7 +5154,7 @@ Popover
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_exx_qtv_glb"/>Popover
+**Popover**
 
  ![](images/Popover_74ceaac.png "Popover") 
 
@@ -5261,7 +5261,7 @@ Progress indicator
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_dhh_wcj_jlb"/>Group of Progress Indicators
+**Group of Progress Indicators**
 
  ![](images/Progress_Indicators_86bc57b.png "Group of Progress Indicators") 
 
@@ -5309,7 +5309,7 @@ Overview page \(OData V2\)
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_vrp_sch_blb"/>Company Information
+**Company Information**
 
  ![](images/Quick_View_Card_dd1682b.png "Company Information") 
 
@@ -5358,7 +5358,7 @@ Quick views for smart link navigation
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_i5v_l1w_2lb"/>Quick Views for Smart Link Navigation
+**Quick Views for Smart Link Navigation**
 
  ![](images/Quick_Views_for_Smart_Link_Navigation_5ee9b90.png "Quick Views for Smart Link Navigation") 
 
@@ -5414,7 +5414,7 @@ Radial micro chart
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_j5m_hbc_jlb"/>Different Radial Charts
+**Different Radial Charts**
 
  ![](images/Radial_Charts_942b517.png "Different Radial Charts") 
 
@@ -5466,7 +5466,7 @@ Rating indicator
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_pl4_g2j_jlb"/>Rating Indicator
+**Rating Indicator**
 
  ![](images/Rating_Indicator_26c6ab1.png "Rating Indicator") 
 
@@ -5514,7 +5514,7 @@ Object page
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_dvs_x3m_blb"/>Related Apps Button
+**Related Apps Button**
 
  ![](images/Related_Apps_Button_b2ba0cd.png "Related Apps Button") 
 
@@ -5615,7 +5615,7 @@ Responsive table
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_i53_42c_jlb"/>Typical Example of Responsive Table
+**Typical Example of Responsive Table**
 
  ![](images/Responsive_Table_3f20981.png "Typical Example of Responsive Table") 
 
@@ -5706,7 +5706,7 @@ Object page
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_h3m_1mg_wlb"/>Reuse components
+**Reuse components**
 
  ![](images/Feature_Map_Reuse_components_c54fccc.jpg "Reuse components") 
 
@@ -5809,7 +5809,7 @@ Search
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_wdg_gfc_jlb"/>Search Field
+**Search Field**
 
  ![](images/Search_Field_with_Refresh_09839cc.png "Search Field") 
 
@@ -5857,7 +5857,7 @@ Object page
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_ypg_kkm_blb"/>Segmented Button
+**Segmented Button**
 
  ![](images/Segmented_Buttons_47f563a.jpg "Segmented Button") 
 
@@ -6065,7 +6065,7 @@ Smart link
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_dms_chc_jlb"/>Smart Link
+**Smart Link**
 
  ![](images/Smart_Link_6773928.png "Smart Link") 
 
@@ -6128,7 +6128,7 @@ Smart table
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_ays_vjc_jlb"/>Smart Table
+**Smart Table**
 
  ![](images/Smart_Table_722e977.png "Smart Table") 
 
@@ -6220,7 +6220,7 @@ Overview page \(OData V2\)
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_cyn_42h_blb"/>Stack Card
+**Stack Card**
 
  ![](images/Stack_Card_d26a509.jpg "Stack Card") 
 
@@ -6276,7 +6276,7 @@ Stacked bar micro chart
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_vdj_m4c_jlb"/>Stacked Bar Micro Chart
+**Stacked Bar Micro Chart**
 
  ![](images/Stacked_Bar_Micro_Chart_a34be5b.png "Stacked Bar Micro Chart") 
 
@@ -6327,7 +6327,7 @@ Status colors and icons
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_dqp_4cw_2lb"/>Status Colors and Icons
+**Status Colors and Icons**
 
  ![](images/Status_Colors_and_Icons_7bb680b.jpg "Status Colors and Icons") 
 
@@ -6377,7 +6377,7 @@ Object page
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_o1t_y1j_psb"/>File Upload in Edit Mode
+**File Upload in Edit Mode**
 
  ![](images/Edm_stream_File_Upload_in_Edit_Mode_46c2706.png "File Upload in Edit Mode") 
 
@@ -6484,7 +6484,7 @@ Overview page
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_xlp_ffh_blb"/>Table Card
+**Table Card**
 
  ![](images/Table_Card_885a97e.png "Table Card") 
 
@@ -6535,7 +6535,7 @@ Table personalization
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_bpy_txh_jlb"/>Table Personalization Dialog
+**Table Personalization Dialog**
 
  ![](images/Table_Personalization_45b4d11.png "Table Personalization Dialog") 
 
@@ -6604,7 +6604,7 @@ Tables
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_phg_tb3_jlb"/>Table
+**Table**
 
  ![](images/Multi-Selection_Grid_Table_35d3aa1.png "Table") 
 
@@ -6656,7 +6656,7 @@ Table toolbar
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_ydw_nfj_jlb"/>Table Toolbar with Segmented Text Button
+**Table Toolbar with Segmented Text Button**
 
  ![](images/Table_Toolbar_with_Segmented_Text_Button_e8ed1bd.png "Table Toolbar with Segmented Text Button") 
 
@@ -6712,7 +6712,7 @@ Text
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_w25_nl3_jlb"/>Text Control: Hyphenation
+**Text Control: Hyphenation**
 
  ![](images/Text_Control_Hyphenation_642dbf8.png "Text Control: Hyphenation") 
 
@@ -6763,7 +6763,7 @@ Text area
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_xkl_qn3_jlb"/>Text Area Counter
+**Text Area Counter**
 
  ![](images/Text_Area_Counter_403e630.png "Text Area Counter") 
 
@@ -6826,7 +6826,7 @@ Title
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_ncv_t43_jlb"/>Title
+**Title**
 
  ![](images/Title_c1c62ad.jpg "Title") 
 
@@ -6899,7 +6899,7 @@ Token
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_inn_zp3_jlb"/>Token Styles
+**Token Styles**
 
  ![](images/Token_Styles_0d03594.png "Token Styles") 
 
@@ -6951,7 +6951,7 @@ Tree table
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_nrw_tgj_jlb"/>Tree Table with Multiple Selection
+**Tree Table with Multiple Selection**
 
  ![](images/Tree_Table_with_Multiple_Selection_cabf655.png "Tree Table with Multiple Selection") 
 
@@ -7048,7 +7048,7 @@ Value help
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_exp_sr3_jlb"/>Value Help Dialog
+**Value Help Dialog**
 
  ![](images/Value_Help_Dialog_d10cc5f.png "Value Help Dialog") 
 
@@ -7113,7 +7113,7 @@ Variant management
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_wb2_1t3_jlb"/>Manage Views Dialog
+**Manage Views Dialog**
 
  ![](images/Variant_Management_Manage_Views_Dialog_b05305d.png "Manage Views Dialog") 
 
@@ -7165,7 +7165,7 @@ Analytical list page
 
    
   
-<a name="loio62d3f7c2a9424864921184fd6c7002eb__fig_x4c_pbb_2lb"/>Visual Filter Setup
+**Visual Filter Setup**
 
  ![](images/Feature_map_Visual_filter_bar_9c53b64.jpg "Visual Filter Setup") 
 

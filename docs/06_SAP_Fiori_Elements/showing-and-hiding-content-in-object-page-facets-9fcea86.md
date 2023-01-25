@@ -14,7 +14,7 @@ The *Show More* button appears in the bottom right corner if hidden facets are a
 
    
   
-<a name="loio9fcea86d8ffd48459dd053eb5255a046__fig_fyr_pys_qrb"/>Show More
+**Show More**
 
  ![](images/Object_Page_Facets_Show_More_f0f38e7.png "Show More") 
 
@@ -22,7 +22,7 @@ The *Show Less* button appears in the bottom right corner if a user has clicked 
 
    
   
-<a name="loio9fcea86d8ffd48459dd053eb5255a046__fig_dtl_x1t_qrb"/>Show Less
+**Show Less**
 
  ![](images/Object_Page_Hiding_A_Facet_From_the_UI_Show_Less_Button_a360c97.png "Show Less") 
 

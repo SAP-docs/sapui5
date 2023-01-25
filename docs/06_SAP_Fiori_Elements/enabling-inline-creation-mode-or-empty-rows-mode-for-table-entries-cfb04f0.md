@@ -11,7 +11,10 @@ In apps that use draft handling, you can enable the inline creation mode or empt
 
 **Empty Rows Mode**: In create or edit mode, two new empty rows are added to the table. In a responsive table, the rows are added at the top. In a grid table, the rows are added at the top. The empty rows won't have any corresponding entry in the back end. Whenever a user modifies a field in an empty row and then moves the focus away from that field, the new row is automatically inserted into the table. In addition, another empty row is added automatically to the table, since empty rows mode always provides two empty new rows.
 
-In this mode:
+> ### Restriction:  
+> The empty rows mode isn't supported when immutable properties are required.
+
+Th empty rows mode has the following features:
 
 -   The row actions, such as the navigation indicator using a chevron icon, and inline deletion, are hidden in the empty rows.
 

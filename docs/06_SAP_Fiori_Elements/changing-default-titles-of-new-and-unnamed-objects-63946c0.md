@@ -20,7 +20,7 @@ List report:
 
    
   
-<a name="loio63946c02df1d45efbbad5b1658fef3a5__fig_b5l_xcp_vdb"/>Default title in list report
+**Default title in list report**
 
  ![](images/Default_Title_List_Report_61d6781.png "Default title in list report") 
 
@@ -32,7 +32,7 @@ Object page:
 
    
   
-<a name="loio63946c02df1d45efbbad5b1658fef3a5__fig_v52_zcp_vdb"/>Default title on object page
+**Default title on object page**
 
  ![](images/Object_Page_Default_Title_5301737.png "Default title on object page") 
 

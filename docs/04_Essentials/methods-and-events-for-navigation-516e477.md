@@ -58,7 +58,7 @@ Use this method to navigate to display one or multiple targets. The method uses 
 
   
   
-<a name="loio516e477e7e0b4e188b19a406e7528c1e__fig_srm_3dn_1w"/>Navigation events
+**Navigation events**
 
  ![](images/SAPUI5_Navigation_Events_6f245c0.png "Navigation events") 
 

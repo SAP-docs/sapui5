@@ -10,7 +10,7 @@ In this step we will make the search bookmarkable. This allows users to search f
 
    
   
-<a name="loioe85da535ea19430a90c381f3c2bd748e__fig_r1j_pst_mr"/>Search and sorting bookmarkable
+**Search and sorting bookmarkable**
 
  ![](images/Tutorial_Navigation_and_Routing_Step_12_feb2ddd.png "Search and sorting bookmarkable") 
 

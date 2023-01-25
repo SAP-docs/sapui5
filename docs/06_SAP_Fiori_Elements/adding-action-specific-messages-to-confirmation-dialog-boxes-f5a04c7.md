@@ -13,7 +13,7 @@ You can add action-specific messages to the i18n.properties file of your applica
 
 where `FunctionImportName` is specific to a particular action. The figure below shows some examples:   
   
-<a name="loiof5a04c7ddd054a33a84e48525a51b5fb__fig_rbv_4x2_sz"/>Function imports
+**Function imports**
 
  ![](images/Function_Imports_71d9639.png "Function imports") 
 

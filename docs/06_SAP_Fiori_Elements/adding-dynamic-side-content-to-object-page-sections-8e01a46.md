@@ -84,7 +84,7 @@ After you have added side content, the system displays a button in the subsectio
 
    
   
-<a name="loio8e01a463d3984bfa8b23c2270d40e38c__fig_u1h_2yj_wcb"/>Side Content Added to the Object Page
+**Side Content Added to the Object Page**
 
  ![](images/Dynamic_Side_Content_9cb9e88.jpg "Side Content Added to the Object Page") 
 
@@ -168,7 +168,7 @@ You define the side content in the manifest as follows:
 
 You can define your side content by implementing an `xmlfragment` and using the following properties:
 
-<a name="loio8e01a463d3984bfa8b23c2270d40e38c__table_vj3_2tn_p4b"/>Properties of Side Content
+**Properties of Side Content**
 
 
 <table>
@@ -324,7 +324,7 @@ For information about the regular `Extension` API, see the [API Reference](https
 
 The following table provides an overview of all possible combinations of facet nesting and how to find the right key in each scenario:
 
-<a name="loio8e01a463d3984bfa8b23c2270d40e38c__table_p5b_cqw_sqb"/>Finding the Right Key for Sections, Subsections, and Side Content
+**Finding the Right Key for Sections, Subsections, and Side Content**
 
 
 <table>

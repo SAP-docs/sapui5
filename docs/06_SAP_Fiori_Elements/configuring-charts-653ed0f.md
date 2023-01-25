@@ -156,7 +156,7 @@ The chart definition contains measures on which the aggregations calculations ar
 > 
 >   
 >   
-> <a name="loio653ed0f4f0d743dbb33ace4f68886c4e__fig_trc_s1d_mnb"/>Navigation Property
+> **Navigation Property**
 > 
 >  
 > 

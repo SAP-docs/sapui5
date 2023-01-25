@@ -10,7 +10,7 @@ SAPUI5 provides a set of simple data types such as `Boolean`, `Currency`, `Date`
 
    
   
-<a name="loio9252ee4015f24fc49c71c295394d1b8d__fig_r1j_pst_mr"/>New *Sales Amount* input field
+**New Sales Amount input field**
 
  ![](images/Tutorial_Data_Binding_Step_10_d15f8bc.png "New Sales Amount input field ") 
 

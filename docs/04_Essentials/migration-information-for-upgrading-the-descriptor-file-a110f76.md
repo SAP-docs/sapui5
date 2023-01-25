@@ -433,7 +433,11 @@ V10 \(1.52\)
 </td>
 <td valign="top">
 
-Determines if the library contains an i18n resource or not. If using a string instead of a boolean value, an alternative name for the i18n resource can be defined.
+Determines whether the library contains an i18n resource. The value can be either a boolean, a string, or \(since 1.78\) an object.
+
+A string value represents a bundle URL. Relative URLs are always resolved to the library origin. If no value is set, the default `messagebundle.properties` file is loaded.
+
+An object can contain additional resource bundle configuration, e.g. terminologies and supported locales. For the supported features and for sample definitions, see the respective entries at [Terminologies](terminologies-eba8d25.md) \(without `bundleUrlRelativeTo`\) and [Supported Locales and Fallback Chain](supported-locales-and-fallback-chain-ec753bc.md) .
 
 > ### Note:  
 > This attribute is beneficial if the name of the main resource bundle \(properties file\) used by your UI5 library differs from the default name `messagebundle.properties`

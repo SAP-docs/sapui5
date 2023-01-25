@@ -15,7 +15,7 @@ Object pages can make use of request groups and lazy loading.
 
 You can bundle requests so they are sent out as batch requests. SAP Fiori elements supports four request groups, as shown in the following table:
 
-<a name="loioac035701f0f94bcca2d051bba9f1880d__table_hfp_tq5_nnb"/>Request Groups
+**Request Groups**
 
 
 <table>

@@ -74,7 +74,7 @@ Each view can contain any control users want to display on the tab. App develope
 
 You can define your custom view by using the following properties:
 
-<a name="loioeb37203f2b884b5097c3c858107cae1f__table_ez5_pnv_3qb"/>Properties of a Custom View
+**Properties of a Custom View**
 
 
 <table>

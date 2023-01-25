@@ -2,21 +2,21 @@
 
 # Enabling Variant Management in the Object Page
 
-You can enable variant management in the object page.
+The variant management is enabed by default for tables and charts on the object page. However, you can choose to disable it.
 
 
 
 ## Context
 
-You can enable variant management for tables in the object page. By default, variant management is not enabled.
+You can disable variant management for tables.
 
-In SAP Fiori Elements for OData V2, you can also enable variant management for charts.
+In SAP Fiori Elements for OData V2, you can also disable variant management for charts.
 
 
 
 ### Additional Features in SAP Fiori Elements for OData V2
 
-To enable variant management for all tables and charts on an object page, make these manifest settings on component level:
+To disable variant management for all tables and charts on an object page, make these manifest settings on component level:
 
 > ### Sample Code:  
 > ```
@@ -25,17 +25,17 @@ To enable variant management for all tables and charts on an object page, make t
 > 	"name": "sap.suite.ui.generic.template.ObjectPage",
 > 	"settings": {
 > 		"tableSettings": {
-> 			"variantManagement": true
+> 			"variantManagement": false
 > 		},
 > 		"chartSettings": {
-> 			"variantManagement": true
+> 			"variantManagement": false
 > 		}
 > 	}
 > }
 > 
 > ```
 
-You can enable variant management for a specific table on an object page by adding this manifest switch:
+You can disable variant management for a specific table on an object page by adding the following manifest switch:
 
 > ### Sample Code:  
 > ```
@@ -46,7 +46,7 @@ You can enable variant management for a specific table on an object page by addi
 > 		"sections": {
 > 			"to_ProductText::com.sap.vocabularies.UI.v1.LineItem ": {
 > 				"tableSettings": {
-> 					"variantManagement": true
+> 					"variantManagement": false
 > 				}
 > 			}
 > 		}
@@ -55,18 +55,17 @@ You can enable variant management for a specific table on an object page by addi
 > 
 > ```
 
-You can enable variant management for a specific chart on an object page by adding this manifest switch:
+You can disable variant management for a specific chart on an object page by adding the following manifest switch:
 
 > ### Sample Code:  
 > ```
-> 
 > "component": {
 > 	"name": "sap.suite.ui.generic.template.ObjectPage",
 > 	"settings": {
 > 		"sections": {
 > 			"to_ProductSalesData::com.sap.vocabularies.UI.v1.Chart ": {
 > 				"chartSettings": {
-> 					"variantManagement": true
+> 					"variantManagement": false
 > 				}
 > 			}
 > 		}
@@ -76,22 +75,24 @@ You can enable variant management for a specific chart on an object page by addi
 > ```
 
 > ### Note:  
-> When variant management is enabled, the selected variant is stored in the inner app state and restored. When you switch to a different object, the default variant for that particular object is selected.
+> -   When variant management is enabled, the selected variant is stored in the inner app state and restored. When you switch to a different object, the default variant for that particular object is selected.
+> 
+> -   As of SAPUI5 1.108, variant management is enabled by default. You must not explicitly set `"variantManagement"` to `"true"` in the manifest to enable it.
+> 
+> -   If you enabled variant management in the manifest prior to SAPUI5 1.108, then you can continue with the same settings.
 
 
 
 ### Additional Features in SAP Fiori Elements for OData V4
 
-To enable variant management for the object page, you must set it to `Control`.
-
-You can turn the personalization on or off for each table individually. Personalization is independent of variant management.
+In SAP Fiori elements for OData V4, variant management is enabled by default. You can disable it on the object page by setting `"variantManagement"` to `"None"`.
 
 > ### Sample Code:  
 > ```
 > "SalesOrderManageObjectPage": {
 >     "options": {
 >         "settings": {
->             "variantManagement": "Control",                        
+>             "variantManagement": "None",                        
 >             "controlConfiguration": {
 >                 "_Item/@com.sap.vocabularies.UI.v1.LineItem": {
 >                     "tableSettings": {
@@ -114,6 +115,10 @@ You can turn the personalization on or off for each table individually. Personal
 >     }
 > }
 > ```
+
+If you've disabled variant management, you can enable it again by setting `"variantManagement"` to `"Control"`.
+
+You can turn the personalization on or off for each table individually. Personalization is independent of variant management.
 
 **Related Information**  
 

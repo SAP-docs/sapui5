@@ -60,6 +60,9 @@ Only the filter fields defined as part of the `UI.SelectionFields` annotation an
 
 All filter fields listed as part of the `UI.SelectionFields` annotation are part of this group. In addition, all filter fields that are part of the `UI.FieldGroup` annotation with qualifier `"_BASIC"` under the `FilterFacets` structure, as shown above, are part of this group.
 
+> ### Restriction:  
+> This feature is only available in SAP Fiori elements for OData V2.
+
 
 
 **Field Group**

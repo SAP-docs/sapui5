@@ -1,6 +1,6 @@
 <!-- loio0715706772ed43f389d2ab9b381ef8ec -->
 
-# IDs in Declarative XML or HTML Fragments
+# IDs in Declarative Fragments
 
 If a fragment with a control ID is instantiated twice without giving an ID, a duplicate ID error occurs.
 
@@ -61,8 +61,7 @@ The second button will either have the ID `btnInFragment`, in case the fragment 
 ```js
 sap.ui.require(["sap/ui/core/Fragment"], function(Fragment){
    Fragment.load({
-      name: "my.useful.UiPartZ",
-      type: "HTML"
+      name: "my.useful.UiPartZ"
    }).then(function(oFragment){
       // ...
    }); // Button ID will not be prefixed
@@ -75,8 +74,7 @@ The other possible ID of the second button is `myFragment--btnInFragment`, in ca
 sap.ui.require(["sap/ui/core/Fragment"], function(Fragment){
    Fragment.load({
       name: "my.useful.UiPartZ",
-      id: "myFragment",
-      type: "HTML"
+      id: "myFragment"
    }).then(function(oFragment){
       // ...
    });

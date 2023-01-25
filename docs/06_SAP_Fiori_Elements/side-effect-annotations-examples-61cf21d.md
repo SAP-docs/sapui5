@@ -292,7 +292,7 @@ You define side effects either in the \*`MPC_EXT` class or in the local annotati
 > 
 > -   Refresh the navigation target
 > 
->     In this case, when the item tax amount is changed, the navigation property leading to the root \(`to_SalesOrder`\) is updated.
+>     In this case, when the item tax amount is changed, the navigation property leading to the root entity \(`to_SalesOrder`\) is updated.
 > 
 >     > ### Sample Code:  
 >     > XML Annotation
@@ -317,23 +317,7 @@ You define side effects either in the \*`MPC_EXT` class or in the local annotati
 >     > 
 >     > ```
 > 
->     > ### Sample Code:  
->     > CAP CDS Annotation
->     > 
->     > ```
->     > 
->     > annotate STTA_SALES_ORDER_WD_20_SRV.C_STTA_SalesOrderItem_WD_20Type @(
->     >     Common.SideEffects #TaxAmountChanged : {
->     >         SourceProperties : [
->     >             TaxAmount
->     >         ],
->     >         TargetEntities : [
->     >             to_SalesOrder
->     >         ],
->     >         EffectTypes : #ValueChange
->     >     }
->     > );
->     > ```
+>     In the following case, when the item tax amount is changed, the navigation property leading to the property of root entity \(`to_SalesOrder`\) is updated. If `*` is defined, then all properties of the root entity are updated.
 > 
 >     > ### Sample Code:  
 >     > XML Annotation
@@ -358,6 +342,24 @@ You define side effects either in the \*`MPC_EXT` class or in the local annotati
 >     > </Annotations>
 >     > ```
 > 
+>     > ### Sample Code:  
+>     > CAP CDS Annotation
+>     > 
+>     > ```
+>     > 
+>     > annotate STTA_SALES_ORDER_WD_20_SRV.C_STTA_SalesOrderItem_WD_20Type @(
+>     >     Common.SideEffects #TaxAmountChanged : {
+>     >         SourceProperties : [
+>     >             TaxAmount
+>     >         ],
+>     >         TargetEntities : [
+>     >             to_SalesOrder
+>     >         ],
+>     >         EffectTypes : #ValueChange
+>     >     }
+>     > );
+>     > ```
+> 
 > -   Side effect on 1:1 associated entity set’s property
 > 
 >     You can add a side effect annotation on a property that is 1:1 associated with the main entity set. In this case, when you change the 1:1 associated smartfield \(that is rendered in a smartform\), side effect call gets triggered as per the target of the side effect annotation.
@@ -371,7 +373,7 @@ You define side effects either in the \*`MPC_EXT` class or in the local annotati
 >     >     <Annotation Term="com.sap.vocabularies.Common.v1.SideEffects" Qualifier="<Qualifier Name (Optional)>">
 >     >         <PropertyValue Property="SourceProperties">
 >     >             <Collection>
->     >                 <PropertyPath><1:1 Associated Navigation Property Name>/<Property Name></PropertyPath>
+>     >                 <PropertyPath><1:1 Associated Navigation Property Name.Ex:to_Rating/Rating>/<Property Name></PropertyPath>
 >     >             </Collection>
 >     >         </PropertyValue>
 >     >         <PropertyValue Property="TargetProperties">

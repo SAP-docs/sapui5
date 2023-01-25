@@ -10,13 +10,13 @@ In this step, we want to change the mock data of the initial app.
 
    
   
-<a name="loio311890311f7148adbfbf248a6980df1c__fig_dpl_41l_c5"/>The product list of the initial app with custom mock data
+**The product list of the initial app with custom mock data**
 
  ![](images/Tutorials_Worklist_Step_2_1_Preview_b150a14.png "The product list of the initial app with custom mock data") 
 
    
   
-<a name="loio311890311f7148adbfbf248a6980df1c__fig_xdw_s1l_c5"/>Folder structure for this step including custom mock data
+**Folder structure for this step including custom mock data**
 
  ![](images/Tutorial_Worklist_Step_02_2_Directory_fa4aba8.png " Folder structure for this step including custom mock data") 
 

@@ -122,7 +122,7 @@ For combination charts:
 
   
   
-<a name="loio58713934229948c79509f5d40966df3c__fig_tqs_wlz_y4b"/>Example of a Combination Chart Card
+**Example of a Combination Chart Card**
 
  ![](../01_Whats-New/images/Whats_New_140_OVP_Combination_Chart_55139a9.png "Example of a Combination Chart Card") 
 

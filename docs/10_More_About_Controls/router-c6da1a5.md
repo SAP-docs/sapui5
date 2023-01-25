@@ -25,7 +25,7 @@ The `sap.f.routing.Router` has the following main differences to the `sap.m.rout
 >    "pattern": "itemInfo",
 >    "name": "itemInfo",
 >    "target": [
->       "master",
+>       "list",
 >       "detail",
 >       "detailDetail"
 >    ],
@@ -38,9 +38,9 @@ The `sap.f.routing.Router` has the following main differences to the `sap.m.rout
 > 
 > ```
 > "targets": {
->    "master": {
+>    "list": {
 >       "type": "View",
->       "name": "Master",
+>       "name": "list",
 >       "controlAggregation": "beginColumnPages"
 >    },
 >    "detail": {
@@ -66,7 +66,7 @@ Another way to achieve this, when the layout cannot be known in advance, is to j
    "pattern": "itemInfo",
    "name": "itemInfo",
    "target": [
-      "master",
+      "list",
       "detail",
       "detailDetail"
    ]
