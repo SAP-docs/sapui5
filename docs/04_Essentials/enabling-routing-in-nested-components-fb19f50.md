@@ -41,7 +41,7 @@ Use the following configuration to load the component from the target:
 
 -   `type`: Set the `type` to `Component`; this loads and instantiates the `Component.js` that is available under `componentUsages`.
 
--   `usage`: Use the key of the component usage as used in the the `componentUsages` section of the parent component's `manifest.json`.
+-   `usage`: Use the key of the component usage as used in the `componentUsages` section of the parent component's `manifest.json`.
 
 -   `options` \(optional\): Add additional options that are merged with the options defined in the `componentUsage` section, see [sap.ui.core.UIComponent](https://ui5.sap.com/#/api/sap.ui.core.UIComponent).
 

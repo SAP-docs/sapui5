@@ -98,7 +98,7 @@ sap.ui.define([], function() {
         }
             },
         restoreCustomAppStateDataExtension : function(oCustomData) {
-            // in order to to restore the content of the custom field in the filter bar e.g. after a 
+            // in order to restore the content of the custom field in the filter bar e.g. after a 
             // back navigation, an object with the content is handed over to this method and the developer 
             // has to ensure, that the content of the custom field is set accordingly
             // also, empty properties have to be set

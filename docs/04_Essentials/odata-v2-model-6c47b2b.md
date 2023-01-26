@@ -1115,7 +1115,7 @@ Content
 > 
 > Using `$expand` has several drawbacks, however. In OData V2, you cannot use additional filters and sorters for the expanded entries of a `$expand` query. In addition, the `$expand` option always loads **all** associated entities, so paging with `$skip` or `$top` isn't possible, either.
 > 
-> Using the preliminary context feature allows you to to circumvent these restrictions. You can merge multiple sub-requests into a single `$batch` query, yet you can easily include additional filters and sorters on the related subordinate entries.
+> Using the preliminary context feature allows you to circumvent these restrictions. You can merge multiple sub-requests into a single `$batch` query, yet you can easily include additional filters and sorters on the related subordinate entries.
 
  <a name="loio6cb8d585ed594ee4b447b5b560f292a4"/>
 

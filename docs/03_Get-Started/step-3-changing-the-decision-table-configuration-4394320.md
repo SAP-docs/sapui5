@@ -82,7 +82,7 @@ This code changes the decision table to display and enable the *Settings* icon \
 > 
 > ```
 
-The user has to set the the `enum` type to `RuleFormat` for the DecisionTable to be rendered based on rule format.
+The user has to set the `enum` type to `RuleFormat` for the DecisionTable to be rendered based on rule format.
 
 The value for the rule format is set at the time of rule creation to either basic or advanced mode depending on which the entire rule will be rendered based on basic mode or advanced mode.
 
