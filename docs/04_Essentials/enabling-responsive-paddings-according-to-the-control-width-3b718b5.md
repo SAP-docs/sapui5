@@ -548,5 +548,5 @@ To call the utility, when initializing the control, use:
 MyCustomControl._initResponsivePaddingsEnablement()
 ```
 
-As a result, application developers will be able to use classes, such as `sapUiResponsivePadding—header` and `sapUiResponsivePadding--content`, to enable the paddings on the respective element.
+As a result, application developers will be able to use classes, such as `sapUiResponsivePadding--header` and `sapUiResponsivePadding--content`, to enable the paddings on the respective element.
 
