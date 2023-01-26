@@ -33,14 +33,14 @@ In the SAP Web IDE, open the folder structure of the Manage Products project and
 
 > ### Sample Code:  
 > ```
-> <core:View xmlns:core="sap.ui.core" xmlns="sap.m">
+> <mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
 > 	<VBox>
 > 		<TextArea id="DescriptionTextArea" 
 > 				value="{to_ProductTextInOriginalLang/Description}"
 > 				width="30%" 
 > 				editable="false"/>
 > 	</VBox>
-> </core:View>		
+> </mvc:View>		
 > ```
 
 
