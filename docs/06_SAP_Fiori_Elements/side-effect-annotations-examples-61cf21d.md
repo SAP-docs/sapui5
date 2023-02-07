@@ -77,7 +77,7 @@ You define side effects either in the \*`MPC_EXT` class or in the local annotati
 >     >     lo_collection->create_simple_value( )->set_property_path( 'PurchasingOrganization' )  ##NO_TEXT.
 >     > ```
 > 
-> -   User changes a source property and the system refreshes the price
+> -   User changes the source properties and the system refreshes the price
 > 
 >     > ### Sample Code:  
 >     > XML Annotation
@@ -90,7 +90,7 @@ You define side effects either in the \*`MPC_EXT` class or in the local annotati
 >     >                 <Collection>
 >     >                     <PropertyPath>Amount</PropertyPath>
 >     >                     <PropertyPath>Discount</PropertyPath>
->     >                     <PropertyPath>Product</PropertyPath>
+>     >                     <PropertyPath>ProductDetail/DeliveryLocations</PropertyPath>// Source property poinnting to multi input field
 >     >                 </Collection>
 >     >             </PropertyValue>
 >     >             <PropertyValue Property="TargetProperties">

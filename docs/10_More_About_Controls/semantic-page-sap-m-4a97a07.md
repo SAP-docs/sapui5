@@ -81,7 +81,7 @@ The ordering logic of custom and semantic content is as follows from left to rig
 
 In the `sap.m` library, the semantic page controls are`sap.m.semantic.FullscreenPage`,`sap.m.semantic.MasterPage`, and `sap.m.semantic.DetailPage`. They have different purpose depending on the context:
 
-For split-screen \(Master-Detail\) scenarios, apps should use `sap.m.semantic.MasterPage` together with `sap.m.semantic.DetailPage`:
+For split-screen \(List-Detail\) scenarios, apps should use `sap.m.semantic.MasterPage` together with `sap.m.semantic.DetailPage`:
 
 ```xml
 <mvc:View
@@ -132,7 +132,7 @@ displayBlock="true">
 
 ### Adding semantic content:
 
-The three semantic pages inherit from the abstract `sap.m.semantic.SemanticPage` control and each supports content that semantically belongs to its master/detail/fullscreen context.
+The three semantic pages inherit from the abstract `sap.m.semantic.SemanticPage` control and each supports content that semantically belongs to its list/detail/fullscreen context.
 
 For example, as the master part usually contains a list of items to be selected, so `sap.m.semantic.MasterPage` supports semantic controls for common operations on a list of items, such as sort, filter, group and multiselect:
 
@@ -168,7 +168,7 @@ For example, as the master part usually contains a list of items to be selected,
 </SplitContainer>
 ```
 
-The `DetailPage` usually displays extended information for the item that was selected in the master part, therefore the `sap.m.semantic.DetailPage` also supports controls for operations like editing and sharing:
+The `DetailPage` usually displays extended information for the item that was selected in the list part, therefore the `sap.m.semantic.DetailPage` also supports controls for operations like editing and sharing:
 
 ```xml
 ...

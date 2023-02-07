@@ -10,7 +10,7 @@ SAPUI5 developers have to consider the text directionality when implementing new
 
 You should develop the control as usual, with only left-to-right \(LTR\) direction in mind.
 
--   You don't need any RTL-specific CSS classes and you shouldn't write RTL-specific styles into a CSS file.
+-   You shouldn't add any RTL-specific CSS classes and you shouldn't write RTL-specific styles into a CSS file.
 
 -   You shouldn't use CSS properties related to RTL.
 
@@ -31,7 +31,7 @@ You can test your control by setting the URL parameter `sap-ui-rtl` to `true`. T
 
 ## RTL Mode in Text-Displaying Controls
 
-Languages that have RTL text directionality keep the default directionality of numeric values and texts in LTR mode. In order to handle these cases, SAPUI5 uses two additional API properties - `textDirection` and `textAlign`. You can find detailed information on how to use these properties in the section *Related Information*.
+Languages that have RTL text directionality keep the default directionality of numeric values and texts in LTR mode. In order to handle these cases, SAPUI5 uses two additional API properties - `textDirection` and `textAlign`. You can find detailed information on how to use these properties in the *Related Information* section.
 
 **Related Information**  
 

@@ -269,7 +269,7 @@ Latest 2 versions
 </td>
 <td valign="top">
 
-Latest 2 versions
+Latest version
 
 
 
@@ -281,9 +281,9 @@ Latest 2 versions
 
 
 </td>
-<td valign="top" align="center">
+<td valign="top">
 
-\-
+Latest version
 
 
 
@@ -327,14 +327,14 @@ Phone and Tablet<sup>5, 6</sup>
 </td>
 <td valign="top">
 
-Latest 2 versions
+Latest version
 
 
 
 </td>
 <td valign="top">
 
-Latest 2 versions
+Latest version
 
 
 
@@ -443,7 +443,7 @@ Latest version
 </table>
 
 1\) The specified browsers are also supported in virtual environments, such as Citrix and VMware. Any issues found must be reproducible in a non-virtualized environment.  
- 2\) SAPUI5 detects Microsoft Edge \(Chromium\) as Google Chrome and treats it the same.  
+ 2\) SAPUI5 detects Microsoft Edge \(Chromium\) as Google Chrome and treats it the same. If your personal or your organization’s tracking prevention settings within Microsoft Edge are too strict, `*hana.ondemand.com` addresses are blocked. To prevent this, load SAPUI5 from `https://ui5.sap.com/`.  
  3\) We use current Apple iPhone and iPad devices for testing and reproducing the reported issues.  
  4\) Android-based devices are very fragmented in matters of operating system variants and hardware diversity. We use current Samsung Galaxy S and Galaxy Tab S series devices for testing and reproducing the reported issues.  
  5\) Not supported for `sap.ui.commons` and `sap.ui.ux3`.  
