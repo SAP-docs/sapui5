@@ -22,15 +22,15 @@ You can create apps using the following SAP Fiori elements floorplans:
 
      ![](images/Using_SAP_Fiori_Elements_Floorplans_Object_Page_563b849.png "Object Page") 
 
--   [Worklist](worklist-d1d588f.md)
+-   [Analytical List Page](analytical-list-page-3d33684.md)
 
-    A worklist displays a collection of items to be processed by the user. There is no need for sophisticated filtering. Working through the item list usually involves reviewing details of the list items and taking action. In most cases, the user has to either complete a work item or delegate it.
+    The analytical list page \(ALP\) offers a unique way to analyze data step by step from different perspectives, to investigate a root cause through drilldown, and to act on transactional content. You can use SAP Fiori elements to build apps that require visualization and reporting of data using filters, interactive charts, and other data points such as KPIs \(key performance indicators\).
 
        
       
-    **Worklist**
+    **Analytical List Page**
 
-     ![](images/Using_SAP_Fiori_Elements_Floorplans_Worklist_0393ce6.png "Worklist") 
+     ![](images/Using_SAP_Fiori_Elements_Floorplans_Analytical_List_Page_897c8d0.png "Analytical List Page") 
 
 -   [Overview Pages](overview-pages-c64ef8c.md)
 
@@ -42,15 +42,15 @@ You can create apps using the following SAP Fiori elements floorplans:
 
      ![](images/Using_SAP_Fiori_Elements_Floorplans_Overview_Page_e83a616.png "Overview Page") 
 
--   [Analytical List Page](analytical-list-page-3d33684.md)
+-   [Worklist](worklist-d1d588f.md)
 
-    The analytical list page \(ALP\) offers a unique way to analyze data step by step from different perspectives, to investigate a root cause through drilldown, and to act on transactional content. You can use SAP Fiori elements to build apps that require visualization and reporting of data using filters, interactive charts, and other data points such as KPIs \(key performance indicators\).
+    A worklist displays a collection of items to be processed by the user. There is no need for sophisticated filtering. Working through the item list usually involves reviewing details of the list items and taking action. In most cases, the user has to either complete a work item or delegate it.
 
        
       
-    **Analytical List Page**
+    **Worklist**
 
-     ![](images/Using_SAP_Fiori_Elements_Floorplans_Analytical_List_Page_897c8d0.png "Analytical List Page") 
+     ![](images/Using_SAP_Fiori_Elements_Floorplans_Worklist_0393ce6.png "Worklist") 
 
 
 Generic information that applies to all floorplans can be found under [How To Use SAP Fiori Elements](how-to-use-sap-fiori-elements-20de950.md).

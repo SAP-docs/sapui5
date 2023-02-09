@@ -10,12 +10,12 @@ You configure visual filters by enhancing the `ValueList` annotation associated 
 
 Application developers must ensure that the records available via the value help entity set associated with the visual filter are the same as the records available via the value help entity set associated with the regular filter field. This is required for a smooth sync of the selected values across the different filter modes.
 
-The visual filter includes only the first measure and dimension from the first chart annotation within the specified `PresentationVariantQualifier`. Make sure that the dimension you specify in the chart and the `ValueListProperty` of the `OUT` parameter is the same. You can also define a `SortOrder` property in the `PresentationVariant` annotation to control the sort order based on a sort field.
+The visual filter includes only the first measure and dimension from the first chart annotation within the specified `PresentationVariantQualifier`. Make sure that the dimension you specify in the chart and the `ValueListProperty` of the `OUT` parameter is the same. You can also define a `SortOrder` property in the `PresentationVariant` annotation to control the sort order.
 
 > ### Note:  
 > Sorting in visual filters is based on this logic:
 > 
-> -   For the bar chart \(and in SAP Fiori elements for OData V2 also for the donut chart type\), sorting is always based on the measure displayed \(the default is descending order\). To change the sort order property, define the `SortOrder` property in the `PresentationVariant` annotation.
+> -   For the bar chart \(and in SAP Fiori elements for OData V2 also for the donut chart type\), sorting is always based on the measure displayed \(the default is descending order\). To change the sort order, define the `SortOrder` property in the `PresentationVariant` annotation.
 > -   For line charts with time-based dimensions, sorting is always based on the dimension displayed in ascending order, however, only the last six time periods are displayed.
 > 
 >     The sorting by the annotation is ignored for time-based dimensions for line-charts in the visual filter.

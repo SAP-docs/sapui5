@@ -9,7 +9,7 @@ The following code shows an example how the configuration is added to activate t
 ```html
 
 <script id="sap-ui-bootstrap"
-  src="resources/sap-ui-cachebuster/sap-ui-core.js"
+  src="resources/sap-ui-core.js"
   data-sap-ui-libs="sap.ui.core,sap.m,sap.ui.table"
   data-sap-ui-theme="sap_belize"
   data-sap-ui-appCacheBuster="./"></script>

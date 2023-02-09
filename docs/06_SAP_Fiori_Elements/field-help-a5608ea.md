@@ -233,7 +233,7 @@ The `"ParentService"` in the annotation sample is an alias defined for the main 
 
 ### Title of the Value Help Dialog
 
-By default, the value help dialog uses the label annotation of the property as its title.
+If the DataField annotation for the field has a label property, it is used as the title of the value help dialog. If it doesn't, the label annotation of the property is used instead.
 
 Context-dependent value help uses the label defined in the `ValueList`. If no label is defined, the property label is used instead.
 

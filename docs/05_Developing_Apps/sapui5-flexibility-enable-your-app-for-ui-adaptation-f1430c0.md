@@ -56,7 +56,7 @@ Stable IDs are used to identify the controls that can be changed via UI adaptati
 If your app is based on SAP Fiori elements, it automatically generates IDs for its controls. You only have to set stable IDs if you use extension points to modify it, for example to add an additional view.
 
 > ### Caution:  
-> Never change the IDs when you're creating the next version of your app if the app was already delivered. Otherwise you'd risk inconsistencies and the loss of UI changes that a key user might have done in the delivered version.
+> Never change or delete the IDs when you're creating the next version of your app if the app was already delivered. Otherwise you'd risk inconsistencies and the loss of UI changes that a developer \(in an adaptation project\) or a key user might have done in the delivered version.
 
 > ### Tip:  
 > With the <code>Stable control IDs are required for SAPUI5 flexibility services</code> rule in the Support Assistant, you can check whether all controls have stable IDs. For more information, see [Stable IDs: All You Need to Know](stable-ids-all-you-need-to-know-f51dbb7.md).

@@ -149,9 +149,23 @@ SAP Fiori elements uses the `UI.LineItem` annotation and the `UI.Chart` annotati
 ### Annotation: PresentationVariant
 
 > ### Sample Code:  
-> XML Annotation
+> XML Annotation for SAP Fiori elements for OData V2
 > 
-> ```xxml
+> ```xml
+> "component": {
+>      "name": "sap.suite.ui.generic.template.ListReport",
+>      "list": true,
+>      "settings": {
+>           "annotationPath": "com.sap.vocabularies.UI.v1.SelectionPresentationVariant#DefaultSPV" // This can also point to PresentationVariant/SelectionVariant instead of SelectionPresentationVariant
+>      }
+> }
+> 
+> ```
+
+> ### Sample Code:  
+> XML Annotation for SAP Fiori elements for OData V4
+> 
+> ```xml
 > <Annotation Term="UI.PresentationVariant" Qualifier="DefaultPresentationVariant">
 >   <Record>
 >     <PropertyValue Property="Text" String="Default"/>
@@ -578,6 +592,10 @@ SAP Fiori elements uses the `UI.LineItem` annotation and the `UI.Chart` annotati
 
 -   For the list report, the `UI.Chart` annotation is only applicable when you use it within a multiple view scenario.
 
+    > ### Restriction:  
+    > This information isn't applicable to SAP Fiori elements for OData V4.
+
+
 -   For the analytical list page, the `UI.Chart` is only supported for the chart in the main content area. You can't use it within a multiple view scenario.
 
 
@@ -588,6 +606,11 @@ For more information, see [Defining Multiple Views on a List Report Table - Mult
 <a name="loio49a6ba5b8d6946208322a9f7e16837c2__section_mzt_mcw_sqb"/>
 
 ## Configuring the Default Visualization
+
+> ### Restriction:  
+> -   In SAP Fiori elements for OData V2, the information provided in the section isn't applicable to the object page.
+> 
+> -   In SAP Fiori elements for OData V4, the information provided in the section isn't applicable to the object page, analytical list page \(ALP\), and charts in the list report.
 
 To configure the default visualization, the `UI.SelectionPresentationVariant` must be defined against the main entity set.
 
@@ -621,9 +644,6 @@ If the application developer hasn't explicitly specified the `UI.SelectionPresen
 
 
 
-
-> ### Restriction:  
-> In SAP Fiori elements for OData V4, the information provided in the section above isn't applicable to the object page, analytical list page \(ALP\), and charts in the list report.
 
 
 

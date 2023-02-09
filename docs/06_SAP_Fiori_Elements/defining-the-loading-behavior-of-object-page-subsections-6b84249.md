@@ -47,7 +47,7 @@ You can use the properties `waitForHeaderData` and `waitForViewportEnter` to def
 >                         "component": {
 >                             "name": "sap.suite.ui.generic.template.ObjectPage",
 >                             "settings": {
->                                 "showConfirmationOnDraftActivate": false,
+>                                
 >                                 "sections": {
 >                                     "SalesOrderItemsID": {
 >                                         "navigationProperty": "to_Item",

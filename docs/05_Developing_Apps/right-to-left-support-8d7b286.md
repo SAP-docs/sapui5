@@ -4,7 +4,9 @@
 
 SAPUI5 application developers need to be aware of how applications behave when right-to-left \(RTL\) directionality is selected. Changing the directionality has a big impact on text-displaying controls, images and the alignment of the whole application.
 
-The default text direction is left-to-right \(LTR\). This can be changed to right-to-left mode \(RTL\) by using one of the following configuration switches:
+ SAPUI5 sets the RTL mode based on the current language which is usually picked automatically based on the locale configuration of the user’s browser or profile data.
+
+The default text direction is left-to-right \(LTR\). If you need to change the mode for testing purposes you can do it by using one of the following configuration switches:
 
 -   URL parameter `sap-ui-rtl=true`
 
@@ -15,5 +17,5 @@ The default text direction is left-to-right \(LTR\). This can be changed to righ
 -   Setting an RTL language as default language for the application.
 
 
-SAPUI5 then sets the overall page direction to RTL. All SAPUI5 content is then displayed in RTL mode. Self-written controls and content has to be tested separately. If you require manual styles, provide a style specifically for the RTL case by using `html[dir=rtl]`.
+SAPUI5 then sets the overall page direction to RTL and all SAPUI5 content is displayed in RTL mode. Self-written controls and content has to be tested separately. If your application comes with additional CSS and needs specific style rules for the RTL case, then use a selector starting with `html[dir=rtl]`.
 

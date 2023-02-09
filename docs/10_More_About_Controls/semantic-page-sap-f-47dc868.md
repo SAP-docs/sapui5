@@ -213,7 +213,7 @@ Adding custom \(non-semantic\) content
 
 <!-- Content -->
 <semantic:content>
-    <!-- Custom page-body content gies here -->
+    <!-- Custom page-body content goes here -->
    <Table
       id="idProductsTable"
       inset="false"

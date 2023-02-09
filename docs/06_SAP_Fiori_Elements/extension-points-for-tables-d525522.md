@@ -473,7 +473,7 @@ header
 </td>
 <td valign="top">
 
-any unicode string
+any Unicode string
 
 
 
@@ -733,9 +733,9 @@ The properties can be any that already exist in the annotations and that can be 
 
     If an error occurs while editing a custom column, the properties list is used to link the message to the column.
 
--   Export to spreadsheet
+-   Export to spreadsheet and PDF
 
-    Every property listed here will be exported into the spreadsheet. The basic export exports all properties in the same column, and the option *Split cells with multiple values* exports each property in a separate column. For more information, see [Using the Export Feature](using-the-export-feature-4bab6f2.md).
+    Every property listed here will be exported into the spreadsheet or PDF file. When you export to a spreadsheet, the basic export exports all properties in the same column, and the option *Split cells with multiple values* exports each property in a separate column. Custom columns without a properties list will not be exported. For more information, see [Using the Export Feature](using-the-export-feature-4bab6f2.md).
 
 
 

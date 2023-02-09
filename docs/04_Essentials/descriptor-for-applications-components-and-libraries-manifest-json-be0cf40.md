@@ -1170,6 +1170,29 @@ Version 50
 
 </td>
 </tr>
+<tr>
+<td valign="top">
+
+Version 51
+
+
+
+</td>
+<td valign="top">
+
+\>=1.110
+
+
+
+</td>
+<td valign="top">
+
+1.50.0
+
+
+
+</td>
+</tr>
 </table>
 
 For more information on the new fields introduced in each version, check out [Migration Information for Upgrading the Descriptor File](migration-information-for-upgrading-the-descriptor-file-a110f76.md)
@@ -2752,7 +2775,7 @@ Current version of the `manifest.json`
 ```
 
 {
-    "_version": "1.49.0",
+    "_version": "1.50.0",
  
     "start_url": "index.html",
  
@@ -3004,7 +3027,7 @@ Current version of the `manifest.json`
             }]
         },
         "dependencies": {
-            "minUI5Version": "1.109.0",
+            "minUI5Version": "1.110.0",
             "libs": {
                 "sap.m": {
                     "minVersion": "1.34.0"

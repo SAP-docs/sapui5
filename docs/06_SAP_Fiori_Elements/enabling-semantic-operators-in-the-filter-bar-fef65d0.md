@@ -9,7 +9,9 @@ You can use semantic date values, such as *Today* or *Last Week*, on the filter 
 ## Additional Features in SAP Fiori Elements for OData V2
 
 > ### Tip:  
-> Navigation to an external application always passes the actual date value that corresponds to the semantic date value that is used.
+> -   Navigation to an external application always passes the actual date value that corresponds to the semantic date value that is used.
+> 
+> -   The date range configuration that is defined in the manifest file is not applied to custom filters of type date range. For more information on custom filters, see [Adding Custom Fields to the Filter Bar](adding-custom-fields-to-the-filter-bar-5fb9f57.md).
 
 The semantic date control can be enabled for the fields in the filter bar by setting the `useDateRange` flag to `true` in the manifest. By default, the value is `false` and date picker control is rendered by the filter bar.
 
