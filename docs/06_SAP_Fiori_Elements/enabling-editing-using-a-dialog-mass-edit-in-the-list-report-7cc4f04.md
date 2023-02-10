@@ -5,11 +5,13 @@
 You can edit a single object or multiple objects using a dialog in the list report page.
 
 > ### Note:  
-> This topic is currently only applicable to SAP Fiori elements for OData V2.
+> For general information about enabling **Mass Edit**, see [Enabling Editing Using a Dialog \(Mass Edit\)](enabling-editing-using-a-dialog-mass-edit-965ef5b.md).
+> 
+> In SAP Fiori elements for OData V2, using the mass edit dialog is currently only available in the list report.
 
-When you select multiple objects, and use mass edit dialog, the values entered are applied for all objects.
+When you select multiple objects and use the mass edit dialog, the values entered are applied to all objects.
 
-When `multiEdit` is enabled, by default the dialog displays editable fields corresponding to columns that are currently displayed in the table. You can change the columns with table personalization. To enable, set the `multiEdit` property to `true` in the `manifest.json` file. When `multiEdit` is enabled, by default the dialog displays editable fields corresponding to columns that are currently displayed in the table. You can change the columns with table personalization.
+When `multiEdit` is enabled, by default the dialog displays editable fields corresponding to columns that are currently displayed in the table. You can change the columns with table personalization. To enable the editing of multiple objects, set the `multiEdit` property to `true` in the `manifest.json` file.
 
 > ### Sample Code:  
 > > ### Sample Code:  
@@ -31,9 +33,11 @@ When `multiEdit` is enabled, by default the dialog displays editable fields corr
 > >                     }
 > > ```
 
+When `MultiEdit` is enabled for an application, the option to edit appears in the table toolbar. You can select multiple records from the table and click *Mass Edit* to launch the mass edit dialog, as shown in the following screenshot.
+
  ![](images/Enabling_Mass_Editing_Through_Dialog_LR_914eba7.png) 
 
-You can also provide a `fieldgroup` annotation in the manifest with a particular qualifier to identify the multi-edit fields. The `dataFields` in the `fieldgroup` annotation are displayed as the multi-edit fields.
+You can also provide a `FieldGroup` annotation in the manifest with a particular qualifier to identify the `MultiEdit` fields. The `DataFields` in the `FieldGroup` annotation are displayed as the `MultiEdit` fields.
 
 To use a `fieldgroup`, add its annotation path in the `manifest.json` file:
 
@@ -82,11 +86,11 @@ To use a `fieldgroup`, add its annotation path in the `manifest.json` file:
 > ### Note:  
 > -   This feature is only supported for responsive tables.
 > 
-> -   This feature is currently not supported for smart multi-input fields, custom columns, and `dataFieldForAnnotations`.
+> -   This feature isnot supported for smart multi-input fields, custom columns, and `DataFieldForAnnotations`.
 > 
 > -   Only the properties of the entity sets are supported for mass edit.
 > 
-> -   The request for each selected instance is sent in a separate changeset within a single batch. If an error occurs for one or more selected instances when update is executed, the other selected instances are still executed.
+> -   The request for each selected instance is sent in a separate changeset within a single batch. If an error occurs for one or more selected instances when the update is executed, the other selected instances are still executed.
 
 
 
@@ -94,7 +98,7 @@ To use a `fieldgroup`, add its annotation path in the `manifest.json` file:
 
 ## Option to Ignore Certain Fields from the Mass Edit Dialog
 
-You can choose to hide certain fields from being displayed in key user adaptation. Do this to restrict the fields from being added to the Mass Edit dialog. You can restrict the fields by adding an `ignoredFields` list in the manifest, as shown in the following example:
+For key user adaptation, you can choose to hide certain fields from being displayed. You can do this to restrict the fields from being added to the mass edit dialog. You can restrict the fields by adding an `ignoredFields` list in the manifest, as shown in the following example:
 
 > ### Sample Code:  
 > Input for `ignoredFields` key must have comma separated values
@@ -117,10 +121,12 @@ You can choose to hide certain fields from being displayed in key user adaptatio
 
 ## Changing the Default Title
 
-Currently, the default title for the edit dialog is `Edit(X)`. You can override the default title of `multiedit` dialog by adding the `MULTI_EDIT_DIALOG_TITLE` key in the i18n file of the list report.
+Currently, the default title for the edit dialog is `Edit(X)`. You can override the default title of the `MultiEdit` dialog by adding the `MULTI_EDIT_DIALOG_TITLE` key in the i18n file of the list report.
 
 **Related Information**  
 
 
 [Replacing the Standard Save Functionality in Mass Edit Dialog](replacing-the-standard-save-functionality-in-the-mass-edit-dialog-492d8a9.md "You can enable custom save functionality for the mass edit dialog.")
+
+[Enabling Editing Using a Dialog \(Mass Edit\)](enabling-editing-using-a-dialog-mass-edit-965ef5b.md "Mass editing allows users to simultaneously change multiple objects that share the same editable properties.")
 

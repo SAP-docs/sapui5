@@ -10,7 +10,7 @@ Drafts are used as follows:
 
 -   To prevent data loss if an app terminates unexpectedly
 
--   
+
 When a user starts creating a new business entity or edits an existing one, a draft is created in the background. This enables field validation and dynamic field control \(showing additional fields based on user interaction\) and provides default values for fields based on recent data entry. A draft can be validated for consistency and completeness at any time. This returns a list of messages.As a locking mechanism to prevent multiple users from editing the same object at the same time, and to inform users about unsaved changes by another user.
 
 While the user is modifying a business entity, an indicator shows when a draft is saved implicitly. The user still needs to choose *Save* to incorporate the changes into an active business document.
@@ -92,6 +92,8 @@ On a draft version of a document, if you press [Enter\] on input fields, by defa
 The `PreparationAction` that is defined within the `DraftRoot` is called, even if you've pressed [Enter\] in the fields of the object page table, or in the subobject pages.
 
 The side effects, if configured, are also triggered upon pressing [Enter\]. The `PreparationAction` call is skipped if you've annotated `TriggerAction` in the global side effects under the corresponding entity. In this case, `TriggerAction` is called instead of `PreparationAction`. However, in case of side effects annotated with source properties and `TriggerAction`, `PreparationAction` call is not impacted. For more information, see [Using the Global Side Effect](using-the-global-side-effect-955ae31.md).
+
+For tablet and mobile devices, the object page displays the *Validate* button to execute the `PreparationAction` call. The side effects, if configured, are also triggered along with the validate action.
 
 
 

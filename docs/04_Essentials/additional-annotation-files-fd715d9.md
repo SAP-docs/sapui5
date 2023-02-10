@@ -71,3 +71,6 @@ If an additional property needs to be added, the term has to be repeated in the 
 </Annotations>
 ```
 
+> ### Note:  
+> Use the `ignoreAnnotationsFromMetadata` model parameter to ignore all annotations from service metadata. Only annotations from annotation files are then loaded. For more information, see  [ `v4.ODataModel#constructor`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataModel/constructor). This is an **experimental** API.
+

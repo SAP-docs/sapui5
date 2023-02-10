@@ -95,7 +95,7 @@ language-dependent message text
 <td valign="top" rowspan="2">
 
 -   path to the message target
--   `target` and `additionalTargets` are both mapped to the `sap.ui.core.message.Message.target` collection
+-   `target` and `additionalTargets` are both mapped to the transition message \(true\)`sap.ui.core.message.Message.target` collection
 
 
 
@@ -193,9 +193,9 @@ End user messages contain the following information:
 
 -   `technicalDetails` - technical details of the message
 
--   `transition` - specifies a message as a state \(false\) or a transition message \(true\)
+-   `transition`
 
--   `numericSeverity` – classification of end user messages; allowed values: 1 \(success\), 2 \(info\), 3 \(warning\), 4 \(error\); `numericSeverity` is mapped to the specific `sap.ui.core.MessageType`
+-   `numericSeverity` - specifies a m – classification of end user messages; allowed values: 1 \(success\), 2 \(info\), 3 \(warning\), 4 \(error\); `numericSeverity` is mapped to the specific `sap.ui.core.MessageType`
 
 -   `longtextUrl` – optional; is omitted if there is no long text available for the corresponding message.
 
@@ -620,7 +620,7 @@ The attribute `technicalDetails.originalMessage` of the message in the message m
 
 The attribute `technicalDetails.httpStatus` of an error message in the message model provides the numerical HTTP status code of the corresponding back-end request that failed.
 
--   In case of a 412 \("Precondition Failed"\) status code, additionally `technicalDetails.isConcurrentModification` is set to `true`, as in the case of  [sap.ui.model.odata.v4.Context\#delete](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.Context/methods/delete), which also uses this flag for the error instance that is used to reject its returned promise.
+-   In case of a 412 \("Precondition Failed"\) status code, either the functionality described in [Strict Handling](odata-operations-b54f789.md#loiob54f7895b7594c61a83fa7257fa9d13f__section_SH) takes effect, or `technicalDetails.isConcurrentModification` is set to `true`. An example of the latter is  [sap.ui.model.odata.v4.Context\#delete](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.Context/methods/delete), which also uses this flag for the error instance that is used to reject its returned promise.
 -   In case of a 503 \("Service Unavailable"\) status code, `technicalDetails.retryAfter` is set to an absolute `Date` value corresponding to the value of the ["Retry-After" HTTP response header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Retry-After), no matter if that header value is an HTTP date or a delay in seconds.
 
 

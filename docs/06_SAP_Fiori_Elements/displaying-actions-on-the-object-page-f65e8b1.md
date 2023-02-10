@@ -8,7 +8,7 @@ Specific rules apply when displaying actions on the object page.
 
 ## Order of Actions
 
-The order of actions is as follows:
+The default display of order of actions in the object page header is as follows:
 
 1.  Generic actions
 
@@ -19,6 +19,8 @@ The order of actions is as follows:
     They follow the order defined in the metadata.
 
 3.  Manifest-based custom actions
+
+    For more information on manifest-based custom actions, see [Adding Custom Actions Using Extension Points](adding-custom-actions-using-extension-points-7619517.md).
 
 4.  *Related Apps* button
 

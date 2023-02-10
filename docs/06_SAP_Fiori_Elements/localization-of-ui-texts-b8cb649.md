@@ -209,7 +209,7 @@ New Object
 </td>
 <td valign="top">
 
-Title for the *Create* dialog if `createWithParameterDialog` is configured. Users can change titles to for example, “Create Order” or “Create Contract”.
+Title for the *Create* dialog if `createWithParameterDialog` is configured. Users can change titles to, for example, “Create Order” or “Create Contract”.
 
 
 
@@ -285,6 +285,31 @@ Label for a button within the `NewAction` parameter dialog in the list report.
 </td>
 </tr>
 <tr>
+<td valign="top">
+
+ `MULTI_EDIT_DIALOG_TITLE` 
+
+
+
+</td>
+<td valign="top">
+
+Edit \(\{0\}\)
+
+
+
+</td>
+<td valign="top">
+
+Title for mass edit dialog in the list report page.
+
+Users can change titles to for example "Edit Purchase Orders \(\{0\}\)".
+
+
+
+</td>
+</tr>
+<tr>
 <td valign="top" colspan="3">
 
  **List Report Specific Key from `..>>lib>i18n`** 
@@ -349,7 +374,9 @@ Text displayed within the delete confirmation dialog that comes up when a user s
 </td>
 <td valign="top">
 
-Another user edited this object without saving the changes\\: \\n\{1\} \\n\\nDelete anyway?
+Another user edited this object without saving the changes: \{1\}
+
+Delete anyway?
 
 
 
@@ -372,7 +399,9 @@ Text displayed within the delete confirmation dialog that comes up when a user s
 </td>
 <td valign="top">
 
-Other users have edited the selected objects without saving the changes. \\n\\nDelete them anyway?
+Other users have edited the selected objects without saving the changes.
+
+Delete them anyway?
 
 
 
@@ -556,7 +585,9 @@ Text displayed within the confirmation dialog when a user select some objects th
 </td>
 <td valign="top">
 
-The remaining object has unsaved changes. \\n\\nDo you still want to delete it?
+The remaining object has unsaved changes.
+
+Do you still want to delete it?
 
 
 
@@ -579,7 +610,9 @@ Text displayed within the confirmation dialog when a user select some objects th
 </td>
 <td valign="top">
 
-The remaining objects have unsaved changes by other users. \\n\\nDo you still want to delete them?
+The remaining objects have unsaved changes by other users.
+
+Do you still want to delete them?
 
 
 
@@ -602,14 +635,14 @@ Text displayed within the confirmation dialog when a user select some objects th
 </td>
 <td valign="top">
 
-Objects were deleted
+Objects were deleted.
 
 
 
 </td>
 <td valign="top">
 
-Message toast text when deletion of multiple object is successful.
+Message toast text when deletion of multiple objects is successful.
 
 
 
@@ -632,7 +665,7 @@ The selected object cannot be deleted.
 </td>
 <td valign="top">
 
-Message toast text when object can’t be deleted from backend.
+Message toast text when an object can’t be deleted from back end.
 
 
 
@@ -657,7 +690,9 @@ Message toast text when object can’t be deleted from backend.
 </td>
 <td valign="top">
 
-Another user edited this object without saving the changes\\:\\n\\n \{0\} \\n\\n If you take over, any changes will be lost.
+Another user edited this object without saving the changes: \{0\}
+
+If you take over, any changes will be lost.
 
 
 
@@ -733,7 +768,7 @@ Please wait while the data is loading...
 </td>
 <td valign="top">
 
-Appears in the samrt table within the object page when data is loading.
+Appears in the smart table within the object page when data is loading.
 
 
 
@@ -749,7 +784,7 @@ Appears in the samrt table within the object page when data is loading.
 </td>
 <td valign="top">
 
-You haven\\u2019t made any changes
+You haven't made any changes
 
 
 
@@ -802,7 +837,7 @@ Delete this object \(\{1\} \{2\}\)?
 </td>
 <td valign="top">
 
-Text displayed within the delete confirmation dialog with both the title and description is available for the object and the app is open in the fixed column layout mode.
+Text displayed within the delete confirmation dialog with both the title and description is available for the object and the app is open in the flexible column layout mode.
 
 
 
@@ -1186,7 +1221,9 @@ Text displayed in a message popover when a user has configured the `InsertRestri
 </td>
 <td valign="top">
 
-Another user edited this object without saving the changes\\: \\n\{1\} \\nIf you take over, any changes will be lost.
+Another user edited this object without saving the changes: \{1\}
+
+If you take over, any changes will be lost.
 
 
 
@@ -1280,7 +1317,7 @@ Message toast text upon the successful deletion of the object.
 <tr>
 <td valign="top" colspan="3">
 
- **List Report and Object Page Keys from `..>>lib>i18n`** 
+ **List Report, Object Page and Analytical List Page Keys from `..>>lib>i18n`** 
 
 
 
@@ -1296,7 +1333,9 @@ Message toast text upon the successful deletion of the object.
 </td>
 <td valign="top">
 
-You cannot edit this object at the moment \\nIt is locked by \{0\}
+You cannot edit this object at the moment.
+
+It is locked by \{0\}
 
 
 
@@ -1464,7 +1503,7 @@ There is no data for the selected filter criteria and chart view.
 </td>
 <td valign="top">
 
-Text displayed in the list report page chart when no data is found.
+Text displayed in the list report chart when no data is found.
 
 
 
@@ -1487,7 +1526,7 @@ No data found. Try adjusting the filter parameters.
 </td>
 <td valign="top">
 
-Text displayed in the object page chart when no data is found after the filters are applied.
+Text displayed in the list report chart when the data load is not triggered with some filters and no data is found for the selected filters.
 
 
 
@@ -1503,14 +1542,14 @@ Text displayed in the object page chart when no data is found after the filters 
 </td>
 <td valign="top">
 
-To start, set the relevant filters.
+To start, set the relevant filters and choose "Go".
 
 
 
 </td>
 <td valign="top">
 
-Text displayed in the list report page chart when the data load is triggered.
+Text displayed in the list report chart when the data load is triggered.
 
 
 
@@ -1533,7 +1572,30 @@ No data found.
 </td>
 <td valign="top">
 
-Text displayed in the list report page chart when no data is found after clicking *Go* without setting any filters.
+Text displayed in the list report table, when the table is empty after clicking "Go" without setting any filters.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `NODATA_SMARTTABLE_LR` 
+
+
+
+</td>
+<td valign="top">
+
+To start, set the relevant filters and choose "Go".
+
+
+
+</td>
+<td valign="top">
+
+Text displayed in the list report table, when no search is triggered.
 
 
 
@@ -1556,7 +1618,7 @@ No data found. Try adjusting the search or filter criteria.
 </td>
 <td valign="top">
 
-Text displayed in the list report page table when no data is found after applying filters.
+Text displayed in the list report table when no data is found after applying filters.
 
 
 
@@ -1579,7 +1641,7 @@ There is no data for the selected filter criteria and table view.
 </td>
 <td valign="top">
 
-Text displayed in the list report page table when no data is found for a view in case of multi view application.
+Text displayed in the list report table when no data is found for a view in case of multi view application.
 
 
 
@@ -1756,7 +1818,7 @@ Text displayed in the message strip above the smart table in the list report whe
 </td>
 <td valign="top">
 
-You can''t filter by \\"\{0\}\\" on the \\"\{1\}\\" tab.
+You can't filter by \\"\{0\}\\" on the \\"\{1\}\\" tab.
 
 
 
@@ -1825,7 +1887,9 @@ Text displayed in the message strip above the smart table in the list report whe
 </td>
 <td valign="top">
 
-You\\u2019ve made changes to this object.\\nWhat would you like to do?
+You haven't made changes to this object.
+
+What would you like to do?
 
 
 
@@ -1848,7 +1912,9 @@ Text displayed within the discard confirmation dialog when a user navigates away
 </td>
 <td valign="top">
 
-You haven\\u2019t created this object yet.\\nWhat would you like to do?
+You haven't created this object yet.
+
+What would you like to do?
 
 
 
@@ -1880,14 +1946,14 @@ Text displayed within the discard confirmation dialog when a user navigates away
 </td>
 <td valign="top">
 
-To start, set the relevant filters
+To start, set the relevant filters and choose "Go".
 
 
 
 </td>
 <td valign="top">
 
-No data text is displayed for on load of the smart chart.
+Text displayed in the analytical list page smart chart when no search is triggered.
 
 
 
@@ -1903,14 +1969,14 @@ No data text is displayed for on load of the smart chart.
 </td>
 <td valign="top">
 
-To start, set the relevant filters
+To start, set the relevant filters and choose "Go".
 
 
 
 </td>
 <td valign="top">
 
-No data text is displayed for on load of the smart table.
+Text displayed in the analytical list page smart table when no search is triggered.
 
 
 
@@ -1926,7 +1992,7 @@ No data text is displayed for on load of the smart table.
 </td>
 <td valign="top">
 
-Some of the filters aren''t relevant for the tab \\"\{1\}\\" \(\{0\}\). Settings these filters has no effect on the results.
+Some of the filters arent relevant for the tab \\"\{1\}\\" \(\{0\}\). Settings these filters has no effect on the results.
 
 
 
@@ -1949,7 +2015,7 @@ Text displayed in the message strip when a user select filters and a few of them
 </td>
 <td valign="top">
 
-You can''t use the following filters on the \\"\{1\}\\" tab\\: \\"\{0\}\\"
+You can't use the following filters on the \\"\{1\}\\" tab\\: \\"\{0\}\\"
 
 
 
@@ -2478,7 +2544,7 @@ Error message description/detail text when a user enters a value in the field of
 </td>
 <td valign="top">
 
-This object is currently locked by \{0\} and cannot be deleted.
+This object is currently locked by \{0\} so it cannot be deleted.
 
 
 
@@ -2692,7 +2758,7 @@ Applications should overwrite the default text with the concrete object.
 </td>
 <td valign="top">
 
-Do you still want to delete the remaining \{0\} objects?
+Do you still want to delete the remaining objects?
 
 
 
@@ -2700,8 +2766,6 @@ Do you still want to delete the remaining \{0\} objects?
 <td valign="top">
 
 Message text used in the confirmation message box when a user clicks the *Delete* button for multiple selected objects, some of which cannot be deleted.
-
-Parameter: \{0\} = number of objects that can be deleted
 
 
 
@@ -2790,7 +2854,7 @@ Applications should overwrite the default text with the concrete object.
 </td>
 <td valign="top">
 
-\{0\} out of \{1\} objects are currently locked so they cannot be deleted.
+\{0\} out of \{1\} selected objects have delete restrictions so they cannot be deleted.
 
 
 
@@ -2824,7 +2888,7 @@ Applications should overwrite the default text with the concrete objects.
 </td>
 <td valign="top">
 
-\{0\} out of \{1\} objects are currently locked.
+\{0\} out of \{1\} objects are currently locked so they cannot be deleted.
 
 
 
@@ -2858,7 +2922,7 @@ Applications should overwrite the default text with the concrete objects.
 </td>
 <td valign="top">
 
-1 out of \{0\} objects is currently locked.
+1 out of \{0\} selected objects is currently locked by \{1\} so it cannot be deleted.
 
 
 
@@ -2867,7 +2931,7 @@ Applications should overwrite the default text with the concrete objects.
 
 Message text used in the confirmation message box when a user clicks the *Delete* button.
 
-Parameters: \{0\} = number of selected objects
+Parameters: \{0\} = number of selected objects, \{1\} = user who has the lock on the object
 
 
 
@@ -2902,6 +2966,8 @@ Do you still want to delete it?
 <td valign="top">
 
 Warning message text on the delete popover when a user tries to delete an object that has unsaved changes from another user.
+
+Parameters: \{0\} = user who has unsaved changes on the object.
 
 
 
@@ -2968,6 +3034,8 @@ Also delete objects with unsaved changes by \{0\}?
 <td valign="top">
 
 Text used for the checkbox in the delete confirmation dialog to confirm if a user also wants to delete the single object from the selected objects that has changes from other users.
+
+Parameters: \{0\} = user who has unsaved changes on the object.
 
 
 
@@ -4138,6 +4206,66 @@ Also delete own drafts of the non-deletable objects?
 <td valign="top">
 
 Text to confirm with the user if the associated own draft of the selected object should be deleted when there are many objects from the selected objects that are non-deletable but have their own draft.
+
+
+
+</td>
+<td valign="top">
+
+Applications should overwrite the default text with the concrete objects.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `C_TRANSACTION_HELPER_CONFIRM_DELETE_WITH_SINGLE_AND_ONE_OBJECT_NON_DELETABLE` 
+
+
+
+</td>
+<td valign="top">
+
+The selected object has delete restrictions so it cannot be deleted.
+
+
+
+</td>
+<td valign="top">
+
+Text used when a single object \(with own draft\) is selected and this object is not deletable.
+
+
+
+</td>
+<td valign="top">
+
+Applications should overwrite the default text with the concrete objects.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `C_TRANSACTION_HELPER_CONFIRM_DELETE_WITH_MULTIPLE_AND_ALL_OBJECT_NON_DELETABLE` 
+
+
+
+</td>
+<td valign="top">
+
+The selected objects have delete restrictions so they cannot be deleted.
+
+
+
+</td>
+<td valign="top">
+
+Text used when all selected objects are not deletable but at least one of them has its own draft.
 
 
 

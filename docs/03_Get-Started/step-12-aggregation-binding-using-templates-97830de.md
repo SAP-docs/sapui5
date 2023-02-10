@@ -63,7 +63,7 @@ sap.ui.require([
 		// Assign the model object to the SAPUI5 core
 		sap.ui.getCore().setModel(oModel);
 
-		var oResourceBundle = new ResourceModel({
+		var oResourceModel = new ResourceModel({
 			bundleName: "sap.ui.demo.db.i18n.i18n",
 			supportedLocales: ["", "de"],
 			fallbackLocale: ""

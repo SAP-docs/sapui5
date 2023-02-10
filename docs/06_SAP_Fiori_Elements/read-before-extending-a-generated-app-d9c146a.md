@@ -11,7 +11,7 @@ Before you start creating an extension for your app, make sure you have read the
 
 Take the following into account:
 
--   Implementing an extension in your app means that the coding lies withing the application's responsibility.
+-   Implementing an extension in your app means that the coding lies within the application's responsibility.
 -   Create extensions based only on the use cases described in this documentation.
 
 

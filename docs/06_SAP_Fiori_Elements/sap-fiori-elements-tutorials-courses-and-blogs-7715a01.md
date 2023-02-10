@@ -1,10 +1,10 @@
 <!-- loio7715a0167f4443d3a03751be3b3127d1 -->
 
-# SAP Fiori Elements Tutorials
+# SAP Fiori Elements Tutorials, Courses, and Blogs
 
-Check out the tutorials we've provided for you.
+Check out the learning resources we've provided for you.
 
-The list is continually growing. Learing resources are provided on different channels:
+The list is continually growing. Our learing resources are provided on the following different channels:
 
 Tutorials
 
@@ -20,5 +20,12 @@ Tutorials
 Courses
 
 -   [Developing and Extending SAP Fiori Elements Apps](https://open.sap.com/courses/fiori-ea1)
+
+
+Blogs
+
+-   [The SAP Fiori elements feature showcase with CAP CDS annotations](https://blogs.sap.com/2021/12/07/the-sap-fiori-elements-feature-showcase-with-cap-cds-annotations/)
+
+-   [The SAP Fiori Elements feature showcase with RAP and ABAP CDS annotations](https://blogs.sap.com/2022/12/19/the-sap-fiori-elements-feature-showcase-with-rap-and-abap-cds-annotations/)
 
 

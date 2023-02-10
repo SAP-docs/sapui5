@@ -106,7 +106,7 @@ The message popover consists of the following components:
       
     **Message Popover: Chevron Navigation to Message Details**
 
-     
+     ![](images/Message_Popover_Chevron_Navigation_to_Details_671213a.png "Message Popover: Chevron Navigation to Message Details") 
 
 
 Navigation is also supported from the messages. This allows end users to navigate directly to the place where the error/warning occurs on the UI by simply clicking on the respective message in the message popover.
@@ -140,7 +140,7 @@ The message dialog consists of the following components:
       
     **Message Dialog: Chevron Navigation to Message Details**
 
-     
+     ![](images/Message_Dialog_Chevron_Navigation_to_Details_6971667.png "Message Dialog: Chevron Navigation to Message Details") 
 
 
 
