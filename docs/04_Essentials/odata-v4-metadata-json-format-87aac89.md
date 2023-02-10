@@ -119,9 +119,11 @@ The following JSON file represents the metadata document which corresponds to `G
       "$Partner" : "<7.1.4 NavigationProperty Partner>", // optional
       "$ContainsTarget" : true, // omit in case of default value: false
       "$ReferentialConstraint" : {
-        "<7.2.1 ReferentialConstraint Property>" : "<7.2.2 ReferentialConstraint ReferencedProperty>"
+        "<7.2.1 ReferentialConstraint Property>" : "<7.2.2 ReferentialConstraint ReferencedProperty>",
+        "<7.2.1 ReferentialConstraint Property>@..." : <value>
       }, // optional
-      "$OnDelete" : "<7.3.1. OnDelete Action>" // optional
+      "$OnDelete" : "<7.3.1. OnDelete Action>", // optional
+      "$OnDelete@..." : "<value>"
     },
   },
   "<5.1.1 Schema Namespace>.<9.1.1 ComplexType Name>" : {
@@ -740,5 +742,5 @@ The record itself is a map:
 
 [OData JSON Format for Common Schema Definition Language \(CSDL\) Version 4.0](http://docs.oasis-open.org/odata/odata-json-csdl/v4.0/odata-json-csdl-v4.0.html)
 
-[OData Version 4.0 Part 3: Common Schema Definition Language \(CSDL\) Plus Errata 02](http://docs.oasis-open.org/odata/odata-json-csdl/v4.0/odata-json-csdl-v4.0.html)
+[OData Version 4.0 Part 3: Common Schema Definition Language \(CSDL\) Plus Errata 03](https://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part3-csdl.html)
 

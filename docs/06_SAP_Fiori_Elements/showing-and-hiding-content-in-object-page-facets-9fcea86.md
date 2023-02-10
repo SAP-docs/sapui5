@@ -107,7 +107,7 @@ To enable this feature, set the `UI.PartOfPreview` annotation of the relevant re
 > ### Sample Code:  
 > ABAP CDS Annotation
 > 
-> No ABAP CDS annotation sample is available. Please use the local XML annotation.
+> No ABAP CDS annotation sample is available. Use the local XML annotation.
 
 > ### Sample Code:  
 > CAP CDS Annotation
@@ -124,5 +124,12 @@ To enable this feature, set the `UI.PartOfPreview` annotation of the relevant re
 > ```
 
 > ### Note:  
-> This feature is available for data fields that are included in a visible reference facet. You cannot use this feature for data fields that are part of a reference facet that is initially hidden \(this means that nesting of the `UI.PartOfPreview` annotation is not possible\).
+> This feature is available for data fields that are included in a visible reference facet. You can't this feature for data fields that are part of a reference facet that is initially hidden \(this means that nesting of the `UI.PartOfPreview` annotation isn't possible.
+
+
+
+### Using *Show More* and *Show Less* Buttons
+
+> ### Restriction:  
+> This feature is applicable only to reference facets that have a `FieldGroup` as their target, for instance a form representation. This feature isn't applicable to other target types, for instance reference facets that point to a table or a chart.
 

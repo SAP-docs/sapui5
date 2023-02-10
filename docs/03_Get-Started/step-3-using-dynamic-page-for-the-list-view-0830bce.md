@@ -1,8 +1,8 @@
 <!-- loio0830bce271bf42d98c2740bed43d435d -->
 
-# Step 3: Using Dynamic Page for the Master View
+# Step 3: Using Dynamic Page for the List View
 
-In this step, we create the master view of the app using `sap.f.DynamicPage` control.
+In this step, we create the list view of the app using `sap.f.DynamicPage` control.
 
 
 
@@ -12,9 +12,9 @@ In this step, we create the master view of the app using `sap.f.DynamicPage` con
 
    
   
-**Master page with sap.f.DynamicPage**
+**List page with sap.f.DynamicPage**
 
- ![](images/DynamicPage_for_the_Master_View_Fiori_2_0_Tutorial_b31948b.gif "Master page with sap.f.DynamicPage") 
+ ![](images/DynamicPage_for_the_Master_View_Fiori_2_0_Tutorial_b31948b.gif "List page with sap.f.DynamicPage") 
 
 
 
@@ -126,11 +126,11 @@ We create the `init` method in the `Component.js` to set the model.
 
 <a name="loio0830bce271bf42d98c2740bed43d435d__section_shq_mjj_l4b"/>
 
-## webapp/view/Master.view.xml \[NEW\]
+## webapp/view/List.view.xml \[NEW\]
 
 ```xml
 <mvc:View
-	controllerName="sap.ui.demo.fiori2.controller.Master"
+	controllerName="sap.ui.demo.fiori2.controller.List"
 	xmlns="sap.m"
 	xmlns:f="sap.f"
 	xmlns:mvc="sap.ui.core.mvc">
@@ -205,7 +205,7 @@ We create the `init` method in the `Component.js` to set the model.
 </mvc:View>
 ```
 
-We create the master view using `sap.f.DynamicPage`. The page consists of a list with all products.
+We create the list view using `sap.f.DynamicPage`. The page consists of a list with all products.
 
 
 
@@ -221,19 +221,19 @@ We create the master view using `sap.f.DynamicPage`. The page consists of a list
 	xmlns:mvc="sap.ui.core.mvc">
 	<FlexibleColumnLayout id="flexibleColumnLayout" backgroundDesign="Solid">
 		<beginColumnPages>
-			<mvc:XMLView id="beginView" viewName="sap.ui.demo.fiori2.view.Master"/>
+			<mvc:XMLView id="beginView" viewName="sap.ui.demo.fiori2.view.List"/>
 		</beginColumnPages>
 	</FlexibleColumnLayout>
 </mvc:View>
 ```
 
-We add the master view in `FlexibleColumnLayout's` `beginColumnPages` aggregation.
+We add the list view in `FlexibleColumnLayout's` `beginColumnPages` aggregation.
 
 
 
 <a name="loio0830bce271bf42d98c2740bed43d435d__section_ovn_jjj_l4b"/>
 
-## webapp/controller/Master.controller.js \[NEW\]
+## webapp/controller/List.controller.js \[NEW\]
 
 ```js
 sap.ui.define([
@@ -246,7 +246,7 @@ sap.ui.define([
 ], function (JSONModel, Controller, Filter, FilterOperator, Sorter, MessageBox) {
 	"use strict";
 
-	return Controller.extend("sap.ui.demo.fiori2.controller.Master", {
+	return Controller.extend("sap.ui.demo.fiori2.controller.List", {
 		onInit: function () {
 			this.oView = this.getView();
 			this._bDescendingSort = false;
@@ -279,5 +279,5 @@ sap.ui.define([
 });
 ```
 
-We create the master controller that provides a basic search and sort functionality for the products listed in the master page.
+We create the list controller that provides a basic search and sort functionality for the products listed in the list page.
 

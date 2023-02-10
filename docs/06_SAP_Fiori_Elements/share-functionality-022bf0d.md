@@ -14,7 +14,7 @@ The "share" functionality allows users to share the current application state us
 
 -   *Save as Tile*
 
-    When a user chooses this option, the corresponding *Save as Tile* dialog is displayed. When a user chooses the tile, the application page opens in the same state in which the tile was created. Application developers can customize the title and the sub-title of the tile. In the list report, users can create a dynamic tile with a record count, where the applied filter is also taken into account.
+    When a user chooses this option, the corresponding *Save as Tile* dialog is displayed. When a user chooses the tile, the application page opens in the same state in which the tile was created. Application developers can customize the title and the sub-title of the tile. In the list report, a dynamic tile with a record count is created, where the applied filter is also taken into account.
 
 
 > ### Note:  
@@ -22,7 +22,7 @@ The "share" functionality allows users to share the current application state us
 > 
 > -   For applications using the flexible column layout, the "share" functionality is shown on the highest view level.
 > 
-> -   A dynamic tile is not created if the filter bar contains a semantic date.
+> -   A dynamic tile is not created if the filter bar contains a semantic date. For more information on semantic date range, see [Enabling Semantic Operators in the Filter Bar](enabling-semantic-operators-in-the-filter-bar-fef65d0.md).
 > 
 > -   The "share" functionality is not available for newly created objects in draft mode, so the button is not visible.
 > 
@@ -38,17 +38,13 @@ The "share" functionality allows users to share the current application state us
 
 The "share" functionality is hidden for the creation pages of non-draft objects.
 
-> ### Restriction:  
-> If semantic date range configuration is not defined, a dynamic tile is created, by default. For more information on semantic date range, see [Enabling Semantic Operators in the Filter Bar](enabling-semantic-operators-in-the-filter-bar-fef65d0.md).
+During tile creation, you can change the tile type from dynamic to static using an extension. For more information, see [Extending the Bookmark Function to Save Static Tiles to the SAP Fiori Launchpad](extending-the-bookmark-function-to-save-static-tiles-to-the-sap-fiori-launchpad-7e34ea9.md).
 
 
 
 <a name="loio022bf0dcae1d4d90961ebe23d642fca3__section_r4n_lql_ymb"/>
 
 ## Additional Features in SAP Fiori Elements for OData V4
-
-> ### Restriction:  
-> A dynamic tile is not created if there is at least one semantic date entered in the filter bar.
 
 \- Send Email -
 
@@ -61,7 +57,7 @@ Make the following changes in the `manifest.json` file:
 > ### Sample Code:  
 > ```
 > "sap.ui5": {
->         "extends": {
+>         "extends": { 
 >             "extensions": {
 >                 "sap.ui.controllerExtensions": {
 >                     "sap.fe.templates.ObjectPage.ObjectPageController": {
@@ -102,43 +98,40 @@ When a user clicks on the chevron in a list report table and navigates to an obj
 
 Here’s an annotation snippet showing the semantic key annotation:
 
+> ### Sample Code:  
+> XML Annotation
+> 
+> ```xml
+> <Annotation Term="Common.SemanticKey">
+>    <Collection>
+>       <PropertyPath>SalesOrder</PropertyPath>
+>    </Collection>
+> </Annotation>
+> ```
 
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> ```
+> 
+> @ObjectModel: {
+>   semanticKey: [ 'SalesOrder' ]
+> }
+> 
+> define view SALESORDERMANAGE {
+> 
+> }
+> ```
 
-### XML Annotation
-
-```xml
-<Annotation Term="Common.SemanticKey">
-   <Collection>
-      <PropertyPath>SalesOrder</PropertyPath>
-   </Collection>
-</Annotation>
-```
-
-
-
-### ABAP CDS Annotation
-
-```
-
-@ObjectModel: {
-  semanticKey: [ 'SalesOrder' ]
-}
-
-define view SALESORDERMANAGE {
-
-}
-```
-
-
-
-### CAP CDS Annotation
-
-```
-
-Common.SemanticKey : [
-    SalesOrder
-],
-```
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> 
+> Common.SemanticKey : [
+>     SalesOrder
+> ],
+> ```
 
 If the application developer does not define the annotations for the semantic keys, the URL contains only the technical keys. In this case, if user A shares the URL via the "share" functionality with user B, user B will only be able to open the list report page if user A shares while being in display mode. If user A is already in edit mode when the URL is shared, then user B will not be able to open the link, since user B cannot access the draft of user A.
 

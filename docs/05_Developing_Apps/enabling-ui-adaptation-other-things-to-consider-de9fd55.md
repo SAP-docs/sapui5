@@ -104,8 +104,7 @@ The process to define the design time metadata depends on your scenario:
 In this case, you need to specify metadata via the `sap.ui.dt` namespace. Example:
 
 ```xml
-<core:View
-	...
+<mvc:View xmlns:mvc="sap.ui.core.mvc"
 	xmlns:sap.ui.dt="sap.ui.dt"
 >
 	...
@@ -118,7 +117,7 @@ In this case, you need to specify metadata via the `sap.ui.dt` namespace. Exampl
 		</ChildControl>
 	</ContainerControl>
 	...
-</core:View>
+</mvc:View>
 ```
 
 

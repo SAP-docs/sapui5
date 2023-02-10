@@ -92,3 +92,11 @@ To validate unit of measurement fields without a related "value" field, use the 
 > 
 > ```
 
+
+
+<a name="loio4b50f214f2444de7b092684f4529f29a__section_uyg_prz_2wb"/>
+
+## Validating `Edm.Guid` Properties
+
+Validation is automatically enabled for properties of type `Edm.Guid` that have a value help.
+

@@ -67,9 +67,9 @@ We create a simple additional page view.
 				},
 				{
 					"pattern": ":layout:",
-					"name": "master",
+					"name": "list",
 					"target": [
-						"master",
+						"list",
 						"detail"
 					]
 				},
@@ -77,7 +77,7 @@ We create a simple additional page view.
 					"pattern": "detail/{product}/{layout}",
 					"name": "detail",
 					"target": [
-						"master",
+						"list",
 						"detail"
 					]
 				},
@@ -85,15 +85,15 @@ We create a simple additional page view.
 					"pattern": "detail/{product}/detailDetail/{supplier}/{layout}",
 					"name": "detailDetail",
 					"target": [
-						"master",
+						"list",
 						"detail",
 						"detailDetail"
 					]
 				}
 			],
 			"targets": {
-				"master": {
-					"name": "Master",
+				"list": {
+					"name": "List",
 					"controlAggregation": "beginColumnPages"
 				},
 				"detail": {

@@ -215,7 +215,7 @@ The following changes and new features are available for SAP Fiori elements for 
 
 -   In the worklist applications, the options to sort, group, and filter are now available within the table personalization dialog that is consistent with the list report. For more information, see [Worklist](../06_SAP_Fiori_Elements/worklist-d1d588f.md).
 
--   The persistence mode is now default for List Report/Object Page applications with flexible column layout. For more information, see [Enabling Persistence Mode](../06_SAP_Fiori_Elements/enabling-persistence-mode-7c62084.md).
+-   The persistence mode is now default for List Report/Object Page applications with flexible column layout. For more information, see [Enabling Persistence Mode](../06_SAP_Fiori_Elements/enabling-discovery-persistence-mode-7c62084.md).
 
 -   List Report and Object Page tables now have a full screen mode option, enabled by default, when launched on mobile phones. For more information, see [Tables](../06_SAP_Fiori_Elements/tables-c0f6592.md).
 
@@ -294,6 +294,8 @@ We have new accessibility documentation with detailed information about SAPUI5 k
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.108](what-s-new-in-sapui5-1-108-799291a.md "With this release SAPUI5 is upgraded from version 1.107 to 1.108.")
 
 [What's New in SAPUI5 1.107](what-s-new-in-sapui5-1-107-b88b40e.md "With this release SAPUI5 is upgraded from version 1.106 to 1.107.")
 

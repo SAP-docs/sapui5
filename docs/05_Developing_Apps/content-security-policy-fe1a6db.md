@@ -189,7 +189,7 @@ Required for the following libraries:
 -   `sap.ui.ux3`
 -   `sap.uiext.inbox`
 -   `sap.viz.*` \(deprecated part\)
--   `sap.zen.*` \(deprecated part\)
+-   `sap.zen.*`
 
 Most likely required for deprecated APIs, especially for programming model APIs, like old factories in the `sap.ui` namespace.
 
@@ -202,7 +202,6 @@ Certain libraries at least partly still require `'unsafe-eval'`, including the f
 -   `sap.rules.ui`
 -   `sap.ui.vbm`
 -   `sap.ushell`
--   `sap.zen.*` \(non-deprecated part\)
 
 The above list assumes that the app runs using library preloads \(recommended, see [Ensure that Library Preloads are Enabled](performance-speed-up-your-app-408b40e.md#loio408b40efed3c416681e1bd8cdd8910d4__section_LibraryPreloads)\). If the appication runs without preloads, more libraries require `unsafe-eval`.
 
@@ -262,7 +261,7 @@ Required for the following libraries:
 -   `sap.ui.ux3`
 -   `sap.uiext.inbox`
 -   `sap.viz.*` \(deprecated part\)
--   `sap.zen.*` \(deprecated part\)
+-   `sap.zen.*`
 
 Most likely required for deprecated APIs.
 
@@ -274,7 +273,6 @@ Certain libraries at least partly still require `'unsafe-inline'`, including:
 -   `sap.ui.vbm`
 -   `sap.ui.vk`
 -   `sap.ushell`
--   `sap.zen.*` \(non-deprecated part\)
 
 
 

@@ -75,6 +75,20 @@ In SAP Fiori elements for OData V4, the object page context is only passed for b
 
 
 
+### Edit Action in Subobject Page
+
+The edit action is also available in the subobject page. Its behavior depends on the annotations on both levels:
+
+-   The edit button is displayed in the subobject page only if it is also visible in the object page and if the subobject page entity is not annotated to hide it.
+
+-   The edit button is enabled in the subobject page only if it is also enabled in the object page and if the subobject page entity is not annotated to disable it.
+
+
+> ### Note:  
+> Selecting the edit button in the subobject page enables the edit action for the entire object page, not just the subobject page where it was selected.
+
+
+
 <a name="loio5fe439613f9c4e259015951594c423dc__section_k41_bwx_qmb"/>
 
 ## Additional Features in SAP Fiori Elements for OData V2
@@ -327,4 +341,6 @@ The `UI.DataFieldForAction` can be bound or unbound actions. For more informatio
 
 
 [Displaying Actions on the Object Page](displaying-actions-on-the-object-page-f65e8b1.md)
+
+[Actions](actions-cbf16c5.md "You can use generic actions provided by SAP Fiori elements and implement application-specific actions using annotations or extension points.")
 
