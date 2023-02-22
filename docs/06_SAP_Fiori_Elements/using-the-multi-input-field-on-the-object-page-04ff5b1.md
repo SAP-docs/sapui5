@@ -31,7 +31,22 @@ You can use the navigation property inside a `UI.DataField` to display values of
 > </Annotation>
 > 
 > ```
-
+> 
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> ```
+> LineItem : {
+> 	{
+> 		type             : #STANDARD,
+> 		label			  : 'Supported Materials',
+> 		value             : _SupportedMaterials.Material,
+> 	 },
+> …
+> }
+> 
+> ```
+> 
 > ### Sample Code:  
 > CAP CDS Annotation
 > 
