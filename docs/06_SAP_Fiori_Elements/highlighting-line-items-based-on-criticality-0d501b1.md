@@ -74,6 +74,9 @@ Add a `LineItem` criticality annotation for the line items of the entity type th
 > 
 > ```
 
+> ### Note:  
+> If using a qualifier on fields and on the line item criticality, there must be at least one field with the default qualifier.
+
 > ### Sample Code:  
 > CAP CDS Annotation
 > 
