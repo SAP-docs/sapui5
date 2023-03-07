@@ -38,10 +38,10 @@ You can use the navigation property inside a `UI.DataField` to display values of
 > ```
 > LineItem : {
 > 	{
-> 		type             : #STANDARD,
 > 		label			  : 'Supported Materials',
-> 		value             : _SupportedMaterials.Material,
+> 		value     : _SupportedMaterials.Material,
 > 	 },
+> 	 _SupportedMaterials;
 > …
 > }
 > 
