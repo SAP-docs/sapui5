@@ -166,5 +166,47 @@ To enable inline creation mode in an object page per table, set `"creationMode"`
 > }
 > ```
 
-Similarly, to enable empty rows mode, set `"creationMode"` to `"InlineCreationRows"`.
+
+
+### Enabling and Disabling Empty Rows Mode
+
+To enable the empty rows mode, set `"creationMode"` to `"InlineCreationRows"`.
+
+The default behavior of the empty rows mode is as follows:
+
+-   The empty rows are visible on grid and responsive tables when a new object is created.
+
+-   The empty rows are visible on grid and responsive tables when an existing object is edited.
+
+
+To change this behavior, you can use the parameter `inlineCreationRowsHiddenInEditMode`. Its default value is `'false'`. If it is set to `'true'`, the empty rows will be hidden when editing an existing object. Selecting the table's *Create* button will display the empty rows.
+
+> ### Sample Code:  
+> `manifest.json`
+> 
+> ```
+> "SalesOrderManageObjectPage":{                  
+>     "type": "Component",                  
+>     "id": "SalesOrderManageObjectPage",                  
+>     "name": "sap.fe.templates.ObjectPage",                  
+>     "options":{
+>         "settings":{
+>             ....
+>             ....                                
+>             "controlConfiguration":{                              
+>                 "_Item/@com.sap.vocabularies.UI.v1.LineItem":{
+>                     "tableSettings": {
+>                         ....
+>                         ....           
+>                         "creationMode":{                                          
+>                             "name": "InlineCreationRows",            
+>                             "inlineCreationRowsHiddenInEditMode": true
+>                         }                                  
+>                     }                              
+>                 }                      
+>             }      
+>         } 
+>     }
+> }
+> ```
 

@@ -219,6 +219,58 @@ UI.FieldGroup
 <tr>
 <td valign="top">
 
+Add card to insights
+
+
+
+</td>
+<td valign="top">
+
+-   List report \(OData V2\)
+
+
+
+</td>
+<td valign="top">
+
+ [Creating Cards for the Insights Section of My Home in SAP S/4HANA Cloud](creating-cards-for-the-insights-section-of-my-home-in-sap-s-4hana-cloud-9b13559.md) 
+
+
+
+</td>
+<td valign="top">
+
+ 
+
+
+
+</td>
+<td valign="top">
+
+   
+  
+**Add Card to Insights**
+
+ ![](images/Add_Cards_to_Insights_453dd3a.png "Add Card to Insights") 
+
+
+
+</td>
+<td valign="top">
+
+add cards
+
+add cards to insights
+
+insights
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
 Add custom column
 
 

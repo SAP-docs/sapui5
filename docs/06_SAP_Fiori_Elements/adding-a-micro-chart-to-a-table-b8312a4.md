@@ -2,7 +2,7 @@
 
 # Adding a Micro Chart to a Table
 
-You can add a micro chart to a column in both the list report and the object page.
+You can add a micro chart to the column of a responsive table in both the list report and the object page.
 
 To add a micro chart to a table, use the annotation term `UI.LineItem` and the complex type `DataFieldForAnnotation`. The micro charts are then displayed within the table column as shown below:
 

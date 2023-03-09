@@ -450,18 +450,18 @@ For bound messages, `longtextUrl` can be a relative or absolute path. Relative p
 
 ## Lifecycle Management for State Messages
 
-The lifecycle management for state messages is optimized for a specific orchestration with the server. When a message is requested, the OData V4 server returns all bound messages for the respective entity and its subentities within the same business object. The business object is defined by the first path segment.
+The lifecycle management for state messages is optimized for a specific orchestration with the server. When messages are selected, the OData V4 server returns all bound messages for the respective entity and its subentities within the same business object. The business object is defined by the first path segment.
 
 The following example uses a sales order with items and related products:
 
--   A `GET` request for `/SalesOrder(´0815´)` returns all bound messages for the sales order and its items, even if the items themselves are not contained in the response. Messages to assigned products, business partners, and so on, that are not part of the `SalesOrder` business object will **not** be sent if the path starts within the `SalesOrder` business object.
+-   A `GET` request for `/SalesOrder(´0815´)` returns all bound messages for the sales order and its items, even if the items themselves are not contained in the response. Messages to assigned products, business partners, and so on, that are not part of the `SalesOrder` business object will **not** be returned if the path starts within the `SalesOrder` business object.
 
 -   A `GET` request for a specific item with path `/SalesOrder(´0815´)/_Items(´010´)` returns all bound messages for this item.
 
 -   A `GET` request for the product related to an item using the deep path `/SalesOrder(´0815´)/_Items(´010´)/_Product` will not return any bound messages.
 
 
-The OData V4 model checks whether the response contains the message property and removes all previous bound state messages from the message model if their target paths start with the path of the entity.
+The OData V4 model checks whether the response contains the `message` property and removes all previous bound state messages from the message model if their target paths start with the path of the entity.
 
 This concept has the following consequences:
 
@@ -472,6 +472,8 @@ This concept has the following consequences:
 -   Binding entities outside the business object with the deep path means that no messages will be retrieved for this entity. Using the binding `/SalesOrder(´0815´)/_Items(´010´)/_Product` to display product information of item `010`, for example, will not return any product-specific bound message.
 
 -   As a consequence, it must also **not** be possible to change the entity that is bound with a path that starts with a different business object. If, for example, product information needs to be changed, we recommended to use the canonical path to bind the product assigned to item `010` to achieve that the server sends the bound messages of the product.
+
+-   The message property has to be requested with the main object of the object page. It must not be part of the $select of list bindings. The state messages of items are returned with the state messages of the main object. Reading state messages again when reading items would cause an issue, as only state messages for read items are returned, and the model cannot know whether state messages for other items are still valid.
 
 
 > ### Note:  
