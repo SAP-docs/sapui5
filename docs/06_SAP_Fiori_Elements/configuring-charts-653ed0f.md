@@ -412,7 +412,7 @@ For charts to work, the entity set must support aggregation. SAP Fiori elements 
     > ```
     > <Annotation Term="UI.Chart">
     >     <Record Type="UI.ChartDefinitionType">
-    >         <PropertyValue Property="Title" String="Height Line Chart"/>
+    >         <PropertyValue Property="Title" String="Sales Chart"/>
     >         <PropertyValue Property="ChartType" EnumMember="UI.ChartType/Column"/>
     >         <PropertyValue Property="Measures">
     >             <Collection>
@@ -432,7 +432,7 @@ For charts to work, the entity set must support aggregation. SAP Fiori elements 
     >         <PropertyValue Property="MeasureAttributes">
     >             <Collection>
     >                 <Record Type="UI.ChartMeasureAttributeType">
-    >                     <PropertyValue Property="Measure" PropertyPath="totalPricing"/>
+    >                     <PropertyValue Property="Measure" PropertyPath="avgPricing"/>
     >                     <PropertyValue Property="Role" EnumMember="UI.ChartMeasureRoleType/Axis1"/>
     >                 </Record>
     >                 <Record Type="UI.ChartMeasureAttributeType">
@@ -464,8 +464,8 @@ For charts to work, the entity set must support aggregation. SAP Fiori elements 
     > ```
     > Chart                                                    : {
     >       $Type               : 'UI.ChartDefinitionType',
-    >       Title               : 'Height Line Chart',
-    >       Description         : 'Testing Line Chart',
+    >       Title               : 'Sales Chart',
+    >       
     >       ChartType           : #Column,
     >       Measures            : [avgPricing],
     >       DynamicMeasures     : ['@Analytics.AggregatedProperty#sum'],
@@ -473,7 +473,7 @@ For charts to work, the entity set must support aggregation. SAP Fiori elements 
     >       MeasureAttributes   : [
     >         {
     >           $Type   : 'UI.ChartMeasureAttributeType',
-    >           Measure : totalPricing,
+    >           Measure : avgPricing,
     >           Role    : #Axis1
     >         },
     >         {
@@ -516,11 +516,6 @@ For charts to work, the entity set must support aggregation. SAP Fiori elements 
     >      </Annotation>
     > </Annotations>
     > ```
-
-    > ### Sample Code:  
-    > ABAP CDS Annotation
-    > 
-    > No ABAP CDS annotation sample is available. Please use the local XML annotation.
 
     > ### Sample Code:  
     > CAP CDS Annotation
@@ -571,4 +566,8 @@ For charts to work, the entity set must support aggregation. SAP Fiori elements 
 > -   The criticality via the `UI.CriticalityCalculation` annotation is currently not supported.
 > 
 > -   For CAP CDS versions 3 or lower, the chart doesn't load properly if the parent entity set is non-aggregate based.
+> 
+> -   When you use draft-enabled entities or charts, sorting on virtual properties and measures causes issues if you use CAP NodeJs. This is because of a CAP limitation that is fixed as of @sap/cds 6.0.0.
+> 
+> -   Aggregations on draft-enabled entities are currently **not** supported in ABAP CDS, since currently `$apply` with or without a filter on draft or transactional entities isn't supported by SADL.
 

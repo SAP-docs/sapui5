@@ -27,7 +27,9 @@ In SAP Fiori elements for OData V4, app developers adapt the UI via manifest set
 Key users can adapt the application at runtime by changing the UI from the initial state of the app to a personalized view for end users. In the *User Actions Menu*, key users can then choose *Adapt UI* and change the user interface of SAP Fiori apps directly. For more information about what you have to consider when developing apps that support key user adaptation, see [SAPUI5 Flexibility: Enable Your App for UI Adaptation](../05_Developing_Apps/sapui5-flexibility-enable-your-app-for-ui-adaptation-f1430c0.md). For more information about key user adaptation, refer to [SAPUI5 Flexibility: Adapting UIs Made Easy](../04_Essentials/sapui5-flexibility-adapting-uis-made-easy-a8e55aa.md).
 
 > ### Note:  
-> In SAP Fiori elements for OData V2, key user adaptation supports only the use cases that are described in the section Additional Features in SAP Fiori elements for OData V2.
+> -   In SAP Fiori elements for OData V2, key user adaptation supports only the use cases that are described in the section Additional Features in SAP Fiori elements for OData V2.
+> 
+> -   Embedding iFrame in the SAP Fiori elements for OData V2 application using UI adaptation is not recommended.
 
 
 

@@ -33,7 +33,7 @@ When `multiEdit` is enabled, by default the dialog displays editable fields corr
 > >                     }
 > > ```
 
-When `MultiEdit` is enabled for an application, the option to edit appears in the table toolbar. You can select multiple records from the table and click *Mass Edit* to launch the mass edit dialog, as shown in the following screenshot.
+When `MultiEdit` is enabled for an application, the option to edit appears in the table toolbar. You can select multiple records from the table and click *Edit* to launch the mass edit dialog, as shown in the following screenshot.
 
  ![](images/Enabling_Mass_Editing_Through_Dialog_LR_914eba7.png) 
 
@@ -129,4 +129,6 @@ Currently, the default title for the edit dialog is `Edit(X)`. You can override 
 [Replacing the Standard Save Functionality in Mass Edit Dialog](replacing-the-standard-save-functionality-in-the-mass-edit-dialog-492d8a9.md "You can enable custom save functionality for the mass edit dialog.")
 
 [Enabling Editing Using a Dialog \(Mass Edit\)](enabling-editing-using-a-dialog-mass-edit-965ef5b.md "Mass editing allows users to simultaneously change multiple objects that share the same editable properties.")
+
+[Adding a Custom ViewExtension in the Mass Edit Dialog](adding-a-custom-viewextension-in-the-mass-edit-dialog-fd26fee.md "You can add a custom ViewExtension to the mass edit dialog by defining it in the manifest.")
 

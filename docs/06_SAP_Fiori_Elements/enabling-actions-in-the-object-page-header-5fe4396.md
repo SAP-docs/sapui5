@@ -4,7 +4,7 @@
 
 You can enable generic actions in your object header.
 
-*Edit* and *Delete* are the generic actions.
+*Edit*, *Delete* and *Copy* are the generic actions.
 
 All `com.sap.vocabularies.UI.v1.DataFieldForAction` within the unqualified `UI.Identification` are interpreted as actions. The system renders a button in the header displaying the text of the data field label.
 
@@ -89,6 +89,35 @@ The edit action is also available in the subobject page. Its behavior depends on
 
 
 
+### Copy Action
+
+The *Copy* button is not available by default. However, applications can define a standard copy action by annotating a `dataFieldForAction` with `isCopyAction`.
+
+This *Copy* button is placed after the *Delete* button.
+
+ ![](images/Copy_Action_in_the_Object_Page_c726782.png) 
+
+> ### Sample Code:  
+> XML Annotation
+> 
+> ```xml
+> <Annotation Term="UI.Identification">
+>   <Collection>
+>       <Record Type="UI.DataFieldForAction">
+>           <PropertyValue Property="Label" String="Copy" />
+>           <PropertyValue Property="Action" String="STTA_PROD_MAN.STTA_PROD_MAN_Entities/STTA_C_MP_ProductCopy" />
+>           <Annotation Term="UI.IsCopyAction" Bool="true" />
+>      </Record>
+> 
+> ```
+
+Applications can define a label for this button. If a label is not provided, then by default this button is labeled as *Copy*.
+
+> ### Note:  
+> The copy action is only available on the object page, not on the subobject pages.
+
+
+
 <a name="loio5fe439613f9c4e259015951594c423dc__section_k41_bwx_qmb"/>
 
 ## Additional Features in SAP Fiori Elements for OData V2
@@ -152,30 +181,6 @@ The code sample below shows you how to set up your annotation to display or hide
 
 
 
-### Copy Button
-
-The *Copy* button is not available by default. However, applications can define a standard copy action by annotating a `dataFieldForAction` with `isCopyAction`.
-
-This *Copy* button is placed after the *Delete* button.
-
- ![](images/Copy_Action_in_the_Object_Page_c726782.png) 
-
-> ### Sample Code:  
-> ```
-> <Annotation Term="UI.Identification">
->   <Collection>
->       <Record Type="UI.DataFieldForAction">
->           <PropertyValue Property="Label" String="Copy" />
->           <PropertyValue Property="Action" String="STTA_PROD_MAN.STTA_PROD_MAN_Entities/STTA_C_MP_ProductCopy" />
->           <Annotation Term="UI.IsCopyAction" Bool="true" />
->      </Record>
-> 
-> ```
-
-Applications can define a label for this button. If a label is not provided, then by default this button is labeled as *Copy*.
-
-
-
 <a name="loio5fe439613f9c4e259015951594c423dc__section_aj2_5wx_qmb"/>
 
 ## Additional Features in SAP Fiori Elements for OData V4
@@ -211,8 +216,8 @@ The *Delete* button allows users to delete the instance of the object page.
 >     > 
 >     > OR
 >     > 
->     > <Annotations Target="com.c_salesordermanage_sd.EntityContainer/HeaderPartner"> 
->     >    <Annotation Term="UI.UpdateHidden" Path="owner/isUpdateHidden"/> 
+>     > <Annotations Target="com.c_salesordermanage_sd.EntityContainer/SalesOrderManage"> 
+>     >    <Annotation Term="UI.UpdateHidden" Path="isUpdateHidden"/> 
 >     > </Annotations>
 >     > 
 >     > ```
@@ -220,7 +225,14 @@ The *Delete* button allows users to delete the instance of the object page.
 >     > ### Sample Code:  
 >     > ABAP CDS Annotation
 >     > 
->     > No ABAP CDS annotation sample is available. Please use the local XML annotation.
+>     > ```
+>     > @UI.updateHidden:true 
+>     > 
+>     > OR
+>     > 
+>     > @UI.updateHidden: #(‘isUpdateHidden’)
+>     > 
+>     > ```
 > 
 >     > ### Sample Code:  
 >     > CAP CDS Annotation
@@ -230,7 +242,7 @@ The *Delete* button allows users to delete the instance of the object page.
 >     > 
 >     > OR
 >     > 
->     > annotate com.c_salesordermanage_sd.SalesOrderManage with @( UI.UpdateHidden: owner.isUpdateHidden);
+>     > annotate com.c_salesordermanage_sd.SalesOrderManage with @( UI.UpdateHidden: isUpdateHidden);
 >     > 
 >     > ```
 > 
