@@ -22,7 +22,7 @@ Use `com.sap.vocabularies.UI.v1.SelectionFields` to add filter fields to the fil
 >         <Collection>
 >             <PropertyPath>Price</PropertyPath>
 >             <PropertyPath>Supplier</PropertyPath>
->         /Collection>
+>         </Collection>
 > </Annotation>
 > ```
 
