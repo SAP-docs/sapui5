@@ -281,4 +281,6 @@ For each target, the following keys should be set:
 > -   In edit mode on an object page, when you add a column to a table or remove it, the subobject page closes automatically.
 > 
 > -   If you have a list report or an object page with multiple tables that are based on the same entity, only the first table is synchronized with its associated subobject page.
+> 
+> -   When you update a multi-input field on an object page, you need to first refresh the parent page \(either an object page or a list report\) before the changes are visible.
 

@@ -14,29 +14,12 @@ There are two checks integrated into the ABAP Test Cockpit \(ATC\) to make sure 
 
 ## The Checks
 
+The following checks are available:
 
+-   [ATC Check SAPUI5 Component Consistency](atc-check-sapui5-component-consistency-a71400b.md)
 
-### CL\_CI\_TEST\_UI5\_COMP \(Component IDs\)
+-   [ATC Check ICF Nodes for SAPUI5 Applications](atc-check-icf-nodes-for-sapui5-applications-2aa5187.md) \(in on-premise systems only\)
 
-The ATC check class `CL_CI_TEST_UI5_COMP` checks if the component IDs used in single repositories are unique and valid. Unique means that the same component ID must not be contained in more than one single repository. Valid means that the component ID fulfills the following rules:
-
--   Consists only of alphanumeric characters
--   Contains only lowercase letters in all segments except the last segment; the last segment may contain camel case letters
--   Does not begin with a number
--   Does not contain special characters
--   Contains a dot \(.\) as a separator of the namespace
--   Is no longer than 70 characters; each individual segment is no longer than 40 characters \(separated by a dot\)
-
-The check class `CL_CI_TEST_UI5_COMP` also reports any errors that occurred when the `manifest.json` file was parsed.
-
-
-
-### CL\_CI\_TEST\_UI5\_ICF \(ICF Nodes\)
-
-The ATC check class `CL_CI_TEST_UI5_ICF` checks if the following rules are fulfilled:
-
--   Each app has a corresponding SAPUI5 ICF node.
--   There are SAPUI5 no ICF nodes without a corresponding application.
 
 
 
@@ -44,7 +27,7 @@ The ATC check class `CL_CI_TEST_UI5_ICF` checks if the following rules are fulfi
 
 ## How to Check
 
-First, you need to activate both checks in the back-end system:
+In on-premise systems, you need to activate both checks in the back-end system:
 
 1.  Start transaction `SCI` \(Code Inspector\).
 2.  Choose *Code Inspector* \> *Management of* \> *Checks*.

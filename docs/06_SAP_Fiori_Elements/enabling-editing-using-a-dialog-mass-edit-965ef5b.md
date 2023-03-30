@@ -118,4 +118,6 @@ The *Mass Edit* button isn't enabled if the update restriction points to a path 
 > 
 > 
 > -   Validation from the server for updates made in the *Mass Edit* dialog is currently not supported. There's no communication with the back end until users choose *Save* in the *Mass Edit* dialog.
+> 
+> -   You must not enable *Mass Edit* if the back end is configured to lock the entire object while you're making an update to a child object.
 

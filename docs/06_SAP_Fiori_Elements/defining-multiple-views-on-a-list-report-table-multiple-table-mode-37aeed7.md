@@ -386,7 +386,7 @@ To define multiple views using multiple table mode, perform the following steps:
     > ### Note:  
     > For the `SelectionVariant`, the following applies:
     > 
-    > -   The `FilterExpression` of the `SelectionVariantType` is not supported.
+    > -   The `FilterExpression` of the `SelectionVariantType` isn't supported.
     > 
     > -   The following `SelectionRangeOptionTypes` are supported without any wildcards, for example, \*, ?, …:
     > 
@@ -408,11 +408,11 @@ To define multiple views using multiple table mode, perform the following steps:
     > 
     > For the `PresentationVariant`, `SortOrders` and visualizations are supported.
 
-2.  Extend the `manifest.json` to switch on the multiple view feature and link to the variants you have added to your annotations. You do this in the list report settings section under `sap.ui.generic.app`. Use `quickVariantSelectionX` for multiple table mode or multiple table mode with charts.
+2.  Extend the `manifest.json` to switch on the multiple view feature and link to the variants you've added to your annotations. You do this in the list report settings section under `sap.ui.generic.app`. Use `quickVariantSelectionX` for multiple table mode or multiple table mode with charts.
 
-    -   The `variants` section \(lines 11-20\) contains a set of entries that point to the variants defined in the annotations.
+    -   The `variants` section \(lines 11–20\) contains a set of entries that point to the variants defined in the annotations.
 
-    -   For each entry under `variants` \(for example, lines 12-15\), define an `annotationPath` \(line 14\) of a specific variant.
+    -   For each entry under `variants` \(for example, lines 12–15\), define an `annotationPath` \(line 14\) of a specific variant.
 
     -   Provide a key entry \(line 13\) that is used for initializing the corresponding `IconTabBar` item. This entry is mandatory.
 
@@ -445,7 +445,7 @@ To define multiple views using multiple table mode, perform the following steps:
     > ```
 
     > ### Note:  
-    > -   If you want to enable auto-binding, do not use key user adaptation for changing the smart table's `enableAutoBinding` properties. From a performance perspective, this leads to back-end requests for each table instance. To achieve the required behavior \(that is, only rebind the currently visible table\), you can add an entry `enableAutoBinding: true` under `quickVariantSelectionX`. This ensures the behavior on list report page level.
+    > -   If you want to enable auto-binding, don't use key user adaptation for changing the smart table's `enableAutoBinding` properties. From a performance perspective, this leads to back-end requests for each table instance. To achieve the required behavior \(that is, only rebind the currently visible table\), you can add an entry `enableAutoBinding: true` under `quickVariantSelectionX`. This ensures the behavior on list report page level.
     > 
     > -   Stable IDs: As there are separate table instances for each tab, table-specific IDs \(such as IDs for tables, toolbar actions, draft indicators in table columns\) get a suffix "-<key\>", where <key\> is the variant key you have specified in the manifest \(line 13\). This avoids duplicate ID errors and allows you to adapt specific tables via runtime adaptation \(for example, hiding a toolbar action for a specific table\).
 
@@ -453,7 +453,7 @@ To define multiple views using multiple table mode, perform the following steps:
 
     -   Actions in toolbars for charts
 
-        For charts in multiple table mode, actions from the annotations \(UI.Chart/Actions only\) and custom actions that were added using extension points are supported. If custom action buttons are relevant to selection, they are disabled if no chart bar is selected. If not, they are enabled.
+        For charts in multiple table mode, actions from the annotations \(UI.Chart/Actions only\) and custom actions that were added using extension points are supported. If custom action buttons are relevant to selection, they're disabled if no chart bar is selected. If not, they're enabled.
 
         > ### Sample Code:  
         > XML Annotation
@@ -826,7 +826,7 @@ To define multiple views using multiple table mode, perform the following steps:
         > 
         > ```
 
-        `SelectionPresentationVariant` containing a `SelectionVariant` and a `PresentationVariant`. The `SelectionVariant` filters for items with a rating lower than or between certain values \(for example, between 2 and 4\), the `PresentationVariant` defines the ascending sort order for the `ID` and the `SalesOrderType`, as well as the maximum number of items to show in the table. Note that a `PresentationVariant` must contain a `Visualization` to be valid. Without a `Visualization`, the `PresentationVariant` won't be applied and the default `LineItem` is applied instead.
+        `SelectionPresentationVariant` containing a `SelectionVariant` and a `PresentationVariant`. The `SelectionVariant` filters for items with a rating lower than or between certain values \(for example, between 2 and 4\), the `PresentationVariant` defines the ascending sort order for the `ID` and the `SalesOrderType`, as well as the maximum number of items to show in the table. Note that a `PresentationVariant` must contain a `Visualization` to be valid. Without a `Visualization`, the `PresentationVariant` isn't applied and the default `LineItem` is applied instead.
 
         > ### Sample Code:  
         > XML Annotation
@@ -1178,7 +1178,7 @@ To define multiple views using multiple table mode, perform the following steps:
     > ### Note:  
     > For the `SelectionVariant`, the following applies:
     > 
-    > -   The `FilterExpression` of the `SelectionVariantType` is not supported.
+    > -   The `FilterExpression` of the `SelectionVariantType` isn't supported.
     > 
     > -   The following `SelectionRangeOptionTypes` are supported without any wildcards, for example, \*, ?, …:
     > 
@@ -1204,9 +1204,9 @@ To define multiple views using multiple table mode, perform the following steps:
 
 2.  Extend the `manifest.json` to switch on the multiple view feature and link to the variants you have added to your annotations. You do this in the list report settings section under the section *routing* \> *targets*. In the settings of your list report page, use the views configuration for multiple table mode.
 
-    -   The `paths` section \(lines 9-22\) contains a set of entries that point to the variants defined in the annotations.
+    -   The `paths` section \(lines 9–22\) contains a set of entries that point to the variants defined in the annotations.
 
-    -   For each entry under `paths` \(for example, lines 10-13\), define an `annotationPath` \(line 12\) of a specific variant.
+    -   For each entry under `paths` \(for example, lines 10–13\), define an `annotationPath` \(line 12\) of a specific variant.
 
     -   Provide a key entry \(line 11\) that is used for initializing the corresponding `IconTabBar` item. This entry is mandatory.
 
@@ -1306,7 +1306,7 @@ To define multiple views using multiple table mode, perform the following steps:
     </td>
     <td valign="top">
 
-    Stable IDs: As there are separate table instances for each tab, table-specific IDs \(such as IDs for tables, toolbar actions, draft indicators in table columns\) get a suffix "-<key\>", where <key\> is the variant key you have specified in the manifest. This avoids duplicate ID errors and allows you to adapt specific tables via runtime adaptation \(for example, hiding a toolbar action for a specific table\).
+    Stable IDs: As there are separate table instances for each tab, table-specific IDs \(such as IDs for tables, toolbar actions, draft indicators in table columns\) get a suffix "-<key\>", where <key\> is the variant key you've specified in the manifest. This avoids duplicate ID errors and allows you to adapt specific tables via runtime adaptation \(for example, hiding a toolbar action for a specific table\).
 
 
     
@@ -1378,7 +1378,7 @@ To define multiple views using multiple table mode, perform the following steps:
 
     If you switch from an app with only a single table to an app with multiple tables, you can keep the previously defined variant on one tab. To do so, add the `"keepPreviousPersonalization"` setting to your view definition at the `key` and `annotationPath` level. The corresponding tab keeps the default `LineItem` ID \(without the key\), so the variant is applied to it.
 
-    Please note that you can only add the personalization to one view because of the need of table-specific IDs.
+    Note that you can only add the personalization to one view because of the need of table-specific IDs.
 
 
     
@@ -1394,10 +1394,20 @@ To define multiple views using multiple table mode, perform the following steps:
     </table>
     
     > ### Note:  
-    > You can combine multiple views with quick filters \(single table mode\). You can configure each table in the `manifest.json` in the `controlConfiguration` and the define the `quickvariantSelection` for a table.
+    > You can combine multiple views with quick filters \(single table mode\). You can configure each table in the`manifest.json` in the `controlConfiguration` and define the `quickvariantSelection` for a table.
 
 
 
 
  ![](images/Multiple_Table_Mode_7249fb3.png) 
+
+> ### Note:  
+
+ <a name="concept_g3k_r21_fwb"/>
+
+<!-- concept\_g3k\_r21\_fwb -->
+
+## Restriction
+
+Refreshing the count available on a tab using a global side effect is only possible for a view that has been opened.
 

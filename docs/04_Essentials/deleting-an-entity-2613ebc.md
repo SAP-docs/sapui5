@@ -38,6 +38,11 @@ onDeleteSalesOrder : function () {
 
 You can also delete an entity from the model and all its bindings via  [`v4.ODataModel#delete`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataModel%23methods/delete) using a canonical binding path to the entity. The model then sends a `DELETE` request to the server. If this request succeeds, the entity is removed from all its bindings. The conditions for identifying these bindings are described in the API documentation.
 
+> ### Caution:  
+> Be cautious if your control or view uses a binding with an empty path \(`<Page id="entityDetails" binding="{}">`\) and you want to delete the entity it displays. The context you get via `oView.byId("entityDetails").getBindingContext()` can be used to delete this entity, but calling `delete()` immediately makes the context binding unresolved and destroys the context. The same holds true if you call `oView.byId("entityDetails").setBindingContext(null)` to clear the control or view. This makes it impossible to restore the control or view in case of failure.
+> 
+> Using context bindings with an empty path is deprecated and should be avoided if possible. Consider setting up your views as described in [Data Reuse](data-reuse-648e360.md). The binding context of your detail page is then the list's row context, and there will be no issue regarding data sharing or deleting.
+
 **Related Information**  
 
 

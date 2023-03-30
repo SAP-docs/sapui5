@@ -311,6 +311,167 @@ The third argument of the base Unit type constructor is a list of dynamic format
 > 
 > So if you define a `decimals` value for a custom unit in the Configuration, the bound values from the Unit type instance will still be taken for the formatting.
 
+
+
+<a name="loio8e618a8d93cb4f92adc911b96047eb8d__section_LUM"/>
+
+## Legacy Unit Mapping
+
+With the upgrade of the CLDR version from 35.1 to 41, released with SAPUI5 version 1.110, some unit keys have changed. To support the formatting of legacy unit keys, a mapping has been added. A user is able to load legacy unit keys from his back end, which are then mapped to the new unit keys. When parsing user input, only the new unit keys are returned. Updating or changing entries containing legacy unit keys results in replacing the legacy unit key with a new unit key.
+
+> ### Note:  
+> If affected unit keys are handled by back-end code explicitly, this code needs to be adapted.
+
+The following legacy unit keys are currently supported; this map may be subject to change since, with further CLDR upgrades, unit keys may change:
+
+
+<table>
+<tr>
+<th valign="top">
+
+Legacy Unit Key
+
+
+
+</th>
+<th valign="top">
+
+New Unit Key
+
+
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+`acceleration-meter-per-second-squared`
+
+
+
+</td>
+<td valign="top">
+
+`acceleration-meter-per-square-second`
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`concentr-milligram-per-deciliter`
+
+
+
+</td>
+<td valign="top">
+
+`concentr-milligram-ofglucose-per-deciliter`
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`concentr-part-per-million`
+
+
+
+</td>
+<td valign="top">
+
+`concentr-permillion`
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`consumption-liter-per-100kilometers`
+
+
+
+</td>
+<td valign="top">
+
+`consumption-liter-per-100-kilometer`
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`pressure-millimeter-of-mercury`
+
+
+
+</td>
+<td valign="top">
+
+`pressure-millimeter-ofhg`
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`pressure-pound-per-square-inch`
+
+
+
+</td>
+<td valign="top">
+
+`pressure-pound-force-per-square-inch`
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`pressure-inch-hg`
+
+
+
+</td>
+<td valign="top">
+
+`pressure-inch-ofhg`
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`torque-pound-foot`
+
+
+
+</td>
+<td valign="top">
+
+`torque-pound-force-foot`
+
+
+
+</td>
+</tr>
+</table>
+
 **Related Information**  
 
 

@@ -138,7 +138,14 @@ onSaveSalesOrder : function (oEvent) {
 
 The OData V4 model automatically repeats failed property changes \(PATCH requests\). If the update group ID has [SubmitMode.API](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.SubmitMode.API) and the property change of the entity on the server fails, the change is repeated with the next call of [ODataModel.submitBatch](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataModel/methods/submitBatch) for this group. If the update group ID has [SubmitMode.Auto](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.SubmitMode.Auto) or [SubmitMode.Direct](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.SubmitMode.Direct) and the change fails, the change is repeated automatically with the next update for the entity. Since 1.67.0, [ODataModel.submitBatch](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataModel/methods/submitBatch) can also be used for update group IDs with [SubmitMode.Auto](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.SubmitMode.Auto) in order to repeat, independently of an update.
 
-The same holds true for [Creating an Entity](creating-an-entity-c9723f8.md).
+The same holds true for [Creating an Entity](creating-an-entity-c9723f8.md) and [Deleting an Entity](deleting-an-entity-2613ebc.md).
+
+> ### Note:  
+> If updates for an entity fail and thus prevent its deletion, they should be reset via [`Context#resetChanges`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.Context/methods/resetChanges)
+
+[Bound Actions](odata-operations-b54f789.md) also automatically repeat failed changes for their binding parameter.
+
+When calling [`v4.Context#requestSideEffects`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.Context/methods/requestSideEffects), all failed updates or creates for the group ID are repeated within the same batch request. If the group ID has [SubmitMode.Auto](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.SubmitMode.Auto) and any updates or creates are currently running, the method first waits for them to be processed.
 
 
 

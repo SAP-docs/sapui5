@@ -50,7 +50,7 @@ The system gives priority to the `Org.OData.Capabilities.V1.NavigationRestrictio
 >     </Record>
 >   </Annotation>
 > </Annotation>
-> 
+> .
 > ```
 
 > ### Sample Code:  
@@ -68,6 +68,9 @@ The system gives priority to the `Org.OData.Capabilities.V1.NavigationRestrictio
 >   { create;  }
 > };
 > ```
+> 
+> > ### Note:  
+> > No ABAP CDS annotation is required, since the setting is made according to the modeling \(create, update, delete, etc.\) in RAP BDEF \(behavior definition\).
 
 > ### Sample Code:  
 > CAP CDS Annotation
@@ -510,7 +513,9 @@ The following code sample shows you how to hide or show the *Create* button, dep
 > ### Sample Code:  
 > ABAP CDS Annotation
 > 
-> No ABAP CDS annotation sample is available. Please use the local XML annotation.
+> ```
+> @UI.createHidden: #(_Root.isCreateHidden)
+> ```
 
 > ### Sample Code:  
 > CAP CDS Annotation
@@ -539,7 +544,9 @@ The following code sample shows you how to hide or show the *Delete* button, dep
 > ### Sample Code:  
 > ABAP CDS Annotation
 > 
-> No ABAP CDS annotation sample is available. Please use the local XML annotation.
+> ```
+> @UI.deleteHidden: #(_Root.isDeleteHidden)
+> ```
 
 > ### Sample Code:  
 > CAP CDS Annotation

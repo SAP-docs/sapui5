@@ -102,9 +102,6 @@ Application developers can pass the variant ID as the URL parameter by updating 
 > }
 > ```
 
-> ### Note:  
-> `sap-ui-fe-chart-variant-id` is currently not supported in SAP Fiori elements for OData V4, since the chart currently does not support control variant management.
-
 **Related Information**  
 
 

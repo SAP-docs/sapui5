@@ -364,6 +364,8 @@ You can use one of the following two approaches:
 > -   None of the navigation entity sets associated with the main entity set can be parameterized.
 > 
 > -   Sort restrictions aren't supported for first-level navigation entity sets when used within parameterized scenarios \(meaning when a root node is a parameterized entity\).
+> 
+> -   SAP Fiori elements for OData V4 doesn't support filtering on properties defined as measures.
 
 
 

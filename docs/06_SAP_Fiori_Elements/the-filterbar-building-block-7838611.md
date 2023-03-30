@@ -16,7 +16,7 @@ The `FilterBar` building block allows application developers to embed a filter b
 > />
 > ```
 
-Default values via `UI.SelectionVariant` and `Common.FilterDefaultValue` as well as custom filters are supported.
+Default values via `UI.SelectionVariant` and `Common.FilterDefaultValue` as well as custom filters are supported. Check out our live example in the flexible programming model explorer at [Filter Bar](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/filterBar/filterBarDefault).
 
 > ### Restriction:  
 > The `FilterBar` building block currently doesn't support the parametrized entity set and has no provision to bring up the visual filter bar.
