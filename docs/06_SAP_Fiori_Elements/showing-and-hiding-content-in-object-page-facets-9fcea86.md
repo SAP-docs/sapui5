@@ -35,12 +35,12 @@ To enable this feature, set the `UI.PartOfPreview` annotation of the relevant re
 > XML Annotation
 > 
 > ```xml
-> <Record Type=“UI.ReferenceFacet”>
->     <PropertyValue Property=“Label” String=“{@i18n>@ShipToAddress}”/>
->     <PropertyValue Property=“ID” String=“ShipToAddress”/>
->     <PropertyValue Property=“Target”
->     AnnotationPath=“@UI.FieldGroup#ShipToAddress”/>
->     <Annotation Term=“UI.PartOfPreview” Bool=“false”/>
+> <Record Type="UI.ReferenceFacet">
+>     <PropertyValue Property="Label" String="{@i18n>@ShipToAddress}"/>
+>     <PropertyValue Property="ID" String="ShipToAddress"/>
+>     <PropertyValue Property="Target"
+>     AnnotationPath="@UI.FieldGroup#ShipToAddress"/>
+>     <Annotation Term="UI.PartOfPreview" Bool="false"/>
 > </Record>
 > ```
 

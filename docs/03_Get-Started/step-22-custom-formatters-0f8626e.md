@@ -25,7 +25,7 @@ sap.ui.define([], function () {
 	"use strict";
 	return {
 		statusText: function (sStatus) {
-			var resourceBundle = this.getView().getModel("i18n").getResourceBundle();
+			var resourceBundle = this.getOwnerComponent().getModel("i18n").getResourceBundle();
 			switch (sStatus) {
 				case "A":
 					return resourceBundle.getText("invoiceStatusA");
@@ -44,6 +44,14 @@ sap.ui.define([], function () {
 We create a new folder `model` in our app project. The new `formatter` file is placed in the model folder of the app, because formatters are working on data properties and format them for display on the UI. So far we did not have any model-related artifacts, except for the `Invoices.json` file, we will now add the folder `webapp/model` to our app. This time we do not extend from any base object but just return a JavaScript object with our `formatter` functions inside the `sap.ui.define` call.
 
 Function `statusText` gets the technical status from the data model as input parameter and returns a human-readable text that is read from the `resourceBundle` file.
+
+> ### Note:  
+> In the above example, `this` refers to the controller instance as soon as the formatter gets called. We access the data model via the component using `this.getOwnerComponent().getModel()` instead of using `this.getView().getModel()`. The latter call might return `undefined`, because the view might not have been attached to the component yet, and thus the view can't inherit a model from the component.
+
+**Additional Information:**
+
+-    [API Reference: `sap.ui.core.mvc.Controller#getOwnerComponent`](https://ui5.sap.com/#/api/sap.ui.core.mvc.Controller/methods/getOwnerComponent). 
+-    [API Reference: `sap.ui.core.mvc.Controller#onInit`](https://ui5.sap.com/#/api/sap.ui.core.mvc.Controller/methods/onInit). 
 
 
 

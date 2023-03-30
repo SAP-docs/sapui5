@@ -164,7 +164,7 @@ You can use `FilterRestrictions` annotations and set the `AllowedExpressions` pr
 >             </Record>
 > 	 </Collection>
 >        </PropertyValue>
->     <Record> 
+>     </Record> 
 > </Annotation>
 > ```
 

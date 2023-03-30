@@ -100,6 +100,51 @@ To add a custom message to the object page table, you must add the table ID as s
 > ### Restriction:  
 > We don't recommend using this extension API with the multiple view scenarios. We also don't support this for smart charts and lists.
 
+
+
+<a name="loio0fdbefb48d6446bb9ed20ca42942aa10__section_asl_gk4_mwb"/>
+
+## Additional Features in SAP Fiori Elements for OData V4
+
+To add a custom message to the list report and the analytical list page, you can use the `setCustomMessage` function on the `ListReport` controler extension.
+
+The `setCustomMessage` function can have the following optional parameters:
+
+-   A message object containing:
+
+    -   `message`: the message text,
+
+    -   `type`: the message type.
+
+
+    If the parameter is omitted, existing messages will be removed.
+
+-   `tabKey` identifying the tab where the custom message is displayed. If the parameter is empty, the message is displayed in all tabs. If `tabKey=['1','2']`, the message is only displayed in tabs 1 and 2.
+-   A function to be called when closing the message.
+
+
+> ### Sample Code:  
+> ```xml
+> routing: {
+>     onAfterBinding: function (oBindingContext, mParameters) {
+>         var oMessage = {
+>                 message: "onAfterBinding: Context bound. Have a nice day",
+>                 type: sap.ui.core.MessageType.Information
+>             },
+>             extensionAPI = this.base.getExtensionAPI();
+> 
+>         function fnOnClose() {
+>             MessageToast.show("Custom message closed");
+>         }
+> 
+>         extensionAPI.setCustomMessage(oMessage, null, fnOnClose);
+> 
+>     }
+> }
+> ```
+
+To add a custom message to the object page, you can use the `addMessage` function on the Table building block. Check out our live example in the flexible programming model explorer at [Table - Messages](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/table/tableMessages).
+
 **Related Information**  
 
 

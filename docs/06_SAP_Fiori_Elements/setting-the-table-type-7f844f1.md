@@ -46,9 +46,9 @@ The additional `type` property available within `tableSettings` is:
 > ### Note:  
 > -   On smart phones, responsive tables are shown.
 > 
-> -   List report only: If the `type` property within `tableSettings` is `AnalyticalTable`, set the annotation `sap:semantics` to `aggregate` for the specified entity type. Note that `sap:semantics` is a back-end entity type definition and cannot be changed in the SAP Web IDE.
+> -   List report only: If the `type` property within `tableSettings` is `AnalyticalTable`, set the annotation `sap:semantics` to `aggregate` for the specified entity type. Note that `sap:semantics` is a back-end entity type definition and can't be changed in the SAP Web IDE.
 > 
-> -   If you do not maintain the `type` property within `tableSettings` , and if `sap:semantics` to `aggregate` has been set in the back end, an analytical table is rendered.
+> -   If you don't maintain the `type` property within `tableSettings` , and if `sap:semantics` to `aggregate` has been set in the back end, an analytical table is rendered.
 
 
 
@@ -141,7 +141,7 @@ The following logic is used to determine the table type of an analytical list pa
 
 -   If the table type is specified in the manifest:
 
-    If the table type is specified and set to analytical, but the `entitySet` doesn’t have analytical capabilities, a grid table is used as the fallback option. Otherwise, the table is created with the specified table type.
+    If the table type is specified and set to analytical, but the `entitySet` doesn’t have analytical capabilities, an empty table is displayed. Otherwise, the table is created with the specified table type.
 
 -   If the table type is **not** specified in the manifest, the `ResponsiveTable` is used by default.
 
@@ -155,7 +155,7 @@ In the `manifest.json` file, you can control which table type is rendered in the
 
 ### Examples
 
-Set the `type` property within `tableSettings` to the required values in *sap.ui5:* \> *routing:* \> *targets*of the `manifest.json` file.
+Set the `type` property within `tableSettings` to the required values in *sap.ui5:* \> *routing:* \> *targets* of the `manifest.json` file.
 
 Example for the list report:
 
@@ -339,6 +339,13 @@ The analytical table renders data that can be grouped and aggregated.
     > }
     > ```
 
+
+> ### Restriction:  
+> -   Analytical tables support draft-enabled services. But you must avoid editing them since tables always reflect the active state of entities.
+> 
+> -   Analytical tables don’t support navigation properties, so if you include them through a `LineItem`, an empty column is displayed. You also cannot add navigation properties through the table personalization settings.
+> 
+> -   You can't use aggregable properties to filter the data on analytical tables.
 
 
 

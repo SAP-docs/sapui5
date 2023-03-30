@@ -245,6 +245,170 @@ The `TextArrangement` value at entity set level is considered as a fallback only
 
 
 
+<a name="loiof49a0f7eaafe444daf4cd62d48120ad0__section_xg1_4mw_kwb"/>
+
+## Fiscal Annotations
+
+`Edm.String` properties can be annotated to indicate that they are based on a fiscal date.
+
+The following annotations are available for fiscal dates with the following paterns:
+
+****
+
+
+<table>
+<tr>
+<th valign="top">
+
+Annotation
+
+
+
+</th>
+<th valign="top">
+
+Pattern
+
+
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+`IsFiscalYearPeriod`
+
+
+
+</td>
+<td valign="top">
+
+PPP
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`IsDayOfFiscalYear`
+
+
+
+</td>
+<td valign="top">
+
+d
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`IsFiscalPeriod`
+
+
+
+</td>
+<td valign="top">
+
+YYYYPPP
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`IsFiscalQuarter`
+
+
+
+</td>
+<td valign="top">
+
+Q
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`IsFiscalWeek`
+
+
+
+</td>
+<td valign="top">
+
+WW
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`IsFiscalYear`
+
+
+
+</td>
+<td valign="top">
+
+YYYY
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`IsFiscalYearQuarter`
+
+
+
+</td>
+<td valign="top">
+
+YYYYQ
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`IsFiscalYearWeek`
+
+
+
+</td>
+<td valign="top">
+
+YYYYWW
+
+
+
+</td>
+</tr>
+</table>
+
+For example, `IsFiscalYearPeriod` indicates that the annotated `Edm.String` property is a string based on a fiscal date following the PPP pattern.
+
+Check out our live example in the flexible programming model explorer at [Field - Fiscal types](https://ui5.sap.com/test-https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/field/fieldFiscals).
+
+
+
 <a name="loiof49a0f7eaafe444daf4cd62d48120ad0__section_v5m_xzf_k4b"/>
 
 ## Visibility and Enablement of the Field

@@ -160,3 +160,6 @@ Key users can move and rename sections and subsections on the object page.
 
 Key users can embed, update, move and remove iFrame content \(that is, embed content\) on object page headers and sections. For more information, see [Embedding Content](https://help.sap.com/viewer/0f8b49c4dfc94bc0bda25a19aa93d5b2/Cloud/en-US/bfdf15154f16419fb60ce598b21fe515.html?q=embedding%20content).
 
+> ### Caution:  
+> You cannot embed another SAP Fiori elements app via an iFrame into an existing SAP Fiori elements app.
+
