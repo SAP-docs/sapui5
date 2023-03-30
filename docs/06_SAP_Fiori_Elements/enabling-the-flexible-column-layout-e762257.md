@@ -122,7 +122,7 @@ In `"routing.config"`, the optional `"flexibleColumnLayout"` object allows you t
 ```
 "sap.ui5": {
     "rootView": {
-            "viewName": "sap.fe.templates.RootContainer.view.Fcl",
+            "viewName": "sap.fe.core.rootView.Fcl",
             "type": "XML",
             "async": true,
             "id": "appRootView"
