@@ -2,11 +2,11 @@
 
 # "Share" Functionality
 
-The "share" functionality allows users to share the current application state using the options *Send Email*, *Share in SAP Jam* and *Save as Tile*.
+The "share" functionality allows users to share the current application state using options such as *Send Email* and *Save as Tile*.
 
 -   *Send Email*
 
-    When a user chooses this option, the link to the page opens in the default email client that is configured in the system. When a user chooses the link, the application page opens in the same state in which it was shared: filter settings, personalization options and selections for charts and tables, as well app-specific button states such as the filter mode or view mode, are all transferred.
+    When a user chooses this option, the link to the page opens in the default email client that is configured in the system. When a user chooses the link, the application page opens in the same state in which it was shared: filter settings, personalization options, and selections for charts and tables, as well app-specific button states such as the filter mode or view mode, are all transferred.
 
 -   *Share in SAP Jam*
 
@@ -16,13 +16,26 @@ The "share" functionality allows users to share the current application state us
 
     When a user chooses this option, the corresponding *Save as Tile* dialog is displayed. When a user chooses the tile, the application page opens in the same state in which the tile was created. Application developers can customize the title and the sub-title of the tile. In the list report, a dynamic tile with a record count is created, where the applied filter is also taken into account.
 
+-   *Chat in Microsoft Teams*
+
+    When a user chooses this option, a separate window opens where they can directly share a link to a business application in the SAP S/4HANA Cloud system with co-workers.
+
+    Please note the following:
+
+    -   This option is only available if the required settings have been made by the system administrators of SAP S/4HANA Cloud.
+
+        For more information, see [Integrating Microsoft Teams](https://help.sap.com/docs/SAP_S4HANA_CLOUD/0f69f8fb28ac4bf48d2b57b9637e81fa/257ec7408db6420682462cd1d000e744.html).
+
+    -   The *Chat in Microsoft Teams* option is part of collaborative ERP \(enterprise resource planning\), which integrates the best of SAP S/4HANA Cloud with Microsoft Teams. So this option is not available for all users.
+
+
 
 > ### Note:  
 > -   The "share" functionality is available for the list report, object page, and subobject page.
 > 
 > -   For applications using the flexible column layout, the "share" functionality is shown on the highest view level.
 > 
-> -   A dynamic tile is not created if the filter bar contains a semantic date. For more information on semantic date range, see [Enabling Semantic Operators in the Filter Bar](enabling-semantic-operators-in-the-filter-bar-fef65d0.md).
+> -   A dynamic tile is not created if the filter bar contains a semantic date. For more information about the semantic date range, see [Enabling Semantic Operators in the Filter Bar](enabling-semantic-operators-in-the-filter-bar-fef65d0.md).
 > 
 > -   The "share" functionality is not available for newly created objects in draft mode, so the button is not visible.
 > 

@@ -114,7 +114,7 @@ On a draft version of a document, if you press [Enter\] on input fields, one of 
 -   If a `PreparedAction` is defined in the `DraftRoot` entity and the message is annotated, that `PreparedAction` is triggered and the messages are requested.
 
 
-For more information, see [Using the Global Side Effect](using-the-global-side-effect-955ae31.md).
+For more information, see [Using the Global Side Effect](using-the-global-side-effect-955ae31.md) and our live example in the flexible programming model at [Guidance - Draft Validation](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/advancedFeatures/guidance/draftValidation).
 
 
 

@@ -569,7 +569,7 @@ Do you still want to delete the remaining \{0\} objects?
 </td>
 <td valign="top">
 
-Text displayed within the confirmation dialog when a user select some objects that are either locked or cannot be deleted. However, one of the selections can be deleted.
+Text displayed within the confirmation dialog when a user select some objects that are either locked or cannot be deleted. However, some of the selections can be deleted.
 
 
 
@@ -619,7 +619,7 @@ Do you still want to delete them?
 </td>
 <td valign="top">
 
-Text displayed within the confirmation dialog when a user select some objects that are either locked or cannot be deleted. However, one of these selections can be deleted but it includes unsaved changes made by another user.
+Text displayed within the confirmation dialog when a user select some objects that are either locked or cannot be deleted. However, some of these selections can be deleted but it includes unsaved changes made by another user.
 
 
 
@@ -1214,23 +1214,21 @@ Text displayed in a message popover when a user has configured the `InsertRestri
 <tr>
 <td valign="top">
 
- `ST_GENERIC_DRAFT_LOCKED_BY_USER` 
+ `CREATE_DIALOG_TITLE` 
 
 
 
 </td>
 <td valign="top">
 
-Another user edited this object without saving the changes: \{1\}
-
-If you take over, any changes will be lost.
+New Item
 
 
 
 </td>
 <td valign="top">
 
-Text displayed within the confirmation dialog when a user selects an obejct to edit that is locked by another user.
+Title text displayed for the create dialog if `createWithParameterDialog` is configured on an object page table of a non-draft application. Users can change titles to, for example, “Create Sales Order Item”.
 
 
 
@@ -1263,6 +1261,31 @@ Delete this object?
 <td valign="top">
 
 Text displayed within the delete confirmation dialog when a user deletes an object \(without an object title\) by clicking *Delete* on the object page header.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `ST_GENERIC_DRAFT_LOCKED_BY_USER` 
+
+
+
+</td>
+<td valign="top">
+
+Another user edited this object without saving the changes: \{1\}
+
+If you take over, any changes will be lost.
+
+
+
+</td>
+<td valign="top">
+
+Text displayed within the confirmation dialog when a user selects an obejct to edit that is locked by another user.
 
 
 
@@ -1480,7 +1503,7 @@ No data found.
 </td>
 <td valign="top">
 
-Text displayed in the object page chart when no data is found after the filters are applied.
+Text displayed in charts on the analytical list page and object page when no data is found without applying any filters.
 
 
 
@@ -1526,7 +1549,7 @@ No data found. Try adjusting the filter parameters.
 </td>
 <td valign="top">
 
-Text displayed in the list report chart when the data load is not triggered with some filters and no data is found for the selected filters.
+Text displayed in charts on the analytical list page and object page when no data is found even after applying filters.
 
 
 
@@ -1549,7 +1572,7 @@ To start, set the relevant filters and choose "Go".
 </td>
 <td valign="top">
 
-Text displayed in the list report chart when the data load is triggered.
+Text displayed in the list report chart when no search is triggered.
 
 
 
@@ -4355,7 +4378,10 @@ For resources that are shared across multiple entity sets, append the navigation
 > 
 > `C_TRANSACTION_HELPER_OBJECT_PAGE_CONFIRM_DELETE_WITH_OBJECTTITLE_SINGULAR|_Items=Do you want to delete this Sales Order Item?` 
 
-For overriding actions that have parameters, some of the text in the action parameter popovers can be overridden. Confirmation actions also get a confirmation popover that has text that can be overridden. To override these texts, the action name along with the entity set name \(or the navigation property name in case of navigation entity set\) has to be provided. This is a mandatory piece of information, even if the application needs the custom text for an action that is used in only 1 entity set. If the entity set name is not appended, the resource bundle text from SAP Fiori elements is used as a fallback.
+For overriding actions that have parameters, some of the text in the action parameter popovers can be overridden. Confirmation actions also get a confirmation popover that has text that can be overridden. To override these texts, the action name along with the entity set name has to be provided. This is a mandatory piece of information, even if the application needs the custom text for an action that is used in only 1 entity set. If the entity set name is not appended, the resource bundle text from SAP Fiori elements is used as a fallback.
+
+> ### Note:  
+> To override the text with a key from a navigation entity set, you must use the navigation property name instead of the entity set name of the navigation entity. In the above example, `_Items` is the navigation property set name of the navigation entity `Items`.
 
 > ### Example:  
 > `C_OPERATIONS_ACTION_CONFIRM_MESSAGE=Are you sure that you want to execute this action?`

@@ -72,18 +72,25 @@ Possible Values for `"availability"`
 
 You can also define charts against a draft-enabled entity. In this case only active data is used for the chart display.
 
+> ### Note:  
+> -   When you use draft-enabled entities or charts, sorting on virtual properties and measures causes issues if you use CAP NodeJs. This is because of a CAP limitation that is fixed as of @sap/cds 6.0.0.
+> 
+> -   Aggregations on draft-enabled entities are not supported in ABAP CDS, since `$apply` with or without a filter on draft or transactional entities isn't supported by SADL.
+
 > ### Restriction:  
-> -   Donut charts are currently not supported.
+> -   Donut charts are not supported.
 > 
-> -   Properties \(measures, dimensions, text associations\) coming from "associated entity sets" are currently not supported. "Associated entity set" is with reference to the value help entity set corresponding to the visual filter.
+> -   Properties \(measures, dimensions, text associations\) coming from "associated entity sets" are not supported. "Associated entity set" is with reference to the value help entity set corresponding to the visual filter.
 > 
-> -   Use only fields of type `Edm.Date`, `Edm.Time`, or `Edm.DateTime` for line charts. String-based fields that are time/date-based are currently not supported.
+> -   Use only fields of type `Edm.Date`, `Edm.Time`, or `Edm.DateTime` for line charts. String-based fields that are time/date-based are not supported.
 > 
-> -   The selection of values outside of the chart is only enabled for value help-based fields. It's currently not enabled for drop-down lists or date/time-based fields.
+> -   The selection of values outside of the chart is only enabled for value help-based fields. It's not enabled for drop-down lists or date/time-based fields.
 > 
-> -   Visual filters within the *Adapt Filters* dialog are currently not supported.
+> -   Visual filters within the *Adapt Filters* dialog are not supported.
 > 
-> -   Path-based values for the `UI.Criticality` annotation and semantic coloring based on the `CriticalityCalculation` annotation are currently not supported.
+> -   Visual Filters don't support the correct formatting for fiscal periods or for string-based dimensions that are annotated as time-based.
+> 
+> -   Path-based values for the `UI.Criticality` annotation and semantic coloring based on the `CriticalityCalculation` annotation are not supported.
 > 
 > -   You can't configure visual filters for a filter field for which a custom filter has already been defined.
 
