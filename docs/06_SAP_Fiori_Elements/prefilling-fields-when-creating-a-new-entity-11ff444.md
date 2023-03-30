@@ -53,3 +53,8 @@ Applications can define `NewAction` and its parameters to ensure that end users 
 > </Annotation>
 > ```
 
+**Related Information**  
+
+
+[Actions in the List Report](actions-in-the-list-report-993e99e.md "The list report supports a number of actions.")
+

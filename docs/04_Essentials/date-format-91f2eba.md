@@ -127,7 +127,39 @@ year
 </td>
 <td valign="top">
 
-Same as `y`, but uses the ISO year-week calendar
+calendar year based on the calendar week
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `Q` 
+
+
+
+</td>
+<td valign="top">
+
+quarter number
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `q` 
+
+
+
+</td>
+<td valign="top">
+
+quarter number in stand-alone format
 
 
 
@@ -232,38 +264,6 @@ day number in month
 <tr>
 <td valign="top">
 
- `Q` 
-
-
-
-</td>
-<td valign="top">
-
-quarter number
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
- `q` 
-
-
-
-</td>
-<td valign="top">
-
-quarter number in stand-alone format
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
 \(`F`\)
 
 
@@ -336,6 +336,22 @@ day number of week
 <td valign="top">
 
 AM or PM
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `B` 
+
+
+
+</td>
+<td valign="top">
+
+flexible day period, e.g. "afternoon" or "midnight", for the time provided
 
 
 

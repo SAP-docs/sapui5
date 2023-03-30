@@ -17,7 +17,7 @@ Value lists enable you to read the possible values for a given property, such as
     -   `Standard`: A dynamic value list with multiple queries including selection criteria exists.
 
 
-2.  Determine the value list detail information on demand via `ODataPropertyBinding.requestValueListInfo` which returns a map of all annotations `com.sap.vocabularies.Common.v1.ValueList` or `com.sap.vocabularies.Common.v1.ValueListMapping` by qualifier. Each mapping has the `ValueListMappingType` type as specified in the OData 4.0 Common Vocabulary, see [OData 4.0 Vocabularies - SAP Common](https://wiki.scn.sap.com/wiki/display/EmTech/OData+4.0+Vocabularies+-+SAP+Common#ValueListMappingType). Each mapping is enriched by a `$model` property of type `sap.ui.model.odata.v4.ODataModel` which can be used to access the value list metadata and retrieve value list data. The annotation `com.sap.vocabularies.Common.v1.ValueListRelevantQualifiers` is automatically taken into account.
+2.  Determine the value list detail information on demand via `ODataPropertyBinding.requestValueListInfo` which returns a map of all annotations `com.sap.vocabularies.Common.v1.ValueList` or `com.sap.vocabularies.Common.v1.ValueListMapping` by qualifier. Each mapping has the `ValueListMappingType` type as specified in the OData 4.0 Common Vocabulary, see [OData 4.0 Vocabularies - SAP Common](https://github.com/SAP/odata-vocabularies/blob/main/vocabularies/Common.md#ValueListMappingType). Each mapping is enriched by a `$model` property of type `sap.ui.model.odata.v4.ODataModel` which can be used to access the value list metadata and retrieve value list data. The annotation `com.sap.vocabularies.Common.v1.ValueListRelevantQualifiers` is automatically taken into account.
 
     For value lists of type `Fixed`, only one mapping is expected and the qualifier is ignored. The mapping is available with key "".
 
@@ -110,9 +110,9 @@ There are three options to place the `ValueList` annotation:
 
 [Data Reuse](data-reuse-648e360.md "The OData V4 model keeps data with respect to bindings, which allows different views on the same data, but also means that data is not automatically shared between bindings. There are mechanisms for sharing data to avoid redundant requests and to keep the same data in different controls in sync.")
 
-[OData 4.0 Vocabularies - SAP Common \> ValueListType](https://wiki.scn.sap.com/wiki/display/EmTech/OData+4.0+Vocabularies+-+SAP+Common#ValueListType)
+[OData 4.0 Vocabularies - SAP Common \> ValueListType](https://github.com/SAP/odata-vocabularies/blob/main/vocabularies/Common.md#ValueListType)
 
-[OData 4.0 Vocabularies - SAP Common \> ValueListMappingType](https://wiki.scn.sap.com/wiki/display/EmTech/OData+4.0+Vocabularies+-+SAP+Common#ValueListMappingType)
+[OData 4.0 Vocabularies - SAP Common \> ValueListMappingType](https://github.com/SAP/odata-vocabularies/blob/main/vocabularies/Common.md#ValueListMappingType)
 
 [sap.ui.model.odata.v4.ValueListType](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ValueListType)
 

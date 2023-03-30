@@ -7,7 +7,20 @@ To create an app using SAP Fiori elements, some prerequisites apply.
 > ### Note:  
 > SAP Fiori elements only supports a single service as the service behind the data for all its controls.
 > 
-> The `ValueHelp` annotation in SAP Fiori elements for OData V4, or KPI tags used in the analytical list page, are exceptions to this rule.
+> KPI tags used in the analytical list page and the `ValueHelp` annotation in SAP Fiori elements for OData V4 are exceptions to this rule.
+> 
+> Note the following for SAP Fiori elements for OData V4:
+> 
+> -   The service must support the following OData query options:
+> 
+>     -   `$count`
+> 
+>     -   `$skip`
+> 
+>     -   `$top`
+> 
+> 
+> -   This requirement also applies to a value help service that is used via the `ValueListReference` annotation.
 
 
 

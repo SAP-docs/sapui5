@@ -207,7 +207,7 @@ The following example shows absolute property bindings for a singleton and an en
 ```xml
 <FlexBox>
     <Text text="{/Me/FirstName} {/Me/LastName}"/>
-    <Button text="{/Me/FirstName}>
+    <Button text="{/Me/FirstName}">
     <Text text="{/People('johndoe')/FirstName} {/People('johndoe')/LastName}"/> 
     <Button text="{/People('johndoe')/FirstName}">
 </FlexBox>

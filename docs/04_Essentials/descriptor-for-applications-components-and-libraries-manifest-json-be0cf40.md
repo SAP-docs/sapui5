@@ -1147,6 +1147,75 @@ Version 49
 
 </td>
 </tr>
+<tr>
+<td valign="top">
+
+Version 50
+
+
+
+</td>
+<td valign="top">
+
+\>=1.109
+
+
+
+</td>
+<td valign="top">
+
+1.49.0
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Version 51
+
+
+
+</td>
+<td valign="top">
+
+\>=1.110
+
+
+
+</td>
+<td valign="top">
+
+1.50.0
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Version 52
+
+
+
+</td>
+<td valign="top">
+
+\>=1.111
+
+
+
+</td>
+<td valign="top">
+
+1.51.0
+
+
+
+</td>
+</tr>
 </table>
 
 For more information on the new fields introduced in each version, check out [Migration Information for Upgrading the Descriptor File](migration-information-for-upgrading-the-descriptor-file-a110f76.md)
@@ -1861,7 +1930,8 @@ Cross-navigation for specifying inbounds and outbounds
 
                 -   '`plain`': '`value`' is taken as a literal string value.
                 -   '`reference`': '`value`' is a reference to a parameter maintained in the SAP Fiori launchpad \(such as '`UserDefault.CostCenter`'. The parameter value is used on the outbound intent parameter.
-                -   '`regexp`': '`value`' matches the specified pattern.'`binding`': '`value`' is a binding path. The value from the model at the specified binding path will be used on the outbound intent parameter.
+                -   '`regexp`': '`value`' matches the specified pattern.
+                -   '`binding`': '`value`' is a binding path. The value from the model at the specified binding path will be used on the outbound intent parameter.
 
 
         -   `required`: Indicator whether parameter is required \(`true`, `false`\)
@@ -1960,10 +2030,10 @@ Contains object with app-specific icons, which are:
     > ### Note:  
     > `favIcon` is not set automatically by the framework. The icons can be set manually using the `sap/ui/util/Mobile` module and the `setIcons` function.
 
--   `phone`: 57x57 pixel version for non-retina iPhones
--   `phone@2`: 114x114 pixel version for retina iPhones
--   `tablet`: 72x72 pixel version for non-retina iPads
--   `tablet@2`: 144x144 pixel version for retina iPads
+-   `phone`: 120x120 pixel version for iPhones with low pixel density
+-   `phone@2`: 180x180 pixel version for iPhones with high pixel density
+-   `tablet`: 152x152 pixel version for iPads with low pixel density
+-   `tablet@2`: 167x167 pixel version for iPads with high pixel density
 
 
 
@@ -2728,7 +2798,7 @@ Current version of the `manifest.json`
 ```
 
 {
-    "_version": "1.48.0",
+    "_version": "1.51.0",
  
     "start_url": "index.html",
  
@@ -2980,7 +3050,7 @@ Current version of the `manifest.json`
             }]
         },
         "dependencies": {
-            "minUI5Version": "1.108.0",
+            "minUI5Version": "1.111.0",
             "libs": {
                 "sap.m": {
                     "minVersion": "1.34.0"

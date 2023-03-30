@@ -187,5 +187,5 @@ For more information, see [Managing Variants](managing-variants-8ce658e.md).
 **Related Information**  
 
 
-[Enabling Variant Management in the Object Page](enabling-variant-management-in-the-object-page-f26d42b.md "You can enable variant management in the object page.")
+[Enabling Variant Management in the Object Page](enabling-variant-management-in-the-object-page-f26d42b.md "The variant management is enabed by default for tables and charts on the object page. However, you can choose to disable it.")
 

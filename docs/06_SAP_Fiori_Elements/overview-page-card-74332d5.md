@@ -108,3 +108,28 @@ To add a card to the *Insights* section, select the more option present on your 
 
 Note that you can add only eight cards to your *Insights* section at a given time. If eight cards are already being displayed, the selected card is added to *Edit Insights* dialog box. You can choose to select/deselect cards by editing the *Insights* section. For more information, see [*My Home* in SAP S/4HANA Cloud](https://help.sap.com/docs/SAP_S4HANA_CLOUD/4fc8d03390c342da8a60f8ee387bca1a/8a60279e8d2041b5ad8d3455fab0f3ef.html).
 
+
+
+### Disabling Card Generation
+
+An application can also decide to restrict the generation of individual analytical, list, and table cards. To do so, you can configure the card manifest setting by turning `enableAddToInsights` to `false`. With this, the option to add cards to the *Insights* section is removed.
+
+> ### Sample Code:  
+> ```
+> "card01": {
+>         "model": "MODEL",
+>         "template": "sap.ovp.cards.charts.analytical",
+>         "settings": {
+>           "title": "{{card01_title}}",
+>           "subTitle": "{{card01_subTitle}}",
+>           "entitySet": "C_EntitySet",
+>           "enableAddToInsights": false,
+>           "selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#SV",
+>           "chartAnnotationPath": "com.sap.vocabularies.UI.v1.Chart#Chart",
+>           "presentationAnnotationPath": "com.sap.vocabularies.UI.v1.PresentationVariant#PV",
+>           "dataPointAnnotationPath": "com.sap.vocabularies.UI.v1.DataPoint#DP",
+>           "identificationAnnotationPath": "com.sap.vocabularies.UI.v1.Identification"
+>         }
+>       },
+> ```
+

@@ -181,7 +181,7 @@ The following are some of the possible scenarios:
 
 ### Enabling Fullscreen Mode for Inbound Navigation in Flexible Column Layout Mode
 
-During inbound navigation to flexible column layout application, if the navigation context points to a unique object, you can open the object in fullscreen mode by adding the below configuration:
+During inbound navigation to flexible column layout application, if the navigation context points to a unique object, you can open the object in fullscreen mode by adding the configuration mentioned here. To experience better performance, set the `"defaultLayoutTypeIfExternalNavigation": "MidColumnFullScreen"` for the main objects and `"EndColumnFullScreen"` for sub-objects.
 
 > ### Sample Code:  
 > ```
@@ -192,6 +192,9 @@ During inbound navigation to flexible column layout application, if the navigati
 >                   "defaultLayoutTypeIfExternalNavigation": "MidColumnFullScreen",
 >                    "component": {
 >                      "name": "sap.suite.ui.generic.template.ObjectPage"
+> 						   "settings':{
+> 								"allowDeepLinking": true
+> 										 }
 >                     },
 >                     "pages": { 
 >         .....

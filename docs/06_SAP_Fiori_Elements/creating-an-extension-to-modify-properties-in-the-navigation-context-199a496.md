@@ -136,3 +136,12 @@ The modification \(add/remove/change\) is achieved via the `adaptNavigationConte
     > ```
 
 
+ <a name="concept_br3_gdr_gwb"/>
+
+<!-- concept\_br3\_gdr\_gwb -->
+
+### 
+
+> ### Restriction:  
+> When you click a field that is displayed as a link, the call to the `adaptNavigationContext` extension method is invoked only once even if the link opens more than one navigation link. You cannot invoke this method by clicking the navigation links at the second level.
+

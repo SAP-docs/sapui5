@@ -257,7 +257,7 @@ The refresh mechanism is exactly the same as defined for the external navigation
 
 Applications can also configure refresh on back navigation when the navigation was triggered using smart link from the reuse component or an extension view.
 
-Following is a sample code on a `stStart` function of a resue component where extension API `setRefreshBehaviour` is used to refresh an entity set:
+Following is a sample code on a `stStart` function of a reuse component where extension API `setRefreshBehaviour` is used to refresh an entity set:
 
 > ### Sample Code:  
 > ```

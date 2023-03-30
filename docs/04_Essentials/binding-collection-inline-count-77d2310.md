@@ -65,4 +65,15 @@ setHeaderContext : function () {
 > ```xml
 > <Title text="{/SalesOrderList/$count} Sales Orders"/>
 > ```
+> 
+> The OData system query options `$apply`, `$filter`, and `$search` are supported:
+> 
+> ```xml
+> 
+> <Title 
+> 	text="{
+> 		path: '/SalesOrderList/$count', 
+> 		parameters: {$filter: 'LifecycleStatus eq \'N\''}
+> 		  } New Sales Orders"/>
+> ```
 
