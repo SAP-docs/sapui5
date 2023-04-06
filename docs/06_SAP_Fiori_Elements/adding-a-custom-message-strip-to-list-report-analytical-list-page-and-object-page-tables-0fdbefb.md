@@ -4,6 +4,10 @@
 
 You can show your custom texts in the message strip above the table.
 
+
+
+## Additional Features in SAP Fiori Elements for OData V2
+
 For the list report and analytical list page, you can choose to add a custom message as shown here:
 
 > ### Sample Code:  
@@ -75,10 +79,6 @@ There can be four types of messages:
 
 -   `sap.ui.core.MessageType.Information`
 
-
-
-
-## Additional Features in SAP Fiori Elements for OData V2
 
 To add a custom message to the object page table, you must add the table ID as shown here:
 

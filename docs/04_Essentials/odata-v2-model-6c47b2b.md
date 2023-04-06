@@ -724,7 +724,7 @@ The `create` and `update` methods also require a mandatory `oData` parameter for
     oModel.remove("/Products(999)", {success: mySuccessHandler, error: myErrorHandler});
     ```
 
-    The [`sap.ui.model.odata.v2.Context#delete`](https://ui5.sap.com/#/api/sap.ui.model.odata.v2.Context%23methods/delete) function uses `ODataModel#remove` to remove a persisted entry. It will also remove transient and inactive entries. With this function, a developer does not need to know the status \(inactive, transient, persisted\) of the context pointing to the entry to be removed.
+    The [`sap.ui.model.odata.v2.Context#delete`](https://ui5.sap.com/#/api/sap.ui.model.odata.v2.Context%23methods/delete) function uses `ODataModel#remove` to remove a persisted entry. It will also remove transient and inactive entries. This function works for all statuses \(inactive, transient, persisted\) of the context pointing to the entry to be removed.
 
 -   Refresh after change
 
@@ -1115,7 +1115,7 @@ Content
 > 
 > Using `$expand` has several drawbacks, however. In OData V2, you cannot use additional filters and sorters for the expanded entries of a `$expand` query. In addition, the `$expand` option always loads **all** associated entities, so paging with `$skip` or `$top` isn't possible, either.
 > 
-> Using the preliminary context feature allows you to to circumvent these restrictions. You can merge multiple sub-requests into a single `$batch` query, yet you can easily include additional filters and sorters on the related subordinate entries.
+> Using the preliminary context feature allows you to circumvent these restrictions. You can merge multiple sub-requests into a single `$batch` query, yet you can easily include additional filters and sorters on the related subordinate entries.
 
  <a name="loio6cb8d585ed594ee4b447b5b560f292a4"/>
 

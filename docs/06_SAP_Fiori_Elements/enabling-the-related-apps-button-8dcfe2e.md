@@ -182,7 +182,8 @@ You can display multiple semantic objects under the *Related Apps* button in the
 >                         "relatedAppsSettings": {
 >                             "": {
 >                                 "semanticObject": "",
->                                 "semanticObjectAction": {}}
+>                                 "semanticObjectAction": {}
+> 						   }
 >                             },
 >                             "EPMProduct": {
 >                                 "semanticObject": "EPMProduct"
@@ -243,6 +244,65 @@ You can enable this feature through the following settings in the `manifest.json
 
 > ### Note:  
 > When making a call to the SAP Fiori launchpad to determine the related apps via the `GetLinks` API, SAP Fiori elements passes all the semantic keys - provided they are available. If not all semantic keys are available, then SAP Fiori elements passes all the technical keys.
+
+
+
+### Supporting the Mapping of Default Links in Related Apps
+
+When working with default links, if the technical field name of the field on the object page and the corresponding field in the target app differ, application developers can define a mapping between these fields. This mapping enables passing the context between these fields even though their technical field names are different.
+
+To create this mapping, you can use `Common.SemanticObject` and `Common.SemanticObjectMapping` annotation as shown in the following sample codes:
+
+> ### Sample Code:  
+> XML Annotation
+> 
+> ```xml
+> <Annotations Target="com.c_salesordermanage_sd.SalesOrderManage">
+>     <Annotation Term="Common.SemanticObject" String="SalesOrder"/>
+>     <Annotation Term="Common.SemanticObjectMapping">
+>         <Collection>
+>             <Record Type="Common.SemanticObjectMappingType">
+>                 <PropertyValue Property="LocalProperty" PropertyPath="SoldToParty"/>
+>                 <PropertyValue Property="SemanticObjectProperty" String="Customer"/>
+>             </Record>
+>         </Collection>
+>     </Annotation>
+> </Annotations>
+> 
+> ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> ```xml
+> 
+> annotate view SalesOrderManage with {
+>    @Consumption.semanticObject: 'SalesOrder'
+>    @Consumption.semanticObjectMapping.additionalBinding: [{element: 'Customer', localElement: 'SoldToParty'}]
+>    Customer
+> }
+> ```
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```xml
+> entity SalesOrderManage                                                       @(
+>     Common       : {
+>         SemanticObject                   : 'SalesOrder',
+>         SemanticObjectMapping            : [{
+>             LocalProperty          : SoldToParty,
+>             SemanticObjectProperty : 'Customer'
+>         }
+>         ]
+>     }
+> )
+> ```
+
+> ### Note:  
+> You mustn't define a mapping between the fields on the object page and the additional links added through the manifest property `additionalSemanticObjects`.
+> 
+> To map to these additional links, use the manifest settings as provided in the following section.
 
 
 

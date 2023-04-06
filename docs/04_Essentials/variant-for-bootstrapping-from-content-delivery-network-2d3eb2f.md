@@ -28,7 +28,7 @@ The specific version allows you to select a particular fixed version for bootstr
 <script id="sap-ui-bootstrap"
     type="text/javascript"
     src="https://ui5.sap.com/[/pandoc/div/div/horizontalrule/horizontalrule/codeblock/strong/span
-     {""}) 1.111.2 (span]/resources/sap-ui-core.js"
+     {""}) 1.112.0 (span]/resources/sap-ui-core.js"
     data-sap-ui-theme="sap_fiori_3"
     data-sap-ui-async="true"
     data-sap-ui-libs="sap.m"></script>

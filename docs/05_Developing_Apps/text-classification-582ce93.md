@@ -320,7 +320,7 @@ We recommend that you assign a text type to each text. The text type indicates t
     <tr>
     <td valign="top">
 
-    `YMSG`
+    `XMSG`
 
 
     

@@ -374,7 +374,7 @@ Displaying timestamps in a specific time zone provided by the back end is done u
 
 ## `sap.ui.core.date.UI5Date`
 
-The [ `sap.ui.core.date.UI5Date`](https://ui5.sap.com/#/api/module:sap/ui/core/date/UI5Date) class is a subclass of JavaScript `Date`. Use it if the browser time zone and your configured time zone differ.
+The [ `sap.ui.core.date.UI5Date`](https://ui5.sap.com/#/api/module:sap/ui/core/date/UI5Date) class is a subclass of JavaScript `Date`. Regardless of whether a time zone is configured or not, the `UI5Date` class is meant to replace the JavaScript `Date` entirely within SAPUI5. Therefore, make sure to always use [ `UI5Date.getInstance`](https://ui5.sap.com/#/api/module:sap/ui/core/date/UI5Date/methods/sap/ui/core/date/UI5Date.getInstance) where `Date`s are required.
 
 > ### Caution:  
 > Use the [ `UI5Date.getInstance`](https://ui5.sap.com/#/api/module:sap/ui/core/date/UI5Date/methods/sap/ui/core/date/UI5Date.getInstance) method instead of `new Date(...)` to create new `Date` instances. This method returns a `UI5Date` if the browser time zone and the configured time zone are different, and a regular JavaScript `Date` otherwise.
@@ -404,8 +404,6 @@ The [ `sap.ui.core.date.UI5Date`](https://ui5.sap.com/#/api/module:sap/ui/core/d
 > });
 > 
 > ```
-
-Regardless of whether a time zone is configured or not, the `UI5Date` class is meant to replace the JavaScript `Date` entirely within SAPUI5. Therefore, make sure to always use [ `UI5Date.getInstance`](https://ui5.sap.com/#/api/module:sap/ui/core/date/UI5Date/methods/sap/ui/core/date/UI5Date.getInstance) where `Date`s are required.
 
 
 

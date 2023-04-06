@@ -269,7 +269,7 @@ You can define side effects either in the back end or in local annotation files.
 
 -   **Side effect without a specific source**
 
-    You can define a side effect without any source properties or source entities. This is called a global side effect. For more information, see [Using the Global Side Effect](using-the-global-side-effect-955ae31.md).
+    You can define a side effect without any source properties or source entities. This is called a global side effect. For more information, see [Using Global Side Effects](using-global-side-effects-955ae31.md).
 
 
 > ### Note:  
@@ -336,5 +336,5 @@ You can find an example in the following sample code:
 
 [Side Effect Annotations: Examples](side-effect-annotations-examples-61cf21d.md "This topic provides some examples for annotating side effects.")
 
-[Using the Global Side Effect](using-the-global-side-effect-955ae31.md "Global side effects are the side effects that are defined without any source properties or source entities.")
+[Using Global Side Effects](using-global-side-effects-955ae31.md "Global side effects are those side effects that are defined without any source properties or source entities.")
 

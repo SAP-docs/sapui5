@@ -25,6 +25,7 @@ The following list of controls support container content padding CSS classes:
 -   `sap.f.semantic.SemanticPage`
 -   `sap.m.Carousel`
 -   `sap.m.Dialog`
+-   `sap.m.IconTabBar`
 -   `sap.m.FlexBox` using `FlexItemData` with `styleClass` property for each item
 -   `sap.m.IconTabBar`
 -   `sap.m.List`

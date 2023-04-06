@@ -50,7 +50,7 @@ To define custom action in quick view cards:
         
         "extends": {
                 "extensions": {
-                     "sap.ui.controllerExtensions": {
+                     "sap.ui.controller.Extensions": {
                              "sap.ovp.app.Main": {
                                          "controllerName": "my_app.ext.controller.OverViewPageExt"
                               }

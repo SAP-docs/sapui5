@@ -16,7 +16,7 @@ The card ID is the property name and the card configuration is provided in an ob
 
 ## Card Header
 
-All cards have a static header section that can be configured in the descriptor configuration file. The card header includes the properties: `category`, `title`, and `subTitle`.
+All cards have a static header section that can be configured in the descriptor configuration file. The card header includes the following properties: `category`, `title`, `subTitle` and card actions.
 
 The title of a card is mandatory. The subtitle is only mandatory if the card contains data point annotations \(such as a KPI header\). The title and subtitle can contain a maximum of two lines. The header also contains counter information that displays how many records are being presented in the card out of the total existing records, according to the current filter.
 
@@ -95,6 +95,21 @@ These annotation terms can be configured in the application manifest file, as sh
 > }
 > 
 > ```
+
+
+
+<a name="loio74332d5d829b413f9d7c0950dc6a71d2__section_bd1_gyx_5wb"/>
+
+## Card Actions
+
+Card actions are available as of SAPUI5 1.110. You can access and perform the card actions from the card header. The following card actions are available:
+
+-   *Refresh*: this action retrieves the the entity bound to the card and reloads the card, displaying the latest data.
+
+-   *Add card to Insights*: this action shows a preview of the card so that it can be added to the *Insights* section directly from the overview. Note that this action is only available if the *Insights* service is enabled. If it is not enabled, this option will not be shown.
+
+-   *Manage Cards*: this action opens the *Manage Cards* dialog where you can hide or show the available cards.
+
 
 
 

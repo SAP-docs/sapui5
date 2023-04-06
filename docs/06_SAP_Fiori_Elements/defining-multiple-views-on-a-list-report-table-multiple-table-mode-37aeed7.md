@@ -18,7 +18,7 @@ You can also use charts in multiple table mode.
 
 ## Context
 
-To do so, you must have defined a `UI.Chart` annotation, including a qualifier, as follows:
+To do so, you must have defined a `UI.Chart` annotation, including a qualifier, as shown in the following sample codes:
 
 > ### Sample Code:  
 > XML Annotation
@@ -69,7 +69,7 @@ To do so, you must have defined a `UI.Chart` annotation, including a qualifier, 
 > ```
 
 > ### Sample Code:  
-> CAP CDS Annotation
+> CAP CDS Annotation \(OData V4 only\)
 > 
 > ```
 > 
@@ -141,7 +141,7 @@ Reference the `UI.Chart` annotation in your `SelectionPresentationVariant` or `P
 > ```
 
 > ### Sample Code:  
-> CAP CDS Annotation
+> CAP CDS Annotation \(OData V4 only\)
 > 
 > ```
 > 
@@ -234,33 +234,6 @@ To define multiple views using multiple table mode, perform the following steps:
         > 
         > ```
 
-        > ### Sample Code:  
-        > CAP CDS Annotation
-        > 
-        > ```
-        > 
-        > annotate STTA_SALES_ORDER_ITEM_AGGR_SRV.STTA_C_SO_ItemAggrType with @(
-        >   UI.SelectionVariant #Expensive : {
-        >     Text : 'Expensive',
-        >     SelectOptions : [
-        >         {
-        >             $Type : 'UI.SelectOptionType',
-        >             PropertyName : GrossAmount,
-        >             Ranges : [
-        >                 {
-        >                     $Type : 'UI.SelectionRangeType',
-        >                     Sign : #E,
-        >                     Option : #LT,
-        >                     Low : '5000'
-        >                 }
-        >             ]
-        >         }
-        >     ]
-        >   }
-        > );
-        > 
-        > ```
-
         `SelectionPresentationVariant` containing a `SelectionVariant` and a`PresentationVariant`. The `SelectionVariant` filters for items with a price less than a certain amount \(for example, 5,000 euros\), the `PresentationVariant` defines the ascending sort order:
 
         > ### Sample Code:  
@@ -342,43 +315,6 @@ To define multiple views using multiple table mode, perform the following steps:
         > annotate view SALESORDERMANAGE with {
         > 
         > }
-        > 
-        > ```
-
-        > ### Sample Code:  
-        > CAP CDS Annotation
-        > 
-        > ```
-        > 
-        > annotate STTA_SALES_ORDER_ITEM_AGGR_SRV.STTA_C_SO_ItemAggrType with @(
-        >   UI.SelectionPresentationVariant #Cheap : {
-        >     Text : 'Cheap',
-        >     SelectionVariant : { 
-        >         Text : 'Cheap',
-        >         SelectOptions : [
-        >             {
-        >                 $Type : 'UI.SelectOptionType',
-        >                 PropertyName : GrossAmount,
-        >                 Ranges : [
-        >                     {
-        >                         $Type : 'UI.SelectionRangeType',
-        >                         Option : #LT,
-        >                         Low : '5000'
-        >                     }
-        >                 ]
-        >             }
-        >         ]
-        >     },
-        >     PresentationVariant : {
-        >         SortOrder : [
-        >             {
-        >                 Property : GrossAmount,
-        >                 Descending : false
-        >             }
-        >         ]
-        >     }
-        >   }
-        > );
         > 
         > ```
 
@@ -526,39 +462,6 @@ To define multiple views using multiple table mode, perform the following steps:
         > annotate view SALESORDERMANAGE with {
         > 
         > }
-        > ```
-
-        > ### Sample Code:  
-        > CAP CDS Annotation
-        > 
-        > ```
-        > 
-        > UI.Chart #Chart4 : {
-        >     $Type : 'UI.ChartDefinitionType',
-        >     ChartType : #Column,
-        >     Dimensions : [
-        >         CompanyCode,
-        >         Customer
-        >     ],
-        >     Measures : [
-        >         AmountInTransactionCurrency
-        >     ],
-        >     Actions : [
-        >         {
-        >             $Type : 'UI.DataFieldForAction',
-        >             Action : 'ZFAR_CUSTOMER_LINE_ITEMS2_SRV.ZFAR_CUSTOMER_LINE_ITEMS2_SRV_Entities/Create',
-        >             Label : 'Action 1'
-        >         },
-        >         {
-        >             $Type : 'UI.DataFieldForIntentBasedNavigation',
-        >             SemanticObject : 'Customer',
-        >             Action : 'postPayment2',
-        >             Label : 'SO Navigation (M)',
-        >             ![@com.sap.vocabularies.UI.v1.Importance] : #Medium
-        >         }
-        >     ]
-        > },
-        > 
         > ```
 
     -   Navigation for charts
@@ -1197,8 +1100,6 @@ To define multiple views using multiple table mode, perform the following steps:
     >     -   LT: Less than
     > 
     > 
-    > -   The `SelectionVariant` is currently not evaluated for views displaying a chart.
-    > 
     > 
     > For the `PresentationVariant`, `SortOrders` and visualizations are supported.
 
@@ -1402,12 +1303,5 @@ To define multiple views using multiple table mode, perform the following steps:
  ![](images/Multiple_Table_Mode_7249fb3.png) 
 
 > ### Note:  
-
- <a name="concept_g3k_r21_fwb"/>
-
-<!-- concept\_g3k\_r21\_fwb -->
-
-## Restriction
-
-Refreshing the count available on a tab using a global side effect is only possible for a view that has been opened.
+> Refreshing the count available on a tab using a global side effect is only possible for a view that has been opened.
 

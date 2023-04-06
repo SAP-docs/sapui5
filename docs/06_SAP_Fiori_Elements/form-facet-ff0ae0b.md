@@ -1,8 +1,8 @@
 <!-- loioff0ae0b200e0488d928f87a043c4c747 -->
 
-# Header Field Group
+# Form Facet
 
-A field group defines the fields displayed within a specific reference facet. For example, the figure below shows the following fields within the *General Information* section \(created with a header facet\):
+You can add a form facet to the object page header. To do this, add a `UI.ReferenceFacet` to the `UI.HeaderFacets` that points to `UI.FieldGroup` or `UI.Identification`. If you provide a label in the `UI.ReferenceFacet`, it is used as the title of the form. For example, the figure below shows the following fields within the *Sales Area* section \(created with a header facet\):
 
 -   *Sales Organization*
 
@@ -25,6 +25,18 @@ A field group defines the fields displayed within a specific reference facet. Fo
 > XML Annotation
 > 
 > ```xml
+> 
+> <Annotation Term="UI.HeaderFacets">
+>     <Collection>
+>         ...
+>         <Record Type="UI.ReferenceFacet">
+>             <PropertyValue Property="Label" String="Sales Area" />
+>             <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#OrgData" />
+>         </Record>
+>         ...
+>         ...
+>     </Collection>
+> </Annotation>
 > 
 > <Annotation Term="UI.FieldGroup" Qualifier="OrgData">
 >     <Record Type="UI.FieldGroupType">
@@ -53,6 +65,18 @@ A field group defines the fields displayed within a specific reference facet. Fo
 > ABAP CDS Annotation
 > 
 > ```
+> 
+> @UI.Facet: [
+>   {
+>     label: '{@i18n>@SalesArea}',
+>     targetQualifier: 'OrgData',
+>     type: #FIELDGROUP_REFERENCE,
+>     purpose: #HEADER
+>   },
+>   ...
+>   ...
+> ]
+> product;
 > 
 > @UI.fieldGroup: [
 >   {
@@ -89,7 +113,17 @@ A field group defines the fields displayed within a specific reference facet. Fo
 > 
 > ```
 > 
-> UI.FieldGroup #OrgData : {
+> annotate service.Products with @(
+>   UI.HeaderFacets : [
+>     {
+>         $Type : 'UI.ReferenceFacet',
+>         Label : '{@i18n>@SalesArea}',
+>         Target : '@UI.FieldGroup#OrgData'
+>     },
+>    ...
+>    ...
+>   ],
+>   UI.FieldGroup #OrgData : {
 >     $Type : 'UI.FieldGroupType',
 >     Data : [
 >         {
@@ -109,7 +143,8 @@ A field group defines the fields displayed within a specific reference facet. Fo
 >             ![@UI.Importance] : #High
 >         }
 >     ]
-> }
+>   }
+> );
 > 
 > ```
 

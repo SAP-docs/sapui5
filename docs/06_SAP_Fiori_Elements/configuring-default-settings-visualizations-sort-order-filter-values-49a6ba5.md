@@ -590,16 +590,13 @@ SAP Fiori elements uses the `UI.LineItem` annotation and the `UI.Chart` annotati
 > 
 > ```
 
--   For the list report, the `UI.Chart` annotation is only applicable when you use it within a multiple view scenario.
-
-    > ### Restriction:  
-    > This information isn't applicable to SAP Fiori elements for OData V4.
+-   In SAP Fiori elements for OData V2, for the list report, the `UI.Chart` annotation is applicable when you use it within a multiple view scenario.
 
 
 -   For the analytical list page, the `UI.Chart` is only supported for the chart in the main content area. You can't use it within a multiple view scenario.
 
 
-For more information, see [Defining Multiple Views on a List Report Table - Multiple Table Mode](defining-multiple-views-on-a-list-report-table-multiple-table-mode-37aeed7.md) and [Defining Multiple Views on a List Report with Different Entity Sets and Table Settings](defining-multiple-views-on-a-list-report-with-different-entity-sets-and-table-settings-b6b59e4.md).
+For more information about the usage within a multiple view scenario, see [Defining Multiple Views on a List Report Table - Multiple Table Mode](defining-multiple-views-on-a-list-report-table-multiple-table-mode-37aeed7.md) and [Defining Multiple Views on a List Report with Different Entity Sets and Table Settings](defining-multiple-views-on-a-list-report-with-different-entity-sets-and-table-settings-b6b59e4.md).
 
 
 
@@ -620,7 +617,7 @@ SAP Fiori elements then checks in the annotation for the `UI.SelectionPresentati
 
 -   If a `UI.SelectionPresentationVariant` is found, SAP Fiori elements looks for the presentation variant associated with it.
 
-    -   If a presentation variant is found, SAP Fiori elements uses the `LineItem`, or, in case of an analytical list page, the `Chart` that is associated with the presentation variant. If no `LineItem` or `Chart` is found, SAP Fiori elements renders a blank table, and users can still use the personalization of the control to render the required table.
+    -   If a presentation variant is found, SAP Fiori elements uses the `LineItem`, or, in case of an analytical list page, the `Chart` that is associated with the presentation variant. If the presentation variant does not have a `LineItem` or `Chart` associated with it, SAP Fiori elements looks for the default `LineItem` or `Chart` \(`UI.LineItem` or `UI.Chart` without a qualifier\) and renders the table accordingly. If no `LineItem` or `Chart` is found, SAP Fiori elements renders a blank table or a blank chart, and users can still use the personalization of the control to render the required table or chart.
 
     -   If a presentation variant is **not** found, SAP Fiori elements raises an error and stops loading the application so that the application developer can ensure the correct annotations.
 
@@ -644,6 +641,11 @@ If the application developer hasn't explicitly specified the `UI.SelectionPresen
 
 
 
+
+> ### Note:  
+> In the multiple view layout for tables, the `UI.SelectionPresentationVariant` in the manifest has no effect if it has already been configured for the multiple view scenario. If no `UI.SelectionPresentationVariant` is configured, that is, if only a selection variant is configured, as is the case for the single table mode, or also for a tab within the multiple view layout for tables, then the presentation variant is calculated based on the logic described.
+> 
+> For more information, see [Multiple Views on List Report Tables](multiple-views-on-list-report-tables-a37df40.md).
 
 
 
@@ -735,11 +737,6 @@ Application developers can also specify the `SelectionVariant` or `PresentationV
 >     }
 > 
 > ```
-
-> ### Note:  
-> In the multiple view layout for tables, the `UI.SelectionPresentationVariant` in the manifest has no effect if it has already been configured for the multiple view scenario. If no `UI.SelectionPresentationVariant` is configured, that is, if only a selection variant is configured, as is the case for the single table mode, or also for a tab within the multiple view layout for tables, then the presentation variant is calculated based on the logic described.
-> 
-> For more information, see [Multiple Views on List Report Tables](multiple-views-on-list-report-tables-a37df40.md).
 
 For more information about the `UI.SelectionPresentationVariant`, see the version-specific sections in this topic.
 

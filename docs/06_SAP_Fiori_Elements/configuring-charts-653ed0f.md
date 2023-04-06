@@ -149,7 +149,7 @@ The following code samples show how to create your annotations for the chart fac
 > );
 > ```
 
-The chart definition contains measures on which the aggregations calculations are done, and dimensions, which categorize these measures. In the chart, these are displayed as labels on the x and on the y axis.
+The chart definition contains measures on which the aggregations calculations are done, and dimensions, which categorize these measures. In the chart, these measures are displayed as labels on the x and on the y axis.
 
 > ### Note:  
 > The use of navigation properties within the `UI.Chart` term isn’t supported.
@@ -404,7 +404,7 @@ For charts to work, the entity set must support aggregation. SAP Fiori elements 
 
     – Using Transformation Aggregate-Based Measures in the Definition of a Chart –
 
-    If you need to define transformation aggregate-based measures as part of the chart annotation, define them as `DynamicMeasures` and not `Measures` \(`Measures` should only have those measure properties that are directly part of the entity set, that is, only custom aggregate-based measures\).
+    If you need to define transformation aggregate-based measures as part of the chart annotation, define them as `DynamicMeasures` and not `Measures` \(`Measures` must only have those measure properties that are directly part of the entity set, that is, only custom aggregate-based measures\).
 
     > ### Sample Code:  
     > XML Annotation for a Chart Using a `DynamicMeasure`
@@ -465,7 +465,6 @@ For charts to work, the entity set must support aggregation. SAP Fiori elements 
     > Chart                                                    : {
     >       $Type               : 'UI.ChartDefinitionType',
     >       Title               : 'Sales Chart',
-    >       
     >       ChartType           : #Column,
     >       Measures            : [avgPricing],
     >       DynamicMeasures     : ['@Analytics.AggregatedProperty#sum'],

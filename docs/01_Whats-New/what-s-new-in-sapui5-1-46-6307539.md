@@ -2058,7 +2058,7 @@ Object Page View:
 
 -   Performance optimization for side effects
 
-    Previously, if no side effect annotation was specified, the whole object page was refreshed upon a change. Now, if there is no side effect annotation, the page is not refreshed automatically. This system behavior optimizes performance. For backward compatibility reasons, you have to enable the new system behavior in the application descriptor. For more information, see [Using the Global Side Effect](../06_SAP_Fiori_Elements/using-the-global-side-effect-955ae31.md).
+    Previously, if no side effect annotation was specified, the whole object page was refreshed upon a change. Now, if there is no side effect annotation, the page is not refreshed automatically. This system behavior optimizes performance. For backward compatibility reasons, you have to enable the new system behavior in the application descriptor. For more information, see [Using Global Side Effects](../06_SAP_Fiori_Elements/using-global-side-effects-955ae31.md).
 
 -   Form actions
 
@@ -2075,7 +2075,7 @@ Object Page View:
 
 -   Contact information
 
-    Quickviews with contact details can now also be displayed in forms and tables. For more information, see [Form Facet](../06_SAP_Fiori_Elements/form-facet-ebe05d5.md).
+    Quickviews with contact details can now also be displayed in forms and tables. For more information, see [Form Facet](../06_SAP_Fiori_Elements/form-facet-ff0ae0b.md).
 
 -   Create and edit mode usability
 
@@ -2218,6 +2218,8 @@ Overview pages have been enhanced with the following features:
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.110](what-s-new-in-sapui5-1-110-71a855c.md "With this release SAPUI5 is upgraded from version 1.109 to 1.110.")
 
 [What's New in SAPUI5 1.109](what-s-new-in-sapui5-1-109-3264bd2.md "With this release SAPUI5 is upgraded from version 1.108 to 1.109.")
 

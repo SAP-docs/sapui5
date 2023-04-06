@@ -7,7 +7,7 @@ The `sap.ui.comp.smartform.SmartForm` control makes it possible to render a form
 > ### Note:  
 > The code samples in this section reflect examples of possible use cases and might not always be suitable for your purposes. Therefore, we recommend that you do not copy and use them directly.
 
-For more information about this control, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.comp.smartform.SmartForm) and the [samples](https://ui5.sap.com/#/entity/sap.ui.comp.smartform.SmartForm).
+For more information about this control, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.comp.smartform.SmartForm.html) and the [samples](https://ui5.sap.com/#/entity/sap.ui.comp.smartform.SmartForm).
 
 
 

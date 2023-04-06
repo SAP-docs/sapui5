@@ -1,16 +1,11 @@
 <!-- loio7a67837a0ee544eea8f19b19e288d507 -->
 
-<link rel="stylesheet" type="text/css" href="../css/sap-icons.css"/>
-
 # What's New in SAPUI5 1.111
 
 With this release SAPUI5 is upgraded from version 1.110 to 1.111.
 
 > ### Tip:  
-> If you want to do a search across all versions of the What's New content, you can also find it in the [SAPUI5 What's New Viewer](https://help.sap.com/whats-new/67f60363b57f4ac0b23efd17fa192d60).
-
-> ### Note:  
-> Content marked as <span style="color:#666666;"><span class="SAP-icons"></span></span>** [Preview](https://help.sap.com/docs/whats-new-disclaimer)** is provided as a courtesy, without a warranty, and may be subject to change. For more information, see the [preview disclaimer](https://help.sap.com/docs/whats-new-disclaimer).
+> If you want to do a search across all versions of the What's New content, you can also find it in the [SAPUI5 What's New viewer](https://help.sap.com/whats-new/67f60363b57f4ac0b23efd17fa192d60).
 
 ** **
 
@@ -66,86 +61,6 @@ Available as of
 
 
 </th>
-</tr>
-<tr>
-<td valign="top">
-
- Upcoming 
-
-
-
-</td>
-<td valign="top">
-
- Deleted 
-
-
-
-</td>
-<td valign="top">
-
- Announcement 
-
-
-
-</td>
-<td valign="top">
-
- **End of Cloud Provisioning for SAPUI5 Versions \(Q1/2023\).** 
-
-
-
-</td>
-<td valign="top">
-
-**End of Cloud Provisioning for SAPUI5 Versions \(Q1/2023\)**
-
-**Minor Versions Reaching Their End of Cloud Provisioning**
-
-The following versions including all patches will be removed entirely:
-
--   1.90
--   1.93
--   1.97
--   1.98
-
-Action: Upgrade to a version that’s still in maintenance.
-
-**Patch Versions Reaching Their End of Cloud Provisioning**
-
-The following patches will be removed:
-
--   Long-term maintenance versions:
-
-    -   1.38.53 to 1.38.55
-    -   1.71.44 to 1.71.46
-    -   1.84.21 to 1.84.23
-    -   1.96.2 to 1.96.7
-
-    Action: Upgrade to the latest available patch for the respective SAPUI5 version.
-
-
-For more information, see [UI5 Releases Ending Service in 2023](https://blogs.sap.com/2022/12/05/ui5-releases-ending-service-in-2023/) and [Version Overview](https://ui5.sap.com/versionoverview.html).
-
-<sub><span style="color:#666666;"><span class="SAP-icons"></span></span>** [Preview](https://help.sap.com/docs/whats-new-disclaimer)**•Deleted•Announcement•Info Only•Upcoming</sub>
-
-
-
-</td>
-<td valign="top">
-
- Required 
-
-
-
-</td>
-<td valign="top">
-
-2023-03-31
-
-
-
-</td>
 </tr>
 <tr>
 <td valign="top">
@@ -622,7 +537,7 @@ We have implemented new options in the `sap.m.DynamicDateRange` control for `Min
 
 The following changes and new features are available for SAP Fiori elements for OData V2:
 
--   You can now create cards from the list report tables that can be added to the *Insights* section of *My Home* in SAP S/4HANA Cloud. For more information, see [Creating Cards for the Insights Section of *My Home* in SAP S/4HANA Cloud](../06_SAP_Fiori_Elements/creating-cards-for-the-insights-section-of-my-home-in-sap-s-4hana-cloud-9b13559.md).
+-   You can now create cards from the list report tables that can be added to the *Insights* section of *My Home* in SAP S/4HANA Cloud. For more information, see [Creating Cards for the Insights Section of My Home in SAP S/4HANA Cloud](../06_SAP_Fiori_Elements/creating-cards-for-the-insights-section-of-my-home-in-sap-s-4hana-cloud-9b13559.md) .
 
 
 <sub>Changed•SAP Fiori Elements•Info Only•1.111</sub>

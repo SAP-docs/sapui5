@@ -35,20 +35,6 @@ The property containing the criticality can have the following values \(derived 
 Add a `LineItem` criticality annotation for the line items of the entity type that is used by a table, as follows:
 
 > ### Sample Code:  
-> ```
->               
-> <Annotation Term="UI.LineItem">
->   <Annotation Term="UI.Criticality" Path="Element_transporting_criticality_of_complete_LineItem" />         //LineItem Criticality annotation
->   <Collection>
->     <Record Type="UI.DataField">
->       ...
->     </Record>
->   </Collection>
-> </Annotation>
-> 
-> ```
-
-> ### Sample Code:  
 > XML Annotation
 > 
 > ```xml

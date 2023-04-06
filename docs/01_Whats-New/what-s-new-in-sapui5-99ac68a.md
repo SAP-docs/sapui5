@@ -7,7 +7,7 @@ Find out what's new in the latest versions of SAPUI5.
 
 
 > ### Tip:  
-> If you want to do a search across all versions of the What's New content, you can also find it in the [SAPUI5 What's New Viewer](https://help.sap.com/whats-new/67f60363b57f4ac0b23efd17fa192d60).
+> If you want to do a search across all versions of the What's New content, you can also find it in the [SAPUI5 What's New viewer](https://help.sap.com/whats-new/67f60363b57f4ac0b23efd17fa192d60).
 
 To learn more about how the features and functional capabilities of SAPUI5 are planned to progress over time, see the [SAP Road Map Explorer](https://roadmaps.sap.com/board?PRODUCT=73554900100800001361).
 

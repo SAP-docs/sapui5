@@ -69,7 +69,7 @@ See the user assistance for [List Report and Object Page](list-report-and-object
 
 ## Additional Features in SAP Fiori Elements for OData V4
 
-In SAP Fiori elements for OData V4, the worklist is not a separate floorplan, but rather a 'flavor' of the list report. For more information, see [Configuring Filter Bars](configuring-filter-bars-4bd7590.md).
+From a technical perspective, a worklist is a simplified list report without a filter bar. You can create a worklist template using the SAP Fiori application generator. For more information, see [Configuring Filter Bars](configuring-filter-bars-4bd7590.md).
 
 
 

@@ -1019,7 +1019,7 @@ The list report has these new features:
 
 The object page has these new features:
 
--   Based on the the default sort order, each new row is placed at the top of the table. You can disable this default sort order in the manifest.json and enter your own sorting logic. For more information, see [Enabling Inline Creation Mode or Empty Rows Mode for Table Entries](../06_SAP_Fiori_Elements/enabling-inline-creation-mode-or-empty-rows-mode-for-table-entries-cfb04f0.md).
+-   Based on the default sort order, each new row is placed at the top of the table. You can disable this default sort order in the manifest.json and enter your own sorting logic. For more information, see [Enabling Inline Creation Mode or Empty Rows Mode for Table Entries](../06_SAP_Fiori_Elements/enabling-inline-creation-mode-or-empty-rows-mode-for-table-entries-cfb04f0.md).
 
 -   Users can now toggle between the active and draft versions of the records in draft-enabled applications by using *Display Active Version* / *Continue Editing*.
 
@@ -1231,6 +1231,8 @@ We have updated the *Tools* page and added two more blocks about the *Support As
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.110](what-s-new-in-sapui5-1-110-71a855c.md "With this release SAPUI5 is upgraded from version 1.109 to 1.110.")
 
 [What's New in SAPUI5 1.109](what-s-new-in-sapui5-1-109-3264bd2.md "With this release SAPUI5 is upgraded from version 1.108 to 1.109.")
 

@@ -280,11 +280,11 @@ The following changes and new features are available for SAP Fiori elements for 
 
 The following changes and new features are available for SAP Fiori elements for OData V2:
 
--   The global side effect is now triggered only from the fields of the entity where the side effect is defined. For more information, see [Using the Global Side Effect](../06_SAP_Fiori_Elements/using-the-global-side-effect-955ae31.md).
+-   The global side effect is now triggered only from the fields of the entity where the side effect is defined. For more information, see [Using Global Side Effects](../06_SAP_Fiori_Elements/using-global-side-effects-955ae31.md).
 
 -   You can now override the default behavior of the `ValueListNoValidation` for value help fields to include client-side validation. For more information, see [Displaying Text and ID for Value Help Input Fields](../06_SAP_Fiori_Elements/displaying-text-and-id-for-value-help-input-fields-080886d.md).
 
--   The refresh action upon pressing [Enter\] on the edit fields of a draft object page is now suppressed, unless it is explicitly configured. For more information, see [Using the Global Side Effect](../06_SAP_Fiori_Elements/using-the-global-side-effect-955ae31.md).
+-   The refresh action upon pressing [Enter\] on the edit fields of a draft object page is now suppressed, unless it is explicitly configured. For more information, see [Using Global Side Effects](../06_SAP_Fiori_Elements/using-global-side-effects-955ae31.md).
 
 -   You can now define keyboard shortcuts for application-specific function import actions in the analytical list page applications. For more information, see [Keyboard Shortcuts](../06_SAP_Fiori_Elements/keyboard-shortcuts-0cd318c.md).
 
@@ -852,6 +852,8 @@ On desktop computers, header facets that include information or important KPIs w
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.110](what-s-new-in-sapui5-1-110-71a855c.md "With this release SAPUI5 is upgraded from version 1.109 to 1.110.")
 
 [What's New in SAPUI5 1.109](what-s-new-in-sapui5-1-109-3264bd2.md "With this release SAPUI5 is upgraded from version 1.108 to 1.109.")
 
