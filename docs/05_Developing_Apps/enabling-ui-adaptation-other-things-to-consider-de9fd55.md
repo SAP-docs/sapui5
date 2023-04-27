@@ -40,7 +40,7 @@ All you have to do is add this control to an appropriate location in your app, a
 
 Please note that it is not supported to retroactively introduce a variant management control after a key user has already created adaptations for your application. This would lead to adaptations being applied in a non-defined order, making the state of the UI unpredictable.
 
-The opposite scenario, retroactively removing a variant management control for which key user adaptations (or end user personalization) already exist, will lead to these adaptations being lost. 
+If you retroactively remove a variant management control for which key user adaptations or end user personalization already exist, these adaptations will be lost. 
 
 <a name="loiode9fd55c69af4b46863f5d26b5d796c4__section_rvb_cpn_2jb"/>
 
