@@ -38,7 +38,7 @@ If users should be able to save their UI changes as different views \(control va
 
 All you have to do is add this control to an appropriate location in your app, and assign the desired UI container as a target in a `for` association.
 
-Please note that retroactively introducing a variant management control after a key user has already created adaptations for your application is not supported. Such an introduction would lead to adaptations being applied in a non-defined order, making the state of the UI unpredictable. 
+Please note that it is not supported to retroactively introduce a variant management control after a key user has already created adaptations for your application. This would lead to adaptations being applied in a non-defined order, making the state of the UI unpredictable.
 
 The opposite scenario, retroactively removing a variant management control for which key user adaptations (or end user personalization) already exist, will lead to these adaptations being lost. 
 
