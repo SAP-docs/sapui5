@@ -214,7 +214,7 @@ To enable intent-based navigation, you must associate a semantic object. Navigat
     >     },
     > ```
 
-    For examples of how to use the `DataFieldWithIntentBasedNavigation` annotation, see [Form Facet](form-facet-ebe05d5.md) and [Adding Actions to Tables](adding-actions-to-tables-b623e0b.md).
+    For examples of how to use the `DataFieldWithIntentBasedNavigation` annotation, see [Form Facet](form-facet-ff0ae0b.md) and [Adding Actions to Tables](adding-actions-to-tables-b623e0b.md).
 
 
 **Using a Button**
@@ -286,7 +286,7 @@ If `RequiresContext` is true, then the button is disabled until a selection is m
 > 
 > ```
 > {    
->     semanticObject: ‘EPMProduct’,
+>     semanticObject: 'EPMProduct',
 >     semanticObjectAction: 'manage_st',
 >     label: 'IBNWithContext',
 >     requiresContext: true,

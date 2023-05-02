@@ -122,14 +122,14 @@ The left side contains the `messagesIndicator`, and the right side - `draftIndic
 Definition in an XML view:
 
 ```xml
-<core:View
-		xmlns:semantic="sap.f.semantic"
-			controllerName="mycompany.myController"
-			height="100%">
-	<semantic:SemanticPage id="mySemanticPage">
-		<!—semantic  page content specified  here -->
-	</semantic:SemanticPage >
-</core:View>
+<mvc:View xmlns:mvc="sap.ui.core.mvc"
+    xmlns:semantic="sap.f.semantic"
+    controllerName="mycompany.myController"
+    height="100%">
+    <semantic:SemanticPage id="mySemanticPage">
+        <!-- Semantic page content specified here -->
+    </semantic:SemanticPage >
+</mvc:View>
 ```
 
 Definition in JavaScript:
@@ -155,13 +155,13 @@ Adding semantic content:
    <semantic:SemanticPage>
       ...
 
-      <!— will automatically create a button with “email” icon and style and position it in accord with the underlying semantics -->
+      <!-- will automatically create a button with “email” icon and style and position it in accord with the underlying semantics -->
       <semantic:sendEmailAction press=”onSendEmailPress >
          <semantic:SendEmailAction />
       </semantic:sendEmailAction>
 
 
-     <!— will automatically create a button with icon, styling and positioning in accord with the underlying semantics -->
+     <!-- will automatically create a button with icon, styling and positioning in accord with the underlying semantics -->
       <semantic:discussInJamAction press=”onDiscussInJamPress”>
          <semantic:DiscussInJamAction />
       </semantic:discussInJamAction>
@@ -192,7 +192,7 @@ Adding custom \(non-semantic\) content
 
 <!-- Header Content -->
 <semantic:headerContent>
-      <!—custom header Content goes here -->
+      <!-- custom header Content goes here -->
 <FlexBox
       alignItems="Start"
       justifyContent="SpaceBetween">
@@ -211,9 +211,9 @@ Adding custom \(non-semantic\) content
 </semantic:headerContent>
 
 
-<!—Content -->
+<!-- Content -->
 <semantic:content>
-    <!—Custom page-body content gies here -->
+    <!-- Custom page-body content goes here -->
    <Table
       id="idProductsTable"
       inset="false"

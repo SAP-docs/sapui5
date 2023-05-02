@@ -2,11 +2,11 @@
 
 # "Share" Functionality
 
-The "share" functionality allows users to share the current application state using the options *Send Email*, *Share in SAP Jam* and *Save as Tile*.
+The "share" functionality allows users to share the current application state using options such as *Send Email* and *Save as Tile*.
 
 -   *Send Email*
 
-    When a user chooses this option, the link to the page opens in the default email client that is configured in the system. When a user chooses the link, the application page opens in the same state in which it was shared: filter settings, personalization options and selections for charts and tables, as well app-specific button states such as the filter mode or view mode, are all transferred.
+    When a user chooses this option, the link to the page opens in the default email client that is configured in the system. When a user chooses the link, the application page opens in the same state in which it was shared: filter settings, personalization options, and selections for charts and tables, as well app-specific button states such as the filter mode or view mode, are all transferred.
 
 -   *Share in SAP Jam*
 
@@ -14,7 +14,20 @@ The "share" functionality allows users to share the current application state us
 
 -   *Save as Tile*
 
-    When a user chooses this option, the corresponding *Save as Tile* dialog is displayed. When a user chooses the tile, the application page opens in the same state in which the tile was created. Application developers can customize the title and the sub-title of the tile. In the list report, users can create a dynamic tile with a record count, where the applied filter is also taken into account.
+    When a user chooses this option, the corresponding *Save as Tile* dialog is displayed. When a user chooses the tile, the application page opens in the same state in which the tile was created. Application developers can customize the title and the sub-title of the tile. In the list report, a dynamic tile with a record count is created, where the applied filter is also taken into account.
+
+-   *Chat in Microsoft Teams*
+
+    When a user chooses this option, a separate window opens where they can directly share a link to a business application in the SAP S/4HANA Cloud system with co-workers.
+
+    Please note the following:
+
+    -   This option is only available if the required settings have been made by the system administrators of SAP S/4HANA Cloud.
+
+        For more information, see [Integrating Microsoft Teams](https://help.sap.com/docs/SAP_S4HANA_CLOUD/0f69f8fb28ac4bf48d2b57b9637e81fa/257ec7408db6420682462cd1d000e744.html).
+
+    -   The *Chat in Microsoft Teams* option is part of collaborative ERP \(enterprise resource planning\), which integrates the best of SAP S/4HANA Cloud with Microsoft Teams. So this option is not available for all users.
+
 
 
 > ### Note:  
@@ -22,7 +35,7 @@ The "share" functionality allows users to share the current application state us
 > 
 > -   For applications using the flexible column layout, the "share" functionality is shown on the highest view level.
 > 
-> -   A dynamic tile is not created if the filter bar contains a semantic date.
+> -   A dynamic tile is not created if the filter bar contains a semantic date. For more information about the semantic date range, see [Enabling Semantic Operators in the Filter Bar](enabling-semantic-operators-in-the-filter-bar-fef65d0.md).
 > 
 > -   The "share" functionality is not available for newly created objects in draft mode, so the button is not visible.
 > 
@@ -38,17 +51,13 @@ The "share" functionality allows users to share the current application state us
 
 The "share" functionality is hidden for the creation pages of non-draft objects.
 
-> ### Restriction:  
-> If semantic date range configuration is not defined, a dynamic tile is created, by default. For more information on semantic date range, see [Enabling Semantic Operators in the Filter Bar](enabling-semantic-operators-in-the-filter-bar-fef65d0.md).
+During tile creation, you can change the tile type from dynamic to static using an extension. For more information, see [Extending the Bookmark Function to Save Static Tiles to the SAP Fiori Launchpad](extending-the-bookmark-function-to-save-static-tiles-to-the-sap-fiori-launchpad-7e34ea9.md).
 
 
 
 <a name="loio022bf0dcae1d4d90961ebe23d642fca3__section_r4n_lql_ymb"/>
 
 ## Additional Features in SAP Fiori Elements for OData V4
-
-> ### Restriction:  
-> A dynamic tile is not created if there is at least one semantic date entered in the filter bar.
 
 \- Send Email -
 
@@ -61,7 +70,7 @@ Make the following changes in the `manifest.json` file:
 > ### Sample Code:  
 > ```
 > "sap.ui5": {
->         "extends": {
+>         "extends": { 
 >             "extensions": {
 >                 "sap.ui.controllerExtensions": {
 >                     "sap.fe.templates.ObjectPage.ObjectPageController": {
@@ -102,43 +111,40 @@ When a user clicks on the chevron in a list report table and navigates to an obj
 
 Here’s an annotation snippet showing the semantic key annotation:
 
+> ### Sample Code:  
+> XML Annotation
+> 
+> ```xml
+> <Annotation Term="Common.SemanticKey">
+>    <Collection>
+>       <PropertyPath>SalesOrder</PropertyPath>
+>    </Collection>
+> </Annotation>
+> ```
 
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> ```
+> 
+> @ObjectModel: {
+>   semanticKey: [ 'SalesOrder' ]
+> }
+> 
+> define view SALESORDERMANAGE {
+> 
+> }
+> ```
 
-### XML Annotation
-
-```xml
-<Annotation Term="Common.SemanticKey">
-   <Collection>
-      <PropertyPath>SalesOrder</PropertyPath>
-   </Collection>
-</Annotation>
-```
-
-
-
-### ABAP CDS Annotation
-
-```
-
-@ObjectModel: {
-  semanticKey: [ 'SalesOrder' ]
-}
-
-define view SALESORDERMANAGE {
-
-}
-```
-
-
-
-### CAP CDS Annotation
-
-```
-
-Common.SemanticKey : [
-    SalesOrder
-],
-```
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> 
+> Common.SemanticKey : [
+>     SalesOrder
+> ],
+> ```
 
 If the application developer does not define the annotations for the semantic keys, the URL contains only the technical keys. In this case, if user A shares the URL via the "share" functionality with user B, user B will only be able to open the list report page if user A shares while being in display mode. If user A is already in edit mode when the URL is shared, then user B will not be able to open the link, since user B cannot access the draft of user A.
 

@@ -67,7 +67,7 @@ For more information, see [Prefilling Fields When Creating a New Entity](prefill
 In case a single record is selected and an action is called that calls the `DefaultValuesFunction` function import, then the default values fetched from the function import gets populated in the parameter dialog, irrespective of the existing value present for the selected record. In case of multiple selections, default values fetched from the `DefaultValuesFunction` gets populated in the parameter dialog and the remaining input parameter remains empty.
 
 > ### Note:  
-> In case of multiselect only the `DefaultValuesFucntion` without any input parameters is called.
+> In case of multiselect only the `DefaultValuesFunction` without any input parameters is called.
 
 **Related Information**  
 

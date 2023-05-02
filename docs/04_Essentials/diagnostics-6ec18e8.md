@@ -354,30 +354,6 @@ The parameters are displayed in a tree structure. You can filter the tree by cli
 > ### Note:  
 > This tool displays the complete startup configuration, including launchpad configuration parameters that might be deprecated or that might be subject to change. Any changes that occurred after startup are not reflected.
 
- <a name="loiob5d9cbda58be4ca4b5ac7612b4160bc7"/>
-
-<!-- loiob5d9cbda58be4ca4b5ac7612b4160bc7 -->
-
-## Back-End Infrastructure
-
-With this feature, you can check whether and to what extend your SAP NetWeaver installation can run and support SAPUI5 apps.
-
-> ### Note:  
-> To use this feature, you need to be authorized in the back-end system \(authorization object `S_DEVELOP` for `OBJTYPE` = '*DEBUG*' and '*ACTVT*' = '*03*'\) and ICF node `/sap/bc/ui2/check_app_infra` needs to be activated.
-
-You can display the relevant messages for the following topics:
-
--   Configuration and availability of the virus scanner with the profiles `/UI5/UI5_INFRA_APP/REP_DT_PUT`, `/SCET/GUI_UPLOAD`, and `/SCET/GUI_DOWNLOAD`
-
--   Status of the background job scheduled for report `/UI5/APP_INDEX_CALCULATE`, which calculates the SAPUI5 application index
-
--   Potential error messages in the log of this index
-
--   Status of the standard ICF nodes used by SAPUI5 apps, components, and libraries
-
-
-In addition, you can access the SAP NetWeaver version and software component as well as other information.
-
  <a name="loioc4ce41599ed143ecaf750f701695b88f"/>
 
 <!-- loioc4ce41599ed143ecaf750f701695b88f -->

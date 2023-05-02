@@ -149,7 +149,7 @@ The following code samples show how to create your annotations for the chart fac
 > );
 > ```
 
-The chart definition contains measures on which the aggregations calculations are done, and dimensions, which categorize these measures. In the chart, these are displayed as labels on the x and on the y axis.
+The chart definition contains measures on which the aggregations calculations are done, and dimensions, which categorize these measures. In the chart, these measures are displayed as labels on the x and on the y axis.
 
 > ### Note:  
 > The use of navigation properties within the `UI.Chart` term isn’t supported.
@@ -404,7 +404,7 @@ For charts to work, the entity set must support aggregation. SAP Fiori elements 
 
     – Using Transformation Aggregate-Based Measures in the Definition of a Chart –
 
-    If you need to define transformation aggregate-based measures as part of the chart annotation, define them as `DynamicMeasures` and not `Measures` \(`Measures` should only have those measure properties that are directly part of the entity set, that is, only custom aggregate-based measures\).
+    If you need to define transformation aggregate-based measures as part of the chart annotation, define them as `DynamicMeasures` and not `Measures` \(`Measures` must only have those measure properties that are directly part of the entity set, that is, only custom aggregate-based measures\).
 
     > ### Sample Code:  
     > XML Annotation for a Chart Using a `DynamicMeasure`
@@ -412,7 +412,7 @@ For charts to work, the entity set must support aggregation. SAP Fiori elements 
     > ```
     > <Annotation Term="UI.Chart">
     >     <Record Type="UI.ChartDefinitionType">
-    >         <PropertyValue Property="Title" String="Height Line Chart"/>
+    >         <PropertyValue Property="Title" String="Sales Chart"/>
     >         <PropertyValue Property="ChartType" EnumMember="UI.ChartType/Column"/>
     >         <PropertyValue Property="Measures">
     >             <Collection>
@@ -432,7 +432,7 @@ For charts to work, the entity set must support aggregation. SAP Fiori elements 
     >         <PropertyValue Property="MeasureAttributes">
     >             <Collection>
     >                 <Record Type="UI.ChartMeasureAttributeType">
-    >                     <PropertyValue Property="Measure" PropertyPath="totalPricing"/>
+    >                     <PropertyValue Property="Measure" PropertyPath="avgPricing"/>
     >                     <PropertyValue Property="Role" EnumMember="UI.ChartMeasureRoleType/Axis1"/>
     >                 </Record>
     >                 <Record Type="UI.ChartMeasureAttributeType">
@@ -464,8 +464,7 @@ For charts to work, the entity set must support aggregation. SAP Fiori elements 
     > ```
     > Chart                                                    : {
     >       $Type               : 'UI.ChartDefinitionType',
-    >       Title               : 'Height Line Chart',
-    >       Description         : 'Testing Line Chart',
+    >       Title               : 'Sales Chart',
     >       ChartType           : #Column,
     >       Measures            : [avgPricing],
     >       DynamicMeasures     : ['@Analytics.AggregatedProperty#sum'],
@@ -473,7 +472,7 @@ For charts to work, the entity set must support aggregation. SAP Fiori elements 
     >       MeasureAttributes   : [
     >         {
     >           $Type   : 'UI.ChartMeasureAttributeType',
-    >           Measure : totalPricing,
+    >           Measure : avgPricing,
     >           Role    : #Axis1
     >         },
     >         {
@@ -490,7 +489,7 @@ For charts to work, the entity set must support aggregation. SAP Fiori elements 
     >     }
     > ```
 
--   Custom Aggregation that Uses Custom Aggregation Methods
+-   Transformation Aggregate that Uses Custom Aggregation Methods
 
     To use custom aggregation in the back end, application developers must ensure that the metadata has `Aggregation.ApplySupported` set and that the following annotations are enabled at entity set level:
 
@@ -518,11 +517,6 @@ For charts to work, the entity set must support aggregation. SAP Fiori elements 
     > ```
 
     > ### Sample Code:  
-    > ABAP CDS Annotation
-    > 
-    > No ABAP CDS annotation sample is available. Please use the local XML annotation.
-
-    > ### Sample Code:  
     > CAP CDS Annotation
     > 
     > ```
@@ -539,7 +533,7 @@ For charts to work, the entity set must support aggregation. SAP Fiori elements 
     In this example, the properties `"RequestedQuantity"` and `"RequestedQuantityLocalUnit"` are measures and use custom aggregation, while the property `"Name"` is a dimension that is marked with `Groupable: true` and can be used to plot the chart.
 
     > ### Note:  
-    > With a custom aggregation \(unlike the transformation aggregation, which allows the use of a virtual property\), you can't mark the same property as both a dimension \(groupable\) and a measure \(aggregatable\). If a chart is configured with such a property, then the chart returns an error.
+    > With a custom aggregation method \(unlike the standard aggregation method, which allows the use of a virtual property\), you can't mark the same property as both a dimension \(groupable\) and a measure \(aggregatable\). If a chart is configured with such a property, then the chart returns an error.
 
     For more information, see [Custom Aggregation](http://docs.oasis-open.org/odata/odata-data-aggregation-ext/v4.0/cs01/odata-data-aggregation-ext-v4.0-cs01.html#_Toc378326320).
 
@@ -550,6 +544,14 @@ For charts to work, the entity set must support aggregation. SAP Fiori elements 
 > -   Applications can't control whether the chart selection can be configured to allow no selection or single selection. SAP Fiori elements always enables multi-selection for the chart control.
 > 
 > -   If a table refresh occurs \(because a user changes the table personalization, for example\), the chart is also refreshed to keep the chart and table data synchronized. Chart selections are **not** maintained, however, since they aren't stored in the `iAppState`.
+> 
+> -   SAP Fiori elements for OData V4 assumes that the back end supports transformation filters for aggregate controls, such as charts or visual filter charts. For more information about transformation filters, see [OData Extension for Data Aggregation Version 4.0](http://docs.oasis-open.org/odata/odata-data-aggregation-ext/v4.0/cs01/odata-data-aggregation-ext-v4.0-cs01.html).
+> 
+>     You must ensure the following:
+> 
+>     -   The back end supports transformation filters.
+> 
+>     -   The annotations must be added for the aggregate entities. For more information about annotation samples, see the section *How to Set Transformation Filters on Aggregate Controls* in [Setting the Table Type](setting-the-table-type-7f844f1.md).
 
 > ### Restriction:  
 > The following restrictions apply regarding the support of the chart control:
@@ -563,4 +565,8 @@ For charts to work, the entity set must support aggregation. SAP Fiori elements 
 > -   The criticality via the `UI.CriticalityCalculation` annotation is currently not supported.
 > 
 > -   For CAP CDS versions 3 or lower, the chart doesn't load properly if the parent entity set is non-aggregate based.
+> 
+> -   When you use draft-enabled entities or charts, sorting on virtual properties and measures causes issues if you use CAP NodeJs. This is because of a CAP limitation that is fixed as of @sap/cds 6.0.0.
+> 
+> -   Aggregations on draft-enabled entities are currently **not** supported in ABAP CDS, since currently `$apply` with or without a filter on draft or transactional entities isn't supported by SADL.
 

@@ -10,6 +10,12 @@ These are the `type` properties available within `tableSettings`:
 -   `GridTable`
 -   `AnalyticalTable`
 
+
+
+<a name="loio7f844f1021cd4791b8f7408eac7c1cec__section_bqd_r2f_dmb"/>
+
+## Additional Features in SAP Fiori Elements for OData V2
+
 The following logic is used to determine the table type of an analytical list page \(ALP\) and a list report:
 
 -   If the table type is specified in the manifest:
@@ -31,12 +37,6 @@ The following logic is used to determine the table type of an analytical list pa
 > ### Tip:  
 > For more information about the guidelines and restrictions that apply to grid tables, see [SAP Fiori Design Guidelines](https://experience.sap.com/fiori-design-web/grid-table/).
 
-
-
-<a name="loio7f844f1021cd4791b8f7408eac7c1cec__section_bqd_r2f_dmb"/>
-
-## Additional Features in SAP Fiori Elements for OData V2
-
 In addition to using the `manifest.json` file, you can also use annotations to control which table type is rendered in the list report and on the object page.
 
 The additional `type` property available within `tableSettings` is:
@@ -46,9 +46,9 @@ The additional `type` property available within `tableSettings` is:
 > ### Note:  
 > -   On smart phones, responsive tables are shown.
 > 
-> -   List report only: If the `type` property within `tableSettings` is `AnalyticalTable`, set the annotation `sap:semantics` to `aggregate` for the specified entity type. Note that `sap:semantics` is a back-end entity type definition and cannot be changed in the SAP Web IDE.
+> -   List report only: If the `type` property within `tableSettings` is `AnalyticalTable`, set the annotation `sap:semantics` to `aggregate` for the specified entity type. Note that `sap:semantics` is a back-end entity type definition and can't be changed in the SAP Web IDE.
 > 
-> -   If you do not maintain the `type` property within `tableSettings` , and if `sap:semantics` to `aggregate` has been set in the back end, an analytical table is rendered.
+> -   If you don't maintain the `type` property within `tableSettings` , and if `sap:semantics` to `aggregate` has been set in the back end, an analytical table is rendered.
 
 
 
@@ -137,13 +137,25 @@ Defining `tableTypes` under the settings is supported for backward compatibility
 
 ## Additional Features in SAP Fiori Elements for OData V4
 
+The following logic is used to determine the table type of an analytical list page \(ALP\) and a list report:
+
+-   If the table type is specified in the manifest:
+
+    If the table type is specified and set to analytical, but the `entitySet` doesn’t have analytical capabilities, an empty table is displayed. Otherwise, the table is created with the specified table type.
+
+-   If the table type is **not** specified in the manifest, the `ResponsiveTable` is used by default.
+
+
+> ### Tip:  
+> For more information about the guidelines and restrictions that apply to grid tables, see [SAP Fiori Design Guidelines](https://experience.sap.com/fiori-design-web/grid-table/).
+
 In the `manifest.json` file, you can control which table type is rendered in the list report and on the object page.
 
 
 
 ### Examples
 
-Set the `type` property within `tableSettings` to the required values in *sap.ui5:* \> *routing:* \> *targets*of the `manifest.json` file.
+Set the `type` property within `tableSettings` to the required values in *sap.ui5:* \> *routing:* \> *targets* of the `manifest.json` file.
 
 Example for the list report:
 
@@ -327,6 +339,57 @@ The analytical table renders data that can be grouped and aggregated.
     > }
     > ```
 
+
+> ### Restriction:  
+> -   Analytical tables support draft-enabled services. But you must avoid editing them since tables always reflect the active state of entities.
+> 
+> -   Analytical tables don’t support navigation properties, so if you include them through a `LineItem`, an empty column is displayed. You also cannot add navigation properties through the table personalization settings.
+> 
+> -   You can't use aggregable properties to filter the data on analytical tables.
+
+
+
+### How to Set Transformation Filters on Aggregate Controls
+
+SAP Fiori elements for OData V4 assumes that the back end supports transformation filters for aggregate controls, such as analytical tables. For more information about transformation filters, see [OData Extension for Data Aggregation Version 4.0](http://docs.oasis-open.org/odata/odata-data-aggregation-ext/v4.0/cs01/odata-data-aggregation-ext-v4.0-cs01.html).
+
+> ### Note:  
+> You must ensure the following:
+> 
+> -   The back end supports transformation filters for aggregate controls.
+> 
+> -   The following annotations must be added for aggregate entities:
+> 
+>     > ### Sample Code:  
+>     > XML Annotation
+>     > 
+>     > ```
+>     > <Annotations Target="sap.fe.managepartners.ManagePartnersService.Customers">
+>     >      <Annotation Term="Aggregation.ApplySupported">
+>     >           <Record Type="Aggregation.ApplySupportedType">
+>     >                <PropertyValue Property="Transformations">
+>     >                     <Collection>
+>     >                          <String>filter</String>
+>     >                          ...
+>     >                     </Collection>
+>     >                </PropertyValue>
+>     >           </Record>
+>     >       </Annotation>
+>     > </Annotations>
+>     > ```
+> 
+>     > ### Sample Code:  
+>     > CAP CDS Annotation
+>     > 
+>     > ```
+>     > @Aggregation.ApplySupported : {
+>     >    Transformations : [
+>     >       'filter',
+>     >       ...
+>     >    ],
+>     > }
+>     > 
+>     > ```
 
 
 

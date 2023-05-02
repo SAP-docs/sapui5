@@ -27,7 +27,7 @@ The main difference is the license.
 
 ## Content
 
-The easiest way to get an overview of which libraries are delivered is to have a look at the *API Reference* of the each Demo Kit. You'll see that the list of libraries in SAPUI5 is much longer... which in no way means that OpenUI5 provides just a very limited scope!
+The easiest way to get an overview of which libraries are delivered is to have a look at the *API Reference* of each Demo Kit. You'll see that the list of libraries in SAPUI5 is much longer... which in no way means that OpenUI5 provides just a very limited scope!
 
 Most importantly, the core containing all central functionality and the most commonly used control libraries is identical in both deliveries. \(For example, `sap.m`, `sap.ui.layout`, `sap.ui.unified`.\)
 

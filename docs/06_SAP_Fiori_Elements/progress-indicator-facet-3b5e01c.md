@@ -182,7 +182,7 @@ Note that the unit of measure can be annotated with `Unit` or `ISOCurrency` as s
 > 
 > ```xml
 > <Annotations Target="STTA_PROD_MAN.STTA_C_MP_ProgressType/Value">
->    <Annotation Term="UoM.Unit" Path="UoM"/>
+>    <Annotation Term="Measures.Unit" Path="UoM"/>
 >    <Annotation Term="Common.Label" String="{@i18n>Footer}"/>
 > </Annotations>
 > ```
@@ -190,7 +190,12 @@ Note that the unit of measure can be annotated with `Unit` or `ISOCurrency` as s
 > ### Sample Code:  
 > ABAP CDS Annotation
 > 
-> No ABAP CDS annotation sample is available. Please use the local XML annotation.
+> ```xml
+> @Semantics.unitOfMeasure: true
+> UoM;
+> @Semantics.quantity.unitOfMeasure: 'UoM'
+> Value;
+> ```
 
 > ### Sample Code:  
 > CAP CDS Annotation
@@ -198,7 +203,7 @@ Note that the unit of measure can be annotated with `Unit` or `ISOCurrency` as s
 > ```
 > 
 > annotate STTA_PROD_MAN.STTA_C_MP_ ProgressType with {
->   @UoM.Unit : UoM
+>   @Measures.Unit : UoM
 >   Common.Label : '{@i18n>Footer}'
 >   Value
 > };
@@ -213,7 +218,7 @@ Note that the unit of measure can be annotated with `Unit` or `ISOCurrency` as s
 > 
 > ```xml
 > <Annotations Target="STTA_PROD_MAN.STTA_C_MP_ ProgressType/Value">
->    <Annotation Term="UoM.ISOCurrency" Path="UoM"/>
+>    <Annotation Term="Measures.ISOCurrency" Path="UoM"/>
 >    <Annotation Term="Common.Label" Path="Footer/”>
 > </Annotations>
 > ```
@@ -221,7 +226,12 @@ Note that the unit of measure can be annotated with `Unit` or `ISOCurrency` as s
 > ### Sample Code:  
 > ABAP CDS Annotation
 > 
-> No ABAP CDS annotation sample is available. Please use the local XML annotation.
+> ```xml
+> @Semantics.currencyCode:true
+> UoM;
+> @Semantics.amount.currencyCode: 'UoM'
+> Value;
+> ```
 
 > ### Sample Code:  
 > CAP CDS Annotation
@@ -229,14 +239,11 @@ Note that the unit of measure can be annotated with `Unit` or `ISOCurrency` as s
 > ```
 > 
 > annotate STTA_PROD_MAN.STTA_C_MP_ ProgressType with {
->     @UoM.ISOCurrency : UoM
+>     Measures.ISOCurrency : UoM
 >     @Common.Label : Footer
 >     Value
 > };
 > ```
-
-> ### Note:  
-> In the examples above, `UoM` is an alias for the `Org.OData.Measures.V1` vocabulary.
 
 
 

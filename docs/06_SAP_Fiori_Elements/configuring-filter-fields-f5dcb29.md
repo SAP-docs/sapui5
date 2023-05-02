@@ -27,7 +27,20 @@ In SAP Fiori elements for OData V2, app developers can control the filter field 
 > sap:aggregation-role="dimension" sap:label="Date" sap:filter-restriction="single-value"/>
 > ```
 
-In SAP Fiori elements for OData V4, app developers can control the filter field configuration via `FilterRestrictions` as shown in the following sample code:
+> ### Remember:  
+> If no filter-restriction is provided, the filter field is treated as a multi-valued field.
+
+
+
+<a name="loiof5dcb29da3bf4e0091eba3e7ccef4580__section_htd_5y1_y5b"/>
+
+## Additional Features in SAP Fiori Elements for OData V4
+
+
+
+### Filter Restrictions
+
+App developers can control the filter field configuration via `FilterRestrictions` as shown in the following sample code:
 
 > ### Sample Code:  
 > XML Annotation
@@ -56,9 +69,27 @@ In SAP Fiori elements for OData V4, app developers can control the filter field 
 > ```
 
 > ### Sample Code:  
-> ABAP CDS Annotation
+> ABAP CDS Annotation: Equivalent to Different Values of `AllowedExpressions` for XML `FilterExpressionRestrictions`
 > 
-> No ABAP CDS annotation sample is available. Please use the local XML annotation.
+> You can use `@Consumption.filter.multipleSelections` to define whether multiple values are allowed. Similarly, you can use `@Consumption.filter.selectionType` to define whether the filter element is a single-valued field, a multi-valued field, or an interval-based field.
+> 
+> ```
+> FilterExpressionRestriction.AllowedExpressions = "SingleValue"
+>        @Consumption.filter.multipleSelections: false 
+>        @Consumption.filter.selectionType: #SINGLE
+>  
+> FilterExpressionRestriction.AllowedExpressions = "MultiValue"
+>        @Consumption.filter.multipleSelections: true 
+>        @Consumption.filter.selectionType: #SINGLE
+> 
+> FilterExpressionRestriction.AllowedExpressions = "SingleRange"
+>        @Consumption.filter.multipleSelections: false 
+>        @Consumption.filter.selectionType: #INTERVAL
+> 
+> FilterExpressionRestriction.AllowedExpressions = "MultiRange"
+>        @Consumption.filter.multipleSelections: true 
+>        @Consumption.filter.selectionType: #INTERVAL
+> ```
 
 > ### Sample Code:  
 > CAP CDS Annotation
@@ -84,17 +115,30 @@ In SAP Fiori elements for OData V4, app developers can control the filter field 
 > ### Remember:  
 > If no filter-restriction is provided, the filter field is treated as a multi-valued field.
 
+If app developers want to make a filter field required, proceed as shown in the following sample code:
 
-
-<a name="loiof5dcb29da3bf4e0091eba3e7ccef4580__section_htd_5y1_y5b"/>
-
-## Additional Features in SAP Fiori Elements for OData V4
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> entity SalesOrderManage @(
+>     title        : 'Manage Sales Order',
+>     Capabilities : {
+>       FilterRestrictions         : {
+>               $Type              : 'Capabilities.FilterRestrictionsType',
+>               RequiredProperties : [
+>                   SalesOrderDate,
+>               ],
+>       }
+>     },
+> 
+> ```
 
 
 
 ### Filter Restrictions for Filter Field in Navigation Entity
 
-You can annotate the`FilterRestriction` for a filter field in a navigation entity using either of the following approaches:
+You can annotate the `FilterRestriction` for a filter field in a navigation entity using either of the following approaches:
 
 -   Filter Restrictions at Association Entity
 
@@ -122,13 +166,34 @@ You can annotate the`FilterRestriction` for a filter field in a navigation entit
     > ### Sample Code:  
     > ABAP CDS Annotation
     > 
-    > No ABAP CDS annotation sample is available. Please use the local XML annotation.
+    > The ABAP CDS sample code is available at the end of this subsection.
 
     > ### Sample Code:  
     > CAP CDS Annotation \(non-containment scenario\)
     > 
     > ```
-    > 
+    > entity SalesOrderManage    @( // add annotations
+    > ...
+    >     SemanticKey : [ID],
+    >     ...
+    >     ...
+    > ) {
+    >     SalesOrder :      SalesOrderId not null; // Add properties
+    >     ...
+    >     ...
+    >     // Add restrictions where navigation property is defined
+    >     _Material  :    Association to Material on _Material.Material = Material;
+    >                      @(Capabilities: { 
+    >                                        FilterRestrictions: {
+    >                                                              FilterExpressionRestrictions: [
+    >                                                               {
+    >                                                                Property   : 'Material',
+    >                                                                AllowedExpressions: 'SingleRange'
+    >                                                               }
+    >                                                              ]
+    >                                        }
+    >                      });
+    > }
     > ```
 
     > ### Sample Code:  
@@ -156,13 +221,23 @@ You can annotate the`FilterRestriction` for a filter field in a navigation entit
     > ### Sample Code:  
     > ABAP CDS Annotation
     > 
-    > No ABAP CDS annotation sample is available. Please use the local XML annotation.
+    > The ABAP CDS sample code is available at the end of this subsection.
 
     > ### Sample Code:  
-    > CAP CDS Annotation \(non-containment scenario\)
+    > CAP CDS Annotation \(containment scenario\)
     > 
     > ```
-    > 
+    > entity CustomerType {
+    >     key ID            : UUID;
+    >         @Capabilities.FilterRestrictions : {
+    >           FilterExpressionRestrictions : [{
+    >             $Type              : 'Capabilities.FilterExpressionRestrictionType',
+    >             Property           : FullName,
+    >             AllowedExpressions : 'MultiValue'
+    >           }]
+    >         }
+    >         _PartnerItems : Composition of many PartnerType;
+    >   };
     > ```
 
 -   Navigation Restrictions at Parent Entity
@@ -205,7 +280,7 @@ You can annotate the`FilterRestriction` for a filter field in a navigation entit
     > ### Sample Code:  
     > ABAP CDS Annotation
     > 
-    > No ABAP CDS annotation sample is available. Please use the local XML annotation.
+    > The ABAP CDS sample code is available at the end of this subsection.
 
     > ### Sample Code:  
     > CAP CDS Annotation \(non-containment scenario\)
@@ -264,7 +339,7 @@ You can annotate the`FilterRestriction` for a filter field in a navigation entit
     > ### Sample Code:  
     > ABAP CDS Annotation
     > 
-    > No ABAP CDS annotation sample is available. Please use the local XML annotation.
+    > The ABAP CDS sample code is available at the end of this subsection..
 
     > ### Sample Code:  
     > CAP CDS Annotation \(containment scenario\)
@@ -312,13 +387,22 @@ You can annotate the`FilterRestriction` for a filter field in a navigation entit
     > ### Sample Code:  
     > ABAP CDS Annotation
     > 
-    > No ABAP CDS annotation sample is available. Please use the local XML annotation.
+    > The ABAP CDS sample code is available at the end of this subsection.
 
     > ### Sample Code:  
     > CAP CDS Annotation \(non-containment scenario\)
     > 
     > ```
-    > 
+    > entity SalesOrderManage   @(  
+    >     Capabilities: {    
+    >         FilterRestrictions    : {FilterExpressionRestrictions: [     
+    >         {      
+    >             Property           : _Material.Material,      
+    >             AllowedExpressions : 'SingleValue'      
+    >         }    
+    >         ]}  
+    >     }
+    > )
     > ```
 
     > ### Tip:  
@@ -350,7 +434,7 @@ You can annotate the`FilterRestriction` for a filter field in a navigation entit
     > ### Sample Code:  
     > ABAP CDS Annotation
     > 
-    > No ABAP CDS annotation sample is available. Please use the local XML annotation.
+    > The ABAP CDS sample code is available at the end of this subsection.
 
     > ### Sample Code:  
     > CAP CDS Annotation \(non-containment scenario\)
@@ -394,7 +478,7 @@ You can annotate the`FilterRestriction` for a filter field in a navigation entit
     > ### Sample Code:  
     > ABAP CDS Annotation
     > 
-    > No ABAP CDS annotation sample is available. Please use the local XML annotation.
+    > The ABAP CDS sample code is available at the end of this subsection.
 
     > ### Sample Code:  
     > CAP CDS Annotation \(containment scenario\)
@@ -411,6 +495,29 @@ You can annotate the`FilterRestriction` for a filter field in a navigation entit
     > }
     > ```
 
+
+> ### Sample Code:  
+> ABAP CDS Annotation: Equivalent to Different Values of `AllowedExpressions` for XML `FilterExpressionRestrictions`
+> 
+> You can use `@Consumption.filter.multipleSelections` to define whether multiple values are allowed. Similarly, you can use `@Consumption.filter.selectionType` to define whether the filter element is a single-valued field, a multi-valued field, or an interval-based field.
+> 
+> ```
+> FilterExpressionRestriction.AllowedExpressions = "SingleValue"
+>        @Consumption.filter.multipleSelections: false 
+>        @Consumption.filter.selectionType: #SINGLE
+>  
+> FilterExpressionRestriction.AllowedExpressions = "MultiValue"
+>        @Consumption.filter.multipleSelections: true 
+>        @Consumption.filter.selectionType: #SINGLE
+> 
+> FilterExpressionRestriction.AllowedExpressions = "SingleRange"
+>        @Consumption.filter.multipleSelections: false 
+>        @Consumption.filter.selectionType: #INTERVAL
+> 
+> FilterExpressionRestriction.AllowedExpressions = "MultiRange"
+>        @Consumption.filter.multipleSelections: true 
+>        @Consumption.filter.selectionType: #INTERVAL
+> ```
 
 **Prioritization**
 

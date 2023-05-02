@@ -47,7 +47,7 @@ var oDateFormat = sap.ui.core.format.DateFormat.getDateInstance({
 	format: "yMMMd"
 });
 
-oDateFormat.format(new Date()); // string in locale de "29. Jan. 2017"; string in locale en "Jan 29, 2017" 
+oDateFormat.format(UI5Date.getInstance()); // string in locale de "29. Jan. 2017"; string in locale en "Jan 29, 2017" 
 ```
 
 `pattern`: A date pattern in LDML date format notation. The date is formatted based on the given pattern.
@@ -57,7 +57,7 @@ var oDateFormat = sap.ui.core.format.DateFormat.getDateInstance({
     pattern: "EEE, MMM d, yyyy"
 });
 
-oDateFormat.format(new Date()); //string in the same format as "Thu, Jan 29, 2017"
+oDateFormat.format(UI5Date.getInstance()); //string in the same format as "Thu, Jan 29, 2017"
 ```
 
 > ### Note:  
@@ -127,7 +127,39 @@ year
 </td>
 <td valign="top">
 
-Same as `y`, but uses the ISO year-week calendar
+calendar year based on the calendar week
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `Q` 
+
+
+
+</td>
+<td valign="top">
+
+quarter number
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `q` 
+
+
+
+</td>
+<td valign="top">
+
+quarter number in stand-alone format
 
 
 
@@ -232,38 +264,6 @@ day number in month
 <tr>
 <td valign="top">
 
- `Q` 
-
-
-
-</td>
-<td valign="top">
-
-quarter number
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
- `q` 
-
-
-
-</td>
-<td valign="top">
-
-quarter number in stand-alone format
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
 \(`F`\)
 
 
@@ -336,6 +336,22 @@ day number of week
 <td valign="top">
 
 AM or PM
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `B` 
+
+
+
+</td>
+<td valign="top">
+
+flexible day period, e.g. "afternoon" or "midnight", for the time provided
 
 
 
@@ -570,7 +586,7 @@ When using `DateFormat.getDateTimeWithTimezoneInstance`, the time zone can be sp
 ```js
 var oDateTimeWithTimezoneFormat = sap.ui.core.format.DateFormat.getDateTimeWithTimezoneInstance();
 
-oDateTimeWithTimezoneFormat.format(new Date(), "America/New_York") // Returns "10.02.2022, 10:01:14 America/New_York"
+oDateTimeWithTimezoneFormat.format(UI5Date.getInstance(), "America/New_York") // Returns "10.02.2022, 10:01:14 America/New_York"
 ```
 
 
@@ -594,11 +610,10 @@ var oDateFormat = sap.ui.core.format.DateFormat.getDateInstance({
 });
  
 var nMS = 1000 * 60 * 60 * 24; // milliseconds in a day
-var oNow = new Date();
-var oDate = new Date(oNow.getTime() - nMS);
+var oDate = UI5Date.getInstance(Date.now() - nMS);
 oDateFormat.format(oDate); // returns "yesterday"
  
-oDate = new Date(oNow.getTime() + 7 * nMS);
+oDate = UI5Date.getInstance(Date.now() + 7 * nMS);
 oDateFormat.format(oDate); // isn't returned in relative format because the default value of relativeRange is [6|-6,]
 ```
 
@@ -615,8 +630,8 @@ var oFormat = sap.ui.core.format.DateFormat.getInstance({
 	format: "yMMMd",
 	interval: true
 });
-var oDate1 = new Date(2017, 3, 11);
-var oDate2 = new Date(2017, 4, 11);
+var oDate1 = UI5Date.getInstance(2017, 3, 11);
+var oDate2 = UI5Date.getInstance(2017, 4, 11);
 oFormat.format([oDate1, oDate2]);  
 // string in locale de "11. Apr. – 11. Mai 2017"; 
 // string in locale en "Apr 11 – May 11, 2017"  

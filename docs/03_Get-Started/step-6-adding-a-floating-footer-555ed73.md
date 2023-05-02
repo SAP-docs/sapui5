@@ -38,7 +38,7 @@ You can view and download all files at [Flexible Column Layout App - Step 6](htt
 	xmlns:mvc="sap.ui.core.mvc">
 	<FlexibleColumnLayout id="flexibleColumnLayout" stateChange="onStateChanged" backgroundDesign="Solid">
 		<beginColumnPages>
-			<mvc:XMLView id="beginView" viewName="sap.ui.demo.fiori2.view.Master"/>
+			<mvc:XMLView id="beginView" viewName="sap.ui.demo.fiori2.view.List"/>
 		</beginColumnPages>
 		<midColumnPages>
 			<mvc:XMLView id="detailView" viewName="sap.ui.demo.fiori2.view.Detail"/>

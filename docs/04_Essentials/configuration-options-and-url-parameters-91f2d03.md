@@ -5,7 +5,9 @@
 The complete list of configuration options available in SAPUI5 can be found in the *API Reference* under `sap.ui.core.Configuration`. The following table shows a subset of the available configuration options.
 
 > ### Note:  
-> A subset of these configuration parameters can also be used as URL parameter \("URL:![YES](../02_Read-Me-First/images/Checked_Okay_3929e46.png)"\). The URL parameter name is composed of the name of the configuration option and the `sap-ui-` prefix, for example like `sap-ui-debug=true`.
+> -   A subset of these configuration parameters can also be set via URL parameters \(if "**by URL parameter**" is: "![YES](../02_Read-Me-First/images/Checked_Okay_3929e46.png)"\). URL parameter names are composed of the `sap-ui-` prefix together with the name of the configuration option, for example: `sap-ui-debug=true`.
+> 
+> -   Some of the information provided here assumes that the `compatVersion` configuration option is set to its expected value; check it for more details.
 
 
 <table>
@@ -1673,7 +1675,7 @@ Default value: the browser's local time zone
 The configured time zone is used to convert dates when using `sap.ui.core.format.DateFormat` instances. The time zone should be an IANA time zone ID, e.g. "America/New\_York". The `sap-timezone` URL parameter can also be used to set the time zone. For more information, see [Date Format](date-format-91f2eba.md).
 
 > ### Note:  
-> Due to compatibility considerations, **this parameter has no effect in this release**. The time zone configuration will **always** reflect the time zone of the browser/host system.
+> Due to compatibility considerations, **setting this parameter has no effect in this release**; the time zone configuration will still reflect the time zone of the browser/host system. **For testing purposes** the `sap-timezone` URL parameter can be used to set a different time zone. You can use it to check whether an application still works properly if the user-specific time zone differs from the time zone of the machine on which the browser is executed. Note that changing the time zone via the `sap-timezone` URL parameter affects **all** applications that are running in that SAPUI5 instance.
 
 
 

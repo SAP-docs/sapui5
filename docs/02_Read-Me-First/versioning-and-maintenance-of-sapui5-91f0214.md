@@ -6,11 +6,11 @@ Versioning and maintenance strategy for SAPUI5.
 
 
 
-SAPUI5 uses a 3-digit version identifier, for example 1.71.22 The digits have the following meaning:
+SAPUI5 uses a three-number version identifier, for example 1.71.22 The numbers have the following meaning:
 
--   The first digit \(1\) specifies the release number \(major version\).
--   The second digit \(71\) specifies the version number \(minor version\).
--   The third digit \(22\) specifies the patch number.
+-   The first part \(1\) specifies the release number \(major version\).
+-   The second part \(71\) specifies the version number \(minor version\).
+-   The third part \(22\) specifies the patch number.
 
 To view the documentation for a specific version, check at [https://ui5.sap.com/versionoverview.html](https://ui5.sap.com/versionoverview.html) which versions are available. You can view the version-specific Demo Kit by adding the version number to the URL, for example, `https://ui5.sap.com/1.71.22/`.
 

@@ -226,6 +226,8 @@ The parameters in the routing pattern are resolved using the relative binding pa
 >                       }   
 >                  }                  
 >             }
+>     }
+> }
 >         }
 >     }
 > }
@@ -297,24 +299,7 @@ Application developers can disable the navigation using the setting `navigateToI
 > `navigateToInstance`
 > 
 > ```
-> “com.sap.vocabularies.UI.v1.LineItem": {
->     "tableSettings": {
->         ...,
->         ...
->     },
->     "actions": {
->         "DataFieldForAction::com.c_salesordermanage_sd.AddRandomItem": {
->             "afterExecution": {
->                 "navigateToInstance": false
->             }
->         },
->         "DataFieldForAction::com.c_salesordermanage_sd.DummyBoundAction": {
->             "afterExecution": {
->                 "navigateToInstance": false
->             }
->         }
->     }
-> }
+> 
 > ```
 
 The key should always start with `DataFieldForAction::`, followed by the action name.
@@ -369,4 +354,10 @@ For inline actions, you must make the following configuration at columns level:
 > -   For manifest-based actions.
 > 
 > -   For external navigation.
+
+
+
+### In-Page Navigation
+
+Header facets supports in-page navigation. For more information, see [Navigation from Header Facet Title](navigation-from-header-facet-title-fa0ca22.md)
 

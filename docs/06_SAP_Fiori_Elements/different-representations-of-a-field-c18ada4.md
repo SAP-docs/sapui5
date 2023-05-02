@@ -318,7 +318,7 @@ If the field is associated with a semantic object, it is rendered as a link - pr
 > 
 > ```
 > SoldToParty                   : String(10)                            @(Common : {
-> SemanticObject                  : ‘supplier’
+> SemanticObject                  : 'supplier'
 > });
 > 
 > ```
@@ -439,6 +439,84 @@ Application developers can specify links for phone numbers or email addresses by
 
 
 
+### Basic Links
+
+Application developers can display basic link with an optional icon or image using `DataFieldWithUrl`.
+
+> ### Sample Code:  
+> XML Annotation
+> 
+> ```
+> <Annotation Term="UI.FieldGroup" Qualifier="DataFieldUrl">
+>     <Record Type="UI.FieldGroupType">
+>         <PropertyValue Property="Data">
+>             <Collection>
+>                 <Record Type="UI.DataFieldWithUrl">
+>                     <PropertyValue Property="Url" String="www.sap.com"/>
+>                     <PropertyValue Property="Value" String="This is an URL"/>
+>                     <PropertyValue Property="IconUrl" String="sap-icon://arrow-right"/>
+>                 </Record>
+>                 <Record Type="UI.DataFieldWithUrl">
+>                     <PropertyValue Property="Url" String="www.sap.com"/>
+>                     <PropertyValue Property="Value" String=""/>
+>                     <PropertyValue Property="IconUrl" Path="oneIcon"/>
+>                 </Record>
+>                 <Record Type="UI.DataFieldWithUrl">
+>                     <PropertyValue Property="Url" Path="oneUrl"/>
+>                     <PropertyValue Property="Value" String="This is an URL three"/>
+>                     <PropertyValue Property="IconUrl" String="sap-icon://arrow-right"/>
+>                 </Record>
+>             </Collection>
+>         </PropertyValue>
+>     </Record>
+> </Annotation>
+> ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> ```
+> @UI.fieldGroup: [
+>   {
+>     iconUrl: 'sap-icon://arrow-right'
+>     type: #WITH_URL,
+>     position: 1 ,
+>     qualifier: 'DataFieldUrl'
+>   },
+>   {
+>     url: 'ONEURL',
+>     value: 'ONEURL',
+>     type: #WITH_URL,
+>     position: 2 ,
+>     qualifier: 'DataFieldUrl'
+>   }
+> ]
+> 
+> ```
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> UI.FieldGroup #DataFieldUrl: {
+> Data : [{
+>               $Type : 'UI.DataFieldWithUrl',
+>               Url   : 'www.sap.com',
+>               Value : 'This is an URL',
+>               IconUrl: 'sap-icon://arrow-right',
+>        },
+>        {
+>               $Type  : 'UI.DataFieldWithUrl',
+>               Url    : oneDisplay,
+>               Value  : oneUrl,
+>               IconUrl: oneIcon
+> }
+> }]
+> 
+> ```
+
+
+
 <a name="loioc18ada4bc56e427a9a2df2d1898f28a5__section_exz_w5f_k4b"/>
 
 ## Representation as a `TextArea` or `ExpandableText`
@@ -465,6 +543,12 @@ The default number of lines of a text area is 4, but you can change this in the 
 – Display Mode –
 
 The text is cut off after 100 characters and a *More* link is shown, allowing users to display the full text. By default, the text is expanded `"InPlace"`, but you can change this in the `manifest.json` by setting the expand behavior to `"Popover"`.
+
+
+
+### Custom Length
+
+You can specify the maximum number of characters a text area can have using `textMaxLength`. When enabled, an indicator at the bottom of the text area shows the remaining number of characters. When it is exceeded, the user will see a notification.
 
 
 
@@ -540,29 +624,6 @@ Description
 
 
 </th>
-</tr>
-<tr>
-<td valign="top">
-
- 
-
-
-
-</td>
-<td valign="top">
-
- 
-
-
-
-</td>
-<td valign="top">
-
- 
-
-
-
-</td>
 </tr>
 <tr>
 <td valign="top">
@@ -656,7 +717,32 @@ Defines how the full text is displayed: either `"InPlace"` or `"Popover"`.
 
 </td>
 </tr>
+<tr>
+<td valign="top">
+
+`textMaxLength`
+
+
+
+</td>
+<td valign="top">
+
+String | Integer
+
+
+
+</td>
+<td valign="top">
+
+An integer value or a string containing an integer value that defines the maximum number of characters that can be entered in the text area. When this number is exceeded, the user sees a notification. If this value is not given, the maximum number of characters is not restricted.
+
+
+
+</td>
+</tr>
 </table>
+
+You can explore and work with the coding yourself. Check out the live example in the flexible programming model explorer at [Format Options](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/field/fieldFormatOptions).
 
 
 
@@ -677,9 +763,6 @@ For more information, see [Micro Chart Facet](micro-chart-facet-e219fd0.md) and 
 ## Representation as File Upload/Download \(`Edm.Stream`\)
 
 SAP Fiori elements allows you to enable stream support so that users can upload and download files. You can add `Edm.Stream` fields \(file upload\) to a form on the object page. For more information, see [Enabling Stream Support](enabling-stream-support-b236d32.md).
-
--   **
-
 
 **Related Information**  
 

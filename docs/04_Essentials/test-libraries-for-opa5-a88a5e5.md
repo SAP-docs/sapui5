@@ -197,7 +197,7 @@ Opa5.extendConfig({
 
 Extending OPA5 configuration from within the test library has an effect on the app test as well. This means that you can also set global OPA5 test statements.
 
-Use this pattern when you need to expose functionality relevant to the the entire app, such as setup and teardown:
+Use this pattern when you need to expose functionality relevant to the entire app, such as setup and teardown:
 
 ```js
 var Common = Opa5.extend("testLibrary.pageObjects.Common", {

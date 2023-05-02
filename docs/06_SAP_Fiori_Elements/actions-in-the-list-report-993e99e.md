@@ -74,6 +74,34 @@ You can display actions to allow users to perform an action for one or more line
 
     Set up your annotations so that the *Create* action is rendered in the table toolbar of the list report.
 
+-   **Copy Action**
+
+
+
+
+### Copy Action
+
+The *Copy* button is not available by default. However, applications can define a standard copy action by annotating `dataFieldForAction` with `isCopyAction`.
+
+This *Copy* button is automatically placed after the *Create* button.
+
+ ![](images/Copy_Action_in_the_List_Report_f337b65.png) 
+
+> ### Sample Code:  
+> XML Annotation
+> 
+> ```xml
+> <Annotation Term="UI.LineItem">
+>   <Collection>
+>       <Record Type="UI.DataFieldForAction">
+>           <PropertyValue Property="Label" String="Copy" />
+>           <PropertyValue Property="Action" String="STTA_PROD_MAN.STTA_PROD_MAN_Entities/STTA_C_MP_ProductCopy" />
+>           <Annotation Term="UI.IsCopyAction" Bool="true" />
+>      </Record>
+> 
+> ```
+
+Applications can define a label for this button. If no custom label is provided, the default label is *Copy*.
 
 
 
@@ -122,33 +150,24 @@ Make the following manifest setting to turn on draft creation with `newAction`:
 
 For more information about actions, see [Adding Actions to Tables](adding-actions-to-tables-b623e0b.md).
 
-
-
-### Standard Action: Copy
-
-The *Copy* button is not available by default. However, applications can define a standard copy action by annotating a `dataFieldForAction` with `isCopyAction`.
-
-This *Copy* button is placed after *Create* button.
-
- ![](images/Copy_Action_in_the_List_Report_f337b65.png) 
+When a new function import has parameters, a popup appears upon clicking the *Create* button. You can define the title for the parameter dialog using the following annotation.
 
 > ### Sample Code:  
 > ```
-> <Annotation Term="UI.LineItem">
->   <Collection>
->       <Record Type="UI.DataFieldForAction">
->           <PropertyValue Property="Label" String="Copy" />
->           <PropertyValue Property="Action" String="STTA_PROD_MAN.STTA_PROD_MAN_Entities/STTA_C_MP_ProductCopy" />
->           <Annotation Term="UI.IsCopyAction" Bool="true" />
->      </Record>
+> 
+> <Annotations Target="SAP.FCLM_BAM_ACCOUNTWD_SRV_Entities/FunctionImportName">
+> <Annotation Term="Common.Label" String="Create"/>
+> </Annotations>
 > 
 > ```
 
-Applications can define a label for this button. If a label is not provided, then by default this button is labeled as *Copy*.
+If the title is not defined in the annotation, the default title is displayed from the `DIALOG_TITLE_NEW_ACTION_FOR_CREATE` i18n key. Applications can modify the title by using the same i18n key. For more information, see [Localization of UI Texts](localization-of-ui-texts-b8cb649.md).
+
+The button label for the new action within the list page table toolbar is *Create* by default. However, applications can overwrite it by modifying the `CREATE_OBJECT` i18n key.
+
+The button within the dialog box says *Continue*. However, applications can overwrite it by modifying the `DIALOG_ACTION_BUTTON_NEW_ACTION_FOR_CREATE` i18n key.
 
 
-
-<a name="loio993e99eae4414b73bc7afef9518c79bf__section_kzh_3jh_mtb"/>
 
 ## Additional Features in SAP Fiori Elements for OData V4
 

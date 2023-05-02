@@ -9,7 +9,9 @@ You can use semantic date values, such as *Today* or *Last Week*, on the filter 
 ## Additional Features in SAP Fiori Elements for OData V2
 
 > ### Tip:  
-> Navigation to an external application always passes the actual date value that corresponds to the semantic date value that is used.
+> -   Navigation to an external application always passes the actual date value that corresponds to the semantic date value that is used.
+> 
+> -   The date range configuration that is defined in the manifest file is not applied to custom filters of type date range. For more information on custom filters, see [Adding Custom Fields to the Filter Bar](adding-custom-fields-to-the-filter-bar-5fb9f57.md).
 
 The semantic date control can be enabled for the fields in the filter bar by setting the `useDateRange` flag to `true` in the manifest. By default, the value is `false` and date picker control is rendered by the filter bar.
 
@@ -141,6 +143,8 @@ The following types of settings exist, either at the property level or at the de
     > -   If you define the semantic date range feature by providing specific fields, you cannot render the fields from the navigation property of the leading entity set as a semantic date range in the filter bar.
     > 
     > -   `DateTimeOffset` fields with filter restrictions as intervals are rendered as a date range control. Fields with `sap:filter-restriction="single-value"` are rendered as date pickers in both the list report and the analytical list page.
+    > 
+    > -   Fields with `sap:filter-restriction="multi-value"` are rendered as date pickers in both the list report and the analytical list page.
 
 -   You can also set a default value for a semantic date range. The default value can be used together with `customdateRangeImplementation`, `filter`, or `selectedValues`. It can also be added without any filters. The default value should be part of the list of values for the field. For example, if you exclude `TOMORROW` as a value for the field `CreatedDate`, do not add `TOMORROW` as a `defaultValue`.
 

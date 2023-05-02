@@ -1650,6 +1650,36 @@ SAPUI5/OpenUI5
 <tr>
 <td valign="top">
 
+OPA5
+
+
+
+</td>
+<td valign="top">
+
+OPA5 is an API for SAPUI5 controls. It hides asynchronicity and eases access to SAPUI5 elements. This makes OPA especially helpful for testing user interactions, integration with SAPUI5, navigation, and data binding.
+
+
+
+</td>
+<td valign="top">
+
+ SAPUI5/OpenUI5 
+
+
+
+</td>
+<td valign="top">
+
+[Integration Testing with One Page Acceptance Tests \(OPA5\)](04_Essentials/integration-testing-with-one-page-acceptance-tests-opa5-2696ab5.md)
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
 paginator buttons
 
 
@@ -2260,6 +2290,36 @@ SAPUI5/OpenUI5
 <td valign="top">
 
 [Views](04_Essentials/views-91f27e3.md)
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+wdi5
+
+
+
+</td>
+<td valign="top">
+
+It is Webdriver.IO service, designed to run cross-platform end-to-end tests on a SAPUI5 applications, with selectors compatible to OPA5.
+
+
+
+</td>
+<td valign="top">
+
+ SAPUI5/OpenUI5 
+
+
+
+</td>
+<td valign="top">
+
+ [Testing](04_Essentials/testing-7cdee40.md) 
 
 
 

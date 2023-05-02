@@ -12,9 +12,9 @@ In this step, we add an empty detail page.
 
    
   
-**Master Page with Empty Detail Page**
+**List Page with Empty Detail Page**
 
- ![](images/Master_Page_with_Empty_Detail_Page_Fiori_2_0_Tutorial_10dec0c.gif "Master Page with Empty Detail Page") 
+ ![](images/Master_Page_with_Empty_Detail_Page_Fiori_2_0_Tutorial_10dec0c.gif "List Page with Empty Detail Page") 
 
 
 
@@ -52,7 +52,7 @@ First, we create a blank detail page.
 	xmlns:mvc="sap.ui.core.mvc">
 	<FlexibleColumnLayout id="flexibleColumnLayout" backgroundDesign="Solid">
 		<beginColumnPages>
-			<mvc:XMLView id="beginView" viewName="sap.ui.demo.fiori2.view.Master"/>
+			<mvc:XMLView id="beginView" viewName="sap.ui.demo.fiori2.view.List"/>
 		</beginColumnPages>
 		<midColumnPages>
 			<mvc:XMLView id="detailView" viewName="sap.ui.demo.fiori2.view.Detail"/>
@@ -67,7 +67,7 @@ We add the detail page in `FlexibleColumnLayout's` `midColumnPages` aggregation 
 
 <a name="loio4e4315cef89e48ceb60b4dc12f5be2d2__section_xw1_1lj_l4b"/>
 
-## webapp/view/Master.view.xml \[MODIFY\]
+## webapp/view/List.view.xml \[MODIFY\]
 
 ```xml
 		...
@@ -95,13 +95,13 @@ We add the detail page in `FlexibleColumnLayout's` `midColumnPages` aggregation 
 					...
 ```
 
-We add a `press` handler to each `ColumnListItem` in the `Master.view.xml`.
+We add a `press` handler to each `ColumnListItem` in the `List.view.xml`.
 
 
 
 <a name="loio4e4315cef89e48ceb60b4dc12f5be2d2__section_nxz_ykj_l4b"/>
 
-## webapp/controller/Master.controller.js \[MODIFY\]
+## webapp/controller/List.controller.js \[MODIFY\]
 
 ```js
 sap.ui.define([
@@ -134,5 +134,5 @@ sap.ui.define([
 });
 ```
 
-In the `Master.controller.js`, we attach a `onListItemPress` function to the `press` handler, which changes the `layout` to `TwoColumnsBeginExpanded`. This means that there are going to be two columns, where the first one is larger than the second. For more information on the available layout types, see [Types of Layout](../10_More_About_Controls/types-of-layout-3b9f760.md).
+In the `List.controller.js`, we attach a `onListItemPress` function to the `press` handler, which changes the `layout` to `TwoColumnsBeginExpanded`. This means that there are going to be two columns, where the first one is larger than the second. For more information on the available layout types, see [Types of Layout](../10_More_About_Controls/types-of-layout-3b9f760.md).
 

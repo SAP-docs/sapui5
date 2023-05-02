@@ -77,7 +77,7 @@ You define side effects either in the \*`MPC_EXT` class or in the local annotati
 >     >     lo_collection->create_simple_value( )->set_property_path( 'PurchasingOrganization' )  ##NO_TEXT.
 >     > ```
 > 
-> -   User changes a source property and the system refreshes the price
+> -   User changes the source properties and the system refreshes the price
 > 
 >     > ### Sample Code:  
 >     > XML Annotation
@@ -90,7 +90,7 @@ You define side effects either in the \*`MPC_EXT` class or in the local annotati
 >     >                 <Collection>
 >     >                     <PropertyPath>Amount</PropertyPath>
 >     >                     <PropertyPath>Discount</PropertyPath>
->     >                     <PropertyPath>Product</PropertyPath>
+>     >                     <PropertyPath>ProductDetail/DeliveryLocations</PropertyPath>// Source property poinnting to multi input field
 >     >                 </Collection>
 >     >             </PropertyValue>
 >     >             <PropertyValue Property="TargetProperties">
@@ -292,7 +292,7 @@ You define side effects either in the \*`MPC_EXT` class or in the local annotati
 > 
 > -   Refresh the navigation target
 > 
->     In this case, when the item tax amount is changed, the navigation property leading to the root \(`to_SalesOrder`\) is updated.
+>     In this case, when the item tax amount is changed, the navigation property leading to the root entity \(`to_SalesOrder`\) is updated.
 > 
 >     > ### Sample Code:  
 >     > XML Annotation
@@ -317,23 +317,7 @@ You define side effects either in the \*`MPC_EXT` class or in the local annotati
 >     > 
 >     > ```
 > 
->     > ### Sample Code:  
->     > CAP CDS Annotation
->     > 
->     > ```
->     > 
->     > annotate STTA_SALES_ORDER_WD_20_SRV.C_STTA_SalesOrderItem_WD_20Type @(
->     >     Common.SideEffects #TaxAmountChanged : {
->     >         SourceProperties : [
->     >             TaxAmount
->     >         ],
->     >         TargetEntities : [
->     >             to_SalesOrder
->     >         ],
->     >         EffectTypes : #ValueChange
->     >     }
->     > );
->     > ```
+>     In the following case, when the item tax amount is changed, the navigation property leading to the property of root entity \(`to_SalesOrder`\) is updated. If `*` is defined, then all properties of the root entity are updated.
 > 
 >     > ### Sample Code:  
 >     > XML Annotation
@@ -356,6 +340,24 @@ You define side effects either in the \*`MPC_EXT` class or in the local annotati
 >     >         </Record>
 >     >     </Annotation>
 >     > </Annotations>
+>     > ```
+> 
+>     > ### Sample Code:  
+>     > CAP CDS Annotation
+>     > 
+>     > ```
+>     > 
+>     > annotate STTA_SALES_ORDER_WD_20_SRV.C_STTA_SalesOrderItem_WD_20Type @(
+>     >     Common.SideEffects #TaxAmountChanged : {
+>     >         SourceProperties : [
+>     >             TaxAmount
+>     >         ],
+>     >         TargetEntities : [
+>     >             to_SalesOrder
+>     >         ],
+>     >         EffectTypes : #ValueChange
+>     >     }
+>     > );
 >     > ```
 > 
 > -   Side effect on 1:1 associated entity set’s property

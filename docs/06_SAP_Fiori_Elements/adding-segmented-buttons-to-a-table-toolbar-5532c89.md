@@ -190,7 +190,7 @@ The following manifest settings are required for adding segmented buttons:
 > "component": {
 >   "name": "sap.suite.ui.generic.template.ObjectPage",
 >   "settings": {
->     "showConfirmationOnDraftActivate": false,
+>  
 >     "sections": {
 >       "SalesOrderItemsID": {
 >         "navigationProperty": "to_Item",

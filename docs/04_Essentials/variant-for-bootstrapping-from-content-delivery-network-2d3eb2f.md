@@ -28,7 +28,7 @@ The specific version allows you to select a particular fixed version for bootstr
 <script id="sap-ui-bootstrap"
     type="text/javascript"
     src="https://ui5.sap.com/[/pandoc/div/div/horizontalrule/horizontalrule/codeblock/strong/span
-     {""}) 1.108.0 (span]/resources/sap-ui-core.js"
+     {""}) 1.112.0 (span]/resources/sap-ui-core.js"
     data-sap-ui-theme="sap_fiori_3"
     data-sap-ui-async="true"
     data-sap-ui-libs="sap.m"></script>
@@ -52,6 +52,7 @@ The evergreen version allows you to automatically select the latest available pa
     src="https://ui5.sap.com/1.96/resources/sap-ui-core.js"
     data-sap-ui-theme="sap_fiori_3"
     data-sap-ui-async="true"
+    data-sap-ui-onInit="module:sap/ui/core/ComponentSupport"
     data-sap-ui-libs="sap.m"></script>
 
 
@@ -61,6 +62,10 @@ The first segment of the URL after the host name is used to specify an evergreen
 
 > ### Note:  
 > Evergreen versions only support asynchronous bootstrapping. Therefore, the `data-sap-ui-async` bootstrap attribute must be set to `true`.
+> 
+> A consequence of asynchronous bootstrapping is that `sap-ui-debug=true` does not work when you bootstrap an evergreen version. You need to explicitly include the namespace of the modules you want to see the debug sources for, for example by specifying `sap-ui-debug=sap/` to include the `sap/*` namespace, or `sap-ui-debug=sap/,xyz/app/` to include more than one namespace. For more information, see the blog post [SAPUI5 – Patch-Level Independent Bootstrap](https://blogs.sap.com/2022/04/14/sapui5-patch-level-independent-bootstrap/).
+
+When using the patch-level independent bootstrap you must use the `data-sap-ui-onInit` callback. Ideally, you refer to a module, for example `sap/ui/core/ComponentSupport` to bootstrap your Component; see [Declarative API for Initial Components](declarative-api-for-initial-components-82a0fce.md). You can also refer to a custom module.
 
 You can find the available versions with long-term maintenance status at [https://ui5.sap.com/versionoverview.html](https://ui5.sap.com/versionoverview.html)
 

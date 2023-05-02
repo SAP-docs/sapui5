@@ -249,7 +249,7 @@ You must register the controller extension in the manifest as follows:
 > }
 > ```
 
-For a sample implementation, see [https://sapui5.hana.ondemand.com/test-resources/sap/fe/core/fpmExplorer/index.html\#/controllerExtensions/controllerExtensionsOverview/viewState](https://sapui5.hana.ondemand.com/test-resources/sap/fe/core/fpmExplorer/index.html#/controllerExtensions/controllerExtensionsOverview/viewState),
+For more information about the sample implementation, see [View State](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/controllerExtensions/controllerExtensionsOverview/viewState).
 
 
 

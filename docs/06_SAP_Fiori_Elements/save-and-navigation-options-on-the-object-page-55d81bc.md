@@ -28,7 +28,7 @@ To enable this feature, set the `navToListOnSave` flag to `true` in the `manifes
                                                        "showRelatedApps": true,
                                                        "tableType": "ResponsiveTable",
                                                        "editableHeaderContent": true,
-                                                       "showConfirmationOnDraftActivate": true,
+                                                      
                                                        "sections": {
                                                               "to_ProductText::com.sap.vocabularies.UI.v1.LineItem": {
                                                                      "navigationProperty": "to_ProductText",

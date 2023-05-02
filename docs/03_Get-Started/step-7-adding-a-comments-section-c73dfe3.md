@@ -89,11 +89,12 @@ sap.ui.define([
    "sap/ui/model/json/JSONModel",
    "sap/ui/core/routing/History",
    "myCompany/myApp/model/formatter",
+   "sap/ui/core/date/UI5Date",
    "sap/ui/core/format/DateFormat",
    "sap/ui/model/Filter",
    "sap/ui/model/FilterOperator"
 
-], function(BaseController, JSONModel, History, formatter, DateFormat, Filter, FilterOperator) {
+], function(BaseController, JSONModel, History, formatter, UI5Date, DateFormat, Filter, FilterOperator) {
    "use strict";
    return BaseController.extend("myCompany.myApp.controller.Object", {
       formatter: formatter,
@@ -112,7 +113,7 @@ sap.ui.define([
       */
       onPost: function (oEvent) {
          var oFormat = DateFormat.getDateTimeInstance({style: "medium"});
-         var sDate = oFormat.format(new Date());
+         var sDate = oFormat.format(UI5Date.getInstance());
          var oObject = this.getView().getBindingContext().getObject();
          var sValue = oEvent.getParameter("value");
          var oEntry = {
