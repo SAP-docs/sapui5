@@ -140,7 +140,7 @@ Application developers can then add the extension code to call the route defined
 >     Log
 > ) {
 >     "use strict";
->     return ControllerExtension.extend("SalesOrder.custom.LRExtend", {
+>     return ControllerExtension.extend("SalesOrder.ext.LRExtend", {
 >         // this section allows to extend lifecycle hooks or override public methods of the base controller
 >         override: {
 >             ......
@@ -192,7 +192,7 @@ In addition, here's an example for the object page:
 >     ],
 >     function(ControllerExtension, Dialog, DialogType, Text, Button, ButtonType, MessageToast, Log) {
 >         "use strict";
->         return ControllerExtension.extend("SalesOrder.custom.OPExtend", {
+>         return ControllerExtension.extend("SalesOrder.ext.OPExtend", {
 >             // this section allows to extend lifecycle hooks or override public methods of the base controller
 >             override: {
 >                 ......

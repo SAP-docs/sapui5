@@ -24,7 +24,7 @@ To create a custom card:
 2.  Extend the custom overview page component in your component file.
 
     ```
-    sap.ui.define(["sap/ovp/cards/custom/Component"],
+    sap.ui.define(["sap/ovp/cards/ext/Component"],
      
         function (CardComponent) {
             "use strict";

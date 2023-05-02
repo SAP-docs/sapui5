@@ -49,12 +49,12 @@ To define a custom view, the path configuration for the custom view in the manif
 >                     {
 >                         "key": "tab2",
 >                         "label": "Custom View with Table",
->                         "template": "BusinessPartners.custom.CustomViewTable"
+>                         "template": "BusinessPartners.ext.CustomViewTable"
 >                     },
 >                     {
 >                         "key": "tab3",
 >                         "label": "{i18n>LRCustomViewWithButton}",
->                         "template": "BusinessPartners.custom.CustomViewWithButton"
+>                         "template": "BusinessPartners.ext.CustomViewWithButton"
 >                     }
 >                 ],
 >                 "showCounts": true
@@ -247,7 +247,7 @@ In the following sample code, a simple button has been added inside a panel to a
 >         headerText="Business Partners"
 >         class="sapUiResponsiveMargin"
 >         width="auto"
->         core:require="{handler: 'BusinessPartners/custom/CustomButton'}"
+>         core:require="{handler: 'BusinessPartners/ext/CustomButton'}"
 >     >
 >         <content>
 >             <Button text="IBN" id="customButton1" class="sapUiSmallMarginEnd" press="handler.onPress" />
@@ -295,7 +295,7 @@ For app developers who want a standard filtering behavior along with other annot
 >         "extensions": {
 >             "sap.ui.controllerExtensions": {
 >                 "sap.fe.templates.ListReport.ListReportController": {
->                     "controllerName": "SalesOrder.custom.LRExtend"
+>                     "controllerName": "SalesOrder.ext.LRExtend"
 >                 }
 >             }
 >         }
@@ -316,7 +316,7 @@ In the following sample code, the binding information is updated with filter con
 > ```
 > sap.ui.define(["sap/ui/core/mvc/ControllerExtension", "sap/ui/model/Filter"], function(ControllerExtension, Filter) {
 >     "use strict";
->     return ControllerExtension.extend("BusinessPartners.custom.LRExtend", {
+>     return ControllerExtension.extend("BusinessPartners.ext.LRExtend", {
 >         override: {
 >             onViewNeedsRefresh: function(mParameters) {
 >                 var oFilterInfo = mParameters.filterConditions;

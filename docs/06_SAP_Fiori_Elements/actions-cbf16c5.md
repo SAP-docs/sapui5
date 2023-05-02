@@ -1599,7 +1599,7 @@ The following default values are available:
     >                                 "@com.sap.vocabularies.UI.v1.LineItem": {
     >                                     "actions": {
     >                                         "DataFieldForAction::com.c_salesordermanage_sd.CreateWithSalesOrderType": {
-    >                                             "defaultValuesFunction": "SalesOrder.custom.CustomActions.getDefaultValues"
+    >                                             "defaultValuesFunction": "SalesOrder.ext.CustomActions.getDefaultValues"
     >                                         }
     >                                     }
     >                                 }
@@ -1775,11 +1775,11 @@ Make the following settings in the manifest to group actions under a menu button
 >               "header": {
 >                 "actions": {
 >                     "myFirstAction": {
->                         "press": "SalesOrder.custom.CustomActions.message",
+>                         "press": "SalesOrder.ext.CustomActions.message",
 >                         "text": "My First Action"
 >                     },
 >                     "mySecondAction": {
->                         "press": "SalesOrder.custom.CustomActions.message",
+>                         "press": "SalesOrder.ext.CustomActions.message",
 >                         "text": "My Second Action"
 >                     },
 >                     "MenuActions": {
@@ -1811,13 +1811,13 @@ Make the following settings in the manifest to group actions under a menu button
 >             "@com.sap.vocabularies.UI.v1.FieldGroup#OrderData": {
 >                 "actions": {
 >                     "myFirstAction": {
->                         "press": "SalesOrder.custom.CustomActions.getCustomerName",
+>                         "press": "SalesOrder.ext.CustomActions.getCustomerName",
 >                         "visible": true,
 >                         "enabled": true,
 >                         "text": "My First Action"
 >                     },
 >                     "mySecondAction": {
->                         "press": "SalesOrder.custom.CustomActions.message",
+>                         "press": "SalesOrder.ext.CustomActions.message",
 >                         "text": "My Second Action"
 >                     },
 >                     "MenuActions": {
@@ -1848,13 +1848,13 @@ Make the following settings in the manifest to group actions under a menu button
 >             "@com.sap.vocabularies.UI.v1.LineItem": {
 >                 "actions": {
 >                     "myFirstAction": {
->                         "press": "SalesOrder.custom.CustomActions.getCustomerName",
+>                         "press": "SalesOrder.ext.CustomActions.getCustomerName",
 >                         "visible": true,
 >                         "enabled": true,
 >                         "text": "My First Action"
 >                     },
 >                     "mySecondAction": {
->                         "press": "SalesOrder.custom.CustomActions.message",
+>                         "press": "SalesOrder.ext.CustomActions.message",
 >                         "text": "My Second Action"
 >                     },
 >                     "MenuActions": {
@@ -1928,8 +1928,8 @@ For certain properties, you can overwrite the annotation-based values via the ma
 >     "@com.sap.vocabularies.UI.v1.LineItem": {
 >         "actions": {
 >             "DataFieldForAction::com.c_salesordermanage_sd.CreateWithSalesOrderType": {
->                 "enabled": "SalesOrder.custom.CustomActions.enabledIfTwoSelected"
->                 "visible": "SalesOrder.custom.CustomActions.visibleIfAConditionIsTrue"
+>                 "enabled": "SalesOrder.ext.CustomActions.enabledIfTwoSelected"
+>                 "visible": "SalesOrder.ext.CustomActions.visibleIfAConditionIsTrue"
 >             }
 >         }
 >     }

@@ -149,7 +149,7 @@ To enable an action in the list report only upon selection of one row in the tab
 
 > ### Sample Code:  
 > ```
-> "enabled": "SalesOrder.custom.CustomActions.enabledForCompletedOnly"
+> "enabled": "SalesOrder.ext.CustomActions.enabledForCompletedOnly"
 > ```
 
 > ### Sample Code:  
@@ -295,7 +295,7 @@ You can also control the visibility of actions via a custom handler \(this is si
 >                                     "actions": {
 >                                         "<ActionName>": {
 >                                             "DataFieldForAction::com.c_salesordermanage_sd.ArchiveSalesOrder": {
->                                             "visible": "SalesOrder.custom.CustomActions.visibleForCompletedOnly"
+>                                             "visible": "SalesOrder.ext.CustomActions.visibleForCompletedOnly"
 >                                             }
 >                                         }
 >                                     }

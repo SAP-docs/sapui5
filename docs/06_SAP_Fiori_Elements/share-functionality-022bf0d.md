@@ -74,7 +74,7 @@ Make the following changes in the `manifest.json` file:
 >             "extensions": {
 >                 "sap.ui.controllerExtensions": {
 >                     "sap.fe.templates.ObjectPage.ObjectPageController": {
->                         "controllerName": "SalesOrder.custom.OPExtend"
+>                         "controllerName": "SalesOrder.ext.OPExtend"
 >                     }
 >                 }
 >             }
@@ -87,7 +87,7 @@ Make the following changes in the `OPExtend.controller.js` file:
 > ```
 > sap.ui.define(["sap/ui/core/mvc/ControllerExtension"], function(ControllerExtension) {
 >         "use strict";
->         return ControllerExtension.extend("SalesOrder.custom.OPExtend", {
+>         return ControllerExtension.extend("SalesOrder.ext.OPExtend", {
 >             // this section allows to extend lifecycle hooks or override public methods of the base controller
 >             override: {
 >                onInit: function() {},
