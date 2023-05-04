@@ -28,10 +28,10 @@ The most specific one wins. In the sample code above, this means for the `SalesO
 > 
 > ```
 > "sap.fe.templates.ObjectPage.ObjectPageController": {
->     "controllerName": "SalesOrder.ext.OPExtend"
+>     "controllerName": "SalesOrder.custom.OPExtend"
 > },
 > "sap.fe.templates.ObjectPage.ObjectPageController#SalesOrder::SalesOrderManageObjectPage": {
->     "controllerName": "SalesOrder.ext.SalesOrderOPExtend"
+>     "controllerName": "SalesOrder.custom.SalesOrderOPExtend"
 > }
 > ```
 

@@ -79,7 +79,7 @@ To add a title to an object page table, provide a string value to the `TypeNameP
 
 Take the following into account:
 
--   As `TypeNamePlural` is a mandatory parameter, if the section title and the table title are identical, the table title is not displayed.
+-   As `TypeNamePlural` is a mandatory parameter, if the subsection title and the table title are identical, the table title is not displayed.
 
 -   If the `UI.HeaderInfo` annotation hasn't been entered, the table title is also not displayed.
 

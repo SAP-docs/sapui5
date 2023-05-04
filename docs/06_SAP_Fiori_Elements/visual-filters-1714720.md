@@ -1069,21 +1069,6 @@ In the following example, the price property number of fractional digits provide
 > price;
 > ```
 
-> ### Sample Code:  
-> CAP CDS Annotation
-> 
-> ```
-> 
-> UI.DataPoint #Price : {
->     $Type : 'UI.DataPointType',
->     Value : Price,
->     ValueFormat : {
->         $Type : 'UI.NumberFormat',
->         NumberOfFractionalDigits : 1
->     }
-> }
-> ```
-
 
 
 ### Semantic Coloring for Visual Filters Based on Measure Values

@@ -79,41 +79,6 @@ In the example, the `UI.DataFieldForAnnotation` points to a contact annotation o
 > 
 > ```
 
-> ### Sample Code:  
-> CAP CDS Annotation
-> 
-> ```
-> 
-> UI.FieldGroup #GeneralInformationForHeader : {
->     Data : [
->         {
->             $Type : 'UI.DataField',
->             Value : to_StockAvailability.Quantity,
->             ![@UI.Importance] : #Low
->         },
->         {
->             $Type : 'UI.DataField',
->             Value : Weight,
->             ![@UI.Importance] : #High
->         },
->         {
->             $Type : 'UI.DataField',
->             Label : 'WeightUnit [SmLiQv]',
->             Value : WeightUnit,
->             ![@UI.Importance] : #High
->         },
->         {
->             $Type : 'UI.DataFieldForAnnotation',
->             Label : 'Supplier [ContactQV]',
->             Target : 'to_Supplier/@Communication.Contact',
->             ![@UI.Importance] : #High
->         }
->     ],
->     Label : '{@i18n>@GeneralInfoFieldGroupLabel}'
-> }
-> 
-> ```
-
 
 
 ### Popover
@@ -171,33 +136,6 @@ In the example, the `UI.DataFieldForAnnotation` points to a contact annotation o
 >  
 >   @Semantics.telephone.type: [ #FAX ]
 >   FaxNumber,
-> }
-> 
-> ```
-
-> ### Sample Code:  
-> CAP CDS Annotation
-> 
-> ```
-> 
-> Communication.Contact : {
->     fn : CompanyName,
->     email : [
->         {
->             type : #work,
->             address : EmailAddress
->         },
->     ],
->     tel : [
->         {
->             type : [ #preferred, #work ],
->             uri : PhoneNumber
->         },
->         {
->             type : #fax,
->             uri : FaxNumber
->         }
->     ]
 > }
 > 
 > ```

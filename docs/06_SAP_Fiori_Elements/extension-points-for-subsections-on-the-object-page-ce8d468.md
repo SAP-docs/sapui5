@@ -119,7 +119,7 @@ For more information, see [Extension Points for Sections on the Object Page](ext
 > 											"subSections": {
 > 												"customSubSection": {
 > 													"type": "XMLFragment",
-> 													"name": "SalesOrder.ext.CustomSubSection",
+> 													"name": "SalesOrder.custom.CustomSubSection",
 > 													"title": "{i18n>customSubSection}",
 > 													"position": {
 > 														"placement": "After",

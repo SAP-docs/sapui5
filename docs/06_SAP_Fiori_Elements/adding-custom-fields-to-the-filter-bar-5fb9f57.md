@@ -46,7 +46,7 @@ You can add additional controls to the smart filter bar. The following methods a
 -   Use `restoreCustomAppStateData` to get the custom app state object you provided in `getCustomAppStateData` and set the corresponding values for your custom controls. For example, you call this method after returning from a navigation.
 
 
-The `onInitSmartFilterBar` method is optional. You use it if you need to bind a custom control to its own model or if you want value changes to trigger an action.
+The `onInitSmartFilterBarExtension` method can be used to set the default filter values or to bind a custom control on initialization of filter bar.
 
 The enhanced controller methods each call a corresponding extension method:
 
@@ -66,6 +66,16 @@ The enhanced controller methods each call a corresponding extension method:
 > The filterable fields are defined by metadata annotations. Use the extension option if the filter attribute can only be calculated by the client.
 
 For an example with step-by-step instructions, see [Adding Filterable Field to the Smart Filter Bar](adding-filterable-field-to-the-smart-filter-bar-3a51582.md).
+
+
+
+### Adding Custom Filter Fields to Exported File
+
+When exporting table content which includes filter fields, they are included by default. For custom filters, however, their translated filter value in the query is shown.
+
+Example: if user-entered value in the filter bar is `Cost=Low`, the translated filter value in the query is `OverallCost<1000`.
+
+To show the filter value as shown in the filter bar, such as `Cost=Low`, you can use the extension method `onBeforeExportTableExtension` in the controller extension. This extension method is supported for exporting tables on analytical list pages, list reports and object pages.
 
 
 
@@ -93,7 +103,7 @@ You can configure the `FilterBar` locally via the section `@com.sap.vocabularies
 >                                         "MyCustomRatingThing": {
 >                                             "label": "{i18n>CustomRatingFilter}",
 >                                             "property": "Rating",
->                                             "template": "SalesOrder.ext.CustomRatingFilter",
+>                                             "template": "SalesOrder.custom.CustomRatingFilter",
 >                                             "required": true,
 >                                             "position": {
 >                                                 "placement": "After",
@@ -116,7 +126,7 @@ You can use the `filterFields` setting to add custom filters. The pattern looks 
 > "<key>": {
 >     "label": <UILabel>,                   // static string or i18n binding, e.g. "MyText" or "{i18n>MyCustomLabel}"
 >     "property": <FullPropertyPath>,       // the full path to the property to be filtered, e.g. "Rating" or "_Partner/Rating"
->     "template": <XmlFragmentPath>,        // the path to the Xml Template containing the filter control, e.g. "SalesOrder.ext.CustomRatingFilter"
+>     "template": <XmlFragmentPath>,        // the path to the Xml Template containing the filter control, e.g. "SalesOrder.custom.CustomRatingFilter"
 >     "required": (false) | true,           // filter field is (not) mandatory, i.e. it requires a value
 >     "position": {
 >         "placement": "Before"|"After",
@@ -134,7 +144,7 @@ The following sample code shows how you can build an XML template for an app cal
 > ### Sample Code:  
 > ```
 > <core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:l="sap.ui.layout">
->     <HBox alignItems="Center" core:require="{handler: 'SalesOrder/ext/CustomRating'}" width="100%">
+>     <HBox alignItems="Center" core:require="{handler: 'SalesOrder/custom/CustomRating'}" width="100%">
 >  
 > <!--     // either handle value change in the handler... // -->
 > <!--     <RatingIndicator id="MyCustomRatingIndicatorId" value="{= ${filterValues>} ? ${filterValues>}.substring(1) : null }" change="handler.onValueChanged" />-->
@@ -153,7 +163,7 @@ The following sample code shows how you can build an XML template for an app cal
 > </core:FragmentDefinition>
 > ```
 
-You can build these custom filter fields for different properties of the `SalesOrder`. To facilitate this, ensure that the key specified in the `manifest.json` is a unique string. The previous sample code shows the usage of custom handlers, that is, handling value changes or handling a button click that resets the filters. Following the naming of this example, these handlers are defined in file `SalesOrder/ext/CustomRating.js`.
+You can build these custom filter fields for different properties of the `SalesOrder`. To facilitate this, ensure that the key specified in the `manifest.json` is a unique string. The previous sample code shows the usage of custom handlers, that is, handling value changes or handling a button click that resets the filters. Following the naming of this example, these handlers are defined in file `SalesOrder/custom/CustomRating.js`.
 
 > ### Sample Code:  
 > ```
@@ -188,8 +198,8 @@ If you want to avoid your users having to enter the exact values of a `SalesOrde
 >     
 >         <ComboBox
 >             id="MyCustomRatingComboBox"
->             core:require="{handler: 'SalesOrder/ext/CustomRating'}"
->             selectedKey="{path: 'filterValues>', type: 'sap.fe.macros.filter.type.Value', formatOptions: { operator: 'SalesOrder.ext.CustomRating.ratingLevels' }}"
+>             core:require="{handler: 'SalesOrder/custom/CustomRating'}"
+>             selectedKey="{path: 'filterValues>', type: 'sap.fe.macros.filter.type.Value', formatOptions: { operator: 'SalesOrder.custom.CustomRating.ratingLevels' }}"
 >         >
 >             <items>
 >                 <core:Item key="Low" text="Low Rating" />
@@ -200,7 +210,7 @@ If you want to avoid your users having to enter the exact values of a `SalesOrde
 > </core:FragmentDefinition>
 > ```
 
-In the following example, these custom filter operators are defined in function `ratingLevels()` of file `SalesOrder/ext/CustomRating.js` and returned as custom filter conditions containing the values that you want to define:
+In the following example, these custom filter operators are defined in function `ratingLevels()` of file `SalesOrder/custom/CustomRating.js` and returned as custom filter conditions containing the values that you want to define:
 
 > ### Sample Code:  
 > Implementation of the Custom Rating Operator
@@ -244,7 +254,7 @@ You can also define your custom filter as mandatory by setting it to `required =
 > ```
 > <core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m">
 >     <Input
->         core:require="{handler: 'SalesOrder/ext/CustomRating'}"
+>         core:require="{handler: 'SalesOrder/custom/CustomRating'}"
 >         value="{path: 'filterValues>', type: 'sap.fe.macros.filter.type.Value', formatOptions: { operator: 'Contains' }}"
 >         valueState="{path: 'filterValues>', formatter: 'handler.onFilterInputFormatValue'}"
 >         placeholder="{i18n>customStringFilterPlaceholder}"
@@ -252,7 +262,7 @@ You can also define your custom filter as mandatory by setting it to `required =
 > </core:FragmentDefinition>
 > ```
 
-The red frame is switched on or off by the formatter `onFilterInputFormatValue()` in the file `SalesOrder/ext/CustomFilter.js` that updates the value state of the input field:
+The red frame is switched on or off by the formatter `onFilterInputFormatValue()` in the file `SalesOrder/custom/CustomFilter.js` that updates the value state of the input field:
 
 > ### Sample Code:  
 > ```

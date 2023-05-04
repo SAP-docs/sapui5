@@ -6,9 +6,9 @@ A card is a smart component that uses UI annotation to render its content. It co
 
 
 
-Each card is bound to a single entity set in a data source and configuration is provided in the `"sap.ovp"..."cards"` object. The cards object contains the list of cards to display in the application.
+Each card is bound to a single entity set in a data source, and its configuration is provided in the `"sap.ovp"..."cards"` object. The cards object contains the list of cards to display in the application.
 
-The card ID is the property name and the card configuration is provided in an object as the value. At runtime, cards are displayed in the order that they appear in the application descriptor.
+The card ID is the property name, and the card configuration is provided as a value in the object. At runtime, the cards are displayed in the order that they appear in the application descriptor.
 
 
 
@@ -18,10 +18,10 @@ The card ID is the property name and the card configuration is provided in an ob
 
 All cards have a static header section that can be configured in the descriptor configuration file. The card header includes the following properties: `category`, `title`, `subTitle` and card actions.
 
-The title of a card is mandatory. The subtitle is only mandatory if the card contains data point annotations \(such as a KPI header\). The title and subtitle can contain a maximum of two lines. The header also contains counter information that displays how many records are being presented in the card out of the total existing records, according to the current filter.
+The `title` property is mandatory. The `subTitle` is only mandatory if the card contains data point annotations \(such as a KPI header\). The title and subtitle can contain a maximum of two lines. The header also contains a counter showing how many records are presented in the card out of the total existing records, according to the current filter.
 
 > ### Note:  
-> The count information displays only in table and list cards. For more information, see [Table Cards](table-cards-167bf7c.md) and [List Cards](list-cards-56f39e0.md).
+> The counter is only displayed on table and list cards. For more information, see [Table Cards](table-cards-167bf7c.md) and [List Cards](list-cards-56f39e0.md).
 
 > ### Sample Code:  
 > ```
@@ -58,12 +58,12 @@ The title of a card is mandatory. The subtitle is only mandatory if the card con
 
 ### **KPI Headers**
 
-The generic card provides a dynamic section that can display a key performance indicator \(KPI\), and related information, in the header. The KPI is an aggregated value, as defined in the annotation file. To display a KPI header in a card, make sure that your OData service supports aggregation of values and the data is coming from the backend only. The KPI header can contain a KPI value, including its unit of measure, its trend, and percentage of change, and KPI header description.
+The generic card provides a dynamic section that can display a key performance indicator \(KPI\) and related information in the header. The KPI is an aggregated value, as defined in the annotation file. To display a KPI header in a card, make sure that your OData service supports aggregation of values and the data is coming from the backend only. The KPI header can contain a KPI value, including its unit of measure, its trend, percentage of change, and KPI header description.
 
 The KPI extension uses the following annotation terms:
 
 -   `com.sap.vocabularies.UI.v1.DataPoint`: Used to retrieve information about the title and the value of the KPI.
--   `com.sap.vocabularies.UI.v1.PresentationVariant`: Used to retrieve information about the fields by which to group, and sorting information.
+-   `com.sap.vocabularies.UI.v1.PresentationVariant`: Used to retrieve information about the fields which are used for grouping and sorting information.
 -   `com.sap.vocabularies.UI.v1.SelectionVariant`: Used to retrieve information about the filters.
 
 > ### Note:  
@@ -117,17 +117,17 @@ Card actions are available as of SAPUI5 1.110. You can access and perform the ca
 
 ## Cards in *Insights*
 
-You can add and use cards within the *Insights* section of the new *My Home* in SAP S/4HANA Cloud. The objective of displaying cards on the entry page is to visualize charts, KPI´s and counters in form of interest cards. The analytical, list and table cards are supported and can be used in the *Insights* section of the entry page.
+You can add and use the analytical, list and table cards within the *Insights* section of *My Home* in SAP S/4HANA Cloud. The objective of displaying cards on the entry page is to visualize charts, KPI´s and counters in the form of interest cards.
 
-To add a card to the *Insights* section, select the more option present on your card and choose *Add to Insights*. From the subsequent dialog box, you can add the selected card to your *Insights* section. You can update the *Title* and the *Subtitle* of the card before choosing *Add*.
+To add a card to the *Insights* section, select the *More* option from the card and choose *Add to Insights*. In the subsequent dialog box, you can update the card's *Title* and the *Subtitle*. Click *Add* to display the card in the *Insights* section .
 
-Note that you can add only eight cards to your *Insights* section at a given time. If eight cards are already being displayed, the selected card is added to *Edit Insights* dialog box. You can choose to select/deselect cards by editing the *Insights* section. For more information, see [*My Home* in SAP S/4HANA Cloud](https://help.sap.com/docs/SAP_S4HANA_CLOUD/4fc8d03390c342da8a60f8ee387bca1a/8a60279e8d2041b5ad8d3455fab0f3ef.html).
+Note that only eight cards at a time can be displayed in the *Insights* section. If the maximum number of cards is already displayed on the entry page, the selected card is added to the *Edit Insights* dialog box. You can choose to select or deselect cards by editing the *Insights* section. For more information, see [*My Home* in SAP S/4HANA Cloud](https://help.sap.com/docs/SAP_S4HANA_CLOUD/4fc8d03390c342da8a60f8ee387bca1a/8a60279e8d2041b5ad8d3455fab0f3ef.html).
 
 
 
 ### Disabling Card Generation
 
-An application can also decide to restrict the generation of individual analytical, list, and table cards. To do so, you can configure the card manifest setting by turning `enableAddToInsights` to `false`. With this, the option to add cards to the *Insights* section is removed.
+An application can also restrict the generation of individual analytical, list, and table cards. To do this, you can configure the card manifest setting by turning `enableAddToInsights` to `false`. This removes the option to add cards to the *Insights* section.
 
 > ### Sample Code:  
 > ```

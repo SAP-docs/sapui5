@@ -187,7 +187,7 @@ Navigation context
 Overrides user defined default variant and standard variant coming from the source app in the target app. The navigation context is applied.
 
 > ### Note:  
-> Navigation context also includes any context coming from the SAP Fiori launchpad target mapping of a tile \(navigation source\), or default values that are configured in the SAP Fiori launchpad target mapping of the SAP Fiori elements application \(navigation target\).
+> Navigation context also means any context coming from the tile's SAP Fiori launchpad target mapping configuration \(navigation source\), or default values that are configured in the SAP Fiori launchpad target mapping of the SAP Fiori elements application \(navigation target\).
 
 
 

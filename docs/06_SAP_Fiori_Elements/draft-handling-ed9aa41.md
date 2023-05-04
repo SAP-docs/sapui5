@@ -2,7 +2,7 @@
 
 # Draft Handling
 
-A draft is an interim version of a business entity that has not yet been explicitly saved as an active version. Drafts are saved automatically in the background whenever users add or change information within a business entity while it's in edit mode \(auto-save\). SAP Fiori elements support the creation of apps using draft handling.
+A draft is an interim version of a business entity that has not yet been explicitly saved as an active version. Drafts are saved automatically in the background after an interval of 20 seconds whenever users add or change information within a business entity while it's in edit mode \(auto-save\). However, if the user has modified a field with a side-effect annotation, then the draft is saved immediately after the user moves out of the virtual field group of the corresponding side-effect. The draft is also saved immediately if the user executes an action. In this case, the pending changes in the draft is also saved immediately, irrespective of the interval of 20 seconds.SAP Fiori elements support the creation of apps using draft handling.
 
 Drafts are used as follows:
 
@@ -74,7 +74,7 @@ The object page displays the *Validate* button to execute the `PreparationAction
 
 ## Handling Inconsistent Input
 
-Users might enter data that is so inconsistent that the system cannot store it in the draft. For example, characters are entered in a number field, or more characters than the field length allows are entered. If this is the case, the contents of the UI differ from the contents of the draft. Before the draft can be saved by the user, the system displays a message prompting the users to solve these errors. After all errors have been solved, the draft can be saved.
+Users might enter data that is so inconsistent that the system cannot store it in the draft. For example, characters are entered in a number field, or more characters than the field length allows are entered. If this is the case, the contents of the UI differ fro the contents of the draft. Before the draft can be saved by the user, the system displays a message prompting the users to solve these errors. After all errors have been solved, the draft can be saved.
 
 This system behavior is also valid when using the *Apply* button. When choosing *Apply*, the system has to make sure that the contents on the UI and the stored contents of the draft are identical. If the errors described above occur, the system displays the same message prompting the user to solve them.
 
@@ -89,11 +89,13 @@ This system behavior is also valid when using the *Apply* button. When choosing 
 
 You can use keyboard shortcuts for common tasks.
 
+The pending changes present on the draft when toggling from draft to saved version is saved before switching to the active version.
+
 
 
 ### Prepare Draft for Activation by Pressing [Enter\]
 
-On a draft version of a document, if you press [Enter\] on input fields, by default the draft validation \(`PreparationAction` available on the `DraftRoot`\) is triggered. The `PreparationAction` performs a validation in the backend for the draft values and sends back validation messages if they're available.
+On a draft version of a document, if you press [Enter\] on input fields, by default the draft validation \(`PreparationAction` available on the `DraftRoot`\) is triggered. The `PreparationAction` performs a validation in the backend for the draft values and sends back validation messages if they're available. The pending changes on the draft, if any, are also saved before validating the draft instance.
 
 The `PreparationAction` that is defined within the `DraftRoot` is called, even if you've pressed [Enter\] in the fields of the object page table, or in the subobject pages.
 

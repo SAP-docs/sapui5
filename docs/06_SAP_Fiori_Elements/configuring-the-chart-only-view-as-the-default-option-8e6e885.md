@@ -370,17 +370,6 @@ If you select a data point or segment from a chart, the smart chart checks the a
 > 
 > ```
 
-> ### Sample Code:  
-> CAP CDS Annotation
-> 
-> ```
-> 
-> annotate Emp_Line_Item.Item with {
->   @Common.SemanticObject : 'CostCenter'
->   Cost_Center
-> };
-> ```
-
 In the preceding example, the smart charts retrieve all of the navigation parameters for which you have authorization and that are defined for the `CostCenter` semantic object. The selected chart and filter context is passed to the target application through the navigation context.
 
 Choose *Details* on the toolbar to view navigation links that define actions associated with semantic objects.

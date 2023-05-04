@@ -249,6 +249,86 @@ Type-Dependent Properties
 
 </td>
 </tr>
+<tr>
+<td valign="top">
+
+ 
+
+
+
+</td>
+<td valign="top">
+
+ `autoScale` \(`boolean`\)
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ 
+
+
+
+</td>
+<td valign="top">
+
+ `timezone` \(`string`\)
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ 
+
+
+
+</td>
+<td valign="top">
+
+ `timezoneProperty` \(`string`\)
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ 
+
+
+
+</td>
+<td valign="top">
+
+ `displayTimezone` \(`boolean`\)
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ 
+
+
+
+</td>
+<td valign="top">
+
+ `utc` \(`boolean`\)
+
+
+
+</td>
+</tr>
 </table>
 
 In this section, you can find out more about type-independent properties.

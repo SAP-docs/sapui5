@@ -368,6 +368,18 @@ Displaying timestamps in a specific time zone provided by the back end is done u
 >      }" />
 > ```
 
+> ### Example:  
+> **Using `sap.ui.model.odata.type.DateTimeWithTimezone` to display only a time zone**
+> 
+> ```
+> <!-- 'TimezoneID' refers to an Edm.String property holding the IANA time zone ID -->
+> <Text text="{
+>         formatOptions: {showTimezone: 'Only'},
+>         parts: [{value: null}, {path: 'TimezoneID'}],
+>         type: 'sap.ui.model.odata.type.DateTimeWithTimezone'
+>      }" />
+> ```
+
 
 
 <a name="loio6c9e61dc157a40c19460660ece8368bc__section_ui5date"/>

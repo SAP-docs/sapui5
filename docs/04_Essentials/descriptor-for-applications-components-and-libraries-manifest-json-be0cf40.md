@@ -1239,6 +1239,29 @@ Version 53
 
 </td>
 </tr>
+<tr>
+<td valign="top">
+
+Version 54
+
+
+
+</td>
+<td valign="top">
+
+\>=1.113
+
+
+
+</td>
+<td valign="top">
+
+1.53.0
+
+
+
+</td>
+</tr>
 </table>
 
 For more information on the new fields introduced in each version, check out [Migration Information for Upgrading the Descriptor File](migration-information-for-upgrading-the-descriptor-file-a110f76.md)
@@ -2837,7 +2860,7 @@ Current version of the `manifest.json`
 ```
 
 {
-    "_version": "1.52.0",
+    "_version": "1.53.0",
  
     "start_url": "index.html",
  
@@ -3089,7 +3112,7 @@ Current version of the `manifest.json`
             }]
         },
         "dependencies": {
-            "minUI5Version": "1.112.0",
+            "minUI5Version": "1.113.0",
             "libs": {
                 "sap.m": {
                     "minVersion": "1.34.0"
@@ -3178,8 +3201,8 @@ Current version of the `manifest.json`
                 "shortcut": "Ctrl+S"
             }
         }
-	    },
- 
+    },
+
     "sap.platform.abap": {
         "uri": "/sap/bc/ui5_ui5/sap/appName",
         "uriNwbc": ""

@@ -93,7 +93,6 @@ sap.ui.define([
    "sap/ui/core/format/DateFormat",
    "sap/ui/model/Filter",
    "sap/ui/model/FilterOperator"
-
 ], function(BaseController, JSONModel, History, formatter, UI5Date, DateFormat, Filter, FilterOperator) {
    "use strict";
    return BaseController.extend("myCompany.myApp.controller.Object", {

@@ -162,7 +162,7 @@ To define a header facet on UI level – you do this if you want to add a custom
 >                                 "header": {
 >                                     "facets": {
 >                                         "CustomHeaderFacet1": {
->                                             "template": "SalesOrder.ext.CustomHeaderFacetColumnChart",
+>                                             "template": "SalesOrder.custom.CustomHeaderFacetColumnChart",
 >                                             "stashed": false,
 >                                             "visible": "{= %{OverallSDProcessStatus} === 'C'}",
 >                                             "position": {
@@ -174,8 +174,8 @@ To define a header facet on UI level – you do this if you want to add a custom
 >                                             }
 >                                         },
 >                                         "CustomHeaderFacet2": {
->                                             "template": "SalesOrder.ext.CustomHeaderFacetDataPoint",
->                                             "templateEdit": "SalesOrder.ext.CustomHeaderFacetDataPointEdit",
+>                                             "template": "SalesOrder.custom.CustomHeaderFacetDataPoint",
+>                                             "templateEdit": "SalesOrder.custom.CustomHeaderFacetDataPointEdit",
 >                                             "title": "{i18n>customHeaderFacet2-CustomDataPoint}",
 >                                             "subTitle": "{i18n>customHeaderFacet2-CarRental}",
 >                                             "requestGroupId": "LongRunners",
@@ -221,7 +221,7 @@ To define a header facet on UI level – you do this if you want to add a custom
 >                                 "@com.sap.vocabularies.UI.v1.HeaderFacets": {
 >                                     "facets": {
 >                                         "CustomHeaderFacet2": {
->                                             "template": "SalesOrder.ext.CustomHeaderFacetOverwritten",
+>                                             "template": "SalesOrder.custom.CustomHeaderFacetOverwritten",
 >                                             "title": "Custom Error",
 >                                             "subTitle": "Should never appear!",
 >                                             "stashed": false,
@@ -231,8 +231,8 @@ To define a header facet on UI level – you do this if you want to add a custom
 >                                             }
 >                                         },
 >                                         "CustomHeaderFacet3": {
->                                             "template": "SalesOrder.ext.CustomHeaderFacetHarveyBall",
->                                             "templateEdit": "SalesOrder.ext.CustomHeaderFacetHarveyBallEdit",
+>                                             "template": "SalesOrder.custom.CustomHeaderFacetHarveyBall",
+>                                             "templateEdit": "SalesOrder.custom.CustomHeaderFacetHarveyBallEdit",
 >                                             "title": "{i18n>customHeaderFacet2-CustomProgress}",
 >                                             "stashed": false,
 >                                             "position": {
@@ -252,7 +252,7 @@ To define a header facet on UI level – you do this if you want to add a custom
 > }
 > ```
 
-In this example, the second header facet with the key `CustomHeaderFacet2` occurs twice: once in the content-based configuration and a second time in the annotation-based configuration. Since the 1st configuration has a higher priority, the second entry will be skipped at runtime and you won't see the fragment `SalesOrder.ext.CustomHeaderFacetOverwritten` as a header facet.
+In this example, the second header facet with the key `CustomHeaderFacet2` occurs twice: once in the content-based configuration and a second time in the annotation-based configuration. Since the 1st configuration has a higher priority, the second entry will be skipped at runtime and you won't see the fragment `SalesOrder.custom.CustomHeaderFacetOverwritten` as a header facet.
 
 **Settings for Custom Header Facets**
 
@@ -677,7 +677,7 @@ To define a field in a header field – you do this if you want to add a custom 
 >                            "fields": {
 >                               "CustomField1": {
 >                                  "label": "{i18n>ObjectPageHeaderFacetFieldLabel1}",
->                                  "template": "ManageItems.ext.CustomHeaderFacetFieldGroupForm",
+>                                  "template": "ManageItems.custom.CustomHeaderFacetFieldGroupForm",
 >                                  "position": {
 >                                     "placement": "Before",
 >                                     "anchor": "DataField::headerDate"

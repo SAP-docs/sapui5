@@ -156,31 +156,6 @@ The sample codes show a quick view facet containing field group, contact and Dat
 > }
 > ```
 
-> ### Sample Code:  
-> CAP CDS Annotation
-> 
-> ```
-> 
-> annotate STTA_PROD_MAN.STTA_C_MP_SupplierType with @(
->     UI.QuickViewFacets : [
->         {
->             $Type : 'UI.ReferenceFacet',
->             Target : '@UI.FieldGroup#SupplierQuickViewPOC_FieldGroup_1'
->         },
->         {
->             $Type : 'UI.ReferenceFacet',
->             Label : 'Main Contact Person',
->             Target : '@Communication.Contact#KeyAccount'
->         },
->         {
->             $Type : 'UI.ReferenceFacet',
->             Label : 'DataPoint in QV',
->             Target : '@UI.DataPoint#Product'
->         }
->     ]
-> );
-> ```
-
 
 
 <a name="loioc245ad757dc64694842e00c40e677cd8__section_spl_mz2_3mb"/>
@@ -573,4 +548,9 @@ The following image shows a *More Links* popover. Users can select actions to be
 
 -   Users can personalize the actions shown in the footer by selecting actions in the *More Links* popover.
 
+
+> ### Note:  
+> When no QuickView annotations are defined and no target is resolved at runtime \(for example, the user does not have access to the target applications\), the field still appears as a link and a message is displayed when pressed.
+> 
+>  ![](images/QuickView_Error_Message_ca67391.png) 
 

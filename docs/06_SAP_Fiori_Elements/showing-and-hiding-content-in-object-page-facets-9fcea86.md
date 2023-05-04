@@ -78,13 +78,13 @@ To enable this feature, set the `UI.PartOfPreview` annotation of the relevant re
 
 ## Additional Features in SAP Fiori Elements for OData V4
 
-You can show or hide fields inside reference facets on the UI using the *Show Details* and *Hide Details* buttons.
+You can show or hide fields and tables inside reference facets on the UI using the *Show Details* and *Hide Details* buttons.
 
-The *Show Details* button appears in the facet toolbar if hidden fields are available:
+The *Show Details* button appears in the facet toolbar if hidden fields and tables are available:
 
  ![](images/Showing_Fields_Inside_Reference_Facets_Show_Details_Link_01c3179.png) 
 
-The *Hide Details* button appears in the facet toolbar if a user has clicked the *Show Details* button, allowing users to hide the additional information.
+The *Hide Details* button appears in the facet toolbar if the user has clicked the *Show Details* button. This allows users to hide the additional information again.
 
  ![](images/Hiding_Fields_Inside_Reference_Facets_Hide_Details_Link_985838c.png) 
 
@@ -124,12 +124,12 @@ To enable this feature, set the `UI.PartOfPreview` annotation of the relevant re
 > ```
 
 > ### Note:  
-> This feature is available for data fields that are included in a visible reference facet. You can't this feature for data fields that are part of a reference facet that is initially hidden \(this means that nesting of the `UI.PartOfPreview` annotation isn't possible.
+> This feature is available for tables and data fields that are included in a visible reference facet. You can't use this feature for tables and data fields that are part of a reference facet that is initially hidden. This means that nesting of the `UI.PartOfPreview` annotation isn't possible.
 
 
 
 ### Using *Show More* and *Show Less* Buttons
 
 > ### Restriction:  
-> This feature is applicable only to reference facets that have a `FieldGroup` as their target, for instance a form representation. This feature isn't applicable to other target types, for instance reference facets that point to a table or a chart.
+> This feature is applicable only to reference facets that have a `FieldGroup` as their target, for instance, a form representation. This feature isn't applicable to other target types, for instance, reference facets that point to a table or a chart.
 

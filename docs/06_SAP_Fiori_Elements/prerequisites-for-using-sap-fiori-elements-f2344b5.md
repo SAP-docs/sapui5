@@ -28,14 +28,7 @@ To create an app using SAP Fiori elements, some prerequisites apply.
 
 ## Tool Support
 
-We recommend that you use [SAP Fiori tools](https://help.sap.com/viewer/product/SAP_FIORI_tools/Latest/en-US), which is a set of extensions for SAP Business Application Studio and Visual Studio Code, to build your apps.
-
-In SAP Fiori elements for OData V2, you can also use SAP Web IDE to build UI applications when using SAP Fiori elements.
-
-> ### Caution:  
-> SAP Web IDE is no longer available via SAP Business Technology Platform trial accounts. Any references to SAP Web IDE in this documentation are only relevant for you if you have access to SAP Web IDE through a productive SAP BTP account. Please consider SAP Business Application Studio as an alternative. See [App Development Using SAP Business Application Studio](../05_Developing_Apps/app-development-using-sap-business-application-studio-6bbad66.md).
-
-For more information about SAP Web IDE, see the documentation for SAP Web IDE on the SAP Help Portal at [https://help.sap.com/viewer/p/SAP\_Web\_IDE](https://help.sap.com/viewer/p/SAP_Web_IDE).
+You can use [SAP Fiori tools](https://help.sap.com/viewer/product/SAP_FIORI_tools/Latest/en-US), which is a set of extensions for SAP Business Application Studio and Visual Studio Code, to build your apps. For more information about SAP Business Application Studio, see the documentation on the SAP Help Portal at [SAP Business Application Studio](https://help.sap.com/viewer/product/SAP%20Business%20Application%20Studio/Cloud/en-US).
 
 > ### Note:  
 > In SAP Fiori elements for OData V4, an edit scenario works in combination with a draft-enabled service.
@@ -54,17 +47,15 @@ For more information about building OData services, use the following links to a
 
 -   [The SAP Cloud Application Programming Model](https://cap.cloud.sap/docs/)
 
-    > ### Note:  
-    > If you want to build an app using CAP and SAP Fiori elements, you need to create an OData V4 CAP service. OData V2 CAP service is currently not supported.
 
+> ### Note:  
+> While CAP defaults to OData V4, the latest protocol version, some projects need to fallback to OData V2, for example, to keep using existing V2-based UIs.
 
 
 
 <a name="loiof2344b5e78164b2b9c27ef8b068f295c__section_bkp_wdt_1rb"/>
 
 ## System Requirements
-
--   To extend your apps, use SAP Web IDE 1.17 or higher. For more information, search for *Annotation Modeler* in the documentation for SAP Web IDE on the SAP Help Portal at [https://help.sap.com/viewer/p/SAP\_Web\_IDE](https://help.sap.com/viewer/p/SAP_Web_IDE).
 
 -   The development of new transactional apps with draft capabilities requires ABAP Application Server as of SAP NetWeaver AS for ABAP 7.51 innovation package SP02 or higher. Draft capabilities are not available with SAP NetWeaver AS for ABAP 7.50. For more information, see [Draft Handling](draft-handling-ed9aa41.md).
 

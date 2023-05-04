@@ -4,7 +4,7 @@
 
 To enable or modify certain default features for apps based on SAP Fiori elements, you can modify the `manifest.json` file and adapt the annotations, after you have generated the app.
 
-Apart from this, you can also extend generated apps using the extension wizard in SAP Web IDE, or manually. For more information, see [Using the Extension Wizard](using-the-extension-wizard-af3369a.md).
+Apart from this, you can also extend generated apps using the extension wizard in SAP Fiori tools. For more information, see [https://help.sap.com/docs/SAP\_FIORI\_tools/17d50220bcd848aa854c9c182d65b699/047507c86afa4e96bb3d284adb9f4726.html](https://help.sap.com/docs/SAP_FIORI_tools/17d50220bcd848aa854c9c182d65b699/047507c86afa4e96bb3d284adb9f4726.html).
 
 To extend generated apps manually, see [Extending SAP Fiori Elements-Based Apps](extending-sap-fiori-elements-based-apps-358cf25.md).
 

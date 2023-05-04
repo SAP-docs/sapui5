@@ -300,18 +300,14 @@ If configured, Read Access Logging tracks who has access to which data at which 
 </td>
 <td valign="top">
 
-![Not supported](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
-
-RAL is not supported because the SAP Gateway export is carried out by a server process that does not run in a specific user context.
+ ![Supported](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
 
 
 
 </td>
 <td valign="top">
 
-![Supported](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
-
-RAL is fully supported because the client export uses the existing OData service to request data.
+ ![Supported](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
 
 
 

@@ -125,7 +125,7 @@ To define a section on UI level - you do this if you want to add a custom look a
 >                         "body": {
 >                            "sections": {
 >                               "customSection": {
->                                  "template": "SalesOrder.ext.CustomSection",
+>                                  "template": "SalesOrder.custom.CustomSection",
 >                                  "title": "{i18n>customSection}",
 >                                  "position": {
 >                                     "placement": "Before",
@@ -137,11 +137,11 @@ To define a section on UI level - you do this if you want to add a custom look a
 >                                  "subSections": {
 >                                      "firstSubSectionKey": {
 >                                          "title": "First Subsection",
->                                          "template": "SalesOrder.ext.CustomFieldForm"
+>                                          "template": "SalesOrder.custom.CustomFieldForm"
 >                                      },
 >                                      "secondSubSectionKey": {
 >                                          "title": "Second Subsection",
->                                          "template": "SalesOrder.ext.CustomFieldForm2",
+>                                          "template": "SalesOrder.custom.CustomFieldForm2",
 >                                          "position": {
 >                                              "placement": "After",
 >                                              "anchor": "firstSubSectionKey"

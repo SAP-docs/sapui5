@@ -5,7 +5,7 @@
 You can export a table into a spreadsheet or to PDF.
 
 > ### Note:  
-> This topic is currently only applicable to SAP Fiori elements for OData V4.
+> This topic is only applicable to SAP Fiori elements for OData V4. For more information on the export option in V2, see [Adapting the UI: List Report and Object Page](adapting-the-ui-list-report-and-object-page-0d2f1a9.md).
 
 
 
@@ -13,7 +13,9 @@ You can export a table into a spreadsheet or to PDF.
 
 ## Export to Spreadsheet
 
-By default, this is enabled in list report tables. In the object page, the export feature is available by default if the copy/paste feature is also available. Otherwise, the feature is disabled in the object page. When enabled, the *Export* button is displayed in the table toolbar. It triggers the export of the values in the table.
+By default, export is enabled in the list report and on the object page. When enabled, the *Export* button is displayed in the table toolbar. When selected, it exports the values in the table .
+
+On the object page, the paste feature is also available by default. For more details, see [Copying and Pasting from Spreadsheet Applications to Tables](copying-and-pasting-from-spreadsheet-applications-to-tables-f6a8fd2.md).
 
  ![](images/Object_Page_Export_to_Excel_2559ec3.png) 
 
@@ -94,7 +96,9 @@ Clicking the drop-down arrow opens a menu with two additional options:
 > You can export the custom columns you have defined via manifest settings. To allow the export of your custom column, you must maintain the `"properties"` array in the definition of the custom column. For more information about how to define custom columns, see the section Sorting and Filtering in the topic [Extension Points for Tables](extension-points-for-tables-d525522.md). The properties will be exported into the spreadsheet as described for a `FieldGroup`.
 
 > ### Restriction:  
-> -   The columns containing a `DataFieldForAnnotation` that points to `Charts` or a `DataFieldForAction` are not exported.
+> -   The columns containing a multi-input field \(1:N\), `DataFieldForAnnotation` that points to `Charts` or a `DataFieldForAction`, are exported without any content.
+> 
+> -   Columns containing a property with a dynamic `UI.Hidden` expression are still exported
 > 
 > -   The numbers exceeding 15 digits are rounded in the spreadsheet file \(this is a JavaScript restriction\).
 

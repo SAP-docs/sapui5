@@ -1,26 +1,21 @@
 <!-- loiob0d5fe2f1b0b497cbd67cd5a1d35fa4c -->
 
-# JSDoc Visibility Tags
+# Use Only Public APIs
 
-Tags such as `@public` or `@private` allow you to control the visibility of the JSDoc documentation.
+SAPUI5 APIs are classified into different types. Only APIs of type `public` should be used by application developers.
 
- 
+All SAPUI5 APIs are assigned one of several possible types. App developers should only use `public` APIs, as compatibility is guaranteed only for these. APIs of type `protected` are not relevant for app developers; they are only relevant for library development. For example, they could be functions called by certain controls in control development.
 
-You can select from several block tags to determine if and how the JSDoc documentation for your API is displayed in the *API Reference*. The tag you choose also affects API usage and compatibility, namely
+The following table gives an overview over these API types:
 
--   whether your API is meant to be used in application development or SAPUI5 framework development,
--   whether you have to keep your API compatible. For more information, see [Compatibility Rules](../02_Read-Me-First/compatibility-rules-91f0873.md).
-
-The following table gives an overview over the available tags:
-
-**Tags for Visibility**
+**API Types**
 
 
 <table>
 <tr>
 <th valign="top">
 
-Tag
+API Type
 
 
 
@@ -34,14 +29,14 @@ Description
 </th>
 <th valign="top">
 
-Compatibility Required
+Compatibility Assured?
 
 
 
 </th>
 <th valign="top">
 
-Can be used by applications
+Can be used by applications?
 
 
 
@@ -64,7 +59,7 @@ Example
 <tr>
 <td valign="top">
 
- `@public` 
+ `public` 
 
 
 
@@ -106,7 +101,7 @@ Indicates that the API, such as a class or method, is generally available for ap
 <tr>
 <td valign="top">
 
- `@protected` 
+ `protected` 
 
 
 
@@ -134,7 +129,7 @@ Indicates that usage of the API is restricted. It is not meant to be used by app
 </td>
 <td valign="top">
 
-The API might be used outside the relevant class or subclasses, but only in closely related classes in SAPUI5 framework development.
+The API might be used outside the relevant class or subclasses, but only in closely related classes in SAPUI5 library / control development.
 
 
 
@@ -150,7 +145,7 @@ The API might be used outside the relevant class or subclasses, but only in clos
 <tr>
 <td valign="top">
 
- `@private` 
+ `private` 
 
 
 
@@ -158,9 +153,6 @@ The API might be used outside the relevant class or subclasses, but only in clos
 <td valign="top">
 
 Indicates that the API is not meant for use outside of SAPUI5 framework development. It won't be visible in the SAPUI5 documentation.
-
-> ### Note:  
-> If you also document private methods with JSDoc, mark them as `@private`. This is currently the default in SAPUI5, but not in JSDoc, so it is safer to explicitly specify this.
 
 
 
@@ -199,7 +191,7 @@ We recommend to use the underscore character "`_`" as a prefix for technical nam
 <tr>
 <td valign="top">
 
- `@ui5-restricted` 
+ `ui5-restricted` 
 
 
 
@@ -207,9 +199,6 @@ We recommend to use the underscore character "`_`" as a prefix for technical nam
 <td valign="top">
 
 Indicates that the API is only meant for certain stakeholders within SAPUI5 framework development and won't be visible in the SAPUI5 documentation.
-
-> ### Note:  
-> `@ui5-restricted` should always be preceded by `@private`. This is to make sure that content isn't accidentally made public if an external JSDoc generator is used that doesn't recognize this tag.
 
 
 
@@ -230,11 +219,9 @@ Indicates that the API is only meant for certain stakeholders within SAPUI5 fram
 </td>
 <td valign="top">
 
-To specify the stakeholders that are allowed to use this API, insert a space- or comma-separated list of stakeholders after the tag, typically package names like `sap.ui.core`, like this:
+In the JSDoc describing the API, its type tag is followed by a space- or comma-separated list of stakeholders, typically package names like `sap.ui.core`, like this:
 
 `@ui5-restricted package_name_1, package_name_2`
-
-You can also add free text.
 
 
 
@@ -254,14 +241,14 @@ in
 <tr>
 <td valign="top">
 
- `@sap-restricted` 
+ `sap-restricted` 
 
 
 
 </td>
 <td valign="top">
 
-Deprecated, replaced by `@ui5-restricted` 
+Deprecated, replaced by `ui5-restricted` 
 
 
 
@@ -304,5 +291,10 @@ Deprecated, replaced by `@ui5-restricted`
 If more than one of the above tags is used, the last one wins.
 
 > ### Note:  
-> The SAPUI5 documentation only includes APIs of categories `@public` and `@protected`.
+> The SAPUI5 documentation only includes APIs of categories `public` and `protected`.
+
+**Related Information**  
+
+
+[Compatibility Rules](../02_Read-Me-First/compatibility-rules-91f0873.md "The following sections describe what SAP can change in major, minor, and patch releases. Always consider these rules when developing apps, features, or controls with or for SAPUI5.")
 

@@ -91,7 +91,7 @@ The form containing additional custom fields can look like this:
     >                             "@com.sap.vocabularies.UI.v1.FieldGroup": {
     >                                 "fields": {
     >                                     "customFormElementAnchor": {
-    >                                         "template": "ObjectPageStructure.ext.CustomField",
+    >                                         "template": "ObjectPageStructure.custom.CustomField",
     >                                          "label": "{i18n>myFieldLabel1}",
     >                                          "position": {
     >                                              "placement": "After",
@@ -99,7 +99,7 @@ The form containing additional custom fields can look like this:
     >                                          }
     >                                      },
     >                                      "customFormElementAnchor2": {
-    >                                          "template": "ObjectPageStructure.ext.CustomField",
+    >                                          "template": "ObjectPageStructure.custom.CustomField",
     >                                          "label": "{i18n>myFieldLabel2}",
     >                                          "position": {
     >                                              "placement": "After",

@@ -111,6 +111,20 @@ This *Copy* button is placed after the *Delete* button.
 > 
 > ```
 
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> UI.Identification : [
+>     {
+>         $Type : 'UI.DataFieldForAction',
+>         Label : 'Copy',
+>         Action : 'STTA_PROD_MAN.STTA_PROD_MAN_Entities/STTA_C_MP_ProductCopy',
+>         ![@UI.IsCopyAction] : true,
+>     },
+> ],
+> ```
+
 Applications can define a label for this button. If a label is not provided, then by default this button is labeled as *Copy*.
 
 > ### Note:  
@@ -165,18 +179,6 @@ The code sample below shows you how to set up your annotation to display or hide
 >         </Record>
 >     </Annotation>
 > </Annotations>
-> ```
-
-> ### Sample Code:  
-> CAP CDS Annotation
-> 
-> ```
-> 
-> annotate STTA_PROD_MAN.STTA_C_MP_Product with @(
->     Capabilities.UpdateRestrictions : {
->         Updatable : Updatable_mc
->     }
-> );
 > ```
 
 

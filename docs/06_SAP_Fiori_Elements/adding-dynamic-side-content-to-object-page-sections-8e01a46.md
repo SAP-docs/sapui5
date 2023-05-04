@@ -137,14 +137,14 @@ You define the side content in the manifest as follows:
 >                            "sections": {
 >                               "<section-key>": {
 >                                  "sideContent": {
->                                     "template": "SalesOrder.ext.CustomSideContent"
+>                                     "template": "SalesOrder.custom.CustomSideContent"
 >                                  }
 >                               },
 >                               "<section-key>": {
 >                                  "subSections": {
 >                                     "<subSection-key>": {
 >                                        "sideContent": {
->                                           "template": "SalesOrder.ext.CustomSideContent",
+>                                           "template": "SalesOrder.custom.CustomSideContent",
 >                                           "equalSplit": true
 >                                        }
 >                                     }
@@ -278,7 +278,7 @@ If no value for the parameter is provided, the API toggles the display.
 >                            "_Item/@com.sap.vocabularies.UI.v1.LineItem": {
 >                               "actions": {
 >                                  "CustomActionToggleSideContent": {
->                                  "press": "Namespace.ext.CustomSectionSideContent.toggleSideContent",
+>                                  "press": "Namespace.custom.CustomSectionSideContent.toggleSideContent",
 >                                  "text": "Show/Hide Side Content",
 >                                  "enabled": true,
 >                                  "visible": true 
@@ -298,7 +298,7 @@ If no value for the parameter is provided, the API toggles the display.
 For more information about defining an action, see [Adding Custom Actions Using Extension Points](adding-custom-actions-using-extension-points-7619517.md).
 
 > ### Sample Code:  
-> webapp/ext/customSectionSideContent.js
+> webapp/custom/customSectionSideContent.js
 > 
 > ```
 > sap.ui.define([], function() {

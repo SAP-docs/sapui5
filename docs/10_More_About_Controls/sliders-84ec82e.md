@@ -37,7 +37,7 @@ In the background, the sliders operate on floats, but some usecases may require 
 ```
 
 // "Element" required from "sap/ui/core/Element"
-var CustomScale = Element.extend("sap.xx.ext.CustomScale", {
+var CustomScale = Element.extend("sap.xx.custom.CustomScale", {
 				interfaces: [
 					"sap.m.IScale"
 				],
@@ -63,8 +63,8 @@ This custom scale is then passed to the control.
 ```
 
 // "Slider" required from "sap/m/Slider"
-// "CustomScale" required from "sap/xx/ext/CustomScale"
-// "CustomTooltip" required from "sap/xx/ext/CustomTooltip"
+// "CustomScale" required from "sap/xx/custom/CustomScale"
+// "CustomTooltip" required from "sap/xx/custom/CustomTooltip"
 var oSlider = new Slider({
 				min: 0,
 				max: 30,

@@ -101,6 +101,21 @@ This *Copy* button is automatically placed after the *Create* button.
 > 
 > ```
 
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> UI.LineItem : [
+>     {
+>         $Type : 'UI.DataFieldForAction',
+>         Label : 'Copy',
+>         Action : 'STTA_PROD_MAN.STTA_PROD_MAN_Entities/STTA_C_MP_ProductCopy',
+>         ![@UI.IsCopyAction] : true,
+>     },
+> ], 
+> 
+> ```
+
 Applications can define a label for this button. If no custom label is provided, the default label is *Copy*.
 
 

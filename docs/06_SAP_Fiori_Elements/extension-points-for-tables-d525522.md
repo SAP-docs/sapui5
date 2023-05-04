@@ -322,7 +322,7 @@ The table containing additional custom columns can look like this:
     > 
     > ```
     > <core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:l="sap.ui.layout">
-    > 	<l:VerticalLayout core:require="{handler: 'SalesOrder/ext/CustomColumn'}">
+    > 	<l:VerticalLayout core:require="{handler: 'SalesOrder/custom/CustomColumn'}">
     > 		<Button text="Custom Button" press="handler.buttonPressed" />
     > 	</l:VerticalLayout>
     > </core:FragmentDefinition>
@@ -353,7 +353,7 @@ The table containing additional custom columns can look like this:
     >                                                 "placement": "After",
     >                                                 "anchor": "DataFieldForAnnotation::FieldGroup::multipleActionFields"
     >                                             },
-    >                                             "template": "SalesOrder.ext.CustomColumnButton",
+    >                                             "template": "SalesOrder.custom.CustomColumnButton",
     >                                             "availability": "Default",
     >                                             "properties": [
     >                                                 "ID",
@@ -376,7 +376,7 @@ The table containing additional custom columns can look like this:
     >                                     "columns": {
     >                                         "CustomColumnOnObjectPage": {
     >                                             "header": "AnotherColumnLabel",
-    >                                             "template": "SalesOrder.ext.CustomColumnButton",
+    >                                             "template": "SalesOrder.custom.CustomColumnButton",
     >                                             "availability": "Adaption"
     >                                         }
     >                                     }

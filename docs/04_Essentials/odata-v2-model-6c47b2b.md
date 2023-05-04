@@ -528,8 +528,8 @@ All examples for entity creation below assume that the model runs in batch mode,
 >   function () { /* deletion of the created entity before it is persisted */ }
 > );
 >  
-> // delete the created entity by resetting the corresponding change
-> oModel.resetChanges([oContext.getPath()], undefined, /*bDeleteCreatedEntities*/true);
+> // delete the created entity
+> oContext.delete();
 > ```
 
 The `createEntry` method takes the optional `refreshAfterChange` parameter, which determines whether all affected bindings are refreshed after successful creation in the back end. This parameter is used to update list bindings with the new entity after creation, so that it is displayed in the bound table controls. In scenarios where such an update is required, we recommend to use the `ODataListBinding#create` API described below instead of `ODataModel#createEntry`.
@@ -576,7 +576,7 @@ Use this approach if you have a list or table control showing the collection of 
 
 New entries are inserted according to the `bAtEnd` parameter. When they are persisted, they retain their position in the list as long as there is no call to a method typically related to a user interaction, such as `ODataListBinding#filter`, `ODataListBinding#sort`, `ODataListBinding#refresh`, or a re-binding of the bound list or table control. In these cases, the persisted entries are shown in the position provided by the back end.
 
-With **inactive** entries, you can build **inline creation rows** in a table that allow for a quick creation of new entries *within* the table without separate forms or popups: Once the table data is loaded, you can add one or more inactive entries; use [`ODataListBinding#isFirstCreateAtEnd`](https://ui5.sap.com/#/api/sap.ui.model.odata.v2.ODataListBinding/methods/isFirstCreateAtEnd) to determine whether such entries have already been created. On activation of an entry, the list binding fires the [`createActivate`](https://ui5.sap.com/#/api/sap.ui.model.odata.v2.ODataListBinding/events/createActivate) event; with this event, you can create a new inactive entry.
+With **inactive** entries, you can build **inline creation rows** in a table that allow for a quick creation of new entries *within* the table without separate forms or popups: Once the table data is loaded, you can add one or more inactive entries; use [`ODataListBinding#isFirstCreateAtEnd`](https://ui5.sap.com/#/api/sap.ui.model.odata.v2.ODataListBinding/methods/isFirstCreateAtEnd) to determine whether such entries have already been created. On activation of an entry, the list binding fires the [`createActivate`](https://ui5.sap.com/#/api/sap.ui.model.odata.v2.ODataListBinding/events/createActivate) event; with this event, you can create a new inactive entry. If you cancel the event using [`preventDefault`](https://ui5.sap.com/#/api/sap.ui.base.Event/methods/preventDefault), the context remains inactive; in this way you can, for example, check whether all required properties for the creation of the entity are set.
 
 > ### Example:  
 > Inline creation rows
@@ -603,9 +603,14 @@ With **inactive** entries, you can build **inline creation rows** in a table tha
 > },
 >  
 > // event handler for createActivate
-> onCreateActivateLineItem : function () {
+> onCreateActivateLineItem : function (oEvent) {
+>     // product id is a required property for the item => item remains inactive if it's not set
+>     if (!oEvent.getParameter("context").getProperty("ProductID")) {
+>       oEvent.preventDefault();
+>       return;
+>     }
+> 
 >   var oItemsBinding = this.getView().byId("ToLineItems").getBinding("rows");
->  
 >   oItemsBinding.create({/* initial data*/}, /*bAtEnd*/ true, {inactive : true});
 > }
 > ```

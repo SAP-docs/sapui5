@@ -73,7 +73,6 @@ In order to simulate the function import call, we write our own \(mocked\) imple
 sap.ui.define([
 	"sap/ui/thirdparty/jquery",
 	"sap/ui/core/date/UI5Date",
-
 	"sap/ui/core/util/MockServer",
 	"sap/base/Log"
 ], function(jQuery, UI5Date, MockServer, Log) {
