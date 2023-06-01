@@ -1130,11 +1130,11 @@ Content
 
 The `ODataModel` supports the invoking of function imports or actions by the `callFunction` method.
 
-```xml
-oModel.callFunction("/GetProductsByRating",{method:"GET", urlParameters:{"rating":3}, success:fnSuccess, error: fnError})
+```
+oModel.callFunction("/GetProductsByRating",{method:"GET", urlParameters:{"rating":3}})
 ```
 
-If the `callFunction` request is deferred, it can be submitted via the `submitChangesmethod`.
+If the `callFunction` request is deferred, it can be submitted via the `submitChanges` method.
 
 > ### Note:  
 > Only "IN" parameters of function imports are currently supported.
@@ -1145,29 +1145,56 @@ If the `callFunction` request is deferred, it can be submitted via the `submitCh
 
 ## Binding of Function Import Parameters
 
-OData Model V2 supports the binding against function import parameters. This is similar to the `createEntry` method which supports binding against entity properties. The `callFunction` method returns a request handle that has a `promise`. This `promise` is resolved when the context to which it is bound is created successfully or is rejected if not:
+You can use data binding to modify values of function import parameters: The `callFunction` method returns a request handle that has a `contextCreated` function which returns a `promise`. This `promise` resolves with an `sap.ui.model.odata.v2.Context` object that can be used as a binding context to change the input parameters of the function import and to bind the result of the function import call.
+
+> ### Example:  
+> Controller Code
+> 
+> ```
+> onStartRating: function () {
+>     var oView = this.getView(),
+>         oModel = oView.getModel(),
+>         oRatingForm = oView.byId("ratingForm"),
+>         oHandle =  oModel.callFunction("/GetProductsByRating", {
+>             error: function () {
+>                 oModel.resetChanges([oRatingForm.getBindingContext().getPath()]);
+>             },
+>             groupId: /*the default deferred group*/ "changes",
+>             urlParameters: {rating: 3}
+>         });
+>  
+>     oHandle.contextCreated().then(function (oContext) {
+>         oRatingForm.setBindingContext(oContext);
+>     });
+> },
+>  
+> onSubmitRatingForm: function () {
+>     this.getView().getModel().submitChanges({groupId : "changes"});
+> },
+> ```
+
+If the function import returns a single entity or a collection of entities, the result data can be accessed and bound against in the `$result` property using the context:
 
 ```xml
-var oHandle = oModel.callFunction("/GetProductsByRating", {urlParameters: {rating:3}});
-oHandle.contextCreated().then(function(oContext) {
-      oView.setBindingContext(oContext);
-});
-```
-
-If the function import returns result data, then the result data can be accessed and bound against in the `$result` property using the context:
-
-```xml
-<form:SimpleForm>
+<form:SimpleForm id="ratingForm">
    <core:Title text="Parameters" />
    <Label text="Rating" />
    <Input value="{rating}" />
-   <Button text="Submit" press=".submit" />
+   <Button text="Submit" press=".onSubmitRatingForm" />
    <core:Title text="Result" />
    <List items="{$result}">
     <StandardListItem title="{Name}" />
    </List>
 </form:SimpleForm>
 ```
+
+A function import is re-executed without calling `ODataModel#callFunction` again in the following cases:
+
+-   A parameter value has been changed via that context, the former request failed, and `ODataModel#submitChanges` is called.
+-   Its group ID is a non-deferred group ID and at least one input parameter value is changed via that context.
+-   Its group ID is a deferred group ID, at least one parameter value is changed via that context, and `ODataModel#submitChanges` is called for that deferred group.
+
+Failed function imports with changed parameter values are repeated automatically. To prevent the function call from being triggered again, you have to reset the changes via `ODataModel#resetChanges`, for example in the error handler of the function call.
 
  <a name="loioc40fc72612754bad877f374bdeb0f893"/>
 

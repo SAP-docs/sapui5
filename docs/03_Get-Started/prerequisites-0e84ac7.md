@@ -6,9 +6,9 @@ Preparation steps for the *Smart Controls* tutorial
 
 You have already gone through the following tutorials:
 
--   [Walkthrough](walkthrough-3da5f4b.md)
+-   [Walkthrough Tutorial](walkthrough-tutorial-3da5f4b.md)
 
--   [Data Binding](data-binding-e531093.md)
+-   [Data Binding Tutorial](data-binding-tutorial-e531093.md)
 
 
 In addition, you need some background knowledge about OData and annotations that you can find here: [http://www.sap.com/protocols/SAPData](http://www.sap.com/protocols/SAPData).

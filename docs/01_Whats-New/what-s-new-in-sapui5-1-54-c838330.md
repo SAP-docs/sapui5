@@ -2693,7 +2693,7 @@ APF has the following enhanced features:
 
 **Documentation Updates**
 
--   We have a new tutorial: [OData V4](../03_Get-Started/odata-v4-bcdbde6.md).
+-   We have a new tutorial: [OData V4 Tutorial](../03_Get-Started/odata-v4-tutorial-bcdbde6.md).
 
 -   We have reworked the [Data Binding](../04_Essentials/data-binding-68b9644.md) section under *Essentials*.
 
@@ -2794,6 +2794,8 @@ APF has the following enhanced features:
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.112](what-s-new-in-sapui5-1-112-34afc69.md "With this release SAPUI5 is upgraded from version 1.111 to 1.112.")
 
 [What's New in SAPUI5 1.111](what-s-new-in-sapui5-1-111-7a67837.md "With this release SAPUI5 is upgraded from version 1.110 to 1.111.")
 

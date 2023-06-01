@@ -335,7 +335,7 @@ You can further optimize your code by doing the following:
 
     Visit the [OData V4 Model](../04_Essentials/odata-v4-model-5de13cf.md) documentation and ensure that all required features are available.
 
-    For a quick start, follow the [OData V4](../03_Get-Started/odata-v4-bcdbde6.md) tutorial.
+    For a quick start, follow the [OData V4 Tutorial](../03_Get-Started/odata-v4-tutorial-bcdbde6.md) tutorial.
 
 -   If you use data binding with an OData V2 service as a back end, you should consider switching your OData model to our more updated OData V2 model. For more information, see [OData V2 Model](../04_Essentials/odata-v2-model-6c47b2b.md#loio6c47b2b39db9404582994070ec3d57a2).
 

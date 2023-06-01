@@ -6,7 +6,7 @@ Check out the learning resources we've provided for you.
 
 The list is continually growing. Our learing resources are provided on the following different channels:
 
-Tutorials
+**Tutorials**
 
 -   [Create a Travel App with SAP Fiori Elements Based on OData V4 RAP Service](https://developers.sap.com/group.fiori-tools-odata-v4-travel.html)
 
@@ -17,12 +17,23 @@ Tutorials
 -   [Use the Mockserver and OPA Test Library with SAP Fiori Elements for OData V4 Applications](https://developers.sap.com/group.fiori-elements-mockserver-opa.html)
 
 
-Courses
+**Courses**
 
 -   [Developing and Extending SAP Fiori Elements Apps](https://open.sap.com/courses/fiori-ea1)
 
 
-Blogs
+**Blogs**
+
+Blog posts change more often than other channels. In case any of the links provided below no longer work, try doing the following:
+
+-   start on the [main page of the SAP Community](https://community.sap.com/) and browse by Blogs, Topics, or Groups,
+
+-   use the *Search* option to look for keywords or specific articles.
+
+
+Here are some articles you may find useful:
+
+-   [Blog Posts Tagged with SAP Fiori Elements](https://blogs.sap.com/tags/ed5c1ef6-932f-4c19-b2ba-1be375109ff5/)
 
 -   [The SAP Fiori elements feature showcase with CAP CDS annotations](https://blogs.sap.com/2021/12/07/the-sap-fiori-elements-feature-showcase-with-cap-cds-annotations/)
 

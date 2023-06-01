@@ -27,7 +27,7 @@ The structure in this step will be used throughout the rest of this tutorial. Th
 
 To set up your project for this tutorial, download the files for *Step 1* from the *Samples* in the Demo Kit at [Flexible Column Layout App - Step 1](https://ui5.sap.com/#/entity/sap.f.tutorial.fiori2/sample/sap.f.tutorial.fiori2.01). Copy the code to your workspace and make sure that the application runs by calling the `webapp/index.html` file.
 
-Depending on your development environment you might have to adjust resource paths and configuration entries. The project structure and the files coming with this tutorial are explained in detail in the [Walkthrough](walkthrough-3da5f4b.md) tutorial.
+Depending on your development environment you might have to adjust resource paths and configuration entries. The project structure and the files coming with this tutorial are explained in detail in the [Walkthrough](walkthrough-tutorial-3da5f4b.md) tutorial.
 
 You should have the same files as displayed in the following figure:
 

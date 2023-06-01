@@ -226,7 +226,8 @@ Add card to insights
 </td>
 <td valign="top">
 
--   List report \(OData V2\)
+-   List report
+-   Analytical list page
 
 
 
@@ -249,9 +250,15 @@ Add card to insights
 
    
   
-**Add Card to Insights**
+**Add Card to Insights Option in List Report Table Toolbar**
 
- ![](images/Add_Cards_to_Insights_453dd3a.png "Add Card to Insights") 
+ ![](images/Add_Cards_to_Insights_New_fe526c6.png "Add Card to Insights Option in List Report Table Toolbar") 
+
+   
+  
+**Add Card to Insights Option in Analytical List Page Chart Toolbar**
+
+ ![](images/Add_Cards_to_Insights_ALP_401e0b0.png "Add Card to Insights Option in Analytical List Page Chart Toolbar") 
 
 
 

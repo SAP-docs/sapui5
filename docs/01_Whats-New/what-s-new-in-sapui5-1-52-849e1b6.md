@@ -1259,7 +1259,7 @@ A new `popinLayout` property has been added that defines the layout for pop-in r
 -   Different data objects can be selected as a result attribute in the settings of both the decision table and text rule. The attributes of the selected data objects are used in the predefined results table. The access mode is set according to the initial settings provided for the selected data object.
 
 
-For more information, see [Rule Builder Control](../03_Get-Started/rule-builder-control-67fcb30.md), the [API Reference](https://ui5.sap.com/#/api/sap.rules.ui.RuleBuilder), and the [Samples](https://ui5.sap.com/#/entity/sap.rules.ui.RuleBuilder).
+For more information, see [Rule Builder Control Tutorial](../03_Get-Started/rule-builder-control-tutorial-67fcb30.md), the [API Reference](https://ui5.sap.com/#/api/sap.rules.ui.RuleBuilder), and the [Samples](https://ui5.sap.com/#/entity/sap.rules.ui.RuleBuilder).
 
 <sub>Changed•Control•Info Only•1.52</sub>
 
@@ -2487,6 +2487,8 @@ APF has the following enhanced features:
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.112](what-s-new-in-sapui5-1-112-34afc69.md "With this release SAPUI5 is upgraded from version 1.111 to 1.112.")
 
 [What's New in SAPUI5 1.111](what-s-new-in-sapui5-1-111-7a67837.md "With this release SAPUI5 is upgraded from version 1.110 to 1.111.")
 

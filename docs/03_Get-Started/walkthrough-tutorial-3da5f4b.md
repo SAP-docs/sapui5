@@ -1,6 +1,6 @@
 <!-- loio3da5f4be63264db99f2e5b04c5e853db -->
 
-# Walkthrough
+# Walkthrough Tutorial
 
 In this tutorial we will introduce you to all major development paradigms of SAPUI5.
 

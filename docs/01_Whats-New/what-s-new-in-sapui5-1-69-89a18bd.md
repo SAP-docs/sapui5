@@ -208,7 +208,7 @@ For details and examples, see [Require Modules in XML View and Fragment](../04_E
 
 Migrate your project from expression language 1.0 \(Rule expression language\) to expression language 2.0 \(DMN SFEEL\) using Business Rules API.
 
-For more information, see [Rule Builder Control](../03_Get-Started/rule-builder-control-67fcb30.md).
+For more information, see [Rule Builder Control Tutorial](../03_Get-Started/rule-builder-control-tutorial-67fcb30.md).
 
 <sub>Changed•Feature•Info Only•1.69</sub>
 
@@ -263,7 +263,7 @@ For more information, see [Rule Builder Control](../03_Get-Started/rule-builder-
 
 **Rule Builder: Vocabulary Rules**
 
-In expression language 2.0, you can include rules in a rule condition to consume the result that the rules return. For more information, see [Rule Builder Control](../03_Get-Started/rule-builder-control-67fcb30.md).
+In expression language 2.0, you can include rules in a rule condition to consume the result that the rules return. For more information, see [Rule Builder Control Tutorial](../03_Get-Started/rule-builder-control-tutorial-67fcb30.md).
 
 <sub>Changed•Feature•Info Only•1.69</sub>
 
@@ -1102,6 +1102,8 @@ The overview page has these new features or enhancements:
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.112](what-s-new-in-sapui5-1-112-34afc69.md "With this release SAPUI5 is upgraded from version 1.111 to 1.112.")
 
 [What's New in SAPUI5 1.111](what-s-new-in-sapui5-1-111-7a67837.md "With this release SAPUI5 is upgraded from version 1.110 to 1.111.")
 

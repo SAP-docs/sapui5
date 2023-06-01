@@ -2,7 +2,7 @@
 
 # Draft Handling
 
-A draft is an interim version of a business entity that has not yet been explicitly saved as an active version. Drafts are saved automatically in the background after an interval of 20 seconds whenever users add or change information within a business entity while it's in edit mode \(auto-save\). However, if the user has modified a field with a side-effect annotation, then the draft is saved immediately after the user moves out of the virtual field group of the corresponding side-effect. The draft is also saved immediately if the user executes an action. In this case, the pending changes in the draft is also saved immediately, irrespective of the interval of 20 seconds.SAP Fiori elements support the creation of apps using draft handling.
+A draft is an interim version of a business entity that has not yet been explicitly saved as an active version. SAP Fiori elements support the creation of apps using draft handling.
 
 Drafts are used as follows:
 
@@ -74,7 +74,7 @@ The object page displays the *Validate* button to execute the `PreparationAction
 
 ## Handling Inconsistent Input
 
-Users might enter data that is so inconsistent that the system cannot store it in the draft. For example, characters are entered in a number field, or more characters than the field length allows are entered. If this is the case, the contents of the UI differ fro the contents of the draft. Before the draft can be saved by the user, the system displays a message prompting the users to solve these errors. After all errors have been solved, the draft can be saved.
+Users might enter data that is so inconsistent that the system cannot store it in the draft. For example, characters are entered in a number field, or more characters than the field length allows are entered. If this is the case, the contents of the UI differ from the contents of the draft. Before the draft can be saved by the user, the system displays a message prompting the users to solve these errors. After all errors have been solved, the draft can be saved.
 
 This system behavior is also valid when using the *Apply* button. When choosing *Apply*, the system has to make sure that the contents on the UI and the stored contents of the draft are identical. If the errors described above occur, the system displays the same message prompting the user to solve them.
 
@@ -87,9 +87,11 @@ This system behavior is also valid when using the *Apply* button. When choosing 
 
 ## Additional Features in SAP Fiori Elements for OData V2
 
+Drafts are saved automatically in the background after an interval of 20 seconds whenever users add or change information within a business entity while it's in edit mode. However, if the user has modified a field on the UI that has a side effect annotation, then the draft is saved immediately after the user moves out of the virtual field group of the corresponding side effect. The draft is also saved immediately when the user executes an action. In this case, the pending changes in the draft are also saved immediately.
+
 You can use keyboard shortcuts for common tasks.
 
-The pending changes present on the draft when toggling from draft to saved version is saved before switching to the active version.
+When a user toggles away from the draft version, any pending changes are automatically saved and are visible in the active version.
 
 
 
@@ -107,6 +109,8 @@ The side effects, if configured, are also triggered upon pressing [Enter\]. The 
 
 ## Additional Features in SAP Fiori Elements for OData V4
 
+Drafts are saved automatically in the background whenever users add or change information within a business entity while it's in edit mode.
+
 You can use a keyboard shortcut to execute a `PreparationAction` or global side effects in the draft mode.
 
 
@@ -121,6 +125,15 @@ On a draft version of a document, if you press [Enter\] on input fields, one of 
 
 
 For more information, see [Using Global Side Effects](using-global-side-effects-955ae31.md) and our live example in the flexible programming model explorer at [Guidance - Draft Validation](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/advancedFeatures/guidance/draftValidation).
+
+
+
+### Filtering Draft-Related Data
+
+Filtering draft-related data is enabled by default in SAP Fiori elements for OData V4. The available filters are *Draft Created By*, *Draft Created On*, *Draft Last Changed By*, and *Draft Last Changed On*. Semantic operators are used by default for the time-related filters, displaying only past values.
+
+> ### Note:  
+> This feature is not available with a CAP service.
 
 
 

@@ -2062,9 +2062,9 @@ The documentation for QUnit testing has been updated and aligned with the new QU
 
 We have updated the following tutorials:
 
--   [Data Binding](../03_Get-Started/data-binding-e531093.md)
+-   [Data Binding Tutorial](../03_Get-Started/data-binding-tutorial-e531093.md)
 
--   [Walkthrough](../03_Get-Started/walkthrough-3da5f4b.md)
+-   [Walkthrough Tutorial](../03_Get-Started/walkthrough-tutorial-3da5f4b.md)
 
 
 <sub>Changed•User Documentation•Info Only•1.42</sub>
@@ -2091,6 +2091,8 @@ We have updated the following tutorials:
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.112](what-s-new-in-sapui5-1-112-34afc69.md "With this release SAPUI5 is upgraded from version 1.111 to 1.112.")
 
 [What's New in SAPUI5 1.111](what-s-new-in-sapui5-1-111-7a67837.md "With this release SAPUI5 is upgraded from version 1.110 to 1.111.")
 

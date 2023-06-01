@@ -98,5 +98,5 @@ With the above steps, the table rebinds every time the object page instance is s
 **Related Information**  
 
 
-[Defining the Loading Behavior of Object Page Subsections](defining-the-loading-behavior-of-object-page-subsections-6b84249.md "You can define the loading behavior of subsections in an object page through manifest settings.")
+[Defining the Loading Behavior of Object Page Subsections](defining-the-loading-behavior-of-object-page-subsections-6b84249.md "You can define the loading behavior of subsections in an object page in the manifest settings.")
 

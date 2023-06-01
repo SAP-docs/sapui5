@@ -174,7 +174,7 @@ The main features of the tool are:
 
 For more information, see [Support Assistant](../04_Essentials/support-assistant-57ccd7d.md).
 
-We have also redesigned the other support tools, *Technical Information Dialog* and *Diagnostics*, reworked the [Troubleshooting](../04_Essentials/troubleshooting-615d9e4.md) documentation section under *Essentials*, and created a [Troubleshooting](../03_Get-Started/troubleshooting-5661952.md) tutorial.
+We have also redesigned the other support tools, *Technical Information Dialog* and *Diagnostics*, reworked the [Troubleshooting](../04_Essentials/troubleshooting-615d9e4.md) documentation section under *Essentials*, and created a [Troubleshooting Tutorial](../03_Get-Started/troubleshooting-tutorial-5661952.md) tutorial.
 
 <sub>New•Feature•Info Only•1.48</sub>
 
@@ -609,7 +609,7 @@ Similar to `sap.m.CustomListItem` for the `sap.m.List` control, the `sap.m.Custo
      ![](images/WhatsNew_148_RuleBuilder5_3ef3328.png) 
 
 
-For more information, see [Rule Builder Control](../03_Get-Started/rule-builder-control-67fcb30.md), the [API Reference](https://ui5.sap.com/#/api/sap.rules.ui.RuleBuilder), and the [sample](https://ui5.sap.com/#/entity/sap.rules.ui.RuleBuilder). 
+For more information, see [Rule Builder Control Tutorial](../03_Get-Started/rule-builder-control-tutorial-67fcb30.md), the [API Reference](https://ui5.sap.com/#/api/sap.rules.ui.RuleBuilder), and the [sample](https://ui5.sap.com/#/entity/sap.rules.ui.RuleBuilder). 
 
 <sub>New•Control•Info Only•1.48</sub>
 
@@ -2491,7 +2491,7 @@ APF has been enhanced with the following features:
 
 In addition to the documentation for new features, the following changes have been applied to the documentation:
 
--   New tutorial: [Troubleshooting](../03_Get-Started/troubleshooting-5661952.md)
+-   New tutorial: [Troubleshooting Tutorial](../03_Get-Started/troubleshooting-tutorial-5661952.md)
 
 -   Reworked [Troubleshooting](../04_Essentials/troubleshooting-615d9e4.md) section
 
@@ -2520,6 +2520,8 @@ In addition to the documentation for new features, the following changes have be
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.112](what-s-new-in-sapui5-1-112-34afc69.md "With this release SAPUI5 is upgraded from version 1.111 to 1.112.")
 
 [What's New in SAPUI5 1.111](what-s-new-in-sapui5-1-111-7a67837.md "With this release SAPUI5 is upgraded from version 1.110 to 1.111.")
 

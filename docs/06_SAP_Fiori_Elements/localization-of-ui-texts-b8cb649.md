@@ -4,8 +4,6 @@
 
 If necessary, you can replace standard UI texts for apps that you have created with SAP Fiori elements.
 
-We recommend that you use [SAP Fiori tools](https://help.sap.com/viewer/product/SAP_FIORI_tools/Latest/en-US), which is a set of extensions for SAP Business Application Studio and Visual Studio Code, to build your apps.
-
 Standard texts are available in the generic framework \(for example, the button texts for draft concepts\) and belong to the template components \(for example, list report and object page\). The following sections describe how you replace texts in your generated apps.
 
 When you have created your specific application component, standard texts are available from a specific template component and from the generic template component.
@@ -127,7 +125,7 @@ For the annotation example above, the application’s i18n properties file must 
 
 ## Additional Features in SAP Fiori Elements for OData V2
 
-When you have created your specific application component, for example in SAP Web IDE or in SAP Fiori tools, standard texts are available from a specific template component \(for example, i18n file within `sap.suite.ui.generic.template.ListReport`\) and from the generic template component \(for example, i18n file within `sap.suite.ui.generic.template.lib`\).
+When you have created your specific application component, for example in SAP Fiori tools, standard texts are available from a specific template component \(for example, i18n file within `sap.suite.ui.generic.template.ListReport`\) and from the generic template component \(for example, i18n file within `sap.suite.ui.generic.template.lib`\).
 
 Texts from the *Generic Application Component* can't be replaced.
 
@@ -454,7 +452,7 @@ This object cannot be deleted.
 </td>
 <td valign="top">
 
-Message text used in the confirmation message box when a user tries to delete an object that is non-deleteable.
+Message text used in the confirmation message box when a user tries to delete an object that is non-deletable.
 
 
 
@@ -722,7 +720,7 @@ Your changes have been saved
 </td>
 <td valign="top">
 
-Message toast text when a user choses to save and the object gets saved successfully.
+Message toast text when a user chooses to save and the object gets saved successfully.
 
 
 
@@ -1113,7 +1111,7 @@ The selected item cannot be deleted.
 </td>
 <td valign="top">
 
-Text displayed when only one record was selected for deletion and the operation failed to excute.
+Text displayed when only one record was selected for deletion and the operation failed to execute.
 
 
 
@@ -1182,7 +1180,7 @@ This item cannot be deleted.
 </td>
 <td valign="top">
 
-Message text used in the confirmation message box when a user selects a signle item that cannot be deleted.
+Message text used in the confirmation message box when a user selects a single item that cannot be deleted.
 
 
 
@@ -1285,7 +1283,7 @@ If you take over, any changes will be lost.
 </td>
 <td valign="top">
 
-Text displayed within the confirmation dialog when a user selects an obejct to edit that is locked by another user.
+Text displayed within the confirmation dialog when a user selects an object to edit that is locked by another user.
 
 
 
@@ -2015,7 +2013,7 @@ Text displayed in the analytical list page smart table when no search is trigger
 </td>
 <td valign="top">
 
-Some of the filters arent relevant for the tab \\"\{1\}\\" \(\{0\}\). Settings these filters has no effect on the results.
+Some of the filters aren’t relevant for the tab \\"\{1\}\\" \(\{0\}\). Settings these filters has no effect on the results.
 
 
 
@@ -2053,34 +2051,24 @@ Text displayed in the message strip when a user select filters and a few of them
 </tr>
 </table>
 
-> ### Caution:  
-> SAP Web IDE is no longer available via SAP Business Technology Platform trial accounts. Any references to SAP Web IDE in this documentation are only relevant for you if you have access to SAP Web IDE through a productive SAP BTP account. Please consider SAP Business Application Studio as an alternative. See [App Development Using SAP Business Application Studio](../05_Developing_Apps/app-development-using-sap-business-application-studio-6bbad66.md).
-
-For more information about SAP Web IDE, see the documentation for SAP Web IDE on the SAP Help Portal at [https://help.sap.com/viewer/p/SAP\_Web\_IDE](https://help.sap.com/viewer/p/SAP_Web_IDE).
-
 
 
 ### How to Find the Resource File of Your Application Component
 
-SAP Web IDE automatically generates the following folders and files when you create an app with SAP Fiori elements:
+SAP Fiori generator automatically generates the following initial folders and files when you create an app with SAP Fiori elements:
 
 -   <root-folder\>
 
--   |—i18n
+-   |--webapp
 
--   |—<shortened template component name\>, for example, List Report and Object Page
-
--   |—<entitySet\>
+-   |----i18n
 
 -   |—i18n.properties
 
-    > ### Note:  
-    > This file contains instructions on how to find the standard UI texts for your application. You need them for the step *How to Replace the Standard UI Texts with Application-Specific Texts* in this topic.
 
+The required folder structure to the resource model appears as shown here. You can create it as required by your application structure and the texts that need adaptation. Since the `manifest.json` file also refers to the title and description of the app, there is a general `i18n.properties` file on the top level:
 
-The folder path to the resource model appears as shown below. Since the `manifest.json` file also refers to the title and description of the app, there is a general `i18n.properties` file on the top level:
-
--   `i18n.properties`
+-   `i18n/i18n.properties`
 -   `i18n/ListReport/<entitySet>/POHeaders/i18n.properties`
 -   `i18n/ObjectPage/<entitySet>/i18n.properties`
 -   `i18n/ObjectPage/<subEntitySet>/i18n.properties`
@@ -2118,21 +2106,6 @@ Example:
 ```
 
 The URL reflects the folder path to the resource model. The model's name, `i18n|sap.suite.ui.generic.template.ObjectPage|POHeaders`, is separated by lines used to identify the specific template component and entity set for which the resource model can be enhanced by editing the `i18n.properties` file.
-
-
-
-### How to Replace the Standard UI Texts with Application-Specific Texts
-
-To replace the standard UI texts, perform the following steps:
-
-1.  Go to the final block of the standard UI texts that starts as follows: `#---Final block: texts to be redefined by the application -------`
-
-2.  Copy this block to the corresponding i18n property file of your app under `webapp/i18n`.
-
-    Consider the detailed instructions that you find as comments in the original property file: For example, a text might be relevant only for the root object, or it might also be relevant for detail pages of subitems. In the latter case, if you have defined multiple object pages in your app, you have to copy and adapt each of them.
-
-3.  After copying the blocks to the relevant files, adjust the texts as described in the comment. For example, replace the generic text *object* by your entity type name.
-
 
 
 
@@ -2379,7 +2352,7 @@ deprecated key: `C_EDIT_FLOW_GENERIC_LOCKED_OBJECT_POPOVER_TEXT_ADDITIONAL_USER`
 </td>
 <td valign="top">
 
-This key has been depreciated. The scenario no longer occurs.
+This key has been deprecated. The scenario no longer occurs.
 
 
 
@@ -2893,7 +2866,7 @@ Parameters: \{0\} = number of objects that cannot be deleted, \{1\} = total numb
 </td>
 <td valign="top">
 
-Applications should overwrite the default text with the concrete objects.
+Applications should overwrite the default text with the concrete object.
 
 
 
@@ -2927,7 +2900,7 @@ Parameters: \{0\} = number of objects that are locked, \{1\} = number of selecte
 </td>
 <td valign="top">
 
-Applications should overwrite the default text with the concrete objects.
+Applications should overwrite the default text with the concrete object.
 
 
 
@@ -3097,7 +3070,7 @@ Text used for the checkbox in the delete confirmation dialog to confirm if a use
 </td>
 <td valign="top">
 
-Applications should overwrite the default text with the concrete objects.
+Applications should overwrite the default text with the concrete object.
 
 
 
@@ -3161,7 +3134,7 @@ Message toast text when multiple objects have been deleted successfully.
 </td>
 <td valign="top">
 
-Applications should overwrite the default text with the concrete objects.
+Applications should overwrite the default text with the concrete object.
 
 
 
@@ -4108,7 +4081,7 @@ The remaining objects have delete restrictions so they cannot be deleted.
 </td>
 <td valign="top">
 
-Text to indicate that all of the remaining objects cannot be deleted. This text is usually appended to text from another key which would indicate why some of the selected records cannot be deleted.
+Text to indicate that none of the remaining objects can be deleted. This text is usually appended to text from another key that indicates why some of the selected records cannot be deleted.
 
 
 
@@ -4145,7 +4118,7 @@ Text to confirm with the user if the associated own draft of the selected object
 </td>
 <td valign="top">
 
-Applications should overwrite the default text with the concrete objects.
+Applications should overwrite the default text with the concrete object.
 
 
 
@@ -4168,7 +4141,7 @@ Delete associated drafts?
 </td>
 <td valign="top">
 
-Text to confirm with the user if the associated own draft of the selected object should be deleted when the object is non-deletable.
+Text to confirm with the user if the associated own drafts of the selected objects should be deleted when the objects are non-deletable.
 
 
 
@@ -4205,7 +4178,7 @@ Text to confirm with the user if their own draft associated with the selected ob
 </td>
 <td valign="top">
 
-Applications should overwrite the default text with the concrete objects.
+Applications should overwrite the default text with the concrete object.
 
 
 
@@ -4235,7 +4208,7 @@ Text to confirm with the user if the associated own draft of the selected object
 </td>
 <td valign="top">
 
-Applications should overwrite the default text with the concrete objects.
+Applications should overwrite the default text with the concrete object.
 
 
 
@@ -4265,7 +4238,7 @@ Text used when a single object \(with own draft\) is selected and this object is
 </td>
 <td valign="top">
 
-Applications should overwrite the default text with the concrete objects.
+Applications should overwrite the default text with the concrete object.
 
 
 
@@ -4295,7 +4268,195 @@ Text used when all selected objects are not deletable but at least one of them h
 </td>
 <td valign="top">
 
-Applications should overwrite the default text with the concrete objects.
+Applications should overwrite the default text with the concrete object.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `OBJECTPAGESTATE_ISSUE` 
+
+
+
+</td>
+<td valign="top">
+
+The object contains issues
+
+
+
+</td>
+<td valign="top">
+
+Error message text used in the message strip of an object page.
+
+
+
+</td>
+<td valign="top">
+
+Applications should overwrite the default text and replace "object" with their concrete object.
+
+Example: *This sales order contains issues.*
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `OBJECTPAGESTATE_ERROR` 
+
+
+
+</td>
+<td valign="top">
+
+The object contains error messages
+
+
+
+</td>
+<td valign="top">
+
+Error message text used in the message strip of an object page.
+
+
+
+</td>
+<td valign="top">
+
+Applications should overwrite the default text and replace "object" with their concrete object.
+
+Example: *This sales order contains error messages.*
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `OBJECTPAGESTATE_WARNING` 
+
+
+
+</td>
+<td valign="top">
+
+The object contains warning messages
+
+
+
+</td>
+<td valign="top">
+
+Warning message text used in the message strip of an object page.
+
+
+
+</td>
+<td valign="top">
+
+Applications should overwrite the default text and replace "object" with their concrete object.
+
+Example: *This sales order contains warning messages.*
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `OBJECTPAGESTATE_INFORMATION` 
+
+
+
+</td>
+<td valign="top">
+
+The object contains information messages
+
+
+
+</td>
+<td valign="top">
+
+Information text used in the message strip of an object page.
+
+
+
+</td>
+<td valign="top">
+
+Applications should overwrite the default text and replace "object" with their concrete object.
+
+Example: *This sales order contains information messages.*
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `M_ILLUSTRATEDMESSAGE_TITLE` 
+
+
+
+</td>
+<td valign="top">
+
+No details available
+
+
+
+</td>
+<td valign="top">
+
+Title of the popup that is shown when no details \(that is, no quick view annotations\) and no targets are found for a semantic object.
+
+
+
+</td>
+<td valign="top">
+
+Applications can choose to overwrite the default text with a more specific one.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `M_ILLUSTRATEDMESSAGE_DESCRIPTION` 
+
+
+
+</td>
+<td valign="top">
+
+This may happen if your access is restricted or the data is incomplete.
+
+
+
+</td>
+<td valign="top">
+
+Text used in the popup that is shown when no details \(that is, no quick view annotations\) and no targets are found for a semantic object.
+
+
+
+</td>
+<td valign="top">
+
+Applications can choose to overwrite the default text with a more specific one.
 
 
 

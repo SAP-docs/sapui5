@@ -53,6 +53,15 @@ Note the following restrictions related to the content provided in the generic *
 
 Changes coming in from other flex layers, such as changes made by key users, are merged with user personalization changes coming from the `iAppState`. For more information, see [SAPUI5 Flexibility: Adapting UIs Made Easy](../04_Essentials/sapui5-flexibility-adapting-uis-made-easy-a8e55aa.md).
 
+> ### Note:  
+> Restoring a shared URL reinstates the last state of the control if variant management isn't enabled. For example, consider the following scenario:
+> 
+> -   A key user adds two columns to a table in a list report-based application.
+> 
+> -   User A loads the application and adds two new columns. To share the application link as an email to user B, user A clicks the *Share* menu button and then *Send Email*.
+> 
+> -   When user B accesses this application, they can see the table with the columns added by user A, but not the columns added by the key user. User B doesn't see the changes made by the key user .
+
 > ### Restriction:  
 > Changes coming in from other flex layers, such as changes made by key users, are not considered for charts.
 

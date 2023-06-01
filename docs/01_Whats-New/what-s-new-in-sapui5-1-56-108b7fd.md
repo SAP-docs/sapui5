@@ -2093,7 +2093,7 @@ APF has the following enhanced features:
 
 **New Tutorial**
 
-We have a new tutorial: [Flexible Column Layout App](../03_Get-Started/flexible-column-layout-app-c4de2df.md). In this tutorial, we showcase how to structure your SAPUI5 app using the layout patterns that comply with the latest SAP Fiori design guidelines.
+We have a new tutorial: [Flexible Column Layout App Tutorial](../03_Get-Started/flexible-column-layout-app-tutorial-c4de2df.md). In this tutorial, we showcase how to structure your SAPUI5 app using the layout patterns that comply with the latest SAP Fiori design guidelines.
 
 <sub>Changed•User Documentation•Info Only•1.56</sub>
 
@@ -2183,6 +2183,8 @@ We have a new tutorial: [Flexible Column Layout App](../03_Get-Started/flexible-
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.112](what-s-new-in-sapui5-1-112-34afc69.md "With this release SAPUI5 is upgraded from version 1.111 to 1.112.")
 
 [What's New in SAPUI5 1.111](what-s-new-in-sapui5-1-111-7a67837.md "With this release SAPUI5 is upgraded from version 1.110 to 1.111.")
 

@@ -16,17 +16,28 @@ The "share" functionality allows users to share the current application state us
 
     When a user chooses this option, the corresponding *Save as Tile* dialog is displayed. When a user chooses the tile, the application page opens in the same state in which the tile was created. Application developers can customize the title and the sub-title of the tile. In the list report, a dynamic tile with a record count is created, where the applied filter is also taken into account.
 
--   *Chat in Microsoft Teams*
+-   *Share Menu: Microsoft Teams*
 
-    When a user chooses this option, a separate window opens where they can directly share a link to a business application in the SAP S/4HANA Cloud system with co-workers.
+     ![](images/Microsoft_Teams_Share_Menu_As_Chat_and_As_Tab_f2cb0d3.png) 
+
+    When a user clicks the *Share* button and then the *Share Menu: Microsoft Teams* option, a separate window opens with the available sharing options:
+
+    -   As Chat
+
+        Collaborate and quickly resolve issues, if necessary, simply by using Microsoft Teams chat to share a direct link with co-workers. You can provide them with access to a specific state of an SAP Fiori application, for example, so they can easily process any requests you have or tasks that come up.
+
+    -   As Tab
+
+        Work efficiently with a group of co-workers on specific content that you share in the form of a Microsoft Teams tab. Use the Microsoft Teams environment to work on the same context of an SAP Fiori application, and use the tab conversation option in parallel to share ideas, discuss, and collaborate.
+
 
     Please note the following:
 
-    -   This option is only available if the required settings have been made by the system administrators of SAP S/4HANA Cloud.
+    -   The *Share Menu: Microsoft Teams* option is only available if the required settings have been made by the system administrators of SAP S/4HANA Cloud.
 
         For more information, see [Integrating Microsoft Teams](https://help.sap.com/docs/SAP_S4HANA_CLOUD/0f69f8fb28ac4bf48d2b57b9637e81fa/257ec7408db6420682462cd1d000e744.html).
 
-    -   The *Chat in Microsoft Teams* option is part of collaborative ERP \(enterprise resource planning\), which integrates the best of SAP S/4HANA Cloud with Microsoft Teams. So this option is not available for all users.
+    -   The *Share Menu: Microsoft Teams* option is part of collaborative ERP \(enterprise resource planning\), which integrates the best of SAP S/4HANA Cloud with Microsoft Teams. So this option is not available for all users.
 
 
 

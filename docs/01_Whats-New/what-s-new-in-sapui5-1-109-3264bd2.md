@@ -439,7 +439,7 @@ The new version of the SAPUI5 OData V2 model introduces the following features:
 
 The following changes and new features are available for both SAP Fiori elements for OData V2 and SAP Fiori elements for OData V4:
 
--   Variant Management is now enabled by default for tables and charts on the object page. For more information, see [Enabling Variant Management in the Object Page](../06_SAP_Fiori_Elements/enabling-variant-management-in-the-object-page-f26d42b.md).
+-   Variant Management is now enabled by default for tables and charts on the object page. For more information, see [Enabling Variant Management on the Object Page](../06_SAP_Fiori_Elements/enabling-variant-management-on-the-object-page-f26d42b.md).
 
 
 <sub>Changed•SAP Fiori Elements•Info Only•1.109</sub>
@@ -878,6 +878,8 @@ We are now using the `IllustratedMessage` control to show errors when an image c
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.112](what-s-new-in-sapui5-1-112-34afc69.md "With this release SAPUI5 is upgraded from version 1.111 to 1.112.")
 
 [What's New in SAPUI5 1.111](what-s-new-in-sapui5-1-111-7a67837.md "With this release SAPUI5 is upgraded from version 1.110 to 1.111.")
 

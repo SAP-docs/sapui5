@@ -100,5 +100,5 @@ To enable table personalization, we set `useTablePersonalisation` to `true`. As 
 **Related Information**  
 
 
-[Personalization](../10_More_About_Controls/personalization-a3c3c5e.md "The sap.m.p13n.Popup control in the sap.m.p13n namespace provides a dialog or popover for personalizing table content, such as selecting columns and adapting their order.")
+[Personalization Dialog](../10_More_About_Controls/personalization-dialog-a3c3c5e.md "The sap.m.p13n.Popup control in the sap.m.p13n namespace provides a dialog or popover for personalizing content, for example, of a table, such as selecting columns and adapting their order.")
 

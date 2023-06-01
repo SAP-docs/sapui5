@@ -160,7 +160,7 @@ Analytical tables are currently not supported on draft-enabled entities.
 
 
 
-### Exclude Fields from Table Personalization
+### Excluding Fields from Table Personalization
 
 You can exclude specific fields from the table personalization dialog in the list report and object page. You can set the `availability` property of the column to `hidden`.
 
@@ -327,6 +327,29 @@ The search restriction for a table is first looked up in the parent entity \(via
     > )
     > ```
 
+
+
+
+### Freezing Table Columns
+
+You can freeze the first columns of a table so that they always remain visible when scrolling the table horizontally. To do this, add the `frozenColumnCount` parameter to the table's manifest. This also specifies how many columns should be frozen.
+
+> ### Sample Code:  
+> ```
+> "_Item/@com.sap.vocabularies.UI.v1.LineItem": {
+>      "tableSettings": {
+>           "type": "GridTable",
+>           "frozenColumnCount": 3,
+>           …
+>           },
+>           ...
+>      }
+> }
+> 
+> ```
+
+> ### Note:  
+> This option is not available for the responsive table.
 
 **Related Information**  
 

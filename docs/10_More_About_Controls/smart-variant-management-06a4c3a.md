@@ -2,7 +2,7 @@
 
 # Smart Variant Management
 
-The `sap.ui.comp.smartvariants.SmartVariantManagement` control provides an interface to enable a simple integration of the `sap.ui.comp.variants.VariantManagement` control and access to the SAPUI5 flexibility back end for easy communication.
+The `sap.ui.comp.smartvariants.SmartVariantManagement` control provides access to the SAPUI5 flexibility back end for easy communication.
 
 The frequently asked questions section aims at answering some basic questions that you might have when using this control.
 
@@ -187,24 +187,6 @@ return [{
             }
    }
 }];
-
-```
-
-To handle the content changes for the views, you have to register the change handler in the `library.js`:
-
-```js
-
-extensions: {
-      flChangeHandlers: {
-          "sap.ui.comp.smartfilterbar.SmartFilterBar": {
-               "variantContent": { 
-                       "changeHandler": "sap/ui/comp/smartvariants/flexibility/changes/VariantContent",
-                       "layers": {
-                              "USER": false
-                       }
-               } 
-          }
-      }
 
 ```
 

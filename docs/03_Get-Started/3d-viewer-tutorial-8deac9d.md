@@ -1,6 +1,6 @@
 <!-- loio8deac9d302504962a01149c3cc913ee0 -->
 
-# 3D Viewer
+# 3D Viewer Tutorial
 
 In this tutorial, you will learn how to work with the controls in the Visual Interaction toolkit \(`sap.ui.vk` library\) to create applications with 3D viewing functionality.
 

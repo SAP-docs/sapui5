@@ -897,7 +897,7 @@ When the `ValueHelpDialog` of `SmartField` or `SmartFilterBar` is open, the tabl
 
 -   SAP Fiori Elements now provides an option to choose fields to be displayed based on the device type and the importance of the field. For example, applications can be set to show only fields of high importance when viewed on small screens. For more information, see [Displaying Fields in Smartforms on Small Devices](../06_SAP_Fiori_Elements/displaying-fields-in-smartforms-on-small-devices-0096cd2.md).
 
--   Object page tables and chart variants can now be enabled through a manifest setting. For more information, see [Enabling Variant Management in the Object Page](../06_SAP_Fiori_Elements/enabling-variant-management-in-the-object-page-f26d42b.md).
+-   Object page tables and chart variants can now be enabled through a manifest setting. For more information, see [Enabling Variant Management on the Object Page](../06_SAP_Fiori_Elements/enabling-variant-management-on-the-object-page-f26d42b.md).
 
 -   You can define visual filters which have all filters as in parameters using the manifest setting `allFiltersAsInParameters`. For more information, see [Descriptor Configuration for the Analytical List Page](../06_SAP_Fiori_Elements/descriptor-configuration-for-the-analytical-list-page-2a9df06.md).
 
@@ -930,6 +930,8 @@ When the `ValueHelpDialog` of `SmartField` or `SmartFilterBar` is open, the tabl
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.112](what-s-new-in-sapui5-1-112-34afc69.md "With this release SAPUI5 is upgraded from version 1.111 to 1.112.")
 
 [What's New in SAPUI5 1.111](what-s-new-in-sapui5-1-111-7a67837.md "With this release SAPUI5 is upgraded from version 1.110 to 1.111.")
 

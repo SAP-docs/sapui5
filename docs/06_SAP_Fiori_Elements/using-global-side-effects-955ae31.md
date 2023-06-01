@@ -69,8 +69,6 @@ It is recommended to specify the target properties or target entities for global
 
 For newly generated apps, the \(design time\) default is `false`, that is, the project generation wizard generates `"forceGlobalRefresh": false`.
 
-You can use [SAP Fiori tools](https://help.sap.com/viewer/product/SAP_FIORI_tools/Latest/en-US), which is a set of extensions for SAP Business Application Studio and Visual Studio Code, to build your apps.
-
 
 
 <a name="loio955ae316856a4dcdbe07a1dbf584fa98__section_hkm_hzq_5wb"/>
@@ -99,5 +97,5 @@ The following CAP CDS sample code shows the global side effect with target field
 **Related Information**  
 
 
-[Draft Handling](draft-handling-ed9aa41.md "A draft is an interim version of a business entity that has not yet been explicitly saved as an active version. Drafts are saved automatically in the background after an interval of 20 seconds whenever users add or change information within a business entity while it's in edit mode (auto-save). However, if the user has modified a field with a side-effect annotation, then the draft is saved immediately after the user moves out of the virtual field group of the corresponding side-effect. The draft is also saved immediately if the user executes an action. In this case, the pending changes in the draft is also saved immediately, irrespective of the interval of 20 seconds.SAP Fiori elements support the creation of apps using draft handling.")
+[Draft Handling](draft-handling-ed9aa41.md "A draft is an interim version of a business entity that has not yet been explicitly saved as an active version. SAP Fiori elements support the creation of apps using draft handling.")
 

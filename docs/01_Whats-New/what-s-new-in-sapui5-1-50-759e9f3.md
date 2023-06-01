@@ -164,7 +164,7 @@ The new Demo Kit contains the following sections:
 
 **Tutorials**
 
-The new *Ice Cream Machine* tutorial shows you how to use SAPUI5 controls like Generic Tiles, Micro Charts, and Process Flow: [Ice Cream Machine](../03_Get-Started/ice-cream-machine-e5b7f8a.md)
+The new *Ice Cream Machine* tutorial shows you how to use SAPUI5 controls like Generic Tiles, Micro Charts, and Process Flow: [Ice Cream Machine Tutorial](../03_Get-Started/ice-cream-machine-tutorial-e5b7f8a.md)
 
 <sub>New•User Documentation•Info Only•1.50</sub>
 
@@ -2042,6 +2042,8 @@ APF has been enhanced with the following features:
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.112](what-s-new-in-sapui5-1-112-34afc69.md "With this release SAPUI5 is upgraded from version 1.111 to 1.112.")
 
 [What's New in SAPUI5 1.111](what-s-new-in-sapui5-1-111-7a67837.md "With this release SAPUI5 is upgraded from version 1.110 to 1.111.")
 

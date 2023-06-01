@@ -10,9 +10,9 @@ You can use [SAP Fiori tools](https://help.sap.com/viewer/product/SAP_FIORI_tool
 
 ## Prerequisites
 
--   You have created an OData service in your ABAP back-end system. For more information, see [Prerequisites for Using SAP Fiori Elements](prerequisites-for-using-sap-fiori-elements-f2344b5.md).
+-   You have completed the prerequisites required to create an app using SAP Fiori elements. For more information, see [Prerequisites for Using SAP Fiori Elements](prerequisites-for-using-sap-fiori-elements-f2344b5.md).
 
--   You use SAP Business Application Studio and have Visual Studio Code installed. For more information, see [Installation](https://help.sap.com/docs/SAP_FIORI_tools/17d50220bcd848aa854c9c182d65b699/e870fcff88b245e9b48a9d9f81715ac0.html).
+-   You use SAP Business Application Studio or have Visual Studio Code installed. For more information, see [Installation](https://help.sap.com/docs/SAP_FIORI_tools/17d50220bcd848aa854c9c182d65b699/e870fcff88b245e9b48a9d9f81715ac0.html).
 
 
 
@@ -21,13 +21,5 @@ You can use [SAP Fiori tools](https://help.sap.com/viewer/product/SAP_FIORI_tool
 
 ## Generating an App
 
-For more information on generating an app using SAP Business Application Studio and Visual Studio Code, see [Generate an Application](https://help.sap.com/docs/SAP_FIORI_tools/17d50220bcd848aa854c9c182d65b699/db44d45051794d778f1dd50def0fa267.html).
-
-
-
-<a name="loiofe5bc65a220647f49ee575762d61d891__section_thx_yyc_cxb"/>
-
-## More Information
-
-For more information about deploying new applications from SAP Business Application Studio and Visual Studio Code to different servers, see [Deploy an Application](https://help.sap.com/docs/SAP_FIORI_tools/17d50220bcd848aa854c9c182d65b699/1b7a3be8d99c45aead90528ef472af37.html).
+You can generate a SAP Fiori application using the SAP Fiori generator. For more information on generating an app using SAP Business Application Studio and Visual Studio Code, see [Generate an Application](https://help.sap.com/docs/SAP_FIORI_tools/17d50220bcd848aa854c9c182d65b699/db44d45051794d778f1dd50def0fa267.html).
 
