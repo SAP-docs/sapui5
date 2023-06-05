@@ -59,7 +59,7 @@ For showing messages to the user that are related to the currrent page, you have
 > ### Example:  
 > ```js
 > 	// add MessageToast as import
-> 	sap.ui.define([..., 'sap/m/MessageTost', ...], function(..., MessageToast, ...) {
+> 	sap.ui.define([..., 'sap/m/MessageToast', ...], function(..., MessageToast, ...) {
 > 
 > 		...
 > 		// show toast when needed
