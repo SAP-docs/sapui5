@@ -764,6 +764,18 @@ For more information, see [Micro Chart Facet](micro-chart-facet-e219fd0.md) and 
 
 SAP Fiori elements allows you to enable stream support so that users can upload and download files. You can add `Edm.Stream` fields \(file upload\) to a form on the object page. For more information, see [Enabling Stream Support](enabling-stream-support-b236d32.md).
 
+
+
+<a name="loioc18ada4bc56e427a9a2df2d1898f28a5__section_ajd_pfs_gxb"/>
+
+## Representation as a Timestamp with Timezone Information
+
+You can display a timestamp together with a timezone.
+
+ ![](images/Timestamp_with_Timezone_cb85f47.png) 
+
+For more information, see the section *Date Picker and Date/Time Picker* in [Field Help](field-help-a5608ea.md).
+
 **Related Information**  
 
 

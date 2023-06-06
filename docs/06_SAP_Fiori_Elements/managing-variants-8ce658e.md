@@ -21,7 +21,7 @@ Use page-level variant management to capture filter selection, filter mode, view
 > ### Note:  
 > You can define variants for specific selections of data on the user interface, for example, based on filter settings. In the definition dialog, these variants are called views, however, the feature is called variant management. Therefore, for clarity, we use the term variant management in this section.
 
-Control-level variant management is not recommended for list report templates and analytical list page templates. Use it only for object page templates. For more information about how to the enable control-level variant in the object page, see [Enabling Variant Management in the Object Page](enabling-variant-management-in-the-object-page-f26d42b.md).
+Control-level variant management is not recommended for list report templates and analytical list page templates. Use it only for object page templates. For more information about how to the enable control-level variant in the object page, see [Enabling Variant Management on the Object Page](enabling-variant-management-on-the-object-page-f26d42b.md).
 
  <a name="topic_fdm_n4r_1qb"/>
 
@@ -46,9 +46,7 @@ For more information, see [Loading Behavior Based on the Chosen Variant](loading
 
 ## Managing Variants in SAP Fiori Elements for OData V2
 
-Code Sample
-
-In the `manifest.json` file, the `smartVariantManagement` variable is set to `true` by default or `false` based on the option selected in the SAP Web IDE Wizard. It can be changed in the manifest as shown below:
+For the list report object page and worklist, the `smartVariantManagement` variable is set to `true` by default within the `manifest.json` file. For the analytical list page, the `smartVariantManagement` variable is set to `false` by default. These settings are automatically set by the SAP Fiori generator. It can be changed in the manifest as shown here:
 
 ```js
 "sap.ui.generic.app": {
@@ -65,9 +63,11 @@ In the `manifest.json` file, the `smartVariantManagement` variable is set to `tr
                         "smartVariantManagement": true
 ```
 
+You can also change the `smartVariantManagement` variable using the *Page Editor*.
+
 If `smartVariantManagement` is set to `true`, the page variant is enabled. If it is set to `false`, control-level variant is enabled. If it is undefined, then the default setting is `true`.
 
-Please also see [Smart Variant Management](../10_More_About_Controls/smart-variant-management-06a4c3a.md).
+For more information see, [Develop an Application](https://help.sap.com/docs/SAP_FIORI_tools/17d50220bcd848aa854c9c182d65b699/a9c004397af5461fbf765419fc1d606a.html).
 
  <a name="topic_jmz_ylg_mqb"/>
 
@@ -75,9 +75,7 @@ Please also see [Smart Variant Management](../10_More_About_Controls/smart-varia
 
 ## Managing Variants in SAP Fiori Elements for OData V4
 
-Code Sample
-
-In the `manifest.json` file, the `VariantManagement` variable is set to `true` by default. It can be changed in the manifest as shown below:
+In the `manifest.json` file, the `VariantManagement` variable is set to `Page` by default. It can be changed in the manifest as shown below:
 
 ```json
 {
@@ -104,4 +102,6 @@ In the `manifest.json` file, the `VariantManagement` variable is set to `true` b
 }
 
 ```
+
+You can also change the `VariantManagement` variable using the *Page Editor*.
 

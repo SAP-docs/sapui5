@@ -54,30 +54,3 @@ If required, you can disable this filter for your app. To do so, you need to ada
 > 
 > ```
 
-> ### Sample Code:  
-> CAP CDS Annotation
-> 
-> ```
-> 
-> Capabilities.NavigationRestrictions : {
->     RestrictedProperties : [
->         {
->             NavigationProperty : DraftAdministrativeData,
->             FilterRestrictions : {
->                 Filterable : false
->             }
->         }
->     ]
-> }
-> 
-> CAP_CDS_Code_53
-> 
-> annotate SEPMRA_PROD_MAN.SEPMRA_C_PD_ProductType with @(
->   UI.SelectionFields : [
->     Price,
->     Supplier
->   ]
-> );
-> 
-> ```
-

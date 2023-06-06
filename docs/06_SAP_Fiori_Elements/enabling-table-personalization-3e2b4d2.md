@@ -188,7 +188,7 @@ In the list report, you can set the variant management to `"Page"` level or to `
 
     By default, the control variant management enables all settings, but you can enable or disable each of these separately using the `"personalization"` setting in the manifest.
 
-    For more information, see [Managing Variants](managing-variants-8ce658e.md) and [Enabling Variant Management in the Object Page](enabling-variant-management-in-the-object-page-f26d42b.md).
+    For more information, see [Managing Variants](managing-variants-8ce658e.md) and [Enabling Variant Management on the Object Page](enabling-variant-management-on-the-object-page-f26d42b.md).
 
 
 

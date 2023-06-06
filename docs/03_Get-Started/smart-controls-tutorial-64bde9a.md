@@ -1,6 +1,6 @@
 <!-- loio64bde9a8879d4f418e2849f7285dd757 -->
 
-# Smart Controls
+# Smart Controls Tutorial
 
 In this tutorial you learn how to work with smart controls.
 

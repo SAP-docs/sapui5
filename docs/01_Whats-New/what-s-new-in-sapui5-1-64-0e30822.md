@@ -155,7 +155,7 @@ Info Only
 
 The rule builder now supports a new expression language: AST based DMN SFEEL. DMN SFEEL is an improvised approach to modeling business decision logic. It can be used both in text rules as well as in decision tables.
 
-For more information, see [Rule Builder Control](../03_Get-Started/rule-builder-control-67fcb30.md).
+For more information, see [Rule Builder Control Tutorial](../03_Get-Started/rule-builder-control-tutorial-67fcb30.md).
 
 <sub>New•Feature•Info Only•1.64</sub>
 
@@ -1140,6 +1140,10 @@ You can pass the variant ID as a URL parameter while navigating from an applicat
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.112](what-s-new-in-sapui5-1-112-34afc69.md "With this release SAPUI5 is upgraded from version 1.111 to 1.112.")
+
+[What's New in SAPUI5 1.111](what-s-new-in-sapui5-1-111-7a67837.md "With this release SAPUI5 is upgraded from version 1.110 to 1.111.")
 
 [What's New in SAPUI5 1.110](what-s-new-in-sapui5-1-110-71a855c.md "With this release SAPUI5 is upgraded from version 1.109 to 1.110.")
 

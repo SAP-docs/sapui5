@@ -1558,7 +1558,7 @@ Overview pages have been enhanced with the following features:
 
 **Testing Tutorial**
 
-The **Testing** tutorial has been enhanced with two additional steps. For more information, see [Testing](../03_Get-Started/testing-291c912.md).
+The **Testing** tutorial has been enhanced with two additional steps. For more information, see [Testing Tutorial](../03_Get-Started/testing-tutorial-291c912.md).
 
 <sub>Changed•User Documentation•Info Only•1.44</sub>
 
@@ -1653,6 +1653,10 @@ The Demo Kit now has the following new features:
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.112](what-s-new-in-sapui5-1-112-34afc69.md "With this release SAPUI5 is upgraded from version 1.111 to 1.112.")
+
+[What's New in SAPUI5 1.111](what-s-new-in-sapui5-1-111-7a67837.md "With this release SAPUI5 is upgraded from version 1.110 to 1.111.")
 
 [What's New in SAPUI5 1.110](what-s-new-in-sapui5-1-110-71a855c.md "With this release SAPUI5 is upgraded from version 1.109 to 1.110.")
 

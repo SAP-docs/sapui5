@@ -1,6 +1,6 @@
 <!-- loio67fcb301d0504fd4a24915edf4058c51 -->
 
-# Rule Builder Control
+# Rule Builder Control Tutorial
 
 In this tutorial you will learn how to embed a rule builder control to manage business rules in your application.
 
@@ -153,8 +153,8 @@ For more information, see the documentation for the SAP HANA Rules Framework on 
 
 This tutorial uses the OData V2 mock server to provide the required data. Before proceeding with this tutorial, ensure that you are familiar with the concepts introduced in the following tutorials:
 
--   [Walkthrough](walkthrough-3da5f4b.md), specifically [Step 26: Mock Server Configuration](step-26-mock-server-configuration-bae9d90.md)
--   [OData V2 Mock Server](odata-v2-mock-server-3a9728e.md)
+-   [Walkthrough Tutorial](walkthrough-tutorial-3da5f4b.md), specifically [Step 26: Mock Server Configuration](step-26-mock-server-configuration-bae9d90.md)
+-   [OData V2 Mock Server Tutorial](odata-v2-mock-server-tutorial-3a9728e.md)
 
 > ### Note:  
 > Alternatively, you can use a properly configured backend system with the following implemented OData services:

@@ -190,5 +190,5 @@ sap.ui.define([
 **Related Information**  
 
 
-[Smart Variant Management](../10_More_About_Controls/smart-variant-management-06a4c3a.md "The sap.ui.comp.smartvariants.SmartVariantManagement control provides an interface to enable a simple integration of the sap.ui.comp.variants.VariantManagement control and access to the SAPUI5 flexibility back end for easy communication.")
+[Smart Variant Management](../10_More_About_Controls/smart-variant-management-06a4c3a.md "The sap.ui.comp.smartvariants.SmartVariantManagement control provides access to the SAPUI5 flexibility back end for easy communication.")
 

@@ -31,11 +31,11 @@ The default state of the filter option is as follows:
 
 You can control the visibility of chart personalization options using the variant management settings. The default visibility is as follows:
 
--   With the `"Page"` level setting, the following chart personalization options are available: *Column*, *Sort* and *Type*.
+-   With the `"Page"` level setting, the following chart personalization options are available: *Item*, *Sort* and *Type*.
 
--   With the `"None"` setting, the following chart personalization options are available: *Column*, *Sort* and *Type*.
+-   With the `"None"` setting, the following chart personalization options are available: *Item*, *Sort* and *Type*.
 
--   With the `"Control"` setting, the following chart personalization options are available: *Column*, *Sort*, *Type*. and *Filter*.
+-   With the `"Control"` setting, the following chart personalization options are available: *Item*, *Sort*, *Type*. and *Filter*.
 
 
 You can switch off personalization using the following setting:

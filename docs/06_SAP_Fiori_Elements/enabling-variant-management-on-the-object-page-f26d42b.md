@@ -1,22 +1,22 @@
 <!-- loiof26d42bea11c4deda82c7a2e00c9bc05 -->
 
-# Enabling Variant Management in the Object Page
+# Enabling Variant Management on the Object Page
 
-The variant management is enabed by default for tables and charts on the object page. However, you can choose to disable it.
+You can enable and disable variant management on the object page.
 
 
 
 ## Context
 
-You can disable variant management for tables.
+You can enable and disable variant management for tables.
 
-In SAP Fiori Elements for OData V2, you can also disable variant management for charts.
+In SAP Fiori elements for OData V2, you can also enable and disable variant management for charts.
 
 
 
 ### Additional Features in SAP Fiori Elements for OData V2
 
-To disable variant management for all tables and charts on an object page, make these manifest settings on component level:
+In SAP Fiori elements for OData V2, variant management is enabled by default for tables and charts on the object page. To disable variant management for all tables and charts on an object page, make these manifest settings on component level:
 
 > ### Sample Code:  
 > ```
@@ -85,14 +85,14 @@ You can disable variant management for a specific chart on an object page by add
 
 ### Additional Features in SAP Fiori Elements for OData V4
 
-In SAP Fiori elements for OData V4, variant management is enabled by default. You can disable it on the object page by setting `"variantManagement"` to `"None"`.
+In SAP Fiori elements for OData V4, variant management is disabled by default. You can enable it on the object page by setting `"variantManagement"` to `"Control"`.
 
 > ### Sample Code:  
 > ```
 > "SalesOrderManageObjectPage": {
 >     "options": {
 >         "settings": {
->             "variantManagement": "None",                        
+>             "variantManagement": "Control",                        
 >             "controlConfiguration": {
 >                 "_Item/@com.sap.vocabularies.UI.v1.LineItem": {
 >                     "tableSettings": {
@@ -116,9 +116,12 @@ In SAP Fiori elements for OData V4, variant management is enabled by default. Yo
 > }
 > ```
 
-If you've disabled variant management, you can enable it again by setting `"variantManagement"` to `"Control"`.
+If you've enabled variant management, you can disable it again by setting `"variantManagement"` to `"None"`.
 
-You can turn the personalization on or off for each table individually. Personalization is independent of variant management. You can't enable variant management if personalization is turned off
+You can turn personalization on or off for each table individually. Personalization is independent of variant management.. You can't enable variant management if personalization is turned off.
+
+> ### Note:  
+> Don't change the variant management settings after delivering the application. Making changes to the settings after an application has been delivered results in end users losing their personalization settings.
 
 **Related Information**  
 

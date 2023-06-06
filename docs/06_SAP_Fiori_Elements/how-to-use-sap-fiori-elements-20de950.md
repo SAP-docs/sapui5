@@ -20,8 +20,6 @@ Creating an app with SAP Fiori elements generally consists of the following step
 
     You can use [SAP Fiori tools](https://help.sap.com/viewer/product/SAP_FIORI_tools/Latest/en-US), which is a set of extensions for SAP Business Application Studio and Visual Studio Code, to build your apps. For more information about SAP Business Application Studio, see the documentation on the SAP Help Portal at [SAP Business Application Studio](https://help.sap.com/viewer/product/SAP%20Business%20Application%20Studio/Cloud/en-US).
 
-    For more information, including details about mandatory and optional post-generation tasks, see [Building an App](building-an-app-9834a0a.md).
-
 -   Extend SAP Fiori elements-based apps
 
     As an optional step, you can extend your app if needed, that is, in cases in which the manifest settings or annotations do not allow you to achieve the desired app behavior.

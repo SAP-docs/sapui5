@@ -90,7 +90,7 @@ Similarly, to enable empty rows mode, set `"createMode"` as `"creationRows"`. Wi
 Users can explicitly hide empty rows in the edit mode and make the empty rows available only in the create mode. To hide empty rows in edit mode, set `"createMode"` as `"creationRowsHiddenInEditMode"`. The table doesn't contain any empty rows upon loading with this configuration. Empty rows are added to the table only when you click the *Create* button.
 
 > ### Note:  
-> The empty rows are prefilled with default values when the `com.sap.vocabularies.Common.v1.DefaultValuesFunction` annotation is defined in the entity set that belongs to the table with which it's configured. For more information, see [Prefilling Fields Using the `DefaultValuesFunction`](prefilling-fields-using-the-defaultvaluesfunction-5ada91c.md).
+> The empty rows are prefilled with default values when the `com.sap.vocabularies.Common.v1.DefaultValuesFunction` annotation is defined in the entity set that belongs to the table with which it's configured. For more information, see [Prefilling Fields Using the DefaultValuesFunction](prefilling-fields-using-the-defaultvaluesfunction-5ada91c.md).
 
 
 
@@ -209,4 +209,14 @@ To change this behavior, you can use the parameter `inlineCreationRowsHiddenInEd
 >     }
 > }
 > ```
+
+
+
+### Disabling Fields in the Empty Rows Mode
+
+Certain fields in the `inlineCreationRows` may become relevant only after the row has been created. They can be disabled so that they appear as read-only in the empty rows.
+
+To disable a field, use the `Capabilities.InsertRestrictions.NonInsertableProperties` annotation.
+
+The list of `NonInsertableProperties` is first checked at the navigation property level. If it's not found there, it is checked at the entity set level.
 

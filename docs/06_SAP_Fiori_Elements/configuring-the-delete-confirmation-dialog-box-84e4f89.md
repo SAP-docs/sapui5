@@ -70,25 +70,6 @@ Depending on the `UI.HeaderInfo` annotation, there can be three different types 
 > 
 > ```
 
-> ### Sample Code:  
-> CAP CDS Annotation
-> 
-> ```
-> 
-> UI.HeaderInfo : {
->     TypeName : 'Sales Order',
->     TypeNamePlural : 'Sales Orders',
->     Title : {
->         $Type : 'UI.DataField',
->         Value : so_id
->     },
->     Description : {
->         $Type : 'UI.DataField',
->         Value : 'Sales Order'
->     }
-> },
-> ```
-
 -   **When the `UI.HeaderInfo` annotation has only the `Title` property defined**:
 
     In this scenario, when you delete a single item from the table, the dialog confirmation would show the message such as the one displayed below.
@@ -130,21 +111,6 @@ Depending on the `UI.HeaderInfo` annotation, there can be three different types 
 > annotate view SALESORDERMANAGE with {
 > 
 > }
-> ```
-
-> ### Sample Code:  
-> CAP CDS Annotation
-> 
-> ```
-> 
-> UI.HeaderInfo : {
->     TypeName : 'Sales Order',
->     TypeNamePlural : 'Sales Orders',
->     Title : {
->         $Type : 'UI.DataField',
->         Value : so_id
->     }
-> },
 > ```
 
 -   **When the `UI.HeaderInfo` annotation has neither the `Title` nor the `Description` property defined:**

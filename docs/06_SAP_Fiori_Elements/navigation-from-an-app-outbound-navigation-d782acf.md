@@ -371,20 +371,6 @@ The properties marked with the `PersonalData.IsPotentiallySensitive` annotation 
 > }
 > ```
 
-> ### Sample Code:  
-> CAP CDS Annotation
-> 
-> ```
-> annotate ZEPM_C_User.C_UserDetailsType with {
->     @PersonalData.IsPotentiallySensitive
->     CreditCardNumber
-> };
-> annotate ZEPM_C_SALESORDERITEMQUERY_CDS.ZEPM_C_SALESORDERITEMKPIResult with {
-> 	@UI.ExcludeFromNavigationContext
-> 	BusinessPartner
-> };
-> ```
-
 
 
 ### Navigation to Any Desired Object Page in a Multi-Entity Set with Tabs

@@ -1099,6 +1099,17 @@ You can specify a timezone for a field of type "`Edm.DateTimeOffset`". If the ti
     > ```
 
     > ### Sample Code:  
+    > ABAP CDS Annotation
+    > 
+    > ```
+    > @Semantics.timeZoneReference: 'MySAPTimezone'
+    > MyDateTime,
+    >   
+    > @Semantics.timeZone
+    > MySAPTimezone,
+    > ```
+
+    > ### Sample Code:  
     > CAP CDS Annotation
     > 
     > ```
@@ -1108,6 +1119,8 @@ You can specify a timezone for a field of type "`Edm.DateTimeOffset`". If the ti
     > …
     > ```
 
+
+Check out our live example in the flexible programming model explorer at [Field - Format Options](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/field/fieldFormatOptions).
 
 If you don't explicitly define the timezone, the `DateTimeOffset` field is converted and displayed in the timezone of the UI as determined by SAPUI5.
 

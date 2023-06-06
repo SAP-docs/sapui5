@@ -870,7 +870,7 @@ The following changes and new features are available for SAP Fiori elements for 
 
 -   Application developers can now define the sort order of the different columns of the table in the value help dialog. End users will find the table content sorted accordingly. For more information, see [Field Help](../06_SAP_Fiori_Elements/field-help-a5608ea.md).
 
--   Application developers can now enable table personalization independent of variant management. For more information, see [Enabling Variant Management in the Object Page](../06_SAP_Fiori_Elements/enabling-variant-management-in-the-object-page-f26d42b.md).
+-   Application developers can now enable table personalization independent of variant management. For more information, see [Enabling Variant Management on the Object Page](../06_SAP_Fiori_Elements/enabling-variant-management-on-the-object-page-f26d42b.md).
 
 
 <sub>Changed•SAP Fiori Elements•Info Only•1.89</sub>
@@ -897,6 +897,10 @@ The following changes and new features are available for SAP Fiori elements for 
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.112](what-s-new-in-sapui5-1-112-34afc69.md "With this release SAPUI5 is upgraded from version 1.111 to 1.112.")
+
+[What's New in SAPUI5 1.111](what-s-new-in-sapui5-1-111-7a67837.md "With this release SAPUI5 is upgraded from version 1.110 to 1.111.")
 
 [What's New in SAPUI5 1.110](what-s-new-in-sapui5-1-110-71a855c.md "With this release SAPUI5 is upgraded from version 1.109 to 1.110.")
 

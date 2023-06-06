@@ -346,7 +346,6 @@ sap.ui.define([
 	"sap/ui/demo/bulletinboard/model/DateFormatter",
 	"sap/ui/core/Locale",
 	"sap/ui/core/date/UI5Date"
-	
 ], function(DateFormatter, Locale, UI5Date) {
 	var oFormatter = null;
 	QUnit.module("DateFormatter", {

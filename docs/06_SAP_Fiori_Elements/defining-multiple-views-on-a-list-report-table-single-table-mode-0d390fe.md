@@ -74,29 +74,6 @@ To define multiple views using single table mode, perform the following steps:
     > }
     > ```
 
-    > ### Sample Code:  
-    > CAP CDS Annotation
-    > 
-    > ```
-    > 
-    > UI.SelectionVariant #Expensive : {
-    >     Text : 'Expensive',
-    >     SelectOptions : [
-    >         {
-    >             $Type : 'UI.SelectOptionType',
-    >             PropertyName : GrossAmount,
-    >             Ranges : [
-    >                 {
-    >                     $Type : 'UI.SelectionRangeType',
-    >                     Option : #GE,
-    >                     Low : '5000'
-    >                 }
-    >             ]
-    >         }
-    >     ]
-    > }
-    > ```
-
     > ### Note:  
     > For the `SelectionVariant`, the following applies:
     > 

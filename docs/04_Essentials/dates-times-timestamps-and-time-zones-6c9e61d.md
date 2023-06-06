@@ -368,6 +368,31 @@ Displaying timestamps in a specific time zone provided by the back end is done u
 >      }" />
 > ```
 
+> ### Example:  
+> **Using `sap.ui.model.odata.type.DateTimeWithTimezone` to display only a time zone**
+> 
+> ```
+> <!-- 'TimezoneID' refers to an Edm.String property holding the IANA time zone ID -->
+> <Text text="{
+>         formatOptions: {showDate: false, showTime: false},
+>         parts: [{value: null}, {path: 'TimezoneID'}],
+>         type: 'sap.ui.model.odata.type.DateTimeWithTimezone'
+>      }" />
+> ```
+
+
+
+<a name="loio6c9e61dc157a40c19460660ece8368bc__section_odr_ryd_jxb"/>
+
+## Core Configuration-Specified Time Zones in SAPUI5
+
+As of Version 1.114.0, SAPUI5 is enabled to set a time zone that's different from the browser's time zone.
+
+> ### Caution:  
+> Using the configuration API in a running application can lead to unexpected data inconsistencies.
+
+For more information, see the `timezone` configuration parameter in [Configuration Options and URL Parameters](configuration-options-and-url-parameters-91f2d03.md)
+
 
 
 <a name="loio6c9e61dc157a40c19460660ece8368bc__section_ui5date"/>

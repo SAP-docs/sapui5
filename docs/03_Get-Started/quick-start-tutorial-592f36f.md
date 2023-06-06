@@ -1,6 +1,6 @@
 <!-- loio592f36fd077b45349a67dcb3efb46ab1 -->
 
-# Quick Start
+# Quick Start Tutorial
 
 Unleash your SAPUI5 skills with this simple three-step tutorial. We start with a simple "Hello World" example, and convert it to a minimalist two-page app.
 

@@ -207,5 +207,5 @@ If you're stuck and need help with a development task, you can also post a quest
 **Related Information**  
 
 
-[Troubleshooting Tutorial](../03_Get-Started/troubleshooting-5661952.md "In this tutorial, we will show you some tools that will help you if you run into problems with your SAPUI5 app.")
+[Troubleshooting Tutorial](../03_Get-Started/troubleshooting-tutorial-5661952.md "In this tutorial, we will show you some tools that will help you if you run into problems with your SAPUI5 app.")
 

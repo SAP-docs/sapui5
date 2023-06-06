@@ -1,6 +1,6 @@
 <!-- loio291c9121e6044ab381e0b51716f97f52 -->
 
-# Testing
+# Testing Tutorial
 
 In this tutorial we will test application functionality with the testing tools that are delivered with SAPUI5. At different steps of this tutorial you will write tests using QUnit, OPA5, and the OData V2 mock server. Additionally, you will learn about testing strategies, Test Driven Development \(TDD\), and much more.
 

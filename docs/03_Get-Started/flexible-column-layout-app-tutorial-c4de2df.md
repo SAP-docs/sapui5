@@ -1,6 +1,6 @@
 <!-- loioc4de2df385174e58a689d9847c7553bd -->
 
-# Flexible Column Layout App
+# Flexible Column Layout App Tutorial
 
 In this tutorial, we showcase how to structure your SAPUI5 app using the layout patterns that comply with the SAP Fiori design guidelines.
 

@@ -23,7 +23,7 @@ manifest.json
 </th>
 <th valign="top">
 
-Available for SAPUI5 dist libraries?
+Available for SAPUI5 distribution libraries?
 
 
 
@@ -53,7 +53,7 @@ Comment
 </td>
 <td valign="top">
 
-x
+![YES](../02_Read-Me-First/images/Checked_Okay_3929e46.png)
 
 
 
@@ -81,7 +81,7 @@ x
 </td>
 <td valign="top">
 
-x
+![YES](../02_Read-Me-First/images/Checked_Okay_3929e46.png)
 
 
 
@@ -111,7 +111,7 @@ Generated with value `library`
 </td>
 <td valign="top">
 
-x
+![YES](../02_Read-Me-First/images/Checked_Okay_3929e46.png)
 
 
 
@@ -141,6 +141,8 @@ Generated
 </td>
 <td valign="top">
 
+![NO](images/Cancel_dfb38de.png)
+
 
 
 </td>
@@ -169,7 +171,7 @@ New in `.library`
 </td>
 <td valign="top">
 
-x
+![YES](../02_Read-Me-First/images/Checked_Okay_3929e46.png)
 
 
 
@@ -197,7 +199,7 @@ x
 </td>
 <td valign="top">
 
-x
+![YES](../02_Read-Me-First/images/Checked_Okay_3929e46.png)
 
 
 
@@ -227,7 +229,7 @@ Text symbol syntax with leading curly brackets \(`{{`\) and trailing curly brack
 </td>
 <td valign="top">
 
-x
+![YES](../02_Read-Me-First/images/Checked_Okay_3929e46.png)
 
 
 
@@ -257,7 +259,7 @@ Text symbol syntax with leading curly brackets \(`{{`\) and trailing curly brack
 </td>
 <td valign="top">
 
-x
+![YES](../02_Read-Me-First/images/Checked_Okay_3929e46.png)
 
 
 
@@ -284,6 +286,8 @@ x
 
 </td>
 <td valign="top">
+
+![NO](images/Cancel_dfb38de.png)
 
 
 
@@ -313,7 +317,7 @@ New in `.library`
 </td>
 <td valign="top">
 
-x
+![YES](../02_Read-Me-First/images/Checked_Okay_3929e46.png)
 
 
 
@@ -343,7 +347,7 @@ Generated with value `resources.json`
 </td>
 <td valign="top">
 
-x
+![YES](../02_Read-Me-First/images/Checked_Okay_3929e46.png)
 
 
 
@@ -373,6 +377,8 @@ New in `.library`
 </td>
 <td valign="top">
 
+![NO](images/Cancel_dfb38de.png)
+
 
 
 </td>
@@ -401,7 +407,7 @@ New in `.library`, to be filled by SAP Web IDE only
 </td>
 <td valign="top">
 
-x
+![YES](../02_Read-Me-First/images/Checked_Okay_3929e46.png)
 
 
 
@@ -431,6 +437,8 @@ Generated with value `UI5`
 </td>
 <td valign="top">
 
+![NO](images/Cancel_dfb38de.png)
+
 
 
 </td>
@@ -459,7 +467,7 @@ New in `.library`
 </td>
 <td valign="top">
 
-x
+![YES](../02_Read-Me-First/images/Checked_Okay_3929e46.png)
 
 
 
@@ -489,7 +497,7 @@ Generated and merged
 </td>
 <td valign="top">
 
-x
+![YES](../02_Read-Me-First/images/Checked_Okay_3929e46.png)
 
 
 
@@ -519,7 +527,7 @@ Generated
 </td>
 <td valign="top">
 
-x
+![YES](../02_Read-Me-First/images/Checked_Okay_3929e46.png)
 
 
 
@@ -546,6 +554,8 @@ x
 
 </td>
 <td valign="top">
+
+![NO](images/Cancel_dfb38de.png)
 
 
 
@@ -575,7 +585,7 @@ New in `.library`
 </td>
 <td valign="top">
 
-x
+![YES](../02_Read-Me-First/images/Checked_Okay_3929e46.png)
 
 
 
@@ -605,6 +615,8 @@ Determines whether the library contains an i18n resource. Value can be either a 
 </td>
 <td valign="top">
 
+![NO](images/Cancel_dfb38de.png)
+
 
 
 </td>
@@ -632,6 +644,8 @@ New in `.library`
 
 </td>
 <td valign="top">
+
+![NO](images/Cancel_dfb38de.png)
 
 
 
@@ -661,6 +675,8 @@ New in `.library`
 </td>
 <td valign="top">
 
+![NO](images/Cancel_dfb38de.png)
+
 
 
 </td>
@@ -688,6 +704,8 @@ New in `.library`
 
 </td>
 <td valign="top">
+
+![NO](images/Cancel_dfb38de.png)
 
 
 

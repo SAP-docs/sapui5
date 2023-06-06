@@ -1,6 +1,6 @@
 <!-- loio6a6a621c978145ad9eef2b221d2cf21d -->
 
-# Worklist App
+# Worklist App Tutorial
 
 In this tutorial we will build an app using SAPUI5 that, for example, a shop owner can use to manage his product stock levels.
 

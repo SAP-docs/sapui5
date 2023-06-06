@@ -1150,7 +1150,7 @@ Some of these concepts use new APIs that have been available since SAPUI5 releas
 
 **New Quick Start Tutorial**
 
-We have replaced the Hello World! tutorial with a new Quick Start tutorial that showcases the key features of SAPUI5 in three simple steps. For more information, see [Quick Start](../03_Get-Started/quick-start-592f36f.md).
+We have replaced the Hello World! tutorial with a new Quick Start tutorial that showcases the key features of SAPUI5 in three simple steps. For more information, see [Quick Start Tutorial](../03_Get-Started/quick-start-tutorial-592f36f.md).
 
 <sub>Changed•User Documentation•Info Only•1.61</sub>
 
@@ -1231,6 +1231,10 @@ We have updated the *Tools* page and added two more blocks about the *Support As
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.112](what-s-new-in-sapui5-1-112-34afc69.md "With this release SAPUI5 is upgraded from version 1.111 to 1.112.")
+
+[What's New in SAPUI5 1.111](what-s-new-in-sapui5-1-111-7a67837.md "With this release SAPUI5 is upgraded from version 1.110 to 1.111.")
 
 [What's New in SAPUI5 1.110](what-s-new-in-sapui5-1-110-71a855c.md "With this release SAPUI5 is upgraded from version 1.109 to 1.110.")
 

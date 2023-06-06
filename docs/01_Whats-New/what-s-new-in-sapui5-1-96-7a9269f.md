@@ -382,7 +382,7 @@ The new version of the SAPUI5 OData V4 model introduces the following features:
 
 -   You can now specify `$select` in addition to the `$$inheritExpandSelect` binding parameter of [OData Operations](../04_Essentials/odata-operations-b54f789.md).
 
--   We have complemented the [OData V4 Tutorial](../03_Get-Started/odata-v4-bcdbde6.md) with additional chapters showing how to reuse data in a list-detail scenario.
+-   We have complemented the [OData V4 Tutorial](../03_Get-Started/odata-v4-tutorial-bcdbde6.md) with additional chapters showing how to reuse data in a list-detail scenario.
 
 -   You can now use [`Common.ValueListWithFixedValues`](https://github.com/SAP/odata-vocabularies/blob/main/vocabularies/Common.xml#L672:~:text=%3CTerm%20Name=%22-,ValueListWithFixedValues,-%22) in combination with [`Common.ValueListRelevantQualifiers`](https://github.com/SAP/odata-vocabularies/blob/main/vocabularies/Common.xml#L666:~:text=%3CTerm%20Name=%22-,ValueListRelevantQualifiers,-%22) if only one value list qualifier is relevant at a time. The `sap.ui.model.odata.v4.ODataMetaModel#requestValueListInfo` method returns the relevant value list for the `""` qualifier and provides the original qualifier as the `$qualifier` property of the value list mapping.
 
@@ -964,6 +964,10 @@ We have new accessibility documentation with detailed information about SAPUI5 k
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.112](what-s-new-in-sapui5-1-112-34afc69.md "With this release SAPUI5 is upgraded from version 1.111 to 1.112.")
+
+[What's New in SAPUI5 1.111](what-s-new-in-sapui5-1-111-7a67837.md "With this release SAPUI5 is upgraded from version 1.110 to 1.111.")
 
 [What's New in SAPUI5 1.110](what-s-new-in-sapui5-1-110-71a855c.md "With this release SAPUI5 is upgraded from version 1.109 to 1.110.")
 

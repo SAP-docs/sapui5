@@ -442,6 +442,49 @@ Defines the calendar type that is used for locale-dependent, date-related featur
 <tr>
 <td valign="top">
 
+`calendarWeekNumbering`
+
+
+
+</td>
+<td valign="top">
+
+Type: `sap.ui.core.date.CalendarWeekNumbering`
+
+Default value: `Default`
+
+Defines the calendar week numbering algorithm that is used to determine the first day of the week and the first calendar week of the year.
+
+For more information, see the [API Reference: `sap.ui.core.date.CalendarWeekNumbering`](https://ui5.sap.com/#/api/sap.ui.core.date.CalendarWeekNumbering)
+
+
+
+</td>
+<td valign="top">
+
+![YES](../02_Read-Me-First/images/Checked_Okay_3929e46.png)
+
+
+
+</td>
+<td valign="top">
+
+![YES](../02_Read-Me-First/images/Checked_Okay_3929e46.png)
+
+
+
+</td>
+<td valign="top">
+
+![YES](../02_Read-Me-First/images/Checked_Okay_3929e46.png)
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
 `debug`
 
 
@@ -1672,10 +1715,14 @@ Type: `string`
 
 Default value: the browser's local time zone
 
-The configured time zone is used to convert dates when using `sap.ui.core.format.DateFormat` instances. The time zone should be an IANA time zone ID, e.g. "America/New\_York". The `sap-timezone` URL parameter can also be used to set the time zone. For more information, see [Date Format](date-format-91f2eba.md).
+The configured time zone is used for `sap.ui.core.date.UI5Date` instances and to convert dates when using `sap.ui.core.format.DateFormat` instances. The time zone should be an IANA time zone ID, e.g. "America/New\_York". In addition to the `sap-ui-timezone` URL parameter, an alternative `sap-timezone` parameter can also be used to set the time zone.
 
-> ### Note:  
-> Due to compatibility considerations, **setting this parameter has no effect in this release**; the time zone configuration will still reflect the time zone of the browser/host system. **For testing purposes** the `sap-timezone` URL parameter can be used to set a different time zone. You can use it to check whether an application still works properly if the user-specific time zone differs from the time zone of the machine on which the browser is executed. Note that changing the time zone via the `sap-timezone` URL parameter affects **all** applications that are running in that SAPUI5 instance.
+For more information, see [Date Format](date-format-91f2eba.md).
+
+> ### Caution:  
+> Setting the time zone via the configuration API has to be done at the earliest possible point in time when launching an SAPUI5 application. It is preferably even set by shells or launchpads, such as the SAP Fiori launchpad, before launching the application. Using the API in running applications can lead to unexpected data inconsistencies, because any created date objects could still be related to the previously configured time zone. Generally, **an app should be completely restarted after changing the time zone**.
+> 
+> The SAPUI5 configuration is applied globally and not application-specific; it therefore affects **all** apps inside the shell or launchpad, for example.
 
 
 

@@ -260,7 +260,7 @@ The following annotations are available for fiscal dates with the following pate
 <tr>
 <th valign="top">
 
-Annotation
+CAP CDS Annotation
 
 
 
@@ -268,6 +268,13 @@ Annotation
 <th valign="top">
 
 Pattern
+
+
+
+</th>
+<th valign="top">
+
+ABAP CDS Annotation
 
 
 
@@ -288,6 +295,13 @@ PPP
 
 
 </td>
+<td valign="top">
+
+`Semantics.fiscal.yearPeriod`
+
+
+
+</td>
 </tr>
 <tr>
 <td valign="top">
@@ -300,6 +314,13 @@ PPP
 <td valign="top">
 
 d
+
+
+
+</td>
+<td valign="top">
+
+`?`
 
 
 
@@ -320,6 +341,13 @@ YYYYPPP
 
 
 </td>
+<td valign="top">
+
+`Semantics.fiscal.period`
+
+
+
+</td>
 </tr>
 <tr>
 <td valign="top">
@@ -332,6 +360,13 @@ YYYYPPP
 <td valign="top">
 
 Q
+
+
+
+</td>
+<td valign="top">
+
+`Semantics.fiscal.quarter`
 
 
 
@@ -352,6 +387,13 @@ WW
 
 
 </td>
+<td valign="top">
+
+`Semantics.fiscal.week`
+
+
+
+</td>
 </tr>
 <tr>
 <td valign="top">
@@ -364,6 +406,13 @@ WW
 <td valign="top">
 
 YYYY
+
+
+
+</td>
+<td valign="top">
+
+`Semantics.fiscal.year`
 
 
 
@@ -384,6 +433,13 @@ YYYYQ
 
 
 </td>
+<td valign="top">
+
+`Semantics.fiscal.yearQuarter`
+
+
+
+</td>
 </tr>
 <tr>
 <td valign="top">
@@ -400,12 +456,118 @@ YYYYWW
 
 
 </td>
+<td valign="top">
+
+`Semantics.fiscal.yearWeek`
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`?`
+
+
+
+</td>
+<td valign="top">
+
+ 
+
+
+
+</td>
+<td valign="top">
+
+`Semantics.fiscal.yearVariant`
+
+
+
+</td>
 </tr>
 </table>
 
 For example, `IsFiscalYearPeriod` indicates that the annotated `Edm.String` property is a string based on a fiscal date following the PPP pattern.
 
-Check out our live example in the flexible programming model explorer at [Field - Fiscal types](https://ui5.sap.com/test-https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/field/fieldFiscals).
+> ### Sample Code:  
+> XML Annotation
+> 
+> ```xml
+> <Annotations Target="sap.fe.manageitems.TechnicalTestingService.LineItems/fiscalYearPeriod">
+>   <Annotation Term="Common.IsFiscalYearPeriod" Bool="true"/>
+>   <Annotation Term="Common.Label" String="Fiscal Year Period"/>
+> </Annotations>
+> <Annotations Target="sap.fe.manageitems.TechnicalTestingService.LineItems/fiscalDayOfYear">
+>   <Annotation Term="Common.IsDayOfFiscalYear" Bool="true"/>
+>   <Annotation Term="Common.Label" String="Fiscal Day Of Year"/>
+> </Annotations>
+> <Annotations Target="sap.fe.manageitems.TechnicalTestingService.LineItems/fiscalPeriod">
+>   <Annotation Term="Common.IsFiscalPeriod" Bool="true"/>
+>   <Annotation Term="Common.Label" String="Fiscal Period"/>
+> </Annotations>
+> <Annotations Target="sap.fe.manageitems.TechnicalTestingService.LineItems/fiscalQuarter">
+>   <Annotation Term="Common.IsFiscalQuarter" Bool="true"/>
+>   <Annotation Term="Common.Label" String="Fiscal Quarter"/>
+> </Annotations>
+> <Annotations Target="sap.fe.manageitems.TechnicalTestingService.LineItems/fiscalWeek">
+>   <Annotation Term="Common.IsFiscalWeek" Bool="true"/>
+>   <Annotation Term="Common.Label" String="Fiscal Week"/>
+> </Annotations>
+> <Annotations Target="sap.fe.manageitems.TechnicalTestingService.LineItems/fiscalYear">
+>   <Annotation Term="Common.IsFiscalYear" Bool="true"/>
+>   <Annotation Term="Common.Label" String="Fiscal Year"/>
+> </Annotations>
+> <Annotations Target="sap.fe.manageitems.TechnicalTestingService.LineItems/fiscalYearQuarter">
+>   <Annotation Term="Common.IsFiscalYearQuarter" Bool="true"/>
+>   <Annotation Term="Common.IsDigitSequence" Bool="true"/>
+>   <Annotation Term="Common.Label" String="Fiscal Year Quarter"/>
+> </Annotations>
+> <Annotations Target="sap.fe.manageitems.TechnicalTestingService.LineItems/fiscalWeekYear">
+>   <Annotation Term="Common.IsFiscalYearWeek" Bool="true"/>
+>   <Annotation Term="Common.Label" String="Fiscal Week Year"/>
+> </Annotations>
+> ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> ```
+> DEFINE VIEW SalesOrderItemHistoryOvw as select from ... 
+> {
+>     ...
+>     
+>     @Semantics.fiscal.yearPeriod: true
+>     fiscalYearPeriod,
+>     
+>     @Semantics.fiscal.period: true
+>     fiscalPeriod,
+>     
+>     @Semantics.fiscal.year: true
+>     fiscalYear,
+>     
+>     ...   
+> }
+> 
+> ```
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> fiscalYearPeriod  : String     @title: 'Fiscal Year Period'   @Common.IsFiscalYearPeriod : true;
+> fiscalDayOfYear   : String     @title: 'Fiscal Day Of Year'   @Common.IsDayOfFiscalYear  : true;
+> fiscalPeriod      : String     @title: 'Fiscal Period'        @Common.IsFiscalPeriod     : true;
+> fiscalQuarter     : String(1)  @title: 'Fiscal Quarter'       @Common.IsFiscalQuarter    : true;
+> fiscalWeek        : String     @title: 'Fiscal Week'          @Common.IsFiscalWeek       : true;
+> fiscalYear        : String     @title: 'Fiscal Year'          @Common.IsFiscalYear       : true;
+> fiscalYearQuarter : String(5) @title: 'Fiscal Year Quarter' @Common.IsFiscalYearQuarter: true @Common.IsDigitSequence: true;
+> fiscalWeekYear    : String     @title: 'Fiscal Week Year'     @Common.IsFiscalYearWeek   : true;
+> 
+> ```
+
+Check out our live example in the flexible programming model explorer at [Field - Fiscal types](https://sapui5.hana.ondemand.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/fieldFiscals).
 
 
 

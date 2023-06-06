@@ -274,37 +274,6 @@ Semantic operators are enabled by default for the following fields:
 -   `Edm.DateTimeOffset`-based fields for which `FilterRestrictions.AllowedExpressions` is set to `SingleRange`.
 
 
-If applications need to switch off semantic date values to use only the date-range picker, they must set the `useSemanticDateRange` property to `false` in the manifest, as shown in the following sample code:
-
-> ### Sample Code:  
-> `useSemanticDateRange`
-> 
-> ```
-> {
->     "sap.ui5": {   
->         "routing": {
->             "targets": {
->                 "SalesOrderManageList": {
->                     "type": "Component",
->                     "id": "SalesOrderManageList",
->                     "name": "sap.fe.templates.ListReport",
->                     "options": {
->                         "settings": {
->                             "entitySet": "SalesOrderManage",
->                             "controlConfiguration": {
->                                 "@com.sap.vocabularies.UI.v1.SelectionFields": {
->                                     "useSemanticDateRange": false
->                                 }
->                             }
->                         }
->                     }
->                 }
->             }
->         }
->     }
-> }
-> ```
-
 You can set the `FilterRestrictions` to `SingleRange` as shown in the following sample code:
 
 > ### Sample Code:  
@@ -376,7 +345,7 @@ Extend the manifest for the filter field as follows to set a default value for a
 >          "filterFields": {
 >             "SalesOrderDate": { 
 >                "settings": {
->                   "defaultValues": [{operator: "YESTERDAY"}] 
+>                   "defaultValues": [{"operator": "YESTERDAY"}] 
 >                }
 >             }
 >          }

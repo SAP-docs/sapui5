@@ -83,14 +83,45 @@ Sample data:
 
 ## Additional Features in SAP Fiori Elements for OData V4
 
-The paste function in a table is also available if the table contains an inline action.
+The paste function is enabled by default on the object page if the creation mode is set to inline or empty rows. For more information, see [Enabling Inline Creation Mode or Empty Rows Mode for Table Entries](enabling-inline-creation-mode-or-empty-rows-mode-for-table-entries-cfb04f0.md).
 
  ![](images/Pasting_in_Excel_with_Inline_Actions_8173bd4.png) 
 
-Sample data:
+To generate an example with the expected format for pasting your data, export the table with the split cell mode:
 
  ![](images/Sample_Data_for_Pasting_in_Exccel_with_Inline_Action_b4c1a5d.png) 
 
 > ### Note:  
-> The user has to maintain the placeholder for inline actions in the spreadsheet application. The column fields can also be empty.
+> -   The user has to maintain the placeholder for inline actions in the spreadsheet application. The column fields can also be empty.
+> 
+> -   Properties annotated with a text arrangement set to text only cannot be pasted.
+
+The paste option can be disabled with the `enablePaste` parameter.
+
+> ### Sample Code:  
+> ```
+>                 "SalesOrderManageObjectPageEnableExport": {
+>                     "type": "Component",
+>                     "id": "SalesOrderManageObjectPage",
+>                     "name": "sap.fe.templates.ObjectPage",
+>                     "options": {
+>                         "settings": {
+>                             "controlConfiguration": {
+>                                 _Item/@com.sap.vocabularies.UI.v1.LineItem: {
+>                                     "tableSettings": {
+>                                         "type": "GridTable",
+>                                         "enablePaste": false,
+>                                         "condensedTableLayout": true,
+>                                         "personalization": {
+>                                             "column": true,
+>                                             "sort": false
+>                                         },
+>                                         "creationMode": {
+>                                             "name": "Inline"
+>                                         }
+>                                     }
+>                                 }
+>                             }
+> 
+> ```
 

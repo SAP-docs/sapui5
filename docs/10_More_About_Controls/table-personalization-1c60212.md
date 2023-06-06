@@ -4,6 +4,9 @@
 
 The simple concept of table personalization allows the user to personalize a table and to persist these settings.
 
+> ### Note:  
+> This concept has been replaced by a new, more generic one, and the documentation will soon be removed. For more information, see [Enablement of Personalization \(With Variant Management\)](enablement-of-personalization-with-variant-management-f280251.md).
+
 Personalization currently supports defining the order of columns and their visibility.
 
 

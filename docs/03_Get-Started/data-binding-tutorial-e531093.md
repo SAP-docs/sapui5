@@ -1,6 +1,6 @@
 <!-- loioe5310932a71f42daa41f3a6143efca9c -->
 
-# Data Binding
+# Data Binding Tutorial
 
 In this tutorial, we will explain the concepts of data binding in SAPUI5.
 

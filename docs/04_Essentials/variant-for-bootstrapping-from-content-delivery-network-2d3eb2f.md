@@ -28,7 +28,7 @@ The specific version allows you to select a particular fixed version for bootstr
 <script id="sap-ui-bootstrap"
     type="text/javascript"
     src="https://ui5.sap.com/[/pandoc/div/div/horizontalrule/horizontalrule/codeblock/strong/span
-     {""}) 1.112.0 (span]/resources/sap-ui-core.js"
+     {""}) 1.114.0 (span]/resources/sap-ui-core.js"
     data-sap-ui-theme="sap_fiori_3"
     data-sap-ui-async="true"
     data-sap-ui-libs="sap.m"></script>
@@ -49,7 +49,7 @@ The evergreen version allows you to automatically select the latest available pa
 ```html
 <script id="sap-ui-bootstrap"
     type="text/javascript"
-    src="https://ui5.sap.com/1.96/resources/sap-ui-core.js"
+    src="https://ui5.sap.com/1.108/resources/sap-ui-core.js"
     data-sap-ui-theme="sap_fiori_3"
     data-sap-ui-async="true"
     data-sap-ui-onInit="module:sap/ui/core/ComponentSupport"
@@ -67,7 +67,7 @@ The first segment of the URL after the host name is used to specify an evergreen
 
 When using the patch-level independent bootstrap you must use the `data-sap-ui-onInit` callback. Ideally, you refer to a module, for example `sap/ui/core/ComponentSupport` to bootstrap your Component; see [Declarative API for Initial Components](declarative-api-for-initial-components-82a0fce.md). You can also refer to a custom module.
 
-You can find the available versions with long-term maintenance status at [https://ui5.sap.com/versionoverview.html](https://ui5.sap.com/versionoverview.html)
+You can find the available versions with long-term maintenance status at [https://ui5.sap.com/versionoverview.html](https://ui5.sap.com/versionoverview.html).
 
 All long-term maintenance versions \>= 1.71 can be used as evergreen versions to bootstrap SAPUI5 applications.
 

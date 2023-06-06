@@ -129,7 +129,7 @@ This event is fired on the view/component cache in SAPUI5 routing which can be f
 **Related Information**  
 
 
-[Tutorial: Navigation and Routing](../03_Get-Started/navigation-and-routing-1b6dcd3.md "SAPUI5 comes with a powerful routing API that helps you control the state of your application efficiently. This tutorial will illustrate all major features and APIs related to navigation and routing in SAPUI5 apps by creating a simple and easy to understand mobile app. It represents a set of best practices for applying the navigation and routing features of SAPUI5 to your applications.")
+[Tutorial: Navigation and Routing](../03_Get-Started/navigation-and-routing-tutorial-1b6dcd3.md "SAPUI5 comes with a powerful routing API that helps you control the state of your application efficiently. This tutorial will illustrate all major features and APIs related to navigation and routing in SAPUI5 apps by creating a simple and easy to understand mobile app. It represents a set of best practices for applying the navigation and routing features of SAPUI5 to your applications.")
 
 [API Reference: `sap.ui.core.routing`](https://ui5.sap.com/#/api/sap.ui.core.routing)
 

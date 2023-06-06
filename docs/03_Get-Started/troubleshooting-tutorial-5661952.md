@@ -1,6 +1,6 @@
 <!-- loio5661952e72df471b932eddc10350c081 -->
 
-# Troubleshooting
+# Troubleshooting Tutorial
 
 In this tutorial, we will show you some tools that will help you if you run into problems with your SAPUI5 app.
 

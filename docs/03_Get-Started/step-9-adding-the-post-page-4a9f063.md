@@ -71,7 +71,7 @@ You can view and download all files in the *Samples* in the Demo Kit at [Testing
 }
 ```
 
-We have already used the `#/Posts/{postId}` hash in our tests and a view called the *Post* page, so we will now add a route and a target to the routing configuration of the descriptor with these patterns. It is simply defining a mandatory routing parameter `postId` that we fill with the ID from the model when navigating. The target configuration references a view called `Post` with a view level deeper than the home page. For more information, see the [Navigation and Routing](navigation-and-routing-1b6dcd3.md) tutorial.
+We have already used the `#/Posts/{postId}` hash in our tests and a view called the *Post* page, so we will now add a route and a target to the routing configuration of the descriptor with these patterns. It is simply defining a mandatory routing parameter `postId` that we fill with the ID from the model when navigating. The target configuration references a view called `Post` with a view level deeper than the home page. For more information, see the [Navigation and Routing Tutorial](navigation-and-routing-tutorial-1b6dcd3.md) tutorial.
 
 
 

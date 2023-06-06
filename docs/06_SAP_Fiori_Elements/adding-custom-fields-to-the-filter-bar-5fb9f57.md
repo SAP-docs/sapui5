@@ -46,7 +46,7 @@ You can add additional controls to the smart filter bar. The following methods a
 -   Use `restoreCustomAppStateData` to get the custom app state object you provided in `getCustomAppStateData` and set the corresponding values for your custom controls. For example, you call this method after returning from a navigation.
 
 
-The `onInitSmartFilterBar` method is optional. You use it if you need to bind a custom control to its own model or if you want value changes to trigger an action.
+The `onInitSmartFilterBarExtension` method can be used to set the default filter values or to bind a custom control on initialization of filter bar.
 
 The enhanced controller methods each call a corresponding extension method:
 
@@ -66,6 +66,82 @@ The enhanced controller methods each call a corresponding extension method:
 > The filterable fields are defined by metadata annotations. Use the extension option if the filter attribute can only be calculated by the client.
 
 For an example with step-by-step instructions, see [Adding Filterable Field to the Smart Filter Bar](adding-filterable-field-to-the-smart-filter-bar-3a51582.md).
+
+
+
+### Adding Custom Filter Fields to Exported File
+
+When exporting table content which includes filter fields, they are included by default. The custom filters, however, will show the values as passed to the query.
+
+For example, if user-entered value in the filter bar is `Cost=Low`, the filter value passed to the query is `OverallCost<1000`.
+
+To show the filter value as shown in the filter bar, such as `Cost=Low`, you can use the extension method `onBeforeExportTableExtension` in the controller extension. This extension method is supported for exporting tables on analytical list pages, list reports and object pages.
+
+> ### Sample Code:  
+> ```
+> sap.ui.define([
+> 	"sap/ui/export/util/Filter"
+> ], function (ExportFilter) {
+> 	"use strict";
+> 
+> 	return {
+> 		onInit: function () {
+> 			//...
+> 		},
+> 		/**
+> 		 * This extension method modifies the "Cost" filter in the exported file.
+> 		 * 
+> 		 * Removes the existing filter with label "OverallCost" and value "<=1000",
+> 		 * and adds a new filter with label "Cost" and value "Low"
+> 		 * 
+> 		 * @param oExportParams 
+> 		 * @returns 
+> 		 */
+> 		onBeforeExportTableExtension: function (oExportParams) {
+> 			if (!oExportParams.includeFilterSettings) {
+> 				return;
+> 			}
+> 			// Array of filters in the exported file
+> 			var aFilterSettings = oExportParams.filterSettings;
+> 			// Find the "Cost" combobox in smart filter bar
+>             var COST_COMBOBOX_ID = "STTA_MP::sap.suite.ui.generic.template.ListReport.view.ListReport::STTA_C_MP_Product--CustomFilter-OverallCost-combobox";
+> 			var oCostCombobox = sap.ui.getCore().byId(COST_COMBOBOX_ID);
+> 			
+> 			if (oCostCombobox && oCostCombobox.getValue()) {
+> 				var oRawValue, sNewCostValue;
+> 
+> 				for (var i = 0; i < aFilterSettings.length; i++) {
+> 					var oCurrentFilter = aFilterSettings[i];
+> 					// Find the filter with property "OverallCost"
+> 					if (oCurrentFilter.getProperty() === "OverallCost") {
+> 						//Store the raw value
+> 						oRawValue = oCurrentFilter.rawValues[0];
+> 						//Remove the current filter from the filters array
+> 						aFilterSettings.splice(i, 1);
+> 						break;
+> 					}
+> 				}
+> 				// Derive Cost category (Low / High) from the raw value
+> 				if (oRawValue.operator === "<=" && oRawValue.value === "1000") {
+> 					sNewCostValue = "Low";
+> 				} else {
+> 					sNewCostValue = "High";
+> 				}
+> 
+> 				//Create a new export filter with the new label and value
+> 				var sProperty = "OverallCost",
+> 					sLabel = "Cost",
+> 					oNewRawValue = {operator: "==", value: sNewCostValue},
+> 					oCostFilter = new ExportFilter(sProperty, oNewRawValue, sLabel);
+> 
+> 				//Add the updated filter to the filter settings array
+> 				aFilterSettings.push(oCostFilter);
+> 			}
+> 		}
+> 	};
+> });
+> 
+> ```
 
 
 

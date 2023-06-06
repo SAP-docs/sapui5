@@ -35,13 +35,13 @@ WebdriverIO \(WDIO\) is a hugely popular end-to-end testing framework. It can wo
 **Related Information**  
 
 
-[Tutorial: Testing](../03_Get-Started/testing-291c912.md "In this tutorial we will test application functionality with the testing tools that are delivered with SAPUI5. At different steps of this tutorial you will write tests using QUnit, OPA5, and the OData V2 mock server. Additionally, you will learn about testing strategies, Test Driven Development (TDD), and much more.")
+[Tutorial: Testing](../03_Get-Started/testing-tutorial-291c912.md "In this tutorial we will test application functionality with the testing tools that are delivered with SAPUI5. At different steps of this tutorial you will write tests using QUnit, OPA5, and the OData V2 mock server. Additionally, you will learn about testing strategies, Test Driven Development (TDD), and much more.")
 
 [Continuous Integration: Ensure Code Quality](../05_Developing_Apps/continuous-integration-ensure-code-quality-fe7a158.md "This section describes the setup of a development project where multiple developers work together on the same code.")
 
 [Integration Testing with One Page Acceptance Tests \(OPA5\)](integration-testing-with-one-page-acceptance-tests-opa5-2696ab5.md "OPA5 is an API for SAPUI5 controls. It hides asynchronicity and eases access to SAPUI5 elements. This makes OPA especially helpful for testing user interactions, integration with SAPUI5, navigation, and data binding.")
 
-[Tutorial: Mock Server](../03_Get-Started/odata-v2-mock-server-3a9728e.md "In this tutorial, we will explore some advanced features of the OData V2 mock server.")
+[Tutorial: Mock Server](../03_Get-Started/odata-v2-mock-server-tutorial-3a9728e.md "In this tutorial, we will explore some advanced features of the OData V2 mock server.")
 
 [wdi5 Home Page](https://ui5-community.github.io/wdi5)
 

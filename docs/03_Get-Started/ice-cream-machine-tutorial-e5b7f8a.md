@@ -1,6 +1,6 @@
 <!-- loioe5b7f8a93e4b432198869b3ae75981b0 -->
 
-# Ice Cream Machine
+# Ice Cream Machine Tutorial
 
 In this tutorial, we will show you how to use SAPUI5 controls like Generic Tiles, Micro Charts, and Process Flow.
 

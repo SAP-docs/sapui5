@@ -101,7 +101,7 @@ You have installed the *current* or *LTS* version of *Node.js* from [https://nod
         browsers: ["Chrome"]
         
         });
-      });
+      };
     ```
 
     Adapt the URL \(<code><i class="varname">&lt;server\&gt;</i>:<i class="varname">&lt;port\&gt;</i></code> to the SAPUI5 resources according to your installation. You can also use SAPUI5 from a content delivery network, see [Variant for Bootstrapping from Content Delivery Network](variant-for-bootstrapping-from-content-delivery-network-2d3eb2f.md).
