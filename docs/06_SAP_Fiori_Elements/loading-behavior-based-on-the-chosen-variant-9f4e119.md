@@ -6,7 +6,7 @@ Several factors affect the loading behavior of the content area based on the cho
 
 These factors are also considered in the following use cases:
 
--   There is no tile context during intial navigation from tiles.
+-   There is no tile context during initial navigation from tiles.
 
 -   There is no tile context, except for values from SAP Fiori launchpad user settings.
 
