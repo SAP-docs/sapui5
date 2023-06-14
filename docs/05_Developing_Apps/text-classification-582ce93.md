@@ -19,7 +19,7 @@ The complete line must have one of the following patterns \(text type is mandato
 
 We recommend that you assign a text type to each text. The text type indicates to which user interface element the text is related. You can use the following main text types:
 
--   For short texts \(less than 120 characters\) :
+-   For short texts \(up to 120 characters\) :
 
 
     <table>
