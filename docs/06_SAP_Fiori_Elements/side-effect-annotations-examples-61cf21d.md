@@ -518,20 +518,38 @@ You define side effects either in the \*`MPC_EXT` class or in the local annotati
 > 
 >     You can use side effects in the list report to refresh multiple lists from different entity sets using absolute paths as `TargetEntities` in the side effects annotation.
 > 
->     ```
->     <Annotations Target="namespace.to.action.ActionName">
->         <Annotation Term="Common.SideEffects">
->             <Record Type="Common.SideEffectsType">
->                 <PropertyValue Property="TargetEntities">
->                     <Collection>
->                         <NavigationPropertyPath>/namespace.to.EntityContainer/EntityType1</NavigationPropertyPath>
->                         <NavigationPropertyPath>/namespace.to.EntityContainer/EntityType2</NavigationPropertyPath>
->                     </Collection>
->                 </PropertyValue>
->             </Record>
->         </Annotation>
->     </Annotations>
->     ```
+>     > ### Sample Code:  
+>     > XML Annotation
+>     > 
+>     > ```
+>     ><Annotations Target="namespace.to.action.ActionName">
+>     >    <Annotation Term="Common.SideEffects">
+>     >        <Record Type="Common.SideEffectsType">
+>     >            <PropertyValue Property="TargetEntities">
+>     >                <Collection>
+>     >                    <NavigationPropertyPath>/namespace.to.EntityContainer/EntityType1</NavigationPropertyPath>
+>     >                    <NavigationPropertyPath>/namespace.to.EntityContainer/EntityType2</NavigationPropertyPath>
+>     >                </Collection>
+>     >            </PropertyValue>
+>     >        </Record>
+>     >    </Annotation>
+>     ></Annotations>
+>     > ```
+> 
+>     > ### Sample Code:  
+>     > CAP CDS Annotation
+>     > 
+>     > ```
+>     > 
+>     > annotate CA_OC_MANAGE_OR_ITEMS_SRV.IssueOutput with @(
+>     >     Common.SideEffects : {
+>     >         TargetEntities : [
+>     >             '/namespace.to.EntityContainer/EntityType1',
+>     >             '/namespace.to.EntityContainer/EntityType2'
+>     >         ]
+>     >     }
+>     > );
+>     > ```
 > 
 > -   Refresh the navigation target
 > 
