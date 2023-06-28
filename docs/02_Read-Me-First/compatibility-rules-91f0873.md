@@ -28,7 +28,7 @@ The following rules apply for introducing new APIs or making incompatible change
 **Patch release** \(x.yy.**zz**\): A new patch version only contains fixes to the existing implementation, but doesn't usually contain new features or incompatible API changes.
 
 > ### Note:  
-> Exceptions to these rules are possible, but only in very urgent cases such as security issues. Such exceptions are documented in the [Change Log](https://ui5.sap.com/#releasenotes).
+> Exceptions to these rules are possible, but only in very urgent cases such as security issues. Such exceptions are documented in the [Change Log](https://ui5.sap.com/releasenotes.html).
 
 
 
@@ -91,15 +91,14 @@ The following changes to existing APIs are incompatible, but **can be done in a 
 
 ## Inheritance
 
-Inheriting from SAPUI5 objects \(e.g. by calling `sap.ui.extend` on an existing control to add custom functionality\) may endanger the updatability of your code.
+Inheriting from SAPUI5 objects \(e.g. by calling `extend` on a control class to add custom functionality\) may endanger the updatability of your code.
 
 When overriding an SAPUI5 lifecycle method \(such as `init`, `exit`, `onBeforeRendering`, and `onAfterRendering`\), you must make sure that the super class implementation is called, for example like this:
 
 ```
 MyClass.prototype.onAfterRendering = function() {
-  SuperClass.prototype.onAfterRendering.apply(this);
-
-  // do your additional stuff AFTER calling super class
+  SuperClass.prototype.onAfterRendering.apply(this, arguments);
+  // ...
 }
 ```
 

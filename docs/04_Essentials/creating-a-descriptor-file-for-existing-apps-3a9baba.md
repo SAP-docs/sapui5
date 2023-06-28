@@ -152,7 +152,7 @@ Detailed description of the steps needed to create a descriptor V2 for applicati
 
     Open the `manifest.json` file and enter the values from the `Component.js` file as follows:
 
-    -   Replace the `<id>` placeholder with the the id / namespace value from the argument of `sap.ui.define` \(`"cust.emp.myleaverequests.Component"` in the example above\).
+    -   Replace the `<id>` placeholder with the id / namespace value from the argument of `sap.ui.define` \(`"cust.emp.myleaverequests.Component"` in the example above\).
 
     -   Replace the `<version>` placeholder with the `version` value \(`"1.2.6"` in the example above\).
 

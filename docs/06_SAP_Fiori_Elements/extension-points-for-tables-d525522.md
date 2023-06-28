@@ -5,9 +5,9 @@
 You can use extension points to enhance tables in SAP Fiori elements apps.
 
 > ### Caution:  
-> Use app extensions with caution and only if you cannot produce the required behavior by other means, such as manifest settings or annotations. To correctly integrate your app extension coding with SAP Fiori elements, use only the extensionAPI of SAP Fiori elements. For more information, see [Using the extensionAPI](using-the-extensionapi-bd2994b.md).
+> Use app extensions with caution and only if you cannot produce the required behavior by other means, such as manifest settings or annotations. To correctly integrate your app extension coding with SAP Fiori elements, use only the `extensionAPI` of SAP Fiori elements. For more information, see [Using the extensionAPI](using-the-extensionapi-bd2994b.md).
 > 
-> After you've created an app extension, its display \(for example, control placing, CSS\) and system behavior \(for example, model and binding usage, busy handling\) of the app extension lies within the application's responsibility. SAP Fiori elements provides support only for the official extensionAPI functions. Don't access or manipulate SAP Fiori elements' internal coding.
+> After you've created an app extension, its display \(for example, control placement and layout\) and system behavior \(for example, model and binding usage, busy handling\) lies within the application's responsibility. SAP Fiori elements provides support only for the official `extensionAPI` functions. Don't access or manipulate controls, properties, models, or other internal objects created by the SAP Fiori elements framework.
 
 
 
@@ -473,7 +473,7 @@ header
 </td>
 <td valign="top">
 
-any unicode string
+any Unicode string
 
 
 
@@ -733,9 +733,9 @@ The properties can be any that already exist in the annotations and that can be 
 
     If an error occurs while editing a custom column, the properties list is used to link the message to the column.
 
--   Export to spreadsheet
+-   Export to spreadsheet and PDF
 
-    Every property listed here will be exported into the spreadsheet. The basic export exports all properties in the same column, and the option *Split cells with multiple values* exports each property in a separate column. For more information, see [Using the Export Feature](using-the-export-feature-4bab6f2.md).
+    Every property listed here will be exported into the spreadsheet or PDF file. When you export to a spreadsheet, the basic export exports all properties in the same column, and the option *Split cells with multiple values* exports each property in a separate column. Custom columns without a properties list will not be exported. For more information, see [Using the Export Feature](using-the-export-feature-4bab6f2.md).
 
 
 

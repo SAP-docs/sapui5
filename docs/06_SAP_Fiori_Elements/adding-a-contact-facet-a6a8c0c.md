@@ -63,19 +63,6 @@ The facet annotation looks like this:
 > product;
 > ```
 
-> ### Sample Code:  
-> CAP CDS Annotation
-> 
-> ```
-> 
-> UI.Facets : {
->     $Type : 'UI.ReferenceFacet',
->     Label : 'Supplier',
->     Target : 'to_Supplier/@Communication.Contact',
-> },
-> 
-> ```
-
 The Contact annotation looks like this:
 
 > ### Sample Code:  
@@ -178,52 +165,6 @@ The Contact annotation looks like this:
 >   @Semantics.contact.photo: true
 >   EmployeePictureURL
 > }
-> 
-> ```
-
-> ### Sample Code:  
-> CAP CDS Annotation
-> 
-> ```
-> 
-> annotate SEPMRA_PROD_MAN.SEPMRA_I_EmployeeType @(
-> Communication.Contact : {
->     fn : FormattedName,
->     title : JobTitle,
->     org : CompanyName,
->     role : OrganizationRole,
->     n : {
->         given : FirstName,
->         additional : MiddleName,
->         surname : LastName,
->     },
->     photo : EmployeePictureURL,
->     tel : [
->         {
->             type : #fax,
->             uri : FaxNumber,
->         },
->         {
->             type : #cell,
->             uri : MobilePhoneNumber,
->         },
->         {
->             type : #work,
->             uri : PhoneNumber,
->         },
->         {
->             type : ,
->             address : FaxNumber,
->         },
->     ],
->     email : [
->         {
->             type : #work,
->             address : EmailAddress,
->         },
->     ],
-> },
-> );
 > 
 > ```
 

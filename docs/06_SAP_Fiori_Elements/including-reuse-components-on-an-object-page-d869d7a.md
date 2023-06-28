@@ -39,6 +39,8 @@ The reuse component instance cannot only receive information about the object th
 The following example embeds two reuse components:
 
 > ### Sample Code:  
+> `manifest.json`
+> 
 > ```
 > ...   
 >  "sap.ui.generic.app": { 
@@ -117,9 +119,56 @@ If the reuse component uses its own OData service, make sure you declare it as a
 > ### Note:  
 > SAP Fiori elements for OData V4 is compatible with freestyle reuse components, but incompatible with SAP Fiori elements for OData V2 reuse components.
 
-The following example embeds two reuse components:
+The following example embeds one reuse component:
 
 > ### Sample Code:  
+> `manifest.json`
+> 
+> ```
+> {
+>     "sap.ui5": {
+>         "routing": {
+>             "routes": [
+>                 {
+>                     "pattern": "myEntitySet({key}):?query:",
+>                     "name": "myObjectPage",
+>                     "target": "myObjectPage"                }
+>             ],
+>             "targets": {
+>                 "myObjectPage": {
+>                     "options": {
+>                         "settings": {
+>                             "content": {
+>                                 "body": {
+>                                     "sections": {
+>                                         "customSectionReuse": {
+>                                             "title": "{i18n>customSectionReuse}",
+>                                             "embeddedComponent": {
+>                                                 "name": "path.to.reuseComponent",
+>                                                 "settings": {
+>                                                     "exampleSettings": "{somePropertyName}"                                                }
+>                                             },
+>                                             "position": {
+>                                                 "placement": "After",
+>                                                 "anchor": "someOtherSection"                                            }
+>                                         }
+>                                     }
+>                                 }
+>                             }
+>                         }
+>                     }
+>                 }
+>             }
+>         }
+>     }
+> }
+> ```
+
+We recommend using the above example. If you prefer, however, you can also add all settings directly using SAPUI5.
+
+> ### Sample Code:  
+> `manifest.json`
+> 
 > ```
 > {
 > 	"sap.ui5": {

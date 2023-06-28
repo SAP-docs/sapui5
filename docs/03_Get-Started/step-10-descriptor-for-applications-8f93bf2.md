@@ -79,7 +79,7 @@ You can view and download all files at [Walkthrough - Step 10](https://ui5.sap.c
 ```
 
 > ### Note:  
-> In this tutorial, we only introduce the most important settings and parameters of the descriptor file. In SAP Web IDE, you may get validation errors because some settings are missing - you can ignore those in this context.
+> In this tutorial, we only introduce the most important settings and parameters of the descriptor file. In some development environments you may get validation errors because some settings are missing - you can ignore those in this context.
 
 The content of the `manifest.json` file is a configuration object in JSON format that contains all global application settings and parameters. The manifest file is called the descriptor for applications, components, and libraries and is also referred to as “descriptor” or “app descriptor” when used for applications. It is stored in the `webapp` folder and read by SAPUI5 to instantiate the component. There are three important sections defined by namespaces in the `manifest.json` file:
 

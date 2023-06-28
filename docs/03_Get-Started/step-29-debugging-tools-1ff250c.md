@@ -92,7 +92,7 @@ This makes debugging harder because the code is a lot less readable. You can loa
 
  ![Technical Information Dialog](images/Technical_Information_Dialog_SAPUI5_8cec8a2.png "Technical information dialog ") 
 
-For a more detailed explanation of the SAPUI5 support tools, go through the [Troubleshooting](troubleshooting-5661952.md) tutorial.
+For a more detailed explanation of the SAPUI5 support tools, go through the [Troubleshooting Tutorial](troubleshooting-tutorial-5661952.md) tutorial.
 
 If you're stuck and need help for some development task, you can also post a question in the SAPUI5-related forums, for example in the [SAP Community](https://www.sap.com/community/topic/ui5.html) or on [Stack Overflow](https://stackoverflow.com/search?q=sapui5).
 

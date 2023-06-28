@@ -24,7 +24,7 @@ If you want to export the "module value" of an AMD module under a global name, y
     > The resulting namespace might not have the expected result if the AMD module name contains dots!
 
 
-In control and class modules, you should not use global variables at all. When you derive a custom control from an existing superclass via the the `extend` method, the resulting subclass is returned.
+In control and class modules, you should not use global variables at all. When you derive a custom control from an existing superclass via the `extend` method, the resulting subclass is returned.
 
 You can store the return value of the extend function in a local variable, make changes to the prototype and then return this variable as the modules return value.
 

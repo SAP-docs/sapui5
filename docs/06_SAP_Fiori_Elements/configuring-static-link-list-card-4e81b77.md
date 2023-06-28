@@ -8,9 +8,6 @@ Lets you display static data \(static links and images/icons\) in the form of li
 
 You can set the `listFlavor` property in the card settings to display information in standard link list type or as a carousel link list type.
 
-> ### Note:  
-> To add annotations, use the SAP WebIDE annotation modular or code editor. For more information, see [Building an App](building-an-app-9834a0a.md).
-
 
 
 1.  Configure card `title`, `subtitle`, and `listFlavor`.

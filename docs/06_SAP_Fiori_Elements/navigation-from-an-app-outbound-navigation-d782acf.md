@@ -214,7 +214,7 @@ To enable intent-based navigation, you must associate a semantic object. Navigat
     >     },
     > ```
 
-    For examples of how to use the `DataFieldWithIntentBasedNavigation` annotation, see [Form Facet](form-facet-ebe05d5.md) and [Adding Actions to Tables](adding-actions-to-tables-b623e0b.md).
+    For examples of how to use the `DataFieldWithIntentBasedNavigation` annotation, see [Form Facet](form-facet-ff0ae0b.md) and [Adding Actions to Tables](adding-actions-to-tables-b623e0b.md).
 
 
 **Using a Button**
@@ -273,7 +273,7 @@ If `RequiresContext` is true, then the button is disabled until a selection is m
 > XML Annotation
 > 
 > ```xml
-> <<Record Type="UI.DataFieldForIntentBasedNavigation">
+> <Record Type="UI.DataFieldForIntentBasedNavigation">
 >    <PropertyValue Property="SemanticObject" String="EPMProduct"/>
 >    <PropertyValue Property="Action" String="manage_st"/>
 >    <PropertyValue Property="Label" String="IBNWithContext"/>
@@ -369,20 +369,6 @@ The properties marked with the `PersonalData.IsPotentiallySensitive` annotation 
 >   @Semantics.personalData.isPotentiallySensitive: true
 >   CreditCardNumber;
 > }
-> ```
-
-> ### Sample Code:  
-> CAP CDS Annotation
-> 
-> ```
-> annotate ZEPM_C_User.C_UserDetailsType with {
->     @PersonalData.IsPotentiallySensitive
->     CreditCardNumber
-> };
-> annotate ZEPM_C_SALESORDERITEMQUERY_CDS.ZEPM_C_SALESORDERITEMKPIResult with {
-> 	@UI.ExcludeFromNavigationContext
-> 	BusinessPartner
-> };
 > ```
 
 

@@ -490,7 +490,7 @@ Table settings
 </td>
 <td valign="top">
 
-  [CMD\] + [,\]  
+  [Ctrl\] + [,\]  
 
 
 

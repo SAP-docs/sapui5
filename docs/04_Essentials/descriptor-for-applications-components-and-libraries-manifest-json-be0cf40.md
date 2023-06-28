@@ -483,7 +483,7 @@ Version 20
 <tr>
 <td valign="top">
 
-Version 21
+ 
 
 
 
@@ -1170,6 +1170,121 @@ Version 50
 
 </td>
 </tr>
+<tr>
+<td valign="top">
+
+Version 51
+
+
+
+</td>
+<td valign="top">
+
+\>=1.110
+
+
+
+</td>
+<td valign="top">
+
+1.50.0
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Version 52
+
+
+
+</td>
+<td valign="top">
+
+\>=1.111
+
+
+
+</td>
+<td valign="top">
+
+1.51.0
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Version 53
+
+
+
+</td>
+<td valign="top">
+
+\>=1.112
+
+
+
+</td>
+<td valign="top">
+
+1.52.0
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Version 54
+
+
+
+</td>
+<td valign="top">
+
+\>=1.113
+
+
+
+</td>
+<td valign="top">
+
+1.53.0
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Version 55
+
+
+
+</td>
+<td valign="top">
+
+\>=1.114
+
+
+
+</td>
+<td valign="top">
+
+1.54.0
+
+
+
+</td>
+</tr>
 </table>
 
 For more information on the new fields introduced in each version, check out [Migration Information for Upgrading the Descriptor File](migration-information-for-upgrading-the-descriptor-file-a110f76.md)
@@ -1368,6 +1483,22 @@ Description
 <td valign="top">
 
 Start page of your app, if available
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `$schema` 
+
+
+
+</td>
+<td valign="top">
+
+JSON schema URI
 
 
 
@@ -2752,7 +2883,7 @@ Current version of the `manifest.json`
 ```
 
 {
-    "_version": "1.49.0",
+    "_version": "1.54.0",
  
     "start_url": "index.html",
  
@@ -3004,7 +3135,7 @@ Current version of the `manifest.json`
             }]
         },
         "dependencies": {
-            "minUI5Version": "1.109.0",
+            "minUI5Version": "1.114.0",
             "libs": {
                 "sap.m": {
                     "minVersion": "1.34.0"
@@ -3093,8 +3224,8 @@ Current version of the `manifest.json`
                 "shortcut": "Ctrl+S"
             }
         }
-	    },
- 
+    },
+
     "sap.platform.abap": {
         "uri": "/sap/bc/ui5_ui5/sap/appName",
         "uriNwbc": ""

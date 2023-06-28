@@ -10,9 +10,6 @@ You can set the `listFlavor` property in the card settings to display informatio
 
 Additionally, dynamic link list card supports contact annotation as default annotation without qualifier to enable quick view information.
 
-> ### Note:  
-> To add annotations, use the SAP WebIDE annotation modular or code editor. For more information, see [Building an App](building-an-app-9834a0a.md).
-
 
 
 1.  Configure descriptor settings

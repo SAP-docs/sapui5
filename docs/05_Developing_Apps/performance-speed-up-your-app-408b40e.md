@@ -151,9 +151,11 @@ Component.create({
 
 If the library preloads are disabled or not found, every module is loaded separately by an own request. Depending on the server and network infrastructure, this can take a lot of time. Except for debugging reasons, it is always recommended to make sure library preloads are used. Fortunately, the library preloads are active by default if the files are present.
 
-In some cases it may happen that preloads are disabled:
+In some cases it may happen that preloads are not enabled, or that modules of some libraries are still loaded separately:
 
--   The `data-sap-ui-preload` bootstrap attribute is empty or set to an invalid value. The attribute is optional and only necessary if the loading behavior \(sync / async\) needs to be overwritten manually.
+-   A subset of libraries in the `sap.ui5/dependencies/libs` section of the `manifest.json` is declared with the `lazy` loading option, but these `lazy` libraries are not preloaded manually before their modules are used. For more information, see [Descriptor Dependencies to Libraries and Components](../04_Essentials/descriptor-dependencies-to-libraries-and-components-8521ad1.md).
+
+-   Neither `sap-ui-async` nor `data-sap-ui-preload` is enabled in the bootstrap configuration options. Note that if `sap-ui-async` is set to `true`, the value of the preload configuration is automatically set to `"async"`. If `sap-ui-async` cannot be enabled yet, the `"async"` value has to be applied in the `sap-ui-preload` bootstrap option manually in order to enable preloading libraries asynchronously.
 
 -   Debug sources are enabled in the bootstrap \(`data-sap-ui-debug=true`\) or via the URL \(`sap-ui-debug=true`\).
 
@@ -333,7 +335,7 @@ You can further optimize your code by doing the following:
 
     Visit the [OData V4 Model](../04_Essentials/odata-v4-model-5de13cf.md) documentation and ensure that all required features are available.
 
-    For a quick start, follow the [OData V4](../03_Get-Started/odata-v4-bcdbde6.md) tutorial.
+    For a quick start, follow the [OData V4 Tutorial](../03_Get-Started/odata-v4-tutorial-bcdbde6.md) tutorial.
 
 -   If you use data binding with an OData V2 service as a back end, you should consider switching your OData model to our more updated OData V2 model. For more information, see [OData V2 Model](../04_Essentials/odata-v2-model-6c47b2b.md#loio6c47b2b39db9404582994070ec3d57a2).
 

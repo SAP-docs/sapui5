@@ -77,7 +77,7 @@ You define side effects either in the \*`MPC_EXT` class or in the local annotati
 >     >     lo_collection->create_simple_value( )->set_property_path( 'PurchasingOrganization' )  ##NO_TEXT.
 >     > ```
 > 
-> -   User changes a source property and the system refreshes the price
+> -   User changes the source properties and the system refreshes the price
 > 
 >     > ### Sample Code:  
 >     > XML Annotation
@@ -90,7 +90,7 @@ You define side effects either in the \*`MPC_EXT` class or in the local annotati
 >     >                 <Collection>
 >     >                     <PropertyPath>Amount</PropertyPath>
 >     >                     <PropertyPath>Discount</PropertyPath>
->     >                     <PropertyPath>Product</PropertyPath>
+>     >                     <PropertyPath>ProductDetail/DeliveryLocations</PropertyPath>// Source property poinnting to multi input field
 >     >                 </Collection>
 >     >             </PropertyValue>
 >     >             <PropertyValue Property="TargetProperties">
@@ -101,26 +101,6 @@ You define side effects either in the \*`MPC_EXT` class or in the local annotati
 >     >         </Record>
 >     >     </Annotation>
 >     > </Annotations>
->     > ```
-> 
->     > ### Sample Code:  
->     > CAP CDS Annotation
->     > 
->     > ```
->     > 
->     > annotate NAMESPACE.ENTITYTYPE @(
->     >     Common.SideEffects #PriceChanged : {
->     >         SourceProperties : [
->     >             Amount,
->     >             Discount,
->     >             Product
->     >         ],
->     >         TargetProperties : [
->     >             Price
->     >         ],
->     >         EffectTypes : #ValueChange
->     >     }
->     > );
 >     > ```
 > 
 > -   User changes the supplier and the system refreshes the 1:1 navigation `toSupplier`
@@ -147,24 +127,6 @@ You define side effects either in the \*`MPC_EXT` class or in the local annotati
 >     > </Annotations>
 >     > ```
 > 
->     > ### Sample Code:  
->     > CAP CDS Annotation
->     > 
->     > ```
->     > 
->     > annotate NAMESPACE.ENTITYTYPE @(
->     >     Common.SideEffects #SupplierChanged : {
->     >         SourceProperties : [
->     >             Supplier
->     >         ],
->     >         TargetEntities : [
->     >             toSupplier
->     >         ],
->     >         EffectTypes : #ValueChange
->     >     }
->     > );
->     > ```
-> 
 > -   User changes a single property, and the system reads the whole entity due to the field control
 > 
 >     > ### Sample Code:  
@@ -187,24 +149,6 @@ You define side effects either in the \*`MPC_EXT` class or in the local annotati
 >     >         </Record>
 >     >     </Annotation>
 >     > </Annotations>
->     > ```
-> 
->     > ### Sample Code:  
->     > CAP CDS Annotation
->     > 
->     > ```
->     > 
->     > annotate NAMESPACE.ENTITYTYPE @(
->     >     Common.SideEffects #PriceChanged : {
->     >         SourceProperties : [
->     >             Status
->     >         ],
->     >         TargetEntities : [
->     >             ...
->     >         ],
->     >         EffectTypes : #FieldControlChange
->     >     }
->     > );
 >     > ```
 > 
 > -   Side effect on structural changes of a 1:n association
@@ -233,24 +177,6 @@ You define side effects either in the \*`MPC_EXT` class or in the local annotati
 >     > </Annotations>
 >     > ```
 > 
->     > ### Sample Code:  
->     > CAP CDS Annotation
->     > 
->     > ```
->     > 
->     > annotate NAMESPACE.ENTITYTYPE @(
->     >     Common.SideEffects #ReactOnItemCreationOrDeletion : {
->     >         SourceEntities : [
->     >             toSalesOrderItems
->     >         ],
->     >         EffectTypes : #ValueChange,
->     >         TargetProperties : [
->     >             OverallAmount
->     >         ]
->     >     }
->     > );
->     > ```
-> 
 > -   Side effect after executing an action
 > 
 >     After executing an action, but only if the returned entity is different from the entity for which the action was called, the related list binding is refreshed. Therefore, you need to define a side effect annotation for those cases in which any other entity or an association might be changed due to an action call. The target definition’s property path that may cover both properties and entities has to express a binding parameter name referring to the entity to which the action is bound.
@@ -273,21 +199,6 @@ You define side effects either in the \*`MPC_EXT` class or in the local annotati
 >     >         </Record>
 >     >     </Annotation>
 >     > </Annotations>
->     > ```
-> 
->     > ### Sample Code:  
->     > CAP CDS Annotation
->     > 
->     > ```
->     > 
->     > annotate CA_OC_MANAGE_OR_ITEMS_SRV.IssueOutput with @(
->     >     Common.SideEffects : {
->     >         EffectTypes : #ValueChange,
->     >         TargetProperties : [
->     >             _it.to_OutputRequestItemStatus.OutputRequestItemStatus_Text
->     >         ]
->     >     }
->     > );
 >     > ```
 > 
 > -   Refresh the navigation target
@@ -340,24 +251,6 @@ You define side effects either in the \*`MPC_EXT` class or in the local annotati
 >     >         </Record>
 >     >     </Annotation>
 >     > </Annotations>
->     > ```
-> 
->     > ### Sample Code:  
->     > CAP CDS Annotation
->     > 
->     > ```
->     > 
->     > annotate STTA_SALES_ORDER_WD_20_SRV.C_STTA_SalesOrderItem_WD_20Type @(
->     >     Common.SideEffects #TaxAmountChanged : {
->     >         SourceProperties : [
->     >             TaxAmount
->     >         ],
->     >         TargetEntities : [
->     >             to_SalesOrder
->     >         ],
->     >         EffectTypes : #ValueChange
->     >     }
->     > );
 >     > ```
 > 
 > -   Side effect on 1:1 associated entity set’s property

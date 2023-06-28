@@ -4,8 +4,6 @@
 
 Provides a list of themes and their names.
 
-
-
 The following themes are available in SAPUI5:
 
 ****

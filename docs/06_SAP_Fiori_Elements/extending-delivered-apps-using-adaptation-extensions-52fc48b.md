@@ -2,7 +2,7 @@
 
 # Extending Delivered Apps Using Adaptation Extensions
 
-You can extend delivered apps based on SAP Fiori elements by using the SAPUI5 Visual Editor in SAP Web IDE.
+You can extend delivered apps based on SAP Fiori elements by using [SAP Fiori tools](https://help.sap.com/viewer/product/SAP_FIORI_tools/Latest/en-US), which is a set of extensions for SAP Business Application Studio and Visual Studio Code.
 
 
 
@@ -11,17 +11,14 @@ You can extend delivered apps based on SAP Fiori elements by using the SAPUI5 Vi
 > ### Note:  
 > This topic is currently only applicable to SAP Fiori elements for OData V2.
 
-You can implement extension functions as part of a UI adaptation project by using the SAPUI5 Visual Editor in SAP Web IDE. The adaptation project references the applications delivered by SAP as base or parent applications.
+You can implement extension functions as part of a UI adaptation project by using the SAP Business Application Studio and Visual Studio Code. The adaptation project references the applications delivered by SAP as base or parent applications.
 
 > ### Note:  
 > This procedure is relevant only for list reports, object pages, overview pages, and analytical list pages.
 > 
-> The flexible column layout is not supported by the SAPUI5 Visual Editor in SAP Web IDE.
+> The flexible column layout is not supported by the SAP Business Application Studio and Visual Studio Code.
 
-> ### Caution:  
-> SAP Web IDE is no longer available via SAP Business Technology Platform trial accounts. Any references to SAP Web IDE in this documentation are only relevant for you if you have access to SAP Web IDE through a productive SAP BTP account. Please consider SAP Business Application Studio as an alternative. See [App Development Using SAP Business Application Studio](../05_Developing_Apps/app-development-using-sap-business-application-studio-6bbad66.md).
-
-You can try the adaptation extensions by creating an adaptation projecs using [Create the Adaptation Project](https://help.sap.com/viewer/DRAFT/bcbb716c051b427cbe8ec7fe8362c9e5/DEV2/en-US/ff97fe714edf42b78a1cbfc2996a0f25.html).
+You can try the adaptation extensions by creating an adaptation projecs using [Extending an SAP Fiori Application](https://help.sap.com/docs/bas/developing-sap-fiori-app-in-sap-business-application-studio/extending-sap-fiori-application).
 
 You can use adaptation extensions for these extension points:
 
@@ -133,27 +130,6 @@ You can use adaptation extensions for these extension points:
         -   `provideCustomParameter`
 
 
-
-
-In SAP Web IDE, here's what you do:
-
-
-
-## Procedure
-
-1.  Choose *File* \> *New* \> *Adaptation Project*.
-
-2.  Enter the project name and the application title and choose *Next*.
-
-3.  Select the system and the base application. Make sure you deselect *Enable Safe Mode* and choose *Finish*.
-
-    The system generates the adaptation project in your workspace.
-
-4.  Right-click your adaptation project and choose SAPUI5*Visual Editor*.
-
-    The system starts the editor. You can make your adaptations on the *Edit* tab.
-
-    For information about adapting the UI in SAP Web IDE, choose *Help* \> *Documentation* \> *Developing* \> *Developing Web Applications* \> *SAPUI5 Visual Editor*.
 
 
 **Related Information**  

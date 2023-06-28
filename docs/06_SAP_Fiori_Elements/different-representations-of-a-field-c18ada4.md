@@ -318,7 +318,7 @@ If the field is associated with a semantic object, it is rendered as a link - pr
 > 
 > ```
 > SoldToParty                   : String(10)                            @(Common : {
-> SemanticObject                  : ‘supplier’
+> SemanticObject                  : 'supplier'
 > });
 > 
 > ```
@@ -436,6 +436,84 @@ Application developers can specify links for phone numbers or email addresses by
     <Annotation Term="Communication.IsEmailAddress" Bool="true"/>
 </Annotations>
 ```
+
+
+
+### Basic Links
+
+Application developers can display basic link with an optional icon or image using `DataFieldWithUrl`.
+
+> ### Sample Code:  
+> XML Annotation
+> 
+> ```
+> <Annotation Term="UI.FieldGroup" Qualifier="DataFieldUrl">
+>     <Record Type="UI.FieldGroupType">
+>         <PropertyValue Property="Data">
+>             <Collection>
+>                 <Record Type="UI.DataFieldWithUrl">
+>                     <PropertyValue Property="Url" String="www.sap.com"/>
+>                     <PropertyValue Property="Value" String="This is an URL"/>
+>                     <PropertyValue Property="IconUrl" String="sap-icon://arrow-right"/>
+>                 </Record>
+>                 <Record Type="UI.DataFieldWithUrl">
+>                     <PropertyValue Property="Url" String="www.sap.com"/>
+>                     <PropertyValue Property="Value" String=""/>
+>                     <PropertyValue Property="IconUrl" Path="oneIcon"/>
+>                 </Record>
+>                 <Record Type="UI.DataFieldWithUrl">
+>                     <PropertyValue Property="Url" Path="oneUrl"/>
+>                     <PropertyValue Property="Value" String="This is an URL three"/>
+>                     <PropertyValue Property="IconUrl" String="sap-icon://arrow-right"/>
+>                 </Record>
+>             </Collection>
+>         </PropertyValue>
+>     </Record>
+> </Annotation>
+> ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> ```
+> @UI.fieldGroup: [
+>   {
+>     iconUrl: 'sap-icon://arrow-right'
+>     type: #WITH_URL,
+>     position: 1 ,
+>     qualifier: 'DataFieldUrl'
+>   },
+>   {
+>     url: 'ONEURL',
+>     value: 'ONEURL',
+>     type: #WITH_URL,
+>     position: 2 ,
+>     qualifier: 'DataFieldUrl'
+>   }
+> ]
+> 
+> ```
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> UI.FieldGroup #DataFieldUrl: {
+> Data : [{
+>               $Type : 'UI.DataFieldWithUrl',
+>               Url   : 'www.sap.com',
+>               Value : 'This is an URL',
+>               IconUrl: 'sap-icon://arrow-right',
+>        },
+>        {
+>               $Type  : 'UI.DataFieldWithUrl',
+>               Url    : oneDisplay,
+>               Value  : oneUrl,
+>               IconUrl: oneIcon
+> }
+> }]
+> 
+> ```
 
 
 
@@ -686,8 +764,17 @@ For more information, see [Micro Chart Facet](micro-chart-facet-e219fd0.md) and 
 
 SAP Fiori elements allows you to enable stream support so that users can upload and download files. You can add `Edm.Stream` fields \(file upload\) to a form on the object page. For more information, see [Enabling Stream Support](enabling-stream-support-b236d32.md).
 
--   **
 
+
+<a name="loioc18ada4bc56e427a9a2df2d1898f28a5__section_ajd_pfs_gxb"/>
+
+## Representation as a Timestamp with Timezone Information
+
+You can display a timestamp together with a timezone.
+
+ ![](images/Timestamp_with_Timezone_cb85f47.png) 
+
+For more information, see the section *Date Picker and Date/Time Picker* in [Field Help](field-help-a5608ea.md).
 
 **Related Information**  
 

@@ -16,7 +16,7 @@ Dialog controls are used to interact with the user in two main ways. Popups, mes
 
 The behavior of controls based on Dialog/Popup \(`role="dialog"`\) changes depending on their `aria-labelledby` attribute.
 
-If the the control has an `aria-labelledby` attribute, the screen reader will announce the following elements:
+If the control has an `aria-labelledby` attribute, the screen reader will announce the following elements:
 
 -   The provided label
 
@@ -25,7 +25,7 @@ If the the control has an `aria-labelledby` attribute, the screen reader will an
 -   The currently focused element
 
 
-If the the control does NOT have an `aria-labelledby` attribute, the screen reader will announce the following elements:
+If the control does NOT have an `aria-labelledby` attribute, the screen reader will announce the following elements:
 
 -   All elements in the dialog \(regardless if interactive or not\)
 

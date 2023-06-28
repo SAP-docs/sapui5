@@ -374,3 +374,9 @@ To choose a tab visualization, you must use the `sectionLayout` property in the 
 > }
 > ```
 
+
+
+### Responsive Column Layout
+
+We're using the responsive column layout on the object page, which means that form data is spread across six columns by default when opened on extra large screens to improve content density. The number of columns adapts automatically, depending on the screen size.
+

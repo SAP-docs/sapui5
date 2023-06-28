@@ -82,7 +82,7 @@ View:
 <mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="my.own.controller">
 	<Page>
             
-		<!—only the initially needed display panel -->
+		<!-- only the initially needed display panel -->
 		<Panel id="displayPanel" headerText="Display Data">
 			<Table...>
 		</Panel>

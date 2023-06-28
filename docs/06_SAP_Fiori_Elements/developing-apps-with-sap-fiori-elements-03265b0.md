@@ -8,7 +8,7 @@ SAP Fiori elements provides designs for UI patterns and predefined floorplans fo
 
 
 
-The following image contains links to product documentation as well as to other Web sites.
+The following image contains links to product documentation as well as to other websites.
 
 ![](images/ImageMapEntryPage_dc8d2b1.png)
 

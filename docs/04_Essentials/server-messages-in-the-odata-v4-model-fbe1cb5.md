@@ -95,7 +95,7 @@ language-dependent message text
 <td valign="top" rowspan="2">
 
 -   path to the message target
--   `target` and `additionalTargets` are both mapped to the `sap.ui.core.message.Message.target` collection
+-   `target` and `additionalTargets` are both mapped to the transition message \(true\)`sap.ui.core.message.Message.target` collection
 
 
 
@@ -193,9 +193,9 @@ End user messages contain the following information:
 
 -   `technicalDetails` - technical details of the message
 
--   `transition` - specifies a message as a state \(false\) or a transition message \(true\)
+-   `transition`
 
--   `numericSeverity` – classification of end user messages; allowed values: 1 \(success\), 2 \(info\), 3 \(warning\), 4 \(error\); `numericSeverity` is mapped to the specific `sap.ui.core.MessageType`
+-   `numericSeverity` - specifies a m – classification of end user messages; allowed values: 1 \(success\), 2 \(info\), 3 \(warning\), 4 \(error\); `numericSeverity` is mapped to the specific `sap.ui.core.MessageType`
 
 -   `longtextUrl` – optional; is omitted if there is no long text available for the corresponding message.
 
@@ -450,7 +450,7 @@ For bound messages, `longtextUrl` can be a relative or absolute path. Relative p
 
 ## Lifecycle Management for State Messages
 
-The lifecycle management for state messages is optimized for a specific orchestration with the server. When a message is requested, the OData V4 server returns all bound messages for the respective entity and its subentities within the same business object. The business object is defined by the first path segment.
+The lifecycle management for state messages is optimized for a specific orchestration with the server. When messages are selected, the OData V4 server returns all bound messages for the respective entity and its subentities within the same business object. The business object is defined by the first path segment.
 
 The following example uses a sales order with items and related products:
 
@@ -461,7 +461,7 @@ The following example uses a sales order with items and related products:
 -   A `GET` request for the product related to an item using the deep path `/SalesOrder(´0815´)/_Items(´010´)/_Product` will not return any bound messages.
 
 
-The OData V4 model checks whether the response contains the message property and removes all previous bound state messages from the message model if their target paths start with the path of the entity.
+The OData V4 model checks whether the response contains the `message` property and removes all previous bound state messages from the message model if their target paths start with the path of the entity.
 
 This concept has the following consequences:
 
@@ -472,6 +472,8 @@ This concept has the following consequences:
 -   Binding entities outside the business object with the deep path means that no messages will be retrieved for this entity. Using the binding `/SalesOrder(´0815´)/_Items(´010´)/_Product` to display product information of item `010`, for example, will not return any product-specific bound message.
 
 -   As a consequence, it must also **not** be possible to change the entity that is bound with a path that starts with a different business object. If, for example, product information needs to be changed, we recommended to use the canonical path to bind the product assigned to item `010` to achieve that the server sends the bound messages of the product.
+
+-   The message property has to be requested with the main object of the object page. The message property must not be part of the $select of list bindings. The state messages of items are returned with the state messages of the main object. Reading state messages again when reading items would cause an issue, as only state messages for read items are returned and the model cannot know whether state messages for other items are still valid.
 
 
 > ### Note:  
@@ -620,7 +622,7 @@ The attribute `technicalDetails.originalMessage` of the message in the message m
 
 The attribute `technicalDetails.httpStatus` of an error message in the message model provides the numerical HTTP status code of the corresponding back-end request that failed.
 
--   In case of a 412 \("Precondition Failed"\) status code, additionally `technicalDetails.isConcurrentModification` is set to `true`, as in the case of  [sap.ui.model.odata.v4.Context\#delete](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.Context/methods/delete), which also uses this flag for the error instance that is used to reject its returned promise.
+-   In case of a 412 \("Precondition Failed"\) status code, either the functionality described in [Strict Handling](odata-operations-b54f789.md#loiob54f7895b7594c61a83fa7257fa9d13f__section_SH) takes effect, or `technicalDetails.isConcurrentModification` is set to `true`. An example of the latter is  [sap.ui.model.odata.v4.Context\#delete](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.Context/methods/delete), which also uses this flag for the error instance that is used to reject its returned promise.
 -   In case of a 503 \("Service Unavailable"\) status code, `technicalDetails.retryAfter` is set to an absolute `Date` value corresponding to the value of the ["Retry-After" HTTP response header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Retry-After), no matter if that header value is an HTTP date or a delay in seconds.
 
 

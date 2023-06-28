@@ -51,7 +51,7 @@ sap.ui.define([
 				var sRouteName = oEvent.getParameter("name");
 				// do something, i.e. send usage statistics to back end
 				// in order to improve our app and the user experience (Build-Measure-Learn cycle)
-				Log.info("User accessed route " + sRouteName + ", timestamp = " + new Date().getTime());
+				Log.info("User accessed route " + sRouteName + ", timestamp = " + Date.now());
 			});
 		}
 	});

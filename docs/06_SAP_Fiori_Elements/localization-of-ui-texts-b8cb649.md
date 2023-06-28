@@ -4,8 +4,6 @@
 
 If necessary, you can replace standard UI texts for apps that you have created with SAP Fiori elements.
 
-We recommend that you use [SAP Fiori tools](https://help.sap.com/viewer/product/SAP_FIORI_tools/Latest/en-US), which is a set of extensions for SAP Business Application Studio and Visual Studio Code, to build your apps.
-
 Standard texts are available in the generic framework \(for example, the button texts for draft concepts\) and belong to the template components \(for example, list report and object page\). The following sections describe how you replace texts in your generated apps.
 
 When you have created your specific application component, standard texts are available from a specific template component and from the generic template component.
@@ -127,7 +125,7 @@ For the annotation example above, the application’s i18n properties file must 
 
 ## Additional Features in SAP Fiori Elements for OData V2
 
-When you have created your specific application component, for example in SAP Web IDE or in SAP Fiori tools, standard texts are available from a specific template component \(for example, i18n file within `sap.suite.ui.generic.template.ListReport`\) and from the generic template component \(for example, i18n file within `sap.suite.ui.generic.template.lib`\).
+When you have created your specific application component, for example in SAP Fiori tools, standard texts are available from a specific template component \(for example, i18n file within `sap.suite.ui.generic.template.ListReport`\) and from the generic template component \(for example, i18n file within `sap.suite.ui.generic.template.lib`\).
 
 Texts from the *Generic Application Component* can't be replaced.
 
@@ -209,7 +207,7 @@ New Object
 </td>
 <td valign="top">
 
-Title for the *Create* dialog if `createWithParameterDialog` is configured. Users can change titles to for example, “Create Order” or “Create Contract”.
+Title for the *Create* dialog if `createWithParameterDialog` is configured. Users can change titles to, for example, “Create Order” or “Create Contract”.
 
 
 
@@ -285,6 +283,31 @@ Label for a button within the `NewAction` parameter dialog in the list report.
 </td>
 </tr>
 <tr>
+<td valign="top">
+
+ `MULTI_EDIT_DIALOG_TITLE` 
+
+
+
+</td>
+<td valign="top">
+
+Edit \(\{0\}\)
+
+
+
+</td>
+<td valign="top">
+
+Title for mass edit dialog in the list report page.
+
+Users can change titles to for example "Edit Purchase Orders \(\{0\}\)".
+
+
+
+</td>
+</tr>
+<tr>
 <td valign="top" colspan="3">
 
  **List Report Specific Key from `..>>lib>i18n`** 
@@ -349,7 +372,9 @@ Text displayed within the delete confirmation dialog that comes up when a user s
 </td>
 <td valign="top">
 
-Another user edited this object without saving the changes\\: \\n\{1\} \\n\\nDelete anyway?
+Another user edited this object without saving the changes: \{1\}
+
+Delete anyway?
 
 
 
@@ -372,7 +397,9 @@ Text displayed within the delete confirmation dialog that comes up when a user s
 </td>
 <td valign="top">
 
-Other users have edited the selected objects without saving the changes. \\n\\nDelete them anyway?
+Other users have edited the selected objects without saving the changes.
+
+Delete them anyway?
 
 
 
@@ -425,7 +452,7 @@ This object cannot be deleted.
 </td>
 <td valign="top">
 
-Message text used in the confirmation message box when a user tries to delete an object that is non-deleteable.
+Message text used in the confirmation message box when a user tries to delete an object that is non-deletable.
 
 
 
@@ -540,7 +567,7 @@ Do you still want to delete the remaining \{0\} objects?
 </td>
 <td valign="top">
 
-Text displayed within the confirmation dialog when a user select some objects that are either locked or cannot be deleted. However, one of the selections can be deleted.
+Text displayed within the confirmation dialog when a user select some objects that are either locked or cannot be deleted. However, some of the selections can be deleted.
 
 
 
@@ -556,7 +583,9 @@ Text displayed within the confirmation dialog when a user select some objects th
 </td>
 <td valign="top">
 
-The remaining object has unsaved changes. \\n\\nDo you still want to delete it?
+The remaining object has unsaved changes.
+
+Do you still want to delete it?
 
 
 
@@ -579,14 +608,16 @@ Text displayed within the confirmation dialog when a user select some objects th
 </td>
 <td valign="top">
 
-The remaining objects have unsaved changes by other users. \\n\\nDo you still want to delete them?
+The remaining objects have unsaved changes by other users.
+
+Do you still want to delete them?
 
 
 
 </td>
 <td valign="top">
 
-Text displayed within the confirmation dialog when a user select some objects that are either locked or cannot be deleted. However, one of these selections can be deleted but it includes unsaved changes made by another user.
+Text displayed within the confirmation dialog when a user select some objects that are either locked or cannot be deleted. However, some of these selections can be deleted but it includes unsaved changes made by another user.
 
 
 
@@ -602,14 +633,14 @@ Text displayed within the confirmation dialog when a user select some objects th
 </td>
 <td valign="top">
 
-Objects were deleted
+Objects were deleted.
 
 
 
 </td>
 <td valign="top">
 
-Message toast text when deletion of multiple object is successful.
+Message toast text when deletion of multiple objects is successful.
 
 
 
@@ -632,7 +663,7 @@ The selected object cannot be deleted.
 </td>
 <td valign="top">
 
-Message toast text when object can’t be deleted from backend.
+Message toast text when an object can’t be deleted from back end.
 
 
 
@@ -657,7 +688,9 @@ Message toast text when object can’t be deleted from backend.
 </td>
 <td valign="top">
 
-Another user edited this object without saving the changes\\:\\n\\n \{0\} \\n\\n If you take over, any changes will be lost.
+Another user edited this object without saving the changes: \{0\}
+
+If you take over, any changes will be lost.
 
 
 
@@ -687,7 +720,7 @@ Your changes have been saved
 </td>
 <td valign="top">
 
-Message toast text when a user choses to save and the object gets saved successfully.
+Message toast text when a user chooses to save and the object gets saved successfully.
 
 
 
@@ -733,7 +766,7 @@ Please wait while the data is loading...
 </td>
 <td valign="top">
 
-Appears in the samrt table within the object page when data is loading.
+Appears in the smart table within the object page when data is loading.
 
 
 
@@ -749,7 +782,7 @@ Appears in the samrt table within the object page when data is loading.
 </td>
 <td valign="top">
 
-You haven\\u2019t made any changes
+You haven't made any changes
 
 
 
@@ -802,7 +835,7 @@ Delete this object \(\{1\} \{2\}\)?
 </td>
 <td valign="top">
 
-Text displayed within the delete confirmation dialog with both the title and description is available for the object and the app is open in the fixed column layout mode.
+Text displayed within the delete confirmation dialog with both the title and description is available for the object and the app is open in the flexible column layout mode.
 
 
 
@@ -1078,7 +1111,7 @@ The selected item cannot be deleted.
 </td>
 <td valign="top">
 
-Text displayed when only one record was selected for deletion and the operation failed to excute.
+Text displayed when only one record was selected for deletion and the operation failed to execute.
 
 
 
@@ -1147,7 +1180,7 @@ This item cannot be deleted.
 </td>
 <td valign="top">
 
-Message text used in the confirmation message box when a user selects a signle item that cannot be deleted.
+Message text used in the confirmation message box when a user selects a single item that cannot be deleted.
 
 
 
@@ -1179,21 +1212,21 @@ Text displayed in a message popover when a user has configured the `InsertRestri
 <tr>
 <td valign="top">
 
- `ST_GENERIC_DRAFT_LOCKED_BY_USER` 
+ `CREATE_DIALOG_TITLE` 
 
 
 
 </td>
 <td valign="top">
 
-Another user edited this object without saving the changes\\: \\n\{1\} \\nIf you take over, any changes will be lost.
+New Item
 
 
 
 </td>
 <td valign="top">
 
-Text displayed within the confirmation dialog when a user selects an obejct to edit that is locked by another user.
+Title text displayed for the create dialog if `createWithParameterDialog` is configured on an object page table of a non-draft application. Users can change titles to, for example, “Create Sales Order Item”.
 
 
 
@@ -1226,6 +1259,31 @@ Delete this object?
 <td valign="top">
 
 Text displayed within the delete confirmation dialog when a user deletes an object \(without an object title\) by clicking *Delete* on the object page header.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `ST_GENERIC_DRAFT_LOCKED_BY_USER` 
+
+
+
+</td>
+<td valign="top">
+
+Another user edited this object without saving the changes: \{1\}
+
+If you take over, any changes will be lost.
+
+
+
+</td>
+<td valign="top">
+
+Text displayed within the confirmation dialog when a user selects an object to edit that is locked by another user.
 
 
 
@@ -1280,7 +1338,7 @@ Message toast text upon the successful deletion of the object.
 <tr>
 <td valign="top" colspan="3">
 
- **List Report and Object Page Keys from `..>>lib>i18n`** 
+ **List Report, Object Page and Analytical List Page Keys from `..>>lib>i18n`** 
 
 
 
@@ -1296,7 +1354,9 @@ Message toast text upon the successful deletion of the object.
 </td>
 <td valign="top">
 
-You cannot edit this object at the moment \\nIt is locked by \{0\}
+You cannot edit this object at the moment.
+
+It is locked by \{0\}
 
 
 
@@ -1441,7 +1501,7 @@ No data found.
 </td>
 <td valign="top">
 
-Text displayed in the object page chart when no data is found after the filters are applied.
+Text displayed in charts on the analytical list page and object page when no data is found without applying any filters.
 
 
 
@@ -1464,7 +1524,7 @@ There is no data for the selected filter criteria and chart view.
 </td>
 <td valign="top">
 
-Text displayed in the list report page chart when no data is found.
+Text displayed in the list report chart when no data is found.
 
 
 
@@ -1487,7 +1547,7 @@ No data found. Try adjusting the filter parameters.
 </td>
 <td valign="top">
 
-Text displayed in the object page chart when no data is found after the filters are applied.
+Text displayed in charts on the analytical list page and object page when no data is found even after applying filters.
 
 
 
@@ -1503,14 +1563,14 @@ Text displayed in the object page chart when no data is found after the filters 
 </td>
 <td valign="top">
 
-To start, set the relevant filters.
+To start, set the relevant filters and choose "Go".
 
 
 
 </td>
 <td valign="top">
 
-Text displayed in the list report page chart when the data load is triggered.
+Text displayed in the list report chart when no search is triggered.
 
 
 
@@ -1533,7 +1593,30 @@ No data found.
 </td>
 <td valign="top">
 
-Text displayed in the list report page chart when no data is found after clicking *Go* without setting any filters.
+Text displayed in the list report table, when the table is empty after clicking "Go" without setting any filters.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `NODATA_SMARTTABLE_LR` 
+
+
+
+</td>
+<td valign="top">
+
+To start, set the relevant filters and choose "Go".
+
+
+
+</td>
+<td valign="top">
+
+Text displayed in the list report table, when no search is triggered.
 
 
 
@@ -1556,7 +1639,7 @@ No data found. Try adjusting the search or filter criteria.
 </td>
 <td valign="top">
 
-Text displayed in the list report page table when no data is found after applying filters.
+Text displayed in the list report table when no data is found after applying filters.
 
 
 
@@ -1579,7 +1662,7 @@ There is no data for the selected filter criteria and table view.
 </td>
 <td valign="top">
 
-Text displayed in the list report page table when no data is found for a view in case of multi view application.
+Text displayed in the list report table when no data is found for a view in case of multi view application.
 
 
 
@@ -1756,7 +1839,7 @@ Text displayed in the message strip above the smart table in the list report whe
 </td>
 <td valign="top">
 
-You can''t filter by \\"\{0\}\\" on the \\"\{1\}\\" tab.
+You can't filter by \\"\{0\}\\" on the \\"\{1\}\\" tab.
 
 
 
@@ -1825,7 +1908,9 @@ Text displayed in the message strip above the smart table in the list report whe
 </td>
 <td valign="top">
 
-You\\u2019ve made changes to this object.\\nWhat would you like to do?
+You haven't made changes to this object.
+
+What would you like to do?
 
 
 
@@ -1848,7 +1933,9 @@ Text displayed within the discard confirmation dialog when a user navigates away
 </td>
 <td valign="top">
 
-You haven\\u2019t created this object yet.\\nWhat would you like to do?
+You haven't created this object yet.
+
+What would you like to do?
 
 
 
@@ -1880,14 +1967,14 @@ Text displayed within the discard confirmation dialog when a user navigates away
 </td>
 <td valign="top">
 
-To start, set the relevant filters
+To start, set the relevant filters and choose "Go".
 
 
 
 </td>
 <td valign="top">
 
-No data text is displayed for on load of the smart chart.
+Text displayed in the analytical list page smart chart when no search is triggered.
 
 
 
@@ -1903,14 +1990,14 @@ No data text is displayed for on load of the smart chart.
 </td>
 <td valign="top">
 
-To start, set the relevant filters
+To start, set the relevant filters and choose "Go".
 
 
 
 </td>
 <td valign="top">
 
-No data text is displayed for on load of the smart table.
+Text displayed in the analytical list page smart table when no search is triggered.
 
 
 
@@ -1926,7 +2013,7 @@ No data text is displayed for on load of the smart table.
 </td>
 <td valign="top">
 
-Some of the filters aren''t relevant for the tab \\"\{1\}\\" \(\{0\}\). Settings these filters has no effect on the results.
+Some of the filters aren’t relevant for the tab \\"\{1\}\\" \(\{0\}\). Settings these filters has no effect on the results.
 
 
 
@@ -1949,7 +2036,7 @@ Text displayed in the message strip when a user select filters and a few of them
 </td>
 <td valign="top">
 
-You can''t use the following filters on the \\"\{1\}\\" tab\\: \\"\{0\}\\"
+You can't use the following filters on the \\"\{1\}\\" tab\\: \\"\{0\}\\"
 
 
 
@@ -1964,34 +2051,24 @@ Text displayed in the message strip when a user select filters and a few of them
 </tr>
 </table>
 
-> ### Caution:  
-> SAP Web IDE is no longer available via SAP Business Technology Platform trial accounts. Any references to SAP Web IDE in this documentation are only relevant for you if you have access to SAP Web IDE through a productive SAP BTP account. Please consider SAP Business Application Studio as an alternative. See [App Development Using SAP Business Application Studio](../05_Developing_Apps/app-development-using-sap-business-application-studio-6bbad66.md).
-
-For more information about SAP Web IDE, see the documentation for SAP Web IDE on the SAP Help Portal at [https://help.sap.com/viewer/p/SAP\_Web\_IDE](https://help.sap.com/viewer/p/SAP_Web_IDE).
-
 
 
 ### How to Find the Resource File of Your Application Component
 
-SAP Web IDE automatically generates the following folders and files when you create an app with SAP Fiori elements:
+SAP Fiori generator automatically generates the following initial folders and files when you create an app with SAP Fiori elements:
 
 -   <root-folder\>
 
--   |—i18n
+-   |--webapp
 
--   |—<shortened template component name\>, for example, List Report and Object Page
-
--   |—<entitySet\>
+-   |----i18n
 
 -   |—i18n.properties
 
-    > ### Note:  
-    > This file contains instructions on how to find the standard UI texts for your application. You need them for the step *How to Replace the Standard UI Texts with Application-Specific Texts* in this topic.
 
+The required folder structure to the resource model appears as shown here. You can create it as required by your application structure and the texts that need adaptation. Since the `manifest.json` file also refers to the title and description of the app, there is a general `i18n.properties` file on the top level:
 
-The folder path to the resource model appears as shown below. Since the `manifest.json` file also refers to the title and description of the app, there is a general `i18n.properties` file on the top level:
-
--   `i18n.properties`
+-   `i18n/i18n.properties`
 -   `i18n/ListReport/<entitySet>/POHeaders/i18n.properties`
 -   `i18n/ObjectPage/<entitySet>/i18n.properties`
 -   `i18n/ObjectPage/<subEntitySet>/i18n.properties`
@@ -2029,21 +2106,6 @@ Example:
 ```
 
 The URL reflects the folder path to the resource model. The model's name, `i18n|sap.suite.ui.generic.template.ObjectPage|POHeaders`, is separated by lines used to identify the specific template component and entity set for which the resource model can be enhanced by editing the `i18n.properties` file.
-
-
-
-### How to Replace the Standard UI Texts with Application-Specific Texts
-
-To replace the standard UI texts, perform the following steps:
-
-1.  Go to the final block of the standard UI texts that starts as follows: `#---Final block: texts to be redefined by the application -------`
-
-2.  Copy this block to the corresponding i18n property file of your app under `webapp/i18n`.
-
-    Consider the detailed instructions that you find as comments in the original property file: For example, a text might be relevant only for the root object, or it might also be relevant for detail pages of subitems. In the latter case, if you have defined multiple object pages in your app, you have to copy and adapt each of them.
-
-3.  After copying the blocks to the relevant files, adjust the texts as described in the comment. For example, replace the generic text *object* by your entity type name.
-
 
 
 
@@ -2290,7 +2352,7 @@ deprecated key: `C_EDIT_FLOW_GENERIC_LOCKED_OBJECT_POPOVER_TEXT_ADDITIONAL_USER`
 </td>
 <td valign="top">
 
-This key has been depreciated. The scenario no longer occurs.
+This key has been deprecated. The scenario no longer occurs.
 
 
 
@@ -2478,7 +2540,7 @@ Error message description/detail text when a user enters a value in the field of
 </td>
 <td valign="top">
 
-This object is currently locked by \{0\} and cannot be deleted.
+This object is currently locked by \{0\} so it cannot be deleted.
 
 
 
@@ -2692,7 +2754,7 @@ Applications should overwrite the default text with the concrete object.
 </td>
 <td valign="top">
 
-Do you still want to delete the remaining \{0\} objects?
+Do you still want to delete the remaining objects?
 
 
 
@@ -2700,8 +2762,6 @@ Do you still want to delete the remaining \{0\} objects?
 <td valign="top">
 
 Message text used in the confirmation message box when a user clicks the *Delete* button for multiple selected objects, some of which cannot be deleted.
-
-Parameter: \{0\} = number of objects that can be deleted
 
 
 
@@ -2790,7 +2850,7 @@ Applications should overwrite the default text with the concrete object.
 </td>
 <td valign="top">
 
-\{0\} out of \{1\} objects are currently locked so they cannot be deleted.
+\{0\} out of \{1\} selected objects have delete restrictions so they cannot be deleted.
 
 
 
@@ -2806,7 +2866,7 @@ Parameters: \{0\} = number of objects that cannot be deleted, \{1\} = total numb
 </td>
 <td valign="top">
 
-Applications should overwrite the default text with the concrete objects.
+Applications should overwrite the default text with the concrete object.
 
 
 
@@ -2824,7 +2884,7 @@ Applications should overwrite the default text with the concrete objects.
 </td>
 <td valign="top">
 
-\{0\} out of \{1\} objects are currently locked.
+\{0\} out of \{1\} objects are currently locked so they cannot be deleted.
 
 
 
@@ -2840,7 +2900,7 @@ Parameters: \{0\} = number of objects that are locked, \{1\} = number of selecte
 </td>
 <td valign="top">
 
-Applications should overwrite the default text with the concrete objects.
+Applications should overwrite the default text with the concrete object.
 
 
 
@@ -2858,7 +2918,7 @@ Applications should overwrite the default text with the concrete objects.
 </td>
 <td valign="top">
 
-1 out of \{0\} objects is currently locked.
+1 out of \{0\} selected objects is currently locked by \{1\} so it cannot be deleted.
 
 
 
@@ -2867,7 +2927,7 @@ Applications should overwrite the default text with the concrete objects.
 
 Message text used in the confirmation message box when a user clicks the *Delete* button.
 
-Parameters: \{0\} = number of selected objects
+Parameters: \{0\} = number of selected objects, \{1\} = user who has the lock on the object
 
 
 
@@ -2902,6 +2962,8 @@ Do you still want to delete it?
 <td valign="top">
 
 Warning message text on the delete popover when a user tries to delete an object that has unsaved changes from another user.
+
+Parameters: \{0\} = user who has unsaved changes on the object.
 
 
 
@@ -2969,6 +3031,8 @@ Also delete objects with unsaved changes by \{0\}?
 
 Text used for the checkbox in the delete confirmation dialog to confirm if a user also wants to delete the single object from the selected objects that has changes from other users.
 
+Parameters: \{0\} = user who has unsaved changes on the object.
+
 
 
 </td>
@@ -3006,7 +3070,7 @@ Text used for the checkbox in the delete confirmation dialog to confirm if a use
 </td>
 <td valign="top">
 
-Applications should overwrite the default text with the concrete objects.
+Applications should overwrite the default text with the concrete object.
 
 
 
@@ -3070,7 +3134,7 @@ Message toast text when multiple objects have been deleted successfully.
 </td>
 <td valign="top">
 
-Applications should overwrite the default text with the concrete objects.
+Applications should overwrite the default text with the concrete object.
 
 
 
@@ -4017,7 +4081,7 @@ The remaining objects have delete restrictions so they cannot be deleted.
 </td>
 <td valign="top">
 
-Text to indicate that all of the remaining objects cannot be deleted. This text is usually appended to text from another key which would indicate why some of the selected records cannot be deleted.
+Text to indicate that none of the remaining objects can be deleted. This text is usually appended to text from another key that indicates why some of the selected records cannot be deleted.
 
 
 
@@ -4054,7 +4118,7 @@ Text to confirm with the user if the associated own draft of the selected object
 </td>
 <td valign="top">
 
-Applications should overwrite the default text with the concrete objects.
+Applications should overwrite the default text with the concrete object.
 
 
 
@@ -4077,7 +4141,7 @@ Delete associated drafts?
 </td>
 <td valign="top">
 
-Text to confirm with the user if the associated own draft of the selected object should be deleted when the object is non-deletable.
+Text to confirm with the user if the associated own drafts of the selected objects should be deleted when the objects are non-deletable.
 
 
 
@@ -4114,7 +4178,7 @@ Text to confirm with the user if their own draft associated with the selected ob
 </td>
 <td valign="top">
 
-Applications should overwrite the default text with the concrete objects.
+Applications should overwrite the default text with the concrete object.
 
 
 
@@ -4144,7 +4208,255 @@ Text to confirm with the user if the associated own draft of the selected object
 </td>
 <td valign="top">
 
-Applications should overwrite the default text with the concrete objects.
+Applications should overwrite the default text with the concrete object.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `C_TRANSACTION_HELPER_CONFIRM_DELETE_WITH_SINGLE_AND_ONE_OBJECT_NON_DELETABLE` 
+
+
+
+</td>
+<td valign="top">
+
+The selected object has delete restrictions so it cannot be deleted.
+
+
+
+</td>
+<td valign="top">
+
+Text used when a single object \(with own draft\) is selected and this object is not deletable.
+
+
+
+</td>
+<td valign="top">
+
+Applications should overwrite the default text with the concrete object.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `C_TRANSACTION_HELPER_CONFIRM_DELETE_WITH_MULTIPLE_AND_ALL_OBJECT_NON_DELETABLE` 
+
+
+
+</td>
+<td valign="top">
+
+The selected objects have delete restrictions so they cannot be deleted.
+
+
+
+</td>
+<td valign="top">
+
+Text used when all selected objects are not deletable but at least one of them has its own draft.
+
+
+
+</td>
+<td valign="top">
+
+Applications should overwrite the default text with the concrete object.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `OBJECTPAGESTATE_ISSUE` 
+
+
+
+</td>
+<td valign="top">
+
+The object contains issues
+
+
+
+</td>
+<td valign="top">
+
+Error message text used in the message strip of an object page.
+
+
+
+</td>
+<td valign="top">
+
+Applications should overwrite the default text and replace "object" with their concrete object.
+
+Example: *This sales order contains issues.*
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `OBJECTPAGESTATE_ERROR` 
+
+
+
+</td>
+<td valign="top">
+
+The object contains error messages
+
+
+
+</td>
+<td valign="top">
+
+Error message text used in the message strip of an object page.
+
+
+
+</td>
+<td valign="top">
+
+Applications should overwrite the default text and replace "object" with their concrete object.
+
+Example: *This sales order contains error messages.*
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `OBJECTPAGESTATE_WARNING` 
+
+
+
+</td>
+<td valign="top">
+
+The object contains warning messages
+
+
+
+</td>
+<td valign="top">
+
+Warning message text used in the message strip of an object page.
+
+
+
+</td>
+<td valign="top">
+
+Applications should overwrite the default text and replace "object" with their concrete object.
+
+Example: *This sales order contains warning messages.*
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `OBJECTPAGESTATE_INFORMATION` 
+
+
+
+</td>
+<td valign="top">
+
+The object contains information messages
+
+
+
+</td>
+<td valign="top">
+
+Information text used in the message strip of an object page.
+
+
+
+</td>
+<td valign="top">
+
+Applications should overwrite the default text and replace "object" with their concrete object.
+
+Example: *This sales order contains information messages.*
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `M_ILLUSTRATEDMESSAGE_TITLE` 
+
+
+
+</td>
+<td valign="top">
+
+No details available
+
+
+
+</td>
+<td valign="top">
+
+Title of the popup that is shown when no details \(that is, no quick view annotations\) and no targets are found for a semantic object.
+
+
+
+</td>
+<td valign="top">
+
+Applications can choose to overwrite the default text with a more specific one.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `M_ILLUSTRATEDMESSAGE_DESCRIPTION` 
+
+
+
+</td>
+<td valign="top">
+
+This may happen if your access is restricted or the data is incomplete.
+
+
+
+</td>
+<td valign="top">
+
+Text used in the popup that is shown when no details \(that is, no quick view annotations\) and no targets are found for a semantic object.
+
+
+
+</td>
+<td valign="top">
+
+Applications can choose to overwrite the default text with a more specific one.
 
 
 
@@ -4227,7 +4539,10 @@ For resources that are shared across multiple entity sets, append the navigation
 > 
 > `C_TRANSACTION_HELPER_OBJECT_PAGE_CONFIRM_DELETE_WITH_OBJECTTITLE_SINGULAR|_Items=Do you want to delete this Sales Order Item?` 
 
-For overriding actions that have parameters, some of the text in the action parameter popovers can be overridden. Confirmation actions also get a confirmation popover that has text that can be overridden. To override these texts, the action name along with the entity set name \(or the navigation property name in case of navigation entity set\) has to be provided. This is a mandatory piece of information, even if the application needs the custom text for an action that is used in only 1 entity set. If the entity set name is not appended, the resource bundle text from SAP Fiori elements is used as a fallback.
+For overriding actions that have parameters, some of the text in the action parameter popovers can be overridden. Confirmation actions also get a confirmation popover that has text that can be overridden. To override these texts, the action name along with the entity set name has to be provided. This is a mandatory piece of information, even if the application needs the custom text for an action that is used in only 1 entity set. If the entity set name is not appended, the resource bundle text from SAP Fiori elements is used as a fallback.
+
+> ### Note:  
+> To override the text with a key from a navigation entity set, you must use the navigation property name instead of the entity set name of the navigation entity. In the above example, `_Items` is the navigation property set name of the navigation entity `Items`.
 
 > ### Example:  
 > `C_OPERATIONS_ACTION_CONFIRM_MESSAGE=Are you sure that you want to execute this action?`

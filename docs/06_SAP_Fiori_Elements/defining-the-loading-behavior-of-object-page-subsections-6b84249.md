@@ -2,7 +2,7 @@
 
 # Defining the Loading Behavior of Object Page Subsections
 
-You can define the loading behavior of subsections in an object page through manifest settings.
+You can define the loading behavior of subsections in an object page in the manifest settings.
 
 > ### Note:  
 > This topic is currently only applicable to SAP Fiori elements for OData V2.
@@ -18,14 +18,14 @@ To define the loading behavior, identify the `id` of the subsection, and add the
 > }
 > ```
 
-You can use the properties `waitForHeaderData` and `waitForViewportEnter` to define whether you want the subsection to load after the header data is loaded, or after the viewport is loaded, respectively.
+You can use the `waitForHeaderData` and `waitForViewportEnter` properties to define whether you want the subsection to load after the header data is loaded, or after the viewport is loaded.
 
 -   If you set the `waitForHeaderData` property to `true`, the subsection waits for the header data to load before activating its binding. This is useful when there is a table or a chart in the subsection and you want to wait for the header data to add some additional filters before rebinding them, for example, using `onBeforeRebindTableExtension`.
 
--   If you set the `waitForViewportEnter` property to `true`, the subsection waits to enter the viewport before activating its binding. If you set this flag to `false`, the data loading behavior is independent of whether or not the subsection is inside the viewport. Setting this property to `false` is useful when you want to load subsection data along with header data.
+-   If you set the `waitForViewportEnter` property to `true`, the subsection waits to enter the viewport before activating its binding. If you set this flag to `false`, the data loading behavior is independent of whether or not the subsection is inside the viewport. Setting this property to `false` is useful when you want to load subsection data together with header data.
 
     > ### Note:  
-    > If you do not define the `loadingBehavior` of a subsection, the default behavior is set as below:
+    > If you do not define the `loadingBehavior` of a subsection, the default behavior is set as follows:
     > 
     > > ### Sample Code:  
     > > ```
@@ -36,7 +36,7 @@ You can use the properties `waitForHeaderData` and `waitForViewportEnter` to def
     > > }
     > > ```
     > 
-    > If you define the `loadingBehavior` property for a subsection with `waitForHeaderData` as `true`, the other property which you have not defined is considered as `false`. The same is applicable for the `waitForViewportEnter` property.
+    > If you define the `loadingBehavior` property for a subsection with `waitForHeaderData` as `true`, the other property, which you have not defined, is considered `false`. The same is applicable for the `waitForViewportEnter` property.
 
 
 > ### Sample Code:  
@@ -47,7 +47,7 @@ You can use the properties `waitForHeaderData` and `waitForViewportEnter` to def
 >                         "component": {
 >                             "name": "sap.suite.ui.generic.template.ObjectPage",
 >                             "settings": {
->                                 "showConfirmationOnDraftActivate": false,
+>                                
 >                                 "sections": {
 >                                     "SalesOrderItemsID": {
 >                                         "navigationProperty": "to_Item",

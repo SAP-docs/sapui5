@@ -126,7 +126,7 @@ You can change the *Select All*/*Clear All* option in both the list report and o
 > ### Note:  
 > For grid tables, analytical tables, and tree tables, if you choose *Select All*, the system loads all data from the back-end system in multiple sequential requests. For performance reasons, set `selectAll:true` only if the expected amount of data is not too high.
 > 
-> In responsive tables, if you choose *Select All*, only the loaded data is selected.
+> In responsive tables, if you choose *Select All*, only the loaded data is selected. A message toast showing the number of selected records is displayed.
 
 
 
@@ -237,4 +237,9 @@ You can change the enablement of the *Select All* feature in both layouts by set
 >         }
 > 
 > ```
+
+> ### Note:  
+> For grid tables, analytical tables, and tree tables, if you choose *Select All*, the system loads all data from the back-end system in multiple sequential requests. For performance reasons, set `selectAll:true` only if the expected amount of data is not too high.
+> 
+> In responsive tables, if you choose *Select All*, only the loaded data is selected. A message toast showing the number of selected records is displayed.
 

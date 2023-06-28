@@ -18,7 +18,7 @@ Here are some general principles for writing comments:
 
 -   For subclasses, document the inheritance by using an `@extends` tag in their constructor doclet.
 
--   Document at least public and protected methods with JSDoc, mark them as `@public` or `@protected`. For more information on these and other tags that determine the visibility of your method in the *API Reference*, see [JSDoc Visibility Tags](jsdoc-visibility-tags-b0d5fe2.md).
+-   Document at least public and protected methods with JSDoc, mark them as `@public` or `@protected`. For more information on these and other tags that determine the visibility of your method in the *API Reference*, see [Use Only Public APIs](../03_Get-Started/use-only-public-apis-b0d5fe2.md).
 
 -   Document method parameters with type \(in curly braces\) and parameter name \(in square brackets if optional\).
 

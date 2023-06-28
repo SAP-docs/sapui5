@@ -219,6 +219,65 @@ UI.FieldGroup
 <tr>
 <td valign="top">
 
+Add card to insights
+
+
+
+</td>
+<td valign="top">
+
+-   List report
+-   Analytical list page
+
+
+
+</td>
+<td valign="top">
+
+ [Creating Cards for the Insights Section of My Home in SAP S/4HANA Cloud](creating-cards-for-the-insights-section-of-my-home-in-sap-s-4hana-cloud-9b13559.md) 
+
+
+
+</td>
+<td valign="top">
+
+ 
+
+
+
+</td>
+<td valign="top">
+
+   
+  
+**Add Card to Insights Option in List Report Table Toolbar**
+
+ ![](images/Add_Cards_to_Insights_New_fe526c6.png "Add Card to Insights Option in List Report Table Toolbar") 
+
+   
+  
+**Add Card to Insights Option in Analytical List Page Chart Toolbar**
+
+ ![](images/Add_Cards_to_Insights_ALP_401e0b0.png "Add Card to Insights Option in Analytical List Page Chart Toolbar") 
+
+
+
+</td>
+<td valign="top">
+
+add cards
+
+add cards to insights
+
+insights
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
 Add custom column
 
 

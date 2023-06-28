@@ -4,6 +4,16 @@
 
 Several factors affect the loading behavior of the content area based on the chosen variant.
 
+These factors are also considered in the following use cases:
+
+-   There is no tile context during initial navigation from tiles.
+
+-   There is no tile context, except for values from SAP Fiori launchpad user settings.
+
+
+> ### Note:  
+> The loading behavior of the content is always triggered when the user navigates to the application using the navigation context \(including any context from the tile's target mapping\). The factors described in this topic aren't considered during this scenario.
+
 
 
 <a name="loio9f4e1192f1384b85bc160288e17f69c4__section_g4c_tyf_mqb"/>
@@ -25,7 +35,7 @@ End users can disable the automatic loading of data by deselecting the *Apply Au
 
 For the *Standard* variant, the *Apply Automatically* checkbox is selected by default.
 
--   If the end user deselects the checkbox, the application does not load the data automatically, irrespective of any preset filters.
+-   If the end user deselects the checkbox, the application doesn't load the data automatically, irrespective of any preset filters.
 
 -   If the end user selects the checkbox, the default behavior is applied and the automatic loading of data works only if preset filters have been set.
 
