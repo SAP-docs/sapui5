@@ -25,7 +25,7 @@ The state of the application is preserved when users refresh or navigate away fr
 -   Data from custom UI elements. For more information, see [Custom State Handling for Extended Apps](custom-state-handling-for-extended-apps-89fa878.md).
 
 -   > ### Note:  
-    > -   If a potentially sensitive filter field \(a property that is annotated via the `PersonalData.v1.IsPotentiallySensitive` annotation\) is changed, SAP Fiori elements does not store/restore this information. Any changes added by users are therefore lost upon refresh.
+    > -   If a potentially sensitive field \(a property that is annotated via the `PersonalData.v1.IsPotentiallySensitive` annotation\) is changed, SAP Fiori elements doesn't store/restore this information. Any changes added by users are therefore lost upon refresh. This is not applicable if the field is used in filter context.
     > 
     > -   Changes to the visibility of filter fields in the filter bar aren't stored/restored. However, if any new filter fields containing values are added from the *Adapt Filters* dialog, then they are stored as a part of the `iAppState`.
     > 
@@ -60,10 +60,16 @@ Changes coming in from other flex layers, such as changes made by key users, are
 > 
 > -   User A loads the application and adds two new columns. To share the application link as an email to user B, user A clicks the *Share* menu button and then *Send Email*.
 > 
-> -   When user B accesses this application, they can see the table with the columns added by user A, but not the columns added by the key user. User B doesn't see the changes made by the key user .
+> -   When user B accesses this application, they see the table with the changes made by user A. It means user B sees the last state of the table and not the state as seen by the key user.
 
 > ### Restriction:  
-> Changes coming in from other flex layers, such as changes made by key users, are not considered for charts.
+> Chart handling with respect to `iAppState` restore has several restrictions such as :
+> 
+> -   Changes coming in from other flex layers, such as changes made by key users, are not considered for charts.
+> 
+> -   Any dimension or measure removed from the settings is retained in the settings even after a `iAppState` restore.
+> 
+> -   Any changes to the order of a dimension or measure in the chart using personalization isn't retained after a `iAppState` restore.
 
 > ### Note:  
 > -   Any filter field value coming from other layers is still overwritten by values for this field coming from SAP Fiori launchpad. For more information, see [Configuring Default Filter Values](configuring-default-filter-values-f27ad7b.md).

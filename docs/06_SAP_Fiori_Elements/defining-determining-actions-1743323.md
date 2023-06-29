@@ -37,18 +37,12 @@ The following code sample shows how to create your annotations for the determini
 >           <PropertyValue Property="Action"
 >              String="STTA_PROD_MAN.STTA_PROD_MAN_Entities/
 >              STTA_C_MP_ProductCopywithparams"/>
->           <PropertyValue Property="InvocationGrouping"
->              EnumMember="UI.OperationGroupingType/Isolated"/>
->           <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
 >        </Record>
 >        <Record Type="UI.DataFieldForAction">
 >           <PropertyValue Property="Label" String="Copy"/>
 >           <PropertyValue Property="Action"
 >              String="STTA_PROD_MAN.STTA_PROD_MAN_Entities/STTA_C_MP_ProductCopy"/>
 >           <PropertyValue Property="Determining" Bool="true"/>
->           <PropertyValue Property="InvocationGrouping"  
->              EnumMember="UI.OperationGroupingType/Isolated"/>
->           <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
 >        </Record>
 >     </Collection>
 > </Annotation>
@@ -57,7 +51,24 @@ The following code sample shows how to create your annotations for the determini
 > ### Sample Code:  
 > ABAP CDS Annotation
 > 
-> No ABAP CDS annotation sample is available. Please use the local XML annotation.
+> ```
+> @UI.identification: [
+>   {
+>     label: 'CWP',
+>     dataAction: 'PUSHDOWN: STTA_C_MP_ProductCopywithparams ',
+>     type: #FOR_ACTION,
+>     position: 1
+>   },
+>   {
+>     label: 'Copy',
+>     dataAction: 'PUSHDOWN: STTA_C_MP_ProductCopy',
+>     type: #FOR_ACTION,
+>     determining: true,
+>     position: 2
+>   }
+> ]
+> product;
+> ```
 
 > ### Sample Code:  
 > CAP CDS Annotation
@@ -69,17 +80,13 @@ The following code sample shows how to create your annotations for the determini
 >         $Type : 'UI.DataFieldForAction',
 >         Label : 'CWP',
 >         Action : 'STTA_PROD_MAN.STTA_PROD_MAN_Entities/
->         STTA_C_MP_ProductCopywithparams',
->         InvocationGrouping : #Isolated,
->         ![@UI.Importance] : #High
+>         STTA_C_MP_ProductCopywithparams'
 >     },
 >     {
 >         $Type : 'UI.DataFieldForAction',
 >         Label : 'Copy',
 >         Action : 'STTA_PROD_MAN.STTA_PROD_MAN_Entities/STTA_C_MP_ProductCopy',
->         Determining : true,
->         InvocationGrouping : #Isolated,
->         ![@UI.Importance] : #High
+>         Determining : true
 >     }
 > ]
 > 

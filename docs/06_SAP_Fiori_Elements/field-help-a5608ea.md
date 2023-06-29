@@ -627,45 +627,22 @@ You can use the `UI.TextArrangement` annotation to configure the display format 
     </tr>
     <tr>
     <td valign="top">
-
-    \-
+    
+        \-
 
 
     
     </td>
     <td valign="top">
-
-    \-
+    
+        \-
 
 
     
     </td>
     <td valign="top">
-
-    `Value`
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-
-    x
-
-
-    
-    </td>
-    <td valign="top">
-
-    \- \*1\)
-
-
-    
-    </td>
-    <td valign="top">
-
-    `Value`
+        `Value`
 
 
     
@@ -673,45 +650,22 @@ You can use the `UI.TextArrangement` annotation to configure the display format 
     </tr>
     <tr>
     <td valign="top">
-
-    x
+    
+        x
 
 
     
     </td>
     <td valign="top">
-
-    `TextFirst`
+    
+        \- \*1\)
 
 
     
     </td>
     <td valign="top">
-
-    `DescriptionValue`
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-
-    x
-
-
-    
-    </td>
-    <td valign="top">
-
-    `TextLast`
-
-
-    
-    </td>
-    <td valign="top">
-
-    `ValueDescription`
+        `Value`
 
 
     
@@ -719,22 +673,22 @@ You can use the `UI.TextArrangement` annotation to configure the display format 
     </tr>
     <tr>
     <td valign="top">
-
-    x
+    
+        x
 
 
     
     </td>
     <td valign="top">
-
-    `TextSeparate`
+    
+        `TextFirst`
 
 
     
     </td>
     <td valign="top">
-
-    `Value`
+    
+        `DescriptionValue`
 
 
     
@@ -742,22 +696,68 @@ You can use the `UI.TextArrangement` annotation to configure the display format 
     </tr>
     <tr>
     <td valign="top">
-
-    x
+    
+        x
 
 
     
     </td>
     <td valign="top">
-
-    `TextOnly`
+    
+        `TextLast`
 
 
     
     </td>
     <td valign="top">
+    
+        `ValueDescription`
 
-    `Description`
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+        x
+
+
+    
+    </td>
+    <td valign="top">
+    
+        `TextSeparate`
+
+
+    
+    </td>
+    <td valign="top">
+    
+        `Value`
+
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+        x
+
+
+    
+    </td>
+    <td valign="top">
+    
+        `TextOnly`
+
+
+    
+    </td>
+    <td valign="top">
+    
+        `Description`
 
 
     
@@ -798,45 +798,22 @@ You can use the `UI.TextArrangement` annotation to configure the display format 
     </tr>
     <tr>
     <td valign="top">
-
-    \-
+    
+        \-
 
 
     
     </td>
     <td valign="top">
-
-    \-
+    
+        \-
 
 
     
     </td>
     <td valign="top">
-
-    `Value`
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-
-    x
-
-
-    
-    </td>
-    <td valign="top">
-
-    \- \*2\)
-
-
-    
-    </td>
-    <td valign="top">
-
-    `DescriptionValue`
+        `Value`
 
 
     
@@ -844,45 +821,22 @@ You can use the `UI.TextArrangement` annotation to configure the display format 
     </tr>
     <tr>
     <td valign="top">
-
-    x
+    
+        x
 
 
     
     </td>
     <td valign="top">
-
-    `TextFirst`
+    
+        \- \*2\)
 
 
     
     </td>
     <td valign="top">
-
-    `DescriptionValue`
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-
-    x
-
-
-    
-    </td>
-    <td valign="top">
-
-    `TextLast`
-
-
-    
-    </td>
-    <td valign="top">
-
-    `ValueDescription`
+        `DescriptionValue`
 
 
     
@@ -890,22 +844,22 @@ You can use the `UI.TextArrangement` annotation to configure the display format 
     </tr>
     <tr>
     <td valign="top">
-
-    x
+    
+        x
 
 
     
     </td>
     <td valign="top">
-
-    `TextSeparate`
+    
+        `TextFirst`
 
 
     
     </td>
     <td valign="top">
-
-    `Value`
+    
+        `DescriptionValue`
 
 
     
@@ -913,22 +867,68 @@ You can use the `UI.TextArrangement` annotation to configure the display format 
     </tr>
     <tr>
     <td valign="top">
-
-    x
+    
+        x
 
 
     
     </td>
     <td valign="top">
-
-    `TextOnly`
+    
+        `TextLast`
 
 
     
     </td>
     <td valign="top">
+    
+        `ValueDescription`
 
-    `Description`
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+        x
+
+
+    
+    </td>
+    <td valign="top">
+    
+        `TextSeparate`
+
+
+    
+    </td>
+    <td valign="top">
+    
+        `Value`
+
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+        x
+
+
+    
+    </td>
+    <td valign="top">
+    
+        `TextOnly`
+
+
+    
+    </td>
+    <td valign="top">
+    
+        `Description`
 
 
     

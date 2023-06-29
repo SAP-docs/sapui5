@@ -322,7 +322,7 @@ The table containing additional custom columns can look like this:
     > 
     > ```
     > <core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:l="sap.ui.layout">
-    > 	<l:VerticalLayout core:require="{handler: 'SalesOrder/custom/CustomColumn'}">
+    > 	<l:VerticalLayout core:require="{handler: 'SalesOrder/ext/CustomColumn'}">
     > 		<Button text="Custom Button" press="handler.buttonPressed" />
     > 	</l:VerticalLayout>
     > </core:FragmentDefinition>
@@ -353,7 +353,7 @@ The table containing additional custom columns can look like this:
     >                                                 "placement": "After",
     >                                                 "anchor": "DataFieldForAnnotation::FieldGroup::multipleActionFields"
     >                                             },
-    >                                             "template": "SalesOrder.custom.CustomColumnButton",
+    >                                             "template": "SalesOrder.ext.CustomColumnButton",
     >                                             "availability": "Default",
     >                                             "properties": [
     >                                                 "ID",
@@ -361,6 +361,11 @@ The table containing additional custom columns can look like this:
     >                                                 "_CustomerPaymentTerms/CustomerPaymentTerms",
     >                                                 "_ShipToParty/BusinessPartner"
     >                                             ]
+    >                                         },
+    >                                         "CustomColumnWithHeaderFromMetaData": {
+    >                                             "header": "{metaModel>/SalesOrderManage/SoldToParty@com.sap.vocabularies.Common.v1.Label}",
+    >                                             "template": "SalesOrder.ext.CustomColumnButton",
+    >                                             "availability": "Default"
     >                                         }
     >                                     }
     >                                 }
@@ -376,7 +381,7 @@ The table containing additional custom columns can look like this:
     >                                     "columns": {
     >                                         "CustomColumnOnObjectPage": {
     >                                             "header": "AnotherColumnLabel",
-    >                                             "template": "SalesOrder.custom.CustomColumnButton",
+    >                                             "template": "SalesOrder.ext.CustomColumnButton",
     >                                             "availability": "Adaption"
     >                                         }
     >                                     }
@@ -409,7 +414,7 @@ The table containing additional custom columns can look like this:
     > ```
 
 
-The `manifest.json` sample code above enables you to add an additional column to an object page. By default, the column isn't visible on the UI due to the availability. Once it has been added via *Add/Remove Columns*, this is the result:
+The `manifest.json` sample code above enables you to add an additional column to an object page. By default, the column isn't visible on the UI. Once it has been added via *Add/Remove Columns*, this is the result:
 
  ![](images/Custom_Button_bea7e9b.png) 
 
@@ -473,14 +478,17 @@ header
 </td>
 <td valign="top">
 
-any Unicode string
+any Unicode string, a string containing an `i18n` text, a string containing a metadata path
+
+> ### Note:  
+> The `i18n` model is the recommended way to add the header text. The use of a metadata path in the header text is optional and not recommended.
 
 
 
 </td>
 <td valign="top">
 
-The header is shown on the table as header, as well as in the add/remove dialog.
+The header is shown on the table as well as in the add/remove dialog.
 
 
 

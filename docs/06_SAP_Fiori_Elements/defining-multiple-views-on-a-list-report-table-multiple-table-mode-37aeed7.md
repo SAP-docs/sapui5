@@ -1176,45 +1176,22 @@ To define multiple views using multiple table mode, perform the following steps:
     </tr>
     <tr>
     <td valign="top">
-
-    `ShowCounts`
+    
+        `ShowCounts`
 
 
     
     </td>
     <td valign="top">
-
-    determines whether the count is displayed in the tabs
+    
+        determines whether the count is displayed in the tabs
 
 
     
     </td>
     <td valign="top">
-
-    optional \(default setting: false\)
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-
-    `key`
-
-
-    
-    </td>
-    <td valign="top">
-
-    Stable IDs: As there are separate table instances for each tab, table-specific IDs \(such as IDs for tables, toolbar actions, draft indicators in table columns\) get a suffix "-<key\>", where <key\> is the variant key you've specified in the manifest. This avoids duplicate ID errors and allows you to adapt specific tables via runtime adaptation \(for example, hiding a toolbar action for a specific table\).
-
-
-    
-    </td>
-    <td valign="top">
-
-    required
+        optional \(default setting: false\)
 
 
     
@@ -1222,15 +1199,38 @@ To define multiple views using multiple table mode, perform the following steps:
     </tr>
     <tr>
     <td valign="top">
-
-    `annotationPath`
+    
+        `key`
 
 
     
     </td>
     <td valign="top">
+    
+        Stable IDs: As there are separate table instances for each tab, table-specific IDs \(such as IDs for tables, toolbar actions, draft indicators in table columns\) get a suffix "-<key\>", where <key\> is the variant key you've specified in the manifest. This avoids duplicate ID errors and allows you to adapt specific tables via runtime adaptation \(for example, hiding a toolbar action for a specific table\).
 
-    Each object in `paths` defines a view. The `annotationPath` points to a selection variant or a selection presentation variant.
+
+    
+    </td>
+    <td valign="top">
+    
+        required
+
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+        `annotationPath`
+
+
+    
+    </td>
+    <td valign="top">
+    
+        Each object in `paths` defines a view. The `annotationPath` points to a selection variant or a selection presentation variant.
 
     If it points to a selection variant, the default `LineItem` \(no qualifier\) is displayed in this view and the selection variant filters are applied.
 
@@ -1260,8 +1260,8 @@ To define multiple views using multiple table mode, perform the following steps:
     
     </td>
     <td valign="top">
-
-    required
+    
+        required
 
 
     
@@ -1269,15 +1269,15 @@ To define multiple views using multiple table mode, perform the following steps:
     </tr>
     <tr>
     <td valign="top">
-
-    `keepPreviousPersonalization`
+    
+        `keepPreviousPersonalization`
 
 
     
     </td>
     <td valign="top">
-
-    If you switch from an app with only a single table to an app with multiple tables, you can keep the previously defined variant on one tab. To do so, add the `"keepPreviousPersonalization"` setting to your view definition at the `key` and `annotationPath` level. The corresponding tab keeps the default `LineItem` ID \(without the key\), so the variant is applied to it.
+    
+        If you switch from an app with only a single table to an app with multiple tables, you can keep the previously defined variant on one tab. To do so, add the `"keepPreviousPersonalization"` setting to your view definition at the `key` and `annotationPath` level. The corresponding tab keeps the default `LineItem` ID \(without the key\), so the variant is applied to it.
 
     Note that you can only add the personalization to one view because of the need of table-specific IDs.
 
@@ -1285,8 +1285,8 @@ To define multiple views using multiple table mode, perform the following steps:
     
     </td>
     <td valign="top">
-
-    optional
+    
+        optional
 
 
     

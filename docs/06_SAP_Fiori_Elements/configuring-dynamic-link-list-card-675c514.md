@@ -264,8 +264,8 @@ Additionally, dynamic link list card supports contact annotation as default anno
     </tr>
     <tr>
     <td valign="top">
-
-    For any of the these annotation configuration:
+    
+        For any of the these annotation configuration:
 
     -   `UI.Identification` annotation with property `Action`
 
@@ -278,8 +278,8 @@ Additionally, dynamic link list card supports contact annotation as default anno
     
     </td>
     <td valign="top">
-
-    Navigation is available from line item
+    
+        Navigation is available from line item
 
 
     
@@ -287,8 +287,8 @@ Additionally, dynamic link list card supports contact annotation as default anno
     </tr>
     <tr>
     <td valign="top">
-
-    For any of the these annotation configuration + default contact annotation:
+    
+        For any of the these annotation configuration + default contact annotation:
 
     -   `UI.Identification` annotation with property `Action`
 
@@ -301,8 +301,8 @@ Additionally, dynamic link list card supports contact annotation as default anno
     
     </td>
     <td valign="top">
-
-    Navigation is available from line item and you can see quick view information on click of the title.
+    
+        Navigation is available from line item and you can see quick view information on click of the title.
 
 
     
@@ -310,15 +310,15 @@ Additionally, dynamic link list card supports contact annotation as default anno
     </tr>
     <tr>
     <td valign="top">
-
-    For only default contact annotation configuration
+    
+        For only default contact annotation configuration
 
 
     
     </td>
     <td valign="top">
-
-    Quick view information is available on click of title
+    
+        Quick view information is available on click of title
 
 
     
@@ -326,15 +326,15 @@ Additionally, dynamic link list card supports contact annotation as default anno
     </tr>
     <tr>
     <td valign="top">
-
-    If no navigation based annotation or contact annotation
+    
+        If no navigation based annotation or contact annotation
 
 
     
     </td>
     <td valign="top">
-
-    Only label is displayed
+    
+        Only label is displayed
 
 
     

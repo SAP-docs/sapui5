@@ -26,7 +26,20 @@ Make sure that the entity set referred for the `Chart` building block supports a
 > ></macros:Chart>
 > ```
 
-Applications can link the chart building block with the filter building block, enable chart building block for variant management, and allow custom actions. Check out our live example in the flexible programming model explorer at [Chart Title](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/chart/chartDefault).
+Applications can do the following with the chart building block:
+
+-   Link chart building block with the filter building block.
+
+-   Enable chart building block for variant management.
+
+-   Add custom actions.
+
+-   Configure the chart title and control header visibility.
+
+-   Control the visibility of tabs within the chart personalization options.
+
+
+Check out our live example in the flexible programming model explorer at [Chart Title](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/chart/chartDefault).
 
 
 

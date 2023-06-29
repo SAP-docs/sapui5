@@ -179,45 +179,22 @@ This control supports both directed and undirected graphs, as well as graphs tha
     </tr>
     <tr>
     <td valign="top">
-
-    Node
+    
+        Node
 
 
     
     </td>
     <td valign="top">
-
-     `press` 
+    
+         `press` 
 
 
     
     </td>
     <td valign="top">
-
-    Action buttons will not be displayed when the user clicks the node.
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-
-    Node
-
-
-    
-    </td>
-    <td valign="top">
-
-     `collapseExpand` 
-
-
-    
-    </td>
-    <td valign="top">
-
-    The node will not be expanded or collapsed when the user clicks the *Collapse/Expand* button.
+        Action buttons will not be displayed when the user clicks the node.
 
 
     
@@ -225,45 +202,22 @@ This control supports both directed and undirected graphs, as well as graphs tha
     </tr>
     <tr>
     <td valign="top">
-
-    Node
+    
+        Node
 
 
     
     </td>
     <td valign="top">
-
-     `hover` 
+    
+         `collapseExpand` 
 
 
     
     </td>
     <td valign="top">
-
-    Moving the mouse over the node will have no effect on the node appearance.
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-
-    Line
-
-
-    
-    </td>
-    <td valign="top">
-
-     `press` 
-
-
-    
-    </td>
-    <td valign="top">
-
-    Details popup will not be displayed when the user clicks the line.
+        The node will not be expanded or collapsed when the user clicks the *Collapse/Expand* button.
 
 
     
@@ -271,22 +225,22 @@ This control supports both directed and undirected graphs, as well as graphs tha
     </tr>
     <tr>
     <td valign="top">
-
-    Line
+    
+        Node
 
 
     
     </td>
     <td valign="top">
-
-     `hover` 
+    
+         `hover` 
 
 
     
     </td>
     <td valign="top">
-
-    Moving the mouse over the line will have no effect on the line appearance.
+    
+        Moving the mouse over the node will have no effect on the node appearance.
 
 
     
@@ -294,22 +248,68 @@ This control supports both directed and undirected graphs, as well as graphs tha
     </tr>
     <tr>
     <td valign="top">
-
-    Group
+    
+        Line
 
 
     
     </td>
     <td valign="top">
-
-     `showDetail` 
+    
+         `press` 
 
 
     
     </td>
     <td valign="top">
+    
+        Details popup will not be displayed when the user clicks the line.
 
-    Details dialog will not be displayed when the user clicks the *Group Details* icon.
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+        Line
+
+
+    
+    </td>
+    <td valign="top">
+    
+         `hover` 
+
+
+    
+    </td>
+    <td valign="top">
+    
+        Moving the mouse over the line will have no effect on the line appearance.
+
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+        Group
+
+
+    
+    </td>
+    <td valign="top">
+    
+         `showDetail` 
+
+
+    
+    </td>
+    <td valign="top">
+    
+        Details dialog will not be displayed when the user clicks the *Group Details* icon.
 
 
     

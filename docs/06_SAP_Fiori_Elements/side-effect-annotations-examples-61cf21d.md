@@ -522,33 +522,32 @@ You define side effects either in the \*`MPC_EXT` class or in the local annotati
 >     > XML Annotation
 >     > 
 >     > ```
->     ><Annotations Target="namespace.to.action.ActionName">
->     >    <Annotation Term="Common.SideEffects">
->     >        <Record Type="Common.SideEffectsType">
->     >            <PropertyValue Property="TargetEntities">
->     >                <Collection>
->     >                    <NavigationPropertyPath>/namespace.to.EntityContainer/EntityType1</NavigationPropertyPath>
->     >                    <NavigationPropertyPath>/namespace.to.EntityContainer/EntityType2</NavigationPropertyPath>
->     >                </Collection>
->     >            </PropertyValue>
->     >        </Record>
->     >    </Annotation>
->     ></Annotations>
+>     > <Annotations Target="namespace.to.action.ActionName">
+>     >     <Annotation Term="Common.SideEffects">
+>     >         <Record Type="Common.SideEffectsType">
+>     >             <PropertyValue Property="TargetEntities">
+>     >                 <Collection>
+>     >                     <NavigationPropertyPath>/namespace.to.EntityContainer/EntityType1</NavigationPropertyPath>
+>     >                     <NavigationPropertyPath>/namespace.to.EntityContainer/EntityType2</NavigationPropertyPath>
+>     >                 </Collection>
+>     >             </PropertyValue>
+>     >         </Record>
+>     >     </Annotation>
+>     > </Annotations>
 >     > ```
 > 
 >     > ### Sample Code:  
 >     > CAP CDS Annotation
 >     > 
 >     > ```
->     > 
 >     > annotate CA_OC_MANAGE_OR_ITEMS_SRV.IssueOutput with @(
->     >     Common.SideEffects : {
->     >         TargetEntities : [
->     >             '/namespace.to.EntityContainer/EntityType1',
->     >             '/namespace.to.EntityContainer/EntityType2'
->     >         ]
->     >     }
->     > );
+>     >           Common.SideEffects : {
+>     >               TargetEntities : [
+>     >                   '/namespace.to.EntityContainer/EntityType1',
+>     >                   '/namespace.to.EntityContainer/EntityType2'
+>     >               ]
+>     >           }
+>     >       );
 >     > ```
 > 
 > -   Refresh the navigation target

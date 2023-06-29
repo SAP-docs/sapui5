@@ -2,9 +2,9 @@
 
 # Extending SAP Fiori Elements-Based Apps
 
-You can extend your application if needed.
+You can use app extensions to extend your app.
 
-You can use app extensions to extend your app. These are made by developers during the creation of an SAP Fiori elements-based app, using framework extension points provided by SAP Fiori elements. The extensions are made, for example, using manifest changes or SAPUI5 extension points, depending on the floorplan. For more information, see [Extending Generated Apps Using App Extensions](extending-generated-apps-using-app-extensions-340cdb2.md).
+These are made by developers during the creation of an SAP Fiori elements-based app, using framework extension points provided by SAP Fiori elements. The extensions are made, for example, using manifest changes or SAPUI5 extension points, depending on the floorplan. For more information, see [Extending Generated Apps Using App Extensions](extending-generated-apps-using-app-extensions-340cdb2.md).
 
 Application developers can optionally also target a specific instance they want to extend in an object page:
 
@@ -28,10 +28,10 @@ The most specific one wins. In the sample code above, this means for the `SalesO
 > 
 > ```
 > "sap.fe.templates.ObjectPage.ObjectPageController": {
->     "controllerName": "SalesOrder.custom.OPExtend"
+>     "controllerName": "SalesOrder.ext.OPExtend"
 > },
 > "sap.fe.templates.ObjectPage.ObjectPageController#SalesOrder::SalesOrderManageObjectPage": {
->     "controllerName": "SalesOrder.custom.SalesOrderOPExtend"
+>     "controllerName": "SalesOrder.ext.SalesOrderOPExtend"
 > }
 > ```
 
@@ -121,5 +121,5 @@ Here, `MyApplicationID::MainEntityObjectPage` represents the page ID.
 App extensions allow customers and partners to introduce their own functionality to an existing app, as part of an adaptation project, in a consistent and upgrade-safe manner. For more information, see [Extending Delivered Apps Using Adaptation Extensions](extending-delivered-apps-using-adaptation-extensions-52fc48b.md).
 
 > ### Note:  
-> This option is possible only for list report, object page, and analytical list page.
+> This option is possible only for list report, object page, overview page and analytical list page.
 

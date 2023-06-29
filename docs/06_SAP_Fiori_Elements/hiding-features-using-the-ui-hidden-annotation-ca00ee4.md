@@ -609,9 +609,10 @@ In the following example, `STTA_C_MP_Product` is the entity set of the object pa
 
   
   
-**DataField Records in Tables**
+**DataField Records in Object Page Tables**
 
- ![](images/Data_Field_Records_Smart_Tables_74a9d75.png "DataField Records in Tables") 
+ ![](images/Data_Field_Records_Smart_Tables_74a9d75.png "DataField Records in Object Page
+                    Tables") 
 
 > ### Note:  
 > Hiding DataField Records

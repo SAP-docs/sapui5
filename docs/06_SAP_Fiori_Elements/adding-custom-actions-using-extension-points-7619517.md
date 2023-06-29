@@ -82,15 +82,15 @@ These custom actions are displayed as buttons on the UI. When the user selects t
     <table>
     <tr>
     <td valign="top">
-
-     `<entity set>` 
+    
+         `<entity set>` 
 
 
     
     </td>
     <td valign="top">
-
-    Entity set that is displayed on the list report or on the object page \(for example, `SMART_C_Product`\)
+    
+        Entity set that is displayed on the list report or on the object page \(for example, `SMART_C_Product`\)
 
     > ### Note:  
     > If you use multiple views with different `entity sets` on the list report page, `Actions` need to be defined only for main entity set. It is not possible to execute `Actions` defined for other `entity sets`.
@@ -101,15 +101,15 @@ These custom actions are displayed as buttons on the UI. When the user selects t
     </tr>
     <tr>
     <td valign="top">
-
-     `<Action 1>`, `<Action 2>`, …
+    
+         `<Action 1>`, `<Action 2>`, …
 
 
     
     </td>
     <td valign="top">
-
-    Action names
+    
+        Action names
 
 
     
@@ -117,15 +117,15 @@ These custom actions are displayed as buttons on the UI. When the user selects t
     </tr>
     <tr>
     <td valign="top">
-
-     `<id>` 
+    
+         `<id>` 
 
 
     
     </td>
     <td valign="top">
-
-    ID to be used for the action button
+    
+        ID to be used for the action button
 
     > ### Note:  
     > The values of the action name and the ID should be identical.
@@ -136,31 +136,15 @@ These custom actions are displayed as buttons on the UI. When the user selects t
     </tr>
     <tr>
     <td valign="top">
-
-     `<button text>` 
+    
+         `<button text>` 
 
 
     
     </td>
     <td valign="top">
-
-    nullText to be displayed on the button \(typically a binding to an i18n entry, for example, null<button text\>nullnull`{i18n>MY_BUTTON_TEXT}`\)
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-
-     `<handler function>` 
-
-
-    
-    </td>
-    <td valign="top">
-
-    Handler function that is called when the user selects the action button
+        nullText to be displayed on the button \(typically a binding to an i18n entry, for example, null<button text\>nullnull`{i18n>MY_BUTTON_TEXT}`\)
 
 
     
@@ -168,15 +152,31 @@ These custom actions are displayed as buttons on the UI. When the user selects t
     </tr>
     <tr>
     <td valign="top">
-
-     `<global>`\(required\)
+    
+         `<handler function>` 
 
 
     
     </td>
     <td valign="top">
+    
+        Handler function that is called when the user selects the action button
 
-    Indicates whether this is a global action. The default value is `false`.
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+         `<global>`\(required\)
+
+
+    
+    </td>
+    <td valign="top">
+    
+        Indicates whether this is a global action. The default value is `false`.
 
     > ### Note:  
     > If a determining property is set along with the global property, the action is rendered as a global action since this takes precedence.
@@ -187,31 +187,15 @@ These custom actions are displayed as buttons on the UI. When the user selects t
     </tr>
     <tr>
     <td valign="top">
-
-    Relevant only for table toolbar actions in the list report and object page: `<requiresSelection>` \(optional\)
+    
+        Relevant only for table toolbar actions in the list report and object page: `<requiresSelection>` \(optional\)
 
 
     
     </td>
     <td valign="top">
-
-    Property that indicates whether the action requires a selection of items. The default value is `true`.
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-
-    Relevant only for list report actions and object page header actions: `<determining>` \(optional\)
-
-
-    
-    </td>
-    <td valign="top">
-
-    Property that indicates whether the action should be displayed in the footer of the page. The default value is `false`.
+        Property that indicates whether the action requires a selection of items. The default value is `true`.
 
 
     
@@ -219,31 +203,15 @@ These custom actions are displayed as buttons on the UI. When the user selects t
     </tr>
     <tr>
     <td valign="top">
-
-    Relevant only for object page actions: `<SmartTable Facet ID>` 
+    
+        Relevant only for list report actions and object page header actions: `<determining>` \(optional\)
 
 
     
     </td>
     <td valign="top">
-
-    ID that either comes from the annotation in which you have provided an ID for the facet or that's made up of the annotation term plus the navigation property. For example: <entity type association\>::com.sap.vocabularies.UI.v1.LineItem
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-
-     `<applicablePath>` 
-
-
-    
-    </td>
-    <td valign="top">
-
-    Determines if a custom action should be visible or enabled.
+        Property that indicates whether the action should be displayed in the footer of the page. The default value is `false`.
 
 
     
@@ -251,15 +219,47 @@ These custom actions are displayed as buttons on the UI. When the user selects t
     </tr>
     <tr>
     <td valign="top">
-
-     `<command>` 
+    
+        Relevant only for object page actions: `<SmartTable Facet ID>` 
 
 
     
     </td>
     <td valign="top">
+    
+        ID that either comes from the annotation in which you have provided an ID for the facet or that's made up of the annotation term plus the navigation property. For example: <entity type association\>::com.sap.vocabularies.UI.v1.LineItem
 
-    Represents the command mapped to a keyboard shortcut defined under `sap.ui.commands`
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+         `<applicablePath>` 
+
+
+    
+    </td>
+    <td valign="top">
+    
+        Determines if a custom action should be visible or enabled.
+
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+         `<command>` 
+
+
+    
+    </td>
+    <td valign="top">
+    
+        Represents the command mapped to a keyboard shortcut defined under `sap.ui.commands`
 
     > ### Note:  
     > If you are adding the command settings to an existing custom action, the parameter i.e., `oEvent` passed to the event handler of that custom action, is changed. It requires code adaptation if the code in the event handler depends on the `oEvent` parameter.
@@ -568,8 +568,8 @@ These custom actions are displayed as buttons on the UI. When the user selects t
     > 
     > ```
     > "myCustomEnablement": {
-    >      "press": "SalesOrder.custom.CustomActions.navigateExternal",
-    >      "enabled": "SalesOrder.custom.CustomActions.enabledForCompletedOnly",
+    >      "press": "SalesOrder.ext.CustomActions.navigateExternal",
+    >      "enabled": "SalesOrder.ext.CustomActions.enabledForCompletedOnly",
     >      "text": "Enabled for Completed"
     > }
     > ```
@@ -607,15 +607,15 @@ These custom actions are displayed as buttons on the UI. When the user selects t
     </tr>
     <tr>
     <td valign="top">
-
-     `The first parameter of<Action name>` 
+    
+         `The first parameter of<Action name>` 
 
 
     
     </td>
     <td valign="top">
-
-    Name of the custom action
+    
+        Name of the custom action
 
 
     
@@ -623,15 +623,15 @@ These custom actions are displayed as buttons on the UI. When the user selects t
     </tr>
     <tr>
     <td valign="top">
-
-     `<handler function>` 
+    
+         `<handler function>` 
 
 
     
     </td>
     <td valign="top">
-
-    Handler function that is called when the user selects the action button
+    
+        Handler function that is called when the user selects the action button
 
     It is of the format `<app ID from manifest>.<Folder Name>.<Script file>.<Method Name>`
 
@@ -641,15 +641,15 @@ These custom actions are displayed as buttons on the UI. When the user selects t
     </tr>
     <tr>
     <td valign="top">
-
-     `<button text>` 
+    
+         `<button text>` 
 
 
     
     </td>
     <td valign="top">
-
-    Text to be displayed on the button \(typically a binding to an i18n entry, for example `{i18n>BUTTON_TEXT}`\)
+    
+        Text to be displayed on the button \(typically a binding to an i18n entry, for example `{i18n>BUTTON_TEXT}`\)
 
 
     
@@ -657,15 +657,15 @@ These custom actions are displayed as buttons on the UI. When the user selects t
     </tr>
     <tr>
     <td valign="top">
-
-     `<Anchor action name>` 
+    
+         `<Anchor action name>` 
 
 
     
     </td>
     <td valign="top">
-
-    Name of another action with reference to which this action should be placed.
+    
+        Name of another action with reference to which this action should be placed.
 
     Here are some examples:
 
@@ -705,7 +705,7 @@ These custom actions are displayed as buttons on the UI. When the user selects t
         >      "<NavigationPropertyFromRootEntityType>/@com.sap.vocabularies.UI.v1.LineItem": {
         >           "actions": {
         >                "myCustomAction": {
-        >                     "press": "TestApplication.custom.CustomActions.message"
+        >                     "press": "TestApplication.ext.CustomActions.message"
         >                     ....
         >                }
         >           }
@@ -713,9 +713,9 @@ These custom actions are displayed as buttons on the UI. When the user selects t
         > }
         > ```
 
-    2.  Create a folder called *custom* in the webapp folder of the application.
+    2.  Create a folder called *ext* in the webapp folder of the application.
 
-    3.  Create a file called *CustomActions.js* in the *custom* folder.
+    3.  Create a file called *CustomActions.js* in the *ext* folder.
 
     4.  Create a method called *message* in the *CustomActions.js* file.
 
@@ -905,7 +905,7 @@ These custom actions are displayed as buttons on the UI. When the user selects t
     >                                 "@com.sap.vocabularies.UI.v1.FieldGroup#OrderData": {
     >                                     "actions": {
     >                                         "customSectionAction": {
-    >                                             "press": "SalesOrder.custom.CustomActions.alert",
+    >                                             "press": "SalesOrder.ext.CustomActions.alert",
     >                                             "visible": true,
     >                                             "enabled": true,
     >                                             "text": "Alert",
@@ -915,7 +915,7 @@ These custom actions are displayed as buttons on the UI. When the user selects t
     >                                             }
     >                                         },
     >                                         "sectionAction2": {
-    >                                             "press": "SalesOrder.custom.CustomActions.accountDetails",
+    >                                             "press": "SalesOrder.ext.CustomActions.accountDetails",
     >                                             "visible": true,
     >                                             "enabled": true,
     >                                             "text": "Display account details",
@@ -952,14 +952,14 @@ These custom actions are displayed as buttons on the UI. When the user selects t
     >                             "@com.sap.vocabularies.UI.v1.FieldGroup#OrderData": {
     >                                 "actions": {
     >                                     "customSectionAction": {
-    >                                         "press": "SalesOrder.custom.CustomActions.alert",
+    >                                         "press": "SalesOrder.ext.CustomActions.alert",
     >                                         "visible": true,
     >                                         "enabled": false,
     >                                         "text": "Action on Form",
     >                                         "inline": true
     >                                     },
     >                                     "customSectionAction2": {
-    >                                         "press": "SalesOrder.custom.CustomActions.alert",
+    >                                         "press": "SalesOrder.ext.CustomActions.alert",
     >                                         "visible": true,
     >                                         "enabled": true,
     >                                         "text": "Action not on Form"

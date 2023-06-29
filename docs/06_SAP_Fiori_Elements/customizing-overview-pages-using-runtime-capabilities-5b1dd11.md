@@ -18,7 +18,7 @@ End users can customize their overview pages in the following ways:
 -   Hide cards by doing the following:
 
     1.  In the header bar, click or tap the *Options* icon and select *Manage Cards*.
-    2.  Use the switch control to hide or show the relevant card.
+    2.  Use the checkbox to hide or show the relevant card.
     3.  Click *OK*.
     4.  To reset the view to the default settings, in the *Manage Cards* window, click *Reset*.
 

@@ -31,7 +31,7 @@ To create an app using SAP Fiori elements, some prerequisites apply.
 You can use [SAP Fiori tools](https://help.sap.com/viewer/product/SAP_FIORI_tools/Latest/en-US), which is a set of extensions for SAP Business Application Studio and Visual Studio Code, to build your apps. For more information about SAP Business Application Studio, see the documentation on the SAP Help Portal at [SAP Business Application Studio](https://help.sap.com/viewer/product/SAP%20Business%20Application%20Studio/Cloud/en-US).
 
 > ### Note:  
-> In SAP Fiori elements for OData V4, an edit scenario works in combination with a draft-enabled service.
+> In SAP Fiori elements for OData V4, an edit scenario works only in combination with a draft-enabled service.
 
 
 
@@ -59,10 +59,7 @@ For more information about building OData services, use the following links to a
 
 -   The development of new transactional apps with draft capabilities requires ABAP Application Server as of SAP NetWeaver AS for ABAP 7.51 innovation package SP02 or higher. Draft capabilities are not available with SAP NetWeaver AS for ABAP 7.50. For more information, see [Draft Handling](draft-handling-ed9aa41.md).
 
--   If you want to use annotations in CDS: SAP NetWeaver
-
-    > ### Note:  
-    > We recommend that you download the most up-to-date version to ensure that you have the latest features. 7.5 SP01 or higher.
+-   We recommend that you download the most up-to-date version to ensure that you have the latest features. 7.5 SP01 or higher.
 
 
 

@@ -29,6 +29,8 @@ The behavior of the available modes is as follows:
 > The empty rows mode isn't supported when immutable properties are required.
 
 > ### Note:  
+> -   You can make the object page tables insertable or not insertable using the `InsertRestrictions` annotation. For more information, see [Adding Actions to Tables](adding-actions-to-tables-b623e0b.md).
+> 
 > -   If you've defined an ID for the reference facet of your table, use this ID instead of the generated one, for example, to\_ProductText::com.sap.vocabularies.UI.v1.LineItem. For more information, see [Defining and Adapting Sections](defining-and-adapting-sections-facfea0.md).
 > 
 > -   For apps based on releases below SAP NetWeaver 7.51 SP01, the following restriction applies: If a user sets a filter in a table that is enabled for inline creation, the filter conditions may not be evaluated correctly. This can result in data being displayed incorrectly and not according to the filter criteria that has been entered. This is relevant only for apps that use draft handling.
@@ -219,4 +221,47 @@ Certain fields in the `inlineCreationRows` may become relevant only after the ro
 To disable a field, use the `Capabilities.InsertRestrictions.NonInsertableProperties` annotation.
 
 The list of `NonInsertableProperties` is first checked at the navigation property level. If it's not found there, it is checked at the entity set level.
+
+> ### Sample Code:  
+> XML Annotation
+> 
+> ```
+> <Annotations Target="com.c_salesordermanage_sd.SalesOrderManage/_Item">
+>     ...
+>     <Annotation Term="Capabilities.InsertRestrictions">
+>         <Record Type="Capabilities.InsertRestrictionsType">
+>             <PropertyValue Property="NonInsertableProperties">
+>                 <Collection>
+>                     <PropertyPath>RequestedQuantity</PropertyPath>
+>                 </Collection>
+>             </PropertyValue>
+>         </Record>
+>     </Annotation>
+>     ...
+> </Annotations>
+> ```
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> entity SalesOrderItem
+> {
+>     ...
+>    RequestedQuantity : Decimal(15, 3);
+>     ...
+>     owner             : Association to one SalesOrderManage;
+>     ...
+> }
+>  
+> entity SalesOrderManage
+> {
+>     ...
+>     _Item : Composition of many SalesOrderItem
+>             on _Item.owner = $self @(Capabilities: {InsertRestrictions: {NonInsertableProperties: [RequestedQuantity]}});
+>     ...
+> }
+>  
+> 
+> ```
 

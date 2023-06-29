@@ -169,9 +169,7 @@ We will no longer need our `index.js` from now on, because the descriptor takes 
 ```ini
 # App Descriptor
 appTitle=Hello World
-appDescription=A simple walkthrough app that explains the most important concepts of [/pandoc/div/div/horizontalrule/codeblock/strong/span
-     {""}) [/pandoc/div/div/horizontalrule/codeblock/strong/span/span
-     {""}) SAPUI5 (span] (span]
+appDescription=A simple walkthrough app that explains the most important concepts of SAPUI5
 
 # Hello Panel
 showHelloButtonText=Say Hello

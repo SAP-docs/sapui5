@@ -2,7 +2,7 @@
 
 # Creating Cards for the Insights Section of *My Home* in SAP S/4HANA Cloud
 
-An option for tables in the list report or charts in the analytical list page allows users to create cards that can be added to the *Insights* section of *My Home* in SAP S/4HANA Cloud.
+An option for tables in the list report or charts in the analytical list page allows users to create cards that can be added to the *Insights* section of*My Home* in SAP S/4HANA Cloud.
 
 **Prerequisites**
 
@@ -55,7 +55,7 @@ Using the manifest, list report applications can choose to hide this feature by 
 > }
 > ```
 
-Using the manifest, analytical list page applications can choose to hide this feature by setting the `addCardtoInsightsHidden` property within `chartSettings` to `true`, as displayed in the following sample code:
+Similarily, using the manifest, analytical list page applications can choose to hide this feature by setting the `addCardtoInsightsHidden` property within `chartSettings` to `true`, as displayed in the following sample code:
 
 > ### Sample Code:  
 > ```

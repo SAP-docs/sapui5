@@ -45,7 +45,7 @@ In the SAP Web IDE, open the folder structure of the Manage Products project and
 
 
 
-### Step 2: Add Section Title to the i18n File
+### Step 2: Add Section Title to the `i18n` File
 
 To make the section title translatable, add the text to the `i18n` file as follows:
 
@@ -149,14 +149,14 @@ The object page of the *Manage Products* app shows the new section *Product Desc
 
 In the editor of your choice, open the folder structure of the project where you want to make the adaptation and proceed as follows:
 
-1.  In the `webapp` folder, create a new subfolder called `custom`.
-2.  In the folder `custom`, create the file `CustomSection.fragment.xml`.
+1.  In the `webapp` folder, create a new subfolder called `ext`.
+2.  In the folder `ext`, create the file `CustomSection.fragment.xml`.
 3.  Define the XML fragment with its elements, in this example a `VerticalLayout` with several other controls is used. Bindings can be used as well.
 
     > ### Sample Code:  
     > ```xml
     > <core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:l="sap.ui.layout">
-    > 	<l:VerticalLayout core:require="{handler: 'SalesOrder/custom/CustomColumn'}">
+    > 	<l:VerticalLayout core:require="{handler: 'SalesOrder/ext/CustomColumn'}">
     > 		<Button text="Custom Button" press="handler.buttonPressed" />
     > 	</l:VerticalLayout>
     > </core:FragmentDefinition>
@@ -181,7 +181,7 @@ In the editor of your choice, open the folder structure of the project where you
 
 
 
-### Step 2: Add Section Title to the i18n File
+### Step 2: Add Section Title to the `i18n` File
 
 To make the section title translatable, add the text to the `i18n` file as follows:
 
@@ -215,7 +215,7 @@ The extension appears within the object page before or after the defined section
 > 									"sections": {
 > 										"customSection": {
 > 											"type": "XMLFragment",
-> 											"template": "SalesOrder.custom.CustomSection",
+> 											"template": "SalesOrder.ext.CustomSection",
 > 											"title": "{i18n>customSection}",
 > 											"position": {
 > 												"placement": "Before",
@@ -224,7 +224,7 @@ The extension appears within the object page before or after the defined section
 > 										},
 > 										"anotherCustomSection": {
 > 											"type": "XMLFragment",
-> 											"template": "SalesOrder.custom.CustomFieldForm",
+> 											"template": "SalesOrder.ext.CustomFieldForm",
 > 											"title": "Field Form",
 > 											"position": {
 > 												"placement": "After",

@@ -1278,22 +1278,22 @@ Overview pages have been enhanced with the following features:
     </tr>
     <tr>
     <td valign="top">
-
-    You can now create charts that use time as an axis category.
+    
+        You can now create charts that use time as an axis category.
 
 
     
     </td>
     <td valign="top">
-
-    With a combination chart card, you can display more than one measure; the first measure gets displayed in a column format and the subsequent measure is displayed as lines within the chart.
+    
+        With a combination chart card, you can display more than one measure; the first measure gets displayed in a column format and the subsequent measure is displayed as lines within the chart.
 
 
     
     </td>
     <td valign="top">
-
-    With a scatter chart card, you can visualize the distribution of data points over two measures.
+    
+        With a scatter chart card, you can visualize the distribution of data points over two measures.
 
 
     
@@ -1301,22 +1301,22 @@ Overview pages have been enhanced with the following features:
     </tr>
     <tr>
     <td valign="top">
-
-     ![](images/Whats_New_140_OVP_Time_Series_1a9d333.png) 
+    
+         ![](images/Whats_New_140_OVP_Time_Series_1a9d333.png) 
 
 
     
     </td>
     <td valign="top">
-
-     ![](images/Whats_New_140_OVP_Combination_Chart_55139a9.png) 
+    
+         ![](images/Whats_New_140_OVP_Combination_Chart_55139a9.png) 
 
 
     
     </td>
     <td valign="top">
-
-     ![](images/Whats_New_140_OVP_Scatter_Chart_f264ec1.png) 
+    
+         ![](images/Whats_New_140_OVP_Scatter_Chart_f264ec1.png) 
 
 
     
@@ -1475,6 +1475,8 @@ The documentation for Analysis Path Framework that has been located at the end o
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.113](what-s-new-in-sapui5-1-113-a9553fe.md "With this release SAPUI5 is upgraded from version 1.112 to 1.113.")
 
 [What's New in SAPUI5 1.112](what-s-new-in-sapui5-1-112-34afc69.md "With this release SAPUI5 is upgraded from version 1.111 to 1.112.")
 

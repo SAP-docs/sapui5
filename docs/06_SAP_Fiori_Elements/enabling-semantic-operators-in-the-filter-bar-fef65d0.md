@@ -479,7 +479,6 @@ DATE
 
 ```
 "@com.sap.vocabularies.UI.v1.SelectionFields": {
-   "useSemanticDateRange": true,
    "filterFields": {
       "SalesOrderDate": {
          "settings": {
@@ -512,7 +511,6 @@ FROM
 
 ```
 "@com.sap.vocabularies.UI.v1.SelectionFields": {
-   "useSemanticDateRange": true,
    "filterFields": {
       "SalesOrderDate": {
          "settings": {
@@ -547,7 +545,6 @@ TO
 
 ```
 "@com.sap.vocabularies.UI.v1.SelectionFields": {
-   "useSemanticDateRange": true,
    "filterFields": {
       "SalesOrderDate": {
          "settings": {
@@ -582,7 +579,7 @@ DATERANGE
 
 ```
 "@com.sap.vocabularies.UI.v1.SelectionFields": {
-   "useSemanticDateRange": true,
+
    "filterFields": {
       "SalesOrderDate": {
          "settings": {
@@ -617,7 +614,7 @@ TODAYFROMTO
 
 ```
 "@com.sap.vocabularies.UI.v1.SelectionFields": {
-   "useSemanticDateRange": true,
+
    "filterFields": {
       "SalesOrderDate": {
          "settings": {
@@ -654,7 +651,7 @@ LastXDays / LastXWeeks / LastXMonths / LastXQuarters / LastXYears
 
 ```
 "@com.sap.vocabularies.UI.v1.SelectionFields": {
-   "useSemanticDateRange": true,
+ 
    "filterFields": {
       "SalesOrderDate": {
          "settings": {
@@ -689,7 +686,7 @@ NextXDays / NextXWeeks / NextXMonths / NextXQuarters / NextXYears
 
 ```
 "@com.sap.vocabularies.UI.v1.SelectionFields": {
-   "useSemanticDateRange": true,
+
    "filterFields": {
       "SalesOrderDate": {
          "settings": {
@@ -724,7 +721,6 @@ SpecificMonth
 
 ```
 "@com.sap.vocabularies.UI.v1.SelectionFields": {
-   "useSemanticDateRange": true,
    "filterFields": {
       "SalesOrderDate": {
          "settings": {
@@ -757,7 +753,7 @@ The numeric assignment is zero \(for example, January is 0\)
 > > 
 > > ```
 > > "@com.sap.vocabularies.UI.v1.SelectionFields": {
-> >    "useSemanticDateRange": true,
+> > 
 > >    "filterFields": {
 > >       "_Item::SalesOrderDate": {
 > >          "settings": {

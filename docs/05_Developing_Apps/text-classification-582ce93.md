@@ -19,7 +19,7 @@ The complete line must have one of the following patterns \(text type is mandato
 
 We recommend that you assign a text type to each text. The text type indicates to which user interface element the text is related. You can use the following main text types:
 
--   For short texts \(up to 120 characters\) :
+-   For short texts \(less than 120 characters\) :
 
 
     <table>
@@ -41,31 +41,15 @@ We recommend that you assign a text type to each text. The text type indicates t
     </tr>
     <tr>
     <td valign="top">
-
-    `XACT`
+    
+        `XACT`
 
 
     
     </td>
     <td valign="top">
-
-    Accessibility
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-
-    `XBUT`
-
-
-    
-    </td>
-    <td valign="top">
-
-    Button
+        Accessibility
 
 
     
@@ -73,31 +57,15 @@ We recommend that you assign a text type to each text. The text type indicates t
     </tr>
     <tr>
     <td valign="top">
-
-    `XCKL`
+    
+        `XBUT`
 
 
     
     </td>
     <td valign="top">
-
-    Checkbox
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-
-    `XCOL`
-
-
-    
-    </td>
-    <td valign="top">
-
-    Column header
+        Button
 
 
     
@@ -105,31 +73,15 @@ We recommend that you assign a text type to each text. The text type indicates t
     </tr>
     <tr>
     <td valign="top">
-
-    `XFLD`
+    
+        `XCKL`
 
 
     
     </td>
     <td valign="top">
-
-    Label
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-
-    `XGRP`
-
-
-    
-    </td>
-    <td valign="top">
-
-    Group title
+        Checkbox
 
 
     
@@ -137,31 +89,15 @@ We recommend that you assign a text type to each text. The text type indicates t
     </tr>
     <tr>
     <td valign="top">
-
-    `XLNK`
+    
+        `XCOL`
 
 
     
     </td>
     <td valign="top">
-
-    Hyperlink
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-
-    `XLOG`
-
-
-    
-    </td>
-    <td valign="top">
-
-    Log entry
+        Column header
 
 
     
@@ -169,31 +105,15 @@ We recommend that you assign a text type to each text. The text type indicates t
     </tr>
     <tr>
     <td valign="top">
-
-    `XLST`
+    
+        `XFLD`
 
 
     
     </td>
     <td valign="top">
-
-    List box item
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-
-    `XMIT`
-
-
-    
-    </td>
-    <td valign="top">
-
-    Menu item
+        Label
 
 
     
@@ -201,31 +121,15 @@ We recommend that you assign a text type to each text. The text type indicates t
     </tr>
     <tr>
     <td valign="top">
-
-    `XMSG`
+    
+        `XGRP`
 
 
     
     </td>
     <td valign="top">
-
-    Message
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-
-    `XRBL`
-
-
-    
-    </td>
-    <td valign="top">
-
-    Radio button
+        Group title
 
 
     
@@ -233,31 +137,15 @@ We recommend that you assign a text type to each text. The text type indicates t
     </tr>
     <tr>
     <td valign="top">
-
-    `XSEL`
+    
+        `XLNK`
 
 
     
     </td>
     <td valign="top">
-
-    Selection
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-
-    `XTIT`
-
-
-    
-    </td>
-    <td valign="top">
-
-    Table title
+        Hyperlink
 
 
     
@@ -265,15 +153,127 @@ We recommend that you assign a text type to each text. The text type indicates t
     </tr>
     <tr>
     <td valign="top">
-
-    `XTOL`
+    
+        `XLOG`
 
 
     
     </td>
     <td valign="top">
+    
+        Log entry
 
-    Tooltip
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+        `XLST`
+
+
+    
+    </td>
+    <td valign="top">
+    
+        List box item
+
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+        `XMIT`
+
+
+    
+    </td>
+    <td valign="top">
+    
+        Menu item
+
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+        `XMSG`
+
+
+    
+    </td>
+    <td valign="top">
+    
+        Message
+
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+        `XRBL`
+
+
+    
+    </td>
+    <td valign="top">
+    
+        Radio button
+
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+        `XSEL`
+
+
+    
+    </td>
+    <td valign="top">
+    
+        Selection
+
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+        `XTIT`
+
+
+    
+    </td>
+    <td valign="top">
+    
+        Table title
+
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+        `XTOL`
+
+
+    
+    </td>
+    <td valign="top">
+    
+        Tooltip
 
 
     
@@ -303,15 +303,15 @@ We recommend that you assign a text type to each text. The text type indicates t
     </tr>
     <tr>
     <td valign="top">
-
-    `YINS`
+    
+        `YINS`
 
 
     
     </td>
     <td valign="top">
-
-    Instruction
+    
+        Instruction
 
 
     
@@ -319,15 +319,15 @@ We recommend that you assign a text type to each text. The text type indicates t
     </tr>
     <tr>
     <td valign="top">
-
-    `XMSG`
+    
+        `XMSG`
 
 
     
     </td>
     <td valign="top">
-
-    Message
+    
+        Message
 
 
     

@@ -56,6 +56,9 @@ The system gives priority to the `Org.OData.Capabilities.V1.NavigationRestrictio
 > ### Sample Code:  
 > ABAP CDS Annotation
 > 
+> No ABAP CDS annotation is required, since the setting is made according to the modeling \(create, update, delete, etc.\) in RAP BDEF \(behavior definition\).
+
+> ### Sample Code:  
 > ```
 > 
 > define behavior for STTA_C_MP_Product
@@ -67,28 +70,6 @@ The system gives priority to the `Org.OData.Capabilities.V1.NavigationRestrictio
 >   association _ProductText
 >   { create;  }
 > };
-> ```
-> 
-> > ### Note:  
-> > No ABAP CDS annotation is required, since the setting is made according to the modeling \(create, update, delete, etc.\) in RAP BDEF \(behavior definition\).
-
-> ### Sample Code:  
-> CAP CDS Annotation
-> 
-> ```
-> 
-> annotate STTA_PROD_MAN.STTA_C_MP_Product with @(
->   Capabilities.NavigationRestrictions : {
->     RestrictedProperties : [
->         {
->             NavigationProperty : to_ProductText,
->             InsertRestrictions : {
->                 Insertable : true
->             }
->         }
->     ]
->   }
-> );
 > ```
 
 
@@ -110,8 +91,7 @@ The system gives priority to the `Org.OData.Capabilities.V1.NavigationRestrictio
 >     <Record>
 >        <PropertyValue Property="Insertable" Bool="true" />
 >                     <!--Example with Boolean value for InsertRestriction-->
->         	    <!-- <PropertyValue Property="Insertable" Path="Insertable"/>-->
->          	    <!--Example with path for InsertRestriction-->
+> 
 >     </Record>
 >   </Annotation>
 > </Annotations>
@@ -492,6 +472,29 @@ After you enable this setting, a *Delete* button is displayed at the end of the 
 <a name="loiob623e0bbbb2b4147b2d0516c463921a0__section_b1k_3lf_nmb"/>
 
 ## Additional Features in SAP Fiori Elements for OData V4
+
+
+
+### Enabling the *Create* button using `NavigationRestrictions` 
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> 
+> annotate STTA_PROD_MAN.STTA_C_MP_Product with @(
+>   Capabilities.NavigationRestrictions : {
+>     RestrictedProperties : [
+>         {
+>             NavigationProperty : to_ProductText,
+>             InsertRestrictions : {
+>                 Insertable : true
+>             }
+>         }
+>     ]
+>   }
+> );
+> ```
 
 
 

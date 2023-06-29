@@ -2,7 +2,7 @@
 
 # Extending Delivered Apps Using Adaptation Extensions
 
-You can extend delivered apps based on SAP Fiori elements by using [SAP Fiori tools](https://help.sap.com/viewer/product/SAP_FIORI_tools/Latest/en-US), which is a set of extensions for SAP Business Application Studio and Visual Studio Code.
+You can extend delivered apps based on SAP Fiori elements by using the Visual Editor on SAP Business Application Studio. It allows you to create adaptation projects on top of delivered apps.
 
 
 
@@ -11,14 +11,14 @@ You can extend delivered apps based on SAP Fiori elements by using [SAP Fiori to
 > ### Note:  
 > This topic is currently only applicable to SAP Fiori elements for OData V2.
 
-You can implement extension functions as part of a UI adaptation project by using the SAP Business Application Studio and Visual Studio Code. The adaptation project references the applications delivered by SAP as base or parent applications.
+You can implement extension functions as part of a UI adaptation project by using the Visual Editor on SAP Business Application Studio. The adaptation project references the applications delivered by SAP as base or parent applications.
 
 > ### Note:  
 > This procedure is relevant only for list reports, object pages, overview pages, and analytical list pages.
 > 
-> The flexible column layout is not supported by the SAP Business Application Studio and Visual Studio Code.
+> The flexible column layout is not supported by the SAP Business Application Studio.
 
-You can try the adaptation extensions by creating an adaptation projecs using [Extending an SAP Fiori Application](https://help.sap.com/docs/bas/developing-sap-fiori-app-in-sap-business-application-studio/extending-sap-fiori-application).
+You can try the adaptation extensions by creating an adaptation projects described in [Extending an SAP Fiori Application](https://help.sap.com/docs/bas/developing-sap-fiori-app-in-sap-business-application-studio/extending-sap-fiori-application).
 
 You can use adaptation extensions for these extension points:
 

@@ -1,16 +1,11 @@
 <!-- loio890fce16801640459e67ec64da4daa00 -->
 
-<link rel="stylesheet" type="text/css" href="../css/sap-icons.css"/>
-
 # What's New in SAPUI5 1.114
 
 With this release SAPUI5 is upgraded from version 1.113 to 1.114.
 
 > ### Tip:  
 > If you want to do a search across all versions of the What's New content, you can also find it in the [SAPUI5 What's New viewer](https://help.sap.com/whats-new/67f60363b57f4ac0b23efd17fa192d60).
-
-> ### Note:  
-> Content marked as <span style="color:#666666;"><span class="SAP-icons"></span></span>** [Preview](https://help.sap.com/docs/whats-new-disclaimer)** is provided as a courtesy, without a warranty, and may be subject to change. For more information, see the [preview disclaimer](https://help.sap.com/docs/whats-new-disclaimer).
 
 ** **
 
@@ -66,95 +61,6 @@ Available as of
 
 
 </th>
-</tr>
-<tr>
-<td valign="top">
-
- Upcoming 
-
-
-
-</td>
-<td valign="top">
-
- Deleted 
-
-
-
-</td>
-<td valign="top">
-
- Announcement 
-
-
-
-</td>
-<td valign="top">
-
- **End of Cloud Provisioning for SAPUI5 Versions \(Q2/2023\)** 
-
-
-
-</td>
-<td valign="top">
-
-**End of Cloud Provisioning for SAPUI5 Versions \(Q2/2023\)**
-
-The following SAPUI5 versions will be removed from the SAPUI5 Content Delivery Network \(CDN\) after the end of Q2/2023.
-
-**Minor Versions Reaching Their End of Cloud Provisioning**
-
-The following versions including all patches will be removed entirely:
-
--   1.91
--   1.99
--   1.100
--   1.101
-
-**Action**: Upgrade to a version that’s still in maintenance.
-
-**Patch Versions Reaching Their End of Cloud Provisioning**
-
-The following patches will be removed:
-
--   Long-term maintenance versions:
-
-    -   1.38.56
-    -   1.71.2
-    -   1.71.47 to 1.71.48
-    -   1.84.24 to 1.84.25
-    -   1.96.8 to 1.96.9
-
-    **Action**: Upgrade to the latest available patch for the respective SAPUI5 version.
-
--   Other versions
-
-    -   1.102.0
-
-    **Action**: Upgrade to a version that’s still in maintenance.
-
-
-For more information, see [UI5 Releases Ending Service in 2023](https://blogs.sap.com/2022/12/05/ui5-releases-ending-service-in-2023/) and [Version Overview](https://ui5.sap.com/versionoverview.html).
-
-<sub><span style="color:#666666;"><span class="SAP-icons"></span></span>** [Preview](https://help.sap.com/docs/whats-new-disclaimer)**•Deleted•Announcement•Required•Upcoming</sub>
-
-
-
-</td>
-<td valign="top">
-
- Required 
-
-
-
-</td>
-<td valign="top">
-
-2023-06-30
-
-
-
-</td>
 </tr>
 <tr>
 <td valign="top">
@@ -736,16 +642,16 @@ Only for fields without a `ValueList` annotation, we allow users to enter text w
 </td>
 <td valign="top">
 
- **Demo Kit: New Tile for UI5 Test Recorder** 
+ **Accessibility** 
 
 
 
 </td>
 <td valign="top">
 
-**Demo Kit: New Tile for UI5 Test Recorder**
+**Accessibility**
 
-We have added a tile for the UI5 Test Recorder to the Demo Kit Tools section for better visibility. For more information, visit the Tools section in the Demo Kit.
+We are now using JAWS 2023 as a reference testing environment in SAPUI5. For more information, see the *Assistive technologies reference testing environment for SAPUI5* SAP Note [2564165](https://launchpad.support.sap.com/#/notes/2564165).
 
 <sub>Changed•Feature•Info Only•1.114</sub>
 

@@ -386,10 +386,9 @@ saveButtonText=Save
 #XBUT: Button text for cancel
 cancelButtonText=Cancel
 
-[/pandoc/div/div/horizontalrule/codeblock/strong/strong
-     {"emphasis"}) #XBUT: Button text for add user
+#XBUT: Button text for add user
 createButtonText=Add User
- (strong]
+
 
 
 #XTOL: Tooltip for sort

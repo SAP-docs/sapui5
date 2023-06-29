@@ -57,7 +57,7 @@ You can use the annotation term `UI.HeaderFacets` to define which information is
 >                                            $Type             : 'UI.ReferenceFacet',
 >                                            Label             : 'Price',
 >                                            ID                : 'Price',
->                                            Target            : '@UI.DataPoint#Price'
+>                                            Target            : '@UI.DataPoint#Price
 >                             },
 >                             {
 >                                            $Type             : 'UI.ReferenceFacet',

@@ -302,8 +302,8 @@ If you want to add an embedded component with a stable ID, you have two options:
     ```
     [...]
     constructor: function() {
-                        arguments[0].id = "embeddedComponentID";
-                        UIComponent.prototype.contructor.apply(this, arguments);
+    	arguments[0].id = "embeddedComponentID";
+    	UIComponent.prototype.contructor.apply(this, arguments);
     }
     [...]
     ```
@@ -328,7 +328,7 @@ If you want to add an embedded component with a stable ID, you have two options:
 </td>
 <td valign="top">
 
-If you use XML fragments in your app, make sure they are instantiated with the correct view ID prefix.To simplify this you can use the `loadFragment` function on your `sap.ui.core.mvc.Controller` instance.
+If you use XML fragments in your app, make sure they are instantiated with the correct view ID prefix. To simplify this you can use the `loadFragment` function on your `sap.ui.core.mvc.Controller` instance.
 
 Example using the controller function `loadFragment`:
 

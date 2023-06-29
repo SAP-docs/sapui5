@@ -491,7 +491,7 @@ Every object in the `colorPalette` map has two properties `color` \(a color valu
 
 You can configure an analytical card with column stack chart to map the dimension values to specific colors. You can use the configuration mentioned below:
 
-1.  In the card manifest setting, set `bEnableStableColors` to true.
+1.  In the card manifest setting, set `bEnableStableColoring` to true.
 
 2.  Define the color palette for the dimension. Follow the structure mentioned below:
 

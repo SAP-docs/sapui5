@@ -2281,6 +2281,70 @@ Cancel button text on the action parameter dialog.
 <tr>
 <td valign="top">
 
+ `C_ACTION_PARTIAL_FRAGMENT_SAPFE_BOUND_ACTION` 
+
+
+
+</td>
+<td valign="top">
+
+1 selected object can't be processed.
+
+
+
+</td>
+<td valign="top">
+
+Message text used in the warning message box when the action cannot be performed for one of the selected objects.
+
+
+
+</td>
+<td valign="top">
+
+Applications should overwrite the default text with the concrete object.
+
+Example: *1 selected sales order can't be processed.*
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `C_ACTION_PARTIAL_FRAGMENT_SAPFE_BOUND_ACTION_PLURAL` 
+
+
+
+</td>
+<td valign="top">
+
+\{0\} selected objects can't be processed.
+
+
+
+</td>
+<td valign="top">
+
+Message text used in the warning message box when a user tries to perform an action \(deletion, for example\) for multiple selected objects, only some of which can be processed.
+
+
+
+</td>
+<td valign="top">
+
+Applications should overwrite the default text with the concrete object.
+
+Example: *2 selected sales orders can't be processed.*
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
  `C_APP_COMPONENT_SAPFE_ETAG_LATE_PROPERTY` 
 
 
@@ -2345,7 +2409,7 @@ Applications should overwrite the default text with the concrete object that is 
 <tr>
 <td valign="top">
 
-deprecated key: `C_EDIT_FLOW_GENERIC_LOCKED_OBJECT_POPOVER_TEXT_ADDITIONAL_USER` 
+ **deprecated key: `C_EDIT_FLOW_GENERIC_LOCKED_OBJECT_POPOVER_TEXT_ADDITIONAL_USER`** 
 
 
 
@@ -2441,7 +2505,7 @@ Applications should overwrite the default text with the concrete object that is 
 <tr>
 <td valign="top">
 
-deprecated key: `C_COMMON_APPLY_ERROR` 
+ **deprecated key: `C_COMMON_APPLY_ERROR`** 
 
 
 
@@ -2471,7 +2535,7 @@ Error message while saving an object.
 <tr>
 <td valign="top">
 
-deprecated key: `C_TRANSACTION_HELPER_TRANSIENT_CONTEXT_MESSAGE` 
+ **deprecated key: `C_TRANSACTION_HELPER_TRANSIENT_CONTEXT_MESSAGE`** 
 
 
 
@@ -2487,6 +2551,8 @@ This key has been deprecated. The regular message handling flow will be invoked 
 
 Error message short text when a user enters a value in the field of an object page but the back-end update cannot be done due to availability or connection issues.
 
+This key has been deprecated.
+
 
 
 </td>
@@ -2501,7 +2567,7 @@ Error message short text when a user enters a value in the field of an object pa
 <tr>
 <td valign="top">
 
-deprecated key: `C_TRANSACTION_HELPER_TRANSIENT_CONTEXT_DESCRIPTION` 
+ **deprecated key: `C_TRANSACTION_HELPER_TRANSIENT_CONTEXT_DESCRIPTION`** 
 
 
 
@@ -2516,6 +2582,8 @@ This key has been deprecated. The regular message handling flow will be invoked 
 <td valign="top">
 
 Error message description/detail text when a user enters a value in the field of an object page but the back-end update cannot be done due to availability or connection issues.
+
+This key has been deprecated.
 
 
 
@@ -4284,7 +4352,7 @@ Applications should overwrite the default text with the concrete object.
 </td>
 <td valign="top">
 
-The object contains issues
+This object contains issues
 
 
 
@@ -4300,7 +4368,7 @@ Error message text used in the message strip of an object page.
 
 Applications should overwrite the default text and replace "object" with their concrete object.
 
-Example: *This sales order contains issues.*
+Example: *The sales order contains issues.*
 
 
 
@@ -4332,7 +4400,7 @@ Error message text used in the message strip of an object page.
 
 Applications should overwrite the default text and replace "object" with their concrete object.
 
-Example: *This sales order contains error messages.*
+Example: *The sales order contains error messages.*
 
 
 
@@ -4364,7 +4432,7 @@ Warning message text used in the message strip of an object page.
 
 Applications should overwrite the default text and replace "object" with their concrete object.
 
-Example: *This sales order contains warning messages.*
+Example: *The sales order contains warning messages.*
 
 
 
@@ -4380,7 +4448,7 @@ Example: *This sales order contains warning messages.*
 </td>
 <td valign="top">
 
-The object contains information messages
+The object contains information messages.
 
 
 
@@ -4396,7 +4464,7 @@ Information text used in the message strip of an object page.
 
 Applications should overwrite the default text and replace "object" with their concrete object.
 
-Example: *This sales order contains information messages.*
+Example: *The sales order contains information messages.*
 
 
 
@@ -4557,4 +4625,6 @@ If the action name is the same but the entity differs, then the second part of t
 
 > ### Example:  
 > `C_OPERATIONS_ACTION_CONFIRM_MESSAGE|_Items|ReturnInProcess=Can you please confirm if you really want to trigger the returns for the chosen items?` 
+
+
 

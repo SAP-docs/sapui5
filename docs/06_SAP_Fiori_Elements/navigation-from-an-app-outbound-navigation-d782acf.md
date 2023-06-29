@@ -273,7 +273,7 @@ If `RequiresContext` is true, then the button is disabled until a selection is m
 > XML Annotation
 > 
 > ```xml
-> <Record Type="UI.DataFieldForIntentBasedNavigation">
+> <<Record Type="UI.DataFieldForIntentBasedNavigation">
 >    <PropertyValue Property="SemanticObject" String="EPMProduct"/>
 >    <PropertyValue Property="Action" String="manage_st"/>
 >    <PropertyValue Property="Label" String="IBNWithContext"/>

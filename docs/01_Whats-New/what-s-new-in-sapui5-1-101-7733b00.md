@@ -903,31 +903,15 @@ The following changes and new features are available for SAP Fiori elements for 
     </tr>
     <tr>
     <td valign="top">
-
-    T\_OP\_TABLE\_AND\_CHART\_NO\_DATA\_TEXT
+    
+        T\_OP\_TABLE\_AND\_CHART\_NO\_DATA\_TEXT
 
 
     
     </td>
     <td valign="top">
-
-    T\_TABLE\_AND\_CHART\_NO\_DATA\_TEXT
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-
-    T\_OP\_TABLE\_AND\_CHART\_NO\_DATA\_TEXT\_WITH\_FILTER
-
-
-    
-    </td>
-    <td valign="top">
-
-    T\_TABLE\_AND\_CHART\_NO\_DATA\_TEXT\_WITH\_FILTER
+        T\_TABLE\_AND\_CHART\_NO\_DATA\_TEXT
 
 
     
@@ -935,15 +919,15 @@ The following changes and new features are available for SAP Fiori elements for 
     </tr>
     <tr>
     <td valign="top">
-
-    M\_OP\_TABLE\_AND\_CHART\_NO\_DATA\_TEXT\_WITH\_FILTER\_MULTI\_VIEW
+    
+        T\_OP\_TABLE\_AND\_CHART\_NO\_DATA\_TEXT\_WITH\_FILTER
 
 
     
     </td>
     <td valign="top">
-
-    M\_TABLE\_AND\_CHART\_NO\_DATA\_TEXT\_MULTI\_VIEW
+    
+        T\_TABLE\_AND\_CHART\_NO\_DATA\_TEXT\_WITH\_FILTER
 
 
     
@@ -951,15 +935,31 @@ The following changes and new features are available for SAP Fiori elements for 
     </tr>
     <tr>
     <td valign="top">
-
-    M\_OP\_TABLE\_AND\_CHART\_OP\_NO\_FILTERS\_NO\_DATA\_TEXT
+    
+        M\_OP\_TABLE\_AND\_CHART\_NO\_DATA\_TEXT\_WITH\_FILTER\_MULTI\_VIEW
 
 
     
     </td>
     <td valign="top">
+    
+        M\_TABLE\_AND\_CHART\_NO\_DATA\_TEXT\_MULTI\_VIEW
 
-    M\_TABLE\_AND\_CHART\_NO\_FILTERS\_NO\_DATA\_TEXT
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+        M\_OP\_TABLE\_AND\_CHART\_OP\_NO\_FILTERS\_NO\_DATA\_TEXT
+
+
+    
+    </td>
+    <td valign="top">
+    
+        M\_TABLE\_AND\_CHART\_NO\_FILTERS\_NO\_DATA\_TEXT
 
 
     
@@ -1002,6 +1002,8 @@ The following changes and new features are available for SAP Fiori elements for 
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.113](what-s-new-in-sapui5-1-113-a9553fe.md "With this release SAPUI5 is upgraded from version 1.112 to 1.113.")
 
 [What's New in SAPUI5 1.112](what-s-new-in-sapui5-1-112-34afc69.md "With this release SAPUI5 is upgraded from version 1.111 to 1.112.")
 
