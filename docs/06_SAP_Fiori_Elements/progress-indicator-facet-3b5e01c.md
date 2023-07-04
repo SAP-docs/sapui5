@@ -8,7 +8,7 @@ The progress indicator allows you to visually represent the level of completion 
 
    
   
-<a name="loio3b5e01c647f44ea98655b8c08feba780__fig_hbc_3xq_4lb"/>Progress Indicator in Object Page Header
+**Progress Indicator in Object Page Header**
 
  ![](images/ObjPageHeader_ProgIndicator_2e059aa.png "Progress Indicator in Object Page Header") 
 
@@ -16,7 +16,7 @@ As shown below, progress can be expressed either as a percentage or in absolute 
 
    
   
-<a name="loio3b5e01c647f44ea98655b8c08feba780__fig_jbc_3xq_4lb"/>Progress Indicator: Percent or Number
+**Progress Indicator: Percent or Number**
 
  ![](images/ProgIndicator_Percent_Number_73aaedf.png "Progress Indicator: Percent or Number") 
 
@@ -24,7 +24,7 @@ The progress indicator in the header facet is made up of sections to include a t
 
    
   
-<a name="loio3b5e01c647f44ea98655b8c08feba780__fig_lbc_3xq_4lb"/>Sections of Progress Indicator
+**Sections of Progress Indicator**
 
  ![](images/ObjPageHeader_ProgInd_Sections_767e59f.png "Sections of Progress Indicator") 
 
@@ -182,7 +182,7 @@ Note that the unit of measure can be annotated with `Unit` or `ISOCurrency` as s
 > 
 > ```xml
 > <Annotations Target="STTA_PROD_MAN.STTA_C_MP_ProgressType/Value">
->    <Annotation Term="UoM.Unit" Path="UoM"/>
+>    <Annotation Term="Measures.Unit" Path="UoM"/>
 >    <Annotation Term="Common.Label" String="{@i18n>Footer}"/>
 > </Annotations>
 > ```
@@ -190,7 +190,12 @@ Note that the unit of measure can be annotated with `Unit` or `ISOCurrency` as s
 > ### Sample Code:  
 > ABAP CDS Annotation
 > 
-> No ABAP CDS annotation sample is available. Please use the local XML annotation.
+> ```xml
+> @Semantics.unitOfMeasure: true
+> UoM;
+> @Semantics.quantity.unitOfMeasure: 'UoM'
+> Value;
+> ```
 
 > ### Sample Code:  
 > CAP CDS Annotation
@@ -198,7 +203,7 @@ Note that the unit of measure can be annotated with `Unit` or `ISOCurrency` as s
 > ```
 > 
 > annotate STTA_PROD_MAN.STTA_C_MP_ ProgressType with {
->   @UoM.Unit : UoM
+>   @Measures.Unit : UoM
 >   Common.Label : '{@i18n>Footer}'
 >   Value
 > };
@@ -213,7 +218,7 @@ Note that the unit of measure can be annotated with `Unit` or `ISOCurrency` as s
 > 
 > ```xml
 > <Annotations Target="STTA_PROD_MAN.STTA_C_MP_ ProgressType/Value">
->    <Annotation Term="UoM.ISOCurrency" Path="UoM"/>
+>    <Annotation Term="Measures.ISOCurrency" Path="UoM"/>
 >    <Annotation Term="Common.Label" Path="Footer/”>
 > </Annotations>
 > ```
@@ -221,7 +226,12 @@ Note that the unit of measure can be annotated with `Unit` or `ISOCurrency` as s
 > ### Sample Code:  
 > ABAP CDS Annotation
 > 
-> No ABAP CDS annotation sample is available. Please use the local XML annotation.
+> ```xml
+> @Semantics.currencyCode:true
+> UoM;
+> @Semantics.amount.currencyCode: 'UoM'
+> Value;
+> ```
 
 > ### Sample Code:  
 > CAP CDS Annotation
@@ -229,14 +239,11 @@ Note that the unit of measure can be annotated with `Unit` or `ISOCurrency` as s
 > ```
 > 
 > annotate STTA_PROD_MAN.STTA_C_MP_ ProgressType with {
->     @UoM.ISOCurrency : UoM
+>     Measures.ISOCurrency : UoM
 >     @Common.Label : Footer
 >     Value
 > };
 > ```
-
-> ### Note:  
-> In the examples above, `UoM` is an alias for the `Org.OData.Measures.V1` vocabulary.
 
 
 
@@ -266,7 +273,7 @@ Note that the unit of measure can be annotated with `Unit` or `ISOCurrency` as s
 
            
           
-        <a name="loio3b5e01c647f44ea98655b8c08feba780__fig_qq1_gqm_bmb"/>Values in Progress Indicator
+        **Values in Progress Indicator**
 
          ![](images/ProgIndicator_SpecialValues_ec1bbd3.png "Values in Progress Indicator") 
 

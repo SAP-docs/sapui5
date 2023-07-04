@@ -10,7 +10,7 @@ Now we use a shell control as container for our app and use it as our new root e
 
    
   
-<a name="loio4df1d914e52d4b1aa0805eb01522537e__fig_r1j_pst_mr"/>The app is now run in a shell that limits the app width
+**The app is now run in a shell that limits the app width**
 
  ![](images/SAPUI5_Walkthrough_Step_12_011584a.png "The app is now run in a shell that limits the app width") 
 

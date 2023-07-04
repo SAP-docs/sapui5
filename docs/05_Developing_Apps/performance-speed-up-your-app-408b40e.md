@@ -32,12 +32,12 @@ Don't specify a link to the CSS in the bootstrap of your app; use the `manifest.
 Please use the `manifest.json` application descriptor file to declare dependencies. This has several advantages:
 
 -   In the manifest, the dependency information is reusable; it works when the app runs standalone and when it is embedded in the Fiori Launchpad or some other launcher.
--   Moving the dependencies to the manifest loads them later and can therefore make the first rendering happen earlier. Obviously, that first rendering cannot come from the component then.
--   Design-time tools or runtime back-end services \(e.g. AppIndex in ABAP systems\) can use the manifest entries to determine the transitive closure of dependencies and thereby further optimise the parallel loading of dependencies. If the dependencies are maintained in the bootstrap, developers can do this by hand, but will have to update the information on each version upgrade.
+-   Moving the dependencies to the manifest loads them later and can therefore make the first rendering happen earlier. Obviously, that first rendering can't come from the component then.
+-   Design-time tools or runtime back-end services \(e.g. AppIndex in ABAP systems\) can use the manifest entries to determine the transitive closure of dependencies and thereby further optimize the parallel loading of dependencies. If the dependencies are maintained in the bootstrap, developers can do this by hand, but will have to update the information on each version upgrade.
 
 Make sure that you don't load too many dependencies. In most apps it's enough to load the libraries `sap.ui.core` and `sap.m` by default, and add additional libraries only when needed.
 
-If you want to make additional libraries generally known in your app, without directly loading them during the app start, you can add them to the dependency declaration in the `manifest.json` file with the `lazy` loading option. This makes sure that the libraries are only loaded when they are needed:
+If you want to make additional libraries known in your app, without directly loading them during the app start, you can add them to the dependency declaration in the `manifest.json` file with the `lazy` loading option. This makes sure that the libraries are only loaded when they're needed:
 
 ```json
 "sap.ui5": {
@@ -53,9 +53,9 @@ If you want to make additional libraries generally known in your app, without di
 ...
 ```
 
-If a library preload contains reuse components and this preload is configured to be loaded lazily \(via `"lazy": true` in the dependencies of the `manifest.json`\), the library is not available upon creation of the related component.
+If a library preload contains reuse components and this preload is configured to be loaded lazily \(via `"lazy": true` in the dependencies of the `manifest.json`\), the library isn't available upon creation of the related component.
 
-In this case you need to use `sap.ui.getCore().loadLibrary("my.library")` before creating the component \(e.g with `Component.create({ name: "my.component" })` or component usage `myComponent.createComponent("myUsage")`\).
+In this case, you need to use `sap.ui.getCore().loadLibrary("my.library")` before creating the component \(e.g with `Component.create({ name: "my.component" })` or component usage `myComponent.createComponent("myUsage")`\).
 
 An indicator that a component is inside a library is the existence of an entry `sap.app/embeddedBy` in its `manifest.json` file.
 
@@ -69,7 +69,7 @@ An indicator that a component is inside a library is the existence of an entry `
 
 ## Load SAPUI5 from the Content Delivery Network \(CDN\)
 
-In order to ensure that all static SAPUI5 resources are served with the lowest possible latency in SAP Business Technology Platform scenarios, you can load the resources from the Content Delivery Network \(CDN\) cached by AKAMAI. Especially when running your app in the cloud, you benefit from the global distribution of servers. For other scenarios, it is possible to configure a custom CDN of choice as an external location.
+In order to ensure that all static SAPUI5 resources are served with the lowest possible latency in SAP Business Technology Platform scenarios, you can load the resources from the Content Delivery Network \(CDN\) cached by AKAMAI. Especially when running your app in the cloud, you benefit from the global distribution of servers. For other scenarios, it possible to configure a custom CDN of choice as an external location.
 
 **Additional Information:**
 
@@ -85,7 +85,7 @@ Languages can be configured in your manifest since UI5 version 1.77.
 
 The manifest configuration for i18n has now the option to provide the `supportedLocales` and the `fallbackLocale`:
 
--   The `supportedLocales` should contain all languages for which you have i18n files. e.g. a file named `i18n_en.properties` has the locale `en`.
+-   The `supportedLocales` should contain all languages for which you've i18n files. e.g., a file named `i18n_en.properties` has the locale `en`.
 -   The `fallbackLocale` is the locale loaded before falling back to the root bundle.
 
 **Example:** If the following language files exist:
@@ -93,7 +93,7 @@ The manifest configuration for i18n has now the option to provide the `supported
 -   `i18n_en.properties` \(English version, `"en"`\)
 -   `i18n_de.properties` \(German version, `"de"`\)
 
-they can be configured in your `manifest.json` in Section `sap.ui5` under `models`:
+They can be configured in your `manifest.json` in Section `sap.ui5` under `models`:
 
 ```json
 "sap.ui5": {
@@ -110,7 +110,7 @@ they can be configured in your `manifest.json` in Section `sap.ui5` under `model
 }
 ```
 
-With AppDescriptor version 1.21.0 this is also possible in the `i18n` section of `sap.app` in your `manifest.json`:
+Wit'sh AppDescriptor version 1.21.0 this is also possible in the `i18n` section of `sap.app` in your `manifest.json`:
 
 ```json
 "sap.app": {
@@ -122,7 +122,7 @@ With AppDescriptor version 1.21.0 this is also possible in the `i18n` section of
 }
 ```
 
-For more informations, see:
+For more information, see:
 
 -   [Identifying the Language Code / Locale](../04_Essentials/identifying-the-language-code-locale-91f21f1.md)
 -   [Supported Locales and Fallback Chain](../04_Essentials/supported-locales-and-fallback-chain-ec753bc.md)
@@ -149,11 +149,13 @@ Component.create({
 
 ## Ensure that Library Preloads are Enabled
 
-If the library preloads are disabled or not found, every module is loaded separately by an own request. Depending on the server and network infrastructure, this can take a lot of time. Except for debugging reasons, it is always recommended to make sure library preloads are used. Fortunately, the library preloads are active by default if the files are present.
+If the library preloads are disabled or not found, every module is loaded separately by an own request. Depending on the server and network infrastructure, this can take a lot of time. Except for debugging reasons, it's always recommended to make sure library preloads are used. Fortunately, the library preloads are active by default if the files are present.
 
-In some cases it may happen that preloads are disabled:
+In some cases it may happen that preloads are not enabled, or that modules of some libraries are still loaded separately:
 
--   The `data-sap-ui-preload` bootstrap attribute is empty or set to an invalid value. The attribute is optional and only necessary if the loading behavior \(sync / async\) needs to be overwritten manually.
+-   A subset of libraries in the `sap.ui5/dependencies/libs` section of the `manifest.json` is declared with the `lazy` loading option, but these `lazy` libraries aren't preloaded manually before their modules are used. For more information, see [Descriptor Dependencies to Libraries and Components](../04_Essentials/descriptor-dependencies-to-libraries-and-components-8521ad1.md).
+
+-   Neither `sap-ui-async` nor `data-sap-ui-preload` is enabled in the bootstrap configuration options. Note that if `sap-ui-async` is set to `true`, the value of the preload configuration is automatically set to `"async"`. If `sap-ui-async` can't be enabled yet, the `"async"` value has to be applied in the `sap-ui-preload` bootstrap option manually in order to enable preloading libraries asynchronously.
 
 -   Debug sources are enabled in the bootstrap \(`data-sap-ui-debug=true`\) or via the URL \(`sap-ui-debug=true`\).
 
@@ -163,10 +165,10 @@ In some cases it may happen that preloads are disabled:
 
 ## Ensure that Application Resources are Loaded as Component Preload
 
-Application modules \(e.g. components, controllers, views or resource bundles\) should be loaded asynchronously via the component preload file. Check \(e.g. via the Network tab in the Google Chrome developer tools\) if a component preload \(`Component-preload.js`\) is missing. If the application is not configured to load modules asynchronously, required application files may be loaded synchronously.
+Application modules \(e.g. components, controllers, views or resource bundles\) should be loaded asynchronously via the component preload file. Check \(e.g. via the Network tab in the Google Chrome developer tools\) if a component preload \(`Component-preload.js`\) is missing. If the application isn't configured to load modules asynchronously, required application files may be loaded synchronously.
 
 > ### Note:  
-> If a component preload does not exist yet, the bundle needs to be created. For example, you may use the [UI5 Tooling](https://sap.github.io/ui5-tooling/).
+> If a component preload doesn't exist yet, the bundle needs to be created. For example, you can use the [UI5 Tooling](https://sap.github.io/ui5-tooling/).
 
 
 
@@ -200,7 +202,7 @@ If you're using SAP Web IDE, refer to [Application Build](https://help.sap.com/v
 
 -   Slow web server or CDN issues \(e.g. serving of static resources\)
 -   Slow network infrastructure \(e.g. mobile network\)
--   The h2 protocol is not supported \(only HTTP/1.1\); ideally, the h2 protocol should be supported by the web server
+-   The h2 protocol isn't supported \(only HTTP/1.1\); ideally, the h2 protocol should be supported by the web server
 
 **Additional Information:**
 
@@ -212,7 +214,7 @@ If you're using SAP Web IDE, refer to [Application Build](https://help.sap.com/v
 
 ## Migrate `jquery.sap.*` Modules to their Modularised Variants
 
-Since UI5 version 1.58, the global `jquery.sap.*` modules are deprecated. Please use the modularised variant of the module. If you are still using the `jquery.sap.*` variants, a so-called "stubbing layer" may load the old module synchronously!
+Since UI5 version 1.58, the global `jquery.sap.*` modules are deprecated. Please use the modularised variant of the module. If you're still using the `jquery.sap.*` variants, a so-called "stubbing layer" may load the old module synchronously!
 
 You can find a list of modules in the [Legacy jQuery.sap Replacement](../04_Essentials/legacy-jquery-sap-replacement-a075ed8.md) documentation.
 
@@ -227,7 +229,7 @@ The usages can either be replaced manually or by the [UI5 Migration Tool](https:
 
 ## Migrate Synchronous Variants of UI5 Factories to Asynchronous Variants
 
-Check if the application uses synchronous UI5 factories. Many asynchronous variants are available, e.g. for Components, Resource Bundles, Controllers, Views and Fragments. Please visit the following overview:[Legacy Factories Replacement](../04_Essentials/legacy-factories-replacement-491bd9c.md).
+Check if the application uses synchronous UI5 factories. Many asynchronous variants are available, e.g. for Components, Resource Bundles, Controllers, Views, and Fragments. Please visit the following overview:[Legacy Factories Replacement](../04_Essentials/legacy-factories-replacement-491bd9c.md).
 
 
 
@@ -311,7 +313,7 @@ In the OData V4 model, `$select` and `$expand` values can be automatically defin
 The performance limits are reached differently depending on the used browser, operating system and hardware. Therefore, it is important to be mindful about the amount of controls and data bindings. This applies especially to lists and their variants \(e.g. `sap.m.Table` or `sap.ui.table.Table`\):
 
 -   If a table needs to display more than 100 rows, please use `sap.ui.table.Table` instead of `sap.m.Table` The reason for this is that `sap.m.Table` keeps every loaded row in memory, even if not visible after scrolling. To choose the right table variant for your requirements, check out the documentation about [Tables: Which One Should I Choose?](../10_More_About_Controls/tables-which-one-should-i-choose-148892f.md)
--   If the table rows contain multiple controls and/or custom-data fields, please check if they are required, or if another control can replace them. For example, another list like a ComboBox inside of a table cell may create many controls for every row, which can be very expensive.
+-   If the table rows contain multiple controls and/or custom-data fields, please check if they're required, or if another control can replace them. For example, another list like a ComboBox inside of a table cell can create many controls for every row, which can be very expensive.
 -   Check tables for hidden columns and load only the visible ones, if possible.
 
 **Additional Information:**
@@ -333,7 +335,7 @@ You can further optimize your code by doing the following:
 
     Visit the [OData V4 Model](../04_Essentials/odata-v4-model-5de13cf.md) documentation and ensure that all required features are available.
 
-    For a quick start, follow the [OData V4](../03_Get-Started/odata-v4-bcdbde6.md) tutorial.
+    For a quick start, follow the [OData V4 Tutorial](../03_Get-Started/odata-v4-tutorial-bcdbde6.md) tutorial.
 
 -   If you use data binding with an OData V2 service as a back end, you should consider switching your OData model to our more updated OData V2 model. For more information, see [OData V2 Model](../04_Essentials/odata-v2-model-6c47b2b.md#loio6c47b2b39db9404582994070ec3d57a2).
 

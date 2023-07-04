@@ -17,7 +17,7 @@ You have the following options:
 
        
       
-    <a name="loioa37df408044e41ef84e67207c8658d4f__fig_trj_m4x_cmb"/>Single Table Mode
+    **Single Table Mode**
 
      ![](images/Single_Table_Mode_8a3bdfd.png "Single Table Mode") 
 
@@ -25,7 +25,7 @@ You have the following options:
 
        
       
-    <a name="loioa37df408044e41ef84e67207c8658d4f__fig_vrj_m4x_cmb"/>Multiple Table Mode
+    **Multiple Table Mode**
 
      ![](images/Multiple_Table_Mode_1be5a97.png "Multiple Table Mode") 
 
@@ -46,13 +46,13 @@ You have the following options:
 
        
       
-    <a name="loioa37df408044e41ef84e67207c8658d4f__fig_yrj_m4x_cmb"/>Multiple Table Mode with Charts
+    **Multiple Table Mode with Charts**
 
      ![](images/Multiple_Table_Mode_with_Charts_a0ae409.png "Multiple Table Mode with Charts") 
 
 
 > ### Note:  
-> For information about `SelectionVariants`, `PresentationVariants`, and `SelectionPresentationVariants`, see the OData vocabulary at [https://wiki.scn.sap.com/wiki/display/EmTech/OData+4.0+Vocabularies+-+SAP+UI](https://wiki.scn.sap.com/wiki/display/EmTech/OData+4.0+Vocabularies+-+SAP+UI).
+> For information about `SelectionVariants`, `PresentationVariants`, and `SelectionPresentationVariants`, see the OData vocabulary at [https://github.com/SAP/odata-vocabularies/blob/main/vocabularies/UI.md](https://github.com/SAP/odata-vocabularies/blob/main/vocabularies/UI.md).
 
 
 
@@ -67,7 +67,7 @@ You have the following options:
 
        
       
-    <a name="loioa37df408044e41ef84e67207c8658d4f__fig_asj_m4x_cmb"/>Multiple views on a list report with different entity sets
+    **Multiple views on a list report with different entity sets**
 
      ![](images/Multiple_Views_with_Multiple_Entity_Sets_1f20511.png "Multiple views on a list report with different entity
     								sets") 

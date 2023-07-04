@@ -17,7 +17,7 @@ In the real world, data often resides on remote servers and is accessed via an O
 
    
   
-<a name="loio44062441f3bd4c67a4f665ae362d1109__fig_r1j_pst_mr"/>Products from the OData invoices test service are now shown within our app
+**Products from the OData invoices test service are now shown within our app**
 
  ![](images/SAPUI5_Walkthrough_Step_26_99a6491.png "Products from the OData invoices test service are now shown within our
 					app") 
@@ -86,7 +86,7 @@ You can now try to run the app and see what happens - we will see an error relat
 
    
   
-<a name="loio44062441f3bd4c67a4f665ae362d1109__fig_jyf_f1k_c5"/>Violations of the same-origin policy in Google Chrome
+**Violations of the same-origin policy in Google Chrome**
 
  ![](images/Tutorial_Walkthrough_Step_26_CORS_2c36d72.png "Violations of the same-origin policy in Google Chrome") 
 

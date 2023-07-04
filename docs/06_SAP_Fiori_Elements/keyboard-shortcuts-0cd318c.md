@@ -490,7 +490,7 @@ Table settings
 </td>
 <td valign="top">
 
-  [CMD\] + [,\]  
+  [Ctrl\] + [,\]  
 
 
 
@@ -897,13 +897,34 @@ You can define custom keyboard shortcut for `DataFieldForIntentBasedNavigation` 
 > ### Note:  
 > To understand how you can determine `"<Component Name>#<Component ID without app ID prefix>"`, see [Adding Custom Actions Using Extension Points](adding-custom-actions-using-extension-points-7619517.md).
 > 
-> Custom keyboard shortcut for inline `DataFieldForAction` or `DataFieldForIntentBasedNavigation` actions are not supported
+> Custom keyboard shortcut for inline `DataFieldForAction` or `DataFieldForIntentBasedNavigation` actions are not supported.
 
 
 
 <a name="loio0cd318c83ec5473d9a091c1782d03c21__section_mjc_ccs_hnb"/>
 
 ## Additional Features in SAP Fiori Elements for OData V4
+
+You can use keyboard shortcuts for common actions.
+
+
+
+### Triggering the Default Positive Action with a Standard Shortcut
+
+In a list report, object page or subobject page, [Ctrl\][Enter\] \(Microsoft Windows\) or [Cmd\][Return\] \(Mac OS\) triggers the default positive action.
+
+Note that this only happens if the focus isn't on a control that uses the same keys for a shortcut. For example, when the focus is on a table with a create button, the shortcut would trigger *Table Create*, not the default positive action.
+
+The default positive actions for each template are as follows:
+
+-   List report: *Go* button on the filter bar.
+
+-   Object page: the positive semantic action defined by the application. If not defined, the default actions are *Edit* in display mode and *Save* in edit mode.
+
+-   Subobject page: Application defined positive semantic action. If not defined, the default action is the *Apply* button.
+
+
+Note that the standard shortcut doesn't trigger the inline primary action within tables even if the focus is on the table. Instead, it triggers the *Table Create* button \(if applicable\) or the primary action at the page level.
 
 
 

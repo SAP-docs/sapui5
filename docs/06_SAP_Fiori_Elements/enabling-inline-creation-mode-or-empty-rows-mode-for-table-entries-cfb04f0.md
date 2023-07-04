@@ -7,26 +7,33 @@ In apps that use draft handling, you can enable the inline creation mode or empt
 > ### Tip:  
 > We recommend that you use the inline creation mode or empty rows mode only for tables that don't have a large number of columns. For complex tables, use create page instead.
 
-**Inline Creation Mode**: In edit mode, users can choose *Create Entry* to add new entries to a section in a table. By default, a new entry is created and the system automatically navigates to the item's object page. You can enable inline creation of entries, that is, a new line is created but automatic navigation isn't triggered. When a new entry is created, the line is highlighted in blue. This highlight disappears once the data is saved.
+The behavior of the available modes is as follows:
 
-**Empty Rows Mode**: In create or edit mode, two new empty rows are added to the table. In a responsive table, the rows are added at the top. In a grid table, the rows are added at the top. The empty rows won't have any corresponding entry in the back end. Whenever a user modifies a field in an empty row and then moves the focus away from that field, the new row is automatically inserted into the table. In addition, another empty row is added automatically to the table, since empty rows mode always provides two empty new rows.
+-   **Inline Creation Mode**: In create or edit mode, users can choose *Create Entry* to add new entries to a section in a table. By default, a new entry is created and the system automatically navigates to the item's object page. You can enable inline creation of entries, that is, a new line is created and the fields can be modified inline but automatic navigation isn't triggered. When a new entry is created, the line is highlighted in blue. This highlight disappears once the data is saved.
 
-In this mode:
+-   **Empty Rows Mode**: In create or edit mode, two new empty rows are added to the table. In a responsive table, the empty rows are added at the top. In a grid table, the empty rows are added at the bottom. There are no corresponding entries in the draft table for these empty rows. When you modify a field in an empty row and move the focus away from that field, a new row is added automatically to the draft table. Since the empty rows mode always provides two new empty rows, another empty row is added below after the current row in the table.
 
--   The row actions, such as the navigation indicator using a chevron icon, and inline deletion, are hidden in the empty rows.
+    The empty rows mode has the following features:
 
--   Sorting and grouping is not applicable for the empty rows, as they don’t exist in a back-end table.
+    -   The row actions, such as the navigation indicator using a chevron, and inline deletion, are hidden in the empty rows.
 
--   The *Create* button is hidden in the responsive table toolbar.
+    -   Sorting and grouping isn't applicable for the empty rows, as they don’t exist in a back-end table.
 
--   In a grid table, the *Create* button is visible. When a user clicks the *Create* button in the grid table toolbar, the table is scrolled up to the top to display the empty rows and the focus is automatically set on the first editable field in the first empty row.
+    -   In a responsive table, the *Create* button is hidden.
 
+    -   In a grid table, the *Create* button is visible. When you click *Create* in the grid table toolbar, the table scrolls to the bottom of the table to display the empty rows, and automatically sets the focus on the first editable field of the first empty row.
+
+
+
+> ### Restriction:  
+> The empty rows mode isn't supported when immutable properties are required.
 
 > ### Note:  
-> If you've defined an ID for the reference facet of your table, use this ID instead of the generated one, for example, `to_ProductText::com.sap.vocabularies.UI.v1.LineItem`. For more information, see [Defining and Adapting Sections](defining-and-adapting-sections-facfea0.md).
-
-> ### Note:  
-> For apps based on releases below SAP NetWeaver 7.51 SP01, the following restriction applies: If a user sets a filter in a table that is enabled for inline creation, the filter conditions may not be evaluated correctly. This can result in data being displayed incorrectly and not according to the filter criteria that has been entered. This is relevant only for apps that use draft handling.
+> -   You can make the object page tables insertable or not insertable using the `InsertRestrictions` annotation. For more information, see [Adding Actions to Tables](adding-actions-to-tables-b623e0b.md).
+> 
+> -   If you've defined an ID for the reference facet of your table, use this ID instead of the generated one, for example, to\_ProductText::com.sap.vocabularies.UI.v1.LineItem. For more information, see [Defining and Adapting Sections](defining-and-adapting-sections-facfea0.md).
+> 
+> -   For apps based on releases below SAP NetWeaver 7.51 SP01, the following restriction applies: If a user sets a filter in a table that is enabled for inline creation, the filter conditions may not be evaluated correctly. This can result in data being displayed incorrectly and not according to the filter criteria that has been entered. This is relevant only for apps that use draft handling.
 
 
 
@@ -34,7 +41,7 @@ In this mode:
 
 ## Additional Features in SAP Fiori Elements for OData V2
 
-To enable inline creation, in the `pages` section within `manifest.json` of your app, set `"createMode"` to `"inline"` like this:
+To enable inline creation, in the `pages` section within `manifest.json` of your app, set `"createMode"` to `"inline"`, as shown in the following sample code:
 
 ```
 
@@ -80,10 +87,12 @@ To enable inline creation, in the `pages` section within `manifest.json` of your
 
 A section ID defined in the annotation must match the section ID defined in the manifest configuration, where the `createMode` setting is defined. For example, `<PropertyValue Property="ID" String="to_ProductText::com.sap.vocabularies.UI.v1.LineItem"/>`.
 
-Similarly, to enable empty rows, in the `pages` section within `manifest.json` of your app, set `"createMode"` as `"createMode": "creationRows"`.
+Similarly, to enable empty rows mode, set `"createMode"` as `"creationRows"`. With this configuration, the table behaves as described in the Empty Rows Mode section..
+
+Users can explicitly hide empty rows in the edit mode and make the empty rows available only in the create mode. To hide empty rows in edit mode, set `"createMode"` as `"creationRowsHiddenInEditMode"`. The table doesn't contain any empty rows upon loading with this configuration. Empty rows are added to the table only when you click the *Create* button.
 
 > ### Note:  
-> The empty rows are prefilled with default values when the `com.sap.vocabularies.Common.v1.DefaultValuesFunction`annotation is defined in the entity set that belongs to the table with which it is configured. For more information see, [Prefilling Fields Using the `DefaultValuesFunction.`](prefilling-fields-using-the-defaultvaluesfunction-5ada91c.md)
+> The empty rows are prefilled with default values when the `com.sap.vocabularies.Common.v1.DefaultValuesFunction` annotation is defined in the entity set that belongs to the table with which it's configured. For more information, see [Prefilling Fields Using the DefaultValuesFunction](prefilling-fields-using-the-defaultvaluesfunction-5ada91c.md).
 
 
 
@@ -106,8 +115,7 @@ This flag is evaluated only if the `"createMode":"inline"` flag is available in 
 >                             "settings": {
 >                                 "showRelatedApps": true,
 >                                 "tableType": "ResponsiveTable",
->                                 "editableHeaderContent": true,
->                                 "showConfirmationOnDraftActivate": true,
+>                                 "editableHeaderContent": true,,
 >                                 "sections": {
 >                                     "to_ProductText::com.sap.vocabularies.UI.v1.LineItem": {
 >                                         "navigationProperty": "to_ProductText",
@@ -129,7 +137,7 @@ This flag is evaluated only if the `"createMode":"inline"` flag is available in 
 
 ## Additional Features in SAP Fiori Elements for OData V4
 
-To enable inline creation mode in an object page, set `"creationMode"` to `"Inline"` as shown in the following sample code:
+To enable inline creation mode in an object page per table, set `"creationMode"` to `"Inline"`, as shown in the following sample code:
 
 > ### Sample Code:  
 > `manifest.json`
@@ -140,23 +148,120 @@ To enable inline creation mode in an object page, set `"creationMode"` to `"Inli
 >     "id": "SalesOrderManageObjectPage",                  
 >     "name": "sap.fe.templates.ObjectPage",                  
 >     "options":{
->         ....
->         ....                                
->         "controlConfiguration":{                              
->             "_Item/@com.sap.vocabularies.UI.v1.LineItem":{
->                 "tableSettings": {
->                     ....
->                     ....           
->                     "creationMode":{                                          
->                         "name": "Inline",            // Results in Inline creation (default).                               
->                         ...                          
->                     }                                  
->                 }                              
->             }                      
->         }      
+>         "settings":{
+>             ....
+>             ....                                
+>             "controlConfiguration":{                              
+>                 "_Item/@com.sap.vocabularies.UI.v1.LineItem":{
+>                     "tableSettings": {
+>                         ....
+>                         ....           
+>                         "creationMode":{                                          
+>                             "name": "Inline",            // Results in Inline creation (default).                               
+>                             ...                          
+>                         }                                  
+>                     }                              
+>                 }                      
+>             }      
+>         } 
 >     }
 > }
 > ```
 
-Similarly, to enable empty rows mode, set `"creationMode"` to `"InlineCreationRows"`.
+
+
+### Enabling and Disabling Empty Rows Mode
+
+To enable the empty rows mode, set `"creationMode"` to `"InlineCreationRows"`.
+
+The default behavior of the empty rows mode is as follows:
+
+-   The empty rows are visible on grid and responsive tables when a new object is created.
+
+-   The empty rows are visible on grid and responsive tables when an existing object is edited.
+
+
+To change this behavior, you can use the parameter `inlineCreationRowsHiddenInEditMode`. Its default value is `'false'`. If it is set to `'true'`, the empty rows will be hidden when editing an existing object. Selecting the table's *Create* button will display the empty rows.
+
+> ### Sample Code:  
+> `manifest.json`
+> 
+> ```
+> "SalesOrderManageObjectPage":{                  
+>     "type": "Component",                  
+>     "id": "SalesOrderManageObjectPage",                  
+>     "name": "sap.fe.templates.ObjectPage",                  
+>     "options":{
+>         "settings":{
+>             ....
+>             ....                                
+>             "controlConfiguration":{                              
+>                 "_Item/@com.sap.vocabularies.UI.v1.LineItem":{
+>                     "tableSettings": {
+>                         ....
+>                         ....           
+>                         "creationMode":{                                          
+>                             "name": "InlineCreationRows",            
+>                             "inlineCreationRowsHiddenInEditMode": true
+>                         }                                  
+>                     }                              
+>                 }                      
+>             }      
+>         } 
+>     }
+> }
+> ```
+
+
+
+### Disabling Fields in the Empty Rows Mode
+
+Certain fields in the `inlineCreationRows` may become relevant only after the row has been created. They can be disabled so that they appear as read-only in the empty rows.
+
+To disable a field, use the `Capabilities.InsertRestrictions.NonInsertableProperties` annotation.
+
+The list of `NonInsertableProperties` is first checked at the navigation property level. If it's not found there, it is checked at the entity set level.
+
+> ### Sample Code:  
+> XML Annotation
+> 
+> ```
+> <Annotations Target="com.c_salesordermanage_sd.SalesOrderManage/_Item">
+>     ...
+>     <Annotation Term="Capabilities.InsertRestrictions">
+>         <Record Type="Capabilities.InsertRestrictionsType">
+>             <PropertyValue Property="NonInsertableProperties">
+>                 <Collection>
+>                     <PropertyPath>RequestedQuantity</PropertyPath>
+>                 </Collection>
+>             </PropertyValue>
+>         </Record>
+>     </Annotation>
+>     ...
+> </Annotations>
+> ```
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> entity SalesOrderItem
+> {
+>     ...
+>    RequestedQuantity : Decimal(15, 3);
+>     ...
+>     owner             : Association to one SalesOrderManage;
+>     ...
+> }
+>  
+> entity SalesOrderManage
+> {
+>     ...
+>     _Item : Composition of many SalesOrderItem
+>             on _Item.owner = $self @(Capabilities: {InsertRestrictions: {NonInsertableProperties: [RequestedQuantity]}});
+>     ...
+> }
+>  
+> 
+> ```
 

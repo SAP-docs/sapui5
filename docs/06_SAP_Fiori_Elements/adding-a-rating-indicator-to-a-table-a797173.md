@@ -12,7 +12,7 @@ Decimal values are rounded up or down accordingly. If a value falls between x.25
 
    
   
-<a name="loioa797173b84724ef1bc54d59dc575e52f__fig_kxd_n51_xlb"/>Rating Indicator in Table
+**Rating Indicator in Table**
 
  ![](images/Rating_Indicator_in_Table_f83c4d3.png "Rating Indicator in Table") 
 

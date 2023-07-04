@@ -183,8 +183,8 @@ To instantiate the reuse component in the current component, you use an instance
 You can also declare a reuse component directly, for example, in your JavaScript or XML code. In an XML view, the local service factory can only be used via the `ComponentContainer` that has a superordinate component.
 
 ```xml
-<View ...>
-  <ComponentContainer usage="myreuse" async="true"></ComponentContainer>
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" ...>
+  <core:ComponentContainer usage="myreuse" async="true" />
 </View>
 ```
 

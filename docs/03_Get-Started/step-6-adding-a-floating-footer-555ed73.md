@@ -12,7 +12,7 @@ In this step, we add a floating footer to the detail page.
 
    
   
-<a name="loio555ed73903b34c70a23ba13af1a5d71e__fig_r1j_pst_mr"/>`ObjectPageLayout` with a floating footer
+**ObjectPageLayout with a floating footer**
 
  ![](images/Floating_Footer_Fiori_2_0_Tutorial_24122e0.png "ObjectPageLayout with a floating footer") 
 
@@ -38,7 +38,7 @@ You can view and download all files at [Flexible Column Layout App - Step 6](htt
 	xmlns:mvc="sap.ui.core.mvc">
 	<FlexibleColumnLayout id="flexibleColumnLayout" stateChange="onStateChanged" backgroundDesign="Solid">
 		<beginColumnPages>
-			<mvc:XMLView id="beginView" viewName="sap.ui.demo.fiori2.view.Master"/>
+			<mvc:XMLView id="beginView" viewName="sap.ui.demo.fiori2.view.List"/>
 		</beginColumnPages>
 		<midColumnPages>
 			<mvc:XMLView id="detailView" viewName="sap.ui.demo.fiori2.view.Detail"/>

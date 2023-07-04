@@ -6,7 +6,7 @@ An overview page is a data-driven SAP Fiori application built using SAPUI5 techn
 
 Overview pages provide quick access to vital business information at a glance, in the form of visual, actionable cards. The user-friendly experience makes viewing, filtering, and acting upon data quick and simple. Business users can see the big picture at a glance, and also focus on the most important tasks, enabling faster decision making as well as immediate action.
 
-The application lets you create several cards for different types of content that helps in visualizing information in an attractive and efficient way. You can create overview pages and add cards to the page using the overview page wizard in SAP Web IDE.
+The application lets you create several cards for different types of content that helps in visualizing information in an attractive and efficient way. You can create overview pages using the SAP Fiori generator. To add any further cards, you can use the guides available within the Guided Development tool. For more information, see [Use Feature Guides](https://help.sap.com/docs/SAP_FIORI_tools/17d50220bcd848aa854c9c182d65b699/0c9e518ecf704b2f80a2bed0eaca60ae.html).
 
 The displayed data is fully interactive, with clickable areas for easy navigation to relevant applications. Based on SAP Fiori, overview pages organize action items with a fully responsive user interface. Users can access overview pages from SAP Fiori launchpad and narrow down the information displayed, or opt to hide cards to focus on a particular topic.
 

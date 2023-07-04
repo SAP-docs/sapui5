@@ -42,7 +42,12 @@ The generated IDs change whenever the control structure of the app changes. The 
 
 
 > ### Tip:  
-> Stable IDs are an important prerequisite for SAPUI5 flexibility services, automated testing, and inline help tools, such as [Web Assistant](https://enable-now.sap.com/ic/pub/int/index.html?show=group!GR_CF44F241F6233280#group!GR_FE31C8798B894A1). Apps with stable IDs are of high quality and offer customers more functionality. Therefore, we strongly recommend that you use stable IDs whenever possible \(some technical controls don't need stable IDs, such as `CustomData`\).
+> Stable IDs are an important prerequisite for SAPUI5 flexibility services, automated testing, and inline help tools. Apps with stable IDs are of high quality and offer customers more functionality. Therefore, we strongly recommend that you use stable IDs whenever possible \(some technical controls don't need stable IDs, such as `CustomData`\).
+
+> ### Caution:  
+> If some controls have disappeared after a software upgrade or the way in which they can be identified has been changed, this has a direct impact on the functions that depend on stable IDs. These stable IDs are part of the public API of the app, and therefore must be kept stable over the life cycle of the app.
+> 
+> Do not delete any control that has a stable ID. If you need to remove a control from an app, set the control's `visible` property to `false`.
 
 
 
@@ -297,8 +302,8 @@ If you want to add an embedded component with a stable ID, you have two options:
     ```
     [...]
     constructor: function() {
-                        arguments[0].id = "embeddedComponentID";
-                        UIComponent.prototype.contructor.apply(this, arguments);
+    	arguments[0].id = "embeddedComponentID";
+    	UIComponent.prototype.contructor.apply(this, arguments);
     }
     [...]
     ```
@@ -323,7 +328,7 @@ If you want to add an embedded component with a stable ID, you have two options:
 </td>
 <td valign="top">
 
-If you use XML fragments in your app, make sure they are instantiated with the correct view ID prefix.To simplify this you can use the `loadFragment` function on your `sap.ui.core.mvc.Controller` instance.
+If you use XML fragments in your app, make sure they are instantiated with the correct view ID prefix. To simplify this you can use the `loadFragment` function on your `sap.ui.core.mvc.Controller` instance.
 
 Example using the controller function `loadFragment`:
 
@@ -352,9 +357,6 @@ Fragment.load({
 </td>
 </tr>
 </table>
-
-> ### Note:  
-> If some controls have disappeared after a software upgrade or the way in which they can be identified has been changed, this has a direct impact on the functions that depend on stable IDs. For this reason, the IDs, which are part of the public API of the app, must be kept stable over the life cycle of the app.
 
 
 

@@ -179,7 +179,7 @@ The value help for these dimensions display values present in the main entity se
 
 Consider the following table in which all of the entity sets refer to the same business object using different dimension names.
 
-<a name="loio4de40b31324e4876a8421f6f642e0140__table_cl1_ndh_yx"/>
+****
 
 
 <table>
@@ -400,7 +400,7 @@ So in the example above, if the user has already filtered on `"Region"` resultin
 The complete `ValueList` annotation for the `CountryID` filter field is as follows:
 
 > ### Sample Code:  
-> `ValueList` annotation for the `CountryID` filter field
+> XML Annotation
 > 
 > ```
 > <Annotations Target="Z0020_CDS.Z0020Type/CountryID">
@@ -424,6 +424,59 @@ The complete `ValueList` annotation for the `CountryID` filter field is as follo
 >         </Record>
 >     </Annotation>
 > </Annotations> 
+> ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> ```
+> @Consumption.valueHelpDefinition:
+>         [{
+>           entity :{
+>             name    : 'Z0022'
+>           },
+>             label  : 'Country',
+>             additionalBinding: [
+>               {
+>                 localElement: 'CountryID',
+>                 element: 'CountryIdentifier',
+>                 usage: #RESULT // Common.ValueListParameterOut
+>                },
+> {
+>                 localElement: 'RegionID',
+>                 element: 'RegionIdentifier',
+>                 usage: #FILTER // Common.ValueListParameterIn
+>                }              
+>             ]
+>           }
+>        ]
+> CountryID;
+> ```
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> CountryID : UUID @(
+>     Common : {
+>         ValueList #0020_Country : {
+>             Label : 'Country',
+>             CollectionPath : 'Z0022',
+>             Parameters : [
+>             {
+>                 $Type : 'Common.ValueListParameterOut',
+>                 LocalDataProperty : CountryID,
+>                 ValueListProperty : 'CountryIdentifier'
+>             },
+>             {
+>                 $Type : 'Common.ValueListParameterIn',
+>                 LocalDataProperty : RegionID,
+>                 ValueListProperty : 'RegionIdentifier'
+>             }
+>             ]
+>        }
+>     }
+> );
 > ```
 
 Similarly, we can have a `ValueList` annotation for the `Plant` field so that it reacts to values from `Region` as well as `Country` filter fields.

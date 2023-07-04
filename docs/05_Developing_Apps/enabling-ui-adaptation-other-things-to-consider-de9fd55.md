@@ -38,6 +38,10 @@ If users should be able to save their UI changes as different views \(control va
 
 All you have to do is add this control to an appropriate location in your app, and assign the desired UI container as a target in a `for` association.
 
+Please note that it is not supported to retroactively introduce a variant management control after a key user has already created adaptations for your application. This would lead to adaptations being applied in a non-defined order, making the state of the UI unpredictable.
+
+If you retroactively remove a variant management control for which key user adaptations or end user personalization already exist, these adaptations will be lost.
+
 
 
 <a name="loiode9fd55c69af4b46863f5d26b5d796c4__section_rvb_cpn_2jb"/>
@@ -104,8 +108,7 @@ The process to define the design time metadata depends on your scenario:
 In this case, you need to specify metadata via the `sap.ui.dt` namespace. Example:
 
 ```xml
-<core:View
-	...
+<mvc:View xmlns:mvc="sap.ui.core.mvc"
 	xmlns:sap.ui.dt="sap.ui.dt"
 >
 	...
@@ -118,7 +121,7 @@ In this case, you need to specify metadata via the `sap.ui.dt` namespace. Exampl
 		</ChildControl>
 	</ContainerControl>
 	...
-</core:View>
+</mvc:View>
 ```
 
 

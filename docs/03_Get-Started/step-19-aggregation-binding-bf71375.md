@@ -10,7 +10,7 @@ Now that we have established a good structure for our app, it's time to add some
 
    
   
-<a name="loiobf71375454654b44af01379a3c3a6273__fig_r1j_pst_mr"/>A list of invoices is displayed below the panel
+**A list of invoices is displayed below the panel**
 
  ![](images/SAPUI5_Walkthrough_Step_20_c694be7.png "A list of invoices is displayed below the panel") 
 
@@ -167,8 +167,7 @@ In the `items` aggregation, we define the template for the list that will be aut
 ```ini
 # App Descriptor
 appTitle=Hello World
-appDescription=A simple walkthrough app that explains the most important concepts of [/pandoc/div/div/horizontalrule/codeblock/span/span
-     {""}) SAPUI5 (span]
+appDescription=A simple walkthrough app that explains the most important concepts of SAPUI5
 
 # Hello Panel
 showHelloButtonText=Say Hello

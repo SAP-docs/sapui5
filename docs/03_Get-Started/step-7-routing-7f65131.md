@@ -12,7 +12,7 @@ In this step, we utilize the `sap.f.routing.Router`.
 
    
   
-<a name="loio7f651316d396400d88835adb0d021532__fig_r1j_pst_mr"/>Changing layouts based on the `sap.f.routing.Router` \(no visual changes to last step\)
+**Changing layouts based on the sap.f.routing.Router \(no visual changes to last step\)**
 
  ![](images/Floating_Footer_Fiori_2_0_Tutorial_24122e0.png "Changing layouts based on the sap.f.routing.Router (no
 					visual changes to last step)") 
@@ -100,7 +100,7 @@ We access the router and bind to its `routeMatched` event. For more information,
 
 <a name="loio7f651316d396400d88835adb0d021532__section_agl_ynj_l4b"/>
 
-## webapp/controller/Master.controller.js \[MODIFY\]
+## webapp/controller/List.controller.js \[MODIFY\]
 
 ```js
 sap.ui.define([
@@ -114,7 +114,7 @@ sap.ui.define([
 ], function (JSONModel, Controller, Filter, FilterOperator, Sorter, MessageBox, fioriLibrary) {
 	"use strict";
 
-	return Controller.extend("sap.ui.demo.fiori2.controller.Master", {
+	return Controller.extend("sap.ui.demo.fiori2.controller.List", {
 		onInit: function () {
 			this.oView = this.getView();
 			this._bDescendingSort = false;
@@ -159,7 +159,7 @@ sap.ui.define([
 });
 ```
 
-We change the event handler for pressing an item from the master view to use the router instead of manually manipulating the `FlexibleColumnLayout` instance. When we call the router's `navTo` method, the router itself will change the `layout` property of the `FlexibleColumnLayout`.
+We change the event handler for pressing an item from the list view to use the router instead of manually manipulating the `FlexibleColumnLayout` instance. When we call the router's `navTo` method, the router itself will change the `layout` property of the `FlexibleColumnLayout`.
 
 
 
@@ -180,7 +180,7 @@ sap.ui.define([
 			this.oRouter = oOwnerComponent.getRouter();
 			this.oModel = oOwnerComponent.getModel();
 
-			this.oRouter.getRoute("master").attachPatternMatched(this._onProductMatched, this);
+			this.oRouter.getRoute("list").attachPatternMatched(this._onProductMatched, this);
 			this.oRouter.getRoute("detail").attachPatternMatched(this._onProductMatched, this);
 		},
 
@@ -200,14 +200,14 @@ sap.ui.define([
 		},
 
 		onExit: function () {
-			this.oRouter.getRoute("master").detachPatternMatched(this._onProductMatched, this);
+			this.oRouter.getRoute("list").detachPatternMatched(this._onProductMatched, this);
 			this.oRouter.getRoute("detail").detachPatternMatched(this._onProductMatched, this);
 		}
 	});
 });
 ```
 
-We bind the table in the detail view to reflect the currently selected product from the master view.
+We bind the table in the detail view to reflect the currently selected product from the list view.
 
 
 
@@ -316,9 +316,9 @@ We initialize the router and bind to its `onBeforeRouteMatched` event, and we in
 			"routes": [
 				{
 					"pattern": ":layout:",
-					"name": "master",
+					"name": "list",
 					"target": [
-						"master",
+						"list",
 						"detail"
 					]
 				},
@@ -326,14 +326,14 @@ We initialize the router and bind to its `onBeforeRouteMatched` event, and we in
 					"pattern": "detail/{product}/{layout}",
 					"name": "detail",
 					"target": [
-						"master",
+						"list",
 						"detail"
 					]
 				}
 			],
 			"targets": {
-				"master": {
-					"name": "Master",
+				"list": {
+					"name": "List",
 					"controlAggregation": "beginColumnPages"
 				},
 				"detail": {

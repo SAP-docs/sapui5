@@ -169,7 +169,8 @@ To enable intent-based navigation, you must associate a semantic object. Navigat
 
     To only show the property as a link in a specific use case, for example within a form on an object page, you must use the `DataFieldWithIntentBasedNavigation` annotation. You can use this type of link in tables and forms, that is, a `DataFieldWithIntentBasedNavigation` can be added to a `LineItem` or `FieldGroup` annotation. The link text is set according to the `"Value"` property \(in the example below this is the value of `SomePath`\). Note that in SAP Fiori elements for OData V2`sap:unit` annotations currently aren't evaluated in this context.
 
-    When a user chooses the link, direct navigation to the target is triggered – provided that you have defined a unique target by defining the semantic object and an action.
+    > ### Note:  
+    > Make sure you define a unique target by specifying both the semantic object and an action. Otherwise, clicking the link will not trigger direct navigation to the target.
 
     > ### Sample Code:  
     > XML Annotation
@@ -213,7 +214,7 @@ To enable intent-based navigation, you must associate a semantic object. Navigat
     >     },
     > ```
 
-    For examples of how to use the `DataFieldWithIntentBasedNavigation` annotation, see [Form Facet](form-facet-ebe05d5.md) and [Adding Actions to Tables](adding-actions-to-tables-b623e0b.md).
+    For examples of how to use the `DataFieldWithIntentBasedNavigation` annotation, see [Form Facet](form-facet-ff0ae0b.md) and [Adding Actions to Tables](adding-actions-to-tables-b623e0b.md).
 
 
 **Using a Button**
@@ -285,7 +286,7 @@ If `RequiresContext` is true, then the button is disabled until a selection is m
 > 
 > ```
 > {    
->     semanticObject: ‘EPMProduct’,
+>     semanticObject: 'EPMProduct',
 >     semanticObjectAction: 'manage_st',
 >     label: 'IBNWithContext',
 >     requiresContext: true,
@@ -317,14 +318,14 @@ If `RequiresContext` is true, then the button is disabled until a selection is m
 
        
       
-    <a name="loiod782acf8bfd74107ad6a04f0361c5f62__fig_gyd_sqb_2nb"/>SAP Fiori launchpad: Maintain the Supported Devices for the Combination of Semantic Object and Action
+    **SAP Fiori launchpad: Maintain the Supported Devices for the Combination of Semantic Object and Action**
 
      ![](images/SupportedDevice_41cc89e.png "SAP Fiori launchpad: Maintain the Supported Devices for the Combination of Semantic
     								Object and Action") 
 
        
       
-    <a name="loiod782acf8bfd74107ad6a04f0361c5f62__fig_iyd_sqb_2nb"/>SAP Fiori launchpad: Maintain the Mandatory Parameters for Semantic Object and Action
+    **SAP Fiori launchpad: Maintain the Mandatory Parameters for Semantic Object and Action**
 
      ![](images/mandatoryparameters_45f06a4.png "SAP Fiori launchpad: Maintain the Mandatory Parameters for Semantic Object and
     								Action") 
@@ -368,20 +369,6 @@ The properties marked with the `PersonalData.IsPotentiallySensitive` annotation 
 >   @Semantics.personalData.isPotentiallySensitive: true
 >   CreditCardNumber;
 > }
-> ```
-
-> ### Sample Code:  
-> CAP CDS Annotation
-> 
-> ```
-> annotate ZEPM_C_User.C_UserDetailsType with {
->     @PersonalData.IsPotentiallySensitive
->     CreditCardNumber
-> };
-> annotate ZEPM_C_SALESORDERITEMQUERY_CDS.ZEPM_C_SALESORDERITEMKPIResult with {
-> 	@UI.ExcludeFromNavigationContext
-> 	BusinessPartner
-> };
 > ```
 
 
@@ -736,7 +723,7 @@ To do this when navigating via the `DataFieldForIntentBasedNavigation` button, u
 
    
   
-<a name="loiod782acf8bfd74107ad6a04f0361c5f62__fig_pws_124_5lb"/>Mapping Semantic Objects
+**Mapping Semantic Objects**
 
  ![](images/Semantic_Object_Mapping_b0c1ab2.png "Mapping Semantic Objects") 
 

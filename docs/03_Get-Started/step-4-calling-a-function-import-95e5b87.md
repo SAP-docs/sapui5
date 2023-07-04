@@ -10,7 +10,7 @@ We only want to display the upcoming meetings and hide the meetings happened in 
 
    
   
-<a name="loio95e5b87804ef4059bb68dd511666d4e3__fig_zrh_5mq_st"/>Only the upcoming meet-ups are shown
+**Only the upcoming meet-ups are shown**
 
  ![](images/Tutorial_Mock_Server_Step_4_8f2176b.png "Only the upcoming meet-ups are shown") 
 
@@ -54,7 +54,7 @@ After saving and running the app again, we should get the following result:
 
    
   
-<a name="loio95e5b87804ef4059bb68dd511666d4e3__fig_mm2_tnq_st"/>No data visible
+**No data visible**
 
  ![](images/Tutorial_Mock_Server_Step_4_02_4992f37.png "No data visible") 
 
@@ -72,10 +72,10 @@ In order to simulate the function import call, we write our own \(mocked\) imple
 ```js
 sap.ui.define([
 	"sap/ui/thirdparty/jquery",
-
+	"sap/ui/core/date/UI5Date",
 	"sap/ui/core/util/MockServer",
 	"sap/base/Log"
-], function(jQuery, MockServer, Log) {
+], function(jQuery, UI5Date, MockServer, Log) {
 	"use strict";
 	return {
 		/**
@@ -101,7 +101,7 @@ sap.ui.define([
 				path: new RegExp("FindUpcomingMeetups(.*)"),
 				response: function(oXhr) {
 					Log.debug("Incoming request for FindUpcomingMeetups");
-					var today = new Date();
+					var today = UI5Date.getInstance();
 					today.setHours(0); // or today.toUTCString(0) due to timezone differences
 					today.setMinutes(0);
 					today.setSeconds(0);
@@ -187,7 +187,7 @@ The path we gave in the simulate function for mock data is where we want to stor
 
        
       
-    <a name="loio95e5b87804ef4059bb68dd511666d4e3__fig_l2f_bqd_tt"/>Editing mock data in SAP Web IDE
+    **Editing mock data in SAP Web IDE**
 
      ![](images/Tutorial_Mock_Server_Step_4_03_1117f6c.png "Editing mock data in SAP Web IDE") 
 

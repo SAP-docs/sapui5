@@ -17,7 +17,7 @@ It will automatically create as many child controls as are needed to display the
 
    
   
-<a name="loio97830de2d7314e93b5c1ee3878a17be9__fig_r1j_pst_mr"/>List with aggregation binding
+**List with aggregation binding**
 
  ![](images/Tutorial_Data_Binding_Step_12_1642433.png "List with aggregation binding") 
 
@@ -63,7 +63,7 @@ sap.ui.require([
 		// Assign the model object to the SAPUI5 core
 		sap.ui.getCore().setModel(oModel);
 
-		var oResourceBundle = new ResourceModel({
+		var oResourceModel = new ResourceModel({
 			bundleName: "sap.ui.demo.db.i18n.i18n",
 			supportedLocales: ["", "de"],
 			fallbackLocale: ""

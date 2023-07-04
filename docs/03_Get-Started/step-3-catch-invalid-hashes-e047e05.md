@@ -10,7 +10,7 @@ Sometimes it is important to display an indication that the requested resource w
 
    
   
-<a name="loioe047e0596e8a4a1db50f4a53c11f4276__fig_r1j_pst_mr"/>*Not Found* page
+**Not Found page**
 
  ![](images/Tutorial_Navigation_and_Routing_Step_03_81506b2.png "Not Found page") 
 
@@ -22,7 +22,7 @@ You can view and download all files in the *Samples* in the Demo Kit at [Routing
 
    
   
-<a name="loioe047e0596e8a4a1db50f4a53c11f4276__fig_chm_4jp_ls"/>Folder structure for this step
+**Folder structure for this step**
 
  ![](images/Tutorial_Navigation_and_Routing_Step_03b_0b225d6.png "Folder structure for this step") 
 

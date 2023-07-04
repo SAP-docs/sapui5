@@ -10,7 +10,7 @@ In contrast to the two-way binding behavior shown above, one-way data binding is
 
    
   
-<a name="loio88756c08fe144ba08ff1762ad92fc07c__fig_r1j_pst_mr"/>Two-way data binding disabled for the checkbox
+**Two-way data binding disabled for the checkbox**
 
  ![](images/Tutorial_Data_Binding_Step_4_61d68f1.png "Two-way data binding disabled for the checkbox") 
 

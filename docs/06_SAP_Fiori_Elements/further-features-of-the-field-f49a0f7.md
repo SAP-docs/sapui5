@@ -245,6 +245,332 @@ The `TextArrangement` value at entity set level is considered as a fallback only
 
 
 
+<a name="loiof49a0f7eaafe444daf4cd62d48120ad0__section_xg1_4mw_kwb"/>
+
+## Fiscal Annotations
+
+`Edm.String` properties can be annotated to indicate that they are based on a fiscal date.
+
+The following annotations are available for fiscal dates with the following paterns:
+
+****
+
+
+<table>
+<tr>
+<th valign="top">
+
+CAP CDS Annotation
+
+
+
+</th>
+<th valign="top">
+
+Pattern
+
+
+
+</th>
+<th valign="top">
+
+ABAP CDS Annotation
+
+
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+`IsFiscalYearPeriod`
+
+
+
+</td>
+<td valign="top">
+
+PPP
+
+
+
+</td>
+<td valign="top">
+
+`Semantics.fiscal.yearPeriod`
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`IsDayOfFiscalYear`
+
+
+
+</td>
+<td valign="top">
+
+d
+
+
+
+</td>
+<td valign="top">
+
+`?`
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`IsFiscalPeriod`
+
+
+
+</td>
+<td valign="top">
+
+YYYYPPP
+
+
+
+</td>
+<td valign="top">
+
+`Semantics.fiscal.period`
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`IsFiscalQuarter`
+
+
+
+</td>
+<td valign="top">
+
+Q
+
+
+
+</td>
+<td valign="top">
+
+`Semantics.fiscal.quarter`
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`IsFiscalWeek`
+
+
+
+</td>
+<td valign="top">
+
+WW
+
+
+
+</td>
+<td valign="top">
+
+`Semantics.fiscal.week`
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`IsFiscalYear`
+
+
+
+</td>
+<td valign="top">
+
+YYYY
+
+
+
+</td>
+<td valign="top">
+
+`Semantics.fiscal.year`
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`IsFiscalYearQuarter`
+
+
+
+</td>
+<td valign="top">
+
+YYYYQ
+
+
+
+</td>
+<td valign="top">
+
+`Semantics.fiscal.yearQuarter`
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`IsFiscalYearWeek`
+
+
+
+</td>
+<td valign="top">
+
+YYYYWW
+
+
+
+</td>
+<td valign="top">
+
+`Semantics.fiscal.yearWeek`
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`?`
+
+
+
+</td>
+<td valign="top">
+
+ 
+
+
+
+</td>
+<td valign="top">
+
+`Semantics.fiscal.yearVariant`
+
+
+
+</td>
+</tr>
+</table>
+
+For example, `IsFiscalYearPeriod` indicates that the annotated `Edm.String` property is a string based on a fiscal date following the PPP pattern.
+
+> ### Sample Code:  
+> XML Annotation
+> 
+> ```xml
+> <Annotations Target="sap.fe.manageitems.TechnicalTestingService.LineItems/fiscalYearPeriod">
+>   <Annotation Term="Common.IsFiscalYearPeriod" Bool="true"/>
+>   <Annotation Term="Common.Label" String="Fiscal Year Period"/>
+> </Annotations>
+> <Annotations Target="sap.fe.manageitems.TechnicalTestingService.LineItems/fiscalDayOfYear">
+>   <Annotation Term="Common.IsDayOfFiscalYear" Bool="true"/>
+>   <Annotation Term="Common.Label" String="Fiscal Day Of Year"/>
+> </Annotations>
+> <Annotations Target="sap.fe.manageitems.TechnicalTestingService.LineItems/fiscalPeriod">
+>   <Annotation Term="Common.IsFiscalPeriod" Bool="true"/>
+>   <Annotation Term="Common.Label" String="Fiscal Period"/>
+> </Annotations>
+> <Annotations Target="sap.fe.manageitems.TechnicalTestingService.LineItems/fiscalQuarter">
+>   <Annotation Term="Common.IsFiscalQuarter" Bool="true"/>
+>   <Annotation Term="Common.Label" String="Fiscal Quarter"/>
+> </Annotations>
+> <Annotations Target="sap.fe.manageitems.TechnicalTestingService.LineItems/fiscalWeek">
+>   <Annotation Term="Common.IsFiscalWeek" Bool="true"/>
+>   <Annotation Term="Common.Label" String="Fiscal Week"/>
+> </Annotations>
+> <Annotations Target="sap.fe.manageitems.TechnicalTestingService.LineItems/fiscalYear">
+>   <Annotation Term="Common.IsFiscalYear" Bool="true"/>
+>   <Annotation Term="Common.Label" String="Fiscal Year"/>
+> </Annotations>
+> <Annotations Target="sap.fe.manageitems.TechnicalTestingService.LineItems/fiscalYearQuarter">
+>   <Annotation Term="Common.IsFiscalYearQuarter" Bool="true"/>
+>   <Annotation Term="Common.IsDigitSequence" Bool="true"/>
+>   <Annotation Term="Common.Label" String="Fiscal Year Quarter"/>
+> </Annotations>
+> <Annotations Target="sap.fe.manageitems.TechnicalTestingService.LineItems/fiscalWeekYear">
+>   <Annotation Term="Common.IsFiscalYearWeek" Bool="true"/>
+>   <Annotation Term="Common.Label" String="Fiscal Week Year"/>
+> </Annotations>
+> ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> ```
+> DEFINE VIEW SalesOrderItemHistoryOvw as select from ... 
+> {
+>     ...
+>     
+>     @Semantics.fiscal.yearPeriod: true
+>     fiscalYearPeriod,
+>     
+>     @Semantics.fiscal.period: true
+>     fiscalPeriod,
+>     
+>     @Semantics.fiscal.year: true
+>     fiscalYear,
+>     
+>     ...   
+> }
+> 
+> ```
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> fiscalYearPeriod  : String     @title: 'Fiscal Year Period'   @Common.IsFiscalYearPeriod : true;
+> fiscalDayOfYear   : String     @title: 'Fiscal Day Of Year'   @Common.IsDayOfFiscalYear  : true;
+> fiscalPeriod      : String     @title: 'Fiscal Period'        @Common.IsFiscalPeriod     : true;
+> fiscalQuarter     : String(1)  @title: 'Fiscal Quarter'       @Common.IsFiscalQuarter    : true;
+> fiscalWeek        : String     @title: 'Fiscal Week'          @Common.IsFiscalWeek       : true;
+> fiscalYear        : String     @title: 'Fiscal Year'          @Common.IsFiscalYear       : true;
+> fiscalYearQuarter : String(5) @title: 'Fiscal Year Quarter' @Common.IsFiscalYearQuarter: true @Common.IsDigitSequence: true;
+> fiscalWeekYear    : String     @title: 'Fiscal Week Year'     @Common.IsFiscalYearWeek   : true;
+> 
+> ```
+
+Check out our live example in the flexible programming model explorer at [Field - Fiscal types](https://sapui5.hana.ondemand.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/fieldFiscals).
+
+
+
 <a name="loiof49a0f7eaafe444daf4cd62d48120ad0__section_v5m_xzf_k4b"/>
 
 ## Visibility and Enablement of the Field
@@ -566,6 +892,9 @@ Mandatory
 <td valign="top">
 
 Property must have a non-null value whenever save or update is triggered. This validation must be done by the back end, since it's not done by SAP Fiori elements.
+
+> ### Caution:  
+> The `FieldControl` annotation won't show fields as mandatory within a table.
 
 
 

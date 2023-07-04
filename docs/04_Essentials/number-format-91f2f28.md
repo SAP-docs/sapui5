@@ -136,7 +136,7 @@ To control the start the starting point of numbers which should be displyed in c
 
 -   `roundingMode`: defines a rounding behavior for discarding the digits after the maximum decimal digits defined by `maxFractionDigits` or `decimals`. Rounding will only be applied, if the formatting value is of type number.
 
-    <a name="loio91f2f2866f4d1014b6dd926db0e91070__table_wdt_rpl_2y"/>Rounding Modes \(with decimals parameter set to 1\)
+    **Rounding Modes \(with decimals parameter set to 1\)**
 
 
     <table>
@@ -207,129 +207,64 @@ To control the start the starting point of numbers which should be displyed in c
     </tr>
     <tr>
     <td valign="top">
-
-    2.21
+    
+        2.21
 
 
     
     </td>
     <td valign="top">
-
-    2.2
+    
+        2.2
 
 
     
     </td>
     <td valign="top">
-
-    2.3
+    
+        2.3
 
 
     
     </td>
     <td valign="top">
-
-    2.2
+    
+        2.2
 
 
     
     </td>
     <td valign="top">
-
-    2.3
+    
+        2.3
 
 
     
     </td>
     <td valign="top">
-
-    2.2
+    
+        2.2
 
 
     
     </td>
     <td valign="top">
-
-    2.2
+    
+        2.2
 
 
     
     </td>
     <td valign="top">
-
-    2.2
+    
+        2.2
 
 
     
     </td>
     <td valign="top">
-
-    2.2
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-
-    2.25
-
-
-    
-    </td>
-    <td valign="top">
-
-    2.2
-
-
-    
-    </td>
-    <td valign="top">
-
-    2.3
-
-
-    
-    </td>
-    <td valign="top">
-
-    2.2
-
-
-    
-    </td>
-    <td valign="top">
-
-    2.3
-
-
-    
-    </td>
-    <td valign="top">
-
-    2.2
-
-
-    
-    </td>
-    <td valign="top">
-
-    2.3
-
-
-    
-    </td>
-    <td valign="top">
-
-    2.2
-
-
-    
-    </td>
-    <td valign="top">
-
-    2.3
+        2.2
 
 
     
@@ -337,129 +272,64 @@ To control the start the starting point of numbers which should be displyed in c
     </tr>
     <tr>
     <td valign="top">
-
-    2.29
+    
+        2.25
 
 
     
     </td>
     <td valign="top">
-
-    2.2
+    
+        2.2
 
 
     
     </td>
     <td valign="top">
-
-    2.3
+    
+        2.3
 
 
     
     </td>
     <td valign="top">
-
-    2.2
+    
+        2.2
 
 
     
     </td>
     <td valign="top">
-
-    2.3
+    
+        2.3
 
 
     
     </td>
     <td valign="top">
-
-    2.3.
+    
+        2.2
 
 
     
     </td>
     <td valign="top">
-
-    2.3
+    
+        2.3
 
 
     
     </td>
     <td valign="top">
-
-    2.3
+    
+        2.2
 
 
     
     </td>
     <td valign="top">
-
-    2.3
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-
-    \-2.21
-
-
-    
-    </td>
-    <td valign="top">
-
-    \-2.3
-
-
-    
-    </td>
-    <td valign="top">
-
-    \-2.2
-
-
-    
-    </td>
-    <td valign="top">
-
-    \-2.2
-
-
-    
-    </td>
-    <td valign="top">
-
-    \-2.2
-
-
-    
-    </td>
-    <td valign="top">
-
-    \-2.2
-
-
-    
-    </td>
-    <td valign="top">
-
-    \-2.2
-
-
-    
-    </td>
-    <td valign="top">
-
-    \-2.2
-
-
-    
-    </td>
-    <td valign="top">
-
-    \-2.2
+        2.3
 
 
     
@@ -467,64 +337,64 @@ To control the start the starting point of numbers which should be displyed in c
     </tr>
     <tr>
     <td valign="top">
-
-    \-2.25
+    
+        2.29
 
 
     
     </td>
     <td valign="top">
-
-    \-2.3
+    
+        2.2
 
 
     
     </td>
     <td valign="top">
-
-    \-2.2
+    
+        2.3
 
 
     
     </td>
     <td valign="top">
-
-    \-2.2
+    
+        2.2
 
 
     
     </td>
     <td valign="top">
-
-    \-2.3
+    
+        2.3
 
 
     
     </td>
     <td valign="top">
-
-    \-2.3
+    
+        2.3.
 
 
     
     </td>
     <td valign="top">
-
-    \-2.2
+    
+        2.3
 
 
     
     </td>
     <td valign="top">
-
-    \-2.2
+    
+        2.3
 
 
     
     </td>
     <td valign="top">
-
-    \-2.3
+    
+        2.3
 
 
     
@@ -532,64 +402,194 @@ To control the start the starting point of numbers which should be displyed in c
     </tr>
     <tr>
     <td valign="top">
-
-    \-2.29
+    
+        \-2.21
 
 
     
     </td>
     <td valign="top">
-
-    \-2.3
+    
+        \-2.3
 
 
     
     </td>
     <td valign="top">
-
-    \-2.2
+    
+        \-2.2
 
 
     
     </td>
     <td valign="top">
-
-    \-2.2
+    
+        \-2.2
 
 
     
     </td>
     <td valign="top">
-
-    \-2.3
+    
+        \-2.2
 
 
     
     </td>
     <td valign="top">
-
-    \-2.3
+    
+        \-2.2
 
 
     
     </td>
     <td valign="top">
-
-    \-2.3
+    
+        \-2.2
 
 
     
     </td>
     <td valign="top">
-
-    \-2.3
+    
+        \-2.2
 
 
     
     </td>
     <td valign="top">
+    
+        \-2.2
 
-    \-2.3
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+        \-2.25
+
+
+    
+    </td>
+    <td valign="top">
+    
+        \-2.3
+
+
+    
+    </td>
+    <td valign="top">
+    
+        \-2.2
+
+
+    
+    </td>
+    <td valign="top">
+    
+        \-2.2
+
+
+    
+    </td>
+    <td valign="top">
+    
+        \-2.3
+
+
+    
+    </td>
+    <td valign="top">
+    
+        \-2.3
+
+
+    
+    </td>
+    <td valign="top">
+    
+        \-2.2
+
+
+    
+    </td>
+    <td valign="top">
+    
+        \-2.2
+
+
+    
+    </td>
+    <td valign="top">
+    
+        \-2.3
+
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+        \-2.29
+
+
+    
+    </td>
+    <td valign="top">
+    
+        \-2.3
+
+
+    
+    </td>
+    <td valign="top">
+    
+        \-2.2
+
+
+    
+    </td>
+    <td valign="top">
+    
+        \-2.2
+
+
+    
+    </td>
+    <td valign="top">
+    
+        \-2.3
+
+
+    
+    </td>
+    <td valign="top">
+    
+        \-2.3
+
+
+    
+    </td>
+    <td valign="top">
+    
+        \-2.3
+
+
+    
+    </td>
+    <td valign="top">
+    
+        \-2.3
+
+
+    
+    </td>
+    <td valign="top">
+    
+        \-2.3
 
 
     

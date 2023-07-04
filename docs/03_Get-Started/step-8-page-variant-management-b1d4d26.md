@@ -23,7 +23,7 @@ As a page variant, the view management is now no longer part of the `SmartFilter
 
    
   
-<a name="loiob1d4d261524b4a3da78547ed4283a082__fig_vkx_wpr_zv"/>Central View Management
+**Central View Management**
 
  ![](images/Smart_Controls_Tutorial_Step_08a_ac9637a.png "Central View Management") 
 
@@ -31,7 +31,7 @@ In addition, the `VariantManagement` control is no longer displayed in the *Filt
 
    
   
-<a name="loiob1d4d261524b4a3da78547ed4283a082__fig_byl_qjx_zv"/>Filter Dialog Without View Management
+**Filter Dialog Without View Management**
 
  ![](images/Smart_Controls_Tutorial_Step_08b_20ef10b.png "Filter Dialog Without View Management") 
 

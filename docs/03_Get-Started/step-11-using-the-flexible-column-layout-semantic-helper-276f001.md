@@ -19,9 +19,9 @@ For more information, see [Flexible Column Layout Semantic Helper](../10_More_Ab
 
    
   
-<a name="loio276f001c5a934f6e8faedee6ea22aba1__fig_zfh_d31_12b"/>Master-detail-detail pattern using `sap.f.FlexibleColumnLayoutSemanticHelper`
+**List-detail-detail pattern using sap.f.FlexibleColumnLayoutSemanticHelper**
 
- ![](images/With_Semantic_Helper_Fiori_2_0_Tutorial_fd98e0d.gif "Master-detail-detail pattern using
+ ![](images/With_Semantic_Helper_Fiori_2_0_Tutorial_fd98e0d.gif "List-detail-detail pattern using
 						sap.f.FlexibleColumnLayoutSemanticHelper") 
 
 
@@ -202,7 +202,7 @@ sap.ui.define([
 			this.oRouter = this.oOwnerComponent.getRouter();
 			this.oModel = this.oOwnerComponent.getModel();
 
-			this.oRouter.getRoute("master").attachPatternMatched(this._onProductMatched, this);
+			this.oRouter.getRoute("list").attachPatternMatched(this._onProductMatched, this);
 			this.oRouter.getRoute("detail").attachPatternMatched(this._onProductMatched, this);
 			this.oRouter.getRoute("detailDetail").attachPatternMatched(this._onProductMatched, this);
 		},
@@ -249,11 +249,11 @@ sap.ui.define([
 
 		handleClose: function () {
 			var sNextLayout = this.oModel.getProperty("/actionButtonsInfo/midColumn/closeColumn");
-			this.oRouter.navTo("master", {layout: sNextLayout});
+			this.oRouter.navTo("list", {layout: sNextLayout});
 		},
 
 		onExit: function () {
-			this.oRouter.getRoute("master").detachPatternMatched(this._onProductMatched, this);
+			this.oRouter.getRoute("list").detachPatternMatched(this._onProductMatched, this);
 			this.oRouter.getRoute("detail").detachPatternMatched(this._onProductMatched, this);
 		}
 	});
@@ -383,7 +383,7 @@ And respectively, we create the handlers needed for the navigation actions in th
 
 <a name="loio276f001c5a934f6e8faedee6ea22aba1__section_t4v_npj_l4b"/>
 
-## webapp/controller/Master.controller.js \[MODIFY\]
+## webapp/controller/List.controller.js \[MODIFY\]
 
 ```js
 sap.ui.define([
@@ -396,7 +396,7 @@ sap.ui.define([
 ], function (JSONModel, Controller, Filter, FilterOperator, Sorter, MessageBox) {
 	"use strict";
 
-	return Controller.extend("sap.ui.demo.fiori2.controller.Master", {
+	return Controller.extend("sap.ui.demo.fiori2.controller.List", {
 		onInit: function () {
 			this.oView = this.getView();
 			this._bDescendingSort = false;
@@ -507,5 +507,5 @@ sap.ui.define([
 });
 ```
 
-Finally, we create a function in the `App.controller.js` to update the visibility of the master, detail, and detail-detail pages.
+Finally, we create a function in the `App.controller.js` to update the visibility of the list, detail, and detail-detail pages.
 

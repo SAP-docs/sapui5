@@ -492,18 +492,18 @@ For all approaches, the corresponding APIs take a `groupId` that specifies a bat
 
 ## ODataModel\#createEntry
 
-[`ODataModel#createEntry`](https://ui5.sap.com/#/api/sap.ui.model.odata.v2.ODataModel%23methods/createEntry) creates an entry and returns a [context](https://ui5.sap.com/#/api/sap.ui.model.odata.v2.Context) corresponding to it. Use this approach in the following cases:
+[`ODataModel#createEntry`](https://ui5.sap.com/#/api/sap.ui.model.odata.v2.ODataModel/methods/createEntry) creates an entry and returns a [context](https://ui5.sap.com/#/api/sap.ui.model.odata.v2.Context) corresponding to it. Use this approach in the following cases:
 
 -   You have a form or popup where the end user can view and modify the data of the new entry, but there is no table or list control where the entry should appear.
 
 -   You want to create an entry without displaying it on the UI.
 
 
-The method takes the `path` to the entity set for creation, and optionally initial `properties` for the created entry; both the path and the property names used in the `properties` parameter must exist in the metadata definition of the OData service. Take care when creating the initial data as a copy of an existing data object retrieved via [`getObject`](https://ui5.sap.com/#/api/sap.ui.model.odata.v2.ODataModel%23methods/getObject) from the model: You need to remove the`__metadata` property from the copy, as this must not be sent in the payload of a creation request.
+The method takes the `path` to the entity set for creation, and optionally initial `properties` for the created entry; both the path and the property names used in the `properties` parameter must exist in the metadata definition of the OData service. Take care when creating the initial data as a copy of an existing data object retrieved via [`getObject`](https://ui5.sap.com/#/api/sap.ui.model.odata.v2.ODataModel/methods/getObject) from the model: You need to remove the`__metadata` property from the copy, as this must not be sent in the payload of a creation request.
 
-The context returned by this method is **transient**. This means the corresponding entity only exists on the client until it is persisted \(for a deferred batch group, use the [`submitChanges`](https://ui5.sap.com/#/api/sap.ui.model.odata.v2.ODataModel%23methods/submitChanges) API\), thus changing its state to **persisted**, or it is deleted with the [`resetChanges`](https://ui5.sap.com/#/api/sap.ui.model.odata.v2.ODataModel%23methods/resetChanges) API. Note that when the creation request sent on `submitChanges` fails, it is automatically retried with the next call to `submitChanges`, which may then succeed, e.g. because missing properties are added.
+The context returned by this method is **transient**. This means the corresponding entity only exists on the client until it is persisted \(for a deferred batch group, use the [`submitChanges`](https://ui5.sap.com/#/api/sap.ui.model.odata.v2.ODataModel/methods/submitChanges) API\), thus changing its state to **persisted**, or it is deleted with the [`resetChanges`](https://ui5.sap.com/#/api/sap.ui.model.odata.v2.ODataModel/methods/resetChanges) API. Note that when the creation request sent on `submitChanges` fails, it is automatically retried with the next call to `submitChanges`, which may then succeed, e.g. because missing properties are added.
 
-Use the promise returned by the [`created`](https://ui5.sap.com/#/api/sap.ui.model.odata.v2.Context%23methods/created) API on the returned context to get notified when it is persisted or reset. With the [`isTransient`](https://ui5.sap.com/#/api/sap.ui.model.odata.v2.Context%23methods/isTransient) API you can determine whether a created context is transient or persisted; note that the API returns `undefined` for contexts which have not been created on the client but have been read from the back end.
+Use the promise returned by the [`created`](https://ui5.sap.com/#/api/sap.ui.model.odata.v2.Context/methods/created) API on the returned context to get notified when it is persisted or reset. With the [`isTransient`](https://ui5.sap.com/#/api/sap.ui.model.odata.v2.Context/methods/isTransient) API you can determine whether a created context is transient or persisted; note that the API returns `undefined` for contexts which have not been created on the client but have been read from the back end.
 
 The transient context is typically used to bind a form or popup, so that the end user can view or modify data of the created entry before it is persisted in the back end. The data of the context is updated from the response of the creation request on success. Note that the transient context's path contains a client-side generated UID as a temporary key predicate, e.g. `ProductSet('id-1641815139894-99')`. Take care when using this path in application coding, as it becomes invalid once the context is persisted; the context then changes its path based on the canonical URL of the persisted entity, e.g. to `ProductSet('4711')`.
 
@@ -528,36 +528,17 @@ All examples for entity creation below assume that the model runs in batch mode,
 >   function () { /* deletion of the created entity before it is persisted */ }
 > );
 >  
-> // delete the created entity by resetting the corresponding change
-> oModel.resetChanges([oContext.getPath()], undefined, /*bDeleteCreatedEntities*/true);
+> // delete the created entity
+> oContext.delete();
 > ```
 
 The `createEntry` method takes the optional `refreshAfterChange` parameter, which determines whether all affected bindings are refreshed after successful creation in the back end. This parameter is used to update list bindings with the new entity after creation, so that it is displayed in the bound table controls. In scenarios where such an update is required, we recommend to use the `ODataListBinding#create` API described below instead of `ODataModel#createEntry`.
 
 If you want to request navigation properties of the created entry on persisting it, use the optional `expand` parameter to do this efficiently in the same batch request as the POST request for entity creation.
 
-The optional `inactive` parameter determines whether an **inactive** transient context is created. Such a context only becomes an *active* transient context on a property update. Before that, it is no pending change, i.e. it is not considered by the [`hasPendingChanges`](https://ui5.sap.com/#/api/sap.ui.model.odata.v2.ODataModel%23methods/hasPendingChanges) API nor can it be deleted with `resetChanges`; the `submitChanges` API will not trigger a creation request for inactive contexts.
+The optional `inactive` parameter determines whether an **inactive** transient context is created. Such a context only becomes an *active* transient context on a property update. Before that, it is no pending change, i.e. it is not considered by the [`hasPendingChanges`](https://ui5.sap.com/#/api/sap.ui.model.odata.v2.ODataModel/methods/hasPendingChanges) API nor can it be deleted with `resetChanges`; the `submitChanges` API will not trigger a creation request for inactive contexts.
 
-*Deep create*, i.e. creation of an entity as a child to a newly created parent entity with one single API call resp. one single request, is not supported. To achieve this, you may chain two API calls to create parent and child entities with two *sequential* requests as shown in the following sample, which creates both a sales order and a sales order item:
-
-> ### Example:  
-> Two sequential requests to mimic deep create
-> 
-> ```js
-> var oParentContext,
->     oModel = this.getView().getModel();
->  
-> oParentContext = oModel.createEntry("/SalesOrderSet");
-> oParentContext.created().then(function () {
->   var oChildContext = oModel.createEntry("ToLineItems", {
->     context : oParentContext
->   });
->  
->   oModel.submitChanges(); // triggers request for creation of item
-> });
->  
-> oModel.submitChanges(); // triggers request for creation of sales order
-> ```
+`ODataModel#createEntry` supports the "deep create" scenario for navigation properties with cardinality "many". For more information, see [Deep Create](odata-v2-model-6c47b2b.md#loio4c4cd99af9b14e08bb72470cc7cabff4__section_DCR).
 
 
 
@@ -565,7 +546,7 @@ The optional `inactive` parameter determines whether an **inactive** transient c
 
 ## ODataListBinding\#create
 
-[`ODataListBinding#create`](https://ui5.sap.com/#/api/sap.ui.model.odata.v2.ODataListBinding%23methods/create) creates an entry and inserts it at the beginning or end of a list of entries. The entry is visible at the corresponding position of the bound control without the need to first save it to the back end and then refresh the binding; this is an advantage compared to the `ODataModel#createEntry` API.
+[`ODataListBinding#create`](https://ui5.sap.com/#/api/sap.ui.model.odata.v2.ODataListBinding/methods/create) creates an entry and inserts it at the beginning or end of a list of entries. The entry is visible at the corresponding position of the bound control without the need to first save it to the back end and then refresh the binding; this is an advantage compared to the `ODataModel#createEntry` API.
 
 Use this approach if you have a list or table control showing the collection of entries and one of the following conditions applies:
 
@@ -595,7 +576,7 @@ Use this approach if you have a list or table control showing the collection of 
 
 New entries are inserted according to the `bAtEnd` parameter. When they are persisted, they retain their position in the list as long as there is no call to a method typically related to a user interaction, such as `ODataListBinding#filter`, `ODataListBinding#sort`, `ODataListBinding#refresh`, or a re-binding of the bound list or table control. In these cases, the persisted entries are shown in the position provided by the back end.
 
-With **inactive** entries, you can build **inline creation rows** in a table that allow for a quick creation of new entries *within* the table without separate forms or popups: Once the table data is loaded, you can add one or more inactive entries; use [`ODataListBinding#isFirstCreateAtEnd`](https://ui5.sap.com/#/api/sap.ui.model.odata.v2.ODataListBinding%23methods/isFirstCreateAtEnd) to determine whether such entries have already been created. On activation of an entry, the list binding fires the [`createActivate`](https://ui5.sap.com/#/api/sap.ui.model.odata.v2.ODataListBinding%23events/createActivate) event; with this event, you can create a new inactive entry.
+With **inactive** entries, you can build **inline creation rows** in a table that allow for a quick creation of new entries *within* the table without separate forms or popups: Once the table data is loaded, you can add one or more inactive entries; use [`ODataListBinding#isFirstCreateAtEnd`](https://ui5.sap.com/#/api/sap.ui.model.odata.v2.ODataListBinding/methods/isFirstCreateAtEnd) to determine whether such entries have already been created. On activation of an entry, the list binding fires the [`createActivate`](https://ui5.sap.com/#/api/sap.ui.model.odata.v2.ODataListBinding/events/createActivate) event; with this event, you can create a new inactive entry. If you cancel the event using [`preventDefault`](https://ui5.sap.com/#/api/sap.ui.base.Event/methods/preventDefault), the context remains inactive; in this way you can, for example, check whether all required properties for the creation of the entity are set.
 
 > ### Example:  
 > Inline creation rows
@@ -622,12 +603,19 @@ With **inactive** entries, you can build **inline creation rows** in a table tha
 > },
 >  
 > // event handler for createActivate
-> onCreateActivateLineItem : function () {
+> onCreateActivateLineItem : function (oEvent) {
+>     // product id is a required property for the item => item remains inactive if it's not set
+>     if (!oEvent.getParameter("context").getProperty("ProductID")) {
+>       oEvent.preventDefault();
+>       return;
+>     }
+> 
 >   var oItemsBinding = this.getView().byId("ToLineItems").getBinding("rows");
->  
 >   oItemsBinding.create({/* initial data*/}, /*bAtEnd*/ true, {inactive : true});
 > }
 > ```
+
+`ODataListBinding#create` supports the "deep create" scenario for navigation properties with cardinality "many". For more information, see [Deep Create](odata-v2-model-6c47b2b.md#loio4c4cd99af9b14e08bb72470cc7cabff4__section_DCR).
 
 
 
@@ -635,11 +623,66 @@ With **inactive** entries, you can build **inline creation rows** in a table tha
 
 ## ODataModel\#create
 
-[`ODataModel#create`](https://ui5.sap.com/#/api/sap.ui.model.odata.v2.ODataModel%23methods/create) triggers a POST request with the given initial data to the OData service to create an entity. This API does not provide a binding context to bind controls to the newly created entry nor does it store the created entry data in model's data cache. As a consequence, **data binding to the created entry is not possible**.
+[`ODataModel#create`](https://ui5.sap.com/#/api/sap.ui.model.odata.v2.ODataModel/methods/create) triggers a POST request with the given initial data to the OData service to create an entity. This API does not provide a binding context to bind controls to the newly created entry nor does it store the created entry data in model's data cache. As a consequence, **data binding to the created entry is not possible**.
 
 Use this approach only if you just want to send a creation request to the back end and do not want to bind the created entry on the UI. In all other cases, use the APIs described above.
 
 The method returns an abort handle to abort the creation POST request. To find out whether such a request is pending, use `ODataModel#hasPendingChanges` with the `bAll` parameter set to `true`. Note that, contrary to `ODataModel#createEntry` and `ODataListBinding#create`, failed creation requests are not automatically retried.
+
+
+
+<a name="loio4c4cd99af9b14e08bb72470cc7cabff4__section_DCR"/>
+
+## Deep Create
+
+One or more subentities for a navigation property of a newly created parent entity can be created with a **single** OData request. This is known as a **deep create**. The OData V2 model supports the deep create scenario for navigation properties with cardinality "many". You can nest deep creates, i.e. create entities for a navigation property of a subentity. The entity in a deep create which has only subentities but no transient parent entity is called **root entity**.
+
+To create a subentity, use [`ODataModel#createEntry`](https://ui5.sap.com/#/api/sap.ui.model.odata.v2.ODataModel/methods/createEntry) with a `context` parameter which is a transient context \(pointing to the parent entity\) and a `path` parameter which is a navigation property for the context's entity type. You can also use [`ODataListBinding#create`](https://ui5.sap.com/#/api/sap.ui.model.odata.v2.ODataListBinding/methods/create) with a list binding which has a transient binding context and the navigation property as the binding's path. Most parameters of these APIs must not be used when creating a subentity because they relate to OData request creation: As data for subentities is added to the OData request payload for the root entity, subentities inherit their request-related settings from the API call which creates the root entity.
+
+After a successful deep create OData request, only the transient context for the root entity is updated and may be used further; the transient contexts for subentities are however not updated and no longer valid: Therefore, you must not store references to such contexts in application coding and use them after successful creation, for example as a binding context for a control.
+
+On a deep create request, the response of the OData service may return a **deep response**. This means that the response not only contains data for the root entity \(which is guaranteed by the OData protocol\), but also data for the subentities that have been created. In case of a deep response, the OData model replaces the transient subcontexts for direct subentities of the root entity with contexts created from this response; this ensures that controls bound to the corresponding navigation property are automatically updated. If your service does not provide a deep response, you have to refresh the list binding of the control after a successful deep create in order to read the updated subentities from the back end with a separate GET request.
+
+When you use [`sap.ui.model.odata.v2.Context#delete`](https://ui5.sap.com/#/api/sap.ui.model.odata.v2.Context/methods/delete) to delete the transient entity referred to by this context, this also deletes its subentities.
+
+The following example shows snippets for a view controller coding that implements a deep create scenario.
+
+> ### Example:  
+> Creation of a root and subentity, submission of changes, and handling of a \(deep\) create success
+> 
+> ```js
+> // create transient context for root entity (sales order)
+> var oItemContext,
+>     oItemsTable = this.byId("salesOrderItemTable"), // table with "rows" bound with path "ToLineItems" (navigation property of sales order)
+>     oItemsBinding = oItemsTable.getBinding("rows"),
+>     oModel = this.getView().getModel(),
+>     oSalesOrderContext = oModel.createEntry("/SalesOrderSet", {properties : {CustomerName : "SAP"}});
+>  
+> ...
+>  
+> // items table shows items of transient sales order
+> oItemsTable.setBindingContext(oSalesOrderContext);
+>  // create transient context for subentity (sales order line item) and display it in the items table
+> oItemContext = oItemsBinding.create({Note : "Item note"});
+> // end-user may edit item data in a dialog
+> oCreateDialog.setBindingContext(oItemContext);
+>  
+> ...
+>  
+> // use created promise of root entity to handle a successful create
+> // Note: subcontext references like oItemContext must no longer be used then!
+> oSalesOrderContext.created().then(function () {
+>     // display success message using data for the created entity contained in the back-end response
+>     MessageToast.show("Created sales order " + oSalesOrderContext.getProperty("SalesOrderID"));
+>     // optional: if the service does not provide a deep response, refresh list binding for items
+>     oItemsBinding.refresh();
+> });
+>  
+> ...
+>  
+> // deep create request is triggered when submitting changes
+> oModel.submitChanges();
+> ```
 
  <a name="loioff667e12b8714f3595e68f3e7c0e7a14"/>
 
@@ -686,7 +729,7 @@ The `create` and `update` methods also require a mandatory `oData` parameter for
     oModel.remove("/Products(999)", {success: mySuccessHandler, error: myErrorHandler});
     ```
 
-    The [`sap.ui.model.odata.v2.Context#delete`](https://ui5.sap.com/#/api/sap.ui.model.odata.v2.Context%23methods/delete) function uses `ODataModel#remove` to remove a persisted entry. It will also remove transient and inactive entries. With this function, a developer does not need to know the status \(inactive, transient, persisted\) of the context pointing to the entry to be removed.
+    The [`sap.ui.model.odata.v2.Context#delete`](https://ui5.sap.com/#/api/sap.ui.model.odata.v2.Context%23methods/delete) function uses `ODataModel#remove` to remove a persisted entry. It will also remove transient and inactive entries. This function works for all statuses \(inactive, transient, persisted\) of the context pointing to the entry to be removed.
 
 -   Refresh after change
 
@@ -955,13 +998,13 @@ The following example shows a context binding with the path **"/Products\(1\)"**
 
    
   
-<a name="loio62149734b5c24507868e722fe87a75db__fig_h54_vhf_zbb"/>Simple Binding Example: Default Binding Resolution
+**Simple Binding Example: Default Binding Resolution**
 
  ![](images/Simple_Binding_Example_e2fe691.png "Simple Binding Example: Default Binding Resolution") 
 
 Without using preliminary contexts, two consecutive OData requests will be issued, one for `Binding 0`, and afterwards one for `Binding 1`, as shown in the following table:
 
-<a name="loio62149734b5c24507868e722fe87a75db__table_xww_51z_zbb"/>Simple Binding Example: Default Binding Resolution
+**Simple Binding Example: Default Binding Resolution**
 
 
 <table>
@@ -1019,7 +1062,7 @@ You can optimize the requests by setting the binding parameters as shown below:
 
    
   
-<a name="loio62149734b5c24507868e722fe87a75db__fig_nym_hgz_zbb"/>Simple Binding Example: Binding Resolution Optimized
+**Simple Binding Example: Binding Resolution Optimized**
 
  ![](images/Simple_Binding_Example_Optimized_57a4d12.png "Simple Binding Example: Binding Resolution Optimized") 
 
@@ -1027,7 +1070,7 @@ Here, `Binding 1` uses the preliminary context created by `Binding 0`, and thus 
 
 This now results in a single `$batch` request:
 
-<a name="loio62149734b5c24507868e722fe87a75db__table_mwj_pgz_zbb"/>Simple Binding Example: Binding Resolution Optimized
+**Simple Binding Example: Binding Resolution Optimized**
 
 
 <table>
@@ -1077,7 +1120,7 @@ Content
 > 
 > Using `$expand` has several drawbacks, however. In OData V2, you cannot use additional filters and sorters for the expanded entries of a `$expand` query. In addition, the `$expand` option always loads **all** associated entities, so paging with `$skip` or `$top` isn't possible, either.
 > 
-> Using the preliminary context feature allows you to to circumvent these restrictions. You can merge multiple sub-requests into a single `$batch` query, yet you can easily include additional filters and sorters on the related subordinate entries.
+> Using the preliminary context feature allows you to circumvent these restrictions. You can merge multiple sub-requests into a single `$batch` query, yet you can easily include additional filters and sorters on the related subordinate entries.
 
  <a name="loio6cb8d585ed594ee4b447b5b560f292a4"/>
 
@@ -1087,11 +1130,11 @@ Content
 
 The `ODataModel` supports the invoking of function imports or actions by the `callFunction` method.
 
-```xml
-oModel.callFunction("/GetProductsByRating",{method:"GET", urlParameters:{"rating":3}, success:fnSuccess, error: fnError})
+```
+oModel.callFunction("/GetProductsByRating",{method:"GET", urlParameters:{"rating":3}})
 ```
 
-If the `callFunction` request is deferred, it can be submitted via the `submitChangesmethod`.
+If the `callFunction` request is deferred, it can be submitted via the `submitChanges` method.
 
 > ### Note:  
 > Only "IN" parameters of function imports are currently supported.
@@ -1102,29 +1145,56 @@ If the `callFunction` request is deferred, it can be submitted via the `submitCh
 
 ## Binding of Function Import Parameters
 
-OData Model V2 supports the binding against function import parameters. This is similar to the `createEntry` method which supports binding against entity properties. The `callFunction` method returns a request handle that has a `promise`. This `promise` is resolved when the context to which it is bound is created successfully or is rejected if not:
+You can use data binding to modify values of function import parameters: The `callFunction` method returns a request handle that has a `contextCreated` function which returns a `promise`. This `promise` resolves with an `sap.ui.model.odata.v2.Context` object that can be used as a binding context to change the input parameters of the function import and to bind the result of the function import call.
+
+> ### Example:  
+> Controller Code
+> 
+> ```
+> onStartRating: function () {
+>     var oView = this.getView(),
+>         oModel = oView.getModel(),
+>         oRatingForm = oView.byId("ratingForm"),
+>         oHandle =  oModel.callFunction("/GetProductsByRating", {
+>             error: function () {
+>                 oModel.resetChanges([oRatingForm.getBindingContext().getPath()]);
+>             },
+>             groupId: /*the default deferred group*/ "changes",
+>             urlParameters: {rating: 3}
+>         });
+>  
+>     oHandle.contextCreated().then(function (oContext) {
+>         oRatingForm.setBindingContext(oContext);
+>     });
+> },
+>  
+> onSubmitRatingForm: function () {
+>     this.getView().getModel().submitChanges({groupId : "changes"});
+> },
+> ```
+
+If the function import returns a single entity or a collection of entities, the result data can be accessed and bound against in the `$result` property using the context:
 
 ```xml
-var oHandle = oModel.callFunction("/GetProductsByRating", {urlParameters: {rating:3}});
-oHandle.contextCreated().then(function(oContext) {
-      oView.setBindingContext(oContext);
-});
-```
-
-If the function import returns result data, then the result data can be accessed and bound against in the `$result` property using the context:
-
-```xml
-<form:SimpleForm>
+<form:SimpleForm id="ratingForm">
    <core:Title text="Parameters" />
    <Label text="Rating" />
    <Input value="{rating}" />
-   <Button text="Submit" press=".submit" />
+   <Button text="Submit" press=".onSubmitRatingForm" />
    <core:Title text="Result" />
    <List items="{$result}">
     <StandardListItem title="{Name}" />
    </List>
 </form:SimpleForm>
 ```
+
+A function import is re-executed without calling `ODataModel#callFunction` again in the following cases:
+
+-   A parameter value has been changed via that context, the former request failed, and `ODataModel#submitChanges` is called.
+-   Its group ID is a non-deferred group ID and at least one input parameter value is changed via that context.
+-   Its group ID is a deferred group ID, at least one parameter value is changed via that context, and `ODataModel#submitChanges` is called for that deferred group.
+
+Failed function imports with changed parameter values are repeated automatically. To prevent the function call from being triggered again, you have to reset the changes via `ODataModel#resetChanges`, for example in the error handler of the function call.
 
  <a name="loioc40fc72612754bad877f374bdeb0f893"/>
 

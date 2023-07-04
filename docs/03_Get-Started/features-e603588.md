@@ -220,37 +220,21 @@ There are two types of value help:
     
     ```
 
-    <a name="loioe6035883c54b4e2b94c022b6950398fd__table_fl4_dbz_lfb"/>Value List
+    **Value List**
 
 
     <table>
     <tr>
     <td valign="top">
-
-    **Code**
+    
+        **Code**
 
 
     
     </td>
     <td valign="top">
-
-    **Description**
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-
-    E001
-
-
-    
-    </td>
-    <td valign="top">
-
-    Smartphone
+        **Description**
 
 
     
@@ -258,31 +242,15 @@ There are two types of value help:
     </tr>
     <tr>
     <td valign="top">
-
-    E002
+    
+        E001
 
 
     
     </td>
     <td valign="top">
-
-    Laptop
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-
-    E003
-
-
-    
-    </td>
-    <td valign="top">
-
-    Tablet
+        Smartphone
 
 
     
@@ -290,15 +258,47 @@ There are two types of value help:
     </tr>
     <tr>
     <td valign="top">
-
-    E004
+    
+        E002
 
 
     
     </td>
     <td valign="top">
+    
+        Laptop
 
-    Smartphone
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+        E003
+
+
+    
+    </td>
+    <td valign="top">
+    
+        Tablet
+
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+        E004
+
+
+    
+    </td>
+    <td valign="top">
+    
+        Smartphone
 
 
     

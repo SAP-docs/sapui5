@@ -1,0 +1,775 @@
+<!-- loio34afc69bf9194d43a9f49042825bb199 -->
+
+# What's New in SAPUI5 1.112
+
+With this release SAPUI5 is upgraded from version 1.111 to 1.112.
+
+> ### Tip:  
+> If you want to do a search across all versions of the What's New content, you can also find it in the [SAPUI5 What's New viewer](https://help.sap.com/whats-new/67f60363b57f4ac0b23efd17fa192d60).
+
+** **
+
+
+<table>
+<tr>
+<th valign="top">
+
+Version
+
+
+
+</th>
+<th valign="top">
+
+Type
+
+
+
+</th>
+<th valign="top">
+
+Category
+
+
+
+</th>
+<th valign="top">
+
+Title
+
+
+
+</th>
+<th valign="top">
+
+Description
+
+
+
+</th>
+<th valign="top">
+
+Action
+
+
+
+</th>
+<th valign="top">
+
+Available as of
+
+
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+ 1.112 
+
+
+
+</td>
+<td valign="top">
+
+ Changed 
+
+
+
+</td>
+<td valign="top">
+
+ Announcement 
+
+
+
+</td>
+<td valign="top">
+
+ **What's New Viewer for OpenUI5** 
+
+
+
+</td>
+<td valign="top">
+
+**What's New Viewer for OpenUI5**
+
+Due to some issues with references to OpenUI5 content we had to remove the What's New viewer for OpenUI5. The What's New viewer is therefore only available in SAPUI5. For more information, see [Want to Know What’s New in SAPUI5 and SAP Fiori Elements? Check the What’s New Viewer!](https://blogs.sap.com/?p=1702680).
+
+<sub>Changed•Announcement•Info Only•1.112</sub>
+
+
+
+</td>
+<td valign="top">
+
+ Info Only 
+
+
+
+</td>
+<td valign="top">
+
+2023-03-23
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ 1.112 
+
+
+
+</td>
+<td valign="top">
+
+ Changed 
+
+
+
+</td>
+<td valign="top">
+
+ Control 
+
+
+
+</td>
+<td valign="top">
+
+ **`sap.m.Input`, `sap.m.ComboBox`, `sap.m.MultiComboBox`** 
+
+
+
+</td>
+<td valign="top">
+
+**`sap.m.Input`, `sap.m.ComboBox`, `sap.m.MultiComboBox`**
+
+We have removed the experimental flag for the `showItems(fnFilter)` method. For more information, see the [`sap.m.Input`API Reference](https://ui5.sap.com/#/api/sap.m.Input/methods/showItems) and [`sap.m.ComboBoxBase`API Reference](https://ui5.sap.com/#/api/sap.m.ComboBoxBase/methods/showItems).
+
+<sub>Changed•Control•Info Only•1.112</sub>
+
+
+
+</td>
+<td valign="top">
+
+ Info Only 
+
+
+
+</td>
+<td valign="top">
+
+2023-03-23
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ 1.112 
+
+
+
+</td>
+<td valign="top">
+
+ Changed 
+
+
+
+</td>
+<td valign="top">
+
+ Control 
+
+
+
+</td>
+<td valign="top">
+
+ **`sap.m.IllustratedMessage`** 
+
+
+
+</td>
+<td valign="top">
+
+**`sap.m.IllustratedMessage`**
+
+-   We have added a new sample that demonstrates how to use `sap.m.IllustratedMessage` with an external illustration set. For more information, see the [Sample](https://ui5.sap.com/#/entity/sap.m.IllustratedMessage/sample/sap.m.sample.IllustratedMessageInPageCustom).
+
+-   We have added a new `ariaTitleLevel` property. It allows setting custom aria-level values to the title in `sap.m.IllustratedMessage`. For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.IllustratedMessage). 
+
+<sub>Changed•Control•Info Only•1.112</sub>
+
+
+
+</td>
+<td valign="top">
+
+ Info Only 
+
+
+
+</td>
+<td valign="top">
+
+2023-03-23
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ 1.112 
+
+
+
+</td>
+<td valign="top">
+
+ Deprecated 
+
+
+
+</td>
+<td valign="top">
+
+ Control 
+
+
+
+</td>
+<td valign="top">
+
+ **`sap.m.MessagePage`** 
+
+
+
+</td>
+<td valign="top">
+
+**`sap.m.MessagePage`**
+
+We have deprecated the `sap.m.MessagePage`, and recommend using the `sap.m.IllustratedMessage` instead.
+
+<sub>Deprecated•Control•Info Only•1.112</sub>
+
+
+
+</td>
+<td valign="top">
+
+ Info Only 
+
+
+
+</td>
+<td valign="top">
+
+2023-03-23
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ 1.112 
+
+
+
+</td>
+<td valign="top">
+
+ Changed 
+
+
+
+</td>
+<td valign="top">
+
+ SAP Fiori Elements 
+
+
+
+</td>
+<td valign="top">
+
+ **SAP Fiori elements for OData V2** 
+
+
+
+</td>
+<td valign="top">
+
+**SAP Fiori elements for OData V2**
+
+The following changes and new features are available for SAP Fiori elements for OData V2:
+
+-   Selection of the *Select All* checkbox within responsive tables of the list report and object pages now shows a message toast with a count of the selected items. For more information, see [Enabling Multiple Selection in Tables](../06_SAP_Fiori_Elements/enabling-multiple-selection-in-tables-116b5d8.md).
+
+
+<sub>Changed•SAP Fiori Elements•Info Only•1.112</sub>
+
+
+
+</td>
+<td valign="top">
+
+ Info Only 
+
+
+
+</td>
+<td valign="top">
+
+2023-03-23
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ 1.112 
+
+
+
+</td>
+<td valign="top">
+
+ Changed 
+
+
+
+</td>
+<td valign="top">
+
+ SAP Fiori Elements 
+
+
+
+</td>
+<td valign="top">
+
+ **SAP Fiori elements for OData V4** 
+
+
+
+</td>
+<td valign="top">
+
+**SAP Fiori elements for OData V4**
+
+The following changes and new features are available for SAP Fiori elements for OData V4:
+
+-   We now offer a streamlined way to include reuse components on an object page. For more information, see [Including Reuse Components on an Object Page](../06_SAP_Fiori_Elements/including-reuse-components-on-an-object-page-d869d7a.md).
+
+-   You can now use filtering within chart personalization. For more information, see [Enabling Chart Personalization](../06_SAP_Fiori_Elements/enabling-chart-personalization-7d41330.md).
+
+-   We have removed a restriction for handling 412 \("Precondition failed"\) messages. For more information, see [Confirmation Popups](../06_SAP_Fiori_Elements/confirmation-popups-9a53662.md).
+
+-   We have added a new button, *Validate*, to the object page for applications that are being run on tablets and mobile devices. For more information, see [Draft Handling](../06_SAP_Fiori_Elements/draft-handling-ed9aa41.md).
+
+
+<sub>Changed•SAP Fiori Elements•Info Only•1.112</sub>
+
+
+
+</td>
+<td valign="top">
+
+ Info Only 
+
+
+
+</td>
+<td valign="top">
+
+2023-03-23
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ 1.112 
+
+
+
+</td>
+<td valign="top">
+
+ Changed 
+
+
+
+</td>
+<td valign="top">
+
+ Control 
+
+
+
+</td>
+<td valign="top">
+
+ **`sap.ui.integration.widgets.Card`** 
+
+
+
+</td>
+<td valign="top">
+
+**`sap.ui.integration.widgets.Card`**
+
+-   We have \(experimentally\) introduced two new `ShowCard` and `HideCard` actions that enable you, from one card, to open another card that shows more details or actions. The `ShowCard` action opens a dialog with the new card, which is created by a given manifest. The `HideCard` action closes this dialog. For more information, see the [Show Card](https://ui5.sap.com/test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/learn/actions/showCard) section and the [Sample](https://ui5.sap.com/test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/explore/cardActions/showHideCard) in the Card Explorer.
+
+-   We have \(experimentally\) enhanced the Object card and now it also supports `Image` and `Input` as content types. For more information, see the [Object Card](https://ui5.sap.com/test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/learn/typesDeclarative/object) section and the [Samples](https://ui5.sap.com/test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/explore/object/formWithValidation) in the Card Explorer.
+
+-   We have added a new \(experimental\) `previewMode` property that can be used when the end user is exploring, selecting, or configuring cards. It depends on the host environment to trigger the card rendering into the required preview mode. The available options for the host developers are:
+
+    -   `Off` \(default\) - live data is displayed.
+    -   `MockData` - the card shows mock data, loaded using a data request. The card developer should set the data source in the `data/mockData` part of the manifest.
+    -   `Abstract` - the card shows an abstract placeholder without loading data.
+
+     For more information, see the [Integrate/Preview](https://ui5.sap.com/test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/integrate/preview) section and the [Samples](https://ui5.sap.com/test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/explore/preview) in the Card Explorer. 
+
+-   The date range filter now supports several new options: `dateTimeRange`, `fromDateTime`, `toDateTime`, and `dateTime`. For more information, see the [Date Range Filter](https://ui5.sap.com/test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/learn/filters/dateRange) section and the [Sample](https://ui5.sap.com/test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/explore/dateRangeFilter/agenda) in the Card Explorer.
+
+<sub>Changed•Control•Info Only•1.112</sub>
+
+
+
+</td>
+<td valign="top">
+
+ Info Only 
+
+
+
+</td>
+<td valign="top">
+
+2023-03-23
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ 1.112 
+
+
+
+</td>
+<td valign="top">
+
+ Changed 
+
+
+
+</td>
+<td valign="top">
+
+ Control 
+
+
+
+</td>
+<td valign="top">
+
+ **`sap.ui.comp.smartfilterbar.SmartFilterBar`** 
+
+
+
+</td>
+<td valign="top">
+
+**sap.ui.comp.smartfilterbar.SmartFilterBar**
+
+We have added support for several new interval options of the `DynamicDateRange` control. Now you can also create filters with `NEXTMINUTES`, `NEXTHOURS`, `LASTMINUTES`, and `LASTHOUTRS` options. For more information, see the [Sample](https://ui5.sap.com/#/entity/sap.ui.comp.smartfilterbar.SmartFilterBar/sample/sap.ui.comp.sample.smartfilterbar.UseDateRangeType).
+
+<sub>Changed•Control•Info Only•1.112</sub>
+
+
+
+</td>
+<td valign="top">
+
+ Info Only 
+
+
+
+</td>
+<td valign="top">
+
+2023-03-23
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ 1.112 
+
+
+
+</td>
+<td valign="top">
+
+ Changed 
+
+
+
+</td>
+<td valign="top">
+
+ Control 
+
+
+
+</td>
+<td valign="top">
+
+ **`sap.ui.comp.valuehelpdialog.ValueHelpDialog`** 
+
+
+
+</td>
+<td valign="top">
+
+**`sap.ui.comp.valuehelpdialog.ValueHelpDialog`**
+
+We have removed the leftmost \(empty\) column of the items table when the control is in single-items selection mode. This column is shown only in multiple-items selection mode where the user can select more than one row in the table.
+
+<sub>Changed•Control•Info Only•1.112</sub>
+
+
+
+</td>
+<td valign="top">
+
+ Info Only 
+
+
+
+</td>
+<td valign="top">
+
+2023-03-23
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ 1.112 
+
+
+
+</td>
+<td valign="top">
+
+ Changed 
+
+
+
+</td>
+<td valign="top">
+
+Feature
+
+
+
+</td>
+<td valign="top">
+
+ **SAPUI5 OData V4 Model** 
+
+
+
+</td>
+<td valign="top">
+
+**SAPUI5 OData V4 Model**
+
+The new version of the SAPUI5 OData V4 model introduces the following features:
+
+-   We now provide Deep Create in a first version as an experimental feature. You can use a transient context as the binding context of a list binding and call `sap.ui.model.odata.v4.ODataListBinding#create` on that dependent list binding. Note that the Deep Create feature is currently neither complete nor intended for productive use.
+-   The experimental hierarchy feature introduced with SAPUI5 1.105 now works if the hierarchy properties announced by the [Org.OData.Aggregation.V1.RecursiveHierarchy](https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Aggregation.V1.html#RecursiveHierarchy) and [com.sap.vocabularies.Hierarchy.v1.RecursiveHierarchy](https://github.com/SAP/odata-vocabularies/blob/main/vocabularies/Hierarchy.md) annotations are part of a property of the complex type.
+-   You can now specify `$$sharedRequest:false` for list bindings. This is helpful for list bindings of separate value list models, as `$$sharedRequest` defaults to `true` for these bindings.
+
+<sub>Changed•Feature•Info Only•1.112</sub>
+
+
+
+</td>
+<td valign="top">
+
+ Info Only 
+
+
+
+</td>
+<td valign="top">
+
+2023-03-23
+
+
+
+</td>
+</tr>
+</table>
+
+**Related Information**  
+
+
+[What's New in SAPUI5 1.113](what-s-new-in-sapui5-1-113-a9553fe.md "With this release SAPUI5 is upgraded from version 1.112 to 1.113.")
+
+[What's New in SAPUI5 1.111](what-s-new-in-sapui5-1-111-7a67837.md "With this release SAPUI5 is upgraded from version 1.110 to 1.111.")
+
+[What's New in SAPUI5 1.110](what-s-new-in-sapui5-1-110-71a855c.md "With this release SAPUI5 is upgraded from version 1.109 to 1.110.")
+
+[What's New in SAPUI5 1.109](what-s-new-in-sapui5-1-109-3264bd2.md "With this release SAPUI5 is upgraded from version 1.108 to 1.109.")
+
+[What's New in SAPUI5 1.108](what-s-new-in-sapui5-1-108-66e33f0.md "With this release SAPUI5 is upgraded from version 1.107 to 1.108.")
+
+[What's New in SAPUI5 1.107](what-s-new-in-sapui5-1-107-d4ff916.md "With this release SAPUI5 is upgraded from version 1.106 to 1.107.")
+
+[What's New in SAPUI5 1.106](what-s-new-in-sapui5-1-106-5b497b0.md "With this release SAPUI5 is upgraded from version 1.105 to 1.106.")
+
+[What's New in SAPUI5 1.105](what-s-new-in-sapui5-1-105-4d6c00e.md "With this release SAPUI5 is upgraded from version 1.104 to 1.105.")
+
+[What's New in SAPUI5 1.104](what-s-new-in-sapui5-1-104-69e567c.md "With this release SAPUI5 is upgraded from version 1.103 to 1.104.")
+
+[What's New in SAPUI5 1.103](what-s-new-in-sapui5-1-103-0e98c76.md "With this release SAPUI5 is upgraded from version 1.102 to 1.103.")
+
+[What's New in SAPUI5 1.102](what-s-new-in-sapui5-1-102-f038c99.md "With this release SAPUI5 is upgraded from version 1.101 to 1.102.")
+
+[What's New in SAPUI5 1.101](what-s-new-in-sapui5-1-101-7733b00.md "With this release SAPUI5 is upgraded from version 1.100 to 1.101.")
+
+[What's New in SAPUI5 1.100](what-s-new-in-sapui5-1-100-27dec1d.md "With this release SAPUI5 is upgraded from version 1.99 to 1.100.")
+
+[What's New in SAPUI5 1.99](what-s-new-in-sapui5-1-99-4f35848.md "With this release SAPUI5 is upgraded from version 1.98 to 1.99.")
+
+[What's New in SAPUI5 1.98](what-s-new-in-sapui5-1-98-d9f16f2.md "With this release SAPUI5 is upgraded from version 1.97 to 1.98.")
+
+[What's New in SAPUI5 1.97](what-s-new-in-sapui5-1-97-fa0e282.md "With this release SAPUI5 is upgraded from version 1.96 to 1.97.")
+
+[What's New in SAPUI5 1.96](what-s-new-in-sapui5-1-96-7a9269f.md "With this release SAPUI5 is upgraded from version 1.95 to 1.96.")
+
+[What's New in SAPUI5 1.95](what-s-new-in-sapui5-1-95-a1aea67.md "With this release SAPUI5 is upgraded from version 1.94 to 1.95.")
+
+[What's New in SAPUI5 1.94](what-s-new-in-sapui5-1-94-c40f1e6.md "With this release SAPUI5 is upgraded from version 1.93 to 1.94.")
+
+[What's New in SAPUI5 1.93](what-s-new-in-sapui5-1-93-f273340.md "With this release SAPUI5 is upgraded from version 1.92 to 1.93.")
+
+[What's New in SAPUI5 1.92](what-s-new-in-sapui5-1-92-1ef345d.md "With this release SAPUI5 is upgraded from version 1.91 to 1.92.")
+
+[What's New in SAPUI5 1.91](what-s-new-in-sapui5-1-91-0a2bd79.md "With this release SAPUI5 is upgraded from version 1.90 to 1.91.")
+
+[What's New in SAPUI5 1.90](what-s-new-in-sapui5-1-90-91c10c2.md "With this release SAPUI5 is upgraded from version 1.89 to 1.90.")
+
+[What's New in SAPUI5 1.89](what-s-new-in-sapui5-1-89-e56cddc.md "With this release SAPUI5 is upgraded from version 1.88 to 1.89.")
+
+[What's New in SAPUI5 1.88](what-s-new-in-sapui5-1-88-e15a206.md "With this release SAPUI5 is upgraded from version 1.87 to 1.88.")
+
+[What's New in SAPUI5 1.87](what-s-new-in-sapui5-1-87-b506da7.md "With this release SAPUI5 is upgraded from version 1.86 to 1.87.")
+
+[What's New in SAPUI5 1.86](what-s-new-in-sapui5-1-86-4c1c959.md "With this release SAPUI5 is upgraded from version 1.85 to 1.86.")
+
+[What's New in SAPUI5 1.85](what-s-new-in-sapui5-1-85-1d18eb5.md "With this release SAPUI5 is upgraded from version 1.84 to 1.85.")
+
+[What's New in SAPUI5 1.84](what-s-new-in-sapui5-1-84-dc76640.md "With this release SAPUI5 is upgraded from version 1.82 to 1.84.")
+
+[What's New in SAPUI5 1.82](what-s-new-in-sapui5-1-82-3a8dd13.md "With this release SAPUI5 is upgraded from version 1.81 to 1.82.")
+
+[What's New in SAPUI5 1.81](what-s-new-in-sapui5-1-81-f5e2a21.md "With this release SAPUI5 is upgraded from version 1.80 to 1.81.")
+
+[What's New in SAPUI5 1.80](what-s-new-in-sapui5-1-80-8cee506.md "With this release SAPUI5 is upgraded from version 1.79 to 1.80.")
+
+[What's New in SAPUI5 1.79](what-s-new-in-sapui5-1-79-99c4cdc.md "With this release SAPUI5 is upgraded from version 1.78 to 1.79.")
+
+[What's New in SAPUI5 1.78](what-s-new-in-sapui5-1-78-f09b63e.md "With this release SAPUI5 is upgraded from version 1.77 to 1.78.")
+
+[What's New in SAPUI5 1.77](what-s-new-in-sapui5-1-77-c46b439.md "With this release SAPUI5 is upgraded from version 1.76 to 1.77.")
+
+[What's New in SAPUI5 1.76](what-s-new-in-sapui5-1-76-aad03b5.md "With this release SAPUI5 is upgraded from version 1.75 to 1.76.")
+
+[What's New in SAPUI5 1.75](what-s-new-in-sapui5-1-75-5cbb62d.md "With this release SAPUI5 is upgraded from version 1.74 to 1.75.")
+
+[What's New in SAPUI5 1.74](what-s-new-in-sapui5-1-74-c22208a.md "With this release SAPUI5 is upgraded from version 1.73 to 1.74.")
+
+[What's New in SAPUI5 1.73](what-s-new-in-sapui5-1-73-231dd13.md "With this release SAPUI5 is upgraded from version 1.72 to 1.73.")
+
+[What's New in SAPUI5 1.72](what-s-new-in-sapui5-1-72-521cad9.md "With this release SAPUI5 is upgraded from version 1.71 to 1.72.")
+
+[What's New in SAPUI5 1.71](what-s-new-in-sapui5-1-71-a93a6a3.md "With this release SAPUI5 is upgraded from version 1.70 to 1.71.")
+
+[What's New in SAPUI5 1.70](what-s-new-in-sapui5-1-70-f073d69.md "With this release SAPUI5 is upgraded from version 1.69 to 1.70.")
+
+[What's New in SAPUI5 1.69](what-s-new-in-sapui5-1-69-89a18bd.md "With this release SAPUI5 is upgraded from version 1.68 to 1.69.")
+
+[What's New in SAPUI5 1.68](what-s-new-in-sapui5-1-68-f94bf93.md "With this release SAPUI5 is upgraded from version 1.67 to 1.68.")
+
+[What's New in SAPUI5 1.67](what-s-new-in-sapui5-1-67-a6b1472.md "With this release SAPUI5 is upgraded from version 1.66 to 1.67.")
+
+[What's New in SAPUI5 1.66](what-s-new-in-sapui5-1-66-c9896e9.md "With this release SAPUI5 is upgraded from version 1.65 to 1.66.")
+
+[What's New in SAPUI5 1.65](what-s-new-in-sapui5-1-65-0f5acfd.md "With this release SAPUI5 is upgraded from version 1.64 to 1.65.")
+
+[What's New in SAPUI5 1.64](what-s-new-in-sapui5-1-64-0e30822.md "With this release SAPUI5 is upgraded from version 1.63 to 1.64.")
+
+[What's New in SAPUI5 1.63](what-s-new-in-sapui5-1-63-e8d9da7.md "With this release SAPUI5 is upgraded from version 1.62 to 1.63.")
+
+[What's New in SAPUI5 1.62](what-s-new-in-sapui5-1-62-771f4d5.md "With this release SAPUI5 is upgraded from version 1.61 to 1.62.")
+
+[What's New in SAPUI5 1.61](what-s-new-in-sapui5-1-61-d991552.md "With this release SAPUI5 is upgraded from version 1.60 to 1.61.")
+
+[What's New in SAPUI5 1.60](what-s-new-in-sapui5-1-60-5a0e1f7.md "With this release SAPUI5 is upgraded from version 1.58 to 1.60.")
+
+[What's New in SAPUI5 1.58](what-s-new-in-sapui5-1-58-7c927aa.md "With this release SAPUI5 is upgraded from version 1.56 to 1.58.")
+
+[What's New in SAPUI5 1.56](what-s-new-in-sapui5-1-56-108b7fd.md "With this release SAPUI5 is upgraded from version 1.54 to 1.56.")
+
+[What's New in SAPUI5 1.54](what-s-new-in-sapui5-1-54-c838330.md "With this release SAPUI5 is upgraded from version 1.52 to 1.54.")
+
+[What's New in SAPUI5 1.52](what-s-new-in-sapui5-1-52-849e1b6.md "With this release SAPUI5 is upgraded from version 1.50 to 1.52.")
+
+[What's New in SAPUI5 1.50](what-s-new-in-sapui5-1-50-759e9f3.md "With this release SAPUI5 is upgraded from version 1.48 to 1.50.")
+
+[What's New in SAPUI5 1.48](what-s-new-in-sapui5-1-48-fa1efac.md "With this release SAPUI5 is upgraded from version 1.46 to 1.48.")
+
+[What's New in SAPUI5 1.46](what-s-new-in-sapui5-1-46-6307539.md "With this release SAPUI5 is upgraded from version 1.44 to 1.46.")
+
+[What's New in SAPUI5 1.44](what-s-new-in-sapui5-1-44-a0cb7a0.md "With this release SAPUI5 is upgraded from version 1.42 to 1.44.")
+
+[What's New in SAPUI5 1.42](what-s-new-in-sapui5-1-42-468b05d.md "With this release SAPUI5 is upgraded from version 1.40 to 1.42.")
+
+[What's New in SAPUI5 1.40](what-s-new-in-sapui5-1-40-fbab50e.md "With this release SAPUI5 is upgraded from version 1.38 to 1.40.")
+
+[What's New in SAPUI5 1.38](what-s-new-in-sapui5-1-38-f218918.md "With this release SAPUI5 is upgraded from version 1.36 to 1.38.")
+

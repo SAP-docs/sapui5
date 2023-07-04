@@ -10,7 +10,7 @@ In this step, we are going to extend the functionality of SAPUI5 with a custom c
 
    
   
-<a name="loiod12d2ee6a5454d799358d425f9e7c4db__fig_r1j_pst_mr"/>A custom product rating control is added to the detail page
+**A custom product rating control is added to the detail page**
 
  ![](images/SAPUI5_Walkthrough_Step_34_e3e163a.png "A custom product rating control is added to the detail page") 
 
@@ -95,6 +95,8 @@ sap.ui.define([
 		setValue: function (fValue) {
 			this.setProperty("value", fValue, true);
 			this.getAggregation("_rating").setValue(fValue);
+
+			return this;
 		},
 
 		reset: function () {
@@ -163,7 +165,7 @@ In the `metadata` section we therefore define several properties that we make us
 
 
     > ### Note:  
-    > You can define `aggregations` and `associations` for controls. The difference is in the relation between the parent and the related control:
+    > You can define `aggregations` and `associations`
     > 
     > -   An **aggregation** is a strong relation that also manages the lifecycle of the related control, for example, when the parent is destroyed, the related control is also destroyed. Also, a control can only be assigned to one single aggregation, if it is assigned to a second aggregation, it is removed from the previous aggregation automatically.
     > 
@@ -179,11 +181,11 @@ In the `metadata` section we therefore define several properties that we make us
 
 In the `init` function that is called by SAPUI5 automatically whenever a new instance of the control is instantiated, we set up our internal controls. We instantiate the three controls and store them in the internal aggregation by calling the framework method `setAggregation` that has been inherited from `sap.ui.core.Control`. We pass on the name of the internal aggregations that we specified above and the new control instances. We specify some control properties to make our custom control look nicer and register a `liveChange` event to the rating and a press event to the button. The initial texts for the label and the button are referenced from our `i18n` model.
 
-Let’s ignore the other internal helper functions and event handlers for now and define our renderer. With the help of the SAPUI5 render manager and the control instance that are passed on as a reference, we can now render the HTML structure of our control. We render the start of the outer `<div>` tag as `<div` and call the helper method `writeControlData` to render the ID and other basic attributes of the control inside the `div` tag. Next, we add a custom CSS class so that we can define styling rules for the custom control in our CSS file later. This CSS class and others that have been added in the view are then rendered by calling `writeClasses` on the renderer instance. Then we close the surrounding `div` tag and render three internal controls by passing the content of the internal aggregation to the render managers `renderControl` function. This will call the renderer of the controls and add their HTML to the page. Finally, we close our surrounding `<div>` tag.
+Let’s ignore the other internal helper functions and event handlers for now and define our renderer. With the help of the SAPUI5 render manager and the control instance that are passed on as a reference, we can now render the HTML structure of our control. We render the start of the outer `for controls. The difference<div>` tag as `<div` and call the helper method `writeControlData` to render the ID and other basic attributes of the control inside the `div` tag. Next, we add a custom CSS class so that we can define styling rules for the custom control in our CSS file later. This CSS class and others that have been added in the view are then rendered by calling `writeClasses` on the renderer instance. Then we close the surrounding `div` tag and render three internal controls by passing the content of the internal aggregation to the render managers `renderControl` function. This will call the renderer of the controls and add their HTML to the page. Finally, we close our surrounding `<div>` tag.
 
 The `setValue` is an overridden setter. SAPUI5 will generate a setter that updates the property value when called in a controller or defined in the XML view, but we also need to update the internal rating control in the hidden aggregation to reflect the state properly. Also, we can skip the rerendering of SAPUI5 that is usually triggered when a property is changed on a control by calling the `setProperty` method to update the control property with true as the third parameter.
 
-Now we define the event handler for the internal rating control. It is called every time the user changes the rating. The current value of the rating control can be read from the event parameter value of the `sap.m.RatingIndicator` control. With the value we call our overridden setter to update the control state, then we update the `label` next to the rating to show the user which value he has selected currently and also displays the maximum value. The string with the placeholder values is read from the `i18n` model that is assigned to the control automatically.
+Now we define the event handler for the internal rating control. It is called every time the user changes the rating. The current value of the rating control can be read from the event parameter value of the `sap.m.RatingIndicator` control. With the value we call the `setProperty` method to update the control state, then we update the `label` next to the rating to show the user which value he has selected currently and also displays the maximum value. The string with the placeholder values is read from the `i18n` model that is assigned to the control automatically.
 
 Next, we have the `press` handler for the rating button that submits our rating. We assume that rating a product is a one-time action and first disable the rating and the button so that the user is not allowed to submit another rating. We also update the label to show a "Thank you for your rating!" message, then we fire the change event of the control and pass in the current value as a parameter so that applications that are listening to this event can react on the rating interaction.
 

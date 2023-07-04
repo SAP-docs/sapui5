@@ -14,7 +14,7 @@ Initially, the UI looks as in the previous steps:
 
    
   
-<a name="loio97fc0eaaf8b045779878ea829586da1a__fig_xjy_r4q_xs"/>Initial UI Without Personalization
+**Initial UI Without Personalization**
 
  ![](images/Smart_Controls_Tutorial_Step_07a_398466e.png "Initial UI Without Personalization") 
 
@@ -22,7 +22,7 @@ We define filters in the *Filters* dialog as shown in step 5 and then select *Sa
 
    
   
-<a name="loio97fc0eaaf8b045779878ea829586da1a__fig_lqr_kdk_js"/>Specifying the Filter
+**Specifying the Filter**
 
  ![](images/Smart_Controls_Tutorial_Step_07b_551f525.png "Specifying the Filter") 
 
@@ -30,7 +30,7 @@ After that, the following dialog is shown:
 
    
   
-<a name="loio97fc0eaaf8b045779878ea829586da1a__fig_xks_kdk_js"/>Defining the View Name
+**Defining the View Name**
 
  ![](images/Smart_Controls_Tutorial_Step_07c_a51c238.png "Defining the View Name") 
 
@@ -40,7 +40,7 @@ We verify these settings now and return to our main UI:
 
    
   
-<a name="loio97fc0eaaf8b045779878ea829586da1a__fig_xts_kdk_js"/>UI with Active View
+**UI with Active View**
 
  ![](images/Smart_Controls_Tutorial_Step_07d_de20dc1.png "UI with Active View") 
 
@@ -50,7 +50,7 @@ Finally we now customize the table so that we do not see the `ProductId` column 
 
    
   
-<a name="loio97fc0eaaf8b045779878ea829586da1a__fig_xct_kdk_js"/>Remove `ProductId`
+**Remove ProductId**
 
  ![](images/Smart_Controls_Tutorial_Step_07e_d07f29c.png "Remove ProductId") 
 
@@ -58,13 +58,13 @@ Returning to the main UI, we see that only the three columns required are now sh
 
    
   
-<a name="loio97fc0eaaf8b045779878ea829586da1a__fig_y3t_kdk_js"/>Personalized Table
+**Personalized Table**
 
  ![](images/Smart_Controls_Tutorial_Step_07f_1fd2e4c.png "Personalized Table") 
 
    
   
-<a name="loio97fc0eaaf8b045779878ea829586da1a__fig_jpt_kdk_js"/>
+****
 
  
 
@@ -72,7 +72,7 @@ The *\** right next to the *Standard* view indicates that a change has been made
 
    
   
-<a name="loio97fc0eaaf8b045779878ea829586da1a__fig_txt_kdk_js"/>Specifying the View Name
+**Specifying the View Name**
 
  ![](images/Smart_Controls_Tutorial_Step_07g_5d8cf84.png "Specifying the View Name") 
 
@@ -80,7 +80,7 @@ Also, here we have the possibility to set this as default and to share the view.
 
    
   
-<a name="loio97fc0eaaf8b045779878ea829586da1a__fig_tcc_bgk_js"/>View for the Filter Bar and View for the Table
+**View for the Filter Bar and View for the Table**
 
  ![](images/Smart_Controls_Tutorial_Step_07h_7bbfc17.png "View for the Filter Bar and View for the Table") 
 
@@ -190,5 +190,5 @@ sap.ui.define([
 **Related Information**  
 
 
-[Smart Variant Management](../10_More_About_Controls/smart-variant-management-06a4c3a.md "The sap.ui.comp.smartvariants.SmartVariantManagement control provides an interface to enable a simple integration of the sap.ui.comp.variants.VariantManagement control and access to the SAPUI5 flexibility back end for easy communication.")
+[Smart Variant Management](../10_More_About_Controls/smart-variant-management-06a4c3a.md "The sap.ui.comp.smartvariants.SmartVariantManagement control provides access to the SAPUI5 flexibility back end for easy communication.")
 

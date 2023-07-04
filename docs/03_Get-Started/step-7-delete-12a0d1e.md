@@ -12,7 +12,7 @@ In this step, we make it possible to delete user data.
 
    
   
-<a name="loio12a0d1ef150a42ef81e9f07fe6407018__fig_m3r_hbx_4cb"/>A new *Delete User* button is added
+**A new Delete User button is added**
 
  ![](images/Tutorial_OData_V4_Step_7_32509f4.png "A new Delete User button is added") 
 
@@ -58,15 +58,25 @@ You can view and download all files at [OData V4 - Step 7](https://ui5.sap.com/#
 		},
 
 		onDelete : function () {
-			var oSelected = this.byId("peopleList").getSelectedItem();
-
-			if (oSelected) {
-				oSelected.getBindingContext().delete("$auto").then(function () {
-					MessageToast.show(this._getText("deletionSuccessMessage"));
-				}.bind(this), function (oError) {
-					MessageBox.error(oError.message);
-				});
-			}
+		    var oContext,
+		        oSelected = this.byId("peopleList").getSelectedItem(),
+		        sUserName;
+ 
+		    if (oSelected) {
+		        oContext = oSelected.getBindingContext();
+		        sUserName = oContext.getProperty("UserName");
+		        oContext.delete().then(function () {
+		            MessageToast.show(this._getText("deletionSuccessMessage", sUserName));
+		        }.bind(this), function (oError) {
+		            this._setUIChanges();
+		            if (oError.canceled) {
+		                MessageToast.show(this._getText("deletionRestoredMessage", sUserName));
+		                return;
+		            }
+		            MessageBox.error(oError.message + ": " + sUserName);
+		        }.bind(this));
+		        this._setUIChanges(true);
+		    }
 		},
 
 		onInputChange : function (oEvt) {
@@ -83,9 +93,7 @@ You can view and download all files at [OData V4 - Step 7](https://ui5.sap.com/#
 ...
 ```
 
-We add the `onDelete` event handler to the controller. In the event handler, we check whether an item is selected in the table and if so, the related data is deleted from the model. To do that, we retrieve the binding context of the selection and call its `delete` method.
-
-We explicitly set the update group ID for the deletion to `$auto` to make sure that the request to the service is sent immediately as a batch request. Otherwise the `delete` function would apply the deferred batch processing that we defined for the table’s list binding event though, `delete` does not currently support deferred batch processing.
+We add the `onDelete` event handler to the controller. In the event handler, we check whether an item is selected in the table and if so, we retrieve the binding context of the selection and call its `delete` method. By doing this, the context is removed from the table on the client side and the deletion is stored as a pending change in the update group of the table's list binding. A call to `_setUIChanges` ensures that the `appView` model reflects the deletion as a pending change and that the *Save* button becomes enabled. The deletion will be submitted with all other changes related to the same update group once the *Save* button is pressed. If the deletion fails on the server side, or the changes are reset via API, the related entity is restored in the table automatically. To distinguish these two situations, the rejected error has `canceled` set to `true` in case of a reset.
 
 
 
@@ -178,7 +186,10 @@ deleteButtonText=Delete User
 # Messages
 ...
 #XMSG: Message for user deleted
-deletionSuccessMessage=User deleted
+deletionSuccessMessage=User {0} deleted
+
+#XMSG: Message for user restored (undeleted)
+deletionRestoredMessage=User {0} restored
 ...
 ```
 

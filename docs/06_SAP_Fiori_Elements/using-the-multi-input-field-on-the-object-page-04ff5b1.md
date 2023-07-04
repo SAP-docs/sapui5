@@ -33,6 +33,14 @@ You can use the navigation property inside a `UI.DataField` to display values of
 > ```
 
 > ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> ```
+> @UI: {  lineItem: [ { value: '_SupportedMaterials.Material', label: 'Supported Materials' } ] }  
+> _SupportedMaterials;
+> ```
+
+> ### Sample Code:  
 > CAP CDS Annotation
 > 
 > ```
@@ -61,12 +69,18 @@ The multi-input field is also available for tables.
 
    
   
-<a name="loio04ff5b1a81344a8e8169ea99630ff4e5__fig_z3x_3sn_lkb"/>Multi-Input Control on the Object Page Table
+**Multi-Input Control on the Object Page Table**
 
  ![](images/Smart_MultiInput_Control_on_the_Object_Page_Table_dcb027c.png "Multi-Input Control on the Object Page Table") 
 
 > ### Restriction:  
-> In SAP Fiori elements for OData V4, you currently cannot edit the multi-input field within the table – even if you switch from display mode to edit mode and the rest of the table is editable. When you export to a spreadsheet, note that the respective column will be empty.
+> Note the following for SAP Fiori elements for OData V4:
+> 
+> -   You cannot edit the multi-input field within the table – even if you switch from display mode to edit mode and the rest of the table is editable. When you export to a spreadsheet, note that the respective column will be empty.
+> 
+> -   You cannot mark multi-input fields as mandatory.
+> 
+> -   You cannot use the multi-input field if you need to display more than 100 selected values, since this isn't supported. In this case we recommend that you use a table instead.
 
 **Related Information**  
 

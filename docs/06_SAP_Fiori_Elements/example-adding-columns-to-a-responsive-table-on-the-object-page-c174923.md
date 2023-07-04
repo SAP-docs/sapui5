@@ -9,9 +9,9 @@ You have to implement two extension points to add a custom column to a table.
 ## Context
 
 > ### Caution:  
-> Use app extensions with caution and only if you cannot produce the required behavior by other means, such as manifest settings or annotations. To correctly integrate your app extension coding with SAP Fiori elements, use only the extensionAPI of SAP Fiori elements. For more information, see [Using the extensionAPI](using-the-extensionapi-bd2994b.md).
+> Use app extensions with caution and only if you cannot produce the required behavior by other means, such as manifest settings or annotations. To correctly integrate your app extension coding with SAP Fiori elements, use only the `extensionAPI` of SAP Fiori elements. For more information, see [Using the extensionAPI](using-the-extensionapi-bd2994b.md).
 > 
-> After you've created an app extension, its display \(for example, control placing, CSS\) and system behavior \(for example, model and binding usage, busy handling\) of the app extension lies within the application's responsibility. SAP Fiori elements provides support only for the official extensionAPI functions. Don't access or manipulate SAP Fiori elements' internal coding.
+> After you've created an app extension, its display \(for example, control placement and layout\) and system behavior \(for example, model and binding usage, busy handling\) lies within the application's responsibility. SAP Fiori elements provides support only for the official `extensionAPI` functions. Don't access or manipulate controls, properties, models, or other internal objects created by the SAP Fiori elements framework.
 
  <a name="task_yhy_gqg_d4b"/>
 
@@ -27,7 +27,7 @@ The table containing additional columns can look like this:
 
    
   
-<a name="task_yhy_gqg_d4b__fig_ztc_v1j_rz"/>Custom columns in a responsive table on the object page
+**Custom columns in a responsive table on the object page**
 
  ![](images/Custom_columns_in_responsive_table_on_object_page_fe17dac.png "Custom columns in a responsive table on the object page") 
 

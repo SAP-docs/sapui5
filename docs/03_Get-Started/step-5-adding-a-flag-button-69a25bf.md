@@ -10,7 +10,7 @@ Now that we have implemented the conversion tests, we add the corresponding func
 
    
   
-<a name="loio69a25bf2f8a2478cbda4b8bbe64039de__fig_r1j_pst_mr"/>The *Flag* button is now added to the table
+**The Flag button is now added to the table**
 
  ![](images/Tutorial_Testing_Step_05_0cfabfd.png "The Flag button is now added to the table") 
 

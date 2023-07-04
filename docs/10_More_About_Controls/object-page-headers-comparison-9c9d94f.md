@@ -4,7 +4,7 @@
 
 This section explains the differences and similarities between the two types of header of the `sap.uxap.ObjectPageLayout` control.
 
-<a name="loio9c9d94fd28284539a9a5a57e9caf82a8__table_cj5_lbl_sbb"/>Summary of the controls used in the classic and the dynamic header
+**Summary of the controls used in the classic and the dynamic header**
 
 
 <table>
@@ -94,7 +94,7 @@ The main difference between the classic and dynamic header content is that the d
 > ### Note:  
 > The controls, comprising the dynamic header title and header content, extend the `sap.f.DynamicPage` title and header controls. They are adapted for the `ObjectPageLayout` use case, but essentially they provide the same functionality.
 
-<a name="loio9c9d94fd28284539a9a5a57e9caf82a8__table_gpd_k3l_sbb"/>Relation between the `sap.uxap.ObjectPageLayout` dynamic header controls and the `sap.f.DynamicPage` controls:
+**Relation between the sap.uxap.ObjectPageLayout dynamic header controls and the sap.f.DynamicPage controls:**
 
 
 <table>
@@ -189,7 +189,7 @@ Some `ObjectPageLayout` features associated with the behavior of the classic hea
 
 Similarly, the dynamic header comes with a set of features \(apart from its general structure\) that are exclusive to itself, and are not taken into account in the use case of the classic header.
 
-<a name="loio9c9d94fd28284539a9a5a57e9caf82a8__table_nxg_tpt_sbb"/>Overview of features exclusive to the classic header \(all being `ObjectPageLayout` properties with the exception of the `sap.uxap.ObjectPageHeaderLayoutData` class\):
+**Overview of features exclusive to the classic header \(all being ObjectPageLayout properties with the exception of the sap.uxap.ObjectPageHeaderLayoutData class\):**
 
 
 <table>
@@ -291,7 +291,7 @@ The `sap.uxap.ObjectPageHeaderLayoutData` can only be set on `headerContent` ite
 </tr>
 </table>
 
-<a name="loio9c9d94fd28284539a9a5a57e9caf82a8__table_o2z_1qt_sbb"/>Overview of features exclusive to the dynamic header \(all being `ObjectPageLayout` properties\):
+**Overview of features exclusive to the dynamic header \(all being ObjectPageLayout properties\):**
 
 
 <table>

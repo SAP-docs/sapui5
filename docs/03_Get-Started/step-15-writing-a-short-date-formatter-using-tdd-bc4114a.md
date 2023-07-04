@@ -10,13 +10,13 @@ It's now time to improve the content of the *Info* tab. We want to see the *Post
 
    
   
-<a name="loiobc4114a88e4d4ac1a0f53b2a7a92b226__fig_r1j_pst_mr"/>Unit tests of the formatter
+**Unit tests of the formatter**
 
  ![](images/Tutorial_Testing_Step_15_1_8ab2798.png "Unit tests of the formatter") 
 
 Depending on the current date, we distinguish four different formatting categories, as shown in the table below:
 
-<a name="loiobc4114a88e4d4ac1a0f53b2a7a92b226__table_hdp_fdd_jt"/>Formatting Categories
+**Formatting Categories**
 
 
 <table>
@@ -244,8 +244,9 @@ Now we fix our test again by returning the expected string.
 ```js
 sap.ui.define([
 	"sap/ui/demo/bulletinboard/model/DateFormatter",
-	"sap/ui/core/Locale"
-], function(DateFormatter, Locale) {
+	"sap/ui/core/Locale",
+	"sap/ui/core/date/UI5Date"
+], function(DateFormatter, Locale, UI5Date) {
 	QUnit.module("DateFormatter");
 	QUnit.test("Should return empty string if no date is given", function(assert) {
 		var oFormatter = new DateFormatter({
@@ -258,7 +259,7 @@ sap.ui.define([
 		var oFormatter = new DateFormatter({
 			locale : new Locale("en-US")
 		});
-		var oDate = new Date(2015, 2, 14, 12, 5, 0, 0);
+		var oDate = UI5Date.getInstance(2015, 2, 14, 12, 5, 0, 0);
 		var sFormattedDate = oFormatter.format(oDate);
 		assert.strictEqual(sFormattedDate, "12:05 PM");
 	});
@@ -309,8 +310,9 @@ In the implementation we use the `DateFormat` of SAPUI5 to create a short date. 
 ```js
 sap.ui.define([
 	"sap/ui/demo/bulletinboard/model/DateFormatter",
-	"sap/ui/core/Locale"
-], function(DateFormatter, Locale) {
+	"sap/ui/core/Locale",
+	"sap/ui/core/date/UI5Date"
+], function(DateFormatter, Locale, UI5Date) {
 	var oFormatter = null;
 	QUnit.module("DateFormatter", {
 		beforeEach: function() {
@@ -342,14 +344,15 @@ Our tests are running so we can start refactoring our code. Since we need the `D
 ```js
 sap.ui.define([
 	"sap/ui/demo/bulletinboard/model/DateFormatter",
-	"sap/ui/core/Locale"
-], function(DateFormatter, Locale) {
+	"sap/ui/core/Locale",
+	"sap/ui/core/date/UI5Date"
+], function(DateFormatter, Locale, UI5Date) {
 	var oFormatter = null;
 	QUnit.module("DateFormatter", {
 		beforeEach: function() {
 			oFormatter = new DateFormatter({
 				now : function() {
-					return new Date(2015, 2, 14, 14, 0, 0, 0).getTime();
+					return UI5Date.getInstance(2015, 2, 14, 14, 0, 0, 0).getTime();
 				},
 				locale : new Locale("en-US")
 			});
@@ -357,7 +360,7 @@ sap.ui.define([
 	});
 	...
 	QUnit.test("Should return 'Yesterday' if date from yesterday", function(assert) {
-		var oDate = new Date(2015, 2, 13);
+		var oDate = UI5Date.getInstance(2015, 2, 13);
 		var sFormattedDate = oFormatter.format(oDate);
 		assert.strictEqual(sFormattedDate, "Yesterday");
 	});
@@ -392,7 +395,6 @@ sap.ui.define([
 			} else if (iElapsedDays === 1) {
 				return "Yesterday";
 			}
-			return this.dateFormat.format(oDate);
 		},
 		_getElapsedDays : function(oDate) {
 			var iElapsedMilliseconds = this.now() - oDate.getTime();
@@ -412,12 +414,13 @@ In the implementation we add a calculation for determining how many days passed.
 ```js
 sap.ui.define([
 	"sap/ui/demo/bulletinboard/model/DateFormatter",
-	"sap/ui/core/Locale"
-], function(DateFormatter, Locale) {
+	"sap/ui/core/Locale",
+	"sap/ui/core/date/UI5Date"
+], function(DateFormatter, Locale, UI5Date) {
 	var oFormatter = null;
 	...
 	QUnit.test("Should return day of the week if date < 7 days ago", function(assert) {
-		var oDate = new Date(2015, 2, 8);
+		var oDate = UI5Date.getInstance(2015, 2, 8);
 		var sFormattedDate = oFormatter.format(oDate);
 		assert.strictEqual(sFormattedDate, "Sunday");
 	});
@@ -470,12 +473,13 @@ Now we define a new format in our constructor, the `weekdayFormat`. In the forma
 ```js
 sap.ui.define([
 	"sap/ui/demo/bulletinboard/model/DateFormatter",
-	"sap/ui/core/Locale"
-], function(DateFormatter, Locale) {
+	"sap/ui/core/Locale",
+	"sap/ui/core/date/UI5Date"
+], function(DateFormatter, Locale, UI5Date) {
 	var oFormatter = null;
 	...
 	QUnit.test("Should return date w/o time if date > 7 days ago", function(assert) {
-		var oDate = new Date(2015, 2, 7);
+		var oDate = UI5Date.getInstance(2015, 2, 7);
 		var sFormattedDate = oFormatter.format(oDate);
 		assert.strictEqual(sFormattedDate, "Mar 7, 2015");
 	});

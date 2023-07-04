@@ -14,7 +14,7 @@ This rating shows an average of all ratings recorded for the object and is displ
 
    
   
-<a name="loiobcc12cbe038146a2a586ac021a20f3a7__fig_bkn_v5q_4lb"/>Aggregated Rating Indicator
+**Aggregated Rating Indicator**
 
  ![](images/AggregatedRatingIndicator_4811ec8.png "Aggregated Rating Indicator") 
 
@@ -43,7 +43,7 @@ This rating shows a single rating, such the user's own rating for the object. In
 
    
   
-<a name="loiobcc12cbe038146a2a586ac021a20f3a7__fig_hyj_1vq_4lb"/>Non-Aggregated Rating Indicator
+**Non-Aggregated Rating Indicator**
 
  ![](images/NonAggregatedRating_e8f6dd1.png "Non-Aggregated Rating Indicator") 
 
@@ -69,7 +69,7 @@ When the object page is in *Edit* mode, the rating indicator moves into the head
 
    
   
-<a name="loiobcc12cbe038146a2a586ac021a20f3a7__fig_bx2_2vq_4lb"/>Rating Indicator in Edit Mode
+**Rating Indicator in Edit Mode**
 
  ![](images/RatingIndicator_EditMode_b9fe8ad.png "Rating Indicator in Edit Mode") 
 

@@ -7,9 +7,9 @@ Sometimes it might be necessary to add additional information that is not availa
 You can use extension points to add additional content to sections.
 
 > ### Caution:  
-> Use app extensions with caution and only if you cannot produce the required behavior by other means, such as manifest settings or annotations. To correctly integrate your app extension coding with SAP Fiori elements, use only the extensionAPI of SAP Fiori elements. For more information, see [Using the extensionAPI](using-the-extensionapi-bd2994b.md).
+> Use app extensions with caution and only if you cannot produce the required behavior by other means, such as manifest settings or annotations. To correctly integrate your app extension coding with SAP Fiori elements, use only the `extensionAPI` of SAP Fiori elements. For more information, see [Using the extensionAPI](using-the-extensionapi-bd2994b.md).
 > 
-> After you've created an app extension, its display \(for example, control placing, CSS\) and system behavior \(for example, model and binding usage, busy handling\) of the app extension lies within the application's responsibility. SAP Fiori elements provides support only for the official extensionAPI functions. Don't access or manipulate SAP Fiori elements' internal coding.
+> After you've created an app extension, its display \(for example, control placement and layout\) and system behavior \(for example, model and binding usage, busy handling\) lies within the application's responsibility. SAP Fiori elements provides support only for the official `extensionAPI` functions. Don't access or manipulate controls, properties, models, or other internal objects created by the SAP Fiori elements framework.
 
 
 
@@ -84,7 +84,7 @@ After you have added side content, the system displays a button in the subsectio
 
    
   
-<a name="loio8e01a463d3984bfa8b23c2270d40e38c__fig_u1h_2yj_wcb"/>Side Content Added to the Object Page
+**Side Content Added to the Object Page**
 
  ![](images/Dynamic_Side_Content_9cb9e88.jpg "Side Content Added to the Object Page") 
 
@@ -168,7 +168,7 @@ You define the side content in the manifest as follows:
 
 You can define your side content by implementing an `xmlfragment` and using the following properties:
 
-<a name="loio8e01a463d3984bfa8b23c2270d40e38c__table_vj3_2tn_p4b"/>Properties of Side Content
+**Properties of Side Content**
 
 
 <table>
@@ -324,7 +324,7 @@ For information about the regular `Extension` API, see the [API Reference](https
 
 The following table provides an overview of all possible combinations of facet nesting and how to find the right key in each scenario:
 
-<a name="loio8e01a463d3984bfa8b23c2270d40e38c__table_p5b_cqw_sqb"/>Finding the Right Key for Sections, Subsections, and Side Content
+**Finding the Right Key for Sections, Subsections, and Side Content**
 
 
 <table>

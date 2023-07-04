@@ -8,7 +8,7 @@ The report contains information from the loaded components, a detailed list of t
 
    
   
-<a name="loio29bcdec715a2428092666212bb6bb875__fig_qcx_vk1_k1b"/>Analysis Results: Collapsed View
+**Analysis Results: Collapsed View**
 
  ![](images/Support_Assistant_Analysis_Results_ea03b3f.png "Analysis Results: Collapsed View") 
 
@@ -26,7 +26,7 @@ The report contains the following elements:
 
        
       
-    <a name="loio29bcdec715a2428092666212bb6bb875__fig_h2m_zk1_k1b"/>Analysis Results: Rules
+    **Analysis Results: Rules**
 
      ![](images/Support_Assistant_Report_Executed_Rules_a6b1941.png "Analysis Results: Rules") 
 
@@ -34,7 +34,7 @@ The report contains the following elements:
 
        
       
-    <a name="loio29bcdec715a2428092666212bb6bb875__fig_szv_dl1_k1b"/>Analysis Results: Technical Information
+    **Analysis Results: Technical Information**
 
      ![](images/Technical_Information_103b3fc.png "Analysis Results: Technical Information") 
 
@@ -42,7 +42,7 @@ The report contains the following elements:
 
        
       
-    <a name="loio29bcdec715a2428092666212bb6bb875__fig_anc_hl1_k1b"/>Analysis Results: Application Information
+    **Analysis Results: Application Information**
 
      ![](images/Support_Assistant_Report_Application_Information_ff63b15.png "Analysis Results: Application Information") 
 
@@ -52,7 +52,7 @@ The report contains the following elements:
 
        
       
-    <a name="loio29bcdec715a2428092666212bb6bb875__fig_p14_jl1_k1b"/>Analysis Results: Issues
+    **Analysis Results: Issues**
 
      ![](images/Support_Assistant_Report_Issues_d39e614.png "Analysis Results: Issues") 
 

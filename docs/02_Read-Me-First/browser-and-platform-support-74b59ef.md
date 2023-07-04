@@ -2,7 +2,7 @@
 
 # Browser and Platform Support
 
-Browser and platform support for the SAPUI5 libraries on iOS, Android, macOS, and Windows platforms.
+Here you can find information on the browser and platform support for the SAPUI5 libraries on iOS, Android, macOS, and Windows platforms.
 
 > ### Note:  
 > The single source of truth about supported browsers and platforms is the Product Availability Matrix \(PAM\) that you can find at [https://support.sap.com/pam](https://support.sap.com/pam). SAPUI5 is not a product of its own, so please check the PAM for the product you're using SAPUI5 with. For more information, see SAP Note [1716423](https://launchpad.support.sap.com/#/notes/1716423).
@@ -96,71 +96,20 @@ SAP Fiori Client
 </th>
 </tr>
 <tr>
-<td valign="top" rowspan="3">
+<td valign="top" rowspan="2">
 
 Windows<sup>1</sup>
 
 
 
 </td>
-<td valign="top" rowspan="2">
+<td valign="top">
 
 Desktop
 
 
 
 </td>
-<td valign="top">
-
-Windows 8.1
-
-
-
-</td>
-<td valign="top" align="center">
-
-\-
-
-
-
-</td>
-<td valign="top" align="center">
-
-\-
-
-
-
-</td>
-<td valign="top" rowspan="2">
-
-Latest version
-
-
-
-</td>
-<td valign="top" rowspan="2">
-
-Latest version
-
-
-
-</td>
-<td valign="top" rowspan="3">
-
-Latest version and latest Extended Support Release \(ESR\)<sup>7</sup>
-
-
-
-</td>
-<td valign="top" align="center">
-
-\-
-
-
-
-</td>
-</tr>
-<tr>
 <td valign="top">
 
 Windows 10
@@ -180,6 +129,27 @@ Windows 11
 <td valign="top">
 
 Latest version
+
+
+
+</td>
+<td valign="top">
+
+Latest version
+
+
+
+</td>
+<td valign="top">
+
+Latest version
+
+
+
+</td>
+<td valign="top" rowspan="2">
+
+Latest version and latest Extended Support Release \(ESR\)<sup>7</sup>
 
 
 
@@ -269,7 +239,7 @@ Latest 2 versions
 </td>
 <td valign="top">
 
-Latest 2 versions
+Latest version
 
 
 
@@ -281,9 +251,9 @@ Latest 2 versions
 
 
 </td>
-<td valign="top" align="center">
+<td valign="top">
 
-\-
+Latest version <sup>5</sup>
 
 
 
@@ -327,14 +297,14 @@ Phone and Tablet<sup>5, 6</sup>
 </td>
 <td valign="top">
 
-Latest 2 versions
+Latest version
 
 
 
 </td>
 <td valign="top">
 
-Latest 2 versions
+Latest version
 
 
 
@@ -443,7 +413,7 @@ Latest version
 </table>
 
 1\) The specified browsers are also supported in virtual environments, such as Citrix and VMware. Any issues found must be reproducible in a non-virtualized environment.  
- 2\) SAPUI5 detects Microsoft Edge \(Chromium\) as Google Chrome and treats it the same.  
+ 2\) SAPUI5 detects Microsoft Edge \(Chromium\) as Google Chrome and treats it the same. If your personal or your organization’s tracking prevention settings within Microsoft Edge are too strict, `*hana.ondemand.com` addresses are blocked. To prevent this, load SAPUI5 from `https://ui5.sap.com/`.  
  3\) We use current Apple iPhone and iPad devices for testing and reproducing the reported issues.  
  4\) Android-based devices are very fragmented in matters of operating system variants and hardware diversity. We use current Samsung Galaxy S and Galaxy Tab S series devices for testing and reproducing the reported issues.  
  5\) Not supported for `sap.ui.commons` and `sap.ui.ux3`.  
@@ -456,12 +426,7 @@ Latest version
 
 ## SAPUI5 Support Status for Microsoft Internet Explorer 11
 
-Support for Microsoft Internet Explorer 11 \(IE11\) ended after SAPUI5 1.87. The last long-term maintenance version of SAPUI5 that supports IE11 is SAPUI5 1.84. Versions up to and including SAPUI5 1.87 will continue to support IE11 as long as they are in maintenance \(see [https://ui5.sap.com/versionoverview.html](https://ui5.sap.com/versionoverview.html)\).
+Support for Microsoft Internet Explorer 11 \(IE11\) ended with the end of IE11 support by Microsoft, and for the sake of completeness Internet Explorer mode of MS Edge was never supported by SAPUI5.
 
-> ### Note:  
-> Products based on SAPUI5 have their own browser support strategy and may have dropped support for IE11 even though the underlying maintenance version of SAPUI5 still supports it. Keep this in mind when you decide to use a certain product version. For more information, check the [Product Availability Matrix \(PAM\)](https://support.sap.com/pam) for the product.
-
-Legacy web applications using active browser plugins that require IE11 cannot run embedded inside an SAP Fiori launchpad that depends on an SAPUI5 version released after support ended. The same goes for integrating SAPUI5 applications into SAP GUI for Windows through the SAP HTML control: Your SAP GUI for Windows version needs to be higher than 7.60 for you to be able to configure a browser engine other than the Microsoft Internet Explorer Control, see SAP Note [2913405](https://launchpad.support.sap.com/#/notes/2913405).
-
-In case you have legacy applications and you still need IE11 with an SAPUI5 version that no longer supports it, we recommend that you either use a dual browser strategy \(for example, your users use another supported browser in addition to IE11\) or you switch to Microsoft Edge \(Chromium\), which has an integrated Internet Explorer runtime mode.
+For more information, see SAP Note [1672817](https://launchpad.support.sap.com/#/notes/1672817).
 

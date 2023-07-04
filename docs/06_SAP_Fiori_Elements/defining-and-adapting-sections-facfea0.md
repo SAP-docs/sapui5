@@ -23,7 +23,7 @@ In the figure below, the collection facet for *General Information* combines two
 
   
   
-<a name="loiofacfea09018d4376acaceddb7e3f03b6__fig_jzw_qky_4lb"/>Object Page: CollectionFacet
+**Object Page: CollectionFacet**
 
  ![](images/Object_Page_Collection_Facet_a7f074e.png "Object Page: CollectionFacet") 
 
@@ -34,7 +34,7 @@ Furthermore, reference facets can refer to identification sections, the field gr
 
   
   
-<a name="loiofacfea09018d4376acaceddb7e3f03b6__fig_lfm_fly_4lb"/>Object Page: ReferenceFacet
+**Object Page: ReferenceFacet**
 
  ![](images/Object_Page_Reference_Facet_9fa2aec.png "Object Page: ReferenceFacet") 
 
@@ -159,6 +159,8 @@ You can hide and display sections based on properties.
 > 
 > 
 >  ![](images/Subsection_Control_Title_34d0a6a.png) 
+> 
+> -   In SAP Fiori elements for OData V2 if a section contains only one type of content, such as a table or a chart, and the section title is the same as the control title, then only the control title is displayed in the section.
 
 
 
@@ -264,7 +266,7 @@ In the figure below, the collection facet for *Product Information* combines thr
 
   
   
-<a name="loiofacfea09018d4376acaceddb7e3f03b6__fig_kbm_yjd_dmb"/>Object Page: CollectionFacet
+**Object Page: CollectionFacet**
 
  ![](images/ObjectPage_Section_CollFacet_2bcb89d.jpg "Object Page: CollectionFacet") 
 
@@ -272,7 +274,7 @@ Further reference facets refer to identification sections, the field group, cont
 
   
   
-<a name="loiofacfea09018d4376acaceddb7e3f03b6__fig_mbm_yjd_dmb"/>Object Page: ReferenceFacets
+**Object Page: ReferenceFacets**
 
  ![](images/ObjectPage_ReferenceFacet_2740bd6.png "Object Page: ReferenceFacets") 
 
@@ -371,4 +373,10 @@ To choose a tab visualization, you must use the `sectionLayout` property in the 
 >     }
 > }
 > ```
+
+
+
+### Responsive Column Layout
+
+We're using the responsive column layout on the object page, which means that form data is spread across six columns by default when opened on extra large screens to improve content density. The number of columns adapts automatically, depending on the screen size.
 

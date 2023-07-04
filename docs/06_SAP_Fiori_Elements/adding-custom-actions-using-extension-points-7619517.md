@@ -9,9 +9,9 @@ You can use extension points to add custom actions to the list report and the ob
 ## Context
 
 > ### Caution:  
-> Use app extensions with caution and only if you cannot produce the required behavior by other means, such as manifest settings or annotations. To correctly integrate your app extension coding with SAP Fiori elements, use only the extensionAPI of SAP Fiori elements. For more information, see [Using the extensionAPI](using-the-extensionapi-bd2994b.md).
+> Use app extensions with caution and only if you cannot produce the required behavior by other means, such as manifest settings or annotations. To correctly integrate your app extension coding with SAP Fiori elements, use only the `extensionAPI` of SAP Fiori elements. For more information, see [Using the extensionAPI](using-the-extensionapi-bd2994b.md).
 > 
-> After you've created an app extension, its display \(for example, control placing, CSS\) and system behavior \(for example, model and binding usage, busy handling\) of the app extension lies within the application's responsibility. SAP Fiori elements provides support only for the official extensionAPI functions. Don't access or manipulate SAP Fiori elements' internal coding.
+> After you've created an app extension, its display \(for example, control placement and layout\) and system behavior \(for example, model and binding usage, busy handling\) lies within the application's responsibility. SAP Fiori elements provides support only for the official `extensionAPI` functions. Don't access or manipulate controls, properties, models, or other internal objects created by the SAP Fiori elements framework.
 
 You can define custom actions for:
 
@@ -82,15 +82,15 @@ These custom actions are displayed as buttons on the UI. When the user selects t
     <table>
     <tr>
     <td valign="top">
-
-     `<entity set>` 
+    
+         `<entity set>` 
 
 
     
     </td>
     <td valign="top">
-
-    Entity set that is displayed on the list report or on the object page \(for example, `SMART_C_Product`\)
+    
+        Entity set that is displayed on the list report or on the object page \(for example, `SMART_C_Product`\)
 
     > ### Note:  
     > If you use multiple views with different `entity sets` on the list report page, `Actions` need to be defined only for main entity set. It is not possible to execute `Actions` defined for other `entity sets`.
@@ -101,15 +101,15 @@ These custom actions are displayed as buttons on the UI. When the user selects t
     </tr>
     <tr>
     <td valign="top">
-
-     `<Action 1>`, `<Action 2>`, …
+    
+         `<Action 1>`, `<Action 2>`, …
 
 
     
     </td>
     <td valign="top">
-
-    Action names
+    
+        Action names
 
 
     
@@ -117,15 +117,15 @@ These custom actions are displayed as buttons on the UI. When the user selects t
     </tr>
     <tr>
     <td valign="top">
-
-     `<id>` 
+    
+         `<id>` 
 
 
     
     </td>
     <td valign="top">
-
-    ID to be used for the action button
+    
+        ID to be used for the action button
 
     > ### Note:  
     > The values of the action name and the ID should be identical.
@@ -136,31 +136,15 @@ These custom actions are displayed as buttons on the UI. When the user selects t
     </tr>
     <tr>
     <td valign="top">
-
-     `<button text>` 
+    
+         `<button text>` 
 
 
     
     </td>
     <td valign="top">
-
-    nullText to be displayed on the button \(typically a binding to an i18n entry, for example, null<button text\>nullnull`{i18n>MY_BUTTON_TEXT}`\)
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-
-     `<handler function>` 
-
-
-    
-    </td>
-    <td valign="top">
-
-    Handler function that is called when the user selects the action button
+        nullText to be displayed on the button \(typically a binding to an i18n entry, for example, null<button text\>nullnull`{i18n>MY_BUTTON_TEXT}`\)
 
 
     
@@ -168,15 +152,31 @@ These custom actions are displayed as buttons on the UI. When the user selects t
     </tr>
     <tr>
     <td valign="top">
-
-     `<global>`\(required\)
+    
+         `<handler function>` 
 
 
     
     </td>
     <td valign="top">
+    
+        Handler function that is called when the user selects the action button
 
-    Indicates whether this is a global action. The default value is `false`.
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+         `<global>`\(required\)
+
+
+    
+    </td>
+    <td valign="top">
+    
+        Indicates whether this is a global action. The default value is `false`.
 
     > ### Note:  
     > If a determining property is set along with the global property, the action is rendered as a global action since this takes precedence.
@@ -187,31 +187,15 @@ These custom actions are displayed as buttons on the UI. When the user selects t
     </tr>
     <tr>
     <td valign="top">
-
-    Relevant only for table toolbar actions in the list report and object page: `<requiresSelection>` \(optional\)
+    
+        Relevant only for table toolbar actions in the list report and object page: `<requiresSelection>` \(optional\)
 
 
     
     </td>
     <td valign="top">
-
-    Property that indicates whether the action requires a selection of items. The default value is `true`.
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-
-    Relevant only for list report actions and object page header actions: `<determining>` \(optional\)
-
-
-    
-    </td>
-    <td valign="top">
-
-    Property that indicates whether the action should be displayed in the footer of the page. The default value is `false`.
+        Property that indicates whether the action requires a selection of items. The default value is `true`.
 
 
     
@@ -219,31 +203,15 @@ These custom actions are displayed as buttons on the UI. When the user selects t
     </tr>
     <tr>
     <td valign="top">
-
-    Relevant only for object page actions: `<SmartTable Facet ID>` 
+    
+        Relevant only for list report actions and object page header actions: `<determining>` \(optional\)
 
 
     
     </td>
     <td valign="top">
-
-    ID that either comes from the annotation in which you have provided an ID for the facet or that's made up of the annotation term plus the navigation property. For example: <entity type association\>::com.sap.vocabularies.UI.v1.LineItem
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-
-     `<applicablePath>` 
-
-
-    
-    </td>
-    <td valign="top">
-
-    Determines if a custom action should be visible or enabled.
+        Property that indicates whether the action should be displayed in the footer of the page. The default value is `false`.
 
 
     
@@ -251,15 +219,47 @@ These custom actions are displayed as buttons on the UI. When the user selects t
     </tr>
     <tr>
     <td valign="top">
-
-     `<command>` 
+    
+        Relevant only for object page actions: `<SmartTable Facet ID>` 
 
 
     
     </td>
     <td valign="top">
+    
+        ID that either comes from the annotation in which you have provided an ID for the facet or that's made up of the annotation term plus the navigation property. For example: <entity type association\>::com.sap.vocabularies.UI.v1.LineItem
 
-    Represents the command mapped to a keyboard shortcut defined under `sap.ui.commands`
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+         `<applicablePath>` 
+
+
+    
+    </td>
+    <td valign="top">
+    
+        Determines if a custom action should be visible or enabled.
+
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+         `<command>` 
+
+
+    
+    </td>
+    <td valign="top">
+    
+        Represents the command mapped to a keyboard shortcut defined under `sap.ui.commands`
 
     > ### Note:  
     > If you are adding the command settings to an existing custom action, the parameter i.e., `oEvent` passed to the event handler of that custom action, is changed. It requires code adaptation if the code in the event handler depends on the `oEvent` parameter.
@@ -607,15 +607,15 @@ These custom actions are displayed as buttons on the UI. When the user selects t
     </tr>
     <tr>
     <td valign="top">
-
-     `The first parameter of<Action name>` 
+    
+         `The first parameter of<Action name>` 
 
 
     
     </td>
     <td valign="top">
-
-    Name of the custom action
+    
+        Name of the custom action
 
 
     
@@ -623,15 +623,15 @@ These custom actions are displayed as buttons on the UI. When the user selects t
     </tr>
     <tr>
     <td valign="top">
-
-     `<handler function>` 
+    
+         `<handler function>` 
 
 
     
     </td>
     <td valign="top">
-
-    Handler function that is called when the user selects the action button
+    
+        Handler function that is called when the user selects the action button
 
     It is of the format `<app ID from manifest>.<Folder Name>.<Script file>.<Method Name>`
 
@@ -641,15 +641,15 @@ These custom actions are displayed as buttons on the UI. When the user selects t
     </tr>
     <tr>
     <td valign="top">
-
-     `<button text>` 
+    
+         `<button text>` 
 
 
     
     </td>
     <td valign="top">
-
-    Text to be displayed on the button \(typically a binding to an i18n entry, for example `{i18n>BUTTON_TEXT}`\)
+    
+        Text to be displayed on the button \(typically a binding to an i18n entry, for example `{i18n>BUTTON_TEXT}`\)
 
 
     
@@ -657,15 +657,15 @@ These custom actions are displayed as buttons on the UI. When the user selects t
     </tr>
     <tr>
     <td valign="top">
-
-     `<Anchor action name>` 
+    
+         `<Anchor action name>` 
 
 
     
     </td>
     <td valign="top">
-
-    Name of another action with reference to which this action should be placed.
+    
+        Name of another action with reference to which this action should be placed.
 
     Here are some examples:
 

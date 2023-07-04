@@ -10,7 +10,7 @@ Before we can do something with SAPUI5, we need to load and initialize it. This 
 
    
   
-<a name="loiofe12df2e338e43598977d09f3d191b7b__fig_r1j_pst_mr"/>An alert "UI5 is ready" is displayed
+**An alert "UI5 is ready" is displayed**
 
  ![](images/SAPUI5_Walkthrough_Step_02_f997780.png "An alert "UI5 is ready" is displayed") 
 

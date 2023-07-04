@@ -64,7 +64,7 @@ Unbound messages are always considered as transition messages.
 
 – Handling Bound Messages –
 
-A message popover is used to display a summarized list of different types of bound messages \(messages that are specific to a particular instance, for example for a sales order selected in a list report and shown in an object page\). It provides a handy and systemized way to navigate and explore details for every message. The message popover automatically displays messages that are sent from the back end as part of the request-response cycle. The messages for subitems are also shown \(for example, if the message popover is bound to a sales order item, the messages for the underlying sales order items are shown as well\).  In addition, messages are grouped by the name of the message group the current item belongs to, or else categorized under ‘General’.
+A message popover is used to display a summarized list of different types of bound messages \(messages that are specific to a particular instance, for example for a sales order selected in a list report and shown in an object page\). It provides a handy and systemized way to navigate and explore details for every message. The message popover automatically displays messages that are sent from the back end as part of the request-response cycle. The messages for subitems are also shown \(for example, if the message popover is bound to a sales order item, the messages for the underlying sales order items are shown as well\). In addition, messages are grouped by the name of the message group the current item belongs to, or else categorized under ‘General’.
 
 Usage
 
@@ -100,13 +100,13 @@ The message popover consists of the following components:
 
 -   Chevron navigation to the detailed description of the message \(if this is supplied by the back end\).
 
-    If the message model provides a long text from the back end, the user is able to navigate to the details section from the message popover. There, the user typically finds more detailed information.
+    If the message model provides a long text from the back end, the user is able to navigate to the details section from the message popover. There, the user typically finds more detailed information.
 
        
       
-    <a name="loio239b1922758645e7b451e01ded7f56bc__fig_owt_2gb_llb"/>Message Popover: Chevron Navigation to Message Details![](images/Message_Popover_Chevron_Navigation_to_Details_671213a.png)
+    **Message Popover: Chevron Navigation to Message Details**
 
-     
+     ![](images/Message_Popover_Chevron_Navigation_to_Details_671213a.png "Message Popover: Chevron Navigation to Message Details") 
 
 
 Navigation is also supported from the messages. This allows end users to navigate directly to the place where the error/warning occurs on the UI by simply clicking on the respective message in the message popover.
@@ -138,9 +138,9 @@ The message dialog consists of the following components:
 
        
       
-    <a name="loio239b1922758645e7b451e01ded7f56bc__fig_cv5_mhb_llb"/>Message Dialog: Chevron Navigation to Message Details![](images/Message_Dialog_Chevron_Navigation_to_Details_6971667.png)
+    **Message Dialog: Chevron Navigation to Message Details**
 
-     
+     ![](images/Message_Dialog_Chevron_Navigation_to_Details_6971667.png "Message Dialog: Chevron Navigation to Message Details") 
 
 
 

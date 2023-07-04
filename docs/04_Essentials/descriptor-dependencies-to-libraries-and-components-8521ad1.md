@@ -62,17 +62,14 @@ sap.ui.getCore().initLibrary({
 > In all cases, the lazy libraries need to be loaded manually in the application or library via the `loadLibrary` API:
 > 
 > ```
-> // lazy lib loaded synchronously (avoid if possible!)
-> sap.ui.getCore().loadLibrary("sap.suite.ui.commons");
 > 
-> // lazy lib loaded asynchronously (the preferred way!)
 > sap.ui.getCore().loadLibrary("sap.suite.ui.commons", { async: true }).then(...);
 > ```
 
 > ### Tip:  
 > Execute the `loadLibrary` before any resource of the library is required to preload the complete library instead of loading each resource individually.
 > 
-> Always use the async API as this is the preferred and performant way. Only use the sync API as an exception if your coding relies on synchronous loading.
+> Always use the async API as this is the preferred and performant way. If your code relies on synchronous loading, it needs to be refactored to support the async API.
 
 
 
@@ -87,10 +84,7 @@ In this scenario, the library is the leading container and **no** component prel
 For loading lazy components inside a library, proceed with the library mechanisms as described above:
 
 ```
-// lazy lib loaded synchronously (avoid if possible!)
-sap.ui.getCore().loadLibrary("sap.suite.ui.commons");
 
-// lazy lib loaded asynchronously (the preferred way!!!)
 sap.ui.getCore().loadLibrary("sap.suite.ui.commons", { async: true }).then(...);
 ```
 

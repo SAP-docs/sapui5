@@ -7,7 +7,7 @@ If we want to test interaction patterns or more visual features of our app, we c
 We haven’t thought about testing our interaction with the app yet, so in this step we will check if the dialog actually opens when we click the “Say Hello with Dialog” button. We can easily do this with OPA5, a feature of SAPUI5 that is easy to set up and is based on JavaScript and QUnit. Using integration and unit tests and running them consistently in a continuous integration \(CI\) environment, we can make sure that we don’t accidentally break our app or introduce logical errors in existing code.
 
 > ### Note:  
-> In this tutorial, we focus on a simple use case for the test implementation. If you want to learn more about OPA tests, have a look at our [Testing](testing-291c912.md) tutorial, especially [Step 6: A First OPA Test](step-6-a-first-opa-test-1b47457.md).
+> In this tutorial, we focus on a simple use case for the test implementation. If you want to learn more about OPA tests, have a look at our [Testing Tutorial](testing-tutorial-291c912.md) tutorial, especially [Step 6: A First OPA Test](step-6-a-first-opa-test-1b47457.md).
 
 
 
@@ -15,7 +15,7 @@ We haven’t thought about testing our interaction with the app yet, so in this 
 
    
   
-<a name="loio9bf4dce43b7943d0909cd6c58a933589__fig_r1j_pst_mr"/>An OPA test opens the "Hello" dialog from step 16
+**An OPA test opens the "Hello" dialog from step 16**
 
  ![](images/SAPUI5_Walkthrough_Step_29_108eccb.png "An OPA test opens the "Hello" dialog from step 16") 
 
@@ -27,7 +27,7 @@ You can view and download all files at [Walkthrough - Step 28](https://ui5.sap.c
 
    
   
-<a name="loio9bf4dce43b7943d0909cd6c58a933589__fig_rqr_hcp_ns"/>Folder Structure for this Step
+**Folder Structure for this Step**
 
  ![](images/SAPUI5_Walkthrough_Step_29_2_72406ab.png "Folder Structure for this Step") 
 
@@ -141,9 +141,7 @@ The implementation of the page object holds the helper functions we just called 
 
 In the actions section of the page object we define a function to click the "Hello" dialog button. This is done in OPA5 with a `waitFor` statement, it is basically a loop that checks for the conditions defined as parameters. If the conditions are met, the success callback is executed, if the test fails because the conditions have not been met, the text in the `errorMessage` property is displayed on the result page.
 
-We define a `waitFor` statement that checks for controls of type `sap.m.Button`. As soon as a button is found on the app page the success handler is executed and we use jQuery to trigger a `tap` event on the first button that we found. This should open the `HelloDialog` similar to clicking on the button manually.
-
-In the assertions section we define another `waitFor` statement that checks if a `sap.m.Dialog` control is existing in the DOM of the app. When the dialog has been found, the test is successful and we can immediately confirm by calling an `ok` statement with a meaningful message.
+In the assertions section we define a `waitFor` statement that checks if a `sap.m.Dialog` control is existing in the DOM of the app. When the dialog has been found, the test is successful and we can immediately confirm by calling an `ok` statement with a meaningful message.
 
 
 
@@ -230,5 +228,5 @@ This script loads the `NavigationJourney`, and the test functions inside are imm
 
 [Samples: `sap.ui.test.Opa5` ](https://ui5.sap.com/#/entity/sap.ui.test.Opa5)
 
-[Testing](testing-291c912.md "In this tutorial we will test application functionality with the testing tools that are delivered with SAPUI5. At different steps of this tutorial you will write tests using QUnit, OPA5, and the OData V2 mock server. Additionally, you will learn about testing strategies, Test Driven Development (TDD), and much more.")
+[Testing Tutorial](testing-tutorial-291c912.md "In this tutorial we will test application functionality with the testing tools that are delivered with SAPUI5. At different steps of this tutorial you will write tests using QUnit, OPA5, and the OData V2 mock server. Additionally, you will learn about testing strategies, Test Driven Development (TDD), and much more.")
 

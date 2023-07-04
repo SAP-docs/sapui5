@@ -29,15 +29,15 @@ The following information is relevant for translators.
     </tr>
     <tr>
     <td valign="top">
-
-     `/UI5/TREP_TEXT` \(master table\)
+    
+         `/UI5/TREP_TEXT` \(master table\)
 
 
     
     </td>
     <td valign="top">
-
-    -   Text name
+    
+        -   Text name
     -   Unique text GUID
     -   Text type
     -   Additional context information
@@ -49,15 +49,15 @@ The following information is relevant for translators.
     </tr>
     <tr>
     <td valign="top">
-
-     `/UI5/TREP_TEXT_T` \(language-dependent table\)
+    
+         `/UI5/TREP_TEXT_T` \(language-dependent table\)
 
 
     
     </td>
     <td valign="top">
-
-    -   Source and translated text
+    
+        -   Source and translated text
     -   Keys: text GUID as in table `/UI5/TREP_TEXT`, and language key
 
 
@@ -66,15 +66,15 @@ The following information is relevant for translators.
     </tr>
     <tr>
     <td valign="top">
-
-     `/UI5/TREP_FILES` 
+    
+         `/UI5/TREP_FILES` 
 
 
     
     </td>
     <td valign="top">
-
-    -   Translation object name \(GUID from the properties file\)
+    
+        -   Translation object name \(GUID from the properties file\)
     -   Path information for the properties file
 
 

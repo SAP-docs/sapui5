@@ -14,7 +14,7 @@ Luckily, SAPUI5 provides a couple of debugging tools that we can use within the 
 
    
   
-<a name="loio1ff250c2038849f5991209f7e6c36f1f__fig_r1j_pst_mr"/>The diagnostics window
+**The diagnostics window**
 
  ![](images/SAPUI5_Walkthrough_Step_30_c4e83f0.png "The diagnostics window") 
 
@@ -88,11 +88,11 @@ This makes debugging harder because the code is a lot less readable. You can loa
 
    
   
-<a name="loio1ff250c2038849f5991209f7e6c36f1f__fig_vfz_xgf_yr"/>Technical information dialog
+**Technical information dialog**
 
  ![Technical Information Dialog](images/Technical_Information_Dialog_SAPUI5_8cec8a2.png "Technical information dialog ") 
 
-For a more detailed explanation of the SAPUI5 support tools, go through the [Troubleshooting](troubleshooting-5661952.md) tutorial.
+For a more detailed explanation of the SAPUI5 support tools, go through the [Troubleshooting Tutorial](troubleshooting-tutorial-5661952.md) tutorial.
 
 If you're stuck and need help for some development task, you can also post a question in the SAPUI5-related forums, for example in the [SAP Community](https://www.sap.com/community/topic/ui5.html) or on [Stack Overflow](https://stackoverflow.com/search?q=sapui5).
 

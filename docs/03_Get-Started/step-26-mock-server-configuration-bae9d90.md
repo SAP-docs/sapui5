@@ -12,7 +12,7 @@ This system is the so-called back-end system that we will now simulate with an S
 
    
   
-<a name="loiobae9d90d2e9c4206889368f04edab508__fig_r1j_pst_mr"/>The list of invoices is now served by the Mock Server
+**The list of invoices is now served by the Mock Server**
 
  ![](images/SAPUI5_Walkthrough_Step_27_ccce9b3.png "The list of invoices is now served by the Mock Server") 
 
@@ -24,7 +24,7 @@ You can view and download all files at [Walkthrough - Step 26](https://ui5.sap.c
 
    
   
-<a name="loiobae9d90d2e9c4206889368f04edab508__fig_dhm_tbp_ns"/>Folder Structure for this Step
+**Folder Structure for this Step**
 
  ![](images/SAPUI5_Walkthrough_Step_27_2_7a5e2b0.png "Folder Structure for this Step") 
 
@@ -265,11 +265,11 @@ Now that we have added the OData service description file `metadata.xml` file, w
 
 We load the standard SAPUI5 `MockServer` module as a dependency and create a helper object that defines an `init` method to start the server. This method is called before the component initialization in the `mockServer.html` file above. The `init` method creates a `MockServer` instance with the same URL as the real service calls.
 
-The URL in configuration parameter `rootUri` has to be exactly the same as the `uri` that is defined for the data source in the `manifest.json` descriptor file. This can be an absolute or, for example in SAP Web IDE, a relative URL to a destination. The URL will now be served by our test server instead of the real service. Next, we set two global configuration settings that tell the server to respond automatically and introduce a delay of one second to imitate a typical server response time. Otherwise, we would have to call the respond method on the `MockServer` manually to simulate the call.
+The URL in configuration parameter `rootUri` has to be exactly the same as the `uri` that is defined for the data source in the `manifest.json` descriptor file. This can be an absolute or, for example in SAP Web IDE, a relative URL to a destination. The URL will now be served by our test server instead of the real service. Next, we set two global configuration settings that tell the server to respond automatically and introduce a delay of 500 ms to imitate a typical server response time. Otherwise, we would have to call the respond method on the `MockServer` manually to simulate the call.
 
 To simulate a service, we can simply call the `simulate` method on the `MockServer` instance with the path to our newly created `metadata.xml`. This will read the test data from our local file system and set up the URL patterns that will mimic the real service.
 
-Finally, we call start on `oMockServer`. From this point, each request to the URL pattern `rootUri` will be processed by the `MockServer`. If you switch from the `index.html` file to the `mockServer.html` file in the browser, you can now see that the test data is displayed from the local sources again, but with a short delay. The delay can be specified with the URI parameter `serverDelay`, the default value is one second.
+Finally, we call start on `oMockServer`. From this point, each request to the URL pattern `rootUri` will be processed by the `MockServer`. If you switch from the `index.html` file to the `mockServer.html` file in the browser, you can now see that the test data is displayed from the local sources again, but with a short delay. The delay can be specified with the URI parameter `serverDelay`.
 
 This approach is perfect for local testing, even without any network connection. This way your development does not depend on the availability of a remote server, i.e. to run your tests.
 
@@ -293,5 +293,5 @@ Try calling the app with the `index.html` file and the `mockServer.html` file to
 
 [API Reference: `sap.ui.core.util.MockServer`](https://ui5.sap.com/#/api/sap.ui.core.util.MockServer)
 
-[Create a Northwind Destination](create-a-northwind-destination-3a16c7a.md "Configure a destination in the SAP BTP Cockpit in order to bypass the same-origin policy of the browser.")
+[Create a Northwind Destination](../05_Developing_Apps/create-a-northwind-destination-3a16c7a.md "Configure a destination in the SAP BTP Cockpit in order to bypass the same-origin policy of the browser.")
 

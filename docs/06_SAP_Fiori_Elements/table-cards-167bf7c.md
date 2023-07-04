@@ -9,9 +9,6 @@ A table card displays a list of records in a 3-column table layout.
 To create a table card, you need these annotations:
 
 > ### Note:  
-> To add annotations, use the SAP WebIDE annotation modular or the SAP WebIDE code editor. For more information, see Building an App Using SAP WebIDE
-
-> ### Note:  
 > \(Optional\) You can configure smart links in table cards to access quick links.
 
 ![](images/TC_19e10b0.png)

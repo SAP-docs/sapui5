@@ -4,6 +4,9 @@
 
 The `sap.ui.model.odata.v4.ODataListBinding#create` method creates a new entity. Users can interact with a newly created entity even before it has been sent to the server.
 
+> ### Note:  
+> The `sap.ui.model.odata.v4.ODataListBinding#create` method is also used for creating records in controller code. For more information, see [Accessing Data in Controller Code](accessing-data-in-controller-code-17b30ac.md).
+
 To create new entities, [`ODataListBinding#create`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataListBinding/methods/create) uses the list binding's update group ID as group ID. For more information how this group ID is determined, see the documentation for the binding-specific parameter `$$updateGroupID` of [`ODataModel#bindList`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataModel/methods/bindList).
 
 A newly created entity can be inserted at the start or at the end of the list. This new entity is transient until it is successfully submitted, see [`Context#isTransient`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.Context/methods/isTransient). The initial data for the created entity can be supplied via the parameter `oInitialData` and modified via property bindings or [`Context#setProperty`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.Context/methods/setProperty). Properties that are not part of the initial data show the default value from the service metadata on the UI, but they are not sent to the server. If there is no default value, null is used instead, even if the property is not nullable. Updates for the transient entity are collected and added to the POST request which creates the entity on the server. The initial data may contain instance annotations.
@@ -79,17 +82,105 @@ The `promise` returned by [`Context#created`](https://ui5.sap.com/#/api/sap.ui.m
 
 
 
+<a name="loioc9723f8265f644af91c0ed941e114d46__section_DCR"/>
+
+## Deep Create
+
+It is also possible to create nested entities in a collection-valued navigation property with a single request together with their parent entity \(so-called "deep create"; the request itself is called "deep insert" in the [OData specification](http://docs.oasis-open.org/odata/odata/v4.01/os/part1-protocol/odata-v4.01-os-part1-protocol.html#sec_CreateRelatedEntitiesWhenCreatinganE)\). For this purpose, bind the list for the nested collection relative to the transient context of the created main entity. A [`create`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataListBinding/methods/create) in the nested table then creates a row which contributes to the POST request of the main entity. A deep create is not restricted to one level; it is also possible that a nested entity has a nested collection itself.
+
+"Deep create" supports a simple collection-valued navigation property \(no path like "detail/items"\). It requires that the `autoExpandSelect` [model](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataModel/constructor) parameter is `true`. There must be no context binding in the binding hierarchy between the top-level and nested list binding.
+
+**Example: Creating a sales order with line items**
+
+> ### Example:  
+> **View**
+> 
+> ```
+> 
+> <SimpleForm id="form">
+>     <Table id="items" items="{path : 'SO_2_SOITEM', parameters : {$$ownRequest : true}}">
+>          <ColumnListItem>
+>              <Input value="{ProductID}"/>
+>              <Input value="{Amount}"/>
+>              <Input value="{Unit}"/>
+>            </ColumnListItem>
+>     </Table>
+> </SimpleForm>
+> ```
+
+> ### Example:  
+> **Controller**
+> 
+> ```
+>    createNewSalesOrder : function () {
+>        var oSalesOrderBinding = this.getView().getModel().bindList("/SalesOrderList");
+>        this.oNewSalesOrderContext = oSalesOrderBinding.create();
+>        this.oNewSalesOrderContext.created().then(function () {
+>            // successfully created
+>        }, function () {
+>            // creation canceled (if the request failed, it will be
+>            // automatically queued again)
+>        };
+>        this.byId("form").setBindingContext(this.oNewSalesOrderContext);
+>    },
+>    addItem : function () {
+>        oNewItemContext = this.byId("items").getBinding("items").create();
+>    },
+>    deleteItem : function () {
+>        this.byId("items").getSelectedItem().getBindingContext().delete();
+>    },
+>    save : function () {
+>        var oModel = this.getView().getModel();
+>        oModel.submitBatch(oModel.getUpdateGroupId());
+>    },
+>    cancel : function () {
+>          this.oNewSalesOrderContext.delete();
+>         // alternatively
+>         // oModel.resetChanges(oModel.getUpdateGroupId());
+>    }
+> ```
+
+The `createNewSalesOrder` function creates a sales order and binds it to the form. Initially this is no deep create. The `addItem` and `deleteItem` functions show that you can create and delete nested items exactly like top-level items. They automatically add and remove an item in the nested collection of the top-level POST request. As soon as the first item has been added to the "items" table, the `create` becomes a deep create. `create` returns a context allowing to access the transient item's data. The [`isTransient`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.Context/methods/isTransient) value of such a nested context is `true`, and it has a [`created`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.Context/methods/created) promise. But there are two important differences:
+
+-   A nested context becomes invalid after a successful deep create. New contexts are created for the nested collection, because it is not possible to reliably assign the response entities to those of the request, especially if the count differs.
+-   Never use the `created` promise of a nested context! This context is about to be destroyed anyway, and it is not possible to access the created data through it. So the promise is always rejected, even if the creation succeeded.
+
+It is also possible to create a sales order already having items in the initial data. These items then show up in the table immediately. They have transient contexts in the "items" table's binding, which can be accessed via [`getAllCurrentContexts`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataListBinding/methods/getAllCurrentContexts):
+
+> ### Example:  
+> ****
+> 
+> ```
+> this.oNewSalesOrderContext = oSalesOrderBinding.create({
+>     SO_2_SOITEM : [
+>         {ProductID : "1", Amount : "1", Unit : "EA"},
+>         {ProductID : "2", Amount : "3.7", Unit : "kg"}
+>     ]
+> });
+> aInitialItemsContexts = this.byId("items").getBinding("items").getAllCurrentContexts();
+> ```
+
+The usage of the `bSkipRefresh` parameter when calling [`create`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataListBinding/methods/create) is not recommended for a deep create. It leads to multiple single row requests if the POST response did not supply all properties of the nested list. If it is not set, the model checks whether all required properties and child entities are available on the client and requests only data that is missing.
+
+Canceling a deep create or deleting the top-level entity removes the request, the top-level entity, and all its subentities. Deleting a nested entity also deletes its subentities.
+
+As long as the parent context is still transient, requesting data from the server does not make sense. Hence, API functions leading to a server request \(like `refresh`, `sort`, `filter`, `requestSideEffects`\) are forbidden. When the parent entity including its nested entities has been created, the binding is fully functional.
+
+
+
 <a name="loioc9723f8265f644af91c0ed941e114d46__section_ICR"/>
 
 ## Inline Creation Rows
 
 In some applications users need to be able to quickly enter a large amount of new records. A "Create" button or the related keyboard shortcut that needs to be explicitly pressed would slow down the user. To avoid this, the application could provide multiple **inline creation rows** in the table that are initially filled with default values and are not persisted in the back end.
 
-You can create such an inline creation row by calling [`sap.ui.model.odata.v4.ODataListBinding#create`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataListBinding/methods/create) with the `bInactive` parameter. Call it multiple times for multiple rows. These rows are called inactive because they are not sent to the server. Once the user modifies a property of such an inactive row, and the modification passes the client-side validation, a [`v4.ODataListBinding.createActivate`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataListBinding%23events/createActivate) event is fired and the row will be sent to the server with the next batch for the binding's update group. The event can be used to create a new inline creation row. While inactive, an inline creation row does not count as a pending change and does not contribute to the collection's count.
+You can create such an inline creation row by calling [`sap.ui.model.odata.v4.ODataListBinding#create`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataListBinding/methods/create) with the `bInactive` parameter. Call it multiple times for multiple rows. These rows are called inactive because they are not sent to the server. Once the user modifies a property of such an inactive row, and the modification passes the client-side validation, a [`v4.ODataListBinding.createActivate`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataListBinding%23events/createActivate) event is fired and the row will be sent to the server with the next batch for the binding's update group. You could use the event for additional custom validation, and it supports calling [`sap.ui.base.Event#preventDefault`](https://ui5.sap.com/#/api/sap.ui.base.Event/methods/preventDefault) to prevent the row from being sent to the server. You could use this, for example, to require certain properties to be set before sending the row to the server. You could also reset the row back to the initial state via [`Context#resetChanges`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.Context/methods/resetChanges). The event can also be used to create a new inline creation row. While inactive, an inline creation row does not count as a pending change and does not contribute to the collection's count.
 
 
 
-### Context states
+<a name="loioc9723f8265f644af91c0ed941e114d46__section_hy5_yxw_rxb"/>
+
+## Context States
 
 -   `persisted`: An already existing entity that was read from the server.
 -   `inactive`: An inline creation row without any property update yet; it is waiting for a property change before adding a POST to the batch queue.
@@ -100,7 +191,7 @@ You can create such an inline creation row by calling [`sap.ui.model.odata.v4.OD
 
    
   
-<a name="loioc9723f8265f644af91c0ed941e114d46__fig_klh_5kw_4cb"/>Internal States of an OData V4 Binding Context
+**Internal States of an OData V4 Binding Context**
 
  ![](images/Create_States_f359082.png "Internal States of an OData V4 Binding Context") 
 

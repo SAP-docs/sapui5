@@ -12,7 +12,7 @@ In this step, we have a closer look at batch groups. Batch groups are used to gr
 
    
   
-<a name="loioef2af4957fae469e9203e98006d3ee75__fig_klh_5kw_4cb"/>No visual change compared to the last step
+**No visual change compared to the last step**
 
  ![](images/Tutorial_OData_V4_Step_4_3ac4fcc.png "No visual change compared to the last step") 
 
@@ -37,8 +37,7 @@ You can view and download all files at [OData V4 - Step 5](https://ui5.sap.com/#
 				"settings": {
 					"autoExpandSelect": true,
 					"operationMode": "Server",
-					"groupId": "$auto",
-					"synchronizationMode": "None"
+					"groupId": "$auto"
 				}
 ...
 ```

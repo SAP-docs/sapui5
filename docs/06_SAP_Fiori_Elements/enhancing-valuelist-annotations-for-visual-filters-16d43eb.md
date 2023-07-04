@@ -119,7 +119,9 @@ After selecting the region chart, if you select a bar in the country chart then 
 `PlantID` is an IN parameter used only for the `RegionID`. This means that along with the main content area only the first chart is refreshed and displays the top three countries for the chosen plant.
 
 > ### Note:  
-> The IN mapping defined for a field is ignored when the same field has a `ValueList` annotation defined for it. For example, when `PlantID` is the IN mapping for the `ValueList` of the `PlantID`. However, the existing mapping values of the `PlantID` in the filter query would have no impact on a visual filter. The ignored value is considered for the main filter query and shows up in the visual filter *Selected* button.
+> -   The IN mapping defined for a field is ignored when the same field has a `ValueList` annotation defined for it. For example, when `PlantID` is the IN mapping for the `ValueList`of the `PlantID`. However, the existing mapping values of the `PlantID` in the filter query would have no impact on a visual filter. The ignored value is considered for the main filter query and shows up in the visual filter Selected button.
+> 
+> -   Mandatory filter field values are passed automatically to the visual filter query only if the valuehelp entity of the visual filter is same as the main entity. Otherwise, the application developer must explicitly define the IN mapping to ensure that the values are passed.
 
 > ### Note:  
 > The ALP ignores the `UI.Hidden` fields when you select filters if the IN mapping points to a field marked with `UI.Hidden` in the value list entity set. For example, the `Status_ID` from the main entity set points to `StatusCode` in the value help entity set \(of the visual filter\). If the `StatusCode` is marked as `UI.Hidden`, then the incoming value is ignored.

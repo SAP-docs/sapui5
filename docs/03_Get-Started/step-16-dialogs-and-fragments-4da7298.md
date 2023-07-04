@@ -18,7 +18,7 @@ We will now add a dialog to our app. Dialogs are special, because they open on t
 
    
   
-<a name="loio4da72985139b4b83b5f1c1e0c0d2ed5a__fig_dzj_yzv_sr"/>A dialog opens when the new “Say Hello With Dialog” button is clicked
+**A dialog opens when the new “Say Hello With Dialog” button is clicked**
 
  ![](images/SAPUI5_Walkthrough_Step_16_f22d752.png "A dialog opens when the new “Say Hello With Dialog” button is clicked") 
 
@@ -139,8 +139,7 @@ To reuse the dialog opening and closing functionality in other controllers, you 
 ```ini
 # App Descriptor
 appTitle=Hello World
-appDescription=A simple walkthrough app that explains the most important concepts of [/pandoc/div/div/horizontalrule/codeblock/span/span
-     {""}) SAPUI5 (span]
+appDescription=A simple walkthrough app that explains the most important concepts of SAPUI5
 
 # Hello Panel
 showHelloButtonText=Say Hello

@@ -28,7 +28,7 @@ The OData models \(V2 and V4\) are server-side models, which means that data is 
 In the view, you bind data by specifying the **binding path** for a control. You can use **data types** and **formatters** to validate and format the data on the UI.
 
 > ### Note:  
-> To learn more about data binding, take this tutorial: [Data Binding](../03_Get-Started/data-binding-e531093.md).
+> To learn more about data binding, take this tutorial: [Data Binding Tutorial](../03_Get-Started/data-binding-tutorial-e531093.md).
 
 
 

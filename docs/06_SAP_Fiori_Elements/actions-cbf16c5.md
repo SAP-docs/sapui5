@@ -1946,6 +1946,8 @@ You can override the enablement through the `enabled` property, and the visibili
 > -   For table actions, regardless of where you place them
 > 
 > -   For footer actions on the object page
+> 
+> -   For form actions on the object page
 
 Add this function to `CustomActions.js`:
 

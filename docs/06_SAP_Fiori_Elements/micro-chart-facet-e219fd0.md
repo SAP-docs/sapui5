@@ -96,28 +96,17 @@ The unit of measure is used for the footer of the micro chart. An annotation for
 > <Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="STTA_PROD_MAN.STTA_C_MP_ProductSalesPriceType/AreaChartPrice">
 >      <Annotation Term="Measures.ISOCurrency" Path="Currency"/>
 > </Annotations>
-> <Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="STTA_PROD_MAN.STTA_C_MP_ProductSalesRevenueType/BulletChartRevenue">
->      <Annotation Term="Measures.ISOCurrency" Path="Currency"/>
-> </Annotations>
-> <Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="STTA_PROD_MAN.STTA_C_MP_ProductSalesRevenueType/BulletChartMonthRevenue">
->      <Annotation Term="Measures.ISOCurrency" Path="Currency"/>
-> </Annotations>
-> <Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="STTA_PROD_MAN.STTA_C_MP_ProductSalesRevenueType/BulletChartNetRevenue">
->      <Annotation Term="Measures.ISOCurrency" Path="Currency"/>
-> </Annotations>
-> <Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="STTA_PROD_MAN.STTA_C_MP_ProductType/SpecificationWidthHarveyChart">
->      <Annotation Term="Measures.ISOCurrency" Path="Currency"/>
-> </Annotations>
-> <Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="STTA_PROD_MAN.STTA_C_MP_ProductType/Sold">
->      <Annotation Term="Measures.ISOCurrency" Path="WeightUnit" />
-> </Annotations>
-> 
 > ```
 
 > ### Sample Code:  
 > ABAP CDS Annotation
 > 
-> No ABAP CDS annotation sample is available. Please use the local XML annotation.
+> ```
+> @Semantics.amount.currencyCode: 'Currency'
+> AreaChartPrice;
+> @Semantics.currencyCode:true
+> Currency;
+> ```
 
 > ### Sample Code:  
 > CAP CDS Annotation
@@ -127,33 +116,6 @@ The unit of measure is used for the footer of the micro chart. An annotation for
 > annotate STTA_PROD_MAN.STTA_C_MP_ProductSalesPriceType with {
 > 	@Measures.ISOCurrency : Currency
 > 	AreaChartPrice
-> };
-> 	
-> annotate STTA_PROD_MAN.STTA_C_MP_ProductSalesRevenueType with {
-> 	@Measures.ISOCurrency : Currency
-> 	BulletChartRevenue
-> };
-> 
-> annotate STTA_PROD_MAN.STTA_C_MP_ProductSalesRevenueType with {
-> 	@Measures.ISOCurrency : Currency
-> 	BulletChartMonthRevenue
-> };
-> 
-> annotate STTA_PROD_MAN.STTA_C_MP_ProductSalesRevenueType with {
-> 	@Measures.ISOCurrency : Currency
-> 	BulletChartNetRevenue
-> };
-> 
-> annotate STTA_PROD_MAN.STTA_C_MP_ProductType with {
-> 	@Measures.ISOCurrency : Currency
-> 	SpecificationWidthHarveyChart
-> };
-> 
-> annotate STTA_PROD_MAN.STTA_C_MP_ProductType with {
-> 	@Measures.ISOCurrency : WeightUnit
-> 	Sold
-> };
-> 
 > 
 > ```
 
@@ -168,7 +130,7 @@ The unit of measure is used for the footer of the micro chart. An annotation for
 > 
 >    
 >   
-> <a name="loioe219fd0c85b842c69ac3a514e712ece5__fig_dvh_xx1_qmb"/>Navigation Property
+> **Navigation Property**
 > 
 >  ![](images/Chart_Limitation_02debb6.png "Navigation Property") 
 
@@ -187,7 +149,7 @@ SAP Fiori elements for OData V4 also supports the comparison micro chart.
 > 
 >    
 >   
-> <a name="loioe219fd0c85b842c69ac3a514e712ece5__fig_qlt_lx1_qmb"/>Navigation Property
+> **Navigation Property**
 > 
 >  ![](images/Navigation_Property_d2168a4.png "Navigation Property ") 
 

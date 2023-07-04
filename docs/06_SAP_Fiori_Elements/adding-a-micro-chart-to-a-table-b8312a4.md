@@ -2,13 +2,13 @@
 
 # Adding a Micro Chart to a Table
 
-You can add a micro chart to a column in both the list report and the object page.
+You can add a micro chart to the column of a responsive table in both the list report and the object page.
 
 To add a micro chart to a table, use the annotation term `UI.LineItem` and the complex type `DataFieldForAnnotation`. The micro charts are then displayed within the table column as shown below:
 
    
   
-<a name="loiob8312a4adde54f33a89480dbe12d8632__fig_lzy_ntp_mx"/>Micro Chart in List Report
+**Micro Chart in List Report**
 
  ![](images/Micro_Chart_in_List_Report_b010c13.png "Micro Chart in List Report") 
 
@@ -236,95 +236,6 @@ The `Label` property of the `UI.DataFieldForAnnotation` is used for the text of 
 > 
 > ```
 
-> ### Sample Code:  
-> CAP CDS Annotation
-> 
-> ```
-> 
-> annotate STTA_PROD_MAN.STTA_C_MP_ProductType @(
->   UI.LineItem : [
->     {
->         $Type : 'UI.DataFieldForAction',
->         Label : 'Copy with new Supplier',
->         Action : 'STTA_PROD_MAN.STTA_PROD_MAN_Entities/STTA_C_MP_ProductCopywithparams',
->         ![@UI.OperationGrouping] : #Isolated
->     },
->     {
->         $Type : 'UI.DataFieldForAction',
->         Label : 'Activate',
->         Action : 'STTA_PROD_MAN.STTA_PROD_MAN_Entities/STTA_C_MP_ProductActivation',
->         Determining : true,
->         ![@UI.OperationGrouping] : #ChangeSet
->     },
->     {
->         $Type : 'UI.DataField',
->         Value : Product,
->         ![@UI.Importance] : #High
->     },
->     {
->         $Type : 'UI.DataField',
->         Value : ProductCategory,
->         ![@UI.Importance] : #High
->     },
->     {
->         $Type : 'UI.DataField',
->         Value : to_Supplier.CompanyName,
->         ![@UI.Importance] : #High
->     },
->     {
->         $Type : 'UI.DataField',
->         Criticality : to_StockAvailability.StockAvailability,
->         Value : to_StockAvailability.StockAvailability,
->         ![@UI.Importance] : #High
->     },
->     {
->         $Type : 'UI.DataField',
->         Value : Price,
->         ![@UI.Importance] : #High
->     },
->     {
->         $Type : 'UI.DataFieldForAction',
->         Label : 'Copy',
->         IconUrl : 'sap-icon://copy',
->         Action : 'STTA_PROD_MAN.STTA_PROD_MAN_Entities/STTA_C_MP_ProductCopy',
->         Inline : true,
->         Determining : true,
->         ![@UI.OperationGrouping] : #Isolated
->     },
->     {
->         $Type : 'UI.DataFieldForIntentBasedNavigation',
->         Label : 'Manage Products (ST)',
->         SemanticObject : 'EPMProduct',
->         Action : 'manage_st',
->         Inline : true,
->         Determining : true
->     },
->     {
->         $Type : 'UI.DataFieldForAnnotation',
->         Label : 'Rating',
->         Target : '@UI.DataPoint#Rating'
->     },
->     {
->         $Type : 'UI.DataFieldForAnnotation',
->         Label : 'Progress',
->         Criticality : to_StockAvailability.Quantity,
->         Target : '@UI.DataPoint#Progress'
->     },
->     {
->         $Type : 'UI.DataFieldForAnnotation',
->         Label : 'Sales',
->         Target : 'to_ProductSalesPrice/@UI.Chart#AreaChartQualifier'
->     },
->     {
->         $Type : 'UI.DataFieldForAnnotation',
->         Label : 'Revenue',
->         Target : 'to_ProductSalesRevenue/@UI.Chart#BulletChartQualifier'
->     }
->   ]
-> );
-> 
-> ```
-
 
 
 ### UI.Chart Annotations
@@ -396,34 +307,6 @@ The `Label` property of the `UI.DataFieldForAnnotation` is used for the text of 
     > 
     > ```
 
-    > ### Sample Code:  
-    > CAP CDS Annotation
-    > 
-    > ```
-    > 
-    > UI.Chart #AreaChartQualifier : {
-    >     $Type : 'UI.ChartDefinitionType',
-    >     Title : 'Sales Price',
-    >     Description : 'Area Micro Chart',
-    >     ChartType : #Area,
-    >     Dimensions : [
-    >         PriceDay
-    >     ],
-    >     Measures : [
-    >         AreaChartPrice
-    >     ],
-    >     MeasureAttributes : [
-    >         {
-    >             $Type : 'UI.ChartMeasureAttributeType',
-    >             Measure : AreaChartPrice,
-    >             Role : #Axis1,
-    >             DataPoint : '@UI.DataPoint#AreaChartPrice'
-    >         }
-    >     ]
-    > }
-    > 
-    > ```
-
 -   Bullet Micro Chart
 
     > ### Sample Code:  
@@ -483,31 +366,6 @@ The `Label` property of the `UI.DataFieldForAnnotation` is used for the text of 
     > 
     > ```
 
-    > ### Sample Code:  
-    > CAP CDS Annotation
-    > 
-    > ```
-    > 
-    > UI.Chart #BulletChartQualifier : {
-    >     $Type : 'UI.ChartDefinitionType',
-    >     Title : 'Sales Revenue',
-    >     Description : 'Bullet Micro Chart',
-    >     ChartType : #Bullet,
-    >     Measures : [
-    >         BulletChartRevenue
-    >     ],
-    >     MeasureAttributes : [
-    >         {
-    >             $Type : 'UI.ChartMeasureAttributeType',
-    >             Measure : BulletChartRevenue,
-    >             Role : #Axis1,
-    >             DataPoint : '@UI.DataPoint#BulletChartRevenue'
-    >         }
-    >     ]
-    > }
-    > 
-    > ```
-
 
 > ### Recommendation:  
 > Refer the documentation for [Micro Chart Facet](micro-chart-facet-e219fd0.md) to see code samples for these micro charts:
@@ -528,7 +386,7 @@ The template doesn't currently support the use of navigation properties within t
 
   
   
-<a name="loiob8312a4adde54f33a89480dbe12d8632__fig_khh_pfx_kx"/>Navigation Property
+**Navigation Property**
 
  ![](images/Chart_Limitation_02debb6.png "Navigation Property") 
 
@@ -588,26 +446,6 @@ The `SmartMicroChart` control supports the `Criticality` and `CriticalityCalcula
     > 
     > ```
 
-    > ### Sample Code:  
-    > CAP CDS Annotation
-    > 
-    > ```
-    > 
-    > UI.DataPoint #AreaChartPrice : {
-    >     Title : 'Sales Price',
-    >     Value : AreaChartPrice,
-    >     TargetValue : TargetPrice,
-    >     CriticalityCalculation : {
-    >         ImprovementDirection : #Target,
-    >         DeviationRangeHighValue : DeviationUpperBoundPrice,
-    >         DeviationRangeLowValue : DeviationLowerBoundPrice,
-    >         ToleranceRangeHighValue : ToleranceUpperBoundPrice,
-    >         ToleranceRangeLowValue : ToleranceLowerBoundPrice
-    >     }
-    > }
-    > 
-    > ```
-
 -   Bullet Micro Chart
 
     > ### Sample Code:  
@@ -642,24 +480,6 @@ The `SmartMicroChart` control supports the `Criticality` and `CriticalityCalcula
     >   criticality: 'Criticality'
     > }
     > BulletChartRevenue;
-    > ```
-
-    > ### Sample Code:  
-    > CAP CDS Annotation
-    > 
-    > ```
-    > 
-    > UI.DataPoint #BulletChartRevenue : {
-    >     Title : 'Sales Revenue',
-    >     Value : BulletChartRevenue,
-    >     TargetValue : TargetRevenue,
-    >     ForecastValue : ForecastRevenue,
-    >     MinimumValue : 100,
-    >     MaximumValue : 300,
-    >     Criticality : Criticality
-    > }
-    > 
-    > 
     > ```
 
 

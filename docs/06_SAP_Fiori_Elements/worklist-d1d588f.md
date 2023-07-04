@@ -20,7 +20,7 @@ The focus of the worklist floorplan is on processing the items. This differs fro
 
 From a technical perspective, a worklist is a simplified list report. The following aspects differ from the list report features:
 
--   You create a worklist using SAP WebIDE. In the*Template Selection* step, choose *Worklist* as a template. For more information, see [Building an App](building-an-app-9834a0a.md).
+-   You create a worklist using SAP Fiori application generator. In the*Template Selection* step, choose *Worklist Page* as a template. For more information, see [Building an App](building-an-app-9834a0a.md).
 
 -   The worklist does not contain a smart filter bar. The search field is available in the table toolbar.
 
@@ -44,13 +44,13 @@ From a technical perspective, a worklist is a simplified list report. The follow
 
 ### Worklist Types
 
-In the SAP WebIDE, you generate a simple worklist. You can create a category worklist by defining a view on a worklist, as described under [Defining Multiple Views on a List Report Table - Single Table Mode](defining-multiple-views-on-a-list-report-table-single-table-mode-0d390fe.md).
+You can create a category worklist by defining multiplee views withing a table in your worklist, as described under [Defining Multiple Views on a List Report Table - Single Table Mode](defining-multiple-views-on-a-list-report-table-single-table-mode-0d390fe.md).
 
 
 
 ### Configuring the Worklist
 
-See the user assistance for [List Report and Object Page](list-report-and-object-page-c0eec49.md) for any worklist configuration options. Apart from the features listed above, you can also use the options described for the list report, for example:
+For more information on any worklist configuration options, see [List Report and Object Page](list-report-and-object-page-c0eec49.md). Apart from the features listed above, you can also use the options described for the list report, for example:
 
 -   [Configuring List Report Features](configuring-list-report-features-3af1d03.md)
 
@@ -69,7 +69,7 @@ See the user assistance for [List Report and Object Page](list-report-and-object
 
 ## Additional Features in SAP Fiori Elements for OData V4
 
-In SAP Fiori elements for OData V4, the worklist is not a separate floorplan, but rather a 'flavor' of the list report. For more information, see [Configuring Filter Bars](configuring-filter-bars-4bd7590.md).
+From a technical perspective, a worklist is a simplified list report without a filter bar. You can create a worklist template using the SAP Fiori application generator. For more information, see [Configuring Filter Bars](configuring-filter-bars-4bd7590.md).
 
 
 

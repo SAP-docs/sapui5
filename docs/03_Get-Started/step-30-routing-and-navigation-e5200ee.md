@@ -12,7 +12,7 @@ In this step, we will use the SAPUI5 navigation features to load and show a sepa
 
    
   
-<a name="loioe5200ee755f344c8aef8efcbab3308fb__fig_r1j_pst_mr"/>A second page is added to display the invoice
+**A second page is added to display the invoice**
 
  ![](images/SAPUI5_Walkthrough_Step_31_a1d85cc.png "A second page is added to display the invoice") 
 
@@ -288,7 +288,7 @@ You should now see the detail page when you click an item in the list of invoice
 
 [Routing and Navigation](../04_Essentials/routing-and-navigation-3d18f20.md "SAPUI5 offers hash-based navigation, which allows you to build single-page apps where the navigation is done by changing the hash. In this way the browser does not have to reload the page; instead there is a callback to which the app and especially the affected view can react. A hash string is parsed and matched against patterns which will then inform the handlers.")
 
-[Tutorial: Navigation and Routing](navigation-and-routing-1b6dcd3.md "SAPUI5 comes with a powerful routing API that helps you control the state of your application efficiently. This tutorial will illustrate all major features and APIs related to navigation and routing in SAPUI5 apps by creating a simple and easy to understand mobile app. It represents a set of best practices for applying the navigation and routing features of SAPUI5 to your applications.")
+[Tutorial: Navigation and Routing](navigation-and-routing-tutorial-1b6dcd3.md "SAPUI5 comes with a powerful routing API that helps you control the state of your application efficiently. This tutorial will illustrate all major features and APIs related to navigation and routing in SAPUI5 apps by creating a simple and easy to understand mobile app. It represents a set of best practices for applying the navigation and routing features of SAPUI5 to your applications.")
 
 [API Reference: `sap.m.routing.Router`](https://ui5.sap.com/#/api/sap.m.routing.Router)
 

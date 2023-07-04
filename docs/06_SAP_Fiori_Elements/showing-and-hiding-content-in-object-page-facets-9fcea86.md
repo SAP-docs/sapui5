@@ -14,7 +14,7 @@ The *Show More* button appears in the bottom right corner if hidden facets are a
 
    
   
-<a name="loio9fcea86d8ffd48459dd053eb5255a046__fig_fyr_pys_qrb"/>Show More
+**Show More**
 
  ![](images/Object_Page_Facets_Show_More_f0f38e7.png "Show More") 
 
@@ -22,7 +22,7 @@ The *Show Less* button appears in the bottom right corner if a user has clicked 
 
    
   
-<a name="loio9fcea86d8ffd48459dd053eb5255a046__fig_dtl_x1t_qrb"/>Show Less
+**Show Less**
 
  ![](images/Object_Page_Hiding_A_Facet_From_the_UI_Show_Less_Button_a360c97.png "Show Less") 
 
@@ -35,12 +35,12 @@ To enable this feature, set the `UI.PartOfPreview` annotation of the relevant re
 > XML Annotation
 > 
 > ```xml
-> <Record Type=“UI.ReferenceFacet”>
->     <PropertyValue Property=“Label” String=“{@i18n>@ShipToAddress}”/>
->     <PropertyValue Property=“ID” String=“ShipToAddress”/>
->     <PropertyValue Property=“Target”
->     AnnotationPath=“@UI.FieldGroup#ShipToAddress”/>
->     <Annotation Term=“UI.PartOfPreview” Bool=“false”/>
+> <Record Type="UI.ReferenceFacet">
+>     <PropertyValue Property="Label" String="{@i18n>@ShipToAddress}"/>
+>     <PropertyValue Property="ID" String="ShipToAddress"/>
+>     <PropertyValue Property="Target"
+>     AnnotationPath="@UI.FieldGroup#ShipToAddress"/>
+>     <Annotation Term="UI.PartOfPreview" Bool="false"/>
 > </Record>
 > ```
 
@@ -78,13 +78,13 @@ To enable this feature, set the `UI.PartOfPreview` annotation of the relevant re
 
 ## Additional Features in SAP Fiori Elements for OData V4
 
-You can show or hide fields inside reference facets on the UI using the *Show Details* and *Hide Details* buttons.
+You can show or hide fields and tables inside reference facets on the UI using the *Show Details* and *Hide Details* buttons.
 
-The *Show Details* button appears in the facet toolbar if hidden fields are available:
+The *Show Details* button appears in the facet toolbar if hidden fields and tables are available:
 
  ![](images/Showing_Fields_Inside_Reference_Facets_Show_Details_Link_01c3179.png) 
 
-The *Hide Details* button appears in the facet toolbar if a user has clicked the *Show Details* button, allowing users to hide the additional information.
+The *Hide Details* button appears in the facet toolbar if the user has clicked the *Show Details* button. This allows users to hide the additional information again.
 
  ![](images/Hiding_Fields_Inside_Reference_Facets_Hide_Details_Link_985838c.png) 
 
@@ -107,7 +107,7 @@ To enable this feature, set the `UI.PartOfPreview` annotation of the relevant re
 > ### Sample Code:  
 > ABAP CDS Annotation
 > 
-> No ABAP CDS annotation sample is available. Please use the local XML annotation.
+> No ABAP CDS annotation sample is available. Use the local XML annotation.
 
 > ### Sample Code:  
 > CAP CDS Annotation
@@ -124,5 +124,12 @@ To enable this feature, set the `UI.PartOfPreview` annotation of the relevant re
 > ```
 
 > ### Note:  
-> This feature is available for data fields that are included in a visible reference facet. You cannot use this feature for data fields that are part of a reference facet that is initially hidden \(this means that nesting of the `UI.PartOfPreview` annotation is not possible\).
+> This feature is available for tables and data fields that are included in a visible reference facet. You can't use this feature for tables and data fields that are part of a reference facet that is initially hidden. This means that nesting of the `UI.PartOfPreview` annotation isn't possible.
+
+
+
+### Using *Show More* and *Show Less* Buttons
+
+> ### Restriction:  
+> This feature is applicable only to reference facets that have a `FieldGroup` as their target, for instance, a form representation. This feature isn't applicable to other target types, for instance, reference facets that point to a table or a chart.
 

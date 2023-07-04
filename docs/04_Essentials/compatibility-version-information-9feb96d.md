@@ -68,59 +68,29 @@ The compatibility version configuration works as follows:
     </tr>
     <tr>
     <td valign="top">
-
-    \--
+    
+        \--
 
 
     
     </td>
     <td valign="top">
-
-    \--
+    
+        \--
 
 
     
     </td>
     <td valign="top">
-
-    1.14
+    
+        1.14
 
 
     
     </td>
     <td valign="top">
-
-    1.14
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-
-    1.16
-
-
-    
-    </td>
-    <td valign="top">
-
-    \--
-
-
-    
-    </td>
-    <td valign="top">
-
-    1.14
-
-
-    
-    </td>
-    <td valign="top">
-
-    1.16
+        1.14
 
 
     
@@ -128,59 +98,29 @@ The compatibility version configuration works as follows:
     </tr>
     <tr>
     <td valign="top">
-
-    \--
+    
+        1.16
 
 
     
     </td>
     <td valign="top">
-
-    1.16
+    
+        \--
 
 
     
     </td>
     <td valign="top">
-
-    1.14
+    
+        1.14
 
 
     
     </td>
     <td valign="top">
-
-    1.16
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-
-    1.18
-
-
-    
-    </td>
-    <td valign="top">
-
-    1.16
-
-
-    
-    </td>
-    <td valign="top">
-
-    1.14
-
-
-    
-    </td>
-    <td valign="top">
-
-    1.16
+        1.16
 
 
     
@@ -188,29 +128,89 @@ The compatibility version configuration works as follows:
     </tr>
     <tr>
     <td valign="top">
-
-    edge
+    
+        \--
 
 
     
     </td>
     <td valign="top">
-
-    ..
+    
+        1.16
 
 
     
     </td>
     <td valign="top">
-
-    1.14
+    
+        1.14
 
 
     
     </td>
     <td valign="top">
+    
+        1.16
 
-    1.18
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+        1.18
+
+
+    
+    </td>
+    <td valign="top">
+    
+        1.16
+
+
+    
+    </td>
+    <td valign="top">
+    
+        1.14
+
+
+    
+    </td>
+    <td valign="top">
+    
+        1.16
+
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+        edge
+
+
+    
+    </td>
+    <td valign="top">
+    
+        ..
+
+
+    
+    </td>
+    <td valign="top">
+    
+        1.14
+
+
+    
+    </td>
+    <td valign="top">
+    
+        1.18
 
 
     
@@ -333,7 +333,7 @@ Default value: 1.14
 </td>
 <td valign="top">
 
-This configuration parameter defines whether the simple or the complex binding syntax is used. The parameter only affects bindings that are defined as strings, for example in the constructor of a control, or when specifying a binding in a declarative view, such as XML view or HTML view.
+This configuration parameter defines whether the simple or the complex binding syntax is used. The parameter only affects bindings that are defined as strings, for example in the constructor of a control, or when specifying a binding in a declarative view, such as an XML view.
 
 For versions lower than 1.28, the default value is `default` which only has very limited features. As of version 1.28, the default is `complex`.
 

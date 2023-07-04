@@ -12,7 +12,7 @@ Set up your development environment and go through our tutorials. They introduce
 
 -   You should be familiar with JavaScript.
 
--   Set up your [Development Environment](development-environment-7bb04e0.md).
+-   Set up your [Development Environment](../05_Developing_Apps/development-environment-7bb04e0.md).
 
 -   Set up a folder where you would place the application content. We will refer to this folder as the “app folder”.
 
@@ -84,7 +84,7 @@ You might have to adapt parts of the coding to your local development environmen
 
 ## Troubleshooting
 
-If you get stuck, check the [Troubleshooting](../04_Essentials/troubleshooting-615d9e4.md) section under *Essentials*, or refer to the [Troubleshooting tutorial](troubleshooting-5661952.md).
+If you get stuck, check the [Troubleshooting](../04_Essentials/troubleshooting-615d9e4.md) section under *Essentials*, or refer to the [Troubleshooting tutorial](troubleshooting-tutorial-5661952.md).
 
 If you can't fix the problem, try downloading the solution of the previews or current step. This should get your project fixed again, just don’t forget to check the resource path and the project configuration files again.
 

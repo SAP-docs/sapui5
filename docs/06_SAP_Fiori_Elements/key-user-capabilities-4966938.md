@@ -21,7 +21,7 @@ Ensure that you have the required user role. For more information, see [SAPUI5 F
 
 To enable the user interface adaptation mode, choose *Adapt UI* in the user actions menu.
 
-<a name="loio49669384ae424ace81667f22f69712b5__table_x11_hbq_kfb"/>User Interface Adaptation Features
+**User Interface Adaptation Features**
 
 
 <table>
@@ -83,7 +83,7 @@ Edit Card
 </td>
 <td valign="top">
 
-Lets you modify title, subtitle, KPI header, value, and description, and type of chart. Also, you can modify sorting and navigation properties.
+Lets you modify title, subtitle, KPI header, value, and description, and type of chart. You can modify sorting and navigation properties. Also, you can disable adding individual cards to the *Insights* section. This option is available only if the generation of cards for the *Insights* section of *My Home* in SAP S/4HANA Cloud is enabled.
 
 
 

@@ -9,7 +9,7 @@ The editing status filter is enabled by default in the list report page of draft
 
    
   
-<a name="loio8eb695ac473b4ab0a726e4021ce35cf4__fig_o24_vbd_r2b"/>Editing status filter
+**Editing status filter**
 
  ![](images/Editing_Status_Filter_d6891a2.png "Editing status filter") 
 
@@ -51,33 +51,6 @@ If required, you can disable this filter for your app. To do so, you need to ada
 >   { create;  }
 >   [...]
 > }
-> 
-> ```
-
-> ### Sample Code:  
-> CAP CDS Annotation
-> 
-> ```
-> 
-> Capabilities.NavigationRestrictions : {
->     RestrictedProperties : [
->         {
->             NavigationProperty : DraftAdministrativeData,
->             FilterRestrictions : {
->                 Filterable : false
->             }
->         }
->     ]
-> }
-> 
-> CAP_CDS_Code_53
-> 
-> annotate SEPMRA_PROD_MAN.SEPMRA_C_PD_ProductType with @(
->   UI.SelectionFields : [
->     Price,
->     Supplier
->   ]
-> );
 > 
 > ```
 

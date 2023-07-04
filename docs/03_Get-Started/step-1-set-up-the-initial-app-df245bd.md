@@ -12,7 +12,7 @@ The structure and data model created in this step will be used throughout the re
 
    
   
-<a name="loiodf245bd449a7470c8c2a0926ca8d78de__fig_r1j_pst_mr"/>Initial app with a simple button
+**Initial app with a simple button**
 
  ![](images/Tutorial_Navigation_and_Routing_Step_01a_2a2a284.png "Initial app with a simple button") 
 
@@ -22,13 +22,13 @@ The structure and data model created in this step will be used throughout the re
 
 To set up your project for this tutorial, download the files for *Step 1* from the *Samples* in the Demo Kit at [Navigation and Routing - Step 1](https://ui5.sap.com/#/entity/sap.ui.core.tutorial.navigation/sample/sap.ui.core.tutorial.navigation.01). Copy the code to your workspace and make sure that the application runs by calling the `webapp/index.html` file.
 
-Depending on your development environment you might have to adjust resource paths and configuration entries. The project structure and the files coming with this tutorial are explained in detail in the [Walkthrough](walkthrough-3da5f4b.md) tutorial.
+Depending on your development environment you might have to adjust resource paths and configuration entries. The project structure and the files coming with this tutorial are explained in detail in the [Walkthrough](walkthrough-tutorial-3da5f4b.md) tutorial.
 
 You should have the same files as displayed in the following figure:
 
    
   
-<a name="loiodf245bd449a7470c8c2a0926ca8d78de__fig_chm_4jp_ls"/>Folder structure with downloaded files
+**Folder structure with downloaded files**
 
  ![](images/Tutorial_Navigation_and_Routing_Step_01b_cf75e00.png "Folder structure with downloaded files") 
 

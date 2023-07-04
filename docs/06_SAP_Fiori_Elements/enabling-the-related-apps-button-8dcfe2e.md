@@ -6,7 +6,7 @@ By default, the *Related Apps* button is disabled on object pages created with t
 
   
   
-<a name="loio8dcfe2e4555f49db8859cb6eb838692e__fig_ulk_kl4_qmb"/>*Related Apps* Button
+**Related Apps Button**
 
  ![](images/Related_Apps_Button_35f231c.png "Related Apps Button") 
 
@@ -182,14 +182,8 @@ You can display multiple semantic objects under the *Related Apps* button in the
 >                         "relatedAppsSettings": {
 >                             "": {
 >                                 "semanticObject": "",
->                                 "semanticObjectAction": {
->                                     "0": {
->                                         "action": "STTASOWD20"
->                                     },
->                                     "1": {
->                                         "action": "trace"
->                                     }
->                                 }
+>                                 "semanticObjectAction": {}
+> 						   }
 >                             },
 >                             "EPMProduct": {
 >                                 "semanticObject": "EPMProduct"
@@ -217,9 +211,11 @@ You can display multiple semantic objects under the *Related Apps* button in the
 
 You must ensure that you define the same semantic object list object-key and there corresponding `semanticObject` value.
 
-In the mentioned code sample for `“semanticObject” : "EPMProduct"`, `semanticObjectAction` is not defined. In this case, all the `semanticObjectAction` excluding the ones with `SemanticObjectUnavailableActions` annotation are displayed in the related apps list.
+In the code sample for `"semanticObject" : "EPMProduct"`, `semanticObjectAction` is not defined. In this case, all the `semanticObjectAction` excluding the ones with `SemanticObjectUnavailableActions` annotation are displayed in the related apps list.
 
 If `semanticObjectAction` list is defined in the manifest as shown for `"semanticObject": "STTA_WD20"`, then only the ones defined in the list are shown in the related apps. In this case, `SemanticObjectUnavailableActions` annotation is not considered.
+
+If the `semanticObjectAction` list is defined in the manifest as an empty object such as `"semanticObjectAction":{}` provided in the sample code, then no action from the semantic object of the current application is considered.
 
 
 
@@ -251,9 +247,68 @@ You can enable this feature through the following settings in the `manifest.json
 
 
 
+### Supporting the Mapping of Default Links in Related Apps
+
+When working with default links, if the technical field name of the field on the object page and the corresponding field in the target app differ, application developers can define a mapping between these fields. This mapping enables passing the context between these fields even though their technical field names are different.
+
+To create this mapping, you can use `Common.SemanticObject` and `Common.SemanticObjectMapping` annotation as shown in the following sample codes:
+
+> ### Sample Code:  
+> XML Annotation
+> 
+> ```xml
+> <Annotations Target="com.c_salesordermanage_sd.SalesOrderManage">
+>     <Annotation Term="Common.SemanticObject" String="SalesOrder"/>
+>     <Annotation Term="Common.SemanticObjectMapping">
+>         <Collection>
+>             <Record Type="Common.SemanticObjectMappingType">
+>                 <PropertyValue Property="LocalProperty" PropertyPath="SoldToParty"/>
+>                 <PropertyValue Property="SemanticObjectProperty" String="Customer"/>
+>             </Record>
+>         </Collection>
+>     </Annotation>
+> </Annotations>
+> 
+> ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> ```xml
+> 
+> annotate view SalesOrderManage with {
+>    @Consumption.semanticObject: 'SalesOrder'
+>    @Consumption.semanticObjectMapping.additionalBinding: [{element: 'Customer', localElement: 'SoldToParty'}]
+>    Customer
+> }
+> ```
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```xml
+> entity SalesOrderManage                                                       @(
+>     Common       : {
+>         SemanticObject                   : 'SalesOrder',
+>         SemanticObjectMapping            : [{
+>             LocalProperty          : SoldToParty,
+>             SemanticObjectProperty : 'Customer'
+>         }
+>         ]
+>     }
+> )
+> ```
+
+> ### Note:  
+> You mustn't define a mapping between the fields on the object page and the additional links added through the manifest property `additionalSemanticObjects`.
+> 
+> To map to these additional links, use the manifest settings as provided in the following section.
+
+
+
 ### Adding Additional Links to Related Apps
 
-Application developers can add additional links under the *Related Apps* button of the object page header. The links originate from the additional semantic objects defined in the `manifest.json` file, as shown below:
+Application developers can add additional links under the *Related Apps* button of the object page header. The links originate from the additional semantic objects defined in the `manifest.json` file, as shown in the following example:
 
 ```json
 "SalesOrderManageObjectPage": {
@@ -287,9 +342,45 @@ Application developers can add additional links under the *Related Apps* button 
 }
 ```
 
-In the example above, `additionalSemanticObjects` is the manifest setting that you need to add under the object page section of the `manifest.json` file. `ProductCollection` and `Customer` refer to the additional semantic objects from which we get additional links that are displayed under the *Related Apps* button.
+In the previous example , `additionalSemanticObjects` is the manifest setting that you need to add under the object page section of the `manifest.json` file. `ProductCollection` and `Customer` refer to the additional semantic objects from which we get additional links that are displayed under the *Related Apps* button.
 
-The array of unavailable actions defined in the above settings denote those navigation actions of the semantic object which should not be displayed under the *Related Apps* button. `displayFactSheet` and `reorderProduct` will not appear in the *Related Apps* menu \(unless they happen to be actions defined for other additional semantic objects and are not part of the unavailable actions there\).
+The array of unavailable actions defined in the preceding settings denote those navigation actions of the semantic object which should not be displayed under the *Related Apps* button. `displayFactSheet` and `reorderProduct` will not appear in the *Related Apps* menu \(unless they happen to be actions defined for other additional semantic objects and are not part of the unavailable actions there\).
 
 `Mapping`, defined for a semantic object, consists of key value pairs. The key defines the way in which the source application \(object page\) passes the context. The value represents the term used for the same entity in the target app. In the example above, an object page context for `SoldToParty` like "SoldToParty"="001" is passed using the specified target name \(`Customer`\) instead of `SoldToParty`. So the target will receive "Customer"="001" in the app context.
+
+You can also use the `allowedActions` key in the `manifest.json` file to define the exact list of semantic object links to be displayed under the *Related Apps* button:
+
+```json
+"SalesOrderManageObjectPage": {
+    "type": "Component",
+    "id": "SalesOrderManageObjectPage",
+    "name": "sap.fe.templates.ObjectPage",
+    "options": {
+        "settings": {
+            "entitySet": "SalesOrderManage",
+            "showRelatedApps": true,
+            "additionalSemanticObjects": {
+                “SalesOrder”: {
+                    allowedActions: ["create", "managev2"],
+                “ProductCollection”: {
+                    allowedActions: ["displayFactSheet"],
+                    mapping: {
+                        “SoldToParty”: “Client”,
+                         .
+                         .
+                    }
+                },
+            },
+            ....
+        }
+    }
+}
+```
+
+In this example, three application links will appear in the *Related Apps* menu.
+
+> ### Note:  
+> -   When you enable the `allowedActions` key, the `unavailableActions` key is disabled.
+> 
+> -   If you do not list any links under `allowedActions`, no applications for the semantic objects will be shown under the *Related Apps* button.
 

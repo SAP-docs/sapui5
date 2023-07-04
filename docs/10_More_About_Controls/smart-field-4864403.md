@@ -86,7 +86,7 @@ It depends on the related data types and configurations **which** control types 
 
 The table below shows which controls are used if you **don't** overwrite the control type.
 
-<a name="loio4864403f08c64ca08a2b0ee1fa9cb5e2__table_knt_l2v_yx"/>Control Selection
+**Control Selection**
 
 
 <table>

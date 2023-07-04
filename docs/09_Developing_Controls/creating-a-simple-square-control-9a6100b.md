@@ -22,7 +22,9 @@ var Square = Control.extend("my.Square", { // call the new Control type "my.Squa
       
 
       // the part creating the HTML:
-      renderer : {
+      renderer : {      
+          apiVersion: 2,
+          render: function(oRm, oControl) {    // static function, so use the given "oControl" instance
                                                // instead of "this" in the render function
               oRm.openStart("div", oControl);  // creates the root element incl. the Control ID and enables event handling - important!
               oRm.style("width", oControl.getSize());  // write the Control property size; the Control has validated it to be a CSS size

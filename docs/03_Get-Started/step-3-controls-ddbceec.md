@@ -10,7 +10,7 @@ Now it is time to build our first little UI by replacing the “Hello World” t
 
    
   
-<a name="loioddbceecd7d3d42eea9cf78a820a238fb__fig_r1j_pst_mr"/>The "Hello World" text is now displayed by a SAPUI5 control
+**The "Hello World" text is now displayed by a SAPUI5 control**
 
  ![](images/SAPUI5_Walkthrough_Step_03_7cad93a.png "The "Hello World" text is now displayed by a SAPUI5
 					control") 

@@ -10,7 +10,7 @@ In the previous steps, we have implemented a *Resume* view that uses tabs to dis
 
    
   
-<a name="loiocdab0a1123514cc08cf2c8deb22f312e__fig_r1j_pst_mr"/>Tabs with lazy loading
+**Tabs with lazy loading**
 
  ![](images/Tutorial_Navigation_and_Routing_Step_10_cb04056.png "Tabs with lazy loading") 
 
@@ -22,7 +22,7 @@ You can view and download all files in the *Samples* in the Demo Kit at [Routing
 
    
   
-<a name="loiocdab0a1123514cc08cf2c8deb22f312e__fig_vbk_bbp_ns"/>Folder Structure for this Step
+**Folder Structure for this Step**
 
  ![](images/Tutorial_Navigation_and_Routing_Step_10b_389058e.png "Folder Structure for this Step") 
 

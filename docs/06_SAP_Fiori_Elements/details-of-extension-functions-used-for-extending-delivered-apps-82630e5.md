@@ -7,7 +7,7 @@ In this document, you can find the details of all the extension functions that c
 > ### Note:  
 > This topic is currently only applicable to SAP Fiori elements for OData V2.
 
-<a name="loio82630e5a31b940b68ea1bd2ca44eeb9c__table_jyc_frt_fsb"/>Extension functions of list report, object page and overview page
+**Extension functions of list report, object page and overview page**
 
 
 <table>
@@ -358,5 +358,5 @@ The method that returns is also defined in the extension controller.
 **Related Information**  
 
 
-[Extending Delivered Apps Using Adaptation Extensions](extending-delivered-apps-using-adaptation-extensions-52fc48b.md "You can extend delivered apps based on SAP Fiori elements by using the SAPUI5 Visual Editor in SAP Web IDE.")
+[Extending Delivered Apps Using Adaptation Extensions](extending-delivered-apps-using-adaptation-extensions-52fc48b.md "You can extend delivered apps based on SAP Fiori elements by using the Visual Editor on SAP Business Application Studio. It allows you to create adaptation projects on top of delivered apps.")
 

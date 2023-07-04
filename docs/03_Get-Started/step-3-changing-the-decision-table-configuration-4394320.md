@@ -2,7 +2,7 @@
 
 # Step 3: Changing the Decision Table Configuration
 
-Decision table has a set of configurations that influence different aspects of the its functionality and the actions that business users can perform. The decision table configuration object has default values, which you can change. Part of the configuration of the decision table can be exposed to the end user via the decision table *Settings* dialog box.
+Decision table has a set of configurations that influence different aspects of its functionality and the actions that business users can perform. The decision table configuration object has default values, which you can change. Part of the configuration of the decision table can be exposed to the end user via the decision table *Settings* dialog box.
 
 If you are using a data object with reference attributes as the result data object, then the attributes of the target data object will also be displayed as result attributes. For more information on reference attributes, see *Attributes* in [Data Objects](https://help.sap.com/viewer/0e4dd38c4e204f47b1ffd09e5684537b/Cloud/en-US/12725c18964e454c859424322c85fc2a.html).
 
@@ -14,13 +14,13 @@ If you are using a data object with reference attributes as the result data obje
 
    
   
-<a name="loio43943208be8846b79bb2a83122d386be__fig_j3v_xvw_rz"/>Decision Table with Settings Button
+**Decision Table with Settings Button**
 
  ![](images/Settings_button_69098c1.png "Decision Table with Settings Button") 
 
    
   
-<a name="loio43943208be8846b79bb2a83122d386be__fig_t5f_zvw_rz"/>Decision Table Settings Dialog Box
+**Decision Table Settings Dialog Box**
 
  ![](images/Settings_dialog_0e02b97.png "Decision Table Settings Dialog Box") 
 
@@ -82,7 +82,7 @@ This code changes the decision table to display and enable the *Settings* icon \
 > 
 > ```
 
-The user has to set the the `enum` type to `RuleFormat` for the DecisionTable to be rendered based on rule format.
+The user has to set the `enum` type to `RuleFormat` for the DecisionTable to be rendered based on rule format.
 
 The value for the rule format is set at the time of rule creation to either basic or advanced mode depending on which the entire rule will be rendered based on basic mode or advanced mode.
 

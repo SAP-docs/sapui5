@@ -6,7 +6,7 @@ The top labels are always formatted by the `sap.ui.core.format.NumberFormat`.
 
 The bottom labels are formatted by the number or date formatter depending on the `dimensions` property’s type and its annotations:
 
-<a name="loio8cd1dc3ef4c94e2b9ba78a4c43eac9fd__table_vrl_cst_ny"/>Formatted bottom labels in different annotation cases
+**Formatted bottom labels in different annotation cases**
 
 
 <table>

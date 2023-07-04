@@ -10,7 +10,7 @@ In this step of our Walkthrough tutorial, we adjust the content density based on
 
    
   
-<a name="loiod935dbf196d34997bf1ac42ac3e81579__fig_r1j_pst_mr"/>The content density is compact on desktop devices and cozy on touch-enabled devices
+**The content density is compact on desktop devices and cozy on touch-enabled devices**
 
  ![](images/SAPUI5_Walkthrough_Step_37_04b6669.png "The content density is compact on desktop devices and cozy on touch-enabled
 					devices") 
@@ -72,14 +72,13 @@ We add a method `onInit` on the app controller that is called when the app view 
 
 
 
-## webapp/controller/HelloDialog.controller.js
+## webapp/controller/HelloPanel.controller.js
 
 ```js
 sap.ui.define([
 	"sap/ui/core/mvc/Controller",
-	"sap/m/MessageToast",
-"sap/ui/core/syncStyleClass"
-], function (Controller, MessageToast, syncStyleClass) {
+	"sap/m/MessageToast"
+], function (Controller, MessageToast) {
 	"use strict";
 
 	return Controller.extend("sap.ui.demo.walkthrough.controller.HelloPanel", {
@@ -101,11 +100,7 @@ sap.ui.define([
 			if (!this.pDialog) {
 				this.pDialog = this.loadFragment({
 					name: "sap.ui.demo.walkthrough.view.HelloDialog"
-				}).then(function (oDialog){
-					// forward compact/cozy style into dialog
-					syncStyleClass(this.getOwnerComponent().getContentDensityClass(), this.getView(), oDialog);
-					return oDialog;
-				}.bind(this));
+				});
 			} 
 			this.pDialog.then(function(oDialog) {
 				oDialog.open();
@@ -124,7 +119,7 @@ sap.ui.define([
 
 ```
 
-The "Hello World" dialog is not part of the `HelloPanel` view but opened in a special part of the DOM called "static area". The content density class defined on the `app` view is not known to the dialog so we sync the style class of the app with the dialog manually.
+The "Hello World" dialog is not part of the `HelloPanel` view but opened in a special part of the DOM called "static area".
 
 
 

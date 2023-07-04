@@ -48,7 +48,10 @@ To validate currency fields without a related "value" field, use the `isCurrency
 > ### Sample Code:  
 > ABAP CDS Annotation
 > 
-> No ABAP CDS annotation sample is available. Please use the local XML annotation.
+> ```
+> @Semantics.currencyCode: true 
+> TransactionCurrency
+> ```
 
 > ### Sample Code:  
 > CAP CDS Annotation
@@ -78,7 +81,10 @@ To validate unit of measurement fields without a related "value" field, use the 
 > ### Sample Code:  
 > ABAP CDS Annotation
 > 
-> No ABAP CDS annotation sample is available. Please use the local XML annotation.
+> ```
+> @Semantics.unitOfMeasure: true 
+> DocumentUnit
+> ```
 
 > ### Sample Code:  
 > CAP CDS Annotation
@@ -91,4 +97,12 @@ To validate unit of measurement fields without a related "value" field, use the 
 > );
 > 
 > ```
+
+
+
+<a name="loio4b50f214f2444de7b092684f4529f29a__section_uyg_prz_2wb"/>
+
+## Validating `Edm.Guid` Properties
+
+Validation is automatically enabled for properties of type `Edm.Guid` that have a value help.
 

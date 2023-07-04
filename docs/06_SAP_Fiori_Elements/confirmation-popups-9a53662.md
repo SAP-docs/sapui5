@@ -22,13 +22,13 @@ When you create or edit an object page in a draft-enabled application and decide
 
    
   
-<a name="loio9a536627a6a94de084b0605eb164d2c8__fig_asw_rsv_mtb"/>Create Mode
+**Create Mode**
 
  ![](images/Confirmation_Popup_for_Draft_Discard_-_Create_Mode_8e59d66.png "Create Mode") 
 
    
   
-<a name="loio9a536627a6a94de084b0605eb164d2c8__fig_zcx_wsv_mtb"/>Edit Mode
+**Edit Mode**
 
  ![](images/Confirmation_Popup_for_Discard_Draft_-_Edit_Mode_b43cd41.png "Edit Mode") 
 
@@ -82,7 +82,7 @@ The following image shows an example of such a popup:
 
 
 
-### Turn Off Draft Discard Confirmation Popup for External Navigation
+### Turn Off *Discard Draft* Confirmation Popup for External Navigation
 
 Applications can turn off the discard draft confirmation popup for external navigation cases using the `draftDiscardConfirmationSettings` manifest setting as follows:
 
@@ -169,16 +169,16 @@ You can override the title text and provide application specific dialog title us
 
 -   For the title text of a dialog:
 
-    -   `“ST_KEEP_DRAFT_MESSAGE_CREATE”` in the create scenario
+    -   `"ST_KEEP_DRAFT_MESSAGE_CREATE"` in the create scenario
 
-    -   `“ST_KEEP_DRAFT_MESSAGE_EDIT”` in the edit scenario
+    -   `"ST_KEEP_DRAFT_MESSAGE_EDIT"` in the edit scenario
 
 
 -   For saving and creating text:
 
-    -   `“CREATE”` in the create mode
+    -   `"CREATE"` in the create mode
 
-    -   `“SAVE”` in the save mode
+    -   `"SAVE"` in the save mode
 
 
 
@@ -190,7 +190,7 @@ You can override the title text and provide application specific dialog title us
 
 
 
-### Turn Off Draft Discard Confirmation Popup for External Navigation
+### Turn Off *Discard Draft* Confirmation Popup for External Navigation
 
 Applications can turn off the discard draft confirmation popup for external navigation cases using the `silentlyKeepDraftOnForwardNavigation` manifest setting as follows:
 
@@ -211,9 +211,5 @@ Applications can turn off the discard draft confirmation popup for external navi
 > You must configure 412 messages from the back end as `transition` messages, not as `state` messages.
 
 > ### Restriction:  
-> Currently, the handling of 412 messages \("Precondition Failed" messages\) is not applied in the following scenarios:
-> 
-> -   if an action is triggered with multiple contexts \(for example, a user triggers a bound action on a table toolbar after having selected multiple objects in the table\)
-> 
-> -   when a record is deleted
+> The handling of 412 messages \("Precondition Failed" messages\) is not applied when a record is deleted.
 

@@ -4,7 +4,7 @@
 
 The libraries provided by SAPUI5 contain various different table controls that are suitable for different use cases. The table below outlines which table controls are available, and what features are supported by each one.
 
-<a name="loio148892ff9aea4a18b912829791e38f3e__table_uzb_zmy_vs"/>Overview of Tables and Supported Features
+**Overview of Tables and Supported Features**
 
 
 <table>

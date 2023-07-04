@@ -8,7 +8,7 @@ You can use annotations to adapt the object page header title and description.
 
   
   
-<a name="loio333f85086c2e43039f6773be15f3ed50__fig_i2m_w3v_pmb"/>Object Page Header: Title and Description
+**Object Page Header: Title and Description**
 
  ![](images/Object_Page_Title_and_Subtitle_0430d3e.png "Object Page Header: Title and Description ") 
 

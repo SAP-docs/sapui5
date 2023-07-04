@@ -14,7 +14,7 @@ The line chart supports a color palette for semantic coloring.
 
    
   
-<a name="loio3e8c6ff603694b7e98b12fc9ed63e9a7__fig_whp_rjz_y4b"/>Example of a Line Chart Card
+**Example of a Line Chart Card**
 
  ![](images/Line_Chart_aacfae2.png "Example of a Line Chart Card") 
 

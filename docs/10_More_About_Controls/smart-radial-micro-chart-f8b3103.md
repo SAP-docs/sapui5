@@ -54,7 +54,7 @@ Using the first option, the user can bind the property to a path in the applicat
 
 The mapping is done as follows:
 
-<a name="loiof8b31037ea284ef6a5a85c55762461b2__table_qs1_qxm_tx"/>Criticality mapped to valueColor
+**Criticality mapped to valueColor**
 
 
 <table>
@@ -147,7 +147,7 @@ In the second option, the criticality can be calculated using customer-defined t
 > ### Note:  
 > The thresholds are not renderd in SmartRadialMicroChart.
 
-<a name="loiof8b31037ea284ef6a5a85c55762461b2__table_wmp_1zm_tx"/>Thresholds
+**Thresholds**
 
 
 <table>

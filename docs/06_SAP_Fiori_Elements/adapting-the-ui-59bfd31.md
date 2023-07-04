@@ -27,7 +27,9 @@ In SAP Fiori elements for OData V4, app developers adapt the UI via manifest set
 Key users can adapt the application at runtime by changing the UI from the initial state of the app to a personalized view for end users. In the *User Actions Menu*, key users can then choose *Adapt UI* and change the user interface of SAP Fiori apps directly. For more information about what you have to consider when developing apps that support key user adaptation, see [SAPUI5 Flexibility: Enable Your App for UI Adaptation](../05_Developing_Apps/sapui5-flexibility-enable-your-app-for-ui-adaptation-f1430c0.md). For more information about key user adaptation, refer to [SAPUI5 Flexibility: Adapting UIs Made Easy](../04_Essentials/sapui5-flexibility-adapting-uis-made-easy-a8e55aa.md).
 
 > ### Note:  
-> In SAP Fiori elements for OData V2, application developers should only allow key user adaptation for the use cases described in the section Additional Features in SAP Fiori elements for OData V2 below.
+> -   In SAP Fiori elements for OData V2, key user adaptation supports only the use cases that are described in the section Additional Features in SAP Fiori elements for OData V2.
+> 
+> -   Embedding iFrame in the SAP Fiori elements for OData V2 application using UI adaptation is not recommended.
 
 
 
@@ -52,10 +54,12 @@ Key users can also perform the following:
 
  ![](images/Key_Users_Manage_Views1_9ff91e8.png) ![](images/Key_Users_Manage_Views_2_f31343c.png) 
 
+While switching to the key user adaptation mode from the normal mode, the app starts in a fresh state and the applied changes are not preserved in the internal app state. Also, when a user exits the key user adaptation mode, the app restores to the old state it was in before entering the key user adaptation mode.
+
 You can extend and customize SAP Fiori applications using the SAPUI5 Visual Editor in SAP Web IDE.
 
 > ### Caution:  
-> SAP Web IDE is no longer available via SAP Business Technology Platform trial accounts. Any references to SAP Web IDE in this documentation are only relevant for you if you have access to SAP Web IDE through a productive SAP BTP account. Please consider SAP Business Application Studio as an alternative. See [App Development Using SAP Business Application Studio](../03_Get-Started/app-development-using-sap-business-application-studio-6bbad66.md).
+> SAP Web IDE is no longer available via SAP Business Technology Platform trial accounts. Any references to SAP Web IDE in this documentation are only relevant for you if you have access to SAP Web IDE through a productive SAP BTP account. Please consider SAP Business Application Studio as an alternative. See [App Development Using SAP Business Application Studio](../05_Developing_Apps/app-development-using-sap-business-application-studio-6bbad66.md).
 
 For information about the features that you can adapt, see:
 

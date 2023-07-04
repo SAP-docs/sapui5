@@ -10,7 +10,7 @@ Now that we have integrated the dialog, it's time to add some user interaction. 
 
    
   
-<a name="loio354f98ed2b514ba9960556333428d35e__fig_r1j_pst_mr"/>The dialog now has an "OK" button
+**The dialog now has an "OK" button**
 
  ![](images/SAPUI5_Walkthrough_Step_17_2a0aee6.png "The dialog now has an "OK" button") 
 
@@ -95,8 +95,7 @@ In the fragment definition, we add a button to the `beginButton` aggregation of 
 ```ini
 # App Descriptor
 appTitle=Hello World
-appDescription=A simple walkthrough app that explains the most important concepts of [/pandoc/div/div/horizontalrule/codeblock/span/span
-     {""}) SAPUI5 (span]
+appDescription=A simple walkthrough app that explains the most important concepts of SAPUI5
 
 # Hello Panel
 showHelloButtonText=Say Hello

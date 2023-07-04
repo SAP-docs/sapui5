@@ -10,7 +10,7 @@ In the previous step, we have listened for bypassed events to detect possible te
 
    
   
-<a name="loio4a063b8250f24d0cbf7c689821df7199__fig_r1j_pst_mr"/>Console output for routes matched by listening to `routeMatched` events
+**Console output for routes matched by listening to routeMatched events**
 
  ![](images/Tutorial_Navigation_and_Routing_Step_17_ea12aae.png "Console output for routes matched by listening to
 						routeMatched events") 
@@ -51,7 +51,7 @@ sap.ui.define([
 				var sRouteName = oEvent.getParameter("name");
 				// do something, i.e. send usage statistics to back end
 				// in order to improve our app and the user experience (Build-Measure-Learn cycle)
-				Log.info("User accessed route " + sRouteName + ", timestamp = " + new Date().getTime());
+				Log.info("User accessed route " + sRouteName + ", timestamp = " + Date.now());
 			});
 		}
 	});

@@ -23,7 +23,7 @@ The `SmartTable` control offers the following types of exports:
 
 To find out which export suits your requirements best, check out the following table:
 
-<a name="loioe7f52f49994347cbadde95620238f3f8__table_nqm_cm2_lfb"/>SAP Gateway versus Client Export
+**SAP Gateway versus Client Export**
 
 
 <table>
@@ -300,18 +300,14 @@ If configured, Read Access Logging tracks who has access to which data at which 
 </td>
 <td valign="top">
 
-![Not supported](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
-
-RAL is not supported because the SAP Gateway export is carried out by a server process that does not run in a specific user context.
+ ![Supported](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
 
 
 
 </td>
 <td valign="top">
 
-![Supported](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
-
-RAL is fully supported because the client export uses the existing OData service to request data.
+ ![Supported](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
 
 
 

@@ -249,6 +249,8 @@ You must register the controller extension in the manifest as follows:
 > }
 > ```
 
+For more information about the sample implementation, see [View State](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/controllerExtensions/controllerExtensionsOverview/viewState).
+
 
 
 ### Triggering an Update of the App State

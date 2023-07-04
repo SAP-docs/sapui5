@@ -8,9 +8,9 @@ The `extensionAPI` consists of several elements that are described below. It can
 
 ## API Methods
 
-When coding the implementation of an extension hook or an event handler used in a view extension, you can use the public methods of `sap.ui.core.mvc.Controller`.
+When coding the implementation of an extension hook or an event handler used in a view extension, you can use the public methods of `sap.ui.core.mvc.Controller`. However: Don't access or manipulate controls, properties, models, or other internal objects created by the SAP Fiori elements framework.
 
-Any other methods or properties of the controller \(in particular any components whose names start with `‘_’`\) should be considered private and therefore not be used.
+Any other methods or properties of the controller \(in particular any components whose names start with `‘_’`\) should be considered private and therefore should not be used.
 
 
 
@@ -149,7 +149,7 @@ For more information, see [ExtensionAPI](https://ui5.sap.com/#/api/sap.suite.ui.
 
 `invokeActions` method calls a particular action multiple times and submits changes to the back end.
 
-<a name="loiobd2994b69ef542998becbc69ab093f7e__table_ytv_nlf_5mb"/>Parameter Details
+**Parameter Details**
 
 
 <table>

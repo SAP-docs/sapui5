@@ -6,7 +6,7 @@ To render a contact list and contact facet, you add a `UI.ReferenceFacet` that p
 
    
   
-<a name="loioa6a8c0c4849b483eb10e87f6fdf9383c__fig_g4x_h1w_35"/>Object Page: Contacts
+**Object Page: Contacts**
 
  ![](images/ObjectPage_Contacts_076fb4d.png "Object Page: Contacts") 
 
@@ -61,19 +61,6 @@ The facet annotation looks like this:
 >  }
 > ]
 > product;
-> ```
-
-> ### Sample Code:  
-> CAP CDS Annotation
-> 
-> ```
-> 
-> UI.Facets : {
->     $Type : 'UI.ReferenceFacet',
->     Label : 'Supplier',
->     Target : 'to_Supplier/@Communication.Contact',
-> },
-> 
 > ```
 
 The Contact annotation looks like this:
@@ -173,57 +160,11 @@ The Contact annotation looks like this:
 >   LastName,
 > 
 >   @Semantics.address : { city: true }  
->   OrganizationRole,
+>   City,
 > 
 >   @Semantics.contact.photo: true
 >   EmployeePictureURL
 > }
-> 
-> ```
-
-> ### Sample Code:  
-> CAP CDS Annotation
-> 
-> ```
-> 
-> annotate SEPMRA_PROD_MAN.SEPMRA_I_EmployeeType @(
-> Communication.Contact : {
->     fn : FormattedName,
->     title : JobTitle,
->     org : CompanyName,
->     role : OrganizationRole,
->     n : {
->         given : FirstName,
->         additional : MiddleName,
->         surname : LastName,
->     },
->     photo : EmployeePictureURL,
->     tel : [
->         {
->             type : #fax,
->             uri : FaxNumber,
->         },
->         {
->             type : #cell,
->             uri : MobilePhoneNumber,
->         },
->         {
->             type : #work,
->             uri : PhoneNumber,
->         },
->         {
->             type : ,
->             address : FaxNumber,
->         },
->     ],
->     email : [
->         {
->             type : #work,
->             address : EmailAddress,
->         },
->     ],
-> },
-> );
 > 
 > ```
 

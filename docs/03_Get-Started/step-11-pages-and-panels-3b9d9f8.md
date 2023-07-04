@@ -10,7 +10,7 @@ After all the work on the app structure it’s time to improve the look of our a
 
    
   
-<a name="loio3b9d9f84930d43df90ad0789d99bd4a3__fig_r1j_pst_mr"/>A panel is now displaying the controls from the previous steps
+**A panel is now displaying the controls from the previous steps**
 
  ![](images/SAPUI5_Walkthrough_Step_11_959dd4b.png "A panel is now displaying the controls from the previous steps") 
 
@@ -68,8 +68,7 @@ In order to make the fullscreen height of the view work properly, we add the `di
 ```ini
 # App Descriptor
 appTitle=Hello World
-appDescription=A simple walkthrough app that explains the most important concepts of [/pandoc/div/div/horizontalrule/codeblock/span/span
-     {""}) SAPUI5 (span]
+appDescription=A simple walkthrough app that explains the most important concepts of SAPUI5
 
 # Hello Panel
 showHelloButtonText=Say Hello

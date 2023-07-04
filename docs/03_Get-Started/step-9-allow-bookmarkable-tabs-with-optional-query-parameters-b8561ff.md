@@ -12,7 +12,7 @@ In this step, we implement a bookmarking feature by enabling deep linking to tab
 
    
   
-<a name="loiob8561ff6f4c34c85a91ed06d20814cd3__fig_r1j_pst_mr"/>Deep link to allow bookmarkable tabs
+**Deep link to allow bookmarkable tabs**
 
  ![](images/Tutorial_Navigation_and_Routing_Step_09_3eb33f8.png "Deep link to allow bookmarkable tabs") 
 

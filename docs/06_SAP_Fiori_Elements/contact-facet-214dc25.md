@@ -79,41 +79,6 @@ In the example, the `UI.DataFieldForAnnotation` points to a contact annotation o
 > 
 > ```
 
-> ### Sample Code:  
-> CAP CDS Annotation
-> 
-> ```
-> 
-> UI.FieldGroup #GeneralInformationForHeader : {
->     Data : [
->         {
->             $Type : 'UI.DataField',
->             Value : to_StockAvailability.Quantity,
->             ![@UI.Importance] : #Low
->         },
->         {
->             $Type : 'UI.DataField',
->             Value : Weight,
->             ![@UI.Importance] : #High
->         },
->         {
->             $Type : 'UI.DataField',
->             Label : 'WeightUnit [SmLiQv]',
->             Value : WeightUnit,
->             ![@UI.Importance] : #High
->         },
->         {
->             $Type : 'UI.DataFieldForAnnotation',
->             Label : 'Supplier [ContactQV]',
->             Target : 'to_Supplier/@Communication.Contact',
->             ![@UI.Importance] : #High
->         }
->     ],
->     Label : '{@i18n>@GeneralInfoFieldGroupLabel}'
-> }
-> 
-> ```
-
 
 
 ### Popover
@@ -175,33 +140,6 @@ In the example, the `UI.DataFieldForAnnotation` points to a contact annotation o
 > 
 > ```
 
-> ### Sample Code:  
-> CAP CDS Annotation
-> 
-> ```
-> 
-> Communication.Contact : {
->     fn : CompanyName,
->     email : [
->         {
->             type : #work,
->             address : EmailAddress
->         },
->     ],
->     tel : [
->         {
->             type : [ #preferred, #work ],
->             uri : PhoneNumber
->         },
->         {
->             type : #fax,
->             uri : FaxNumber
->         }
->     ]
-> }
-> 
-> ```
-
 
 
 <a name="loio214dc25fb47f42c6a0091dfe71e87950__section_wtx_hg5_dnb"/>
@@ -210,7 +148,7 @@ In the example, the `UI.DataFieldForAnnotation` points to a contact annotation o
 
   
   
-<a name="loio214dc25fb47f42c6a0091dfe71e87950__fig_etg_hc3_nlb"/>Contact Facet![](images/Contact_Facet_d4576ed.png)
+**Contact Facet**
 
  
 

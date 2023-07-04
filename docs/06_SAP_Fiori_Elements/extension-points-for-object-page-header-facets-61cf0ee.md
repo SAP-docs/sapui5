@@ -11,9 +11,9 @@ You define application-specific header facets using annotations, but in some cas
 ## Additional Features in SAP Fiori Elements for OData V2
 
 > ### Caution:  
-> Use app extensions with caution and only if you cannot produce the required behavior by other means, such as manifest settings or annotations. To correctly integrate your app extension coding with SAP Fiori elements, use only the extensionAPI of SAP Fiori elements. For more information, see [Using the extensionAPI](using-the-extensionapi-bd2994b.md).
+> Use app extensions with caution and only if you cannot produce the required behavior by other means, such as manifest settings or annotations. To correctly integrate your app extension coding with SAP Fiori elements, use only the `extensionAPI` of SAP Fiori elements. For more information, see [Using the extensionAPI](using-the-extensionapi-bd2994b.md).
 > 
-> After you've created an app extension, its display \(for example, control placing, CSS\) and system behavior \(for example, model and binding usage, busy handling\) of the app extension lies within the application's responsibility. SAP Fiori elements provides support only for the official extensionAPI functions. Don't access or manipulate SAP Fiori elements' internal coding.
+> After you've created an app extension, its display \(for example, control placement and layout\) and system behavior \(for example, model and binding usage, busy handling\) lies within the application's responsibility. SAP Fiori elements provides support only for the official `extensionAPI` functions. Don't access or manipulate controls, properties, models, or other internal objects created by the SAP Fiori elements framework.
 
 On the object page, you can use extension points to add additional header facets in the following places:
 
@@ -258,7 +258,7 @@ In this example, the second header facet with the key `CustomHeaderFacet2` occur
 
 You can define your custom header facet by implementing an `xmlfragment` and using the following properties:
 
-<a name="loio61cf0ee828824903907464c80dd0d88c__table_w4x_dhb_snb"/>Properties of a Custom Header Facet
+**Properties of a Custom Header Facet**
 
 
 <table>
@@ -714,7 +714,7 @@ You reference the `fieldGroup` through the annotation path with the correspondin
 
 You can define your custom header fields by implementing an `xmlfragment` and using the following properties:
 
-<a name="loio61cf0ee828824903907464c80dd0d88c__table_hzf_ttb_snb"/>Properties of Custom Header Fields
+**Properties of Custom Header Fields**
 
 
 <table>

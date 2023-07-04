@@ -5,9 +5,9 @@
 You can use extension points to enhance tables in SAP Fiori elements apps.
 
 > ### Caution:  
-> Use app extensions with caution and only if you cannot produce the required behavior by other means, such as manifest settings or annotations. To correctly integrate your app extension coding with SAP Fiori elements, use only the extensionAPI of SAP Fiori elements. For more information, see [Using the extensionAPI](using-the-extensionapi-bd2994b.md).
+> Use app extensions with caution and only if you cannot produce the required behavior by other means, such as manifest settings or annotations. To correctly integrate your app extension coding with SAP Fiori elements, use only the `extensionAPI` of SAP Fiori elements. For more information, see [Using the extensionAPI](using-the-extensionapi-bd2994b.md).
 > 
-> After you've created an app extension, its display \(for example, control placing, CSS\) and system behavior \(for example, model and binding usage, busy handling\) of the app extension lies within the application's responsibility. SAP Fiori elements provides support only for the official extensionAPI functions. Don't access or manipulate SAP Fiori elements' internal coding.
+> After you've created an app extension, its display \(for example, control placement and layout\) and system behavior \(for example, model and binding usage, busy handling\) lies within the application's responsibility. SAP Fiori elements provides support only for the official `extensionAPI` functions. Don't access or manipulate controls, properties, models, or other internal objects created by the SAP Fiori elements framework.
 
 
 
@@ -291,7 +291,7 @@ The table containing additional custom columns can look like this:
 
   
   
-<a name="loiod525522c1bf54672ae4e02d66b38e60c__fig_py1_dlg_d4b"/>Custom Columns in a Table
+**Custom Columns in a Table**
 
  ![](images/Custom_Columns_00819cd.png "Custom Columns in a Table") 
 
@@ -361,6 +361,11 @@ The table containing additional custom columns can look like this:
     >                                                 "_CustomerPaymentTerms/CustomerPaymentTerms",
     >                                                 "_ShipToParty/BusinessPartner"
     >                                             ]
+    >                                         },
+    >                                         "CustomColumnWithHeaderFromMetaData": {
+    >                                             "header": "{metaModel>/SalesOrderManage/SoldToParty@com.sap.vocabularies.Common.v1.Label}",
+    >                                             "template": "SalesOrder.ext.CustomColumnButton",
+    >                                             "availability": "Default"
     >                                         }
     >                                     }
     >                                 }
@@ -409,11 +414,11 @@ The table containing additional custom columns can look like this:
     > ```
 
 
-The `manifest.json` sample code above enables you to add an additional column to an object page. By default, the column isn't visible on the UI due to the availability. Once it has been added via *Add/Remove Columns*, this is the result:
+The `manifest.json` sample code above enables you to add an additional column to an object page. By default, the column isn't visible on the UI. Once it has been added via *Add/Remove Columns*, this is the result:
 
  ![](images/Custom_Button_bea7e9b.png) 
 
-<a name="loiod525522c1bf54672ae4e02d66b38e60c__table_ssw_r3g_tnb"/>Settings
+**Settings**
 
 
 <table>
@@ -473,14 +478,17 @@ header
 </td>
 <td valign="top">
 
-any unicode string
+any Unicode string, a string containing an `i18n` text, a string containing a metadata path
+
+> ### Note:  
+> The `i18n` model is the recommended way to add the header text. The use of a metadata path in the header text is optional and not recommended.
 
 
 
 </td>
 <td valign="top">
 
-The header is shown on the table as header, as well as in the add/remove dialog.
+The header is shown on the table as well as in the add/remove dialog.
 
 
 
@@ -733,9 +741,9 @@ The properties can be any that already exist in the annotations and that can be 
 
     If an error occurs while editing a custom column, the properties list is used to link the message to the column.
 
--   Export to spreadsheet
+-   Export to spreadsheet and PDF
 
-    Every property listed here will be exported into the spreadsheet. The basic export exports all properties in the same column, and the option *Split cells with multiple values* exports each property in a separate column. For more information, see [Using the Export Feature](using-the-export-feature-4bab6f2.md).
+    Every property listed here will be exported into the spreadsheet or PDF file. When you export to a spreadsheet, the basic export exports all properties in the same column, and the option *Split cells with multiple values* exports each property in a separate column. Custom columns without a properties list will not be exported. For more information, see [Using the Export Feature](using-the-export-feature-4bab6f2.md).
 
 
 

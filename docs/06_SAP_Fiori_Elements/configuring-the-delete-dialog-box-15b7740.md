@@ -55,22 +55,6 @@ The context displayed in the Delete dialog box is taken from the `Title` propert
 > 
 > ```
 
-> ### Sample Code:  
-> CAP CDS Annotation
-> 
-> ```
-> 
-> UI.HeaderInfo : {
->     TypeName : 'Sales Order',
->     TypeNamePlural : 'Sales Orders',
->     Title : {
->         $Type : 'UI.DataField',
->         Value : so_id
->     }
-> },
-> 
-> ```
-
 
 
 <a name="loio15b7740845b44b419a56eb63d34b8ab3__section_yfk_4ds_cnb"/>

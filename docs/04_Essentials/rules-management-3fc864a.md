@@ -14,7 +14,7 @@ The *Available Rulesets* tab contains the list of the currently loaded rulesets 
 
    
   
-<a name="loio3fc864acf926406194744375aa464fe7__fig_ekh_tj1_k1b"/>Support Assistant Available Rulesets
+**Support Assistant Available Rulesets**
 
  ![](images/Support_Assistant_Available_Rulesets_d7d49af.png "Support Assistant Available Rulesets") 
 
@@ -22,7 +22,7 @@ The *Additional Rulesets* tab shows rules for libraries that are not used by the
 
    
   
-<a name="loio3fc864acf926406194744375aa464fe7__fig_bbv_vj1_k1b"/>Support Assistant Additional Rulesets
+**Support Assistant Additional Rulesets**
 
  ![](images/Support_Assistant_Additional_Rulesets_c34ca5f.png "Support Assistant Additional Rulesets") 
 
@@ -38,7 +38,7 @@ The Support Assistant allows you to export and import subsets of preselected rul
 
   
   
-<a name="loio3fc864acf926406194744375aa464fe7__fig_qp5_gqr_32b"/>Support Assistant Rule Presets
+**Support Assistant Rule Presets**
 
  ![](../01_Whats-New/images/Support_Assistant_Rule_Presets_7ec5783.png "Support Assistant Rule Presets") 
 
@@ -76,7 +76,7 @@ you can find your most currentYou have the option to personalize the Rules view 
 
    
   
-<a name="loio3fc864acf926406194744375aa464fe7__fig_sqy_115_j2b"/>Support Assistant Columns Personalization
+**Support Assistant Columns Personalization**
 
  ![](images/Support_Assistant_Columns_Personalization_3d12062.png "Support Assistant Columns Personalization") 
 

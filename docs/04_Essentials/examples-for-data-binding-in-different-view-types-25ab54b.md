@@ -42,41 +42,6 @@ Examples how complex syntax can be used for calculated fields in XML, HTML, and 
 
 
 
-<a name="loio25ab54b0113c4914999c43d07d3b71fe__section_fgl_f4p_rcb"/>
-
-## HTML View
-
-```js
-
-<template data-controller-name="testdata.complexsyntax">
-  <div>
-  <div data-sap-ui-type="sap.m.Label" data-text="Hello Mr. {/employees/0/lastName}, {path:\'/employees/0/firstName\', formatter:\'.myFormatter\'}"></div>
-  <div data-sap-ui-type="sap.m.Table" data-items="{/employees}">
-   <div data-sap-ui-aggregation="columns">
-     <div data-sap-ui-type="sap.m.Column">
-       <div data-sap-ui-type="sap.m.Label" data-text="Name"></div>
-     </div>
-     <div data-sap-ui-type="sap.m.Column">
-       <div data-sap-ui-type="sap.m.Label" data-text="Birthday"></div>
-     </div>
-   </div>
-   <div data-sap-ui-aggregation="items">
-     <div data-sap-ui-type="sap.m.ColumnListItem">
-       <div data-sap-ui-aggregation="cells">
-         <div data-sap-ui-type="sap.m.Text" data-text="{path:\'gender\', formatter:\'.myGenderFormatter\'} {firstName} {lastName}"></div>
-         <div data-sap-ui-type="sap.m.Text" data-text="{parts:[{ path:\'birthday/day\'}, {path:\'birthday/month\'}, {path:\'birthday/year\}], formatter:\'my.globalFormatter\'}"></div>
-       </div>
-     </div>
-   </div>
-  </div>
-  <div data-sap-ui-type="sap.m.Label" data-text="{path: \'/statistics/amount\', type:\'sap.ui.model.type.Float\', formatOptions: { minFractionDigits: 1}}"></div>       
- </div>
-</template>
-
-```
-
-
-
 <a name="loio25ab54b0113c4914999c43d07d3b71fe__section_gqr_g4p_rcb"/>
 
 ## Typed View

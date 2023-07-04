@@ -35,7 +35,7 @@ This is the rendering result:
 
   
   
-<a name="loio2a0a630e50c7472b803fb94dab922d18__fig_s4r_ghp_slb"/>Product Category Values as Dropdown List Box
+**Product Category Values as Dropdown List Box**
 
  ![](images/Values_for_Product_Category_as_Drop-Down_List_Box_30ba33b.png "Product Category Values as Dropdown List Box") 
 
@@ -144,7 +144,7 @@ This is the rendering result:
 
   
   
-<a name="loio2a0a630e50c7472b803fb94dab922d18__fig_dyw_gx3_llb"/>Currency Code as Dropdown List Box
+**Currency Code as Dropdown List Box**
 
  ![](images/Currency_Code_as_Dropdown_List_Box_edffc94.png "Currency Code as Dropdown List Box") 
 
@@ -164,7 +164,7 @@ You can use `FilterRestrictions` annotations and set the `AllowedExpressions` pr
 >             </Record>
 > 	 </Collection>
 >        </PropertyValue>
->     <Record> 
+>     </Record> 
 > </Annotation>
 > ```
 

@@ -191,31 +191,15 @@ By default, `Measurement` is disabled to avoid unnecessary code execution during
     </tr>
     <tr>
     <td valign="top">
-
-    Start measurement
+    
+        Start measurement
 
 
     
     </td>
     <td valign="top">
-
-     `Measurement.start(sId,sInfo,[categories])` 
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-
-    End measurement
-
-
-    
-    </td>
-    <td valign="top">
-
-     `Measurement.end(sId)` 
+         `Measurement.start(sId,sInfo,[categories])` 
 
 
     
@@ -223,15 +207,15 @@ By default, `Measurement` is disabled to avoid unnecessary code execution during
     </tr>
     <tr>
     <td valign="top">
-
-    Pause
+    
+        End measurement
 
 
     
     </td>
     <td valign="top">
-
-     `Measurement.pause(sId)` 
+    
+         `Measurement.end(sId)` 
 
 
     
@@ -239,15 +223,31 @@ By default, `Measurement` is disabled to avoid unnecessary code execution during
     </tr>
     <tr>
     <td valign="top">
-
-    Resume
+    
+        Pause
 
 
     
     </td>
     <td valign="top">
+    
+         `Measurement.pause(sId)` 
 
-     `Measurement.resume(sId)` 
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+        Resume
+
+
+    
+    </td>
+    <td valign="top">
+    
+         `Measurement.resume(sId)` 
 
 
     

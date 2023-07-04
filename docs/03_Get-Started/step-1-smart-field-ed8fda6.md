@@ -12,7 +12,7 @@ So we start our journey into the world of smart controls by looking at the `Smar
 
    
   
-<a name="loioed8fda66cd3b406cbd22f6019188ce82__fig_r1j_pst_mr"/>Smart Field
+**Smart Field**
 
  ![](images/Smart_Controls_Tutorial_Step_01_379bc52.png "Smart Field") 
 

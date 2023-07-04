@@ -10,7 +10,7 @@ In this step, we extend the product detail view by adding a feature allowing to 
 
    
   
-<a name="loioc73dfe312f104664954749c5c36faf27__fig_apx_45y_c5"/>Comments section added to the detail page
+**Comments section added to the detail page**
 
  ![](images/Tutorial_Worklist_Step_7_Preview_a517fe5.png "Comments section added to the detail page") 
 
@@ -89,11 +89,11 @@ sap.ui.define([
    "sap/ui/model/json/JSONModel",
    "sap/ui/core/routing/History",
    "myCompany/myApp/model/formatter",
+   "sap/ui/core/date/UI5Date",
    "sap/ui/core/format/DateFormat",
    "sap/ui/model/Filter",
    "sap/ui/model/FilterOperator"
-
-], function(BaseController, JSONModel, History, formatter, DateFormat, Filter, FilterOperator) {
+], function(BaseController, JSONModel, History, formatter, UI5Date, DateFormat, Filter, FilterOperator) {
    "use strict";
    return BaseController.extend("myCompany.myApp.controller.Object", {
       formatter: formatter,
@@ -112,7 +112,7 @@ sap.ui.define([
       */
       onPost: function (oEvent) {
          var oFormat = DateFormat.getDateTimeInstance({style: "medium"});
-         var sDate = oFormat.format(new Date());
+         var sDate = oFormat.format(UI5Date.getInstance());
          var oObject = this.getView().getBindingContext().getObject();
          var sValue = oEvent.getParameter("value");
          var oEntry = {

@@ -56,45 +56,22 @@ APF expects certain entries in the manifest of a component that extends `sap.apf
     </tr>
     <tr>
     <td valign="top">
-
-    `PathPersistenceServiceRoot`
+    
+        `PathPersistenceServiceRoot`
 
 
     
     </td>
     <td valign="top">
-
-    `/sap/hba/r/apf/core/odata/apf.xsodata`
+    
+        `/sap/hba/r/apf/core/odata/apf.xsodata`
 
 
     
     </td>
     <td valign="top">
-
-    `/sap/opu/odata/sap/BSANLY_APF_RUNTIME_SRV`
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-
-    `SmartBusiness`
-
-
-    
-    </td>
-    <td valign="top">
-
-    `/sap/hba/r/sb/core/odata/runtime/SMART_BUSINESS.xsodata`
-
-
-    
-    </td>
-    <td valign="top">
-
-    Not required
+        `/sap/opu/odata/sap/BSANLY_APF_RUNTIME_SRV`
 
 
     
@@ -102,22 +79,45 @@ APF expects certain entries in the manifest of a component that extends `sap.apf
     </tr>
     <tr>
     <td valign="top">
-
-    `LogicalSystem`
+    
+        `SmartBusiness`
 
 
     
     </td>
     <td valign="top">
-
-    `/sap/hba/apps/wca/dso/s/odata/wca.xsodata`
+    
+        `/sap/hba/r/sb/core/odata/runtime/SMART_BUSINESS.xsodata`
 
 
     
     </td>
     <td valign="top">
+    
+        Not required
 
-    Not required
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+        `LogicalSystem`
+
+
+    
+    </td>
+    <td valign="top">
+    
+        `/sap/hba/apps/wca/dso/s/odata/wca.xsodata`
+
+
+    
+    </td>
+    <td valign="top">
+    
+        Not required
 
 
     

@@ -24,6 +24,8 @@ The delivered apps can be extended by adding a new node in the object page or by
 
 ABAP platform 2021 or a higher version is installed.
 
+In the manifest file of the app, the pages and sub pages section must be specified in the object format and not in the array format, within `sap.ui.generic.app`.
+
 
 
 <a name="loioa2b24a69baef4b91af2293ccc6b5871f__section_iz2_wcl_4pb"/>

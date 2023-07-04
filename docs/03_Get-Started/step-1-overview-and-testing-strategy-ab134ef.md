@@ -13,7 +13,7 @@ In this step, we will take a look at the prototype and define the test strategy 
 
    
   
-<a name="loioab134ef3932c4b42898c79c10341e8b5__fig_r1j_pst_mr"/>The prototype app
+**The prototype app**
 
  ![](images/Tutorial_Testing_Step_01_7946d24.png "The prototype app") 
 
@@ -23,13 +23,13 @@ In this step, we will take a look at the prototype and define the test strategy 
 
 To set up your project for this tutorial, download the files for *Step 1* from the *Samples* in the Demo Kit at [Testing - Step 1](https://ui5.sap.com/#/entity/sap.m.tutorial.testing/sample/sap.m.tutorial.testing.01). Copy the code to your workspace and make sure that the application runs by calling the `webapp/test/mockServer.html` file.
 
-Depending on your development environment, you might have to adjust resource paths and configuration entries. The project structure and the files provided with this tutorial are explained in detail in the [Walkthrough](walkthrough-3da5f4b.md) tutorial.
+Depending on your development environment, you might have to adjust resource paths and configuration entries. The project structure and the files provided with this tutorial are explained in detail in the [Walkthrough](walkthrough-tutorial-3da5f4b.md) tutorial.
 
 After downloading *Step 1*, you should have the following files:
 
    
   
-<a name="loioab134ef3932c4b42898c79c10341e8b5__fig_xvp_11y_2t"/>Folder structure with downloaded files
+**Folder structure with downloaded files**
 
  ![](images/Tutorial_Testing_Step_01_2_8007848.png "Folder structure with downloaded files") 
 
@@ -125,7 +125,7 @@ Before you start implementing your first test, you should think about how to tes
 
    
   
-<a name="loioab134ef3932c4b42898c79c10341e8b5__fig_u2g_t2y_2t"/>Testing pyramid
+**Testing pyramid**
 
  ![](images/Tutorial_Testing_Step_01_2_88758c3.png "Testing pyramid") 
 
@@ -159,5 +159,5 @@ There might still be features that are hard to test with these client-side testi
 
 [Mock Server](../04_Essentials/mock-server-69d3cbd.md "A mock server mimics one or more back-end services. It is used to simplify integration testing and to decouple UI development from service development. By using a mock server you can develop and test the UI even if the service in the back end is incomplete or unstable.")
 
-[Walkthrough](walkthrough-3da5f4b.md "In this tutorial we will introduce you to all major development paradigms of SAPUI5.")
+[Walkthrough Tutorial](walkthrough-tutorial-3da5f4b.md "In this tutorial we will introduce you to all major development paradigms of SAPUI5.")
 

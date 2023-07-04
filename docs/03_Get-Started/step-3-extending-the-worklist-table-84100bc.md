@@ -10,7 +10,7 @@ In this step, we will edit the worklist table to include additional columns for 
 
    
   
-<a name="loio84100bcfd5b34f62858bdd6f67976b4a__fig_djl_pjl_c5"/>The improved worklist table with new columns and formatting
+**The improved worklist table with new columns and formatting**
 
  ![](images/Tutorial_Worklist_Step_03_Preview_2def9d9.png "The improved worklist table with new columns and formatting") 
 

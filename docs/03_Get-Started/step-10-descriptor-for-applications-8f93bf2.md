@@ -12,7 +12,7 @@ The SAP Fiori launchpad acts as an application container and instantiates the ap
 
    
   
-<a name="loio8f93bf2b2b13402e9f035128ce8b495f__fig_r1j_pst_mr"/>An input field and a description displaying the value of the input field \(No visual changes to last step\)
+**An input field and a description displaying the value of the input field \(No visual changes to last step\)**
 
  ![](images/SAPUI5_Walkthrough_Step_07_to_10_e5a9bb4.png " An input field and a description displaying the value of the input field (No
 					visual changes to last step)") 
@@ -79,7 +79,7 @@ You can view and download all files at [Walkthrough - Step 10](https://ui5.sap.c
 ```
 
 > ### Note:  
-> In this tutorial, we only introduce the most important settings and parameters of the descriptor file. In SAP Web IDE, you may get validation errors because some settings are missing - you can ignore those in this context.
+> In this tutorial, we only introduce the most important settings and parameters of the descriptor file. In some development environments you may get validation errors because some settings are missing - you can ignore those in this context.
 
 The content of the `manifest.json` file is a configuration object in JSON format that contains all global application settings and parameters. The manifest file is called the descriptor for applications, components, and libraries and is also referred to as “descriptor” or “app descriptor” when used for applications. It is stored in the `webapp` folder and read by SAPUI5 to instantiate the component. There are three important sections defined by namespaces in the `manifest.json` file:
 
@@ -169,9 +169,7 @@ We will no longer need our `index.js` from now on, because the descriptor takes 
 ```ini
 # App Descriptor
 appTitle=Hello World
-appDescription=A simple walkthrough app that explains the most important concepts of [/pandoc/div/div/horizontalrule/codeblock/strong/span
-     {""}) [/pandoc/div/div/horizontalrule/codeblock/strong/span/span
-     {""}) SAPUI5 (span] (span]
+appDescription=A simple walkthrough app that explains the most important concepts of SAPUI5
 
 # Hello Panel
 showHelloButtonText=Say Hello

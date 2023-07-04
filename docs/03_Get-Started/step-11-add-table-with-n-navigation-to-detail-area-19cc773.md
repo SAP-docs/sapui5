@@ -12,7 +12,7 @@ In this step we add a table with additional information to the detail area.
 
    
   
-<a name="loio19cc773a60d944c8bb588056f665de04__fig_ybl_pdx_4cb"/>A table containing information about friends of the selected user is added
+**A table containing information about friends of the selected user is added**
 
  ![](images/Tut_OD4_Step_11_45abd62.png "A table containing information about friends of the selected user is added") 
 

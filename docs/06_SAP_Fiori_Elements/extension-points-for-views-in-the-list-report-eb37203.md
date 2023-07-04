@@ -74,7 +74,7 @@ Each view can contain any control users want to display on the tab. App develope
 
 You can define your custom view by using the following properties:
 
-<a name="loioeb37203f2b884b5097c3c858107cae1f__table_ez5_pnv_3qb"/>Properties of a Custom View
+**Properties of a Custom View**
 
 
 <table>
@@ -305,7 +305,7 @@ For app developers who want a standard filtering behavior along with other annot
 
 The methods app developers can use are:
 
--   `onViewNeedsRefresh`: To be used to refresh the content of a list report view. This happens either when there is a change on the filter bar and the search is triggered, or when a tab with custom content is selected. App developers can use the additional parameters added to this method to identify the refresh cause \(`"tabChanged"` or `"search"`\) and apply the filter conditions on a specific tab based on the ID of the tab.
+-   `onViewNeedsRefresh`: To be used to refresh the content of a custom tab in a list report view with multiple tabs. This happens either when there is a change on the filter bar and the search is triggered, or when a tab with custom content is selected. App developers can use the additional parameters added to this method to identify the refresh cause \(`"tabChanged"` or `"search"`\) and apply the filter conditions on a specific tab based on the ID of the tab.
 
 -   `onPendingFilters`: To be used when a filter or search value has been changed in the filter bar but has not been validated yet by the end user \(using the *Go* or *Search* button\). Typically, the content of the current tab is grayed out until the filters are validated.
 

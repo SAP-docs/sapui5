@@ -70,19 +70,23 @@ You can use the annotation term `UI.HeaderFacets` to define which information is
 > 
 > ```
 
+On desktops, the dynamic or static header is used with the responsive layout.
+
+ ![](images/Header_Facet_Desktop_Version_b1c531e.png) 
+
+On mobile devices, a header container is used with the horizontal layout. It provides horizontal scrolling for header facets.
+
+ ![](images/Header_Facets_Mobile_Version_8abec0d.png) 
+
+You can see the object page header facets within a horizontal scroll container.
+
 
 
 <a name="loio17dbd5b7a61e4cdcb079062e976cd63f__section_dn1_5zh_nlb"/>
 
 ## Additional Features in SAP Fiori Elements for OData V2
 
-You can also include the address facet in the object page header. For more information, see [Address Facet in the Object Page Header](address-facet-in-the-object-page-header-0b73cbb.md).
-
-In mobile devices, a header container is used with the horizontal layout. It provides horizontal scrolling for header facets.
-
- ![](images/Mobile_Header_Facets_8abec0d.png) 
-
-You can see the object page header facets as within a horizontal scroll container. On mobile devices, the horizontal scroll container is the default. On desktops, the Dynamic/Static header is the default. However, you can enable the carousel header on the desktop by defining `showHeaderAsCarouselOnDesktop:true` in the manifest settings.
+On mobile devices, the horizontal scroll container is the default. On desktops, the Dynamic/Static header is the default. However, you can enable the carousel header on the desktop by defining `showHeaderAsCarouselOnDesktop:true` in the manifest settings.
 
  ![](images/Desktop_Carousels_for_Header_Facet_6113e92.png) 
 

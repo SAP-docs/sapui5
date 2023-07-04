@@ -10,7 +10,7 @@ For easily detecting and managing product shortages in our app, we will add a qu
 
    
   
-<a name="loio85ec3a9454ac4eb1a901745e773844d3__fig_nmv_yrs_c5"/>A quick filter allows filtering the product table
+**A quick filter allows filtering the product table**
 
  ![](images/Tutorial_Worklist_Step_4_Preview_395f8ac.png "A quick filter allows filtering the product table") 
 

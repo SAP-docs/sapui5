@@ -10,12 +10,12 @@ You configure visual filters by enhancing the `ValueList` annotation associated 
 
 Application developers must ensure that the records available via the value help entity set associated with the visual filter are the same as the records available via the value help entity set associated with the regular filter field. This is required for a smooth sync of the selected values across the different filter modes.
 
-The visual filter includes only the first measure and dimension from the first chart annotation within the specified `PresentationVariantQualifier`. Make sure that the dimension you specify in the chart and the `ValueListProperty` of the `OUT` parameter is the same. You can also define a `SortOrder` property in the `PresentationVariant` annotation to control the sort order based on a sort field.
+The visual filter includes only the first measure and dimension from the first chart annotation within the specified `PresentationVariantQualifier`. Make sure that the dimension you specify in the chart and the `ValueListProperty` of the `OUT` parameter is the same. You can also define a `SortOrder` property in the `PresentationVariant` annotation to control the sort order.
 
 > ### Note:  
 > Sorting in visual filters is based on this logic:
 > 
-> -   For the bar chart \(and in SAP Fiori elements for OData V2 also for the donut chart type\), sorting is always based on the measure displayed \(the default is descending order\). To change the sort order property, define the `SortOrder` property in the `PresentationVariant` annotation.
+> -   For the bar chart \(and in SAP Fiori elements for OData V2 also for the donut chart type\), sorting is always based on the measure displayed \(the default is descending order\). To change the sort order, define the `SortOrder` property in the `PresentationVariant` annotation.
 > -   For line charts with time-based dimensions, sorting is always based on the dimension displayed in ascending order, however, only the last six time periods are displayed.
 > 
 >     The sorting by the annotation is ignored for time-based dimensions for line-charts in the visual filter.
@@ -104,7 +104,7 @@ This is an example of a code snippet for a value list annotation. You use it to 
 
 ### `PresentationVariant` Qualifier
 
-The `PresentationVariant` qualifier provides chart definitions for visual filters. The visual filter picks up the first chart annotation in the `PresentationVariant` annotation to render the chart. If the chart type is not supported, the ALP renders a bar chart \(default chart type\).
+The `PresentationVariant` qualifier provides chart definitions for visual filters. The visual filter picks up the first chart annotation in the `PresentationVariant` annotation to render the chart. If the chart type isn't supported, the ALP renders a bar chart \(default chart type\).
 
 > ### Sample Code:  
 > XML Annotation
@@ -295,7 +295,7 @@ The `PresentationVariant` qualifier provides chart definitions for visual filter
 
 ### Annotation: `SelectionFields`
 
-Define the `SelectionFields` annotation for sorting the order of the fields displayed in the visual filters. If there are any mandatory filter fields that are not specified in the `SelectionFields`, then these fields appear first, followed by the other entries in the `SelectionFields`.
+Define the `SelectionFields` annotation for sorting the order of the fields displayed in the visual filters. If there are any mandatory filter fields that aren't specified in the `SelectionFields`, then these fields appear first, followed by the other entries in the `SelectionFields`.
 
 > ### Sample Code:  
 > XML Annotation
@@ -517,7 +517,7 @@ First or last six data points
 
 Donut
 
-\(currenlty only supported in SAP Fiori elements for OData V2\)
+\(currently only supported in SAP Fiori elements for OData V2\)
 
 
 
@@ -574,7 +574,7 @@ ALP displays chart titles in the following order: <Measure Name\> by <Dimension 
 
 
 > ### Note:  
-> SAP Fiori elements recommends that you do **not** specify a hard-coded scale factor that doesn't work well with changing measure values. Use it only if you can ensure that the range of possible values for the measure is fixed and there is a preferred scale factor to be used.
+> SAP Fiori elements recommends that you do **not** specify a hard-coded scale factor that doesn't work well with changing measure values. Use it only if you can ensure that the range of possible values for the measure is fixed and there'sis a preferred scale factor to be used.
 > 
 > The scale factor in the chart and chart title are of the same scale.
 
@@ -584,9 +584,9 @@ ALP displays chart titles in the following order: <Measure Name\> by <Dimension 
 
 ## Text Arrangement
 
-You can change the formatting of the text that appears on the visual filter chart axis labels, chart tooltips, and within the selected link \(if a chart context is selected\). The default view of the visual filter bar is based on the filter fields defined in the `TextArrangement` annotation and its type in the main entity set to change the text behavior like this:
+You can change the formatting of the text that appears on the vual filter chart axis labels, chart tooltips, and within the selected link \(if a chart context is selected\). The default view of the visual filter bar is based on the filter fields defined in the `TextArrangement` annotation and its type in the main entity set to change the text behavior like this:
 
-<a name="loio1714720cae984ad8b9d9111937e7cd38__table_zyg_kb4_wbb"/>
+****
 
 
 <table>
@@ -708,7 +708,7 @@ Shows only the ID, for example, "002"
 
 ## Lazy Loading of Visual Filters
 
-In SAP Fiori elements for OData V2, you enable lazy loading of visual filters by configuring the `lazyLoadVisualFilter` setting in the descriptor file. It is disabled by default.
+In SAP Fiori elements for OData V2, you enable lazy loading of visual filters by configuring the `lazyLoadVisualFilter` setting in the descriptor file. It's disabled by default.
 
 If you enable lazy loading, then the batch call for loading of visual filters is deferred until the user switches to the visual filter bar.
 
@@ -731,7 +731,7 @@ If you enable lazy loading, then the batch call for loading of visual filters is
 > ```
 
 > ### Note:  
-> In SAP Fiori elements for OData V4, lazy loading is enabled by default and cannot be switched off.
+> In SAP Fiori elements for OData V4, lazy loading is enabled by default and can't be switched off.
 
 
 
@@ -748,7 +748,7 @@ The IN/OUT parameter values take precedence over the `SelectionVariant` values f
 > 
 > If the `SelectionVariant` has date-based filter fields, you must specify the value in the format `"Z'. Ex:”2018-10-15T00:00:00Z"`, with the time part as zeroes and appended with 'Z'.
 
-<a name="loio1714720cae984ad8b9d9111937e7cd38__table_pkx_kxn_j2b"/>In/out parameter taking precedence
+**In/out parameter taking precedence**
 
 
 <table>
@@ -780,7 +780,7 @@ Chart dimension = “Status”, Select Option in SV = \[\(“Status”, Values =
 </td>
 <td valign="top">
 
--   "Project" is not a chart dimension, it is an in/out parameter for the status
+-   "Project" is not a chart dimension, it is an in/out parameter for the status.
 
 -   The chart displays records relating to `In Progress` and `New` status values for the project `List Report`.
 
@@ -794,7 +794,7 @@ Chart dimension = “Status”, Select Option in SV = \[\(“Status”, Values =
 
 **Scenario 2**: Overriding annotation configuration from filter bar
 
-Change the project value from `List Report` to `Analytical List Page` on the filter bar
+Change the project value from `List Report` to `Analytical List Page` on the filter bar.
 
 
 
@@ -814,7 +814,7 @@ Specifying ***Analytical List Page*** as a value for the project in the filter b
 
 In SAP Fiori elements for OData V2, you can render the visual filter with a parametrized entity set as the collection path. To do so, you need to provide parameters in the `SelectionVariant` annotation. Any values added in the smart filter bar take priority over the `SelectionVariant` annotation values.
 
-<a name="loio1714720cae984ad8b9d9111937e7cd38__table_jng_vyn_j2b"/>
+****
 
 
 <table>
@@ -917,7 +917,7 @@ Do not show the same filter dimension with two or more different measures at the
 
 If the use case requires you to show a dimension with different measures, consider using an overview page instead.
 
-<a name="loio1714720cae984ad8b9d9111937e7cd38__table_xvf_wyy_ghb"/>
+****
 
 
 <table>
@@ -1069,21 +1069,6 @@ In the following example, the price property number of fractional digits provide
 > price;
 > ```
 
-> ### Sample Code:  
-> CAP CDS Annotation
-> 
-> ```
-> 
-> UI.DataPoint #Price : {
->     $Type : 'UI.DataPointType',
->     Value : Price,
->     ValueFormat : {
->         $Type : 'UI.NumberFormat',
->         NumberOfFractionalDigits : 1
->     }
-> }
-> ```
-
 
 
 ### Semantic Coloring for Visual Filters Based on Measure Values
@@ -1193,7 +1178,7 @@ Line charts are only rendered if the dimension is time based, that is if you use
 
 ### Date Selection
 
-While date/time is converted to the local timezone, the values coming from the back end are used for all other formats. SAP Fiori elements for OData V4 also supports `Edm.Date`, which is shown with no converision to the local timezone.
+While date/time is converted to the local timezone, the values coming from the back end are used for all other formats. SAP Fiori elements for OData V4 `Edm.Date`, which is shown with no conversion to the local timezone.
 
 
 

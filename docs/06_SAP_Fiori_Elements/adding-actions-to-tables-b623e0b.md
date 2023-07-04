@@ -50,12 +50,15 @@ The system gives priority to the `Org.OData.Capabilities.V1.NavigationRestrictio
 >     </Record>
 >   </Annotation>
 > </Annotation>
-> 
+> .
 > ```
 
 > ### Sample Code:  
 > ABAP CDS Annotation
 > 
+> No ABAP CDS annotation is required, since the setting is made according to the modeling \(create, update, delete, etc.\) in RAP BDEF \(behavior definition\).
+
+> ### Sample Code:  
 > ```
 > 
 > define behavior for STTA_C_MP_Product
@@ -67,25 +70,6 @@ The system gives priority to the `Org.OData.Capabilities.V1.NavigationRestrictio
 >   association _ProductText
 >   { create;  }
 > };
-> ```
-
-> ### Sample Code:  
-> CAP CDS Annotation
-> 
-> ```
-> 
-> annotate STTA_PROD_MAN.STTA_C_MP_Product with @(
->   Capabilities.NavigationRestrictions : {
->     RestrictedProperties : [
->         {
->             NavigationProperty : to_ProductText,
->             InsertRestrictions : {
->                 Insertable : true
->             }
->         }
->     ]
->   }
-> );
 > ```
 
 
@@ -107,8 +91,7 @@ The system gives priority to the `Org.OData.Capabilities.V1.NavigationRestrictio
 >     <Record>
 >        <PropertyValue Property="Insertable" Bool="true" />
 >                     <!--Example with Boolean value for InsertRestriction-->
->         	    <!-- <PropertyValue Property="Insertable" Path="Insertable"/>-->
->          	    <!--Example with path for InsertRestriction-->
+> 
 >     </Record>
 >   </Annotation>
 > </Annotations>
@@ -242,7 +225,7 @@ Annotation-based actions can be inline actions. Inline actions are used to trigg
 
   
   
-<a name="loiob623e0bbbb2b4147b2d0516c463921a0__fig_ayd_sqb_2nb"/>Example: Actions in the Table Toolbar
+**Example: Actions in the Table Toolbar**
 
  ![](images/Actions_in_the_Table_Toolbar_856c5a4.jpg "Example: Actions in the Table Toolbar") 
 
@@ -492,6 +475,29 @@ After you enable this setting, a *Delete* button is displayed at the end of the 
 
 
 
+### Enabling the *Create* button using `NavigationRestrictions` 
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> 
+> annotate STTA_PROD_MAN.STTA_C_MP_Product with @(
+>   Capabilities.NavigationRestrictions : {
+>     RestrictedProperties : [
+>         {
+>             NavigationProperty : to_ProductText,
+>             InsertRestrictions : {
+>                 Insertable : true
+>             }
+>         }
+>     ]
+>   }
+> );
+> ```
+
+
+
 ### Showing or Hiding the *Create* Button
 
 You can control the visibility of the *Create* button depending on the `UI.CreateHidden` annotation. The annotation can be a Boolean value or can point to a path. In your annotation, set the path to point to a particular property \(either true or false\) of the parent object. If the value of the property is `true`, then the *Create* button is hidden; if it's `false`, it's visible.
@@ -510,7 +516,9 @@ The following code sample shows you how to hide or show the *Create* button, dep
 > ### Sample Code:  
 > ABAP CDS Annotation
 > 
-> No ABAP CDS annotation sample is available. Please use the local XML annotation.
+> ```
+> @UI.createHidden: #(_Root.isCreateHidden)
+> ```
 
 > ### Sample Code:  
 > CAP CDS Annotation
@@ -539,7 +547,9 @@ The following code sample shows you how to hide or show the *Delete* button, dep
 > ### Sample Code:  
 > ABAP CDS Annotation
 > 
-> No ABAP CDS annotation sample is available. Please use the local XML annotation.
+> ```
+> @UI.deleteHidden: #(_Root.isDeleteHidden)
+> ```
 
 > ### Sample Code:  
 > CAP CDS Annotation

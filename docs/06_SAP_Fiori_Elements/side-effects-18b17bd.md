@@ -165,7 +165,7 @@ The following side effect annotations are supported:
 
 -   **Source properties**
 
-    If you use a value help, the side effect is triggered as soon as the value is set. However, if you are entering the value, the side effect is triggered when the focus moves away from the field. If the value help is used in combination with other input fields as a source for a side effect, then the side effect is triggered only when the focus moves away from the source field group.
+    If you use a value help, combo box, checkbox, date picker or date time picker, the side effect is triggered as soon as the value is set. However, if you are entering the value, the side effect is triggered when the focus moves away from the field. If the aforementioned controls are used in combination with other input fields as a source for a side effect, then the side effect is triggered only when the focus moves away from the source field group.
 
     **For SAP Fiori elements for OData V2:**
 
@@ -269,7 +269,7 @@ You can define side effects either in the back end or in local annotation files.
 
 -   **Side effect without a specific source**
 
-    You can define a side effect without any source properties or source entities. This is called a global side effect. For more information, see [Using the Global Side Effect](using-the-global-side-effect-955ae31.md).
+    You can define a side effect without any source properties or source entities. This is called a global side effect. For more information, see [Using Global Side Effects](using-global-side-effects-955ae31.md).
 
 
 > ### Note:  
@@ -336,5 +336,5 @@ You can find an example in the following sample code:
 
 [Side Effect Annotations: Examples](side-effect-annotations-examples-61cf21d.md "This topic provides some examples for annotating side effects.")
 
-[Using the Global Side Effect](using-the-global-side-effect-955ae31.md "Global side effects are the side effects that are defined without any source properties or source entities.")
+[Using Global Side Effects](using-global-side-effects-955ae31.md "Global side effects are those side effects that are defined without any source properties or source entities.")
 

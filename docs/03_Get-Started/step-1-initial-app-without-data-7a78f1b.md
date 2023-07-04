@@ -16,7 +16,7 @@ Usually you start the development of an app with local mock data first. This way
 
    
   
-<a name="loio7a78f1b707c248fd9ec53dcb5f10814c__fig_wg3_bdq_st"/>The initial app
+**The initial app**
 
  ![](images/Tutorial_Mock_Server_Step_01_3a29b22.png "The initial app") 
 
@@ -26,13 +26,13 @@ Usually you start the development of an app with local mock data first. This way
 
 To set up your project for this tutorial, download the files for *Step 1* in the Demo Kit at [Mock Server - Step 1](https://ui5.sap.com/#/entity/sap.ui.core.tutorial.mockserver/sample/sap.ui.core.tutorial.mockserver.01). Copy the code to your workspace and make sure that the application runs by calling the `webapp/test/mockServer.html` file.
 
-Depending on your development environment you might have to adjust resource paths and configuration entries. The project structure and the files coming with this tutorial are explained in detail in the [Walkthrough](walkthrough-3da5f4b.md) tutorial.
+Depending on your development environment you might have to adjust resource paths and configuration entries. The project structure and the files coming with this tutorial are explained in detail in the [Walkthrough](walkthrough-tutorial-3da5f4b.md) tutorial.
 
 You should have the same files as displayed in the following figure:
 
    
   
-<a name="loio7a78f1b707c248fd9ec53dcb5f10814c__fig_gsc_mld_tt"/>Folder structure with downloaded files
+**Folder structure with downloaded files**
 
  ![](images/Tutorial_Mock_Server_Step_1_Folders_026a908.png "Folder structure with downloaded files") 
 

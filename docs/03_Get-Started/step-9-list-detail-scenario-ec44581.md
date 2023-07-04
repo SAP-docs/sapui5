@@ -12,7 +12,7 @@ In this step we add a detail area with additional information.
 
    
   
-<a name="loioec445816634f45eb88a7e559187dac46__fig_ybl_pdx_4cb"/>A detail area containing information about the selected user is added
+**A detail area containing information about the selected user is added**
 
  ![A list of users with an added detail area](images/Tut_OD4_Step_9_6e9025b.png "A detail area containing information about the selected user is added") 
 
@@ -32,30 +32,66 @@ You can view and download all files at [OData V4 - Step 9](https://ui5.sap.com/#
 
 ```js
 ...
+        onDelete : function () {
+            var oContext,
+                oPeopleList = this.byId("peopleList"),
+                oSelected = oPeopleList.getSelectedItem(),
+                sUserName;
+ 
+            if (oSelected) {
+                oContext = oSelected.getBindingContext();
+                sUserName = oContext.getProperty("UserName");
+                oContext.delete().then(function () {
+                    MessageToast.show(this._getText("deletionSuccessMessage", sUserName));
+                }.bind(this), function (oError) {
+                    if (oContext === oPeopleList.getSelectedItem().getBindingContext()) {
+                        this._setDetailArea(oContext);
+                    }
+                    this._setUIChanges();
+                    if (oError.canceled) {
+                        MessageToast.show(this._getText("deletionRestoredMessage", sUserName));
+                        return;
+                    }
+                    MessageBox.error(oError.message + ": " + sUserName);
+                }.bind(this));
+                this._setDetailArea();
+                this._setUIChanges(true);
+            }
+        },
+...
 		onMessageBindingChange : function (oEvent) {
 			...
 		},
 
 		onSelectionChange : function (oEvent) {
-			var oDetailArea = this.byId("detailArea"),
-				oLayout = this.byId("defaultLayout"),
-			// get binding of selected item
-				oUserContext = oEvent.getParameters().listItem.getBindingContext();
+            this._setDetailArea(oEvent.getParameter("listItem").getBindingContext());
+        },
 
-			// set binding
-			oDetailArea.setBindingContext(oUserContext);
-			// resize view
-			oDetailArea.setVisible(true);
-			oLayout.setSize("60%");
-			oLayout.setResizable(true);
-		},
-
-...
+...		
+         /**
+         * Toggles the visibility of the detail area
+         *
+         * @param {object} [oUserContext] - the current user context
+         */
+        _setDetailArea : function (oUserContext) {
+            var oDetailArea = this.byId("detailArea"),
+                oLayout = this.byId("defaultLayout"),
+                oSearchField = this.byId("searchField");
+ 
+            oDetailArea.setBindingContext(oUserContext || null);
+            // resize view
+            oDetailArea.setVisible(!!oUserContext);
+            oLayout.setSize(oUserContext ? "60%" : "100%");
+            oLayout.setResizable(!!oUserContext);
+            oSearchField.setWidth(oUserContext ? "40%" : "20%");
+        }
 ```
 
-The `onSelectionChange` event handler first saves the row context of the selected `listItem` / user to the `oUserContext` variable. This context is then set as the binding context of the detail area.
+The `onSelectionChange` event handler retrieves the context of the selected list item and passes it to a new `_setDetailArea` function. Within `_setDetailArea`, the given context is passed as binding context for the semantic page detail area.
 
 Afterwards the detail area is made visible and is resized.
+
+The application also needs to close the detail area if its binding context is deleted. If the deleted context is restored after a failed DELETE request, or undeleted via `Context#resetChanges`, it could be shown in the detail area again, unless the user had selected another row in the meantime. Hence, we call `_setDetailArea` without a context once the context gets deleted, and with the restored context in the error handler of the `Context#delete` API. In `_setDetailArea` we resize the view based on the given context in an appropriate way.
 
 
 

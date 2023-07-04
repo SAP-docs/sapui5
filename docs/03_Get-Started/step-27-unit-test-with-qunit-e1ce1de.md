@@ -7,7 +7,7 @@ Now that we have a test folder in the app, we can start to increase our test cov
 Actually, every feature that we added to the app so far, would require a separate test case. We have totally neglected this so far, so let’s add a simple unit test for our custom formatter function from Step 23. We will test if the long text for our status is correct by comparing it with the texts from our resource bundle.
 
 > ### Note:  
-> In this tutorial, we focus on a simple use case for the test implementation. If you want to learn more about QUnit tests, have a look at our [Testing](testing-291c912.md) tutorial, especially [Step 2: A First Unit Test](step-2-a-first-unit-test-b81736e.md).
+> In this tutorial, we focus on a simple use case for the test implementation. If you want to learn more about QUnit tests, have a look at our [Testing Tutorial](testing-tutorial-291c912.md) tutorial, especially [Step 2: A First Unit Test](step-2-a-first-unit-test-b81736e.md).
 
 
 
@@ -15,7 +15,7 @@ Actually, every feature that we added to the app so far, would require a separat
 
    
   
-<a name="loioe1ce1de315994a02bf162f4b3b5a9f09__fig_r1j_pst_mr"/>A unit test for our formatters is now available
+**A unit test for our formatters is now available**
 
  ![](images/SAPUI5_Walkthrough_Step_28_a933bc8.png "A unit test for our formatters is now available") 
 
@@ -27,7 +27,7 @@ You can view and download all files at [Walkthrough - Step 27](https://ui5.sap.c
 
    
   
-<a name="loioe1ce1de315994a02bf162f4b3b5a9f09__fig_lbx_wcp_ns"/>Folder Structure for this Step
+**Folder Structure for this Step**
 
  ![](images/SAPUI5_Walkthrough_Step_28_2_1b5613a.png "Folder Structure for this Step") 
 
@@ -197,5 +197,5 @@ This script loads and executes our formatter. If we now open the `webapp/test/un
 
 [Sinon.JS Home Page](http://sinonjs.org/)
 
-[Testing](testing-291c912.md "In this tutorial we will test application functionality with the testing tools that are delivered with SAPUI5. At different steps of this tutorial you will write tests using QUnit, OPA5, and the OData V2 mock server. Additionally, you will learn about testing strategies, Test Driven Development (TDD), and much more.")
+[Testing Tutorial](testing-tutorial-291c912.md "In this tutorial we will test application functionality with the testing tools that are delivered with SAPUI5. At different steps of this tutorial you will write tests using QUnit, OPA5, and the OData V2 mock server. Additionally, you will learn about testing strategies, Test Driven Development (TDD), and much more.")
 

@@ -54,16 +54,6 @@ To do so, perform the following steps:
     > }
     > ```
 
-    > ### Sample Code:  
-    > CAP CDS Annotation
-    > 
-    > ```
-    > annotate STTA_PROD_MAN.STTA_C_MP_ProductType with {
-    >   @Common.SemanticObject : 'EPMProduct'
-    >   Supplier
-    > };
-    > ```
-
 2.  In the metadata document, you can find the reference to the association end type. Check for a referential constraint that includes the identified property as `Dependent`. For the `Supplier` property in the entity type STTA\_C\_MP\_ProductType, that has a set of navigation properties, only `to_Supplier` includes the `Supplier` property as `Dependent`.
 
     ```
@@ -167,40 +157,6 @@ To do so, perform the following steps:
     > ]
     > emailaddress;
     > }
-    > 
-    > ```
-
-    > ### Sample Code:  
-    > CAP CDS Annotation
-    > 
-    > ```
-    > annotate STTA_PROD_MAN.STTA_C_MP_SupplierType with @(
-    >     UI.QuickViewFacets : [
-    >         {
-    >             $Type : 'UI.ReferenceFacet',
-    >             Target : '@UI.FieldGroup#SupplierQuickViewPOC_FieldGroup_1'
-    >         }
-    >     ],
-    >     UI.FieldGroup #SupplierQuickViewPOC_FieldGroup_1 : {
-    >         Data : [
-    >             {
-    >                 $Type : 'UI.DataField',
-    >                 Label : 'Company Name',
-    >                 Value : CompanyName
-    >             },
-    >             {
-    >                 $Type : 'UI.DataField',
-    >                 Label : 'Supplier',
-    >                 Value : Supplier
-    >             },
-    >             {
-    >                 $Type : 'UI.DataField',
-    >                 Label : 'Email Address',
-    >                 Value : EmailAddress
-    >             }
-    >         ]
-    >     }
-    > );
     > 
     > ```
 

@@ -6,7 +6,7 @@ One OData V4 model instance can only cover one OData service. This section descr
 
 The OData V4 model is primarily designed for OData V4 services. Nevertheless, OData V2 services may be used through an adapter as well. For more information see: [Consuming OData V2 Services with the OData V4 Model](consuming-odata-v2-services-with-the-odata-v4-model-365bdbd.md)
 
-When creating an OData V4 model instance, the only parameter you actually need is a map. This map must contain at least the properties `serviceUrl` and `synchronizationMode`. For more information, see the [sap.ui.model.odata.v4.ODataModel constructor](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataModel/constructor) API documentation in the Demo Kit.
+When creating an OData V4 model instance, the only parameter you actually need is a map. This map must contain at least the `serviceUrl` property. For more information, see the [sap.ui.model.odata.v4.ODataModel constructor](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataModel/constructor) API documentation in the Demo Kit.
 
 **OData V4 model instantiation:**
 
@@ -14,8 +14,7 @@ When creating an OData V4 model instance, the only parameter you actually need i
 
 sap.ui.define(["sap/ui/model/odata/v4/ODataModel"], function (ODataModel) {
     var oModel = new ODataModel({
-        serviceUrl : "/sap/opu/odata4/IWBEP/V4_SAMPLE/default/IWBEP/V4_GW_SAMPLE_BASIC/0001/",
-        synchronizationMode : "None"
+        serviceUrl : "/sap/opu/odata4/IWBEP/V4_SAMPLE/default/IWBEP/V4_GW_SAMPLE_BASIC/0001/"
     });
 });
 ```
@@ -35,8 +34,7 @@ An OData service accepts query options placed in the service URL query part, as 
 
 sap.ui.define(["sap/ui/model/odata/v4/ODataModel"], function (ODataModel) {
     var oModel = new ODataModel({
-    	serviceUrl : "/sap/opu/odata4/IWBEP/V4_SAMPLE/default/IWBEP/V4_GW_SAMPLE_BASIC/0001/?customParam=foo", 
-    	synchronizationMode : "None"
+    	serviceUrl : "/sap/opu/odata4/IWBEP/V4_SAMPLE/default/IWBEP/V4_GW_SAMPLE_BASIC/0001/?customParam=foo"
     });
 });
 ```
@@ -58,7 +56,6 @@ The following code instantiates a model that bundles all update requests in the 
 sap.ui.define(["sap/ui/model/odata/v4/ODataModel"], function (ODataModel) {
     var oModel = new ODataModel({
         serviceUrl : "/sap/opu/odata4/IWBEP/V4_SAMPLE/default/IWBEP/V4_GW_SAMPLE_BASIC/0001/",
-        synchronizationMode : "None",
         updateGroupId : "myAppUpdateGroup"
     });
 });
@@ -89,7 +86,6 @@ The code sample below shows the parts of a [Descriptor for Applications, Compone
             "" : {
                 "dataSource" : "default",
                 "settings" : {
-                    "synchronizationMode" : "None",
                     "updateGroupId" : "myAppUpdateGroup"
                 }
             }
@@ -142,7 +138,6 @@ Sample: Set HTTP header `custom` in manifest.json:
                     "httpHeaders" : {
                         "custom" : "foo"
                     },
-                    "synchronizationMode" : "None",
                      
                 }
             }
@@ -175,6 +170,25 @@ Often, the first request is a POST to $batch and would fail for services requiri
 ### Security token handlers
 
 Some services do not support an "X-CSRF-Token" request header value "Fetch", for example because the "X-CSRF-Token" header value is fixed, known from the beginning, not fetched via the OData service, or does not expire. In other cases, a different header name might be needed. Sometimes it is enough to call [v4.ODataModel\#changeHttpHeaders](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataModel/methods/changeHttpHeaders) early on. At other times you might need to provide your own security token handler. You can do so before the OData model is created via [SAPUI5's "securityTokenHandlers" configuration option](configuration-options-and-url-parameters-91f2d03.md). You can provide a list of functions which are invoked one by one with the model's service URL as the only argument. The first handler which does not return `undefined` wins and is expected to return a `Promise` that resolves with a map of header names and values. This works much like [v4.ODataModel\#changeHttpHeaders](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataModel/methods/changeHttpHeaders), but overriding the "X-CSRF-Token" : "Fetch" pair. This means you either provide your own "X-CSRF-Token" value, or that header is not used at all. Note that expiration is currently only supported for the "X-CSRF-Token" header.
+
+
+
+<a name="loio9613f1f2d88747cab21896f7216afdac__section_RHD"/>
+
+## Response Headers
+
+The OData model processes some of the response headers, namely:
+
+-   `DataServiceVersion` \(only when consuming an OData V2 service\),
+-   `Date`,
+-   `ETag`,
+-   `OData-Version`,
+-   `Preference-Applied`,
+-   `Retry-After`,
+-   `SAP-Messages`,
+-   `X-CSRF-Token`.
+
+Some SAP applications will also require the processing of `SAP-ContextId`, `SAP-Err-Id`, and `SAP-Http-Session-Timeout`. When using cross-origin resource sharing \(CORS\), it is important to add all these headers to the `Access-Control-Expose-Headers` response header.
 
 **Related Information**  
 

@@ -12,19 +12,19 @@ The detail page has to read the ID of the employee from the URL to fetch and dis
 
    
   
-<a name="loiof96d2522a5ca4382a274ae3c6d002ca0__fig_r1j_pst_mr"/>Employee list with navigation option for items
+**Employee list with navigation option for items**
 
  ![](images/Tutorial_Navigation_and_Routing_Step_07a_c797ba8.png "Employee list with navigation option for items") 
 
    
   
-<a name="loiof96d2522a5ca4382a274ae3c6d002ca0__fig_msh_mf3_ns"/>Detail Page for a selected employee
+**Detail Page for a selected employee**
 
  ![](images/Tutorial_Navigation_and_Routing_Step_07b_af68fa9.png "Detail Page for a selected employee") 
 
    
   
-<a name="loiof96d2522a5ca4382a274ae3c6d002ca0__fig_t53_mf3_ns"/>*Not Found* page for an invalid `EmployeeID`
+**Not Found page for an invalid EmployeeID**
 
  ![](images/Tutorial_Navigation_and_Routing_Step_07c_8bec971.png "Not Found page for an invalid
 						EmployeeID") 
@@ -37,7 +37,7 @@ You can view and download all files in the *Samples* in the Demo Kit at [Routing
 
    
   
-<a name="loiof96d2522a5ca4382a274ae3c6d002ca0__fig_p4j_mf3_ns"/>Folder structure for this step
+**Folder structure for this step**
 
  ![](images/Tutorial_Navigation_and_Routing_Step_07d_ad192cd.png "Folder structure for this step") 
 

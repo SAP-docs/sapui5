@@ -23,7 +23,7 @@ This is what the smart chart looks like initially after firing the query:
 
    
   
-<a name="loio0219b115deda45a9ae46d11fdc7e69eb__fig_phs_vrn_4v"/>Initial Look of Smart Chart after Firing Query
+**Initial Look of Smart Chart after Firing Query**
 
  ![](images/Smart_Controls_Tutorial_Step_09a_935f9ed.png "Initial Look of Smart Chart after Firing Query") 
 
@@ -33,7 +33,7 @@ Next to the view management dialog is a button labeled *Jump To*. This button is
 
    
   
-<a name="loio0219b115deda45a9ae46d11fdc7e69eb__fig_tcb_rms_4v"/>Semantic Navigation Feature
+**Semantic Navigation Feature**
 
  ![](images/Smart_Controls_Tutorial_Step_09b_77403c9.png "Semantic Navigation Feature") 
 
@@ -41,7 +41,7 @@ The button at the right-hand side of the toolbar can be used for selecting the c
 
    
   
-<a name="loio0219b115deda45a9ae46d11fdc7e69eb__fig_qss_tns_4v"/>Selection of Chart Type
+**Selection of Chart Type**
 
  ![](images/Smart_Controls_Tutorial_Step_09c_d54fb32.png "Selection of Chart Type") 
 
@@ -49,7 +49,7 @@ The two buttons next to the *Jump To* button can be used to drill up and drill d
 
    
   
-<a name="loio0219b115deda45a9ae46d11fdc7e69eb__fig_vdx_fss_4v"/>Drillup and Drilldown Features
+**Drillup and Drilldown Features**
 
  ![](images/Smart_Controls_Tutorial_Step_09d_8679d39.png "Drillup and Drilldown Features") 
 
@@ -57,7 +57,7 @@ If we set the `showDetailsButton` and `showDrillBreadcrumbs` properties to `true
 
    
   
-<a name="loio0219b115deda45a9ae46d11fdc7e69eb__fig_cm1_zbl_2w"/>Drilldown by Dimensions
+**Drilldown by Dimensions**
 
  ![](images/Smart_Controls_Tutorial_Step_09_-_5_63fed30.png "Drilldown by Dimensions") 
 
@@ -65,7 +65,7 @@ When you drill further down, you can see the breadcrumbs trail for the drilldown
 
    
   
-<a name="loio0219b115deda45a9ae46d11fdc7e69eb__fig_ukj_jqb_fy"/>Further Drilldown
+**Further Drilldown**
 
  ![](images/Smart_Controls_Tutorial_Step_09e_-2_7eb0305.png "Further Drilldown") 
 
@@ -73,7 +73,7 @@ The next button can be used to toggle legend visibility:
 
    
   
-<a name="loio0219b115deda45a9ae46d11fdc7e69eb__fig_jsq_sts_4v"/>Toggle Legend Visibility
+**Toggle Legend Visibility**
 
  ![](images/Smart_Controls_Tutorial_Step_09f_3e8568e.png "Toggle Legend Visibility") 
 
@@ -81,7 +81,7 @@ The two buttons next to this in the toolbar are used for zooming in or out. This
 
    
   
-<a name="loio0219b115deda45a9ae46d11fdc7e69eb__fig_ytc_gws_4v"/>Dialog for Adding Measures and Dimensions
+**Dialog for Adding Measures and Dimensions**
 
  ![](images/Smart_Controls_Tutorial_Step_09g_18889d2.png "Dialog for Adding Measures and Dimensions") 
 

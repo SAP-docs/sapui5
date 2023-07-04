@@ -10,7 +10,7 @@ Sometimes the predefined types of SAPUI5 are not flexible enough and you want to
 
    
   
-<a name="loioc98d57347ba444c6945f596584d2db45__fig_r1j_pst_mr"/>The price is now formatted according to its number
+**The price is now formatted according to its number**
 
  ![](images/SAPUI5_Walkthrough_Step_22_2ff81a7.png "The price is now formatted according to its number") 
 

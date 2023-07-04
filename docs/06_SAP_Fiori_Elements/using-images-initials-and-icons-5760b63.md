@@ -5,7 +5,7 @@
 SAP Fiori elements supports the use of images, initials, and icons.
 
 > ### Note:  
-> You can use the SAPUI5 Visual Editor to replace the default icon by any SAP icon.
+> For SAP Fiori elements for OData V2based applications, you can change the display shape using the Page Editor of SAP Fiori tools. For more information, see [Configure Page Elements](https://help.sap.com/docs/SAP_FIORI_tools/17d50220bcd848aa854c9c182d65b699/047507c86afa4e96bb3d284adb9f4726.html).
 
 The system follows this logic for choosing a display option for an object:
 
