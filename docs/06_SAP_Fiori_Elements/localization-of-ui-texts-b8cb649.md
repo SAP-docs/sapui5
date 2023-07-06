@@ -2069,7 +2069,7 @@ SAP Fiori generator automatically generates the following initial folders and fi
 The required folder structure to the resource model appears as shown here. You can create it as required by your application structure and the texts that need adaptation. Since the `manifest.json` file also refers to the title and description of the app, there is a general `i18n.properties` file on the top level:
 
 -   `i18n/i18n.properties`
--   `i18n/ListReport/<entitySet>/POHeaders/i18n.properties`
+-   `i18n/ListReport/<entitySet>/i18n.properties`
 -   `i18n/ObjectPage/<entitySet>/i18n.properties`
 -   `i18n/ObjectPage/<subEntitySet>/i18n.properties`
 
@@ -2102,6 +2102,7 @@ Example:
         "i18n|sap.suite.ui.generic.template.ObjectPage|POItems": {
                     "type": "sap.ui.model.resource.ResourceModel",
                     "uri": "i18n/ObjectPage/POItems/i18n.properties"
+              },
 
 ```
 
