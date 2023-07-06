@@ -28,7 +28,7 @@ Perform the following steps to replace the standard UI texts:
 
 
 
-### Overriding Texts from Annotations
+## Overriding Texts from Annotations
 
 You can override the texts that come from annotations. To do so, the annotation must refer to the i18n key that is used in the application’s i18n file:
 
