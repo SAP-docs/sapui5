@@ -10,7 +10,7 @@ The `Chart` building block provides an easy way to instantiate a chart based on 
 
 ## Usage
 
-Make sure that the entity set referred for the `Chart` building block supports aggregation, as described under *Enabling Aggregation in the Back End* in the section *Additional Features in SAP Fiori Elements for OData V4* in [Configuring Charts](configuring-charts-653ed0f.md).
+Ensure that the entity set referred for the `Chart` building block supports aggregation. For more information , see the subsection *Enabling Aggregation in the Back End* in [Configuring Charts](configuring-charts-653ed0f.md).
 
 > ### Sample Code:  
 > `Chart` Building Block

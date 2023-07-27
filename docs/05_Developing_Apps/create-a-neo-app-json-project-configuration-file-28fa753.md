@@ -28,7 +28,7 @@ SAP Web IDE reads these settings automatically when running the app. You can see
 
 ## Procedure
 
-1.  Select the *New File* icon and enter ***neo-app.json*** as the file name.
+1.  Select the *New File* icon and enter `neo-app.json` as the file name.
 2.  Open the newly created file from the tree structure on the left side of the screen.
 3.  Paste the following code in the `neo-app.json` and select *Save*:
 

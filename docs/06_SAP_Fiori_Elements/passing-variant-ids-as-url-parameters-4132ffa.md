@@ -14,27 +14,27 @@ You can choose to pass a page variant or a control variant using these parameter
 -   `sap-ui-fe-variant-id`: Page variant ID you want to set
 
     > ### Example:  
-    > https://abc.com/ui\#SalesOrder-analyze\_deliv\_perf?sap-ui-fe-variant-id=***id\_1542011587281\_980\_page***
+    > https://abc.com/ui\#SalesOrder-analyze\_deliv\_perf?sap-ui-fe-variant-id=`id_1542011587281_980_page`
 
 -   `sap-ui-fe-filterbar-variant-id`: Parameter for the filter bar control variant
 
     > ### Example:  
-    > https://abc.com/ui\#SalesOrder-analyze\_deliv\_perf?sap-ui-fe-filterbar-variant-id=***id\_1542011587281\_230\_page***
+    > https://abc.com/ui\#SalesOrder-analyze\_deliv\_perf?sap-ui-fe-filterbar-variant-id=`id_1542011587281_230_page`
 
 -   `sap-ui-fe-chart-variant-id`: Parameter for the chart control variant
 
     > ### Example:  
-    > https://abc.com/ui\#SalesOrder-analyze\_deliv\_perf?sap-ui-fe-chart-variant-id=***id\_1574157179885\_675\_chart***
+    > https://abc.com/ui\#SalesOrder-analyze\_deliv\_perf?sap-ui-fe-chart-variant-id=`id_1574157179885_675_chart`
 
 -   `sap-ui-fe-table-variant-id`: Parameter for the table control variant
 
     > ### Example:  
-    > https://abc.com/ui\#SalesOrder-analyze\_deliv\_perf?sap-ui-fe-table-variant-id=***id\_1574157179595\_331\_table***
+    > https://abc.com/ui\#SalesOrder-analyze\_deliv\_perf?sap-ui-fe-table-variant-id=`id_1574157179595_331_table`
 
     When both the chart variant and table variant are passed:
 
     > ### Example:  
-    > https:/abc.com/ui\#SalesOrder-analyze\_deliv\_perf?sap-ui-fe-chart-variant-id=***id\_1574157179885\_675\_chart***&sap-ui-fe-table-variant-id=***id\_1574157179595\_331\_table***
+    > https:/abc.com/ui\#SalesOrder-analyze\_deliv\_perf?sap-ui-fe-chart-variant-id=`id_1574157179885_675_chart`&sap-ui-fe-table-variant-id=`id_1574157179595_331_table`
 
 
 > ### Note:  

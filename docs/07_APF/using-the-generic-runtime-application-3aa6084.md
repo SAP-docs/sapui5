@@ -9,7 +9,7 @@ The generic application already contains important elements that are required fo
 To create a configuration and run it using the generic runtime application, proceed as follows:
 
 1.  Open the APF Configuration Modeler
-2.  Click the + icon to create a new application and enter a description. The *Semantic Object* field is already filled with ***FioriApplication***. Save your application.
+2.  Click the + icon to create a new application and enter a description. The *Semantic Object* field is already filled with `FioriApplication`. Save your application.
 
     > ### Note:  
     > This step is not required if you use an already existing APF application and just create an additional configuration.
@@ -44,7 +44,7 @@ The following settings are relevant when you use the generic APF runtime applica
 
 -   You must activate the service `af_apf_launch` using transaction `SICF` in the Fiori frontend server system.
 
--   If you use BW OData queries, set the URL parameter `sap-apf-filter-reduction` to ***true***.
+-   If you use BW OData queries, set the URL parameter `sap-apf-filter-reduction` to `true`.
 
 
 **Related Information**  

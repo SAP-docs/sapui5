@@ -2,7 +2,7 @@
 
 # Extending SAP Fiori Elements-Based Apps
 
-You can use app extensions to extend your app.
+App extensions can be used to extend your app.
 
 These are made by developers during the creation of an SAP Fiori elements-based app, using framework extension points provided by SAP Fiori elements. The extensions are made, for example, using manifest changes or SAPUI5 extension points, depending on the floorplan. For more information, see [Extending Generated Apps Using App Extensions](extending-generated-apps-using-app-extensions-340cdb2.md).
 

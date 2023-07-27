@@ -175,8 +175,6 @@ Indicates that the API is not meant for use outside of SAPUI5 framework developm
 
 The API is not meant to be used outside its own class, module, package, or library.
 
-We recommend to use the underscore character "`_`" as a prefix for technical names of private entities.
-
 
 
 </td>
@@ -219,20 +217,14 @@ Indicates that the API is only meant for certain stakeholders within SAPUI5 fram
 </td>
 <td valign="top">
 
-In the JSDoc describing the API, its type tag is followed by a space- or comma-separated list of stakeholders, typically package names like `sap.ui.core`, like this:
-
-`@ui5-restricted package_name_1, package_name_2`
+Any potential new usage should be discussed with the owner first, then the stakeholder information should be updated, and only then should the API be used.
 
 
 
 </td>
 <td valign="top">
 
-`@ui5-restricted sap.ui.core, sap.m, sap.viz`
-
-in
-
-[`Control.prototype.setBlocked`](https://github.com/SAP/openui5/blob/c67c74d5de985904b50fb250b0d335c08b275025/src/sap.ui.core/src/sap/ui/core/Control.js#L944)
+ [`Control.prototype.setBlocked`](https://github.com/SAP/openui5/blob/c67c74d5de985904b50fb250b0d335c08b275025/src/sap.ui.core/src/sap/ui/core/Control.js#L944) 
 
 
 
@@ -284,11 +276,8 @@ Deprecated, replaced by `ui5-restricted`
 </tr>
 </table>
 
-1\) Unless the API is tagged as `@experimental`.  
- 2\) There’s no compatibility promise for `ui5-restricted` APIs. However, before introducing incompatible changes the owner is expected to announce them to the listed stakeholders, so that all affected parties can cooperate to achieve a smooth migration.  
- 3\) Any potential new usage should be discussed with the owner first, then the stakeholder information should be updated, and only then should the API be used.
-
-If more than one of the above tags is used, the last one wins.
+1\) Unless the API is experimental.  
+ 2\) There’s no compatibility promise for `ui5-restricted` APIs. However, before introducing incompatible changes the owner is expected to announce them to the listed stakeholders, so that all affected parties can cooperate to achieve a smooth migration.
 
 > ### Note:  
 > The SAPUI5 documentation only includes APIs of categories `public` and `protected`.

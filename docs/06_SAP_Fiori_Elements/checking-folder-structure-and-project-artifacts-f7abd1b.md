@@ -2,9 +2,14 @@
 
 # Checking Folder Structure and Project Artifacts
 
-Once you've applied the template, the generated application is ready to run.
+Once the generation is complete and the node modules have been installed, the application is ready to run.
 
-The new app or component reuses the views and controllers from `sap.suite.ui.generic.template`. You can find the destinations in the `neo-app.json` file. The resource links and route definitions for navigation are in the app descriptor file \(`manifest.json`\).
+> ### Note:  
+> This topic is currently only applicable to SAP Fiori elements for OData V2.
+
+The new app or component reuses the views and controllers from `sap.suite.ui.generic.template`. The resource links and route definitions for navigation are in the app descriptor file \(`manifest.json`\). You can find the destination configuration for preview in the `ui5*.yaml` files.
+
+You can use the run configurations \(palette command `Fiori: Open Run Configurations`\) to adapt the destinations for preview
 
 The following artifacts are generated:
 
@@ -12,7 +17,9 @@ The following artifacts are generated:
   
 **Folder Structure for List Report and Object Page**
 
- ![](images/Smart_Templates_Folder_Structure_aeab6b5.png "Folder Structure for List Report and Object Page") 
+ ![](images/Folder_Structure_for_List_Report_and_Object_Page_c33e8a1.png "Folder Structure for List Report and Object Page") 
+
+For more information on generated files, see the **Projects** section of [https://help.sap.com/docs/SAP\_FIORI\_tools/17d50220bcd848aa854c9c182d65b699/db44d45051794d778f1dd50def0fa267.html](https://help.sap.com/docs/SAP_FIORI_tools/17d50220bcd848aa854c9c182d65b699/db44d45051794d778f1dd50def0fa267.html)
 
 
 
@@ -22,8 +29,6 @@ After you generate the application, the SAPUI5 component `Component.js` that rep
 
 > ### Caution:  
 > Don't edit or change this file.
-
-The generated app uses the reuse component controller by referencing a template that uses transactional processing including draft-save. Similarly, the generated app uses the generic view in the template's folder, which is based on the [XML templating](../04_Essentials/xml-templating-5ee619f.md) approach.
 
 
 
@@ -35,49 +40,10 @@ Here, the annotations are read using the catalog service of SAP Gateway. This is
 
 The local resources `localService/metadata.xml` and `localService/SEPMRA_PROD_MAN_ANNO_MDL.xml` are generated for local tests that want to simulate back-end access.
 
-Besides, the annotations that are retrieved from the back-end system, the local resource `annotations.xml` plays a role at runtime, as this file contains the facet descriptions for the object page. This is where you've to maintain the labels for the different facets.
+If the local `annotations.xml` is defined, it takes the precedence over the annotations from back-end.
 
 We recommend that you use i18n properties, for example, to maintain the texts in the related `i18n` resource file. For more information, see [Localization of UI Texts](localization-of-ui-texts-b8cb649.md).
 
 > ### Note:  
-> -   You can use the annotation modeler to maintain `UI.facets`.
-> 
->     For more information, search for *Annotation Modeler* in the documentation for SAP Web IDE on the SAP Help Portal at [https://help.sap.com/viewer/p/SAP\_Web\_IDE](https://help.sap.com/viewer/p/SAP_Web_IDE).
-> 
->     We recommend that you use only the manifest properties specified there.
-> 
-> -   You can define the subtitle and the application icon to display on the shell bar navigation menu in the `manifest.json` file. For more information, see [Descriptor for Applications, Components, and Libraries \(manifest.json\)](../04_Essentials/descriptor-for-applications-components-and-libraries-manifest-json-be0cf40.md).
-
-
-
-## Neo-app.json
-
-You can find the routing information in the `neoapp.json` file that is based on the destination you've chosen:
-
-```
-{
-  "welcomeFile": "index.html",
-  "routes": [
-    {
-      "path": "/sap/opu/odata",
-      "target": {
-        "type": "destination",
-        "name": "<DestinationName>",
-        "entryPath": "/sap/opu/odata"
-      },
-      "description": "<YourDescription>"
-    },
-    {
-      "path": "/sap/bc/lrep",
-      "target": {
-        "type": "destination",
-        "name": "<DestinationName>",
-        "entryPath": "/sap/bc/lrep"
-      },
-      "description": "<DestinationName>"
-    },
-
-```
-
-You can adapt the destinations in order to address a different back-end system. This option is also available under *Run Configurations* \> *Advanced Settings*.
+> You can define the subtitle and the application icon to display on the shell bar navigation menu in the `manifest.json` file. For more information, see [Descriptor for Applications, Components, and Libraries \(manifest.json\)](../04_Essentials/descriptor-for-applications-components-and-libraries-manifest-json-be0cf40.md).
 

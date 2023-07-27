@@ -5,7 +5,7 @@
 The `sap.ui.mdc` library contains composite, metadata-driven controls that assemble UI elements with predefined user experience and various functionalities. The controls can be used as a basis for scalable application development and can be implemented for use with any SAPUI5 model and data protocol.
 
 > ### Note:  
-> In the context of OData V4, the `sap.ui.mdc` library can only be used with SAP Fiori elements.
+> For SAPUI5 applications for OData V4, SAP Fiori elements provides a flexible programming model based on the `sap.ui.mdc` library. It offers building blocks that can be used without additional integration effort. For more information, see [Building Blocks](../06_SAP_Fiori_Elements/building-blocks-24c1304.md). 
 
 > ### Note:  
 > The following sections only provide additional information for some of the controls. For a complete list of all controls and their documentation, see the [API Reference](https://ui5.sap.com/#/api) and the [Samples](https://ui5.sap.com/#/controls). 

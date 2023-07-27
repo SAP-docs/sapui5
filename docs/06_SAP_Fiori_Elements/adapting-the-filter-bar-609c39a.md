@@ -164,7 +164,8 @@ If the field groups don't contain all properties of the entity, the remaining pr
 
 ## Additional Features in SAP Fiori Elements for OData V2
 
-The below video shows the step-by-step procedure for adding a default filter to the filter bar: 
+> ### Note:  
+> We've removed videos showing step-by-step procedures using SAP Web IDE, which SAP no longer actively supports. You can still access the video using an older version of this document.
 
 To set default filter value, refer [Configuring Default Filter Values](configuring-default-filter-values-f27ad7b.md).
 

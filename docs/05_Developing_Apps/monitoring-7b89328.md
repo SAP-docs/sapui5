@@ -37,7 +37,7 @@ Set up alerts for the report by using the data collection method `CCMS_BATCH_MON
 > ### Note:  
 > This monitoring refers only to the execution of the job itself. It does not detect any application log entries with problems created by the report.
 
-For more information, search for ***Monitoring Jobs with the Alert Monitor*** and ***Setting Up the Monitoring of Jobs with the Alert Monitor*** in the documentation for your [SAP NetWeaver](https://help.sap.com/viewer/p/SAP_NETWEAVER) version on the SAP Help Portal.
+For more information, search for `Monitoring Jobs with the Alert Monitor` and `Setting Up the Monitoring of Jobs with the Alert Monitor` in the documentation for your [SAP NetWeaver](https://help.sap.com/viewer/p/SAP_NETWEAVER) version on the SAP Help Portal.
 
 
 
@@ -55,7 +55,7 @@ Calculation results
 
 Build CCMS methods that evaluate the application logs for the object `/UI5/APPIDX` and the subobjects `GENERAL`, `UI5REP`, and `UI5COMP`.
 
-For more information, search for ***Creating a Data Supplier for the CCMS Alert Monitor*** and ***Application Log \(BC-SRV-BAL\)*** in the documentation for your [SAP NetWeaver](https://help.sap.com/viewer/p/SAP_NETWEAVER) version on the SAP Help Portal.
+For more information, search for `Creating a Data Supplier for the CCMS Alert Monitor` and `Application Log (BC-SRV-BAL)` in the documentation for your [SAP NetWeaver](https://help.sap.com/viewer/p/SAP_NETWEAVER) version on the SAP Help Portal.
 
 
 

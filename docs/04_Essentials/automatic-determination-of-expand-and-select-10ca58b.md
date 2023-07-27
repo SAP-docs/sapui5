@@ -13,11 +13,13 @@ You switch on auto-$expand/$select by setting the flag `autoExpandSelect` during
 
 It is still possible to specify `$expand` and `$select` in the binding parameters. This is useful if you need to access properties which are not bound on the UI. When auto-$expand/$select is switched on, you may add any path to a simple or structured property to `$select`, even if this path contains navigation properties. The binding converts this `$select` to a `$expand` if necessary. It is not possible to change `$expand` and `$select` via the binding's [changeParameters](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataListBinding/methods/changeParameters) API. You don't have to specify **key properties** in the binding's `$select` parameter if they aren't bound on the UI. These are selected automatically because keys are required in many scenarios, for example, to compute the edit-URL to update an entity.
 
-In auto-$expand/$select mode, a parent binding aggregates the binding paths and query options of its child bindings in its `$select` and `$expand` options, so that they do not send own data services requests. This aggregation is only possible in the following cases:
+In auto-$expand/$select mode, a parent binding aggregates the binding paths and query options of its child bindings in its `$select` and `$expand` options, so that they do not send own data services requests. This aggregation works as follows:
 
-1.  If the request for the parent binding is **not sent** and the child binding is a list or context binding which has only OData system query options in its parameters, or is a property binding.
+1.  If the request for the parent binding is **not sent** and the child binding is a list or context binding which has only OData system query options in its parameters, or is a property binding, the `$expand` and `$select` of the parent binding is extended to include the required properties of the child binding.
 
-2.  If the request for the parent binding is **already sent** and the request already contains the aggregation for the child binding in its `$expand` and `$select`.
+2.  If the request for the parent binding is **already sent** and the request already contains the aggregation for the child binding in its `$expand` and `$select`, the child binding's data is requested through the parent binding as in **1**.
+
+3.  If the request for the parent binding is already sent but the request does not contain the aggregation for the child binding in its `$expand` and `$select`, and the additional binding paths do not contain collection-valued navigation properties, the parent binding will send an additional request for the missing data. In case of a list binding, these additional properties are not requested in normal list requests, e.g. when scrolling down in the table, but may be reread using `sap.ui.model.odata.v4.Context#requestSideEffects`.
 
 
 In other cases the child binding is not aggregated and sends an own request.

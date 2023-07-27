@@ -22,6 +22,9 @@ Depending on the platform your SAPUI5 apps run on, different browsers in differe
 
 The following tables give a general overview of the browsers, platforms, and reference devices supported by the main SAPUI5 libraries. There are certain known device-browser combinations that lead to visual degradations. For more information, see [Visual Degradations](visual-degradations-f08f296.md).
 
+> ### Note:  
+> Browsers are constantly evolving across various devices. Browser upgrades may introduce changes that are not backward compatible and can affect the behavior of SAPUI5. SAP has no control over these upgrades and doesn’t provide any warranty regarding the features or qualities of these browsers.
+
 
 
 <a name="loio74b59efa0eef48988d3b716bd0ecc933__section_bgw_kns_hnb"/>

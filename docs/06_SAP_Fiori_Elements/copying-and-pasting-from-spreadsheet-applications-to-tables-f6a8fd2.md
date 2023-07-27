@@ -61,7 +61,7 @@ In SAP Fiori elements for OData V2, you need to fulfill these prerequisites to u
 
 -   The app is draft-enabled.
 
--   Inline creation is enabled for the object page table. For more information, see [Enabling Inline Creation Mode or Empty Rows Mode for Table Entries](enabling-inline-creation-mode-or-empty-rows-mode-for-table-entries-cfb04f0.md).
+-   Inline creation is enabled for the object page table. For more information, see [Enabling Inline Creation Mode or Empty Row Mode for Table Entries](enabling-inline-creation-mode-or-empty-row-mode-for-table-entries-cfb04f0.md).
 
 -   The create action is supported in the object page table.
 
@@ -83,7 +83,7 @@ Sample data:
 
 ## Additional Features in SAP Fiori Elements for OData V4
 
-The paste function is enabled by default on the object page if the creation mode is set to inline or empty rows. For more information, see [Enabling Inline Creation Mode or Empty Rows Mode for Table Entries](enabling-inline-creation-mode-or-empty-rows-mode-for-table-entries-cfb04f0.md).
+The paste function is enabled by default on the object page if the creation mode is set to inline or empty row. For more information, see [Enabling Inline Creation Mode or Empty Row Mode for Table Entries](enabling-inline-creation-mode-or-empty-row-mode-for-table-entries-cfb04f0.md).
 
  ![](images/Pasting_in_Excel_with_Inline_Actions_8173bd4.png) 
 

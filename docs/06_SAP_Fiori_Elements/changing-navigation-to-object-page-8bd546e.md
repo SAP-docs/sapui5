@@ -113,16 +113,17 @@ You can define an external navigation using intent-based navigation in the `mani
 > ```json
 > {
 > …
-> "sap.app": {
->        "crossNavigation": {
->            "outbounds": {
->                "ProductDetails": {
->                    "semanticObject": "ProductDetails",
->                    "action": "manage"
->                }
->            }
->        }
-> },
+> …
+>  "sap.app": {
+>         "crossNavigation": {
+>             "outbounds": {
+>                 "ProductDetails": {
+>                     "semanticObject": "ProductDetails",
+>                     "action": "manage"
+>                 }
+>             }
+>         }
+>  },
 > "sap.ui5": {
 >     ....
 >     ....

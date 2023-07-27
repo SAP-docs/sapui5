@@ -116,7 +116,7 @@ The following sections differentiate the data you must enter depending on the us
 
 ## Using the SAP Smart Business Modeler Apps for SAP Business Suite powered by SAP HANA
 
-To configure a KPI tile for an APF-based application, open the *Configure KPI Tiles* app, go to the *Navigation* area and select the *Other Drill-Down* radio button. Select ***Analysis Path Framework*** as drill-down.
+To configure a KPI tile for an APF-based application, open the *Configure KPI Tiles* app, go to the *Navigation* area and select the *Other Drill-Down* radio button. Select `Analysis Path Framework` as drill-down.
 
 Depending on your use case, enter the following data:
 
@@ -321,7 +321,7 @@ By clicking *Save and Configure Drill-Down*, you can navigate to the APF Configu
 > ### Note:  
 > The KPI Modeler for SAP S/4HANA may also be used on SAP Business Suite powered by SAP HANA.
 
-To configure a KPI tile for an APF-based application in the SAP Smart Business modeler apps for SAP S/4HANA, open the *Create Tile* app and select your tile or create a new one. In the *Navigation* area, go to the *Select Drill-Down* field and select ***Analysis Path Framework***.
+To configure a KPI tile for an APF-based application in the SAP Smart Business modeler apps for SAP S/4HANA, open the *Create Tile* app and select your tile or create a new one. In the *Navigation* area, go to the *Select Drill-Down* field and select `Analysis Path Framework`.
 
 Depending on your use case, enter the following data:
 
@@ -374,7 +374,7 @@ As defined in target mapping of the application
 </td>
 <td valign="top">
 
- ***FioriApplication*** \(automatically filled based on selected configuration\)
+ `FioriApplication` \(automatically filled based on selected configuration\)
 
 
 
@@ -404,7 +404,7 @@ As defined in target mapping of the application
 </td>
 <td valign="top">
 
- ***executeAPFConfigurationS4HANA*** or ***executeAPFConfiguration***\(automatically filled based on selected configuration.\)
+ `executeAPFConfigurationS4HANA` or `executeAPFConfiguration`\(automatically filled based on selected configuration.\)
 
 
 

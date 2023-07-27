@@ -408,21 +408,21 @@ Concatenated IDs
 <tr>
 <td valign="top" rowspan="4">
 
- ***myProducts*** 
+ `myProducts` 
 
 
 
 </td>
 <td valign="top" rowspan="2">
 
- ***worklist*** 
+ `worklist` 
 
 
 
 </td>
 <td valign="top">
 
- ***page*** 
+ `page` 
 
 
 
@@ -438,7 +438,7 @@ Concatenated IDs
 <tr>
 <td valign="top">
 
- ***table*** 
+ `table` 
 
 
 
@@ -454,14 +454,14 @@ Concatenated IDs
 <tr>
 <td valign="top" rowspan="2">
 
- ***product*** 
+ `product` 
 
 
 
 </td>
 <td valign="top">
 
- ***page*** 
+ `page` 
 
 
 
@@ -477,7 +477,7 @@ Concatenated IDs
 <tr>
 <td valign="top">
 
- ***objectHeader*** 
+ `objectHeader` 
 
 
 
@@ -505,7 +505,7 @@ With the Support Assistant, you can analyze whether there are any issues with th
 3.  In the *Technical Information Dialog*, choose *Activate Support Assistant*.
 4.  In the table on the left, deselect all rules.
 5.  Click on the *Rules* column.
-6.  Filter for ***stable*** and choose *Enter*.
+6.  Filter for `stable` and choose *Enter*.
 7.  Select the *Stable control IDs are required for SAPUI5 flexibility services* rule.
 8.  Choose *Analyze*.
 

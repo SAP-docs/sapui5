@@ -16,9 +16,9 @@ You can implement extension functions as part of a UI adaptation project by usin
 > ### Note:  
 > This procedure is relevant only for list reports, object pages, overview pages, and analytical list pages.
 > 
-> The flexible column layout is not supported by the SAP Business Application Studio.
+> The flexible column layout is not supported by the Visual Editor.
 
-You can try the adaptation extensions by creating an adaptation projects described in [Extending an SAP Fiori Application](https://help.sap.com/docs/bas/developing-sap-fiori-app-in-sap-business-application-studio/extending-sap-fiori-application).
+You can try the adaptation extensions by creating an adaptation project described in [Extending an SAP Fiori Application](https://help.sap.com/docs/bas/developing-sap-fiori-app-in-sap-business-application-studio/extending-sap-fiori-application).
 
 You can use adaptation extensions for these extension points:
 

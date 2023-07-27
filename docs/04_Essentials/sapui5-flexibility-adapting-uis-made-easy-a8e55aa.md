@@ -60,11 +60,11 @@ They just start the personalization mode and use intuitive WYSIWYG functions to 
 For the personalization feature to be available on SAP Fiori launchpad on ABAP or on SAP BTP Portal, the app needs to be assigned to one of the user's roles.
 
 > ### Note:  
-> For more information, open the documentation for *SAP Fiori Launchpad in SAP NetWeaver AS for ABAP 7.52 with SAP\_UI 752* on the [SAP Fiori Launchpad](https://help.sap.com/viewer/product/SAP_FIORI_LAUNCHPAD/EXTERNAL/en-US) overview page, and search for ***Enabling Personalization of Object Pages \(Experimental\)***
+> For more information, open the documentation for *SAP Fiori Launchpad in SAP NetWeaver AS for ABAP 7.52 with SAP\_UI 752* on the [SAP Fiori Launchpad](https://help.sap.com/viewer/product/SAP_FIORI_LAUNCHPAD/EXTERNAL/en-US) overview page, and search for `Enabling Personalization of Object Pages (Experimental)`
 
 ![Example of adding a section](images/UI5_Flex_-_Personalization_2ad8264.gif)
 
-For more information about personalizing object pages in SAP Fiori apps using SAPUI5 flexibility, open the [SAP Fiori Launchpad](https://help.sap.com/viewer/product/SAP_FIORI_LAUNCHPAD/EXTERNAL/en-US) product page. Open the documentation for your product version and search for ***Personalizing Apps \(Experimental\)***.
+For more information about personalizing object pages in SAP Fiori apps using SAPUI5 flexibility, open the [SAP Fiori Launchpad](https://help.sap.com/viewer/product/SAP_FIORI_LAUNCHPAD/EXTERNAL/en-US) product page. Open the documentation for your product version and search for `Personalizing Apps (Experimental)`.
 
 
 
@@ -72,9 +72,9 @@ For more information about personalizing object pages in SAP Fiori apps using SA
 
 Here's a typical scenario: A team lead who has business knowledge, but probably no technical or development skills, wants to adapt an app for all users of the app. In the context of SAPUI5 flexibility, we call this team lead a *key user*. Let's assume, the users would need to see the supplier number in addition. Using the *key user adaptation* feature of SAPUI5 flexibility, the key user just starts the adaptation mode and changes the user interface using intuitive WYSIWYG functions. So, for example, it's very easy to rearrange UI elements using drag and drop or to add fields to the user interface. The supplier number would be added in no time. After releasing the adapted version of the app, it's available for all users working with the app.Depending on your platform, you can even save the adapted app as a separate app variant.
 
-For more information about adapting the user interface of SAP Fiori apps using the key user adaptation feature of SAPUI5 flexibility, open the [SAP Fiori Launchpad](https://help.sap.com/viewer/product/SAP_FIORI_LAUNCHPAD/EXTERNAL/en-US) product page. Open the documentation for your product version and search for ***Adapting SAP Fiori UIs at Runtime***.
+For more information about adapting the user interface of SAP Fiori apps using the key user adaptation feature of SAPUI5 flexibility, open the [SAP Fiori Launchpad](https://help.sap.com/viewer/product/SAP_FIORI_LAUNCHPAD/EXTERNAL/en-US) product page. Open the documentation for your product version and search for `Adapting SAP Fiori UIs at Runtime`.
 
-Administrators have to enable key users to be able to use key user adaptation. For more information, open the [SAP Fiori Launchpad](https://help.sap.com/viewer/product/SAP_FIORI_LAUNCHPAD/EXTERNAL/en-US) product page. Open the documentation for your product version and search for ***Enabling UI Adaptation at Runtime***. If you use SAP BTP, you can find the relevant information here: [Enabling Key User Adaptation](https://help.sap.com/viewer/8422cb487c2146999a2a7dab9cc85cf7/Cloud/en-US/f7f671f6c26348d7a662c2c3d120202d.html).
+Administrators have to enable key users to be able to use key user adaptation. For more information, open the [SAP Fiori Launchpad](https://help.sap.com/viewer/product/SAP_FIORI_LAUNCHPAD/EXTERNAL/en-US) product page. Open the documentation for your product version and search for `Enabling UI Adaptation at Runtime`. If you use SAP BTP, you can find the relevant information here: [Enabling Key User Adaptation](https://help.sap.com/viewer/8422cb487c2146999a2a7dab9cc85cf7/Cloud/en-US/f7f671f6c26348d7a662c2c3d120202d.html).
 
 
 

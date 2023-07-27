@@ -27,10 +27,8 @@ Make the following setting:
 > 
 > ```
 
-The *Auto-hide*
-
 > ### Note:  
-> Ensure that the chart context dimensions are set as visible columns in the table for optimal accuracy of highlights. feature is displayed in the hybrid view \(chart and table\). When the feature is turned off, the table records that are not affected by the chart selection are also displayed in the table. If the feature is turned on, then only the records that are affected by the chart selection \(for example, only the highlighted records\) are displayed in the table. In this case, chart selection acts as an additional filter. The table records that match the selected chart context are highlighted.
+> Ensure that the chart context dimensions are set as visible columns in the table for optimal accuracy of highlights. The *auto-hide* feature is displayed in the hybrid view \(chart and table\). When the feature is turned off, the table records that are not affected by the chart selection are also displayed in the table. If the feature is turned on, then only the records that are affected by the chart selection \(for example, only the highlighted records\) are displayed in the table. In this case, chart selection acts as an additional filter. The table records that match the selected chart context are highlighted.
 
 > ### Tip:  
 > Note that the hybrid view is available in laptops with a screen height that is larger than 900px.

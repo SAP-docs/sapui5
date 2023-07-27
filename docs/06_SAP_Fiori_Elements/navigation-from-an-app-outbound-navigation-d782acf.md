@@ -108,7 +108,9 @@ To enable intent-based navigation, you must associate a semantic object. Navigat
 
     To use a specific property that is always shown as a link in your application, you must annotate the property with a semantic object. Wherever the property is used as a `DataField`, it is always rendered as a link.
 
-    When a user chooses the link, and only one navigation target is found, direct navigation to the target is triggered. If more than one target is found, the system displays a popover containing some text and links to the targets for the user to choose from. You can enhance the content of this popover and display a quick view containing more information about the navigation target. For more information, see [Enabling Quick Views for Link Navigation](enabling-quick-views-for-link-navigation-307ced1.md).
+    When a user chooses the link, and only one navigation target is found, direct navigation to the target is triggered. If more than one target is found, the system displays a popover containing some text and links to the targets for the user to choose from. The user can hide unwanted semantic object actions from the popover using `SemanticObjectUnavailableActions` annotation. The user can also annotate a property using multiple semantic objects. For more information, see [https://ui5.sap.com/\#/topic/f638884d0d624ad8a243f4005f8e9972](https://ui5.sap.com/#/topic/f638884d0d624ad8a243f4005f8e9972).
+
+    You can enhance the content of this popover and display a quick view containing more information about the navigation target. For more information, see [Enabling Quick Views for Link Navigation](enabling-quick-views-for-link-navigation-307ced1.md).
 
     > ### Sample Code:  
     > XML Annotation
@@ -273,7 +275,7 @@ If `RequiresContext` is true, then the button is disabled until a selection is m
 > XML Annotation
 > 
 > ```xml
-> <<Record Type="UI.DataFieldForIntentBasedNavigation">
+> <Record Type="UI.DataFieldForIntentBasedNavigation">
 >    <PropertyValue Property="SemanticObject" String="EPMProduct"/>
 >    <PropertyValue Property="Action" String="manage_st"/>
 >    <PropertyValue Property="Label" String="IBNWithContext"/>

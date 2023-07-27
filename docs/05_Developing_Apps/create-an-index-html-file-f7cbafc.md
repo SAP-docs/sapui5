@@ -7,7 +7,7 @@ A minimalistic `index.html` file is needed to test the project configuration. Th
 > ### Caution:  
 > SAP Web IDE is no longer available via SAP Business Technology Platform trial accounts. Any references to SAP Web IDE in this documentation are only relevant for you if you have access to SAP Web IDE through a productive SAP BTP account. Please consider SAP Business Application Studio as an alternative. See [App Development Using SAP Business Application Studio](app-development-using-sap-business-application-studio-6bbad66.md).
 
-1.  Choose the *New Folder* icon in the header toolbar and enter ***src*** as the folder name.
+1.  Choose the *New Folder* icon in the header toolbar and enter `src` as the folder name.
 2.  Select the newly created folder and create a new `index.html` file inside it by choosing the *New File* icon.
 3.  Paste the following code in the newly created `index.html` file and select *Save*:
 

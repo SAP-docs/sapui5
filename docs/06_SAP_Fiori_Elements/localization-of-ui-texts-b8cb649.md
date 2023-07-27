@@ -26,8 +26,6 @@ Perform the following steps to replace the standard UI texts:
 
 
 
-
-
 ## Overriding Texts from Annotations
 
 You can override the texts that come from annotations. To do so, the annotation must refer to the i18n key that is used in the application’s i18n file:
@@ -2102,7 +2100,6 @@ Example:
         "i18n|sap.suite.ui.generic.template.ObjectPage|POItems": {
                     "type": "sap.ui.model.resource.ResourceModel",
                     "uri": "i18n/ObjectPage/POItems/i18n.properties"
-              },
 
 ```
 
@@ -4346,30 +4343,20 @@ Applications should overwrite the default text with the concrete object.
 <tr>
 <td valign="top">
 
- `OBJECTPAGESTATE_ISSUE` 
+
+
+</td>
+<td valign="top">
 
 
 
 </td>
 <td valign="top">
 
-This object contains issues
-
-
-
-</td>
-<td valign="top">
-
-Error message text used in the message strip of an object page.
-
 
 
 </td>
 <td valign="top">
-
-Applications should overwrite the default text and replace "object" with their concrete object.
-
-Example: *The sales order contains issues.*
 
 
 
@@ -4378,14 +4365,16 @@ Example: *The sales order contains issues.*
 <tr>
 <td valign="top">
 
- `OBJECTPAGESTATE_ERROR` 
+`OBJECTPAGESTATE_ERROR`
+
+\(deprecated key: `OBJECTPAGESTATE_ISSUE`\)
 
 
 
 </td>
 <td valign="top">
 
-The object contains error messages
+The object contains errors.
 
 
 
@@ -4401,7 +4390,7 @@ Error message text used in the message strip of an object page.
 
 Applications should overwrite the default text and replace "object" with their concrete object.
 
-Example: *The sales order contains error messages.*
+Example: *The sales order contains errors.*
 
 
 
@@ -4417,7 +4406,7 @@ Example: *The sales order contains error messages.*
 </td>
 <td valign="top">
 
-The object contains warning messages
+The object contains warnings.
 
 
 
@@ -4433,7 +4422,7 @@ Warning message text used in the message strip of an object page.
 
 Applications should overwrite the default text and replace "object" with their concrete object.
 
-Example: *The sales order contains warning messages.*
+Example: *The sales order contains warnings.*
 
 
 
@@ -4449,7 +4438,7 @@ Example: *The sales order contains warning messages.*
 </td>
 <td valign="top">
 
-The object contains information messages.
+The object contains messages.
 
 
 
@@ -4465,7 +4454,7 @@ Information text used in the message strip of an object page.
 
 Applications should overwrite the default text and replace "object" with their concrete object.
 
-Example: *The sales order contains information messages.*
+Example: *The sales order contains messages.*
 
 
 
@@ -4526,6 +4515,70 @@ Text used in the popup that is shown when no details \(that is, no quick view an
 <td valign="top">
 
 Applications can choose to overwrite the default text with a more specific one.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `M_COMMON_TABLE_CREATE` 
+
+
+
+</td>
+<td valign="top">
+
+Create
+
+
+
+</td>
+<td valign="top">
+
+ *Create* button text in a table
+
+
+
+</td>
+<td valign="top">
+
+Applications can choose to overwrite the default text with a more specific one for a certain table.
+
+Example: `M_COMMON_TABLE_CREATE|_Items=MyCustomCreateText` 
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `M_COMMON_TABLE_DELETE` 
+
+
+
+</td>
+<td valign="top">
+
+Delete
+
+
+
+</td>
+<td valign="top">
+
+ *Delete* button text in a table
+
+
+
+</td>
+<td valign="top">
+
+Applications can choose to overwrite the default text with a more specific one for a certain table.
+
+Example: `M_COMMON_TABLE_DELETE|_Items=MyCustomDeleteText` 
 
 
 

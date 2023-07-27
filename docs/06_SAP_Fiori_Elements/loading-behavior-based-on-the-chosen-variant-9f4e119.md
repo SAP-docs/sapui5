@@ -6,7 +6,7 @@ Several factors affect the loading behavior of the content area based on the cho
 
 These factors are also considered in the following use cases:
 
--   There is no tile context during intial navigation from tiles.
+-   There is no tile context during initial navigation from tiles.
 
 -   There is no tile context, except for values from SAP Fiori launchpad user settings.
 
@@ -106,7 +106,7 @@ For multi-view scenarios, you can also change the manifest setting `enableAutobi
 
 ### SAP Fiori Elements for OData V4
 
-Application developers can set `initialLoad` to `Auto`\(default\), `Disabled` , and `Enabled`.
+Application developers can set `initialLoad` to `Auto` \(default\), `Disabled` , and `Enabled`.
 
 > ### Sample Code:  
 > ```
@@ -127,7 +127,7 @@ These settings work for both single and multi-view applications.
 
 This is the loading behavior:
 
--   `Auto`: An initial load of data only occurs if some default filter values have been set in the filter bar. The *Apply Automatically* checkbox is provided in the *Manage Views* dialog together with the following text: *If predefined filter values are available, the content loads automatically.*. This is the default setting.
+-   `Auto`: An initial load of data only occurs if some default filter values have been set in the filter bar. The *Apply Automatically* checkbox is provided in the *Manage Views* dialog together with the following text: *If predefined filter values are available, the content loads automatically.* This is the default setting.
 
 -    `Disabled`: An initial load of data does not occur for the standard variant and the user has to actively click the *Go* button. End users can override this by selecting the *Apply Automatically* checkbox in the *Manage Views* dialog.
 

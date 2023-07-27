@@ -14,9 +14,11 @@ For information about how application developers can enable an app for key user 
 
 App developers can adapt the UI at design time.
 
-For information about the features that application developers can adapt in SAP Fiori elements for OData V2, see [Adapting the UI: List Report and Object Page](adapting-the-ui-list-report-and-object-page-0d2f1a9.md).
+For information about the features that application developers can adapt in SAP Fiori elements for OData V2, see [Adapting the UI: List Report and Object Page](adapting-the-ui-list-report-and-object-page-0d2f1a9.md) and [Adapting the UI: Analytical List Page](adapting-the-ui-analytical-list-page-2c5fa29.md).
 
-In SAP Fiori elements for OData V4, app developers adapt the UI via manifest settings. You can search for features and navigate to the related documentation for further details using the [SAP Fiori Elements Feature Map](sap-fiori-elements-feature-map-62d3f7c.md).
+In SAP Fiori elements for OData V4, app developers adapt the UI manually, or for the most common settings using SAP Fiori tools. For more information, see [Developing an Application](https://help.sap.com/docs/SAP_FIORI_tools/17d50220bcd848aa854c9c182d65b699/a9c004397af5461fbf765419fc1d606a.html).
+
+You can search for features and navigate to the related documentation for further details using the [SAP Fiori Elements Feature Map](sap-fiori-elements-feature-map-62d3f7c.md).
 
 
 
@@ -56,17 +58,6 @@ Key users can also perform the following:
 
 While switching to the key user adaptation mode from the normal mode, the app starts in a fresh state and the applied changes are not preserved in the internal app state. Also, when a user exits the key user adaptation mode, the app restores to the old state it was in before entering the key user adaptation mode.
 
-You can extend and customize SAP Fiori applications using the SAPUI5 Visual Editor in SAP Web IDE.
-
 > ### Caution:  
 > SAP Web IDE is no longer available via SAP Business Technology Platform trial accounts. Any references to SAP Web IDE in this documentation are only relevant for you if you have access to SAP Web IDE through a productive SAP BTP account. Please consider SAP Business Application Studio as an alternative. See [App Development Using SAP Business Application Studio](../05_Developing_Apps/app-development-using-sap-business-application-studio-6bbad66.md).
-
-For information about the features that you can adapt, see:
-
--   [Creating a Binding Change](creating-a-binding-change-4754094.md)
-
--   [Adapting the UI: Analytical List Page](adapting-the-ui-analytical-list-page-2c5fa29.md)
-
-
-For more information about SAP Web IDE, see the documentation for SAP Web IDE on the SAP Help Portal at [https://help.sap.com/viewer/p/SAP\_Web\_IDE](https://help.sap.com/viewer/p/SAP_Web_IDE).
 

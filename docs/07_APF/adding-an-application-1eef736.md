@@ -50,7 +50,7 @@ Semantic Object
 </td>
 <td valign="top">
 
-For SAP Business Suite powered by SAP HANA, this field is prefilled with ***FioriApplication***. Keep this default entry if you use the generic APF runtime application. You can change the semantic object any time, but the entry here must be the same as the one you make when configuring the Smart Business KPI tile. In the KPI tile configuration, the semantic object filters the list of configurations so that only those are listed that have been created for the specified semantic object. Otherwise you have to type in your configuration manually.
+For SAP Business Suite powered by SAP HANA, this field is prefilled with `FioriApplication`. Keep this default entry if you use the generic APF runtime application. You can change the semantic object any time, but the entry here must be the same as the one you make when configuring the Smart Business KPI tile. In the KPI tile configuration, the semantic object filters the list of configurations so that only those are listed that have been created for the specified semantic object. Otherwise you have to type in your configuration manually.
 
 For SAP S/4HANA, this field is not relevant and can be left empty.
 

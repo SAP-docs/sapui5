@@ -613,7 +613,7 @@ The following parameters have to be included as `headerWhiteList` in the consumi
 > 
 > ```
 
-These changes are to be added to `manifest.appdescr_variant` file in the adaptation project. For more details on the mergers, see [Descriptor Change Types](https://wiki.wdf.sap.corp/wiki/display/UI/Descriptor+Change+Types#b0f58371-dfbf-460f-b9d7-fdb3c0edaad1-1884226546).
+These changes are to be added to `manifest.appdescr_variant` file in the adaptation project
 
 > ### Sample Code:  
 > ```

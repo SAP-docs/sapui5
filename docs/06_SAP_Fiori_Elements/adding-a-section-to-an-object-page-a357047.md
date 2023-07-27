@@ -18,7 +18,7 @@ You can add an additional section to your object page, as described below.
 For this example, you want to add a section called *Product Description* to the object page of the *Manage Products* app.
 
 > ### Note:  
-> This documentation describes how to manually define extensions. The following video provides an example for how to create a section extension on the object page using the extension wizard: 
+> We've removed videos showing step-by-step procedures using SAP Web IDE, which SAP no longer actively supports. You can still access the video using an older version of this document.
 
 
 

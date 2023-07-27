@@ -277,7 +277,7 @@ The following changes and new features are available for SAP Fiori elements for 
 
 -   Applications can now show a custom message strip above the object page tables. For more information, see [Adding a Custom Message Strip to List Report, Analytical List Page and Object Page Tables](../06_SAP_Fiori_Elements/adding-a-custom-message-strip-to-list-report-analytical-list-page-and-object-page-tables-0fdbefb.md).
 
--   In the object page tables, you can now prepopulate the default empty rows with a value using `DefaultValuesFunction`. For more information, see [Enabling Inline Creation Mode or Empty Rows Mode for Table Entries](../06_SAP_Fiori_Elements/enabling-inline-creation-mode-or-empty-rows-mode-for-table-entries-cfb04f0.md) and [Prefilling Fields Using the DefaultValuesFunction](../06_SAP_Fiori_Elements/prefilling-fields-using-the-defaultvaluesfunction-5ada91c.md).
+-   In the object page tables, you can now prepopulate the default empty rows with a value using `DefaultValuesFunction`. For more information, see [Enabling Inline Creation Mode or Empty Row Mode for Table Entries](../06_SAP_Fiori_Elements/enabling-inline-creation-mode-or-empty-row-mode-for-table-entries-cfb04f0.md) and [Prefilling Fields Using the DefaultValuesFunction](../06_SAP_Fiori_Elements/prefilling-fields-using-the-defaultvaluesfunction-5ada91c.md).
 
 -   Applications can now define the list of specific semantic object actions that are displayed in the related apps list. For more information, see [Enabling the Related Apps Button](../06_SAP_Fiori_Elements/enabling-the-related-apps-button-8dcfe2e.md).
 
@@ -423,6 +423,8 @@ We have provided a new API in the control, and now app developers can change the
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.114](what-s-new-in-sapui5-1-114-890fce1.md "With this release SAPUI5 is upgraded from version 1.113 to 1.114.")
 
 [What's New in SAPUI5 1.113](what-s-new-in-sapui5-1-113-a9553fe.md "With this release SAPUI5 is upgraded from version 1.112 to 1.113.")
 

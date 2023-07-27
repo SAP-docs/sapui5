@@ -31,7 +31,7 @@ To do so, perform the following steps:
 
 ## Procedure
 
-1.  Identify the property that has been annotated as a semantic object.
+1.  Identify the property that has been annotated as a semantic object. In this case, the field is shown as a link. For more information, see [Navigation from an App \(Outbound Navigation\)](navigation-from-an-app-outbound-navigation-d782acf.md).
 
     > ### Sample Code:  
     > XML Annotation

@@ -185,5 +185,5 @@ The external ID is the component ID.
 </tr>
 </table>
 
-The application log contains only entries of the last run of the report `/UI5/APP_INDEX_CALCULATE` and any older entries are removed automatically. For more information, search for ***Analyze Logs*** in the documentation for your [SAP NetWeaver](https://help.sap.com/viewer/p/SAP_NETWEAVER) version on the SAP Help Portal.
+The application log contains only entries of the last run of the report `/UI5/APP_INDEX_CALCULATE` and any older entries are removed automatically. For more information, search for `Analyze Logs` in the documentation for your [SAP NetWeaver](https://help.sap.com/viewer/p/SAP_NETWEAVER) version on the SAP Help Portal.
 

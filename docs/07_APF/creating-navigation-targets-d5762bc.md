@@ -67,7 +67,7 @@ Semantic object as defined in the corresponding target mapping configured in the
 Semantic object as defined by the Fiori launchpad configuration.
 
 > ### Note:  
-> Currently, you can only navigate to other APF applications. Therefore, the semantic object must be ***FioriApplication***.
+> Currently, you can only navigate to other APF applications. Therefore, the semantic object must be `FioriApplication`.
 
 
 
@@ -86,7 +86,7 @@ Action
 As soon as you enter a semantic object, the value help for the action is filled with all actions that are available for this target mapping and that you are authorized for. The *Action* field is prefilled with the first action in this list.
 
 > ### Note:  
-> Currently, you can only navigate to other APF applications. Therefore, the action must be ***executeAPFConfiguration***.
+> Currently, you can only navigate to other APF applications. Therefore, the action must be `executeAPFConfiguration`.
 
 
 

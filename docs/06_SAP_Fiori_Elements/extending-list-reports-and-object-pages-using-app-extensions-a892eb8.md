@@ -17,14 +17,11 @@ Make sure you have read the following information: [Read Before Extending a Gene
 
 ## Additional Features in SAP Fiori Elements for OData V2
 
-You can either use the extension wizard in the SAP Web IDE to create extensions or you can create them manually.
+You can either use [SAP Fiori tools](https://help.sap.com/viewer/product/SAP_FIORI_tools/Latest/en-US), which is a set of extensions for SAP Business Application Studio and Visual Studio Code to create extensions, or you can create them manually.
 
-> ### Caution:  
-> SAP Web IDE is no longer available via SAP Business Technology Platform trial accounts. Any references to SAP Web IDE in this documentation are only relevant for you if you have access to SAP Web IDE through a productive SAP BTP account. Please consider SAP Business Application Studio as an alternative. See [App Development Using SAP Business Application Studio](../05_Developing_Apps/app-development-using-sap-business-application-studio-6bbad66.md).
+For more information, see [Configure Page Elements](https://help.sap.com/docs/SAP_FIORI_tools/17d50220bcd848aa854c9c182d65b699/047507c86afa4e96bb3d284adb9f4726.html).
 
-For more information about SAP Web IDE, see the documentation for SAP Web IDE on the SAP Help Portal at [https://help.sap.com/viewer/p/SAP\_Web\_IDE](https://help.sap.com/viewer/p/SAP_Web_IDE).
-
-In list reports and object pages, you can use SAP Web IDE to add the following extensions:
+In list reports and object pages, you can use [SAP Fiori tools](https://help.sap.com/viewer/product/SAP_FIORI_tools/Latest/en-US) to add the following extensions:
 
 -   List report
 
@@ -48,7 +45,8 @@ In list reports and object pages, you can use SAP Web IDE to add the following e
 
 
 
-While this documentation describes how to manually define app extensions, the following how-to video shows you how to create a section extension on the object page using the extension wizard: .
+> ### Note:  
+> We've removed videos showing step-by-step procedures using SAP Web IDE, which SAP no longer actively supports. You can still access the video using an older version of this document.
 
 **Related Information**  
 

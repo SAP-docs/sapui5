@@ -66,7 +66,7 @@ Reason: In the `sap.ui5` section of the `manifest.json`, the `flexEnabled` flag 
 
 
 > ### Tip:  
-> For more information about the FAQ for users of key user adaptation, search for ***Something Isn’t Working like It Should?*** in the documentation for your [SAP NetWeaver](https://help.sap.com/viewer/p/SAP_NETWEAVER) version on the SAP Help Portal.
+> For more information about the FAQ for users of key user adaptation, search for `Something Isn’t Working like It Should?` in the documentation for your [SAP NetWeaver](https://help.sap.com/viewer/p/SAP_NETWEAVER) version on the SAP Help Portal.
 
 **Related Information**  
 

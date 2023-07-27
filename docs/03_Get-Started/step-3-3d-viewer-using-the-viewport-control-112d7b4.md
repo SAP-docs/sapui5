@@ -225,7 +225,7 @@ We'll now break the code down to look at each part in more detail.
 
  **Create a New Content Resource** 
 
-Create a `contentResource` object that specifies the resource to load. In this case, we're pre-loading the `boxTestModel.vds` model into the application. This occurs before the scene in our Viewer application is initiated. Once again we are using ***vds4*** as the value for `sourceType` to use the ThreeJs rendering engine.
+Create a `contentResource` object that specifies the resource to load. In this case, we're pre-loading the `boxTestModel.vds` model into the application. This occurs before the scene in our Viewer application is initiated. Once again we are using `vds4` as the value for `sourceType` to use the ThreeJs rendering engine.
 
 ```js
 sap.ui.define([

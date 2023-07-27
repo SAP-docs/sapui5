@@ -114,7 +114,7 @@ The system gives priority to the `Org.OData.Capabilities.V1.NavigationRestrictio
 > );
 > ```
 
-For more information, see [Enabling Inline Creation Mode or Empty Rows Mode for Table Entries](enabling-inline-creation-mode-or-empty-rows-mode-for-table-entries-cfb04f0.md).
+For more information, see [Enabling Inline Creation Mode or Empty Row Mode for Table Entries](enabling-inline-creation-mode-or-empty-row-mode-for-table-entries-cfb04f0.md).
 
 
 
@@ -556,6 +556,133 @@ The following code sample shows you how to hide or show the *Delete* button, dep
 > 
 > ```
 > annotate com.c_salesordermanage_sd.SalesOrderManage with @( UI.DeleteHidden: owner.isDeleteHidden);
+> ```
+
+
+
+### Defining the Order of Standard Actions
+
+Application developers can define the order of standard actions in the table toolbar. The developer must define the properties, `anchor` and `position` for each action corresponding to the action key in the manifest. The following table shows the keys and the corresponding standard actions:
+
+
+<table>
+<tr>
+<th valign="top">
+
+Key
+
+
+
+</th>
+<th valign="top">
+
+Standard Action
+
+
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+`Create`
+
+
+
+</td>
+<td valign="top">
+
+`StandardAction::Create`
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`Delete`
+
+
+
+</td>
+<td valign="top">
+
+`StandardAction::Delete`
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`MassEdit`
+
+
+
+</td>
+<td valign="top">
+
+`StandardAction::MassEdit`
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`Delete`
+
+
+
+</td>
+<td valign="top">
+
+`StandardAction::'Insights'`
+
+
+
+</td>
+</tr>
+</table>
+
+> ### Sample Code:  
+> ```
+> { "sap.ui5": {
+>      "routing": { 
+>         "targets": { 
+>             "SalesOrderManageList": { 
+>                 "options": { 
+>                     "settings": { 
+>                         "controlConfiguration": { 
+>                             "@com.sap.vocabularies.UI.v1.LineItem": { 
+>                                 "actions": { "StandardAction::Delete": { 
+>                                     "visible": false, 
+>                                     "position": { 
+>                                         "anchor": "StandardAction::Create", 
+>                                         "placement": "Before" 
+>                                         } 
+>                                     }, 
+>                                     "CustomAction": { 
+>                                         "press": "SalesOrder.custom.CustomActions.CustomAction1", 
+>                                         "enabled": true, "text": "Custom Action", 
+>                                         "command": "COMMON", "position": { 
+>                                             "anchor": "StandardAction::Create", 
+>                                             "placement": "After" 
+>                                             } 
+>                                         } 
+>                                     } 
+>                                 } 
+>                             } 
+>                         } 
+>                     } 
+>                 } 
+>             } 
+>         } 
+>     } 
+> }
 > ```
 
 

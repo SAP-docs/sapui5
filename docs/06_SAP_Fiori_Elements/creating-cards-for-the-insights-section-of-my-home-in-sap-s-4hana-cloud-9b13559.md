@@ -25,7 +25,9 @@ Once you have enabled *My Home* in SAP S/4HANA Cloud, the *Add Card to Insights*
 > ### Note:  
 > -   This feature supports only single view cases that have responsive tables in list report applications.
 > 
-> -   The card creation dialog shows only those columns that are supported for a card.
+> -   The card creation dialog shows only those columns that are supported for a card. The card supports single-valued `DataField` based columns. It also supports columns with field values displayed as links such as `DataFieldWithUrl`, semantic links, and `DataField` with `QuickViewFacets`. In addition, SAP Fiori elements for OData V4 also supports `DataFieldWithIntentBasedNavigation` and `DataFieldWithNavigationPath` columns.
+> 
+>     The excluded columns are image, multi-valued based columns, `FieldGroup` based columns, columns with inline action, columns with navigation button, `DataFieldForAnnotation` based columns \(for contact or address fields\), and custom columns.
 
 Application developers can switch off the option to add cards to *Insights* of *My Home* using the manifest setting.
 
@@ -110,7 +112,7 @@ To disable the *Add Card to Insights* option in the chart toolbar, add the follo
 > ```
 
 > ### Restriction:  
-> -   When creating an integration card from the list report table, the following changes will not be retained when navigating back from the card: position or visibility of the filter fields, position or visibility of the table columns, and width of the columns.
+> -   When creating an integration card from the list report table, the following changes will not be retained when navigating back from the card: the filter fields or table columns that were removed, and change in the position of filter field or table column.
 > 
 > -   *Add Card to Insights* option is not available if the list report applications are configured against a parameterized entity.
 > 

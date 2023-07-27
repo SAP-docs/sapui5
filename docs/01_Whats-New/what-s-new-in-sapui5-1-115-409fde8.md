@@ -1,16 +1,11 @@
 <!-- loio409fde8b73364f5bb49905a669a57503 -->
 
-<link rel="stylesheet" type="text/css" href="../css/sap-icons.css"/>
-
 # What's New in SAPUI5 1.115
 
 With this release SAPUI5 is upgraded from version 1.114 to 1.115.
 
 > ### Tip:  
 > If you want to do a search across all versions of the What's New content, you can also find it in the [SAPUI5 What's New viewer](https://help.sap.com/whats-new/67f60363b57f4ac0b23efd17fa192d60).
-
-> ### Note:  
-> Content marked as <span style="color:#666666;"><span class="SAP-icons"></span></span>** [Preview](https://help.sap.com/docs/whats-new-disclaimer)** is provided as a courtesy, without a warranty, and may be subject to change. For more information, see the [preview disclaimer](https://help.sap.com/docs/whats-new-disclaimer).
 
 ** **
 
@@ -66,213 +61,6 @@ Available as of
 
 
 </th>
-</tr>
-<tr>
-<td valign="top">
-
- Upcoming 
-
-
-
-</td>
-<td valign="top">
-
- Deleted 
-
-
-
-</td>
-<td valign="top">
-
- Announcement 
-
-
-
-</td>
-<td valign="top">
-
- **End of Cloud Provisioning for SAPUI5 Versions \(Q2/2023\)** 
-
-
-
-</td>
-<td valign="top">
-
-**End of Cloud Provisioning for SAPUI5 Versions \(Q2/2023\)**
-
-The following SAPUI5 versions will be removed from the SAPUI5 Content Delivery Network \(CDN\) after the end of Q2/2023.
-
-**Minor Versions Reaching Their End of Cloud Provisioning**
-
-The following versions including all patches will be removed entirely:
-
--   1.91
--   1.99
--   1.100
--   1.101
-
-**Action**: Upgrade to a version that’s still in maintenance.
-
-**Patch Versions Reaching Their End of Cloud Provisioning**
-
-The following patches will be removed:
-
--   Long-term maintenance versions:
-
-    -   1.38.56
-    -   1.71.2
-    -   1.71.47 to 1.71.48
-    -   1.84.24 to 1.84.25
-    -   1.96.8 to 1.96.9
-
-    **Action**: Upgrade to the latest available patch for the respective SAPUI5 version.
-
--   Other versions
-
-    -   1.102.0
-
-    **Action**: Upgrade to a version that’s still in maintenance.
-
-
-For more information, see [UI5 Releases Ending Service in 2023](https://blogs.sap.com/2022/12/05/ui5-releases-ending-service-in-2023/) and [Version Overview](https://ui5.sap.com/versionoverview.html).
-
-<sub><span style="color:#666666;"><span class="SAP-icons"></span></span>** [Preview](https://help.sap.com/docs/whats-new-disclaimer)**•Deleted•Announcement•Required•Upcoming</sub>
-
-
-
-</td>
-<td valign="top">
-
- Required 
-
-
-
-</td>
-<td valign="top">
-
-2023-06-30
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
- 1.118 
-
-
-
-</td>
-<td valign="top">
-
- Deprecated 
-
-
-
-</td>
-<td valign="top">
-
- Announcement 
-
-
-
-</td>
-<td valign="top">
-
- **`sap.ui.table` Controls: Discontinued Use of `sap.ui.commons` Library** 
-
-
-
-</td>
-<td valign="top">
-
-**`sap.ui.table` Controls: Discontinued Use of `sap.ui.commons` Library**
-
-We will discontinue the use of the deprecated `sap.ui.commons` library as of SAPUI5 version 1.118. If you use shortcuts for defining titles, footers, column headers, and cell templates in your `sap.ui.table` controls based on the related controls in the `sap.ui.commons` library, these will no longer work. Instead, the `sap.ui.table` controls will always depend on the related controls in the `sap.m` library after version 1.118.
-
-**Recommended Action**: Check which libraries are used in your application. If you use `sap.ui.table` controls and their shortcuts in combination with the `sap.ui.commons` library, make sure to switch to the `sap.m` library.
-
-For more information about how to prepare for this change, see [Change to the SAPUI5 sap.ui.table library](https://blogs.sap.com/2023/05/25/change-to-the-sapui5-sap.ui.table-library/).
-
-<sub><span style="color:#666666;"><span class="SAP-icons"></span></span>** [Preview](https://help.sap.com/docs/whats-new-disclaimer)**•Deprecated•Announcement•Recommended•1.118</sub>
-
-
-
-</td>
-<td valign="top">
-
- Recommended 
-
-
-
-</td>
-<td valign="top">
-
-2023-09-07
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
- 1.116 
-
-
-
-</td>
-<td valign="top">
-
- Changed 
-
-
-
-</td>
-<td valign="top">
-
- Announcement 
-
-
-
-</td>
-<td valign="top">
-
- **Planned Modern ECMAScript Support in SAPUI5** 
-
-
-
-</td>
-<td valign="top">
-
-**Planned Modern ECMAScript Support in SAPUI5**
-
-With SAPUI5 1.116, we intend to enable UI5 framework libraries to use modern ECMAScript syntax in their code and define Specification Version 3.0 in their UI5 Tooling configuration.
-
-**Action:** If you use UI5 Tooling in your projects, upgrade to UI5 Tooling 3.0 and make sure that your project's development infrastructure fully supports this change.
-
-For more information, see [Upgrade Your Tools for Modern ECMAScript in UI5](https://blogs.sap.com/2023/05/24/upgrade-your-tools-for-modern-ecmascript-in-ui5/).
-
-<sub><span style="color:#666666;"><span class="SAP-icons"></span></span>** [Preview](https://help.sap.com/docs/whats-new-disclaimer)**•Changed•Announcement•Required•1.116</sub>
-
-
-
-</td>
-<td valign="top">
-
- Required 
-
-
-
-</td>
-<td valign="top">
-
-2023-07-13
-
-
-
-</td>
 </tr>
 <tr>
 <td valign="top">
@@ -474,7 +262,7 @@ We have introduced the `sap.ui.mdc` library experimentally. This library contain
 
 The following changes and new features are available for SAP Fiori elements for OData V2:
 
--   Empty rows in the object page tables can be shown or hidden using the `InsertRestrictions` annotation. For more information, see [Enabling Inline Creation Mode or Empty Rows Mode for Table Entries](../06_SAP_Fiori_Elements/enabling-inline-creation-mode-or-empty-rows-mode-for-table-entries-cfb04f0.md).
+-   Empty rows in the object page tables can be shown or hidden using the `InsertRestrictions` annotation. For more information, see [Enabling Inline Creation Mode or Empty Row Mode for Table Entries](../06_SAP_Fiori_Elements/enabling-inline-creation-mode-or-empty-row-mode-for-table-entries-cfb04f0.md).
 
 
 <sub>Changed•SAP Fiori Elements•Info Only•1.115</sub>

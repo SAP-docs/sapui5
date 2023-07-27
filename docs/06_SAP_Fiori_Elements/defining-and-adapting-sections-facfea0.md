@@ -168,7 +168,8 @@ You can hide and display sections based on properties.
 
 ## Adding a Field Group to a Section
 
-This video shows the step-by-step procedure for adding a field group to a section on the object page: 
+> ### Note:  
+> We've removed videos showing step-by-step procedures using SAP Web IDE, which SAP no longer actively supports. You can still access the video using an older version of this document.
 
 For more information, see [Grouping of Fields](grouping-of-fields-7d7a0c4.md).
 
@@ -185,7 +186,7 @@ To render a table in a section, here's what you do:
 2.  To render a *Create* button, set `Org.OData.Capabilities.V1.InsertRestrictions/Insertable/Bool` to `true` for the entity set. For more information, see the section **Generic Actions** in [Adding Actions to Tables](adding-actions-to-tables-b623e0b.md).
 
 
-See also [Enabling Inline Creation Mode or Empty Rows Mode for Table Entries](enabling-inline-creation-mode-or-empty-rows-mode-for-table-entries-cfb04f0.md).
+See also [Enabling Inline Creation Mode or Empty Row Mode for Table Entries](enabling-inline-creation-mode-or-empty-row-mode-for-table-entries-cfb04f0.md).
 
 
 

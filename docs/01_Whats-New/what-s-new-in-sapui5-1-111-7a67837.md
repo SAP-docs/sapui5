@@ -595,7 +595,7 @@ The following changes and new features are available for SAP Fiori elements for 
 
 The following changes and new features are available forSAP Fiori elements for OData V4:
 
--   You can now hide empty table rows in edit mode. For more information, see [Enabling Inline Creation Mode or Empty Rows Mode for Table Entries](../06_SAP_Fiori_Elements/enabling-inline-creation-mode-or-empty-rows-mode-for-table-entries-cfb04f0.md).
+-   You can now hide empty table rows in edit mode. For more information, see [Enabling Inline Creation Mode or Empty Row Mode for Table Entries](../06_SAP_Fiori_Elements/enabling-inline-creation-mode-or-empty-row-mode-for-table-entries-cfb04f0.md).
 
 -   You can now enable the *Copy* button in the list report header and the object page header. For more information, see [Actions in the List Report](../06_SAP_Fiori_Elements/actions-in-the-list-report-993e99e.md) and [Enabling Actions in the Object Page Header](../06_SAP_Fiori_Elements/enabling-actions-in-the-object-page-header-5fe4396.md).
 
@@ -1012,6 +1012,8 @@ We have provided a new option for `customizeConfig` property: The `clientSideMan
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.114](what-s-new-in-sapui5-1-114-890fce1.md "With this release SAPUI5 is upgraded from version 1.113 to 1.114.")
 
 [What's New in SAPUI5 1.113](what-s-new-in-sapui5-1-113-a9553fe.md "With this release SAPUI5 is upgraded from version 1.112 to 1.113.")
 

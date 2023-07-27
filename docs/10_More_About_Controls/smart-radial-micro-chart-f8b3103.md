@@ -27,7 +27,7 @@ In addition, the Smart Radial Micro Chart supports a *FreeText* value. This can 
 
 ## Binding
 
-The `SmartRadialMicroChart` control should be bound to **one** entity and not to a collection of entities \(entitySet\). It supports both `enableAutoBinding` = ***false*** \(no binding is done inside the control\) and `enableAutoBinding` = ***true*** :
+The `SmartRadialMicroChart` control should be bound to **one** entity and not to a collection of entities \(entitySet\). It supports both `enableAutoBinding` = `false` \(no binding is done inside the control\) and `enableAutoBinding` = `true` :
 
 -   If the `chartBindingPath` is provided, the control will be bound relatively to it. For example, the `chartBindingPath` can be a navigation property.
 
@@ -35,7 +35,7 @@ The `SmartRadialMicroChart` control should be bound to **one** entity and not to
 
 
 > ### Note:  
-> If `enableAutoBinding` = ***true*** and `chartBindingPath` is set then the `bindingContext` for the *Title*, *Description*, *UnitOfMeasure* and *FreeText* is set to the value as well.
+> If `enableAutoBinding` = `true` and `chartBindingPath` is set then the `bindingContext` for the *Title*, *Description*, *UnitOfMeasure* and *FreeText* is set to the value as well.
 
 
 

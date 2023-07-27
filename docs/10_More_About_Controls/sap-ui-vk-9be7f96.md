@@ -13,9 +13,9 @@ Applications use the `sap.ui.vk` namespace. All other namespaces \(`sap.ui.vk.dv
 
 The selection of the 3D rendering engine is done using the `sap.ui.vk.ContentResource` object and its parameter `sourceType`.
 
--   To use the legacy DVL rendering engine, set the `sourceType` parameter to ***vds***.
+-   To use the legacy DVL rendering engine, set the `sourceType` parameter to `vds`.
 
--   To use the ThreeJs rendering engine, set the `sourceType` parameter to ***vds4***.
+-   To use the ThreeJs rendering engine, set the `sourceType` parameter to `vds4`.
 
 
 All examples and screenshots in this document use the **ThreeJs** rendering engine.

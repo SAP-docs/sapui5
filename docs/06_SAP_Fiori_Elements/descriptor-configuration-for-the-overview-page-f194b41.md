@@ -12,7 +12,7 @@ The `manifest.json` file defines static information about the application, such 
 > Descriptor Sample Settings
 > 
 > ```
-> "sap.ovp": 
+> "sap.ovp": 
 > {//section for ovp-specific app descriptor settings
 >  	"globalFilterModel": "ZModelName", //OData model that contains entity definitions relevant for global filters
 >  	"globalFilterEntityType": "ZFilterEntityType", //Represents the entity to use as a global filter in the smart filter bar control
@@ -25,14 +25,13 @@ The `manifest.json` file defines static information about the application, such 
 >  	"considerAnalyticalParameters": true, //Flag to enable/disable analytical parameter support for smart filter bar
 >  	"refreshIntervalInMinutes": 2, //Time interval in minutes to auto refresh the card models
 >  	"useDateRangeType": true, //Flag to enable or disable semantic date range control for the Smart filter bar. The default value is false.
-> 
->  	"cards": {  //An object of cards 
+>        
 >  	  "card01": { //each card will contain the following 
 >  	      "model": "ZCard1Model", //Model for the card
 >  	      "template": "sap.ovp.cards.list",//Card component path to use for this card
 >  	      "settings": {
 >             "title": "card title", //Language-dependent title of the card - used in the card header
->             "ubTitle": "sub title", //Language-dependent subtitle of the card - used in the card header
+>             "subTitle": "sub title", //Language-dependent subtitle of the card - used in the card header
 >             "entitySet": "zCard1EntitySet", //Entity set displayed in this card
 >             "valueSelectionInfo": "text for KPI Header", //Additional information relevant for the KPI Header
 >             "listFlavor": "Standard", //Represents the flavor of the list to use in this card. The flavor can be bar or standard.
@@ -44,16 +43,16 @@ The `manifest.json` file defines static information about the application, such 
 >  	            "annotationPath": "", // Represents the annotation path
 >  	            "kpiAnnotationPath":"com.sap.vocabularies.UI.v1.KPI#AllActualCosts", // Represents the KPI annotation path"selectionAnnotationPath": "", // Represents the selection annotation path
 >          		"chartAnnotationPath": "",//Represents the chart annotation path
->         		"presentationAnnotationPath": "", //Represents the presentation annotation path
+>         	"presentationAnnotationPath": "", //Represents the presentation annotation path
 >                 "dataPointAnnotationPath": "", //Represents the data point annotation path
->         		"identificationAnnotationPath": "", //Represents the identification annotation path
->         		"dynamicSubtitleAnnotationPath": "dynamicSubtitle", //Represents the dynamic subtitle annotation path
+>         	"identificationAnnotationPath": "", //Represents the identification annotation path
+>         	"dynamicSubtitleAnnotationPath": "dynamicSubtitle", //Represents the dynamic subtitle annotation path
 >          		"requireAppAuthorization": "", //Represents the cards for which authorization is required
 >  	            "chartAnnotationPath": "com.sap.vocabularies.UI.v1.Chart#SalesShareBubble",
->      			"presentationAnnotationPath": "com.sap.vocabularies.UI.v1.PresentationVariant#SalesShareBubble",
->      			"identificationAnnotationPath": "com.sap.vocabularies.UI.v1.Identification#Eval_by_Currency_Scatter",
->      			"selectionAnnotationPath" : "com.sap.vocabularies.UI.v1.SelectionVariant#Eval_by_Currency_ColumnStacked",
->      			"navigation": "noHeaderNav" //Allows you to disable navigation from the analytical list card header area
+>      		"presentationAnnotationPath": "com.sap.vocabularies.UI.v1.PresentationVariant#SalesShareBubble",
+>      		"identificationAnnotationPath": "com.sap.vocabularies.UI.v1.Identification#Eval_by_Currency_Scatter",
+>      		"selectionAnnotationPath" : "com.sap.vocabularies.UI.v1.SelectionVariant#Eval_by_Currency_ColumnStacked",
+>      		"navigation": "noHeaderNav" //Allows you to disable navigation from the analytical list card header area
 >             }
 >         }
 >     }

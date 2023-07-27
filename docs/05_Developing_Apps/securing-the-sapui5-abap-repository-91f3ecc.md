@@ -219,7 +219,7 @@ SAP Business Application Studio, SAP Fiori tools
 
 When uploading files to the SAPUI5 ABAP repository, you can perform a virus scan. SAP delivers virus scan profile`/UI/UI5_INFRA_APP/REP_DT_PUT`, which is used to store files in theSAPUI5 ABAP repository. This profile is deactivated when delivered. To activate it, create at least one basis profile and save it as the default profile. You can then activate one of the delivered profiles.
 
-By default, it links to a reference profile that is the default profile. For more information, search for ***ABAB-Specific Configuration*** in the documentation of your [SAP NetWeaver](https://help.sap.com/viewer/p/SAP_NETWEAVER) version on the SAP Help Portal.
+By default, it links to a reference profile that is the default profile. For more information, search for `ABAB-Specific Configuration` in the documentation of your [SAP NetWeaver](https://help.sap.com/viewer/p/SAP_NETWEAVER) version on the SAP Help Portal.
 
 
 
@@ -236,13 +236,13 @@ For the execution of SAPUI5 applications from the SAPUI5 ABAP repository, SAP de
 > ### Note:  
 > Since all services delivered by SAP are inactive initially, please activate all required services.
 
-For more information, search for ***Activating and Deactivating ICF Services*** in the documentation of your [SAP NetWeaver](https://help.sap.com/viewer/p/SAP_NETWEAVER) version on the SAP Help Portal.
+For more information, search for `Activating and Deactivating ICF Services` in the documentation of your [SAP NetWeaver](https://help.sap.com/viewer/p/SAP_NETWEAVER) version on the SAP Help Portal.
 
 **Authorization Objects** 
 
 There are no specific authorization objects needed to execute SAPUI5 applications from the SAPUI5 ABAP repository.
 
-As for ICF service nodes in general, authorization for specific ICF service nodes can be restricted. For more information, search for ***Defining Service Data*** in the documentation of your [SAP NetWeaver](https://help.sap.com/viewer/p/SAP_NETWEAVER) version on the SAP Help Portal.
+As for ICF service nodes in general, authorization for specific ICF service nodes can be restricted. For more information, search for `Defining Service Data` in the documentation of your [SAP NetWeaver](https://help.sap.com/viewer/p/SAP_NETWEAVER) version on the SAP Help Portal.
 
 
 
@@ -270,7 +270,7 @@ For the execution of the SAPUI5 application index REST API, SAP delivers ICF nod
 > ### Note:  
 > Since all services delivered by SAP are inactive initially, please activate all required services.
 
-For more information about ICF services and security, search for ***Activating and Deactivating ICF Services*** and ***RFC/ICF Security Guide*** in the documentation of your [SAP NetWeaver](https://help.sap.com/viewer/p/SAP_NETWEAVER) version on the SAP Help Portal.
+For more information about ICF services and security, search for `Activating and Deactivating ICF Services` and `RFC/ICF Security Guide` in the documentation of your [SAP NetWeaver](https://help.sap.com/viewer/p/SAP_NETWEAVER) version on the SAP Help Portal.
 
 For more information about the SAPUI5 application index, see [SAPUI5 Application Index](sapui5-application-index-c5e7098.md).
 

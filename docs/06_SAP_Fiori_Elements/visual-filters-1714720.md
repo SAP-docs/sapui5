@@ -801,7 +801,7 @@ Change the project value from `List Report` to `Analytical List Page` on the fil
 </td>
 <td valign="top">
 
-Specifying ***Analytical List Page*** as a value for the project in the filter bar, re-renders charts to display records for *In Progress* and *New* status values of the Analytical List Page project.
+Specifying `Analytical List Page` as a value for the project in the filter bar, re-renders charts to display records for *In Progress* and *New* status values of the Analytical List Page project.
 
 > ### Note:  
 > The in/out parameter mapping values set for the other properties in the `SelectionVariant` annotation that are not part of the project field is considered as it is.

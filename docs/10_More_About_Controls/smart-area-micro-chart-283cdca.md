@@ -17,7 +17,7 @@ By using the `chartType` property *Area* of the *UI.Chart* annotation the corres
 
 **Binding**
 
-The `SmartAreaMicroChart` control supports only `enableAutoBinding` = ***true***. This means it should be bound to only **one** entitySet, and should get a navigation property as a chartBindingPath to an entitySet \(for the relative binding\) or else the `entitySet` property will be used for the absolute binding.
+The `SmartAreaMicroChart` control supports only `enableAutoBinding` = `true`. This means it should be bound to only **one** entitySet, and should get a navigation property as a chartBindingPath to an entitySet \(for the relative binding\) or else the `entitySet` property will be used for the absolute binding.
 
 **Colors of the Chart \(Criticality\)**
 
@@ -70,7 +70,7 @@ The control provides the *Title*, *Description* or *UnitOfMeasure* values retrie
 
     For more information about the supported annotation terms *ISOCurrency* and *Unit*, see [http://docs.oasis-open.org/odata/odata/v4.0/os/vocabularies/Org.OData.Measures.V1.xml](http://docs.oasis-open.org/odata/odata/v4.0/os/vocabularies/Org.OData.Measures.V1.xml).
 
-    The control takes into account only the *measure* annotation for the `entityType` property that is addressed by the `Value` property of the *DataPoint* annotation. In the following example, the `Value` property of the *DataPoint* points to the `Price` property in the `EntityType` \(`Path`="***Price***"\). This means that the control \(`Path`="***Currency***"\) uses the *measure* annotation with `Target="AmcNamespace.StockPrice/Price"`:
+    The control takes into account only the *measure* annotation for the `entityType` property that is addressed by the `Value` property of the *DataPoint* annotation. In the following example, the `Value` property of the *DataPoint* points to the `Price` property in the `EntityType` \(`Path`="`Price`"\). This means that the control \(`Path`="`Currency`"\) uses the *measure* annotation with `Target="AmcNamespace.StockPrice/Price"`:
 
     ```xml
     

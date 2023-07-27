@@ -10,7 +10,7 @@ When you debug code in SAPUI5, keep in mind that you can **not** debug SAPUI5 in
 
 ## ABAP Debugger vs. Browser Debugger
 
-This section explains how you use the debugging tool of a Chrome browser. Keep in mind that you have to test your application on all browsers that are officially supported by SAP, because the implementation differs depending on the browser used, see [Choose your Browser](../02_Read-Me-First/browser-and-platform-support-74b59ef.md). To start the debugger, use the browser menu or choose ***F12*** \(valid for most browsers\).
+This section explains how you use the debugging tool of a Chrome browser. Keep in mind that you have to test your application on all browsers that are officially supported by SAP, because the implementation differs depending on the browser used, see [Choose your Browser](../02_Read-Me-First/browser-and-platform-support-74b59ef.md). To start the debugger, use the browser menu or choose `F12` \(valid for most browsers\).
 
 The following explanations assume that your application is up and running on your web server, either a local Tomcat, or a remote server.
 
@@ -56,7 +56,7 @@ To add a variable to the list of watched variables, open the context menu for th
 
 ## Modifying Variables
 
-If you want to modify a variable to find out if the code works correctly with a different value, open the console, for example by choosing ***ESC*** in the debugging tool and enter the new value manually directly in the JavaScript code. To confirm the change, choose ***ENTER*** in Chrome and *Execute* in Firefox.
+If you want to modify a variable to find out if the code works correctly with a different value, open the console, for example by choosing `ESC` in the debugging tool and enter the new value manually directly in the JavaScript code. To confirm the change, choose `ENTER` in Chrome and *Execute* in Firefox.
 
 
 
@@ -99,14 +99,14 @@ Step-by-step execution, also stepping into functions and loops
 </td>
 <td valign="top">
 
-***F5***
+`F5`
 
 
 
 </td>
 <td valign="top">
 
-***F11***
+`F11`
 
 
 
@@ -122,14 +122,14 @@ Step-by-step execution, stepping over functions
 </td>
 <td valign="top">
 
-***F6***
+`F6`
 
 
 
 </td>
 <td valign="top">
 
-***F10***
+`F10`
 
 
 
@@ -145,14 +145,14 @@ Skipping the rest of the current function and stepping out to the last cursor po
 </td>
 <td valign="top">
 
-***F7***
+`F7`
 
 
 
 </td>
 <td valign="top">
 
-***SHIFT+F11***
+`SHIFT+F11`
 
 
 
@@ -168,14 +168,14 @@ Resume execution
 </td>
 <td valign="top">
 
-***F8***
+`F8`
 
 
 
 </td>
 <td valign="top">
 
- ***F8*** 
+ `F8` 
 
 
 

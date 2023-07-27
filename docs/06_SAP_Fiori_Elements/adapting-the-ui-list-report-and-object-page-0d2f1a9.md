@@ -19,12 +19,7 @@ In SAP Fiori elements for OData V4, app developers adapt the UI using the manife
 > ### Note:  
 > Adapt the UI only for the use cases described here. Otherwise, you might experience issues regarding consistency, compatibility, or other problems, immediately or in future releases.
 
-You can also use SAP Web IDE to extend and customize specific features of the list report and object page.
-
-> ### Caution:  
-> SAP Web IDE is no longer available via SAP Business Technology Platform trial accounts. Any references to SAP Web IDE in this documentation are only relevant for you if you have access to SAP Web IDE through a productive SAP BTP account. Please consider SAP Business Application Studio as an alternative. See [App Development Using SAP Business Application Studio](../05_Developing_Apps/app-development-using-sap-business-application-studio-6bbad66.md).
-
-For more information about SAP Web IDE, see the documentation for SAP Web IDE on the SAP Help Portal at [https://help.sap.com/viewer/p/SAP\_Web\_IDE](https://help.sap.com/viewer/p/SAP_Web_IDE).
+You can also use SAP Fiori tools to extend and customize specific features of the list report and object page. For more information, see [Configure Page Elements](https://help.sap.com/docs/SAP_FIORI_tools/17d50220bcd848aa854c9c182d65b699/047507c86afa4e96bb3d284adb9f4726.html).
 
 
 
@@ -58,7 +53,7 @@ Display/Hide the *Export to Excel* button in the table toolbar
 </td>
 <td valign="top">
 
-Change the *Export to Excel* property to `True/False` using UI adaptation.
+Change the *Export to Excel* property to `True/False`.
 
 
 
@@ -67,33 +62,14 @@ Change the *Export to Excel* property to `True/False` using UI adaptation.
 <tr>
 <td valign="top">
 
-Combine buttons \(actions\) in the toolbar
+Change the column width.
 
 
 
 </td>
 <td valign="top">
 
-Select the buttons that you want to combine by holding down the [ctrl\] key and left-clicking the buttons in the required order. Then, release the [ctrl\] key, and the button is visible on the UI by default. You can hide this button by pressing the [ctrl\] key, right-clicking one of the selected buttons, and choosing *Combine* from the context menu.
-
-> ### Note:  
-> If the buttons don't all fit because the preview size in the UI adaptation editor is too small, you can expand the editor tab by double-clicking it and collapsing the outline and property panels.
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Change the column width of `sap.ui.table.Table` ,`sap.ui.table.AnalyticalTable` button is visible on the UI by default. You can hide this button by, or `sap.m.Table`.
-
-
-
-</td>
-<td valign="top">
-
-Choose the column header to select the corresponding `sap.ui.table.Column`. Change the *Width* property as needed.
+Choose the column of a table in the outline of the Page Editor, and change the *Width* property as needed.
 
 
 
@@ -109,9 +85,7 @@ Center-align status columns
 </td>
 <td valign="top">
 
-For `sap.m.Table`, select a column and set the *H Align* property to `Center`.
-
-For `sap.ui.table`, click the column header and set the *H Align* property to `Center`.
+Choose the column of the table in the outline of Page Editor, and set the *H Align* property to `Center`.
 
 For vertical alignment of the whole responsive table, see [Tables](tables-c0f6592.md).
 
@@ -161,7 +135,7 @@ Disable standard system behavior for list report tables \(analytical, grid, tree
 </td>
 <td valign="top">
 
-In the Dynamic Page, set the `Fit Content` property to `false`.
+In the table, set the `Fit Content` property with the Page Editor.
 
 
 
@@ -177,7 +151,7 @@ Change the layout of the list report table for better readability for a high num
 </td>
 <td valign="top">
 
-For `sap.m.Table`, set the `PopinLayout` property to one of the following values:
+In the table, set the `PopinLayout` property with the Page Editor to one of the following values:
 
 -   `Block`
 
@@ -242,7 +216,7 @@ Change the avatar shape in the object page dynamic header from a square to a cir
 </td>
 <td valign="top">
 
-Switch to preview mode, navigate to the object page, switch back to *Adapt the UI*. Select the avatar in the object page header and set the *displayShape* property to `Circle`.
+On the header of the object page, set the *displayShape* property to `Circle`.
 
 
 
@@ -258,7 +232,7 @@ Hide the anchor bar
 </td>
 <td valign="top">
 
-Switch to preview mode, navigate to the object page, switch back to *Adapt the UI*. Select the object page layout and set the *Show Anchor Bar* property to `false`.
+On the page layout node, set the *Show Anchor Bar* property to `false`.
 
 
 
@@ -274,7 +248,7 @@ Switch to tabs
 </td>
 <td valign="top">
 
-Switch to preview mode, navigate to the object page, switch back to *Adapt the UI*. Select the object page layout and set the *Use Icon Tab Bar* property `"useIconTabBar"` to `true`.
+On the page layout node, set the *Use Icon Tab Bar* property `"useIconTabBar"` to `true`.
 
 
 
@@ -290,7 +264,7 @@ Display the *Export to Excel* button in the table toolbar
 </td>
 <td valign="top">
 
-For `SmartTable`, set the *Use Export to Excel* property to `true`.
+In the table node, set the *Use Export to Excel* property to `true`.
 
 
 
@@ -306,7 +280,7 @@ Show header content in edit mode
 </td>
 <td valign="top">
 
-By default, there is a binding at the *showHeaderContent* property of `sap.uxap.ObjectPageLayout` that the UI Adaptation editor cannot display. Change this property to `False` to get a change file. Then, change the `newValue` from `false` to `true`.
+On the page layout node, set the *showHeaderContent* property to `true` or `false`, to determine the header content visibility.
 
 Alternatively, you can make a binding change if you need to change the value according to a property or an expression. For more information, see [Creating a Binding Change](creating-a-binding-change-4754094.md).
 
@@ -351,24 +325,6 @@ Select the *Share* button in the header and set the `Visible` property to `false
 <tr>
 <td valign="top">
 
-Set widths of mixed content in sections
-
-When placing mixed content, such as forms or tables into one subsection, you may want to adjust the content blocks to display a table next to a form, for example.
-
-
-
-</td>
-<td valign="top">
-
-Select the `sap.ui.layout.GridData` of the corresponding section and set the spans according to your requirements.
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
 Don't collapse headers when scrolling down
 
 
@@ -376,7 +332,7 @@ Don't collapse headers when scrolling down
 </td>
 <td valign="top">
 
-Select the *sap.uxap.ObjectPageLayout* and set the `Always show content header` property to `true`.
+On the page layout node, set the `Always show content header` property to `true`.
 
 > ### Note:  
 > On tablets and mobile phones, the header collapses automatically.
@@ -463,7 +419,7 @@ Users can then navigate through the entire focusable table content, and not only
 <tr>
 <td valign="top">
 
-Enable "Include Item In Selection" for tables.
+Enable *Include Item In Selection* for tables.
 
 By setting this property to true, the item selection is displayed even if a user navigates away from a table.
 

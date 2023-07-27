@@ -291,7 +291,7 @@ The following settings reside in the `sap.apf` name space:
 -   `activateLrep`
 
     > ### Note:  
-    > If you use SAP S/4HANA, this property is mandatory and must be set to ***true***.
+    > If you use SAP S/4HANA, this property is mandatory and must be set to `true`.
 
     This property defines that the layered repository of SAPUI5 flexibility is used for persistence of the analytical configuration.
 

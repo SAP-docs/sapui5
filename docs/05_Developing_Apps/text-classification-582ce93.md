@@ -19,7 +19,7 @@ The complete line must have one of the following patterns \(text type is mandato
 
 We recommend that you assign a text type to each text. The text type indicates to which user interface element the text is related. You can use the following main text types:
 
--   For short texts \(less than 120 characters\) :
+-   For short texts \(up to 120 characters\) :
 
 
     <table>
@@ -317,22 +317,6 @@ We recommend that you assign a text type to each text. The text type indicates t
     
     </td>
     </tr>
-    <tr>
-    <td valign="top">
-    
-        `XMSG`
-
-
-    
-    </td>
-    <td valign="top">
-    
-        Message
-
-
-    
-    </td>
-    </tr>
     </table>
     
 -   For text elements that are not supposed to be translated, use the text type `NOTR`.
@@ -340,7 +324,7 @@ We recommend that you assign a text type to each text. The text type indicates t
 
 **Maximum Length \(Optional\)**
 
-You can provide the maximum text length for translation. It must be greater than the source text length and must never exceed 255.
+If necessary, you can provide the maximum text length for translation. It must be greater than the source text length and must never exceed 255.
 
 To ensure that translators have enough space for the translated texts, set an appropriate maximum text length for translation according to the source text length:
 
@@ -414,5 +398,5 @@ Multiply by 1.5
 
 **Additional Context Information \(Optional\)**
 
-You can also add a comment for the translator.
+You can also add a comment for the translator. This is recommended for all texts.
 

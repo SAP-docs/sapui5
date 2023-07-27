@@ -34,7 +34,7 @@ After that, the following dialog is shown:
 
  ![](images/Smart_Controls_Tutorial_Step_07c_a51c238.png "Defining the View Name") 
 
-In this dialog, we specify the name under which this view is persisted, in our case ***With Currency EUR***. With *Set as Default*, we can also specify whether this view is always used initially when navigating to this particular UI \(since in our example we only persist within one browser session, this setting has no effect\). With *Apply Automatically* we define that the query is fired automatically. The idea behind *Public* is that some popular but perhaps fairly complicated query settings that are used by several users can be automatically provided to all users. This *Public* option only has an effect when running on a real server and not on the mock server as in our example. If you choose *Public*, additional information regarding this function is required.
+In this dialog, we specify the name under which this view is persisted, in our case `With Currency EUR`. With *Set as Default*, we can also specify whether this view is always used initially when navigating to this particular UI \(since in our example we only persist within one browser session, this setting has no effect\). With *Apply Automatically* we define that the query is fired automatically. The idea behind *Public* is that some popular but perhaps fairly complicated query settings that are used by several users can be automatically provided to all users. This *Public* option only has an effect when running on a real server and not on the mock server as in our example. If you choose *Public*, additional information regarding this function is required.
 
 We verify these settings now and return to our main UI:
 

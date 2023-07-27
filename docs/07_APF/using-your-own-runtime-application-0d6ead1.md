@@ -132,7 +132,7 @@ The following steps are required:
     </td>
     <td valign="top">
     
-        If you use SAP S/4HANA, this property is mandatory and must be set to ***true***. Otherwise set it to ***false***.
+        If you use SAP S/4HANA, this property is mandatory and must be set to `true`. Otherwise set it to `false`.
 
 
     

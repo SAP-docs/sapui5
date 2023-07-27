@@ -175,7 +175,7 @@ Contains two properties:
 
     Specifies the service to determine the logical system.
 
-    In most cases, you can set the service to ***null***.
+    In most cases, you can set the service to `null`.
 
 
 

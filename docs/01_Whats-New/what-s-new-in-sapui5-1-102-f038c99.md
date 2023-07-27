@@ -1253,7 +1253,7 @@ The following changes and new features are available for SAP Fiori elements for 
 
 The following changes and new features are available for SAP Fiori elements for OData V2 and SAP Fiori elements for OData V4:
 
--   In apps that use draft handling, you can now enable the empty rows mode for table entries. For more information, see [Enabling Inline Creation Mode or Empty Rows Mode for Table Entries](../06_SAP_Fiori_Elements/enabling-inline-creation-mode-or-empty-rows-mode-for-table-entries-cfb04f0.md).
+-   In apps that use draft handling, you can now enable the empty rows mode for table entries. For more information, see [Enabling Inline Creation Mode or Empty Row Mode for Table Entries](../06_SAP_Fiori_Elements/enabling-inline-creation-mode-or-empty-row-mode-for-table-entries-cfb04f0.md).
 
 
 <sub>Changed•SAP Fiori Elements•Info Only•1.102</sub>
@@ -1280,6 +1280,8 @@ The following changes and new features are available for SAP Fiori elements for 
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.114](what-s-new-in-sapui5-1-114-890fce1.md "With this release SAPUI5 is upgraded from version 1.113 to 1.114.")
 
 [What's New in SAPUI5 1.113](what-s-new-in-sapui5-1-113-a9553fe.md "With this release SAPUI5 is upgraded from version 1.112 to 1.113.")
 

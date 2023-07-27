@@ -1135,7 +1135,7 @@ The following changes and new features are available for SAP Fiori elements for 
 
 -   You can now group the multi-input fields along with other fields as a source for side effects. For more information, see [Side Effect Annotations: Examples](../06_SAP_Fiori_Elements/side-effect-annotations-examples-61cf21d.md).
 
--   In edit mode, we now provide an option to hide the empty rows of a table in the object page. For more information, see [Enabling Inline Creation Mode or Empty Rows Mode for Table Entries](../06_SAP_Fiori_Elements/enabling-inline-creation-mode-or-empty-rows-mode-for-table-entries-cfb04f0.md).
+-   In edit mode, we now provide an option to hide the empty rows of a table in the object page. For more information, see [Enabling Inline Creation Mode or Empty Row Mode for Table Entries](../06_SAP_Fiori_Elements/enabling-inline-creation-mode-or-empty-row-mode-for-table-entries-cfb04f0.md).
 
 -   We have added a new button, *Validate*, to the object page for applications that are being run on tablets and mobile devices. For more information, see [Draft Handling](../06_SAP_Fiori_Elements/draft-handling-ed9aa41.md).
 
@@ -1351,6 +1351,8 @@ The new version of the SAPUI5 OData V4 model introduces the following features:
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.114](what-s-new-in-sapui5-1-114-890fce1.md "With this release SAPUI5 is upgraded from version 1.113 to 1.114.")
 
 [What's New in SAPUI5 1.113](what-s-new-in-sapui5-1-113-a9553fe.md "With this release SAPUI5 is upgraded from version 1.112 to 1.113.")
 

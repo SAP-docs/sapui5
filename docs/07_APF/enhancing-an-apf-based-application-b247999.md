@@ -9,7 +9,7 @@ You have installed an APF-based application that was shipped by SAP. If you want
 
 1.  In your SAP Fiori frontend server system, run transaction `SE80`.
 
-2.  In the Repository Browser, select ***BSP Application*** and enter the name of your Business Server Page \(BSP\) application.
+2.  In the Repository Browser, select `BSP Application` and enter the name of your Business Server Page \(BSP\) application.
 
 3.  In the folder structure, open *Page Fragments* \> *config* and double-click the analytical configuration file to open it.
 

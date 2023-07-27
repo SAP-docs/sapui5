@@ -16,11 +16,11 @@ The "share" functionality allows users to share the current application state us
 
     When a user chooses this option, the corresponding *Save as Tile* dialog is displayed. When a user chooses the tile, the application page opens in the same state in which the tile was created. Application developers can customize the title and the sub-title of the tile. In the list report, a dynamic tile with a record count is created, where the applied filter is also taken into account.
 
--   *Share Menu: Microsoft Teams*
+-   *Share: Microsoft Teams*
 
      ![](images/Microsoft_Teams_Share_Menu_As_Chat_and_As_Tab_f2cb0d3.png) 
 
-    When a user clicks the *Share* button and then the *Share Menu: Microsoft Teams* option, a separate window opens with the available sharing options:
+    When a user clicks the *Share* button and then the *Share: Microsoft Teams* option, a separate window opens with the available sharing options:
 
     -   As Chat
 
@@ -33,11 +33,11 @@ The "share" functionality allows users to share the current application state us
 
     Please note the following:
 
-    -   The *Share Menu: Microsoft Teams* option is only available if the required settings have been made by the system administrators of SAP S/4HANA Cloud.
+    -   The *Share: Microsoft Teams* option is only available if the required settings have been made by the system administrators of SAP S/4HANA Cloud.
 
         For more information, see [Integrating Microsoft Teams](https://help.sap.com/docs/SAP_S4HANA_CLOUD/0f69f8fb28ac4bf48d2b57b9637e81fa/257ec7408db6420682462cd1d000e744.html).
 
-    -   The *Share Menu: Microsoft Teams* option is part of collaborative ERP \(enterprise resource planning\), which integrates the best of SAP S/4HANA Cloud with Microsoft Teams. So this option is not available for all users.
+    -   The *Share: Microsoft Teams* option is part of collaborative ERP \(enterprise resource planning\), which integrates the best of SAP S/4HANA Cloud with Microsoft Teams. So this option is not available for all users.
 
 
 
@@ -53,6 +53,8 @@ The "share" functionality allows users to share the current application state us
 > -   In SAP Fiori elements for OData V2, for draft objects with an existing active instance the "share" functionality will directly share the URL of the active instance.
 > 
 >     In SAP Fiori elements for OData V4, for draft objects with an existing active instance the "share" functionality will use the semantic bookmarking feature \(see the corresponding section in this topic below\), but if semantic keys are not defined then the URL of the active instance is shared.
+> 
+> -   The *Share: Microsoft Teams* functionality uses application states to shorten long URLs. These application state records are cleaned up in case they aren't accessed for a long time. For more information, see [Cleanup of Expired Application State](https://help.sap.com/docs/ABAP_PLATFORM_NEW/a7b390faab1140c087b8926571e942b7/6107ee41f89a43c9af0aa279fe039cca.html).
 
 
 

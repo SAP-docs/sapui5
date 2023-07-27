@@ -6,6 +6,30 @@ Application developers can configure filter fields to ensure they only accept ei
 
 
 
+<a name="loiof5dcb29da3bf4e0091eba3e7ccef4580__section_nld_r3y_zxb"/>
+
+## Copying and Pasting Multiple Values in the Filter Bar
+
+As an end user, you can copy and paste multiple values in the filter bar in the following use cases:
+
+-   From one filter field to another filter field that has the same data type.
+
+-   From one filter field to the value help dialog of another field that has the same data type.
+
+-   From a spreadsheet to a filter field that has the same data type.
+
+
+For example, you can copy the values from the *Sales Order No.:* field and paste them either to another filter field or a value help that has the same data type. In the value help dialog, paste to the *equal to* field.
+
+ ![](images/copy-paste-filter-bar_e343435.png) 
+
+> ### Restriction:  
+> -   Copying and pasting a large number of values into the filter fields can cause performance issues.
+> 
+> -   For apps with custom filters, the application developers must define the copy event and paste event for the custom filters.
+
+
+
 <a name="loiof5dcb29da3bf4e0091eba3e7ccef4580__section_amq_ynw_xmb"/>
 
 ## Additional Features in SAP Fiori Elements for OData V2
@@ -541,7 +565,7 @@ If the annotation holds more than one of these approaches, the filter restrictio
 > 
 > -   CityName - MultiValue field since higher priority annotation wins
 > 
-> -   PartnerAddress - MultiValue field. Since this wasn’t defined via a higher priority approach, the lower priority approach persists
+> -   PartnerAddress - MultiValue field. Since this wasn’t defined via a higher priority approach, the lower priority approach persists.
 
 
 

@@ -6,7 +6,8 @@ By default, the list report displays only one table. You can define multiple vie
 
 
 
-This video shows the step-by-step procedure for defining multiple views: 
+> ### Note:  
+> We've removed videos showing step-by-step procedures using SAP Web IDE, which SAP no longer actively supports. You can still access the video using an older version of this document.
 
 > ### Note:  
 > You can define variants for specific selections of data on the user interface, for example, based on filter settings. In the definition dialog, these variants are called views, however, the feature is called variant management. Therefore, for clarity, we use the term variant management in this section.

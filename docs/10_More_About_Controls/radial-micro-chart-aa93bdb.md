@@ -23,7 +23,7 @@ The percentage value in the `RadialMicroChart` control can be defined by:
 -   Setting the total and the fraction property and calculating the percentage value automatically.
 
     > ### Note:  
-    > If the total property is set to ***0***, only a blank circle gets rendered because no valid value is returned. The error is described in the error log.
+    > If the total property is set to `0`, only a blank circle gets rendered because no valid value is returned. The error is described in the error log.
 
 
 **Colors**

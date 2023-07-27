@@ -8,7 +8,7 @@ Specific rules apply when displaying actions on the object page.
 
 ## Order of Actions
 
-The default display of order of actions in the object page header is as follows:
+The default display order of actions in the object page header is as follows:
 
 1.  Generic actions
 
@@ -37,7 +37,7 @@ The display of actions depends on which mode the user is in:
 
 -   In *Display* mode, the relevant actions are displayed in the header toolbar \(see [Object Page Elements](object-page-elements-645e27a.md)\).
 
--   In *Edit* or *Create* mode, the footer bar contains the relevant actions, for example, *Save* and *Cancel* in *Edit* mode \(see figure below\), and *Create* and *Cancel* in *Create* mode.
+-   In *Edit* or *Create* mode, the footer bar contains the relevant actions, for example, *Save* and *Cancel* in *Edit* mode \(see the mentioned figure\), and *Create* and *Cancel* in *Create* mode.
 
 
    

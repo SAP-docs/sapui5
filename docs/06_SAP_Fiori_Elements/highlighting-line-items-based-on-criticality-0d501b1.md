@@ -23,7 +23,7 @@ The property containing the criticality can have the following values \(derived 
     > ### Note:  
     > -   By default, SAP Fiori elements assumes that the `DataField` is also marked with "CriticalityRepresentationType/WithIcon" and sets the icon of the `ObjectStatus` appropriately \(for example, for fields marked with "com.sap.vocabularies.UI.v1.CriticalityType/Negative", SAP Fiori elements sets the 'sap-icon://status-negative'\).
     > 
-    > -   If the field is marked with "CriticalityRepresentationType/WithoutIcon", then the `` is rendered without the icon.
+    > -   If the field is marked with "CriticalityRepresentationType/WithoutIcon", then it is rendered without the icon.
 
 
 

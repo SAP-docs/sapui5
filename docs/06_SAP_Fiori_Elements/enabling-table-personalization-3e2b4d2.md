@@ -102,8 +102,6 @@ In the list report, you can set the variant management to `"Page"` level or to `
 
     -   Sorting
 
-        Users can sort tables by choosing individual columns or multiple columns \(unless sorting is disabled\). Users can sort each column in ascending or descending order.
-
          ![](images/Sorting_Columns_in_Tables_e44ae82.png) 
 
         You can use the `@.OData.Capabilities.V1.SortRestrictions` annotation to exclude those columns you don’t want to be sortable. You can use the `@.OData.Capabilities.V1.NavigationRestrictions` annotation to exclude navigation properties.
@@ -111,7 +109,7 @@ In the list report, you can set the variant management to `"Page"` level or to `
         > ### Note:  
         > Defining sort restrictions is currently only possible for first-level navigation entities.
 
-        You can use `SortRestrictions` to define your desired `RestrictedProperty` in the `NavigationRestrictions`. Use `SortRestrictions` to either restrict all properties of an entity by setting `Sortable` to `false`, or to disable sorting of individual properties using `NonSortableProperties`.
+        You can use `SortRestrictions` to define your desired `RestrictedProperty` in the `NavigationRestrictions`. Use `SortRestrictions` to either restrict all properties of an entity by setting `Sortable` to `false`, or to disable sorting of individual properties using `NonSortableProperties`. To add sort retrictions for navigation properties, the list of `NonSortableProperties` must be prefixed with the `NavigationPropertyPath`.
 
         > ### Sample Code:  
         > XML Annotation for `SortRestrictions` in `NavigationRestrictions`
@@ -127,7 +125,7 @@ In the list report, you can set the variant management to `"Page"` level or to `
         >                         <Record Type="Capabilities.SortRestrictionsType">
         >                             <PropertyValue Property="NonSortableProperties">
         >                                 <Collection>
-        >                                     <PropertyPath>OverallSDProcessStatus_Text</PropertyPath>
+        >                                     <PropertyPath>_OverallSDProcessStatus/OverallSDProcessStatus_Text</PropertyPath>
         >                                 </Collection>
         >                             </PropertyValue>
         >                         </Record>
@@ -164,7 +162,7 @@ In the list report, you can set the variant management to `"Page"` level or to `
         >     RestrictedProperties : [
         >         {
         >             NavigationProperty: _OverallSDProcessStatus,
-        >             SortRestrictions: {NonSortableProperties: [OverallSDProcessStatus_Text]}
+        >             SortRestrictions: {NonSortableProperties: [_OverallSDProcessStatus.OverallSDProcessStatus_Text]}
         >         },
         >         {
         >             NavigationProperty: _SalesOrderType,
@@ -179,7 +177,7 @@ In the list report, you can set the variant management to `"Page"` level or to `
 
     -   Adding or removing columns
 
-        Users can add or remove all properties of the root entity of a given table and its 1:1 navigation entities. Selected properties are shown at the top of the list. For all properties of navigation entities, the name of the navigation entity is shown below the name of the property using a gray font, as shown in the following screenshot:
+        Users can add or remove all properties of the root entity of a given table and its 1:1 navigation entities. Selected properties are shown at the top of the list. For all properties of navigation entities, the name of the navigation entity is shown below the name of the property using a gray font, as shown in the following screenshot:Users can sort tables by choosing individual columns or multiple columns \(unless sorting is disabled\). Users can sort each column in ascending or descending order.
 
          ![](images/Adding_or_Removing_Columns_caf79df.png) 
 
@@ -201,7 +199,7 @@ Variant management on control level enables filtering, sorting, adding/removing 
 > Using the `"personalization"` setting
 > 
 > ```
-> "BusinessPartnersList": {
+> Users can sort tables by choosing individual columns or"BusinessPartnersList": {
 >    "type": "Component",
 >    "id": "BusinessPartnersList",
 >    "name": "sap.fe.templates.ListReport",
@@ -236,4 +234,13 @@ You can use the following values for the `"personalization"` setting:
 
 -   object: If you use the value 'object', you must also define the values `"column"`, `"sort"` and `"filter"`. If the table is an analytical table, you can also configure the `"group"`. In this case omitting a setting is treated as false, which prevents apps from getting new features in upcoming releases. You can see this in the sample code above, where the object is used as a value for an analytical table.
 
+
+> ### Note:  
+> -   Sorting, grouping, and filtering applies to the properties visible in a column. For example, for properties with text arrangement set as `#TextFirst`, the property itself or its text can be sorted, grouped, or filtered. For properties with text arrangement set as `#TextOnly`, sorting and grouping applies to the text. .
+> 
+> -   If a label is defined for a column within the `LineItem`, then the label is used in the Sort, Group, and Filter menus if the column displays a single property. For example, a property with a text annotation `#TextOnly`,
+> 
+> -   For properties with text arrangement set as `#TextOnly`, if its text is annotated as `UI.Hidden = true`, then the annotation is ignored. This text property can still be sorted and grouped.
+> 
+> -   If a `sortOrder` is set via a presentation variant on a property with text arrangement set as `#TextOnly`, the sorting is applied on the property and not the text. The sort indicator will not appear in the header column containing the property as the property is not visible on the table. This also applies for the sort and group tabs on the table personalisation dialog.
 

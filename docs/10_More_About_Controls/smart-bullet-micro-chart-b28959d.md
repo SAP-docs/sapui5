@@ -15,7 +15,7 @@ By using the `chartType` property *Bullet* of the *UI.Chart* annotation the corr
 
 ## Binding
 
-The `SmartBulletMicroChart` control should be bound to **one** entity, and not a collection of entities \(entitySet\). It supports both `enableAutoBinding` = ***false*** \(no binding is done inside the control\) and `enableAutoBinding` = ***true*** :
+The `SmartBulletMicroChart` control should be bound to **one** entity, and not a collection of entities \(entitySet\). It supports both `enableAutoBinding` = `false` \(no binding is done inside the control\) and `enableAutoBinding` = `true` :
 
 -   If the `chartBindingPath` is provided, the control will be bound relatively to it. For example, the `chartBindingPath` can be a navigation property.
 
@@ -25,7 +25,7 @@ The `SmartBulletMicroChart` control should be bound to **one** entity, and not a
 For information on how the control provides *Title*, *Description* and *UnitOfMeasure* values retrieved from the annotations, please see the *Title, Description and UnitOfMeasures* section in the [Smart Area Micro Chart](smart-area-micro-chart-283cdca.md) documentation.
 
 > ### Note:  
-> If `enableAutoBinding` = ***true*** and `chartBindingPath` is set then the `bindingContext` for the *Title*, *Description* and *UnitOfMeasure* is set to the value as well.
+> If `enableAutoBinding` = `true` and `chartBindingPath` is set then the `bindingContext` for the *Title*, *Description* and *UnitOfMeasure* is set to the value as well.
 
 
 
