@@ -8,11 +8,11 @@ You can enable generic actions in your object header.
 
 All `com.sap.vocabularies.UI.v1.DataFieldForAction` within the unqualified `UI.Identification` are interpreted as actions. The system renders a button in the header displaying the text of the data field label.
 
-   
+  
   
 **Object Page: Enable Actions in Header**
 
- ![](images/Object_Page_Enable_Actions_in_Header_b506b5c.png "Object Page: Enable Actions in Header") 
+![](images/Object_Page_Enable_Actions_in_Header_b506b5c.png "Object Page: Enable Actions in Header")
 
 
 
@@ -95,7 +95,7 @@ The *Copy* button is not available by default. However, applications can define 
 
 This *Copy* button is placed after the *Delete* button.
 
- ![](images/Copy_Action_in_the_Object_Page_c726782.png) 
+![](images/Copy_Action_in_the_Object_Page_c726782.png)
 
 > ### Sample Code:  
 > XML Annotation

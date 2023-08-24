@@ -8,11 +8,11 @@ Now we can navigate to our detail page and display an invoice, but we cannot go 
 
 ## Preview
 
-   
+  
   
 **A back button is now displayed on the detail page**
 
- ![](images/SAPUI5_Walkthrough_Step_33_6e4426b.png "A back button is now displayed on the detail page") 
+![](images/SAPUI5_Walkthrough_Step_33_6e4426b.png "A back button is now displayed on the detail page")
 
 
 

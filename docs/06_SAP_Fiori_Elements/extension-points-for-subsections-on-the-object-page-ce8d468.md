@@ -68,7 +68,7 @@ You must specify the subsection in the form of its annotation path. You also hav
 
 The result looks as shown below. The highlighted subsection has been added using the extension point.
 
- ![](images/Subsections_90b2aad.jpg) 
+![](images/Subsections_90b2aad.jpg)
 
 > ### Note:  
 > You can specify either a view or a fragment contained in the additional subsection. Either way, you do not need to use the object page \(uxap\) tags `ObjectPageSection`, `subSections`, or `ObjectPageSubSection`. These definitions are already part of the template for the object page view. Additional sections are rendered if an extension exists.
@@ -142,7 +142,7 @@ For more information, see [Extension Points for Sections on the Object Page](ext
 
 The result looks as shown below. The highlighted subsection has been added using the extension point.
 
- ![](images/Subsections_90b2aad.jpg) 
+![](images/Subsections_90b2aad.jpg)
 
 > ### Note:  
 > You can specify either a view or a fragment contained in the additional subsection. Either way, you do not need to use the object page \(uxap\) tags `ObjectPageSection`, `subSections`, or `ObjectPageSubSection`. These definitions are already part of the template for the object page view. Additional sections are rendered if an extension exists.

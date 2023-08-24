@@ -61,7 +61,7 @@ sap.ui.define([
 
 As you can see, `getCounty` generates the key for a division into groups as well as a group caption, which in this case is the county of the current companies. `getGroupHeader` serves as a group header factory function. After sorting and grouping, the company list looks like this:
 
- ![](images/Aggregation_Binding_cdd0973.png) 
+![](images/Aggregation_Binding_cdd0973.png)
 
 The following XML snippet provides initial filtering:
 

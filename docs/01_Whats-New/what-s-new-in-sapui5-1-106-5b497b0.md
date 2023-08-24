@@ -4,7 +4,7 @@
 
 With this release SAPUI5 is upgraded from version 1.105 to 1.106.
 
-** **
+****
 
 
 <table>
@@ -62,28 +62,28 @@ Available as of
 <tr>
 <td valign="top">
 
- 1.106 
+1.106 
 
 
 
 </td>
 <td valign="top">
 
- Deprecated 
+Deprecated 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Deprecations** 
+**Deprecations** 
 
 
 
@@ -101,7 +101,7 @@ There are currently no major deprecations. For a complete list of all deprecatio
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -117,28 +117,28 @@ There are currently no major deprecations. For a complete list of all deprecatio
 <tr>
 <td valign="top">
 
- 1.106 
+1.106 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.smartchart.SmartChart`** 
+**`sap.ui.comp.smartchart.SmartChart`** 
 
 
 
@@ -158,7 +158,7 @@ There are currently no major deprecations. For a complete list of all deprecatio
 
 -   We have introduced the new `notAssignedText` property. The property can be used to provide a description for fields with an empty string.
 
-     For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.comp.smartchart.SmartChart%23methods/getNotAssignedText) and the [Samples](https://ui5.sap.com/#/entity/sap.ui.comp.smartchart.SmartChart).
+    For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.comp.smartchart.SmartChart%23methods/getNotAssignedText) and the [Samples](https://ui5.sap.com/#/entity/sap.ui.comp.smartchart.SmartChart).
 
 
 <sub>Changed•Control•Info Only•1.106</sub>
@@ -168,7 +168,7 @@ There are currently no major deprecations. For a complete list of all deprecatio
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -184,28 +184,28 @@ There are currently no major deprecations. For a complete list of all deprecatio
 <tr>
 <td valign="top">
 
- 1.106 
+1.106 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- SAP Fiori Elements 
+SAP Fiori Elements 
 
 
 
 </td>
 <td valign="top">
 
- **SAP Fiori elements for OData V4** 
+**SAP Fiori elements for OData V4** 
 
 
 
@@ -232,7 +232,7 @@ The following changes and new features are available for SAP Fiori elements for 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -248,28 +248,28 @@ The following changes and new features are available for SAP Fiori elements for 
 <tr>
 <td valign="top">
 
- 1.106 
+1.106 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- SAP Fiori Elements 
+SAP Fiori Elements 
 
 
 
 </td>
 <td valign="top">
 
- **SAP Fiori elements for OData V2** 
+**SAP Fiori elements for OData V2** 
 
 
 
@@ -296,7 +296,7 @@ The following changes and new features are available for SAP Fiori elements for 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -312,28 +312,28 @@ The following changes and new features are available for SAP Fiori elements for 
 <tr>
 <td valign="top">
 
- 1.106 
+1.106 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- SAP Fiori Elements 
+SAP Fiori Elements 
 
 
 
 </td>
 <td valign="top">
 
- **SAP Fiori elements for OData V2 and SAP Fiori elements for OData V4** 
+**SAP Fiori elements for OData V2 and SAP Fiori elements for OData V4** 
 
 
 
@@ -356,7 +356,7 @@ The following changes and new features are available for both SAP Fiori elements
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -372,28 +372,28 @@ The following changes and new features are available for both SAP Fiori elements
 <tr>
 <td valign="top">
 
- 1.106 
+1.106 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.integration.widgets.Card`** 
+**`sap.ui.integration.widgets.Card`** 
 
 
 
@@ -425,7 +425,7 @@ The following changes and new features are available for both SAP Fiori elements
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -441,28 +441,28 @@ The following changes and new features are available for both SAP Fiori elements
 <tr>
 <td valign="top">
 
- 1.106 
+1.106 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.smartfield.SmartField`** 
+**`sap.ui.comp.smartfield.SmartField`** 
 
 
 
@@ -480,7 +480,7 @@ We have enabled key-user adaptation for `TextArrangement` annotation types. Key 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -496,28 +496,28 @@ We have enabled key-user adaptation for `TextArrangement` annotation types. Key 
 <tr>
 <td valign="top">
 
- 1.106 
+1.106 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.suite.ui.commons.Timeline`** 
+**`sap.suite.ui.commons.Timeline`** 
 
 
 
@@ -535,7 +535,7 @@ You can now configure the timeline control to visualize the respective IANA time
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -551,28 +551,28 @@ You can now configure the timeline control to visualize the respective IANA time
 <tr>
 <td valign="top">
 
- 1.106 
+1.106 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.uxap.ObjectPageSection`** 
+**`sap.uxap.ObjectPageSection`** 
 
 
 
@@ -590,7 +590,7 @@ We have introduced a new `heading` aggregation that allows you to include conten
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -606,28 +606,28 @@ We have introduced a new `heading` aggregation that allows you to include conten
 <tr>
 <td valign="top">
 
- 1.106 
+1.106 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.Image` \(Experimental\)** 
+**`sap.m.Image` \(Experimental\)** 
 
 
 
@@ -645,7 +645,7 @@ We have enabled inline rendering of SVG files, so that they can be themeable and
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -661,28 +661,28 @@ We have enabled inline rendering of SVG files, so that they can be themeable and
 <tr>
 <td valign="top">
 
- 1.106 
+1.106 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Announcement 
+Announcement 
 
 
 
 </td>
 <td valign="top">
 
- **Deactivation of Default Time Zone Configuration Feature** 
+**Deactivation of Default Time Zone Configuration Feature** 
 
 
 
@@ -719,7 +719,7 @@ We plan to bring this feature back in a different form at a later point in time.
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -735,28 +735,28 @@ We plan to bring this feature back in a different form at a later point in time.
 <tr>
 <td valign="top">
 
- 1.106 
+1.106 
 
 
 
 </td>
 <td valign="top">
 
- UI Changed 
+UI Changed 
 
 
 
 </td>
 <td valign="top">
 
- Announcement 
+Announcement 
 
 
 
 </td>
 <td valign="top">
 
- **Object Pages: Sections Now Show Six Columns by Default** 
+**Object Pages: Sections Now Show Six Columns by Default** 
 
 
 
@@ -777,7 +777,7 @@ To reduce empty spaces on very large screens in object page apps, sections will 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -793,28 +793,28 @@ To reduce empty spaces on very large screens in object page apps, sections will 
 <tr>
 <td valign="top">
 
- 1.106 
+1.106 
 
 
 
 </td>
 <td valign="top">
 
- UI Changed 
+UI Changed 
 
 
 
 </td>
 <td valign="top">
 
- Announcement 
+Announcement 
 
 
 
 </td>
 <td valign="top">
 
- **Object Pages: Header Facets in Scrollable Containers** 
+**Object Pages: Header Facets in Scrollable Containers** 
 
 
 
@@ -835,7 +835,7 @@ On desktop computers, header facets that include information or important KPIs w
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -852,6 +852,8 @@ On desktop computers, header facets that include information or important KPIs w
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.115](what-s-new-in-sapui5-1-115-409fde8.md "With this release SAPUI5 is upgraded from version 1.114 to 1.115.")
 
 [What's New in SAPUI5 1.114](what-s-new-in-sapui5-1-114-890fce1.md "With this release SAPUI5 is upgraded from version 1.113 to 1.114.")
 

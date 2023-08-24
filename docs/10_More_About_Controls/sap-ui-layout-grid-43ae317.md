@@ -66,8 +66,8 @@ Description
 <td valign="top">
 
 `"XL3 L4 M6 S12"`  
- `"XL6 M6"`  
- `"S2"`
+`"XL6 M6"`  
+`"S2"`
 
 
 
@@ -91,8 +91,8 @@ Determines the span of the items for the different screen/container sizes \(XL, 
 <td valign="top">
 
 `"XL4 L3 M2 S1"`  
- `"XL2 L1"`  
- `"S6"`
+`"XL2 L1"`  
+`"S6"`
 
 
 

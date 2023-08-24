@@ -8,11 +8,11 @@ In this step, we are going to extend the functionality of SAPUI5 with a custom c
 
 ## Preview
 
-   
+  
   
 **A custom product rating control is added to the detail page**
 
- ![](images/SAPUI5_Walkthrough_Step_34_e3e163a.png "A custom product rating control is added to the detail page") 
+![](images/SAPUI5_Walkthrough_Step_34_e3e163a.png "A custom product rating control is added to the detail page")
 
 
 
@@ -157,11 +157,11 @@ In the `metadata` section we therefore define several properties that we make us
 
     As described in the first paragraph, we need three internal controls to realize our rating functionality. We therefore create three “hidden aggregations” by setting the `visibility` attribute to `hidden`. This way, we can use the models that are set on the view also in the inner controls and SAPUI5 will take care of the lifecycle management and destroy the controls when they are not needed anymore. Aggregations can also be used to hold arrays of controls but we just want a single control in each of the aggregations so we need to adjust the cardinality by setting the attribute `multiple` to `false`.
 
-    -    `_rating`: A `sap.m.RatingIndicator` control for user input
+    -   `_rating`: A `sap.m.RatingIndicator` control for user input
 
-    -    `_label`: A `sap.m.Label` to display additional information
+    -   `_label`: A `sap.m.Label` to display additional information
 
-    -    `_button`: A `sap.m.Button` to submit the rating
+    -   `_button`: A `sap.m.Button` to submit the rating
 
 
     > ### Note:  

@@ -101,7 +101,7 @@ Choose which filter type you want to use for the entire configuration:
 
 Within a configuration, you can now start adding objects according to the following structure:
 
- ![](images/Tree_Structure_of_a_Configuration_d6135df.png) 
+![](images/Tree_Structure_of_a_Configuration_d6135df.png)
 
 The design time layout of these objects is organized as a tree structure to reflect the dependencies between them. For example, steps can only be added under a category, and representations can only be added under a step.
 

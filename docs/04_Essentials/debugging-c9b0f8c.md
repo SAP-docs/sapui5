@@ -7,7 +7,7 @@ When developing apps, searching for bugs is an inevitable part of the process. T
 > ### Note:  
 > For information on browser debugging for ABAP developers, see [Browser Debugging for ABAP Developers](../05_Developing_Apps/browser-debugging-for-abap-developers-1e52fde.md).
 
- <a name="loio1ed4b5f9f18848b1badee9b72d4ac261"/>
+<a name="loio1ed4b5f9f18848b1badee9b72d4ac261"/>
 
 <!-- loio1ed4b5f9f18848b1badee9b72d4ac261 -->
 
@@ -35,7 +35,7 @@ If you only want to load the debug sources for **specific packages**, you have t
 
 After reloading the page, in the *Network* tab of the browser’s developer tools you can see that the controls and framework assets are now loaded individually and have a `-dbg` suffix. These are the source code files that include comments, the uncompressed code of the app, and the SAPUI5 artifacts.
 
-Choose  [Ctrl\] + [O\]  \(Windows\) or  [Command\] + [O\]  \(macOS\) and type the name of an SAPUI5 artifact to view its source code in debug mode.
+Choose [Ctrl\] + [O\]  \(Windows\) or [Command\] + [O\]  \(macOS\) and type the name of an SAPUI5 artifact to view its source code in debug mode.
 
 > ### Note:  
 > Turning on debug sources also increases the log level. For more information, see [Logging and Tracing](logging-and-tracing-9f4d62c.md).
@@ -62,7 +62,7 @@ This feature can be used to test an application against a newer or older version
 
 ![](images/SAPUI5_Diagnostics_Debugging_View_64d3bfd.png)
 
- <a name="loio9d57287c155741e7ad15f42736605ffa"/>
+<a name="loio9d57287c155741e7ad15f42736605ffa"/>
 
 <!-- loio9d57287c155741e7ad15f42736605ffa -->
 
@@ -72,7 +72,7 @@ Breakpoints are helpful when you debug the event handling of an SAPUI5 object. Y
 
 For more information, see [Diagnostics](diagnostics-6ec18e8.md#loio6ec18e80b0ce47f290bc2645b0cc86e6).
 
- <a name="loio549150aa11cf432780c1801a6e2dc3c4"/>
+<a name="loio549150aa11cf432780c1801a6e2dc3c4"/>
 
 <!-- loio549150aa11cf432780c1801a6e2dc3c4 -->
 
@@ -105,7 +105,7 @@ In the *Debugging* section of the *Diagnostics* window, you can set breakpoints 
 6.  To remove a breakpoint, select the red x.
 
 
- <a name="loiob691c4e7e970484991007a4e30fcd6d0"/>
+<a name="loiob691c4e7e970484991007a4e30fcd6d0"/>
 
 <!-- loiob691c4e7e970484991007a4e30fcd6d0 -->
 

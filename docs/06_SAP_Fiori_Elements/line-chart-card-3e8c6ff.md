@@ -12,9 +12,9 @@ Line charts are often used to visualize a trend in data over time. Line charts n
 
 The line chart supports a color palette for semantic coloring.
 
-   
+  
   
 **Example of a Line Chart Card**
 
- ![](images/Line_Chart_aacfae2.png "Example of a Line Chart Card") 
+![](images/Line_Chart_aacfae2.png "Example of a Line Chart Card")
 

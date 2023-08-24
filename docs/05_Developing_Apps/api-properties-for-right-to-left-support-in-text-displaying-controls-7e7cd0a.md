@@ -21,9 +21,9 @@ Two new properites have been introduced to determine the directionality of the t
 -   **`textAlign`**
 
 
- `textDirection` adds an HTML `dir` attribute to the part of the control that displays the target content.
+`textDirection` adds an HTML `dir` attribute to the part of the control that displays the target content.
 
- `textAlign` and is used for reversing the text alignment. Adding the `textAlign` property is only needed if the control doesn’t force the correct alignment.
+`textAlign` and is used for reversing the text alignment. Adding the `textAlign` property is only needed if the control doesn’t force the correct alignment.
 
 The naming of the properties varies based on the actual use case of the control. For example, the `sap.m.DisplayListItem` control has `label` and `value` properties for text representation and the most common use case is to display numeric data in the `value` part of the control. The naming of the new property is `valueTextDirection` and since the control forces text alignment, the `valueTextAlign` property is not needed.
 

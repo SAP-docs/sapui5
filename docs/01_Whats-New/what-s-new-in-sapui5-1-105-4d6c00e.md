@@ -7,9 +7,9 @@
 With this release SAPUI5 is upgraded from version 1.104 to 1.105.
 
 > ### Note:  
-> Content marked as <span style="color:#666666;"><span class="SAP-icons"></span></span>** [Preview](https://help.sap.com/docs/whats-new-disclaimer)** is provided as a courtesy, without a warranty, and may be subject to change. For more information, see the [preview disclaimer](https://help.sap.com/docs/whats-new-disclaimer).
+> Content marked as <span style="color:#666666;"><span class="SAP-icons"></span></span>**[Preview](https://help.sap.com/docs/whats-new-disclaimer)** is provided as a courtesy, without a warranty, and may be subject to change. For more information, see the [preview disclaimer](https://help.sap.com/docs/whats-new-disclaimer).
 
-** **
+****
 
 
 <table>
@@ -67,28 +67,28 @@ Available as of
 <tr>
 <td valign="top">
 
- 1.105 
+1.105 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.List`** 
+**`sap.m.List`** 
 
 
 
@@ -114,7 +114,7 @@ Available as of
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -130,28 +130,28 @@ Available as of
 <tr>
 <td valign="top">
 
- 1.105 
+1.105 
 
 
 
 </td>
 <td valign="top">
 
- Deprecated 
+Deprecated 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Deprecations** 
+**Deprecations** 
 
 
 
@@ -169,7 +169,7 @@ There are currently no major deprecations. For a complete list of all deprecatio
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -185,28 +185,28 @@ There are currently no major deprecations. For a complete list of all deprecatio
 <tr>
 <td valign="top">
 
- 1.105 
+1.105 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.smartfilterbar.SmartFilterBar`** 
+**`sap.ui.comp.smartfilterbar.SmartFilterBar`** 
 
 
 
@@ -224,7 +224,7 @@ We have introduced a new button in the header of the `Adapt Filters` dialog. As 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -240,28 +240,28 @@ We have introduced a new button in the header of the `Adapt Filters` dialog. As 
 <tr>
 <td valign="top">
 
- 1.105 
+1.105 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.smartfield.SmartField`** 
+**`sap.ui.comp.smartfield.SmartField`** 
 
 
 
@@ -290,7 +290,7 @@ For more information, see the [Sample](https://ui5.sap.com/#/entity/sap.ui.comp.
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -306,28 +306,28 @@ For more information, see the [Sample](https://ui5.sap.com/#/entity/sap.ui.comp.
 <tr>
 <td valign="top">
 
- 1.105 
+1.105 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.integration.widgets.Card`** 
+**`sap.ui.integration.widgets.Card`** 
 
 
 
@@ -345,7 +345,7 @@ We have introduced the `tooltip` property, which is used to provide more informa
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -361,28 +361,28 @@ We have introduced the `tooltip` property, which is used to provide more informa
 <tr>
 <td valign="top">
 
- 1.105 
+1.105 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.IllustratedMessage`** 
+**`sap.m.IllustratedMessage`** 
 
 
 
@@ -400,7 +400,7 @@ We have enabled vertical responsiveness for the control. The `sap.m.IllustratedM
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -416,28 +416,28 @@ We have enabled vertical responsiveness for the control. The `sap.m.IllustratedM
 <tr>
 <td valign="top">
 
- 1.105 
+1.105 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.Dialog`** 
+**`sap.m.Dialog`** 
 
 
 
@@ -446,7 +446,7 @@ We have enabled vertical responsiveness for the control. The `sap.m.IllustratedM
 
 **`sap.m.Dialog`**
 
-We have enabled a new keyboard shortcut for `sap.m.Dialog` with a footer button of type *Accept* or *Emphasized*. Buttons can be triggered by pressing  [Ctrl\] + [Enter\]  for Windows and  [Ctrl\] + [Enter\] / [Cmd\] + [Enter\]  for Mac OS. For more information, see the [Sample](https://ui5.sap.com/#/entity/sap.m.Dialog/sample/sap.m.sample.Dialog). 
+We have enabled a new keyboard shortcut for `sap.m.Dialog` with a footer button of type *Accept* or *Emphasized*. Buttons can be triggered by pressing [Ctrl\] + [Enter\]  for Windows and [Ctrl\] + [Enter\] /[Cmd\] + [Enter\]  for Mac OS. For more information, see the [Sample](https://ui5.sap.com/#/entity/sap.m.Dialog/sample/sap.m.sample.Dialog). 
 
 <sub>Changed•Control•Info Only•1.105</sub>
 
@@ -455,7 +455,7 @@ We have enabled a new keyboard shortcut for `sap.m.Dialog` with a footer button 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -471,28 +471,28 @@ We have enabled a new keyboard shortcut for `sap.m.Dialog` with a footer button 
 <tr>
 <td valign="top">
 
- 1.105 
+1.105 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **SAPUI5 OData V4 Model** 
+**SAPUI5 OData V4 Model** 
 
 
 
@@ -512,7 +512,7 @@ For more information, see [Recursive Hierarchy](../04_Essentials/extension-for-d
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -528,28 +528,28 @@ For more information, see [Recursive Hierarchy](../04_Essentials/extension-for-d
 <tr>
 <td valign="top">
 
- 1.105 
+1.105 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- SAP Fiori Elements 
+SAP Fiori Elements 
 
 
 
 </td>
 <td valign="top">
 
- **SAP Fiori elements for OData V2** 
+**SAP Fiori elements for OData V2** 
 
 
 
@@ -572,7 +572,7 @@ The following changes and new features are available for SAP Fiori elements for 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -588,28 +588,28 @@ The following changes and new features are available for SAP Fiori elements for 
 <tr>
 <td valign="top">
 
- 1.105 
+1.105 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- SAP Fiori Elements 
+SAP Fiori Elements 
 
 
 
 </td>
 <td valign="top">
 
- **SAP Fiori elements for OData V4** 
+**SAP Fiori elements for OData V4** 
 
 
 
@@ -632,7 +632,7 @@ The following changes and new features are available for SAP Fiori elements for 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -648,28 +648,28 @@ The following changes and new features are available for SAP Fiori elements for 
 <tr>
 <td valign="top">
 
- 1.105 
+1.105 
 
 
 
 </td>
 <td valign="top">
 
- UI Changed 
+UI Changed 
 
 
 
 </td>
 <td valign="top">
 
- Announcement 
+Announcement 
 
 
 
 </td>
 <td valign="top">
 
- **Stricter Validation of Decimal and Grouping Separators** 
+**Stricter Validation of Decimal and Grouping Separators** 
 
 
 
@@ -690,7 +690,7 @@ If a user added grouping separators when entering a number, the parsing logic ig
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -706,28 +706,28 @@ If a user added grouping separators when entering a number, the parsing logic ig
 <tr>
 <td valign="top">
 
- 1.105 
+1.105 
 
 
 
 </td>
 <td valign="top">
 
- UI Changed 
+UI Changed 
 
 
 
 </td>
 <td valign="top">
 
- Announcement 
+Announcement 
 
 
 
 </td>
 <td valign="top">
 
- **Draft-Enabled Object Pages: Entries Validated on Choosing *Enter*** 
+**Draft-Enabled Object Pages: Entries Validated on Choosing *Enter*** 
 
 
 
@@ -748,7 +748,7 @@ Data entered in a form or table is currently only validated after the user choos
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -764,14 +764,14 @@ Data entered in a form or table is currently only validated after the user choos
 <tr>
 <td valign="top">
 
- 1.105 
+1.105 
 
 
 
 </td>
 <td valign="top">
 
- UI Changed 
+UI Changed 
 
 
 
@@ -785,7 +785,7 @@ Announcement
 </td>
 <td valign="top">
 
- **Object Pages: Data Entry No Longer Blocked by Busy Indicator** 
+**Object Pages: Data Entry No Longer Blocked by Busy Indicator** 
 
 
 
@@ -806,7 +806,7 @@ In certain cases, a busy indicator unneccessarily prevents the user from enterin
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -822,28 +822,28 @@ In certain cases, a busy indicator unneccessarily prevents the user from enterin
 <tr>
 <td valign="top">
 
- 1.105 
+1.105 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Announcement 
+Announcement 
 
 
 
 </td>
 <td valign="top">
 
- **Deactivation of Default Time Zone Configuration Feature** 
+**Deactivation of Default Time Zone Configuration Feature** 
 
 
 
@@ -883,7 +883,7 @@ We plan to bring this feature back in a different form at a later point in time.
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -900,6 +900,8 @@ We plan to bring this feature back in a different form at a later point in time.
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.115](what-s-new-in-sapui5-1-115-409fde8.md "With this release SAPUI5 is upgraded from version 1.114 to 1.115.")
 
 [What's New in SAPUI5 1.114](what-s-new-in-sapui5-1-114-890fce1.md "With this release SAPUI5 is upgraded from version 1.113 to 1.114.")
 

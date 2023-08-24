@@ -8,11 +8,11 @@ We also want to provide our users a way of contacting Harry Hawk. Therefore we w
 
 ## Preview
 
-   
+  
   
 **Address with e-mail link**
 
- ![](images/Tutorial_Data_Binding_Step_9_1161575.png "Address with e-mail link") 
+![](images/Tutorial_Data_Binding_Step_9_1161575.png "Address with e-mail link")
 
 
 
@@ -102,7 +102,7 @@ For more complex bindings we cannot use the simple binding syntax with the curly
 
 -   `formatter`
 
-    A reference to the function that receives the parameters listed in the `parts` array. Whatever value is returned by the formatter function becomes the value set for this property. The dot \(<code><b> </b>formatMail</code>\) at the beginning of the formatter tellsSAPUI5 to look for a `formatMail` function on the controller instance of the view. If you do not use the dot, the function will be resolved by looking into the global namespace.
+    A reference to the function that receives the parameters listed in the `parts` array. Whatever value is returned by the formatter function becomes the value set for this property. The dot \(<code><b></b>formatMail</code>\) at the beginning of the formatter tellsSAPUI5 to look for a `formatMail` function on the controller instance of the view. If you do not use the dot, the function will be resolved by looking into the global namespace.
 
 
 > ### Note:  

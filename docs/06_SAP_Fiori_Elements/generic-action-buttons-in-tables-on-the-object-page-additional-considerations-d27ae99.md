@@ -12,11 +12,11 @@ For more information, see [Adding Actions to Tables](adding-actions-to-tables-b6
 
 The *Create* button is only displayed in the table toolbar when the object page is in *Edit* mode, as shown below.
 
-   
+  
   
 **Create Button in Table Toolbar**
 
- ![](images/CreatablePath_ObPTable_1d6a9b1.png "Create Button in Table Toolbar") 
+![](images/CreatablePath_ObPTable_1d6a9b1.png "Create Button in Table Toolbar")
 
 
 
@@ -30,13 +30,13 @@ Within your annotations, you set the `creatable-path` to a particular property o
 
 ### Code Samples
 
- **creatable-path: Annotation for SAP Fiori elements for OData V2** 
+**creatable-path: Annotation for SAP Fiori elements for OData V2** 
 
 ```xml
 <NavigationProperty Name="to_ProductText" sap:creatable-path="CanCreateProductText".../>
 ```
 
- **creatable-path: Annotation for SAP Fiori elements for OData V4** 
+**creatable-path: Annotation for SAP Fiori elements for OData V4** 
 
 ```xml
 

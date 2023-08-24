@@ -82,7 +82,7 @@ You need to update the `manifest.json` file of the app as follows:
 > }
 > ```
 
- ![](images/Standard_list_Item_b45a926.png) 
+![](images/Standard_list_Item_b45a926.png)
 
 Follow the guidelines mentioned in the following table for adding `DataFields` and `DataPoints` under the `UI.LineItem` annotation:
 
@@ -354,7 +354,7 @@ You need to update the `manifest.json` file of the app as follows:
 > }
 > ```
 
- ![](images/Object_List_Item_157cbbb.png) 
+![](images/Object_List_Item_157cbbb.png)
 
 Follow the guidelines in the following table for adding `DataFields` and `DataPoints` under the `UI.LineItem` annotation:
 

@@ -13,12 +13,12 @@ You find yourself in one of these situations:
 
 ## Preview
 
-   
+  
   
 **The browser displays an empty page and an Uncaught Error is issued in the console**
 
- ![](images/FAK1_Empty_Page_Comes_Up_873b3c2.png "The browser displays an empty page and an Uncaught Error is issued in
-					the console") 
+![](images/FAK1_Empty_Page_Comes_Up_873b3c2.png "The browser displays an empty page and an Uncaught Error is issued in
+					the console")
 
 
 
@@ -94,7 +94,7 @@ Incorrect Example
 <tr>
 <td valign="top">
 
- <code>&lt;<b>B</b>utton text="Click me" /&gt;</code> 
+<code>&lt;<b>B</b>utton text="Click me" /&gt;</code> 
 
 
 

@@ -47,35 +47,35 @@ The `sap.ui.layout.Grid` control defines how many columns are displayed dependin
 <tr>
 <th valign="top">
 
- **Feature Supported?** 
+**Feature Supported?** 
 
 
 
 </th>
 <th valign="top">
 
- `sap.f.GridContainer` 
+`sap.f.GridContainer` 
 
 
 
 </th>
 <th valign="top">
 
- `sap.f.GridList` 
+`sap.f.GridList` 
 
 
 
 </th>
 <th valign="top">
 
- `sap.ui.layout.cssgrid.CSSGrid` 
+`sap.ui.layout.cssgrid.CSSGrid` 
 
 
 
 </th>
 <th valign="top">
 
- `sap.ui.layout.Grid` 
+`sap.ui.layout.Grid` 
 
 
 
@@ -84,35 +84,35 @@ The `sap.ui.layout.Grid` control defines how many columns are displayed dependin
 <tr>
 <td valign="top">
 
- **Complies with the grid specification according to the HTML Standard** 
+**Complies with the grid specification according to the HTML Standard** 
 
 
 
 </td>
 <td valign="top">
 
- ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
 
 
 
@@ -121,7 +121,7 @@ The `sap.ui.layout.Grid` control defines how many columns are displayed dependin
 <tr>
 <td valign="top">
 
- **Number of columns supported** 
+**Number of columns supported** 
 
 
 
@@ -158,72 +158,35 @@ Up to 12
 <tr>
 <td valign="top">
 
- **Can configure row height, column width, and gap dimensions** 
+**Can configure row height, column width, and gap dimensions** 
 
 
 
 </td>
 <td valign="top">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
- **Supports auto calculation of rows per item** 
-
-
-
-</td>
-<td valign="top">
-
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
-
-
-
-</td>
-<td valign="top">
-
- ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
-
-
-
-</td>
-<td valign="top">
-
- ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
-
-
-
-</td>
-<td valign="top">
-
- ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
 
 
 
@@ -232,35 +195,35 @@ Up to 12
 <tr>
 <td valign="top">
 
- **Can fill empty spaces in the grid** 
+**Supports auto calculation of rows per item** 
 
 
 
 </td>
 <td valign="top">
 
- ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
 
 
 
@@ -269,7 +232,44 @@ Up to 12
 <tr>
 <td valign="top">
 
- **Items flow direction** 
+**Can fill empty spaces in the grid** 
+
+
+
+</td>
+<td valign="top">
+
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+
+
+
+</td>
+<td valign="top">
+
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
+
+
+
+</td>
+<td valign="top">
+
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
+
+
+
+</td>
+<td valign="top">
+
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+**Items flow direction** 
 
 
 
@@ -306,35 +306,35 @@ Horizontal only
 <tr>
 <td valign="top">
 
- **Can configure item position** 
+**Can configure item position** 
 
 
 
 </td>
 <td valign="top">
 
- ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
 
 
 
@@ -352,28 +352,28 @@ The ability to define how many rows and columns an item should take.
 </td>
 <td valign="top">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
 
 
 
@@ -382,35 +382,35 @@ The ability to define how many rows and columns an item should take.
 <tr>
 <td valign="top">
 
- **Supports columns breathing** 
+**Supports columns breathing** 
 
 
 
 </td>
 <td valign="top">
 
- ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
@@ -428,65 +428,28 @@ The possibility to use one of the predefined layout templates or to create a cus
 </td>
 <td valign="top">
 
- ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)<sup>1</sup> 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)<sup>1</sup> 
 
 
 
 </td>
 <td valign="top">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)<sup>1</sup> 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)<sup>1</sup> 
 
 
 
 </td>
 <td valign="top">
 
- ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
- **Supports screen-size breakpoints** 
-
-
-
-</td>
-<td valign="top">
-
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
-
-
-
-</td>
-<td valign="top">
-
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)<sup>1</sup> 
-
-
-
-</td>
-<td valign="top">
-
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)<sup>1</sup> 
-
-
-
-</td>
-<td valign="top">
-
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
 
 
 
@@ -495,72 +458,35 @@ The possibility to use one of the predefined layout templates or to create a cus
 <tr>
 <td valign="top">
 
- **Supports container-size breakpoints** 
+**Supports screen-size breakpoints** 
 
 
 
 </td>
 <td valign="top">
 
- ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)<sup>1</sup> 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)<sup>1</sup> 
 
 
 
 </td>
 <td valign="top">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)<sup>1</sup> 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)<sup>1</sup> 
 
 
 
 </td>
 <td valign="top">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
- **Supports indentation** 
-
-
-
-</td>
-<td valign="top">
-
- ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
-
-
-
-</td>
-<td valign="top">
-
- ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
-
-
-
-</td>
-<td valign="top">
-
- ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
-
-
-
-</td>
-<td valign="top">
-
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
@@ -569,72 +495,35 @@ The possibility to use one of the predefined layout templates or to create a cus
 <tr>
 <td valign="top">
 
- **Can control items visibility based on breakpoints** 
+**Supports container-size breakpoints** 
 
 
 
 </td>
 <td valign="top">
 
- ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)<sup>1</sup> 
 
 
 
 </td>
 <td valign="top">
 
- ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)<sup>1</sup> 
 
 
 
 </td>
 <td valign="top">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
- **Supports keyboard handling** 
-
-
-
-</td>
-<td valign="top">
-
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)<sup>2</sup> 
-
-
-
-</td>
-<td valign="top">
-
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
-
-
-
-</td>
-<td valign="top">
-
- ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
-
-
-
-</td>
-<td valign="top">
-
- ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
@@ -643,72 +532,35 @@ The possibility to use one of the predefined layout templates or to create a cus
 <tr>
 <td valign="top">
 
- **Supports growing** 
+**Supports indentation** 
 
 
 
 </td>
 <td valign="top">
 
- ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
- **Supports sorting, filtering and grouping** 
-
-
-
-</td>
-<td valign="top">
-
- ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
-
-
-
-</td>
-<td valign="top">
-
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
-
-
-
-</td>
-<td valign="top">
-
- ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
-
-
-
-</td>
-<td valign="top">
-
- ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
@@ -717,35 +569,35 @@ The possibility to use one of the predefined layout templates or to create a cus
 <tr>
 <td valign="top">
 
- **Supports headers and footer**s
+**Can control items visibility based on breakpoints** 
 
 
 
 </td>
 <td valign="top">
 
- ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
@@ -754,35 +606,183 @@ The possibility to use one of the predefined layout templates or to create a cus
 <tr>
 <td valign="top">
 
- **Supports selection and highlighting** 
+**Supports keyboard handling** 
 
 
 
 </td>
 <td valign="top">
 
- ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)<sup>2</sup> 
 
 
 
 </td>
 <td valign="top">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+**Supports growing** 
+
+
+
+</td>
+<td valign="top">
+
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+
+
+
+</td>
+<td valign="top">
+
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
+
+
+
+</td>
+<td valign="top">
+
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+
+
+
+</td>
+<td valign="top">
+
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+**Supports sorting, filtering and grouping** 
+
+
+
+</td>
+<td valign="top">
+
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+
+
+
+</td>
+<td valign="top">
+
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
+
+
+
+</td>
+<td valign="top">
+
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+
+
+
+</td>
+<td valign="top">
+
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+**Supports headers and footer**s
+
+
+
+</td>
+<td valign="top">
+
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+
+
+
+</td>
+<td valign="top">
+
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
+
+
+
+</td>
+<td valign="top">
+
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+
+
+
+</td>
+<td valign="top">
+
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+**Supports selection and highlighting** 
+
+
+
+</td>
+<td valign="top">
+
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+
+
+
+</td>
+<td valign="top">
+
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
+
+
+
+</td>
+<td valign="top">
+
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+
+
+
+</td>
+<td valign="top">
+
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
 
 
 

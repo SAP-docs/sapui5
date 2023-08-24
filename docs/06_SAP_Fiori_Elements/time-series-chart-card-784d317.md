@@ -127,9 +127,9 @@ This chart type represents a time-based dimension that is more responsive to a c
 > 
 > ```
 
-   
+  
   
 **Example of a Time Series Chart Card**
 
- ![](images/Time_Series_Chart_Card_2ae1caf.png "Example of a Time Series Chart Card") 
+![](images/Time_Series_Chart_Card_2ae1caf.png "Example of a Time Series Chart Card")
 

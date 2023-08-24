@@ -15,7 +15,7 @@ Application developers can use this extension to modify \(add/remove/change\) th
 > 
 > After you've created an app extension, its display \(for example, control placement and layout\) and system behavior \(for example, model and binding usage, busy handling\) lies within the application's responsibility. SAP Fiori elements provides support only for the official `extensionAPI` functions. Don't access or manipulate controls, properties, models, or other internal objects created by the SAP Fiori elements framework.
 
- <a name="task_u52_ds1_34b"/>
+<a name="task_u52_ds1_34b"/>
 
 <!-- task\_u52\_ds1\_34b -->
 
@@ -52,7 +52,7 @@ Application developers can use this extension to modify \(add/remove/change\) th
 
 2.  Create the controller extension files in your app, as shown below:
 
-     ![](images/Controller_Extension_4303c97.png) 
+    ![](images/Controller_Extension_4303c97.png)
 
 3.  Implement the `adaptNavigationParameterExtension` function in the controller extension files of the list report / object page or the analytical list page and check the *API Reference* for [`SelectionVariant`](https://ui5.sap.com/#/api/sap.ui.generic.app.navigation.service.SelectionVariant/overview).
 
@@ -77,7 +77,7 @@ Application developers can use this extension to modify \(add/remove/change\) th
     ```
 
 
- <a name="task_yb4_1s1_34b"/>
+<a name="task_yb4_1s1_34b"/>
 
 <!-- task\_yb4\_1s1\_34b -->
 
@@ -136,7 +136,7 @@ The modification \(add/remove/change\) is achieved via the `adaptNavigationConte
     > ```
 
 
- <a name="concept_br3_gdr_gwb"/>
+<a name="concept_br3_gdr_gwb"/>
 
 <!-- concept\_br3\_gdr\_gwb -->
 

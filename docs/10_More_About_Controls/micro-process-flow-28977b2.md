@@ -16,7 +16,7 @@ The `MicroProcessFlow` control can be used to display the progress of linear wor
 
 It is best used for simple linear workflows that include up to seven progress steps. For more complex processes and workflows, consider using the [`ProcessFlow`](process-flow-70307d4.md) control instead.
 
- ![Micro Process Flow with a Popup Dialog](../01_Whats-New/images/WhatsNew_154_MicroProcessFlow_e40ca58.jpg) 
+![Micro Process Flow with a Popup Dialog](../01_Whats-New/images/WhatsNew_154_MicroProcessFlow_e40ca58.jpg)
 
 
 

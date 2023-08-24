@@ -8,7 +8,7 @@
 
 ## Preview
 
- ![](images/Text_Rule_807586f.png) 
+![](images/Text_Rule_807586f.png)
 
 
 

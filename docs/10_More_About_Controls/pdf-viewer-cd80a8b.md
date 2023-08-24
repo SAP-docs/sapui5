@@ -14,11 +14,11 @@ For more information about this control, see the [API Reference](https://ui5.sap
 
 The `PDFViewer` control displays PDF documents right inside your app. It can be embedded into your page layout, or you can set it to open in a popup dialog. In addition, this control allows you to download the PDF documents it displays.
 
-   
+  
   
 **PDF Viewer Example**
 
- ![PDF Viewer Example](images/PDF_Viewer_c4692b3.png "PDF Viewer Example") 
+![PDF Viewer Example](images/PDF_Viewer_c4692b3.png "PDF Viewer Example")
 
 
 

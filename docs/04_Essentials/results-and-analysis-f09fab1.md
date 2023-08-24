@@ -8,11 +8,11 @@ After an analysis run, you can view a list of all triggered rules, their descrip
 
 Below you can see an example of how the results are displayed.
 
-   
+  
   
 **Support Assistant Issues View**
 
- ![](images/Support_Assistant_Issues_View_78c90c5.png "Support Assistant Issues View") 
+![](images/Support_Assistant_Issues_View_78c90c5.png "Support Assistant Issues View")
 
 
 
@@ -52,9 +52,9 @@ The right side shows the element tree of the application. The root of the tree i
 -   The table in the issues list shows all other elements that have triggered the same rule. The list also shows you the severity of each issue.
 
 
-   
+  
   
 **Support Assistant DOM Tree**
 
- ![](images/Support_Assistant_DOM_Tree_4c280d1.png "Support Assistant DOM Tree") 
+![](images/Support_Assistant_DOM_Tree_4c280d1.png "Support Assistant DOM Tree")
 

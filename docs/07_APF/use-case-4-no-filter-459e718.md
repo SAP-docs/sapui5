@@ -11,5 +11,5 @@ In this case, the context is applied to the analysis path in the background. Thi
 
 The option described above is depicted in the following figure:
 
- ![](images/Facet_Filter_Configuration_Use_Case_4_a0c45f6.png) 
+![](images/Facet_Filter_Configuration_Use_Case_4_a0c45f6.png)
 

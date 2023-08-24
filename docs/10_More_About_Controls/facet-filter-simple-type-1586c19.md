@@ -6,11 +6,11 @@ The simple type of the `FacetFilter` control is only available for desktop and t
 
 The active facets are displayed as individually selectable buttons on the toolbar as shown in the following figure.
 
- ![](images/SAPUI5_Facet_Filter_Simple_Toolbar_0c7cf9f.png) 
+![](images/SAPUI5_Facet_Filter_Simple_Toolbar_0c7cf9f.png)
 
 If the user selects a facet in the toolbar, a popover list of the available filters for the selected facet is displayed.
 
- ![](images/SAPUI5_Facet_Filter_Simple_Flow_5dd4728.png) 
+![](images/SAPUI5_Facet_Filter_Simple_Flow_5dd4728.png)
 
 The simple type provides the following functions:
 

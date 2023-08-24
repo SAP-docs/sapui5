@@ -40,7 +40,8 @@ If you have called [`ODataListBinding#create`](https://ui5.sap.com/#/api/sap.ui.
                         "CurrencyCode" : "EUR"
                     });
  
-            // Note: This promise fails only if the transient entity is deleted
+            // Note: This promise fails only if the transient entity is canceled, 
+            //   i.e. deleted by either deleting the transient context or by resetting pending changes
             oContext.created().then(function () {
                     // sales order successfully created
                 }, function (oError) {
@@ -86,7 +87,13 @@ The `promise` returned by [`Context#created`](https://ui5.sap.com/#/api/sap.ui.m
 
 ## Deep Create
 
-It is also possible to create nested entities in a collection-valued navigation property with a single request together with their parent entity \(so-called "deep create"; the request itself is called "deep insert" in the [OData specification](http://docs.oasis-open.org/odata/odata/v4.01/os/part1-protocol/odata-v4.01-os-part1-protocol.html#sec_CreateRelatedEntitiesWhenCreatinganE)\). For this purpose, bind the list for the nested collection relative to the transient context of the created main entity. A [`create`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataListBinding/methods/create) in the nested table then creates a row which contributes to the POST request of the main entity. A deep create is not restricted to one level; it is also possible that a nested entity has a nested collection itself.
+It is also possible to create nested entities in a navigation property with a single request together with their parent entity \(so-called "deep create"; the request itself is called "deep insert" in the [OData specification](http://docs.oasis-open.org/odata/odata/v4.01/os/part1-protocol/odata-v4.01-os-part1-protocol.html#sec_CreateRelatedEntitiesWhenCreatinganE)\).
+
+
+
+### Nested Collection
+
+Bind the list for the nested collection relative to the transient context of the created main entity. A [`create`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataListBinding/methods/create) in the nested table then creates a row which contributes to the POST request of the main entity. A deep create is not restricted to one level; it is also possible that a nested entity has a nested collection itself.
 
 "Deep create" supports a simple collection-valued navigation property \(no path like "detail/items"\). It requires that the `autoExpandSelect` [model](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataModel/constructor) parameter is `true`. There must be no context binding in the binding hierarchy between the top-level and nested list binding.
 
@@ -168,6 +175,31 @@ As long as the parent context is still transient, requesting data from the serve
 
 
 
+### Nested Single Entity
+
+> ### Note:  
+> This is an **experimental** feature as of SAPUI5 1.117.0
+
+No API is required here. Simply bind the properties of the nested entity relative to the transient context of the created main entity. If the user enters a value in such a field, this value is automatically added to the payload of the POST request, making it a deep create.
+
+> ### Example:  
+> **View**
+> 
+> ```
+> 
+> <SimpleForm>
+>      <Text text="{SalesOrderID}"/>
+>      <Text text="{SO_2_BP/BusinessPartnerID}"/>
+>      <Input value="{SO_2_BP/CompanyName}"/>
+> </SimpleForm>
+> ```
+
+In this \(unrealistic\) example, it is possible to create the business partner together with the sales order. As soon as the user enters a company name, the POST request for the sales order contains the `SO_2_BP` navigation property and thus becomes a deep create.
+
+It is also possible to have this navigation property in the initial data.
+
+
+
 <a name="loioc9723f8265f644af91c0ed941e114d46__section_ICR"/>
 
 ## Inline Creation Rows
@@ -189,15 +221,15 @@ You can create such an inline creation row by calling [`sap.ui.model.odata.v4.OD
 -   `parked`: A POST via an auto group that failed is parked until a property update takes place.
 -   `createdPersisted`: The POST succeeded, and the entity now exists on the server. If the binding is refreshed, the context's reaction depends on its `isKeepAlive` state. If it's set to `false`, the context is dropped and created anew when it's read from the server. If it's set to `true`, it is refreshed with a special request and remains in the `createdPersisted` state.
 
-   
+  
   
 **Internal States of an OData V4 Binding Context**
 
- ![](images/Create_States_f359082.png "Internal States of an OData V4 Binding Context") 
+![](images/Create_States_f359082.png "Internal States of an OData V4 Binding Context")
 
 The state of a context can be checked via the following API functions:
 
--    [`Context#isTransient`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.Context/methods/isTransient). This function does not distinguish between the `transient`, `createPending`, and `parked` states of a context. It returns `true` for any of them; the internal state of a such a context should not matter to the application. `Context#isTransient` also returns `true` for `inactive` contexts. It returns `false` for `createdPersisted` contexts, and `undefined` for `persisted` contexts. The value of `isTransient()` can also be observed via the bindable annotation `@$ui5.context.isTransient`.
+-   [`Context#isTransient`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.Context/methods/isTransient). This function does not distinguish between the `transient`, `createPending`, and `parked` states of a context. It returns `true` for any of them; the internal state of a such a context should not matter to the application. `Context#isTransient` also returns `true` for `inactive` contexts. It returns `false` for `createdPersisted` contexts, and `undefined` for `persisted` contexts. The value of `isTransient()` can also be observed via the bindable annotation `@$ui5.context.isTransient`.
 
 -   [`Context#isInactive`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.Context/methods/isInactive): This function returns `true` for `inactive` contexts, `false` for contexts that were created in the `inactive` state and have been activated, and `undefined` otherwise. The value of `isInactive()` can also be observed via the bindable annotation `@$ui5.context.isInactive`.
 

@@ -15,7 +15,7 @@ You can replace the standard navigation from the list report to the object page 
 > 
 > After you've created an app extension, its display \(for example, control placement and layout\) and system behavior \(for example, model and binding usage, busy handling\) lies within the application's responsibility. SAP Fiori elements provides support only for the official `extensionAPI` functions. Don't access or manipulate controls, properties, models, or other internal objects created by the SAP Fiori elements framework.
 
- <a name="task_iyp_wxz_h4b"/>
+<a name="task_iyp_wxz_h4b"/>
 
 <!-- task\_iyp\_wxz\_h4b -->
 
@@ -105,7 +105,7 @@ You can replace the standard navigation from the list report to the object page 
 4.  To ensure that this navigation can be triggered by the user, you must have defined an object page. If you do not want the user to be able to navigate to this object page, follow the procedure described under [Changing Navigation to Object Page](changing-navigation-to-object-page-8bd546e.md), *Enable External Navigation*.
 
 
- <a name="task_l13_4yz_h4b"/>
+<a name="task_l13_4yz_h4b"/>
 
 <!-- task\_l13\_4yz\_h4b -->
 

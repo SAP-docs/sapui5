@@ -134,7 +134,7 @@ To view the results of the measurement, select the *Enable coverage* checkbox on
 
 In this example the coverage is limited to one specific file - the only one that is important for this test.
 
- ![](images/Istanbul_Code_Coverage_8b7a4a5.png) 
+![](images/Istanbul_Code_Coverage_8b7a4a5.png)
 
 
 
@@ -254,7 +254,7 @@ To view the results of the measurement, select the *Enable coverage* checkbox on
 
 In this example the coverage is limited to one specific file - the only one that is important for this test.
 
- ![](images/QUnit_Code_Coverage_358de53.jpg) 
+![](images/QUnit_Code_Coverage_358de53.jpg)
 
 **Related Information**  
 

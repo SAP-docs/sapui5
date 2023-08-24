@@ -21,11 +21,11 @@ The SAP Fiori 2.0 design concept requires changes with regards to the headers of
 > ### Note:  
 > The screenshots in this topic are mockups and are used to visually outline the adaptations. The final apps will look somewhat different.
 
-   
+  
   
 **SAP Fiori 2.0 header of a fullscreen application**
 
- ![](images/FIori_2_0_Header_d78b4f4.png "SAP Fiori 2.0 header of a fullscreen application") 
+![](images/FIori_2_0_Header_d78b4f4.png "SAP Fiori 2.0 header of a fullscreen application")
 
 The complete adaptation of a fullscreen app to SAP Fiori 2.0 consists of five main steps:
 
@@ -42,11 +42,11 @@ The complete adaptation of a fullscreen app to SAP Fiori 2.0 consists of five ma
 
 You can see how the elements are moved and transformed from the old SAP Fiori version \(below\) to the new SAP Fiori 2.0 design in the screenshot below.
 
-   
+  
   
 **SAP Fiori 2.0 header adaptation**
 
- ![](images/Fiori_2_0_Title_Adaptation_fba5d25.png "SAP Fiori 2.0 header adaptation") 
+![](images/Fiori_2_0_Title_Adaptation_fba5d25.png "SAP Fiori 2.0 header adaptation")
 
 > ### Note:  
 > These adaptations are primarily valid only for **fullscreen** apps. Other floorplans, like List-Detail, are affected differently and the adaptation there will not be the same.

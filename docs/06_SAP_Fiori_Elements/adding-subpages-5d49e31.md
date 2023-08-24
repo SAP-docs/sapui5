@@ -84,7 +84,7 @@ To add a subpage, you need two objects in the `manifest.json` file.
                     "name": "sap.fe.templates.ObjectPage",
                     "options": {
                         "settings": {
-                            "entitySet": "SalesOrderItem",
+                            "contextPath": "/SalesOrderItem",
                             ...
                         }
                     }

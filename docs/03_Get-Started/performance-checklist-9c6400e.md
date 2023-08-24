@@ -4,10 +4,10 @@
 
 Follow these steps to apply performance best practices to your application.
 
-In addition to applying best practices, always stay up to date with the framework, for instance via the SAPUI5  [Release Notes](https://ui5.sap.com/#/releasenotes.html) and the [What's New in SAPUI5](../01_Whats-New/what-s-new-in-sapui5-99ac68a.md).
+In addition to applying best practices, always stay up to date with the framework, for instance via the SAPUI5 [Release Notes](https://ui5.sap.com/#/releasenotes.html) and the [What's New in SAPUI5](../01_Whats-New/what-s-new-in-sapui5-99ac68a.md).
 
 1.  [Use the UI5 Support Assistant to Check for Known Issues](../04_Essentials/support-assistant-57ccd7d.md)
-2.   [Enable Asynchronous Loading in the Bootstrap](use-asynchronous-loading-676b636.md#loio676b636446c94eada183b1218a824717__section_EALB)
+2.  [Enable Asynchronous Loading in the Bootstrap](use-asynchronous-loading-676b636.md#loio676b636446c94eada183b1218a824717__section_EALB)
 3.  [Make Use of the `sap.ui.core.IAsyncContentCreation` Interface](use-asynchronous-loading-676b636.md#loio676b636446c94eada183b1218a824717__section_AsyncInterface) or [Ensure the Root View and Routing are Configured to Load Targets Asynchronously](use-asynchronous-loading-676b636.md#loio676b636446c94eada183b1218a824717__section_RootViewRoutingConfiguration)
 4.  [Make Use of Asynchronous Module Loading \(AMD Style\)](use-asynchronous-loading-676b636.md#loio676b636446c94eada183b1218a824717__section_AsyncModuleLoading)
 5.  [Use `manifest.json` instead of the Bootstrap to define Dependencies](../05_Developing_Apps/performance-speed-up-your-app-408b40e.md#loio408b40efed3c416681e1bd8cdd8910d4__section_ManifestJson)

@@ -8,11 +8,11 @@ Now that we have integrated the dialog, it's time to add some user interaction. 
 
 ## Preview
 
-   
+  
   
 **The dialog now has an "OK" button**
 
- ![](images/SAPUI5_Walkthrough_Step_17_2a0aee6.png "The dialog now has an "OK" button") 
+![](images/SAPUI5_Walkthrough_Step_17_2a0aee6.png "The dialog now has an "OK" button")
 
 
 

@@ -151,28 +151,28 @@ We've also provided a set of negative margin classes that add a two-sided \(`Beg
 <tr>
 <td valign="top">
 
- `sapUiTinyNegativeMarginBeginEnd` 
+`sapUiTinyNegativeMarginBeginEnd` 
 
 
 
 </td>
 <td valign="top">
 
- `sapUiSmallNegativeMarginBeginEnd` 
+`sapUiSmallNegativeMarginBeginEnd` 
 
 
 
 </td>
 <td valign="top">
 
- `sapUiMediumNegativeMarginBeginEnd` 
+`sapUiMediumNegativeMarginBeginEnd` 
 
 
 
 </td>
 <td valign="top">
 
- `sapUiLargeNegativeMarginBeginEnd` 
+`sapUiLargeNegativeMarginBeginEnd` 
 
 
 
@@ -214,7 +214,7 @@ Screen width less than 600px \(smartphones\): For devices such as these, `sapUiR
 </td>
 <td valign="top">
 
- ![](images/Responsive_Margin_-_Small_9520013.png) 
+![](images/Responsive_Margin_-_Small_9520013.png)
 
 
 
@@ -230,7 +230,7 @@ Between 600px and 1023px \(tablets and small desktops\): For these, `sapUiRespon
 </td>
 <td valign="top">
 
- ![](images/Responsive_Margin_-_Medium_ca3e0cc.png) 
+![](images/Responsive_Margin_-_Medium_ca3e0cc.png)
 
 
 
@@ -246,7 +246,7 @@ Larger than 1023px \(large desktops\): For these, `sapUiResponsiveMargin` provid
 </td>
 <td valign="top">
 
- ![](images/Responsive_Margin_-_Large_f76b0b3.png) 
+![](images/Responsive_Margin_-_Large_f76b0b3.png)
 
 
 

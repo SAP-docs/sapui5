@@ -41,7 +41,7 @@ Description
 <tr>
 <td valign="top">
 
- `id` 
+`id` 
 
 
 
@@ -57,7 +57,7 @@ Unique ID of type string
 <tr>
 <td valign="top">
 
- `semanticObject` 
+`semanticObject` 
 
 
 
@@ -73,7 +73,7 @@ Semantic object as defined in the corresponding target mapping configured in the
 <tr>
 <td valign="top">
 
- `action` 
+`action` 
 
 
 
@@ -89,7 +89,7 @@ Action as defined in the corresponding target mapping configured in the Fiori la
 <tr>
 <td valign="top">
 
- `isStepSpecific` 
+`isStepSpecific` 
 
 
 

@@ -40,11 +40,11 @@ The display of actions depends on which mode the user is in:
 -   In *Edit* or *Create* mode, the footer bar contains the relevant actions, for example, *Save* and *Cancel* in *Edit* mode \(see the mentioned figure\), and *Create* and *Cancel* in *Create* mode.
 
 
-   
+  
   
 **Object Page: Action Triggered from Footer Bar \(Edit Mode\)**
 
- ![](images/Object_Page_Footer_Bar_Edit_Mode_2c8767f.png "Object Page: Action Triggered from Footer Bar (Edit Mode)") 
+![](images/Object_Page_Footer_Bar_Edit_Mode_2c8767f.png "Object Page: Action Triggered from Footer Bar (Edit Mode)")
 
 You can add criticality to an action button via annotations. For more information, see [Setting the Criticality for Actions](setting-the-criticality-for-actions-12f2ba2.md).
 

@@ -128,11 +128,11 @@ The unit of measure is used for the footer of the micro chart. An annotation for
 > ### Note:  
 > The template does not currently support the use of navigation properties in the `UI.Chart` term for the micro chart \(see example below\).
 > 
->    
+>   
 >   
 > **Navigation Property**
 > 
->  ![](images/Chart_Limitation_02debb6.png "Navigation Property") 
+> ![](images/Chart_Limitation_02debb6.png "Navigation Property")
 
 
 
@@ -147,11 +147,11 @@ SAP Fiori elements for OData V4 also supports the comparison micro chart.
 > ### Note:  
 > The use of navigation properties, like the one highlighted below, is currently not supported.
 > 
->    
+>   
 >   
 > **Navigation Property**
 > 
->  ![](images/Navigation_Property_d2168a4.png "Navigation Property ") 
+> ![](images/Navigation_Property_d2168a4.png "Navigation Property ")
 
 **Related Information**  
 

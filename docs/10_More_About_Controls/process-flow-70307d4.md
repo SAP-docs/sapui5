@@ -10,11 +10,11 @@ The `ProcessFlow` control allows you to show flows of multiple object types, for
 
 Process Flow is a complex control that enables you to display documents or other items in their flow. The items or documents are displayed as nodes in a lane containing a lane header with a donut chart. The donut chart reflects the status of the nodes in its lane. The chevron arrows ![Chevron arrow](images/Chevron_Arrow_46af038.png) in the lane header separate the lanes from one another. Connector lines show the process flow of the items between the nodes.
 
-   
+  
   
 **Process Flow Example**
 
- ![Process Flow Example](images/Process_Flow_05ab4f0.jpg "Process Flow Example") 
+![Process Flow Example](images/Process_Flow_05ab4f0.jpg "Process Flow Example")
 
 
 

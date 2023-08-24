@@ -8,11 +8,11 @@ After all the work on the app structure it’s time to improve the look of our a
 
 ## Preview
 
-   
+  
   
 **A panel is now displaying the controls from the previous steps**
 
- ![](images/SAPUI5_Walkthrough_Step_11_959dd4b.png "A panel is now displaying the controls from the previous steps") 
+![](images/SAPUI5_Walkthrough_Step_11_959dd4b.png "A panel is now displaying the controls from the previous steps")
 
 
 

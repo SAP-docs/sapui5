@@ -150,5 +150,5 @@ The bubble chart supports a color palette for semantic coloring.
   
 **Example of a Bubble Chart Card**
 
- ![](images/Bubble_Chart_e131bed.png "Example of a Bubble Chart Card") 
+![](images/Bubble_Chart_e131bed.png "Example of a Bubble Chart Card")
 

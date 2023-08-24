@@ -15,7 +15,7 @@ You have to implement two extension points to add a custom column to a table.
 > 
 > After you've created an app extension, its display \(for example, control placement and layout\) and system behavior \(for example, model and binding usage, busy handling\) lies within the application's responsibility. SAP Fiori elements provides support only for the official `extensionAPI` functions. Don't access or manipulate controls, properties, models, or other internal objects created by the SAP Fiori elements framework.
 
- <a name="task_r4q_j3g_d4b"/>
+<a name="task_r4q_j3g_d4b"/>
 
 <!-- task\_r4q\_j3g\_d4b -->
 
@@ -29,11 +29,11 @@ For information about the configuration options and examples for defining custom
 
 The table containing additional custom columns can look like this:
 
-   
+  
   
 **Custom columns in responsive table**
 
- ![](images/Add_columns_to_responsive_table_in_list_report_4efc171.png "Custom columns in responsive table") 
+![](images/Add_columns_to_responsive_table_in_list_report_4efc171.png "Custom columns in responsive table")
 
 
 
@@ -181,7 +181,7 @@ The table containing additional custom columns can look like this:
     > ```
 
 
- <a name="task_k4t_zkg_d4b"/>
+<a name="task_k4t_zkg_d4b"/>
 
 <!-- task\_k4t\_zkg\_d4b -->
 

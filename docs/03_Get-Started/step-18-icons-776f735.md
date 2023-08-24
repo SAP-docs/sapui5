@@ -8,11 +8,11 @@ Our dialog is still pretty much empty. Since SAPUI5 is shipped with a large icon
 
 ## Preview
 
-   
+  
   
 **An icon is now displayed in the dialog box**
 
- ![](images/SAPUI5_Walkthrough_Step_18_bd57299.png "An icon is now displayed in the dialog box") 
+![](images/SAPUI5_Walkthrough_Step_18_bd57299.png "An icon is now displayed in the dialog box")
 
 
 

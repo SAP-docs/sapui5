@@ -159,7 +159,7 @@ Used In
 <tr>
 <td valign="top" colspan="3">
 
- **List Report Specific Key from `..>>ListReport>i18n`** 
+**List Report Specific Key from `..>>ListReport>i18n`** 
 
 
 
@@ -168,7 +168,7 @@ Used In
 <tr>
 <td valign="top">
 
- `CREATE_OBJECT` 
+`CREATE_OBJECT` 
 
 
 
@@ -191,7 +191,7 @@ Label for creating buttons in the list report.
 <tr>
 <td valign="top">
 
- `CREATE_DIALOG_TITLE` 
+`CREATE_DIALOG_TITLE` 
 
 
 
@@ -214,7 +214,7 @@ Title for the *Create* dialog if `createWithParameterDialog` is configured. User
 <tr>
 <td valign="top">
 
- `PARTIAL_UPDATE` 
+`PARTIAL_UPDATE` 
 
 
 
@@ -237,7 +237,7 @@ Used in a message box that is displayed in the list report after a partial updat
 <tr>
 <td valign="top">
 
- `DIALOG_TITLE_NEW_ACTION_FOR_CREATE` 
+`DIALOG_TITLE_NEW_ACTION_FOR_CREATE` 
 
 
 
@@ -260,7 +260,7 @@ Title for the `NewAction` parameter dialog in the list report.
 <tr>
 <td valign="top">
 
- `DIALOG_ACTION_BUTTON_NEW_ACTION_FOR_CREATE` 
+`DIALOG_ACTION_BUTTON_NEW_ACTION_FOR_CREATE` 
 
 
 
@@ -283,7 +283,7 @@ Label for a button within the `NewAction` parameter dialog in the list report.
 <tr>
 <td valign="top">
 
- `MULTI_EDIT_DIALOG_TITLE` 
+`MULTI_EDIT_DIALOG_TITLE` 
 
 
 
@@ -308,7 +308,7 @@ Users can change titles to for example "Edit Purchase Orders \(\{0\}\)".
 <tr>
 <td valign="top" colspan="3">
 
- **List Report Specific Key from `..>>lib>i18n`** 
+**List Report Specific Key from `..>>lib>i18n`** 
 
 
 
@@ -317,7 +317,7 @@ Users can change titles to for example "Edit Purchase Orders \(\{0\}\)".
 <tr>
 <td valign="top">
 
- `ST_GENERIC_UNSAVED_CHANGES_CHECKBOX` 
+`ST_GENERIC_UNSAVED_CHANGES_CHECKBOX` 
 
 
 
@@ -340,7 +340,7 @@ This message is displayed in a delete confirmation dialog when a user select mul
 <tr>
 <td valign="top">
 
- `ST_GENERIC_DELETE_SELECTED_PLURAL` 
+`ST_GENERIC_DELETE_SELECTED_PLURAL` 
 
 
 
@@ -363,7 +363,7 @@ Text displayed within the delete confirmation dialog that comes up when a user s
 <tr>
 <td valign="top">
 
- `ST_GENERIC_DELETE_UNSAVED_CHANGES` 
+`ST_GENERIC_DELETE_UNSAVED_CHANGES` 
 
 
 
@@ -388,7 +388,7 @@ Text displayed within the delete confirmation dialog that comes up when a user s
 <tr>
 <td valign="top">
 
- `ST_GENERIC_DELETE_UNSAVED_CHANGES_PLURAL` 
+`ST_GENERIC_DELETE_UNSAVED_CHANGES_PLURAL` 
 
 
 
@@ -413,7 +413,7 @@ Text displayed within the delete confirmation dialog that comes up when a user s
 <tr>
 <td valign="top">
 
- `ST_GENERIC_DELETE_LOCKED` 
+`ST_GENERIC_DELETE_LOCKED` 
 
 
 
@@ -436,7 +436,7 @@ Message text used in the confirmation message box when a user selects an object 
 <tr>
 <td valign="top">
 
- `ST_GENERIC_NOT_DELETABLE` 
+`ST_GENERIC_NOT_DELETABLE` 
 
 
 
@@ -459,7 +459,7 @@ Message text used in the confirmation message box when a user tries to delete an
 <tr>
 <td valign="top">
 
- `ST_GENERIC_DELETE_LOCKED_PLURAL` 
+`ST_GENERIC_DELETE_LOCKED_PLURAL` 
 
 
 
@@ -482,7 +482,7 @@ Message text used in the confirmation message box when a user select multiple ob
 <tr>
 <td valign="top">
 
- `ST_GENERIC_DELETE_UNDELETABLE` 
+`ST_GENERIC_DELETE_UNDELETABLE` 
 
 
 
@@ -505,7 +505,7 @@ Text displayed within the delete confirmation dialog when a user tries to delete
 <tr>
 <td valign="top">
 
- `ST_GENERIC_CURRENTLY_LOCKED_PLURAL` 
+`ST_GENERIC_CURRENTLY_LOCKED_PLURAL` 
 
 
 
@@ -528,7 +528,7 @@ Text displayed within the delete confirmation dialog when some of the selected o
 <tr>
 <td valign="top">
 
- `ST_GENERIC_DELETE_REMAINING` 
+`ST_GENERIC_DELETE_REMAINING` 
 
 
 
@@ -551,7 +551,7 @@ Text displayed within the confirmation dialog when a user select some objects th
 <tr>
 <td valign="top">
 
- `ST_GENERIC_DELETE_REMAINING_PLURAL` 
+`ST_GENERIC_DELETE_REMAINING_PLURAL` 
 
 
 
@@ -574,7 +574,7 @@ Text displayed within the confirmation dialog when a user select some objects th
 <tr>
 <td valign="top">
 
- `ST_GENERIC_DELETE_REMAINING_UNSAVED_CHANGES` 
+`ST_GENERIC_DELETE_REMAINING_UNSAVED_CHANGES` 
 
 
 
@@ -599,7 +599,7 @@ Text displayed within the confirmation dialog when a user select some objects th
 <tr>
 <td valign="top">
 
- `ST_GENERIC_DELETE_REMAINING_UNSAVED_CHANGES_PLURAL` 
+`ST_GENERIC_DELETE_REMAINING_UNSAVED_CHANGES_PLURAL` 
 
 
 
@@ -624,7 +624,7 @@ Text displayed within the confirmation dialog when a user select some objects th
 <tr>
 <td valign="top">
 
- `ST_GENERIC_DELETE_SUCCESS_PLURAL` 
+`ST_GENERIC_DELETE_SUCCESS_PLURAL` 
 
 
 
@@ -647,7 +647,7 @@ Message toast text when deletion of multiple objects is successful.
 <tr>
 <td valign="top">
 
- `ST_GENERIC_DELETE_ERROR` 
+`ST_GENERIC_DELETE_ERROR` 
 
 
 
@@ -670,7 +670,7 @@ Message toast text when an object can’t be deleted from back end.
 <tr>
 <td valign="top" colspan="3">
 
- **Key from `..>>ObjectPage>i18n`** 
+**Key from `..>>ObjectPage>i18n`** 
 
 
 
@@ -679,7 +679,7 @@ Message toast text when an object can’t be deleted from back end.
 <tr>
 <td valign="top">
 
- `DRAFT_LOCK_EXPIRED` 
+`DRAFT_LOCK_EXPIRED` 
 
 
 
@@ -704,7 +704,7 @@ Text displayed within the confirmation dialog when a user clicks *Edit* on the o
 <tr>
 <td valign="top">
 
- `OBJECT_SAVED` 
+`OBJECT_SAVED` 
 
 
 
@@ -727,7 +727,7 @@ Message toast text when a user chooses to save and the object gets saved success
 <tr>
 <td valign="top">
 
- `ITEM_CREATED` 
+`ITEM_CREATED` 
 
 
 
@@ -750,7 +750,7 @@ Message toast text when a user successfully creates a sub object or an item.
 <tr>
 <td valign="top">
 
- `WAITING_SMARTTABLE` 
+`WAITING_SMARTTABLE` 
 
 
 
@@ -773,7 +773,7 @@ Appears in the smart table within the object page when data is loading.
 <tr>
 <td valign="top">
 
- `OBJECT_NOT_MODIFIED` 
+`OBJECT_NOT_MODIFIED` 
 
 
 
@@ -796,7 +796,7 @@ Message toast text when a user clicks on *Save* and the object has no unsaved ch
 <tr>
 <td valign="top">
 
- `OBJECT_CREATED` 
+`OBJECT_CREATED` 
 
 
 
@@ -819,7 +819,7 @@ Message toast text when an object is successfully created.
 <tr>
 <td valign="top">
 
- `DELETE_WITH_OBJECTINFO` 
+`DELETE_WITH_OBJECTINFO` 
 
 
 
@@ -842,7 +842,7 @@ Text displayed within the delete confirmation dialog with both the title and des
 <tr>
 <td valign="top">
 
- `DELETE_WITH_OBJECTTITLE` 
+`DELETE_WITH_OBJECTTITLE` 
 
 
 
@@ -865,7 +865,7 @@ Text displayed within the delete confirmation dialog when the app is open in the
 <tr>
 <td valign="top">
 
- `SHOW_SIDE_CONTENT` 
+`SHOW_SIDE_CONTENT` 
 
 
 
@@ -888,7 +888,7 @@ Used as a label to show the side content button when the side content is hidden.
 <tr>
 <td valign="top">
 
- `HIDE_SIDE_CONTENT` 
+`HIDE_SIDE_CONTENT` 
 
 
 
@@ -911,7 +911,7 @@ Used as a label to hide the side content button when the side content is being d
 <tr>
 <td valign="top">
 
- `DELETE_SELECTED_ITEM` 
+`DELETE_SELECTED_ITEM` 
 
 
 
@@ -934,7 +934,7 @@ Text displayed within the delete confirmation dialog when a user select items \(
 <tr>
 <td valign="top">
 
- `DELETE_SELECTED_ITEM_WITH_OBJECTINFO` 
+`DELETE_SELECTED_ITEM_WITH_OBJECTINFO` 
 
 
 
@@ -957,7 +957,7 @@ Text displayed within the delete confirmation dialog when the title and descript
 <tr>
 <td valign="top">
 
- `DELETE_SELECTED_ITEM_WITH_OBJECTTITLE` 
+`DELETE_SELECTED_ITEM_WITH_OBJECTTITLE` 
 
 
 
@@ -980,7 +980,7 @@ Text displayed within the delete confirmation dialog when a user select items in
 <tr>
 <td valign="top">
 
- `DELETE_SELECTED_ITEMS` 
+`DELETE_SELECTED_ITEMS` 
 
 
 
@@ -1003,7 +1003,7 @@ Text displayed within the delete confirmation dialog when a user select items in
 <tr>
 <td valign="top">
 
- `DELETE_SUCCESS_PLURAL_WITH_COUNT` 
+`DELETE_SUCCESS_PLURAL_WITH_COUNT` 
 
 
 
@@ -1026,7 +1026,7 @@ Message toast text when a user successfully deletes multiple items from the obje
 <tr>
 <td valign="top">
 
- `DELETE_SUCCESS_WITH_COUNT` 
+`DELETE_SUCCESS_WITH_COUNT` 
 
 
 
@@ -1049,7 +1049,7 @@ Message toast text when a user successfully deletes a single item from the objec
 <tr>
 <td valign="top">
 
- `DELETE_ERROR_PLURAL_WITH_COUNT` 
+`DELETE_ERROR_PLURAL_WITH_COUNT` 
 
 
 
@@ -1072,7 +1072,7 @@ Text displayed when a few of the selected items cannot be deleted.
 <tr>
 <td valign="top">
 
- `DELETE_ERROR_WITH_COUNT` 
+`DELETE_ERROR_WITH_COUNT` 
 
 
 
@@ -1095,7 +1095,7 @@ Text displayed when a selected item cannot be deleted.
 <tr>
 <td valign="top">
 
- `DELETE_ERROR` 
+`DELETE_ERROR` 
 
 
 
@@ -1118,7 +1118,7 @@ Text displayed when only one record was selected for deletion and the operation 
 <tr>
 <td valign="top">
 
- `ITEM_DELETED` 
+`ITEM_DELETED` 
 
 
 
@@ -1141,7 +1141,7 @@ Message toast text when an item is successfully deleted from the object page tab
 <tr>
 <td valign="top">
 
- `DELETE_UNDELETABLE_ITEMS` 
+`DELETE_UNDELETABLE_ITEMS` 
 
 
 
@@ -1164,7 +1164,7 @@ Message text used in the confirmation message box when a user has selected multi
 <tr>
 <td valign="top">
 
- `DELETE_UNDELETABLE_ITEM` 
+`DELETE_UNDELETABLE_ITEM` 
 
 
 
@@ -1187,7 +1187,7 @@ Message text used in the confirmation message box when a user selects a single i
 <tr>
 <td valign="top">
 
- `ENTER_MANDATORY` 
+`ENTER_MANDATORY` 
 
 
 
@@ -1210,7 +1210,7 @@ Text displayed in a message popover when a user has configured the `InsertRestri
 <tr>
 <td valign="top">
 
- `CREATE_DIALOG_TITLE` 
+`CREATE_DIALOG_TITLE` 
 
 
 
@@ -1233,7 +1233,7 @@ Title text displayed for the create dialog if `createWithParameterDialog` is con
 <tr>
 <td valign="top" colspan="3">
 
- **Object Page and Sub Object Page Keys from`..>>lib>i18n`** 
+**Object Page and Sub Object Page Keys from`..>>lib>i18n`** 
 
 
 
@@ -1242,7 +1242,7 @@ Title text displayed for the create dialog if `createWithParameterDialog` is con
 <tr>
 <td valign="top">
 
- `ST_GENERIC_DELETE_SELECTED` 
+`ST_GENERIC_DELETE_SELECTED` 
 
 
 
@@ -1265,7 +1265,7 @@ Text displayed within the delete confirmation dialog when a user deletes an obje
 <tr>
 <td valign="top">
 
- `ST_GENERIC_DRAFT_LOCKED_BY_USER` 
+`ST_GENERIC_DRAFT_LOCKED_BY_USER` 
 
 
 
@@ -1290,7 +1290,7 @@ Text displayed within the confirmation dialog when a user selects an object to e
 <tr>
 <td valign="top">
 
- `DELETE_WITH_OBJECTTITLE` 
+`DELETE_WITH_OBJECTTITLE` 
 
 
 
@@ -1313,7 +1313,7 @@ Text displayed within the delete confirmation dialog when a user deletes an obje
 <tr>
 <td valign="top">
 
- `ST_GENERIC_OBJECT_DELETED` 
+`ST_GENERIC_OBJECT_DELETED` 
 
 
 
@@ -1336,7 +1336,7 @@ Message toast text upon the successful deletion of the object.
 <tr>
 <td valign="top" colspan="3">
 
- **List Report, Object Page and Analytical List Page Keys from `..>>lib>i18n`** 
+**List Report, Object Page and Analytical List Page Keys from `..>>lib>i18n`** 
 
 
 
@@ -1345,7 +1345,7 @@ Message toast text upon the successful deletion of the object.
 <tr>
 <td valign="top">
 
- `ST_GENERIC_LOCKED_OBJECT_POPOVER_TEXT` 
+`ST_GENERIC_LOCKED_OBJECT_POPOVER_TEXT` 
 
 
 
@@ -1370,7 +1370,7 @@ Text displayed when a user tries editing an object that is locked by another use
 <tr>
 <td valign="top">
 
- `ST_GENERIC_UNSAVED_OBJECT_POPOVER_TEXT` 
+`ST_GENERIC_UNSAVED_OBJECT_POPOVER_TEXT` 
 
 
 
@@ -1393,7 +1393,7 @@ When an object has unsaved change from another user, it is indicated by an icon 
 <tr>
 <td valign="top">
 
- `NEW_OBJECT` 
+`NEW_OBJECT` 
 
 
 
@@ -1416,7 +1416,7 @@ This is the header title for a newly created object.
 <tr>
 <td valign="top">
 
- `NOITEMS_SMARTTABLE` 
+`NOITEMS_SMARTTABLE` 
 
 
 
@@ -1439,7 +1439,7 @@ No data text is displayed when there is no data available in the smart table of 
 <tr>
 <td valign="top">
 
- `NOITEMS_SMARTTABLE_WITH_FILTER` 
+`NOITEMS_SMARTTABLE_WITH_FILTER` 
 
 
 
@@ -1462,7 +1462,7 @@ Text displayed when there is no data available in the smart table of the object 
 <tr>
 <td valign="top">
 
- `NOITEMS_SMARTTABLE_WITH_FILTER_FOR_SEGMENTEDBUTTON` 
+`NOITEMS_SMARTTABLE_WITH_FILTER_FOR_SEGMENTEDBUTTON` 
 
 
 
@@ -1485,7 +1485,7 @@ Text displayed when there is no data available in the smart table of the object 
 <tr>
 <td valign="top">
 
- `NOITEMS_SMARTCHART` 
+`NOITEMS_SMARTCHART` 
 
 
 
@@ -1508,7 +1508,7 @@ Text displayed in charts on the analytical list page and object page when no dat
 <tr>
 <td valign="top">
 
- `NOITEMS_LR_SMARTCHART` 
+`NOITEMS_LR_SMARTCHART` 
 
 
 
@@ -1531,7 +1531,7 @@ Text displayed in the list report chart when no data is found.
 <tr>
 <td valign="top">
 
- `NOITEMS_SMARTCHART_WITH_FILTER` 
+`NOITEMS_SMARTCHART_WITH_FILTER` 
 
 
 
@@ -1554,7 +1554,7 @@ Text displayed in charts on the analytical list page and object page when no dat
 <tr>
 <td valign="top">
 
- `SMARTCHART_INITIAL_NODATA` 
+`SMARTCHART_INITIAL_NODATA` 
 
 
 
@@ -1577,7 +1577,7 @@ Text displayed in the list report chart when no search is triggered.
 <tr>
 <td valign="top">
 
- `NOITEMS_LR_SMARTTABLE` 
+`NOITEMS_LR_SMARTTABLE` 
 
 
 
@@ -1600,7 +1600,7 @@ Text displayed in the list report table, when the table is empty after clicking 
 <tr>
 <td valign="top">
 
- `NODATA_SMARTTABLE_LR` 
+`NODATA_SMARTTABLE_LR` 
 
 
 
@@ -1623,7 +1623,7 @@ Text displayed in the list report table, when no search is triggered.
 <tr>
 <td valign="top">
 
- `NOITEMS_LR_SMARTTABLE_WITH_FILTER` 
+`NOITEMS_LR_SMARTTABLE_WITH_FILTER` 
 
 
 
@@ -1646,7 +1646,7 @@ Text displayed in the list report table when no data is found after applying fil
 <tr>
 <td valign="top">
 
- `NOITEMS_MULTIVIEW_LR_SMARTTABLE_WITH_FILTER` 
+`NOITEMS_MULTIVIEW_LR_SMARTTABLE_WITH_FILTER` 
 
 
 
@@ -1669,7 +1669,7 @@ Text displayed in the list report table when no data is found for a view in case
 <tr>
 <td valign="top">
 
- `ST_GENERIC_DELETE_WITH_WARNING_SUGGESTION_PLURAL` 
+`ST_GENERIC_DELETE_WITH_WARNING_SUGGESTION_PLURAL` 
 
 
 
@@ -1692,7 +1692,7 @@ Warning message text on the delete popover when a user tries to delete some of t
 <tr>
 <td valign="top">
 
- `ST_GENERIC_NOT_DELETED_RECORDS` 
+`ST_GENERIC_NOT_DELETED_RECORDS` 
 
 
 
@@ -1715,7 +1715,7 @@ Warning message text on the delete popover informing the user that some of the o
 <tr>
 <td valign="top">
 
- `ST_GENERIC_DELETE_ERROR_PLURAL` 
+`ST_GENERIC_DELETE_ERROR_PLURAL` 
 
 
 
@@ -1738,7 +1738,7 @@ Warning message text on the delete popover in case of multi select delete, infor
 <tr>
 <td valign="top">
 
- `ST_GENERIC_NOT_PROCESSED_RECORDS` 
+`ST_GENERIC_NOT_PROCESSED_RECORDS` 
 
 
 
@@ -1761,7 +1761,7 @@ Message text displayed in case of multi select function import actions, if the a
 <tr>
 <td valign="top">
 
- `ST_GENERIC_NOT_PROCESSED_RECORDS_PLURAL` 
+`ST_GENERIC_NOT_PROCESSED_RECORDS_PLURAL` 
 
 
 
@@ -1784,7 +1784,7 @@ Message text displayed in case of multi select function import actions, if the a
 <tr>
 <td valign="top">
 
- `ST_GENERIC_ACTION_WITH_WARNING_SUGGESTION_PLURAL` 
+`ST_GENERIC_ACTION_WITH_WARNING_SUGGESTION_PLURAL` 
 
 
 
@@ -1807,7 +1807,7 @@ Message text displayed in case of multi select function import actions, if the a
 <tr>
 <td valign="top">
 
- `MESSAGE_SINGLE_VALUE_L_FORM` 
+`MESSAGE_SINGLE_VALUE_L_FORM` 
 
 
 
@@ -1830,7 +1830,7 @@ Text displayed in the message strip above the smart table in the list report whe
 <tr>
 <td valign="top">
 
- `MESSAGE_SINGLE_VALUE_S_FORM` 
+`MESSAGE_SINGLE_VALUE_S_FORM` 
 
 
 
@@ -1853,7 +1853,7 @@ Text displayed in the message strip above the smart table in the list report whe
 <tr>
 <td valign="top">
 
- `MESSAGE_MULTIPLE_VALUES_L_FORM` 
+`MESSAGE_MULTIPLE_VALUES_L_FORM` 
 
 
 
@@ -1876,7 +1876,7 @@ Text displayed in the message strip above the smart table in the list report whe
 <tr>
 <td valign="top">
 
- `MESSAGE_MULTIPLE_VALUES_S_FORM` 
+`MESSAGE_MULTIPLE_VALUES_S_FORM` 
 
 
 
@@ -1899,7 +1899,7 @@ Text displayed in the message strip above the smart table in the list report whe
 <tr>
 <td valign="top">
 
- `ST_KEEP_DRAFT_MESSAGE_EDIT` 
+`ST_KEEP_DRAFT_MESSAGE_EDIT` 
 
 
 
@@ -1924,7 +1924,7 @@ Text displayed within the discard confirmation dialog when a user navigates away
 <tr>
 <td valign="top">
 
- `ST_KEEP_DRAFT_MESSAGE_CREATE` 
+`ST_KEEP_DRAFT_MESSAGE_CREATE` 
 
 
 
@@ -1949,7 +1949,7 @@ Text displayed within the discard confirmation dialog when a user navigates away
 <tr>
 <td valign="top" colspan="3">
 
- **Key from `..>>AnalyticalPage>i18n`** 
+**Key from `..>>AnalyticalPage>i18n`** 
 
 
 
@@ -1958,7 +1958,7 @@ Text displayed within the discard confirmation dialog when a user navigates away
 <tr>
 <td valign="top">
 
- `NODATA_SMARTCHART_ALP` 
+`NODATA_SMARTCHART_ALP` 
 
 
 
@@ -1981,7 +1981,7 @@ Text displayed in the analytical list page smart chart when no search is trigger
 <tr>
 <td valign="top">
 
- `NODATA_SMARTTABLE_ALP` 
+`NODATA_SMARTTABLE_ALP` 
 
 
 
@@ -2004,7 +2004,7 @@ Text displayed in the analytical list page smart table when no search is trigger
 <tr>
 <td valign="top">
 
- `MESSAGE_MULTIPLE_VALUES_L_FORM` 
+`MESSAGE_MULTIPLE_VALUES_L_FORM` 
 
 
 
@@ -2027,7 +2027,7 @@ Text displayed in the message strip when a user select filters and a few of them
 <tr>
 <td valign="top">
 
- `MESSAGE_MULTIPLE_VALUES_S_FORM` 
+`MESSAGE_MULTIPLE_VALUES_S_FORM` 
 
 
 
@@ -2159,7 +2159,7 @@ Recommendation
 <tr>
 <td valign="top">
 
- `C_OPERATIONS_ACTION_CONFIRM_MESSAGE` 
+`C_OPERATIONS_ACTION_CONFIRM_MESSAGE` 
 
 
 
@@ -2189,7 +2189,7 @@ Applications should overwrite the default text with a shorter version, or should
 <tr>
 <td valign="top">
 
- `C_COMMON_DIALOG_OK` 
+`C_COMMON_DIALOG_OK` 
 
 
 
@@ -2219,7 +2219,7 @@ Applications should overwrite with the action name.
 <tr>
 <td valign="top">
 
- `C_OPERATIONS_ACTION_PARAMETER_REQUIRED` 
+`C_OPERATIONS_ACTION_PARAMETER_REQUIRED` 
 
 
 
@@ -2249,7 +2249,7 @@ Applications should overwrite the default text with a more specific message.
 <tr>
 <td valign="top">
 
- `C_COMMON_ACTION_PARAMETER_DIALOG_CANCEL` 
+`C_COMMON_ACTION_PARAMETER_DIALOG_CANCEL` 
 
 
 
@@ -2279,7 +2279,7 @@ Cancel button text on the action parameter dialog.
 <tr>
 <td valign="top">
 
- `C_ACTION_PARTIAL_FRAGMENT_SAPFE_BOUND_ACTION` 
+`C_ACTION_PARTIAL_FRAGMENT_SAPFE_BOUND_ACTION` 
 
 
 
@@ -2311,7 +2311,7 @@ Example: *1 selected sales order can't be processed.*
 <tr>
 <td valign="top">
 
- `C_ACTION_PARTIAL_FRAGMENT_SAPFE_BOUND_ACTION_PLURAL` 
+`C_ACTION_PARTIAL_FRAGMENT_SAPFE_BOUND_ACTION_PLURAL` 
 
 
 
@@ -2343,7 +2343,7 @@ Example: *2 selected sales orders can't be processed.*
 <tr>
 <td valign="top">
 
- `C_APP_COMPONENT_SAPFE_ETAG_LATE_PROPERTY` 
+`C_APP_COMPONENT_SAPFE_ETAG_LATE_PROPERTY` 
 
 
 
@@ -2407,7 +2407,7 @@ Applications should overwrite the default text with the concrete object that is 
 <tr>
 <td valign="top">
 
- **deprecated key: `C_EDIT_FLOW_GENERIC_LOCKED_OBJECT_POPOVER_TEXT_ADDITIONAL_USER`** 
+**deprecated key: `C_EDIT_FLOW_GENERIC_LOCKED_OBJECT_POPOVER_TEXT_ADDITIONAL_USER`** 
 
 
 
@@ -2503,7 +2503,7 @@ Applications should overwrite the default text with the concrete object that is 
 <tr>
 <td valign="top">
 
- **deprecated key: `C_COMMON_APPLY_ERROR`** 
+**deprecated key: `C_COMMON_APPLY_ERROR`** 
 
 
 
@@ -2533,7 +2533,7 @@ Error message while saving an object.
 <tr>
 <td valign="top">
 
- **deprecated key: `C_TRANSACTION_HELPER_TRANSIENT_CONTEXT_MESSAGE`** 
+**deprecated key: `C_TRANSACTION_HELPER_TRANSIENT_CONTEXT_MESSAGE`** 
 
 
 
@@ -2565,7 +2565,7 @@ This key has been deprecated.
 <tr>
 <td valign="top">
 
- **deprecated key: `C_TRANSACTION_HELPER_TRANSIENT_CONTEXT_DESCRIPTION`** 
+**deprecated key: `C_TRANSACTION_HELPER_TRANSIENT_CONTEXT_DESCRIPTION`** 
 
 
 
@@ -2875,7 +2875,7 @@ Applications should overwrite the default text with the concrete object.
 <tr>
 <td valign="top">
 
- `C_TRANSACTION_HELPER_CONFIRM_DELETE_WITH_OBJECTINFO_AND_ONE_OBJECT_NON_DELETABLE` 
+`C_TRANSACTION_HELPER_CONFIRM_DELETE_WITH_OBJECTINFO_AND_ONE_OBJECT_NON_DELETABLE` 
 
 
 
@@ -3209,7 +3209,7 @@ Applications should overwrite the default text with the concrete object.
 <tr>
 <td valign="top">
 
- `C_COMMON_OBJECT_PAGE_CANCEL` 
+`C_COMMON_OBJECT_PAGE_CANCEL` 
 
 
 
@@ -3239,7 +3239,7 @@ Cancel button text on the object page.
 <tr>
 <td valign="top">
 
- `C_TRANSACTION_HELPER_OBJECT_CREATED` 
+`C_TRANSACTION_HELPER_OBJECT_CREATED` 
 
 
 
@@ -3269,7 +3269,7 @@ Applications should overwrite the default text with the concrete object.
 <tr>
 <td valign="top">
 
- `C_TRANSACTION_HELPER_OBJECT_SAVED` 
+`C_TRANSACTION_HELPER_OBJECT_SAVED` 
 
 
 
@@ -3299,7 +3299,7 @@ Applications should overwrite the default text with the concrete object.
 <tr>
 <td valign="top">
 
- `C_TRANSACTION_HELPER_DRAFT_DISCARD_MESSAGE` 
+`C_TRANSACTION_HELPER_DRAFT_DISCARD_MESSAGE` 
 
 
 
@@ -3313,7 +3313,7 @@ Discard all changes?
 </td>
 <td valign="top">
 
- *Discard* button popover text on the object page when there are unsaved changes and the user clicks *Cancel*.
+*Discard* button popover text on the object page when there are unsaved changes and the user clicks *Cancel*.
 
 
 
@@ -3329,7 +3329,7 @@ Discard all changes?
 <tr>
 <td valign="top">
 
- `C_TRANSACTION_HELPER_DRAFT_DISCARD_BUTTON` 
+`C_TRANSACTION_HELPER_DRAFT_DISCARD_BUTTON` 
 
 
 
@@ -3343,7 +3343,7 @@ Discard
 </td>
 <td valign="top">
 
- *Discard* button text on the object page when there are unsaved changes and the user clicks *Cancel*.
+*Discard* button text on the object page when there are unsaved changes and the user clicks *Cancel*.
 
 
 
@@ -3487,7 +3487,7 @@ Applications can overwrite the default text with a more suitable text for their 
 <tr>
 <td valign="top">
 
- `C_ROUTING_NAVIGATION_DISABLED_TITLE` 
+`C_ROUTING_NAVIGATION_DISABLED_TITLE` 
 
 
 
@@ -3517,7 +3517,7 @@ Text that is shown when the navigation cannot be completed successfully.
 <tr>
 <td valign="top">
 
- `T_ANNOTATION_HELPER_DEFAULT_OBJECT_PAGE_HEADER_TITLE_NO_HEADER_INFO` 
+`T_ANNOTATION_HELPER_DEFAULT_OBJECT_PAGE_HEADER_TITLE_NO_HEADER_INFO` 
 
 
 
@@ -3547,7 +3547,7 @@ Default header title for the object page if no header information is available.
 <tr>
 <td valign="top">
 
- `C_DRAFT_OBJECT_PAGE_DRAFT_UNSAVED_CHANGES` 
+`C_DRAFT_OBJECT_PAGE_DRAFT_UNSAVED_CHANGES` 
 
 
 
@@ -3579,7 +3579,7 @@ Applications should overwrite the default text with the concrete object.
 <tr>
 <td valign="top">
 
- `C_DRAFT_OBJECT_PAGE_DRAFT_LOCKED_BY_USER` 
+`C_DRAFT_OBJECT_PAGE_DRAFT_LOCKED_BY_USER` 
 
 
 
@@ -3611,7 +3611,7 @@ Applications should overwrite the default text with the concrete object.
 <tr>
 <td valign="top">
 
- `T_ANNOTATION_HELPER_DEFAULT_OBJECT_PAGE_HEADER_TITLE` 
+`T_ANNOTATION_HELPER_DEFAULT_OBJECT_PAGE_HEADER_TITLE` 
 
 
 
@@ -3641,7 +3641,7 @@ The default text "New" is appended with `UI.HeaderInfo.TypeName` to form the def
 <tr>
 <td valign="top">
 
- `T_OP_OBJECT_PAGE_SAVE` 
+`T_OP_OBJECT_PAGE_SAVE` 
 
 
 
@@ -3671,7 +3671,7 @@ Save button text on the object page.
 <tr>
 <td valign="top">
 
- `T_OP_OBJECT_PAGE_CREATE` 
+`T_OP_OBJECT_PAGE_CREATE` 
 
 
 
@@ -3701,7 +3701,7 @@ Create button text on the footer of the object page.
 <tr>
 <td valign="top">
 
- `T_OP_RELATED_APPS` 
+`T_OP_RELATED_APPS` 
 
 
 
@@ -3731,7 +3731,7 @@ Restriction: you can change the key only to *Open In...*
 <tr>
 <td valign="top">
 
- `T_NEW_OBJECT` 
+`T_NEW_OBJECT` 
 
 
 
@@ -3761,7 +3761,7 @@ Applications should overwrite the object with a more specific name.
 <tr>
 <td valign="top">
 
- `T_PAGINATOR_CONTROL_PAGINATOR_TOOLTIP_UP` 
+`T_PAGINATOR_CONTROL_PAGINATOR_TOOLTIP_UP` 
 
 
 
@@ -3791,7 +3791,7 @@ Applications should overwrite the default text and replace "Item" with the concr
 <tr>
 <td valign="top">
 
- `T_PAGINATOR_CONTROL_PAGINATOR_TOOLTIP_DOWN` 
+`T_PAGINATOR_CONTROL_PAGINATOR_TOOLTIP_DOWN` 
 
 
 
@@ -3821,7 +3821,7 @@ Applications should overwrite the default text and replace "Item" with the concr
 <tr>
 <td valign="top">
 
- `ST_DRAFT_DATALOSS_POPUP_MESSAGE_CREATE` 
+`ST_DRAFT_DATALOSS_POPUP_MESSAGE_CREATE` 
 
 
 
@@ -3855,7 +3855,7 @@ Example: *You haven't created this sales order yet.*
 <tr>
 <td valign="top">
 
- `ST_DRAFT_DATALOSS_CREATE_ENTITY_TOL` 
+`ST_DRAFT_DATALOSS_CREATE_ENTITY_TOL` 
 
 
 
@@ -3887,7 +3887,7 @@ Example: *Create the sales order.*
 <tr>
 <td valign="top">
 
- `ST_DRAFT_DATALOSS_POPUP_MESSAGE_SAVE` 
+`ST_DRAFT_DATALOSS_POPUP_MESSAGE_SAVE` 
 
 
 
@@ -3921,7 +3921,7 @@ Example: *You've made changes to this sales order.*
 <tr>
 <td valign="top">
 
- `ST_DRAFT_DATALOSS_SAVE_DRAFT_TOL` 
+`ST_DRAFT_DATALOSS_SAVE_DRAFT_TOL` 
 
 
 
@@ -3951,7 +3951,7 @@ Text that is shown below the *Save* option in the confirmation dialog.
 <tr>
 <td valign="top">
 
- `FILTERBAR_EDITING_STATUS` 
+`FILTERBAR_EDITING_STATUS` 
 
 
 
@@ -3981,7 +3981,7 @@ Label of the filter field that is automatically added to the filter bar for draf
 <tr>
 <td valign="top">
 
- `ACTION_PARAMETER_DIALOG_ACTION_NAME` 
+`ACTION_PARAMETER_DIALOG_ACTION_NAME` 
 
 
 
@@ -4011,7 +4011,7 @@ Label of the action name in the action parameter dialog
 <tr>
 <td valign="top">
 
- `C_MASS_EDIT_CONFIRM_MESSAGE` 
+`C_MASS_EDIT_CONFIRM_MESSAGE` 
 
 
 
@@ -4043,7 +4043,7 @@ Text that is shown within the warning message box when some of the selected reco
 <tr>
 <td valign="top">
 
- `C_MASS_EDIT_CONFIRM_MESSAGE_DETAIL_REASON` 
+`C_MASS_EDIT_CONFIRM_MESSAGE_DETAIL_REASON` 
 
 
 
@@ -4073,7 +4073,7 @@ Text that is shown within warning message box when some of the selected objects 
 <tr>
 <td valign="top">
 
- `C_MASS_EDIT_CONFIRM_MESSAGE_DETAIL_REASON_DRAFT` 
+`C_MASS_EDIT_CONFIRM_MESSAGE_DETAIL_REASON_DRAFT` 
 
 
 
@@ -4103,7 +4103,7 @@ Text that is shown within the warning message box when some of the selected obje
 <tr>
 <td valign="top">
 
- `C_MASS_EDIT_CONFIRM_MESSAGE_DETAIL_REASON_NON_EDITABLE` 
+`C_MASS_EDIT_CONFIRM_MESSAGE_DETAIL_REASON_NON_EDITABLE` 
 
 
 
@@ -4133,7 +4133,7 @@ Text that is shown within the warning message box when some of the selected obje
 <tr>
 <td valign="top">
 
- `C_TRANSACTION_HELPER_CONFIRM_DELETE_WITH_ALL_REMAINING_NON_DELETABLE` 
+`C_TRANSACTION_HELPER_CONFIRM_DELETE_WITH_ALL_REMAINING_NON_DELETABLE` 
 
 
 
@@ -4163,7 +4163,7 @@ Applications should overwrite the default text with the concrete objects.
 <tr>
 <td valign="top">
 
- `C_TRANSACTION_HELPER_CONFIRM_DELETE_ONLY_DRAFT_OF_NON_DELETABLE_ACTIVE` 
+`C_TRANSACTION_HELPER_CONFIRM_DELETE_ONLY_DRAFT_OF_NON_DELETABLE_ACTIVE` 
 
 
 
@@ -4193,7 +4193,7 @@ Applications should overwrite the default text with the concrete object.
 <tr>
 <td valign="top">
 
- `C_TRANSACTION_HELPER_CONFIRM_DELETE_ONLY_DRAFTS_OF_NON_DELETABLE_ACTIVE` 
+`C_TRANSACTION_HELPER_CONFIRM_DELETE_ONLY_DRAFTS_OF_NON_DELETABLE_ACTIVE` 
 
 
 
@@ -4223,7 +4223,7 @@ Applications should overwrite the default text with the concrete objects.
 <tr>
 <td valign="top">
 
- `C_TRANSACTION_HELPER_CONFIRM_DELETE_DRAFT_OF_NON_DELETABLE_ACTIVE` 
+`C_TRANSACTION_HELPER_CONFIRM_DELETE_DRAFT_OF_NON_DELETABLE_ACTIVE` 
 
 
 
@@ -4253,7 +4253,7 @@ Applications should overwrite the default text with the concrete object.
 <tr>
 <td valign="top">
 
- `C_TRANSACTION_HELPER_CONFIRM_DELETE_DRAFTS_OF_NON_DELETABLE_ACTIVE` 
+`C_TRANSACTION_HELPER_CONFIRM_DELETE_DRAFTS_OF_NON_DELETABLE_ACTIVE` 
 
 
 
@@ -4283,7 +4283,7 @@ Applications should overwrite the default text with the concrete object.
 <tr>
 <td valign="top">
 
- `C_TRANSACTION_HELPER_CONFIRM_DELETE_WITH_SINGLE_AND_ONE_OBJECT_NON_DELETABLE` 
+`C_TRANSACTION_HELPER_CONFIRM_DELETE_WITH_SINGLE_AND_ONE_OBJECT_NON_DELETABLE` 
 
 
 
@@ -4313,7 +4313,7 @@ Applications should overwrite the default text with the concrete object.
 <tr>
 <td valign="top">
 
- `C_TRANSACTION_HELPER_CONFIRM_DELETE_WITH_MULTIPLE_AND_ALL_OBJECT_NON_DELETABLE` 
+`C_TRANSACTION_HELPER_CONFIRM_DELETE_WITH_MULTIPLE_AND_ALL_OBJECT_NON_DELETABLE` 
 
 
 
@@ -4399,7 +4399,7 @@ Example: *The sales order contains errors.*
 <tr>
 <td valign="top">
 
- `OBJECTPAGESTATE_WARNING` 
+`OBJECTPAGESTATE_WARNING` 
 
 
 
@@ -4431,7 +4431,7 @@ Example: *The sales order contains warnings.*
 <tr>
 <td valign="top">
 
- `OBJECTPAGESTATE_INFORMATION` 
+`OBJECTPAGESTATE_INFORMATION` 
 
 
 
@@ -4463,7 +4463,7 @@ Example: *The sales order contains messages.*
 <tr>
 <td valign="top">
 
- `M_ILLUSTRATEDMESSAGE_TITLE` 
+`M_ILLUSTRATEDMESSAGE_TITLE` 
 
 
 
@@ -4493,7 +4493,7 @@ Applications can choose to overwrite the default text with a more specific one.
 <tr>
 <td valign="top">
 
- `M_ILLUSTRATEDMESSAGE_DESCRIPTION` 
+`M_ILLUSTRATEDMESSAGE_DESCRIPTION` 
 
 
 
@@ -4523,7 +4523,7 @@ Applications can choose to overwrite the default text with a more specific one.
 <tr>
 <td valign="top">
 
- `M_COMMON_TABLE_CREATE` 
+`M_COMMON_TABLE_CREATE` 
 
 
 
@@ -4537,7 +4537,7 @@ Create
 </td>
 <td valign="top">
 
- *Create* button text in a table
+*Create* button text in a table
 
 
 
@@ -4555,7 +4555,7 @@ Example: `M_COMMON_TABLE_CREATE|_Items=MyCustomCreateText`
 <tr>
 <td valign="top">
 
- `M_COMMON_TABLE_DELETE` 
+`M_COMMON_TABLE_DELETE` 
 
 
 
@@ -4569,7 +4569,7 @@ Delete
 </td>
 <td valign="top">
 
- *Delete* button text in a table
+*Delete* button text in a table
 
 
 
@@ -4629,7 +4629,7 @@ Changes must be made in the manifest file of the application. Add `enhanceI18n` 
 >         "name": "sap.fe.templates.ListReport",
 >         "options": {
 >             "settings": {
->                 "entitySet": "SalesOrderManage",
+>                 "contextPath": "/SalesOrderManage",
 >                 "enhanceI18n": "i18n/customSalesOrderLR.properties", // This is the line to be added - it provides Fiori Elements with the name of the custom resource bundle
 >                 ...
 >                 ...
@@ -4679,6 +4679,4 @@ If the action name is the same but the entity differs, then the second part of t
 
 > ### Example:  
 > `C_OPERATIONS_ACTION_CONFIRM_MESSAGE|_Items|ReturnInProcess=Can you please confirm if you really want to trigger the returns for the chosen items?` 
-
-
 

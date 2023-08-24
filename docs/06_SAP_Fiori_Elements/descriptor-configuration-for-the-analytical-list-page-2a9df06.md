@@ -52,7 +52,7 @@ In SAP Fiori elements for OData V4, the ALP is not a separate floorplan, but rat
 >           "name": "sap.fe.templates.ListReport",
 >           "options": {
 >                "settings": {
->                     "entitySet": "BusinessPartners",
+>                     "contextPath": "/BusinessPartners",
 >                     ………
 >                     "views": {
 >                          "paths": [{

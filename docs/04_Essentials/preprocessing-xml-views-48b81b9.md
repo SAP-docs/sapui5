@@ -6,7 +6,7 @@ Applying preprocessing to views enables you to use features like XML templating.
 
 The following figure shows the different stages of view initialization. There are three hooks, XML, ViewXML and controls, which differ mainly in the source that is passed to the preprocessor.
 
- ![](images/SAPUI5_Preprocessing_XML_Views_f33daeb.png) 
+![](images/SAPUI5_Preprocessing_XML_Views_f33daeb.png)
 
 -   XML
 

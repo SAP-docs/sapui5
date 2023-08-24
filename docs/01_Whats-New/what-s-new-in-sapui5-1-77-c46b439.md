@@ -6,7 +6,7 @@ With this release SAPUI5 is upgraded from version 1.76 to 1.77.
 
 
 
-** **
+****
 
 
 <table>
@@ -64,28 +64,28 @@ Available as of
 <tr>
 <td valign="top">
 
- 1.77 
+1.77 
 
 
 
 </td>
 <td valign="top">
 
- New 
+New 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Supported Locales and Fallback** 
+**Supported Locales and Fallback** 
 
 
 
@@ -121,28 +121,28 @@ Info Only
 <tr>
 <td valign="top">
 
- 1.77 
+1.77 
 
 
 
 </td>
 <td valign="top">
 
- New 
+New 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Terminologies** 
+**Terminologies** 
 
 
 
@@ -160,7 +160,7 @@ By defining terminologies together with additional resource bundles, you can ada
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -176,28 +176,28 @@ By defining terminologies together with additional resource bundles, you can ada
 <tr>
 <td valign="top">
 
- 1.77 
+1.77 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **SAPUI5 OData V4 Model** 
+**SAPUI5 OData V4 Model** 
 
 
 
@@ -229,7 +229,7 @@ For more information, see [OData V4 Model](../04_Essentials/odata-v4-model-5de13
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -245,28 +245,28 @@ For more information, see [OData V4 Model](../04_Essentials/odata-v4-model-5de13
 <tr>
 <td valign="top">
 
- 1.77 
+1.77 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Team Calendar** 
+**Team Calendar** 
 
 
 
@@ -284,7 +284,7 @@ This demo app is now enhanced with improvements in the navigation and available 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -300,28 +300,28 @@ This demo app is now enhanced with improvements in the navigation and available 
 <tr>
 <td valign="top">
 
- 1.77 
+1.77 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.f.FlexibleColumnLayout`** 
+**`sap.f.FlexibleColumnLayout`** 
 
 
 
@@ -339,7 +339,7 @@ We’ve introduced the `restoreFocusOnBackNavigation` property. If the property 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -355,28 +355,28 @@ We’ve introduced the `restoreFocusOnBackNavigation` property. If the property 
 <tr>
 <td valign="top">
 
- 1.77 
+1.77 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.Avatar`** 
+**`sap.m.Avatar`** 
 
 
 
@@ -394,7 +394,7 @@ You can now display visual affordance as a badge icon at the bottom-end corner o
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -410,28 +410,28 @@ You can now display visual affordance as a badge icon at the bottom-end corner o
 <tr>
 <td valign="top">
 
- 1.77 
+1.77 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.Button`** 
+**`sap.m.Button`** 
 
 
 
@@ -449,7 +449,7 @@ We have added a new `Attention` button type to the `sap.m.ButtonType` enum. This
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -465,28 +465,28 @@ We have added a new `Attention` button type to the `sap.m.ButtonType` enum. This
 <tr>
 <td valign="top">
 
- 1.77 
+1.77 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.IconTabBar`** 
+**`sap.m.IconTabBar`** 
 
 
 
@@ -504,7 +504,7 @@ This control is now updated according to the latest SAP Fiori design guidelines.
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -520,28 +520,28 @@ This control is now updated according to the latest SAP Fiori design guidelines.
 <tr>
 <td valign="top">
 
- 1.77 
+1.77 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.SearchField`** 
+**`sap.m.SearchField`** 
 
 
 
@@ -559,7 +559,7 @@ We have introduced a new `change` event, fired when the user changes the value o
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -575,28 +575,28 @@ We have introduced a new `change` event, fired when the user changes the value o
 <tr>
 <td valign="top">
 
- 1.77 
+1.77 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.Table`** 
+**`sap.m.Table`** 
 
 
 
@@ -614,7 +614,7 @@ The automatic pop-in mode for the responsive table has been expanded: The new `h
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -630,28 +630,28 @@ The automatic pop-in mode for the responsive table has been expanded: The new `h
 <tr>
 <td valign="top">
 
- 1.77 
+1.77 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.suite.ui.commons.CalculationBuilder`** 
+**`sap.suite.ui.commons.CalculationBuilder`** 
 
 
 
@@ -674,7 +674,7 @@ The automatic pop-in mode for the responsive table has been expanded: The new `h
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -690,28 +690,28 @@ The automatic pop-in mode for the responsive table has been expanded: The new `h
 <tr>
 <td valign="top">
 
- 1.77 
+1.77 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.tnt.SideNavigation`** 
+**`sap.tnt.SideNavigation`** 
 
 
 
@@ -729,7 +729,7 @@ We have added a UI adaptation at runtime \(RTA\) `rename` action for the `sap.tn
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -745,28 +745,28 @@ We have added a UI adaptation at runtime \(RTA\) `rename` action for the `sap.tn
 <tr>
 <td valign="top">
 
- 1.77 
+1.77 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.smartfield.SmartField`, `sap.ui.comp.smartfilterbar.SmartFilterBar`** 
+**`sap.ui.comp.smartfield.SmartField`, `sap.ui.comp.smartfilterbar.SmartFilterBar`** 
 
 
 
@@ -784,7 +784,7 @@ We have introduced a new OData type, `NumericText`, to improve the `display-form
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -800,28 +800,28 @@ We have introduced a new OData type, `NumericText`, to improve the `display-form
 <tr>
 <td valign="top">
 
- 1.77 
+1.77 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.smarttable.SmartTable`** 
+**`sap.ui.comp.smarttable.SmartTable`** 
 
 
 
@@ -842,7 +842,7 @@ We have introduced a new OData type, `NumericText`, to improve the `display-form
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -858,28 +858,28 @@ We have introduced a new OData type, `NumericText`, to improve the `display-form
 <tr>
 <td valign="top">
 
- 1.77 
+1.77 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.ValueHelpDialog`** 
+**`sap.ui.comp.ValueHelpDialog`** 
 
 
 
@@ -899,7 +899,7 @@ Values with `revoked` status are hidden from the `ValueHelpDialog` results unles
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -915,28 +915,28 @@ Values with `revoked` status are hidden from the `ValueHelpDialog` results unles
 <tr>
 <td valign="top">
 
- 1.77 
+1.77 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.integration.widgets.Card`** 
+**`sap.ui.integration.widgets.Card`** 
 
 
 
@@ -962,7 +962,7 @@ Values with `revoked` status are hidden from the `ValueHelpDialog` results unles
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -978,28 +978,28 @@ Values with `revoked` status are hidden from the `ValueHelpDialog` results unles
 <tr>
 <td valign="top">
 
- 1.77 
+1.77 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.richtexteditor.RichTextEditor`** 
+**`sap.ui.richtexteditor.RichTextEditor`** 
 
 
 
@@ -1017,7 +1017,7 @@ We have enabled the native mobile TinyMCE support and you can now enable it in y
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1033,28 +1033,28 @@ We have enabled the native mobile TinyMCE support and you can now enable it in y
 <tr>
 <td valign="top">
 
- 1.77 
+1.77 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.uxap.ObjectPageLayout`** 
+**`sap.uxap.ObjectPageLayout`** 
 
 
 
@@ -1075,7 +1075,7 @@ We have enabled the native mobile TinyMCE support and you can now enable it in y
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1091,28 +1091,28 @@ We have enabled the native mobile TinyMCE support and you can now enable it in y
 <tr>
 <td valign="top">
 
- 1.77 
+1.77 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- SAP Fiori Elements 
+SAP Fiori Elements 
 
 
 
 </td>
 <td valign="top">
 
- **SAP Fiori Elements** 
+**SAP Fiori Elements** 
 
 
 
@@ -1155,7 +1155,7 @@ We have enabled the native mobile TinyMCE support and you can now enable it in y
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1172,6 +1172,8 @@ We have enabled the native mobile TinyMCE support and you can now enable it in y
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.115](what-s-new-in-sapui5-1-115-409fde8.md "With this release SAPUI5 is upgraded from version 1.114 to 1.115.")
 
 [What's New in SAPUI5 1.114](what-s-new-in-sapui5-1-114-890fce1.md "With this release SAPUI5 is upgraded from version 1.113 to 1.114.")
 

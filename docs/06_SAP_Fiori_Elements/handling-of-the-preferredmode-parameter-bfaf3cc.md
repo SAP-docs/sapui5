@@ -127,7 +127,7 @@ If the specified mode isn't suitable for the current draft state, there is no si
 <tr>
 <td valign="top">
 
- `callUnboundAction` 
+`callUnboundAction` 
 
 
 
@@ -251,7 +251,7 @@ When `preferredMode=create` is used with URL parameter values, there's a differe
     > ```
     > "options": {
     >     "settings": {
-    >         "entitySet": "SalesOrderManage", // Object Page
+    >         "contextPath": "/SalesOrderManage", // Object Page
     >         ...
     >         "inboundParameters": {
     >              "SalesOrderType": {

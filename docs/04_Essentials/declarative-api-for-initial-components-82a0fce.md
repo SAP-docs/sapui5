@@ -46,11 +46,11 @@ This module scans the DOM for HTML elements containing a special data attribute 
 ## Declarative Configuration of `ComponentContainer`
 
 > ### Caution:  
-> As HTML is case-insensitive, in order to define a property with upper-case characters you have to "escape" them with the hyphen character. This is similar to CSS attributes. In the following sample the `handleValidation` argument of the `ComponentContainer` constructor is used:
+> As HTML is case-insensitive, property or event names with upper-case characters have to be "escaped" with the hyphen character. This is similar to CSS attributes. In the following sample, the `handleValidation` and `componentCreated` arguments of the `ComponentContainer` constructor are used:
 > 
 > ```html
 > 
-> <div data-sap-ui-component ... data-handle-validation="true" ...></div>
+> <div data-sap-ui-component ... data-handle-validation="true" data-component-created="onComponentCreated"<</div>
 > 
 > ```
 
@@ -67,7 +67,7 @@ The `ComponentSupport` module enforces asynchronous module loading of the compon
 
 For details on the manifest, see [Descriptor for Applications, Components, and Libraries \(manifest.json\)](descriptor-for-applications-components-and-libraries-manifest-json-be0cf40.md).
 
-See also [ `ComponentSupport`](https://ui5.sap.com/#/api/module:sap/ui/core/ComponentSupport) and [ `ComponentContainer`](https://ui5.sap.com/#/api/sap.ui.core.ComponentContainer) for more information. 
+See also [`ComponentSupport`](https://ui5.sap.com/#/api/module:sap/ui/core/ComponentSupport) and [`ComponentContainer`](https://ui5.sap.com/#/api/sap.ui.core.ComponentContainer) for more information. 
 
 
 

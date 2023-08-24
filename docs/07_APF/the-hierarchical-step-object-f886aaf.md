@@ -49,7 +49,7 @@ Description
 <tr>
 <td valign="top">
 
- `id` 
+`id` 
 
 
 
@@ -65,7 +65,7 @@ Unique ID of type string
 <tr>
 <td valign="top">
 
- `title` 
+`title` 
 
 
 
@@ -81,7 +81,7 @@ Title displayed in the analysis step gallery and in the analysis path display.
 <tr>
 <td valign="top">
 
- `longTitle` 
+`longTitle` 
 
 
 
@@ -97,7 +97,7 @@ Title displayed above the representation in the analysis step display. If no lon
 <tr>
 <td valign="top">
 
- `request` 
+`request` 
 
 
 
@@ -113,7 +113,7 @@ ID of the request used for this analysis step.
 <tr>
 <td valign="top">
 
- `binding` 
+`binding` 
 
 
 
@@ -161,7 +161,7 @@ The property that is provided in a hierarchical form.
 <tr>
 <td valign="top">
 
- `thumbnail` 
+`thumbnail` 
 
 
 
@@ -177,7 +177,7 @@ Displayed in the analysis path display.
 <tr>
 <td valign="top">
 
- `filterMapping` 
+`filterMapping` 
 
 
 
@@ -193,7 +193,7 @@ Maps a filter derived from the selection in a chart \(source filter property\) t
 <tr>
 <td valign="top">
 
- `requestForMappedFilter` 
+`requestForMappedFilter` 
 
 
 
@@ -209,7 +209,7 @@ Contains the ID of the `request` object used to do the lookup request. The looku
 <tr>
 <td valign="top">
 
- `target` 
+`target` 
 
 
 
@@ -225,7 +225,7 @@ Array of properties that are used to determine the mapped filter properties base
 <tr>
 <td valign="top">
 
- `keepSource` 
+`keepSource` 
 
 
 

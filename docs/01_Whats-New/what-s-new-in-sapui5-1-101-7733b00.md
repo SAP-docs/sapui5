@@ -6,7 +6,7 @@ With this release SAPUI5 is upgraded from version 1.100 to 1.101.
 
 
 
-** **
+****
 
 
 <table>
@@ -64,28 +64,28 @@ Available as of
 <tr>
 <td valign="top">
 
- 1.101 
+1.101 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Drag and Drop** 
+**Drag and Drop** 
 
 
 
@@ -108,7 +108,7 @@ For more information, see [Drag and Drop](../04_Essentials/drag-and-drop-3ddb6cd
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -124,28 +124,28 @@ For more information, see [Drag and Drop](../04_Essentials/drag-and-drop-3ddb6cd
 <tr>
 <td valign="top">
 
- 1.101 
+1.101 
 
 
 
 </td>
 <td valign="top">
 
- UI Changed 
+UI Changed 
 
 
 
 </td>
 <td valign="top">
 
- Announcement 
+Announcement 
 
 
 
 </td>
 <td valign="top">
 
- **Draft-Enabled Apps: Draft Toggle Button Moved** 
+**Draft-Enabled Apps: Draft Toggle Button Moved** 
 
 
 
@@ -166,7 +166,7 @@ To improve the user experience, we've changed the handling of the draft concept 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -182,28 +182,28 @@ To improve the user experience, we've changed the handling of the draft concept 
 <tr>
 <td valign="top">
 
- 1.101 
+1.101 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **High Contrast Themes** 
+**High Contrast Themes** 
 
 
 
@@ -221,7 +221,7 @@ We have prevented the overwriting of the high contrast setting of Windows for al
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -237,28 +237,28 @@ We have prevented the overwriting of the high contrast setting of Windows for al
 <tr>
 <td valign="top">
 
- 1.101 
+1.101 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **SAPUI5 OData V2 Model** 
+**SAPUI5 OData V2 Model** 
 
 
 
@@ -276,7 +276,7 @@ The new `sap.ui.model.odata.v2.Context#delete` method deletes a binding's `Conte
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -292,28 +292,28 @@ The new `sap.ui.model.odata.v2.Context#delete` method deletes a binding's `Conte
 <tr>
 <td valign="top">
 
- 1.101 
+1.101 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **SAPUI5 OData V4 Model** 
+**SAPUI5 OData V4 Model** 
 
 
 
@@ -338,7 +338,7 @@ The new version of the SAPUI5 OData V4 model introduces the following features:
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -354,28 +354,28 @@ The new version of the SAPUI5 OData V4 model introduces the following features:
 <tr>
 <td valign="top">
 
- 1.101 
+1.101 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.List, sap.m.Table, sap.m.Tree`** 
+**`sap.m.List, sap.m.Table, sap.m.Tree`** 
 
 
 
@@ -393,7 +393,7 @@ For better user experience with a more visual approach and a more conversational
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -409,28 +409,28 @@ For better user experience with a more visual approach and a more conversational
 <tr>
 <td valign="top">
 
- 1.101 
+1.101 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.upload.UploadSet`** 
+**`sap.m.upload.UploadSet`** 
 
 
 
@@ -448,7 +448,7 @@ You can now sort, group, and filter the items within `UploadSet`.For more inform
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -464,28 +464,28 @@ You can now sort, group, and filter the items within `UploadSet`.For more inform
 <tr>
 <td valign="top">
 
- 1.101 
+1.101 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.Wizard`** 
+**`sap.m.Wizard`** 
 
 
 
@@ -506,7 +506,7 @@ You can now sort, group, and filter the items within `UploadSet`.For more inform
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -522,28 +522,28 @@ You can now sort, group, and filter the items within `UploadSet`.For more inform
 <tr>
 <td valign="top">
 
- 1.101 
+1.101 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.smartfield.SmartField`** 
+**`sap.ui.comp.smartfield.SmartField`** 
 
 
 
@@ -561,7 +561,7 @@ You can now sort, group, and filter the items within `UploadSet`.For more inform
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -577,28 +577,28 @@ You can now sort, group, and filter the items within `UploadSet`.For more inform
 <tr>
 <td valign="top">
 
- 1.101 
+1.101 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.smartfilterbar.SmartFilterBar`** 
+**`sap.ui.comp.smartfilterbar.SmartFilterBar`** 
 
 
 
@@ -616,7 +616,7 @@ Users can now rearrange the filters in the *Adapt Filters* dialog. With this imp
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -632,28 +632,28 @@ Users can now rearrange the filters in the *Adapt Filters* dialog. With this imp
 <tr>
 <td valign="top">
 
- 1.101 
+1.101 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.smartform.SmartForm`** 
+**`sap.ui.comp.smartform.SmartForm`** 
 
 
 
@@ -671,7 +671,7 @@ The `SemanticGroupElement` control now supports currency and unit of measure sma
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -687,28 +687,28 @@ The `SemanticGroupElement` control now supports currency and unit of measure sma
 <tr>
 <td valign="top">
 
- 1.101 
+1.101 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.smarttable.SmartTable`** 
+**`sap.ui.comp.smarttable.SmartTable`** 
 
 
 
@@ -726,7 +726,7 @@ We have improved the usability of the [Show Details\]/[Hide Details\] buttons an
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -742,28 +742,28 @@ We have improved the usability of the [Show Details\]/[Hide Details\] buttons an
 <tr>
 <td valign="top">
 
- 1.101 
+1.101 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- SAP Fiori Elements 
+SAP Fiori Elements 
 
 
 
 </td>
 <td valign="top">
 
- **SAP Fiori elements for OData V2** 
+**SAP Fiori elements for OData V2** 
 
 
 
@@ -792,7 +792,7 @@ The following changes and new features are available for SAP Fiori elements for 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -808,28 +808,28 @@ The following changes and new features are available for SAP Fiori elements for 
 <tr>
 <td valign="top">
 
- 1.101 
+1.101 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- SAP Fiori Elements 
+SAP Fiori Elements 
 
 
 
 </td>
 <td valign="top">
 
- **SAP Fiori elements for OData V4** 
+**SAP Fiori elements for OData V4** 
 
 
 
@@ -850,19 +850,19 @@ The following changes and new features are available for SAP Fiori elements for 
 
         Until now, when working with the draft version of the document the user could switch to the saved version using the following button:
 
-         ![](images/Object_page_-_draft_version_of_the_object_is_shown_using_button_text_Display_Saved_Version_6337dc4.png) 
+        ![](images/Object_page_-_draft_version_of_the_object_is_shown_using_button_text_Display_Saved_Version_6337dc4.png)
 
         Likewise, when working with the saved version of the document the user could switch to the draft using the following button:
 
-         ![](images/Object_page_-_saved_version_of_the_object_is_shown_using_button_text_Return_to_Draft_8556812.png) 
+        ![](images/Object_page_-_saved_version_of_the_object_is_shown_using_button_text_Return_to_Draft_8556812.png)
 
         As of SAPUI5 1.101, when working with the draft version of the document the user can switch to the saved version using the following popover:
 
-         ![](images/Object_page_new_concept_-_draft_version_of_the_object_is_shown_using_button_text_Draft_0971995.png) 
+        ![](images/Object_page_new_concept_-_draft_version_of_the_object_is_shown_using_button_text_Draft_0971995.png)
 
         Likewise, when working with the saved version of the document the user can switch to the draft version:
 
-         ![](images/Object_page_new_concept_-_saved_version_of_the_object_is_displayed_746ff83.png) 
+        ![](images/Object_page_new_concept_-_saved_version_of_the_object_is_displayed_746ff83.png)
 
         The highlighting and labels clearly indicate which version the user is currently working on.
 
@@ -870,11 +870,11 @@ The following changes and new features are available for SAP Fiori elements for 
 
         Until now we showed the following confirmation dialog:
 
-         ![](images/Object_page_new_concept_-_Draft_toggling_Warning_confirmation_dialog_in_old_version_457b83f.png) 
+        ![](images/Object_page_new_concept_-_Draft_toggling_Warning_confirmation_dialog_in_old_version_457b83f.png)
 
         As of SAPUI5 1.101 we're showing the following confirmation dialog with the new default action *Save*:
 
-         ![](images/Object_page_new_concept_-_Draft_toggling_Warning_confirmation_dialog_in_new_version_70024f1.png) 
+        ![](images/Object_page_new_concept_-_Draft_toggling_Warning_confirmation_dialog_in_new_version_70024f1.png)
 
 
     For more information, see [Toggling Between Draft and Saved Values](../06_SAP_Fiori_Elements/toggling-between-draft-and-saved-values-fd3950a.md).
@@ -904,30 +904,14 @@ The following changes and new features are available for SAP Fiori elements for 
     <tr>
     <td valign="top">
     
-        T\_OP\_TABLE\_AND\_CHART\_NO\_DATA\_TEXT
+    T\_OP\_TABLE\_AND\_CHART\_NO\_DATA\_TEXT
 
 
     
     </td>
     <td valign="top">
     
-        T\_TABLE\_AND\_CHART\_NO\_DATA\_TEXT
-
-
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-        T\_OP\_TABLE\_AND\_CHART\_NO\_DATA\_TEXT\_WITH\_FILTER
-
-
-    
-    </td>
-    <td valign="top">
-    
-        T\_TABLE\_AND\_CHART\_NO\_DATA\_TEXT\_WITH\_FILTER
+    T\_TABLE\_AND\_CHART\_NO\_DATA\_TEXT
 
 
     
@@ -936,14 +920,14 @@ The following changes and new features are available for SAP Fiori elements for 
     <tr>
     <td valign="top">
     
-        M\_OP\_TABLE\_AND\_CHART\_NO\_DATA\_TEXT\_WITH\_FILTER\_MULTI\_VIEW
+    T\_OP\_TABLE\_AND\_CHART\_NO\_DATA\_TEXT\_WITH\_FILTER
 
 
     
     </td>
     <td valign="top">
     
-        M\_TABLE\_AND\_CHART\_NO\_DATA\_TEXT\_MULTI\_VIEW
+    T\_TABLE\_AND\_CHART\_NO\_DATA\_TEXT\_WITH\_FILTER
 
 
     
@@ -952,14 +936,30 @@ The following changes and new features are available for SAP Fiori elements for 
     <tr>
     <td valign="top">
     
-        M\_OP\_TABLE\_AND\_CHART\_OP\_NO\_FILTERS\_NO\_DATA\_TEXT
+    M\_OP\_TABLE\_AND\_CHART\_NO\_DATA\_TEXT\_WITH\_FILTER\_MULTI\_VIEW
 
 
     
     </td>
     <td valign="top">
     
-        M\_TABLE\_AND\_CHART\_NO\_FILTERS\_NO\_DATA\_TEXT
+    M\_TABLE\_AND\_CHART\_NO\_DATA\_TEXT\_MULTI\_VIEW
+
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    M\_OP\_TABLE\_AND\_CHART\_OP\_NO\_FILTERS\_NO\_DATA\_TEXT
+
+
+    
+    </td>
+    <td valign="top">
+    
+    M\_TABLE\_AND\_CHART\_NO\_FILTERS\_NO\_DATA\_TEXT
 
 
     
@@ -985,7 +985,7 @@ The following changes and new features are available for SAP Fiori elements for 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1002,6 +1002,8 @@ The following changes and new features are available for SAP Fiori elements for 
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.115](what-s-new-in-sapui5-1-115-409fde8.md "With this release SAPUI5 is upgraded from version 1.114 to 1.115.")
 
 [What's New in SAPUI5 1.114](what-s-new-in-sapui5-1-114-890fce1.md "With this release SAPUI5 is upgraded from version 1.113 to 1.114.")
 

@@ -21,7 +21,7 @@ As an end user, you can copy and paste multiple values in the filter bar in the 
 
 For example, you can copy the values from the *Sales Order No.:* field and paste them either to another filter field or a value help that has the same data type. In the value help dialog, paste to the *equal to* field.
 
- ![](images/copy-paste-filter-bar_e343435.png) 
+![](images/copy-paste-filter-bar_e343435.png)
 
 > ### Restriction:  
 > -   Copying and pasting a large number of values into the filter fields can cause performance issues.

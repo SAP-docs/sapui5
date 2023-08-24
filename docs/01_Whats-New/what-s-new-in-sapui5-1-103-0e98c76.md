@@ -4,7 +4,7 @@
 
 With this release SAPUI5 is upgraded from version 1.102 to 1.103.
 
-** **
+****
 
 
 <table>
@@ -62,28 +62,28 @@ Available as of
 <tr>
 <td valign="top">
 
- 1.103 
+1.103 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.plugins.DataStateIndicator`** 
+**`sap.m.plugins.DataStateIndicator`** 
 
 
 
@@ -101,7 +101,7 @@ The `MessageStrip` control, which is offered by the `DataStateIndicator` plugin,
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -117,28 +117,28 @@ The `MessageStrip` control, which is offered by the `DataStateIndicator` plugin,
 <tr>
 <td valign="top">
 
- 1.103 
+1.103 
 
 
 
 </td>
 <td valign="top">
 
- UI Changed 
+UI Changed 
 
 
 
 </td>
 <td valign="top">
 
- Announcement 
+Announcement 
 
 
 
 </td>
 <td valign="top">
 
- **Smart Link Personalization: *Reset* Button Moved** 
+**Smart Link Personalization: *Reset* Button Moved** 
 
 
 
@@ -159,7 +159,7 @@ To further harmonize various personalization dialogs, the *Reset* button in the 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -175,28 +175,28 @@ To further harmonize various personalization dialogs, the *Reset* button in the 
 <tr>
 <td valign="top">
 
- 1.103 
+1.103 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.navpopover.SmartLink`** 
+**`sap.ui.comp.navpopover.SmartLink`** 
 
 
 
@@ -214,7 +214,7 @@ We have made the UI for `SmartLink` more consistent with other UIs. We now use t
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -230,28 +230,28 @@ We have made the UI for `SmartLink` more consistent with other UIs. We now use t
 <tr>
 <td valign="top">
 
- 1.103 
+1.103 
 
 
 
 </td>
 <td valign="top">
 
- Deprecated 
+Deprecated 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **Deprecation of the Visual Tree Mapper Library** 
+**Deprecation of the Visual Tree Mapper Library** 
 
 
 
@@ -269,7 +269,7 @@ The experimental [`sap.ui.vtm`](https://ui5.sap.com/#/api/sap.ui.vtm) library \(
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -285,28 +285,28 @@ The experimental [`sap.ui.vtm`](https://ui5.sap.com/#/api/sap.ui.vtm) library \(
 <tr>
 <td valign="top">
 
- 1.103 
+1.103 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **SAPUI5 OData V4 Model** 
+**SAPUI5 OData V4 Model** 
 
 
 
@@ -327,7 +327,7 @@ The new version of the SAPUI5 OData V4 model introduces the following features:
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -343,28 +343,28 @@ The new version of the SAPUI5 OData V4 model introduces the following features:
 <tr>
 <td valign="top">
 
- 1.103 
+1.103 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- SAP Fiori Elements 
+SAP Fiori Elements 
 
 
 
 </td>
 <td valign="top">
 
- **SAP Fiori elements for OData V4** 
+**SAP Fiori elements for OData V4** 
 
 
 
@@ -387,7 +387,7 @@ The following changes and new features are available for SAP Fiori elements for 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -403,28 +403,28 @@ The following changes and new features are available for SAP Fiori elements for 
 <tr>
 <td valign="top">
 
- 1.103 
+1.103 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- SAP Fiori Elements 
+SAP Fiori Elements 
 
 
 
 </td>
 <td valign="top">
 
- **SAP Fiori elements for OData V2** 
+**SAP Fiori elements for OData V2** 
 
 
 
@@ -449,7 +449,7 @@ The following changes and new features are available for SAP Fiori elements for 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -465,28 +465,28 @@ The following changes and new features are available for SAP Fiori elements for 
 <tr>
 <td valign="top">
 
- 1.103 
+1.103 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.DateRangeSelection`, `sap.m.OverflowToolbar`, and `sap.m.IOverflowToolbarContent`** 
+**`sap.m.DateRangeSelection`, `sap.m.OverflowToolbar`, and `sap.m.IOverflowToolbarContent`** 
 
 
 
@@ -504,7 +504,7 @@ We have implemented `sap.m.OverflowToolbar` on the `sap.m.DateRangeSelection` to
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -520,28 +520,28 @@ We have implemented `sap.m.OverflowToolbar` on the `sap.m.DateRangeSelection` to
 <tr>
 <td valign="top">
 
- 1.103 
+1.103 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.integration.widgets.Card`** 
+**`sap.ui.integration.widgets.Card`** 
 
 
 
@@ -564,7 +564,7 @@ We have implemented `sap.m.OverflowToolbar` on the `sap.m.DateRangeSelection` to
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -580,28 +580,28 @@ We have implemented `sap.m.OverflowToolbar` on the `sap.m.DateRangeSelection` to
 <tr>
 <td valign="top">
 
- 1.103 
+1.103 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.MessageBox`** 
+**`sap.m.MessageBox`** 
 
 
 
@@ -619,7 +619,7 @@ We have enhanced the `details` property and now it can also be a function that a
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -636,6 +636,8 @@ We have enhanced the `details` property and now it can also be a function that a
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.115](what-s-new-in-sapui5-1-115-409fde8.md "With this release SAPUI5 is upgraded from version 1.114 to 1.115.")
 
 [What's New in SAPUI5 1.114](what-s-new-in-sapui5-1-114-890fce1.md "With this release SAPUI5 is upgraded from version 1.113 to 1.114.")
 

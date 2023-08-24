@@ -138,19 +138,19 @@ To define multiple views using single table mode, perform the following steps:
 
 The analytical list page table is now configured to be displayed with multiple views in the form of a drop-down. The drop-down values shows each `SelectionVariant`.
 
-   
+  
   
 **Multiple view as drop-down**
 
- ![](images/Dropdown_selection_51d95cd.png "Multiple view as drop-down ") 
+![](images/Dropdown_selection_51d95cd.png "Multiple view as drop-down ")
 
 If the number of tabs are less than or equal to three, the views are displayed in a segmented button.
 
-   
+  
   
 **Multiple view as segmented button**
 
- ![](images/Multiple_view_as_segmented_button_d14c1fe.png "Multiple view as segmented button ") 
+![](images/Multiple_view_as_segmented_button_d14c1fe.png "Multiple view as segmented button ")
 
 
 
@@ -183,17 +183,17 @@ You can show the counts of entries of each view by setting `showCounts` to `true
 > },
 > ```
 
-   
+  
   
 **Drop-down with count**
 
- ![](images/Drop-down_with_count_777a3bb.png "Drop-down with count") 
+![](images/Drop-down_with_count_777a3bb.png "Drop-down with count")
 
-   
+  
   
 **Segmented button with count**
 
- ![](images/Segmented_button_with_count_47f5d6a.png "Segmented button with count") 
+![](images/Segmented_button_with_count_47f5d6a.png "Segmented button with count")
 
 
 

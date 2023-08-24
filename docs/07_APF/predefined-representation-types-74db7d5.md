@@ -93,14 +93,14 @@ BarChart
 </td>
 <td valign="top">
 
- `sap.apf.ui.representations.barChart` 
+`sap.apf.ui.representations.barChart` 
 
 
 
 </td>
 <td valign="top">
 
- `sap.viz.ui5.controls.VizFrame({vizType : bar});` 
+`sap.viz.ui5.controls.VizFrame({vizType : bar});` 
 
 
 
@@ -153,14 +153,14 @@ LineChartWithTwoVerticalAxes
 </td>
 <td valign="top">
 
- `sap.apf.ui.representations.lineChartWithTwoVerticalAxes` 
+`sap.apf.ui.representations.lineChartWithTwoVerticalAxes` 
 
 
 
 </td>
 <td valign="top">
 
- `sap.viz.ui5.controls.Vi zFrame({vizType : dual_line});` 
+`sap.viz.ui5.controls.Vi zFrame({vizType : dual_line});` 
 
 
 
@@ -183,14 +183,14 @@ LineChartWithTimeAxis
 </td>
 <td valign="top">
 
- `sap.apf.ui.representations.lineChartWithTimeAxis` 
+`sap.apf.ui.representations.lineChartWithTimeAxis` 
 
 
 
 </td>
 <td valign="top">
 
- `sap.viz.ui5.controls.Vi zFrame({vizType : timeseries_line});` 
+`sap.viz.ui5.controls.Vi zFrame({vizType : timeseries_line});` 
 
 
 
@@ -213,14 +213,14 @@ PieChart
 </td>
 <td valign="top">
 
- `sap.apf.ui.representations.pieChart` 
+`sap.apf.ui.representations.pieChart` 
 
 
 
 </td>
 <td valign="top">
 
- `sap.viz.ui5.controls.VizFrame({vizType : pie});` 
+`sap.viz.ui5.controls.VizFrame({vizType : pie});` 
 
 
 
@@ -243,14 +243,14 @@ DonutChart
 </td>
 <td valign="top">
 
- `sap.apf.ui.representations.donutChart` 
+`sap.apf.ui.representations.donutChart` 
 
 
 
 </td>
 <td valign="top">
 
- `sap.viz.ui5.controls.VizFrame({vizType : donut});` 
+`sap.viz.ui5.controls.VizFrame({vizType : donut});` 
 
 
 
@@ -303,14 +303,14 @@ BubbleChart
 </td>
 <td valign="top">
 
- `sap.apf.ui.representations.bubbleChart` 
+`sap.apf.ui.representations.bubbleChart` 
 
 
 
 </td>
 <td valign="top">
 
- `sap.viz.ui5.controls.VizFrame({vizType : bubble});` 
+`sap.viz.ui5.controls.VizFrame({vizType : bubble});` 
 
 
 
@@ -363,14 +363,14 @@ StackedBarChart
 </td>
 <td valign="top">
 
- `sap.apf.ui.representations.stackedBarChart` 
+`sap.apf.ui.representations.stackedBarChart` 
 
 
 
 </td>
 <td valign="top">
 
- `sap.viz.ui5.controls.VizFrame({vizType : 100_stacked_bar});` 
+`sap.viz.ui5.controls.VizFrame({vizType : 100_stacked_bar});` 
 
 
 
@@ -423,14 +423,14 @@ PercentageStackedBarChart
 </td>
 <td valign="top">
 
- `sap.apf.ui.representati ons.percentageStackedBarChart` 
+`sap.apf.ui.representati ons.percentageStackedBarChart` 
 
 
 
 </td>
 <td valign="top">
 
- `sap.viz.ui5.controls.Vi zFrame({vizType : 100_stacked_bar});)` 
+`sap.viz.ui5.controls.Vi zFrame({vizType : 100_stacked_bar});)` 
 
 
 
@@ -453,14 +453,14 @@ CombinationChart
 </td>
 <td valign="top">
 
- `sap.apf.ui.represent ations.combinationChart` 
+`sap.apf.ui.represent ations.combinationChart` 
 
 
 
 </td>
 <td valign="top">
 
- `sap.viz.ui5.controls .Vi zFrame({vizType : combination});)` 
+`sap.viz.ui5.controls .Vi zFrame({vizType : combination});)` 
 
 
 
@@ -483,14 +483,14 @@ StackedCombinationChart
 </td>
 <td valign="top">
 
- `sap.apf.ui.represent ations.stackedCombinationChart` 
+`sap.apf.ui.represent ations.stackedCombinationChart` 
 
 
 
 </td>
 <td valign="top">
 
- `sap.viz.ui5.controls .Vi zFrame({vizType : stacked combination});)` 
+`sap.viz.ui5.controls .Vi zFrame({vizType : stacked combination});)` 
 
 
 
@@ -513,14 +513,14 @@ DualCombinationChart
 </td>
 <td valign="top">
 
- `sap.apf.ui.represent ations.dualCombinationChart` 
+`sap.apf.ui.represent ations.dualCombinationChart` 
 
 
 
 </td>
 <td valign="top">
 
- `sap.viz.ui5.controls .Vi zFrame({vizType : dual combination});)` 
+`sap.viz.ui5.controls .Vi zFrame({vizType : dual combination});)` 
 
 
 
@@ -543,14 +543,14 @@ DualStackedCombinationChart
 </td>
 <td valign="top">
 
- `sap.apf.ui.represent ations.dualStackedCombinationChart` 
+`sap.apf.ui.represent ations.dualStackedCombinationChart` 
 
 
 
 </td>
 <td valign="top">
 
- `sap.viz.ui5.controls .Vi zFrame({vizType : dual stacked combination});)` 
+`sap.viz.ui5.controls .Vi zFrame({vizType : dual stacked combination});)` 
 
 
 
@@ -573,14 +573,14 @@ HeatmapChart
 </td>
 <td valign="top">
 
- `Sap.apf.ui.representations.heatmapChart` 
+`Sap.apf.ui.representations.heatmapChart` 
 
 
 
 </td>
 <td valign="top">
 
- `sap.viz.ui5.controls.Vi zFrame({vizType :heatmap});)` 
+`sap.viz.ui5.controls.Vi zFrame({vizType :heatmap});)` 
 
 
 
@@ -633,14 +633,14 @@ TreeTableRepresentation
 </td>
 <td valign="top">
 
- `sap.apf.ui.representations.treeTable` 
+`sap.apf.ui.representations.treeTable` 
 
 
 
 </td>
 <td valign="top">
 
- `SAPUI5 tree table (sap.ui.table.TreeTable)` 
+`SAPUI5 tree table (sap.ui.table.TreeTable)` 
 
 
 

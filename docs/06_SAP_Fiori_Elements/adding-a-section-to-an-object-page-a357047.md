@@ -40,7 +40,7 @@ In the SAP Web IDE, open the folder structure of the Manage Products project and
 > 				width="30%" 
 > 				editable="false"/>
 > 	</VBox>
-> </mvc:View>		
+> </core:View>		
 > ```
 
 
@@ -135,7 +135,7 @@ To add multiple sections, the extension name needs to contain a key after the an
 
 The object page of the *Manage Products* app shows the new section *Product Description*:
 
- ![](images/Object_Page_New_Section_Added_5964a7f.png) 
+![](images/Object_Page_New_Section_Added_5964a7f.png)
 
 
 

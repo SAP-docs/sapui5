@@ -4,7 +4,7 @@
 
 With this release SAPUI5 is upgraded from version 1.101 to 1.102.
 
-** **
+****
 
 
 <table>
@@ -62,28 +62,28 @@ Available as of
 <tr>
 <td valign="top">
 
- 1.102 
+1.102 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Accessibility** 
+**Accessibility** 
 
 
 
@@ -101,7 +101,7 @@ We are now using JAWS 2022 as a reference testing environment in SAPUI5. For mor
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -117,28 +117,28 @@ We are now using JAWS 2022 as a reference testing environment in SAPUI5. For mor
 <tr>
 <td valign="top">
 
- 1.102 
+1.102 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.richtexteditor.RichTextEditor`** 
+**`sap.ui.richtexteditor.RichTextEditor`** 
 
 
 
@@ -156,7 +156,7 @@ Application developers can now customize the custom toolbar and remove the butto
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -172,28 +172,28 @@ Application developers can now customize the custom toolbar and remove the butto
 <tr>
 <td valign="top">
 
- 1.102 
+1.102 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Announcement 
+Announcement 
 
 
 
 </td>
 <td valign="top">
 
- **Deactivation of Default Time Zone Configuration Feature** 
+**Deactivation of Default Time Zone Configuration Feature** 
 
 
 
@@ -230,7 +230,7 @@ We plan to bring this feature back in a different form at a later point in time.
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -246,96 +246,28 @@ We plan to bring this feature back in a different form at a later point in time.
 <tr>
 <td valign="top">
 
- 1.102 
+1.102 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.p13n*`** 
-
-
-
-</td>
-<td valign="top">
-
-**`sap.m.p13n*`**
-
-We have improved the usability of the *View Settings* dialog. To do this, we have replaced the `sap.m.Select` control with a `sap.m.ComboBox` control and items of type `sap.m.StandardListItem`.
-
-In particular, the following changes have been applied:
-
--   We have replaced *None* in the selection lists of the *Sort* and *Group* tabs with the *Sort by* and *Group by* placeholder texts based on the SAP Fiori design guidelines.
-
--   We have adapted the tooltips of the *Delete* buttons for removing entries on the tabs.
-
-    ![](images/Sort_tab_for_WN_View_Settings_53d93b3.png)
-
--   For a more simplified search, especially in a long selection list, users can now enter a column name.
-
-
-For more information, see the [Sample](https://ui5.sap.com/#/entity/sap.m.p13n.Popup/sample/sap.m.sample.p13n.Popup) for `sap.m.p13n.Popup` and the [Sample](https://ui5.sap.com/#/entity/sap.ui.comp.smarttable.SmartTable/sample/sap.ui.comp.sample.smarttable.mtableCustom) for `SmartTable`. 
-
-<sub>Changed•Control•Info Only•1.102</sub>
-
-
-
-</td>
-<td valign="top">
-
- Info Only 
-
-
-
-</td>
-<td valign="top">
-
-2022-05-19
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
- 1.102 
-
-
-
-</td>
-<td valign="top">
-
- Changed 
-
-
-
-</td>
-<td valign="top">
-
- Control 
-
-
-
-</td>
-<td valign="top">
-
- **`sap.ui.comp.smarttable.SmartTable`** 
+**`sap.ui.comp.smarttable.SmartTable`** 
 
 
 
@@ -356,7 +288,7 @@ For more information, see the [Sample](https://ui5.sap.com/#/entity/sap.m.p13n.P
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -372,28 +304,28 @@ For more information, see the [Sample](https://ui5.sap.com/#/entity/sap.m.p13n.P
 <tr>
 <td valign="top">
 
- 1.102 
+1.102 
 
 
 
 </td>
 <td valign="top">
 
- New 
+New 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Visualization of IANA Time Zones for Date/Time Data** 
+**Visualization of IANA Time Zones for Date/Time Data** 
 
 
 
@@ -435,7 +367,7 @@ The following SAPUI5 functionality supports IANA time zones:
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -451,28 +383,28 @@ The following SAPUI5 functionality supports IANA time zones:
 <tr>
 <td valign="top">
 
- 1.102 
+1.102 
 
 
 
 </td>
 <td valign="top">
 
- UI Changed 
+UI Changed 
 
 
 
 </td>
 <td valign="top">
 
- Announcement 
+Announcement 
 
 
 
 </td>
 <td valign="top">
 
- **Draft-Enabled Apps: Empty Rows Offered by Default in Object Page Tables** 
+**Draft-Enabled Apps: Empty Rows Offered by Default in Object Page Tables** 
 
 
 
@@ -493,7 +425,7 @@ To improve the user experience of draft-enabled apps, a number of empty rows are
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -509,28 +441,28 @@ To improve the user experience of draft-enabled apps, a number of empty rows are
 <tr>
 <td valign="top">
 
- 1.102 
+1.102 
 
 
 
 </td>
 <td valign="top">
 
- UI Changed 
+UI Changed 
 
 
 
 </td>
 <td valign="top">
 
- Announcement 
+Announcement 
 
 
 
 </td>
 <td valign="top">
 
- **Draft-Enabled Apps: Draft Toggle Button Moved** 
+**Draft-Enabled Apps: Draft Toggle Button Moved** 
 
 
 
@@ -551,7 +483,7 @@ To improve the user experience, we've changed the handling of the draft concept 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -567,28 +499,28 @@ To improve the user experience, we've changed the handling of the draft concept 
 <tr>
 <td valign="top">
 
- 1.102 
+1.102 
 
 
 
 </td>
 <td valign="top">
 
- New 
+New 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Translation of Key User UI Changes** 
+**Translation of Key User UI Changes** 
 
 
 
@@ -606,7 +538,7 @@ Developers on SAP BTP, Cloud Foundry environment, can now enable translation of 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -622,28 +554,28 @@ Developers on SAP BTP, Cloud Foundry environment, can now enable translation of 
 <tr>
 <td valign="top">
 
- 1.102 
+1.102 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.NotificationListItem`, `sap.m.NotificationListGroup`** 
+**`sap.m.NotificationListItem`, `sap.m.NotificationListGroup`** 
 
 
 
@@ -670,7 +602,7 @@ For more information, see the [NotificationListItem](https://ui5.sap.com/#/entit
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -686,28 +618,28 @@ For more information, see the [NotificationListItem](https://ui5.sap.com/#/entit
 <tr>
 <td valign="top">
 
- 1.102 
+1.102 
 
 
 
 </td>
 <td valign="top">
 
- New 
+New 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Accessibility Guide** 
+**Accessibility Guide** 
 
 
 
@@ -725,7 +657,7 @@ The accessibility guide is a newly developed application about web accessibility
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -741,28 +673,96 @@ The accessibility guide is a newly developed application about web accessibility
 <tr>
 <td valign="top">
 
- 1.102 
+1.102 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **SAPUI5 OData V4 Model** 
+**`sap.m.p13n*`** 
+
+
+
+</td>
+<td valign="top">
+
+**`sap.m.p13n*`**
+
+We have improved the usability of the *View Settings* dialog. To do this, we have replaced the `sap.m.Select` control with a `sap.m.ComboBox` control and items of type `sap.m.StandardListItem`.
+
+In particular, the following changes have been applied:
+
+-   We have replaced *None* in the selection lists of the *Sort* and *Group* tabs with the *Sort by* and *Group by* placeholder texts based on the SAP Fiori design guidelines.
+
+-   We have adapted the tooltips of the *Delete* buttons for removing entries on the tabs.
+
+    ![](images/Sort_tab_for_WN_View_Settings_53d93b3.png)
+
+-   For a more simplified search, especially in a long selection list, users can now enter a column name.
+
+
+For more information, see the [Sample](https://ui5.sap.com/#/entity/sap.m.p13n.Popup/sample/sap.m.sample.p13n.Popup) for `sap.m.p13n.Popup` and the [Sample](https://ui5.sap.com/#/entity/sap.ui.comp.smarttable.SmartTable/sample/sap.ui.comp.sample.smarttable.mtableCustom) for `SmartTable`. 
+
+<sub>Changed•Control•Info Only•1.102</sub>
+
+
+
+</td>
+<td valign="top">
+
+Info Only 
+
+
+
+</td>
+<td valign="top">
+
+2022-05-19
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+1.102 
+
+
+
+</td>
+<td valign="top">
+
+Changed 
+
+
+
+</td>
+<td valign="top">
+
+Feature 
+
+
+
+</td>
+<td valign="top">
+
+**SAPUI5 OData V4 Model** 
 
 
 
@@ -783,7 +783,7 @@ The new version of the SAPUI5 OData V4 model introduces the following features:
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -799,28 +799,28 @@ The new version of the SAPUI5 OData V4 model introduces the following features:
 <tr>
 <td valign="top">
 
- 1.102 
+1.102 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Improved Handling of Aggregations in XML Views** 
+**Improved Handling of Aggregations in XML Views** 
 
 
 
@@ -842,7 +842,7 @@ In order to align the usage of XML views and controls even further, aggregations
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -858,28 +858,28 @@ In order to align the usage of XML views and controls even further, aggregations
 <tr>
 <td valign="top">
 
- 1.102 
+1.102 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **SAPUI5 OData V2 Model** 
+**SAPUI5 OData V2 Model** 
 
 
 
@@ -897,7 +897,7 @@ The `sap.ui.model.odata.OperationMode.Auto` operation mode is deprecated. If the
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -913,28 +913,28 @@ The `sap.ui.model.odata.OperationMode.Auto` operation mode is deprecated. If the
 <tr>
 <td valign="top">
 
- 1.102 
+1.102 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.DatePicker`, `sap.m.TimePicker` and `sap.m.DateTimePicker`** 
+**`sap.m.DatePicker`, `sap.m.TimePicker` and `sap.m.DateTimePicker`** 
 
 
 
@@ -952,7 +952,7 @@ We have added `afterValueHelpOpen` and `afterValueHelpClose` events, fired when 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -968,28 +968,28 @@ We have added `afterValueHelpOpen` and `afterValueHelpClose` events, fired when 
 <tr>
 <td valign="top">
 
- 1.102 
+1.102 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.unified.FileUploader`** 
+**`sap.ui.unified.FileUploader`** 
 
 
 
@@ -1007,7 +1007,7 @@ We have implemented `beforeDialogOpen` and `beforeDialogClose` events, fired whe
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1023,28 +1023,28 @@ We have implemented `beforeDialogOpen` and `beforeDialogClose` events, fired whe
 <tr>
 <td valign="top">
 
- 1.102 
+1.102 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- SAP Fiori Elements 
+SAP Fiori Elements 
 
 
 
 </td>
 <td valign="top">
 
- **SAP Fiori elements for OData V4** 
+**SAP Fiori elements for OData V4** 
 
 
 
@@ -1065,13 +1065,13 @@ The following changes and new features are available for SAP Fiori elements for 
 
     -   We're now showing the following confirmation dialog when a user has created a new object:
 
-         ![](images/ST_DRAFT_DATALOSS_POPUP_MESSAGE_CREATE_c1c8347.png) 
+        ![](images/ST_DRAFT_DATALOSS_POPUP_MESSAGE_CREATE_c1c8347.png)
 
         Application developers can use the custom i18n approach to override the corresponding keys \(`ST_DRAFT_DATALOSS_POPUP_MESSAGE_CREATE`\) and \(`ST_DRAFT_DATALOSS_CREATE_ENTITY_TOL`\).
 
     -   We're now showing the following confirmation dialog when a user has edited an existing object:
 
-         ![](images/ST_DRAFT_DATALOSS_POPUP_MESSAGE_SAVE_c21d563.png) 
+        ![](images/ST_DRAFT_DATALOSS_POPUP_MESSAGE_SAVE_c21d563.png)
 
         Application developers can use the custom i18n approach to override the corresponding keys \(`ST_DRAFT_DATALOSS_POPUP_MESSAGE_SAVE`\) and \(`ST_DRAFT_DATALOSS_SAVE_DRAFT_TOL`\).
 
@@ -1096,7 +1096,7 @@ The following changes and new features are available for SAP Fiori elements for 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1112,28 +1112,28 @@ The following changes and new features are available for SAP Fiori elements for 
 <tr>
 <td valign="top">
 
- 1.102 
+1.102 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- SAP Fiori Elements 
+SAP Fiori Elements 
 
 
 
 </td>
 <td valign="top">
 
- **SAP Fiori elements for OData V2** 
+**SAP Fiori elements for OData V2** 
 
 
 
@@ -1160,19 +1160,19 @@ The following changes and new features are available for SAP Fiori elements for 
 
         Until now, when working with the draft version of the document, the user could switch to the saved version using the following button:
 
-         ![](images/Object_page_-_draft_version_of_the_object_is_shown_using_button_text_Display_Saved_Version_6337dc4.png) 
+        ![](images/Object_page_-_draft_version_of_the_object_is_shown_using_button_text_Display_Saved_Version_6337dc4.png)
 
         Likewise, when working with the saved version of the document the user could switch to the draft using the following button:
 
-         ![](images/Object_page_-_saved_version_of_the_object_is_shown_using_button_text_Return_to_Draft_8556812.png) 
+        ![](images/Object_page_-_saved_version_of_the_object_is_shown_using_button_text_Return_to_Draft_8556812.png)
 
         As of SAPUI5 1.102, when working with the draft version of the document the user can switch to the saved version using the following popover:
 
-         ![](images/Object_page_new_concept_-_draft_version_of_the_object_is_shown_using_button_text_Draft_0971995.png) 
+        ![](images/Object_page_new_concept_-_draft_version_of_the_object_is_shown_using_button_text_Draft_0971995.png)
 
         Likewise, when working with the saved version of the document the user can switch to the draft version:
 
-         ![](images/Object_page_new_concept_-_saved_version_of_the_object_is_displayed_746ff83.png) 
+        ![](images/Object_page_new_concept_-_saved_version_of_the_object_is_displayed_746ff83.png)
 
         The highlighting and labels clearly indicate which version the user is currently working on.
 
@@ -1180,19 +1180,19 @@ The following changes and new features are available for SAP Fiori elements for 
 
         Until now we showed the following confirmation dialog:
 
-         ![](images/Object_page_new_concept_-_Draft_toggling_Warning_confirmation_dialog_in_old_version_457b83f.png) 
+        ![](images/Object_page_new_concept_-_Draft_toggling_Warning_confirmation_dialog_in_old_version_457b83f.png)
 
         As of SAPUI5 1.102 we're showing the following confirmation dialog with the new default action *Save*:
 
-         ![](images/Object_page_new_concept_-_Draft_toggling_Warning_confirmation_dialog_in_new_version_70024f1.png) 
+        ![](images/Object_page_new_concept_-_Draft_toggling_Warning_confirmation_dialog_in_new_version_70024f1.png)
 
         In the footer bar, the draft update message text is changed and the *Cancel* button is renamed to *Discard Draft*:
 
-         ![](images/Object_page_new_concept_-_draft_update_message_old_version_2c58930.png) 
+        ![](images/Object_page_new_concept_-_draft_update_message_old_version_2c58930.png)
 
         As of SAPUI5 1.102 we're showing the following draft message text with the renamed button:
 
-         ![](images/Object_page_new_concept_-_draft_update_message_new_version_6b963e5.png) 
+        ![](images/Object_page_new_concept_-_draft_update_message_new_version_6b963e5.png)
 
 
     For more information, see [Toggling Between Draft and Saved Values](../06_SAP_Fiori_Elements/toggling-between-draft-and-saved-values-fd3950a.md) and [Confirmation Popups](../06_SAP_Fiori_Elements/confirmation-popups-9a53662.md).
@@ -1205,7 +1205,7 @@ The following changes and new features are available for SAP Fiori elements for 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1221,28 +1221,28 @@ The following changes and new features are available for SAP Fiori elements for 
 <tr>
 <td valign="top">
 
- 1.102 
+1.102 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- SAP Fiori Elements 
+SAP Fiori Elements 
 
 
 
 </td>
 <td valign="top">
 
- **SAP Fiori elements for OData V2 and SAP Fiori elements for OData V4** 
+**SAP Fiori elements for OData V2 and SAP Fiori elements for OData V4** 
 
 
 
@@ -1263,7 +1263,7 @@ The following changes and new features are available for SAP Fiori elements for 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1280,6 +1280,8 @@ The following changes and new features are available for SAP Fiori elements for 
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.115](what-s-new-in-sapui5-1-115-409fde8.md "With this release SAPUI5 is upgraded from version 1.114 to 1.115.")
 
 [What's New in SAPUI5 1.114](what-s-new-in-sapui5-1-114-890fce1.md "With this release SAPUI5 is upgraded from version 1.113 to 1.114.")
 

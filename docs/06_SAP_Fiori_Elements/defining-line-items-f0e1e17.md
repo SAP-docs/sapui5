@@ -4,11 +4,11 @@
 
 To define the line items of a table, use `com.sap.vocabularies.UI.v1.LineItem` as shown in the code samples below. The rendering result is as follows:
 
-   
+  
   
 **List Report: LineItem of Root EntitySet**
 
- ![](images/ListReport_LineItem_69a7c44.png "List Report: LineItem of Root EntitySet") 
+![](images/ListReport_LineItem_69a7c44.png "List Report: LineItem of Root EntitySet")
 
 
 

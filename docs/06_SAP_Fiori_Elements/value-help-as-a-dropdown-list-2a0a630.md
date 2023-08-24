@@ -37,7 +37,7 @@ This is the rendering result:
   
 **Product Category Values as Dropdown List Box**
 
- ![](images/Values_for_Product_Category_as_Drop-Down_List_Box_30ba33b.png "Product Category Values as Dropdown List Box") 
+![](images/Values_for_Product_Category_as_Drop-Down_List_Box_30ba33b.png "Product Category Values as Dropdown List Box")
 
 
 
@@ -146,7 +146,7 @@ This is the rendering result:
   
 **Currency Code as Dropdown List Box**
 
- ![](images/Currency_Code_as_Dropdown_List_Box_edffc94.png "Currency Code as Dropdown List Box") 
+![](images/Currency_Code_as_Dropdown_List_Box_edffc94.png "Currency Code as Dropdown List Box")
 
 You can use `FilterRestrictions` annotations and set the `AllowedExpressions` property to `MultiValue` or `SingleValue`.
 

@@ -7,7 +7,7 @@ With this release SAPUI5 is upgraded from version 1.111 to 1.112.
 > ### Tip:  
 > If you want to do a search across all versions of the What's New content, you can also find it in the [SAPUI5 What's New viewer](https://help.sap.com/whats-new/67f60363b57f4ac0b23efd17fa192d60).
 
-** **
+****
 
 
 <table>
@@ -65,28 +65,28 @@ Available as of
 <tr>
 <td valign="top">
 
- 1.112 
+1.112 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Announcement 
+Announcement 
 
 
 
 </td>
 <td valign="top">
 
- **What's New Viewer for OpenUI5** 
+**What's New Viewer for OpenUI5** 
 
 
 
@@ -104,7 +104,7 @@ Due to some issues with references to OpenUI5 content we had to remove the What'
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -120,28 +120,28 @@ Due to some issues with references to OpenUI5 content we had to remove the What'
 <tr>
 <td valign="top">
 
- 1.112 
+1.112 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.Input`, `sap.m.ComboBox`, `sap.m.MultiComboBox`** 
+**`sap.m.Input`, `sap.m.ComboBox`, `sap.m.MultiComboBox`** 
 
 
 
@@ -159,7 +159,7 @@ We have removed the experimental flag for the `showItems(fnFilter)` method. For 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -175,28 +175,28 @@ We have removed the experimental flag for the `showItems(fnFilter)` method. For 
 <tr>
 <td valign="top">
 
- 1.112 
+1.112 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.IllustratedMessage`** 
+**`sap.m.IllustratedMessage`** 
 
 
 
@@ -216,7 +216,7 @@ We have removed the experimental flag for the `showItems(fnFilter)` method. For 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -232,28 +232,28 @@ We have removed the experimental flag for the `showItems(fnFilter)` method. For 
 <tr>
 <td valign="top">
 
- 1.112 
+1.112 
 
 
 
 </td>
 <td valign="top">
 
- Deprecated 
+Deprecated 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.MessagePage`** 
+**`sap.m.MessagePage`** 
 
 
 
@@ -271,7 +271,7 @@ We have deprecated the `sap.m.MessagePage`, and recommend using the `sap.m.Illus
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -287,28 +287,28 @@ We have deprecated the `sap.m.MessagePage`, and recommend using the `sap.m.Illus
 <tr>
 <td valign="top">
 
- 1.112 
+1.112 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- SAP Fiori Elements 
+SAP Fiori Elements 
 
 
 
 </td>
 <td valign="top">
 
- **SAP Fiori elements for OData V2** 
+**SAP Fiori elements for OData V2** 
 
 
 
@@ -329,7 +329,7 @@ The following changes and new features are available for SAP Fiori elements for 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -345,28 +345,28 @@ The following changes and new features are available for SAP Fiori elements for 
 <tr>
 <td valign="top">
 
- 1.112 
+1.112 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- SAP Fiori Elements 
+SAP Fiori Elements 
 
 
 
 </td>
 <td valign="top">
 
- **SAP Fiori elements for OData V4** 
+**SAP Fiori elements for OData V4** 
 
 
 
@@ -393,7 +393,7 @@ The following changes and new features are available for SAP Fiori elements for 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -409,28 +409,28 @@ The following changes and new features are available for SAP Fiori elements for 
 <tr>
 <td valign="top">
 
- 1.112 
+1.112 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.integration.widgets.Card`** 
+**`sap.ui.integration.widgets.Card`** 
 
 
 
@@ -449,7 +449,7 @@ The following changes and new features are available for SAP Fiori elements for 
     -   `MockData` - the card shows mock data, loaded using a data request. The card developer should set the data source in the `data/mockData` part of the manifest.
     -   `Abstract` - the card shows an abstract placeholder without loading data.
 
-     For more information, see the [Integrate/Preview](https://ui5.sap.com/test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/integrate/preview) section and the [Samples](https://ui5.sap.com/test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/explore/preview) in the Card Explorer. 
+    For more information, see the [Integrate/Preview](https://ui5.sap.com/test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/integrate/preview) section and the [Samples](https://ui5.sap.com/test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/explore/preview) in the Card Explorer. 
 
 -   The date range filter now supports several new options: `dateTimeRange`, `fromDateTime`, `toDateTime`, and `dateTime`. For more information, see the [Date Range Filter](https://ui5.sap.com/test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/learn/filters/dateRange) section and the [Sample](https://ui5.sap.com/test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/explore/dateRangeFilter/agenda) in the Card Explorer.
 
@@ -460,7 +460,7 @@ The following changes and new features are available for SAP Fiori elements for 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -476,28 +476,28 @@ The following changes and new features are available for SAP Fiori elements for 
 <tr>
 <td valign="top">
 
- 1.112 
+1.112 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.smartfilterbar.SmartFilterBar`** 
+**`sap.ui.comp.smartfilterbar.SmartFilterBar`** 
 
 
 
@@ -515,7 +515,7 @@ We have added support for several new interval options of the `DynamicDateRange`
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -531,28 +531,28 @@ We have added support for several new interval options of the `DynamicDateRange`
 <tr>
 <td valign="top">
 
- 1.112 
+1.112 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.valuehelpdialog.ValueHelpDialog`** 
+**`sap.ui.comp.valuehelpdialog.ValueHelpDialog`** 
 
 
 
@@ -570,7 +570,7 @@ We have removed the leftmost \(empty\) column of the items table when the contro
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -586,14 +586,14 @@ We have removed the leftmost \(empty\) column of the items table when the contro
 <tr>
 <td valign="top">
 
- 1.112 
+1.112 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
@@ -607,7 +607,7 @@ Feature
 </td>
 <td valign="top">
 
- **SAPUI5 OData V4 Model** 
+**SAPUI5 OData V4 Model** 
 
 
 
@@ -629,7 +629,7 @@ The new version of the SAPUI5 OData V4 model introduces the following features:
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -646,6 +646,8 @@ The new version of the SAPUI5 OData V4 model introduces the following features:
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.115](what-s-new-in-sapui5-1-115-409fde8.md "With this release SAPUI5 is upgraded from version 1.114 to 1.115.")
 
 [What's New in SAPUI5 1.114](what-s-new-in-sapui5-1-114-890fce1.md "With this release SAPUI5 is upgraded from version 1.113 to 1.114.")
 

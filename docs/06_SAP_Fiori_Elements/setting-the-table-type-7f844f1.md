@@ -9,6 +9,7 @@ These are the `type` properties available within `tableSettings`:
 -   `ResponsiveTable`
 -   `GridTable`
 -   `AnalyticalTable`
+-   `TreeTable`
 
 
 
@@ -38,10 +39,6 @@ The following logic is used to determine the table type of an analytical list pa
 > For more information about the guidelines and restrictions that apply to grid tables, see [SAP Fiori Design Guidelines](https://experience.sap.com/fiori-design-web/grid-table/).
 
 In addition to using the `manifest.json` file, you can also use annotations to control which table type is rendered in the list report and on the object page.
-
-The additional `type` property available within `tableSettings` is:
-
--   `TreeTable`
 
 > ### Note:  
 > -   On smart phones, responsive tables are shown.
@@ -266,7 +263,7 @@ The analytical table renders data that can be grouped and aggregated.
 
     Users can then group rows of the table:
 
-     ![](images/ALP_Groupable_Properties_786a94f.png) 
+    ![](images/ALP_Groupable_Properties_786a94f.png)
 
 -   How to Define Aggregable Properties
 
@@ -390,6 +387,30 @@ SAP Fiori elements for OData V4 assumes that the back end supports transformatio
 >     > }
 >     > 
 >     > ```
+
+
+
+### How to Activate the Tree Table
+
+You can activate the tree table in the `manifest.json`. To do so, set the table `type` in the `TableSettings` section to `TreeTable` and provide the hierarchy qualifier.
+
+> ### Sample Code:  
+> ```
+> "controlConfiguration": {
+>                 "@com.sap.vocabularies.UI.v1.LineItem": {
+>                   "tableSettings": {
+>                     "type": "TreeTable",
+>                     "hierarchyQualifier": "SalesOrgHierarchy",
+>                     "personalization": true
+>                   }
+>                 }
+>               }
+> ```
+
+> ### Restriction:  
+> -   The tree table is only supported when using the ABAP RESTful Application Programming Model \(RAP\).
+> 
+> -   Edit scenarios are not supported.
 
 
 

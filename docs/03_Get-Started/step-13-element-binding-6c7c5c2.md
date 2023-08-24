@@ -8,11 +8,11 @@ Now we want to do something with that newly generated list. In most cases you wi
 
 ## Preview
 
-   
+  
   
 **Element binding implemented, product details displayed per item**
 
- ![](images/Tutorial_Data_Binding_Step_13_872d2ed.png "Element binding implemented, product details displayed per item") 
+![](images/Tutorial_Data_Binding_Step_13_872d2ed.png "Element binding implemented, product details displayed per item")
 
 
 

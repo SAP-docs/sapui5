@@ -10,11 +10,11 @@ In this step, we create the list view of the app using `sap.f.DynamicPage` contr
 
 ## Preview
 
-   
+  
   
 **List page with sap.f.DynamicPage**
 
- ![](images/DynamicPage_for_the_Master_View_Fiori_2_0_Tutorial_b31948b.gif "List page with sap.f.DynamicPage") 
+![](images/DynamicPage_for_the_Master_View_Fiori_2_0_Tutorial_b31948b.gif "List page with sap.f.DynamicPage")
 
 
 

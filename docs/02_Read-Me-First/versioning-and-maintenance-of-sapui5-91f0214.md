@@ -14,7 +14,7 @@ SAPUI5 uses a three-number version identifier, for example 1.71.22 The numbers h
 
 To view the documentation for a specific version, check at [https://ui5.sap.com/versionoverview.html](https://ui5.sap.com/versionoverview.html) which versions are available. You can view the version-specific Demo Kit by adding the version number to the URL, for example, `https://ui5.sap.com/1.71.22/`.
 
-To get an overview of the new features of each version, see [What's New in SAPUI5](../01_Whats-New/what-s-new-in-sapui5-99ac68a.md), to see the fixes contained in each patch check the  [Change Log](https://ui5.sap.com/#/releasenotes.html).
+To get an overview of the new features of each version, see [What's New in SAPUI5](../01_Whats-New/what-s-new-in-sapui5-99ac68a.md), to see the fixes contained in each patch check the [Change Log](https://ui5.sap.com/#/releasenotes.html).
 
 
 
@@ -69,7 +69,7 @@ Check the available versions with respective maintenance status at [https://ui5.
 
 ## SAPUI5 Version vs. OpenUI5 Version \(Core Version\)
 
-You can find which patch versions you use in your app in the technical information dialog \( [Ctrl\] + [Left Alt\] + [Shift\] + [P\] \).
+You can find which patch versions you use in your app in the technical information dialog \([Ctrl\] + [Left Alt\] + [Shift\] + [P\] \).
 
 The patch version number of the SAPUI5 version and the OpenUI5 version that is included, may be different.
 

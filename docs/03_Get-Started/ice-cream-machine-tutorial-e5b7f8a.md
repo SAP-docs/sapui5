@@ -14,5 +14,5 @@ To get all of the important information about the production process at a glance
 
 ## Preview
 
- ![](images/Start_page_a40b513.png) 
+![](images/Start_page_a40b513.png)
 

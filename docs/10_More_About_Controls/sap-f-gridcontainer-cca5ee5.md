@@ -12,7 +12,7 @@ The `GridContainer` allows you to align tiles, cards or other controls in config
 
 The `GridContainer` allows the positioning of items \(Tiles, Cards, or others\) in a two-dimensional mesh. The mesh consists of rows with the same height and columns with the same width. Those height and width sizes along with the gap size are configurable.
 
- ![](images/GridContainer_Scheme_b8076d5.png) 
+![](images/GridContainer_Scheme_b8076d5.png)
 
 The control provides responsiveness and automatically aligns the items depending on the available space.
 

@@ -4,7 +4,7 @@
 
 You can define multiple views of a table and display them in single table mode. Users can switch between views using a segmented button.
 
- <a name="task_ibz_ywy_cnb"/>
+<a name="task_ibz_ywy_cnb"/>
 
 <!-- task\_ibz\_ywy\_cnb -->
 
@@ -138,7 +138,7 @@ To define multiple views using single table mode, perform the following steps:
     > The `PresenationVariant` part of the `SelectionPresentationVariant` \(as used in the above example\) is not considered. The `SelectionPresentationVariant` is only used to find the `SelectionVariant` and the filters defined within it.
 
 
- <a name="concept_ecd_hgr_j4b"/>
+<a name="concept_ecd_hgr_j4b"/>
 
 <!-- concept\_ecd\_hgr\_j4b -->
 
@@ -414,7 +414,7 @@ To define multiple views using single table mode, perform the following steps:
 > 
 > ```
 
- <a name="task_dfp_z5x_cmb"/>
+<a name="task_dfp_z5x_cmb"/>
 
 <!-- task\_dfp\_z5x\_cmb -->
 
@@ -606,7 +606,7 @@ To define multiple views using single table mode, perform the following steps:
     > 4   "name": "sap.fe.templates.ListReport",
     > 5   "options": {
     > 6      "settings": {
-    > 7         "entitySet": "SalesOrderManage",
+    > 7         "contextPath": "/SalesOrderManage",
     > 8         "controlConfiguration": {
     > 9            "@com.sap.vocabularies.UI.v1.LineItem": {
     > 10               "tableSettings": {
@@ -636,11 +636,11 @@ To define multiple views using single table mode, perform the following steps:
     > 34  }}}
     > ```
 
-       
+      
       
     **Multiple Views on a List Report Table - Single Table Mode**
 
-     ![](images/Multiple_Views_on_a_List_Report_Table_ec09b05.png "Multiple Views on a List Report Table - Single Table Mode") 
+    ![](images/Multiple_Views_on_a_List_Report_Table_ec09b05.png "Multiple Views on a List Report Table - Single Table Mode")
 
 
 **Related Information**  

@@ -8,11 +8,11 @@ Determining actions are used to trigger actions directly using the context of th
 
 `DataFieldForAction` can be configured as a determining action.
 
-   
+  
   
 **Object Page: Determining Action in Footer**
 
- ![](images/ObjectPage_DeterminingAction_5dc52f1.png "Object Page: Determining Action in Footer") 
+![](images/ObjectPage_DeterminingAction_5dc52f1.png "Object Page: Determining Action in Footer")
 
 
 

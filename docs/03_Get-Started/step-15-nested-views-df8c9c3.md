@@ -8,12 +8,12 @@ Our panel content is getting more and more complex and now it is time to move th
 
 ## Preview
 
-   
+  
   
 **The panel content is now refactored to a separate view \(No visual changes to last step\)**
 
- ![](images/SAPUI5_Walkthrough_Step_14_15_dc7fa70.png "The panel content is now refactored to a separate view (No visual changes to last
-               step)") 
+![](images/SAPUI5_Walkthrough_Step_14_15_dc7fa70.png "The panel content is now refactored to a separate view (No visual changes to last
+               step)")
 
 
 

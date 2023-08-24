@@ -10,11 +10,11 @@ In this step, we have a closer look at batch groups. Batch groups are used to gr
 
 ## Preview
 
-   
+  
   
 **No visual change compared to the last step**
 
- ![](images/Tutorial_OData_V4_Step_4_3ac4fcc.png "No visual change compared to the last step") 
+![](images/Tutorial_OData_V4_Step_4_3ac4fcc.png "No visual change compared to the last step")
 
 
 

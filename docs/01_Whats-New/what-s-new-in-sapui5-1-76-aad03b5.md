@@ -6,7 +6,7 @@ With this release SAPUI5 is upgraded from version 1.75 to 1.76.
 
 
 
-** **
+****
 
 
 <table>
@@ -64,28 +64,28 @@ Available as of
 <tr>
 <td valign="top">
 
- 1.76 
+1.76 
 
 
 
 </td>
 <td valign="top">
 
- New 
+New 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Team Calendar** 
+**Team Calendar** 
 
 
 
@@ -119,28 +119,28 @@ Info Only
 <tr>
 <td valign="top">
 
- 1.76 
+1.76 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Card Explorer** 
+**Card Explorer** 
 
 
 
@@ -161,7 +161,7 @@ For more information, see [Card Explorer](https://ui5.sap.com/test-resources/sap
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -177,28 +177,28 @@ For more information, see [Card Explorer](https://ui5.sap.com/test-resources/sap
 <tr>
 <td valign="top">
 
- 1.76 
+1.76 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **One Page Acceptance Tests \(OPA5\)** 
+**One Page Acceptance Tests \(OPA5\)** 
 
 
 
@@ -216,7 +216,7 @@ We've introduced `Drag` and `Drop` actions to OPA5 to help with the most common 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -232,28 +232,28 @@ We've introduced `Drag` and `Drop` actions to OPA5 to help with the most common 
 <tr>
 <td valign="top">
 
- 1.76 
+1.76 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **SAPUI5 OData V2 Model** 
+**SAPUI5 OData V2 Model** 
 
 
 
@@ -275,7 +275,7 @@ The new version of the SAPUI5 OData V2 model introduces the following features:
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -291,28 +291,28 @@ The new version of the SAPUI5 OData V2 model introduces the following features:
 <tr>
 <td valign="top">
 
- 1.76 
+1.76 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **SAPUI5 OData V4 Model** 
+**SAPUI5 OData V4 Model** 
 
 
 
@@ -341,7 +341,7 @@ For more information, see [OData V4 Model](../04_Essentials/odata-v4-model-5de13
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -357,28 +357,28 @@ For more information, see [OData V4 Model](../04_Essentials/odata-v4-model-5de13
 <tr>
 <td valign="top">
 
- 1.76 
+1.76 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.f.FlexibleColumnLayout`** 
+**`sap.f.FlexibleColumnLayout`** 
 
 
 
@@ -399,7 +399,7 @@ For more information, see [OData V4 Model](../04_Essentials/odata-v4-model-5de13
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -415,28 +415,28 @@ For more information, see [OData V4 Model](../04_Essentials/odata-v4-model-5de13
 <tr>
 <td valign="top">
 
- 1.76 
+1.76 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.FacetFilter`** 
+**`sap.m.FacetFilter`** 
 
 
 
@@ -454,7 +454,7 @@ Optimization regarding the initial database service query has been introduced. T
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -470,28 +470,28 @@ Optimization regarding the initial database service query has been introduced. T
 <tr>
 <td valign="top">
 
- 1.76 
+1.76 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.List`, `sap.m.Table`, `sap.m.Tree`** 
+**`sap.m.List`, `sap.m.Table`, `sap.m.Tree`** 
 
 
 
@@ -509,7 +509,7 @@ New indication colors are now available \(provided by the `sap.ui.core.Indicatio
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -525,28 +525,28 @@ New indication colors are now available \(provided by the `sap.ui.core.Indicatio
 <tr>
 <td valign="top">
 
- 1.76 
+1.76 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.plugins.DataStateIndicator`** 
+**`sap.m.plugins.DataStateIndicator`** 
 
 
 
@@ -571,7 +571,7 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.pl
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -587,28 +587,28 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.pl
 <tr>
 <td valign="top">
 
- 1.76 
+1.76 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.Table`** 
+**`sap.m.Table`** 
 
 
 
@@ -626,7 +626,7 @@ An automatic pop-in mode has been enabled for the responsive table. For more inf
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -642,28 +642,28 @@ An automatic pop-in mode has been enabled for the responsive table. For more inf
 <tr>
 <td valign="top">
 
- 1.76 
+1.76 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.smartchart.SmartChart`** 
+**`sap.ui.comp.smartchart.SmartChart`** 
 
 
 
@@ -681,7 +681,7 @@ A more comprehensive message text is now shown if no data is available. The mess
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -697,28 +697,28 @@ A more comprehensive message text is now shown if no data is available. The mess
 <tr>
 <td valign="top">
 
- 1.76 
+1.76 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.smartfilterbar.SmartFilterBar`** 
+**`sap.ui.comp.smartfilterbar.SmartFilterBar`** 
 
 
 
@@ -736,7 +736,7 @@ When a user tries to enter any text in interval type fields \(such as `DateTime 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -752,28 +752,28 @@ When a user tries to enter any text in interval type fields \(such as `DateTime 
 <tr>
 <td valign="top">
 
- 1.76 
+1.76 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.smartform.SmartForm`** 
+**`sap.ui.comp.smartform.SmartForm`** 
 
 
 
@@ -791,7 +791,7 @@ We have introduced an empty field indicator for the `sap.ui.comp.smartform.Smart
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -807,28 +807,28 @@ We have introduced an empty field indicator for the `sap.ui.comp.smartform.Smart
 <tr>
 <td valign="top">
 
- 1.76 
+1.76 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.ValueHelpDialog`** 
+**`sap.ui.comp.ValueHelpDialog`** 
 
 
 
@@ -849,7 +849,7 @@ We have introduced an empty field indicator for the `sap.ui.comp.smartform.Smart
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -865,28 +865,28 @@ We have introduced an empty field indicator for the `sap.ui.comp.smartform.Smart
 <tr>
 <td valign="top">
 
- 1.76 
+1.76 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.integration.widgets.Card`** 
+**`sap.ui.integration.widgets.Card`** 
 
 
 
@@ -907,7 +907,7 @@ We have introduced an empty field indicator for the `sap.ui.comp.smartform.Smart
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -923,28 +923,28 @@ We have introduced an empty field indicator for the `sap.ui.comp.smartform.Smart
 <tr>
 <td valign="top">
 
- 1.76 
+1.76 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.table.AnalyticalTable`, `sap.ui.table.Table`, `sap.ui.table.TreeTable`** 
+**`sap.ui.table.AnalyticalTable`, `sap.ui.table.Table`, `sap.ui.table.TreeTable`** 
 
 
 
@@ -965,7 +965,7 @@ We have introduced an empty field indicator for the `sap.ui.comp.smartform.Smart
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -981,28 +981,28 @@ We have introduced an empty field indicator for the `sap.ui.comp.smartform.Smart
 <tr>
 <td valign="top">
 
- 1.76 
+1.76 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.table.AnalyticalTable`, `sap.ui.table.Table, sap.ui.table.TreeTable`** 
+**`sap.ui.table.AnalyticalTable`, `sap.ui.table.Table, sap.ui.table.TreeTable`** 
 
 
 
@@ -1031,7 +1031,7 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.t
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1047,28 +1047,28 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.t
 <tr>
 <td valign="top">
 
- 1.76 
+1.76 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.unified.calendar.Month`** 
+**`sap.ui.unified.calendar.Month`** 
 
 
 
@@ -1086,7 +1086,7 @@ We have enabled custom colors to be used with the `specialDates` aggregation in 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1102,28 +1102,28 @@ We have enabled custom colors to be used with the `specialDates` aggregation in 
 <tr>
 <td valign="top">
 
- 1.76 
+1.76 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **SAP Fiori Elements** 
+**SAP Fiori Elements** 
 
 
 
@@ -1169,7 +1169,7 @@ We have enabled custom colors to be used with the `specialDates` aggregation in 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1186,6 +1186,8 @@ We have enabled custom colors to be used with the `specialDates` aggregation in 
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.115](what-s-new-in-sapui5-1-115-409fde8.md "With this release SAPUI5 is upgraded from version 1.114 to 1.115.")
 
 [What's New in SAPUI5 1.114](what-s-new-in-sapui5-1-114-890fce1.md "With this release SAPUI5 is upgraded from version 1.113 to 1.114.")
 

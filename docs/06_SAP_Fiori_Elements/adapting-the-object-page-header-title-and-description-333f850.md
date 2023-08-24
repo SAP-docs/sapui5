@@ -10,7 +10,7 @@ You can use annotations to adapt the object page header title and description.
   
 **Object Page Header: Title and Description**
 
- ![](images/Object_Page_Title_and_Subtitle_0430d3e.png "Object Page Header: Title and Description ") 
+![](images/Object_Page_Title_and_Subtitle_0430d3e.png "Object Page Header: Title and Description ")
 
 To define or change the object page header title and description, adapt the OData annotations:
 

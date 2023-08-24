@@ -196,7 +196,7 @@ Add controller and view extensions with a path to the custom controller name and
 > ```
 
 > ### Sample Code:  
->  `customFilter.controller.js`
+> `customFilter.controller.js`
 > 
 > ```
 > sap.ui.define("sap.ovp.demo.ext.customFilter", [

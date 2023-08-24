@@ -10,7 +10,7 @@ Using the `@Communication.Contact` annotation, you can enable a quick view conta
 
 ## Additional Features in SAP Fiori Elements for OData V2
 
- ![](images/Object_Page_Header_Facet_abf0b26.jpg) 
+![](images/Object_Page_Header_Facet_abf0b26.jpg)
 
 In the example, the `UI.DataFieldForAnnotation` points to a contact annotation on a different entity, which has a 1:1 relation to the root entity, and so one contact is displayed in the header. The label, for example *Supplier*, is taken from `UI.DataFieldForAnnotation`, and the value, for example *Laurent*, is the `fn` property of the contact annotation.
 
@@ -150,7 +150,7 @@ In the example, the `UI.DataFieldForAnnotation` points to a contact annotation o
   
 **Contact Facet**
 
- 
+
 
 In the example, the `UI.DataFieldForAnnotation` points to a contact annotation on a different entity, which has a 1:1 relation to the root entity, and so one contact is displayed in the header. The label, for example *Sold-To-Party*, is taken from `UI.DataFieldForAnnotation`, and the value, for example *Domestic HK Customer 1*, is the `fn` property of the contact annotation.
 

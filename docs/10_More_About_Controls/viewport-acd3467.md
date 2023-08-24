@@ -94,7 +94,7 @@ Rotate the scene.
 <tr>
 <td valign="top">
 
- [SHIFT\] + [DIRECTIONAL ARROW\] 
+[SHIFT\] + [DIRECTIONAL ARROW\] 
 
 
 

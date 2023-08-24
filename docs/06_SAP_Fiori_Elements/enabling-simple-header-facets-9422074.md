@@ -14,11 +14,11 @@ To do so, you must add the `simpleHeaderFacets:true` flag manually in the app's 
 
 The following figure shows a sample simple header facet:
 
-   
+  
   
 **Simple Header Facet**
 
- ![](images/Simple_Header_Facet_6bc65c5.png "Simple Header Facet") 
+![](images/Simple_Header_Facet_6bc65c5.png "Simple Header Facet")
 
 > ### Sample Code:  
 > Enabling simple header facet

@@ -8,18 +8,18 @@ In this step, we'll create a second button on the home page, with which we can n
 
 ## Preview
 
-   
+  
   
 **Show Employee List button on the Home page**
 
- ![](images/Tutorial_Navigation_and_Routing_Step_06a_f0f4fd7.png "Show Employee List button on the
-						Home page") 
+![](images/Tutorial_Navigation_and_Routing_Step_06a_f0f4fd7.png "Show Employee List button on the
+						Home page")
 
-   
+  
   
 **Employee list with Back button**
 
- ![](images/Tutorial_Navigation_and_Routing_Step_06b_f45ee74.png "Employee list with Back button") 
+![](images/Tutorial_Navigation_and_Routing_Step_06b_f45ee74.png "Employee list with Back button")
 
 
 
@@ -27,11 +27,11 @@ In this step, we'll create a second button on the home page, with which we can n
 
 You can view and download all files in the *Samples* in the Demo Kit at [Routing and Navigation - Step 6](https://ui5.sap.com/#/entity/sap.ui.core.tutorial.navigation/sample/sap.ui.core.tutorial.navigation.06).
 
-   
+  
   
 **Folder structure for this step**
 
- ![](images/Tutorial_Navigation_and_Routing_Step_06c_fffa091.png "Folder structure for this step") 
+![](images/Tutorial_Navigation_and_Routing_Step_06c_fffa091.png "Folder structure for this step")
 
 
 

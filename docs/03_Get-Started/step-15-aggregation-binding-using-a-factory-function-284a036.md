@@ -8,11 +8,11 @@ Instead of hard-coding a single template control, we use a factory function to g
 
 ## Preview
 
-   
+  
   
 **Controls generated based on data**
 
- ![](images/Tutorial_Data_Binding_Step_15_db27ba8.png "Controls generated based on data") 
+![](images/Tutorial_Data_Binding_Step_15_db27ba8.png "Controls generated based on data")
 
 
 

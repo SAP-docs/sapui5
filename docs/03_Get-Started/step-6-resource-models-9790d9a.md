@@ -10,11 +10,11 @@ The example we used at the start of this tutorial was overly simplistic as we st
 
 ## Preview
 
-   
+  
   
 **Texts derived from the resource model \(No visual change to last step\)**
 
- ![](images/Tutorial_Data_Binding_Step_4_61d68f1.png "Texts derived from the resource model (No visual change to last step)") 
+![](images/Tutorial_Data_Binding_Step_4_61d68f1.png "Texts derived from the resource model (No visual change to last step)")
 
 
 

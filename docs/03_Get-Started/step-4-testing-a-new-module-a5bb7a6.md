@@ -10,12 +10,12 @@ In the first unit test we have just extended the formatters module with a new fu
 
 A frequently used feature of a bulletin board is to flag interesting posts to mark them for later reading. The UI should contain a button to toggle the flagged state for each item. We will implement this feature with a custom type and again start writing the test case for it first and add the implementation later.
 
-   
+  
   
 **The unit test for the Flagged feature will fail until the feature is implemented**
 
- ![](images/Tutorial_Testing_Step_04_ba4369b.png "The unit test for the Flagged feature will fail until the
-					feature is implemented") 
+![](images/Tutorial_Testing_Step_04_ba4369b.png "The unit test for the Flagged feature will fail until the
+					feature is implemented")
 
 
 

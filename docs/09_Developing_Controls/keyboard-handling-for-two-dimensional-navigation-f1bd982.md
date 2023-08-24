@@ -25,7 +25,7 @@ Behavior
 <tr>
 <td valign="top">
 
- [Left arrow\]
+[Left arrow\]
 
 
 
@@ -45,7 +45,7 @@ If focus is on the first item, do nothing.
 <tr>
 <td valign="top">
 
- [Right arrow\]
+[Right arrow\]
 
 
 
@@ -65,7 +65,7 @@ If focus is on the last item, do nothing.
 <tr>
 <td valign="top">
 
- [Up arrow\]
+[Up arrow\]
 
 
 
@@ -83,7 +83,7 @@ If focus is on the first item of a column, do nothing.
 <tr>
 <td valign="top">
 
- [DOWN\]
+[DOWN\]
 
 
 
@@ -147,7 +147,7 @@ If focus is on the last item, do nothing.
 <tr>
 <td valign="top">
 
- [Alt\] / [Option\] + [Page up\] 
+[Alt\] /[Option\] + [Page up\] 
 
 
 
@@ -170,7 +170,7 @@ If focus is on the first item, do nothing.
 <tr>
 <td valign="top">
 
- [Alt\] / [Option\] + [Page down\] 
+[Alt\] /[Option\] + [Page down\] 
 
 
 
@@ -229,7 +229,7 @@ If focus is on the last item of a row, move focus to the last item.
 <tr>
 <td valign="top">
 
- [Ctrl\] + [Home\] 
+[Ctrl\] + [Home\] 
 
 
 
@@ -247,7 +247,7 @@ If focus is on the first item of a column, move focus to the first item.
 <tr>
 <td valign="top">
 
- [Ctrl\] + [End\] 
+[Ctrl\] + [End\] 
 
 
 

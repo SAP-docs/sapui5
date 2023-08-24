@@ -41,7 +41,7 @@ Clicking the browser action icon in the address bar provides you with:
 > ### Note:  
 > Your version of SAPUI5 may be older than the latest and the features described in the documentation may not be available for you.
 
- ![](images/UI5_Inspector_browser_action_SAPUI5_25cb428.png) 
+![](images/UI5_Inspector_browser_action_SAPUI5_25cb428.png)
 
 **Control Inspector**
 
@@ -51,9 +51,9 @@ Hovering over a specific branch of the tree highlights the corresponding control
 
 Additionally, you can right click on any SAPUI5 control from the app and select *Inspect UI5 control*. This automatically selects the control in the tree and you can review its properties directly.
 
- ![](images/UI5_Inpector_inspect_control_1_SAPUI5_4c8e523.png) 
+![](images/UI5_Inpector_inspect_control_1_SAPUI5_4c8e523.png)
 
- ![](images/UI5_Inspector_inspect_control_2_SAPUI5_cd573f5.png) 
+![](images/UI5_Inspector_inspect_control_2_SAPUI5_cd573f5.png)
 
 **Properties**
 

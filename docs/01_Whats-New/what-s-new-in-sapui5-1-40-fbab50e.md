@@ -4,7 +4,7 @@
 
 With this release SAPUI5 is upgraded from version 1.38 to 1.40.
 
-** **
+****
 
 
 <table>
@@ -62,28 +62,28 @@ Available as of
 <tr>
 <td valign="top">
 
- 1.40 
+1.40 
 
 
 
 </td>
 <td valign="top">
 
- New 
+New 
 
 
 
 </td>
 <td valign="top">
 
- Announcement 
+Announcement 
 
 
 
 </td>
 <td valign="top">
 
- **New Belize Theme \(SAP Fiori 2.0 Design\)** 
+**New Belize Theme \(SAP Fiori 2.0 Design\)** 
 
 
 
@@ -127,28 +127,28 @@ Info Only
 <tr>
 <td valign="top">
 
- 1.40 
+1.40 
 
 
 
 </td>
 <td valign="top">
 
- Deleted 
+Deleted 
 
 
 
 </td>
 <td valign="top">
 
- Announcement 
+Announcement 
 
 
 
 </td>
 <td valign="top">
 
- **Older jQuery Versions Removed** 
+**Older jQuery Versions Removed** 
 
 
 
@@ -166,7 +166,7 @@ As of this version, SAPUI5 only contains one version of jQuery \(the current ver
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -182,28 +182,28 @@ As of this version, SAPUI5 only contains one version of jQuery \(the current ver
 <tr>
 <td valign="top">
 
- 1.40 
+1.40 
 
 
 
 </td>
 <td valign="top">
 
- New 
+New 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **XML View Cache** 
+**XML View Cache** 
 
 
 
@@ -223,7 +223,7 @@ Parts of this feature are currently still experimental! For more information, se
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -239,28 +239,28 @@ Parts of this feature are currently still experimental! For more information, se
 <tr>
 <td valign="top">
 
- 1.40 
+1.40 
 
 
 
 </td>
 <td valign="top">
 
- New 
+New 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **Visual Interaction toolkit \(`sap.ui.vk` library\)** 
+**Visual Interaction toolkit \(`sap.ui.vk` library\)** 
 
 
 
@@ -299,7 +299,7 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.v
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -315,28 +315,28 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.v
 <tr>
 <td valign="top">
 
- 1.40 
+1.40 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **SAPUI5 OData V4 Model** 
+**SAPUI5 OData V4 Model** 
 
 
 
@@ -370,7 +370,7 @@ For more information, see [OData V4 Model](../04_Essentials/odata-v4-model-5de13
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -386,28 +386,28 @@ For more information, see [OData V4 Model](../04_Essentials/odata-v4-model-5de13
 <tr>
 <td valign="top">
 
- 1.40 
+1.40 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.GenericTile`** 
+**`sap.m.GenericTile`** 
 
 
 
@@ -425,7 +425,7 @@ The `GenericTile` control can be implemented as slide tile. The animated content
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -441,28 +441,28 @@ The `GenericTile` control can be implemented as slide tile. The animated content
 <tr>
 <td valign="top">
 
- 1.40 
+1.40 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.IconTabHeaderMode`** 
+**`sap.m.IconTabHeaderMode`** 
 
 
 
@@ -480,7 +480,7 @@ A new `IconTabBar` property, `headerMode`, has been introduced. It accepts `sap.
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -496,28 +496,28 @@ A new `IconTabBar` property, `headerMode`, has been introduced. It accepts `sap.
 <tr>
 <td valign="top">
 
- 1.40 
+1.40 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.Page`** 
+**`sap.m.Page`** 
 
 
 
@@ -535,7 +535,7 @@ The `Page` control now offers a floating footer. This new feature helps unify th
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -551,28 +551,28 @@ The `Page` control now offers a floating footer. This new feature helps unify th
 <tr>
 <td valign="top">
 
- 1.40 
+1.40 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.OverflowToolbar`** 
+**`sap.m.OverflowToolbar`** 
 
 
 
@@ -593,7 +593,7 @@ The `Page` control now offers a floating footer. This new feature helps unify th
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -609,28 +609,28 @@ The `Page` control now offers a floating footer. This new feature helps unify th
 <tr>
 <td valign="top">
 
- 1.40 
+1.40 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.RangeSlider`** 
+**`sap.m.RangeSlider`** 
 
 
 
@@ -651,7 +651,7 @@ The `Page` control now offers a floating footer. This new feature helps unify th
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -667,28 +667,28 @@ The `Page` control now offers a floating footer. This new feature helps unify th
 <tr>
 <td valign="top">
 
- 1.40 
+1.40 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.Text`** 
+**`sap.m.Text`** 
 
 
 
@@ -706,7 +706,7 @@ Line breaks \(`\r\n`, `\n\r`, `\r`, `\n`\) are always visualized now. You can di
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -722,28 +722,28 @@ Line breaks \(`\r\n`, `\n\r`, `\r`, `\n`\) are always visualized now. You can di
 <tr>
 <td valign="top">
 
- 1.40 
+1.40 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.TimePicker`** 
+**`sap.m.TimePicker`** 
 
 
 
@@ -761,7 +761,7 @@ The `TimePicker` control now has configurable step precision for minutes and sec
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -777,28 +777,28 @@ The `TimePicker` control now has configurable step precision for minutes and sec
 <tr>
 <td valign="top">
 
- 1.40 
+1.40 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.suite.ui.commons.ChartContainer`** 
+**`sap.suite.ui.commons.ChartContainer`** 
 
 
 
@@ -816,7 +816,7 @@ An application can set its own toolbar inside a `ChartContainer` control. If no 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -832,28 +832,28 @@ An application can set its own toolbar inside a `ChartContainer` control. If no 
 <tr>
 <td valign="top">
 
- 1.40 
+1.40 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.navpopover.NavigationPopover`** 
+**`sap.ui.comp.navpopover.NavigationPopover`** 
 
 
 
@@ -871,7 +871,7 @@ The `NavigationPopover` control has been redesigned and now has a fresh new look
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -887,28 +887,28 @@ The `NavigationPopover` control has been redesigned and now has a fresh new look
 <tr>
 <td valign="top">
 
- 1.40 
+1.40 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.navpopover.SmartLink`** 
+**`sap.ui.comp.navpopover.SmartLink`** 
 
 
 
@@ -928,7 +928,7 @@ A new property `contactAnnotationPath` allows you to show contact information in
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -944,28 +944,28 @@ A new property `contactAnnotationPath` allows you to show contact information in
 <tr>
 <td valign="top">
 
- 1.40 
+1.40 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.smartchart.SmartChart`** 
+**`sap.ui.comp.smartchart.SmartChart`** 
 
 
 
@@ -979,7 +979,7 @@ The `SmartChart` control now provides a download function by offering the *Downl
 > ### Note:  
 > In Microsoft Internet Explorer, only SVG formats can be downloaded. Here the user is notified in a notification bar at the bottom of the page that allows them to display or download the chart.
 
- For more information, see , the [API Reference](https://ui5.sap.com/#/api/sap.ui.comp.smartchart.SmartChart). 
+For more information, see , the [API Reference](https://ui5.sap.com/#/api/sap.ui.comp.smartchart.SmartChart). 
 
 <sub>Changed•Control•Info Only•1.40</sub>
 
@@ -988,7 +988,7 @@ The `SmartChart` control now provides a download function by offering the *Downl
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1004,28 +1004,28 @@ The `SmartChart` control now provides a download function by offering the *Downl
 <tr>
 <td valign="top">
 
- 1.40 
+1.40 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.smartchart.SmartChart / sap.ui.comp.smarttable.SmartTable`** 
+**`sap.ui.comp.smartchart.SmartChart / sap.ui.comp.smarttable.SmartTable`** 
 
 
 
@@ -1045,7 +1045,7 @@ Like before, the `SmartTable` control first checks for a `PresentationVariant` a
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1061,28 +1061,28 @@ Like before, the `SmartTable` control first checks for a `PresentationVariant` a
 <tr>
 <td valign="top">
 
- 1.40 
+1.40 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.core.format.NumberFormat`** 
+**`sap.ui.core.format.NumberFormat`** 
 
 
 
@@ -1100,7 +1100,7 @@ You can now use the `shortRefNumber` option to calculate all numbers in one scre
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1116,28 +1116,28 @@ You can now use the `shortRefNumber` option to calculate all numbers in one scre
 <tr>
 <td valign="top">
 
- 1.40 
+1.40 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **Visual Interaction toolkit \(`sap.ui.vk library`\)** 
+**Visual Interaction toolkit \(`sap.ui.vk library`\)** 
 
 
 
@@ -1158,7 +1158,7 @@ You can now use the `shortRefNumber` option to calculate all numbers in one scre
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1174,28 +1174,28 @@ You can now use the `shortRefNumber` option to calculate all numbers in one scre
 <tr>
 <td valign="top">
 
- 1.40 
+1.40 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- SAP Fiori Elements 
+SAP Fiori Elements 
 
 
 
 </td>
 <td valign="top">
 
- **SAP Fiori Еlements** 
+**SAP Fiori Еlements** 
 
 
 
@@ -1279,21 +1279,21 @@ Overview pages have been enhanced with the following features:
     <tr>
     <td valign="top">
     
-        You can now create charts that use time as an axis category.
+    You can now create charts that use time as an axis category.
 
 
     
     </td>
     <td valign="top">
     
-        With a combination chart card, you can display more than one measure; the first measure gets displayed in a column format and the subsequent measure is displayed as lines within the chart.
+    With a combination chart card, you can display more than one measure; the first measure gets displayed in a column format and the subsequent measure is displayed as lines within the chart.
 
 
     
     </td>
     <td valign="top">
     
-        With a scatter chart card, you can visualize the distribution of data points over two measures.
+    With a scatter chart card, you can visualize the distribution of data points over two measures.
 
 
     
@@ -1302,21 +1302,21 @@ Overview pages have been enhanced with the following features:
     <tr>
     <td valign="top">
     
-         ![](images/Whats_New_140_OVP_Time_Series_1a9d333.png) 
+    ![](images/Whats_New_140_OVP_Time_Series_1a9d333.png)
 
 
     
     </td>
     <td valign="top">
     
-         ![](images/Whats_New_140_OVP_Combination_Chart_55139a9.png) 
+    ![](images/Whats_New_140_OVP_Combination_Chart_55139a9.png)
 
 
     
     </td>
     <td valign="top">
     
-         ![](images/Whats_New_140_OVP_Scatter_Chart_f264ec1.png) 
+    ![](images/Whats_New_140_OVP_Scatter_Chart_f264ec1.png)
 
 
     
@@ -1336,7 +1336,7 @@ Overview pages have been enhanced with the following features:
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1352,28 +1352,28 @@ Overview pages have been enhanced with the following features:
 <tr>
 <td valign="top">
 
- 1.40 
+1.40 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Analysis Path Framework \(APF\) 
+Analysis Path Framework \(APF\) 
 
 
 
 </td>
 <td valign="top">
 
- **Analysis Path Framework \(APF\)** 
+**Analysis Path Framework \(APF\)** 
 
 
 
@@ -1401,7 +1401,7 @@ When you configure a filter, you can now specify that no values are selected by 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1417,28 +1417,28 @@ When you configure a filter, you can now specify that no values are selected by 
 <tr>
 <td valign="top">
 
- 1.40 
+1.40 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- User Documentation 
+User Documentation 
 
 
 
 </td>
 <td valign="top">
 
- **Documentation Structure** 
+**Documentation Structure** 
 
 
 
@@ -1458,7 +1458,7 @@ The documentation for Analysis Path Framework that has been located at the end o
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1475,6 +1475,8 @@ The documentation for Analysis Path Framework that has been located at the end o
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.115](what-s-new-in-sapui5-1-115-409fde8.md "With this release SAPUI5 is upgraded from version 1.114 to 1.115.")
 
 [What's New in SAPUI5 1.114](what-s-new-in-sapui5-1-114-890fce1.md "With this release SAPUI5 is upgraded from version 1.113 to 1.114.")
 

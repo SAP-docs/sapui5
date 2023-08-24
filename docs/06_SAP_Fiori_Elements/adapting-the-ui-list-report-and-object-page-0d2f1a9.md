@@ -21,6 +21,9 @@ In SAP Fiori elements for OData V4, app developers adapt the UI using the manife
 
 You can also use SAP Fiori tools to extend and customize specific features of the list report and object page. For more information, see [Configure Page Elements](https://help.sap.com/docs/SAP_FIORI_tools/17d50220bcd848aa854c9c182d65b699/047507c86afa4e96bb3d284adb9f4726.html).
 
+> ### Note:  
+> In the Page Editor, a property is written with spaces in between for better readability. In SAP Fiori elements, whenever we provide a property, it is written in the actual code format.
+
 
 
 ### Adapting the UI: List Report
@@ -53,7 +56,7 @@ Display/Hide the *Export to Excel* button in the table toolbar
 </td>
 <td valign="top">
 
-Change the *Export to Excel* property to `True/False`.
+Change the `ExporttoExcel` property to `True/False`.
 
 
 
@@ -69,7 +72,7 @@ Change the column width.
 </td>
 <td valign="top">
 
-Choose the column of a table in the outline of the Page Editor, and change the *Width* property as needed.
+Choose the column of a table in the outline of the Page Editor, and change the `Width` property as needed.
 
 
 
@@ -85,41 +88,9 @@ Center-align status columns
 </td>
 <td valign="top">
 
-Choose the column of the table in the outline of Page Editor, and set the *H Align* property to `Center`.
+Choose the column of the table in the outline of Page Editor, and set the `HAlign` property to `Center`.
 
 For vertical alignment of the whole responsive table, see [Tables](tables-c0f6592.md).
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Disable sticky column header and sticky table toolbar
-
-
-
-</td>
-<td valign="top">
-
-The sticky column header and the sticky table toolbar in the list report are enabled by default. To disable them, change the *Sticky* property value under *Table*.
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Hide a toolbar action for a specific table \(if you use multiple views on list report tables\)
-
-
-
-</td>
-<td valign="top">
-
-Set the `visible` property to `false`.
 
 
 
@@ -193,22 +164,6 @@ Setting
 <tr>
 <td valign="top">
 
-Change the image shape from a square to a circle
-
-
-
-</td>
-<td valign="top">
-
-Switch to preview mode, navigate to the object page, switch back to *Adapt the UI*. Select the object page header and set the *Object Image Shape* property to `Circle`.
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
 Change the avatar shape in the object page dynamic header from a square to a circle
 
 
@@ -216,7 +171,7 @@ Change the avatar shape in the object page dynamic header from a square to a cir
 </td>
 <td valign="top">
 
-On the header of the object page, set the *displayShape* property to `Circle`.
+On the header of the object page, set the `displayShape` property to `Circle`.
 
 
 
@@ -232,7 +187,7 @@ Hide the anchor bar
 </td>
 <td valign="top">
 
-On the page layout node, set the *Show Anchor Bar* property to `false`.
+On the page layout node, set the `ShowAnchorBar` property to `false`.
 
 
 
@@ -248,7 +203,7 @@ Switch to tabs
 </td>
 <td valign="top">
 
-On the page layout node, set the *Use Icon Tab Bar* property `"useIconTabBar"` to `true`.
+On the page layout node, set the property `useIconTabBar` to `true`.
 
 
 
@@ -264,7 +219,7 @@ Display the *Export to Excel* button in the table toolbar
 </td>
 <td valign="top">
 
-In the table node, set the *Use Export to Excel* property to `true`.
+In the table node, set the `UseExporttoExcel` property to `true`.
 
 
 
@@ -280,43 +235,9 @@ Show header content in edit mode
 </td>
 <td valign="top">
 
-On the page layout node, set the *showHeaderContent* property to `true` or `false`, to determine the header content visibility.
+On the page layout node, set the `showHeaderContent` property to `true` or `false`, to determine the header content visibility.
 
 Alternatively, you can make a binding change if you need to change the value according to a property or an expression. For more information, see [Creating a Binding Change](creating-a-binding-change-4754094.md).
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Show content parts in the header according to display/edit mode
-
-
-
-</td>
-<td valign="top">
-
-Ensure that the header content is also displayed in edit/create mode, as described above. Then, search for the *sap.m.VBox* under*sap.uxap.ObjectPageLayout* \> *headerContent* of the header facet that you want to adjust. In the *sap.m.VBox*, set a binding change in the *Visible* property.
-
-See also [Creating a Binding Change](creating-a-binding-change-4754094.md).
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Hide the *Share* button
-
-
-
-</td>
-<td valign="top">
-
-Select the *Share* button in the header and set the `Visible` property to `false`.
 
 
 
@@ -344,40 +265,6 @@ On the page layout node, set the `Always show content header` property to `true`
 <tr>
 <td valign="top">
 
-Show more contact information in the header facet
-
-
-
-</td>
-<td valign="top">
-
-In the outline, choose *sap.m.Page* \> *content* \> *sap.uxap.ObjectPageLayout* \> *headerContent*. For each header facet, an `sap.m.VBox` is displayed. In the contact header facet, several `sap.m.HBoxes` are displayed when icons and texts or links are available but invisible. Set the *Visible* properties of the required items to `true`.
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Show paginator buttons \(up and down arrows\) on the first object page
-
-By default, the paginator buttons for navigating to the previous object page or next object page are not displayed on the first object page. They are displayed from the second object page onwards. You can hide it by changing the *Visible* property to false.
-
-
-
-</td>
-<td valign="top">
-
-From the outline, choose ** \> *sap.m.Page* \> *content* \> *sap.uxap.ObjectPageLayout* \> *headerTitle* \> *sap.uxap.ObjectPageHeader* \> *navigationBar* \> *sap.m.Bar* \> *contentRight* \> *sap.m.HBox* and set the *Visible* property to `true`.
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
 Change the default `growingThreshold` value for the object page’s `sap.m.Table`. The default value is 10.
 
 > ### Note:  
@@ -388,7 +275,7 @@ Change the default `growingThreshold` value for the object page’s `sap.m.Table
 </td>
 <td valign="top">
 
-Switch to preview mode, navigate to the object page, switch back to *Adapt the UI*. In the outline, select the table whose value needs to be changed, and set the new value for the `growingThreshold` property.
+In the outline, select the table whose value needs to be changed, and set the new value for the `growingThreshold` property.
 
 
 
@@ -408,7 +295,7 @@ However, in a table with only non-editable content, there is no tab stop.
 </td>
 <td valign="top">
 
-Set the `editable` property of the smart table to `false`. The inner table's `navigationMode` property is set to `Navigation`.
+Set the `editable` property of the table to `false`. The inner table's `navigationMode` property is set to `Navigation`.
 
 Users can then navigate through the entire focusable table content, and not only through the editable fields.
 
@@ -428,7 +315,7 @@ By setting this property to true, the item selection is displayed even if a user
 </td>
 <td valign="top">
 
-For the SmartTable control, set the `includeItemInSelection` property to `True`.
+On the table, set the `includeItemInSelection` property to `True`.
 
 
 
@@ -460,7 +347,7 @@ Change the layout of the object table for better readability for a high number o
 </td>
 <td valign="top">
 
-For `sap.m.Table`, set the `PopinLayout` property to one of the following values:
+On the table, set the `PopinLayout` property to one of the following values:
 
 -   `Block`
 
@@ -475,25 +362,6 @@ The default layout is `Block`.
 
 </td>
 </tr>
-<tr>
-<td valign="top">
-
-Combine buttons \(actions\) in the header
-
-
-
-</td>
-<td valign="top">
-
-Select the buttons that you want to combine by holding down the [ctrl\] key and left-clicking the buttons in the required order. Then, release the [ctrl\] key, and the button is visible on the UI by default. You can hide this button by pressing the [ctrl\] key, right-clicking one of the selected buttons, and choosing *Combine* from the context menu.
-
-> ### Note:  
-> If the buttons don't all fit because the preview size in the UI adaptation editor is too small, you can expand the editor tab by double-clicking it and collapsing the outline and property panels.
-
-
-
-</td>
-</tr>
 </table>
 
 
@@ -501,6 +369,4 @@ Select the buttons that you want to combine by holding down the [ctrl\] key and 
 ### More Information
 
 For more information, see [Creating a Binding Change](creating-a-binding-change-4754094.md).
-
-For more information about SAP Web IDE, see the documentation for SAP Web IDE on the SAP Help Portal at [https://help.sap.com/viewer/p/SAP\_Web\_IDE](https://help.sap.com/viewer/p/SAP_Web_IDE).
 

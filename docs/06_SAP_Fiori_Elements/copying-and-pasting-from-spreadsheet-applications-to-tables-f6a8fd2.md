@@ -4,15 +4,15 @@
 
 You can copy and paste data from spreadsheet applications to responsive tables and grid tables.
 
-A *Paste* button is shown in the table toolbar. Once you have copied data from a spreadsheet application, the focus can be anywhere in the table except for the cells. You can trigger the browser paste \( [CTRL\] + [V\]  for Microsoft Windows,  [CMD\] + [V\]  for macOS\) or click *Paste* on the smart table. The paste function in a smart table is available for the following scenarios:
+A *Paste* button is shown in the table toolbar. Once you have copied data from a spreadsheet application, the focus can be anywhere in the table except for the cells. You can trigger the browser paste \([CTRL\] + [V\]  for Microsoft Windows, [CMD\] + [V\]  for macOS\) or click *Paste* on the smart table. The paste function in a smart table is available for the following scenarios:
 
 -   In edit mode, the smart table only has editable fields.
 
-     ![](images/Excel_copy_paste_1_428f114.png) 
+    ![](images/Excel_copy_paste_1_428f114.png)
 
     Sample data:
 
-     ![](images/Excel_Copy_paste_0_d66f42d.png) 
+    ![](images/Excel_Copy_paste_0_d66f42d.png)
 
 -   In edit mode, the smart table only has editable fields. It also contains multiple editable fields in a single column, for example, value and unit of measure.
 
@@ -20,15 +20,15 @@ A *Paste* button is shown in the table toolbar. Once you have copied data from a
 
     Sample data:
 
-     ![](images/Excel_copy_paste_0a_17355b2.png) 
+    ![](images/Excel_copy_paste_0a_17355b2.png)
 
 -   The smart table has both editable and non-editable fields.
 
-     ![](images/Excel_copy_paste_3_766e2e9.png) 
+    ![](images/Excel_copy_paste_3_766e2e9.png)
 
     Sample data:
 
-     ![](images/Excel_copy_paste_4_b6af7fd.png) 
+    ![](images/Excel_copy_paste_4_b6af7fd.png)
 
     > ### Note:  
     > You have to maintain the placeholder for non-editable fields in spreadsheet applications. The fields can also be empty.
@@ -68,11 +68,11 @@ In SAP Fiori elements for OData V2, you need to fulfill these prerequisites to u
 
 The paste function in a smart table is also available if the smart table contains an inline action.
 
- ![](images/Excel_copy_paste_5_db3d9d3.png) 
+![](images/Excel_copy_paste_5_db3d9d3.png)
 
 Sample data:
 
- ![](images/Excel_copy_paste_6_fa98abc.png) 
+![](images/Excel_copy_paste_6_fa98abc.png)
 
 > ### Note:  
 > Do not make entries for inline actions since the actions are not actual columns in the smart table.
@@ -85,11 +85,11 @@ Sample data:
 
 The paste function is enabled by default on the object page if the creation mode is set to inline or empty row. For more information, see [Enabling Inline Creation Mode or Empty Row Mode for Table Entries](enabling-inline-creation-mode-or-empty-row-mode-for-table-entries-cfb04f0.md).
 
- ![](images/Pasting_in_Excel_with_Inline_Actions_8173bd4.png) 
+![](images/Pasting_in_Excel_with_Inline_Actions_8173bd4.png)
 
 To generate an example with the expected format for pasting your data, export the table with the split cell mode:
 
- ![](images/Sample_Data_for_Pasting_in_Exccel_with_Inline_Action_b4c1a5d.png) 
+![](images/Sample_Data_for_Pasting_in_Exccel_with_Inline_Action_b4c1a5d.png)
 
 > ### Note:  
 > -   The user has to maintain the placeholder for inline actions in the spreadsheet application. The column fields can also be empty.

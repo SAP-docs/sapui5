@@ -36,13 +36,13 @@ After you have defined a view extension, you can access and modify the propertie
 
 Several models \(instances of `sap.ui.model.Model`\) are attached to the list report and object page, and analytical list page template artifacts.
 
--    **OData Model** 
+-   **OData Model** 
 
     The most prominent is the default model. This is the OData model specified in the `manifest.json` file. You can use this model for data-binding in your own view extensions.
 
     Access the model \(through the standard SAPUI5 API methods\) with care, since side effects may interfere with the template coding that also uses this model.
 
--    **UI Model** 
+-   **UI Model** 
 
     Each view has its own model attached that has the name `ui`. This model can be used in view and controller extensions for read purposes.
 
@@ -51,14 +51,14 @@ Several models \(instances of `sap.ui.model.Model`\) are attached to the list re
     > ### Caution:  
     > It is strictly forbidden to perform any change operations on the properties of the UI model.
 
--    **SAP Fiori Elements Private Model** 
+-   **SAP Fiori Elements Private Model** 
 
     Additional model that is attached to each view that contains properties used for internal purposes within the templates.
 
     > ### Caution:  
     > It is strictly forbidden to access this model in any way. Do not access any model other than the default model and the `ui` model unless you have attached it to the `ManagedObject` yourself.
 
--    **Application-Specific Models** 
+-   **Application-Specific Models** 
 
     You may want to define your own JSON model and attach it to UI elements. You can do this easily if the model is attached to a UI element that exists only within the scope of an extension. However, use models that are attached to a higher level \(for example, to the whole view\) only if absolutely necessary. In this case, you should use a name containing your own namespace to clearly separate this model from models defined by other parts of the framework.
 

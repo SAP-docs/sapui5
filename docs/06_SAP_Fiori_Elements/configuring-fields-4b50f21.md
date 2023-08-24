@@ -25,7 +25,7 @@ Input fields, like `sap.m.Input` or `sap.m.ComboBox`, have a property placeholde
 </Annotations>
 ```
 
- ![](images/Placeholder_Texts_b565a6c.png) 
+![](images/Placeholder_Texts_b565a6c.png)
 
 
 

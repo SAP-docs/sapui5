@@ -158,7 +158,7 @@ The chart definition contains measures on which the aggregations calculations ar
 >   
 > **Navigation Property**
 > 
->  
+> 
 > 
 > ![](images/ChartFacet_Navigation_Property_63620b4.png)
 
@@ -275,7 +275,7 @@ SAP Fiori elements supports the criticality based on `UI.CriticalityType`. Wrap 
 
 You can see the result in the following chart:
 
- ![](images/Criticality_Chart_040e948.png) 
+![](images/Criticality_Chart_040e948.png)
 
 
 

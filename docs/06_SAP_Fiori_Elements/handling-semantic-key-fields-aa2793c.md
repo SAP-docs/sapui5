@@ -8,7 +8,7 @@ In list reports, semantic key fields are displayed with the following logic:
 
 -   For responsive tables, SAP Fiori elements uses `ObjectIdentifier`. The part in bold will be the text followed by the ID in the next line. If there is no text,the ID will be shown in bold in the first line. In this case, there will be no second line. The screenshot below shows the use case for both a text and an ID in a responsive table:
 
-     ![](images/Semantic_Key_Fields_in_a_Table_Text_and_ID_d58b9d9.png) 
+    ![](images/Semantic_Key_Fields_in_a_Table_Text_and_ID_d58b9d9.png)
 
 -   For other tables, SAP Fiori elements uses a label and renders the entire content in bold. SAP Fiori elements also reads the associated text and combines the information in accordance with how the `TextArrangement` is configured. The behavior is as follows:
 
@@ -19,7 +19,7 @@ In list reports, semantic key fields are displayed with the following logic:
 
     The screenshot below shows the use case for `TextFirst` arrangement in a grid table:
 
-     ![](images/Semantic_Key_Fields_in_a_Table_TextFirst_40b9a46.png) 
+    ![](images/Semantic_Key_Fields_in_a_Table_TextFirst_40b9a46.png)
 
 
 > ### Note:  

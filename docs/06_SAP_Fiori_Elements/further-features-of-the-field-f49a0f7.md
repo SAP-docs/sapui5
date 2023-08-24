@@ -1138,5 +1138,5 @@ The tooltip is determined by the OData annotation `Common.QuickInfo`.
 
 The following screenshot shows the result on the UI:
 
- ![](images/Tooltip_for_Data_Point_ec5aa42.png) 
+![](images/Tooltip_for_Data_Point_ec5aa42.png)
 

@@ -8,9 +8,11 @@ With the facet filter, users can explore a data collection by applying multiple 
 
 The following figure shows the structure of the facet filter.
 
- ![](images/SAPUI5_Facet_Filter_Anatomy_f144853.png) 
+![](images/SAPUI5_Facet_Filter_Anatomy_f144853.png)
 
 
+
+## Example
 
 Your application displays a large list of products that can be grouped by category and supplier. With the facet filter, you allow users to dynamically filter the list so it only displays products from the categories and suppliers they want to see. In the following figure, the `FacetFilter` control is outlined in red and will be referred to as the 'toolbar' for the user. In the example, the user has set the following filters:
 

@@ -23,24 +23,28 @@ This instantiates the actual control tree that corresponds to this building bloc
 
 You can use the `Table` building block inside custom sections, custom subsections, and custom pages.
 
-You can use the `Table` building block to add bound and unbound actions, and to group actions as menu buttons. You have the following options:
+You can use the `Table` building block to add bound and unbound actions, to group actions as menu buttons, and specify the create options for the table. You have the following options:
 
--   Define the placement of the action relative to an anchor
+-   Define the placement of the action relative to an anchor.
 
     You can explore and work with the coding yourself. Check out our live example in the flexible programming model explorer at [Table Customization](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/table/tableCustoms).
 
--   Specify a bound action by using the `requiresSelection` property
+-   Specify a bound action by using the `requiresSelection` property.
 
     By default, the action is unbound.
 
--   Define menu actions and contained actions using the `ActionGroup` building block
+-   Define menu actions and contained actions using the `ActionGroup` building block.
+
+-   Specify the create options and the related parameters for the table using the `creationMode` parameter. For more information about `TableCreationOptions`, see the [API Reference](https://ui5.sap.com//#/api/sap.fe.macros.table.TableCreationOptions).
+
+    Check out our live example in the flexible programming model explorer at [Table - Edit Mode](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/table/tableEdit).
 
 
 > ### Sample Code:  
 > XML annotation
 > 
 > ```xml
-> <macros:Table metaPath="@com.sap.vocabularies.UI.v1.LineItem" readOnly="true" id="LineItemTablePageCustomActions">
+> <macros:Table metaPath="@com.sap.vocabularies.UI.v1.LineItem" readOnly="true" id="LineItemTablePageCustomActions"> <creationMode name="InlineCreationRows" inlineCreationRowsHiddenInEditMode="true" />  </macros:Table>
 >      <macros:actions>
 >           <macros:Action
 >                key="customAction"

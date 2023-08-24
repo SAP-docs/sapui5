@@ -10,11 +10,11 @@ If the tests are passed, we can be sure that the formatter is formally correct b
 
 ## Preview
 
-   
+  
   
 **The price is now formatted with a semantic color**
 
- ![](images/Tutorial_Testing_Step_03_436054f.png "The price is now formatted with a semantic color") 
+![](images/Tutorial_Testing_Step_03_436054f.png "The price is now formatted with a semantic color")
 
 
 

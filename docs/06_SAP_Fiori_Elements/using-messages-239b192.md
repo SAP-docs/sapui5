@@ -102,11 +102,11 @@ The message popover consists of the following components:
 
     If the message model provides a long text from the back end, the user is able to navigate to the details section from the message popover. There, the user typically finds more detailed information.
 
-       
+      
       
     **Message Popover: Chevron Navigation to Message Details**
 
-     ![](images/Message_Popover_Chevron_Navigation_to_Details_671213a.png "Message Popover: Chevron Navigation to Message Details") 
+    ![](images/Message_Popover_Chevron_Navigation_to_Details_671213a.png "Message Popover: Chevron Navigation to Message Details")
 
 
 Navigation is also supported from the messages. This allows end users to navigate directly to the place where the error/warning occurs on the UI by simply clicking on the respective message in the message popover.
@@ -136,11 +136,11 @@ The message dialog consists of the following components:
 
     If the message cannot be fully displayed or includes a description, the `MessageDialog` enables the navigation to the detailed description of the message, along with the technical details of the message \(for example status code, status text, or description\), application details \(component ID, service ID, or service repository\) and error resolution details \(analysis, exception category, or timestamp\).
 
-       
+      
       
     **Message Dialog: Chevron Navigation to Message Details**
 
-     ![](images/Message_Dialog_Chevron_Navigation_to_Details_6971667.png "Message Dialog: Chevron Navigation to Message Details") 
+    ![](images/Message_Dialog_Chevron_Navigation_to_Details_6971667.png "Message Dialog: Chevron Navigation to Message Details")
 
 
 

@@ -2,18 +2,18 @@
 
 # Step 8: Testing Navigation
 
- So far, we have a list of posts on the home page of the app. But typically, a post comes with more details that should be displayed on a separate detail page. We call it the post page because it displays details of a post. In this step we will introduce a new journey to test the post page. We write tests that trigger typical navigation events with OPA. Testing navigation greatly helps in reducing manual testing efforts as it covers a lot of testing paths. It is good practice to cover every view of your application with at least one test, since OPA will check if an exception is thrown. In this way you can detect critical errors very fast. 
+So far, we have a list of posts on the home page of the app. But typically, a post comes with more details that should be displayed on a separate detail page. We call it the post page because it displays details of a post. In this step we will introduce a new journey to test the post page. We write tests that trigger typical navigation events with OPA. Testing navigation greatly helps in reducing manual testing efforts as it covers a lot of testing paths. It is good practice to cover every view of your application with at least one test, since OPA will check if an exception is thrown. In this way you can detect critical errors very fast. 
 
 
 
 ## Preview
 
-   
+  
   
 **We add an OPA test that selects an item from the table and navigates to the post page**
 
- ![](images/Tutorial_Testing_Step_08_cf3e0a6.png "We add an OPA test that selects an item from the table and navigates to the
-					post page") 
+![](images/Tutorial_Testing_Step_08_cf3e0a6.png "We add an OPA test that selects an item from the table and navigates to the
+					post page")
 
 
 

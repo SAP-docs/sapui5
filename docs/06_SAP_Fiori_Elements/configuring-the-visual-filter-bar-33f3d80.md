@@ -30,7 +30,7 @@ Application developers must ensure that there's a manifest property for each vis
 > 
 > ```
 > "settings" : {  
->    "entitySet" : "SalesOrderManage",
+>    "contextPath" : "/SalesOrderManage",
 >    "controlConfiguration" : {
 >       "@com.sap.vocabularies.UI.v1.SelectionFields" : {
 >          "layout": "CompactVisual” , // Possible Values: “Compact” (if only compact filter is present) and “CompactVisual” if both compact and visual filters are present

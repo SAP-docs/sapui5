@@ -157,7 +157,7 @@ Displayed in the analysis path display.
 <tr>
 <td valign="top">
 
- `filterMapping` 
+`filterMapping` 
 
 
 
@@ -173,7 +173,7 @@ Maps a filter derived from the selection in a chart \(source filter property\) t
 <tr>
 <td valign="top">
 
- `requestForMappedFilter` 
+`requestForMappedFilter` 
 
 
 
@@ -189,7 +189,7 @@ Contains the ID of the `request` object used to do the lookup request. The looku
 <tr>
 <td valign="top">
 
- `target` 
+`target` 
 
 
 
@@ -205,7 +205,7 @@ Array of properties that are used to determine the mapped filter properties base
 <tr>
 <td valign="top">
 
- `keepSource` 
+`keepSource` 
 
 
 

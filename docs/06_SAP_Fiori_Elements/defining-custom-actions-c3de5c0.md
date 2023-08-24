@@ -45,7 +45,7 @@ Description
 <tr>
 <td valign="top">
 
- `<entity set>` 
+`<entity set>` 
 
 
 
@@ -64,7 +64,7 @@ Entity set that is displayed on the analytical list page. \(For example `ZCostCe
 <tr>
 <td valign="top">
 
- `<Action 1>`, `<Action 2>`, etc.
+`<Action 1>`, `<Action 2>`, etc.
 
 
 
@@ -80,7 +80,7 @@ The names of actions.
 <tr>
 <td valign="top">
 
- `<id>` 
+`<id>` 
 
 
 
@@ -96,7 +96,7 @@ The ID that is used for the action button.
 <tr>
 <td valign="top">
 
- `<button text>` 
+`<button text>` 
 
 
 
@@ -112,7 +112,7 @@ The `nullText` that is displayed on the button \(typically a binding to an i18n 
 <tr>
 <td valign="top">
 
- `<handler function>` 
+`<handler function>` 
 
 
 
@@ -128,7 +128,7 @@ The handler function that is called when the user selects the action button.
 <tr>
 <td valign="top">
 
- `<global>` \(required\)
+`<global>` \(required\)
 
 
 
@@ -147,7 +147,7 @@ Indicates whether this is a global action. The default value is `false`.
 <tr>
 <td valign="top">
 
- `<requiresSelection>` \(optional: relevant only for table toolbar actions in the analytical list page\)
+`<requiresSelection>` \(optional: relevant only for table toolbar actions in the analytical list page\)
 
 
 
@@ -163,7 +163,7 @@ Indicates whether the action requires a selection of items. The default value is
 <tr>
 <td valign="top">
 
- `<determining>` \(optional: relevant only for the analytical list page actions\)
+`<determining>` \(optional: relevant only for the analytical list page actions\)
 
 
 
@@ -179,7 +179,7 @@ Indicates whether the action should be displayed in the footer of the page. The 
 <tr>
 <td valign="top">
 
- `<command>` 
+`<command>` 
 
 
 
@@ -189,7 +189,7 @@ Indicates whether the action should be displayed in the footer of the page. The 
 Represents the command mapped to a keyboard shortcut defined under `sap.ui.commands`.
 
 > ### Note:  
-> If you are adding the command settings to an existing custom action, the `oEvent` parameter that is passed to the event handler of that custom action is changed. It requires code adaptation if the code in the event handler depends on the `oEvent` parameter. For example,  [Ctrl\] + [B\]  
+> If you are adding the command settings to an existing custom action, the `oEvent` parameter that is passed to the event handler of that custom action is changed. It requires code adaptation if the code in the event handler depends on the `oEvent` parameter. For example, [Ctrl\] + [B\]  
 
 
 

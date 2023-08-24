@@ -26,11 +26,11 @@ The table toolbar in the list report contains buttons used to trigger actions fo
 
 For more information, see [Adding Actions to Tables](adding-actions-to-tables-b623e0b.md).
 
-   
+  
   
 **Example: Table Toolbar Actions and Inline Actions**
 
- ![](images/Actions_in_the_Table_Toolbar_856c5a4.jpg "Example: Table Toolbar Actions and Inline Actions") 
+![](images/Actions_in_the_Table_Toolbar_856c5a4.jpg "Example: Table Toolbar Actions and Inline Actions")
 
 
 
@@ -85,7 +85,7 @@ The *Copy* button is not available by default. However, applications can define 
 
 This *Copy* button is automatically placed after the *Create* button.
 
- ![](images/Copy_Action_in_the_List_Report_f337b65.png) 
+![](images/Copy_Action_in_the_List_Report_f337b65.png)
 
 > ### Sample Code:  
 > XML Annotation

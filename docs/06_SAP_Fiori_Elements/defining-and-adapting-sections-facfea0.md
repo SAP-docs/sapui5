@@ -25,7 +25,7 @@ In the figure below, the collection facet for *General Information* combines two
   
 **Object Page: CollectionFacet**
 
- ![](images/Object_Page_Collection_Facet_a7f074e.png "Object Page: CollectionFacet") 
+![](images/Object_Page_Collection_Facet_a7f074e.png "Object Page: CollectionFacet")
 
 > ### Note:  
 > `UI.CollectionFacets` at third level and beyond are not considered.
@@ -36,7 +36,7 @@ Furthermore, reference facets can refer to identification sections, the field gr
   
 **Object Page: ReferenceFacet**
 
- ![](images/Object_Page_Reference_Facet_9fa2aec.png "Object Page: ReferenceFacet") 
+![](images/Object_Page_Reference_Facet_9fa2aec.png "Object Page: ReferenceFacet")
 
 > ### Sample Code:  
 > XML Annotation
@@ -158,7 +158,7 @@ You can hide and display sections based on properties.
 > -   If a subsection contains only one type of content, such as a table or a chart, and the subsection title is the same as the control title, then only the control title is displayed in the subsection.
 > 
 > 
->  ![](images/Subsection_Control_Title_34d0a6a.png) 
+> ![](images/Subsection_Control_Title_34d0a6a.png)
 > 
 > -   In SAP Fiori elements for OData V2 if a section contains only one type of content, such as a table or a chart, and the section title is the same as the control title, then only the control title is displayed in the section.
 
@@ -269,7 +269,7 @@ In the figure below, the collection facet for *Product Information* combines thr
   
 **Object Page: CollectionFacet**
 
- ![](images/ObjectPage_Section_CollFacet_2bcb89d.jpg "Object Page: CollectionFacet") 
+![](images/ObjectPage_Section_CollFacet_2bcb89d.jpg "Object Page: CollectionFacet")
 
 Further reference facets refer to identification sections, the field group, contact, or line item annotations. For line items, a list is rendered.
 
@@ -277,7 +277,7 @@ Further reference facets refer to identification sections, the field group, cont
   
 **Object Page: ReferenceFacets**
 
- ![](images/ObjectPage_ReferenceFacet_2740bd6.png "Object Page: ReferenceFacets") 
+![](images/ObjectPage_ReferenceFacet_2740bd6.png "Object Page: ReferenceFacets")
 
 > ### Note:  
 > When rendering a table in a section, `NavigationRestrictions` works only if `InlineCreate` is enabled for the related entity table. The creation from a new object page is not supported using the mentioned annotation.
@@ -338,7 +338,7 @@ By default, `"Page"` mode is the section layout mode. In this mode, all the sect
 
 Alternatively, application developers can configure the object page using `"Tabs"` mode as the section layout mode. In this mode, the sections are represented as tabs under the header facet. End users can reach the right section or subsection only by choosing the corresponding navigation placeholder \(either by choosing the tab directly, or by choosing a subsection via the navigation placeholder under the tab\).
 
- 
+
 
 > ### Note:  
 > We recommend using the tab representation when your page uses the `UI.Table` \(grid table\).
@@ -353,7 +353,7 @@ To choose a tab visualization, you must use the `sectionLayout` property in the 
 >     "name": "sap.fe.templates.ObjectPage",                  
 >     "options":{                      
 >         "settings":{                          
->             "entitySet": "SalesOrderManage",                          
+>             "contextPath": "/SalesOrderManage",                          
 >             "navigation":{                              
 >                 "_Item":{                                  
 >                     "detail":{                                      

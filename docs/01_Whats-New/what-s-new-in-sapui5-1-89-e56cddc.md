@@ -6,7 +6,7 @@ With this release SAPUI5 is upgraded from version 1.88 to 1.89.
 
 
 
-** **
+****
 
 
 <table>
@@ -64,28 +64,28 @@ Available as of
 <tr>
 <td valign="top">
 
- 1.89 
+1.89 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Demo Kit Feedback** 
+**Demo Kit Feedback** 
 
 
 
@@ -126,28 +126,28 @@ Info Only
 <tr>
 <td valign="top">
 
- 1.89 
+1.89 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **SAPUI5 OData V2 Model** 
+**SAPUI5 OData V2 Model** 
 
 
 
@@ -165,7 +165,7 @@ You can now provide unit and currency customizing for the `sap.ui.model.odata.ty
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -181,28 +181,28 @@ You can now provide unit and currency customizing for the `sap.ui.model.odata.ty
 <tr>
 <td valign="top">
 
- 1.89 
+1.89 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **SAPUI5 OData V4 Model** 
+**SAPUI5 OData V4 Model** 
 
 
 
@@ -220,7 +220,7 @@ Additional targets are now supported for [server messages](../04_Essentials/serv
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -236,28 +236,28 @@ Additional targets are now supported for [server messages](../04_Essentials/serv
 <tr>
 <td valign="top">
 
- 1.89 
+1.89 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **SAPUI5 Data Types** 
+**SAPUI5 Data Types** 
 
 
 
@@ -288,7 +288,7 @@ However, in some cases it can be necessary to display a value with fewer decimal
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -304,28 +304,28 @@ However, in some cases it can be necessary to display a value with fewer decimal
 <tr>
 <td valign="top">
 
- 1.89 
+1.89 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.Link, sap.m.ObjectIdentifier, sap.m.ObjectNumber, sap.m.ObjectStatus, and sap.ui.unified.Currency`** 
+**`sap.m.Link, sap.m.ObjectIdentifier, sap.m.ObjectNumber, sap.m.ObjectStatus, and sap.ui.unified.Currency`** 
 
 
 
@@ -343,7 +343,7 @@ Similar to the `sap.m.Text` control, these controls now also implement the new `
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -359,28 +359,28 @@ Similar to the `sap.m.Text` control, these controls now also implement the new `
 <tr>
 <td valign="top">
 
- 1.89 
+1.89 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.navpopover.SmartLink`** 
+**`sap.ui.comp.navpopover.SmartLink`** 
 
 
 
@@ -398,7 +398,7 @@ You can now also use `SmartLink` as the content of `sap.m.title`. For more infor
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -414,28 +414,28 @@ You can now also use `SmartLink` as the content of `sap.m.title`. For more infor
 <tr>
 <td valign="top">
 
- 1.89 
+1.89 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.smartfield.SmartField`** 
+**`sap.ui.comp.smartfield.SmartField`** 
 
 
 
@@ -453,7 +453,7 @@ Until now, when `SmartField` was represented by `sap.m.TextArea` as an inner con
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -469,28 +469,28 @@ Until now, when `SmartField` was represented by `sap.m.TextArea` as an inner con
 <tr>
 <td valign="top">
 
- 1.89 
+1.89 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.smartfilterbar.SmartFilterBar`, `sap.ui.comp.valuehelpdialog.ValueHelpDialog`** 
+**`sap.ui.comp.smartfilterbar.SmartFilterBar`, `sap.ui.comp.valuehelpdialog.ValueHelpDialog`** 
 
 
 
@@ -519,7 +519,7 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.c
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -535,28 +535,28 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.c
 <tr>
 <td valign="top">
 
- 1.89 
+1.89 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.smartfilterbar.SmartFilterBar`** 
+**`sap.ui.comp.smartfilterbar.SmartFilterBar`** 
 
 
 
@@ -574,7 +574,7 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.c
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -590,28 +590,28 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.c
 <tr>
 <td valign="top">
 
- 1.89 
+1.89 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.smarttable.SmartTable`** 
+**`sap.ui.comp.smarttable.SmartTable`** 
 
 
 
@@ -636,7 +636,7 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.c
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -652,28 +652,28 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.c
 <tr>
 <td valign="top">
 
- 1.89 
+1.89 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.layout.form.Form`, `sap.ui.layout.form.SimpleForm`** 
+**`sap.ui.layout.form.Form`, `sap.ui.layout.form.SimpleForm`** 
 
 
 
@@ -691,7 +691,7 @@ You can now define up to six columns in extra-large size in a form. For more inf
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -707,28 +707,28 @@ You can now define up to six columns in extra-large size in a form. For more inf
 <tr>
 <td valign="top">
 
- 1.89 
+1.89 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- SAP Fiori Elements 
+SAP Fiori Elements 
 
 
 
 </td>
 <td valign="top">
 
- **SAP Fiori elements for OData V2 and SAP Fiori elements for OData V4** 
+**SAP Fiori elements for OData V2 and SAP Fiori elements for OData V4** 
 
 
 
@@ -749,7 +749,7 @@ The following changes and new features are available for SAP Fiori elements for 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -765,28 +765,28 @@ The following changes and new features are available for SAP Fiori elements for 
 <tr>
 <td valign="top">
 
- 1.89 
+1.89 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- SAP Fiori Elements 
+SAP Fiori Elements 
 
 
 
 </td>
 <td valign="top">
 
- **SAP Fiori elements for OData V2** 
+**SAP Fiori elements for OData V2** 
 
 
 
@@ -814,7 +814,7 @@ The following changes and new features are available for SAP Fiori elements for 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -830,28 +830,28 @@ The following changes and new features are available for SAP Fiori elements for 
 <tr>
 <td valign="top">
 
- 1.89 
+1.89 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- SAP Fiori Elements 
+SAP Fiori Elements 
 
 
 
 </td>
 <td valign="top">
 
- **SAP Fiori elements for OData V4** 
+**SAP Fiori elements for OData V4** 
 
 
 
@@ -880,7 +880,7 @@ The following changes and new features are available for SAP Fiori elements for 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -897,6 +897,8 @@ The following changes and new features are available for SAP Fiori elements for 
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.115](what-s-new-in-sapui5-1-115-409fde8.md "With this release SAPUI5 is upgraded from version 1.114 to 1.115.")
 
 [What's New in SAPUI5 1.114](what-s-new-in-sapui5-1-114-890fce1.md "With this release SAPUI5 is upgraded from version 1.113 to 1.114.")
 

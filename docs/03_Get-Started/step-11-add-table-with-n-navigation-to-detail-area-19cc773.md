@@ -10,11 +10,11 @@ In this step we add a table with additional information to the detail area.
 
 ## Preview
 
-   
+  
   
 **A table containing information about friends of the selected user is added**
 
- ![](images/Tut_OD4_Step_11_45abd62.png "A table containing information about friends of the selected user is added") 
+![](images/Tut_OD4_Step_11_45abd62.png "A table containing information about friends of the selected user is added")
 
 
 

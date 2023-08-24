@@ -8,11 +8,11 @@ In this step, we want to allow bookmarking of the dialog box that is opened when
 
 ## Preview
 
-   
+  
   
 **Bookmark for a dialog**
 
- ![](images/Tutorial_Navigation_and_Routing_Step_14_ea8f2d0.png "Bookmark for a dialog") 
+![](images/Tutorial_Navigation_and_Routing_Step_14_ea8f2d0.png "Bookmark for a dialog")
 
 
 

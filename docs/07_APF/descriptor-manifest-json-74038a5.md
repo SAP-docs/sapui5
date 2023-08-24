@@ -57,44 +57,21 @@ APF expects certain entries in the manifest of a component that extends `sap.apf
     <tr>
     <td valign="top">
     
-        `PathPersistenceServiceRoot`
+    `PathPersistenceServiceRoot`
 
 
     
     </td>
     <td valign="top">
     
-        `/sap/hba/r/apf/core/odata/apf.xsodata`
+    `/sap/hba/r/apf/core/odata/apf.xsodata`
 
 
     
     </td>
     <td valign="top">
     
-        `/sap/opu/odata/sap/BSANLY_APF_RUNTIME_SRV`
-
-
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-        `SmartBusiness`
-
-
-    
-    </td>
-    <td valign="top">
-    
-        `/sap/hba/r/sb/core/odata/runtime/SMART_BUSINESS.xsodata`
-
-
-    
-    </td>
-    <td valign="top">
-    
-        Not required
+    `/sap/opu/odata/sap/BSANLY_APF_RUNTIME_SRV`
 
 
     
@@ -103,21 +80,44 @@ APF expects certain entries in the manifest of a component that extends `sap.apf
     <tr>
     <td valign="top">
     
-        `LogicalSystem`
+    `SmartBusiness`
 
 
     
     </td>
     <td valign="top">
     
-        `/sap/hba/apps/wca/dso/s/odata/wca.xsodata`
+    `/sap/hba/r/sb/core/odata/runtime/SMART_BUSINESS.xsodata`
 
 
     
     </td>
     <td valign="top">
     
-        Not required
+    Not required
+
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    `LogicalSystem`
+
+
+    
+    </td>
+    <td valign="top">
+    
+    `/sap/hba/apps/wca/dso/s/odata/wca.xsodata`
+
+
+    
+    </td>
+    <td valign="top">
+    
+    Not required
 
 
     
@@ -129,6 +129,8 @@ APF expects certain entries in the manifest of a component that extends `sap.apf
 The `sap.app` namespace also contains the title of the application. This “title” entry references the text key `AnalyticalConfigurationName`. When you export the text pool from APF Configuration Modeler, the up-to-date configuration title is written into the .properties file with the text key `AnalyticalConfigurationName`. Ensure you also keep the location of the .properties file up to date in the `manifest.json` file \(entry “i18n”\). At runtime, this title is displayed as the browser tab title.
 
 
+
+## Example
 
 ```
 {
@@ -280,7 +282,7 @@ The following settings reside in the `sap.apf` name space:
 
 ```
 
--    `activateFilterReduction`:
+-   `activateFilterReduction`:
 
     This property is relevant if you use CDS views that are executed on the Analytic Engine or BW OData queries. It defines whether filters that are generated during a path update are reduced so that the Analytic Engine can handle them.
 

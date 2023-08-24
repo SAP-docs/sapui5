@@ -20,7 +20,7 @@ In Safari on iOS , the file name and file extension get lost due to a download a
 <tr>
 <td valign="top">
 
-Columns of type `sap.ui.export.EdmType.Date` and `sap.ui.export.EdmType.DateTime` support multiple calendars as defined by `sap.ui.core.CalendarType`. However, not all values of the `sap.ui.core.CalendarType` enumeration are supported. For more information about supported values for the `calendar` property for columns of type `sap.ui.export.EdmType.Date` and `sap.ui.export.EdmType.DateTime`, see [ `Date`, `Time`, and `DateTime`.](data-types-for-spreadsheet-export-283217d.md#loio283217d8f187401c8045723abc27e5e0__section_tg5_hyv_43b) 
+Columns of type `sap.ui.export.EdmType.Date` and `sap.ui.export.EdmType.DateTime` support multiple calendars as defined by `sap.ui.core.CalendarType`. However, not all values of the `sap.ui.core.CalendarType` enumeration are supported. For more information about supported values for the `calendar` property for columns of type `sap.ui.export.EdmType.Date` and `sap.ui.export.EdmType.DateTime`, see [`Date`, `Time`, and `DateTime`.](data-types-for-spreadsheet-export-283217d.md#loio283217d8f187401c8045723abc27e5e0__section_tg5_hyv_43b) 
 
 
 

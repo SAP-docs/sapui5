@@ -6,7 +6,7 @@ With this release SAPUI5 is upgraded from version 1.87 to 1.88.
 
 
 
-** **
+****
 
 
 <table>
@@ -64,28 +64,28 @@ Available as of
 <tr>
 <td valign="top">
 
- 1.88 
+1.88 
 
 
 
 </td>
 <td valign="top">
 
- Deprecated 
+Deprecated 
 
 
 
 </td>
 <td valign="top">
 
- Announcement 
+Announcement 
 
 
 
 </td>
 <td valign="top">
 
- **End of Support for Microsoft Internet Explorer 11** 
+**End of Support for Microsoft Internet Explorer 11** 
 
 
 
@@ -119,28 +119,28 @@ Info Only
 <tr>
 <td valign="top">
 
- 1.88 
+1.88 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Demo Kit Feedback** 
+**Demo Kit Feedback** 
 
 
 
@@ -157,7 +157,7 @@ We have improved the following Demo Kit areas:
 
 -   We have improved the readability of the *Known direct subclasses* popover in the *API Reference*. The subclasses are displayed in a list with only one item per row. It is now easier to browse through the numerous subclasses of base controls, such as `sap.ui.core.Control`.Check it out in the [API Reference](https://ui5.sap.com/#/api/sap.ui.core.Control).
 
--   You can now use the new  [Ctrl\] + [Shift\] + [F\]  shortcut combination to directly enable the global search functionality and start typing without the need to select the search field.
+-   You can now use the new [Ctrl\] + [Shift\] + [F\]  shortcut combination to directly enable the global search functionality and start typing without the need to select the search field.
 
 -   We have improved the appearance of long API names, such as methods and aggregations, in the *API Reference* so that they are no longer truncated.
 
@@ -169,7 +169,7 @@ We have improved the following Demo Kit areas:
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -185,28 +185,28 @@ We have improved the following Demo Kit areas:
 <tr>
 <td valign="top">
 
- 1.88 
+1.88 
 
 
 
 </td>
 <td valign="top">
 
- New 
+New 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.f.IllustratedMessage` \(Experimental\)** 
+**`sap.f.IllustratedMessage` \(Experimental\)** 
 
 
 
@@ -228,7 +228,7 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.f.Il
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -244,28 +244,28 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.f.Il
 <tr>
 <td valign="top">
 
- 1.88 
+1.88 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **SAPUI5 Models** 
+**SAPUI5 Models** 
 
 
 
@@ -283,7 +283,7 @@ The new version of SAPUI5 introduces a new `sap.ui.model.Binding#getResolvedPath
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -299,28 +299,28 @@ The new version of SAPUI5 introduces a new `sap.ui.model.Binding#getResolvedPath
 <tr>
 <td valign="top">
 
- 1.88 
+1.88 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **SAPUI5 OData V4 Model** 
+**SAPUI5 OData V4 Model** 
 
 
 
@@ -340,7 +340,7 @@ For more information, see [OData V4 Model](../04_Essentials/odata-v4-model-5de13
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -356,28 +356,28 @@ For more information, see [OData V4 Model](../04_Essentials/odata-v4-model-5de13
 <tr>
 <td valign="top">
 
- 1.88 
+1.88 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Test Recorder** 
+**Test Recorder** 
 
 
 
@@ -395,7 +395,7 @@ We've introduced the option to generate code snippets with assertions. Assertion
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -411,28 +411,28 @@ We've introduced the option to generate code snippets with assertions. Assertion
 <tr>
 <td valign="top">
 
- 1.88 
+1.88 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **White Spaces in Spreadsheet Export** 
+**White Spaces in Spreadsheet Export** 
 
 
 
@@ -452,7 +452,7 @@ For more information, see [Spreadsheet Export](../04_Essentials/spreadsheet-expo
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -468,28 +468,28 @@ For more information, see [Spreadsheet Export](../04_Essentials/spreadsheet-expo
 <tr>
 <td valign="top">
 
- 1.88 
+1.88 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`P13nDialog`** 
+**`P13nDialog`** 
 
 
 
@@ -510,7 +510,7 @@ We've visually modified the filter tab of the table personalization dialog, or `
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -526,28 +526,28 @@ We've visually modified the filter tab of the table personalization dialog, or `
 <tr>
 <td valign="top">
 
- 1.88 
+1.88 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.f.GridContainer`** 
+**`sap.f.GridContainer`** 
 
 
 
@@ -565,7 +565,7 @@ We have added a new `columnsChange` event, fired when the count of grid columns 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -581,28 +581,28 @@ We have added a new `columnsChange` event, fired when the count of grid columns 
 <tr>
 <td valign="top">
 
- 1.88 
+1.88 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.gantt`** 
+**`sap.gantt`** 
 
 
 
@@ -620,7 +620,7 @@ We have improved the usability of the Gantt chart with the large interval/label 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -636,28 +636,28 @@ We have improved the usability of the Gantt chart with the large interval/label 
 <tr>
 <td valign="top">
 
- 1.88 
+1.88 
 
 
 
 </td>
 <td valign="top">
 
- Deprecated 
+Deprecated 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.UploadCollection`** 
+**`sap.m.UploadCollection`** 
 
 
 
@@ -675,7 +675,7 @@ As of version 1.88, the `UploadCollection` control is deprecated. You can use th
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -691,28 +691,28 @@ As of version 1.88, the `UploadCollection` control is deprecated. You can use th
 <tr>
 <td valign="top">
 
- 1.88 
+1.88 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.filterbar.FilterBar`, `sap.ui.comp.valuehelpdialog.ValueHelpDialog`** 
+**`sap.ui.comp.filterbar.FilterBar`, `sap.ui.comp.valuehelpdialog.ValueHelpDialog`** 
 
 
 
@@ -741,7 +741,7 @@ For more information, see the [Samples](https://ui5.sap.com/#/entity/sap.ui.comp
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -757,28 +757,28 @@ For more information, see the [Samples](https://ui5.sap.com/#/entity/sap.ui.comp
 <tr>
 <td valign="top">
 
- 1.88 
+1.88 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.smartfield.SmartField`, `sap.ui.comp.smartfilterbar.SmartFilterBar`** 
+**`sap.ui.comp.smartfield.SmartField`, `sap.ui.comp.smartfilterbar.SmartFilterBar`** 
 
 
 
@@ -796,7 +796,7 @@ We've introduced the highlighting of search suggestions of the `SmartField` and 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -812,28 +812,28 @@ We've introduced the highlighting of search suggestions of the `SmartField` and 
 <tr>
 <td valign="top">
 
- 1.88 
+1.88 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.smartfield.SmartField`** 
+**`sap.ui.comp.smartfield.SmartField`** 
 
 
 
@@ -851,7 +851,7 @@ We've introduced a new property, `fixedValueListValidationEnabled`, to turn off 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -867,28 +867,28 @@ We've introduced a new property, `fixedValueListValidationEnabled`, to turn off 
 <tr>
 <td valign="top">
 
- 1.88 
+1.88 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.smartform.SmartForm`** 
+**`sap.ui.comp.smartform.SmartForm`** 
 
 
 
@@ -910,7 +910,7 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.c
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -926,28 +926,28 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.c
 <tr>
 <td valign="top">
 
- 1.88 
+1.88 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.smarttable.SmartTable`** 
+**`sap.ui.comp.smarttable.SmartTable`** 
 
 
 
@@ -967,7 +967,7 @@ We have improved the usability and accessibility of column resizing for the resp
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -983,28 +983,28 @@ We have improved the usability and accessibility of column resizing for the resp
 <tr>
 <td valign="top">
 
- 1.88 
+1.88 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.integration.widgets.Card`** 
+**`sap.ui.integration.widgets.Card`** 
 
 
 
@@ -1026,7 +1026,7 @@ We have improved the usability and accessibility of column resizing for the resp
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1042,28 +1042,28 @@ We have improved the usability and accessibility of column resizing for the resp
 <tr>
 <td valign="top">
 
- 1.88 
+1.88 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.unified.Currency`** 
+**`sap.ui.unified.Currency`** 
 
 
 
@@ -1081,7 +1081,7 @@ As an app developer you can now define custom currency names with a length of up
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1097,28 +1097,28 @@ As an app developer you can now define custom currency names with a length of up
 <tr>
 <td valign="top">
 
- 1.88 
+1.88 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- SAP Fiori Elements 
+SAP Fiori Elements 
 
 
 
 </td>
 <td valign="top">
 
- **SAP Fiori elements for OData V2 and SAP Fiori elements for OData V4** 
+**SAP Fiori elements for OData V2 and SAP Fiori elements for OData V4** 
 
 
 
@@ -1139,7 +1139,7 @@ The following changes and new features are available for SAP Fiori elements for 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1155,28 +1155,28 @@ The following changes and new features are available for SAP Fiori elements for 
 <tr>
 <td valign="top">
 
- 1.88 
+1.88 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- SAP Fiori Elements 
+SAP Fiori Elements 
 
 
 
 </td>
 <td valign="top">
 
- **SAP Fiori elements for OData V2** 
+**SAP Fiori elements for OData V2** 
 
 
 
@@ -1198,7 +1198,7 @@ The following changes and new features are available for SAP Fiori elements for 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1214,28 +1214,28 @@ The following changes and new features are available for SAP Fiori elements for 
 <tr>
 <td valign="top">
 
- 1.88 
+1.88 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- SAP Fiori Elements 
+SAP Fiori Elements 
 
 
 
 </td>
 <td valign="top">
 
- **SAP Fiori elements for OData V4** 
+**SAP Fiori elements for OData V4** 
 
 
 
@@ -1260,7 +1260,7 @@ The following changes and new features are available for SAP Fiori elements for 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1277,6 +1277,8 @@ The following changes and new features are available for SAP Fiori elements for 
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.115](what-s-new-in-sapui5-1-115-409fde8.md "With this release SAPUI5 is upgraded from version 1.114 to 1.115.")
 
 [What's New in SAPUI5 1.114](what-s-new-in-sapui5-1-114-890fce1.md "With this release SAPUI5 is upgraded from version 1.113 to 1.114.")
 

@@ -10,7 +10,7 @@ Proper labeling of all UI elements is needed in order to ensure the screen reade
 
 There are several options for labeling:
 
-1.   `Label` element with `labelFor` attribute
+1.  `Label` element with `labelFor` attribute
 
     -   Single ID reference to the labeled control
 

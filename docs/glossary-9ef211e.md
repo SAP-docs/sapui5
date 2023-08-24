@@ -85,14 +85,14 @@ Action represents a business function in the application backend that can be tri
 </td>
 <td valign="top">
 
- SAP Fiori elements 
+SAP Fiori elements 
 
 
 
 </td>
 <td valign="top">
 
- [Actions](06_SAP_Fiori_Elements/actions-cbf16c5.md) 
+[Actions](06_SAP_Fiori_Elements/actions-cbf16c5.md) 
 
 
 
@@ -154,14 +154,14 @@ Annotations contain metadata that accompanies the application data. It is an int
 </td>
 <td valign="top">
 
- SAP Fiori elements 
+SAP Fiori elements 
 
 
 
 </td>
 <td valign="top">
 
- [Working With UI Annotations](06_SAP_Fiori_Elements/working-with-ui-annotations-83c89cc.md) 
+[Working With UI Annotations](06_SAP_Fiori_Elements/working-with-ui-annotations-83c89cc.md) 
 
 
 
@@ -300,7 +300,7 @@ An asynchronous action is one that the backend can execute sometime after the us
 </td>
 <td valign="top">
 
- SAP Fiori elements 
+SAP Fiori elements 
 
 
 
@@ -760,14 +760,14 @@ A finalizing action placed at the bottom of the page that applies to the entire 
 </td>
 <td valign="top">
 
- SAP Fiori elements 
+SAP Fiori elements 
 
 
 
 </td>
 <td valign="top">
 
- [Defining Determining Actions](06_SAP_Fiori_Elements/defining-determining-actions-1743323.md) 
+[Defining Determining Actions](06_SAP_Fiori_Elements/defining-determining-actions-1743323.md) 
 
 
 
@@ -785,7 +785,7 @@ diagnostics
 
 A diagnostics window is available in SAPUI5 applications.
 
-To open it, use the following [shortcut](02_Read-Me-First/keyboard-shortcuts-for-sapui5-tools-154844c.md):  [Ctrl\] + [Shift\] + [Alt\] /[Option\][S\] 
+To open it, use the following [shortcut](02_Read-Me-First/keyboard-shortcuts-for-sapui5-tools-154844c.md): [Ctrl\] + [Shift\] + [Alt\] /[Option\][S\] 
 
 
 
@@ -916,7 +916,7 @@ For example, for a sales order processing application, the data model can define
 </td>
 <td valign="top">
 
- SAP Fiori elements 
+SAP Fiori elements 
 
 
 
@@ -946,7 +946,7 @@ Extension of SAP Fiori elements application where you can add custom code, that 
 </td>
 <td valign="top">
 
- SAP Fiori elements 
+SAP Fiori elements 
 
 
 
@@ -989,7 +989,7 @@ Facet is the basic building block of the object page. A facet can be:
 </td>
 <td valign="top">
 
- SAP Fiori elements 
+SAP Fiori elements 
 
 
 
@@ -1007,21 +1007,21 @@ Facet is the basic building block of the object page. A facet can be:
 <tr>
 <td valign="top">
 
- SAP Fiori 
+SAP Fiori 
 
 
 
 </td>
 <td valign="top">
 
- SAP Fiori is the user experience \(UX\) for SAP software that applies modern design principles. SAP solutions are using the SAP Fiori UX to provide a personalized, responsive, and simple user experience.
+SAP Fiori is the user experience \(UX\) for SAP software that applies modern design principles. SAP solutions are using the SAP Fiori UX to provide a personalized, responsive, and simple user experience.
 
 
 
 </td>
 <td valign="top">
 
- SAP Fiori 
+SAP Fiori 
 
 
 
@@ -1115,7 +1115,7 @@ It is the inner app state that stores all the information required to retrieve t
 </td>
 <td valign="top">
 
- SAP Fiori elements 
+SAP Fiori elements 
 
 
 
@@ -1216,7 +1216,7 @@ For example:
 </td>
 <td valign="top">
 
- SAP Fiori elements 
+SAP Fiori elements 
 
 
 
@@ -1244,7 +1244,7 @@ Layout Management refers to how the information in the object page is displayed 
 </td>
 <td valign="top">
 
- SAP Fiori elements 
+SAP Fiori elements 
 
 
 
@@ -1290,28 +1290,28 @@ SAPUI5/OpenUI5
 <tr>
 <td valign="top">
 
- `LineItem` - Table
+`LineItem` - Table
 
 
 
 </td>
 <td valign="top">
 
- `LineItem` define the columns that can be seen in the table.
+`LineItem` define the columns that can be seen in the table.
 
 
 
 </td>
 <td valign="top">
 
- SAP Fiori elements 
+SAP Fiori elements 
 
 
 
 </td>
 <td valign="top">
 
- [Configuring Tables](06_SAP_Fiori_Elements/configuring-tables-f4eb70f.md) 
+[Configuring Tables](06_SAP_Fiori_Elements/configuring-tables-f4eb70f.md) 
 
 
 
@@ -1345,14 +1345,14 @@ For more information, see annotations.
 </td>
 <td valign="top">
 
- SAP Fiori elements 
+SAP Fiori elements 
 
 
 
 </td>
 <td valign="top">
 
- [Checking Folder Structure and Project Artifacts](06_SAP_Fiori_Elements/checking-folder-structure-and-project-artifacts-f7abd1b.md) 
+[Checking Folder Structure and Project Artifacts](06_SAP_Fiori_Elements/checking-folder-structure-and-project-artifacts-f7abd1b.md) 
 
 
 
@@ -1375,7 +1375,7 @@ Main entity refers to the entry entity that holds the information displayed in t
 </td>
 <td valign="top">
 
- SAP Fiori elements 
+SAP Fiori elements 
 
 
 
@@ -1512,14 +1512,14 @@ For more information, see xAppState.
 </td>
 <td valign="top">
 
- SAP Fiori elements 
+SAP Fiori elements 
 
 
 
 </td>
 <td valign="top">
 
- [Configuring Navigation](06_SAP_Fiori_Elements/configuring-navigation-a424275.md) 
+[Configuring Navigation](06_SAP_Fiori_Elements/configuring-navigation-a424275.md) 
 
 
 
@@ -1542,7 +1542,7 @@ Navigation entity refers to the other entities associated with the given entity 
 </td>
 <td valign="top">
 
- SAP Fiori elements 
+SAP Fiori elements 
 
 
 
@@ -1572,14 +1572,14 @@ A control that is defined on the fly without a library definition or running gen
 </td>
 <td valign="top">
 
- SAPUI5/OpenUI5 
+SAPUI5/OpenUI5 
 
 
 
 </td>
 <td valign="top">
 
- [Developing Controls](09_Developing_Controls/developing-controls-8dcab00.md) 
+[Developing Controls](09_Developing_Controls/developing-controls-8dcab00.md) 
 
 
 
@@ -1602,7 +1602,7 @@ OData \(Open Data Protocol\) is a standard protocol that defines best practices 
 </td>
 <td valign="top">
 
- SAP Fiori elements 
+SAP Fiori elements 
 
 
 
@@ -1664,7 +1664,7 @@ OPA5 is an API for SAPUI5 controls. It hides asynchronicity and eases access to 
 </td>
 <td valign="top">
 
- SAPUI5/OpenUI5 
+SAPUI5/OpenUI5 
 
 
 
@@ -1696,14 +1696,14 @@ They allow users to navigate to the previous or next object page shown in the li
 </td>
 <td valign="top">
 
- SAP Fiori elements 
+SAP Fiori elements 
 
 
 
 </td>
 <td valign="top">
 
- [Object Page Elements](06_SAP_Fiori_Elements/object-page-elements-645e27a.md) 
+[Object Page Elements](06_SAP_Fiori_Elements/object-page-elements-645e27a.md) 
 
 
 
@@ -1848,14 +1848,14 @@ For more information, see facet.
 </td>
 <td valign="top">
 
- SAP Fiori elements 
+SAP Fiori elements 
 
 
 
 </td>
 <td valign="top">
 
- [Defining and Adapting Sections](06_SAP_Fiori_Elements/defining-and-adapting-sections-facfea0.md) 
+[Defining and Adapting Sections](06_SAP_Fiori_Elements/defining-and-adapting-sections-facfea0.md) 
 
 
 
@@ -1880,14 +1880,14 @@ For example: A `SalesOrder` entity might have a `SalesOrderID` field as a semant
 </td>
 <td valign="top">
 
- SAP Fiori elements 
+SAP Fiori elements 
 
 
 
 </td>
 <td valign="top">
 
- [Handling Semantic Key Fields](06_SAP_Fiori_Elements/handling-semantic-key-fields-aa2793c.md) 
+[Handling Semantic Key Fields](06_SAP_Fiori_Elements/handling-semantic-key-fields-aa2793c.md) 
 
 
 
@@ -1910,7 +1910,7 @@ A service is code that delivers one or more functionalities or capabilities on t
 </td>
 <td valign="top">
 
- SAP Fiori elements 
+SAP Fiori elements 
 
 
 
@@ -2036,14 +2036,14 @@ For example, when user updates **Quantity** in the frontend, applications can co
 </td>
 <td valign="top">
 
- SAP Fiori elements 
+SAP Fiori elements 
 
 
 
 </td>
 <td valign="top">
 
- [Side Effects](06_SAP_Fiori_Elements/side-effects-18b17bd.md) 
+[Side Effects](06_SAP_Fiori_Elements/side-effects-18b17bd.md) 
 
 
 
@@ -2094,7 +2094,7 @@ A synchronous action is one that the backend executes immediately after the user
 </td>
 <td valign="top">
 
- SAP Fiori elements 
+SAP Fiori elements 
 
 
 
@@ -2252,14 +2252,14 @@ Germany \(01\)
 </td>
 <td valign="top">
 
- SAP Fiori elements 
+SAP Fiori elements 
 
 
 
 </td>
 <td valign="top">
 
- [Further Features of the Field](06_SAP_Fiori_Elements/further-features-of-the-field-f49a0f7.md) 
+[Further Features of the Field](06_SAP_Fiori_Elements/further-features-of-the-field-f49a0f7.md) 
 
 
 
@@ -2312,14 +2312,14 @@ It is Webdriver.IO service, designed to run cross-platform end-to-end tests on a
 </td>
 <td valign="top">
 
- SAPUI5/OpenUI5 
+SAPUI5/OpenUI5 
 
 
 
 </td>
 <td valign="top">
 
- [Testing](04_Essentials/testing-7cdee40.md) 
+[Testing](04_Essentials/testing-7cdee40.md) 
 
 
 
@@ -2344,14 +2344,14 @@ For more information, see navigation: internal, external, outbound, inbound.
 </td>
 <td valign="top">
 
- SAP Fiori elements 
+SAP Fiori elements 
 
 
 
 </td>
 <td valign="top">
 
- [Configuring External Navigation](06_SAP_Fiori_Elements/configuring-external-navigation-1d4a0f9.md) 
+[Configuring External Navigation](06_SAP_Fiori_Elements/configuring-external-navigation-1d4a0f9.md) 
 
 
 

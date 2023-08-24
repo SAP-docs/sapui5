@@ -8,11 +8,11 @@ In this step we will make the search bookmarkable. This allows users to search f
 
 ## Preview
 
-   
+  
   
 **Search and sorting bookmarkable**
 
- ![](images/Tutorial_Navigation_and_Routing_Step_12_feb2ddd.png "Search and sorting bookmarkable") 
+![](images/Tutorial_Navigation_and_Routing_Step_12_feb2ddd.png "Search and sorting bookmarkable")
 
 
 

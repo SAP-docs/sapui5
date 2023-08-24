@@ -10,7 +10,7 @@ In this step, we will create the `ProcessFlow` on the **Production Process** pag
 
 ## Preview
 
- ![](images/Step10_1_a4df9ef.png) 
+![](images/Step10_1_a4df9ef.png)
 
 
 

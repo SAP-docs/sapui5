@@ -18,13 +18,13 @@ In the *Quality Control* view, we want to display the temperatures needed for di
 
 ### Chart Content
 
- ![](images/Step5_1_08bae85.png) 
+![](images/Step5_1_08bae85.png)
 
 
 
 ### Table Content
 
- ![](images/Step5_2_85f1fc8.png) 
+![](images/Step5_2_85f1fc8.png)
 
 
 

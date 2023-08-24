@@ -20,28 +20,17 @@ An incoming value for a field that is also a filter field in the entity set of t
 
 When dealing with incoming navigation, in addition to the navigation context passed by the source application, there are also other values coming from the FLP, like the FLP target mapping default values. The FLP target mapping can have parameters to which you can assign default values. These default values can also point to the FLP user default values.
 
-   
+  
   
 **Handling Default Values from FLP**
 
- ![](images/Handling_Default_Values_from_FLP_9c2ee88.png "Handling Default Values from FLP") 
+![](images/Handling_Default_Values_from_FLP_9c2ee88.png "Handling Default Values from FLP")
 
 -   When you navigate into a list report app via intent-based navigation: Only those values that are added by the FLP via the standard target mapping mechanism are considered.
 
 -   When you navigate into a list report app via a static FLP tile \(with no navigation context\): If there is no user default variant available, then the FLP default values as passed via the target mapping mechanism are considered.
 
 -   When you navigate into a list report app via a dynamic tile \(for example an *SAP Smart Business* tile, where the navigation context is passed\): In this case, there is a special handling for `DisplayCurrency`. For all other fields, the FLP default values are ignored \(except those that are added by the FLP via the standard target mapping mechanism\).
-
-    Special Handling of `DisplayCurrency`
-
-    The incoming navigation context will only have the source application context and the target Fiori elements application first checks for a filter bar which has a filter field containing the technical name `DisplayCurrency`. If there is such a filter field, SAP Fiori elements checks for the following conditions:
-
-    -   The `DisplayCurrency` filter field is marked as a mandatory filter field.
-
-    -   There is no incoming value for this from the source application context.
-
-
-    If both these conditions are fulfilled, the FLP user default values are checked to see if there is a field called `DisplayCurrency`. If so, this value is used for the filter field.
 
 
 
@@ -214,6 +203,19 @@ During inbound navigation to flexible column layout application, if the navigati
 
 
 
+### Special Handling of `DisplayCurrency`
+
+The incoming navigation context will only have the source application context and the target Fiori elements application first checks for a filter bar which has a filter field containing the technical name `DisplayCurrency`. If there is such a filter field, SAP Fiori elements checks for the following conditions:
+
+-   The `DisplayCurrency` filter field is marked as a mandatory filter field.
+
+-   There is no incoming value for this from the source application context.
+
+
+If both these conditions are fulfilled, the FLP user default values are checked to see if there is a field called `DisplayCurrency`. If so, this value is used for the filter field.
+
+
+
 ### Inbound Navigation to Object Pages Using Deep Linking
 
 Applications can also trigger deep linking to object pages by only providing all semantic keys corresponding to the list report entity set. In this case either the draft object page instance is loaded \(if a draft exists for the user\) or the active object page is loaded \(if no draft exists\).
@@ -281,7 +283,7 @@ In addition, the manifest must have the route having the key configured for the 
 >                     "level": 1,
 >                     "options": {
 >                         "settings": {
->                             "entitySet": "yourEntity"
+>                             "contextPath": "/yourEntity"
 >                         }
 >                     }
 >                 }
@@ -311,7 +313,7 @@ To enable deep linking for a subobject page, you need to enable it in the manife
 >      "name":"sap.fe.templates.ObjectPage",
 >      "options":{
 >           "settings":{
->                "entitySet":"SalesOrderManage",
+>                "contextPath":"/SalesOrderManage",
 >                "allowDeepLinking":true,
 >                ....
 >                ...

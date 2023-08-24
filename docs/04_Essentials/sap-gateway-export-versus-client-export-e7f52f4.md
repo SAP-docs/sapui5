@@ -106,14 +106,14 @@ Office Open XML spreadsheets are ZIP containers that contain a particular file s
 </td>
 <td valign="top">
 
- ![Supported](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Supported](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Supported](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Supported](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
@@ -136,7 +136,7 @@ The exported spreadsheet contains a header row with the corresponding column lab
 </td>
 <td valign="top">
 
- ![Supported](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Supported](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
@@ -238,14 +238,14 @@ The exported file can contain hierarchies that are visualized when opening the f
 </td>
 <td valign="top">
 
- ![Supported](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Supported](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Supported](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Supported](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
@@ -300,14 +300,14 @@ If configured, Read Access Logging tracks who has access to which data at which 
 </td>
 <td valign="top">
 
- ![Supported](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Supported](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Supported](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Supported](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 

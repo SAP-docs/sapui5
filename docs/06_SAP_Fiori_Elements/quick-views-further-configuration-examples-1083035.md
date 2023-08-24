@@ -13,7 +13,7 @@ You have various options for configuring quick views. This documentation provide
 > ### Note:  
 > Not all columns that are supported in a table support the display of a quick view.
 
- ![](images/Quick_View_in_Object_Page_Table_2f6910f.png) 
+![](images/Quick_View_in_Object_Page_Table_2f6910f.png)
 
 For the currency, no referential constraint is defined by the service. This is why you need to make the following entry:
 
@@ -181,7 +181,7 @@ For the currency, no referential constraint is defined by the service. This is w
 > ### Example:  
 > `QuickViewFacets` annotation for Supplier
 > 
->  ![](images/Quick_View_Example_1_8633539.png) 
+> ![](images/Quick_View_Example_1_8633539.png)
 
 > ### Sample Code:  
 > XML Annotation
@@ -363,7 +363,7 @@ For the currency, no referential constraint is defined by the service. This is w
 ## Additional Features in SAP Fiori Elements for OData V4
 
 > ### Example:  
->  ![](images/Quick_View_for_Smart_Link_Navigation_Labels_2f019ad.png) 
+> ![](images/Quick_View_for_Smart_Link_Navigation_Labels_2f019ad.png)
 
 > ### Sample Code:  
 > XML Annotation

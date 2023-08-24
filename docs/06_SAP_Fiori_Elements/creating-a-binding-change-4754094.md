@@ -2,7 +2,7 @@
 
 # Creating a Binding Change
 
-You can create property binding changes manually by using the UI Adaptation Editor. Note that you can use only those properties whose data has already be retrieved by the model.
+You can create property binding changes manually by using the Page Editor. Note that you can use only those properties whose data has already been retrieved by the model.
 
 
 
@@ -26,9 +26,11 @@ Perform the following steps to create a property binding change:
 
 ## Procedure
 
-1.  Open SAP Web IDE and choose the SAPUI5 Visual Editor for your app.
+1.  Open the Page Editor and for the application and page you want to add the binding change to.
 
-2.  Change the property to which you want to apply a property binding, for example, the *Visible* property of a button. This is an example of a change file:
+2.  Find the property you want to apply an expression \(e.g. the visibility of an object page section\), and change the value in the property panel. You can select a value from the drop-down or compose your own expression.
+
+3.  In case you already have a change file of type *propertyChange* like in the following example:
 
     ```
     
@@ -46,7 +48,7 @@ Perform the following steps to create a property binding change:
         "selector": {        "id": "STTA_MP::sap.suite.ui.generic.template.ObjectPage.view.Details::STTA_C_MP_Product--action::STTA_PROD_MAN.STTA_PROD_MAN_Entities::STTA_C_MP_ProductCopywithparams",
             "type": "sap.uxap.ObjectPageHeaderActionButton"
         },
-        "layer": "VENDOR",
+        "layer": "CUSTOMER_BASE",
         "texts": {},
         "namespace": "apps/STTA_MP/changes/",
         "creation": "2016-04-18T14:05:47.149Z",
@@ -62,7 +64,7 @@ Perform the following steps to create a property binding change:
     
     ```
 
-    Make the following replacements in this change:
+    You can make the following replacements in this change:
 
     -   Change the value of the `changeType` from `propertyChange` to `propertyBindingChange`.
 
@@ -87,7 +89,7 @@ Perform the following steps to create a property binding change:
                 "id": "STTA_MP::sap.suite.ui.generic.template.ObjectPage.view.Details::STTA_C_MP_Product--action::STTA_PROD_MAN.STTA_PROD_MAN_Entities::STTA_C_MP_ProductCopywithparams",
                 "type": "sap.uxap.ObjectPageHeaderActionButton"
             },
-            "layer": "VENDOR",
+            "layer": "CUSTOMER_BASE",
             "texts": {},
             "namespace": "apps/STTA_MP/changes/",
             "creation": "2016-04-18T14:05:47.149Z",

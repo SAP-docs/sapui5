@@ -70,7 +70,7 @@ jQuery 3.x + Compat. Layer = jQuery 2.x
 <tr>
 <td valign="top">
 
- **`jQuery.fn.size()`** 
+**`jQuery.fn.size()`** 
 
 
 
@@ -141,14 +141,14 @@ when a jQuery object is created from a node \(like in our `oControl.$()` call\),
 </td>
 <td valign="top">
 
- `context` property exists
+`context` property exists
 
 
 
 </td>
 <td valign="top">
 
- `context` property has been removed
+`context` property has been removed
 
 
 
@@ -260,7 +260,7 @@ returns `undefined` \(cast to `NaN`\)
 <tr>
 <td valign="top">
 
- **`jQuery.event.props`** and **`jQuery.event.fixHooks`** 
+**`jQuery.event.props`** and **`jQuery.event.fixHooks`** 
 
 
 
@@ -290,7 +290,7 @@ removed
 <tr>
 <td valign="top">
 
- **`jQuery.Deferred.then(function A() {})`** 
+**`jQuery.Deferred.then(function A() {})`** 
 
 
 
@@ -329,14 +329,14 @@ Function `A` is called after the current call stack is finished
 </td>
 <td valign="top">
 
- `this` context is set to the promise of the `Deferred` object
+`this` context is set to the promise of the `Deferred` object
 
 
 
 </td>
 <td valign="top">
 
- `this` context is undefined
+`this` context is undefined
 
 
 
@@ -412,7 +412,7 @@ Use `jQuery.fn.[outerWidth|outerHeight]` instead. Also works in jQuery 2.x
 <tr>
 <td valign="top">
 
- **`jQuery.animation`** 
+**`jQuery.animation`** 
 
 
 
@@ -485,7 +485,7 @@ Function `A` is called after the current call stack has finished
 <tr>
 <td valign="top">
 
- **`jQuery.swap()`** 
+**`jQuery.swap()`** 
 
 
 

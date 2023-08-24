@@ -60,9 +60,6 @@ The enhanced controller methods each call a corresponding extension method:
 
 
 > ### Note:  
-> The methods `getCustomAppStateDataExtension` and `restoreCustomAppStateDataExtension` are generated automatically in the controller extension if a custom field is added to the app via the SAP WebIDE wizard. You can change the code in the methods as needed.
-
-> ### Note:  
 > The filterable fields are defined by metadata annotations. Use the extension option if the filter attribute can only be calculated by the client.
 
 For an example with step-by-step instructions, see [Adding Filterable Field to the Smart Filter Bar](adding-filterable-field-to-the-smart-filter-bar-3a51582.md).
@@ -161,7 +158,7 @@ You can configure the `FilterBar` locally via the section `@com.sap.vocabularies
 >                     "name": "sap.fe.templates.ListReport",
 >                     "options": {
 >                         "settings" : {
->                             "entitySet" : "SalesOrderManage",                              
+>                             "contextPath" : "/SalesOrderManage",                              
 >                             "controlConfiguration" : {
 >                                  "@com.sap.vocabularies.UI.v1.SelectionFields" : {
 >                                     "navigationProperties": ["_Partner", "_DistributionChannel"],
@@ -248,7 +245,7 @@ You can build these custom filter fields for different properties of the `SalesO
 
 The function `setFilterValues` that is used is part of the list report's `ControllerExtensionAPI`.
 
- For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.fe.templates.ListReport.ExtensionAPI/methods/setFilterValues) in the Demo Kit. 
+For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.fe.templates.ListReport.ExtensionAPI/methods/setFilterValues) in the Demo Kit. 
 
 
 

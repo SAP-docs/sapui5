@@ -24,7 +24,7 @@ With UI Inspector, you can find answers to the following questions, for example:
 
 ## Preview
 
- ![](images/Troubleshooting_Tutorial_UI5_Inspector_e881330.gif) 
+![](images/Troubleshooting_Tutorial_UI5_Inspector_e881330.gif)
 
 
 

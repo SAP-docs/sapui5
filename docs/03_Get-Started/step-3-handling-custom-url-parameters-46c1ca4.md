@@ -10,11 +10,11 @@ We know that the OData V2 provider of this service implements a URL parameter th
 
 ## Preview
 
-   
+  
   
 **Only the next three meet-ups are shown**
 
- ![](images/Tutorial_Mock_Server_Step_3_e65ccb2.png "Only the next three meet-ups are shown") 
+![](images/Tutorial_Mock_Server_Step_3_e65ccb2.png "Only the next three meet-ups are shown")
 
 
 

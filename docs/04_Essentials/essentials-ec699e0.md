@@ -10,7 +10,7 @@ This chapter and its sections describe the development concepts of SAPUI5, such 
 
 ## SAPUI5 Architecture
 
- ![SAPUI5 Architecture Overview](images/SAPUI5_Architecture_Overview_99b4be7.png) 
+![SAPUI5 Architecture Overview](images/SAPUI5_Architecture_Overview_99b4be7.png)
 
 SAPUI5 is a client UI technology based on JavaScript, CSS and HTML5.
 

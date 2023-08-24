@@ -8,11 +8,11 @@ The *Employees* table displays employee data. However, the resumes of the employ
 
 ## Preview
 
-   
+  
   
 **Navigation to an existing route from a table item**
 
- ![](images/Tutorial_Navigation_and_Routing_Step_15_d97fe6d.png "Navigation to an existing route from a table item") 
+![](images/Tutorial_Navigation_and_Routing_Step_15_d97fe6d.png "Navigation to an existing route from a table item")
 
 
 

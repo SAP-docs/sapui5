@@ -14,11 +14,11 @@ A chart facet is suitable to use if you wish to present data graphically for ana
 
 To add a chart facet, use the `UI.Facet` term and include the `UI.ReferenceFacet` complex type, and then reference the `UI.Chart` annotation. This is displayed as shown within a content section of the object page in the following screenshot:
 
-   
+  
   
 **Chart in Object Page**
 
- ![](images/ObjectPage_SmartChart_69b1977.png "Chart in Object Page") 
+![](images/ObjectPage_SmartChart_69b1977.png "Chart in Object Page")
 
 For more information, see [Configuring Charts](configuring-charts-653ed0f.md).
 
@@ -30,11 +30,11 @@ For more information, see [Configuring Charts](configuring-charts-653ed0f.md).
 
 The object page does not support the `UI.Chart` with qualifier \(see example below\).
 
-   
+  
   
 **Navigation Property**
 
- ![](images/Chart_Limitation_02debb6.png "Navigation Property") 
+![](images/Chart_Limitation_02debb6.png "Navigation Property")
 
 
 

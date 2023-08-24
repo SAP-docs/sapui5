@@ -54,7 +54,7 @@ On leave, move focus to the next control in the application.
 <tr>
 <td valign="top">
 
- [Shift\] + [Tab\] 
+[Shift\] + [Tab\] 
 
 
 
@@ -77,7 +77,7 @@ On leave, move focus to the previous control in the tab order.
 
 ## Group Navigation
 
-Controls which are adjacent within the application can be grouped. Within a group, [F6\] or  [Ctrl\] + [Alt/Option\] + [Down\]  skip all controls of the group and move the focus to the first control in the application within the **next** group.  [Shift\] + [F6\]  or  [Ctrl\] + [Alt/Option\] + [Up\] move the focus to the first control of the **previous** group.
+Controls which are adjacent within the application can be grouped. Within a group, [F6\] or [Ctrl\] + [Alt/Option\] + [Down\]  skip all controls of the group and move the focus to the first control in the application within the **next** group. [Shift\] + [F6\]  or [Ctrl\] + [Alt/Option\] + [Up\] move the focus to the first control of the **previous** group.
 
 
 <table>
@@ -104,7 +104,7 @@ Behavior
 
 or
 
- [Ctrl\] + [Alt/Option\] + [Down\] 
+[Ctrl\] + [Alt/Option\] + [Down\] 
 
 
 
@@ -122,11 +122,11 @@ Move focus to the next control in the tab order after the group
 <tr>
 <td valign="top">
 
- [Shift\] + [F6\]  
+[Shift\] + [F6\]  
 
 or
 
- [Ctrl\] + [Alt/Option\] + [Up\] 
+[Ctrl\] + [Alt/Option\] + [Up\] 
 
 
 

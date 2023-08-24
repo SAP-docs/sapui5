@@ -70,7 +70,7 @@ The property containing the criticality can have the following values \(derived 
 
 The texts are not static, so you can change them to suit your needs by defining them in the criticality path. The following image shows examples of using these values in stock availability of products both in the list report and the object page:
 
- ![](images/LROP_Status_Colors_and_Icons_75aa307.png) 
+![](images/LROP_Status_Colors_and_Icons_75aa307.png)
 
 
 

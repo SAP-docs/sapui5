@@ -33,30 +33,14 @@ ARIA Attribute
 <tr>
 <td valign="top">
 
- `editable` 
+`editable` 
 
 
 
 </td>
 <td valign="top">
 
- `aria-readonly` 
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
- `enabled` 
-
-
-
-</td>
-<td valign="top">
-
- `aria-disabled` 
+`aria-readonly` 
 
 
 
@@ -65,30 +49,14 @@ ARIA Attribute
 <tr>
 <td valign="top">
 
- `visible` 
+`enabled` 
 
 
 
 </td>
 <td valign="top">
 
- `aria-hidden` 
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
- `required` 
-
-
-
-</td>
-<td valign="top">
-
- `aria-required` 
+`aria-disabled` 
 
 
 
@@ -97,14 +65,14 @@ ARIA Attribute
 <tr>
 <td valign="top">
 
- `checked` 
+`visible` 
 
 
 
 </td>
 <td valign="top">
 
- `aria-checked` 
+`aria-hidden` 
 
 
 
@@ -113,14 +81,46 @@ ARIA Attribute
 <tr>
 <td valign="top">
 
- `selected` 
+`required` 
 
 
 
 </td>
 <td valign="top">
 
- `aria-selected` 
+`aria-required` 
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`checked` 
+
+
+
+</td>
+<td valign="top">
+
+`aria-checked` 
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`selected` 
+
+
+
+</td>
+<td valign="top">
+
+`aria-selected` 
 
 
 

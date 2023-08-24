@@ -66,14 +66,14 @@ Object page
 </td>
 <td valign="top">
 
- `onBeforeRebindTableExtension` 
+`onBeforeRebindTableExtension` 
 
 
 
 </td>
 <td valign="top">
 
- [Example: Applying Custom Logic When a Table is Loaded or Refreshed](example-applying-custom-logic-when-a-table-is-loaded-or-refreshed-382a6c3.md) 
+[Example: Applying Custom Logic When a Table is Loaded or Refreshed](example-applying-custom-logic-when-a-table-is-loaded-or-refreshed-382a6c3.md) 
 
 
 
@@ -105,7 +105,7 @@ List report
 </td>
 <td valign="top">
 
- [Example: Adding Columns to a Responsive Table in the List Report](example-adding-columns-to-a-responsive-table-in-the-list-report-28e9570.md) 
+[Example: Adding Columns to a Responsive Table in the List Report](example-adding-columns-to-a-responsive-table-in-the-list-report-28e9570.md) 
 
 
 
@@ -130,7 +130,7 @@ Object page
 </td>
 <td valign="top">
 
- [Example: Adding Columns to a Responsive Table on the Object Page](example-adding-columns-to-a-responsive-table-on-the-object-page-c174923.md) 
+[Example: Adding Columns to a Responsive Table on the Object Page](example-adding-columns-to-a-responsive-table-on-the-object-page-c174923.md) 
 
 
 
@@ -153,14 +153,14 @@ List report
 </td>
 <td valign="top">
 
- `GridTableColumnsExtension|<Name of the EntitySet>` 
+`GridTableColumnsExtension|<Name of the EntitySet>` 
 
 
 
 </td>
 <td valign="top">
 
- [Example: Adding Columns to a Grid Table in the List Report](example-adding-columns-to-a-grid-table-in-the-list-report-69bfeec.md) 
+[Example: Adding Columns to a Grid Table in the List Report](example-adding-columns-to-a-grid-table-in-the-list-report-69bfeec.md) 
 
 
 
@@ -176,14 +176,14 @@ Object page
 </td>
 <td valign="top">
 
- `` 
+``
 
 
 
 </td>
 <td valign="top">
 
- [Example: Adding Columns to a Grid Table in the Object Page](example-adding-columns-to-a-grid-table-in-the-object-page-10a6ef1.md) 
+[Example: Adding Columns to a Grid Table in the Object Page](example-adding-columns-to-a-grid-table-in-the-object-page-10a6ef1.md) 
 
 
 
@@ -206,7 +206,7 @@ List report
 </td>
 <td valign="top">
 
- `AnalyticalTableColumnsExtension|<Name of the EntitySet>GridTableColumnsExtension|<Name of the table EntitySet>|<Facet ID/Annotation Path>` 
+`AnalyticalTableColumnsExtension|<Name of the EntitySet>GridTableColumnsExtension|<Name of the table EntitySet>|<Facet ID/Annotation Path>` 
 
 
 
@@ -229,14 +229,14 @@ Object page
 </td>
 <td valign="top">
 
- `GridTableColumnsExtension|AnalyticalTableColumnsExtension|<Name of the table EntitySet>|<Facet ID/Annotation Path>` 
+`GridTableColumnsExtension|AnalyticalTableColumnsExtension|<Name of the table EntitySet>|<Facet ID/Annotation Path>` 
 
 
 
 </td>
 <td valign="top">
 
- [Example: Adding Columns to an Analytical Table on the Object Page](example-adding-columns-to-an-analytical-table-on-the-object-page-3b78e69.md) 
+[Example: Adding Columns to an Analytical Table on the Object Page](example-adding-columns-to-an-analytical-table-on-the-object-page-3b78e69.md) 
 
 
 
@@ -259,14 +259,14 @@ List report
 </td>
 <td valign="top">
 
- `TreeTableColumnsExtension|<Name of the EntitySet>` 
+`TreeTableColumnsExtension|<Name of the EntitySet>` 
 
 
 
 </td>
 <td valign="top">
 
- [Example: Adding Columns to a Tree Table in the List Report](example-adding-columns-to-a-tree-table-in-the-list-report-b903da5.md) 
+[Example: Adding Columns to a Tree Table in the List Report](example-adding-columns-to-a-tree-table-in-the-list-report-b903da5.md) 
 
 
 
@@ -293,7 +293,7 @@ The table containing additional custom columns can look like this:
   
 **Custom Columns in a Table**
 
- ![](images/Custom_Columns_00819cd.png "Custom Columns in a Table") 
+![](images/Custom_Columns_00819cd.png "Custom Columns in a Table")
 
 > ### Note:  
 > When adding custom columns to tables, each column needs a column key as its unique identifier. Use only the following characters:
@@ -416,7 +416,7 @@ The table containing additional custom columns can look like this:
 
 The `manifest.json` sample code above enables you to add an additional column to an object page. By default, the column isn't visible on the UI. Once it has been added via *Add/Remove Columns*, this is the result:
 
- ![](images/Custom_Button_bea7e9b.png) 
+![](images/Custom_Button_bea7e9b.png)
 
 **Settings**
 
@@ -781,19 +781,19 @@ You can add the configuration to support sorting and filtering via "properties" 
 
 The header of a custom column is clickable:
 
- ![](images/Custom_Column_Sorting_2138690.png) 
+![](images/Custom_Column_Sorting_2138690.png)
 
 Upon selection of the icon shown in the screenshot, the provided properties are displayed:
 
- ![](images/Sorting_Icon_83b2725.png) 
+![](images/Sorting_Icon_83b2725.png)
 
 If sorting is applied, the indicator is added to any column that points to the property used for sorting:
 
- ![](images/Sorted_By_Property_48480a8.png) 
+![](images/Sorted_By_Property_48480a8.png)
 
 Properties added to any custom column can also be found in the sorting and filtering dialog \(make sure sorting and filtering is available for your table\):
 
- ![](images/Sorting_and_Filterin_Dialog_d8b8a6e.png) 
+![](images/Sorting_and_Filterin_Dialog_d8b8a6e.png)
 
 
 

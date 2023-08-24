@@ -60,21 +60,21 @@ Description
 <tr>
 <td valign="top">
 
- `inputFormat` 
+`inputFormat` 
 
 
 
 </td>
 <td valign="top">
 
- `string` 
+`string` 
 
 
 
 </td>
 <td valign="top">
 
- `"([0-9]{3})([0-9]{4})"` 
+`"([0-9]{3})([0-9]{4})"` 
 
 
 
@@ -90,7 +90,7 @@ Yes
 
 Used as a regular expression that determines specific parts of the original value. This makes it possible to apply the template to a single property instead of multiple properties.
 
- `inputFormat` is ignored if no `template` is provided.
+`inputFormat` is ignored if no `template` is provided.
 
 
 
@@ -99,21 +99,21 @@ Used as a regular expression that determines specific parts of the original valu
 <tr>
 <td valign="top">
 
- `template` 
+`template` 
 
 
 
 </td>
 <td valign="top">
 
- `string` 
+`string` 
 
 
 
 </td>
 <td valign="top">
 
- `"{0} (Company code {1})"` 
+`"{0} (Company code {1})"` 
 
 
 
@@ -136,14 +136,14 @@ A textual template that can be filled with multiple values from various business
 <tr>
 <td valign="top">
 
- `wrap` 
+`wrap` 
 
 
 
 </td>
 <td valign="top">
 
- `boolean` 
+`boolean` 
 
 
 
@@ -228,14 +228,14 @@ Description
 <tr>
 <td valign="top">
 
- `trueValue` 
+`trueValue` 
 
 
 
 </td>
 <td valign="top">
 
- `string` 
+`string` 
 
 
 
@@ -251,14 +251,14 @@ Defines the textual representation of a Boolean type that has the value `true`.
 <tr>
 <td valign="top">
 
- `falseValue` 
+`falseValue` 
 
 
 
 </td>
 <td valign="top">
 
- `string` 
+`string` 
 
 
 
@@ -343,7 +343,7 @@ Description
 <tr>
 <td valign="top">
 
- `scale` 
+`scale` 
 
 
 
@@ -363,7 +363,7 @@ Description
 </td>
 <td valign="top">
 
- `number` 
+`number` 
 
 
 
@@ -386,7 +386,7 @@ Sets a fixed number of decimals. The scale is applied to the whole column and di
 <tr>
 <td valign="top">
 
- `autoScale` 
+`autoScale` 
 
 
 
@@ -427,7 +427,7 @@ If no code list is available or the code list does not contain a particular unit
 <tr>
 <td valign="top">
 
- `delimiter` 
+`delimiter` 
 
 
 
@@ -443,7 +443,7 @@ If no code list is available or the code list does not contain a particular unit
 </td>
 <td valign="top">
 
- `boolean` 
+`boolean` 
 
 
 
@@ -466,7 +466,7 @@ Specifies if the numeric value is shown in groups of thousands. If set to `true`
 <tr>
 <td valign="top">
 
- `unit` 
+`unit` 
 
 
 
@@ -484,7 +484,7 @@ Specifies if the numeric value is shown in groups of thousands. If set to `true`
 </td>
 <td valign="top">
 
- `string` 
+`string` 
 
 
 
@@ -510,7 +510,7 @@ Specifies the unit of measurement \(UoM\). The UoM is shown next to the numeric 
 <tr>
 <td valign="top">
 
- `unitProperty` 
+`unitProperty` 
 
 
 
@@ -528,7 +528,7 @@ Specifies the unit of measurement \(UoM\). The UoM is shown next to the numeric 
 </td>
 <td valign="top">
 
- `string` 
+`string` 
 
 
 
@@ -614,7 +614,7 @@ Description
 <tr>
 <td valign="top">
 
- `Date` 
+`Date` 
 
 
 
@@ -639,7 +639,7 @@ Represents a date without time-related information. Due to the use of built-in f
 <tr>
 <td valign="top">
 
- `DateTime` 
+`DateTime` 
 
 
 
@@ -666,7 +666,7 @@ The locale has no effect on any time zone formatting. All values in columns of t
 <tr>
 <td valign="top">
 
- `Time` 
+`Time` 
 
 
 
@@ -723,14 +723,14 @@ Description
 <tr>
 <td valign="top">
 
- `calendar` 
+`calendar` 
 
 
 
 </td>
 <td valign="top">
 
- `string` 
+`string` 
 
 
 
@@ -764,14 +764,14 @@ If the `calendar` property has not been defined, the `sap.ui.core.Configuration#
 <tr>
 <td valign="top">
 
- `format` 
+`format` 
 
 
 
 </td>
 <td valign="top">
 
- `string` 
+`string` 
 
 
 
@@ -886,14 +886,14 @@ Wednesday, 22. April 2017
 <tr>
 <td valign="top">
 
- `inputFormat` 
+`inputFormat` 
 
 
 
 </td>
 <td valign="top">
 
- `string` 
+`string` 
 
 
 
@@ -982,7 +982,7 @@ yyyy-mm-dd
 </tr>
 </table>
 
- `inputFormat` is case-insensitive.
+`inputFormat` is case-insensitive.
 
 
 
@@ -991,14 +991,14 @@ yyyy-mm-dd
 <tr>
 <td valign="top">
 
- `utc` 
+`utc` 
 
 
 
 </td>
 <td valign="top">
 
- `boolean` 
+`boolean` 
 
 
 
@@ -1024,14 +1024,14 @@ The date and time information is exported based on the UTC time zone. The defaul
 <tr>
 <td valign="top">
 
- `timezone` 
+`timezone` 
 
 
 
 </td>
 <td valign="top">
 
- `string` 
+`string` 
 
 
 
@@ -1057,14 +1057,14 @@ The date and time information is exported based on the given IANA \(Internet Ass
 <tr>
 <td valign="top">
 
- `timezoneProperty` 
+`timezoneProperty` 
 
 
 
 </td>
 <td valign="top">
 
- `string` 
+`string` 
 
 
 
@@ -1090,14 +1090,14 @@ References the OData property that contains the IANA time zone, which is used to
 <tr>
 <td valign="top">
 
- `displayTimezone` 
+`displayTimezone` 
 
 
 
 </td>
 <td valign="top">
 
- `boolean` 
+`boolean` 
 
 
 
@@ -1201,14 +1201,14 @@ Description
 <tr>
 <td valign="top">
 
- `unitProperty` 
+`unitProperty` 
 
 
 
 </td>
 <td valign="top">
 
- `string` 
+`string` 
 
 
 
@@ -1231,14 +1231,14 @@ References the business object property that contains the UoM for this particula
 <tr>
 <td valign="top">
 
- `displayUnit` 
+`displayUnit` 
 
 
 
 </td>
 <td valign="top">
 
- `boolean` 
+`boolean` 
 
 
 
@@ -1261,14 +1261,14 @@ Defines if the UoM is shown in the column. If set to `true`, the UoM is displaye
 <tr>
 <td valign="top">
 
- `scale` 
+`scale` 
 
 
 
 </td>
 <td valign="top">
 
- `integer` 
+`integer` 
 
 
 
@@ -1352,14 +1352,14 @@ Description
 <tr>
 <td valign="top">
 
- `valueMap` 
+`valueMap` 
 
 
 
 </td>
 <td valign="top">
 
- `object|map` 
+`object|map` 
 
 
 
@@ -1454,7 +1454,7 @@ Description
 <tr>
 <td valign="top">
 
- `scale` 
+`scale` 
 
 
 
@@ -1468,7 +1468,7 @@ Description
 </td>
 <td valign="top">
 
- `number` 
+`number` 
 
 
 
@@ -1484,7 +1484,7 @@ Sets a fixed number of decimals. The scale is applied to the whole column and di
 <tr>
 <td valign="top">
 
- `delimiter` 
+`delimiter` 
 
 
 
@@ -1498,7 +1498,7 @@ Sets a fixed number of decimals. The scale is applied to the whole column and di
 </td>
 <td valign="top">
 
- `boolean` 
+`boolean` 
 
 
 

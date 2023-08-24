@@ -16,14 +16,14 @@ Use control-level variant management to define separate variants for filters and
 
 Use page-level variant management to capture filter selection, filter mode, view mode, auto-hide icon state \(eye-icon\), chart, and table configuration \(measures and dimensions\), sort order, and grouping. The page level variant is enabled by default.
 
- ![](images/Managing_Variants_df8f117.png) 
+![](images/Managing_Variants_df8f117.png)
 
 > ### Note:  
 > You can define variants for specific selections of data on the user interface, for example, based on filter settings. In the definition dialog, these variants are called views, however, the feature is called variant management. Therefore, for clarity, we use the term variant management in this section.
 
 Control-level variant management is not recommended for list report templates and analytical list page templates. Use it only for object page templates. For more information about how to the enable control-level variant in the object page, see [Enabling Variant Management on the Object Page](enabling-variant-management-on-the-object-page-f26d42b.md).
 
- <a name="topic_fdm_n4r_1qb"/>
+<a name="topic_fdm_n4r_1qb"/>
 
 <!-- topic\_fdm\_n4r\_1qb -->
 
@@ -40,7 +40,7 @@ For the filter control variant or the page variant, the following behavior appli
 
 For more information, see [Loading Behavior Based on the Chosen Variant](loading-behavior-based-on-the-chosen-variant-9f4e119.md).
 
- <a name="topic_ctc_rlg_mqb"/>
+<a name="topic_ctc_rlg_mqb"/>
 
 <!-- topic\_ctc\_rlg\_mqb -->
 
@@ -69,7 +69,7 @@ If `smartVariantManagement` is set to `true`, the page variant is enabled. If it
 
 For more information see, [Develop an Application](https://help.sap.com/docs/SAP_FIORI_tools/17d50220bcd848aa854c9c182d65b699/a9c004397af5461fbf765419fc1d606a.html).
 
- <a name="topic_jmz_ylg_mqb"/>
+<a name="topic_jmz_ylg_mqb"/>
 
 <!-- topic\_jmz\_ylg\_mqb -->
 

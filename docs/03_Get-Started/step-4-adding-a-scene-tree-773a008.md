@@ -17,11 +17,11 @@ The content in this step builds on the code from [Step 3: 3D Viewer Using the Vi
 
 ## Preview
 
-   
+  
   
 **Viewer application with a Viewport and a Scene Tree**
 
- ![](images/3D_Viewer_Tutorial_Step_04_-_Preview_a0d2e26.png "Viewer application with a Viewport and a Scene Tree") 
+![](images/3D_Viewer_Tutorial_Step_04_-_Preview_a0d2e26.png "Viewer application with a Viewport and a Scene Tree")
 
 
 

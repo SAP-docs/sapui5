@@ -30,11 +30,11 @@ You can use adaptation extensions for these extension points:
 
     -   Add additional table toolbar buttons and extension controller logic. For an example, see [Adaptation Extension Example: Adding a Button to the Table Toolbar in the List Report](adaptation-extension-example-adding-a-button-to-the-table-toolbar-in-the-list-report-a269671.md)
 
-           
+          
           
         **Adaptation Extension Options in the List Report**
 
-         ![](images/List_Report_Adaptation_extensions_d09b292.png "Adaptation Extension Options in the List Report") 
+        ![](images/List_Report_Adaptation_extensions_d09b292.png "Adaptation Extension Options in the List Report")
 
     -   Override extension functions
 
@@ -76,11 +76,11 @@ You can use adaptation extensions for these extension points:
 
     -   Add additional fields and field groups to forms
 
-           
+          
           
         **Adaptation Extension Options on the Object Page**
 
-         ![](images/Object_Page_Adaptation_Extensions_07345eb.png "Adaptation Extension Options on the Object Page") 
+        ![](images/Object_Page_Adaptation_Extensions_07345eb.png "Adaptation Extension Options on the Object Page")
 
     -   Override extension functions
 

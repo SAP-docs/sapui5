@@ -22,13 +22,13 @@ The counts of each table are also influenced by the filters from the `filterBar`
 
 In the example below, the "Requested" field exists in each entity set. It influences the number of items displayed on each tab:
 
- ![](images/SystemBehaviorForFiltersAndCounts1_1e794e6.png) 
+![](images/SystemBehaviorForFiltersAndCounts1_1e794e6.png)
 
 If you add a second filter value, which is found only in the entity type of the first table, only the count of the first tab changes. The counts of the second tab don't change, as this field is not relevant for the second entity set. The system displays a message to inform users about this.
 
 For example, if you add the filter "Property S3" to the first tab, which is not applicable to the entity set of the second tab, and switch to the second tab, the system displays a message about this. If you close this message and add another filter that is not applicable to the entity set of the *Purchase Orders* tab, the system displays an updated message informing that both filters are not relevant to this entity set.
 
- ![](images/System_Behavior_for_Filters_and_Counts_2_120cf40.png) 
+![](images/System_Behavior_for_Filters_and_Counts_2_120cf40.png)
 
 
 
@@ -125,13 +125,13 @@ Table type settings can be set for each variant under `quickVariantSelectionX` i
 
 Different tabs on a List Report can render different table types. For example, first tab can be a tree table while the second tab can be a grid table.
 
-   
+  
   
 **Example of a List Report page with two tabs of different table types**
 
- ![](images/list_report_entity_set_with_diff_table_types_1_bc2ec30.jpg " Example of a List Report page with two tabs of different table types ") 
+![](images/list_report_entity_set_with_diff_table_types_1_bc2ec30.jpg " Example of a List Report page with two tabs of different table types ")
 
- ![](images/list_report_entity_set_with_diff_table_types_2_d34682a.jpg) 
+![](images/list_report_entity_set_with_diff_table_types_2_d34682a.jpg)
 
 
 
@@ -294,7 +294,7 @@ Once the SV and SPV are defined for the two `entitySets`, you must configure the
 >             "name": "sap.fe.templates.ListReport",
 >             "options": {
 >                 "settings": {
->                     "entitySet": "entityA",
+>                     "contextPath": "/entityA",
 >                     "views": {
 >                         "paths": [
 >                             {
@@ -317,7 +317,7 @@ Once the SV and SPV are defined for the two `entitySets`, you must configure the
 
 As a result, you can see the two tabs in the application:
 
- ![](images/Multiple_Entity_Sets_in_Multiple_Table_Mode_dac86fa.png) 
+![](images/Multiple_Entity_Sets_in_Multiple_Table_Mode_dac86fa.png)
 
 **Defining Different Table Configurations Using `controlConfiguration`**
 
@@ -336,7 +336,7 @@ The following sample code shows different personalization settings per table \(w
 >         "name": "sap.fe.templates.ListReport",
 >         "options": {
 >             "settings": {
->                 "entitySet": "EntityA",
+>                 "contextPath": "/EntityA",
 >                 "views": {
 >                     "paths": [
 >                         {

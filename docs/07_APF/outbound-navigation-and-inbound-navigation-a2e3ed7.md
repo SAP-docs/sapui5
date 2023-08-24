@@ -156,6 +156,8 @@ A range expression is a filter that represents ranges and disjunctions of values
 
 
 
+## Example
+
 ```
 {
     "SelectionVariantID" : "20141023134315",

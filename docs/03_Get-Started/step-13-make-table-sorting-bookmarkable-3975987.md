@@ -8,11 +8,11 @@ In this step, we will create a button at the top of the table which will change 
 
 ## Preview
 
-   
+  
   
 **Bookmarkable search and sorting**
 
- ![](images/Tutorial_Navigation_and_Routing_Step_13_7ec54ef.png "Bookmarkable search and sorting") 
+![](images/Tutorial_Navigation_and_Routing_Step_13_7ec54ef.png "Bookmarkable search and sorting")
 
 
 

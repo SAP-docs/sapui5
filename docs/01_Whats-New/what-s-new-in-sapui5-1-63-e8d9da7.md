@@ -4,7 +4,7 @@
 
 With this release SAPUI5 is upgraded from version 1.62 to 1.63.
 
-** **
+****
 
 
 <table>
@@ -62,28 +62,28 @@ Available as of
 <tr>
 <td valign="top">
 
- 1.63 
+1.63 
 
 
 
 </td>
 <td valign="top">
 
- New 
+New 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Custom Currencies** 
+**Custom Currencies** 
 
 
 
@@ -119,28 +119,28 @@ Info Only
 <tr>
 <td valign="top">
 
- 1.63 
+1.63 
 
 
 
 </td>
 <td valign="top">
 
- New 
+New 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **UI5 Web Components** 
+**UI5 Web Components** 
 
 
 
@@ -164,7 +164,7 @@ For more information, see the [UI5 Web Components](https://sap.github.io/ui5-web
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -180,28 +180,28 @@ For more information, see the [UI5 Web Components](https://sap.github.io/ui5-web
 <tr>
 <td valign="top">
 
- 1.63 
+1.63 
 
 
 
 </td>
 <td valign="top">
 
- New 
+New 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.f.ShellBar` \(Experimental\)** 
+**`sap.f.ShellBar` \(Experimental\)** 
 
 
 
@@ -212,7 +212,7 @@ For more information, see the [UI5 Web Components](https://sap.github.io/ui5-web
 
 We have implemented a new `sap.f.ShellBar` control, which is used as the uppermost section \(shell\) of the app. The control is fully responsive and adaptive, and corresponds to the latest SAP Fiori Design Guidelines.
 
- ![](images/What_s_New_1_63_sap_f_ShellBar_421fe34.gif) 
+![](images/What_s_New_1_63_sap_f_ShellBar_421fe34.gif)
 
 For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.f.ShellBar) and the [Samples](https://ui5.sap.com/#/entity/sap.f.ShellBar).
 
@@ -223,7 +223,7 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.f.Sh
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -239,28 +239,28 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.f.Sh
 <tr>
 <td valign="top">
 
- 1.63 
+1.63 
 
 
 
 </td>
 <td valign="top">
 
- New 
+New 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.upload.UploadSet`** 
+**`sap.m.upload.UploadSet`** 
 
 
 
@@ -280,7 +280,7 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.up
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -296,28 +296,28 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.up
 <tr>
 <td valign="top">
 
- 1.63 
+1.63 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **SAPUI5 OData V4 Model** 
+**SAPUI5 OData V4 Model** 
 
 
 
@@ -347,7 +347,7 @@ For more information, see [OData V4 Model](../04_Essentials/odata-v4-model-5de13
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -363,28 +363,28 @@ For more information, see [OData V4 Model](../04_Essentials/odata-v4-model-5de13
 <tr>
 <td valign="top">
 
- 1.63 
+1.63 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.f.Avatar`** 
+**`sap.f.Avatar`** 
 
 
 
@@ -402,7 +402,7 @@ We have introduced a fallback image behavior that handles situations when the pr
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -418,28 +418,28 @@ We have introduced a fallback image behavior that handles situations when the pr
 <tr>
 <td valign="top">
 
- 1.63 
+1.63 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.f.DynamicPage`** 
+**`sap.f.DynamicPage`** 
 
 
 
@@ -457,7 +457,7 @@ We have implemented the option to provide a simple, single-line title that takes
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -473,28 +473,28 @@ We have implemented the option to provide a simple, single-line title that takes
 <tr>
 <td valign="top">
 
- 1.63 
+1.63 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.f.semantic.SemanticPage`** 
+**`sap.f.semantic.SemanticPage`** 
 
 
 
@@ -512,7 +512,7 @@ We have implemented the option to provide a simple, single-line title that takes
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -528,28 +528,28 @@ We have implemented the option to provide a simple, single-line title that takes
 <tr>
 <td valign="top">
 
- 1.63 
+1.63 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.ObjectNumber / sap.m.ObjectStatus`** 
+**`sap.m.ObjectNumber / sap.m.ObjectStatus`** 
 
 
 
@@ -567,7 +567,7 @@ You can now display both controls with a large font size, thus meeting the SAP F
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -583,28 +583,28 @@ You can now display both controls with a large font size, thus meeting the SAP F
 <tr>
 <td valign="top">
 
- 1.63 
+1.63 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.Select`** 
+**`sap.m.Select`** 
 
 
 
@@ -622,7 +622,7 @@ To ensure that the value states are displayed in all situations and devices, the
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -638,28 +638,28 @@ To ensure that the value states are displayed in all situations and devices, the
 <tr>
 <td valign="top">
 
- 1.63 
+1.63 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.suite.ui.microchart.BulletMicroChart`** 
+**`sap.suite.ui.microchart.BulletMicroChart`** 
 
 
 
@@ -679,7 +679,7 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.suit
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -695,28 +695,28 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.suit
 <tr>
 <td valign="top">
 
- 1.63 
+1.63 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.suite.ui.microchart.ColumnMicroChart`** 
+**`sap.suite.ui.microchart.ColumnMicroChart`** 
 
 
 
@@ -736,7 +736,7 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.suit
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -752,28 +752,28 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.suit
 <tr>
 <td valign="top">
 
- 1.63 
+1.63 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.suite.ui.microchart.LineMicroChart`** 
+**`sap.suite.ui.microchart.LineMicroChart`** 
 
 
 
@@ -793,7 +793,7 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.suit
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -809,28 +809,28 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.suit
 <tr>
 <td valign="top">
 
- 1.63 
+1.63 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.suite.ui.microchart`** 
+**`sap.suite.ui.microchart`** 
 
 
 
@@ -852,7 +852,7 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.suit
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -868,28 +868,28 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.suit
 <tr>
 <td valign="top">
 
- 1.63 
+1.63 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.layout.cssgrid.CSSGrid`** 
+**`sap.ui.layout.cssgrid.CSSGrid`** 
 
 
 
@@ -907,7 +907,7 @@ You can now set the `CSSGrid` breakpoints \(large, medium, or small\) to depend 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -923,28 +923,28 @@ You can now set the `CSSGrid` breakpoints \(large, medium, or small\) to depend 
 <tr>
 <td valign="top">
 
- 1.63 
+1.63 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- SAP Fiori Elements 
+SAP Fiori Elements 
 
 
 
 </td>
 <td valign="top">
 
- **SAP Fiori Elements** 
+**SAP Fiori Elements** 
 
 
 
@@ -987,7 +987,7 @@ The analytical list page has these new features or enhancements:
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1003,28 +1003,28 @@ The analytical list page has these new features or enhancements:
 <tr>
 <td valign="top">
 
- 1.63 
+1.63 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Demo Kit API Reference Tree** 
+**Demo Kit API Reference Tree** 
 
 
 
@@ -1035,7 +1035,7 @@ The analytical list page has these new features or enhancements:
 
 We have improved the *API Reference* tree to use proper nesting of the SAPUI5 symbols based on a strict hierarchical structure. Fewer elements are now displayed on the root level, thus improving the user experience and shortening the time the user spends trying to find a specific symbol in the tree structure.
 
- ![](images/What_s_New_1_63_API_Ref_Tree_SAPUI5_5b9187a.png) 
+![](images/What_s_New_1_63_API_Ref_Tree_SAPUI5_5b9187a.png)
 
 <sub>Changed•Feature•Info Only•1.63</sub>
 
@@ -1044,7 +1044,7 @@ We have improved the *API Reference* tree to use proper nesting of the SAPUI5 sy
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1061,6 +1061,8 @@ We have improved the *API Reference* tree to use proper nesting of the SAPUI5 sy
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.115](what-s-new-in-sapui5-1-115-409fde8.md "With this release SAPUI5 is upgraded from version 1.114 to 1.115.")
 
 [What's New in SAPUI5 1.114](what-s-new-in-sapui5-1-114-890fce1.md "With this release SAPUI5 is upgraded from version 1.113 to 1.114.")
 

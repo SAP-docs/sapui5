@@ -10,7 +10,7 @@ We first introduce you to the basic development paradigms like *Model-View-Contr
 
 ## Preview
 
- ![](images/SAPUI5_Walkthrough_Step_35_62a5405.png) 
+![](images/SAPUI5_Walkthrough_Step_35_62a5405.png)
 
 
 

@@ -16,11 +16,11 @@ We will now add a dialog to our app. Dialogs are special, because they open on t
 
 ## Preview
 
-   
+  
   
 **A dialog opens when the new “Say Hello With Dialog” button is clicked**
 
- ![](images/SAPUI5_Walkthrough_Step_16_f22d752.png "A dialog opens when the new “Say Hello With Dialog” button is clicked") 
+![](images/SAPUI5_Walkthrough_Step_16_f22d752.png "A dialog opens when the new “Say Hello With Dialog” button is clicked")
 
 
 

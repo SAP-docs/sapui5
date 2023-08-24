@@ -6,7 +6,7 @@ With this release SAPUI5 is upgraded from version 1.77 to 1.78.
 
 
 
-** **
+****
 
 
 <table>
@@ -64,28 +64,28 @@ Available as of
 <tr>
 <td valign="top">
 
- 1.78 
+1.78 
 
 
 
 </td>
 <td valign="top">
 
- New 
+New 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Special Messaging Support for Visually Impaired Users \(Experimental\)** 
+**Special Messaging Support for Visually Impaired Users \(Experimental\)** 
 
 
 
@@ -119,28 +119,28 @@ Info Only
 <tr>
 <td valign="top">
 
- 1.78 
+1.78 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **SAPUI5 OData V2 Model** 
+**SAPUI5 OData V2 Model** 
 
 
 
@@ -164,7 +164,7 @@ The new version of the SAPUI5 OData V2 model introduces the following features:
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -180,28 +180,28 @@ The new version of the SAPUI5 OData V2 model introduces the following features:
 <tr>
 <td valign="top">
 
- 1.78 
+1.78 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **SAPUI5 OData V4 Model** 
+**SAPUI5 OData V4 Model** 
 
 
 
@@ -228,7 +228,7 @@ For more information, see [OData V4 Model](../04_Essentials/odata-v4-model-5de13
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -244,28 +244,28 @@ For more information, see [OData V4 Model](../04_Essentials/odata-v4-model-5de13
 <tr>
 <td valign="top">
 
- 1.78 
+1.78 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Screen Reader Support Enhancement** 
+**Screen Reader Support Enhancement** 
 
 
 
@@ -283,7 +283,7 @@ We have removed the `application` role from the body of SAPUI5 apps. Following t
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -299,28 +299,28 @@ We have removed the `application` role from the body of SAPUI5 apps. Following t
 <tr>
 <td valign="top">
 
- 1.78 
+1.78 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Spreadsheet Export** 
+**Spreadsheet Export** 
 
 
 
@@ -338,7 +338,7 @@ Fiscal date formats can now be used during the export. The input format for the 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -354,28 +354,28 @@ Fiscal date formats can now be used during the export. The input format for the 
 <tr>
 <td valign="top">
 
- 1.78 
+1.78 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.ColorPalette`** 
+**`sap.m.ColorPalette`** 
 
 
 
@@ -393,7 +393,7 @@ We have added a new `setColorPickerSelectedColor` setter, which enables develope
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -409,28 +409,28 @@ We have added a new `setColorPickerSelectedColor` setter, which enables develope
 <tr>
 <td valign="top">
 
- 1.78 
+1.78 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.IconTabBar`** 
+**`sap.m.IconTabBar`** 
 
 
 
@@ -453,7 +453,7 @@ We have added a new `setColorPickerSelectedColor` setter, which enables develope
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -469,28 +469,28 @@ We have added a new `setColorPickerSelectedColor` setter, which enables develope
 <tr>
 <td valign="top">
 
- 1.78 
+1.78 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.InputBase` \(Experimental\)** 
+**`sap.m.InputBase` \(Experimental\)** 
 
 
 
@@ -508,7 +508,7 @@ The class now supports the possibility to add links as part of the `ValueStateTe
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -524,28 +524,28 @@ The class now supports the possibility to add links as part of the `ValueStateTe
 <tr>
 <td valign="top">
 
- 1.78 
+1.78 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.List`, `sap.m.Table`** 
+**`sap.m.List`, `sap.m.Table`** 
 
 
 
@@ -563,7 +563,7 @@ The `List` and `Table` controls now provide a method to scroll the list of items
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -579,28 +579,28 @@ The `List` and `Table` controls now provide a method to scroll the list of items
 <tr>
 <td valign="top">
 
- 1.78 
+1.78 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.MultiComboBox`, `sap.m.MultiInput`** 
+**`sap.m.MultiComboBox`, `sap.m.MultiInput`** 
 
 
 
@@ -618,7 +618,7 @@ When the `sap.m.MultiComboBox` and `sap.m.MultiInput` controls contain only one 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -634,28 +634,28 @@ When the `sap.m.MultiComboBox` and `sap.m.MultiInput` controls contain only one 
 <tr>
 <td valign="top">
 
- 1.78 
+1.78 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.smartfilterbar.SmartFilterBar`, `sap.ui.comp.smartfield.SmartField`** 
+**`sap.ui.comp.smartfilterbar.SmartFilterBar`, `sap.ui.comp.smartfield.SmartField`** 
 
 
 
@@ -676,7 +676,7 @@ When the `sap.m.MultiComboBox` and `sap.m.MultiInput` controls contain only one 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -692,28 +692,28 @@ When the `sap.m.MultiComboBox` and `sap.m.MultiInput` controls contain only one 
 <tr>
 <td valign="top">
 
- 1.78 
+1.78 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.smartfilterbar.SmartFilterBar`** 
+**`sap.ui.comp.smartfilterbar.SmartFilterBar`** 
 
 
 
@@ -734,7 +734,7 @@ When the `sap.m.MultiComboBox` and `sap.m.MultiInput` controls contain only one 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -750,28 +750,28 @@ When the `sap.m.MultiComboBox` and `sap.m.MultiInput` controls contain only one 
 <tr>
 <td valign="top">
 
- 1.78 
+1.78 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.ValueHelpDialog`** 
+**`sap.ui.comp.ValueHelpDialog`** 
 
 
 
@@ -789,7 +789,7 @@ When the `ValueHelpDialog` of `SmartField` or `SmartFilterBar` is open, the tabl
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -805,28 +805,28 @@ When the `ValueHelpDialog` of `SmartField` or `SmartFilterBar` is open, the tabl
 <tr>
 <td valign="top">
 
- 1.78 
+1.78 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.layout.Splitter`** 
+**`sap.ui.layout.Splitter`** 
 
 
 
@@ -847,7 +847,7 @@ When the `ValueHelpDialog` of `SmartField` or `SmartFilterBar` is open, the tabl
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -863,28 +863,28 @@ When the `ValueHelpDialog` of `SmartField` or `SmartFilterBar` is open, the tabl
 <tr>
 <td valign="top">
 
- 1.78 
+1.78 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- SAP Fiori Elements 
+SAP Fiori Elements 
 
 
 
 </td>
 <td valign="top">
 
- **SAP Fiori Elements** 
+**SAP Fiori Elements** 
 
 
 
@@ -913,7 +913,7 @@ When the `ValueHelpDialog` of `SmartField` or `SmartFilterBar` is open, the tabl
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -930,6 +930,8 @@ When the `ValueHelpDialog` of `SmartField` or `SmartFilterBar` is open, the tabl
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.115](what-s-new-in-sapui5-1-115-409fde8.md "With this release SAPUI5 is upgraded from version 1.114 to 1.115.")
 
 [What's New in SAPUI5 1.114](what-s-new-in-sapui5-1-114-890fce1.md "With this release SAPUI5 is upgraded from version 1.113 to 1.114.")
 

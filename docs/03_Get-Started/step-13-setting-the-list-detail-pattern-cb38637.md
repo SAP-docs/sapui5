@@ -12,11 +12,11 @@ Apps using the list-detail pattern operate with a layout divided into two separa
 
 ## Preview
 
-   
+  
   
 **list-detail pattern with FlexibleColumnLayout**
 
- ![](images/Master-detail_Pattern_Fiori_2_0_Tutorial_267d05f.gif "list-detail pattern with FlexibleColumnLayout") 
+![](images/Master-detail_Pattern_Fiori_2_0_Tutorial_267d05f.gif "list-detail pattern with FlexibleColumnLayout")
 
 
 

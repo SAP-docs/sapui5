@@ -33,7 +33,7 @@ The available semantic content is different buttons and selects. Each one can co
   
 **Semantic content at its default positions on the page.**
 
- ![](images/sap_m_SemanticPage_master-detail_1632fd5.png "Semantic content at its default positions on the page.") 
+![](images/sap_m_SemanticPage_master-detail_1632fd5.png "Semantic content at its default positions on the page.")
 
 Several different selects are supported for displaying a list of selectable items - `SortSelect`, `FilterSelect`, and `GroupSelect`.
 

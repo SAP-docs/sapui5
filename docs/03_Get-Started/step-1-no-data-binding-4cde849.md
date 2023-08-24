@@ -8,11 +8,11 @@ In this step, we simply place some text on the screen using a standard `sap.m.Te
 
 ## Preview
 
-   
+  
   
 **Screen with text**
 
- ![](images/Tutorial_Data_Binding_Step_1_6d391d5.png "Screen with text") 
+![](images/Tutorial_Data_Binding_Step_1_6d391d5.png "Screen with text")
 
 
 

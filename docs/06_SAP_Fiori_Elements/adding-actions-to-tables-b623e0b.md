@@ -227,7 +227,7 @@ Annotation-based actions can be inline actions. Inline actions are used to trigg
   
 **Example: Actions in the Table Toolbar**
 
- ![](images/Actions_in_the_Table_Toolbar_856c5a4.jpg "Example: Actions in the Table Toolbar") 
+![](images/Actions_in_the_Table_Toolbar_856c5a4.jpg "Example: Actions in the Table Toolbar")
 
 
 
@@ -235,7 +235,7 @@ Annotation-based actions can be inline actions. Inline actions are used to trigg
 
 To specify a text for your action, use the `com.sap.vocabularies.UI.v1.DataFieldForAction` property and specify the text to display. The following example shows you how to display an action to create a copy of the list item in the toolbar:
 
- ![](images/List_Report_Annotation_DataFieldForAction_for_Defining_Application-Specific_Actions_fe9ce2d.png) 
+![](images/List_Report_Annotation_DataFieldForAction_for_Defining_Application-Specific_Actions_fe9ce2d.png)
 
 For more information about adding a button triggering external navigation, see [Navigation from an App \(Outbound Navigation\)](navigation-from-an-app-outbound-navigation-d782acf.md).
 

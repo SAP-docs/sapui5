@@ -159,7 +159,7 @@ When `selectionMode` is set to `Multi` in the `manifest.json` file of a list rep
 >          "name":"sap.fe.templates.ListReport",
 >          "options":{
 >             "settings":{
->                "entitySet":"SalesOrderManage",
+>                "contextPath":"/SalesOrderManage",
 >                "controlConfiguration":{
 >                   "@com.sap.vocabularies.UI.v1.LineItem":{
 >                      "tableSettings":{
@@ -190,7 +190,7 @@ To do so, set `selectionMode` to `Multi` for a specific table in the `manifest.j
 >       "name":"sap.fe.templates.ObjectPage",
 >       "options":{
 >          "settings":{
->             "entitySet":"SalesOrderManage",
+>             "contextPath":"/SalesOrderManage",
 >             "sectionLayout":"Tabs",
 >             "controlConfiguration":{
 >                "_Item/@com.sap.vocabularies.UI.v1.LineItem":{

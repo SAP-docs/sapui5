@@ -10,11 +10,11 @@ Now we extend our minimalist HTML page to a basic app with a view and a controll
 
 ## Preview
 
-   
+  
   
 **The browser shows a Steady button in an app**
 
- ![](images/Tutorial_Quick_Start_Step_2_240ef53.png "The browser shows a Steady button in an app ") 
+![](images/Tutorial_Quick_Start_Step_2_240ef53.png "The browser shows a Steady button in an app ")
 
 
 

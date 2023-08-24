@@ -8,11 +8,11 @@ In the previous steps, we have implemented a *Resume* view that uses tabs to dis
 
 ## Preview
 
-   
+  
   
 **Tabs with lazy loading**
 
- ![](images/Tutorial_Navigation_and_Routing_Step_10_cb04056.png "Tabs with lazy loading") 
+![](images/Tutorial_Navigation_and_Routing_Step_10_cb04056.png "Tabs with lazy loading")
 
 
 
@@ -20,11 +20,11 @@ In the previous steps, we have implemented a *Resume* view that uses tabs to dis
 
 You can view and download all files in the *Samples* in the Demo Kit at [Routing and Navigation - Step 10](https://ui5.sap.com/#/entity/sap.ui.core.tutorial.navigation/sample/sap.ui.core.tutorial.navigation.10) .
 
-   
+  
   
 **Folder Structure for this Step**
 
- ![](images/Tutorial_Navigation_and_Routing_Step_10b_389058e.png "Folder Structure for this Step") 
+![](images/Tutorial_Navigation_and_Routing_Step_10b_389058e.png "Folder Structure for this Step")
 
 
 

@@ -8,11 +8,11 @@ In this step we will modify the app and introduce routing. Instead of having the
 
 ## Preview
 
-   
+  
   
 **Views are wired together using the router**
 
- ![](images/Tutorial_Navigation_and_Routing_Step_02a_ce8dce1.png "Views are wired together using the router") 
+![](images/Tutorial_Navigation_and_Routing_Step_02a_ce8dce1.png "Views are wired together using the router")
 
 
 
@@ -20,11 +20,11 @@ In this step we will modify the app and introduce routing. Instead of having the
 
 You can view and download all files in the *Samples* in the Demo Kit at [Routing and Navigation - Step 2](https://ui5.sap.com/#/entity/sap.ui.core.tutorial.navigation/sample/sap.ui.core.tutorial.navigation.02).
 
-   
+  
   
 **Folder structure for this step**
 
- ![](images/Tutorial_Navigation_and_Routing_Step_02b_93bd2dc.png "Folder structure for this step") 
+![](images/Tutorial_Navigation_and_Routing_Step_02b_93bd2dc.png "Folder structure for this step")
 
 
 

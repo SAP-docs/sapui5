@@ -12,7 +12,7 @@ The tool aims to reduce maintenance and consulting times and to streamline SAPUI
 
 Check out the Support Assistant highlights video for an overview of its main functionalities:
 
-  
+
 
 
 
@@ -29,11 +29,11 @@ The Support Assistant is enabled with the following URL parameter: `sap-ui-suppo
 > ### Tip:  
 > If you want to run the Support Assistant in a separate window, use the parameter `sap-ui-support=true,window` 
 
-   
+  
   
 **Support Assistant Toolbar**
 
- ![](images/Support_Assistant_Toolbar_c9ec61c.png "Support Assistant Toolbar ") 
+![](images/Support_Assistant_Toolbar_c9ec61c.png "Support Assistant Toolbar ")
 
 
 
@@ -41,7 +41,7 @@ The Support Assistant is enabled with the following URL parameter: `sap-ui-suppo
 
 You can also start the Support Assistant from the Technical Information Dialog.
 
-1.  Open the Technical Information Dialog by using the following [shortcut](../02_Read-Me-First/keyboard-shortcuts-for-sapui5-tools-154844c.md):  [Ctrl\] + [Shift\] + [Left-Alt\] / [Left-Option\] + [P\]  
+1.  Open the Technical Information Dialog by using the following [shortcut](../02_Read-Me-First/keyboard-shortcuts-for-sapui5-tools-154844c.md): [Ctrl\] + [Shift\] + [Left-Alt\] /[Left-Option\] + [P\]  
 
 2.  Choose *Activate Support Assistant*.
 

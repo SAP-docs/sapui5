@@ -8,12 +8,12 @@ When we are on the *Not Found* page because of an invalid hash, we want to get b
 
 ## Preview
 
-   
+  
   
 **Not Found page with Back button**
 
- ![](images/Tutorial_Navigation_and_Routing_Step_04a_1cbb1eb.png "Not Found page with Back
-					button") 
+![](images/Tutorial_Navigation_and_Routing_Step_04a_1cbb1eb.png "Not Found page with Back
+					button")
 
 
 

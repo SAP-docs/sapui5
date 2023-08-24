@@ -217,7 +217,7 @@ Recommended Code
 <tr>
 <td valign="top">
 
- `manifest.json` with dependency declaration only:
+`manifest.json` with dependency declaration only:
 
 ```json
 {
@@ -267,7 +267,7 @@ Recommended Code
 <tr>
 <td valign="top">
 
- `Component.js` with nested reuse component:
+`Component.js` with nested reuse component:
 
 ```js
 createContent: function() {
@@ -284,7 +284,7 @@ createContent: function() {
 </td>
 <td valign="top">
 
- `Component.js` that loads the reuse component
+`Component.js` that loads the reuse component
 
 ```js
 createContent: function() {

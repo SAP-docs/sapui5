@@ -6,7 +6,7 @@ With this release SAPUI5 is upgraded from version 1.91 to 1.92.
 
 
 
-** **
+****
 
 
 <table>
@@ -64,28 +64,28 @@ Available as of
 <tr>
 <td valign="top">
 
- 1.92 
+1.92 
 
 
 
 </td>
 <td valign="top">
 
- New 
+New 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.DynamicDateRange` \(Experimental\)** 
+**`sap.m.DynamicDateRange` \(Experimental\)** 
 
 
 
@@ -103,7 +103,7 @@ The new \(experimental\) `DynamicDateRange` control enables users to select abso
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -119,28 +119,28 @@ The new \(experimental\) `DynamicDateRange` control enables users to select abso
 <tr>
 <td valign="top">
 
- 1.92 
+1.92 
 
 
 
 </td>
 <td valign="top">
 
- UI Changed 
+UI Changed 
 
 
 
 </td>
 <td valign="top">
 
- Announcement 
+Announcement 
 
 
 
 </td>
 <td valign="top">
 
- **Dialog for Smart Controls** 
+**Dialog for Smart Controls** 
 
 
 
@@ -161,7 +161,7 @@ We have improved the usability of the *View Settings* dialog for the smart chart
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -177,28 +177,28 @@ We have improved the usability of the *View Settings* dialog for the smart chart
 <tr>
 <td valign="top">
 
- 1.92 
+1.92 
 
 
 
 </td>
 <td valign="top">
 
- UI Changed 
+UI Changed 
 
 
 
 </td>
 <td valign="top">
 
- Announcement 
+Announcement 
 
 
 
 </td>
 <td valign="top">
 
- **Confirmation Message for Drafts** 
+**Confirmation Message for Drafts** 
 
 
 
@@ -221,7 +221,7 @@ When a user has created or edited an object in a draft-enabled object page app t
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -237,28 +237,28 @@ When a user has created or edited an object in a draft-enabled object page app t
 <tr>
 <td valign="top">
 
- 1.92 
+1.92 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **SAPUI5 OData V4 Model** 
+**SAPUI5 OData V4 Model** 
 
 
 
@@ -283,7 +283,7 @@ The new version of the SAPUI5 OData V4 model introduces the following features:
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -299,28 +299,28 @@ The new version of the SAPUI5 OData V4 model introduces the following features:
 <tr>
 <td valign="top">
 
- 1.92 
+1.92 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.Dialog`** 
+**`sap.m.Dialog`** 
 
 
 
@@ -338,7 +338,7 @@ We have updated the colors of value-state status icons. Now, they have better co
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -354,28 +354,28 @@ We have updated the colors of value-state status icons. Now, they have better co
 <tr>
 <td valign="top">
 
- 1.92 
+1.92 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.List, sap.m.Table, sap.m.Tree`** 
+**`sap.m.List, sap.m.Table, sap.m.Tree`** 
 
 
 
@@ -393,7 +393,7 @@ We have provided the new `requestItems` method that lets you load more data in a
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -409,28 +409,28 @@ We have provided the new `requestItems` method that lets you load more data in a
 <tr>
 <td valign="top">
 
- 1.92 
+1.92 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.QuickViewPage`** 
+**`sap.m.QuickViewPage`** 
 
 
 
@@ -448,7 +448,7 @@ The control now supports avatars, which display business objects, images, initia
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -464,28 +464,28 @@ The control now supports avatars, which display business objects, images, initia
 <tr>
 <td valign="top">
 
- 1.92 
+1.92 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.smartchart.SmartChart`, `sap.ui.comp.smarttable.SmartTable`** 
+**`sap.ui.comp.smartchart.SmartChart`, `sap.ui.comp.smarttable.SmartTable`** 
 
 
 
@@ -507,7 +507,7 @@ We have improved the usability of the *View Settings* dialog in these controls a
 -   If you choose the *Reset* button, you receive a warning that you are about to set back your changes.
 
 
-![](images/View_Settings_Dialog_5990753.png) 
+![](images/View_Settings_Dialog_5990753.png)
 
 For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.comp.smarttable.SmartTable) and the [Sample](https://ui5.sap.com/#/entity/sap.ui.comp.smarttable.SmartTable/sample/sap.ui.comp.sample.smarttable.mtableCustom).
 
@@ -518,7 +518,7 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.c
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -534,28 +534,28 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.c
 <tr>
 <td valign="top">
 
- 1.92 
+1.92 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.smarttable.SmartTable`** 
+**`sap.ui.comp.smarttable.SmartTable`** 
 
 
 
@@ -573,7 +573,7 @@ We have introduced a global `customData` setting that allows you to configure th
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -589,28 +589,28 @@ We have introduced a global `customData` setting that allows you to configure th
 <tr>
 <td valign="top">
 
- 1.92 
+1.92 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.integration.widgets.Card`** 
+**`sap.ui.integration.widgets.Card`** 
 
 
 
@@ -635,7 +635,7 @@ For more information, see the [Analytical Card](https://ui5.sap.com/test-resourc
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -651,28 +651,28 @@ For more information, see the [Analytical Card](https://ui5.sap.com/test-resourc
 <tr>
 <td valign="top">
 
- 1.92 
+1.92 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.layout.ResponsiveSplitter`** 
+**`sap.ui.layout.ResponsiveSplitter`** 
 
 
 
@@ -690,7 +690,7 @@ We have added a new `resize` event, fired when the contents of the `sap.ui.layou
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -706,28 +706,28 @@ We have added a new `resize` event, fired when the contents of the `sap.ui.layou
 <tr>
 <td valign="top">
 
- 1.92 
+1.92 
 
 
 
 </td>
 <td valign="top">
 
- Deprecated 
+Deprecated 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Deprecation of String-Based Rendering** 
+**Deprecation of String-Based Rendering** 
 
 
 
@@ -745,7 +745,7 @@ String-based rendering \(also known as "apiVersion 1" of a renderer\) has been d
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -761,28 +761,28 @@ String-based rendering \(also known as "apiVersion 1" of a renderer\) has been d
 <tr>
 <td valign="top">
 
- 1.92 
+1.92 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- SAP Fiori Elements 
+SAP Fiori Elements 
 
 
 
 </td>
 <td valign="top">
 
- **SAP Fiori elements for OData V4** 
+**SAP Fiori elements for OData V4** 
 
 
 
@@ -811,7 +811,7 @@ The following changes and new features are available for SAP Fiori elements for 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -828,6 +828,8 @@ The following changes and new features are available for SAP Fiori elements for 
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.115](what-s-new-in-sapui5-1-115-409fde8.md "With this release SAPUI5 is upgraded from version 1.114 to 1.115.")
 
 [What's New in SAPUI5 1.114](what-s-new-in-sapui5-1-114-890fce1.md "With this release SAPUI5 is upgraded from version 1.113 to 1.114.")
 

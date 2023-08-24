@@ -110,7 +110,7 @@ System Behavior
 <tr>
 <td valign="top">
 
- `busy.set=true` 
+`busy.set=true` 
 
 
 
@@ -126,7 +126,7 @@ Triggers a busy indicator when a function is being executed. Can be set to false
 <tr>
 <td valign="top">
 
- `busy.check=true` 
+`busy.check=true` 
 
 
 
@@ -144,7 +144,7 @@ Has to be set to false if the function is not triggered by direct user interacti
 <tr>
 <td valign="top">
 
- `dataloss.popup=true` 
+`dataloss.popup=true` 
 
 
 
@@ -160,7 +160,7 @@ Displays a data-loss message before execution of the function if needed \(that i
 <tr>
 <td valign="top">
 
- `dataloss.navigation=false` 
+`dataloss.navigation=false` 
 
 
 

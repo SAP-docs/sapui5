@@ -8,11 +8,11 @@ Now we use a shell control as container for our app and use it as our new root e
 
 ## Preview
 
-   
+  
   
 **The app is now run in a shell that limits the app width**
 
- ![](images/SAPUI5_Walkthrough_Step_12_011584a.png "The app is now run in a shell that limits the app width") 
+![](images/SAPUI5_Walkthrough_Step_12_011584a.png "The app is now run in a shell that limits the app width")
 
 
 

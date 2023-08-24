@@ -92,7 +92,7 @@ The results look like this:
   
 **Title for single table in object page section**
 
- ![](images/Adding_Titles_to_Object_page_8920264.png "Title for single table in object page section") 
+![](images/Adding_Titles_to_Object_page_8920264.png "Title for single table in object page section")
 
 > ### Note:  
 > If the subsection has only one type of content \(table or chart\), and the subsection title corresponds to the control title, then only the control title is displayed in the subsection.

@@ -26,7 +26,7 @@ The following table provides an overview of the two main types of card controls 
 <tr>
 <th valign="top" rowspan="2">
 
- **Feature Supported** 
+**Feature Supported** 
 
 
 
@@ -69,58 +69,28 @@ Component card
 <tr>
 <td valign="top">
 
- **Fiori 3 card UX** 
+**Fiori 3 card UX** 
 
 
 
 </td>
 <td valign="top">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)<sup>1</sup> 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)<sup>1</sup> 
 
 
 
 </td>
 <td valign="top">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
- **Cross product integration** 
-
-
-
-</td>
-<td valign="top">
-
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
-
-
-
-</td>
-<td valign="top">
-
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
-
-
-
-</td>
-<td valign="top">
-
- ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
@@ -129,58 +99,28 @@ Component card
 <tr>
 <td valign="top">
 
- **Cross HTML product integration** 
+**Cross product integration** 
 
 
 
 </td>
 <td valign="top">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
- **FLP / cFLP integration** 
-
-
-
-</td>
-<td valign="top">
-
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
-
-
-
-</td>
-<td valign="top">
-
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
-
-
-
-</td>
-<td valign="top">
-
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)<sup>2</sup> 
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
 
 
 
@@ -189,28 +129,28 @@ Component card
 <tr>
 <td valign="top">
 
- **Independent of SAPUI5 runtime** 
+**Cross HTML product integration** 
 
 
 
 </td>
 <td valign="top">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
@@ -219,28 +159,88 @@ Component card
 <tr>
 <td valign="top">
 
- **Can implement application logic** 
+**FLP / cFLP integration** 
 
 
 
 </td>
 <td valign="top">
 
- ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)<sup>2</sup> 
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+**Independent of SAPUI5 runtime** 
+
+
+
+</td>
+<td valign="top">
+
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
+
+
+
+</td>
+<td valign="top">
+
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+
+
+
+</td>
+<td valign="top">
+
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+**Can implement application logic** 
+
+
+
+</td>
+<td valign="top">
+
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+
+
+
+</td>
+<td valign="top">
+
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
+
+
+
+</td>
+<td valign="top">
+
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
@@ -263,7 +263,7 @@ The `sap.ui.integration.widgets.Card` is a self-contained user interface element
 -   The header area indicates what the card is about and can function as a navigation area for opening the underlying source. It also serves as a counter showing the number of items on the card in relation to the total number of relevant items \(in case multiple items are shown in the content area\). It can have a title, a subtitle, an icon, and a status indicator. If the header is of type `Numeric`, it may have different attributes, describing a KPI.
 -   The content area represents data from the underlying source. It uses the interaction and visualization from the embedded controls. It depends on the card type.
 
- ![](../01_Whats-New/images/Cards_3ff4cba.png) 
+![](../01_Whats-New/images/Cards_3ff4cba.png)
 
 
 
@@ -440,7 +440,7 @@ In contrast to the self-contained and manifest-driven Integration Card \(`sap.ui
 
 The `sap.f.Card` consists of three elements: a container with background color and rounded corners, a header, and content.
 
- ![](../01_Whats-New/images/sap_f_Card_Example_b1ff765.png) 
+![](../01_Whats-New/images/sap_f_Card_Example_b1ff765.png)
 
 The header is predefined and can be an instance of either `sap.f.cards.Header` or `sap.f.cards.NumericHeader`. The content area can be built with a desired combination of the standard SAPUI5 controls.
 

@@ -18,9 +18,11 @@ To configure the context resolution request, enter the required information in t
 
 The option described above is depicted in the following figure:
 
- ![](images/Facet_Filter_Configuration_Use_Case_3_ba04452.png) 
+![](images/Facet_Filter_Configuration_Use_Case_3_ba04452.png)
 
 
+
+## Example
 
 You configure a filter for the property `CompanyCode`. You define a value help request that retrieves all company codes that are available. These are listed in the value help for the filter.
 

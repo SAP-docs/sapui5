@@ -6,7 +6,7 @@ You can add semantic highlights to line items in tables, based on their critical
 
 The figure below shows an example of this:
 
- ![](images/Semantic_Highlighting_of_Rows_cb0f238.png) 
+![](images/Semantic_Highlighting_of_Rows_cb0f238.png)
 
 The property containing the criticality can have the following values \(derived from the complex type `CriticalityType` of the vocabulary `com.sap.vocabularies.UI.v1`\):
 

@@ -16,11 +16,11 @@ We will build on this sample application in later steps of the 3D Viewer tutoria
 
 ## Preview
 
-   
+  
   
 **Viewer application that consists solely of a Viewport**
 
- ![](images/3D_Viewer_Tutorial_Step_03_-_Preview_2864ebc.png "Viewer application that consists solely of a Viewport") 
+![](images/3D_Viewer_Tutorial_Step_03_-_Preview_2864ebc.png "Viewer application that consists solely of a Viewport")
 
 
 
@@ -223,7 +223,7 @@ sap.ui.define([
 
 We'll now break the code down to look at each part in more detail.
 
- **Create a New Content Resource** 
+**Create a New Content Resource** 
 
 Create a `contentResource` object that specifies the resource to load. In this case, we're pre-loading the `boxTestModel.vds` model into the application. This occurs before the scene in our Viewer application is initiated. Once again we are using `vds4` as the value for `sourceType` to use the ThreeJs rendering engine.
 
@@ -240,7 +240,7 @@ sap.ui.define([
 
 ```
 
- **Create a new Content Connector instance** 
+**Create a new Content Connector instance** 
 
 Create a new Content Connector instance. We're only specifying one input parameter, which is an even handler which is invoked when content resource loading is finished \(either successfully or unsuccessfully\). We then get the current viewport, and attach the Content Connector instance so that the model we've loaded can be rendered.
 
@@ -265,7 +265,7 @@ return Controller.extend("standaloneViewport.controller.App",{
         viewport.setContentConnector(contentConnector);
 ```
 
- **Load the Content Resource for Rendering** 
+**Load the Content Resource for Rendering** 
 
 Now that we've associated the viewport with the Content Connector, we can load our model to be displayed on the Viewport.
 

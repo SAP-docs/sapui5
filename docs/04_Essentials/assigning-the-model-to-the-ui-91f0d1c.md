@@ -4,7 +4,7 @@
 
 If you don't want to use a component or descriptor file, you have to assign the model instance manually to the UI, before you can bind controls to this model instance.
 
-SAPUI5 provides a flexible and modularized concept in which you can not only define one model for your applications, but define different areas in your application with different models and assign single controls to a model. You can, for example, define a JSON model for the application and an OData model for a table control that is contained in the application. You can also set multiple models for a control or a [ `UIArea`](https://ui5.sap.com/#/api/sap.ui.core.UIArea) by specifying a name for the model. These models can be accessed by their name.
+SAPUI5 provides a flexible and modularized concept in which you can not only define one model for your applications, but define different areas in your application with different models and assign single controls to a model. You can, for example, define a JSON model for the application and an OData model for a table control that is contained in the application. You can also set multiple models for a control or a [`UIArea`](https://ui5.sap.com/#/api/sap.ui.core.UIArea) by specifying a name for the model. These models can be accessed by their name.
 
 ```js
 var oJSONModel = new sap.ui.model.json.JSONModel();

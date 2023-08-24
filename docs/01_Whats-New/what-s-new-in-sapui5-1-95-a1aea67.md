@@ -6,7 +6,7 @@ With this release SAPUI5 is upgraded from version 1.94 to 1.95.
 
 
 
-** **
+****
 
 
 <table>
@@ -64,28 +64,28 @@ Available as of
 <tr>
 <td valign="top">
 
- 1.95 
+1.95 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **SAPUI5 OData V2 Model** 
+**SAPUI5 OData V2 Model** 
 
 
 
@@ -108,7 +108,7 @@ The new version of the SAPUI5 OData V2 model introduces the following features:
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -124,28 +124,28 @@ The new version of the SAPUI5 OData V2 model introduces the following features:
 <tr>
 <td valign="top">
 
- 1.95 
+1.95 
 
 
 
 </td>
 <td valign="top">
 
- UI Changed 
+UI Changed 
 
 
 
 </td>
 <td valign="top">
 
- Announcement 
+Announcement 
 
 
 
 </td>
 <td valign="top">
 
- **SAP Fiori Elements: Worklist Apps: Sort, Group, and Filter Options Moved to Table Personalization** 
+**SAP Fiori Elements: Worklist Apps: Sort, Group, and Filter Options Moved to Table Personalization** 
 
 
 
@@ -166,7 +166,7 @@ Sort, group, and filter options in table toolbars have been moved to the table p
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -182,28 +182,28 @@ Sort, group, and filter options in table toolbars have been moved to the table p
 <tr>
 <td valign="top">
 
- 1.95 
+1.95 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **SAPUI5 OData V4 Model** 
+**SAPUI5 OData V4 Model** 
 
 
 
@@ -228,7 +228,7 @@ The new version of the SAPUI5 OData V4 model introduces the following features:
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -244,28 +244,28 @@ The new version of the SAPUI5 OData V4 model introduces the following features:
 <tr>
 <td valign="top">
 
- 1.95 
+1.95 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.Button`** 
+**`sap.m.Button`** 
 
 
 
@@ -283,7 +283,7 @@ We have improved the accessibility of the control, and the screen readers now an
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -299,28 +299,28 @@ We have improved the accessibility of the control, and the screen readers now an
 <tr>
 <td valign="top">
 
- 1.95 
+1.95 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.DatePicker, sap.m.DateRangeSelection, sap.m.DateTimePicker, and sap.ui.unified.Calendar`** 
+**`sap.m.DatePicker, sap.m.DateRangeSelection, sap.m.DateTimePicker, and sap.ui.unified.Calendar`** 
 
 
 
@@ -338,7 +338,7 @@ These controls now have the new property `showCurrentDateButton`, which displays
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -354,28 +354,28 @@ These controls now have the new property `showCurrentDateButton`, which displays
 <tr>
 <td valign="top">
 
- 1.95 
+1.95 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- <code><b>sap.m.StandardListItem</b></code> 
+<code><b>sap.m.StandardListItem</b></code> 
 
 
 
@@ -393,7 +393,7 @@ Information texts in lists can now also be wrapped if wrapping is enabled for th
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -409,28 +409,28 @@ Information texts in lists can now also be wrapped if wrapping is enabled for th
 <tr>
 <td valign="top">
 
- 1.95 
+1.95 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.integration.widgets.Card`** 
+**`sap.ui.integration.widgets.Card`** 
 
 
 
@@ -455,7 +455,7 @@ Information texts in lists can now also be wrapped if wrapping is enabled for th
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -471,28 +471,28 @@ Information texts in lists can now also be wrapped if wrapping is enabled for th
 <tr>
 <td valign="top">
 
- 1.95 
+1.95 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- SAP Fiori Elements 
+SAP Fiori Elements 
 
 
 
 </td>
 <td valign="top">
 
- **SAP Fiori elements for OData V2** 
+**SAP Fiori elements for OData V2** 
 
 
 
@@ -531,7 +531,7 @@ The following changes and new features are available for SAP Fiori elements for 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -547,28 +547,28 @@ The following changes and new features are available for SAP Fiori elements for 
 <tr>
 <td valign="top">
 
- 1.95 
+1.95 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- SAP Fiori Elements 
+SAP Fiori Elements 
 
 
 
 </td>
 <td valign="top">
 
- **SAP Fiori elements for OData V4** 
+**SAP Fiori elements for OData V4** 
 
 
 
@@ -602,7 +602,7 @@ The following changes and new features are available for SAP Fiori elements for 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -619,6 +619,8 @@ The following changes and new features are available for SAP Fiori elements for 
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.115](what-s-new-in-sapui5-1-115-409fde8.md "With this release SAPUI5 is upgraded from version 1.114 to 1.115.")
 
 [What's New in SAPUI5 1.114](what-s-new-in-sapui5-1-114-890fce1.md "With this release SAPUI5 is upgraded from version 1.113 to 1.114.")
 

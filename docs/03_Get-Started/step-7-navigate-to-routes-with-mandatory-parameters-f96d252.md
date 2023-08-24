@@ -10,24 +10,24 @@ The detail page has to read the ID of the employee from the URL to fetch and dis
 
 ## Preview
 
-   
+  
   
 **Employee list with navigation option for items**
 
- ![](images/Tutorial_Navigation_and_Routing_Step_07a_c797ba8.png "Employee list with navigation option for items") 
+![](images/Tutorial_Navigation_and_Routing_Step_07a_c797ba8.png "Employee list with navigation option for items")
 
-   
+  
   
 **Detail Page for a selected employee**
 
- ![](images/Tutorial_Navigation_and_Routing_Step_07b_af68fa9.png "Detail Page for a selected employee") 
+![](images/Tutorial_Navigation_and_Routing_Step_07b_af68fa9.png "Detail Page for a selected employee")
 
-   
+  
   
 **Not Found page for an invalid EmployeeID**
 
- ![](images/Tutorial_Navigation_and_Routing_Step_07c_8bec971.png "Not Found page for an invalid
-						EmployeeID") 
+![](images/Tutorial_Navigation_and_Routing_Step_07c_8bec971.png "Not Found page for an invalid
+						EmployeeID")
 
 
 
@@ -35,11 +35,11 @@ The detail page has to read the ID of the employee from the URL to fetch and dis
 
 You can view and download all files in the *Samples* in the Demo Kit at [Routing and Navigation - Step 7](https://ui5.sap.com/#/entity/sap.ui.core.tutorial.navigation/sample/sap.ui.core.tutorial.navigation.07).
 
-   
+  
   
 **Folder structure for this step**
 
- ![](images/Tutorial_Navigation_and_Routing_Step_07d_ad192cd.png "Folder structure for this step") 
+![](images/Tutorial_Navigation_and_Routing_Step_07d_ad192cd.png "Folder structure for this step")
 
 
 

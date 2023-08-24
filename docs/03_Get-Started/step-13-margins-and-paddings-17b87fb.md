@@ -10,11 +10,11 @@ Instead of manually adding CSS to the controls, we will use the standard classes
 
 ## Preview
 
-   
+  
   
 **The layout of the panel and its content now has margins and padding**
 
- ![](images/SAPUI5_Walkthrough_Step_13_dffe7aa.png "The layout of the panel and its content now has margins and padding") 
+![](images/SAPUI5_Walkthrough_Step_13_dffe7aa.png "The layout of the panel and its content now has margins and padding")
 
 
 

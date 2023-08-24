@@ -100,7 +100,7 @@ Here, `STTASOWD20` represents the application name , `sap.suite.ui.generic.templ
 >               "name": "sap.fe.templates.ObjectPage",
 >               "options": {
 >                 "settings": {
->                   "entitySet": "MainEntity"
+>                   "contextPath": "/MainEntity"
 >                 }
 >               }
 >             }

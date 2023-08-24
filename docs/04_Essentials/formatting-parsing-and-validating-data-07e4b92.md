@@ -72,7 +72,7 @@ For simple data types, you can generate the following parameters in the construc
 
 -   `formatOptions`: Format options define how a value is formatted and displayed in the UI.
 
--    `constraints`: Constraints are optional and define how an input value entered in the UI should look like. During parsing the value is validated against these constraints. For example, an `Integer` type has a constraint for `maximum` that is automatically validated when parsing the input values.
+-   `constraints`: Constraints are optional and define how an input value entered in the UI should look like. During parsing the value is validated against these constraints. For example, an `Integer` type has a constraint for `maximum` that is automatically validated when parsing the input values.
 
 
 ```xml

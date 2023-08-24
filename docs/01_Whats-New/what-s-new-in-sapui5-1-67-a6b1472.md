@@ -4,7 +4,7 @@
 
 With this release SAPUI5 is upgraded from version 1.66 to 1.67.
 
-** **
+****
 
 
 <table>
@@ -62,28 +62,28 @@ Available as of
 <tr>
 <td valign="top">
 
- 1.67 
+1.67 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **SAPUI5 OData V4 Model** 
+**SAPUI5 OData V4 Model** 
 
 
 
@@ -131,28 +131,28 @@ Info Only
 <tr>
 <td valign="top">
 
- 1.67 
+1.67 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.f.ShellBar`** 
+**`sap.f.ShellBar`** 
 
 
 
@@ -182,7 +182,7 @@ Info Only
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -198,28 +198,28 @@ Info Only
 <tr>
 <td valign="top">
 
- 1.67 
+1.67 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.OverflowToolbar`** 
+**`sap.m.OverflowToolbar`** 
 
 
 
@@ -237,7 +237,7 @@ To improve the control's performance, we have introduced a new `asyncMode` prope
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -253,28 +253,28 @@ To improve the control's performance, we have introduced a new `asyncMode` prope
 <tr>
 <td valign="top">
 
- 1.67 
+1.67 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.SinglePlanningCalendar`** 
+**`sap.m.SinglePlanningCalendar`** 
 
 
 
@@ -292,7 +292,7 @@ We have created new examples of the different use cases for `sap.m.SinglePlannin
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -308,28 +308,28 @@ We have created new examples of the different use cases for `sap.m.SinglePlannin
 <tr>
 <td valign="top">
 
- 1.67 
+1.67 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.StandardListItem`** 
+**`sap.m.StandardListItem`** 
 
 
 
@@ -347,7 +347,7 @@ You can now use the `wrapping` property to enable the wrapping of titles and des
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -363,28 +363,28 @@ You can now use the `wrapping` property to enable the wrapping of titles and des
 <tr>
 <td valign="top">
 
- 1.67 
+1.67 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.smarttable.SmartTable`** 
+**`sap.ui.comp.smarttable.SmartTable`** 
 
 
 
@@ -402,7 +402,7 @@ The formatting of group headers in analytical and responsive tables with grouped
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -418,28 +418,28 @@ The formatting of group headers in analytical and responsive tables with grouped
 <tr>
 <td valign="top">
 
- 1.67 
+1.67 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- `sap.ui.generic.app.navigation.service.NavigationHandler` 
+`sap.ui.generic.app.navigation.service.NavigationHandler` 
 
 
 
@@ -457,7 +457,7 @@ Measures are now excluded from navigation in analytical scenarios: `NavigationHa
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -473,28 +473,28 @@ Measures are now excluded from navigation in analytical scenarios: `NavigationHa
 <tr>
 <td valign="top">
 
- 1.67 
+1.67 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.integration.widgets.Card`** 
+**`sap.ui.integration.widgets.Card`** 
 
 
 
@@ -517,7 +517,7 @@ For more information, see [Cards](../10_More_About_Controls/cards-5b46b03.md), t
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -533,28 +533,28 @@ For more information, see [Cards](../10_More_About_Controls/cards-5b46b03.md), t
 <tr>
 <td valign="top">
 
- 1.67 
+1.67 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.table.AnalyticalTable / sap.ui.table.Table / sap.ui.table.TreeTable`** 
+**`sap.ui.table.AnalyticalTable / sap.ui.table.Table / sap.ui.table.TreeTable`** 
 
 
 
@@ -572,7 +572,7 @@ The `MultiSelectionPlugin` class is now available: It provides a plugin to suppo
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -588,28 +588,28 @@ The `MultiSelectionPlugin` class is now available: It provides a plugin to suppo
 <tr>
 <td valign="top">
 
- 1.67 
+1.67 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.uxap.ObjectPageLayout`** 
+**`sap.uxap.ObjectPageLayout`** 
 
 
 
@@ -627,7 +627,7 @@ The control header can now be snapped \(collapsed\) and no scroll bar is display
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -643,28 +643,28 @@ The control header can now be snapped \(collapsed\) and no scroll bar is display
 <tr>
 <td valign="top">
 
- 1.67 
+1.67 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- SAP Fiori Elements 
+SAP Fiori Elements 
 
 
 
 </td>
 <td valign="top">
 
- **SAP Fiori Elements** 
+**SAP Fiori Elements** 
 
 
 
@@ -693,7 +693,7 @@ You can now add, edit, or copy cards using SAPUI5 Visual Editor. You can only ad
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -710,6 +710,8 @@ You can now add, edit, or copy cards using SAPUI5 Visual Editor. You can only ad
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.115](what-s-new-in-sapui5-1-115-409fde8.md "With this release SAPUI5 is upgraded from version 1.114 to 1.115.")
 
 [What's New in SAPUI5 1.114](what-s-new-in-sapui5-1-114-890fce1.md "With this release SAPUI5 is upgraded from version 1.113 to 1.114.")
 

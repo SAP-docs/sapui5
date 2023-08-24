@@ -20,9 +20,9 @@ SAP Fiori elements for OData V4 automatically displays an icon for Situation Han
 
 The following screenshot shows an example from a list report:
 
- ![](images/Situation_Handling_in_a_List_Report_8cbabf0.png) 
+![](images/Situation_Handling_in_a_List_Report_8cbabf0.png)
 
 The following screenshot shows an example from an object page:
 
- ![](images/Situation_Handling_on_an_Object_Page_3268202.png) 
+![](images/Situation_Handling_on_an_Object_Page_3268202.png)
 

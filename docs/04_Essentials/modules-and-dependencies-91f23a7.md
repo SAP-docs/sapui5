@@ -29,6 +29,8 @@ Modules have no predefined syntax or structure, but module developers can use th
 
 
 
+## Example
+
 The following code snippet shows a typical module that uses all of features listed above. The name of the module is `someClass`:
 
 ```js

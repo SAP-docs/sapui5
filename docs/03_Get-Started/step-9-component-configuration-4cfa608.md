@@ -10,12 +10,12 @@ In this step, we will encapsulate all UI assets in a component that is independe
 
 ## Preview
 
-   
+  
   
 **An input field and a description displaying the value of the input field \(No visual changes to last step\)**
 
- ![](images/SAPUI5_Walkthrough_Step_07_to_10_e5a9bb4.png "An input field and a description displaying the value of the input field (No
-					visual changes to last step)") 
+![](images/SAPUI5_Walkthrough_Step_07_to_10_e5a9bb4.png "An input field and a description displaying the value of the input field (No
+					visual changes to last step)")
 
 
 
@@ -27,7 +27,7 @@ You can view and download all files at [Walkthrough - Step 9](https://ui5.sap.co
   
 **Folder Structure for this Step**
 
- ![](images/SAPUI5_Walkthrough_Step_09_1e237a3.png "Folder Structure for this Step") 
+![](images/SAPUI5_Walkthrough_Step_09_1e237a3.png "Folder Structure for this Step")
 
 After this step your project structure will look like the figure above. We will create the `Component.js` file now and modify the related files in the app.
 

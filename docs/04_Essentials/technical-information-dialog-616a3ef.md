@@ -6,7 +6,7 @@ The *Technical Information* dialog shows details of the SAPUI5 version currently
 
 To open the technical information dialog from within a supported desktop browser, use the following [shortcut](../02_Read-Me-First/keyboard-shortcuts-for-sapui5-tools-154844c.md):
 
-  [Ctrl\] + [Shift\] + [Left-Alt\] / [Left-Option\] + [P\] 
+[Ctrl\] + [Shift\] + [Left-Alt\] /[Left-Option\] + [P\] 
 
 ![Technical Information Dialog](../03_Get-Started/images/Technical_Information_Dialog_SAPUI5_8cec8a2.png)
 
@@ -23,7 +23,7 @@ The dialog contains the following information:
 
 You can download the technical information, so that you can attach it to a ticket for example, by clicking *Copy*.
 
- <a name="copyda1306a437244116b156c4428b3c5b5f"/>
+<a name="copyda1306a437244116b156c4428b3c5b5f"/>
 
 <!-- copyda1306a437244116b156c4428b3c5b5f -->
 
@@ -51,14 +51,14 @@ If you only want to load the debug sources for **specific packages**, you have t
 
 After reloading the page, in the *Network* tab of the browser’s developer tools you can see that the controls and framework assets are now loaded individually and have a `-dbg` suffix. These are the source code files that include comments, the uncompressed code of the app, and the SAPUI5 artifacts.
 
-Choose  [Ctrl\] + [O\]  \(Windows\) or  [Command\] + [O\]  \(macOS\) and type the name of an SAPUI5 artifact to view its source code in debug mode.
+Choose [Ctrl\] + [O\]  \(Windows\) or [Command\] + [O\]  \(macOS\) and type the name of an SAPUI5 artifact to view its source code in debug mode.
 
 > ### Note:  
 > Turning on debug sources also increases the log level. For more information, see [Logging and Tracing](logging-and-tracing-9f4d62c.md).
 > 
 > To improve performance, you must deactivate the debug sources once you're done with debugging.
 
- <a name="loiob5dcf47c7d4a4228ab40d77f835648e3"/>
+<a name="loiob5dcf47c7d4a4228ab40d77f835648e3"/>
 
 <!-- loiob5dcf47c7d4a4228ab40d77f835648e3 -->
 

@@ -716,7 +716,7 @@ For more information, see the [API Reference: `sap.ui.core.Configuration.FormatS
 <tr>
 <td valign="top">
 
- `frameOptions` 
+`frameOptions` 
 
 
 
@@ -757,7 +757,7 @@ Frame options mode; for more information, see [Frame Options](../05_Developing_A
 <tr>
 <td valign="top">
 
- `frameOptionsConfig` 
+`frameOptionsConfig` 
 
 
 
@@ -1371,7 +1371,7 @@ Type: `object`
 
 Default value: undefined
 
-With `sap.ui.loader.config({paths: ...})` a map can be used to define locations for resources. See the  [API Reference: `sap.ui.loader`](https://ui5.sap.com/#/api/sap.ui.loader)
+With `sap.ui.loader.config({paths: ...})` a map can be used to define locations for resources. See the [API Reference: `sap.ui.loader`](https://ui5.sap.com/#/api/sap.ui.loader)
 
 To provide a URL location that is **not** overwritten by a component later on, `final` can be set to `true`, for example: `{url: '/that/is/the/prefix/', final: true}`
 
@@ -1927,7 +1927,7 @@ URLs within the CSS or parameters are not modified.
 <tr>
 <td valign="top">
 
- `allowlistService` 
+`allowlistService` 
 
 
 
@@ -1968,7 +1968,7 @@ URL to an allowlist service; see [Allowlist Service](../05_Developing_Apps/allow
 <tr>
 <td valign="top">
 
- `compatVersion` 
+`compatVersion` 
 
 
 

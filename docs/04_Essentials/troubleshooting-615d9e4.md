@@ -6,7 +6,7 @@ This section describes the various tools that are available for troubleshooting 
 
 The first place to check for errors is the developer tools that are provided by the various browsers. They can help you examine the details of the current web page and provide you with debugging tools. For more information on how to debug SAPUI5 apps, see [Debugging](debugging-c9b0f8c.md#loioc9b0f8cca852443f9b8d3bf8ba5626ab) and [Logging and Tracing](logging-and-tracing-9f4d62c.md).
 
-  
+
 
 SAPUI5 also provides you with support tools that help you troubleshoot and solve issues.
 
@@ -40,7 +40,7 @@ How to Open
 <tr>
 <td valign="top">
 
- [Technical Information Dialog](technical-information-dialog-616a3ef.md#loio616a3ef07f554e20a3adf749c11f64e9) 
+[Technical Information Dialog](technical-information-dialog-616a3ef.md#loio616a3ef07f554e20a3adf749c11f64e9) 
 
 
 
@@ -56,7 +56,7 @@ Use the *Technical Information*dialog to enable debug sources and to check which
 
 [Keyboard shortcut](../02_Read-Me-First/keyboard-shortcuts-for-sapui5-tools-154844c.md):
 
- [Ctrl\] + [Shift\] + [Alt\] / [Option\] + [P\] 
+[Ctrl\] + [Shift\] + [Alt\] /[Option\] + [P\] 
 
 Gesture on mobile device:
 
@@ -70,7 +70,7 @@ Gesture on mobile device:
 <tr>
 <td valign="top">
 
- [Support Assistant](support-assistant-57ccd7d.md) 
+[Support Assistant](support-assistant-57ccd7d.md) 
 
 
 
@@ -93,7 +93,7 @@ From the *Technical Information* dialog or with the URL parameter `sap-ui-suppor
 <tr>
 <td valign="top">
 
- [Diagnostics](diagnostics-6ec18e8.md#loio6ec18e80b0ce47f290bc2645b0cc86e6) 
+[Diagnostics](diagnostics-6ec18e8.md#loio6ec18e80b0ce47f290bc2645b0cc86e6) 
 
 
 
@@ -109,7 +109,7 @@ Use the *Diagnostics* window to enable debug sources, display the control tree, 
 
 [Keyboard shortcut](../02_Read-Me-First/keyboard-shortcuts-for-sapui5-tools-154844c.md):
 
- [Ctrl\] + [Shift\] + [Alt\] / [Option\] + [S\] 
+[Ctrl\] + [Shift\] + [Alt\] /[Option\] + [S\] 
 
 
 
@@ -118,7 +118,7 @@ Use the *Diagnostics* window to enable debug sources, display the control tree, 
 <tr>
 <td valign="top">
 
- [UI5 Inspector](ui5-inspector-b24e724.md) 
+[UI5 Inspector](ui5-inspector-b24e724.md) 
 
 
 
@@ -163,7 +163,7 @@ Use Case Examples
 <tr>
 <td valign="top">
 
- [Performance Measurement Using sap/ui/performance/Measurement Module](performance-measurement-using-sap-ui-performance-measurement-module-78880c0.md) 
+[Performance Measurement Using sap/ui/performance/Measurement Module](performance-measurement-using-sap-ui-performance-measurement-module-78880c0.md) 
 
 
 
@@ -179,7 +179,7 @@ Measures the performance of your JavaScript code.
 <tr>
 <td valign="top">
 
- [Interaction Tracking for Performance Measurement](interaction-tracking-for-performance-measurement-b2825ea.md) 
+[Interaction Tracking for Performance Measurement](interaction-tracking-for-performance-measurement-b2825ea.md) 
 
 
 

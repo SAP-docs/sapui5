@@ -16,21 +16,21 @@ Applications can configure actions as critical and when such actions are trigger
 
 <a name="loio9a536627a6a94de084b0605eb164d2c8__section_yms_cz4_wpb"/>
 
-## Confirmation Popup for Discarding a Draft
+## Confirmation Popup for Activating a Draft
 
 When you create or edit an object page in a draft-enabled application and decide to leave the page without saving, you get the following popup:
 
-   
+  
   
 **Create Mode**
 
- ![](images/Confirmation_Popup_for_Draft_Discard_-_Create_Mode_8e59d66.png "Create Mode") 
+![](images/Confirmation_Popup_for_Draft_Discard_-_Create_Mode_8e59d66.png "Create Mode")
 
-   
+  
   
 **Edit Mode**
 
- ![](images/Confirmation_Popup_for_Discard_Draft_-_Edit_Mode_b43cd41.png "Edit Mode") 
+![](images/Confirmation_Popup_for_Discard_Draft_-_Edit_Mode_b43cd41.png "Edit Mode")
 
 > ### Tip:  
 > The popup is enabled by default in SAP Fiori elements for OData V2 and SAP Fiori elements for OData V4. You can disable it for external navigation via manifest settings.
@@ -72,7 +72,7 @@ The flow is as follows:
 
 The following image shows an example of such a popup:
 
- ![](images/Confirmation_Popup_412_Warning_03381d1.png) 
+![](images/Confirmation_Popup_412_Warning_03381d1.png)
 
 
 
@@ -82,9 +82,9 @@ The following image shows an example of such a popup:
 
 
 
-### Turn Off *Discard Draft* Confirmation Popup for External Navigation
+### Turn Off *Draft Activation* Confirmation Popup for External Navigation
 
-Applications can turn off the discard draft confirmation popup for external navigation cases using the `draftDiscardConfirmationSettings` manifest setting as follows:
+Applications can turn off the confirmation popup for draft activation in the case of external navigation using the `draftDiscardConfirmationSettings` manifest setting as follows:
 
 > ### Sample Code:  
 > ```
@@ -96,7 +96,9 @@ Applications can turn off the discard draft confirmation popup for external navi
 >                              }
 >               }
 > }
-> 
+> .
+> .
+> .
 > ```
 
 
@@ -122,44 +124,44 @@ If a user wants to perform an action on multiple selected items, some of the sel
 
 
 
-### Configuring a Confirmation Popup for Save/Activation on Object Pages
-
-In draft scenarios, applications can configure a UI confirmation popup before proceeding with activation, if there are any warnings available at the front end.
+### Configuring an Additional Confirmation Popup for Save/Activation on Object Pages
 
 > ### Note:  
 > This is a legacy feature and it is recommended to use the 412 confirmation popup instead.
 
+In draft scenarios, applications can configure a UI confirmation popup before proceeding with activation, if there are any warnings available at the front end.
+
 To enable this popup, in the `manifest.json` under the object page settings, set the `showConfirmationOnDraftActivate` indicator to `true`.
 
-```
-
-"pages": {
-    "ObjectPage|STTA_C_MP_Product": {
-           "entitySet": "STTA_C_MP_Product",
-            "component": {
-                "name": "sap.suite.ui.generic.template.ObjectPage",
-                 "settings": {
-                         "showRelatedApps": true,
-                          "tableType": "ResponsiveTable",
-                          "editableHeaderContent": true,
-                          "showConfirmationOnDraftActivate": true,
-                          "sections": {
-                                  "to_ProductText::com.sap.vocabularies.UI.v1.LineItem": {
-                                       "navigationProperty": "to_ProductText",
-                                        "entitySet": "STTA_C_MP_ProductText",
-                                        "multiSelect": true,
-                                        "createMode": "inline",
-                                        "tableType": "ResponsiveTable"
-                                    }
-                           }
-                      }
-              }
-     }
-}
-.
-.
-.
-```
+> ### Sample Code:  
+> ```
+> "pages": {
+>               "ObjectPage|STTA_C_MP_Product": {
+>                              "entitySet": "STTA_C_MP_Product",
+>                              "component": {
+>                                            "name": "sap.suite.ui.generic.template.ObjectPage",
+>                                            "settings": {
+>                                                           "showRelatedApps": true,
+>                                                           "tableType": "ResponsiveTable",
+>                                                           "editableHeaderContent": true,
+>                                                           "showConfirmationOnDraftActivate": true,
+>                                                           "sections": {
+>                                                                         "to_ProductText::com.sap.vocabularies.UI.v1.LineItem": {
+>                                                                                       "navigationProperty": "to_ProductText",
+>                                                                                       "entitySet": "STTA_C_MP_ProductText",
+>                                                                                       "multiSelect": true,
+>                                                                                       "createMode": "inline",
+>                                                                                       "tableType": "ResponsiveTable"
+>                                                                         }
+>                                                           }
+>                                            }
+>                              }
+>               }
+> }
+> .
+> .
+> .
+> ```
 
 
 
@@ -190,9 +192,9 @@ You can override the title text and provide application specific dialog title us
 
 
 
-### Turn Off *Discard Draft* Confirmation Popup for External Navigation
+### Turn Off *Draft Activation* Confirmation Popup for External Navigation
 
-Applications can turn off the discard draft confirmation popup for external navigation cases using the `silentlyKeepDraftOnForwardNavigation` manifest setting as follows:
+Applications can turn off the confirmation popup for draft activation in the case of external navigation using the `silentlyKeepDraftOnForwardNavigation` manifest setting as follows:
 
 > ### Sample Code:  
 > ```
@@ -201,6 +203,9 @@ Applications can turn off the discard draft confirmation popup for external navi
 >           "silentlyKeepDraftOnForwardNavigation": true
 >      }
 > }
+> .
+> .
+> .
 > ```
 
 

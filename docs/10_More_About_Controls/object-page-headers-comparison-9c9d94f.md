@@ -41,14 +41,14 @@ Title
 </td>
 <td valign="top">
 
- `sap.uxap.ObjectPageHeader` 
+`sap.uxap.ObjectPageHeader` 
 
 
 
 </td>
 <td valign="top">
 
- `sap.uxap.ObjectPageDynamicHeaderTitle` 
+`sap.uxap.ObjectPageDynamicHeaderTitle` 
 
 
 
@@ -64,14 +64,14 @@ Content \(controls are used internally\)
 </td>
 <td valign="top">
 
- `sap.uxap.ObjectPageHeaderContent` 
+`sap.uxap.ObjectPageHeaderContent` 
 
 
 
 </td>
 <td valign="top">
 
- `sap.uxap.ObjectPageDynamicHeaderContent` 
+`sap.uxap.ObjectPageDynamicHeaderContent` 
 
 
 
@@ -124,21 +124,21 @@ Header Content
 <tr>
 <td valign="top">
 
- `sap.uxap.ObjectPageLayout` 
+`sap.uxap.ObjectPageLayout` 
 
 
 
 </td>
 <td valign="top">
 
- `sap.uxap.ObjectPageDynamicHeaderTitle` 
+`sap.uxap.ObjectPageDynamicHeaderTitle` 
 
 
 
 </td>
 <td valign="top">
 
- `sap.uxap.ObjectPageDynamicHeaderContent` 
+`sap.uxap.ObjectPageDynamicHeaderContent` 
 
 
 
@@ -147,21 +147,21 @@ Header Content
 <tr>
 <td valign="top">
 
- `sap.f.DynamicPage` 
+`sap.f.DynamicPage` 
 
 
 
 </td>
 <td valign="top">
 
- `sap.f.DynamicPageTitle` 
+`sap.f.DynamicPageTitle` 
 
 
 
 </td>
 <td valign="top">
 
- `sap.f.DynamicPageHeader` 
+`sap.f.DynamicPageHeader` 
 
 
 
@@ -212,7 +212,7 @@ Description
 <tr>
 <td valign="top">
 
- `showTitleInHeaderContent` 
+`showTitleInHeaderContent` 
 
 
 
@@ -228,7 +228,7 @@ Determines whether the title, image, markers and `selectTitleArrow` are displaye
 <tr>
 <td valign="top">
 
- `isChildPage` 
+`isChildPage` 
 
 
 
@@ -244,7 +244,7 @@ Determines whether the page is a child page and renders it with a different desi
 <tr>
 <td valign="top">
 
- `alwaysShowContentHeader` 
+`alwaysShowContentHeader` 
 
 
 
@@ -260,7 +260,7 @@ Determines whether Header Content will always be expanded on desktop.
 <tr>
 <td valign="top">
 
- `showEditHeaderButton` 
+`showEditHeaderButton` 
 
 
 
@@ -276,7 +276,7 @@ Determines whether an *Edit* button will be displayed in the Header Content.
 <tr>
 <td valign="top">
 
- `sap.uxap.ObjectPageHeaderLayoutData` 
+`sap.uxap.ObjectPageHeaderLayoutData` 
 
 
 
@@ -314,7 +314,7 @@ Description
 <tr>
 <td valign="top">
 
- `headerContentPinnable` 
+`headerContentPinnable` 
 
 
 
@@ -332,7 +332,7 @@ When set to true, a pin button is displayed within the Header Content area. The 
 <tr>
 <td valign="top">
 
- `toggleHeaderOnTitleClick` 
+`toggleHeaderOnTitleClick` 
 
 
 
@@ -348,7 +348,7 @@ Determines whether the user can switch between the expanded/collapsed states of 
 <tr>
 <td valign="top">
 
- `preserveHeaderStateOnScroll` 
+`preserveHeaderStateOnScroll` 
 
 
 
@@ -364,7 +364,7 @@ Preserves the current header state when scrolling. For example, if the user expa
 <tr>
 <td valign="top">
 
- `toggleHeaderOnTitleClick` 
+`toggleHeaderOnTitleClick` 
 
 
 

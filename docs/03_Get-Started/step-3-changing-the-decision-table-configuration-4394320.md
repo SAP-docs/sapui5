@@ -12,17 +12,17 @@ If you are using a data object with reference attributes as the result data obje
 
 ## Preview
 
-   
+  
   
 **Decision Table with Settings Button**
 
- ![](images/Settings_button_69098c1.png "Decision Table with Settings Button") 
+![](images/Settings_button_69098c1.png "Decision Table with Settings Button")
 
-   
+  
   
 **Decision Table Settings Dialog Box**
 
- ![](images/Settings_dialog_0e02b97.png "Decision Table Settings Dialog Box") 
+![](images/Settings_dialog_0e02b97.png "Decision Table Settings Dialog Box")
 
 
 

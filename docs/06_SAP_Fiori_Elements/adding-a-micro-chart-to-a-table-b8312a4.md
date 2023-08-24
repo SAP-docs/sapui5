@@ -6,11 +6,11 @@ You can add a micro chart to the column of a responsive table in both the list r
 
 To add a micro chart to a table, use the annotation term `UI.LineItem` and the complex type `DataFieldForAnnotation`. The micro charts are then displayed within the table column as shown below:
 
-   
+  
   
 **Micro Chart in List Report**
 
- ![](images/Micro_Chart_in_List_Report_b010c13.png "Micro Chart in List Report") 
+![](images/Micro_Chart_in_List_Report_b010c13.png "Micro Chart in List Report")
 
 
 
@@ -388,7 +388,7 @@ The template doesn't currently support the use of navigation properties within t
   
 **Navigation Property**
 
- ![](images/Chart_Limitation_02debb6.png "Navigation Property") 
+![](images/Chart_Limitation_02debb6.png "Navigation Property")
 
 
 

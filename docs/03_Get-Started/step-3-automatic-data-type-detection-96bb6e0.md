@@ -12,11 +12,11 @@ The OData V4 Model utilizes this information to compute the corresponding SAPUI5
 
 ## Preview
 
-   
+  
   
 **Input does not match the underlying data type**
 
- ![](images/Tutorial_OData_V4_Step_3_8320fcf.png "Input does not match the underlying data type") 
+![](images/Tutorial_OData_V4_Step_3_8320fcf.png "Input does not match the underlying data type")
 
 
 

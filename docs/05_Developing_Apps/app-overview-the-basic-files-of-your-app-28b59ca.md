@@ -4,7 +4,7 @@
 
 We recommend creating at least three files for your app: the descriptor \(`manifest.json`\), the component \(`Component.js`\), and the main view of the app \(`App.view.xml`\).
 
- ![](images/Basic_Files_eeae30f.png) 
+![](images/Basic_Files_eeae30f.png)
 
 
 

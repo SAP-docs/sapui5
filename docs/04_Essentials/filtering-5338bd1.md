@@ -11,7 +11,7 @@ To use server side filtering, set the operation mode to [`sap.ui.model.odata.Ope
 -   For all list bindings of the model, set the model parameter `operationMode`.
 
 
- **Example: Operation mode set in `manifest.json` for the model** 
+**Example: Operation mode set in `manifest.json` for the model** 
 
 ```js
 
@@ -113,7 +113,7 @@ oTeamsBinding.filter(
         operator : sap.ui.model.FilterOperator.Any,
         variable : "employee",
         condition : new sap.ui.model.Filter("employee/AGE", sap.ui.model.FilterOperator.GT, 42)
-    });
+    })
 );
 ```
 
@@ -126,7 +126,7 @@ oTeamsBinding.filter(
     new sap.ui.model.Filter({
         path : "TEAM_2_EMPLOYEES",
         operator : sap.ui.model.FilterOperator.Any
-    });
+    })
 );
 ```
 
@@ -148,7 +148,7 @@ oOrdersListBinding.filter(
         operator : sap.ui.model.FilterOperator.All,
         variable : "employee",
         condition : new sap.ui.model.Filter("employee/AGE", sap.ui.model.FilterOperator.GT, 42)
-    });
+    })
 );
 ```
 

@@ -15,11 +15,11 @@ To achieve this, we will add ARIA attributes. ARIA attributes are used by screen
 
 ## Preview
 
-   
+  
   
 **Landmarks in our app**
 
- ![](images/Walkthrough_Tutorial_Step_38_Preview_d9c6cd3.png "Landmarks in our app") 
+![](images/Walkthrough_Tutorial_Step_38_Preview_d9c6cd3.png "Landmarks in our app")
 
 
 

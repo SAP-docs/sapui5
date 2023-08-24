@@ -6,7 +6,7 @@ With this release SAPUI5 is upgraded from version 1.95 to 1.96.
 
 
 
-** **
+****
 
 
 <table>
@@ -64,28 +64,28 @@ Available as of
 <tr>
 <td valign="top">
 
- 1.96 
+1.96 
 
 
 
 </td>
 <td valign="top">
 
- New 
+New 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Enabling Apps to Comply with a Content Security Policy \(CSP\) without `eval()` and Inline Styles** 
+**Enabling Apps to Comply with a Content Security Policy \(CSP\) without `eval()` and Inline Styles** 
 
 
 
@@ -106,7 +106,7 @@ The SAPUI5 framework now allows you to run applications in environments with str
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -122,28 +122,28 @@ The SAPUI5 framework now allows you to run applications in environments with str
 <tr>
 <td valign="top">
 
- 1.96 
+1.96 
 
 
 
 </td>
 <td valign="top">
 
- UI Changed 
+UI Changed 
 
 
 
 </td>
 <td valign="top">
 
- Announcement 
+Announcement 
 
 
 
 </td>
 <td valign="top">
 
- **SAP Fiori Elements: Multi-Select in Responsive Tables: *Clear All* Instead of *Select All*** 
+**SAP Fiori Elements: Multi-Select in Responsive Tables: *Clear All* Instead of *Select All*** 
 
 
 
@@ -164,7 +164,7 @@ Responsive tables with a multi-select option will show a *Clear All* checkbox in
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -180,28 +180,28 @@ Responsive tables with a multi-select option will show a *Clear All* checkbox in
 <tr>
 <td valign="top">
 
- 1.96 
+1.96 
 
 
 
 </td>
 <td valign="top">
 
- New 
+New 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **New Theme Available for SAP Fiori User Experience \(Experimental\)** 
+**New Theme Available for SAP Fiori User Experience \(Experimental\)** 
 
 
 
@@ -222,7 +222,7 @@ We have introduced a new theme, the preview version of the *Horizon* visual them
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -238,28 +238,28 @@ We have introduced a new theme, the preview version of the *Horizon* visual them
 <tr>
 <td valign="top">
 
- 1.96 
+1.96 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **SAPUI5 Models** 
+**SAPUI5 Models** 
 
 
 
@@ -277,7 +277,7 @@ We have provided the new `sap.ui.model.ListBinding#getFilters` method. It is ava
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -293,28 +293,28 @@ We have provided the new `sap.ui.model.ListBinding#getFilters` method. It is ava
 <tr>
 <td valign="top">
 
- 1.96 
+1.96 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **SAPUI5 OData V2 Model** 
+**SAPUI5 OData V2 Model** 
 
 
 
@@ -332,7 +332,7 @@ We have introduced the new `sap.ui.model.odata.v2.Context#created` method. For c
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -348,28 +348,28 @@ We have introduced the new `sap.ui.model.odata.v2.Context#created` method. For c
 <tr>
 <td valign="top">
 
- 1.96 
+1.96 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **SAPUI5 OData V4 Model** 
+**SAPUI5 OData V4 Model** 
 
 
 
@@ -394,7 +394,7 @@ The new version of the SAPUI5 OData V4 model introduces the following features:
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -410,28 +410,28 @@ The new version of the SAPUI5 OData V4 model introduces the following features:
 <tr>
 <td valign="top">
 
- 1.96 
+1.96 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.MaskInput`** 
+**`sap.m.MaskInput`** 
 
 
 
@@ -449,7 +449,7 @@ We have introduced the `showClearIcon` property. If set to `true`, when there is
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -465,28 +465,28 @@ We have introduced the `showClearIcon` property. If set to `true`, when there is
 <tr>
 <td valign="top">
 
- 1.96 
+1.96 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.MultiComboBox`** 
+**`sap.m.MultiComboBox`** 
 
 
 
@@ -504,7 +504,7 @@ We have implemented a checkbox that allows users to select all options, placed o
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -520,28 +520,28 @@ We have implemented a checkbox that allows users to select all options, placed o
 <tr>
 <td valign="top">
 
- 1.96 
+1.96 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.smartfield.SmartField`** 
+**`sap.ui.comp.smartfield.SmartField`** 
 
 
 
@@ -562,7 +562,7 @@ We have implemented a checkbox that allows users to select all options, placed o
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -578,28 +578,28 @@ We have implemented a checkbox that allows users to select all options, placed o
 <tr>
 <td valign="top">
 
- 1.96 
+1.96 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.smarttable.SmartTable`** 
+**`sap.ui.comp.smarttable.SmartTable`** 
 
 
 
@@ -617,7 +617,7 @@ We have provided an option to disable the *Paste* button and control the related
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -633,28 +633,28 @@ We have provided an option to disable the *Paste* button and control the related
 <tr>
 <td valign="top">
 
- 1.96 
+1.96 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.integration.widgets.Card`** 
+**`sap.ui.integration.widgets.Card`** 
 
 
 
@@ -679,7 +679,7 @@ We have provided an option to disable the *Paste* button and control the related
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -695,28 +695,28 @@ We have provided an option to disable the *Paste* button and control the related
 <tr>
 <td valign="top">
 
- 1.96 
+1.96 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- SAP Fiori Elements 
+SAP Fiori Elements 
 
 
 
 </td>
 <td valign="top">
 
- **SAP Fiori elements for OData V4 and SAP Fiori elements for OData V2** 
+**SAP Fiori elements for OData V4 and SAP Fiori elements for OData V2** 
 
 
 
@@ -737,7 +737,7 @@ The following changes and new features are available for SAP Fiori elements for 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -753,28 +753,28 @@ The following changes and new features are available for SAP Fiori elements for 
 <tr>
 <td valign="top">
 
- 1.96 
+1.96 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- SAP Fiori Elements 
+SAP Fiori Elements 
 
 
 
 </td>
 <td valign="top">
 
- **SAP Fiori elements for OData V2** 
+**SAP Fiori elements for OData V2** 
 
 
 
@@ -807,7 +807,7 @@ The following changes and new features are available for SAP Fiori elements for 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -823,28 +823,28 @@ The following changes and new features are available for SAP Fiori elements for 
 <tr>
 <td valign="top">
 
- 1.96 
+1.96 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- SAP Fiori Elements 
+SAP Fiori Elements 
 
 
 
 </td>
 <td valign="top">
 
- **SAP Fiori elements for OData V4** 
+**SAP Fiori elements for OData V4** 
 
 
 
@@ -882,7 +882,7 @@ The following changes and new features are available for SAP Fiori elements for 
 
 -   You can now display a KPI tag in applications using analytical services. When a user clicks the KPI tag, the KPI card opens with more details.
 
-     ![](images/KPI_Tag_KPI_Card_ab5d389.png) 
+    ![](images/KPI_Tag_KPI_Card_ab5d389.png)
 
 
 <sub>Changed•SAP Fiori Elements•Info Only•1.96</sub>
@@ -892,7 +892,7 @@ The following changes and new features are available for SAP Fiori elements for 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -908,28 +908,28 @@ The following changes and new features are available for SAP Fiori elements for 
 <tr>
 <td valign="top">
 
- 1.96 
+1.96 
 
 
 
 </td>
 <td valign="top">
 
- New 
+New 
 
 
 
 </td>
 <td valign="top">
 
- User Documentation 
+User Documentation 
 
 
 
 </td>
 <td valign="top">
 
- **Accessibility Documentation for End Users** 
+**Accessibility Documentation for End Users** 
 
 
 
@@ -947,7 +947,7 @@ We have new accessibility documentation with detailed information about SAPUI5 k
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -964,6 +964,8 @@ We have new accessibility documentation with detailed information about SAPUI5 k
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.115](what-s-new-in-sapui5-1-115-409fde8.md "With this release SAPUI5 is upgraded from version 1.114 to 1.115.")
 
 [What's New in SAPUI5 1.114](what-s-new-in-sapui5-1-114-890fce1.md "With this release SAPUI5 is upgraded from version 1.113 to 1.114.")
 

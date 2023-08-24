@@ -10,11 +10,11 @@ SAPUI5 apps consist of multiple views, components and fragments. If you run the 
 
 To change the analysis scope, select the gears icon next to the *Analyze* button.
 
-   
+  
   
 **Support Assistant - Execution Scopes**
 
- ![](images/Support_Assistant_-_Scopes_272b4b5.png "Support Assistant - Execution Scopes") 
+![](images/Support_Assistant_-_Scopes_272b4b5.png "Support Assistant - Execution Scopes")
 
 There are three available execution scopes:
 

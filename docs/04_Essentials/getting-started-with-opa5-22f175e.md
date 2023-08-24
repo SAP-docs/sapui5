@@ -176,7 +176,7 @@ Opa5.extendConfig({
 
 The `viewNamespace` is very important for finding the correct view. As you probably do not want to set this in every single `waitFor`, a default is provided. You can now launch the test page and the OPA test should run. If everything worked, you get the following result:
 
-![](images/Testing_OPA_Success_New_b7d6ee3.jpg) 
+![](images/Testing_OPA_Success_New_b7d6ee3.jpg)
 
 For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.test) and the [Samples](https://ui5.sap.com/#/entity/sap.ui.test.Opa5). 
 
@@ -247,7 +247,7 @@ new Opa5().iTeardownMyApp();
 new Opa5().iTeardownMyAppFrame();
 ```
 
- For more information, see the [API Reference: `Opa5`](https://ui5.sap.com/#/api/sap.ui.test.Opa5). 
+For more information, see the [API Reference: `Opa5`](https://ui5.sap.com/#/api/sap.ui.test.Opa5). 
 
 Starting the app can be a slow operation so it is not recommended to do this for every test. However, it is good practice to group tests in modules and restart the app in every module to enable faster debugging of larger suites.
 

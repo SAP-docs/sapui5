@@ -346,7 +346,7 @@ You can also place action inside the form toolbar using the `inline` parameter.
 
 When you set `inline=true`, a given action from a `FieldGroup` shows up directly in the form toolbar instead of the section toolbar. You can see the result in the following image:
 
- ![](images/Placing_Form_Actions_Inside_the_Form_Toolbar_d513ccf.png) 
+![](images/Placing_Form_Actions_Inside_the_Form_Toolbar_d513ccf.png)
 
 > ### Sample Code:  
 > XML Annotation

@@ -12,11 +12,11 @@ The structure and data model created in this step will be used throughout this t
 
 ## Preview
 
-   
+  
   
 **Initial app with a simple table**
 
- ![](images/Tutorial_OData_V4_Step1_Preview_9d0182f.png "Initial app with a simple table") 
+![](images/Tutorial_OData_V4_Step1_Preview_9d0182f.png "Initial app with a simple table")
 
 
 
@@ -34,7 +34,7 @@ You should now have the following files:
   
 **Folder structure with downloaded files**
 
- ![](images/Tutorial_OData_V4_Step1_Folders_1406ea6.png "Folder structure with downloaded files") 
+![](images/Tutorial_OData_V4_Step1_Folders_1406ea6.png "Folder structure with downloaded files")
 
 
 

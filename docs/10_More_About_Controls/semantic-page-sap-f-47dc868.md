@@ -59,7 +59,7 @@ The actions in the title are grouped to text actions or icon actions. When an ag
 
 `titleMainAction`, `titleCustomTextActions`, semantic text actions \(`deleteAction`, `copyAction`, `addAction`\), `customIconActions`, semantic icon actions \(`favoriteAction`, `flagAction`\), share menu action, navigation actions \(`fullScreenAction`, `exitFullScreenAction`, `closeAction`\).
 
- ![](images/sap_f_SemanticPage_title_5181747.png) 
+![](images/sap_f_SemanticPage_title_5181747.png)
 
 
 
@@ -82,7 +82,7 @@ The following aggregations are available to control the semantic in the share me
 
 The actions in the share menu icon appear in the title when a related aggregation is used.
 
- ![](images/sap_f_SemanticPage_ShareMenu_1539a48.png) 
+![](images/sap_f_SemanticPage_ShareMenu_1539a48.png)
 
 
 
@@ -107,7 +107,7 @@ The actions in the footer are positioned either on its left or right area and ha
 
 The left side contains the `messagesIndicator`, and the right side - `draftIndicator`, `footerMainAction`, `positiveAction`, `negativeAction` and `footerCustomActions`:
 
- ![](images/sap_f_SemanticPage_footer_5d56a48.png) 
+![](images/sap_f_SemanticPage_footer_5d56a48.png)
 
 
 

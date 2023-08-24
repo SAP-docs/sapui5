@@ -8,11 +8,11 @@ It's now time to improve the content of the *Info* tab. We want to see the *Post
 
 ## Preview
 
-   
+  
   
 **Unit tests of the formatter**
 
- ![](images/Tutorial_Testing_Step_15_1_8ab2798.png "Unit tests of the formatter") 
+![](images/Tutorial_Testing_Step_15_1_8ab2798.png "Unit tests of the formatter")
 
 Depending on the current date, we distinguish four different formatting categories, as shown in the table below:
 
@@ -53,14 +53,14 @@ Today
 </td>
 <td valign="top">
 
- `2013/02/13 12:05:20` 
+`2013/02/13 12:05:20` 
 
 
 
 </td>
 <td valign="top">
 
- ***12:05 PM*** 
+***12:05 PM*** 
 
 
 
@@ -76,14 +76,14 @@ Yesterday
 </td>
 <td valign="top">
 
- `2013/02/12 12:05:20` 
+`2013/02/12 12:05:20` 
 
 
 
 </td>
 <td valign="top">
 
- ***Yesterday*** 
+***Yesterday*** 
 
 
 
@@ -99,14 +99,14 @@ Last 7 days
 </td>
 <td valign="top">
 
- `2013/02/08 12:05:20` 
+`2013/02/08 12:05:20` 
 
 
 
 </td>
 <td valign="top">
 
- ***Friday*** 
+***Friday*** 
 
 
 
@@ -122,14 +122,14 @@ Others
 </td>
 <td valign="top">
 
- `2011/02/05 12:05:20` 
+`2011/02/05 12:05:20` 
 
 
 
 </td>
 <td valign="top">
 
- ***Dec 5, 2011*** 
+***Dec 5, 2011*** 
 
 
 
@@ -299,7 +299,7 @@ In the implementation we use the `DateFormat` of SAPUI5 to create a short date. 
 > ### Note:  
 > The implementation should not do more than the current tests covers. This makes sure you cover all the code paths. You can enable the code coverage by selecting the *Enable coverage* checkbox.
 > 
->  ![](images/Tutorial_Testing_Step_15_2_a700487.png) 
+> ![](images/Tutorial_Testing_Step_15_2_a700487.png)
 > 
 > It will show the lines covered by your tests \(white\) and the ones that were not covered \(red\). For the single test above the coverage looks like this. The red line is already covered by the previous test so in total we have a test coverage of 100%.
 

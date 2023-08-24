@@ -49,11 +49,11 @@ The control metadata is defined as follows:
 
     Aggregations and associations are defined by their name and a configuration object with the following information:
 
-    -    `type`: The type should be a subclass of the element or the control; the default is `sap.ui.core.control`
+    -   `type`: The type should be a subclass of the element or the control; the default is `sap.ui.core.control`
 
-    -    `multiple`: Defines whether it is a 0..1 aggregation or a 0..n aggregation; the default for aggregations is `true` = 0..n, and for associations the default is `false`
+    -   `multiple`: Defines whether it is a 0..1 aggregation or a 0..n aggregation; the default for aggregations is `true` = 0..n, and for associations the default is `false`
 
-    -    `singularName`: For 0..n aggregations, the aggregation name typically is plural, but certain methods are created where the singular form is required \(for example, `addWorksetItem`\} for the "worksetItems" aggregation\).
+    -   `singularName`: For 0..n aggregations, the aggregation name typically is plural, but certain methods are created where the singular form is required \(for example, `addWorksetItem`\} for the "worksetItems" aggregation\).
 
 
     If only the type needs to be set, you can just give it as a string instead of the configuration object.

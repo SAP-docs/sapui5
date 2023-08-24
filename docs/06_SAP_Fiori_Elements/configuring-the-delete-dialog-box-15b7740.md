@@ -12,7 +12,7 @@ You can adapt the text in the Delete dialog box to match your requirements.
 
 When a user deletes a record from the list report, the text in the dialog box "Delete Object 500000000?" is displayed in the delete confirmation, informing the user that object 500000000 is being deleted.
 
- ![](images/Delete_a435e28.png) 
+![](images/Delete_a435e28.png)
 
 The corresponding i18n key for the text used by the SAP Fiori elements framework in the delete confirmation dialog is `ST_GENERIC_DELETE_SELECTED`. You can adapt it by maintaining a text for this key in the app’s i18n file.
 
@@ -208,7 +208,7 @@ Changes must be made in the manifest file of the application. Add `enhanceI18n` 
 >       "name": "sap.fe.templates.ListReport",
 >       "options":{
 >          "settings":{
->          "entitySet": "SalesOrderManage",
+>          "contextPath": "/SalesOrderManage",
 >          "enhanceI18n": "i18n/customSalesOrderLR.properties", // This is the line to be added - it provides Fiori Elements with the name of the custom resource bundle
 >          .
 >          .

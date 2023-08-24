@@ -6,7 +6,7 @@ With this release SAPUI5 is upgraded from version 1.82 to 1.84.
 
 
 
-** **
+****
 
 
 <table>
@@ -64,28 +64,28 @@ Available as of
 <tr>
 <td valign="top">
 
- 1.84 
+1.84 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Asynchronous Loading of XML Content in Fragments** 
+**Asynchronous Loading of XML Content in Fragments** 
 
 
 
@@ -105,7 +105,7 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.c
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -121,28 +121,28 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.c
 <tr>
 <td valign="top">
 
- 1.84 
+1.84 
 
 
 
 </td>
 <td valign="top">
 
- New 
+New 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Accessibility Enhancement** 
+**Accessibility Enhancement** 
 
 
 
@@ -160,7 +160,7 @@ We have enhanced SAPUI5’s accessibility support according to the latest WAI-AR
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -176,28 +176,28 @@ We have enhanced SAPUI5’s accessibility support according to the latest WAI-AR
 <tr>
 <td valign="top">
 
- 1.84 
+1.84 
 
 
 
 </td>
 <td valign="top">
 
- New 
+New 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **SAPUI5 in the SAP Road Map Explorer** 
+**SAPUI5 in the SAP Road Map Explorer** 
 
 
 
@@ -215,7 +215,7 @@ SAPUI5 is now part of the SAP Road Map Explorer. Check out the innovations that 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -231,28 +231,28 @@ SAPUI5 is now part of the SAP Road Map Explorer. Check out the innovations that 
 <tr>
 <td valign="top">
 
- 1.84 
+1.84 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Card Explorer** 
+**Card Explorer** 
 
 
 
@@ -263,7 +263,7 @@ SAPUI5 is now part of the SAP Road Map Explorer. Check out the innovations that 
 
 -   A new Troubleshooting page has been added to the Integrate section of the Card Explorer. It contains additional tips and solutions to the most common issues with Integration cards. For more information, see [Card Explorer](https://ui5.sap.com/test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/learn/types/calendar).
 
--   We have added detailed documentation about sizing and layouts in Integration cards. For more information, see the [Sizing](https://ui5.sap.com/test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/learn/features/sizing) and the  [Layouts](https://ui5.sap.com/test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/integrate/layouts) pages in the Card Explorer.
+-   We have added detailed documentation about sizing and layouts in Integration cards. For more information, see the [Sizing](https://ui5.sap.com/test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/learn/features/sizing) and the [Layouts](https://ui5.sap.com/test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/integrate/layouts) pages in the Card Explorer.
 
 
 <sub>Changed•Feature•Info Only•1.84</sub>
@@ -273,7 +273,7 @@ SAPUI5 is now part of the SAP Road Map Explorer. Check out the innovations that 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -289,28 +289,28 @@ SAPUI5 is now part of the SAP Road Map Explorer. Check out the innovations that 
 <tr>
 <td valign="top">
 
- 1.84 
+1.84 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Navigation with Dynamic Targets** 
+**Navigation with Dynamic Targets** 
 
 
 
@@ -330,7 +330,7 @@ Note that the static definition remains the preferred solution as it allows for 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -346,28 +346,28 @@ Note that the static definition remains the preferred solution as it allows for 
 <tr>
 <td valign="top">
 
- 1.84 
+1.84 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Rule Builder Control** 
+**Rule Builder Control** 
 
 
 
@@ -385,7 +385,7 @@ You can now configure labels for condition expressions in a decision table. Thes
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -401,28 +401,28 @@ You can now configure labels for condition expressions in a decision table. Thes
 <tr>
 <td valign="top">
 
- 1.84 
+1.84 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **SAPUI5 OData V2 Model** 
+**SAPUI5 OData V2 Model** 
 
 
 
@@ -443,7 +443,7 @@ The new version of the SAPUI5 OData V2 model introduces the following features:
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -459,28 +459,28 @@ The new version of the SAPUI5 OData V2 model introduces the following features:
 <tr>
 <td valign="top">
 
- 1.84 
+1.84 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **SAPUI5 OData V4 Model** 
+**SAPUI5 OData V4 Model** 
 
 
 
@@ -509,7 +509,7 @@ For more information, see [OData V4 Model](../04_Essentials/odata-v4-model-5de13
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -525,28 +525,28 @@ For more information, see [OData V4 Model](../04_Essentials/odata-v4-model-5de13
 <tr>
 <td valign="top">
 
- 1.84 
+1.84 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.f.GridContainer`** 
+**`sap.f.GridContainer`** 
 
 
 
@@ -564,7 +564,7 @@ You can now drag and drop items using the keyboard into an empty container. For 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -580,28 +580,28 @@ You can now drag and drop items using the keyboard into an empty container. For 
 <tr>
 <td valign="top">
 
- 1.84 
+1.84 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.Button`** 
+**`sap.m.Button`** 
 
 
 
@@ -619,7 +619,7 @@ The new `ariaHasPopup` property allows the `aria-haspopup` attribute to be set f
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -635,28 +635,28 @@ The new `ariaHasPopup` property allows the `aria-haspopup` attribute to be set f
 <tr>
 <td valign="top">
 
- 1.84 
+1.84 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.ComboBox`** 
+**`sap.m.ComboBox`** 
 
 
 
@@ -674,7 +674,7 @@ We have updated the behavior of the control regarding the `selectedKey` and `val
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -690,28 +690,28 @@ We have updated the behavior of the control regarding the `selectedKey` and `val
 <tr>
 <td valign="top">
 
- 1.84 
+1.84 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.IconTabBar`** 
+**`sap.m.IconTabBar`** 
 
 
 
@@ -729,7 +729,7 @@ The control now supports the badge feature. You can use it to indicate that some
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -745,28 +745,28 @@ The control now supports the badge feature. You can use it to indicate that some
 <tr>
 <td valign="top">
 
- 1.84 
+1.84 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.Input`** 
+**`sap.m.Input`** 
 
 
 
@@ -784,7 +784,7 @@ We have introduced a new `valueHelpIconSrc` property. It allows you to set a cus
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -800,28 +800,28 @@ We have introduced a new `valueHelpIconSrc` property. It allows you to set a cus
 <tr>
 <td valign="top">
 
- 1.84 
+1.84 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.List`** 
+**`sap.m.List`** 
 
 
 
@@ -839,7 +839,7 @@ The new `accDescription` property allows applications to define their own applic
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -855,28 +855,28 @@ The new `accDescription` property allows applications to define their own applic
 <tr>
 <td valign="top">
 
- 1.84 
+1.84 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.ObjectStatus`** 
+**`sap.m.ObjectStatus`** 
 
 
 
@@ -900,7 +900,7 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.Ob
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -916,28 +916,28 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.Ob
 <tr>
 <td valign="top">
 
- 1.84 
+1.84 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.ProgressIndicator`** 
+**`sap.m.ProgressIndicator`** 
 
 
 
@@ -955,7 +955,7 @@ We have improved the control behavior when the available width is not enough and
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -971,28 +971,28 @@ We have improved the control behavior when the available width is not enough and
 <tr>
 <td valign="top">
 
- 1.84 
+1.84 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.SearchField`** 
+**`sap.m.SearchField`** 
 
 
 
@@ -1010,7 +1010,7 @@ The icon of the Refresh button in the `sap.m.SearchField` is now changed from sa
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1026,28 +1026,28 @@ The icon of the Refresh button in the `sap.m.SearchField` is now changed from sa
 <tr>
 <td valign="top">
 
- 1.84 
+1.84 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.Wizard` \(Experimental\)** 
+**`sap.m.Wizard` \(Experimental\)** 
 
 
 
@@ -1065,7 +1065,7 @@ We have enhanced the `sap.m.Wizard` to support rendering of the steps as separat
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1081,28 +1081,28 @@ We have enhanced the `sap.m.Wizard` to support rendering of the steps as separat
 <tr>
 <td valign="top">
 
- 1.84 
+1.84 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.smartfield.SmartField`** 
+**`sap.ui.comp.smartfield.SmartField`** 
 
 
 
@@ -1123,7 +1123,7 @@ We have enhanced the `sap.m.Wizard` to support rendering of the steps as separat
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1139,28 +1139,28 @@ We have enhanced the `sap.m.Wizard` to support rendering of the steps as separat
 <tr>
 <td valign="top">
 
- 1.84 
+1.84 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.smartfilterbar.SmartFilterBar`, `sap.ui.comp.smartfield.SmartField`** 
+**`sap.ui.comp.smartfilterbar.SmartFilterBar`, `sap.ui.comp.smartfield.SmartField`** 
 
 
 
@@ -1178,7 +1178,7 @@ Until now, the history of recently entered values could be switched on or off at
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1194,28 +1194,28 @@ Until now, the history of recently entered values could be switched on or off at
 <tr>
 <td valign="top">
 
- 1.84 
+1.84 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.smarttable.SmartTable`** 
+**`sap.ui.comp.smarttable.SmartTable`** 
 
 
 
@@ -1233,7 +1233,7 @@ The new `headerLevel` property is now available to define the semantic level of 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1249,28 +1249,28 @@ The new `headerLevel` property is now available to define the semantic level of 
 <tr>
 <td valign="top">
 
- 1.84 
+1.84 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.valuehelpdialog.ValueHelpDialog`** 
+**`sap.ui.comp.valuehelpdialog.ValueHelpDialog`** 
 
 
 
@@ -1305,7 +1305,7 @@ For more information, see the [Sample](https://ui5.sap.com/#/entity/sap.ui.comp.
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1321,28 +1321,28 @@ For more information, see the [Sample](https://ui5.sap.com/#/entity/sap.ui.comp.
 <tr>
 <td valign="top">
 
- 1.84 
+1.84 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.integration.widgets.Card`** 
+**`sap.ui.integration.widgets.Card`** 
 
 
 
@@ -1352,7 +1352,7 @@ For more information, see the [Sample](https://ui5.sap.com/#/entity/sap.ui.comp.
 **`sap.ui.integration.widgets.Card`**
 
 -   The Calendar card is no longer in experimental state. This card shows an overview of tasks for a single entity \(such as a person or resource\). It consists of an interactive calendar and a chronological list of appointments for a single date. For more information, see [Calendar Card](https://ui5.sap.com/test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/learn/types/calendar) in the Card Explorer.
--   You can now dynamically fetch data to populate filters \(experimental\). For more information, see the `data` property in the [Filters](https://ui5.sap.com/test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/learn/features/filters) section and the  [Sample](https://ui5.sap.com/test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/explore/filters) in the Card Explorer.
+-   You can now dynamically fetch data to populate filters \(experimental\). For more information, see the `data` property in the [Filters](https://ui5.sap.com/test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/learn/features/filters) section and the [Sample](https://ui5.sap.com/test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/explore/filters) in the Card Explorer.
 -   We have introduced `size` and `backgroundColor` icon properties \(experimental\). They are both available for the List, Object, and Table cards, while the default card header has only the `backgroundColor` \(experimental\) property. For more information, see the [List Card](https://ui5.sap.com/test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/learn/types/list), [Object Card](https://ui5.sap.com/test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/learn/types/object) and [Table Card](https://ui5.sap.com/test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/learn/types/table) sections in the Card Explorer.
 -   You can now use the `oCard.triggerAction` \(experimental\) method to programmatically trigger an action from a Component card or from an extension. For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.integration.widgets.CardFacade%23methods/sap.ui.integration.widgets.CardFacade.triggerAction), [Sample](https://ui5.sap.com/test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/explore/component/triggerAction) and the [Card Actions](https://ui5.sap.com/test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/learn/features/cardActions) section in the Card Explorer. 
 -   You can now make HTTP POST requests with body encoding of type JSON. For more information, see the [Sample](https://ui5.sap.com/test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/explore/data/graphql) and the [Data](https://ui5.sap.com/test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/learn/features/data) section in the Card Explorer.
@@ -1364,7 +1364,7 @@ For more information, see the [Sample](https://ui5.sap.com/#/entity/sap.ui.comp.
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1380,28 +1380,28 @@ For more information, see the [Sample](https://ui5.sap.com/#/entity/sap.ui.comp.
 <tr>
 <td valign="top">
 
- 1.84 
+1.84 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- SAP Fiori Elements 
+SAP Fiori Elements 
 
 
 
 </td>
 <td valign="top">
 
- **SAP Fiori Elements** 
+**SAP Fiori Elements** 
 
 
 
@@ -1449,7 +1449,7 @@ For more information, see the [Sample](https://ui5.sap.com/#/entity/sap.ui.comp.
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1466,6 +1466,8 @@ For more information, see the [Sample](https://ui5.sap.com/#/entity/sap.ui.comp.
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.115](what-s-new-in-sapui5-1-115-409fde8.md "With this release SAPUI5 is upgraded from version 1.114 to 1.115.")
 
 [What's New in SAPUI5 1.114](what-s-new-in-sapui5-1-114-890fce1.md "With this release SAPUI5 is upgraded from version 1.113 to 1.114.")
 

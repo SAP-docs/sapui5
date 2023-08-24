@@ -45,7 +45,7 @@ Yes
 <tr>
 <td valign="top">
 
- `hierarchicalStep` 
+`hierarchicalStep` 
 
 
 
@@ -61,7 +61,7 @@ Yes
 <tr>
 <td valign="top">
 
- `request` 
+`request` 
 
 
 
@@ -125,7 +125,7 @@ Yes
 <tr>
 <td valign="top">
 
- `facetFilter` 
+`facetFilter` 
 
 
 
@@ -141,7 +141,7 @@ Yes
 <tr>
 <td valign="top">
 
- `smartFilterBarConfiguration` 
+`smartFilterBarConfiguration` 
 
 
 
@@ -157,7 +157,7 @@ Yes
 <tr>
 <td valign="top">
 
- `navigationTarget` 
+`navigationTarget` 
 
 
 

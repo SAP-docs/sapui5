@@ -14,11 +14,11 @@ Usually you start the development of an app with local mock data first. This way
 
 ## Preview
 
-   
+  
   
 **The initial app**
 
- ![](images/Tutorial_Mock_Server_Step_01_3a29b22.png "The initial app") 
+![](images/Tutorial_Mock_Server_Step_01_3a29b22.png "The initial app")
 
 
 
@@ -30,9 +30,9 @@ Depending on your development environment you might have to adjust resource path
 
 You should have the same files as displayed in the following figure:
 
-   
+  
   
 **Folder structure with downloaded files**
 
- ![](images/Tutorial_Mock_Server_Step_1_Folders_026a908.png "Folder structure with downloaded files") 
+![](images/Tutorial_Mock_Server_Step_1_Folders_026a908.png "Folder structure with downloaded files")
 

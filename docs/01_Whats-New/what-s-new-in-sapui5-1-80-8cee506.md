@@ -6,7 +6,7 @@ With this release SAPUI5 is upgraded from version 1.79 to 1.80.
 
 
 
-** **
+****
 
 
 <table>
@@ -64,28 +64,28 @@ Available as of
 <tr>
 <td valign="top">
 
- 1.80 
+1.80 
 
 
 
 </td>
 <td valign="top">
 
- New 
+New 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.BadgeCustomData`, `sap.m.IBadgeEnabler`** 
+**`sap.m.BadgeCustomData`, `sap.m.IBadgeEnabler`** 
 
 
 
@@ -119,28 +119,28 @@ Info Only
 <tr>
 <td valign="top">
 
- 1.80 
+1.80 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **SAPUI5 OData V4 Model****SAPUI5 OData V4 Model** 
+**SAPUI5 OData V4 Model****SAPUI5 OData V4 Model** 
 
 
 
@@ -171,7 +171,7 @@ For more information, see [OData V4 Model](../04_Essentials/odata-v4-model-5de13
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -187,28 +187,28 @@ For more information, see [OData V4 Model](../04_Essentials/odata-v4-model-5de13
 <tr>
 <td valign="top">
 
- 1.80 
+1.80 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.f.GridContainer`** 
+**`sap.f.GridContainer`** 
 
 
 
@@ -227,7 +227,7 @@ For more information, see [OData V4 Model](../04_Essentials/odata-v4-model-5de13
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -243,28 +243,28 @@ For more information, see [OData V4 Model](../04_Essentials/odata-v4-model-5de13
 <tr>
 <td valign="top">
 
- 1.80 
+1.80 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.IconTabBar`** 
+**`sap.m.IconTabBar`** 
 
 
 
@@ -282,7 +282,7 @@ When you drag one tab over a tab with nested tabs, only one drop zone is availab
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -298,28 +298,28 @@ When you drag one tab over a tab with nested tabs, only one drop zone is availab
 <tr>
 <td valign="top">
 
- 1.80 
+1.80 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.TablePersoDialog`** 
+**`sap.m.TablePersoDialog`** 
 
 
 
@@ -337,7 +337,7 @@ The look and feel of the control has been improved based on the latest design gu
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -353,28 +353,28 @@ The look and feel of the control has been improved based on the latest design gu
 <tr>
 <td valign="top">
 
- 1.80 
+1.80 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.tnt.NavigationListItem`** 
+**`sap.tnt.NavigationListItem`** 
 
 
 
@@ -392,7 +392,7 @@ We have added `href` and `target` properties to improve the SEO capabilities of 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -408,28 +408,28 @@ We have added `href` and `target` properties to improve the SEO capabilities of 
 <tr>
 <td valign="top">
 
- 1.80 
+1.80 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.smarttable.SmartTable`** 
+**`sap.ui.comp.smarttable.SmartTable`** 
 
 
 
@@ -450,7 +450,7 @@ We have added `href` and `target` properties to improve the SEO capabilities of 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -466,28 +466,28 @@ We have added `href` and `target` properties to improve the SEO capabilities of 
 <tr>
 <td valign="top">
 
- 1.80 
+1.80 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.integration.widgets.Card`** 
+**`sap.ui.integration.widgets.Card`** 
 
 
 
@@ -506,7 +506,7 @@ We have added `href` and `target` properties to improve the SEO capabilities of 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -522,28 +522,28 @@ We have added `href` and `target` properties to improve the SEO capabilities of 
 <tr>
 <td valign="top">
 
- 1.80 
+1.80 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- SAP Fiori Elements 
+SAP Fiori Elements 
 
 
 
 </td>
 <td valign="top">
 
- **SAP Fiori Elements** 
+**SAP Fiori Elements** 
 
 
 
@@ -572,7 +572,7 @@ We have added `href` and `target` properties to improve the SEO capabilities of 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -588,28 +588,28 @@ We have added `href` and `target` properties to improve the SEO capabilities of 
 <tr>
 <td valign="top">
 
- 1.80 
+1.80 
 
 
 
 </td>
 <td valign="top">
 
- New 
+New 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Demo Kit Improvements** 
+**Demo Kit Improvements** 
 
 
 
@@ -640,7 +640,7 @@ You can now view the sample description and any additional details directly from
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -657,6 +657,8 @@ You can now view the sample description and any additional details directly from
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.115](what-s-new-in-sapui5-1-115-409fde8.md "With this release SAPUI5 is upgraded from version 1.114 to 1.115.")
 
 [What's New in SAPUI5 1.114](what-s-new-in-sapui5-1-114-890fce1.md "With this release SAPUI5 is upgraded from version 1.113 to 1.114.")
 

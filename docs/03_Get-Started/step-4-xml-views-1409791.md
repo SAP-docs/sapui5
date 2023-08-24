@@ -10,12 +10,12 @@ SAPUI5 supports multiple view types \(XML, HTML, JavaScript\). We choose XML as 
 
 ## Preview
 
-   
+  
   
 **The "Hello World" text is now displayed by a SAPUI5 control \(No visual changes to last step\)**
 
- ![](images/SAPUI5_Walkthrough_Step_04_c1d7d89.png "The "Hello World" text is now displayed by a SAPUI5 control (No
-					visual changes to last step)") 
+![](images/SAPUI5_Walkthrough_Step_04_c1d7d89.png "The "Hello World" text is now displayed by a SAPUI5 control (No
+					visual changes to last step)")
 
 
 

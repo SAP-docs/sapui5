@@ -8,11 +8,11 @@ Now we can easily spot shortages on our stock, but we would also like to take ac
 
 ## Preview
 
-   
+  
   
 **Actions are now available in the footer bar**
 
- ![](images/Tutorial_Worklist_Step_5_Preview_016d473.png "Actions are now available in the footer bar") 
+![](images/Tutorial_Worklist_Step_5_Preview_016d473.png "Actions are now available in the footer bar")
 
 
 

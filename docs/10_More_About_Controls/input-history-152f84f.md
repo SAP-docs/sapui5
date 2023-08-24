@@ -55,11 +55,11 @@ Don't use this feature when:
 
 When the recently used values feature is enabled by the SAP Fiori launchpad parameter, you can see the *Input History Settings* option in the user actions menu. Otherwise, this item is not visible in the menu.
 
- ![](images/Launchpad_User_Settings_Menu_0d10b51.png) 
+![](images/Launchpad_User_Settings_Menu_0d10b51.png)
 
 When you select *Input History Settings*, a dialog opens offering the possibility to switch off the recently used values feature. This setting is available on the user level and it's applicable for all applications for this user. There is also the option to delete all stored entries for all SAPUI5 applications running on this SAP Fiori launchpad instance. This doesn't affect the input history of other UI technologies that the applications use.
 
- ![](images/Input_History_Settings_9d7b39f.png) 
+![](images/Input_History_Settings_9d7b39f.png)
 
 
 
@@ -196,13 +196,13 @@ For the `SmartFilterBar`, the `historyEnabled` property is in the `ControlConfig
 
 This configuration will switch off history only for the field with the `Bukrs` ID and the *Company Code* description. All other filter fields whose default value is `on` in the `SmartFilterBar` will have the functionality on.
 
- ![](images/SmartFilterBar_with_HistoryEnabled_Switched_Off_ff0c24e.png) 
+![](images/SmartFilterBar_with_HistoryEnabled_Switched_Off_ff0c24e.png)
 
 
 
 ### How suggestions are visualized
 
- ![](images/Recently_Used_Values_when_enabled_for_SmartFilterBar_1009ebe.png) 
+![](images/Recently_Used_Values_when_enabled_for_SmartFilterBar_1009ebe.png)
 
 If there have been previously entered values, a dropdown opens up when focusing on the input. On a mobile device, the dropdown opens as a full-screen dialog. If no previous history values are stored, the dropdown will not open. When you start typing, you’ll get filtered suggestions and recommendations, if available.
 

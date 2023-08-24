@@ -10,11 +10,11 @@ The content in this tutorial step references [Step 1: 3D Viewer With Single File
 
 ## Preview
 
-   
+  
   
 **Viewer application with multiple file loading capability**
 
- ![](images/3D_Viewer_Tutorial_Step_02_-_Preview_9425f9f.png "Viewer application with multiple file loading capability") 
+![](images/3D_Viewer_Tutorial_Step_02_-_Preview_9425f9f.png "Viewer application with multiple file loading capability")
 
 
 
@@ -363,9 +363,9 @@ Download the following VDS files from the *Samples* in the Demo Kit:
 
 Type in the file path of the VDS files into each of the input text fields, and click on the *Load* button to load the 3D models. The content of all three files will overlap with each other, so to see box and cylinder you have to hide cooper. Your screen should look like the following:
 
-   
+  
   
 **Viewer application loaded with three VDS files**
 
- ![](images/Image_SAPUI5_Viewer_2_50c1c17.png "Viewer application loaded with three VDS files") 
+![](images/Image_SAPUI5_Viewer_2_50c1c17.png "Viewer application loaded with three VDS files")
 

@@ -8,19 +8,19 @@ An option for tables in the list report or charts in the analytical list page al
 
 You must enable *My Home* in SAP S/4HANA Cloud to create and add cards. For more information, see [*My Home* in SAP S/4HANA Cloud](https://help.sap.com/docs/SAP_S4HANA_CLOUD/4fc8d03390c342da8a60f8ee387bca1a/8a60279e8d2041b5ad8d3455fab0f3ef.html).
 
-Once you have enabled *My Home* in SAP S/4HANA Cloud, the *Add Card to Insights* option automatically appears in the overflow toolbar of the table in list report applications and the overflow toolbar of the chart in analytical list page applications.
+Once you've enabled *My Home* in SAP S/4HANA Cloud, the *Add Card to Insights* option automatically appears in the overflow toolbar of the table in list report applications and the overflow toolbar of the chart in analytical list page applications.
 
-   
+  
   
 **Add Card to Insights Option in the Table Toolbar of List Report**
 
- ![](images/Add_Cards_to_Insights_New_fe526c6.png "Add Card to Insights Option in the Table Toolbar of List Report ") 
+![](images/Add_Cards_to_Insights_New_fe526c6.png "Add Card to Insights Option in the Table Toolbar of List Report ")
 
-   
+  
   
 **Add Card to Insights Option in the Chart Toolbar of Analytical List Page**
 
- ![](images/Add_Cards_to_Insights_ALP_401e0b0.png "Add Card to Insights Option in the Chart Toolbar of Analytical List Page") 
+![](images/Add_Cards_to_Insights_ALP_401e0b0.png "Add Card to Insights Option in the Chart Toolbar of Analytical List Page")
 
 > ### Note:  
 > -   This feature supports only single view cases that have responsive tables in list report applications.
@@ -57,7 +57,7 @@ Using the manifest, list report applications can choose to hide this feature by 
 > }
 > ```
 
-Similarily, using the manifest, analytical list page applications can choose to hide this feature by setting the `addCardtoInsightsHidden` property within `chartSettings` to `true`, as displayed in the following sample code:
+Similarly, using the manifest, analytical list page applications can choose to hide this feature by setting the `addCardtoInsightsHidden` property within `chartSettings` to `true`, as displayed in the following sample code:
 
 > ### Sample Code:  
 > ```
@@ -98,7 +98,7 @@ To disable the *Add Card to Insights* option in the table toolbar, add the follo
 > ```
 
 > ### Note:  
-> The *Add Card to Insights* option is not available if the list report application is configured as a flavor of the analytical list page.
+> The *Add Card to Insights* option isn't available if the list report application is configured as a flavor of the analytical list page.
 
 To disable the *Add Card to Insights* option in the chart toolbar, add the following manifest settings:
 
@@ -112,9 +112,7 @@ To disable the *Add Card to Insights* option in the chart toolbar, add the follo
 > ```
 
 > ### Restriction:  
-> -   When creating an integration card from the list report table, the following changes will not be retained when navigating back from the card: the filter fields or table columns that were removed, and change in the position of filter field or table column.
+> -   When creating an integration card from the list report table, the following changes aren't retained when navigating back from the card: the filter fields or table columns that were removed, and changes in the position of filter fields or table columns.
 > 
-> -   *Add Card to Insights* option is not available if the list report applications are configured against a parameterized entity.
-> 
-> -   Cards will not have the same formatting for date, datetime and unit of measure fields as seen in the list report table.
+> -   Cards don't have the same formatting for date, datetime, and unit of measure fields as seen in the list report table.
 

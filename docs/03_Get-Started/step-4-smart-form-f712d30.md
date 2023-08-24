@@ -10,19 +10,19 @@ The `SmartForm` control is used to obtain a form-like layout for several control
 
 ## Preview
 
-   
+  
   
 **Smart Form with Several Smart Fields \(Initial Read-Only Mode\)**
 
- ![](images/Smart_Controls_Tutorial_Step_04a_3127199.png "Smart Form with Several Smart Fields (Initial Read-Only Mode)") 
+![](images/Smart_Controls_Tutorial_Step_04a_3127199.png "Smart Form with Several Smart Fields (Initial Read-Only Mode)")
 
 When you press the pencil icon, the dialog for `SmartForm` becomes editable:
 
-   
+  
   
 **Smart Form with Several Smart Fields \(Edit Mode\)**
 
- ![](images/Smart_Controls_Tutorial_Step_04b_0fd542d.png "Smart Form with Several Smart Fields (Edit Mode)") 
+![](images/Smart_Controls_Tutorial_Step_04b_0fd542d.png "Smart Form with Several Smart Fields (Edit Mode)")
 
 When pressing the eyeglasses icon, you return to the display view of `SmartForm`.
 

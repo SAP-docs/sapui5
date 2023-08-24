@@ -46,7 +46,7 @@ Perform these steps to be able to use the extension:
 
 2.  Maintain the controller extension files in your app:
 
-     ![](images/AppExtensionTree_ObjectPage_318f52b.png) 
+    ![](images/AppExtensionTree_ObjectPage_318f52b.png)
 
 3.  The *Delete* dialog box contains the following text:
 

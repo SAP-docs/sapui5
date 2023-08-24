@@ -32,7 +32,7 @@ The consuming application can overwrite the OData default information. The `Smar
 
 When using `SmartTable` with an internal responsive table, you can set the `demandPopin` property to `true`. This property renders columns that exceed the space available on the screen by displaying popins.
 
- `SmartTable` checks the custom data section for the columns and reads the `columnIndex` attribute to determine when the columns that are defined in the XML view are rendered.
+`SmartTable` checks the custom data section for the columns and reads the `columnIndex` attribute to determine when the columns that are defined in the XML view are rendered.
 
 If you want to show and follow `navigationProperty` fields for `EntityType`, the `SmartTable` control automatically performs a `$expand` operation for these fields.
 

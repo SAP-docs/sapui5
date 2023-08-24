@@ -7,7 +7,7 @@ With this release SAPUI5 is upgraded from version 1.113 to 1.114.
 > ### Tip:  
 > If you want to do a search across all versions of the What's New content, you can also find it in the [SAPUI5 What's New viewer](https://help.sap.com/whats-new/67f60363b57f4ac0b23efd17fa192d60).
 
-** **
+****
 
 
 <table>
@@ -65,28 +65,28 @@ Available as of
 <tr>
 <td valign="top">
 
- 1.114 
+1.114 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.integration.widgets.Card`** 
+**`sap.ui.integration.widgets.Card`** 
 
 
 
@@ -106,7 +106,7 @@ List, Table, Object, and the other declarative card types automatically show a c
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -122,28 +122,28 @@ List, Table, Object, and the other declarative card types automatically show a c
 <tr>
 <td valign="top">
 
- 1.114 
+1.114 
 
 
 
 </td>
 <td valign="top">
 
- Deprecated 
+Deprecated 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Deprecations** 
+**Deprecations** 
 
 
 
@@ -161,7 +161,7 @@ There are currently no major deprecations. For a complete list of all deprecatio
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -177,28 +177,28 @@ There are currently no major deprecations. For a complete list of all deprecatio
 <tr>
 <td valign="top">
 
- 1.114 
+1.114 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.smarttable.SmartTable`** 
+**`sap.ui.comp.smarttable.SmartTable`** 
 
 
 
@@ -207,11 +207,11 @@ There are currently no major deprecations. For a complete list of all deprecatio
 
 **`sap.ui.comp.smarttable.SmartTable`**
 
--   We have introduced the `useColumnLabelsAsTooltips` property that allows you to automatically use a column label as a tooltip for a column. You can also use this property for custom columns. For more information, see the  [API Reference](https://ui5.sap.com/#/api/sap.ui.comp.smarttable.SmartTable%23methods/getUseColumnLabelsAsTooltips).
+-   We have introduced the `useColumnLabelsAsTooltips` property that allows you to automatically use a column label as a tooltip for a column. You can also use this property for custom columns. For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.comp.smarttable.SmartTable%23methods/getUseColumnLabelsAsTooltips).
 
 -   We have provided a way to sort multiple properties of semantically connected fields. To enable this, we have added `additionalSortProperty` in the `p13nData`. The table will create a `QuickSortItem` for each listed property name. For more information, see [API Reference](https://ui5.sap.com/#/api/sap.ui.comp.smarttable.SmartTable%23faq) and see question 27.
 
--   We have added the `copyProvider` aggregation that provides generic copy and paste functions along with a *Copy* button in the toolbar of the table. To enable the copy and paste functions, the `CopyProvider` plugin is used. For more information, see the  [API Reference](https://ui5.sap.com/#/api/sap.ui.comp.smarttable.SmartTable%23methods/getCopyProvider)  for the `copyProvider` aggregation, the [API Reference](https://ui5.sap.com/#/api/sap.m.plugins.CopyProvider) for the `CopyProvider` plugin, and the [Sample](https://ui5.sap.com/#/entity/sap.ui.comp.smarttable.SmartTable/sample/sap.ui.comp.sample.smarttable.smartTableWithCriticality).
+-   We have added the `copyProvider` aggregation that provides generic copy and paste functions along with a *Copy* button in the toolbar of the table. To enable the copy and paste functions, the `CopyProvider` plugin is used. For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.comp.smarttable.SmartTable%23methods/getCopyProvider)  for the `copyProvider` aggregation, the [API Reference](https://ui5.sap.com/#/api/sap.m.plugins.CopyProvider) for the `CopyProvider` plugin, and the [Sample](https://ui5.sap.com/#/entity/sap.ui.comp.smarttable.SmartTable/sample/sap.ui.comp.sample.smarttable.smartTableWithCriticality).
 
 -   To improve the user experience, we have removed the *Reset* button from the control’s personalization dialog when the dialog is opened from the column header menu or from a custom button in the table's toolbar. This change was needed because when you open the dialog from one of these places it opens only one panel \(for example, Columns, Sort, Group, or Filter\). However, the *Reset* button resets all the panels and not only the one that is opened, which was confusing for the user.
 
@@ -223,7 +223,7 @@ There are currently no major deprecations. For a complete list of all deprecatio
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -239,28 +239,28 @@ There are currently no major deprecations. For a complete list of all deprecatio
 <tr>
 <td valign="top">
 
- 1.114 
+1.114 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- SAP Fiori Elements 
+SAP Fiori Elements 
 
 
 
 </td>
 <td valign="top">
 
- **SAP Fiori elements for OData V2** 
+**SAP Fiori elements for OData V2** 
 
 
 
@@ -277,7 +277,7 @@ The following changes and new features are available for SAP Fiori elements for 
 
 -   We've added another option to the *Share* menu button. When a user clicks the *Share* button and then the *Share Menu: Microsoft Teams* option, they can now also choose *As Tab*.
 
-     ![](images/Share_Menu_Microsoft_Teams_Share_as_Tab_c0c2151.png) 
+    ![](images/Share_Menu_Microsoft_Teams_Share_as_Tab_c0c2151.png)
 
     For more information, see ["Share" Functionality](../06_SAP_Fiori_Elements/share-functionality-022bf0d.md).
 
@@ -289,7 +289,7 @@ The following changes and new features are available for SAP Fiori elements for 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -305,28 +305,28 @@ The following changes and new features are available for SAP Fiori elements for 
 <tr>
 <td valign="top">
 
- 1.114 
+1.114 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- SAP Fiori Elements 
+SAP Fiori Elements 
 
 
 
 </td>
 <td valign="top">
 
- **SAP Fiori elements for OData V4** 
+**SAP Fiori elements for OData V4** 
 
 
 
@@ -366,7 +366,7 @@ The following changes and new features are available for SAP Fiori elements for 
 
 -   We've added another option to the *Share* menu button. When a user clicks the *Share* button and then the *Share Menu: Microsoft Teams* option, they can now also choose *As Tab*.
 
-     ![](images/Share_Menu_Microsoft_Teams_Share_as_Tab_c0c2151.png) 
+    ![](images/Share_Menu_Microsoft_Teams_Share_as_Tab_c0c2151.png)
 
     For more information, see ["Share" Functionality](../06_SAP_Fiori_Elements/share-functionality-022bf0d.md).
 
@@ -378,7 +378,7 @@ The following changes and new features are available for SAP Fiori elements for 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -394,28 +394,28 @@ The following changes and new features are available for SAP Fiori elements for 
 <tr>
 <td valign="top">
 
- 1.114 
+1.114 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **FLP Time Zone Support in SAPUI5** 
+**FLP Time Zone Support in SAPUI5** 
 
 
 
@@ -437,7 +437,7 @@ For more information, see [Dates, Times, Timestamps, and Time Zones](../04_Essen
 </td>
 <td valign="top">
 
- Required 
+Required 
 
 
 
@@ -453,28 +453,28 @@ For more information, see [Dates, Times, Timestamps, and Time Zones](../04_Essen
 <tr>
 <td valign="top">
 
- 1.114 
+1.114 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.SearchField`** 
+**`sap.m.SearchField`** 
 
 
 
@@ -494,7 +494,7 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.Se
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -510,28 +510,28 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.Se
 <tr>
 <td valign="top">
 
- 1.114 
+1.114 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.smartfield.SmartField`** 
+**`sap.ui.comp.smartfield.SmartField`** 
 
 
 
@@ -549,7 +549,7 @@ Only for fields without a `ValueList` annotation, we allow users to enter text w
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -565,28 +565,28 @@ Only for fields without a `ValueList` annotation, we allow users to enter text w
 <tr>
 <td valign="top">
 
- 1.114 
+1.114 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.valuehelpdialog.ValueHelpDialog`** 
+**`sap.ui.comp.valuehelpdialog.ValueHelpDialog`** 
 
 
 
@@ -605,7 +605,7 @@ Only for fields without a `ValueList` annotation, we allow users to enter text w
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -621,28 +621,28 @@ Only for fields without a `ValueList` annotation, we allow users to enter text w
 <tr>
 <td valign="top">
 
- 1.114 
+1.114 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Accessibility** 
+**Accessibility** 
 
 
 
@@ -660,7 +660,7 @@ We are now using JAWS 2023 as a reference testing environment in SAPUI5. For mor
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -677,6 +677,8 @@ We are now using JAWS 2023 as a reference testing environment in SAPUI5. For mor
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.115](what-s-new-in-sapui5-1-115-409fde8.md "With this release SAPUI5 is upgraded from version 1.114 to 1.115.")
 
 [What's New in SAPUI5 1.113](what-s-new-in-sapui5-1-113-a9553fe.md "With this release SAPUI5 is upgraded from version 1.112 to 1.113.")
 

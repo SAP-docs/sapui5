@@ -73,5 +73,5 @@ From a technical perspective, a worklist is a simplified list report without a f
 
 
 
-For general information about the worklist floorplan, see  [SAP Fiori Design Guidelines](https://experience.sap.com/fiori-design-web/).
+For general information about the worklist floorplan, see [SAP Fiori Design Guidelines](https://experience.sap.com/fiori-design-web/).
 

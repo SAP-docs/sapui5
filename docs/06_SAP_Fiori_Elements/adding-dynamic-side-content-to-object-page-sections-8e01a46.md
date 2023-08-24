@@ -71,7 +71,7 @@ After you have added side content, the system displays a button in the subsectio
 
     Example: `ShowSideContent|STTA_C_MP_Product|to_ProductSalesData|com.sap.vocabularies.UI.v1.Chart`
 
-     `ShowSideContent|STTA_C_MP_Product|GeneralInformationForm`
+    `ShowSideContent|STTA_C_MP_Product|GeneralInformationForm`
 
 -   Hide the side content button
 
@@ -82,11 +82,11 @@ After you have added side content, the system displays a button in the subsectio
     `HideSideContent|STTA_C_MP_Product|GeneralInformationForm`
 
 
-   
+  
   
 **Side Content Added to the Object Page**
 
- ![](images/Dynamic_Side_Content_9cb9e88.jpg "Side Content Added to the Object Page") 
+![](images/Dynamic_Side_Content_9cb9e88.jpg "Side Content Added to the Object Page")
 
 > ### Note:  
 > -   Use dynamic side content for small previews. Do not consider it as an extension of the main panel's content.
@@ -453,7 +453,7 @@ RF @ Level 0 Key
 </td>
 <td valign="top">
 
- ![](images/Side_Content_Scenario_1_2ccaf01.png) 
+![](images/Side_Content_Scenario_1_2ccaf01.png)
 
 
 
@@ -511,7 +511,7 @@ RF @ Level 0 Key
 </td>
 <td valign="top">
 
- ![](images/Side_Content_Scenario_2_bc11e5a.png) 
+![](images/Side_Content_Scenario_2_bc11e5a.png)
 
 
 
@@ -569,7 +569,7 @@ CF @ Level 0
 </td>
 <td valign="top">
 
- ![](images/Side_Content_Scenario_3_dfe4e08.png) 
+![](images/Side_Content_Scenario_3_dfe4e08.png)
 
 
 
@@ -685,7 +685,7 @@ CF @ Level 0
 </td>
 <td valign="top">
 
- ![](images/Side_Content_Scenario_4_d8f292a.png) 
+![](images/Side_Content_Scenario_4_d8f292a.png)
 
 
 
@@ -801,7 +801,7 @@ CF @ Level 0
 </td>
 <td valign="top">
 
- ![](images/Side_Content_Scenario_5_626898a.png) 
+![](images/Side_Content_Scenario_5_626898a.png)
 
 
 
@@ -984,7 +984,7 @@ CF @ Level 0
 </td>
 <td valign="top">
 
- ![](images/Side_Content_Scenario_6_8be63d5.png) 
+![](images/Side_Content_Scenario_6_8be63d5.png)
 
 
 
@@ -1332,7 +1332,7 @@ CF @ Level 0
 </td>
 <td valign="top">
 
- ![](images/Side_Content_Scenario_7_748ada6.png) 
+![](images/Side_Content_Scenario_7_748ada6.png)
 
 
 
@@ -1622,7 +1622,7 @@ CF @ Level 1
 </td>
 <td valign="top">
 
- ![](images/Side_Content_Scenario_8_aa7d8f8.png) 
+![](images/Side_Content_Scenario_8_aa7d8f8.png)
 
 
 
@@ -1697,7 +1697,7 @@ CF @ Level 1 Key
 
 The `equalSplit` property changes the visualization of the side content. It changes the aspect ratio of the section content in comparison to the side content. The following images show the UI without equal split mode and with equal split mode turned on:
 
- ![](images/Side_Content_Without_Equal_Split_Mode_d3c0b39.png) 
+![](images/Side_Content_Without_Equal_Split_Mode_d3c0b39.png)
 
- ![](images/Side_Content_with_Equal_Split_Mode_ba5134f.png) 
+![](images/Side_Content_with_Equal_Split_Mode_ba5134f.png)
 

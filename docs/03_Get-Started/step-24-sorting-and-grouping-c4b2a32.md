@@ -8,11 +8,11 @@ To make our list of invoices even more user-friendly, we sort it alphabetically 
 
 ## Preview
 
-   
+  
   
 **The list is now sorted and grouped by the shipping company**
 
- ![](images/SAPUI5_Walkthrough_Step_25_80771b1.png "The list is now sorted and grouped by the shipping company") 
+![](images/SAPUI5_Walkthrough_Step_25_80771b1.png "The list is now sorted and grouped by the shipping company")
 
 
 

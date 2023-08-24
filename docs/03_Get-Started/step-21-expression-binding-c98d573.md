@@ -8,11 +8,11 @@ Sometimes the predefined types of SAPUI5 are not flexible enough and you want to
 
 ## Preview
 
-   
+  
   
 **The price is now formatted according to its number**
 
- ![](images/SAPUI5_Walkthrough_Step_22_2ff81a7.png "The price is now formatted according to its number") 
+![](images/SAPUI5_Walkthrough_Step_22_2ff81a7.png "The price is now formatted according to its number")
 
 
 

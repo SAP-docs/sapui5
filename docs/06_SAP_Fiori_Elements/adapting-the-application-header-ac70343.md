@@ -10,11 +10,11 @@ If required, you can change the application header that is generated from the SA
 
 ## List Report
 
-   
+  
   
 **Application Header in List Report**
 
- ![](images/Application_Header_Title_d6eb0e9.jpg "Application Header in List Report") 
+![](images/Application_Header_Title_d6eb0e9.jpg "Application Header in List Report")
 
 To change the application header on the object page, change the `@UI.headerInfo.typeName` annotation.
 
@@ -24,11 +24,11 @@ To change the application header on the object page, change the `@UI.headerInfo.
 
 ## Object Page
 
-   
+  
   
 **Application Header on Object Page**
 
- ![](images/Object_Page_Header_b88d272.jpg "Application Header on Object Page") 
+![](images/Object_Page_Header_b88d272.jpg "Application Header on Object Page")
 
 To change the application header on the object page, change the `@UI.headerInfo.typeName` annotation.
 

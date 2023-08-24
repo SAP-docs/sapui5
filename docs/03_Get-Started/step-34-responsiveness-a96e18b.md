@@ -8,11 +8,11 @@ In this step, we improve the responsiveness of our app. SAPUI5 applications can 
 
 ## Preview
 
-   
+  
   
 **A responsive table is hiding some of the columns on small devices**
 
- ![](images/SAPUI5_Walkthrough_Step_35_62a5405.png "A responsive table is hiding some of the columns on small devices") 
+![](images/SAPUI5_Walkthrough_Step_35_62a5405.png "A responsive table is hiding some of the columns on small devices")
 
 
 

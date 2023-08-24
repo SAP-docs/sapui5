@@ -30,7 +30,7 @@ Behavior
 <tr>
 <td valign="top">
 
- `<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High" />` 
+`<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High" />` 
 
 
 
@@ -46,7 +46,7 @@ The field is visible in all device types \(desktops, tablets, or mobiles\).
 <tr>
 <td valign="top">
 
- `<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Medium" />` 
+`<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Medium" />` 
 
 
 
@@ -62,7 +62,7 @@ The field is visible in desktops and tablets.
 <tr>
 <td valign="top">
 
- `<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low" />` 
+`<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low" />` 
 
 
 

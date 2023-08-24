@@ -8,11 +8,11 @@ Now that we have covered all kinds of tests for navigation, we introduce our *Po
 
 ## Preview
 
-   
+  
   
 **The Post page with more details about the post**
 
- ![](images/Tutorial_Testing_Step_09_38c810b.png "The Post page with more details about the post") 
+![](images/Tutorial_Testing_Step_09_38c810b.png "The Post page with more details about the post")
 
 
 

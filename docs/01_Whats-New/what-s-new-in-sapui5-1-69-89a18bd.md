@@ -4,7 +4,7 @@
 
 With this release SAPUI5 is upgraded from version 1.68 to 1.69.
 
-** **
+****
 
 
 <table>
@@ -62,28 +62,28 @@ Available as of
 <tr>
 <td valign="top">
 
- 1.69 
+1.69 
 
 
 
 </td>
 <td valign="top">
 
- New 
+New 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **New Themes for SAP Fiori 3 User Experience** 
+**New Themes for SAP Fiori 3 User Experience** 
 
 
 
@@ -117,28 +117,28 @@ Info Only
 <tr>
 <td valign="top">
 
- 1.69 
+1.69 
 
 
 
 </td>
 <td valign="top">
 
- New 
+New 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Require Modules in XML Views and Fragments** 
+**Require Modules in XML Views and Fragments** 
 
 
 
@@ -160,7 +160,7 @@ For details and examples, see [Require Modules in XML View and Fragment](../04_E
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -176,28 +176,28 @@ For details and examples, see [Require Modules in XML View and Fragment](../04_E
 <tr>
 <td valign="top">
 
- 1.69 
+1.69 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Rule Builder: Migrate projects from expression language 1.0 to expression language 2.0** 
+**Rule Builder: Migrate projects from expression language 1.0 to expression language 2.0** 
 
 
 
@@ -217,7 +217,7 @@ For more information, see [Rule Builder Control Tutorial](../03_Get-Started/rule
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -233,28 +233,28 @@ For more information, see [Rule Builder Control Tutorial](../03_Get-Started/rule
 <tr>
 <td valign="top">
 
- 1.69 
+1.69 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Rule Builder: Vocabulary Rules** 
+**Rule Builder: Vocabulary Rules** 
 
 
 
@@ -272,7 +272,7 @@ In expression language 2.0, you can include rules in a rule condition to consume
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -288,28 +288,28 @@ In expression language 2.0, you can include rules in a rule condition to consume
 <tr>
 <td valign="top">
 
- 1.69 
+1.69 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **SAPUI5 OData V4 Model** 
+**SAPUI5 OData V4 Model** 
 
 
 
@@ -343,7 +343,7 @@ For more information, see [OData V4 Model](../04_Essentials/odata-v4-model-5de13
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -359,28 +359,28 @@ For more information, see [OData V4 Model](../04_Essentials/odata-v4-model-5de13
 <tr>
 <td valign="top">
 
- 1.69 
+1.69 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.f.Avatar`** 
+**`sap.f.Avatar`** 
 
 
 
@@ -403,7 +403,7 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.f.Av
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -419,28 +419,28 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.f.Av
 <tr>
 <td valign="top">
 
- 1.69 
+1.69 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.Breadcrumbs`** 
+**`sap.m.Breadcrumbs`** 
 
 
 
@@ -458,7 +458,7 @@ You can now choose different separator styles to be displayed between the `Bread
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -474,28 +474,28 @@ You can now choose different separator styles to be displayed between the `Bread
 <tr>
 <td valign="top">
 
- 1.69 
+1.69 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.ListBase` / `sap.m.ListItemBase`** 
+**`sap.m.ListBase` / `sap.m.ListItemBase`** 
 
 
 
@@ -513,7 +513,7 @@ These controls now support a range selection with key combinations if the `Multi
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -529,28 +529,28 @@ These controls now support a range selection with key combinations if the `Multi
 <tr>
 <td valign="top">
 
- 1.69 
+1.69 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.NavContainer`** 
+**`sap.m.NavContainer`** 
 
 
 
@@ -568,7 +568,7 @@ We have improved the fade and slide animations when navigating forward and backw
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -584,28 +584,28 @@ We have improved the fade and slide animations when navigating forward and backw
 <tr>
 <td valign="top">
 
- 1.69 
+1.69 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.QuickViewPage`** 
+**`sap.m.QuickViewPage`** 
 
 
 
@@ -623,7 +623,7 @@ We have introduced a new `fallbackIcon` property. It allows you to define an ico
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -639,28 +639,28 @@ We have introduced a new `fallbackIcon` property. It allows you to define an ico
 <tr>
 <td valign="top">
 
- 1.69 
+1.69 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.SearchField`** 
+**`sap.m.SearchField`** 
 
 
 
@@ -678,7 +678,7 @@ We have made some changes in the suggestions dialog for the `SearchField` contro
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -694,28 +694,28 @@ We have made some changes in the suggestions dialog for the `SearchField` contro
 <tr>
 <td valign="top">
 
- 1.69 
+1.69 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.Select`** 
+**`sap.m.Select`** 
 
 
 
@@ -733,7 +733,7 @@ The items in the select list now have a maximum width. If the text of the items 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -749,28 +749,28 @@ The items in the select list now have a maximum width. If the text of the items 
 <tr>
 <td valign="top">
 
- 1.69 
+1.69 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.SinglePlanningCalendar`** 
+**`sap.m.SinglePlanningCalendar`** 
 
 
 
@@ -788,7 +788,7 @@ A new *Month* view is now available for the control. It displays a calendar mont
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -804,28 +804,28 @@ A new *Month* view is now available for the control. It displays a calendar mont
 <tr>
 <td valign="top">
 
- 1.69 
+1.69 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.smartfilterbar.SmartFilterBar`** 
+**`sap.ui.comp.smartfilterbar.SmartFilterBar`** 
 
 
 
@@ -843,7 +843,7 @@ Values in single input fields are now validated against the keys available in th
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -859,28 +859,28 @@ Values in single input fields are now validated against the keys available in th
 <tr>
 <td valign="top">
 
- 1.69 
+1.69 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.smarttable.SmartTable`** 
+**`sap.ui.comp.smarttable.SmartTable`** 
 
 
 
@@ -898,7 +898,7 @@ The sorting for multiple currencies has been improved. For more information, see
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -914,28 +914,28 @@ The sorting for multiple currencies has been improved. For more information, see
 <tr>
 <td valign="top">
 
- 1.69 
+1.69 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.table.plugins.MultiSelectionPlugin`** 
+**`sap.ui.table.plugins.MultiSelectionPlugin`** 
 
 
 
@@ -953,7 +953,7 @@ The plugin for the `sap.ui.table.AnalyticalTable`, the `sap.ui.table.Table`, and
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -969,28 +969,28 @@ The plugin for the `sap.ui.table.AnalyticalTable`, the `sap.ui.table.Table`, and
 <tr>
 <td valign="top">
 
- 1.69 
+1.69 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.unified.Calendar`** 
+**`sap.ui.unified.Calendar`** 
 
 
 
@@ -1008,7 +1008,7 @@ We have implemented year range in the `Calendar` control to help the user naviga
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1024,28 +1024,28 @@ We have implemented year range in the `Calendar` control to help the user naviga
 <tr>
 <td valign="top">
 
- 1.69 
+1.69 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- SAP Fiori Elements 
+SAP Fiori Elements 
 
 
 
 </td>
 <td valign="top">
 
- **SAP Fiori Elements** 
+**SAP Fiori Elements** 
 
 
 
@@ -1085,7 +1085,7 @@ The overview page has these new features or enhancements:
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1102,6 +1102,8 @@ The overview page has these new features or enhancements:
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.115](what-s-new-in-sapui5-1-115-409fde8.md "With this release SAPUI5 is upgraded from version 1.114 to 1.115.")
 
 [What's New in SAPUI5 1.114](what-s-new-in-sapui5-1-114-890fce1.md "With this release SAPUI5 is upgraded from version 1.113 to 1.114.")
 

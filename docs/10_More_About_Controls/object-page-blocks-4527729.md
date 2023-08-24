@@ -6,11 +6,11 @@ The contents of the subsections in the `ObjectPageLayout` control are organized 
 
 The blocks are used to group the app content that is displayed in the sections and subsections of the `ObjectPageLayout`.
 
-   
+  
   
 **Object Page content grouped in Blocks**
 
- ![](images/Object_Page_Blocks_da91fe4.png "Object Page content grouped in Blocks") 
+![](images/Object_Page_Blocks_da91fe4.png "Object Page content grouped in Blocks")
 
 To add blocks, use the `blocks` aggregation of `sap.uxap.ObjectPageSubSection`:
 

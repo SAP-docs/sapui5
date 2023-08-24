@@ -4,7 +4,7 @@
 
 You can define multiple views of a table and display them in multiple table mode. Users can switch between views using an icon tab bar.
 
- <a name="task_rbs_2lm_1rb"/>
+<a name="task_rbs_2lm_1rb"/>
 
 <!-- task\_rbs\_2lm\_1rb -->
 
@@ -158,7 +158,7 @@ Reference the `UI.Chart` annotation in your `SelectionPresentationVariant` or `P
 > },
 > ```
 
- <a name="task_qgj_5mg_3mb"/>
+<a name="task_qgj_5mg_3mb"/>
 
 <!-- task\_qgj\_5mg\_3mb -->
 
@@ -498,7 +498,7 @@ To define multiple views using multiple table mode, perform the following steps:
     On each tab, you can also display data for different entity sets with different table types and other settings, for example, a sales order or a supplier. To do so, add the entity set and/or table settings to the corresponding tab in the manifest. For more information, see [Defining Multiple Views on a List Report with Different Entity Sets and Table Settings](defining-multiple-views-on-a-list-report-with-different-entity-sets-and-table-settings-b6b59e4.md).
 
 
- <a name="concept_ecd_hgr_j4b"/>
+<a name="concept_ecd_hgr_j4b"/>
 
 <!-- concept\_ecd\_hgr\_j4b -->
 
@@ -630,7 +630,7 @@ To define multiple views using multiple table mode, perform the following steps:
 > 
 > ```
 
- <a name="task_om1_nyy_cnb"/>
+<a name="task_om1_nyy_cnb"/>
 
 <!-- task\_om1\_nyy\_cnb -->
 
@@ -1120,7 +1120,7 @@ To define multiple views using multiple table mode, perform the following steps:
     > 4-	"name": "sap.fe.templates.ListReport",
     > 5-	"options": {
     > 6-	     "settings": {
-    > 7-	          "entitySet": "SalesOrderManage",
+    > 7-	          "contextPath": "/SalesOrderManage",
     > 8-	          "views": {
     > 9-	               "paths": [
     > 10-	                    {
@@ -1177,44 +1177,21 @@ To define multiple views using multiple table mode, perform the following steps:
     <tr>
     <td valign="top">
     
-        `ShowCounts`
+    `ShowCounts`
 
 
     
     </td>
     <td valign="top">
     
-        determines whether the count is displayed in the tabs
+    determines whether the count is displayed in the tabs
 
 
     
     </td>
     <td valign="top">
     
-        optional \(default setting: false\)
-
-
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-        `key`
-
-
-    
-    </td>
-    <td valign="top">
-    
-        Stable IDs: As there are separate table instances for each tab, table-specific IDs \(such as IDs for tables, toolbar actions, draft indicators in table columns\) get a suffix "-<key\>", where <key\> is the variant key you've specified in the manifest. This avoids duplicate ID errors and allows you to adapt specific tables via runtime adaptation \(for example, hiding a toolbar action for a specific table\).
-
-
-    
-    </td>
-    <td valign="top">
-    
-        required
+    optional \(default setting: false\)
 
 
     
@@ -1223,14 +1200,37 @@ To define multiple views using multiple table mode, perform the following steps:
     <tr>
     <td valign="top">
     
-        `annotationPath`
+    `key`
 
 
     
     </td>
     <td valign="top">
     
-        Each object in `paths` defines a view. The `annotationPath` points to a selection variant or a selection presentation variant.
+    Stable IDs: As there are separate table instances for each tab, table-specific IDs \(such as IDs for tables, toolbar actions, draft indicators in table columns\) get a suffix "-<key\>", where <key\> is the variant key you've specified in the manifest. This avoids duplicate ID errors and allows you to adapt specific tables via runtime adaptation \(for example, hiding a toolbar action for a specific table\).
+
+
+    
+    </td>
+    <td valign="top">
+    
+    required
+
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    `annotationPath`
+
+
+    
+    </td>
+    <td valign="top">
+    
+    Each object in `paths` defines a view. The `annotationPath` points to a selection variant or a selection presentation variant.
 
     If it points to a selection variant, the default `LineItem` \(no qualifier\) is displayed in this view and the selection variant filters are applied.
 
@@ -1261,7 +1261,7 @@ To define multiple views using multiple table mode, perform the following steps:
     </td>
     <td valign="top">
     
-        required
+    required
 
 
     
@@ -1270,14 +1270,14 @@ To define multiple views using multiple table mode, perform the following steps:
     <tr>
     <td valign="top">
     
-        `keepPreviousPersonalization`
+    `keepPreviousPersonalization`
 
 
     
     </td>
     <td valign="top">
     
-        If you switch from an app with only a single table to an app with multiple tables, you can keep the previously defined variant on one tab. To do so, add the `"keepPreviousPersonalization"` setting to your view definition at the `key` and `annotationPath` level. The corresponding tab keeps the default `LineItem` ID \(without the key\), so the variant is applied to it.
+    If you switch from an app with only a single table to an app with multiple tables, you can keep the previously defined variant on one tab. To do so, add the `"keepPreviousPersonalization"` setting to your view definition at the `key` and `annotationPath` level. The corresponding tab keeps the default `LineItem` ID \(without the key\), so the variant is applied to it.
 
     Note that you can only add the personalization to one view because of the need of table-specific IDs.
 
@@ -1286,7 +1286,7 @@ To define multiple views using multiple table mode, perform the following steps:
     </td>
     <td valign="top">
     
-        optional
+    optional
 
 
     
@@ -1300,7 +1300,9 @@ To define multiple views using multiple table mode, perform the following steps:
 
 
 
- ![](images/Multiple_Table_Mode_7249fb3.png) 
+### Example
+
+![](images/Multiple_Table_Mode_7249fb3.png)
 
 > ### Note:  
 > Refreshing the count available on a tab using a global side effect is only possible for a view that has been opened.

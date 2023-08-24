@@ -4,7 +4,7 @@
 
 This page contains some of the complementary offerings from the UI5 ecosystem - toolchains, generators, and other cool community projects.
 
- <a name="loiod8ab43d845cd42ceb0aa4e47b44a8fcc"/>
+<a name="loiod8ab43d845cd42ceb0aa4e47b44a8fcc"/>
 
 <!-- loiod8ab43d845cd42ceb0aa4e47b44a8fcc -->
 
@@ -26,7 +26,7 @@ UI5 Tooling is a state-of-the-art way to develop SAPUI5 projects by consuming SA
 
 -   [UI5 Tooling on GitHub](https://sap.github.io/ui5-tooling/)
 
- <a name="loio702f08a7481e46688c5603385b5bdc68"/>
+<a name="loio702f08a7481e46688c5603385b5bdc68"/>
 
 <!-- loio702f08a7481e46688c5603385b5bdc68 -->
 
@@ -48,7 +48,7 @@ The purpose of this generator is to guide you on your first steps with SAPUI5 an
 -   [Easy-UI5 on NPMJS](https://www.npmjs.com/package/generator-easy-ui5)
 -   Blog post: [Easy-UI5 3.0 – From Community Contributions to Community Plugins](https://blogs.sap.com/2021/04/09/easy-ui5-3.0-from-community-contributions-to-community-plugins/)
 
- <a name="loioab4f18de7652442da85fc08b38a8a8ce"/>
+<a name="loioab4f18de7652442da85fc08b38a8a8ce"/>
 
 <!-- loioab4f18de7652442da85fc08b38a8a8ce -->
 
@@ -58,17 +58,28 @@ The purpose of this generator is to guide you on your first steps with SAPUI5 an
 
 TypeScript is an extension of JavaScript that adds type information to the language. It helps developers catch errors early through type checking and by providing code assist in many supporting code editors \(for example, through code completion and inline documentation\). Browsers can’t execute TypeScript directly, it needs to be transpiled to JavaScript, which can then be executed as usual.
 
-For SAPUI5, we have published definition files that can contain type information describing the SAPUI5 APIs and types. With the help of these definitions, you can write SAPUI5 apps in TypeScript and enjoy all the benefits that come with it.
+For SAPUI5, we have published definition files that contain type definitions describing the SAPUI5 APIs and types. With the help of these definitions, you can write SAPUI5 apps in TypeScript and enjoy all the benefits that come with it.
 
 
 
-### Further Information
+<a name="loioab4f18de7652442da85fc08b38a8a8ce__section_grr_32p_k5c"/>
+
+## Related Information
+
+[Main topic: TypeScript Support in UI5](typescript-support-a7ee961.md)
+
+External resources:
 
 -   Documentation and resources: [UI5 & TypeScript](https://sap.github.io/ui5-typescript/)
 -   Tutorial: [Learn App Development in UI5 and TypeScript](https://github.com/SAP-samples/ui5-typescript-tutorial)
--   [UI5 type signatures on NPMJS](https://www.npmjs.com/package/@sapui5/ts-types)
 
- <a name="loiof92b537272ba43abbfc157ba4ec8f010"/>
+npm packages \(check the individual packages for licensing information\):
+
+-   [UI5 type signatures on npm](https://www.npmjs.com/package/@sapui5/ts-types-esm)
+-   [Babel preset UI5 transformer on npm](https://www.npmjs.com/package/babel-preset-transform-ui5) to transform ES modules and classes to classic UI5 code
+-   [TypeScript interface generator for control development on npm](https://www.npmjs.com/package/@ui5/ts-interface-generator) to support UI5 control development in TypeScript
+
+<a name="loiof92b537272ba43abbfc157ba4ec8f010"/>
 
 <!-- loiof92b537272ba43abbfc157ba4ec8f010 -->
 
@@ -87,7 +98,7 @@ wdi5 is a Webdriver.IO service that uses SAPUI5’s test API. It is designed to 
 -   [wdi5 on NPMJS](https://www.npmjs.com/package/wdio-ui5-service)
 
 
- <a name="loio23a0a11a88df42578b5baae11c06a89b"/>
+<a name="loio23a0a11a88df42578b5baae11c06a89b"/>
 
 <!-- loio23a0a11a88df42578b5baae11c06a89b -->
 

@@ -4,7 +4,7 @@
 
 With this release SAPUI5 is upgraded from version 1.60 to 1.61.
 
-** **
+****
 
 
 <table>
@@ -62,28 +62,28 @@ Available as of
 <tr>
 <td valign="top">
 
- 1.61 
+1.61 
 
 
 
 </td>
 <td valign="top">
 
- New 
+New 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Enabling Applications to Comply with the Content Security Policy \(CSP\)** 
+**Enabling Applications to Comply with the Content Security Policy \(CSP\)** 
 
 
 
@@ -120,28 +120,28 @@ Info Only
 <tr>
 <td valign="top">
 
- 1.61 
+1.61 
 
 
 
 </td>
 <td valign="top">
 
- New 
+New 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- <code><b><code>sap.m.SinglePlanningCalendar</code></b></code> 
+<code><b><code>sap.m.SinglePlanningCalendar</code></b></code> 
 
 
 
@@ -152,17 +152,17 @@ Info Only
 
 The `sap.m.SinglePlanningCalendar` is a new control designed to display the schedule of a single resource. It can display three types of time intervals - a single day, a work week, or a full week. You can add custom actions to facilitate the interaction with the control.
 
-   
+  
   
 **SinglePlanningCalendar Header Area**
 
- ![](images/SinglePlanningCalendar_Header_9406ea7.png "SinglePlanningCalendar Header Area") 
+![](images/SinglePlanningCalendar_Header_9406ea7.png "SinglePlanningCalendar Header Area")
 
-   
+  
   
 **SinglePlanningCalendar Meetings**
 
- ![](images/SinglePlanningCalendar_Meetings_b99c835.png "SinglePlanningCalendar Meetings") 
+![](images/SinglePlanningCalendar_Meetings_b99c835.png "SinglePlanningCalendar Meetings")
 
 For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.SinglePlanningCalendar) and the [Samples](https://ui5.sap.com/#/entity/sap.m.SinglePlanningCalendar).
 
@@ -173,7 +173,7 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.Si
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -189,28 +189,28 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.Si
 <tr>
 <td valign="top">
 
- 1.61 
+1.61 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **SAPUI5 OData V4 Model** 
+**SAPUI5 OData V4 Model** 
 
 
 
@@ -240,7 +240,7 @@ Note that we have introduced this change to support message processing.
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -256,28 +256,28 @@ Note that we have introduced this change to support message processing.
 <tr>
 <td valign="top">
 
- 1.61 
+1.61 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.f.DynamicPage`/`sap.f.semantic.SemanticPage`** 
+**`sap.f.DynamicPage`/`sap.f.semantic.SemanticPage`** 
 
 
 
@@ -297,7 +297,7 @@ Note that we have introduced this change to support message processing.
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -313,28 +313,28 @@ Note that we have introduced this change to support message processing.
 <tr>
 <td valign="top">
 
- 1.61 
+1.61 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.f.GridList`** 
+**`sap.f.GridList`** 
 
 
 
@@ -352,7 +352,7 @@ We have implemented a regressive enhancement \(polyfill\) that enables the `sap.
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -368,28 +368,28 @@ We have implemented a regressive enhancement \(polyfill\) that enables the `sap.
 <tr>
 <td valign="top">
 
- 1.61 
+1.61 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.Input`** 
+**`sap.m.Input`** 
 
 
 
@@ -407,7 +407,7 @@ We have implemented a regressive enhancement \(polyfill\) that enables the `sap.
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -423,28 +423,28 @@ We have implemented a regressive enhancement \(polyfill\) that enables the `sap.
 <tr>
 <td valign="top">
 
- 1.61 
+1.61 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.Label`** 
+**`sap.m.Label`** 
 
 
 
@@ -462,7 +462,7 @@ We have changed the color for labels whose `displayOnly` property is set to `tru
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -478,28 +478,28 @@ We have changed the color for labels whose `displayOnly` property is set to `tru
 <tr>
 <td valign="top">
 
- 1.61 
+1.61 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.ObjectHeader`** 
+**`sap.m.ObjectHeader`** 
 
 
 
@@ -517,7 +517,7 @@ We have changed the color for labels whose `displayOnly` property is set to `tru
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -533,28 +533,28 @@ We have changed the color for labels whose `displayOnly` property is set to `tru
 <tr>
 <td valign="top">
 
- 1.61 
+1.61 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.Select`/`sap.m.SelectList`** 
+**`sap.m.Select`/`sap.m.SelectList`** 
 
 
 
@@ -572,7 +572,7 @@ The `sap.m.Select` and `sap.m.SelectList` controls can now display icons before 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -588,28 +588,28 @@ The `sap.m.Select` and `sap.m.SelectList` controls can now display icons before 
 <tr>
 <td valign="top">
 
- 1.61 
+1.61 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.semantic.DetailPage`/`sap.m.semantic.SemanticPage`** 
+**`sap.m.semantic.DetailPage`/`sap.m.semantic.SemanticPage`** 
 
 
 
@@ -627,7 +627,7 @@ We have enabled the controls to be a droppable area. For more information, see [
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -643,28 +643,28 @@ We have enabled the controls to be a droppable area. For more information, see [
 <tr>
 <td valign="top">
 
- 1.61 
+1.61 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.Table`** 
+**`sap.m.Table`** 
 
 
 
@@ -682,7 +682,7 @@ The `sortIndicator` property, which indicates that a column is sorted, is now av
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -698,28 +698,28 @@ The `sortIndicator` property, which indicates that a column is sorted, is now av
 <tr>
 <td valign="top">
 
- 1.61 
+1.61 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.smartchart.SmartChart`** 
+**`sap.ui.comp.smartchart.SmartChart`** 
 
 
 
@@ -737,7 +737,7 @@ The control now supports the `com.sap.vocabularies.UI.v1.ValueCriticality` annot
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -753,28 +753,28 @@ The control now supports the `com.sap.vocabularies.UI.v1.ValueCriticality` annot
 <tr>
 <td valign="top">
 
- 1.61 
+1.61 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.smarttable.SmartTable`** 
+**`sap.ui.comp.smarttable.SmartTable`** 
 
 
 
@@ -792,7 +792,7 @@ To make descriptions more readable, column widths are now automatically adjusted
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -808,28 +808,28 @@ To make descriptions more readable, column widths are now automatically adjusted
 <tr>
 <td valign="top">
 
- 1.61 
+1.61 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.layout.cssgrid.CSSGrid`** 
+**`sap.ui.layout.cssgrid.CSSGrid`** 
 
 
 
@@ -847,7 +847,7 @@ We have added new samples to demonstrate different use cases. For more informati
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -863,28 +863,28 @@ We have added new samples to demonstrate different use cases. For more informati
 <tr>
 <td valign="top">
 
- 1.61 
+1.61 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.unified.Calendar`** 
+**`sap.ui.unified.Calendar`** 
 
 
 
@@ -902,7 +902,7 @@ The `sap.ui.unified.Calendar` control now has aligned keyboard navigation when u
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -918,28 +918,28 @@ The `sap.ui.unified.Calendar` control now has aligned keyboard navigation when u
 <tr>
 <td valign="top">
 
- 1.61 
+1.61 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.uxap.ObjectPageLayout`** 
+**`sap.uxap.ObjectPageLayout`** 
 
 
 
@@ -964,7 +964,7 @@ The `sap.ui.unified.Calendar` control now has aligned keyboard navigation when u
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -980,28 +980,28 @@ The `sap.ui.unified.Calendar` control now has aligned keyboard navigation when u
 <tr>
 <td valign="top">
 
- 1.61 
+1.61 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- SAP Fiori Elements 
+SAP Fiori Elements 
 
 
 
 </td>
 <td valign="top">
 
- **SAP Fiori Elements** 
+**SAP Fiori Elements** 
 
 
 
@@ -1041,7 +1041,7 @@ The overview page has these new features or enhancements:
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1057,28 +1057,28 @@ The overview page has these new features or enhancements:
 <tr>
 <td valign="top">
 
- 1.61 
+1.61 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- User Documentation 
+User Documentation 
 
 
 
 </td>
 <td valign="top">
 
- **Demo Apps/Tutorials** 
+**Demo Apps/Tutorials** 
 
 
 
@@ -1104,7 +1104,7 @@ Some of these concepts use new APIs that have been available since SAPUI5 releas
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1120,28 +1120,28 @@ Some of these concepts use new APIs that have been available since SAPUI5 releas
 <tr>
 <td valign="top">
 
- 1.61 
+1.61 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- User Documentation 
+User Documentation 
 
 
 
 </td>
 <td valign="top">
 
- **New Quick Start Tutorial** 
+**New Quick Start Tutorial** 
 
 
 
@@ -1159,7 +1159,7 @@ We have replaced the Hello World! tutorial with a new Quick Start tutorial that 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1175,28 +1175,28 @@ We have replaced the Hello World! tutorial with a new Quick Start tutorial that 
 <tr>
 <td valign="top">
 
- 1.61 
+1.61 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Demo Kit Tools Page** 
+**Demo Kit Tools Page** 
 
 
 
@@ -1214,7 +1214,7 @@ We have updated the *Tools* page and added two more blocks about the *Support As
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1231,6 +1231,8 @@ We have updated the *Tools* page and added two more blocks about the *Support As
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.115](what-s-new-in-sapui5-1-115-409fde8.md "With this release SAPUI5 is upgraded from version 1.114 to 1.115.")
 
 [What's New in SAPUI5 1.114](what-s-new-in-sapui5-1-114-890fce1.md "With this release SAPUI5 is upgraded from version 1.113 to 1.114.")
 

@@ -10,12 +10,12 @@ In this step, we see how the `Table` that is bound to the `People` entity set in
 
 ## Preview
 
-   
+  
   
 **App with a toolbar that contains a Refresh button**
 
- ![](images/Tutorial_OData_V4_Step_2_0abcbb6.png "App with a toolbar that contains a Refresh
-					button") 
+![](images/Tutorial_OData_V4_Step_2_0abcbb6.png "App with a toolbar that contains a Refresh
+					button")
 
 
 

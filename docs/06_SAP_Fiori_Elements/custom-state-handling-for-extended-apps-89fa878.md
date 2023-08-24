@@ -142,11 +142,11 @@ The `ViewState` controller extension supports the retrieval and utilization of a
 
 The following activity diagram shows the steps taken to retrieve and store an app state:
 
- ![](images/Retrieve_App_State_0849740.png) 
+![](images/Retrieve_App_State_0849740.png)
 
 For applying an app state, the following steps are executed:
 
- ![](images/Apply_App_State_84d20d9.png) 
+![](images/Apply_App_State_84d20d9.png)
 
 
 

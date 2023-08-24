@@ -41,7 +41,7 @@ Type of changes
 <tr>
 <td valign="top">
 
- `USER` 
+`USER` 
 
 
 
@@ -71,7 +71,7 @@ User-specific personalization settings \(for object pages\)
 <tr>
 <td valign="top" rowspan="2">
 
- `CUSTOMER` 
+`CUSTOMER` 
 
 
 
@@ -117,7 +117,7 @@ Views that the end user saves as *Public*
 <tr>
 <td valign="top">
 
- `CUSTOMER_BASE` 
+`CUSTOMER_BASE` 
 
 
 
@@ -147,7 +147,7 @@ UI changes made using the SAPUI5 Visual Editor editor in SAP Web IDE
 <tr>
 <td valign="top">
 
- `VENDOR` 
+`VENDOR` 
 
 
 

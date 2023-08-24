@@ -35,7 +35,7 @@ There is one special tag : the `@wip` tag. This tag indicates to the Gherkin tes
 
 Here's an example of a test execution with a skipped test:
 
- ![](images/GherkinAdvancedTags_179f07a.png) 
+![](images/GherkinAdvancedTags_179f07a.png)
 
 
 

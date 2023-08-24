@@ -12,7 +12,7 @@ OPA checks many conditions before it passes a control to your matchers/actions/s
 
 After turning on the debug mode, you can have a look at the log and also filter it by looking for `opa` or `matchers`.
 
- ![](images/OPA_Pitfalls_Image_340d18e.jpg) 
+![](images/OPA_Pitfalls_Image_340d18e.jpg)
 
 A frequent cause of error is typos in the view name or control IDs. These are easily found by looking through the logs.
 

@@ -73,14 +73,14 @@ Number of list items displayed: up to 6.
 <tr>
 <td valign="top">
 
- ![](images/Condensed_Standard_342d904.png) 
+![](images/Condensed_Standard_342d904.png)
 
 
 
 </td>
 <td valign="top">
 
- ![](images/Extended_Standard_849fdc4.png) 
+![](images/Extended_Standard_849fdc4.png)
 
 
 
@@ -128,14 +128,14 @@ In this type of list, each list item displays up to five fields. The first `Data
 <tr>
 <td valign="top">
 
- ![](images/Condensed_Bar_8f1def4.png) 
+![](images/Condensed_Bar_8f1def4.png)
 
 
 
 </td>
 <td valign="top">
 
- ![](images/Extended_Bar_bdbbbb2.png) 
+![](images/Extended_Bar_bdbbbb2.png)
 
 
 

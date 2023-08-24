@@ -4,7 +4,7 @@
 
 The following image shows an overview of the main tools, repositories, APIs, and parts of the ABAP back end.
 
-![](images/Big_Picture_473a10a.png) 
+![](images/Big_Picture_473a10a.png)
 
 -   The **SAPUI5 ABAP repository** contains single SAPUI5 repositories \(each represented by a BSP application\). The SAPUI5 ABAP repository is used to store SAPUI5 application resources.
 -   At **design time**, you can access the SAPUI5 ABAP repository through the design time API using three different design time tools: SAP Business Application Studio, SAP Web IDE, special SAPUI5 repository upload and download reports, and OData services.

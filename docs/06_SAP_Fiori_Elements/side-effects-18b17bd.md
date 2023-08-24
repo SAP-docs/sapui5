@@ -159,7 +159,7 @@ A side effect annotation includes the following elements:
 > ### Note:  
 > Side effects types are deprecated as of SAPUI5 1.84 release.
 
- **Side Effect Annotation Properties** 
+**Side Effect Annotation Properties** 
 
 The following side effect annotations are supported:
 
@@ -205,7 +205,7 @@ The following side effect annotations are supported:
     If a trigger action is defined but the `TargetProperties` or `TargetEntities` are not defined, then only the trigger action is called.
 
 
- **Scenarios Where Side Effects Cannot be Triggered** 
+**Scenarios Where Side Effects Cannot be Triggered** 
 
 As a general rule, no data is sent to the back end until the UI validation errors are solved. This means that the side effect is not triggered when there are validation errors related to the source property or a set of properties.
 

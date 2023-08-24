@@ -18,7 +18,7 @@ There are a lot more reasons and many small details that we will address through
 
 ## Preview
 
- ![](images/Tutorial_Testing_Overview_89001ea.png) 
+![](images/Tutorial_Testing_Overview_89001ea.png)
 
 
 

@@ -10,11 +10,11 @@ To make this work, we have to pass over the information which item has been sele
 
 ## Preview
 
-   
+  
   
 **The selected invoice details are now shown in the details page**
 
- ![](images/SAPUI5_Walkthrough_Step_32_3a96173.png "The selected invoice details are now shown in the details page") 
+![](images/SAPUI5_Walkthrough_Step_32_3a96173.png "The selected invoice details are now shown in the details page")
 
 
 

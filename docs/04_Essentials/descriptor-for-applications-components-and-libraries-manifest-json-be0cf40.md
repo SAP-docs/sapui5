@@ -30,7 +30,7 @@ App Descriptor Release
 </th>
 <th valign="top">
 
- SAPUI5 Version
+SAPUI5 Version
 
 
 
@@ -53,7 +53,7 @@ Version 2
 </td>
 <td valign="top">
 
-\>=1.30
+\>=1.30, as introduced with 1.58, loads the
 
 
 
@@ -145,7 +145,7 @@ Version 6
 </td>
 <td valign="top">
 
-\>=1.42
+, as introduced with\>=1.42
 
 
 
@@ -1331,6 +1331,29 @@ Version 57
 
 </td>
 </tr>
+<tr>
+<td valign="top">
+
+Version 58
+
+
+
+</td>
+<td valign="top">
+
+\>=1.117
+
+
+
+</td>
+<td valign="top">
+
+1.57.0
+
+
+
+</td>
+</tr>
 </table>
 
 For more information on the new fields introduced in each version, check out [Migration Information for Upgrading the Descriptor File](migration-information-for-upgrading-the-descriptor-file-a110f76.md)
@@ -1341,7 +1364,7 @@ For more information on the new fields introduced in each version, check out [Mi
 
 ## Manifest First Function
 
-The component factory function [`Component.create`](https://ui5.sap.com/#/api/sap.ui.core.Component%23methods/sap.ui.core.Component.create), as introduced with 1.58, loads the `manifest.json` by default before the component instance is created. With this, you can preload the dependencies \(libraries and components\) and, thus, improve the performance for loading the component. The preload is also available for models, which can be flagged for preload during component loading.
+The component factory function [`Component.create`](https://ui5.sap.com/#/api/sap.ui.core.Component%23methods/sap.ui.core.Component.create)`manifest.json` by default before the component instance is created. With this, you can preload the dependencies \(libraries and components\) and, thus, improve the performance for loading the component. The preload is also available for models, which can be flagged for preload during component loading.
 
 The `manifest` option allows you to configure when and from where the descriptor is loaded:
 
@@ -1521,7 +1544,7 @@ Description
 <tr>
 <td valign="top">
 
- `start_url` 
+`start_url` 
 
 
 
@@ -1537,7 +1560,7 @@ Start page of your app, if available
 <tr>
 <td valign="top">
 
- `$schema` 
+`$schema` 
 
 
 
@@ -1581,7 +1604,7 @@ Description
 <tr>
 <td valign="top">
 
- `id` 
+`id` 
 
 
 
@@ -1618,7 +1641,7 @@ It's used as a reference point for most operations involving the app descriptor.
 <tr>
 <td valign="top">
 
- `type` 
+`type` 
 
 
 
@@ -1643,7 +1666,7 @@ Possible values:
 <tr>
 <td valign="top">
 
- `i18n` 
+`i18n` 
 
 
 
@@ -1672,7 +1695,7 @@ If the manifest contains placeholders in `{{...}}` syntax, but no `i18n` attribu
 <tr>
 <td valign="top">
 
- `applicationVersion` 
+`applicationVersion` 
 
 
 
@@ -1688,7 +1711,7 @@ Mandatory version of the app \(semantic version with the following format **`maj
 <tr>
 <td valign="top">
 
- `embeds` 
+`embeds` 
 
 
 
@@ -1704,7 +1727,7 @@ Array of relative paths to the nested `manifest.json` files; attribute is mandat
 <tr>
 <td valign="top">
 
- `embeddedBy` 
+`embeddedBy` 
 
 
 
@@ -1720,7 +1743,7 @@ Relative path back to the `manifest.json` file of an embedding component or libr
 <tr>
 <td valign="top">
 
- `title` 
+`title` 
 
 
 
@@ -1736,7 +1759,7 @@ Mandatory attribute; to make this property language dependent \(recommended\), u
 <tr>
 <td valign="top">
 
- `subTitle` 
+`subTitle` 
 
 
 
@@ -1752,7 +1775,7 @@ Subtitle; to make this property language dependent \(recommended\), use a key in
 <tr>
 <td valign="top">
 
- `shortTitle` 
+`shortTitle` 
 
 
 
@@ -1768,7 +1791,7 @@ Short version of the title; to make this property language dependent \(recommend
 <tr>
 <td valign="top">
 
- `info` 
+`info` 
 
 
 
@@ -1784,7 +1807,7 @@ Needed for CDM \(Common Data Model\) conversion of tiles; to make this property 
 <tr>
 <td valign="top">
 
- `description` 
+`description` 
 
 
 
@@ -1800,7 +1823,7 @@ Description; to make this property language dependent \(recommended\), use a key
 <tr>
 <td valign="top">
 
- `tags` 
+`tags` 
 
 
 
@@ -1821,7 +1844,7 @@ Contains the following:
 <tr>
 <td valign="top">
 
- `ach` 
+`ach` 
 
 
 
@@ -1837,7 +1860,7 @@ Application component hierarchy \(SAP's component names for bug reports\); attri
 <tr>
 <td valign="top">
 
- `dataSources` 
+`dataSources` 
 
 
 
@@ -1880,7 +1903,7 @@ Unique key/alias for specifying the used data sources; contains the following in
 <tr>
 <td valign="top">
 
- `cdsViews` 
+`cdsViews` 
 
 
 
@@ -1898,7 +1921,7 @@ This attribute is optional and only added if used via INA protocol directly, not
 <tr>
 <td valign="top">
 
- `offline` 
+`offline` 
 
 
 
@@ -1914,7 +1937,7 @@ Indicates whether the app is running offline; default is `false` \(online\)
 <tr>
 <td valign="top">
 
- `sourceTemplate` 
+`sourceTemplate` 
 
 
 
@@ -1937,7 +1960,7 @@ If an app has been generated from a template, this attribute is filled automatic
 <tr>
 <td valign="top">
 
- `openSourceComponents` 
+`openSourceComponents` 
 
 
 
@@ -1960,7 +1983,7 @@ Array of directly used open source libraries for documentation purposes; not use
 <tr>
 <td valign="top">
 
- `provider` 
+`provider` 
 
 
 
@@ -1976,7 +1999,7 @@ Name of the provider that owns the application. Current supported enum value is 
 <tr>
 <td valign="top">
 
- `crossNavigation` 
+`crossNavigation` 
 
 
 
@@ -2084,7 +2107,7 @@ Cross-navigation for specifying inbounds and outbounds
 <tr>
 <td valign="top">
 
- `resources` 
+`resources` 
 
 
 
@@ -2130,7 +2153,7 @@ Description
 <tr>
 <td valign="top">
 
- `technology` 
+`technology` 
 
 
 
@@ -2146,7 +2169,7 @@ Specifies the UI technology; value is `UI5`
 <tr>
 <td valign="top">
 
- `icons` 
+`icons` 
 
 
 
@@ -2173,7 +2196,7 @@ Contains object with app-specific icons, which are:
 <tr>
 <td valign="top">
 
- `deviceTypes` 
+`deviceTypes` 
 
 
 
@@ -2182,9 +2205,9 @@ Contains object with app-specific icons, which are:
 
 Mandatory; contains objects with device types on which the app is running, such as:
 
--   `desktop`: Indicator for whether desktop devices are supported, `true` \(default\), `false`
--   `tablet`: Indicator for whether tablet devices are supported, `true` \(default\),`false`
--   `phone`: Indicator for whether phone devices are supported, `true` \(default\),`false`
+-   `desktop`: Indicator for whether desktop devices are supported, `true`, `false`
+-   `tablet`: Indicator for whether tablet devices are supported, `true`, `false`
+-   `phone`: Indicator for whether phone devices are supported, `true`, `false`
 
 
 
@@ -2193,7 +2216,7 @@ Mandatory; contains objects with device types on which the app is running, such 
 <tr>
 <td valign="top">
 
- `fullWidth` 
+`fullWidth` 
 
 
 
@@ -2239,7 +2262,7 @@ Description
 <tr>
 <td valign="top">
 
- `resources` 
+`resources` 
 
 
 
@@ -2267,7 +2290,7 @@ Two settings can be defined per resource:
 <tr>
 <td valign="top">
 
- `dependencies` 
+`dependencies` 
 
 
 
@@ -2292,7 +2315,7 @@ For more information, see [Descriptor Dependencies to Libraries and Components](
 <tr>
 <td valign="top">
 
- `componentUsages` 
+`componentUsages` 
 
 
 
@@ -2319,7 +2342,7 @@ For more information see:[Using and Nesting Components](using-and-nesting-compon
 <tr>
 <td valign="top">
 
- `models` 
+`models` 
 
 
 
@@ -2367,7 +2390,7 @@ Defines models that should be created or destroyed along the component's lifecyc
 <tr>
 <td valign="top">
 
- `rootView` 
+`rootView` 
 
 
 
@@ -2383,7 +2406,7 @@ Specifies the root view that shall be opened; can be the view name as a string f
 <tr>
 <td valign="top">
 
- `autoPrefixId` 
+`autoPrefixId` 
 
 
 
@@ -2401,7 +2424,7 @@ In former SAPUI5 releases this prefixing of the ID needed to be done with `oComp
 <tr>
 <td valign="top">
 
- `handleValidation` 
+`handleValidation` 
 
 
 
@@ -2417,7 +2440,7 @@ Possible values: `true` or `false` \(default\); used to enable or disable valida
 <tr>
 <td valign="top">
 
- `config` 
+`config` 
 
 
 
@@ -2433,7 +2456,7 @@ Static configuration; specify the name-value pairs that you need in your compone
 <tr>
 <td valign="top">
 
- `routing` 
+`routing` 
 
 
 
@@ -2449,7 +2472,7 @@ Provides configuration parameters for route and router, see [Routing and Navigat
 <tr>
 <td valign="top">
 
- `extends` 
+`extends` 
 
 
 
@@ -2472,7 +2495,7 @@ Used to extend another component.
 <tr>
 <td valign="top">
 
- `contentDensities` 
+`contentDensities` 
 
 
 
@@ -2493,7 +2516,7 @@ Mandatory; contains an object with the content density modes that the app suppor
 <tr>
 <td valign="top">
 
- `resourceRoots` 
+`resourceRoots` 
 
 
 
@@ -2514,7 +2537,7 @@ This attribute is intended for actual sub-packages of the component only, meanin
 <tr>
 <td valign="top">
 
- `componentName` 
+`componentName` 
 
 
 
@@ -2530,7 +2553,7 @@ An optional attribute that only has to be provided if your project is a variant 
 <tr>
 <td valign="top">
 
- `library/i18n` 
+`library/i18n` 
 
 
 
@@ -2556,7 +2579,7 @@ An object value can contain additional resource bundle configuration, e.g. termi
 <tr>
 <td valign="top">
 
- `flexEnabled` 
+`flexEnabled` 
 
 
 
@@ -2574,7 +2597,7 @@ For more information, see [SAPUI5 Flexibility: Enable Your App for UI Adaptation
 <tr>
 <td valign="top">
 
- `commands` 
+`commands` 
 
 
 
@@ -2593,7 +2616,7 @@ Specifies provided commands with a unique key/alias. Contains:
 <tr>
 <td valign="top">
 
- `flexExtensionPointEnabled` 
+`flexExtensionPointEnabled` 
 
 
 
@@ -2637,7 +2660,7 @@ Description
 <tr>
 <td valign="top">
 
- `uri` 
+`uri` 
 
 
 
@@ -2681,7 +2704,7 @@ Description
 <tr>
 <td valign="top">
 
- `uri` 
+`uri` 
 
 
 
@@ -2697,7 +2720,7 @@ Specifies the URI inside the SAP Business Technology Platform HTML5 application;
 <tr>
 <td valign="top">
 
- `providerAccount` 
+`providerAccount` 
 
 
 
@@ -2713,7 +2736,7 @@ Specifies the name of the provider account; filled during deployment
 <tr>
 <td valign="top">
 
- `appName` 
+`appName` 
 
 
 
@@ -2729,7 +2752,7 @@ Specifies the name of the deployed HTML5 application; filled during deployment
 <tr>
 <td valign="top">
 
- `appVersion` 
+`appVersion` 
 
 
 
@@ -2773,7 +2796,7 @@ Description
 <tr>
 <td valign="top">
 
- `registrationIds` 
+`registrationIds` 
 
 
 
@@ -2789,7 +2812,7 @@ Array of registration IDs, for example, the SAP Fiori IDs for SAP Fiori apps
 <tr>
 <td valign="top">
 
- `archeType` 
+`archeType` 
 
 
 
@@ -2805,7 +2828,7 @@ Mandatory archetype of the app, possible values `transactional`, `analytical`, `
 <tr>
 <td valign="top">
 
- `abstract` 
+`abstract` 
 
 
 
@@ -2849,7 +2872,7 @@ Description
 <tr>
 <td valign="top">
 
- `type` 
+`type` 
 
 
 
@@ -2865,7 +2888,7 @@ Describes the card type; possible values are `list` and `analytical`
 <tr>
 <td valign="top">
 
- `header` 
+`header` 
 
 
 
@@ -2881,7 +2904,7 @@ Specifies the card’s header area
 <tr>
 <td valign="top">
 
- `content` 
+`content` 
 
 
 
@@ -2929,7 +2952,7 @@ Current version of the `manifest.json`
 ```
 
 {
-    "_version": "1.56.0",
+    "_version": "1.57.0",
  
     "start_url": "index.html",
  
@@ -3181,7 +3204,7 @@ Current version of the `manifest.json`
             }]
         },
         "dependencies": {
-            "minUI5Version": "1.116.0",
+            "minUI5Version": "1.117.0",
             "libs": {
                 "sap.m": {
                     "minVersion": "1.34.0"
@@ -3315,6 +3338,7 @@ Current version of the `manifest.json`
     "sap.artifact": {},
     "sap.package": {},
     "sap.insights": {},
+    "sap.bpa.task: {},
     "sap.fe": {},
     "sap.card": {}
 }
@@ -3342,6 +3366,8 @@ For the following namespaces, the indicated teams are responsible:
 
 -   sap.platform.cf - in Cloud Foundry/XSA responsibility
 
+-   sap.copilot - in Copilot responsibility
+
 -   sap.map - in SAP Visual Business responsibility
 
 -   sap.url - in SAP Fiori launchpad responsibility
@@ -3352,7 +3378,17 @@ For the following namespaces, the indicated teams are responsible:
 
 -   sap.cloud - for SAP BTP-specific attributes
 
+-   sap.integration - in Application Integration responsibility
+
 -   sap.platform.mobilecards - in Mobile Cards responsibility
+
+-   sap.artifact - in SAP Work Zone responsibility
+
+-   sap.package - in SAP Work Zone responsibility
+
+-   sap.insights - for My Insights inside My Home
+
+-   sap.bpa.task - in SAP Build Process Automation responsibility
 
 -   sap.fe - in SAP Fiori elements responsibility
 

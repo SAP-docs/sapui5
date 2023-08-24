@@ -8,11 +8,11 @@ We want to display statistics for posts, for example, how many times it was view
 
 ## Preview
 
-   
+  
   
 **An icon tab bar with statistics**
 
- ![](images/Tutorial_Testing_Step_12_1d8248a.png "An icon tab bar with statistics") 
+![](images/Tutorial_Testing_Step_12_1d8248a.png "An icon tab bar with statistics")
 
 
 

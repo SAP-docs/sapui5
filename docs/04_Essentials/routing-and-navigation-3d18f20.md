@@ -13,11 +13,11 @@ You use routing in the following cases:
 -   Pass on data via the hash to application logic.
 
 
-   
+  
   
 **Routing overview**
 
- ![](images/SAPUI5_Navigation_3b3a63b.png "Routing overview") 
+![](images/SAPUI5_Navigation_3b3a63b.png "Routing overview")
 
 In SAPUI5, navigation and routing is implemented using a “router” to forward the hash change and the data in the hash to one or more views of the app.
 

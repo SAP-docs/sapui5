@@ -8,12 +8,12 @@ We now configure the visibility and properties of controls based on the device t
 
 ## Preview
 
-   
+  
   
 **On phone devices, the panel is collapsed to save screen space and a button is hidden**
 
- ![](images/SAPUI5_Walkthrough_Step_36_26ae5cb.png "On phone devices, the panel is collapsed to save screen space and a button is
-					hidden") 
+![](images/SAPUI5_Walkthrough_Step_36_26ae5cb.png "On phone devices, the panel is collapsed to save screen space and a button is
+					hidden")
 
 
 

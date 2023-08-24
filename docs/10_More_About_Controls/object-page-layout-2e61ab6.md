@@ -12,11 +12,11 @@ The `ObjectPageLayout` control provides a layout that allows apps to easily disp
 
 The `ObjectPageLayout` layout is composed of a header \(title and content\), an optional anchor bar, and block content wrapped in sections and subsections that structure the information.
 
-   
+  
   
 **ObjectPageLayout Main Structure**
 
- ![](images/ObjectPageLayout_overview_6b01587.png "ObjectPageLayout Main Structure") 
+![](images/ObjectPageLayout_overview_6b01587.png "ObjectPageLayout Main Structure")
 
 
 
@@ -77,11 +77,11 @@ oObjectPage.addHeaderContent(new sap.m.Text({value:"some KPI info"}));
 
 The content of the page that appears below the header is composed of blocks structured into sections and subsections.
 
-   
+  
   
 **Blocks Structured into Sections and Subsections**
 
- ![](images/sections_subsections_blocks_69eeaf3.png "Blocks Structured into Sections and Subsections") 
+![](images/sections_subsections_blocks_69eeaf3.png "Blocks Structured into Sections and Subsections")
 
 The blocks hold the actual app content, while the purpose of the sections and subsections is to define grouping.
 
@@ -128,21 +128,21 @@ var oSubSection1 = new sap.uxap.ObjectPageSubSection({title:"sub payroll title"}
 
 The `subSectionLayout` property provides information on how all the underlying subsections arrange the blocks within their internal grid. The default is set to `titleOnTop`, which arranges the blocks content in columns where the first column is below the section and subsection titles.
 
-   
+  
   
 **Blocks Content Arranged in Columns with Section and Subsection Titles Displayed on Top**
 
- ![](images/layout_titleOnTop_80c1583.png "Blocks Content Arranged in Columns with Section and Subsection Titles
-					Displayed on Top") 
+![](images/layout_titleOnTop_80c1583.png "Blocks Content Arranged in Columns with Section and Subsection Titles
+					Displayed on Top")
 
 Additionally, a second layout named `titleOnLeft` arranges the blocks content from the second column, leaving the first one for section and subsection titles only.
 
-   
+  
   
 **Blocks Content Arranged in Columns with Section and Subsection Titles Displayed on the Left**
 
- ![](images/layout_titleOnLeft_96bf1fa.png "Blocks Content Arranged in Columns with Section and Subsection Titles
-					Displayed on the Left") 
+![](images/layout_titleOnLeft_96bf1fa.png "Blocks Content Arranged in Columns with Section and Subsection Titles
+					Displayed on the Left")
 
 Here is how this property is set in the XML view:
 
@@ -166,7 +166,7 @@ Here is how this property is set in the XML view:
 
 The `moreBlocks` aggregation of `sap.uxap.ObjectPageSubSection` allows you to specify blocks to be displayed only after the user clicks the internally created *See more* button:
 
- ![](images/seeMore_74c9728.png) 
+![](images/seeMore_74c9728.png)
 
 The *See more* button is only displayed for subsections that contain one of the following:
 

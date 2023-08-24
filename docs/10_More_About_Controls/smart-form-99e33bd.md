@@ -169,13 +169,13 @@ The `SmartForm` control uses a `ResponsiveGridLayout` that can be adjusted. The 
 
 -   `labelSpanXL`, `labelSpanL`, `labelSpanM`, `labelSpanS`
 
--    `emptySpanXL`, `emptySpanL` `emptySpanM`, `emptySpanS`
+-   `emptySpanXL`, `emptySpanL` `emptySpanM`, `emptySpanS`
 
 -   `columnsXL`, `columnsL`, `columnsM`
 
 -   `breakpointXL`, `breakpointL`, `breakpointM` 
 
--    `gridDataSpan`
+-   `gridDataSpan`
 
 
 To display the fields next to each other with a label on top, you can use the `gridDataSpan` property of the `layout` element in combination with the `useHorizontalLayout` property.

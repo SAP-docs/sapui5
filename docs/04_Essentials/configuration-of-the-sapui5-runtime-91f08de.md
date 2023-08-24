@@ -43,7 +43,7 @@ UI5 supports 7 different possibilities to provide values for the available confi
     > ### Note:  
     > Additional `<meta>` tags are evaluated after URL parameters, if not stated otherwise. Please see the overall list of [Configuration Options and URL Parameters](configuration-options-and-url-parameters-91f2d03.md) for the parameters which can be defined via `<meta>` tags.
 
-7.  Specific APIs, for example the setters on the  [`sap.ui.core.Configuration`](https://ui5.sap.com/#/api/sap.ui.core.Configuration) class \(only for some parameters\)
+7.  Specific APIs, for example the setters on the [`sap.ui.core.Configuration`](https://ui5.sap.com/#/api/sap.ui.core.Configuration) class \(only for some parameters\)
 
 Please have a look at the complete list of [Configuration Options and URL Parameters](configuration-options-and-url-parameters-91f2d03.md) for a description of each configuration option, including the available ways to set input values. The following subsections will describe these possibilities in more detail.
 
@@ -59,7 +59,7 @@ Please have a look at the complete list of [Configuration Options and URL Parame
 
 The easiest way to specify a configuration value is **not to specify** it. The SAPUI5 runtime contains a default value for each configuration option. As long as you don't have to change the value, simply don't specify it.
 
-The effective default values can be found either in the  [API Reference](https://ui5.sap.com/#/api/sap.ui.core.Configuration) or in the complete list of [Configuration Options and URL Parameters](configuration-options-and-url-parameters-91f2d03.md).
+The effective default values can be found either in the [API Reference](https://ui5.sap.com/#/api/sap.ui.core.Configuration) or in the complete list of [Configuration Options and URL Parameters](configuration-options-and-url-parameters-91f2d03.md).
 
 
 
@@ -173,30 +173,14 @@ For each configuration option, you can have one attribute in the bootstrap scrip
     <tr>
     <td valign="top">
     
-        `boolean`
+    `boolean`
 
 
     
     </td>
     <td valign="top">
     
-        `true` and `x` are both accepted as true values \(case-insensitive\), all others are false. We recommend to use `false` for false values
-
-
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-        `int`
-
-
-    
-    </td>
-    <td valign="top">
-    
-        Any integer value
+    `true` and `x` are both accepted as true values \(case-insensitive\), all others are false. We recommend to use `false` for false values
 
 
     
@@ -205,14 +189,14 @@ For each configuration option, you can have one attribute in the bootstrap scrip
     <tr>
     <td valign="top">
     
-        `string array`
+    `int`
 
 
     
     </td>
     <td valign="top">
     
-        Comma-separated list of values; commas within a string are not supported \(no escaping\)
+    Any integer value
 
 
     
@@ -221,14 +205,30 @@ For each configuration option, you can have one attribute in the bootstrap scrip
     <tr>
     <td valign="top">
     
-        map from string to string
+    `string array`
 
 
     
     </td>
     <td valign="top">
     
-        JavaScript object literal \(preferably JSON syntax\)
+    Comma-separated list of values; commas within a string are not supported \(no escaping\)
+
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    map from string to string
+
+
+    
+    </td>
+    <td valign="top">
+    
+    JavaScript object literal \(preferably JSON syntax\)
 
 
     

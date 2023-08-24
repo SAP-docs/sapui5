@@ -12,11 +12,11 @@ By default, the `FlexibleColumnLayout` starts off with one column. If your use c
 
 ## Preview
 
-   
+  
   
 **Initial layout with two columns**
 
- ![](images/Starting_with_Two_Columns_Fiori_2_0_Tutorial_18a03a8.png "Initial layout with two columns") 
+![](images/Starting_with_Two_Columns_Fiori_2_0_Tutorial_18a03a8.png "Initial layout with two columns")
 
 
 

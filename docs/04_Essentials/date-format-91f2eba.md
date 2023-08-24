@@ -88,7 +88,7 @@ Replaced By
 <tr>
 <td valign="top">
 
- `G` 
+`G` 
 
 
 
@@ -104,7 +104,7 @@ era string for the current date
 <tr>
 <td valign="top">
 
- `y` 
+`y` 
 
 
 
@@ -120,7 +120,7 @@ year
 <tr>
 <td valign="top">
 
- `Y` 
+`Y` 
 
 
 
@@ -136,7 +136,7 @@ calendar year based on the calendar week
 <tr>
 <td valign="top">
 
- `Q` 
+`Q` 
 
 
 
@@ -152,7 +152,7 @@ quarter number
 <tr>
 <td valign="top">
 
- `q` 
+`q` 
 
 
 
@@ -168,7 +168,7 @@ quarter number in stand-alone format
 <tr>
 <td valign="top">
 
- `M` 
+`M` 
 
 
 
@@ -184,7 +184,7 @@ month
 <tr>
 <td valign="top">
 
- `L` 
+`L` 
 
 
 
@@ -200,7 +200,7 @@ month in stand-alone format
 <tr>
 <td valign="top">
 
- `w` 
+`w` 
 
 
 
@@ -248,7 +248,7 @@ week number in year
 <tr>
 <td valign="top">
 
- `d` 
+`d` 
 
 
 
@@ -280,7 +280,7 @@ day number in month
 <tr>
 <td valign="top">
 
- `E` 
+`E` 
 
 
 
@@ -296,7 +296,7 @@ day of week
 <tr>
 <td valign="top">
 
- `c` 
+`c` 
 
 
 
@@ -312,7 +312,7 @@ day of week in stand-alone format
 <tr>
 <td valign="top">
 
- `u` 
+`u` 
 
 
 
@@ -328,7 +328,7 @@ day number of week
 <tr>
 <td valign="top">
 
- `a` 
+`a` 
 
 
 
@@ -344,7 +344,7 @@ AM or PM
 <tr>
 <td valign="top">
 
- `B` 
+`B` 
 
 
 
@@ -360,7 +360,7 @@ flexible day period, e.g. "afternoon" or "midnight", for the time provided
 <tr>
 <td valign="top">
 
- `j` 
+`j` 
 
 
 
@@ -376,7 +376,7 @@ Can only be used in the `format` option, not in the `pattern`. It will be replac
 <tr>
 <td valign="top">
 
- `J` 
+`J` 
 
 
 
@@ -392,7 +392,7 @@ Can only be used in the `format` option, not in the `pattern`. It will be replac
 <tr>
 <td valign="top">
 
- `H` 
+`H` 
 
 
 
@@ -408,7 +408,7 @@ hour \(0-23\)
 <tr>
 <td valign="top">
 
- `k` 
+`k` 
 
 
 
@@ -424,7 +424,7 @@ hour \(1-24\)
 <tr>
 <td valign="top">
 
- `K` 
+`K` 
 
 
 
@@ -440,7 +440,7 @@ hour \(0-11\)
 <tr>
 <td valign="top">
 
- `h` 
+`h` 
 
 
 
@@ -456,7 +456,7 @@ hour \(1-12\)
 <tr>
 <td valign="top">
 
- `m` 
+`m` 
 
 
 
@@ -472,7 +472,7 @@ minute
 <tr>
 <td valign="top">
 
- `s` 
+`s` 
 
 
 
@@ -488,7 +488,7 @@ second
 <tr>
 <td valign="top">
 
- `S` 
+`S` 
 
 
 
@@ -504,7 +504,7 @@ fractional second
 <tr>
 <td valign="top">
 
- `z` 
+`z` 
 
 
 
@@ -520,7 +520,7 @@ time zone
 <tr>
 <td valign="top">
 
- `Z` 
+`Z` 
 
 
 
@@ -536,7 +536,7 @@ time zone in RFC 822 format
 <tr>
 <td valign="top">
 
- `X` 
+`X` 
 
 
 
@@ -552,7 +552,7 @@ time zone in ISO 8601 format
 <tr>
 <td valign="top">
 
- `V` 
+`V` 
 
 
 

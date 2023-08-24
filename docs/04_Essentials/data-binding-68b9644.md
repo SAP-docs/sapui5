@@ -99,21 +99,21 @@ OData V4 model
 </td>
 <td valign="top">
 
- ![Supported](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Supported](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Supported](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Supported](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Supported](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) \(default\)
+![Supported](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) \(default\)
 
 
 
@@ -129,21 +129,21 @@ OData V2 model
 </td>
 <td valign="top">
 
- ![Supported](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Supported](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Supported](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) \(default\)
+![Supported](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) \(default\)
 
 
 
 </td>
 <td valign="top">
 
- ![Supported](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Supported](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
@@ -159,21 +159,21 @@ ODataMetaModel V4
 </td>
 <td valign="top">
 
- ![Supported](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) \(default\)
+![Supported](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) \(default\)
 
 
 
 </td>
 <td valign="top">
 
- ![Supported](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Supported](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Not supported](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
+![Not supported](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
 
 
 
@@ -189,21 +189,21 @@ ODataMetaModel
 </td>
 <td valign="top">
 
- ![Supported](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) \(default\)
+![Supported](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) \(default\)
 
 
 
 </td>
 <td valign="top">
 
- ![Not supported](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
+![Not supported](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Not supported](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
+![Not supported](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
 
 
 
@@ -219,21 +219,21 @@ JSON model
 </td>
 <td valign="top">
 
- ![Supported](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Supported](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Supported](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Supported](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Supported](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) \(default\)
+![Supported](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) \(default\)
 
 
 
@@ -249,21 +249,21 @@ XML model
 </td>
 <td valign="top">
 
- ![Supported](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Supported](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Supported](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Supported](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Supported](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) \(default\)
+![Supported](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) \(default\)
 
 
 
@@ -279,21 +279,21 @@ Resource model
 </td>
 <td valign="top">
 
- ![Supported](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Supported](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Supported](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) \(default\)
+![Supported](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) \(default\)
 
 
 
 </td>
 <td valign="top">
 
- ![Not supported](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
+![Not supported](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
 
 
 

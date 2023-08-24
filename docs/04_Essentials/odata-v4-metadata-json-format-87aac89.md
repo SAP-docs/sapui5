@@ -417,7 +417,7 @@ Is represented by a JavaScript number literal as long as the value is a safe int
 </td>
 <td valign="top">
 
- `"Product Catalog"` 
+`"Product Catalog"` 
 
 
 
@@ -478,7 +478,7 @@ edm:Not is written as `{"$Not" : <value>, "@..." : <value>}`. All others are wri
 </td>
 <td valign="top">
 
- `{"$AnnotationPath" : "..."}` 
+`{"$AnnotationPath" : "..."}` 
 
 
 
@@ -494,7 +494,7 @@ edm:Not is written as `{"$Not" : <value>, "@..." : <value>}`. All others are wri
 </td>
 <td valign="top">
 
- `{"$Apply" : [<value>, ...], "$Function" : "<14.5.3.1 Apply Function>", "@..." : <value>}` 
+`{"$Apply" : [<value>, ...], "$Function" : "<14.5.3.1 Apply Function>", "@..." : <value>}` 
 
 
 
@@ -602,7 +602,7 @@ Condition, then, else \(which is optional inside a "14.5.5 Expression Collection
 </td>
 <td valign="top">
 
- `{"$LabeledElement" : <value>, "$Name" : "<5.1.1 Schema Namespace>.<14.5.8.1 LabeledElement Name>", "@..." : <value>}` 
+`{"$LabeledElement" : <value>, "$Name" : "<5.1.1 Schema Namespace>.<14.5.8.1 LabeledElement Name>", "@..." : <value>}` 
 
 
 
@@ -618,7 +618,7 @@ Condition, then, else \(which is optional inside a "14.5.5 Expression Collection
 </td>
 <td valign="top">
 
- `{"$LabeledElementReference" : "<QualifiedName name of a labeled element expression in scope>"}` 
+`{"$LabeledElementReference" : "<QualifiedName name of a labeled element expression in scope>"}` 
 
 
 
@@ -654,7 +654,7 @@ The object notation is needed in case of inline annotations.
 </td>
 <td valign="top">
 
- `{"$NavigationPropertyPath" : "..."}` 
+`{"$NavigationPropertyPath" : "..."}` 
 
 
 
@@ -670,7 +670,7 @@ The object notation is needed in case of inline annotations.
 </td>
 <td valign="top">
 
- `{"$Path" : "..."}` 
+`{"$Path" : "..."}` 
 
 
 
@@ -686,7 +686,7 @@ The object notation is needed in case of inline annotations.
 </td>
 <td valign="top">
 
- `{"$PropertyPath" : "..."}` 
+`{"$PropertyPath" : "..."}` 
 
 
 
@@ -727,7 +727,7 @@ The record itself is a map:
 </td>
 <td valign="top">
 
- `{"$UrlRef" : <value>, "@..." : <value>}` 
+`{"$UrlRef" : <value>, "@..." : <value>}` 
 
 
 

@@ -46,7 +46,7 @@ Besides the `createContent` method, a view can implement the methods `getControl
 
 -   `getControllerName`: Defines the name of the view controller that should be instantiated and used for the view. The name must be in class name notation \(i.e. dot notation\) **without** the `.controller` suffix. The suffix will be added by the framework when loading the module containing the controller.
 
--   `getAutoPrefixId`: Defines whether the IDs of controls created during the execution of `createContent` will automatically be prefixed with the ID of the view. The default implementation of this method returns `false`. Auto-prefixing is only available for synchronous content creation. For asynchronous content creation use  [`sap.ui.core.mvc.View#createId`](https://ui5.sap.com/#/api/sap.ui.core.mvc.View/methods/createId) instead in order to prefix the IDs programmatically.
+-   `getAutoPrefixId`: Defines whether the IDs of controls created during the execution of `createContent` will automatically be prefixed with the ID of the view. The default implementation of this method returns `false`. Auto-prefixing is only available for synchronous content creation. For asynchronous content creation use [`sap.ui.core.mvc.View#createId`](https://ui5.sap.com/#/api/sap.ui.core.mvc.View/methods/createId) instead in order to prefix the IDs programmatically.
 
 
 
@@ -55,7 +55,7 @@ Besides the `createContent` method, a view can implement the methods `getControl
 
 ## View Instantiation
 
-The preferred way of instantiating a typed view is via the factory function  [`sap.ui.core.mvc.View#create`](https://ui5.sap.com/#/api/sap.ui.core.mvc.View/methods/sap.ui.core.mvc.View.create) . When the `viewName` starts with the `module:` prefix, the remainder of the name is assumed to be the name of a module that exports a typed view \(a subclass of `sap.ui.core.mvc.View`\). The module name must use the same syntax as for `sap.ui.define` or `sap.ui.require`, respectively, i.e. use slashes for separation.
+The preferred way of instantiating a typed view is via the factory function [`sap.ui.core.mvc.View#create`](https://ui5.sap.com/#/api/sap.ui.core.mvc.View/methods/sap.ui.core.mvc.View.create) . When the `viewName` starts with the `module:` prefix, the remainder of the name is assumed to be the name of a module that exports a typed view \(a subclass of `sap.ui.core.mvc.View`\). The module name must use the same syntax as for `sap.ui.define` or `sap.ui.require`, respectively, i.e. use slashes for separation.
 
 **Example:** Instantiating a typed view with `View.create`:
 

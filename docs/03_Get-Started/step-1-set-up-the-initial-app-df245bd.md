@@ -10,11 +10,11 @@ The structure and data model created in this step will be used throughout the re
 
 ## Preview
 
-   
+  
   
 **Initial app with a simple button**
 
- ![](images/Tutorial_Navigation_and_Routing_Step_01a_2a2a284.png "Initial app with a simple button") 
+![](images/Tutorial_Navigation_and_Routing_Step_01a_2a2a284.png "Initial app with a simple button")
 
 
 
@@ -26,11 +26,11 @@ Depending on your development environment you might have to adjust resource path
 
 You should have the same files as displayed in the following figure:
 
-   
+  
   
 **Folder structure with downloaded files**
 
- ![](images/Tutorial_Navigation_and_Routing_Step_01b_cf75e00.png "Folder structure with downloaded files") 
+![](images/Tutorial_Navigation_and_Routing_Step_01b_cf75e00.png "Folder structure with downloaded files")
 
 > ### Note:  
 > The content of the `localService` folders will not be changed in this tutorial. The `i18n` folder will always contain the `i18n.properties` file only. Therefore, we will show both subfolders collapsed in the following steps.

@@ -10,11 +10,11 @@ In this step, we will make it possible to create and edit \(update\) user data f
 
 ## Preview
 
-   
+  
   
 **Data can now be edited and added.**
 
- ![](images/Tutorial_OData_V4_Step_6_baf7417.png "Data can now be edited and added.") 
+![](images/Tutorial_OData_V4_Step_6_baf7417.png "Data can now be edited and added.")
 
 
 

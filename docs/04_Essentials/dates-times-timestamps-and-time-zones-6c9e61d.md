@@ -16,15 +16,15 @@ When talking about dates, times, or timestamps, we'll use the following definiti
 > -   `Date#getTime` returns a timestamp and not a time in our terminology,
 > -   `Date#getDate` returns only the day of a date and not the entire date.
 
-The intermediate processing of these entities on the client side typically uses the JavaScript `Date` object, which represents a timestamp. This may cause issues if dates are used and time zone handling comes into play. Typically, timestamps are displayed in the time zone of the browser. It is also possible to display a timestamp in a different time zone, for example in the `America/New_York` time zone, by using  [ `sap.ui.model.odata.type.DateTimeWithTimezone`](https://ui5.sap.com/#/api/sap.ui.model.odata.type.DateTimeWithTimezone) or [ `sap.ui.core.format.DateFormat.getDateTimeWithTimezoneInstance`](https://ui5.sap.com/#/api/sap.ui.core.format.DateFormat.getDateTimeWithTimezoneInstance).
+The intermediate processing of these entities on the client side typically uses the JavaScript `Date` object, which represents a timestamp. This may cause issues if dates are used and time zone handling comes into play. Typically, timestamps are displayed in the time zone of the browser. It is also possible to display a timestamp in a different time zone, for example in the `America/New_York` time zone, by using [`sap.ui.model.odata.type.DateTimeWithTimezone`](https://ui5.sap.com/#/api/sap.ui.model.odata.type.DateTimeWithTimezone) or [`sap.ui.core.format.DateFormat.getDateTimeWithTimezoneInstance`](https://ui5.sap.com/#/api/sap.ui.core.format.DateFormat.getDateTimeWithTimezoneInstance).
 
-For testing purposes, you can use the `sap-timezone` URL parameter to switch from the browser's time zone to any provided time zone. For example, with `?sap-timezone=Pacific/Honolulu` the Honolulu time zone \(GMT-10:00\), and with `?sap-timezone=Pacific/Kiritimati` the Kiritimati time zone \(GMT+14:00\) is used for formatting and parsing timestamps, except for the timestamps that are formatted or parsed with  [ `sap.ui.model.odata.type.DateTimeWithTimezone`](https://ui5.sap.com/#/api/sap.ui.model.odata.type.DateTimeWithTimezone) or [ `sap.ui.core.format.DateFormat.getDateTimeWithTimezoneInstance`](https://ui5.sap.com/#/api/sap.ui.core.format.DateFormat.getDateTimeWithTimezoneInstance).
+For testing purposes, you can use the `sap-timezone` URL parameter to switch from the browser's time zone to any provided time zone. For example, with `?sap-timezone=Pacific/Honolulu` the Honolulu time zone \(GMT-10:00\), and with `?sap-timezone=Pacific/Kiritimati` the Kiritimati time zone \(GMT+14:00\) is used for formatting and parsing timestamps, except for the timestamps that are formatted or parsed with [`sap.ui.model.odata.type.DateTimeWithTimezone`](https://ui5.sap.com/#/api/sap.ui.model.odata.type.DateTimeWithTimezone) or [`sap.ui.core.format.DateFormat.getDateTimeWithTimezoneInstance`](https://ui5.sap.com/#/api/sap.ui.core.format.DateFormat.getDateTimeWithTimezoneInstance).
 
 > ### Restriction:  
 > If you use a configured time zone, **your application may break** if it uses the JavaScript `Date` object in combination with functions that use the local browser time zone, for example `oDate.getHours()` or `oDate.getDate()`. To avoid such issues, we strongly recommend the following approach:
 > 
 > -   Use data binding with the corresponding SAPUI5 OData types wherever possible in your application.
-> -   Always use [ `UI5Date.getInstance`](https://ui5.sap.com/#/api/module:sap/ui/core/date/UI5Date/methods/sap/ui/core/date/UI5Date.getInstance) to create new date instances. For more information, see the [UI5Date section](dates-times-timestamps-and-time-zones-6c9e61d.md#loio6c9e61dc157a40c19460660ece8368bc__section_ui5date) below.
+> -   Always use [`UI5Date.getInstance`](https://ui5.sap.com/#/api/module:sap/ui/core/date/UI5Date/methods/sap/ui/core/date/UI5Date.getInstance) to create new date instances. For more information, see the [UI5Date section](dates-times-timestamps-and-time-zones-6c9e61d.md#loio6c9e61dc157a40c19460660ece8368bc__section_ui5date) below.
 
 This topic describes the different OData Edm types and the corresponding SAPUI5 data type, how to display timestamps in a specific time zone, a list of best practices for handling timestamps, dates, and times in SAPUI5, and a list of common pitfalls.
 
@@ -108,7 +108,7 @@ String
 </td>
 <td valign="top">
 
- [ `sap.ui.model.odata.type.Date`](https://ui5.sap.com/#/api/sap.ui.model.odata.type.Date)
+[`sap.ui.model.odata.type.Date`](https://ui5.sap.com/#/api/sap.ui.model.odata.type.Date)
 
 
 
@@ -145,7 +145,7 @@ String
 </td>
 <td valign="top">
 
- [ `sap.ui.model.odata.type.DateTimeOffset`](https://ui5.sap.com/#/api/sap.ui.model.odata.type.DateTimeOffset)
+[`sap.ui.model.odata.type.DateTimeOffset`](https://ui5.sap.com/#/api/sap.ui.model.odata.type.DateTimeOffset)
 
 
 
@@ -182,7 +182,7 @@ String
 </td>
 <td valign="top">
 
- [ `sap.ui.model.odata.type.TimeOfDay`](https://ui5.sap.com/#/api/sap.ui.model.odata.type.TimeOfDay)
+[`sap.ui.model.odata.type.TimeOfDay`](https://ui5.sap.com/#/api/sap.ui.model.odata.type.TimeOfDay)
 
 
 
@@ -228,7 +228,7 @@ JavaScript `Date`
 </td>
 <td valign="top">
 
- [ `sap.ui.model.odata.type.DateTime`](https://ui5.sap.com/#/api/sap.ui.model.odata.type.DateTime) with constraint`displayFormat: "Date"`
+[`sap.ui.model.odata.type.DateTime`](https://ui5.sap.com/#/api/sap.ui.model.odata.type.DateTime) with constraint`displayFormat: "Date"`
 
 
 
@@ -265,7 +265,7 @@ JavaScript `Date`
 </td>
 <td valign="top">
 
- [ `sap.ui.model.odata.type.DateTimeOffset`](https://ui5.sap.com/#/api/sap.ui.model.odata.type.DateTimeOffset)
+[`sap.ui.model.odata.type.DateTimeOffset`](https://ui5.sap.com/#/api/sap.ui.model.odata.type.DateTimeOffset)
 
 
 
@@ -302,7 +302,7 @@ A **timestamp** as defined above.
 </td>
 <td valign="top">
 
- [ `sap.ui.model.odata.type.Time`](https://ui5.sap.com/#/api/sap.ui.model.odata.type.Time)
+[`sap.ui.model.odata.type.Time`](https://ui5.sap.com/#/api/sap.ui.model.odata.type.Time)
 
 
 
@@ -319,7 +319,7 @@ A **time** as defined above.
 
 Timestamps are always transported between client and server in UTC \(Coordinated Universal Time\), but on the UI they are displayed in the user's time zone, i.e. the time zone used by the browser which is configured in the operating system. The UTC offset \("Z" in OData V4, or "+0000" in OData V2 in the examples above\) is neither used to determine a time zone on the client nor to transport time zone information from the client to the back end.
 
-Dates and times are time zone-independent, so OData V4 uses strings like "2014-03-25" or "07:25:21" for transporting dates and times between server and client, and for storing the values in the OData model. In OData V2, however, there is no specific data type for dates. There is an `sap:display-format="Date"` annotation at an OData property/parameter having the Edm type `DateTime`, which means that the given timestamp has to be interpreted as a date. The  [ `sap.ui.model.odata.type.DateTime`](https://ui5.sap.com/#/api/sap.ui.model.odata.type.DateTime) with the constraint `sap:display-format="Date"` uses UTC to extract the date information from a timestamp.
+Dates and times are time zone-independent, so OData V4 uses strings like "2014-03-25" or "07:25:21" for transporting dates and times between server and client, and for storing the values in the OData model. In OData V2, however, there is no specific data type for dates. There is an `sap:display-format="Date"` annotation at an OData property/parameter having the Edm type `DateTime`, which means that the given timestamp has to be interpreted as a date. The [`sap.ui.model.odata.type.DateTime`](https://ui5.sap.com/#/api/sap.ui.model.odata.type.DateTime) with the constraint `sap:display-format="Date"` uses UTC to extract the date information from a timestamp.
 
 When using dates and times, we strongly recommend to use data bindings with the corresponding SAPUI5 data types. If data is retrieved or sent via OData, e.g. for filtering, **make sure to use data types from the `sap.ui.model.odata.type` namespace. This is also valid for data bindings with non-OData-models, such as JSON models.** For examples, see [Best Practices](dates-times-timestamps-and-time-zones-6c9e61d.md#loio6c9e61dc157a40c19460660ece8368bc__section_BP).
 
@@ -329,7 +329,7 @@ When using dates and times, we strongly recommend to use data bindings with the 
 
 ## Displaying Timestamps in a Specific Time Zone
 
-Displaying timestamps in a specific time zone provided by the back end is done using the composite type  [ `sap.ui.model.odata.type.DateTimeWithTimezone`](https://ui5.sap.com/#/api/sap.ui.model.odata.type.DateTimeWithTimezone). The first part of the composite binding contains the timestamp as an `Edm.DateTimeOffset`, and the second part contains the IANA time zone ID.
+Displaying timestamps in a specific time zone provided by the back end is done using the composite type [`sap.ui.model.odata.type.DateTimeWithTimezone`](https://ui5.sap.com/#/api/sap.ui.model.odata.type.DateTimeWithTimezone). The first part of the composite binding contains the timestamp as an `Edm.DateTimeOffset`, and the second part contains the IANA time zone ID.
 
 > ### Example:  
 > **Using `sap.ui.model.odata.type.DateTimeWithTimezone` with OData V4**
@@ -399,10 +399,10 @@ For more information, see the `timezone` configuration parameter in [Configurati
 
 ## `sap.ui.core.date.UI5Date`
 
-The [ `sap.ui.core.date.UI5Date`](https://ui5.sap.com/#/api/module:sap/ui/core/date/UI5Date) class is a subclass of JavaScript `Date`. Regardless of whether a time zone is configured or not, the `UI5Date` class is meant to replace the JavaScript `Date` entirely within SAPUI5. Therefore, make sure to always use [ `UI5Date.getInstance`](https://ui5.sap.com/#/api/module:sap/ui/core/date/UI5Date/methods/sap/ui/core/date/UI5Date.getInstance) where `Date`s are required.
+The [`sap.ui.core.date.UI5Date`](https://ui5.sap.com/#/api/module:sap/ui/core/date/UI5Date) class is a subclass of JavaScript `Date`. Regardless of whether a time zone is configured or not, the `UI5Date` class is meant to replace the JavaScript `Date` entirely within SAPUI5. Therefore, make sure to always use [`UI5Date.getInstance`](https://ui5.sap.com/#/api/module:sap/ui/core/date/UI5Date/methods/sap/ui/core/date/UI5Date.getInstance) where `Date`s are required.
 
 > ### Caution:  
-> Use the [ `UI5Date.getInstance`](https://ui5.sap.com/#/api/module:sap/ui/core/date/UI5Date/methods/sap/ui/core/date/UI5Date.getInstance) method instead of `new Date(...)` to create new `Date` instances. This method returns a `UI5Date` if the browser time zone and the configured time zone are different, and a regular JavaScript `Date` otherwise.
+> Use the [`UI5Date.getInstance`](https://ui5.sap.com/#/api/module:sap/ui/core/date/UI5Date/methods/sap/ui/core/date/UI5Date.getInstance) method instead of `new Date(...)` to create new `Date` instances. This method returns a `UI5Date` if the browser time zone and the configured time zone are different, and a regular JavaScript `Date` otherwise.
 
 > ### Example:  
 > **How to create and use a `UI5Date`**

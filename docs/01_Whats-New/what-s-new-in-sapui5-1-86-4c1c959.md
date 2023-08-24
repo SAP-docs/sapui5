@@ -6,7 +6,7 @@ With this release SAPUI5 is upgraded from version 1.85 to 1.86.
 
 
 
-** **
+****
 
 
 <table>
@@ -64,28 +64,28 @@ Available as of
 <tr>
 <td valign="top">
 
- 1.86 
+1.86 
 
 
 
 </td>
 <td valign="top">
 
- Deprecated 
+Deprecated 
 
 
 
 </td>
 <td valign="top">
 
- Announcement 
+Announcement 
 
 
 
 </td>
 <td valign="top">
 
- **Preannouncement: End of Support for Microsoft Internet Explorer 11 after SAPUI5 1.87** 
+**Preannouncement: End of Support for Microsoft Internet Explorer 11 after SAPUI5 1.87** 
 
 
 
@@ -119,28 +119,28 @@ Info Only
 <tr>
 <td valign="top">
 
- 1.86 
+1.86 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **SAPUI5 OData V4 Model** 
+**SAPUI5 OData V4 Model** 
 
 
 
@@ -172,7 +172,7 @@ For more information, see [OData V4 Model](../04_Essentials/odata-v4-model-5de13
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -188,28 +188,28 @@ For more information, see [OData V4 Model](../04_Essentials/odata-v4-model-5de13
 <tr>
 <td valign="top">
 
- 1.86 
+1.86 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.FormattedText`** 
+**`sap.m.FormattedText`** 
 
 
 
@@ -234,7 +234,7 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.Fo
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -250,28 +250,28 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.Fo
 <tr>
 <td valign="top">
 
- 1.86 
+1.86 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.IconTabBar`, `sap.m.RadioButton`** 
+**`sap.m.IconTabBar`, `sap.m.RadioButton`** 
 
 
 
@@ -289,7 +289,7 @@ Value states are not shown when the controls are in read-only or disabled mode. 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -305,28 +305,28 @@ Value states are not shown when the controls are in read-only or disabled mode. 
 <tr>
 <td valign="top">
 
- 1.86 
+1.86 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.Label`** 
+**`sap.m.Label`** 
 
 
 
@@ -344,7 +344,7 @@ The colon symbol \(:\) is represented differently in different languages. In Ger
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -360,28 +360,28 @@ The colon symbol \(:\) is represented differently in different languages. In Ger
 <tr>
 <td valign="top">
 
- 1.86 
+1.86 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.Select`** 
+**`sap.m.Select`** 
 
 
 
@@ -399,7 +399,7 @@ With the new experimental `columnRatio` property, you can now set a custom ratio
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -415,28 +415,28 @@ With the new experimental `columnRatio` property, you can now set a custom ratio
 <tr>
 <td valign="top">
 
- 1.86 
+1.86 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.Table`** 
+**`sap.m.Table`** 
 
 
 
@@ -456,7 +456,7 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.Ta
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -472,28 +472,28 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.Ta
 <tr>
 <td valign="top">
 
- 1.86 
+1.86 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.Title`** 
+**`sap.m.Title`** 
 
 
 
@@ -511,7 +511,7 @@ We have introduced the `textDirection` property, which is also available in the 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -527,28 +527,28 @@ We have introduced the `textDirection` property, which is also available in the 
 <tr>
 <td valign="top">
 
- 1.86 
+1.86 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.smartfield.SmartField`** 
+**`sap.ui.comp.smartfield.SmartField`** 
 
 
 
@@ -572,7 +572,7 @@ We have introduced the `textDirection` property, which is also available in the 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -588,28 +588,28 @@ We have introduced the `textDirection` property, which is also available in the 
 <tr>
 <td valign="top">
 
- 1.86 
+1.86 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.smartfilterbar.SmartFilterBar`** 
+**`sap.ui.comp.smartfilterbar.SmartFilterBar`** 
 
 
 
@@ -620,7 +620,7 @@ We have introduced the `textDirection` property, which is also available in the 
 
 The *Filters* dialog of the control has been improved: You can now toggle between *List View* and *Group View* depending on how you would like to view the filtered data. For example, you might want to use the list view if there is only a small number of fields available. You can also choose between *Hide Values* and *Show Values*, if you want to see the filter values for the active filter fields.
 
- ![](images/Adapt_Filters_9c7cc3a.png) 
+![](images/Adapt_Filters_9c7cc3a.png)
 
 For more information, see the [Sample](https://ui5.sap.com/#/entity/sap.ui.comp.smartfilterbar.SmartFilterBar/sample/sap.ui.comp.sample.smartfilterbar.example1).
 
@@ -631,7 +631,7 @@ For more information, see the [Sample](https://ui5.sap.com/#/entity/sap.ui.comp.
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -647,28 +647,28 @@ For more information, see the [Sample](https://ui5.sap.com/#/entity/sap.ui.comp.
 <tr>
 <td valign="top">
 
- 1.86 
+1.86 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.smarttable.SmartTable`** 
+**`sap.ui.comp.smarttable.SmartTable`** 
 
 
 
@@ -693,7 +693,7 @@ For more information, see the [Sample](https://ui5.sap.com/#/entity/sap.ui.comp.
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -709,28 +709,28 @@ For more information, see the [Sample](https://ui5.sap.com/#/entity/sap.ui.comp.
 <tr>
 <td valign="top">
 
- 1.86 
+1.86 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.valuehelpdialog.ValueHelpDialog`** 
+**`sap.ui.comp.valuehelpdialog.ValueHelpDialog`** 
 
 
 
@@ -759,7 +759,7 @@ For more information, see the [Sample](https://ui5.sap.com/#/entity/sap.ui.comp.
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -775,28 +775,28 @@ For more information, see the [Sample](https://ui5.sap.com/#/entity/sap.ui.comp.
 <tr>
 <td valign="top">
 
- 1.86 
+1.86 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.integration.widgets.Card`** 
+**`sap.ui.integration.widgets.Card`** 
 
 
 
@@ -815,7 +815,7 @@ For more information, see the [Sample](https://ui5.sap.com/#/entity/sap.ui.comp.
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -831,28 +831,28 @@ For more information, see the [Sample](https://ui5.sap.com/#/entity/sap.ui.comp.
 <tr>
 <td valign="top">
 
- 1.86 
+1.86 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.layout.form.SemanticFormElement`** 
+**`sap.ui.layout.form.SemanticFormElement`** 
 
 
 
@@ -870,7 +870,7 @@ The `SemanticFormElement` element \(experimental\) now allows you to render sema
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -886,28 +886,28 @@ The `SemanticFormElement` element \(experimental\) now allows you to render sema
 <tr>
 <td valign="top">
 
- 1.86 
+1.86 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.richtexteditor.RichTextEditor`** 
+**`sap.ui.richtexteditor.RichTextEditor`** 
 
 
 
@@ -925,7 +925,7 @@ We have enabled TinyMCE version 5 to be used with `sap.ui.richtexteditor.RichTex
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -941,28 +941,28 @@ We have enabled TinyMCE version 5 to be used with `sap.ui.richtexteditor.RichTex
 <tr>
 <td valign="top">
 
- 1.86 
+1.86 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.table.AnalyticalTable`, `sap.ui.table.Table`, `sap.ui.table.TreeTable`** 
+**`sap.ui.table.AnalyticalTable`, `sap.ui.table.Table`, `sap.ui.table.TreeTable`** 
 
 
 
@@ -980,7 +980,7 @@ The `rowsUpdated` event is now available so applications can find out about any 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -996,28 +996,28 @@ The `rowsUpdated` event is now available so applications can find out about any 
 <tr>
 <td valign="top">
 
- 1.86 
+1.86 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- SAP Fiori Elements 
+SAP Fiori Elements 
 
 
 
 </td>
 <td valign="top">
 
- **SAP Fiori elements for OData V2** 
+**SAP Fiori elements for OData V2** 
 
 
 
@@ -1044,7 +1044,7 @@ The following changes and new features are available for SAP Fiori elements for 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1060,28 +1060,28 @@ The following changes and new features are available for SAP Fiori elements for 
 <tr>
 <td valign="top">
 
- 1.86 
+1.86 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- SAP Fiori Elements 
+SAP Fiori Elements 
 
 
 
 </td>
 <td valign="top">
 
- **SAP Fiori elements for OData V4** 
+**SAP Fiori elements for OData V4** 
 
 
 
@@ -1123,7 +1123,7 @@ The following changes and new features are available for SAP Fiori elements for 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1139,28 +1139,28 @@ The following changes and new features are available for SAP Fiori elements for 
 <tr>
 <td valign="top">
 
- 1.86 
+1.86 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Demo Kit Search Suggestions in Global Search** 
+**Demo Kit Search Suggestions in Global Search** 
 
 
 
@@ -1186,7 +1186,7 @@ At the bottom of the popover, you have the *Results by Category* section from wh
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1203,6 +1203,8 @@ At the bottom of the popover, you have the *Results by Category* section from wh
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.115](what-s-new-in-sapui5-1-115-409fde8.md "With this release SAPUI5 is upgraded from version 1.114 to 1.115.")
 
 [What's New in SAPUI5 1.114](what-s-new-in-sapui5-1-114-890fce1.md "With this release SAPUI5 is upgraded from version 1.113 to 1.114.")
 

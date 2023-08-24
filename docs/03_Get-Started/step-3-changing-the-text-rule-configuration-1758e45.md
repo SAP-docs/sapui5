@@ -14,9 +14,9 @@ If you are using a data object with reference attributes as the result data obje
 
 ## Preview
 
- ![](images/Text_rule_with_settings_a179316.png) 
+![](images/Text_rule_with_settings_a179316.png)
 
- ![](images/Text_rule_with_settings_dialog_box_5e430bc.png) 
+![](images/Text_rule_with_settings_dialog_box_5e430bc.png)
 
 
 

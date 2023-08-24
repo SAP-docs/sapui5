@@ -10,7 +10,7 @@ Criticality of a data field \(`UI.DataFieldForAction`\) can be achieved by setti
 
 Actions that are a part of table rows \(inline\), an object page header, and an object page footer support `Criticality`.
 
- ![]() ![](images/Criticality_for_Actions_e60c298.png) 
+![]()![](images/Criticality_for_Actions_e60c298.png)
 
 
 

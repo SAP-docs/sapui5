@@ -108,9 +108,9 @@ A scatter chart card supports a maximum of two dimensions. If the dimension is n
 > 
 > ```
 
-   
+  
   
 **Example of a Scatter Chart Card**
 
- ![](../01_Whats-New/images/Whats_New_140_OVP_Scatter_Chart_f264ec1.png "Example of a Scatter Chart Card") 
+![](../01_Whats-New/images/Whats_New_140_OVP_Scatter_Chart_f264ec1.png "Example of a Scatter Chart Card")
 

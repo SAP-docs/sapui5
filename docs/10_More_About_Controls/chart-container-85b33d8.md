@@ -47,11 +47,11 @@ For more information about the `VizFrame` control, see the [API Reference](https
 
     -   legend, zoom in, zoom out, personalization, full screen, custom icons and segmented button for content selection.
 
-         ![Custom Toolbar with the embedded buttons and the dimension selector](images/ChartContainer_ToolbarDimension_4b93f6b.png) 
+        ![Custom Toolbar with the embedded buttons and the dimension selector](images/ChartContainer_ToolbarDimension_4b93f6b.png)
 
     -   If a dimension selector is displayed in the chart container, it will always be displayed in the first position in the toolbar. When a dimension selector is not visible, the chart container’s title \(`title` property of `ChartContainer`\) will be displayed in the first position in the toolbar as shown below.
 
-         ![Custom Toolbar with the embedded buttons and a title](images/ChartContainer_ToolbarTitle_cb0a6b7.png) 
+        ![Custom Toolbar with the embedded buttons and a title](images/ChartContainer_ToolbarTitle_cb0a6b7.png)
 
 
     If the custom toolbar has been configured and the placeholder is missing, an information log will be displayed and the custom toolbar is ignored. The default toolbar is used instead. If a custom toolbar has been configured, the embedded buttons are still present and integrated using a placeholder.

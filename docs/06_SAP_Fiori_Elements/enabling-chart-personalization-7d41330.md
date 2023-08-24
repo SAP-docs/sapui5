@@ -50,7 +50,7 @@ You can switch off personalization using the following setting:
 >    "name": "sap.fe.templates.ListReport",
 >    "options": {
 >       "settings": {
->          "entitySet": "BusinessPartners",
+>          "contextPath": "/BusinessPartners",
 >          .....
 >          .....    
 >          "controlConfiguration": {
@@ -84,7 +84,7 @@ The `"personalization"` setting can have the following values:
 >    "name": "sap.fe.templates.ListReport",
 >    "options": {
 >       "settings": {
->          "entitySet": "BusinessPartners",
+>          "contextPath": "/BusinessPartners",
 >          ....
 >          ....
 >          "controlConfiguration": {

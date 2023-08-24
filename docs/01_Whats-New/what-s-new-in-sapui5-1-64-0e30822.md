@@ -4,7 +4,7 @@
 
 With this release SAPUI5 is upgraded from version 1.63 to 1.64.
 
-** **
+****
 
 
 <table>
@@ -62,28 +62,28 @@ Available as of
 <tr>
 <td valign="top">
 
- 1.64 
+1.64 
 
 
 
 </td>
 <td valign="top">
 
- New 
+New 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.f.Card`** 
+**`sap.f.Card`** 
 
 
 
@@ -96,7 +96,7 @@ The new `sap.f.Card` control complies with the visual design of the Integration 
 
 The `sap.f.Card` consists of three elements: a container with background color and rounded corners, a header, and content areas.
 
- ![](images/sap_f_Card_Example_b1ff765.png) 
+![](images/sap_f_Card_Example_b1ff765.png)
 
 For more information, see [Cards](../10_More_About_Controls/cards-5b46b03.md), the [API Reference](https://ui5.sap.com/#/api/sap.f.Card) and the [Sample](https://ui5.sap.com/#/entity/sap.f.Card/sample/sap.f.sample.Card).
 
@@ -123,28 +123,28 @@ Info Only
 <tr>
 <td valign="top">
 
- 1.64 
+1.64 
 
 
 
 </td>
 <td valign="top">
 
- New 
+New 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Rule Builder: AST based DMN SFEEL** 
+**Rule Builder: AST based DMN SFEEL** 
 
 
 
@@ -164,7 +164,7 @@ For more information, see [Rule Builder Control Tutorial](../03_Get-Started/rule
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -180,28 +180,28 @@ For more information, see [Rule Builder Control Tutorial](../03_Get-Started/rule
 <tr>
 <td valign="top">
 
- 1.64 
+1.64 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Key User Adaptation: Restricting Adaptation for Certain Controls** 
+**Key User Adaptation: Restricting Adaptation for Certain Controls** 
 
 
 
@@ -224,7 +224,7 @@ For more information, see [SAPUI5 Flexibility: Enable Your App for UI Adaptation
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -240,28 +240,28 @@ For more information, see [SAPUI5 Flexibility: Enable Your App for UI Adaptation
 <tr>
 <td valign="top">
 
- 1.64 
+1.64 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **SAPUI5 Flexibility: New `flexEnabled` Flag** 
+**SAPUI5 Flexibility: New `flexEnabled` Flag** 
 
 
 
@@ -281,7 +281,7 @@ For more information, see [SAPUI5 Flexibility: Enable Your App for UI Adaptation
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -297,28 +297,28 @@ For more information, see [SAPUI5 Flexibility: Enable Your App for UI Adaptation
 <tr>
 <td valign="top">
 
- 1.64 
+1.64 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **SAPUI5 Flexibility: Simplified Terminology** 
+**SAPUI5 Flexibility: Simplified Terminology** 
 
 
 
@@ -434,7 +434,7 @@ For more information on the features of SAPUI5 flexibility, see [SAPUI5 Flexibil
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -450,28 +450,28 @@ For more information on the features of SAPUI5 flexibility, see [SAPUI5 Flexibil
 <tr>
 <td valign="top">
 
- 1.64 
+1.64 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **SAPUI5 OData V4 Model** 
+**SAPUI5 OData V4 Model** 
 
 
 
@@ -494,7 +494,7 @@ For more information, see [OData V4 Model](../04_Essentials/odata-v4-model-5de13
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -510,28 +510,28 @@ For more information, see [OData V4 Model](../04_Essentials/odata-v4-model-5de13
 <tr>
 <td valign="top">
 
- 1.64 
+1.64 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.f.DynamicPage`** 
+**`sap.f.DynamicPage`** 
 
 
 
@@ -549,7 +549,7 @@ We have redesigned the content area of the `DynamicPageTitle` control so that th
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -565,28 +565,28 @@ We have redesigned the content area of the `DynamicPageTitle` control so that th
 <tr>
 <td valign="top">
 
- 1.64 
+1.64 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.f.ShellBar` \(Experimental\)** 
+**`sap.f.ShellBar` \(Experimental\)** 
 
 
 
@@ -597,7 +597,7 @@ We have redesigned the content area of the `DynamicPageTitle` control so that th
 
 We have implemented an additional element that visualizes the number of notifications for the app \(`notificationsNumber` property\). It is displayed at the top right corner of the notifications button. When the resize breakpoint is hit and the notifications button enters the overflow area of the `OverflowToolbar`, the element is displayed at the top right corner of both the `OverflowToolbarButton` and the overflow area notification button.
 
- ![](images/ShellBar_What_s_New_1_64_4ae1e3f.png) 
+![](images/ShellBar_What_s_New_1_64_4ae1e3f.png)
 
 For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.f.ShellBar) and the [Sample](https://ui5.sap.com/#/entity/sap.f.ShellBar/sample/sap.f.sample.ShellBar).
 
@@ -608,7 +608,7 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.f.Sh
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -624,28 +624,28 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.f.Sh
 <tr>
 <td valign="top">
 
- 1.64 
+1.64 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.ComboBox`** 
+**`sap.m.ComboBox`** 
 
 
 
@@ -668,7 +668,7 @@ In case a `sap.ui.core.SeparatorItem` without a defined text property is inserte
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -684,28 +684,28 @@ In case a `sap.ui.core.SeparatorItem` without a defined text property is inserte
 <tr>
 <td valign="top">
 
- 1.64 
+1.64 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.DatePicker`** 
+**`sap.m.DatePicker`** 
 
 
 
@@ -723,7 +723,7 @@ With the new `isValidValue` function, you can receive information on the validit
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -739,28 +739,28 @@ With the new `isValidValue` function, you can receive information on the validit
 <tr>
 <td valign="top">
 
- 1.64 
+1.64 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.Input / sap.m.ComboBoxBase` \(Experimental\)** 
+**`sap.m.Input / sap.m.ComboBoxBase` \(Experimental\)** 
 
 
 
@@ -778,7 +778,7 @@ We have introduced a new experimental method `showItems(fnFilter)`. It enables y
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -794,28 +794,28 @@ We have introduced a new experimental method `showItems(fnFilter)`. It enables y
 <tr>
 <td valign="top">
 
- 1.64 
+1.64 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.Input / sap.m.MultiInput`** 
+**`sap.m.Input / sap.m.MultiInput`** 
 
 
 
@@ -833,7 +833,7 @@ We have introduced grouping for the suggestions of `sap.m.Input` and `sap.m.Mult
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -849,28 +849,28 @@ We have introduced grouping for the suggestions of `sap.m.Input` and `sap.m.Mult
 <tr>
 <td valign="top">
 
- 1.64 
+1.64 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.SinglePlanningCalendar`** 
+**`sap.m.SinglePlanningCalendar`** 
 
 
 
@@ -893,7 +893,7 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.Si
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -909,28 +909,28 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.Si
 <tr>
 <td valign="top">
 
- 1.64 
+1.64 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.integration.widgets.Card`** 
+**`sap.ui.integration.widgets.Card`** 
 
 
 
@@ -951,7 +951,7 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.Si
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -967,28 +967,28 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.Si
 <tr>
 <td valign="top">
 
- 1.64 
+1.64 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.uxap.ObjectPageLayout`** 
+**`sap.uxap.ObjectPageLayout`** 
 
 
 
@@ -1006,7 +1006,7 @@ We have implemented the option to provide a simple, single-line title that takes
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1022,28 +1022,28 @@ We have implemented the option to provide a simple, single-line title that takes
 <tr>
 <td valign="top">
 
- 1.64 
+1.64 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- SAP Fiori Elements 
+SAP Fiori Elements 
 
 
 
 </td>
 <td valign="top">
 
- **SAP Fiori Elements** 
+**SAP Fiori Elements** 
 
 
 
@@ -1063,7 +1063,7 @@ You can pass the variant ID as a URL parameter while navigating from an applicat
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1079,28 +1079,28 @@ You can pass the variant ID as a URL parameter while navigating from an applicat
 <tr>
 <td valign="top">
 
- 1.64 
+1.64 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Demo Kit API Reference** 
+**Demo Kit API Reference** 
 
 
 
@@ -1113,7 +1113,7 @@ You can pass the variant ID as a URL parameter while navigating from an applicat
 
 -   Based on your feedback, we have improved the API Reference documentation to include the borrowed *Properties*, *Aggregations*, and *Associations* in the respective sections. All the inherited entries are marked with a *Borrowed from:* label in the *Description* column with a link to the corresponding class.
 
-     ![](images/What_s_New_1_64_-_Borrowed_Properties_Aggregations_Associations_d7f2a71.png) 
+    ![](images/What_s_New_1_64_-_Borrowed_Properties_Aggregations_Associations_d7f2a71.png)
 
 
 <sub>Changed•Feature•Info Only•1.64</sub>
@@ -1123,7 +1123,7 @@ You can pass the variant ID as a URL parameter while navigating from an applicat
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1140,6 +1140,8 @@ You can pass the variant ID as a URL parameter while navigating from an applicat
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.115](what-s-new-in-sapui5-1-115-409fde8.md "With this release SAPUI5 is upgraded from version 1.114 to 1.115.")
 
 [What's New in SAPUI5 1.114](what-s-new-in-sapui5-1-114-890fce1.md "With this release SAPUI5 is upgraded from version 1.113 to 1.114.")
 

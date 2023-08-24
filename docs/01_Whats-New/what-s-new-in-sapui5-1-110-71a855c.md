@@ -6,7 +6,7 @@
 
 With this release SAPUI5 is upgraded from version 1.109 to 1.110.
 
-** **
+****
 
 
 <table>
@@ -64,28 +64,28 @@ Available as of
 <tr>
 <td valign="top">
 
- 1.110 
+1.110 
 
 
 
 </td>
 <td valign="top">
 
- New 
+New 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.p13n.Engine`** 
+**`sap.m.p13n.Engine`** 
 
 
 
@@ -103,7 +103,7 @@ We have provided a new entity that allows custom control developers and applicat
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -119,28 +119,28 @@ We have provided a new entity that allows custom control developers and applicat
 <tr>
 <td valign="top">
 
- 1.110 
+1.110 
 
 
 
 </td>
 <td valign="top">
 
- New 
+New 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Copy-to-Clipboard Feature for Tables** 
+**Copy-to-Clipboard Feature for Tables** 
 
 
 
@@ -158,7 +158,7 @@ Users can copy selected table content to the clipboard and use it anywhere insid
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -174,28 +174,28 @@ Users can copy selected table content to the clipboard and use it anywhere insid
 <tr>
 <td valign="top">
 
- 1.110 
+1.110 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Spreadsheet Export** 
+**Spreadsheet Export** 
 
 
 
@@ -213,7 +213,7 @@ When you export data from `ClientListBinding` the data objects are now requested
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -229,28 +229,28 @@ When you export data from `ClientListBinding` the data objects are now requested
 <tr>
 <td valign="top">
 
- 1.110 
+1.110 
 
 
 
 </td>
 <td valign="top">
 
- Deprecated 
+Deprecated 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Deprecations** 
+**Deprecations** 
 
 
 
@@ -268,7 +268,7 @@ There are currently no major deprecations. For a complete list of all deprecatio
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -284,28 +284,28 @@ There are currently no major deprecations. For a complete list of all deprecatio
 <tr>
 <td valign="top">
 
- 1.110 
+1.110 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.smarttable.SmartTable`** 
+**`sap.ui.comp.smarttable.SmartTable`** 
 
 
 
@@ -314,7 +314,7 @@ There are currently no major deprecations. For a complete list of all deprecatio
 
 **`sap.ui.comp.smarttable.SmartTable`**
 
--   The data exported when you select *Include filter settings* now contains additional application- and type-specific formatting for the filter settings. For example, if you export data and time information, it will be exported in an improved format. We have also improved other filter settings to make it easier to match labels in the application with property names. For more information, see the  [API Reference](https://ui5.sap.com/#/api/sap.ui.comp.smarttable.SmartTable%23events/beforeExport)  and the [Sample](https://ui5.sap.com/#/entity/sap.ui.comp.smarttable.SmartTable/sample/sap.ui.comp.sample.smarttable).
+-   The data exported when you select *Include filter settings* now contains additional application- and type-specific formatting for the filter settings. For example, if you export data and time information, it will be exported in an improved format. We have also improved other filter settings to make it easier to match labels in the application with property names. For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.comp.smarttable.SmartTable%23events/beforeExport)  and the [Sample](https://ui5.sap.com/#/entity/sap.ui.comp.smarttable.SmartTable/sample/sap.ui.comp.sample.smarttable).
 
 -   We have now provided a binding for the `semanticObject` property for `SmartLink` controls. For example, the binding for `Common.SemanticObject.Path` of the `semanticObject` annotation makes it possible to define different semantic objects for a smart link. For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.comp.smarttable.SmartTable%23annotations/SemanticObject).
 
@@ -326,7 +326,7 @@ There are currently no major deprecations. For a complete list of all deprecatio
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -342,28 +342,28 @@ There are currently no major deprecations. For a complete list of all deprecatio
 <tr>
 <td valign="top">
 
- 1.110 
+1.110 
 
 
 
 </td>
 <td valign="top">
 
- New 
+New 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.table.ColumnMenu`** 
+**`sap.m.table.ColumnMenu`** 
 
 
 
@@ -390,7 +390,7 @@ These features are available in a menu that users can choose in the column heade
 > ### Note:  
 > The menu is also available in the `SmartTable` control.
 
- For more information, see the  [API Reference](https://ui5.sap.com/#/api/sap.m.table.columnmenu)  and the [Sample](https://ui5.sap.com/#/entity/sap.ui.comp.smarttable.SmartTable/sample/sap.ui.comp.sample.smarttable). 
+For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.table.columnmenu)  and the [Sample](https://ui5.sap.com/#/entity/sap.ui.comp.smarttable.SmartTable/sample/sap.ui.comp.sample.smarttable). 
 
 <sub>New•Control•Info Only•1.110</sub>
 
@@ -399,7 +399,7 @@ These features are available in a menu that users can choose in the column heade
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -415,28 +415,28 @@ These features are available in a menu that users can choose in the column heade
 <tr>
 <td valign="top">
 
- 1.110 
+1.110 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Header Bar in Key User Adaptation** 
+**Header Bar in Key User Adaptation** 
 
 
 
@@ -458,7 +458,7 @@ The header bar in key user adaptation has been redesigned.
 
 The following screenshot shows an example:
 
- ![](images/Key_User_Adaptation_Toolbar_00fdcc7.png) 
+![](images/Key_User_Adaptation_Toolbar_00fdcc7.png)
 
 <sub>Changed•Feature•Info Only•1.110</sub>
 
@@ -467,7 +467,7 @@ The following screenshot shows an example:
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -483,28 +483,28 @@ The following screenshot shows an example:
 <tr>
 <td valign="top">
 
- 1.110 
+1.110 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- ****`sap.m.PlanningCalendar, sap.m.SinglePlanningCalendar`**, and **`sap.ui.core.format.DateFormat`**** 
+****`sap.m.PlanningCalendar, sap.m.SinglePlanningCalendar`**, and **`sap.ui.core.format.DateFormat`**** 
 
 
 
@@ -515,7 +515,7 @@ The following screenshot shows an example:
 
 We have adapted our Date and Time controls to support the calendar week based on the `sap.ui.core.format.DateFormat` options.
 
- For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.core.format.DateFormat). 
+For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.core.format.DateFormat). 
 
 <sub>Changed•Control•Info Only•1.110</sub>
 
@@ -524,7 +524,7 @@ We have adapted our Date and Time controls to support the calendar week based on
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -540,28 +540,28 @@ We have adapted our Date and Time controls to support the calendar week based on
 <tr>
 <td valign="top">
 
- 1.110 
+1.110 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.ObjectStatus`** 
+**`sap.m.ObjectStatus`** 
 
 
 
@@ -572,7 +572,7 @@ We have adapted our Date and Time controls to support the calendar week based on
 
 We have implemented a new property to give application developers the ability to override the default state announcement. Now the `group` role isn't placed on inactive control instances and a proper `roledescription` is set for active control instances.
 
- For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.ObjectStatus). 
+For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.ObjectStatus). 
 
 <sub>Changed•Control•Info Only•1.110</sub>
 
@@ -581,7 +581,7 @@ We have implemented a new property to give application developers the ability to
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -597,28 +597,28 @@ We have implemented a new property to give application developers the ability to
 <tr>
 <td valign="top">
 
- 1.110 
+1.110 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.core.ScrollEnablement`** 
+**`sap.ui.core.ScrollEnablement`** 
 
 
 
@@ -636,7 +636,7 @@ We have added a new option to the `scrollToElement` API method of the `sap.ui.co
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -652,28 +652,28 @@ We have added a new option to the `scrollToElement` API method of the `sap.ui.co
 <tr>
 <td valign="top">
 
- 1.110 
+1.110 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.IllustratedMessage`** 
+**`sap.m.IllustratedMessage`** 
 
 
 
@@ -693,7 +693,7 @@ For more information, see the [Samples](https://ui5.sap.com/#/entity/sap.m.Illus
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -709,28 +709,28 @@ For more information, see the [Samples](https://ui5.sap.com/#/entity/sap.m.Illus
 <tr>
 <td valign="top">
 
- 1.110 
+1.110 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.ComboBox`** 
+**`sap.m.ComboBox`** 
 
 
 
@@ -748,7 +748,7 @@ We have updated the behavior of the `loadItems` API. Now, when the picker is ope
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -764,28 +764,28 @@ We have updated the behavior of the `loadItems` API. Now, when the picker is ope
 <tr>
 <td valign="top">
 
- 1.110 
+1.110 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Demo Kit: Improved main theme selection** 
+**Demo Kit: Improved main theme selection** 
 
 
 
@@ -794,7 +794,7 @@ We have updated the behavior of the `loadItems` API. Now, when the picker is ope
 
 **Demo Kit: Improved main theme selection**
 
-We have added the latest high contrast themes to the main theme selector in the Demo Kit.![](images/ThemesWN_b76a17b.png) 
+We have added the latest high contrast themes to the main theme selector in the Demo Kit.![](images/ThemesWN_b76a17b.png)
 
 <sub>Changed•Feature•Info Only•1.110</sub>
 
@@ -803,7 +803,7 @@ We have added the latest high contrast themes to the main theme selector in the 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -819,28 +819,28 @@ We have added the latest high contrast themes to the main theme selector in the 
 <tr>
 <td valign="top">
 
- 1.110 
+1.110 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.integration.widgets.Card`** 
+**`sap.ui.integration.widgets.Card`** 
 
 
 
@@ -863,7 +863,7 @@ We have added the latest high contrast themes to the main theme selector in the 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -879,195 +879,28 @@ We have added the latest high contrast themes to the main theme selector in the 
 <tr>
 <td valign="top">
 
- 1.110 
+1.110 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.Carousel`** 
-
-
-
-</td>
-<td valign="top">
-
-**`sap.m.Carousel`**
-
-Using the new `backgroundDesign` property, you can now set the carousel’s background color as `Translucent` \(Default\), `Solid`, or `Transparent`.For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.Carousel) and the [Sample](https://ui5.sap.com/#/entity/sap.m.Carousel/sample/sap.m.sample.CarouselWithDisplayOptions).
-
-<sub>Changed•Control•Info Only•1.110</sub>
-
-
-
-</td>
-<td valign="top">
-
- Info Only 
-
-
-
-</td>
-<td valign="top">
-
-2023-01-26
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
- 1.110 
-
-
-
-</td>
-<td valign="top">
-
- Changed 
-
-
-
-</td>
-<td valign="top">
-
- Control 
-
-
-
-</td>
-<td valign="top">
-
- **`sap.m.Dialog`** 
-
-
-
-</td>
-<td valign="top">
-
-**`sap.m.Dialog`**
-
-We have added a new `footer` aggregation of type `sap.m.Toolbar` to the control. You can now use this horizontal container to display controls that fit different custom scenarios, for example, a button that shows a message popover.For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.Dialog) and the [Sample](https://ui5.sap.com/#/entity/sap.m.Dialog/sample/sap.m.sample.DialogWithMessagePopover).
-
-<sub>Changed•Control•Info Only•1.110</sub>
-
-
-
-</td>
-<td valign="top">
-
- Info Only 
-
-
-
-</td>
-<td valign="top">
-
-2023-01-26
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
- 1.110 
-
-
-
-</td>
-<td valign="top">
-
- Changed 
-
-
-
-</td>
-<td valign="top">
-
- Control 
-
-
-
-</td>
-<td valign="top">
-
- **`sap.m.SelectDialog`** 
-
-
-
-</td>
-<td valign="top">
-
-**`sap.m.SelectDialog`**
-
-You can now control the placeholder text in the inner search field using the new `searchPlaceholder` property. If not set, the word `Search` in the current local language or in English will be used as a placeholder.
-
-For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.SelectDialog) and the [Sample](https://ui5.sap.com/#/entity/sap.m.SelectDialog/sample/sap.m.sample.SelectDialog).
-
-<sub>Changed•Control•Info Only•1.110</sub>
-
-
-
-</td>
-<td valign="top">
-
- Info Only 
-
-
-
-</td>
-<td valign="top">
-
-2023-01-26
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
- 1.110 
-
-
-
-</td>
-<td valign="top">
-
- Changed 
-
-
-
-</td>
-<td valign="top">
-
- Control 
-
-
-
-</td>
-<td valign="top">
-
- **`sap.ui.comp.smartfield.SmartField`** 
+**`sap.ui.comp.smartfield.SmartField`** 
 
 
 
@@ -1085,7 +918,7 @@ When the control renders a combo box, it gets the text arrangement for the dropd
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1101,28 +934,28 @@ When the control renders a combo box, it gets the text arrangement for the dropd
 <tr>
 <td valign="top">
 
- 1.110 
+1.110 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- SAP Fiori Elements 
+SAP Fiori Elements 
 
 
 
 </td>
 <td valign="top">
 
- **SAP Fiori elements for OData V2** 
+**SAP Fiori elements for OData V2** 
 
 
 
@@ -1149,7 +982,7 @@ The following changes and new features are available for SAP Fiori elements for 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1165,28 +998,28 @@ The following changes and new features are available for SAP Fiori elements for 
 <tr>
 <td valign="top">
 
- 1.110 
+1.110 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- SAP Fiori Elements 
+SAP Fiori Elements 
 
 
 
 </td>
 <td valign="top">
 
- **SAP Fiori elements for OData V4** 
+**SAP Fiori elements for OData V4** 
 
 
 
@@ -1215,7 +1048,7 @@ The following changes and new features are available for SAP Fiori elements for 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1231,28 +1064,195 @@ The following changes and new features are available for SAP Fiori elements for 
 <tr>
 <td valign="top">
 
- 1.110 
+1.110 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- ****SAPUI5 Formatters**** 
+**`sap.m.SelectDialog`** 
+
+
+
+</td>
+<td valign="top">
+
+**`sap.m.SelectDialog`**
+
+You can now control the placeholder text in the inner search field using the new `searchPlaceholder` property. If not set, the word `Search` in the current local language or in English will be used as a placeholder.
+
+For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.SelectDialog) and the [Sample](https://ui5.sap.com/#/entity/sap.m.SelectDialog/sample/sap.m.sample.SelectDialog).
+
+<sub>Changed•Control•Info Only•1.110</sub>
+
+
+
+</td>
+<td valign="top">
+
+Info Only 
+
+
+
+</td>
+<td valign="top">
+
+2023-01-26
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+1.110 
+
+
+
+</td>
+<td valign="top">
+
+Changed 
+
+
+
+</td>
+<td valign="top">
+
+Control 
+
+
+
+</td>
+<td valign="top">
+
+**`sap.m.Dialog`** 
+
+
+
+</td>
+<td valign="top">
+
+**`sap.m.Dialog`**
+
+We have added a new `footer` aggregation of type `sap.m.Toolbar` to the control. You can now use this horizontal container to display controls that fit different custom scenarios, for example, a button that shows a message popover.For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.Dialog) and the [Sample](https://ui5.sap.com/#/entity/sap.m.Dialog/sample/sap.m.sample.DialogWithMessagePopover).
+
+<sub>Changed•Control•Info Only•1.110</sub>
+
+
+
+</td>
+<td valign="top">
+
+Info Only 
+
+
+
+</td>
+<td valign="top">
+
+2023-01-26
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+1.110 
+
+
+
+</td>
+<td valign="top">
+
+Changed 
+
+
+
+</td>
+<td valign="top">
+
+Control 
+
+
+
+</td>
+<td valign="top">
+
+**`sap.m.Carousel`** 
+
+
+
+</td>
+<td valign="top">
+
+**`sap.m.Carousel`**
+
+Using the new `backgroundDesign` property, you can now set the carousel’s background color as `Translucent` \(Default\), `Solid`, or `Transparent`.For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.Carousel) and the [Sample](https://ui5.sap.com/#/entity/sap.m.Carousel/sample/sap.m.sample.CarouselWithDisplayOptions).
+
+<sub>Changed•Control•Info Only•1.110</sub>
+
+
+
+</td>
+<td valign="top">
+
+Info Only 
+
+
+
+</td>
+<td valign="top">
+
+2023-01-26
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+1.110 
+
+
+
+</td>
+<td valign="top">
+
+Changed 
+
+
+
+</td>
+<td valign="top">
+
+Feature 
+
+
+
+</td>
+<td valign="top">
+
+****SAPUI5 Formatters**** 
 
 
 
@@ -1274,7 +1274,7 @@ The new version of SAPUI5 introduces the following formatting features:
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1290,28 +1290,28 @@ The new version of SAPUI5 introduces the following formatting features:
 <tr>
 <td valign="top">
 
- 1.110 
+1.110 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **SAPUI5 OData V4 Model** 
+**SAPUI5 OData V4 Model** 
 
 
 
@@ -1334,7 +1334,7 @@ The new version of the SAPUI5 OData V4 model introduces the following features:
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1351,6 +1351,8 @@ The new version of the SAPUI5 OData V4 model introduces the following features:
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.115](what-s-new-in-sapui5-1-115-409fde8.md "With this release SAPUI5 is upgraded from version 1.114 to 1.115.")
 
 [What's New in SAPUI5 1.114](what-s-new-in-sapui5-1-114-890fce1.md "With this release SAPUI5 is upgraded from version 1.113 to 1.114.")
 

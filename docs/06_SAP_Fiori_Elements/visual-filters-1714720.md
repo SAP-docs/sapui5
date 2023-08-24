@@ -985,7 +985,7 @@ SAP Fiori elements for OData V2 also supports the visual filter setup for donut 
 
 The empty dimension value is displayed as *Not Assigned* in the visual filter chart. Note that this impacts the display only of visual filters but not of the value help, drop down, or compact filters. For the value help, drop down, or compact filter, it is displayed as *<empty\>*.
 
- ![](images/Not_Assigned_Screenshot_841d97d.png) 
+![](images/Not_Assigned_Screenshot_841d97d.png)
 
 
 
@@ -1158,7 +1158,7 @@ If the main entity set doesn't contain the text annotation, and if the unit fiel
 
 If the main entity set contains the text annotation for a unit, then that is displayed and the value list entity set is not checked for the annotation.
 
- ![](images/Visual_Filters_Image_01_3469fc3.png) 
+![](images/Visual_Filters_Image_01_3469fc3.png)
 
 
 

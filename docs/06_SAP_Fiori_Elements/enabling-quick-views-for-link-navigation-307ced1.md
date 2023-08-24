@@ -4,7 +4,7 @@
 
 You can enrich the popovers for link navigation with additional information to display quick views.
 
- <a name="task_v3l_y2y_xmb"/>
+<a name="task_v3l_y2y_xmb"/>
 
 <!-- task\_v3l\_y2y\_xmb -->
 
@@ -169,11 +169,11 @@ To do so, perform the following steps:
 
 A quick view for link navigation is generated and can look like this:
 
- ![](images/Quick_View_3c33cc2.png) 
+![](images/Quick_View_3c33cc2.png)
 
 For more information about the system behavior and configuration options, see [Configuring the Content of Quick Views](configuring-the-content-of-quick-views-c245ad7.md).
 
- <a name="task_hck_y5k_hmb"/>
+<a name="task_hck_y5k_hmb"/>
 
 <!-- task\_hck\_y5k\_hmb -->
 
@@ -512,7 +512,7 @@ To define a quick view for a source property where the target property is a sema
 
 A quick view for link navigation is generated and can look like this:
 
- ![](images/Quick_View_for_Smart_Link_Navigation_c61cade.png) 
+![](images/Quick_View_for_Smart_Link_Navigation_c61cade.png)
 
 This video shows the step-by-step procedure for enabling quick views for link navigation: 
 

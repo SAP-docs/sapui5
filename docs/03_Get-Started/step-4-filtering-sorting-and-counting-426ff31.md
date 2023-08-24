@@ -10,12 +10,12 @@ In this step, we add features to filter, sort, and count the user data by using 
 
 ## Preview
 
-   
+  
   
 **App now has a search field, the entries can be sorted, and you can see how many entities are loaded and how many more are available**
 
- ![](images/Tutorial_OData_V4_Step_4_3ac4fcc.png "App now has a search field, the entries can be sorted, and you can see how
-					many entities are loaded and how many more are available") 
+![](images/Tutorial_OData_V4_Step_4_3ac4fcc.png "App now has a search field, the entries can be sorted, and you can see how
+					many entities are loaded and how many more are available")
 
 
 

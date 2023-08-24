@@ -15,7 +15,7 @@ Applications can control how the field is represented by using annotations or me
 
 A field can be displayed as a simple plain text facet, which shows up in the key-value format:
 
- ![](images/Representation_as_a_Simple_Plain_Text_Facet_52e34f4.png) 
+![](images/Representation_as_a_Simple_Plain_Text_Facet_52e34f4.png)
 
 To be represented in this manner, you must initialize the OData field with an annotation that has a `UI.DataField` wrapped within `UI.FieldGroup`, as shown in the sample code below:
 
@@ -74,7 +74,7 @@ To be represented in this manner, you must initialize the OData field with an an
 
 You can group multiple fields together into a form-based representation:
 
- ![](images/Representation_as_Part_of_a_Form_5ab0639.png) 
+![](images/Representation_as_Part_of_a_Form_5ab0639.png)
 
 For more information about the required annotations, see [Grouping of Fields](grouping-of-fields-cb1748e.md).
 
@@ -86,7 +86,7 @@ For more information about the required annotations, see [Grouping of Fields](gr
 
 A field can be represented as a key value facet or render a KPI:
 
- ![](images/Representation_as_a_Key_Value_Facet_or_KPI_902d530.png) 
+![](images/Representation_as_a_Key_Value_Facet_or_KPI_902d530.png)
 
 The underlying annotation for this is the `UI.DataPoint` annotation:
 
@@ -168,7 +168,7 @@ Apart from its usage in the object page header, the KPI could also be a `DataFie
 
 This could render 3 KPIs, as shown in the image below:
 
- ![](images/Representation_as_Three_KPIs_423321f.png) 
+![](images/Representation_as_Three_KPIs_423321f.png)
 
 > ### Tip:  
 > If you add a semantic object annotation to the value field of the `DataPoint`, the value is shown as a link but does not show any criticality information. For more information about adding the semantic object annotation, see the section *Using a Link Control* in [Navigation from an App \(Outbound Navigation\)](navigation-from-an-app-outbound-navigation-d782acf.md).
@@ -181,7 +181,7 @@ This could render 3 KPIs, as shown in the image below:
 
 A field can be displayed as a rating indicator:
 
- ![](images/Representation_as_a_Rating_Indicator_6d4af36.png) 
+![](images/Representation_as_a_Rating_Indicator_6d4af36.png)
 
 This requires a `UI.DataPoint` annotation with the visualization type "Rating":
 
@@ -211,7 +211,7 @@ This requires a `UI.DataPoint` annotation with the visualization type "Rating":
 > ```
 
 > ### Sample Code:  
->  CAP CDS Annotation
+> CAP CDS Annotation
 > 
 > ```
 > DataPoint #averageRating               : {
@@ -233,7 +233,7 @@ This requires a `UI.DataPoint` annotation with the visualization type "Rating":
 
 A field can be displayed as a progress indicator:
 
- ![](images/Representation_as_Progress_Indicator_f63b611.png) 
+![](images/Representation_as_Progress_Indicator_f63b611.png)
 
 This requires a `UI.DataPoint` annotation with the visualization type "Progress":
 
@@ -263,7 +263,7 @@ This requires a `UI.DataPoint` annotation with the visualization type "Progress"
 > ```
 
 > ### Sample Code:  
->  CAP CDS Annotation
+> CAP CDS Annotation
 > 
 > ```
 > DataPoint #quantity               : {
@@ -285,7 +285,7 @@ This requires a `UI.DataPoint` annotation with the visualization type "Progress"
 
 A field can be displayed as a link. The link can then be used in one of the scenarios described below.
 
- ![](images/Representation_as_a_Link_d3b1eac.png) 
+![](images/Representation_as_a_Link_d3b1eac.png)
 
 
 
@@ -523,7 +523,7 @@ Application developers can display basic link with an optional icon or image usi
 
 You can display a field as a `TextArea` in edit mode or as an `ExpandableText` in display mode by annotating the property associated to the field with `UI.MultiLineText`.
 
- ![](images/Representation_as_a_TextArea_1744ef6.png) 
+![](images/Representation_as_a_TextArea_1744ef6.png)
 
 ```xml
 <Annotations Target="com.c_salesordermanage_sd.SalesOrderManage">
@@ -752,7 +752,7 @@ You can explore and work with the coding yourself. Check out the live example in
 
 You can render a field as a micro chart to show additional information like critical measures, or criticality.
 
- ![](images/Representation_as_a_Micro_Chart_9ed960f.png) 
+![](images/Representation_as_a_Micro_Chart_9ed960f.png)
 
 For more information, see [Micro Chart Facet](micro-chart-facet-e219fd0.md) and [Adding a Micro Chart to a Table](adding-a-micro-chart-to-a-table-b8312a4.md).
 
@@ -772,7 +772,7 @@ SAP Fiori elements allows you to enable stream support so that users can upload 
 
 You can display a timestamp together with a timezone.
 
- ![](images/Timestamp_with_Timezone_cb85f47.png) 
+![](images/Timestamp_with_Timezone_cb85f47.png)
 
 For more information, see the section *Date Picker and Date/Time Picker* in [Field Help](field-help-a5608ea.md).
 

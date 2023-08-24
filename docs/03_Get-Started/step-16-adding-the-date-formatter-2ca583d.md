@@ -8,11 +8,11 @@ Our formatter does its job, but it is not yet used. In this step we will use it.
 
 ## Preview
 
-   
+  
   
 **Date formatter in action**
 
- ![](images/Tutorial_Testing_Step_16_9aa15b0.png "Date formatter in action") 
+![](images/Tutorial_Testing_Step_16_9aa15b0.png "Date formatter in action")
 
 
 

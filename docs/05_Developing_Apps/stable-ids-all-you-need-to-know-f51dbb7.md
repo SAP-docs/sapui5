@@ -145,7 +145,7 @@ The generated IDs change whenever the control structure of the app changes. The 
 <tr>
 <td valign="top">
 
- **Extension points** 
+**Extension points** 
 
 
 
@@ -161,7 +161,7 @@ If you use extension points, use stable IDs for nested views and prefixes for ne
 <tr>
 <td valign="top">
 
- **Controls** 
+**Controls** 
 
 
 
@@ -210,7 +210,7 @@ If you use extension points, use stable IDs for nested views and prefixes for ne
 <tr>
 <td valign="top">
 
- **Components** 
+**Components** 
 
 
 
@@ -248,7 +248,7 @@ new Shell({
 <tr>
 <td valign="top">
 
- **Embedded Components** 
+**Embedded Components** 
 
 
 
@@ -321,7 +321,7 @@ If you want to add an embedded component with a stable ID, you have two options:
 <tr>
 <td valign="top">
 
- **XML fragments** 
+**XML fragments** 
 
 
 
@@ -408,28 +408,28 @@ Concatenated IDs
 <tr>
 <td valign="top" rowspan="4">
 
- `myProducts` 
+`myProducts` 
 
 
 
 </td>
 <td valign="top" rowspan="2">
 
- `worklist` 
+`worklist` 
 
 
 
 </td>
 <td valign="top">
 
- `page` 
+`page` 
 
 
 
 </td>
 <td valign="top">
 
- `myProducts---worklist--page` 
+`myProducts---worklist--page` 
 
 
 
@@ -438,14 +438,14 @@ Concatenated IDs
 <tr>
 <td valign="top">
 
- `table` 
+`table` 
 
 
 
 </td>
 <td valign="top">
 
- `myProducts---worklist--table` 
+`myProducts---worklist--table` 
 
 
 
@@ -454,21 +454,21 @@ Concatenated IDs
 <tr>
 <td valign="top" rowspan="2">
 
- `product` 
+`product` 
 
 
 
 </td>
 <td valign="top">
 
- `page` 
+`page` 
 
 
 
 </td>
 <td valign="top">
 
- `myProducts---product--page` 
+`myProducts---product--page` 
 
 
 
@@ -477,14 +477,14 @@ Concatenated IDs
 <tr>
 <td valign="top">
 
- `objectHeader` 
+`objectHeader` 
 
 
 
 </td>
 <td valign="top">
 
- `myProducts---product--objectHeader` 
+`myProducts---product--objectHeader` 
 
 
 
@@ -501,7 +501,7 @@ Concatenated IDs
 With the Support Assistant, you can analyze whether there are any issues with the stable IDs used in your app. Here's how you can check this:
 
 1.  Open your app in a browser.
-2.  Enter the [shortcut](../02_Read-Me-First/keyboard-shortcuts-for-sapui5-tools-154844c.md)  [Ctrl\] + [Shift\] + [Alt\] / [Option\] + [P\]  to start the Support Assistant.
+2.  Enter the [shortcut](../02_Read-Me-First/keyboard-shortcuts-for-sapui5-tools-154844c.md) [Ctrl\] + [Shift\] + [Alt\] /[Option\] + [P\]  to start the Support Assistant.
 3.  In the *Technical Information Dialog*, choose *Activate Support Assistant*.
 4.  In the table on the left, deselect all rules.
 5.  Click on the *Rules* column.

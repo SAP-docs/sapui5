@@ -122,13 +122,13 @@ Analytical card
 </td>
 <td valign="top">
 
-   
+  
   
 **Donut Chart**
 
- 
 
- ![](images/Analytical_card_ee6aedf.jpg) 
+
+![](images/Analytical_card_ee6aedf.jpg)
 
 
 
@@ -185,11 +185,11 @@ Add column to a table
 </td>
 <td valign="top">
 
-   
+  
   
 **Add column to a table**
 
- ![](images/Add_column_to_a_table_019b848.png "Add column to a table") 
+![](images/Add_column_to_a_table_019b848.png "Add column to a table")
 
 
 
@@ -234,7 +234,7 @@ Add card to insights
 </td>
 <td valign="top">
 
- [Creating Cards for the Insights Section of My Home in SAP S/4HANA Cloud](creating-cards-for-the-insights-section-of-my-home-in-sap-s-4hana-cloud-9b13559.md) 
+[Creating Cards for the Insights Section of My Home in SAP S/4HANA Cloud](creating-cards-for-the-insights-section-of-my-home-in-sap-s-4hana-cloud-9b13559.md) 
 
 
 
@@ -248,17 +248,17 @@ Add card to insights
 </td>
 <td valign="top">
 
-   
+  
   
 **Add Card to Insights Option in List Report Table Toolbar**
 
- ![](images/Add_Cards_to_Insights_New_fe526c6.png "Add Card to Insights Option in List Report Table Toolbar") 
+![](images/Add_Cards_to_Insights_New_fe526c6.png "Add Card to Insights Option in List Report Table Toolbar")
 
-   
+  
   
 **Add Card to Insights Option in Analytical List Page Chart Toolbar**
 
- ![](images/Add_Cards_to_Insights_ALP_401e0b0.png "Add Card to Insights Option in Analytical List Page Chart Toolbar") 
+![](images/Add_Cards_to_Insights_ALP_401e0b0.png "Add Card to Insights Option in Analytical List Page Chart Toolbar")
 
 
 
@@ -293,7 +293,7 @@ Add custom column
 </td>
 <td valign="top">
 
- [Extension Points for Tables](extension-points-for-tables-d525522.md) 
+[Extension Points for Tables](extension-points-for-tables-d525522.md) 
 
 
 
@@ -307,11 +307,11 @@ Add custom column
 </td>
 <td valign="top">
 
-   
+  
   
 **Custom Columns in a Table**
 
- ![](images/Custom_Columns_00819cd.png "Custom Columns in a Table") 
+![](images/Custom_Columns_00819cd.png "Custom Columns in a Table")
 
 
 
@@ -398,7 +398,7 @@ Analytical table
 </td>
 <td valign="top">
 
- [Configuring Tables](configuring-tables-f4eb70f.md) 
+[Configuring Tables](configuring-tables-f4eb70f.md) 
 
 
 
@@ -412,11 +412,11 @@ Analytical table
 </td>
 <td valign="top">
 
-   
+  
   
 **Analytical Table**
 
- ![](images/Analytical_Table_in_Compact_Mode_4d427f5.png "Analytical Table") 
+![](images/Analytical_Table_in_Compact_Mode_4d427f5.png "Analytical Table")
 
 
 
@@ -468,11 +468,11 @@ Area micro chart
 </td>
 <td valign="top">
 
-   
+  
   
 **Components of an Area Micro Chart**
 
- ![](images/Area_Micro_Chart_8720cf8.png "Components of an Area Micro Chart") 
+![](images/Area_Micro_Chart_8720cf8.png "Components of an Area Micro Chart")
 
 
 
@@ -525,11 +525,11 @@ Avatar
 </td>
 <td valign="top">
 
-   
+  
   
 **Business Images**
 
- ![](images/AvatarBusinessImages_8199863.png "Business Images") 
+![](images/AvatarBusinessImages_8199863.png "Business Images")
 
 
 
@@ -578,12 +578,12 @@ Breadcrumb
 </td>
 <td valign="top">
 
-   
+  
   
 **Navigation Bar, Breadcrumbs and Actions in Header Title of Object Page**
 
- ![](images/Breadcrumb_5d56a97.jpg "Navigation Bar, Breadcrumbs and Actions in Header Title
-										of Object Page") 
+![](images/Breadcrumb_5d56a97.jpg "Navigation Bar, Breadcrumbs and Actions in Header Title
+										of Object Page")
 
 
 
@@ -689,7 +689,7 @@ Bullet chart
 </td>
 <td valign="top">
 
- [Configuring Charts](configuring-charts-653ed0f.md) 
+[Configuring Charts](configuring-charts-653ed0f.md) 
 
 
 
@@ -703,11 +703,11 @@ Bullet chart
 </td>
 <td valign="top">
 
-   
+  
   
 **Bullet Chart**
 
- ![](images/Bullet_Chart_08e0f82.jpg "Bullet Chart") 
+![](images/Bullet_Chart_08e0f82.jpg "Bullet Chart")
 
 
 
@@ -759,11 +759,11 @@ Bullet micro chart
 </td>
 <td valign="top">
 
-   
+  
   
 **Bullet Micro Chart**
 
- ![](images/Bullet_Micro_Chart_daa43f5.jpg "Bullet Micro Chart") 
+![](images/Bullet_Micro_Chart_daa43f5.jpg "Bullet Micro Chart")
 
 
 
@@ -818,11 +818,11 @@ Busy indicator
 </td>
 <td valign="top">
 
-   
+  
   
 **Busy Indicator**
 
- ![](images/Busy_Indicator_70da86b.jpg "Busy Indicator") 
+![](images/Busy_Indicator_70da86b.jpg "Busy Indicator")
 
 
 
@@ -871,11 +871,11 @@ Button/Action
 </td>
 <td valign="top">
 
-   
+  
   
 **Common Button Types**
 
- ![](images/Common_Button_Types_05ad659.jpg "Common Button Types") 
+![](images/Common_Button_Types_05ad659.jpg "Common Button Types")
 
 
 
@@ -936,13 +936,13 @@ Canvas page
 </td>
 <td valign="top">
 
-   
+  
   
 **Canvas Page**
 
- 
 
- ![](images/Canvas_Page_13fe5ce.png) 
+
+![](images/Canvas_Page_13fe5ce.png)
 
 
 
@@ -1094,11 +1094,11 @@ Chart/Smart chart
 </td>
 <td valign="top">
 
-   
+  
   
 **Common Chart Types**
 
- ![](images/Chart_Types_3174dbc.png "Common Chart Types") 
+![](images/Chart_Types_3174dbc.png "Common Chart Types")
 
 
 
@@ -1131,7 +1131,7 @@ Checkbox
 </td>
 <td valign="top">
 
- [Enabling Multiple Selection in Tables](enabling-multiple-selection-in-tables-116b5d8.md) 
+[Enabling Multiple Selection in Tables](enabling-multiple-selection-in-tables-116b5d8.md) 
 
 
 
@@ -1145,11 +1145,11 @@ Checkbox
 </td>
 <td valign="top">
 
-   
+  
   
 **Enabled Checkboxes**
 
- ![](images/Enabled_Checkboxes_2104a89.png "Enabled Checkboxes") 
+![](images/Enabled_Checkboxes_2104a89.png "Enabled Checkboxes")
 
 
 
@@ -1199,11 +1199,11 @@ Overview page
 </td>
 <td valign="top">
 
-   
+  
   
 **Target and Maximizing Measures**
 
- ![](images/Coloring_Cards_Based_on_Threshold_Values_89fadf9.png "Target and Maximizing Measures") 
+![](images/Coloring_Cards_Based_on_Threshold_Values_89fadf9.png "Target and Maximizing Measures")
 
 
 
@@ -1234,7 +1234,7 @@ Column chart
 </td>
 <td valign="top">
 
- [Chart Cards Used in Overview Pages](chart-cards-used-in-overview-pages-68e62ad.md) 
+[Chart Cards Used in Overview Pages](chart-cards-used-in-overview-pages-68e62ad.md) 
 
 
 
@@ -1248,11 +1248,11 @@ Column chart
 </td>
 <td valign="top">
 
-   
+  
   
 **Column Chart Card**
 
- ![](images/Column_Chart_Cards_271710e.png "Column Chart Card") 
+![](images/Column_Chart_Cards_271710e.png "Column Chart Card")
 
 
 
@@ -1393,11 +1393,11 @@ Combo box
 </td>
 <td valign="top">
 
-   
+  
   
 **Combobox with Autocomplete Function**
 
- ![](images/Combobox_with_Autocomplete-Function_c517f44.png "Combobox with Autocomplete Function") 
+![](images/Combobox_with_Autocomplete-Function_c517f44.png "Combobox with Autocomplete Function")
 
 
 
@@ -1448,11 +1448,11 @@ Contact quick view
 </td>
 <td valign="top">
 
-   
+  
   
 **Contact Quick View**
 
- ![](images/Feature_map_Contact_Quick_View_57923ca.jpg "Contact Quick View") 
+![](images/Feature_map_Contact_Quick_View_57923ca.jpg "Contact Quick View")
 
 
 
@@ -1496,11 +1496,11 @@ Object page
 </td>
 <td valign="top">
 
-   
+  
   
 **Copy from Excel to Table**
 
- ![](images/Feature_Map_Copy_Paste_bf1847b.png "Copy from Excel to Table") 
+![](images/Feature_Map_Copy_Paste_bf1847b.png "Copy from Excel to Table")
 
 
 
@@ -1549,11 +1549,11 @@ Cumulation \(Waterfall chart\)
 </td>
 <td valign="top">
 
-   
+  
   
 **Cumulation \(Waterfall Chart\)**
 
- ![](images/Cumulation_Waterfall_Chart_8eed559.png "Cumulation (Waterfall Chart)") 
+![](images/Cumulation_Waterfall_Chart_8eed559.png "Cumulation (Waterfall Chart)")
 
 
 
@@ -1586,7 +1586,7 @@ Currency
 </td>
 <td valign="top">
 
- [Different Representations of a Field](different-representations-of-a-field-c18ada4.md) 
+[Different Representations of a Field](different-representations-of-a-field-c18ada4.md) 
 
 
 
@@ -1600,11 +1600,11 @@ Currency
 </td>
 <td valign="top">
 
-   
+  
   
 **Examples of the Currency Control**
 
- ![](images/Currency_Control_e2f31f9.png "Examples of the Currency Control") 
+![](images/Currency_Control_e2f31f9.png "Examples of the Currency Control")
 
 
 
@@ -1654,11 +1654,11 @@ Overview page
 </td>
 <td valign="top">
 
-   
+  
   
 **Custom Cards**
 
- ![](images/Custom_Card_31e0a61.jpg "Custom Cards") 
+![](images/Custom_Card_31e0a61.jpg "Custom Cards")
 
 
 
@@ -1756,7 +1756,7 @@ List report
 </td>
 <td valign="top">
 
- ![](images/Custom_Filter_7a85f34.png) 
+![](images/Custom_Filter_7a85f34.png)
 
 
 
@@ -1809,7 +1809,7 @@ Custom action
 </td>
 <td valign="top">
 
- ![](images/Custom_Action_804961a.png) 
+![](images/Custom_Action_804961a.png)
 
 
 
@@ -1863,7 +1863,7 @@ Object page
 </td>
 <td valign="top">
 
- ![](images/Custom_Header_Facet_8dc8996.png) 
+![](images/Custom_Header_Facet_8dc8996.png)
 
 
 
@@ -1913,7 +1913,7 @@ Object page
 </td>
 <td valign="top">
 
- ![](images/Custom_Form_466ee3c.png) 
+![](images/Custom_Form_466ee3c.png)
 
 
 
@@ -1963,7 +1963,7 @@ Object page
 </td>
 <td valign="top">
 
- ![](images/Custom_Section_39fd4d1.png) 
+![](images/Custom_Section_39fd4d1.png)
 
 
 
@@ -2013,7 +2013,7 @@ Object page
 </td>
 <td valign="top">
 
- ![](images/Custom_Subsection_808fac0.png) 
+![](images/Custom_Subsection_808fac0.png)
 
 
 
@@ -2063,7 +2063,7 @@ Object page
 </td>
 <td valign="top">
 
- ![](images/Custom_Dynamic_Side_Content_c93c534.png) 
+![](images/Custom_Dynamic_Side_Content_c93c534.png)
 
 
 
@@ -2102,7 +2102,7 @@ Date/time picker
 </td>
 <td valign="top">
 
- [Smart Field](../10_More_About_Controls/smart-field-4864403.md) [Field Help](field-help-a5608ea.md) 
+[Smart Field](../10_More_About_Controls/smart-field-4864403.md) [Field Help](field-help-a5608ea.md) 
 
 
 
@@ -2116,11 +2116,11 @@ Date/time picker
 </td>
 <td valign="top">
 
-   
+  
   
 **Date/Time Picker**
 
- ![](images/Date_Time_Picker_9de0e45.png "Date/Time Picker") 
+![](images/Date_Time_Picker_9de0e45.png "Date/Time Picker")
 
 
 
@@ -2171,11 +2171,11 @@ Date picker
 </td>
 <td valign="top">
 
-   
+  
   
 **Date Picker with Footer**
 
- ![](images/Date_Picker_with_Footer_87d3846.png "Date Picker with Footer") 
+![](images/Date_Picker_with_Footer_87d3846.png "Date Picker with Footer")
 
 
 
@@ -2208,7 +2208,7 @@ Date range selection
 </td>
 <td valign="top">
 
- [Enabling Semantic Operators in the Filter Bar](enabling-semantic-operators-in-the-filter-bar-fef65d0.md) 
+[Enabling Semantic Operators in the Filter Bar](enabling-semantic-operators-in-the-filter-bar-fef65d0.md) 
 
 
 
@@ -2222,11 +2222,11 @@ Date range selection
 </td>
 <td valign="top">
 
-   
+  
   
 **Date Range Selection**
 
- ![](images/Date_Range_Selection_2c83f1c.png "Date Range Selection") 
+![](images/Date_Range_Selection_2c83f1c.png "Date Range Selection")
 
 
 
@@ -2328,11 +2328,11 @@ Section *Default Values for Action Parameters* in the topic [Actions](actions-cb
 </td>
 <td valign="top">
 
-   
+  
   
 **Default Values for Action Parameter**
 
- ![](images/Default_Values_for_Action_Parameters_d77753a.png "Default Values for Action Parameter") 
+![](images/Default_Values_for_Action_Parameters_d77753a.png "Default Values for Action Parameter")
 
 
 
@@ -2392,11 +2392,11 @@ Dialog box
 </td>
 <td valign="top">
 
-   
+  
   
 **Dialog**
 
- ![](images/Dialog_Dragging_2a8512f.jpg "Dialog ") 
+![](images/Dialog_Dragging_2a8512f.jpg "Dialog ")
 
 
 
@@ -2441,7 +2441,7 @@ Direct edit
 </td>
 <td valign="top">
 
- [Navigation to an Object Page in Edit Mode](navigation-to-an-object-page-in-edit-mode-8665847.md) 
+[Navigation to an Object Page in Edit Mode](navigation-to-an-object-page-in-edit-mode-8665847.md) 
 
 
 
@@ -2455,11 +2455,11 @@ Direct edit
 </td>
 <td valign="top">
 
-   
+  
   
 **Direct Edit**
 
- ![](images/Image_Navigation_to_an_Object_Page_in_Edit_Mode_1_087686b.png "Direct Edit") 
+![](images/Image_Navigation_to_an_Object_Page_in_Edit_Mode_1_087686b.png "Direct Edit")
 
 
 
@@ -2508,11 +2508,11 @@ Draft handling
 </td>
 <td valign="top">
 
-   
+  
   
 **Draft Handling**
 
- ![](images/feature_map_Draft_Handling_25f7ad7.jpg "Draft Handling") 
+![](images/feature_map_Draft_Handling_25f7ad7.jpg "Draft Handling")
 
 
 
@@ -2558,11 +2558,11 @@ Dynamic page layout
 </td>
 <td valign="top">
 
-   
+  
   
 **Dynamic page layout**
 
- ![](images/Feature_map_Dynamic_page_layout_d0957c5.jpg "Dynamic page layout ") 
+![](images/Feature_map_Dynamic_page_layout_d0957c5.jpg "Dynamic page layout ")
 
 
 
@@ -2611,11 +2611,11 @@ Editing status
 </td>
 <td valign="top">
 
-   
+  
   
 **Editing status**
 
- ![](images/Feature_map_Editing_status_886d379.jpg "Editing status") 
+![](images/Feature_map_Editing_status_886d379.jpg "Editing status")
 
 
 
@@ -2789,11 +2789,11 @@ Filter bar
 </td>
 <td valign="top">
 
-   
+  
   
 **Filter Bar**
 
- ![](images/Expanded_Filter_Bar_c3f0792.jpg "Filter Bar") 
+![](images/Expanded_Filter_Bar_c3f0792.jpg "Filter Bar")
 
 
 
@@ -2918,11 +2918,11 @@ Flexible column layout
 </td>
 <td valign="top">
 
-   
+  
   
 **Flexible Column Layout**
 
- ![](images/Flexible_Column_Layout_03e717b.png "Flexible Column Layout") 
+![](images/Flexible_Column_Layout_03e717b.png "Flexible Column Layout")
 
 
 
@@ -3016,11 +3016,11 @@ Footer toolbar
 </td>
 <td valign="top">
 
-   
+  
   
 **Footer Toolbar**
 
- ![](images/Footer_Toolbar_d28e3c8.png "Footer Toolbar") 
+![](images/Footer_Toolbar_d28e3c8.png "Footer Toolbar")
 
 
 
@@ -3066,11 +3066,11 @@ Form
 </td>
 <td valign="top">
 
-   
+  
   
 **Mixed Form**
 
- ![](images/Mixed_Form_4e3030b.jpg "Mixed Form") 
+![](images/Mixed_Form_4e3030b.jpg "Mixed Form")
 
 
 
@@ -3134,11 +3134,11 @@ Overview page
 </td>
 <td valign="top">
 
-   
+  
   
 **Formatting numeric values**
 
- ![](images/Feature_map_Formatting_numeric_values_db0cbcd.png "Formatting numeric values") 
+![](images/Feature_map_Formatting_numeric_values_db0cbcd.png "Formatting numeric values")
 
 
 
@@ -3227,11 +3227,11 @@ Analytical list page \(OData V2\)
 </td>
 <td valign="top">
 
-   
+  
   
 **Generic Tag**
 
- ![](images/Feature_map_Generic_Tag_1cbf80e.png "Generic Tag") 
+![](images/Feature_map_Generic_Tag_1cbf80e.png "Generic Tag")
 
 
 
@@ -3265,7 +3265,7 @@ Grid table
 </td>
 <td valign="top">
 
- [Setting the Table Type](setting-the-table-type-7f844f1.md) 
+[Setting the Table Type](setting-the-table-type-7f844f1.md) 
 
 
 
@@ -3279,11 +3279,11 @@ Grid table
 </td>
 <td valign="top">
 
-   
+  
   
 **Grid Table**
 
- ![](images/Grid_Table_Schematic_Visualization_833396d.png "Grid Table") 
+![](images/Grid_Table_Schematic_Visualization_833396d.png "Grid Table")
 
 
 
@@ -3338,11 +3338,11 @@ Header toolbar
 </td>
 <td valign="top">
 
-   
+  
   
 **Header Bar with Share Icon**
 
- ![](images/Header_Bar_with_Share_Icon_cc83b69.jpg "Header Bar with Share Icon") 
+![](images/Header_Bar_with_Share_Icon_cc83b69.jpg "Header Bar with Share Icon")
 
 
 
@@ -3397,11 +3397,11 @@ Highlighting line items based on criticality
 </td>
 <td valign="top">
 
-   
+  
   
 **Criticality of Line Items**
 
- ![](images/Criticality_of_Line_Items_2257ca0.jpg "Criticality of Line Items") 
+![](images/Criticality_of_Line_Items_2257ca0.jpg "Criticality of Line Items")
 
 
 
@@ -3451,11 +3451,11 @@ Icon tab bar
 </td>
 <td valign="top">
 
-   
+  
   
 **Icon Tabs**
 
- ![](images/Icon_Tabs_4c3846d.png "Icon Tabs") 
+![](images/Icon_Tabs_4c3846d.png "Icon Tabs")
 
 
 
@@ -3514,7 +3514,7 @@ Image
   
 **Image Used in a Dialog**
 
- ![](images/Image_in_a_Dialog_1f7a3b3.png "Image Used in a Dialog") 
+![](images/Image_in_a_Dialog_1f7a3b3.png "Image Used in a Dialog")
 
 CDO:/content/authoring/mor1590823160236.image
 
@@ -3566,11 +3566,11 @@ Object page
 </td>
 <td valign="top">
 
-   
+  
   
 **Inline Create**
 
- ![](images/FM_Inline_creation_of_table_entries_e545ac0.jpg "Inline Create") 
+![](images/FM_Inline_creation_of_table_entries_e545ac0.jpg "Inline Create")
 
 
 
@@ -3619,11 +3619,11 @@ Input field
 </td>
 <td valign="top">
 
-   
+  
   
 **Input**
 
- ![](images/Input_Assistance_858d7ff.png "Input") 
+![](images/Input_Assistance_858d7ff.png "Input")
 
 
 
@@ -3667,11 +3667,11 @@ Analytical list page
 </td>
 <td valign="top">
 
-   
+  
   
 **Interactive Chart Types**
 
- ![](images/Feature_Map_interactive_chart_types_bc53d40.jpg "Interactive Chart Types") 
+![](images/Feature_Map_interactive_chart_types_bc53d40.jpg "Interactive Chart Types")
 
 
 
@@ -3858,11 +3858,11 @@ Label
 </td>
 <td valign="top">
 
-   
+  
   
 **Label**
 
- ![](images/Feature_Map_Label_e819b35.png "Label") 
+![](images/Feature_Map_Label_e819b35.png "Label")
 
 
 
@@ -3909,11 +3909,11 @@ Line chart
 </td>
 <td valign="top">
 
-   
+  
   
 **Line Chart**
 
- ![](images/Line_Chart_with_Popover_5869caf.png "Line Chart ") 
+![](images/Line_Chart_with_Popover_5869caf.png "Line Chart ")
 
 
 
@@ -3965,11 +3965,11 @@ Line micro chart
 </td>
 <td valign="top">
 
-   
+  
   
 **Line Micro Chart with Labels**
 
- ![](images/Line_Micro_Chart_with_Labels_f9cd9f8.png "Line Micro Chart with Labels") 
+![](images/Line_Micro_Chart_with_Labels_f9cd9f8.png "Line Micro Chart with Labels")
 
 
 
@@ -4022,11 +4022,11 @@ Link
 </td>
 <td valign="top">
 
-   
+  
   
 **Link**
 
- ![](images/Link_Wrapping_and_Truncation_6f9d3bb.png "Link ") 
+![](images/Link_Wrapping_and_Truncation_6f9d3bb.png "Link ")
 
 
 
@@ -4070,11 +4070,11 @@ Overview page
 </td>
 <td valign="top">
 
-   
+  
   
 **Carousel-Based View**
 
- ![](images/Link_List_Card_d5bd193.jpg "Carousel-Based View") 
+![](images/Link_List_Card_d5bd193.jpg "Carousel-Based View")
 
 
 
@@ -4121,11 +4121,11 @@ Add multiple fields to one column
 </td>
 <td valign="top">
 
-   
+  
   
 **Multiple Fields to One Column**
 
- ![](images/FE_Add_multiple_fields_to_one_column_ec3893b.png "Multiple Fields to One Column") 
+![](images/FE_Add_multiple_fields_to_one_column_ec3893b.png "Multiple Fields to One Column")
 
 
 
@@ -4169,11 +4169,11 @@ Display text and ID for value help
 </td>
 <td valign="top">
 
-   
+  
   
 **Text and ID for Value Help**
 
- ![](images/FEATURE_MAP_FE_Displaying_Text_and_ID_for_Value_Help_049f2d6.png "Text and ID for Value Help") 
+![](images/FEATURE_MAP_FE_Displaying_Text_and_ID_for_Value_Help_049f2d6.png "Text and ID for Value Help")
 
 
 
@@ -4222,11 +4222,11 @@ Semantic date range on filter bar
 </td>
 <td valign="top">
 
-   
+  
   
 **Semantic Date Range on Filter Bar**
 
- ![](images/FEATURE_MAP_FE_Semantic_Date_Range_on_Filter_Bar_8668c2b.png "Semantic Date Range on Filter Bar") 
+![](images/FEATURE_MAP_FE_Semantic_Date_Range_on_Filter_Bar_8668c2b.png "Semantic Date Range on Filter Bar")
 
 
 
@@ -4272,11 +4272,11 @@ Overview page
 </td>
 <td valign="top">
 
-   
+  
   
 **List Card**
 
- ![](images/List_Card_3767c22.png "List Card") 
+![](images/List_Card_3767c22.png "List Card")
 
 
 
@@ -4320,11 +4320,11 @@ Overview page
 </td>
 <td valign="top">
 
-   
+  
   
 **Manage Cards**
 
- ![](images/Feature_map_manage_cards_3b5d696.jpg "Manage Cards") 
+![](images/Feature_map_manage_cards_3b5d696.jpg "Manage Cards")
 
 
 
@@ -4370,11 +4370,11 @@ Mass edit
 </td>
 <td valign="top">
 
-   
+  
   
 **Mass Edit**
 
- ![](images/Image_Map_Mass_Edit_9cf3272.png "Mass Edit") 
+![](images/Image_Map_Mass_Edit_9cf3272.png "Mass Edit")
 
 
 
@@ -4419,7 +4419,7 @@ Menu button
 </td>
 <td valign="top">
 
- [Adapting the UI: List Report and Object Page](adapting-the-ui-list-report-and-object-page-0d2f1a9.md) 
+[Adapting the UI: List Report and Object Page](adapting-the-ui-list-report-and-object-page-0d2f1a9.md) 
 
 
 
@@ -4433,11 +4433,11 @@ Menu button
 </td>
 <td valign="top">
 
-   
+  
   
 **Menu Buttons**
 
- ![](images/Menu_Buttons_0629a79.jpg "Menu Buttons") 
+![](images/Menu_Buttons_0629a79.jpg "Menu Buttons")
 
 
 
@@ -4484,11 +4484,11 @@ Message box
 </td>
 <td valign="top">
 
-   
+  
   
 **Message Box**
 
- ![](images/Message_Box_8514163.png "Message Box") 
+![](images/Message_Box_8514163.png "Message Box")
 
 
 
@@ -4537,11 +4537,11 @@ Message page
 </td>
 <td valign="top">
 
-   
+  
   
 **Message Page**
 
- ![](images/Message_Page_1598cfe.jpg "Message Page") 
+![](images/Message_Page_1598cfe.jpg "Message Page")
 
 
 
@@ -4586,11 +4586,11 @@ Message popover
 </td>
 <td valign="top">
 
-   
+  
   
 **Message Popover with Filter**
 
- ![](images/Message_Popover_with_Filter_c945eaf.jpg "Message Popover with Filter") 
+![](images/Message_Popover_with_Filter_c945eaf.jpg "Message Popover with Filter")
 
 
 
@@ -4637,11 +4637,11 @@ Message toast
 </td>
 <td valign="top">
 
-   
+  
   
 **Message Toast**
 
- ![](images/Message_Toast_with_Item_Cound_655a388.png "Message Toast") 
+![](images/Message_Toast_with_Item_Cound_655a388.png "Message Toast")
 
 
 
@@ -4746,11 +4746,11 @@ Micro chart/Smart micro chart
 </td>
 <td valign="top">
 
-   
+  
   
 **Comparison Micro Chart**
 
- ![](images/Comparison_Micro_Chart_7ad7a7b.png "Comparison Micro Chart") 
+![](images/Comparison_Micro_Chart_7ad7a7b.png "Comparison Micro Chart")
 
 
 
@@ -4798,11 +4798,11 @@ Multi-combo box
 </td>
 <td valign="top">
 
-   
+  
   
 **Multi-combo Box**
 
- ![](images/Multi-Combo_Box_8daedf3.png "Multi-combo Box") 
+![](images/Multi-Combo_Box_8daedf3.png "Multi-combo Box")
 
 
 
@@ -4849,11 +4849,11 @@ Multi-input field
 </td>
 <td valign="top">
 
-   
+  
   
 **Multi-Input Field**
 
- ![](images/Expanded_Multi-Selection_62b8761.png "Multi-Input Field") 
+![](images/Expanded_Multi-Selection_62b8761.png "Multi-Input Field")
 
 
 
@@ -4884,7 +4884,7 @@ Multiple selection of lines in tables
 </td>
 <td valign="top">
 
- [Enabling Multiple Selection in Tables](enabling-multiple-selection-in-tables-116b5d8.md) 
+[Enabling Multiple Selection in Tables](enabling-multiple-selection-in-tables-116b5d8.md) 
 
 
 
@@ -4898,11 +4898,11 @@ Multiple selection of lines in tables
 </td>
 <td valign="top">
 
-   
+  
   
 **Multiple selection of lines in tables**
 
- ![](images/Feature_map_Multiple_selection_of_lines_in_tables_5d8fb93.jpg "Multiple selection of lines in tables ") 
+![](images/Feature_map_Multiple_selection_of_lines_in_tables_5d8fb93.jpg "Multiple selection of lines in tables ")
 
 
 
@@ -4946,11 +4946,11 @@ List report
 </td>
 <td valign="top">
 
-   
+  
   
 **Multiple views on list report tables**
 
- ![](images/Feature_map_Multiple_views_on_list_report_tables_891cf38.jpg "Multiple views on list report tables ") 
+![](images/Feature_map_Multiple_views_on_list_report_tables_891cf38.jpg "Multiple views on list report tables ")
 
 
 
@@ -4997,11 +4997,11 @@ Navigation
 </td>
 <td valign="top">
 
-   
+  
   
 **Deep Link Navigation Flow**
 
- ![](images/Deep_Link_Navigation_Flow_e489ff5.png "Deep Link Navigation Flow") 
+![](images/Deep_Link_Navigation_Flow_e489ff5.png "Deep Link Navigation Flow")
 
 
 
@@ -5109,11 +5109,11 @@ P13n dialog
 </td>
 <td valign="top">
 
-   
+  
   
 **P13n Dialog**
 
- ![](images/P13n_Dialog_39cd18d.jpg " P13n Dialog") 
+![](images/P13n_Dialog_39cd18d.jpg " P13n Dialog")
 
 
 
@@ -5211,11 +5211,11 @@ Popover
 </td>
 <td valign="top">
 
-   
+  
   
 **Popover**
 
- ![](images/Popover_74ceaac.png "Popover") 
+![](images/Popover_74ceaac.png "Popover")
 
 
 
@@ -5318,11 +5318,11 @@ Progress indicator
 </td>
 <td valign="top">
 
-   
+  
   
 **Group of Progress Indicators**
 
- ![](images/Progress_Indicators_86bc57b.png "Group of Progress Indicators") 
+![](images/Progress_Indicators_86bc57b.png "Group of Progress Indicators")
 
 
 
@@ -5366,11 +5366,11 @@ Overview page \(OData V2\)
 </td>
 <td valign="top">
 
-   
+  
   
 **Company Information**
 
- ![](images/Quick_View_Card_dd1682b.png "Company Information") 
+![](images/Quick_View_Card_dd1682b.png "Company Information")
 
 
 
@@ -5415,11 +5415,11 @@ Quick views for smart link navigation
 </td>
 <td valign="top">
 
-   
+  
   
 **Quick Views for Smart Link Navigation**
 
- ![](images/Quick_Views_for_Smart_Link_Navigation_5ee9b90.png "Quick Views for Smart Link Navigation") 
+![](images/Quick_Views_for_Smart_Link_Navigation_5ee9b90.png "Quick Views for Smart Link Navigation")
 
 
 
@@ -5471,11 +5471,11 @@ Radial micro chart
 </td>
 <td valign="top">
 
-   
+  
   
 **Different Radial Charts**
 
- ![](images/Radial_Charts_942b517.png "Different Radial Charts") 
+![](images/Radial_Charts_942b517.png "Different Radial Charts")
 
 
 
@@ -5523,11 +5523,11 @@ Rating indicator
 </td>
 <td valign="top">
 
-   
+  
   
 **Rating Indicator**
 
- ![](images/Rating_Indicator_26c6ab1.png "Rating Indicator") 
+![](images/Rating_Indicator_26c6ab1.png "Rating Indicator")
 
 
 
@@ -5571,11 +5571,11 @@ Object page
 </td>
 <td valign="top">
 
-   
+  
   
 **Related Apps Button**
 
- ![](images/Related_Apps_Button_b2ba0cd.png "Related Apps Button") 
+![](images/Related_Apps_Button_b2ba0cd.png "Related Apps Button")
 
 
 
@@ -5672,11 +5672,11 @@ Responsive table
 </td>
 <td valign="top">
 
-   
+  
   
 **Typical Example of Responsive Table**
 
- ![](images/Responsive_Table_3f20981.png "Typical Example of Responsive Table") 
+![](images/Responsive_Table_3f20981.png "Typical Example of Responsive Table")
 
 
 
@@ -5763,11 +5763,11 @@ Object page
 </td>
 <td valign="top">
 
-   
+  
   
 **Reuse components**
 
- ![](images/Feature_Map_Reuse_components_c54fccc.jpg "Reuse components") 
+![](images/Feature_Map_Reuse_components_c54fccc.jpg "Reuse components")
 
 
 
@@ -5866,11 +5866,11 @@ Search
 </td>
 <td valign="top">
 
-   
+  
   
 **Search Field**
 
- ![](images/Search_Field_with_Refresh_09839cc.png "Search Field") 
+![](images/Search_Field_with_Refresh_09839cc.png "Search Field")
 
 
 
@@ -5914,11 +5914,11 @@ Object page
 </td>
 <td valign="top">
 
-   
+  
   
 **Segmented Button**
 
- ![](images/Segmented_Buttons_47f563a.jpg "Segmented Button") 
+![](images/Segmented_Buttons_47f563a.jpg "Segmented Button")
 
 
 
@@ -6122,11 +6122,11 @@ Smart link
 </td>
 <td valign="top">
 
-   
+  
   
 **Smart Link**
 
- ![](images/Smart_Link_6773928.png "Smart Link") 
+![](images/Smart_Link_6773928.png "Smart Link")
 
 
 
@@ -6185,11 +6185,11 @@ Smart table
 </td>
 <td valign="top">
 
-   
+  
   
 **Smart Table**
 
- ![](images/Smart_Table_722e977.png "Smart Table") 
+![](images/Smart_Table_722e977.png "Smart Table")
 
 
 
@@ -6277,11 +6277,11 @@ Overview page \(OData V2\)
 </td>
 <td valign="top">
 
-   
+  
   
 **Stack Card**
 
- ![](images/Stack_Card_d26a509.jpg "Stack Card") 
+![](images/Stack_Card_d26a509.jpg "Stack Card")
 
 
 
@@ -6333,11 +6333,11 @@ Stacked bar micro chart
 </td>
 <td valign="top">
 
-   
+  
   
 **Stacked Bar Micro Chart**
 
- ![](images/Stacked_Bar_Micro_Chart_a34be5b.png "Stacked Bar Micro Chart") 
+![](images/Stacked_Bar_Micro_Chart_a34be5b.png "Stacked Bar Micro Chart")
 
 
 
@@ -6384,11 +6384,11 @@ Status colors and icons
 </td>
 <td valign="top">
 
-   
+  
   
 **Status Colors and Icons**
 
- ![](images/Status_Colors_and_Icons_7bb680b.jpg "Status Colors and Icons") 
+![](images/Status_Colors_and_Icons_7bb680b.jpg "Status Colors and Icons")
 
 
 
@@ -6434,11 +6434,11 @@ Object page
 </td>
 <td valign="top">
 
-   
+  
   
 **File Upload in Edit Mode**
 
- ![](images/Edm_stream_File_Upload_in_Edit_Mode_46c2706.png "File Upload in Edit Mode") 
+![](images/Edm_stream_File_Upload_in_Edit_Mode_46c2706.png "File Upload in Edit Mode")
 
 
 
@@ -6541,11 +6541,11 @@ Overview page
 </td>
 <td valign="top">
 
-   
+  
   
 **Table Card**
 
- ![](images/Table_Card_885a97e.png "Table Card") 
+![](images/Table_Card_885a97e.png "Table Card")
 
 
 
@@ -6578,7 +6578,7 @@ Table personalization
 </td>
 <td valign="top">
 
- [Enabling Table Personalization](enabling-table-personalization-3e2b4d2.md) 
+[Enabling Table Personalization](enabling-table-personalization-3e2b4d2.md) 
 
 
 
@@ -6592,11 +6592,11 @@ Table personalization
 </td>
 <td valign="top">
 
-   
+  
   
 **Table Personalization Dialog**
 
- ![](images/Table_Personalization_45b4d11.png "Table Personalization Dialog") 
+![](images/Table_Personalization_45b4d11.png "Table Personalization Dialog")
 
 
 
@@ -6661,11 +6661,11 @@ Tables
 </td>
 <td valign="top">
 
-   
+  
   
 **Table**
 
- ![](images/Multi-Selection_Grid_Table_35d3aa1.png "Table") 
+![](images/Multi-Selection_Grid_Table_35d3aa1.png "Table")
 
 
 
@@ -6713,11 +6713,11 @@ Table toolbar
 </td>
 <td valign="top">
 
-   
+  
   
 **Table Toolbar with Segmented Text Button**
 
- ![](images/Table_Toolbar_with_Segmented_Text_Button_e8ed1bd.png "Table Toolbar with Segmented Text Button") 
+![](images/Table_Toolbar_with_Segmented_Text_Button_e8ed1bd.png "Table Toolbar with Segmented Text Button")
 
 
 
@@ -6769,11 +6769,11 @@ Text
 </td>
 <td valign="top">
 
-   
+  
   
 **Text Control: Hyphenation**
 
- ![](images/Text_Control_Hyphenation_642dbf8.png "Text Control: Hyphenation") 
+![](images/Text_Control_Hyphenation_642dbf8.png "Text Control: Hyphenation")
 
 
 
@@ -6820,11 +6820,11 @@ Text area
 </td>
 <td valign="top">
 
-   
+  
   
 **Text Area Counter**
 
- ![](images/Text_Area_Counter_403e630.png "Text Area Counter") 
+![](images/Text_Area_Counter_403e630.png "Text Area Counter")
 
 
 
@@ -6883,11 +6883,11 @@ Title
 </td>
 <td valign="top">
 
-   
+  
   
 **Title**
 
- ![](images/Title_c1c62ad.jpg "Title") 
+![](images/Title_c1c62ad.jpg "Title")
 
 
 
@@ -6956,11 +6956,11 @@ Token
 </td>
 <td valign="top">
 
-   
+  
   
 **Token Styles**
 
- ![](images/Token_Styles_0d03594.png "Token Styles") 
+![](images/Token_Styles_0d03594.png "Token Styles")
 
 
 
@@ -7008,11 +7008,11 @@ Tree table
 </td>
 <td valign="top">
 
-   
+  
   
 **Tree Table with Multiple Selection**
 
- ![](images/Tree_Table_with_Multiple_Selection_cabf655.png "Tree Table with Multiple Selection") 
+![](images/Tree_Table_with_Multiple_Selection_cabf655.png "Tree Table with Multiple Selection")
 
 
 
@@ -7105,11 +7105,11 @@ Value help
 </td>
 <td valign="top">
 
-   
+  
   
 **Value Help Dialog**
 
- ![](images/Value_Help_Dialog_d10cc5f.png "Value Help Dialog") 
+![](images/Value_Help_Dialog_d10cc5f.png "Value Help Dialog")
 
 
 
@@ -7170,11 +7170,11 @@ Variant management
 </td>
 <td valign="top">
 
-   
+  
   
 **Manage Views Dialog**
 
- ![](images/Variant_Management_Manage_Views_Dialog_b05305d.png "Manage Views Dialog") 
+![](images/Variant_Management_Manage_Views_Dialog_b05305d.png "Manage Views Dialog")
 
 
 
@@ -7222,11 +7222,11 @@ Analytical list page
 </td>
 <td valign="top">
 
-   
+  
   
 **Visual Filter Setup**
 
- ![](images/Feature_map_Visual_filter_bar_9c53b64.jpg "Visual Filter Setup") 
+![](images/Feature_map_Visual_filter_bar_9c53b64.jpg "Visual Filter Setup")
 
 
 
@@ -7270,7 +7270,7 @@ Worklist
 </td>
 <td valign="top">
 
- ![](images/Image_Map_Worklist_b057362.jpg) 
+![](images/Image_Map_Worklist_b057362.jpg)
 
 
 

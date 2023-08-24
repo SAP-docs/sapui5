@@ -39,7 +39,7 @@ SAP Fiori Elements for OData V4
 > 	"name": "sap.fe.templates.ObjectPage",
 > 	"options": {
 > 		"settings": {
-> 			"entitySet": "SalesOrderManage",
+> 			"contextPath": "/SalesOrderManage",
 > 			...
 > 			},
 > 			"controlConfiguration": {

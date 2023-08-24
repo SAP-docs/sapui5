@@ -116,7 +116,7 @@ The alignment of popups with the parent element is unaffected by RTL mode and is
 </td>
 <td valign="top">
 
- `sap.ui.core.Popup.Dock` has been extended by adding `Begin*` and"`End*`. Those will change sides in RTL mode. Use these instead of `Left*` and `Right*` if the popup alignment should change sides.
+`sap.ui.core.Popup.Dock` has been extended by adding `Begin*` and"`End*`. Those will change sides in RTL mode. Use these instead of `Left*` and `Right*` if the popup alignment should change sides.
 
 
 

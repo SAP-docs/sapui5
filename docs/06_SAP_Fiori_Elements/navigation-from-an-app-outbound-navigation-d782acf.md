@@ -318,19 +318,19 @@ If `RequiresContext` is true, then the button is disabled until a selection is m
 
     You can define that context-independent buttons \(`RequiresContext` is set to `False`\) triggering external navigation are displayed only if the navigation target is supported on the current device. In addition, if the `SemanticObject` or the action is invalid, and if the user doesn’t have the correct authorizations, the button isn't displayed. As a prerequisite, you need to have maintained the navigation target in the SAP Fiori launchpad, as shown in the following images:
 
-       
+      
       
     **SAP Fiori launchpad: Maintain the Supported Devices for the Combination of Semantic Object and Action**
 
-     ![](images/SupportedDevice_41cc89e.png "SAP Fiori launchpad: Maintain the Supported Devices for the Combination of Semantic
-    								Object and Action") 
+    ![](images/SupportedDevice_41cc89e.png "SAP Fiori launchpad: Maintain the Supported Devices for the Combination of Semantic
+    								Object and Action")
 
-       
+      
       
     **SAP Fiori launchpad: Maintain the Mandatory Parameters for Semantic Object and Action**
 
-     ![](images/mandatoryparameters_45f06a4.png "SAP Fiori launchpad: Maintain the Mandatory Parameters for Semantic Object and
-    								Action") 
+    ![](images/mandatoryparameters_45f06a4.png "SAP Fiori launchpad: Maintain the Mandatory Parameters for Semantic Object and
+    								Action")
 
     > ### Note:  
     > -   As already shown, you maintain mandatory parameters for navigation in SAP Fiori launchpad, for example a sales order ID. If you have specified `RequiresContext: False`, for the combination of semantic object and action, and for this combination you maintain a mandatory parameter in SAP Fiori launchpad, these settings contradict each other and the button isn't displayed.
@@ -723,11 +723,11 @@ If the target field name isn't from the global field catalog, you can use the ta
 
 To do this when navigating via the `DataFieldForIntentBasedNavigation` button, use the `Mapping` property in the `DataFieldForIntentBasedNavigation` annotation.
 
-   
+  
   
 **Mapping Semantic Objects**
 
- ![](images/Semantic_Object_Mapping_b0c1ab2.png "Mapping Semantic Objects") 
+![](images/Semantic_Object_Mapping_b0c1ab2.png "Mapping Semantic Objects")
 
 > ### Sample Code:  
 > XML Annotation

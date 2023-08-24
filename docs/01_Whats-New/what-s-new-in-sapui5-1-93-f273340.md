@@ -6,7 +6,7 @@ With this release SAPUI5 is upgraded from version 1.92 to 1.93.
 
 
 
-** **
+****
 
 
 <table>
@@ -64,28 +64,28 @@ Available as of
 <tr>
 <td valign="top">
 
- 1.93 
+1.93 
 
 
 
 </td>
 <td valign="top">
 
- New 
+New 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **New Theme Available for SAP Fiori User Experience \(Experimental\)** 
+**New Theme Available for SAP Fiori User Experience \(Experimental\)** 
 
 
 
@@ -122,28 +122,28 @@ Info Only
 <tr>
 <td valign="top">
 
- 1.93 
+1.93 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **SAPUI5 Data Types** 
+**SAPUI5 Data Types** 
 
 
 
@@ -161,7 +161,7 @@ The new version of SAPUI5 introduces a new `skipDecimalsValidation` constraint f
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -177,28 +177,28 @@ The new version of SAPUI5 introduces a new `skipDecimalsValidation` constraint f
 <tr>
 <td valign="top">
 
- 1.93 
+1.93 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **SAPUI5 OData V2 Model** 
+**SAPUI5 OData V2 Model** 
 
 
 
@@ -221,7 +221,7 @@ The new version of the SAPUI5 OData V2 model introduces the following features:
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -237,28 +237,28 @@ The new version of the SAPUI5 OData V2 model introduces the following features:
 <tr>
 <td valign="top">
 
- 1.93 
+1.93 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **SAPUI5 OData V4 Model** 
+**SAPUI5 OData V4 Model** 
 
 
 
@@ -281,7 +281,7 @@ The new version of the SAPUI5 OData V4 model introduces the following features:
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -297,28 +297,28 @@ The new version of the SAPUI5 OData V4 model introduces the following features:
 <tr>
 <td valign="top">
 
- 1.93 
+1.93 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.f.DynamicPage`** 
+**`sap.f.DynamicPage`** 
 
 
 
@@ -336,7 +336,7 @@ With the new `headerPinned` property and `headerContentPinnedStateChange` event,
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -352,28 +352,28 @@ With the new `headerPinned` property and `headerContentPinnedStateChange` event,
 <tr>
 <td valign="top">
 
- 1.93 
+1.93 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.IconTabBar`** 
+**`sap.m.IconTabBar`** 
 
 
 
@@ -402,7 +402,7 @@ With the new `headerPinned` property and `headerContentPinnedStateChange` event,
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -418,28 +418,28 @@ With the new `headerPinned` property and `headerContentPinnedStateChange` event,
 <tr>
 <td valign="top">
 
- 1.93 
+1.93 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.List, sap.m.Table, sap.m.Tree`** 
+**`sap.m.List, sap.m.Table, sap.m.Tree`** 
 
 
 
@@ -457,7 +457,7 @@ We have provided a new toggle option in multi-selection mode for these controls:
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -473,28 +473,28 @@ We have provided a new toggle option in multi-selection mode for these controls:
 <tr>
 <td valign="top">
 
- 1.93 
+1.93 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.MultiComboBox`** 
+**`sap.m.MultiComboBox`** 
 
 
 
@@ -512,7 +512,7 @@ We have the range selection functionality in `sap.m.MultiComboBox`. Two new para
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -528,28 +528,28 @@ We have the range selection functionality in `sap.m.MultiComboBox`. Two new para
 <tr>
 <td valign="top">
 
- 1.93 
+1.93 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.PlanningCalendar`** 
+**`sap.m.PlanningCalendar`** 
 
 
 
@@ -570,7 +570,7 @@ We have the range selection functionality in `sap.m.MultiComboBox`. Two new para
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -586,28 +586,28 @@ We have the range selection functionality in `sap.m.MultiComboBox`. Two new para
 <tr>
 <td valign="top">
 
- 1.93 
+1.93 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.SelectDialog`, `sap.m.TableSelectDialog`** 
+**`sap.m.SelectDialog`, `sap.m.TableSelectDialog`** 
 
 
 
@@ -625,7 +625,7 @@ The `updateStarted`, `updateFinished`, and `selectionChange` events from an inne
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -641,28 +641,28 @@ The `updateStarted`, `updateFinished`, and `selectionChange` events from an inne
 <tr>
 <td valign="top">
 
- 1.93 
+1.93 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.tnt.ToolPage`** 
+**`sap.tnt.ToolPage`** 
 
 
 
@@ -680,7 +680,7 @@ We have added a new `subHeader` aggregation to the control. You can use it to cr
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -696,28 +696,28 @@ We have added a new `subHeader` aggregation to the control. You can use it to cr
 <tr>
 <td valign="top">
 
- 1.93 
+1.93 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.integration.widgets.Card`** 
+**`sap.ui.integration.widgets.Card`** 
 
 
 
@@ -738,7 +738,7 @@ We have added a new `subHeader` aggregation to the control. You can use it to cr
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -754,28 +754,28 @@ We have added a new `subHeader` aggregation to the control. You can use it to cr
 <tr>
 <td valign="top">
 
- 1.93 
+1.93 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.uxap.ObjectPageLayout`** 
+**`sap.uxap.ObjectPageLayout`** 
 
 
 
@@ -793,7 +793,7 @@ With the new `headerContentPinned` property and `pinnedStateChange` event, you c
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -809,28 +809,28 @@ With the new `headerContentPinned` property and `pinnedStateChange` event, you c
 <tr>
 <td valign="top">
 
- 1.93 
+1.93 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- SAP Fiori Elements 
+SAP Fiori Elements 
 
 
 
 </td>
 <td valign="top">
 
- **SAP Fiori elements for OData V4** 
+**SAP Fiori elements for OData V4** 
 
 
 
@@ -865,7 +865,7 @@ The following changes and new features are available for SAP Fiori elements for 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -881,28 +881,28 @@ The following changes and new features are available for SAP Fiori elements for 
 <tr>
 <td valign="top">
 
- 1.93 
+1.93 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- User Documentation 
+User Documentation 
 
 
 
 </td>
 <td valign="top">
 
- **FAQ for Smart Controls** 
+**FAQ for Smart Controls** 
 
 
 
@@ -929,7 +929,7 @@ You can now find them on the new *FAQ* tab in the *API Reference*.
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -945,28 +945,28 @@ You can now find them on the new *FAQ* tab in the *API Reference*.
 <tr>
 <td valign="top">
 
- 1.93 
+1.93 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Demo Kit Change Version Dialog** 
+**Demo Kit Change Version Dialog** 
 
 
 
@@ -986,7 +986,7 @@ We have improved the *Change Version* dialog to help you find the desired versio
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1003,6 +1003,8 @@ We have improved the *Change Version* dialog to help you find the desired versio
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.115](what-s-new-in-sapui5-1-115-409fde8.md "With this release SAPUI5 is upgraded from version 1.114 to 1.115.")
 
 [What's New in SAPUI5 1.114](what-s-new-in-sapui5-1-114-890fce1.md "With this release SAPUI5 is upgraded from version 1.113 to 1.114.")
 

@@ -8,7 +8,7 @@ The grouping of rows is supported in analytical tables \(`sap.ui.Table.Analytica
 
 Table grouping of rows looks like this:
 
- ![](images/Table_Grouping_b36df77.png) 
+![](images/Table_Grouping_b36df77.png)
 
 
 
@@ -677,11 +677,11 @@ The default SPV or PV is read as follows:
 
 You can see the grouping applied on the *Country* property, and the totals for the *Sales Amount* in the following screenshot:
 
- ![](images/ALP_Groupings_and_Totals_ae1b171.png) 
+![](images/ALP_Groupings_and_Totals_ae1b171.png)
 
 End users can always change groups and totals via the column header and the aggregation icon of the analytical table:
 
- ![](images/ALP_Changing_Groupings_and_Totals_d94d57a.png) 
+![](images/ALP_Changing_Groupings_and_Totals_d94d57a.png)
 
 
 

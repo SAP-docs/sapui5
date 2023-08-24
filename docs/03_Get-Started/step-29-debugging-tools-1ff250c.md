@@ -12,11 +12,11 @@ Luckily, SAPUI5 provides a couple of debugging tools that we can use within the 
 
 ## Preview
 
-   
+  
   
 **The diagnostics window**
 
- ![](images/SAPUI5_Walkthrough_Step_30_c4e83f0.png "The diagnostics window") 
+![](images/SAPUI5_Walkthrough_Step_30_c4e83f0.png "The diagnostics window")
 
 
 
@@ -73,7 +73,7 @@ You can view and download all files at [Walkthrough - Step 29](https://ui5.sap.c
 </mvc:View>
 ```
 
-We introduced a typo in the binding of the number attribute to simulate a frequent error; instead of using `'invoice>ExtendedPrice'` we use <code>'invoice&gt;Ex<b>T</b>endedPrice'</code>. Now we call the app and notice that the price is actually missing. By entering the [shortcut](../02_Read-Me-First/keyboard-shortcuts-for-sapui5-tools-154844c.md)  [Ctrl\] + [Shift\] + [Alt\] / [Option\] + [S\]  we open the SAPUI5 support diagnostics tool and check the app.
+We introduced a typo in the binding of the number attribute to simulate a frequent error; instead of using `'invoice>ExtendedPrice'` we use <code>'invoice&gt;Ex<b>T</b>endedPrice'</code>. Now we call the app and notice that the price is actually missing. By entering the [shortcut](../02_Read-Me-First/keyboard-shortcuts-for-sapui5-tools-154844c.md) [Ctrl\] + [Shift\] + [Alt\] /[Option\] + [S\]  we open the SAPUI5 support diagnostics tool and check the app.
 
 > ### Note:  
 > If you use the Google Chrome browser, you can install the *UI5 Inspector* plugin. With this plugin, you can easily debug your SAPUI5- or OpenUI5-based apps. For more information, see [UI5 Inspector](../04_Essentials/ui5-inspector-b24e724.md).
@@ -84,13 +84,13 @@ A hierarchical tree of SAPUI5 controls is shown on the left and the properties o
 
 Sometimes errors are not as easy to spot and you actually need to debug the JavaScript code with the tools of the browser. For performance reasons, the SAPUI5 files are shipped in a minified version, this means that all possible variable names are shortened and comments are removed.
 
-This makes debugging harder because the code is a lot less readable. You can load the debug sources by adding the URL parameter `sap-ui-debug=true` or by pressing  [Ctrl\] + [Shift\] + [Alt\] / [Option\] + [P\]  and selecting *Use Debug Sources* in the dialog box that is displayed. After reloading the page, you can see in the *Network* tab of the browser’s developer tools that now a lot of files with the `–dbg` suffix are loaded. These are the source code files that include comments and the uncompressed code of the app and the SAPUI5 artifacts.
+This makes debugging harder because the code is a lot less readable. You can load the debug sources by adding the URL parameter `sap-ui-debug=true` or by pressing [Ctrl\] + [Shift\] + [Alt\] /[Option\] + [P\]  and selecting *Use Debug Sources* in the dialog box that is displayed. After reloading the page, you can see in the *Network* tab of the browser’s developer tools that now a lot of files with the `–dbg` suffix are loaded. These are the source code files that include comments and the uncompressed code of the app and the SAPUI5 artifacts.
 
-   
+  
   
 **Technical information dialog**
 
- ![Technical Information Dialog](images/Technical_Information_Dialog_SAPUI5_8cec8a2.png "Technical information dialog ") 
+![Technical Information Dialog](images/Technical_Information_Dialog_SAPUI5_8cec8a2.png "Technical information dialog ")
 
 For a more detailed explanation of the SAPUI5 support tools, go through the [Troubleshooting Tutorial](troubleshooting-tutorial-5661952.md) tutorial.
 

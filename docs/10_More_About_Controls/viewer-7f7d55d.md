@@ -38,7 +38,7 @@ Most applications require the simplest possible visualisation capability, which 
 
 The following figure shows the default Viewer layout after it is initialized:
 
- ![](images/Viewer_-_No_File_Loaded_14b82c3.png) 
+![](images/Viewer_-_No_File_Loaded_14b82c3.png)
 
 The following figure shows the Viewer layout with a file loaded and all available controls enabled and visible:
 

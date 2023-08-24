@@ -72,14 +72,14 @@ Description
 <tr>
 <td valign="top">
 
- `id` 
+`id` 
 
 
 
 </td>
 <td valign="top">
 
- `sap/base/util/uid` 
+`sap/base/util/uid` 
 
 
 
@@ -95,14 +95,14 @@ Interaction ID
 <tr>
 <td valign="top">
 
- `event` 
+`event` 
 
 
 
 </td>
 <td valign="top">
 
- `String` 
+`String` 
 
 
 
@@ -141,14 +141,14 @@ Event type which triggered the interaction. Allowed types are:
 <tr>
 <td valign="top">
 
- `trigger` 
+`trigger` 
 
 
 
 </td>
 <td valign="top">
 
- `String` 
+`String` 
 
 
 
@@ -164,14 +164,14 @@ ID of the element that triggered the action
 <tr>
 <td valign="top">
 
- `component` 
+`component` 
 
 
 
 </td>
 <td valign="top">
 
- `String` 
+`String` 
 
 
 
@@ -187,14 +187,14 @@ ID of the app or name of the Component that contains the triggering element
 <tr>
 <td valign="top">
 
- `appVersion` 
+`appVersion` 
 
 
 
 </td>
 <td valign="top">
 
- `String` 
+`String` 
 
 
 
@@ -210,14 +210,14 @@ Application version as from App Descriptor
 <tr>
 <td valign="top">
 
- `start` 
+`start` 
 
 
 
 </td>
 <td valign="top">
 
- `Number` 
+`Number` 
 
 
 
@@ -233,14 +233,14 @@ Interaction start; always triggered by user interaction. From that point in time
 <tr>
 <td valign="top">
 
- `end` 
+`end` 
 
 
 
 </td>
 <td valign="top">
 
- `Number` 
+`Number` 
 
 
 
@@ -256,14 +256,14 @@ Interaction end; defined as start time plus duration.
 <tr>
 <td valign="top">
 
- `navigation` 
+`navigation` 
 
 
 
 </td>
 <td valign="top">
 
- `Number` 
+`Number` 
 
 
 
@@ -281,14 +281,14 @@ Requests that are started while another request is already in progress are ignor
 <tr>
 <td valign="top">
 
- `roundtrip` 
+`roundtrip` 
 
 
 
 </td>
 <td valign="top">
 
- `Number` 
+`Number` 
 
 
 
@@ -304,14 +304,14 @@ Roundtrip time for a request, calculated as difference from `requestStart` to `r
 <tr>
 <td valign="top">
 
- `processing` 
+`processing` 
 
 
 
 </td>
 <td valign="top">
 
- `Number` 
+`Number` 
 
 
 
@@ -327,14 +327,14 @@ The client processing time \(in ms\) of an interaction, calculated by subtractin
 <tr>
 <td valign="top">
 
- `duration` 
+`duration` 
 
 
 
 </td>
 <td valign="top">
 
- `Number` 
+`Number` 
 
 
 
@@ -350,14 +350,14 @@ The duration time \(in ms\) of an interaction including navigation and request t
 <tr>
 <td valign="top">
 
- `requests` 
+`requests` 
 
 
 
 </td>
 <td valign="top">
 
- `PerformanceTiming[]` 
+`PerformanceTiming[]` 
 
 
 
@@ -373,14 +373,14 @@ All requests that occurred during the interaction, taken from the `NavigationTim
 <tr>
 <td valign="top">
 
- `measurements` 
+`measurements` 
 
 
 
 </td>
 <td valign="top">
 
- `Measurement[]` 
+`Measurement[]` 
 
 
 
@@ -396,14 +396,14 @@ Performance measurements \(see [Performance Measurement Using sap/ui/performance
 <tr>
 <td valign="top">
 
- `sapStatistics` 
+`sapStatistics` 
 
 
 
 </td>
 <td valign="top">
 
- `Object[]` 
+`Object[]` 
 
 
 
@@ -419,14 +419,14 @@ Map of request URL to corresponding `sap-statistics` header as String \( format:
 <tr>
 <td valign="top">
 
- `requestTime` 
+`requestTime` 
 
 
 
 </td>
 <td valign="top">
 
- `Number` 
+`Number` 
 
 
 
@@ -442,14 +442,14 @@ Sum over all request durations of this interaction, from `startTime` to `respons
 <tr>
 <td valign="top">
 
- `networkTime` 
+`networkTime` 
 
 
 
 </td>
 <td valign="top">
 
- `Number` 
+`Number` 
 
 
 
@@ -465,14 +465,14 @@ Average network time per request \(in ms\) that occurred during the interaction.
 <tr>
 <td valign="top">
 
- `bytesSent` 
+`bytesSent` 
 
 
 
 </td>
 <td valign="top">
 
- `Number` 
+`Number` 
 
 
 
@@ -488,14 +488,14 @@ Sum over all bytes sent with requests \(content plus headers\)
 <tr>
 <td valign="top">
 
- `bytesReceived` 
+`bytesReceived` 
 
 
 
 </td>
 <td valign="top">
 
- `Number` 
+`Number` 
 
 
 
@@ -511,14 +511,14 @@ Sum over all bytes received with responses \(content plus headers\)
 <tr>
 <td valign="top">
 
- `requestCompression` 
+`requestCompression` 
 
 
 
 </td>
 <td valign="top">
 
- `Boolean` 
+`Boolean` 
 
 
 
@@ -534,14 +534,14 @@ Indicates if all requests during an interaction have been received in GNU zip fo
 <tr>
 <td valign="top">
 
- `busyDuration` 
+`busyDuration` 
 
 
 
 </td>
 <td valign="top">
 
- `Number` 
+`Number` 
 
 
 

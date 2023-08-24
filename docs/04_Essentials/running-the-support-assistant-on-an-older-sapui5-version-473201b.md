@@ -18,17 +18,17 @@ The minimum SAPUI5 version in which the Support Assistant is available is 1.44.1
 
 ## Procedure
 
-1.  Open the *Technical Information Dialog* using the [shortcut](../02_Read-Me-First/keyboard-shortcuts-for-sapui5-tools-154844c.md)  [Ctrl\] + [Shift\] + [Alt\] / [Option\] + [P\] .
+1.  Open the *Technical Information Dialog* using the [shortcut](../02_Read-Me-First/keyboard-shortcuts-for-sapui5-tools-154844c.md) [Ctrl\] + [Shift\] + [Alt\] /[Option\] + [P\] .
 
 2.  Choose the settings button for the Support Assistant \(![](images/SA_Settings_Button_TechInfo_4c9d605.png)\).
 
 3.  Select a predefined version from the dropdown, or select *Custom Location* to paste a custom URL in the input field.
 
-       
+      
       
     **Technical Information Dialog: Support Assistant Settings**
 
-     ![](images/Support_Assistant_Older_Version_76e6ee0.png "Technical Information Dialog: Support Assistant Settings") 
+    ![](images/Support_Assistant_Older_Version_76e6ee0.png "Technical Information Dialog: Support Assistant Settings")
 
     > ### Note:  
     > When you choose a custom location, keep in mind that the URL should match the protocol of the application. For example, if the application is HTTP, the location should also be HTTP. If it is HTTPS, the location should be HTTPS. The URL should also end in `sap/ui/support/`.
@@ -49,7 +49,7 @@ The minimum SAPUI5 version in which the Support Assistant is available is 1.44.1
       
     **Support Assistant - Multi-Version Support**
 
-     ![](images/Support_Assistant_Code_Injection_f976dcd.png "Support Assistant - Multi-Version Support") 
+    ![](images/Support_Assistant_Code_Injection_f976dcd.png "Support Assistant - Multi-Version Support")
 
 
 

@@ -17,7 +17,7 @@ The following sections describe what SAP can change in major, minor, and patch r
 
 ## API Evolution
 
-Unless otherwise mentioned, the word "API" in this section refers to "public API", meaning functions, classes, namespaces, controls along with their declared properties, aggregations, and so on. The sole definition of the public API is the  [API Reference](https://ui5.sap.com/#/api/sap.ui), which is included in the SAPUI5 Demo Kit. Features that are **not** mentioned there are **not** part of the API.
+Unless otherwise mentioned, the word "API" in this section refers to "public API", meaning functions, classes, namespaces, controls along with their declared properties, aggregations, and so on. The sole definition of the public API is the [API Reference](https://ui5.sap.com/#/api/sap.ui), which is included in the SAPUI5 Demo Kit. Features that are **not** mentioned there are **not** part of the API.
 
 The following rules apply for introducing new APIs or making incompatible changes to existing APIs:
 

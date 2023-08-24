@@ -152,14 +152,14 @@ Uses
 <tr>
 <td valign="top">
 
- `FilterBar` 
+`FilterBar` 
 
 
 
 </td>
 <td valign="top">
 
- `SmartVariantManagementUI2` 
+`SmartVariantManagementUI2` 
 
 
 
@@ -168,14 +168,14 @@ Uses
 <tr>
 <td valign="top">
 
- `SmartFilterBar` 
+`SmartFilterBar` 
 
 
 
 </td>
 <td valign="top">
 
- `SmartVariantManagement` 
+`SmartVariantManagement` 
 
 
 
