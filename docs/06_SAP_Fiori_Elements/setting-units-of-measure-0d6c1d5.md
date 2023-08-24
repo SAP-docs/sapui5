@@ -69,27 +69,27 @@ In the following example, the `Price` property is annotated in the annotation do
 > ```
 > 
 > annotate GWSAMPLE_BASIC.Product with {
->   @MeasuresUnit : WeightUnit
+>   @Measures.Unit : WeightUnit
 >   WeightMeasure
 > };
 > 
 > annotate GWSAMPLE_BASIC.Product with {
->   @MeasuresUnit : DimUnit
+>   @Measures.Unit : DimUnit
 >   Width
 > };
 > 
 > annotate GWSAMPLE_BASIC.Product with {
->   @MeasuresUnit : DimUnit
+>   @Measures.Unit : DimUnit
 >   Depth
 > };
 > 
 > annotate GWSAMPLE_BASIC.Product with {
->   @MeasuresUnit : DimUnit
+>   @Measures.Unit : DimUnit
 >   Height
 > };
 > 
 > annotate GWSAMPLE_BASIC.Product with {
->   @MeasuresISOCurrency : CurrencyCode
+>   @Measures.ISOCurrency : CurrencyCode
 >   Price
 > };
 > 
