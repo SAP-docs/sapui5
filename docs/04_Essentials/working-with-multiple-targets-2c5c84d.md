@@ -29,6 +29,8 @@ A parent relationship between targets tightly couples the two targets together. 
 
 
 
+## Example
+
 In the following example, the relationship between the views `employeeOverviewTop` and `employeeOverviewContent` is established by assigning both to the same route.
 
 The relationship between the target `employeeOverview` and `employeeOverviewTop` \(`employeeOverviewContent` respectively\) is a parent relationship.

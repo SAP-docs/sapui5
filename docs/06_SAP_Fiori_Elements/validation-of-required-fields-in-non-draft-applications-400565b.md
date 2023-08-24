@@ -26,7 +26,7 @@ The following annotation needs to be configured individually for each entity set
 > 
 > ```
 
- ![](images/Validation_of_Required_Fields_in_Non-Draft_Apps_1_18415a9.png) 
+![](images/Validation_of_Required_Fields_in_Non-Draft_Apps_1_18415a9.png)
 
 
 

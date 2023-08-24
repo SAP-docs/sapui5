@@ -90,7 +90,7 @@ Entity type
 </td>
 <td valign="top">
 
- `sap:semantics` 
+`sap:semantics` 
 
 
 
@@ -127,7 +127,7 @@ Dimensions
 </td>
 <td valign="top">
 
- `sap:aggregation-role` 
+`sap:aggregation-role` 
 
 
 
@@ -164,7 +164,7 @@ Measures
 </td>
 <td valign="top">
 
- `sap:aggregation-role` 
+`sap:aggregation-role` 
 
 
 

@@ -59,7 +59,7 @@ List Report
 </td>
 <td valign="top">
 
- `sap.suite.ui.generic.template.ListReport.extensionAPI.ExtensionAPI` 
+`sap.suite.ui.generic.template.ListReport.extensionAPI.ExtensionAPI` 
 
 
 
@@ -75,7 +75,7 @@ Object Page
 </td>
 <td valign="top">
 
- `sap.suite.ui.generic.template.ObjectPage.extensionAPI.ExtensionAPI` 
+`sap.suite.ui.generic.template.ObjectPage.extensionAPI.ExtensionAPI` 
 
 
 
@@ -325,7 +325,7 @@ List Report
 </td>
 <td valign="top">
 
- `sap.fe.templates.ListReport.ExtensionAPI` 
+`sap.fe.templates.ListReport.ExtensionAPI` 
 
 
 
@@ -341,7 +341,7 @@ Object Page
 </td>
 <td valign="top">
 
- `sap.fe.templates.ObjectPage.ExtensionAPI` 
+`sap.fe.templates.ObjectPage.ExtensionAPI` 
 
 
 

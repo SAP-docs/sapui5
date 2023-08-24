@@ -15,11 +15,11 @@ The content in this step builds on the code from [Step 4: Adding a Scene Tree](s
 
 ## Preview
 
-   
+  
   
 **Viewer application with a View Gallery, Viewport, and Scene Tree**
 
- ![](images/Image_SAPUI5_3D_Viewer_5_a0285c1.png "Viewer application with a View Gallery, Viewport, and Scene Tree") 
+![](images/Image_SAPUI5_3D_Viewer_5_a0285c1.png "Viewer application with a View Gallery, Viewport, and Scene Tree")
 
 
 

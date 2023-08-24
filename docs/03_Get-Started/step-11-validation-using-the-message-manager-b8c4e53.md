@@ -8,11 +8,11 @@ So far, we have created a currency field that can format itself correctly. The c
 
 ## Preview
 
-   
+  
   
 **A message appears**
 
- ![](images/Tutorial_Data_Binding_Step_11_3_e67207b.png "A message appears") 
+![](images/Tutorial_Data_Binding_Step_11_3_e67207b.png "A message appears")
 
 
 
@@ -88,7 +88,7 @@ You can now enter a non-numeric value into the *Sales Amount* field and either p
 
 Now that the view has been registered with the `MessageManager`, any validation error messages will be picked up by the `MessageManager`, which in turn checks its list of registered objects and then passes the error message back to the correct view for display.
 
-Note that the field in error has a red border: ![](images/Tutorial_Data_Binding_Step_11_2_44db88e.png) 
+Note that the field in error has a red border: ![](images/Tutorial_Data_Binding_Step_11_2_44db88e.png)
 
 However, the error message itself will only be displayed when that particular field has focus: ![](images/Tutorial_Data_Binding_Step_11_3_e67207b.png)
 

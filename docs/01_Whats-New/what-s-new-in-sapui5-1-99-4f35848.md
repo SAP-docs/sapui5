@@ -6,7 +6,7 @@ With this release SAPUI5 is upgraded from version 1.98 to 1.99.
 
 
 
-** **
+****
 
 
 <table>
@@ -64,28 +64,28 @@ Available as of
 <tr>
 <td valign="top">
 
- 1.99 
+1.99 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **SAPUI5 OData V4 Model** 
+**SAPUI5 OData V4 Model** 
 
 
 
@@ -130,28 +130,28 @@ Info Only
 <tr>
 <td valign="top">
 
- 1.99 
+1.99 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.Carousel`** 
+**`sap.m.Carousel`** 
 
 
 
@@ -169,7 +169,7 @@ The control now shows `sap.m.illustratedMessage` in use cases where there’s no
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -185,28 +185,28 @@ The control now shows `sap.m.illustratedMessage` in use cases where there’s no
 <tr>
 <td valign="top">
 
- 1.99 
+1.99 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.DynamicDateRange` \(Experimental\)** 
+**`sap.m.DynamicDateRange` \(Experimental\)** 
 
 
 
@@ -233,7 +233,7 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.Ti
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -249,28 +249,28 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.Ti
 <tr>
 <td valign="top">
 
- 1.99 
+1.99 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.SinglePlanningCalendar`** 
+**`sap.m.SinglePlanningCalendar`** 
 
 
 
@@ -288,7 +288,7 @@ We have introduced new behavior – an option to zoom in and zoom out to make th
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -304,28 +304,28 @@ We have introduced new behavior – an option to zoom in and zoom out to make th
 <tr>
 <td valign="top">
 
- 1.99 
+1.99 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.upload.UploadSet`** 
+**`sap.m.upload.UploadSet`** 
 
 
 
@@ -345,7 +345,7 @@ The `itemDragStart` and `itemDrop` events are also being exposed. These events r
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -361,28 +361,28 @@ The `itemDragStart` and `itemDrop` events are also being exposed. These events r
 <tr>
 <td valign="top">
 
- 1.99 
+1.99 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.smartfield.SmartField`** 
+**`sap.ui.comp.smartfield.SmartField`** 
 
 
 
@@ -406,7 +406,7 @@ You can format the date in the `sap.ui.core.CustomData` class with `key:“dateF
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -422,28 +422,28 @@ You can format the date in the `sap.ui.core.CustomData` class with `key:“dateF
 <tr>
 <td valign="top">
 
- 1.99 
+1.99 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.smartfilterbar.SmartFilterBar`** 
+**`sap.ui.comp.smartfilterbar.SmartFilterBar`** 
 
 
 
@@ -481,7 +481,7 @@ For more information, see the [Sample](https://ui5.sap.com/#/entity/sap.ui.comp.
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -497,28 +497,28 @@ For more information, see the [Sample](https://ui5.sap.com/#/entity/sap.ui.comp.
 <tr>
 <td valign="top">
 
- 1.99 
+1.99 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.smarttable.SmartTable`** 
+**`sap.ui.comp.smarttable.SmartTable`** 
 
 
 
@@ -536,7 +536,7 @@ We now support the `com.sap.vocabularies.Common.v1.Timezone` annotation. The ann
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -552,28 +552,28 @@ We now support the `com.sap.vocabularies.Common.v1.Timezone` annotation. The ann
 <tr>
 <td valign="top">
 
- 1.99 
+1.99 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.integration.widgets.Card`** 
+**`sap.ui.integration.widgets.Card`** 
 
 
 
@@ -598,7 +598,7 @@ We now support the `com.sap.vocabularies.Common.v1.Timezone` annotation. The ann
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -614,28 +614,28 @@ We now support the `com.sap.vocabularies.Common.v1.Timezone` annotation. The ann
 <tr>
 <td valign="top">
 
- 1.99 
+1.99 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- SAP Fiori Elements 
+SAP Fiori Elements 
 
 
 
 </td>
 <td valign="top">
 
- **SAP Fiori elements for OData V2** 
+**SAP Fiori elements for OData V2** 
 
 
 
@@ -658,7 +658,7 @@ The following changes and new features are available for SAP Fiori elements for 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -674,28 +674,28 @@ The following changes and new features are available for SAP Fiori elements for 
 <tr>
 <td valign="top">
 
- 1.99 
+1.99 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- SAP Fiori Elements 
+SAP Fiori Elements 
 
 
 
 </td>
 <td valign="top">
 
- **SAP Fiori elements for OData V4** 
+**SAP Fiori elements for OData V4** 
 
 
 
@@ -730,7 +730,7 @@ The following changes and new features are available for SAP Fiori elements for 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -747,6 +747,8 @@ The following changes and new features are available for SAP Fiori elements for 
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.115](what-s-new-in-sapui5-1-115-409fde8.md "With this release SAPUI5 is upgraded from version 1.114 to 1.115.")
 
 [What's New in SAPUI5 1.114](what-s-new-in-sapui5-1-114-890fce1.md "With this release SAPUI5 is upgraded from version 1.113 to 1.114.")
 

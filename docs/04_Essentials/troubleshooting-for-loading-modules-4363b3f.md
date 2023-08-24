@@ -224,7 +224,7 @@ The dependent modules are waiting for the module callback execution to be finish
 
 **Example**: The file for module C has one top-level `sap.ui.require` instead of a top-level `sap.ui.define` call. The module callback evaluation order starts with module B, because it has no dependencies. Afterwards, the framework can execute module A or module C, because the intended module C is not a module from the module loader perspective. Furthermore, the undefined export value of module C will most probably lead to errors in module A. If module C is defined correctly via a top-level `sap.ui.define` call, the module callback execution order is clear: B - C - A.
 
- ![](images/Image_Module_Loading_BP_4_87c101d.png) 
+![](images/Image_Module_Loading_BP_4_87c101d.png)
 
 
 

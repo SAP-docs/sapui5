@@ -10,11 +10,11 @@ The rating indicator allows you to visually represent the value of a field from 
 
 Decimal values are rounded up or down accordingly. If a value falls between x.25 and x.74, a half star is displayed.
 
-   
+  
   
 **Rating Indicator in Table**
 
- ![](images/Rating_Indicator_in_Table_f83c4d3.png "Rating Indicator in Table") 
+![](images/Rating_Indicator_in_Table_f83c4d3.png "Rating Indicator in Table")
 
 
 

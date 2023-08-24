@@ -8,9 +8,9 @@ Various bars can have different value colors, for example for different statuses
 
 The `sap.suite.ui.microchart.StackedBarMicroChart` control is designed to display key figures or numbers inside a set of bars defined by different lengths and colors. It can be displayed standalone or in a table.
 
- ![Stacked Bar Micro Chart with percentage values](images/StackedBar_MC_Standalone_fa042ce.jpg) 
+![Stacked Bar Micro Chart with percentage values](images/StackedBar_MC_Standalone_fa042ce.jpg)
 
- ![Stacked Bar Micro Chart in a table with absolute values](images/StackedBar_MC_in_Table_fd785e3.jpg) 
+![Stacked Bar Micro Chart in a table with absolute values](images/StackedBar_MC_in_Table_fd785e3.jpg)
 
 
 

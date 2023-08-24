@@ -188,7 +188,7 @@ Use an OData form and pass the `UI.ReferenceFacet` to it. This, in turn, has a `
 
 This groups the fields in a form-like display, as shown in the following screenshot:
 
- ![](images/Related_Fields_Using_a_Form_Implementation_b9b30bd.png) 
+![](images/Related_Fields_Using_a_Form_Implementation_b9b30bd.png)
 
 > ### Note:  
 > -   If there is no `Headerfacet` annotation and if the `Headerinfo` annotation doesn’t contain any images, then the expand or collapse button and the pin button are hidden from the object page header.
@@ -349,7 +349,7 @@ The following annotation types are currently supported:
 
 This displays a `DataField` and a dummy button, as shown in the following screenshot:
 
- ![](images/DataField_with_Dummy_Button_8c91e4e.png) 
+![](images/DataField_with_Dummy_Button_8c91e4e.png)
 
 > ### Note:  
 > -   The `FieldGroup` is not supported in grid tables.
@@ -369,7 +369,7 @@ You use the `UI.ConnectedFields` annotation to display two fields side by side.
 > ### Example:  
 > You can maintain date and time as two properties in the back end and show this information in a single form. You can use a delimiter to separate the two values.
 
- ![](images/Semantically_Connected_Fields_eb0b024.png) 
+![](images/Semantically_Connected_Fields_eb0b024.png)
 
 
 
@@ -480,12 +480,12 @@ You can show the labels of fields inside the table columns when you show a `Fiel
 
 You can see what the result looks like in the following screenshot:
 
-   
+  
   
 **FieldGroup Column "Sold-To Party" with Field Labels**
 
- ![](images/FieldGroup_Column_Sold-To_Party_with_Field_Labels_81e38b2.png "FieldGroup Column "Sold-To Party" with Field
-                        Labels") 
+![](images/FieldGroup_Column_Sold-To_Party_with_Field_Labels_81e38b2.png "FieldGroup Column "Sold-To Party" with Field
+                        Labels")
 
 For more information about how to find the right key for a column, see [Finding the Right Key for the Anchor](finding-the-right-key-for-the-anchor-6ffb084.md).
 

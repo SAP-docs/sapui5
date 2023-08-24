@@ -55,28 +55,28 @@ Desktop
 </td>
 <td valign="top">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
@@ -92,28 +92,28 @@ Tablet
 </td>
 <td valign="top">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
@@ -129,28 +129,28 @@ Phone
 </td>
 <td valign="top">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
 
 
 
@@ -166,28 +166,28 @@ Responsive \(hide column, popin support\)
 </td>
 <td valign="top">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
 
 
 
@@ -203,28 +203,28 @@ Compact density
 </td>
 <td valign="top">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
@@ -240,28 +240,28 @@ Condensed density
 </td>
 <td valign="top">
 
- ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
@@ -277,28 +277,28 @@ Cozy density
 </td>
 <td valign="top">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
@@ -314,28 +314,28 @@ Summarized cell
 </td>
 <td valign="top">
 
- ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
 
 
 
@@ -351,28 +351,28 @@ Hierarchical data
 </td>
 <td valign="top">
 
- ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
@@ -388,28 +388,28 @@ Large number of rows \(\> 200\)<sup>2</sup>
 </td>
 <td valign="top">
 
- ![Partly](../02_Read-Me-First/images/Yellow_Led_3ea53dc.gif) 
+![Partly](../02_Read-Me-First/images/Yellow_Led_3ea53dc.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
@@ -425,28 +425,28 @@ Grouping
 </td>
 <td valign="top">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
 
 
 
@@ -462,28 +462,28 @@ Freeze columns
 </td>
 <td valign="top">
 
- ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
@@ -499,28 +499,28 @@ Horizontal scrolling
 </td>
 <td valign="top">
 
- ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
@@ -536,28 +536,28 @@ Merge duplicates
 </td>
 <td valign="top">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
 
 
 
@@ -610,28 +610,28 @@ Row-based
 </td>
 <td valign="top">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
 
 
 
@@ -647,28 +647,28 @@ Column-based
 </td>
 <td valign="top">
 
- ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
@@ -720,7 +720,7 @@ Requires manual modifications
 -   ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif): Feature is not supported for this table type
 
 
-1\) `Text`, `Label`, `ObjectStatus`, `Icon`, `Button`, `Input`, `DatePicker`, `Select`, `ComboBox`, `MultiComboBox`, `CheckBox`, `Link`, `Currency`, `RatingIndicator`, `ProgressIndicator`as well as the `StackedBarMicroChart`, `ComparisonMicroChart` , and `BulletMicroChart` controls \(of responsive or extra small size\); To keep the control height always stable, the `wrapping` and `renderWhitespace` properties in the `sap.m.Text` control, for example, must be set to `false`. For more information, search for cell level in the  [SAP Fiori Design Guidelines](https://experience.sap.com/fiori-design-web/).
+1\) `Text`, `Label`, `ObjectStatus`, `Icon`, `Button`, `Input`, `DatePicker`, `Select`, `ComboBox`, `MultiComboBox`, `CheckBox`, `Link`, `Currency`, `RatingIndicator`, `ProgressIndicator`as well as the `StackedBarMicroChart`, `ComparisonMicroChart` , and `BulletMicroChart` controls \(of responsive or extra small size\); To keep the control height always stable, the `wrapping` and `renderWhitespace` properties in the `sap.m.Text` control, for example, must be set to `false`. For more information, search for cell level in the [SAP Fiori Design Guidelines](https://experience.sap.com/fiori-design-web/).
 
 2\) To optimize perfomance, we recommend to show no more than 200 items at once in the responsive table. For a larger number of items \(up to 1000\), use the growing feature to limit the number of displayed items and make sure the user can filter the data. For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.Table) for the growing\* properties. 
 
@@ -737,7 +737,7 @@ Requires manual modifications
 > 
 > -   The browser being used
 
-For more information, search for loading items and performance in the responsive table section in the  [SAP Fiori Design Guidelines](https://experience.sap.com/fiori-design-web/).
+For more information, search for loading items and performance in the responsive table section in the [SAP Fiori Design Guidelines](https://experience.sap.com/fiori-design-web/).
 
 
 

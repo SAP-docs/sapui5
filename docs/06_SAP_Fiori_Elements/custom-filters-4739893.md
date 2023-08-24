@@ -33,14 +33,14 @@ Add custom filters to your overview page application. It provides the end users 
     <tr>
     <td valign="top">
     
-         `groupId` 
+    `groupId` 
 
 
     
     </td>
     <td valign="top">
     
-        Enter a group ID to associate the custom controller to a group.
+    Enter a group ID to associate the custom controller to a group.
 
     > ### Note:  
     > If the group ID does not exist, the filter is added to the default group.
@@ -52,30 +52,14 @@ Add custom filters to your overview page application. It provides the end users 
     <tr>
     <td valign="top">
     
-         `key` 
+    `key` 
 
 
     
     </td>
     <td valign="top">
     
-        Enter a property of an entity type to define the filter criteria.
-
-
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-         `visibleInAdvancedArea` 
-
-
-    
-    </td>
-    <td valign="top">
-    
-        Enable this property to view custom filters on the filter bar.
+    Enter a property of an entity type to define the filter criteria.
 
 
     
@@ -84,14 +68,30 @@ Add custom filters to your overview page application. It provides the end users 
     <tr>
     <td valign="top">
     
-         `Input id` 
+    `visibleInAdvancedArea` 
 
 
     
     </td>
     <td valign="top">
     
-        Enter a property of an entity type to define the input criteria.
+    Enable this property to view custom filters on the filter bar.
+
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    `Input id` 
+
+
+    
+    </td>
+    <td valign="top">
+    
+    Enter a property of an entity type to define the input criteria.
 
 
     

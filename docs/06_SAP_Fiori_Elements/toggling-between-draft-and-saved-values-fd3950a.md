@@ -45,7 +45,7 @@ Navigating back to a List Report
 <tr>
 <td valign="top">
 
- *All \(Hiding Drafts\)* 
+*All \(Hiding Drafts\)* 
 
 
 
@@ -74,18 +74,27 @@ Only the saved objects with their respective data are displayed in the list repo
 </tr>
 </table>
 
- ![](images/Toggling_Between_Draft_and_Saved_Values_1_6817734.png) 
+![](images/Toggling_Between_Draft_and_Saved_Values_1_6817734.png)
 
 On the object page, the *Saved Version*/*Draft* button is visible if a draft exists. The *Saved Version*/*Draft* button opens a popover that allows you to toggle between the draft and saved version of an object page. The label of the button clearly indicates which version of the object page you're working with.
 
 In the following screenshot, the object page displays the *Draft* version with the popover you can use to toggle:
 
- ![](images/Object_Page_Draft_Version_is_Shown_Including_Toggle_Popover_fbdd6a2.png) 
+![](images/Object_Page_Draft_Version_is_Shown_Including_Toggle_Popover_fbdd6a2.png)
 
 In the following screenshot, the object page displays the *Saved Version*:
 
- ![](images/Object_Page_Saved_Version_is_Shown_4d6823f.png) 
+![](images/Object_Page_Saved_Version_is_Shown_4d6823f.png)
 
 > ### Note:  
-> In SAP Fiori elements for OData V2 apps with the classic header. the header toolbar shows the *Display Saved Version*/*Return to Draft* button instead of the menu button next to the title.
+> In SAP Fiori elements for OData V2 apps with the classic header, the header toolbar shows the *Display Saved Version*/*Return to Draft* button instead of the menu button next to the title.
+
+
+
+<a name="loiofd3950a0b251439ab8cd4153d64844b6__section_mxn_wxs_hyb"/>
+
+## Related Links
+
+-   [Draft Handling](draft-handling-ed9aa41.md)
+
 

@@ -48,7 +48,7 @@ Description
 <tr>
 <td valign="top">
 
- `description` 
+`description` 
 
 
 
@@ -64,7 +64,7 @@ Contains the string entered as label so that a specific facet filter object can 
 <tr>
 <td valign="top">
 
- `id` 
+`id` 
 
 
 
@@ -80,7 +80,7 @@ Unique ID of type string
 <tr>
 <td valign="top">
 
- `property` 
+`property` 
 
 
 
@@ -98,7 +98,7 @@ If `alias` is not defined, `property` is also used as select property for `value
 <tr>
 <td valign="top">
 
- `alias` 
+`alias` 
 
 
 
@@ -118,7 +118,7 @@ If `property` and `alias` are the same, `alias` can be omitted.
 <tr>
 <td valign="top">
 
- `valueHelpRequest` 
+`valueHelpRequest` 
 
 
 
@@ -134,7 +134,7 @@ ID of the request used for providing a value help to select values in the facet 
 <tr>
 <td valign="top">
 
- `filterResolutionRequest` 
+`filterResolutionRequest` 
 
 
 
@@ -150,7 +150,7 @@ ID of the request used for resolving a filter into single values for the value h
 <tr>
 <td valign="top">
 
- `multiSelection` 
+`multiSelection` 
 
 
 
@@ -166,7 +166,7 @@ Defines whether selection of multiple values is possible.
 <tr>
 <td valign="top">
 
- `preselectionDefaults` 
+`preselectionDefaults` 
 
 
 
@@ -182,7 +182,7 @@ Array of values that are preselected in the facet filter.
 <tr>
 <td valign="top">
 
- `preselectionFunction` 
+`preselectionFunction` 
 
 
 
@@ -198,7 +198,7 @@ Path to the function used if the preselected values need to be calculated.
 <tr>
 <td valign="top">
 
- `label` 
+`label` 
 
 
 

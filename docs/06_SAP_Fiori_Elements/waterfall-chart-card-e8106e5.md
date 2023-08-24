@@ -132,9 +132,9 @@ Waterfall charts allow you to see the change in cumulative values from the initi
 > 
 > ```
 
-   
+  
   
 **Example of a Waterfall Chart Card**
 
- ![](images/Waterfall_Chart_Card_0e381e6.png "Example of a Waterfall Chart Card") 
+![](images/Waterfall_Chart_Card_0e381e6.png "Example of a Waterfall Chart Card")
 

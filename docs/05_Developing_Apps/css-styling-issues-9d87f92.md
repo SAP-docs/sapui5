@@ -53,7 +53,7 @@ Good Example
 
 Add a custom CSS class to the control in those situations where you want additional styling:
 
- `oButton.addStyleClass("poaAppError");`
+`oButton.addStyleClass("poaAppError");`
 
 Then provide the style for this class:
 

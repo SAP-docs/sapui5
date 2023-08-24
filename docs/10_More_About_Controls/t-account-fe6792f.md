@@ -20,7 +20,7 @@ In double-entry bookkeeping, journal entries are transferred to the general ledg
 
 T accounts are usually clustered together, so that accountants can analyze how individual line items from different journal entries affect the ledger balances.
 
- ![T Accounts](../01_Whats-New/images/WhatsNew_158_T_Account_3894aeb.jpg) 
+![T Accounts](../01_Whats-New/images/WhatsNew_158_T_Account_3894aeb.jpg)
 
 
 

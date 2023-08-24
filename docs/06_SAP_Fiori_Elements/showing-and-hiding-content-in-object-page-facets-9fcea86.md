@@ -12,19 +12,19 @@ You can show or hide reference facets on the UI using the *Show More* and *Show 
 
 The *Show More* button appears in the bottom right corner if hidden facets are available.
 
-   
+  
   
 **Show More**
 
- ![](images/Object_Page_Facets_Show_More_f0f38e7.png "Show More") 
+![](images/Object_Page_Facets_Show_More_f0f38e7.png "Show More")
 
 The *Show Less* button appears in the bottom right corner if a user has clicked the *Show More* button, allowing users to hide the additional information.
 
-   
+  
   
 **Show Less**
 
- ![](images/Object_Page_Hiding_A_Facet_From_the_UI_Show_Less_Button_a360c97.png "Show Less") 
+![](images/Object_Page_Hiding_A_Facet_From_the_UI_Show_Less_Button_a360c97.png "Show Less")
 
 To enable this feature, set the `UI.PartOfPreview` annotation of the relevant reference facet to `false`, as shown in the following sample code:
 
@@ -82,11 +82,11 @@ You can show or hide fields and tables inside reference facets on the UI using t
 
 The *Show Details* button appears in the facet toolbar if hidden fields and tables are available:
 
- ![](images/Showing_Fields_Inside_Reference_Facets_Show_Details_Link_01c3179.png) 
+![](images/Showing_Fields_Inside_Reference_Facets_Show_Details_Link_01c3179.png)
 
 The *Hide Details* button appears in the facet toolbar if the user has clicked the *Show Details* button. This allows users to hide the additional information again.
 
- ![](images/Hiding_Fields_Inside_Reference_Facets_Hide_Details_Link_985838c.png) 
+![](images/Hiding_Fields_Inside_Reference_Facets_Hide_Details_Link_985838c.png)
 
 To enable this feature, set the `UI.PartOfPreview` annotation of the relevant reference facet to `false`, as shown in the following sample code:
 

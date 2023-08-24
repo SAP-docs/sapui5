@@ -8,7 +8,7 @@ In the extension function, you can define the logic or condition that triggers t
 
 The figure below shows a sample navigation scenario:
 
- ![](images/Internal_Navigation_11d89ac.png) 
+![](images/Internal_Navigation_11d89ac.png)
 
 
 

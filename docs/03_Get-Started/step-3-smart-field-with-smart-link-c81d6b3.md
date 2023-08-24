@@ -10,35 +10,35 @@ We will learn that a `SmartField` control in an XML view bound to an OData model
 
 ## Preview
 
-   
+  
   
 **Smart Field with Smart Link**
 
- ![](images/Smart_Controls_Tutorial_Step_01a_f74fd0e.png "Smart Field with Smart Link") 
+![](images/Smart_Controls_Tutorial_Step_01a_f74fd0e.png "Smart Field with Smart Link")
 
 When you choose the link, a dialog opens:
 
-   
+  
   
 **Dialog with Navigation Targets**
 
- ![](images/Smart_Controls_Tutorial_Step_03b_fc22fa7.png "Dialog with Navigation Targets") 
+![](images/Smart_Controls_Tutorial_Step_03b_fc22fa7.png "Dialog with Navigation Targets")
 
 When you choose *More Links*, a dialog opens where you can select the cross-application links you want to see.
 
-   
+  
   
 **Link List**
 
- ![](images/Smart_Controls_Tutorial_Step_03c_408cba9.png "Link List") 
+![](images/Smart_Controls_Tutorial_Step_03c_408cba9.png "Link List")
 
 After your selection, the dialog looks like this:
 
-   
+  
   
 **Changed Links**
 
- ![](images/Smart_Controls_Tutorial_Step_03d_93c346e.png "Changed Links") 
+![](images/Smart_Controls_Tutorial_Step_03d_93c346e.png "Changed Links")
 
 You can choose *More Links* to go back to the link list.
 

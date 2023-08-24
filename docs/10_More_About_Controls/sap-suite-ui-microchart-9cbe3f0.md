@@ -16,7 +16,7 @@ The different values can be visualized in the charts by a semantically-colored r
 > ### Note:  
 > You can include a `MicroChart` control into a `GenericTile` control in the responsive mode only. However, if you define a width, a height, and size properties, this data is overwritten and the responsive mode is used.
 
- ![Different microcharts](images/MicroChart_Library_Image_fc12e08.png) 
+![Different microcharts](images/MicroChart_Library_Image_fc12e08.png)
 
 
 

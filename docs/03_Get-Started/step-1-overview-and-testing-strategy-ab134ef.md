@@ -11,11 +11,11 @@ In this step, we will take a look at the prototype and define the test strategy 
 
 ## Preview
 
-   
+  
   
 **The prototype app**
 
- ![](images/Tutorial_Testing_Step_01_7946d24.png "The prototype app") 
+![](images/Tutorial_Testing_Step_01_7946d24.png "The prototype app")
 
 
 
@@ -27,11 +27,11 @@ Depending on your development environment, you might have to adjust resource pat
 
 After downloading *Step 1*, you should have the following files:
 
-   
+  
   
 **Folder structure with downloaded files**
 
- ![](images/Tutorial_Testing_Step_01_2_8007848.png "Folder structure with downloaded files") 
+![](images/Tutorial_Testing_Step_01_2_8007848.png "Folder structure with downloaded files")
 
 
 
@@ -123,11 +123,11 @@ The mock server is also set up and allows us to test the app with local test dat
 
 Before you start implementing your first test, you should think about how to test the different aspects of your application. The image below shows the testing tools along the agile testing pyramid.
 
-   
+  
   
 **Testing pyramid**
 
- ![](images/Tutorial_Testing_Step_01_2_88758c3.png "Testing pyramid") 
+![](images/Tutorial_Testing_Step_01_2_88758c3.png "Testing pyramid")
 
 When you set up application testing, you should automate as many testing steps as possible. If you immediately write a test for all the features that we implement, then you can greatly reduce manual testing efforts that are time consuming and cumbersome. If you change something later, you can simply run the existing tests and see if the functionality is still working as expected.
 

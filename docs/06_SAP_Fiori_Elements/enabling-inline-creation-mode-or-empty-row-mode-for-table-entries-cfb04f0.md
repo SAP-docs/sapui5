@@ -39,6 +39,61 @@ The behavior of the available modes is as follows:
 
 
 
+
+
+### Disabling Fields in the Empty Row Mode
+
+Certain fields in the `inlineCreationRows` may become relevant only after the row has been created. They can be disabled so that they appear as read-only in the empty row.
+
+To disable a field, use the `Capabilities.InsertRestrictions.NonInsertableProperties` annotation.
+
+The list of `NonInsertableProperties` is first checked at the navigation property level. If it's not found there, it is checked at the entity set level.
+
+> ### Sample Code:  
+> XML Annotation
+> 
+> ```
+> <Annotations Target="com.c_salesordermanage_sd.SalesOrderManage/_Item">
+>     ...
+>     <Annotation Term="Capabilities.InsertRestrictions">
+>         <Record Type="Capabilities.InsertRestrictionsType">
+>             <PropertyValue Property="NonInsertableProperties">
+>                 <Collection>
+>                     <PropertyPath>RequestedQuantity</PropertyPath>
+>                 </Collection>
+>             </PropertyValue>
+>         </Record>
+>     </Annotation>
+>     ...
+> </Annotations>
+> ```
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> entity SalesOrderItem
+> {
+>     ...
+>    RequestedQuantity : Decimal(15, 3);
+>     ...
+>     owner             : Association to one SalesOrderManage;
+>     ...
+> }
+>  
+> entity SalesOrderManage
+> {
+>     ...
+>     _Item : Composition of many SalesOrderItem
+>             on _Item.owner = $self @(Capabilities: {InsertRestrictions: {NonInsertableProperties: [RequestedQuantity]}});
+>     ...
+> }
+>  
+> 
+> ```
+
+
+
 <a name="loiocfb04f0c58e7409992feb4c91aa9410b__section_app_g2l_hrb"/>
 
 ## Additional Features in SAP Fiori Elements for OData V2
@@ -213,54 +268,5 @@ To change this behavior, you can use the parameter `inlineCreationRowsHiddenInEd
 
 
 
-### Disabling Fields in the Empty Row Mode
-
-Certain fields in the `inlineCreationRows` may become relevant only after the row has been created. They can be disabled so that they appear as read-only in the empty row.
-
-To disable a field, use the `Capabilities.InsertRestrictions.NonInsertableProperties` annotation.
-
-The list of `NonInsertableProperties` is first checked at the navigation property level. If it's not found there, it is checked at the entity set level.
-
-> ### Sample Code:  
-> XML Annotation
-> 
-> ```
-> <Annotations Target="com.c_salesordermanage_sd.SalesOrderManage/_Item">
->     ...
->     <Annotation Term="Capabilities.InsertRestrictions">
->         <Record Type="Capabilities.InsertRestrictionsType">
->             <PropertyValue Property="NonInsertableProperties">
->                 <Collection>
->                     <PropertyPath>RequestedQuantity</PropertyPath>
->                 </Collection>
->             </PropertyValue>
->         </Record>
->     </Annotation>
->     ...
-> </Annotations>
-> ```
-
-> ### Sample Code:  
-> CAP CDS Annotation
-> 
-> ```
-> entity SalesOrderItem
-> {
->     ...
->    RequestedQuantity : Decimal(15, 3);
->     ...
->     owner             : Association to one SalesOrderManage;
->     ...
-> }
->  
-> entity SalesOrderManage
-> {
->     ...
->     _Item : Composition of many SalesOrderItem
->             on _Item.owner = $self @(Capabilities: {InsertRestrictions: {NonInsertableProperties: [RequestedQuantity]}});
->     ...
-> }
->  
-> 
-> ```
+### 
 

@@ -4,7 +4,7 @@
 
 With this release SAPUI5 is upgraded from version 1.46 to 1.48.
 
-** **
+****
 
 
 <table>
@@ -62,28 +62,28 @@ Available as of
 <tr>
 <td valign="top">
 
- 1.48 
+1.48 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Announcement 
+Announcement 
 
 
 
 </td>
 <td valign="top">
 
- **Third-Party Library Upgrades** 
+**Third-Party Library Upgrades** 
 
 
 
@@ -113,7 +113,7 @@ Available as of
 </td>
 <td valign="top">
 
- Info Only
+Info Only
 
 
 
@@ -129,28 +129,28 @@ Available as of
 <tr>
 <td valign="top">
 
- 1.48 
+1.48 
 
 
 
 </td>
 <td valign="top">
 
- New 
+New 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Support Assistant and Other Support Tools** 
+**Support Assistant and Other Support Tools** 
 
 
 
@@ -170,7 +170,7 @@ The main features of the tool are:
 -   Results reporting
 
 
- ![](images/WhatsNew_148_Support_Assistant_78e2768.png) 
+![](images/WhatsNew_148_Support_Assistant_78e2768.png)
 
 For more information, see [Support Assistant](../04_Essentials/support-assistant-57ccd7d.md).
 
@@ -183,7 +183,7 @@ We have also redesigned the other support tools, *Technical Information Dialog* 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -199,28 +199,28 @@ We have also redesigned the other support tools, *Technical Information Dialog* 
 <tr>
 <td valign="top">
 
- 1.48 
+1.48 
 
 
 
 </td>
 <td valign="top">
 
- New 
+New 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Reuse Components** 
+**Reuse Components** 
 
 
 
@@ -244,7 +244,7 @@ For more information, see [Using and Nesting Components](../04_Essentials/using-
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -260,28 +260,28 @@ For more information, see [Using and Nesting Components](../04_Essentials/using-
 <tr>
 <td valign="top">
 
- 1.48 
+1.48 
 
 
 
 </td>
 <td valign="top">
 
- New 
+New 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Object Page Personalization \(experimental\)** 
+**Object Page Personalization \(experimental\)** 
 
 
 
@@ -301,7 +301,7 @@ For more information, search for *Personalizing Apps* in the documentation for y
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -317,28 +317,28 @@ For more information, search for *Personalizing Apps* in the documentation for y
 <tr>
 <td valign="top">
 
- 1.48 
+1.48 
 
 
 
 </td>
 <td valign="top">
 
- New 
+New 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Theme Parameter Tool** 
+**Theme Parameter Tool** 
 
 
 
@@ -351,7 +351,7 @@ There is a new theme parameter tool for finding the best-fitting semantic LESS p
 
 With the tool, you can also preview all supported SAP themes and find information about the semantic parameter structure.
 
- ![](images/Demoapp_Theme_Parameters_f1355e7.png) 
+![](images/Demoapp_Theme_Parameters_f1355e7.png)
 
 To find the tool, see [Demo Apps](https://ui5.sap.com/#/demoapps).
 
@@ -362,7 +362,7 @@ To find the tool, see [Demo Apps](https://ui5.sap.com/#/demoapps).
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -378,28 +378,28 @@ To find the tool, see [Demo Apps](https://ui5.sap.com/#/demoapps).
 <tr>
 <td valign="top">
 
- 1.48 
+1.48 
 
 
 
 </td>
 <td valign="top">
 
- New 
+New 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.MessageView`** 
+**`sap.m.MessageView`** 
 
 
 
@@ -412,7 +412,7 @@ Displays a summarized list of different types of messages. The `MessageView` is 
 
 `sap.m.MessageView` also allows grouping of messages by setting the property `groupItems` and defining a `groupName` for each item. For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.MessageView) and the [samples](https://ui5.sap.com/#/sample/sap.m.sample.MessageViewWithGrouping/preview).
 
- ![](images/WhatsNew_148_MessageView_6244b88.png) 
+![](images/WhatsNew_148_MessageView_6244b88.png)
 
 <sub>New•Control•Info Only•1.48</sub>
 
@@ -421,7 +421,7 @@ Displays a summarized list of different types of messages. The `MessageView` is 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -437,28 +437,28 @@ Displays a summarized list of different types of messages. The `MessageView` is 
 <tr>
 <td valign="top">
 
- 1.48 
+1.48 
 
 
 
 </td>
 <td valign="top">
 
- New 
+New 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.CustomTreeItem`** 
+**`sap.m.CustomTreeItem`** 
 
 
 
@@ -476,7 +476,7 @@ Similar to `sap.m.CustomListItem` for the `sap.m.List` control, the `sap.m.Custo
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -492,28 +492,28 @@ Similar to `sap.m.CustomListItem` for the `sap.m.List` control, the `sap.m.Custo
 <tr>
 <td valign="top">
 
- 1.48 
+1.48 
 
 
 
 </td>
 <td valign="top">
 
- New 
+New 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.PDFViewer`** 
+**`sap.m.PDFViewer`** 
 
 
 
@@ -524,7 +524,7 @@ Similar to `sap.m.CustomListItem` for the `sap.m.List` control, the `sap.m.Custo
 
 **`sap.m.PDFViewer`** enables SAP Fiori developers to display PDF files in a consistent way across all browsers and devices. It encapsulates browser-specific PDF viewer plugins and provides a simple API to embed a PDF file into a page or to open it in a dialog box. For more information, see [PDF Viewer](../10_More_About_Controls/pdf-viewer-cd80a8b.md), the [API Reference](https://ui5.sap.com/#/api/sap.m.PDFViewer), and the [sample](https://ui5.sap.com/#/entity/sap.m.PDFViewer). 
 
- ![](images/WhatsNew_148_PDFViewer_3c7c40d.png) 
+![](images/WhatsNew_148_PDFViewer_3c7c40d.png)
 
 <sub>New•Control•Info Only•1.48</sub>
 
@@ -533,7 +533,7 @@ Similar to `sap.m.CustomListItem` for the `sap.m.List` control, the `sap.m.Custo
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -549,28 +549,28 @@ Similar to `sap.m.CustomListItem` for the `sap.m.List` control, the `sap.m.Custo
 <tr>
 <td valign="top">
 
- 1.48 
+1.48 
 
 
 
 </td>
 <td valign="top">
 
- New 
+New 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.rules.ui.RuleBuilder`** 
+**`sap.rules.ui.RuleBuilder`** 
 
 
 
@@ -587,26 +587,26 @@ Similar to `sap.m.CustomListItem` for the `sap.m.List` control, the `sap.m.Custo
 
 -   Choosing the results set \(`then` statements\) of the decision table.
 
-     ![](images/WhatsNew_148_RuleBuilder_165859e.png) 
+    ![](images/WhatsNew_148_RuleBuilder_165859e.png)
 
 -   Setting each column’s input mode:
 
     -   **Guided input mode** \(default\) guides the user through the process of entering values for conditions in decision table cells.
 
-         ![](images/WhatsNew_148_RuleBuilder2_df20da4.png) 
+        ![](images/WhatsNew_148_RuleBuilder2_df20da4.png)
 
     -   **Text input mode** allows the user to enter text directly into conditions in decision table cells, and provides support via auto-suggest and validation services.
 
-         ![](images/WhatsNew_148_RuleBuilder3_5d6c1e1.png) 
+        ![](images/WhatsNew_148_RuleBuilder3_5d6c1e1.png)
 
 
 -   In both input modes, the client-side parser provides auto-suggestion and validation of values from the business vocabulary and business language relevant to the specific decision table. Errors are highlighted and messages provide alternative suggestions.
 
-     ![](images/WhatsNew_148_RuleBuilder4_cd91cc4.png) 
+    ![](images/WhatsNew_148_RuleBuilder4_cd91cc4.png)
 
 -   Performing copy, cut, paste, insert after, and insert before actions on a row of a decision table.
 
-     ![](images/WhatsNew_148_RuleBuilder5_3ef3328.png) 
+    ![](images/WhatsNew_148_RuleBuilder5_3ef3328.png)
 
 
 For more information, see [Rule Builder Control Tutorial](../03_Get-Started/rule-builder-control-tutorial-67fcb30.md), the [API Reference](https://ui5.sap.com/#/api/sap.rules.ui.RuleBuilder), and the [sample](https://ui5.sap.com/#/entity/sap.rules.ui.RuleBuilder). 
@@ -618,7 +618,7 @@ For more information, see [Rule Builder Control Tutorial](../03_Get-Started/rule
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -634,28 +634,28 @@ For more information, see [Rule Builder Control Tutorial](../03_Get-Started/rule
 <tr>
 <td valign="top">
 
- 1.48 
+1.48 
 
 
 
 </td>
 <td valign="top">
 
- New 
+New 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.suite.ui.microchart.LineMicroChart`** 
+**`sap.suite.ui.microchart.LineMicroChart`** 
 
 
 
@@ -668,7 +668,7 @@ For more information, see [Rule Builder Control Tutorial](../03_Get-Started/rule
 
 `LineMicroChart` provides regular points or emphasized points with or without semantic colors. It offers a standard line diagram with an automatically determined or predefined scale \(with optional threshold\).
 
- ![](images/WhatsNew_148_LineMicroChart1_1eeae4e.png) 
+![](images/WhatsNew_148_LineMicroChart1_1eeae4e.png)
 
 For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.suite.ui.microchart.LineMicroChart) and the [samples](https://ui5.sap.com/#/entity/sap.suite.ui.microchart.LineMicroChart).
 
@@ -679,7 +679,7 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.suit
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -695,28 +695,28 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.suit
 <tr>
 <td valign="top">
 
- 1.48 
+1.48 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Improved Script Loading** 
+**Improved Script Loading** 
 
 
 
@@ -734,7 +734,7 @@ If loading a resource fails, a second retry is done.
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -750,28 +750,28 @@ If loading a resource fails, a second retry is done.
 <tr>
 <td valign="top">
 
- 1.48 
+1.48 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Date Intervals** 
+**Date Intervals** 
 
 
 
@@ -789,7 +789,7 @@ The `DateFormat` can format two dates as an interval. For more information, see 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -805,28 +805,28 @@ The `DateFormat` can format two dates as an interval. For more information, see 
 <tr>
 <td valign="top">
 
- 1.48 
+1.48 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **SAPUI5 OData V4 Model** 
+**SAPUI5 OData V4 Model** 
 
 
 
@@ -865,7 +865,7 @@ For more information, see [OData V4 Model](../04_Essentials/odata-v4-model-5de13
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -881,28 +881,28 @@ For more information, see [OData V4 Model](../04_Essentials/odata-v4-model-5de13
 <tr>
 <td valign="top">
 
- 1.48 
+1.48 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **One Page Acceptance Tests \(OPA5\)** 
+**One Page Acceptance Tests \(OPA5\)** 
 
 
 
@@ -923,7 +923,7 @@ For more information, see [OData V4 Model](../04_Essentials/odata-v4-model-5de13
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -939,28 +939,28 @@ For more information, see [OData V4 Model](../04_Essentials/odata-v4-model-5de13
 <tr>
 <td valign="top">
 
- 1.48 
+1.48 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **UI Adaptation at Runtime** 
+**UI Adaptation at Runtime** 
 
 
 
@@ -985,7 +985,7 @@ For more information, see [OData V4 Model](../04_Essentials/odata-v4-model-5de13
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1001,28 +1001,28 @@ For more information, see [OData V4 Model](../04_Essentials/odata-v4-model-5de13
 <tr>
 <td valign="top">
 
- 1.48 
+1.48 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.f.Avatar`** 
+**`sap.f.Avatar`** 
 
 
 
@@ -1040,7 +1040,7 @@ With the use of the new `detailBox` aggregation, you can automatically open a `s
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1056,28 +1056,28 @@ With the use of the new `detailBox` aggregation, you can automatically open a `s
 <tr>
 <td valign="top">
 
- 1.48 
+1.48 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.f.DynamicPage`** 
+**`sap.f.DynamicPage`** 
 
 
 
@@ -1095,7 +1095,7 @@ It is now possible to initialize the control with collapsed header. To enable th
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1111,28 +1111,28 @@ It is now possible to initialize the control with collapsed header. To enable th
 <tr>
 <td valign="top">
 
- 1.48 
+1.48 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.gantt`** 
+**`sap.gantt`** 
 
 
 
@@ -1155,7 +1155,7 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.gant
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1171,28 +1171,28 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.gant
 <tr>
 <td valign="top">
 
- 1.48 
+1.48 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.ComboBox`** 
+**`sap.m.ComboBox`** 
 
 
 
@@ -1210,7 +1210,7 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.gant
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1226,28 +1226,28 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.gant
 <tr>
 <td valign="top">
 
- 1.48 
+1.48 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.DatePicker`** 
+**`sap.m.DatePicker`** 
 
 
 
@@ -1267,7 +1267,7 @@ For more information, see the [sample](https://ui5.sap.com/#/sample/sap.m.sample
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1283,28 +1283,28 @@ For more information, see the [sample](https://ui5.sap.com/#/sample/sap.m.sample
 <tr>
 <td valign="top">
 
- 1.48 
+1.48 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.GenericTile`** 
+**`sap.m.GenericTile`** 
 
 
 
@@ -1324,7 +1324,7 @@ With a new overflow concept that allows more flexibility in the layout of the ti
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1340,28 +1340,28 @@ With a new overflow concept that allows more flexibility in the layout of the ti
 <tr>
 <td valign="top">
 
- 1.48 
+1.48 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.PlanningCalendar`** 
+**`sap.m.PlanningCalendar`** 
 
 
 
@@ -1384,7 +1384,7 @@ With a new overflow concept that allows more flexibility in the layout of the ti
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1400,28 +1400,28 @@ With a new overflow concept that allows more flexibility in the layout of the ti
 <tr>
 <td valign="top">
 
- 1.48 
+1.48 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.TextArea`** 
+**`sap.m.TextArea`** 
 
 
 
@@ -1439,7 +1439,7 @@ With a new overflow concept that allows more flexibility in the layout of the ti
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1455,28 +1455,28 @@ With a new overflow concept that allows more flexibility in the layout of the ti
 <tr>
 <td valign="top">
 
- 1.48 
+1.48 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.UploadCollection`** 
+**`sap.m.UploadCollection`** 
 
 
 
@@ -1494,7 +1494,7 @@ When grouping of `UploadCollectionItems` you can now provide the grouping featur
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1510,28 +1510,28 @@ When grouping of `UploadCollectionItems` you can now provide the grouping featur
 <tr>
 <td valign="top">
 
- 1.48 
+1.48 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.Wizard`** 
+**`sap.m.Wizard`** 
 
 
 
@@ -1549,7 +1549,7 @@ When grouping of `UploadCollectionItems` you can now provide the grouping featur
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1565,28 +1565,28 @@ When grouping of `UploadCollectionItems` you can now provide the grouping featur
 <tr>
 <td valign="top">
 
- 1.48 
+1.48 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.suite.ui.commons.ChartContainer`** 
+**`sap.suite.ui.commons.ChartContainer`** 
 
 
 
@@ -1597,7 +1597,7 @@ When grouping of `UploadCollectionItems` you can now provide the grouping featur
 
 There is a new *Selection Details**Selection Details* button, set the `ChartContainer`’s `showSelectionDetails` property to `true`. The button is set inside the main toolbar of the chart container next to the controlling buttons that are added automatically.
 
- For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.SelectionDetails) and the [samples](https://ui5.sap.com/#/sample/sap.suite.ui.commons.sample.ChartContainerActions/preview). 
+For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.SelectionDetails) and the [samples](https://ui5.sap.com/#/sample/sap.suite.ui.commons.sample.ChartContainerActions/preview). 
 
 <sub>Changed•Control•Info Only•1.48</sub>
 
@@ -1606,7 +1606,7 @@ There is a new *Selection Details**Selection Details* button, set the `ChartCont
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1622,28 +1622,28 @@ There is a new *Selection Details**Selection Details* button, set the `ChartCont
 <tr>
 <td valign="top">
 
- 1.48 
+1.48 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.suite.ui.microchart.InteractiveBarChart`** 
+**`sap.suite.ui.microchart.InteractiveBarChart`** 
 
 
 
@@ -1661,7 +1661,7 @@ The `InteractiveBarChart` provides optional button in the chart container toolba
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1677,28 +1677,28 @@ The `InteractiveBarChart` provides optional button in the chart container toolba
 <tr>
 <td valign="top">
 
- 1.48 
+1.48 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.suite.ui.microchart`** 
+**`sap.suite.ui.microchart`** 
 
 
 
@@ -1716,7 +1716,7 @@ A default tooltip was added to `InteractiveBarChart`, `InteractiveLineChart`, an
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1732,28 +1732,28 @@ A default tooltip was added to `InteractiveBarChart`, `InteractiveLineChart`, an
 <tr>
 <td valign="top">
 
- 1.48 
+1.48 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.layout.BlockLayout`** 
+**`sap.ui.layout.BlockLayout`** 
 
 
 
@@ -1769,7 +1769,7 @@ A default tooltip was added to `InteractiveBarChart`, `InteractiveLineChart`, an
 
 For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.layout.BlockLayoutCell) and the [samples](https://ui5.sap.com/#/sample/sap.ui.layout.sample.BlockLayoutCustomBackground/preview).
 
- ![](images/WhatsNew_148_BlockLayout_d4f2319.png) 
+![](images/WhatsNew_148_BlockLayout_d4f2319.png)
 
 <sub>Changed•Control•Info Only•1.48</sub>
 
@@ -1778,7 +1778,7 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.l
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1794,28 +1794,28 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.l
 <tr>
 <td valign="top">
 
- 1.48 
+1.48 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.tnt.ToolPage`** 
+**`sap.tnt.ToolPage`** 
 
 
 
@@ -1840,7 +1840,7 @@ For more information, see the [sample](https://ui5.sap.com/#/sample/sap.tnt.samp
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1856,28 +1856,28 @@ For more information, see the [sample](https://ui5.sap.com/#/sample/sap.tnt.samp
 <tr>
 <td valign="top">
 
- 1.48 
+1.48 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.table`** 
+**`sap.ui.table`** 
 
 
 
@@ -1895,7 +1895,7 @@ You can now highlight items in the tables of the `sap.ui.table` library \(`sap.u
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1911,28 +1911,28 @@ You can now highlight items in the tables of the `sap.ui.table` library \(`sap.u
 <tr>
 <td valign="top">
 
- 1.48 
+1.48 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.unified.Calendar`** 
+**`sap.ui.unified.Calendar`** 
 
 
 
@@ -1957,7 +1957,7 @@ You can now highlight items in the tables of the `sap.ui.table` library \(`sap.u
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1973,28 +1973,28 @@ You can now highlight items in the tables of the `sap.ui.table` library \(`sap.u
 <tr>
 <td valign="top">
 
- 1.48 
+1.48 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.unified.ColorPicker`** 
+**`sap.ui.unified.ColorPicker`** 
 
 
 
@@ -2014,7 +2014,7 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.u
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -2030,28 +2030,28 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.u
 <tr>
 <td valign="top">
 
- 1.48 
+1.48 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.smartfilterbar.SmartFilterBar`** 
+**`sap.ui.comp.smartfilterbar.SmartFilterBar`** 
 
 
 
@@ -2073,7 +2073,7 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.u
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -2089,28 +2089,28 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.u
 <tr>
 <td valign="top">
 
- 1.48 
+1.48 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.smartchart.SmartChart`** 
+**`sap.ui.comp.smartchart.SmartChart`** 
 
 
 
@@ -2135,7 +2135,7 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.u
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -2151,28 +2151,28 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.u
 <tr>
 <td valign="top">
 
- 1.48 
+1.48 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.navpopover.SmartLink`** 
+**`sap.ui.comp.navpopover.SmartLink`** 
 
 
 
@@ -2190,7 +2190,7 @@ The `SmartLink` control supports a new annotation, `SemanticObjectMapping`. You 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -2206,28 +2206,28 @@ The `SmartLink` control supports a new annotation, `SemanticObjectMapping`. You 
 <tr>
 <td valign="top">
 
- 1.48 
+1.48 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- SAP Fiori Elements 
+SAP Fiori Elements 
 
 
 
 </td>
 <td valign="top">
 
- **SAP Fiori Elements** 
+**SAP Fiori Elements** 
 
 
 
@@ -2375,7 +2375,7 @@ For more information, see [Analytical List Page](../06_SAP_Fiori_Elements/analyt
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -2391,28 +2391,28 @@ For more information, see [Analytical List Page](../06_SAP_Fiori_Elements/analyt
 <tr>
 <td valign="top">
 
- 1.48 
+1.48 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Analysis Path Framework \(APF\) 
+Analysis Path Framework \(APF\) 
 
 
 
 </td>
 <td valign="top">
 
- **Analysis Path Framework \(APF\)** 
+**Analysis Path Framework \(APF\)** 
 
 
 
@@ -2443,7 +2443,7 @@ APF has been enhanced with the following features:
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -2459,28 +2459,28 @@ APF has been enhanced with the following features:
 <tr>
 <td valign="top">
 
- 1.48 
+1.48 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- User Documentation 
+User Documentation 
 
 
 
 </td>
 <td valign="top">
 
- **Documentation Updates** 
+**Documentation Updates** 
 
 
 
@@ -2503,7 +2503,7 @@ In addition to the documentation for new features, the following changes have be
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -2520,6 +2520,8 @@ In addition to the documentation for new features, the following changes have be
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.115](what-s-new-in-sapui5-1-115-409fde8.md "With this release SAPUI5 is upgraded from version 1.114 to 1.115.")
 
 [What's New in SAPUI5 1.114](what-s-new-in-sapui5-1-114-890fce1.md "With this release SAPUI5 is upgraded from version 1.113 to 1.114.")
 

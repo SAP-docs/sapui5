@@ -8,9 +8,9 @@ The source value for this data type, that is, the value given in the model, must
 
 -   `float`: Value is rounded using `Math.floor` 
 
--    `integer`: No transformation needed
+-   `integer`: No transformation needed
 
--    `string`: Value is formatted or parsed according to the given output pattern
+-   `string`: Value is formatted or parsed according to the given output pattern
 
 
 Examples how an `Integer` type can be initialized:

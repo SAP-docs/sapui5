@@ -127,11 +127,11 @@ The following sample code shows an example of a path-based update restriction:
 > 
 > ```
 
- ![](images/UpdateRestrictions1_9616035.png) 
+![](images/UpdateRestrictions1_9616035.png)
 
 In the screenshot above, the field *Warranty Expiration* comes from an entity set for which `UpdateRestrictions` evaluates to `false`. Therefore, it is in display mode even when the object page is in edit mode and the other fields \(from other entity sets\) are editable. This is also true when you navigate to the subobject page:
 
- ![](images/UpdateRestrictions2_b3a0021.png) 
+![](images/UpdateRestrictions2_b3a0021.png)
 
 The screenshot shows that none of the fields from the *Material Reviews* entity set are editable. This is because `UpdateRestrictions` of the *Material Reviews* entity set evaluates to `false`. Note that the field *Material Category* comes from a different entity set.
 

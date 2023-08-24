@@ -19,7 +19,7 @@ The action buttons are displayed as shown below in the chart toolbar:
   
 **Actions in Chart Toolbar**
 
- ![](images/Actions_in_Smart_Chart_Toolbar_067d5d8.png "Actions in Chart Toolbar") 
+![](images/Actions_in_Smart_Chart_Toolbar_067d5d8.png "Actions in Chart Toolbar")
 
 
 
@@ -27,7 +27,7 @@ The action buttons are displayed as shown below in the chart toolbar:
 
 The code samples below show how to add actions to the chart toolbar.
 
- **UI.Chart** 
+**UI.Chart** 
 
 > ### Sample Code:  
 > XML Annotation
@@ -147,7 +147,7 @@ To control whether `UI.DataFieldForIntentBasedNavigation`-based actions are enab
 > ### Note:  
 > If you are using the path-based `applicable-path` setting to control the visibility of actions in the chart toolbar, the property specified must be based on the property from the parent entity set. The property cannot be from the chart entity set.
 
- ![](images/ChartActions_NavProps_9111386.png) 
+![](images/ChartActions_NavProps_9111386.png)
 
 
 

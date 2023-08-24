@@ -8,11 +8,11 @@ The reason we have resource bundles is to allow an app to run in multiple langua
 
 ## Preview
 
-   
+  
   
 **German version of our UI**
 
- ![](images/Tutorial_Data_Binding_Step_7_d96cdf9.png "German version of our UI") 
+![](images/Tutorial_Data_Binding_Step_7_d96cdf9.png "German version of our UI")
 
 
 

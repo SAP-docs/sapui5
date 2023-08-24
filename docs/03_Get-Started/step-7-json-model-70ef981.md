@@ -10,12 +10,12 @@ We will add an input field to our app, bind its value to the model, and bind the
 
 ## Preview
 
-   
+  
   
 **An input field and a description displaying the value of the input field**
 
- ![](images/SAPUI5_Walkthrough_Step_07_to_10_e5a9bb4.png "An input field and a description displaying the value of the input
-					field") 
+![](images/SAPUI5_Walkthrough_Step_07_to_10_e5a9bb4.png "An input field and a description displaying the value of the input
+					field")
 
 
 
@@ -82,7 +82,7 @@ We add an `sap.m.Input` control to the view. With this, the user can enter a rec
 
 -   The curly brackets `{…}` indicate that data is taken from the value of the `recipient`'s object name property. This is called "data binding".
 
--    `/recipient/name` declares the path in the model.
+-   `/recipient/name` declares the path in the model.
 
 
 

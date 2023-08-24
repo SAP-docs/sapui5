@@ -126,7 +126,7 @@ You can expand the Scene Tree by clicking on the *\>* icon next to a node to dis
 
 ![](images/Image_UI5_Visualization_Scene_Tree_Select_985671a.png)
 
- 
+
 
 ![](images/Image_Visualisation_UI5_Scene_Tree_2_b6dcb6f.png)
 

@@ -60,7 +60,7 @@ Folder Structure
 <tr>
 <td valign="top">
 
- OpenUI5 
+OpenUI5 
 
 
 
@@ -179,6 +179,8 @@ If the `library.support.js` contains rules for `sap.m.Button` and `sap.m.Label`,
 This is an example of a `library.support.js` before the split:
 
 
+
+## Example
 
 ```js
 sap.ui.define(["sap/ui/support/library"],

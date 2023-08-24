@@ -10,7 +10,7 @@ A common pattern to address this is called list-detail, and is often used in nat
 
 The figure shows the basic idea of the pattern. The app is divided into two views, the list and the detail view. The list view presents a list of items and is used as the main navigation within the application. The detail view shows detail information for the selected item.
 
- ![SAPUI5 Mobile SplitApp Pattern](images/SAPUI5_Mobile_Split_App_Pattern_0dd20bc.png) 
+![SAPUI5 Mobile SplitApp Pattern](images/SAPUI5_Mobile_Split_App_Pattern_0dd20bc.png)
 
 Whereas the selection of an item on a mobile devices navigates the user to the detail page, the user can see the list of items and the detail view at the same time on a tablet device.
 
@@ -37,7 +37,7 @@ In landscape mode, all three modes described above display the list view.
 
 If you run a `SplitApp` on a mobile device, it automatically behaves like a standard mobile application. The following figure shows the difference:
 
- ![SAPUI5 Mobile Splitt App Mobile](images/SAPUI5_Mobile_Split_App_Mobile_png_bac7575.png) 
+![SAPUI5 Mobile Splitt App Mobile](images/SAPUI5_Mobile_Split_App_Mobile_png_bac7575.png)
 
 As only one page per screen can be displayed, the list and detail view are automatically displayed on separate pages and the standard page navigation is applied.
 

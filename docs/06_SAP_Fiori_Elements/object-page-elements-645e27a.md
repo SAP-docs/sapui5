@@ -107,7 +107,7 @@ Controls related to object pages
 </td>
 <td valign="top">
 
- [sap.uxap](../10_More_About_Controls/sap-uxap-de71337.md) 
+[sap.uxap](../10_More_About_Controls/sap-uxap-de71337.md) 
 
 
 

@@ -15,7 +15,7 @@ where `FunctionImportName` is specific to a particular action. The figure below 
   
 **Function imports**
 
- ![](images/Function_Imports_71d9639.png "Function imports") 
+![](images/Function_Imports_71d9639.png "Function imports")
 
 You can also add action messages specific to the entity set and the action name.
 

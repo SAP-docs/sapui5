@@ -62,14 +62,14 @@ Create
 </td>
 <td valign="top">
 
-  [Ctrl\] + [Enter\]  
+[Ctrl\] + [Enter\]  
 
 
 
 </td>
 <td valign="top">
 
-  [CMD\] + [Enter\]  
+[CMD\] + [Enter\]  
 
 
 
@@ -108,14 +108,14 @@ Delete table entry
 </td>
 <td valign="top">
 
-  [Ctrl\] + [D\]  
+[Ctrl\] + [D\]  
 
 
 
 </td>
 <td valign="top">
 
- [Cmd\] + [D\] 
+[Cmd\] + [D\] 
 
 
 
@@ -159,14 +159,14 @@ Delete page level
 </td>
 <td valign="top">
 
-  [Ctrl\] + [Del\]  
+[Ctrl\] + [Del\]  
 
 
 
 </td>
 <td valign="top">
 
-  [CMD\] + [fn\] + [delete\] \(use ← if there is no delete key
+[CMD\] + [fn\] + [delete\] \(use ← if there is no delete key
 
 
 
@@ -203,14 +203,14 @@ Edit page level
 </td>
 <td valign="top">
 
-  [Ctrl\] + [E\]  
+[Ctrl\] + [E\]  
 
 
 
 </td>
 <td valign="top">
 
-  [CMD\] + [E\]  
+[CMD\] + [E\]  
 
 
 
@@ -247,14 +247,14 @@ Save page level
 </td>
 <td valign="top">
 
-  [Ctrl\] + [S\]  
+[Ctrl\] + [S\]  
 
 
 
 </td>
 <td valign="top">
 
-  [CMD\] + [S\]  
+[CMD\] + [S\]  
 
 
 
@@ -293,14 +293,14 @@ Share
 </td>
 <td valign="top">
 
-  [Shift\] + [Ctrl\] + [S\]  
+[Shift\] + [Ctrl\] + [S\]  
 
 
 
 </td>
 <td valign="top">
 
-  [Shift\] + [CMD\] + [S\]  
+[Shift\] + [CMD\] + [S\]  
 
 
 
@@ -391,14 +391,14 @@ Go
 </td>
 <td valign="top">
 
-  [Ctrl\] + [Enter\]  
+[Ctrl\] + [Enter\]  
 
 
 
 </td>
 <td valign="top">
 
-  [CMD\] + [Enter\]  
+[CMD\] + [Enter\]  
 
 
 
@@ -435,14 +435,14 @@ Select row in analytical or grid tables
 </td>
 <td valign="top">
 
-  [Shift\] + [Space\]  
+[Shift\] + [Space\]  
 
 
 
 </td>
 <td valign="top">
 
-  [Shift\] + [Space\]  
+[Shift\] + [Space\]  
 
 
 
@@ -483,14 +483,14 @@ Table settings
 </td>
 <td valign="top">
 
-  [Ctrl\] + [,\]  
+[Ctrl\] + [,\]  
 
 
 
 </td>
 <td valign="top">
 
-  [Ctrl\] + [,\]  
+[Ctrl\] + [,\]  
 
 
 
@@ -531,14 +531,14 @@ Export as
 </td>
 <td valign="top">
 
-  [Shift\] + [Ctrl\] + [E\]  
+[Shift\] + [Ctrl\] + [E\]  
 
 
 
 </td>
 <td valign="top">
 
-  [Shift\] + [CMD\] + [E\]  
+[Shift\] + [CMD\] + [E\]  
 
 
 
@@ -581,14 +581,14 @@ Create with filters
 </td>
 <td valign="top">
 
-  [Shift\] + [Ctrl\] + [Enter\]  
+[Shift\] + [Ctrl\] + [Enter\]  
 
 
 
 </td>
 <td valign="top">
 
-  [Shift\] + [CMD\] + [Enter\]  
+[Shift\] + [CMD\] + [Enter\]  
 
 
 
@@ -625,14 +625,14 @@ Cancel/Discard Draft
 </td>
 <td valign="top">
 
- [Esc\] 
+[Esc\] 
 
 
 
 </td>
 <td valign="top">
 
- [Esc\] 
+[Esc\] 
 
 
 
@@ -696,7 +696,7 @@ Keyboard shortcuts for standard actions such as create, delete, and edit can get
 > 
 > ```
 
-In this example, the standard create functionality is replaced with `onCreateWithParameters`. It means that when the shortcut for create \( [Ctrl\] + [Enter\] \) is triggered, the `onCreateWithParameters` function written in application extension code is executed. For the annotated buttons, you can add an extra piece of logic that is custom implemented inside the standard functionality.
+In this example, the standard create functionality is replaced with `onCreateWithParameters`. It means that when the shortcut for create \([Ctrl\] + [Enter\] \) is triggered, the `onCreateWithParameters` function written in application extension code is executed. For the annotated buttons, you can add an extra piece of logic that is custom implemented inside the standard functionality.
 
 Custom action with a valid `logicalAction` setting takes over the general properties of the standard action. It overrides the keyboard shortcut, the place where the button is rendered on the UI, and the properties such as ID, event handler, text etc., that are not explicitly defined in the`manifest.json`. This also means that in order to override any standard action, application must meet all the conditions required to render the corresponding standard action. For example, if you want to override the standard *Create* button, you should make sure that the *Create* button is eligible to be rendered on the UI for your application
 
@@ -746,29 +746,29 @@ Currently, redirection of the following shortcuts is supported:
 
 -   For List Report:
 
-    -   Create:  [Ctrl\] + [Enter\] 
+    -   Create: [Ctrl\] + [Enter\] 
 
-    -   `CreateWithFilters`:  [Shift\] + [Ctrl\] + [Enter\] 
+    -   `CreateWithFilters`: [Shift\] + [Ctrl\] + [Enter\] 
 
-    -   Delete:  [Ctrl\] + [D\]  
+    -   Delete: [Ctrl\] + [D\]  
 
 
 -   For Object Page:
 
     -   For Header:
 
-        -   Save:  [Ctrl\] + [S\] 
+        -   Save: [Ctrl\] + [S\] 
 
-        -   Edit:  [Ctrl\] + [E\] 
+        -   Edit: [Ctrl\] + [E\] 
 
-        -   Delete:  [Ctrl\] + [Del\] 
+        -   Delete: [Ctrl\] + [Del\] 
 
 
     -   For Sections:
 
-        -   Create:  [Ctrl\] + [Enter\]  
+        -   Create: [Ctrl\] + [Enter\]  
 
-        -   Delete:  [Ctrl\] + [D\]  
+        -   Delete: [Ctrl\] + [D\]  
 
 
 

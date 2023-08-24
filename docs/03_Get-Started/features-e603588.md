@@ -32,7 +32,7 @@ You can model a text rule without a result data object too. This type of text ru
 > ### Note:  
 > Select *No Default Result* as the text rule result to perform the operations.
 
-To view the list of operations that can be performed on any data object or attribute of your project, press  [CTRL\] + [SPACE\]  in the *Then* field of your text rule.
+To view the list of operations that can be performed on any data object or attribute of your project, press [CTRL\] + [SPACE\]  in the *Then* field of your text rule.
 
 **List of Operations:**
 
@@ -227,30 +227,14 @@ There are two types of value help:
     <tr>
     <td valign="top">
     
-        **Code**
+    **Code**
 
 
     
     </td>
     <td valign="top">
     
-        **Description**
-
-
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-        E001
-
-
-    
-    </td>
-    <td valign="top">
-    
-        Smartphone
+    **Description**
 
 
     
@@ -259,30 +243,14 @@ There are two types of value help:
     <tr>
     <td valign="top">
     
-        E002
+    E001
 
 
     
     </td>
     <td valign="top">
     
-        Laptop
-
-
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-        E003
-
-
-    
-    </td>
-    <td valign="top">
-    
-        Tablet
+    Smartphone
 
 
     
@@ -291,14 +259,46 @@ There are two types of value help:
     <tr>
     <td valign="top">
     
-        E004
+    E002
 
 
     
     </td>
     <td valign="top">
     
-        Smartphone
+    Laptop
+
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    E003
+
+
+    
+    </td>
+    <td valign="top">
+    
+    Tablet
+
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    E004
+
+
+    
+    </td>
+    <td valign="top">
+    
+    Smartphone
 
 
     

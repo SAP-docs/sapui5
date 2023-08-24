@@ -18,7 +18,7 @@ You can adapt the text of the *Delete* dialog box that is displayed when you del
 
 The *Delete* dialog looks as follows:
 
- ![](images/Delete_dialog_box_9b29c5c.png) 
+![](images/Delete_dialog_box_9b29c5c.png)
 
 It contains the following text:
 
@@ -71,7 +71,7 @@ It contains the following text:
 
 2.  Maintain the controller extension files in your app.
 
-     ![](images/AppExtension_Tree_List_Report_cc8015b.png) 
+    ![](images/AppExtension_Tree_List_Report_cc8015b.png)
 
 3.  Implement the function `'beforeDeleteExtension'` in the controller extension file of the list report. You have several options to determine the delete dialog box:
 

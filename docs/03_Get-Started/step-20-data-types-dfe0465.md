@@ -8,11 +8,11 @@ The list of invoices is already looking nice, but what is an invoice without a p
 
 ## Preview
 
-   
+  
   
 **The list of invoices with prices and number units**
 
- ![](images/SAPUI5_Walkthrough_Step_21_a839470.png "The list of invoices with prices and number units") 
+![](images/SAPUI5_Walkthrough_Step_21_a839470.png "The list of invoices with prices and number units")
 
 
 

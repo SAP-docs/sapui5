@@ -2,7 +2,7 @@
 
 # SAPUI5: UI Development Toolkit for HTML5
 
-Create apps with rich user interfaces for modern web business applications, responsive across browsers and devices, based on HTML5. \(Documentation patch 1.116.0\)
+Create apps with rich user interfaces for modern web business applications, responsive across browsers and devices, based on HTML5. \(Documentation patch 1.117.0\)
 
 
 
@@ -49,7 +49,7 @@ Check the [SAPUI5 playlist](https://www.youtube.com/playlist?list=PLWV533hWWvDmx
 </tr>
 </table>
 
- SAP Fiori apps are built with SAPUI5 and follow the SAP Fiori design guidelines to ensure consistent design and a high level of design quality. See  [SAP Fiori Design Guidelines](https://experience.sap.com/fiori-design-web/).
+SAP Fiori apps are built with SAPUI5 and follow the SAP Fiori design guidelines to ensure consistent design and a high level of design quality. See [SAP Fiori Design Guidelines](https://experience.sap.com/fiori-design-web/).
 
 For more information about SAP Fiori, see [http://www.sap.com/fiori](http://www.sap.com/fiori) 
 

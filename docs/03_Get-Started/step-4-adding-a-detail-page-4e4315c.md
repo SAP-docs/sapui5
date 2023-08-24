@@ -10,11 +10,11 @@ In this step, we add an empty detail page.
 
 ## Preview
 
-   
+  
   
 **List Page with Empty Detail Page**
 
- ![](images/Master_Page_with_Empty_Detail_Page_Fiori_2_0_Tutorial_10dec0c.gif "List Page with Empty Detail Page") 
+![](images/Master_Page_with_Empty_Detail_Page_Fiori_2_0_Tutorial_10dec0c.gif "List Page with Empty Detail Page")
 
 
 

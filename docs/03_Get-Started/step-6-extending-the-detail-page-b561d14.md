@@ -8,11 +8,11 @@ In this step, we will extend the detail page of our app to show more information
 
 ## Preview
 
-   
+  
   
 **Detail page with more product information**
 
- ![](images/Tutorial_Worklist_Step_6_Preview_49780e4.png "Detail page with more product information") 
+![](images/Tutorial_Worklist_Step_6_Preview_49780e4.png "Detail page with more product information")
 
 
 

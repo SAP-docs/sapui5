@@ -27,13 +27,10 @@ The binding must then know the metadata part of the binding expression. The path
     var myLabel = new sap.m.Label({text:"{/#Company/CompanyName/@sap:label}"});
     ```
 
-    To use the absolute binding for a property that doesn't occur in a EnttityType of the default model, the reference to the correct model defined in the manifest can be added as a prefix.
-    If you’re not adding the model the framework will tell you in the development console that the mentioned Entity is not present.
-    Defining the target model can be done by adding `myModel>` in the beginning of the binding string.
+    To use the absolute binding for a property that doesn't occur in an EntityType of the default model, the reference to the correct model defined in the manifest can be added as a prefix. If you’re not adding the model, the framework will tell you in the development console that the mentioned Entity is not present. Defining the target model can be done by adding `myModel>` in the beginning of the binding string.
 
-    
     Example:
-    
+
     ```js
     
     var myLabel = new sap.m.Label({text:"{myModel>/#Company/CompanyName/@sap:label}"});
@@ -51,3 +48,5 @@ The binding must then know the metadata part of the binding expression. The path
     var myLabel2 = new sap.m.Label({text:"{City/#@sap:label}"});
     myLabel2.bindElement("/Companies(1)");
     ```
+
+

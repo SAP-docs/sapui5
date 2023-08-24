@@ -12,77 +12,77 @@ For the smart controls, changes that are persisted include definitions of the fi
 
 Initially, the UI looks as in the previous steps:
 
-   
+  
   
 **Initial UI Without Personalization**
 
- ![](images/Smart_Controls_Tutorial_Step_07a_398466e.png "Initial UI Without Personalization") 
+![](images/Smart_Controls_Tutorial_Step_07a_398466e.png "Initial UI Without Personalization")
 
 We define filters in the *Filters* dialog as shown in step 5 and then select *Save As* in the related dialog of the view management:
 
-   
+  
   
 **Specifying the Filter**
 
- ![](images/Smart_Controls_Tutorial_Step_07b_551f525.png "Specifying the Filter") 
+![](images/Smart_Controls_Tutorial_Step_07b_551f525.png "Specifying the Filter")
 
 After that, the following dialog is shown:
 
-   
+  
   
 **Defining the View Name**
 
- ![](images/Smart_Controls_Tutorial_Step_07c_a51c238.png "Defining the View Name") 
+![](images/Smart_Controls_Tutorial_Step_07c_a51c238.png "Defining the View Name")
 
 In this dialog, we specify the name under which this view is persisted, in our case `With Currency EUR`. With *Set as Default*, we can also specify whether this view is always used initially when navigating to this particular UI \(since in our example we only persist within one browser session, this setting has no effect\). With *Apply Automatically* we define that the query is fired automatically. The idea behind *Public* is that some popular but perhaps fairly complicated query settings that are used by several users can be automatically provided to all users. This *Public* option only has an effect when running on a real server and not on the mock server as in our example. If you choose *Public*, additional information regarding this function is required.
 
 We verify these settings now and return to our main UI:
 
-   
+  
   
 **UI with Active View**
 
- ![](images/Smart_Controls_Tutorial_Step_07d_de20dc1.png "UI with Active View") 
+![](images/Smart_Controls_Tutorial_Step_07d_de20dc1.png "UI with Active View")
 
 We notice that the *Currency* field is available in the filter bar and that we have already specified *EUR* as the currency.
 
 Finally we now customize the table so that we do not see the `ProductId` column anymore. To do that, we press the *Settings* icon in the upper right-hand corner of the table and deselect `ProductId` in the dialog:
 
-   
+  
   
 **Remove ProductId**
 
- ![](images/Smart_Controls_Tutorial_Step_07e_d07f29c.png "Remove ProductId") 
+![](images/Smart_Controls_Tutorial_Step_07e_d07f29c.png "Remove ProductId")
 
 Returning to the main UI, we see that only the three columns required are now shown:
 
-   
+  
   
 **Personalized Table**
 
- ![](images/Smart_Controls_Tutorial_Step_07f_1fd2e4c.png "Personalized Table") 
+![](images/Smart_Controls_Tutorial_Step_07f_1fd2e4c.png "Personalized Table")
 
-   
+  
   
 ****
 
- 
+
 
 The *\** right next to the *Standard* view indicates that a change has been made. We save this change by choosing the down-arrow symbol and *Save As* in the dialog, which takes us to the following dialog as before:
 
-   
+  
   
 **Specifying the View Name**
 
- ![](images/Smart_Controls_Tutorial_Step_07g_5d8cf84.png "Specifying the View Name") 
+![](images/Smart_Controls_Tutorial_Step_07g_5d8cf84.png "Specifying the View Name")
 
 Also, here we have the possibility to set this as default and to share the view. The latter is similar to the view for the `SmartFilterBar` control. After confirming the specified name, you return directly to the main UI.
 
-   
+  
   
 **View for the Filter Bar and View for the Table**
 
- ![](images/Smart_Controls_Tutorial_Step_07h_7bbfc17.png "View for the Filter Bar and View for the Table") 
+![](images/Smart_Controls_Tutorial_Step_07h_7bbfc17.png "View for the Filter Bar and View for the Table")
 
 
 

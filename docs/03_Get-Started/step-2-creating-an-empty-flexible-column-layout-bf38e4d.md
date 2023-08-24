@@ -10,12 +10,12 @@ In this step, we add an instance of the `sap.f.FlexibleColumnLayout` control in 
 
 ## Preview
 
-   
+  
   
 **An empty instance of the sap.f.FlexibleColumnLayout control**
 
- ![](images/Empty_FlexibleColumnLayout_Fiori_2_0_Tutorial_533d165.png "An empty instance of the sap.f.FlexibleColumnLayout
-					control") 
+![](images/Empty_FlexibleColumnLayout_Fiori_2_0_Tutorial_533d165.png "An empty instance of the sap.f.FlexibleColumnLayout
+					control")
 
 
 

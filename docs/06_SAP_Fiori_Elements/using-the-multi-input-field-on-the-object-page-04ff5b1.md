@@ -57,7 +57,7 @@ You can use the navigation property inside a `UI.DataField` to display values of
 
 The following image shows the result on the UI:
 
- ![](images/Multi-Input_Control_on_the_Object_Page_d756a5b.png) 
+![](images/Multi-Input_Control_on_the_Object_Page_d756a5b.png)
 
 > ### Tip:  
 > Define the value help on the target property to add and remove existing values from the multi-input field.
@@ -67,11 +67,11 @@ The following image shows the result on the UI:
 
 The multi-input field is also available for tables.
 
-   
+  
   
 **Multi-Input Control on the Object Page Table**
 
- ![](images/Smart_MultiInput_Control_on_the_Object_Page_Table_dcb027c.png "Multi-Input Control on the Object Page Table") 
+![](images/Smart_MultiInput_Control_on_the_Object_Page_Table_dcb027c.png "Multi-Input Control on the Object Page Table")
 
 > ### Restriction:  
 > Note the following for SAP Fiori elements for OData V4:

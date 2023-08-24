@@ -4,7 +4,7 @@
 
 With this release SAPUI5 is upgraded from version 1.65 to 1.66.
 
-** **
+****
 
 
 <table>
@@ -62,28 +62,28 @@ Available as of
 <tr>
 <td valign="top">
 
- 1.66 
+1.66 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **SAPUI5 OData V4 Model** 
+**SAPUI5 OData V4 Model** 
 
 
 
@@ -133,28 +133,28 @@ Info Only
 <tr>
 <td valign="top">
 
- 1.66 
+1.66 
 
 
 
 </td>
 <td valign="top">
 
- New 
+New 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.suite.ui.commons.imageeditor`** 
+**`sap.suite.ui.commons.imageeditor`** 
 
 
 
@@ -178,7 +178,7 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.suit
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -194,28 +194,28 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.suit
 <tr>
 <td valign="top">
 
- 1.66 
+1.66 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Support for New Era in the Japanese Calendar** 
+**Support for New Era in the Japanese Calendar** 
 
 
 
@@ -233,7 +233,7 @@ Starting May 1, 2019, SAPUI5 supports a new era in the Japanese calendar, due to
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -249,28 +249,28 @@ Starting May 1, 2019, SAPUI5 supports a new era in the Japanese calendar, due to
 <tr>
 <td valign="top">
 
- 1.66 
+1.66 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.f.GridContainer` \(Experimental\)** 
+**`sap.f.GridContainer` \(Experimental\)** 
 
 
 
@@ -285,7 +285,7 @@ We have introduced three new properties:
 
 -   `allowDenseFill` is an experimental property that allows you to try out a denser arrangement of the grid items. Smaller items will take up all the available space, ignoring their order.
 
--    `inlineBlockLayout` is an experimental property. It allows you to arrange the items in rows with the height equal to the highest item in the row.
+-   `inlineBlockLayout` is an experimental property. It allows you to arrange the items in rows with the height equal to the highest item in the row.
 
 
 For more information, see [sap.f.GridContainer](../10_More_About_Controls/sap-f-gridcontainer-cca5ee5.md) and the [API Reference](https://ui5.sap.com/#/api/sap.f.GridContainer).
@@ -297,7 +297,7 @@ For more information, see [sap.f.GridContainer](../10_More_About_Controls/sap-f-
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -313,28 +313,28 @@ For more information, see [sap.f.GridContainer](../10_More_About_Controls/sap-f-
 <tr>
 <td valign="top">
 
- 1.66 
+1.66 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.gantt.simple`** 
+**`sap.gantt.simple`** 
 
 
 
@@ -354,7 +354,7 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.gant
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -370,28 +370,28 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.gant
 <tr>
 <td valign="top">
 
- 1.66 
+1.66 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.ComboBox / sap.m.MultiComboBox`** 
+**`sap.m.ComboBox / sap.m.MultiComboBox`** 
 
 
 
@@ -409,7 +409,7 @@ The options list used in these controls is now instantiated lazily. The list is 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -425,28 +425,28 @@ The options list used in these controls is now instantiated lazily. The list is 
 <tr>
 <td valign="top">
 
- 1.66 
+1.66 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.DateRangeSelection`** 
+**`sap.m.DateRangeSelection`** 
 
 
 
@@ -459,9 +459,9 @@ You can now change the date range value using keyboard combinations without open
 
 -   [PgUp\]/[PgDn\] - increments/decrements the date
 
--    [Shift\] + [PgUp\] / [Shift\] + [PgDn\]  - increments/decrements the month
+-   [Shift\] + [PgUp\] /[Shift\] + [PgDn\]  - increments/decrements the month
 
--    [Ctrl\] + [Shift\] + [PgUp\] / [Ctrl\] + [Shift\] + [PgDn\]  - increments/decrements the year
+-   [Ctrl\] + [Shift\] + [PgUp\] /[Ctrl\] + [Shift\] + [PgDn\]  - increments/decrements the year
 
 
 For more information, see the [Sample](https://ui5.sap.com/#/entity/sap.m.DateRangeSelection/sample/sap.m.sample.DateRangeSelection).
@@ -473,7 +473,7 @@ For more information, see the [Sample](https://ui5.sap.com/#/entity/sap.m.DateRa
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -489,28 +489,28 @@ For more information, see the [Sample](https://ui5.sap.com/#/entity/sap.m.DateRa
 <tr>
 <td valign="top">
 
- 1.66 
+1.66 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.Input`** 
+**`sap.m.Input`** 
 
 
 
@@ -528,7 +528,7 @@ We have adjusted the value state text for the `sap.m.Input` control. The value s
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -544,28 +544,28 @@ We have adjusted the value state text for the `sap.m.Input` control. The value s
 <tr>
 <td valign="top">
 
- 1.66 
+1.66 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.ObjectStatus`** 
+**`sap.m.ObjectStatus`** 
 
 
 
@@ -583,7 +583,7 @@ You can now switch the background and text colors using the new `inverted` prope
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -599,28 +599,28 @@ You can now switch the background and text colors using the new `inverted` prope
 <tr>
 <td valign="top">
 
- 1.66 
+1.66 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.Select`** 
+**`sap.m.Select`** 
 
 
 
@@ -638,7 +638,7 @@ To be better aligned with the other input controls, we have implemented a new `e
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -654,28 +654,28 @@ To be better aligned with the other input controls, we have implemented a new `e
 <tr>
 <td valign="top">
 
- 1.66 
+1.66 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.SinglePlanningCalendar`** 
+**`sap.m.SinglePlanningCalendar`** 
 
 
 
@@ -700,7 +700,7 @@ To be better aligned with the other input controls, we have implemented a new `e
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -716,28 +716,28 @@ To be better aligned with the other input controls, we have implemented a new `e
 <tr>
 <td valign="top">
 
- 1.66 
+1.66 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.smartchart.SmartChart`** 
+**`sap.ui.comp.smartchart.SmartChart`** 
 
 
 
@@ -755,7 +755,7 @@ We have introduced the `initialized` event to enable asynchronous processing for
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -771,28 +771,28 @@ We have introduced the `initialized` event to enable asynchronous processing for
 <tr>
 <td valign="top">
 
- 1.66 
+1.66 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.smarttable.SmartTable`** 
+**`sap.ui.comp.smarttable.SmartTable`** 
 
 
 
@@ -813,7 +813,7 @@ We have introduced the `initialized` event to enable asynchronous processing for
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -829,28 +829,28 @@ We have introduced the `initialized` event to enable asynchronous processing for
 <tr>
 <td valign="top">
 
- 1.66 
+1.66 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- SAP Fiori Elements 
+SAP Fiori Elements 
 
 
 
 </td>
 <td valign="top">
 
- **SAP Fiori Elements** 
+**SAP Fiori Elements** 
 
 
 
@@ -874,7 +874,7 @@ The `InsertRestriction` property can now be passed as a property for the navigat
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -890,28 +890,28 @@ The `InsertRestriction` property can now be passed as a property for the navigat
 <tr>
 <td valign="top">
 
- 1.66 
+1.66 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- User Documentation 
+User Documentation 
 
 
 
 </td>
 <td valign="top">
 
- **OData V2 Messaging Documentation** 
+**OData V2 Messaging Documentation** 
 
 
 
@@ -929,7 +929,7 @@ The OData V2 Messaging documentation has been enhanced and improved. See [Error,
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -946,6 +946,8 @@ The OData V2 Messaging documentation has been enhanced and improved. See [Error,
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.115](what-s-new-in-sapui5-1-115-409fde8.md "With this release SAPUI5 is upgraded from version 1.114 to 1.115.")
 
 [What's New in SAPUI5 1.114](what-s-new-in-sapui5-1-114-890fce1.md "With this release SAPUI5 is upgraded from version 1.113 to 1.114.")
 

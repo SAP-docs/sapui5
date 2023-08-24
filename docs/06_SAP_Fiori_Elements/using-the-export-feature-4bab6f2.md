@@ -17,7 +17,7 @@ By default, export is enabled in the list report and on the object page. When en
 
 On the object page, the paste feature is also available by default. For more details, see [Copying and Pasting from Spreadsheet Applications to Tables](copying-and-pasting-from-spreadsheet-applications-to-tables-f6a8fd2.md).
 
- ![](images/Object_Page_Export_to_Excel_2559ec3.png) 
+![](images/Object_Page_Export_to_Excel_2559ec3.png)
 
 To disable the feature in the list report and enable it in the object page, use the `enableExport` property of the manifest of the application and set it to false/true. In the `controlConfiguration` section of the page, annotate the `LineItem` on which the export should be disabled/enabled as shown in the code sample below:
 
@@ -29,7 +29,7 @@ To disable the feature in the list report and enable it in the object page, use 
 >    "name": "sap.fe.templates.ListReport",
 >    "options": {
 >       "settings": {
->          "entitySet": "SalesOrderManage",
+>          "contextPath": "/SalesOrderManage",
 >          "controlConfiguration": {
 >             "@com.sap.vocabularies.UI.v1.LineItem": {
 >                "tableSettings": {
@@ -46,7 +46,7 @@ To disable the feature in the list report and enable it in the object page, use 
 >    "name": "sap.fe.templates.ObjectPage",
 >    "options": {
 >       "settings": {
->          "entitySet": "SalesOrderManage",
+>          "contextPath": "/SalesOrderManage",
 >          "controlConfiguration": {
 >             "_Item/@com.sap.vocabularies.UI.v1.LineItem": {
 >                "tableSettings": {
@@ -90,7 +90,7 @@ Clicking the drop-down arrow opens a menu with two additional options:
 
 
 
- ![](images/Object_Page_Options_for_Export_to_Excel_8bd12db.png) 
+![](images/Object_Page_Options_for_Export_to_Excel_8bd12db.png)
 
 > ### Note:  
 > You can export the custom columns you have defined via manifest settings. To allow the export of your custom column, you must maintain the `"properties"` array in the definition of the custom column. For more information about how to define custom columns, see the section Sorting and Filtering in the topic [Extension Points for Tables](extension-points-for-tables-d525522.md). The properties will be exported into the spreadsheet as described for a `FieldGroup`.

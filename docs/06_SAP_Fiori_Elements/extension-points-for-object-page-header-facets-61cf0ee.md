@@ -129,7 +129,7 @@ Custom header facets provide the following features:
 -   using a localized header facet title and subtitle
 
 
- ![](images/Custom_Header_Facet_8dd9f08.png) 
+![](images/Custom_Header_Facet_8dd9f08.png)
 
 To define a header facet on UI level – you do this if you want to add a custom look and feel, or to use controls that are not supported by default – you can extend the manifest of the corresponding object page with a content-based configuration or an annotation-based configuration. You define header facets by using a custom key that you later reference by providing the following properties:
 
@@ -583,7 +583,7 @@ Defines which settings are available for key user adaptation at design time. For
 
 – Using a Custom Header Facet to Display a Harvey Ball Micro Chart –
 
- ![](images/Custom_Header_Facet_Harvey_Ball_Micro_Chart_2517ecf.png) 
+![](images/Custom_Header_Facet_Harvey_Ball_Micro_Chart_2517ecf.png)
 
 The values are retrieved via value binding and the title is defined in the `manifest.json`.
 
@@ -608,7 +608,7 @@ The values are retrieved via value binding and the title is defined in the `mani
 
 – Using a Custom Editable Header Facet to Edit the Values Used in a Custom Header Facet –
 
- ![](images/Using_a_Custom_Editable_Header_Facet_to_Edit_the_Values_Used_in_a_Custom_Header_Facet_d39631d.png) 
+![](images/Using_a_Custom_Editable_Header_Facet_to_Edit_the_Values_Used_in_a_Custom_Header_Facet_d39631d.png)
 
 In edit mode, header facets are displayed in a form. For the editable custom header facet, you need to structure the content by using `sap.ui.layout.FormElement`. The `FormElements` will then be displayed inside a `FormContainer` with the title defined in the manifest.
 
@@ -648,7 +648,7 @@ Custom header fields provide the following features:
 > 
 > For more information, refer to [Adapting the UI: List Report and Object Page](adapting-the-ui-list-report-and-object-page-0d2f1a9.md).
 
- ![](images/Custom_Header_Field_8c26693.png) 
+![](images/Custom_Header_Field_8c26693.png)
 
 **Using Custom Header Fields**
 

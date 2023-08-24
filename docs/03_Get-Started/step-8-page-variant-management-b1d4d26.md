@@ -6,7 +6,7 @@ In this step, we will look at the page variant of the `VariantManagement` contro
 
 Basically, the paged version of the `VariantManagement` control is the same as the \(non-paged\) `VariantManagement` control. The difference is that the page variant is initialized with the `persistencyKey` property and can handle the persistency of multiple smart controls. Each smart control that uses personalization via the page variant has to provide a persistency key. The persistency itself will be stored under the `persistencyKey` of the `VariantManagement` control, and the relevant content for each control will be distributed accordingly based on each individual persistency key.
 
- `persistencyKey` - `VariantManagement` control
+`persistencyKey` - `VariantManagement` control
 
 -   `persistencyKey` - `SmartFilterBar` control-relevant content
 
@@ -21,19 +21,19 @@ Therefore, the persistent content of the page variant is the aggregated content 
 
 As a page variant, the view management is now no longer part of the `SmartFilterBar` and `SmartTable` controls, but displayed in a central location instead:
 
-   
+  
   
 **Central View Management**
 
- ![](images/Smart_Controls_Tutorial_Step_08a_ac9637a.png "Central View Management") 
+![](images/Smart_Controls_Tutorial_Step_08a_ac9637a.png "Central View Management")
 
 In addition, the `VariantManagement` control is no longer displayed in the *Filters* dialog of the `SmartFilterBar` control:
 
-   
+  
   
 **Filter Dialog Without View Management**
 
- ![](images/Smart_Controls_Tutorial_Step_08b_20ef10b.png "Filter Dialog Without View Management") 
+![](images/Smart_Controls_Tutorial_Step_08b_20ef10b.png "Filter Dialog Without View Management")
 
 Other than that, the page variant is just the same as the `VariantManagement` control.
 

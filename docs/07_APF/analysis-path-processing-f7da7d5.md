@@ -38,11 +38,11 @@ The following runtime objects exist:
 
 The relation between the objects described above is depicted in the following figure:
 
-   
+  
   
 **Runtime Objects of a Path**
 
- ![](images/Runtime_Objects_of_a_Path_c2f67ec.png "Runtime Objects of a Path") 
+![](images/Runtime_Objects_of_a_Path_c2f67ec.png "Runtime Objects of a Path")
 
 
 

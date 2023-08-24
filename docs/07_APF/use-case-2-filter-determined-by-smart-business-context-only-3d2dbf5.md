@@ -19,5 +19,5 @@ To configure the context resolution request, enter the required information in t
 
 The options described above are depicted in the following figure:
 
- ![](images/Facet_Filter_Configuration_Use_Case_2_c7a9ab2.png) 
+![](images/Facet_Filter_Configuration_Use_Case_2_c7a9ab2.png)
 

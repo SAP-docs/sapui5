@@ -8,11 +8,11 @@ In this step we want to write a test that simulates user interaction with an ico
 
 ## Preview
 
-   
+  
   
 **Test interacting with an icon tab bar**
 
- ![](images/Tutorial_Testing_Step_13_c76a7b5.png "Test interacting with an icon tab bar") 
+![](images/Tutorial_Testing_Step_13_c76a7b5.png "Test interacting with an icon tab bar")
 
 
 

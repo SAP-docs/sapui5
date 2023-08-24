@@ -4,7 +4,7 @@
 
 With this release SAPUI5 is upgraded from version 1.54 to 1.56.
 
-** **
+****
 
 
 <table>
@@ -62,28 +62,28 @@ Available as of
 <tr>
 <td valign="top">
 
- 1.56 
+1.56 
 
 
 
 </td>
 <td valign="top">
 
- New 
+New 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **New Event Handler Parameter Syntax** 
+**New Event Handler Parameter Syntax** 
 
 
 
@@ -107,7 +107,7 @@ For more information, see [Handling Events in XML Views](../04_Essentials/handli
 </td>
 <td valign="top">
 
- Info Only
+Info Only
 
 
 
@@ -130,21 +130,21 @@ For more information, see [Handling Events in XML Views](../04_Essentials/handli
 </td>
 <td valign="top">
 
- New 
+New 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **XML Composite Control** 
+**XML Composite Control** 
 
 
 
@@ -162,7 +162,7 @@ A new type of composite control, the XML composite control, is now available. It
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -185,21 +185,21 @@ A new type of composite control, the XML composite control, is now available. It
 </td>
 <td valign="top">
 
- New 
+New 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Support Assistant** 
+**Support Assistant** 
 
 
 
@@ -221,7 +221,7 @@ For more information, see [Rules Management](../04_Essentials/rules-management-3
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -244,21 +244,21 @@ For more information, see [Rules Management](../04_Essentials/rules-management-3
 </td>
 <td valign="top">
 
- New 
+New 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.suite.ui.commons.CalculationBuilder`** 
+**`sap.suite.ui.commons.CalculationBuilder`** 
 
 
 
@@ -271,7 +271,7 @@ Enables you to perform arithmetic calculations on constants and variables, using
 
 For more information, see [Calculation Builder](../10_More_About_Controls/calculation-builder-1db5047.md), the [API Reference](https://ui5.sap.com/#/api/sap.suite.ui.commons.CalculationBuilder) and the [Samples](https://ui5.sap.com/#/entity/sap.suite.ui.commons.CalculationBuilder).
 
- ![Calculation Builder with Autocomplete Suggestions](images/WhatsNew_156_Calculation_Builder_0eb83de.png) 
+![Calculation Builder with Autocomplete Suggestions](images/WhatsNew_156_Calculation_Builder_0eb83de.png)
 
 <sub>New•Control•Info Only•1.56</sub>
 
@@ -280,7 +280,7 @@ For more information, see [Calculation Builder](../10_More_About_Controls/calcul
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -303,21 +303,21 @@ For more information, see [Calculation Builder](../10_More_About_Controls/calcul
 </td>
 <td valign="top">
 
- New 
+New 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.smartmultiinput.SmartMultiInput`** 
+**`sap.ui.comp.smartmultiinput.SmartMultiInput`** 
 
 
 
@@ -330,7 +330,7 @@ Acts as a wrapper control for `sap.ui.comp.smartfield.SmartField` and supports t
 
 For more information, see [Smart Multi Input](../10_More_About_Controls/smart-multi-input-5644169.md), the [API Reference](https://ui5.sap.com/#/api/sap.ui.comp.smartmultiinput.SmartMultiInput) and the [Samples](https://ui5.sap.com/#/entity/sap.ui.comp.smartmultiinput.SmartMultiInput).
 
- ![Smart Multi Input Fields](images/WhatsNew_156_Smart_Multi_Input_ece2f96.jpg) 
+![Smart Multi Input Fields](images/WhatsNew_156_Smart_Multi_Input_ece2f96.jpg)
 
 <sub>New•Control•Info Only•1.56</sub>
 
@@ -339,7 +339,7 @@ For more information, see [Smart Multi Input](../10_More_About_Controls/smart-mu
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -362,21 +362,21 @@ For more information, see [Smart Multi Input](../10_More_About_Controls/smart-mu
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **SAPUI5 OData V4 Model** 
+**SAPUI5 OData V4 Model** 
 
 
 
@@ -411,7 +411,7 @@ For more information, see [OData V4 Model](../04_Essentials/odata-v4-model-5de13
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -434,21 +434,21 @@ For more information, see [OData V4 Model](../04_Essentials/odata-v4-model-5de13
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Support Assistant** 
+**Support Assistant** 
 
 
 
@@ -479,7 +479,7 @@ For more information, see [OData V4 Model](../04_Essentials/odata-v4-model-5de13
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -502,21 +502,21 @@ For more information, see [OData V4 Model](../04_Essentials/odata-v4-model-5de13
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Spreadsheet Export** 
+**Spreadsheet Export** 
 
 
 
@@ -534,7 +534,7 @@ Hierarchical structures, such as the `Tree` table, are now enabled in the export
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -557,21 +557,21 @@ Hierarchical structures, such as the `Tree` table, are now enabled in the export
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Drag and Drop** 
+**Drag and Drop** 
 
 
 
@@ -591,7 +591,7 @@ For more information, see the [API Reference for `DragInfo`](https://ui5.sap.com
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -614,21 +614,21 @@ For more information, see the [API Reference for `DragInfo`](https://ui5.sap.com
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Drag and Drop: General Support \(experimental\)** 
+**Drag and Drop: General Support \(experimental\)** 
 
 
 
@@ -651,7 +651,7 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.c
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -674,21 +674,21 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.c
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.f.DynamicPageHeader`** 
+**`sap.f.DynamicPageHeader`** 
 
 
 
@@ -709,7 +709,7 @@ For more information, see the [Sample](https://ui5.sap.com/#/sample/sap.f.sample
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -732,21 +732,21 @@ For more information, see the [Sample](https://ui5.sap.com/#/sample/sap.f.sample
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.gantt`** 
+**`sap.gantt`** 
 
 
 
@@ -764,7 +764,7 @@ When you click the *Bird Eye* button, the Gantt chart intelligently uses the bes
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -787,21 +787,21 @@ When you click the *Bird Eye* button, the Gantt chart intelligently uses the bes
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.DateTimePicker`** 
+**`sap.m.DateTimePicker`** 
 
 
 
@@ -819,7 +819,7 @@ Two new properties are added to the control - `minutesStep` and `secondsStep`. T
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -842,21 +842,21 @@ Two new properties are added to the control - `minutesStep` and `secondsStep`. T
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.IconTabBar`** 
+**`sap.m.IconTabBar`** 
 
 
 
@@ -877,7 +877,7 @@ Two new properties are added to the control - `minutesStep` and `secondsStep`. T
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -900,21 +900,21 @@ Two new properties are added to the control - `minutesStep` and `secondsStep`. T
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.List`** 
+**`sap.m.List`** 
 
 
 
@@ -934,7 +934,7 @@ The `columns` aggregation was deprecated in version 1.16 and has now been remove
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -957,21 +957,21 @@ The `columns` aggregation was deprecated in version 1.16 and has now been remove
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.MenuButton`** 
+**`sap.m.MenuButton`** 
 
 
 
@@ -989,7 +989,7 @@ The control now has a new `menuPosition` property. It specifies the position of 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1012,21 +1012,21 @@ The control now has a new `menuPosition` property. It specifies the position of 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.PlanningCalendar`** 
+**`sap.m.PlanningCalendar`** 
 
 
 
@@ -1051,7 +1051,7 @@ The control now has a new `menuPosition` property. It specifies the position of 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1074,21 +1074,21 @@ The control now has a new `menuPosition` property. It specifies the position of 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.PlanningCalendarRow`** 
+**`sap.m.PlanningCalendarRow`** 
 
 
 
@@ -1106,7 +1106,7 @@ The new `specialDates` aggregation allows you to mark special days on a row leve
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1129,21 +1129,21 @@ The new `specialDates` aggregation allows you to mark special days on a row leve
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.SelectDialog`** 
+**`sap.m.SelectDialog`** 
 
 
 
@@ -1166,7 +1166,7 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.Se
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1189,21 +1189,21 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.Se
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.Slider/sap.m.RangeSlider`** 
+**`sap.m.Slider/sap.m.RangeSlider`** 
 
 
 
@@ -1226,7 +1226,7 @@ For more information, see [Sliders](../10_More_About_Controls/sliders-84ec82e.md
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1249,21 +1249,21 @@ For more information, see [Sliders](../10_More_About_Controls/sliders-84ec82e.md
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.Table`** 
+**`sap.m.Table`** 
 
 
 
@@ -1288,7 +1288,7 @@ For more information, see [Sliders](../10_More_About_Controls/sliders-84ec82e.md
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1311,21 +1311,21 @@ For more information, see [Sliders](../10_More_About_Controls/sliders-84ec82e.md
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.TableSelectDialog`** 
+**`sap.m.TableSelectDialog`** 
 
 
 
@@ -1351,7 +1351,7 @@ For more information, see [Sliders](../10_More_About_Controls/sliders-84ec82e.md
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1374,21 +1374,21 @@ For more information, see [Sliders](../10_More_About_Controls/sliders-84ec82e.md
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.Tree`** 
+**`sap.m.Tree`** 
 
 
 
@@ -1406,7 +1406,7 @@ You can now expand and collapse multiple rows at once by using the related metho
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1429,21 +1429,21 @@ You can now expand and collapse multiple rows at once by using the related metho
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.smartchart.SmartChart`** 
+**`sap.ui.comp.smartchart.SmartChart`** 
 
 
 
@@ -1454,7 +1454,7 @@ You can now expand and collapse multiple rows at once by using the related metho
 
 The representation of date and time has been improved: For example, if a time line is shown on the x-axis of a column chart, each day is displayed on the axis, with no column for days with no available data.
 
- ![](images/WN156_SmartChart_51936d9.png) 
+![](images/WN156_SmartChart_51936d9.png)
 
 <sub>Changed•Control•Info Only•1.56</sub>
 
@@ -1463,7 +1463,7 @@ The representation of date and time has been improved: For example, if a time li
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1486,21 +1486,21 @@ The representation of date and time has been improved: For example, if a time li
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.smarttable.SmartTable`** 
+**`sap.ui.comp.smarttable.SmartTable`** 
 
 
 
@@ -1522,7 +1522,7 @@ The representation of date and time has been improved: For example, if a time li
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1545,21 +1545,21 @@ The representation of date and time has been improved: For example, if a time li
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.core.ScrollBar`** 
+**`sap.ui.core.ScrollBar`** 
 
 
 
@@ -1577,7 +1577,7 @@ The control has been deprecated. For more information, see the [API Reference](h
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1600,21 +1600,21 @@ The control has been deprecated. For more information, see the [API Reference](h
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.layout.BlockLayout`** 
+**`sap.ui.layout.BlockLayout`** 
 
 
 
@@ -1632,7 +1632,7 @@ The new `titleLink` aggregation allows the replacement of the title of a `BlockL
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1655,21 +1655,21 @@ The new `titleLink` aggregation allows the replacement of the title of a `BlockL
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.layout`** 
+**`sap.ui.layout`** 
 
 
 
@@ -1687,7 +1687,7 @@ The new `titleLink` aggregation allows the replacement of the title of a `BlockL
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1710,21 +1710,21 @@ The new `titleLink` aggregation allows the replacement of the title of a `BlockL
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.unified.Calendar`** 
+**`sap.ui.unified.Calendar`** 
 
 
 
@@ -1742,7 +1742,7 @@ With the introduction of the `weekNumberSelect` event, the week numbers in Grego
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1765,21 +1765,21 @@ With the introduction of the `weekNumberSelect` event, the week numbers in Grego
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.uxap.ObjectPageDynamicHeaderTitle`** 
+**`sap.uxap.ObjectPageDynamicHeaderTitle`** 
 
 
 
@@ -1806,7 +1806,7 @@ For more information, see the [Sample](https://ui5.sap.com/#/sample/sap.uxap.sam
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1829,21 +1829,21 @@ For more information, see the [Sample](https://ui5.sap.com/#/sample/sap.uxap.sam
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.uxap.ObjectPageHeader`** 
+**`sap.uxap.ObjectPageHeader`** 
 
 
 
@@ -1861,7 +1861,7 @@ The new `titleSelectorTooltip` aggregation now enables you to set a custom toolt
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1884,21 +1884,21 @@ The new `titleSelectorTooltip` aggregation now enables you to set a custom toolt
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- SAP Fiori Elements 
+SAP Fiori Elements 
 
 
 
 </td>
 <td valign="top">
 
- **SAP Fiori Elements** 
+**SAP Fiori Elements** 
 
 
 
@@ -1976,7 +1976,7 @@ Global filter now lets you configure:
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1999,21 +1999,21 @@ Global filter now lets you configure:
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Analysis Path Framework \(APF\) 
+Analysis Path Framework \(APF\) 
 
 
 
 </td>
 <td valign="top">
 
- **Analysis Path Framework \(APF\)** 
+**Analysis Path Framework \(APF\)** 
 
 
 
@@ -2047,7 +2047,7 @@ APF has the following enhanced features:
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -2070,21 +2070,21 @@ APF has the following enhanced features:
 </td>
 <td valign="top">
 
- New 
+New 
 
 
 
 </td>
 <td valign="top">
 
- User Documentation 
+User Documentation 
 
 
 
 </td>
 <td valign="top">
 
- **New Tutorial** 
+**New Tutorial** 
 
 
 
@@ -2102,7 +2102,7 @@ We have a new tutorial: [Flexible Column Layout App Tutorial](../03_Get-Started/
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -2125,21 +2125,21 @@ We have a new tutorial: [Flexible Column Layout App Tutorial](../03_Get-Started/
 </td>
 <td valign="top">
 
- New 
+New 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Demo Kit Improvements** 
+**Demo Kit Improvements** 
 
 
 
@@ -2150,11 +2150,11 @@ We have a new tutorial: [Flexible Column Layout App Tutorial](../03_Get-Started/
 
 -   We've added a *Change version* button in the Demo Kit's toolbar that enables you to easily switch the app to a different SAPUI5 version.
 
-     ![](images/DemoKit_ChangeVersion_401b0b0.png) 
+    ![](images/DemoKit_ChangeVersion_401b0b0.png)
 
 -   In the *API Reference*, at the bottom of the API tree you can now find an *Index by Version* page that displays all APIs grouped by the release version they were first introduced in. Each release version is displayed as a separate tab.
 
-     ![](images/DemoKit_Index_By_Version_d47b461.png) 
+    ![](images/DemoKit_Index_By_Version_d47b461.png)
 
     For more information, see *API Reference*: [Index by Version](https://ui5.sap.com/#/api/since).
 
@@ -2166,7 +2166,7 @@ We have a new tutorial: [Flexible Column Layout App Tutorial](../03_Get-Started/
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -2183,6 +2183,8 @@ We have a new tutorial: [Flexible Column Layout App Tutorial](../03_Get-Started/
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.115](what-s-new-in-sapui5-1-115-409fde8.md "With this release SAPUI5 is upgraded from version 1.114 to 1.115.")
 
 [What's New in SAPUI5 1.114](what-s-new-in-sapui5-1-114-890fce1.md "With this release SAPUI5 is upgraded from version 1.113 to 1.114.")
 

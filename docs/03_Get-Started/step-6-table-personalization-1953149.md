@@ -12,43 +12,43 @@ The settings in the dialog can also be persisted as you will see in the next ste
 
 Starting from the main UI, we can enter the different personalization possibilities by pressing the *Settings* icon in the upper right-hand corner of the toolbar:
 
-   
+  
   
 **Table Personalization**
 
- ![](images/Smart_Controls_Tutorial_Step_06a_1623d1b.png "Table Personalization") 
+![](images/Smart_Controls_Tutorial_Step_06a_1623d1b.png "Table Personalization")
 
 After doing this, you see a popup with four different tabs:
 
-   
+  
   
 **Settings Dialog: Column Visibility and Order**
 
- ![](images/Step6_popup1_new_33103eb.png "Settings Dialog: Column Visibility and Order") 
+![](images/Step6_popup1_new_33103eb.png "Settings Dialog: Column Visibility and Order")
 
-   
+  
   
 **Settings Dialog: Sorting**
 
- ![](images/Step6_popup2_3a399e1.png "Settings Dialog: Sorting") 
+![](images/Step6_popup2_3a399e1.png "Settings Dialog: Sorting")
 
-   
+  
   
 **Settings Dialog: Filtering**
 
- ![](images/Step6_popup3_2f682a9.png "Settings Dialog: Filtering") 
+![](images/Step6_popup3_2f682a9.png "Settings Dialog: Filtering")
 
-   
+  
   
 **Settings Dialog: Grouping**
 
- ![](images/Step6_popup4_eb8fab9.png "Settings Dialog: Grouping") 
+![](images/Step6_popup4_eb8fab9.png "Settings Dialog: Grouping")
 
-   
+  
   
 **Resulting View with Personalization Applied**
 
- ![](images/Smart_Controls_Tutorial_Step_06f_d018195.png "Resulting View with Personalization Applied") 
+![](images/Smart_Controls_Tutorial_Step_06f_d018195.png "Resulting View with Personalization Applied")
 
 
 

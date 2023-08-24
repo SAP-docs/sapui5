@@ -10,11 +10,11 @@ To add a plain text facet, use the `UI.HeaderFacet` term and include the `UI.Ref
 
 This is displayed as shown below within the object page header:
 
-   
+  
   
 **Plain Text Facet in Object Header**
 
- ![](images/Object_Page_Header_Plain_Text_Facet_c2970f8.png "Plain Text Facet in Object Header") 
+![](images/Object_Page_Header_Plain_Text_Facet_c2970f8.png "Plain Text Facet in Object Header")
 
 
 

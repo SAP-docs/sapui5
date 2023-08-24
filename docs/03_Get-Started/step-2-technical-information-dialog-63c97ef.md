@@ -10,7 +10,7 @@ In this tutorial step, we will have a closer look at the "Technical Information 
 
 ## Preview
 
- ![Technical Information Dialog](images/Technical_Information_Dialog_SAPUI5_8cec8a2.png) 
+![Technical Information Dialog](images/Technical_Information_Dialog_SAPUI5_8cec8a2.png)
 
 
 
@@ -20,7 +20,7 @@ In this tutorial step, we will have a closer look at the "Technical Information 
 
 1.  Download the example app with errors from the Demo Kitat [Troubleshooting](https://ui5.sap.com/#/entity/sap.ui.core.tutorial.troubleshooting/sample/sap.ui.core.tutorial.troubleshooting.01) and run the app.
 
-2.  Open the *Technical Information Dialog* by pressing  [Ctrl\] + [Shift\] + [Left-Alt\] / [Left-Option\] + [P\] .
+2.  Open the *Technical Information Dialog* by pressing [Ctrl\] + [Shift\] + [Left-Alt\] /[Left-Option\] + [P\] .
 
 
 The dialog box shows information related to the app and provides access to additional support options.
@@ -39,7 +39,7 @@ When you run into problems with your app, you should check the SAPUI5 version th
 
 2.  Open the version overview at [https://ui5.sap.com/versionoverview.html](https://ui5.sap.com/versionoverview.html) to see if there are newer patch levels or releases of SAPUI5.
 
-3.  Read the [What's New](../01_Whats-New/what-s-new-in-sapui5-99ac68a.md) section in the documentation and check the  [Change Log](https://ui5.sap.com/#releasenotes.html) to find information about new features and bug fixes.
+3.  Read the [What's New](../01_Whats-New/what-s-new-in-sapui5-99ac68a.md) section in the documentation and check the [Change Log](https://ui5.sap.com/#releasenotes.html) to find information about new features and bug fixes.
 
     > ### Note:  
     > You can view a specific version of the Demo Kit by adding the version number to the URL, for example, `https://ui5.sap.com/1.38.8/`.
@@ -70,7 +70,7 @@ The SAPUI5 libraries are included in your app in a compressed form. To be able t
 
 2.  Open the developer tools of your browser
 
-3.  Choose  [Crtl\] + [O\]  and type the name of an SAPUI5 framework artifact to display its source code in debug mode.
+3.  Choose [Crtl\] + [O\]  and type the name of an SAPUI5 framework artifact to display its source code in debug mode.
 
     > ### Note:  
     > You may see additional errors and warnings in the developer console. These can help you investigate the problem further.

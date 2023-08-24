@@ -4,7 +4,7 @@
 
 With this release SAPUI5 is upgraded from version 1.67 to 1.68.
 
-** **
+****
 
 
 <table>
@@ -62,28 +62,28 @@ Available as of
 <tr>
 <td valign="top">
 
- 1.68 
+1.68 
 
 
 
 </td>
 <td valign="top">
 
- New 
+New 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Format Option `parseKeepsEmptyString`** 
+**Format Option `parseKeepsEmptyString`** 
 
 
 
@@ -117,28 +117,28 @@ Info Only
 <tr>
 <td valign="top">
 
- 1.68 
+1.68 
 
 
 
 </td>
 <td valign="top">
 
- New 
+New 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **New Semantic Rendering With `RenderManager`** 
+**New Semantic Rendering With `RenderManager`** 
 
 
 
@@ -160,7 +160,7 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.c
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -176,28 +176,28 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.c
 <tr>
 <td valign="top">
 
- 1.68 
+1.68 
 
 
 
 </td>
 <td valign="top">
 
- New 
+New 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.integration.widgets.Card`** 
+**`sap.ui.integration.widgets.Card`** 
 
 
 
@@ -217,7 +217,7 @@ For more information, see [Card Explorer](https://ui5.sap.com/test-resources/sap
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -233,28 +233,28 @@ For more information, see [Card Explorer](https://ui5.sap.com/test-resources/sap
 <tr>
 <td valign="top">
 
- 1.68 
+1.68 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **SAPUI5 OData V4 Model** 
+**SAPUI5 OData V4 Model** 
 
 
 
@@ -284,7 +284,7 @@ For more information, see [OData V4 Model](../04_Essentials/odata-v4-model-5de13
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -300,28 +300,28 @@ For more information, see [OData V4 Model](../04_Essentials/odata-v4-model-5de13
 <tr>
 <td valign="top">
 
- 1.68 
+1.68 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Text Wrapping for Spreadsheet Export** 
+**Text Wrapping for Spreadsheet Export** 
 
 
 
@@ -339,7 +339,7 @@ If you set the new `wrap` property to `true`, the content of columns of type *te
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -355,28 +355,28 @@ If you set the new `wrap` property to `true`, the content of columns of type *te
 <tr>
 <td valign="top">
 
- 1.68 
+1.68 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.f.DynamicPage`** 
+**`sap.f.DynamicPage`** 
 
 
 
@@ -394,7 +394,7 @@ You can now change the background color of the `DynamicPage` control by using th
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -410,28 +410,28 @@ You can now change the background color of the `DynamicPage` control by using th
 <tr>
 <td valign="top">
 
- 1.68 
+1.68 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.f.GridContainer` \(Experimental\)** 
+**`sap.f.GridContainer` \(Experimental\)** 
 
 
 
@@ -449,7 +449,7 @@ We have enhanced the drag and drop functionality. With the new version, we intro
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -465,28 +465,28 @@ We have enhanced the drag and drop functionality. With the new version, we intro
 <tr>
 <td valign="top">
 
- 1.68 
+1.68 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.DatePicker`** 
+**`sap.m.DatePicker`** 
 
 
 
@@ -504,7 +504,7 @@ The options displayed in the picker now depend on the display format. For exampl
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -520,28 +520,28 @@ The options displayed in the picker now depend on the display format. For exampl
 <tr>
 <td valign="top">
 
- 1.68 
+1.68 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.SelectDialog / sap.m.TableSelectDialog`** 
+**`sap.m.SelectDialog / sap.m.TableSelectDialog`** 
 
 
 
@@ -559,7 +559,7 @@ Application developers can now customize the text of the confirmation button for
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -575,28 +575,28 @@ Application developers can now customize the text of the confirmation button for
 <tr>
 <td valign="top">
 
- 1.68 
+1.68 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.SelectDialog`** 
+**`sap.m.SelectDialog`** 
 
 
 
@@ -614,7 +614,7 @@ We have introduced a new API method called `clearSelection` that allows removing
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -630,28 +630,28 @@ We have introduced a new API method called `clearSelection` that allows removing
 <tr>
 <td valign="top">
 
- 1.68 
+1.68 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.smartvariants.SmartVariantManagement`** 
+**`sap.ui.comp.smartvariants.SmartVariantManagement`** 
 
 
 
@@ -671,7 +671,7 @@ This behavior is supported for page variants and control variants \(for example,
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -687,28 +687,28 @@ This behavior is supported for page variants and control variants \(for example,
 <tr>
 <td valign="top">
 
- 1.68 
+1.68 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- SAP Fiori Elements 
+SAP Fiori Elements 
 
 
 
 </td>
 <td valign="top">
 
- **SAP Fiori Elements** 
+**SAP Fiori Elements** 
 
 
 
@@ -745,7 +745,7 @@ For more information, see [Using Images, Initials, and Icons](../06_SAP_Fiori_El
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -761,28 +761,28 @@ For more information, see [Using Images, Initials, and Icons](../06_SAP_Fiori_El
 <tr>
 <td valign="top">
 
- 1.68 
+1.68 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Demo Kit Improvements** 
+**Demo Kit Improvements** 
 
 
 
@@ -795,7 +795,7 @@ For more information, see [Using Images, Initials, and Icons](../06_SAP_Fiori_El
 
 To improve the visualization of borrowed *Properties*, *Aggregations*, and *Associations*, we added a checkbox that enables you to switch them on and off. Initially, the borrowed entities aren't displayed.
 
- ![](images/What_s_New_1_68_-_Borrowed_entities_checkbox_33559e6.gif) 
+![](images/What_s_New_1_68_-_Borrowed_entities_checkbox_33559e6.gif)
 
 **Web Page Title**
 
@@ -808,7 +808,7 @@ The web page title is now updated dynamically to reflect the currently open tab.
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -825,6 +825,8 @@ The web page title is now updated dynamically to reflect the currently open tab.
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.115](what-s-new-in-sapui5-1-115-409fde8.md "With this release SAPUI5 is upgraded from version 1.114 to 1.115.")
 
 [What's New in SAPUI5 1.114](what-s-new-in-sapui5-1-114-890fce1.md "With this release SAPUI5 is upgraded from version 1.113 to 1.114.")
 

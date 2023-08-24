@@ -78,7 +78,7 @@ The `"variantManagement"` setting in the manifest allows you to enable or disabl
 >    "name": "sap.fe.templates.ListReport",
 >    "options": {
 >       "settings": {
->          "entitySet": "BusinessPartners",
+>          "contextPath": "/BusinessPartners",
 >          "variantManagement": "Control"
 >       }
 >    }
@@ -98,11 +98,11 @@ In the list report, you can set the variant management to `"Page"` level or to `
 
         Users can filter table data choosing one or multiple column values \(unless filtering is disabled\). You can use the `@com.sap.vocabularies.UI.v1.HiddenFilter` annotation to exclude those columns you don't want to be filterable.
 
-         ![](images/Filtering_Columns_3868aad.png) 
+        ![](images/Filtering_Columns_3868aad.png)
 
     -   Sorting
 
-         ![](images/Sorting_Columns_in_Tables_e44ae82.png) 
+        ![](images/Sorting_Columns_in_Tables_e44ae82.png)
 
         You can use the `@.OData.Capabilities.V1.SortRestrictions` annotation to exclude those columns you don’t want to be sortable. You can use the `@.OData.Capabilities.V1.NavigationRestrictions` annotation to exclude navigation properties.
 
@@ -179,7 +179,7 @@ In the list report, you can set the variant management to `"Page"` level or to `
 
         Users can add or remove all properties of the root entity of a given table and its 1:1 navigation entities. Selected properties are shown at the top of the list. For all properties of navigation entities, the name of the navigation entity is shown below the name of the property using a gray font, as shown in the following screenshot:Users can sort tables by choosing individual columns or multiple columns \(unless sorting is disabled\). Users can sort each column in ascending or descending order.
 
-         ![](images/Adding_or_Removing_Columns_caf79df.png) 
+        ![](images/Adding_or_Removing_Columns_caf79df.png)
 
     -   Grouping \(available only for analytical tables\)
 
@@ -205,7 +205,7 @@ Variant management on control level enables filtering, sorting, adding/removing 
 >    "name": "sap.fe.templates.ListReport",
 >    "options": {
 >       "settings": {
->          "entitySet": "BusinessPartners",
+>          "contextPath": "/BusinessPartners",
 >          "variantManagement": "Control",
 >          "controlConfiguration": {
 >             "@com.sap.vocabularies.UI.v1.LineItem": {

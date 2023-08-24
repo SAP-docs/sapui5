@@ -4,7 +4,7 @@
 
 With this release SAPUI5 is upgraded from version 1.58 to 1.60.
 
-** **
+****
 
 
 <table>
@@ -62,28 +62,28 @@ Available as of
 <tr>
 <td valign="top">
 
- 1.60 
+1.60 
 
 
 
 </td>
 <td valign="top">
 
- New 
+New 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Hyphenation for Text Controls** 
+**Hyphenation for Text Controls** 
 
 
 
@@ -123,28 +123,28 @@ Info Only
 <tr>
 <td valign="top">
 
- 1.60 
+1.60 
 
 
 
 </td>
 <td valign="top">
 
- New 
+New 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Support Assistant** 
+**Support Assistant** 
 
 
 
@@ -184,7 +184,7 @@ The `jQuery.sap.support.analyze` method of the Support Assistant API can now acc
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -200,28 +200,28 @@ The `jQuery.sap.support.analyze` method of the Support Assistant API can now acc
 <tr>
 <td valign="top">
 
- 1.60 
+1.60 
 
 
 
 </td>
 <td valign="top">
 
- New 
+New 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **UI5 Evolution** 
+**UI5 Evolution** 
 
 
 
@@ -253,7 +253,7 @@ In order to benefit from asynchronous behavior and to avoid synchronous requests
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -269,28 +269,28 @@ In order to benefit from asynchronous behavior and to avoid synchronous requests
 <tr>
 <td valign="top">
 
- 1.60 
+1.60 
 
 
 
 </td>
 <td valign="top">
 
- New 
+New 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.f.GridList`** 
+**`sap.f.GridList`** 
 
 
 
@@ -312,7 +312,7 @@ For more information, see [Grid Controls](../10_More_About_Controls/grid-control
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -328,28 +328,28 @@ For more information, see [Grid Controls](../10_More_About_Controls/grid-control
 <tr>
 <td valign="top">
 
- 1.60 
+1.60 
 
 
 
 </td>
 <td valign="top">
 
- New 
+New 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.layout.cssgrid.CSSGrid`** 
+**`sap.ui.layout.cssgrid.CSSGrid`** 
 
 
 
@@ -371,7 +371,7 @@ For more information, see [Grid Controls](../10_More_About_Controls/grid-control
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -387,28 +387,28 @@ For more information, see [Grid Controls](../10_More_About_Controls/grid-control
 <tr>
 <td valign="top">
 
- 1.60 
+1.60 
 
 
 
 </td>
 <td valign="top">
 
- New 
+New 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.unified.ColorPickerPopover`** 
+**`sap.ui.unified.ColorPickerPopover`** 
 
 
 
@@ -419,7 +419,7 @@ For more information, see [Grid Controls](../10_More_About_Controls/grid-control
 
 A wrapper around the `sap.ui.unified.ColorPicker`A control that allows it to be displayed as a popover or a dialog depending on the device. The `ColorPickerPopover` has the same properties as the `ColorPicker` control but it has two additional methods - `openBy` and `close` to control the popover. Another difference between the new control and the `ColorPicker` control is that there is no `liveChange` event, and the `change` event is fired only when the *Submit* button is pressed. For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.unified.ColorPickerPopover) and the [Sample](https://ui5.sap.com/#/sample/sap.ui.unified.sample.ColorPickerPopover/preview).
 
- ![](images/Color_Picker_in_Popover_and_Dialog_c983fe1.png) 
+![](images/Color_Picker_in_Popover_and_Dialog_c983fe1.png)
 
 <sub>New•Control•Info Only•1.60</sub>
 
@@ -428,7 +428,7 @@ A wrapper around the `sap.ui.unified.ColorPicker`A control that allows it to be 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -444,28 +444,28 @@ A wrapper around the `sap.ui.unified.ColorPicker`A control that allows it to be 
 <tr>
 <td valign="top">
 
- 1.60 
+1.60 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **SAPUI5 OData V4 Model** 
+**SAPUI5 OData V4 Model** 
 
 
 
@@ -508,7 +508,7 @@ For more information, see [OData V4 Model](../04_Essentials/odata-v4-model-5de13
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -524,28 +524,28 @@ For more information, see [OData V4 Model](../04_Essentials/odata-v4-model-5de13
 <tr>
 <td valign="top">
 
- 1.60 
+1.60 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Aggregation Forwarding for Composite Controls** 
+**Aggregation Forwarding for Composite Controls** 
 
 
 
@@ -574,7 +574,7 @@ For more information, see [Aggregation Forwarding](../09_Developing_Controls/agg
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -590,28 +590,28 @@ For more information, see [Aggregation Forwarding](../09_Developing_Controls/agg
 <tr>
 <td valign="top">
 
- 1.60 
+1.60 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Drag and Drop** 
+**Drag and Drop** 
 
 
 
@@ -634,7 +634,7 @@ For more information, see [Drag and Drop](../04_Essentials/drag-and-drop-3ddb6cd
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -650,28 +650,28 @@ For more information, see [Drag and Drop](../04_Essentials/drag-and-drop-3ddb6cd
 <tr>
 <td valign="top">
 
- 1.60 
+1.60 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.f.FlexibleColumnLayout`** 
+**`sap.f.FlexibleColumnLayout`** 
 
 
 
@@ -689,7 +689,7 @@ A new sample now shows the control as an app with routing that displays differen
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -705,28 +705,28 @@ A new sample now shows the control as an app with routing that displays differen
 <tr>
 <td valign="top">
 
- 1.60 
+1.60 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.gantt`** 
+**`sap.gantt`** 
 
 
 
@@ -749,7 +749,7 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.gant
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -765,28 +765,28 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.gant
 <tr>
 <td valign="top">
 
- 1.60 
+1.60 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- `sap.m.Image` 
+`sap.m.Image` 
 
 
 
@@ -804,7 +804,7 @@ To optimize app performance, we changed the default value of the `densityAware` 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -820,28 +820,28 @@ To optimize app performance, we changed the default value of the `densityAware` 
 <tr>
 <td valign="top">
 
- 1.60 
+1.60 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.MessageView`/`sap.m.MessagePopover`** 
+**`sap.m.MessageView`/`sap.m.MessagePopover`** 
 
 
 
@@ -850,7 +850,7 @@ To optimize app performance, we changed the default value of the `densityAware` 
 
 **`sap.m.MessageView`/`sap.m.MessagePopover`**
 
-A keyboard accelerator for the  [Alt\] + [Enter\]  event has been added. Now, when the focus is on *item* with the `activeTitle` property set to `true`, and when the  [Alt\] + [Enter\]  is triggered, the `activeTitlePress` callback is fired. Screen reader support was also improved. Information that the defined keyboard accelerators can be used for easier navigation has been provided to its users.
+A keyboard accelerator for the [Alt\] + [Enter\]  event has been added. Now, when the focus is on *item* with the `activeTitle` property set to `true`, and when the [Alt\] + [Enter\]  is triggered, the `activeTitlePress` callback is fired. Screen reader support was also improved. Information that the defined keyboard accelerators can be used for easier navigation has been provided to its users.
 
 <sub>Changed•Control•Info Only•1.60</sub>
 
@@ -859,7 +859,7 @@ A keyboard accelerator for the  [Alt\] + [Enter\]  event has been added. Now, wh
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -875,28 +875,28 @@ A keyboard accelerator for the  [Alt\] + [Enter\]  event has been added. Now, wh
 <tr>
 <td valign="top">
 
- 1.60 
+1.60 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.MultiComboBox`** 
+**`sap.m.MultiComboBox`** 
 
 
 
@@ -917,7 +917,7 @@ A keyboard accelerator for the  [Alt\] + [Enter\]  event has been added. Now, wh
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -933,28 +933,28 @@ A keyboard accelerator for the  [Alt\] + [Enter\]  event has been added. Now, wh
 <tr>
 <td valign="top">
 
- 1.60 
+1.60 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.Page`** 
+**`sap.m.Page`** 
 
 
 
@@ -972,7 +972,7 @@ We have made `sap.m.Page` a droppable area.
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -988,28 +988,28 @@ We have made `sap.m.Page` a droppable area.
 <tr>
 <td valign="top">
 
- 1.60 
+1.60 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.PlanningCalendar`** 
+**`sap.m.PlanningCalendar`** 
 
 
 
@@ -1027,7 +1027,7 @@ The `stickyHeader` property is no longer experimental.For more information, see 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1043,28 +1043,28 @@ The `stickyHeader` property is no longer experimental.For more information, see 
 <tr>
 <td valign="top">
 
- 1.60 
+1.60 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.SearchField`** 
+**`sap.m.SearchField`** 
 
 
 
@@ -1082,7 +1082,7 @@ The live search function of the control was originally designed to trigger a bac
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1098,28 +1098,28 @@ The live search function of the control was originally designed to trigger a bac
 <tr>
 <td valign="top">
 
- 1.60 
+1.60 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.table`** 
+**`sap.m.table`** 
 
 
 
@@ -1139,7 +1139,7 @@ The live search function of the control was originally designed to trigger a bac
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1155,28 +1155,28 @@ The live search function of the control was originally designed to trigger a bac
 <tr>
 <td valign="top">
 
- 1.60 
+1.60 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.UploadCollection`** 
+**`sap.m.UploadCollection`** 
 
 
 
@@ -1194,7 +1194,7 @@ The control's functionality has been unified, so the behavior is now more consis
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1210,28 +1210,28 @@ The control's functionality has been unified, so the behavior is now more consis
 <tr>
 <td valign="top">
 
- 1.60 
+1.60 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.ViewSettingsDialog`** 
+**`sap.m.ViewSettingsDialog`** 
 
 
 
@@ -1249,7 +1249,7 @@ Several visual improvements were implemented - the *OK* button is now displayed 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1265,28 +1265,28 @@ Several visual improvements were implemented - the *OK* button is now displayed 
 <tr>
 <td valign="top">
 
- 1.60 
+1.60 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.navpopover.SmartLink`** 
+**`sap.ui.comp.navpopover.SmartLink`** 
 
 
 
@@ -1304,7 +1304,7 @@ The `SmartLink` control can now hide actions of semantic objects that are not re
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1320,28 +1320,28 @@ The `SmartLink` control can now hide actions of semantic objects that are not re
 <tr>
 <td valign="top">
 
- 1.60 
+1.60 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.smartmicrochart`** 
+**`sap.ui.comp.smartmicrochart`** 
 
 
 
@@ -1359,7 +1359,7 @@ The `SmartAreaMicroChart`, `SmartLineMicroChart`, and `SmartColumnMicroChart` co
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1375,28 +1375,28 @@ The `SmartAreaMicroChart`, `SmartLineMicroChart`, and `SmartColumnMicroChart` co
 <tr>
 <td valign="top">
 
- 1.60 
+1.60 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.smarttable.SmartTable`** 
+**`sap.ui.comp.smarttable.SmartTable`** 
 
 
 
@@ -1410,7 +1410,7 @@ The `SmartAreaMicroChart`, `SmartLineMicroChart`, and `SmartColumnMicroChart` co
 -   The spreadsheet export has been extended with additional user options that you can find in a new dialog that is available in a dropdown list next to the *Export to Spreadsheet* button. For more information, see the [Sample](https://ui5.sap.com/#/sample/sap.ui.comp.sample.smarttable/preview).
 
 
- ![](images/WN160_ExportSettingsDialog_a2b11c1.png) 
+![](images/WN160_ExportSettingsDialog_a2b11c1.png)
 
 <sub>Changed•Control•Info Only•1.60</sub>
 
@@ -1419,7 +1419,7 @@ The `SmartAreaMicroChart`, `SmartLineMicroChart`, and `SmartColumnMicroChart` co
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1435,28 +1435,28 @@ The `SmartAreaMicroChart`, `SmartLineMicroChart`, and `SmartColumnMicroChart` co
 <tr>
 <td valign="top">
 
- 1.60 
+1.60 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.core.AccessibleLandmarkRole`** 
+**`sap.ui.core.AccessibleLandmarkRole`** 
 
 
 
@@ -1474,7 +1474,7 @@ We have extended the `AccessibleLandmarkRole` enumeration with the roles Form an
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1490,28 +1490,28 @@ We have extended the `AccessibleLandmarkRole` enumeration with the roles Form an
 <tr>
 <td valign="top">
 
- 1.60 
+1.60 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.core.ValueState`** 
+**`sap.ui.core.ValueState`** 
 
 
 
@@ -1529,7 +1529,7 @@ We have introduced `sap.ui.core.ValueState.Information` as a new semantic color 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1545,28 +1545,28 @@ We have introduced `sap.ui.core.ValueState.Information` as a new semantic color 
 <tr>
 <td valign="top">
 
- 1.60 
+1.60 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.generic.app.navigation.service.NavigationHandler`** 
+**`sap.ui.generic.app.navigation.service.NavigationHandler`** 
 
 
 
@@ -1584,7 +1584,7 @@ We have introduced `sap.ui.core.ValueState.Information` as a new semantic color 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1600,28 +1600,28 @@ We have introduced `sap.ui.core.ValueState.Information` as a new semantic color 
 <tr>
 <td valign="top">
 
- 1.60 
+1.60 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.richtexteditor.RichTextEditor`** 
+**`sap.ui.richtexteditor.RichTextEditor`** 
 
 
 
@@ -1639,7 +1639,7 @@ The default editor type is now TinyMCE version 4. TinyMCE3 is no longer supporte
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1655,28 +1655,28 @@ The default editor type is now TinyMCE version 4. TinyMCE3 is no longer supporte
 <tr>
 <td valign="top">
 
- 1.60 
+1.60 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.table`** 
+**`sap.ui.table`** 
 
 
 
@@ -1694,7 +1694,7 @@ The `paste` event has been added to the grid table. For more information, see th
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1710,28 +1710,28 @@ The `paste` event has been added to the grid table. For more information, see th
 <tr>
 <td valign="top">
 
- 1.60 
+1.60 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.unified.Calendar`** 
+**`sap.ui.unified.Calendar`** 
 
 
 
@@ -1740,9 +1740,9 @@ The `paste` event has been added to the grid table. For more information, see th
 
 **`sap.ui.unified.Calendar`**
 
--   **Week selection**: Users can now select/deselect all the days in a given week at once by choosing the week number or by pressing  [SHIFT\] + [SPACE\]  on any day of the week.
+-   **Week selection**: Users can now select/deselect all the days in a given week at once by choosing the week number or by pressing [SHIFT\] + [SPACE\]  on any day of the week.
 
--   **Range selection**: We introduced two more shortcuts -  [SHIFT\] + [ENTER\]  and  [SHIFT\] + [Left Mouse Button\] . Both of them select/deselect all days between the two selected dates.
+-   **Range selection**: We introduced two more shortcuts - [SHIFT\] + [ENTER\]  and [SHIFT\] + [Left Mouse Button\] . Both of them select/deselect all days between the two selected dates.
 
 
 For more information, see the [Sample](https://ui5.sap.com/#/sample/sap.ui.unified.sample.CalendarMultipleDaySelection/preview).
@@ -1754,7 +1754,7 @@ For more information, see the [Sample](https://ui5.sap.com/#/sample/sap.ui.unifi
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1770,28 +1770,28 @@ For more information, see the [Sample](https://ui5.sap.com/#/sample/sap.ui.unifi
 <tr>
 <td valign="top">
 
- 1.60 
+1.60 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.uxap.ObjectPageLayout`** 
+**`sap.uxap.ObjectPageLayout`** 
 
 
 
@@ -1815,7 +1815,7 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.uxap
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1831,28 +1831,28 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.uxap
 <tr>
 <td valign="top">
 
- 1.60 
+1.60 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- SAP Fiori Elements 
+SAP Fiori Elements 
 
 
 
 </td>
 <td valign="top">
 
- **SAP Fiori Elements** 
+**SAP Fiori Elements** 
 
 
 
@@ -1930,7 +1930,7 @@ Overview page has the following new and enhanced features:
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1946,28 +1946,28 @@ Overview page has the following new and enhanced features:
 <tr>
 <td valign="top">
 
- 1.60 
+1.60 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Analysis Path Framework \(APF\) 
+Analysis Path Framework \(APF\) 
 
 
 
 </td>
 <td valign="top">
 
- **Analysis Path Framework \(APF\)** 
+**Analysis Path Framework \(APF\)** 
 
 
 
@@ -1987,7 +1987,7 @@ In the APF runtime, KPI values can now be displayed in the chart. A new button a
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -2003,28 +2003,28 @@ In the APF runtime, KPI values can now be displayed in the chart. A new button a
 <tr>
 <td valign="top">
 
- 1.60 
+1.60 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- User Documentation 
+User Documentation 
 
 
 
 </td>
 <td valign="top">
 
- **Accessibility Improvements in Demo Apps and in the Walkthrough Tutorial** 
+**Accessibility Improvements in Demo Apps and in the Walkthrough Tutorial** 
 
 
 
@@ -2042,7 +2042,7 @@ We have improved the accessibility of our demo apps. In addition, we have update
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -2059,6 +2059,8 @@ We have improved the accessibility of our demo apps. In addition, we have update
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.115](what-s-new-in-sapui5-1-115-409fde8.md "With this release SAPUI5 is upgraded from version 1.114 to 1.115.")
 
 [What's New in SAPUI5 1.114](what-s-new-in-sapui5-1-114-890fce1.md "With this release SAPUI5 is upgraded from version 1.113 to 1.114.")
 

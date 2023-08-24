@@ -9,11 +9,11 @@ You can add a form facet to the object page header. To do this, add a `UI.Refere
 -   *Distribution Channel*
 -   *Division*
 
-   
+  
   
 **Object Page: Header Field Group**
 
- ![](images/Header_Field_Group_379b975.png "Object Page: Header Field Group") 
+![](images/Header_Field_Group_379b975.png "Object Page: Header Field Group")
 
 
 

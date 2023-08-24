@@ -10,7 +10,7 @@ Displays a ring chart that represents a percentage value.
 
 The `RadialMicroChart` control provides a ring chart that displays the percentage value in the center of the chart. To indicate the significance of the displayed percentage value, you can define the status as `Good`, `Neutral`, `Critical`, or `Error`.
 
- ![Radial Micro Chart with percentage value](images/WhatsNew_136_Microchart_12befff.png) 
+![Radial Micro Chart with percentage value](images/WhatsNew_136_Microchart_12befff.png)
 
 
 

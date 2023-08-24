@@ -14,11 +14,11 @@ The expression language objects are an association of the `RuleBuilder` object, 
 
 ## Preview
 
-   
+  
   
 **Decision Table with Guided Input**
 
- ![](images/decision_table1_40a97b4.png "Decision Table with Guided Input") 
+![](images/decision_table1_40a97b4.png "Decision Table with Guided Input")
 
 
 

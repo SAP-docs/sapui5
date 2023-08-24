@@ -46,21 +46,21 @@ Description
 <tr>
 <td valign="top">
 
- `bundleName` 
+`bundleName` 
 
 
 
 </td>
 <td valign="top">
 
- `String` 
+`String` 
 
 
 
 </td>
 <td valign="top">
 
- SAPUI5 module name in dot notation referring to the main `.properties` file.
+SAPUI5 module name in dot notation referring to the main `.properties` file.
 
 
 
@@ -69,14 +69,14 @@ Description
 <tr>
 <td valign="top">
 
- `bundleUrl` 
+`bundleUrl` 
 
 
 
 </td>
 <td valign="top">
 
- `String` 
+`String` 
 
 
 
@@ -92,14 +92,14 @@ URL pointing to the `.properties` file of the main bundle.
 <tr>
 <td valign="top">
 
- `bundleUrlRelativeTo` 
+`bundleUrlRelativeTo` 
 
 
 
 </td>
 <td valign="top">
 
- `String` 
+`String` 
 
 
 
@@ -118,14 +118,14 @@ The bundle URL can be resolved relative to either `manifest` \(default\) or `com
 <tr>
 <td valign="top">
 
- `supportedLocales` 
+`supportedLocales` 
 
 
 
 </td>
 <td valign="top">
 
- `String[]` 
+`String[]` 
 
 
 
@@ -141,14 +141,14 @@ An array containing a list of supported locales, for example `en_GB`, `en-GB`, o
 <tr>
 <td valign="top">
 
- `fallbackLocale` 
+`fallbackLocale` 
 
 
 
 </td>
 <td valign="top">
 
- `String` 
+`String` 
 
 
 
@@ -164,14 +164,14 @@ The fallback locale in case the user's locale is not present in the list of supp
 <tr>
 <td valign="top">
 
- `terminologies` 
+`terminologies` 
 
 
 
 </td>
 <td valign="top">
 
- `Object` 
+`Object` 
 
 
 
@@ -187,14 +187,14 @@ A key-value map in which the name of a terminology is specified as a key and a c
 <tr>
 <td valign="top">
 
- `enhanceWith` 
+`enhanceWith` 
 
 
 
 </td>
 <td valign="top">
 
- `Object[]` 
+`Object[]` 
 
 
 
@@ -346,7 +346,7 @@ In the examples below, the terminology `travel` has the highest priority as it i
 
 The most relevant option is to pass the list of active terminologies as an array of strings to the factory functions of the `sap.ui.core.Component`. In case of nested components, the active terminologies will be inherited from the owner component.
 
- For more information and additional usage instructions, see the [API Reference: `sap.ui.core.Component.create`](https://ui5.sap.com/#/api/sap.ui.core.Component%23methods/sap.ui.core.Component.create). 
+For more information and additional usage instructions, see the [API Reference: `sap.ui.core.Component.create`](https://ui5.sap.com/#/api/sap.ui.core.Component%23methods/sap.ui.core.Component.create). 
 
 ```js
 

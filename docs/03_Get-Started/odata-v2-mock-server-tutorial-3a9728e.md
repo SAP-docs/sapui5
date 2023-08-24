@@ -17,7 +17,7 @@ Additionally, we will demonstrate how to mock an additional request that is not 
 
 ## Preview
 
- ![](images/Tutorial_Mock_Server_Step_2_55edd9f.png) 
+![](images/Tutorial_Mock_Server_Step_2_55edd9f.png)
 
 > ### Tip:  
 > You don't have to do all tutorial steps sequentially, you can also jump directly to any step you want. Just download the code from the previous step, and start there.

@@ -10,12 +10,12 @@ This way, they are all in a central place and can be easily translated into othe
 
 ## Preview
 
-   
+  
   
 **An input field and a description displaying the value of the input field \(No visual changes to last step\)**
 
- ![](images/SAPUI5_Walkthrough_Step_07_to_10_e5a9bb4.png "An input field and a description displaying the value of the input field (No
-					visual changes to last step)") 
+![](images/SAPUI5_Walkthrough_Step_07_to_10_e5a9bb4.png "An input field and a description displaying the value of the input field (No
+					visual changes to last step)")
 
 
 

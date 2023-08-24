@@ -628,44 +628,21 @@ You can use the `UI.TextArrangement` annotation to configure the display format 
     <tr>
     <td valign="top">
     
-        \-
+    \-
 
 
     
     </td>
     <td valign="top">
     
-        \-
+    \-
 
 
     
     </td>
     <td valign="top">
     
-        `Value`
-
-
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-        x
-
-
-    
-    </td>
-    <td valign="top">
-    
-        \- \*1\)
-
-
-    
-    </td>
-    <td valign="top">
-    
-        `Value`
+    `Value`
 
 
     
@@ -674,44 +651,21 @@ You can use the `UI.TextArrangement` annotation to configure the display format 
     <tr>
     <td valign="top">
     
-        x
+    x
 
 
     
     </td>
     <td valign="top">
     
-        `TextFirst`
+    \- \*1\)
 
 
     
     </td>
     <td valign="top">
     
-        `DescriptionValue`
-
-
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-        x
-
-
-    
-    </td>
-    <td valign="top">
-    
-        `TextLast`
-
-
-    
-    </td>
-    <td valign="top">
-    
-        `ValueDescription`
+    `Value`
 
 
     
@@ -720,21 +674,21 @@ You can use the `UI.TextArrangement` annotation to configure the display format 
     <tr>
     <td valign="top">
     
-        x
+    x
 
 
     
     </td>
     <td valign="top">
     
-        `TextSeparate`
+    `TextFirst`
 
 
     
     </td>
     <td valign="top">
     
-        `Value`
+    `DescriptionValue`
 
 
     
@@ -743,21 +697,67 @@ You can use the `UI.TextArrangement` annotation to configure the display format 
     <tr>
     <td valign="top">
     
-        x
+    x
 
 
     
     </td>
     <td valign="top">
     
-        `TextOnly`
+    `TextLast`
 
 
     
     </td>
     <td valign="top">
     
-        `Description`
+    `ValueDescription`
+
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    x
+
+
+    
+    </td>
+    <td valign="top">
+    
+    `TextSeparate`
+
+
+    
+    </td>
+    <td valign="top">
+    
+    `Value`
+
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    x
+
+
+    
+    </td>
+    <td valign="top">
+    
+    `TextOnly`
+
+
+    
+    </td>
+    <td valign="top">
+    
+    `Description`
 
 
     
@@ -799,44 +799,21 @@ You can use the `UI.TextArrangement` annotation to configure the display format 
     <tr>
     <td valign="top">
     
-        \-
+    \-
 
 
     
     </td>
     <td valign="top">
     
-        \-
+    \-
 
 
     
     </td>
     <td valign="top">
     
-        `Value`
-
-
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-        x
-
-
-    
-    </td>
-    <td valign="top">
-    
-        \- \*2\)
-
-
-    
-    </td>
-    <td valign="top">
-    
-        `DescriptionValue`
+    `Value`
 
 
     
@@ -845,44 +822,21 @@ You can use the `UI.TextArrangement` annotation to configure the display format 
     <tr>
     <td valign="top">
     
-        x
+    x
 
 
     
     </td>
     <td valign="top">
     
-        `TextFirst`
+    \- \*2\)
 
 
     
     </td>
     <td valign="top">
     
-        `DescriptionValue`
-
-
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-        x
-
-
-    
-    </td>
-    <td valign="top">
-    
-        `TextLast`
-
-
-    
-    </td>
-    <td valign="top">
-    
-        `ValueDescription`
+    `DescriptionValue`
 
 
     
@@ -891,21 +845,21 @@ You can use the `UI.TextArrangement` annotation to configure the display format 
     <tr>
     <td valign="top">
     
-        x
+    x
 
 
     
     </td>
     <td valign="top">
     
-        `TextSeparate`
+    `TextFirst`
 
 
     
     </td>
     <td valign="top">
     
-        `Value`
+    `DescriptionValue`
 
 
     
@@ -914,21 +868,67 @@ You can use the `UI.TextArrangement` annotation to configure the display format 
     <tr>
     <td valign="top">
     
-        x
+    x
 
 
     
     </td>
     <td valign="top">
     
-        `TextOnly`
+    `TextLast`
 
 
     
     </td>
     <td valign="top">
     
-        `Description`
+    `ValueDescription`
+
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    x
+
+
+    
+    </td>
+    <td valign="top">
+    
+    `TextSeparate`
+
+
+    
+    </td>
+    <td valign="top">
+    
+    `Value`
+
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    x
+
+
+    
+    </td>
+    <td valign="top">
+    
+    `TextOnly`
+
+
+    
+    </td>
+    <td valign="top">
+    
+    `Description`
 
 
     
@@ -1032,7 +1032,7 @@ When you choose a property with the data type "`Edm.Date`", a date picker is ren
 > }
 > ```
 
- ![](images/Date_Picker_bba0ad9.png) 
+![](images/Date_Picker_bba0ad9.png)
 
 When you choose a property with the data type "`Edm.DateTimeOffset`", a date/time picker is rendered:
 
@@ -1045,7 +1045,7 @@ When you choose a property with the data type "`Edm.DateTimeOffset`", a date/tim
 > </EntityType>
 > ```
 
- ![](images/Input_Field_Without_a_Timezone_Dialog_b07bbe3.png) 
+![](images/Input_Field_Without_a_Timezone_Dialog_b07bbe3.png)
 
 You can specify a timezone for a field of type "`Edm.DateTimeOffset`". If the timezone is specified \(annotated\), then the timezone is displayed in the input field and the text field in display mode. You can make the following settings:
 
@@ -1126,7 +1126,7 @@ If you don't explicitly define the timezone, the `DateTimeOffset` field is conve
 
 The following screenshot shows an input field with no specified timezone or the default timezone:
 
- ![](images/Input_Field_with_No_Timezone_or_the_Default_Timezone_a2f5fc8.png) 
+![](images/Input_Field_with_No_Timezone_or_the_Default_Timezone_a2f5fc8.png)
 
 > ### Sample Code:  
 > CAP CDS Annotation
@@ -1140,9 +1140,9 @@ The following screenshot shows an input field with no specified timezone or the 
 
 The following screenshot shows an input field where a timezone has been specified:
 
- ![](images/Input_Field_with_Specified_Timezone_b3b7f08.png) 
+![](images/Input_Field_with_Specified_Timezone_b3b7f08.png)
 
 The following screenshot shows that the timezone is specified for the corresponding input field. The Date/Time Picker doesn't show any timezone in the dialog:
 
- ![](images/Input_Field_Without_a_Timezone_Dialog_b07bbe3.png) 
+![](images/Input_Field_Without_a_Timezone_Dialog_b07bbe3.png)
 

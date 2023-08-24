@@ -6,11 +6,11 @@ You can use a bar chart to display data, such as total product sales over a peri
 
 The number of columns is equal to the number of measures in the annotation file.
 
-   
+  
   
 **Example of a Horizontal Bar Chart Card**
 
- ![](images/Example_of_a_Horizontal_Bar_Chart_Card_51ba955.png "Example of a Horizontal Bar Chart Card") 
+![](images/Example_of_a_Horizontal_Bar_Chart_Card_51ba955.png "Example of a Horizontal Bar Chart Card")
 
 
 
@@ -31,7 +31,7 @@ The threshold values are taken from that data point annotations that are associa
   
 **Example of a Bar Chart Card with Semantic Coloring**
 
- ![](images/Example_of_a_Bar_Chart_Card_with_Semantic_Coloring_e9cc5d1.png "Example of a Bar Chart Card with Semantic Coloring") 
+![](images/Example_of_a_Bar_Chart_Card_with_Semantic_Coloring_e9cc5d1.png "Example of a Bar Chart Card with Semantic Coloring")
 
 When you semantically color the bar chart card, the threshold values which influence the semantic color would also be displayed in the legend. However, if you use more than one measure in the chart, the legends would only show the values *Good*, *Bad*, and *Neutral*.
 
@@ -57,11 +57,11 @@ The measures can be maximizing, minimizing, or target, based on a threhold value
     -   Critical to Positive: Here, the measure value should be greater than or equal to `ThresholdValues.ToleranceRangeLowValue` 
 
 
-       
+      
       
     **Example of a Maximizing Measure**
 
-     ![](images/Example_of_a_Maximizing_Measure_3a30047.png "Example of a Maximizing Measure") 
+    ![](images/Example_of_a_Maximizing_Measure_3a30047.png "Example of a Maximizing Measure")
 
 -   Minimizing measure, for example, cost: The direction of improvement is as follows:
 
@@ -70,11 +70,11 @@ The measures can be maximizing, minimizing, or target, based on a threhold value
     -   Critical to Negative: Here, the measure value should be greater than `ThresholdValues.DeviationRangeHighValue` 
 
 
-       
+      
       
     **Example of a Minimizing Measure**
 
-     ![](images/Example_of_a_Minimizing_Measure_9bef69b.png "Example of a Minimizing Measure") 
+    ![](images/Example_of_a_Minimizing_Measure_9bef69b.png "Example of a Minimizing Measure")
 
 -   Target measure, for example, temperature: The direction of improvement is as follows:
 
@@ -87,11 +87,11 @@ The measures can be maximizing, minimizing, or target, based on a threhold value
     -   Critical to Negative: Here, the measure value should be greater than `ThresholdValues.DeviationRangeHighValue` 
 
 
-       
+      
       
     **Example of a Target Measure**
 
-     ![](images/Example_of_a_Target_Measure_7626b9d.png "Example of a Target Measure") 
+    ![](images/Example_of_a_Target_Measure_7626b9d.png "Example of a Target Measure")
 
 
 > ### Sample Code:  

@@ -6,27 +6,27 @@ You can add a progress indicator to a header facet on the object page.
 
 The progress indicator allows you to visually represent the level of completion of a goal or target, such as a project's progress, sales progress for the current year’s goal, the development stage of a product, stock availability, and so on. The image below shows a progress indicator within the object page header.
 
-   
+  
   
 **Progress Indicator in Object Page Header**
 
- ![](images/ObjPageHeader_ProgIndicator_2e059aa.png "Progress Indicator in Object Page Header") 
+![](images/ObjPageHeader_ProgIndicator_2e059aa.png "Progress Indicator in Object Page Header")
 
 As shown below, progress can be expressed either as a percentage or in absolute numbers \(for example, "8 of 10"\), and it can include a unit of measure, such as PC or GB.
 
-   
+  
   
 **Progress Indicator: Percent or Number**
 
- ![](images/ProgIndicator_Percent_Number_73aaedf.png "Progress Indicator: Percent or Number") 
+![](images/ProgIndicator_Percent_Number_73aaedf.png "Progress Indicator: Percent or Number")
 
 The progress indicator in the header facet is made up of sections to include a title, subtitle, and footer:
 
-   
+  
   
 **Sections of Progress Indicator**
 
- ![](images/ObjPageHeader_ProgInd_Sections_767e59f.png "Sections of Progress Indicator") 
+![](images/ObjPageHeader_ProgInd_Sections_767e59f.png "Sections of Progress Indicator")
 
 
 
@@ -271,11 +271,11 @@ Note that the unit of measure can be annotated with `Unit` or `ISOCurrency` as s
 
     -   In both cases the actual value of the progress will be displayed in the bar as shown in the image below.
 
-           
+          
           
         **Values in Progress Indicator**
 
-         ![](images/ProgIndicator_SpecialValues_ec1bbd3.png "Values in Progress Indicator") 
+        ![](images/ProgIndicator_SpecialValues_ec1bbd3.png "Values in Progress Indicator")
 
 
 

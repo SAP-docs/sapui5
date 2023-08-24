@@ -8,11 +8,11 @@ In this step, we replace the text with a button and show the “Hello World” m
 
 ## Preview
 
-   
+  
   
 **A Say Hello button is added**
 
- ![](images/SAPUI5_Walkthrough_Step_05_5717fb5.png "A Say Hello button is added") 
+![](images/SAPUI5_Walkthrough_Step_05_5717fb5.png "A Say Hello button is added")
 
 
 

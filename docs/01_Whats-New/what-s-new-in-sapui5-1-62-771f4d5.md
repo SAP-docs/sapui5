@@ -4,7 +4,7 @@
 
 With this release SAPUI5 is upgraded from version 1.61 to 1.62.
 
-** **
+****
 
 
 <table>
@@ -62,28 +62,28 @@ Available as of
 <tr>
 <td valign="top">
 
- 1.62 
+1.62 
 
 
 
 </td>
 <td valign="top">
 
- New 
+New 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.GenericTag`** 
+**`sap.m.GenericTag`** 
 
 
 
@@ -94,7 +94,7 @@ Available as of
 
 The new `sap.m.GenericTag` control displays complimentary information related to the current page, such as key performance indicators \(KPI\) and situations.
 
- ![](images/sap_m_GenericTag_New_Control_1_7fe88c5.png) 
+![](images/sap_m_GenericTag_New_Control_1_7fe88c5.png)
 
 It consists of four different parts:
 
@@ -107,7 +107,7 @@ It consists of four different parts:
 -   An optional content area that can display either a control of type `sap.m.ObjectNumber` or a warning icon \(D\)
 
 
- ![](images/sap_m_GenericTag_New_Control_2_fb7c92b.png) 
+![](images/sap_m_GenericTag_New_Control_2_fb7c92b.png)
 
 The control can move to the overflow area of `sap.m.OverflowToolbar`.
 
@@ -136,28 +136,28 @@ Info Only
 <tr>
 <td valign="top">
 
- 1.62 
+1.62 
 
 
 
 </td>
 <td valign="top">
 
- New 
+New 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.integration.widgets.Card`** 
+**`sap.ui.integration.widgets.Card`** 
 
 
 
@@ -172,7 +172,7 @@ A card is a user experience design pattern that displays the most concise pieces
   
 **Analytical card**
 
- ![](images/Cards_3ff4cba.png "Analytical card") 
+![](images/Cards_3ff4cba.png "Analytical card")
 
 Using cards, you can group information, link additional details, and present a summary. You can also get direct insights without leaving the current screen and choose further navigation options. Each card is designed in a different style and contains various content formats.
 
@@ -194,7 +194,7 @@ For more information, see [Cards](../10_More_About_Controls/cards-5b46b03.md), t
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -210,28 +210,28 @@ For more information, see [Cards](../10_More_About_Controls/cards-5b46b03.md), t
 <tr>
 <td valign="top">
 
- 1.62 
+1.62 
 
 
 
 </td>
 <td valign="top">
 
- New 
+New 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Routing in Nested Components** 
+**Routing in Nested Components** 
 
 
 
@@ -251,7 +251,7 @@ For details, see [Enabling Routing in Nested Components](../04_Essentials/enabli
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -267,28 +267,28 @@ For details, see [Enabling Routing in Nested Components](../04_Essentials/enabli
 <tr>
 <td valign="top">
 
- 1.62 
+1.62 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **SAPUI5 OData V4 Model** 
+**SAPUI5 OData V4 Model** 
 
 
 
@@ -331,7 +331,7 @@ For more information, see [OData V4 Model](../04_Essentials/odata-v4-model-5de13
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -347,28 +347,28 @@ For more information, see [OData V4 Model](../04_Essentials/odata-v4-model-5de13
 <tr>
 <td valign="top">
 
- 1.62 
+1.62 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.Carousel`** 
+**`sap.m.Carousel`** 
 
 
 
@@ -386,7 +386,7 @@ The control can now display several items at once. This functionality is impleme
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -402,28 +402,28 @@ The control can now display several items at once. This functionality is impleme
 <tr>
 <td valign="top">
 
- 1.62 
+1.62 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.Column`** 
+**`sap.m.Column`** 
 
 
 
@@ -441,7 +441,7 @@ The `sortIndicator` property now shows a sort icon when a column is sorted. For 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -457,28 +457,28 @@ The `sortIndicator` property now shows a sort icon when a column is sorted. For 
 <tr>
 <td valign="top">
 
- 1.62 
+1.62 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.ComboBox`** 
+**`sap.m.ComboBox`** 
 
 
 
@@ -496,7 +496,7 @@ In order for the `ComboBox` to be aligned with the rest of the input controls an
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -512,28 +512,28 @@ In order for the `ComboBox` to be aligned with the rest of the input controls an
 <tr>
 <td valign="top">
 
- 1.62 
+1.62 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.ListBase`** 
+**`sap.m.ListBase`** 
 
 
 
@@ -551,7 +551,7 @@ You can now use more values for the `highlight` property. These values are provi
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -567,28 +567,28 @@ You can now use more values for the `highlight` property. These values are provi
 <tr>
 <td valign="top">
 
- 1.62 
+1.62 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.OverflowToolbar`** 
+**`sap.m.OverflowToolbar`** 
 
 
 
@@ -609,7 +609,7 @@ You can now use more values for the `highlight` property. These values are provi
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -625,28 +625,28 @@ You can now use more values for the `highlight` property. These values are provi
 <tr>
 <td valign="top">
 
- 1.62 
+1.62 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.SinglePlanningCalendar`** 
+**`sap.m.SinglePlanningCalendar`** 
 
 
 
@@ -669,7 +669,7 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.Si
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -685,28 +685,28 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.Si
 <tr>
 <td valign="top">
 
- 1.62 
+1.62 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.StandardListItem`** 
+**`sap.m.StandardListItem`** 
 
 
 
@@ -724,7 +724,7 @@ The new `information` value in the `sap.ui.core.ValueState` enumeration is now s
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -740,28 +740,28 @@ The new `information` value in the `sap.ui.core.ValueState` enumeration is now s
 <tr>
 <td valign="top">
 
- 1.62 
+1.62 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.tnt.SideNavigation`** 
+**`sap.tnt.SideNavigation`** 
 
 
 
@@ -779,7 +779,7 @@ We have implemented a `selectedKey` property of `sap.tnt.SideNavigation`, with w
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -795,28 +795,28 @@ We have implemented a `selectedKey` property of `sap.tnt.SideNavigation`, with w
 <tr>
 <td valign="top">
 
- 1.62 
+1.62 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.smarttable.SmartTable`** 
+**`sap.ui.comp.smarttable.SmartTable`** 
 
 
 
@@ -837,7 +837,7 @@ We have implemented a `selectedKey` property of `sap.tnt.SideNavigation`, with w
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -853,28 +853,28 @@ We have implemented a `selectedKey` property of `sap.tnt.SideNavigation`, with w
 <tr>
 <td valign="top">
 
- 1.62 
+1.62 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.core.support.RuleEngineOpaExtension`** 
+**`sap.ui.core.support.RuleEngineOpaExtension`** 
 
 
 
@@ -892,7 +892,7 @@ The rule engine OPA extension, which allows Support Assistant checks, has been e
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -908,28 +908,28 @@ The rule engine OPA extension, which allows Support Assistant checks, has been e
 <tr>
 <td valign="top">
 
- 1.62 
+1.62 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.table.AnalyticalTable / sap.ui.table.Table / sap.ui.table.TreeTable`** 
+**`sap.ui.table.AnalyticalTable / sap.ui.table.Table / sap.ui.table.TreeTable`** 
 
 
 
@@ -947,7 +947,7 @@ You can now use more values for the `highlight` property. These values are provi
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -963,28 +963,28 @@ You can now use more values for the `highlight` property. These values are provi
 <tr>
 <td valign="top">
 
- 1.62 
+1.62 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- SAP Fiori Elements 
+SAP Fiori Elements 
 
 
 
 </td>
 <td valign="top">
 
- **SAP Fiori Elements** 
+**SAP Fiori Elements** 
 
 
 
@@ -1036,7 +1036,7 @@ The analytical list page has these new features or enhancements:
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1052,28 +1052,28 @@ The analytical list page has these new features or enhancements:
 <tr>
 <td valign="top">
 
- 1.62 
+1.62 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Demo Kit Improvements** 
+**Demo Kit Improvements** 
 
 
 
@@ -1102,7 +1102,7 @@ You can now switch the *Content Density* of the Demo Kit samples to *Condensed*.
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1119,6 +1119,8 @@ You can now switch the *Content Density* of the Demo Kit samples to *Condensed*.
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.115](what-s-new-in-sapui5-1-115-409fde8.md "With this release SAPUI5 is upgraded from version 1.114 to 1.115.")
 
 [What's New in SAPUI5 1.114](what-s-new-in-sapui5-1-114-890fce1.md "With this release SAPUI5 is upgraded from version 1.113 to 1.114.")
 

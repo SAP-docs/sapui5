@@ -2,7 +2,7 @@
 
 # Adapting the UI: Analytical List Page
 
-You can extend and customize specific features of the analytical list page using the SAPUI5 Visual Editor in SAP Web IDE.
+You can extend and customize specific features of the analytical list page.
 
 
 
@@ -11,10 +11,13 @@ You can extend and customize specific features of the analytical list page using
 
 
 
-You can also use [SAP Fiori tools](https://help.sap.com/viewer/product/SAP_FIORI_tools/Latest/en-US) for SAPUI5 versions higher than or equal to 1.52 to adapt the analytical list page.
+We recommend that you use [SAP Fiori tools](https://help.sap.com/viewer/product/SAP_FIORI_tools/Latest/en-US), which is a set of extensions for SAP Business Application Studio and Visual Studio Code, to adapt the analytical list page.
 
 > ### Note:  
 > Adapt the UI only for the use cases described here. Otherwise, control replacements might lead to changes that can no longer be applied.
+
+> ### Note:  
+> In the Page Editor, a property is written with spaces in between for better readability. In SAP Fiori elements, whenever we provide a property, it is written in the actual code format.
 
 ****
 
@@ -46,7 +49,7 @@ Collapse smart filter bar
 </td>
 <td valign="top">
 
-Configure the `Header Expanded` property for the template \(ID is `template:Page`\) to collapse and hide the filter bar.
+Configure the `headerExpanded` property for the template to collapse and hide the filter bar.
 
 
 
@@ -62,7 +65,7 @@ Freeze filter bar on scroll
 </td>
 <td valign="top">
 
-Configure the `Preserve header state on scroll` property for the template \(ID is `template:Page`\) to freeze the filter bar.
+Configure the `preserveHeaderStateonScroll` property for the template to freeze the filter bar.
 
 
 
@@ -78,11 +81,11 @@ Variant management options
 </td>
 <td valign="top">
 
-Configure the following page variant \(ID is `template:PageVariant`\) properties to enable the variant management options:
+Configure the following page variant properties to enable the variant management options:
 
--   `Set as default`: This property lets you set the default variant for a user
+-   `showSetAsDefault`: This property lets you set the default variant for a user
 
--   `Public`: This property lets you make the variant as visible to users
+-   `showShare`: This property lets you make the variant as visible to users
 
 
 
@@ -99,7 +102,7 @@ Share icon
 </td>
 <td valign="top">
 
-Configure the `Visibility` property to hide or unhide the share icon \(ID is `template:Share`\).
+Configure the `visible` property to hide or unhide the share icon.
 
 
 
@@ -117,9 +120,9 @@ Clear button
 
 The clear button may appear on the smart filter bar or on the header area based on the enabling of *Go* button. If the *Clear* button is on the:
 
--   Smart filer bar: Configure the `Visibility` property of the clear button \(ID is `template:SmartFilterBar-btnClear`\).
+-   Smart filer bar: Configure the `visible` property of the clear button.
 
--   Header bar: Configure the `Visibility` property of the *Clear* button \(ID is `template:ClearButton`\).
+-   Header bar: Configure the `visible` property of the *Clear* button.
 
 
 
@@ -136,7 +139,7 @@ Table toolbar
 </td>
 <td valign="top">
 
-Configure the `Visibility` property of the table toolbar \(ID is `template:TableToolbar`\) to hide or unhide table toolbar.
+Configure the `visible` property of the table toolbar to hide or unhide table toolbar.
 
 
 
@@ -152,7 +155,7 @@ Page footer
 </td>
 <td valign="top">
 
-Configure the `Visibility` property of the page footer \(ID is `template:FooterToolbar`\) to hide or unhide page footer.
+Configure the `visible` property of the page footer to hide or unhide page footer.
 
 
 
@@ -168,15 +171,15 @@ Chart
 </td>
 <td valign="top">
 
-Use the following smart chart \(ID is `chart`, example C\_ContrItemMonitoringResults--chart\) properties on the UI Adaptation layer:
+Use the following smart chart properties on the UI Adaptation layer:
 
--   Ignored Chart Types
+-   `ignoredChartTypes`
 
--   Selection Mode
+-   `selectionMode`
 
--   Chart tool tip
+-   `showChartTooltip`
 
--   Chart type selection button
+-   `showChartTypeSelectionButton`
 
 
 

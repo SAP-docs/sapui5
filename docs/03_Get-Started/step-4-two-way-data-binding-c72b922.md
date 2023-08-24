@@ -8,11 +8,11 @@ In the examples used so far, we have used a read-only field to display the value
 
 ## Preview
 
-   
+  
   
 **Input fields can be enabled or disabled**
 
- ![](images/Tutorial_Data_Binding_Step_4_61d68f1.png "Input fields can be enabled or disabled") 
+![](images/Tutorial_Data_Binding_Step_4_61d68f1.png "Input fields can be enabled or disabled")
 
 
 

@@ -54,7 +54,7 @@ Key users can also perform the following:
 -   Manage views by adding or removing favorites and modifying the visibility
 
 
- ![](images/Key_Users_Manage_Views1_9ff91e8.png) ![](images/Key_Users_Manage_Views_2_f31343c.png) 
+![](images/Key_Users_Manage_Views1_9ff91e8.png)![](images/Key_Users_Manage_Views_2_f31343c.png)
 
 While switching to the key user adaptation mode from the normal mode, the app starts in a fresh state and the applied changes are not preserved in the internal app state. Also, when a user exits the key user adaptation mode, the app restores to the old state it was in before entering the key user adaptation mode.
 

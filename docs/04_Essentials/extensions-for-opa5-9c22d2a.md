@@ -29,7 +29,7 @@ The extension API is defined in the `sap.ui.test.OpaExtension` class. A custom e
 
 To load an extension, the test should enable it by specifying extension class name as string in the key 'extensions' in the options object given to `Opa5.extendConfig()`. An array of extension names could be specified or the extension name `?opaExtensions=[my/custom/Extension]` could be given in the test URL. If the extension needs some application parameters, they could be provided in the `appParams`.
 
-For more information, see the *API Reference*: [ `Opa5.extendConfig()`](https://ui5.sap.com/#/api/sap.ui.test.Opa5/methods/sap.ui.test.Opa5.extendConfig) 
+For more information, see the *API Reference*: [`Opa5.extendConfig()`](https://ui5.sap.com/#/api/sap.ui.test.Opa5/methods/sap.ui.test.Opa5.extendConfig) 
 
 
 

@@ -142,7 +142,7 @@ Error
 
 In the second option, the criticality can be calculated using customer-defined thresholds.
 
- ![](images/Radial_Thresholds_ec1af00.png) 
+![](images/Radial_Thresholds_ec1af00.png)
 
 > ### Note:  
 > The thresholds are not renderd in SmartRadialMicroChart.
@@ -274,12 +274,12 @@ With the `ImprovementDirection` property the thresholds can determine the `value
 
     With the Maximize direction, it is calculated the higher the value the more the circle color trends to green or the more positive is its status. Depending on the relevant thresholds \(`DeviationLowValue` and `ToleranceLowValue`\), there are appropriate certain points where the color changes. Reflecting the sample data above, values lower than 10 will be shown in red color, values lower than 45 but higher than 10 are displayed in orange color and all values bigger than 45 are shown in green color.
 
-     ![](images/Radial_Maximize_c8c3013.png) 
+    ![](images/Radial_Maximize_c8c3013.png)
 
 -   **ImprovementDirection: Minimize**
 
     With theMinimize direction, it is calculated the lower the value the more the circle color trends to green or the higher the value the more negative is its status. This direction uses the `ToleranceHighValue` and `DeviationHighValue` thresholds. Reflecting the sample data above, values higher than 80 will be shown in red color, values lower than 80 but higher than 55 are displayed in orange color and all values lower than 55 are shown in green color.
 
-     ![](images/Radial_Minimize_e3cedd1.png) 
+    ![](images/Radial_Minimize_e3cedd1.png)
 
 

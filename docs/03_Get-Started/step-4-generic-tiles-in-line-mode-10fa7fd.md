@@ -10,7 +10,7 @@ In this step, we will create two `GenericTiles` in line mode.
 
 ## Preview
 
- ![](images/Step3_1_0add8de.png) 
+![](images/Step3_1_0add8de.png)
 
 
 

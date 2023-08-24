@@ -124,6 +124,8 @@ The `owner` parameter defines the owner of all views that are created by the rou
 
 
 
+## Example
+
 ```js
 {
     metadata: {

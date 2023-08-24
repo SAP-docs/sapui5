@@ -76,7 +76,7 @@ sap.ui.getCore().attachInit(function(){
 });
 ```
 
- <a name="loiobf10bd41ac8f49048a1ccb743fbfbb8a"/>
+<a name="loiobf10bd41ac8f49048a1ccb743fbfbb8a"/>
 
 <!-- loiobf10bd41ac8f49048a1ccb743fbfbb8a -->
 
@@ -95,7 +95,7 @@ The files are loaded in the following sequence:
     A standard CSS file that contains all styles relevant for this library. For application development tools, this file is generated automatically during the build.
 
 
- <a name="loiobbce44f06ddc48fda7aeb44eae52ebbc"/>
+<a name="loiobbce44f06ddc48fda7aeb44eae52ebbc"/>
 
 <!-- loiobbce44f06ddc48fda7aeb44eae52ebbc -->
 

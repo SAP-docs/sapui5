@@ -12,7 +12,7 @@ In this step, we will create our start page with the KPI Tile `(GenericTile` wit
 
 When you have completed this step, your start page will include the following tiles:
 
- ![](images/Step1_1_f71dec0.png) 
+![](images/Step1_1_f71dec0.png)
 
 
 

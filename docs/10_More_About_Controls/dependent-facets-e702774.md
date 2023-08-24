@@ -8,6 +8,8 @@ For example, an application displays a list of products and uses a facet filter 
 
 
 
+## Example
+
 In this example, only products from the selected category are displayed.
 
 ![](images/SAPUI5_Facet_Filter_Dependent_Facets_Example_1f47e60.png)

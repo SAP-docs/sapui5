@@ -8,11 +8,11 @@ For easily detecting and managing product shortages in our app, we will add a qu
 
 ## Preview
 
-   
+  
   
 **A quick filter allows filtering the product table**
 
- ![](images/Tutorial_Worklist_Step_4_Preview_395f8ac.png "A quick filter allows filtering the product table") 
+![](images/Tutorial_Worklist_Step_4_Preview_395f8ac.png "A quick filter allows filtering the product table")
 
 
 

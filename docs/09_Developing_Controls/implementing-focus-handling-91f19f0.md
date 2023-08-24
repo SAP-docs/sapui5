@@ -8,19 +8,19 @@ Each control provided by the SAPUI5 framework has its own behavior for focus han
 
 The base class for elements \(`Element.js`\) provides the following four methods to support the implementation of focus handling:
 
--    `Element.getFocusDomRef()` 
+-   `Element.getFocusDomRef()` 
 
     Once a visible element is rendered, it has a Document Object Model \(DOM\) representation. The root DOM node can be accessed by using the method `getDomRef()` on the element. The root DOM node is the default focused DOM node. After rendering, when a control is supposed to be focused, the framework asks the control for its focus DOM node by using the `getFocusDomRef()` method. If the root DOM node does **not** represent the element that should have the focus, you have to return another DOM node by overriding the `getFocusDomRef()` method.
 
--    `Element.focus()` 
+-   `Element.focus()` 
 
     The `focus()` method sets the focus on the element. This is done using the focus DOM node.
 
--    `Element.getFocusInfo()` 
+-   `Element.getFocusInfo()` 
 
     For some controls, it is even more difficult to apply the focus once the control has been rerendered. List controls, for example, have their own internal focus handling and set the focus on the different items. A data table moves the focus over a matrix of cells. The requirement is that a control can apply the focus to its exact previous position after rerendering. In cases where the SAPUI5 rendering mechanism fails to find the correct element after rendering \(for example, because it does not have an ID or the ID changed\), override the `getFocusInfo()` method and serialize the focus state into a JSON object and return it. Before rendering, the render manager calls this method for the element instance and stores this information for future use. After rendering, it calls the `applyFocusInfo()` method and passes back the serialized object. This is not only useful for focus information, but also, for example, the exact cursor position of a `TextField` control, can be stored in such an object.
 
--    `Element.applyFocusInfo(oFocusInfo)` 
+-   `Element.applyFocusInfo(oFocusInfo)` 
 
     The `applyFocusInfo()` method applies the focus to the element after rerendering. You use this method if a different behavior is expected for the element. The default implementation of this method sets the focus as it is implemented in the `focus()` method \(see above\).
 

@@ -192,7 +192,7 @@ Analytical List Page
 <tr>
 <td valign="top">
 
- [Configuring the Table-Only View as the Default Option](configuring-the-table-only-view-as-the-default-option-d074e26.md) 
+[Configuring the Table-Only View as the Default Option](configuring-the-table-only-view-as-the-default-option-d074e26.md) 
 
 
 
@@ -301,7 +301,7 @@ depends \(see linked topics\)
 </td>
 <td valign="top">
 
- [Adding Action Buttons to Forms in Sections](adding-action-buttons-to-forms-in-sections-e64efda.md) 
+[Adding Action Buttons to Forms in Sections](adding-action-buttons-to-forms-in-sections-e64efda.md) 
 
 
 
@@ -324,7 +324,7 @@ context independent
 </td>
 <td valign="top">
 
- [Adding Custom Actions Using Extension Points](adding-custom-actions-using-extension-points-7619517.md) 
+[Adding Custom Actions Using Extension Points](adding-custom-actions-using-extension-points-7619517.md) 
 
 
 
@@ -363,7 +363,7 @@ depends \(see linked topics\)
 </td>
 <td valign="top">
 
- [Defining Actions in the Chart Toolbar](defining-actions-in-the-chart-toolbar-7d1fa83.md) 
+[Defining Actions in the Chart Toolbar](defining-actions-in-the-chart-toolbar-7d1fa83.md) 
 
 
 
@@ -927,7 +927,7 @@ Unbound actions can have parameters that are defined by the backend. All the fun
 
 For internal use only! Corresponding CDS annotation:
 
- `{position:30, importance: #HIGH, type: #FOR_INTENT_BASED_NAVIGATION, requiresContext: false, semanticObjectAction: 'showItemFinancialPlanningWD', label: 'Financial Planning' },` 
+`{position:30, importance: #HIGH, type: #FOR_INTENT_BASED_NAVIGATION, requiresContext: false, semanticObjectAction: 'showItemFinancialPlanningWD', label: 'Financial Planning' },` 
 
 
 
@@ -935,7 +935,7 @@ For internal use only! Corresponding CDS annotation:
 
 For internal use only! Corresponding CDS annotation:
 
- `{position:30, importance: #HIGH, type: #FOR_INTENT_BASED_NAVIGATION, requiresContext: true, semanticObjectAction: 'showItemFinancialPlanningWD', label: 'Financial Planning' },` 
+`{position:30, importance: #HIGH, type: #FOR_INTENT_BASED_NAVIGATION, requiresContext: true, semanticObjectAction: 'showItemFinancialPlanningWD', label: 'Financial Planning' },` 
 
 
 
@@ -1411,7 +1411,7 @@ More information about the parameter itself, such as the label for the parameter
 
 When an action with parameters is invoked, an action parameter dialog opens up showing all of the parameter fields. An exception is the `New` action, where the action dialog only comes up if there are mandatory parameters.
 
- ![](images/Create_Action_Dialog_e79706e.png) 
+![](images/Create_Action_Dialog_e79706e.png)
 
 
 
@@ -1475,15 +1475,15 @@ The following default values are available:
 
     -   User defaults configured as `UserDefault.<parameterName>` are single-valued, so the value will always be considered for the action parameter with the same technical name.
 
-         ![](images/Action_Parameter_Dialog_e343414.png) 
+        ![](images/Action_Parameter_Dialog_e343414.png)
 
-         ![](images/FLP_User_settings_b73e037.png) 
+        ![](images/FLP_User_settings_b73e037.png)
 
     -   User defaults configured as `UserDefault.extended.<parameterName>` can result in multiple values. Since only single values are supported, a value added in the additional parameters dialog is considered only when the condition is set as ‘EQ’ \(equal to\). Note that only one such condition is allowed.
 
     -   If multiple conditions are found for the same property, then the values are ignored for the action parameter with the same technical name.
 
-         ![](images/FLP_User_Settings_Multiple_Values_1c51a28.png) 
+        ![](images/FLP_User_Settings_Multiple_Values_1c51a28.png)
 
 
 -   Default Values Calculated in the Back End
@@ -1750,7 +1750,7 @@ In the following screenshot, *My Menu Button* has grouped three actions:
 -   *Bound Action with params* is an action maintained via annotations.
 
 
- ![](images/Grouping_Actions_as_Menu_Buttons_d7ed70d.png) 
+![](images/Grouping_Actions_as_Menu_Buttons_d7ed70d.png)
 
 If a `DataField` action is named `com.c_salesordermanage_sd.BoundActionWithParams`, its corresponding key is `DataFieldForAction::com.c_salesordermanage_sd.BoundActionWithParams`. If the action name contains parentheses, as in `DataFieldForAction::com.c_salesordermanage_sd.BoundActionWithParams(com.c_salesordermanage_sd.SalesOrderManage)`, the corresponding key is `DataFieldForAction::com.c_salesordermanage_sd.BoundActionWithParams::com.c_salesordermanage_sd.SalesOrderManage`.
 
@@ -1806,7 +1806,7 @@ Make the following settings in the manifest to group actions under a menu button
 > ```
 > "options": {
 >     "settings": {
->         "entitySet": "SalesOrderManage",
+>         "contextPath": "/SalesOrderManage",
 >         "controlConfiguration": {
 >             "@com.sap.vocabularies.UI.v1.FieldGroup#OrderData": {
 >                 "actions": {
@@ -1843,7 +1843,7 @@ Make the following settings in the manifest to group actions under a menu button
 > ```
 > "options": {
 >     "settings": {
->         "entitySet": "SalesOrderManage",
+>         "contextPath": "/SalesOrderManage",
 >         "controlConfiguration": {
 >             "@com.sap.vocabularies.UI.v1.LineItem": {
 >                 "actions": {

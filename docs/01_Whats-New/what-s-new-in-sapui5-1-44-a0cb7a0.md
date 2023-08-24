@@ -4,7 +4,7 @@
 
 With this release SAPUI5 is upgraded from version 1.42 to 1.44.
 
-** **
+****
 
 
 <table>
@@ -62,28 +62,28 @@ Available as of
 <tr>
 <td valign="top">
 
- 1.44 
+1.44 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Navigation and Routing** 
+**Navigation and Routing** 
 
 
 
@@ -101,7 +101,7 @@ In the routing configuration, you can now define a `homeRoute` for the generic h
 </td>
 <td valign="top">
 
- Info Only
+Info Only
 
 
 
@@ -117,28 +117,28 @@ In the routing configuration, you can now define a `homeRoute` for the generic h
 <tr>
 <td valign="top">
 
- 1.44 
+1.44 
 
 
 
 </td>
 <td valign="top">
 
- New 
+New 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.suite.ui.microchart.StackedBarMicroChart`** 
+**`sap.suite.ui.microchart.StackedBarMicroChart`** 
 
 
 
@@ -149,7 +149,7 @@ In the routing configuration, you can now define a `homeRoute` for the generic h
 
 This control shows a progress chart that displays overall progress but also a summary of the items. You can have different value colors, for example, for accepted, rejected, and open items. For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.suite.ui.microchart.StackedBarMicroChart) and the [Samples](https://ui5.sap.com/#/entity/sap.suite.ui.microchart.StackedBarMicroChart).
 
- ![](images/WhatsNew_144_StackedMicroChart_2c030cc.png) 
+![](images/WhatsNew_144_StackedMicroChart_2c030cc.png)
 
 <sub>New•Control•Info Only•1.44</sub>
 
@@ -158,7 +158,7 @@ This control shows a progress chart that displays overall progress but also a su
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -174,28 +174,28 @@ This control shows a progress chart that displays overall progress but also a su
 <tr>
 <td valign="top">
 
- 1.44 
+1.44 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Formatting and Parsing of Week Info for All Calendar Types** 
+**Formatting and Parsing of Week Info for All Calendar Types** 
 
 
 
@@ -213,7 +213,7 @@ The calculation of calendar weeks is now based on minimal days in first week com
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -229,28 +229,28 @@ The calculation of calendar weeks is now based on minimal days in first week com
 <tr>
 <td valign="top">
 
- 1.44 
+1.44 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **SAPUI5 OData V4 Model** 
+**SAPUI5 OData V4 Model** 
 
 
 
@@ -291,7 +291,7 @@ For more information, see [OData V4 Model](../04_Essentials/odata-v4-model-5de13
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -307,28 +307,28 @@ For more information, see [OData V4 Model](../04_Essentials/odata-v4-model-5de13
 <tr>
 <td valign="top">
 
- 1.44 
+1.44 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **OData V2 Model** 
+**OData V2 Model** 
 
 
 
@@ -346,7 +346,7 @@ For OData V2 models, the V2 annotation `‘sap:visible=”false”’` is now al
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -362,28 +362,28 @@ For OData V2 models, the V2 annotation `‘sap:visible=”false”’` is now al
 <tr>
 <td valign="top">
 
- 1.44 
+1.44 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **One Page Acceptance Tests \(OPA5\)** 
+**One Page Acceptance Tests \(OPA5\)** 
 
 
 
@@ -401,7 +401,7 @@ You can now check for empty aggregations in your OPA test with the `AggregationE
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -417,28 +417,28 @@ You can now check for empty aggregations in your OPA test with the `AggregationE
 <tr>
 <td valign="top">
 
- 1.44 
+1.44 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.f.DynamicPage`** 
+**`sap.f.DynamicPage`** 
 
 
 
@@ -456,7 +456,7 @@ Using the new property `toggleHeaderOnTitleClick`, you can now disable the featu
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -472,28 +472,28 @@ Using the new property `toggleHeaderOnTitleClick`, you can now disable the featu
 <tr>
 <td valign="top">
 
- 1.44 
+1.44 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.Dialog`** 
+**`sap.m.Dialog`** 
 
 
 
@@ -511,7 +511,7 @@ We have enabled custom handling for the *Close* button. App developers can check
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -527,28 +527,28 @@ We have enabled custom handling for the *Close* button. App developers can check
 <tr>
 <td valign="top">
 
- 1.44 
+1.44 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.GenericTile`** 
+**`sap.m.GenericTile`** 
 
 
 
@@ -566,7 +566,7 @@ With the new `LineMode`, you can switch the visualization of the Generic Tile on
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -582,28 +582,28 @@ With the new `LineMode`, you can switch the visualization of the Generic Tile on
 <tr>
 <td valign="top">
 
- 1.44 
+1.44 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.HeaderContainer`** 
+**`sap.m.HeaderContainer`** 
 
 
 
@@ -621,7 +621,7 @@ The `HeaderContainer` control has been moved from the `sap.suite.ui.commons` lib
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -637,28 +637,28 @@ The `HeaderContainer` control has been moved from the `sap.suite.ui.commons` lib
 <tr>
 <td valign="top">
 
- 1.44 
+1.44 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.IconTabBar`** 
+**`sap.m.IconTabBar`** 
 
 
 
@@ -681,7 +681,7 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.Ic
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -697,28 +697,28 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.Ic
 <tr>
 <td valign="top">
 
- 1.44 
+1.44 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.List / sap.m.Table`** 
+**`sap.m.List / sap.m.Table`** 
 
 
 
@@ -736,7 +736,7 @@ You can now highlight items, for example to indicate an error. For more informat
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -752,28 +752,28 @@ You can now highlight items, for example to indicate an error. For more informat
 <tr>
 <td valign="top">
 
- 1.44 
+1.44 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.NotificationListItem / sap.m.NotificationListGroup`** 
+**`sap.m.NotificationListItem / sap.m.NotificationListGroup`** 
 
 
 
@@ -786,7 +786,7 @@ We have implemented several new features:
 
 -   New aggregation \(`processingMessage`\) to provide a `sap.m.MessageStrip` notification within a `NotificationListItem`
 
-     ![](images/WhatsNew_146_NoficiationActions_2b1c9e0.png) 
+    ![](images/WhatsNew_146_NoficiationActions_2b1c9e0.png)
 
 -   Notification list items are highlighted on mouse-over as with list items.
 
@@ -802,7 +802,7 @@ For more information, see the samples [Notification List Item](https://ui5.sap.c
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -818,28 +818,28 @@ For more information, see the samples [Notification List Item](https://ui5.sap.c
 <tr>
 <td valign="top">
 
- 1.44 
+1.44 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.PlanningCalendar`** 
+**`sap.m.PlanningCalendar`** 
 
 
 
@@ -857,7 +857,7 @@ A new `week` view is now available for the `PlanningCalendar` control. It displa
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -873,28 +873,28 @@ A new `week` view is now available for the `PlanningCalendar` control. It displa
 <tr>
 <td valign="top">
 
- 1.44 
+1.44 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.Slider / sap.m.RangeSlider`** 
+**`sap.m.Slider / sap.m.RangeSlider`** 
 
 
 
@@ -905,7 +905,7 @@ A new `week` view is now available for the `PlanningCalendar` control. It displa
 
 We have implemented responsive tickmarks for the slider controls. The tickmarks are enabled with the `enableTickmarks` property. The number of visible tickmarks depends on the step size and the slider minimum and maximum values. For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.Slider/methods/getEnableTickmarks) and the [Sample](https://ui5.sap.com/#/entity/sap.m.Slider/sample/sap.m.sample.Slider).
 
- ![](images/WhatsNew_144_Tickmarks_bf5c44a.png) 
+![](images/WhatsNew_144_Tickmarks_bf5c44a.png)
 
 <sub>Changed•Control•Info Only•1.44</sub>
 
@@ -914,7 +914,7 @@ We have implemented responsive tickmarks for the slider controls. The tickmarks 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -930,28 +930,28 @@ We have implemented responsive tickmarks for the slider controls. The tickmarks 
 <tr>
 <td valign="top">
 
- 1.44 
+1.44 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.UploadCollection`** 
+**`sap.m.UploadCollection`** 
 
 
 
@@ -969,7 +969,7 @@ The sorting and filtering feature has been enhanced. You can now also display th
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -985,28 +985,28 @@ The sorting and filtering feature has been enhanced. You can now also display th
 <tr>
 <td valign="top">
 
- 1.44 
+1.44 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.suite.ui.commons.ProcessFlow`** 
+**`sap.suite.ui.commons.ProcessFlow`** 
 
 
 
@@ -1024,7 +1024,7 @@ In some scenarios, the process flow graph occupies more space on the screen than
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1040,28 +1040,28 @@ In some scenarios, the process flow graph occupies more space on the screen than
 <tr>
 <td valign="top">
 
- 1.44 
+1.44 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.suite.ui.microchart.RadialMicroChart`** 
+**`sap.suite.ui.microchart.RadialMicroChart`** 
 
 
 
@@ -1079,7 +1079,7 @@ The `RadialMicroChart` control is rendered responsive. This means that the size 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1095,28 +1095,28 @@ The `RadialMicroChart` control is rendered responsive. This means that the size 
 <tr>
 <td valign="top">
 
- 1.44 
+1.44 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.navpopover.SmartLink`** 
+**`sap.ui.comp.navpopover.SmartLink`** 
 
 
 
@@ -1134,7 +1134,7 @@ You can now personalize the cross-application links on the popover by selecting 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1150,28 +1150,28 @@ You can now personalize the cross-application links on the popover by selecting 
 <tr>
 <td valign="top">
 
- 1.44 
+1.44 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.smartmicrochart`** 
+**`sap.ui.comp.smartmicrochart`** 
 
 
 
@@ -1189,7 +1189,7 @@ Some Smart Micro Chart controls, such as the `SmartBulletMicroChart` and the `Sm
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1205,28 +1205,28 @@ Some Smart Micro Chart controls, such as the `SmartBulletMicroChart` and the `Sm
 <tr>
 <td valign="top">
 
- 1.44 
+1.44 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.smartmicrohart.SmartAreaMicroChart`** 
+**`sap.ui.comp.smartmicrohart.SmartAreaMicroChart`** 
 
 
 
@@ -1244,7 +1244,7 @@ The labels at the top and bottom of the chart can now also be displayed with the
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1260,28 +1260,28 @@ The labels at the top and bottom of the chart can now also be displayed with the
 <tr>
 <td valign="top">
 
- 1.44 
+1.44 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.table.*`** 
+**`sap.ui.table.*`** 
 
 
 
@@ -1304,7 +1304,7 @@ The labels at the top and bottom of the chart can now also be displayed with the
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1320,28 +1320,28 @@ The labels at the top and bottom of the chart can now also be displayed with the
 <tr>
 <td valign="top">
 
- 1.44 
+1.44 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.vbm.GeoMap`** 
+**`sap.ui.vbm.GeoMap`** 
 
 
 
@@ -1359,7 +1359,7 @@ A new method called `getClusteredSpots` has been added to the `sap.ui.vbm.GeoMap
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1375,28 +1375,28 @@ A new method called `getClusteredSpots` has been added to the `sap.ui.vbm.GeoMap
 <tr>
 <td valign="top">
 
- 1.44 
+1.44 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.vk`** 
+**`sap.ui.vk`** 
 
 
 
@@ -1414,7 +1414,7 @@ A number of controls in the `sap.ui.vk` library have been updated to improve the
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1430,28 +1430,28 @@ A number of controls in the `sap.ui.vk` library have been updated to improve the
 <tr>
 <td valign="top">
 
- 1.44 
+1.44 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- SAP Fiori Elements 
+SAP Fiori Elements 
 
 
 
 </td>
 <td valign="top">
 
- **SAP Fiori Elements** 
+**SAP Fiori Elements** 
 
 
 
@@ -1512,7 +1512,7 @@ Overview pages have been enhanced with the following features:
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1528,28 +1528,28 @@ Overview pages have been enhanced with the following features:
 <tr>
 <td valign="top">
 
- 1.44 
+1.44 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- User Documentation 
+User Documentation 
 
 
 
 </td>
 <td valign="top">
 
- **Testing Tutorial** 
+**Testing Tutorial** 
 
 
 
@@ -1567,7 +1567,7 @@ The **Testing** tutorial has been enhanced with two additional steps. For more i
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1583,28 +1583,28 @@ The **Testing** tutorial has been enhanced with two additional steps. For more i
 <tr>
 <td valign="top">
 
- 1.44 
+1.44 
 
 
 
 </td>
 <td valign="top">
 
- New 
+New 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Demo Kit Improvements** 
+**Demo Kit Improvements** 
 
 
 
@@ -1636,7 +1636,7 @@ The Demo Kit now has the following new features:
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1653,6 +1653,8 @@ The Demo Kit now has the following new features:
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.115](what-s-new-in-sapui5-1-115-409fde8.md "With this release SAPUI5 is upgraded from version 1.114 to 1.115.")
 
 [What's New in SAPUI5 1.114](what-s-new-in-sapui5-1-114-890fce1.md "With this release SAPUI5 is upgraded from version 1.113 to 1.114.")
 

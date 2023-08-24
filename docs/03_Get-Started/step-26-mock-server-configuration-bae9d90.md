@@ -10,11 +10,11 @@ This system is the so-called back-end system that we will now simulate with an S
 
 ## Preview
 
-   
+  
   
 **The list of invoices is now served by the Mock Server**
 
- ![](images/SAPUI5_Walkthrough_Step_27_ccce9b3.png "The list of invoices is now served by the Mock Server") 
+![](images/SAPUI5_Walkthrough_Step_27_ccce9b3.png "The list of invoices is now served by the Mock Server")
 
 
 
@@ -22,11 +22,11 @@ This system is the so-called back-end system that we will now simulate with an S
 
 You can view and download all files at [Walkthrough - Step 26](https://ui5.sap.com/#/entity/sap.m.tutorial.walkthrough/sample/sap.m.tutorial.walkthrough.26).
 
-   
+  
   
 **Folder Structure for this Step**
 
- ![](images/SAPUI5_Walkthrough_Step_27_2_7a5e2b0.png "Folder Structure for this Step") 
+![](images/SAPUI5_Walkthrough_Step_27_2_7a5e2b0.png "Folder Structure for this Step")
 
 The folder structure of our app project is clearly separating test and productive files after this step. The new `test` folder now contains a new HTML page `mockServer.html` which will launch our application in test mode without calling the real service.
 

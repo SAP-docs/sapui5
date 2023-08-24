@@ -44,7 +44,7 @@ Use to show the first logical information level \(master page\) only.
 </td>
 <td valign="top">
 
- ![](images/1_OneColumn_d791491.png) 
+![](images/1_OneColumn_d791491.png)
 
 
 
@@ -62,7 +62,7 @@ Use this layout type to display two logical levels of information \(master and d
 </td>
 <td valign="top">
 
- ![](images/2_TwoColumnsBeginExpanded_9a60387.png) 
+![](images/2_TwoColumnsBeginExpanded_9a60387.png)
 
 
 
@@ -80,7 +80,7 @@ Similar to `TwoColumnsBeginExpanded`, but this time the `Mid` column is the wide
 </td>
 <td valign="top">
 
- ![](images/3_TwoColumnsMidExpanded_c0d6936.png) 
+![](images/3_TwoColumnsMidExpanded_c0d6936.png)
 
 
 
@@ -101,7 +101,7 @@ Use this layout to display the second logical level of information \(detail page
 </td>
 <td valign="top">
 
- ![](images/4_MidColumnFullScreen_a01d72d.png) 
+![](images/4_MidColumnFullScreen_a01d72d.png)
 
 
 
@@ -119,7 +119,7 @@ Use this layout to display up to three logical levels of information side by sid
 </td>
 <td valign="top">
 
- ![](images/5_ThreeColumnsMidExpanded_d1f89e8.png) 
+![](images/5_ThreeColumnsMidExpanded_d1f89e8.png)
 
 
 
@@ -137,7 +137,7 @@ Similar to `ThreeColumnsMidExpanded`, but this time the `End` column is expanded
 </td>
 <td valign="top">
 
- ![](images/6_ThreeColumnsEndExpanded_2cef71c.png) 
+![](images/6_ThreeColumnsEndExpanded_2cef71c.png)
 
 
 
@@ -155,7 +155,7 @@ Use this layout to show the `Begin` and `Mid` columns only \(`Mid` being expande
 </td>
 <td valign="top">
 
- ![](images/7_ThreeColumnsMidExpandedEndHidden_21a31d2.png) 
+![](images/7_ThreeColumnsMidExpandedEndHidden_21a31d2.png)
 
 
 
@@ -173,7 +173,7 @@ Similar to `ThreeColumnsMidExpandedEndHidden`, but this time the `Begin` column 
 </td>
 <td valign="top">
 
- ![](images/8_ThreeColumnsBeginExpandedEndHidden_e98b27b.png) 
+![](images/8_ThreeColumnsBeginExpandedEndHidden_e98b27b.png)
 
 
 
@@ -194,7 +194,7 @@ Use this layout to display the third logical level of information \(detail-detai
 </td>
 <td valign="top">
 
- ![](images/9_EndColumnFullScreen_1129d11.png) 
+![](images/9_EndColumnFullScreen_1129d11.png)
 
 
 

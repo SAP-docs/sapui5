@@ -8,11 +8,11 @@ If we want to do a more complex logic for formatting properties of our data mode
 
 ## Preview
 
-   
+  
   
 **A status is now displayed with a custom formatter**
 
- ![](images/SAPUI5_Walkthrough_Step_23_7e0112d.png "A status is now displayed with a custom formatter") 
+![](images/SAPUI5_Walkthrough_Step_23_7e0112d.png "A status is now displayed with a custom formatter")
 
 
 
@@ -50,8 +50,8 @@ Function `statusText` gets the technical status from the data model as input par
 
 **Additional Information:**
 
--    [API Reference: `sap.ui.core.mvc.Controller#getOwnerComponent`](https://ui5.sap.com/#/api/sap.ui.core.mvc.Controller/methods/getOwnerComponent). 
--    [API Reference: `sap.ui.core.mvc.Controller#onInit`](https://ui5.sap.com/#/api/sap.ui.core.mvc.Controller/methods/onInit). 
+-   [API Reference: `sap.ui.core.mvc.Controller#getOwnerComponent`](https://ui5.sap.com/#/api/sap.ui.core.mvc.Controller/methods/getOwnerComponent). 
+-   [API Reference: `sap.ui.core.mvc.Controller#onInit`](https://ui5.sap.com/#/api/sap.ui.core.mvc.Controller/methods/onInit). 
 
 
 

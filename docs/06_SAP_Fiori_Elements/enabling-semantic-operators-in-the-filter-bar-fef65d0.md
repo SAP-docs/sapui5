@@ -39,7 +39,7 @@ The semantic date control can be enabled for the fields in the filter bar by set
 
 This date range shows all the default settings listed in the [Sample Posting Date](https://ui5.sap.com/#/entity/sap.ui.comp.smartfilterbar.SmartFilterBar/sample/sap.ui.comp.sample.smartfilterbar.UseDateRangeType).
 
- ![](images/Date_Range_Filter_with_all_Default_Range_Types_f1642e6.png) 
+![](images/Date_Range_Filter_with_all_Default_Range_Types_f1642e6.png)
 
 You can modify the default date range options by specifying the required options as shown in the sample code here. For date fields without specific date range options, the default semantic date range values are displayed because `useDateRange` is set to `true`.
 
@@ -214,7 +214,7 @@ Example 1: If you want to remove `TODAY` from the date range, see the following 
 > }
 > ```
 
- ![](images/TodayInclude_DateRange_5f57bd3.png) 
+![](images/TodayInclude_DateRange_5f57bd3.png)
 
 Example 2: If you want to include `TODAY` and exclude `Today -X/+Y Days`, see the following sample code:
 
@@ -337,7 +337,7 @@ Extend the manifest for the filter field as follows to set a default value for a
 > 
 > ```
 > "settings" : {  
->    "entitySet" : "SalesOrderManage",
+>    "contextPath" : "/SalesOrderManage",
 >    "controlConfiguration" : {
 >       "@com.sap.vocabularies.UI.v1.SelectionFields" : {
 >    …
@@ -797,7 +797,7 @@ You can use the `operatorConfiguration` settings to include and exclude specific
 
     You can see the result in the following screenshot:
 
-     ![](images/Date_Range_1_e0b551e.png) 
+    ![](images/Date_Range_1_e0b551e.png)
 
 -   Example 2
 
@@ -827,7 +827,7 @@ You can use the `operatorConfiguration` settings to include and exclude specific
 
     You can see the result in the following screenshot:
 
-     ![](images/Date_Range_2_a9217ea.png) 
+    ![](images/Date_Range_2_a9217ea.png)
 
     You can find all supported operators for the `"exclude"` configuration in the following list:
 

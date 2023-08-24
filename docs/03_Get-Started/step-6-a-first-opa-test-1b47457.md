@@ -8,11 +8,11 @@ A bulletin board may contain many posts. We expect to have a high data load once
 
 ## Preview
 
-   
+  
   
 **The OPA test page is waiting for more items to be loaded**
 
- ![](images/Tutorial_Testing_Step_06_c4aaadb.png "The OPA test page is waiting for more items to be loaded") 
+![](images/Tutorial_Testing_Step_06_c4aaadb.png "The OPA test page is waiting for more items to be loaded")
 
 
 
@@ -31,11 +31,11 @@ We write integration tests with OPA5 – a tool that is integrated and delivered
 > ### Note:  
 > There is also a stand-alone version of OPA5 called “OPA” available that can be used for testing any kind of single-page Web application and that does not provide any SAPUI5-specific functionality. In this tutorial, “OPA” always refers to OPA5. It includes functionality for easily finding and matching SAPUI5 controls as well as their properties and aggregations.
 
-   
+  
   
 **Integration test infrastructure in the project**
 
- ![](images/Tutorial_Testing_Step_06_2_new_596ebcf.png "Integration test infrastructure in the project") 
+![](images/Tutorial_Testing_Step_06_2_new_596ebcf.png "Integration test infrastructure in the project")
 
 For structuring integration tests with OPA we use “journeys”. A test journey contains all test cases for a specific view or use case, for example the navigation journey simulates user interaction with the app.
 

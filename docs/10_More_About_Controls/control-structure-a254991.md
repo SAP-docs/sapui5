@@ -39,14 +39,14 @@ Number of Pages Displayed
 <tr>
 <td valign="top">
 
- `sap.m.NavContainer` 
+`sap.m.NavContainer` 
 
 
 
 </td>
 <td valign="top">
 
- `pages` \(aggregation\)
+`pages` \(aggregation\)
 
 
 
@@ -62,7 +62,7 @@ Number of Pages Displayed
 <tr>
 <td valign="top">
 
- `sap.m.SplitContainer` 
+`sap.m.SplitContainer` 
 
 
 
@@ -87,7 +87,7 @@ Up to 2 pages at a time \(2 instances of `NavContainer`\)
 <tr>
 <td valign="top">
 
- `sap.f.FlexibleColumnLayout` 
+`sap.f.FlexibleColumnLayout` 
 
 
 

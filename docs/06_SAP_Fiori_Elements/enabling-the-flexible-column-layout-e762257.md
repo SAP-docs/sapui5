@@ -12,28 +12,28 @@ Use the following attributes to create the column layout you want:
 
     -   `TwoColumnsBeginExpanded`
 
-         ![](images/Two_Columns_Begin_Expanded_c34a5e7.png) 
+        ![](images/Two_Columns_Begin_Expanded_c34a5e7.png)
 
     -   `TwoColumnsMidExpanded`
 
-         ![](images/Two_Columns_Mid_Expanded_392c14f.png) 
+        ![](images/Two_Columns_Mid_Expanded_392c14f.png)
 
 
 -   `defaultThreeColumnLayoutType`: 3-column layout with these options:
 
     -   `ThreeColumnsMidExpanded`
 
-         ![](images/Three_Columns_Mid_Expanded_227c14d.png) 
+        ![](images/Three_Columns_Mid_Expanded_227c14d.png)
 
     -   `ThreeColumnsEndExpanded`
 
-         ![](images/Three_Columns_End_Expanded_0f5a9cc.png) 
+        ![](images/Three_Columns_End_Expanded_0f5a9cc.png)
 
 
 
 Users can expand and collapse the columns using the focus buttons. They can change to full-screen mode by choosing the full-screen button.
 
- ![](images/FCL_Master_Detail_9ff7dd4.jpg) 
+![](images/FCL_Master_Detail_9ff7dd4.jpg)
 
 
 

@@ -200,11 +200,11 @@ You can hide header facets on the object page.
 
 You can hide an entire section. To hide one subsection, you can hide content within a section. See also the section about DataField Records in Header Facets in this topic.
 
-   
+  
   
 **Sections on Object Page**
 
- ![](images/Section_Object_Page_1_4d0d970.png "Sections on Object Page") 
+![](images/Section_Object_Page_1_4d0d970.png "Sections on Object Page")
 
 > ### Sample Code:  
 > XML Annotation
@@ -292,11 +292,11 @@ You can hide an entire section. To hide one subsection, you can hide content wit
 
 You can hide content in quick views, such as field groups like this:
 
-   
+  
   
 **Field Groups in Quick Views on Object Page**
 
- ![](images/Content_in_Quick_Views_1_5ee9d69.png "Field Groups in Quick Views on Object Page") 
+![](images/Content_in_Quick_Views_1_5ee9d69.png "Field Groups in Quick Views on Object Page")
 
 > ### Sample Code:  
 > XML Annotation
@@ -370,11 +370,11 @@ You can also use this annotation to hide the content in quick views in the list 
 
 You can hide DataField records, for example, UI.DataField, UI.DataFieldForAnnotation in facets as shown below:
 
-   
+  
   
 **DataField Records in Header Facets**
 
- ![](images/Header_Facets_1_ba72afc.png "DataField Records in Header Facets") 
+![](images/Header_Facets_1_ba72afc.png "DataField Records in Header Facets")
 
 > ### Sample Code:  
 > XML Annotation
@@ -454,11 +454,11 @@ You can hide DataField records, for example, UI.DataField, UI.DataFieldForAnnota
 
 You can hide DataField records, for example, UI.DataField, UI.DataFieldForAnnotation in facets as shown below:
 
-   
+  
   
 **DataField Records in Facets**
 
- ![](images/DataField_Records_in_Facets_1_b6dea7a.png "DataField Records in Facets") 
+![](images/DataField_Records_in_Facets_1_b6dea7a.png "DataField Records in Facets")
 
 > ### Sample Code:  
 > XML Annotation
@@ -611,8 +611,8 @@ In the following example, `STTA_C_MP_Product` is the entity set of the object pa
   
 **DataField Records in Object Page Tables**
 
- ![](images/Data_Field_Records_Smart_Tables_74a9d75.png "DataField Records in Object Page
-                    Tables") 
+![](images/Data_Field_Records_Smart_Tables_74a9d75.png "DataField Records in Object Page
+                    Tables")
 
 > ### Note:  
 > Hiding DataField Records
@@ -644,7 +644,7 @@ If `UI.Hidden` is provided a static `true` value for any field, then the column 
   
 **DataField Records in Tables**
 
- ![](images/DataFieldRecords1_bd2e691.png "DataField Records in Tables") 
+![](images/DataFieldRecords1_bd2e691.png "DataField Records in Tables")
 
 > ### Sample Code:  
 > ```

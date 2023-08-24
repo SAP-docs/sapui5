@@ -139,21 +139,21 @@ Control
 <tr>
 <td valign="top">
 
- `Edm.Boolean` 
+`Edm.Boolean` 
 
 
 
 </td>
 <td valign="top">
 
- `sap.m.CheckBox` 
+`sap.m.CheckBox` 
 
 
 
 </td>
 <td valign="top">
 
- `Edm.Boolean` 
+`Edm.Boolean` 
 
 
 
@@ -169,37 +169,21 @@ Control
 <tr>
 <td valign="top">
 
- `Edm.Int16` 
+`Edm.Int16` 
 
 
 
 </td>
 <td valign="top" rowspan="10">
 
- `sap.m.Input` 
+`sap.m.Input` 
 
 
 
 </td>
 <td valign="top">
 
- `Edm.Int16` 
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
- `Edm.Int32` 
-
-
-
-</td>
-<td valign="top">
-
- `Edm.Int32` 
+`Edm.Int16` 
 
 
 
@@ -208,30 +192,14 @@ Control
 <tr>
 <td valign="top">
 
- `Edm.Int64` 
+`Edm.Int32` 
 
 
 
 </td>
 <td valign="top">
 
- `Edm.Int64` 
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
- `Edm.SByte` 
-
-
-
-</td>
-<td valign="top">
-
- `Edm.SByte` 
+`Edm.Int32` 
 
 
 
@@ -240,30 +208,14 @@ Control
 <tr>
 <td valign="top">
 
- `Edm.Byte` 
+`Edm.Int64` 
 
 
 
 </td>
 <td valign="top">
 
- `Edm.Byte` 
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
- `Edm.Single` 
-
-
-
-</td>
-<td valign="top">
-
- `Edm.Single` 
+`Edm.Int64` 
 
 
 
@@ -272,30 +224,14 @@ Control
 <tr>
 <td valign="top">
 
- `Edm.Float` 
+`Edm.SByte` 
 
 
 
 </td>
 <td valign="top">
 
- `Edm.Float` 
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
- `Edm.Double` 
-
-
-
-</td>
-<td valign="top">
-
- `Edm.Double` 
+`Edm.SByte` 
 
 
 
@@ -304,30 +240,14 @@ Control
 <tr>
 <td valign="top">
 
- `Edm.Decimal` 
+`Edm.Byte` 
 
 
 
 </td>
 <td valign="top">
 
- `Edm.Decimal` 
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
- `Edm.String` 
-
-
-
-</td>
-<td valign="top">
-
- `Edm.String` 
+`Edm.Byte` 
 
 
 
@@ -336,7 +256,87 @@ Control
 <tr>
 <td valign="top">
 
- `Edm.Time` 
+`Edm.Single` 
+
+
+
+</td>
+<td valign="top">
+
+`Edm.Single` 
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`Edm.Float` 
+
+
+
+</td>
+<td valign="top">
+
+`Edm.Float` 
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`Edm.Double` 
+
+
+
+</td>
+<td valign="top">
+
+`Edm.Double` 
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`Edm.Decimal` 
+
+
+
+</td>
+<td valign="top">
+
+`Edm.Decimal` 
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`Edm.String` 
+
+
+
+</td>
+<td valign="top">
+
+`Edm.String` 
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`Edm.Time` 
 
 
 
@@ -350,7 +350,7 @@ Control
 </td>
 <td valign="top">
 
- `Edm.Time` 
+`Edm.Time` 
 
 
 
@@ -359,14 +359,14 @@ Control
 <tr>
 <td valign="top">
 
- `Edm.DateTime` 
+`Edm.DateTime` 
 
 
 
 </td>
 <td valign="top">
 
- `Edm.DateTime` 
+`Edm.DateTime` 
 
 
 
@@ -375,14 +375,14 @@ Control
 <tr>
 <td valign="top">
 
- `Edm.DateTimeOffset` 
+`Edm.DateTimeOffset` 
 
 
 
 </td>
 <td valign="top">
 
- `Edm.DateTimeOffset` 
+`Edm.DateTimeOffset` 
 
 
 

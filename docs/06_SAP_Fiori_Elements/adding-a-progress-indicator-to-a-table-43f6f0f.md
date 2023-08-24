@@ -8,11 +8,11 @@ The progress indicator allows you to visually represent the level of completion 
 
 It can be used to express completion values either as a percentage or as absolute numbers \(for example, 8 of 10\).
 
-   
+  
   
 **Progress Indicator**
 
- ![](images/ProgressIndicator_Tables_c6d1e04.png "Progress Indicator") 
+![](images/ProgressIndicator_Tables_c6d1e04.png "Progress Indicator")
 
 
 
@@ -100,11 +100,11 @@ The following code sample shows how to implement a progress indicator using anno
 
 If required, you can set up the progress bar so that it changes color to reflect the state of the progress depending on the `criticality` value as shown in the figure below.
 
-   
+  
   
 **Progress Indicator: Colors Reflect State of Progress**
 
- ![](images/Tables_ProgressIndicator_Color_5fc7265.png "Progress Indicator: Colors Reflect State of Progress") 
+![](images/Tables_ProgressIndicator_Color_5fc7265.png "Progress Indicator: Colors Reflect State of Progress")
 
 To do so, assign a value to the `criticality` property.
 

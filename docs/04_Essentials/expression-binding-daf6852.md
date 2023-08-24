@@ -141,7 +141,7 @@ Multiplicative operator
 </td>
 <td valign="top">
 
- `*`
+`*`
 
 `/`
 
@@ -237,7 +237,7 @@ Conditional operator
 </td>
 <td valign="top">
 
- `?` 
+`?` 
 
 
 
@@ -295,7 +295,7 @@ Array literals
 </td>
 <td valign="top">
 
- `[...]`, for example `[2,3,5,7,11]` 
+`[...]`, for example `[2,3,5,7,11]` 
 
 
 
@@ -311,7 +311,7 @@ Property/array access
 </td>
 <td valign="top">
 
- `o[...]`, for example `'foo/bar'.split('/')[1]` 
+`o[...]`, for example `'foo/bar'.split('/')[1]` 
 
 
 
@@ -320,14 +320,14 @@ Property/array access
 <tr>
 <td valign="top">
 
- `in` operator
+`in` operator
 
 
 
 </td>
 <td valign="top">
 
- `'PI' in Math` \(true\) or `0 in []` \(false\)
+`'PI' in Math` \(true\) or `0 in []` \(false\)
 
 
 
@@ -343,7 +343,7 @@ Global symbol
 </td>
 <td valign="top">
 
- `Array`, `Boolean`, `Date`, `encodeURIComponent`, `Infinity`, `isFinite`, `isNaN`, `JSON`, `Math`, `NaN`, `Number`, `Object`, `parseFloat`, `parseInt`, `RegExp`, `String`, `undefined` 
+`Array`, `Boolean`, `Date`, `encodeURIComponent`, `Infinity`, `isFinite`, `isNaN`, `JSON`, `Math`, `NaN`, `Number`, `Object`, `parseFloat`, `parseInt`, `RegExp`, `String`, `undefined` 
 
 
 

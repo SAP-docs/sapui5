@@ -9,10 +9,10 @@ Here you can find information on the browser and platform support for the SAPUI5
 > 
 > The following sections only contain additional information on restrictions and platform support information for specific SAPUI5 libraries in a summarized form.
 
-As SAPUI5 is based on CSS3, HTML5, and the ECMAScript 5 \(ES5\) JavaScript API, only browsers with HTML5 capabilities are supported. In general, only major versions that are also supported by the respective platform can be supported by the SAPUI5 framework.
+As SAPUI5 is based on CSS3, HTML5, and modern ECMAScript \("ES2022"\), only browsers with corresponding capabilities are supported. In general, only major versions that are also supported by the respective platform can be supported by the SAPUI5 framework.
 
 > ### Restriction:  
-> We currently do not guarantee that ECMAScript standards ES6/ES2015 or newer, work with SAPUI5.
+> With SAPUI5 1.116, the framework leverages features of modern ECMAScript up to and including [ECMAScript 2022 Language Specification](https://262.ecma-international.org/13.0/). Certain restrictions do apply, however. For more information, see [ECMAScript Support](ecmascript-support-0cb44d7.md).
 
 Depending on the platform your SAPUI5 apps run on, different browsers in different versions are supported. If you know which platform and which browsers are used by your users, you can decide on which libraries to use for your app.
 
@@ -420,7 +420,7 @@ Latest version
  3\) We use current Apple iPhone and iPad devices for testing and reproducing the reported issues.  
  4\) Android-based devices are very fragmented in matters of operating system variants and hardware diversity. We use current Samsung Galaxy S and Galaxy Tab S series devices for testing and reproducing the reported issues.  
  5\) Not supported for `sap.ui.commons` and `sap.ui.ux3`.  
- 6\) Not supported for `sap.gantt`. Note that gantt charts consuming `sap.gantt` can be displayed on tablet devices.  
+6\) Not supported for `sap.gantt`. Note that gantt charts consuming `sap.gantt` can be displayed on tablet devices.  
  7\) Not supported for `sap.ui.vbm`.
 
 

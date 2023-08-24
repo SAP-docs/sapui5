@@ -55,7 +55,7 @@ Custom fields, that is, form elements, provide the following features:
 
 The form containing additional custom fields can look like this:
 
- ![](images/Custom_Fields_on_the_Object_Page_852b724.png) 
+![](images/Custom_Fields_on_the_Object_Page_852b724.png)
 
 1.  Define a fragment for the view extension
 

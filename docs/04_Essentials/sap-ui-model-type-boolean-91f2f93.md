@@ -6,8 +6,8 @@ The `Boolean` data type represents a string.
 
 The source value \(value given in the model\) must be given as boolean and is transformed into the type of the bound control property:
 
--    `boolean`: No transformation needed
--    `string`: "true" or "X" are interpreted as true, "false" and "" as false
+-   `boolean`: No transformation needed
+-   `string`: "true" or "X" are interpreted as true, "false" and "" as false
 
 The `Boolean` type has **no** format or validation constraint options.
 

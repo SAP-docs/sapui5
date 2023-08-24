@@ -108,25 +108,25 @@ For more information, see the [API Reference: `sap.ui.require`](https://ui5.sap.
 
 The following data types are supported:
 
--   [ `String`](data-types-for-spreadsheet-export-283217d.md#loio283217d8f187401c8045723abc27e5e0__section_sg5_2z1_j3b)
+-   [`String`](data-types-for-spreadsheet-export-283217d.md#loio283217d8f187401c8045723abc27e5e0__section_sg5_2z1_j3b)
 
--   [ `Boolean`](data-types-for-spreadsheet-export-283217d.md#loio283217d8f187401c8045723abc27e5e0__section_qwh_fmb_j3b)
+-   [`Boolean`](data-types-for-spreadsheet-export-283217d.md#loio283217d8f187401c8045723abc27e5e0__section_qwh_fmb_j3b)
 
--   [ `Number`](data-types-for-spreadsheet-export-283217d.md#loio283217d8f187401c8045723abc27e5e0__section_dnx_c3n_n3b)
+-   [`Number`](data-types-for-spreadsheet-export-283217d.md#loio283217d8f187401c8045723abc27e5e0__section_dnx_c3n_n3b)
 
--   [ `Date`](data-types-for-spreadsheet-export-283217d.md#loio283217d8f187401c8045723abc27e5e0__section_tg5_hyv_43b)
+-   [`Date`](data-types-for-spreadsheet-export-283217d.md#loio283217d8f187401c8045723abc27e5e0__section_tg5_hyv_43b)
 
--   [ `DateTime`](data-types-for-spreadsheet-export-283217d.md#loio283217d8f187401c8045723abc27e5e0__section_tg5_hyv_43b)
+-   [`DateTime`](data-types-for-spreadsheet-export-283217d.md#loio283217d8f187401c8045723abc27e5e0__section_tg5_hyv_43b)
 
--   [ `Time`](data-types-for-spreadsheet-export-283217d.md#loio283217d8f187401c8045723abc27e5e0__section_tg5_hyv_43b)
+-   [`Time`](data-types-for-spreadsheet-export-283217d.md#loio283217d8f187401c8045723abc27e5e0__section_tg5_hyv_43b)
 
--   [ `Currency`](data-types-for-spreadsheet-export-283217d.md#loio283217d8f187401c8045723abc27e5e0__section_gdf_spn_n3b)
+-   [`Currency`](data-types-for-spreadsheet-export-283217d.md#loio283217d8f187401c8045723abc27e5e0__section_gdf_spn_n3b)
 
--   [ `Enumeration`](data-types-for-spreadsheet-export-283217d.md#loio283217d8f187401c8045723abc27e5e0__section_zw5_53x_43b)
+-   [`Enumeration`](data-types-for-spreadsheet-export-283217d.md#loio283217d8f187401c8045723abc27e5e0__section_zw5_53x_43b)
 
--   [ `BigNumber`](data-types-for-spreadsheet-export-283217d.md#loio283217d8f187401c8045723abc27e5e0__section_fhw_hqx_43b)
+-   [`BigNumber`](data-types-for-spreadsheet-export-283217d.md#loio283217d8f187401c8045723abc27e5e0__section_fhw_hqx_43b)
 
--   [ `Percentage`](data-types-for-spreadsheet-export-283217d.md#loio283217d8f187401c8045723abc27e5e0__section_wxf_zjj_l4b)
+-   [`Percentage`](data-types-for-spreadsheet-export-283217d.md#loio283217d8f187401c8045723abc27e5e0__section_wxf_zjj_l4b)
 
     > ### Note:  
     > Currency values and numbers that cannot be represented in the standard format as defined by the *IEEE \(Institute of Electrical and Electronics Engineers\)* in the spreadsheet file because they are too large automatically use the `BigNumber` data type as a fallback option. The number is then stored as `string` and represented using the international format with a comma as a thousands separator and a period for the decimal point.

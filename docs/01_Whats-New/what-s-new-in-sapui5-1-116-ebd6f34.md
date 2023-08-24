@@ -9,10 +9,7 @@ With this release SAPUI5 is upgraded from version 1.115 to 1.116.
 > ### Tip:  
 > If you want to do a search across all versions of the What's New content, you can also find it in the [SAPUI5 What's New viewer](https://help.sap.com/whats-new/67f60363b57f4ac0b23efd17fa192d60).
 
-> ### Note:  
-> Content marked as <span style="color:#666666;"><span class="SAP-icons"></span></span>** [Preview](https://help.sap.com/docs/whats-new-disclaimer)** is provided as a courtesy, without a warranty, and may be subject to change. For more information, see the [preview disclaimer](https://help.sap.com/docs/whats-new-disclaimer).
-
-** **
+****
 
 
 <table>
@@ -70,149 +67,28 @@ Available as of
 <tr>
 <td valign="top">
 
- 1.118 
+1.116 
 
 
 
 </td>
 <td valign="top">
 
- Deprecated 
+Deprecated 
 
 
 
 </td>
 <td valign="top">
 
- Announcement 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.table` Controls: Discontinued Use of `sap.ui.commons` Library** 
-
-
-
-</td>
-<td valign="top">
-
-**`sap.ui.table` Controls: Discontinued Use of `sap.ui.commons` Library**
-
-We will discontinue the use of the deprecated `sap.ui.commons` library as of SAPUI5 version 1.118. If you use shortcuts for defining titles, footers, column headers, and cell templates in your `sap.ui.table` controls based on the related controls in the `sap.ui.commons` library, these will no longer work. Instead, the `sap.ui.table` controls will always depend on the related controls in the `sap.m` library after version 1.118.
-
-**Recommended Action**: Check which libraries are used in your application. If you use `sap.ui.table` controls and their shortcuts in combination with the `sap.ui.commons` library, make sure to switch to the `sap.m` library.
-
-For more information about how to prepare for this change, see [Change to the SAPUI5 sap.ui.table library](https://blogs.sap.com/2023/05/25/change-to-the-sapui5-sap.ui.table-library/).
-
-<sub><span style="color:#666666;"><span class="SAP-icons"></span></span>** [Preview](https://help.sap.com/docs/whats-new-disclaimer)**•Deprecated•Announcement•Recommended•1.118</sub>
-
-
-
-</td>
-<td valign="top">
-
- Recommended 
-
-
-
-</td>
-<td valign="top">
-
-2023-09-07
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
- Upcoming 
-
-
-
-</td>
-<td valign="top">
-
- UI Changed 
-
-
-
-</td>
-<td valign="top">
-
- Announcement 
-
-
-
-</td>
-<td valign="top">
-
- **Improved Keyboard Handling and Screen Reader Support of `sap.m.Table`** 
-
-
-
-</td>
-<td valign="top">
-
-**Improved Keyboard Handling and Screen Reader Support of `sap.m.Table`**
-
-> ### Note:  
-> The following information concerns important upcoming changes for end users. These changes may require end users to adjust and/or test cases to be adapted, but they won't stop or disrupt software or processes.
-
-To improve accessibility, we will completely rework the screen reader and keyboard support of the `sap.m.Table` control in 1.117/1.118. The row-based navigation stays the same, but cell-based navigation will also be possible, similar to the grid table. We will also improve other accessibility features of the table, for example, the *Delete* and *Edit* buttons for row actions will become accessible via keyboard. These features will not only be changed for the responsive table, but partly also for `sap.m.List`. Also, the ARIA role will be adapted.
-
-**Recommended Action**: Test cases might have to be adapted. Stay tuned and check out the related documentation once the changes have been made.
-
-For more information about accessibility, see [Accessibility for End Users](https://help.sap.com/viewer/bc5a64aac808463baa95b4230f221716/1.116/en-US).
-
-<sub><span style="color:#666666;"><span class="SAP-icons"></span></span>** [Preview](https://help.sap.com/docs/whats-new-disclaimer)**•UI Changed•Announcement•Recommended•Upcoming</sub>
-
-
-
-</td>
-<td valign="top">
-
- Recommended 
-
-
-
-</td>
-<td valign="top">
-
-9999-01-01
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
- 1.116 
-
-
-
-</td>
-<td valign="top">
-
- Deprecated 
-
-
-
-</td>
-<td valign="top">
-
- Feature 
-
-
-
-</td>
-<td valign="top">
-
- **Deprecations** 
+**Deprecations** 
 
 
 
@@ -230,7 +106,7 @@ There are currently no major deprecations. For a complete list of all deprecatio
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -246,28 +122,28 @@ There are currently no major deprecations. For a complete list of all deprecatio
 <tr>
 <td valign="top">
 
- 1.116 
+1.116 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.smarttable.SmartTable`** 
+**`sap.ui.comp.smarttable.SmartTable`** 
 
 
 
@@ -285,7 +161,7 @@ We have now added a *Remove All Filters* button to the infobar of the `SmartTabl
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -301,28 +177,28 @@ We have now added a *Remove All Filters* button to the infobar of the `SmartTabl
 <tr>
 <td valign="top">
 
- 1.116 
+1.116 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- SAP Fiori Elements 
+SAP Fiori Elements 
 
 
 
 </td>
 <td valign="top">
 
- **SAP Fiori elements for OData V2** and **SAP Fiori elements for OData V4** 
+**SAP Fiori elements for OData V2** and **SAP Fiori elements for OData V4** 
 
 
 
@@ -345,7 +221,7 @@ The following changes and new features are available for SAP Fiori elements for 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -361,28 +237,28 @@ The following changes and new features are available for SAP Fiori elements for 
 <tr>
 <td valign="top">
 
- 1.116 
+1.116 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- SAP Fiori Elements 
+SAP Fiori Elements 
 
 
 
 </td>
 <td valign="top">
 
- **SAP Fiori elements for OData V4** 
+**SAP Fiori elements for OData V4** 
 
 
 
@@ -407,7 +283,7 @@ The following changes and new features are available for SAP Fiori elements for 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -423,28 +299,28 @@ The following changes and new features are available for SAP Fiori elements for 
 <tr>
 <td valign="top">
 
- 1.116 
+1.116 
 
 
 
 </td>
 <td valign="top">
 
- New 
+New 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **TypeScript: Supported productively** 
+**TypeScript: Supported productively** 
 
 
 
@@ -455,7 +331,7 @@ The following changes and new features are available for SAP Fiori elements for 
 
 TypeScript can now be used productively.
 
- For more information, see [TypeScript in SAPUI5](../02_Read-Me-First/typescript-in-sapui5-a7ee961.md). 
+For more information, see [TypeScript Support](../02_Read-Me-First/typescript-support-a7ee961.md). 
 
 <sub>New•Feature•Info Only•SAPUI5</sub>
 
@@ -464,7 +340,7 @@ TypeScript can now be used productively.
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -480,28 +356,28 @@ TypeScript can now be used productively.
 <tr>
 <td valign="top">
 
- 1.116 
+1.116 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.smartfilterbar.SmartFilterBar`, `sap.ui.comp.smartfield.SmartField`, `sap.ui.comp.valuehelpdialog.ValueHelpDialog`, and `sap.m.P13nConditionPanel`** 
+**`sap.ui.comp.smartfilterbar.SmartFilterBar`, `sap.ui.comp.smartfield.SmartField`, `sap.ui.comp.valuehelpdialog.ValueHelpDialog`, and `sap.m.P13nConditionPanel`** 
 
 
 
@@ -529,7 +405,7 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.c
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -545,28 +421,28 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.c
 <tr>
 <td valign="top">
 
- 1.116 
+1.116 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.valuehelpdialog.ValueHelpDialog`** 
+**`sap.ui.comp.valuehelpdialog.ValueHelpDialog`** 
 
 
 
@@ -590,7 +466,7 @@ For more information, see the [Smart Filter Bar with Different Annotations](http
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -606,28 +482,28 @@ For more information, see the [Smart Filter Bar with Different Annotations](http
 <tr>
 <td valign="top">
 
- 1.116 
+1.116 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.integration.widgets.Card`** 
+**`sap.ui.integration.widgets.Card`** 
 
 
 
@@ -645,7 +521,7 @@ We have \(experimentally\) introduced a new input field in the Object Card that 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -661,28 +537,28 @@ We have \(experimentally\) introduced a new input field in the Object Card that 
 <tr>
 <td valign="top">
 
- 1.116 
+1.116 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.Menu`** 
+**`sap.m.Menu`** 
 
 
 
@@ -700,7 +576,7 @@ Disabled items in the menu are now focusable. This way they can be accessed by s
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -716,28 +592,28 @@ Disabled items in the menu are now focusable. This way they can be accessed by s
 <tr>
 <td valign="top">
 
- 1.116 
+1.116 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m` library: Date- and time-related controls** 
+**`sap.m` library: Date- and time-related controls** 
 
 
 
@@ -755,7 +631,7 @@ We have improved the placeholders of these controls in cases when the placeholde
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -771,28 +647,28 @@ We have improved the placeholders of these controls in cases when the placeholde
 <tr>
 <td valign="top">
 
- 1.116 
+1.116 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Demo Kit: Index of Deprecated APIs with new sorting order** 
+**Demo Kit: Index of Deprecated APIs with new sorting order** 
 
 
 
@@ -812,7 +688,7 @@ For more information, see the [Index of Deprecated APIs](https://ui5.sap.com/#/a
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -828,28 +704,28 @@ For more information, see the [Index of Deprecated APIs](https://ui5.sap.com/#/a
 <tr>
 <td valign="top">
 
- 1.116 
+1.116 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Demo Kit: Editable code samples** 
+**Demo Kit: Editable code samples** 
 
 
 
@@ -869,7 +745,7 @@ For more information, see the [Samples](https://ui5.sap.com/#/controls).
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -885,28 +761,28 @@ For more information, see the [Samples](https://ui5.sap.com/#/controls).
 <tr>
 <td valign="top">
 
- 1.116 
+1.116 
 
 
 
 </td>
 <td valign="top">
 
- Deleted 
+Deleted 
 
 
 
 </td>
 <td valign="top">
 
- Announcement 
+Announcement 
 
 
 
 </td>
 <td valign="top">
 
- **End of Cloud Provisioning for SAPUI5 Versions \(Q2/2023\)** 
+**End of Cloud Provisioning for SAPUI5 Versions \(Q2/2023\)** 
 
 
 
@@ -958,7 +834,7 @@ For more information, see [UI5 Releases Ending Service in 2023](https://blogs.sa
 </td>
 <td valign="top">
 
- Required 
+Required 
 
 
 
@@ -974,28 +850,28 @@ For more information, see [UI5 Releases Ending Service in 2023](https://blogs.sa
 <tr>
 <td valign="top">
 
- 1.116 
+1.116 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Modern ECMAScript Support in SAPUI5** 
+**Modern ECMAScript Support in SAPUI5** 
 
 
 
@@ -1017,7 +893,7 @@ For more information, see [Upgrade Your Tools for Modern ECMAScript in UI5](http
 </td>
 <td valign="top">
 
- Required 
+Required 
 
 
 

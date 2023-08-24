@@ -58,7 +58,7 @@ To define a custom page, the routing configuration in the manifest is extended b
 >                     "options": {
 >                         "settings": {
 >                             "viewName": "sap.fe.core.fpmExplorer.customPageContent.CustomPage",
->                             "entitySet": "RootEntity",
+>                             "contextPath": "/RootEntity",
 >                             "navigation": {
 >                                 "RootEntity": {
 >                                     "detail": {
@@ -75,7 +75,7 @@ To define a custom page, the routing configuration in the manifest is extended b
 >                     "name": "sap.fe.templates.ObjectPage",
 >                     "options": {
 >                         "settings": {
->                             "entitySet": "RootEntity",
+>                             "contextPath": "/RootEntity",
 >                             "editableHeaderContent": false,
 >                             "navigation": {
 >                                 "items": {
@@ -94,7 +94,7 @@ To define a custom page, the routing configuration in the manifest is extended b
 >                     "options": {
 >                         "settings": {
 >                             "viewName": "sap.fe.core.fpmExplorer.customPageContent.CustomDetailPage",
->                             "entitySet": "ChildEntity",
+>                             "contextPath": "/ChildEntity",
 >                             "navigation": {}
 >                         }
 >                     }

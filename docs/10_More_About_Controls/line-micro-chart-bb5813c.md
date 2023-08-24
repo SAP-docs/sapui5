@@ -30,11 +30,11 @@ With the line micro chart, you can visualize the diagram curve and show trends. 
 
 By default, the line of the chart is blue. However, you can use different colors, such as semantic colors for the line, to mark positive and negative values.
 
- ![](images/Pic1_LMC_bfc8015.png) 
+![](images/Pic1_LMC_bfc8015.png)
 
 You can also choose to use focus points instead of data points. Data points are useful if you want to concentrate on one or two special values, for example, the first and the last data point on the chart. For focus points, you can use any CSS color, but we recommend using semantic colors.
 
- ![](images/Pic2_LMC_678546d.png) 
+![](images/Pic2_LMC_678546d.png)
 
 
 
@@ -71,7 +71,7 @@ The chart has a built-in automatic scale that is applied based on existing value
 -   maxYValue
 
 
- ![](images/Pic3_LMC_dbfcdda.png) 
+![](images/Pic3_LMC_dbfcdda.png)
 
 
 

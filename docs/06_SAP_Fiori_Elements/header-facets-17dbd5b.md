@@ -72,11 +72,11 @@ You can use the annotation term `UI.HeaderFacets` to define which information is
 
 On desktops, the dynamic or static header is used with the responsive layout.
 
- ![](images/Header_Facet_Desktop_Version_b1c531e.png) 
+![](images/Header_Facet_Desktop_Version_b1c531e.png)
 
 On mobile devices, a header container is used with the horizontal layout. It provides horizontal scrolling for header facets.
 
- ![](images/Header_Facets_Mobile_Version_8abec0d.png) 
+![](images/Header_Facets_Mobile_Version_8abec0d.png)
 
 You can see the object page header facets within a horizontal scroll container.
 
@@ -88,7 +88,7 @@ You can see the object page header facets within a horizontal scroll container.
 
 On mobile devices, the horizontal scroll container is the default. On desktops, the Dynamic/Static header is the default. However, you can enable the carousel header on the desktop by defining `showHeaderAsCarouselOnDesktop:true` in the manifest settings.
 
- ![](images/Desktop_Carousels_for_Header_Facet_6113e92.png) 
+![](images/Desktop_Carousels_for_Header_Facet_6113e92.png)
 
 > ### Sample Code:  
 > ```

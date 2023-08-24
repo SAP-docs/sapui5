@@ -2,7 +2,7 @@
 
 # Defining Groups for Fast Navigation
 
-Adjacent controls within the tab chain can be grouped. Within such a group, [F6\] or  [Ctrl\] + [Alt/Option\] + [Down\] skip all controls of the group and move the focus to the first control in the tab chain of the next group.  [Shift\] + [F6\]  or  [Ctrl\] + [Alt/Option\] + [Up\]  move the focus to the first control of the previous group. Adjacent tab chain elements between groups are automatically handled as one group. For nested groups, the most concrete group is used.
+Adjacent controls within the tab chain can be grouped. Within such a group, [F6\] or [Ctrl\] + [Alt/Option\] + [Down\] skip all controls of the group and move the focus to the first control in the tab chain of the next group. [Shift\] + [F6\]  or [Ctrl\] + [Alt/Option\] + [Up\]  move the focus to the first control of the previous group. Adjacent tab chain elements between groups are automatically handled as one group. For nested groups, the most concrete group is used.
 
 Basically, a fast navigation group is defined via the attribute `data-sap-ui-fastnavgroup="true"` on a DOM element. Several options exist to implement fast navigation support in controls.
 
@@ -52,7 +52,7 @@ render = function(oRm, oControl){
 
 It may be necessary that a control has to provide a custom fast navigation handling, for example, if the DOM structure of the control does not allow to define suitable navigation groups with one of the options described above. The following picture shows how the central fast navigation handling \(a\) outside the control collaborates with the custom handling inside the control.
 
- ![](images/SAPUI5_Views_Custom_Fast_Navigation_fd10658.png) 
+![](images/SAPUI5_Views_Custom_Fast_Navigation_fd10658.png)
 
 To implement custom fast navigation handling, start with flagging the control as a custom handling area:
 
@@ -66,7 +66,7 @@ render = function(oRm, oControl){
 
 ```
 
-To implement the custom fast navigation behavior within the control \(d\), use the event handlers `onsapskipforward` \([F6\] or  [Ctrl\] + [Alt/Option\] + [Down\] \) and `onsapskipback` \( [Shift\] + [F6\]  or  [Ctrl\] + [Alt/Option\] + [Up\] \). When `preventDefault` is called on the provided event, the central fast navigation handling ignores the event.
+To implement the custom fast navigation behavior within the control \(d\), use the event handlers `onsapskipforward` \([F6\] or [Ctrl\] + [Alt/Option\] + [Down\] \) and `onsapskipback` \([Shift\] + [F6\]  or [Ctrl\] + [Alt/Option\] + [Up\] \). When `preventDefault` is called on the provided event, the central fast navigation handling ignores the event.
 
 The interesting point is the collaboration \(b, c\) between the control and the central fast navigation handling.
 
@@ -93,7 +93,7 @@ onsapskipback = function(oEvent){ //Shift+F6
 
 ```
 
-If the focus resides within the control and jumps out of the control \(b\) when pressing [F6\] or  [Shift\] + [F6\]  \(or the alternative key combinations given above\), the `onsapskipforward` and `onsapskipback` events should not be handled \(no `preventDefault` call\).
+If the focus resides within the control and jumps out of the control \(b\) when pressing [F6\] or [Shift\] + [F6\]  \(or the alternative key combinations given above\), the `onsapskipforward` and `onsapskipback` events should not be handled \(no `preventDefault` call\).
 
 If the focus resides outside the control and the central fast navigation handling calculates a target to focus within the control, the central handling first calls the event handler `onBeforeFastNavigationFocus` \(if available\) on the control \(c1, c2\) that is flagged as a custom handling area. The provided event has the following attributes:
 
@@ -101,7 +101,7 @@ If the focus resides outside the control and the central fast navigation handlin
 
 -   `source`: Specifies the DOM element which is the starting point for the calculation of the next/previous element to focus; this is usually the element that is currently focused
 
--   `forward`: Specifies whether forward \([F6\] or  [Ctrl\] + [Alt/Option\] + [Down\] \) or backward \( [Shift\] + [F6\]  or  [Ctrl\] + [Alt/Option\] + [Up\] \) navigation is used
+-   `forward`: Specifies whether forward \([F6\] or [Ctrl\] + [Alt/Option\] + [Down\] \) or backward \([Shift\] + [F6\]  or [Ctrl\] + [Alt/Option\] + [Up\] \) navigation is used
 
 
 If `preventDefault` is called on `BeforeFastNavigationFocus`, setting the focus on the target by the central handling is skipped.

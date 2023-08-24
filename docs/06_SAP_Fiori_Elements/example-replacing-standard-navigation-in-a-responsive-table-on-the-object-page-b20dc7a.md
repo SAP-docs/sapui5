@@ -15,7 +15,7 @@ You can replace the standard navigation from the object page with your own navig
 > 
 > After you've created an app extension, its display \(for example, control placement and layout\) and system behavior \(for example, model and binding usage, busy handling\) lies within the application's responsibility. SAP Fiori elements provides support only for the official `extensionAPI` functions. Don't access or manipulate controls, properties, models, or other internal objects created by the SAP Fiori elements framework.
 
- <a name="task_vqm_nq1_34b"/>
+<a name="task_vqm_nq1_34b"/>
 
 <!-- task\_vqm\_nq1\_34b -->
 
@@ -99,7 +99,7 @@ You can replace the standard navigation from the object page with your own navig
     > ```
 
 
- <a name="task_txp_vq1_34b"/>
+<a name="task_txp_vq1_34b"/>
 
 <!-- task\_txp\_vq1\_34b -->
 

@@ -15,11 +15,11 @@ It will automatically create as many child controls as are needed to display the
 
 ## Preview
 
-   
+  
   
 **List with aggregation binding**
 
- ![](images/Tutorial_Data_Binding_Step_12_1642433.png "List with aggregation binding") 
+![](images/Tutorial_Data_Binding_Step_12_1642433.png "List with aggregation binding")
 
 
 

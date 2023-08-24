@@ -14,7 +14,7 @@ We start with an initial app that simply retrieves data from an OData V4 service
 
 ## Preview
 
- ![](images/Tutorial_OData_V4_Step_8_e518deb.png) 
+![](images/Tutorial_OData_V4_Step_8_e518deb.png)
 
 
 

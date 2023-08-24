@@ -40,7 +40,7 @@ The SAPUI5 resource handler extends this concept to support standard and test-re
 
     Resources are all kind of JavaScript, CSS, Mimes, Resource Bundles, which are relevant for the runtime.
 
--    `test-resources/**` 
+-   `test-resources/**` 
 
     Test resources are resources that are samples and only relevant for testing purposes, for example, the content of the SAPUI5 test suite.
 

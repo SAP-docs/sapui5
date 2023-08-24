@@ -14,11 +14,11 @@ Internal examples of controls that use this feature are controls which accept ar
 
 The allowed URLs can be maintained with the following API:
 
--    `sap/base/security/URLListValidator.add` 
+-   `sap/base/security/URLListValidator.add` 
 
 -   `sap/base/security/URLListValidator.clear` 
 
--    `sap/base/security/URLListValidator.entries` 
+-   `sap/base/security/URLListValidator.entries` 
 
 
 Here is an example how valid URLs can be allowed:

@@ -6,7 +6,7 @@ With this release SAPUI5 is upgraded from version 1.74 to 1.75.
 
 
 
-** **
+****
 
 
 <table>
@@ -64,28 +64,28 @@ Available as of
 <tr>
 <td valign="top">
 
- 1.75 
+1.75 
 
 
 
 </td>
 <td valign="top">
 
- New 
+New 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Accessibility Enhancement** 
+**Accessibility Enhancement** 
 
 
 
@@ -119,28 +119,28 @@ Info Only
 <tr>
 <td valign="top">
 
- 1.75 
+1.75 
 
 
 
 </td>
 <td valign="top">
 
- New 
+New 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Browser and Platform Support** 
+**Browser and Platform Support** 
 
 
 
@@ -158,7 +158,7 @@ SAPUI5 now supports the latest Chromium-based version of Microsoft Edge. The nex
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -174,28 +174,28 @@ SAPUI5 now supports the latest Chromium-based version of Microsoft Edge. The nex
 <tr>
 <td valign="top">
 
- 1.75 
+1.75 
 
 
 
 </td>
 <td valign="top">
 
- New 
+New 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **UI Adaptation: Embedding External Content** 
+**UI Adaptation: Embedding External Content** 
 
 
 
@@ -213,7 +213,7 @@ If you have enabled an app for UI adaptation \(see [SAPUI5 Flexibility: Enable Y
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -229,28 +229,28 @@ If you have enabled an app for UI adaptation \(see [SAPUI5 Flexibility: Enable Y
 <tr>
 <td valign="top">
 
- 1.75 
+1.75 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Card Explorer** 
+**Card Explorer** 
 
 
 
@@ -268,7 +268,7 @@ We have introduced a schema validation feature in our samples in the Card Explor
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -284,28 +284,28 @@ We have introduced a schema validation feature in our samples in the Card Explor
 <tr>
 <td valign="top">
 
- 1.75 
+1.75 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Currency Codes** 
+**Currency Codes** 
 
 
 
@@ -325,7 +325,7 @@ If currency symbols are enabled \(formatting option `currencyCode: false`\), the
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -341,28 +341,28 @@ If currency symbols are enabled \(formatting option `currencyCode: false`\), the
 <tr>
 <td valign="top">
 
- 1.75 
+1.75 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **SAPUI5 OData V2 Messages** 
+**SAPUI5 OData V2 Messages** 
 
 
 
@@ -380,7 +380,7 @@ With the new version of the SAPUI5 OData V2 model, the target of server messages
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -396,28 +396,28 @@ With the new version of the SAPUI5 OData V2 model, the target of server messages
 <tr>
 <td valign="top">
 
- 1.75 
+1.75 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **SAPUI5 OData V4 Model** 
+**SAPUI5 OData V4 Model** 
 
 
 
@@ -446,7 +446,7 @@ For more information, see [OData V4 Model](../04_Essentials/odata-v4-model-5de13
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -462,28 +462,28 @@ For more information, see [OData V4 Model](../04_Essentials/odata-v4-model-5de13
 <tr>
 <td valign="top">
 
- 1.75 
+1.75 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Title Support in Nested Components** 
+**Title Support in Nested Components** 
 
 
 
@@ -505,7 +505,7 @@ For more information, see [Using the title Property in Targets](../04_Essentials
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -521,28 +521,28 @@ For more information, see [Using the title Property in Targets](../04_Essentials
 <tr>
 <td valign="top">
 
- 1.75 
+1.75 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.InitialPagePattern`** 
+**`sap.m.InitialPagePattern`** 
 
 
 
@@ -560,7 +560,7 @@ We have introduced the initial page floorplan as a Demo Kit sample. The floorpla
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -576,28 +576,28 @@ We have introduced the initial page floorplan as a Demo Kit sample. The floorpla
 <tr>
 <td valign="top">
 
- 1.75 
+1.75 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.Link`** 
+**`sap.m.Link`** 
 
 
 
@@ -615,7 +615,7 @@ The `text` property can now be changed using UI adaptation at runtime. This enab
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -631,28 +631,28 @@ The `text` property can now be changed using UI adaptation at runtime. This enab
 <tr>
 <td valign="top">
 
- 1.75 
+1.75 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.MessageBox`** 
+**`sap.m.MessageBox`** 
 
 
 
@@ -670,7 +670,7 @@ We have introduced a new `emphasizedAction` property. This allows developers to 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -686,28 +686,28 @@ We have introduced a new `emphasizedAction` property. This allows developers to 
 <tr>
 <td valign="top">
 
- 1.75 
+1.75 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.ObjectStatus`** 
+**`sap.m.ObjectStatus`** 
 
 
 
@@ -725,7 +725,7 @@ We have enhanced the `sap.ui.core.IndicationColor` palette. Three new colors wer
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -741,28 +741,28 @@ We have enhanced the `sap.ui.core.IndicationColor` palette. Three new colors wer
 <tr>
 <td valign="top">
 
- 1.75 
+1.75 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.smartfilterbar.SmartFilterBar`** 
+**`sap.ui.comp.smartfilterbar.SmartFilterBar`** 
 
 
 
@@ -785,7 +785,7 @@ We have enhanced the `sap.ui.core.IndicationColor` palette. Three new colors wer
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -801,28 +801,28 @@ We have enhanced the `sap.ui.core.IndicationColor` palette. Three new colors wer
 <tr>
 <td valign="top">
 
- 1.75 
+1.75 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.integration.widgets.Card`** 
+**`sap.ui.integration.widgets.Card`** 
 
 
 
@@ -847,7 +847,7 @@ For more information, see the [Adaptive Card](https://ui5.sap.com/test-resources
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -863,28 +863,28 @@ For more information, see the [Adaptive Card](https://ui5.sap.com/test-resources
 <tr>
 <td valign="top">
 
- 1.75 
+1.75 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.table.AnalyticalTable`, `sap.ui.table.Table, sap.ui.table.TreeTable`** 
+**`sap.ui.table.AnalyticalTable`, `sap.ui.table.Table, sap.ui.table.TreeTable`** 
 
 
 
@@ -902,7 +902,7 @@ A more comprehensive message text is now shown if no data is available because a
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -918,28 +918,28 @@ A more comprehensive message text is now shown if no data is available because a
 <tr>
 <td valign="top">
 
- 1.75 
+1.75 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- SAP Fiori Elements 
+SAP Fiori Elements 
 
 
 
 </td>
 <td valign="top">
 
- **SAP Fiori Elements** 
+**SAP Fiori Elements** 
 
 
 
@@ -974,7 +974,7 @@ A more comprehensive message text is now shown if no data is available because a
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -990,28 +990,28 @@ A more comprehensive message text is now shown if no data is available because a
 <tr>
 <td valign="top">
 
- 1.75 
+1.75 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- SAP Fiori Elements 
+SAP Fiori Elements 
 
 
 
 </td>
 <td valign="top">
 
- **UX Improvement** 
+**UX Improvement** 
 
 
 
@@ -1036,7 +1036,7 @@ A more comprehensive message text is now shown if no data is available because a
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1052,28 +1052,28 @@ A more comprehensive message text is now shown if no data is available because a
 <tr>
 <td valign="top">
 
- 1.75 
+1.75 
 
 
 
 </td>
 <td valign="top">
 
- New 
+New 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Demo Kit Improvements** 
+**Demo Kit Improvements** 
 
 
 
@@ -1086,9 +1086,9 @@ A more comprehensive message text is now shown if no data is available because a
 
 The search highlighting functionality is now also available in the *Documentation* tree filter and the *Samples* list.
 
- ![](images/WN_1_75_Docu_Highlighting_e79499d.png) 
+![](images/WN_1_75_Docu_Highlighting_e79499d.png)
 
- ![](images/WN_1_75_Samples_Highlighting_308ff81.png) 
+![](images/WN_1_75_Samples_Highlighting_308ff81.png)
 
 <sub>New•Feature•Info Only•1.75</sub>
 
@@ -1097,7 +1097,7 @@ The search highlighting functionality is now also available in the *Documentatio
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1114,6 +1114,8 @@ The search highlighting functionality is now also available in the *Documentatio
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.115](what-s-new-in-sapui5-1-115-409fde8.md "With this release SAPUI5 is upgraded from version 1.114 to 1.115.")
 
 [What's New in SAPUI5 1.114](what-s-new-in-sapui5-1-114-890fce1.md "With this release SAPUI5 is upgraded from version 1.113 to 1.114.")
 

@@ -19,31 +19,31 @@ In this step, we will look at `SmartTable` without table personalization or view
 
 ## Preview
 
-   
+  
   
 **Initial Look of the Smart Filter Bar and the Smart Table, and the Results of Firing the Query**
 
- ![](images/Smart_Controls_Tutorial_Step_05a_928338e.jpg "Initial Look of the Smart Filter Bar and the Smart Table, and the Results of
-					Firing the Query ") 
+![](images/Smart_Controls_Tutorial_Step_05a_928338e.jpg "Initial Look of the Smart Filter Bar and the Smart Table, and the Results of
+					Firing the Query ")
 
 When choosing the *Filters* link, you see a popup:
 
-   
+  
   
 **Dialog for Changing the Filter Values and Defining the Fields Displayed in the Filter Bar**
 
- ![](images/Smart_Controls_Tutorial_Step_05b_3e467ed.png " Dialog for Changing the Filter Values and Defining the Fields Displayed in
-					the Filter Bar") 
+![](images/Smart_Controls_Tutorial_Step_05b_3e467ed.png " Dialog for Changing the Filter Values and Defining the Fields Displayed in
+					the Filter Bar")
 
 You can now select *Currency* as an additional field in the filter bar of the first dialog.
 
 After selecting this additional field, we return to the table with the filter bar again and can use the value help for the newly added *Currency* field to restrict the results to those with *Currency = “EUR”*. Firing the query with this restriction, we see fewer results:
 
-   
+  
   
 **Query "EUR" Applied**
 
- ![](images/Smart_Controls_Tutorial_Step_05e_7f96bda.jpg "Query "EUR" Applied") 
+![](images/Smart_Controls_Tutorial_Step_05e_7f96bda.jpg "Query "EUR" Applied")
 
 
 

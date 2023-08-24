@@ -33,11 +33,11 @@ Make the settings in the `manifest.json` as follows:
 
 The full-screen button is added to the left of the personalization button:
 
- ![](images/Full-Screen_Button_for_Tables_543c2fd.png) 
+![](images/Full-Screen_Button_for_Tables_543c2fd.png)
 
 When you click the button, the table is displayed in full-screen mode, and the icon of the button changes accordingly to allow users to leave full-screen mode when clicking the button again.
 
 In addition, a *Close* button is displayed at the bottom of the dialog:
 
- ![](images/Close_Full-Screen_Mode_for_Tables_0d13370.png) 
+![](images/Close_Full-Screen_Mode_for_Tables_0d13370.png)
 

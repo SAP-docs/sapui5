@@ -16,7 +16,7 @@ Without variant management, and with no custom title added, your app looks as fo
   
 **App without Variant Management**
 
- ![](images/Creating_Apps_without_Variant_Management_8b85684.jpg "App without Variant Management") 
+![](images/Creating_Apps_without_Variant_Management_8b85684.jpg "App without Variant Management")
 
 Without variant management and with a custom title added, your app looks like this:
 
@@ -24,13 +24,13 @@ Without variant management and with a custom title added, your app looks like th
   
 **App without Variant Management and with Custom Title**
 
- 
+
 
 ![](images/Custom_Title_98d4cb0.jpg)
 
 For more information, see [Managing Variants](managing-variants-8ce658e.md).
 
- <a name="task_orp_fsc_mmb"/>
+<a name="task_orp_fsc_mmb"/>
 
 <!-- task\_orp\_fsc\_mmb -->
 
@@ -120,7 +120,7 @@ For more information, see [Managing Variants](managing-variants-8ce658e.md).
     > `variantManagementHidden` must be used in combination with `smartVariantManagement = true` in order to hide both the page variant and control variant. If used alone, it only hides the filter bar variant.
 
 
- <a name="task_ozn_qsc_mmb"/>
+<a name="task_ozn_qsc_mmb"/>
 
 <!-- task\_ozn\_qsc\_mmb -->
 
@@ -151,7 +151,7 @@ For more information, see [Managing Variants](managing-variants-8ce658e.md).
     >                         "name": "sap.fe.templates.ListReport",
     >                         "options": {
     >                             "settings" : {
-    >                                 "entitySet" : "XXXXXX",
+    >                                 "contextPath" : "/XXXXXX",
     >                                 "variantManagement": "None"
     >                                 }
     >                             }

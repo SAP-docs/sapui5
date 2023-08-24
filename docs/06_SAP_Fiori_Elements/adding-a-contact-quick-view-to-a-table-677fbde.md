@@ -6,11 +6,11 @@ Using the `@Communication.Contact` annotation, you can enable a contact quick vi
 
 The quick view can be displayed from the list report and the object page, as shown below.
 
-   
+  
   
 **Displaying a Contact Quick View in a Table**
 
- ![](images/Contact_Quick_View_47d4042.png "Displaying a Contact Quick View in a Table") 
+![](images/Contact_Quick_View_47d4042.png "Displaying a Contact Quick View in a Table")
 
 
 

@@ -4,7 +4,7 @@
 
 With this release SAPUI5 is upgraded from version 1.69 to 1.70.
 
-** **
+****
 
 
 <table>
@@ -62,28 +62,28 @@ Available as of
 <tr>
 <td valign="top">
 
- 1.70 
+1.70 
 
 
 
 </td>
 <td valign="top">
 
- New 
+New 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.f.GridListItem`** 
+**`sap.f.GridListItem`** 
 
 
 
@@ -94,7 +94,7 @@ Available as of
 
 We have introduced a new control `GridListItem` to be used in the default `items``sap.f.GridList`. It consists of a header toolbar and content. aggregation of
 
- ![](images/WhatsNew_170_GridListItem_d3ef93c.png) 
+![](images/WhatsNew_170_GridListItem_d3ef93c.png)
 
 Note that even though the `content` aggregation can be used for any control, complex responsive layout controls, such as `Table` and `Form`, should not be used.
 
@@ -123,28 +123,28 @@ Info Only
 <tr>
 <td valign="top">
 
- 1.70 
+1.70 
 
 
 
 </td>
 <td valign="top">
 
- New 
+New 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Rule Builder Control** 
+**Rule Builder Control** 
 
 
 
@@ -162,7 +162,7 @@ aggregation ofYou can model a text rule to perform operations on data objects or
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -178,28 +178,28 @@ aggregation ofYou can model a text rule to perform operations on data objects or
 <tr>
 <td valign="top">
 
- 1.70 
+1.70 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **SAPUI5 OData V4 Model** 
+**SAPUI5 OData V4 Model** 
 
 
 
@@ -225,7 +225,7 @@ For more information, see [OData V4 Model](../04_Essentials/odata-v4-model-5de13
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -241,28 +241,28 @@ For more information, see [OData V4 Model](../04_Essentials/odata-v4-model-5de13
 <tr>
 <td valign="top">
 
- 1.70 
+1.70 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.f.GridContainer`** 
+**`sap.f.GridContainer`** 
 
 
 
@@ -280,7 +280,7 @@ We have polished the code, added right-to-left \(RTL\) support, and implemented 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -296,28 +296,28 @@ We have polished the code, added right-to-left \(RTL\) support, and implemented 
 <tr>
 <td valign="top">
 
- 1.70 
+1.70 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.ColorPalette`** 
+**`sap.m.ColorPalette`** 
 
 
 
@@ -335,7 +335,7 @@ With the new `displayMode` enum property of `sap.m.ColorPalettePopover`, you can
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -351,28 +351,28 @@ With the new `displayMode` enum property of `sap.m.ColorPalettePopover`, you can
 <tr>
 <td valign="top">
 
- 1.70 
+1.70 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.DatePicker`** 
+**`sap.m.DatePicker`** 
 
 
 
@@ -390,7 +390,7 @@ We have introduced a more intuitive way for users to confirm date selection. Set
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -406,28 +406,28 @@ We have introduced a more intuitive way for users to confirm date selection. Set
 <tr>
 <td valign="top">
 
- 1.70 
+1.70 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.SelectDialog`** 
+**`sap.m.SelectDialog`** 
 
 
 
@@ -450,7 +450,7 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.Se
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -466,28 +466,28 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.Se
 <tr>
 <td valign="top">
 
- 1.70 
+1.70 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.SinglePlanningCalendar`** 
+**`sap.m.SinglePlanningCalendar`** 
 
 
 
@@ -505,7 +505,7 @@ We have introduced support for indicating working hours in the `sap.m.SinglePlan
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -521,28 +521,28 @@ We have introduced support for indicating working hours in the `sap.m.SinglePlan
 <tr>
 <td valign="top">
 
- 1.70 
+1.70 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.TableSelectDialog`** 
+**`sap.m.TableSelectDialog`** 
 
 
 
@@ -560,7 +560,7 @@ We have extended the `search` event of the control with a new `clearButtonPresse
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -576,28 +576,28 @@ We have extended the `search` event of the control with a new `clearButtonPresse
 <tr>
 <td valign="top">
 
- 1.70 
+1.70 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.smarttable.SmartTable`** 
+**`sap.ui.comp.smarttable.SmartTable`** 
 
 
 
@@ -615,7 +615,7 @@ The new `useInfoToolbar` property allows you to show the filters that have been 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -631,28 +631,28 @@ The new `useInfoToolbar` property allows you to show the filters that have been 
 <tr>
 <td valign="top">
 
- 1.70 
+1.70 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.table.AnalyticalTable`** 
+**`sap.ui.table.AnalyticalTable`** 
 
 
 
@@ -670,7 +670,7 @@ When you group columns in an analytical table, you can now select *Expand All* i
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -686,28 +686,28 @@ When you group columns in an analytical table, you can now select *Expand All* i
 <tr>
 <td valign="top">
 
- 1.70 
+1.70 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.unified.Calendar`** 
+**`sap.ui.unified.Calendar`** 
 
 
 
@@ -725,7 +725,7 @@ We have improved the navigation in the multiple months view for `sap.ui.unified.
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -741,28 +741,28 @@ We have improved the navigation in the multiple months view for `sap.ui.unified.
 <tr>
 <td valign="top">
 
- 1.70 
+1.70 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- SAP Fiori Elements 
+SAP Fiori Elements 
 
 
 
 </td>
 <td valign="top">
 
- **SAP Fiori Elements** 
+**SAP Fiori Elements** 
 
 
 
@@ -784,13 +784,13 @@ General features:
       
     **Select All Checkbox**
 
-     ![](images/MultiSelect_SelectAll_95bca00.jpg "Select All Checkbox") 
+    ![](images/MultiSelect_SelectAll_95bca00.jpg "Select All Checkbox")
 
       
       
     **Deselect All Arrow**
 
-     ![](images/MultiSelect_DeselectAll_449a6ae.jpg "Deselect All Arrow") 
+    ![](images/MultiSelect_DeselectAll_449a6ae.jpg "Deselect All Arrow")
 
 
 The object page has these new features:
@@ -829,7 +829,7 @@ The overview page has these new features or enhancements:
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -846,6 +846,8 @@ The overview page has these new features or enhancements:
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.115](what-s-new-in-sapui5-1-115-409fde8.md "With this release SAPUI5 is upgraded from version 1.114 to 1.115.")
 
 [What's New in SAPUI5 1.114](what-s-new-in-sapui5-1-114-890fce1.md "With this release SAPUI5 is upgraded from version 1.113 to 1.114.")
 

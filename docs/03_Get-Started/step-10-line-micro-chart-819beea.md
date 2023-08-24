@@ -10,7 +10,7 @@ In this step, we will create the `LineMicroChart` on the **Production Process** 
 
 ## Preview
 
- ![](images/Step9_1_ea29a78.png) 
+![](images/Step9_1_ea29a78.png)
 
 
 

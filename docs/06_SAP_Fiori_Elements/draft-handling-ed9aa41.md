@@ -2,16 +2,18 @@
 
 # Draft Handling
 
-A draft is an interim version of a business entity that has not yet been explicitly saved as an active version. SAP Fiori elements support the creation of apps using draft handling.
+A draft is an interim version of a business entity that has not yet been explicitly saved as an active version. SAP Fiori elements supports the creation of apps using draft handling.
 
 Drafts are used as follows:
 
 -   To keep unsaved changes when an editing activity is interrupted. This lets users resume editing later.
 
--   To prevent data loss if an app terminates unexpectedly
+-   To prevent data loss if an app terminates unexpectedly.
+
+-   As a locking mechanism to prevent multiple users from editing the same object at the same time, and to inform users about unsaved changes by another user.
 
 
-When a user starts creating a new business entity or edits an existing one, a draft is created in the background. This enables field validation and dynamic field control \(showing additional fields based on user interaction\) and provides default values for fields based on recent data entry. A draft can be validated for consistency and completeness at any time. This returns a list of messages.As a locking mechanism to prevent multiple users from editing the same object at the same time, and to inform users about unsaved changes by another user.
+When a user starts creating a new business entity or edits an existing one, a draft is created in the background. This enables field validation and dynamic field control \(showing additional fields based on user interaction\) and provides default values for fields based on recent data entry. A draft can be validated for consistency and completeness at any time. This returns a list of messages.
 
 While the user is modifying a business entity, an indicator shows when a draft is saved implicitly. The user still needs to choose *Save* to incorporate the changes into an active business document.
 
@@ -29,7 +31,7 @@ When a user edits an object, the system behavior of the *Apply* button is as fol
 
 2.  The system creates a draft version of the object.
 
-3.  The user makes changes to the draft version of the object and navigates to a detail page. When *Apply*As a locking mechanism to prevent multiple users from editing the same object at the same time, and to inform users about unsaved is chosen, the changes are applied to the draft.
+3.  The user makes changes to the draft version of the object and navigates to a detail page. When the user chooses *Apply*, the changes are applied to the draft.
 
 4.  When the user chooses *Save*, the changes are saved to the active version of the object.
 
@@ -41,30 +43,21 @@ When a user edits an object, the system behavior of the *Apply* button is as fol
 
 <a name="loioed9aa41c563a44b18701529c8327db4d__section_ysr_zrm_mtb"/>
 
-## Switch Between Draft and Saved Version
+## Switching Between the Draft and Saved Version
 
-Users can switch between the draft and saved version using:
-
--   Toggling button for those application that have static or classical header.
-
--   Dropdown for those applications that have dynamic header.
+Users can switch between the draft and saved version using a dropdown in applications that have the dynamic header.
 
 
-   
+
   
-**Static/Classical Header**
-
- ![](images/Static_or_Classic_Header_-_Draft_Handling_17f784f.png "Static/Classical Header") 
-
-   
   
 **Dynamic Header**
 
- ![](images/Dynamic_Header_-_Draft_Handling_6c69105.png "Dynamic Header") 
+![](images/Dynamic_Header_-_Draft_Handling_6c69105.png "Dynamic Header")
 
 
 
-### Prepare Draft for Activation on Tablet and Mobile Devices by Pressing [Enter\]
+### Preparing the Draft for Activation on Tablet and Mobile Devices by Pressing [Enter\]
 
 The object page displays the *Validate* button to execute the `PreparationAction` call. The side effects, if configured, are also triggered along with the validate action.
 
@@ -95,9 +88,21 @@ When a user toggles away from the draft version, any pending changes are automat
 
 
 
-### Prepare Draft for Activation by Pressing [Enter\]
+### Switching Between the Draft and Saved Version
 
-On a draft version of a document, if you press [Enter\] on input fields, by default the draft validation \(`PreparationAction` available on the `DraftRoot`\) is triggered. The `PreparationAction` performs a validation in the backend for the draft values and sends back validation messages if they're available. The pending changes on the draft, if any, are also saved before validating the draft instance.
+Users can switch between the draft and saved version using a toggle button in applications that have the static or classic header.
+
+  
+  
+**Static/Classic Header**
+
+![](images/Static_or_Classic_Header_-_Draft_Handling_17f784f.png "Static/Classic Header")
+
+
+
+### Preparing the Draft for Activation by Pressing [Enter\]
+
+On a draft version of a document, if you press [Enter\] on input fields, by default the draft validation \(`PreparationAction` available on the `DraftRoot`\) is triggered. The `PreparationAction` performs a validation in the back end for the draft values and sends back validation messages if they're available. The pending changes on the draft, if any, are also saved before validating the draft instance.
 
 The `PreparationAction` that is defined within the `DraftRoot` is called, even if you've pressed [Enter\] in the fields of the object page table, or in the subobject pages.
 
@@ -109,13 +114,20 @@ The side effects, if configured, are also triggered upon pressing [Enter\]. The 
 
 ## Additional Features in SAP Fiori Elements for OData V4
 
+There are two kinds of drafts in SAP Fiori elements for OData V4:
+
+-   Exclusive draft: only one user can create the draft for the business entity. Other users cannot see the changes before the user saves the draft.
+
+-   Collaborative draft: all users who have access to a business object can access the draft and change the business entity.
+
+
 Drafts are saved automatically in the background whenever users add or change information within a business entity while it's in edit mode.
 
 You can use a keyboard shortcut to execute a `PreparationAction` or global side effects in the draft mode.
 
 
 
-### Prepare Draft for Activation by Pressing [Enter\]
+### Preparing the Draft for Activation by Pressing [Enter\]
 
 On a draft version of a document, if you press [Enter\] on input fields, one of the following actions is triggered:
 
@@ -137,9 +149,30 @@ Filtering draft-related data is enabled by default in SAP Fiori elements for ODa
 
 
 
+### Using the Collaborative Draft
+
+If the service supports the collaborative draft using a `ShareAction` annotation, all drafts are automatically shared with all users who have access to the business object. Users can edit the entity as long as the draft exists.
+
+Avatars of all the users who are currently accessing this draft are displayed in the object page header.
+
+When a user starts typing in a field or sets the focus in a specific field, it is locked for all the other users. An indicator appears next to the field to show who is modifying it.
+
+When a user changes a field or performs an action, such as creating a new subitem, deleting a subitem or calling an action, the new changes are immediately visible to the other users. When a user saves or discards the draft, the other users are notified.
+
+Clicking the *Invite* button next to the user avatars shows a list of users who are currently editing the draft or have previously edited it. Users can also add other users to the list, asking them to join the collaborative draft. Note that adding a user to this list does not change their authorization. Only users with access to the business object can be invited.
+
+When a user is added to the list, the draft will appear in their *Own Draft* list.
+
+> ### Restriction:  
+> -   This feature is only supported when using the ABAP RESTful Application Programming Model \(RAP\).
+> 
+> -   The lock mechanism is only supported by app extensions built using the SAP Fiori elements for OData V4 building blocks.
+
+
+
 <a name="loioed9aa41c563a44b18701529c8327db4d__section_ivw_gkc_d2b"/>
 
-## Related Links:
+## Related Links
 
 -   [Draft Handling in SAP Fiori Design Guidelines](https://experience.sap.com/fiori-design-web/draft-handling/)
 
@@ -148,5 +181,7 @@ Filtering draft-related data is enabled by default in SAP Fiori elements for ODa
 -   [Confirmation Popups](confirmation-popups-9a53662.md)
 
 -   [Using Global Side Effects](using-global-side-effects-955ae31.md)
+
+-   [Toggling Between Draft and Saved Values](toggling-between-draft-and-saved-values-fd3950a.md)
 
 

@@ -81,7 +81,7 @@ For information about the `Field` API, see the [API Reference](https://ui5.sap.c
 
         The image below shows how this will look on the UI:
 
-         ![](images/Building_Block_Currency_Data_Field_bbce28d.png) 
+        ![](images/Building_Block_Currency_Data_Field_bbce28d.png)
 
 
 2.  In addition to the automatic generation of controls fitting best to the bound data when using the `Field` building block, you can also influence the appearance using the `Field` building block API.
@@ -114,7 +114,7 @@ For information about the `Field` API, see the [API Reference](https://ui5.sap.c
 
         The image below shows how this will look on the UI:
 
-         ![](images/Building_Block_Currency_Data_Field_with_Format_Options_and_Parameter_measureDisplayMode_e80fd3f.png) 
+        ![](images/Building_Block_Currency_Data_Field_with_Format_Options_and_Parameter_measureDisplayMode_e80fd3f.png)
 
     -   The following example shows how to use the `formatOptions` and the parameter `displayMode` to influence the display of the value and description inside a currency field.
 
@@ -142,7 +142,7 @@ For information about the `Field` API, see the [API Reference](https://ui5.sap.c
 
         The image below shows how this will look on the UI:
 
-         ![](images/Building_Block_Currency_Field_Display_Mode_9e7718e.png) 
+        ![](images/Building_Block_Currency_Field_Display_Mode_9e7718e.png)
 
 
 

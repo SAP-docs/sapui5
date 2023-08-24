@@ -8,11 +8,11 @@ In contrast to the two-way binding behavior shown above, one-way data binding is
 
 ## Preview
 
-   
+  
   
 **Two-way data binding disabled for the checkbox**
 
- ![](images/Tutorial_Data_Binding_Step_4_61d68f1.png "Two-way data binding disabled for the checkbox") 
+![](images/Tutorial_Data_Binding_Step_4_61d68f1.png "Two-way data binding disabled for the checkbox")
 
 
 

@@ -48,14 +48,14 @@ Description
 <tr>
 <td valign="top">
 
- `name` 
+`name` 
 
 
 
 </td>
 <td valign="top">
 
- `string` 
+`string` 
 
 
 
@@ -78,14 +78,14 @@ The relative path of the resource as accessible in a server. The path is relativ
 <tr>
 <td valign="top">
 
- `size` 
+`size` 
 
 
 
 </td>
 <td valign="top">
 
- `number` 
+`number` 
 
 
 
@@ -108,14 +108,14 @@ The size in bytes of the resource.
 <tr>
 <td valign="top">
 
- `condRequired` 
+`condRequired` 
 
 
 
 </td>
 <td valign="top">
 
- `string[]` 
+`string[]` 
 
 
 
@@ -138,14 +138,14 @@ A list of conditional dependencies of this resource. These dependencies can be r
 <tr>
 <td valign="top">
 
- `designtime` 
+`designtime` 
 
 
 
 </td>
 <td valign="top">
 
- `boolean` 
+`boolean` 
 
 
 
@@ -168,14 +168,14 @@ When set to `true`, the resource is considered a designtime resource. The SAPUI5
 <tr>
 <td valign="top">
 
- `dynRequired` 
+`dynRequired` 
 
 
 
 </td>
 <td valign="top">
 
- `boolean` 
+`boolean` 
 
 
 
@@ -198,14 +198,14 @@ When set to `true`, the resource has dynamic dependencies. The name of this depe
 <tr>
 <td valign="top">
 
- `exposedGlobalNames` 
+`exposedGlobalNames` 
 
 
 
 </td>
 <td valign="top">
 
- `string[]` 
+`string[]` 
 
 
 
@@ -228,14 +228,14 @@ A list of variables which are exposed to the global JS scope.
 <tr>
 <td valign="top">
 
- `format` 
+`format` 
 
 
 
 </td>
 <td valign="top">
 
- `string` 
+`string` 
 
 
 
@@ -258,14 +258,14 @@ Defines the format of this resource; `raw` means that it is not a UI5 module.
 <tr>
 <td valign="top">
 
- `included` 
+`included` 
 
 
 
 </td>
 <td valign="top">
 
- `string[]` 
+`string[]` 
 
 
 
@@ -288,14 +288,14 @@ List of sub-modules which are included in this resource, e.g. the `Component-pre
 <tr>
 <td valign="top">
 
- `isDebug` 
+`isDebug` 
 
 
 
 </td>
 <td valign="top">
 
- `boolean` 
+`boolean` 
 
 
 
@@ -318,14 +318,14 @@ When set to `true`, the resource is a debug source, the SAPUI5 build derives the
 <tr>
 <td valign="top">
 
- `locale` 
+`locale` 
 
 
 
 </td>
 <td valign="top">
 
- `string` 
+`string` 
 
 
 
@@ -348,14 +348,14 @@ Locale of the resource for known i18n resources; the SAPUI5 build derives the lo
 <tr>
 <td valign="top">
 
- `merged` 
+`merged` 
 
 
 
 </td>
 <td valign="top">
 
- `string` 
+`string` 
 
 
 
@@ -378,14 +378,14 @@ Indicates whether the resource is a merged resource. By default, the SAPUI5 buil
 <tr>
 <td valign="top">
 
- `module` 
+`module` 
 
 
 
 </td>
 <td valign="top">
 
- `string` 
+`string` 
 
 
 
@@ -408,14 +408,14 @@ The name of the UI5 module, including the file extension.
 <tr>
 <td valign="top">
 
- `raw` 
+`raw` 
 
 
 
 </td>
 <td valign="top">
 
- `string` 
+`string` 
 
 
 
@@ -438,14 +438,14 @@ The name of the corresponding resource in the raw \(developer\) language for kno
 <tr>
 <td valign="top">
 
- `required` 
+`required` 
 
 
 
 </td>
 <td valign="top">
 
- `string[]` 
+`string[]` 
 
 
 
@@ -468,14 +468,14 @@ A list of dependencies of this resource. These dependencies are required prior t
 <tr>
 <td valign="top">
 
- `support` 
+`support` 
 
 
 
 </td>
 <td valign="top">
 
- `boolean` 
+`boolean` 
 
 
 
@@ -500,14 +500,14 @@ The SAPUI5 build derives this flag from the naming convention `.support.js`.
 <tr>
 <td valign="top">
 
- `theme` 
+`theme` 
 
 
 
 </td>
 <td valign="top">
 
- `string` 
+`string` 
 
 
 
@@ -532,6 +532,8 @@ The SAPUI5 build determines this from the naming convention `**themes/<theme>/**
 </table>
 
 
+
+## Example
 
 ```js
 

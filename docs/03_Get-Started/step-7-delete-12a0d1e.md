@@ -10,11 +10,11 @@ In this step, we make it possible to delete user data.
 
 ## Preview
 
-   
+  
   
 **A new Delete User button is added**
 
- ![](images/Tutorial_OData_V4_Step_7_32509f4.png "A new Delete User button is added") 
+![](images/Tutorial_OData_V4_Step_7_32509f4.png "A new Delete User button is added")
 
 
 

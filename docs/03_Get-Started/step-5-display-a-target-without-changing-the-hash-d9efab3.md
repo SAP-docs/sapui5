@@ -12,11 +12,11 @@ Fortunately, we can extend our app and offer an easy solution. There are some us
 
 ## Preview
 
-   
+  
   
 **The new Home page with a navigation button**
 
- ![](images/Tutorial_Navigation_and_Routing_Step_05_64fc7de.png "The new Home page with a navigation button") 
+![](images/Tutorial_Navigation_and_Routing_Step_05_64fc7de.png "The new Home page with a navigation button")
 
 
 

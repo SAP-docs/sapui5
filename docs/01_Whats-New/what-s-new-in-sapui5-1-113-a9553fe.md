@@ -9,12 +9,12 @@ With this release SAPUI5 is upgraded from version 1.112 to 1.113.
 > ### Tip:  
 > If you want to do a search across all versions of the What's New content, you can also find it in the
 > 
->  [SAPUI5 What's New viewer](https://help.sap.com/whats-new/67f60363b57f4ac0b23efd17fa192d60).
+> [SAPUI5 What's New viewer](https://help.sap.com/whats-new/67f60363b57f4ac0b23efd17fa192d60).
 
 > ### Note:  
-> Content marked as <span style="color:#666666;"><span class="SAP-icons"></span></span>** [Preview](https://help.sap.com/docs/whats-new-disclaimer)** is provided as a courtesy, without a warranty, and may be subject to change. For more information, see the [preview disclaimer](https://help.sap.com/docs/whats-new-disclaimer).
+> Content marked as <span style="color:#666666;"><span class="SAP-icons"></span></span>**[Preview](https://help.sap.com/docs/whats-new-disclaimer)** is provided as a courtesy, without a warranty, and may be subject to change. For more information, see the [preview disclaimer](https://help.sap.com/docs/whats-new-disclaimer).
 
-** **
+****
 
 
 <table>
@@ -72,28 +72,28 @@ Available as of
 <tr>
 <td valign="top">
 
- 1.113 
+1.113 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.p13n*`** 
+**`sap.m.p13n*`** 
 
 
 
@@ -111,7 +111,7 @@ We have further improved the usability and accessibility of the *View Settings* 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -127,28 +127,28 @@ We have further improved the usability and accessibility of the *View Settings* 
 <tr>
 <td valign="top">
 
- 1.113 
+1.113 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Announcement 
+Announcement 
 
 
 
 </td>
 <td valign="top">
 
- **`Variant Management: Button Replaced`** 
+**`Variant Management: Button Replaced`** 
 
 
 
@@ -169,7 +169,7 @@ We have further improved the usability and accessibility of the *View Settings* 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -185,28 +185,28 @@ We have further improved the usability and accessibility of the *View Settings* 
 <tr>
 <td valign="top">
 
- 1.113 
+1.113 
 
 
 
 </td>
 <td valign="top">
 
- UI Changed 
+UI Changed 
 
 
 
 </td>
 <td valign="top">
 
- Announcement 
+Announcement 
 
 
 
 </td>
 <td valign="top">
 
- **Multi-Select Table in Value Help Dialog** 
+**Multi-Select Table in Value Help Dialog** 
 
 
 
@@ -227,7 +227,7 @@ Grid tables with a multi-select option will now show a *Deselect All* button ins
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -243,28 +243,28 @@ Grid tables with a multi-select option will now show a *Deselect All* button ins
 <tr>
 <td valign="top">
 
- 1.113 
+1.113 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.smarttable.SmartTable`** 
+**`sap.ui.comp.smarttable.SmartTable`** 
 
 
 
@@ -282,7 +282,7 @@ If several columns are sorted based on the same sortable property, the indicator
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -298,28 +298,28 @@ If several columns are sorted based on the same sortable property, the indicator
 <tr>
 <td valign="top">
 
- 1.113 
+1.113 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Spreadsheet Export** 
+**Spreadsheet Export** 
 
 
 
@@ -332,7 +332,7 @@ If several columns are sorted based on the same sortable property, the indicator
 
 -   In the *Export As* dialog, you can now select the *Show Page Number* option in the PDF-specific settings.
 
-     ![](images/WN_PDF_Settings_efa9f86.png) 
+    ![](images/WN_PDF_Settings_efa9f86.png)
 
 
 <sub>Changed•Feature•Info Only•1.113</sub>
@@ -342,7 +342,7 @@ If several columns are sorted based on the same sortable property, the indicator
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -358,28 +358,28 @@ If several columns are sorted based on the same sortable property, the indicator
 <tr>
 <td valign="top">
 
- 1.113 
+1.113 
 
 
 
 </td>
 <td valign="top">
 
- Deprecated 
+Deprecated 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Deprecations** 
+**Deprecations** 
 
 
 
@@ -397,7 +397,7 @@ There are currently no major deprecations. For a complete list of all deprecatio
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -413,28 +413,28 @@ There are currently no major deprecations. For a complete list of all deprecatio
 <tr>
 <td valign="top">
 
- 1.113 
+1.113 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Code Coverage Powered by `Istanbul`** 
+**Code Coverage Powered by `Istanbul`** 
 
 
 
@@ -454,7 +454,7 @@ To start taking advantage of the more future-proof and feature-rich `Istanbul` s
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -470,28 +470,28 @@ To start taking advantage of the more future-proof and feature-rich `Istanbul` s
 <tr>
 <td valign="top">
 
- 1.113 
+1.113 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **SAPUI5 Date and Time Formatting** 
+**SAPUI5 Date and Time Formatting** 
 
 
 
@@ -516,7 +516,7 @@ The new version of SAPUI5 introduces the following formatting features:
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -532,28 +532,28 @@ The new version of SAPUI5 introduces the following formatting features:
 <tr>
 <td valign="top">
 
- 1.113 
+1.113 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **SAPUI5 OData V4 Model** 
+**SAPUI5 OData V4 Model** 
 
 
 
@@ -584,7 +584,7 @@ The new version of the SAPUI5 OData V4 model introduces the following features:
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -600,28 +600,28 @@ The new version of the SAPUI5 OData V4 model introduces the following features:
 <tr>
 <td valign="top">
 
- 1.113 
+1.113 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **SAPUI5 OData V2 Model** 
+**SAPUI5 OData V2 Model** 
 
 
 
@@ -641,7 +641,7 @@ For more information, see the API Reference for [`hasPendingChanges`](https://ui
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -657,28 +657,28 @@ For more information, see the API Reference for [`hasPendingChanges`](https://ui
 <tr>
 <td valign="top">
 
- 1.113 
+1.113 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- SAP Fiori Elements 
+SAP Fiori Elements 
 
 
 
 </td>
 <td valign="top">
 
- **SAP Fiori elements for OData V2** 
+**SAP Fiori elements for OData V2** 
 
 
 
@@ -723,7 +723,7 @@ The following changes and new features are available for SAP Fiori elements for 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -739,28 +739,28 @@ The following changes and new features are available for SAP Fiori elements for 
 <tr>
 <td valign="top">
 
- 1.113 
+1.113 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- SAP Fiori Elements 
+SAP Fiori Elements 
 
 
 
 </td>
 <td valign="top">
 
- **SAP Fiori elements for OData V4** 
+**SAP Fiori elements for OData V4** 
 
 
 
@@ -775,7 +775,7 @@ The following changes and new features are available for SAP Fiori elements for 
 
 -   The sorting mechanism and options on a table column now reflect the visible properties and content of the column. Note that in SAP Fiori apps that were built using ABAP CDS, sort restrictions may apply.
 
-     ![](images/Sorting_Column_Content_-_Improved_68e1849.png) 
+    ![](images/Sorting_Column_Content_-_Improved_68e1849.png)
 
 -   When no `QuickView` annotations are defined and no target is resolved at runtime, the field now appears as a link and a message is displayed when you click the link. For more information, see [Configuring the Content of Quick Views](../06_SAP_Fiori_Elements/configuring-the-content-of-quick-views-c245ad7.md).
 
@@ -787,7 +787,7 @@ The following changes and new features are available for SAP Fiori elements for 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -810,21 +810,21 @@ The following changes and new features are available for SAP Fiori elements for 
 </td>
 <td valign="top">
 
- Deleted 
+Deleted 
 
 
 
 </td>
 <td valign="top">
 
- Announcement 
+Announcement 
 
 
 
 </td>
 <td valign="top">
 
- **End of Cloud Provisioning for SAPUI5 Versions \(Q1/2023\)** 
+**End of Cloud Provisioning for SAPUI5 Versions \(Q1/2023\)** 
 
 
 
@@ -872,7 +872,7 @@ For more information, see [UI5 Releases Ending Service in 2023](https://blogs.sa
 </td>
 <td valign="top">
 
- Required 
+Required 
 
 
 
@@ -888,28 +888,28 @@ For more information, see [UI5 Releases Ending Service in 2023](https://blogs.sa
 <tr>
 <td valign="top">
 
- 1.113 
+1.113 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.integration.widgets.Card`** 
+**`sap.ui.integration.widgets.Card`** 
 
 
 
@@ -937,7 +937,7 @@ For more information, see [UI5 Releases Ending Service in 2023](https://blogs.sa
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -953,28 +953,28 @@ For more information, see [UI5 Releases Ending Service in 2023](https://blogs.sa
 <tr>
 <td valign="top">
 
- 1.113 
+1.113 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.smartfield.SmartField`** 
+**`sap.ui.comp.smartfield.SmartField`** 
 
 
 
@@ -997,7 +997,7 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.c
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1013,28 +1013,28 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.c
 <tr>
 <td valign="top">
 
- 1.113 
+1.113 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.smartfield.SmartField` and `sap.ui.comp.smartfilterbar.SmartFilterBar`** 
+**`sap.ui.comp.smartfield.SmartField` and `sap.ui.comp.smartfilterbar.SmartFilterBar`** 
 
 
 
@@ -1052,7 +1052,7 @@ These controls now support the `inputFieldSuggestions` setting from SAP Fiori la
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1068,28 +1068,28 @@ These controls now support the `inputFieldSuggestions` setting from SAP Fiori la
 <tr>
 <td valign="top">
 
- 1.113 
+1.113 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.valuehelpdialog.ValueHelpDialog`** 
+**`sap.ui.comp.valuehelpdialog.ValueHelpDialog`** 
 
 
 
@@ -1110,7 +1110,7 @@ These controls now support the `inputFieldSuggestions` setting from SAP Fiori la
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1126,28 +1126,28 @@ These controls now support the `inputFieldSuggestions` setting from SAP Fiori la
 <tr>
 <td valign="top">
 
- 1.113 
+1.113 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.test.Opa5`** 
+**`sap.ui.test.Opa5`** 
 
 
 
@@ -1165,7 +1165,7 @@ We have introduced a new `fetchWaiter`, which checks for currently ongoing fetch
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1181,28 +1181,28 @@ We have introduced a new `fetchWaiter`, which checks for currently ongoing fetch
 <tr>
 <td valign="top">
 
- 1.113 
+1.113 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.richtexteditor.RichTextEditor`** 
+**`sap.ui.richtexteditor.RichTextEditor`** 
 
 
 
@@ -1220,7 +1220,7 @@ We have updated the TinyMCE version 6 used in `sap.ui.richtexteditor.RichTextEdi
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1236,28 +1236,28 @@ We have updated the TinyMCE version 6 used in `sap.ui.richtexteditor.RichTextEdi
 <tr>
 <td valign="top">
 
- 1.113 
+1.113 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.SuggestionsPopover`** 
+**`sap.m.SuggestionsPopover`** 
 
 
 
@@ -1275,7 +1275,7 @@ We have restricted the width of input suggestions to a maximum of 40 rem for opt
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1291,28 +1291,28 @@ We have restricted the width of input suggestions to a maximum of 40 rem for opt
 <tr>
 <td valign="top">
 
- 1.113 
+1.113 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.IllustratedMessage`** 
+**`sap.m.IllustratedMessage`** 
 
 
 
@@ -1330,7 +1330,7 @@ We have introduced a new `Survey` illustration type and four new illustrations t
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1346,28 +1346,28 @@ We have introduced a new `Survey` illustration type and four new illustrations t
 <tr>
 <td valign="top">
 
- 1.113 
+1.113 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.unified.FileUploader`** 
+**`sap.ui.unified.FileUploader`** 
 
 
 
@@ -1378,7 +1378,7 @@ We have introduced a new `Survey` illustration type and four new illustrations t
 
 We have implemented two new methods in the control's API, a trigger to open the native file upload picker and a getter to return the file input type element from the control DOM representation.
 
- For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.unified.FileUploader). 
+For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.unified.FileUploader). 
 
 <sub>Changed•Control•Info Only•1.113</sub>
 
@@ -1387,7 +1387,7 @@ We have implemented two new methods in the control's API, a trigger to open the 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1403,28 +1403,28 @@ We have implemented two new methods in the control's API, a trigger to open the 
 <tr>
 <td valign="top">
 
- 1.113 
+1.113 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.f.SidePanel`** 
+**`sap.f.SidePanel`** 
 
 
 
@@ -1435,7 +1435,7 @@ We have implemented two new methods in the control's API, a trigger to open the 
 
 We have implemented an **enabled** property to the Side Panel item, which disables the controls and UI elements inside it.
 
- For more information, see the [Sample](https://ui5.sap.com/#/entity/sap.f.SidePanel/sample/sap.f.sample.SidePanel). 
+For more information, see the [Sample](https://ui5.sap.com/#/entity/sap.f.SidePanel/sample/sap.f.sample.SidePanel). 
 
 <sub>Changed•Control•Info Only•1.113</sub>
 
@@ -1444,7 +1444,7 @@ We have implemented an **enabled** property to the Side Panel item, which disabl
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1460,28 +1460,28 @@ We have implemented an **enabled** property to the Side Panel item, which disabl
 <tr>
 <td valign="top">
 
- 1.113 
+1.113 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.SinglePlanningCalendar`** 
+**`sap.m.SinglePlanningCalendar`** 
 
 
 
@@ -1490,9 +1490,9 @@ We have implemented an **enabled** property to the Side Panel item, which disabl
 
 **`sap.m.SinglePlanningCalendar`**
 
-We have implemented a new mode to select one or more dates in **SinglePlanningCalendar**. Тhe single day option is enabled by default, the multi-date selection option is possible by using a key combination \( [Ctrl\] + [Meta key\]  and select the dates\) or by activating the new **MultiDateSelectionMode** property.
+We have implemented a new mode to select one or more dates in **SinglePlanningCalendar**. Тhe single day option is enabled by default, the multi-date selection option is possible by using a key combination \([Ctrl\] + [Meta key\]  and select the dates\) or by activating the new **MultiDateSelectionMode** property.
 
- For more information, see the [Sample](https://ui5.sap.com/#/entity/sap.m.SinglePlanningCalendar/sample/sap.m.sample.SinglePlanningCalendarDateSelection). 
+For more information, see the [Sample](https://ui5.sap.com/#/entity/sap.m.SinglePlanningCalendar/sample/sap.m.sample.SinglePlanningCalendarDateSelection). 
 
 <sub>Changed•Control•Info Only•1.113</sub>
 
@@ -1501,7 +1501,7 @@ We have implemented a new mode to select one or more dates in **SinglePlanningCa
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1518,6 +1518,8 @@ We have implemented a new mode to select one or more dates in **SinglePlanningCa
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.115](what-s-new-in-sapui5-1-115-409fde8.md "With this release SAPUI5 is upgraded from version 1.114 to 1.115.")
 
 [What's New in SAPUI5 1.114](what-s-new-in-sapui5-1-114-890fce1.md "With this release SAPUI5 is upgraded from version 1.113 to 1.114.")
 

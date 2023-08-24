@@ -6,7 +6,7 @@ With this release SAPUI5 is upgraded from version 1.73 to 1.74.
 
 
 
-** **
+****
 
 
 <table>
@@ -64,28 +64,28 @@ Available as of
 <tr>
 <td valign="top">
 
- 1.74 
+1.74 
 
 
 
 </td>
 <td valign="top">
 
- New 
+New 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Test Recorder** 
+**Test Recorder** 
 
 
 
@@ -96,7 +96,7 @@ Available as of
 
 The Test Recorder tool is now part of the SAPUI5 framework and is available in all browsers. Use it in any SAPUI5 app to inspect the rendered user interface, view the control properties, and get hints about writing tests. The tool is aligned with the two official SAPUI5 testing tools – OPA5 and UIVeri5.
 
- ![](images/Test_Recorder_WN_1_74_639a704.png) 
+![](images/Test_Recorder_WN_1_74_639a704.png)
 
 For more information, see [Test Recorder](../04_Essentials/test-recorder-2535ef9.md).
 
@@ -123,28 +123,28 @@ Info Only
 <tr>
 <td valign="top">
 
- 1.74 
+1.74 
 
 
 
 </td>
 <td valign="top">
 
- New 
+New 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Rule Builder Control** 
+**Rule Builder Control** 
 
 
 
@@ -162,7 +162,7 @@ You can model a text rule to perform an append operation on data objects or attr
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -178,28 +178,28 @@ You can model a text rule to perform an append operation on data objects or attr
 <tr>
 <td valign="top">
 
- 1.74 
+1.74 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Card Explorer** 
+**Card Explorer** 
 
 
 
@@ -217,7 +217,7 @@ We have enhanced the functionality to download samples from the Card Explorer, a
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -233,28 +233,28 @@ We have enhanced the functionality to download samples from the Card Explorer, a
 <tr>
 <td valign="top">
 
- 1.74 
+1.74 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Navigation in Nested Components** 
+**Navigation in Nested Components** 
 
 
 
@@ -272,7 +272,7 @@ In recent releases, the capabilities to [Navigate with Nested Components](../04_
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -288,28 +288,28 @@ In recent releases, the capabilities to [Navigate with Nested Components](../04_
 <tr>
 <td valign="top">
 
- 1.74 
+1.74 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Negative Predefined CSS Margin Classes** 
+**Negative Predefined CSS Margin Classes** 
 
 
 
@@ -338,7 +338,7 @@ For more information, see [Using Predefined CSS Margin Classes](../04_Essentials
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -354,28 +354,28 @@ For more information, see [Using Predefined CSS Margin Classes](../04_Essentials
 <tr>
 <td valign="top">
 
- 1.74 
+1.74 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Responsive Padding Enablement** 
+**Responsive Padding Enablement** 
 
 
 
@@ -393,7 +393,7 @@ We've introduced responsive paddings to the `sap.m.IconTabBar`, `sap.m.ObjectHea
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -409,28 +409,28 @@ We've introduced responsive paddings to the `sap.m.IconTabBar`, `sap.m.ObjectHea
 <tr>
 <td valign="top">
 
- 1.74 
+1.74 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **SAPUI5 OData V4 Model** 
+**SAPUI5 OData V4 Model** 
 
 
 
@@ -461,7 +461,7 @@ For more information, see [OData V4 Model](../04_Essentials/odata-v4-model-5de13
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -477,28 +477,28 @@ For more information, see [OData V4 Model](../04_Essentials/odata-v4-model-5de13
 <tr>
 <td valign="top">
 
- 1.74 
+1.74 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.Avatar`** 
+**`sap.m.Avatar`** 
 
 
 
@@ -516,7 +516,7 @@ We've added *remove* and *reveal* actions in the `Avatar` design-time metadata. 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -532,28 +532,28 @@ We've added *remove* and *reveal* actions in the `Avatar` design-time metadata. 
 <tr>
 <td valign="top">
 
- 1.74 
+1.74 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.ColorPalette`** 
+**`sap.m.ColorPalette`** 
 
 
 
@@ -571,7 +571,7 @@ We have introduced a *Recent Colors* section, showing the last 5 recently used c
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -587,28 +587,28 @@ We have introduced a *Recent Colors* section, showing the last 5 recently used c
 <tr>
 <td valign="top">
 
- 1.74 
+1.74 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.DateRangeSelection`** 
+**`sap.m.DateRangeSelection`** 
 
 
 
@@ -626,7 +626,7 @@ We have introduced the ability to select month and year ranges. This improves th
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -642,28 +642,28 @@ We have introduced the ability to select month and year ranges. This improves th
 <tr>
 <td valign="top">
 
- 1.74 
+1.74 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.List`, `sap.m.Table`, `sap.m.Tree`** 
+**`sap.m.List`, `sap.m.Table`, `sap.m.Tree`** 
 
 
 
@@ -681,7 +681,7 @@ The busy indicator is now displayed in the center of the visible area of the UIs
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -697,28 +697,28 @@ The busy indicator is now displayed in the center of the visible area of the UIs
 <tr>
 <td valign="top">
 
- 1.74 
+1.74 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.NavContainer`** 
+**`sap.m.NavContainer`** 
 
 
 
@@ -736,7 +736,7 @@ In version 1.69, the default value for the `defaultTransitionName` property was 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -752,28 +752,28 @@ In version 1.69, the default value for the `defaultTransitionName` property was 
 <tr>
 <td valign="top">
 
- 1.74 
+1.74 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.NotificationListItem`** 
+**`sap.m.NotificationListItem`** 
 
 
 
@@ -791,7 +791,7 @@ The avatar background color can now be managed by the application developer usin
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -807,28 +807,28 @@ The avatar background color can now be managed by the application developer usin
 <tr>
 <td valign="top">
 
- 1.74 
+1.74 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.plugins.DataStateIndicator`** 
+**`sap.m.plugins.DataStateIndicator`** 
 
 
 
@@ -846,7 +846,7 @@ This plugin for the table controls \(`sap.m.List, sap.m.Table, sap.ui.table.Tabl
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -862,28 +862,28 @@ This plugin for the table controls \(`sap.m.List, sap.m.Table, sap.ui.table.Tabl
 <tr>
 <td valign="top">
 
- 1.74 
+1.74 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.Select`** 
+**`sap.m.Select`** 
 
 
 
@@ -901,7 +901,7 @@ With the new `required` property, you can now indicate whether user input is req
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -917,28 +917,28 @@ With the new `required` property, you can now indicate whether user input is req
 <tr>
 <td valign="top">
 
- 1.74 
+1.74 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.StandardListItem`** 
+**`sap.m.StandardListItem`** 
 
 
 
@@ -956,7 +956,7 @@ The new `infoStateInverted` property changes the rendering behavior of the infor
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -972,28 +972,28 @@ The new `infoStateInverted` property changes the rendering behavior of the infor
 <tr>
 <td valign="top">
 
- 1.74 
+1.74 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.Table`** 
+**`sap.m.Table`** 
 
 
 
@@ -1011,7 +1011,7 @@ A more comprehensive message text is now shown if no data is available because a
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1027,28 +1027,28 @@ A more comprehensive message text is now shown if no data is available because a
 <tr>
 <td valign="top">
 
- 1.74 
+1.74 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.ViewSettingsDialog`** 
+**`sap.m.ViewSettingsDialog`** 
 
 
 
@@ -1066,7 +1066,7 @@ We have introduced a new button to display only the selected items in the filter
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1082,28 +1082,28 @@ We have introduced a new button to display only the selected items in the filter
 <tr>
 <td valign="top">
 
- 1.74 
+1.74 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.Wizard`** 
+**`sap.m.Wizard`** 
 
 
 
@@ -1121,7 +1121,7 @@ We have enhanced the `sap.m.Wizard` control for better integration in the `sap.f
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1137,28 +1137,28 @@ We have enhanced the `sap.m.Wizard` control for better integration in the `sap.f
 <tr>
 <td valign="top">
 
- 1.74 
+1.74 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.tnt.InfoLabel`** 
+**`sap.tnt.InfoLabel`** 
 
 
 
@@ -1169,7 +1169,7 @@ We have enhanced the `sap.m.Wizard` control for better integration in the `sap.f
 
 We have introduced the option to add an icon to the `sap.tnt.InfoLabel` content. It is defined by the new `icon` property. For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.tnt.InfoLabel) and the [Sample](https://ui5.sap.com/#/entity/sap.tnt.InfoLabel/sample/sap.tnt.sample.InfoLabel).
 
- ![](images/WhatsNew_174_InfoLabel_Icon_cadac6c.png) 
+![](images/WhatsNew_174_InfoLabel_Icon_cadac6c.png)
 
 <sub>Changed•Control•Info Only•1.74</sub>
 
@@ -1178,7 +1178,7 @@ We have introduced the option to add an icon to the `sap.tnt.InfoLabel` content.
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1194,28 +1194,28 @@ We have introduced the option to add an icon to the `sap.tnt.InfoLabel` content.
 <tr>
 <td valign="top">
 
- 1.74 
+1.74 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.smartfield.SmartField`, `sap.ui.comp.smartfilterbar.SmartFilterBar`** 
+**`sap.ui.comp.smartfield.SmartField`, `sap.ui.comp.smartfilterbar.SmartFilterBar`** 
 
 
 
@@ -1233,7 +1233,7 @@ We've introduced support for fiscal dates. The service metadata property must be
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1249,28 +1249,28 @@ We've introduced support for fiscal dates. The service metadata property must be
 <tr>
 <td valign="top">
 
- 1.74 
+1.74 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.smartfilterbar.SmartFilterBar`, `sap.ui.comp.smarttable.SmartTable`** 
+**`sap.ui.comp.smartfilterbar.SmartFilterBar`, `sap.ui.comp.smarttable.SmartTable`** 
 
 
 
@@ -1288,7 +1288,7 @@ We've updated the available exclude operators to match the include operators for
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1304,28 +1304,28 @@ We've updated the available exclude operators to match the include operators for
 <tr>
 <td valign="top">
 
- 1.74 
+1.74 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.valuehelpdialog.ValueHelpDialog`** 
+**`sap.ui.comp.valuehelpdialog.ValueHelpDialog`** 
 
 
 
@@ -1343,7 +1343,7 @@ We've improved the behavior of the `ValueHelpDialog` basic search for `SmartFilt
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1359,28 +1359,28 @@ We've improved the behavior of the `ValueHelpDialog` basic search for `SmartFilt
 <tr>
 <td valign="top">
 
- 1.74 
+1.74 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.export.Spreadsheet`** 
+**`sap.ui.export.Spreadsheet`** 
 
 
 
@@ -1398,7 +1398,7 @@ This class has been further improved to facilitate the export functions. The cla
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1414,28 +1414,28 @@ This class has been further improved to facilitate the export functions. The cla
 <tr>
 <td valign="top">
 
- 1.74 
+1.74 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.integration.widgets.Card`** 
+**`sap.ui.integration.widgets.Card`** 
 
 
 
@@ -1467,7 +1467,7 @@ This class has been further improved to facilitate the export functions. The cla
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1483,28 +1483,28 @@ This class has been further improved to facilitate the export functions. The cla
 <tr>
 <td valign="top">
 
- 1.74 
+1.74 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.uxap.ObjectPageLayout`** 
+**`sap.uxap.ObjectPageLayout`** 
 
 
 
@@ -1522,7 +1522,7 @@ You can now move the corresponding section numbers that are displayed in the `An
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1538,28 +1538,28 @@ You can now move the corresponding section numbers that are displayed in the `An
 <tr>
 <td valign="top">
 
- 1.74 
+1.74 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- SAP Fiori Elements 
+SAP Fiori Elements 
 
 
 
 </td>
 <td valign="top">
 
- **SAP Fiori Elements** 
+**SAP Fiori Elements** 
 
 
 
@@ -1602,7 +1602,7 @@ You can now move the corresponding section numbers that are displayed in the `An
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1618,28 +1618,28 @@ You can now move the corresponding section numbers that are displayed in the `An
 <tr>
 <td valign="top">
 
- 1.74 
+1.74 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- User Documentation 
+User Documentation 
 
 
 
 </td>
 <td valign="top">
 
- **Performance Checklist** 
+**Performance Checklist** 
 
 
 
@@ -1657,7 +1657,7 @@ Ensuring that your SAPUI5 apps run fast is an important topic in application dev
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1674,6 +1674,8 @@ Ensuring that your SAPUI5 apps run fast is an important topic in application dev
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.115](what-s-new-in-sapui5-1-115-409fde8.md "With this release SAPUI5 is upgraded from version 1.114 to 1.115.")
 
 [What's New in SAPUI5 1.114](what-s-new-in-sapui5-1-114-890fce1.md "With this release SAPUI5 is upgraded from version 1.113 to 1.114.")
 

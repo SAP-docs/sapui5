@@ -160,13 +160,13 @@ The table containing the segmented buttons looks like this:
   
 **Segmented button 1 selected**
 
- ![](images/Segmented_Buttons_3d9da3f.png "Segmented button 1 selected") 
+![](images/Segmented_Buttons_3d9da3f.png "Segmented button 1 selected")
 
   
   
 **Segmented button 2 selected**
 
- ![](images/Segmented_Buttons_1_e1d19dc.png "Segmented button 2 selected") 
+![](images/Segmented_Buttons_1_e1d19dc.png "Segmented button 2 selected")
 
 > ### Note:  
 > When the table is initially loaded, two calls are made to determine the number of the records in the table. These are shown in the button text.
@@ -237,7 +237,7 @@ The following manifest settings are required for adding segmented buttons:
 > 	"name": "sap.fe.templates.ObjectPage",
 > 	"options": {
 > 		"settings": {
-> 			"entitySet": "SalesOrderManage",
+> 			"contextPath": "/SalesOrderManage",
 > 			"navigation": {
 > 	           ...
 > 			},

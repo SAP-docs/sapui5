@@ -85,7 +85,7 @@ The following table shows the [Available Themes](../04_Essentials/available-them
 <tr>
 <td valign="top">
 
- `sap_horizon_dark` 
+`sap_horizon_dark` 
 
 
 
@@ -208,7 +208,7 @@ n/a
 </td>
 <td valign="top">
 
- ![Supported](images/Green_Led_3cb17ee.gif) 
+![Supported](images/Green_Led_3cb17ee.gif)
 
 
 
@@ -217,7 +217,7 @@ n/a
 <tr>
 <td valign="top">
 
- `sap_horizon` 
+`sap_horizon` 
 
 
 
@@ -266,14 +266,14 @@ n/a
 </td>
 <td valign="top">
 
- ![Supported](images/Green_Led_3cb17ee.gif) 
+![Supported](images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Supported](images/Green_Led_3cb17ee.gif) 
+![Supported](images/Green_Led_3cb17ee.gif)
 
 
 
@@ -282,7 +282,7 @@ n/a
 <tr>
 <td valign="top">
 
- `sap_fiori_3_dark` 
+`sap_fiori_3_dark` 
 
 
 
@@ -324,21 +324,21 @@ n/a
 </td>
 <td valign="top">
 
- ![Supported](images/Green_Led_3cb17ee.gif) 
+![Supported](images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Supported](images/Green_Led_3cb17ee.gif) 
+![Supported](images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Supported](images/Green_Led_3cb17ee.gif) 
+![Supported](images/Green_Led_3cb17ee.gif)
 
 
 
@@ -347,7 +347,7 @@ n/a
 <tr>
 <td valign="top">
 
- `sap_fiori_3` 
+`sap_fiori_3` 
 
 
 
@@ -375,35 +375,35 @@ n/a
 </td>
 <td valign="top">
 
- ![Supported](images/Green_Led_3cb17ee.gif) 
+![Supported](images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Supported](images/Green_Led_3cb17ee.gif) 
+![Supported](images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Supported](images/Green_Led_3cb17ee.gif) 
+![Supported](images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Supported](images/Green_Led_3cb17ee.gif) 
+![Supported](images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Supported](images/Green_Led_3cb17ee.gif) 
+![Supported](images/Green_Led_3cb17ee.gif)
 
 
 
@@ -449,28 +449,28 @@ n/a
 </td>
 <td valign="top">
 
- ![Supported](images/Green_Led_3cb17ee.gif) 
+![Supported](images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Supported](images/Green_Led_3cb17ee.gif) 
+![Supported](images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Supported](images/Green_Led_3cb17ee.gif) 
+![Supported](images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Supported](images/Green_Led_3cb17ee.gif) 
+![Supported](images/Green_Led_3cb17ee.gif)
 
 
 
@@ -495,49 +495,49 @@ n/a
 </td>
 <td valign="top">
 
- ![Supported](images/Green_Led_3cb17ee.gif) 
+![Supported](images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Supported](images/Green_Led_3cb17ee.gif) 
+![Supported](images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Supported](images/Green_Led_3cb17ee.gif) 
+![Supported](images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Supported](images/Green_Led_3cb17ee.gif) 
+![Supported](images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Supported](images/Green_Led_3cb17ee.gif) 
+![Supported](images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Supported](images/Green_Led_3cb17ee.gif) 
+![Supported](images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Supported](images/Green_Led_3cb17ee.gif) 
+![Supported](images/Green_Led_3cb17ee.gif)
 
 
 
@@ -569,107 +569,42 @@ n/a
 </td>
 <td valign="top">
 
- ![Supported](images/Green_Led_3cb17ee.gif) 
+![Supported](images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Supported](images/Green_Led_3cb17ee.gif) 
+![Supported](images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Supported](images/Green_Led_3cb17ee.gif) 
+![Supported](images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Supported](images/Green_Led_3cb17ee.gif) 
+![Supported](images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Supported](images/Green_Led_3cb17ee.gif) 
+![Supported](images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Supported](images/Green_Led_3cb17ee.gif) 
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
- `sap_bluecrystal` 
-
-
-
-</td>
-<td valign="top">
-
- ![Supported](images/Green_Led_3cb17ee.gif) 
-
-
-
-</td>
-<td valign="top">
-
- ![Not Supported](images/warning_gray_obj_d355123.png) 
-
-
-
-</td>
-<td valign="top">
-
- ![Not Supported](images/warning_gray_obj_d355123.png) 
-
-
-
-</td>
-<td valign="top">
-
- ![Not Supported](images/warning_gray_obj_d355123.png) 
-
-
-
-</td>
-<td valign="top">
-
- ![Not Supported](images/warning_gray_obj_d355123.png) 
-
-
-
-</td>
-<td valign="top">
-
- ![Not Supported](images/warning_gray_obj_d355123.png) 
-
-
-
-</td>
-<td valign="top">
-
- ![Not Supported](images/warning_gray_obj_d355123.png) 
-
-
-
-</td>
-<td valign="top">
-
- ![Not Supported](images/warning_gray_obj_d355123.png) 
+![Supported](images/Green_Led_3cb17ee.gif)
 
 
 
@@ -678,28 +613,14 @@ n/a
 <tr>
 <td valign="top">
 
- `sap_hcb` 
+`sap_bluecrystal` 
 
 
 
 </td>
 <td valign="top">
 
- ![Supported](images/Green_Led_3cb17ee.gif) 
-
-
-
-</td>
-<td valign="top">
-
- ![Supported](images/Green_Led_3cb17ee.gif) 
-
-
-
-</td>
-<td valign="top">
-
- ![Not Supported](images/warning_gray_obj_d355123.png) 
+![Supported](images/Green_Led_3cb17ee.gif)
 
 
 
@@ -713,28 +634,107 @@ n/a
 </td>
 <td valign="top">
 
- ![Not Supported](images/warning_gray_obj_d355123.png) 
+![Not Supported](images/warning_gray_obj_d355123.png)
 
 
 
 </td>
 <td valign="top">
 
- ![Not Supported](images/warning_gray_obj_d355123.png) 
+![Not Supported](images/warning_gray_obj_d355123.png)
 
 
 
 </td>
 <td valign="top">
 
- ![Not Supported](images/warning_gray_obj_d355123.png) 
+![Not Supported](images/warning_gray_obj_d355123.png)
 
 
 
 </td>
 <td valign="top">
 
- ![Not Supported](images/warning_gray_obj_d355123.png) 
+![Not Supported](images/warning_gray_obj_d355123.png)
+
+
+
+</td>
+<td valign="top">
+
+![Not Supported](images/warning_gray_obj_d355123.png)
+
+
+
+</td>
+<td valign="top">
+
+![Not Supported](images/warning_gray_obj_d355123.png)
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`sap_hcb` 
+
+
+
+</td>
+<td valign="top">
+
+![Supported](images/Green_Led_3cb17ee.gif)
+
+
+
+</td>
+<td valign="top">
+
+![Supported](images/Green_Led_3cb17ee.gif)
+
+
+
+</td>
+<td valign="top">
+
+![Not Supported](images/warning_gray_obj_d355123.png)
+
+
+
+</td>
+<td valign="top">
+
+![Not Supported](images/warning_gray_obj_d355123.png)
+
+
+
+</td>
+<td valign="top">
+
+![Not Supported](images/warning_gray_obj_d355123.png)
+
+
+
+</td>
+<td valign="top">
+
+![Not Supported](images/warning_gray_obj_d355123.png)
+
+
+
+</td>
+<td valign="top">
+
+![Not Supported](images/warning_gray_obj_d355123.png)
+
+
+
+</td>
+<td valign="top">
+
+![Not Supported](images/warning_gray_obj_d355123.png)
 
 
 
@@ -884,7 +884,7 @@ n/a
 </td>
 <td valign="top">
 
- ![Not Supported](images/warning_gray_obj_d355123.png) 
+![Not Supported](images/warning_gray_obj_d355123.png)
 
 
 
@@ -951,7 +951,7 @@ n/a
 </td>
 <td valign="top">
 
- ![Not Supported](images/warning_gray_obj_d355123.png) 
+![Not Supported](images/warning_gray_obj_d355123.png)
 
 
 
@@ -960,7 +960,7 @@ n/a
 <tr>
 <td valign="top">
 
- `sap_horizon` 
+`sap_horizon` 
 
 
 
@@ -1009,14 +1009,14 @@ n/a
 </td>
 <td valign="top">
 
- ![Not Supported](images/warning_gray_obj_d355123.png) 
+![Not Supported](images/warning_gray_obj_d355123.png)
 
 
 
 </td>
 <td valign="top">
 
- ![Not Supported](images/warning_gray_obj_d355123.png) 
+![Not Supported](images/warning_gray_obj_d355123.png)
 
 
 
@@ -1025,7 +1025,7 @@ n/a
 <tr>
 <td valign="top">
 
- `sap_fiori_3` 
+`sap_fiori_3` 
 
 
 
@@ -1060,28 +1060,28 @@ n/a
 </td>
 <td valign="top">
 
- ![Not Supported](images/warning_gray_obj_d355123.png) 
+![Not Supported](images/warning_gray_obj_d355123.png)
 
 
 
 </td>
 <td valign="top">
 
- ![Not Supported](images/warning_gray_obj_d355123.png) 
+![Not Supported](images/warning_gray_obj_d355123.png)
 
 
 
 </td>
 <td valign="top">
 
- ![Not Supported](images/warning_gray_obj_d355123.png) 
+![Not Supported](images/warning_gray_obj_d355123.png)
 
 
 
 </td>
 <td valign="top">
 
- ![Not Supported](images/warning_gray_obj_d355123.png) 
+![Not Supported](images/warning_gray_obj_d355123.png)
 
 
 
@@ -1106,49 +1106,49 @@ n/a
 </td>
 <td valign="top">
 
- ![Not Supported](images/warning_gray_obj_d355123.png) 
+![Not Supported](images/warning_gray_obj_d355123.png)
 
 
 
 </td>
 <td valign="top">
 
- ![Not Supported](images/warning_gray_obj_d355123.png) 
+![Not Supported](images/warning_gray_obj_d355123.png)
 
 
 
 </td>
 <td valign="top">
 
- ![Not Supported](images/warning_gray_obj_d355123.png) 
+![Not Supported](images/warning_gray_obj_d355123.png)
 
 
 
 </td>
 <td valign="top">
 
- ![Not Supported](images/warning_gray_obj_d355123.png) 
+![Not Supported](images/warning_gray_obj_d355123.png)
 
 
 
 </td>
 <td valign="top">
 
- ![Not Supported](images/warning_gray_obj_d355123.png) 
+![Not Supported](images/warning_gray_obj_d355123.png)
 
 
 
 </td>
 <td valign="top">
 
- ![Not Supported](images/warning_gray_obj_d355123.png) 
+![Not Supported](images/warning_gray_obj_d355123.png)
 
 
 
 </td>
 <td valign="top">
 
- ![Not Supported](images/warning_gray_obj_d355123.png) 
+![Not Supported](images/warning_gray_obj_d355123.png)
 
 
 
@@ -1180,107 +1180,42 @@ n/a
 </td>
 <td valign="top">
 
- ![Not Supported](images/warning_gray_obj_d355123.png) 
+![Not Supported](images/warning_gray_obj_d355123.png)
 
 
 
 </td>
 <td valign="top">
 
- ![Not Supported](images/warning_gray_obj_d355123.png) 
+![Not Supported](images/warning_gray_obj_d355123.png)
 
 
 
 </td>
 <td valign="top">
 
- ![Not Supported](images/warning_gray_obj_d355123.png) 
+![Not Supported](images/warning_gray_obj_d355123.png)
 
 
 
 </td>
 <td valign="top">
 
- ![Not Supported](images/warning_gray_obj_d355123.png) 
+![Not Supported](images/warning_gray_obj_d355123.png)
 
 
 
 </td>
 <td valign="top">
 
- ![Not Supported](images/warning_gray_obj_d355123.png) 
+![Not Supported](images/warning_gray_obj_d355123.png)
 
 
 
 </td>
 <td valign="top">
 
- ![Not Supported](images/warning_gray_obj_d355123.png) 
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
- `sap_bluecrystal` 
-
-
-
-</td>
-<td valign="top">
-
- ![Deprecated](images/Yellow_Led_3ea53dc.gif) 
-
-
-
-</td>
-<td valign="top">
-
- ![Deprecated](images/Yellow_Led_3ea53dc.gif) 
-
-
-
-</td>
-<td valign="top">
-
- ![Deprecated](images/Yellow_Led_3ea53dc.gif) 
-
-
-
-</td>
-<td valign="top">
-
- ![Deprecated](images/Yellow_Led_3ea53dc.gif) 
-
-
-
-</td>
-<td valign="top">
-
- ![Deprecated](images/Yellow_Led_3ea53dc.gif) 
-
-
-
-</td>
-<td valign="top">
-
- ![Deprecated](images/Yellow_Led_3ea53dc.gif) 
-
-
-
-</td>
-<td valign="top">
-
- ![Deprecated](images/Yellow_Led_3ea53dc.gif) 
-
-
-
-</td>
-<td valign="top">
-
- ![Deprecated](images/Yellow_Led_3ea53dc.gif) 
+![Not Supported](images/warning_gray_obj_d355123.png)
 
 
 
@@ -1289,128 +1224,63 @@ n/a
 <tr>
 <td valign="top">
 
- `sap_hcb` 
+`sap_bluecrystal` 
 
 
 
 </td>
 <td valign="top">
 
- ![Supported](images/Green_Led_3cb17ee.gif) 
+![Deprecated](images/Yellow_Led_3ea53dc.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Deprecated](images/Yellow_Led_3ea53dc.gif) 
+![Deprecated](images/Yellow_Led_3ea53dc.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Deprecated](images/Yellow_Led_3ea53dc.gif) 
+![Deprecated](images/Yellow_Led_3ea53dc.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Deprecated](images/Yellow_Led_3ea53dc.gif) 
+![Deprecated](images/Yellow_Led_3ea53dc.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Deprecated](images/Yellow_Led_3ea53dc.gif) 
+![Deprecated](images/Yellow_Led_3ea53dc.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Deprecated](images/Yellow_Led_3ea53dc.gif) 
+![Deprecated](images/Yellow_Led_3ea53dc.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Deprecated](images/Yellow_Led_3ea53dc.gif) 
+![Deprecated](images/Yellow_Led_3ea53dc.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Deprecated](images/Yellow_Led_3ea53dc.gif) 
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
- `sap_goldreflection` 
-
-
-
-</td>
-<td valign="top">
-
- ![Deprecated](images/Yellow_Led_3ea53dc.gif) 
-
-
-
-</td>
-<td valign="top">
-
- ![Deprecated](images/Yellow_Led_3ea53dc.gif) 
-
-
-
-</td>
-<td valign="top">
-
- ![Deprecated](images/Yellow_Led_3ea53dc.gif) 
-
-
-
-</td>
-<td valign="top">
-
- ![Removed](images/Red_Led_5befb5a.gif) 
-
-
-
-</td>
-<td valign="top">
-
- ![Removed](images/Red_Led_5befb5a.gif) 
-
-
-
-</td>
-<td valign="top">
-
- ![Removed](images/Red_Led_5befb5a.gif) 
-
-
-
-</td>
-<td valign="top">
-
- ![Removed](images/Red_Led_5befb5a.gif) 
-
-
-
-</td>
-<td valign="top">
-
- ![Removed](images/Red_Led_5befb5a.gif) 
+![Deprecated](images/Yellow_Led_3ea53dc.gif)
 
 
 
@@ -1419,63 +1289,63 @@ n/a
 <tr>
 <td valign="top">
 
- `sap_platinum` 
+`sap_hcb` 
 
 
 
 </td>
 <td valign="top">
 
- ![Deprecated](images/Yellow_Led_3ea53dc.gif) 
+![Supported](images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Deprecated](images/Yellow_Led_3ea53dc.gif) 
+![Deprecated](images/Yellow_Led_3ea53dc.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Deprecated](images/Yellow_Led_3ea53dc.gif) 
+![Deprecated](images/Yellow_Led_3ea53dc.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Removed](images/Red_Led_5befb5a.gif) 
+![Deprecated](images/Yellow_Led_3ea53dc.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Removed](images/Red_Led_5befb5a.gif) 
+![Deprecated](images/Yellow_Led_3ea53dc.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Removed](images/Red_Led_5befb5a.gif) 
+![Deprecated](images/Yellow_Led_3ea53dc.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Removed](images/Red_Led_5befb5a.gif) 
+![Deprecated](images/Yellow_Led_3ea53dc.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Removed](images/Red_Led_5befb5a.gif) 
+![Deprecated](images/Yellow_Led_3ea53dc.gif)
 
 
 
@@ -1484,63 +1354,193 @@ n/a
 <tr>
 <td valign="top">
 
- `sap_ux` 
+`sap_goldreflection` 
 
 
 
 </td>
 <td valign="top">
 
- ![Deprecated](images/Yellow_Led_3ea53dc.gif) 
+![Deprecated](images/Yellow_Led_3ea53dc.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Deprecated](images/Yellow_Led_3ea53dc.gif) 
+![Deprecated](images/Yellow_Led_3ea53dc.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Deprecated](images/Yellow_Led_3ea53dc.gif) 
+![Deprecated](images/Yellow_Led_3ea53dc.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Removed](images/Red_Led_5befb5a.gif) 
+![Removed](images/Red_Led_5befb5a.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Removed](images/Red_Led_5befb5a.gif) 
+![Removed](images/Red_Led_5befb5a.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Removed](images/Red_Led_5befb5a.gif) 
+![Removed](images/Red_Led_5befb5a.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Removed](images/Red_Led_5befb5a.gif) 
+![Removed](images/Red_Led_5befb5a.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Removed](images/Red_Led_5befb5a.gif) 
+![Removed](images/Red_Led_5befb5a.gif)
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`sap_platinum` 
+
+
+
+</td>
+<td valign="top">
+
+![Deprecated](images/Yellow_Led_3ea53dc.gif)
+
+
+
+</td>
+<td valign="top">
+
+![Deprecated](images/Yellow_Led_3ea53dc.gif)
+
+
+
+</td>
+<td valign="top">
+
+![Deprecated](images/Yellow_Led_3ea53dc.gif)
+
+
+
+</td>
+<td valign="top">
+
+![Removed](images/Red_Led_5befb5a.gif)
+
+
+
+</td>
+<td valign="top">
+
+![Removed](images/Red_Led_5befb5a.gif)
+
+
+
+</td>
+<td valign="top">
+
+![Removed](images/Red_Led_5befb5a.gif)
+
+
+
+</td>
+<td valign="top">
+
+![Removed](images/Red_Led_5befb5a.gif)
+
+
+
+</td>
+<td valign="top">
+
+![Removed](images/Red_Led_5befb5a.gif)
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`sap_ux` 
+
+
+
+</td>
+<td valign="top">
+
+![Deprecated](images/Yellow_Led_3ea53dc.gif)
+
+
+
+</td>
+<td valign="top">
+
+![Deprecated](images/Yellow_Led_3ea53dc.gif)
+
+
+
+</td>
+<td valign="top">
+
+![Deprecated](images/Yellow_Led_3ea53dc.gif)
+
+
+
+</td>
+<td valign="top">
+
+![Removed](images/Red_Led_5befb5a.gif)
+
+
+
+</td>
+<td valign="top">
+
+![Removed](images/Red_Led_5befb5a.gif)
+
+
+
+</td>
+<td valign="top">
+
+![Removed](images/Red_Led_5befb5a.gif)
+
+
+
+</td>
+<td valign="top">
+
+![Removed](images/Red_Led_5befb5a.gif)
+
+
+
+</td>
+<td valign="top">
+
+![Removed](images/Red_Led_5befb5a.gif)
 
 
 

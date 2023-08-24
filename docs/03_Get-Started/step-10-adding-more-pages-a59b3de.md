@@ -10,11 +10,11 @@ In this step, we create an additional page that is displayed in a separate fulls
 
 ## Preview
 
-   
+  
   
 **Additional page displayed in a separate fullscreen column**
 
- ![](images/More_Pages_Fiori_2_0_Tutorial_41f6ae1.gif "Additional page displayed in a separate fullscreen column") 
+![](images/More_Pages_Fiori_2_0_Tutorial_41f6ae1.gif "Additional page displayed in a separate fullscreen column")
 
 
 

@@ -66,7 +66,7 @@ Supported; only single navigations are supported, e.g. "/a\(\)/b/". Further navi
 <tr>
 <td valign="top" colspan="2">
 
- **Query String options:** 
+**Query String options:** 
 
 
 
@@ -339,7 +339,7 @@ Unsupported
 <tr>
 <td valign="top">
 
- `Edm.DateTime` keys
+`Edm.DateTime` keys
 
 
 
@@ -355,7 +355,7 @@ Unsupported
 <tr>
 <td valign="top">
 
- `Edm.DateTime` values
+`Edm.DateTime` values
 
 
 
@@ -371,7 +371,7 @@ All dates have to be either before 2017 or after; you cannot use mixed values
 <tr>
 <td valign="top">
 
- `metadata.xml` with properties from `datetimeoffset` 
+`metadata.xml` with properties from `datetimeoffset` 
 
 
 
@@ -419,7 +419,7 @@ Unsupported
 <tr>
 <td valign="top">
 
- `$links` and `#AddressingLinksBetweenEntries` 
+`$links` and `#AddressingLinksBetweenEntries` 
 
 
 

@@ -38,14 +38,14 @@ Explanation
 <tr>
 <td valign="top">
 
- *Cozy* 
+*Cozy* 
 
 
 
 </td>
 <td valign="top">
 
- `sapUiSizeCozy` 
+`sapUiSizeCozy` 
 
 
 
@@ -63,14 +63,14 @@ This is the default density for most controls, particularly those in the `sap.m`
 <tr>
 <td valign="top">
 
- *Compact* 
+*Compact* 
 
 
 
 </td>
 <td valign="top">
 
- `sapUiSizeCompact` 
+`sapUiSizeCompact` 
 
 
 
@@ -88,14 +88,14 @@ For some controls, this is the default density.
 <tr>
 <td valign="top">
 
- *Condensed* 
+*Condensed* 
 
 
 
 </td>
 <td valign="top">
 
- `sapUiSizeCondensed` 
+`sapUiSizeCondensed` 
 
 
 
@@ -114,17 +114,17 @@ This density can be used for all tables of the `sap.ui.table` library.
 
 The following two screenshots show the difference between the *Cozy* and *Compact* densities, using a simple `sap.ui.table.Table` example:
 
-   
+  
   
 **Cozy Density: Mainly for Touch Devices \(such as Smartphones\)**
 
- ![](images/Cosy_Mode_c9c8ffa.png "Cozy Density: Mainly for Touch Devices (such as Smartphones)") 
+![](images/Cosy_Mode_c9c8ffa.png "Cozy Density: Mainly for Touch Devices (such as Smartphones)")
 
-   
+  
   
 **Compact Density: Mainly for Mouse-Operated Devices \(such as Desktops\)**
 
- ![](images/Compact_Mode_644ff9d.png "Compact Density: Mainly for Mouse-Operated Devices (such as Desktops)") 
+![](images/Compact_Mode_644ff9d.png "Compact Density: Mainly for Mouse-Operated Devices (such as Desktops)")
 
 
 
@@ -132,11 +132,11 @@ The following two screenshots show the difference between the *Cozy* and *Compac
 
 If you need to know which content densities are supported for a particular control, the best place to look is the [Samples](https://ui5.sap.com/explored.html) section in the Demo Kit. After choosing a control from the list, look at the details in the Object Header area to see which density is supported. In the example shown below, the control supports both the *Compact* and *Cozy* content densities:
 
- ![](images/Content_Density_Category_bc564fc.png) 
+![](images/Content_Density_Category_bc564fc.png)
 
 Alternatively, you can also use the filter function in the *Samples* in the Demo Kit to filter the controls according to their content densities. Simply choose the filter selection icon in the upper left corner of the screen and then select *Content Density*, as shown below:
 
- ![](images/Content_Density_Selection_18e87a8.png) 
+![](images/Content_Density_Selection_18e87a8.png)
 
 
 
@@ -161,7 +161,7 @@ You can use densities in the following way:
 
 -   *Condensed*
 
-     *Condensed* is a special case and can only be used in combination with the *Compact* density.
+    *Condensed* is a special case and can only be used in combination with the *Compact* density.
 
     Also, keep in mind that the *Condensed* density has an effect on controls in the `sap.ui.table` library and their content only. If the density is set for controls outside of these tables, it will not have any effect on them.
 

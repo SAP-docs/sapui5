@@ -134,7 +134,7 @@ Simplification: Metadata is only accessed via `ODataMetaModel`. Metadata is only
 <tr>
 <td valign="top">
 
- [sap.ui.model.odata.AnnotationHelper](https://ui5.sap.com/#/api/sap.ui.model.odata.AnnotationHelper) is not supported for OData V4.
+[sap.ui.model.odata.AnnotationHelper](https://ui5.sap.com/#/api/sap.ui.model.odata.AnnotationHelper) is not supported for OData V4.
 
 
 

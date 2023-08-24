@@ -2,7 +2,7 @@
 
 # Error, Warning, and Info Messages
 
- SAPUI5 provides a central place for storing and managing info, warning, and error messages.
+SAPUI5 provides a central place for storing and managing info, warning, and error messages.
 
 Messages can be used to notify the user about specific states of the application and can help the user to correct their incorrect inputs. The central `MessageManager` for storing messages is available globally by calling `sap.ui.getCore().getMessageManager()` and the central `MessageModel` for managing messages is available by calling `sap.ui.getCore().getMessageManager().getMessageModel()`.
 

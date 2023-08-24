@@ -15,12 +15,12 @@ In the real world, data often resides on remote servers and is accessed via an O
 
 ## Preview
 
-   
+  
   
 **Products from the OData invoices test service are now shown within our app**
 
- ![](images/SAPUI5_Walkthrough_Step_26_99a6491.png "Products from the OData invoices test service are now shown within our
-					app") 
+![](images/SAPUI5_Walkthrough_Step_26_99a6491.png "Products from the OData invoices test service are now shown within our
+					app")
 
 
 
@@ -84,11 +84,11 @@ Our component now automatically creates an instance of `sap.ui.model.odata.v2.OD
 
 You can now try to run the app and see what happens - we will see an error related to our new configuration in the console:
 
-   
+  
   
 **Violations of the same-origin policy in Google Chrome**
 
- ![](images/Tutorial_Walkthrough_Step_26_CORS_2c36d72.png "Violations of the same-origin policy in Google Chrome") 
+![](images/Tutorial_Walkthrough_Step_26_CORS_2c36d72.png "Violations of the same-origin policy in Google Chrome")
 
 Due to the so called same-origin policy, browsers deny AJAX requests to service endpoints in case the service endpoint has a different domain/subdomain, protocol, or port than the app. The browser refuses to connect to a remote URL directly for security reasons. Depending on your development environment you have different options to overcome this restriction. For more information, see [Request Fails Due to Same-Origin Policy \(Cross-Origin Resource Sharing - CORS\)](../04_Essentials/request-fails-due-to-same-origin-policy-cross-origin-resource-sharing-cors-5bb388f.md).
 

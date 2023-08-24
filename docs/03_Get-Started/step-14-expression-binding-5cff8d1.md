@@ -8,11 +8,11 @@ Expression binding allows you to display a value on the screen that has been cal
 
 ## Preview
 
-   
+  
   
 **Values formatted**
 
- ![](images/Tutorial_Data_Binding_Step_14_b9fb758.png "Values formatted") 
+![](images/Tutorial_Data_Binding_Step_14_b9fb758.png "Values formatted")
 
 
 

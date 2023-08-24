@@ -6,7 +6,7 @@ In this tutorial, we will show you some tools that will help you if you run into
 
 We will introduce you to the browser developer tools and show you the various tools that SAPUI5 offers.
 
- ![](images/Troubleshooting_Tutorial_58e6ffb.png) 
+![](images/Troubleshooting_Tutorial_58e6ffb.png)
 
 For example, the SAPUI5 tools can help you with the following tasks:
 

@@ -4,7 +4,7 @@
 
 With this release SAPUI5 is upgraded from version 1.103 to 1.104.
 
-** **
+****
 
 
 <table>
@@ -62,28 +62,28 @@ Available as of
 <tr>
 <td valign="top">
 
- 1.104 
+1.104 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Spreadsheet Export** 
+**Spreadsheet Export** 
 
 
 
@@ -108,7 +108,7 @@ For more information, see [Spreadsheet Export](../04_Essentials/spreadsheet-expo
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -124,14 +124,14 @@ For more information, see [Spreadsheet Export](../04_Essentials/spreadsheet-expo
 <tr>
 <td valign="top">
 
- 1.104 
+1.104 
 
 
 
 </td>
 <td valign="top">
 
- Deprecated 
+Deprecated 
 
 
 
@@ -145,7 +145,7 @@ Feature
 </td>
 <td valign="top">
 
- **Deprecations** 
+**Deprecations** 
 
 
 
@@ -163,7 +163,7 @@ There are currently no major deprecations. For a complete list of all deprecatio
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -179,28 +179,28 @@ There are currently no major deprecations. For a complete list of all deprecatio
 <tr>
 <td valign="top">
 
- 1.104 
+1.104 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- SAP Fiori Elements 
+SAP Fiori Elements 
 
 
 
 </td>
 <td valign="top">
 
- **SAP Fiori elements for OData V4** 
+**SAP Fiori elements for OData V4** 
 
 
 
@@ -223,7 +223,7 @@ The following changes and new features are available for SAP Fiori elements for 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -239,28 +239,28 @@ The following changes and new features are available for SAP Fiori elements for 
 <tr>
 <td valign="top">
 
- 1.104 
+1.104 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- SAP Fiori Elements 
+SAP Fiori Elements 
 
 
 
 </td>
 <td valign="top">
 
- ** SAP Fiori elements for OData V2:** 
+**SAP Fiori elements for OData V2:** 
 
 
 
@@ -289,7 +289,7 @@ The following changes and new features are available for SAP Fiori elements for 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -305,28 +305,28 @@ The following changes and new features are available for SAP Fiori elements for 
 <tr>
 <td valign="top">
 
- 1.104 
+1.104 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.Link`** 
+**`sap.m.Link`** 
 
 
 
@@ -344,7 +344,7 @@ We have provided a new API in the control, and now app developers can change the
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -360,28 +360,28 @@ We have provided a new API in the control, and now app developers can change the
 <tr>
 <td valign="top">
 
- 1.104 
+1.104 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.integration.widgets.Card`** 
+**`sap.ui.integration.widgets.Card`** 
 
 
 
@@ -406,7 +406,7 @@ We have provided a new API in the control, and now app developers can change the
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -423,6 +423,8 @@ We have provided a new API in the control, and now app developers can change the
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.115](what-s-new-in-sapui5-1-115-409fde8.md "With this release SAPUI5 is upgraded from version 1.114 to 1.115.")
 
 [What's New in SAPUI5 1.114](what-s-new-in-sapui5-1-114-890fce1.md "With this release SAPUI5 is upgraded from version 1.113 to 1.114.")
 

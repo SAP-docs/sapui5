@@ -51,7 +51,7 @@ Each `sap.ui.mdc` control consists of a central control part and a delegate that
 
 Controls and delegates can be extended from the base classes by the `sap.ui.mdc` adopter leveraging the predefined default behavior. Only in combination with a delegate does a control offer all the advantages outlined initially.
 
- ![Each control needs to be used in combination with a delegate. Controls and their related delegates form a unit that can then be used as described and together with other controls.](images/MDC_Library_1_175859c.png) 
+![Each control needs to be used in combination with a delegate. Controls and their related delegates form a unit that can then be used as described and together with other controls.](images/MDC_Library_1_175859c.png)
 
 
 
@@ -59,17 +59,17 @@ Controls and delegates can be extended from the base classes by the `sap.ui.mdc`
 
 As `sap.ui.mdc` controls are supposed to work metadata-driven, service-specific metadata is translated into `propertyInfo` objects. They can include basic information, such as a label for a `Field` control, but also more intricate information, such as the information if a table column supports sorting. The `propertyInfo` objects are provided by the application via the delegate but can also be provided on XML view level to be cached and hence speed up the initial rendering.
 
- ![](images/MDC_Library_2_a36e110.png) 
+![](images/MDC_Library_2_a36e110.png)
 
 
 
-###  SAPUI5 Flexibility Integration
+### SAPUI5 Flexibility Integration
 
 For the integration of SAPUI5 flexibility and its features, the delegates offer specific and easy-to-adopt APIs that enable personalization changes, such as adding items to aggregations or removing them, for example, from table columns, as well as applying filtering or sorting.
 
 The integration of SAPUI5 flexibility is taken over by the `sap.m.p13n.Engine`. It can also be used stand-alone to enable personalization including persistency of any SAPUI5 control.
 
- ![The controls and their delegates work together with the sap.m.p13n.Engine and SAPUI5 flexibility and the sap.ui.fl library to enable personalization.](images/MDC_Library_3_82a3a32.png) 
+![The controls and their delegates work together with the sap.m.p13n.Engine and SAPUI5 flexibility and the sap.ui.fl library to enable personalization.](images/MDC_Library_3_82a3a32.png)
 
 
 
@@ -77,7 +77,7 @@ The integration of SAPUI5 flexibility is taken over by the `sap.m.p13n.Engine`. 
 
 The application startup time benefits from the metadata APIs and the SAPUI5 flexibility integration. The XML view cache can store the results of the delegate’s metadata processing and the subsequent modification of the XML view by SAPUI5 flexibility change handlers. This behavior should result in a significantly improved performance and fewer requests to the back end, which makes applications cost-efficient.
 
- ![Based on the cache check in the XML view, the delegate fetches the metadata. After that, the XML view is modified by SAPUI5 flexibility, which results in the creation of a control of the XML view, which uses the cached scenario for this.](images/MDC_Library_4_7a21af4.png) 
+![Based on the cache check in the XML view, the delegate fetches the metadata. After that, the XML view is modified by SAPUI5 flexibility, which results in the creation of a control of the XML view, which uses the cached scenario for this.](images/MDC_Library_4_7a21af4.png)
 
 **Related Information**  
 

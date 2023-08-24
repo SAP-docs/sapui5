@@ -10,7 +10,7 @@ In this step, we will create the `ComparisonMicroChart` on the **Production Proc
 
 ## Preview
 
- ![](images/Step7_1_ce9e131.png) 
+![](images/Step7_1_ce9e131.png)
 
 
 

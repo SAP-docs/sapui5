@@ -8,11 +8,11 @@ So far we have created many useful routes in our app. In the very early steps we
 
 ## Preview
 
-   
+  
   
 **Console output for invalid hashes when listening to bypassed events**
 
- ![](images/Tutorial_Navigation_and_Routing_Step_16_6f2e76a.png "Console output for invalid hashes when listening to bypassed events") 
+![](images/Tutorial_Navigation_and_Routing_Step_16_6f2e76a.png "Console output for invalid hashes when listening to bypassed events")
 
 
 

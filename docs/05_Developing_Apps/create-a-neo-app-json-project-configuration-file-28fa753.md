@@ -20,7 +20,7 @@ SAP Web IDE reads these settings automatically when running the app. You can see
 > 
 > You can check which version of SAPUI5 is loaded by opening the SAPUI5 debugging tools with this [shortcut](../02_Read-Me-First/keyboard-shortcuts-for-sapui5-tools-154844c.md):
 > 
->   [Ctrl\] + [Shift\] + [Alt\] / [Option\] + [P\] 
+> [Ctrl\] + [Shift\] + [Alt\] /[Option\] + [P\] 
 > 
 > If the version is too old for certain features of the tutorial, you have to add the `version` attribute to the target configuration entry and set the value to `snapshot`.
 

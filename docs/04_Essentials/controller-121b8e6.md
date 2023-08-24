@@ -32,7 +32,7 @@ SAPUI5 provides predefined lifecycle hooks for implementation. You can add event
 
 SAPUI5 provides the following lifecycle hooks:
 
--    `onInit()`: Called when a view is instantiated and its controls \(if available\) have already been created; used to modify the view before it is displayed to bind event handlers and do other one-time initialization
+-   `onInit()`: Called when a view is instantiated and its controls \(if available\) have already been created; used to modify the view before it is displayed to bind event handlers and do other one-time initialization
 
 -   `onExit()`: Called when the view is destroyed; used to free resources and finalize activities
 

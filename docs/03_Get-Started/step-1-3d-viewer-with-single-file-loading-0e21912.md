@@ -10,11 +10,11 @@ In this step, you will be creating a 3D Viewer application that allows a user to
 
 By the end of this step, you will have created a Viewer application that allows you to load a 2D or 3D resource. The Viewer application will look as follows:
 
-   
+  
   
 **Viewer application with single file loading functionality**
 
- ![](images/3D_Viewer_Tutorial_Step_01_-_Preview_d751e9e.png "Viewer application with single file loading functionality") 
+![](images/3D_Viewer_Tutorial_Step_01_-_Preview_d751e9e.png "Viewer application with single file loading functionality")
 
 
 
@@ -363,7 +363,7 @@ To test that the application works, we will load a local 3D resource into the Vi
 
 Download the `cooper.vds` file from the *Samples*. Click the *Browse...* button, navigate to the folder where the 3D resource is located, and load the model. Your screen should look like the following:
 
-   
+  
   
 **Viewer application loaded with a single VDS file**
 

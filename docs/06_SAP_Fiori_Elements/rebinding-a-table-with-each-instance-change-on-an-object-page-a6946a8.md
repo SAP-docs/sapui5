@@ -46,6 +46,8 @@ With the above steps, the table rebinds every time the object page instance is s
 
 
 
+## Example
+
 > ### Sample Code:  
 > ```
 > 

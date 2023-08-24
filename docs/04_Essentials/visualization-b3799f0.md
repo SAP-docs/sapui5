@@ -24,7 +24,7 @@ Icon library ensures consistent icon usage within a product and also across prod
 
 Focus visualization is very important for user efficiency.​
 
- ![](images/Focus_Visualization_f04ef12.png) 
+![](images/Focus_Visualization_f04ef12.png)
 
 
 

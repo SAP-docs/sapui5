@@ -18,11 +18,11 @@ Depending on the `UI.HeaderInfo` annotation, there can be three different types 
 
     **Flexible Column Layout mode**: In this scenario, when you delete a single item from the table, the dialog confirmation would show the message such as the one displayed below.
 
-     ![](images/Delete_Dialog_1_4e21c19.png) 
+    ![](images/Delete_Dialog_1_4e21c19.png)
 
     **Fullscreen mode**: In this scenario, when you delete a single item from the table, the dialog confirmation would show the message such as the one displayed below.
 
-     ![](images/Delete_Dialog_1b_ad1d3f4.png) 
+    ![](images/Delete_Dialog_1b_ad1d3f4.png)
 
 
 > ### Sample Code:  
@@ -74,7 +74,7 @@ Depending on the `UI.HeaderInfo` annotation, there can be three different types 
 
     In this scenario, when you delete a single item from the table, the dialog confirmation would show the message such as the one displayed below.
 
-     ![](images/Delete_Dialog_2_f898032.png) 
+    ![](images/Delete_Dialog_2_f898032.png)
 
 
 > ### Sample Code:  
@@ -117,7 +117,7 @@ Depending on the `UI.HeaderInfo` annotation, there can be three different types 
 
     In this scenario, when you delete a single item from the table, the dialog confirmation would show the message like the one displayed below.
 
-     ![](images/Delete_Dialog_3_c55b1e8.png) 
+    ![](images/Delete_Dialog_3_c55b1e8.png)
 
 
 The applications can override the default text by using the i18n keys mentioned below:

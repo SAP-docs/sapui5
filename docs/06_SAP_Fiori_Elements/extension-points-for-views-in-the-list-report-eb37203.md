@@ -39,7 +39,7 @@ To define a custom view, the path configuration for the custom view in the manif
 >     "name": "sap.fe.templates.ListReport",
 >     "options": {
 >         "settings": {
->             "entitySet": "BusinessPartners",
+>             "contextPath": "/BusinessPartners",
 >             "views": {
 >                 "paths": [
 >                     {

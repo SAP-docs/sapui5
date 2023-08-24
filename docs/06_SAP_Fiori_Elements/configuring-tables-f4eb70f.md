@@ -10,7 +10,7 @@ You can use the annotations and entries in the `manifest.json` to control variou
 
 ## Additional Features in SAP Fiori Elements for OData V2
 
-For information on smart tables, see [`sap.ui.comp.smarttable.SmartTable`](https://ui5.sap.com/#/api/sap.ui.comp.smarttable.SmartTable) and [Tables: Which One Should I Choose?](../10_More_About_Controls/tables-which-one-should-i-choose-148892f.md).
+For information on smart tables, see[`sap.ui.comp.smarttable.SmartTable`](https://ui5.sap.com/#/api/sap.ui.comp.smarttable.SmartTable) and [Tables: Which One Should I Choose?](../10_More_About_Controls/tables-which-one-should-i-choose-148892f.md).
 
 
 

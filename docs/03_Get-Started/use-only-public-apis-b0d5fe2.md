@@ -59,7 +59,7 @@ Example
 <tr>
 <td valign="top">
 
- `public` 
+`public` 
 
 
 
@@ -73,14 +73,14 @@ Indicates that the API, such as a class or method, is generally available for ap
 </td>
 <td valign="top">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)<sup>1</sup> 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)<sup>1</sup> 
 
 
 
 </td>
 <td valign="top">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
@@ -92,7 +92,7 @@ Indicates that the API, such as a class or method, is generally available for ap
 </td>
 <td valign="top">
 
- [`ManagedObject.prototype.getId`](https://ui5.sap.com/#/api/sap.ui.base.ManagedObject%23methods/getId) 
+[`ManagedObject.prototype.getId`](https://ui5.sap.com/#/api/sap.ui.base.ManagedObject%23methods/getId) 
 
 
 
@@ -101,7 +101,7 @@ Indicates that the API, such as a class or method, is generally available for ap
 <tr>
 <td valign="top">
 
- `protected` 
+`protected` 
 
 
 
@@ -115,14 +115,14 @@ Indicates that usage of the API is restricted. It is not meant to be used by app
 </td>
 <td valign="top">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)<sup>1</sup> 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)<sup>1</sup> 
 
 
 
 </td>
 <td valign="top">
 
- ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
 
 
 
@@ -136,7 +136,7 @@ The API might be used outside the relevant class or subclasses, but only in clos
 </td>
 <td valign="top">
 
- [`Control.prototype.invalidate`](https://ui5.sap.com/#/api/sap.ui.core.Control%23methods/invalidate) 
+[`Control.prototype.invalidate`](https://ui5.sap.com/#/api/sap.ui.core.Control%23methods/invalidate) 
 
 
 
@@ -145,7 +145,7 @@ The API might be used outside the relevant class or subclasses, but only in clos
 <tr>
 <td valign="top">
 
- `private` 
+`private` 
 
 
 
@@ -159,14 +159,14 @@ Indicates that the API is not meant for use outside of SAPUI5 framework developm
 </td>
 <td valign="top">
 
- ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
 
 
 
@@ -180,7 +180,7 @@ The API is not meant to be used outside its own class, module, package, or libra
 </td>
 <td valign="top">
 
- [`Icon.prototype._getOutputTitle`](https://github.com/SAP/openui5/blob/c67c74d5de985904b50fb250b0d335c08b275025/src/sap.ui.core/src/sap/ui/core/Icon.js#L477) 
+[`Icon.prototype._getOutputTitle`](https://github.com/SAP/openui5/blob/c67c74d5de985904b50fb250b0d335c08b275025/src/sap.ui.core/src/sap/ui/core/Icon.js#L477) 
 
 
 
@@ -189,7 +189,7 @@ The API is not meant to be used outside its own class, module, package, or libra
 <tr>
 <td valign="top">
 
- `ui5-restricted` 
+`ui5-restricted` 
 
 
 
@@ -203,14 +203,14 @@ Indicates that the API is only meant for certain stakeholders within SAPUI5 fram
 </td>
 <td valign="top">
 
- ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)<sup>2,3</sup> 
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)<sup>2,3</sup> 
 
 
 
 </td>
 <td valign="top">
 
- ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
 
 
 
@@ -224,7 +224,7 @@ Any potential new usage should be discussed with the owner first, then the stake
 </td>
 <td valign="top">
 
- [`Control.prototype.setBlocked`](https://github.com/SAP/openui5/blob/c67c74d5de985904b50fb250b0d335c08b275025/src/sap.ui.core/src/sap/ui/core/Control.js#L944) 
+[`Control.prototype.setBlocked`](https://github.com/SAP/openui5/blob/c67c74d5de985904b50fb250b0d335c08b275025/src/sap.ui.core/src/sap/ui/core/Control.js#L944) 
 
 
 
@@ -233,7 +233,7 @@ Any potential new usage should be discussed with the owner first, then the stake
 <tr>
 <td valign="top">
 
- `sap-restricted` 
+`sap-restricted` 
 
 
 
@@ -247,14 +247,14 @@ Deprecated, replaced by `ui5-restricted`
 </td>
 <td valign="top">
 
- ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
 
 
 

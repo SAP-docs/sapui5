@@ -169,7 +169,7 @@ Charts
     The column key \(`"DataField::SalesOrderItemCategory"` in our sample code above\) is used to identify the column for which you want to set the width.
 
 
- ![](images/Custom_Column_Width_5538367.png) 
+![](images/Custom_Column_Width_5538367.png)
 
 > ### Note:  
 > -   When the application is rendered in mobile phones, the table column width is adjusted automatically so that the displayed columns can occupy the complete available width.

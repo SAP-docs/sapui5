@@ -31,7 +31,7 @@ Used for...
 <tr>
 <td valign="top">
 
- `sap.m.StandardListItem` 
+`sap.m.StandardListItem` 
 
 
 
@@ -47,7 +47,7 @@ Displaying list content with a title description, icon and info
 <tr>
 <td valign="top">
 
- `sap.m.DisplayListItem` 
+`sap.m.DisplayListItem` 
 
 
 
@@ -63,7 +63,7 @@ Displaying name/value pairs
 <tr>
 <td valign="top">
 
- `sap.m.InputListItem` 
+`sap.m.InputListItem` 
 
 
 
@@ -79,7 +79,7 @@ Building a form-like user interface on phones
 <tr>
 <td valign="top">
 
- `sap.m.ActionListItem` 
+`sap.m.ActionListItem` 
 
 
 
@@ -95,7 +95,7 @@ Triggering an action directly from a list
 <tr>
 <td valign="top">
 
- `sap.m.FeedListItem` 
+`sap.m.FeedListItem` 
 
 
 
@@ -111,7 +111,7 @@ Displaying a standard UI for feeds. For more information, see [Feed List Item](f
 <tr>
 <td valign="top">
 
- `sap.m.ObjectListItem` 
+`sap.m.ObjectListItem` 
 
 
 
@@ -127,7 +127,7 @@ Providing a quick overview for an object within a list
 <tr>
 <td valign="top">
 
- `sap.m.ColumnListItem` 
+`sap.m.ColumnListItem` 
 
 
 
@@ -143,7 +143,7 @@ Providing responsive table design in combination with `sap.m.Table`
 <tr>
 <td valign="top">
 
- `sap.m.CustomListItem` 
+`sap.m.CustomListItem` 
 
 
 
@@ -168,7 +168,7 @@ For more information about the different list items, refer to the corresponding 
 
 A list item can be split into three parts, as shown in the following graphic:
 
- ![](images/List_Item_Structure_2f72dfb.png) 
+![](images/List_Item_Structure_2f72dfb.png)
 
 The parts that are to the left and right of the dotted area are part of the `ListItemBase` and are used to display the selection and deletion mode, as well as different list item type indicators such as navigation, details, and counter. The `Unread` indicator also comes from the `ListItemBase` and when it is set, any unread text will be displayed in bold format.
 
@@ -197,7 +197,7 @@ As mentioned above, you can either use `sap.m.CustomListItem` directly by adding
 
 The example above creates an attachment list item that displays an attachment title as a link, as shown in the graphic below. Clicking on the link will open the attachment. Below the attachment title, we want to display the details of the attachment, so we have used `sap.m.HBox` and `sap.m.VBox` for basic layouting. Data binding is also supported, and here it assumes that a model featuring `ProductPicUrl` and `ProductId` properties is used.
 
- ![](images/Custom_List_Item_6c6af3e.png) 
+![](images/Custom_List_Item_6c6af3e.png)
 
 The following example shows how to use a notepad control as a reusable control in an `sap.m.CustomListItem`. It assumes you want to build a product list item that shows an image of the product and displays its details:
 

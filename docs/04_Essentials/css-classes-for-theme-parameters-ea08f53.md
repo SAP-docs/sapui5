@@ -21,6 +21,8 @@ To resolve this problem, you can use CSS classes. There is a number of predefine
 
 
 
+## Example
+
 The most straightforward example is the theme parameter `@sapUiText`. The theme parameter is mainly used for text colors, so the custom CSS rule sets the `color` property.
 
 ```

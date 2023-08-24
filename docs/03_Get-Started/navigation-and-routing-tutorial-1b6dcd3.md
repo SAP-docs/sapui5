@@ -24,11 +24,11 @@ We will create a simple app displaying the data of a company’s employees to sh
 -   Show an *Employee Overview* that they can search and sort
 
 
-   
+  
   
 **Page flow of the final app**
 
- ![](images/Tutorial_Navigation_and_Routing_Screen_Flow_92cdce7.png "Page flow of the final app") 
+![](images/Tutorial_Navigation_and_Routing_Screen_Flow_92cdce7.png "Page flow of the final app")
 
 Throughout this tutorial we will add features for navigating to pages and bookmarking them. We will add backward and forward navigation with common transition animations \(slide, show, flip, etc.\). We will add more pages to the app and navigate between them to show typical use cases. We will even learn how to implement features for bookmarking a specific search, table sorting via filters, and dialogs.
 

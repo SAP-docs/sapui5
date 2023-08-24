@@ -8,7 +8,7 @@ By default, the *Related Apps* button is disabled on object pages created with t
   
 **Related Apps Button**
 
- ![](images/Related_Apps_Button_35f231c.png "Related Apps Button") 
+![](images/Related_Apps_Button_35f231c.png "Related Apps Button")
 
 The *Related Apps* button is displayed on the object page if you set the `showRelatedApps` parameter to `true` in the `manifest.json`.
 
@@ -317,7 +317,7 @@ Application developers can add additional links under the *Related Apps* button 
     "name": "sap.fe.templates.ObjectPage",
     "options": {
         "settings": {
-            "entitySet": "SalesOrderManage",
+            "contextPath": "/SalesOrderManage",
             "showRelatedApps": true,
             "additionalSemanticObjects": {
                 “ProductCollection”: {
@@ -357,7 +357,7 @@ You can also use the `allowedActions` key in the `manifest.json` file to define 
     "name": "sap.fe.templates.ObjectPage",
     "options": {
         "settings": {
-            "entitySet": "SalesOrderManage",
+            "contextPath": "/SalesOrderManage",
             "showRelatedApps": true,
             "additionalSemanticObjects": {
                 “SalesOrder”: {

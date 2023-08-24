@@ -27,11 +27,11 @@ The content area, consisting of a title and additional information, for example,
 
     -   Enter the title according to the `TextArrangement` annotation. See the figure below: `TextArrangementType/TextLast`. Note that *Computer Systems* is declared as `TextLast` here.
 
-         ![](images/Title_in_Quick_View_adc6a09.png) 
+        ![](images/Title_in_Quick_View_adc6a09.png)
 
     -   If a main navigation has been defined, the title is displayed as a link. In the example below, see the <code><i>Asia High tech</i></code> link:
 
-         ![](images/Title_-_Link_8d1888b.png) 
+        ![](images/Title_-_Link_8d1888b.png)
 
 
 -   Description
@@ -39,7 +39,7 @@ The content area, consisting of a title and additional information, for example,
 
     -   If the description is not filled, the title size is increased automatically and the description field remains empty, as shown below \(`TextArrangementType/TextOnly`\).
 
-         ![](images/Description_9b4acac.png) 
+        ![](images/Description_9b4acac.png)
 
 
 
@@ -55,7 +55,7 @@ The content area can contain field groups, contacts, and DataPoints.
 
 -   You can include any number of field groups or none at all. The example below shows a quick view with no reference facet, however, a header image included:
 
-     ![](images/Field_Group_cf98382.png) 
+    ![](images/Field_Group_cf98382.png)
 
 -   A field group can have a label. It is taken from within the `<Record Type="UI.ReferenceFacet">`.
 
@@ -77,7 +77,7 @@ The content area can contain field groups, contacts, and DataPoints.
 
 You can display any number of contacts or none at all. See the example below:
 
- ![](images/Contacts_7fbc5f9.png) 
+![](images/Contacts_7fbc5f9.png)
 
 The following applies:
 
@@ -99,7 +99,7 @@ The following applies:
 -   A DataPoint can have a label. It is taken from within the `<Record Type="UI.ReferenceFacet">`.
 
 
- ![](images/DataPoint_in_QuickView_5da4f79.png) 
+![](images/DataPoint_in_QuickView_5da4f79.png)
 
 The sample codes show a quick view facet containing field group, contact and DataPoint:
 
@@ -177,13 +177,13 @@ The sample codes show a quick view facet containing field group, contact and Dat
 
     -   The title is taken from `HeaderInfo.Title`.
 
-         ![](images/Title_in_Quick_View_adc6a09.png) 
+        ![](images/Title_in_Quick_View_adc6a09.png)
 
     -   If a main navigation has been defined using the `sap-tag` parameter `primaryAction`, the title is displayed as a link. For more information about how to define a primary action, see [Enabling the Flexible Column Layout](enabling-the-flexible-column-layout-e762257.md).
 
         In the example below, see the <code><i>Asia High tech</i></code> link:
 
-         ![](images/Title_-_Link_8d1888b.png) 
+        ![](images/Title_-_Link_8d1888b.png)
 
 
     > ### Restriction:  
@@ -199,7 +199,7 @@ The sample codes show a quick view facet containing field group, contact and Dat
 -   Description
     -   The description is taken from the `HeaderInfo.Description` annotation.
 
-         ![](images/Description_9b4acac.png) 
+        ![](images/Description_9b4acac.png)
 
 
 
@@ -213,7 +213,7 @@ The content area can contain field groups, contacts, and `DataPoints`.
 
 -   You can include any number of field groups or none at all. The example below shows a quick view with no reference facet, however, a header image included:
 
-     ![](images/Field_Groups_7910b76.png) 
+    ![](images/Field_Groups_7910b76.png)
 
 -   A field group can have a label. It is taken from within the `<Record Type="UI.ReferenceFacet">`.
 
@@ -235,7 +235,7 @@ The content area can contain field groups, contacts, and `DataPoints`.
 
 You can display any number of contacts or none at all. See the example below:
 
- ![](images/Contacts_64e1252.png) 
+![](images/Contacts_64e1252.png)
 
 The following applies:
 
@@ -257,7 +257,7 @@ The following applies:
 -   A `DataPoint` can have a label. It is taken from within the `<Record Type="UI.ReferenceFacet">`.
 
 
- ![](images/DataPoint_in_QuickView_5da4f79.png) 
+![](images/DataPoint_in_QuickView_5da4f79.png)
 
 The sample codes show a quick view facet containing field group, contact and `DataPoint`:
 
@@ -534,11 +534,11 @@ To enable navigation from a quick view facet, use the `SemanticObject` annotatio
 
 The following image shows a quick view popover displaying the most important links in the footer:
 
- ![](images/Quick_View_Footer_83521d5.png) 
+![](images/Quick_View_Footer_83521d5.png)
 
 The following image shows a *More Links* popover. Users can select actions to be displayed in the quick view footer:
 
- ![](images/More_Links_Popover_in_Footer_696b457.png) 
+![](images/More_Links_Popover_in_Footer_696b457.png)
 
 -   The footer section gathers the most important navigation targets. Users can see the full list of available actions by choosing the *More Links* button.
 
@@ -552,5 +552,5 @@ The following image shows a *More Links* popover. Users can select actions to be
 > ### Note:  
 > When no QuickView annotations are defined and no target is resolved at runtime \(for example, the user does not have access to the target applications\), the field still appears as a link and a message is displayed when pressed.
 > 
->  ![](images/QuickView_Error_Message_ca67391.png) 
+> ![](images/QuickView_Error_Message_ca67391.png)
 

@@ -4,9 +4,9 @@
 
 The following video shows how to import and export configurations:
 
-  
 
- [Open this video in a new window](https://www.kaltura.com/p/1921661/sp/192166100/embedIframeJs/uiconf_id/37285991/partner_id/1921661?iframeembed=true&playerId=kaltura_player&entry_id=1_umaqoyme) 
+
+[Open this video in a new window](https://www.kaltura.com/p/1921661/sp/192166100/embedIframeJs/uiconf_id/37285991/partner_id/1921661?iframeembed=true&playerId=kaltura_player&entry_id=1_umaqoyme) 
 
 You can export the table entries for configurations and text pools. An export results in the following files:
 

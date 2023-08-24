@@ -6,7 +6,7 @@ With this release SAPUI5 is upgraded from version 1.93 to 1.94.
 
 
 
-** **
+****
 
 
 <table>
@@ -64,28 +64,28 @@ Available as of
 <tr>
 <td valign="top">
 
- 1.94 
+1.94 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **SAPUI5 OData V2 Model** 
+**SAPUI5 OData V2 Model** 
 
 
 
@@ -119,28 +119,28 @@ Info Only
 <tr>
 <td valign="top">
 
- 1.94 
+1.94 
 
 
 
 </td>
 <td valign="top">
 
- UI Changed 
+UI Changed 
 
 
 
 </td>
 <td valign="top">
 
- Announcement 
+Announcement 
 
 
 
 </td>
 <td valign="top">
 
- **SAP Fiori Elements: Object Pages: Search Bar Added to Table Toolbar** 
+**SAP Fiori Elements: Object Pages: Search Bar Added to Table Toolbar** 
 
 
 
@@ -160,7 +160,7 @@ Tables with searchable content in object pages now have a search field in the to
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -176,28 +176,28 @@ Tables with searchable content in object pages now have a search field in the to
 <tr>
 <td valign="top">
 
- 1.94 
+1.94 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **SAPUI5 OData V4 Model** 
+**SAPUI5 OData V4 Model** 
 
 
 
@@ -222,7 +222,7 @@ The new version of the SAPUI5 OData V4 model introduces the following features:
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -238,28 +238,28 @@ The new version of the SAPUI5 OData V4 model introduces the following features:
 <tr>
 <td valign="top">
 
- 1.94 
+1.94 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Whitespaces Visualization** 
+**Whitespaces Visualization** 
 
 
 
@@ -277,7 +277,7 @@ We have created a new sample pattern that showcases how whitespaces can be enabl
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -293,28 +293,28 @@ We have created a new sample pattern that showcases how whitespaces can be enabl
 <tr>
 <td valign="top">
 
- 1.94 
+1.94 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.IconTabBar`** 
+**`sap.m.IconTabBar`** 
 
 
 
@@ -332,7 +332,7 @@ We have updated the colors of value-state status icons. Now, they have better co
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -348,28 +348,28 @@ We have updated the colors of value-state status icons. Now, they have better co
 <tr>
 <td valign="top">
 
- 1.94 
+1.94 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.Input`, `sap.m.MultiInput`** 
+**`sap.m.Input`, `sap.m.MultiInput`** 
 
 
 
@@ -387,7 +387,7 @@ We have introduced the `showClearIcon` property. If set to true, when there is t
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -403,28 +403,28 @@ We have introduced the `showClearIcon` property. If set to true, when there is t
 <tr>
 <td valign="top">
 
- 1.94 
+1.94 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.List`** 
+**`sap.m.List`** 
 
 
 
@@ -442,7 +442,7 @@ You can now adapt the default wrapping behavior for titles and descriptions in l
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -458,28 +458,28 @@ You can now adapt the default wrapping behavior for titles and descriptions in l
 <tr>
 <td valign="top">
 
- 1.94 
+1.94 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.MenuButton`** 
+**`sap.m.MenuButton`** 
 
 
 
@@ -497,7 +497,7 @@ We have introduced a new `beforeMenuOpen` event, fired when the arrow button of 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -513,28 +513,28 @@ We have introduced a new `beforeMenuOpen` event, fired when the arrow button of 
 <tr>
 <td valign="top">
 
- 1.94 
+1.94 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.PlanningCalendar`** 
+**`sap.m.PlanningCalendar`** 
 
 
 
@@ -552,7 +552,7 @@ The new `firstDayOfWeek` property enables developers to set the first day of wee
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -568,28 +568,28 @@ The new `firstDayOfWeek` property enables developers to set the first day of wee
 <tr>
 <td valign="top">
 
- 1.94 
+1.94 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.smartfield.SmartField`** 
+**`sap.ui.comp.smartfield.SmartField`** 
 
 
 
@@ -609,7 +609,7 @@ For more information, see [Currency and Unit Customizing in OData V2](../04_Esse
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -625,28 +625,28 @@ For more information, see [Currency and Unit Customizing in OData V2](../04_Esse
 <tr>
 <td valign="top">
 
- 1.94 
+1.94 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.integration.widgets.Card`** 
+**`sap.ui.integration.widgets.Card`** 
 
 
 
@@ -664,7 +664,7 @@ We have updated the Microsoft Adaptive Cards SDK from version 1.2.3 to version 2
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -680,28 +680,28 @@ We have updated the Microsoft Adaptive Cards SDK from version 1.2.3 to version 2
 <tr>
 <td valign="top">
 
- 1.94 
+1.94 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- SAP Fiori Elements 
+SAP Fiori Elements 
 
 
 
 </td>
 <td valign="top">
 
- **SAP Fiori elements for OData V4** 
+**SAP Fiori elements for OData V4** 
 
 
 
@@ -734,7 +734,7 @@ The following changes and new features are available for SAP Fiori elements for 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -751,6 +751,8 @@ The following changes and new features are available for SAP Fiori elements for 
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.115](what-s-new-in-sapui5-1-115-409fde8.md "With this release SAPUI5 is upgraded from version 1.114 to 1.115.")
 
 [What's New in SAPUI5 1.114](what-s-new-in-sapui5-1-114-890fce1.md "With this release SAPUI5 is upgraded from version 1.113 to 1.114.")
 

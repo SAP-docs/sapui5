@@ -21,11 +21,11 @@ You have performed the steps described in [Extending Delivered Apps Using Adapta
 
 1.  Select the table tool bar and choose *Add Fragment*.
 
-     ![](images/Add_Fragment_e13933b.png) 
+    ![](images/Add_Fragment_e13933b.png)
 
 2.  Under *Target Aggregation*, select *content* and choose your preferred index value. Choose *Create New* to create the fragment. If the fragment is already there, you can search for it.
 
-     ![](images/Searchfragment_978b253.png) 
+    ![](images/Searchfragment_978b253.png)
 
 3.  Enter a fragment name, for example, `FilterPriceButton`, and choose *Create*.
 
@@ -39,7 +39,7 @@ You have performed the steps described in [Extending Delivered Apps Using Adapta
     > ```
 
     > ### Note:  
-    >  `".extension.ProdMan.AdaptProject.ListReportExtension.handleFilterPricePress"` consists of the following elements that are connected with a dot \(.\).
+    > `".extension.ProdMan.AdaptProject.ListReportExtension.handleFilterPricePress"` consists of the following elements that are connected with a dot \(.\).
     > 
     > `.extension`: Required according to the UI adaptation tool guidelines
     > 
@@ -51,7 +51,7 @@ You have performed the steps described in [Extending Delivered Apps Using Adapta
 
 5.  Create a controller extension. Select the table toolbar as described under step 1 and choose *Extend with Controller*.
 
-     ![](images/Extend_with_controller_0328780.png) 
+    ![](images/Extend_with_controller_0328780.png)
 
 6.  Enter the controller name, for example, `ListReportExtension`, and choose *Extend*.
 
@@ -127,6 +127,6 @@ You have performed the steps described in [Extending Delivered Apps Using Adapta
 
 8.  Choose *Filter Price* and check the value in the *Price* field for the filtered records.
 
-     ![](images/Customextension_preview_8c525dd.png) 
+    ![](images/Customextension_preview_8c525dd.png)
 
 

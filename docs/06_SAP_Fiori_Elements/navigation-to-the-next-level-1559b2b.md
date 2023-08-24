@@ -30,7 +30,7 @@ The following manifest snippet shows how an object page and subobject page can b
 >          "name":"sap.fe.templates.ListReport",
 >          "options":{
 >             "settings":{
->                "entitySet":"SalesOrderManage",
+>                "contextPath":"/SalesOrderManage",
 >                "variantManagement":"Page",
 >                ...
 >                ...
@@ -50,7 +50,7 @@ The following manifest snippet shows how an object page and subobject page can b
 >          "name":"sap.fe.templates.ObjectPage",
 >          "options":{
 >             "settings":{
->                "entitySet":"SalesOrderManage",
+>                "contextPath":"/SalesOrderManage",
 >                "navigation":{
 >                   "_Item":{
 >                      "detail":{

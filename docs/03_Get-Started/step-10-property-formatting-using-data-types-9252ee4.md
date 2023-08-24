@@ -8,11 +8,11 @@ SAPUI5 provides a set of simple data types such as `Boolean`, `Currency`, `Date`
 
 ## Preview
 
-   
+  
   
 **New Sales Amount input field**
 
- ![](images/Tutorial_Data_Binding_Step_10_d15f8bc.png "New Sales Amount input field ") 
+![](images/Tutorial_Data_Binding_Step_10_d15f8bc.png "New Sales Amount input field ")
 
 
 

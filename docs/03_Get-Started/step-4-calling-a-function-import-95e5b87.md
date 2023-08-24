@@ -8,11 +8,11 @@ We only want to display the upcoming meetings and hide the meetings happened in 
 
 ## Preview
 
-   
+  
   
 **Only the upcoming meet-ups are shown**
 
- ![](images/Tutorial_Mock_Server_Step_4_8f2176b.png "Only the upcoming meet-ups are shown") 
+![](images/Tutorial_Mock_Server_Step_4_8f2176b.png "Only the upcoming meet-ups are shown")
 
 
 
@@ -52,11 +52,11 @@ We change the binding of the list to a function import call that returns only up
 
 After saving and running the app again, we should get the following result:
 
-   
+  
   
 **No data visible**
 
- ![](images/Tutorial_Mock_Server_Step_4_02_4992f37.png "No data visible") 
+![](images/Tutorial_Mock_Server_Step_4_02_4992f37.png "No data visible")
 
 Since the function import call is not simulated automatically by the mock server, we do not see any data in list, and a failed network call is issued in the developer tools of the browser.
 
@@ -185,10 +185,10 @@ The path we gave in the simulate function for mock data is where we want to stor
 
 -   Generate it in SAP Web IDE by choosing *Edit Mock Data* in the context menu of the `medatdata.xml` file. For more information about SAP Web IDE, see the documentation for SAP Web IDE on the SAP Help Portal at [https://help.sap.com/viewer/p/SAP\_Web\_IDE](https://help.sap.com/viewer/p/SAP_Web_IDE).
 
-       
+      
       
     **Editing mock data in SAP Web IDE**
 
-     ![](images/Tutorial_Mock_Server_Step_4_03_1117f6c.png "Editing mock data in SAP Web IDE") 
+    ![](images/Tutorial_Mock_Server_Step_4_03_1117f6c.png "Editing mock data in SAP Web IDE")
 
 

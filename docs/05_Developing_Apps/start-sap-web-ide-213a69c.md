@@ -17,6 +17,6 @@ Initial Steps in SAP Web IDE
 
     You now see a folder list with an entry *Workspace* on the left side and an empty code editor on the right side.
 
-3.  Create your project within the *Workspace* folder by choosing *File* \> *New* \> *Folder* from the menu or  [Ctrl\] + [Alt\] + [Shift\] + [N\] . Enter, for example, `myProject` as the folder name.
+3.  Create your project within the *Workspace* folder by choosing *File* \> *New* \> *Folder* from the menu or [Ctrl\] + [Alt\] + [Shift\] + [N\] . Enter, for example, `myProject` as the folder name.
 
 

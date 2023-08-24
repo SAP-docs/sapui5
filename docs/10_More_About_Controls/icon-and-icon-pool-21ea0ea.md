@@ -24,9 +24,9 @@ To display your custom icons in all browsers that SAPUI5 supports, you need the 
 
 -   `collectionName` \(optional\): Collection name which can be used in the `sap-icon` URI to reference the icons. If this is not provided, the `fontFamily` is used as `collectionName`.
 
--   `metadata` \(optional\): Object that contains the mapping of the icon name to the icon's hex code, for example `{ "code1": "e011", "code2": "e012", "spike-arrest": "e013", "verify-api": "e014" }`.
+-   `metadata` \(optional\): Object that contains the mapping of the icon name to the icon's hex code, for example `{ "code1": "e011", "code2": "e012", "spike-arrest": "e013", "verify-api": "e014" }`
 
--   `metadataURI` \(optional\): URI of a JSON file that contains the mapping of the icon name to the icon's hex code for every icon in the icon file
+-   `metadataURI` \(optional\): URI of a JSON file that contains the mapping of the icon name to the icon's hex code for every icon in the icon file and the path configuration for theme-dependent icon fonts
 
 -   `lazy` \(optional\): Metadata for the icons is not loaded until the first icon from the icon set is used
 
@@ -37,21 +37,52 @@ To display your custom icons in all browsers that SAPUI5 supports, you need the 
 > ### Example:  
 > The `sap.tnt` library provides an extra icon set. The `sap/tnt/themes/base/fonts` folder contains the `SAP-icons-TNT.woff2` font file as well as the `SAP-icons-TNT.json` JSON file, which contains the mapping of the icon name and the icon's hex code:
 > 
-> ```js
+> ```
 > {
->   "technicalsystem": "e000",
->   "systemjava": "e001",
->   "systemabap": "e002",
->   "systemrecommendations": "e003",
->   "system": "e004",
->   "systemtrex": "e005",
->   "systemtracks": "e006",
->   "technicalinstance": "e008",
->   "technicalscenario": "e007",
->   "throughput-backlog": "e009",
->   ...
+>     "technicalsystem": "e000",
+>     "systemjava": "e001",
+>     "systemabap": "e002",
+>     "systemrecommendations": "e003",
+>     "system": "e004",
+>     "systemtrex": "e005",
+>     "systemtracks": "e006",
+>     "technicalinstance": "e008",
+>     "technicalscenario": "e007",
+>     "throughput-backlog": "e009",
+>     ...
 > }
 > ```
+
+
+
+### Theme-Dependent Icons
+
+Since UI5 version 1.117, a `config` section can be defined, into which the path configuration for the theme-dependent icon designs \(e.g. Horizon theme\) can be written. The **key** defines a regluar expression that matches the theme name, and the **value** represents the font file location for the respective theme. If the `config` property is defined, the mapping of the icons' names and hex codes must be defined under an `icons` property as shown below.
+
+Since UI5 version 1.117, the `SAP-icons-TNT.json` file contains the theme-dependent path configuration:
+
+```
+{
+    "config": {
+        "path": {
+            "^sap_horizon.*": "sap/tnt/themes/base/fonts/horizon"
+        }
+    },
+    "icons": {
+        "technicalsystem": "e000",
+        "systemjava": "e001",
+        "systemabap": "e002",
+        "systemrecommendations": "e003",
+        "system": "e004",
+        "systemtrex": "e005",
+        "systemtracks": "e006",
+        "technicalinstance": "e008",
+        "technicalscenario": "e007",
+        "throughput-backlog": "e009",
+        ...
+    }
+}
+```
 
 The JSON file has the same name as the `woff2` file, so it is not necessary to set `metadataURI`. To register the icon in the `IconPool`, use the following code. Note that in the example the metadata is not loaded until one icon from this icon set is used because `lazy` is set to true.
 

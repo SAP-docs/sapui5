@@ -181,7 +181,7 @@ we have prevented the automatic insertion of role `application` on the body of t
 <tr>
 <td valign="top">
 
- SAPUI5 is following the SAP ‘s updated design and development guidelines, as well as the testing procedures and accessibility reporting, that are based on WCAG 2.1 level A and AA.
+SAPUI5 is following the SAP ‘s updated design and development guidelines, as well as the testing procedures and accessibility reporting, that are based on WCAG 2.1 level A and AA.
 
 
 

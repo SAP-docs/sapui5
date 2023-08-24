@@ -11,7 +11,7 @@ It shows the label of the `UI.ReferenceFacet` and, below, only the label propert
 
 Example value for the label property: "Mail Drop: TNE QB\\n123 Main Street\\nAny Town, CA 91921-1234\\nU.S.A.". This is shown as follows:
 
- ![](images/Address_Facet_8d92094.png) 
+![](images/Address_Facet_8d92094.png)
 
 
 

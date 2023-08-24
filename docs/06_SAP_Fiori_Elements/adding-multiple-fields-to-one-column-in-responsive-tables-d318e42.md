@@ -148,11 +148,11 @@ You can use the following annotations in `UI.FieldGroup`:
 
 The result looks like this:
 
-   
+  
   
 **Multiple IDs, Descriptions, and Action Buttons in a Table Column**
 
- ![](images/Multiple_IDs_93da960.png "Multiple IDs, Descriptions, and Action Buttons in a Table Column") 
+![](images/Multiple_IDs_93da960.png "Multiple IDs, Descriptions, and Action Buttons in a Table Column")
 
 
 

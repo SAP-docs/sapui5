@@ -374,7 +374,7 @@ As defined in target mapping of the application
 </td>
 <td valign="top">
 
- `FioriApplication` \(automatically filled based on selected configuration\)
+`FioriApplication` \(automatically filled based on selected configuration\)
 
 
 
@@ -404,7 +404,7 @@ As defined in target mapping of the application
 </td>
 <td valign="top">
 
- `executeAPFConfigurationS4HANA` or `executeAPFConfiguration`\(automatically filled based on selected configuration.\)
+`executeAPFConfigurationS4HANA` or `executeAPFConfiguration`\(automatically filled based on selected configuration.\)
 
 
 

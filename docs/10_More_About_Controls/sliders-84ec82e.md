@@ -10,17 +10,17 @@
 
 A slider is a control that enables you to adjust values on a specified range. SAPUI5 has two controls of this type - `sap.m.Slider` and `sap.m.RangeSlider`. The slider allows you to choose a single value, whereas with the RangeSlider you can choose an interval with start and end within a given interval.
 
-   
+  
   
 **Slider**
 
- ![](images/Slider_18fb5f8.png "Slider") 
+![](images/Slider_18fb5f8.png "Slider")
 
-   
+  
   
 **RangeSlider**
 
- ![](images/RangeSlider_923cc5e.png "RangeSlider") 
+![](images/RangeSlider_923cc5e.png "RangeSlider")
 
 Technically the RangeSlider extends `sap.m.Slider` and thus uses all its properties. It has two additional properties for the second slider value and the selected range.
 

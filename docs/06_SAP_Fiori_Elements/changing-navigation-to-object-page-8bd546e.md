@@ -147,7 +147,7 @@ You can define an external navigation using intent-based navigation in the `mani
 >                 "name": "sap.fe.templates.ListReport",
 >                 "options": {
 >                     "settings" :{                          
->                         "entitySet": "Artists",
+>                         "contextPath": "/Artists",
 >                         "navigation": {                              
 >                             "Artists": {                                 
 >                                 "detail": {                                      
@@ -164,7 +164,7 @@ You can define an external navigation using intent-based navigation in the `mani
 >                 "name": "sap.fe.templates.ObjectPage",
 >                 "options": {
 >                     "settings" : {                          
->                         "entitySet" : "Artists",                          
+>                         "contextPath": "/Artists",                          
 >                         "_tableType" : "Table",                          
 >                         "navigation": {                              
 >                             "_Publication": {                                  

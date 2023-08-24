@@ -10,7 +10,7 @@ In this step, we will create a new Launch Tile `(GenericTile` with `ImageContent
 
 ## Preview
 
- ![](images/Step2_1_61d4039.png) 
+![](images/Step2_1_61d4039.png)
 
 
 

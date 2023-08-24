@@ -224,9 +224,9 @@ Depending on your situation, you can do the following:
 
 [F4\] or
 
- [Alt\] + [Down\]  or
+[Alt\] + [Down\]  or
 
- [Alt\] + [Up\] 
+[Alt\] + [Up\] 
 
 
 
@@ -251,7 +251,7 @@ You can open the options and elements available in a drop-down menu, if the UI e
 
 [F6\] or
 
- [Ctrl\] + [Alt/Option\] + [Down\] 
+[Ctrl\] + [Alt/Option\] + [Down\] 
 
 
 
@@ -274,9 +274,9 @@ UI elements within an application can be grouped together \(for example, all ele
 <tr>
 <td valign="top">
 
- [Shift\] + [F6\]  or
+[Shift\] + [F6\]  or
 
- [Ctrl\] + [Alt/Option\] + [Up\] 
+[Ctrl\] + [Alt/Option\] + [Up\] 
 
 
 

@@ -10,7 +10,7 @@ In this tutorial step, we have a closer look at the Diagnostics window. It offer
 
 ## Preview
 
- ![](images/Diagnostics_Window_5ceb62a.png) 
+![](images/Diagnostics_Window_5ceb62a.png)
 
 
 
@@ -20,7 +20,7 @@ In this tutorial step, we have a closer look at the Diagnostics window. It offer
 
 1.  Download the example app with errors from the Demo Kitat [Troubleshooting](https://ui5.sap.com/#/entity/sap.ui.core.tutorial.troubleshooting/sample/sap.ui.core.tutorial.troubleshooting.01) and run the app.
 
-2.  Open the *Diagnostics* window by pressing  [Ctrl\] + [Shift\] + [Alt\] + [S\] .
+2.  Open the *Diagnostics* window by pressing [Ctrl\] + [Shift\] + [Alt\] + [S\] .
 
 
 
@@ -75,7 +75,7 @@ The app contains a *Do Something* button and you want to make the button bigger.
 
 1.  Expand the *Control Tree* section. Make sure that you display both the app and the *Diagnostics* windows side-by-side or on different monitors. Otherwise the diagnostics window will go to the background.
 
-2.  Press and hold the  [Ctrl\] + [Shift\] + [Alt\]  keys and click the *Do Something* button in the app. You see the button blinking green.
+2.  Press and hold the [Ctrl\] + [Shift\] + [Alt\]  keys and click the *Do Something* button in the app. You see the button blinking green.
 
 3.  In the control tree of the *Diagnostics* window, the button is selected and you can see its properties on the right.
 

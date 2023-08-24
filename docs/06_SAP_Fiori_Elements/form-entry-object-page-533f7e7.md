@@ -18,7 +18,7 @@ For a page to be considered a form entry object page, you must make the followin
 >     "name": "sap.fe.templates.ObjectPage",   
 >     "options": {                             
 >         "settings": {                        
->             "entitySet": "FormRoot",         
+>             "contextPath": "/FormRoot",         
 >             "editableHeaderContent": false,  
 >             "content": {                     
 >                 "header": {                  

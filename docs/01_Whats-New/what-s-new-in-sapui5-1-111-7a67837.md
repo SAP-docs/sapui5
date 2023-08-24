@@ -7,7 +7,7 @@ With this release SAPUI5 is upgraded from version 1.110 to 1.111.
 > ### Tip:  
 > If you want to do a search across all versions of the What's New content, you can also find it in the [SAPUI5 What's New viewer](https://help.sap.com/whats-new/67f60363b57f4ac0b23efd17fa192d60).
 
-** **
+****
 
 
 <table>
@@ -65,28 +65,28 @@ Available as of
 <tr>
 <td valign="top">
 
- 1.111 
+1.111 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.Input`, `sap.m.MultiInput`, `sap.m.ComboBox`, `sap.m.MultiComboBox`** 
+**`sap.m.Input`, `sap.m.MultiInput`, `sap.m.ComboBox`, `sap.m.MultiComboBox`** 
 
 
 
@@ -104,7 +104,7 @@ The type-ahead \(autocomplete\) functionality is updated to always suggest the e
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -120,28 +120,28 @@ The type-ahead \(autocomplete\) functionality is updated to always suggest the e
 <tr>
 <td valign="top">
 
- 1.111 
+1.111 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.NavContainer`** 
+**`sap.m.NavContainer`** 
 
 
 
@@ -159,7 +159,7 @@ We have introduced a new `navigationFinished` event. The event is fired when nav
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -175,28 +175,28 @@ We have introduced a new `navigationFinished` event. The event is fired when nav
 <tr>
 <td valign="top">
 
- 1.111 
+1.111 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.IllustratedMessage`** 
+**`sap.m.IllustratedMessage`** 
 
 
 
@@ -214,7 +214,7 @@ We have introduced a new `enableDefaultTitleAndDescription` property. It provide
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -230,28 +230,28 @@ We have introduced a new `enableDefaultTitleAndDescription` property. It provide
 <tr>
 <td valign="top">
 
- 1.111 
+1.111 
 
 
 
 </td>
 <td valign="top">
 
- Deprecated 
+Deprecated 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.ActionSelect`** 
+**`sap.m.ActionSelect`** 
 
 
 
@@ -269,7 +269,7 @@ We have deprecated the `sap.m.ActionSelect` control.
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -285,28 +285,28 @@ We have deprecated the `sap.m.ActionSelect` control.
 <tr>
 <td valign="top">
 
- 1.111 
+1.111 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.unified.Calendar`** 
+**`sap.ui.unified.Calendar`** 
 
 
 
@@ -324,7 +324,7 @@ We have implemented the `initialFocusedDate` property in `sap.ui.unified.Calenda
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -340,28 +340,28 @@ We have implemented the `initialFocusedDate` property in `sap.ui.unified.Calenda
 <tr>
 <td valign="top">
 
- 1.111 
+1.111 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.unified.CalendarLegend`** 
+**`sap.ui.unified.CalendarLegend`** 
 
 
 
@@ -379,7 +379,7 @@ The `sap.ui.unified.CalendarLegend` control offers a new functionality. If an in
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -395,28 +395,28 @@ The `sap.ui.unified.CalendarLegend` control offers a new functionality. If an in
 <tr>
 <td valign="top">
 
- 1.111 
+1.111 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.DynamicDateRange`** 
+**`sap.m.DynamicDateRange`** 
 
 
 
@@ -434,7 +434,7 @@ We have implemented a new `calendarWeekNumbering` property in the `sap.m.Dynamic
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -450,28 +450,28 @@ We have implemented a new `calendarWeekNumbering` property in the `sap.m.Dynamic
 <tr>
 <td valign="top">
 
- 1.111 
+1.111 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.DynamicDateRange`** 
+**`sap.m.DynamicDateRange`** 
 
 
 
@@ -489,7 +489,7 @@ We have implemented new options in the `sap.m.DynamicDateRange` control for `Min
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -505,28 +505,28 @@ We have implemented new options in the `sap.m.DynamicDateRange` control for `Min
 <tr>
 <td valign="top">
 
- 1.111 
+1.111 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- SAP Fiori Elements 
+SAP Fiori Elements 
 
 
 
 </td>
 <td valign="top">
 
- **SAP Fiori elements for OData V2** 
+**SAP Fiori elements for OData V2** 
 
 
 
@@ -547,7 +547,7 @@ The following changes and new features are available for SAP Fiori elements for 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -563,28 +563,28 @@ The following changes and new features are available for SAP Fiori elements for 
 <tr>
 <td valign="top">
 
- 1.111 
+1.111 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- SAP Fiori Elements 
+SAP Fiori Elements 
 
 
 
 </td>
 <td valign="top">
 
- **SAP Fiori elements for OData V4** 
+**SAP Fiori elements for OData V4** 
 
 
 
@@ -605,7 +605,7 @@ The following changes and new features are available forSAP Fiori elements for O
 
 -   We've replaced the simple *Share* button with a *Share* menu button. The menu can now also contain the *Chat in Microsoft Teams* option.
 
-     ![](images/Chat_In_Microsoft_Teams_-_Share_Menu_Button_3b8f67e.png) 
+    ![](images/Chat_In_Microsoft_Teams_-_Share_Menu_Button_3b8f67e.png)
 
     For more information, see ["Share" Functionality](../06_SAP_Fiori_Elements/share-functionality-022bf0d.md).
 
@@ -617,7 +617,7 @@ The following changes and new features are available forSAP Fiori elements for O
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -633,28 +633,28 @@ The following changes and new features are available forSAP Fiori elements for O
 <tr>
 <td valign="top">
 
- 1.111 
+1.111 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **SAPUI5 OData V4 Model** 
+**SAPUI5 OData V4 Model** 
 
 
 
@@ -691,7 +691,7 @@ For more information, see the API Reference for
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -707,28 +707,28 @@ For more information, see the API Reference for
 <tr>
 <td valign="top">
 
- 1.111 
+1.111 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Dates, Times, Timestamps, and Time Zones** 
+**Dates, Times, Timestamps, and Time Zones** 
 
 
 
@@ -770,7 +770,7 @@ The new version of SAPUI5 introduces the following features for time zone config
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -786,28 +786,28 @@ The new version of SAPUI5 introduces the following features for time zone config
 <tr>
 <td valign="top">
 
- 1.111 
+1.111 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.SelectDialog`** 
+**`sap.m.SelectDialog`** 
 
 
 
@@ -825,7 +825,7 @@ To improve the accessibility of the control, the initial focus is now set on the
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -841,28 +841,28 @@ To improve the accessibility of the control, the initial focus is now set on the
 <tr>
 <td valign="top">
 
- 1.111 
+1.111 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.integration.widgets.Card`** 
+**`sap.ui.integration.widgets.Card`** 
 
 
 
@@ -883,7 +883,7 @@ To improve the accessibility of the control, the initial focus is now set on the
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -899,28 +899,28 @@ To improve the accessibility of the control, the initial focus is now set on the
 <tr>
 <td valign="top">
 
- 1.111 
+1.111 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Announcement 
+Announcement 
 
 
 
 </td>
 <td valign="top">
 
- **Changed Format of What's New Content** 
+**Changed Format of What's New Content** 
 
 
 
@@ -940,7 +940,7 @@ We have also changed the format of the What's New content in the Demo Kit. You c
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -956,28 +956,28 @@ We have also changed the format of the What's New content in the Demo Kit. You c
 <tr>
 <td valign="top">
 
- 1.111 
+1.111 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.smarttable.SmartTable`** 
+**`sap.ui.comp.smarttable.SmartTable`** 
 
 
 
@@ -986,7 +986,7 @@ We have also changed the format of the What's New content in the Demo Kit. You c
 
 **`sap.ui.comp.smarttable.SmartTable`**
 
-We have provided a new option for `customizeConfig` property: The `clientSideMandatoryCheck` property now allows you to run a check on client side whether a field of the `sap.ui.comp.smartfield.SmartField` control created inside the table has a value. For more information, see the  [API Reference](https://ui5.sap.com/#/api/sap.ui.comp.smarttable.SmartTable%23methods/getCustomizeConfig)  and the [Sample](https://ui5.sap.com/#/entity/sap.ui.comp.smarttable.SmartTable/sample/sap.ui.comp.sample.smarttable.mtableCustomizeConfig).
+We have provided a new option for `customizeConfig` property: The `clientSideMandatoryCheck` property now allows you to run a check on client side whether a field of the `sap.ui.comp.smartfield.SmartField` control created inside the table has a value. For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.comp.smarttable.SmartTable%23methods/getCustomizeConfig)  and the [Sample](https://ui5.sap.com/#/entity/sap.ui.comp.smarttable.SmartTable/sample/sap.ui.comp.sample.smarttable.mtableCustomizeConfig).
 
 <sub>Changed•Control•Info Only•1.111</sub>
 
@@ -995,7 +995,7 @@ We have provided a new option for `customizeConfig` property: The `clientSideMan
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1012,6 +1012,8 @@ We have provided a new option for `customizeConfig` property: The `clientSideMan
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.115](what-s-new-in-sapui5-1-115-409fde8.md "With this release SAPUI5 is upgraded from version 1.114 to 1.115.")
 
 [What's New in SAPUI5 1.114](what-s-new-in-sapui5-1-114-890fce1.md "With this release SAPUI5 is upgraded from version 1.113 to 1.114.")
 

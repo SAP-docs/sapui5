@@ -6,7 +6,7 @@ With this release SAPUI5 is upgraded from version 1.86 to 1.87.
 
 
 
-** **
+****
 
 
 <table>
@@ -64,28 +64,28 @@ Available as of
 <tr>
 <td valign="top">
 
- 1.87 
+1.87 
 
 
 
 </td>
 <td valign="top">
 
- Deprecated 
+Deprecated 
 
 
 
 </td>
 <td valign="top">
 
- Announcement 
+Announcement 
 
 
 
 </td>
 <td valign="top">
 
- **End of Support for Microsoft Internet Explorer 11 after SAPUI5 1.87** 
+**End of Support for Microsoft Internet Explorer 11 after SAPUI5 1.87** 
 
 
 
@@ -119,28 +119,28 @@ Info Only
 <tr>
 <td valign="top">
 
- 1.87 
+1.87 
 
 
 
 </td>
 <td valign="top">
 
- New 
+New 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.ExpandableText`** 
+**`sap.m.ExpandableText`** 
 
 
 
@@ -158,7 +158,7 @@ You can use the control to display long texts, for example, inside a table, list
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -174,28 +174,28 @@ You can use the control to display long texts, for example, inside a table, list
 <tr>
 <td valign="top">
 
- 1.87 
+1.87 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **New Type for Spreadsheet Export** 
+**New Type for Spreadsheet Export** 
 
 
 
@@ -215,7 +215,7 @@ For more information, see [Spreadsheet Export](../04_Essentials/spreadsheet-expo
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -231,28 +231,28 @@ For more information, see [Spreadsheet Export](../04_Essentials/spreadsheet-expo
 <tr>
 <td valign="top">
 
- 1.87 
+1.87 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **SAPUI5 OData V4 Model** 
+**SAPUI5 OData V4 Model** 
 
 
 
@@ -279,7 +279,7 @@ For more information, see [OData V4 Model](../04_Essentials/odata-v4-model-5de13
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -295,28 +295,28 @@ For more information, see [OData V4 Model](../04_Essentials/odata-v4-model-5de13
 <tr>
 <td valign="top">
 
- 1.87 
+1.87 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.f.Card`** 
+**`sap.f.Card`** 
 
 
 
@@ -334,7 +334,7 @@ We no longer apply default `min-height` in the control, which allows smaller car
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -350,28 +350,28 @@ We no longer apply default `min-height` in the control, which allows smaller car
 <tr>
 <td valign="top">
 
- 1.87 
+1.87 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.f.GridList`** 
+**`sap.f.GridList`** 
 
 
 
@@ -396,7 +396,7 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.f.Gr
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -412,28 +412,28 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.f.Gr
 <tr>
 <td valign="top">
 
- 1.87 
+1.87 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.BadgeCustomData`** 
+**`sap.m.BadgeCustomData`** 
 
 
 
@@ -451,7 +451,7 @@ We have added a new `animation` property that enables you to choose the animatio
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -467,28 +467,28 @@ We have added a new `animation` property that enables you to choose the animatio
 <tr>
 <td valign="top">
 
- 1.87 
+1.87 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.Dialog`** 
+**`sap.m.Dialog`** 
 
 
 
@@ -497,7 +497,7 @@ We have added a new `animation` property that enables you to choose the animatio
 
 **`sap.m.Dialog`**
 
-You can now drag and resize the dialog using the keyboard. To enable this behavior, you have to set the `draggable` and/or `resizable` properties to `true`. While the keyboard focus is located on the title bar, the dialog can then be moved with the [Arrow\] keys and resized with  [Shift\] + [Arrow\]  keys. For more information, see the [Sample](https://ui5.sap.com/#/entity/sap.m.Dialog/sample/sap.m.sample.Dialog).
+You can now drag and resize the dialog using the keyboard. To enable this behavior, you have to set the `draggable` and/or `resizable` properties to `true`. While the keyboard focus is located on the title bar, the dialog can then be moved with the [Arrow\] keys and resized with [Shift\] + [Arrow\]  keys. For more information, see the [Sample](https://ui5.sap.com/#/entity/sap.m.Dialog/sample/sap.m.sample.Dialog).
 
 <sub>Changed•Control•Info Only•1.87</sub>
 
@@ -506,7 +506,7 @@ You can now drag and resize the dialog using the keyboard. To enable this behavi
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -522,28 +522,28 @@ You can now drag and resize the dialog using the keyboard. To enable this behavi
 <tr>
 <td valign="top">
 
- 1.87 
+1.87 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.Image`** 
+**`sap.m.Image`** 
 
 
 
@@ -561,7 +561,7 @@ With the new `lazyLoading` property, you can now ensure that off-screen images a
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -577,28 +577,28 @@ With the new `lazyLoading` property, you can now ensure that off-screen images a
 <tr>
 <td valign="top">
 
- 1.87 
+1.87 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.PlanningCalendar`** 
+**`sap.m.PlanningCalendar`** 
 
 
 
@@ -623,7 +623,7 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.Pl
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -639,28 +639,28 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.Pl
 <tr>
 <td valign="top">
 
- 1.87 
+1.87 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.Text`** 
+**`sap.m.Text`** 
 
 
 
@@ -678,7 +678,7 @@ The new `emptyIndicatorMode` property allows developers to display an empty text
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -694,28 +694,28 @@ The new `emptyIndicatorMode` property allows developers to display an empty text
 <tr>
 <td valign="top">
 
- 1.87 
+1.87 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.Title`** 
+**`sap.m.Title`** 
 
 
 
@@ -733,7 +733,7 @@ You can now place a link as a title. To enable this functionality, we have intro
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -749,28 +749,28 @@ You can now place a link as a title. To enable this functionality, we have intro
 <tr>
 <td valign="top">
 
- 1.87 
+1.87 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.smartchart.SmartChart`** 
+**`sap.ui.comp.smartchart.SmartChart`** 
 
 
 
@@ -797,7 +797,7 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.c
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -813,28 +813,28 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.c
 <tr>
 <td valign="top">
 
- 1.87 
+1.87 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.smartfield.SmartField`, `sap.ui.comp.smartform.SmartForm`** 
+**`sap.ui.comp.smartfield.SmartField`, `sap.ui.comp.smartform.SmartForm`** 
 
 
 
@@ -868,7 +868,7 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.c
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -884,28 +884,28 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.c
 <tr>
 <td valign="top">
 
- 1.87 
+1.87 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.smartfield.SmartField`** 
+**`sap.ui.comp.smartfield.SmartField`** 
 
 
 
@@ -925,7 +925,7 @@ We have extended `sap.m.ComboBox` with our own control `sap.ui.comp.smartfield.C
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -941,28 +941,28 @@ We have extended `sap.m.ComboBox` with our own control `sap.ui.comp.smartfield.C
 <tr>
 <td valign="top">
 
- 1.87 
+1.87 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.smarttable.SmartTable`** 
+**`sap.ui.comp.smarttable.SmartTable`** 
 
 
 
@@ -982,7 +982,7 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.c
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -998,28 +998,28 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.c
 <tr>
 <td valign="top">
 
- 1.87 
+1.87 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.smartvariants.SmartVariantManagement`** 
+**`sap.ui.comp.smartvariants.SmartVariantManagement`** 
 
 
 
@@ -1044,7 +1044,7 @@ For more information, see the [Sample](https://ui5.sap.com/#/entity/sap.ui.comp.
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1060,28 +1060,28 @@ For more information, see the [Sample](https://ui5.sap.com/#/entity/sap.ui.comp.
 <tr>
 <td valign="top">
 
- 1.87 
+1.87 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.integration.widgets.Card`** 
+**`sap.ui.integration.widgets.Card`** 
 
 
 
@@ -1110,7 +1110,7 @@ For more information, see the [Sample](https://ui5.sap.com/#/entity/sap.ui.comp.
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1126,28 +1126,28 @@ For more information, see the [Sample](https://ui5.sap.com/#/entity/sap.ui.comp.
 <tr>
 <td valign="top">
 
- 1.87 
+1.87 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.layout.cssgrid.ResponsiveColumnLayout`** 
+**`sap.ui.layout.cssgrid.ResponsiveColumnLayout`** 
 
 
 
@@ -1165,7 +1165,7 @@ We have enhanced the layout with higher density of responsive breakpoints, provi
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1181,28 +1181,28 @@ We have enhanced the layout with higher density of responsive breakpoints, provi
 <tr>
 <td valign="top">
 
- 1.87 
+1.87 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- SAP Fiori Elements 
+SAP Fiori Elements 
 
 
 
 </td>
 <td valign="top">
 
- **SAP Fiori elements for OData V2** 
+**SAP Fiori elements for OData V2** 
 
 
 
@@ -1231,7 +1231,7 @@ The following changes and new features are available for SAP Fiori elements for 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1247,28 +1247,28 @@ The following changes and new features are available for SAP Fiori elements for 
 <tr>
 <td valign="top">
 
- 1.87 
+1.87 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- SAP Fiori Elements 
+SAP Fiori Elements 
 
 
 
 </td>
 <td valign="top">
 
- **SAP Fiori elements for OData V4** 
+**SAP Fiori elements for OData V4** 
 
 
 
@@ -1305,7 +1305,7 @@ The following changes and new features are available for SAP Fiori elements for 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1321,28 +1321,28 @@ The following changes and new features are available for SAP Fiori elements for 
 <tr>
 <td valign="top">
 
- 1.87 
+1.87 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Demo Kit HTML Title** 
+**Demo Kit HTML Title** 
 
 
 
@@ -1360,7 +1360,7 @@ We’ve improved the HTML title tag of the Demo Kit app to contain more informat
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1377,6 +1377,8 @@ We’ve improved the HTML title tag of the Demo Kit app to contain more informat
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.115](what-s-new-in-sapui5-1-115-409fde8.md "With this release SAPUI5 is upgraded from version 1.114 to 1.115.")
 
 [What's New in SAPUI5 1.114](what-s-new-in-sapui5-1-114-890fce1.md "With this release SAPUI5 is upgraded from version 1.113 to 1.114.")
 

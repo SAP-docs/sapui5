@@ -28,6 +28,8 @@ Most error messages are sufficient to figure out what has gone wrong, for exampl
 
 
 
+## Example
+
 Here are some examples of Gherkin console logs:
 
 -   `[GHERKIN] Running feature: 'Feature: Clicking Buttons Is a Life Saving Activity'`

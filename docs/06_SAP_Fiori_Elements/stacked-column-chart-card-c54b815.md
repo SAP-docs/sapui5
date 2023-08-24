@@ -11,9 +11,9 @@ There should be at least one dimension with the assigned **category** role and a
 
 The stacked column chart supports a color palette for semantic coloring.
 
-   
+  
   
 **Example of a Stacked Column Chart**
 
- ![](../01_Whats-New/images/WhatsNew_138_OVP_StackedColumn_751363a.png "Example of a Stacked Column Chart") 
+![](../01_Whats-New/images/WhatsNew_138_OVP_StackedColumn_751363a.png "Example of a Stacked Column Chart")
 

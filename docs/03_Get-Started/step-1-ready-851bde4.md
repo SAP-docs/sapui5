@@ -10,11 +10,11 @@ Let's get you ready for your journey! We bootstrap SAPUI5 in an HTML page and im
 
 ## Preview
 
-   
+  
   
 **The browser shows a "Ready" button that triggers a "Hello World" message**
 
- ![](images/Tutorial_Quick_Start_Step_1_9c157e9.png "The browser shows a "Ready" button that triggers a "Hello World" message") 
+![](images/Tutorial_Quick_Start_Step_1_9c157e9.png "The browser shows a "Ready" button that triggers a "Hello World" message")
 
 
 

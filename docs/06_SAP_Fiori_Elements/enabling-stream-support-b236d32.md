@@ -67,13 +67,13 @@ The following annotation must be set on the `entitylevel` if the stream is displ
 
 If the entity is annotated with `UI.IsImage`, then both the images and the media files are displayed on the UI as thumbnails.
 
- ![](images/Stream_Support_1_6239c98.png) 
+![](images/Stream_Support_1_6239c98.png)
 
 If the entity is not annotated with `UI.IsImage`, then both the images and the media files are displayed on the UI with icon and hyperlink.
 
- ![](images/Stream_Support_2_24af17e.png) 
+![](images/Stream_Support_2_24af17e.png)
 
- ![](images/Stream_Support_3_fc27c63.png) 
+![](images/Stream_Support_3_fc27c63.png)
 
 Label for the file uploader is picked from the `dataFiled` annotation.
 
@@ -108,12 +108,12 @@ In the draft apps, you can only upload or delete a stream when the UI is editabl
 
 If no file is present, a placeholder is displayed:
 
- ![](images/Stream_Support_4_adaa7a8.png) 
+![](images/Stream_Support_4_adaa7a8.png)
 
 > ### Note:  
 > An uploaded file cannot be viewed in the list report or the object page table. But that cannot be edited from the table. To upload a file you have to navigate to the corresponding object page. You cannot upload multiple files.
 > 
->  ![](images/Stream_Support_5_08edaaf.png) 
+> ![](images/Stream_Support_5_08edaaf.png)
 
 
 
@@ -134,15 +134,15 @@ Fields based on `Edm.Stream` have the following features:
 
 The following image shows an example of a list report from which end users can download a file:
 
- ![]() ![](images/Edm_Stream_List_Report_-_Download_File_5659cb3.png) 
+![]()![](images/Edm_Stream_List_Report_-_Download_File_5659cb3.png)
 
 The following image shows an example of an object page in display mode:
 
- ![](images/Edm_stream_File_Upload_in_Display_Mode_3d08541.png) 
+![](images/Edm_stream_File_Upload_in_Display_Mode_3d08541.png)
 
 The following image shows the object page containing file upload fields in edit mode:
 
- ![](images/Edm_stream_File_Upload_in_Edit_Mode_46c2706.png) 
+![](images/Edm_stream_File_Upload_in_Edit_Mode_46c2706.png)
 
 To get the file upload elements, proceed as follows:
 

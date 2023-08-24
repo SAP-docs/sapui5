@@ -16,11 +16,11 @@ The `NetworkGraph` control can be used to illustrate how different objects are r
 
 This control supports both directed and undirected graphs, as well as graphs that contain cycles. It also provides broad customization options, enabling you to separate the graph layout from its rendering and to position individual graph elements freely, for example, when displaying geospatial data on top of a map.
 
-   
+  
   
 **Network Graph Example**
 
- ![Network Graph Example](images/Network_Graph_screenshot_671dd30.png "Network Graph Example") 
+![Network Graph Example](images/Network_Graph_screenshot_671dd30.png "Network Graph Example")
 
 
 
@@ -41,7 +41,7 @@ This control supports both directed and undirected graphs, as well as graphs tha
     -   Custom layout – You can define your own algorithm that will be used to lay out your graph.
 
 
-    For details, see [ `sap.suite.ui.commons.networkgraph.layout`](https://ui5.sap.com/#/api/sap.suite.ui.commons.networkgraph.layout).
+    For details, see [`sap.suite.ui.commons.networkgraph.layout`](https://ui5.sap.com/#/api/sap.suite.ui.commons.networkgraph.layout).
 
 -   The process of drawing the graph consists of two phases:
 
@@ -69,14 +69,14 @@ This control supports both directed and undirected graphs, as well as graphs tha
     
     ```
 
-    For more information, see [ `sap.suite.ui.commons.networkgraph.Graph#preventInvalidation`](https://ui5.sap.com/#/api/sap.suite.ui.commons.networkgraph.Graph/methods/preventInvalidation).
+    For more information, see [`sap.suite.ui.commons.networkgraph.Graph#preventInvalidation`](https://ui5.sap.com/#/api/sap.suite.ui.commons.networkgraph.Graph/methods/preventInvalidation).
 
 
 **Appearance**
 
 -   **Grouping** – You can join nodes into a group, so they are displayed closer to one another. A group can be collapsed to hide the nodes that are included in it. Please note that grouping is available only for graphs that use layered layout.
 
-    For details, see [ `sap.suite.ui.commons.networkgraph.Group`](https://ui5.sap.com/#/api/sap.suite.ui.commons.networkgraph.Group).
+    For details, see [`sap.suite.ui.commons.networkgraph.Group`](https://ui5.sap.com/#/api/sap.suite.ui.commons.networkgraph.Group).
 
 -   **Node Shape** – You can choose between two node shapes: circular or rectangular. Depending on the node shape, the `width` and `height` properties of the node are treated differently:
 
@@ -85,7 +85,7 @@ This control supports both directed and undirected graphs, as well as graphs tha
     -   For circular nodes, the `height` property determines the diameter of the circle, while the `width` property is used as the width of the node's title and description.
 
 
-    For details, see [ `sap.suite.ui.commons.networkgraph.Node`](https://ui5.sap.com/#/api/sap.suite.ui.commons.networkgraph.Node).
+    For details, see [`sap.suite.ui.commons.networkgraph.Node`](https://ui5.sap.com/#/api/sap.suite.ui.commons.networkgraph.Node).
 
     **Other Properties** – In addition to shape, you can define some other properties:
 
@@ -100,7 +100,7 @@ This control supports both directed and undirected graphs, as well as graphs tha
 
 -   **Line Customization** – You can choose among several connector line styles: dashed, dotted, or solid, as well as define where the arrow should be positioned and where it should point to.
 
-    For details, see [ `sap.suite.ui.commons.networkgraph.LineType`](https://ui5.sap.com/#/api/sap.suite.ui.commons.networkgraph.LineType).
+    For details, see [`sap.suite.ui.commons.networkgraph.LineType`](https://ui5.sap.com/#/api/sap.suite.ui.commons.networkgraph.LineType).
 
 -   **Semantic Colors** – Nodes, groups of nodes, and connector lines may use semantic colors, based on their status. You can use any of the custom statuses defined by the `statuses` aggregation in the [`sap.suite.ui.commons.networkgraph.Graph`](https://ui5.sap.com/#/api/sap.suite.ui.commons.networkgraph.Graph) control or use the default statuses provided by [`sap.suite.ui.commons.networkgraph.ElementStatus`](https://ui5.sap.com/#/api/sap.suite.ui.commons.networkgraph.ElementStatus).
 
@@ -121,7 +121,7 @@ This control supports both directed and undirected graphs, as well as graphs tha
     
     ```
 
-    For details, see [ `sap.suite.ui.commons.networkgraph.layout`](https://ui5.sap.com/#/api/sap.suite.ui.commons.networkgraph.layout).
+    For details, see [`sap.suite.ui.commons.networkgraph.layout`](https://ui5.sap.com/#/api/sap.suite.ui.commons.networkgraph.layout).
 
     After that you can define the positions for each of your nodes using their `x` and `y` attributes that define the coordinates of the upper left corner of the node \(or upper right corner in languages that have right-to-left writings systems\).
 
@@ -136,7 +136,7 @@ This control supports both directed and undirected graphs, as well as graphs tha
 
     These methods do not trigger invalidation.
 
-    For details, see [ `sap.suite.ui.commons.networkgraph.Line`](https://ui5.sap.com/#/api/sap.suite.ui.commons.networkgraph.Line).
+    For details, see [`sap.suite.ui.commons.networkgraph.Line`](https://ui5.sap.com/#/api/sap.suite.ui.commons.networkgraph.Line).
 
 -   **Using Events for Graph Customization** – You can adjust the graph behavior through a variety of event calls. Such event calls may suppress the default behavior of certain events. For example, if you define the following function for a node, action buttons will no longer be displayed when the user clicks the node:
 
@@ -180,44 +180,21 @@ This control supports both directed and undirected graphs, as well as graphs tha
     <tr>
     <td valign="top">
     
-        Node
+    Node
 
 
     
     </td>
     <td valign="top">
     
-         `press` 
+    `press` 
 
 
     
     </td>
     <td valign="top">
     
-        Action buttons will not be displayed when the user clicks the node.
-
-
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-        Node
-
-
-    
-    </td>
-    <td valign="top">
-    
-         `collapseExpand` 
-
-
-    
-    </td>
-    <td valign="top">
-    
-        The node will not be expanded or collapsed when the user clicks the *Collapse/Expand* button.
+    Action buttons will not be displayed when the user clicks the node.
 
 
     
@@ -226,44 +203,21 @@ This control supports both directed and undirected graphs, as well as graphs tha
     <tr>
     <td valign="top">
     
-        Node
+    Node
 
 
     
     </td>
     <td valign="top">
     
-         `hover` 
+    `collapseExpand` 
 
 
     
     </td>
     <td valign="top">
     
-        Moving the mouse over the node will have no effect on the node appearance.
-
-
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-        Line
-
-
-    
-    </td>
-    <td valign="top">
-    
-         `press` 
-
-
-    
-    </td>
-    <td valign="top">
-    
-        Details popup will not be displayed when the user clicks the line.
+    The node will not be expanded or collapsed when the user clicks the *Collapse/Expand* button.
 
 
     
@@ -272,21 +226,21 @@ This control supports both directed and undirected graphs, as well as graphs tha
     <tr>
     <td valign="top">
     
-        Line
+    Node
 
 
     
     </td>
     <td valign="top">
     
-         `hover` 
+    `hover` 
 
 
     
     </td>
     <td valign="top">
     
-        Moving the mouse over the line will have no effect on the line appearance.
+    Moving the mouse over the node will have no effect on the node appearance.
 
 
     
@@ -295,21 +249,67 @@ This control supports both directed and undirected graphs, as well as graphs tha
     <tr>
     <td valign="top">
     
-        Group
+    Line
 
 
     
     </td>
     <td valign="top">
     
-         `showDetail` 
+    `press` 
 
 
     
     </td>
     <td valign="top">
     
-        Details dialog will not be displayed when the user clicks the *Group Details* icon.
+    Details popup will not be displayed when the user clicks the line.
+
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    Line
+
+
+    
+    </td>
+    <td valign="top">
+    
+    `hover` 
+
+
+    
+    </td>
+    <td valign="top">
+    
+    Moving the mouse over the line will have no effect on the line appearance.
+
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    Group
+
+
+    
+    </td>
+    <td valign="top">
+    
+    `showDetail` 
+
+
+    
+    </td>
+    <td valign="top">
+    
+    Details dialog will not be displayed when the user clicks the *Group Details* icon.
 
 
     

@@ -45,7 +45,7 @@ In the sample above, the resource model `i18n` is enhanced with a `travel` termi
         "name": "sap.fe.templates.ListReport",
         "options": {
             "settings": {
-                "entitySet": "LineItems",
+                "contextPath": "/LineItems",
                 "enhanceI18n": ["i18n/ManageItemsListReport.properties", "i18n"],
                 "variantManagement": "Page",
                 "initialLoad": true,

@@ -2,7 +2,7 @@
 
 # Tables
 
- SAP Fiori elements supports several table types.
+SAP Fiori elements supports several table types.
 
 You can use the following table types:
 

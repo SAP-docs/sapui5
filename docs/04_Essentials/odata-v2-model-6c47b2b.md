@@ -27,14 +27,14 @@ Feature
 </th>
 <th valign="top">
 
- `sap.ui.model.odata.v2.ODataModel` 
+`sap.ui.model.odata.v2.ODataModel` 
 
 
 
 </th>
 <th valign="top">
 
- `sap.ui.model.odata.ODataModel` 
+`sap.ui.model.odata.ODataModel` 
 
 
 
@@ -284,7 +284,7 @@ The requests to the service to fetch data are made automatically based on the da
 
 [API Reference: `sap.ui.model.odata.v2.ODataModel`](https://ui5.sap.com/#/api/sap.ui.model.odata.v2.ODataModel)
 
- <a name="loio218afa0780da42fd982b72e992fb57d2"/>
+<a name="loio218afa0780da42fd982b72e992fb57d2"/>
 
 <!-- loio218afa0780da42fd982b72e992fb57d2 -->
 
@@ -308,7 +308,7 @@ When creating an `ODataModel` instance, a request is sent to retrieve the servic
 http://services.odata.org/Northwind/Northwind.svc/$metadata
 ```
 
- <a name="loio71a3ae02691147abaf6d78a553d50161"/>
+<a name="loio71a3ae02691147abaf6d78a553d50161"/>
 
 <!-- loio71a3ae02691147abaf6d78a553d50161 -->
 
@@ -326,7 +326,7 @@ var oMetadata = oModel.getServiceMetadata();
 > ### Note:  
 > In the `v2.ODataModel`, the service metadata is loaded asynchronously. It is not possible to load it synchronously. To get notified when the loading is finished, attach the `metadataLoaded` event.
 
- <a name="loio82afe9152177428290cc9d5dbd90e245"/>
+<a name="loio82afe9152177428290cc9d5dbd90e245"/>
 
 <!-- loio82afe9152177428290cc9d5dbd90e245 -->
 
@@ -367,7 +367,7 @@ There are different ways to add URL parameters to the requests:
     ```
 
 
- <a name="loio7370a173015e49929e011d6ab6b4885c"/>
+<a name="loio7370a173015e49929e011d6ab6b4885c"/>
 
 <!-- loio7370a173015e49929e011d6ab6b4885c -->
 
@@ -408,7 +408,7 @@ To do this, provide a map of headers to the OData model constructor or use the `
     > For additional methods and parameters, see the [API Reference: sap.ui.model.odata.v2.ODataModel](https://ui5.sap.com/#/api/sap.ui.model.odata.v2.ODataModel). 
 
 
- <a name="loioc4be40ce21ff4d0485b1d8f8114f7426"/>
+<a name="loioc4be40ce21ff4d0485b1d8f8114f7426"/>
 
 <!-- loioc4be40ce21ff4d0485b1d8f8114f7426 -->
 
@@ -454,7 +454,7 @@ Navigation properties, used to identify a single entity or a collection of entit
 
 For more information on addressing OData entries, see the URI conventions documentation on [http://www.odata.org](http://www.odata.org).
 
- <a name="loioadd47c3966dd40489e952bb4f5f74a7c"/>
+<a name="loioadd47c3966dd40489e952bb4f5f74a7c"/>
 
 <!-- loioadd47c3966dd40489e952bb4f5f74a7c -->
 
@@ -476,7 +476,7 @@ You can only access single entities and properties with this method. To access e
 > ### Note:  
 > The ODataModel uses the `$skip` and `$top` URL parameters for paging. It is possible that data is modified between two paging requests, for example entities could be added or removed, and this may lead to data inconsistencies.
 
- <a name="loio4c4cd99af9b14e08bb72470cc7cabff4"/>
+<a name="loio4c4cd99af9b14e08bb72470cc7cabff4"/>
 
 <!-- loio4c4cd99af9b14e08bb72470cc7cabff4 -->
 
@@ -684,7 +684,7 @@ The following example shows snippets for a view controller coding that implement
 > oModel.submitChanges();
 > ```
 
- <a name="loioff667e12b8714f3595e68f3e7c0e7a14"/>
+<a name="loioff667e12b8714f3595e68f3e7c0e7a14"/>
 
 <!-- loioff667e12b8714f3595e68f3e7c0e7a14 -->
 
@@ -740,7 +740,7 @@ The `create` and `update` methods also require a mandatory `oData` parameter for
     ```
 
 
- <a name="loio94e302455f8044e79de759c86bb295a2"/>
+<a name="loio94e302455f8044e79de759c86bb295a2"/>
 
 <!-- loio94e302455f8044e79de759c86bb295a2 -->
 
@@ -748,7 +748,7 @@ The `create` and `update` methods also require a mandatory `oData` parameter for
 
 OData uses HTTP ETags for optimistic concurrency control. The service must be configured to provide them. The ETag can be passed within the parameters map for every CRUD request. If no ETag is passed, the ETag of the cached entity is used, if it is loaded already.
 
- <a name="loio30362c1cafd244dd86752e28993bbcdd"/>
+<a name="loio30362c1cafd244dd86752e28993bbcdd"/>
 
 <!-- loio30362c1cafd244dd86752e28993bbcdd -->
 
@@ -756,7 +756,7 @@ OData uses HTTP ETags for optimistic concurrency control. The service must be co
 
 To address cross-site request forgery, an OData service may require XSRF tokens for change requests by the client application. In this case, the client has to fetch a token from the server and send it with each change request to the server. The OData model fetches the XSRF token when reading the metadata and then automatically sends it with each write request header. If the token is no longer valid, a new token can be fetched by calling the `refreshSecurityToken` function on the OData model. The token is fetched with a request to the service root URL, which usually responds with the service document. To get a valid token, make sure that the response is **not** cached.
 
- <a name="loio66a130fa4d10411b8fc90df00185554b"/>
+<a name="loio66a130fa4d10411b8fc90df00185554b"/>
 
 <!-- loio66a130fa4d10411b8fc90df00185554b -->
 
@@ -764,7 +764,7 @@ To address cross-site request forgery, an OData service may require XSRF tokens 
 
 The `refresh` function refreshes all data within an OData model. Each binding reloads its data from the server. For list or context bindings, a new request to the back end is triggered. If the XSRF token is no longer valid, it has to be fetched again with a `read` request to the service document. Data that has been imported via manual CRUD requests is **not** reloaded automatically.
 
- <a name="loio8a6ae1d390534d05a560bf350af59c29"/>
+<a name="loio8a6ae1d390534d05a560bf350af59c29"/>
 
 <!-- loio8a6ae1d390534d05a560bf350af59c29 -->
 
@@ -843,7 +843,7 @@ Similar to the `groupId`, you can use a `changeSetId` for OData change requests:
 > oModel.submitChanges({success: mySuccessHandler, error: myErrorHandler});
 > ```
 
- <a name="loio42b3ca19a47d49a3b4ba5f34ca0d1f7e"/>
+<a name="loio42b3ca19a47d49a3b4ba5f34ca0d1f7e"/>
 
 <!-- loio42b3ca19a47d49a3b4ba5f34ca0d1f7e -->
 
@@ -872,7 +872,7 @@ oModel.setChangeGroups({
 oModel.submitChanges({groupId: "myGroupId", success: mySuccessHandler, error: myErrorHandler});
 ```
 
-To collect the changes for all entity types in the same batch group, use '\*’ as `EntityType`. If the change is not set to deferred, the changes are sent to the backend immediately. By setting the `single` parameter for `changeSet` to true or false, you define if each change results in its own change set \(`true`\) or if all changes are collected in one change set \(`false`\). The model only takes care of the `changeSetId` if `single` is set to `false`.
+To collect the changes for all entity types in the same batch group, use an asterisk \(`"*"`\) as the entity type name. If the change is not set to deferred, the changes are sent to the back end immediately. By setting the `single` parameter for the change set to `true` or `false`, you can define whether each change results in its own change set \(`true`\) or whether all changes are collected in one change set \(`false`\). The model only takes the `changeSetId` into account if `single` is set to `false`.
 
 > ### Note:  
 > The first change of an entity defines the order in the change set.
@@ -891,7 +891,7 @@ oModel.setProperty("/myEntity(0)", oValue);
 oModel.resetChanges(["/myEntity(0)"]);
 ```
 
- <a name="loiobf1fc3b4c9ab4bbc845a3f0e0940c004"/>
+<a name="loiobf1fc3b4c9ab4bbc845a3f0e0940c004"/>
 
 <!-- loiobf1fc3b4c9ab4bbc845a3f0e0940c004 -->
 
@@ -961,7 +961,7 @@ You can use these parameters in bindings in addition to the parameters described
     ```
 
 
- <a name="loio62149734b5c24507868e722fe87a75db"/>
+<a name="loio62149734b5c24507868e722fe87a75db"/>
 
 <!-- loio62149734b5c24507868e722fe87a75db -->
 
@@ -992,15 +992,15 @@ You may set the `preliminaryContext` parameter when creating an OData V2 model. 
 -   All context bindings have the `createPreliminaryContext` parameter set to `true`.
 -   All context bindings and all list bindings have the `usePreliminaryContext` parameter set to `true`.
 
-You can overrule this default by the corresponding parameters of the [`ODataContextBinding`](https://ui5.sap.com/#/api/sap.ui.model.odata.v2.ODataContextBinding) constructor or  [`ODataListBinding`](https://ui5.sap.com/#/api/sap.ui.model.odata.v2.ODataListBinding) constructor. In addition, it is possible not to use the general `preliminaryContext` parameter on the model \(which affects all bindings\), but just switch on preliminary context handling for pairs of parent and depending binding instances using these parameters.
+You can overrule this default by the corresponding parameters of the[`ODataContextBinding`](https://ui5.sap.com/#/api/sap.ui.model.odata.v2.ODataContextBinding) constructor or [`ODataListBinding`](https://ui5.sap.com/#/api/sap.ui.model.odata.v2.ODataListBinding) constructor. In addition, it is possible not to use the general `preliminaryContext` parameter on the model \(which affects all bindings\), but just switch on preliminary context handling for pairs of parent and depending binding instances using these parameters.
 
 The following example shows a context binding with the path **"/Products\(1\)"** \(e.g. created as element binding of an `sap.m.Panel` control\) which is the parent binding. The dependent relative binding with the path **"Supplier"** is a list binding created for a table showing all suppliers of the product \(e.g. created for the `rows` aggregation of a `sap.ui.table.Table` control\).
 
-   
+  
   
 **Simple Binding Example: Default Binding Resolution**
 
- ![](images/Simple_Binding_Example_e2fe691.png "Simple Binding Example: Default Binding Resolution") 
+![](images/Simple_Binding_Example_e2fe691.png "Simple Binding Example: Default Binding Resolution")
 
 Without using preliminary contexts, two consecutive OData requests will be issued, one for `Binding 0`, and afterwards one for `Binding 1`, as shown in the following table:
 
@@ -1034,7 +1034,7 @@ Content
 </td>
 <td valign="top">
 
- `GET Products(1)` 
+`GET Products(1)` 
 
 
 
@@ -1050,7 +1050,7 @@ Content
 </td>
 <td valign="top">
 
- `GET Products(1)/Supplier` 
+`GET Products(1)/Supplier` 
 
 
 
@@ -1060,11 +1060,11 @@ Content
 
 You can optimize the requests by setting the binding parameters as shown below:
 
-   
+  
   
 **Simple Binding Example: Binding Resolution Optimized**
 
- ![](images/Simple_Binding_Example_Optimized_57a4d12.png "Simple Binding Example: Binding Resolution Optimized") 
+![](images/Simple_Binding_Example_Optimized_57a4d12.png "Simple Binding Example: Binding Resolution Optimized")
 
 Here, `Binding 1` uses the preliminary context created by `Binding 0`, and thus the request URL can directly be resolved.
 
@@ -1122,7 +1122,7 @@ Content
 > 
 > Using the preliminary context feature allows you to circumvent these restrictions. You can merge multiple sub-requests into a single `$batch` query, yet you can easily include additional filters and sorters on the related subordinate entries.
 
- <a name="loio6cb8d585ed594ee4b447b5b560f292a4"/>
+<a name="loio6cb8d585ed594ee4b447b5b560f292a4"/>
 
 <!-- loio6cb8d585ed594ee4b447b5b560f292a4 -->
 
@@ -1196,7 +1196,7 @@ A function import is re-executed without calling `ODataModel#callFunction` again
 
 Failed function imports with changed parameter values are repeated automatically. To prevent the function call from being triggered again, you have to reset the changes via `ODataModel#resetChanges`, for example in the error handler of the function call.
 
- <a name="loioc40fc72612754bad877f374bdeb0f893"/>
+<a name="loioc40fc72612754bad877f374bdeb0f893"/>
 
 <!-- loioc40fc72612754bad877f374bdeb0f893 -->
 
@@ -1204,7 +1204,7 @@ Failed function imports with changed parameter values are repeated automatically
 
 SAPUI5 uses the concept of a "current language" \(see [Identifying the Language Code / Locale](identifying-the-language-code-locale-91f21f1.md)\). This language is automatically propagated to the OData service by the OData V2 model. For this reason, applications must not hard code the language themselves, e.g. they must not specify the `"sap-language"` URL parameter as a custom query option.
 
- <a name="loio341823349ed04df1813197f2a0d71db2"/>
+<a name="loio341823349ed04df1813197f2a0d71db2"/>
 
 <!-- loio341823349ed04df1813197f2a0d71db2 -->
 
@@ -3577,7 +3577,7 @@ At `Property`:
 
 [Class `sap.ui.model.odata.ODataMetaModel`](https://ui5.sap.com/#/api/sap.ui.model.odata.ODataMetaModel)
 
- <a name="loioaa9024c7c5444822a68daeb21a92bd51"/>
+<a name="loioaa9024c7c5444822a68daeb21a92bd51"/>
 
 <!-- loioaa9024c7c5444822a68daeb21a92bd51 -->
 

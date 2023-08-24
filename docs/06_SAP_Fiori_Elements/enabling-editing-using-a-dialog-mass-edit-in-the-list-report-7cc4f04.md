@@ -35,7 +35,7 @@ When `multiEdit` is enabled, by default the dialog displays editable fields corr
 
 When `MultiEdit` is enabled for an application, the option to edit appears in the table toolbar. You can select multiple records from the table and click *Edit* to launch the mass edit dialog, as shown in the following screenshot.
 
- ![](images/Enabling_Mass_Editing_Through_Dialog_LR_914eba7.png) 
+![](images/Enabling_Mass_Editing_Through_Dialog_LR_914eba7.png)
 
 You can also provide a `FieldGroup` annotation in the manifest with a particular qualifier to identify the `MultiEdit` fields. The `DataFields` in the `FieldGroup` annotation are displayed as the `MultiEdit` fields.
 

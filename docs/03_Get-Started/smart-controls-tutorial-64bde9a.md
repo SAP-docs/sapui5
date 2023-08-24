@@ -9,7 +9,7 @@ Smart controls are a specific category of SAPUI5 controls that have some special
 A primary example of such a feature is OData support: Typically, a smart control interprets OData metadata. In some cases, a smart control even persists an adapted version of the user interface that the user has defined for later usage.
 
 > ### Note:  
->  The controls in this library only support OData V2 and a default model \(named `undefined`\). 
+> The controls in this library only support OData V2 and a default model \(named `undefined`\). 
 
 In this tutorial, you see examples that should make the term “smart” even more tangible.
 

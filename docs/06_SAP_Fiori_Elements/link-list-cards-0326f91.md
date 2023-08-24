@@ -27,7 +27,7 @@ Provides an ordered list items. \(Optional\) You can
 -   Add a picture and/or subtitle to the list item.
 -   Configure the card size to view multiple columns, if the dashboard layout has multiple columns.
 
-![](images/StandardLLC_f27c6ec.png) 
+![](images/StandardLLC_f27c6ec.png)
 
 
 

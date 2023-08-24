@@ -16,19 +16,19 @@ You have the following options:
 
 -   **A single table for all views \("single table mode"\)**: The UI contains a single table instance, one table toolbar, and \(if activated\) one table variant management. To switch between the views, a segmented button is rendered in the table toolbar. If there are more than three views, a select control is rendered instead of a segmented button.
 
-       
+      
       
     **Single Table Mode**
 
-     ![](images/Single_Table_Mode_8a3bdfd.png "Single Table Mode") 
+    ![](images/Single_Table_Mode_8a3bdfd.png "Single Table Mode")
 
 -   **A separate table for each view \("multiple table mode"\)**: If there are n views, the UI contains n table instances. This results in n separate table toolbars and n separate table variant managements. An icon tab bar is rendered above the table for switching between the views \(table instances\). Only the table on the currently selected tab is visible.
 
-       
+      
       
     **Multiple Table Mode**
 
-     ![](images/Multiple_Table_Mode_1be5a97.png "Multiple Table Mode") 
+    ![](images/Multiple_Table_Mode_1be5a97.png "Multiple Table Mode")
 
 
 
@@ -45,11 +45,11 @@ You have the following options:
 
 -   In multiple table mode, in addition to tables, you can also display charts on specific tab pages.
 
-       
+      
       
     **Multiple Table Mode with Charts**
 
-     ![](images/Multiple_Table_Mode_with_Charts_a0ae409.png "Multiple Table Mode with Charts") 
+    ![](images/Multiple_Table_Mode_with_Charts_a0ae409.png "Multiple Table Mode with Charts")
 
 
 > ### Note:  
@@ -66,12 +66,11 @@ You have the following options:
 
 -   On each tab, you can also display data for different entity sets, for example, a sales order or a supplier. To do so, add the entity set to the corresponding tab in the manifest.
 
-       
+      
       
     **Multiple views on a list report with different entity sets**
 
-     ![](images/Multiple_Views_with_Multiple_Entity_Sets_1f20511.png "Multiple views on a list report with different entity
-    								sets") 
+    ![](images/Multiple_Views_with_Multiple_Entity_Sets_1f20511.png "Multiple views on a list report with different entity sets")
 
 
 
@@ -106,7 +105,7 @@ Make the settings as shown in the following sample code:
 >           "name": "sap.fe.templates.ListReport",
 >           "options": {
 >                "settings": {
->                     "entitySet": "FirstDraft",
+>                     "contextPath": "/FirstDraft",
 >                     "variantManagement": "Control",
 >                     "initialLoad": "Enabled",
 >                     "stickyMultiTabHeader": false,
@@ -119,7 +118,7 @@ Make the settings as shown in the following sample code:
 >                               },
 >                               {
 >                                    "key": "tab2",
->                                    "entitySet": "SecondDraft",
+>                                    "contextPath": "/SecondDraft",
 >                                    "annotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#Two"
 >                               }
 >                          ]

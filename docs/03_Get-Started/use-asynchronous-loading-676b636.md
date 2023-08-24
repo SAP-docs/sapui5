@@ -153,7 +153,7 @@ If modules follow the Asynchronous Module Definition \(AMD\) standard and the bo
 
 But it isn't enough to write AMD modules. You also need to prevent access to SAPUI5 classes via global names. For instance, do not use global namespaces like `new sap.m.Button()` but require the `Button` and call its constructor via the local AMD reference instead.
 
- For more information, see the [API Reference: `sap.ui.define`](https://ui5.sap.com/#/api/sap.ui/methods/sap.ui.define). 
+For more information, see the [API Reference: `sap.ui.define`](https://ui5.sap.com/#/api/sap.ui/methods/sap.ui.define). 
 
 Always avoid usages of `jQuery.sap.require` ! In order to enable modules to load asynchronously, use `sap.ui.define` to create modules \(e.g. controllers or components\) or `sap.ui.require` in other cases.
 

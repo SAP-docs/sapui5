@@ -18,11 +18,11 @@ To add custom columns to a tree table in the list report, follow the steps descr
 
 The table containing additional columns can look like this:
 
-   
+  
   
 **Custom columns in tree table in the list report**
 
- ![](images/Adding_Columns_to_a_Tree_Table_in_the_List_Report_24fb6d5.png "Custom columns in tree table in the list report") 
+![](images/Adding_Columns_to_a_Tree_Table_in_the_List_Report_24fb6d5.png "Custom columns in tree table in the list report")
 
 
 

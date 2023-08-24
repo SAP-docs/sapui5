@@ -54,7 +54,7 @@ The *Dimension* column is hidden, the *Weight* column is displayed in a pop-in w
 
 The described pop-in design is provided by a table by default. However, you can change the pop-in layout in the table by defining the relevant property like this: `popinLayout="GridSmall"` or `popinLayout="GridLarge"`. By default, `popinLayout="Block"` is set for a table. The pop-in columns are rendered as shown in the image above. With the `GridSmall` and `GridLarge` layouts, the pop-in columns are rendered next to each other if there is enough space available.
 
- ![](images/Popin_Layout_4b33c44.png) 
+![](images/Popin_Layout_4b33c44.png)
 
 For more information, see the [Sample](https://ui5.sap.com/#/entity/sap.m.Table/sample/sap.m.sample.Table). Use the `ComboBox` control provided in the table toolbar to switch between the different pop-in layouts and see the visual differences.
 

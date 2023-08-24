@@ -8,11 +8,11 @@ We now add a search field to our bulletin board and define a filter that represe
 
 ## Preview
 
-   
+  
   
 **Search field**
 
- ![](images/Tutorial_Testing_Step_12_b012fdf.png "Search field") 
+![](images/Tutorial_Testing_Step_12_b012fdf.png "Search field")
 
 
 

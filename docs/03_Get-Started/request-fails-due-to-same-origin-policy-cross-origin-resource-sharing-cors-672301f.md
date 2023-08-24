@@ -10,11 +10,11 @@ If you use a remote URL in your code, for example a remote OData service, such a
 
 ## Preview
 
-   
+  
   
 **Violations of the same-origin policy in Google Chrome**
 
- ![](images/Tutorial_Walkthrough_Step_26_CORS_2c36d72.png "Violations of the same-origin policy in Google Chrome") 
+![](images/Tutorial_Walkthrough_Step_26_CORS_2c36d72.png "Violations of the same-origin policy in Google Chrome")
 
 
 
@@ -99,7 +99,7 @@ After this change, you can run the app in SAP Business Application Studio withou
 
 A proxy is simply a service end point on the same domain of your app to overcome the restrictions. It receives requests from the app, forwards them to another server, and finally returns the corresponding response from the remote service.
 
-Follow the steps below to configure a proxy of your choice in your project. Make sure to replace the** `myProxy`** placeholder with your actual proxy name.
+Follow the steps below to configure a proxy of your choice in your project. Make sure to replace the**`myProxy`** placeholder with your actual proxy name.
 
 Prerequisites: NodeJS is installed on your machine.
 

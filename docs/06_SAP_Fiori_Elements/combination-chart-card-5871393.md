@@ -124,5 +124,5 @@ For combination charts:
   
 **Example of a Combination Chart Card**
 
- ![](../01_Whats-New/images/Whats_New_140_OVP_Combination_Chart_55139a9.png "Example of a Combination Chart Card") 
+![](../01_Whats-New/images/Whats_New_140_OVP_Combination_Chart_55139a9.png "Example of a Combination Chart Card")
 

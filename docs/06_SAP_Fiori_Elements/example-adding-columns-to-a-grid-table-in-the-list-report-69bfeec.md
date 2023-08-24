@@ -18,11 +18,11 @@ To add custom columns to a grid table in the list report, follow the steps descr
 
 The table containing additional columns can look like this:
 
-   
+  
   
 **Custom columns in a grid table in the list report**
 
- ![](images/Adding_a_Column_to_a_Grid_Table_in_the_List_Report_819b2d2.png "Custom columns in a grid table in the list report") 
+![](images/Adding_a_Column_to_a_Grid_Table_in_the_List_Report_819b2d2.png "Custom columns in a grid table in the list report")
 
 
 

@@ -8,12 +8,12 @@ In this step of our Walkthrough tutorial, we adjust the content density based on
 
 ## Preview
 
-   
+  
   
 **The content density is compact on desktop devices and cozy on touch-enabled devices**
 
- ![](images/SAPUI5_Walkthrough_Step_37_04b6669.png "The content density is compact on desktop devices and cozy on touch-enabled
-					devices") 
+![](images/SAPUI5_Walkthrough_Step_37_04b6669.png "The content density is compact on desktop devices and cozy on touch-enabled
+					devices")
 
 
 

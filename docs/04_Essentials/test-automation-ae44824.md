@@ -17,7 +17,7 @@ In the following section, we describe the setup with *Karma*, but you can of cou
 
 [`karma-ui5` on GitHub](https://github.com/SAP/karma-openui5/)
 
- <a name="loioa182676ed3714bd5b4f011eb29076f6c"/>
+<a name="loioa182676ed3714bd5b4f011eb29076f6c"/>
 
 <!-- loioa182676ed3714bd5b4f011eb29076f6c -->
 
@@ -127,7 +127,7 @@ You have installed the *current* or *LTS* version of *Node.js* from [https://nod
 
 [karma-ui5 on GitHub](https://github.com/SAP/karma-openui5)
 
- <a name="loio8c27b0ab239242c69f181208c9b8fb1d"/>
+<a name="loio8c27b0ab239242c69f181208c9b8fb1d"/>
 
 <!-- loio8c27b0ab239242c69f181208c9b8fb1d -->
 
@@ -169,7 +169,7 @@ You can launch karma also with a specific config file. It might make sense, for 
 karma start karma-ci.conf.js
 ```
 
- <a name="loio1851a066b0e34d84ae00f887445239e5"/>
+<a name="loio1851a066b0e34d84ae00f887445239e5"/>
 
 <!-- loio1851a066b0e34d84ae00f887445239e5 -->
 

@@ -97,5 +97,5 @@ The following CAP CDS sample code shows the global side effect with target field
 **Related Information**  
 
 
-[Draft Handling](draft-handling-ed9aa41.md "A draft is an interim version of a business entity that has not yet been explicitly saved as an active version. SAP Fiori elements support the creation of apps using draft handling.")
+[Draft Handling](draft-handling-ed9aa41.md "A draft is an interim version of a business entity that has not yet been explicitly saved as an active version. SAP Fiori elements supports the creation of apps using draft handling.")
 

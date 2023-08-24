@@ -10,11 +10,11 @@ In this step we avoid unnecessary back-end requests by preventing the destructio
 
 ## Preview
 
-   
+  
   
 **No visual change compared to the last step**
 
- ![A list of users with an added detail area](images/Tut_OD4_Step_9_6e9025b.png "No visual change compared to the last step") 
+![A list of users with an added detail area](images/Tut_OD4_Step_9_6e9025b.png "No visual change compared to the last step")
 
 
 

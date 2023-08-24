@@ -57,7 +57,7 @@ Any type
 </td>
 <td valign="top">
 
- `sap:text`=”DateLabel” \(or has annotation `Common.Text` whose Path=”DateLabel”\)
+`sap:text`=”DateLabel” \(or has annotation `Common.Text` whose Path=”DateLabel”\)
 
 
 
@@ -94,7 +94,7 @@ Edm.String
 </td>
 <td valign="top">
 
- `sap:semantics`=”year” \(or has annotation `IsCalendarYear`\)
+`sap:semantics`=”year” \(or has annotation `IsCalendarYear`\)
 
 
 
@@ -131,7 +131,7 @@ Edm.String
 </td>
 <td valign="top">
 
- `sap:semantics`=”yearmonth” \(or has annotation `IsCalendarYearMonth`\)
+`sap:semantics`=”yearmonth” \(or has annotation `IsCalendarYearMonth`\)
 
 
 
@@ -168,7 +168,7 @@ Edm.String
 </td>
 <td valign="top">
 
- `sap:semantics`=”yearmonthday” \(or has annotation `IsCalendarDate`\)
+`sap:semantics`=”yearmonthday” \(or has annotation `IsCalendarDate`\)
 
 
 

@@ -185,7 +185,7 @@ Contains two properties:
 <tr>
 <td valign="top">
 
- `smartBusiness` 
+`smartBusiness` 
 
 
 

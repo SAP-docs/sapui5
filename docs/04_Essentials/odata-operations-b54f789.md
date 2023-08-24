@@ -238,7 +238,7 @@ oModel.bindContext("name.space.DestroyOutdated(...)", oHeaderContext).execute();
 > 
 > -   The parent binding of a deferred operation must not be a deferred operation itself.
 > 
-> -   When executing a bound action, you can use the `bIgnoreETag` argument of  [`ODataContextBinding#execute`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataContextBinding/methods/execute) to actively ignore the ETag match that normally happens \(technically, the header *"If-Match : \*"* will be used\). This is useful if a second bound action for the same entity is to be executed within the same batch \(especially if it is in a different change set\). An example would be "prepare" and "activate" for draft handling. Without this, the second bound action would be rejected, because the client sent the initial ETag via the *"If-Match"* header, but the first bound action changes that ETag on the server before the second one is executed.
+> -   When executing a bound action, you can use the `bIgnoreETag` argument of [`ODataContextBinding#execute`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataContextBinding/methods/execute) to actively ignore the ETag match that normally happens \(technically, the header *"If-Match : \*"* will be used\). This is useful if a second bound action for the same entity is to be executed within the same batch \(especially if it is in a different change set\). An example would be "prepare" and "activate" for draft handling. Without this, the second bound action would be rejected, because the client sent the initial ETag via the *"If-Match"* header, but the first bound action changes that ETag on the server before the second one is executed.
 
 
 
@@ -271,7 +271,7 @@ In some cases an action should not be performed in case warnings are present, un
 
 The strict handling is requested by the client with the HTTP request header `Prefer:handling=strict`. The server replies with HTTP status code `412 Precondition Failed` and the response header `Preference-Applied:handling=strict` if the request fails because the preference was applied.
 
-To request this behavior, you have to provide `fnOnStrictHandlingFailed` as a callback function when invoking  [`sap.ui.model.odata.v4.ODataContextBinding#execute`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataContextBinding/methods/execute) . This callback is called if the action is rejected with HTTP status code `412 Precondition Failed` and the response header `Preference-Applied:handling=strict`. All messages of the OData error are passed to the callback as an array of  [`sap.ui.core.message.Message`](https://ui5.sap.com/#/api/sap.ui.core.message.Message) . These messages are not reported to the message model. The callback may be used to visualize the messages and has to return a `Promise` resolving with a `boolean` value. If this `Promise` resolves with `true`, the bound action is repeated, now without requesting `Prefer:handling=strict`. Otherwise, the `Promise` returned by `sap.ui.model.odata.v4.ODataContextBinding#execute` will be canceled.
+To request this behavior, you have to provide `fnOnStrictHandlingFailed` as a callback function when invoking [`sap.ui.model.odata.v4.ODataContextBinding#execute`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataContextBinding/methods/execute) . This callback is called if the action is rejected with HTTP status code `412 Precondition Failed` and the response header `Preference-Applied:handling=strict`. All messages of the OData error are passed to the callback as an array of [`sap.ui.core.message.Message`](https://ui5.sap.com/#/api/sap.ui.core.message.Message) . These messages are not reported to the message model. The callback may be used to visualize the messages and has to return a `Promise` resolving with a `boolean` value. If this `Promise` resolves with `true`, the bound action is repeated, now without requesting `Prefer:handling=strict`. Otherwise, the `Promise` returned by `sap.ui.model.odata.v4.ODataContextBinding#execute` will be canceled.
 
 To enable strict handling for the above example, the controller code snippet may look like this:
 
@@ -343,7 +343,7 @@ To enable strict handling for the above example, the controller code snippet may
 > },
 > ```
 
- See also the example in the Demo Kit: [Controller Code for `sap.ui.core.sample.odata.v4.SalesOrders.onConfirmSalesOrder`](https://ui5.sap.com/#/entity/sap.ui.model.odata.v4.ODataModel/sample/sap.ui.core.sample.odata.v4.SalesOrders/code/Main.controller.js)
+See also the example in the Demo Kit: [Controller Code for `sap.ui.core.sample.odata.v4.SalesOrders.onConfirmSalesOrder`](https://ui5.sap.com/#/entity/sap.ui.model.odata.v4.ODataModel/sample/sap.ui.core.sample.odata.v4.SalesOrders/code/Main.controller.js)
 
 
 

@@ -21,69 +21,69 @@ There are several features that can be enabled in `SmartChart`, but for this tut
 
 This is what the smart chart looks like initially after firing the query:
 
-   
+  
   
 **Initial Look of Smart Chart after Firing Query**
 
- ![](images/Smart_Controls_Tutorial_Step_09a_935f9ed.png "Initial Look of Smart Chart after Firing Query") 
+![](images/Smart_Controls_Tutorial_Step_09a_935f9ed.png "Initial Look of Smart Chart after Firing Query")
 
 The toolbar of the smart chart contains the header, and next to it is the view management dialog that has been explained in detail in one of the previous steps.
 
 Next to the view management dialog is a button labeled *Jump To*. This button is disabled by default, but once a column has been selected inside the chart, this button gets enabled. When we click this button, a popup appears that contains details of the selected column. You can also navigate to related apps from here. This feature is enabled using `SemanticObjectController`. When we hover the mouse pointer over a column, a popup is displayed to provide additional information.
 
-   
+  
   
 **Semantic Navigation Feature**
 
- ![](images/Smart_Controls_Tutorial_Step_09b_77403c9.png "Semantic Navigation Feature") 
+![](images/Smart_Controls_Tutorial_Step_09b_77403c9.png "Semantic Navigation Feature")
 
 The button at the right-hand side of the toolbar can be used for selecting the chart type:
 
-   
+  
   
 **Selection of Chart Type**
 
- ![](images/Smart_Controls_Tutorial_Step_09c_d54fb32.png "Selection of Chart Type") 
+![](images/Smart_Controls_Tutorial_Step_09c_d54fb32.png "Selection of Chart Type")
 
 The two buttons next to the *Jump To* button can be used to drill up and drill down into the chart. Using this feature you can display even more detailed information in the chart:
 
-   
+  
   
 **Drillup and Drilldown Features**
 
- ![](images/Smart_Controls_Tutorial_Step_09d_8679d39.png "Drillup and Drilldown Features") 
+![](images/Smart_Controls_Tutorial_Step_09d_8679d39.png "Drillup and Drilldown Features")
 
 If we set the `showDetailsButton` and `showDrillBreadcrumbs` properties to `true`, we can also use an alternative drilldown function: A button labeled *Drilldown* is shown. If a column is selected inside the chart, this button changes into a *Details* button. When you click this button, again, a popup appears that contains details of the selected column.
 
-   
+  
   
 **Drilldown by Dimensions**
 
- ![](images/Smart_Controls_Tutorial_Step_09_-_5_63fed30.png "Drilldown by Dimensions") 
+![](images/Smart_Controls_Tutorial_Step_09_-_5_63fed30.png "Drilldown by Dimensions")
 
 When you drill further down, you can see the breadcrumbs trail for the drilldown path on the left-hand side, which you can also use to drill up within the chart.
 
-   
+  
   
 **Further Drilldown**
 
- ![](images/Smart_Controls_Tutorial_Step_09e_-2_7eb0305.png "Further Drilldown") 
+![](images/Smart_Controls_Tutorial_Step_09e_-2_7eb0305.png "Further Drilldown")
 
 The next button can be used to toggle legend visibility:
 
-   
+  
   
 **Toggle Legend Visibility**
 
- ![](images/Smart_Controls_Tutorial_Step_09f_3e8568e.png "Toggle Legend Visibility") 
+![](images/Smart_Controls_Tutorial_Step_09f_3e8568e.png "Toggle Legend Visibility")
 
 The two buttons next to this in the toolbar are used for zooming in or out. This will help you to get a clearer picture of a particular entity. The next button in the toolbar is the *Settings* icon that opens the personalization dialog for the chart:
 
-   
+  
   
 **Dialog for Adding Measures and Dimensions**
 
- ![](images/Smart_Controls_Tutorial_Step_09g_18889d2.png "Dialog for Adding Measures and Dimensions") 
+![](images/Smart_Controls_Tutorial_Step_09g_18889d2.png "Dialog for Adding Measures and Dimensions")
 
 The button next to the settings can be used to display a chart in full screen mode. The chart will then take up 100 % width and height of the browser.
 
@@ -188,7 +188,7 @@ The following two functions are defined:
 -   `onNavigate()`
 
 
- `onNavigationTargetObtained()` is called when a column is selected and you click the *Jump To* button. With the click event the semantic parameters are obtained, and the function renders a navigation popover containing a simple form that presents detailed information of the entity selected as can be seen in figure 2.
+`onNavigationTargetObtained()` is called when a column is selected and you click the *Jump To* button. With the click event the semantic parameters are obtained, and the function renders a navigation popover containing a simple form that presents detailed information of the entity selected as can be seen in figure 2.
 
 `onNavigate()` is called when the links in the navigation popover are clicked. This is done to demonstrate how you add more functionality to the data in the navigation popover. In our example, we are just showing a message box and the navigation to one other link.
 
@@ -324,7 +324,7 @@ The most important point to keep in mind is that analytical annotations along wi
 
     Defines that a property of `EntityType` is treated as a measure.
 
--    `Annotation Term="com.sap.vocabularies.UI.v1.Chart`
+-   `Annotation Term="com.sap.vocabularies.UI.v1.Chart`
 
     Defines the UI annotation for rendering a chart.
 

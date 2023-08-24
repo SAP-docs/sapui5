@@ -10,7 +10,7 @@ In this step, we will create the `DeltaMicroChart` on the **Production Process**
 
 ## Preview
 
- ![](images/Step8_1_996b69f.jpg) 
+![](images/Step8_1_996b69f.jpg)
 
 
 

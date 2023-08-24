@@ -42,7 +42,7 @@ The header area of the `ProcessFlow` should contain a `HeaderContainer` with fou
 
 This is the final view of this page:
 
- ![](images/Step6_1_18be0c0.jpg) 
+![](images/Step6_1_18be0c0.jpg)
 
 
 
@@ -50,7 +50,7 @@ This is the final view of this page:
 
 ## Preview of this step
 
- ![](images/Step6_2_3cae5da.jpg) 
+![](images/Step6_2_3cae5da.jpg)
 
 
 

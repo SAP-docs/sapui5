@@ -8,23 +8,23 @@ In this step, we will add a new button to the home page to illustrate the usage 
 
 ## Preview
 
-   
+  
   
 **New button Show Employee Overview**
 
- ![](images/Tutorial_Navigation_and_Routing_Step_11a_02350a2.png "New button Show Employee Overview") 
+![](images/Tutorial_Navigation_and_Routing_Step_11a_02350a2.png "New button Show Employee Overview")
 
-   
+  
   
 **Employee Overview with search field**
 
- ![](images/Tutorial_Navigation_and_Routing_Step_11b_bf4ffb5.png "Employee Overview with search field") 
+![](images/Tutorial_Navigation_and_Routing_Step_11b_bf4ffb5.png "Employee Overview with search field")
 
-   
+  
   
 **Sort options for the Employee Overview**
 
- ![](images/Tutorial_Navigation_and_Routing_Step_11c_0842e39.png "Sort options for the Employee Overview") 
+![](images/Tutorial_Navigation_and_Routing_Step_11c_0842e39.png "Sort options for the Employee Overview")
 
 
 
@@ -32,11 +32,11 @@ In this step, we will add a new button to the home page to illustrate the usage 
 
 You can view and download all files in the Demo Kit at [Routing and Navigation - Step 11](https://ui5.sap.com/#/entity/sap.ui.core.tutorial.navigation/sample/sap.ui.core.tutorial.navigation.11) .
 
-   
+  
   
 **Folder Structure for this Step**
 
- 
+
 
 
 

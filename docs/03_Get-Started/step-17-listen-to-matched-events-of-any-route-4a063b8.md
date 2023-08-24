@@ -8,12 +8,12 @@ In the previous step, we have listened for bypassed events to detect possible te
 
 ## Preview
 
-   
+  
   
 **Console output for routes matched by listening to routeMatched events**
 
- ![](images/Tutorial_Navigation_and_Routing_Step_17_ea12aae.png "Console output for routes matched by listening to
-						routeMatched events") 
+![](images/Tutorial_Navigation_and_Routing_Step_17_ea12aae.png "Console output for routes matched by listening to
+						routeMatched events")
 
 
 

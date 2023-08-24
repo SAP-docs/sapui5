@@ -8,11 +8,11 @@ In this step, we will step back from our tests and application features that we 
 
 ## Preview
 
-   
+  
   
 **A Selenium runner for the test suite of the bulletin board**
 
- ![](images/Tutorial_Testing_Step_10_a715577.png "A Selenium runner for the test suite of the bulletin board") 
+![](images/Tutorial_Testing_Step_10_a715577.png "A Selenium runner for the test suite of the bulletin board")
 
 
 

@@ -60,6 +60,8 @@ jQuery(document).on(Device.support.touch ? "touchmove" : "mousemove", function(o
 
 
 
+## Example
+
 We have also adapted some controls within `sap.m` for devices supporting both mouse and touch input. Let's take `sap/m/RatingIndicator` as an example, where the user can drag a rating indicator to change a rating value. This is implemented by registering a `touchmove` or `mousemove` event in the `ontouchstart` function, and `deregister` from `touchmove` or `mousemove`by listening to `touchend`, `touchcancel` or `mouseup`.
 
 **Code before the adaptation:**

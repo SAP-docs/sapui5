@@ -18,11 +18,11 @@ To add custom columns to an analytical table on the object page, follow the step
 
 The table containing additional columns can look like this:
 
-   
+  
   
 **Custom columns in an analytical table on the object page**
 
- ![](images/Adding_Columns_to_an_Analytical_Table_on_the_Object_Page_508f303.png "Custom columns in an analytical table on the object page") 
+![](images/Adding_Columns_to_an_Analytical_Table_on_the_Object_Page_508f303.png "Custom columns in an analytical table on the object page")
 
 
 

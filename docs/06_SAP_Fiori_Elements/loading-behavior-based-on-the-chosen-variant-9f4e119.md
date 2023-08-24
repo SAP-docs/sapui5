@@ -74,7 +74,7 @@ This is the loading behavior:
 
 -   `always`: Data for the standard variant is always loaded. End users can override this by deselecting the *Apply Automatically* checkbox in the *Manage Views* dialog.
 
--    `never`: Data for the standard variant is not loaded automatically, and the user has to actively click the *Go* button. End users can override this by selecting the *Apply Automatically* checkbox in the *Manage Views* dialog.
+-   `never`: Data for the standard variant is not loaded automatically, and the user has to actively click the *Go* button. End users can override this by selecting the *Apply Automatically* checkbox in the *Manage Views* dialog.
 
 -   Undefined or set to `ifAnyFilterExist`: Data for the standard variant is loaded only if the default filter values have been defined \(by an administrator or a user, or passed from another app\). This is the default behavior for any newly generated apps. The *Apply Automatically* check box appears checked.
 
@@ -116,7 +116,7 @@ Application developers can set `initialLoad` to `Auto` \(default\), `Disabled` ,
 >      "name": "sap.fe.templates.AnalyticalListPage",
 >      "options": {
 >           "settings": {
->                "entitySet": "SalesOrderManage",
+>                "contextPath": "/SalesOrderManage",
 >                "initialLoad": "Enabled"
 >           }
 >      }
@@ -129,7 +129,7 @@ This is the loading behavior:
 
 -   `Auto`: An initial load of data only occurs if some default filter values have been set in the filter bar. The *Apply Automatically* checkbox is provided in the *Manage Views* dialog together with the following text: *If predefined filter values are available, the content loads automatically.* This is the default setting.
 
--    `Disabled`: An initial load of data does not occur for the standard variant and the user has to actively click the *Go* button. End users can override this by selecting the *Apply Automatically* checkbox in the *Manage Views* dialog.
+-   `Disabled`: An initial load of data does not occur for the standard variant and the user has to actively click the *Go* button. End users can override this by selecting the *Apply Automatically* checkbox in the *Manage Views* dialog.
 
 -   `Enabled`: An initial load of data occurs for the standard variant. End users can override this by deselecting the *Apply Automatically* checkbox in the *Manage Views* dialog.
 

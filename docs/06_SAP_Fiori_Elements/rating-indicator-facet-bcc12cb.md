@@ -12,11 +12,11 @@ The rating indicator allows you to visually represent the rating types described
 
 This rating shows an average of all ratings recorded for the object and is displayed as shown below in the object page header \(*Display* mode\):
 
-   
+  
   
 **Aggregated Rating Indicator**
 
- ![](images/AggregatedRatingIndicator_4811ec8.png "Aggregated Rating Indicator") 
+![](images/AggregatedRatingIndicator_4811ec8.png "Aggregated Rating Indicator")
 
 When the rating indicator shows an aggregated rating, it contains the following elements:
 
@@ -41,11 +41,11 @@ When the rating indicator shows an aggregated rating, it contains the following 
 
 This rating shows a single rating, such the user's own rating for the object. In the examples below, the non-aggregated rating is used to display the user's own rating. This rating type is displayed as shown below:
 
-   
+  
   
 **Non-Aggregated Rating Indicator**
 
- ![](images/NonAggregatedRating_e8f6dd1.png "Non-Aggregated Rating Indicator") 
+![](images/NonAggregatedRating_e8f6dd1.png "Non-Aggregated Rating Indicator")
 
 When the rating indicator shows a non-aggregated rating, it contains the following elements:
 
@@ -67,11 +67,11 @@ When the rating indicator shows a non-aggregated rating, it contains the followi
 
 When the object page is in *Edit* mode, the rating indicator moves into the header facet and appears as shown below with the title only. For an aggregated rating, the number of ratings is shown in parentheses after the stars. Note that the rating indicator is still read-only in this mode.
 
-   
+  
   
 **Rating Indicator in Edit Mode**
 
- ![](images/RatingIndicator_EditMode_b9fe8ad.png "Rating Indicator in Edit Mode") 
+![](images/RatingIndicator_EditMode_b9fe8ad.png "Rating Indicator in Edit Mode")
 
 
 

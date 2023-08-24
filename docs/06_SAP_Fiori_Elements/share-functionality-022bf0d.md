@@ -18,7 +18,7 @@ The "share" functionality allows users to share the current application state us
 
 -   *Share: Microsoft Teams*
 
-     ![](images/Microsoft_Teams_Share_Menu_As_Chat_and_As_Tab_f2cb0d3.png) 
+    ![](images/Microsoft_Teams_Share_Menu_As_Chat_and_As_Tab_f2cb0d3.png)
 
     When a user clicks the *Share* button and then the *Share: Microsoft Teams* option, a separate window opens with the available sharing options:
 
@@ -46,8 +46,6 @@ The "share" functionality allows users to share the current application state us
 > 
 > -   For applications using the flexible column layout, the "share" functionality is shown on the highest view level.
 > 
-> -   A dynamic tile is not created if the filter bar contains a semantic date. For more information about the semantic date range, see [Enabling Semantic Operators in the Filter Bar](enabling-semantic-operators-in-the-filter-bar-fef65d0.md).
-> 
 > -   The "share" functionality is not available for newly created objects in draft mode, so the button is not visible.
 > 
 > -   In SAP Fiori elements for OData V2, for draft objects with an existing active instance the "share" functionality will directly share the URL of the active instance.
@@ -65,6 +63,9 @@ The "share" functionality allows users to share the current application state us
 The "share" functionality is hidden for the creation pages of non-draft objects.
 
 During tile creation, you can change the tile type from dynamic to static using an extension. For more information, see [Extending the Bookmark Function to Save Static Tiles to the SAP Fiori Launchpad](extending-the-bookmark-function-to-save-static-tiles-to-the-sap-fiori-launchpad-7e34ea9.md).
+
+> ### Restriction:  
+> A dynamic tile is not created if the filter bar contains a semantic date. For more information about the semantic date range, see [Enabling Semantic Operators in the Filter Bar](enabling-semantic-operators-in-the-filter-bar-fef65d0.md).
 
 
 

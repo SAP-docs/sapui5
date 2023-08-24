@@ -39,44 +39,21 @@ Shortcut \(macOS\)
 <tr>
 <td valign="top">
 
- [Technical Information Dialog](../04_Essentials/technical-information-dialog-616a3ef.md#loio616a3ef07f554e20a3adf749c11f64e9) 
+[Technical Information Dialog](../04_Essentials/technical-information-dialog-616a3ef.md#loio616a3ef07f554e20a3adf749c11f64e9) 
 
 
 
 </td>
 <td valign="top">
 
-  [Ctrl\] + [Shift\] + [Alt\] + [P\]  
+[Ctrl\] + [Shift\] + [Alt\] + [P\]  
 
 
 
 </td>
 <td valign="top">
 
-  [Ctrl\] + [Shift\] + [Alt\] / [Option\] + [P\]  
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
- [Diagnostics Window](../04_Essentials/diagnostics-6ec18e8.md#loio6ec18e80b0ce47f290bc2645b0cc86e6) 
-
-
-
-</td>
-<td valign="top">
-
-  [Ctrl\] + [Shift\] + [Alt\] + [S\]  
-
-
-
-</td>
-<td valign="top">
-
-  [Ctrl\] + [Shift\] + [Alt\] / [Option\] + [S\]  
+[Ctrl\] + [Shift\] + [Alt\] /[Option\] + [P\]  
 
 
 
@@ -85,21 +62,44 @@ Shortcut \(macOS\)
 <tr>
 <td valign="top">
 
- [Test Recorder](../04_Essentials/test-recorder-2535ef9.md) 
+[Diagnostics Window](../04_Essentials/diagnostics-6ec18e8.md#loio6ec18e80b0ce47f290bc2645b0cc86e6) 
 
 
 
 </td>
 <td valign="top">
 
-  [Ctrl\] + [Shift\] + [Alt\] + [T\]  
+[Ctrl\] + [Shift\] + [Alt\] + [S\]  
 
 
 
 </td>
 <td valign="top">
 
-  [Ctrl\] + [Shift\] + [Alt\] / [Option\] + [T\]  
+[Ctrl\] + [Shift\] + [Alt\] /[Option\] + [S\]  
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+[Test Recorder](../04_Essentials/test-recorder-2535ef9.md) 
+
+
+
+</td>
+<td valign="top">
+
+[Ctrl\] + [Shift\] + [Alt\] + [T\]  
+
+
+
+</td>
+<td valign="top">
+
+[Ctrl\] + [Shift\] + [Alt\] /[Option\] + [T\]  
 
 
 

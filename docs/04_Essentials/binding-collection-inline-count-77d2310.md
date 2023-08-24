@@ -12,7 +12,7 @@ The OData V4 model allows for binding the inline count of the entity collection 
     items="{
         path : '/SalesOrderList',
         parameters : {
-            $count : true,
+            $count : true
         }
     }"
 >

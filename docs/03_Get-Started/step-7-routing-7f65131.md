@@ -10,12 +10,12 @@ In this step, we utilize the `sap.f.routing.Router`.
 
 ## Preview
 
-   
+  
   
 **Changing layouts based on the sap.f.routing.Router \(no visual changes to last step\)**
 
- ![](images/Floating_Footer_Fiori_2_0_Tutorial_24122e0.png "Changing layouts based on the sap.f.routing.Router (no
-					visual changes to last step)") 
+![](images/Floating_Footer_Fiori_2_0_Tutorial_24122e0.png "Changing layouts based on the sap.f.routing.Router (no
+					visual changes to last step)")
 
 
 

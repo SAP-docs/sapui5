@@ -30,7 +30,7 @@ Make the settings in the `manifest.json` as follows:
 
 The result is as follows:
 
- ![](images/Overriding_the_Horizontal_Alignment_of_Annotation-Based_Table_Columns_fc4e1b4.png) 
+![](images/Overriding_the_Horizontal_Alignment_of_Annotation-Based_Table_Columns_fc4e1b4.png)
 
 The supported values for the property `horizontalAlign` are "Begin" | "Center" | "End".
 

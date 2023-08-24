@@ -19,11 +19,11 @@ The Support Assistant is currently separated into two main parts:
 
 In the following diagram you can see how the Support Assistant is connected to the individual application layers.
 
-   
+  
   
 **Support Assistant Architecture**
 
- ![](images/Support_Assistant_Architecture_fad73ed.png "Support Assistant Architecture") 
+![](images/Support_Assistant_Architecture_fad73ed.png "Support Assistant Architecture")
 
 There are two different use cases for its integration:
 

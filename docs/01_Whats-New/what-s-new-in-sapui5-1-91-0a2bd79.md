@@ -6,7 +6,7 @@ With this release SAPUI5 is upgraded from version 1.90 to 1.91.
 
 
 
-** **
+****
 
 
 <table>
@@ -64,28 +64,28 @@ Available as of
 <tr>
 <td valign="top">
 
- 1.91 
+1.91 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **SAPUI5 OData V2 Model** 
+**SAPUI5 OData V2 Model** 
 
 
 
@@ -119,28 +119,28 @@ Info Only
 <tr>
 <td valign="top">
 
- 1.91 
+1.91 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **SAPUI5 OData V4 Model** 
+**SAPUI5 OData V4 Model** 
 
 
 
@@ -163,7 +163,7 @@ The new version of the SAPUI5 OData V4 model introduces the following features:
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -179,28 +179,28 @@ The new version of the SAPUI5 OData V4 model introduces the following features:
 <tr>
 <td valign="top">
 
- 1.91 
+1.91 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **New Data Type Property for Spreadsheet Export** 
+**New Data Type Property for Spreadsheet Export** 
 
 
 
@@ -218,7 +218,7 @@ The additional `utc` property is now available for date and time information. It
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -234,28 +234,28 @@ The additional `utc` property is now available for date and time information. It
 <tr>
 <td valign="top">
 
- 1.91 
+1.91 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.App`** 
+**`sap.m.App`** 
 
 
 
@@ -273,7 +273,7 @@ Until now, `sap.m.App` assumed that it wasn't nested and always appeared as the 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -289,28 +289,28 @@ Until now, `sap.m.App` assumed that it wasn't nested and always appeared as the 
 <tr>
 <td valign="top">
 
- 1.91 
+1.91 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.ExpandableText`** 
+**`sap.m.ExpandableText`** 
 
 
 
@@ -328,7 +328,7 @@ Until now, `sap.m.App` assumed that it wasn't nested and always appeared as the 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -344,28 +344,28 @@ Until now, `sap.m.App` assumed that it wasn't nested and always appeared as the 
 <tr>
 <td valign="top">
 
- 1.91 
+1.91 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.Table`** 
+**`sap.m.Table`** 
 
 
 
@@ -383,7 +383,7 @@ We introduced the `ColumnResizer` plugin that handles column resizing for a resp
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -399,28 +399,28 @@ We introduced the `ColumnResizer` plugin that handles column resizing for a resp
 <tr>
 <td valign="top">
 
- 1.91 
+1.91 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.smartfield.SmartField`** 
+**`sap.ui.comp.smartfield.SmartField`** 
 
 
 
@@ -438,7 +438,7 @@ The `SmartField` control now supports currency and unit of measure custom lists 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -454,28 +454,28 @@ The `SmartField` control now supports currency and unit of measure custom lists 
 <tr>
 <td valign="top">
 
- 1.91 
+1.91 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.smarttable.SmartTable`** 
+**`sap.ui.comp.smarttable.SmartTable`** 
 
 
 
@@ -496,7 +496,7 @@ The `SmartField` control now supports currency and unit of measure custom lists 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -512,28 +512,28 @@ The `SmartField` control now supports currency and unit of measure custom lists 
 <tr>
 <td valign="top">
 
- 1.91 
+1.91 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- SAP Fiori Elements 
+SAP Fiori Elements 
 
 
 
 </td>
 <td valign="top">
 
- **SAP Fiori elements for OData V4** 
+**SAP Fiori elements for OData V4** 
 
 
 
@@ -572,7 +572,7 @@ The following changes and new features are available for SAP Fiori elements for 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -588,28 +588,28 @@ The following changes and new features are available for SAP Fiori elements for 
 <tr>
 <td valign="top">
 
- 1.91 
+1.91 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- User Documentation 
+User Documentation 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.Table` Documentation Enhancement** 
+**`sap.m.Table` Documentation Enhancement** 
 
 
 
@@ -629,7 +629,7 @@ For more information, see [Configuring Responsive Behavior of a Table](../10_Mor
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -646,6 +646,8 @@ For more information, see [Configuring Responsive Behavior of a Table](../10_Mor
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.115](what-s-new-in-sapui5-1-115-409fde8.md "With this release SAPUI5 is upgraded from version 1.114 to 1.115.")
 
 [What's New in SAPUI5 1.114](what-s-new-in-sapui5-1-114-890fce1.md "With this release SAPUI5 is upgraded from version 1.113 to 1.114.")
 

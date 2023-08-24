@@ -158,35 +158,35 @@ Supported Controls
 </th>
 <th valign="top">
 
- `sapUiResponsivePadding--header` 
+`sapUiResponsivePadding--header` 
 
 
 
 </th>
 <th valign="top">
 
- `sapUiResponsivePadding--subHeader` 
+`sapUiResponsivePadding--subHeader` 
 
 
 
 </th>
 <th valign="top">
 
- `sapUiResponsivePadding--content` 
+`sapUiResponsivePadding--content` 
 
 
 
 </th>
 <th valign="top">
 
- `sapUiResponsivePadding--footer` 
+`sapUiResponsivePadding--footer` 
 
 
 
 </th>
 <th valign="top">
 
- `sapUiResponsivePadding--floatingFooter` 
+`sapUiResponsivePadding--floatingFooter` 
 
 
 
@@ -208,79 +208,35 @@ Supported Controls
 </td>
 <td valign="top">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
- `sap.m.IconTabBar` 
-
-
-
-</td>
-<td valign="top">
-
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
-
-
-
-</td>
-<td valign="top">
-
- ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
-
-
-
-</td>
-<td valign="top">
-
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
-
-
-
-</td>
-<td valign="top">
-
- ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
-
-
-
-</td>
-<td valign="top">
-
- ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
 
 
 
@@ -289,86 +245,42 @@ Supported Controls
 <tr>
 <td valign="top">
 
- `sap.m.ObjectHeader` 
+`sap.m.IconTabBar` 
 
 
 
 </td>
 <td valign="top">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
- `sap.m.Page` 
-
-
-
-</td>
-<td valign="top">
-
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
-
-
-
-</td>
-<td valign="top">
-
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
-
-
-
-</td>
-<td valign="top">
-
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
-
-
-
-</td>
-<td valign="top">
-
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
-
-
-
-</td>
-<td valign="top">
-
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
 
 
 
@@ -377,86 +289,42 @@ Supported Controls
 <tr>
 <td valign="top">
 
- `sap.m.Popover` 
+`sap.m.ObjectHeader` 
 
 
 
 </td>
 <td valign="top">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
- `sap.m.TabContainer` 
-
-
-
-</td>
-<td valign="top">
-
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
-
-
-
-</td>
-<td valign="top">
-
- ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
-
-
-
-</td>
-<td valign="top">
-
- ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
-
-
-
-</td>
-<td valign="top">
-
- ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
-
-
-
-</td>
-<td valign="top">
-
- ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
 
 
 
@@ -465,42 +333,174 @@ Supported Controls
 <tr>
 <td valign="top">
 
- `sap.m.Wizard` 
+`sap.m.Page` 
 
 
 
 </td>
 <td valign="top">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
 </td>
 <td valign="top">
 
- ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`sap.m.Popover` 
+
+
+
+</td>
+<td valign="top">
+
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
+
+
+
+</td>
+<td valign="top">
+
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
+
+
+
+</td>
+<td valign="top">
+
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
+
+
+
+</td>
+<td valign="top">
+
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
+
+
+
+</td>
+<td valign="top">
+
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`sap.m.TabContainer` 
+
+
+
+</td>
+<td valign="top">
+
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
+
+
+
+</td>
+<td valign="top">
+
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+
+
+
+</td>
+<td valign="top">
+
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+
+
+
+</td>
+<td valign="top">
+
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+
+
+
+</td>
+<td valign="top">
+
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`sap.m.Wizard` 
+
+
+
+</td>
+<td valign="top">
+
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
+
+
+
+</td>
+<td valign="top">
+
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+
+
+
+</td>
+<td valign="top">
+
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
+
+
+
+</td>
+<td valign="top">
+
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+
+
+
+</td>
+<td valign="top">
+
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
 
 
 
@@ -512,6 +512,8 @@ Supported Controls
 > If nessecary, you can further align controls by using the available set of predefined CSS margin classes. For example, you can add negative margins to an element on its left and right sides. For more information, see [Using Predefined CSS Margin Classes](using-predefined-css-margin-classes-777168f.md).
 
 
+
+## Example
 
 ```
 <Page class="sapUiResponsivePadding--header sapUiResponsivePadding--subHeader sapUiResponsivePadding--content sapUiResponsivePadding--footer sapUiResponsivePadding--floatingFooter">

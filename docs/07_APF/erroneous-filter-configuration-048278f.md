@@ -6,5 +6,5 @@ If a filter has been configured for a property, situations may occur where the f
 
 The option described above is depicted in the following figure:
 
- ![](images/Facet_Filter_Configuration_Error_c1d98b5.png) 
+![](images/Facet_Filter_Configuration_Error_c1d98b5.png)
 

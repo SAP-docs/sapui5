@@ -145,21 +145,21 @@ There are OPA5 rules that limit the ways you can use busy controls. Some OPA5 fe
 <tr>
 <th valign="top" align="center">
 
- `OPA5.config` `autoWait` 
+`OPA5.config` `autoWait` 
 
 
 
 </th>
 <th valign="top" align="center">
 
- `waitFor` actions
+`waitFor` actions
 
 
 
 </th>
 <th valign="top" align="center">
 
- `waitFor` `autoWait` 
+`waitFor` `autoWait` 
 
 
 

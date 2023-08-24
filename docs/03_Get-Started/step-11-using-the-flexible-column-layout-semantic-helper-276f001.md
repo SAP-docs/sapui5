@@ -17,12 +17,12 @@ For more information, see [Flexible Column Layout Semantic Helper](../10_More_Ab
 
 ## Preview
 
-   
+  
   
 **List-detail-detail pattern using sap.f.FlexibleColumnLayoutSemanticHelper**
 
- ![](images/With_Semantic_Helper_Fiori_2_0_Tutorial_fd98e0d.gif "List-detail-detail pattern using
-						sap.f.FlexibleColumnLayoutSemanticHelper") 
+![](images/With_Semantic_Helper_Fiori_2_0_Tutorial_fd98e0d.gif "List-detail-detail pattern using
+						sap.f.FlexibleColumnLayoutSemanticHelper")
 
 
 

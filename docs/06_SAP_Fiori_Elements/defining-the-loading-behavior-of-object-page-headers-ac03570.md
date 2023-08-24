@@ -129,7 +129,7 @@ The following sample code is for an object page with configured header elements:
 >     "name": "sap.fe.templates.ObjectPage",                  
 >     "options":{               
 >        "settings": {                         
->             "entitySet": "SalesOrderManage",                         
+>             "contextPath": "/SalesOrderManage",                         
 >             …                          
 >             "controlConfiguration": {                                
 >                 …                             

@@ -35,7 +35,7 @@ Description
 <tr>
 <td valign="top">
 
- ![](images/ListReport_Edit_Draft_4e387a1.png) 
+![](images/ListReport_Edit_Draft_4e387a1.png)
 
 
 
@@ -51,7 +51,7 @@ Draft: my own draft
 <tr>
 <td valign="top">
 
- ![](images/ListReport_Edit_Active_3bbd126.png) 
+![](images/ListReport_Edit_Active_3bbd126.png)
 
 
 
@@ -67,7 +67,7 @@ Active version
 <tr>
 <td valign="top">
 
- ![](images/ListReport_Edit_Unsaved_8916c63.jpg) 
+![](images/ListReport_Edit_Unsaved_8916c63.jpg)
 
 
 
@@ -83,7 +83,7 @@ Active version with draft created by another user; no longer locked
 <tr>
 <td valign="top">
 
- ![](images/ListReport_Edit_Locked_bfd9208.jpg) 
+![](images/ListReport_Edit_Locked_bfd9208.jpg)
 
 
 
@@ -141,7 +141,7 @@ Description
 <tr>
 <td valign="top">
 
- *All* 
+*All* 
 
 
 
@@ -157,7 +157,7 @@ Displays all entities
 <tr>
 <td valign="top">
 
- *Own Draft* 
+*Own Draft* 
 
 
 
@@ -173,7 +173,7 @@ Displays a user’s own draft only
 <tr>
 <td valign="top">
 
- *Locked by Another User* 
+*Locked by Another User* 
 
 
 
@@ -189,7 +189,7 @@ Displays all entities that are currently in progress by someone
 <tr>
 <td valign="top">
 
- *Unsaved Changes by Another User* 
+*Unsaved Changes by Another User* 
 
 
 
@@ -205,7 +205,7 @@ Displays all entities with unsaved changes \(lock expired, draft of someone is s
 <tr>
 <td valign="top">
 
- *Unchanged* 
+*Unchanged* 
 
 
 

@@ -79,7 +79,7 @@ The same holds true for the navigation to a second object page. This is possible
 
 In addition to an entity set which identifies a subpage, we recommend you to also specify the navigation property which defines the connection between the object page and the subpage.
 
- 
+
 
 A chevron indicates the navigation options. The user can navigate by clicking on the line.
 
@@ -88,7 +88,7 @@ A chevron indicates the navigation options. The user can navigate by clicking on
 
 The chevron navigation from a list report can also be modified using [onListNavigationExtension](https://ui5.sap.com/#/api/sap.suite.ui.generic.template.ListReport.controllerFrameworkExtensions) to navigate to deeper-hierarchy child pages of the same app. However, it is not recommended to do so. For more information on configuring navigation restrictions, refer to [Adding Actions to Tables](adding-actions-to-tables-b623e0b.md).
 
- **Show item list in a list report and parent on an object page** 
+**Show item list in a list report and parent on an object page** 
 
 Users can enable applications to display item lists in a list report, and parent/main object along with its child entities on an object page. This can be achieved by mapping child entity to a list report page and enabling navigation to the parent/main object.
 
@@ -142,7 +142,7 @@ In the `manifest.json`, you define the "navigation" section for each "target". T
 >                 "name": "sap.fe.templates.ListReport",
 >                 "options": {
 >                     "settings" :{                          
->                         "entitySet": "Artists",
+>                         "contextPath": "/Artists",
 >                         "navigation": {                              // Navigation Section to detail page: Eliminate if no navigation is required.
 >                             "Artists": {                                 
 >                                 "detail": {                                      
@@ -214,7 +214,7 @@ The parameters in the routing pattern are resolved using the relative binding pa
 >             "name": "sap.fe.templates.ObjectPage",
 >             "options": {
 >                 "settings": {
->                     "entitySet":    "SalesOrderManage",
+>                     "contextPath":    "/SalesOrderManage",
 >                     "navigation": {
 >                         "to_SalesOrder": {  // ‘Target’ of UI.DataFieldWithNavigationPath annotation
 >                             "detail": {

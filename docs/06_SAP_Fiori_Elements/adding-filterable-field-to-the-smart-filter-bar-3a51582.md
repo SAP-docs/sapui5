@@ -25,7 +25,7 @@ In this example, we assume that you want to add a *Price* field with two filter 
 
 ## Step 1: Create a controller for a new facet in the list report
 
-In the SAP Web IDE, open the folder structure of the Manage Products project and then proceed as follows:
+In the SAP Business Application Studio or Visual Studio Code, open the folder structure of the Manage Products project and then proceed as follows:
 
 1.  In the `webapp` folder, create a new subfolder called `ext`.
 2.  In the folder `ext`, create a new subfolder called `fragment`.

@@ -27,7 +27,7 @@ SAP Fiori elements uses the `UI.LineItem` annotation and the `UI.Chart` annotati
 >         "name": "sap.fe.templates.ListReport",
 >         "options": {
 >             "settings": {
->                 "entitySet": "SalesOrderManage",
+>                 "contextPath": "/SalesOrderManage",
 >                 "variantManagement": "Page",
 >                 "defaultTemplateAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionPresentationVariant#SPVPath", // This is where app developer provides fe the right SPV to be used
 >                 "initialLoad": true,
@@ -886,7 +886,7 @@ Make the following settings in the `manifest.json` to specify the `SelectionPres
 >         "name": "sap.fe.templates.ListReport",
 >         "options": {
 >             "settings": {
->                 "entitySet": "SalesOrderManage",
+>                 "contextPath": "/SalesOrderManage",
 >                 "defaultTemplateAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionPresentationVariant#SPVPath", 
 >                  .....
 >                  .....

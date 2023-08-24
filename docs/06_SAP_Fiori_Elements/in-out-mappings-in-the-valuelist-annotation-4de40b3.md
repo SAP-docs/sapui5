@@ -50,7 +50,7 @@ Enter label information
 <tr>
 <td valign="top">
 
- `CollectionPath` \(Required, String\)
+`CollectionPath` \(Required, String\)
 
 
 
@@ -66,7 +66,7 @@ Entity set for retrieving value help
 <tr>
 <td valign="top">
 
- `SearchSupported` \(Required, Bool\)
+`SearchSupported` \(Required, Bool\)
 
 
 

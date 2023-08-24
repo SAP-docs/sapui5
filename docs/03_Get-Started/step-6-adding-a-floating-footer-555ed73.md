@@ -10,11 +10,11 @@ In this step, we add a floating footer to the detail page.
 
 ## Preview
 
-   
+  
   
 **ObjectPageLayout with a floating footer**
 
- ![](images/Floating_Footer_Fiori_2_0_Tutorial_24122e0.png "ObjectPageLayout with a floating footer") 
+![](images/Floating_Footer_Fiori_2_0_Tutorial_24122e0.png "ObjectPageLayout with a floating footer")
 
 
 

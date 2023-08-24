@@ -21,5 +21,5 @@ If only single selection is allowed, you can specify one value that is used as d
 
 The option described above is depicted in the following figure:
 
- ![](images/Facet_Filter_Configuration_Use_Case_1_d550224.png) 
+![](images/Facet_Filter_Configuration_Use_Case_1_d550224.png)
 

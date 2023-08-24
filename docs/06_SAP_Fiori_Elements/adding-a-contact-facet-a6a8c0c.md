@@ -4,11 +4,11 @@
 
 To render a contact list and contact facet, you add a `UI.ReferenceFacet` that points to a contact annotation \(`type`\). It shows the label of the `UI.ReferenceFacet`, and below it, the `fn` property of the contact annotation. If you click on the name, a quick view with the contact details is displayed, as shown here:
 
-   
+  
   
 **Object Page: Contacts**
 
- ![](images/ObjectPage_Contacts_076fb4d.png "Object Page: Contacts") 
+![](images/ObjectPage_Contacts_076fb4d.png "Object Page: Contacts")
 
 Currently, the contact card reads the following annotation properties and displays them:
 
@@ -339,7 +339,7 @@ You must then add the annotation given below to the `EntitySet` pointed to by th
 
 The column in the table and the contact popover when clicking the link looks like this:
 
- ![](images/Contact_Card_with_Smart_Links_7282872.jpg) 
+![](images/Contact_Card_with_Smart_Links_7282872.jpg)
 
 > ### Tip:  
 > If no "`@Contact.photo`" annotation is provided, a fallback icon for the contact is displayed.

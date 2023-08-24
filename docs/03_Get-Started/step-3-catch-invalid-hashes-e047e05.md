@@ -8,11 +8,11 @@ Sometimes it is important to display an indication that the requested resource w
 
 ## Preview
 
-   
+  
   
 **Not Found page**
 
- ![](images/Tutorial_Navigation_and_Routing_Step_03_81506b2.png "Not Found page") 
+![](images/Tutorial_Navigation_and_Routing_Step_03_81506b2.png "Not Found page")
 
 
 
@@ -20,11 +20,11 @@ Sometimes it is important to display an indication that the requested resource w
 
 You can view and download all files in the *Samples* in the Demo Kit at [Routing and Navigation - Step 3](https://ui5.sap.com/#/entity/sap.ui.core.tutorial.navigation/sample/sap.ui.core.tutorial.navigation.03).
 
-   
+  
   
 **Folder structure for this step**
 
- ![](images/Tutorial_Navigation_and_Routing_Step_03b_0b225d6.png "Folder structure for this step") 
+![](images/Tutorial_Navigation_and_Routing_Step_03b_0b225d6.png "Folder structure for this step")
 
 
 

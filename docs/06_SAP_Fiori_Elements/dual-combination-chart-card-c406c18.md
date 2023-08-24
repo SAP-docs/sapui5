@@ -65,9 +65,9 @@ Chart area configuration:
 >                 </Annotation>
 > ```
 
-   
+  
   
 **Example of a Dual Combination Chart Card**
 
- ![](images/Dual_Combination_Chart_Card_6fbcb2e.png "Example of a Dual Combination Chart Card") 
+![](images/Dual_Combination_Chart_Card_6fbcb2e.png "Example of a Dual Combination Chart Card")
 

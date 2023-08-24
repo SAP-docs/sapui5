@@ -10,11 +10,11 @@ In this step, we set up the initial app.
 
 ## Preview
 
-   
+  
   
 **The worklist app**
 
- ![](images/Tutorial_Worklist_Step_01_Preview_60e42c8.png "The worklist app") 
+![](images/Tutorial_Worklist_Step_01_Preview_60e42c8.png "The worklist app")
 
 
 
@@ -37,11 +37,11 @@ To access the real service, you would need to set up a proxy service that connec
 
 With the downloaded code from the Demo Kit, you have an initial app structure with the following content inside the `webapp` folder:
 
-   
+  
   
 **Folder structure of the initial project**
 
- ![](images/Tutorial_Worklist_Step_01_Folders_7f6899e.png "Folder structure of the initial project") 
+![](images/Tutorial_Worklist_Step_01_Folders_7f6899e.png "Folder structure of the initial project")
 
 -   **Home Page** \(`webapp/view/Worklist.view.xml` file\)
 

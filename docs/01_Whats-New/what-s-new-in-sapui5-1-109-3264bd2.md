@@ -4,7 +4,7 @@
 
 With this release SAPUI5 is upgraded from version 1.108 to 1.109.
 
-** **
+****
 
 
 <table>
@@ -62,28 +62,28 @@ Available as of
 <tr>
 <td valign="top">
 
- 1.109 
+1.109 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.fl.variants.VariantManagement`** 
+**`sap.ui.fl.variants.VariantManagement`** 
 
 
 
@@ -104,7 +104,7 @@ Available as of
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -120,28 +120,28 @@ Available as of
 <tr>
 <td valign="top">
 
- 1.109 
+1.109 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.smartvariants.SmartVariantManagement`** 
+**`sap.ui.comp.smartvariants.SmartVariantManagement`** 
 
 
 
@@ -162,7 +162,7 @@ Available as of
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -178,28 +178,28 @@ Available as of
 <tr>
 <td valign="top">
 
- 1.109 
+1.109 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.Table`** 
+**`sap.m.Table`** 
 
 
 
@@ -217,7 +217,7 @@ If a user selects all rows in a table using the *Select All* checkbox, **only** 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -233,28 +233,28 @@ If a user selects all rows in a table using the *Select All* checkbox, **only** 
 <tr>
 <td valign="top">
 
- 1.109 
+1.109 
 
 
 
 </td>
 <td valign="top">
 
- Deprecated 
+Deprecated 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Deprecations** 
+**Deprecations** 
 
 
 
@@ -272,7 +272,7 @@ There are currently no major deprecations. For a complete list of all deprecatio
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -288,28 +288,28 @@ There are currently no major deprecations. For a complete list of all deprecatio
 <tr>
 <td valign="top">
 
- 1.109 
+1.109 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **SAPUI5 OData V4 Model** 
+**SAPUI5 OData V4 Model** 
 
 
 
@@ -333,7 +333,7 @@ The new version of the SAPUI5 OData V4 model introduces the following features:
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -349,28 +349,28 @@ The new version of the SAPUI5 OData V4 model introduces the following features:
 <tr>
 <td valign="top">
 
- 1.109 
+1.109 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **SAPUI5 OData V2 Model** 
+**SAPUI5 OData V2 Model** 
 
 
 
@@ -391,7 +391,7 @@ The new version of the SAPUI5 OData V2 model introduces the following features:
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -407,28 +407,28 @@ The new version of the SAPUI5 OData V2 model introduces the following features:
 <tr>
 <td valign="top">
 
- 1.109 
+1.109 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- SAP Fiori Elements 
+SAP Fiori Elements 
 
 
 
 </td>
 <td valign="top">
 
- **SAP Fiori elements for OData V2 and SAP Fiori elements for OData V4** 
+**SAP Fiori elements for OData V2 and SAP Fiori elements for OData V4** 
 
 
 
@@ -449,7 +449,7 @@ The following changes and new features are available for both SAP Fiori elements
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -465,28 +465,28 @@ The following changes and new features are available for both SAP Fiori elements
 <tr>
 <td valign="top">
 
- 1.109 
+1.109 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- SAP Fiori Elements 
+SAP Fiori Elements 
 
 
 
 </td>
 <td valign="top">
 
- **SAP Fiori elements for OData V2** 
+**SAP Fiori elements for OData V2** 
 
 
 
@@ -509,7 +509,7 @@ The following changes and new features are available for SAP Fiori elements for 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -525,28 +525,28 @@ The following changes and new features are available for SAP Fiori elements for 
 <tr>
 <td valign="top">
 
- 1.109 
+1.109 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- SAP Fiori Elements 
+SAP Fiori Elements 
 
 
 
 </td>
 <td valign="top">
 
- **SAP Fiori elements for OData V4** 
+**SAP Fiori elements for OData V4** 
 
 
 
@@ -571,7 +571,7 @@ The following changes and new features are available for SAP Fiori elements for 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -587,28 +587,28 @@ The following changes and new features are available for SAP Fiori elements for 
 <tr>
 <td valign="top">
 
- 1.109 
+1.109 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.IllustratedMessage`** 
+**`sap.m.IllustratedMessage`** 
 
 
 
@@ -626,7 +626,7 @@ We have updated the illustrations in the default set. For more information, see 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -642,28 +642,28 @@ We have updated the illustrations in the default set. For more information, see 
 <tr>
 <td valign="top">
 
- 1.109 
+1.109 
 
 
 
 </td>
 <td valign="top">
 
- UI Changed 
+UI Changed 
 
 
 
 </td>
 <td valign="top">
 
- Announcement 
+Announcement 
 
 
 
 </td>
 <td valign="top">
 
- **Object Pages: Variant Management Enabled by Default for Tables and Charts** 
+**Object Pages: Variant Management Enabled by Default for Tables and Charts** 
 
 
 
@@ -684,7 +684,7 @@ Object page tables and charts now have variant management enabled by default. Us
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -700,28 +700,28 @@ Object page tables and charts now have variant management enabled by default. Us
 <tr>
 <td valign="top">
 
- 1.109 
+1.109 
 
 
 
 </td>
 <td valign="top">
 
- UI Changed 
+UI Changed 
 
 
 
 </td>
 <td valign="top">
 
- Announcement 
+Announcement 
 
 
 
 </td>
 <td valign="top">
 
- **SAP Fiori elements for OData V4: Value Help Titles Aligned** 
+**SAP Fiori elements for OData V4: Value Help Titles Aligned** 
 
 
 
@@ -742,7 +742,7 @@ We harmonized the titles for value help dialogs. The title of the value help for
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -758,28 +758,28 @@ We harmonized the titles for value help dialogs. The title of the value help for
 <tr>
 <td valign="top">
 
- 1.109 
+1.109 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.integration.widgets.Card`** 
+**`sap.ui.integration.widgets.Card`** 
 
 
 
@@ -806,7 +806,7 @@ We harmonized the titles for value help dialogs. The title of the value help for
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -822,28 +822,28 @@ We harmonized the titles for value help dialogs. The title of the value help for
 <tr>
 <td valign="top">
 
- 1.109 
+1.109 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.LightBox`** 
+**`sap.m.LightBox`** 
 
 
 
@@ -861,7 +861,7 @@ We are now using the `IllustratedMessage` control to show errors when an image c
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -878,6 +878,8 @@ We are now using the `IllustratedMessage` control to show errors when an image c
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.115](what-s-new-in-sapui5-1-115-409fde8.md "With this release SAPUI5 is upgraded from version 1.114 to 1.115.")
 
 [What's New in SAPUI5 1.114](what-s-new-in-sapui5-1-114-890fce1.md "With this release SAPUI5 is upgraded from version 1.113 to 1.114.")
 

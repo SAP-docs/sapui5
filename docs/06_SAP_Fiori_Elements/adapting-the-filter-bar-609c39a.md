@@ -100,11 +100,11 @@ Each filter field is displayed only once in the *Adapt Filters* dialog. If a sin
 
 If the field groups don't contain all properties of the entity, the remaining properties are all grouped under the label for the entity. If no label is defined for the entity, the entity name is displayed.
 
-   
+  
   
 **List Report: Adapt Filters Popup**
 
- ![](images/ListReport_FilterPopUp1_410e07f.png "List Report: Adapt Filters Popup") 
+![](images/ListReport_FilterPopUp1_410e07f.png "List Report: Adapt Filters Popup")
 
 > ### Sample Code:  
 > XML Annotation

@@ -8,11 +8,11 @@ In this step, we extend the product detail view by adding a feature allowing to 
 
 ## Preview
 
-   
+  
   
 **Comments section added to the detail page**
 
- ![](images/Tutorial_Worklist_Step_7_Preview_a517fe5.png "Comments section added to the detail page") 
+![](images/Tutorial_Worklist_Step_7_Preview_a517fe5.png "Comments section added to the detail page")
 
 
 

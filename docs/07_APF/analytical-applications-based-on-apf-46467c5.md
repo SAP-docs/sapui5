@@ -36,7 +36,7 @@ UI Overview
 </td>
 <td valign="top">
 
-  
+
 
 
 
@@ -52,7 +52,7 @@ Creating an Analysis Path
 </td>
 <td valign="top">
 
-  
+
 
 
 
@@ -68,7 +68,7 @@ Further Options for Analysis Paths
 </td>
 <td valign="top">
 
-  
+
 
 
 
@@ -84,7 +84,7 @@ Filtering Data in Analysis Paths
 </td>
 <td valign="top">
 
-  
+
 
 
 
@@ -100,7 +100,7 @@ Insight to Action
 </td>
 <td valign="top">
 
-  
+
 
 
 

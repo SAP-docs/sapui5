@@ -8,5 +8,5 @@ The header of the table is set using `com.sap.vocabularies.UI.v1.HeaderInfo Type
   
 **List Report: Page Header**
 
- ![](images/ListReport_HeaderInfo_a75ab6b.png "List Report: Page Header") 
+![](images/ListReport_HeaderInfo_a75ab6b.png "List Report: Page Header")
 

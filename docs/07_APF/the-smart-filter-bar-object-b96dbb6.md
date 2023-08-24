@@ -41,7 +41,7 @@ Description
 <tr>
 <td valign="top">
 
- `id` 
+`id` 
 
 
 
@@ -57,7 +57,7 @@ Unique ID of type string
 <tr>
 <td valign="top">
 
- `service` 
+`service` 
 
 
 
@@ -73,7 +73,7 @@ Path to OData service root
 <tr>
 <td valign="top">
 
- `entitySet` 
+`entitySet` 
 
 
 

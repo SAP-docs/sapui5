@@ -71,7 +71,7 @@ Available with ...
 <tr>
 <td valign="top">
 
- SAPUI5 ABAP repository
+SAPUI5 ABAP repository
 
 
 
@@ -106,7 +106,7 @@ SAP Business Suite systems from version 7.31 containing the UI add-on for SAP Ne
 <tr>
 <td valign="top">
 
- SAPUI5 repository upload and download reports \(alternative for the team repository provider with similar functions\)
+SAPUI5 repository upload and download reports \(alternative for the team repository provider with similar functions\)
 
 
 
@@ -124,7 +124,7 @@ For more information, see [Using the SAPUI5 ABAP Repository Upload and Download 
 <tr>
 <td valign="top">
 
- SAPUI5 control libraries
+SAPUI5 control libraries
 
 
 

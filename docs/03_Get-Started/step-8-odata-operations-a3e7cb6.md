@@ -10,11 +10,11 @@ Our OData service provides one OData operation: the `ResetDataSource` action. In
 
 ## Preview
 
-   
+  
   
 **A Restart Tutorial button is added**
 
- ![](images/Tutorial_OData_V4_Step_8_e518deb.png "A Restart Tutorial button is added") 
+![](images/Tutorial_OData_V4_Step_8_e518deb.png "A Restart Tutorial button is added")
 
 
 

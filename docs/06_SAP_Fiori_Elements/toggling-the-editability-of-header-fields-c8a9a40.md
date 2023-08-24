@@ -80,7 +80,7 @@ The editability of header fields can be controlled by the manifest property `edi
 >                     "name": "sap.fe.templates.ObjectPage",
 >                     "options": {
 >                         "settings": {
->                             "entitySet": "SalesOrderItem",
+>                             "contextPath": "/SalesOrderItem",
 >                             "editableHeaderContent": true,
 >                             ...
 >                         }

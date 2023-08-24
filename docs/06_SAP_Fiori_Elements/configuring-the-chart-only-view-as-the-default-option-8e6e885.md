@@ -396,19 +396,19 @@ To do this, set the `showDataLabel` property to `True` in the manifest settings.
 >                     },
 > ```
 
-   
+  
   
 **Data Label in Smart Charts**
 
- ![](images/Data_lable_in_ALP_Smart_chart_5e20395.png "Data Label in Smart Charts") 
+![](images/Data_lable_in_ALP_Smart_chart_5e20395.png "Data Label in Smart Charts")
 
-   
+  
   
 **Data Label in KPI Cards**
 
- 
 
- ![](images/Data_lable_in_ALP_KPI_Cards_4360c2c.png) 
+
+![](images/Data_lable_in_ALP_KPI_Cards_4360c2c.png)
 
 
 
@@ -462,25 +462,25 @@ You can configure the chart to map the dimension values to specific colors. In t
 > 
 > ```
 
-   
+  
   
 **Bar Chart**
 
- ![](images/Stable_Color_for_Dimension_Values_1_e2a8429.png "Bar Chart") 
+![](images/Stable_Color_for_Dimension_Values_1_e2a8429.png "Bar Chart")
 
-   
+  
   
 **Donut Chart**
 
- ![](images/Stable_Color_for_Dimension_Values_2_fb744c5.png "Donut Chart") 
+![](images/Stable_Color_for_Dimension_Values_2_fb744c5.png "Donut Chart")
 
 If a color isn't specified for a dimension value, and the default color is applied:
 
-   
+  
   
 **Default Color Appearance in the Absence of a Specified Color**
 
- ![](images/Stable_Color_for_Dimension_Values_3_463dc27.png "Default Color Appearance in the Absence of a Specified Color") 
+![](images/Stable_Color_for_Dimension_Values_3_463dc27.png "Default Color Appearance in the Absence of a Specified Color")
 
 
 

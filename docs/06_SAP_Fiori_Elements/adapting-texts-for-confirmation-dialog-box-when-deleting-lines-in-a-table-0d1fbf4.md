@@ -276,7 +276,7 @@ Changes must be made in the manifest file of the application. Add `enhanceI18n` 
 >       "name": "sap.fe.templates.ListReport",
 >       "options":{
 >          "settings":{
->             "entitySet": "SalesOrderManage",
+>             "contextPath": "/SalesOrderManage",
 >             "enhanceI18n": "i18n/customSalesOrderLR.properties", // This is the line to be added - it provides Fiori Elements with the name of the custom resource bundle
 >             .
 >             .

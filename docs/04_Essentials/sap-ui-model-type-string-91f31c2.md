@@ -6,8 +6,8 @@ The `String` data type represents a string.
 
 The source value \(value given in the model\) must be given as a string and is transformed into the type of the bound control property:
 
--    `string`: No transformation needed
--    `integer`/`float`: String is parsed accordingly
+-   `string`: No transformation needed
+-   `integer`/`float`: String is parsed accordingly
 -   `boolean`: "true" or "X" are interpreted as true, "false" or " " as false
 
 The `string` type does not have any format options.

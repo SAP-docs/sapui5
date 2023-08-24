@@ -8,24 +8,24 @@ In this step, we want to illustrate how to navigate to a page with a custom tran
 
 ## Preview
 
-   
+  
   
 **Employee Details page with Flip to Resume link**
 
- ![](images/Tutorial_Navigation_and_Routing_Step_08a_e56a3f0.png "Employee Details page with Flip to
-						Resume link") 
+![](images/Tutorial_Navigation_and_Routing_Step_08a_e56a3f0.png "Employee Details page with Flip to
+						Resume link")
 
-   
+  
   
 **Resume page with multiple tabs**
 
- ![](images/Tutorial_Navigation_and_Routing_Step_08b_6ab9122.png "Resume page with multiple tabs") 
+![](images/Tutorial_Navigation_and_Routing_Step_08b_6ab9122.png "Resume page with multiple tabs")
 
-   
+  
   
 **Not Found page for resume**
 
- ![](images/Tutorial_Navigation_and_Routing_Step_08c_36aff02.png "Not Found page for resume") 
+![](images/Tutorial_Navigation_and_Routing_Step_08c_36aff02.png "Not Found page for resume")
 
 
 
@@ -33,11 +33,11 @@ In this step, we want to illustrate how to navigate to a page with a custom tran
 
 You can view and download all files in the *Samples* in the Demo Kit at [Routing and Navigation - Step 8](https://ui5.sap.com/#/entity/sap.ui.core.tutorial.navigation/sample/sap.ui.core.tutorial.navigation.08).
 
-   
+  
   
 **Folder structure for this step**
 
- ![](images/Tutorial_Navigation_and_Routing_Step_08d_2ca76d0.png "Folder structure for this step") 
+![](images/Tutorial_Navigation_and_Routing_Step_08d_2ca76d0.png "Folder structure for this step")
 
 
 

@@ -49,9 +49,9 @@ The following catalog and role are relevant for the generic runtime application:
 
 The following role is relevant for the APF Configuration Modeler:
 
--    `sap.hba.r.apf.core.roles:AnalyticalConfiguration`
+-   `sap.hba.r.apf.core.roles:AnalyticalConfiguration`
 
 The following role is relevant for all APF-based applications :
 
--    `sap.hba.r.apf.core.roles::AnalysisPath`
+-   `sap.hba.r.apf.core.roles::AnalysisPath`
 

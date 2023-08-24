@@ -11,17 +11,17 @@ To do so, create the feature toggle in the backend system and place `@feature:'T
 
 In list reports with multiple tabs, reducing an entity set results in the removal of tabs corresponding to that entity. Similarly, for an object page, reducing an entity set results in the removal of the corresponding section from the object page.
 
-   
+  
   
 **List report and object page showing all tabs when the feature toggle is active**
 
- ![](images/OP_with_all_tabs_when_feature_toggle_is_active_0ff5d08.png "List report and object page showing all tabs when the feature toggle is
-				active") 
+![](images/OP_with_all_tabs_when_feature_toggle_is_active_0ff5d08.png "List report and object page showing all tabs when the feature toggle is
+				active")
 
-   
+  
   
 **List report and object page with some tabs hidden when related entities are reduced by deactivating the feature toggle**
 
- ![](images/OP_with_only_one_tab_when_other_related_entities_are_reduced_by_deactivating_the_toggle_42737b9.png "List report and object page with some tabs hidden when related entities are
-				reduced by deactivating the feature toggle") 
+![](images/OP_with_only_one_tab_when_other_related_entities_are_reduced_by_deactivating_the_toggle_42737b9.png "List report and object page with some tabs hidden when related entities are
+				reduced by deactivating the feature toggle")
 

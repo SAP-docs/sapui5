@@ -50,21 +50,21 @@ XML View defined string
 <tr>
 <td valign="top">
 
- **New line** 
+**New line** 
 
 
 
 </td>
 <td valign="top">
 
- `\n` 
+`\n` 
 
 
 
 </td>
 <td valign="top">
 
- `&#xA;` 
+`&#xA;` 
 
 
 
@@ -82,14 +82,14 @@ For example, if you want to visualize `C:\NewFolder`
 </td>
 <td valign="top">
 
- `\\n` 
+`\\n` 
 
 
 
 </td>
 <td valign="top">
 
- `\n` 
+`\n` 
 
 
 
@@ -98,21 +98,21 @@ For example, if you want to visualize `C:\NewFolder`
 <tr>
 <td valign="top">
 
- **Tab** 
+**Tab** 
 
 
 
 </td>
 <td valign="top">
 
- `\t` 
+`\t` 
 
 
 
 </td>
 <td valign="top">
 
- `&#x9;` 
+`&#x9;` 
 
 
 
@@ -130,14 +130,14 @@ For example, if you want to visualize `C:\TestFolder`
 </td>
 <td valign="top">
 
- `\\t` 
+`\\t` 
 
 
 
 </td>
 <td valign="top">
 
- `\t` 
+`\t` 
 
 
 

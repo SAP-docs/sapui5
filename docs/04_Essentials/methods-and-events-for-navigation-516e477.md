@@ -60,7 +60,7 @@ Use this method to navigate to display one or multiple targets. The method uses 
   
 **Navigation events**
 
- ![](images/SAPUI5_Navigation_Events_6f245c0.png "Navigation events") 
+![](images/SAPUI5_Navigation_Events_6f245c0.png "Navigation events")
 
 
 

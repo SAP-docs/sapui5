@@ -360,7 +360,7 @@ The following types are available for list items:
     -   `description`
     -   `icon`: The icon is displayed on the left hand side of the list item and can be shown with or without an inset.
 
-     `label` feature to set a label and the `content` feature that can be aggregated with controls, for example a radio button or a search control. The following code snippet shows an example:
+    `label` feature to set a label and the `content` feature that can be aggregated with controls, for example a radio button or a search control. The following code snippet shows an example:
 
     ```js
     

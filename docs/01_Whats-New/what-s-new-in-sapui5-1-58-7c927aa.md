@@ -4,7 +4,7 @@
 
 With this release SAPUI5 is upgraded from version 1.56 to 1.58.
 
-** **
+****
 
 
 <table>
@@ -62,28 +62,28 @@ Available as of
 <tr>
 <td valign="top">
 
- 1.58 
+1.58 
 
 
 
 </td>
 <td valign="top">
 
- New 
+New 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Support Assistant** 
+**Support Assistant** 
 
 
 
@@ -96,14 +96,14 @@ Available as of
 
 -   A **rule preset management***My Selection*.
 
-     ![](images/Support_Assistant_Rule_Presets_7ec5783.png) 
+    ![](images/Support_Assistant_Rule_Presets_7ec5783.png)
 
     > ### Note:  
     > To make sure that your last selection remains available for future use, choose *I agree to use local storage persistency* in the Support Assistant Settings menu.
 
 -   An **ID field** has been added to the *Export a Rule Preset* dialog. The ID is a string of alphanumeric symbols added manually by the user when creating a rule preset. It is useful in case you want to collect data and generate reports on specific rule preset executions within your organization.
 
-     ![](images/Support_Assistant_Rule_Preset_ID_ed742b6.png) 
+    ![](images/Support_Assistant_Rule_Preset_ID_ed742b6.png)
 
     For more information, see [Rules Management](../04_Essentials/rules-management-3fc864a.md).
 
@@ -117,7 +117,7 @@ The Support Assistant now allows you to personalize the *Rules View* by:
 -   Sorting the information within a column or filtering it by keyword. To access these options, click on a column header. A dropdown menu opens from which you can choose the desired action.
 
 
- ![](images/Support_Assistant_Columns_Personalization_and_Filtering_baf460d.png) 
+![](images/Support_Assistant_Columns_Personalization_and_Filtering_baf460d.png)
 
 For more information, see [Rules Management](../04_Essentials/rules-management-3fc864a.md).
 
@@ -128,7 +128,7 @@ For more information, see [Rules Management](../04_Essentials/rules-management-3
 </td>
 <td valign="top">
 
- Info Only
+Info Only
 
 
 
@@ -144,28 +144,28 @@ For more information, see [Rules Management](../04_Essentials/rules-management-3
 <tr>
 <td valign="top">
 
- 1.58 
+1.58 
 
 
 
 </td>
 <td valign="top">
 
- New 
+New 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **UI5 Inspector** 
+**UI5 Inspector** 
 
 
 
@@ -180,7 +180,7 @@ The latest version 0.9.5 of the UI5 Inspector includes two main features:
 
 -   In previous versions, the UI5 Inspector did not properly display composite binding structures. Now it shows all parts of the bindings on the *Bindings* tab, including individual models, paths, and values. Clicking on the model link displays the whole model with all values.
 
-     ![](images/UI5_Inspector_Binding_460e1e3.png) 
+    ![](images/UI5_Inspector_Binding_460e1e3.png)
 
 
 For more information, see [UI5 Inspector](../04_Essentials/ui5-inspector-b24e724.md).
@@ -192,7 +192,7 @@ For more information, see [UI5 Inspector](../04_Essentials/ui5-inspector-b24e724
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -208,28 +208,28 @@ For more information, see [UI5 Inspector](../04_Essentials/ui5-inspector-b24e724
 <tr>
 <td valign="top">
 
- 1.58 
+1.58 
 
 
 
 </td>
 <td valign="top">
 
- New 
+New 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.suite.ui.commons.TAccount`** 
+**`sap.suite.ui.commons.TAccount`** 
 
 
 
@@ -242,7 +242,7 @@ A control that can be used to display individual line items from one or more acc
 
 For more information, see [T Account](../10_More_About_Controls/t-account-fe6792f.md), the [API Reference](https://ui5.sap.com/#/api/sap.suite.ui.commons.TAccount), and the [Samples](https://ui5.sap.com/#/entity/sap.suite.ui.commons.TAccount).
 
- ![T Accounts](images/WhatsNew_158_T_Account_3894aeb.jpg) 
+![T Accounts](images/WhatsNew_158_T_Account_3894aeb.jpg)
 
 <sub>New•Control•Info Only•1.58</sub>
 
@@ -251,7 +251,7 @@ For more information, see [T Account](../10_More_About_Controls/t-account-fe6792
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -267,28 +267,28 @@ For more information, see [T Account](../10_More_About_Controls/t-account-fe6792
 <tr>
 <td valign="top">
 
- 1.58 
+1.58 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Flexibility Panel in the Diagnostics Window** 
+**Flexibility Panel in the Diagnostics Window** 
 
 
 
@@ -308,7 +308,7 @@ For more information, see [Diagnostics](../04_Essentials/diagnostics-6ec18e8.md#
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -324,28 +324,28 @@ For more information, see [Diagnostics](../04_Essentials/diagnostics-6ec18e8.md#
 <tr>
 <td valign="top">
 
- 1.58 
+1.58 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **SAPUI5 OData V4 Model** 
+**SAPUI5 OData V4 Model** 
 
 
 
@@ -377,7 +377,7 @@ For more information, see [OData V4 Model](../04_Essentials/odata-v4-model-5de13
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -393,28 +393,28 @@ For more information, see [OData V4 Model](../04_Essentials/odata-v4-model-5de13
 <tr>
 <td valign="top">
 
- 1.58 
+1.58 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Spreadsheet Export** 
+**Spreadsheet Export** 
 
 
 
@@ -434,7 +434,7 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.e
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -450,28 +450,28 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.e
 <tr>
 <td valign="top">
 
- 1.58 
+1.58 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **XML Templating: No Preloading Required for Asynchronous Views** 
+**XML Templating: No Preloading Required for Asynchronous Views** 
 
 
 
@@ -491,7 +491,7 @@ For more information, see the [API Reference: `sap.ui.core.util.XMLPreprocessor`
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -507,28 +507,28 @@ For more information, see the [API Reference: `sap.ui.core.util.XMLPreprocessor`
 <tr>
 <td valign="top">
 
- 1.58 
+1.58 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.f.DynamicPage`** 
+**`sap.f.DynamicPage`** 
 
 
 
@@ -549,7 +549,7 @@ For more information, see the [API Reference: `sap.ui.core.util.XMLPreprocessor`
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -565,28 +565,28 @@ For more information, see the [API Reference: `sap.ui.core.util.XMLPreprocessor`
 <tr>
 <td valign="top">
 
- 1.58 
+1.58 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.f.FlexibleColumnLayout`** 
+**`sap.f.FlexibleColumnLayout`** 
 
 
 
@@ -604,7 +604,7 @@ The control now supports reveal effect animation to ensure smooth performance wh
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -620,28 +620,28 @@ The control now supports reveal effect animation to ensure smooth performance wh
 <tr>
 <td valign="top">
 
- 1.58 
+1.58 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.f.semantic.SemanticPage`** 
+**`sap.f.semantic.SemanticPage`** 
 
 
 
@@ -664,7 +664,7 @@ The control now supports reveal effect animation to ensure smooth performance wh
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -680,28 +680,28 @@ The control now supports reveal effect animation to ensure smooth performance wh
 <tr>
 <td valign="top">
 
- 1.58 
+1.58 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.App`** 
+**`sap.m.App`** 
 
 
 
@@ -719,7 +719,7 @@ The `mobileWebAppCapable` property is now available. It determines whether the `
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -735,28 +735,28 @@ The `mobileWebAppCapable` property is now available. It determines whether the `
 <tr>
 <td valign="top">
 
- 1.58 
+1.58 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.CheckBox`** 
+**`sap.m.CheckBox`** 
 
 
 
@@ -774,7 +774,7 @@ The new `partiallySelected` property now allows the `CheckBox` control to be ren
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -790,28 +790,28 @@ The new `partiallySelected` property now allows the `CheckBox` control to be ren
 <tr>
 <td valign="top">
 
- 1.58 
+1.58 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.ColorPalette`** 
+**`sap.m.ColorPalette`** 
 
 
 
@@ -832,7 +832,7 @@ The new `partiallySelected` property now allows the `CheckBox` control to be ren
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -848,28 +848,28 @@ The new `partiallySelected` property now allows the `CheckBox` control to be ren
 <tr>
 <td valign="top">
 
- 1.58 
+1.58 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.DateTimePicker`** 
+**`sap.m.DateTimePicker`** 
 
 
 
@@ -887,7 +887,7 @@ The Time Picker is now vertically aligned with the Calendar for better user expe
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -903,28 +903,28 @@ The Time Picker is now vertically aligned with the Calendar for better user expe
 <tr>
 <td valign="top">
 
- 1.58 
+1.58 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.List/sap.m.Tree`** 
+**`sap.m.List/sap.m.Tree`** 
 
 
 
@@ -945,7 +945,7 @@ The new `sticky` property is now also available for these controls \(in `sap.m.L
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -961,28 +961,28 @@ The new `sticky` property is now also available for these controls \(in `sap.m.L
 <tr>
 <td valign="top">
 
- 1.58 
+1.58 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.MessagePopover/sap.m.MessageView`** 
+**`sap.m.MessagePopover/sap.m.MessageView`** 
 
 
 
@@ -1000,7 +1000,7 @@ The `sap.m.MessageItems` that are aggregated in these controls have a new proper
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1016,28 +1016,28 @@ The `sap.m.MessageItems` that are aggregated in these controls have a new proper
 <tr>
 <td valign="top">
 
- 1.58 
+1.58 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.MultiComboBox`** 
+**`sap.m.MultiComboBox`** 
 
 
 
@@ -1055,7 +1055,7 @@ The autocomplete functionality is available in the `sap.m.MultiComboBox` control
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1071,28 +1071,28 @@ The autocomplete functionality is available in the `sap.m.MultiComboBox` control
 <tr>
 <td valign="top">
 
- 1.58 
+1.58 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.MultiComboBox/sap.m.ComboBox`** 
+**`sap.m.MultiComboBox/sap.m.ComboBox`** 
 
 
 
@@ -1110,7 +1110,7 @@ The default filtering function has been changed from "**starts with**" to "**sta
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1126,28 +1126,28 @@ The default filtering function has been changed from "**starts with**" to "**sta
 <tr>
 <td valign="top">
 
- 1.58 
+1.58 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.MultiComboBox/sap.m.MultiInput`** 
+**`sap.m.MultiComboBox/sap.m.MultiInput`** 
 
 
 
@@ -1158,7 +1158,7 @@ The default filtering function has been changed from "**starts with**" to "**sta
 
 All overflowing tokens are now available in a separate popover indicated with an *N-more* label, which serves as an opening trigger. This behavior is used to replace the multi-line mode for both controls, which is now deprecated.
 
- ![](images/Nmore_Label_a9a6a77.png) 
+![](images/Nmore_Label_a9a6a77.png)
 
 <sub>Changed•Control•Info Only•1.58</sub>
 
@@ -1167,7 +1167,7 @@ All overflowing tokens are now available in a separate popover indicated with an
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1183,28 +1183,28 @@ All overflowing tokens are now available in a separate popover indicated with an
 <tr>
 <td valign="top">
 
- 1.58 
+1.58 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.OverflowToolbar`** 
+**`sap.m.OverflowToolbar`** 
 
 
 
@@ -1222,7 +1222,7 @@ Shrinking of controls is now enabled. For the new functionality to work, each co
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1238,28 +1238,28 @@ Shrinking of controls is now enabled. For the new functionality to work, each co
 <tr>
 <td valign="top">
 
- 1.58 
+1.58 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.P13nFilterPanel`** 
+**`sap.m.P13nFilterPanel`** 
 
 
 
@@ -1277,7 +1277,7 @@ You can now search for an empty string in the filter conditions of the personali
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1293,28 +1293,28 @@ You can now search for an empty string in the filter conditions of the personali
 <tr>
 <td valign="top">
 
- 1.58 
+1.58 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.PlanningCalendar`** 
+**`sap.m.PlanningCalendar`** 
 
 
 
@@ -1332,7 +1332,7 @@ The background color of the week numbers has been updated to more clearly displa
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1348,28 +1348,28 @@ The background color of the week numbers has been updated to more clearly displa
 <tr>
 <td valign="top">
 
- 1.58 
+1.58 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.SelectDialog`** 
+**`sap.m.SelectDialog`** 
 
 
 
@@ -1387,7 +1387,7 @@ A *Clear* button has been added to allow you to clear your selection with one cl
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1403,28 +1403,28 @@ A *Clear* button has been added to allow you to clear your selection with one cl
 <tr>
 <td valign="top">
 
- 1.58 
+1.58 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.TableSelectDialog`** 
+**`sap.m.TableSelectDialog`** 
 
 
 
@@ -1448,7 +1448,7 @@ A *Clear* button has been added to allow you to clear your selection with one cl
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1464,28 +1464,28 @@ A *Clear* button has been added to allow you to clear your selection with one cl
 <tr>
 <td valign="top">
 
- 1.58 
+1.58 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.TimePicker`** 
+**`sap.m.TimePicker`** 
 
 
 
@@ -1503,7 +1503,7 @@ The sliders are now vertically centered for better user experience. For more inf
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1519,28 +1519,28 @@ The sliders are now vertically centered for better user experience. For more inf
 <tr>
 <td valign="top">
 
- 1.58 
+1.58 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.navpopover.SmartLink`** 
+**`sap.ui.comp.navpopover.SmartLink`** 
 
 
 
@@ -1558,7 +1558,7 @@ You can now always access additional content that is shown as a link, even if th
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1574,28 +1574,28 @@ You can now always access additional content that is shown as a link, even if th
 <tr>
 <td valign="top">
 
- 1.58 
+1.58 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.smartfield.SmartField`** 
+**`sap.ui.comp.smartfield.SmartField`** 
 
 
 
@@ -1613,7 +1613,7 @@ The `ValueListWithFixedValues` annotation now supports numeric values.
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1629,28 +1629,28 @@ The `ValueListWithFixedValues` annotation now supports numeric values.
 <tr>
 <td valign="top">
 
- 1.58 
+1.58 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.smarttable.SmartTable`** 
+**`sap.ui.comp.smarttable.SmartTable`** 
 
 
 
@@ -1661,7 +1661,7 @@ The `ValueListWithFixedValues` annotation now supports numeric values.
 
 Sorting and filtering has now been enabled in the column header menus \(if the `SmartTable` control is used in combination with `sap.m.table`\). To use these functions, you have to set the `useTablePersonalisation` property to `true`. For more information, see the [Sample](https://ui5.sap.com/#/sample/sap.ui.comp.sample.smarttable.mtableCustom/preview).
 
- ![](images/WN158_SmartTable_3f793b5.png) 
+![](images/WN158_SmartTable_3f793b5.png)
 
 <sub>Changed•Control•Info Only•1.58</sub>
 
@@ -1670,7 +1670,7 @@ Sorting and filtering has now been enabled in the column header menus \(if the `
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1686,28 +1686,28 @@ Sorting and filtering has now been enabled in the column header menus \(if the `
 <tr>
 <td valign="top">
 
- 1.58 
+1.58 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.smartvariants.SmartVariantManagement`** 
+**`sap.ui.comp.smartvariants.SmartVariantManagement`** 
 
 
 
@@ -1725,7 +1725,7 @@ You can now use a setting in the SAPUI5 flexibility services that determines whe
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1741,28 +1741,28 @@ You can now use a setting in the SAPUI5 flexibility services that determines whe
 <tr>
 <td valign="top">
 
- 1.58 
+1.58 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.layout.form`** 
+**`sap.ui.layout.form`** 
 
 
 
@@ -1780,7 +1780,7 @@ You can now use the `Switch` control in all the forms that are editable. For mor
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1796,28 +1796,28 @@ You can now use the `Switch` control in all the forms that are editable. For mor
 <tr>
 <td valign="top">
 
- 1.58 
+1.58 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.model.base.ManagedObjectModel`** 
+**`sap.ui.model.base.ManagedObjectModel`** 
 
 
 
@@ -1835,7 +1835,7 @@ You can now use the model for data binding to the properties and aggregations of
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1851,28 +1851,28 @@ You can now use the model for data binding to the properties and aggregations of
 <tr>
 <td valign="top">
 
- 1.58 
+1.58 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.unified.Calendar`** 
+**`sap.ui.unified.Calendar`** 
 
 
 
@@ -1895,7 +1895,7 @@ You can now use the model for data binding to the properties and aggregations of
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1911,28 +1911,28 @@ You can now use the model for data binding to the properties and aggregations of
 <tr>
 <td valign="top">
 
- 1.58 
+1.58 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.unified.ColorPicker`** 
+**`sap.ui.unified.ColorPicker`** 
 
 
 
@@ -1950,7 +1950,7 @@ The new `displayMode` property determines how the control will be displayed. The
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -1966,28 +1966,28 @@ The new `displayMode` property determines how the control will be displayed. The
 <tr>
 <td valign="top">
 
- 1.58 
+1.58 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.uxap.ObjectPageLayout`** 
+**`sap.uxap.ObjectPageLayout`** 
 
 
 
@@ -2010,7 +2010,7 @@ The new `displayMode` property determines how the control will be displayed. The
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -2026,28 +2026,28 @@ The new `displayMode` property determines how the control will be displayed. The
 <tr>
 <td valign="top">
 
- 1.58 
+1.58 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- SAP Fiori Elements 
+SAP Fiori Elements 
 
 
 
 </td>
 <td valign="top">
 
- **SAP Fiori Elements** 
+**SAP Fiori Elements** 
 
 
 
@@ -2114,7 +2114,7 @@ Overview page has the following new and enhanced features:
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -2130,28 +2130,28 @@ Overview page has the following new and enhanced features:
 <tr>
 <td valign="top">
 
- 1.58 
+1.58 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- User Documentation 
+User Documentation 
 
 
 
 </td>
 <td valign="top">
 
- **New QUnit/OPA Testing Recommendations** 
+**New QUnit/OPA Testing Recommendations** 
 
 
 
@@ -2174,7 +2174,7 @@ We have updated our recommendations for QUnit and OPA tests in the *Walkthrough*
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -2190,28 +2190,28 @@ We have updated our recommendations for QUnit and OPA tests in the *Walkthrough*
 <tr>
 <td valign="top">
 
- 1.58 
+1.58 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- User Documentation 
+User Documentation 
 
 
 
 </td>
 <td valign="top">
 
- **Alignment with SAP Fiori 2.0 Design Concepts** 
+**Alignment with SAP Fiori 2.0 Design Concepts** 
 
 
 
@@ -2233,7 +2233,7 @@ We have updated our *Master-Detail* template as well as our *Browse Orders* demo
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -2249,28 +2249,28 @@ We have updated our *Master-Detail* template as well as our *Browse Orders* demo
 <tr>
 <td valign="top">
 
- 1.58 
+1.58 
 
 
 
 </td>
 <td valign="top">
 
- New 
+New 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Demo Kit Improvements** 
+**Demo Kit Improvements** 
 
 
 
@@ -2281,7 +2281,7 @@ We have updated our *Master-Detail* template as well as our *Browse Orders* demo
 
 Until now the *API Reference* tree displayed by default all APIs including deprecated ones. Now we've added an *Include deprecated* checkbox above the tree that allows you to choose whether to see the full list. If it's selected, the deprecated items are displayed in the tree with the label *Deprecated* so you can easily identify them without opening each class.
 
- ![](images/Demo_Kit_Deprecated_items_included_6d95e67.png) 
+![](images/Demo_Kit_Deprecated_items_included_6d95e67.png)
 
 <sub>New•Feature•Info Only•1.58</sub>
 
@@ -2290,7 +2290,7 @@ Until now the *API Reference* tree displayed by default all APIs including depre
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -2307,6 +2307,8 @@ Until now the *API Reference* tree displayed by default all APIs including depre
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.115](what-s-new-in-sapui5-1-115-409fde8.md "With this release SAPUI5 is upgraded from version 1.114 to 1.115.")
 
 [What's New in SAPUI5 1.114](what-s-new-in-sapui5-1-114-890fce1.md "With this release SAPUI5 is upgraded from version 1.113 to 1.114.")
 

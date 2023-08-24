@@ -37,7 +37,7 @@ Description
 <tr>
 <td valign="top">
 
- `onInitSmartFilterBar` 
+`onInitSmartFilterBar` 
 
 
 
@@ -62,7 +62,7 @@ This extension function is called when the `SmartFilterbar` has been initialized
 <tr>
 <td valign="top">
 
- `provideExtensionAppStateData` 
+`provideExtensionAppStateData` 
 
 
 
@@ -96,7 +96,7 @@ Note that the call is ignored if `oAppState` is faulty.
 <tr>
 <td valign="top">
 
- `restoreExtensionAppStateData` 
+`restoreExtensionAppStateData` 
 
 
 
@@ -123,7 +123,7 @@ Enable extensions to restore their state based on a previously stored state. In 
 <tr>
 <td valign="top">
 
- `ensureFieldsForSelect` 
+`ensureFieldsForSelect` 
 
 
 
@@ -159,7 +159,7 @@ For each custom field the extension must call `fnEnsureSelectionProperty` \(`oCo
 <tr>
 <td valign="top">
 
- `addFilters` 
+`addFilters` 
 
 
 
@@ -195,7 +195,7 @@ For each filter the extension must call `fnAddFilter` \(`oControllerExtension`, 
 <tr>
 <td valign="top">
 
- `provideExtensionStateData` 
+`provideExtensionStateData` 
 
 
 
@@ -229,7 +229,7 @@ The values for the lifecycle object parameters \(Page, Permanent etc.\) are prov
 <tr>
 <td valign="top">
 
- `restoreExtensionStateData` 
+`restoreExtensionStateData` 
 
 
 
@@ -256,7 +256,7 @@ In this case, the implementing controller extension can call `fnGetExtensionStat
 <tr>
 <td valign="top">
 
- `provideStartupExtension` 
+`provideStartupExtension` 
 
 
 
@@ -281,7 +281,7 @@ The parameter, while calling this function, is a reference to the custom selecti
 <tr>
 <td valign="top">
 
- `provideExtensionNavigation` 
+`provideExtensionNavigation` 
 
 
 
@@ -306,7 +306,7 @@ This function is called with the standard navigation entry details \(if present\
 <tr>
 <td valign="top">
 
- `provideCustomActionPress` 
+`provideCustomActionPress` 
 
 
 
@@ -331,7 +331,7 @@ The method provided to this function is defined in the controller extension.
 <tr>
 <td valign="top">
 
- `provideCustomParameter` 
+`provideCustomParameter` 
 
 
 

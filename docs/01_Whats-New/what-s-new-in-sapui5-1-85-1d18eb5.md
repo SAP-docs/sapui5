@@ -6,7 +6,7 @@ With this release SAPUI5 is upgraded from version 1.84 to 1.85.
 
 
 
-** **
+****
 
 
 <table>
@@ -64,28 +64,28 @@ Available as of
 <tr>
 <td valign="top">
 
- 1.85 
+1.85 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **SAPUI5 OData V4 Model** 
+**SAPUI5 OData V4 Model** 
 
 
 
@@ -128,28 +128,28 @@ Info Only
 <tr>
 <td valign="top">
 
- 1.85 
+1.85 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Feature 
+Feature 
 
 
 
 </td>
 <td valign="top">
 
- **Special Messaging Support for Visually Impaired Users** 
+**Special Messaging Support for Visually Impaired Users** 
 
 
 
@@ -167,7 +167,7 @@ The `sap.ui.core.InvisibleMessage` class is no longer experimental. This class i
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -183,28 +183,28 @@ The `sap.ui.core.InvisibleMessage` class is no longer experimental. This class i
 <tr>
 <td valign="top">
 
- 1.85 
+1.85 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.f.GridContainer`** 
+**`sap.f.GridContainer`** 
 
 
 
@@ -222,7 +222,7 @@ We have improved the two-dimensional keyboard navigation. Now navigation using t
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -238,28 +238,28 @@ We have improved the two-dimensional keyboard navigation. Now navigation using t
 <tr>
 <td valign="top">
 
- 1.85 
+1.85 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.Bar`** 
+**`sap.m.Bar`** 
 
 
 
@@ -277,7 +277,7 @@ We have added a new `titleAlignment` property. It enables developers to create c
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -293,28 +293,28 @@ We have added a new `titleAlignment` property. It enables developers to create c
 <tr>
 <td valign="top">
 
- 1.85 
+1.85 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.ColorPalette`, `sap.m.ColorPalettePopover`, and `sap.ui.unified.ColorPickerPopover`** 
+**`sap.m.ColorPalette`, `sap.m.ColorPalettePopover`, and `sap.ui.unified.ColorPickerPopover`** 
 
 
 
@@ -332,7 +332,7 @@ A `liveChange` event is now available in these controls, which are using the `sa
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -348,28 +348,28 @@ A `liveChange` event is now available in these controls, which are using the `sa
 <tr>
 <td valign="top">
 
- 1.85 
+1.85 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.SinglePlanningCalendar`** 
+**`sap.m.SinglePlanningCalendar`** 
 
 
 
@@ -387,7 +387,7 @@ The `specialDates` aggregation, which allows you to define special dates for the
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -403,28 +403,28 @@ The `specialDates` aggregation, which allows you to define special dates for the
 <tr>
 <td valign="top">
 
- 1.85 
+1.85 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.m.Table`** 
+**`sap.m.Table`** 
 
 
 
@@ -438,7 +438,7 @@ The `specialDates` aggregation, which allows you to define special dates for the
 
 If the sum of the width of all columns in a table is less than the available space for the whole table, we now render a placeholder column to occupy the remaining unused space. This feature is enabled by default.
 
- ![](images/Dummy_Column_1da07e7.png) 
+![](images/Dummy_Column_1da07e7.png)
 
 For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.Table).
 
@@ -449,7 +449,7 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.Ta
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -465,28 +465,28 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.Ta
 <tr>
 <td valign="top">
 
- 1.85 
+1.85 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.smartfield.SmartField`** 
+**`sap.ui.comp.smartfield.SmartField`** 
 
 
 
@@ -504,7 +504,7 @@ We've updated the object status icons of the `SmartField` according to the lates
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -520,28 +520,28 @@ We've updated the object status icons of the `SmartField` according to the lates
 <tr>
 <td valign="top">
 
- 1.85 
+1.85 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.comp.smartfilterbar.SmartFilterBar`, `sap.ui.comp.smartfield.SmartField`** 
+**`sap.ui.comp.smartfilterbar.SmartFilterBar`, `sap.ui.comp.smartfield.SmartField`** 
 
 
 
@@ -552,7 +552,7 @@ We've updated the object status icons of the `SmartField` according to the lates
 
 -   We have enabled the support of a `ValueListParameterConstant` as a `valueList` property of the `Common.v1.ValueList` annotation. This constant specifies a unique value that is used to get an exact match result of your queries. It affects the autocomplete suggestion feature and the value help option. Parameters with a constant value are not shown in the filter bar of the `ValueHelpDialog` as filterable fields.
 
-     For more information, see the [Sample](https://ui5.sap.com/#/entity/sap.ui.comp.smartfield.SmartField/sample/sap.ui.comp.sample.smartfield.WithValueListAndConstantParameter). 
+    For more information, see the [Sample](https://ui5.sap.com/#/entity/sap.ui.comp.smartfield.SmartField/sample/sap.ui.comp.sample.smartfield.WithValueListAndConstantParameter). 
 
 -   Until now, the recently used values function didn't take into account possible language changes in the application. Now, if you use your application in one language and switch the language in SAP Fiori launchpad, the recently used values consider this change and store the data for the different languages. Note that all data stored before the introduction of this feature will be displayed in the field history only when the application is in English.
 
@@ -564,7 +564,7 @@ We've updated the object status icons of the `SmartField` according to the lates
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -580,28 +580,28 @@ We've updated the object status icons of the `SmartField` according to the lates
 <tr>
 <td valign="top">
 
- 1.85 
+1.85 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- Control 
+Control 
 
 
 
 </td>
 <td valign="top">
 
- **`sap.ui.integration.widgets.Card`** 
+**`sap.ui.integration.widgets.Card`** 
 
 
 
@@ -622,7 +622,7 @@ We've updated the object status icons of the `SmartField` according to the lates
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -638,28 +638,28 @@ We've updated the object status icons of the `SmartField` according to the lates
 <tr>
 <td valign="top">
 
- 1.85 
+1.85 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- SAP Fiori Elements 
+SAP Fiori Elements 
 
 
 
 </td>
 <td valign="top">
 
- **SAP Fiori elements for OData V2** 
+**SAP Fiori elements for OData V2** 
 
 
 
@@ -686,7 +686,7 @@ The following changes and new features are available for SAP Fiori elements for 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -702,28 +702,28 @@ The following changes and new features are available for SAP Fiori elements for 
 <tr>
 <td valign="top">
 
- 1.85 
+1.85 
 
 
 
 </td>
 <td valign="top">
 
- Changed 
+Changed 
 
 
 
 </td>
 <td valign="top">
 
- SAP Fiori Elements 
+SAP Fiori Elements 
 
 
 
 </td>
 <td valign="top">
 
- **SAP Fiori elements for OData V4** 
+**SAP Fiori elements for OData V4** 
 
 
 
@@ -774,7 +774,7 @@ The following changes and new features are available for SAP Fiori elements for 
 </td>
 <td valign="top">
 
- Info Only 
+Info Only 
 
 
 
@@ -791,6 +791,8 @@ The following changes and new features are available for SAP Fiori elements for 
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.115](what-s-new-in-sapui5-1-115-409fde8.md "With this release SAPUI5 is upgraded from version 1.114 to 1.115.")
 
 [What's New in SAPUI5 1.114](what-s-new-in-sapui5-1-114-890fce1.md "With this release SAPUI5 is upgraded from version 1.113 to 1.114.")
 

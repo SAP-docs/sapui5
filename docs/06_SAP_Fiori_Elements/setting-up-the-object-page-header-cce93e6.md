@@ -64,7 +64,7 @@ Title \(Object Type\)
 <tr>
 <td valign="top">
 
- *2* 
+*2* 
 
 
 
@@ -115,7 +115,7 @@ Product title in SAP back-end systems
   
 **Object Page Header**
 
- ![](images/Object_Page_Header_Main_Elements_698018b.png "Object Page Header") 
+![](images/Object_Page_Header_Main_Elements_698018b.png "Object Page Header")
 
 
 

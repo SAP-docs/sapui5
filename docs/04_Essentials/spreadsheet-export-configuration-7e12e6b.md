@@ -76,30 +76,14 @@ Type-Dependent Properties
 <tr>
 <td valign="top">
 
- `property` \(`string`\)
+`property` \(`string`\)
 
 
 
 </td>
 <td valign="top">
 
- `scale` \(`number`\)
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
- `label` \(`string`\)
-
-
-
-</td>
-<td valign="top">
-
- `delimiter` \(`boolean`\)
+`scale` \(`number`\)
 
 
 
@@ -108,30 +92,14 @@ Type-Dependent Properties
 <tr>
 <td valign="top">
 
- `type` \(`string`\)
+`label` \(`string`\)
 
 
 
 </td>
 <td valign="top">
 
- `unit` \(`string`\)
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
- `width` \(`number`\)
-
-
-
-</td>
-<td valign="top">
-
- `unitProperty` \(`string`\)
+`delimiter` \(`boolean`\)
 
 
 
@@ -140,14 +108,14 @@ Type-Dependent Properties
 <tr>
 <td valign="top">
 
- `textAlign` \(`string`\)
+`type` \(`string`\)
 
 
 
 </td>
 <td valign="top">
 
- `displayUnit` \(`boolean`\)
+`unit` \(`string`\)
 
 
 
@@ -156,14 +124,30 @@ Type-Dependent Properties
 <tr>
 <td valign="top">
 
- 
+`width` \(`number`\)
 
 
 
 </td>
 <td valign="top">
 
- `trueValue` \(`string`\)
+`unitProperty` \(`string`\)
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`textAlign` \(`string`\)
+
+
+
+</td>
+<td valign="top">
+
+`displayUnit` \(`boolean`\)
 
 
 
@@ -179,7 +163,7 @@ Type-Dependent Properties
 </td>
 <td valign="top">
 
- `falseValue` \(`string`\)
+`trueValue` \(`string`\)
 
 
 
@@ -195,7 +179,7 @@ Type-Dependent Properties
 </td>
 <td valign="top">
 
- `template` \(`string`\)
+`falseValue` \(`string`\)
 
 
 
@@ -211,7 +195,7 @@ Type-Dependent Properties
 </td>
 <td valign="top">
 
- `inputFormat` \(`string`\)
+`template` \(`string`\)
 
 
 
@@ -227,7 +211,7 @@ Type-Dependent Properties
 </td>
 <td valign="top">
 
- `valueMap` \(`object|Map`\)
+`inputFormat` \(`string`\)
 
 
 
@@ -243,7 +227,7 @@ Type-Dependent Properties
 </td>
 <td valign="top">
 
- `wrap` \(`boolean`\)
+`valueMap` \(`object|Map`\)
 
 
 
@@ -259,7 +243,7 @@ Type-Dependent Properties
 </td>
 <td valign="top">
 
- `autoScale` \(`boolean`\)
+`wrap` \(`boolean`\)
 
 
 
@@ -275,7 +259,7 @@ Type-Dependent Properties
 </td>
 <td valign="top">
 
- `timezone` \(`string`\)
+`autoScale` \(`boolean`\)
 
 
 
@@ -291,7 +275,7 @@ Type-Dependent Properties
 </td>
 <td valign="top">
 
- `timezoneProperty` \(`string`\)
+`timezone` \(`string`\)
 
 
 
@@ -307,7 +291,7 @@ Type-Dependent Properties
 </td>
 <td valign="top">
 
- `displayTimezone` \(`boolean`\)
+`timezoneProperty` \(`string`\)
 
 
 
@@ -323,7 +307,23 @@ Type-Dependent Properties
 </td>
 <td valign="top">
 
- `utc` \(`boolean`\)
+`displayTimezone` \(`boolean`\)
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ 
+
+
+
+</td>
+<td valign="top">
+
+`utc` \(`boolean`\)
 
 
 
@@ -424,21 +424,21 @@ Description
 <tr>
 <td valign="top">
 
- `type` 
+`type` 
 
 
 
 </td>
 <td valign="top">
 
- `string` 
+`string` 
 
 
 
 </td>
 <td valign="top">
 
- ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
 
 
 
@@ -454,21 +454,21 @@ Defines the type of the data service that provides the data. If it is an OData s
 <tr>
 <td valign="top">
 
- `dataUrl` 
+`dataUrl` 
 
 
 
 </td>
 <td valign="top">
 
- `string` 
+`string` 
 
 
 
 </td>
 <td valign="top">
 
- ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif) 
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
 
 
 
@@ -484,21 +484,21 @@ Request URL that is needed to request the data with all the filters and its orde
 <tr>
 <td valign="top">
 
- `serviceUrl` 
+`serviceUrl` 
 
 
 
 </td>
 <td valign="top">
 
- `string` 
+`string` 
 
 
 
 </td>
 <td valign="top">
 
- ![Partially](../02_Read-Me-First/images/Yellow_Led_3ea53dc.gif) 
+![Partially](../02_Read-Me-First/images/Yellow_Led_3ea53dc.gif)
 
 
 
@@ -517,21 +517,21 @@ URL of the data service that serves the entity which is requested by the `dataUr
 <tr>
 <td valign="top">
 
- `count` 
+`count` 
 
 
 
 </td>
 <td valign="top">
 
- `number` 
+`number` 
 
 
 
 </td>
 <td valign="top">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
@@ -550,21 +550,21 @@ Indicator of the line items available through the service. During the export pro
 <tr>
 <td valign="top">
 
- `useBatch` 
+`useBatch` 
 
 
 
 </td>
 <td valign="top">
 
- `boolean` 
+`boolean` 
 
 
 
 </td>
 <td valign="top">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
@@ -580,21 +580,21 @@ If set to `true`, the export library will use OData batch requests. Once batch r
 <tr>
 <td valign="top">
 
- `headers` 
+`headers` 
 
 
 
 </td>
 <td valign="top">
 
- `object` 
+`object` 
 
 
 
 </td>
 <td valign="top">
 
- ![Partially](../02_Read-Me-First/images/Yellow_Led_3ea53dc.gif) 
+![Partially](../02_Read-Me-First/images/Yellow_Led_3ea53dc.gif)
 
 
 
@@ -613,14 +613,14 @@ Provides additional request headers within an OData batch request. Every propert
 <tr>
 <td valign="top">
 
- `sizeLimit` 
+`sizeLimit` 
 
 
 
 </td>
 <td valign="top">
 
- `number` 
+`number` 
 
 
 
@@ -678,7 +678,7 @@ exportConfiguration = {
 
 Apart from the mandatory configuration, you can add context information to the generated Office Open XML spreadsheet. This part of the configuration is optional. It is provided within a JSON object that is assigned to the `context` property within the workbook object of the export configuration. Built-in properties are not visible on a data sheet and stored as document properties in the generated file while custom metadata is visible on a data sheet in the workbook.
 
- ![](images/contextmetadata_png_07d19bb.png) 
+![](images/contextmetadata_png_07d19bb.png)
 
 > ### Note:  
 > Apart from the actual data that is exported, sometimes additional information is required in the spreadsheet. For example, this meta information could be the URL of the system from which the data is exported, the system ID, a timestamp of the export date, or the name of the user who exported this data.
@@ -736,7 +736,7 @@ Custom Metadata Context Information
 <tr>
 <td valign="top">
 
- `application` \(`string`\)
+`application` \(`string`\)
 
 
 
@@ -752,7 +752,7 @@ We recommend to use this property because there are often several similar apps t
 </td>
 <td valign="top" rowspan="4">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
@@ -768,7 +768,7 @@ We recommend to use this property because there are often several similar apps t
 <tr>
 <td valign="top">
 
- `version` \(`string`\)
+`version` \(`string`\)
 
 
 
@@ -800,7 +800,7 @@ Adds a self-explanatory title to the document generated. This can be useful if t
 <tr>
 <td valign="top">
 
- `modifiedBy` \(`string`\)
+`modifiedBy` \(`string`\)
 
 
 
@@ -818,7 +818,7 @@ If you do not use this property, the `sap.ui.export.Spreadsheet` library automat
 <tr>
 <td valign="top">
 
- `sheetName` \(`string`\)
+`sheetName` \(`string`\)
 
 
 
@@ -839,7 +839,7 @@ Changes the name of the sheet that contains the exported data. If this property 
 </td>
 <td valign="top" rowspan="3">
 
- ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) 
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 
 
@@ -848,7 +848,7 @@ Changes the name of the sheet that contains the exported data. If this property 
 <tr>
 <td valign="top">
 
- `metaSheetName` \(`string`\)
+`metaSheetName` \(`string`\)
 
 
 
@@ -864,7 +864,7 @@ Changes the name of the sheet that contains the metadata. In contrast to `sheetN
 <tr>
 <td valign="top">
 
- `metainfo` \(`array`\)
+`metainfo` \(`array`\)
 
 
 

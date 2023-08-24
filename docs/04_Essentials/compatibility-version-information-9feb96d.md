@@ -69,58 +69,28 @@ The compatibility version configuration works as follows:
     <tr>
     <td valign="top">
     
-        \--
+    \--
 
 
     
     </td>
     <td valign="top">
     
-        \--
+    \--
 
 
     
     </td>
     <td valign="top">
     
-        1.14
+    1.14
 
 
     
     </td>
     <td valign="top">
     
-        1.14
-
-
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-        1.16
-
-
-    
-    </td>
-    <td valign="top">
-    
-        \--
-
-
-    
-    </td>
-    <td valign="top">
-    
-        1.14
-
-
-    
-    </td>
-    <td valign="top">
-    
-        1.16
+    1.14
 
 
     
@@ -129,58 +99,28 @@ The compatibility version configuration works as follows:
     <tr>
     <td valign="top">
     
-        \--
+    1.16
 
 
     
     </td>
     <td valign="top">
     
-        1.16
+    \--
 
 
     
     </td>
     <td valign="top">
     
-        1.14
+    1.14
 
 
     
     </td>
     <td valign="top">
     
-        1.16
-
-
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-        1.18
-
-
-    
-    </td>
-    <td valign="top">
-    
-        1.16
-
-
-    
-    </td>
-    <td valign="top">
-    
-        1.14
-
-
-    
-    </td>
-    <td valign="top">
-    
-        1.16
+    1.16
 
 
     
@@ -189,28 +129,88 @@ The compatibility version configuration works as follows:
     <tr>
     <td valign="top">
     
-        edge
+    \--
 
 
     
     </td>
     <td valign="top">
     
-        ..
+    1.16
 
 
     
     </td>
     <td valign="top">
     
-        1.14
+    1.14
 
 
     
     </td>
     <td valign="top">
     
-        1.18
+    1.16
+
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    1.18
+
+
+    
+    </td>
+    <td valign="top">
+    
+    1.16
+
+
+    
+    </td>
+    <td valign="top">
+    
+    1.14
+
+
+    
+    </td>
+    <td valign="top">
+    
+    1.16
+
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    edge
+
+
+    
+    </td>
+    <td valign="top">
+    
+    ..
+
+
+    
+    </td>
+    <td valign="top">
+    
+    1.14
+
+
+    
+    </td>
+    <td valign="top">
+    
+    1.18
 
 
     
