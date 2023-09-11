@@ -3338,7 +3338,7 @@ Current version of the `manifest.json`
     "sap.artifact": {},
     "sap.package": {},
     "sap.insights": {},
-    "sap.bpa.task: {},
+    "sap.bpa.task": {},
     "sap.fe": {},
     "sap.card": {}
 }
