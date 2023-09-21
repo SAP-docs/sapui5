@@ -3517,28 +3517,30 @@ Text that is shown when the navigation cannot be completed successfully.
 <tr>
 <td valign="top">
 
-`T_ANNOTATION_HELPER_DEFAULT_OBJECT_PAGE_HEADER_TITLE_NO_HEADER_INFO` 
+`T_ANNOTATION_HELPER_DEFAULT_HEADER_TITLE_NO_HEADER_INFO`
+
+\(deprecated key: `T_ANNOTATION_HELPER_DEFAULT_OBJECT_PAGE_HEADER_TITLE_NO_HEADER_INFO`\)
 
 
 
 </td>
 <td valign="top">
 
-\(Unnamed Object\)
+Unnamed Object
 
 
 
 </td>
 <td valign="top">
 
-Default header title for the object page if no header information is available.
+The object page title can be linked to an editable field. When a user edits the object page and clears the value of this field, then the page title is set from the text that corresponds to this key.
 
 
 
 </td>
 <td valign="top">
 
- 
+Applications can overwrite the default text with the concrete object.
 
 
 

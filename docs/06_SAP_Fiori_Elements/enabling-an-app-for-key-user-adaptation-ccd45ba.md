@@ -152,7 +152,7 @@ Properties for which no label has been defined get a label that consists of a wa
 
 ### Section/Subsection
 
-Key users can move and rename sections and subsections on the object page.
+Key users can move, rename, remove, and reveal sections and subsections on the object page.
 
 
 

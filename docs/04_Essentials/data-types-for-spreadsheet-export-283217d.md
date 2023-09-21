@@ -295,7 +295,7 @@ var exportConfiguration = {
 
 <a name="loio283217d8f187401c8045723abc27e5e0__section_dnx_c3n_n3b"/>
 
-## Number
+## `Number`
 
 The type `Number` represents a simple numeric value without any specific formatting. The value is displayed the way it is. For further adjustment use the additional properties `scale`, `delimiter`, `unit`, and `unitProperty`.
 
@@ -1160,7 +1160,7 @@ var exportConfiguration = {
 
 <a name="loio283217d8f187401c8045723abc27e5e0__section_gdf_spn_n3b"/>
 
-## Currency
+## `Currency`
 
 The type `Currency` handles currencies as an aggregation of a value and a particular UoM. This type might apply various styles on cell level because the scale of each currency cell depends on the corresponding UoM which in turn might vary for various cells in a currency column. The `Currency` type inherits from the `number` type but provides additional properties, including the `unitProperty` property as a mandatory property.
 
@@ -1311,7 +1311,7 @@ var exportConfiguration = {
 
 <a name="loio283217d8f187401c8045723abc27e5e0__section_zw5_53x_43b"/>
 
-## Enumeration
+## `Enumeration`
 
 The type `Enumeration` is used for mapping values to a particular key. This is useful if your SAPUI5 application is using formatters instead of raw data to display meaningful content because formatters are not supported directly.
 
@@ -1405,7 +1405,7 @@ var exportConfiguration = {
 
 <a name="loio283217d8f187401c8045723abc27e5e0__section_fhw_hqx_43b"/>
 
-## BigNumber
+## `BigNumber`
 
 The type `BigNumber` is used to represent numbers that contain more than 15 digits. This data type is required because of the internal number representation of Microsoft Excel as defined by the IEEE \(Institute of Electrical and Electronics Engineers\). This means that all numbers that contain more than 15 digits are filled with zeros at the end. This affects precision of the values although the difference is really small compared to the total amount. The `BigNumber` type inherits from the `Currency` type and uses the same properties as `Currency` and its superordinate class `Number`. This type creates a textual output which is why it is not possible to do any calculation with these values.
 
@@ -1413,7 +1413,7 @@ The type `BigNumber` is used to represent numbers that contain more than 15 digi
 
 <a name="loio283217d8f187401c8045723abc27e5e0__section_wxf_zjj_l4b"/>
 
-## Percentage
+## `Percentage`
 
 The type `Percentage` represents numeric values that are transformed into percentage. The raw value 1 corresponds to 100%.
 
@@ -1524,6 +1524,31 @@ var exportConfiguration = {
                 property: "Fraction",
                 scale: 2,
 		delimiter: false
+            }
+        ]
+    }
+}
+```
+
+
+
+<a name="loio283217d8f187401c8045723abc27e5e0__section_f2x_vc2_qyb"/>
+
+## `Timezone`
+
+The type `Timezone` represents IANA time zone keys that are translated based on the current locale. This type behaves similar to `Enumeration` but does not require any additional properties to resolve the values.
+
+Here is an example for a `Timezone` column:
+
+```js
+var exportConfiguration = {
+    workbook: {
+        columns: [
+            {
+		label: "Timezone (Departure)",
+		type: sap.ui.export.EdmType.Timezone,
+		property: "TimezoneID",
+		width: 25
             }
         ]
     }

@@ -177,9 +177,6 @@ As long as the parent context is still transient, requesting data from the serve
 
 ### Nested Single Entity
 
-> ### Note:  
-> This is an **experimental** feature as of SAPUI5 1.117.0
-
 No API is required here. Simply bind the properties of the nested entity relative to the transient context of the created main entity. If the user enters a value in such a field, this value is automatically added to the payload of the POST request, making it a deep create.
 
 > ### Example:  

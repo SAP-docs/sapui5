@@ -756,7 +756,7 @@ The following changes and new features are available for SAP Fiori elements for 
 
 -   You can now adapt the size of micro charts in responsive tables and configure the label. For more information, see [Adding a Micro Chart to a Table](../06_SAP_Fiori_Elements/adding-a-micro-chart-to-a-table-b8312a4.md).
 
--   In the list report, users can now create a dynamic tile with a record count, where the applied filter is also considered. For more information, see ["Share" Functionality](../06_SAP_Fiori_Elements/share-functionality-022bf0d.md).
+-   In the list report, users can now create a dynamic tile with a record count, where the applied filter is also considered. For more information, see [The Share Functionality](../06_SAP_Fiori_Elements/the-share-functionality-022bf0d.md).
 
 -   If a property has a `SemanticObject` annotation, but no navigation is available from this application for this `SemanticObject`, the link is displayed as a text.
 
@@ -791,6 +791,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.116](what-s-new-in-sapui5-1-116-ebd6f34.md "With this release SAPUI5 is upgraded from version 1.115 to 1.116.")
 
 [What's New in SAPUI5 1.115](what-s-new-in-sapui5-1-115-409fde8.md "With this release SAPUI5 is upgraded from version 1.114 to 1.115.")
 

@@ -82,6 +82,21 @@ This system behavior is also valid when using the *Apply* button. When choosing 
 
 Drafts are saved automatically in the background after an interval of 20 seconds whenever users add or change information within a business entity while it's in edit mode. However, if the user has modified a field on the UI that has a side effect annotation, then the draft is saved immediately after the user moves out of the virtual field group of the corresponding side effect. The draft is also saved immediately when the user executes an action. In this case, the pending changes in the draft are also saved immediately.
 
+You can turn off the feature to delay draft merges in `manifest.json` in exceptional cases using the following sample code:
+
+> ### Sample Code:  
+> Settings in `manifest.json`
+> 
+> ```
+> "sap.ui.generic.app": {
+>      "settings": {
+>           "draftSettings": {
+>                "dataSaveFrequency": "immediate"
+>           }
+>      }
+> }
+> ```
+
 You can use keyboard shortcuts for common tasks.
 
 When a user toggles away from the draft version, any pending changes are automatically saved and are visible in the active version.
@@ -162,6 +177,11 @@ When a user changes a field or performs an action, such as creating a new subite
 Clicking the *Invite* button next to the user avatars shows a list of users who are currently editing the draft or have previously edited it. Users can also add other users to the list, asking them to join the collaborative draft. Note that adding a user to this list does not change their authorization. Only users with access to the business object can be invited.
 
 When a user is added to the list, the draft will appear in their *Own Draft* list.
+
+> ### Caution:  
+> The collaborative draft uses WebSocket for the synchronization between the participants, which extends the browser session timeout until all users have either navigated away from the draft, closed the session, or closed the application.
+> 
+> Please be aware of this behavior and also inform end users of the app accordingly.
 
 > ### Restriction:  
 > -   This feature is only supported when using the ABAP RESTful Application Programming Model \(RAP\).

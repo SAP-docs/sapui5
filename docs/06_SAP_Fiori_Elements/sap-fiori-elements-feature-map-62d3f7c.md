@@ -5949,7 +5949,7 @@ Object page
 </td>
 <td valign="top">
 
-["Share" Functionality](share-functionality-022bf0d.md)
+[The Share Functionality](the-share-functionality-022bf0d.md)
 
 [Store/Restore the Application State](store-restore-the-application-state-46bf248.md)
 

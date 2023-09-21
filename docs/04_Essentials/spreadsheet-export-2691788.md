@@ -128,11 +128,11 @@ The following data types are supported:
 
 -   [`Percentage`](data-types-for-spreadsheet-export-283217d.md#loio283217d8f187401c8045723abc27e5e0__section_wxf_zjj_l4b)
 
-    > ### Note:  
-    > Currency values and numbers that cannot be represented in the standard format as defined by the *IEEE \(Institute of Electrical and Electronics Engineers\)* in the spreadsheet file because they are too large automatically use the `BigNumber` data type as a fallback option. The number is then stored as `string` and represented using the international format with a comma as a thousands separator and a period for the decimal point.
+-   [`Timezone`](data-types-for-spreadsheet-export-283217d.md#loio283217d8f187401c8045723abc27e5e0__section_f2x_vc2_qyb)
 
--   `Percentage`
 
+> ### Note:  
+> Currency values and numbers that cannot be represented in the standard format as defined by the *IEEE \(Institute of Electrical and Electronics Engineers\)* in the spreadsheet file because they are too large automatically use the `BigNumber` data type as a fallback option. The number is then stored as `string` and represented using the international format with a comma as a thousands separator and a period for the decimal point.
 
 For more information, see [Data Types for Spreadsheet Export](data-types-for-spreadsheet-export-283217d.md).
 

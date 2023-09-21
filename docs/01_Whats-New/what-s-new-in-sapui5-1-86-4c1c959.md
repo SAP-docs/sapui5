@@ -1103,7 +1103,7 @@ The following changes and new features are available for SAP Fiori elements for 
     -   Application developers can use the new extension method `onBeforeNavigation` to selectively change the target when chevron navigation is triggered from a table in list reports and object pages. For more information, see [Example: Replacing Standard Navigation in a Responsive Table in the List Report](../06_SAP_Fiori_Elements/example-replacing-standard-navigation-in-a-responsive-table-in-the-list-report-a12ad60.md).
 
 
--   The share functionality has been updated: A static tile is now created if the filter bar contains a semantic date. For more information, see ["Share" Functionality](../06_SAP_Fiori_Elements/share-functionality-022bf0d.md).
+-   The share functionality has been updated: A static tile is now created if the filter bar contains a semantic date. For more information, see [The Share Functionality](../06_SAP_Fiori_Elements/the-share-functionality-022bf0d.md).
 
 -   A new method for grouping actions is now available using the *Menu* button. For more information, see [Actions](../06_SAP_Fiori_Elements/actions-cbf16c5.md).
 
@@ -1203,6 +1203,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.116](what-s-new-in-sapui5-1-116-ebd6f34.md "With this release SAPUI5 is upgraded from version 1.115 to 1.116.")
 
 [What's New in SAPUI5 1.115](what-s-new-in-sapui5-1-115-409fde8.md "With this release SAPUI5 is upgraded from version 1.114 to 1.115.")
 

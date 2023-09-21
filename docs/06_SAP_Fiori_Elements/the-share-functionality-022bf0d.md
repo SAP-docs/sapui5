@@ -1,8 +1,8 @@
 <!-- loio022bf0dcae1d4d90961ebe23d642fca3 -->
 
-# "Share" Functionality
+# The *Share* Functionality
 
-The "share" functionality allows users to share the current application state using options such as *Send Email* and *Save as Tile*.
+The *Share* functionality allows users to share the current application state using options such as *Send Email* and *Save as Tile*.
 
 -   *Send Email*
 
@@ -42,17 +42,19 @@ The "share" functionality allows users to share the current application state us
 
 
 > ### Note:  
-> -   The "share" functionality is available for the list report, object page, and subobject page.
+> -   The *Share* functionality is available for the list report, object page, and subobject page.
 > 
-> -   For applications using the flexible column layout, the "share" functionality is shown on the highest view level.
+> -   For applications using the flexible column layout, the *Share* functionality is shown on the highest view level.
 > 
-> -   The "share" functionality is not available for newly created objects in draft mode, so the button is not visible.
+> -   The *Share* functionality is not available for newly created objects in draft mode, so the button is not visible.
 > 
-> -   In SAP Fiori elements for OData V2, for draft objects with an existing active instance the "share" functionality will directly share the URL of the active instance.
+> -   In SAP Fiori elements for OData V2, for draft objects with an existing active instance the *Share* functionality will directly share the URL of the active instance.
 > 
->     In SAP Fiori elements for OData V4, for draft objects with an existing active instance the "share" functionality will use the semantic bookmarking feature \(see the corresponding section in this topic below\), but if semantic keys are not defined then the URL of the active instance is shared.
+>     In SAP Fiori elements for OData V4, for draft objects with an existing active instance the *Share* functionality will use the semantic bookmarking feature \(see the corresponding section in this topic below\), but if semantic keys are not defined then the URL of the active instance is shared.
 > 
 > -   The *Share: Microsoft Teams* functionality uses application states to shorten long URLs. These application state records are cleaned up in case they aren't accessed for a long time. For more information, see [Cleanup of Expired Application State](https://help.sap.com/docs/ABAP_PLATFORM_NEW/a7b390faab1140c087b8926571e942b7/6107ee41f89a43c9af0aa279fe039cca.html).
+> 
+> -   Users who want to use the *Share: Microsoft Teams* feature in incognito mode will receive an error of type ***Authentication Information HTTP Status 401- Unauthorized***. To resolve this, users must allow third-party cookies for the incognito session.
 
 
 
@@ -60,7 +62,7 @@ The "share" functionality allows users to share the current application state us
 
 ## Additional Features in SAP Fiori Elements for OData V2
 
-The "share" functionality is hidden for the creation pages of non-draft objects.
+The *Share* functionality is hidden for the creation pages of non-draft objects.
 
 During tile creation, you can change the tile type from dynamic to static using an extension. For more information, see [Extending the Bookmark Function to Save Static Tiles to the SAP Fiori Launchpad](extending-the-bookmark-function-to-save-static-tiles-to-the-sap-fiori-launchpad-7e34ea9.md).
 
@@ -160,7 +162,7 @@ Here’s an annotation snippet showing the semantic key annotation:
 > ],
 > ```
 
-If the application developer does not define the annotations for the semantic keys, the URL contains only the technical keys. In this case, if user A shares the URL via the "share" functionality with user B, user B will only be able to open the list report page if user A shares while being in display mode. If user A is already in edit mode when the URL is shared, then user B will not be able to open the link, since user B cannot access the draft of user A.
+If the application developer does not define the annotations for the semantic keys, the URL contains only the technical keys. In this case, if user A shares the URL via the*Share* functionality with user B, user B will only be able to open the list report page if user A shares while being in display mode. If user A is already in edit mode when the URL is shared, then user B will not be able to open the link, since user B cannot access the draft of user A.
 
 If, however, the application developer has defined semantic keys, the URL only contains semantic keys. In this case, user B will be able to open the shared URL, irrespective of whether user A shares the active copy \(display mode\) or the draft copy \(edit mode\). If user A shares the draft copy, then user B sees the corresponding active copy of the object.
 

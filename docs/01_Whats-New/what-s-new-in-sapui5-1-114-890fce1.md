@@ -279,7 +279,7 @@ The following changes and new features are available for SAP Fiori elements for 
 
     ![](images/Share_Menu_Microsoft_Teams_Share_as_Tab_c0c2151.png)
 
-    For more information, see ["Share" Functionality](../06_SAP_Fiori_Elements/share-functionality-022bf0d.md).
+    For more information, see [The Share Functionality](../06_SAP_Fiori_Elements/the-share-functionality-022bf0d.md).
 
 
 <sub>Changed•SAP Fiori Elements•Info Only•1.114</sub>
@@ -368,7 +368,7 @@ The following changes and new features are available for SAP Fiori elements for 
 
     ![](images/Share_Menu_Microsoft_Teams_Share_as_Tab_c0c2151.png)
 
-    For more information, see ["Share" Functionality](../06_SAP_Fiori_Elements/share-functionality-022bf0d.md).
+    For more information, see [The Share Functionality](../06_SAP_Fiori_Elements/the-share-functionality-022bf0d.md).
 
 
 <sub>Changed•SAP Fiori Elements•Info Only•1.114</sub>
@@ -677,6 +677,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.116](what-s-new-in-sapui5-1-116-ebd6f34.md "With this release SAPUI5 is upgraded from version 1.115 to 1.116.")
 
 [What's New in SAPUI5 1.115](what-s-new-in-sapui5-1-115-409fde8.md "With this release SAPUI5 is upgraded from version 1.114 to 1.115.")
 

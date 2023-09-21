@@ -21,6 +21,9 @@ The `manifest.json` file defines static information about the application, such 
 >  	"smartVariantRequired": true, //Represents a switch to activate smart variant management in the global filters. The default value is true.
 >  	"showDateInRelativeFormat": false, //Represents a switch to enable or disable relative/normal date formatting in OVP applications
 >  	"enableLiveFilter": false, //Represents the switch to activate live update in the global filters, else manual update is required by clicking the Go button
+>  	"dataLoadSettings" : {
+>            "loadDataOnAppLaunch" : "ifAnyFilterExist" //Defines the data load behaviour on app launch. Values: 'ifAnyFilterExist'/'always' to auto load data and 'never' to stop the auto data load during application launch.
+>       },
 >  	"imageSupported": true, //Allows the condensed list card to show images or icons	
 >  	"considerAnalyticalParameters": true, //Flag to enable/disable analytical parameter support for smart filter bar
 >  	"refreshIntervalInMinutes": 2, //Time interval in minutes to auto refresh the card models

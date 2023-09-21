@@ -100,7 +100,7 @@ The *Mass Edit* button isn't enabled if the update restriction points to a path 
 > 
 >     -   date-time fields
 > 
->     -   dropdown fields
+>     -   value help fields with a dropdown list
 > 
 >     -   rating fields
 > 

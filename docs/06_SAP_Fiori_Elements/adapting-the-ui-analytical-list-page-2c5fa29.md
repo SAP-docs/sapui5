@@ -199,14 +199,14 @@ Use the following smart chart properties on the UI Adaptation layer:
 <tr>
 <th valign="top">
 
-Property
+Feature
 
 
 
 </th>
 <th valign="top">
 
-Description
+Setting
 
 
 
@@ -222,7 +222,7 @@ Ignored chart types
 </td>
 <td valign="top">
 
-Comma-separated value fields do not show up in the list of available chart types.
+Configure the `ignoredChartType` property to hide certain chart types. Upon entering the value as comma-separated chart types, the mentioned charts do not show up in the list of available charts.
 
 
 
@@ -238,7 +238,7 @@ No data
 </td>
 <td valign="top">
 
-Allows you to override the default text when chart has no data to display.
+Configure the `noData` property that allows you to override the default text when chart has no data to display.
 
 
 
@@ -254,7 +254,7 @@ Selection mode
 </td>
 <td valign="top">
 
-Lets you select the mode \(single, multiple, or none\).
+Configure the `selectionMode` property that lets you select the mode \(single, multiple, or none\).
 
 
 
@@ -270,7 +270,7 @@ Show chart type selection button
 </td>
 <td valign="top">
 
-Controls the visibility of the chart type button \(users could change the chart type\).
+Configure the `showChartTypeSelectionButton` property that controls the visibility of the chart type button \(users could change the chart type\).
 
 
 
@@ -286,7 +286,7 @@ Show download button
 </td>
 <td valign="top">
 
-Controls the visibility of the chart download button \(users can download the chart as an image\)
+Configure the `showDownloadButton` property that controls the visibility of the chart download button \(users can download the chart as an image\).
 
 
 
@@ -302,7 +302,7 @@ Show legend button
 </td>
 <td valign="top">
 
-Controls the visibility of the legend button \(users can toggle the visibility of the chart legends\)
+Configure the `showLegendButton` property that controls the visibility of the legend button \(users can toggle the visibility of the chart legends\).
 
 
 
@@ -312,7 +312,7 @@ Controls the visibility of the legend button \(users can toggle the visibility o
 
 
 
-### Values for Ignored Chart Type
+### List of Available Chart Types
 
 ****
 
@@ -829,7 +829,7 @@ horizontal\_waterfall
 <tr>
 <th valign="top">
 
-Sample ID
+Feature
 
 
 
@@ -845,14 +845,14 @@ Setting
 <tr>
 <td valign="top">
 
-C\_ContrItemMonitoringResults--chart-btnPersonalisation
+Chart personalisation button
 
 
 
 </td>
 <td valign="top">
 
-Icon: For chart personalization
+Configure the `visible` property to display or hide the Settings icon of chart personalisation
 
 
 
@@ -889,7 +889,7 @@ Visibility: To drill down within the chart toolbar
 <tr>
 <th valign="top">
 
-Sample ID
+Feature
 
 
 
@@ -921,14 +921,14 @@ Allows you to override the default text when chart has no data to display
 <tr>
 <td valign="top">
 
-C\_ContrItemMonitoringResults--table-btnPersonalisation
+Personalization
 
 
 
 </td>
 <td valign="top">
 
-Icon: Lets you configure the table personalization
+Configure the `visible` property to display or hide the *Settings* icon of table personalisation.
 
 
 
@@ -937,16 +937,14 @@ Icon: Lets you configure the table personalization
 <tr>
 <td valign="top">
 
-C\_ContrItemMonitoringResults--table-btnExcelExport
+Export to Excel
 
 
 
 </td>
 <td valign="top">
 
-Icon: To export content to Excel
-
-The *Export to Excel* button is visible on the UI by default. You can hide this button by setting the `Use Export to Excel` property to `False` via UI adaptation.
+The *Export to Excel* button is visible on the UI by default. You can hide this button by setting the `UseExporttoExcel` property to `False` using the UI adaptation.
 
 
 
@@ -976,7 +974,7 @@ Show Row Count
 
 ## Adapting the UI: Table Column
 
-Each column of the smart table can also be tweaked in UI Adaptation \(sample ID is `C_ContrItemMonitoringResults--PurchaseContract`\). The smart table columns expose several properties for this purpose. Some of them are listed here:
+Each column of the smart table can also be tweaked in UI Adaptation. The smart table columns expose several properties for this purpose. Some of them are listed here:
 
 ****
 
@@ -1001,14 +999,14 @@ Setting
 <tr>
 <td valign="top">
 
-Visible
+`visible` 
 
 
 
 </td>
 <td valign="top">
 
-Hide or unhide a column
+Hide or unhide a column.
 
 
 
@@ -1017,7 +1015,7 @@ Hide or unhide a column
 <tr>
 <td valign="top">
 
-Width
+`width` 
 
 
 
@@ -1033,7 +1031,7 @@ Adjust the column width
 <tr>
 <td valign="top">
 
-Auto Resizable
+`autoResizable` 
 
 
 
@@ -1049,7 +1047,7 @@ Expand column to the maximum width of the content
 <tr>
 <td valign="top">
 
-InResult
+`inResult` 
 
 
 
@@ -1065,7 +1063,7 @@ Ensures the column is always used in the query, which affects the aggregation le
 <tr>
 <td valign="top">
 
-Resizable
+`resizable` 
 
 
 
@@ -1081,7 +1079,7 @@ Resize column width
 <tr>
 <td valign="top">
 
-Show Sort Menu Entry
+`showSortMenuEntry` 
 
 
 
@@ -1097,14 +1095,14 @@ Displays column with a sort tab for personalization
 <tr>
 <td valign="top">
 
-Sort Order
+`sortOrder` 
 
 
 
 </td>
 <td valign="top">
 
-Allows sorting
+Allows sorting in ascending or descending. The default value is ascending.
 
 
 
@@ -1113,7 +1111,7 @@ Allows sorting
 <tr>
 <td valign="top">
 
-Sorted
+`sorted` 
 
 
 
@@ -1129,7 +1127,7 @@ Displays sorted items when sort is available in column header
 <tr>
 <td valign="top">
 
-Summed
+`summed` 
 
 
 
@@ -1175,7 +1173,7 @@ Setting
 <tr>
 <td valign="top">
 
-Visible
+`visible` 
 
 
 
@@ -1191,7 +1189,7 @@ Hide or reveal a button
 <tr>
 <td valign="top">
 
-Width
+`width` 
 
 
 
@@ -1207,7 +1205,7 @@ Adjust the width of a button
 <tr>
 <td valign="top">
 
-Icon
+`icon` 
 
 
 
@@ -1223,7 +1221,7 @@ Lets you configure a button icon
 <tr>
 <td valign="top">
 
-Active Icon
+`activeIcon` 
 
 
 
@@ -1239,7 +1237,7 @@ The source property of an alternative icon for the active \(depressed\) state of
 <tr>
 <td valign="top">
 
-Text
+`text` 
 
 
 
@@ -1255,7 +1253,7 @@ Allows you to change button text
 <tr>
 <td valign="top">
 
-Busy
+`busy` 
 
 
 
@@ -1271,7 +1269,7 @@ Denotes whether a control is currently in busy state
 <tr>
 <td valign="top">
 
-Enabled
+`enabled` 
 
 
 
@@ -1287,7 +1285,7 @@ Enable or disable a button
 <tr>
 <td valign="top">
 
-Blocked
+`blocked` 
 
 
 

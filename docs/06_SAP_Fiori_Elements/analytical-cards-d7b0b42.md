@@ -71,59 +71,101 @@ When a user select a particular data point, the system passes a technical ID \(`
 
 Axis scaling lets you scale and display data for line, bubble, or scatter charts in the analytics card. You can choose any of the following axis scaling types:
 
-**Type 1: Default property**
+1.  **Type 1: `ZeroAlwaysVisible`**
 
-The default behavior displays data in the respective chart format including the zero value. The graph is adjusted according to the available data range. Set the following property in the `UI.Chart` annotation:
+    The default behavior displays data in the respective chart format including the zero value. The graph is adjusted according to the available data range.
 
-> ### Sample Code:  
-> XML Annotation
-> 
-> ```
-> <PropertyValue Property="AxisScaling" EnumMember="UI.ChartAxisScalingType/AdjustToDataIncluding0"/>
-> ```
+    Set the following property in the `UI.Chart` annotation:
 
-> ### Sample Code:  
-> CAP CDS Annotation
-> 
-> ```
-> AxisScaling : #AdjustToDataIncluding0
-> ```
+    > ### Sample Code:  
+    > XML Annotation
+    > 
+    > ```
+    > <PropertyValue Property="AxisScaling">
+    > >   <Record Type="UI.ChartAxisScalingType">
+    > >       <PropertyValue Property="AutoScaleBehavior">
+    > >           <Record Type="UI.ChartAxisAutoScaleBehaviorType">
+    > >               <PropertyValue Property="ZeroAlwaysVisible" Bool="true"/>
+    > >           </Record>
+    > >       </PropertyValue>
+    > >   </Record>
+    > > </PropertyValue>
+    > ```
 
-**Type 2: Adjust scale property**
+    > ### Sample Code:  
+    > CAP CDS Annotation
+    > 
+    > ```
+    > AxisScaling : { 
+    > >     $Type : 'UI.ChartAxisScalingType',
+    > >     AutoScaleBehavior: { 
+    > >        $Type: 'UI.ChartAxisAutoScaleBehaviorType',
+    > >        ZeroAlwaysVisible: true
+    > >        }
+    > >  }
+    > ```
 
-The adjust scale property displays data in the respective chart format based on the available data range. Set the following property in the `UI.Chart` annotation:
+2.  **Type 2: `DataScope`**
 
-> ### Sample Code:  
-> XML Annotation
-> 
-> ```
-> <PropertyValue Property="AxisScaling" EnumMember="UI.ChartAxisScalingType/AdjustToData"/>
-> ```
+    The adjust scale property displays data in the respective chart format based on the available data range. It determines the automatic scaling. Minimum and maximum axes values are determined from the entire data set.
 
-> ### Sample Code:  
-> CAP CDS Annotation
-> 
-> ```
-> AxisScaling : #AdjustToData
-> ```
+    Set the following property in the \`UI.Chart\` annotation:
 
-**Type 3: Min-Max property**
+    > ### Sample Code:  
+    > XML Annotation
+    > 
+    > ```
+    > <PropertyValue Property="AxisScaling">
+    > >   <Record Type="UI.ChartAxisScalingType">
+    > >       <PropertyValue Property="AutoScaleBehavior">
+    > >           <Record Type="UI.ChartAxisAutoScaleBehaviorType">
+    > >               <PropertyValue Property="DataScope" EnumMember="DataSet"/>
+    > >           </Record>
+    > >       </PropertyValue>
+    > >   </Record>
+    > > </PropertyValue>>
+    > ```
 
-The min-max property lets you define the minimum and maximum data range to display data in the respective chart format. Set the following property in the `UI.Chart` annotation:
+    > ### Sample Code:  
+    > CAP CDS Annotation
+    > 
+    > ```
+    >  AxisScaling : { 
+    > >     $Type : 'UI.ChartAxisScalingType',
+    > >     AutoScaleBehavior: { 
+    > >        $Type: 'UI.ChartAxisAutoScaleBehaviorType',
+    > >        DataScope: 'DataSet'
+    > >        }
+    > >  }
+    > ```
 
-> ### Sample Code:  
-> XML Annotation
-> 
-> ```
-> <PropertyValue Property="AxisScaling" EnumMember="UI.ChartAxisScalingType/MinMaxValues"/>
-> ```
+3.  **Type 3: `FixedScale`**
 
-> ### Sample Code:  
-> CAP CDS Annotation
-> 
-> ```
-> AxisScaling : #MinMaxValues
-> ```
+    Scale Behaviour set to `FixedScale` lets you define the minimum and maximum data range to display data in the respective chart format. Fixed minimum and maximum values are applied, that are derived from the `@UI.MeasureAttributes.DataPoint/MinimumValue and .../MaximumValue` annotation by default.
+
+    Set the following property in the `UI.Chart` annotation:
+
+    > ### Sample Code:  
+    > XML Annotation
+    > 
+    > ```
+    > <PropertyValue Property="AxisScaling">
+    > >   <Record Type="UI.ChartAxisScalingType">
+    > >       <PropertyValue Property="ScaleBehavior" EnumMember="UI.ChartAxisScaleBehaviorType/FixedScale"/>
+    > >   </Record>
+    > > </PropertyValue>
+    > ```
+
+    > ### Sample Code:  
+    > CAP
+    > 
+    > ```
+    > AxisScaling : { 
+    > >     $Type : 'UI.ChartAxisScalingType',
+    > >     ScaleBehavior: #FixedScale
+    > >  }
+    > ```
+
 
 You must define the `DataPoint` annotation to set the minimum and maximum values.
 

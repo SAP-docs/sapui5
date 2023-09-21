@@ -114,5 +114,5 @@ To disable the *Add Card to Insights* option in the chart toolbar, add the follo
 > ### Restriction:  
 > -   When creating an integration card from the list report table, the following changes aren't retained when navigating back from the card: the filter fields or table columns that were removed, and changes in the position of filter fields or table columns.
 > 
-> -   Cards don't have the same formatting for date, datetime, and unit of measure fields as seen in the list report table.
+> -   Cards don't have the same formatting for unit of measure field as seen in the list report table.
 

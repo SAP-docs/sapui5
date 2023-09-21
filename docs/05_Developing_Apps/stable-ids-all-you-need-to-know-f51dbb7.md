@@ -302,8 +302,8 @@ If you want to add an embedded component with a stable ID, you have two options:
     ```
     [...]
     constructor: function() {
-    	arguments[0].id = "embeddedComponentID";
-    	UIComponent.prototype.contructor.apply(this, arguments);
+        arguments[0].id = "embeddedComponentID";
+        UIComponent.prototype.contructor.apply(this, arguments);
     }
     [...]
     ```

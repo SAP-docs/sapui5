@@ -4,7 +4,7 @@
 
 The bullet chart features a single, primary measure \(for example, current year-to-date revenue\).
 
-It compares that measure to one or more other measures to enrich its meaning \(for example, compared to a target\), and displays it in the context of qualitative ranges of performance, such as poor, satisfactory, and good.
+It compares the measure value to one or more data point values to enrich its meaning \(for example, compared to a target or a forecast value\), and displays it in the context of qualitative ranges of performance, such as poor, satisfactory, and good.
 
 ![](images/Bullet_Micro_Chart_9d24d23.png)
 

@@ -7,7 +7,7 @@ When creating a new entity or item, or action parameters, you can provide defaul
 > ### Note:  
 > This topic is currently only applicable to
 > 
-> -   SAP Fiori elements for OData V2 and SAP Fiori elements for OData V4 non-draft applications.
+> -   SAP Fiori elements for OData V2 non-draft applications.
 > 
 > -   SAP Fiori elements for OData V2 draft applications in the empty row mode and for SAP Fiori elements for OData V4 draft applications in the inline and empty row modes. For more information, see [Enabling Inline Creation Mode or Empty Row Mode for Table Entries](enabling-inline-creation-mode-or-empty-row-mode-for-table-entries-cfb04f0.md).
 

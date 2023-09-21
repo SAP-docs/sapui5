@@ -70,68 +70,6 @@ Available as of
 <tr>
 <td valign="top">
 
-Upcoming 
-
-
-
-</td>
-<td valign="top">
-
-UI Changed 
-
-
-
-</td>
-<td valign="top">
-
-Announcement 
-
-
-
-</td>
-<td valign="top">
-
-**Improved Keyboard Handling and Screen Reader Support of `sap.m.Table`** 
-
-
-
-</td>
-<td valign="top">
-
-**Improved Keyboard Handling and Screen Reader Support of `sap.m.Table`**
-
-> ### Note:  
-> The following information concerns important upcoming changes for end users. These changes may require end users to adjust and/or test cases to be adapted, but they won't stop or disrupt software or processes.
-
-To improve accessibility, we will completely rework the screen reader and keyboard support of the `sap.m.Table` control in 1.118. The row-based navigation stays the same, but cell-based navigation will also be possible, similar to the grid table. We will also improve other accessibility features of the table, for example, the *Delete* and *Edit* buttons for row actions will become accessible via keyboard. These features will not only be changed for the responsive table, but partly also for `sap.m.List`. Also, the ARIA role will be adapted.
-
-**Recommended Action**: Test cases might have to be adapted. Stay tuned and check out the related documentation once the changes have been made.
-
-For more information about accessibility, see [Accessibility for End Users](https://help.sap.com/viewer/bc5a64aac808463baa95b4230f221716/1.116/en-US).
-
-<sub><span style="color:#666666;"><span class="SAP-icons"></span></span>**[Preview](https://help.sap.com/docs/whats-new-disclaimer)**•UI Changed•Announcement•Recommended•Upcoming</sub>
-
-
-
-</td>
-<td valign="top">
-
-Recommended 
-
-
-
-</td>
-<td valign="top">
-
-9999-01-01
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
 1.117 
 
 
@@ -647,7 +585,7 @@ SAP Fiori Elements
 
 The following changes and new features are available for SAP Fiori elements for OData V4:
 
--   End users can now create dynamic tiles from the list report when relative date values such as *Today* and *Tomorrow* are used. For more information, see ["Share" Functionality](../06_SAP_Fiori_Elements/share-functionality-022bf0d.md).
+-   End users can now create dynamic tiles from the list report when relative date values such as *Today* and *Tomorrow* are used. For more information, see [The Share Functionality](../06_SAP_Fiori_Elements/the-share-functionality-022bf0d.md).
 
 -   Changes coming from other flex layers are no longer considered when users navigate from the dynamic tiles created using the *Save as Tile* option. Such changes are also not considered when users navigate from the integration cards to the application. For more information, see [Store/Restore the Application State](../06_SAP_Fiori_Elements/store-restore-the-application-state-46bf248.md).
 

@@ -19,9 +19,9 @@ Check the latest videos in the [SAPUI5 playlist](https://www.youtube.com/playlis
 
 **TypeScript can now be used productively in SAPUI5**
 
-TypeScript is an extension of JavaScript that adds type information to the language. It helps developers catch errors early through type checking and by providing code assist in supporting code editors, for example through code completion and inline documentation. TypeScript can now be used productively in SAPUI5, and we encourage you to use it for an improved development efficiency and experience.
+TypeScript is an extension of JavaScript that adds type information to the language. It helps developers catch errors early through type checking and by providing code assist in supporting code editors, for example through code completion and inline documentation. TypeScript can now be used productively in SAPUI5
 
-You are familiar with SAPUI5 app development, but do you want to learn how to do it in TypeScript? Now there is a video that guides you through the official UI5 TypeScript Tutorial, adds hints about how to avoid pitfalls, and provides some background information.
+You are familiar with SAPUI5 app development, but do you want to learn how to do it in TypeScript? Now there is a video that guides you through the official UI5 TypeScript Tutorial, adds hints about how to avoid pitfalls, and provides some background information., and we encourage you to use it for an improved development efficiency and experience.
 
 
 

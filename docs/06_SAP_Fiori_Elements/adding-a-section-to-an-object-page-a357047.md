@@ -40,7 +40,7 @@ In the SAP Web IDE, open the folder structure of the Manage Products project and
 > 				width="30%" 
 > 				editable="false"/>
 > 	</VBox>
-> </core:View>		
+> </mvc:View>		
 > ```
 
 

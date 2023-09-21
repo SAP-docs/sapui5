@@ -33,7 +33,7 @@ The following button can be used to place a call.
 new sap.m.Button({
     text : person.tel,
     icon : "images/action.png", /* Depends where your images are located */
-    tap : function() {
+    press : function() {
         sap.m.URLHelper.triggerTel(person.tel);
     }
 });
@@ -51,7 +51,7 @@ The following code snippet gives an example for triggering an e-mail application
 
 new sap.m.Image({
     src : "images/website.png", /* Depends where your images are located */
-    tap : function() {
+    press : function() {
         sap.m.URLHelper.triggerEmail(person.website, "Info", "Dear " + person.name + ",");
     }
 });
@@ -71,7 +71,7 @@ new sap.m.DisplayListItem({
     label : "Sms",
     value : "( " + person.sms + " )",
     type : "Active",
-    tap : function() {
+    press : function() {
         sap.m.URLHelper.triggerSms(person.sms);
     }
 });
@@ -85,7 +85,7 @@ new sap.m.InputListItem({
     label : "Website",
     content : new sap.m.Button({
         text : person.website,
-        tap : function() {
+        press : function() {
             sap.m.URLHelper.redirect(person.website);
         }
     })

@@ -734,7 +734,7 @@ String | Integer
 </td>
 <td valign="top">
 
-An integer value or a string containing an integer value that defines the maximum number of characters that can be entered in the text area. When this number is exceeded, the user sees a notification. If this value is not given, the maximum number of characters is not restricted.
+An integer value or a string containing an integer value that defines the maximum number of characters that can be entered in the text area. When this number is exceeded for a multi-line text field, the user sees a notification. When this number is reached for an input field, the user is unable to enter more characters than the defined length. If this value is not given, the maximum number of characters is not restricted.
 
 
 

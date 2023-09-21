@@ -801,7 +801,7 @@ The following changes and new features are available for SAP Fiori elements for 
 
 -   Key users can now create delivery variants. For more information, see [Adapting the UI](../06_SAP_Fiori_Elements/adapting-the-ui-59bfd31.md).
 
--   The *Share* functionality is now automatically hidden for new drafts. For more information, see ["Share" Functionality](../06_SAP_Fiori_Elements/share-functionality-022bf0d.md).
+-   The *Share* functionality is now automatically hidden for new drafts. For more information, see [The Share Functionality](../06_SAP_Fiori_Elements/the-share-functionality-022bf0d.md).
 -   Adaptation of filter bars on overview pages is now enabled by default. For more information, see [Key User Capabilities](../06_SAP_Fiori_Elements/key-user-capabilities-4966938.md).
 
 -   It is now possible to sort and filter columns that are defined via `DataFieldForAnnotation`.
@@ -866,7 +866,7 @@ The following changes and new features are available for SAP Fiori elements for 
 
 -   Semantically connected fields are now displayed side by side to reflect their data relation. For more information, see [Grouping of Fields](../06_SAP_Fiori_Elements/grouping-of-fields-cb1748e.md).
 
--   The *Share in SAP Jam* option is now available on platforms that are integrated with SAP Jam. For more information, see ["Share" Functionality](../06_SAP_Fiori_Elements/share-functionality-022bf0d.md).
+-   The *Share in SAP Jam* option is now available on platforms that are integrated with SAP Jam. For more information, see [The Share Functionality](../06_SAP_Fiori_Elements/the-share-functionality-022bf0d.md).
 
 -   Application developers can now define the sort order of the different columns of the table in the value help dialog. End users will find the table content sorted accordingly. For more information, see [Field Help](../06_SAP_Fiori_Elements/field-help-a5608ea.md).
 
@@ -897,6 +897,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.116](what-s-new-in-sapui5-1-116-ebd6f34.md "With this release SAPUI5 is upgraded from version 1.115 to 1.116.")
 
 [What's New in SAPUI5 1.115](what-s-new-in-sapui5-1-115-409fde8.md "With this release SAPUI5 is upgraded from version 1.114 to 1.115.")
 

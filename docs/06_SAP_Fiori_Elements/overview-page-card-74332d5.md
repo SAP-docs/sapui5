@@ -10,6 +10,8 @@ Each card is bound to a single entity set in a data source, and its configuratio
 
 The card ID is the property name, and the card configuration is provided as a value in the object. At runtime, the cards are displayed in the order that they appear in the application descriptor.
 
+For more information on cards and its areas, see [Card](https://experience.sap.com/fiori-design-web/cards/).
+
 
 
 <a name="loio74332d5d829b413f9d7c0950dc6a71d2__section_nsk_34p_31b"/>

@@ -92,7 +92,7 @@ If `NavigationRestrictions` has `Updatable=false`, the child entity records cann
 
 For more information on how to control the editability for the main entity set that has an `EditAction`, see the section *Enablement of Operations* in the topic [Adding Actions to Tables](adding-actions-to-tables-b623e0b.md) \(under *Additional Features in SAP Fiori elements for OData V4*\).
 
-Both Boolean and path values of `UpdateRestrictions` are supported.
+Both Boolean and path values of `UpdateRestrictions.Updatable` are supported.
 
 The following sample code shows an example of a path-based update restriction:
 
@@ -129,12 +129,12 @@ The following sample code shows an example of a path-based update restriction:
 
 ![](images/UpdateRestrictions1_9616035.png)
 
-In the screenshot above, the field *Warranty Expiration* comes from an entity set for which `UpdateRestrictions` evaluates to `false`. Therefore, it is in display mode even when the object page is in edit mode and the other fields \(from other entity sets\) are editable. This is also true when you navigate to the subobject page:
+In the screenshot above, the field *Warranty Expiration* comes from an entity set for which `UpdateRestrictions.Updatable` evaluates to `false`. Therefore, it is in display mode even when the object page is in edit mode and the other fields \(from other entity sets\) are editable. This is also true when you navigate to the subobject page:
 
 ![](images/UpdateRestrictions2_b3a0021.png)
 
-The screenshot shows that none of the fields from the *Material Reviews* entity set are editable. This is because `UpdateRestrictions` of the *Material Reviews* entity set evaluates to `false`. Note that the field *Material Category* comes from a different entity set.
+The screenshot shows that none of the fields from the *Material Reviews* entity set are editable. This is because `UpdateRestrictions.Updatable` of the *Material Reviews* entity set evaluates to `false`. Note that the field *Material Category* comes from a different entity set.
 
 > ### Note:  
-> Application developers should be aware of the following behavior when setting a static `false` value for `UpdateRestrictions`: Since these restrictions are applicable for both draft as well as active records, doing so prevents an update even on the draft copy \(which was not yet activated\). To avoid this, please use a path-based value for `UpdateRestrictions`, so that the editability is enabled for records for the subobject page that were just created \(but not yet activated\), while `UpdateRestrictions` evaluates to `true` only for activated records. This ensures that users can create and edit the draft records, but can no longer edit after activation.
+> Application developers must be aware of the following behavior when setting a static `false` value for `UpdateRestrictions.Updatable`: Since these restrictions are applicable for both draft as well as active records, doing so prevents an update even on the draft copy \(which was not yet activated\). To avoid this, please use a path-based value for `UpdateRestrictions.Updatable`, so that the editability is enabled for records for the subobject page that were just created \(but not yet activated\), while `UpdateRestrictions.Updatable` evaluates to `true` only for activated records. This ensures that users can create and edit the draft records, but can no longer edit after activation.
 

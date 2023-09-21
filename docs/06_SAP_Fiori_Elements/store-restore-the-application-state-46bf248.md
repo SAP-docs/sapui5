@@ -4,7 +4,7 @@
 
 SAP Fiori elements uses the `iAppState` mechanism for storing or restoring the application state. This mechanism enables a smooth user experience when navigating back and forth between SAP Fiori elements and other apps.
 
-The state of the application is preserved when users refresh or navigate away from an application created using SAP Fiori elements \(either a list report or an object page\) and then navigate back to this page. The application state is also preserved when the URL of the application is shared with another user who then opens the link. For more information, see ["Share" Functionality](share-functionality-022bf0d.md).
+The state of the application is preserved when users refresh or navigate away from an application created using SAP Fiori elements \(either a list report or an object page\) and then navigate back to this page. The application state is also preserved when the URL of the application is shared with another user who then opens the link. For more information, see [The Share Functionality](the-share-functionality-022bf0d.md).
 
 
 
@@ -86,6 +86,4 @@ In these scenarios, the following changes aren't retained from the `iAppState`: 
 > -   The logic that allows changes from other layers to be merged by the flex layer with the changes coming from an end user is only applied if the variant within the `iAppState` is available at the time when the restore takes place. If this is not the case, for example when the page was shared to another user and the target user doesn't have access to the variant shared in the `iAppState`, then the app loads using the *Standard* variant and the full state of the page when it is shared is applied on top, meaning without any other layer changes. When this happens, the following changes won't be retained: the filter fields or table columns that were removed and changes in the filter field or table column position.
 > 
 > -   For a single-valued field, the merge logic always has priority over the other layer value \(the value of the key user, for example\) and the changes made by the end user for the same field are ignored.
-> 
-> -   If a user navigates to the list report via a dynamic tile created using the *Save as Tile* feature in the list report, the changes from other layers \(such as changes made by the key user, for example\) aren't applied.
 

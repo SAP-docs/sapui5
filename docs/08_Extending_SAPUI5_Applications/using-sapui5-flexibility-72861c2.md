@@ -74,5 +74,5 @@ You can also override an extension directly in a controller.
 **Related Information**  
 
 
-[What is SAPUI5 Flexibility?](https://help.sap.com/viewer/UI5_Flex/e36d19b3d24f47199a9a82d3faa508c3.html)
+[What is SAPUI5 Flexibility?](https://help.sap.com/docs/UI5_FLEXIBILITY/430e2c1a4ff241bc8162df4bf51e0730/e36d19b3d24f47199a9a82d3faa508c3.html)
 

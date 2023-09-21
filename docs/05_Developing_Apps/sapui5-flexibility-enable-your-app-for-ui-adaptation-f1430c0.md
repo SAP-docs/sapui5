@@ -121,6 +121,30 @@ In general, you can change your app without any problems, as long as you keep th
 
 
 
+<a name="loiof1430c0337534d469da3a56307ff76af__section_szb_d1n_myb"/>
+
+## Enabling UI Adaptation for Apps Running Standalone
+
+In addition, for SAPUI5 apps running standalone \(not in an SAP Fiori launchpad\), you need to declare a dependency to the `sap.ui.fl` library in the `manifest.json` file, under `sap.ui5/dependencies/libs`.
+
+> ### Sample Code:  
+> manifest.json
+> 
+> ```
+>     "sap.ui5": {
+>         "dependencies": {
+>             …
+>             "libs": {
+>                 "sap.ui.fl": {},
+>                 …
+>             }
+>         },
+>         …
+> 
+> ```
+
+
+
 <a name="loiof1430c0337534d469da3a56307ff76af__section_jfn_ctd_ygb"/>
 
 ## Something isn’t working like it should?
@@ -135,6 +159,8 @@ For more information, see [Troubleshooting](troubleshooting-3527428.md).
 You can also check out our [Enabling UI Adaptation: Other Things to Consider](enabling-ui-adaptation-other-things-to-consider-de9fd55.md) page for additional tips and tricks..
 
 For more information about how key user adaptation works for key users and how it gets enabled in the SAP Fiori launchpad, search for `Adapting SAP Fiori UIs at Runtime` and `Enabling UI Adaptation at Runtime` in the documentation for your [SAP NetWeaver](https://help.sap.com/viewer/p/SAP_NETWEAVER) version on the SAP Help Portal.
+
+For more information on SAPUI5 flexibility in SAP Fiori Elements, see [Adapting the UI](../06_SAP_Fiori_Elements/adapting-the-ui-59bfd31.md) and [Enabling an App for Key User Adaptation](../06_SAP_Fiori_Elements/enabling-an-app-for-key-user-adaptation-ccd45ba.md).
 
 **Related Information**  
 

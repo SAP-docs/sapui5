@@ -39,6 +39,8 @@ Because of the use of а third-party component some additional restrictions appl
 
 -   As of version 1.113, the TinyMCE version 6 used in `sap.ui.richtexteditor.RichTextEditor` is TinyMCE 6.3.1.
 
+-   As of version 1.118, the TinyMCE version 6 used in `sap.ui.richtexteditor.RichTextEditor` is TinyMCE 6.5.1.
+
 -   Accessibility features that the wrapper control provides, like high-contrast themes and keyboard handling, are not fully available for the native toolbar.
 
 -   For the usage of high contrast themes TinyMCE relies on the Windows setting. Thus, if you want to use SAPUI5 high contrast theme and the `RichTextEditor` control, you need to turn on the high contrast mode setting of the OS.

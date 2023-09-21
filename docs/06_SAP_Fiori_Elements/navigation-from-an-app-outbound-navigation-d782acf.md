@@ -108,7 +108,7 @@ To enable intent-based navigation, you must associate a semantic object. Navigat
 
     To use a specific property that is always shown as a link in your application, you must annotate the property with a semantic object. Wherever the property is used as a `DataField`, it is always rendered as a link.
 
-    When a user chooses the link, and only one navigation target is found, direct navigation to the target is triggered. If more than one target is found, the system displays a popover containing some text and links to the targets for the user to choose from. The user can hide unwanted semantic object actions from the popover using `SemanticObjectUnavailableActions` annotation. The user can also annotate a property using multiple semantic objects. For more information, see [https://ui5.sap.com/\#/topic/f638884d0d624ad8a243f4005f8e9972](https://ui5.sap.com/#/topic/f638884d0d624ad8a243f4005f8e9972).
+    When a user chooses the link, and only one navigation target is found, direct navigation to the target is triggered. If more than one target is found, the system displays a popover containing some text and links to the targets for the user to choose from. The user can hide unwanted semantic object actions from the popover using the `SemanticObjectUnavailableActions` annotation. The user can also annotate a property using multiple semantic objects. For more information, see [Smart Link](../10_More_About_Controls/smart-link-f638884.md) .
 
     You can enhance the content of this popover and display a quick view containing more information about the navigation target. For more information, see [Enabling Quick Views for Link Navigation](enabling-quick-views-for-link-navigation-307ced1.md).
 
@@ -952,12 +952,7 @@ You can hide actions on semantic objects through the `SemanticObjectUnavailableA
 > ### Sample Code:  
 > ABAP CDS Annotation
 > 
-> ```
-> annotate view SALESORDERMANAGE with {
->     @Consumption.semanticObject: 'SalesOrder'
->     OrderID;
-> }
-> ```
+> No ABAP CDS annotation sample is available. Please use the local XML annotation.
 
 > ### Sample Code:  
 > CAP CDS Annotation
@@ -972,7 +967,7 @@ You can hide actions on semantic objects through the `SemanticObjectUnavailableA
 > };
 > ```
 
-This results in both the `analyze` and `manage` actions being hidden from the link popover of the `OrderID` field. The other available actions from the `SalesOrder` entity set is displayed.
+This results in both the `analyze` and `manage` actions being hidden from the link popover of the `OrderID` field. The other available actions from the `SalesOrder` entity set are displayed.
 
 
 
@@ -1008,10 +1003,7 @@ For example, if an object page header has "Location"="DE" and there is also the 
 
 ### SAP Fiori elements for OData V2
 
--   When you specify a URL for external navigation, a `link` control is rendered for the property on the list report or object page only if it's in *Display* mode.
-
--   When using intent-based navigation for external navigation, a `link` control is rendered for the property on the list report or object page only if it's in *Display* mode.
-
+When you specify a URL for external navigation or intent-based navigation, a `link` control is rendered for the property on the list report or object page only if it's in *Display* mode.
 
 
 
@@ -1019,6 +1011,6 @@ For example, if an object page header has "Location"="DE" and there is also the 
 
 -   For outbound navigation, if there is a filter bar and a filter field has values with the operators `Not Equal To` or `Not Empty`, then these fields are not transported to the target application.
 
--   Parameters are currently not supported.
+-   Parameters are not supported.
 
 
