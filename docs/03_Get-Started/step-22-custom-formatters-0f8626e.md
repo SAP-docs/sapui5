@@ -12,27 +12,36 @@ If we want to do a more complex logic for formatting properties of our data mode
   
 **A status is now displayed with a custom formatter**
 
-![](images/SAPUI5_Walkthrough_Step_23_7e0112d.png "A status is now displayed with a custom formatter")
+![](images/UI5_Walkthrough_Step_22_7aa185a.png "A status is now displayed with a custom formatter")
 
 
+
+<a name="loio0f8626ed7b7542ffaa44601828db20de__section_lp1_2nk_syb"/>
 
 ## Coding
 
 You can view and download all files at [Walkthrough - Step 22](https://ui5.sap.com/#/entity/sap.m.tutorial.walkthrough/sample/sap.m.tutorial.walkthrough.22).
 
+
+
+<a name="loio0f8626ed7b7542ffaa44601828db20de__section_mp1_2nk_syb"/>
+
+## webapp/model/formatter.js \(New\)
+
 ```js
-sap.ui.define([], function () {
+sap.ui.define([], () => {
 	"use strict";
+
 	return {
-		statusText: function (sStatus) {
-			var resourceBundle = this.getOwnerComponent().getModel("i18n").getResourceBundle();
+		statusText(sStatus) {
+			const oResourceBundle = this.getOwnerComponent().getModel("i18n").getResourceBundle();
 			switch (sStatus) {
 				case "A":
-					return resourceBundle.getText("invoiceStatusA");
+					return oResourceBundle.getText("invoiceStatusA");
 				case "B":
-					return resourceBundle.getText("invoiceStatusB");
+					return oResourceBundle.getText("invoiceStatusB");
 				case "C":
-					return resourceBundle.getText("invoiceStatusC");
+					return oResourceBundle.getText("invoiceStatusC");
 				default:
 					return sStatus;
 			}
@@ -43,7 +52,7 @@ sap.ui.define([], function () {
 
 We create a new folder `model` in our app project. The new `formatter` file is placed in the model folder of the app, because formatters are working on data properties and format them for display on the UI. So far we did not have any model-related artifacts, except for the `Invoices.json` file, we will now add the folder `webapp/model` to our app. This time we do not extend from any base object but just return a JavaScript object with our `formatter` functions inside the `sap.ui.define` call.
 
-Function `statusText` gets the technical status from the data model as input parameter and returns a human-readable text that is read from the `resourceBundle` file.
+The `statusText` function gets the technical status from the data model as input parameter and returns the correct human-readable text from the `resourceBundle` file.
 
 > ### Note:  
 > In the above example, `this` refers to the controller instance as soon as the formatter gets called. We access the data model via the component using `this.getOwnerComponent().getModel()` instead of using `this.getView().getModel()`. The latter call might return `undefined`, because the view might not have been attached to the component yet, and thus the view can't inherit a model from the component.
@@ -62,12 +71,13 @@ sap.ui.define([
 	"sap/ui/core/mvc/Controller",
 	"sap/ui/model/json/JSONModel",
 	"../model/formatter"
-], function (Controller, JSONModel, formatter) {
+], (Controller, JSONModel, formatter) => {
 	"use strict";
-	return Controller.extend("sap.ui.demo.walkthrough.controller.InvoiceList", {
+
+	return Controller.extend("ui5.walkthrough.controller.InvoiceList", {
 		formatter: formatter,
-		onInit : function () {
-			var oViewModel = new JSONModel({
+		onInit() {
+			const oViewModel = new JSONModel({
 				currency: "EUR"
 			});
 			this.getView().setModel(oViewModel, "view");
@@ -84,35 +94,39 @@ To load our formatter functions, we have to add it to the `InvoiceList.controlle
 
 ```xml
 <mvc:View
-	controllerName="sap.ui.demo.walkthrough.controller.InvoiceList"
-	xmlns="sap.m"
-	xmlns:mvc="sap.ui.core.mvc">
-	<List
-			headerText="{i18n>invoiceListTitle}"
-		class="sapUiResponsiveMargin"
-		width="auto"
-		items="{invoice>/Invoices}">
-		<items>
-			<ObjectListItem
-				title="{invoice>Quantity} x {invoice>ProductName}"
-				number="{
-					parts: [{path: 'invoice>ExtendedPrice'}, {path: 'view>/currency'}],
-					type: 'sap.ui.model.type.Currency',
-					formatOptions: {
-						showMeasure: false
-					}
-				}"
-				numberUnit="{view>/currency}"
-				numberState="{=	${invoice>ExtendedPrice} > 50 ? 'Error' : 'Success' }">
-				<firstStatus>
-					<ObjectStatus text="{
-						path: 'invoice>Status',
-						formatter: '.formatter.statusText'
-					}"/>
-				</firstStatus>
-			</ObjectListItem>
-		</items>
-	</List>
+    controllerName="ui5.walkthrough.controller.InvoiceList"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc">
+    <List
+        headerText="{i18n>invoiceListTitle}"
+        class="sapUiResponsiveMargin"
+        width="auto"
+        items="{invoice>/Invoices}">
+        <items>
+            <ObjectListItem
+                title="{invoice>Quantity} x {invoice>ProductName}"
+                number="{
+                    parts: [
+                        'invoice>ExtendedPrice',
+                        'view>/currency'
+                    ],
+                    type: 'sap.ui.model.type.Currency',
+                    formatOptions: {
+                        showMeasure: false
+                    }
+                }"
+                numberUnit="{view>/currency}"
+                numberState="{= ${invoice>ExtendedPrice} > 50 ? 'Error' : 'Success' }">
+                <firstStatus>
+                    <ObjectStatus
+                        text="{
+                            path: 'invoice>Status',
+                            formatter: '.formatter.statusText'
+                        }"/>
+                </firstStatus>
+            </ObjectListItem>
+        </items>
+    </List>
 </mvc:View>
 ```
 

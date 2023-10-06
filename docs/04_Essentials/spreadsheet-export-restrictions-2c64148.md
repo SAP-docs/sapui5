@@ -145,5 +145,5 @@ Aggregated rows \(group headers or sum rows\)
 </table>
 
 > ### Note:  
-> For more information, see the SAP Note [3198506](https://launchpad.support.sap.com/#/notes/3198506).
+> For more information, see the SAP Note [3198506](https://me.sap.com/notes/3198506).
 

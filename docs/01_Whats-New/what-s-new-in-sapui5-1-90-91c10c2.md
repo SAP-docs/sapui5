@@ -319,7 +319,7 @@ Feature
 
 **Accessibility**
 
-We are now using JAWS 2021 as reference testing environment in SAPUI5. For more information, see the Assistive technologies reference testing environment for SAPUI5 [2564165](https://launchpad.support.sap.com/#/notes/2564165).
+We are now using JAWS 2021 as reference testing environment in SAPUI5. For more information, see the Assistive technologies reference testing environment for SAPUI5 [2564165](https://me.sap.com/notes/2564165).
 
 <sub>Changed•Feature•Info Only•1.90</sub>
 
@@ -1105,6 +1105,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.117](what-s-new-in-sapui5-1-117-029d3b4.md "With this release SAPUI5 is upgraded from version 1.116 to 1.117.")
 
 [What's New in SAPUI5 1.116](what-s-new-in-sapui5-1-116-ebd6f34.md "With this release SAPUI5 is upgraded from version 1.115 to 1.116.")
 

@@ -297,7 +297,9 @@ The column layout is used by default in the `SmartForm` on the object page. Do n
 The default of six columns in smart form of extra-large screens can be changed to four columns using the following manifest setting.
 
 > ### Sample Code:  
-> ```
+> `manifest.json`
+> 
+> ```json
 > "sap.ui.generic.app": { 
 >         "settings": { 
 >             "objectPageColumns": { 
@@ -310,7 +312,9 @@ The default of six columns in smart form of extra-large screens can be changed t
 You can also use the `useColumnLayoutForSmartForm` switch in the manifest, at `sap.ui.generic.app\settings`, to change from the default layout for the `SmartForm` \(column layout\) to the responsive grid layout. To do so, set the switch to `false`.
 
 > ### Sample Code:  
-> ```
+> `manifest.json`
+> 
+> ```json
 > "sap.ui.generic.app": {
 >                               "_version": "1.3.0",
 >                               "settings": {
@@ -346,7 +350,9 @@ Alternatively, application developers can configure the object page using `"Tabs
 To choose a tab visualization, you must use the `sectionLayout` property in the manifest file as shown below:
 
 > ### Sample Code:  
-> ```xml
+> `manifest.json`
+> 
+> ```json
 > "SalesOrderManageObjectPage":{              
 >     "type": "Component",                  
 >     "id": "SalesOrderManageObjectPage",                  

@@ -12,26 +12,34 @@ In this step, we are going to extend the functionality of SAPUI5 with a custom c
   
 **A custom product rating control is added to the detail page**
 
-![](images/SAPUI5_Walkthrough_Step_34_e3e163a.png "A custom product rating control is added to the detail page")
+![](images/UI5_Walkthrough_Step_33_21dd14c.png "A custom product rating control is added to the detail page")
 
 
+
+<a name="loiod12d2ee6a5454d799358d425f9e7c4db__section_ylk_pbn_tyb"/>
 
 ## Coding
 
 You can view and download all files at [Walkthrough - Step 33](https://ui5.sap.com/#/entity/sap.m.tutorial.walkthrough/sample/sap.m.tutorial.walkthrough.33).
 
+
+
+<a name="loiod12d2ee6a5454d799358d425f9e7c4db__section_zlk_pbn_tyb"/>
+
+## webapp/control/ProductRating.js \(New\)
+
 ```js
 sap.ui.define([
 	"sap/ui/core/Control"
-], function (Control) {
+], (Control) => {
 	"use strict";
-	return Control.extend("sap.ui.demo.walkthrough.control.ProductRating", {
-		metadata : {
-		},
-		init : function () {
-		},
-		renderer : function (oRM, oControl) {
-		}
+
+	return Control.extend("ui5.walkthrough.control.ProductRating", {
+		metadata : {},
+
+		init() {},
+
+		renderer(oRM, oControl) {}
 	});
 });
 ```
@@ -49,16 +57,22 @@ The `init` method is a special function that is called by the SAPUI5 core whenev
 > ### Note:  
 > Controls always extend `sap.ui.core.Control` and render themselves. You could also extend `sap.ui.core.Element` or `sap.ui.base.ManagedObject` directly if you want to reuse life cycle features of SAPUI5 including data binding for objects that are not rendered. Please refer to the API reference to learn more about the inheritance hierarchy of controls.
 
+
+
+<a name="loiod12d2ee6a5454d799358d425f9e7c4db__section_bvh_qbn_tyb"/>
+
+## webapp/control/ProductRating.js
+
 ```js
 sap.ui.define([
 	"sap/ui/core/Control",
 	"sap/m/RatingIndicator",
 	"sap/m/Label",
 	"sap/m/Button"
-
-], function (Control, RatingIndicator, Label, Button) {
+], (Control, RatingIndicator, Label, Button) => {
 	"use strict";
-	return Control.extend("sap.ui.demo.walkthrough.control.ProductRating", {
+
+	return Control.extend("ui5.walkthrough.control.ProductRating", {
 		metadata : {
 			properties : {
 				value: 	{type : "float", defaultValue : 0}
@@ -76,7 +90,8 @@ sap.ui.define([
 				}
 			}
 		},
-		init : function () {
+
+		init() {
 			this.setAggregation("_rating", new RatingIndicator({
 				value: this.getValue(),
 				iconSize: "2rem",
@@ -92,15 +107,15 @@ sap.ui.define([
 			}).addStyleClass("sapUiTinyMarginTopBottom"));
 		},
 
-		setValue: function (fValue) {
+		setValue(fValue) {
 			this.setProperty("value", fValue, true);
 			this.getAggregation("_rating").setValue(fValue);
 
 			return this;
 		},
 
-		reset: function () {
-			var oResourceBundle = this.getModel("i18n").getResourceBundle();
+		reset() {
+			const oResourceBundle = this.getModel("i18n").getResourceBundle();
 
 			this.setValue(0);
 			this.getAggregation("_label").setDesign("Standard");
@@ -109,9 +124,9 @@ sap.ui.define([
 			this.getAggregation("_button").setEnabled(true);
 		},
 
-		_onRate : function (oEvent) {
-			var oRessourceBundle = this.getModel("i18n").getResourceBundle();
-			var fValue = oEvent.getParameter("value");
+		_onRate(oEvent) {
+			const oRessourceBundle = this.getModel("i18n").getResourceBundle();
+			const fValue = oEvent.getParameter("value");
 
 			this.setProperty("value", fValue, true);
 
@@ -119,8 +134,8 @@ sap.ui.define([
 			this.getAggregation("_label").setDesign("Bold");
 		},
 
-		_onSubmit : function (oEvent) {
-			var oResourceBundle = this.getModel("i18n").getResourceBundle();
+		_onSubmit(oEvent) {
+			const oResourceBundle = this.getModel("i18n").getResourceBundle();
 
 			this.getAggregation("_rating").setEnabled(false);
 			this.getAggregation("_label").setText(oResourceBundle.getText("productRatingLabelFinal"));
@@ -129,7 +144,7 @@ sap.ui.define([
 				value: this.getValue()
 			});
 		},
-		renderer : function (oRm, oControl) {
+		renderer(oRm, oControl) {
 			oRm.openStart("div", oControl);
 			oRm.class("myAppDemoWTProductRating");
 			oRm.openEnd();
@@ -197,10 +212,10 @@ We define the `reset` method to be able to revert the state of the control on th
 
 ```xml
 <mvc:View
-	controllerName="sap.ui.demo.walkthrough.controller.Detail"
+	controllerName="ui5.walkthrough.controller.Detail"
 	xmlns="sap.m"
 	xmlns:mvc="sap.ui.core.mvc"
-	xmlns:wt="sap.ui.demo.walkthrough.control">
+	xmlns:wt="ui5.walkthrough.control">
 	<Page
 		title="{i18n>detailPageTitle}"
 		showNavButton="true"
@@ -208,7 +223,10 @@ We define the `reset` method to be able to revert the state of the control on th
 		<ObjectHeader
 			intro="{invoice>ShipperName}"
 			title="{invoice>ProductName}"/>
-		<wt:ProductRating id="rating" class="sapUiSmallMarginBeginEnd" change=".onRatingChange"/>
+		<wt:ProductRating 
+			id="rating" 
+			class="sapUiSmallMarginBeginEnd" 
+			change=".onRatingChange"/>
 	</Page>
 </mvc:View>
 
@@ -225,13 +243,12 @@ sap.ui.define([
 	"sap/ui/core/mvc/Controller",
 	"sap/ui/core/routing/History",
 	"sap/m/MessageToast"
-
-], function (Controller, History, MessageToast) {
+], (Controller, History, MessageToast) => {
 	"use strict";
 
-	return Controller.extend("sap.ui.demo.walkthrough.controller.Detail", {
+	return Controller.extend("ui5.walkthrough.controller.Detail", {
 		…
-		_onObjectMatched: function (oEvent) {
+		onObjectMatched(oEvent) {
 			this.byId("rating").reset();
 			this.getView().bindElement({
 				path: "/" + window.decodeURIComponent(oEvent.getParameter("arguments").invoicePath),
@@ -239,21 +256,21 @@ sap.ui.define([
 			});
 		},
 
-		onNavBack: function () {
-			var oHistory = History.getInstance();
-			var sPreviousHash = oHistory.getPreviousHash();
+		onNavBack() {
+			const oHistory = History.getInstance();
+			const sPreviousHash = oHistory.getPreviousHash();
 
 			if (sPreviousHash !== undefined) {
 				window.history.go(-1);
 			} else {
-				var oRouter = this.getOwnerComponent().getRouter();
+				const oRouter = this.getOwnerComponent().getRouter();
 				oRouter.navTo("overview", {}, true);
 			}
 		},
 
-		onRatingChange: function (oEvent) {
-			var fValue = oEvent.getParameter("value");
-			var oResourceBundle = this.getView().getModel("i18n").getResourceBundle();
+		onRatingChange(oEvent) {
+			const fValue = oEvent.getParameter("value");
+			const oResourceBundle = this.getView().getModel("i18n").getResourceBundle();
 
 			MessageToast.show(oResourceBundle.getText("ratingConfirmation", [fValue]));
 		}
@@ -263,31 +280,43 @@ sap.ui.define([
 
 In the `Detail` controller we load the dependency to the `sap.m.MessageToast` because we will simply display a message instead of sending the rating to the backend to keep the example simple. The event handler `onRatingChange` reads the value of our custom change event that is fired when the rating has been submitted. We then display a confirmation message with the value in a `MessageToast` control.
 
-In the `onObjectMatched` private method, we call the `reset` method to make it possible to submit another rating as soon as the detail view is displayed for a different item.
+In the `onObjectMatched` method, we call the `reset` method to make it possible to submit another rating as soon as the detail view is displayed for a different item.
 
 
+
+<a name="loiod12d2ee6a5454d799358d425f9e7c4db__section_azj_rbn_tyb"/>
 
 ## webapp/css/style.css
 
 ```
-.myAppDemoWTmyCustomButton.sapMBtn {
-	margin-right: 0.125rem;
+html[dir="ltr"] .myAppDemoWT .myCustomButton.sapMBtn {
+    margin-right: 0.125rem
 }
-.myAppDemoWTmyCustomText {
-	font-weight: bold;
+html[dir="rtl"] .myAppDemoWT .myCustomButton.sapMBtn {
+    margin-left: 0.125rem
+}
+.myAppDemoWT .myCustomText {
+    display: inline-block;
+    font-weight: bold;
 }
 /*  ProductRating */
 .myAppDemoWTProductRating {
-	padding: 0.75rem;
+    padding: 0.75rem;
 }
 .myAppDemoWTProductRating .sapMRI {
-	vertical-align: initial;
+    vertical-align: initial;
 }
 ```
 
 To layout our control, we add a little padding to the root class to have some space around the three inner controls, and we override the alignment of the `RatingIndicator` control so that it is aligned in one line with the label and the button.
 
 We could also do this with more HTML in the renderer but this is the simplest way and it will only be applied inside our custom control. However, please be aware that the custom control is in your app and might have to be adjusted when the inner controls change in future versions of SAPUI5.
+
+
+
+<a name="loiod12d2ee6a5454d799358d425f9e7c4db__section_bzj_rbn_tyb"/>
+
+## webapp/i18n/i18n.properties
 
 ```ini
 …

@@ -110,43 +110,45 @@ You can configure inbound navigation to any subobject page belonging to an app b
 
 To do so, make the following settings:
 
-1.  In the target application's manifest, for the corresponding subobject page, set `allowDeepLinking: true`. The example below shows the subobject page section of the manifest.json:
+1.  In the target application's manifest, for the corresponding subobject page, set `allowDeepLinking: true`. The following example shows the subobject page section of the `manifest.json`:
 
-    ```
-    "pages": {
-         "navigationProperty": "to_ProductText",
-         "entitySet": "STTA_C_MP_ProductText",
-         "component": {
-              "name": "sap.suite.ui.generic.template.ObjectPage",
-              "settings": {
-                   "allowDeepLinking": true
-              }
-         }
-    }
-    
-    ```
+    > ### Sample Code:  
+    > ```
+    > "pages": {
+    >      "navigationProperty": "to_ProductText",
+    >      "entitySet": "STTA_C_MP_ProductText",
+    >      "component": {
+    >           "name": "sap.suite.ui.generic.template.ObjectPage",
+    >           "settings": {
+    >                "allowDeepLinking": true
+    >           }
+    >      }
+    > }
+    > 
+    > ```
 
     If multiple pages on the same level have this property set to `true`, the entry that comes first in the manifest is used.
 
     Navigation to any level is possible by setting `allowDeepLinking: true` for each level. Note that each level needs to have the setting `allowDeepLinking: true`. In the following example, the navigation goes to subobject level 3:
 
-    ```
-    Object Page1: {
-         allowDeepLinking:true,
-         SubObjectPage1:{
-              allowDeepLinking:true
-              SubObjectPage2:{
-                   allowDeepLinking:true
-                   SubObjectPage3:{
-                        allowDeepLinking:true
-                   }
-              }
-         }
-    }
-    
-    ```
+    > ### Sample Code:  
+    > ```
+    > Object Page1: {
+    >      allowDeepLinking:true,
+    >      SubObjectPage1:{
+    >           allowDeepLinking:true
+    >           SubObjectPage2:{
+    >                allowDeepLinking:true
+    >                SubObjectPage3:{
+    >                     allowDeepLinking:true
+    >                }
+    >           }
+    >      }
+    > }
+    > 
+    > ```
 
-2.  Provide the URL parameters for navigation, as described under [https://help.sap.com/viewer/cc1c7615ee2f4a699a9272453379006c/7.5.5/en-US/bd8ae3d327ab4541bcce8e7353c046fc.html](https://help.sap.com/viewer/cc1c7615ee2f4a699a9272453379006c/7.5.5/en-US/bd8ae3d327ab4541bcce8e7353c046fc.html).
+2.  Provide the URL parameters for navigation, as described under [Configuring Navigation](https://help.sap.com/viewer/cc1c7615ee2f4a699a9272453379006c/7.5.5/en-US/bd8ae3d327ab4541bcce8e7353c046fc.html).
 
 
 
@@ -303,7 +305,7 @@ In addition, the manifest must have the route having the key configured for the 
 
 ### Inbound Navigation to Subobject Pages Using Deep Linking
 
-To enable deep linking for a subobject page, you need to enable it in the manifest.
+To enable deep linking for a subobject page, you need to enable it in the `manifest.json` file.
 
 > ### Sample Code:  
 > ```json

@@ -27,7 +27,9 @@ The pages structure of the app should always be a tree, with the root as either 
 You can control whether it is possible to navigate to a detail page. It simply depends on whether you keep the predefined definition of a subpage:
 
 > ### Sample Code:  
-> ```
+> `manifest.json`
+> 
+> ```json
 > "sap.ui.generic.app": {
 >   "pages": {
 >     "MyListReport": {
@@ -95,7 +97,9 @@ Users can enable applications to display item lists in a list report, and parent
 Add the below configuration in the manifest to direct the *Create* action in a list report to the main entity:
 
 > ### Sample Code:  
-> ```
+> `manifest.json`
+> 
+> ```json
 > "component": {
 > "name": "sap.suite.ui.generic.template.ListReport",
 > "list": true,
@@ -115,6 +119,8 @@ For more information, see [List Report Elements](list-report-elements-1cf5c7f.md
 In the `manifest.json`, you define the "navigation" section for each "target". This controls if the navigation is enabled or not. If navigation is enabled, a chevron comes for the record in the table indicating a further navigation to the detail page \(object page or subobject page\).
 
 > ### Sample Code:  
+> `manifest.json`
+> 
 > ```json
 > {
 > …
@@ -197,7 +203,7 @@ The parameters in the routing pattern are resolved using the relative binding pa
 > ### Sample Code:  
 > `manifest.json`
 > 
-> ```
+> ```json
 > "routing": {
 > "routes": [
 >         {                 

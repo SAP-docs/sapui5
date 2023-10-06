@@ -122,7 +122,7 @@ Application developers can use the above-mentioned group names to group their `D
 The following sample code is for an object page with configured header elements:
 
 > ### Sample Code:  
-> ```xml
+> ```json
 > "SalesOrderManageObjectPage": {                  
 >     "type": "Component",                 
 >     "id": "SalesOrderManageObjectPage",                  

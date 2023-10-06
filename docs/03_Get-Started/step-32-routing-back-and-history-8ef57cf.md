@@ -12,17 +12,25 @@ Now we can navigate to our detail page and display an invoice, but we cannot go 
   
 **A back button is now displayed on the detail page**
 
-![](images/SAPUI5_Walkthrough_Step_33_6e4426b.png "A back button is now displayed on the detail page")
+![](images/UI5_Walkthrough_Step_32_33a8341.png "A back button is now displayed on the detail page")
 
 
+
+<a name="loio8ef57cfd37b44f089f7e3b52d56597eb__section_l5n_zvm_tyb"/>
 
 ## Coding
 
 You can view and download all files at [Walkthrough - Step 32](https://ui5.sap.com/#/entity/sap.m.tutorial.walkthrough/sample/sap.m.tutorial.walkthrough.32).
 
+
+
+<a name="loio8ef57cfd37b44f089f7e3b52d56597eb__section_m5n_zvm_tyb"/>
+
+## webapp/view/Detail.view.xml
+
 ```xml
 <mvc:View
-	controllerName="sap.ui.demo.walkthrough.controller.Detail"
+	controllerName="ui5.walkthrough.controller.Detail"
 	xmlns="sap.m"
 	xmlns:mvc="sap.ui.core.mvc">
 	<Page
@@ -46,41 +54,40 @@ On the detail page, we tell the control to display a back button by setting the 
 sap.ui.define([
 	"sap/ui/core/mvc/Controller",
 	"sap/ui/core/routing/History"
-], function (Controller, History) {
+], (Controller, History) => {
 	"use strict";
 
-	return Controller.extend("sap.ui.demo.walkthrough.controller.Detail", {
+	return Controller.extend("ui5.walkthrough.controller.Detail", {
 
-		onInit: function () {
-			var oRouter = this.getOwnerComponent().getRouter();
-			oRouter.getRoute("detail").attachPatternMatched(this._onObjectMatched, this);
+		onInit() {
+			const oRouter = this.getOwnerComponent().getRouter();
+			oRouter.getRoute("detail").attachPatternMatched(this.onObjectMatched, this);
 		},
 
-		_onObjectMatched: function (oEvent) {
+		onObjectMatched(oEvent) {
 			this.getView().bindElement({
 				path: "/" + window.decodeURIComponent(oEvent.getParameter("arguments").invoicePath),
 				model: "invoice"
 			});
 		},
 
-		onNavBack: function () {
-			var oHistory = History.getInstance();
-			var sPreviousHash = oHistory.getPreviousHash();
+		onNavBack() {
+			const oHistory = History.getInstance();
+			const sPreviousHash = oHistory.getPreviousHash();
 
 			if (sPreviousHash !== undefined) {
 				window.history.go(-1);
 			} else {
-				var oRouter = this.getOwnerComponent().getRouter();
+				const oRouter = this.getOwnerComponent().getRouter();
 				oRouter.navTo("overview", {}, true);
 			}
 		}
-
 	});
 });
 
 ```
 
-We load a new dependency that helps us to manage the navigation history from the `sap.ui.core.routing` namespace and add the implementation for the event handler to our detail page controller.
+We load a new dependency called `History` that helps us to manage the navigation history from the `sap.ui.core.routing` namespace and add the implementation for the event handler to our detail page controller.
 
 In the event handler we access the navigation history and try to determine the previous hash. In contrast to the browser history, we will get a valid result only if a navigation step inside our app has already happened. Then we will simply use the browser history to go back to the previous page. If no navigation has happened before, we can tell the router to go to our overview page directly. The third parameter `true` tells the router to replace the current history state with the new one since we actually do a back navigation by ourselves. The second parameter is an empty array \(`{}`\) as we do not pass any additional parameters to this route.
 

@@ -11,7 +11,7 @@ This chapter gives an overview of the possible combinations of themes and librar
 The following table shows the [Available Themes](../04_Essentials/available-themes-da0d2e7.md) for the active SAPUI5 libraries. Even though the `sap_bluecrystal` and the `sap_hcb` themes are now deprecated, they currently are still available, but will not be maintained. We recommend that you migrate your existing apps to the supported themes.
 
 > ### Note:  
-> For more information about the *Quartz Dark* theme, see SAP Note [2982978](https://launchpad.support.sap.com/#/notes/2982978).
+> For more information about the *Quartz Dark* theme, see SAP Note [2982978](https://me.sap.com/notes/2982978).
 
 **Themes for Supported Libraries**
 

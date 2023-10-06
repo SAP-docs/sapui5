@@ -10,7 +10,7 @@ Back-end systems can generate either a state message or a transition message.
 
     A state message refers to the state of an instance, for example when a user tries to activate an object with field values that return an error like "Amount must not be negative". These messages are displayed on the UI until the state of the related instance has been corrected, for example by changing the amount attribute to a positive value. The messages are displayed to the user and also persisted in the back-end system.
 
-    State messages are not expected or supported in the list report and on the object page \(or subobject page\) in display mode. In edit more of the object page \(or subobject page\), state messages are shown in the message popover. The popover in the main object also displays the messages related to its items and vice versa. Client-side validation messages are also shown here.
+    State messages are not expected or supported in the list report and on the object page \(or subobject page\) in display mode. In edit mode of the object page \(or subobject page\), state messages are shown in the message popover. The popover in the main object also displays the messages related to its items and vice versa. Client-side validation messages are also shown here.
 
 -   Transition message
 

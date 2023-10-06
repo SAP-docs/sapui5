@@ -12,7 +12,7 @@ In this step, we add a search field for our product list and define a filter tha
   
 **A search field is displayed above the list**
 
-![](images/SAPUI5_Walkthrough_Step_24_b59b3ed.png "A search field is displayed above the list")
+![](images/UI5_Walkthrough_Step_23_472ab6b.png "A search field is displayed above the list")
 
 
 
@@ -30,7 +30,7 @@ You can view and download all files at [Walkthrough - Step 23](https://ui5.sap.c
 
 ```xml
 <mvc:View
-   controllerName="sap.ui.demo.walkthrough.controller.InvoiceList"
+   controllerName="ui5.walkthrough.controller.InvoiceList"
    xmlns="sap.m"
    xmlns:mvc="sap.ui.core.mvc">
    <List
@@ -42,15 +42,12 @@ You can view and download all files at [Walkthrough - Step 23](https://ui5.sap.c
          <Toolbar>
             <Title text="{i18n>invoiceListTitle}"/>
             <ToolbarSpacer/>
-            <SearchField width="50%" search=".onFilterInvoices"/>
+            <SearchField 
+               width="50%" 
+               search=".onFilterInvoices"/>
          </Toolbar>
       </headerToolbar>
-      <items>
-         <ObjectListItem>
-		…
-         </ObjectListItem/>
-      </items>
-   </List>
+      ...
 </mvc:View>
 ```
 
@@ -69,28 +66,30 @@ sap.ui.define([
 	"../model/formatter",
 	"sap/ui/model/Filter",
 	"sap/ui/model/FilterOperator"
-], function (Controller, JSONModel, formatter, Filter, FilterOperator) {
+], (Controller, JSONModel, formatter, Filter, FilterOperator) => {
 	"use strict";
-	return Controller.extend("sap.ui.demo.walkthrough.controller.InvoiceList", {
+
+	return Controller.extend("ui5.walkthrough.controller.InvoiceList", {
 		formatter: formatter, 
-		onInit : function () {
-			var oViewModel = new JSONModel({
+
+		onInit() {
+			const oViewModel = new JSONModel({
 				currency: "EUR"
 			});
 			this.getView().setModel(oViewModel, "view");
 		},
-		onFilterInvoices : function (oEvent) {
 
+		onFilterInvoices(oEvent) {
 			// build filter array
-			var aFilter = [];
-			var sQuery = oEvent.getParameter("query");
+			const aFilter = [];
+			const sQuery = oEvent.getParameter("query");
 			if (sQuery) {
 				aFilter.push(new Filter("ProductName", FilterOperator.Contains, sQuery));
 			}
 
 			// filter binding
-			var oList = this.byId("invoiceList");
-			var oBinding = oList.getBinding("items");
+			const oList = this.byId("invoiceList");
+			const oBinding = oList.getBinding("items");
 			oBinding.filter(aFilter);
 		}
 	});
@@ -99,7 +98,7 @@ sap.ui.define([
 
 We load two new dependencies for the filtering. The filter object will hold our configuration for the filter action and the `FilterOperator` is a helper type that we need in order to specify the filter.
 
-In the `onFilterInvoices` function we construct a filter object from the search string that the user has typed in the search field. Event handlers always receive an event argument that can be used to access the parameters that the event provides. In our case the search field defines a parameter `query` that we access by calling `getParameter(“query”)` on the `oEvent` parameter.
+In the `onFilterInvoices` function we construct a filter object from the search string that the user has typed in the search field. Event handlers always receive an event argument that can be used to access the parameters that the event provides. In our case the search field defines a parameter `query` that we access by calling `getParameter("query")` on the `oEvent` parameter.
 
 If the query is not empty, we add a new filter object to the still empty array of filters. However, if the query is empty, we filter the binding with an empty array. This makes sure that we see all list elements again. We could also add more filters to the array, if we wanted to search more than one data field. In our example, we just search in the `ProductName` path and specify a filter operator that will search for the given query string.
 

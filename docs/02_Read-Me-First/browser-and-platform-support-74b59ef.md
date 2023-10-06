@@ -5,7 +5,7 @@
 Here you can find information on the browser and platform support for the SAPUI5 libraries on iOS, Android, macOS, and Windows platforms.
 
 > ### Note:  
-> The single source of truth about supported browsers and platforms is the Product Availability Matrix \(PAM\) that you can find at [https://support.sap.com/pam](https://support.sap.com/pam). SAPUI5 is not a product of its own, so please check the PAM for the product you're using SAPUI5 with. For more information, see SAP Note [1716423](https://launchpad.support.sap.com/#/notes/1716423).
+> The single source of truth about supported browsers and platforms is the Product Availability Matrix \(PAM\) that you can find at [https://support.sap.com/pam](https://support.sap.com/pam). SAPUI5 is not a product of its own, so please check the PAM for the product you're using SAPUI5 with. For more information, see SAP Note [1716423](https://me.sap.com/notes/1716423).
 > 
 > The following sections only contain additional information on restrictions and platform support information for specific SAPUI5 libraries in a summarized form.
 
@@ -431,5 +431,5 @@ Latest version
 
 Support for Microsoft Internet Explorer 11 \(IE11\) ended with the end of IE11 support by Microsoft, and for the sake of completeness Internet Explorer mode of MS Edge was never supported by SAPUI5.
 
-For more information, see SAP Note [1672817](https://launchpad.support.sap.com/#/notes/1672817).
+For more information, see SAP Note [1672817](https://me.sap.com/notes/1672817).
 

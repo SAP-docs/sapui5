@@ -362,6 +362,22 @@ The default layout is `Block`.
 
 </td>
 </tr>
+<tr>
+<td valign="top">
+
+Hide the *Paste* button on the table toolbar.
+
+
+
+</td>
+<td valign="top">
+
+On the table, set the Show Paste Button attribute to `false`.
+
+
+
+</td>
+</tr>
 </table>
 
 

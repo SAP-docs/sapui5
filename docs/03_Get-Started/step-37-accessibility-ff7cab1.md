@@ -2,7 +2,7 @@
 
 # Step 37: Accessibility
 
-As the last step in this tutorial, we are going to improve the accessibility of our app.
+In this step we're going to improve the accessibility of our app.
 
 To achieve this, we will add ARIA attributes. ARIA attributes are used by screen readers to recognize the application structure and to interpret UI elements properly. That way, we can make our app more accessible for users who are limited in their use of computers, for example visually impaired persons. The main goal here is to make our app usable for as many people as we can.
 
@@ -19,7 +19,7 @@ To achieve this, we will add ARIA attributes. ARIA attributes are used by screen
   
 **Landmarks in our app**
 
-![](images/Walkthrough_Tutorial_Step_38_Preview_d9c6cd3.png "Landmarks in our app")
+![](images/UI5_Walkthrough_Step_37_b35deda.png "Landmarks in our app")
 
 
 
@@ -39,9 +39,10 @@ One part of the ARIA attribute set are the so-called landmarks. You can compare 
 
 ```xml
 <mvc:View
-	controllerName="sap.ui.demo.walkthrough.controller.App"
+	controllerName="ui5.walkthrough.controller.App"
 	xmlns="sap.m"
-	xmlns:mvc="sap.ui.core.mvc">
+	xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true">
 	<Page title="{i18n>homePageTitle}">
 		<landmarkInfo>
 			<PageAccessibleLandmarkInfo
@@ -52,16 +53,12 @@ One part of the ARIA attribute set are the so-called landmarks. You can compare 
 				headerRole="Banner"
 				headerLabel="{i18n>Overview_headerLabel}"/>
 		</landmarkInfo>
-		<headerContent>
-			…
-		</headerContent>
 		<content>
-			…
+			<mvc:XMLView viewName="ui5.walkthrough.view.HelloPanel"/>
+			<mvc:XMLView viewName="ui5.walkthrough.view.InvoiceList"/>
 		</content>
 	</Page>
 </mvc:View>
- 
-
 ```
 
 We use `sap.m.PageAccessibleLandmarkInfo` to define ARIA roles and labels for the overview page areas. For more information, see the [API Reference: `sap.m.PageAccessibleLandmarkInfo`](https://ui5.sap.com/#/api/sap.m.PageAccessibleLandmarkInfo). 
@@ -74,7 +71,7 @@ We use `sap.m.PageAccessibleLandmarkInfo` to define ARIA roles and labels for th
 
 ```xml
 <mvc:View
-	controllerName="sap.ui.demo.walkthrough.controller.InvoiceList"
+	controllerName="ui5.walkthrough.controller.InvoiceList"
 	xmlns="sap.m"
 	xmlns:mvc="sap.ui.core.mvc">
 	<Panel accessibleRole="Region">
@@ -101,17 +98,15 @@ We use `sap.m.PageAccessibleLandmarkInfo` to define ARIA roles and labels for th
 			<columns>
 				<Column
 					hAlign="End"
-
-
-	…
+					...
 			</columns>
+			...
 		</Table>
 	</Panel>
 </mvc:View>
-
 ```
 
-We add a `sap.m.Panel` around the invoice list, and we move the toolbar from the table into the panel so the region can take the title of the toolbar as its own. This has the effect that it will now be a region in our landmarks.
+We add an `sap.m.Panel` around the invoice list and move the toolbar from the table into the panel, so that the region can take the title of the toolbar as its own. This has the effect that it will now be a region in our landmarks.
 
 
 
@@ -121,7 +116,7 @@ We add a `sap.m.Panel` around the invoice list, and we move the toolbar from the
 
 ```xml
 <mvc:View
-	controllerName="sap.ui.demo.walkthrough.controller.HelloPanel"
+	controllerName="ui5.walkthrough.controller.HelloPanel"
 	xmlns="sap.m"
 	xmlns:mvc="sap.ui.core.mvc">
 	<Panel
@@ -138,11 +133,6 @@ We add a `sap.m.Panel` around the invoice list, and we move the toolbar from the
 ```
 
 In this view, we already have a panel, so we just add the `accessibleRole` attribute.
-
-
-
-> ### Note:  
-> To add ARIA roles, labels and panels to other views, for example your `Detail.view.xml`, you can follow the same pattern. We won't go into detail in this tutorial step, but if you're interested, simply download the tutorial code and take a look at the `Detail.view.xml`.
 
 
 
@@ -212,14 +202,6 @@ As you can see, we now have four landmarks on our page. The top three landmarks 
 
 -   *Page Content* marks the content of our page. This landmark already has two children.
 
-
-
-
-<a name="loioff7cab1f271a4181a86e5aa5c2f8d421__section_u12_lby_tfb"/>
-
-## Congratulations!
-
-You've completed the walkthrough, good job! You should be familiar with all major development paradigms of SAPUI5 now. Our other tutorials focus on certain aspects of SAPUI5, so feel free to explore!
 
 **Related Information**  
 

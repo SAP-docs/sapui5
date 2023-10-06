@@ -1360,7 +1360,7 @@ SAP Fiori Elements
 
 The following changes and new features are available for SAP Fiori elements for OData V4:
 
--   The `FilterBar` building block now supports default values and custom filters. For more information, see [Building Blocks](../06_SAP_Fiori_Elements/building-blocks-24c1304.md).
+-   The `FilterBar` building block now supports default values and custom filters. For more information, see  <?sap-ot O2O class="- topic/xref " href="24c1304739dd4f19af0ce2482c4d9bbe.xml" text="Building Blocks" desc="" xtrc="xref:62" xtrf="file:/home/builder/src/dita-all/zyl1693565473561/loioa82e269bbb584cfcbdbd3ae8765d8e7f_en-US/src/content/localization/en-us/d9f16f2262a947ef9cd5b58f11c54b6e.xml" ?> .
 
 -   SAP Fiori elements now enables you to navigate to a different internal target. For more information, see [Example: Enable Internal Navigation to Different Detail Page](../06_SAP_Fiori_Elements/example-enable-internal-navigation-to-different-detail-page-75002b3.md).
 
@@ -1395,6 +1395,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.117](what-s-new-in-sapui5-1-117-029d3b4.md "With this release SAPUI5 is upgraded from version 1.116 to 1.117.")
 
 [What's New in SAPUI5 1.116](what-s-new-in-sapui5-1-116-ebd6f34.md "With this release SAPUI5 is upgraded from version 1.115 to 1.116.")
 

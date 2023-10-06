@@ -200,7 +200,9 @@ C\_TRANSACTION\_HELPER\_OBJECT\_PAGE\_DELETE\_TOAST\_PLURAL=Objects were deleted
 Changes must be made in the manifest file of the application. Add `enhanceI18n` to the `settings`  of the corresponding section as shown below:
 
 > ### Sample Code:  
-> ```
+> `manifest.json`
+> 
+> ```json
 > targets":{
 >    "SalesOrderManageList":{
 >       "type": "Component",

@@ -53,7 +53,7 @@ For example, the following versions have a long-term maintenance:
 
 In the version overview at [https://ui5.sap.com/versionoverview.html](https://ui5.sap.com/versionoverview.html), you can see which of the SAPUI5 versions have an extended maintenance.
 
-For more information on the SAPUI5 maintenance strategy for SAP NetWeaver AS for ABAP, see SAP Note [2217489](https://launchpad.support.sap.com/#/notes/2217489).
+For more information on the SAPUI5 maintenance strategy for SAP NetWeaver AS for ABAP, see SAP Note [2217489](https://me.sap.com/notes/2217489).
 
 
 

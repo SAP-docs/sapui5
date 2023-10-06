@@ -864,7 +864,7 @@ The following changes and new features are available for SAP Fiori elements for 
     -   FilterBar
 
 
-    For more information, see [Building Blocks](../06_SAP_Fiori_Elements/building-blocks-24c1304.md).
+    For more information, see  <?sap-ot O2O class="- topic/xref " href="24c1304739dd4f19af0ce2482c4d9bbe.xml" text="Building Blocks" desc="" xtrc="xref:37" xtrf="file:/home/builder/src/dita-all/zyl1693565473561/loioa82e269bbb584cfcbdbd3ae8765d8e7f_en-US/src/content/localization/en-us/7a9269ffe51c4ee7bc8529e120480d78.xml" ?> .
 
 -   SAP Fiori elements now provides an option to pass the variant IDs of a page, the filter bar, or a table as URL parameters to the app. For more information, see [Passing Variant IDs as URL Parameters](../06_SAP_Fiori_Elements/passing-variant-ids-as-url-parameters-4132ffa.md).
 
@@ -964,6 +964,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.117](what-s-new-in-sapui5-1-117-029d3b4.md "With this release SAPUI5 is upgraded from version 1.116 to 1.117.")
 
 [What's New in SAPUI5 1.116](what-s-new-in-sapui5-1-116-ebd6f34.md "With this release SAPUI5 is upgraded from version 1.115 to 1.116.")
 

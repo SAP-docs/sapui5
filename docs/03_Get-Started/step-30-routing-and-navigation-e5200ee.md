@@ -14,55 +14,59 @@ In this step, we will use the SAPUI5 navigation features to load and show a sepa
   
 **A second page is added to display the invoice**
 
-![](images/SAPUI5_Walkthrough_Step_31_a1d85cc.png "A second page is added to display the invoice")
+![](images/UI5_Walkthrough_Step_30_94152a5.png "A second page is added to display the invoice")
 
 
+
+<a name="loioe5200ee755f344c8aef8efcbab3308fb__section_ips_rvh_tyb"/>
 
 ## Coding
 
 You can view and download all files at [Walkthrough - Step 30](https://ui5.sap.com/#/entity/sap.m.tutorial.walkthrough/sample/sap.m.tutorial.walkthrough.30).
 
-```js
+
+
+<a name="loioe5200ee755f344c8aef8efcbab3308fb__section_jps_rvh_tyb"/>
+
+## webapp/manifest.json
+
+```
 {
-  "_version": "1.12.0",
-  …
+  ...
   "sap.ui5": {
-	…
-	"models": {
-		…
-	},
-	"routing": {
-	  "config": {
-		"routerClass": "sap.m.routing.Router",
-		"type": "View",
-		"viewType": "XML",
-		"path": "sap.ui.demo.walkthrough.view",
-		"controlId": "app",
-		"controlAggregation": "pages"
-	  },
-	  "routes": [
-		{
-		  "pattern": "",
-		  "name": "overview",
-		  "target": "overview"
-		},
-		{
-		  "pattern": "detail",
-		  "name": "detail",
-		  "target": "detail"
-		}
-	  ],
-	  "targets": {
-		"overview": {
-		  "id": "overview",
-		  "name": "Overview"
-		},
-		"detail": {
-		  "id": "detail",
-		  "name": "Detail"
-		}
-	  }
-	}
+  ...
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "type": "View",
+        "viewType": "XML",
+        "path": "ui5.walkthrough.view",
+        "controlId": "app",
+        "controlAggregation": "pages"
+      },
+      "routes": [
+        {
+          "pattern": "",
+          "name": "overview",
+          "target": "overview"
+        },
+        {
+          "pattern": "detail",
+          "name": "detail",
+          "target": "detail"
+        }
+      ],
+      "targets": {
+        "overview": {
+          "id": "overview",
+          "name": "Overview"
+        },
+        "detail": {
+          "id": "detail",
+          "name": "Detail"
+        }
+      }
+    }
   }
 }
 ```
@@ -79,7 +83,7 @@ We add a new “routing" section to the `sap.ui5` part of the descriptor. There 
 
 -   `targets`
 
-    A target defines a view that is displayed, it is associated with one or more routes and it can also be displayed manually from within the app. Whenever a target is displayed, the corresponding view is loaded and shown in the app. In our app we simply define two targets with a view name that corresponds to the target name.
+    A target defines a view, or even another component, that is displayed; it is associated with one or more routes, and it can also be displayed manually from within the app. Whenever a target is displayed, the corresponding view is loaded and shown in the app. In our app we simply define two targets with a view name that corresponds to the target name.
 
 
 
@@ -90,41 +94,39 @@ We add a new “routing" section to the `sap.ui5` part of the descriptor. There 
 sap.ui.define([
 	"sap/ui/core/UIComponent",
 	"sap/ui/model/json/JSONModel"
-], function (UIComponent, JSONModel) {
+], (UIComponent, JSONModel) => {
 	"use strict";
 
-	return UIComponent.extend("sap.ui.demo.walkthrough.Component", {
+	return UIComponent.extend("ui5.walkthrough.Component", {
 
 		metadata: {
 			interfaces: ["sap.ui.core.IAsyncContentCreation"],
 			manifest: "json"
 		},
 
-		init: function () {
+		init() {
 			// call the init function of the parent
 			UIComponent.prototype.init.apply(this, arguments);
 
 			// set data model
-			var oData = {
+			const oData = {
 				recipient: {
 					name: "World"
 				}
 			};
-			var oModel = new JSONModel(oData);
+			const oModel = new JSONModel(oData);
 			this.setModel(oModel);
 
 			// create the views based on the url/hash
 			this.getRouter().initialize();
 		}
-
 	});
-
 });
 ```
 
 In the component initialization method, we now add a call to initialize the router. We do not need to instantiate the router manually, it is automatically instantiated based on our `AppDescriptor` configuration and assigned to the component.
 
-Initializing the router will evaluate the current URL and load the corresponding view automatically. This is done with the help of the routes and targets that have been configured in the `AppDescriptor`. If a route has been hit, the view of its corresponding target is loaded and displayed.
+Initializing the router will evaluate the current URL and load the corresponding view automatically. This is done with the help of the routes and targets that have been configured in the `manifest.json`, also known as the **app descriptor**. If a route has been hit, the view of its corresponding target is loaded and displayed.
 
 
 
@@ -132,24 +134,20 @@ Initializing the router will evaluate the current URL and load the corresponding
 
 ```xml
 <mvc:View
-		controllerName="sap.ui.demo.walkthrough.controller.App"
-		xmlns="sap.m"
-		xmlns:mvc="sap.ui.core.mvc">
-	<Page title="{i18n>homePageTitle}">
-		<headerContent>
-			<Button
-					icon="sap-icon://hello-world"
-					press=".onOpenDialog"/>
-		</headerContent>
-		<content>
-			<mvc:XMLView viewName="sap.ui.demo.walkthrough.view.HelloPanel"/>
-			<mvc:XMLView viewName="sap.ui.demo.walkthrough.view.InvoiceList"/>
-		</content>
-	</Page>
+    controllerName="ui5.walkthrough.controller.App"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true">
+    <Page title="{i18n>homePageTitle}">
+        <content>
+            <mvc:XMLView viewName="ui5.walkthrough.view.HelloPanel" />
+            <mvc:XMLView viewName="ui5.walkthrough.view.InvoiceList" />
+        </content>
+    </Page>
 </mvc:View>
 ```
 
-We move the content of the previous steps from the `App` view to a new `Overview` view. For simplicity, we do not change the controller as it only contains our helper method to open the dialog, that means we reuse the controller `sap.ui.demo.walkthrough.controller.App` for two different views \(for the new overview and for the app view\). However, two instances of that controller are instantiated at runtime. In general, one instance of a controller is instantiated for each view that references the controller.
+We move the content of the previous steps from the `App` view to a new `Overview` view. For simplicity, we do not change the controller as it only contains our helper method to open the dialog, that means we reuse the controller `ui5.walkthrough.controller.App` for two different views \(for the new overview and for the app view\). However, two instances of that controller are instantiated at runtime. In general, one instance of a controller is instantiated for each view that references the controller.
 
 
 
@@ -157,13 +155,15 @@ We move the content of the previous steps from the `App` view to a new `Overview
 
 ```xml
 <mvc:View
-		controllerName="sap.ui.demo.walkthrough.controller.App"
-		xmlns="sap.m"
-		xmlns:mvc="sap.ui.core.mvc"
-		displayBlock="true">
-<Shell>
-	<App class="myAppDemoWT" id="app"/>
-</Shell>
+    controllerName="ui5.walkthrough.controller.App"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true">
+    <Shell>
+        <App
+            class="myAppDemoWT"
+            id="app"/>
+    </Shell>
 </mvc:View>
 ```
 
@@ -179,8 +179,7 @@ Our `App` view is now only containing the empty app tag. The router will automat
 	xmlns:mvc="sap.ui.core.mvc">
 	<Page
 		title="{i18n>detailPageTitle}">
-		<ObjectHeader
-			title="Invoice"/>
+		<ObjectHeader title="Invoice"/>
 	</Page>
 </mvc:View>
 ```
@@ -211,35 +210,37 @@ We add a new string to the resource bundle for the detail page title.
 
 ```xml
 <mvc:View
-		controllerName="sap.ui.demo.walkthrough.controller.InvoiceList"
-		xmlns="sap.m"
-		xmlns:mvc="sap.ui.core.mvc">
-	<List	…>
-		…
-		<items>
-			<ObjectListItem
-					
-					title="{invoice>Quantity} x {invoice>ProductName}"
-					number="{
-					parts: [{path: 'invoice>ExtendedPrice'}, {path: 'view>/currency'}],
-					type: 'sap.ui.model.type.Currency',
-					formatOptions: {
-						showMeasure: false
-					}
-				}"
-					numberUnit="{view>/currency}"
-					numberState="{=	${invoice>ExtendedPrice} > 50 ? 'Error' : 'Success' }"
-					type="Navigation"
-					press="onPress">
-				<firstStatus>
-					<ObjectStatus text="{
-						path: 'invoice>Status',
-						formatter: '.formatter.statusText'
-					}"/>
-				</firstStatus>
-			</ObjectListItem>
-		</items>
-	</List>
+    controllerName="ui5.walkthrough.controller.InvoiceList"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc">
+    ...
+        <items>
+            <ObjectListItem
+                title="{invoice>Quantity} x {invoice>ProductName}"
+                number="{
+                    parts: [
+                        'invoice>ExtendedPrice',
+                        'view>/currency'
+                    ],
+                    type: 'sap.ui.model.type.Currency',
+                    formatOptions: {
+                        showMeasure: false
+                    }
+                }"
+                numberUnit="{view>/currency}"
+                numberState="{= ${invoice>ExtendedPrice} > 50 ? 'Error' : 'Success' }"
+                type="Navigation"
+                press=".onPress" >
+                <firstStatus>
+                    <ObjectStatus
+                        text="{
+                            path: 'invoice>Status',
+                            formatter: '.formatter.statusText'
+                        }"/>
+                </firstStatus>
+            </ObjectListItem>
+        </items>
+    </List>
 </mvc:View>
 ```
 
@@ -256,19 +257,18 @@ sap.ui.define([
 	"../model/formatter",
 	"sap/ui/model/Filter",
 	"sap/ui/model/FilterOperator"
-], function (Controller, JSONModel, formatter, Filter, FilterOperator) {
+], (Controller, JSONModel, formatter, Filter, FilterOperator) => {
 	"use strict";
 
-	return Controller.extend("sap.ui.demo.walkthrough.controller.InvoiceList", {
+	return Controller.extend("ui5.walkthrough.controller.InvoiceList", {
 
 		…
 
-		onPress: function (oEvent) {
-			var oRouter = this.getOwnerComponent().getRouter();
+		onPress() {
+			const oRouter = this.getOwnerComponent().getRouter();
 			oRouter.navTo("detail");
 		}
 	});
-
 });
 ```
 
@@ -282,6 +282,7 @@ You should now see the detail page when you click an item in the list of invoice
 
 -   Define the routing configuration in the descriptor
 
+-   Initialize the router at the end of your `Component#init` function
 
 **Related Information**  
 

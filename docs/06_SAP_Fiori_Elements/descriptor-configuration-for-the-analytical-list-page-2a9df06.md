@@ -10,7 +10,7 @@ The descriptor file \(`manifest.json`\) is an application configuration file tha
 
 The following code sample provides the descriptor configuration with the default values relevant for the ALP.
 
-```
+```json
 
    "component": {
 	"name": "sap.suite.ui.generic.template.AnalyticalListPage", // Should not be changed.
@@ -21,7 +21,7 @@ The following code sample provides the descriptor configuration with the default
 > The Analytical List Page \(ALP\) works only for analytical services.
 > 
 > > ### Sample Code:  
-> > ```
+> > ```json
 > > "sap.ui.generic.app": {
 > >    "_version": "1.3.0",
 > >    "pages": {
@@ -45,7 +45,7 @@ In SAP Fiori elements for OData V4, the ALP is not a separate floorplan, but rat
 > ### Sample Code:  
 > ALP Configuration in `manifest.json`
 > 
-> ```
+> ```json
 > "targets": {
 >      "BusinessPartnersList": {
 >           ………

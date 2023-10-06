@@ -88,7 +88,7 @@ You get this message if you use the SAP Cloud Connector to call `/UI5/ABAP_REPOS
 -   Change the configuration of SAP Cloud Connector: Go to the installation directory of SAP Cloud Connector and open the XML file <code><i class="varname">&lt;sccdir&gt;</i>\scc_config\scc_config.ini</code>. Change the value for the parameter `httpProtocolProcessorMaxResponseHeaderSize` from `8` to `30` \(kB\). Restart the SAP Cloud Connector.
 -   Use the URL parameters mentioned above to reduce the HTTP response header size.
 
-For more information, see SAP Note [2875647](https://launchpad.support.sap.com/#/notes/2875647).
+For more information, see SAP Note [2875647](https://me.sap.com/notes/2875647).
 
 **Related Information**  
 
@@ -97,5 +97,5 @@ For more information, see SAP Note [2875647](https://launchpad.support.sap.com/#
 
 [ICF Services](https://help.sap.com/viewer/68bf513362174d54b58cddec28794093/latest/en-US/a5f72651c294256ee10000000a445394.html)
 
-[SAP Note 2875647](https://launchpad.support.sap.com/#/notes/2875647 "SAPUI5 ABAP Repository Load via OData: URL parameters to reduce size of messages in HTTP response header")
+[SAP Note 2875647](https://me.sap.com/notes/2875647 "SAPUI5 ABAP Repository Load via OData: URL parameters to reduce size of messages in HTTP response header")
 

@@ -124,7 +124,7 @@ Latest update with UI5 1.102
 </td>
 <td valign="top">
 
-For the versions, see SAP Note [2564165](https://launchpad.support.sap.com/#/notes/2564165).
+For the versions, see SAP Note [2564165](https://me.sap.com/notes/2564165).
 
 
 
@@ -165,7 +165,7 @@ We have enhanced SAPUI5 accessibility support according to the latest WAI-ARIA 1
 <tr>
 <td valign="top">
 
-we have prevented the automatic insertion of role `application` on the body of the SAPUI5 applications. After the change, a mode-based screen reader will start operating in reading mode as its default mode. For more information, please refer to SAP Note [2925884](https://launchpad.support.sap.com/#/notes/2925884).
+we have prevented the automatic insertion of role `application` on the body of the SAPUI5 applications. After the change, a mode-based screen reader will start operating in reading mode as its default mode. For more information, please refer to SAP Note [2925884](https://me.sap.com/notes/2925884).
 
 
 

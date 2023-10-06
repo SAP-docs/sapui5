@@ -14,7 +14,7 @@ The SAP Fiori launchpad acts as an application container and instantiates the ap
   
 **An input field and a description displaying the value of the input field \(No visual changes to last step\)**
 
-![](images/SAPUI5_Walkthrough_Step_07_to_10_e5a9bb4.png " An input field and a description displaying the value of the input field (No
+![](images/UI5_Walkthrough_Step_10_7b2aef8.png " An input field and a description displaying the value of the input field (No
 					visual changes to last step)")
 
 
@@ -23,22 +23,19 @@ The SAP Fiori launchpad acts as an application container and instantiates the ap
 
 You can view and download all files at [Walkthrough - Step 10](https://ui5.sap.com/#/entity/sap.m.tutorial.walkthrough/sample/sap.m.tutorial.walkthrough.10).
 
-> ### Caution:  
-> Automatic model instantiation is only available as of SAPUI5 version 1.30. If you are using an older version, you can manually instantiate the resource bundle and other models of the app in the `init` method of the `Component.js` file as we did in [Step 9: Component Configuration](step-9-component-configuration-4cfa608.md).
-
 
 
 ## webapp/manifest.json \(New\)
 
-```js
+```
 {
-  "_version": "1.12.0",
+  "_version": "1.58.0",
   "sap.app": {
-	"id": "sap.ui.demo.walkthrough",
-	"type": "application",
+	"id": "ui5.walkthrough",
 	"i18n": "i18n/i18n.properties",
 	"title": "{{appTitle}}",
 	"description": "{{appDescription}}",
+	"type": "application",
 	"applicationVersion": {
 	  "version": "1.0.0"
 	}
@@ -52,13 +49,8 @@ You can view and download all files at [Walkthrough - Step 10](https://ui5.sap.c
 	}
   },
   "sap.ui5": {
-	"rootView": {
-		"viewName": "sap.ui.demo.walkthrough.view.App",
-		"type": "XML",
-		"id": "app"
-	},
 	"dependencies": {
-	  "minUI5Version": "1.93",
+	  "minUI5Version": "1.108.0",
 	  "libs": {
 		"sap.ui.core": {},
 		"sap.m": {}
@@ -68,11 +60,16 @@ You can view and download all files at [Walkthrough - Step 10](https://ui5.sap.c
 	  "i18n": {
 		"type": "sap.ui.model.resource.ResourceModel",
 		"settings": {
-		  "bundleName": "sap.ui.demo.walkthrough.i18n.i18n",
+		  "bundleName": "ui5.walkthrough.i18n.i18n",
 		  "supportedLocales": [""],
 		  "fallbackLocale": ""
 		}
 	  }
+	},
+	"rootView": {
+		"viewName": "ui5.walkthrough.view.App",
+		"type": "XML",
+		"id": "app"
 	}
   }
 }
@@ -87,19 +84,19 @@ The content of the `manifest.json` file is a configuration object in JSON format
 
     The `sap.app` namespace contains the following application-specific attributes:
 
-    -   `id` \(mandatory\): The namespace of our application component
+    -   `id` \(mandatory\): The namespace of our application component.
 
         The ID must not exceed 70 characters. It must be unique and must correspond to the component ID/namespace.
 
-    -   `type`: Defines what we want to configure, here: an application
+    -   `type`: Defines what we want to configure; here: an application.
 
-    -   `i18n`: Defines the path to the resource bundle file
+    -   `i18n`: Defines the path to the resource bundle file. The `supportedLocales` and `fallbackLocale` properties are set to empty strings, as our demo app uses only one `i18n.properties` file for simplicity and we'd like to prevent the browser from trying to load additional `i18n_*.properties` files based on your browser settings and your locale.
 
-    -   `title`: Title of the application in handlebars syntax referenced from the app's resource bundle
+    -   `title`: Title of the application in handlebars syntax referenced from the app's resource bundle.
 
-    -   `description`: Short description text what the application does in handlebars syntax referenced from the app's resource bundle
+    -   `description`: Short description text what the application does in handlebars syntax referenced from the app's resource bundle.
 
-    -   `applicationVersion`: The version of the application to be able to easily update the application later on
+    -   `applicationVersion`: The version of the application to be able to update the application easily later on.
 
 
 -   **`sap.ui`**
@@ -122,7 +119,7 @@ The content of the `manifest.json` file is a configuration object in JSON format
     -   `models`: In this section of the descriptor we can define models that will be automatically instantiated by SAPUI5 when the app starts. Here we can now define the local resource bundle. We define the name of the model "i18n" as key and specify the bundle file by namespace. As in the previous steps, the file with our translated texts is stored in the `i18n` folder and named `i18n.properties`. We simply prefix the path to the file with the namespace of our app. The manual instantiation in the app component's init method will be removed later in this step. The `supportedLocales` and `fallbackLocale` properties are set to empty strings, as in this tutorial our demo app uses only one `i18n.properties` file for simplicity, and we'd like to prevent the browser from trying to load additional `i18n_*.properties` files based on your browser settings and your locale.
 
 
-    For compatibility reasons the root object and each of the sections state the descriptor version number `1.1.0` under the internal property `_version`. Features might be added or changed in future versions of the descriptor and the version number helps to identify the application settings by tools that read the descriptor.
+    For compatibility reasons the root object and each of the sections state the descriptor version number `1.58.0` under the internal property `_version`. Features might be added or changed in future versions of the descriptor and the version number helps to identify the application settings by tools that read the descriptor.
 
 
 > ### Note:  
@@ -139,28 +136,28 @@ The content of the `manifest.json` file is a configuration object in JSON format
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>SAPUI5 Walkthrough</title>
+	<title>UI5 Walkthrough</title>
 	<script
 		id="sap-ui-bootstrap"
-		src="https://sdk.openui5.org/resources/sap-ui-core.js"
-		data-sap-ui-theme="sap_belize"
-		data-sap-ui-resourceroots='{
-			"sap.ui.demo.walkthrough": "./"
-		}'
-		data-sap-ui-oninit="module:sap/ui/core/ComponentSupport"
+		src="resources/sap-ui-core.js"
+		data-sap-ui-theme="sap_horizon"
 		data-sap-ui-compatVersion="edge"
-		data-sap-ui-async="true">
+		data-sap-ui-async="true"
+		data-sap-ui-oninit="module:sap/ui/core/ComponentSupport"
+		data-sap-ui-resourceroots='{
+			"ui5.walkthrough": "./"
+		}'>
 	</script>
 </head>
 <body class="sapUiBody" id="content">
-	<div data-sap-ui-component data-name="sap.ui.demo.walkthrough" data-id="container" data-settings='{"id" : "walkthrough"}'></div>
+	<div data-sap-ui-component data-name="ui5.walkthrough" data-id="container" data-settings='{"id" : "walkthrough"}'></div>
 </body>
 </html>
 ```
 
-Now we declare our component in the body of our `index.html`. In the bootstrapping script of our `index.html`, we enable the `ComponentSupport` module and remove the `sap.m` library. Then, we declare our component in the body via a `div` tag. This will instantiate the component when the `onInit` event is executed.
+Now we declare our component in the body of our `index.html`. In the bootstrapping script of our `index.html`, we enable the `ComponentSupport` module. Then, we declare our component in the body via a `div` tag. This will instantiate the component when the `onInit` event is executed.
 
-We will no longer need our `index.js` from now on, because the descriptor takes care of everything.
+We can delete our `index.js`, because the descriptor now takes care of everything.
 
 
 
@@ -187,23 +184,26 @@ In the resource bundle we simply add the texts for the app and add comments to s
 sap.ui.define([
    "sap/ui/core/UIComponent",
    "sap/ui/model/json/JSONModel"
-], function (UIComponent, JSONModel) {
+], (UIComponent, JSONModel) => {
    "use strict";
-   return UIComponent.extend("sap.ui.demo.walkthrough.Component", {
+
+   return UIComponent.extend("ui5.walkthrough.Component", {
       metadata : {
-            interfaces: ["sap.ui.core.IAsyncContentCreation"],
-            manifest: "json"
+         interfaces: ["sap.ui.core.IAsyncContentCreation"],
+         manifest: "json"
       },
-      init : function () {
+
+      init() {
          // call the init function of the parent
          UIComponent.prototype.init.apply(this, arguments);
+
          // set data model
-         var oData = {
+         const oData = {
             recipient : {
                name : "World"
             }
          };
-         var oModel = new JSONModel(oData);
+         const oModel = new JSONModel(oData);
          this.setModel(oModel);
       }
    });

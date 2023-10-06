@@ -14,7 +14,7 @@ In this step, we will encapsulate all UI assets in a component that is independe
   
 **An input field and a description displaying the value of the input field \(No visual changes to last step\)**
 
-![](images/SAPUI5_Walkthrough_Step_07_to_10_e5a9bb4.png "An input field and a description displaying the value of the input field (No
+![](images/UI5_Walkthrough_Step_09_cac9bcf.png "An input field and a description displaying the value of the input field (No
 					visual changes to last step)")
 
 
@@ -38,11 +38,11 @@ After this step your project structure will look like the figure above. We will 
 ```js
 sap.ui.define([
    "sap/ui/core/UIComponent"
-], function (UIComponent) {
+], (UIComponent) => {
    "use strict";
-   return UIComponent.extend("", {
 
-      init : function () {
+   return UIComponent.extend("", {
+      init() {
          // call the init function of the parent
          UIComponent.prototype.init.apply(this, arguments);
       }
@@ -51,7 +51,7 @@ sap.ui.define([
 
 ```
 
-We create an initial `Component.js` file in the `webapp` folder that will hold our application setup. The init function of the component is automatically invoked by SAPUI5 when the component is instantiated. Our component inherits from the base class `sap.ui.core.UIComponent` and it is obligatory to make the super call to the `init` function of the base class in the overridden `init` method.
+We create an initial `Component.js` file in the `webapp` folder that will hold our application setup. The init function of the component is automatically invoked by SAPUI5 when the component is instantiated. Our component inherits from the base class `sap/ui/core/UIComponent`, and it is obligatory to make the super call to the `init` function of the base class in the overridden `init` method.
 
 
 
@@ -62,32 +62,33 @@ sap.ui.define([
    "sap/ui/core/UIComponent",
    "sap/ui/model/json/JSONModel",
    "sap/ui/model/resource/ResourceModel"
-], function (UIComponent, JSONModel, ResourceModel) {
+], (UIComponent, JSONModel, ResourceModel) => {
    "use strict";
-   return UIComponent.extend("sap.ui.demo.walkthrough.Component", {
+
+   return UIComponent.extend("ui5.walkthrough.Component", {
       metadata : {
          "interfaces": ["sap.ui.core.IAsyncContentCreation"],
          "rootView": {
-            "viewName": "sap.ui.demo.walkthrough.view.App",
+            "viewName": "ui5.walkthrough.view.App",
             "type": "XML",
-            /*"async": true, // implicitly set via the sap.ui.core.IAsyncContentCreation interface*/
             "id": "app"
          }
       },
-      init : function () {
+
+      init() {
          // call the init function of the parent
          UIComponent.prototype.init.apply(this, arguments);
          // set data model
-         var oData = {
+         const oData = {
             recipient : {
                name : "World"
             }
          };
-         var oModel = new JSONModel(oData);
+         const oModel = new JSONModel(oData);
          this.setModel(oModel);
 
          // set i18n model
-         var i18nModel = new ResourceModel({
+         const i18nModel = new ResourceModel({
             bundleName: "sap.ui.demo.walkthrough.i18n.i18n"
          });
          this.setModel(i18nModel, "i18n");
@@ -99,7 +100,10 @@ sap.ui.define([
 
 The `Component.js` file now consists of two parts: The new `metadata` section and the previously introduced `init` function that is called when the component is initialized.
 
-The `metadata` section defines a reference to the root view, so that instead of displaying the root view directly in the `index.js` file as we did previously, the component now manages the display of the app view. It also implements the `sap.ui.core.IAsyncContentCreation` interface, which allows the component to be created fully asynchronously. This interface implicitly sets both the component's `rootView` and its router configuration to `"async": true`.
+The `metadata` section defines a reference to the root view, so that instead of displaying the root view directly in the `index.js` file as we did previously, the component now manages the display of the app view. It also implements the `sap.ui.core.IAsyncContentCreation` interface, which allows the component to be created fully asynchronously.
+
+> ### Note:  
+> The `sap.ui.core.IAsyncContentCreation` interface implicitly sets both the component's `rootView` and its router configuration to `"async": true`; the latter will be described in [Step 30: Routing and Navigation](step-30-routing-and-navigation-e5200ee.md).
 
 In the `init` function we instantiate our data model and the `i18n` model like we did before in the app controller. Be aware that the models are set directly on the component and not on the root view of the component. However, as nested controls automatically inherit the models from their parent controls, the models are available on the view as well.
 
@@ -111,14 +115,16 @@ In the `init` function we instantiate our data model and the `i18n` model like w
 sap.ui.define([
    "sap/ui/core/mvc/Controller",
    "sap/m/MessageToast"
-], function (Controller, MessageToast) {
+], (Controller, MessageToast) => {
    "use strict";
-   return Controller.extend("sap.ui.demo.walkthrough.controller.App", {
-      onShowHello : function () {
+
+   return Controller.extend("ui5.walkthrough.controller.App", {
+      onShowHello() {
          // read msg from i18n model
-         var oBundle = this.getView().getModel("i18n").getResourceBundle();
-         var sRecipient = this.getView().getModel().getProperty("/recipient/name");
-         var sMsg = oBundle.getText("helloMsg", [sRecipient]);
+         const oBundle = this.getView().getModel("i18n").getResourceBundle();
+         const sRecipient = this.getView().getModel().getProperty("/recipient/name");
+         const sMsg = oBundle.getText("helloMsg", [sRecipient]);
+
          // show message
          MessageToast.show(sMsg);
       }
@@ -138,11 +144,11 @@ Delete the `onInit` function and the required modules; this is now done in the c
 ```js
 sap.ui.define([
 	"sap/ui/core/ComponentContainer"
-], function (ComponentContainer) {
+], (ComponentContainer) => {
 	"use strict";
 
 	new ComponentContainer({
-		name: "sap.ui.demo.walkthrough",
+		name: "ui5.walkthrough",
 		settings : {
 			id : "walkthrough"
 		},

@@ -14,17 +14,24 @@ To make this work, we have to pass over the information which item has been sele
   
 **The selected invoice details are now shown in the details page**
 
-![](images/SAPUI5_Walkthrough_Step_32_3a96173.png "The selected invoice details are now shown in the details page")
+![](images/UI5_Walkthrough_Step_31_31da9d4.png "The selected invoice details are now shown in the details page")
 
 
+
+<a name="loio2366345a94f64ec1a80f9d9ce50a59ef__section_m2z_d5m_tyb"/>
 
 ## Coding
 
 You can view and download all files at [Walkthrough - Step 31](https://ui5.sap.com/#/entity/sap.m.tutorial.walkthrough/sample/sap.m.tutorial.walkthrough.31).
 
+
+
+<a name="loio2366345a94f64ec1a80f9d9ce50a59ef__section_n2z_d5m_tyb"/>
+
+## webapp/manifest.json
+
 ```js
 {
-  "_version": "1.12.0",
   …
   "sap.ui5": {
 	…
@@ -33,7 +40,7 @@ You can view and download all files at [Walkthrough - Step 31](https://ui5.sap.c
 		"routerClass": "sap.m.routing.Router",
 		"type": "View",
 		"viewType": "XML",
-		"path": "sap.ui.demo.walkthrough.view",
+		"path": "ui5.walkthrough.view",
 		"controlId": "app",
 		"controlAggregation": "pages"
 	  },
@@ -51,11 +58,11 @@ You can view and download all files at [Walkthrough - Step 31](https://ui5.sap.c
 	  ],
 		  "targets": {
 		"overview": {
-		  "id": "overview"
+		  "id": "overview",
 		  "name": "Overview"
 		},
 		"detail": {
-		  "id": "detail"
+		  "id": "detail",
 		  "name": "Detail"
 		}
 	  }
@@ -72,7 +79,7 @@ We now add a navigation parameter `invoicePath` to the detail route so that we c
 
 ```xml
 <mvc:View
-	controllerName="sap.ui.demo.walkthrough.controller.Detail"
+	controllerName="ui5.walkthrough.controller.Detail"
 	xmlns="sap.m"
 	xmlns:mvc="sap.ui.core.mvc">
 	<Page
@@ -97,14 +104,15 @@ sap.ui.define([
 	"../model/formatter",
 	"sap/ui/model/Filter",
 	"sap/ui/model/FilterOperator"
-], function (Controller, JSONModel, formatter, Filter, FilterOperator) {
+], (Controller, JSONModel, formatter, Filter, FilterOperator) => {
 	"use strict";
-	return Controller.extend("sap.ui.demo.walkthrough.controller.InvoiceList", {
+
+	return Controller.extend("ui5.walkthrough.controller.InvoiceList", {
 		…
 
-		onPress: function (oEvent) {
-			var oItem = oEvent.getSource();
-			var oRouter = this.getOwnerComponent().getRouter();
+		onPress(oEvent) {
+			const oItem = oEvent.getSource();
+			const oRouter = this.getOwnerComponent().getRouter();
 			oRouter.navTo("detail", {
 				invoicePath: window.encodeURIComponent(oItem.getBindingContext("invoice").getPath().substr(1))
 			});
@@ -117,7 +125,7 @@ The control instance that has been interacted with can be accessed by the `getSo
 
 In the `navTo` method we now add a configuration object to fill the navigation parameter `invoicePath` with the current information of the item. This will update the URL and navigate to the detail view at the same time. On the detail page, we can access this `context` information again and display the corresponding item.
 
-To identify the object that we selected, we would typically use the key of the item in the back-end system because it is short and precise. For our invoice items however, we do not have a simple key and directly use the binding path to keep the example short and simple. The path to the item is part of the binding context which is a helper object of SAPUI5 to manage the binding information for controls. The binding context can be accessed by calling the `getBindingContext` method with the model name on any bound SAPUI5 control. We need to remove the first `/` from the binding path by calling `.substr(1)` on the string because this is a special character in URLs and is not allowed, we will add it again on the detail page.
+To identify the object that we selected, we would typically use the key of the item in the back-end system because it is short and precise. For our invoice items however, we do not have a simple key and directly use the binding path to keep the example short and simple. The path to the item is part of the binding context which is a helper object of SAPUI5 to manage the binding information for controls. The binding context can be accessed by calling the `getBindingContext` method with the model name on any bound SAPUI5 control. We need to remove the first `/` from the binding path by calling `.substr(1)` on the string because this is a special character in URLs and is not allowed, we will add it again on the detail page. Also, the binding path might contain special characters which are not allowed in URLs, so we have to encode the path with `encodeURIComponent`.
 
 
 
@@ -126,14 +134,16 @@ To identify the object that we selected, we would typically use the key of the i
 ```js
 sap.ui.define([
 	"sap/ui/core/mvc/Controller"
-], function (Controller) {
+], (Controller) => {
 	"use strict";
-	return Controller.extend("sap.ui.demo.walkthrough.controller.Detail", {
-		onInit: function () {
-			var oRouter = this.getOwnerComponent().getRouter();
-			oRouter.getRoute("detail").attachPatternMatched(this._onObjectMatched, this);
+
+	return Controller.extend("ui5.walkthrough.controller.Detail", {
+		onInit() {
+			const oRouter = this.getOwnerComponent().getRouter();
+			oRouter.getRoute("detail").attachPatternMatched(this.onObjectMatched, this);
 		},
-		_onObjectMatched: function (oEvent) {
+
+		onObjectMatched(oEvent) {
 			this.getView().bindElement({
 				path: "/" + window.decodeURIComponent(oEvent.getParameter("arguments").invoicePath),
 				model: "invoice"
@@ -145,9 +155,9 @@ sap.ui.define([
 
 Our last piece to fit the puzzle together is the detail controller. It needs to set the context that we passed in with the URL parameter `invoicePath` on the view, so that the item that has been selected in the list of invoices is actually displayed, otherwise, the view would simply stay empty.
 
-In the `onInit` method of the controller we fetch the instance of our app router and attach to the detail route by calling the method `attachPatternMatched` on the route that we accessed by its name. We register an internal callback function `_onObjectMatched` that will be executed when the route is hit, either by clicking on the item or by calling the app with a URL for the detail page.
+In the `onInit` method of the controller we fetch the instance of our app router and attach to the detail route by calling the method `attachPatternMatched` on the route that we accessed by its name. We register an internal callback function `onObjectMatched` that will be executed when the route is hit, either by clicking on the item or by calling the app with a URL for the detail page.
 
-In the `_onObjectMatched` method that is triggered by the router we receive an event that we can use to access the URL and navigation parameters. The `arguments` parameter will return an object that corresponds to our navigation parameters from the route pattern. We access the `invoicePath` that we set in the invoice list controller and call the `bindElement` function on the view to set the context. We have to add the root `/` in front of the path again that was removed for passing on the path as a URL parameter.
+In the `onObjectMatched` method that is triggered by the router we receive an event that we can use to access the URL and navigation parameters. The `arguments` parameter will return an object that corresponds to our navigation parameters from the route pattern. We access the `invoicePath` that we set in the invoice list controller and call the `bindElement` function on the view to set the context. We have to add the root `/` in front of the path again that was removed for passing on the path as a URL parameter. Because we have encoded the binding path part in the URL before, we have to decode it again with `decodeURIComponent`.
 
 The `bindElement` function is creating a binding context for a SAPUI5 control and receives the model name as well as the path to an item in a configuration object. This will trigger an update of the UI controls that we connected with fields of the invoice model. You should now see the invoice details on a separate page when you click on an item in the list of invoices.
 
@@ -155,8 +165,9 @@ The `bindElement` function is creating a binding context for a SAPUI5 control an
 
 ## Conventions
 
--   Define the routing configuration in the `AppDescriptor`
+-   Define the routing configuration in the `manifest.json` / app descriptor
 
+-   Initialize the router at the end of your `Component#init` function
 
 **Related Information**  
 

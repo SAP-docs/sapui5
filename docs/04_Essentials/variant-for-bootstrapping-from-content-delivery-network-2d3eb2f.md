@@ -16,7 +16,7 @@ SAPUI5 can either be loaded locally with a relative path from an SAP Web server 
 SAPUI5 application hosted on SAP BTP as well as applications loaded via the SAP Launchpad service into the launchpad on SAP BTP are allowed to leverage the SAPUI5 CDN to retrieve the SAPUI5 distribution layer artifacts.
 
 > ### Note:  
-> To ensure outdated versions no longer pose a potential security risk, SAP removes SAPUI5 versions from the SAPUI5 CDN one year after their end of maintenance. Also patches of versions in maintenance which are older than one year will be removed. For more information, see SAP Note [3001696](https://launchpad.support.sap.com/#/notes/3001696). The end dates for the cloud provisioning of SAPUI5 versions and patches can be found at [https://ui5.sap.com/versionoverview.html](https://ui5.sap.com/versionoverview.html)
+> To ensure outdated versions no longer pose a potential security risk, SAP removes SAPUI5 versions from the SAPUI5 CDN one year after their end of maintenance. Also patches of versions in maintenance which are older than one year will be removed. For more information, see SAP Note [3001696](https://me.sap.com/notes/3001696). The end dates for the cloud provisioning of SAPUI5 versions and patches can be found at [https://ui5.sap.com/versionoverview.html](https://ui5.sap.com/versionoverview.html)
 
 
 
@@ -27,7 +27,7 @@ The specific version allows you to select a particular fixed version for bootstr
 ```html
 <script id="sap-ui-bootstrap"
     type="text/javascript"
-    src="https://ui5.sap.com/1.118.0/resources/sap-ui-core.js"
+    src="https://ui5.sap.com/1.119.2/resources/sap-ui-core.js"
     data-sap-ui-theme="sap_fiori_3"
     data-sap-ui-async="true"
     data-sap-ui-libs="sap.m"></script>

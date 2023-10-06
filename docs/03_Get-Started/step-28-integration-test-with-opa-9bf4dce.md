@@ -17,7 +17,7 @@ We haven’t thought about testing our interaction with the app yet, so in this 
   
 **An OPA test opens the "Hello" dialog from step 16**
 
-![](images/SAPUI5_Walkthrough_Step_29_108eccb.png "An OPA test opens the "Hello" dialog from step 16")
+![](images/UI5_Walkthrough_Step_28_250d5b9.png "An OPA test opens the "Hello" dialog from step 16")
 
 
 
@@ -38,25 +38,19 @@ We add a new folder `integration` below the `test` folder, where we put our new 
 ## webapp/test/integration/NavigationJourney.js \(New\)
 
 ```js
-/*global QUnit, opaTest*/
-
 sap.ui.define([
-	"sap/ui/demo/walkthrough/localService/mockserver",
 	"sap/ui/test/opaQunit",
 	"./pages/App"
-], function (mockserver) {
+], (opaTest) => {
 	"use strict";
 
 	QUnit.module("Navigation");
 
-	opaTest("Should open the Hello dialog", function (Given, When, Then) {
-		// initialize the mock server
-		mockserver.init();
-
+	opaTest("Should open the Hello dialog", (Given, When, Then) => {
 		// Arrangements
 		Given.iStartMyUIComponent({
 			componentConfig: {
-				name: "sap.ui.demo.walkthrough"
+				name: "ui5.walkthrough"
 			}
 		});
 
@@ -70,7 +64,6 @@ sap.ui.define([
 		Then.iTeardownMyApp();
 	});
 });
-
 ```
 
 Let’s start with the `journey` first. A `journey` consists of a series of integration tests that belong to the same context such as navigating through the app. Similar to the QUnit test implementation, OPA5 uses QUnit, that's why we first set up a QUnit module `Navigation` that will be displayed on our result page.
@@ -102,15 +95,15 @@ As you can see, the test case reads like a user story, we actually do not need t
 sap.ui.define([
 	"sap/ui/test/Opa5",
 	"sap/ui/test/actions/Press"
-], function (Opa5, Press) {
+], (Opa5, Press) => {
 	"use strict";
 
-	var sViewName = "sap.ui.demo.walkthrough.view.HelloPanel";
+	const sViewName = "ui5.walkthrough.view.HelloPanel";
 
 	Opa5.createPageObjects({
 		onTheAppPage: {
 			actions: {
-				iPressTheSayHelloWithDialogButton: function () {
+				iPressTheSayHelloWithDialogButton() {
 					return this.waitFor({
 						id: "helloDialogButton",
 						viewName: sViewName,
@@ -121,10 +114,10 @@ sap.ui.define([
 			},
 
 			assertions: {
-				iShouldSeeTheHelloDialog: function () {
+				iShouldSeeTheHelloDialog() {
 					return this.waitFor({
 						controlType: "sap.m.Dialog",
-						success: function () {
+						success() {
 							// we set the view busy, so we need to query the parent of the app
 							Opa5.assert.ok(true, "The dialog is open");
 						},
@@ -153,25 +146,25 @@ In the assertions section we define a `waitFor` statement that checks if a `sap.
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Integration tests for SAPUI5 Walkthrough</title>
+	<title>Integration tests for the UI5 Walkthrough</title>
 	<meta charset="utf-8">
 
 	<script
 		id="sap-ui-bootstrap"
-		src="https://sdk.openui5.org/resources/sap-ui-core.js"
-		data-sap-ui-theme="sap_belize"
+		src="../../resources/sap-ui-core.js"
+		data-sap-ui-theme="sap_horizon"
 		data-sap-ui-resourceroots='{
-			"sap.ui.demo.walkthrough": "../../"
+			"ui5.walkthrough": "../../"
 		}'
 		data-sap-ui-animation="false"
 		data-sap-ui-compatVersion="edge"
 		data-sap-ui-async="true">
 	</script>
 
-	<link rel="stylesheet" type="text/css" href="https://sdk.openui5.org/resources/sap/ui/thirdparty/qunit-2.css">
+	<link rel="stylesheet" type="text/css" href="../../resources/sap/ui/thirdparty/qunit-2.css">
 
-	<script src="https://sdk.openui5.org/resources/sap/ui/thirdparty/qunit-2.js"></script>
-	<script src="https://sdk.openui5.org/resources/sap/ui/qunit/qunit-junit.js"></script>
+	<script src="../../resources/sap/ui/thirdparty/qunit-2.js"></script>
+	<script src="../../resources/sap/ui/qunit/qunit-junit.js"></script>
 
 	<script src="opaTests.qunit.js"></script>
 </head>
@@ -180,7 +173,6 @@ In the assertions section we define a `waitFor` statement that checks if a `sap.
 	<div id="qunit-fixture"></div>
 </body>
 </html>
-
 ```
 
 This file contains our test suite for all OPA tests of the app. We use the same namespace as for our application.
@@ -194,20 +186,20 @@ Then we load the basic QUnit functionality via script tags from SAPUI5 so that w
 ## webapp/test/integration/opaTests.qunit.js \(New\)
 
 ```js
-/* global QUnit */
-
 QUnit.config.autostart = false;
 
-sap.ui.getCore().attachInit(function () {
+sap.ui.getCore().attachInit(() => {
 	"use strict";
 
 	sap.ui.require([
-		"sap/ui/demo/walkthrough/test/integration/NavigationJourney"
-	], function () {
-		QUnit.start();
+        "ui5/walkthrough/localService/mockserver",
+        "ui5/walkthrough/test/integration/NavigationJourney"
+	], (mockserver) => {
+        // initialize the mock server
+        mockserver.init();
+        QUnit.start();
 	});
 });
-
 ```
 
 This script loads the `NavigationJourney`, and the test functions inside are immediately executed. When you call the `webapp/test/integration/opaTests.qunit.html` page of your project on the server, you should see the QUnit layout and a test “Should see the Hello dialog” is executed immediately. It will load the app component on the right side of the page. There you can see what operations the test is performing on the app, if everything works correctly the button click is triggered, then a dialog is shown and the test case is green.

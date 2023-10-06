@@ -12,9 +12,9 @@ Set up your development environment and go through our tutorials. They introduce
 
 -   You should be familiar with JavaScript.
 
--   Set up your [Development Environment](../05_Developing_Apps/development-environment-7bb04e0.md).
+-   Set up your [Development Environment](../05_Developing_Apps/development-environment-7bb04e0.md). We recommend UI5 Tooling , but you could also use other development environments.
 
--   Set up a folder where you would place the application content. We will refer to this folder as the “app folder”.
+-   Set up a folder where you would place the application content. We will refer to this folder as the “app root folder”.
 
 
 
@@ -44,17 +44,15 @@ Set up your development environment and go through our tutorials. They introduce
 
 To download the code from the Demo Kit, follow these steps:
 
-1.  Choose the link in the *Coding* section of the tutorial step you want to work on or find the code in the *Samples* section of the Demo Kit \(filter by "*Tutorial*" to get a list of the tutorials that are available\).
+1.  Follow the link in the *Coding* section of the tutorial step or find the code in the *Samples* section of the Demo Kit \(filter by "*Tutorial*" to get a list of the tutorials that are available\).
 
-2.  Choose the icon with the *Show source code for this sample* tooltip in the right-hand part of the header bar to display all files included in this sample.
+2.  Download a `zip` file to your local machine \(find the *Download* button on the top right\).
 
-3.  Choose the *Download* button. A `zip` file is downloaded to your local machine.
+3.  Extract the project folder to a desired location on your local machine.
 
-4.  Extract or upload the `zip` file to your development environment.
+4.  **If you use UI5 Tooling \(recommended\):** At your chosen location, open a new shell and execute `npm install`. After all dependencies have been installed, enter `npm start` to start the development server. \(**Note:** if they're not already present, you may have to create and adjust some project configuration files first; see the [Walkthrough Tutorial](walkthrough-tutorial-3da5f4b.md) for an example.\)
 
-5.  Adjust the project configuration files to match your development environment as described below.
-
-6.  Test the project by calling one of the HTML pages in your development environment and make sure that the app is displaying the features exactly as shown in the preview of the step.
+5.  Test your project setup by opening one of its HTML pages in your development environment and making sure that the app displays the features exactly as shown in the preview of the step.
 
 
 

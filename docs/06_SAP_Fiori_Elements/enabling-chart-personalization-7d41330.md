@@ -31,11 +31,11 @@ The default state of the filter option is as follows:
 
 You can control the visibility of chart personalization options using the variant management settings. The default visibility is as follows:
 
--   With the `"Page"` level setting, the following chart personalization options are available: *Item*, *Sort* and *Type*.
+-   With the `"Page"` level setting, the following chart personalization options are available: *Item*, *Sort*, and *Type*.
 
--   With the `"None"` setting, the following chart personalization options are available: *Item*, *Sort* and *Type*.
+-   With the `"None"` setting, the following chart personalization options are available: *Item*, *Sort*, and *Type*.
 
--   With the `"Control"` setting, the following chart personalization options are available: *Item*, *Sort*, *Type*. and *Filter*.
+-   With the `"Control"` setting, the following chart personalization options are available: *Item*, *Sort*, *Type*, and *Filter*.
 
 
 You can switch off personalization using the following setting:
@@ -43,7 +43,7 @@ You can switch off personalization using the following setting:
 > ### Sample Code:  
 > Manifest Setting to Switch Off Personalization
 > 
-> ```
+> ```json
 > "BusinessPartnersList": {
 >    "type": "Component",
 >    "id": "BusinessPartnersList",
@@ -71,13 +71,13 @@ The `"personalization"` setting can have the following values:
 
 -   `false`: all chart settings are disabled.
 
--   `object`: when using this value, you must also define the following values: `column`, `sort`, `type` and `filter`. If you omit a setting, it is treated as false, which prevents apps from getting new features in upcoming releases. You can see this in the sample code above, where the object is used as a value.
+-   `object`: when using this value, you must also define the following values: `column`, `sort`, `type`, and `filter`. If you omit a setting, it is treated as false, which prevents apps from getting new features in upcoming releases. You can see this in the sample code above, where the object is used as a value.
 
 
 > ### Sample Code:  
 > Manifest Setting for Finer Control of Chart Personalization
 > 
-> ```
+> ```json
 > "BusinessPartnersList": {
 >    "type": "Component",
 >    "id": "BusinessPartnersList",

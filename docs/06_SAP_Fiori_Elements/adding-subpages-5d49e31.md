@@ -22,7 +22,7 @@ You can add further subpages manually in the `manifest.json` file post-generatio
 
 You can also use SAP Web IDE to create one subpage \(detail page\) for the object page when you create your app. This is expressed in the code as a 1:n association to the root entity and is rendered as a table on the object page.
 
-```js
+```json
 
 "sap.ui.generic.app":{
    "pages":{
@@ -66,7 +66,7 @@ To add a subpage, you need two objects in the `manifest.json` file.
 2.  Target: to specify the component to be loaded.
 
 
-```js
+```json
 "sap.ui5": {
         ...
         "routing": {

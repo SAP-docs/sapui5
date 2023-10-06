@@ -151,7 +151,7 @@ Feature
 
 We have added a jQuery security fix to SAPUI5, which may introduce incompatibilities to existing application or library code.
 
-For checking and, if required, fixing your applications and libraries, see SAP Note [2941170](https://launchpad.support.sap.com/#/notes/2941170). This note also contains information on the security background.
+For checking and, if required, fixing your applications and libraries, see SAP Note [2941170](https://me.sap.com/notes/2941170). This note also contains information on the security background.
 
 <sub>New•Feature•Info Only•1.81</sub>
 
@@ -1114,6 +1114,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.117](what-s-new-in-sapui5-1-117-029d3b4.md "With this release SAPUI5 is upgraded from version 1.116 to 1.117.")
 
 [What's New in SAPUI5 1.116](what-s-new-in-sapui5-1-116-ebd6f34.md "With this release SAPUI5 is upgraded from version 1.115 to 1.116.")
 

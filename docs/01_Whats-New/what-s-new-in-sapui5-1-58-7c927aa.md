@@ -1716,7 +1716,7 @@ Control
 
 **`sap.ui.comp.smartvariants.SmartVariantManagement`**
 
-You can now use a setting in the SAPUI5 flexibility services that determines whether variants can be shared by all users \(default\) or key users only. For more information, see [2658662](https://launchpad.support.sap.com/#/notes/2658662).
+You can now use a setting in the SAPUI5 flexibility services that determines whether variants can be shared by all users \(default\) or key users only. For more information, see [2658662](https://me.sap.com/notes/2658662).
 
 <sub>Changed•Control•Info Only•1.58</sub>
 
@@ -2307,6 +2307,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.117](what-s-new-in-sapui5-1-117-029d3b4.md "With this release SAPUI5 is upgraded from version 1.116 to 1.117.")
 
 [What's New in SAPUI5 1.116](what-s-new-in-sapui5-1-116-ebd6f34.md "With this release SAPUI5 is upgraded from version 1.115 to 1.116.")
 

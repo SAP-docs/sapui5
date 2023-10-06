@@ -273,7 +273,7 @@ The following changes and new features are available for SAP Fiori elements for 
 
 -   You can now define the order of the standard actions in the table. For more information, see [Adding Actions to Tables](../06_SAP_Fiori_Elements/adding-actions-to-tables-b623e0b.md).
 
--   You can now interact with the `FilterBar` building block using the `SelectionVariant` format. For more information, see [The FilterBar Building Block](../06_SAP_Fiori_Elements/the-filterbar-building-block-7838611.md).
+-   You can now interact with the `FilterBar` building block using the `SelectionVariant` format. For more information, see  <?sap-ot O2O class="- topic/xref " href="78386110817d43978ffd6988d1704e38.xml" text="The FilterBar Building Block" desc="" xtrc="xref:9" xtrf="file:/home/builder/src/dita-all/zyl1693565473561/loioa82e269bbb584cfcbdbd3ae8765d8e7f_en-US/src/content/localization/en-us/d1be891bb9d64b03bdd6faac2f0d431a.xml" ?> .
 
 
 <sub>Changed•SAP Fiori Elements•Info Only•1.116</sub>
@@ -910,6 +910,8 @@ Required
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.117](what-s-new-in-sapui5-1-117-029d3b4.md "With this release SAPUI5 is upgraded from version 1.116 to 1.117.")
 
 [What's New in SAPUI5 1.115](what-s-new-in-sapui5-1-115-409fde8.md "With this release SAPUI5 is upgraded from version 1.114 to 1.115.")
 

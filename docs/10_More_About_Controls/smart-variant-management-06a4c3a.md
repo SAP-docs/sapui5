@@ -246,7 +246,7 @@ When you want to save the view, you have to select a transport request. The sele
 
 ### How can I make sure that only key users can make views public?
 
-You can use a setting in SAPUI5 flexibility that determines whether views can be shared or made public by all users \(default\) or key users only. For more information on how to activate the related key user check, see [2658662](https://launchpad.support.sap.com/#/notes/2658662). For more information about making views public, see [Step 7: View Management](../03_Get-Started/step-7-view-management-97fc0ea.md).
+You can use a setting in SAPUI5 flexibility that determines whether views can be shared or made public by all users \(default\) or key users only. For more information on how to activate the related key user check, see [2658662](https://me.sap.com/notes/2658662). For more information about making views public, see [Step 7: View Management](../03_Get-Started/step-7-view-management-97fc0ea.md).
 
 **Related Information**  
 

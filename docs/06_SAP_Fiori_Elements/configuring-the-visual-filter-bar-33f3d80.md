@@ -28,7 +28,7 @@ Application developers must ensure that there's a manifest property for each vis
 > ### Sample Code:  
 > `manifest.json` setting for visual filters
 > 
-> ```
+> ```json
 > "settings" : {  
 >    "contextPath" : "/SalesOrderManage",
 >    "controlConfiguration" : {

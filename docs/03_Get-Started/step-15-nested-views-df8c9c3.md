@@ -12,18 +12,26 @@ Our panel content is getting more and more complex and now it is time to move th
   
 **The panel content is now refactored to a separate view \(No visual changes to last step\)**
 
-![](images/SAPUI5_Walkthrough_Step_14_15_dc7fa70.png "The panel content is now refactored to a separate view (No visual changes to last
+![](images/UI5_Walkthrough_Step_15_f3724d2.png "The panel content is now refactored to a separate view (No visual changes to last
                step)")
 
 
+
+<a name="loiodf8c9c3d79b54c928855162bafcd88ee__section_rjd_vt2_syb"/>
 
 ## Coding
 
 You can view and download all files at [Walkthrough - Step 15](https://ui5.sap.com/#/entity/sap.m.tutorial.walkthrough/sample/sap.m.tutorial.walkthrough.15).
 
+
+
+<a name="loiodf8c9c3d79b54c928855162bafcd88ee__section_sjd_vt2_syb"/>
+
+## webapp/view/App.view.xml
+
 ```xml
 <mvc:View
-	controllerName="sap.ui.demo.walkthrough.controller.App"
+	controllerName="ui5.walkthrough.controller.App"
 	xmlns="sap.m"
 	xmlns:mvc="sap.ui.core.mvc"
 	displayBlock="true">
@@ -32,14 +40,13 @@ You can view and download all files at [Walkthrough - Step 15](https://ui5.sap.c
 			<pages>
 				<Page title="{i18n>homePageTitle}">
 					<content>
-						<mvc:XMLView viewName="sap.ui.demo.walkthrough.view.HelloPanel"/>
+						<mvc:XMLView viewName="ui5.walkthrough.view.HelloPanel"/>
 					</content>
 				</Page>
 			</pages>
 		</App>
 	</Shell>
 </mvc:View>
-
 ```
 
 Instead of putting the panel and its content directly into our `App` view, we will move it to a new separate `HelloPanel` view. We refer to this using an `XMLView` tag in the content aggregation of the panel.
@@ -50,13 +57,13 @@ Instead of putting the panel and its content directly into our `App` view, we wi
 
 ```xml
 <mvc:View
-   controllerName="sap.ui.demo.walkthrough.controller.HelloPanel"
+   controllerName="ui5.walkthrough.controller.HelloPanel"
    xmlns="sap.m"
    xmlns:mvc="sap.ui.core.mvc">
    <Panel
       headerText="{i18n>helloPanelTitle}"
       class="sapUiResponsiveMargin"
-      width="auto" >
+      width="auto">
       <content>
          <Button
             text="{i18n>showHelloButtonText}"
@@ -84,14 +91,16 @@ The whole content for the panel is now added to the new file `HelloPanel.view.xm
 sap.ui.define([
    "sap/ui/core/mvc/Controller",
    "sap/m/MessageToast"
-], function (Controller, MessageToast) {
+], (Controller, MessageToast) => {
    "use strict";
-   return Controller.extend("sap.ui.demo.walkthrough.controller.HelloPanel", {
-      onShowHello : function () {
+
+   return Controller.extend("ui5.walkthrough.controller.HelloPanel", {
+      onShowHello() {
          // read msg from i18n model
-         var oBundle = this.getView().getModel("i18n").getResourceBundle();
-         var sRecipient = this.getView().getModel().getProperty("/recipient/name");
-         var sMsg = oBundle.getText("helloMsg", [sRecipient]);
+         const oBundle = this.getView().getModel("i18n").getResourceBundle();
+         const sRecipient = this.getView().getModel().getProperty("/recipient/name");
+         const sMsg = oBundle.getText("helloMsg", [sRecipient]);
+
          // show message
          MessageToast.show(sMsg);
       }
@@ -108,9 +117,10 @@ To have a reusable asset, the method `onShowHello` is also moved from the app co
 ```js
 sap.ui.define([
    "sap/ui/core/mvc/Controller"
-], function (Controller) {
+], (Controller) => {
    "use strict";
-   return Controller.extend("sap.ui.demo.walkthrough.controller.App", {
+
+   return Controller.extend("ui5.walkthrough.controller.App", {
    });
 });
 ```

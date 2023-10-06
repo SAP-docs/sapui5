@@ -149,6 +149,8 @@ To show the filter value as shown in the filter bar, such as `Cost=Low`, you can
 You can configure the `FilterBar` locally via the section `@com.sap.vocabularies.UI.v1.SelectionFields` in the `controlConfiguration` of the `manifest.json` for the list report target:
 
 > ### Sample Code:  
+> `manifest.json`
+> 
 > ```
 >     ...
 >             "targets": {
@@ -185,6 +187,8 @@ You can configure the `FilterBar` locally via the section `@com.sap.vocabularies
 You can use the `filterFields` setting to add custom filters. The pattern looks like this:
 
 > ### Sample Code:  
+> `manifest.json`
+> 
 > ```
 > "<key>": {
 >     "label": <UILabel>,                   // static string or i18n binding, e.g. "MyText" or "{i18n>MyCustomLabel}"
@@ -205,7 +209,7 @@ You can use the `filterFields` setting to add custom filters. The pattern looks 
 The following sample code shows how you can build an XML template for an app called `SalesOrder`:
 
 > ### Sample Code:  
-> ```
+> ```xml
 > <core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:l="sap.ui.layout">
 >     <HBox alignItems="Center" core:require="{handler: 'SalesOrder/ext/CustomRating'}" width="100%">
 >  
@@ -229,7 +233,7 @@ The following sample code shows how you can build an XML template for an app cal
 You can build these custom filter fields for different properties of the `SalesOrder`. To facilitate this, ensure that the key specified in the `manifest.json` is a unique string. The previous sample code shows the usage of custom handlers, that is, handling value changes or handling a button click that resets the filters. Following the naming of this example, these handlers are defined in file `SalesOrder/ext/CustomRating.js`.
 
 > ### Sample Code:  
-> ```
+> ```js
 > sap.ui.define(["sap/ui/model/Filter", "sap/ui/model/FilterOperator"], function(Filter, FilterOperator) {
 >   "use strict";
 >   return {
@@ -278,7 +282,7 @@ In the following example, these custom filter operators are defined in function 
 > ### Sample Code:  
 > Implementation of the Custom Rating Operator
 > 
-> ```
+> ```js
 > sap.ui.define(["sap/ui/model/Filter", "sap/ui/model/FilterOperator"], function(Filter, FilterOperator) {
 >   "use strict";
 >   return {
@@ -328,7 +332,7 @@ You can also define your custom filter as mandatory by setting it to `required =
 The red frame is switched on or off by the formatter `onFilterInputFormatValue()` in the file `SalesOrder/ext/CustomFilter.js` that updates the value state of the input field:
 
 > ### Sample Code:  
-> ```
+> ```js
 > sap.ui.define(["sap/ui/core/ValueState"], function (ValueState) {
 >     "use strict";
 > 

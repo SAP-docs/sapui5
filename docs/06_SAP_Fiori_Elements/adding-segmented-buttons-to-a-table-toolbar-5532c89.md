@@ -186,6 +186,8 @@ Every variant corresponds to its filter on the UI. A segmented button is rendere
 The following manifest settings are required for adding segmented buttons:
 
 > ### Sample Code:  
+> `manifest.json`
+> 
 > ```
 > "component": {
 >   "name": "sap.suite.ui.generic.template.ObjectPage",
@@ -230,6 +232,8 @@ Every `"paths"` entry corresponds to its filter on the UI. A segmented button is
 The following manifest settings are required for adding segmented buttons:
 
 > ### Sample Code:  
+> `manifest.json`
+> 
 > ```
 > "SalesOrderManageObjectPage": {
 > 	"type": "Component",

@@ -10,18 +10,14 @@ We first introduce you to the basic development paradigms like *Model-View-Contr
 
 ## Preview
 
-![](images/SAPUI5_Walkthrough_Step_35_62a5405.png)
+![Preview of the UI5 application that is going to be built in this tutorial. Contains a Hello World upper part with buttons and a text input. The lower part shows list of invoices with details, grouped by vendors.](images/UI5_Walkthrough_Step_38_fb12cea.png)
 
 
 
 > ### Tip:  
-> You don't have to do all tutorial steps sequentially, you can also jump directly to any step you want. Just download the code from the previous step, copy it to your workspace and make sure that the application runs by calling the `webapp/index.html` file.
+> You don't have to do all tutorial steps sequentially, you can also jump directly to any step you want. Just download the code from the previous step and make sure that the application runs as intended; for detailed instructions, see [Downloading Code for a Tutorial Step](get-started-setup-tutorials-and-demo-apps-8b49fc1.md#loio8b49fc198bf04b2d9800fc37fecbb218__tutorials_download).
 > 
-> You can view and download the samples for all steps in the Demo Kit at [Walkthrough](https://ui5.sap.com/#/entity/sap.m.tutorial.walkthrough). Depending on your development environment you might have to adjust resource paths and configuration entries.
+> You can view and download the samples for all steps in the Demo Kit at [Walkthrough](https://ui5.sap.com/#/entity/sap.m.tutorial.walkthrough).
 > 
-> For more information check the following sections of the tutorials overview page \(see [Get Started: Setup, Tutorials, and Demo Apps](get-started-setup-tutorials-and-demo-apps-8b49fc1.md)\):
-> 
-> -   [Downloading Code for a Tutorial Step](get-started-setup-tutorials-and-demo-apps-8b49fc1.md#loio8b49fc198bf04b2d9800fc37fecbb218__tutorials_download)
-> 
-> -   [Adapting Code to Your Development Environment](get-started-setup-tutorials-and-demo-apps-8b49fc1.md#loio8b49fc198bf04b2d9800fc37fecbb218__tutorials_adaptation)
+> For more information, see the overview page: [Get Started: Setup, Tutorials, and Demo Apps](get-started-setup-tutorials-and-demo-apps-8b49fc1.md).
 

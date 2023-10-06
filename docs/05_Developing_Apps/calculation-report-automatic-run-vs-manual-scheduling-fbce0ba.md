@@ -107,7 +107,7 @@ Manual changes using transaction `SE80` \(not supported and therefore not recomm
 
 ## Import of Content to the Repository
 
-This scenario usually happens in test and production systems. The system automatically updates the index after transports which have been imported under certain conditions, for example, which version of the user interface add-on for SAP NetWeaver is installed and whether the Business Add-In \(BAdI\) CTS\_IMPORT\_FEEDBACK is called after an import. For more information, see SAP Note [2253480](https://launchpad.support.sap.com/#/notes/2253480).
+This scenario usually happens in test and production systems. The system automatically updates the index after transports which have been imported under certain conditions, for example, which version of the user interface add-on for SAP NetWeaver is installed and whether the Business Add-In \(BAdI\) CTS\_IMPORT\_FEEDBACK is called after an import. For more information, see SAP Note [2253480](https://me.sap.com/notes/2253480).
 
 If you are unsure whether the BAdI is called, you can verify this in the import log of a transport. The BAdI is called if the import log contains a *Feedback after import or export* entry \(there might be one after import and one after export entry\) and the after import entry contains the following logs:
 
@@ -122,7 +122,7 @@ Here’s how you can decide whether you need to schedule the report after transp
 
 ![](images/Decide_whether_you_need_to_schedule_the_report_35e150c.png)
 
-If the import is triggered by ABAP, report `/UI5/APP_INDEX_CALCULATE` is executed automatically. If the import is triggered by OS command line and the transport profile parameter `FEEDBACK_IMPORT` is set \(see SAP Note [2253480](https://launchpad.support.sap.com/#/notes/2253480)\), the report is also executed automatically. If the transport profile parameter is not set, the report is not executed automatically.
+If the import is triggered by ABAP, report `/UI5/APP_INDEX_CALCULATE` is executed automatically. If the import is triggered by OS command line and the transport profile parameter `FEEDBACK_IMPORT` is set \(see SAP Note [2253480](https://me.sap.com/notes/2253480)\), the report is also executed automatically. If the transport profile parameter is not set, the report is not executed automatically.
 
 If you have to schedule the report, there are three options for this:
 

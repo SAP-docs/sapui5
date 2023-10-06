@@ -2,9 +2,9 @@
 
 # Step 4: XML Views
 
-Putting all our UI into the `index.html` file will very soon result in a messy setup and there is quite a bit of work ahead of us. So let’s do a first modularization by putting the `sap.m.Text` control into a dedicated `view`.
+Putting all our UI into the `index.js` file will very soon result in a messy setup, and there is quite a bit of work ahead of us. So let’s do a first modularization by putting the `sap/m/Text` control into a dedicated `view`.
 
-SAPUI5 supports multiple view types \(XML, HTML, JavaScript\). We choose XML as this produces the most readable code and will force us to separate the view declaration from the controller logic. Yet the look of our UI will not change.
+SAPUI5 supports multiple view types \(XML, HTML, JavaScript\). When working with UI5, we recommend the use of XML, as this produces the most readable code and will force us to separate the view declaration from the controller logic. Yet the look of our UI will not change.
 
 
 
@@ -14,14 +14,22 @@ SAPUI5 supports multiple view types \(XML, HTML, JavaScript\). We choose XML as 
   
 **The "Hello World" text is now displayed by a SAPUI5 control \(No visual changes to last step\)**
 
-![](images/SAPUI5_Walkthrough_Step_04_c1d7d89.png "The "Hello World" text is now displayed by a SAPUI5 control (No
+![](images/UI5_Walkthrough_Step_04_05f6775.png "The "Hello World" text is now displayed by a SAPUI5 control (No
 					visual changes to last step)")
 
 
 
+<a name="loio1409791afe4747319a3b23a1e2fc7064__section_l3f_lgc_syb"/>
+
 ## Coding
 
 You can view and download all files at [Walkthrough - Step 4](https://ui5.sap.com/#/entity/sap.m.tutorial.walkthrough/sample/sap.m.tutorial.walkthrough.04).
+
+
+
+<a name="loio1409791afe4747319a3b23a1e2fc7064__section_m3f_lgc_syb"/>
+
+## webapp/view/App.view.xml \(New\)
 
 ```xml
 <mvc:View
@@ -30,7 +38,7 @@ You can view and download all files at [Walkthrough - Step 4](https://ui5.sap.co
 </mvc:View>
 ```
 
-We create a new `view` folder in our app and a new file for our XML view inside the `app` folder. The root node of the XML structure is the `view`. Here, we reference the default namespace `sap.m` where the majority of our UI assets are located. We define an additional `sap.ui.core.mvc` namespace with alias `mvc`, where the SAPUI5 views and all other Model-View-Controller \(MVC\) assets are located.
+We create a new `view` folder in our webapp folder and a new file called `App.view.xml` inside this folder. The root node of the XML structure is the `view`. Here, we reference the default namespace `sap.m` where the majority of our UI assets are located. We define an additional `sap.ui.core.mvc` namespace with alias `mvc`, where the SAPUI5 views and all other Model-View-Controller \(MVC\) assets are located.
 
 > ### Note:  
 > The namespace identifies all resources of the project and has to be unique. If you develop your own application code or controls, you cannot use the namespace prefix `sap`, because this namespace is reserved for SAP resources. Instead, simply define your own unique namespace \(for example, `myCompany.myApp`\).
@@ -48,7 +56,7 @@ We create a new `view` folder in our app and a new file for our XML view inside 
 
 ```
 
-Inside the `view` tag, we add the declarative definition of our `text` control with the same properties as in the previous step. The XML tags are mapped to controls and the attributes are mapped to the properties of the control.
+Inside the `View` tag, we add the declarative definition of our `text` control with the same properties as in the previous step. The XML tags are mapped to controls, and the attributes are mapped to control properties.
 
 
 
@@ -59,25 +67,17 @@ Inside the `view` tag, we add the declarative definition of our `text` control w
 ```js
 sap.ui.define([
 	"sap/ui/core/mvc/XMLView"
-], function (XMLView) {
+], (XMLView) => {
 	"use strict";
 
 	XMLView.create({
-		viewName: "sap.ui.demo.walkthrough.view.App"
-	}).then(function (oView) {
-		oView.placeAt("content");
-	});
-
+		viewName: "ui5.walkthrough.view.App"
+	}).then((oView) => oView.placeAt("content"));
 });
 
 ```
 
-We replace the instantiation of the `sap.m.Text` control by our new `App` XML view. The view is created by a factory function of SAPUI5 which makes sure that the view is correctly configured and can be extended by customers. The name is prefixed with the namespace `sap.ui.demo.walkthrough.view` in order to uniquely identify this resource.
-
-> ### Note:  
-> From this step onwards, it is necessary to run the app on a Web server. We structure the app with multiple files that are loaded from the local file system. Without a Web server, this is prevented by the browser due to security reasons. If the error message "sap is not defined" appears in the developer tools of the browser, you need to check the `resource` path in the bootstrap.
-> 
-> Instead of installing a Web server you could use [UI5 Tooling](https://sap.github.io/ui5-tooling/) to start a local development server. See [Development Environment](../05_Developing_Apps/development-environment-7bb04e0.md) for more information.
+We replace the instantiation of the `sap/m/Text` control by our new `App.view.xml` file. The view is created by a factory function of SAPUI5. The name is prefixed with the namespace `ui5.walkthrough.view` in order to uniquely identify this resource.
 
 
 

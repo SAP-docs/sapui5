@@ -12,37 +12,48 @@ The list of invoices is already looking nice, but what is an invoice without a p
   
 **The list of invoices with prices and number units**
 
-![](images/SAPUI5_Walkthrough_Step_21_a839470.png "The list of invoices with prices and number units")
+![](images/UI5_Walkthrough_Step_20_dc9e919.png "The list of invoices with prices and number units")
 
 
+
+<a name="loiodfe04650afc046e0802abb1a1a90d2d9__section_wqj_flk_syb"/>
 
 ## Coding
 
 You can view and download all files at [Walkthrough - Step 20](https://ui5.sap.com/#/entity/sap.m.tutorial.walkthrough/sample/sap.m.tutorial.walkthrough.20).
 
+
+
+<a name="loiodfe04650afc046e0802abb1a1a90d2d9__section_xqj_flk_syb"/>
+
+## webapp/view/InvoiceList.view.xml
+
 ```xml
 <mvc:View
-   controllerName="sap.ui.demo.walkthrough.controller.InvoiceList"
-   xmlns="sap.m"
-   xmlns:mvc="sap.ui.core.mvc">
-   <List
-      headerText="{i18n>invoiceListTitle}"
-      class="sapUiResponsiveMargin"
-      width="auto"
-      items="{invoice>/Invoices}">
-      <items>
-         <ObjectListItem
-		title="{invoice>Quantity} x {invoice>ProductName}"
-		number="{
-			parts: [{path: 'invoice>ExtendedPrice'}, {path: 'view>/currency'}],
-			type: 'sap.ui.model.type.Currency',
-			formatOptions: {
-				showMeasure: false
-			}
-		}"
-		numberUnit="{view>/currency}"/>
-	</items>
-   </List>
+    controllerName="ui5.walkthrough.controller.InvoiceList"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc">
+    <List
+        headerText="{i18n>invoiceListTitle}"
+        class="sapUiResponsiveMargin"
+        width="auto"
+        items="{invoice>/Invoices}">
+        <items>
+            <ObjectListItem
+                title="{invoice>Quantity} x {invoice>ProductName}"
+                number="{
+                    parts: [
+                        'invoice>ExtendedPrice',
+                        'view>/currency'
+                    ],
+                    type: 'sap.ui.model.type.Currency',
+                    formatOptions: {
+                        showMeasure: false
+                    }
+                }"
+                numberUnit="{view>/currency}"/>
+        </items>
+    </List>
 </mvc:View>
 ```
 
@@ -62,18 +73,16 @@ Additionally, we set the formatting option `showMeasure` to `false`. This hides 
 sap.ui.define([
 	"sap/ui/core/mvc/Controller",
 	"sap/ui/model/json/JSONModel"
-], function (Controller, JSONModel) {
+], (Controller, JSONModel) => {
 	"use strict";
 
-	return Controller.extend("sap.ui.demo.walkthrough.controller.InvoiceList", {
-
-		onInit : function () {
-			var oViewModel = new JSONModel({
+	return Controller.extend("ui5.walkthrough.controller.InvoiceList", {
+		onInit() {
+			const oViewModel = new JSONModel({
 				currency: "EUR"
 			});
 			this.getView().setModel(oViewModel, "view");
 		}
-
 	});
 });
 ```

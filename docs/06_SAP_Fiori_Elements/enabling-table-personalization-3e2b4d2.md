@@ -88,7 +88,7 @@ The `"variantManagement"` setting in the manifest allows you to enable or disabl
 
 In the list report, you can set the variant management to `"Page"` level or to `"Control"` level. On an object page, you can set the variant management to `"Control"` level or to `"None"`.
 
--   `"Page"` level \(list report\): With this setting, the table personalization is disabled and users can filter the table from the `filterBar`. The filters applied in the `filterBar` can be saved as a page variant.
+-   `"Page"` level \(list report\): With this setting, filtering using the table personalization settings is disabled and users can filter the table from the `filterBar`. The filters applied in the `filterBar` can be saved as a page variant.
 
 -   `"None"` \(object page\): With this setting, variant management is disabled.
 

@@ -44,7 +44,7 @@ Users can expand and collapse the columns using the focus buttons. They can chan
 > ### Note:  
 > -   For the overview page, the flexible column layout is not relevant.
 > 
-> -   The analytical list page only supports the `TwoColumnsBeginExpanded` layout. For more information, see also [2409984](https://launchpad.support.sap.com/#/notes/2409984).
+> -   The analytical list page only supports the `TwoColumnsBeginExpanded` layout. For more information, see also [2409984](https://me.sap.com/notes/2409984).
 > 
 > -   The flexible column layout can be used in draft and non-draft scenarios.
 > 

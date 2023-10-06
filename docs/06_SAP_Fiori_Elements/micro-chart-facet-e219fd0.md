@@ -8,9 +8,11 @@ A micro chart facet contains a title, subtitle, `MicroChart` control, and a foot
 
 
 
+
+
 ![](images/Micro_Chart_Facet_7e0b23a.png)
 
-To add a micro chart facet, in the local annotations file, use a `UI.HeaderFacets` term and the complex type `UI.ReferenceFacet` and reference the `UI.Chart` as shown in the sample code below.
+To add a micro chart facet, in the local annotations file, use a `UI.HeaderFacets` term and the complex type `UI.ReferenceFacet` and reference the `UI.Chart` as shown in the following sample code :
 
 
 
@@ -67,6 +69,9 @@ To add a micro chart facet, in the local annotations file, use a `UI.HeaderFacet
 > 
 > ```
 
+> ### Note:  
+> For micro charts that display multiple measure values such as comparison chart, column chart, area chart, line chart, stacked bar chart, the application must ensure that only the required data points are sent from the back end. By default, the sorting of data in micro charts is managed by the back end unless specified explicitly.
+
 
 
 ### `UI.Chart` Annotations
@@ -87,7 +92,7 @@ The micro chart supports both the `Criticality` and `CriticalityCalculation` pro
 
 ### Unit of Measure Annotations
 
-The unit of measure is used for the footer of the micro chart. An annotation for the unit of measure is included in the example below. The example uses the `Measures.ISOCurrency` term and it is applied to the entity type property that is used as the value property of the `UI.DataPoint`.
+The unit of measure is used for the footer of the micro chart. An annotation for the unit of measure is included in the following example. The example uses the `Measures.ISOCurrency` term and it's applied to the entity type property that is used as the value property of the `UI.DataPoint`.
 
 > ### Sample Code:  
 > XML Annotation
@@ -126,7 +131,7 @@ The unit of measure is used for the footer of the micro chart. An annotation for
 ## Additional Features in SAP Fiori Elements for OData V2
 
 > ### Note:  
-> The template does not currently support the use of navigation properties in the `UI.Chart` term for the micro chart \(see example below\).
+> The template doesn't support the use of navigation properties in the `UI.Chart` term for the micro chart as shown in the following example:
 > 
 >   
 >   
@@ -145,13 +150,18 @@ Application developers can also enable in-page and external navigation from the 
 SAP Fiori elements for OData V4 also supports the comparison micro chart.
 
 > ### Note:  
-> The use of navigation properties, like the one highlighted below, is currently not supported.
+> The use of navigation properties, like the one highlighted in the following sample code, is not supported.
 > 
 >   
 >   
 > **Navigation Property**
 > 
 > ![](images/Navigation_Property_d2168a4.png "Navigation Property ")
+
+> ### Restriction:  
+> Micro charts require data that is aggregated by the back end, as the client-side doesn't support aggregating the entity sets.
+> 
+> For example, there is an entity that is linked with a micro chart that has multiple records with values, 'Plant' and 'Sales'. In this case, the back end must aggregate the Sales value and ensure that the entity has only one record for each 'Plant' value. This behavior is unlike the behavior of regular charts or analytical tables, where SAP Fiori elements for OData V4 initiates an aggregation call to the back end for the aggregated 'Sales' value.
 
 **Related Information**  
 

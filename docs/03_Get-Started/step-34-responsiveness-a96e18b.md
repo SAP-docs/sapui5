@@ -12,35 +12,45 @@ In this step, we improve the responsiveness of our app. SAPUI5 applications can 
   
 **A responsive table is hiding some of the columns on small devices**
 
-![](images/SAPUI5_Walkthrough_Step_35_62a5405.png "A responsive table is hiding some of the columns on small devices")
+![](images/UI5_Walkthrough_Step_34_cc3f2e0.png "A responsive table is hiding some of the columns on small devices")
 
 
+
+<a name="loioa96e18b4cd924196b255eb9623431dbb__section_jd5_1fn_tyb"/>
 
 ## Coding
 
 You can view and download all files at [Walkthrough - Step 34](https://ui5.sap.com/#/entity/sap.m.tutorial.walkthrough/sample/sap.m.tutorial.walkthrough.34).
 
+
+
+<a name="loioa96e18b4cd924196b255eb9623431dbb__section_kd5_1fn_tyb"/>
+
+## webapp/view/InvoiceList.view.xml
+
 ```xml
 <mvc:View
-		controllerName="sap.ui.demo.walkthrough.controller.InvoiceList"
-		xmlns="sap.m"
-		xmlns:mvc="sap.ui.core.mvc">
+	controllerName="ui5.walkthrough.controller.InvoiceList"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc">
 	<Table
 		id="invoiceList"
 		class="sapUiResponsiveMargin"
 		width="auto"
 		items="{
-			path : 'invoice>/Invoices',
-			sorter : {
-				path : 'ShipperName',
-				group : true
-			}
-		}">
+				path : 'invoice>/Invoices',
+				sorter : {
+					path : 'ShipperName',
+					group : true
+				}
+			}">
 		<headerToolbar>
 			<Toolbar>
-				<Title text="{i18n>invoiceListTitle}"/>
-				<ToolbarSpacer/>
-				<SearchField width="50%" search=".onFilterInvoices"/>
+				<Title text="{i18n>invoiceListTitle}" />
+				<ToolbarSpacer />
+				<SearchField
+					width="50%"
+					search=".onFilterInvoices"/>
 			</Toolbar>
 		</headerToolbar>
 		<columns>
@@ -48,25 +58,24 @@ You can view and download all files at [Walkthrough - Step 34](https://ui5.sap.c
 				hAlign="End"
 				minScreenWidth="Small"
 				demandPopin="true"
-				width="4em">
-				<Text text="{i18n>columnQuantity}"/>
+				width="5em">
+				<Text text="{i18n>columnQuantity}" />
 			</Column>
 			<Column>
-				<Text text="{i18n>columnName}"/>
+				<Text text="{i18n>columnName}" />
 			</Column>
 			<Column
 				minScreenWidth="Small"
 				demandPopin="true">
-				<Text text="{i18n>columnStatus}"/>
+				<Text text="{i18n>columnStatus}" />
 			</Column>
 			<Column
 				minScreenWidth="Tablet"
 				demandPopin="false">
-				<Text text="{i18n>columnSupplier}"/>
+				<Text text="{i18n>columnSupplier}" />
 			</Column>
-			<Column
-				hAlign="End">
-				<Text text="{i18n>columnPrice}"/>
+			<Column hAlign="End">
+				<Text text="{i18n>columnPrice}" />
 			</Column>
 		</columns>
 		<items>
@@ -74,28 +83,38 @@ You can view and download all files at [Walkthrough - Step 34](https://ui5.sap.c
 				type="Navigation"
 				press=".onPress">
 				<cells>
-					<ObjectNumber number="{invoice>Quantity}" emphasized="false"/>
-					<ObjectIdentifier title="{invoice>ProductName}"/>
-					<Text text="{
-						path: 'invoice>Status',
-						formatter: '.formatter.statusText'
-					}"/>
-					<Text text="{invoice>ShipperName}"/>
+					<ObjectNumber
+						number="{invoice>Quantity}"
+						emphasized="false"/>
+					<ObjectIdentifier title="{invoice>ProductName}" />
+					<Text
+						text="{
+								parts: [
+									'invoice>Status',
+									'i18n>invoiceStatusA',
+									'i18n>invoiceStatusB',
+									'i18n>invoiceStatusC'
+								],
+								formatter: '.formatter.statusText'
+							}"/>
+					<Text text="{invoice>ShipperName}" />
 					<ObjectNumber
 						number="{
-							parts: [{path: 'invoice>ExtendedPrice'}, {path: 'view>/currency'}],
-							type: 'sap.ui.model.type.Currency',
-							formatOptions: {
-								showMeasure: false
-							}
-						}"
+								parts: [
+									'invoice>ExtendedPrice',
+									'view>/currency'
+								],
+								type: 'sap.ui.model.type.Currency',
+								formatOptions: {
+									showMeasure: false
+								}
+							}"
 						unit="{view>/currency}"
 						state="{= ${invoice>ExtendedPrice} > 50 ? 'Error' : 'Success' }"/>
 				</cells>
 			</ColumnListItem>
 		</items>
 	</Table>
-
 </mvc:View>
 ```
 

@@ -51,7 +51,7 @@ SAPUI5 provides a way to prevent clickjacking since version 1.28.0. This has to 
 > ### Note:  
 > As of version 1.28.0, you no longer need to use the Business Add-In `/UI5/BADI_CONFIG_HTTP_HANDLER` to configure the X-Frame-Options response header \(SAP Note 2075016\). The SAPUI5 framework now handles clickjacking prevention and the add-in solution won't work on all browsers.
 
-For more detailed information on clickjacking, refer to the following SAP Note: [2319727](https://launchpad.support.sap.com/#/notes/2319727)
+For more detailed information on clickjacking, refer to the following SAP Note: [2319727](https://me.sap.com/notes/2319727)
 
 
 

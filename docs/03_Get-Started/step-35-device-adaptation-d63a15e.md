@@ -12,18 +12,26 @@ We now configure the visibility and properties of controls based on the device t
   
 **On phone devices, the panel is collapsed to save screen space and a button is hidden**
 
-![](images/SAPUI5_Walkthrough_Step_36_26ae5cb.png "On phone devices, the panel is collapsed to save screen space and a button is
+![](images/UI5_Walkthrough_Step_35_0b0d57e.png "On phone devices, the panel is collapsed to save screen space and a button is
 					hidden")
 
 
+
+<a name="loiod63a15e5eebb45cdada317bae5f45bc2__section_qzn_hln_tyb"/>
 
 ## Coding
 
 You can view and download all files at [Walkthrough - Step 35](https://ui5.sap.com/#/entity/sap.m.tutorial.walkthrough/sample/sap.m.tutorial.walkthrough.35).
 
+
+
+<a name="loiod63a15e5eebb45cdada317bae5f45bc2__section_rzn_hln_tyb"/>
+
+## webapp/view/HelloPanel.view.xml
+
 ```xml
 <mvc:View
-	controllerName="sap.ui.demo.walkthrough.controller.HelloPanel"
+	controllerName="ui5.walkthrough.controller.HelloPanel"
 	xmlns="sap.m"
 	xmlns:mvc="sap.ui.core.mvc">
 	<Panel
@@ -55,7 +63,7 @@ You can view and download all files at [Walkthrough - Step 35](https://ui5.sap.c
 </mvc:View>
 ```
 
-We add two new properties `expandable` and `expanded` to the `HelloPanel`. The user can now close and open the panel to have more space for the table below on devices with small screens. The property `expandable` is bound to a model named `device` and the path `/system/phone`. So the panel can be expanded on phone devices only. The device model is filled with the `sap.ui.Device` API of SAPUI5 as we see further down. The `expanded` property controls the state of the panel and we use expression binding syntax to close it on phone devices and have the panel expanded on all other devices. The device API of SAPUI5 offers more functionality to detect various device-specific settings, please have a look at the documentation for more details.
+We add two new properties `expandable` and `expanded` to the `HelloPanel`. The user can now close and open the panel to have more space for the table below on devices with small screens. The property `expandable` is bound to a model named `device` and the path `/system/phone`. So the panel can be expanded on phone devices only. The device model is filled with the `sap.ui.Device` API of SAPUI5 as we see further down. The `expanded` property controls the state of the panel and we use expression binding syntax to close it on phone devices and have the panel expanded on all other devices. The device API of SAPUI5 offers more functionality to detect various device-specific settings, please have a look at the [documentation](https://ui5.sap.com/#/api/sap.ui.Device) for more details.
 
 > ### Note:  
 > The `sap.ui.Device` API detects the device type \(Phone, Tablet, Desktop\) based on the user agent and many other properties of the device. Therefore simply reducing the screen size will not change the device type. To test this feature, you will have to enable device emulation in your browser or open it on a real device.
@@ -71,37 +79,36 @@ sap.ui.define([
 	"sap/ui/core/UIComponent",
 	"sap/ui/model/json/JSONModel",
 	"sap/ui/Device"
-], function (UIComponent, JSONModel, Device) {
+], (UIComponent, JSONModel, Device) => {
 	"use strict";
-	return UIComponent.extend("sap.ui.demo.walkthrough.Component", {
+
+	return UIComponent.extend("ui5.walkthrough.Component", {
 		metadata: {
 			interfaces: ["sap.ui.core.IAsyncContentCreation"],
 			manifest: "json"
 		},
-		init: function () {
+
+		init() {
 			// call the init function of the parent
 			UIComponent.prototype.init.apply(this, arguments);
 
 			// set data model
-			var oData = {
+			const oData = {
 				recipient: {
 					name: "World"
 				}
 			};
-			var oModel = new JSONModel(oData);
+			const oModel = new JSONModel(oData);
 			this.setModel(oModel);
-			// disable batch grouping for v2 API of the northwind service
-			this.getModel("invoice").setUseBatch(false);
 
 			// set device model
-			var oDeviceModel = new JSONModel(Device);
+			const oDeviceModel = new JSONModel(Device);
 			oDeviceModel.setDefaultBindingMode("OneWay");
 			this.setModel(oDeviceModel, "device");
 
 			// create the views based on the url/hash
 			this.getRouter().initialize();
 		}
-
 	});
 });
 ```
@@ -120,43 +127,53 @@ In the `app` component we add a dependency to `sap.ui.Device` and initialize the
 
 ```xml
 <mvc:View
-	controllerName="sap.ui.demo.walkthrough.controller.Detail"
-	xmlns="sap.m"
-	xmlns:mvc="sap.ui.core.mvc"
-	xmlns:wt="sap.ui.demo.walkthrough.control">
-	<Page
-		title="{i18n>detailPageTitle}"
-		showNavButton="true"
-		navButtonPress=".onNavBack">
-		<ObjectHeader
-			responsive="true"
-			fullScreenOptimized="true"
-			number="{
-				parts: [{path: 'invoice>ExtendedPrice'}, {path: 'view>/currency'}],
-				type: 'sap.ui.model.type.Currency',
-				formatOptions: {
-					showMeasure: false
-				}
-			}"
-			numberUnit="{view>/currency}"
-			intro="{invoice>ShipperName}"
-			title="{invoice>ProductName}">
-			<attributes>
-				<ObjectAttribute title="{i18n>quantityTitle}" text="{invoice>Quantity}"></ObjectAttribute>
-				<ObjectAttribute title="{i18n>dateTitle}" text="{
-					path: 'invoice>ShippedDate',
-					type: 'sap.ui.model.type.Date',
-					formatOptions: {
-					  style: 'long',
-					  source: {
-						pattern: 'yyyy-MM-ddTHH:mm:ss'
-					  }
-					}
-				  }"/>
-			</attributes>
-		</ObjectHeader>
-		<wt:ProductRating id="rating" class="sapUiSmallMarginBeginEnd" change=".onRatingChange"/>
-	</Page>
+    controllerName="ui5.walkthrough.controller.Detail"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:wt="ui5.walkthrough.control">
+    <Page
+        title="{i18n>detailPageTitle}"
+        showNavButton="true"
+        navButtonPress=".onNavBack">
+        <ObjectHeader
+            responsive="true"
+            fullScreenOptimized="true"
+            number="{
+                parts: [
+                    'invoice>ExtendedPrice',
+                    'view>/currency'
+                ],
+                type: 'sap.ui.model.type.Currency',
+                formatOptions: {
+                    showMeasure: false
+                }
+            }"
+            numberUnit="{view>/currency}"
+            intro="{invoice>ShipperName}"
+            title="{invoice>ProductName}">
+            <attributes>
+                <ObjectAttribute
+                    title="{i18n>quantityTitle}"
+                    text="{invoice>Quantity}"/>
+                <ObjectAttribute
+                    title="{i18n>dateTitle}"
+                    text="{
+                        path: 'invoice>ShippedDate',
+                        type: 'sap.ui.model.type.Date',
+                        formatOptions: {
+                            style: 'long',
+                            source: {
+                            pattern: 'yyyy-MM-ddTHH:mm:ss'
+                            }
+                        }
+                    }"/>
+            </attributes>
+        </ObjectHeader>
+        <wt:ProductRating
+            id="rating"
+            class="sapUiSmallMarginBeginEnd"
+            change=".onRatingChange"/>
+    </Page>
 </mvc:View>
 ```
 
@@ -176,20 +193,21 @@ sap.ui.define([
 	"sap/ui/core/routing/History",
 	"sap/m/MessageToast",
 	"sap/ui/model/json/JSONModel"
-
-], function (Controller, History, MessageToast, JSONModel) {
+], (Controller, History, MessageToast, JSONModel) => {
 	"use strict";
-	return Controller.extend("sap.ui.demo.walkthrough.controller.Detail", {
-		onInit : function () {
-			var oViewModel = new JSONModel({
+
+	return Controller.extend("ui5.walkthrough.controller.Detail", {
+		onInit() {
+			const oViewModel = new JSONModel({
 				currency: "EUR"
 			});
 			this.getView().setModel(oViewModel, "view");
 
-			var oRouter = this.getOwnerComponent().getRouter();
-			oRouter.getRoute("detail").attachPatternMatched(this._onObjectMatched, this);
+			const oRouter = this.getOwnerComponent().getRouter();
+			oRouter.getRoute("detail").attachPatternMatched(this.onObjectMatched, this);
 		},
-		_onObjectMatched : …
+		…
+	});
 });
 ```
 
@@ -219,8 +237,6 @@ Optimize your application for the different screen sizes of phone, tablet, and d
 
 **Related Information**  
 
-
-[API Reference: `sap.ui.Device.media.RANGESETS`](https://ui5.sap.com/#/api/sap.ui.Device.media.RANGESETS)
 
 [API Reference: `sap.ui.Device`](https://ui5.sap.com/#/api/sap.ui.Device)
 

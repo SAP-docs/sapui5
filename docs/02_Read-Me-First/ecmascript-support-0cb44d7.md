@@ -5,11 +5,34 @@
 With SAPUI5 1.116, the framework starts leveraging features of modern ECMAScript, up to and including [ES2022](https://262.ecma-international.org/13.0/). You have to consider certain restrictions when using modern ECMAScript with your UI5 project.
 
 > ### Caution:  
-> The restrictions described here apply to the usage of modern ECMAScript features in projects that are written in native JavaScript. If your project is written, for instance, in TypeScript, you have to make sure that the listed constraints are met by the transpiled code.
+> The restrictions described here apply to the usage of modern ECMAScript features in projects that are written in native JavaScript. If your project is written in TypeScript, you only have to make sure that the listed constraints are met by the transpiled code.
 
 
 
-<a name="loio0cb44d7a147640a0890cefa5fd7c7f8e__section_w1y_s25_hyb"/>
+<a name="loio0cb44d7a147640a0890cefa5fd7c7f8e__section_zhq_133_ryb"/>
+
+## Overview
+
+1.  Do not use ECMAScript modules, but use `sap.ui.define` / `sap.ui.require` for module loading.
+
+    For more information, see [Defining and Loading UI5 Modules](ecmascript-support-0cb44d7.md#loio0cb44d7a147640a0890cefa5fd7c7f8e__section_UI5Mod).
+
+2.  Only use ES6+ classes for classes not deriving from SAPUI5 classes; when deriving from SAPUI5 classes, do it the UI5 way: `ClassName.extend()`.
+
+    For more information, see [UI5 Inheritance](ecmascript-support-0cb44d7.md#loio0cb44d7a147640a0890cefa5fd7c7f8e__section_UI5Inherit).
+
+3.  Only use string literals \(no variables, no variable template literals, no spread parameter\) for dependency names, class names and library names.
+
+    For more information, see *Expressions as Dependencies* and following in [Defining and Loading UI5 Modules](ecmascript-support-0cb44d7.md#loio0cb44d7a147640a0890cefa5fd7c7f8e__section_UI5Mod), *Expressions as Class Names* and following in [UI5 Inheritance](ecmascript-support-0cb44d7.md#loio0cb44d7a147640a0890cefa5fd7c7f8e__section_UI5Inherit), and [Library Initialization](ecmascript-support-0cb44d7.md#loio0cb44d7a147640a0890cefa5fd7c7f8e__section_libInit).
+
+4.  Do not use async functions or Promises for defining a module or for event handlers.
+
+    For more information, see *Asynchronous Factory Function* and *Event Handler Registration* in [Defining and Loading UI5 Modules](ecmascript-support-0cb44d7.md#loio0cb44d7a147640a0890cefa5fd7c7f8e__section_UI5Mod).
+
+
+
+
+<a name="loio0cb44d7a147640a0890cefa5fd7c7f8e__section_UI5Mod"/>
 
 ## Defining and Loading UI5 Modules
 
@@ -217,7 +240,7 @@ The usage of template literals with one or more expressions in the context of th
 
 
 
-<a name="loio0cb44d7a147640a0890cefa5fd7c7f8e__section_cgv_2l5_hyb"/>
+<a name="loio0cb44d7a147640a0890cefa5fd7c7f8e__section_UI5Inherit"/>
 
 ## UI5 Inheritance
 
@@ -327,7 +350,7 @@ The usage of template literals with one or more expressions as the class name pa
 
 
 
-<a name="loio0cb44d7a147640a0890cefa5fd7c7f8e__section_trk_cw5_hyb"/>
+<a name="loio0cb44d7a147640a0890cefa5fd7c7f8e__section_libInit"/>
 
 ## Library Initialization
 

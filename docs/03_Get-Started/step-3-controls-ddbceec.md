@@ -2,7 +2,7 @@
 
 # Step 3: Controls
 
-Now it is time to build our first little UI by replacing the “Hello World” text in the HTML body by the SAPUI5 control `sap.m.Text`. In the beginning, we will use the JavaScript control interface to set up the UI, the control instance is then placed into the HTML body.
+Now it is time to build our first little UI by replacing the “Hello World” text in the HTML body by the SAPUI5 control `sap/m/Text`. In the beginning, we will use the JavaScript control interface to set up the UI, the control instance is then placed into the HTML body.
 
 
 
@@ -12,7 +12,7 @@ Now it is time to build our first little UI by replacing the “Hello World” t
   
 **The "Hello World" text is now displayed by a SAPUI5 control**
 
-![](images/SAPUI5_Walkthrough_Step_03_7cad93a.png "The "Hello World" text is now displayed by a SAPUI5
+![](images/UI5_Walkthrough_Step_03_30a42d3.png "The "Hello World" text is now displayed by a SAPUI5
 					control")
 
 
@@ -34,25 +34,23 @@ You can view and download all files at [Walkthrough - Step 3](https://ui5.sap.co
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>SAPUI5 Walkthrough</title>
+	<title>UI5 Walkthrough</title>
 	<script
 		id="sap-ui-bootstrap"
-		src="https://sdk.openui5.org/resources/sap-ui-core.js"
-		data-sap-ui-theme="sap_belize"
+		src="resources/sap-ui-core.js"
+		data-sap-ui-theme="sap_horizon"
 		data-sap-ui-libs="sap.m"
 		data-sap-ui-compatVersion="edge"
 		data-sap-ui-async="true"
-		data-sap-ui-onInit="module:sap/ui/demo/walkthrough/index"
+		data-sap-ui-onInit="module:ui5/walkthrough/index"
 		data-sap-ui-resourceroots='{
-			"sap.ui.demo.walkthrough": "./"
+			"ui5.walkthrough": "./"
 		}'>
 	</script>
 </head>
 <body class="sapUiBody" id="content">
 </body>
-
 </html>
-
 ```
 
 The class `sapUiBody` adds additional theme-dependent styles for displaying SAPUI5 apps.
@@ -66,16 +64,13 @@ The class `sapUiBody` adds additional theme-dependent styles for displaying SAPU
 ```js
 sap.ui.define([
 	"sap/m/Text"
-
-], function (Text) {
+], (Text) => {
 	"use strict";
 
 	new Text({
 		text: "Hello World"
 	}).placeAt("content");
-
 });
-
 ```
 
 Instead of using native JavaScript to display a dialog we want to use a simple SAPUI5 control. Controls are used to define appearance and behavior of parts of the screen.
@@ -86,7 +81,7 @@ We chain the constructor call of the control to the standard method `placeAt` th
 
 All controls of SAPUI5 have a fixed set of properties, aggregations, and associations for configuration. You can find their descriptions in the Demo Kit. In addition, each control comes with a set of public functions that you can look up in the API reference.
 
-Don’t forget to remove the “Hello World”.
+Don’t forget to remove the `<div>Hello World</div>` from the `index.html`.
 
 > ### Note:  
 > Only instances of `sap.ui.core.Control` or their subclasses can be rendered stand-alone and have a `placeAt` function. Each control extends `sap.ui.core.Element` that can only be rendered inside controls. Check the API reference to learn more about the inheritance hierarchy of controls. The API documentation of each control refers to the directly known subclasses.

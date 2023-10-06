@@ -27,7 +27,7 @@ Web Accessibility Initiative - Accessible Rich Internet Applications \(WAI-ARIA\
 
 
 > ### Note:  
-> SAPUI5 controls provide the prerequisites for screen reader support based on the ARIA and HTML standards. All screen readers that implement this standard should work fine. If there are deviations in the interpretation, these need to be addressed to the screen reader vendor. If you need more information on our testing environment, see SAP Note [2564165](https://launchpad.support.sap.com/#/notes/2564165).
+> SAPUI5 controls provide the prerequisites for screen reader support based on the ARIA and HTML standards. All screen readers that implement this standard should work fine. If there are deviations in the interpretation, these need to be addressed to the screen reader vendor. If you need more information on our testing environment, see SAP Note [2564165](https://me.sap.com/notes/2564165).
 
 
 

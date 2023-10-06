@@ -1334,6 +1334,29 @@ Message toast text upon the successful deletion of the object.
 </td>
 </tr>
 <tr>
+<td valign="top">
+
+`REQUIRED_PROP_ERROR|<EntitySet>|<navigationProperty>| com.sap.vocabularies.UI.v1.LineItem|<Required Property Name>` 
+
+
+
+</td>
+<td valign="top">
+
+Enter a value.
+
+
+
+</td>
+<td valign="top">
+
+Text displayed when the value for a required field is missing and so the draft cannot be created. The required field is highlighted with a red border.
+
+
+
+</td>
+</tr>
+<tr>
 <td valign="top" colspan="3">
 
 **List Report, Object Page and Analytical List Page Keys from `..>>lib>i18n`** 
@@ -2079,29 +2102,30 @@ The app descriptor \(`manifest.json` file\) of an application specifies the SAPU
 
 Example:
 
-```
-"sap.ui5": {
- 
-        ...
-    "models": {
-        "i18n": {                
-            "type": "sap.ui.model.resource.ResourceModel",                
-            "uri": "i18n/i18n.properties"           
-      },
- 
-        "i18n|sap.suite.ui.generic.template.ListReport|POHeaders": {
-            "type": "sap.ui.model.resource.ResourceModel",
-            "uri": "i18n/ListReport/POHeaders/i18n.properties"
-              },
-        "i18n|sap.suite.ui.generic.template.ObjectPage|POHeaders": {
-                    "type": "sap.ui.model.resource.ResourceModel",
-                    "uri": "i18n/ObjectPage/POHeaders/i18n.properties"
-              },
-        "i18n|sap.suite.ui.generic.template.ObjectPage|POItems": {
-                    "type": "sap.ui.model.resource.ResourceModel",
-                    "uri": "i18n/ObjectPage/POItems/i18n.properties"
-
-```
+> ### Sample Code:  
+> ```
+> "sap.ui5": {
+>  
+>         ...
+>     "models": {
+>         "i18n": {                
+>             "type": "sap.ui.model.resource.ResourceModel",                
+>             "uri": "i18n/i18n.properties"           
+>       },
+>  
+>         "i18n|sap.suite.ui.generic.template.ListReport|POHeaders": {
+>             "type": "sap.ui.model.resource.ResourceModel",
+>             "uri": "i18n/ListReport/POHeaders/i18n.properties"
+>               },
+>         "i18n|sap.suite.ui.generic.template.ObjectPage|POHeaders": {
+>                     "type": "sap.ui.model.resource.ResourceModel",
+>                     "uri": "i18n/ObjectPage/POHeaders/i18n.properties"
+>               },
+>         "i18n|sap.suite.ui.generic.template.ObjectPage|POItems": {
+>                     "type": "sap.ui.model.resource.ResourceModel",
+>                     "uri": "i18n/ObjectPage/POItems/i18n.properties"
+> 
+> ```
 
 The URL reflects the folder path to the resource model. The model's name, `i18n|sap.suite.ui.generic.template.ObjectPage|POHeaders`, is separated by lines used to identify the specific template component and entity set for which the resource model can be enhanced by editing the `i18n.properties` file.
 

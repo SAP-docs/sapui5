@@ -750,6 +750,32 @@ The properties can be any that already exist in the annotations and that can be 
 
 </td>
 </tr>
+<tr>
+<td valign="top">
+
+required
+
+
+
+</td>
+<td valign="top">
+
+`true`/`false`
+
+
+
+</td>
+<td valign="top">
+
+Indicates whether a custom column is required. If set to `true`, an asterisk will be displayed in the column header.
+
+> ### Note:  
+> This is only a visual indicator and no additional checks are performed by the framework.
+
+
+
+</td>
+</tr>
 </table>
 
 \(\*\) = optional value

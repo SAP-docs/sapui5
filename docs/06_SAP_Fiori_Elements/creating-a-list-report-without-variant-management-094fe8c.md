@@ -50,7 +50,7 @@ For more information, see [Managing Variants](managing-variants-8ce658e.md).
     > ### Sample Code:  
     > List Report without Variant Management
     > 
-    > ```
+    > ```json
     > 
     > "sap.ui.generic.app": {
     >         "_version":"1.1.0",
@@ -73,7 +73,7 @@ For more information, see [Managing Variants](managing-variants-8ce658e.md).
 2.  If you want to use an app-specific title instead of the variant, include the `subTitleIfVariantMgmtHidden` property in the i18n file and enter a text value as shown here:
 
     > ### Sample Code:  
-    > ```
+    > ```json
     > 
     > #XTIT,40
     > subTitleIfVariantMgmtHidden = List Report Custom Title
@@ -81,7 +81,7 @@ For more information, see [Managing Variants](managing-variants-8ce658e.md).
 
 3.  Add a new property in the `manifest.json` of the application as shown here.
 
-    ```
+    ```json
     
     "sap.ui.generic.app": {
     
@@ -140,7 +140,7 @@ For more information, see [Managing Variants](managing-variants-8ce658e.md).
     > ### Sample Code:  
     > List Report without Variant Management
     > 
-    > ```
+    > ```json
     > 
     > "sap.ui5": {
     >             "routing": {
@@ -163,7 +163,7 @@ For more information, see [Managing Variants](managing-variants-8ce658e.md).
 2.  If you want to use an app-specific title instead of the variant, include the `subTitle` property in the i18n file and enter a text value as shown here:
 
     > ### Sample Code:  
-    > ```
+    > ```json
     > 
     > #XTIT, 40
     > appSubTitle = List Report Custom Title
@@ -172,7 +172,7 @@ For more information, see [Managing Variants](managing-variants-8ce658e.md).
 3.  Add a new property in the `manifest.json` of the application as shown here.
 
     > ### Sample Code:  
-    > ```
+    > ```json
     > 
     > "sap.app": {
     >             "id": "XXXXXX",

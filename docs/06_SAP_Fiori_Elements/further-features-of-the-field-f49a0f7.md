@@ -893,8 +893,8 @@ Mandatory
 
 Property must have a non-null value whenever save or update is triggered. This validation must be done by the back end, since it's not done by SAP Fiori elements.
 
-> ### Caution:  
-> The `FieldControl` annotation won't show fields as mandatory within a table.
+> ### Note:  
+> If a field has the `FieldControl` annotation set to `mandatory`, its column header will be marked as mandatory in edit mode.
 
 
 

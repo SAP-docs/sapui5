@@ -651,7 +651,7 @@ Version 28
 </td>
 <td valign="top">
 
-\>=1.83 \(SAPUI5 1.83 was not released, see [2979657](https://launchpad.support.sap.com/#/notes/2979657)\)
+\>=1.83 \(SAPUI5 1.83 was not released, see [2979657](https://me.sap.com/notes/2979657)\)
 
 
 
@@ -1349,6 +1349,52 @@ Version 58
 <td valign="top">
 
 1.57.0
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Version 59
+
+
+
+</td>
+<td valign="top">
+
+\>=1.118
+
+
+
+</td>
+<td valign="top">
+
+1.58.0
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Version 60
+
+
+
+</td>
+<td valign="top">
+
+\>=1.119
+
+
+
+</td>
+<td valign="top">
+
+1.59.0
 
 
 
@@ -2952,7 +2998,7 @@ Current version of the `manifest.json`
 ```
 
 {
-    "_version": "1.57.0",
+    "_version": "1.59.0",
  
     "start_url": "index.html",
  
@@ -3204,7 +3250,7 @@ Current version of the `manifest.json`
             }]
         },
         "dependencies": {
-            "minUI5Version": "1.117.0",
+            "minUI5Version": "1.119.0",
             "libs": {
                 "sap.m": {
                     "minVersion": "1.34.0"
@@ -3338,7 +3384,7 @@ Current version of the `manifest.json`
     "sap.artifact": {},
     "sap.package": {},
     "sap.insights": {},
-    "sap.bpa.task: {},
+    "sap.bpa.task": {},
     "sap.fe": {},
     "sap.card": {}
 }

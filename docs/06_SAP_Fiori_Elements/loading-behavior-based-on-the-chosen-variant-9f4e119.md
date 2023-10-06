@@ -87,14 +87,14 @@ For multi-view scenarios, you can also change the manifest setting `enableAutobi
 
 > ### Sample Code:  
 > ```
-> “pages”: {
->           “ListReport|<EntitySet> “: {
->                   “entitySet”: <EntitySet>,
->                   “component”: {
->                   “name”: “sap.suite.ui.generic.template.ListReport”,
->                   “settings”: {
->                               “quickVariantSelectionX”: {
->                                       “enableAutoBinding”:  false
+> "pages": {
+>           "ListReport|<EntitySet> ": {
+>                   "entitySet": <EntitySet>,
+>                   "component": {
+>                   "name": "sap.suite.ui.generic.template.ListReport",
+>                   "settings": {
+>                               "quickVariantSelectionX": {
+>                                       "enableAutoBinding":  false
 >                                }
 >                    }
 >              }

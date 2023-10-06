@@ -10,7 +10,7 @@ A single measure value is shown against a maximum value. Only the first three va
 ![](images/Comparison_Micro_Chart_0df709f.png)
 
 > ### Note:  
-> In the image above, the values on the left \(10, 40 and 70\) represent the dimension values. They are the IDs of the sales order items. For more information about this chart type, see [Samples](https://ui5.sap.com/1.82.5/#/entity/sap.suite.ui.microchart.ComparisonMicroChart).
+> The chart dimensions and measures cannot be of the same entity but must be from 1:n navigation entity. In the image above, the values on the left \(10, 40 and 70\) represent the dimension values. They are the IDs of the sales order items. For more information about this chart type, see [Samples](https://ui5.sap.com/1.82.5/#/entity/sap.suite.ui.microchart.ComparisonMicroChart).
 
 There are two variants to the display value. If the `Value` property of the `DataPoint` does not have a text associated with it in the `@com.sap.vocabularies.Common.v1.Text` annotation, then the value is displayed. If there is a text associated with the `DataPoint`, then the `TextValue` is displayed.
 

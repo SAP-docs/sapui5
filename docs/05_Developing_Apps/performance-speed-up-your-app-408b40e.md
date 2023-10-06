@@ -206,7 +206,7 @@ If you're using SAP Web IDE, refer to [Application Build](https://help.sap.com/v
 
 **Additional Information:**
 
--   To determine the minimum required bandwidth when using UI5-based applications, you can find further information in SAP Note [2240690](https://launchpad.support.sap.com/#/notes/2240690) on front-end network bandwidth sizing.
+-   To determine the minimum required bandwidth when using UI5-based applications, you can find further information in SAP Note [2240690](https://me.sap.com/notes/2240690) on front-end network bandwidth sizing.
 
 
 

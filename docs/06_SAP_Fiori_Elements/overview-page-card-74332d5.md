@@ -150,3 +150,6 @@ An application can also restrict the generation of individual analytical, list, 
 >       },
 > ```
 
+> ### Note:  
+> If custom navigation is enabled for a card, navigation from the *Insights* section of *My Home* for that card leads to the parent overview page application instead of the target maintained in the overview page card.
+

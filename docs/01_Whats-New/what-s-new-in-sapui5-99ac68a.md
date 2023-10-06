@@ -11,7 +11,9 @@ Find out what's new in the latest versions of SAPUI5.
 
 To learn more about how the features and functional capabilities of SAPUI5 are planned to progress over time, see the [SAP Road Map Explorer](https://roadmaps.sap.com/board?PRODUCT=73554900100800001361).
 
-![](images/Image_Map_What_s_New_60070cb.png)
+![This interactive graphic provides links to the current and the previous
+							What's New versions and a link to a section that lists all previous
+							versions.](images/Image_Map_What_s_New_60070cb.png)
 
 
 

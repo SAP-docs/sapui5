@@ -685,7 +685,7 @@ The following changes and new features are available for SAP Fiori elements for 
 
 -   You can now hide an action parameter using a dynamic expression. For more information, see [Actions](../06_SAP_Fiori_Elements/actions-cbf16c5.md).
 
--   You can now use the `Table` building block to add bound and unbound actions, and to group actions as menu buttons. You can also send and remove messages related to the table. For more information, see [Building Blocks](../06_SAP_Fiori_Elements/building-blocks-24c1304.md).
+-   You can now use the `Table` building block to add bound and unbound actions, and to group actions as menu buttons. You can also send and remove messages related to the table. For more information, see  <?sap-ot O2O class="- topic/xref " href="24c1304739dd4f19af0ce2482c4d9bbe.xml" text="Building Blocks" desc="" xtrc="xref:30" xtrf="file:/home/builder/src/dita-all/zyl1693565473561/loioa82e269bbb584cfcbdbd3ae8765d8e7f_en-US/src/content/localization/en-us/27dec1d8246d4b129d8747a317483253.xml" ?> .
 
 -   You can now hide the icon tab bar for multiple views. For more information, see [Multiple Views on List Report Tables](../06_SAP_Fiori_Elements/multiple-views-on-list-report-tables-a37df40.md).
 
@@ -720,6 +720,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.117](what-s-new-in-sapui5-1-117-029d3b4.md "With this release SAPUI5 is upgraded from version 1.116 to 1.117.")
 
 [What's New in SAPUI5 1.116](what-s-new-in-sapui5-1-116-ebd6f34.md "With this release SAPUI5 is upgraded from version 1.115 to 1.116.")
 

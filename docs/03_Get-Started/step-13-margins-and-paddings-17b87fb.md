@@ -14,17 +14,25 @@ Instead of manually adding CSS to the controls, we will use the standard classes
   
 **The layout of the panel and its content now has margins and padding**
 
-![](images/SAPUI5_Walkthrough_Step_13_dffe7aa.png "The layout of the panel and its content now has margins and padding")
+![](images/UI5_Walkthrough_Step_13_0becf3e.png "The layout of the panel and its content now has margins and padding")
 
 
+
+<a name="loio17b87fbafb5a4474982760d2a3a73e69__section_wl1_jq2_syb"/>
 
 ## Coding
 
 You can view and download all files at [Walkthrough - Step 13](https://ui5.sap.com/#/entity/sap.m.tutorial.walkthrough/sample/sap.m.tutorial.walkthrough.13).
 
+
+
+<a name="loio17b87fbafb5a4474982760d2a3a73e69__section_xl1_jq2_syb"/>
+
+## webapp/view/App.view.xml
+
 ```xml
 <mvc:View
-	controllerName="sap.ui.demo.walkthrough.controller.App"
+	controllerName="ui5.walkthrough.controller.App"
 	xmlns="sap.m"
 	xmlns:mvc="sap.ui.core.mvc"
 	displayBlock="true">

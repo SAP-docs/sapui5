@@ -18,7 +18,7 @@ You can use the `manifest.json` file to control whether it is possible to naviga
 
 **Example with Navigation**
 
-```js
+```json
 "sap.ui.generic.app": {
 			"pages":[{
 				"entitySet": "Zfarvd_Bs_Hd_Bo",
@@ -58,7 +58,7 @@ You can define an external navigation target using intent-based navigation in th
 
 In the example below, the standard navigation from the list report to the object page has been replaced with navigation to an object page in another app.
 
-```js
+```json
     "sap.app": {
         "_version": "1.2.0",
         ...
@@ -110,6 +110,8 @@ In the example below, the standard navigation from the list report to the object
 You can define an external navigation using intent-based navigation in the `manifest.json` file. This allows end user to navigate to an external FLP-based application instead of the normal internal navigation to an object page or sub-object page. to remove the navigation option to an object page or a sub-object page. The `manifest.json` snippet below shows an example change that would be needed to navigate to an intent-based external navigation instead of the regular sub-object page navigation. The same can also be done at any sub-object level or at the object page level..
 
 > ### Sample Code:  
+> `manifest.json`
+> 
 > ```json
 > {
 > …
@@ -190,6 +192,8 @@ You can define an external navigation using intent-based navigation in the `mani
 You can also use a `display` section within the `navigation` section instead of the `detail` section shown in the sample above. The `display` section looks as follows:
 
 > ### Sample Code:  
+> `manifest.json`
+> 
 > ```json
 > "navigation": {                              
 >     "_Publication": {

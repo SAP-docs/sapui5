@@ -759,7 +759,7 @@ jQuery no longer closes self-closing tags for non-void HTML elements in the `htm
 </td>
 <td valign="top">
 
-You should properly close non-void HTML elements. For detailed instructions for identifying affected code and fixing it, see SAP Note [2944336](https://launchpad.support.sap.com/#/notes/2944336).
+You should properly close non-void HTML elements. For detailed instructions for identifying affected code and fixing it, see SAP Note [2944336](https://me.sap.com/notes/2944336).
 
 Properly closing non-void HTML elements in this way is backward-compatible to older SAPUI5 and jQuery versions.
 

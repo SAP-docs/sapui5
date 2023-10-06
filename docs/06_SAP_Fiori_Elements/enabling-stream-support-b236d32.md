@@ -180,7 +180,7 @@ To restrict the file size, add the attribute `MaxLength` to the `Property`. `Max
 > ### Note:  
 > The `odata.mediaEditLink` annotation is currently not supported.
 
-For more information, see [https://cap.cloud.sap/docs/guides/providing-services\#media-data](https://cap.cloud.sap/docs/guides/providing-services#media-data).
+For more information, see [https://cap.cloud.sap/docs/guides/media-data](https://cap.cloud.sap/docs/guides/media-data).
 
 
 

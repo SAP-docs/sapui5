@@ -30,7 +30,7 @@ You can use the following table types:
     In contrast to other tables, the analytical data binding used by the analytical table automatically displays an aggregated number in a cell.
 
     > ### Note:  
-    > On mobile devices, a responsive table is used instead of an analytical table – even if this was specified at application level.
+    > On mobile devices, a responsive table is used instead of an analytical table – even if an analytical table is specified at application level.
 
 
 
@@ -350,6 +350,143 @@ You can freeze the first columns of a table so that they always remain visible w
 
 > ### Note:  
 > This option is not available for the responsive table.
+
+
+
+### Calculating the Column Width
+
+By default, the column width is calculated based on the type of the content.
+
+Developers can include the column header in the calculation using the `widthIncludingColumnHeader` option in `manifest.json`. This option can be set at table or column level. Setting it at the column level has the priority over the table level.
+
+> ### Sample Code:  
+> `manifest.json`
+> 
+> ```
+> "controlConfiguration": {
+>      "@com.sap.vocabularies.UI.v1.LineItem": {
+>             "tableSettings": {
+>                    "widthIncludingColumnHeader":true
+>             },
+>             "columns": {
+>                    "DataField::commonProperty": {
+>                         "widthIncludingColumnHeader":false
+>                    }
+>             }
+>      }
+> }
+> ```
+
+
+
+### Copying Multiple Rows and Ranges
+
+Users can copy multiple rows as well as ranges of rows and columns to clipboard. The selected content \(rows or ranges\) then can be copied to another SAP Fiori elements table, Microsoft Excel or Microsoft Word, provided the content matches the target table.
+
+> ### Note:  
+> Selecting a range only works for non-responsive tables.
+
+To select a range with your mouse, click and hold while making a selection. You may also use keyboard shortcuts.
+
+
+<table>
+<tr>
+<th valign="top">
+
+Key Combination
+
+
+
+</th>
+<th valign="top">
+
+Behavior
+
+
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+[Space\]
+
+
+
+</td>
+<td valign="top">
+
+Selects the cell the focus is set on, If used inside a selection, removes the selection.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+[Shift\] + [Arrow keys\] 
+
+
+
+</td>
+<td valign="top">
+
+Adjusts an existing selection. If used outside a selection, creates a new selection.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+[Shift\] + [Space\] 
+
+
+
+</td>
+<td valign="top">
+
+Transforms the current selection into a row selection, based on the selection mode applied to the table.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+[Control\] + [Space\] 
+
+
+
+</td>
+<td valign="top">
+
+Expands the selection to all cells in a column \(up to the range limit\).
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+[Control\] + [Shift\] + [A\] 
+
+
+
+</td>
+<td valign="top">
+
+Clears the selection.
+
+
+
+</td>
+</tr>
+</table>
 
 **Related Information**  
 

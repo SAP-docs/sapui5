@@ -12,17 +12,25 @@ Our dialog is still pretty much empty. Since SAPUI5 is shipped with a large icon
   
 **An icon is now displayed in the dialog box**
 
-![](images/SAPUI5_Walkthrough_Step_18_bd57299.png "An icon is now displayed in the dialog box")
+![](images/UI5_Walkthrough_Step_18_fbc48e2.png "An icon is now displayed in the dialog box")
 
 
+
+<a name="loio776f7352807e4f82b18176c8fbdc0c56__section_pg2_zgk_syb"/>
 
 ## Coding
 
 You can view and download all files at [Walkthrough - Step 18](https://ui5.sap.com/#/entity/sap.m.tutorial.walkthrough/sample/sap.m.tutorial.walkthrough.18).
 
+
+
+<a name="loio776f7352807e4f82b18176c8fbdc0c56__section_qg2_zgk_syb"/>
+
+## webapp/view/HelloPanel.view.xml
+
 ```xml
 <mvc:View
-   controllerName="sap.ui.demo.walkthrough.controller.HelloPanel"
+   controllerName="ui5.walkthrough.controller.HelloPanel"
    xmlns="sap.m"
    xmlns:mvc="sap.ui.core.mvc">
    <Panel
@@ -44,9 +52,9 @@ You can view and download all files at [Walkthrough - Step 18](https://ui5.sap.c
             value="{/recipient/name}"
             valueLiveUpdate="true"
             width="60%"/>
-           <FormattedText
-              htmlText="Hello {/recipient/name}"
-              class="sapUiSmallMargin sapThemeHighlight-asColor myCustomText"/>
+         <FormattedText
+            htmlText="Hello {/recipient/name}"
+            class="sapUiSmallMargin sapThemeHighlight-asColor myCustomText"/>
       </content>
    </Panel>
 </mvc:View>
@@ -55,7 +63,7 @@ You can view and download all files at [Walkthrough - Step 18](https://ui5.sap.c
 We add an icon to the button that opens the dialog. The `sap-icon://` protocol is indicating that an icon from the icon font should be loaded. The identifier `world` is the readable name of the icon in the icon font.
 
 > ### Tip:  
-> You can look up other icons using the *Icon Explorer* tool in the Demo Kit.
+> You can look up other icons using the [Icon Explorer tool](https://ui5.sap.com/test-resources/sap/m/demokit/iconExplorer/webapp/index.html).
 > 
 > To call any icon, use its name as listed in the *Icon Explorer* in <code>sap-icon://<i>&lt;iconname&gt;</i></code>.
 
