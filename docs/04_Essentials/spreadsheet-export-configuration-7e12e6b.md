@@ -661,11 +661,11 @@ exportConfiguration = {
         useBatch: true,
         headers: {
             /* Some sample headers DO NOT copy them */
-            Accept: "application/json",
-            Accept-Language: "en",
-            sap-cancel-on-close: "true",
-            DataServiceVersion: "2.0",
-            x-csrf-token: "XvR_WdN7nCw83ngZnH9lZQ=="
+            "Accept": "application/json",
+            "Accept-Language": "en",
+            "sap-cancel-on-close": "true",
+            "DataServiceVersion": "2.0",
+            "x-csrf-token": "XvR_WdN7nCw83ngZnH9lZQ=="
         },
         sizeLimit: 500
     }
