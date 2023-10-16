@@ -93,7 +93,7 @@ We now run the app using the `index.html` file and enter values that don't match
    
 ```
 
-To make the *First Name* optional, we remove the parameter `Nullable="false"` from the `FirstName` property. You can play around with the settings for the other properties, for example, change the type of property `Age` to `Type="Edm.String"` to allow free text.
+To make the *UserName* optional, we remove the parameter `Nullable="false"` from the `UserName` property. You can play around with the settings for the other properties, for example, change the type of property `Age` to `Type="Edm.String"` to allow free text.
 
 
 
