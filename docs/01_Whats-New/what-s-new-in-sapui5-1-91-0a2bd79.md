@@ -544,7 +544,7 @@ SAP Fiori Elements
 
 The following changes and new features are available for SAP Fiori elements for OData V4:
 
--   Application developers can now use building blocks in custom sections, that allow you, for example, to create a visual representation of your data in a convenient way. For more information, see  <?sap-ot O2O class="- topic/xref " href="24c1304739dd4f19af0ce2482c4d9bbe.xml" text="Building Blocks" desc="" xtrc="xref:17" xtrf="file:/home/builder/src/dita-all/zyl1693565473561/loioa82e269bbb584cfcbdbd3ae8765d8e7f_en-US/src/content/localization/en-us/0a2bd79036fe48708687526413ef9e8c.xml" ?> .
+-   Application developers can now use building blocks in custom sections, that allow you, for example, to create a visual representation of your data in a convenient way. For more information, see [Building Blocks](../06_SAP_Fiori_Elements/building-blocks-24c1304.md).
 
 -   Application developers can now specify a dimension or a measure using `"GroupableProperties"` and `"AggregatableProperties"` at an entity set level. For more information, see [Configuring Charts](../06_SAP_Fiori_Elements/configuring-charts-653ed0f.md).
 

@@ -842,7 +842,7 @@ The following changes and new features are available for SAP Fiori elements for 
 
 -   When you're using the flexible column layout and switch to edit mode, the subobject page is now kept open. For more information, see [Enabling the Flexible Column Layout](../06_SAP_Fiori_Elements/enabling-the-flexible-column-layout-e762257.md).
 
--   We've enhanced the `Table` building block to support the `isSearchable` property. For more information, see  <?sap-ot O2O class="- topic/xref " href="24c1304739dd4f19af0ce2482c4d9bbe.xml" text="Building Blocks" desc="" xtrc="xref:31" xtrf="file:/home/builder/src/dita-all/zyl1693565473561/loioa82e269bbb584cfcbdbd3ae8765d8e7f_en-US/src/content/localization/en-us/7733b001a3714bbe8bf1bbb524cf1221.xml" ?> .
+-   We've enhanced the `Table` building block to support the `isSearchable` property. For more information, see [Building Blocks](../06_SAP_Fiori_Elements/building-blocks-24c1304.md).
 
 -   We've changed the handling of the draft concept in SAP Fiori elements for OData V4, which results in the following UI changes:
 

@@ -851,11 +851,11 @@ The following changes and new features are available for SAP Fiori elements for 
 
 -   App developers can now edit the values used in a custom header facet. For more information, see [Extension Points for Object Page Header Facets](../06_SAP_Fiori_Elements/extension-points-for-object-page-header-facets-61cf0ee.md).
 
--   The `FlexibleColumnLayoutActions` building block provides you with an easy way to instantiate the *Close*, *Enter Full Screen*, and *Exit Full Screen* buttons. For more information, see  <?sap-ot O2O class="- topic/xref " href="24c1304739dd4f19af0ce2482c4d9bbe.xml" text="Building Blocks" desc="" xtrc="xref:35" xtrf="file:/home/builder/src/dita-all/zyl1693565473561/loioa82e269bbb584cfcbdbd3ae8765d8e7f_en-US/src/content/localization/en-us/f273340e4c3f4d4180296af070f59f50.xml" ?> .
+-   The `FlexibleColumnLayoutActions` building block provides you with an easy way to instantiate the *Close*, *Enter Full Screen*, and *Exit Full Screen* buttons. For more information, see [Building Blocks](../06_SAP_Fiori_Elements/building-blocks-24c1304.md).
 
 -   App developers can now display custom content in a dedicated tab together with regular tabs defined through annotations. For more information, see [Extension Points for Views in the List Report](../06_SAP_Fiori_Elements/extension-points-for-views-in-the-list-report-eb37203.md).
 
--   App developers can now use the `MicroChart` building block and the `Share` building block. For more information, see  <?sap-ot O2O class="- topic/xref " href="24c1304739dd4f19af0ce2482c4d9bbe.xml" text="Building Blocks" desc="" xtrc="xref:39" xtrf="file:/home/builder/src/dita-all/zyl1693565473561/loioa82e269bbb584cfcbdbd3ae8765d8e7f_en-US/src/content/localization/en-us/f273340e4c3f4d4180296af070f59f50.xml" ?> .
+-   App developers can now use the `MicroChart` building block and the `Share` building block. For more information, see [Building Blocks](../06_SAP_Fiori_Elements/building-blocks-24c1304.md).
 
 
 <sub>Changed•SAP Fiori Elements•Info Only•1.93</sub>

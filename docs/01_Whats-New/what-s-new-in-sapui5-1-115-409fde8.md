@@ -320,7 +320,7 @@ SAP Fiori Elements
 
 The following changes and new features are available for SAP Fiori elements for OData V4:
 
--   Applications can now programmatically trigger 'Go' in the `FilterBar` building block. For more information, see  <?sap-ot O2O class="- topic/xref " href="78386110817d43978ffd6988d1704e38.xml" text="The FilterBar Building Block" desc="" xtrc="xref:3" xtrf="file:/home/builder/src/dita-all/zyl1693565473561/loioa82e269bbb584cfcbdbd3ae8765d8e7f_en-US/src/content/localization/en-us/723fa23679ca4dc9b06282390c4de42d.xml" ?> .
+-   Applications can now programmatically trigger 'Go' in the `FilterBar` building block. For more information, see [The FilterBar Building Block](../06_SAP_Fiori_Elements/the-filterbar-building-block-7838611.md).
 
 
 <sub>Changed•SAP Fiori Elements•Info Only•1.115</sub>

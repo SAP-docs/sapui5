@@ -591,7 +591,7 @@ The following changes and new features are available for SAP Fiori elements for 
 
 -   Application developers can now specify the `rowCountMode` and `rowCount` properties for a non-responsive table. For more information about the `Table`, see the [API Reference](https://ui5.sap.com/#/api/sap.fe.macros.Table%23overview) .
 
--   Application developers can now specify the create options for the table when using the `Table` building block. For more information, see  <?sap-ot O2O class="- topic/xref " href="3801656db27b4b7a9099b6ed5fa1d769.xml" text="The Table Building Block" desc="" xtrc="xref:9" xtrf="file:/home/builder/src/dita-all/zyl1693565473561/loioa82e269bbb584cfcbdbd3ae8765d8e7f_en-US/src/content/localization/en-us/e72dfe00b99547808a2698533022d960.xml" ?> .
+-   Application developers can now specify the create options for the table when using the `Table` building block. For more information, see [The Table Building Block](../06_SAP_Fiori_Elements/the-table-building-block-3801656.md).
 
 -   Application developers can now use a tree table to display a hierarchy in a list report or an object page. For more information, see [Setting the Table Type](../06_SAP_Fiori_Elements/setting-the-table-type-7f844f1.md).
 
