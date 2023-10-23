@@ -712,7 +712,7 @@ The following changes and new features are available for SAP Fiori elements for 
 
 -   Single-valued date fields now use the `sap.m.DynamicDateRange` control. This enables end users to use semantic date operators like `"TODAY"` and `"TOMORROW"`, as well as date pickers. For more information, see [Enabling Semantic Operators in the Filter Bar](../06_SAP_Fiori_Elements/enabling-semantic-operators-in-the-filter-bar-fef65d0.md).
 
--   You can now also use semantic dates in the `FilterBar` building block. For more information, see  <?sap-ot O2O class="- topic/xref " href="24c1304739dd4f19af0ce2482c4d9bbe.xml" text="Building Blocks" desc="" xtrc="xref:38" xtrf="file:/home/builder/src/dita-all/zyl1693565473561/loioa82e269bbb584cfcbdbd3ae8765d8e7f_en-US/src/content/localization/en-us/4f35848febaa44988ccf18941bcc4af8.xml" ?> .
+-   You can now also use semantic dates in the `FilterBar` building block. For more information, see [Building Blocks](../06_SAP_Fiori_Elements/building-blocks-24c1304.md).
 
 -   You can now use the `UI.TextArrangement` annotation to configure the display format of a table column of the value help. For more information, see [Field Help](../06_SAP_Fiori_Elements/field-help-a5608ea.md).
 

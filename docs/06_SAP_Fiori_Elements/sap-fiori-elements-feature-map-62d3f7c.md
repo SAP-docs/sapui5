@@ -614,29 +614,29 @@ Building blocks
 </td>
 <td valign="top">
 
- <?sap-ot O2O class="- topic/xref " href="24c1304739dd4f19af0ce2482c4d9bbe.xml" text="Building Blocks" desc="" xtrc="xref:28" xtrf="file:/home/builder/src/dita-all/zyl1693565473561/loioa82e269bbb584cfcbdbd3ae8765d8e7f_en-US/src/content/localization/en-us/62d3f7c2a9424864921184fd6c7002eb.xml" ?> 
+[Building Blocks](building-blocks-24c1304.md)
 
- <?sap-ot O2O class="- topic/xref " href="5260b9ca249f465ab33769b9edb442aa.xml" text="Field Building Block" desc="" xtrc="xref:29" xtrf="file:/home/builder/src/dita-all/zyl1693565473561/loioa82e269bbb584cfcbdbd3ae8765d8e7f_en-US/src/content/localization/en-us/62d3f7c2a9424864921184fd6c7002eb.xml" ?> 
+[Field Building Block](the-field-building-block-5260b9c.md)
 
- <?sap-ot O2O class="- topic/xref " href="391aad28bfc64616abe2500a631391c1.xml" text="Form Building Block" desc="" xtrc="xref:30" xtrf="file:/home/builder/src/dita-all/zyl1693565473561/loioa82e269bbb584cfcbdbd3ae8765d8e7f_en-US/src/content/localization/en-us/62d3f7c2a9424864921184fd6c7002eb.xml" ?> 
+[Form Building Block](the-form-building-block-391aad2.md)
 
- <?sap-ot O2O class="- topic/xref " href="b45f038068ca4b68a2d8008c1de5f7fb.xml" text="FormElement Building Block" desc="" xtrc="xref:31" xtrf="file:/home/builder/src/dita-all/zyl1693565473561/loioa82e269bbb584cfcbdbd3ae8765d8e7f_en-US/src/content/localization/en-us/62d3f7c2a9424864921184fd6c7002eb.xml" ?> 
+[FormElement Building Block](the-formelement-building-block-b45f038.md)
 
- <?sap-ot O2O class="- topic/xref " href="3801656db27b4b7a9099b6ed5fa1d769.xml" text="Table Building Block" desc="" xtrc="xref:32" xtrf="file:/home/builder/src/dita-all/zyl1693565473561/loioa82e269bbb584cfcbdbd3ae8765d8e7f_en-US/src/content/localization/en-us/62d3f7c2a9424864921184fd6c7002eb.xml" ?> 
+[Table Building Block](the-table-building-block-3801656.md)
 
- <?sap-ot O2O class="- topic/xref " href="78386110817d43978ffd6988d1704e38.xml" text="FilterBar Building Block" desc="" xtrc="xref:33" xtrf="file:/home/builder/src/dita-all/zyl1693565473561/loioa82e269bbb584cfcbdbd3ae8765d8e7f_en-US/src/content/localization/en-us/62d3f7c2a9424864921184fd6c7002eb.xml" ?> 
+[FilterBar Building Block](the-filterbar-building-block-7838611.md)
 
- <?sap-ot O2O class="- topic/xref " href="2df783760a8e4540ad19ce5ec3ed91c8.xml" text="FilterField Building Block" desc="" xtrc="xref:34" xtrf="file:/home/builder/src/dita-all/zyl1693565473561/loioa82e269bbb584cfcbdbd3ae8765d8e7f_en-US/src/content/localization/en-us/62d3f7c2a9424864921184fd6c7002eb.xml" ?> 
+[FilterField Building Block](the-filterfield-building-block-2df7837.md)
 
- <?sap-ot O2O class="- topic/xref " href="74554b4ca1de49aea42e2c309946ba05.xml" text="MicroChart Building Block" desc="" xtrc="xref:35" xtrf="file:/home/builder/src/dita-all/zyl1693565473561/loioa82e269bbb584cfcbdbd3ae8765d8e7f_en-US/src/content/localization/en-us/62d3f7c2a9424864921184fd6c7002eb.xml" ?> 
+[MicroChart Building Block](the-microchart-building-block-74554b4.md)
 
- <?sap-ot O2O class="- topic/xref " href="52d065ab8bb740c58c834a0c985e3b9e.xml" text="Chart Building Block" desc="" xtrc="xref:36" xtrf="file:/home/builder/src/dita-all/zyl1693565473561/loioa82e269bbb584cfcbdbd3ae8765d8e7f_en-US/src/content/localization/en-us/62d3f7c2a9424864921184fd6c7002eb.xml" ?> 
+[Chart Building Block](the-chart-building-block-52d065a.md)
 
- <?sap-ot O2O class="- topic/xref " href="1ba680b7ed6f4b1f8415c0a196264a6c.xml" text="FlexibleColumnLayoutActions Building Blocks" desc="" xtrc="xref:37" xtrf="file:/home/builder/src/dita-all/zyl1693565473561/loioa82e269bbb584cfcbdbd3ae8765d8e7f_en-US/src/content/localization/en-us/62d3f7c2a9424864921184fd6c7002eb.xml" ?> 
+[FlexibleColumnLayoutActions Building Blocks](the-flexiblecolumnlayoutactions-building-block-1ba680b.md)
 
- <?sap-ot O2O class="- topic/xref " href="41b02dfe1ac44d72bb766f5fc3e3d244.xml" text="Share Building Block" desc="" xtrc="xref:38" xtrf="file:/home/builder/src/dita-all/zyl1693565473561/loioa82e269bbb584cfcbdbd3ae8765d8e7f_en-US/src/content/localization/en-us/62d3f7c2a9424864921184fd6c7002eb.xml" ?> 
+[Share Building Block](the-share-building-block-41b02df.md)
 
- <?sap-ot O2O class="- topic/xref " href="997292b38e584e6aa6d848f22e4422fd.xml" text="Paginator Building Block" desc="" xtrc="xref:39" xtrf="file:/home/builder/src/dita-all/zyl1693565473561/loioa82e269bbb584cfcbdbd3ae8765d8e7f_en-US/src/content/localization/en-us/62d3f7c2a9424864921184fd6c7002eb.xml" ?> 
+[Paginator Building Block](the-paginator-building-block-997292b.md)
 
 
 
@@ -1017,7 +1017,7 @@ Chart building block
 </td>
 <td valign="top">
 
- <?sap-ot O2O class="- topic/xref " href="24c1304739dd4f19af0ce2482c4d9bbe.xml" text="Building Blocks" desc="" xtrc="xref:53" xtrf="file:/home/builder/src/dita-all/zyl1693565473561/loioa82e269bbb584cfcbdbd3ae8765d8e7f_en-US/src/content/localization/en-us/62d3f7c2a9424864921184fd6c7002eb.xml" ?> 
+[Building Blocks](building-blocks-24c1304.md)
 
 
 
@@ -2693,7 +2693,7 @@ Field building block
 </td>
 <td valign="top">
 
- <?sap-ot O2O class="- topic/xref " href="24c1304739dd4f19af0ce2482c4d9bbe.xml" text="Building Blocks" desc="" xtrc="xref:122" xtrf="file:/home/builder/src/dita-all/zyl1693565473561/loioa82e269bbb584cfcbdbd3ae8765d8e7f_en-US/src/content/localization/en-us/62d3f7c2a9424864921184fd6c7002eb.xml" ?> 
+[Building Blocks](building-blocks-24c1304.md)
 
 
 
@@ -2850,7 +2850,7 @@ FilterBar building block
 </td>
 <td valign="top">
 
- <?sap-ot O2O class="- topic/xref " href="24c1304739dd4f19af0ce2482c4d9bbe.xml" text="Building Blocks" desc="" xtrc="xref:138" xtrf="file:/home/builder/src/dita-all/zyl1693565473561/loioa82e269bbb584cfcbdbd3ae8765d8e7f_en-US/src/content/localization/en-us/62d3f7c2a9424864921184fd6c7002eb.xml" ?> 
+[Building Blocks](building-blocks-24c1304.md)
 
 
 
@@ -2953,7 +2953,7 @@ FlexibleColumnLayoutActions building block
 </td>
 <td valign="top">
 
- <?sap-ot O2O class="- topic/xref " href="24c1304739dd4f19af0ce2482c4d9bbe.xml" text="Building Blocks" desc="" xtrc="xref:141" xtrf="file:/home/builder/src/dita-all/zyl1693565473561/loioa82e269bbb584cfcbdbd3ae8765d8e7f_en-US/src/content/localization/en-us/62d3f7c2a9424864921184fd6c7002eb.xml" ?> 
+[Building Blocks](building-blocks-24c1304.md)
 
 
 
@@ -3169,7 +3169,7 @@ FormElement building block
 </td>
 <td valign="top">
 
- <?sap-ot O2O class="- topic/xref " href="24c1304739dd4f19af0ce2482c4d9bbe.xml" text="Building Blocks" desc="" xtrc="xref:149" xtrf="file:/home/builder/src/dita-all/zyl1693565473561/loioa82e269bbb584cfcbdbd3ae8765d8e7f_en-US/src/content/localization/en-us/62d3f7c2a9424864921184fd6c7002eb.xml" ?> 
+[Building Blocks](building-blocks-24c1304.md)
 
 
 
@@ -4672,7 +4672,7 @@ MicroChart building block
 </td>
 <td valign="top">
 
- <?sap-ot O2O class="- topic/xref " href="24c1304739dd4f19af0ce2482c4d9bbe.xml" text="Building Blocks" desc="" xtrc="xref:216" xtrf="file:/home/builder/src/dita-all/zyl1693565473561/loioa82e269bbb584cfcbdbd3ae8765d8e7f_en-US/src/content/localization/en-us/62d3f7c2a9424864921184fd6c7002eb.xml" ?> 
+[Building Blocks](building-blocks-24c1304.md)
 
 
 
@@ -5146,7 +5146,7 @@ Paginator building block
 </td>
 <td valign="top">
 
- <?sap-ot O2O class="- topic/xref " href="24c1304739dd4f19af0ce2482c4d9bbe.xml" text="Building Blocks" desc="" xtrc="xref:235" xtrf="file:/home/builder/src/dita-all/zyl1693565473561/loioa82e269bbb584cfcbdbd3ae8765d8e7f_en-US/src/content/localization/en-us/62d3f7c2a9424864921184fd6c7002eb.xml" ?> 
+[Building Blocks](building-blocks-24c1304.md)
 
 
 
@@ -6051,7 +6051,7 @@ Share building block
 </td>
 <td valign="top">
 
- <?sap-ot O2O class="- topic/xref " href="24c1304739dd4f19af0ce2482c4d9bbe.xml" text="Building Blocks" desc="" xtrc="xref:271" xtrf="file:/home/builder/src/dita-all/zyl1693565473561/loioa82e269bbb584cfcbdbd3ae8765d8e7f_en-US/src/content/localization/en-us/62d3f7c2a9424864921184fd6c7002eb.xml" ?> 
+[Building Blocks](building-blocks-24c1304.md)
 
 
 
@@ -6481,7 +6481,7 @@ Table building block
 </td>
 <td valign="top">
 
- <?sap-ot O2O class="- topic/xref " href="24c1304739dd4f19af0ce2482c4d9bbe.xml" text="Building Blocks" desc="" xtrc="xref:289" xtrf="file:/home/builder/src/dita-all/zyl1693565473561/loioa82e269bbb584cfcbdbd3ae8765d8e7f_en-US/src/content/localization/en-us/62d3f7c2a9424864921184fd6c7002eb.xml" ?> 
+[Building Blocks](building-blocks-24c1304.md)
 
 
 
