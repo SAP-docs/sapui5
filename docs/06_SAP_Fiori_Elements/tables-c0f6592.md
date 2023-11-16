@@ -122,9 +122,102 @@ In responsive, grid, and analytical tables, if the table is searchable \(that is
 
 <a name="loioc0f6592a592e47f9bb6d09900de47412__section_uzk_54j_x4b"/>
 
-## Define Column Width Using an Annotation
+## Defining Column Width Using an Annotation
+
+SAP Fiori Elements automatically calculates the default width of columns containing texts based on the `MaxLength` property of the field defined in the metadata. The lower limit is set to 3 rem and the upper limit is set to 20 rem.
 
 You can customize the width of a column defined in a line item using the UI annotation `com.sap.vocabularies.HTML5.v1.CssDefaults`. For more information, see [Setting the Default Column Width](setting-the-default-column-width-a765253.md).
+
+
+
+<a name="loioc0f6592a592e47f9bb6d09900de47412__section_pth_3mb_dzb"/>
+
+## Copying Multiple Rows and Range Selections
+
+Users can copy multiple rows as well as ranges of rows and columns to the clipboard. The selected content \(rows or ranges\) then can be copied to another SAP Fiori elements table, Microsoft Excel or Microsoft Word, provided the content matches the target table.
+
+> ### Note:  
+> -   Selecting a range only works for non-responsive tables.
+> 
+> -   When using custom columns in SAP Fiori elements for OData V4, the cell content are the properties listed in the `property` array of the custom column definition. For more information, see [Extension Points for Tables](extension-points-for-tables-d525522.md).
+
+To select a range with your mouse, click and hold while making a selection. You may also use keyboard shortcuts.
+
+
+<table>
+<tr>
+<th valign="top">
+
+Key Combination
+
+</th>
+<th valign="top">
+
+Behavior
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+[Space\]
+
+</td>
+<td valign="top">
+
+Selects the cell the focus is set on, If used inside a selection, removes the selection.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+[Shift\] + [Arrow keys\] 
+
+</td>
+<td valign="top">
+
+Adjusts an existing selection. If used outside a selection, creates a new selection.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+[Shift\] + [Space\] 
+
+</td>
+<td valign="top">
+
+Transforms the current selection into a row selection, based on the selection mode applied to the table.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+[Control\] + [Space\] 
+
+</td>
+<td valign="top">
+
+Expands the selection to all cells in a column \(up to the range limit\).
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+[Control\] + [Shift\] + [A\] 
+
+</td>
+<td valign="top">
+
+Clears the selection.
+
+</td>
+</tr>
+</table>
 
 
 
@@ -150,11 +243,101 @@ You can set the vertical alignment property for a responsive table viathe `table
 
 
 
+### Show/Hide the *Copy* Button
+
+By default, the *Copy* button is displayed on the table toolbar if the selection mode, such as single selection or multi selection, is defined for the corresponding table. However, you can also configure the visibility *Copy* button by defining the `copy` settings in the `manifest.json` file. If `copy` is set to `true`, the *Copy* button is shown on the table toolbar. If `copy` is set to `false`, the *Copy* button is hidden from the table toolbar.
+
+> ### Sample Code:  
+> Settings for the List Report page
+> 
+> ```
+> "sap.ui.generic.app": {
+>     "pages": {
+>         "ListReport|<EntitySetName>": {
+>             "entitySet": <EntitySetName>,
+>             "component": {
+>                 "name": "sap.suite.ui.generic.template.ListReport",
+>                 "settings": {
+>                     "tableSettings": {
+>                         "copy": true Or false
+>                     }
+>                 }
+>             }
+>         }
+>     }
+> }
+> 
+> ```
+
+> ### Sample Code:  
+> Settings for the Analytical List Page
+> 
+> ```
+> "sap.ui.generic.app": {
+>     "pages": {
+>         "ListReport|<EntitySetName>": {
+>             "entitySet": <EntitySetName>,
+>             "component": {
+>                 "name": "sap.suite.ui.generic.template.AnalyticalListPage",
+>                 "settings": {
+>                     "tableSettings": {
+>                         "copy": true Or false
+>                     }
+>                 }
+>             }
+>         }
+>     }
+> }
+> 
+> ```
+
+> ### Sample Code:  
+> Settings for the Object Page
+> 
+> ```
+> "sap.ui.generic.app": {
+>     "pages": {
+>         "ListReport|<EntitySetName": {
+>             ...
+>             ...
+>             "pages": {
+>                 "ObjectPage|<EntitySetName": {
+>                     "entitySet": "<EntitySetName",
+>                     "component": {
+>                         "name": "sap.suite.ui.generic.template.ObjectPage",
+>                         "settings": {
+>                             "sections": {
+>                                 "SalesOrderItemsID": {
+>                                     "navigationProperty": <NavigationProperty>,
+>                                     "entitySet": <NavigationEntitySetName>,
+>                                     "tableSettings": {
+>                                         "copy": true Or false
+>                                     }
+>                                 }
+>                             },
+>                             "tableSettings": {
+>                                 "copy": true Or false
+>                             }
+>                         }
+>                     }
+>                 }
+>             }
+>         }
+>     }
+> }
+> 
+> ```
+
+> ### Note:  
+> The copy settings defined at the section level has a higher priority than the copy settings defined at the object page level.
+
+
+
 <a name="loioc0f6592a592e47f9bb6d09900de47412__section_ey5_lvv_gnb"/>
 
 ## Additional Features in SAP Fiori Elements for OData V4
 
-A responsive table is used by default. You can change this in the `manifest.json`.
+A responsive table is used by default. You can change this in the `manifest.json` file.
 
 Analytical tables are currently not supported on draft-enabled entities.
 
@@ -376,117 +559,6 @@ Developers can include the column header in the calculation using the `widthIncl
 >      }
 > }
 > ```
-
-
-
-### Copying Multiple Rows and Ranges
-
-Users can copy multiple rows as well as ranges of rows and columns to clipboard. The selected content \(rows or ranges\) then can be copied to another SAP Fiori elements table, Microsoft Excel or Microsoft Word, provided the content matches the target table.
-
-> ### Note:  
-> Selecting a range only works for non-responsive tables.
-
-To select a range with your mouse, click and hold while making a selection. You may also use keyboard shortcuts.
-
-
-<table>
-<tr>
-<th valign="top">
-
-Key Combination
-
-
-
-</th>
-<th valign="top">
-
-Behavior
-
-
-
-</th>
-</tr>
-<tr>
-<td valign="top">
-
-[Space\]
-
-
-
-</td>
-<td valign="top">
-
-Selects the cell the focus is set on, If used inside a selection, removes the selection.
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-[Shift\] + [Arrow keys\] 
-
-
-
-</td>
-<td valign="top">
-
-Adjusts an existing selection. If used outside a selection, creates a new selection.
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-[Shift\] + [Space\] 
-
-
-
-</td>
-<td valign="top">
-
-Transforms the current selection into a row selection, based on the selection mode applied to the table.
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-[Control\] + [Space\] 
-
-
-
-</td>
-<td valign="top">
-
-Expands the selection to all cells in a column \(up to the range limit\).
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-[Control\] + [Shift\] + [A\] 
-
-
-
-</td>
-<td valign="top">
-
-Clears the selection.
-
-
-
-</td>
-</tr>
-</table>
 
 **Related Information**  
 

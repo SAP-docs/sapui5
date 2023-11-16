@@ -13,49 +13,35 @@ With this release SAPUI5 is upgraded from version 1.40 to 1.42.
 
 Version
 
-
-
 </th>
 <th valign="top">
 
 Type
-
-
 
 </th>
 <th valign="top">
 
 Category
 
-
-
 </th>
 <th valign="top">
 
 Title
-
-
 
 </th>
 <th valign="top">
 
 Description
 
-
-
 </th>
 <th valign="top">
 
 Action
 
-
-
 </th>
 <th valign="top">
 
 Available as of
-
-
 
 </th>
 </tr>
@@ -64,28 +50,20 @@ Available as of
 
 1.42 
 
-
-
 </td>
 <td valign="top">
 
 New 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.f.DynamicPage`** 
-
-
 
 </td>
 <td valign="top">
@@ -114,21 +92,15 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.f.Dy
 
 <sub>New•Control•Info Only•1.42</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only
 
-
-
 </td>
 <td valign="top">
 
 2016-11-11
-
-
 
 </td>
 </tr>
@@ -137,28 +109,20 @@ Info Only
 
 1.42 
 
-
-
 </td>
 <td valign="top">
 
 New 
-
-
 
 </td>
 <td valign="top">
 
 Announcement 
 
-
-
 </td>
 <td valign="top">
 
 **Acceleration of SAPUI5 Cloud Deployment** 
-
-
 
 </td>
 <td valign="top">
@@ -172,21 +136,15 @@ We now deploy new versions of SAPUI5 earlier to `https://ui5.sap.com/`. As soon 
 
 <sub>New•Announcement•Info Only•1.42</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2016-11-11
-
-
 
 </td>
 </tr>
@@ -195,28 +153,20 @@ Info Only
 
 1.42 
 
-
-
 </td>
 <td valign="top">
 
 New 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.LightBox`** 
-
-
 
 </td>
 <td valign="top">
@@ -229,21 +179,15 @@ The `LightBox` control is used to display an image in its original size. When th
 
 <sub>New•Control•Info Only•1.42</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2016-11-11
-
-
 
 </td>
 </tr>
@@ -252,28 +196,20 @@ Info Only
 
 1.42 
 
-
-
 </td>
 <td valign="top">
 
 New 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.Tree`** 
-
-
 
 </td>
 <td valign="top">
@@ -284,21 +220,15 @@ The `Tree` control provides a tree structure for displaying data in a hierarchy.
 
 <sub>New•Control•Info Only•1.42</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2016-11-11
-
-
 
 </td>
 </tr>
@@ -307,28 +237,20 @@ Info Only
 
 1.42 
 
-
-
 </td>
 <td valign="top">
 
 New 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.comp.smartmicrochart.SmartRadialMicroChart`** 
-
-
 
 </td>
 <td valign="top">
@@ -339,21 +261,15 @@ The `SmartRadialMicroChart` control has been added to the `SmartMicroChart` cont
 
 <sub>New•Control•Info Only•1.42</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2016-11-11
-
-
 
 </td>
 </tr>
@@ -362,28 +278,20 @@ Info Only
 
 1.42 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.Carousel`** 
-
-
 
 </td>
 <td valign="top">
@@ -403,21 +311,15 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.Ca
 
 <sub>Changed•Control•Info Only•1.42</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2016-11-11
-
-
 
 </td>
 </tr>
@@ -426,28 +328,20 @@ Info Only
 
 1.42 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.Combobox`** 
-
-
 
 </td>
 <td valign="top">
@@ -458,21 +352,15 @@ The `Combobox` control now automatically scrolls to the selected element, so tha
 
 <sub>Changed•Control•Info Only•1.42</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2016-11-11
-
-
 
 </td>
 </tr>
@@ -481,28 +369,20 @@ Info Only
 
 1.42 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.FeedListItem`** 
-
-
 
 </td>
 <td valign="top">
@@ -513,21 +393,15 @@ The `FeedListItem` control now incorporates the `sap.m.FormattedText` control th
 
 <sub>Changed•Control•Info Only•1.42</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2016-11-11
-
-
 
 </td>
 </tr>
@@ -536,28 +410,20 @@ Info Only
 
 1.42 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.FlexBox`** 
-
-
 
 </td>
 <td valign="top">
@@ -568,21 +434,15 @@ The render type `Bare` has been added to the `FlexBox` control. It allows flex i
 
 <sub>Changed•Control•Info Only•1.42</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2016-11-11
-
-
 
 </td>
 </tr>
@@ -591,28 +451,20 @@ Info Only
 
 1.42 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.IconTabBar`** 
-
-
 
 </td>
 <td valign="top">
@@ -630,21 +482,15 @@ For more information, see the API Reference for [sap.m.IconTabHeaderMode](https:
 
 <sub>Changed•Control•Info Only•1.42</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2016-11-11
-
-
 
 </td>
 </tr>
@@ -653,28 +499,20 @@ Info Only
 
 1.42 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.MultiComboBox`** 
-
-
 
 </td>
 <td valign="top">
@@ -685,21 +523,15 @@ We have implemented touch support on mobile devices for the `MultiComboBox` cont
 
 <sub>Changed•Control•Info Only•1.42</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2016-11-11
-
-
 
 </td>
 </tr>
@@ -708,28 +540,20 @@ Info Only
 
 1.42 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.Slider / sap.m.RangeSlider`** 
-
-
 
 </td>
 <td valign="top">
@@ -747,21 +571,15 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.Sl
 
 <sub>Changed•Control•Info Only•1.42</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2016-11-11
-
-
 
 </td>
 </tr>
@@ -770,28 +588,20 @@ Info Only
 
 1.42 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.ObjectListItem / sap.m.ObjectHeader`** 
-
-
 
 </td>
 <td valign="top">
@@ -802,21 +612,15 @@ These controls can now display all markers of type `sap.m.ObjectMarker` with the
 
 <sub>Changed•Control•Info Only•1.42</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2016-11-11
-
-
 
 </td>
 </tr>
@@ -825,28 +629,20 @@ Info Only
 
 1.42 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.ObjectMarker`** 
-
-
 
 </td>
 <td valign="top">
@@ -855,21 +651,15 @@ With the use of a new `additionalInfo` property, you can now add descriptive tex
 
 <sub>Changed•Control•Info Only•1.42</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2016-11-11
-
-
 
 </td>
 </tr>
@@ -878,28 +668,20 @@ Info Only
 
 1.42 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.UploadCollection`** 
-
-
 
 </td>
 <td valign="top">
@@ -917,21 +699,15 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.Up
 
 <sub>Changed•Control•Info Only•1.42</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2016-11-11
-
-
 
 </td>
 </tr>
@@ -940,28 +716,20 @@ Info Only
 
 1.42 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.ViewSettingsDialog`** 
-
-
 
 </td>
 <td valign="top">
@@ -972,21 +740,15 @@ You can now customize the search behavior in the filter details page with the us
 
 <sub>Changed•Control•Info Only•1.42</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2016-11-11
-
-
 
 </td>
 </tr>
@@ -995,28 +757,20 @@ Info Only
 
 1.42 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.suite.ui.commons.ProcessFlow`** 
-
-
 
 </td>
 <td valign="top">
@@ -1027,21 +781,15 @@ In the `ProcessFlow` control, the new status `Critical` has been implemented. Th
 
 <sub>Changed•Control•Info Only•1.42</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2016-11-11
-
-
 
 </td>
 </tr>
@@ -1050,28 +798,20 @@ Info Only
 
 1.42 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.suite.ui.microchart`** 
-
-
 
 </td>
 <td valign="top">
@@ -1082,21 +822,15 @@ Tooltip enhancement for all controls in the **`sap.suite.ui.microchart`** librar
 
 <sub>Changed•Control•Info Only•1.42</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2016-11-11
-
-
 
 </td>
 </tr>
@@ -1105,28 +839,20 @@ Info Only
 
 1.42 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.suite.ui.microchart.ComparisonMicroChart`** 
-
-
 
 </td>
 <td valign="top">
@@ -1137,21 +863,15 @@ You can now set minimum and maximum values for the `ComparisonMicroChart` contro
 
 <sub>Changed•Control•Info Only•1.42</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2016-11-11
-
-
 
 </td>
 </tr>
@@ -1160,28 +880,20 @@ Info Only
 
 1.42 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.comp.smartfield.SmartField`** 
-
-
 
 </td>
 <td valign="top">
@@ -1192,21 +904,15 @@ For improved performance, you can now use the `fetchValueListReadOnly` property 
 
 <sub>Changed•Control•Info Only•1.42</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2016-11-11
-
-
 
 </td>
 </tr>
@@ -1215,28 +921,20 @@ Info Only
 
 1.42 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.comp.smartmicrochart.SmartMicroChart`** 
-
-
 
 </td>
 <td valign="top">
@@ -1247,21 +945,15 @@ The qualifier for the `UI.Chart` annotation term has been added to the `SmartMic
 
 <sub>Changed•Control•Info Only•1.42</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2016-11-11
-
-
 
 </td>
 </tr>
@@ -1270,28 +962,20 @@ Info Only
 
 1.42 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.layout.BlockLayout`** 
-
-
 
 </td>
 <td valign="top">
@@ -1302,21 +986,15 @@ The `BlockLayout` control has been updated to comply to the new SAP Fiori 2.0 de
 
 <sub>Changed•Control•Info Only•1.42</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2016-11-11
-
-
 
 </td>
 </tr>
@@ -1325,28 +1003,20 @@ Info Only
 
 1.42 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **Visual Interaction toolkit \(`sap.ui.vk` library\)** 
-
-
 
 </td>
 <td valign="top">
@@ -1364,21 +1034,15 @@ Improved controls for the **Visual Interaction toolkit \(`sap.ui.vk` library\)**
 
 <sub>Changed•Control•Info Only•1.42</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2016-11-11
-
-
 
 </td>
 </tr>
@@ -1387,28 +1051,20 @@ Info Only
 
 1.42 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.uxap.ObjectPageLayout`** 
-
-
 
 </td>
 <td valign="top">
@@ -1419,21 +1075,15 @@ You can set the footer with the footer aggregation and toggle its visibility usi
 
 <sub>Changed•Control•Info Only•1.42</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2016-11-11
-
-
 
 </td>
 </tr>
@@ -1442,28 +1092,20 @@ Info Only
 
 1.42 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **Behavior-Driven Development with Gherkin** 
-
-
 
 </td>
 <td valign="top">
@@ -1474,21 +1116,15 @@ SAPUI5 now supports behavior-driven development \(BDD\) with Gherkin. Gherkin al
 
 <sub>Changed•Control•Info Only•1.42</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2016-11-11
-
-
 
 </td>
 </tr>
@@ -1497,28 +1133,20 @@ Info Only
 
 1.42 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **Enhancements for the SAP Fiori 2.0 Design** 
-
-
 
 </td>
 <td valign="top">
@@ -1534,21 +1162,15 @@ Feature
 
 <sub>Changed•Feature•Info Only•1.42</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2016-11-11
-
-
 
 </td>
 </tr>
@@ -1557,28 +1179,20 @@ Info Only
 
 1.42 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **SAPUI5 OData V4 Model** 
-
-
 
 </td>
 <td valign="top">
@@ -1599,21 +1213,15 @@ For more information, see [OData V4 Model](../04_Essentials/odata-v4-model-5de13
 
 <sub>Changed•Feature•Info Only•1.42</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2016-11-11
-
-
 
 </td>
 </tr>
@@ -1622,28 +1230,20 @@ Info Only
 
 1.42 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **One Page Acceptance Tests \(OPA5\)** 
-
-
 
 </td>
 <td valign="top">
@@ -1674,21 +1274,15 @@ Feature
 
 <sub>Changed•Feature•Info Only•1.42</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2016-11-11
-
-
 
 </td>
 </tr>
@@ -1697,28 +1291,20 @@ Info Only
 
 1.42 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **Navigation and Routing** 
-
-
 
 </td>
 <td valign="top">
@@ -1729,21 +1315,15 @@ You can now use the `title` property for targets and a `titleTarget` for routes 
 
 <sub>Changed•Feature•Info Only•1.42</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2016-11-11
-
-
 
 </td>
 </tr>
@@ -1752,28 +1332,20 @@ Info Only
 
 1.42 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **New Icons** 
-
-
 
 </td>
 <td valign="top">
@@ -1784,21 +1356,15 @@ We have 10 new icons - check out the [Icon Explorer](https://ui5.sap.com/test-re
 
 <sub>Changed•Feature•Info Only•1.42</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2016-11-11
-
-
 
 </td>
 </tr>
@@ -1807,28 +1373,20 @@ Info Only
 
 1.42 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 SAP Fiori Elements 
 
-
-
 </td>
 <td valign="top">
 
 **SAP Fiori Elements** 
-
-
 
 </td>
 <td valign="top">
@@ -1897,21 +1455,15 @@ Overview pages have been enhanced with the following features:
 
 <sub>Changed•SAP Fiori Elements•Info Only•1.42</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2016-11-11
-
-
 
 </td>
 </tr>
@@ -1920,28 +1472,20 @@ Info Only
 
 1.42 
 
-
-
 </td>
 <td valign="top">
 
 Deprecated 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.suite.ui.commons`** 
-
-
 
 </td>
 <td valign="top">
@@ -1952,21 +1496,15 @@ The `HeaderCell` and `HeaderCellItem` controls have been deprecated with this re
 
 <sub>Deprecated•Control•Info Only•1.42</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2016-11-11
-
-
 
 </td>
 </tr>
@@ -1975,28 +1513,20 @@ Info Only
 
 1.42 
 
-
-
 </td>
 <td valign="top">
 
 Deprecated 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.comp.navpopover.SemanticObjectController`** 
-
-
 
 </td>
 <td valign="top">
@@ -2007,21 +1537,15 @@ The `prefetchNavigationTargets` property and the `prefetchDone` event of `sap.ui
 
 <sub>Deprecated•Control•Info Only•1.42</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2016-11-11
-
-
 
 </td>
 </tr>
@@ -2030,28 +1554,20 @@ Info Only
 
 1.42 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 User Documentation 
 
-
-
 </td>
 <td valign="top">
 
 **QUnit Testing Documentation** 
-
-
 
 </td>
 <td valign="top">
@@ -2069,21 +1585,15 @@ We have updated the following tutorials:
 
 <sub>Changed•User Documentation•Info Only•1.42</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2016-11-11
-
-
 
 </td>
 </tr>
@@ -2091,6 +1601,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.118](what-s-new-in-sapui5-1-118-3eecbde.md "With this release SAPUI5 is upgraded from version 1.117 to 1.118.")
 
 [What's New in SAPUI5 1.117](what-s-new-in-sapui5-1-117-029d3b4.md "With this release SAPUI5 is upgraded from version 1.116 to 1.117.")
 

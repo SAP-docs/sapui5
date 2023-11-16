@@ -17,14 +17,10 @@ The default width of columns containing different controls/UI elements is as fol
 
 Columns with Controls/UI Elements
 
-
-
 </th>
 <th valign="top">
 
 Default Width
-
-
 
 </th>
 </tr>
@@ -33,14 +29,10 @@ Default Width
 
 Images
 
-
-
 </td>
 <td valign="top">
 
 5 rem
-
-
 
 </td>
 </tr>
@@ -49,14 +41,10 @@ Images
 
 Rating indicator
 
-
-
 </td>
 <td valign="top">
 
 6.875 rem
-
-
 
 </td>
 </tr>
@@ -65,14 +53,10 @@ Rating indicator
 
 Progress indicator
 
-
-
 </td>
 <td valign="top">
 
 6.875 rem
-
-
 
 </td>
 </tr>
@@ -81,14 +65,10 @@ Progress indicator
 
 Charts
 
-
-
 </td>
 <td valign="top">
 
 20 rem
-
-
 
 </td>
 </tr>

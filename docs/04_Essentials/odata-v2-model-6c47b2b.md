@@ -22,21 +22,15 @@ The following table shows the supported features for both OData models:
 
 Feature
 
-
-
 </th>
 <th valign="top">
 
 `sap.ui.model.odata.v2.ODataModel` 
 
-
-
 </th>
 <th valign="top">
 
 `sap.ui.model.odata.ODataModel` 
-
-
 
 </th>
 </tr>
@@ -45,21 +39,15 @@ Feature
 
 OData version support
 
-
-
 </td>
 <td valign="top">
 
 2.0
 
-
-
 </td>
 <td valign="top">
 
 2.0
-
-
 
 </td>
 </tr>
@@ -68,21 +56,15 @@ OData version support
 
 JSON format
 
-
-
 </td>
 <td valign="top">
 
 Yes \(default\)
 
-
-
 </td>
 <td valign="top">
 
 Yes
-
-
 
 </td>
 </tr>
@@ -91,21 +73,15 @@ Yes
 
 XML format
 
-
-
 </td>
 <td valign="top">
 
 Yes
 
-
-
 </td>
 <td valign="top">
 
 Yes \(default\)
-
-
 
 </td>
 </tr>
@@ -114,21 +90,15 @@ Yes \(default\)
 
 Support of two-way binding mode
 
-
-
 </td>
 <td valign="top">
 
 Yes; for property changes only, not yet implemented for aggregations
 
-
-
 </td>
 <td valign="top">
 
 Experimental; only properties of one entity can be changed at the same time
-
-
 
 </td>
 </tr>
@@ -137,21 +107,15 @@ Experimental; only properties of one entity can be changed at the same time
 
 Default binding mode
 
-
-
 </td>
 <td valign="top">
 
 One-way binding
 
-
-
 </td>
 <td valign="top">
 
 One-way binding
-
-
 
 </td>
 </tr>
@@ -160,8 +124,6 @@ One-way binding
 
 Client-side sorting and filtering
 
-
-
 </td>
 <td valign="top">
 
@@ -169,14 +131,10 @@ Yes
 
 For more information, see [API Reference: sap.ui.model.odata.OperationMode](https://ui5.sap.com/#/api/sap.ui.model.odata.OperationMode). 
 
-
-
 </td>
 <td valign="top">
 
 No
-
-
 
 </td>
 </tr>
@@ -185,21 +143,15 @@ No
 
 $batch
 
-
-
 </td>
 <td valign="top">
 
 Yes; all requests can be batched
 
-
-
 </td>
 <td valign="top">
 
 Only manual batch requests are possible
-
-
 
 </td>
 </tr>
@@ -208,21 +160,15 @@ Only manual batch requests are possible
 
 Data cache in model
 
-
-
 </td>
 <td valign="top">
 
 All data is cached in the model
 
-
-
 </td>
 <td valign="top">
 
 Manually requested data is **not** cached
-
-
 
 </td>
 </tr>
@@ -231,21 +177,15 @@ Manually requested data is **not** cached
 
 Automatic refresh
 
-
-
 </td>
 <td valign="top">
 
 Yes \(default\)
 
-
-
 </td>
 <td valign="top">
 
 Yes
-
-
 
 </td>
 </tr>
@@ -254,21 +194,15 @@ Yes
 
 Message handling
 
-
-
 </td>
 <td valign="top">
 
 Yes, see [Error, Warning, and Info Messages](error-warning-and-info-messages-62b1481.md) 
 
-
-
 </td>
 <td valign="top">
 
 No
-
-
 
 </td>
 </tr>
@@ -694,7 +628,7 @@ The OData model allows manual CRUD \(create, read, update, delete\) operations o
 
 
 
-The `create` and `update` methods also require a mandatory `oData` parameter for passing the created or changed data object. Each operation returns an object containing a function abort, which can be used to abort the request. If the request is aborted, the error handler is called. This ensures that the success or the error handler is executed for every request. It is also possible to pass additional header data, URL parameters, or an eTag.
+The `create` and `update` methods also require a mandatory `oData` parameter for passing the created or changed data object. Each operation returns an object containing a function abort, which can be used to abort the request. If the request is aborted, the error handler is called. This ensures that the success or the error handler is executed for every request. It is also possible to pass additional header data, URL parameters, or an eTag in the cases of updating or deleting an entity.
 
 -   Creating entities
 
@@ -746,7 +680,7 @@ The `create` and `update` methods also require a mandatory `oData` parameter for
 
 ## Concurrency Control and ETags
 
-OData uses HTTP ETags for optimistic concurrency control. The service must be configured to provide them. The ETag can be passed within the parameters map for every CRUD request. If no ETag is passed, the ETag of the cached entity is used, if it is loaded already.
+OData uses HTTP ETags for optimistic concurrency control. The service must be configured to provide them. The ETag can be passed within the parameters map for updating or deleting entities. If no ETag is passed, the ETag of the cached entity is used, if it is loaded already.
 
 <a name="loio30362c1cafd244dd86752e28993bbcdd"/>
 
@@ -1013,14 +947,10 @@ Without using preliminary contexts, two consecutive OData requests will be issue
 
 Request Number
 
-
-
 </th>
 <th valign="top">
 
 Content
-
-
 
 </th>
 </tr>
@@ -1029,14 +959,10 @@ Content
 
 1
 
-
-
 </td>
 <td valign="top">
 
 `GET Products(1)` 
-
-
 
 </td>
 </tr>
@@ -1045,14 +971,10 @@ Content
 
 2
 
-
-
 </td>
 <td valign="top">
 
 `GET Products(1)/Supplier` 
-
-
 
 </td>
 </tr>
@@ -1079,14 +1001,10 @@ This now results in a single `$batch` request:
 
 Request Number
 
-
-
 </th>
 <th valign="top">
 
 Content
-
-
 
 </th>
 </tr>
@@ -1095,16 +1013,12 @@ Content
 
 1
 
-
-
 </td>
 <td valign="top">
 
 `GET Products(1)`
 
 `GET Products(1)/Supplier`
-
-
 
 </td>
 </tr>
@@ -1476,14 +1390,10 @@ Transformations defined at `EntitySet`:
 
 OData V2 SAP Extension
 
-
-
 </th>
 <th valign="top">
 
 Resulting OData V4 Annotation
-
-
 
 </th>
 </tr>
@@ -1543,8 +1453,6 @@ sap:deletable-path = "AnyPath"
 
 Where `AnyPath` is a path expression that identifies a Boolean property in the context of the entity type of the entity set. The value of this property indicates whether the entity can be deleted or not.
 
-
-
 </td>
 <td valign="top">
 
@@ -1567,8 +1475,6 @@ sap:label = "foo"
 ```
 
 Where `foo` is any text.
-
-
 
 </td>
 <td valign="top">
@@ -1635,8 +1541,6 @@ sap:searchable = "false"
 ```
 
 Alternatively, do not use the `sap:searchable` annotation.
-
-
 
 </td>
 <td valign="top">
@@ -1706,8 +1610,6 @@ sap:updatable-path = "AnyPath"
 
 Where `AnyPath` is a path expression that identifies a Boolean property in the context of the entity type of the entity set. The value of this property indicates whether the entity can be updated or not.
 
-
-
 </td>
 <td valign="top">
 
@@ -1733,14 +1635,10 @@ Transformations defined at `Property`:
 
 OData V2 SAP Extension
 
-
-
 </th>
 <th valign="top">
 
 Resulting OData V4 Annotation
-
-
 
 </th>
 </tr>
@@ -1752,8 +1650,6 @@ sap:label = "foo"
 ```
 
 Where `foo` is any text.
-
-
 
 </td>
 <td valign="top">
@@ -1875,8 +1771,6 @@ sap:field-control = "AnyPath"
 
 Where `AnyPath` is a path expression that identifies a property containing a numeric value that controls visibility..
 
-
-
 </td>
 <td valign="top">
 
@@ -1926,8 +1820,6 @@ sap:filter-restriction="multi-value"
 
 For example, at a `BusinessPartnerID` property of a `BusinessPartner` type.
 
-
-
 </td>
 <td valign="top">
 
@@ -1956,8 +1848,6 @@ sap:heading = "foo"
 
 Where `foo` is any text.
 
-
-
 </td>
 <td valign="top">
 
@@ -1979,8 +1869,6 @@ sap:precision = "AnyPath"
 
 Where `AnyPath` is a path expression that identifies a property in the context of the entity type containing the number of significant decimal places for a numeric value.
 
-
-
 </td>
 <td valign="top">
 
@@ -2001,8 +1889,6 @@ sap:quickinfo = "foo"
 ```
 
 Where `foo` is any text.
-
-
 
 </td>
 <td valign="top">
@@ -2081,8 +1967,6 @@ sap:text = "AnyPath"
 
 Where `AnyPath` is a path expression that identifies a property in the context of the entity type containing a human-readable text for the value of this property.
 
-
-
 </td>
 <td valign="top">
 
@@ -2109,8 +1993,6 @@ sap:unit="CurrencyCode"
 ```
 
 Where `WeightUnit` and `CurrencyCode` are names of properties in the same entity and `WeightUnit` points to a property with `sap-semantics:unit-of-measure` and `CurrencyCode`points to a property with `sap-semantics:currency-code`.
-
-
 
 </td>
 <td valign="top">
@@ -2399,14 +2281,10 @@ Transformations defined at `NavigationProperty`:
 
 OData V2 SAP Extension
 
-
-
 </th>
 <th valign="top">
 
 Resulting OData V4 Annotation
-
-
 
 </th>
 </tr>
@@ -2574,14 +2452,10 @@ Transformations defined at `Schema`:
 
 OData V2 SAP Extension
 
-
-
 </th>
 <th valign="top">
 
 Resulting OData V4 Annotation
-
-
 
 </th>
 </tr>
@@ -2619,14 +2493,10 @@ Depending on the value of the `sap:semantics` annotation, different vocabulary-b
 
 OData V2 SAP Extension
 
-
-
 </th>
 <th valign="top">
 
 Resulting OData V4 Annotation
-
-
 
 </th>
 </tr>
@@ -2644,8 +2514,6 @@ sap:semantics = "currency-code"
 
 see `sap:unit` above
 
-
-
 </td>
 </tr>
 <tr>
@@ -2661,8 +2529,6 @@ sap:semantics = "unit-of-measure"
 <td valign="top">
 
 see `sap:unit` above
-
-
 
 </td>
 </tr>

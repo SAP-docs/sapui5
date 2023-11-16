@@ -26,14 +26,10 @@ Enter the `preferredMode` parameter to specify the mode in which the object page
 
 PreferredMode Parameter
 
-
-
 </th>
 <th valign="top">
 
 Results in the following mode
-
-
 
 </th>
 </tr>
@@ -42,14 +38,10 @@ Results in the following mode
 
 display
 
-
-
 </td>
 <td valign="top">
 
 Object page opens in display mode unless the user is already working on a draft. In this case, the draft is opened in edit mode.
-
-
 
 </td>
 </tr>
@@ -58,14 +50,10 @@ Object page opens in display mode unless the user is already working on a draft.
 
 edit
 
-
-
 </td>
 <td valign="top">
 
 A draft is created if one doesn't exist yet. If an outdated draft by another user exists \("unsaved changes"\), the user can decide to cancel this draft and create their own, or to keep the other user's draft and open it in display mode. If another user's draft exists and is not outdated, the page is opened in display mode.
-
-
 
 </td>
 </tr>
@@ -73,8 +61,6 @@ A draft is created if one doesn't exist yet. If an outdated draft by another use
 <td valign="top">
 
 create
-
-
 
 </td>
 <td valign="top">
@@ -113,14 +99,10 @@ You can use URL parameters to prefill specific values. This is currently not sup
 
 mode
 
-
-
 </td>
 <td valign="top">
 
 If the specified mode isn't suitable for the current draft state, there is no silent fallback. However, the user gets an error message before the object page is opened in the potentially available mode.
-
-
 
 </td>
 </tr>
@@ -128,8 +110,6 @@ If the specified mode isn't suitable for the current draft state, there is no si
 <td valign="top">
 
 `callUnboundAction` 
-
-
 
 </td>
 <td valign="top">
@@ -268,6 +248,45 @@ When `preferredMode=create` is used with URL parameter values, there's a differe
 
     > ### Note:  
     > The parameter values in the navigation context are also passed for matching fields that are hidden, that is, the matching field is configured for the action parameter dialog in `NewAction()`, but not seen because of the `UI.Hidden` annotation.
+
+
+
+
+### Passing Parameters when Using `preferredMode=edit`
+
+If an application is configured with the startup parameter `preferredMode=edit` or contains the URL parameter `preferredMode=edit` followed by a technical key or semantic key, then the object page can be launched directly in the edit mode. When the object page opens in the edit mode, a draft is created if one doesn't exist yet.
+
+-   `preferredMode=edit` as a startup parameter
+
+    You can configure `preferredMode=edit` as a startup parameter either in the SAP Fiori launchpad configuration or in the `Component.js` file of the application, along with a key pointing to the object page that needs to be opened in the edit mode.
+
+    > ### Sample Code:  
+    > ```
+    > sap.ui.define(["sap/fe/core/AppComponent"], function(AppComponent) 
+    >     "use strict";                                                  
+    > 
+    >     return AppComponent.extend("FormTemplate.Component", {         
+    >         metadata: {                                                
+    >             manifest: "json"                                       
+    >         },                                                         
+    >         getStartupParameters: function() {                         
+    >             return Promise.resolve({                               
+    >                 preferredMode: ["edit"],
+    >                 ID: "1"                          
+    >             });                                                    
+    >         }                                                          
+    >     });                                                            
+    > );
+    > ```
+
+-   `preferredMode=edit` as an URL parameter
+
+    You can also use the `preferredMode=edit` parameter directly as an URL parameter along with the key pointing to the object page, that prompts the navigation to the respective object page in the edit mode.
+
+    > ### Sample Code:  
+    > ```
+    > #Manage-items?preferredMode=edit&ID=1
+    > ```
 
 
 **Related Information**  

@@ -16,49 +16,35 @@ With this release SAPUI5 is upgraded from version 1.113 to 1.114.
 
 Version
 
-
-
 </th>
 <th valign="top">
 
 Type
-
-
 
 </th>
 <th valign="top">
 
 Category
 
-
-
 </th>
 <th valign="top">
 
 Title
-
-
 
 </th>
 <th valign="top">
 
 Description
 
-
-
 </th>
 <th valign="top">
 
 Action
 
-
-
 </th>
 <th valign="top">
 
 Available as of
-
-
 
 </th>
 </tr>
@@ -67,28 +53,20 @@ Available as of
 
 1.114 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.integration.widgets.Card`** 
-
-
 
 </td>
 <td valign="top">
@@ -101,21 +79,15 @@ List, Table, Object, and the other declarative card types automatically show a c
 
 <sub>Changed•Control•Info Only•1.114</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-05-18
-
-
 
 </td>
 </tr>
@@ -124,28 +96,20 @@ Info Only
 
 1.114 
 
-
-
 </td>
 <td valign="top">
 
 Deprecated 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **Deprecations** 
-
-
 
 </td>
 <td valign="top">
@@ -156,21 +120,15 @@ There are currently no major deprecations. For a complete list of all deprecatio
 
 <sub>Deprecated•Feature•Info Only•1.114</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-05-18
-
-
 
 </td>
 </tr>
@@ -179,28 +137,20 @@ Info Only
 
 1.114 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.comp.smarttable.SmartTable`** 
-
-
 
 </td>
 <td valign="top">
@@ -218,21 +168,15 @@ Control
 
 <sub>Changed•Control•Info Only•1.114</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-05-18
-
-
 
 </td>
 </tr>
@@ -241,28 +185,20 @@ Info Only
 
 1.114 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 SAP Fiori Elements 
 
-
-
 </td>
 <td valign="top">
 
 **SAP Fiori elements for OData V2** 
-
-
 
 </td>
 <td valign="top">
@@ -284,21 +220,15 @@ The following changes and new features are available for SAP Fiori elements for 
 
 <sub>Changed•SAP Fiori Elements•Info Only•1.114</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-05-18
-
-
 
 </td>
 </tr>
@@ -307,28 +237,20 @@ Info Only
 
 1.114 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 SAP Fiori Elements 
 
-
-
 </td>
 <td valign="top">
 
 **SAP Fiori elements for OData V4** 
-
-
 
 </td>
 <td valign="top">
@@ -373,21 +295,15 @@ The following changes and new features are available for SAP Fiori elements for 
 
 <sub>Changed•SAP Fiori Elements•Info Only•1.114</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-05-18
-
-
 
 </td>
 </tr>
@@ -396,28 +312,20 @@ Info Only
 
 1.114 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **FLP Time Zone Support in SAPUI5** 
-
-
 
 </td>
 <td valign="top">
@@ -432,21 +340,15 @@ For more information, see [Dates, Times, Timestamps, and Time Zones](../04_Essen
 
 <sub>Changed•Feature•Required•1.114</sub>
 
-
-
 </td>
 <td valign="top">
 
 Required 
 
-
-
 </td>
 <td valign="top">
 
 2023-05-18
-
-
 
 </td>
 </tr>
@@ -455,28 +357,20 @@ Required
 
 1.114 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.SearchField`** 
-
-
 
 </td>
 <td valign="top">
@@ -489,21 +383,15 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.Se
 
 <sub>Changed•Control•Info Only•1.114</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-05-18
-
-
 
 </td>
 </tr>
@@ -512,28 +400,20 @@ Info Only
 
 1.114 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.comp.smartfield.SmartField`** 
-
-
 
 </td>
 <td valign="top">
@@ -544,21 +424,15 @@ Only for fields without a `ValueList` annotation, we allow users to enter text w
 
 <sub>Changed•Control•Info Only•1.114</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-05-18
-
-
 
 </td>
 </tr>
@@ -567,28 +441,20 @@ Info Only
 
 1.114 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.comp.valuehelpdialog.ValueHelpDialog`** 
-
-
 
 </td>
 <td valign="top">
@@ -600,21 +466,15 @@ Control
 
 <sub>Changed•Control•Info Only•1.114</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-05-18
-
-
 
 </td>
 </tr>
@@ -623,28 +483,20 @@ Info Only
 
 1.114 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **Accessibility** 
-
-
 
 </td>
 <td valign="top">
@@ -655,21 +507,15 @@ We are now using JAWS 2023 as a reference testing environment in SAPUI5. For mor
 
 <sub>Changed•Feature•Info Only•1.114</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-05-18
-
-
 
 </td>
 </tr>
@@ -677,6 +523,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.118](what-s-new-in-sapui5-1-118-3eecbde.md "With this release SAPUI5 is upgraded from version 1.117 to 1.118.")
 
 [What's New in SAPUI5 1.117](what-s-new-in-sapui5-1-117-029d3b4.md "With this release SAPUI5 is upgraded from version 1.116 to 1.117.")
 

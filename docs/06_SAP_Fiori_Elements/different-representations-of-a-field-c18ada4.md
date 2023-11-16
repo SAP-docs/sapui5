@@ -607,21 +607,15 @@ The following table provides an overview of the parameters that are allowed in `
 
 Parameter
 
-
-
 </th>
 <th valign="top">
 
 Type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -630,21 +624,15 @@ Description
 
 `textLinesEdit`
 
-
-
 </td>
 <td valign="top">
 
 String | Integer
 
-
-
 </td>
 <td valign="top">
 
 An integer value or a string containing an integer value that defines the number of lines the text area can show when it is editable before a scrollbar is shown. If you use it together with `textMaxLines`, this parameter defines the minimum number of lines the field can shrink to.
-
-
 
 </td>
 </tr>
@@ -653,21 +641,15 @@ An integer value or a string containing an integer value that defines the number
 
 `textMaxLines`
 
-
-
 </td>
 <td valign="top">
 
 String | Integer
 
-
-
 </td>
 <td valign="top">
 
 An integer value or a string containing an integer value that defines the maximum number of lines that the text area can grow to when it is editable before a scrollbar is shown. If this value is not given or if it is not larger than `textLinesEdit`, the text area does not grow or shrink.
-
-
 
 </td>
 </tr>
@@ -676,21 +658,15 @@ An integer value or a string containing an integer value that defines the maximu
 
 `textMaxCharactersDisplay`
 
-
-
 </td>
 <td valign="top">
 
 String | Integer
 
-
-
 </td>
 <td valign="top">
 
 An integer value or a string containing an integer value that defines the number of characters to be displayed before the text is cut off and a *More* link is shown. If you set this value to `"Infinity"`, the text is shown completely.
-
-
 
 </td>
 </tr>
@@ -699,21 +675,15 @@ An integer value or a string containing an integer value that defines the number
 
 `textExpandBehaviorDisplay`
 
-
-
 </td>
 <td valign="top">
 
 String
 
-
-
 </td>
 <td valign="top">
 
 Defines how the full text is displayed: either `"InPlace"` or `"Popover"`.
-
-
 
 </td>
 </tr>
@@ -722,21 +692,15 @@ Defines how the full text is displayed: either `"InPlace"` or `"Popover"`.
 
 `textMaxLength`
 
-
-
 </td>
 <td valign="top">
 
 String | Integer
 
-
-
 </td>
 <td valign="top">
 
 An integer value or a string containing an integer value that defines the maximum number of characters that can be entered in the text area. When this number is exceeded for a multi-line text field, the user sees a notification. When this number is reached for an input field, the user is unable to enter more characters than the defined length. If this value is not given, the maximum number of characters is not restricted.
-
-
 
 </td>
 </tr>

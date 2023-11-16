@@ -57,42 +57,30 @@ SAP Fiori elements supports these group header formatters:
 
 OData Type
 
-
-
 </th>
 <th valign="top">
 
 SAP Display Format
-
-
 
 </th>
 <th valign="top">
 
 OData Example
 
-
-
 </th>
 <th valign="top">
 
 Unformatted
-
-
 
 </th>
 <th valign="top">
 
 Formatted
 
-
-
 </th>
 <th valign="top">
 
 Comments
-
-
 
 </th>
 </tr>
@@ -101,42 +89,30 @@ Comments
 
 Edm.DateTimeOffsetDate
 
-
-
 </td>
 <td valign="top">
 
 Date
-
-
 
 </td>
 <td valign="top">
 
 /Date\(1485471600000 +0000\)/
 
-
-
 </td>
 <td valign="top">
 
 Fri Jan 27 2017 00:00:00 GMT+0100 \(Central European Standard Time\)
-
-
 
 </td>
 <td valign="top">
 
 Jan 26, 2017
 
-
-
 </td>
 <td valign="top">
 
 UTC
-
-
 
 </td>
 </tr>
@@ -145,42 +121,30 @@ UTC
 
 Edm.DateTimeOffset
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 <td valign="top">
 
 /Date\(1485471600000 +0000\)/
 
-
-
 </td>
 <td valign="top">
 
 Fri Jan 27 2017 00:00:00 GMT+0100 \(Central European Standard Time\)
-
-
 
 </td>
 <td valign="top">
 
 Jan 27, 2017, 12:00:00 AM
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -188,43 +152,31 @@ Jan 27, 2017, 12:00:00 AM
 <td valign="top">
 
 Edm.DateTime
-
-
 
 </td>
 <td valign="top">
 
 Date
 
-
-
 </td>
 <td valign="top">
 
 /Date\(1485471600000 +0000\)/
-
-
 
 </td>
 <td valign="top">
 
 Fri Jan 27 2017 00:00:00 GMT+0100 \(Central European Standard Time\)
 
-
-
 </td>
 <td valign="top">
 
 Jan 26, 2017
 
-
-
 </td>
 <td valign="top">
 
 UTC
-
-
 
 </td>
 </tr>
@@ -233,42 +185,30 @@ UTC
 
 Edm.DateTime
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 <td valign="top">
 
 /Date\(1485471600000 +0000\)/
 
-
-
 </td>
 <td valign="top">
 
 Fri Jan 27 2017 00:00:00 GMT+0100 \(Central European Standard Time\)
-
-
 
 </td>
 <td valign="top">
 
 Jan 27, 2017, 12:00:00 AM
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -277,42 +217,30 @@ Jan 27, 2017, 12:00:00 AM
 
 Edm.Time
 
-
-
 </td>
 <td valign="top">
 
 Time
-
-
 
 </td>
 <td valign="top">
 
 PT11H13M01S
 
-
-
 </td>
 <td valign="top">
 
 \[object Object\] is: \{ms: 43980000, \_\_edmType: "Edm.Time"\}
-
-
 
 </td>
 <td valign="top">
 
 11:13:01 AM
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -321,42 +249,30 @@ PT11H13M01S
 
 Edm.String
 
-
-
 </td>
 <td valign="top">
 
 Date
 
-
-
 </td>
 <td valign="top">
 
 20180313
 
-
-
 </td>
 <td valign="top">
 
 20180313
-
-
 
 </td>
 <td valign="top">
 
 Mar 13, 2018
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -365,42 +281,30 @@ Mar 13, 2018
 
 Edm.Boolean
 
-
-
 </td>
 <td valign="top">
 
  
 
-
-
 </td>
 <td valign="top">
 
 true
 
-
-
 </td>
 <td valign="top">
 
 true
-
-
 
 </td>
 <td valign="top">
 
 Yes
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -409,42 +313,30 @@ Yes
 
 Edm.Decimal
 
-
-
 </td>
 <td valign="top">
 
  
 
-
-
 </td>
 <td valign="top">
 
 10
 
-
-
 </td>
 <td valign="top">
 
 10
-
-
 
 </td>
 <td valign="top">
 
 10.000 m\*
 
-
-
 </td>
 <td valign="top">
 
 Unit of measure
-
-
 
 </td>
 </tr>
@@ -453,42 +345,30 @@ Unit of measure
 
 Edm.Decimal
 
-
-
 </td>
 <td valign="top">
 
  
 
-
-
 </td>
 <td valign="top">
 
 2498.00
 
-
-
 </td>
 <td valign="top">
 
 2498.00
-
-
 
 </td>
 <td valign="top">
 
 2,498.00 EUR\*
 
-
-
 </td>
 <td valign="top">
 
 Currency
-
-
 
 </td>
 </tr>
@@ -497,42 +377,30 @@ Currency
 
 Edm.String
 
-
-
 </td>
 <td valign="top">
 
  
 
-
-
 </td>
 <td valign="top">
 
 m
 
-
-
 </td>
 <td valign="top">
 
 m
-
-
 
 </td>
 <td valign="top">
 
 Meter \(m\)\*
 
-
-
 </td>
 <td valign="top">
 
 Unit of measure and TextArrangement
-
-
 
 </td>
 </tr>
@@ -541,42 +409,30 @@ Unit of measure and TextArrangement
 
 Edm.String
 
-
-
 </td>
 <td valign="top">
 
  
 
-
-
 </td>
 <td valign="top">
 
 EUR
 
-
-
 </td>
 <td valign="top">
 
 EUR
-
-
 
 </td>
 <td valign="top">
 
 Euro \(EUR\)\*
 
-
-
 </td>
 <td valign="top">
 
 Currency and TextArrangement
-
-
 
 </td>
 </tr>

@@ -12,7 +12,7 @@ If we want to do a more complex logic for formatting properties of our data mode
   
 **A status is now displayed with a custom formatter**
 
-![](images/UI5_Walkthrough_Step_22_7aa185a.png "A status is now displayed with a custom formatter")
+![A list of invoices is displayed below the panel](images/UI5_Walkthrough_Step_22_7aa185a.png "A status is now displayed with a custom formatter")
 
 
 

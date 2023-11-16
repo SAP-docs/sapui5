@@ -111,7 +111,10 @@ The difference between this more formal namespace and the existing MVC namespace
 
 <a name="loio91f0c3ee6f4d1014b6dd926db0e91070__section_A34A9FCBC8DA4E8CB559743B7B48CDCE"/>
 
-## Use in JSON Views
+## Use in JSON Views \(deprecated\)
+
+> ### Caution:  
+> Deprecated as of UI5 version 1.120, replaced by [XML View](xml-view-91f2928.md).
 
 To add custom data to an element in a JSON view, add the following code to the element properties \(examples with data binding\):
 
@@ -163,7 +166,10 @@ var json =
 
 
 
-## Use in HTML Views
+## Use in HTML Views \(deprecated\)
+
+> ### Caution:  
+> Deprecated as of UI5 version 1.108, replaced by [XML View](xml-view-91f2928.md).
 
 To add custom data objects to a control or an element in HTML views, use a specific HTML attribute with the following syntax: `data-custom-data:my-key="myValue"`. A custom data attribute starts with `data-custom-data:` followed by the name of the key. The dashes convert the respective following character into an upper case character. The value can be either a string or a binding expression:
 

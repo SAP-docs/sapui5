@@ -15,49 +15,35 @@ With this release SAPUI5 is upgraded from version 1.78 to 1.79.
 
 Version
 
-
-
 </th>
 <th valign="top">
 
 Type
-
-
 
 </th>
 <th valign="top">
 
 Category
 
-
-
 </th>
 <th valign="top">
 
 Title
-
-
 
 </th>
 <th valign="top">
 
 Description
 
-
-
 </th>
 <th valign="top">
 
 Action
 
-
-
 </th>
 <th valign="top">
 
 Available as of
-
-
 
 </th>
 </tr>
@@ -66,28 +52,20 @@ Available as of
 
 1.79 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **Browser and Platform Support** 
-
-
 
 </td>
 <td valign="top">
@@ -98,21 +76,15 @@ SAPUI5 used PhantomJS in the past to test the framework, even though PhantomJS w
 
 <sub>Changed•Feature•Info Only•1.79</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only
 
-
-
 </td>
 <td valign="top">
 
 2020-06-18
-
-
 
 </td>
 </tr>
@@ -121,28 +93,20 @@ Info Only
 
 1.79 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **SAPUI5 OData V2 Model** 
-
-
 
 </td>
 <td valign="top">
@@ -157,21 +121,15 @@ The new version of the SAPUI5 OData V2 model introduces the following features:
 
 <sub>Changed•Feature•Info Only•1.79</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-06-18
-
-
 
 </td>
 </tr>
@@ -180,28 +138,20 @@ Info Only
 
 1.79 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **SAPUI5 OData V4 Model** 
-
-
 
 </td>
 <td valign="top">
@@ -220,21 +170,15 @@ For more information, see [OData V4 Model](../04_Essentials/odata-v4-model-5de13
 
 <sub>Changed•Feature•Info Only•1.79</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-06-18
-
-
 
 </td>
 </tr>
@@ -243,28 +187,20 @@ Info Only
 
 1.79 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.f.GridContainer`, `sap.f.GridList`** 
-
-
 
 </td>
 <td valign="top">
@@ -275,21 +211,15 @@ We have improved the accessibility of these controls by providing better navigat
 
 <sub>Changed•Control•Info Only•1.79</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-06-18
-
-
 
 </td>
 </tr>
@@ -298,28 +228,20 @@ Info Only
 
 1.79 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.IconTabBar`** 
-
-
 
 </td>
 <td valign="top">
@@ -331,21 +253,15 @@ Control
 
 <sub>Changed•Control•Info Only•1.79</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-06-18
-
-
 
 </td>
 </tr>
@@ -354,28 +270,20 @@ Info Only
 
 1.79 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.Input`, `sap.m.MultiInput`** 
-
-
 
 </td>
 <td valign="top">
@@ -386,21 +294,15 @@ When the controls are used with tabular suggestions, the column headers are now 
 
 <sub>Changed•Control•Info Only•1.79</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-06-18
-
-
 
 </td>
 </tr>
@@ -409,28 +311,20 @@ Info Only
 
 1.79 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.InputBase` \(Experimental\)** 
-
-
 
 </td>
 <td valign="top">
@@ -441,21 +335,15 @@ We are extending the set of controls that support the possibility to add links a
 
 <sub>Changed•Control•Info Only•1.79</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-06-18
-
-
 
 </td>
 </tr>
@@ -464,28 +352,20 @@ Info Only
 
 1.79 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.Panel`** 
-
-
 
 </td>
 <td valign="top">
@@ -496,21 +376,15 @@ We have enhanced the control by making the whole header clickable to allow users
 
 <sub>Changed•Control•Info Only•1.79</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-06-18
-
-
 
 </td>
 </tr>
@@ -519,28 +393,20 @@ Info Only
 
 1.79 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.comp.smarttable.SmartTable`** 
-
-
 
 </td>
 <td valign="top">
@@ -556,21 +422,15 @@ Control
 
 <sub>Changed•Control•Info Only•1.79</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-06-18
-
-
 
 </td>
 </tr>
@@ -579,28 +439,20 @@ Info Only
 
 1.79 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.integration.widgets.Card`** 
-
-
 
 </td>
 <td valign="top">
@@ -612,21 +464,15 @@ Control
 
 <sub>Changed•Control•Info Only•1.79</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-06-18
-
-
 
 </td>
 </tr>
@@ -635,28 +481,20 @@ Info Only
 
 1.79 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.richtexteditor.RichTextEditor`** 
-
-
 
 </td>
 <td valign="top">
@@ -667,21 +505,15 @@ We have updated the `sap.ui.richtexteditor.RichTextEditor` and respectively the 
 
 <sub>Changed•Control•Info Only•1.79</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-06-18
-
-
 
 </td>
 </tr>
@@ -690,28 +522,20 @@ Info Only
 
 1.79 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 SAP Fiori Elements 
 
-
-
 </td>
 <td valign="top">
 
 **SAP Fiori Elements** 
-
-
 
 </td>
 <td valign="top">
@@ -731,21 +555,15 @@ SAP Fiori Elements
 
 <sub>Changed•SAP Fiori Elements•Info Only•1.79</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-06-18
-
-
 
 </td>
 </tr>
@@ -753,6 +571,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.118](what-s-new-in-sapui5-1-118-3eecbde.md "With this release SAPUI5 is upgraded from version 1.117 to 1.118.")
 
 [What's New in SAPUI5 1.117](what-s-new-in-sapui5-1-117-029d3b4.md "With this release SAPUI5 is upgraded from version 1.116 to 1.117.")
 

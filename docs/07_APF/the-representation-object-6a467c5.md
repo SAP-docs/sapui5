@@ -33,14 +33,10 @@ The properties used in the `representation` object denote the following:
 
 Property
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -49,14 +45,10 @@ Description
 
 `id` 
 
-
-
 </td>
 <td valign="top">
 
 Unique ID of type string.
-
-
 
 </td>
 </tr>
@@ -65,14 +57,10 @@ Unique ID of type string.
 
 `representationTypeId` 
 
-
-
 </td>
 <td valign="top">
 
 ID of the `representation type` 
-
-
 
 </td>
 </tr>
@@ -81,16 +69,12 @@ ID of the `representation type`
 
 `parameter` 
 
-
-
 </td>
 <td valign="top">
 
 Defines specific information for the representation, for example, dimensions, measures, properties, the optional alternate table representation, and the column width for table representations. Dimensions, measures, properties and hierarchical property are all optional, but at least one of them must exist, depending on the representation type: Charts have dimensions and measures, tables have properties, and tree tables have a hierarchical property and optionally more properties.
 
 At runtime, the constructor defined in the object, which contains a label, an image, and a reference to the constructor function of the representation type `representation type` object is called with the parameters defined by this property.
-
-
 
 </td>
 </tr>
@@ -175,21 +159,15 @@ The kind attribute provides the option to maintain multiple dimensions. It is ma
 
 Chart Type
 
-
-
 </th>
 <th valign="top">
 
 Dimension
 
-
-
 </th>
 <th valign="top">
 
 feedItemId
-
-
 
 </th>
 </tr>
@@ -198,21 +176,15 @@ feedItemId
 
 Line chart, line chart with two vertical axes, column chart, bar chart, stacked column chart, stacked bar chart, 100% stacked column chart, 100% stacked bar chart, combined column line chart, combined stacked column line chart, combined column line chart with two vertical axes, combined stacked column line chart with two vertical axes
 
-
-
 </td>
 <td valign="top">
 
 First dimension
 
-
-
 </td>
 <td valign="top">
 
 categoryAxis
-
-
 
 </td>
 </tr>
@@ -221,14 +193,10 @@ categoryAxis
 
 Second dimension
 
-
-
 </td>
 <td valign="top">
 
 color
-
-
 
 </td>
 </tr>
@@ -237,21 +205,15 @@ color
 
 Line chart with time axis
 
-
-
 </td>
 <td valign="top">
 
 First dimension
 
-
-
 </td>
 <td valign="top">
 
 timeAxis
-
-
 
 </td>
 </tr>
@@ -260,14 +222,10 @@ timeAxis
 
 Second dimension
 
-
-
 </td>
 <td valign="top">
 
 color
-
-
 
 </td>
 </tr>
@@ -276,21 +234,15 @@ color
 
 Heatmap chart
 
-
-
 </td>
 <td valign="top">
 
 First dimension
 
-
-
 </td>
 <td valign="top">
 
 categoryAxis
-
-
 
 </td>
 </tr>
@@ -299,14 +251,10 @@ categoryAxis
 
 Second dimension
 
-
-
 </td>
 <td valign="top">
 
 valueAxis
-
-
 
 </td>
 </tr>
@@ -315,21 +263,15 @@ valueAxis
 
 Pie chart, donut chart
 
-
-
 </td>
 <td valign="top">
 
 Dimension
 
-
-
 </td>
 <td valign="top">
 
 color
-
-
 
 </td>
 </tr>
@@ -338,21 +280,15 @@ color
 
 Scatter chart, bubble chart
 
-
-
 </td>
 <td valign="top">
 
 First dimension
 
-
-
 </td>
 <td valign="top">
 
 color
-
-
 
 </td>
 </tr>
@@ -361,14 +297,10 @@ color
 
 Second dimension
 
-
-
 </td>
 <td valign="top">
 
 shape
-
-
 
 </td>
 </tr>
@@ -400,21 +332,15 @@ The kind attribute provides the option to maintain multiple measures. It is mapp
 
 Chart Type
 
-
-
 </th>
 <th valign="top">
 
 Measure
 
-
-
 </th>
 <th valign="top">
 
 feedItemId
-
-
 
 </th>
 </tr>
@@ -423,21 +349,15 @@ feedItemId
 
 Line chart, line chart with time axis, column chart, bar chart, stacked column chart, stacked bar chart, 100% stacked column chart, 100% stacked bar chart, combined column line chart, combined stacked column line chart
 
-
-
 </td>
 <td valign="top">
 
 Measure
 
-
-
 </td>
 <td valign="top">
 
 valueAxis
-
-
 
 </td>
 </tr>
@@ -446,21 +366,15 @@ valueAxis
 
 Heatmap chart
 
-
-
 </td>
 <td valign="top">
 
 Measure
 
-
-
 </td>
 <td valign="top">
 
 Color
-
-
 
 </td>
 </tr>
@@ -469,21 +383,15 @@ Color
 
 Pie chart, donut chart
 
-
-
 </td>
 <td valign="top">
 
 Measure
 
-
-
 </td>
 <td valign="top">
 
 size
-
-
 
 </td>
 </tr>
@@ -492,21 +400,15 @@ size
 
 Scatter chart, line chart with two vertical axes, combined column line chart with two vertical axes, combined stacked column line chart with two vertical axes
 
-
-
 </td>
 <td valign="top">
 
 First measure
 
-
-
 </td>
 <td valign="top">
 
 valueAxis
-
-
 
 </td>
 </tr>
@@ -515,14 +417,10 @@ valueAxis
 
 Second measure
 
-
-
 </td>
 <td valign="top">
 
 valueAxis2
-
-
 
 </td>
 </tr>
@@ -531,21 +429,15 @@ valueAxis2
 
 Bubble chart
 
-
-
 </td>
 <td valign="top">
 
 First measure
 
-
-
 </td>
 <td valign="top">
 
 valueAxis
-
-
 
 </td>
 </tr>
@@ -554,14 +446,10 @@ valueAxis
 
 Second measure
 
-
-
 </td>
 <td valign="top">
 
 valueAxis2
-
-
 
 </td>
 </tr>
@@ -570,14 +458,10 @@ valueAxis2
 
 Third measure
 
-
-
 </td>
 <td valign="top">
 
 bubbleWidth
-
-
 
 </td>
 </tr>

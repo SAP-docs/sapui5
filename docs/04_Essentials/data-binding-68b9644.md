@@ -64,28 +64,20 @@ The following table shows which binding modes are supported by the respective da
 
 Model
 
-
-
 </th>
 <th valign="top">
 
 One-time
-
-
 
 </th>
 <th valign="top">
 
 One-way
 
-
-
 </th>
 <th valign="top">
 
 Two-way
-
-
 
 </th>
 </tr>
@@ -94,28 +86,20 @@ Two-way
 
 OData V4 model
 
-
-
 </td>
 <td valign="top">
 
 ![Supported](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
-
-
 </td>
 <td valign="top">
 
 ![Supported](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
-
-
 
 </td>
 <td valign="top">
 
 ![Supported](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) \(default\)
-
-
 
 </td>
 </tr>
@@ -124,28 +108,20 @@ OData V4 model
 
 OData V2 model
 
-
-
 </td>
 <td valign="top">
 
 ![Supported](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
-
-
 
 </td>
 <td valign="top">
 
 ![Supported](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) \(default\)
 
-
-
 </td>
 <td valign="top">
 
 ![Supported](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
-
-
 
 </td>
 </tr>
@@ -154,28 +130,20 @@ OData V2 model
 
 ODataMetaModel V4
 
-
-
 </td>
 <td valign="top">
 
 ![Supported](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) \(default\)
-
-
 
 </td>
 <td valign="top">
 
 ![Supported](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
-
-
 </td>
 <td valign="top">
 
 ![Not supported](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
-
-
 
 </td>
 </tr>
@@ -184,28 +152,20 @@ ODataMetaModel V4
 
 ODataMetaModel
 
-
-
 </td>
 <td valign="top">
 
 ![Supported](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) \(default\)
 
-
-
 </td>
 <td valign="top">
 
 ![Not supported](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
 
-
-
 </td>
 <td valign="top">
 
 ![Not supported](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
-
-
 
 </td>
 </tr>
@@ -214,28 +174,20 @@ ODataMetaModel
 
 JSON model
 
-
-
 </td>
 <td valign="top">
 
 ![Supported](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
-
-
 </td>
 <td valign="top">
 
 ![Supported](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
-
-
 
 </td>
 <td valign="top">
 
 ![Supported](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) \(default\)
-
-
 
 </td>
 </tr>
@@ -244,28 +196,20 @@ JSON model
 
 XML model
 
-
-
 </td>
 <td valign="top">
 
 ![Supported](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
-
-
 </td>
 <td valign="top">
 
 ![Supported](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
-
-
 
 </td>
 <td valign="top">
 
 ![Supported](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) \(default\)
-
-
 
 </td>
 </tr>
@@ -274,28 +218,20 @@ XML model
 
 Resource model
 
-
-
 </td>
 <td valign="top">
 
 ![Supported](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
-
-
 
 </td>
 <td valign="top">
 
 ![Supported](../02_Read-Me-First/images/Green_Led_3cb17ee.gif) \(default\)
 
-
-
 </td>
 <td valign="top">
 
 ![Not supported](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
-
-
 
 </td>
 </tr>

@@ -11,6 +11,8 @@ The `AnnotationHelper` connects all the pieces related to XML templating: It kno
 
 
 
+<a name="loiodbec058964f545e4bb3b7e9fbaa0602d__section_evw_l4f_2zb"/>
+
 ## Formatter Functions
 
 The formatter functions can be used in binding expressions and `<template:if>` instructions for test conditions.
@@ -42,15 +44,15 @@ The following formatter functions exist:
 
     -   Constant *"14.4.11 Expression edm:String"*: This constant is either turned into fixed text, for example *"Width"*, or into a data binding expression, for example `"{/##/dataServices/schema/0/entityType/1/com.sap.vocabularies.UI.v1.FieldGroup#Dimensions/Data/0/Label/String}"`. If XML template processing has been started with the setting `bindTexts : true`, data binding expressions are used. The constant is used to reference translatable texts from OData v4 annotations, especially for XML template processing at design time. The string constants that contain a simple binding `"{@i18n>...}"` to the hard-coded model name `"@i18n"` with an arbitrary path are not turned into a fixed text, but kept as a data binding expression. This enables local annotation files to refer to a resource bundle for internationalization. If you want to avoid this behaviour, add a space at the end of the string constant and it will be turned into a fixed text again.
 
-    -   Dynamic *"14.5.1 Comparison and Logical Operators"*: Turned into an expression binding to perform the operations at runtime
+    -   Dynamic *"14.5.1 Comparison and Logical Operators"*: Turned into an expression binding to perform the operations at runtime. It's strongly recommended to require the `sap.ui.model.odata.v4.ODataUtils` module in advance to avoid synchronous loading of this module.
 
     -   Dynamic *"14.5.3 Expression edm:Apply"*:
 
         -   *"14.5.3.1.1 Function odata.concat"*: Turned into a data binding expression relative to an entity
 
-        -   *"14.5.3.1.2 Function odata.fillUriTemplate"*: Turned into an expression binding to fill the template at runtime
+        -   *"14.5.3.1.2 Function odata.fillUriTemplate"*: Turned into an expression binding to fill the template at runtime. It's strongly recommended to require the `sap.ui.thirdparty.URITemplate` module in advance to avoid synchronous loading of this module.
 
-        -   *"14.5.3.1.3 Function odata.uriEncode"*: Turned into an expression binding to encode the parameter at runtime
+        -   *"14.5.3.1.3 Function odata.uriEncode"*: Turned into an expression binding to encode the parameter at runtime. It's strongly recommended to require the `sap.ui.model.odata.ODataUtils` module in advance to avoid synchronous loading of this module.
 
 
         The *apply* functions can be nested arbitrarily.
@@ -141,6 +143,12 @@ var oModel = this.getModel(),
 ```
 
 The formatter functions are called with a context object as first parameter. The second parameter \(`vRawValue`\) is optional. If the value is not provided, it is calculated in the formatter function. If the application has already calculated the value, it passes the raw value as second parameter, thus avoiding unnecessary further calculations of the raw value.
+
+
+
+<a name="loiodbec058964f545e4bb3b7e9fbaa0602d__section_fvw_l4f_2zb"/>
+
+## Helper Functions
 
 The following helper functions can be used with `<template:with>`:
 

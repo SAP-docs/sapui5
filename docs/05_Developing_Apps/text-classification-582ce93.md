@@ -27,15 +27,11 @@ We recommend that you assign a text type to each text. The text type indicates t
     <th valign="top">
 
     **Text Type** 
-
-
     
     </th>
     <th valign="top">
 
     **Description** 
-
-
     
     </th>
     </tr>
@@ -43,15 +39,11 @@ We recommend that you assign a text type to each text. The text type indicates t
     <td valign="top">
     
     `XACT`
-
-
     
     </td>
     <td valign="top">
     
     Accessibility
-
-
     
     </td>
     </tr>
@@ -59,15 +51,11 @@ We recommend that you assign a text type to each text. The text type indicates t
     <td valign="top">
     
     `XBUT`
-
-
     
     </td>
     <td valign="top">
     
     Button
-
-
     
     </td>
     </tr>
@@ -75,15 +63,11 @@ We recommend that you assign a text type to each text. The text type indicates t
     <td valign="top">
     
     `XCKL`
-
-
     
     </td>
     <td valign="top">
     
     Checkbox
-
-
     
     </td>
     </tr>
@@ -91,15 +75,11 @@ We recommend that you assign a text type to each text. The text type indicates t
     <td valign="top">
     
     `XCOL`
-
-
     
     </td>
     <td valign="top">
     
     Column header
-
-
     
     </td>
     </tr>
@@ -107,15 +87,11 @@ We recommend that you assign a text type to each text. The text type indicates t
     <td valign="top">
     
     `XFLD`
-
-
     
     </td>
     <td valign="top">
     
     Label
-
-
     
     </td>
     </tr>
@@ -123,15 +99,11 @@ We recommend that you assign a text type to each text. The text type indicates t
     <td valign="top">
     
     `XGRP`
-
-
     
     </td>
     <td valign="top">
     
     Group title
-
-
     
     </td>
     </tr>
@@ -139,15 +111,11 @@ We recommend that you assign a text type to each text. The text type indicates t
     <td valign="top">
     
     `XLNK`
-
-
     
     </td>
     <td valign="top">
     
     Hyperlink
-
-
     
     </td>
     </tr>
@@ -155,15 +123,11 @@ We recommend that you assign a text type to each text. The text type indicates t
     <td valign="top">
     
     `XLOG`
-
-
     
     </td>
     <td valign="top">
     
     Log entry
-
-
     
     </td>
     </tr>
@@ -171,15 +135,11 @@ We recommend that you assign a text type to each text. The text type indicates t
     <td valign="top">
     
     `XLST`
-
-
     
     </td>
     <td valign="top">
     
     List box item
-
-
     
     </td>
     </tr>
@@ -187,15 +147,11 @@ We recommend that you assign a text type to each text. The text type indicates t
     <td valign="top">
     
     `XMIT`
-
-
     
     </td>
     <td valign="top">
     
     Menu item
-
-
     
     </td>
     </tr>
@@ -203,15 +159,11 @@ We recommend that you assign a text type to each text. The text type indicates t
     <td valign="top">
     
     `XMSG`
-
-
     
     </td>
     <td valign="top">
     
     Message
-
-
     
     </td>
     </tr>
@@ -219,15 +171,11 @@ We recommend that you assign a text type to each text. The text type indicates t
     <td valign="top">
     
     `XRBL`
-
-
     
     </td>
     <td valign="top">
     
     Radio button
-
-
     
     </td>
     </tr>
@@ -235,15 +183,11 @@ We recommend that you assign a text type to each text. The text type indicates t
     <td valign="top">
     
     `XSEL`
-
-
     
     </td>
     <td valign="top">
     
     Selection
-
-
     
     </td>
     </tr>
@@ -251,15 +195,11 @@ We recommend that you assign a text type to each text. The text type indicates t
     <td valign="top">
     
     `XTIT`
-
-
     
     </td>
     <td valign="top">
     
     Table title
-
-
     
     </td>
     </tr>
@@ -267,15 +207,11 @@ We recommend that you assign a text type to each text. The text type indicates t
     <td valign="top">
     
     `XTOL`
-
-
     
     </td>
     <td valign="top">
     
     Tooltip
-
-
     
     </td>
     </tr>
@@ -289,15 +225,11 @@ We recommend that you assign a text type to each text. The text type indicates t
     <th valign="top">
 
     **Text Type** 
-
-
     
     </th>
     <th valign="top">
 
     **Description** 
-
-
     
     </th>
     </tr>
@@ -305,15 +237,11 @@ We recommend that you assign a text type to each text. The text type indicates t
     <td valign="top">
     
     `YINS`
-
-
     
     </td>
     <td valign="top">
     
     Instruction
-
-
     
     </td>
     </tr>
@@ -335,14 +263,10 @@ To ensure that translators have enough space for the translated texts, set an ap
 
 Length of Source Text in Characters
 
-
-
 </th>
 <th valign="top">
 
 How Is the Maximum Text Length for Translation Calculated?
-
-
 
 </th>
 </tr>
@@ -351,14 +275,10 @@ How Is the Maximum Text Length for Translation Calculated?
 
 < 8
 
-
-
 </td>
 <td valign="top">
 
 Multiply by 5; minimum 12 characters
-
-
 
 </td>
 </tr>
@@ -367,14 +287,10 @@ Multiply by 5; minimum 12 characters
 
 8 - 30
 
-
-
 </td>
 <td valign="top">
 
 Multiply by 3
-
-
 
 </td>
 </tr>
@@ -383,14 +299,10 @@ Multiply by 3
 
 \> 31
 
-
-
 </td>
 <td valign="top">
 
 Multiply by 1.5
-
-
 
 </td>
 </tr>

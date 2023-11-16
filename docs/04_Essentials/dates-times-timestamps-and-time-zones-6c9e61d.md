@@ -43,35 +43,25 @@ OData provides different Edm types for handling timestamps, dates, and times. Fo
 
 Edm Type
 
-
-
 </th>
 <th valign="top">
 
 Transported as \(in JSON Format\)
-
-
 
 </th>
 <th valign="top">
 
 Model Representation
 
-
-
 </th>
 <th valign="top">
 
 SAPUI5 Type
 
-
-
 </th>
 <th valign="top">
 
 Meaning
-
-
 
 </th>
 </tr>
@@ -80,8 +70,6 @@ Meaning
 
 **OData V4 Edm Types**
 
-
-
 </td>
 </tr>
 <tr>
@@ -89,35 +77,25 @@ Meaning
 
 `Edm.Date`
 
-
-
 </td>
 <td valign="top">
 
 "Date" : "2014-03-25"
-
-
 
 </td>
 <td valign="top">
 
 String
 
-
-
 </td>
 <td valign="top">
 
 [`sap.ui.model.odata.type.Date`](https://ui5.sap.com/#/api/sap.ui.model.odata.type.Date)
 
-
-
 </td>
 <td valign="top">
 
 A **date** as defined above.
-
-
 
 </td>
 </tr>
@@ -126,35 +104,25 @@ A **date** as defined above.
 
 `Edm.DateTimeOffset`
 
-
-
 </td>
 <td valign="top">
 
 "DateTimeOffset" : "2015-01-06T07:25:21Z"
-
-
 
 </td>
 <td valign="top">
 
 String
 
-
-
 </td>
 <td valign="top">
 
 [`sap.ui.model.odata.type.DateTimeOffset`](https://ui5.sap.com/#/api/sap.ui.model.odata.type.DateTimeOffset)
 
-
-
 </td>
 <td valign="top">
 
 A **timestamp** as defined above.
-
-
 
 </td>
 </tr>
@@ -163,35 +131,25 @@ A **timestamp** as defined above.
 
 `Edm.TimeOfDay`
 
-
-
 </td>
 <td valign="top">
 
 "TimeOfDay" : "07:25:21"
-
-
 
 </td>
 <td valign="top">
 
 String
 
-
-
 </td>
 <td valign="top">
 
 [`sap.ui.model.odata.type.TimeOfDay`](https://ui5.sap.com/#/api/sap.ui.model.odata.type.TimeOfDay)
 
-
-
 </td>
 <td valign="top">
 
 A **time** as defined above.
-
-
 
 </td>
 </tr>
@@ -200,8 +158,6 @@ A **time** as defined above.
 
 **OData V2 Edm Types**
 
-
-
 </td>
 </tr>
 <tr>
@@ -209,35 +165,25 @@ A **time** as defined above.
 
 `Edm.DateTime`
 
-
-
 </td>
 <td valign="top">
 
 "DateTime" : "\\/Date\(1395752399000\)\\/"
-
-
 
 </td>
 <td valign="top">
 
 JavaScript `Date`
 
-
-
 </td>
 <td valign="top">
 
 [`sap.ui.model.odata.type.DateTime`](https://ui5.sap.com/#/api/sap.ui.model.odata.type.DateTime) with constraint`displayFormat: "Date"`
 
-
-
 </td>
 <td valign="top">
 
 A **date** as defined above if the property/parameter is annotated with `sap:display-format="Date"`. Using this type as a **timestamp** is not recommended; use `Edm.DateTimeOffset` instead.
-
-
 
 </td>
 </tr>
@@ -246,35 +192,25 @@ A **date** as defined above if the property/parameter is annotated with `sap:dis
 
 `Edm.DateTimeOffset`
 
-
-
 </td>
 <td valign="top">
 
 "DateTimeOffset" : "\\/Date\(1420529121547+0000\)\\/"
-
-
 
 </td>
 <td valign="top">
 
 JavaScript `Date`
 
-
-
 </td>
 <td valign="top">
 
 [`sap.ui.model.odata.type.DateTimeOffset`](https://ui5.sap.com/#/api/sap.ui.model.odata.type.DateTimeOffset)
 
-
-
 </td>
 <td valign="top">
 
 A **timestamp** as defined above.
-
-
 
 </td>
 </tr>
@@ -283,35 +219,25 @@ A **timestamp** as defined above.
 
 `Edm.Time`
 
-
-
 </td>
 <td valign="top">
 
 "Time" : "PT11H33M55S"
-
-
 
 </td>
 <td valign="top">
 
 \{ ms : 41635000 , \_\_edmType : 'Edm.Time' \}
 
-
-
 </td>
 <td valign="top">
 
 [`sap.ui.model.odata.type.Time`](https://ui5.sap.com/#/api/sap.ui.model.odata.type.Time)
 
-
-
 </td>
 <td valign="top">
 
 A **time** as defined above.
-
-
 
 </td>
 </tr>

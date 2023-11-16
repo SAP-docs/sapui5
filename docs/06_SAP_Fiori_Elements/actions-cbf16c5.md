@@ -19,28 +19,20 @@ Application-specific actions either trigger an interaction with the back end, ca
 
  
 
-
-
 </th>
 <th valign="top">
 
 Action Type
-
-
 
 </th>
 <th valign="top">
 
 Context Dependency
 
-
-
 </th>
 <th valign="top">
 
 Use
-
-
 
 </th>
 </tr>
@@ -49,8 +41,6 @@ Use
 
 Global Actions
 
-
-
 </td>
 </tr>
 <tr>
@@ -58,21 +48,15 @@ Global Actions
 
  
 
-
-
 </td>
 <td valign="top" rowspan="3">
 
 custom action
 
-
-
 </td>
 <td valign="top" rowspan="3">
 
 context independent
-
-
 
 </td>
 <td valign="top">
@@ -83,8 +67,6 @@ Object Page
 
 [Adding Custom Actions Using Extension Points](adding-custom-actions-using-extension-points-7619517.md)
 
-
-
 </td>
 </tr>
 <tr>
@@ -93,8 +75,6 @@ Object Page
 Overview Page
 
 [Custom Actions](custom-actions-02fb273.md)
-
-
 
 </td>
 </tr>
@@ -105,16 +85,12 @@ Analytical List Page
 
 [Defining Custom Actions](defining-custom-actions-c3de5c0.md)
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
 annotation-based
-
-
 
 </td>
 <td valign="top">
@@ -133,16 +109,12 @@ Object Page
 
 [Enabling Actions in the Object Page Header](enabling-actions-in-the-object-page-header-5fe4396.md)
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top" colspan="4">
 
 Actions in the Table Toolbar
-
-
 
 </td>
 </tr>
@@ -156,14 +128,10 @@ Actions in the Table Toolbar
 
 annotation-based
 
-
-
 </td>
 <td valign="top" rowspan="3">
 
 depends \(see linked topics\)
-
-
 
 </td>
 <td valign="top">
@@ -176,16 +144,12 @@ Object Page
 
 [Generic Action Buttons in Tables on the Object Page: Additional Considerations](generic-action-buttons-in-tables-on-the-object-page-additional-considerations-d27ae99.md)
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
 Analytical List Page
-
-
 
 </td>
 </tr>
@@ -194,8 +158,6 @@ Analytical List Page
 
 [Configuring the Table-Only View as the Default Option](configuring-the-table-only-view-as-the-default-option-d074e26.md) 
 
-
-
 </td>
 </tr>
 <tr>
@@ -203,14 +165,10 @@ Analytical List Page
 
 custom action
 
-
-
 </td>
 <td valign="top" rowspan="2">
 
 context independent
-
-
 
 </td>
 <td valign="top">
@@ -221,8 +179,6 @@ Object Page
 
 [Adding Custom Actions Using Extension Points](adding-custom-actions-using-extension-points-7619517.md)
 
-
-
 </td>
 </tr>
 <tr>
@@ -232,8 +188,6 @@ Analytical List Page
 
 [Defining Custom Actions](defining-custom-actions-c3de5c0.md)
 
-
-
 </td>
 </tr>
 <tr>
@@ -241,21 +195,15 @@ Analytical List Page
 
 More Information about Actions in the Object Page
 
-
-
 </td>
 <td valign="top">
 
 n/a
 
-
-
 </td>
 <td valign="top">
 
 n/a
-
-
 
 </td>
 <td valign="top">
@@ -264,16 +212,12 @@ n/a
 
 [Enabling the Related Apps Button](enabling-the-related-apps-button-8dcfe2e.md)
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top" colspan="4">
 
 Actions in Forms and Sections on the Object Page
-
-
 
 </td>
 </tr>
@@ -282,28 +226,20 @@ Actions in Forms and Sections on the Object Page
 
  
 
-
-
 </td>
 <td valign="top">
 
 annotation-based
-
-
 
 </td>
 <td valign="top">
 
 depends \(see linked topics\)
 
-
-
 </td>
 <td valign="top">
 
 [Adding Action Buttons to Forms in Sections](adding-action-buttons-to-forms-in-sections-e64efda.md) 
-
-
 
 </td>
 </tr>
@@ -312,21 +248,15 @@ depends \(see linked topics\)
 
 custom action
 
-
-
 </td>
 <td valign="top">
 
 context independent
 
-
-
 </td>
 <td valign="top">
 
 [Adding Custom Actions Using Extension Points](adding-custom-actions-using-extension-points-7619517.md) 
-
-
 
 </td>
 </tr>
@@ -335,8 +265,6 @@ context independent
 
 Actions in the Chart Toolbar
 
-
-
 </td>
 </tr>
 <tr>
@@ -344,28 +272,20 @@ Actions in the Chart Toolbar
 
  
 
-
-
 </td>
 <td valign="top" rowspan="2">
 
 annotation-based
-
-
 
 </td>
 <td valign="top" rowspan="2">
 
 depends \(see linked topics\)
 
-
-
 </td>
 <td valign="top">
 
 [Defining Actions in the Chart Toolbar](defining-actions-in-the-chart-toolbar-7d1fa83.md) 
-
-
 
 </td>
 </tr>
@@ -376,8 +296,6 @@ Analytical List Page
 
 [Configuring the Chart-Only View as the Default Option](configuring-the-chart-only-view-as-the-default-option-8e6e885.md)
 
-
-
 </td>
 </tr>
 <tr>
@@ -385,14 +303,10 @@ Analytical List Page
 
 using `manifest.json` settings
 
-
-
 </td>
 <td valign="top">
 
 depends \(see linked topics\)
-
-
 
 </td>
 <td valign="top">
@@ -401,16 +315,12 @@ Analytical List Page
 
 [Defining Custom Actions](defining-custom-actions-c3de5c0.md)
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top" colspan="4">
 
 Determining Actions
-
-
 
 </td>
 </tr>
@@ -419,14 +329,10 @@ Determining Actions
 
  
 
-
-
 </td>
 <td valign="top" rowspan="2">
 
 annotation-based
-
-
 
 </td>
 <td valign="top">
@@ -445,16 +351,12 @@ Object Page
 
 [Defining Determining Actions](defining-determining-actions-1743323.md)
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
 available content is passed
-
-
 
 </td>
 <td valign="top">
@@ -463,8 +365,6 @@ Analytical List Page
 
 [Configuring the Table-Only View as the Default Option](configuring-the-table-only-view-as-the-default-option-d074e26.md)
 
-
-
 </td>
 </tr>
 <tr>
@@ -472,14 +372,10 @@ Analytical List Page
 
 custom action
 
-
-
 </td>
 <td valign="top">
 
 context independent
-
-
 
 </td>
 <td valign="top">
@@ -488,16 +384,12 @@ Object Page
 
 [Adding Custom Actions Using Extension Points](adding-custom-actions-using-extension-points-7619517.md)
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top" colspan="4">
 
 Actions in the Quick View Card
-
-
 
 </td>
 </tr>
@@ -506,21 +398,15 @@ Actions in the Quick View Card
 
  
 
-
-
 </td>
 <td valign="top" rowspan="2">
 
 annotation-based
 
-
-
 </td>
 <td valign="top">
 
 context dependent
-
-
 
 </td>
 <td valign="top">
@@ -529,16 +415,12 @@ Overview Page
 
 [Quick View Cards](quick-view-cards-c4bd35e.md)
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
  
-
-
 
 </td>
 <td valign="top">
@@ -548,8 +430,6 @@ List Report
 Object Page
 
 [Enabling Quick Views for Link Navigation](enabling-quick-views-for-link-navigation-307ced1.md)
-
-
 
 </td>
 </tr>
@@ -801,14 +681,10 @@ The `InvocationGrouping` property denotes how multiple invocations of the same a
 
 Value
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -816,8 +692,6 @@ Description
 <td valign="top">
 
 UI.OperationGroupingType/Isolated
-
-
 
 </td>
 <td valign="top">
@@ -833,16 +707,12 @@ UI.OperationGroupingType/Isolated
 
 Even if an error occurs for one or more selected instances when an action is executed, the other selected instances are still executed.
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
 UI.OperationGroupingType/ChangeSet
-
-
 
 </td>
 <td valign="top">

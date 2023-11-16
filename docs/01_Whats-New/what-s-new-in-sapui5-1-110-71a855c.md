@@ -15,49 +15,35 @@ With this release SAPUI5 is upgraded from version 1.109 to 1.110.
 
 Version
 
-
-
 </th>
 <th valign="top">
 
 Type
-
-
 
 </th>
 <th valign="top">
 
 Category
 
-
-
 </th>
 <th valign="top">
 
 Title
-
-
 
 </th>
 <th valign="top">
 
 Description
 
-
-
 </th>
 <th valign="top">
 
 Action
 
-
-
 </th>
 <th valign="top">
 
 Available as of
-
-
 
 </th>
 </tr>
@@ -66,28 +52,20 @@ Available as of
 
 1.110 
 
-
-
 </td>
 <td valign="top">
 
 New 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.p13n.Engine`** 
-
-
 
 </td>
 <td valign="top">
@@ -98,21 +76,15 @@ We have provided a new entity that allows custom control developers and applicat
 
 <sub>New•Feature•Info Only•1.110</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-01-26
-
-
 
 </td>
 </tr>
@@ -121,28 +93,20 @@ Info Only
 
 1.110 
 
-
-
 </td>
 <td valign="top">
 
 New 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **Copy-to-Clipboard Feature for Tables** 
-
-
 
 </td>
 <td valign="top">
@@ -153,21 +117,15 @@ Users can copy selected table content to the clipboard and use it anywhere insid
 
 <sub>New•Feature•Info Only•1.110</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-01-26
-
-
 
 </td>
 </tr>
@@ -176,28 +134,20 @@ Info Only
 
 1.110 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **Spreadsheet Export** 
-
-
 
 </td>
 <td valign="top">
@@ -208,21 +158,15 @@ When you export data from `ClientListBinding` the data objects are now requested
 
 <sub>Changed•Feature•Info Only•1.110</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-01-26
-
-
 
 </td>
 </tr>
@@ -231,28 +175,20 @@ Info Only
 
 1.110 
 
-
-
 </td>
 <td valign="top">
 
 Deprecated 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **Deprecations** 
-
-
 
 </td>
 <td valign="top">
@@ -263,21 +199,15 @@ There are currently no major deprecations. For a complete list of all deprecatio
 
 <sub>Deprecated•Feature•Info Only•1.110</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-01-26
-
-
 
 </td>
 </tr>
@@ -286,28 +216,20 @@ Info Only
 
 1.110 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.comp.smarttable.SmartTable`** 
-
-
 
 </td>
 <td valign="top">
@@ -321,21 +243,15 @@ Control
 
 <sub>Changed•Control•Info Only•1.110</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-01-26
-
-
 
 </td>
 </tr>
@@ -344,28 +260,20 @@ Info Only
 
 1.110 
 
-
-
 </td>
 <td valign="top">
 
 New 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.table.ColumnMenu`** 
-
-
 
 </td>
 <td valign="top">
@@ -394,21 +302,15 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.ta
 
 <sub>New•Control•Info Only•1.110</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-01-26
-
-
 
 </td>
 </tr>
@@ -417,28 +319,20 @@ Info Only
 
 1.110 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **Header Bar in Key User Adaptation** 
-
-
 
 </td>
 <td valign="top">
@@ -462,21 +356,15 @@ The following screenshot shows an example:
 
 <sub>Changed•Feature•Info Only•1.110</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-01-26
-
-
 
 </td>
 </tr>
@@ -485,28 +373,20 @@ Info Only
 
 1.110 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 ****`sap.m.PlanningCalendar, sap.m.SinglePlanningCalendar`**, and **`sap.ui.core.format.DateFormat`**** 
-
-
 
 </td>
 <td valign="top">
@@ -519,21 +399,15 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.c
 
 <sub>Changed•Control•Info Only•1.110</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-01-26
-
-
 
 </td>
 </tr>
@@ -542,28 +416,20 @@ Info Only
 
 1.110 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.ObjectStatus`** 
-
-
 
 </td>
 <td valign="top">
@@ -576,21 +442,15 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.Ob
 
 <sub>Changed•Control•Info Only•1.110</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-01-26
-
-
 
 </td>
 </tr>
@@ -599,28 +459,20 @@ Info Only
 
 1.110 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.core.ScrollEnablement`** 
-
-
 
 </td>
 <td valign="top">
@@ -631,21 +483,15 @@ We have added a new option to the `scrollToElement` API method of the `sap.ui.co
 
 <sub>Changed•Control•Info Only•1.110</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-01-26
-
-
 
 </td>
 </tr>
@@ -654,28 +500,20 @@ Info Only
 
 1.110 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.IllustratedMessage`** 
-
-
 
 </td>
 <td valign="top">
@@ -688,21 +526,15 @@ For more information, see the [Samples](https://ui5.sap.com/#/entity/sap.m.Illus
 
 <sub>Changed•Control•Info Only•1.110</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-01-26
-
-
 
 </td>
 </tr>
@@ -711,28 +543,20 @@ Info Only
 
 1.110 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.ComboBox`** 
-
-
 
 </td>
 <td valign="top">
@@ -743,21 +567,15 @@ We have updated the behavior of the `loadItems` API. Now, when the picker is ope
 
 <sub>Changed•Control•Info Only•1.110</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-01-26
-
-
 
 </td>
 </tr>
@@ -766,28 +584,20 @@ Info Only
 
 1.110 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **Demo Kit: Improved main theme selection** 
-
-
 
 </td>
 <td valign="top">
@@ -798,21 +608,15 @@ We have added the latest high contrast themes to the main theme selector in the 
 
 <sub>Changed•Feature•Info Only•1.110</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-01-26
-
-
 
 </td>
 </tr>
@@ -821,28 +625,20 @@ Info Only
 
 1.110 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.integration.widgets.Card`** 
-
-
 
 </td>
 <td valign="top">
@@ -858,21 +654,15 @@ Control
 
 <sub>Changed•Control•Info Only•1.110</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-01-26
-
-
 
 </td>
 </tr>
@@ -881,28 +671,20 @@ Info Only
 
 1.110 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.comp.smartfield.SmartField`** 
-
-
 
 </td>
 <td valign="top">
@@ -913,21 +695,15 @@ When the control renders a combo box, it gets the text arrangement for the dropd
 
 <sub>Changed•Control•Info Only•1.110</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-01-26
-
-
 
 </td>
 </tr>
@@ -936,28 +712,20 @@ Info Only
 
 1.110 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 SAP Fiori Elements 
 
-
-
 </td>
 <td valign="top">
 
 **SAP Fiori elements for OData V2** 
-
-
 
 </td>
 <td valign="top">
@@ -977,21 +745,15 @@ The following changes and new features are available for SAP Fiori elements for 
 
 <sub>Changed•SAP Fiori Elements•Info Only•1.110</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-01-26
-
-
 
 </td>
 </tr>
@@ -1000,28 +762,20 @@ Info Only
 
 1.110 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 SAP Fiori Elements 
 
-
-
 </td>
 <td valign="top">
 
 **SAP Fiori elements for OData V4** 
-
-
 
 </td>
 <td valign="top">
@@ -1043,21 +797,15 @@ The following changes and new features are available for SAP Fiori elements for 
 
 <sub>Changed•SAP Fiori Elements•Info Only•1.110</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-01-26
-
-
 
 </td>
 </tr>
@@ -1066,28 +814,20 @@ Info Only
 
 1.110 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.SelectDialog`** 
-
-
 
 </td>
 <td valign="top">
@@ -1100,21 +840,15 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.Se
 
 <sub>Changed•Control•Info Only•1.110</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-01-26
-
-
 
 </td>
 </tr>
@@ -1123,28 +857,20 @@ Info Only
 
 1.110 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.Dialog`** 
-
-
 
 </td>
 <td valign="top">
@@ -1155,21 +881,15 @@ We have added a new `footer` aggregation of type `sap.m.Toolbar` to the control.
 
 <sub>Changed•Control•Info Only•1.110</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-01-26
-
-
 
 </td>
 </tr>
@@ -1178,28 +898,20 @@ Info Only
 
 1.110 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.Carousel`** 
-
-
 
 </td>
 <td valign="top">
@@ -1210,21 +922,15 @@ Using the new `backgroundDesign` property, you can now set the carousel’s back
 
 <sub>Changed•Control•Info Only•1.110</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-01-26
-
-
 
 </td>
 </tr>
@@ -1233,28 +939,20 @@ Info Only
 
 1.110 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 ****SAPUI5 Formatters**** 
-
-
 
 </td>
 <td valign="top">
@@ -1269,21 +967,15 @@ The new version of SAPUI5 introduces the following formatting features:
 
 <sub>Changed•Feature•Info Only•1.110</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-01-26
-
-
 
 </td>
 </tr>
@@ -1292,28 +984,20 @@ Info Only
 
 1.110 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **SAPUI5 OData V4 Model** 
-
-
 
 </td>
 <td valign="top">
@@ -1329,21 +1013,15 @@ The new version of the SAPUI5 OData V4 model introduces the following features:
 
 <sub>Changed•Feature•Info Only•1.110</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-01-26
-
-
 
 </td>
 </tr>
@@ -1351,6 +1029,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.118](what-s-new-in-sapui5-1-118-3eecbde.md "With this release SAPUI5 is upgraded from version 1.117 to 1.118.")
 
 [What's New in SAPUI5 1.117](what-s-new-in-sapui5-1-117-029d3b4.md "With this release SAPUI5 is upgraded from version 1.116 to 1.117.")
 

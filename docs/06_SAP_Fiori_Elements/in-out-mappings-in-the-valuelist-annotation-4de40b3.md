@@ -20,14 +20,10 @@ This topic provides information about the structure of the `ValueList` annotatio
 
 Property
 
-
-
 </th>
 <th valign="top">
 
 Details
-
-
 
 </th>
 </tr>
@@ -36,14 +32,10 @@ Details
 
 Label \(Optional, String\)
 
-
-
 </td>
 <td valign="top">
 
 Enter label information
-
-
 
 </td>
 </tr>
@@ -52,14 +44,10 @@ Enter label information
 
 `CollectionPath` \(Required, String\)
 
-
-
 </td>
 <td valign="top">
 
 Entity set for retrieving value help
-
-
 
 </td>
 </tr>
@@ -68,14 +56,10 @@ Entity set for retrieving value help
 
 `SearchSupported` \(Required, Bool\)
 
-
-
 </td>
 <td valign="top">
 
 True or False
-
-
 
 </td>
 </tr>
@@ -83,8 +67,6 @@ True or False
 <td valign="top">
 
 Parameters
-
-
 
 </td>
 <td valign="top">
@@ -188,35 +170,25 @@ Consider the following table in which all of the entity sets refer to the same b
 
 Business Object
 
-
-
 </th>
 <th valign="top">
 
 Z0020 \(Main Entity Set\)
-
-
 
 </th>
 <th valign="top">
 
 Z0021 \(Entity Set\)
 
-
-
 </th>
 <th valign="top">
 
 Z0022 \(Entity Set\)
 
-
-
 </th>
 <th valign="top">
 
 Z0023 \(Entity Set\)
-
-
 
 </th>
 </tr>
@@ -225,35 +197,25 @@ Z0023 \(Entity Set\)
 
 Region
 
-
-
 </td>
 <td valign="top">
 
 RegionID
-
-
 
 </td>
 <td valign="top">
 
 RegionCode
 
-
-
 </td>
 <td valign="top">
 
 RegionIdentifier
 
-
-
 </td>
 <td valign="top">
 
 RegionNumber
-
-
 
 </td>
 </tr>
@@ -262,35 +224,25 @@ RegionNumber
 
 Country
 
-
-
 </td>
 <td valign="top">
 
 CountryID
-
-
 
 </td>
 <td valign="top">
 
 CountryCode
 
-
-
 </td>
 <td valign="top">
 
 CountryIdentifier
 
-
-
 </td>
 <td valign="top">
 
 CountryNumber
-
-
 
 </td>
 </tr>
@@ -299,35 +251,25 @@ CountryNumber
 
 Plant
 
-
-
 </td>
 <td valign="top">
 
 PlantID
-
-
 
 </td>
 <td valign="top">
 
 PlantCode
 
-
-
 </td>
 <td valign="top">
 
 PlantIdentifier
 
-
-
 </td>
 <td valign="top">
 
 PlantNumber
-
-
 
 </td>
 </tr>

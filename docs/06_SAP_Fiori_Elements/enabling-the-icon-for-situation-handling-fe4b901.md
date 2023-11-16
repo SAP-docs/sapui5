@@ -26,3 +26,5 @@ The following screenshot shows an example from an object page:
 
 ![](images/Situation_Handling_on_an_Object_Page_3268202.png)
 
+In applications using the situation handling framework, the business situations icon is displayed in a separate column in grid tables.
+

@@ -17,21 +17,15 @@ The table below shows the content densities that are available for the Quartz Li
 
 Content Density
 
-
-
 </th>
 <th valign="top">
 
 CSS Class
 
-
-
 </th>
 <th valign="top">
 
 Explanation
-
-
 
 </th>
 </tr>
@@ -40,14 +34,10 @@ Explanation
 
 *Cozy* 
 
-
-
 </td>
 <td valign="top">
 
 `sapUiSizeCozy` 
-
-
 
 </td>
 <td valign="top">
@@ -56,8 +46,6 @@ Explanation
 
 This is the default density for most controls, particularly those in the `sap.m` library.
 
-
-
 </td>
 </tr>
 <tr>
@@ -65,14 +53,10 @@ This is the default density for most controls, particularly those in the `sap.m`
 
 *Compact* 
 
-
-
 </td>
 <td valign="top">
 
 `sapUiSizeCompact` 
-
-
 
 </td>
 <td valign="top">
@@ -81,8 +65,6 @@ Reduced-size design: The font size is the same as for the cozy density, but the 
 
 For some controls, this is the default density.
 
-
-
 </td>
 </tr>
 <tr>
@@ -90,14 +72,10 @@ For some controls, this is the default density.
 
 *Condensed* 
 
-
-
 </td>
 <td valign="top">
 
 `sapUiSizeCondensed` 
-
-
 
 </td>
 <td valign="top">
@@ -105,8 +83,6 @@ For some controls, this is the default density.
 Size even further reduced compared to *Compact* \(in particular, row heights smaller\).
 
 This density can be used for all tables of the `sap.ui.table` library.
-
-
 
 </td>
 </tr>

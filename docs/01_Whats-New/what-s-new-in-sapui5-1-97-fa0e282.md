@@ -15,49 +15,35 @@ With this release SAPUI5 is upgraded from version 1.96 to 1.97.
 
 Version
 
-
-
 </th>
 <th valign="top">
 
 Type
-
-
 
 </th>
 <th valign="top">
 
 Category
 
-
-
 </th>
 <th valign="top">
 
 Title
-
-
 
 </th>
 <th valign="top">
 
 Description
 
-
-
 </th>
 <th valign="top">
 
 Action
 
-
-
 </th>
 <th valign="top">
 
 Available as of
-
-
 
 </th>
 </tr>
@@ -66,28 +52,20 @@ Available as of
 
 1.97 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **SAPUI5 OData V4 Model** 
-
-
 
 </td>
 <td valign="top">
@@ -107,21 +85,15 @@ The new version of the SAPUI5 OData V4 model introduces the following features:
 
 <sub>Changed•Feature•Info Only•1.97</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-12-02
-
-
 
 </td>
 </tr>
@@ -130,28 +102,20 @@ Info Only
 
 1.97 
 
-
-
 </td>
 <td valign="top">
 
 UI Changed 
-
-
 
 </td>
 <td valign="top">
 
 Announcement 
 
-
-
 </td>
 <td valign="top">
 
 **Multi-Select in Responsive Tables: *Clear All* Instead of *Select All*** 
-
-
 
 </td>
 <td valign="top">
@@ -165,21 +129,15 @@ Responsive tables with a multi-select option will show a *Clear All* checkbox in
 
 <sub>UI Changed•Announcement•Info Only•1.97</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-12-02
-
-
 
 </td>
 </tr>
@@ -188,28 +146,20 @@ Info Only
 
 1.97 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.Avatar`** 
-
-
 
 </td>
 <td valign="top">
@@ -220,21 +170,15 @@ With the new `decorative` property, you can now set the `Avatar` control to be u
 
 <sub>Changed•Control•Info Only•1.97</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-12-02
-
-
 
 </td>
 </tr>
@@ -243,28 +187,20 @@ Info Only
 
 1.97 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.ComboBox`, `sap.m.MultiComboBox`** 
-
-
 
 </td>
 <td valign="top">
@@ -275,21 +211,15 @@ We have introduced the `showClearIcon` property. If set to `true`, when there is
 
 <sub>Changed•Control•Info Only•1.97</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-12-02
-
-
 
 </td>
 </tr>
@@ -298,28 +228,20 @@ Info Only
 
 1.97 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.DatePicker, sap.m.DateRangeSelection, sap.m.DateTimePicker, and sap.m.TimePicker`** 
-
-
 
 </td>
 <td valign="top">
@@ -330,21 +252,15 @@ These controls can now be opened by another control. To enable this feature, we 
 
 <sub>Changed•Control•Info Only•1.97</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-12-02
-
-
 
 </td>
 </tr>
@@ -353,28 +269,20 @@ Info Only
 
 1.97 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.DateTimePicker`** 
-
-
 
 </td>
 <td valign="top">
@@ -385,21 +293,15 @@ The control now implements the new dial-based design for the time picker.For mor
 
 <sub>Changed•Control•Info Only•1.97</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-12-02
-
-
 
 </td>
 </tr>
@@ -408,28 +310,20 @@ Info Only
 
 1.97 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.DynamicDateRange` \(Experimental\)** 
-
-
 
 </td>
 <td valign="top">
@@ -440,21 +334,15 @@ We have added a new standard option named `DATETOYEAR` - a period from today to 
 
 <sub>Changed•Control•Info Only•1.97</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-12-02
-
-
 
 </td>
 </tr>
@@ -463,28 +351,20 @@ Info Only
 
 1.97 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.MessagePage`** 
-
-
 
 </td>
 <td valign="top">
@@ -495,21 +375,15 @@ With the new `titleLevel` property, we have enabled app developers to set a cust
 
 <sub>Changed•Control•Info Only•1.97</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-12-02
-
-
 
 </td>
 </tr>
@@ -518,28 +392,20 @@ Info Only
 
 1.97 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.PlanningCalendar`** 
-
-
 
 </td>
 <td valign="top">
@@ -550,21 +416,15 @@ We have introduced a new `multipleAppointmentsSelection` property that allows mo
 
 <sub>Changed•Control•Info Only•1.97</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-12-02
-
-
 
 </td>
 </tr>
@@ -573,28 +433,20 @@ Info Only
 
 1.97 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.comp.smartchart.SmartChart`, `sap.ui.comp.smarttable.SmartTable`** 
-
-
 
 </td>
 <td valign="top">
@@ -605,21 +457,15 @@ We have introduced the `uiStateChange` event for these controls. The event is fi
 
 <sub>Changed•Control•Info Only•1.97</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-12-02
-
-
 
 </td>
 </tr>
@@ -628,28 +474,20 @@ Info Only
 
 1.97 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.comp.smartfield.SmartField`** 
-
-
 
 </td>
 <td valign="top">
@@ -660,21 +498,15 @@ Until now, when we used `SmartField` with the `Common.ValueListRelevantQualifier
 
 <sub>Changed•Control•Info Only•1.97</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-12-02
-
-
 
 </td>
 </tr>
@@ -683,28 +515,20 @@ Info Only
 
 1.97 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.comp.smartfilterbar.SmartFilterBar`** 
-
-
 
 </td>
 <td valign="top">
@@ -717,21 +541,15 @@ Control
 
 <sub>Changed•Control•Info Only•1.97</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-12-02
-
-
 
 </td>
 </tr>
@@ -740,28 +558,20 @@ Info Only
 
 1.97 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.comp.smarttable.SmartTable`** 
-
-
 
 </td>
 <td valign="top">
@@ -775,21 +585,15 @@ Control
 
 <sub>Changed•Control•Info Only•1.97</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-12-02
-
-
 
 </td>
 </tr>
@@ -798,28 +602,20 @@ Info Only
 
 1.97 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.integration.widgets.Card`** 
-
-
 
 </td>
 <td valign="top">
@@ -830,21 +626,15 @@ Timeline cards now support actions defined on an item level. These actions can b
 
 <sub>Changed•Control•Info Only•1.97</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-12-02
-
-
 
 </td>
 </tr>
@@ -853,28 +643,20 @@ Info Only
 
 1.97 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 SAP Fiori Elements 
 
-
-
 </td>
 <td valign="top">
 
 **SAP Fiori elements for OData V2** 
-
-
 
 </td>
 <td valign="top">
@@ -896,21 +678,15 @@ The following changes and new features are available for SAP Fiori elements for 
 
 <sub>Changed•SAP Fiori Elements•Info Only•1.97</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-12-02
-
-
 
 </td>
 </tr>
@@ -919,28 +695,20 @@ Info Only
 
 1.97 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 SAP Fiori Elements 
 
-
-
 </td>
 <td valign="top">
 
 **SAP Fiori elements for OData V4** 
-
-
 
 </td>
 <td valign="top">
@@ -964,21 +732,15 @@ The following changes and new features are available for SAP Fiori elements for 
 
 <sub>Changed•SAP Fiori Elements•Info Only•1.97</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-12-02
-
-
 
 </td>
 </tr>
@@ -987,28 +749,20 @@ Info Only
 
 1.97 
 
-
-
 </td>
 <td valign="top">
 
 New 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **Demo Kit News Section with Notifications** 
-
-
 
 </td>
 <td valign="top">
@@ -1021,21 +775,15 @@ We implemented a *News* section with notifications where you can get highlights 
 
 <sub>New•Feature•Info Only•1.97</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-12-02
-
-
 
 </td>
 </tr>
@@ -1043,6 +791,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.118](what-s-new-in-sapui5-1-118-3eecbde.md "With this release SAPUI5 is upgraded from version 1.117 to 1.118.")
 
 [What's New in SAPUI5 1.117](what-s-new-in-sapui5-1-117-029d3b4.md "With this release SAPUI5 is upgraded from version 1.116 to 1.117.")
 

@@ -4,17 +4,17 @@
 
 SAPUI5 provides several options for the configuration of the SAPUI5 runtime. The possible ways to provide input for the available configuration options are described in detail.
 
-When the SAPUI5 bootstrap script is included in a page, the SAPUI5 runtime will automatically be initialized as soon as the script is loaded and executed by the browser. For simple use cases and for a default SAPUI5 installation, this should already be sufficient to build and run UI5 applications. The only additional information that usually needs to be specified is the set of libraries and the theme to be used.
+> ### Note:  
+> In earlier framework versions, the configuration options available in SAPUI5 could be found in the [API Reference via the `sap.ui.core.Configuration`](https://ui5.sap.com/#/api/sap.ui.core.Configuration). This legacy module has been deprecated with SAPUI5 1.120 and replaced by a modular, future-proof solution for configuration handling.
+
+When the SAPUI5 bootstrap script is included in a page, the SAPUI5 runtime will automatically be initialized as soon as the script is loaded and executed by the browser. For simple use cases and for a default SAPUI5 installation, this should already be sufficient to build and run UI5 applications. The only configuration option you should specify is `data-sap-ui-compat-version="edge"` to run SAPUI5 with the latest feature set.
 
 A typical bootstrap script looks like this:
 
 ```html
 <script id="sap-ui-bootstrap"
-            type="text/javascript"
             src="resources/sap-ui-core.js"
-            data-sap-ui-theme="sap_belize"
-            data-sap-ui-libs="sap.m"
-            data-sap-ui-compatVersion="edge">
+            data-sap-ui-compat-version="edge">
 </script>
 ```
 
@@ -28,24 +28,25 @@ You can provide additional configuration information in the following ways:
 
 ## Available Configuration Options
 
-UI5 supports 7 different possibilities to provide values for the available configuration parameters. Options 2 to 5 require you to provide them before the application boots up \(in **pre-boot**\). They are technically equivalent, however at runtime they will be evaluated in the order given below. The list below is therefore sorted in ascending order of precedence:
+UI5 supports different possibilities to provide values for the available configuration parameters. Options 2 to 6 require you to provide them before the application boots up. They are technically equivalent, however at runtime they will be evaluated in the order given below. The list below is therefore sorted in ascending order of precedence:
 
 1.  Effective framework default values
-2.  Server-wide defaults, read from `sap-ui-config.json`
+2.  UI5-supported configuration options provided in `globalThis["sap-ui-config"]`
+3.  **\[DEPRECATED\]** Server-wide defaults, read from `sap-ui-config.json`
+4.  **\[DEPRECATED\]** A configuration string in the `data-sap-ui-config` attribute of the bootstrap tag
+5.  Individual <code>data-sap-ui-&lt;<i>UI5-supported-config-option</i>&gt;</code> attributes of the bootstrap tag
+6.  Individual <code>&lt;meta name="sap-ui-&lt;<i>UI5-supported-config-option</i>&gt;" content="&lt;<i>value</i>&gt;"&gt;</code> tags
+7.  Individual <code>sap-ui-&lt;<i>UI5-supported-config-option</i>&gt;</code> URL parameters
+8.  Specific APIs allowing a configuration change during runtime
 
-    This option is activated by setting `window["sap-ui-config"]` to an arbitrary string value.
+Configuration options must be provided in kebab-case notation, i.e. as hyphenated names, starting with the `sap-ui` prefix, which serves to distinguish UI5 configuration options from options defined by others. If a configuration option is defined multiple times, the first match will be applied.
 
-3.  Properties of the global configuration object `window["sap-ui-config"]`
-4.  A configuration string in the `data-sap-ui-config` attribute of the bootstrap tag
-5.  Individual `data-sap-ui-<myOption>` attributes of the bootstrap tag
-6.  URL parameters
+> ### Note:  
+> The `sap-ui` prefix must be omitted for options provided in `globalThis["sap-ui-config"]`. The options given there are prefixed with `sap-ui` implicitly.
 
-    > ### Note:  
-    > Additional `<meta>` tags are evaluated after URL parameters, if not stated otherwise. Please see the overall list of [Configuration Options and URL Parameters](configuration-options-and-url-parameters-91f2d03.md) for the parameters which can be defined via `<meta>` tags.
+As the configuration is evaluated during bootstrap, the configuration object must be created before SAPUI5 is bootstrapped; it cannot be evaluated otherwise. As a consequence, using the global configuration object requires another script tag referencing a file containing the configuration \(see the example in *\[2\] Global Configuration Object*\).
 
-7.  Specific APIs, for example the setters on the [`sap.ui.core.Configuration`](https://ui5.sap.com/#/api/sap.ui.core.Configuration) class \(only for some parameters\)
-
-Please have a look at the complete list of [Configuration Options and URL Parameters](configuration-options-and-url-parameters-91f2d03.md) for a description of each configuration option, including the available ways to set input values. The following subsections will describe these possibilities in more detail.
+The comprehensive list of [Configuration Options and URL Parameters](configuration-options-and-url-parameters-91f2d03.md) has descriptions of each configuration option.
 
 
 
@@ -55,191 +56,140 @@ Please have a look at the complete list of [Configuration Options and URL Parame
 
 
 
-### \[1\] Effective Default Values
+### \[1\] Effective default values
 
 The easiest way to specify a configuration value is **not to specify** it. The SAPUI5 runtime contains a default value for each configuration option. As long as you don't have to change the value, simply don't specify it.
 
-The effective default values can be found either in the [API Reference](https://ui5.sap.com/#/api/sap.ui.core.Configuration) or in the complete list of [Configuration Options and URL Parameters](configuration-options-and-url-parameters-91f2d03.md).
+The effective default values can be found in the complete list of [Configuration Options and URL Parameters](configuration-options-and-url-parameters-91f2d03.md).
 
 
 
-### \[2\] `sap-ui-config.json` \(deprecated\)
+### \[2\] Global configuration object
 
-This option is activated by setting `window["sap-ui-config"]` to an arbitrary string value.
+The global configuration object is a property in the `globalThis` object with the property name `sap-ui-config`. The property must be a simple object, where each property represents the configuration option of the corresponding name.
 
-> ### Note:  
-> The usage of a `sap-ui-config.json` file is deprecated. Please use one of the other available configuration options.
+As the `sap-ui-config` property is not a valid JavaScript identifier, it needs to be enclosed by quotes. The same applies for configuration properties specified in kebab case:
 
-
-
-### \[3\] Global Configuration Object
-
-The global configuration object is a property in the global `window` object with property name `sap-ui-config`. The property must be a simple object, where each property represents the configuration option of the corresponding name.
-
-To avoid conflicts with typical JavaScript coding, the name of the `window` property is not a valid JavaScript identifier. The name structure is chosen to avoid conflicts with SAP objects. To define the object, quotes must be used. If a configuration option has a name that is not a valid JavaScript identifier or that is a reserved token in JavaScript, the property name in the configuration object must be quoted. Currently, this only applies to the experimental configuration options starting with "xx-". These must be quoted inside square brackets, e.g. `["xx-supportedLanguages"] = ...`
-
-As the configuration is evaluated during bootstrap, the configuration object must be created **before** SAPUI5 is bootstrapped. Otherwise, the contained configuration cannot be evaluated. As a consequence, using the global configuration object requires another script tag in front of the bootstrap script tag. It is up to the application whether it uses an inline script tag or a separate JavaScript file, which is loaded via a script tag, for this purpose. If you use a dedicated file, it may require more work initially, but offers the following advantages:
-
--   Several pages can share the file and, thus, use the same configuration.
-
--   The Content Security Policy \(CSP\) mechanism as introduced, for example, by Firefox 4.0 and others requires the use of a file.
-
-
-The following code snippet shows an example for an inline script tag:
-
-```html
-<script type="text/javascript">
-            window["sap-ui-config"] = {
-			theme : "sap_belize",
-			libs : "sap.m",
-            };
-</script>
-<script id="sap-ui-bootstrap" 
-            src="resources/sap-ui-core.js">
-</script>
+```
+globalThis["sap-ui-config"].language = "en";
+globalThis["sap-ui-config"]["animation-mode"] = "full";
 ```
 
-This option requires an additional script or script tag, but it offers the following advantages:
+Be careful with overwriting the config object, as others might have already provided some options:
 
--   Possibility to share configuration between pages
+```
+// Be mindful of already existing configuration options
+globalThis["sap-ui-config"] ??= {};
+Object.assign(globalThis["sap-ui-config"], {
+    language: "en",
+    "animation-mode": "full"
+});
+```
 
--   Can be used in environments where the scrip tag cannot be influenced, for example, because it is created out of some configuration, like in some mashup frameworks
+The following code snippets show an example how to add a configuration before bootstrapping UI5:
 
--   Allows to provide configuration before the core boots
+> ### Example:  
+> config.js
+> 
+> ```
+> 
+> globalThis["sap-ui-config"] ??= {}; // globalThis["sap-ui-config"] could be already available
+> globalThis["sap-ui-config"]["compat-version"] = "edge";
+> ```
+
+> ### Example:  
+> index.html
+> 
+> ```html
+> <script src="config.js"></script>
+> <script id="sap-ui-bootstrap"
+>             src="resources/sap-ui-core.js">
+> </script>
+> ```
+
+> ### Caution:  
+> The existing list of property names in `globalThis["sap-ui-config"]` must not be extended with undocumented custom names. Applications must not access the global configuration object directly either.
 
 
 
+### \[3\] `sap-ui-config.json` \(deprecated\)
 
-### \[4\] Configuration String in the `data-sap-ui-config` Attribute
+This option is activated by setting `globalThis["sap-ui-config"]` to an arbitrary string value.
+
+> ### Note:  
+> The use of an `sap-ui-config.json` file is deprecated; be sure to use one of the other available configuration options instead.
+
+
+
+### \[4\] Configuration string in the `data-sap-ui-config` attribute \(deprecated\)
 
 The bootstrap attribute `data-sap-ui-config` enables you to provide a single attribute with the configuration information for the SAPUI5 runtime.
 
-You can use this attribute instead of attaching individual options with individual configuration attributes to the script tag. Its content is similar to the Global Configuration Object but without the enclosing parentheses: It is a comma-separated list of key-value pairs.
+You can use this attribute instead of attaching individual options with individual configuration attributes to the script tag. Its content is similar to the Global Configuration Object but without the enclosing parentheses; it is a comma-separated list of key-value pairs.
 
 > ### Note:  
 > The usual HTML escape mechanisms must be used if the value contains specific HTML characters \(<, \>, &\) or the quote character that is used to enclose the attribute value.
 
 ```html
 <script id="sap-ui-bootstrap"
-	type="text/javascript"
 	src="resources/sap-ui-core.js"
 	data-sap-ui-config="
-		theme:'sap_belize',
-		libs:'sap.m'
+		\"anmination-mode\":\"full\",
+		\"compat-version\":\"edge\"
 	">
 </script>
 ```
 
 
 
-### \[5\] Individual Script Tag Attributes
+### \[5\] Individual <code>data-sap-ui-&lt;<i>UI5-supported-config-option</i>&gt;</code> attributes of the bootstrap tag
 
 For each configuration option, you can have one attribute in the bootstrap script tag. These attributes must provide the following information:
 
--   Attribute name
+-   Attribute name in kebab case
 
-    The attribute name is composed of the name of the configuration option and the `data-sap-ui-` prefix. The first part of the prefix \(`data-`\) is necessary to comply with the W3C recommendations for custom attributes in HTML. The second part \(`-sap-ui-`\) separates SAPUI5 attributes from custom attributes defined by any other framework.
-
-    > ### Note:  
-    > Attribute names in HTML are case-insensitive and this also applies to the configuration attribute names. However, SAPUI5 has defined some configuration options names in camel case, for example `originInfo`. SAPUI5 converts these names automatically to lower case when accessing the configuration.
+    The attribute name is composed of the name of the configuration option and the `data-sap-ui-` prefix. The first part of the prefix \(`data-`\) is necessary to comply with the W3C recommendations for custom attributes in HTML. The second part \(`-sap-ui-`\) separates SAPUI5 attributes from custom attributes defined by any other framework. The third part is the config option name in kebab case.
 
 -   Value
 
     Element attributes in HTML have a `string` value by definition. For configuration options of type `string`, the attribute value is equivalent to the value of the option.
 
     > ### Note:  
-    > If the value contains specific HTML characters, such as '<' or '\>', or if the value contains the same quote character that is used to wrap the attribute value, the usual HTML escape mechanisms must be used: Use entities for the specific HTML characters, for example `&lt;` instead of `<`, and switch the type of quotes from single to double or vice versa.
+    > If the value contains specific HTML characters, such as `<` or `>`, or if the value contains the same quote character that is used to wrap the attribute value, the usual HTML escape mechanisms must be used: Use entities for the specific HTML characters, for example `&lt;` instead of `<`, and switch the type of quotes from single to double or vice versa.
 
-    For configuration options that are **not** of type `string`, the format of the allowed values has to be defined as follows:
-
-
-    <table>
-    <tr>
-    <th valign="top">
-
-    Type
-
-
-    
-    </th>
-    <th valign="top">
-
-    Notation/Values
-
-
-    
-    </th>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-    `boolean`
-
-
-    
-    </td>
-    <td valign="top">
-    
-    `true` and `x` are both accepted as true values \(case-insensitive\), all others are false. We recommend to use `false` for false values
-
-
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-    `int`
-
-
-    
-    </td>
-    <td valign="top">
-    
-    Any integer value
-
-
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-    `string array`
-
-
-    
-    </td>
-    <td valign="top">
-    
-    Comma-separated list of values; commas within a string are not supported \(no escaping\)
-
-
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-    map from string to string
-
-
-    
-    </td>
-    <td valign="top">
-    
-    JavaScript object literal \(preferably JSON syntax\)
-
-
-    
-    </td>
-    </tr>
-    </table>
-    
+    ```html
+    <script id="sap-ui-bootstrap"
+                src="resources/sap-ui-core.js"
+                data-sap-ui-compat-version="edge">
+    </script>
+    ```
 
 
 
-### \[6\] URL Parameters
+
+### \[6\] Individual meta tag attributes
+
+For each configuration option, you can add a meta tag. These attributes must provide the following information:
+
+-   Attribute name in kebab case
+
+    The attribute name is composed of the name of the configuration option and the `data-sap-ui-` prefix. The first part of the prefix \(`data-`\) is necessary to comply with the W3C recommendations for custom attributes in HTML. The second part \(`-sap-ui-`\) separates SAPUI5 attributes from custom attributes defined by any other framework. The third part is the config option name in kebab case. The attribute name must be provided within the `name` attribute of the meta tag.
+
+-   Value
+
+    Element attributes in HTML have a `string` value by definition. For configuration options of type `string`, the attribute value is equivalent to the value of the option. The attribute value must be provided within the `content` attribute of the meta tag.
+
+    > ### Note:  
+    > If the value contains specific HTML characters, such as `<` or `>`, or if the value contains the same quote character that is used to wrap the attribute value, the usual HTML escape mechanisms must be used: Use entities for the specific HTML characters, for example `&lt;` instead of `<`, and switch the type of quotes from single to double or vice versa.
+
+    ```html
+    <meta name="sap-ui-compat-version" content="edge">
+    ```
+
+
+
+
+### \[7\] URL parameters
 
 Configuration parameters can be added to the URL of an app.
 
@@ -250,15 +200,15 @@ The URL parameter name is composed of the name of the configuration option and t
 
 The value of a URL parameter is of type `string` and the same type mapping as for HTML attributes applies. However, URLs require a different encoding than HTML; they use, for example % encoding instead of entity encoding.
 
-For security reasons, only some configuration options can be set via URL parameters. An application can set the `ignoreUrlParameters` option to `true` to disable URL configuration parameters completely.
+For security reasons, only some configuration options can be set via URL parameters. An application can set the `ignore-url-parameters` option to `true` to disable URL configuration parameters completely.
 
 
 
-### \[7\] Specific APIs
+### \[8\] Specific APIs
 
-The configuration options above are evaluated during the SAPUI5 runtime boot. After that, all changes to these parameters are ignored. To read the final configuration result, you can use the `sap.ui.getCore().getConfiguration()` method.
+The configuration options above are evaluated when booting SAPUI5. After that, all changes to these parameters are ignored.
 
-Additionally, for a limited set of configuration options specific APIs exist which allow you to modify these options at runtime.
+For a limited set of configuration options, specific APIs exist that allow you to modify these options at runtime.
 
-For example, the `sap.ui.core.Configuration` class provides setters for several configuration options that can be modified at runtime. The runtime and/or the controls can then react on these configuration changes. The most prominent example for such a configuration option is the `theme`.
+You can find these APIs in [Configuration Options and URL Parameters](configuration-options-and-url-parameters-91f2d03.md).
 

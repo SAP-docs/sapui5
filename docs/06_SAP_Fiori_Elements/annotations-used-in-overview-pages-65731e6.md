@@ -1808,14 +1808,10 @@ In the preceding example, the text `Customer` is bound to the `ContactID` proper
 
 Text Arrangement Type
 
-
-
 </th>
 <th valign="top">
 
 Result
-
-
 
 </th>
 </tr>
@@ -1824,14 +1820,10 @@ Result
 
 `TextLast` 
 
-
-
 </td>
 <td valign="top">
 
 ContractID \(Customer\)
-
-
 
 </td>
 </tr>
@@ -1840,14 +1832,10 @@ ContractID \(Customer\)
 
 `TextFirst` 
 
-
-
 </td>
 <td valign="top">
 
 Customer \(ContractID\)
-
-
 
 </td>
 </tr>
@@ -1856,14 +1844,10 @@ Customer \(ContractID\)
 
 `TextOnly` 
 
-
-
 </td>
 <td valign="top">
 
 Customer
-
-
 
 </td>
 </tr>

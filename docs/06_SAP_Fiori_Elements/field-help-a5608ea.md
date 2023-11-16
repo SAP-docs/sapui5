@@ -253,7 +253,7 @@ By default, the filter bar is collapsed. If one of the following conditions is m
 
 
 > ### Note:  
-> If no `SelectionFields` are annotated on the entity of the value help, all properties of the entity are displayed as filter fields. If there are no filterable fields \(see [Filter Restrictions](https://github.com/oasis-tcs/odata-vocabularies/blob/master/vocabularies/Org.OData.Capabilities.V1.xml#L430)\) within the value help entity, then the filter panel isn't visible.
+> If no `SelectionFields` are annotated on the entity of the value help, all properties of the entity are displayed as filter fields. If there are no filterable fields \(see [Filter Restrictions](https://github.com/oasis-tcs/odata-vocabularies/blob/-/vocabularies/Org.OData.Capabilities.V1.xml#L430)\) within the value help entity, then the filter panel isn't visible.
 
 **Help Icon for Fields Within the Filter Panel**
 
@@ -266,7 +266,7 @@ Filter fields always get a value help icon ‒ irrespective of whether a value l
 
 **Filter Operators**
 
-The filter operators offered within the value help dialog \(under the *Define Conditions* tab\) can be restricted according to the [Filter Expression Restrictions](https://github.com/oasis-tcs/odata-vocabularies/blob/master/vocabularies/Org.OData.Capabilities.V1.md#FilterExpressionType).
+The filter operators offered within the value help dialog \(under the *Define Conditions* tab\) can be restricted according to the [Filter Expression Restrictions](https://github.com/oasis-tcs/odata-vocabularies/blob/-/vocabularies/Org.OData.Capabilities.V1.md#FilterExpressionType).
 
 For each filter expression type, the operators shown in the value help dialog depend on the base type of the property \(String, Date, DateTime, Time, Boolean, Unit, Numeric\). For filter fields with no defined filter expression type, or if it is incompatible with the base type, the complete default set of operators for the respective base type are used.
 
@@ -606,22 +606,16 @@ You can use the `UI.TextArrangement` annotation to configure the display format 
     <th valign="top">
 
     Text
-
-
     
     </th>
     <th valign="top">
 
     `TextArrangement`
-
-
     
     </th>
     <th valign="top">
 
     Display Format
-
-
     
     </th>
     </tr>
@@ -629,22 +623,16 @@ You can use the `UI.TextArrangement` annotation to configure the display format 
     <td valign="top">
     
     \-
-
-
     
     </td>
     <td valign="top">
     
     \-
-
-
     
     </td>
     <td valign="top">
     
     `Value`
-
-
     
     </td>
     </tr>
@@ -652,22 +640,16 @@ You can use the `UI.TextArrangement` annotation to configure the display format 
     <td valign="top">
     
     x
-
-
     
     </td>
     <td valign="top">
     
     \- \*1\)
-
-
     
     </td>
     <td valign="top">
     
     `Value`
-
-
     
     </td>
     </tr>
@@ -675,22 +657,16 @@ You can use the `UI.TextArrangement` annotation to configure the display format 
     <td valign="top">
     
     x
-
-
     
     </td>
     <td valign="top">
     
     `TextFirst`
-
-
     
     </td>
     <td valign="top">
     
     `DescriptionValue`
-
-
     
     </td>
     </tr>
@@ -698,22 +674,16 @@ You can use the `UI.TextArrangement` annotation to configure the display format 
     <td valign="top">
     
     x
-
-
     
     </td>
     <td valign="top">
     
     `TextLast`
-
-
     
     </td>
     <td valign="top">
     
     `ValueDescription`
-
-
     
     </td>
     </tr>
@@ -721,22 +691,16 @@ You can use the `UI.TextArrangement` annotation to configure the display format 
     <td valign="top">
     
     x
-
-
     
     </td>
     <td valign="top">
     
     `TextSeparate`
-
-
     
     </td>
     <td valign="top">
     
     `Value`
-
-
     
     </td>
     </tr>
@@ -744,22 +708,16 @@ You can use the `UI.TextArrangement` annotation to configure the display format 
     <td valign="top">
     
     x
-
-
     
     </td>
     <td valign="top">
     
     `TextOnly`
-
-
     
     </td>
     <td valign="top">
     
     `Description`
-
-
     
     </td>
     </tr>
@@ -777,22 +735,16 @@ You can use the `UI.TextArrangement` annotation to configure the display format 
     <th valign="top">
 
     Text
-
-
     
     </th>
     <th valign="top">
 
     `TextArrangement`
-
-
     
     </th>
     <th valign="top">
 
     Display Format
-
-
     
     </th>
     </tr>
@@ -800,22 +752,16 @@ You can use the `UI.TextArrangement` annotation to configure the display format 
     <td valign="top">
     
     \-
-
-
     
     </td>
     <td valign="top">
     
     \-
-
-
     
     </td>
     <td valign="top">
     
     `Value`
-
-
     
     </td>
     </tr>
@@ -823,22 +769,16 @@ You can use the `UI.TextArrangement` annotation to configure the display format 
     <td valign="top">
     
     x
-
-
     
     </td>
     <td valign="top">
     
     \- \*2\)
-
-
     
     </td>
     <td valign="top">
     
     `DescriptionValue`
-
-
     
     </td>
     </tr>
@@ -846,22 +786,16 @@ You can use the `UI.TextArrangement` annotation to configure the display format 
     <td valign="top">
     
     x
-
-
     
     </td>
     <td valign="top">
     
     `TextFirst`
-
-
     
     </td>
     <td valign="top">
     
     `DescriptionValue`
-
-
     
     </td>
     </tr>
@@ -869,22 +803,16 @@ You can use the `UI.TextArrangement` annotation to configure the display format 
     <td valign="top">
     
     x
-
-
     
     </td>
     <td valign="top">
     
     `TextLast`
-
-
     
     </td>
     <td valign="top">
     
     `ValueDescription`
-
-
     
     </td>
     </tr>
@@ -892,22 +820,16 @@ You can use the `UI.TextArrangement` annotation to configure the display format 
     <td valign="top">
     
     x
-
-
     
     </td>
     <td valign="top">
     
     `TextSeparate`
-
-
     
     </td>
     <td valign="top">
     
     `Value`
-
-
     
     </td>
     </tr>
@@ -915,22 +837,16 @@ You can use the `UI.TextArrangement` annotation to configure the display format 
     <td valign="top">
     
     x
-
-
     
     </td>
     <td valign="top">
     
     `TextOnly`
-
-
     
     </td>
     <td valign="top">
     
     `Description`
-
-
     
     </td>
     </tr>
@@ -964,7 +880,7 @@ Value help for draft-enabled entities only shows active documents.
 
 ## Value Help Using `FetchValuesType`
 
-By default, a value help requests the data immediately when the dialog is opened. Application developers can use the <code><a href="https://github.com/SAP/odata-vocabularies/blob/master/vocabularies/Common.md#FetchValuesType">FetchValuesType</a></code>Applications can bring up value help for fields, allowing end users to choose from to define that a value help doesn't load the data immediately, and that users can first maintain a filter and then request the data by choosing *Go*.
+By default, a value help requests the data immediately when the dialog is opened. Application developers can use the <code><a href="https://github.com/SAP/odata-vocabularies/blob/-/vocabularies/Common.md#FetchValuesType">FetchValuesType</a></code>Applications can bring up value help for fields, allowing end users to choose from to define that a value help doesn't load the data immediately, and that users can first maintain a filter and then request the data by choosing *Go*.
 
 You achieve this by setting the property "FetchValues = 2".
 

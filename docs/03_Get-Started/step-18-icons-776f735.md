@@ -12,7 +12,7 @@ Our dialog is still pretty much empty. Since SAPUI5 is shipped with a large icon
   
 **An icon is now displayed in the dialog box**
 
-![](images/UI5_Walkthrough_Step_18_fbc48e2.png "An icon is now displayed in the dialog box")
+![The graphic has an explanatory text.](images/UI5_Walkthrough_Step_18_fbc48e2.png "An icon is now displayed in the dialog box")
 
 
 

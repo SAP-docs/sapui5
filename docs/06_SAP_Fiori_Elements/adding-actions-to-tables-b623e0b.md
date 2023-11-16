@@ -571,14 +571,10 @@ Application developers can define the order of standard actions in the table too
 
 Key
 
-
-
 </th>
 <th valign="top">
 
 Standard Action
-
-
 
 </th>
 </tr>
@@ -587,14 +583,10 @@ Standard Action
 
 `Create`
 
-
-
 </td>
 <td valign="top">
 
 `StandardAction::Create`
-
-
 
 </td>
 </tr>
@@ -603,14 +595,10 @@ Standard Action
 
 `Delete`
 
-
-
 </td>
 <td valign="top">
 
 `StandardAction::Delete`
-
-
 
 </td>
 </tr>
@@ -619,14 +607,10 @@ Standard Action
 
 `MassEdit`
 
-
-
 </td>
 <td valign="top">
 
 `StandardAction::MassEdit`
-
-
 
 </td>
 </tr>
@@ -635,14 +619,10 @@ Standard Action
 
 `Delete`
 
-
-
 </td>
 <td valign="top">
 
 `StandardAction::'Insights'`
-
-
 
 </td>
 </tr>

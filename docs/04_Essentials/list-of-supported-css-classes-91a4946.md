@@ -11,35 +11,25 @@ Overview of the CSS classes currently supported by SAPUI5.
 
 CSS Class Name
 
-
-
 </th>
 <th valign="top">
 
 CSS Property
-
-
 
 </th>
 <th valign="top">
 
 `sap_bluecrystal`
 
-
-
 </th>
 <th valign="top">
 
 All Themes
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -48,35 +38,25 @@ Description
 
 `sapThemeFontFamily`
 
-
-
 </td>
 <td valign="top">
 
 `font-family`
 
-
-
 </td>
 <td valign="top">
 
 X
 
-
-
 </td>
 <td valign="top">
 
 X
-
-
 
 </td>
 <td valign="top">
 
 Default font
-
-
 
 </td>
 </tr>
@@ -85,35 +65,25 @@ Default font
 
 `sapThemeFontSize`
 
-
-
 </td>
 <td valign="top">
 
 `font-size`
 
-
-
 </td>
 <td valign="top">
 
 X
 
-
-
 </td>
 <td valign="top">
 
 X
-
-
 
 </td>
 <td valign="top">
 
 Default font size
-
-
 
 </td>
 </tr>
@@ -122,35 +92,25 @@ Default font size
 
 `sapThemeFont`
 
-
-
 </td>
 <td valign="top">
 
 `font-family+font-size`
 
-
-
 </td>
 <td valign="top">
 
 X
 
-
-
 </td>
 <td valign="top">
 
 X
-
-
 
 </td>
 <td valign="top">
 
 Default font and font size
-
-
 
 </td>
 </tr>
@@ -159,35 +119,25 @@ Default font and font size
 
 `sapThemeText`
 
-
-
 </td>
 <td valign="top">
 
 `color`
 
-
-
 </td>
 <td valign="top">
 
 X
 
-
-
 </td>
 <td valign="top">
 
 X
-
-
 
 </td>
 <td valign="top">
 
 Default text color
-
-
 
 </td>
 </tr>
@@ -196,35 +146,25 @@ Default text color
 
 `sapThemeText-asColor`
 
-
-
 </td>
 <td valign="top">
 
 `color`
 
-
-
 </td>
 <td valign="top">
 
 X
 
-
-
 </td>
 <td valign="top">
 
 X
-
-
 
 </td>
 <td valign="top">
 
 Default text color
-
-
 
 </td>
 </tr>
@@ -233,35 +173,25 @@ Default text color
 
 `sapThemeText-asBackgroundColor`
 
-
-
 </td>
 <td valign="top">
 
 `background-color`
 
-
-
 </td>
 <td valign="top">
 
 X
 
-
-
 </td>
 <td valign="top">
 
 X
-
-
 
 </td>
 <td valign="top">
 
 Default text color
-
-
 
 </td>
 </tr>
@@ -270,35 +200,25 @@ Default text color
 
 `sapThemeText-asBorderColor`
 
-
-
 </td>
 <td valign="top">
 
 `border-color`
 
-
-
 </td>
 <td valign="top">
 
 X
 
-
-
 </td>
 <td valign="top">
 
 X
-
-
 
 </td>
 <td valign="top">
 
 Default text color
-
-
 
 </td>
 </tr>
@@ -307,35 +227,25 @@ Default text color
 
 `sapThemeText-asOutlineColor`
 
-
-
 </td>
 <td valign="top">
 
 `outline-color`
 
-
-
 </td>
 <td valign="top">
 
 X
 
-
-
 </td>
 <td valign="top">
 
 X
-
-
 
 </td>
 <td valign="top">
 
 Default text color
-
-
 
 </td>
 </tr>
@@ -344,35 +254,25 @@ Default text color
 
 `sapThemeTextInverted`
 
-
-
 </td>
 <td valign="top">
 
 `color`
 
-
-
 </td>
 <td valign="top">
 
 X
 
-
-
 </td>
 <td valign="top">
 
 X
-
-
 
 </td>
 <td valign="top">
 
 Default color of inverted text
-
-
 
 </td>
 </tr>
@@ -381,35 +281,25 @@ Default color of inverted text
 
 `sapThemeTextInverted-asColor`
 
-
-
 </td>
 <td valign="top">
 
 `color`
 
-
-
 </td>
 <td valign="top">
 
 X
 
-
-
 </td>
 <td valign="top">
 
 X
-
-
 
 </td>
 <td valign="top">
 
 Default color of inverted text
-
-
 
 </td>
 </tr>
@@ -418,35 +308,25 @@ Default color of inverted text
 
 `sapThemeBaseBG`
 
-
-
 </td>
 <td valign="top">
 
 `background-color`
 
-
-
 </td>
 <td valign="top">
 
 X
 
-
-
 </td>
 <td valign="top">
 
 X
-
-
 
 </td>
 <td valign="top">
 
 Base color for all backgrounds
-
-
 
 </td>
 </tr>
@@ -455,35 +335,25 @@ Base color for all backgrounds
 
 `sapThemeBaseBG-asBackgroundColor`
 
-
-
 </td>
 <td valign="top">
 
 `background-color`
 
-
-
 </td>
 <td valign="top">
 
 X
 
-
-
 </td>
 <td valign="top">
 
 X
-
-
 
 </td>
 <td valign="top">
 
 Base color for all backgrounds
-
-
 
 </td>
 </tr>
@@ -492,35 +362,25 @@ Base color for all backgrounds
 
 `sapThemeBaseBG-asBorderColor`
 
-
-
 </td>
 <td valign="top">
 
 `border-color`
 
-
-
 </td>
 <td valign="top">
 
 X
 
-
-
 </td>
 <td valign="top">
 
 X
-
-
 
 </td>
 <td valign="top">
 
 Base color for all backgrounds
-
-
 
 </td>
 </tr>
@@ -529,35 +389,25 @@ Base color for all backgrounds
 
 `sapThemeBaseBG-asColor`
 
-
-
 </td>
 <td valign="top">
 
 `color`
 
-
-
 </td>
 <td valign="top">
 
 X
 
-
-
 </td>
 <td valign="top">
 
 X
-
-
 
 </td>
 <td valign="top">
 
 Base color for all backgrounds
-
-
 
 </td>
 </tr>
@@ -566,35 +416,25 @@ Base color for all backgrounds
 
 `sapThemeBrand-asColor`
 
-
-
 </td>
 <td valign="top">
 
 `color`
 
-
-
 </td>
 <td valign="top">
 
 X
 
-
-
 </td>
 <td valign="top">
 
 X
-
-
 
 </td>
 <td valign="top">
 
 Brand color
-
-
 
 </td>
 </tr>
@@ -603,35 +443,25 @@ Brand color
 
 `sapThemeBrand-asBorderColor`
 
-
-
 </td>
 <td valign="top">
 
 `border-color`
 
-
-
 </td>
 <td valign="top">
 
 X
 
-
-
 </td>
 <td valign="top">
 
 X
-
-
 
 </td>
 <td valign="top">
 
 Brand color
-
-
 
 </td>
 </tr>
@@ -640,35 +470,25 @@ Brand color
 
 `sapThemeBrand-asBackgroundColor`
 
-
-
 </td>
 <td valign="top">
 
 `background-color`
 
-
-
 </td>
 <td valign="top">
 
 X
 
-
-
 </td>
 <td valign="top">
 
 X
-
-
 
 </td>
 <td valign="top">
 
 Brand color
-
-
 
 </td>
 </tr>
@@ -677,35 +497,25 @@ Brand color
 
 `sapThemeBrand-asOutlineColor`
 
-
-
 </td>
 <td valign="top">
 
 `outline-color`
 
-
-
 </td>
 <td valign="top">
 
 X
 
-
-
 </td>
 <td valign="top">
 
 X
-
-
 
 </td>
 <td valign="top">
 
 Brand color
-
-
 
 </td>
 </tr>
@@ -714,35 +524,25 @@ Brand color
 
 `sapThemeHighlight-asColor`
 
-
-
 </td>
 <td valign="top">
 
 `color`
 
-
-
 </td>
 <td valign="top">
 
 X
 
-
-
 </td>
 <td valign="top">
 
 X
-
-
 
 </td>
 <td valign="top">
 
 Color for highlighted elements
-
-
 
 </td>
 </tr>
@@ -751,35 +551,25 @@ Color for highlighted elements
 
 `sapThemeHighlight-asBorderColor`
 
-
-
 </td>
 <td valign="top">
 
 `border-color`
 
-
-
 </td>
 <td valign="top">
 
 X
 
-
-
 </td>
 <td valign="top">
 
 X
-
-
 
 </td>
 <td valign="top">
 
 Color for highlighted elements
-
-
 
 </td>
 </tr>
@@ -788,35 +578,25 @@ Color for highlighted elements
 
 `sapThemeHighlight-asBackgroundColor`
 
-
-
 </td>
 <td valign="top">
 
 `background-color`
 
-
-
 </td>
 <td valign="top">
 
 X
 
-
-
 </td>
 <td valign="top">
 
 X
-
-
 
 </td>
 <td valign="top">
 
 Color for highlighted elements
-
-
 
 </td>
 </tr>
@@ -825,35 +605,25 @@ Color for highlighted elements
 
 `sapThemeHighlight-asOutlineColor`
 
-
-
 </td>
 <td valign="top">
 
 `outline-color`
 
-
-
 </td>
 <td valign="top">
 
 X
 
-
-
 </td>
 <td valign="top">
 
 X
-
-
 
 </td>
 <td valign="top">
 
 Brand color
-
-
 
 </td>
 </tr>
@@ -862,35 +632,25 @@ Brand color
 
 `sapThemePageBG`
 
-
-
 </td>
 <td valign="top">
 
 `background-color`
-
-
 
 </td>
 <td valign="top">
 
 X
 
-
-
 </td>
 <td valign="top">
 
 \-
 
-
-
 </td>
 <td valign="top">
 
 Background color of mobile pages
-
-
 
 </td>
 </tr>
@@ -899,35 +659,25 @@ Background color of mobile pages
 
 `sapThemePageBG-asColor`
 
-
-
 </td>
 <td valign="top">
 
 `color`
-
-
 
 </td>
 <td valign="top">
 
 X
 
-
-
 </td>
 <td valign="top">
 
 \-
 
-
-
 </td>
 <td valign="top">
 
 Background color of mobile pages
-
-
 
 </td>
 </tr>
@@ -936,35 +686,25 @@ Background color of mobile pages
 
 `sapThemeBarBG`
 
-
-
 </td>
 <td valign="top">
 
 `background-color`
-
-
 
 </td>
 <td valign="top">
 
 X
 
-
-
 </td>
 <td valign="top">
 
 \-
 
-
-
 </td>
 <td valign="top">
 
 Background color for header bars in mobile pages
-
-
 
 </td>
 </tr>
@@ -973,35 +713,25 @@ Background color for header bars in mobile pages
 
 `sapThemeBarHeading` 
 
-
-
 </td>
 <td valign="top">
 
 `color`
-
-
 
 </td>
 <td valign="top">
 
 X
 
-
-
 </td>
 <td valign="top">
 
 \-
 
-
-
 </td>
 <td valign="top">
 
 Header text color for header bars in mobile pages
-
-
 
 </td>
 </tr>
@@ -1010,35 +740,25 @@ Header text color for header bars in mobile pages
 
 `sapThemeBarText`
 
-
-
 </td>
 <td valign="top">
 
 `color`
-
-
 
 </td>
 <td valign="top">
 
 X
 
-
-
 </td>
 <td valign="top">
 
 \-
 
-
-
 </td>
 <td valign="top">
 
 Normal text color for header bars in mobile pages
-
-
 
 </td>
 </tr>
@@ -1047,35 +767,25 @@ Normal text color for header bars in mobile pages
 
 `sapThemeNegativeText`
 
-
-
 </td>
 <td valign="top">
 
 `color`
-
-
 
 </td>
 <td valign="top">
 
 X
 
-
-
 </td>
 <td valign="top">
 
 \-
 
-
-
 </td>
 <td valign="top">
 
 Semantic negative text color
-
-
 
 </td>
 </tr>
@@ -1084,35 +794,25 @@ Semantic negative text color
 
 `sapThemeCriticalText`
 
-
-
 </td>
 <td valign="top">
 
 `color`
-
-
 
 </td>
 <td valign="top">
 
 X
 
-
-
 </td>
 <td valign="top">
 
 \-
 
-
-
 </td>
 <td valign="top">
 
 Semantic critical text color
-
-
 
 </td>
 </tr>
@@ -1121,35 +821,25 @@ Semantic critical text color
 
 `sapThemePositiveText`
 
-
-
 </td>
 <td valign="top">
 
 `color`
-
-
 
 </td>
 <td valign="top">
 
 X
 
-
-
 </td>
 <td valign="top">
 
 \-
 
-
-
 </td>
 <td valign="top">
 
 Semantic positive text color
-
-
 
 </td>
 </tr>
@@ -1158,35 +848,25 @@ Semantic positive text color
 
 `sapThemeLightText`
 
-
-
 </td>
 <td valign="top">
 
 `color`
-
-
 
 </td>
 <td valign="top">
 
 X
 
-
-
 </td>
 <td valign="top">
 
 \-
 
-
-
 </td>
 <td valign="top">
 
 Light text color
-
-
 
 </td>
 </tr>
@@ -1195,35 +875,25 @@ Light text color
 
 `sapThemeMediumText`
 
-
-
 </td>
 <td valign="top">
 
 `color`
-
-
 
 </td>
 <td valign="top">
 
 X
 
-
-
 </td>
 <td valign="top">
 
 \-
 
-
-
 </td>
 <td valign="top">
 
 Medium text color
-
-
 
 </td>
 </tr>
@@ -1232,35 +902,25 @@ Medium text color
 
 `sapThemeDarkText`
 
-
-
 </td>
 <td valign="top">
 
 `color`
-
-
 
 </td>
 <td valign="top">
 
 X
 
-
-
 </td>
 <td valign="top">
 
 \-
 
-
-
 </td>
 <td valign="top">
 
 Dark text color
-
-
 
 </td>
 </tr>

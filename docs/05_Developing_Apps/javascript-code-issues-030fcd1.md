@@ -25,14 +25,10 @@ Always double check in the API Reference. If SAPUI5 changes the implementation i
 
 Bad Examples
 
-
-
 </th>
 <th valign="top">
 
 Good Example
-
-
 
 </th>
 </tr>
@@ -41,14 +37,10 @@ Good Example
 
 `var sText = oControl.mProperties["text"];`
 
-
-
 </td>
 <td valign="top">
 
 `var sText = oControl.getText();`
-
-
 
 </td>
 </tr>
@@ -57,14 +49,10 @@ Good Example
 
 `oSelectDialog._oList.setGrowing(false);`
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -73,14 +61,10 @@ Good Example
 
 `var sPart = oEvent.oSource.oBindingContexts.description.sPath.split('/')[3];`
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -103,14 +87,10 @@ Use only local variables inside the AMD factory function, do not access the cont
 
 Bad Example
 
-
-
 </th>
 <th valign="top">
 
 Good Example
-
-
 
 </th>
 </tr>
@@ -231,14 +211,10 @@ Instead, you should consider using delegates.
 
 Bad Examples
 
-
-
 </th>
 <th valign="top">
 
 Good Example
-
-
 
 </th>
 </tr>
@@ -275,14 +251,10 @@ oControl.addEventDelegate({
 
 `oControl.prototype.setText = function(){ ... };`
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -311,14 +283,10 @@ Even `onAfterRendering` may not be called when a control handles certain propert
 
 Bad Examples
 
-
-
 </th>
 <th valign="top">
 
 Good Example
-
-
 
 </th>
 </tr>
@@ -326,8 +294,6 @@ Good Example
 <td valign="top">
 
 `oControl.$().find(".sapMLabel")[0].innerHTML = "reallybad";`
-
-
 
 </td>
 <td valign="top">
@@ -354,14 +320,10 @@ oControl.addEventDelegate({
 
 `oControl.$().find(".sapMLabel").remove();`
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -407,7 +369,7 @@ See also: [sap.ui.core.Control - attachBrowserEvent](https://ui5.sap.com/#/api/s
 
 When you create typed views or applications that will be running together with views or applications from other sources \(that are not owned by you\), or typed views that will be instantiated several times in parallel, you must not create stable IDs for your controls, fragments, or views in SAPUI5. Doing so might result in duplicate ID errors that will break your app. Especially when running together with other apps, there could be name clashes or other errors.
 
-Use the `createId()` function of a view or controller instead. This is done automatically in XMLViews and JSONViews. The `createId()` function adds the View ID as a prefix, thus recursively ensuring uniqueness of the ID \(for example: `__page0--__dialog0`\).
+Use the `createId()` function of a view or controller instead. This is done automatically in XMLViews and JSONViews \(**deprecated** as of UI5 version 1.120\). The `createId()` function adds the View ID as a prefix, thus recursively ensuring uniqueness of the ID \(for example: `__page0--__dialog0`\).
 
 **Examples**
 
@@ -418,14 +380,10 @@ Use the `createId()` function of a view or controller instead. This is done auto
 
 Bad Example \(Inside a Typed View\)
 
-
-
 </th>
 <th valign="top">
 
 Good Example \(Inside a Typed View\)
-
-
 
 </th>
 </tr>
@@ -490,14 +448,10 @@ Hard coding UI strings will exclude them from translation. In addition, concaten
 
 Bad Example
 
-
-
 </th>
 <th valign="top">
 
 Good Example
-
-
 
 </th>
 </tr>
@@ -506,14 +460,10 @@ Good Example
 
 Using separate texts like " you selected " and " items " in the translation file to construct sentences like: " you selected " + 10 + "items ". This would lead to a wrong word order in languages where the verb needs to be at the end of the sentence, for example.
 
-
-
 </td>
 <td valign="top">
 
 Using a complete sentence including a placeholder in the translation file: " you selected \{0\} items ". This allows translators to change the word order and the position of the inserted placeholder value.
-
-
 
 </td>
 </tr>
@@ -546,14 +496,10 @@ Note that most errors and warnings in the developer console thrown by the SAPUI5
 
 Bad Example
 
-
-
 </th>
 <th valign="top">
 
 Good Example
-
-
 
 </th>
 </tr>
@@ -562,14 +508,10 @@ Good Example
 
 `console.error("Logon failed");`
 
-
-
 </td>
 <td valign="top">
 
 `Log.error("Logon failed", "", "connectivity";)`
-
-
 
 </td>
 </tr>
@@ -594,14 +536,10 @@ Executing logic with timeouts is often a workaround for faulty behavior and does
 
 Bad Example
 
-
-
 </th>
 <th valign="top">
 
 Good Example
-
-
 
 </th>
 </tr>

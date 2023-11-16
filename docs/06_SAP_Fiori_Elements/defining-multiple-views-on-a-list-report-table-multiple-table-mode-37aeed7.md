@@ -1155,22 +1155,16 @@ To define multiple views using multiple table mode, perform the following steps:
     <th valign="top">
 
     Setting
-
-
     
     </th>
     <th valign="top">
 
     Description
-
-
     
     </th>
     <th valign="top">
 
     Status
-
-
     
     </th>
     </tr>
@@ -1178,22 +1172,16 @@ To define multiple views using multiple table mode, perform the following steps:
     <td valign="top">
     
     `ShowCounts`
-
-
     
     </td>
     <td valign="top">
     
     determines whether the count is displayed in the tabs
-
-
     
     </td>
     <td valign="top">
     
     optional \(default setting: false\)
-
-
     
     </td>
     </tr>
@@ -1201,22 +1189,16 @@ To define multiple views using multiple table mode, perform the following steps:
     <td valign="top">
     
     `key`
-
-
     
     </td>
     <td valign="top">
     
     Stable IDs: As there are separate table instances for each tab, table-specific IDs \(such as IDs for tables, toolbar actions, draft indicators in table columns\) get a suffix "-<key\>", where <key\> is the variant key you've specified in the manifest. This avoids duplicate ID errors and allows you to adapt specific tables via runtime adaptation \(for example, hiding a toolbar action for a specific table\).
-
-
     
     </td>
     <td valign="top">
     
     required
-
-
     
     </td>
     </tr>
@@ -1224,8 +1206,6 @@ To define multiple views using multiple table mode, perform the following steps:
     <td valign="top">
     
     `annotationPath`
-
-
     
     </td>
     <td valign="top">
@@ -1262,8 +1242,6 @@ To define multiple views using multiple table mode, perform the following steps:
     <td valign="top">
     
     required
-
-
     
     </td>
     </tr>
@@ -1271,8 +1249,6 @@ To define multiple views using multiple table mode, perform the following steps:
     <td valign="top">
     
     `keepPreviousPersonalization`
-
-
     
     </td>
     <td valign="top">
@@ -1280,15 +1256,11 @@ To define multiple views using multiple table mode, perform the following steps:
     If you switch from an app with only a single table to an app with multiple tables, you can keep the previously defined variant on one tab. To do so, add the `"keepPreviousPersonalization"` setting to your view definition at the `key` and `annotationPath` level. The corresponding tab keeps the default `LineItem` ID \(without the key\), so the variant is applied to it.
 
     Note that you can only add the personalization to one view because of the need of table-specific IDs.
-
-
     
     </td>
     <td valign="top">
     
     optional
-
-
     
     </td>
     </tr>

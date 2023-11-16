@@ -9,59 +9,61 @@ By defining terminologies together with additional resource bundles, an applicat
 
 To use the concept of terminologies provided by SAPUI5, the "model" definition in the app descriptor must first be enhanced with the terminologies:
 
-```
-"models": {
-    "i18n": {
-        "type": "sap.ui.model.resource.ResourceModel",
-        "settings": {
-            "bundleUrl": "i18n/i18n.properties",
-            "supportedLocales": ["en", “de”],
-            "fallbackLocale": "en",
-            "terminologies": {
-                "travel": {
-                    "bundleUrl": "i18n/terminologies/travel/i18n.terminologies.travel.properties",
-                    "bundleUrlRelativeTo": "manifest",
-                    "supportedLocales": ["en", "de"]
-                }
-            }
-        }
-    },
-    ...
-    ...
-    ...
-}
-```
+> ### Sample Code:  
+> ```
+> "models": {
+>     "i18n": {
+>         "type": "sap.ui.model.resource.ResourceModel",
+>         "settings": {
+>             "bundleUrl": "i18n/i18n.properties",
+>             "supportedLocales": ["en", “de”],
+>             "fallbackLocale": "en",
+>             "terminologies": {
+>                 "travel": {
+>                     "bundleUrl": "i18n/terminologies/travel/i18n.terminologies.travel.properties",
+>                     "bundleUrlRelativeTo": "manifest",
+>                     "supportedLocales": ["en", "de"]
+>                 }
+>             }
+>         }
+>     },
+>     ...
+>     ...
+>     ...
+> }
+> ```
 
 In the sample above, the resource model `i18n` is enhanced with a `travel` terminology.
 
 > ### Note:  
 > Enhancing resource models does not make them available to SAP Fiori elements, so you must add this model to the `enhanceI18n` setting of the SAP Fiori elements template.
 
-```
-"targets": {
-    "LineItemsList": {
-        "type": "Component",
-        "id": "LineItemsList",
-        "name": "sap.fe.templates.ListReport",
-        "options": {
-            "settings": {
-                "contextPath": "/LineItems",
-                "enhanceI18n": ["i18n/ManageItemsListReport.properties", "i18n"],
-                "variantManagement": "Page",
-                "initialLoad": true,
-                "navigation": {
-                    "LineItems": {
-                        "detail": {
-                            "route": "LineItemsObjectPage"
-                        }
-                    }
-                }
-        }
-    }
-}
-```
+> ### Sample Code:  
+> ```
+> "targets": {
+>     "LineItemsList": {
+>         "type": "Component",
+>         "id": "LineItemsList",
+>         "name": "sap.fe.templates.ListReport",
+>         "options": {
+>             "settings": {
+>                 "contextPath": "/LineItems",
+>                 "enhanceI18n": ["i18n/ManageItemsListReport.properties", "i18n"],
+>                 "variantManagement": "Page",
+>                 "initialLoad": true,
+>                 "navigation": {
+>                     "LineItems": {
+>                         "detail": {
+>                             "route": "LineItemsObjectPage"
+>                         }
+>                     }
+>                 }
+>         }
+>     }
+> }
+> ```
 
-In the sample above, the list report is enhanced with an `i18n` bundle \(`i18n/ManageItemsListReport.properties`\) and a resource model \(`i18n`\) to which a terminology has already been added.
+In the preceding sample code, the list report is enhanced with an `i18n` bundle \(`i18n/ManageItemsListReport.properties`\) and a resource model \(`i18n`\) to which a terminology has already been added.
 
 > ### Note:  
 > -   `enhanceI18n` can take any combination of resource files and resource models. In the example above, a resource file `i18n/ManageItemsListReport.properties` and a resource model `i18n` are provided, but you can add further files and models.

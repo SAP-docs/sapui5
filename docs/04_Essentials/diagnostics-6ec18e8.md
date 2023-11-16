@@ -197,16 +197,12 @@ Before you can use this feature, restart your app in Support Mode \(with the `sa
 
 You can display XML metadata by expanding the related nodes in the tree. This helps you to better understand how the data is stored in the back end and which properties it has. This is especially important when investigating binding issues.
 
-
-
 </td>
 <td valign="top">
 
 ![](images/Diagnostics_XML_1_449fff4.png)
 
 XML metadata of a service with three main entity sets: `Product`, `ProductCategory`, and `FeaturedProduct`
-
-
 
 </td>
 </tr>
@@ -246,8 +242,6 @@ You can choose the following options for this view:
 
 ![](images/Diagnostics_XML_2_e95cf06.png)
 
-
-
 </td>
 </tr>
 <tr>
@@ -275,8 +269,6 @@ When you select a control in the code, the following information is displayed:
 <td valign="top">
 
 ![](images/Diagnostics_XML_3_8b3a0c2.png)
-
-
 
 </td>
 </tr>
@@ -407,14 +399,10 @@ The *UI Flexibility Diagnostics* application displays all changes that have been
 
 Color
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -423,14 +411,10 @@ Description
 
 Green
 
-
-
 </td>
 <td valign="top">
 
 This change has been applied to the control in the current system.
-
-
 
 </td>
 </tr>
@@ -439,14 +423,10 @@ This change has been applied to the control in the current system.
 
 Red
 
-
-
 </td>
 <td valign="top">
 
 The change could not be applied, and an error was raised.
-
-
 
 </td>
 </tr>
@@ -455,14 +435,10 @@ The change could not be applied, and an error was raised.
 
 White
 
-
-
 </td>
 <td valign="top">
 
 There was no attempt to apply the change either because required controls were not present, or because preconditions were not fulfilled.
-
-
 
 </td>
 </tr>

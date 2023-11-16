@@ -250,15 +250,11 @@ Additionally, dynamic link list card supports contact annotation as default anno
     <th valign="top">
 
     Annotation
-
-
     
     </th>
     <th valign="top">
 
     Behavior
-
-
     
     </th>
     </tr>
@@ -280,8 +276,6 @@ Additionally, dynamic link list card supports contact annotation as default anno
     <td valign="top">
     
     Navigation is available from line item
-
-
     
     </td>
     </tr>
@@ -303,8 +297,6 @@ Additionally, dynamic link list card supports contact annotation as default anno
     <td valign="top">
     
     Navigation is available from line item and you can see quick view information on click of the title.
-
-
     
     </td>
     </tr>
@@ -312,15 +304,11 @@ Additionally, dynamic link list card supports contact annotation as default anno
     <td valign="top">
     
     For only default contact annotation configuration
-
-
     
     </td>
     <td valign="top">
     
     Quick view information is available on click of title
-
-
     
     </td>
     </tr>
@@ -328,15 +316,11 @@ Additionally, dynamic link list card supports contact annotation as default anno
     <td valign="top">
     
     If no navigation based annotation or contact annotation
-
-
     
     </td>
     <td valign="top">
     
     Only label is displayed
-
-
     
     </td>
     </tr>

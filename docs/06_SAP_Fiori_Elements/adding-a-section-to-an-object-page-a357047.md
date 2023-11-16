@@ -2,7 +2,7 @@
 
 # Adding a Section to an Object Page
 
-You can add an additional section to your object page, as described below.
+You can add custom sections to your object page, as described in this document.
 
 
 
@@ -24,7 +24,7 @@ For this example, you want to add a section called *Product Description* to the 
 
 ### Step 1: Create Fragment for the New Facet
 
-In the SAP Web IDE, open the folder structure of the Manage Products project and proceed as follows:
+In the editor of your choice, open the folder structure of the project where you want to make the adaptation and proceed as follows:
 
 1.  In the `webapp` folder, create a new subfolder called `ext`.
 2.  In the folder `ext`, create a new subfolder called `view`.

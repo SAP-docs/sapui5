@@ -14,7 +14,7 @@ SAPUI5 supports multiple view types \(XML, HTML, JavaScript\). When working with
   
 **The "Hello World" text is now displayed by a SAPUI5 control \(No visual changes to last step\)**
 
-![](images/UI5_Walkthrough_Step_04_05f6775.png "The "Hello World" text is now displayed by a SAPUI5 control (No
+![Hello World](images/UI5_Walkthrough_Step_04_05f6775.png "The "Hello World" text is now displayed by a SAPUI5 control (No
 					visual changes to last step)")
 
 

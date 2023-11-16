@@ -15,49 +15,35 @@ With this release SAPUI5 is upgraded from version 1.95 to 1.96.
 
 Version
 
-
-
 </th>
 <th valign="top">
 
 Type
-
-
 
 </th>
 <th valign="top">
 
 Category
 
-
-
 </th>
 <th valign="top">
 
 Title
-
-
 
 </th>
 <th valign="top">
 
 Description
 
-
-
 </th>
 <th valign="top">
 
 Action
 
-
-
 </th>
 <th valign="top">
 
 Available as of
-
-
 
 </th>
 </tr>
@@ -66,28 +52,20 @@ Available as of
 
 1.96 
 
-
-
 </td>
 <td valign="top">
 
 New 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **Enabling Apps to Comply with a Content Security Policy \(CSP\) without `eval()` and Inline Styles** 
-
-
 
 </td>
 <td valign="top">
@@ -101,21 +79,15 @@ The SAPUI5 framework now allows you to run applications in environments with str
 
 <sub>New•Feature•Info Only•1.96</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-11-04
-
-
 
 </td>
 </tr>
@@ -124,28 +96,20 @@ Info Only
 
 1.96 
 
-
-
 </td>
 <td valign="top">
 
 UI Changed 
-
-
 
 </td>
 <td valign="top">
 
 Announcement 
 
-
-
 </td>
 <td valign="top">
 
 **SAP Fiori Elements: Multi-Select in Responsive Tables: *Clear All* Instead of *Select All*** 
-
-
 
 </td>
 <td valign="top">
@@ -159,21 +123,15 @@ Responsive tables with a multi-select option will show a *Clear All* checkbox in
 
 <sub>UI Changed•Announcement•Info Only•1.95</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-11-04
-
-
 
 </td>
 </tr>
@@ -182,28 +140,20 @@ Info Only
 
 1.96 
 
-
-
 </td>
 <td valign="top">
 
 New 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **New Theme Available for SAP Fiori User Experience \(Experimental\)** 
-
-
 
 </td>
 <td valign="top">
@@ -217,21 +167,15 @@ We have introduced a new theme, the preview version of the *Horizon* visual them
 
 <sub>New•Feature•Info Only•1.96</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-11-04
-
-
 
 </td>
 </tr>
@@ -240,28 +184,20 @@ Info Only
 
 1.96 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **SAPUI5 Models** 
-
-
 
 </td>
 <td valign="top">
@@ -272,21 +208,15 @@ We have provided the new `sap.ui.model.ListBinding#getFilters` method. It is ava
 
 <sub>Changed•Feature•Info Only•1.96</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-11-04
-
-
 
 </td>
 </tr>
@@ -295,28 +225,20 @@ Info Only
 
 1.96 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **SAPUI5 OData V2 Model** 
-
-
 
 </td>
 <td valign="top">
@@ -327,21 +249,15 @@ We have introduced the new `sap.ui.model.odata.v2.Context#created` method. For c
 
 <sub>Changed•Feature•Info Only•1.96</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-11-04
-
-
 
 </td>
 </tr>
@@ -350,28 +266,20 @@ Info Only
 
 1.96 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **SAPUI5 OData V4 Model** 
-
-
 
 </td>
 <td valign="top">
@@ -389,21 +297,15 @@ The new version of the SAPUI5 OData V4 model introduces the following features:
 
 <sub>Changed•Feature•Info Only•1.96</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-11-04
-
-
 
 </td>
 </tr>
@@ -412,28 +314,20 @@ Info Only
 
 1.96 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.MaskInput`** 
-
-
 
 </td>
 <td valign="top">
@@ -444,21 +338,15 @@ We have introduced the `showClearIcon` property. If set to `true`, when there is
 
 <sub>Changed•Control•Info Only•1.96</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-11-04
-
-
 
 </td>
 </tr>
@@ -467,28 +355,20 @@ Info Only
 
 1.96 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.MultiComboBox`** 
-
-
 
 </td>
 <td valign="top">
@@ -499,21 +379,15 @@ We have implemented a checkbox that allows users to select all options, placed o
 
 <sub>Changed•Control•Info Only•1.96</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-11-04
-
-
 
 </td>
 </tr>
@@ -522,28 +396,20 @@ Info Only
 
 1.96 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.comp.smartfield.SmartField`** 
-
-
 
 </td>
 <td valign="top">
@@ -557,21 +423,15 @@ Control
 
 <sub>Changed•Control•Info Only•1.96</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-11-04
-
-
 
 </td>
 </tr>
@@ -580,28 +440,20 @@ Info Only
 
 1.96 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.comp.smarttable.SmartTable`** 
-
-
 
 </td>
 <td valign="top">
@@ -612,21 +464,15 @@ We have provided an option to disable the *Paste* button and control the related
 
 <sub>Changed•Control•Info Only•1.96</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-11-04
-
-
 
 </td>
 </tr>
@@ -635,28 +481,20 @@ Info Only
 
 1.96 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.integration.widgets.Card`** 
-
-
 
 </td>
 <td valign="top">
@@ -674,21 +512,15 @@ Control
 
 <sub>Changed•Control•Info Only•1.96</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-11-04
-
-
 
 </td>
 </tr>
@@ -697,28 +529,20 @@ Info Only
 
 1.96 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 SAP Fiori Elements 
 
-
-
 </td>
 <td valign="top">
 
 **SAP Fiori elements for OData V4 and SAP Fiori elements for OData V2** 
-
-
 
 </td>
 <td valign="top">
@@ -732,21 +556,15 @@ The following changes and new features are available for SAP Fiori elements for 
 
 <sub>Changed•SAP Fiori Elements•Info Only•1.96</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-11-04
-
-
 
 </td>
 </tr>
@@ -755,28 +573,20 @@ Info Only
 
 1.96 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 SAP Fiori Elements 
 
-
-
 </td>
 <td valign="top">
 
 **SAP Fiori elements for OData V2** 
-
-
 
 </td>
 <td valign="top">
@@ -802,21 +612,15 @@ The following changes and new features are available for SAP Fiori elements for 
 
 <sub>Changed•SAP Fiori Elements•Info Only•1.96</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-11-04
-
-
 
 </td>
 </tr>
@@ -825,28 +629,20 @@ Info Only
 
 1.96 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 SAP Fiori Elements 
 
-
-
 </td>
 <td valign="top">
 
 **SAP Fiori elements for OData V4** 
-
-
 
 </td>
 <td valign="top">
@@ -864,7 +660,7 @@ The following changes and new features are available for SAP Fiori elements for 
     -   FilterBar
 
 
-    For more information, see  <?sap-ot O2O class="- topic/xref " href="24c1304739dd4f19af0ce2482c4d9bbe.xml" text="Building Blocks" desc="" xtrc="xref:37" xtrf="file:/home/builder/src/dita-all/zyl1693565473561/loioa82e269bbb584cfcbdbd3ae8765d8e7f_en-US/src/content/localization/en-us/7a9269ffe51c4ee7bc8529e120480d78.xml" ?> .
+    For more information, see [Building Blocks](../06_SAP_Fiori_Elements/building-blocks-24c1304.md).
 
 -   SAP Fiori elements now provides an option to pass the variant IDs of a page, the filter bar, or a table as URL parameters to the app. For more information, see [Passing Variant IDs as URL Parameters](../06_SAP_Fiori_Elements/passing-variant-ids-as-url-parameters-4132ffa.md).
 
@@ -887,21 +683,15 @@ The following changes and new features are available for SAP Fiori elements for 
 
 <sub>Changed•SAP Fiori Elements•Info Only•1.96</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-11-04
-
-
 
 </td>
 </tr>
@@ -910,28 +700,20 @@ Info Only
 
 1.96 
 
-
-
 </td>
 <td valign="top">
 
 New 
-
-
 
 </td>
 <td valign="top">
 
 User Documentation 
 
-
-
 </td>
 <td valign="top">
 
 **Accessibility Documentation for End Users** 
-
-
 
 </td>
 <td valign="top">
@@ -942,21 +724,15 @@ We have new accessibility documentation with detailed information about SAPUI5 k
 
 <sub>New•User Documentation•Info Only•1.96</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-11-04
-
-
 
 </td>
 </tr>
@@ -964,6 +740,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.118](what-s-new-in-sapui5-1-118-3eecbde.md "With this release SAPUI5 is upgraded from version 1.117 to 1.118.")
 
 [What's New in SAPUI5 1.117](what-s-new-in-sapui5-1-117-029d3b4.md "With this release SAPUI5 is upgraded from version 1.116 to 1.117.")
 

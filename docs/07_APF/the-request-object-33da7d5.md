@@ -26,14 +26,10 @@ The properties used in the `request` object denote the following:
 
 Property
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -42,14 +38,10 @@ Description
 
 `id` 
 
-
-
 </td>
 <td valign="top">
 
 Unique ID of type string.
-
-
 
 </td>
 </tr>
@@ -57,8 +49,6 @@ Unique ID of type string.
 <td valign="top">
 
 `service` 
-
-
 
 </td>
 <td valign="top">
@@ -69,8 +59,6 @@ The service root is defined by an absolute path on the OData server according to
 
 The `request` \{ and its entity set name are absolute to the service root, which starts after the server and port information: <code>[protocol]://[server]:[port]/<i class="varname">&lt;service root&gt;</i></code>
 
-
-
 </td>
 </tr>
 <tr>
@@ -78,14 +66,10 @@ The `request` \{ and its entity set name are absolute to the service root, which
 
 `entitySet` 
 
-
-
 </td>
 <td valign="top">
 
 Entity set that corresponds to the data source, for example, the SAP HANA view.
-
-
 
 </td>
 </tr>
@@ -94,16 +78,12 @@ Entity set that corresponds to the data source, for example, the SAP HANA view.
 
 `selectProperties` 
 
-
-
 </td>
 <td valign="top">
 
 Set of property names.
 
 The selected properties determine which properties of the entity are contained in the server response. Therefore, they also determine the analytical processing of the request on the server.
-
-
 
 </td>
 </tr>

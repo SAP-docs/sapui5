@@ -15,7 +15,7 @@ For more information about this control, see the [API Reference](https://ui5.sap
 
 ## Overview
 
-The `SmartVariantManagement` control is a specialization of the `VariantManagement` control. This basic control handles the visual representation of variants, or views, on the user interface.
+The `SmartVariantManagement` control is a specialization of the `sap.m.VariantManagement` control. This basic control handles the visual representation of variants, or views, on the user interface.
 
 > ### Note:  
 > You can define views for specific selections of data on the user interface, for example, based on filter settings. Views are also called variants, usually in a more technical context, for example, in the API names and texts of the control.

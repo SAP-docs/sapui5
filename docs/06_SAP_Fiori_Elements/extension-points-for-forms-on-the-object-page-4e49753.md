@@ -133,21 +133,15 @@ You can define your custom fields by implementing an `xmlfragment` and using the
 
 Property Name
 
-
-
 </th>
 <th valign="top">
 
 Supported Values
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -156,21 +150,15 @@ Description
 
 key
 
-
-
 </td>
 <td valign="top">
 
 aA-zZ, 0-9, :, \_, -
 
-
-
 </td>
 <td valign="top">
 
 The key of the custom field is needed as an identifier, which can be used as reference for other fields.
-
-
 
 </td>
 </tr>
@@ -179,21 +167,15 @@ The key of the custom field is needed as an identifier, which can be used as ref
 
 label
 
-
-
 </td>
 <td valign="top">
 
 any Unicode string
 
-
-
 </td>
 <td valign="top">
 
 The label is shown on the form as the label of the field.
-
-
 
 </td>
 </tr>
@@ -202,21 +184,15 @@ The label is shown on the form as the label of the field.
 
 position
 
-
-
 </td>
 <td valign="top">
 
  
 
-
-
 </td>
 <td valign="top">
 
 Defines the position of the field relative to other fields.
-
-
 
 </td>
 </tr>
@@ -225,21 +201,15 @@ Defines the position of the field relative to other fields.
 
 position.placement
 
-
-
 </td>
 <td valign="top">
 
 "**After**" | "Before"
 
-
-
 </td>
 <td valign="top">
 
 Defines the placement: either "After" or "Before" the anchor field.
-
-
 
 </td>
 </tr>
@@ -248,21 +218,15 @@ Defines the placement: either "After" or "Before" the anchor field.
 
 position.anchor
 
-
-
 </td>
 <td valign="top">
 
 "<key\_of\_column\>"
 
-
-
 </td>
 <td valign="top">
 
 The key of another field to be used as the placement anchor.
-
-
 
 </td>
 </tr>
@@ -271,21 +235,15 @@ The key of another field to be used as the placement anchor.
 
 template
 
-
-
 </td>
 <td valign="top">
 
  
 
-
-
 </td>
 <td valign="top">
 
 Defining the target fragment follows the syntax of defining a fragment via `Fragment.load`.
-
-
 
 </td>
 </tr>

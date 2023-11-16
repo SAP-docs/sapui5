@@ -42,14 +42,10 @@ If an aggregation of **cardinality `0..1`** has an alternative type and if you w
 > 
 > String
 > 
-> 
-> 
 > </th>
 > <th valign="top">
 > 
 > Nested text control
-> 
-> 
 > 
 > </th>
 > </tr>

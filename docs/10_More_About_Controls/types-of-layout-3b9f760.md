@@ -19,14 +19,10 @@ The table below shows how each of the 9 layout types affects the column visibili
 
 Layout Types
 
-
-
 </th>
 <th valign="top" align="center">
 
 Desktop / Tablet / Phone
-
-
 
 </th>
 </tr>
@@ -39,14 +35,10 @@ This is the default layout type for a `FlexibleColumnLayout`. Only the `Begin` c
 
 Use to show the first logical information level \(master page\) only.
 
-
-
 </td>
 <td valign="top">
 
 ![](images/1_OneColumn_d791491.png)
-
-
 
 </td>
 </tr>
@@ -57,14 +49,10 @@ Use to show the first logical information level \(master page\) only.
 
 Use this layout type to display two logical levels of information \(master and detail pages, master being expanded\) on desktop/tablet, or the second logical level of information only \(detail page\) on phone. On desktop/tablet the transition from `OneColumn` to `TwoColumnsBeginExpanded` is seen by the user as the `Begin` column shrinking and `Mid` column opening, while on phone it's seen as the `Mid` column replacing the `Begin` column.
 
-
-
 </td>
 <td valign="top">
 
 ![](images/2_TwoColumnsBeginExpanded_9a60387.png)
-
-
 
 </td>
 </tr>
@@ -75,14 +63,10 @@ Use this layout type to display two logical levels of information \(master and d
 
 Similar to `TwoColumnsBeginExpanded`, but this time the `Mid` column is the wider one.
 
-
-
 </td>
 <td valign="top">
 
 ![](images/3_TwoColumnsMidExpanded_c0d6936.png)
-
-
 
 </td>
 </tr>
@@ -103,8 +87,6 @@ Use this layout to display the second logical level of information \(detail page
 
 ![](images/4_MidColumnFullScreen_a01d72d.png)
 
-
-
 </td>
 </tr>
 <tr>
@@ -114,14 +96,10 @@ Use this layout to display the second logical level of information \(detail page
 
 Use this layout to display up to three logical levels of information side by side \(master, detail, and detail-detail pages\), when the user should focus primarily on the content of the `Mid` column \(as it is wider than the other two\). On desktop, all three columns will be displayed, on tablet – the `Mid` and `End` columns only \(with a layout arrow to access the `Begin` column\), and on phone – the `End` column only.
 
-
-
 </td>
 <td valign="top">
 
 ![](images/5_ThreeColumnsMidExpanded_d1f89e8.png)
-
-
 
 </td>
 </tr>
@@ -132,14 +110,10 @@ Use this layout to display up to three logical levels of information side by sid
 
 Similar to `ThreeColumnsMidExpanded`, but this time the `End` column is expanded, and this is where the user is supposed to focus their attention.
 
-
-
 </td>
 <td valign="top">
 
 ![](images/6_ThreeColumnsEndExpanded_2cef71c.png)
-
-
 
 </td>
 </tr>
@@ -150,14 +124,10 @@ Similar to `ThreeColumnsMidExpanded`, but this time the `End` column is expanded
 
 Use this layout to show the `Begin` and `Mid` columns only \(`Mid` being expanded\), while the `End` column is hidden but accessible with a layout arrow. The difference between this layout and the `TwoColumnsMidExpanded` layout is that for `TwoColumnsMidExpanded` the user cannot access the `End` column at all, as only two logical levels of information are offered \(the third may not be loaded yet\), while for `ThreeColumnsMidExpandedEndHidden` the `End` column is not empty, but just not currently displayed. Its content is loaded and easily accessible \(most commonly already seen by the user, and now hidden so more space can be freed for the other columns\).
 
-
-
 </td>
 <td valign="top">
 
 ![](images/7_ThreeColumnsMidExpandedEndHidden_21a31d2.png)
-
-
 
 </td>
 </tr>
@@ -168,14 +138,10 @@ Use this layout to show the `Begin` and `Mid` columns only \(`Mid` being expande
 
 Similar to `ThreeColumnsMidExpandedEndHidden`, but this time the `Begin` column is expanded. A layout arrow is provided to shrink the `Begin` column, thus transitioning the layout to `ThreeColumnsMidExpandedEndHidden`.
 
-
-
 </td>
 <td valign="top">
 
 ![](images/8_ThreeColumnsBeginExpandedEndHidden_e98b27b.png)
-
-
 
 </td>
 </tr>
@@ -196,8 +162,6 @@ Use this layout to display the third logical level of information \(detail-detai
 
 ![](images/9_EndColumnFullScreen_1129d11.png)
 
-
-
 </td>
 </tr>
 </table>
@@ -211,14 +175,10 @@ For each value of the layout property, the `FlexibleColumnLayout` displays a dif
 
 Control size
 
-
-
 </th>
 <th valign="top">
 
 Columns
-
-
 
 </th>
 </tr>
@@ -227,14 +187,10 @@ Columns
 
 Up to 960px \(Phone\)
 
-
-
 </td>
 <td valign="top">
 
 1 column max
-
-
 
 </td>
 </tr>
@@ -243,14 +199,10 @@ Up to 960px \(Phone\)
 
 960px – 1280px \(Tablet\)
 
-
-
 </td>
 <td valign="top">
 
 2 column max
-
-
 
 </td>
 </tr>
@@ -259,14 +211,10 @@ Up to 960px \(Phone\)
 
 1280px and above \(Desktop\)
 
-
-
 </td>
 <td valign="top">
 
 3 column max
-
-
 
 </td>
 </tr>

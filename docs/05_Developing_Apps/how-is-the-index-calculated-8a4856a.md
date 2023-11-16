@@ -19,6 +19,11 @@ The report allows you to specify the basis for the calculation of the index. Her
 
     This is the recommended mode. The default value for the expiration period is 24 hours.
 
+    This mode is active when you use the provided variant `SAP&DELTA`.
+
+    > ### Tip:  
+    > We recommend to schedule a job to run this report with these settings every 15 minutes.
+
 -   A single repository
 
 -   The SAPUI5 distribution layer only

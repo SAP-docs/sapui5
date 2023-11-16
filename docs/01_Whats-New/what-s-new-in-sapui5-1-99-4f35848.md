@@ -15,49 +15,35 @@ With this release SAPUI5 is upgraded from version 1.98 to 1.99.
 
 Version
 
-
-
 </th>
 <th valign="top">
 
 Type
-
-
 
 </th>
 <th valign="top">
 
 Category
 
-
-
 </th>
 <th valign="top">
 
 Title
-
-
 
 </th>
 <th valign="top">
 
 Description
 
-
-
 </th>
 <th valign="top">
 
 Action
 
-
-
 </th>
 <th valign="top">
 
 Available as of
-
-
 
 </th>
 </tr>
@@ -66,28 +52,20 @@ Available as of
 
 1.99 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **SAPUI5 OData V4 Model** 
-
-
 
 </td>
 <td valign="top">
@@ -109,21 +87,15 @@ The new version of the SAPUI5 OData V4 model introduces the following features:
 
 <sub>Changed•Feature•Info Only•1.99</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only
 
-
-
 </td>
 <td valign="top">
 
 2022-02-22
-
-
 
 </td>
 </tr>
@@ -132,28 +104,20 @@ Info Only
 
 1.99 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.Carousel`** 
-
-
 
 </td>
 <td valign="top">
@@ -164,21 +128,15 @@ The control now shows `sap.m.illustratedMessage` in use cases where there’s no
 
 <sub>Changed•Control•Info Only•1.99</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-02-22
-
-
 
 </td>
 </tr>
@@ -187,28 +145,20 @@ Info Only
 
 1.99 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.DynamicDateRange` \(Experimental\)** 
-
-
 
 </td>
 <td valign="top">
@@ -228,21 +178,15 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.Ti
 
 <sub>Changed•Control•Info Only•1.99</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-02-22
-
-
 
 </td>
 </tr>
@@ -251,28 +195,20 @@ Info Only
 
 1.99 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.SinglePlanningCalendar`** 
-
-
 
 </td>
 <td valign="top">
@@ -283,21 +219,15 @@ We have introduced new behavior – an option to zoom in and zoom out to make th
 
 <sub>Changed•Control•Info Only•1.99</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-02-22
-
-
 
 </td>
 </tr>
@@ -306,28 +236,20 @@ Info Only
 
 1.99 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.upload.UploadSet`** 
-
-
 
 </td>
 <td valign="top">
@@ -340,21 +262,15 @@ The `itemDragStart` and `itemDrop` events are also being exposed. These events r
 
 <sub>Changed•Control•Info Only•1.99</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-02-22
-
-
 
 </td>
 </tr>
@@ -363,28 +279,20 @@ Info Only
 
 1.99 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.comp.smartfield.SmartField`** 
-
-
 
 </td>
 <td valign="top">
@@ -401,21 +309,15 @@ You can format the date in the `sap.ui.core.CustomData` class with `key:“dateF
 
 <sub>Changed•Control•Info Only•1.99</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-02-22
-
-
 
 </td>
 </tr>
@@ -424,28 +326,20 @@ Info Only
 
 1.99 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.comp.smartfilterbar.SmartFilterBar`** 
-
-
 
 </td>
 <td valign="top">
@@ -476,21 +370,15 @@ For more information, see the [Sample](https://ui5.sap.com/#/entity/sap.ui.comp.
 
 <sub>Changed•Control•Info Only•1.99</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-02-22
-
-
 
 </td>
 </tr>
@@ -499,28 +387,20 @@ Info Only
 
 1.99 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.comp.smarttable.SmartTable`** 
-
-
 
 </td>
 <td valign="top">
@@ -531,21 +411,15 @@ We now support the `com.sap.vocabularies.Common.v1.Timezone` annotation. The ann
 
 <sub>Changed•Control•Info Only•1.99</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-02-22
-
-
 
 </td>
 </tr>
@@ -554,28 +428,20 @@ Info Only
 
 1.99 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.integration.widgets.Card`** 
-
-
 
 </td>
 <td valign="top">
@@ -593,21 +459,15 @@ Control
 
 <sub>Changed•Control•Info Only•1.99</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-02-22
-
-
 
 </td>
 </tr>
@@ -616,28 +476,20 @@ Info Only
 
 1.99 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 SAP Fiori Elements 
 
-
-
 </td>
 <td valign="top">
 
 **SAP Fiori elements for OData V2** 
-
-
 
 </td>
 <td valign="top">
@@ -653,21 +505,15 @@ The following changes and new features are available for SAP Fiori elements for 
 
 <sub>Changed•SAP Fiori Elements•Info Only•1.99</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-02-22
-
-
 
 </td>
 </tr>
@@ -676,28 +522,20 @@ Info Only
 
 1.99 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 SAP Fiori Elements 
 
-
-
 </td>
 <td valign="top">
 
 **SAP Fiori elements for OData V4** 
-
-
 
 </td>
 <td valign="top">
@@ -712,7 +550,7 @@ The following changes and new features are available for SAP Fiori elements for 
 
 -   Single-valued date fields now use the `sap.m.DynamicDateRange` control. This enables end users to use semantic date operators like `"TODAY"` and `"TOMORROW"`, as well as date pickers. For more information, see [Enabling Semantic Operators in the Filter Bar](../06_SAP_Fiori_Elements/enabling-semantic-operators-in-the-filter-bar-fef65d0.md).
 
--   You can now also use semantic dates in the `FilterBar` building block. For more information, see  <?sap-ot O2O class="- topic/xref " href="24c1304739dd4f19af0ce2482c4d9bbe.xml" text="Building Blocks" desc="" xtrc="xref:38" xtrf="file:/home/builder/src/dita-all/zyl1693565473561/loioa82e269bbb584cfcbdbd3ae8765d8e7f_en-US/src/content/localization/en-us/4f35848febaa44988ccf18941bcc4af8.xml" ?> .
+-   You can now also use semantic dates in the `FilterBar` building block. For more information, see [Building Blocks](../06_SAP_Fiori_Elements/building-blocks-24c1304.md).
 
 -   You can now use the `UI.TextArrangement` annotation to configure the display format of a table column of the value help. For more information, see [Field Help](../06_SAP_Fiori_Elements/field-help-a5608ea.md).
 
@@ -725,21 +563,15 @@ The following changes and new features are available for SAP Fiori elements for 
 
 <sub>Changed•SAP Fiori Elements•Info Only•1.99</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-02-22
-
-
 
 </td>
 </tr>
@@ -747,6 +579,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.118](what-s-new-in-sapui5-1-118-3eecbde.md "With this release SAPUI5 is upgraded from version 1.117 to 1.118.")
 
 [What's New in SAPUI5 1.117](what-s-new-in-sapui5-1-117-029d3b4.md "With this release SAPUI5 is upgraded from version 1.116 to 1.117.")
 

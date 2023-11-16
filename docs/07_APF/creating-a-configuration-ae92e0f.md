@@ -11,14 +11,10 @@ Once you have created an application, you can add a configuration to it. First, 
 
 Field
 
-
-
 </th>
 <th valign="top">
 
 Explanation
-
-
 
 </th>
 </tr>
@@ -27,14 +23,10 @@ Explanation
 
 Configuration Title
 
-
-
 </td>
 <td valign="top">
 
 Text used as title at runtime. This title is translated.
-
-
 
 </td>
 </tr>
@@ -43,14 +35,10 @@ Text used as title at runtime. This title is translated.
 
 Configuration ID
 
-
-
 </td>
 <td valign="top">
 
 Generated GUID that is required for configuring a Fiori app launcher tile. This ID cannot be changed.
-
-
 
 </td>
 </tr>
@@ -59,14 +47,10 @@ Generated GUID that is required for configuring a Fiori app launcher tile. This 
 
 Semantic Object
 
-
-
 </td>
 <td valign="top">
 
 Inherited from the application. It is displayed for information only and cannot be changed here.
-
-
 
 </td>
 </tr>
@@ -74,8 +58,6 @@ Inherited from the application. It is displayed for information only and cannot 
 <td valign="top">
 
 Filter Type
-
-
 
 </td>
 <td valign="top">

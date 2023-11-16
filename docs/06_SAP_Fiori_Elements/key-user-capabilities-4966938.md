@@ -30,14 +30,10 @@ To enable the user interface adaptation mode, choose *Adapt UI* in the user acti
 
 Feature
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -46,14 +42,10 @@ Description
 
 Hide Card
 
-
-
 </td>
 <td valign="top">
 
 Lets you hide cards during initial load. The hidden cards are available in the *Manage Cards* section.
-
-
 
 </td>
 </tr>
@@ -62,14 +54,10 @@ Lets you hide cards during initial load. The hidden cards are available in the *
 
 Add Card
 
-
-
 </td>
 <td valign="top">
 
 Lets you add cards from a list of available cards that are hidden.
-
-
 
 </td>
 </tr>
@@ -78,14 +66,10 @@ Lets you add cards from a list of available cards that are hidden.
 
 Edit Card
 
-
-
 </td>
 <td valign="top">
 
 Lets you modify title, subtitle, KPI header, value, and description, and type of chart. You can modify sorting and navigation properties. Also, you can disable adding individual cards to the *Insights* section. This option is available only if the generation of cards for the *Insights* section of *My Home* in SAP S/4HANA Cloud is enabled.
-
-
 
 </td>
 </tr>
@@ -94,14 +78,10 @@ Lets you modify title, subtitle, KPI header, value, and description, and type of
 
 Add/Delete Views
 
-
-
 </td>
 <td valign="top">
 
 Lets you add view switch field to a card
-
-
 
 </td>
 </tr>
@@ -110,14 +90,10 @@ Lets you add view switch field to a card
 
 Modify Card Size
 
-
-
 </td>
 <td valign="top">
 
 Lets you resize cards, change the number of rows and columns.
-
-
 
 </td>
 </tr>
@@ -126,14 +102,10 @@ Lets you resize cards, change the number of rows and columns.
 
 Create Card
 
-
-
 </td>
 <td valign="top">
 
 Lets you create new cards. Currently you can create static link list card and KPI card only.
-
-
 
 </td>
 </tr>
@@ -142,14 +114,10 @@ Lets you create new cards. Currently you can create static link list card and KP
 
 Others
 
-
-
 </td>
 <td valign="top">
 
 Similarly you can perform basic card operations like cut, copy, paste, save, cancel, reset and publish.
-
-
 
 </td>
 </tr>
@@ -158,14 +126,10 @@ Similarly you can perform basic card operations like cut, copy, paste, save, can
 
 Adapt Filters
 
-
-
 </td>
 <td valign="top">
 
 Lets you add or remove filters from the filter bar. You can also add a value to a filter. These changes can later be saved as a new variant or a previously defined variant.
-
-
 
 </td>
 </tr>
@@ -174,14 +138,10 @@ Lets you add or remove filters from the filter bar. You can also add a value to 
 
 Adapt Variants
 
-
-
 </td>
 <td valign="top">
 
 Lets you rename an existing view, save a view, save a current view as a new view, and manage views.
-
-
 
 </td>
 </tr>
@@ -202,14 +162,10 @@ Maintain property labels for these annotations to enhance readability in the use
 
 Annotation
 
-
-
 </th>
 <th valign="top">
 
 Property
-
-
 
 </th>
 </tr>
@@ -218,14 +174,10 @@ Property
 
 `PresentationVariant`
 
-
-
 </td>
 <td valign="top">
 
 text
-
-
 
 </td>
 </tr>
@@ -234,14 +186,10 @@ text
 
 `SelectionVariant`
 
-
-
 </td>
 <td valign="top">
 
 text
-
-
 
 </td>
 </tr>
@@ -250,14 +198,10 @@ text
 
 `DataPoint`
 
-
-
 </td>
 <td valign="top">
 
 title
-
-
 
 </td>
 </tr>
@@ -266,14 +210,10 @@ title
 
 `IdentificationAnnotation`
 
-
-
 </td>
 <td valign="top">
 
 The label is displayed based on the priority set in the `DataFieldForIntentBasedNavigation`/`DataFieldWithURL` property
-
-
 
 </td>
 </tr>
@@ -282,14 +222,10 @@ The label is displayed based on the priority set in the `DataFieldForIntentBased
 
 `chartAnnotation`
 
-
-
 </td>
 <td valign="top">
 
 description
-
-
 
 </td>
 </tr>

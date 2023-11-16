@@ -45,21 +45,15 @@ The connectors control the layers to which changes are written. Every connector 
 
 Name
 
-
-
 </th>
 <th valign="top">
 
 Supported Layers
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -68,14 +62,10 @@ Description
 
 `KeyUserConnector`
 
-
-
 </td>
 <td valign="top">
 
 `CUSTOMER`
-
-
 
 </td>
 <td valign="top">
@@ -83,8 +73,6 @@ Description
 Used to connect key user adaptation and shared views on SAP BTP, Cloud Foundry environment
 
 For more information, see [Developing Applications Running Standalone](https://help.sap.com/docs/UI5_FLEXIBILITY_KEY_USER/0f8b49c4dfc94bc0bda25a19aa93d5b2/7f1c8c8aa7e1487a9d79a0b001e8060b.html/?&version=Cloud#adding-sapui5-flexibility-services-to-the-sapui5-bootstrap) and [Developing Applications Running in the SAP Cloud Portal Service](https://help.sap.com/docs/UI5_FLEXIBILITY_KEY_USER/0f8b49c4dfc94bc0bda25a19aa93d5b2/55433c585c5a43ef96d9b8d4bc4bc464.html/?&version=Cloud#adding-sapui5-flexibility-services-to-the-sapui5-bootstrap).
-
-
 
 </td>
 </tr>
@@ -101,21 +89,15 @@ For more information, see [Developing Applications Running Standalone](https://h
 
 Name
 
-
-
 </th>
 <th valign="top">
 
 Supported Layers
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -124,21 +106,15 @@ Description
 
 `LrepConnector`
 
-
-
 </td>
 <td valign="top">
 
 `CUSTOMER, USER`
 
-
-
 </td>
 <td valign="top">
 
 Default connector used to handle ABAP back-end systems as well as SAP BTP, Neo environment
-
-
 
 </td>
 </tr>
@@ -147,21 +123,15 @@ Default connector used to handle ABAP back-end systems as well as SAP BTP, Neo e
 
 `PersonalizationConnector`
 
-
-
 </td>
 <td valign="top">
 
 `USER`
 
-
-
 </td>
 <td valign="top">
 
 Used to connect personalization within an SAPUI5 application on SAP BTP, Cloud Foundry environment
-
-
 
 </td>
 </tr>
@@ -178,21 +148,15 @@ Used to connect personalization within an SAPUI5 application on SAP BTP, Cloud F
 
 Name
 
-
-
 </th>
 <th valign="top">
 
 Supported Layers
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -201,14 +165,10 @@ Description
 
 `LocalStorageConnector`
 
-
-
 </td>
 <td valign="top">
 
 All
-
-
 
 </td>
 <td valign="top">
@@ -227,14 +187,10 @@ Used to store all entries within the local storage of the browser.
 
 `SessionStorageConnector`
 
-
-
 </td>
 <td valign="top">
 
 All
-
-
 
 </td>
 <td valign="top">
@@ -253,14 +209,10 @@ Used to store all entries within the session storage of the browser.
 
 `JsObjectConnector`
 
-
-
 </td>
 <td valign="top">
 
 All
-
-
 
 </td>
 <td valign="top">
@@ -279,14 +231,10 @@ Used to store all entries within a JSON object persisting only for the session.
 
 `ObjectPathConnector`
 
-
-
 </td>
 <td valign="top">
 
 None
-
-
 
 </td>
 <td valign="top">

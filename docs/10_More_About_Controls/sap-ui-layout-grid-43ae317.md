@@ -37,21 +37,15 @@ You can use the `sap.ui.layout.Grid` on its own or in combination with the `sap.
 
 Property
 
-
-
 </th>
 <th valign="top">
 
 Example Values
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -60,8 +54,6 @@ Description
 
 `defaultSpan`
 
-
-
 </td>
 <td valign="top">
 
@@ -69,14 +61,10 @@ Description
 `"XL6 M6"`  
 `"S2"`
 
-
-
 </td>
 <td valign="top">
 
 Determines the span of the items for the different screen/container sizes \(XL, L, M, and S\). Each item can be set to span over several grid columns \(from 1 to 12\).
-
-
 
 </td>
 </tr>
@@ -85,8 +73,6 @@ Determines the span of the items for the different screen/container sizes \(XL, 
 
 `defaultIndent`
 
-
-
 </td>
 <td valign="top">
 
@@ -94,14 +80,10 @@ Determines the span of the items for the different screen/container sizes \(XL, 
 `"XL2 L1"`  
 `"S6"`
 
-
-
 </td>
 <td valign="top">
 
 Defines the number of columns with which each item is indented for the different screen/container sizes \(XL, L, M, and S\). Each item can be indented with several grid columns \(from 0 to 11\).
-
-
 
 </td>
 </tr>
@@ -157,8 +139,6 @@ S container/screen size \(one item spans over 12 columns\)
 
 ![](images/S_Grid_Example_8412d67.png)
 
-
-
 </td>
 </tr>
 <tr>
@@ -183,8 +163,6 @@ S container/screen size \(one item spans over 12 columns\)
 XL container/screen size \(items are indented with 1 column\)
 
 ![](images/XL_Grid_Indent_d86735c.png)
-
-
 
 </td>
 </tr>
@@ -217,8 +195,6 @@ XL container/screen size \(items are indented with 1 column\)
 Individual span for item2 and item4 using `sap.ui.layout.GridData`
 
 ![](images/XL_Grid_GridData_147f097.png)
-
-
 
 </td>
 </tr>

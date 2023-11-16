@@ -96,14 +96,10 @@ Various checks can be executed. For example, check for the needed busy indicator
 
 Parameter
 
-
-
 </th>
 <th valign="top">
 
 System Behavior
-
-
 
 </th>
 </tr>
@@ -112,14 +108,10 @@ System Behavior
 
 `busy.set=true` 
 
-
-
 </td>
 <td valign="top">
 
 Triggers a busy indicator when a function is being executed. Can be set to false in case of immediate completion.
-
-
 
 </td>
 </tr>
@@ -128,16 +120,12 @@ Triggers a busy indicator when a function is being executed. Can be set to false
 
 `busy.check=true` 
 
-
-
 </td>
 <td valign="top">
 
 Checks whether the application is currently busy. The function is executed only if it's not busy.
 
 Has to be set to false if the function is not triggered by direct user interaction, but as a result of another function that set the application to busy.
-
-
 
 </td>
 </tr>
@@ -146,14 +134,10 @@ Has to be set to false if the function is not triggered by direct user interacti
 
 `dataloss.popup=true` 
 
-
-
 </td>
 <td valign="top">
 
 Displays a data-loss message before execution of the function if needed \(that is, in non-draft cases when the model or registered methods contain pending changes\).
-
-
 
 </td>
 </tr>
@@ -162,14 +146,10 @@ Displays a data-loss message before execution of the function if needed \(that i
 
 `dataloss.navigation=false` 
 
-
-
 </td>
 <td valign="top">
 
 Indicates that execution of the function leads to navigation, that is, leaves the current page, which induces a slightly different text for the data-loss message.
-
-
 
 </td>
 </tr>

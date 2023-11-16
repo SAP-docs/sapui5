@@ -13,49 +13,35 @@ With this release SAPUI5 is upgraded from version 1.67 to 1.68.
 
 Version
 
-
-
 </th>
 <th valign="top">
 
 Type
-
-
 
 </th>
 <th valign="top">
 
 Category
 
-
-
 </th>
 <th valign="top">
 
 Title
-
-
 
 </th>
 <th valign="top">
 
 Description
 
-
-
 </th>
 <th valign="top">
 
 Action
 
-
-
 </th>
 <th valign="top">
 
 Available as of
-
-
 
 </th>
 </tr>
@@ -64,28 +50,20 @@ Available as of
 
 1.68 
 
-
-
 </td>
 <td valign="top">
 
 New 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **Format Option `parseKeepsEmptyString`** 
-
-
 
 </td>
 <td valign="top">
@@ -96,21 +74,15 @@ The format option `parseKeepsEmptyString` for `sap.ui.model.odata.type.String` i
 
 <sub>New•Feature•Info Only•1.68</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only
 
-
-
 </td>
 <td valign="top">
 
 2019-07-18
-
-
 
 </td>
 </tr>
@@ -119,28 +91,20 @@ Info Only
 
 1.68 
 
-
-
 </td>
 <td valign="top">
 
 New 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **New Semantic Rendering With `RenderManager`** 
-
-
 
 </td>
 <td valign="top">
@@ -155,21 +119,15 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.c
 
 <sub>New•Feature•Info Only•1.68</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-07-18
-
-
 
 </td>
 </tr>
@@ -178,28 +136,20 @@ Info Only
 
 1.68 
 
-
-
 </td>
 <td valign="top">
 
 New 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.integration.widgets.Card`** 
-
-
 
 </td>
 <td valign="top">
@@ -212,21 +162,15 @@ For more information, see [Card Explorer](https://ui5.sap.com/test-resources/sap
 
 <sub>New•Feature•Info Only•1.68</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-07-18
-
-
 
 </td>
 </tr>
@@ -235,28 +179,20 @@ Info Only
 
 1.68 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **SAPUI5 OData V4 Model** 
-
-
 
 </td>
 <td valign="top">
@@ -279,21 +215,15 @@ For more information, see [OData V4 Model](../04_Essentials/odata-v4-model-5de13
 
 <sub>Changed•Feature•Info Only•1.68</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-07-18
-
-
 
 </td>
 </tr>
@@ -302,28 +232,20 @@ Info Only
 
 1.68 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **Text Wrapping for Spreadsheet Export** 
-
-
 
 </td>
 <td valign="top">
@@ -334,21 +256,15 @@ If you set the new `wrap` property to `true`, the content of columns of type *te
 
 <sub>Changed•Feature•Info Only•1.68</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-07-18
-
-
 
 </td>
 </tr>
@@ -357,28 +273,20 @@ Info Only
 
 1.68 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.f.DynamicPage`** 
-
-
 
 </td>
 <td valign="top">
@@ -389,21 +297,15 @@ You can now change the background color of the `DynamicPage` control by using th
 
 <sub>Changed•Control•Info Only•1.68</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-07-18
-
-
 
 </td>
 </tr>
@@ -412,28 +314,20 @@ Info Only
 
 1.68 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.f.GridContainer` \(Experimental\)** 
-
-
 
 </td>
 <td valign="top">
@@ -444,21 +338,15 @@ We have enhanced the drag and drop functionality. With the new version, we intro
 
 <sub>Changed•Control•Info Only•1.68</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-07-18
-
-
 
 </td>
 </tr>
@@ -467,28 +355,20 @@ Info Only
 
 1.68 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.DatePicker`** 
-
-
 
 </td>
 <td valign="top">
@@ -499,21 +379,15 @@ The options displayed in the picker now depend on the display format. For exampl
 
 <sub>Changed•Control•Info Only•1.68</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-07-18
-
-
 
 </td>
 </tr>
@@ -522,28 +396,20 @@ Info Only
 
 1.68 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.SelectDialog / sap.m.TableSelectDialog`** 
-
-
 
 </td>
 <td valign="top">
@@ -554,21 +420,15 @@ Application developers can now customize the text of the confirmation button for
 
 <sub>Changed•Control•Info Only•1.68</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-07-18
-
-
 
 </td>
 </tr>
@@ -577,28 +437,20 @@ Info Only
 
 1.68 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.SelectDialog`** 
-
-
 
 </td>
 <td valign="top">
@@ -609,21 +461,15 @@ We have introduced a new API method called `clearSelection` that allows removing
 
 <sub>Changed•Control•Info Only•1.68</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-07-18
-
-
 
 </td>
 </tr>
@@ -632,28 +478,20 @@ Info Only
 
 1.68 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.comp.smartvariants.SmartVariantManagement`** 
-
-
 
 </td>
 <td valign="top">
@@ -666,21 +504,15 @@ This behavior is supported for page variants and control variants \(for example,
 
 <sub>Changed•Control•Info Only•1.68</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-07-18
-
-
 
 </td>
 </tr>
@@ -689,28 +521,20 @@ Info Only
 
 1.68 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 SAP Fiori Elements 
 
-
-
 </td>
 <td valign="top">
 
 **SAP Fiori Elements** 
-
-
 
 </td>
 <td valign="top">
@@ -740,21 +564,15 @@ For more information, see [Using Images, Initials, and Icons](../06_SAP_Fiori_El
 
 <sub>Changed•SAP Fiori Elements•Info Only•1.68</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-07-18
-
-
 
 </td>
 </tr>
@@ -763,28 +581,20 @@ Info Only
 
 1.68 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **Demo Kit Improvements** 
-
-
 
 </td>
 <td valign="top">
@@ -803,21 +613,15 @@ The web page title is now updated dynamically to reflect the currently open tab.
 
 <sub>Changed•Feature•Info Only•1.68</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-07-18
-
-
 
 </td>
 </tr>
@@ -825,6 +629,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.118](what-s-new-in-sapui5-1-118-3eecbde.md "With this release SAPUI5 is upgraded from version 1.117 to 1.118.")
 
 [What's New in SAPUI5 1.117](what-s-new-in-sapui5-1-117-029d3b4.md "With this release SAPUI5 is upgraded from version 1.116 to 1.117.")
 

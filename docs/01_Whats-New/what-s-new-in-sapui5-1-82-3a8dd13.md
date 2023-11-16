@@ -15,49 +15,35 @@ With this release SAPUI5 is upgraded from version 1.81 to 1.82.
 
 Version
 
-
-
 </th>
 <th valign="top">
 
 Type
-
-
 
 </th>
 <th valign="top">
 
 Category
 
-
-
 </th>
 <th valign="top">
 
 Title
-
-
 
 </th>
 <th valign="top">
 
 Description
 
-
-
 </th>
 <th valign="top">
 
 Action
 
-
-
 </th>
 <th valign="top">
 
 Available as of
-
-
 
 </th>
 </tr>
@@ -66,28 +52,20 @@ Available as of
 
 1.82 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Announcement 
 
-
-
 </td>
 <td valign="top">
 
 **Third-Party Library Upgrades** 
-
-
 
 </td>
 <td valign="top">
@@ -104,21 +82,15 @@ We have upgraded the third-party jQuery library from jQuery 2.2.3 to jQuery 3.5.
 
 <sub>Changed•Announcement•Info Only•1.82</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only
 
-
-
 </td>
 <td valign="top">
 
 2020-09-17
-
-
 
 </td>
 </tr>
@@ -127,28 +99,20 @@ Info Only
 
 1.82 
 
-
-
 </td>
 <td valign="top">
 
 New 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **Badge Implementation** 
-
-
 
 </td>
 <td valign="top">
@@ -168,21 +132,15 @@ Badges display very short and important information that attracts the user’s a
 
 <sub>New•Feature•Info Only•1.82</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-09-17
-
-
 
 </td>
 </tr>
@@ -191,28 +149,20 @@ Info Only
 
 1.82 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **Five New Icons Available in the *SAP Fiori Tools* Icon Font** 
-
-
 
 </td>
 <td valign="top">
@@ -225,21 +175,15 @@ Find the icon that fits your needs via the [SAPUI5 Icon Explorer](https://ui5.sa
 
 <sub>Changed•Feature•Info Only•1.82</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-09-17
-
-
 
 </td>
 </tr>
@@ -248,28 +192,20 @@ Info Only
 
 1.82 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **SAPUI5 OData V2 Model** 
-
-
 
 </td>
 <td valign="top">
@@ -282,21 +218,15 @@ Depending on their format options, some composite types, such as `sap.ui.model.t
 
 <sub>Changed•Feature•Info Only•1.82</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-09-17
-
-
 
 </td>
 </tr>
@@ -305,28 +235,20 @@ Info Only
 
 1.82 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **SAPUI5 OData V4 Model** 
-
-
 
 </td>
 <td valign="top">
@@ -347,21 +269,15 @@ For more information, see [OData V4 Model](../04_Essentials/odata-v4-model-5de13
 
 <sub>Changed•Feature•Info Only•1.82</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-09-17
-
-
 
 </td>
 </tr>
@@ -370,28 +286,20 @@ Info Only
 
 1.82 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.comp.smartchart.SmartChart`** 
-
-
 
 </td>
 <td valign="top">
@@ -417,21 +325,15 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.c
 
 <sub>Changed•Control•Info Only•1.82</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-09-17
-
-
 
 </td>
 </tr>
@@ -440,28 +342,20 @@ Info Only
 
 1.82 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.comp.smartfilterbar.SmartFilterBar`** 
-
-
 
 </td>
 <td valign="top">
@@ -474,21 +368,15 @@ For more information, see the [Sample](https://ui5.sap.com/#/entity/sap.ui.comp.
 
 <sub>Changed•Control•Info Only•1.82</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-09-17
-
-
 
 </td>
 </tr>
@@ -497,28 +385,20 @@ Info Only
 
 1.82 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.comp.SmartForm`** 
-
-
 
 </td>
 <td valign="top">
@@ -529,21 +409,15 @@ We have introduced the option to set `textInEditModeSource` to all smart fields 
 
 <sub>Changed•Control•Info Only•1.82</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-09-17
-
-
 
 </td>
 </tr>
@@ -552,28 +426,20 @@ Info Only
 
 1.82 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.integration.widgets.Card`** 
-
-
 
 </td>
 <td valign="top">
@@ -584,21 +450,15 @@ We have updated the UI5 Web Components dependency of the Adaptive Cards to the v
 
 <sub>Changed•Control•Info Only•1.82</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-09-17
-
-
 
 </td>
 </tr>
@@ -607,28 +467,20 @@ Info Only
 
 1.82 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 SAP Fiori Elements 
 
-
-
 </td>
 <td valign="top">
 
 **SAP Fiori Elements** 
-
-
 
 </td>
 <td valign="top">
@@ -650,21 +502,15 @@ SAP Fiori Elements
 
 <sub>Changed•SAP Fiori Elements•Info Only•1.82</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-09-17
-
-
 
 </td>
 </tr>
@@ -672,6 +518,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.118](what-s-new-in-sapui5-1-118-3eecbde.md "With this release SAPUI5 is upgraded from version 1.117 to 1.118.")
 
 [What's New in SAPUI5 1.117](what-s-new-in-sapui5-1-117-029d3b4.md "With this release SAPUI5 is upgraded from version 1.116 to 1.117.")
 

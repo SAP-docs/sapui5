@@ -66,7 +66,7 @@ By invoking the special JavaScript function .`call(...)` on your event handler f
 
 ## Passing Parameters
 
-In XMLViews and JSONViews it is also possible to directly specify the parameters that should be passed into the event handler function. These parameters then are passed instead of the event object. The syntax mimics the JavaScript syntax for function calls:
+In XMLViews and JSONViews \(**deprecated** as of UI5 version 1.120\) it is also possible to directly specify the parameters that should be passed into the event handler function. These parameters then are passed instead of the event object. The syntax mimics the JavaScript syntax for function calls:
 
 ```
 <Button text="Press Me" press=".doSomething('Hello World')"/>

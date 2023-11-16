@@ -15,21 +15,15 @@ You cannot set the label color directly. The color of the labels at the bottom i
 
 Property
 
-
-
 </th>
 <th valign="top">
 
 Type
 
-
-
 </th>
 <th valign="top">
 
 Value
-
-
 
 </th>
 </tr>
@@ -38,21 +32,15 @@ Value
 
 DeviationLowValue
 
-
-
 </td>
 <td valign="top">
 
 Negative
 
-
-
 </td>
 <td valign="top">
 
 10
-
-
 
 </td>
 </tr>
@@ -61,21 +49,15 @@ Negative
 
 ToleranceLowValue
 
-
-
 </td>
 <td valign="top">
 
 Critical
 
-
-
 </td>
 <td valign="top">
 
 45
-
-
 
 </td>
 </tr>
@@ -84,21 +66,15 @@ Critical
 
 ToleranceHighValue
 
-
-
 </td>
 <td valign="top">
 
 Critical
 
-
-
 </td>
 <td valign="top">
 
 55
-
-
 
 </td>
 </tr>
@@ -107,21 +83,15 @@ Critical
 
 DeviationHighValue
 
-
-
 </td>
 <td valign="top">
 
 Negative
 
-
-
 </td>
 <td valign="top">
 
 80
-
-
 
 </td>
 </tr>
@@ -136,28 +106,20 @@ Negative
 
 Value
 
-
-
 </th>
 <th valign="top">
 
 Maximize direction
-
-
 
 </th>
 <th valign="top">
 
 Minimize direction
 
-
-
 </th>
 <th valign="top">
 
 Target direction
-
-
 
 </th>
 </tr>
@@ -166,28 +128,20 @@ Target direction
 
 5
 
-
-
 </td>
 <td valign="top">
 
 Error
-
-
 
 </td>
 <td valign="top">
 
 Good
 
-
-
 </td>
 <td valign="top">
 
 Error
-
-
 
 </td>
 </tr>
@@ -196,28 +150,20 @@ Error
 
 15
 
-
-
 </td>
 <td valign="top">
 
 Critical
-
-
 
 </td>
 <td valign="top">
 
 Good
 
-
-
 </td>
 <td valign="top">
 
 Critical
-
-
 
 </td>
 </tr>
@@ -226,28 +172,20 @@ Critical
 
 50
 
+</td>
+<td valign="top">
 
+Good
 
 </td>
 <td valign="top">
 
 Good
 
-
-
 </td>
 <td valign="top">
 
 Good
-
-
-
-</td>
-<td valign="top">
-
-Good
-
-
 
 </td>
 </tr>
@@ -256,28 +194,20 @@ Good
 
 70
 
-
-
 </td>
 <td valign="top">
 
 Good
 
-
-
 </td>
 <td valign="top">
 
 Critical
 
-
-
 </td>
 <td valign="top">
 
 Critical
-
-
 
 </td>
 </tr>
@@ -286,28 +216,20 @@ Critical
 
 90
 
-
-
 </td>
 <td valign="top">
 
 Good
 
-
-
 </td>
 <td valign="top">
 
 Error
 
-
-
 </td>
 <td valign="top">
 
 Error
-
-
 
 </td>
 </tr>

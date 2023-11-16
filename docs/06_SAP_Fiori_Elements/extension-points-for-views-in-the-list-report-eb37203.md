@@ -83,21 +83,15 @@ You can define your custom view by using the following properties:
 
 Property Name
 
-
-
 </th>
 <th valign="top">
 
 Supported Values
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -106,21 +100,15 @@ Description
 
 key
 
-
-
 </td>
 <td valign="top">
 
 "<unique\_tab\_id\>"
 
-
-
 </td>
 <td valign="top">
 
 Unique tab identifier.
-
-
 
 </td>
 </tr>
@@ -129,21 +117,15 @@ Unique tab identifier.
 
 label
 
-
-
 </td>
 <td valign="top">
 
 "<tab\_title\>"
 
-
-
 </td>
 <td valign="top">
 
 View title \(localization supported\).
-
-
 
 </td>
 </tr>
@@ -152,21 +134,15 @@ View title \(localization supported\).
 
 template
 
-
-
 </td>
 <td valign="top">
 
 "<name\_of\_custom\_xml\_view\>"
 
-
-
 </td>
 <td valign="top">
 
 The name contains `sap.app.id` as a prefix, followed by the path in the app/webapp folder and the name of the XML view.
-
-
 
 </td>
 </tr>

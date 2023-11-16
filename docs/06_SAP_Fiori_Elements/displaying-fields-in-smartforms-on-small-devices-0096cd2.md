@@ -16,14 +16,10 @@ Using the `UI.Importance` annotation, you can set the importance of a field. Bas
 
 Annotation
 
-
-
 </th>
 <th valign="top">
 
 Behavior
-
-
 
 </th>
 </tr>
@@ -32,14 +28,10 @@ Behavior
 
 `<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High" />` 
 
-
-
 </td>
 <td valign="top">
 
 The field is visible in all device types \(desktops, tablets, or mobiles\).
-
-
 
 </td>
 </tr>
@@ -48,14 +40,10 @@ The field is visible in all device types \(desktops, tablets, or mobiles\).
 
 `<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Medium" />` 
 
-
-
 </td>
 <td valign="top">
 
 The field is visible in desktops and tablets.
-
-
 
 </td>
 </tr>
@@ -64,14 +52,10 @@ The field is visible in desktops and tablets.
 
 `<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low" />` 
 
-
-
 </td>
 <td valign="top">
 
 The field is visible in desktops and tablets.
-
-
 
 </td>
 </tr>

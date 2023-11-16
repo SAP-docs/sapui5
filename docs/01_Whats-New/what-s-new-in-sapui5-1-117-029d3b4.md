@@ -21,49 +21,35 @@ With this release SAPUI5 is upgraded from version 1.116 to 1.117.
 
 Version
 
-
-
 </th>
 <th valign="top">
 
 Type
-
-
 
 </th>
 <th valign="top">
 
 Category
 
-
-
 </th>
 <th valign="top">
 
 Title
-
-
 
 </th>
 <th valign="top">
 
 Description
 
-
-
 </th>
 <th valign="top">
 
 Action
 
-
-
 </th>
 <th valign="top">
 
 Available as of
-
-
 
 </th>
 </tr>
@@ -72,28 +58,20 @@ Available as of
 
 1.117 
 
-
-
 </td>
 <td valign="top">
 
 Deprecated 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **Deprecations** 
-
-
 
 </td>
 <td valign="top">
@@ -119,21 +97,15 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.ta
 
 <sub>Deprecated•Feature•Info Only•1.117</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-08-10
-
-
 
 </td>
 </tr>
@@ -142,28 +114,20 @@ Info Only
 
 1.117 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.List, sap.m.Table, sap.m.Tree`** 
-
-
 
 </td>
 <td valign="top">
@@ -176,21 +140,15 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.Li
 
 <sub>Changed•Control•Info Only•1.117</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-08-10
-
-
 
 </td>
 </tr>
@@ -199,28 +157,20 @@ Info Only
 
 1.117 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.comp.smarttable.SmartTable`** 
-
-
 
 </td>
 <td valign="top">
@@ -250,21 +200,15 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.c
 
 <sub>Changed•Control•Info Only•1.117</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-08-10
-
-
 
 </td>
 </tr>
@@ -273,28 +217,20 @@ Info Only
 
 1.117 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.mdc.Table` \(experimental\)** 
-
-
 
 </td>
 <td valign="top">
@@ -307,21 +243,15 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/module:s
 
 <sub>Changed•Control•Info Only•1.117</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-08-10
-
-
 
 </td>
 </tr>
@@ -330,28 +260,20 @@ Info Only
 
 1.117 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.export.ExportHandler`** 
-
-
 
 </td>
 <td valign="top">
@@ -364,21 +286,15 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.e
 
 <sub>Changed•Feature•Info Only•1.117</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-08-10
-
-
 
 </td>
 </tr>
@@ -387,28 +303,20 @@ Info Only
 
 1.117 
 
-
-
 </td>
 <td valign="top">
 
 New 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 ****Sample for `sap.ui.mdc` library**** 
-
-
 
 </td>
 <td valign="top">
@@ -419,21 +327,15 @@ You can now test the table and filter bar features of the \(experimental\) `sap.
 
 <sub>New•Feature•Info Only•1.117</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-08-10
-
-
 
 </td>
 </tr>
@@ -442,28 +344,20 @@ Info Only
 
 1.117 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.layout.form.SimpleForm`** 
-
-
 
 </td>
 <td valign="top">
@@ -474,21 +368,15 @@ Control
 
 <sub>Changed•Control•Info Only•1.117</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-08-10
-
-
 
 </td>
 </tr>
@@ -497,28 +385,20 @@ Info Only
 
 1.117 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 SAP Fiori Elements 
 
-
-
 </td>
 <td valign="top">
 
 **SAP Fiori elements for OData V2** 
-
-
 
 </td>
 <td valign="top">
@@ -532,21 +412,15 @@ The following changes and new features are available for SAP Fiori elements for 
 
 <sub>Changed•SAP Fiori Elements•Info Only•1.117</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-08-10
-
-
 
 </td>
 </tr>
@@ -555,28 +429,20 @@ Info Only
 
 1.117 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 SAP Fiori Elements 
 
-
-
 </td>
 <td valign="top">
 
 **SAP Fiori elements for OData V4** 
-
-
 
 </td>
 <td valign="top">
@@ -591,7 +457,7 @@ The following changes and new features are available for SAP Fiori elements for 
 
 -   Application developers can now specify the `rowCountMode` and `rowCount` properties for a non-responsive table. For more information about the `Table`, see the [API Reference](https://ui5.sap.com/#/api/sap.fe.macros.Table%23overview) .
 
--   Application developers can now specify the create options for the table when using the `Table` building block. For more information, see  <?sap-ot O2O class="- topic/xref " href="3801656db27b4b7a9099b6ed5fa1d769.xml" text="The Table Building Block" desc="" xtrc="xref:9" xtrf="file:/home/builder/src/dita-all/zyl1693565473561/loioa82e269bbb584cfcbdbd3ae8765d8e7f_en-US/src/content/localization/en-us/e72dfe00b99547808a2698533022d960.xml" ?> .
+-   Application developers can now specify the create options for the table when using the `Table` building block. For more information, see [The Table Building Block](../06_SAP_Fiori_Elements/the-table-building-block-3801656.md).
 
 -   Application developers can now use a tree table to display a hierarchy in a list report or an object page. For more information, see [Setting the Table Type](../06_SAP_Fiori_Elements/setting-the-table-type-7f844f1.md).
 
@@ -600,21 +466,15 @@ The following changes and new features are available for SAP Fiori elements for 
 
 <sub>Changed•SAP Fiori Elements•Info Only•1.117</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-08-10
-
-
 
 </td>
 </tr>
@@ -623,28 +483,20 @@ Info Only
 
 1.117 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.upload.UploadSet`** 
-
-
 
 </td>
 <td valign="top">
@@ -657,21 +509,15 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.up
 
 <sub>Changed•Control•Info Only•1.117</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-08-10
-
-
 
 </td>
 </tr>
@@ -680,28 +526,20 @@ Info Only
 
 1.117 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.upload.UploadSetItem`** 
-
-
 
 </td>
 <td valign="top">
@@ -723,21 +561,15 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.up
 
 <sub>Changed•Control•Info Only•1.117</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-08-10
-
-
 
 </td>
 </tr>
@@ -746,28 +578,20 @@ Info Only
 
 1.117 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **Modern ECMAScript Support in SAPUI5** 
-
-
 
 </td>
 <td valign="top">
@@ -780,21 +604,15 @@ For more information, see [ECMAScript Support](../02_Read-Me-First/ecmascript-su
 
 <sub>Changed•Feature•Info Only•1.117</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-08-10
-
-
 
 </td>
 </tr>
@@ -803,28 +621,20 @@ Info Only
 
 1.117 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **Theme-Dependent Custom Icon Fonts** 
-
-
 
 </td>
 <td valign="top">
@@ -837,21 +647,15 @@ For more information and an example, see [Icon and Icon Pool](../10_More_About_C
 
 <sub>Changed•Feature•Info Only•1.117</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-08-10
-
-
 
 </td>
 </tr>
@@ -860,28 +664,20 @@ Info Only
 
 1.117 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **SAPUI5 OData V4 Model** 
-
-
 
 </td>
 <td valign="top">
@@ -905,21 +701,15 @@ The new version of the SAPUI5 OData V4 model introduces the following features:
 
 <sub>Changed•Feature•Info Only•1.117</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-08-10
-
-
 
 </td>
 </tr>
@@ -928,28 +718,20 @@ Info Only
 
 1.117 
 
-
-
 </td>
 <td valign="top">
 
 New 
-
-
 
 </td>
 <td valign="top">
 
 User Documentation 
 
-
-
 </td>
 <td valign="top">
 
 **TypeScript Tutorial** 
-
-
 
 </td>
 <td valign="top">
@@ -960,21 +742,15 @@ You are familiar with SAPUI5 app development, but do you want to learn how to do
 
 <sub>New•User Documentation•Info Only•1.117</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-08-10
-
-
 
 </td>
 </tr>
@@ -983,28 +759,20 @@ Info Only
 
 1.117 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.Menu` and `sap.ui.unified.Menu`** 
-
-
 
 </td>
 <td valign="top">
@@ -1015,21 +783,15 @@ We have introduced a new `isOpen` method that indicates whether the menu is curr
 
 <sub>Changed•Control•Info Only•1.117</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-08-10
-
-
 
 </td>
 </tr>
@@ -1038,28 +800,20 @@ Info Only
 
 1.117 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.comp.smartfield.SmartField`** 
-
-
 
 </td>
 <td valign="top">
@@ -1079,21 +833,15 @@ We have changed the behavior for numeric fields that don't accept a `null` value
 
 <sub>Changed•Control•Info Only•1.117</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-08-10
-
-
 
 </td>
 </tr>
@@ -1102,28 +850,20 @@ Info Only
 
 1.117 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.SinglePlanningCalendar`** 
-
-
 
 </td>
 <td valign="top">
@@ -1134,21 +874,15 @@ Users can now select a whole week from the Month view if they click on the week 
 
 <sub>Changed•Control•Info Only•1.117</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-08-10
-
-
 
 </td>
 </tr>
@@ -1157,28 +891,20 @@ Info Only
 
 1.117 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.comp.valuehelpdialog.ValueHelpDialog`** 
-
-
 
 </td>
 <td valign="top">
@@ -1189,21 +915,15 @@ The control now supports analytical parameters. Analytical parameters are values
 
 <sub>Changed•Control•Info Only•1.117</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-08-10
-
-
 
 </td>
 </tr>
@@ -1212,28 +932,20 @@ Info Only
 
 1.117 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.SelectDialog` and `sap.m.TableSelectDialog`** 
-
-
 
 </td>
 <td valign="top">
@@ -1244,21 +956,15 @@ To improve the accessibility of these controls, we have introduced a new `initia
 
 <sub>Changed•Control•Info Only•1.117</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-08-10
-
-
 
 </td>
 </tr>
@@ -1267,28 +973,20 @@ Info Only
 
 1.117 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **OPA Framework** 
-
-
 
 </td>
 <td valign="top">
@@ -1299,21 +997,15 @@ We have enhanced the OPA framework to now perform comprehensive checks for compo
 
 <sub>Changed•Feature•Info Only•1.117</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-08-10
-
-
 
 </td>
 </tr>
@@ -1322,28 +1014,20 @@ Info Only
 
 1.117 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.Panel`** 
-
-
 
 </td>
 <td valign="top">
@@ -1354,21 +1038,15 @@ We have introduced the `stickyHeader` property. When set to `true`, the header o
 
 <sub>Changed•Control•Info Only•1.117</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-08-10
-
-
 
 </td>
 </tr>
@@ -1376,6 +1054,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.118](what-s-new-in-sapui5-1-118-3eecbde.md "With this release SAPUI5 is upgraded from version 1.117 to 1.118.")
 
 [What's New in SAPUI5 1.116](what-s-new-in-sapui5-1-116-ebd6f34.md "With this release SAPUI5 is upgraded from version 1.115 to 1.116.")
 

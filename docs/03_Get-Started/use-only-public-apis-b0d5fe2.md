@@ -17,42 +17,30 @@ The following table gives an overview over these API types:
 
 API Type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 <th valign="top">
 
 Compatibility Assured?
 
-
-
 </th>
 <th valign="top">
 
 Can be used by applications?
-
-
 
 </th>
 <th valign="top">
 
 Further Details
 
-
-
 </th>
 <th valign="top">
 
 Example
-
-
 
 </th>
 </tr>
@@ -61,28 +49,20 @@ Example
 
 `public` 
 
-
-
 </td>
 <td valign="top">
 
 Indicates that the API, such as a class or method, is generally available for application developers.
-
-
 
 </td>
 <td valign="top">
 
 ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)<sup>1</sup> 
 
-
-
 </td>
 <td valign="top">
 
 ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
-
-
 
 </td>
 <td valign="top">
@@ -94,8 +74,6 @@ Indicates that the API, such as a class or method, is generally available for ap
 
 [`ManagedObject.prototype.getId`](https://ui5.sap.com/#/api/sap.ui.base.ManagedObject%23methods/getId) 
 
-
-
 </td>
 </tr>
 <tr>
@@ -103,42 +81,30 @@ Indicates that the API, such as a class or method, is generally available for ap
 
 `protected` 
 
-
-
 </td>
 <td valign="top">
 
 Indicates that usage of the API is restricted. It is not meant to be used by applications.
-
-
 
 </td>
 <td valign="top">
 
 ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)<sup>1</sup> 
 
-
-
 </td>
 <td valign="top">
 
 ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
-
-
 
 </td>
 <td valign="top">
 
 The API might be used outside the relevant class or subclasses, but only in closely related classes in SAPUI5 library / control development.
 
-
-
 </td>
 <td valign="top">
 
 [`Control.prototype.invalidate`](https://ui5.sap.com/#/api/sap.ui.core.Control%23methods/invalidate) 
-
-
 
 </td>
 </tr>
@@ -147,42 +113,30 @@ The API might be used outside the relevant class or subclasses, but only in clos
 
 `private` 
 
-
-
 </td>
 <td valign="top">
 
 Indicates that the API is not meant for use outside of SAPUI5 framework development. It won't be visible in the SAPUI5 documentation.
 
-
-
 </td>
 <td valign="top">
 
 ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
 
-
-
 </td>
 <td valign="top">
 
 ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
-
-
 
 </td>
 <td valign="top">
 
 The API is not meant to be used outside its own class, module, package, or library.
 
-
-
 </td>
 <td valign="top">
 
 [`Icon.prototype._getOutputTitle`](https://github.com/SAP/openui5/blob/c67c74d5de985904b50fb250b0d335c08b275025/src/sap.ui.core/src/sap/ui/core/Icon.js#L477) 
-
-
 
 </td>
 </tr>
@@ -191,42 +145,30 @@ The API is not meant to be used outside its own class, module, package, or libra
 
 `ui5-restricted` 
 
-
-
 </td>
 <td valign="top">
 
 Indicates that the API is only meant for certain stakeholders within SAPUI5 framework development and won't be visible in the SAPUI5 documentation.
-
-
 
 </td>
 <td valign="top">
 
 ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)<sup>2,3</sup> 
 
-
-
 </td>
 <td valign="top">
 
 ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
-
-
 
 </td>
 <td valign="top">
 
 Any potential new usage should be discussed with the owner first, then the stakeholder information should be updated, and only then should the API be used.
 
-
-
 </td>
 <td valign="top">
 
 [`Control.prototype.setBlocked`](https://github.com/SAP/openui5/blob/c67c74d5de985904b50fb250b0d335c08b275025/src/sap.ui.core/src/sap/ui/core/Control.js#L944) 
-
-
 
 </td>
 </tr>
@@ -235,42 +177,30 @@ Any potential new usage should be discussed with the owner first, then the stake
 
 `sap-restricted` 
 
-
-
 </td>
 <td valign="top">
 
 Deprecated, replaced by `ui5-restricted` 
 
+</td>
+<td valign="top">
 
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
 
 </td>
 <td valign="top">
 
 ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
 
-
-
-</td>
-<td valign="top">
-
-![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
-
-
-
 </td>
 <td valign="top">
 
  
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>

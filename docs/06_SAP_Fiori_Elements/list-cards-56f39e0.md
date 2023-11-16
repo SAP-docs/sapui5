@@ -75,14 +75,10 @@ Number of list items displayed: up to 6.
 
 ![](images/Condensed_Standard_342d904.png)
 
-
-
 </td>
 <td valign="top">
 
 ![](images/Extended_Standard_849fdc4.png)
-
-
 
 </td>
 </tr>
@@ -91,14 +87,10 @@ Number of list items displayed: up to 6.
 
 Condensed List Type - Standard Flavor
 
-
-
 </td>
 <td valign="top">
 
 Extended List Type - Standard Flavor
-
-
 
 </td>
 </tr>
@@ -130,14 +122,10 @@ In this type of list, each list item displays up to five fields. The first `Data
 
 ![](images/Condensed_Bar_8f1def4.png)
 
-
-
 </td>
 <td valign="top">
 
 ![](images/Extended_Bar_bdbbbb2.png)
-
-
 
 </td>
 </tr>
@@ -146,14 +134,10 @@ In this type of list, each list item displays up to five fields. The first `Data
 
 Condensed List Type - Bar Flavor
 
-
-
 </td>
 <td valign="top">
 
 Extended List Type - Bar Flavor
-
-
 
 </td>
 </tr>

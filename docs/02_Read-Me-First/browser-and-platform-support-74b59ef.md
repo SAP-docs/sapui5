@@ -38,63 +38,45 @@ The following tables give a general overview of the browsers, platforms, and ref
 
 Platform
 
-
-
 </th>
 <th valign="top" align="center">
 
 Device Category
-
-
 
 </th>
 <th valign="top" align="center">
 
 Platform Version
 
-
-
 </th>
 <th valign="top" align="center">
 
 Safari
-
-
 
 </th>
 <th valign="top" align="center">
 
 Web View
 
-
-
 </th>
 <th valign="top" align="center">
 
 Microsoft Edge \(Chromium\)<sup>2</sup>
-
-
 
 </th>
 <th valign="top" align="center">
 
 Google Chrome
 
-
-
 </th>
 <th valign="top" align="center">
 
 Mozilla Firefox
 
-
-
 </th>
 <th valign="top" align="center">
 
 SAP Fiori Client
-
-
 
 </th>
 </tr>
@@ -103,14 +85,10 @@ SAP Fiori Client
 
 Windows<sup>1</sup>
 
-
-
 </td>
 <td valign="top">
 
 Desktop
-
-
 
 </td>
 <td valign="top">
@@ -119,58 +97,42 @@ Windows 10
 
 Windows 11
 
-
-
 </td>
 <td valign="top" align="center">
 
 \-
 
+</td>
+<td valign="top">
 
+Latest version
 
 </td>
 <td valign="top">
 
 Latest version
 
-
-
 </td>
 <td valign="top">
 
 Latest version
-
-
-
-</td>
-<td valign="top">
-
-Latest version
-
-
 
 </td>
 <td valign="top" rowspan="2">
 
-Latest version and latest Extended Support Release \(ESR\)<sup>7</sup>
-
-
+Latest version and latest Extended Support Release \(ESR\)<sup>8</sup>
 
 </td>
 <td valign="top" align="center">
 
 \-
-
-
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-Touch<sup>5, 6</sup>
-
-
+Touch<sup>5, 6, 7</sup>
 
 </td>
 <td valign="top">
@@ -179,42 +141,30 @@ Windows 10
 
 Windows 11
 
-
-
 </td>
 <td valign="top" align="center">
 
 \-
 
-
-
 </td>
 <td valign="top">
 
 Latest version
 
+</td>
+<td valign="top">
 
+Latest version<sup>8</sup>
 
 </td>
 <td valign="top">
 
-Latest version<sup>7</sup>
-
-
-
-</td>
-<td valign="top">
-
-Latest version<sup>7</sup>
-
-
+Latest version<sup>8</sup>
 
 </td>
 <td valign="top">
 
 Latest version
-
-
 
 </td>
 </tr>
@@ -223,63 +173,45 @@ Latest version
 
 macOS
 
-
-
 </td>
 <td valign="top">
 
 Desktop
-
-
 
 </td>
 <td valign="top">
 
 Latest 2 versions
 
-
-
 </td>
 <td valign="top">
 
 Latest version
 
-
-
 </td>
 <td valign="top" align="center">
 
 \-
-
-
 
 </td>
 <td valign="top">
 
 Latest version <sup>5</sup>
 
-
-
 </td>
 <td valign="top">
 
 Latest version<sup>5</sup>
 
-
-
 </td>
 <td valign="top" align="center">
 
 \-
 
-
-
 </td>
 <td valign="top" align="center">
 
 \-
-
-
 
 </td>
 </tr>
@@ -288,63 +220,45 @@ Latest version<sup>5</sup>
 
 iOS & iPadOS<sup>3</sup>
 
-
-
 </td>
 <td valign="top">
 
-Phone and Tablet<sup>5, 6</sup>
-
-
+Phone and Tablet<sup>5,6, 7</sup>
 
 </td>
 <td valign="top">
 
 Latest version
 
-
-
 </td>
 <td valign="top">
 
 Latest version
 
-
-
 </td>
 <td valign="top">
 
-Latest version<sup>7</sup>
-
-
+Latest version<sup>8</sup>
 
 </td>
 <td valign="top" align="center">
 
 \-
 
-
-
 </td>
 <td valign="top" align="center">
 
 \-
 
-
-
 </td>
 <td valign="top" align="center">
 
 \-
-
-
 
 </td>
 <td valign="top">
 
 Latest version
-
-
 
 </td>
 </tr>
@@ -353,63 +267,45 @@ Latest version
 
 Android<sup>4</sup>
 
-
-
 </td>
 <td valign="top">
 
-Phone and Tablet<sup>5, 6</sup>
-
-
+Phone and Tablet<sup>5,6, 7</sup>
 
 </td>
 <td valign="top">
 
 Latest 3 versions supported by Google
 
+</td>
+<td valign="top" align="center">
 
+\-
 
 </td>
 <td valign="top" align="center">
 
 \-
 
-
-
 </td>
 <td valign="top" align="center">
 
 \-
-
-
-
-</td>
-<td valign="top" align="center">
-
-\-
-
-
 
 </td>
 <td valign="top">
 
 Latest version
 
-
-
 </td>
 <td valign="top" align="center">
 
 \-
 
-
-
 </td>
 <td valign="top">
 
 Latest version
-
-
 
 </td>
 </tr>
@@ -420,8 +316,9 @@ Latest version
  3\) We use current Apple iPhone and iPad devices for testing and reproducing the reported issues.  
  4\) Android-based devices are very fragmented in matters of operating system variants and hardware diversity. We use current Samsung Galaxy S and Galaxy Tab S series devices for testing and reproducing the reported issues.  
  5\) Not supported for `sap.ui.commons` and `sap.ui.ux3`.  
-6\) Not supported for `sap.gantt`. Note that gantt charts consuming `sap.gantt` can be displayed on tablet devices.  
- 7\) Not supported for `sap.ui.vbm`.
+ 6\)  Not supported for `sap.sac.df`.  
+7\) Not supported for `sap.gantt`. Note that gantt charts consuming `sap.gantt` can be displayed on tablet devices.  
+ 8\) Not supported for `sap.ui.vbm`.
 
 
 

@@ -59,14 +59,10 @@ To describe the processing of an analysis path in more details, the following va
 
 Variable
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -75,14 +71,10 @@ Description
 
 `S_1,..,S_n` 
 
-
-
 </td>
 <td valign="top">
 
 Path of length n
-
-
 
 </td>
 </tr>
@@ -91,14 +83,10 @@ Path of length n
 
 `S_i` 
 
-
-
 </td>
 <td valign="top">
 
 Step
-
-
 
 </td>
 </tr>
@@ -107,14 +95,10 @@ Step
 
 `R_i` 
 
-
-
 </td>
 <td valign="top">
 
 Request for step `S_i` 
-
-
 
 </td>
 </tr>
@@ -123,14 +107,10 @@ Request for step `S_i`
 
 `B_i` 
 
-
-
 </td>
 <td valign="top">
 
 Binding for step `S_i` 
-
-
 
 </td>
 </tr>
@@ -139,14 +119,10 @@ Binding for step `S_i`
 
 `RO_i_s` 
 
-
-
 </td>
 <td valign="top">
 
 Selected representation object for step `S_i` 
-
-
 
 </td>
 </tr>
@@ -155,14 +131,10 @@ Selected representation object for step `S_i`
 
 `F_i` 
 
-
-
 </td>
 <td valign="top">
 
 Filter object associated to step `S_i` 
-
-
 
 </td>
 </tr>
@@ -171,14 +143,10 @@ Filter object associated to step `S_i`
 
 `F_0` 
 
-
-
 </td>
 <td valign="top">
 
 Filter for the entire path. This filter is either empty or it is the filter set by the APF API method `addPathFilter())`. This filter defines the OData filter for request `R_1` of step `S_1`.
-
-
 
 </td>
 </tr>

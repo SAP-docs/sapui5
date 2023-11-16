@@ -35,21 +35,15 @@ The following table describes the functionality of each of the buttons or dropdo
 
 Button / Menu name
 
-
-
 </th>
 <th valign="top">
 
 Icon
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -58,21 +52,15 @@ Description
 
 *Previous*
 
-
-
 </td>
 <td valign="top">
 
 ![](images/Step_Navigation_-_Previous_button_41ed1bc.png)
 
-
-
 </td>
 <td valign="top">
 
 Plays the previous step in the procedure.
-
-
 
 </td>
 </tr>
@@ -81,21 +69,15 @@ Plays the previous step in the procedure.
 
 *Play/ Pause*
 
-
-
 </td>
 <td valign="top">
 
 ![](images/Step_Navigation_-_Play_button_c2df912.png)
 
-
-
 </td>
 <td valign="top">
 
 Plays entire procedure from the currently selected step. During play, this button changes to a pause button which can then be used to the pause currently playing animation.
-
-
 
 </td>
 </tr>
@@ -104,21 +86,15 @@ Plays entire procedure from the currently selected step. During play, this butto
 
 *Next*
 
-
-
 </td>
 <td valign="top">
 
 ![](images/Step_Navigation_-_Next_button_69e11d4.png)
 
-
-
 </td>
 <td valign="top">
 
 Plays the next step in the procedure.
-
-
 
 </td>
 </tr>
@@ -127,21 +103,15 @@ Plays the next step in the procedure.
 
 *Procedure names*
 
-
-
 </td>
 <td valign="top">
 
 \(the dropdown menu located to the right of the *Play* button\)
 
-
-
 </td>
 <td valign="top">
 
 Select which procedure in the scene to play. Depending on the loaded model, you may have one or more procedures to select from.
-
-
 
 </td>
 </tr>

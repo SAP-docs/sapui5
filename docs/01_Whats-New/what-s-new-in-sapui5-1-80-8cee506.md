@@ -15,49 +15,35 @@ With this release SAPUI5 is upgraded from version 1.79 to 1.80.
 
 Version
 
-
-
 </th>
 <th valign="top">
 
 Type
-
-
 
 </th>
 <th valign="top">
 
 Category
 
-
-
 </th>
 <th valign="top">
 
 Title
-
-
 
 </th>
 <th valign="top">
 
 Description
 
-
-
 </th>
 <th valign="top">
 
 Action
 
-
-
 </th>
 <th valign="top">
 
 Available as of
-
-
 
 </th>
 </tr>
@@ -66,28 +52,20 @@ Available as of
 
 1.80 
 
-
-
 </td>
 <td valign="top">
 
 New 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.BadgeCustomData`, `sap.m.IBadgeEnabler`** 
-
-
 
 </td>
 <td valign="top">
@@ -98,21 +76,15 @@ To facilitate control developers working on implementations of badges, we create
 
 <sub>New•Control•Info Only•1.80</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only
 
-
-
 </td>
 <td valign="top">
 
 2020-07-16
-
-
 
 </td>
 </tr>
@@ -121,28 +93,20 @@ Info Only
 
 1.80 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **SAPUI5 OData V4 Model****SAPUI5 OData V4 Model** 
-
-
 
 </td>
 <td valign="top">
@@ -166,21 +130,15 @@ For more information, see [OData V4 Model](../04_Essentials/odata-v4-model-5de13
 
 <sub>Changed•Feature•Info Only•1.80</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-07-16
-
-
 
 </td>
 </tr>
@@ -189,28 +147,20 @@ Info Only
 
 1.80 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.f.GridContainer`** 
-
-
 
 </td>
 <td valign="top">
@@ -222,21 +172,15 @@ Control
 
 <sub>Changed•Control•Info Only•1.80</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-07-16
-
-
 
 </td>
 </tr>
@@ -245,28 +189,20 @@ Info Only
 
 1.80 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.IconTabBar`** 
-
-
 
 </td>
 <td valign="top">
@@ -277,21 +213,15 @@ When you drag one tab over a tab with nested tabs, only one drop zone is availab
 
 <sub>Changed•Control•Info Only•1.80</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-07-16
-
-
 
 </td>
 </tr>
@@ -300,28 +230,20 @@ Info Only
 
 1.80 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.TablePersoDialog`** 
-
-
 
 </td>
 <td valign="top">
@@ -332,21 +254,15 @@ The look and feel of the control has been improved based on the latest design gu
 
 <sub>Changed•Control•Info Only•1.80</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-07-16
-
-
 
 </td>
 </tr>
@@ -355,28 +271,20 @@ Info Only
 
 1.80 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.tnt.NavigationListItem`** 
-
-
 
 </td>
 <td valign="top">
@@ -387,21 +295,15 @@ We have added `href` and `target` properties to improve the SEO capabilities of 
 
 <sub>Changed•Control•Info Only•1.80</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-07-16
-
-
 
 </td>
 </tr>
@@ -410,28 +312,20 @@ Info Only
 
 1.80 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.comp.smarttable.SmartTable`** 
-
-
 
 </td>
 <td valign="top">
@@ -445,21 +339,15 @@ Control
 
 <sub>Changed•Control•Info Only•1.80</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-07-16
-
-
 
 </td>
 </tr>
@@ -468,28 +356,20 @@ Info Only
 
 1.80 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.integration.widgets.Card`** 
-
-
 
 </td>
 <td valign="top">
@@ -501,21 +381,15 @@ Control
 
 <sub>Changed•Control•Info Only•1.80</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-07-16
-
-
 
 </td>
 </tr>
@@ -524,28 +398,20 @@ Info Only
 
 1.80 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 SAP Fiori Elements 
 
-
-
 </td>
 <td valign="top">
 
 **SAP Fiori Elements** 
-
-
 
 </td>
 <td valign="top">
@@ -567,21 +433,15 @@ SAP Fiori Elements
 
 <sub>Changed•SAP Fiori Elements•Info Only•1.80</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-07-16
-
-
 
 </td>
 </tr>
@@ -590,28 +450,20 @@ Info Only
 
 1.80 
 
-
-
 </td>
 <td valign="top">
 
 New 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **Demo Kit Improvements** 
-
-
 
 </td>
 <td valign="top">
@@ -635,21 +487,15 @@ You can now view the sample description and any additional details directly from
 
 <sub>New•Feature•Info Only•1.80</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-07-16
-
-
 
 </td>
 </tr>
@@ -657,6 +503,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.118](what-s-new-in-sapui5-1-118-3eecbde.md "With this release SAPUI5 is upgraded from version 1.117 to 1.118.")
 
 [What's New in SAPUI5 1.117](what-s-new-in-sapui5-1-117-029d3b4.md "With this release SAPUI5 is upgraded from version 1.116 to 1.117.")
 

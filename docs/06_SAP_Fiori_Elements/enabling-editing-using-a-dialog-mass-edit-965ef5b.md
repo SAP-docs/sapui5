@@ -102,9 +102,17 @@ The *Mass Edit* button isn't enabled if the update restriction points to a path 
 > 
 >     -   value help fields with a dropdown list
 > 
+>     -   image based fields
+> 
+>     -   progress indicator fields
+> 
+>     -   micro chart based fields
+> 
 >     -   rating fields
 > 
 >     -   multi-valued fields
+> 
+>     -   contact fields
 > 
 >     -   fields coming from a `FieldGroup`-based field in the table
 > 

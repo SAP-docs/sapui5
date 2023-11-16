@@ -33,14 +33,10 @@ To create or edit an analysis step, enter the following:
 
 Field
 
-
-
 </th>
 <th valign="top">
 
 Explanation
-
-
 
 </th>
 </tr>
@@ -49,14 +45,10 @@ Explanation
 
 Step Title
 
-
-
 </td>
 <td valign="top">
 
 The title displayed in the analysis step gallery and with the thumbnails in the analysis path display.
-
-
 
 </td>
 </tr>
@@ -65,14 +57,10 @@ The title displayed in the analysis step gallery and with the thumbnails in the 
 
 Step Long Title
 
-
-
 </td>
 <td valign="top">
 
 The title displayed above the representation in the analysis step display. If no long title is defined, the title entered in the *Step Title* field is used instead.
-
-
 
 </td>
 </tr>
@@ -81,16 +69,12 @@ The title displayed above the representation in the analysis step display. If no
 
 Category Assignments
 
-
-
 </td>
 <td valign="top">
 
 The categories in which the analysis step is displayed in the analysis step gallery. At least one category must be entered here. When first creating a step, this field is already filled with the category in which you create the step. You can enter additional categories so that the step is displayed in all of these categories.
 
 You can also remove category assignments here and you can use this field to change the category assignment of a step by selecting a different category from the value help. This is particularly useful if you copy a step and then want to assign it to a different category.
-
-
 
 </td>
 </tr>
@@ -109,14 +93,10 @@ Here, you enter information for the request that defines the data provisioning f
 
 Field
 
-
-
 </th>
 <th valign="top">
 
 Explanation
-
-
 
 </th>
 </tr>
@@ -125,14 +105,10 @@ Explanation
 
 Service
 
-
-
 </td>
 <td valign="top">
 
 Path to the OData service root. If you use ABAP CDS views or BW OData queries, select a service from the value help, which lists all services available on SAP Gateway. If you use calculation views, you must enter the service manually.
-
-
 
 </td>
 </tr>
@@ -141,14 +117,10 @@ Path to the OData service root. If you use ABAP CDS views or BW OData queries, s
 
 Entity Set
 
-
-
 </td>
 <td valign="top">
 
 Entity set that corresponds to the data source, for example, the SAP HANA view.
-
-
 
 </td>
 </tr>
@@ -157,16 +129,12 @@ Entity set that corresponds to the data source, for example, the SAP HANA view.
 
 Properties
 
-
-
 </td>
 <td valign="top">
 
 The drill-down dimensions, measures, and additional information, for example, the currency, used in the step.
 
 Ensure you select only those properties that shall be displayed in the representation.
-
-
 
 </td>
 </tr>
@@ -175,16 +143,12 @@ Ensure you select only those properties that shall be displayed in the represent
 
 Selectable Property
 
-
-
 </td>
 <td valign="top">
 
 The property that is selectable in the chart. If nothing is entered here, nothing can be selected in any representation of this step.
 
 If you have selected both a key property and the corresponding text property in the *Properties* field, you can define for the selectable property what is displayed at runtime: the key only, the text only, or both key and text. This takes effect in the selection information popup, showing which elements are selected in the current analysis step as well as in the filter information popup, showing the filters that affect the current analysis step.
-
-
 
 </td>
 </tr>
@@ -193,16 +157,12 @@ If you have selected both a key property and the corresponding text property in 
 
 Label
 
-
-
 </td>
 <td valign="top">
 
 The label of the selectable property, which is displayed in the selection information popup as well as in the filter information popup at runtime.
 
 The default label text for each property is derived from the `sap:label` annotation of the property. You can see that the default text is used when you see *Label \(Default\)* in front of the entry field. You can overwrite the default text with your own label text as required. When you delete the label text, the default label is displayed again.
-
-
 
 </td>
 </tr>
@@ -234,14 +194,10 @@ In this section, you can reduce the number of data records that are sent to the 
 
 Field
 
-
-
 </th>
 <th valign="top">
 
 Explanation
-
-
 
 </th>
 </tr>
@@ -250,14 +206,10 @@ Explanation
 
 Data Reduction Type
 
-
-
 </td>
 <td valign="top">
 
 Choose whether you want to use top n or no data reduction.
-
-
 
 </td>
 </tr>
@@ -266,14 +218,10 @@ Choose whether you want to use top n or no data reduction.
 
 Number of Records
 
-
-
 </td>
 <td valign="top">
 
 Enter a number between 1 and 10,000.
-
-
 
 </td>
 </tr>
@@ -282,14 +230,10 @@ Enter a number between 1 and 10,000.
 
 Sorting Field, Direction
 
-
-
 </td>
 <td valign="top">
 
 You can define which properties are applied to the data request and subsequently to the chart as sorting criteria. You can also specify the sorting direction \(ascending or descending\) for each property. The sorting criteria you enter here are copied to each representation of the step and cannot be changed in the representation configuration afterwards.
-
-
 
 </td>
 </tr>
@@ -312,14 +256,10 @@ Define the lookup request that maps the source property to the target properties
 
 Field
 
-
-
 </th>
 <th valign="top">
 
 Explanation
-
-
 
 </th>
 </tr>
@@ -328,14 +268,10 @@ Explanation
 
 Service
 
-
-
 </td>
 <td valign="top">
 
 Path to the OData service root. If you use ABAP CDS views or BW OData queries, select a service from the value help, which lists all services available on SAP Gateway. If you use calculation views, you must enter the service manually.
-
-
 
 </td>
 </tr>
@@ -344,14 +280,10 @@ Path to the OData service root. If you use ABAP CDS views or BW OData queries, s
 
 Entity Set
 
-
-
 </td>
 <td valign="top">
 
 Entity set that corresponds to the SAP HANA view.
-
-
 
 </td>
 </tr>
@@ -360,16 +292,12 @@ Entity set that corresponds to the SAP HANA view.
 
 Target Property
 
-
-
 </td>
 <td valign="top">
 
 Filter properties that the selectable property shall be mapped to. These are filter properties that can be used in the request for subsequent steps.
 
 If both a key property and the corresponding text property exist, you can define what is displayed at runtime: the key only, the text only, or both key and text.
-
-
 
 </td>
 </tr>
@@ -378,16 +306,12 @@ If both a key property and the corresponding text property exist, you can define
 
 Label
 
-
-
 </td>
 <td valign="top">
 
 The label of the target property, which is displayed in the filter information popup at runtime.
 
 The default label text for each property is derived from the `sap:label` annotation of the property. You can see that the default text is used when you see *Label \(Default\)* in front of the entry field. You can overwrite the default text with your own label text as required. When you delete the label text, the default label is displayed again.
-
-
 
 </td>
 </tr>
@@ -396,14 +320,10 @@ The default label text for each property is derived from the `sap:label` annotat
 
 Keep Selected Property as Filter
 
-
-
 </td>
 <td valign="top">
 
 Determines whether the source filter property is kept in the cumulative filter in addition to the mapped filter properties.
-
-
 
 </td>
 </tr>
@@ -422,14 +342,10 @@ Here, you can assign step-specific navigation targets to your analysis step. At 
 
 Field
 
-
-
 </th>
 <th valign="top">
 
 Explanation
-
-
 
 </th>
 </tr>
@@ -438,14 +354,10 @@ Explanation
 
 Step-Specific
 
-
-
 </td>
 <td valign="top">
 
 Shows the assigned step-specific navigation targets for this step. You can assign additional ones by selecting them from the list of previously created step-specific navigation targets. You can also delete assignments.
-
-
 
 </td>
 </tr>
@@ -454,14 +366,10 @@ Shows the assigned step-specific navigation targets for this step. You can assig
 
 Assigned to All Steps
 
-
-
 </td>
 <td valign="top">
 
 Navigation targets that are relevant for all analysis steps and are always displayed in the *Open In…* menu at runtime. This field is read-only.
-
-
 
 </td>
 </tr>

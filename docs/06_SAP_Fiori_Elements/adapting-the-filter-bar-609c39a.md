@@ -173,6 +173,47 @@ For more information about the smart filter bar, see [SmartFilterBar](https://ui
 
 
 
+### Hiding Navigation Properties from Filtering
+
+The 1:1 navigation properties that can be filtered are included in the *Adapt Filters* dialog by default. You can also directly define navigation properties that must be added for the filtering. To add the specific navigation properties, you can use the `navigationProperties` setting in the `manifest.json` file. It is an array of \(navigation\) property paths relative to the current entity type. If the path points to a navigation property or a complex property, all simple properties of that type are added to the filter adaptation and all other navigation properties are excluded from the *Adapt Filters* dialog.
+
+For example, you can see that all properties \(except the properties annotated as either `Hidden` or `HiddenFilter`\) of the navigation type `to_Currency` and `to_DeliveryStatus` are added to the *Adapt Filters* dialog as shown in the following code sample:
+
+> ### Sample Code:  
+> ```
+> "ListReport|C_STTA_SalesOrder_WD_20": {
+>     "entitySet": "C_STTA_SalesOrder_WD_20",
+>     "component": {
+>         "name": "sap.suite.ui.generic.template.ListReport",
+>         "list": true,
+>         "settings": {
+>             "tableSettings": {
+> …
+>             },
+> 
+>             "filterSettings": {
+>                 "navigationProperties": [
+>                     "to_Currency",
+>                     "to_DeliveryStatus"
+>                 ]
+>             }
+>         }
+> ```
+
+You can hide the filter fields of all navigation properties from the *Adapt Filters* dialog. To do so, set `"navigationProperties": []` as shown in the code sample here:
+
+> ### Sample Code:  
+> ```
+> "filterSettings": {
+>     "navigationProperties": []
+> }
+> ```
+
+> ### Note:  
+> You can only define navigation properties within a single level. Nested navigation properties aren't supported.
+
+
+
 <a name="loio609c39a7498541559dbef503c1ffd194__section_q5m_cnn_d4b"/>
 
 ## Additional Features in SAP Fiori Elements for OData V4
@@ -237,14 +278,10 @@ SAP Fiori elements for OData V4 checks for the existence of the `tolower` filter
 
 `FilterFunction`
 
-
-
 </th>
 <th valign="top">
 
 `caseSensitive`
-
-
 
 </th>
 </tr>
@@ -253,14 +290,10 @@ SAP Fiori elements for OData V4 checks for the existence of the `tolower` filter
 
 `tolower` exists
 
-
-
 </td>
 <td valign="top">
 
 false
-
-
 
 </td>
 </tr>
@@ -269,14 +302,10 @@ false
 
 `tolower` does not exist
 
-
-
 </td>
 <td valign="top">
 
 true \(back end decides the default behavior\)
-
-
 
 </td>
 </tr>
@@ -285,14 +314,10 @@ true \(back end decides the default behavior\)
 
 No annotation is configured
 
-
-
 </td>
 <td valign="top">
 
 true \(back end decides the default behavior\)
-
-
 
 </td>
 </tr>

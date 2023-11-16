@@ -20,28 +20,20 @@ The list of resources is stored in an array in the `resources` property of the t
 
 Property
 
-
-
 </th>
 <th valign="top">
 
 Type
-
-
 
 </th>
 <th valign="top">
 
 Mandatory
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -50,28 +42,20 @@ Description
 
 `name` 
 
-
-
 </td>
 <td valign="top">
 
 `string` 
-
-
 
 </td>
 <td valign="top">
 
 ![YES](../02_Read-Me-First/images/Checked_Okay_3929e46.png)
 
-
-
 </td>
 <td valign="top">
 
 The relative path of the resource as accessible in a server. The path is relative to the location of the `resources.json` file, for example `Component.js`.
-
-
 
 </td>
 </tr>
@@ -80,28 +64,20 @@ The relative path of the resource as accessible in a server. The path is relativ
 
 `size` 
 
-
-
 </td>
 <td valign="top">
 
 `number` 
-
-
 
 </td>
 <td valign="top">
 
 ![YES](../02_Read-Me-First/images/Checked_Okay_3929e46.png)
 
-
-
 </td>
 <td valign="top">
 
 The size in bytes of the resource.
-
-
 
 </td>
 </tr>
@@ -110,28 +86,20 @@ The size in bytes of the resource.
 
 `condRequired` 
 
-
-
 </td>
 <td valign="top">
 
 `string[]` 
-
-
 
 </td>
 <td valign="top">
 
  
 
-
-
 </td>
 <td valign="top">
 
 A list of conditional dependencies of this resource. These dependencies can be required during execution of this resource.
-
-
 
 </td>
 </tr>
@@ -140,28 +108,20 @@ A list of conditional dependencies of this resource. These dependencies can be r
 
 `designtime` 
 
-
-
 </td>
 <td valign="top">
 
 `boolean` 
-
-
 
 </td>
 <td valign="top">
 
  
 
-
-
 </td>
 <td valign="top">
 
 When set to `true`, the resource is considered a designtime resource. The SAPUI5 build derives the flag from the naming convention \(could be `/designtime/`, `.designtime.js`, `.control`, `.interface`, `.type`, `.less`, `library.templates.xml`, `library.dependencies.xml`, or `library.dependencies.json`\).
-
-
 
 </td>
 </tr>
@@ -170,28 +130,20 @@ When set to `true`, the resource is considered a designtime resource. The SAPUI5
 
 `dynRequired` 
 
-
-
 </td>
 <td valign="top">
 
 `boolean` 
-
-
 
 </td>
 <td valign="top">
 
  
 
-
-
 </td>
 <td valign="top">
 
 When set to `true`, the resource has dynamic dependencies. The name of this dependency could not be resolved during build time.
-
-
 
 </td>
 </tr>
@@ -200,28 +152,20 @@ When set to `true`, the resource has dynamic dependencies. The name of this depe
 
 `exposedGlobalNames` 
 
-
-
 </td>
 <td valign="top">
 
 `string[]` 
-
-
 
 </td>
 <td valign="top">
 
  
 
-
-
 </td>
 <td valign="top">
 
 A list of variables which are exposed to the global JS scope.
-
-
 
 </td>
 </tr>
@@ -230,28 +174,20 @@ A list of variables which are exposed to the global JS scope.
 
 `format` 
 
-
-
 </td>
 <td valign="top">
 
 `string` 
-
-
 
 </td>
 <td valign="top">
 
  
 
-
-
 </td>
 <td valign="top">
 
 Defines the format of this resource; `raw` means that it is not a UI5 module.
-
-
 
 </td>
 </tr>
@@ -260,28 +196,20 @@ Defines the format of this resource; `raw` means that it is not a UI5 module.
 
 `included` 
 
-
-
 </td>
 <td valign="top">
 
 `string[]` 
-
-
 
 </td>
 <td valign="top">
 
  
 
-
-
 </td>
 <td valign="top">
 
 List of sub-modules which are included in this resource, e.g. the `Component-preload.js` typically has the `included` property.
-
-
 
 </td>
 </tr>
@@ -290,28 +218,20 @@ List of sub-modules which are included in this resource, e.g. the `Component-pre
 
 `isDebug` 
 
-
-
 </td>
 <td valign="top">
 
 `boolean` 
-
-
 
 </td>
 <td valign="top">
 
  
 
-
-
 </td>
 <td valign="top">
 
 When set to `true`, the resource is a debug source, the SAPUI5 build derives the flag from the naming convention \(`-dbg(.controller .view .fragment).js`\).
-
-
 
 </td>
 </tr>
@@ -320,28 +240,20 @@ When set to `true`, the resource is a debug source, the SAPUI5 build derives the
 
 `locale` 
 
-
-
 </td>
 <td valign="top">
 
 `string` 
-
-
 
 </td>
 <td valign="top">
 
  
 
-
-
 </td>
 <td valign="top">
 
 Locale of the resource for known i18n resources; the SAPUI5 build derives the locale from the naming convention \(`*_[locale].properties`\).
-
-
 
 </td>
 </tr>
@@ -350,28 +262,20 @@ Locale of the resource for known i18n resources; the SAPUI5 build derives the lo
 
 `merged` 
 
-
-
 </td>
 <td valign="top">
 
 `string` 
-
-
 
 </td>
 <td valign="top">
 
  
 
-
-
 </td>
 <td valign="top">
 
 Indicates whether the resource is a merged resource. By default, the SAPUI5 build determines this from naming conventions \(`library-preload.json`, `library-all.js`, `Component-preload.js`\), but it also allows to add more merged files by manual configuration of the build step. SAP Web IDE may use other knowledge for this; it knows, for example, that it merges the`Component-preload.js`.
-
-
 
 </td>
 </tr>
@@ -380,28 +284,20 @@ Indicates whether the resource is a merged resource. By default, the SAPUI5 buil
 
 `module` 
 
-
-
 </td>
 <td valign="top">
 
 `string` 
-
-
 
 </td>
 <td valign="top">
 
  
 
-
-
 </td>
 <td valign="top">
 
 The name of the UI5 module, including the file extension.
-
-
 
 </td>
 </tr>
@@ -410,28 +306,20 @@ The name of the UI5 module, including the file extension.
 
 `raw` 
 
-
-
 </td>
 <td valign="top">
 
 `string` 
-
-
 
 </td>
 <td valign="top">
 
  
 
-
-
 </td>
 <td valign="top">
 
 The name of the corresponding resource in the raw \(developer\) language for known i18n resources; for example, for`messagebundle.en.properties`, the corresponding raw file is `messagebundle.properties`.
-
-
 
 </td>
 </tr>
@@ -440,28 +328,20 @@ The name of the corresponding resource in the raw \(developer\) language for kno
 
 `required` 
 
-
-
 </td>
 <td valign="top">
 
 `string[]` 
-
-
 
 </td>
 <td valign="top">
 
  
 
-
-
 </td>
 <td valign="top">
 
 A list of dependencies of this resource. These dependencies are required prior to using this resource.
-
-
 
 </td>
 </tr>
@@ -470,21 +350,15 @@ A list of dependencies of this resource. These dependencies are required prior t
 
 `support` 
 
-
-
 </td>
 <td valign="top">
 
 `boolean` 
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 <td valign="top">
@@ -493,8 +367,6 @@ When set to `true`, the resource is considered a ssupport assistant resource.
 
 The SAPUI5 build derives this flag from the naming convention `.support.js`.
 
-
-
 </td>
 </tr>
 <tr>
@@ -502,21 +374,15 @@ The SAPUI5 build derives this flag from the naming convention `.support.js`.
 
 `theme` 
 
-
-
 </td>
 <td valign="top">
 
 `string` 
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 <td valign="top">
@@ -524,8 +390,6 @@ The SAPUI5 build derives this flag from the naming convention `.support.js`.
 Indicates a theme-dependent resource.
 
 The SAPUI5 build determines this from the naming convention `**themes/<theme>/**`
-
-
 
 </td>
 </tr>

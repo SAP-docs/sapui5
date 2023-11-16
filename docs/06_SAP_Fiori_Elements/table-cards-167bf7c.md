@@ -1141,14 +1141,10 @@ In the preceding example, the text `Customer` is bound to the `ContactID` proper
 
 Text Arrangement Type
 
-
-
 </th>
 <th valign="top">
 
 Result
-
-
 
 </th>
 </tr>
@@ -1157,14 +1153,10 @@ Result
 
 `TextLast` 
 
-
-
 </td>
 <td valign="top">
 
 ContractID \(Customer\)
-
-
 
 </td>
 </tr>
@@ -1173,14 +1165,10 @@ ContractID \(Customer\)
 
 `TextFirst` 
 
-
-
 </td>
 <td valign="top">
 
 Customer \(ContractID\)
-
-
 
 </td>
 </tr>
@@ -1189,14 +1177,10 @@ Customer \(ContractID\)
 
 `TextOnly` 
 
-
-
 </td>
 <td valign="top">
 
 Customer
-
-
 
 </td>
 </tr>
@@ -1217,14 +1201,10 @@ The DataPoint or DataField is aligned as shown in the table below:
 
 Annotation Field
 
-
-
 </th>
 <th valign="top">
 
 Table Alignment
-
-
 
 </th>
 </tr>
@@ -1233,14 +1213,10 @@ Table Alignment
 
 DataField, Contact annotation
 
-
-
 </td>
 <td valign="top">
 
 Left Aligned
-
-
 
 </td>
 </tr>
@@ -1249,14 +1225,10 @@ Left Aligned
 
 DataPoint with or without Criticality/CriticalityCalculation OR property \(either DataField or DataPoint\) of type Edm.DateTime or Edm.DateTimeOffset
 
-
-
 </td>
 <td valign="top">
 
 Right Aligned
-
-
 
 </td>
 </tr>
@@ -1265,14 +1237,10 @@ Right Aligned
 
 DataPoint with Criticality and property of type Edm.String
 
-
-
 </td>
 <td valign="top">
 
 Center Aligned
-
-
 
 </td>
 </tr>

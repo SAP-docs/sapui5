@@ -11,22 +11,16 @@ Any issues during the calculation of the index are written as messages to the ap
 
 Message Type
 
-
-
 </th>
 <th valign="top">
 
 Classification
-
-
 
 </th>
 <th valign="top">
 
 What's the Issue?
 
-
-
 </th>
 </tr>
 <tr>
@@ -34,21 +28,15 @@ What's the Issue?
 
 Error
 
-
-
 </td>
 <td valign="top">
 
 Very high
 
-
-
 </td>
 <td valign="top">
 
 Exception because manifest.json file is not valid or cache buster token could not be calculated
-
-
 
 </td>
 </tr>
@@ -57,21 +45,15 @@ Exception because manifest.json file is not valid or cache buster token could no
 
 Error
 
-
-
 </td>
 <td valign="top">
 
 High
 
-
-
 </td>
 <td valign="top">
 
 Component ID occurs or is used more than once
-
-
 
 </td>
 </tr>
@@ -80,21 +62,15 @@ Component ID occurs or is used more than once
 
 Warning
 
-
-
 </td>
 <td valign="top">
 
 Medium
 
-
-
 </td>
 <td valign="top">
 
 Component ID is potentially not valid
-
-
 
 </td>
 </tr>
@@ -111,14 +87,10 @@ Technically, the application log is referenced by the object `/UI5/APPIDX`. This
 
 Subobject
 
-
-
 </th>
 <th valign="top">
 
 What Does It Contain?
-
-
 
 </th>
 </tr>
@@ -127,14 +99,10 @@ What Does It Contain?
 
 GENERAL
 
-
-
 </td>
 <td valign="top">
 
 General information like time and duration of the last calculation of the index, number of single repositories, and number of updated table entries
-
-
 
 </td>
 </tr>
@@ -143,8 +111,6 @@ General information like time and duration of the last calculation of the index,
 
 UI5REP
 
-
-
 </td>
 <td valign="top">
 
@@ -152,16 +118,12 @@ Error messages that occurred when a single repository was processed
 
 The external ID is the name of the single repository.
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
 UI5COMP
-
-
 
 </td>
 <td valign="top">
@@ -178,8 +140,6 @@ The consistency check includes the following:
 
 
 The external ID is the component ID.
-
-
 
 </td>
 </tr>

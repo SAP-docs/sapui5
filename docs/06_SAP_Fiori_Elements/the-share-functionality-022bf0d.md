@@ -33,11 +33,11 @@ The *Share* functionality allows users to share the current application state us
 
     Please note the following:
 
-    -   The *Share: Microsoft Teams* option is only available if the required settings have been made by the system administrators of SAP S/4HANA Cloud.
+    The *Share: Microsoft Teams* option is only available if the required settings have been made by a system administrator. The *Share: Microsoft Teams* option is part of collaborative ERP \(enterprise resource planning\) within the SAP S/4HANA family of products. So this option is not available for all users.
 
-        For more information, see [Integrating Microsoft Teams](https://help.sap.com/docs/SAP_S4HANA_CLOUD/0f69f8fb28ac4bf48d2b57b9637e81fa/257ec7408db6420682462cd1d000e744.html).
+    -   System administrators for SAP S/4HANA Cloud can find the required information at [Integrating Microsoft Teams](https://help.sap.com/docs/SAP_S4HANA_CLOUD/0f69f8fb28ac4bf48d2b57b9637e81fa/257ec7408db6420682462cd1d000e744.html).
 
-    -   The *Share: Microsoft Teams* option is part of collaborative ERP \(enterprise resource planning\), which integrates the best of SAP S/4HANA Cloud with Microsoft Teams. So this option is not available for all users.
+    -   System administrators for SAP S/4HANA can find the required information at [Integration with Microsoft Teams](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/8308e6d301d54584a33cd04a9861bc52/849465e69b7a490a88049fe0b24fb01e.html?version=2023.000).
 
 
 
@@ -66,16 +66,15 @@ The *Share* functionality is hidden for the creation pages of non-draft objects.
 
 During tile creation, you can change the tile type from dynamic to static using an extension. For more information, see [Extending the Bookmark Function to Save Static Tiles to the SAP Fiori Launchpad](extending-the-bookmark-function-to-save-static-tiles-to-the-sap-fiori-launchpad-7e34ea9.md).
 
-> ### Restriction:  
-> A dynamic tile is not created if the filter bar contains a semantic date. For more information about the semantic date range, see [Enabling Semantic Operators in the Filter Bar](enabling-semantic-operators-in-the-filter-bar-fef65d0.md).
-
 
 
 <a name="loio022bf0dcae1d4d90961ebe23d642fca3__section_r4n_lql_ymb"/>
 
 ## Additional Features in SAP Fiori Elements for OData V4
 
-\- Send Email -
+
+
+### Send Email
 
 You can also use controller extension methods to change the subject line of the email.
 
@@ -119,7 +118,9 @@ Make the following changes in the `OPExtend.controller.js` file:
 > );
 > ```
 
-\- Semantic Bookmarking -
+
+
+### Semantic Bookmarking
 
 Semantic bookmarking enables the sharing of an object page even while it is being edited by a user, that is, even when the object page has the status `draft`.
 
@@ -162,7 +163,7 @@ Here’s an annotation snippet showing the semantic key annotation:
 > ],
 > ```
 
-If the application developer does not define the annotations for the semantic keys, the URL contains only the technical keys. In this case, if user A shares the URL via the*Share* functionality with user B, user B will only be able to open the list report page if user A shares while being in display mode. If user A is already in edit mode when the URL is shared, then user B will not be able to open the link, since user B cannot access the draft of user A.
+If the application developer does not define the annotations for the semantic keys, the URL contains only the technical keys. In this case, if user A shares the URL via the *Share* functionality with user B, user B will only be able to open the list report page if user A shares while being in display mode. If user A is already in edit mode when the URL is shared, then user B will not be able to open the link, since user B cannot access the draft of user A.
 
 If, however, the application developer has defined semantic keys, the URL only contains semantic keys. In this case, user B will be able to open the shared URL, irrespective of whether user A shares the active copy \(display mode\) or the draft copy \(edit mode\). If user A shares the draft copy, then user B sees the corresponding active copy of the object.
 

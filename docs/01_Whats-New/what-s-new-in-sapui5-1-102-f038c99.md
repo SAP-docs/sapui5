@@ -13,49 +13,35 @@ With this release SAPUI5 is upgraded from version 1.101 to 1.102.
 
 Version
 
-
-
 </th>
 <th valign="top">
 
 Type
-
-
 
 </th>
 <th valign="top">
 
 Category
 
-
-
 </th>
 <th valign="top">
 
 Title
-
-
 
 </th>
 <th valign="top">
 
 Description
 
-
-
 </th>
 <th valign="top">
 
 Action
 
-
-
 </th>
 <th valign="top">
 
 Available as of
-
-
 
 </th>
 </tr>
@@ -64,28 +50,20 @@ Available as of
 
 1.102 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **Accessibility** 
-
-
 
 </td>
 <td valign="top">
@@ -96,21 +74,15 @@ We are now using JAWS 2022 as a reference testing environment in SAPUI5. For mor
 
 <sub>Changed•Feature•Info Only•1.102</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-05-19
-
-
 
 </td>
 </tr>
@@ -119,28 +91,20 @@ Info Only
 
 1.102 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.richtexteditor.RichTextEditor`** 
-
-
 
 </td>
 <td valign="top">
@@ -151,21 +115,15 @@ Application developers can now customize the custom toolbar and remove the butto
 
 <sub>Changed•Control•Info Only•1.102</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-05-19
-
-
 
 </td>
 </tr>
@@ -174,28 +132,20 @@ Info Only
 
 1.102 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Announcement 
 
-
-
 </td>
 <td valign="top">
 
 **Deactivation of Default Time Zone Configuration Feature** 
-
-
 
 </td>
 <td valign="top">
@@ -225,21 +175,15 @@ We plan to bring this feature back in a different form at a later point in time.
 
 <sub>Changed•Announcement•Info Only•1.102</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-05-19
-
-
 
 </td>
 </tr>
@@ -248,28 +192,20 @@ Info Only
 
 1.102 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.comp.smarttable.SmartTable`** 
-
-
 
 </td>
 <td valign="top">
@@ -283,21 +219,15 @@ Control
 
 <sub>Changed•Control•Info Only•1.102</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-05-19
-
-
 
 </td>
 </tr>
@@ -306,28 +236,20 @@ Info Only
 
 1.102 
 
-
-
 </td>
 <td valign="top">
 
 New 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **Visualization of IANA Time Zones for Date/Time Data** 
-
-
 
 </td>
 <td valign="top">
@@ -362,21 +284,15 @@ The following SAPUI5 functionality supports IANA time zones:
 
 <sub>New•Feature•Info Only•1.102</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-05-19
-
-
 
 </td>
 </tr>
@@ -385,28 +301,20 @@ Info Only
 
 1.102 
 
-
-
 </td>
 <td valign="top">
 
 UI Changed 
-
-
 
 </td>
 <td valign="top">
 
 Announcement 
 
-
-
 </td>
 <td valign="top">
 
 **Draft-Enabled Apps: Empty Rows Offered by Default in Object Page Tables** 
-
-
 
 </td>
 <td valign="top">
@@ -420,21 +328,15 @@ To improve the user experience of draft-enabled apps, a number of empty rows are
 
 <sub>UI Changed•Announcement•Info Only•1.102</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-05-19
-
-
 
 </td>
 </tr>
@@ -443,28 +345,20 @@ Info Only
 
 1.102 
 
-
-
 </td>
 <td valign="top">
 
 UI Changed 
-
-
 
 </td>
 <td valign="top">
 
 Announcement 
 
-
-
 </td>
 <td valign="top">
 
 **Draft-Enabled Apps: Draft Toggle Button Moved** 
-
-
 
 </td>
 <td valign="top">
@@ -478,21 +372,15 @@ To improve the user experience, we've changed the handling of the draft concept 
 
 <sub>UI Changed•Announcement•Info Only•1.102</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-05-19
-
-
 
 </td>
 </tr>
@@ -501,28 +389,20 @@ Info Only
 
 1.102 
 
-
-
 </td>
 <td valign="top">
 
 New 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **Translation of Key User UI Changes** 
-
-
 
 </td>
 <td valign="top">
@@ -533,21 +413,15 @@ Developers on SAP BTP, Cloud Foundry environment, can now enable translation of 
 
 <sub>New•Feature•Info Only•1.102</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-05-19
-
-
 
 </td>
 </tr>
@@ -556,28 +430,20 @@ Info Only
 
 1.102 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.NotificationListItem`, `sap.m.NotificationListGroup`** 
-
-
 
 </td>
 <td valign="top">
@@ -597,21 +463,15 @@ For more information, see the [NotificationListItem](https://ui5.sap.com/#/entit
 
 <sub>Changed•Control•Info Only•1.102</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-05-19
-
-
 
 </td>
 </tr>
@@ -620,28 +480,20 @@ Info Only
 
 1.102 
 
-
-
 </td>
 <td valign="top">
 
 New 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **Accessibility Guide** 
-
-
 
 </td>
 <td valign="top">
@@ -652,21 +504,15 @@ The accessibility guide is a newly developed application about web accessibility
 
 <sub>New•Feature•Info Only•1.102</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-05-19
-
-
 
 </td>
 </tr>
@@ -675,28 +521,20 @@ Info Only
 
 1.102 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.p13n*`** 
-
-
 
 </td>
 <td valign="top">
@@ -720,21 +558,15 @@ For more information, see the [Sample](https://ui5.sap.com/#/entity/sap.m.p13n.P
 
 <sub>Changed•Control•Info Only•1.102</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-05-19
-
-
 
 </td>
 </tr>
@@ -743,28 +575,20 @@ Info Only
 
 1.102 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **SAPUI5 OData V4 Model** 
-
-
 
 </td>
 <td valign="top">
@@ -778,21 +602,15 @@ The new version of the SAPUI5 OData V4 model introduces the following features:
 
 <sub>Changed•Feature•Info Only•1.102</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-05-19
-
-
 
 </td>
 </tr>
@@ -801,28 +619,20 @@ Info Only
 
 1.102 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **Improved Handling of Aggregations in XML Views** 
-
-
 
 </td>
 <td valign="top">
@@ -837,21 +647,15 @@ In order to align the usage of XML views and controls even further, aggregations
 
 <sub>Changed•Feature•Info Only•1.102</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-05-19
-
-
 
 </td>
 </tr>
@@ -860,28 +664,20 @@ Info Only
 
 1.102 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **SAPUI5 OData V2 Model** 
-
-
 
 </td>
 <td valign="top">
@@ -892,21 +688,15 @@ The `sap.ui.model.odata.OperationMode.Auto` operation mode is deprecated. If the
 
 <sub>Changed•Feature•Info Only•1.102</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-05-19
-
-
 
 </td>
 </tr>
@@ -915,28 +705,20 @@ Info Only
 
 1.102 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.DatePicker`, `sap.m.TimePicker` and `sap.m.DateTimePicker`** 
-
-
 
 </td>
 <td valign="top">
@@ -947,21 +729,15 @@ We have added `afterValueHelpOpen` and `afterValueHelpClose` events, fired when 
 
 <sub>Changed•Control•Info Only•1.102</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-05-19
-
-
 
 </td>
 </tr>
@@ -970,28 +746,20 @@ Info Only
 
 1.102 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.unified.FileUploader`** 
-
-
 
 </td>
 <td valign="top">
@@ -1002,21 +770,15 @@ We have implemented `beforeDialogOpen` and `beforeDialogClose` events, fired whe
 
 <sub>Changed•Control•Info Only•1.102</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-05-19
-
-
 
 </td>
 </tr>
@@ -1025,28 +787,20 @@ Info Only
 
 1.102 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 SAP Fiori Elements 
 
-
-
 </td>
 <td valign="top">
 
 **SAP Fiori elements for OData V4** 
-
-
 
 </td>
 <td valign="top">
@@ -1091,21 +845,15 @@ The following changes and new features are available for SAP Fiori elements for 
 
 <sub>Changed•SAP Fiori Elements•Info Only•1.102</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-05-19
-
-
 
 </td>
 </tr>
@@ -1114,28 +862,20 @@ Info Only
 
 1.102 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 SAP Fiori Elements 
 
-
-
 </td>
 <td valign="top">
 
 **SAP Fiori elements for OData V2** 
-
-
 
 </td>
 <td valign="top">
@@ -1200,21 +940,15 @@ The following changes and new features are available for SAP Fiori elements for 
 
 <sub>Changed•SAP Fiori Elements•Info Only•1.102</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-05-19
-
-
 
 </td>
 </tr>
@@ -1223,28 +957,20 @@ Info Only
 
 1.102 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 SAP Fiori Elements 
 
-
-
 </td>
 <td valign="top">
 
 **SAP Fiori elements for OData V2 and SAP Fiori elements for OData V4** 
-
-
 
 </td>
 <td valign="top">
@@ -1258,21 +984,15 @@ The following changes and new features are available for SAP Fiori elements for 
 
 <sub>Changed•SAP Fiori Elements•Info Only•1.102</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-05-19
-
-
 
 </td>
 </tr>
@@ -1280,6 +1000,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.118](what-s-new-in-sapui5-1-118-3eecbde.md "With this release SAPUI5 is upgraded from version 1.117 to 1.118.")
 
 [What's New in SAPUI5 1.117](what-s-new-in-sapui5-1-117-029d3b4.md "With this release SAPUI5 is upgraded from version 1.116 to 1.117.")
 

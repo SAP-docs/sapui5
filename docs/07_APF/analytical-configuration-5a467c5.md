@@ -15,14 +15,10 @@ The following table lists the objects used in an analytical configuration:
 
 Object Type
 
-
-
 </th>
 <th valign="top">
 
 Unique ID Required
-
-
 
 </th>
 </tr>
@@ -31,14 +27,10 @@ Unique ID Required
 
 `step` 
 
-
-
 </td>
 <td valign="top">
 
 Yes
-
-
 
 </td>
 </tr>
@@ -47,14 +39,10 @@ Yes
 
 `hierarchicalStep` 
 
-
-
 </td>
 <td valign="top">
 
 Yes
-
-
 
 </td>
 </tr>
@@ -63,14 +51,10 @@ Yes
 
 `request` 
 
-
-
 </td>
 <td valign="top">
 
 Yes
-
-
 
 </td>
 </tr>
@@ -79,14 +63,10 @@ Yes
 
 `binding` 
 
-
-
 </td>
 <td valign="top">
 
 Yes
-
-
 
 </td>
 </tr>
@@ -95,14 +75,10 @@ Yes
 
 `representation` 
 
-
-
 </td>
 <td valign="top">
 
 Yes
-
-
 
 </td>
 </tr>
@@ -111,14 +87,10 @@ Yes
 
 `representationType` \(optional\)
 
-
-
 </td>
 <td valign="top">
 
 Yes
-
-
 
 </td>
 </tr>
@@ -127,14 +99,10 @@ Yes
 
 `facetFilter` 
 
-
-
 </td>
 <td valign="top">
 
 Yes
-
-
 
 </td>
 </tr>
@@ -143,14 +111,10 @@ Yes
 
 `smartFilterBarConfiguration` 
 
-
-
 </td>
 <td valign="top">
 
 Yes
-
-
 
 </td>
 </tr>
@@ -159,14 +123,10 @@ Yes
 
 `navigationTarget` 
 
-
-
 </td>
 <td valign="top">
 
 Yes
-
-
 
 </td>
 </tr>
@@ -175,14 +135,10 @@ Yes
 
 `category` 
 
-
-
 </td>
 <td valign="top">
 
 Yes
-
-
 
 </td>
 </tr>
@@ -191,14 +147,10 @@ Yes
 
 `label` 
 
-
-
 </td>
 <td valign="top">
 
 No
-
-
 
 </td>
 </tr>
@@ -207,14 +159,10 @@ No
 
 `thumbnail` 
 
-
-
 </td>
 <td valign="top">
 
 No
-
-
 
 </td>
 </tr>

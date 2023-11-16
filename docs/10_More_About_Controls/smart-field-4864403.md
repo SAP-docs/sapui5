@@ -95,14 +95,10 @@ The table below shows which controls are used if you **don't** overwrite the con
 
 Editing Use Cases
 
-
-
 </th>
 <th valign="top" colspan="2">
 
 Display Use Cases
-
-
 
 </th>
 </tr>
@@ -111,28 +107,20 @@ Display Use Cases
 
 EDM Type
 
-
-
 </th>
 <th valign="top">
 
 Control
-
-
 
 </th>
 <th valign="top">
 
 EDM Type
 
-
-
 </th>
 <th valign="top">
 
 Control
-
-
 
 </th>
 </tr>
@@ -140,53 +128,39 @@ Control
 <td valign="top">
 
 `Edm.Boolean` 
-
-
 
 </td>
 <td valign="top">
 
 `sap.m.CheckBox` 
 
-
-
 </td>
 <td valign="top">
 
 `Edm.Boolean` 
-
-
 
 </td>
 <td valign="top" rowspan="14">
 
 `sap.m.Text`
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
 `Edm.Int16` 
-
-
 
 </td>
 <td valign="top" rowspan="10">
 
 `sap.m.Input` 
 
-
-
 </td>
 <td valign="top">
 
 `Edm.Int16` 
 
-
-
 </td>
 </tr>
 <tr>
@@ -194,14 +168,10 @@ Control
 
 `Edm.Int32` 
 
-
-
 </td>
 <td valign="top">
 
 `Edm.Int32` 
-
-
 
 </td>
 </tr>
@@ -210,15 +180,11 @@ Control
 
 `Edm.Int64` 
 
-
-
 </td>
 <td valign="top">
 
 `Edm.Int64` 
 
-
-
 </td>
 </tr>
 <tr>
@@ -226,14 +192,10 @@ Control
 
 `Edm.SByte` 
 
-
-
 </td>
 <td valign="top">
 
 `Edm.SByte` 
-
-
 
 </td>
 </tr>
@@ -242,15 +204,11 @@ Control
 
 `Edm.Byte` 
 
-
-
 </td>
 <td valign="top">
 
 `Edm.Byte` 
 
-
-
 </td>
 </tr>
 <tr>
@@ -258,14 +216,10 @@ Control
 
 `Edm.Single` 
 
-
-
 </td>
 <td valign="top">
 
 `Edm.Single` 
-
-
 
 </td>
 </tr>
@@ -274,15 +228,11 @@ Control
 
 `Edm.Float` 
 
-
-
 </td>
 <td valign="top">
 
 `Edm.Float` 
 
-
-
 </td>
 </tr>
 <tr>
@@ -290,14 +240,10 @@ Control
 
 `Edm.Double` 
 
-
-
 </td>
 <td valign="top">
 
 `Edm.Double` 
-
-
 
 </td>
 </tr>
@@ -306,14 +252,10 @@ Control
 
 `Edm.Decimal` 
 
-
-
 </td>
 <td valign="top">
 
 `Edm.Decimal` 
-
-
 
 </td>
 </tr>
@@ -322,14 +264,10 @@ Control
 
 `Edm.String` 
 
-
-
 </td>
 <td valign="top">
 
 `Edm.String` 
-
-
 
 </td>
 </tr>
@@ -337,23 +275,17 @@ Control
 <td valign="top">
 
 `Edm.Time` 
-
-
 
 </td>
 <td valign="top" rowspan="3">
 
 `sap.m.DateTimePicker`
 
-
-
 </td>
 <td valign="top">
 
 `Edm.Time` 
 
-
-
 </td>
 </tr>
 <tr>
@@ -361,14 +293,10 @@ Control
 
 `Edm.DateTime` 
 
-
-
 </td>
 <td valign="top">
 
 `Edm.DateTime` 
-
-
 
 </td>
 </tr>
@@ -377,14 +305,10 @@ Control
 
 `Edm.DateTimeOffset` 
 
-
-
 </td>
 <td valign="top">
 
 `Edm.DateTimeOffset` 
-
-
 
 </td>
 </tr>

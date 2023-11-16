@@ -19,7 +19,7 @@ In the real world, data often resides on remote servers and is accessed via an O
   
 **Products from the OData invoices test service are now shown within our app**
 
-![](images/UI5_Walkthrough_Step_25_5b76bb4.png "Products from the OData invoices test service are now shown within our
+![The graphic has an explanatory text.](images/UI5_Walkthrough_Step_25_5b76bb4.png "Products from the OData invoices test service are now shown within our
 					app")
 
 
@@ -53,7 +53,7 @@ metadata:
 type: application
 framework:
   name: OpenUI5
-  version: "1.119.2"
+  version: "1.120.0"
   libraries:
     - name: sap.m
     - name: sap.ui.core

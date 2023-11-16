@@ -13,49 +13,35 @@ With this release SAPUI5 is upgraded from version 1.68 to 1.69.
 
 Version
 
-
-
 </th>
 <th valign="top">
 
 Type
-
-
 
 </th>
 <th valign="top">
 
 Category
 
-
-
 </th>
 <th valign="top">
 
 Title
-
-
 
 </th>
 <th valign="top">
 
 Description
 
-
-
 </th>
 <th valign="top">
 
 Action
 
-
-
 </th>
 <th valign="top">
 
 Available as of
-
-
 
 </th>
 </tr>
@@ -64,28 +50,20 @@ Available as of
 
 1.69 
 
-
-
 </td>
 <td valign="top">
 
 New 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **New Themes for SAP Fiori 3 User Experience** 
-
-
 
 </td>
 <td valign="top">
@@ -96,21 +74,15 @@ The High Contrast White \(HCW\) and High Contrast Black \(HCB\) themes \(`sap_fi
 
 <sub>New•Feature•Info Only•1.69</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only
 
-
-
 </td>
 <td valign="top">
 
 2019-08-15
-
-
 
 </td>
 </tr>
@@ -119,28 +91,20 @@ Info Only
 
 1.69 
 
-
-
 </td>
 <td valign="top">
 
 New 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **Require Modules in XML Views and Fragments** 
-
-
 
 </td>
 <td valign="top">
@@ -155,21 +119,15 @@ For details and examples, see [Require Modules in XML View and Fragment](../04_E
 
 <sub>New•Feature•Info Only•1.69</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-08-15
-
-
 
 </td>
 </tr>
@@ -178,28 +136,20 @@ Info Only
 
 1.69 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **Rule Builder: Migrate projects from expression language 1.0 to expression language 2.0** 
-
-
 
 </td>
 <td valign="top">
@@ -212,21 +162,15 @@ For more information, see [Rule Builder Control Tutorial](../03_Get-Started/rule
 
 <sub>Changed•Feature•Info Only•1.69</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-08-15
-
-
 
 </td>
 </tr>
@@ -235,28 +179,20 @@ Info Only
 
 1.69 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **Rule Builder: Vocabulary Rules** 
-
-
 
 </td>
 <td valign="top">
@@ -267,21 +203,15 @@ In expression language 2.0, you can include rules in a rule condition to consume
 
 <sub>Changed•Feature•Info Only•1.69</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-08-15
-
-
 
 </td>
 </tr>
@@ -290,28 +220,20 @@ Info Only
 
 1.69 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **SAPUI5 OData V4 Model** 
-
-
 
 </td>
 <td valign="top">
@@ -338,21 +260,15 @@ For more information, see [OData V4 Model](../04_Essentials/odata-v4-model-5de13
 
 <sub>Changed•Feature•Info Only•1.69</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-08-15
-
-
 
 </td>
 </tr>
@@ -361,28 +277,20 @@ Info Only
 
 1.69 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.f.Avatar`** 
-
-
 
 </td>
 <td valign="top">
@@ -398,21 +306,15 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.f.Av
 
 <sub>Changed•Control•Info Only•1.69</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-08-15
-
-
 
 </td>
 </tr>
@@ -421,28 +323,20 @@ Info Only
 
 1.69 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.Breadcrumbs`** 
-
-
 
 </td>
 <td valign="top">
@@ -453,21 +347,15 @@ You can now choose different separator styles to be displayed between the `Bread
 
 <sub>Changed•Control•Info Only•1.69</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-08-15
-
-
 
 </td>
 </tr>
@@ -476,28 +364,20 @@ Info Only
 
 1.69 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.ListBase` / `sap.m.ListItemBase`** 
-
-
 
 </td>
 <td valign="top">
@@ -508,21 +388,15 @@ These controls now support a range selection with key combinations if the `Multi
 
 <sub>Changed•Control•Info Only•1.69</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-08-15
-
-
 
 </td>
 </tr>
@@ -531,28 +405,20 @@ Info Only
 
 1.69 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.NavContainer`** 
-
-
 
 </td>
 <td valign="top">
@@ -563,21 +429,15 @@ We have improved the fade and slide animations when navigating forward and backw
 
 <sub>Changed•Control•Info Only•1.69</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-08-15
-
-
 
 </td>
 </tr>
@@ -586,28 +446,20 @@ Info Only
 
 1.69 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.QuickViewPage`** 
-
-
 
 </td>
 <td valign="top">
@@ -618,21 +470,15 @@ We have introduced a new `fallbackIcon` property. It allows you to define an ico
 
 <sub>Changed•Control•Info Only•1.69</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-08-15
-
-
 
 </td>
 </tr>
@@ -641,28 +487,20 @@ Info Only
 
 1.69 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.SearchField`** 
-
-
 
 </td>
 <td valign="top">
@@ -673,21 +511,15 @@ We have made some changes in the suggestions dialog for the `SearchField` contro
 
 <sub>Changed•Control•Info Only•1.69</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-08-15
-
-
 
 </td>
 </tr>
@@ -696,28 +528,20 @@ Info Only
 
 1.69 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.Select`** 
-
-
 
 </td>
 <td valign="top">
@@ -728,21 +552,15 @@ The items in the select list now have a maximum width. If the text of the items 
 
 <sub>Changed•Control•Info Only•1.69</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-08-15
-
-
 
 </td>
 </tr>
@@ -751,28 +569,20 @@ Info Only
 
 1.69 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.SinglePlanningCalendar`** 
-
-
 
 </td>
 <td valign="top">
@@ -783,21 +593,15 @@ A new *Month* view is now available for the control. It displays a calendar mont
 
 <sub>Changed•Control•Info Only•1.69</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-08-15
-
-
 
 </td>
 </tr>
@@ -806,28 +610,20 @@ Info Only
 
 1.69 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.comp.smartfilterbar.SmartFilterBar`** 
-
-
 
 </td>
 <td valign="top">
@@ -838,21 +634,15 @@ Values in single input fields are now validated against the keys available in th
 
 <sub>Changed•Control•Info Only•1.69</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-08-15
-
-
 
 </td>
 </tr>
@@ -861,28 +651,20 @@ Info Only
 
 1.69 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.comp.smarttable.SmartTable`** 
-
-
 
 </td>
 <td valign="top">
@@ -893,21 +675,15 @@ The sorting for multiple currencies has been improved. For more information, see
 
 <sub>Changed•Control•Info Only•1.69</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-08-15
-
-
 
 </td>
 </tr>
@@ -916,28 +692,20 @@ Info Only
 
 1.69 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.table.plugins.MultiSelectionPlugin`** 
-
-
 
 </td>
 <td valign="top">
@@ -948,21 +716,15 @@ The plugin for the `sap.ui.table.AnalyticalTable`, the `sap.ui.table.Table`, and
 
 <sub>Changed•Control•Info Only•1.69</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-08-15
-
-
 
 </td>
 </tr>
@@ -971,28 +733,20 @@ Info Only
 
 1.69 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.unified.Calendar`** 
-
-
 
 </td>
 <td valign="top">
@@ -1003,21 +757,15 @@ We have implemented year range in the `Calendar` control to help the user naviga
 
 <sub>Changed•Control•Info Only•1.69</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-08-15
-
-
 
 </td>
 </tr>
@@ -1026,28 +774,20 @@ Info Only
 
 1.69 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 SAP Fiori Elements 
 
-
-
 </td>
 <td valign="top">
 
 **SAP Fiori Elements** 
-
-
 
 </td>
 <td valign="top">
@@ -1080,21 +820,15 @@ The overview page has these new features or enhancements:
 
 <sub>Changed•SAP Fiori Elements•Info Only•1.69</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-08-15
-
-
 
 </td>
 </tr>
@@ -1102,6 +836,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.118](what-s-new-in-sapui5-1-118-3eecbde.md "With this release SAPUI5 is upgraded from version 1.117 to 1.118.")
 
 [What's New in SAPUI5 1.117](what-s-new-in-sapui5-1-117-029d3b4.md "With this release SAPUI5 is upgraded from version 1.116 to 1.117.")
 

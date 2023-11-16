@@ -34,14 +34,10 @@ This figure shows how to set up the following basic elements for your object pag
 
 Label in Figure
 
-
-
 </th>
 <th valign="top">
 
 Element
-
-
 
 </th>
 </tr>
@@ -50,14 +46,10 @@ Element
 
 *1*
 
-
-
 </td>
 <td valign="top">
 
 Title \(Object Type\)
-
-
 
 </td>
 </tr>
@@ -66,14 +58,10 @@ Title \(Object Type\)
 
 *2* 
 
-
-
 </td>
 <td valign="top">
 
 Image of the object instance
-
-
 
 </td>
 </tr>
@@ -82,14 +70,10 @@ Image of the object instance
 
 *3*
 
-
-
 </td>
 <td valign="top">
 
 Language-dependent product text in SAP back-end systems
-
-
 
 </td>
 </tr>
@@ -98,14 +82,10 @@ Language-dependent product text in SAP back-end systems
 
 *4*
 
-
-
 </td>
 <td valign="top">
 
 Product title in SAP back-end systems
-
-
 
 </td>
 </tr>

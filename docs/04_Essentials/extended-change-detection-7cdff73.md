@@ -39,14 +39,10 @@ The difference between the previous and the current state of the list is provide
 > 
 > **Old State** 
 > 
-> 
-> 
 > </td>
 > <td valign="top">
 > 
 > **New State** 
-> 
-> 
 > 
 > </td>
 > </tr>
@@ -55,14 +51,10 @@ The difference between the previous and the current state of the list is provide
 > 
 > `["one", "two", "three", "four", "five"]` 
 > 
-> 
-> 
 > </td>
 > <td valign="top">
 > 
 > `["one", "three", "four", "five", "six"]` 
-> 
-> 
 > 
 > </td>
 > </tr>
@@ -71,16 +63,12 @@ The difference between the previous and the current state of the list is provide
 > 
 > **Difference** 
 > 
-> 
-> 
 > </td>
 > </tr>
 > <tr>
 > <td valign="top" colspan="2">
 > 
 > `[{index: 1, type: "delete"}, {index: 4, type: "insert}]` 
-> 
-> 
 > 
 > </td>
 > </tr>
@@ -113,15 +101,11 @@ If a control you want to use in your app to visualize list entries supports exte
     <th valign="top">
 
     `key` property
-
-
     
     </th>
     <th valign="top">
 
     `key` function
-
-
     
     </th>
     </tr>

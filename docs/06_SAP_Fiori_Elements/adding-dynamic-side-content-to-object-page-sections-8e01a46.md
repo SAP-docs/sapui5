@@ -177,21 +177,15 @@ You can define your side content by implementing an `xmlfragment` and using the 
 
 Property Name
 
-
-
 </th>
 <th valign="top">
 
 Supported Values
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -200,21 +194,15 @@ Description
 
 template
 
-
-
 </td>
 <td valign="top">
 
 "<module\_path\_to\_a\_fragment\>"
 
-
-
 </td>
 <td valign="top">
 
 Defining the target fragment follows the syntax of defining a fragment via `Fragment.load`
-
-
 
 </td>
 </tr>
@@ -223,14 +211,10 @@ Defining the target fragment follows the syntax of defining a fragment via `Frag
 
 equalSplit
 
-
-
 </td>
 <td valign="top">
 
 true | **false**
-
-
 
 </td>
 <td valign="top">
@@ -238,8 +222,6 @@ true | **false**
 Changes the visualization of the side content: instead of being split 1:3 / 1:2, according to responsiveness the side content is split 1:1.
 
 For information about the layout API, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.layout.DynamicSideContent).
-
-
 
 </td>
 </tr>
@@ -333,56 +315,40 @@ The following table provides an overview of all possible combinations of facet n
 
 Scenario
 
-
-
 </th>
 <th valign="top">
 
 Level 0
-
-
 
 </th>
 <th valign="top">
 
 Level 1
 
-
-
 </th>
 <th valign="top">
 
 Level 2
-
-
 
 </th>
 <th valign="top">
 
 Section-Key
 
-
-
 </th>
 <th valign="top">
 
 SubSection-Key
-
-
 
 </th>
 <th valign="top">
 
 SideContent-Key
 
-
-
 </th>
 <th valign="top">
 
 How Side Content is Displayed
-
-
 
 </th>
 </tr>
@@ -391,8 +357,6 @@ How Side Content is Displayed
 
 One level of nesting
 
-
-
 </td>
 </tr>
 <tr>
@@ -400,28 +364,20 @@ One level of nesting
 
 1
 
-
-
 </td>
 <td valign="top">
 
 Reference Facet including form \(RF\)
 
-
-
 </td>
 <td valign="top">
 
  
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 <td valign="top">
@@ -430,16 +386,12 @@ RF @ Level 0
 
 \(for example: `SalesOrderItems`\)
 
-
-
 </td>
 <td valign="top">
 
 RF @ Level 0
 
 \(for example: `SalesOrderItems`\)
-
-
 
 </td>
 <td valign="top">
@@ -448,14 +400,10 @@ RF @ Level 0 Key
 
 \(for example: `SalesOrderItems`\)
 
-
-
 </td>
 <td valign="top">
 
 ![](images/Side_Content_Scenario_1_2ccaf01.png)
-
-
 
 </td>
 </tr>
@@ -464,56 +412,40 @@ RF @ Level 0 Key
 
 2
 
-
-
 </td>
 <td valign="top">
 
 Reference Facet as Table \(T\)
 
+</td>
+<td valign="top">
 
+ 
 
 </td>
 <td valign="top">
 
  
 
-
-
-</td>
-<td valign="top">
-
- 
-
-
-
 </td>
 <td valign="top">
 
 RF @ Level 0
 
-
-
 </td>
 <td valign="top">
 
 RF @ Level 0
-
-
 
 </td>
 <td valign="top">
 
 RF @ Level 0 Key
 
-
-
 </td>
 <td valign="top">
 
 ![](images/Side_Content_Scenario_2_bc11e5a.png)
-
-
 
 </td>
 </tr>
@@ -522,56 +454,40 @@ RF @ Level 0 Key
 
 3
 
-
-
 </td>
 <td valign="top">
 
 Collection Facet \(CF\)
 
-
-
 </td>
 <td valign="top">
 
  
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 <td valign="top">
 
 CF @ Level 0
 
-
-
 </td>
 <td valign="top">
 
  
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 <td valign="top">
 
 ![](images/Side_Content_Scenario_3_dfe4e08.png)
-
-
 
 </td>
 </tr>
@@ -580,56 +496,40 @@ CF @ Level 0
 
 3.1
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 <td valign="top">
 
 RF
 
-
-
 </td>
 <td valign="top">
 
  
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 <td valign="top">
 
 CF @ Level 0
 
-
-
 </td>
 <td valign="top">
 
 CF @ Level 0 Key
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -638,56 +538,40 @@ CF @ Level 0 Key
 
 4
 
-
-
 </td>
 <td valign="top">
 
 CF
 
-
-
 </td>
 <td valign="top">
 
  
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 <td valign="top">
 
 CF @ Level 0
 
-
-
 </td>
 <td valign="top">
 
  
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 <td valign="top">
 
 ![](images/Side_Content_Scenario_4_d8f292a.png)
-
-
 
 </td>
 </tr>
@@ -696,56 +580,40 @@ CF @ Level 0
 
 4.1
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 <td valign="top">
 
 T
 
-
-
 </td>
 <td valign="top">
 
  
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 <td valign="top">
 
 CF @ Level 0
 
-
-
 </td>
 <td valign="top">
 
 RF @ Level 1 Key
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -754,56 +622,40 @@ RF @ Level 1 Key
 
 5
 
-
-
 </td>
 <td valign="top">
 
 CF
 
-
-
 </td>
 <td valign="top">
 
  
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 <td valign="top">
 
 CF @ Level 0
 
-
-
 </td>
 <td valign="top">
 
  
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 <td valign="top">
 
 ![](images/Side_Content_Scenario_5_626898a.png)
-
-
 
 </td>
 </tr>
@@ -812,56 +664,40 @@ CF @ Level 0
 
 5.1/2
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 <td valign="top">
 
 RF+RF
 
-
-
 </td>
 <td valign="top">
 
  
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 <td valign="top">
 
 CF @ Level 0
 
-
-
 </td>
 <td valign="top">
 
 CF @ Level 0 Key
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -870,56 +706,40 @@ CF @ Level 0 Key
 
 5.3
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 <td valign="top">
 
 T
 
+</td>
+<td valign="top">
 
+ 
 
 </td>
 <td valign="top">
 
  
 
+</td>
+<td valign="top">
 
+ 
 
 </td>
 <td valign="top">
 
  
 
-
-
 </td>
 <td valign="top">
 
  
-
-
-
-</td>
-<td valign="top">
-
- 
-
-
-
-</td>
-<td valign="top">
-
- 
-
-
 
 </td>
 </tr>
@@ -928,8 +748,6 @@ T
 
 Two levels of nesting
 
-
-
 </td>
 </tr>
 <tr>
@@ -937,56 +755,40 @@ Two levels of nesting
 
 6
 
-
-
 </td>
 <td valign="top">
 
 CF
 
-
-
 </td>
 <td valign="top">
 
  
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 <td valign="top">
 
 CF @ Level 0
 
-
-
 </td>
 <td valign="top">
 
  
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 <td valign="top">
 
 ![](images/Side_Content_Scenario_6_8be63d5.png)
-
-
 
 </td>
 </tr>
@@ -995,56 +797,40 @@ CF @ Level 0
 
 6.1
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 <td valign="top">
 
 CF
 
+</td>
+<td valign="top">
 
+ 
 
 </td>
 <td valign="top">
 
  
 
+</td>
+<td valign="top">
 
+ 
 
 </td>
 <td valign="top">
 
  
 
-
-
 </td>
 <td valign="top">
 
  
-
-
-
-</td>
-<td valign="top">
-
- 
-
-
-
-</td>
-<td valign="top">
-
- 
-
-
 
 </td>
 </tr>
@@ -1053,56 +839,40 @@ CF
 
 6.1.1/2
 
-
-
 </td>
 <td valign="top">
 
  
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 <td valign="top">
 
 RF+RF
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 <td valign="top">
 
 CF @ Level 1
 
-
-
 </td>
 <td valign="top">
 
 CF @ Level 1 Key
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -1111,56 +881,40 @@ CF @ Level 1 Key
 
 6.2
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 <td valign="top">
 
 CF
 
+</td>
+<td valign="top">
 
+ 
 
 </td>
 <td valign="top">
 
  
 
+</td>
+<td valign="top">
 
+ 
 
 </td>
 <td valign="top">
 
  
 
-
-
 </td>
 <td valign="top">
 
  
-
-
-
-</td>
-<td valign="top">
-
- 
-
-
-
-</td>
-<td valign="top">
-
- 
-
-
 
 </td>
 </tr>
@@ -1169,56 +923,40 @@ CF
 
 6.2.1/2
 
-
-
 </td>
 <td valign="top">
 
  
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 <td valign="top">
 
 RF+RF
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 <td valign="top">
 
 CF @ Level 1
 
-
-
 </td>
 <td valign="top">
 
 CF @ Level 1 Key
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -1227,56 +965,40 @@ CF @ Level 1 Key
 
 6.2.3
 
-
-
 </td>
 <td valign="top">
 
  
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 <td valign="top">
 
 T
 
+</td>
+<td valign="top">
 
+ 
 
 </td>
 <td valign="top">
 
  
 
-
-
 </td>
 <td valign="top">
 
  
 
-
-
 </td>
 <td valign="top">
 
  
-
-
-
-</td>
-<td valign="top">
-
- 
-
-
 
 </td>
 </tr>
@@ -1285,56 +1007,40 @@ T
 
 7
 
-
-
 </td>
 <td valign="top">
 
 CF
 
-
-
 </td>
 <td valign="top">
 
  
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 <td valign="top">
 
 CF @ Level 0
 
-
-
 </td>
 <td valign="top">
 
  
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 <td valign="top">
 
 ![](images/Side_Content_Scenario_7_748ada6.png)
-
-
 
 </td>
 </tr>
@@ -1343,56 +1049,40 @@ CF @ Level 0
 
 7.1
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 <td valign="top">
 
 T
 
-
-
 </td>
 <td valign="top">
 
  
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 <td valign="top">
 
 RF @ Level 1
 
-
-
 </td>
 <td valign="top">
 
 RF @ Level 1 Key
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -1401,56 +1091,40 @@ RF @ Level 1 Key
 
 7.2
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 <td valign="top">
 
 CF
 
+</td>
+<td valign="top">
 
+ 
 
 </td>
 <td valign="top">
 
  
 
+</td>
+<td valign="top">
 
+ 
 
 </td>
 <td valign="top">
 
  
 
-
-
 </td>
 <td valign="top">
 
  
-
-
-
-</td>
-<td valign="top">
-
- 
-
-
-
-</td>
-<td valign="top">
-
- 
-
-
 
 </td>
 </tr>
@@ -1459,56 +1133,40 @@ CF
 
 7.2.1
 
-
-
 </td>
 <td valign="top">
 
  
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 <td valign="top">
 
 RF
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 <td valign="top">
 
 CF @ Level 1
 
-
-
 </td>
 <td valign="top">
 
 CF @ Level 1 Key
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -1517,56 +1175,40 @@ CF @ Level 1 Key
 
 8
 
-
-
 </td>
 <td valign="top">
 
 \(CF - ignored\)
 
+</td>
+<td valign="top">
 
+ 
 
 </td>
 <td valign="top">
 
  
 
+</td>
+<td valign="top">
 
+ 
 
 </td>
 <td valign="top">
 
  
 
-
-
 </td>
 <td valign="top">
 
  
-
-
-
-</td>
-<td valign="top">
-
- 
-
-
-
-</td>
-<td valign="top">
-
- 
-
-
 
 </td>
 <td valign="top">
 
 \- not displayed -
-
-
 
 </td>
 </tr>
@@ -1575,56 +1217,40 @@ CF @ Level 1 Key
 
 8.1
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 <td valign="top">
 
 CF
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 <td valign="top">
 
 CF @ Level 1
 
-
-
 </td>
 <td valign="top">
 
  
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 <td valign="top">
 
 ![](images/Side_Content_Scenario_8_aa7d8f8.png)
-
-
 
 </td>
 </tr>
@@ -1633,56 +1259,40 @@ CF @ Level 1
 
 8.1.1
 
-
-
 </td>
 <td valign="top">
 
  
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 <td valign="top">
 
 RF
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 <td valign="top">
 
 CF @ Level 1
 
-
-
 </td>
 <td valign="top">
 
 CF @ Level 1 Key
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>

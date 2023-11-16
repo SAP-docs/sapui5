@@ -57,14 +57,10 @@ For more information, see [Design Time Aspects](design-time-aspects-fde0f86.md).
 
 What?
 
-
-
 </th>
 <th valign="top">
 
 Available with ...
-
-
 
 </th>
 </tr>
@@ -73,14 +69,10 @@ Available with ...
 
 SAPUI5 ABAP repository
 
-
-
 </td>
 <td valign="top">
 
 SAP Business Suite systems from version 7.00 containing the user interface \(UI\) add-on for SAP NetWeaver, which contains the software component `UI_INFRA` 
-
-
 
 </td>
 </tr>
@@ -88,8 +80,6 @@ SAP Business Suite systems from version 7.00 containing the user interface \(UI\
 <td valign="top">
 
 Team repository provider \(available in Eclipse\)
-
-
 
 </td>
 <td valign="top">
@@ -108,16 +98,12 @@ SAP Business Suite systems from version 7.31 containing the UI add-on for SAP Ne
 
 SAPUI5 repository upload and download reports \(alternative for the team repository provider with similar functions\)
 
-
-
 </td>
 <td valign="top">
 
 SAP Business Suite system from version 7.00
 
 For more information, see [Using the SAPUI5 ABAP Repository Upload and Download Reports to Synchronize](using-the-sapui5-abap-repository-upload-and-download-reports-to-synchronize-a560bd6.md).
-
-
 
 </td>
 </tr>
@@ -126,14 +112,10 @@ For more information, see [Using the SAPUI5 ABAP Repository Upload and Download 
 
 SAPUI5 control libraries
 
-
-
 </td>
 <td valign="top">
 
 SAP Business Suite systems from version 7.00 containing the UI add-on for SAP NetWeaver in the software component `UISAPUI5` 
-
-
 
 </td>
 </tr>

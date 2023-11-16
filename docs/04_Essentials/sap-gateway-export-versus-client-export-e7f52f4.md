@@ -32,28 +32,20 @@ To find out which export suits your requirements best, check out the following t
 
 Feature
 
-
-
 </th>
 <th valign="top">
 
 Description
 
-
-
 </th>
 <th valign="top">
 
-SAP Gateway
-
-
+SAP Gateway \(deprecated\)
 
 </th>
 <th valign="top">
 
 Client
-
-
 
 </th>
 </tr>
@@ -62,21 +54,15 @@ Client
 
 Number of cells
 
-
-
 </td>
 <td valign="top">
 
 The number of cells that can be exported without warnings or errors.
 
-
-
 </td>
 <td valign="top">
 
 Shows a warning if there are more than 100,000 cells or up to 500,000 cells, depending on the configuration of the session and ABAP memory.
-
-
 
 </td>
 <td valign="top">
@@ -85,8 +71,6 @@ Shows a warning depending on device used, for 2,000,000 cells on a desktop and 1
 
 The total number of cells is limited only by the physical memory of the client and memory restrictions of the browser.
 
-
-
 </td>
 </tr>
 <tr>
@@ -94,28 +78,20 @@ The total number of cells is limited only by the physical memory of the client a
 
 File compression
 
-
-
 </td>
 <td valign="top">
 
 Office Open XML spreadsheets are ZIP containers that contain a particular file structure. To reduce the file size, these ZIP containers can be compressed.
 
-
-
 </td>
 <td valign="top">
 
 ![Supported](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
-
-
 </td>
 <td valign="top">
 
 ![Supported](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
-
-
 
 </td>
 </tr>
@@ -124,21 +100,15 @@ Office Open XML spreadsheets are ZIP containers that contain a particular file s
 
 Header row
 
-
-
 </td>
 <td valign="top">
 
 The exported spreadsheet contains a header row with the corresponding column labels.
 
-
-
 </td>
 <td valign="top">
 
 ![Supported](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
-
-
 
 </td>
 <td valign="top">
@@ -147,8 +117,6 @@ The exported spreadsheet contains a header row with the corresponding column lab
 
 Also, the exported spreadsheet uses the built-in auto filter for all configured columns. This will allow the user to apply filters directly in the exported file without having to change the file.
 
-
-
 </td>
 </tr>
 <tr>
@@ -156,14 +124,10 @@ Also, the exported spreadsheet uses the built-in auto filter for all configured 
 
 Localization
 
-
-
 </td>
 <td valign="top">
 
 The location of the user exporting a file is taken into account, and the content of the exported spreadsheet will contain translated column headers and the required date, time, and Boolean representation.
-
-
 
 </td>
 <td valign="top">
@@ -172,16 +136,12 @@ The location of the user exporting a file is taken into account, and the content
 
 Column headers in the exported file can be shown in the user's language as defined in the back-end system and might differ from what the user sees on the UI.
 
-
-
 </td>
 <td valign="top">
 
 ![Supported](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 The column headers in the exported file are the same as the ones shown on the UI.
-
-
 
 </td>
 </tr>
@@ -190,14 +150,10 @@ The column headers in the exported file are the same as the ones shown on the UI
 
 Meta information
 
-
-
 </td>
 <td valign="top">
 
 Metadata with additional information is shown in the exported spreadsheet.
-
-
 
 </td>
 <td valign="top">
@@ -205,8 +161,6 @@ Metadata with additional information is shown in the exported spreadsheet.
 ![Supported](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 Provides an appendix to add information to the data sheet.
-
-
 
 </td>
 <td valign="top">
@@ -217,8 +171,6 @@ Provides an optional sheet in the workbook to attach additional information to t
 
 In addition to that, the client export allows you to add additional information that is not part of the sheets inside the workbook. This data is built-in information and can be processed by applications like Microsoft Excel.
 
-
-
 </td>
 </tr>
 <tr>
@@ -226,28 +178,20 @@ In addition to that, the client export allows you to add additional information 
 
 Hierarchies
 
-
-
 </td>
 <td valign="top">
 
 The exported file can contain hierarchies that are visualized when opening the file with Microsoft Excel.
 
-
-
 </td>
 <td valign="top">
 
 ![Supported](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
-
-
 </td>
 <td valign="top">
 
 ![Supported](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
-
-
 
 </td>
 </tr>
@@ -256,14 +200,10 @@ The exported file can contain hierarchies that are visualized when opening the f
 
 Data types
 
-
-
 </td>
 <td valign="top">
 
 Office Open XML spreadsheets support various types of data that have a different visual and functional behavior. The type representation differs from the raw data and needs to be transformed accordingly.
-
-
 
 </td>
 <td valign="top">
@@ -272,14 +212,10 @@ Office Open XML spreadsheets support various types of data that have a different
 
 The types `text`, `number`, `date`, `time`, and `boolean` are supported.
 
-
-
 </td>
 <td valign="top">
 
 The types `text`, `number`, `currency`, `date`, `time`, and `Boolean` are supported. In addition to the mere support for these data types, it is possible to pass additional configuration to create formatted text aggregations, a particular date and time output format, textual Boolean representation \(for example, *in stock/out of stock* instead of `true`/`false`\), and units of measurement.
-
-
 
 </td>
 </tr>
@@ -288,28 +224,20 @@ The types `text`, `number`, `currency`, `date`, `time`, and `Boolean` are suppor
 
 Read Access Logging \(RAL\) support
 
-
-
 </td>
 <td valign="top">
 
 If configured, Read Access Logging tracks who has access to which data at which point in time.This information might be required for audits.
 
-
-
 </td>
 <td valign="top">
 
 ![Supported](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
-
-
 </td>
 <td valign="top">
 
 ![Supported](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
-
-
 
 </td>
 </tr>

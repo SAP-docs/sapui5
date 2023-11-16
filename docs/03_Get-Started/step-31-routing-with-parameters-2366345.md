@@ -14,7 +14,7 @@ To make this work, we have to pass over the information which item has been sele
   
 **The selected invoice details are now shown in the details page**
 
-![](images/UI5_Walkthrough_Step_31_31da9d4.png "The selected invoice details are now shown in the details page")
+![The graphic has an explanatory text](images/UI5_Walkthrough_Step_31_31da9d4.png "The selected invoice details are now shown in the details page")
 
 
 

@@ -14,7 +14,7 @@ We will add an input field to our app, bind its value to the model, and bind the
   
 **An input field and a description displaying the value of the input field**
 
-![](images/UI5_Walkthrough_Step_07_afc1055.png "An input field and a description displaying the value of the input
+![The graphic has an explanatory text](images/UI5_Walkthrough_Step_07_afc1055.png "An input field and a description displaying the value of the input
 					field")
 
 

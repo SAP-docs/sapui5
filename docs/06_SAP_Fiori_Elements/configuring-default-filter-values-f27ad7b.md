@@ -163,14 +163,10 @@ Apart from the default values via annotation as described above, a filter field 
 
 Parameters coming from ...
 
-
-
 </th>
 <th valign="top">
 
 Result
-
-
 
 </th>
 </tr>
@@ -178,8 +174,6 @@ Result
 <td valign="top">
 
 Navigation context
-
-
 
 </td>
 <td valign="top">
@@ -198,14 +192,10 @@ Overrides user defined default variant and standard variant coming from the sour
 
 User-defined default variant \(this variant is not equal to the standard variant and there is no navigation context\)
 
-
-
 </td>
 <td valign="top">
 
 Overrides everything, including the user default values from SAP Fiori launchpad.
-
-
 
 </td>
 </tr>
@@ -213,8 +203,6 @@ Overrides everything, including the user default values from SAP Fiori launchpad
 <td valign="top">
 
 Standard variant as default \(there is no navigation context\) combined with optional `UI.SelectionVariant` or `Common.FilterDefaultValue` annotations.
-
-
 
 </td>
 <td valign="top">

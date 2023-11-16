@@ -12,7 +12,7 @@ In this step we're going to build our application and consume the speed of a bui
   
 **The UI5 application is built and served**
 
-![](images/UI5_Walkthrough_Step_38_fb12cea.png "The UI5 application is built and served")
+![The overview page of the application. Contains a Hello World header with buttons and a text input. The lower part shows list of invoices with details, grouped by vendor names.](images/UI5_Walkthrough_Step_38_fb12cea.png "The UI5 application is built and served")
 
 
 
@@ -28,7 +28,7 @@ You can view and download all files at [Walkthrough - Step 38](https://ui5.sap.c
 
 ## package.json
 
-We introduce a new npm script called "build", which executes a UI5 Tooling build. We add `-a` as a command-line argument to also build the framework dependencies \(e.g. `sap.ui.core`, etc.\).
+We introduce a new npm script called "build", which executes a UI5 Tooling build. As command-line arguments, we add `-all` to also build the framework dependencies \(e.g. `sap.ui.core`, etc.\) and `--clean-dest` to clear any output of a previous build from the `dist` folder before creating the new build result.
 
 ```
 {
@@ -37,7 +37,7 @@ We introduce a new npm script called "build", which executes a UI5 Tooling build
   "description": "The UI5 walkthrough application",
   "scripts": {
       "start": "ui5 serve -o test/mockServer.html",
-      "build": "ui5 build -a"
+      "build": "ui5 build --all --clean-dest"
   },
   "devDependencies": {
     "@ui5/cli": "^3",

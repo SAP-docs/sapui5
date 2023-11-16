@@ -13,42 +13,30 @@ The table shows the available keyboard shortcuts.
 
 Action
 
-
-
 </th>
 <th valign="top">
 
 Shortcut \(Microsoft Windows\)
-
-
 
 </th>
 <th valign="top">
 
 Shortcut \(Mac OS\)
 
-
-
 </th>
 <th valign="top">
 
 Prerequisite
-
-
 
 </th>
 <th valign="top">
 
 Relevant Floorplans
 
-
-
 </th>
 <th valign="top">
 
 Result
-
-
 
 </th>
 </tr>
@@ -57,28 +45,20 @@ Result
 
 Create
 
-
-
 </td>
 <td valign="top">
 
 [Ctrl\] + [Enter\]  
-
-
 
 </td>
 <td valign="top">
 
 [CMD\] + [Enter\]  
 
-
-
 </td>
 <td valign="top">
 
 The focus is set on the table.
-
-
 
 </td>
 <td valign="top">
@@ -87,14 +67,10 @@ List report
 
 Object page
 
-
-
 </td>
 <td valign="top">
 
 The same as when a user chooses *Create*.
-
-
 
 </td>
 </tr>
@@ -103,28 +79,20 @@ The same as when a user chooses *Create*.
 
 Delete table entry
 
-
-
 </td>
 <td valign="top">
 
 [Ctrl\] + [D\]  
-
-
 
 </td>
 <td valign="top">
 
 [Cmd\] + [D\] 
 
-
-
 </td>
 <td valign="top">
 
 The focus is set on the table.
-
-
 
 </td>
 <td valign="top">
@@ -132,8 +100,6 @@ The focus is set on the table.
 List report
 
 Object page
-
-
 
 </td>
 <td valign="top">
@@ -145,8 +111,6 @@ The same as when a user chooses *Delete* in a table.
 
 Only works on read-only/display-only content. Edit fields map [Del\]/[Backspace\] on their own.
 
-
-
 </td>
 </tr>
 <tr>
@@ -154,42 +118,30 @@ Only works on read-only/display-only content. Edit fields map [Del\]/[Backspace\
 
 Delete page level
 
-
-
 </td>
 <td valign="top">
 
 [Ctrl\] + [Del\]  
-
-
 
 </td>
 <td valign="top">
 
 [CMD\] + [fn\] + [delete\] \(use ← if there is no delete key
 
-
-
 </td>
 <td valign="top">
 
 The focus is set anywhere on the object page in display mode.
-
-
 
 </td>
 <td valign="top">
 
 Object page
 
-
-
 </td>
 <td valign="top">
 
 The same as when a user chooses *Delete* on the object page.
-
-
 
 </td>
 </tr>
@@ -198,42 +150,30 @@ The same as when a user chooses *Delete* on the object page.
 
 Edit page level
 
-
-
 </td>
 <td valign="top">
 
 [Ctrl\] + [E\]  
-
-
 
 </td>
 <td valign="top">
 
 [CMD\] + [E\]  
 
-
-
 </td>
 <td valign="top">
 
 The focus is set anywhere on the object page.
-
-
 
 </td>
 <td valign="top">
 
 Object page
 
-
-
 </td>
 <td valign="top">
 
 The same as when a user chooses *Edit* on the object page.
-
-
 
 </td>
 </tr>
@@ -242,42 +182,30 @@ The same as when a user chooses *Edit* on the object page.
 
 Save page level
 
-
-
 </td>
 <td valign="top">
 
 [Ctrl\] + [S\]  
-
-
 
 </td>
 <td valign="top">
 
 [CMD\] + [S\]  
 
-
-
 </td>
 <td valign="top">
 
 The page is in edit mode. The focus is set anywhere on the object page.
-
-
 
 </td>
 <td valign="top">
 
 Object page
 
-
-
 </td>
 <td valign="top">
 
 The same as when a user chooses *Save* on the object page
-
-
 
 </td>
 </tr>
@@ -288,28 +216,20 @@ Share
 
 \(This keyboard shortcut is currently not applicable to SAP Fiori elements for OData V4\)
 
-
-
 </td>
 <td valign="top">
 
 [Shift\] + [Ctrl\] + [S\]  
-
-
 
 </td>
 <td valign="top">
 
 [Shift\] + [CMD\] + [S\]  
 
-
-
 </td>
 <td valign="top">
 
 The focus is set anywhere on the list report or object page.
-
-
 
 </td>
 <td valign="top">
@@ -320,14 +240,10 @@ List report
 
 Object page
 
-
-
 </td>
 <td valign="top">
 
 If the focus is on the filter bar, the share-ActionSheet opens near the *Share* button
-
-
 
 </td>
 </tr>
@@ -336,28 +252,20 @@ If the focus is on the filter bar, the share-ActionSheet opens near the *Share* 
 
 Go
 
-
-
 </td>
 <td valign="top">
 
 [Enter\]or [Return\]
 
-
-
 </td>
 <td valign="top">
 
 [Enter\]or [Return\]
-
-
 
 </td>
 <td valign="top">
 
 The focus is set anywhere on the SmartFilterBar.
-
-
 
 </td>
 <td valign="top">
@@ -368,14 +276,10 @@ List report
 
 Object page
 
-
-
 </td>
 <td valign="top">
 
 In the SmartFilterBar, the search is triggered when the focus is in one of the filter bar’s input fields.
-
-
 
 </td>
 </tr>
@@ -386,42 +290,30 @@ Go
 
 \(This keyboard shortcut is currently not applicable to SAP Fiori elements for OData V4\)
 
-
-
 </td>
 <td valign="top">
 
 [Ctrl\] + [Enter\]  
-
-
 
 </td>
 <td valign="top">
 
 [CMD\] + [Enter\]  
 
-
-
 </td>
 <td valign="top">
 
 The focus is on any element in the visual filter panel or on the entire visual filter.
-
-
 
 </td>
 <td valign="top">
 
 Analytical list page \(visual filter\)
 
-
-
 </td>
 <td valign="top">
 
 *Go* is triggered when the focus is on any element in the visual filter panel or on the entire visual filter.
-
-
 
 </td>
 </tr>
@@ -430,28 +322,20 @@ Analytical list page \(visual filter\)
 
 Select row in analytical or grid tables
 
-
-
 </td>
 <td valign="top">
 
 [Shift\] + [Space\]  
 
-
-
 </td>
 <td valign="top">
 
 [Shift\] + [Space\]  
-
-
 
 </td>
 <td valign="top">
 
 The focus is on a table cell.
-
-
 
 </td>
 <td valign="top">
@@ -462,14 +346,10 @@ List report
 
 Object page
 
-
-
 </td>
 <td valign="top">
 
 If the focus is on a cell, the entire row is selected
-
-
 
 </td>
 </tr>
@@ -478,28 +358,20 @@ If the focus is on a cell, the entire row is selected
 
 Table settings
 
-
-
 </td>
 <td valign="top">
 
 [Ctrl\] + [,\]  
 
-
-
 </td>
 <td valign="top">
 
 [Ctrl\] + [,\]  
-
-
 
 </td>
 <td valign="top">
 
 The focus is set on the table.
-
-
 
 </td>
 <td valign="top">
@@ -510,14 +382,10 @@ List report
 
 Object page
 
-
-
 </td>
 <td valign="top">
 
 The same as when a user chooses the *Table Settings* button.
-
-
 
 </td>
 </tr>
@@ -526,28 +394,20 @@ The same as when a user chooses the *Table Settings* button.
 
 Export as
 
-
-
 </td>
 <td valign="top">
 
 [Shift\] + [Ctrl\] + [E\]  
-
-
 
 </td>
 <td valign="top">
 
 [Shift\] + [CMD\] + [E\]  
 
-
-
 </td>
 <td valign="top">
 
 The focus is set on the table.
-
-
 
 </td>
 <td valign="top">
@@ -558,14 +418,10 @@ List report
 
 Object page
 
-
-
 </td>
 <td valign="top">
 
 The same as when a user chooses *Export to Excel* \> *Export As*.
-
-
 
 </td>
 </tr>
@@ -576,42 +432,30 @@ Create with filters
 
 \(This keyboard shortcut is currently not applicable to SAP Fiori elements for OData V4\)
 
-
-
 </td>
 <td valign="top">
 
 [Shift\] + [Ctrl\] + [Enter\]  
-
-
 
 </td>
 <td valign="top">
 
 [Shift\] + [CMD\] + [Enter\]  
 
-
-
 </td>
 <td valign="top">
 
 The focus is on the table.
-
-
 
 </td>
 <td valign="top">
 
 List report
 
-
-
 </td>
 <td valign="top">
 
 The same as when a user chooses *Create With Filters*.
-
-
 
 </td>
 </tr>
@@ -620,42 +464,30 @@ The same as when a user chooses *Create With Filters*.
 
 Cancel/Discard Draft
 
-
-
 </td>
 <td valign="top">
 
 [Esc\] 
 
-
-
 </td>
 <td valign="top">
 
 [Esc\] 
-
-
 
 </td>
 <td valign="top">
 
 The focus is set anywhere on the object page in edit mode.
 
-
-
 </td>
 <td valign="top">
 
 Object page
 
-
-
 </td>
 <td valign="top">
 
 The same as when user clicks on *Cancel* in the non draft apps and *Discard Draft* in the draft apps.
-
-
 
 </td>
 </tr>

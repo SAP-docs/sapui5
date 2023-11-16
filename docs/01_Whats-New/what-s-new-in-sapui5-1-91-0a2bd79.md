@@ -15,49 +15,35 @@ With this release SAPUI5 is upgraded from version 1.90 to 1.91.
 
 Version
 
-
-
 </th>
 <th valign="top">
 
 Type
-
-
 
 </th>
 <th valign="top">
 
 Category
 
-
-
 </th>
 <th valign="top">
 
 Title
-
-
 
 </th>
 <th valign="top">
 
 Description
 
-
-
 </th>
 <th valign="top">
 
 Action
 
-
-
 </th>
 <th valign="top">
 
 Available as of
-
-
 
 </th>
 </tr>
@@ -66,28 +52,20 @@ Available as of
 
 1.91 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **SAPUI5 OData V2 Model** 
-
-
 
 </td>
 <td valign="top">
@@ -98,21 +76,15 @@ A `Content-ID` header has been added to all non-read requests in a batch request
 
 <sub>Changed•Feature•Info Only•1.91</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only
 
-
-
 </td>
 <td valign="top">
 
 2021-06-17
-
-
 
 </td>
 </tr>
@@ -121,28 +93,20 @@ Info Only
 
 1.91 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **SAPUI5 OData V4 Model** 
-
-
 
 </td>
 <td valign="top">
@@ -158,21 +122,15 @@ The new version of the SAPUI5 OData V4 model introduces the following features:
 
 <sub>Changed•Feature•Info Only•1.91</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-06-17
-
-
 
 </td>
 </tr>
@@ -181,28 +139,20 @@ Info Only
 
 1.91 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **New Data Type Property for Spreadsheet Export** 
-
-
 
 </td>
 <td valign="top">
@@ -213,21 +163,15 @@ The additional `utc` property is now available for date and time information. It
 
 <sub>Changed•Feature•Info Only•1.91</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-06-17
-
-
 
 </td>
 </tr>
@@ -236,28 +180,20 @@ Info Only
 
 1.91 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.App`** 
-
-
 
 </td>
 <td valign="top">
@@ -268,21 +204,15 @@ Until now, `sap.m.App` assumed that it wasn't nested and always appeared as the 
 
 <sub>Changed•Control•Info Only•1.91</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-06-17
-
-
 
 </td>
 </tr>
@@ -291,28 +221,20 @@ Info Only
 
 1.91 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.ExpandableText`** 
-
-
 
 </td>
 <td valign="top">
@@ -323,21 +245,15 @@ Control
 
 <sub>Changed•Control•Info Only•1.91</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-06-17
-
-
 
 </td>
 </tr>
@@ -346,28 +262,20 @@ Info Only
 
 1.91 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.Table`** 
-
-
 
 </td>
 <td valign="top">
@@ -378,21 +286,15 @@ We introduced the `ColumnResizer` plugin that handles column resizing for a resp
 
 <sub>Changed•Control•Info Only•1.91</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-06-17
-
-
 
 </td>
 </tr>
@@ -401,28 +303,20 @@ Info Only
 
 1.91 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.comp.smartfield.SmartField`** 
-
-
 
 </td>
 <td valign="top">
@@ -433,21 +327,15 @@ The `SmartField` control now supports currency and unit of measure custom lists 
 
 <sub>Changed•Control•Info Only•1.91</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-06-17
-
-
 
 </td>
 </tr>
@@ -456,28 +344,20 @@ Info Only
 
 1.91 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.comp.smarttable.SmartTable`** 
-
-
 
 </td>
 <td valign="top">
@@ -491,21 +371,15 @@ Control
 
 <sub>Changed•Control•Info Only•1.91</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-06-17
-
-
 
 </td>
 </tr>
@@ -514,28 +388,20 @@ Info Only
 
 1.91 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 SAP Fiori Elements 
 
-
-
 </td>
 <td valign="top">
 
 **SAP Fiori elements for OData V4** 
-
-
 
 </td>
 <td valign="top">
@@ -544,7 +410,7 @@ SAP Fiori Elements
 
 The following changes and new features are available for SAP Fiori elements for OData V4:
 
--   Application developers can now use building blocks in custom sections, that allow you, for example, to create a visual representation of your data in a convenient way. For more information, see  <?sap-ot O2O class="- topic/xref " href="24c1304739dd4f19af0ce2482c4d9bbe.xml" text="Building Blocks" desc="" xtrc="xref:17" xtrf="file:/home/builder/src/dita-all/zyl1693565473561/loioa82e269bbb584cfcbdbd3ae8765d8e7f_en-US/src/content/localization/en-us/0a2bd79036fe48708687526413ef9e8c.xml" ?> .
+-   Application developers can now use building blocks in custom sections, that allow you, for example, to create a visual representation of your data in a convenient way. For more information, see [Building Blocks](../06_SAP_Fiori_Elements/building-blocks-24c1304.md).
 
 -   Application developers can now specify a dimension or a measure using `"GroupableProperties"` and `"AggregatableProperties"` at an entity set level. For more information, see [Configuring Charts](../06_SAP_Fiori_Elements/configuring-charts-653ed0f.md).
 
@@ -567,21 +433,15 @@ The following changes and new features are available for SAP Fiori elements for 
 
 <sub>Changed•SAP Fiori Elements•Info Only•1.91</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-06-17
-
-
 
 </td>
 </tr>
@@ -590,28 +450,20 @@ Info Only
 
 1.91 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 User Documentation 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.Table` Documentation Enhancement** 
-
-
 
 </td>
 <td valign="top">
@@ -624,21 +476,15 @@ For more information, see [Configuring Responsive Behavior of a Table](../10_Mor
 
 <sub>Changed•User Documentation•Info Only•1.91</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-06-17
-
-
 
 </td>
 </tr>
@@ -646,6 +492,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.118](what-s-new-in-sapui5-1-118-3eecbde.md "With this release SAPUI5 is upgraded from version 1.117 to 1.118.")
 
 [What's New in SAPUI5 1.117](what-s-new-in-sapui5-1-117-029d3b4.md "With this release SAPUI5 is upgraded from version 1.116 to 1.117.")
 

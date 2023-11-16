@@ -12,7 +12,7 @@ In this step, we are going to extend the functionality of SAPUI5 with a custom c
   
 **A custom product rating control is added to the detail page**
 
-![](images/UI5_Walkthrough_Step_33_21dd14c.png "A custom product rating control is added to the detail page")
+![The graphic has an explanatory text](images/UI5_Walkthrough_Step_33_21dd14c.png "A custom product rating control is added to the detail page")
 
 
 

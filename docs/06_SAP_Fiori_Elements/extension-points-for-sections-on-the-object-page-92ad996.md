@@ -180,21 +180,15 @@ You can define your custom header fields by implementing an `xmlfragment` and us
 
 Property Name
 
-
-
 </th>
 <th valign="top">
 
 Supported Values
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -203,21 +197,15 @@ Description
 
 template
 
-
-
 </td>
 <td valign="top">
 
 "<module\_path\_to\_a\_fragment\>"
 
-
-
 </td>
 <td valign="top">
 
 Defining the target fragment follows the syntax of defining a fragment via Fragment.load
-
-
 
 </td>
 </tr>
@@ -226,21 +214,15 @@ Defining the target fragment follows the syntax of defining a fragment via Fragm
 
 title\*
 
-
-
 </td>
 <td valign="top">
 
 "<text\_or\_binding\_expression\>"
 
-
-
 </td>
 <td valign="top">
 
 Title of the section \(usually a binding path to an i18n text\)
-
-
 
 </td>
 </tr>
@@ -249,21 +231,15 @@ Title of the section \(usually a binding path to an i18n text\)
 
 position
 
-
-
 </td>
 <td valign="top">
 
  
 
-
-
 </td>
 <td valign="top">
 
 Defines the position of the section relative to other sections.
-
-
 
 </td>
 </tr>
@@ -272,21 +248,15 @@ Defines the position of the section relative to other sections.
 
 position.placement
 
-
-
 </td>
 <td valign="top">
 
 "Before" | "After"
 
-
-
 </td>
 <td valign="top">
 
 Defines the placement: either "Before" or "After" \(default\) the anchor section.
-
-
 
 </td>
 </tr>
@@ -295,21 +265,15 @@ Defines the placement: either "Before" or "After" \(default\) the anchor section
 
 position.anchor\*
 
-
-
 </td>
 <td valign="top">
 
  
 
-
-
 </td>
 <td valign="top">
 
 The key of another section to be used as the placement anchor. Sections defined via the `Facet` annotation can be referenced by its `FacetId`.
-
-
 
 </td>
 </tr>
@@ -318,21 +282,15 @@ The key of another section to be used as the placement anchor. Sections defined 
 
 visible
 
-
-
 </td>
 <td valign="top">
 
 Boolean | Binding Expression
 
-
-
 </td>
 <td valign="top">
 
 Defines if the section is displayed in the body of the object page. The default setting is true.
-
-
 
 </td>
 </tr>
@@ -341,21 +299,15 @@ Defines if the section is displayed in the body of the object page. The default 
 
 actions
 
-
-
 </td>
 <td valign="top">
 
 Actions Object
 
-
-
 </td>
 <td valign="top">
 
 Allows you to add actions placed by the framework to the custom \(sub-\)sections in the same format as described in [Adding Custom Actions Using Extension Points](adding-custom-actions-using-extension-points-7619517.md).
-
-
 
 </td>
 </tr>

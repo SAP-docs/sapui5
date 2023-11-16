@@ -12,7 +12,7 @@ Our panel content is getting more and more complex and now it is time to move th
   
 **The panel content is now refactored to a separate view \(No visual changes to last step\)**
 
-![](images/UI5_Walkthrough_Step_15_f3724d2.png "The panel content is now refactored to a separate view (No visual changes to last
+![The graphic has an explanatory text.](images/UI5_Walkthrough_Step_15_f3724d2.png "The panel content is now refactored to a separate view (No visual changes to last
                step)")
 
 

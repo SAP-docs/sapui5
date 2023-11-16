@@ -63,7 +63,7 @@ Additionally, you can use the synchronous method `ODataPropertyBinding.getValueL
                 oValueListMetaModel = oValueListMapping.$model.getMetaModel();
   
             ...
-        ]);
+        });
     },
 ...
 ```

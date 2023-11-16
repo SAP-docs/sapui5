@@ -8,11 +8,7 @@ Before we can do something with SAPUI5, we need to load and initialize it. This 
 
 ## Preview
 
-  
-  
-**An alert "UI5 is ready" is displayed**
-
-![](images/UI5_Walkthrough_Step_02_0f6b6b9.png "An alert "UI5 is ready" is displayed")
+![An alert "UI5 is ready" is displayed](images/UI5_Walkthrough_Step_02_0f6b6b9.png)
 
 
 

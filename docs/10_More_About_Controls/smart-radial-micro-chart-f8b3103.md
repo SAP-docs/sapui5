@@ -63,14 +63,10 @@ The mapping is done as follows:
 
 Criticality
 
-
-
 </th>
 <th valign="top">
 
 ValueColor
-
-
 
 </th>
 </tr>
@@ -79,14 +75,10 @@ ValueColor
 
 Neutral
 
-
-
 </td>
 <td valign="top">
 
 Neutral
-
-
 
 </td>
 </tr>
@@ -95,14 +87,10 @@ Neutral
 
 Positive
 
-
-
 </td>
 <td valign="top">
 
 Good
-
-
 
 </td>
 </tr>
@@ -111,14 +99,10 @@ Good
 
 Critical
 
-
-
 </td>
 <td valign="top">
 
 Critical
-
-
 
 </td>
 </tr>
@@ -127,14 +111,10 @@ Critical
 
 Negative
 
-
-
 </td>
 <td valign="top">
 
 Error
-
-
 
 </td>
 </tr>
@@ -156,21 +136,15 @@ In the second option, the criticality can be calculated using customer-defined t
 
 Property
 
-
-
 </th>
 <th valign="top">
 
 Type
 
-
-
 </th>
 <th valign="top">
 
 Sample Values
-
-
 
 </th>
 </tr>
@@ -179,21 +153,15 @@ Sample Values
 
 DeviationLowValue
 
-
-
 </td>
 <td valign="top">
 
 Negative
 
-
-
 </td>
 <td valign="top">
 
 10
-
-
 
 </td>
 </tr>
@@ -202,21 +170,15 @@ Negative
 
 ToleranceLowValue
 
-
-
 </td>
 <td valign="top">
 
 Critical
 
-
-
 </td>
 <td valign="top">
 
 45
-
-
 
 </td>
 </tr>
@@ -225,21 +187,15 @@ Critical
 
 ToleranceHighValue
 
-
-
 </td>
 <td valign="top">
 
 Critical
 
-
-
 </td>
 <td valign="top">
 
 55
-
-
 
 </td>
 </tr>
@@ -248,21 +204,15 @@ Critical
 
 DeviationHighValue
 
-
-
 </td>
 <td valign="top">
 
 Negative
 
-
-
 </td>
 <td valign="top">
 
 80
-
-
 
 </td>
 </tr>

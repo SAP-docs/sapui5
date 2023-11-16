@@ -12,7 +12,7 @@ Now that we have established a good structure for our app, it's time to add some
   
 **A list of invoices is displayed below the panel**
 
-![](images/UI5_Walkthrough_Step_19_b05bdb4.png "A list of invoices is displayed below the panel")
+![The graphic has an explanatory text.](images/UI5_Walkthrough_Step_19_b05bdb4.png "A list of invoices is displayed below the panel")
 
 
 
@@ -75,7 +75,7 @@ You can view and download all files at [Walkthrough - Step 19](https://ui5.sap.c
 }
 ```
 
-The `invoices` file simply contains five invoices in a JSON format that we can use to bind controls against them in the app. JSON is a very lightweight format for storing data and can be directly used as a data source for SAPUI5 applications.
+The `Invoices.json` file simply contains five invoices in a JSON format that we can use to bind controls against them in the app. JSON is a very lightweight format for storing data and can be directly used as a data source for SAPUI5 applications.
 
 
 
@@ -85,6 +85,7 @@ The `invoices` file simply contains five invoices in a JSON format that we can u
 {
   ...
   "sap.ui5": {
+    ...
     "models": {
       "i18n": {
         "type": "sap.ui.model.resource.ResourceModel",

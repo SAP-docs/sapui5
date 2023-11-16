@@ -449,21 +449,15 @@ If applications want to provide a default value for the semantic date field that
 
 Operator
 
-
-
 </th>
 <th valign="top">
 
 `manifest.json` Sample
 
-
-
 </th>
 <th valign="top">
 
 Comment
-
-
 
 </th>
 </tr>
@@ -471,8 +465,6 @@ Comment
 <td valign="top">
 
 DATE
-
-
 
 </td>
 <td valign="top">
@@ -495,16 +487,12 @@ DATE
 
 Required date format: YYYY-MM-DD
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
 FROM
-
-
 
 </td>
 <td valign="top">
@@ -529,16 +517,12 @@ FROM
 
 Required date format: YYYY-MM-DD
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
 TO
-
-
 
 </td>
 <td valign="top">
@@ -563,16 +547,12 @@ TO
 
 Required date format: YYYY-MM-DD
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
 DATERANGE
-
-
 
 </td>
 <td valign="top">
@@ -598,16 +578,12 @@ DATERANGE
 
 Required date format: YYYY-MM-DD
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
 TODAYFROMTO
-
-
 
 </td>
 <td valign="top">
@@ -635,16 +611,12 @@ First value: days before TODAY
 
 Second value: Number of days after TODAY
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
 LastXDays / LastXWeeks / LastXMonths / LastXQuarters / LastXYears
-
-
 
 </td>
 <td valign="top">
@@ -670,16 +642,12 @@ LastXDays / LastXWeeks / LastXMonths / LastXQuarters / LastXYears
 
  
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
 NextXDays / NextXWeeks / NextXMonths / NextXQuarters / NextXYears
-
-
 
 </td>
 <td valign="top">
@@ -705,16 +673,12 @@ NextXDays / NextXWeeks / NextXMonths / NextXQuarters / NextXYears
 
  
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
 SpecificMonth
-
-
 
 </td>
 <td valign="top">
@@ -738,8 +702,6 @@ SpecificMonth
 <td valign="top">
 
 The numeric assignment is zero \(for example, January is 0\)
-
-
 
 </td>
 </tr>

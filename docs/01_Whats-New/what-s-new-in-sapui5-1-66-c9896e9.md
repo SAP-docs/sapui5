@@ -13,49 +13,35 @@ With this release SAPUI5 is upgraded from version 1.65 to 1.66.
 
 Version
 
-
-
 </th>
 <th valign="top">
 
 Type
-
-
 
 </th>
 <th valign="top">
 
 Category
 
-
-
 </th>
 <th valign="top">
 
 Title
-
-
 
 </th>
 <th valign="top">
 
 Description
 
-
-
 </th>
 <th valign="top">
 
 Action
 
-
-
 </th>
 <th valign="top">
 
 Available as of
-
-
 
 </th>
 </tr>
@@ -64,28 +50,20 @@ Available as of
 
 1.66 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **SAPUI5 OData V4 Model** 
-
-
 
 </td>
 <td valign="top">
@@ -112,21 +90,15 @@ For more information, see [OData V4 Model](../04_Essentials/odata-v4-model-5de13
 
 <sub>Changed•Feature•Info Only•1.66</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only
 
-
-
 </td>
 <td valign="top">
 
 2019-05-22
-
-
 
 </td>
 </tr>
@@ -135,28 +107,20 @@ Info Only
 
 1.66 
 
-
-
 </td>
 <td valign="top">
 
 New 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.suite.ui.commons.imageeditor`** 
-
-
 
 </td>
 <td valign="top">
@@ -173,21 +137,15 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.suit
 
 <sub>New•Control•Info Only•1.66</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-05-22
-
-
 
 </td>
 </tr>
@@ -196,28 +154,20 @@ Info Only
 
 1.66 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **Support for New Era in the Japanese Calendar** 
-
-
 
 </td>
 <td valign="top">
@@ -228,21 +178,15 @@ Starting May 1, 2019, SAPUI5 supports a new era in the Japanese calendar, due to
 
 <sub>Changed•Feature•Info Only•1.66</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-05-22
-
-
 
 </td>
 </tr>
@@ -251,28 +195,20 @@ Info Only
 
 1.66 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.f.GridContainer` \(Experimental\)** 
-
-
 
 </td>
 <td valign="top">
@@ -292,21 +228,15 @@ For more information, see [sap.f.GridContainer](../10_More_About_Controls/sap-f-
 
 <sub>Changed•Control•Info Only•1.66</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-05-22
-
-
 
 </td>
 </tr>
@@ -315,28 +245,20 @@ Info Only
 
 1.66 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.gantt.simple`** 
-
-
 
 </td>
 <td valign="top">
@@ -349,21 +271,15 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.gant
 
 <sub>Changed•Control•Info Only•1.66</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-05-22
-
-
 
 </td>
 </tr>
@@ -372,28 +288,20 @@ Info Only
 
 1.66 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.ComboBox / sap.m.MultiComboBox`** 
-
-
 
 </td>
 <td valign="top">
@@ -404,21 +312,15 @@ The options list used in these controls is now instantiated lazily. The list is 
 
 <sub>Changed•Control•Info Only•1.66</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-05-22
-
-
 
 </td>
 </tr>
@@ -427,28 +329,20 @@ Info Only
 
 1.66 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.DateRangeSelection`** 
-
-
 
 </td>
 <td valign="top">
@@ -468,21 +362,15 @@ For more information, see the [Sample](https://ui5.sap.com/#/entity/sap.m.DateRa
 
 <sub>Changed•Control•Info Only•1.66</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-05-22
-
-
 
 </td>
 </tr>
@@ -491,28 +379,20 @@ Info Only
 
 1.66 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.Input`** 
-
-
 
 </td>
 <td valign="top">
@@ -523,21 +403,15 @@ We have adjusted the value state text for the `sap.m.Input` control. The value s
 
 <sub>Changed•Control•Info Only•1.66</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-05-22
-
-
 
 </td>
 </tr>
@@ -546,28 +420,20 @@ Info Only
 
 1.66 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.ObjectStatus`** 
-
-
 
 </td>
 <td valign="top">
@@ -578,21 +444,15 @@ You can now switch the background and text colors using the new `inverted` prope
 
 <sub>Changed•Control•Info Only•1.66</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-05-22
-
-
 
 </td>
 </tr>
@@ -601,28 +461,20 @@ Info Only
 
 1.66 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.Select`** 
-
-
 
 </td>
 <td valign="top">
@@ -633,21 +485,15 @@ To be better aligned with the other input controls, we have implemented a new `e
 
 <sub>Changed•Control•Info Only•1.66</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-05-22
-
-
 
 </td>
 </tr>
@@ -656,28 +502,20 @@ Info Only
 
 1.66 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.SinglePlanningCalendar`** 
-
-
 
 </td>
 <td valign="top">
@@ -695,21 +533,15 @@ Control
 
 <sub>Changed•Control•Info Only•1.66</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-05-22
-
-
 
 </td>
 </tr>
@@ -718,28 +550,20 @@ Info Only
 
 1.66 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.comp.smartchart.SmartChart`** 
-
-
 
 </td>
 <td valign="top">
@@ -750,21 +574,15 @@ We have introduced the `initialized` event to enable asynchronous processing for
 
 <sub>Changed•Control•Info Only•1.66</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-05-22
-
-
 
 </td>
 </tr>
@@ -773,28 +591,20 @@ Info Only
 
 1.66 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.comp.smarttable.SmartTable`** 
-
-
 
 </td>
 <td valign="top">
@@ -808,21 +618,15 @@ Control
 
 <sub>Changed•Control•Info Only•1.66</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-05-22
-
-
 
 </td>
 </tr>
@@ -831,28 +635,20 @@ Info Only
 
 1.66 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 SAP Fiori Elements 
 
-
-
 </td>
 <td valign="top">
 
 **SAP Fiori Elements** 
-
-
 
 </td>
 <td valign="top">
@@ -869,21 +665,15 @@ The `InsertRestriction` property can now be passed as a property for the navigat
 
 <sub>Changed•SAP Fiori Elements•Info Only•1.66</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-05-22
-
-
 
 </td>
 </tr>
@@ -892,28 +682,20 @@ Info Only
 
 1.66 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 User Documentation 
 
-
-
 </td>
 <td valign="top">
 
 **OData V2 Messaging Documentation** 
-
-
 
 </td>
 <td valign="top">
@@ -924,21 +706,15 @@ The OData V2 Messaging documentation has been enhanced and improved. See [Error,
 
 <sub>Changed•Control•Info Only•1.66</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-05-22
-
-
 
 </td>
 </tr>
@@ -946,6 +722,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.118](what-s-new-in-sapui5-1-118-3eecbde.md "With this release SAPUI5 is upgraded from version 1.117 to 1.118.")
 
 [What's New in SAPUI5 1.117](what-s-new-in-sapui5-1-117-029d3b4.md "With this release SAPUI5 is upgraded from version 1.116 to 1.117.")
 

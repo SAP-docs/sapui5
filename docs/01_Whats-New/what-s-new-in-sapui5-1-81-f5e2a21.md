@@ -15,49 +15,35 @@ With this release SAPUI5 is upgraded from version 1.80 to 1.81.
 
 Version
 
-
-
 </th>
 <th valign="top">
 
 Type
-
-
 
 </th>
 <th valign="top">
 
 Category
 
-
-
 </th>
 <th valign="top">
 
 Title
-
-
 
 </th>
 <th valign="top">
 
 Description
 
-
-
 </th>
 <th valign="top">
 
 Action
 
-
-
 </th>
 <th valign="top">
 
 Available as of
-
-
 
 </th>
 </tr>
@@ -66,28 +52,20 @@ Available as of
 
 1.81 
 
-
-
 </td>
 <td valign="top">
 
 New 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **Consuming SAP Icon Font in a Non-UI5 Environment** 
-
-
 
 </td>
 <td valign="top">
@@ -98,21 +76,15 @@ You can now consume the predefined `SAP-icons` icon font in an environment where
 
 <sub>New•Feature•Info Only•1.81</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only
 
-
-
 </td>
 <td valign="top">
 
 2020-08-13
-
-
 
 </td>
 </tr>
@@ -121,28 +93,20 @@ Info Only
 
 1.81 
 
-
-
 </td>
 <td valign="top">
 
 New 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **Incompatible jQuery Security Fix** 
-
-
 
 </td>
 <td valign="top">
@@ -155,21 +119,15 @@ For checking and, if required, fixing your applications and libraries, see SAP N
 
 <sub>New•Feature•Info Only•1.81</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-08-13
-
-
 
 </td>
 </tr>
@@ -178,28 +136,20 @@ Info Only
 
 1.81 
 
-
-
 </td>
 <td valign="top">
 
 New 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **Special URL Prefixes in App Descriptor** 
-
-
 
 </td>
 <td valign="top">
@@ -214,21 +164,15 @@ Find more details about the usage of such URL prefixes and an example in the [do
 
 <sub>New•Feature•Info Only•1.81</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-08-13
-
-
 
 </td>
 </tr>
@@ -237,28 +181,20 @@ Info Only
 
 1.81 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **SAPUI5 OData V4 Model** 
-
-
 
 </td>
 <td valign="top">
@@ -288,21 +224,15 @@ For more information, see [OData V4 Model](../04_Essentials/odata-v4-model-5de13
 
 <sub>Changed•Feature•Info Only•1.81</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-08-13
-
-
 
 </td>
 </tr>
@@ -311,28 +241,20 @@ Info Only
 
 1.81 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.f.GridContainer`** 
-
-
 
 </td>
 <td valign="top">
@@ -347,21 +269,15 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.f.Gr
 
 <sub>Changed•Control•Info Only•1.81</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-08-13
-
-
 
 </td>
 </tr>
@@ -370,28 +286,20 @@ Info Only
 
 1.81 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.Button`** 
-
-
 
 </td>
 <td valign="top">
@@ -402,21 +310,15 @@ Visualization of shortcut hints on focus and hover is now available. For example
 
 <sub>Changed•Control•Info Only•1.81</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-08-13
-
-
 
 </td>
 </tr>
@@ -425,28 +327,20 @@ Info Only
 
 1.81 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.DatePicker`, `sap.m.DateTimePicker`, and `sap.m.TimePicker`** 
-
-
 
 </td>
 <td valign="top">
@@ -457,21 +351,15 @@ We have aligned the visualization of the full-screen dialog in mobile view for t
 
 <sub>Changed•Control•Info Only•1.81</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-08-13
-
-
 
 </td>
 </tr>
@@ -480,28 +368,20 @@ Info Only
 
 1.81 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.MessageView`** 
-
-
 
 </td>
 <td valign="top">
@@ -512,21 +392,15 @@ The grouping functionality in the `sap.m.MessageView` shows the messages in the 
 
 <sub>Changed•Control•Info Only•1.81</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-08-13
-
-
 
 </td>
 </tr>
@@ -535,28 +409,20 @@ Info Only
 
 1.81 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.PlanningCalendar`** 
-
-
 
 </td>
 <td valign="top">
@@ -570,21 +436,15 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.Pl
 
 <sub>Changed•Control•Info Only•1.81</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-08-13
-
-
 
 </td>
 </tr>
@@ -593,28 +453,20 @@ Info Only
 
 1.81 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.comp.smartfield.SmartField`** 
-
-
 
 </td>
 <td valign="top">
@@ -625,21 +477,15 @@ To support better async validation in the applications, we have introduced a `ch
 
 <sub>Changed•Control•Info Only•1.81</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-08-13
-
-
 
 </td>
 </tr>
@@ -648,28 +494,20 @@ Info Only
 
 1.81 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.comp.smartfilterbar.SmartFilterBar`** 
-
-
 
 </td>
 <td valign="top">
@@ -683,21 +521,15 @@ Control
 
 <sub>Changed•Control•Info Only•1.81</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-08-13
-
-
 
 </td>
 </tr>
@@ -706,28 +538,20 @@ Info Only
 
 1.81 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.comp.smarttable.SmartTable`** 
-
-
 
 </td>
 <td valign="top">
@@ -738,21 +562,15 @@ The [Show Details\]/[Hide Details\] feature for toggling the visibility of hidde
 
 <sub>Changed•Control•Info Only•1.81</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-08-13
-
-
 
 </td>
 </tr>
@@ -761,28 +579,20 @@ Info Only
 
 1.81 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.comp.smartvariants.SmartVariantManagement`** 
-
-
 
 </td>
 <td valign="top">
@@ -793,21 +603,15 @@ Key users can now define and delete favorites as well as define a default view i
 
 <sub>Changed•Control•Info Only•1.81</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-08-13
-
-
 
 </td>
 </tr>
@@ -816,28 +620,20 @@ Info Only
 
 1.81 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.integration.widgets.Card`** 
-
-
 
 </td>
 <td valign="top">
@@ -851,21 +647,15 @@ Control
 
 <sub>Changed•Control•Info Only•1.81</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-08-13
-
-
 
 </td>
 </tr>
@@ -874,28 +664,20 @@ Info Only
 
 1.81 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.unified.Calendar`** 
-
-
 
 </td>
 <td valign="top">
@@ -906,21 +688,15 @@ We have added a new property to the `DateTypeRange` class, called `secondaryType
 
 <sub>Changed•Control•Info Only•1.81</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-08-13
-
-
 
 </td>
 </tr>
@@ -929,28 +705,20 @@ Info Only
 
 1.81 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.unified.FileUploader`** 
-
-
 
 </td>
 <td valign="top">
@@ -961,21 +729,15 @@ We have added a new `httpRequestMethod` \(experimental\) property to enable the 
 
 <sub>Changed•Control•Info Only•1.81</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-08-13
-
-
 
 </td>
 </tr>
@@ -984,28 +746,20 @@ Info Only
 
 1.81 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 SAP Fiori Elements 
 
-
-
 </td>
 <td valign="top">
 
 **SAP Fiori Elements** 
-
-
 
 </td>
 <td valign="top">
@@ -1035,21 +789,15 @@ SAP Fiori Elements
 
 <sub>Changed•SAP Fiori Elements•Info Only•1.81</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-08-13
-
-
 
 </td>
 </tr>
@@ -1058,28 +806,20 @@ Info Only
 
 1.81 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **Demo Kit Samples** 
-
-
 
 </td>
 <td valign="top">
@@ -1092,21 +832,15 @@ We have added a new *Pattern* category in the *Samples* section of the Demo Kit 
 
 <sub>Changed•Feature•Info Only•1.81</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-08-13
-
-
 
 </td>
 </tr>
@@ -1114,6 +848,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.118](what-s-new-in-sapui5-1-118-3eecbde.md "With this release SAPUI5 is upgraded from version 1.117 to 1.118.")
 
 [What's New in SAPUI5 1.117](what-s-new-in-sapui5-1-117-029d3b4.md "With this release SAPUI5 is upgraded from version 1.116 to 1.117.")
 

@@ -188,28 +188,20 @@ For numerical data points, you can override the scale and precision defined in t
 
 Scale metadata
 
-
-
 </th>
 <th valign="top">
 
 Precision metadata
-
-
 
 </th>
 <th valign="top">
 
 Value of `NumberOfFractionalDigits` 
 
-
-
 </th>
 <th valign="top">
 
 Decimal places displayed on the UI
-
-
 
 </th>
 </tr>
@@ -218,28 +210,20 @@ Decimal places displayed on the UI
 
 3
 
-
-
 </td>
 <td valign="top">
 
 15
-
-
 
 </td>
 <td valign="top">
 
 undefined
 
-
-
 </td>
 <td valign="top">
 
 3
-
-
 
 </td>
 </tr>
@@ -248,28 +232,42 @@ undefined
 
 3
 
-
-
 </td>
 <td valign="top">
 
 15
-
-
 
 </td>
 <td valign="top">
 
 5
 
-
-
 </td>
 <td valign="top">
 
 5
 
+</td>
+</tr>
+<tr>
+<td valign="top">
 
+3
+
+</td>
+<td valign="top">
+
+15
+
+</td>
+<td valign="top">
+
+1
+
+</td>
+<td valign="top">
+
+1
 
 </td>
 </tr>
@@ -278,58 +276,20 @@ undefined
 
 3
 
-
-
 </td>
 <td valign="top">
 
 15
-
-
-
-</td>
-<td valign="top">
-
-1
-
-
-
-</td>
-<td valign="top">
-
-1
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-3
-
-
-
-</td>
-<td valign="top">
-
-15
-
-
 
 </td>
 <td valign="top">
 
 20
 
-
-
 </td>
 <td valign="top">
 
 14
-
-
 
 </td>
 </tr>
@@ -338,28 +298,20 @@ undefined
 
 3
 
-
-
 </td>
 <td valign="top">
 
 15
-
-
 
 </td>
 <td valign="top">
 
 0
 
-
-
 </td>
 <td valign="top">
 
 3
-
-
 
 </td>
 </tr>

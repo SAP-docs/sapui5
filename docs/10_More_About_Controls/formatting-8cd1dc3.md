@@ -15,35 +15,25 @@ The bottom labels are formatted by the number or date formatter depending on the
 
 Type of `dimension` property
 
-
-
 </th>
 <th valign="top">
 
 Annotations
-
-
 
 </th>
 <th valign="top">
 
 Raw value
 
-
-
 </th>
 <th valign="top">
 
 X-coordinate value
 
-
-
 </th>
 <th valign="top">
 
 Formatted value for bottom label
-
-
 
 </th>
 </tr>
@@ -52,109 +42,79 @@ Formatted value for bottom label
 
 Any type
 
-
-
 </td>
 <td valign="top">
 
 `sap:text`=”DateLabel” \(or has annotation `Common.Text` whose Path=”DateLabel”\)
-
-
 
 </td>
 <td valign="top">
 
 “any text” \(raw value of `DateLabel` property\)
 
-
-
 </td>
 <td valign="top">
 
 Depends on property type \(use index value if neither date nor number type\)
-
-
 
 </td>
 <td valign="top">
 
 ‘any text’
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
 Edm.String
-
-
 
 </td>
 <td valign="top">
 
 `sap:semantics`=”year” \(or has annotation `IsCalendarYear`\)
 
-
-
 </td>
 <td valign="top">
 
 2016
 
-
-
 </td>
 <td valign="top">
 
 Timestamp
-
-
 
 </td>
 <td valign="top">
 
 1/1/16
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
 Edm.String
-
-
 
 </td>
 <td valign="top">
 
 `sap:semantics`=”yearmonth” \(or has annotation `IsCalendarYearMonth`\)
 
-
-
 </td>
 <td valign="top">
 
 201612
-
-
 
 </td>
 <td valign="top">
 
 Timestamp
 
-
-
 </td>
 <td valign="top">
 
 12/1/16
-
-
 
 </td>
 </tr>
@@ -163,35 +123,25 @@ Timestamp
 
 Edm.String
 
-
-
 </td>
 <td valign="top">
 
 `sap:semantics`=”yearmonthday” \(or has annotation `IsCalendarDate`\)
-
-
 
 </td>
 <td valign="top">
 
 20161225
 
-
-
 </td>
 <td valign="top">
 
 Timestamp
 
-
-
 </td>
 <td valign="top">
 
 12/25/16
-
-
 
 </td>
 </tr>
@@ -205,21 +155,15 @@ Timestamp
 
 \---
 
-
-
 </td>
 <td valign="top">
 
 'any text'
 
-
-
 </td>
 <td valign="top">
 
 Indices
-
-
 
 </td>
 <td valign="top">
@@ -233,8 +177,6 @@ Indices
 
 Edm.DateTime
 
-
-
 </td>
 <td valign="top">
 
@@ -245,21 +187,15 @@ Edm.DateTime
 
 /Date\(1472629368000\)/
 
-
-
 </td>
 <td valign="top">
 
 Timestamp
 
-
-
 </td>
 <td valign="top">
 
 8/31/16
-
-
 
 </td>
 </tr>
@@ -268,8 +204,6 @@ Timestamp
 
 Edm.Int32 or other number types
 
-
-
 </td>
 <td valign="top">
 
@@ -280,21 +214,15 @@ Edm.Int32 or other number types
 
 20000
 
-
-
 </td>
 <td valign="top">
 
 20000
-
-
 
 </td>
 <td valign="top">
 
 20K
-
-
 
 </td>
 </tr>

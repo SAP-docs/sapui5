@@ -25,7 +25,7 @@ Each control or element is represented by an XML tag with the name of the contro
 
 You can create a context binding for the control by using the `binding` attribute. For more information, see [Context Binding \(Element Binding\)](context-binding-element-binding-91f05e8.md).
 
-You can refer to a style class for the control by using the `class` attribute. For more information, see [Using CSS Style Sheets in XML Views](using-css-style-sheets-in-xml-views-b564935.md).
+You can refer to a style class for the control by using the `class` attribute. For more information, see [Using CSS Style Sheets in XML Views \(deprecated\)](using-css-style-sheets-in-xml-views-deprecated-b564935.md).
 
 **Related Information**  
 

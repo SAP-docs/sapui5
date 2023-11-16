@@ -64,14 +64,10 @@ In addition to using mouse and touch gestures to navigate the scene in a Viewpor
 
 Keyboard Shortcut
 
-
-
 </th>
 <th valign="top">
 
 Function
-
-
 
 </th>
 </tr>
@@ -80,14 +76,10 @@ Function
 
 [DIRECTIONAL ARROW\]
 
-
-
 </td>
 <td valign="top">
 
 Rotate the scene.
-
-
 
 </td>
 </tr>
@@ -96,14 +88,10 @@ Rotate the scene.
 
 [SHIFT\] + [DIRECTIONAL ARROW\] 
 
-
-
 </td>
 <td valign="top">
 
 Pan the scene.
-
-
 
 </td>
 </tr>
@@ -112,14 +100,10 @@ Pan the scene.
 
 [\+\]
 
-
-
 </td>
 <td valign="top">
 
 Zoom into the scene.
-
-
 
 </td>
 </tr>
@@ -128,14 +112,10 @@ Zoom into the scene.
 
 [\-\]
 
-
-
 </td>
 <td valign="top">
 
 Zoom out of the scene.
-
-
 
 </td>
 </tr>

@@ -111,6 +111,9 @@ The `config` section contains the global router configuration and default values
     > ### Note:  
     > If you use asynchronous loading, you cannot rely on the sequence of events that are fired during the load phase. If you follow our programming model with MVC, this should not be a problem.
 
+    > ### Note:  
+    > If the `Component.js` implements the `sap.ui.core.IAsyncContentCreation` interface, the default value for `async` is set to `true`, so no `async` config needs to be set in the `manifest.json`.
+
 -   Using the `bypassed` parameter, you specify the navigation target that is used whenever no navigation pattern is matched. If you use this setting, you also have to define a corresponding target in the `targets` section.
 
 

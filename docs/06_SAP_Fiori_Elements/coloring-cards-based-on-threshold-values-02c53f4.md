@@ -37,22 +37,16 @@ When you color the chart card, the threshold value that influences the semantic 
 
 From
 
-
-
 </th>
 <th valign="top">
 
 To
-
-
 
 </th>
 <th valign="top">
 
 Measure Value
 
-
-
 </th>
 </tr>
 <tr>
@@ -60,22 +54,16 @@ Measure Value
 
 Negative
 
-
-
 </td>
 <td valign="top">
 
 Critical
-
-
 
 </td>
 <td valign="top">
 
 \>= ThresholdValues.DeviationRangeLowValue
 
-
-
 </td>
 </tr>
 <tr>
@@ -83,22 +71,16 @@ Critical
 
 Critical
 
-
-
 </td>
 <td valign="top">
 
 Positive
-
-
 
 </td>
 <td valign="top">
 
 \>= ThresholdValues.ToleranceRangeLowValue
 
-
-
 </td>
 </tr>
 <tr>
@@ -106,21 +88,15 @@ Positive
 
 Positive
 
-
-
 </td>
 <td valign="top">
 
 Critical
 
-
-
 </td>
 <td valign="top">
 
 \> ThresholdValues.ToleranceRangeHighValue
-
-
 
 </td>
 </tr>
@@ -129,21 +105,15 @@ Critical
 
 Critical
 
-
-
 </td>
 <td valign="top">
 
 Negative
 
-
-
 </td>
 <td valign="top">
 
 \> ThresholdValues.DeviationRangeHighValue
-
-
 
 </td>
 </tr>
@@ -162,21 +132,15 @@ Negative
 
 From
 
-
-
 </th>
 <th valign="top">
 
 To
 
-
-
 </th>
 <th valign="top">
 
 Measure Value
-
-
 
 </th>
 </tr>
@@ -185,21 +149,15 @@ Measure Value
 
 Negative
 
-
-
 </td>
 <td valign="top">
 
 Critical
 
-
-
 </td>
 <td valign="top">
 
 \>= ThresholdValues.DeviationRangeLowValue
-
-
 
 </td>
 </tr>
@@ -208,21 +166,15 @@ Critical
 
 Critical
 
-
-
 </td>
 <td valign="top">
 
 Positive
 
-
-
 </td>
 <td valign="top">
 
 \>= ThresholdValues.ToleranceRangeLowValue
-
-
 
 </td>
 </tr>
@@ -239,14 +191,10 @@ Positive
 
 ![](images/ovp_semanticcolor_target_b57af63.png)
 
-
-
 </td>
 <td valign="top">
 
 ![](images/ovp_semanticcolor_max_c16efec.png)
-
-
 
 </td>
 </tr>
@@ -255,14 +203,10 @@ Positive
 
 Semantic coloring with target KPIs
 
-
-
 </td>
 <td valign="top">
 
 Semantic coloring with maximizing KPIs
-
-
 
 </td>
 </tr>
@@ -281,21 +225,15 @@ Semantic coloring with maximizing KPIs
 
 From
 
-
-
 </th>
 <th valign="top">
 
 To
 
-
-
 </th>
 <th valign="top">
 
 Measure Value
-
-
 
 </th>
 </tr>
@@ -304,21 +242,15 @@ Measure Value
 
 Positive
 
-
-
 </td>
 <td valign="top">
 
 Critical
 
-
-
 </td>
 <td valign="top">
 
 \> ThresholdValues.ToleranceRangeHighValue
-
-
 
 </td>
 </tr>
@@ -327,21 +259,15 @@ Critical
 
 Critical
 
-
-
 </td>
 <td valign="top">
 
 Negative
 
-
-
 </td>
 <td valign="top">
 
 \> ThresholdValues.DeviationRangeHighValue
-
-
 
 </td>
 </tr>

@@ -24,14 +24,10 @@ The following side effects are available in SAP Fiori elements by default.
 
 User Action
 
-
-
 </th>
 <th valign="top">
 
 Side Effect
-
-
 
 </th>
 </tr>
@@ -40,14 +36,10 @@ Side Effect
 
 Creating a new entity/draft version, either in the list report or on the object page
 
-
-
 </td>
 <td valign="top">
 
 List binding of the parent page is refreshed to show the newly created entity.
-
-
 
 </td>
 </tr>
@@ -56,14 +48,10 @@ List binding of the parent page is refreshed to show the newly created entity.
 
 Deleting an entity, either in the list report or on the object page
 
-
-
 </td>
 <td valign="top">
 
 List binding of the parent page is refreshed to remove the deleted entity.
-
-
 
 </td>
 </tr>
@@ -72,14 +60,10 @@ List binding of the parent page is refreshed to remove the deleted entity.
 
 Creating a draft for an active object
 
-
-
 </td>
 <td valign="top">
 
 List binding of the list report page is refreshed to show the new draft.
-
-
 
 </td>
 </tr>
@@ -88,14 +72,10 @@ List binding of the list report page is refreshed to show the new draft.
 
 Discarding a draft version
 
-
-
 </td>
 <td valign="top">
 
 List binding of the list report page is refreshed to remove the draft and show the active version.
-
-
 
 </td>
 </tr>
@@ -104,14 +84,10 @@ List binding of the list report page is refreshed to remove the draft and show t
 
 Activating a draft version
 
-
-
 </td>
 <td valign="top">
 
 List binding of the list report page is refreshed to remove the draft and show the active version.
-
-
 
 </td>
 </tr>
@@ -119,8 +95,6 @@ List binding of the list report page is refreshed to remove the draft and show t
 <td valign="top">
 
 Triggering an action
-
-
 
 </td>
 <td valign="top">

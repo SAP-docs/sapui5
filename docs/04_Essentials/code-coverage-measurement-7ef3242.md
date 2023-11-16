@@ -259,7 +259,7 @@ In this example the coverage is limited to one specific file - the only one that
 **Related Information**  
 
 
-[`UI5 Middleware Code Coverage`](https://github.com/SAP/ui5-tooling-extensions/tree/main/packages/middleware-code-coverage)
+[`UI5 Middleware Code Coverage`](https://github.com/SAP/ui5-tooling-extensions/blob/-/packages/middleware-code-coverage)
 
-[More information about `Blanket.js`](https://github.com/alex-seville/blanket/blob/master/docs/intermediate_browser.md)
+[More information about `Blanket.js`](https://github.com/alex-seville/blanket/blob/-/docs/intermediate_browser.md)
 

@@ -20,27 +20,154 @@ Because of the use of а third-party component some additional restrictions appl
 
 -   If you use API calls to the native API of TinyMCE, we **cannot** guarantee backwards compatibility after an upgrade of the TinyMCE library.
 
--   As of version 1.60, the native editor type is TinyMCE4. Keep in mind that TinyMCE3 is no longer supported and cannot be used. With version 1.79 we have updated the TinyMCE library with version 4.9.10, in order to be in sync with the latest fixes and updates.
+-   The default value of the `editorType` property is set to always point to the version of TinyMCE, that is recommended by SAPUI5, therefore it will be subject to change in the future.
 
--   As of version 1.86, you can use TinyMCE version 5 with the `RichTextEditor`, by setting the following property: `editorType`: `sap.ui.richtexteditor.RichTextEditor.EDITORTYPE_TINYMCE5`. We recommend switching to the newer version, as v4 is no longer supported by TinyMCE and will not receive updates. For more information about the TinyMCE version 5, see [https://www.tiny.cloud/docs/release-notes/release-notes50/](https://www.tiny.cloud/docs/release-notes/release-notes50/).
+-   The following table shows the supported TinyMCE versions in the respective SAPUI5 versions:
 
--   As of version 1.98, the TinyMCE version 5 used in `sap.ui.richtexteditor.RichTextEditor` is TinyMCE 5.10.2.
 
-    If you are using the native API and want to trnasfer to version 5, follow the TinyMCE migration guide: [https://www.tiny.cloud/docs/migration-from-4x/](https://www.tiny.cloud/docs/migration-from-4x/)
+    <table>
+    <tr>
+    <th valign="top">
 
--   As of version 1.107, the native editor type is TinyMCE 6.
+    SAPUI5 Version
+    
+    </th>
+    <th valign="top">
 
-    Also the default value of the `editorType` property is set to always point to the version of TinyMCE, that is recommended by SAPUI5. This is crucial for the application developers as using another version might lead to errors and malfunction of the application code. Any `RichTextEditor` which does not have the editorType property set up will automatically start using TinyMCE 6. Have in mind that this could cause some errors in the application, if there is an internal TinyMCE API usage that has been removed. Another potential error could be the usage of DOM selectors that don’t exist anymore, since there are also DOM changes that come with the new version.
+    TinyMCE Version
+    
+    </th>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    1.38
+    
+    </td>
+    <td valign="top">
+    
+    -   3.5.11
 
-    > ### Note:  
-    > The default value of the `editorType` property will always point to the recommended version by UI5, therefore it will be subject to change in the future.
+    -   4.5.7
 
-    For more information abot the TinyMCE version 6, see [https://www.tiny.cloud/docs/release-notes/6.0-upcoming-changes/](https://www.tiny.cloud/docs/release-notes/6.0-upcoming-changes/). For detailed information on the migration to TinyMCE 6, see [https://www.tiny.cloud/docs/tinymce/6/migration-from-5x/](https://www.tiny.cloud/docs/tinymce/6/migration-from-5x/)
 
--   As of version 1.113, the TinyMCE version 6 used in `sap.ui.richtexteditor.RichTextEditor` is TinyMCE 6.3.1.
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    1.71
+    
+    </td>
+    <td valign="top">
+    
+    -   4.9.10
 
--   As of version 1.118, the TinyMCE version 6 used in `sap.ui.richtexteditor.RichTextEditor` is TinyMCE 6.5.1.
 
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    1.84
+    
+    </td>
+    <td valign="top">
+    
+    -   4.9.10
+
+
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    1.96
+    
+    </td>
+    <td valign="top">
+    
+    -   4.9.10
+
+    -   5.5.1
+
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    1.108
+    
+    </td>
+    <td valign="top">
+    
+    -   4.9.10
+
+    -   5.10.2
+    -   6.5.1
+
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    1.111
+    
+    </td>
+    <td valign="top">
+    
+    -   4.9.10
+
+    -   5.10.2
+    -   6.5.1
+
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    1.114
+    
+    </td>
+    <td valign="top">
+    
+    -   4.9.10
+
+    -   5.10.2
+    -   6.5.1
+
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    Current
+    
+    </td>
+    <td valign="top">
+    
+    -   5.10.2
+    -   6.5.1
+
+
+    
+    </td>
+    </tr>
+    </table>
+    
 -   Accessibility features that the wrapper control provides, like high-contrast themes and keyboard handling, are not fully available for the native toolbar.
 
 -   For the usage of high contrast themes TinyMCE relies on the Windows setting. Thus, if you want to use SAPUI5 high contrast theme and the `RichTextEditor` control, you need to turn on the high contrast mode setting of the OS.
@@ -80,8 +207,6 @@ Because of the use of а third-party component some additional restrictions appl
 To replace the native toolbar, set the following properties:
 
 -   `customToolbar=true`
-
--   `editorType = tinyMCE4`
 
 -   If you want to use the custom toolbar, you need to instantiate the `RichTextEditor` in the application’s controller. It cannot be embedded in an XML view.
 

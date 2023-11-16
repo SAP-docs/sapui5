@@ -62,14 +62,10 @@ The following table shows the different kind of properties.
 
 Type-Independent Properties
 
-
-
 </th>
 <th valign="top">
 
 Type-Dependent Properties
-
-
 
 </th>
 </tr>
@@ -78,14 +74,10 @@ Type-Dependent Properties
 
 `property` \(`string`\)
 
-
-
 </td>
 <td valign="top">
 
 `scale` \(`number`\)
-
-
 
 </td>
 </tr>
@@ -94,14 +86,10 @@ Type-Dependent Properties
 
 `label` \(`string`\)
 
-
-
 </td>
 <td valign="top">
 
 `delimiter` \(`boolean`\)
-
-
 
 </td>
 </tr>
@@ -110,14 +98,10 @@ Type-Dependent Properties
 
 `type` \(`string`\)
 
-
-
 </td>
 <td valign="top">
 
 `unit` \(`string`\)
-
-
 
 </td>
 </tr>
@@ -126,14 +110,10 @@ Type-Dependent Properties
 
 `width` \(`number`\)
 
-
-
 </td>
 <td valign="top">
 
 `unitProperty` \(`string`\)
-
-
 
 </td>
 </tr>
@@ -142,14 +122,10 @@ Type-Dependent Properties
 
 `textAlign` \(`string`\)
 
-
-
 </td>
 <td valign="top">
 
 `displayUnit` \(`boolean`\)
-
-
 
 </td>
 </tr>
@@ -157,160 +133,120 @@ Type-Dependent Properties
 <td valign="top">
 
  
-
-
 
 </td>
 <td valign="top">
 
 `trueValue` \(`string`\)
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
  
-
-
 
 </td>
 <td valign="top">
 
 `falseValue` \(`string`\)
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
  
-
-
 
 </td>
 <td valign="top">
 
 `template` \(`string`\)
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
  
-
-
 
 </td>
 <td valign="top">
 
 `inputFormat` \(`string`\)
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
  
-
-
 
 </td>
 <td valign="top">
 
 `valueMap` \(`object|Map`\)
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
  
-
-
 
 </td>
 <td valign="top">
 
 `wrap` \(`boolean`\)
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
  
-
-
 
 </td>
 <td valign="top">
 
 `autoScale` \(`boolean`\)
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
  
-
-
 
 </td>
 <td valign="top">
 
 `timezone` \(`string`\)
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
  
-
-
 
 </td>
 <td valign="top">
 
 `timezoneProperty` \(`string`\)
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
  
-
-
 
 </td>
 <td valign="top">
 
 `displayTimezone` \(`boolean`\)
 
-
-
 </td>
 </tr>
 <tr>
@@ -318,14 +254,10 @@ Type-Dependent Properties
 
  
 
-
-
 </td>
 <td valign="top">
 
 `utc` \(`boolean`\)
-
-
 
 </td>
 </tr>
@@ -396,28 +328,20 @@ Apart from the column configuration, data source configuration is the most impor
 
 Property
 
-
-
 </th>
 <th valign="top">
 
 Type
-
-
 
 </th>
 <th valign="top">
 
 Optional
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -426,28 +350,20 @@ Description
 
 `type` 
 
-
-
 </td>
 <td valign="top">
 
 `string` 
-
-
 
 </td>
 <td valign="top">
 
 ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
 
-
-
 </td>
 <td valign="top">
 
 Defines the type of the data service that provides the data. If it is an OData service, the value `odata` must be assigned.
-
-
 
 </td>
 </tr>
@@ -456,28 +372,20 @@ Defines the type of the data service that provides the data. If it is an OData s
 
 `dataUrl` 
 
-
-
 </td>
 <td valign="top">
 
 `string` 
-
-
 
 </td>
 <td valign="top">
 
 ![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
 
-
-
 </td>
 <td valign="top">
 
 Request URL that is needed to request the data with all the filters and its order. The URL can either be relative or absolute. If the URL is relative, the current origin will be used as a host.
-
-
 
 </td>
 </tr>
@@ -486,21 +394,15 @@ Request URL that is needed to request the data with all the filters and its orde
 
 `serviceUrl` 
 
-
-
 </td>
 <td valign="top">
 
 `string` 
 
-
-
 </td>
 <td valign="top">
 
 ![Partially](../02_Read-Me-First/images/Yellow_Led_3ea53dc.gif)
-
-
 
 </td>
 <td valign="top">
@@ -519,21 +421,15 @@ URL of the data service that serves the entity which is requested by the `dataUr
 
 `count` 
 
-
-
 </td>
 <td valign="top">
 
 `number` 
 
-
-
 </td>
 <td valign="top">
 
 ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
-
-
 
 </td>
 <td valign="top">
@@ -552,28 +448,20 @@ Indicator of the line items available through the service. During the export pro
 
 `useBatch` 
 
-
-
 </td>
 <td valign="top">
 
 `boolean` 
-
-
 
 </td>
 <td valign="top">
 
 ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
-
-
 </td>
 <td valign="top">
 
 If set to `true`, the export library will use OData batch requests. Once batch requests are enabled, you'll have to provide the `serviceUrl` and `headers` properties. If batch requests are not supported by your OData service, you can disable this functionality by setting this property to `false`.
-
-
 
 </td>
 </tr>
@@ -582,21 +470,15 @@ If set to `true`, the export library will use OData batch requests. Once batch r
 
 `headers` 
 
-
-
 </td>
 <td valign="top">
 
 `object` 
 
-
-
 </td>
 <td valign="top">
 
 ![Partially](../02_Read-Me-First/images/Yellow_Led_3ea53dc.gif)
-
-
 
 </td>
 <td valign="top">
@@ -615,28 +497,20 @@ Provides additional request headers within an OData batch request. Every propert
 
 `sizeLimit` 
 
-
-
 </td>
 <td valign="top">
 
 `number` 
-
-
 
 </td>
 <td valign="top">
 
 ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
-
-
 </td>
 <td valign="top">
 
 Defines the number of records that are requested from the service with a single request. This is important to make fine adjustments.
-
-
 
 </td>
 </tr>
@@ -708,28 +582,20 @@ You can use the following properties:
 
 Property \(optional\)
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 <th valign="top">
 
 Built-in Context Information
 
-
-
 </th>
 <th valign="top">
 
 Custom Metadata Context Information
-
-
 
 </th>
 </tr>
@@ -738,8 +604,6 @@ Custom Metadata Context Information
 
 `application` \(`string`\)
 
-
-
 </td>
 <td valign="top">
 
@@ -747,21 +611,15 @@ Adds information about the business application that created a particular file.
 
 We recommend to use this property because there are often several similar apps that work on the same data entity but with a different scope or view. This makes it easier to identify where the data comes from if the exported file is shared, for example, among employees and managers.
 
-
-
 </td>
 <td valign="top" rowspan="4">
 
 ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
-
-
 </td>
 <td valign="top" rowspan="4">
 
  
-
-
 
 </td>
 </tr>
@@ -770,14 +628,10 @@ We recommend to use this property because there are often several similar apps t
 
 `version` \(`string`\)
 
-
-
 </td>
 <td valign="top">
 
 Identifies the application version through which a particular Office Open XML spreadsheet was created. This can be helpful for debugging because you can identify the version that caused the issues and compare it to previous builds. The more detailed your version information is, the easier it will be to identify your application changes within your source code management system.
-
-
 
 </td>
 </tr>
@@ -786,14 +640,10 @@ Identifies the application version through which a particular Office Open XML sp
 
 `title` \(`string`\)
 
-
-
 </td>
 <td valign="top">
 
 Adds a self-explanatory title to the document generated. This can be useful if the exported entity is not the main entity of the application in question, for example, company codes within a purchase order application.
-
-
 
 </td>
 </tr>
@@ -802,16 +652,12 @@ Adds a self-explanatory title to the document generated. This can be useful if t
 
 `modifiedBy` \(`string`\)
 
-
-
 </td>
 <td valign="top">
 
 Adds information about the user who created this document.
 
 If you do not use this property, the `sap.ui.export.Spreadsheet` library automatically adds SAPUI5 *Document Export* as the author of the document to the generated file and generates the creation timestamp.
-
-
 
 </td>
 </tr>
@@ -820,28 +666,20 @@ If you do not use this property, the `sap.ui.export.Spreadsheet` library automat
 
 `sheetName` \(`string`\)
 
-
-
 </td>
 <td valign="top">
 
 Changes the name of the sheet that contains the exported data. If this property is not used, the default value `SAP Document Export` is used. The maximum length of `sheetName` is limited to 31 characters.
-
-
 
 </td>
 <td valign="top" rowspan="3">
 
  
 
-
-
 </td>
 <td valign="top" rowspan="3">
 
 ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
-
-
 
 </td>
 </tr>
@@ -850,14 +688,10 @@ Changes the name of the sheet that contains the exported data. If this property 
 
 `metaSheetName` \(`string`\)
 
-
-
 </td>
 <td valign="top">
 
 Changes the name of the sheet that contains the metadata. In contrast to `sheetName`, it only affects the name of the additional sheet that contains the metadata. If no metadata has been provided, the additional sheet will not be created, and this property will not take effect.
-
-
 
 </td>
 </tr>
@@ -866,14 +700,10 @@ Changes the name of the sheet that contains the metadata. In contrast to `sheetN
 
 `metainfo` \(`array`\)
 
-
-
 </td>
 <td valign="top">
 
 An array of JSON objects that follow an exact specification, the so-called meta information groups. Each meta information group has an explicit `name` property which accepts a string that is not empty. Apart from the group name, it contains an array that is assigned to the `items` property of the group. This array can contain several JSON objects that provide the `key` and `value` properties \(type `string`\).
-
-
 
 </td>
 </tr>

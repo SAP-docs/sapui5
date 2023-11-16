@@ -22,21 +22,15 @@ The value displayed within the field can show either only the textual descriptio
 
 SalesOrderID
 
-
-
 </th>
 <th valign="top">
 
 PlantID
 
-
-
 </th>
 <th valign="top">
 
 PlantName
-
-
 
 </th>
 </tr>
@@ -45,21 +39,15 @@ PlantName
 
 100
 
-
-
 </td>
 <td valign="top">
 
 A1
 
-
-
 </td>
 <td valign="top">
 
 ABC
-
-
 
 </td>
 </tr>
@@ -68,21 +56,15 @@ ABC
 
 101
 
-
-
 </td>
 <td valign="top">
 
 A2
 
-
-
 </td>
 <td valign="top">
 
 DEF
-
-
 
 </td>
 </tr>
@@ -101,14 +83,10 @@ Application developers can define the arrangement of a code or ID value and its 
 
 TextArrangement
 
-
-
 </th>
 <th valign="top">
 
 Display Format
-
-
 
 </th>
 </tr>
@@ -117,14 +95,10 @@ Display Format
 
 TextFirst - \(default value\)
 
-
-
 </td>
 <td valign="top">
 
 ABC \(A1\)
-
-
 
 </td>
 </tr>
@@ -133,14 +107,10 @@ ABC \(A1\)
 
 TextLast
 
-
-
 </td>
 <td valign="top">
 
 A1 \(ABC\)
-
-
 
 </td>
 </tr>
@@ -149,14 +119,10 @@ A1 \(ABC\)
 
 TextOnly
 
-
-
 </td>
 <td valign="top">
 
 ABC
-
-
 
 </td>
 </tr>
@@ -165,14 +131,10 @@ ABC
 
 TextSeparate
 
-
-
 </td>
 <td valign="top">
 
 A1
-
-
 
 </td>
 </tr>
@@ -262,21 +224,15 @@ The following annotations are available for fiscal dates with the following pate
 
 CAP CDS Annotation
 
-
-
 </th>
 <th valign="top">
 
 Pattern
 
-
-
 </th>
 <th valign="top">
 
 ABAP CDS Annotation
-
-
 
 </th>
 </tr>
@@ -285,21 +241,15 @@ ABAP CDS Annotation
 
 `IsFiscalYearPeriod`
 
-
-
 </td>
 <td valign="top">
 
 PPP
 
-
-
 </td>
 <td valign="top">
 
 `Semantics.fiscal.yearPeriod`
-
-
 
 </td>
 </tr>
@@ -308,21 +258,15 @@ PPP
 
 `IsDayOfFiscalYear`
 
-
-
 </td>
 <td valign="top">
 
 d
 
-
-
 </td>
 <td valign="top">
 
 `?`
-
-
 
 </td>
 </tr>
@@ -331,21 +275,15 @@ d
 
 `IsFiscalPeriod`
 
-
-
 </td>
 <td valign="top">
 
 YYYYPPP
 
-
-
 </td>
 <td valign="top">
 
 `Semantics.fiscal.period`
-
-
 
 </td>
 </tr>
@@ -354,21 +292,15 @@ YYYYPPP
 
 `IsFiscalQuarter`
 
-
-
 </td>
 <td valign="top">
 
 Q
 
-
-
 </td>
 <td valign="top">
 
 `Semantics.fiscal.quarter`
-
-
 
 </td>
 </tr>
@@ -377,21 +309,15 @@ Q
 
 `IsFiscalWeek`
 
-
-
 </td>
 <td valign="top">
 
 WW
 
-
-
 </td>
 <td valign="top">
 
 `Semantics.fiscal.week`
-
-
 
 </td>
 </tr>
@@ -400,21 +326,15 @@ WW
 
 `IsFiscalYear`
 
-
-
 </td>
 <td valign="top">
 
 YYYY
 
-
-
 </td>
 <td valign="top">
 
 `Semantics.fiscal.year`
-
-
 
 </td>
 </tr>
@@ -423,21 +343,15 @@ YYYY
 
 `IsFiscalYearQuarter`
 
-
-
 </td>
 <td valign="top">
 
 YYYYQ
 
-
-
 </td>
 <td valign="top">
 
 `Semantics.fiscal.yearQuarter`
-
-
 
 </td>
 </tr>
@@ -446,21 +360,15 @@ YYYYQ
 
 `IsFiscalYearWeek`
 
-
-
 </td>
 <td valign="top">
 
 YYYYWW
 
-
-
 </td>
 <td valign="top">
 
 `Semantics.fiscal.yearWeek`
-
-
 
 </td>
 </tr>
@@ -469,21 +377,15 @@ YYYYWW
 
 `?`
 
-
-
 </td>
 <td valign="top">
 
  
 
-
-
 </td>
 <td valign="top">
 
 `Semantics.fiscal.yearVariant`
-
-
 
 </td>
 </tr>
@@ -870,14 +772,10 @@ In SAP Fiori elements for OData V4, you can use the `common.FieldControl` annota
 
 Value of the `FieldControl`
 
-
-
 </th>
 <th valign="top">
 
 Behavior
-
-
 
 </th>
 </tr>
@@ -885,8 +783,6 @@ Behavior
 <td valign="top">
 
 Mandatory
-
-
 
 </td>
 <td valign="top">
@@ -905,14 +801,10 @@ Property must have a non-null value whenever save or update is triggered. This v
 
 Optional
 
-
-
 </td>
 <td valign="top">
 
 Property can have a null value.
-
-
 
 </td>
 </tr>
@@ -921,14 +813,10 @@ Property can have a null value.
 
 ReadOnly
 
-
-
 </td>
 <td valign="top">
 
 Property value cannot be changed. In edit mode, this property will not show up as an editable field.
-
-
 
 </td>
 </tr>
@@ -936,8 +824,6 @@ Property value cannot be changed. In edit mode, this property will not show up a
 <td valign="top">
 
 Inapplicable
-
-
 
 </td>
 <td valign="top">

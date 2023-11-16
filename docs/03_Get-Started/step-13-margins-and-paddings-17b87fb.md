@@ -14,7 +14,7 @@ Instead of manually adding CSS to the controls, we will use the standard classes
   
 **The layout of the panel and its content now has margins and padding**
 
-![](images/UI5_Walkthrough_Step_13_0becf3e.png "The layout of the panel and its content now has margins and padding")
+![The graphic has an explanatory text.](images/UI5_Walkthrough_Step_13_0becf3e.png "The layout of the panel and its content now has margins and padding")
 
 
 

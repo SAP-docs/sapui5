@@ -21,28 +21,20 @@ Using the team repository provider, you can synchronize the application resource
 
 Authorization Object
 
-
-
 </th>
 <th valign="top">
 
 Values
-
-
 
 </th>
 <th valign="top">
 
 What is it for?
 
-
-
 </th>
 <th valign="top">
 
 Needed for deployment from
-
-
 
 </th>
 </tr>
@@ -51,8 +43,6 @@ Needed for deployment from
 
 `S_DEVELOP`
 
-
-
 </td>
 <td valign="top">
 
@@ -60,21 +50,15 @@ Needed for deployment from
 
 `ACTVT` = `01 Create`, `02: Change`, `03: Display`, `06: Delete`
 
-
-
 </td>
 <td valign="top">
 
 Create, update, and delete applications in the SAPUI5 ABAP repository
 
-
-
 </td>
 <td valign="top">
 
 All tools
-
-
 
 </td>
 </tr>
@@ -83,28 +67,20 @@ All tools
 
 `S_TRANSPORT`
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 <td valign="top">
 
 Optional: Create a new transport request or new task
 
-
-
 </td>
 <td valign="top">
 
 All tools
-
-
 
 </td>
 </tr>
@@ -112,8 +88,6 @@ All tools
 <td valign="top">
 
 `S_ADT_RES`
-
-
 
 </td>
 <td valign="top">
@@ -126,21 +100,15 @@ All tools
 
 `/sap/bc/adt/filestore/ui5-bsp/*`
 
-
-
 </td>
 <td valign="top">
 
 For the ABAP back-end communication via team repository provider REST API or RFC
 
-
-
 </td>
 <td valign="top">
 
 Eclipse, SAP Web IDE
-
-
 
 </td>
 </tr>
@@ -149,28 +117,20 @@ Eclipse, SAP Web IDE
 
 `S_RFC`
 
-
-
 </td>
 <td valign="top">
 
 `Activity 16` \(Execute\), with `RFC_NAME=SADT_REST_RFC_ENDPOINT` and `RFC_TYPE=FUNC`
-
-
 
 </td>
 <td valign="top">
 
 For the ABAP back-end communication via team repository provider API via RFC
 
-
-
 </td>
 <td valign="top">
 
 Eclipse
-
-
 
 </td>
 </tr>
@@ -178,8 +138,6 @@ Eclipse
 <td valign="top">
 
 `S_SERVICE`
-
-
 
 </td>
 <td valign="top">
@@ -192,21 +150,15 @@ Eclipse
 
 `SRV_TYPE` = Hash Value for TADIR Object
 
-
-
 </td>
 <td valign="top">
 
 For the ABAP back-end communication via OData service
 
-
-
 </td>
 <td valign="top">
 
 SAP Business Application Studio, SAP Fiori tools
-
-
 
 </td>
 </tr>

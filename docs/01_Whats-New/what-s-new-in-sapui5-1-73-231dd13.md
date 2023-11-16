@@ -15,49 +15,35 @@ With this release SAPUI5 is upgraded from version 1.72 to 1.73.
 
 Version
 
-
-
 </th>
 <th valign="top">
 
 Type
-
-
 
 </th>
 <th valign="top">
 
 Category
 
-
-
 </th>
 <th valign="top">
 
 Title
-
-
 
 </th>
 <th valign="top">
 
 Description
 
-
-
 </th>
 <th valign="top">
 
 Action
 
-
-
 </th>
 <th valign="top">
 
 Available as of
-
-
 
 </th>
 </tr>
@@ -66,28 +52,20 @@ Available as of
 
 1.73 
 
-
-
 </td>
 <td valign="top">
 
 New 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.f.AvatarGroup` \(Experimental\)** 
-
-
 
 </td>
 <td valign="top">
@@ -102,21 +80,15 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.f.Av
 
 <sub>New•Control•Info Only•1.73</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only
 
-
-
 </td>
 <td valign="top">
 
 2019-12-05
-
-
 
 </td>
 </tr>
@@ -125,28 +97,20 @@ Info Only
 
 1.73 
 
-
-
 </td>
 <td valign="top">
 
 Deprecated 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **Alternatives for the SAPUI5 Tools for Eclipse** 
-
-
 
 </td>
 <td valign="top">
@@ -157,21 +121,15 @@ As we have announced with SAPUI5 version 1.71, the SAPUI5 Tools for Eclipse are 
 
 <sub>Deprecated•Feature•Info Only•1.73</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-12-05
-
-
 
 </td>
 </tr>
@@ -180,28 +138,20 @@ Info Only
 
 1.73 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **Export Functions** 
-
-
 
 </td>
 <td valign="top">
@@ -214,21 +164,15 @@ For more information, see [Spreadsheet Export](../04_Essentials/spreadsheet-expo
 
 <sub>Changed•Feature•Info Only•1.73</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-12-05
-
-
 
 </td>
 </tr>
@@ -237,28 +181,20 @@ Info Only
 
 1.73 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **SAPUI5 OData V4 Model** 
-
-
 
 </td>
 <td valign="top">
@@ -284,21 +220,15 @@ For more information, see [OData V4 Model](../04_Essentials/odata-v4-model-5de13
 
 <sub>Changed•Feature•Info Only•1.73</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-12-05
-
-
 
 </td>
 </tr>
@@ -307,28 +237,20 @@ Info Only
 
 1.73 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.f.semantic.SemanticPage`** 
-
-
 
 </td>
 <td valign="top">
@@ -339,21 +261,15 @@ The `fitContent` property of the `sap.f.DynamicPage` control is now also exposed
 
 <sub>Changed•Control•Info Only•1.73</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-12-05
-
-
 
 </td>
 </tr>
@@ -362,28 +278,20 @@ Info Only
 
 1.73 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.Button`** 
-
-
 
 </td>
 <td valign="top">
@@ -403,21 +311,15 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.Bu
 
 <sub>Changed•Control•Info Only•1.73</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-12-05
-
-
 
 </td>
 </tr>
@@ -426,28 +328,20 @@ Info Only
 
 1.73 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.ComboBox`, `sap.m.MultiComboBox`** 
-
-
 
 </td>
 <td valign="top">
@@ -458,21 +352,15 @@ We have updated the behavior of the `showItems` method. When the control's picke
 
 <sub>Changed•Control•Info Only•1.73</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-12-05
-
-
 
 </td>
 </tr>
@@ -481,28 +369,20 @@ Info Only
 
 1.73 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.Dialog`** 
-
-
 
 </td>
 <td valign="top">
@@ -515,21 +395,15 @@ For more information, see [Enabling Responsive Paddings According to the Control
 
 <sub>Changed•Control•Info Only•1.73</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-12-05
-
-
 
 </td>
 </tr>
@@ -538,28 +412,20 @@ Info Only
 
 1.73 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.Input`** 
-
-
 
 </td>
 <td valign="top">
@@ -575,21 +441,15 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.In
 
 <sub>Changed•Control•Info Only•1.73</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-12-05
-
-
 
 </td>
 </tr>
@@ -598,28 +458,20 @@ Info Only
 
 1.73 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.Label`** 
-
-
 
 </td>
 <td valign="top">
@@ -630,21 +482,15 @@ A visual change was introduced for the `sap.m.Label` control to align it with SA
 
 <sub>Changed•Control•Info Only•1.73</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-12-05
-
-
 
 </td>
 </tr>
@@ -653,28 +499,20 @@ Info Only
 
 1.73 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.list`, `sap.m.StandardListItem`** 
-
-
 
 </td>
 <td valign="top">
@@ -685,21 +523,15 @@ The usability of the additional information text and its combination with title 
 
 <sub>Changed•Control•Info Only•1.73</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-12-05
-
-
 
 </td>
 </tr>
@@ -708,28 +540,20 @@ Info Only
 
 1.73 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.MessagePopover`** 
-
-
 
 </td>
 <td valign="top">
@@ -740,21 +564,15 @@ We have exposed the `groupItems` property and `navigateBack` function as APIs in
 
 <sub>Changed•Control•Info Only•1.73</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-12-05
-
-
 
 </td>
 </tr>
@@ -763,28 +581,20 @@ Info Only
 
 1.73 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.NotificationListItem`, `sap.m.NotificationListGroup`** 
-
-
 
 </td>
 <td valign="top">
@@ -803,21 +613,15 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.No
 
 <sub>Changed•Control•Info Only•1.73</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-12-05
-
-
 
 </td>
 </tr>
@@ -826,28 +630,20 @@ Info Only
 
 1.73 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.NumericContent`** 
-
-
 
 </td>
 <td valign="top">
@@ -858,21 +654,15 @@ A new `adaptiveFontSize` property is now introduced to meet different country/lo
 
 <sub>Changed•Control•Info Only•1.73</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-12-05
-
-
 
 </td>
 </tr>
@@ -881,28 +671,20 @@ Info Only
 
 1.73 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.PlanningCalendar`** 
-
-
 
 </td>
 <td valign="top">
@@ -918,21 +700,15 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.Pl
 
 <sub>Changed•Control•Info Only•1.73</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-12-05
-
-
 
 </td>
 </tr>
@@ -941,28 +717,20 @@ Info Only
 
 1.73 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.ProgressIndicator`** 
-
-
 
 </td>
 <td valign="top">
@@ -973,21 +741,15 @@ With the new `displayAnimation` property, you can now determine whether a percen
 
 <sub>Changed•Control•Info Only•1.73</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-12-05
-
-
 
 </td>
 </tr>
@@ -996,28 +758,20 @@ Info Only
 
 1.73 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.comp.SmartField`, `sap.ui.comp.SmartFilterBar`, `sap.ui.comp.SmartTable`** 
-
-
 
 </td>
 <td valign="top">
@@ -1028,21 +782,15 @@ You can now search for empty strings for dates of type `Edm.DateTime`, `Edm.Date
 
 <sub>Changed•Control•Info Only•1.73</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-12-05
-
-
 
 </td>
 </tr>
@@ -1051,28 +799,20 @@ Info Only
 
 1.73 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.integration.widgets.Card`** 
-
-
 
 </td>
 <td valign="top">
@@ -1085,21 +825,15 @@ Control
 
 <sub>Changed•Control•Info Only•1.73</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-12-05
-
-
 
 </td>
 </tr>
@@ -1108,28 +842,20 @@ Info Only
 
 1.73 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.layout.cssgrid.ResponsiveColumnLayout`** 
-
-
 
 </td>
 <td valign="top">
@@ -1140,21 +866,15 @@ This control now also supports Microsoft Internet Explorer 11, due to the implem
 
 <sub>Changed•Control•Info Only•1.73</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-12-05
-
-
 
 </td>
 </tr>
@@ -1163,28 +883,20 @@ Info Only
 
 1.73 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.table.AnalyticalTable`, `sap.ui.table.Table`, `sap.ui.table.TreeTable`** 
-
-
 
 </td>
 <td valign="top">
@@ -1195,21 +907,15 @@ The `navigated` property that was introduced in version 1.72 is now also availab
 
 <sub>Changed•Control•Info Only•1.73</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-12-05
-
-
 
 </td>
 </tr>
@@ -1218,28 +924,20 @@ Info Only
 
 1.73 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.uxap.ObjectPageHeader`** 
-
-
 
 </td>
 <td valign="top">
@@ -1250,21 +948,15 @@ With the new `objectImageBackgroundColor` property, you can now determine the ba
 
 <sub>Changed•Control•Info Only•1.73</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-12-05
-
-
 
 </td>
 </tr>
@@ -1273,28 +965,20 @@ Info Only
 
 1.73 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.uxap.ObjectPageLayout`** 
-
-
 
 </td>
 <td valign="top">
@@ -1305,21 +989,15 @@ With the new `sectionChange` event, you can identify when the page is scrolled t
 
 <sub>Changed•Control•Info Only•1.73</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-12-05
-
-
 
 </td>
 </tr>
@@ -1328,28 +1006,20 @@ Info Only
 
 1.73 
 
-
-
 </td>
 <td valign="top">
 
 New 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **Demo Kit Search Highlighting** 
-
-
 
 </td>
 <td valign="top">
@@ -1362,21 +1032,15 @@ You can now easily find the results you're interested in with the new search hig
 
 <sub>New•Feature•Info Only•1.73</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-12-05
-
-
 
 </td>
 </tr>
@@ -1384,6 +1048,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.118](what-s-new-in-sapui5-1-118-3eecbde.md "With this release SAPUI5 is upgraded from version 1.117 to 1.118.")
 
 [What's New in SAPUI5 1.117](what-s-new-in-sapui5-1-117-029d3b4.md "With this release SAPUI5 is upgraded from version 1.116 to 1.117.")
 

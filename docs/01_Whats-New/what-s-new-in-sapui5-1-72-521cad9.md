@@ -15,49 +15,35 @@ With this release SAPUI5 is upgraded from version 1.71 to 1.72.
 
 Version
 
-
-
 </th>
 <th valign="top">
 
 Type
-
-
 
 </th>
 <th valign="top">
 
 Category
 
-
-
 </th>
 <th valign="top">
 
 Title
-
-
 
 </th>
 <th valign="top">
 
 Description
 
-
-
 </th>
 <th valign="top">
 
 Action
 
-
-
 </th>
 <th valign="top">
 
 Available as of
-
-
 
 </th>
 </tr>
@@ -66,28 +52,20 @@ Available as of
 
 1.72 
 
-
-
 </td>
 <td valign="top">
 
 New 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **New Theme Available for SAP Fiori 3 User Experience \(Experimental\)** 
-
-
 
 </td>
 <td valign="top">
@@ -101,21 +79,15 @@ To further support the SAP Fiori 3 user experience, a new theme has been introdu
 
 <sub>New•Feature•Info Only•1.72</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only
 
-
-
 </td>
 <td valign="top">
 
 2019-11-21
-
-
 
 </td>
 </tr>
@@ -124,28 +96,20 @@ Info Only
 
 1.72 
 
-
-
 </td>
 <td valign="top">
 
 New 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 ****Responsive Paddings Enablement**** 
-
-
 
 </td>
 <td valign="top">
@@ -158,21 +122,15 @@ For more information, see [Enabling Responsive Paddings According to the Control
 
 <sub>New•Feature•Info Only•1.72</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-11-21
-
-
 
 </td>
 </tr>
@@ -181,28 +139,20 @@ Info Only
 
 1.72 
 
-
-
 </td>
 <td valign="top">
 
 New 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.f.ProductSwitch` \(Experimental\)** 
-
-
 
 </td>
 <td valign="top">
@@ -217,21 +167,15 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.f.Pr
 
 <sub>New•Control•Info Only•1.72</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-11-21
-
-
 
 </td>
 </tr>
@@ -240,28 +184,20 @@ Info Only
 
 1.72 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **Navigation in Nested Components** 
-
-
 
 </td>
 <td valign="top">
@@ -274,21 +210,15 @@ For more information, see [`sap.ui.core.routing.Router.navTo`](https://ui5.sap.c
 
 <sub>Changed•Feature•Info Only•1.72</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-11-21
-
-
 
 </td>
 </tr>
@@ -297,28 +227,20 @@ Info Only
 
 1.72 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **SAPUI5 OData V4 Model** 
-
-
 
 </td>
 <td valign="top">
@@ -339,21 +261,15 @@ For more information, see [OData V4 Model](../04_Essentials/odata-v4-model-5de13
 
 <sub>Changed•Feature•Info Only•1.72</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-11-21
-
-
 
 </td>
 </tr>
@@ -362,28 +278,20 @@ Info Only
 
 1.72 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **Title Alignment Changes for SAP Quartz Themes** 
-
-
 
 </td>
 <td valign="top">
@@ -406,21 +314,15 @@ Affected Controls:
 
 <sub>Changed•Feature•Info Only•1.72</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-11-21
-
-
 
 </td>
 </tr>
@@ -429,28 +331,20 @@ Info Only
 
 1.72 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.f.Avatar`** 
-
-
 
 </td>
 <td valign="top">
@@ -461,21 +355,15 @@ We have added more options in the `sap.f.AvatarColor` enum for the background co
 
 <sub>Changed•Control•Info Only•1.72</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-11-21
-
-
 
 </td>
 </tr>
@@ -484,28 +372,20 @@ Info Only
 
 1.72 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.f.FlexibleColumnLayoutSemanticHelper`** 
-
-
 
 </td>
 <td valign="top">
@@ -516,21 +396,15 @@ Some methods in the helper class rely on the internal `sap.f.FlexibleColumnLayou
 
 <sub>Changed•Control•Info Only•1.72</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-11-21
-
-
 
 </td>
 </tr>
@@ -539,28 +413,20 @@ Info Only
 
 1.72 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.ActionSheet`** 
-
-
 
 </td>
 <td valign="top">
@@ -571,21 +437,15 @@ We have extended the `afterClose` event, to provide context information that ind
 
 <sub>Changed•Control•Info Only•1.72</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-11-21
-
-
 
 </td>
 </tr>
@@ -594,28 +454,20 @@ Info Only
 
 1.72 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.ComboBox`, `sap.m.MultiComboBox`, `sap.m.Input`, `sap.m.MultiInput`** 
-
-
 
 </td>
 <td valign="top">
@@ -626,21 +478,15 @@ We have improved the controls to display the text set in the `valueStateText` pr
 
 <sub>Changed•Control•Info Only•1.72</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-11-21
-
-
 
 </td>
 </tr>
@@ -649,28 +495,20 @@ Info Only
 
 1.72 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.DateRangeSelection`** 
-
-
 
 </td>
 <td valign="top">
@@ -681,21 +519,15 @@ We have introduced an optional footer with *OK* and *Cancel* buttons, to provide
 
 <sub>Changed•Control•Info Only•1.72</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-11-21
-
-
 
 </td>
 </tr>
@@ -704,28 +536,20 @@ Info Only
 
 1.72 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.List`, `sap.m.Table`, `sap.m.Tree`** 
-
-
 
 </td>
 <td valign="top">
@@ -739,21 +563,15 @@ Control
 
 <sub>Changed•Control•Info Only•1.72</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-11-21
-
-
 
 </td>
 </tr>
@@ -762,28 +580,20 @@ Info Only
 
 1.72 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.SinglePlanningCalendar`** 
-
-
 
 </td>
 <td valign="top">
@@ -794,21 +604,15 @@ The `appointmentSelect` event was also provided for the appointments in the Mont
 
 <sub>Changed•Control•Info Only•1.72</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-11-21
-
-
 
 </td>
 </tr>
@@ -817,28 +621,20 @@ Info Only
 
 1.72 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.Table`** 
-
-
 
 </td>
 <td valign="top">
@@ -849,21 +645,15 @@ If applications configure a responsive table that contains only one column in su
 
 <sub>Changed•Control•Info Only•1.72</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-11-21
-
-
 
 </td>
 </tr>
@@ -872,28 +662,20 @@ Info Only
 
 1.72 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.ViewSettingsDialog`** 
-
-
 
 </td>
 <td valign="top">
@@ -909,21 +691,15 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.Vi
 
 <sub>Changed•Control•Info Only•1.72</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-11-21
-
-
 
 </td>
 </tr>
@@ -932,28 +708,20 @@ Info Only
 
 1.72 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 <code><b>sap.m.Wizard</b></code> 
-
-
 
 </td>
 <td valign="top">
@@ -964,21 +732,15 @@ We have added a new `backgroundDesign` property. It can change the background co
 
 <sub>Changed•Control•Info Only•1.72</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-11-21
-
-
 
 </td>
 </tr>
@@ -987,28 +749,20 @@ Info Only
 
 1.72 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.comp.smarttable.SmartTable`** 
-
-
 
 </td>
 <td valign="top">
@@ -1019,21 +773,15 @@ We have introduced new key combinations that you can use for opening the table p
 
 <sub>Changed•Control•Info Only•1.72</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-11-21
-
-
 
 </td>
 </tr>
@@ -1042,28 +790,20 @@ Info Only
 
 1.72 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.integration.widgets.Card`** 
-
-
 
 </td>
 <td valign="top">
@@ -1078,21 +818,15 @@ For more information, see [Card Explorer](https://ui5.sap.com/test-resources/sap
 
 <sub>Changed•Control•Info Only•1.72</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-11-21
-
-
 
 </td>
 </tr>
@@ -1101,28 +835,20 @@ Info Only
 
 1.72 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.table.AnalyticalTable`, `sap.ui.table.Table`, `sap.ui.table.TreeTable`** 
-
-
 
 </td>
 <td valign="top">
@@ -1136,21 +862,15 @@ Control
 
 <sub>Changed•Control•Info Only•1.72</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-11-21
-
-
 
 </td>
 </tr>
@@ -1159,28 +879,20 @@ Info Only
 
 1.72 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.unified.FileUploader`** 
-
-
 
 </td>
 <td valign="top">
@@ -1191,21 +903,15 @@ The new `fileEmpty` event was introduced, fired when uploading an empty file. Fo
 
 <sub>Changed•Control•Info Only•1.72</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-11-21
-
-
 
 </td>
 </tr>
@@ -1214,28 +920,20 @@ Info Only
 
 1.72 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.uxap.BlockBase`** 
-
-
 
 </td>
 <td valign="top">
@@ -1246,21 +944,15 @@ You can now subscribe to the new `viewInit` event that is fired when the asynchr
 
 <sub>Changed•Control•Info Only•1.72</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-11-21
-
-
 
 </td>
 </tr>
@@ -1269,28 +961,20 @@ Info Only
 
 1.72 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 SAP Fiori Elements 
 
-
-
 </td>
 <td valign="top">
 
 **SAP Fiori Elements** 
-
-
 
 </td>
 <td valign="top">
@@ -1318,21 +1002,15 @@ The object page has the following new features:
 
 <sub>Changed•SAP Fiori Elements•Info Only•1.72</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-11-21
-
-
 
 </td>
 </tr>
@@ -1340,6 +1018,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.118](what-s-new-in-sapui5-1-118-3eecbde.md "With this release SAPUI5 is upgraded from version 1.117 to 1.118.")
 
 [What's New in SAPUI5 1.117](what-s-new-in-sapui5-1-117-029d3b4.md "With this release SAPUI5 is upgraded from version 1.116 to 1.117.")
 

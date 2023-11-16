@@ -15,49 +15,35 @@ With this release SAPUI5 is upgraded from version 1.87 to 1.88.
 
 Version
 
-
-
 </th>
 <th valign="top">
 
 Type
-
-
 
 </th>
 <th valign="top">
 
 Category
 
-
-
 </th>
 <th valign="top">
 
 Title
-
-
 
 </th>
 <th valign="top">
 
 Description
 
-
-
 </th>
 <th valign="top">
 
 Action
 
-
-
 </th>
 <th valign="top">
 
 Available as of
-
-
 
 </th>
 </tr>
@@ -66,28 +52,20 @@ Available as of
 
 1.88 
 
-
-
 </td>
 <td valign="top">
 
 Deprecated 
-
-
 
 </td>
 <td valign="top">
 
 Announcement 
 
-
-
 </td>
 <td valign="top">
 
 **End of Support for Microsoft Internet Explorer 11** 
-
-
 
 </td>
 <td valign="top">
@@ -98,21 +76,15 @@ Starting with version 1.88, SAPUI5 no longer supports Microsoft Internet Explore
 
 <sub>Deprecated•Announcement•Info Only•1.88</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only
 
-
-
 </td>
 <td valign="top">
 
 2021-03-25
-
-
 
 </td>
 </tr>
@@ -121,28 +93,20 @@ Info Only
 
 1.88 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **Demo Kit Feedback** 
-
-
 
 </td>
 <td valign="top">
@@ -164,21 +128,15 @@ We have improved the following Demo Kit areas:
 
 <sub>Changed•Feature•Info Only•1.88</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-03-25
-
-
 
 </td>
 </tr>
@@ -187,28 +145,20 @@ Info Only
 
 1.88 
 
-
-
 </td>
 <td valign="top">
 
 New 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.f.IllustratedMessage` \(Experimental\)** 
-
-
 
 </td>
 <td valign="top">
@@ -223,21 +173,15 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.f.Il
 
 <sub>New•Control•Info Only•1.88</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-03-25
-
-
 
 </td>
 </tr>
@@ -246,28 +190,20 @@ Info Only
 
 1.88 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **SAPUI5 Models** 
-
-
 
 </td>
 <td valign="top">
@@ -278,21 +214,15 @@ The new version of SAPUI5 introduces a new `sap.ui.model.Binding#getResolvedPath
 
 <sub>Changed•Feature•Info Only•1.88</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-03-25
-
-
 
 </td>
 </tr>
@@ -301,28 +231,20 @@ Info Only
 
 1.88 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **SAPUI5 OData V4 Model** 
-
-
 
 </td>
 <td valign="top">
@@ -335,21 +257,15 @@ For more information, see [OData V4 Model](../04_Essentials/odata-v4-model-5de13
 
 <sub>Changed•Feature•Info Only•1.88</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-03-25
-
-
 
 </td>
 </tr>
@@ -358,28 +274,20 @@ Info Only
 
 1.88 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **Test Recorder** 
-
-
 
 </td>
 <td valign="top">
@@ -390,21 +298,15 @@ We've introduced the option to generate code snippets with assertions. Assertion
 
 <sub>Changed•Feature•Info Only•1.88</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-03-25
-
-
 
 </td>
 </tr>
@@ -413,28 +315,20 @@ Info Only
 
 1.88 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **White Spaces in Spreadsheet Export** 
-
-
 
 </td>
 <td valign="top">
@@ -447,21 +341,15 @@ For more information, see [Spreadsheet Export](../04_Essentials/spreadsheet-expo
 
 <sub>Changed•Feature•Info Only•1.88</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-03-25
-
-
 
 </td>
 </tr>
@@ -470,28 +358,20 @@ Info Only
 
 1.88 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`P13nDialog`** 
-
-
 
 </td>
 <td valign="top">
@@ -505,21 +385,15 @@ We've visually modified the filter tab of the table personalization dialog, or `
 
 <sub>Changed•Control•Info Only•1.88</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-03-25
-
-
 
 </td>
 </tr>
@@ -528,28 +402,20 @@ Info Only
 
 1.88 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.f.GridContainer`** 
-
-
 
 </td>
 <td valign="top">
@@ -560,21 +426,15 @@ We have added a new `columnsChange` event, fired when the count of grid columns 
 
 <sub>Changed•Control•Info Only•1.88</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-03-25
-
-
 
 </td>
 </tr>
@@ -583,28 +443,20 @@ Info Only
 
 1.88 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.gantt`** 
-
-
 
 </td>
 <td valign="top">
@@ -615,21 +467,15 @@ We have improved the usability of the Gantt chart with the large interval/label 
 
 <sub>Changed•Control•Info Only•1.88</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-03-25
-
-
 
 </td>
 </tr>
@@ -638,28 +484,20 @@ Info Only
 
 1.88 
 
-
-
 </td>
 <td valign="top">
 
 Deprecated 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.UploadCollection`** 
-
-
 
 </td>
 <td valign="top">
@@ -670,21 +508,15 @@ As of version 1.88, the `UploadCollection` control is deprecated. You can use th
 
 <sub>Deprecated•Control•Info Only•1.88</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-03-25
-
-
 
 </td>
 </tr>
@@ -693,28 +525,20 @@ Info Only
 
 1.88 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.comp.filterbar.FilterBar`, `sap.ui.comp.valuehelpdialog.ValueHelpDialog`** 
-
-
 
 </td>
 <td valign="top">
@@ -736,21 +560,15 @@ For more information, see the [Samples](https://ui5.sap.com/#/entity/sap.ui.comp
 
 <sub>Changed•Control•Info Only•1.88</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-03-25
-
-
 
 </td>
 </tr>
@@ -759,28 +577,20 @@ Info Only
 
 1.88 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.comp.smartfield.SmartField`, `sap.ui.comp.smartfilterbar.SmartFilterBar`** 
-
-
 
 </td>
 <td valign="top">
@@ -791,21 +601,15 @@ We've introduced the highlighting of search suggestions of the `SmartField` and 
 
 <sub>Changed•Control•Info Only•1.88</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-03-25
-
-
 
 </td>
 </tr>
@@ -814,28 +618,20 @@ Info Only
 
 1.88 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.comp.smartfield.SmartField`** 
-
-
 
 </td>
 <td valign="top">
@@ -846,21 +642,15 @@ We've introduced a new property, `fixedValueListValidationEnabled`, to turn off 
 
 <sub>Changed•Control•Info Only•1.88</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-03-25
-
-
 
 </td>
 </tr>
@@ -869,28 +659,20 @@ Info Only
 
 1.88 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.comp.smartform.SmartForm`** 
-
-
 
 </td>
 <td valign="top">
@@ -905,21 +687,15 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.c
 
 <sub>Changed•Control•Info Only•1.88</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-03-25
-
-
 
 </td>
 </tr>
@@ -928,28 +704,20 @@ Info Only
 
 1.88 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.comp.smarttable.SmartTable`** 
-
-
 
 </td>
 <td valign="top">
@@ -962,21 +730,15 @@ We have improved the usability and accessibility of column resizing for the resp
 
 <sub>Changed•Control•Info Only•1.88</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-03-25
-
-
 
 </td>
 </tr>
@@ -985,28 +747,20 @@ Info Only
 
 1.88 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.integration.widgets.Card`** 
-
-
 
 </td>
 <td valign="top">
@@ -1021,21 +775,15 @@ Control
 
 <sub>Changed•Control•Info Only•1.88</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-03-25
-
-
 
 </td>
 </tr>
@@ -1044,28 +792,20 @@ Info Only
 
 1.88 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.unified.Currency`** 
-
-
 
 </td>
 <td valign="top">
@@ -1076,21 +816,15 @@ As an app developer you can now define custom currency names with a length of up
 
 <sub>Changed•Control•Info Only•1.88</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-03-25
-
-
 
 </td>
 </tr>
@@ -1099,28 +833,20 @@ Info Only
 
 1.88 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 SAP Fiori Elements 
 
-
-
 </td>
 <td valign="top">
 
 **SAP Fiori elements for OData V2 and SAP Fiori elements for OData V4** 
-
-
 
 </td>
 <td valign="top">
@@ -1134,21 +860,15 @@ The following changes and new features are available for SAP Fiori elements for 
 
 <sub>Changed•SAP Fiori Elements•Info Only•1.88</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-03-25
-
-
 
 </td>
 </tr>
@@ -1157,28 +877,20 @@ Info Only
 
 1.88 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 SAP Fiori Elements 
 
-
-
 </td>
 <td valign="top">
 
 **SAP Fiori elements for OData V2** 
-
-
 
 </td>
 <td valign="top">
@@ -1193,21 +905,15 @@ The following changes and new features are available for SAP Fiori elements for 
 
 <sub>Changed•SAP Fiori Elements•Info Only•1.88</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-03-25
-
-
 
 </td>
 </tr>
@@ -1216,28 +922,20 @@ Info Only
 
 1.88 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 SAP Fiori Elements 
 
-
-
 </td>
 <td valign="top">
 
 **SAP Fiori elements for OData V4** 
-
-
 
 </td>
 <td valign="top">
@@ -1255,21 +953,15 @@ The following changes and new features are available for SAP Fiori elements for 
 
 <sub>Changed•SAP Fiori Elements•Info Only•1.88</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-03-25
-
-
 
 </td>
 </tr>
@@ -1277,6 +969,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.118](what-s-new-in-sapui5-1-118-3eecbde.md "With this release SAPUI5 is upgraded from version 1.117 to 1.118.")
 
 [What's New in SAPUI5 1.117](what-s-new-in-sapui5-1-117-029d3b4.md "With this release SAPUI5 is upgraded from version 1.116 to 1.117.")
 

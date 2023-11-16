@@ -16,15 +16,11 @@ A Table basically consists of columns \(`sap.m.Column`\) and rows. The rows, def
     <th valign="top">
 
     Property or Aggregation
-
-
     
     </th>
     <th valign="top">
 
     Description
-
-
     
     </th>
     </tr>
@@ -32,15 +28,11 @@ A Table basically consists of columns \(`sap.m.Column`\) and rows. The rows, def
     <td valign="top">
     
     **header**
-
-
     
     </td>
     <td valign="top">
     
     Defines column header. Any control can be used but most likely **Label** or **Text** control. If any column has header definition then header line gets visible for all columns.
-
-
     
     </td>
     </tr>
@@ -48,15 +40,11 @@ A Table basically consists of columns \(`sap.m.Column`\) and rows. The rows, def
     <td valign="top">
     
     **footer**
-
-
     
     </td>
     <td valign="top">
     
     Any control can be assigned to be displayed in the column footer. If at least one column has a footer definition, then the footer line is displayed for all columns.
-
-
     
     </td>
     </tr>
@@ -64,15 +52,11 @@ A Table basically consists of columns \(`sap.m.Column`\) and rows. The rows, def
     <td valign="top">
     
     **width**
-
-
     
     </td>
     <td valign="top">
     
     Defines the width of the column. If you leave it empty then this column covers the remaining space.
-
-
     
     </td>
     </tr>
@@ -80,15 +64,11 @@ A Table basically consists of columns \(`sap.m.Column`\) and rows. The rows, def
     <td valign="top">
     
     **hAlign**
-
-
     
     </td>
     <td valign="top">
     
     Defines the horizontal alignment\(*Begin*, *Center*, *End*, *Left*, *Right*\) of the column content. Controls with a textAlign property inherit the horizontal alignment from Column hAlign property.
-
-
     
     </td>
     </tr>
@@ -96,15 +76,11 @@ A Table basically consists of columns \(`sap.m.Column`\) and rows. The rows, def
     <td valign="top">
     
     **vAlign**
-
-
     
     </td>
     <td valign="top">
     
     Defines the vertical alignment of column cells. Possible values are *Top*, *Middle*, and *Bottom*. This property does not affect the vertical alignment of header and footer.
-
-
     
     </td>
     </tr>
@@ -112,15 +88,11 @@ A Table basically consists of columns \(`sap.m.Column`\) and rows. The rows, def
     <td valign="top">
     
     **visible**
-
-
     
     </td>
     <td valign="top">
     
     Specifies whether the column is visible. Invisible columns are not rendered.
-
-
     
     </td>
     </tr>

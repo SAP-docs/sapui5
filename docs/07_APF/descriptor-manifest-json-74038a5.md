@@ -35,22 +35,16 @@ APF expects certain entries in the manifest of a component that extends `sap.apf
     <th valign="top">
 
     Data Source
-
-
     
     </th>
     <th valign="top">
 
     ...for SAP Business Suite powered by SAP HANA and SAP BW on SAP HANA
-
-
     
     </th>
     <th valign="top">
 
     ...for SAP S/4HANA 
-
-
     
     </th>
     </tr>
@@ -58,22 +52,16 @@ APF expects certain entries in the manifest of a component that extends `sap.apf
     <td valign="top">
     
     `PathPersistenceServiceRoot`
-
-
     
     </td>
     <td valign="top">
     
     `/sap/hba/r/apf/core/odata/apf.xsodata`
-
-
     
     </td>
     <td valign="top">
     
     `/sap/opu/odata/sap/BSANLY_APF_RUNTIME_SRV`
-
-
     
     </td>
     </tr>
@@ -81,22 +69,16 @@ APF expects certain entries in the manifest of a component that extends `sap.apf
     <td valign="top">
     
     `SmartBusiness`
-
-
     
     </td>
     <td valign="top">
     
     `/sap/hba/r/sb/core/odata/runtime/SMART_BUSINESS.xsodata`
-
-
     
     </td>
     <td valign="top">
     
     Not required
-
-
     
     </td>
     </tr>
@@ -104,22 +86,16 @@ APF expects certain entries in the manifest of a component that extends `sap.apf
     <td valign="top">
     
     `LogicalSystem`
-
-
     
     </td>
     <td valign="top">
     
     `/sap/hba/apps/wca/dso/s/odata/wca.xsodata`
-
-
     
     </td>
     <td valign="top">
     
     Not required
-
-
     
     </td>
     </tr>

@@ -18,49 +18,35 @@ With this release SAPUI5 is upgraded from version 1.104 to 1.105.
 
 Version
 
-
-
 </th>
 <th valign="top">
 
 Type
-
-
 
 </th>
 <th valign="top">
 
 Category
 
-
-
 </th>
 <th valign="top">
 
 Title
-
-
 
 </th>
 <th valign="top">
 
 Description
 
-
-
 </th>
 <th valign="top">
 
 Action
 
-
-
 </th>
 <th valign="top">
 
 Available as of
-
-
 
 </th>
 </tr>
@@ -69,28 +55,20 @@ Available as of
 
 1.105 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.List`** 
-
-
 
 </td>
 <td valign="top">
@@ -109,21 +87,15 @@ Control
 
 <sub>Changed•Control•Info Only•1.105</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-08-11
-
-
 
 </td>
 </tr>
@@ -132,28 +104,20 @@ Info Only
 
 1.105 
 
-
-
 </td>
 <td valign="top">
 
 Deprecated 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **Deprecations** 
-
-
 
 </td>
 <td valign="top">
@@ -164,21 +128,15 @@ There are currently no major deprecations. For a complete list of all deprecatio
 
 <sub>Deprecated•Feature•Info Only•1.105</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-08-11
-
-
 
 </td>
 </tr>
@@ -187,28 +145,20 @@ Info Only
 
 1.105 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.comp.smartfilterbar.SmartFilterBar`** 
-
-
 
 </td>
 <td valign="top">
@@ -219,21 +169,15 @@ We have introduced a new button in the header of the `Adapt Filters` dialog. As 
 
 <sub>Changed•Control•Info Only•1.105</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-08-11
-
-
 
 </td>
 </tr>
@@ -242,28 +186,20 @@ Info Only
 
 1.105 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.comp.smartfield.SmartField`** 
-
-
 
 </td>
 <td valign="top">
@@ -285,21 +221,15 @@ For more information, see the [Sample](https://ui5.sap.com/#/entity/sap.ui.comp.
 
 <sub>Changed•Control•Info Only•1.105</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-08-11
-
-
 
 </td>
 </tr>
@@ -308,28 +238,20 @@ Info Only
 
 1.105 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.integration.widgets.Card`** 
-
-
 
 </td>
 <td valign="top">
@@ -340,21 +262,15 @@ We have introduced the `tooltip` property, which is used to provide more informa
 
 <sub>Changed•Control•Info Only•1.105</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-08-11
-
-
 
 </td>
 </tr>
@@ -363,28 +279,20 @@ Info Only
 
 1.105 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.IllustratedMessage`** 
-
-
 
 </td>
 <td valign="top">
@@ -395,21 +303,15 @@ We have enabled vertical responsiveness for the control. The `sap.m.IllustratedM
 
 <sub>Changed•Control•Info Only•1.105</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-08-11
-
-
 
 </td>
 </tr>
@@ -418,28 +320,20 @@ Info Only
 
 1.105 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.Dialog`** 
-
-
 
 </td>
 <td valign="top">
@@ -450,21 +344,15 @@ We have enabled a new keyboard shortcut for `sap.m.Dialog` with a footer button 
 
 <sub>Changed•Control•Info Only•1.105</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-08-11
-
-
 
 </td>
 </tr>
@@ -473,28 +361,20 @@ Info Only
 
 1.105 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **SAPUI5 OData V4 Model** 
-
-
 
 </td>
 <td valign="top">
@@ -507,21 +387,15 @@ For more information, see [Recursive Hierarchy](../04_Essentials/extension-for-d
 
 <sub>Changed•Feature•Info Only•1.105</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-08-11
-
-
 
 </td>
 </tr>
@@ -530,28 +404,20 @@ Info Only
 
 1.105 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 SAP Fiori Elements 
 
-
-
 </td>
 <td valign="top">
 
 **SAP Fiori elements for OData V2** 
-
-
 
 </td>
 <td valign="top">
@@ -567,21 +433,15 @@ The following changes and new features are available for SAP Fiori elements for 
 
 <sub>Changed•SAP Fiori Elements•Info Only•1.105</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-08-11
-
-
 
 </td>
 </tr>
@@ -590,28 +450,20 @@ Info Only
 
 1.105 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 SAP Fiori Elements 
 
-
-
 </td>
 <td valign="top">
 
 **SAP Fiori elements for OData V4** 
-
-
 
 </td>
 <td valign="top">
@@ -620,28 +472,22 @@ SAP Fiori Elements
 
 The following changes and new features are available for SAP Fiori elements for OData V4:
 
--   You can now link the `Table` building block to a `FilterBar` that is defined in the same view, or to a different one, by referencing the ID of the `FilterBar`. For more information, see  <?sap-ot O2O class="- topic/xref " href="24c1304739dd4f19af0ce2482c4d9bbe.xml" text="Building Blocks" desc="" xtrc="xref:3" xtrf="file:/home/builder/src/dita-all/zyl1693565473561/loioa82e269bbb584cfcbdbd3ae8765d8e7f_en-US/src/content/localization/en-us/78c4f0ad0bf84fcbbd548a92f8f1d5a2.xml" ?> .
+-   You can now link the `Table` building block to a `FilterBar` that is defined in the same view, or to a different one, by referencing the ID of the `FilterBar`. For more information, see [Building Blocks](../06_SAP_Fiori_Elements/building-blocks-24c1304.md).
 
 -   You can now define a custom filter as mandatory. For more information, see the section *Custom Filter Fields Marked as Mandatory* in [Adding Custom Fields to the Filter Bar](../06_SAP_Fiori_Elements/adding-custom-fields-to-the-filter-bar-5fb9f57.md).
 
 
 <sub>Changed•SAP Fiori Elements•Info Only•1.105</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-08-11
-
-
 
 </td>
 </tr>
@@ -650,28 +496,20 @@ Info Only
 
 1.105 
 
-
-
 </td>
 <td valign="top">
 
 UI Changed 
-
-
 
 </td>
 <td valign="top">
 
 Announcement 
 
-
-
 </td>
 <td valign="top">
 
 **Stricter Validation of Decimal and Grouping Separators** 
-
-
 
 </td>
 <td valign="top">
@@ -685,21 +523,15 @@ If a user added grouping separators when entering a number, the parsing logic ig
 
 <sub>UI Changed•Announcement•Info Only•1.105</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-08-11
-
-
 
 </td>
 </tr>
@@ -708,28 +540,20 @@ Info Only
 
 1.105 
 
-
-
 </td>
 <td valign="top">
 
 UI Changed 
-
-
 
 </td>
 <td valign="top">
 
 Announcement 
 
-
-
 </td>
 <td valign="top">
 
 **Draft-Enabled Object Pages: Entries Validated on Choosing *Enter*** 
-
-
 
 </td>
 <td valign="top">
@@ -743,21 +567,15 @@ Data entered in a form or table is currently only validated after the user choos
 
 <sub>UI Changed•Announcement•Info Only•1.105</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-08-11
-
-
 
 </td>
 </tr>
@@ -766,28 +584,20 @@ Info Only
 
 1.105 
 
-
-
 </td>
 <td valign="top">
 
 UI Changed 
-
-
 
 </td>
 <td valign="top">
 
 Announcement
 
-
-
 </td>
 <td valign="top">
 
 **Object Pages: Data Entry No Longer Blocked by Busy Indicator** 
-
-
 
 </td>
 <td valign="top">
@@ -801,21 +611,15 @@ In certain cases, a busy indicator unneccessarily prevents the user from enterin
 
 <sub>UI Changed•Announcement•Info Only•1.105</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-08-11
-
-
 
 </td>
 </tr>
@@ -824,28 +628,20 @@ Info Only
 
 1.105 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Announcement 
 
-
-
 </td>
 <td valign="top">
 
 **Deactivation of Default Time Zone Configuration Feature** 
-
-
 
 </td>
 <td valign="top">
@@ -878,21 +674,15 @@ We plan to bring this feature back in a different form at a later point in time.
 
 <sub>Changed•Announcement•Info Only•1.105</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-08-11
-
-
 
 </td>
 </tr>
@@ -900,6 +690,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.118](what-s-new-in-sapui5-1-118-3eecbde.md "With this release SAPUI5 is upgraded from version 1.117 to 1.118.")
 
 [What's New in SAPUI5 1.117](what-s-new-in-sapui5-1-117-029d3b4.md "With this release SAPUI5 is upgraded from version 1.116 to 1.117.")
 

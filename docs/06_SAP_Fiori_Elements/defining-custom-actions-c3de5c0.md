@@ -31,14 +31,10 @@ You can specify the following information and extend the manifest files as descr
 
 Property
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -46,8 +42,6 @@ Description
 <td valign="top">
 
 `<entity set>` 
-
-
 
 </td>
 <td valign="top">
@@ -66,14 +60,10 @@ Entity set that is displayed on the analytical list page. \(For example `ZCostCe
 
 `<Action 1>`, `<Action 2>`, etc.
 
-
-
 </td>
 <td valign="top">
 
 The names of actions.
-
-
 
 </td>
 </tr>
@@ -82,14 +72,10 @@ The names of actions.
 
 `<id>` 
 
-
-
 </td>
 <td valign="top">
 
 The ID that is used for the action button.
-
-
 
 </td>
 </tr>
@@ -98,14 +84,10 @@ The ID that is used for the action button.
 
 `<button text>` 
 
-
-
 </td>
 <td valign="top">
 
 The `nullText` that is displayed on the button \(typically a binding to an i18n entry\). For example, `null<button text>nullnull{i18n>MY_BUTTON_TEXT}` 
-
-
 
 </td>
 </tr>
@@ -114,14 +96,10 @@ The `nullText` that is displayed on the button \(typically a binding to an i18n 
 
 `<handler function>` 
 
-
-
 </td>
 <td valign="top">
 
 The handler function that is called when the user selects the action button.
-
-
 
 </td>
 </tr>
@@ -129,8 +107,6 @@ The handler function that is called when the user selects the action button.
 <td valign="top">
 
 `<global>` \(required\)
-
-
 
 </td>
 <td valign="top">
@@ -149,14 +125,10 @@ Indicates whether this is a global action. The default value is `false`.
 
 `<requiresSelection>` \(optional: relevant only for table toolbar actions in the analytical list page\)
 
-
-
 </td>
 <td valign="top">
 
 Indicates whether the action requires a selection of items. The default value is `true`.
-
-
 
 </td>
 </tr>
@@ -165,14 +137,10 @@ Indicates whether the action requires a selection of items. The default value is
 
 `<determining>` \(optional: relevant only for the analytical list page actions\)
 
-
-
 </td>
 <td valign="top">
 
 Indicates whether the action should be displayed in the footer of the page. The default value is `false`.
-
-
 
 </td>
 </tr>
@@ -180,8 +148,6 @@ Indicates whether the action should be displayed in the footer of the page. The 
 <td valign="top">
 
 `<command>` 
-
-
 
 </td>
 <td valign="top">

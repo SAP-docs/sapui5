@@ -87,21 +87,15 @@ To run an app in an environment in which CSP has been enabled, SAPUI5 requires t
 
 Directive
 
-
-
 </th>
 <th valign="top" align="center" colspan="4">
 
 Sources Required by the SAPUI5 Framework
 
-
-
 </th>
 <th valign="top" align="center">
 
 Sources Required by the App
-
-
 
 </th>
 </tr>
@@ -112,35 +106,25 @@ Sources Required by the App
 
 \(equals `'self'` if SAPUI5 is hosted with the app\)
 
-
-
 </th>
 <th valign="top">
 
 `data:`
-
-
 
 </th>
 <th valign="top">
 
 `blob:`
 
-
-
 </th>
 <th valign="top">
 
 Other Sources
 
-
-
 </th>
 <th valign="top">
 
 Custom Sources \(Including 'self' for the App's Own Origin\)
-
-
 
 </th>
 </tr>
@@ -149,28 +133,20 @@ Custom Sources \(Including 'self' for the App's Own Origin\)
 
 `script-src`
 
-
-
 </td>
 <td valign="top" align="center">
 
 <span style="color:#007833;"><span class="SAP-icons"></span></span>
 
-
-
 </td>
 <td valign="top">
 
  
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 <td valign="top">
@@ -182,7 +158,6 @@ Required for synchronous loading of JavaScript resources.
 Required for the following libraries:
 
 -   `sap.ca.ui` and scaffolding framework
--   `sap.landvisz`
 -   `sap.makit`
 -   `sap.me`
 -   `sap.ui.commons`
@@ -205,8 +180,6 @@ Certain libraries at least partly still require `'unsafe-eval'`, including the f
 
 The above list assumes that the app runs using library preloads \(recommended, see [Ensure that Library Preloads are Enabled](performance-speed-up-your-app-408b40e.md#loio408b40efed3c416681e1bd8cdd8910d4__section_LibraryPreloads)\). If the appication runs without preloads, more libraries require `unsafe-eval`.
 
-
-
 </td>
 <td valign="top">
 
@@ -222,28 +195,20 @@ The above list assumes that the app runs using library preloads \(recommended, s
 
 `style-src`
 
-
-
 </td>
 <td valign="top" align="center">
 
 <span style="color:#007833;"><span class="SAP-icons"></span></span>
 
-
-
 </td>
 <td valign="top">
 
  
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 <td valign="top">
@@ -253,7 +218,6 @@ The above list assumes that the app runs using library preloads \(recommended, s
 Required for the following libraries:
 
 -   `sap.ca.ui` and scaffolding framework
--   `sap.landvisz`
 -   `sap.makit`
 -   `sap.me`
 -   `sap.ui.richtexteditor`
@@ -291,42 +255,30 @@ Certain libraries at least partly still require `'unsafe-inline'`, including:
 
 `img-src`
 
-
-
 </td>
 <td valign="top" align="center">
 
 <span style="color:#007833;"><span class="SAP-icons"></span></span>
 
-
-
 </td>
 <td valign="top">
 
 May be required by some specific SAPUI5 functionality.
 
-
-
 </td>
 <td valign="top">
 
 May be required by some specific SAPUI5 functionality.
-
-
 
 </td>
 <td valign="top">
 
  
 
-
-
 </td>
 <td valign="top">
 
 May require `'self'` or additional locations for application-specific images \(such as custom themes or images in the back end\).
-
-
 
 </td>
 </tr>
@@ -335,42 +287,30 @@ May require `'self'` or additional locations for application-specific images \(s
 
 `font-src`
 
-
-
 </td>
 <td valign="top" align="center">
 
 <span style="color:#007833;"><span class="SAP-icons"></span></span>
-
-
 
 </td>
 <td valign="top">
 
 May be required by some specific SAPUI5 functionality.
 
-
-
 </td>
 <td valign="top">
 
  
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 <td valign="top">
 
 May require `'self'` or additional locations for application-specific fonts.
-
-
 
 </td>
 </tr>
@@ -379,42 +319,30 @@ May require `'self'` or additional locations for application-specific fonts.
 
 `frame-src`
 
-
-
 </td>
 <td valign="top">
 
 Required for using the support assistant and/or the diagnostics tool. Also required to avoid a fallback to `child-src`.\*
 
-
-
 </td>
 <td valign="top">
 
 May be required by some specific SAPUI5 functionality.
 
-
-
 </td>
 <td valign="top">
 
 May be required by some specific SAPUI5 functionality.
-
-
 
 </td>
 <td valign="top">
 
  
 
-
-
 </td>
 <td valign="top">
 
 May require additional locations depending on the integration, application, or test scenario.
-
-
 
 </td>
 </tr>
@@ -423,42 +351,30 @@ May require additional locations depending on the integration, application, or t
 
 `worker-src`
 
-
-
 </td>
 <td valign="top" align="center">
 
 <span style="color:#007833;"><span class="SAP-icons"></span></span>
 
+</td>
+<td valign="top">
 
+May be required by some specific SAPUI5 functionality.
 
 </td>
 <td valign="top">
 
 May be required by some specific SAPUI5 functionality.
 
-
-
-</td>
-<td valign="top">
-
-May be required by some specific SAPUI5 functionality.
-
-
-
 </td>
 <td valign="top">
 
  
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -467,42 +383,30 @@ May be required by some specific SAPUI5 functionality.
 
 `child-src`\*\*
 
-
-
 </td>
 <td valign="top" align="center">
 
 <span style="color:#007833;"><span class="SAP-icons"></span></span>
 
+</td>
+<td valign="top">
 
+May be required by some specific SAPUI5 functionality.
 
 </td>
 <td valign="top">
 
 May be required by some specific SAPUI5 functionality.
 
-
-
-</td>
-<td valign="top">
-
-May be required by some specific SAPUI5 functionality.
-
-
-
 </td>
 <td valign="top">
 
  
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -511,42 +415,30 @@ May be required by some specific SAPUI5 functionality.
 
 `connect-src`
 
-
-
 </td>
 <td valign="top" align="center">
 
 <span style="color:#007833;"><span class="SAP-icons"></span></span>
 
-
-
 </td>
 <td valign="top">
 
  
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 <td valign="top">
 
 Some specific SAPUI5 functionality may require `wss:`.
 
-
-
 </td>
 <td valign="top">
 
 Requires `'self'` for loading application resources.
-
-
 
 </td>
 </tr>
@@ -571,21 +463,15 @@ The following functions and features require additional CSP source entries or ha
 
 Library
 
-
-
 </th>
 <th valign="top">
 
 Topic
 
-
-
 </th>
 <th valign="top">
 
 Comment
-
-
 
 </th>
 </tr>
@@ -594,8 +480,6 @@ Comment
 
 <code><b>script-src 'unsafe-eval'</b></code>
 
-
-
 </td>
 </tr>
 <tr>
@@ -603,21 +487,15 @@ Comment
 
 `sap.ui.support`
 
-
-
 </td>
 <td valign="top">
 
 Support Assistant - Temporary Rules
 
-
-
 </td>
 <td valign="top">
 
 For temporary rules in the Support Assistant, dynamic code execution is essential, so it can't be removed. Support Assistant detects whether dynamic code execution is allowed and informs the user if temporary rules can be used or not.
-
-
 
 </td>
 </tr>
@@ -626,21 +504,15 @@ For temporary rules in the Support Assistant, dynamic code execution is essentia
 
 `sap.ushell`
 
-
-
 </td>
 <td valign="top">
 
 Search, App Finder, Custom Tiles
 
-
-
 </td>
 <td valign="top">
 
 `script-src 'unsafe-eval'` is required for the App Finder and the rendering of custom tiles. It's also required to start the search function via a deep link.
-
-
 
 </td>
 </tr>
@@ -649,21 +521,15 @@ Search, App Finder, Custom Tiles
 
 `sap.viz`
 
-
-
 </td>
 <td valign="top">
 
 VizContainer, typed charts
 
-
-
 </td>
 <td valign="top">
 
 VizContainer and old typed charts require synchronous loading of JavaScript.
-
-
 
 </td>
 </tr>
@@ -672,21 +538,15 @@ VizContainer and old typed charts require synchronous loading of JavaScript.
 
 `unified.shell`
 
-
-
 </td>
 <td valign="top">
 
 Factsheets, Smart Business
 
-
-
 </td>
 <td valign="top">
 
 Factsheets and Smart Business \(tiles\) have not been fully adopted to run without synchronous loading yet.
-
-
 
 </td>
 </tr>
@@ -695,8 +555,6 @@ Factsheets and Smart Business \(tiles\) have not been fully adopted to run witho
 
 <code><b>script-src 'unsafe-inline'</b></code>
 
-
-
 </td>
 </tr>
 <tr>
@@ -704,14 +562,10 @@ Factsheets and Smart Business \(tiles\) have not been fully adopted to run witho
 
 `sap.ui.richtexteditor`
 
-
-
 </td>
 <td valign="top">
 
 RichTextEditor
-
-
 
 </td>
 <td valign="top">
@@ -723,16 +577,12 @@ The following cases can cause CSP-relevant issues for inline scripts when the Ri
 
 See also [sap.ui.richtexteditor](../10_More_About_Controls/sap-ui-richtexteditor-d4f3f15.md).
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top" align="center" colspan="3">
 
 <code><b>script-src 'wasm-eval'</b></code>
-
-
 
 </td>
 </tr>
@@ -741,14 +591,10 @@ See also [sap.ui.richtexteditor](../10_More_About_Controls/sap-ui-richtexteditor
 
 `sap.ui.core`
 
-
-
 </td>
 <td valign="top">
 
 Hyphenation
-
-
 
 </td>
 <td valign="top">
@@ -757,16 +603,12 @@ Hyphenation
 
 When native hyphenation is not available, a third-party library \(Hyphenopoly\) is used. This library uses WASM, which leads to CSP issues due to browser limitations. There is a fallback to `asm.js`, if WASM can't be used.
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top" align="center" colspan="3">
 
 <code><b>style-src 'unsafe-inline'</b></code>
-
-
 
 </td>
 </tr>
@@ -775,14 +617,10 @@ When native hyphenation is not available, a third-party library \(Hyphenopoly\) 
 
 `sap.m` and others
 
-
-
 </td>
 <td valign="top">
 
 Controls that display provided HTML text \(for example `sap.m.FormattedText` and `sap.ui.core.HTML`\)
-
-
 
 </td>
 <td valign="top">
@@ -791,8 +629,6 @@ Certain controls display provided HTML text, for example `sap.m.FormattedText`. 
 
 It's recommended to use styling with the `class` attribute and external stylesheets.
 
-
-
 </td>
 </tr>
 <tr>
@@ -800,21 +636,15 @@ It's recommended to use styling with the `class` attribute and external styleshe
 
 `sap.ui.vk`
 
-
-
 </td>
 <td valign="top">
 
 2D drawings \(`sap.ui.vk.svg.Viewport`\)
 
-
-
 </td>
 <td valign="top">
 
 When a 2D drawing is loaded, `sap.ui.vk.svg.Viewport` creates an SVG document that uses inline styles to define SVG drawing elements, colors, line styles, etc.
-
-
 
 </td>
 </tr>
@@ -823,21 +653,15 @@ When a 2D drawing is loaded, `sap.ui.vk.svg.Viewport` creates an SVG document th
 
 `sap.ushell`
 
-
-
 </td>
 <td valign="top">
 
 Company Logo
 
-
-
 </td>
 <td valign="top">
 
 A console error related to the loading of the company logo is logged during startup of the SAP Fiori launchpad. Eventually, the logo is loaded as expected.
-
-
 
 </td>
 </tr>
@@ -846,21 +670,15 @@ A console error related to the loading of the company logo is logged during star
 
 `sap.viz`
 
-
-
 </td>
 <td valign="top">
 
 VizContainer, typed charts
 
-
-
 </td>
 <td valign="top">
 
 VizContainer and old typed charts require synchronous loading of JavaScript.
-
-
 
 </td>
 </tr>
@@ -869,21 +687,15 @@ VizContainer and old typed charts require synchronous loading of JavaScript.
 
 `unified.shell`
 
-
-
 </td>
 <td valign="top">
 
 Factsheets, Smart Business
 
-
-
 </td>
 <td valign="top">
 
 Factsheets and Smart Business \(tiles\) have not been fully adopted to run without inline styles yet.
-
-
 
 </td>
 </tr>

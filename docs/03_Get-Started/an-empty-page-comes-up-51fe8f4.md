@@ -80,14 +80,10 @@ This could happen if you wrote the tag of the control with lowercase letters, be
 
 Correct Example
 
-
-
 </th>
 <th valign="top">
 
 Incorrect Example
-
-
 
 </th>
 </tr>
@@ -96,16 +92,12 @@ Incorrect Example
 
 <code>&lt;<b>B</b>utton text="Click me" /&gt;</code> 
 
-
-
 </td>
 <td valign="top">
 
 <code>&lt;<b>b</b>utton text="Click me" /&gt;</code>
 
 Error message: `Uncaught Error: failed to load 'sap/m/button.js'`
-
-
 
 </td>
 </tr>

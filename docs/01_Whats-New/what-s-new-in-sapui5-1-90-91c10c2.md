@@ -15,49 +15,35 @@ With this release SAPUI5 is upgraded from version 1.89 to 1.90.
 
 Version
 
-
-
 </th>
 <th valign="top">
 
 Type
-
-
 
 </th>
 <th valign="top">
 
 Category
 
-
-
 </th>
 <th valign="top">
 
 Title
-
-
 
 </th>
 <th valign="top">
 
 Description
 
-
-
 </th>
 <th valign="top">
 
 Action
 
-
-
 </th>
 <th valign="top">
 
 Available as of
-
-
 
 </th>
 </tr>
@@ -66,28 +52,20 @@ Available as of
 
 1.90 
 
-
-
 </td>
 <td valign="top">
 
 New 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.NotificationList`** 
-
-
 
 </td>
 <td valign="top">
@@ -98,21 +76,15 @@ The control provides a container for `sap.m.NotificationListGroup` and `sap.m.No
 
 <sub>New•Control•Info Only•1.90</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only
 
-
-
 </td>
 <td valign="top">
 
 2021-05-20
-
-
 
 </td>
 </tr>
@@ -121,28 +93,20 @@ Info Only
 
 1.90 
 
-
-
 </td>
 <td valign="top">
 
 New 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **Key User Adaptation: Local Reset of Controls** 
-
-
 
 </td>
 <td valign="top">
@@ -156,21 +120,15 @@ In UI adaptation mode, key users can now remove all key user changes for specifi
 
 <sub>New•Feature•Info Only•1.90</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-05-20
-
-
 
 </td>
 </tr>
@@ -179,28 +137,20 @@ Info Only
 
 1.90 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **One Page Acceptance Tests \(OPA5\)** 
-
-
 
 </td>
 <td valign="top">
@@ -211,21 +161,15 @@ You can now simulate scroll in controls that provide a scrollable area. For more
 
 <sub>Changed•Feature•Info Only•1.90</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-05-20
-
-
 
 </td>
 </tr>
@@ -234,28 +178,20 @@ Info Only
 
 1.90 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **UI Adaptation Support for OData V2 `SmartVariantManagement` Controls** 
-
-
 
 </td>
 <td valign="top">
@@ -268,21 +204,15 @@ On the design-time side, this type of variant is ready to be implemented in SAP'
 
 <sub>Changed•Feature•Info Only•1.90</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-05-20
-
-
 
 </td>
 </tr>
@@ -291,28 +221,20 @@ Info Only
 
 1.90 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **Accessibility** 
-
-
 
 </td>
 <td valign="top">
@@ -323,21 +245,15 @@ We are now using JAWS 2021 as reference testing environment in SAPUI5. For more 
 
 <sub>Changed•Feature•Info Only•1.90</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-05-20
-
-
 
 </td>
 </tr>
@@ -346,28 +262,20 @@ Info Only
 
 1.90 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`P13nDialog`** 
-
-
 
 </td>
 <td valign="top">
@@ -378,21 +286,15 @@ The filter panel of the table personalization dialog now supports the `sap.m.Com
 
 <sub>Changed•Control•Info Only•1.90</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-05-20
-
-
 
 </td>
 </tr>
@@ -401,28 +303,20 @@ Info Only
 
 1.90 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.f.IllustratedMessage` \(Experimental\)** 
-
-
 
 </td>
 <td valign="top">
@@ -438,21 +332,15 @@ We have implemented two new samples for specific scenarios:
 
 <sub>Changed•Control•Info Only•1.90</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-05-20
-
-
 
 </td>
 </tr>
@@ -461,28 +349,20 @@ Info Only
 
 1.90 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.gantt`** 
-
-
 
 </td>
 <td valign="top">
@@ -493,21 +373,15 @@ Key users can now use the new customization feature to make changes to the user 
 
 <sub>Changed•Control•Info Only•1.90</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-05-20
-
-
 
 </td>
 </tr>
@@ -516,28 +390,20 @@ Info Only
 
 1.90 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.Dialog`** 
-
-
 
 </td>
 <td valign="top">
@@ -548,21 +414,15 @@ The control adopts the `setWithinArea` feature of `sap.ui.core.Popup`. Now, when
 
 <sub>Changed•Control•Info Only•1.90</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-05-20
-
-
 
 </td>
 </tr>
@@ -571,28 +431,20 @@ Info Only
 
 1.90 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.IconTabBar`** 
-
-
 
 </td>
 <td valign="top">
@@ -603,21 +455,15 @@ We have introduced a new `TabsOverflowMode` property, which defines the overflow
 
 <sub>Changed•Control•Info Only•1.90</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-05-20
-
-
 
 </td>
 </tr>
@@ -626,28 +472,20 @@ Info Only
 
 1.90 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.Input`, `sap.m.MultiInput`** 
-
-
 
 </td>
 <td valign="top">
@@ -658,21 +496,15 @@ We have introduced a new property called `enableTableAutoPopinMode`. The propert
 
 <sub>Changed•Control•Info Only•1.90</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-05-20
-
-
 
 </td>
 </tr>
@@ -681,28 +513,20 @@ Info Only
 
 1.90 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.InputBase`** 
-
-
 
 </td>
 <td valign="top">
@@ -713,21 +537,15 @@ We have introduced a new association called `ariaDescribedBy`. The association i
 
 <sub>Changed•Control•Info Only•1.90</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-05-20
-
-
 
 </td>
 </tr>
@@ -736,28 +554,20 @@ Info Only
 
 1.90 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.TimePicker`** 
-
-
 
 </td>
 <td valign="top">
@@ -772,21 +582,15 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.Ti
 
 <sub>Changed•Control•Info Only•1.90</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-05-20
-
-
 
 </td>
 </tr>
@@ -795,28 +599,20 @@ Info Only
 
 1.90 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.comp.smartfield.SmartField`** 
-
-
 
 </td>
 <td valign="top">
@@ -827,21 +623,15 @@ The `SmartField` control now supports `com.sap.vocabularies.UI.v1.Hidden` annota
 
 <sub>Changed•Control•Info Only•1.90</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-05-20
-
-
 
 </td>
 </tr>
@@ -850,28 +640,20 @@ Info Only
 
 1.90 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.comp.smarttable.SmartTable`** 
-
-
 
 </td>
 <td valign="top">
@@ -885,21 +667,15 @@ Control
 
 <sub>Changed•Control•Info Only•1.90</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-05-20
-
-
 
 </td>
 </tr>
@@ -908,28 +684,20 @@ Info Only
 
 1.90 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.integration.widgets.Card`** 
-
-
 
 </td>
 <td valign="top">
@@ -943,21 +711,15 @@ Control
 
 <sub>Changed•Control•Info Only•1.90</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-05-20
-
-
 
 </td>
 </tr>
@@ -966,28 +728,20 @@ Info Only
 
 1.90 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 SAP Fiori Elements 
 
-
-
 </td>
 <td valign="top">
 
 **SAP Fiori elements for OData V2** 
-
-
 
 </td>
 <td valign="top">
@@ -1013,21 +767,15 @@ The following changes and new features are available for SAP Fiori elements for 
 
 <sub>Changed•SAP Fiori Elements•Info Only•1.90</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-05-20
-
-
 
 </td>
 </tr>
@@ -1036,28 +784,20 @@ Info Only
 
 1.90 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 SAP Fiori Elements 
 
-
-
 </td>
 <td valign="top">
 
 **SAP Fiori elements for OData V4** 
-
-
 
 </td>
 <td valign="top">
@@ -1083,21 +823,15 @@ The following changes and new features are available for SAP Fiori elements for 
 
 <sub>Changed•SAP Fiori Elements•Info Only•1.90</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-05-20
-
-
 
 </td>
 </tr>
@@ -1105,6 +839,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.118](what-s-new-in-sapui5-1-118-3eecbde.md "With this release SAPUI5 is upgraded from version 1.117 to 1.118.")
 
 [What's New in SAPUI5 1.117](what-s-new-in-sapui5-1-117-029d3b4.md "With this release SAPUI5 is upgraded from version 1.116 to 1.117.")
 

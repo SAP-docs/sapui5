@@ -13,14 +13,10 @@ To configure a smart filter bar, enter the following:
 
 Field
 
-
-
 </th>
 <th valign="top">
 
 Explanation
-
-
 
 </th>
 </tr>
@@ -29,14 +25,10 @@ Explanation
 
 Service
 
-
-
 </td>
 <td valign="top">
 
 Path to the OData service root. If you use ABAP CDS views or BW OData queries, select a service from the value help, which lists all services available on SAP Gateway. If you use calculation views, you must enter the service manually.
-
-
 
 </td>
 </tr>
@@ -45,14 +37,10 @@ Path to the OData service root. If you use ABAP CDS views or BW OData queries, s
 
 Entity Set
 
-
-
 </td>
 <td valign="top">
 
 Entity set that corresponds to the data source, for example, the SAP HANA view.
-
-
 
 </td>
 </tr>

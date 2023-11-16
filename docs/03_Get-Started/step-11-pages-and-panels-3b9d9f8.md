@@ -12,7 +12,7 @@ After all the work on the app structure it’s time to improve the look of our a
   
 **A panel is now displaying the controls from the previous steps**
 
-![](images/UI5_Walkthrough_Step_11_97feb54.png "A panel is now displaying the controls from the previous steps")
+![The graphic has an explanatory text.](images/UI5_Walkthrough_Step_11_97feb54.png "A panel is now displaying the controls from the previous steps")
 
 
 

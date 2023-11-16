@@ -8,11 +8,7 @@ As you know SAPUI5 is all about HTML5. Let’s get started with building a first
 
 ## Preview
 
-  
-  
-**The browser shows the text "Hello World"**
-
-![The graphic has an explanatory text](images/UI5_Walkthrough_Step_01_1dd4563.png "The browser shows the text "Hello World"")
+![The browser shows the text "Hello World"](images/UI5_Walkthrough_Step_01_1dd4563.png)
 
 
 

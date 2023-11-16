@@ -27,14 +27,10 @@ The properties used in the `representation type` object denote the following:
 
 Properties
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -43,14 +39,10 @@ Description
 
 `id` 
 
-
-
 </td>
 <td valign="top">
 
 Unique ID of type string.
-
-
 
 </td>
 </tr>
@@ -59,14 +51,10 @@ Unique ID of type string.
 
 `constructor` 
 
-
-
 </td>
 <td valign="top">
 
 Defines the implementing function object of the representation.
-
-
 
 </td>
 </tr>
@@ -75,14 +63,10 @@ Defines the implementing function object of the representation.
 
 `picture` 
 
-
-
 </td>
 <td valign="top">
 
 Icon indicating the representation type.
-
-
 
 </td>
 </tr>
@@ -91,14 +75,10 @@ Icon indicating the representation type.
 
 `label` 
 
-
-
 </td>
 <td valign="top">
 
 Defines the label text.
-
-
 
 </td>
 </tr>

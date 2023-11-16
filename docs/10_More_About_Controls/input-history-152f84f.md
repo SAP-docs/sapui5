@@ -74,14 +74,10 @@ In addition to the SAP Fiori launchpad property that needs to be enabled, we've 
 
 Control Type
 
-
-
 </th>
 <th valign="top">
 
 Default Value
-
-
 
 </th>
 </tr>
@@ -90,14 +86,10 @@ Default Value
 
 `Input` 
 
-
-
 </td>
 <td valign="top">
 
 `true`
-
-
 
 </td>
 </tr>
@@ -106,14 +98,10 @@ Default Value
 
 `ComboBox`
 
-
-
 </td>
 <td valign="top">
 
 `false`
-
-
 
 </td>
 </tr>
@@ -128,14 +116,10 @@ These are the values for the `SmartFilterBar` filter fields:
 
 Control Type
 
-
-
 </th>
 <th valign="top">
 
 Default Value
-
-
 
 </th>
 </tr>
@@ -144,14 +128,10 @@ Default Value
 
 `MultiInput`
 
-
-
 </td>
 <td valign="top">
 
 `true`
-
-
 
 </td>
 </tr>
@@ -160,14 +140,10 @@ Default Value
 
 `MultiComboBox`
 
-
-
 </td>
 <td valign="top">
 
 `false`
-
-
 
 </td>
 </tr>

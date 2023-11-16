@@ -21,14 +21,10 @@ To create or edit a hierarchical step, enter the following information:
 
 Field
 
-
-
 </th>
 <th valign="top">
 
 Explanation
-
-
 
 </th>
 </tr>
@@ -37,14 +33,10 @@ Explanation
 
 Step Title
 
-
-
 </td>
 <td valign="top">
 
 The title displayed in the analysis step gallery and with the thumbnails in the analysis path display.
-
-
 
 </td>
 </tr>
@@ -53,14 +45,10 @@ The title displayed in the analysis step gallery and with the thumbnails in the 
 
 Step Long Title
 
-
-
 </td>
 <td valign="top">
 
 The title displayed above the representation in the analysis step display. If no long title is defined, the title entered in the *Step Title* field is used instead.
-
-
 
 </td>
 </tr>
@@ -69,16 +57,12 @@ The title displayed above the representation in the analysis step display. If no
 
 Category Assignments
 
-
-
 </td>
 <td valign="top">
 
 The categories in which the analysis step is displayed in the analysis step gallery. At least one category must be entered here. When first creating a step, this field is already filled with the category in which you create the step. You can enter additional categories so that the step is displayed in all of these categories.
 
 You can also remove category assignments here and you can use this field to change the category assignment of a step by selecting a different category from the value help. This is particularly useful if you copy a step and then want to assign it to a different category.
-
-
 
 </td>
 </tr>
@@ -99,14 +83,10 @@ Here, you enter information for the request that defines the data provisioning f
 
 Field
 
-
-
 </th>
 <th valign="top">
 
 Explanation
-
-
 
 </th>
 </tr>
@@ -115,14 +95,10 @@ Explanation
 
 Service
 
-
-
 </td>
 <td valign="top">
 
 Path to the OData service root. If you use ABAP CDS views or BW OData queries, select a service from the value help, which lists all services available on SAP Gateway. If you use calculation views, you must enter the service manually.
-
-
 
 </td>
 </tr>
@@ -131,14 +107,10 @@ Path to the OData service root. If you use ABAP CDS views or BW OData queries, s
 
 Hierarchical Entity Set
 
-
-
 </td>
 <td valign="top">
 
 Entity set that corresponds to the data source, for example, the SAP HANA view. As soon as a service has been entered, this field is filled automatically.
-
-
 
 </td>
 </tr>
@@ -147,14 +119,10 @@ Entity set that corresponds to the data source, for example, the SAP HANA view. 
 
 Hierarchical Property
 
-
-
 </td>
 <td valign="top">
 
 The property that is provided in a hierarchical form. This property is always displayed as the first column of the hierarchical table. As soon as a service has been entered, this field is filled automatically.
-
-
 
 </td>
 </tr>
@@ -162,8 +130,6 @@ The property that is provided in a hierarchical form. This property is always di
 <td valign="top">
 
 Non-Hierarchical Properties
-
-
 
 </td>
 <td valign="top">
@@ -188,8 +154,6 @@ The properties that are displayed in the following columns of the table. Ensure 
 <td valign="top">
 
 Selectable Property
-
-
 
 </td>
 <td valign="top">
@@ -224,14 +188,10 @@ Define the lookup request that maps the source property to the target properties
 
 Field
 
-
-
 </th>
 <th valign="top">
 
 Explanation
-
-
 
 </th>
 </tr>
@@ -240,14 +200,10 @@ Explanation
 
 Service
 
-
-
 </td>
 <td valign="top">
 
 Path to the OData service root. If you use ABAP CDS views or BW OData queries, select a service from the value help, which lists all services available on SAP Gateway. If you use calculation views, you must enter the service manually.
-
-
 
 </td>
 </tr>
@@ -256,14 +212,10 @@ Path to the OData service root. If you use ABAP CDS views or BW OData queries, s
 
 Entity Set
 
-
-
 </td>
 <td valign="top">
 
 Entity set that corresponds to the SAP HANA view.
-
-
 
 </td>
 </tr>
@@ -272,14 +224,10 @@ Entity set that corresponds to the SAP HANA view.
 
 Target Property
 
-
-
 </td>
 <td valign="top">
 
 Filter properties that the selectable property shall be mapped to. These are filter properties that can be used in the request for subsequent steps.
-
-
 
 </td>
 </tr>
@@ -288,14 +236,10 @@ Filter properties that the selectable property shall be mapped to. These are fil
 
 Keep Selected Property as Filter
 
-
-
 </td>
 <td valign="top">
 
 Determines whether the source filter property is kept in the cumulative filter in addition to the mapped filter properties.
-
-
 
 </td>
 </tr>
@@ -316,14 +260,10 @@ Here, you can assign step-specific navigation targets to your analysis step. At 
 
 Field
 
-
-
 </th>
 <th valign="top">
 
 Explanation
-
-
 
 </th>
 </tr>
@@ -332,14 +272,10 @@ Explanation
 
 Step-Specific
 
-
-
 </td>
 <td valign="top">
 
 Shows the assigned step-specific navigation targets for this step. You can assign additional ones by selecting them from the list of previously created step-specific navigation targets. You can also delete assignments.
-
-
 
 </td>
 </tr>
@@ -348,14 +284,10 @@ Shows the assigned step-specific navigation targets for this step. You can assig
 
 Assigned to All Steps
 
-
-
 </td>
 <td valign="top">
 
 Navigation targets that are relevant for all analysis steps and are always displayed in the *Open In…* menu at runtime. This field is read-only.
-
-
 
 </td>
 </tr>
