@@ -18,49 +18,35 @@ With this release SAPUI5 is upgraded from version 1.115 to 1.116.
 
 Version
 
-
-
 </th>
 <th valign="top">
 
 Type
-
-
 
 </th>
 <th valign="top">
 
 Category
 
-
-
 </th>
 <th valign="top">
 
 Title
-
-
 
 </th>
 <th valign="top">
 
 Description
 
-
-
 </th>
 <th valign="top">
 
 Action
 
-
-
 </th>
 <th valign="top">
 
 Available as of
-
-
 
 </th>
 </tr>
@@ -69,28 +55,20 @@ Available as of
 
 1.116 
 
-
-
 </td>
 <td valign="top">
 
 Deprecated 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **Deprecations** 
-
-
 
 </td>
 <td valign="top">
@@ -101,21 +79,15 @@ There are currently no major deprecations. For a complete list of all deprecatio
 
 <sub>Deprecated•Feature•Info Only•1.116</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-07-13
-
-
 
 </td>
 </tr>
@@ -124,28 +96,20 @@ Info Only
 
 1.116 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.comp.smarttable.SmartTable`** 
-
-
 
 </td>
 <td valign="top">
@@ -156,21 +120,15 @@ We have now added a *Remove All Filters* button to the infobar of the `SmartTabl
 
 <sub>Changed•Control•Info Only•1.116</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-07-13
-
-
 
 </td>
 </tr>
@@ -179,28 +137,20 @@ Info Only
 
 1.116 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 SAP Fiori Elements 
 
-
-
 </td>
 <td valign="top">
 
 **SAP Fiori elements for OData V2** and **SAP Fiori elements for OData V4** 
-
-
 
 </td>
 <td valign="top">
@@ -216,21 +166,15 @@ The following changes and new features are available for SAP Fiori elements for 
 
 <sub>Changed•SAP Fiori Elements•Info Only•1.116</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-07-13
-
-
 
 </td>
 </tr>
@@ -239,28 +183,20 @@ Info Only
 
 1.116 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 SAP Fiori Elements 
 
-
-
 </td>
 <td valign="top">
 
 **SAP Fiori elements for OData V4** 
-
-
 
 </td>
 <td valign="top">
@@ -278,21 +214,15 @@ The following changes and new features are available for SAP Fiori elements for 
 
 <sub>Changed•SAP Fiori Elements•Info Only•1.116</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-07-13
-
-
 
 </td>
 </tr>
@@ -301,28 +231,20 @@ Info Only
 
 1.116 
 
-
-
 </td>
 <td valign="top">
 
 New 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **TypeScript: Supported productively** 
-
-
 
 </td>
 <td valign="top">
@@ -335,21 +257,15 @@ For more information, see [TypeScript Support](../02_Read-Me-First/typescript-su
 
 <sub>New•Feature•Info Only•SAPUI5</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-07-13
-
-
 
 </td>
 </tr>
@@ -358,28 +274,20 @@ Info Only
 
 1.116 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.comp.smartfilterbar.SmartFilterBar`, `sap.ui.comp.smartfield.SmartField`, `sap.ui.comp.valuehelpdialog.ValueHelpDialog`, and `sap.m.P13nConditionPanel`** 
-
-
 
 </td>
 <td valign="top">
@@ -400,21 +308,15 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.c
 
 <sub>Changed•Control•Info Only•1.116</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-07-13
-
-
 
 </td>
 </tr>
@@ -423,28 +325,20 @@ Info Only
 
 1.116 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.comp.valuehelpdialog.ValueHelpDialog`** 
-
-
 
 </td>
 <td valign="top">
@@ -461,21 +355,15 @@ For more information, see the [Smart Filter Bar with Different Annotations](http
 
 <sub>Changed•Control•Info Only•1.116</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-07-13
-
-
 
 </td>
 </tr>
@@ -484,28 +372,20 @@ Info Only
 
 1.116 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.integration.widgets.Card`** 
-
-
 
 </td>
 <td valign="top">
@@ -516,21 +396,15 @@ We have \(experimentally\) introduced a new input field in the Object Card that 
 
 <sub>Changed•Control•Info Only•1.116</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-07-13
-
-
 
 </td>
 </tr>
@@ -539,28 +413,20 @@ Info Only
 
 1.116 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.Menu`** 
-
-
 
 </td>
 <td valign="top">
@@ -571,21 +437,15 @@ Disabled items in the menu are now focusable. This way they can be accessed by s
 
 <sub>Changed•Control•Info Only•1.116</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-07-13
-
-
 
 </td>
 </tr>
@@ -594,28 +454,20 @@ Info Only
 
 1.116 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m` library: Date- and time-related controls** 
-
-
 
 </td>
 <td valign="top">
@@ -626,21 +478,15 @@ We have improved the placeholders of these controls in cases when the placeholde
 
 <sub>Changed•Control•Info Only•1.116</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-07-13
-
-
 
 </td>
 </tr>
@@ -649,28 +495,20 @@ Info Only
 
 1.116 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **Demo Kit: Index of Deprecated APIs with new sorting order** 
-
-
 
 </td>
 <td valign="top">
@@ -683,21 +521,15 @@ For more information, see the [Index of Deprecated APIs](https://ui5.sap.com/#/a
 
 <sub>Changed•Feature•Info Only•1.116</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-07-13
-
-
 
 </td>
 </tr>
@@ -706,28 +538,20 @@ Info Only
 
 1.116 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **Demo Kit: Editable code samples** 
-
-
 
 </td>
 <td valign="top">
@@ -740,21 +564,15 @@ For more information, see the [Samples](https://ui5.sap.com/#/controls).
 
 <sub>Changed•Feature•Info Only•1.116</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-07-13
-
-
 
 </td>
 </tr>
@@ -763,28 +581,20 @@ Info Only
 
 1.116 
 
-
-
 </td>
 <td valign="top">
 
 Deleted 
-
-
 
 </td>
 <td valign="top">
 
 Announcement 
 
-
-
 </td>
 <td valign="top">
 
 **End of Cloud Provisioning for SAPUI5 Versions \(Q2/2023\)** 
-
-
 
 </td>
 <td valign="top">
@@ -829,21 +639,15 @@ For more information, see [UI5 Releases Ending Service in 2023](https://blogs.sa
 
 <sub>Deleted•Announcement•Required•1.116</sub>
 
-
-
 </td>
 <td valign="top">
 
 Required 
 
-
-
 </td>
 <td valign="top">
 
 2023-07-13
-
-
 
 </td>
 </tr>
@@ -852,28 +656,20 @@ Required
 
 1.116 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **Modern ECMAScript Support in SAPUI5** 
-
-
 
 </td>
 <td valign="top">
@@ -888,21 +684,15 @@ For more information, see [Upgrade Your Tools for Modern ECMAScript in UI5](http
 
 <sub>Changed•Feature•Required•1.116</sub>
 
-
-
 </td>
 <td valign="top">
 
 Required 
 
-
-
 </td>
 <td valign="top">
 
 2023-07-13
-
-
 
 </td>
 </tr>
@@ -910,6 +700,8 @@ Required
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.118](what-s-new-in-sapui5-1-118-3eecbde.md "With this release SAPUI5 is upgraded from version 1.117 to 1.118.")
 
 [What's New in SAPUI5 1.117](what-s-new-in-sapui5-1-117-029d3b4.md "With this release SAPUI5 is upgraded from version 1.116 to 1.117.")
 

@@ -15,49 +15,35 @@ With this release SAPUI5 is upgraded from version 1.75 to 1.76.
 
 Version
 
-
-
 </th>
 <th valign="top">
 
 Type
-
-
 
 </th>
 <th valign="top">
 
 Category
 
-
-
 </th>
 <th valign="top">
 
 Title
-
-
 
 </th>
 <th valign="top">
 
 Description
 
-
-
 </th>
 <th valign="top">
 
 Action
 
-
-
 </th>
 <th valign="top">
 
 Available as of
-
-
 
 </th>
 </tr>
@@ -66,28 +52,20 @@ Available as of
 
 1.76 
 
-
-
 </td>
 <td valign="top">
 
 New 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **Team Calendar** 
-
-
 
 </td>
 <td valign="top">
@@ -98,21 +76,15 @@ We have added a new demo application - the Team Calendar. It demonstrates the in
 
 <sub>New•Feature•Info Only•1.76</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only
 
-
-
 </td>
 <td valign="top">
 
 2020-03-26
-
-
 
 </td>
 </tr>
@@ -121,28 +93,20 @@ Info Only
 
 1.76 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **Card Explorer** 
-
-
 
 </td>
 <td valign="top">
@@ -156,21 +120,15 @@ For more information, see [Card Explorer](https://ui5.sap.com/test-resources/sap
 
 <sub>Changed•Feature•Info Only•1.76</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-03-26
-
-
 
 </td>
 </tr>
@@ -179,28 +137,20 @@ Info Only
 
 1.76 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **One Page Acceptance Tests \(OPA5\)** 
-
-
 
 </td>
 <td valign="top">
@@ -211,21 +161,15 @@ We've introduced `Drag` and `Drop` actions to OPA5 to help with the most common 
 
 <sub>Changed•Feature•Info Only•1.76</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-03-26
-
-
 
 </td>
 </tr>
@@ -234,28 +178,20 @@ Info Only
 
 1.76 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **SAPUI5 OData V2 Model** 
-
-
 
 </td>
 <td valign="top">
@@ -270,21 +206,15 @@ The new version of the SAPUI5 OData V2 model introduces the following features:
 
 <sub>Changed•Feature•Info Only•1.76</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-03-26
-
-
 
 </td>
 </tr>
@@ -293,28 +223,20 @@ Info Only
 
 1.76 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **SAPUI5 OData V4 Model** 
-
-
 
 </td>
 <td valign="top">
@@ -336,21 +258,15 @@ For more information, see [OData V4 Model](../04_Essentials/odata-v4-model-5de13
 
 <sub>Changed•Feature•Info Only•1.76</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-03-26
-
-
 
 </td>
 </tr>
@@ -359,28 +275,20 @@ Info Only
 
 1.76 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.f.FlexibleColumnLayout`** 
-
-
 
 </td>
 <td valign="top">
@@ -394,21 +302,15 @@ Control
 
 <sub>Changed•Control•Info Only•1.76</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-03-26
-
-
 
 </td>
 </tr>
@@ -417,28 +319,20 @@ Info Only
 
 1.76 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.FacetFilter`** 
-
-
 
 </td>
 <td valign="top">
@@ -449,21 +343,15 @@ Optimization regarding the initial database service query has been introduced. T
 
 <sub>Changed•Control•Info Only•1.76</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-03-26
-
-
 
 </td>
 </tr>
@@ -472,28 +360,20 @@ Info Only
 
 1.76 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.List`, `sap.m.Table`, `sap.m.Tree`** 
-
-
 
 </td>
 <td valign="top">
@@ -504,21 +384,15 @@ New indication colors are now available \(provided by the `sap.ui.core.Indicatio
 
 <sub>Changed•Control•Info Only•1.76</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-03-26
-
-
 
 </td>
 </tr>
@@ -527,28 +401,20 @@ Info Only
 
 1.76 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.plugins.DataStateIndicator`** 
-
-
 
 </td>
 <td valign="top">
@@ -566,21 +432,15 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.pl
 
 <sub>Changed•Control•Info Only•1.76</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-03-26
-
-
 
 </td>
 </tr>
@@ -589,28 +449,20 @@ Info Only
 
 1.76 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.Table`** 
-
-
 
 </td>
 <td valign="top">
@@ -621,21 +473,15 @@ An automatic pop-in mode has been enabled for the responsive table. For more inf
 
 <sub>Changed•Control•Info Only•1.76</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-03-26
-
-
 
 </td>
 </tr>
@@ -644,28 +490,20 @@ Info Only
 
 1.76 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.comp.smartchart.SmartChart`** 
-
-
 
 </td>
 <td valign="top">
@@ -676,21 +514,15 @@ A more comprehensive message text is now shown if no data is available. The mess
 
 <sub>Changed•Control•Info Only•1.76</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-03-26
-
-
 
 </td>
 </tr>
@@ -699,28 +531,20 @@ Info Only
 
 1.76 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.comp.smartfilterbar.SmartFilterBar`** 
-
-
 
 </td>
 <td valign="top">
@@ -731,21 +555,15 @@ When a user tries to enter any text in interval type fields \(such as `DateTime 
 
 <sub>Changed•Control•Info Only•1.76</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-03-26
-
-
 
 </td>
 </tr>
@@ -754,28 +572,20 @@ Info Only
 
 1.76 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.comp.smartform.SmartForm`** 
-
-
 
 </td>
 <td valign="top">
@@ -786,21 +596,15 @@ We have introduced an empty field indicator for the `sap.ui.comp.smartform.Smart
 
 <sub>Changed•Control•Info Only•1.76</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-03-26
-
-
 
 </td>
 </tr>
@@ -809,28 +613,20 @@ Info Only
 
 1.76 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.comp.ValueHelpDialog`** 
-
-
 
 </td>
 <td valign="top">
@@ -844,21 +640,15 @@ Control
 
 <sub>Changed•Control•Info Only•1.76</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-03-26
-
-
 
 </td>
 </tr>
@@ -867,28 +657,20 @@ Info Only
 
 1.76 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.integration.widgets.Card`** 
-
-
 
 </td>
 <td valign="top">
@@ -902,21 +684,15 @@ Control
 
 <sub>Changed•Control•Info Only•1.76</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-03-26
-
-
 
 </td>
 </tr>
@@ -925,28 +701,20 @@ Info Only
 
 1.76 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.table.AnalyticalTable`, `sap.ui.table.Table`, `sap.ui.table.TreeTable`** 
-
-
 
 </td>
 <td valign="top">
@@ -960,21 +728,15 @@ Control
 
 <sub>Changed•Control•Info Only•1.76</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-03-26
-
-
 
 </td>
 </tr>
@@ -983,28 +745,20 @@ Info Only
 
 1.76 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.table.AnalyticalTable`, `sap.ui.table.Table, sap.ui.table.TreeTable`** 
-
-
 
 </td>
 <td valign="top">
@@ -1026,21 +780,15 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.t
 
 <sub>Changed•Control•Info Only•1.76</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-03-26
-
-
 
 </td>
 </tr>
@@ -1049,28 +797,20 @@ Info Only
 
 1.76 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.unified.calendar.Month`** 
-
-
 
 </td>
 <td valign="top">
@@ -1081,21 +821,15 @@ We have enabled custom colors to be used with the `specialDates` aggregation in 
 
 <sub>Changed•Control•Info Only•1.76</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-03-26
-
-
 
 </td>
 </tr>
@@ -1104,28 +838,20 @@ Info Only
 
 1.76 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **SAP Fiori Elements** 
-
-
 
 </td>
 <td valign="top">
@@ -1164,21 +890,15 @@ Control
 
 <sub>Changed•Control•Info Only•1.76</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-03-26
-
-
 
 </td>
 </tr>
@@ -1186,6 +906,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.118](what-s-new-in-sapui5-1-118-3eecbde.md "With this release SAPUI5 is upgraded from version 1.117 to 1.118.")
 
 [What's New in SAPUI5 1.117](what-s-new-in-sapui5-1-117-029d3b4.md "With this release SAPUI5 is upgraded from version 1.116 to 1.117.")
 

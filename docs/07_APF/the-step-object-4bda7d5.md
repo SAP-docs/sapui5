@@ -47,14 +47,10 @@ The properties used in the step object denote the following:
 
 Property
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -63,14 +59,10 @@ Description
 
 `id` 
 
-
-
 </td>
 <td valign="top">
 
 Unique ID of type string
-
-
 
 </td>
 </tr>
@@ -79,14 +71,10 @@ Unique ID of type string
 
 `title` 
 
-
-
 </td>
 <td valign="top">
 
 Title displayed in the analysis step gallery and in the analysis path display.
-
-
 
 </td>
 </tr>
@@ -95,14 +83,10 @@ Title displayed in the analysis step gallery and in the analysis path display.
 
 `longTitle` 
 
-
-
 </td>
 <td valign="top">
 
 Title displayed above the representation in the analysis step display. If no long title is defined, the title is used instead.
-
-
 
 </td>
 </tr>
@@ -111,14 +95,10 @@ Title displayed above the representation in the analysis step display. If no lon
 
 `request` 
 
-
-
 </td>
 <td valign="top">
 
 ID of the request used for this analysis step.
-
-
 
 </td>
 </tr>
@@ -127,14 +107,10 @@ ID of the request used for this analysis step.
 
 `binding` 
 
-
-
 </td>
 <td valign="top">
 
 ID of the binding used for this analysis step.
-
-
 
 </td>
 </tr>
@@ -143,14 +119,10 @@ ID of the binding used for this analysis step.
 
 `thumbnail` 
 
-
-
 </td>
 <td valign="top">
 
 Displayed in the analysis path display.
-
-
 
 </td>
 </tr>
@@ -159,14 +131,10 @@ Displayed in the analysis path display.
 
 `filterMapping` 
 
-
-
 </td>
 <td valign="top">
 
 Maps a filter derived from the selection in a chart \(source filter property\) to another filter that can be used in the requests for subsequent steps in the path \(mapped filter property\). If the `filterMapping` property does not exist, no filter mapping is required for this step.
-
-
 
 </td>
 </tr>
@@ -175,14 +143,10 @@ Maps a filter derived from the selection in a chart \(source filter property\) t
 
 `requestForMappedFilter` 
 
-
-
 </td>
 <td valign="top">
 
 Contains the ID of the `request` object used to do the lookup request. The lookup request maps the source filter properties to the mapped filter properties. The source filter properties are derived from the selections made in the current step. They correspond to property `requiredFilter` of the `binding` object. Therefore, the properties used in the source filter must be contained as filterable properties in `requestForMappedFilter`.
-
-
 
 </td>
 </tr>
@@ -191,14 +155,10 @@ Contains the ID of the `request` object used to do the lookup request. The looku
 
 `target` 
 
-
-
 </td>
 <td valign="top">
 
 Array of properties that are used to determine the mapped filter properties based on the response from `requestForMappedFilter`.
-
-
 
 </td>
 </tr>
@@ -206,8 +166,6 @@ Array of properties that are used to determine the mapped filter properties base
 <td valign="top">
 
 `keepSource` 
-
-
 
 </td>
 <td valign="top">
@@ -217,8 +175,6 @@ Determines whether the source filter property is kept in the cumulative filter i
 true = Both filter properties are kept in the cumulative filter for subsequent steps.
 
 false = The mapped filter property only is kept in the cumulative filter.
-
-
 
 </td>
 </tr>

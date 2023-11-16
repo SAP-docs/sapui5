@@ -58,6 +58,3 @@ Key users can also perform the following:
 
 While switching to the key user adaptation mode from the normal mode, the app starts in a fresh state and the applied changes are not preserved in the internal app state. Also, when a user exits the key user adaptation mode, the app restores to the old state it was in before entering the key user adaptation mode.
 
-> ### Caution:  
-> SAP Web IDE is no longer available via SAP Business Technology Platform trial accounts. Any references to SAP Web IDE in this documentation are only relevant for you if you have access to SAP Web IDE through a productive SAP BTP account. Please consider SAP Business Application Studio as an alternative. See [App Development Using SAP Business Application Studio](../05_Developing_Apps/app-development-using-sap-business-application-studio-6bbad66.md).
-

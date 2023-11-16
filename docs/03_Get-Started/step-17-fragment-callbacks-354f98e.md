@@ -12,7 +12,7 @@ Now that we have integrated the dialog, it's time to add some user interaction. 
   
 **The dialog now has an "OK" button**
 
-![](images/UI5_Walkthrough_Step_17_c351bbd.png "The dialog now has an "OK" button")
+![The graphic has an explanatory text.](images/UI5_Walkthrough_Step_17_c351bbd.png "The dialog now has an "OK" button")
 
 
 

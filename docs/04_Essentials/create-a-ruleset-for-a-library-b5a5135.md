@@ -46,14 +46,10 @@ Here is an example of folder structure depending on the location of your ruleset
 
 Location
 
-
-
 </th>
 <th valign="top">
 
 Folder Structure
-
-
 
 </th>
 </tr>
@@ -62,14 +58,10 @@ Folder Structure
 
 OpenUI5 
 
-
-
 </td>
 <td valign="top">
 
 \[openui5.git\]/src/sap.m/src/sap/m/
-
-
 
 </td>
 </tr>
@@ -78,14 +70,10 @@ OpenUI5
 
 Reuse library
 
-
-
 </td>
 <td valign="top">
 
 \[project\]/src/\[library path\]
-
-
 
 </td>
 </tr>

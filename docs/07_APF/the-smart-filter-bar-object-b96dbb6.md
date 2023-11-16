@@ -27,14 +27,10 @@ The properties used in the step object denote the following:
 
 Property
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -43,14 +39,10 @@ Description
 
 `id` 
 
-
-
 </td>
 <td valign="top">
 
 Unique ID of type string
-
-
 
 </td>
 </tr>
@@ -59,14 +51,10 @@ Unique ID of type string
 
 `service` 
 
-
-
 </td>
 <td valign="top">
 
 Path to OData service root
-
-
 
 </td>
 </tr>
@@ -75,14 +63,10 @@ Path to OData service root
 
 `entitySet` 
 
-
-
 </td>
 <td valign="top">
 
 Entity set that corresponds to the data source, for example, the SAP HANA view. The entity set provides the properties and parameters that can be displayed in the smart filter bar.
-
-
 
 </td>
 </tr>

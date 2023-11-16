@@ -34,8 +34,6 @@ You can use these i18n keys:
 
 DELETE\_SELECTED\_ITEM=Delete the selected item?
 
-
-
 </td>
 </tr>
 <tr>
@@ -44,8 +42,6 @@ DELETE\_SELECTED\_ITEM=Delete the selected item?
 \#YMSG, 100: Delete selected items text. "items" to be redefined.
 
 DELETE\_SELECTED\_ITEMS=Delete the selected items?
-
-
 
 </td>
 </tr>
@@ -56,8 +52,6 @@ DELETE\_SELECTED\_ITEMS=Delete the selected items?
 
 DELETE\_SUCCESS\_PLURAL\_WITH\_COUNT=\{0\} items have been deleted.
 
-
-
 </td>
 </tr>
 <tr>
@@ -66,8 +60,6 @@ DELETE\_SUCCESS\_PLURAL\_WITH\_COUNT=\{0\} items have been deleted.
 \#YMSG, 30: Delete success message. Parameter: \{0\}= deleted item as count \(1\). "item" to be redefined.
 
 DELETE\_SUCCESS\_WITH\_COUNT=\{0\} item has been deleted.
-
-
 
 </td>
 </tr>
@@ -78,8 +70,6 @@ DELETE\_SUCCESS\_WITH\_COUNT=\{0\} item has been deleted.
 
 DELETE\_ERROR\_PLURAL\_WITH\_COUNT=\{0\} items cannot be deleted.
 
-
-
 </td>
 </tr>
 <tr>
@@ -88,8 +78,6 @@ DELETE\_ERROR\_PLURAL\_WITH\_COUNT=\{0\} items cannot be deleted.
 \#YMSG, 30: Delete error message. Parameter: \{0\}= non-deleted item as count \(1\)."item" to be redefined.
 
 DELETE\_ERROR\_WITH\_COUNT=\{0\} item cannot be deleted.
-
-
 
 </td>
 </tr>
@@ -100,8 +88,6 @@ DELETE\_ERROR\_WITH\_COUNT=\{0\} item cannot be deleted.
 
 DELETE\_ERROR\_PLURAL=The selected items cannot be deleted.
 
-
-
 </td>
 </tr>
 <tr>
@@ -110,8 +96,6 @@ DELETE\_ERROR\_PLURAL=The selected items cannot be deleted.
 \#YMSG, 30: Delete error message. "item" to be redefined.
 
 DELETE\_ERROR=The selected item cannot be deleted.
-
-
 
 </td>
 </tr>
@@ -122,8 +106,6 @@ DELETE\_ERROR=The selected item cannot be deleted.
 
 DELETE\_SUCCESS\_PLURAL=The selected items have been deleted.
 
-
-
 </td>
 </tr>
 <tr>
@@ -133,8 +115,6 @@ DELETE\_SUCCESS\_PLURAL=The selected items have been deleted.
 
 ITEM\_DELETED=Item deleted
 
-
-
 </td>
 </tr>
 <tr>
@@ -143,8 +123,6 @@ ITEM\_DELETED=Item deleted
 \#YMSG, 100: Delete undeletable items text: \{0\}=digit, \{1\}=digit
 
 DELETE\_UNDELETABLE\_ITEMS=\{0\} of \{1\} items cannot be deleted.
-
-
 
 </td>
 </tr>
@@ -167,16 +145,12 @@ Only the keys given below are allowed to be overridden in the custom i18n file f
 
 C\_TRANSACTION\_HELPER\_OBJECT\_PAGE\_CONFIRM\_DELETE\_WITH\_OBJECTTITLE\_SINGULAR=Delete this object?
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
 C\_TRANSACTION\_HELPER\_OBJECT\_PAGE\_CONFIRM\_DELETE\_WITH\_UNSAVED\_CHANGES=Another user edited this object without saving the changes:\{0\} Delete anyway?
-
-
 
 </td>
 </tr>
@@ -185,16 +159,12 @@ C\_TRANSACTION\_HELPER\_OBJECT\_PAGE\_CONFIRM\_DELETE\_WITH\_UNSAVED\_CHANGES=An
 
 C\_TRANSACTION\_HELPER\_OBJECT\_PAGE\_CONFIRM\_DELETE\_WITH\_UNSAVED\_CHANGES\_MULTIPLE\_OBJECTS=Other users have edited the selected objects without saving the changes. Delete anyway?
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
 C\_TRANSACTION\_HELPER\_OBJECT\_PAGE\_CONFIRM\_DELETE\_WITH\_OBJECTTITLE\_PLURAL=Delete the selected objects?
-
-
 
 </td>
 </tr>
@@ -203,16 +173,12 @@ C\_TRANSACTION\_HELPER\_OBJECT\_PAGE\_CONFIRM\_DELETE\_WITH\_OBJECTTITLE\_PLURAL
 
 C\_TRANSACTION\_HELPER\_OBJECT\_PAGE\_CONFIRM\_DELETE\_WITH\_OBJECTINFO\_AND\_FEW\_OBJECTS\_NON\_DELETABLEC\_TRANSACTION\_HELPER\_OBJECT\_PAGE\_CONFIRM\_DELETE\_WITH\_OBJECTINFO\_AND\_FEW\_OBJECTS\_NON\_DELETABLE=\{0\} of \{1\} objects cannot be deleted.
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
 C\_TRANSACTION\_HELPER\_OBJECT\_PAGE\_CONFIRM\_DELETE\_WITH\_OBJECTINFO\_AND\_FEW\_OBJECTS\_LOCKED=\{0\} of \{1\} objects are currently locked.
-
-
 
 </td>
 </tr>
@@ -221,16 +187,12 @@ C\_TRANSACTION\_HELPER\_OBJECT\_PAGE\_CONFIRM\_DELETE\_WITH\_OBJECTINFO\_AND\_FE
 
 C\_TRANSACTION\_HELPER\_OBJECT\_PAGE\_CONFIRM\_DELETE\_WITH\_UNSAVED\_AND\_FEW\_OBJECTS\_LOCKED\_SINGULAR=The remaining object has unsaved changes. Do you still want to delete it?
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
 C\_TRANSACTION\_HELPER\_OBJECT\_PAGE\_CONFIRM\_DELETE\_WITH\_UNSAVED\_AND\_FEW\_OBJECTS\_LOCKED\_PLURAL=The remaining objects have unsaved changes. Do you still want to delete them?
-
-
 
 </td>
 </tr>
@@ -239,8 +201,6 @@ C\_TRANSACTION\_HELPER\_OBJECT\_PAGE\_CONFIRM\_DELETE\_WITH\_UNSAVED\_AND\_FEW\_
 
 C\_TRANSACTION\_HELPER\_OBJECT\_PAGE\_CONFIRM\_DELETE\_WITH\_OBJECTINFO\_AND\_FEW\_OBJECTS\_UNSAVED\_SINGULAR=Also delete object with unsaved changes?
 
-
-
 </td>
 </tr>
 <tr>
@@ -248,16 +208,12 @@ C\_TRANSACTION\_HELPER\_OBJECT\_PAGE\_CONFIRM\_DELETE\_WITH\_OBJECTINFO\_AND\_FE
 
 C\_TRANSACTION\_HELPER\_OBJECT\_PAGE\_CONFIRM\_DELETE\_WITH\_OBJECTINFO\_AND\_FEW\_OBJECTS\_UNSAVED\_PLURAL=Also delete objects with unsaved changes?
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
 C\_TRANSACTION\_HELPER\_OBJECT\_PAGE\_CONFIRM\_DELETE\_WITH\_OBJECTINFO\_AND\_FEW\_OBJECTS\_LOCKED\_AND\_NON\_DELETABLE=\{0\} out of \{2\} objects cannot be deleted. \{1\} of \{2\} objects are currently locked.
-
-
 
 </td>
 </tr>

@@ -331,14 +331,10 @@ The following legacy unit keys are currently supported; this map may be subject 
 
 Legacy Unit Key
 
-
-
 </th>
 <th valign="top">
 
 New Unit Key
-
-
 
 </th>
 </tr>
@@ -347,14 +343,10 @@ New Unit Key
 
 `acceleration-meter-per-second-squared`
 
-
-
 </td>
 <td valign="top">
 
 `acceleration-meter-per-square-second`
-
-
 
 </td>
 </tr>
@@ -363,14 +355,10 @@ New Unit Key
 
 `concentr-milligram-per-deciliter`
 
-
-
 </td>
 <td valign="top">
 
 `concentr-milligram-ofglucose-per-deciliter`
-
-
 
 </td>
 </tr>
@@ -379,14 +367,10 @@ New Unit Key
 
 `concentr-part-per-million`
 
-
-
 </td>
 <td valign="top">
 
 `concentr-permillion`
-
-
 
 </td>
 </tr>
@@ -395,78 +379,10 @@ New Unit Key
 
 `consumption-liter-per-100kilometers`
 
-
-
 </td>
 <td valign="top">
 
 `consumption-liter-per-100-kilometer`
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-`pressure-millimeter-of-mercury`
-
-
-
-</td>
-<td valign="top">
-
-`pressure-millimeter-ofhg`
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-`pressure-pound-per-square-inch`
-
-
-
-</td>
-<td valign="top">
-
-`pressure-pound-force-per-square-inch`
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-`pressure-inch-hg`
-
-
-
-</td>
-<td valign="top">
-
-`pressure-inch-ofhg`
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-`torque-pound-foot`
-
-
-
-</td>
-<td valign="top">
-
-`torque-pound-force-foot`
-
-
 
 </td>
 </tr>
@@ -475,14 +391,58 @@ New Unit Key
 
 `mass-metric-ton`
 
-
-
 </td>
 <td valign="top">
 
 `mass-tonne`
 
+</td>
+</tr>
+<tr>
+<td valign="top">
 
+`pressure-millimeter-of-mercury`
+
+</td>
+<td valign="top">
+
+`pressure-millimeter-ofhg`
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`pressure-pound-per-square-inch`
+
+</td>
+<td valign="top">
+
+`pressure-pound-force-per-square-inch`
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`pressure-inch-hg`
+
+</td>
+<td valign="top">
+
+`pressure-inch-ofhg`
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`torque-pound-foot`
+
+</td>
+<td valign="top">
+
+`torque-pound-force-foot`
 
 </td>
 </tr>

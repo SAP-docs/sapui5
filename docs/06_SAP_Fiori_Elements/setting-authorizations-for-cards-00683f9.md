@@ -11,7 +11,7 @@ To improve this user experience, during card configuration, you can add the prop
 Also, `isIntentSupported` is standard functionality in the Cross Application Navigation Service.
 
 > ### Note:  
-> The `requireAppAuthorization` check does not work in design time for the overview page cards. As a result, it also does not work for creating adaptation project and extending using UI adaptation scenario \(creating extension project from BAS / SAP Web IDE\).
+> The `requireAppAuthorization` check does not work in design time for the overview page cards. As a result, it also does not work for creating adaptation project and extending using UI adaptation scenario \(creating extension project from BAS / Visual Studio Code\).
 
 > ### Sample Code:  
 > ```

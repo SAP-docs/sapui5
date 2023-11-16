@@ -49,9 +49,9 @@ For more information, see the documentation for `Blanket.js` on GitHub. Keep in 
 **Related Information**  
 
 
-[`Blanket.js` Documentation on GitHub](https://github.com/alex-seville/blanket/blob/master/docs/intermediate_browser.md)
+[`Blanket.js` Documentation on GitHub](https://github.com/alex-seville/blanket/blob/-/docs/intermediate_browser.md)
 
-[`UI5 Middleware Code Coverage` repo on GitHub](https://github.com/SAP/ui5-tooling-extensions/tree/main/packages/middleware-code-coverage)
+[`UI5 Middleware Code Coverage` repo on GitHub](https://github.com/SAP/ui5-tooling-extensions/blob/-/packages/middleware-code-coverage)
 
 [Code Coverage Measurement](code-coverage-measurement-7ef3242.md "You can measure the code coverage either via HTML or JavaScript code using a code coverage tool like Istanbul (default) or Blanket.js (legacy).")
 

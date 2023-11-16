@@ -13,49 +13,35 @@ With this release SAPUI5 is upgraded from version 1.107 to 1.108.
 
 Version
 
-
-
 </th>
 <th valign="top">
 
 Type
-
-
 
 </th>
 <th valign="top">
 
 Category
 
-
-
 </th>
 <th valign="top">
 
 Title
-
-
 
 </th>
 <th valign="top">
 
 Description
 
-
-
 </th>
 <th valign="top">
 
 Action
 
-
-
 </th>
 <th valign="top">
 
 Available as of
-
-
 
 </th>
 </tr>
@@ -64,28 +50,20 @@ Available as of
 
 1.108 
 
-
-
 </td>
 <td valign="top">
 
 Deprecated 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **Deprecations** 
-
-
 
 </td>
 <td valign="top">
@@ -96,21 +74,15 @@ There are currently no major deprecations. For a complete list of all deprecatio
 
 <sub>Deprecated•Feature•Info Only•1.108</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-11-03
-
-
 
 </td>
 </tr>
@@ -119,28 +91,20 @@ Info Only
 
 1.108 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.comp.smarttable.SmartTable`** 
-
-
 
 </td>
 <td valign="top">
@@ -154,21 +118,15 @@ Control
 
 <sub>Changed•Control•Info Only•1.108</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-11-03
-
-
 
 </td>
 </tr>
@@ -177,28 +135,20 @@ Info Only
 
 1.108 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **Visualization of Changes in Key User Adaptation** 
-
-
 
 </td>
 <td valign="top">
@@ -211,21 +161,15 @@ For more information, see the [Demo App](https://ui5.sap.com/test-resources/sap/
 
 <sub>Changed•Feature•Info Only•1.108</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-11-03
-
-
 
 </td>
 </tr>
@@ -234,28 +178,20 @@ Info Only
 
 1.108 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 SAP Fiori Elements 
 
-
-
 </td>
 <td valign="top">
 
 **SAP Fiori elements for OData V2** 
-
-
 
 </td>
 <td valign="top">
@@ -273,21 +209,15 @@ The following changes and new features are available for SAP Fiori elements for 
 
 <sub>Changed•SAP Fiori Elements•Info Only•1.108</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-11-03
-
-
 
 </td>
 </tr>
@@ -296,28 +226,20 @@ Info Only
 
 1.108 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 SAP Fiori Elements 
 
-
-
 </td>
 <td valign="top">
 
 **SAP Fiori elements for OData V4** 
-
-
 
 </td>
 <td valign="top">
@@ -343,21 +265,15 @@ The following changes and new features are available for SAP Fiori elements for 
 
 <sub>Changed•SAP Fiori Elements•Info Only•1.108</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-11-03
-
-
 
 </td>
 </tr>
@@ -366,28 +282,20 @@ Info Only
 
 1.108 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 ****TypeScript Demo App**** 
-
-
 
 </td>
 <td valign="top">
@@ -398,21 +306,15 @@ A new `TypeScript To-Do List` demo app is now available in both the Demo Apps an
 
 <sub>Changed•Feature•Info Only•1.108</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-11-03
-
-
 
 </td>
 </tr>
@@ -421,28 +323,20 @@ Info Only
 
 1.108 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.IllustratedMessage`** 
-
-
 
 </td>
 <td valign="top">
@@ -453,21 +347,15 @@ We have introduced a new illustration breakpoint variant `Dot`, suitable for spa
 
 <sub>Changed•Control•Info Only•1.108</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-11-03
-
-
 
 </td>
 </tr>
@@ -476,28 +364,20 @@ Info Only
 
 1.108 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.Avatar`** 
-
-
 
 </td>
 <td valign="top">
@@ -508,21 +388,15 @@ Up to three Latin letters can be displayed as initials in a `sap.m.Avatar`. For 
 
 <sub>Changed•Control•Info Only•1.108</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-11-03
-
-
 
 </td>
 </tr>
@@ -531,28 +405,20 @@ Info Only
 
 1.108 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **Replacement for `jQuery.fn.control`** 
-
-
 
 </td>
 <td valign="top">
@@ -565,21 +431,15 @@ For more information, see [Legacy jQuery.sap Replacement](../04_Essentials/legac
 
 <sub>Changed•Feature•Info Only•1.108</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-11-03
-
-
 
 </td>
 </tr>
@@ -588,28 +448,20 @@ Info Only
 
 1.108 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **SAPUI5 OData V4 Model** 
-
-
 
 </td>
 <td valign="top">
@@ -624,21 +476,15 @@ The new version of the SAPUI5 OData V4 model introduces the following features:
 
 <sub>Changed•Feature•Info Only•1.108</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-11-03
-
-
 
 </td>
 </tr>
@@ -647,28 +493,20 @@ Info Only
 
 1.108 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **SAPUI5 OData V2 Model** 
-
-
 
 </td>
 <td valign="top">
@@ -684,21 +522,15 @@ The new version of the SAPUI5 OData V2 model introduces the following features:
 
 <sub>Changed•Feature•Info Only•1.108</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-11-03
-
-
 
 </td>
 </tr>
@@ -707,28 +539,20 @@ Info Only
 
 1.108 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **sap.m.Carousel** 
-
-
 
 </td>
 <td valign="top">
@@ -739,21 +563,15 @@ We have improved the keyboard interaction and accessibility of the control. The 
 
 <sub>Changed•Control•Info Only•1.108</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-11-03
-
-
 
 </td>
 </tr>
@@ -762,28 +580,20 @@ Info Only
 
 1.108 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.comp.smarttable.SmartTable` and `sap.ui.comp.smartchart.SmartChart`** 
-
-
 
 </td>
 <td valign="top">
@@ -804,21 +614,15 @@ For more information, see the [Sample](https://ui5.sap.com/#/entity/sap.ui.comp.
 
 <sub>Changed•Control•Info Only•1.108</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-11-03
-
-
 
 </td>
 </tr>
@@ -827,28 +631,20 @@ Info Only
 
 1.108 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.integration.widgets.Card`** 
-
-
 
 </td>
 <td valign="top">
@@ -876,21 +672,15 @@ Control
 
 <sub>Changed•Control•Info Only•1.108</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-11-03
-
-
 
 </td>
 </tr>
@@ -899,28 +689,20 @@ Info Only
 
 1.108 
 
-
-
 </td>
 <td valign="top">
 
 UI Changed 
-
-
 
 </td>
 <td valign="top">
 
 Announcement 
 
-
-
 </td>
 <td valign="top">
 
 **Analytical List Pages: Date Ranges Supported** 
-
-
 
 </td>
 <td valign="top">
@@ -934,21 +716,15 @@ Filter fields on analytical list pages now provide date range options.
 
 <sub>UI Changed•Announcement•Info Only•1.108</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-11-03
-
-
 
 </td>
 </tr>
@@ -956,6 +732,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.118](what-s-new-in-sapui5-1-118-3eecbde.md "With this release SAPUI5 is upgraded from version 1.117 to 1.118.")
 
 [What's New in SAPUI5 1.117](what-s-new-in-sapui5-1-117-029d3b4.md "With this release SAPUI5 is upgraded from version 1.116 to 1.117.")
 

@@ -35,22 +35,16 @@ These SAPUI5 configuration options accept the following formats:
     <th valign="top">
 
     SAP Language Code
-
-
     
     </th>
     <th valign="top">
 
     BCP47 Language Tag
-
-
     
     </th>
     <th valign="top">
 
     Description
-
-
     
     </th>
     </tr>
@@ -58,22 +52,16 @@ These SAPUI5 configuration options accept the following formats:
     <td valign="top">
     
     `ZH`
-
-
     
     </td>
     <td valign="top">
     
     `zh-Hans`
-
-
     
     </td>
     <td valign="top">
     
     `ZH` is the SAP language code for Simplified Chinese. The most generic representation in BCP47 is `zh-Hans`. `zh-CN` \(Chinese, China\) is another representation, but SAPUI5 decided to use `zh-Hans`.
-
-
     
     </td>
     </tr>
@@ -81,22 +69,16 @@ These SAPUI5 configuration options accept the following formats:
     <td valign="top">
     
     `ZF`
-
-
     
     </td>
     <td valign="top">
     
     `zh-Hant`
-
-
     
     </td>
     <td valign="top">
     
     `ZF` is the SAP language code for Traditional Chinese. The most generic representation in BCP47 is `zh-Hant`. `zh-TW` \(Chinese, Taiwan\) is another representation, but SAPUI5 decided to use `zh-Hant`.
-
-
     
     </td>
     </tr>
@@ -104,22 +86,16 @@ These SAPUI5 configuration options accept the following formats:
     <td valign="top">
     
     `SH`
-
-
     
     </td>
     <td valign="top">
     
     `sr-Latn`
-
-
     
     </td>
     <td valign="top">
     
     `SH` is the SAP language code for Serbian \(Latin script\).
-
-
     
     </td>
     </tr>
@@ -127,22 +103,16 @@ These SAPUI5 configuration options accept the following formats:
     <td valign="top">
     
     `6N`
-
-
     
     </td>
     <td valign="top">
     
     `en-GB`
-
-
     
     </td>
     <td valign="top">
     
     `6N` is the SAP language code for British English.
-
-
     
     </td>
     </tr>
@@ -150,22 +120,16 @@ These SAPUI5 configuration options accept the following formats:
     <td valign="top">
     
     `1P`
-
-
     
     </td>
     <td valign="top">
     
     `pt-PT`
-
-
     
     </td>
     <td valign="top">
     
     `1P` is the SAP language code for Portuguese.
-
-
     
     </td>
     </tr>
@@ -173,22 +137,16 @@ These SAPUI5 configuration options accept the following formats:
     <td valign="top">
     
     `1X`
-
-
     
     </td>
     <td valign="top">
     
     `es-MX`
-
-
     
     </td>
     <td valign="top">
     
     `1X` is the SAP language code for Mexican Spanish.
-
-
     
     </td>
     </tr>
@@ -196,22 +154,16 @@ These SAPUI5 configuration options accept the following formats:
     <td valign="top">
     
     `3F`
-
-
     
     </td>
     <td valign="top">
     
     `fr-CA`
-
-
     
     </td>
     <td valign="top">
     
     `3F` is the SAP language code for Canadian French.
-
-
     
     </td>
     </tr>
@@ -219,22 +171,16 @@ These SAPUI5 configuration options accept the following formats:
     <td valign="top">
     
     `1Q`
-
-
     
     </td>
     <td valign="top">
     
     `en-US-x-saptrc`
-
-
     
     </td>
     <td valign="top">
     
     `1Q` is a technical SAP language code used in support scenarios, for example for translation issues. When you select this language code, the technical keys are displayed instead of the actual data. As no ISO639 code for this exists, the information has been added as a BCP47 private extension to the `en-US` language tag: "trc" stands for "trace" or "traceability".
-
-
     
     </td>
     </tr>
@@ -242,22 +188,16 @@ These SAPUI5 configuration options accept the following formats:
     <td valign="top">
     
     `2Q`
-
-
     
     </td>
     <td valign="top">
     
     `en-US-x-sappsd`
-
-
     
     </td>
     <td valign="top">
     
     `2Q` is also used as a technical SAP language code in support scenarios and displays a pseudo translation \("psd" in the private extensions name\).
-
-
     
     </td>
     </tr>
@@ -265,22 +205,16 @@ These SAPUI5 configuration options accept the following formats:
     <td valign="top">
     
     `3Q`
-
-
     
     </td>
     <td valign="top">
     
     `en-US-x-saprigi`
-
-
     
     </td>
     <td valign="top">
     
     `3Q` is also used as a technical SAP language code in support scenarios and displays a pseudo translation \("rigi" in the private extensions name\).
-
-
     
     </td>
     </tr>

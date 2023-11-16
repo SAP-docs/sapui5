@@ -11,21 +11,15 @@ Information how to add new attributes of descriptor versions higher than V2 \(SA
 
 Attribute
 
-
-
 </th>
 <th valign="top">
 
 Version\*
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -34,14 +28,10 @@ Description
 
 `_version` 
 
-
-
 </td>
 <td valign="top">
 
 V3 \(1.32\)
-
-
 
 </td>
 <td valign="top">
@@ -71,14 +61,10 @@ Needs to be updated in the `manifest.json` file when migrating to a new descript
 
 `sap.app/crossNavigation` 
 
-
-
 </td>
 <td valign="top">
 
 V3 \(1.32\)
-
-
 
 </td>
 <td valign="top">
@@ -99,14 +85,10 @@ Contains navigation information and is a mandatory attribute in the `manifest.js
 
 `sap.app/subTitle` 
 
-
-
 </td>
 <td valign="top">
 
 V4 \(1.34\)
-
-
 
 </td>
 <td valign="top">
@@ -133,14 +115,10 @@ Added to the `manifest.json` file by using the `{{...}}` syntax
 
 `sap.app/crossNavigation/inbounds/<inboundname>/subTitle` 
 
-
-
 </td>
 <td valign="top">
 
 V4 \(1.34\)
-
-
 
 </td>
 <td valign="top">
@@ -174,14 +152,10 @@ Used to overwrite the `subTitle` attribute per inbound; use the `{{...}}` syntax
 
 `sap.ui/fullWidth` 
 
-
-
 </td>
 <td valign="top">
 
 V4 \(1.34\)
-
-
 
 </td>
 <td valign="top">
@@ -205,14 +179,10 @@ Indicates whether an app shall run in full screen mode \(`true`\)
 
 `sap.ui5/dependencies/components/<componentname>/lazy` and `dependencies/libs/<libname>/lazy` 
 
-
-
 </td>
 <td valign="top">
 
 V4 \(1.34\)
-
-
 
 </td>
 <td valign="top">
@@ -254,14 +224,10 @@ Example for `manifest.json` for the SAP Fiori app:
 
 `sap.ui5/routing/config/async` 
 
-
-
 </td>
 <td valign="top">
 
 V4 \(1.34\)
-
-
 
 </td>
 <td valign="top">
@@ -292,14 +258,10 @@ For performance reasons, we recommend to always use the `async` setting. This re
 
 `sap.ui5/models/preload` 
 
-
-
 </td>
 <td valign="top">
 
 V5 \(1.38\)
-
-
 
 </td>
 <td valign="top">
@@ -324,14 +286,10 @@ Defines whether or not the model is initialized \(preloaded\) before the compone
 
 `sap.ui5/routing/routes/target` 
 
-
-
 </td>
 <td valign="top">
 
 V6 \(1.42\)
-
-
 
 </td>
 <td valign="top">
@@ -375,14 +333,10 @@ Allows to define titles declaratively in the configuration \(`title` under `targ
 
 `sap.ui5/componentUsages` 
 
-
-
 </td>
 <td valign="top">
 
 V8 \(1.48\)
-
-
 
 </td>
 <td valign="top">
@@ -421,14 +375,10 @@ For more information see:[Using and Nesting Components](using-and-nesting-compon
 
 `sap.ui5/library/i18n` 
 
-
-
 </td>
 <td valign="top">
 
 V10 \(1.52\)
-
-
 
 </td>
 <td valign="top">
@@ -461,14 +411,10 @@ An object can contain additional resource bundle configuration, e.g. terminologi
 
 `sap.ui5/componentUsages/lazy` 
 
-
-
 </td>
 <td valign="top">
 
 V12 \(1.56\)
-
-
 
 </td>
 <td valign="top">
@@ -501,14 +447,10 @@ For more information see:[Using and Nesting Components](using-and-nesting-compon
 
 `sap.ui5/models/<modelName>/settings/enhanceWith` 
 
-
-
 </td>
 <td valign="top">
 
 V12 \(1.56\)
-
-
 
 </td>
 <td valign="top">
@@ -552,14 +494,10 @@ Additional attributes can be found in [Terminologies](terminologies-eba8d25.md).
 
 `sap.ui5/routing/routes/targets/attachment/id`
 
-
-
 </td>
 <td valign="top">
 
 V15 \(1.62\)
-
-
 
 </td>
 <td valign="top">
@@ -605,14 +543,10 @@ With the `type` option set to "Component", the `Component.js` which is available
 
 `sap.ui5/routing/routes/targets/attachment/usage` 
 
-
-
 </td>
 <td valign="top">
 
 V16 \(1.66\)
-
-
 
 </td>
 <td valign="top">
@@ -676,14 +610,10 @@ A component can be configured as a routing target by defining it in the `compone
 
 `sap.ui5/commands` 
 
-
-
 </td>
 <td valign="top">
 
 V17 \(1.70\)
-
-
 
 </td>
 <td valign="top">
@@ -711,14 +641,10 @@ Specifies provided commands with a unique key/alias.
 
 `sap.ui5/routing/propagateTitle` 
 
-
-
 </td>
 <td valign="top">
 
 V20 \(1.75\)
-
-
 
 </td>
 <td valign="top">
@@ -775,14 +701,10 @@ The `propagateTitle` property can be set to forward title information from a nes
 
 `sap.ui5/models/<modelName>/settings/terminologies`
 
-
-
 </td>
 <td valign="top">
 
 V22 \(1.77\)
-
-
 
 </td>
 <td valign="top">
@@ -834,14 +756,10 @@ Additional resource bundles can be made available by defining `terminologies`.
 
 `sap.fiori/abstract` 
 
-
-
 </td>
 <td valign="top">
 
 V32 \(1.87\)
-
-
 
 </td>
 <td valign="top">
@@ -871,14 +789,10 @@ Indicates whether an app is an abstract \(generic\) app, which may not used dire
 
 `sap.app/dataSources/<sourceName>/settings/objects` 
 
-
-
 </td>
 <td valign="top">
 
 V35 \(1.92\)
-
-
 
 </td>
 <td valign="top">

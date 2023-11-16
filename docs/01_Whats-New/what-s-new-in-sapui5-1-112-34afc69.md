@@ -16,49 +16,35 @@ With this release SAPUI5 is upgraded from version 1.111 to 1.112.
 
 Version
 
-
-
 </th>
 <th valign="top">
 
 Type
-
-
 
 </th>
 <th valign="top">
 
 Category
 
-
-
 </th>
 <th valign="top">
 
 Title
-
-
 
 </th>
 <th valign="top">
 
 Description
 
-
-
 </th>
 <th valign="top">
 
 Action
 
-
-
 </th>
 <th valign="top">
 
 Available as of
-
-
 
 </th>
 </tr>
@@ -67,28 +53,20 @@ Available as of
 
 1.112 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Announcement 
 
-
-
 </td>
 <td valign="top">
 
 **What's New Viewer for OpenUI5** 
-
-
 
 </td>
 <td valign="top">
@@ -99,21 +77,15 @@ Due to some issues with references to OpenUI5 content we had to remove the What'
 
 <sub>Changed•Announcement•Info Only•1.112</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-03-23
-
-
 
 </td>
 </tr>
@@ -122,28 +94,20 @@ Info Only
 
 1.112 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.Input`, `sap.m.ComboBox`, `sap.m.MultiComboBox`** 
-
-
 
 </td>
 <td valign="top">
@@ -154,21 +118,15 @@ We have removed the experimental flag for the `showItems(fnFilter)` method. For 
 
 <sub>Changed•Control•Info Only•1.112</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-03-23
-
-
 
 </td>
 </tr>
@@ -177,28 +135,20 @@ Info Only
 
 1.112 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.IllustratedMessage`** 
-
-
 
 </td>
 <td valign="top">
@@ -211,21 +161,15 @@ Control
 
 <sub>Changed•Control•Info Only•1.112</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-03-23
-
-
 
 </td>
 </tr>
@@ -234,28 +178,20 @@ Info Only
 
 1.112 
 
-
-
 </td>
 <td valign="top">
 
 Deprecated 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.MessagePage`** 
-
-
 
 </td>
 <td valign="top">
@@ -266,21 +202,15 @@ We have deprecated the `sap.m.MessagePage`, and recommend using the `sap.m.Illus
 
 <sub>Deprecated•Control•Info Only•1.112</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-03-23
-
-
 
 </td>
 </tr>
@@ -289,28 +219,20 @@ Info Only
 
 1.112 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 SAP Fiori Elements 
 
-
-
 </td>
 <td valign="top">
 
 **SAP Fiori elements for OData V2** 
-
-
 
 </td>
 <td valign="top">
@@ -324,21 +246,15 @@ The following changes and new features are available for SAP Fiori elements for 
 
 <sub>Changed•SAP Fiori Elements•Info Only•1.112</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-03-23
-
-
 
 </td>
 </tr>
@@ -347,28 +263,20 @@ Info Only
 
 1.112 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 SAP Fiori Elements 
 
-
-
 </td>
 <td valign="top">
 
 **SAP Fiori elements for OData V4** 
-
-
 
 </td>
 <td valign="top">
@@ -388,21 +296,15 @@ The following changes and new features are available for SAP Fiori elements for 
 
 <sub>Changed•SAP Fiori Elements•Info Only•1.112</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-03-23
-
-
 
 </td>
 </tr>
@@ -411,28 +313,20 @@ Info Only
 
 1.112 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.integration.widgets.Card`** 
-
-
 
 </td>
 <td valign="top">
@@ -455,21 +349,15 @@ Control
 
 <sub>Changed•Control•Info Only•1.112</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-03-23
-
-
 
 </td>
 </tr>
@@ -478,28 +366,20 @@ Info Only
 
 1.112 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.comp.smartfilterbar.SmartFilterBar`** 
-
-
 
 </td>
 <td valign="top">
@@ -510,21 +390,15 @@ We have added support for several new interval options of the `DynamicDateRange`
 
 <sub>Changed•Control•Info Only•1.112</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-03-23
-
-
 
 </td>
 </tr>
@@ -533,28 +407,20 @@ Info Only
 
 1.112 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.comp.valuehelpdialog.ValueHelpDialog`** 
-
-
 
 </td>
 <td valign="top">
@@ -565,21 +431,15 @@ We have removed the leftmost \(empty\) column of the items table when the contro
 
 <sub>Changed•Control•Info Only•1.112</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-03-23
-
-
 
 </td>
 </tr>
@@ -588,28 +448,20 @@ Info Only
 
 1.112 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature
 
-
-
 </td>
 <td valign="top">
 
 **SAPUI5 OData V4 Model** 
-
-
 
 </td>
 <td valign="top">
@@ -624,21 +476,15 @@ The new version of the SAPUI5 OData V4 model introduces the following features:
 
 <sub>Changed•Feature•Info Only•1.112</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-03-23
-
-
 
 </td>
 </tr>
@@ -646,6 +492,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.118](what-s-new-in-sapui5-1-118-3eecbde.md "With this release SAPUI5 is upgraded from version 1.117 to 1.118.")
 
 [What's New in SAPUI5 1.117](what-s-new-in-sapui5-1-117-029d3b4.md "With this release SAPUI5 is upgraded from version 1.116 to 1.117.")
 

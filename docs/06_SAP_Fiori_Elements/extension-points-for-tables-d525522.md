@@ -24,28 +24,20 @@ You use the following extension points to add additional columns to tables:
 
 Table Type
 
-
-
 </th>
 <th valign="top">
 
 SAP Fiori Elements
-
-
 
 </th>
 <th valign="top">
 
 Extension Point
 
-
-
 </th>
 <th valign="top">
 
 Example
-
-
 
 </th>
 </tr>
@@ -54,28 +46,20 @@ Example
 
 All
 
-
-
 </td>
 <td valign="top">
 
 Object page
-
-
 
 </td>
 <td valign="top">
 
 `onBeforeRebindTableExtension` 
 
-
-
 </td>
 <td valign="top">
 
 [Example: Applying Custom Logic When a Table is Loaded or Refreshed](example-applying-custom-logic-when-a-table-is-loaded-or-refreshed-382a6c3.md) 
-
-
 
 </td>
 </tr>
@@ -84,14 +68,10 @@ Object page
 
 Responsive table
 
-
-
 </td>
 <td valign="top">
 
 List report
-
-
 
 </td>
 <td valign="top">
@@ -100,14 +80,10 @@ List report
 
 `ResponsiveTableCellsExtension|<Name of the EntitySet>`
 
-
-
 </td>
 <td valign="top">
 
 [Example: Adding Columns to a Responsive Table in the List Report](example-adding-columns-to-a-responsive-table-in-the-list-report-28e9570.md) 
-
-
 
 </td>
 </tr>
@@ -115,8 +91,6 @@ List report
 <td valign="top">
 
 Object page
-
-
 
 </td>
 <td valign="top">
@@ -125,14 +99,10 @@ Object page
 
 `ResponsiveTableCellsExtension|<Name of the table EntitySet>|<Facet ID/Annotation Path>`
 
-
-
 </td>
 <td valign="top">
 
 [Example: Adding Columns to a Responsive Table on the Object Page](example-adding-columns-to-a-responsive-table-on-the-object-page-c174923.md) 
-
-
 
 </td>
 </tr>
@@ -141,28 +111,20 @@ Object page
 
 Grid table
 
-
-
 </td>
 <td valign="top">
 
 List report
-
-
 
 </td>
 <td valign="top">
 
 `GridTableColumnsExtension|<Name of the EntitySet>` 
 
-
-
 </td>
 <td valign="top">
 
 [Example: Adding Columns to a Grid Table in the List Report](example-adding-columns-to-a-grid-table-in-the-list-report-69bfeec.md) 
-
-
 
 </td>
 </tr>
@@ -171,21 +133,15 @@ List report
 
 Object page
 
-
-
 </td>
 <td valign="top">
 
 ``
 
-
-
 </td>
 <td valign="top">
 
 [Example: Adding Columns to a Grid Table in the Object Page](example-adding-columns-to-a-grid-table-in-the-object-page-10a6ef1.md) 
-
-
 
 </td>
 </tr>
@@ -194,28 +150,20 @@ Object page
 
 Analytical table
 
-
-
 </td>
 <td valign="top">
 
 List report
-
-
 
 </td>
 <td valign="top">
 
 `AnalyticalTableColumnsExtension|<Name of the EntitySet>GridTableColumnsExtension|<Name of the table EntitySet>|<Facet ID/Annotation Path>` 
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -224,21 +172,15 @@ List report
 
 Object page
 
-
-
 </td>
 <td valign="top">
 
 `GridTableColumnsExtension|AnalyticalTableColumnsExtension|<Name of the table EntitySet>|<Facet ID/Annotation Path>` 
 
-
-
 </td>
 <td valign="top">
 
 [Example: Adding Columns to an Analytical Table on the Object Page](example-adding-columns-to-an-analytical-table-on-the-object-page-3b78e69.md) 
-
-
 
 </td>
 </tr>
@@ -247,28 +189,20 @@ Object page
 
 Tree table
 
-
-
 </td>
 <td valign="top">
 
 List report
-
-
 
 </td>
 <td valign="top">
 
 `TreeTableColumnsExtension|<Name of the EntitySet>` 
 
-
-
 </td>
 <td valign="top">
 
 [Example: Adding Columns to a Tree Table in the List Report](example-adding-columns-to-a-tree-table-in-the-list-report-b903da5.md) 
-
-
 
 </td>
 </tr>
@@ -331,8 +265,6 @@ The table containing additional custom columns can look like this:
 2.  Register your view extensions in the `manifest.json` file of your application as follows:
 
     > ### Sample Code:  
-    > manifest.json
-    > 
     > ```
     > {
     >     "sap.ui5": {
@@ -427,21 +359,15 @@ The `manifest.json` sample code above enables you to add an additional column to
 
 Property
 
-
-
 </th>
 <th valign="top">
 
 Supported Values
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -450,21 +376,15 @@ Description
 
 key
 
-
-
 </td>
 <td valign="top">
 
 aA-zZ, 0-9, :, \_, -
 
-
-
 </td>
 <td valign="top">
 
 The key of the custom column is needed as an identifier, which can be used as reference for other columns.
-
-
 
 </td>
 </tr>
@@ -472,8 +392,6 @@ The key of the custom column is needed as an identifier, which can be used as re
 <td valign="top">
 
 header
-
-
 
 </td>
 <td valign="top">
@@ -488,7 +406,27 @@ any Unicode string, a string containing an `i18n` text, a string containing a me
 </td>
 <td valign="top">
 
-The header is shown on the table as well as in the add/remove dialog.
+The header is shown on the table as well as in the add/remove dialog.of
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+tooltip
+
+</td>
+<td valign="top">
+
+any Unicode string, a string containing an `i18n` text.
+
+</td>
+<td valign="top">
+
+The tooltip is shown on the header of the custom columns when the mouse is hovered.
+
+> ### Note:  
+> The column header text is displayed as the tooltip if the tooltip isn't defined.
 
 
 
@@ -499,14 +437,10 @@ The header is shown on the table as well as in the add/remove dialog.
 
 width\*
 
-
-
 </td>
 <td valign="top">
 
 **auto**|value|inherit;
-
-
 
 </td>
 <td valign="top">
@@ -523,8 +457,6 @@ Default values are set by SAP Fiori elements if nothing is set.
 
 Note: This setting can also be used for existing annotation columns.
 
-
-
 </td>
 </tr>
 <tr>
@@ -532,14 +464,10 @@ Note: This setting can also be used for existing annotation columns.
 
 importance
 
-
-
 </td>
 <td valign="top">
 
 "High" | "Medium" | "Low"
-
-
 
 </td>
 <td valign="top">
@@ -558,8 +486,6 @@ The responsive table provides a feature where the table automatically moves the 
 
 For more information, see [Configuring Responsive Behavior of a Table](../10_More_About_Controls/configuring-responsive-behavior-of-a-table-38855e0.md).
 
-
-
 </td>
 </tr>
 <tr>
@@ -567,21 +493,15 @@ For more information, see [Configuring Responsive Behavior of a Table](../10_Mor
 
 horizontalAlign\*
 
-
-
 </td>
 <td valign="top">
 
 **"Begin"** | "Center" | "End"
 
-
-
 </td>
 <td valign="top">
 
 Aligns the header as well as the content horizontally.
-
-
 
 </td>
 </tr>
@@ -590,21 +510,15 @@ Aligns the header as well as the content horizontally.
 
 position
 
-
-
 </td>
 <td valign="top">
 
  
 
-
-
 </td>
 <td valign="top">
 
 Defines the position of the column relative to other columns.
-
-
 
 </td>
 </tr>
@@ -613,21 +527,15 @@ Defines the position of the column relative to other columns.
 
 position.placement
 
-
-
 </td>
 <td valign="top">
 
 **"After"** | "Before"
 
-
-
 </td>
 <td valign="top">
 
 Defines the placement, either before or after the anchor column.
-
-
 
 </td>
 </tr>
@@ -636,21 +544,15 @@ Defines the placement, either before or after the anchor column.
 
 position.anchor
 
-
-
 </td>
 <td valign="top">
 
 "<key\_of\_referenced\_column\>"
 
-
-
 </td>
 <td valign="top">
 
 The key of another column to be used as placement anchor. Columns defined via annotations can be referenced their `FieldId`.
-
-
 
 </td>
 </tr>
@@ -659,21 +561,15 @@ The key of another column to be used as placement anchor. Columns defined via an
 
 template
 
-
-
 </td>
 <td valign="top">
 
  
 
-
-
 </td>
 <td valign="top">
 
 Defining the target fragment follows the syntax of defining a fragment via Fragment.load
-
-
 
 </td>
 </tr>
@@ -682,14 +578,10 @@ Defining the target fragment follows the syntax of defining a fragment via Fragm
 
 availability\*
 
-
-
 </td>
 <td valign="top">
 
 **"Default"** | "Adaptation" | "Hidden"
-
-
 
 </td>
 <td valign="top">
@@ -705,8 +597,6 @@ Defines where the column is shown.
 
 Note: This setting can also be used for existing annotation columns.
 
-
-
 </td>
 </tr>
 <tr>
@@ -714,14 +604,10 @@ Note: This setting can also be used for existing annotation columns.
 
 properties\*
 
-
-
 </td>
 <td valign="top">
 
 Array of string\(s\)
-
-
 
 </td>
 <td valign="top">
@@ -745,6 +631,10 @@ The properties can be any that already exist in the annotations and that can be 
 
     Every property listed here will be exported into the spreadsheet or PDF file. When you export to a spreadsheet, the basic export exports all properties in the same column, and the option *Split cells with multiple values* exports each property in a separate column. Custom columns without a properties list will not be exported. For more information, see [Using the Export Feature](using-the-export-feature-4bab6f2.md).
 
+-   Copying row or range
+
+    Every property listed here will be copied to the clipboard when using the row or range copy.
+
 
 
 
@@ -755,14 +645,10 @@ The properties can be any that already exist in the annotations and that can be 
 
 required
 
-
-
 </td>
 <td valign="top">
 
 `true`/`false`
-
-
 
 </td>
 <td valign="top">

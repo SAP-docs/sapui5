@@ -138,14 +138,10 @@ The following table shows which controls are used by the filter bar controls to 
 
 Control
 
-
-
 </th>
 <th valign="top">
 
 Uses
-
-
 
 </th>
 </tr>
@@ -154,14 +150,10 @@ Uses
 
 `FilterBar` 
 
-
-
 </td>
 <td valign="top">
 
 `SmartVariantManagementUI2` 
-
-
 
 </td>
 </tr>
@@ -170,14 +162,10 @@ Uses
 
 `SmartFilterBar` 
 
-
-
 </td>
 <td valign="top">
 
 `SmartVariantManagement` 
-
-
 
 </td>
 </tr>

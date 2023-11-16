@@ -13,49 +13,35 @@ With this release SAPUI5 is upgraded from version 1.62 to 1.63.
 
 Version
 
-
-
 </th>
 <th valign="top">
 
 Type
-
-
 
 </th>
 <th valign="top">
 
 Category
 
-
-
 </th>
 <th valign="top">
 
 Title
-
-
 
 </th>
 <th valign="top">
 
 Description
 
-
-
 </th>
 <th valign="top">
 
 Action
 
-
-
 </th>
 <th valign="top">
 
 Available as of
-
-
 
 </th>
 </tr>
@@ -64,28 +50,20 @@ Available as of
 
 1.63 
 
-
-
 </td>
 <td valign="top">
 
 New 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **Custom Currencies** 
-
-
 
 </td>
 <td valign="top">
@@ -98,21 +76,15 @@ For more information, see [Currency Formatting](../04_Essentials/currency-format
 
 <sub>New•Feature•Info Only•1.63</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only
 
-
-
 </td>
 <td valign="top">
 
 2019-02-27
-
-
 
 </td>
 </tr>
@@ -121,28 +93,20 @@ Info Only
 
 1.63 
 
-
-
 </td>
 <td valign="top">
 
 New 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **UI5 Web Components** 
-
-
 
 </td>
 <td valign="top">
@@ -159,21 +123,15 @@ For more information, see the [UI5 Web Components](https://sap.github.io/ui5-web
 
 <sub>New•Feature•Info Only•1.63</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-02-27
-
-
 
 </td>
 </tr>
@@ -182,28 +140,20 @@ Info Only
 
 1.63 
 
-
-
 </td>
 <td valign="top">
 
 New 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.f.ShellBar` \(Experimental\)** 
-
-
 
 </td>
 <td valign="top">
@@ -218,21 +168,15 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.f.Sh
 
 <sub>New•Control•Info Only•1.63</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-02-27
-
-
 
 </td>
 </tr>
@@ -241,28 +185,20 @@ Info Only
 
 1.63 
 
-
-
 </td>
 <td valign="top">
 
 New 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.upload.UploadSet`** 
-
-
 
 </td>
 <td valign="top">
@@ -275,21 +211,15 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.up
 
 <sub>New•Control•Info Only•1.63</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-02-27
-
-
 
 </td>
 </tr>
@@ -298,28 +228,20 @@ Info Only
 
 1.63 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **SAPUI5 OData V4 Model** 
-
-
 
 </td>
 <td valign="top">
@@ -342,21 +264,15 @@ For more information, see [OData V4 Model](../04_Essentials/odata-v4-model-5de13
 
 <sub>Changed•Feature•Info Only•1.63</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-02-27
-
-
 
 </td>
 </tr>
@@ -365,28 +281,20 @@ Info Only
 
 1.63 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.f.Avatar`** 
-
-
 
 </td>
 <td valign="top">
@@ -397,21 +305,15 @@ We have introduced a fallback image behavior that handles situations when the pr
 
 <sub>Changed•Control•Info Only•1.63</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-02-27
-
-
 
 </td>
 </tr>
@@ -420,28 +322,20 @@ Info Only
 
 1.63 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.f.DynamicPage`** 
-
-
 
 </td>
 <td valign="top">
@@ -452,21 +346,15 @@ We have implemented the option to provide a simple, single-line title that takes
 
 <sub>Changed•Control•Info Only•1.63</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-02-27
-
-
 
 </td>
 </tr>
@@ -475,28 +363,20 @@ Info Only
 
 1.63 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.f.semantic.SemanticPage`** 
-
-
 
 </td>
 <td valign="top">
@@ -507,21 +387,15 @@ We have implemented the option to provide a simple, single-line title that takes
 
 <sub>Changed•Control•Info Only•1.63</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-02-27
-
-
 
 </td>
 </tr>
@@ -530,28 +404,20 @@ Info Only
 
 1.63 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.ObjectNumber / sap.m.ObjectStatus`** 
-
-
 
 </td>
 <td valign="top">
@@ -562,21 +428,15 @@ You can now display both controls with a large font size, thus meeting the SAP F
 
 <sub>Changed•Control•Info Only•1.63</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-02-27
-
-
 
 </td>
 </tr>
@@ -585,28 +445,20 @@ Info Only
 
 1.63 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.Select`** 
-
-
 
 </td>
 <td valign="top">
@@ -617,21 +469,15 @@ To ensure that the value states are displayed in all situations and devices, the
 
 <sub>Changed•Control•Info Only•1.63</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-02-27
-
-
 
 </td>
 </tr>
@@ -640,28 +486,20 @@ Info Only
 
 1.63 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.suite.ui.microchart.BulletMicroChart`** 
-
-
 
 </td>
 <td valign="top">
@@ -674,21 +512,15 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.suit
 
 <sub>Changed•Control•Info Only•1.63</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-02-27
-
-
 
 </td>
 </tr>
@@ -697,28 +529,20 @@ Info Only
 
 1.63 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.suite.ui.microchart.ColumnMicroChart`** 
-
-
 
 </td>
 <td valign="top">
@@ -731,21 +555,15 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.suit
 
 <sub>Changed•Control•Info Only•1.63</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-02-27
-
-
 
 </td>
 </tr>
@@ -754,28 +572,20 @@ Info Only
 
 1.63 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.suite.ui.microchart.LineMicroChart`** 
-
-
 
 </td>
 <td valign="top">
@@ -788,21 +598,15 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.suit
 
 <sub>Changed•Control•Info Only•1.63</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-02-27
-
-
 
 </td>
 </tr>
@@ -811,28 +615,20 @@ Info Only
 
 1.63 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.suite.ui.microchart`** 
-
-
 
 </td>
 <td valign="top">
@@ -847,21 +643,15 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.suit
 
 <sub>Changed•Control•Info Only•1.63</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-02-27
-
-
 
 </td>
 </tr>
@@ -870,28 +660,20 @@ Info Only
 
 1.63 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.layout.cssgrid.CSSGrid`** 
-
-
 
 </td>
 <td valign="top">
@@ -902,21 +684,15 @@ You can now set the `CSSGrid` breakpoints \(large, medium, or small\) to depend 
 
 <sub>Changed•Control•Info Only•1.63</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-02-27
-
-
 
 </td>
 </tr>
@@ -925,28 +701,20 @@ Info Only
 
 1.63 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 SAP Fiori Elements 
 
-
-
 </td>
 <td valign="top">
 
 **SAP Fiori Elements** 
-
-
 
 </td>
 <td valign="top">
@@ -982,21 +750,15 @@ The analytical list page has these new features or enhancements:
 
 <sub>Changed•SAP Fiori Elements•Info Only•1.63</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-02-27
-
-
 
 </td>
 </tr>
@@ -1005,28 +767,20 @@ Info Only
 
 1.63 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **Demo Kit API Reference Tree** 
-
-
 
 </td>
 <td valign="top">
@@ -1039,21 +793,15 @@ We have improved the *API Reference* tree to use proper nesting of the SAPUI5 sy
 
 <sub>Changed•Feature•Info Only•1.63</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-02-27
-
-
 
 </td>
 </tr>
@@ -1061,6 +809,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.118](what-s-new-in-sapui5-1-118-3eecbde.md "With this release SAPUI5 is upgraded from version 1.117 to 1.118.")
 
 [What's New in SAPUI5 1.117](what-s-new-in-sapui5-1-117-029d3b4.md "With this release SAPUI5 is upgraded from version 1.116 to 1.117.")
 

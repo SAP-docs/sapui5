@@ -18,7 +18,7 @@ We will now add a dialog to our app. Dialogs are special, because they open on t
   
 **A dialog opens when the new “Say Hello With Dialog” button is clicked**
 
-![](images/UI5_Walkthrough_Step_16_0916080.png "A dialog opens when the new “Say Hello With Dialog” button is clicked")
+![The graphic has an explanatory text.](images/UI5_Walkthrough_Step_16_0916080.png "A dialog opens when the new “Say Hello With Dialog” button is clicked")
 
 
 

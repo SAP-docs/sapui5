@@ -34,7 +34,6 @@ You can view and download all files at [OData V4 - Step 7](https://ui5.sap.com/#
 ...
 		onInit: function () {
 			...
-
 				oViewModel = new JSONModel({
 					busy : false,
 					hasUIChanges : false,

@@ -12,7 +12,7 @@ We now configure the visibility and properties of controls based on the device t
   
 **On phone devices, the panel is collapsed to save screen space and a button is hidden**
 
-![](images/UI5_Walkthrough_Step_35_0b0d57e.png "On phone devices, the panel is collapsed to save screen space and a button is
+![The graphic has an explanatory text.](images/UI5_Walkthrough_Step_35_0b0d57e.png "On phone devices, the panel is collapsed to save screen space and a button is
 					hidden")
 
 

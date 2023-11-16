@@ -19,21 +19,15 @@ The following table contains guidelines and examples on how to set the rule prop
 
 Field
 
-
-
 </th>
 <th valign="top">
 
 Guidelines / Explanation
 
-
-
 </th>
 <th valign="top">
 
 Example / Clarification
-
-
 
 </th>
 </tr>
@@ -41,8 +35,6 @@ Example / Clarification
 <td valign="top">
 
 ID
-
-
 
 </td>
 <td valign="top">
@@ -59,8 +51,6 @@ ID
 
 *hardcodedTextValues*
 
-
-
 </td>
 </tr>
 <tr>
@@ -68,21 +58,15 @@ ID
 
 Async
 
-
-
 </td>
 <td valign="top">
 
 Defines if the rule check function will contain asynchronous operations. It can be true or false. The default value is false.
 
-
-
 </td>
 <td valign="top">
 
 Make sure you use the resolve function in your rule check function as a 4th parameter.
-
-
 
 </td>
 </tr>
@@ -90,8 +74,6 @@ Make sure you use the resolve function in your rule check function as a 4th para
 <td valign="top">
 
 Audiences
-
-
 
 </td>
 <td valign="top">
@@ -110,16 +92,12 @@ Audiences
 
 Choose one.
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
 Categories
-
-
 
 </td>
 <td valign="top">
@@ -140,16 +118,12 @@ A list of categories checked that show which aspects of the application are affe
 
 Choose one or more, or add your own.
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
 Min version
-
-
 
 </td>
 <td valign="top">
@@ -158,14 +132,10 @@ The minimum SAPUI5 version required so that the rule can produce valid results. 
 
 If you have rules in your custom library, keep in mind that the rule `minversion` will still be compared against the underlying SAPUI5 version. If you are not aware of the version, you can put in the `minversion` field "\*", "-" or whitespace \(" "\) to make sure these rules are executed.
 
-
-
 </td>
 <td valign="top">
 
 for example, 1.44 for SAPUI5 version comparison or "\*", "-", or whitespace \(" "\) to avoid version filtering.
-
-
 
 </td>
 </tr>
@@ -174,21 +144,15 @@ for example, 1.44 for SAPUI5 version comparison or "\*", "-", or whitespace \(" 
 
 Max version
 
-
-
 </td>
 <td valign="top">
 
 The maximum SAPUI5 version required to run the rule.
 
-
-
 </td>
 <td valign="top">
 
 \(currently not taken into account\)
-
-
 
 </td>
 </tr>
@@ -196,8 +160,6 @@ The maximum SAPUI5 version required to run the rule.
 <td valign="top">
 
 Title
-
-
 
 </td>
 <td valign="top">
@@ -216,16 +178,12 @@ Title
 
 *Page: invalid background design property*
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
 Description
-
-
 
 </td>
 <td valign="top">
@@ -244,16 +202,12 @@ Description
 
 *Dialogs with content should have ariaLabelledBy association set*
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
 Resolution
-
-
 
 </td>
 <td valign="top">
@@ -274,16 +228,12 @@ Resolution
 
 *Set property upperCase to false or add icons to IconTabFilters*
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
 Details
-
-
 
 </td>
 <td valign="top">
@@ -300,16 +250,12 @@ Details
 
 *Element\{0\} has no icon but its parent Element\{1\} has property upperCase set to true.*
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
 URLs
-
-
 
 </td>
 <td valign="top">
@@ -346,21 +292,15 @@ URLs
 
 Check function
 
-
-
 </td>
 <td valign="top">
 
 Check function code
 
-
-
 </td>
 <td valign="top">
 
 `function (issueManager, oCoreFacade, oScope) { ... }` 
-
-
 
 </td>
 </tr>

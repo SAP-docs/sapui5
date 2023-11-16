@@ -21,28 +21,20 @@ The following table lists the order of available representation types:
 
 Chart Name
 
-
-
 </th>
 <th valign="top">
 
 ID
-
-
 
 </th>
 <th valign="top">
 
 Constructor
 
-
-
 </th>
 <th valign="top">
 
 Chart Type in VizFrame Charting Library
-
-
 
 </th>
 </tr>
@@ -51,28 +43,20 @@ Chart Type in VizFrame Charting Library
 
 Column chart
 
-
-
 </td>
 <td valign="top">
 
 ColumnChart
-
-
 
 </td>
 <td valign="top">
 
 `sap.apf.ui.representations.columnChart` 
 
-
-
 </td>
 <td valign="top">
 
 `sap.viz.ui5.controls.VizFrame({vizType : column});` 
-
-
 
 </td>
 </tr>
@@ -81,28 +65,20 @@ ColumnChart
 
 Bar chart
 
-
-
 </td>
 <td valign="top">
 
 BarChart
-
-
 
 </td>
 <td valign="top">
 
 `sap.apf.ui.representations.barChart` 
 
-
-
 </td>
 <td valign="top">
 
 `sap.viz.ui5.controls.VizFrame({vizType : bar});` 
-
-
 
 </td>
 </tr>
@@ -111,28 +87,20 @@ BarChart
 
 Line chart
 
-
-
 </td>
 <td valign="top">
 
 LineChart
-
-
 
 </td>
 <td valign="top">
 
 `sap.apf.ui.representations.lineChart` 
 
-
-
 </td>
 <td valign="top">
 
 `sap.viz.ui5.controls.VizFrame({vizType : line});` 
-
-
 
 </td>
 </tr>
@@ -141,28 +109,20 @@ LineChart
 
 Line chart with two vertical axes
 
-
-
 </td>
 <td valign="top">
 
 LineChartWithTwoVerticalAxes
-
-
 
 </td>
 <td valign="top">
 
 `sap.apf.ui.representations.lineChartWithTwoVerticalAxes` 
 
-
-
 </td>
 <td valign="top">
 
 `sap.viz.ui5.controls.Vi zFrame({vizType : dual_line});` 
-
-
 
 </td>
 </tr>
@@ -171,28 +131,20 @@ LineChartWithTwoVerticalAxes
 
 Line chart with time axis
 
-
-
 </td>
 <td valign="top">
 
 LineChartWithTimeAxis
-
-
 
 </td>
 <td valign="top">
 
 `sap.apf.ui.representations.lineChartWithTimeAxis` 
 
-
-
 </td>
 <td valign="top">
 
 `sap.viz.ui5.controls.Vi zFrame({vizType : timeseries_line});` 
-
-
 
 </td>
 </tr>
@@ -201,28 +153,20 @@ LineChartWithTimeAxis
 
 Pie chart
 
-
-
 </td>
 <td valign="top">
 
 PieChart
-
-
 
 </td>
 <td valign="top">
 
 `sap.apf.ui.representations.pieChart` 
 
-
-
 </td>
 <td valign="top">
 
 `sap.viz.ui5.controls.VizFrame({vizType : pie});` 
-
-
 
 </td>
 </tr>
@@ -231,28 +175,20 @@ PieChart
 
 Donut chart
 
-
-
 </td>
 <td valign="top">
 
 DonutChart
-
-
 
 </td>
 <td valign="top">
 
 `sap.apf.ui.representations.donutChart` 
 
-
-
 </td>
 <td valign="top">
 
 `sap.viz.ui5.controls.VizFrame({vizType : donut});` 
-
-
 
 </td>
 </tr>
@@ -261,28 +197,20 @@ DonutChart
 
 Scatter plot chart
 
-
-
 </td>
 <td valign="top">
 
 ScatterPlotChart
-
-
 
 </td>
 <td valign="top">
 
 `sap.apf.ui.representations.scatterPlotChart` 
 
-
-
 </td>
 <td valign="top">
 
 `sap.viz.ui5.controls.VizFrame({vizType : scatter});` 
-
-
 
 </td>
 </tr>
@@ -291,28 +219,20 @@ ScatterPlotChart
 
 Bubble chart
 
-
-
 </td>
 <td valign="top">
 
 BubbleChart
-
-
 
 </td>
 <td valign="top">
 
 `sap.apf.ui.representations.bubbleChart` 
 
-
-
 </td>
 <td valign="top">
 
 `sap.viz.ui5.controls.VizFrame({vizType : bubble});` 
-
-
 
 </td>
 </tr>
@@ -321,28 +241,20 @@ BubbleChart
 
 Stacked column chart
 
-
-
 </td>
 <td valign="top">
 
 StackedColumnChart
-
-
 
 </td>
 <td valign="top">
 
 `sap.apf.ui.representations.stackedColumnChart` 
 
-
-
 </td>
 <td valign="top">
 
 `sap.viz.ui5.controls.VizFrame({vizType : 100_stacked_column});` 
-
-
 
 </td>
 </tr>
@@ -351,28 +263,20 @@ StackedColumnChart
 
 Stacked bar chart
 
-
-
 </td>
 <td valign="top">
 
 StackedBarChart
-
-
 
 </td>
 <td valign="top">
 
 `sap.apf.ui.representations.stackedBarChart` 
 
-
-
 </td>
 <td valign="top">
 
 `sap.viz.ui5.controls.VizFrame({vizType : 100_stacked_bar});` 
-
-
 
 </td>
 </tr>
@@ -381,28 +285,20 @@ StackedBarChart
 
 100% stacked column chart
 
-
-
 </td>
 <td valign="top">
 
 PercentageStackedColumnChart
-
-
 
 </td>
 <td valign="top">
 
 `sap.apf.ui.representations.percentageStackedColumnChart` 
 
-
-
 </td>
 <td valign="top">
 
 `sap.viz.ui5.controls.VizFrame({vizType : 100_stacked_column});)` 
-
-
 
 </td>
 </tr>
@@ -411,28 +307,20 @@ PercentageStackedColumnChart
 
 100% stacked bar chart
 
-
-
 </td>
 <td valign="top">
 
 PercentageStackedBarChart
-
-
 
 </td>
 <td valign="top">
 
 `sap.apf.ui.representati ons.percentageStackedBarChart` 
 
-
-
 </td>
 <td valign="top">
 
 `sap.viz.ui5.controls.Vi zFrame({vizType : 100_stacked_bar});)` 
-
-
 
 </td>
 </tr>
@@ -441,28 +329,20 @@ PercentageStackedBarChart
 
 Combined column line chart
 
-
-
 </td>
 <td valign="top">
 
 CombinationChart
-
-
 
 </td>
 <td valign="top">
 
 `sap.apf.ui.represent ations.combinationChart` 
 
-
-
 </td>
 <td valign="top">
 
 `sap.viz.ui5.controls .Vi zFrame({vizType : combination});)` 
-
-
 
 </td>
 </tr>
@@ -471,28 +351,20 @@ CombinationChart
 
 Combined stacked column line chart
 
-
-
 </td>
 <td valign="top">
 
 StackedCombinationChart
-
-
 
 </td>
 <td valign="top">
 
 `sap.apf.ui.represent ations.stackedCombinationChart` 
 
-
-
 </td>
 <td valign="top">
 
 `sap.viz.ui5.controls .Vi zFrame({vizType : stacked combination});)` 
-
-
 
 </td>
 </tr>
@@ -501,28 +373,20 @@ StackedCombinationChart
 
 Combined column line chart with two vertical axes
 
-
-
 </td>
 <td valign="top">
 
 DualCombinationChart
-
-
 
 </td>
 <td valign="top">
 
 `sap.apf.ui.represent ations.dualCombinationChart` 
 
-
-
 </td>
 <td valign="top">
 
 `sap.viz.ui5.controls .Vi zFrame({vizType : dual combination});)` 
-
-
 
 </td>
 </tr>
@@ -531,28 +395,20 @@ DualCombinationChart
 
 Combined stacked column line chart with two vertical axes
 
-
-
 </td>
 <td valign="top">
 
 DualStackedCombinationChart
-
-
 
 </td>
 <td valign="top">
 
 `sap.apf.ui.represent ations.dualStackedCombinationChart` 
 
-
-
 </td>
 <td valign="top">
 
 `sap.viz.ui5.controls .Vi zFrame({vizType : dual stacked combination});)` 
-
-
 
 </td>
 </tr>
@@ -561,28 +417,20 @@ DualStackedCombinationChart
 
 Heatmap chart
 
-
-
 </td>
 <td valign="top">
 
 HeatmapChart
-
-
 
 </td>
 <td valign="top">
 
 `Sap.apf.ui.representations.heatmapChart` 
 
-
-
 </td>
 <td valign="top">
 
 `sap.viz.ui5.controls.Vi zFrame({vizType :heatmap});)` 
-
-
 
 </td>
 </tr>
@@ -591,28 +439,20 @@ HeatmapChart
 
 Table
 
-
-
 </td>
 <td valign="top">
 
 TableRepresentation
-
-
 
 </td>
 <td valign="top">
 
 `sap.apf.ui.representations.tableRepresentation` 
 
-
-
 </td>
 <td valign="top">
 
 `SAPUI5 table (sap.ui.table.Table)` 
-
-
 
 </td>
 </tr>
@@ -621,28 +461,20 @@ TableRepresentation
 
 Tree table
 
-
-
 </td>
 <td valign="top">
 
 TreeTableRepresentation
-
-
 
 </td>
 <td valign="top">
 
 `sap.apf.ui.representations.treeTable` 
 
-
-
 </td>
 <td valign="top">
 
 `SAPUI5 tree table (sap.ui.table.TreeTable)` 
-
-
 
 </td>
 </tr>

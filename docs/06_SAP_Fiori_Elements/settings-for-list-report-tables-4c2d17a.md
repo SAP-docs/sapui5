@@ -10,7 +10,7 @@ You can set up various aspects of the list report table through annotations and 
 
 ## Displaying the Editing Status
 
-In draft-enabled applications, the **Draft**, **Unsaved Changes by Another User**, and **Locked by Another User** statuses are displayed in the first column. You can add the semantic key as shown in the following sample code:
+In draft-enabled applications, the **Draft**, **Unsaved Changes by Another User**, and **Locked by Another User** statuses are displayed in the list report. In the responsive table, the statuses are shown in the key column. In the grid table, the statuses are shown in a separate column next to the key column. You can add the semantic key as shown in the following sample code:
 
 > ### Sample Code:  
 > XML Annotation
@@ -61,7 +61,7 @@ For more information, see [Editing Status](editing-status-668ea18.md).
 
 ## Additional Features in SAP Fiori Elements for OData V2
 
-If you have not added a semantic key to the line items, the editing status is displayed in the *Title* or *Description* column, depending on the available information:
+If you'ven't added a semantic key to the line items, the editing status is displayed in the *Title* or *Description* column, depending on the available information:
 
 -   If a semantic key is available for the `entityType` and is part of the table, the draft information is shown in the column where the first semantic key is displayed.
 

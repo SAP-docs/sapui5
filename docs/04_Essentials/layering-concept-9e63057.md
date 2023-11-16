@@ -13,28 +13,20 @@ The delta changes are stored in a repository, called *layered repository*, as it
 
 Layer
 
-
-
 </th>
 <th valign="top">
 
 Used by
-
-
 
 </th>
 <th valign="top">
 
 Stores changes by
 
-
-
 </th>
 <th valign="top">
 
 Type of changes
-
-
 
 </th>
 </tr>
@@ -43,28 +35,20 @@ Type of changes
 
 `USER` 
 
-
-
 </td>
 <td valign="top">
 
 Customer
-
-
 
 </td>
 <td valign="top">
 
 End users
 
-
-
 </td>
 <td valign="top">
 
 User-specific personalization settings \(for object pages\)
-
-
 
 </td>
 </tr>
@@ -73,28 +57,20 @@ User-specific personalization settings \(for object pages\)
 
 `CUSTOMER` 
 
-
-
 </td>
 <td valign="top" rowspan="2">
 
 Customer
-
-
 
 </td>
 <td valign="top">
 
 Key users
 
-
-
 </td>
 <td valign="top">
 
 UI changes to adapt apps for all users made using key user adaptation
-
-
 
 </td>
 </tr>
@@ -103,14 +79,10 @@ UI changes to adapt apps for all users made using key user adaptation
 
 End users
 
-
-
 </td>
 <td valign="top">
 
 Views that the end user saves as *Public* 
-
-
 
 </td>
 </tr>
@@ -119,28 +91,20 @@ Views that the end user saves as *Public*
 
 `CUSTOMER_BASE` 
 
-
-
 </td>
 <td valign="top">
 
 Customer
-
-
 
 </td>
 <td valign="top">
 
 Developers
 
-
-
 </td>
 <td valign="top">
 
 UI changes made using the SAPUI5 Visual Editor editor in SAP Web IDE 
-
-
 
 </td>
 </tr>
@@ -149,28 +113,20 @@ UI changes made using the SAPUI5 Visual Editor editor in SAP Web IDE
 
 `VENDOR` 
 
-
-
 </td>
 <td valign="top">
 
 SAP
 
-
-
 </td>
 <td valign="top">
 
 SAP
-
-
 
 </td>
 <td valign="top">
 
 Example: Update of an app
-
-
 
 </td>
 </tr>

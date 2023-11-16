@@ -22,8 +22,6 @@ By default, when executing an action defined via the `UI.DataFieldForAction` ann
 
 ### SAP Fiori Elements for OData V2
 
-The pages structure of the app should always be a tree, with the root as either a list report or an analytical list page. All the other nodes would be object pages or canvas pages, that are uniquely identified by their entity sets. This means that no two object pages can share the same entity set.
-
 You can control whether it is possible to navigate to a detail page. It simply depends on whether you keep the predefined definition of a subpage:
 
 > ### Sample Code:  
@@ -116,13 +114,13 @@ For more information, see [List Report Elements](list-report-elements-1cf5c7f.md
 
 ### SAP Fiori Elements for OData V4
 
-In the `manifest.json`, you define the "navigation" section for each "target". This controls if the navigation is enabled or not. If navigation is enabled, a chevron comes for the record in the table indicating a further navigation to the detail page \(object page or subobject page\).
+In the `manifest.json`, you define the "navigation" section for each "target". This controls if the navigation is enabled or not. If navigation is enabled, a chevron comes for the record in the table indicating a further navigation to the detail page \(object page or subobject page\).The pages structure of the app should always be a tree, with the root as either a list report or an analytical list page. All the other nodes would be object pages or canvas pages, that are uniquely identified by their entity sets. This means that no two object pages can share the same entity set.
 
 > ### Sample Code:  
 > `manifest.json`
 > 
 > ```json
-> {
+> The pages structure of the app should always be a tree, with the root as either a list report or an analytical list page. All the{
 > …
 > …
 > "sap.ui5": {
@@ -147,24 +145,42 @@ In the `manifest.json`, you define the "navigation" section for each "target". T
 >                 "id": "ArtistList",
 >                 "name": "sap.fe.templates.ListReport",
 >                 "options": {
->                     "settings" :{                          
+>                     "settings" :{                         
 >                         "contextPath": "/Artists",
 >                         "navigation": {                              // Navigation Section to detail page: Eliminate if no navigation is required.
->                             "Artists": {                                 
->                                 "detail": {                                      
+>                             "Artists": {                                
+>                                 "detail": {                                     
 >                                     "route": "ArtistObjectPage" // This triggers the regular internal navigation to OP from LR table record
->                                 }                           
->                             }                          
+>                                 }                          
+>                             }                         
 >                         }
 >                     }
 >                 }
 >             }, // End of ArtistList
 >             "ArtistObjectPage": {
 >                 "type": "Component",
->                 "id":  "ArtistDetail",                  
+>                 "id":  "ArtistDetail",                 
 >                 "name": "sap.fe.templates.ObjectPage",
->                 ...
->                 ...
+>                "option"”: {
+>                  "setting": {
+>                   …..
+>                   …..
+>                   "navigation": {               // Navigation Section to SubOP detail page: Eliminate if no navigation is required.
+>                             "_Records": {       // NOTE: This should refer to navigation path and NOT navigation entity name                         
+>                                 "detail": {                                     
+>                                     "route": "RecordSubObjectPage" // This triggers the regular internal navigation from OP “Records” table record to SubOP
+>                                 }                         
+>                             },
+>                             "_Publishers": {    // NOTE: This should refer to navigation path and NOT navigation entity name                            
+>                                 "detail": {                                     
+>                                     "route": "PublisherSubObjectPage" // This triggers the regular internal navigation from OP “Publisher” table record to SubOP
+>                                 }                         
+>                             }                         
+>                         }
+>                     }
+>                   }
+>                  ...
+>                  ...
 >             } // End of ArtistObjectPage
 >         } // End of Targets
 >      }, // End of routing
@@ -178,6 +194,11 @@ In the `manifest.json`, you define the "navigation" section for each "target". T
 > ```
 
 The same holds true for the navigation to any level of subobject pages.
+
+> ### Note:  
+> While defining navigation targets for object pages and subobject pages, application developers must ensure that they specify the navigation property path instead of the navigation entity set name.
+> 
+> In the preceding sample code, under `navigation`, the `_Records` is the navigation path to the navigation entity linked to `ArtistObjectPage`. You must not use `Records` as the navigation target because it is the navigation entity set name.
 
 
 

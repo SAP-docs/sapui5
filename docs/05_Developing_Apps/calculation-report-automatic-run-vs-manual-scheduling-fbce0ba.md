@@ -19,14 +19,10 @@ The execution of the report to update the index is in most cases triggered autom
 
 Type of Change to the SAPUI5 ABAP Repository
 
-
-
 </th>
 <th valign="top">
 
 Manual Execution of the Calculation Report Required?
-
-
 
 </th>
 </tr>
@@ -35,14 +31,10 @@ Manual Execution of the Calculation Report Required?
 
 Deployment with SAP Business Application Studio 
 
-
-
 </td>
 <td valign="top" rowspan="3">
 
 No, the report is executed automatically.
-
-
 
 </td>
 </tr>
@@ -51,16 +43,12 @@ No, the report is executed automatically.
 
 Upload with report `/UI5/UI5_REPOSITORY_LOAD` 
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
 Installation of a new version of the SAPUI5 distribution layer
-
-
 
 </td>
 </tr>
@@ -69,14 +57,10 @@ Installation of a new version of the SAPUI5 distribution layer
 
 Implementation of an SAP Note containing changes for an SAPUI5 app
 
-
-
 </td>
 <td valign="top" rowspan="3">
 
 Yes, run the report manually to update the index for the app or distribution layer in question.
-
-
 
 </td>
 </tr>
@@ -85,16 +69,12 @@ Yes, run the report manually to update the index for the app or distribution lay
 
 Support package updates and release upgrades
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
 Manual changes using transaction `SE80` \(not supported and therefore not recommended\)
-
-
 
 </td>
 </tr>
@@ -120,7 +100,7 @@ You can access the job `/UI5/APP_IDX_UPD_AFTER_IMPORT` that is automatically sch
 
 Here’s how you can decide whether you need to schedule the report after transports:
 
-![](images/Decide_whether_you_need_to_schedule_the_report_35e150c.png)
+![The graphic is explained in the accompanying text.](images/Decide_whether_you_need_to_schedule_the_report_35e150c.png)
 
 If the import is triggered by ABAP, report `/UI5/APP_INDEX_CALCULATE` is executed automatically. If the import is triggered by OS command line and the transport profile parameter `FEEDBACK_IMPORT` is set \(see SAP Note [2253480](https://me.sap.com/notes/2253480)\), the report is also executed automatically. If the transport profile parameter is not set, the report is not executed automatically.
 

@@ -13,49 +13,35 @@ With this release SAPUI5 is upgraded from version 1.48 to 1.50.
 
 Version
 
-
-
 </th>
 <th valign="top">
 
 Type
-
-
 
 </th>
 <th valign="top">
 
 Category
 
-
-
 </th>
 <th valign="top">
 
 Title
-
-
 
 </th>
 <th valign="top">
 
 Description
 
-
-
 </th>
 <th valign="top">
 
 Action
 
-
-
 </th>
 <th valign="top">
 
 Available as of
-
-
 
 </th>
 </tr>
@@ -64,28 +50,20 @@ Available as of
 
 1.50 
 
-
-
 </td>
 <td valign="top">
 
 New 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **New Demo Kit \(already available as of version 1.48.5\)** 
-
-
 
 </td>
 <td valign="top">
@@ -113,21 +91,15 @@ The new Demo Kit contains the following sections:
 
 <sub>New•Feature•Info Only•1.50</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only
 
-
-
 </td>
 <td valign="top">
 
 2017-11-09
-
-
 
 </td>
 </tr>
@@ -136,28 +108,20 @@ Info Only
 
 1.50
 
-
-
 </td>
 <td valign="top">
 
 New 
-
-
 
 </td>
 <td valign="top">
 
 User Documentation 
 
-
-
 </td>
 <td valign="top">
 
 **Tutorials** 
-
-
 
 </td>
 <td valign="top">
@@ -168,21 +132,15 @@ The new *Ice Cream Machine* tutorial shows you how to use SAPUI5 controls like G
 
 <sub>New•User Documentation•Info Only•1.50</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2017-11-09
-
-
 
 </td>
 </tr>
@@ -191,28 +149,20 @@ Info Only
 
 1.50
 
-
-
 </td>
 <td valign="top">
 
 New 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **Unicode Common Locale Data Repository \(CLDR\)** 
-
-
 
 </td>
 <td valign="top">
@@ -225,21 +175,15 @@ The correct plural category for a given number is now handled by the locale-spec
 
 <sub>New•Feature•Info Only•1.50</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2017-11-09
-
-
 
 </td>
 </tr>
@@ -248,28 +192,20 @@ Info Only
 
 1.50
 
-
-
 </td>
 <td valign="top">
 
 New 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **Date Interval Types** 
-
-
 
 </td>
 <td valign="top">
@@ -289,21 +225,15 @@ For more information, see [sap.ui.model.type.DateTimeInterval](../04_Essentials/
 
 <sub>New•Feature•Info Only•1.50</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2017-11-09
-
-
 
 </td>
 </tr>
@@ -312,28 +242,20 @@ Info Only
 
 1.50
 
-
-
 </td>
 <td valign="top">
 
 New 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **`animationMode`** 
-
-
 
 </td>
 <td valign="top">
@@ -344,21 +266,15 @@ The configuration option `animationMode` replaces `animation`, which is now depr
 
 <sub>New•Feature•Info Only•1.50</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2017-11-09
-
-
 
 </td>
 </tr>
@@ -367,28 +283,20 @@ Info Only
 
 1.50
 
-
-
 </td>
 <td valign="top">
 
 New 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.export`** 
-
-
 
 </td>
 <td valign="top">
@@ -399,21 +307,15 @@ This new library provides APIs for exporting a client-side spreadsheet using an 
 
 <sub>New•Feature•Info Only•1.50</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2017-11-09
-
-
 
 </td>
 </tr>
@@ -422,28 +324,20 @@ Info Only
 
 1.50
 
-
-
 </td>
 <td valign="top">
 
 New 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.PlanningCalendarLegend`** 
-
-
 
 </td>
 <td valign="top">
@@ -456,21 +350,15 @@ Control
 
 <sub>New•Control•Info Only•1.50</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2017-11-09
-
-
 
 </td>
 </tr>
@@ -479,28 +367,20 @@ Info Only
 
 1.50
 
-
-
 </td>
 <td valign="top">
 
 New 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.suite.ui.commons.networkgraph`** 
-
-
 
 </td>
 <td valign="top">
@@ -517,21 +397,15 @@ For more information, see [Network Graph](../10_More_About_Controls/network-grap
 
 <sub>New•Control•Info Only•1.50</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2017-11-09
-
-
 
 </td>
 </tr>
@@ -540,28 +414,20 @@ Info Only
 
 1.50
 
-
-
 </td>
 <td valign="top">
 
 New 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.suite.ui.commons.statusindicator`** 
-
-
 
 </td>
 <td valign="top">
@@ -580,21 +446,15 @@ For more information, see [Status Indicator](../10_More_About_Controls/status-in
 
 <sub>New•Control•Info Only•1.50</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2017-11-09
-
-
 
 </td>
 </tr>
@@ -603,28 +463,20 @@ Info Only
 
 1.50
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **SAPUI5 OData V4 Model** 
-
-
 
 </td>
 <td valign="top">
@@ -660,21 +512,15 @@ For more information, see [OData V4 Model](../04_Essentials/odata-v4-model-5de13
 
 <sub>Changed•Feature•Info Only•1.50</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2017-11-09
-
-
 
 </td>
 </tr>
@@ -683,28 +529,20 @@ Info Only
 
 1.50
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **Support Assistant: OPA Test Sample Added** 
-
-
 
 </td>
 <td valign="top">
@@ -719,21 +557,15 @@ As of this version, there is now a sample of the OPA integration in the Demo Kit
 
 <sub>Changed•Feature•Info Only•1.50</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2017-11-09
-
-
 
 </td>
 </tr>
@@ -742,28 +574,20 @@ Info Only
 
 1.50
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.f.DynamicPage`** 
-
-
 
 </td>
 <td valign="top">
@@ -781,21 +605,15 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.f.Dy
 
 <sub>Changed•Control•Info Only•1.50</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2017-11-09
-
-
 
 </td>
 </tr>
@@ -804,28 +622,20 @@ Info Only
 
 1.50
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.f.semantic.SemanticPage`** 
-
-
 
 </td>
 <td valign="top">
@@ -843,21 +653,15 @@ For more information, see [Semantic Page \(sap.f\)](../10_More_About_Controls/se
 
 <sub>Changed•Control•Info Only•1.50</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2017-11-09
-
-
 
 </td>
 </tr>
@@ -866,28 +670,20 @@ Info Only
 
 1.50
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.gantt`** 
-
-
 
 </td>
 <td valign="top">
@@ -905,21 +701,15 @@ Control
 
 <sub>Changed•Control•Info Only•1.50</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2017-11-09
-
-
 
 </td>
 </tr>
@@ -928,28 +718,20 @@ Info Only
 
 1.50
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.Label`** 
-
-
 
 </td>
 <td valign="top">
@@ -969,21 +751,15 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.La
 
 <sub>Changed•Control•Info Only•1.50</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2017-11-09
-
-
 
 </td>
 </tr>
@@ -992,28 +768,20 @@ Info Only
 
 1.50
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.MessageStrip`** 
-
-
 
 </td>
 <td valign="top">
@@ -1024,21 +792,15 @@ Control
 
 <sub>Changed•Control•Info Only•1.50</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2017-11-09
-
-
 
 </td>
 </tr>
@@ -1047,28 +809,20 @@ Info Only
 
 1.50
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.Panel`** 
-
-
 
 </td>
 <td valign="top">
@@ -1079,21 +833,15 @@ Control
 
 <sub>Changed•Control•Info Only•1.50</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2017-11-09
-
-
 
 </td>
 </tr>
@@ -1102,28 +850,20 @@ Info Only
 
 1.50
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.PlanningCalendar`** 
-
-
 
 </td>
 <td valign="top">
@@ -1139,21 +879,15 @@ Control
 
 <sub>Changed•Control•Info Only•1.50</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2017-11-09
-
-
 
 </td>
 </tr>
@@ -1162,28 +896,20 @@ Info Only
 
 1.50
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.ProgressIndicator`** 
-
-
 
 </td>
 <td valign="top">
@@ -1194,21 +920,15 @@ You can now set the control in a display-only state using the new `displayOnly` 
 
 <sub>Changed•Control•Info Only•1.50</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2017-11-09
-
-
 
 </td>
 </tr>
@@ -1217,28 +937,20 @@ Info Only
 
 1.50
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.RatingIndicator`** 
-
-
 
 </td>
 <td valign="top">
@@ -1251,21 +963,15 @@ A new state can be set using the `displayOnly` property. It enables visually dis
 
 <sub>Changed•Control•Info Only•1.50</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2017-11-09
-
-
 
 </td>
 </tr>
@@ -1274,28 +980,20 @@ Info Only
 
 1.50
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.semantic.SemanticPage`** 
-
-
 
 </td>
 <td valign="top">
@@ -1306,21 +1004,15 @@ You can now set the background color of the page using the new `backgroundDesign
 
 <sub>Changed•Control•Info Only•1.50</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2017-11-09
-
-
 
 </td>
 </tr>
@@ -1329,28 +1021,20 @@ Info Only
 
 1.50
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.UploadCollection`** 
-
-
 
 </td>
 <td valign="top">
@@ -1361,21 +1045,15 @@ Control
 
 <sub>Changed•Control•Info Only•1.50</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2017-11-09
-
-
 
 </td>
 </tr>
@@ -1384,28 +1062,20 @@ Info Only
 
 1.50
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.Tree`** 
-
-
 
 </td>
 <td valign="top">
@@ -1416,21 +1086,15 @@ The `toggleOpenState` event has been added. For more information, see the [API R
 
 <sub>Changed•Control•Info Only•1.50</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2017-11-09
-
-
 
 </td>
 </tr>
@@ -1439,28 +1103,20 @@ Info Only
 
 1.50
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.suite.ui.commons.ProcessFlow`** 
-
-
 
 </td>
 <td valign="top">
@@ -1473,21 +1129,15 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.suit
 
 <sub>Changed•Control•Info Only•1.50</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2017-11-09
-
-
 
 </td>
 </tr>
@@ -1496,28 +1146,20 @@ Info Only
 
 1.50
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.suite.ui.microchart.Interactive*Chart`** 
-
-
 
 </td>
 <td valign="top">
@@ -1532,21 +1174,15 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.suit
 
 <sub>Changed•Control•Info Only•1.50</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2017-11-09
-
-
 
 </td>
 </tr>
@@ -1555,28 +1191,20 @@ Info Only
 
 1.50
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.unified.Calendar`** 
-
-
 
 </td>
 <td valign="top">
@@ -1587,21 +1215,15 @@ The days of the previous/next month are no longer visible whenever the `sap.ui.u
 
 <sub>Changed•Control•Info Only•1.50</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2017-11-09
-
-
 
 </td>
 </tr>
@@ -1610,28 +1232,20 @@ Info Only
 
 1.50
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.comp.smartvariantmanagement.SmartVariantManagement`** 
-
-
 
 </td>
 <td valign="top">
@@ -1644,21 +1258,15 @@ For more information, see [Smart Variant Management](../10_More_About_Controls/s
 
 <sub>Changed•Control•Info Only•1.50</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2017-11-09
-
-
 
 </td>
 </tr>
@@ -1667,28 +1275,20 @@ Info Only
 
 1.50
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.layout.form.Form/sap.ui.layout.form.SimpleForm`** 
-
-
 
 </td>
 <td valign="top">
@@ -1699,21 +1299,15 @@ The samples, including the descriptions, have been simplified and are now more c
 
 <sub>Changed•Control•Info Only•1.50</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2017-11-09
-
-
 
 </td>
 </tr>
@@ -1722,28 +1316,20 @@ Info Only
 
 1.50
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.comp.navpopover.SmartLink`** 
-
-
 
 </td>
 <td valign="top">
@@ -1754,21 +1340,15 @@ The usability of the samples for the popover has been improved. For more informa
 
 <sub>Changed•Control•Info Only•1.50</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2017-11-09
-
-
 
 </td>
 </tr>
@@ -1777,28 +1357,20 @@ Info Only
 
 1.50
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **Smart Controls** 
-
-
 
 </td>
 <td valign="top">
@@ -1809,21 +1381,15 @@ Columns in the value help can now be sorted in all smart controls that use value
 
 <sub>Changed•Control•Info Only•1.50</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2017-11-09
-
-
 
 </td>
 </tr>
@@ -1832,28 +1398,20 @@ Info Only
 
 1.50
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 SAP Fiori Elements 
 
-
-
 </td>
 <td valign="top">
 
 **SAP Fiori Elements** 
-
-
 
 </td>
 <td valign="top">
@@ -1947,21 +1505,15 @@ OVP has been enhanced with the following features:
 
 <sub>Changed•SAP Fiori Elements•Info Only•1.50</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2017-11-09
-
-
 
 </td>
 </tr>
@@ -1970,28 +1522,20 @@ Info Only
 
 1.50
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Analysis Path Framework \(APF\) 
 
-
-
 </td>
 <td valign="top">
 
 **Analysis Path Framework \(APF\)** 
-
-
 
 </td>
 <td valign="top">
@@ -2020,21 +1564,15 @@ APF has been enhanced with the following features:
 
 <sub>Changed•Analysis Path Framework \(APF\)•Info Only•1.50</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2017-11-09
-
-
 
 </td>
 </tr>
@@ -2042,6 +1580,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.118](what-s-new-in-sapui5-1-118-3eecbde.md "With this release SAPUI5 is upgraded from version 1.117 to 1.118.")
 
 [What's New in SAPUI5 1.117](what-s-new-in-sapui5-1-117-029d3b4.md "With this release SAPUI5 is upgraded from version 1.116 to 1.117.")
 

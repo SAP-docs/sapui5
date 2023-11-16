@@ -15,15 +15,11 @@ The following information is relevant for translators.
     <th valign="top">
 
     Database Table
-
-
     
     </th>
     <th valign="top">
 
     What Does it Contain?
-
-
     
     </th>
     </tr>
@@ -31,8 +27,6 @@ The following information is relevant for translators.
     <td valign="top">
     
     `/UI5/TREP_TEXT` \(master table\)
-
-
     
     </td>
     <td valign="top">
@@ -51,8 +45,6 @@ The following information is relevant for translators.
     <td valign="top">
     
     `/UI5/TREP_TEXT_T` \(language-dependent table\)
-
-
     
     </td>
     <td valign="top">
@@ -68,8 +60,6 @@ The following information is relevant for translators.
     <td valign="top">
     
     `/UI5/TREP_FILES` 
-
-
     
     </td>
     <td valign="top">

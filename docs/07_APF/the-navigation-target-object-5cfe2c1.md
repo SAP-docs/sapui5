@@ -27,14 +27,10 @@ The properties used in the navigation target object denote the following:
 
 Property
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -43,14 +39,10 @@ Description
 
 `id` 
 
-
-
 </td>
 <td valign="top">
 
 Unique ID of type string
-
-
 
 </td>
 </tr>
@@ -59,14 +51,10 @@ Unique ID of type string
 
 `semanticObject` 
 
-
-
 </td>
 <td valign="top">
 
 Semantic object as defined in the corresponding target mapping configured in the Fiori launchpad designer.
-
-
 
 </td>
 </tr>
@@ -75,14 +63,10 @@ Semantic object as defined in the corresponding target mapping configured in the
 
 `action` 
 
-
-
 </td>
 <td valign="top">
 
 Action as defined in the corresponding target mapping configured in the Fiori launchpad designer.
-
-
 
 </td>
 </tr>
@@ -90,8 +74,6 @@ Action as defined in the corresponding target mapping configured in the Fiori la
 <td valign="top">
 
 `isStepSpecific` 
-
-
 
 </td>
 <td valign="top">
@@ -101,8 +83,6 @@ Determines whether the navigation is assigned to all steps or to specific steps.
 true = assigned to specific steps
 
 false = assigned to all steps
-
-
 
 </td>
 </tr>

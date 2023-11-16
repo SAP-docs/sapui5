@@ -18,21 +18,15 @@ The following table respresents how the `FlexibleColumnLayout` roughly relates t
 
 Control
 
-
-
 </th>
 <th valign="top">
 
 API
 
-
-
 </th>
 <th valign="top">
 
 Number of Pages Displayed
-
-
 
 </th>
 </tr>
@@ -41,21 +35,15 @@ Number of Pages Displayed
 
 `sap.m.NavContainer` 
 
-
-
 </td>
 <td valign="top">
 
 `pages` \(aggregation\)
 
-
-
 </td>
 <td valign="top">
 
 1 page at a time
-
-
 
 </td>
 </tr>
@@ -64,8 +52,6 @@ Number of Pages Displayed
 
 `sap.m.SplitContainer` 
 
-
-
 </td>
 <td valign="top">
 
@@ -73,14 +59,10 @@ Number of Pages Displayed
 
 `detailPages` \(aggregation\)
 
-
-
 </td>
 <td valign="top">
 
 Up to 2 pages at a time \(2 instances of `NavContainer`\)
-
-
 
 </td>
 </tr>
@@ -88,8 +70,6 @@ Up to 2 pages at a time \(2 instances of `NavContainer`\)
 <td valign="top">
 
 `sap.f.FlexibleColumnLayout` 
-
-
 
 </td>
 <td valign="top">
@@ -102,14 +82,10 @@ Up to 2 pages at a time \(2 instances of `NavContainer`\)
 
 `layout` \(property of type `sap.f.LayoutType`, determining the relative widths of the 3 `NavContainers`\)
 
-
-
 </td>
 <td valign="top">
 
 Up to 3 pages at a time \(3 instances of `NavContainer`\)
-
-
 
 </td>
 </tr>

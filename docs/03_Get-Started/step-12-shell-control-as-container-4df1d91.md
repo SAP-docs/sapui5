@@ -12,7 +12,7 @@ Now we use a shell control as container for our app and use it as our new root e
   
 **The app is now run in a shell that limits the app width**
 
-![](images/UI5_Walkthrough_Step_12_a1f1b53.png "The app is now run in a shell that limits the app width")
+![The graphic has an explanatory text.](images/UI5_Walkthrough_Step_12_a1f1b53.png "The app is now run in a shell that limits the app width")
 
 
 

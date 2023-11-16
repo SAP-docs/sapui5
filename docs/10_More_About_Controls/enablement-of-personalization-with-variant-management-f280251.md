@@ -61,21 +61,15 @@ When enabling a control for personalization, you need to register the control on
 
 Property
 
-
-
 </th>
 <th valign="top">
 
 Type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -84,21 +78,15 @@ Description
 
 `key` 
 
-
-
 </td>
 <td valign="top">
 
 `string` 
 
-
-
 </td>
 <td valign="top">
 
 The key associated to the item. The recommendation is to provide the ID of the related item to create an association between the metadata and the aggregation.
-
-
 
 </td>
 </tr>
@@ -107,21 +95,15 @@ The key associated to the item. The recommendation is to provide the ID of the r
 
 `label` 
 
-
-
 </td>
 <td valign="top">
 
 `string` 
 
-
-
 </td>
 <td valign="top">
 
 The text that is displayed in the personalization dialog.
-
-
 
 </td>
 </tr>
@@ -130,21 +112,15 @@ The text that is displayed in the personalization dialog.
 
 `path` 
 
-
-
 </td>
 <td valign="top">
 
 `string` 
 
-
-
 </td>
 <td valign="top">
 
 The model path to create filters, groupings, and sorters.
-
-
 
 </td>
 </tr>
@@ -153,21 +129,15 @@ The model path to create filters, groupings, and sorters.
 
 `visible` 
 
-
-
 </td>
 <td valign="top">
 
 `boolean` 
 
-
-
 </td>
 <td valign="top">
 
 Default value is `true`. Hides an item from `SelectionPanel` in the personalization if set to `false`.
-
-
 
 </td>
 </tr>
@@ -176,21 +146,15 @@ Default value is `true`. Hides an item from `SelectionPanel` in the personalizat
 
 `sortable` 
 
-
-
 </td>
 <td valign="top">
 
 `boolean` 
 
-
-
 </td>
 <td valign="top">
 
 Default value is `true`. Hides an item from `SortPanel` in the personalization if set to `false`.
-
-
 
 </td>
 </tr>
@@ -199,21 +163,15 @@ Default value is `true`. Hides an item from `SortPanel` in the personalization i
 
 `groupable` 
 
-
-
 </td>
 <td valign="top">
 
 `boolean` 
 
-
-
 </td>
 <td valign="top">
 
 Default value is `true`. Hides an item from `GroupPanel` in the personalization if set to `false`.
-
-
 
 </td>
 </tr>
@@ -389,21 +347,15 @@ The following properties can be used per controller to remove a state entry:
 
 Registered Controller Type
 
-
-
 </th>
 <th valign="top">
 
 Key
 
-
-
 </th>
 <th valign="top">
 
 Type
-
-
 
 </th>
 </tr>
@@ -412,21 +364,15 @@ Type
 
 `SelectionController` 
 
-
-
 </td>
 <td valign="top">
 
 `visible` 
 
-
-
 </td>
 <td valign="top">
 
 `boolean` 
-
-
 
 </td>
 </tr>
@@ -435,21 +381,15 @@ Type
 
 `SortController` 
 
-
-
 </td>
 <td valign="top">
 
 `sorted` 
 
-
-
 </td>
 <td valign="top">
 
 `boolean` 
-
-
 
 </td>
 </tr>
@@ -458,21 +398,15 @@ Type
 
 `GroupController` 
 
-
-
 </td>
 <td valign="top">
 
 `grouped` 
 
-
-
 </td>
 <td valign="top">
 
 `boolean` 
-
-
 
 </td>
 </tr>

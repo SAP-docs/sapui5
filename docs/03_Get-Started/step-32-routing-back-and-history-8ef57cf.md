@@ -12,7 +12,7 @@ Now we can navigate to our detail page and display an invoice, but we cannot go 
   
 **A back button is now displayed on the detail page**
 
-![](images/UI5_Walkthrough_Step_32_33a8341.png "A back button is now displayed on the detail page")
+![The graphic has an explanatory text](images/UI5_Walkthrough_Step_32_33a8341.png "A back button is now displayed on the detail page")
 
 
 

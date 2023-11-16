@@ -22,11 +22,7 @@ The visualization provided by the `RuleBuilder` component contains text parts an
 > 
 > You can view and download all the files required for steps 1 and 2 in text rule section at [Rule Builder - Text Rule](https://ui5.sap.com/#/entity/sap.rules.ui.RuleBuilder/sample/sap.rules.ui.sample.TextRule).
 > 
-> For more information, check the following sections of the tutorials overview page \(see [Get Started: Setup, Tutorials, and Demo Apps](get-started-setup-tutorials-and-demo-apps-8b49fc1.md)\):
-> 
-> -   [Downloading Code for a Tutorial Step](get-started-setup-tutorials-and-demo-apps-8b49fc1.md#loio8b49fc198bf04b2d9800fc37fecbb218__tutorials_download)
-> 
-> -   [Adapting Code to Your Development Environment](get-started-setup-tutorials-and-demo-apps-8b49fc1.md#loio8b49fc198bf04b2d9800fc37fecbb218__tutorials_adaptation)
+> For more information check the [Downloading Code for a Tutorial Step](get-started-setup-tutorials-and-demo-apps-8b49fc1.md#loio8b49fc198bf04b2d9800fc37fecbb218__tutorials_download) section of the tutorials overview page [Get Started: Setup, Tutorials, and Demo Apps](get-started-setup-tutorials-and-demo-apps-8b49fc1.md).
 
 
 
@@ -76,14 +72,10 @@ The following are the objects for each expression language:
 
 Expression Language
 
-
-
 </th>
 <th valign="top">
 
 Expression Language Object
-
-
 
 </th>
 </tr>
@@ -92,14 +84,10 @@ Expression Language Object
 
 Expression language 1.0
 
-
-
 </td>
 <td valign="top">
 
 `ExpressionLanguage`
-
-
 
 </td>
 </tr>
@@ -108,14 +96,10 @@ Expression language 1.0
 
 Expression language 2.0
 
-
-
 </td>
 <td valign="top">
 
 `AstExpressionLanguage`
-
-
 
 </td>
 </tr>

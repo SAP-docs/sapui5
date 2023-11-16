@@ -76,8 +76,6 @@ The multi-input field is also available for tables.
 > ### Restriction:  
 > Note the following for SAP Fiori elements for OData V4:
 > 
-> -   You cannot edit the multi-input field within the table – even if you switch from display mode to edit mode and the rest of the table is editable. When you export to a spreadsheet, note that the respective column will be empty.
-> 
 > -   You cannot mark multi-input fields as mandatory.
 > 
 > -   You cannot use the multi-input field if you need to display more than 100 selected values, since this isn't supported. In this case we recommend that you use a table instead.

@@ -25,14 +25,10 @@ Add your own namespaced classes instead.
 
 Bad Example
 
-
-
 </th>
 <th valign="top">
 
 Good Example
-
-
 
 </th>
 </tr>
@@ -88,14 +84,10 @@ Styling DOM elements directly will lead to unpredictable results, as SAPUI5 does
 
 Bad Example
 
-
-
 </th>
 <th valign="top">
 
 Good Example
-
-
 
 </th>
 </tr>
@@ -144,14 +136,10 @@ SAPUI5 applications can create dynamic IDs for elements. Do not use these IDs as
 
 Bad Example
 
-
-
 </th>
 <th valign="top">
 
 Good Example
-
-
 
 </th>
 </tr>
@@ -202,14 +190,10 @@ Custom selectors and CSS classes that are not namespaced might lead to style cla
 
 Bad Example
 
-
-
 </th>
 <th valign="top">
 
 Good Example
-
-
 
 </th>
 </tr>
@@ -258,14 +242,10 @@ Themability of applications relies on LESS calculations within the SAPUI5 theme 
 
 Bad Example
 
-
-
 </th>
 <th valign="top">
 
 Good Example
-
-
 
 </th>
 </tr>
@@ -286,8 +266,6 @@ Good Example
 <td valign="top">
 
 Add the CSS classes `sapThemeTextInverted` and `sapThemeHighlight-asBackgroundColor` to your custom HTML element.
-
-
 
 </td>
 </tr>
@@ -314,14 +292,10 @@ To ensure that you do not use combinations of theme colors which may clash after
 
 Bad Example
 
-
-
 </th>
 <th valign="top">
 
 Good Example
-
-
 
 </th>
 </tr>

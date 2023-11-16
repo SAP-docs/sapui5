@@ -19,7 +19,7 @@ To achieve this, we will add ARIA attributes. ARIA attributes are used by screen
   
 **Landmarks in our app**
 
-![](images/UI5_Walkthrough_Step_37_b35deda.png "Landmarks in our app")
+![The graphic has an explanatory text.](images/UI5_Walkthrough_Step_37_b35deda.png "Landmarks in our app")
 
 
 
@@ -163,16 +163,12 @@ Here, we add the text for the rating panel title and the labels for the ARIA reg
 <tr>
 <td valign="top">
 
-![](images/Walkthrough_Step_38_Landmarks_before_54e9bca.png)
-
-
+![Landmarks before](images/Walkthrough_Step_38_Landmarks_before_54e9bca.png)
 
 </td>
 <td valign="top">
 
-![](images/Walkthrough_Step_38_Landmarks_after_f38dee2.png)
-
-
+![Landmarks after](images/Walkthrough_Step_38_Landmarks_after_f38dee2.png)
 
 </td>
 </tr>
@@ -181,14 +177,10 @@ Here, we add the text for the rating panel title and the labels for the ARIA reg
 
 **Landmarks on the overview page - before**
 
-
-
 </td>
 <td valign="top">
 
 **Landmarks on the overview page - after**
-
-
 
 </td>
 </tr>

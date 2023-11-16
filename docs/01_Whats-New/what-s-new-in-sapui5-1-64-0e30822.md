@@ -13,49 +13,35 @@ With this release SAPUI5 is upgraded from version 1.63 to 1.64.
 
 Version
 
-
-
 </th>
 <th valign="top">
 
 Type
-
-
 
 </th>
 <th valign="top">
 
 Category
 
-
-
 </th>
 <th valign="top">
 
 Title
-
-
 
 </th>
 <th valign="top">
 
 Description
 
-
-
 </th>
 <th valign="top">
 
 Action
 
-
-
 </th>
 <th valign="top">
 
 Available as of
-
-
 
 </th>
 </tr>
@@ -64,28 +50,20 @@ Available as of
 
 1.64 
 
-
-
 </td>
 <td valign="top">
 
 New 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.f.Card`** 
-
-
 
 </td>
 <td valign="top">
@@ -102,21 +80,15 @@ For more information, see [Cards](../10_More_About_Controls/cards-5b46b03.md), t
 
 <sub>New•Control•Info Only•1.64</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only
 
-
-
 </td>
 <td valign="top">
 
 2019-03-28
-
-
 
 </td>
 </tr>
@@ -125,28 +97,20 @@ Info Only
 
 1.64 
 
-
-
 </td>
 <td valign="top">
 
 New 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **Rule Builder: AST based DMN SFEEL** 
-
-
 
 </td>
 <td valign="top">
@@ -159,21 +123,15 @@ For more information, see [Rule Builder Control Tutorial](../03_Get-Started/rule
 
 <sub>New•Feature•Info Only•1.64</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-03-28
-
-
 
 </td>
 </tr>
@@ -182,28 +140,20 @@ Info Only
 
 1.64 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **Key User Adaptation: Restricting Adaptation for Certain Controls** 
-
-
 
 </td>
 <td valign="top">
@@ -219,21 +169,15 @@ For more information, see [SAPUI5 Flexibility: Enable Your App for UI Adaptation
 
 <sub>Changed•Feature•Info Only•1.64</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-03-28
-
-
 
 </td>
 </tr>
@@ -242,28 +186,20 @@ Info Only
 
 1.64 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **SAPUI5 Flexibility: New `flexEnabled` Flag** 
-
-
 
 </td>
 <td valign="top">
@@ -276,21 +212,15 @@ For more information, see [SAPUI5 Flexibility: Enable Your App for UI Adaptation
 
 <sub>Changed•Feature•Info Only•1.64</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-03-28
-
-
 
 </td>
 </tr>
@@ -299,28 +229,20 @@ Info Only
 
 1.64 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **SAPUI5 Flexibility: Simplified Terminology** 
-
-
 
 </td>
 <td valign="top">
@@ -336,21 +258,15 @@ We have improved and simplified the terminology for certain core terms in the ar
 
 Old
 
-
-
 </th>
 <th valign="top">
 
 New
 
-
-
 </th>
 <th valign="top">
 
 Explanation
-
-
 
 </th>
 </tr>
@@ -359,21 +275,15 @@ Explanation
 
 SAPUI5 flexibility services
 
-
-
 </td>
 <td valign="top">
 
 SAPUI5 flexibility
 
-
-
 </td>
 <td valign="top">
 
 Collection of features that allow upgrade-safe and modification-free UI changes of SAPUI5 apps on different levels
-
-
 
 </td>
 </tr>
@@ -382,21 +292,15 @@ Collection of features that allow upgrade-safe and modification-free UI changes 
 
 UI adaptation at runtime \(RTA\)
 
-
-
 </td>
 <td valign="top">
 
 key user adaptation
 
-
-
 </td>
 <td valign="top">
 
 Key users \(business experts with special permissions\) can adapt the UI of an SAPUI5 app that is running in the SAP Fiori launchpad for other users by means of intuitive WYSIWYG functions.
-
-
 
 </td>
 </tr>
@@ -405,21 +309,15 @@ Key users \(business experts with special permissions\) can adapt the UI of an S
 
 UI adaptation at design time \(DTA\)
 
-
-
 </td>
 <td valign="top">
 
 developer adaptation
 
-
-
 </td>
 <td valign="top">
 
 Developers can adapt SAPUI5 apps via the SAPUI5 Visual Editor in SAP Web IDE.
-
-
 
 </td>
 </tr>
@@ -429,21 +327,15 @@ For more information on the features of SAPUI5 flexibility, see [SAPUI5 Flexibil
 
 <sub>Changed•Feature•Info Only•1.64</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-03-28
-
-
 
 </td>
 </tr>
@@ -452,28 +344,20 @@ Info Only
 
 1.64 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **SAPUI5 OData V4 Model** 
-
-
 
 </td>
 <td valign="top">
@@ -489,21 +373,15 @@ For more information, see [OData V4 Model](../04_Essentials/odata-v4-model-5de13
 
 <sub>Changed•Feature•Info Only•1.64</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-03-28
-
-
 
 </td>
 </tr>
@@ -512,28 +390,20 @@ Info Only
 
 1.64 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.f.DynamicPage`** 
-
-
 
 </td>
 <td valign="top">
@@ -544,21 +414,15 @@ We have redesigned the content area of the `DynamicPageTitle` control so that th
 
 <sub>Changed•Control•Info Only•1.64</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-03-28
-
-
 
 </td>
 </tr>
@@ -567,28 +431,20 @@ Info Only
 
 1.64 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.f.ShellBar` \(Experimental\)** 
-
-
 
 </td>
 <td valign="top">
@@ -603,21 +459,15 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.f.Sh
 
 <sub>Changed•Control•Info Only•1.64</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-03-28
-
-
 
 </td>
 </tr>
@@ -626,28 +476,20 @@ Info Only
 
 1.64 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.ComboBox`** 
-
-
 
 </td>
 <td valign="top">
@@ -663,21 +505,15 @@ In case a `sap.ui.core.SeparatorItem` without a defined text property is inserte
 
 <sub>Changed•Control•Info Only•1.64</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-03-28
-
-
 
 </td>
 </tr>
@@ -686,28 +522,20 @@ Info Only
 
 1.64 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.DatePicker`** 
-
-
 
 </td>
 <td valign="top">
@@ -718,21 +546,15 @@ With the new `isValidValue` function, you can receive information on the validit
 
 <sub>Changed•Control•Info Only•1.64</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-03-28
-
-
 
 </td>
 </tr>
@@ -741,28 +563,20 @@ Info Only
 
 1.64 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.Input / sap.m.ComboBoxBase` \(Experimental\)** 
-
-
 
 </td>
 <td valign="top">
@@ -773,21 +587,15 @@ We have introduced a new experimental method `showItems(fnFilter)`. It enables y
 
 <sub>Changed•Control•Info Only•1.64</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-03-28
-
-
 
 </td>
 </tr>
@@ -796,28 +604,20 @@ Info Only
 
 1.64 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.Input / sap.m.MultiInput`** 
-
-
 
 </td>
 <td valign="top">
@@ -828,21 +628,15 @@ We have introduced grouping for the suggestions of `sap.m.Input` and `sap.m.Mult
 
 <sub>Changed•Control•Info Only•1.64</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-03-28
-
-
 
 </td>
 </tr>
@@ -851,28 +645,20 @@ Info Only
 
 1.64 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.SinglePlanningCalendar`** 
-
-
 
 </td>
 <td valign="top">
@@ -888,21 +674,15 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.Si
 
 <sub>Changed•Control•Info Only•1.64</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-03-28
-
-
 
 </td>
 </tr>
@@ -911,28 +691,20 @@ Info Only
 
 1.64 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.integration.widgets.Card`** 
-
-
 
 </td>
 <td valign="top">
@@ -946,21 +718,15 @@ Control
 
 <sub>Changed•Control•Info Only•1.64</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-03-28
-
-
 
 </td>
 </tr>
@@ -969,28 +735,20 @@ Info Only
 
 1.64 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.uxap.ObjectPageLayout`** 
-
-
 
 </td>
 <td valign="top">
@@ -1001,21 +759,15 @@ We have implemented the option to provide a simple, single-line title that takes
 
 <sub>Changed•Control•Info Only•1.64</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-03-28
-
-
 
 </td>
 </tr>
@@ -1024,28 +776,20 @@ Info Only
 
 1.64 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 SAP Fiori Elements 
 
-
-
 </td>
 <td valign="top">
 
 **SAP Fiori Elements** 
-
-
 
 </td>
 <td valign="top">
@@ -1058,21 +802,15 @@ You can pass the variant ID as a URL parameter while navigating from an applicat
 
 <sub>Changed•SAP Fiori Elements•Info Only•1.64</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-03-28
-
-
 
 </td>
 </tr>
@@ -1081,28 +819,20 @@ Info Only
 
 1.64 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **Demo Kit API Reference** 
-
-
 
 </td>
 <td valign="top">
@@ -1118,21 +848,15 @@ Feature
 
 <sub>Changed•Feature•Info Only•1.64</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2019-03-28
-
-
 
 </td>
 </tr>
@@ -1140,6 +864,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.118](what-s-new-in-sapui5-1-118-3eecbde.md "With this release SAPUI5 is upgraded from version 1.117 to 1.118.")
 
 [What's New in SAPUI5 1.117](what-s-new-in-sapui5-1-117-029d3b4.md "With this release SAPUI5 is upgraded from version 1.116 to 1.117.")
 

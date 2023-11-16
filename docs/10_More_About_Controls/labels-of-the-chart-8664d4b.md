@@ -15,35 +15,25 @@ The relationships between these four labels and their annotations are as follows
 
 Chart point \(sap.suite.ui.microchart.AreaMicroChartItem\)
 
-
-
 </th>
 <th valign="top">
 
 Coordinate
-
-
 
 </th>
 <th valign="top">
 
 Label position
 
-
-
 </th>
 <th valign="top">
 
 Annotation Term
 
-
-
 </th>
 <th valign="top">
 
 Property
-
-
 
 </th>
 </tr>
@@ -52,35 +42,25 @@ Property
 
 First point
 
-
-
 </td>
 <td valign="top">
 
 x
-
-
 
 </td>
 <td valign="top">
 
 Bottom left
 
-
-
 </td>
 <td valign="top">
 
 UI.Chart
 
-
-
 </td>
 <td valign="top">
 
 Dimensions
-
-
 
 </td>
 </tr>
@@ -94,28 +74,20 @@ Dimensions
 
 y
 
-
-
 </td>
 <td valign="top">
 
 Top left
-
-
 
 </td>
 <td valign="top">
 
 UI.Chart
 
-
-
 </td>
 <td valign="top">
 
 Measures
-
-
 
 </td>
 </tr>
@@ -124,35 +96,25 @@ Measures
 
 Last point
 
-
-
 </td>
 <td valign="top">
 
 x
-
-
 
 </td>
 <td valign="top">
 
 Bottom right
 
-
-
 </td>
 <td valign="top">
 
 UI.Chart
 
-
-
 </td>
 <td valign="top">
 
 Dimensions
-
-
 
 </td>
 </tr>
@@ -166,28 +128,20 @@ Dimensions
 
 y
 
-
-
 </td>
 <td valign="top">
 
 Top right
-
-
 
 </td>
 <td valign="top">
 
 UI.Chart
 
-
-
 </td>
 <td valign="top">
 
 Measures
-
-
 
 </td>
 </tr>

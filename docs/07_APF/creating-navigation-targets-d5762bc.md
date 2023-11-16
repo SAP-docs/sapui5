@@ -41,14 +41,10 @@ You can define multiple navigation targets for each configuration. To create a n
 
 Field
 
-
-
 </th>
 <th valign="top">
 
 Explanation
-
-
 
 </th>
 </tr>
@@ -56,8 +52,6 @@ Explanation
 <td valign="top">
 
 Semantic Object
-
-
 
 </td>
 <td valign="top">
@@ -78,8 +72,6 @@ Semantic object as defined by the Fiori launchpad configuration.
 
 Action
 
-
-
 </td>
 <td valign="top">
 
@@ -97,14 +89,10 @@ As soon as you enter a semantic object, the value help for the action is filled 
 
 Navigation Target Title
 
-
-
 </td>
 <td valign="top">
 
 Taken over from the description in the target mapping.
-
-
 
 </td>
 </tr>
@@ -123,14 +111,10 @@ Taken over from the description in the target mapping.
 
 Field
 
-
-
 </th>
 <th valign="top">
 
 Explanation
-
-
 
 </th>
 </tr>
@@ -138,8 +122,6 @@ Explanation
 <td valign="top">
 
 Use Dynamic Parameters
-
-
 
 </td>
 <td valign="top">
@@ -162,14 +144,10 @@ This is useful, for example, if the navigation target is unable to consume a con
 
 Static Parameter/Value
 
-
-
 </td>
 <td valign="top">
 
 At runtime, static parameters are added to the URL of the navigation target. You can, for example, add a specific APF configuration ID to the navigation target to execute the generic APF runtime.
-
-
 
 </td>
 </tr>
@@ -186,14 +164,10 @@ At runtime, static parameters are added to the URL of the navigation target. You
 
 Field
 
-
-
 </th>
 <th valign="top">
 
 Explanation
-
-
 
 </th>
 </tr>
@@ -201,8 +175,6 @@ Explanation
 <td valign="top">
 
 Assignment Type
-
-
 
 </td>
 <td valign="top">
@@ -227,14 +199,10 @@ Choose one of the following:
 
 Step Assignments
 
-
-
 </td>
 <td valign="top">
 
 If you are creating a step-specific navigation target, assign one or more analysis steps to it. If you leave this field empty, you can still save the navigation target and assign it to steps at a later point in time.
-
-
 
 </td>
 </tr>
@@ -253,14 +221,10 @@ If a certain property is required for launching the navigation target, you can d
 
 Field
 
-
-
 </th>
 <th valign="top">
 
 Explanation
-
-
 
 </th>
 </tr>
@@ -269,14 +233,10 @@ Explanation
 
 Service
 
-
-
 </td>
 <td valign="top">
 
 Path to the OData service root. If you use ABAP CDS views or BW OData queries, select a service from the value help, which lists all services available on SAP Gateway. If you use calculation views, you must enter the service manually.
-
-
 
 </td>
 </tr>
@@ -285,14 +245,10 @@ Path to the OData service root. If you use ABAP CDS views or BW OData queries, s
 
 Entity Set
 
-
-
 </td>
 <td valign="top">
 
 Entity set that corresponds to the data source, for example, the SAP HANA view.
-
-
 
 </td>
 </tr>
@@ -301,14 +257,10 @@ Entity set that corresponds to the data source, for example, the SAP HANA view.
 
 Mapped Properties
 
-
-
 </td>
 <td valign="top">
 
 Select one or more properties from the list of properties that are available for the selected entity set.
-
-
 
 </td>
 </tr>

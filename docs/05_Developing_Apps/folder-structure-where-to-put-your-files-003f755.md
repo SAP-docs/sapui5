@@ -91,14 +91,10 @@ For information about mock server functionality for OData V4, see [OData V4 Mock
 
 `test` folder for apps that are build for the SAP Fiori launchpad 
 
-
-
 </th>
 <th valign="top">
 
 `test` folder for standalone apps
-
-
 
 </th>
 </tr>
@@ -107,14 +103,10 @@ For information about mock server functionality for OData V4, see [OData V4 Mock
 
 ![](images/Folder_Structure_7_47df579.png)
 
-
-
 </td>
 <td valign="top">
 
 ![](images/Folder_Structure_7_alternative_9f45b87.png)
-
-
 
 </td>
 </tr>

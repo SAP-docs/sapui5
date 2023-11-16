@@ -15,49 +15,35 @@ With this release SAPUI5 is upgraded from version 1.85 to 1.86.
 
 Version
 
-
-
 </th>
 <th valign="top">
 
 Type
-
-
 
 </th>
 <th valign="top">
 
 Category
 
-
-
 </th>
 <th valign="top">
 
 Title
-
-
 
 </th>
 <th valign="top">
 
 Description
 
-
-
 </th>
 <th valign="top">
 
 Action
 
-
-
 </th>
 <th valign="top">
 
 Available as of
-
-
 
 </th>
 </tr>
@@ -66,28 +52,20 @@ Available as of
 
 1.86 
 
-
-
 </td>
 <td valign="top">
 
 Deprecated 
-
-
 
 </td>
 <td valign="top">
 
 Announcement 
 
-
-
 </td>
 <td valign="top">
 
 **Preannouncement: End of Support for Microsoft Internet Explorer 11 after SAPUI5 1.87** 
-
-
 
 </td>
 <td valign="top">
@@ -98,21 +76,15 @@ SAPUI5 1.87 will be the last version to support Microsoft Internet Explorer 11. 
 
 <sub>Deprecated•Announcement•Info Only•1.86</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only
 
-
-
 </td>
 <td valign="top">
 
 2021-01-28
-
-
 
 </td>
 </tr>
@@ -121,28 +93,20 @@ Info Only
 
 1.86 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **SAPUI5 OData V4 Model** 
-
-
 
 </td>
 <td valign="top">
@@ -167,21 +131,15 @@ For more information, see [OData V4 Model](../04_Essentials/odata-v4-model-5de13
 
 <sub>Changed•Feature•Info Only•1.86</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-01-28
-
-
 
 </td>
 </tr>
@@ -190,28 +148,20 @@ Info Only
 
 1.86 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.FormattedText`** 
-
-
 
 </td>
 <td valign="top">
@@ -229,21 +179,15 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.Fo
 
 <sub>Changed•Control•Info Only•1.86</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-01-28
-
-
 
 </td>
 </tr>
@@ -252,28 +196,20 @@ Info Only
 
 1.86 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.IconTabBar`, `sap.m.RadioButton`** 
-
-
 
 </td>
 <td valign="top">
@@ -284,21 +220,15 @@ Value states are not shown when the controls are in read-only or disabled mode. 
 
 <sub>Changed•Control•Info Only•1.86</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-01-28
-
-
 
 </td>
 </tr>
@@ -307,28 +237,20 @@ Info Only
 
 1.86 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.Label`** 
-
-
 
 </td>
 <td valign="top">
@@ -339,21 +261,15 @@ The colon symbol \(:\) is represented differently in different languages. In Ger
 
 <sub>Changed•Control•Info Only•1.86</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-01-28
-
-
 
 </td>
 </tr>
@@ -362,28 +278,20 @@ Info Only
 
 1.86 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.Select`** 
-
-
 
 </td>
 <td valign="top">
@@ -394,21 +302,15 @@ With the new experimental `columnRatio` property, you can now set a custom ratio
 
 <sub>Changed•Control•Info Only•1.86</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-01-28
-
-
 
 </td>
 </tr>
@@ -417,28 +319,20 @@ Info Only
 
 1.86 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.Table`** 
-
-
 
 </td>
 <td valign="top">
@@ -451,21 +345,15 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.Ta
 
 <sub>Changed•Control•Info Only•1.86</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-01-28
-
-
 
 </td>
 </tr>
@@ -474,28 +362,20 @@ Info Only
 
 1.86 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.Title`** 
-
-
 
 </td>
 <td valign="top">
@@ -506,21 +386,15 @@ We have introduced the `textDirection` property, which is also available in the 
 
 <sub>Changed•Control•Info Only•1.86</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-01-28
-
-
 
 </td>
 </tr>
@@ -529,28 +403,20 @@ Info Only
 
 1.86 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.comp.smartfield.SmartField`** 
-
-
 
 </td>
 <td valign="top">
@@ -567,21 +433,15 @@ Control
 
 <sub>Changed•Control•Info Only•1.86</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-01-28
-
-
 
 </td>
 </tr>
@@ -590,28 +450,20 @@ Info Only
 
 1.86 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.comp.smartfilterbar.SmartFilterBar`** 
-
-
 
 </td>
 <td valign="top">
@@ -626,21 +478,15 @@ For more information, see the [Sample](https://ui5.sap.com/#/entity/sap.ui.comp.
 
 <sub>Changed•Control•Info Only•1.86</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-01-28
-
-
 
 </td>
 </tr>
@@ -649,28 +495,20 @@ Info Only
 
 1.86 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.comp.smarttable.SmartTable`** 
-
-
 
 </td>
 <td valign="top">
@@ -688,21 +526,15 @@ Control
 
 <sub>Changed•Control•Info Only•1.86</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-01-28
-
-
 
 </td>
 </tr>
@@ -711,28 +543,20 @@ Info Only
 
 1.86 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.comp.valuehelpdialog.ValueHelpDialog`** 
-
-
 
 </td>
 <td valign="top">
@@ -754,21 +578,15 @@ For more information, see the [Sample](https://ui5.sap.com/#/entity/sap.ui.comp.
 
 <sub>Changed•Control•Info Only•1.86</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-01-28
-
-
 
 </td>
 </tr>
@@ -777,28 +595,20 @@ Info Only
 
 1.86 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.integration.widgets.Card`** 
-
-
 
 </td>
 <td valign="top">
@@ -810,21 +620,15 @@ Control
 
 <sub>Changed•Control•Info Only•1.86</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-01-28
-
-
 
 </td>
 </tr>
@@ -833,28 +637,20 @@ Info Only
 
 1.86 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.layout.form.SemanticFormElement`** 
-
-
 
 </td>
 <td valign="top">
@@ -865,21 +661,15 @@ The `SemanticFormElement` element \(experimental\) now allows you to render sema
 
 <sub>Changed•Control•Info Only•1.86</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-01-28
-
-
 
 </td>
 </tr>
@@ -888,28 +678,20 @@ Info Only
 
 1.86 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.richtexteditor.RichTextEditor`** 
-
-
 
 </td>
 <td valign="top">
@@ -920,21 +702,15 @@ We have enabled TinyMCE version 5 to be used with `sap.ui.richtexteditor.RichTex
 
 <sub>Changed•Control•Info Only•1.86</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-01-28
-
-
 
 </td>
 </tr>
@@ -943,28 +719,20 @@ Info Only
 
 1.86 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.table.AnalyticalTable`, `sap.ui.table.Table`, `sap.ui.table.TreeTable`** 
-
-
 
 </td>
 <td valign="top">
@@ -975,21 +743,15 @@ The `rowsUpdated` event is now available so applications can find out about any 
 
 <sub>Changed•Control•Info Only•1.86</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-01-28
-
-
 
 </td>
 </tr>
@@ -998,28 +760,20 @@ Info Only
 
 1.86 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 SAP Fiori Elements 
 
-
-
 </td>
 <td valign="top">
 
 **SAP Fiori elements for OData V2** 
-
-
 
 </td>
 <td valign="top">
@@ -1039,21 +793,15 @@ The following changes and new features are available for SAP Fiori elements for 
 
 <sub>Changed•SAP Fiori Elements•Info Only•1.86</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-01-28
-
-
 
 </td>
 </tr>
@@ -1062,28 +810,20 @@ Info Only
 
 1.86 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 SAP Fiori Elements 
 
-
-
 </td>
 <td valign="top">
 
 **SAP Fiori elements for OData V4** 
-
-
 
 </td>
 <td valign="top">
@@ -1118,21 +858,15 @@ The following changes and new features are available for SAP Fiori elements for 
 
 <sub>Changed•SAP Fiori Elements•Info Only•1.86</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-01-28
-
-
 
 </td>
 </tr>
@@ -1141,28 +875,20 @@ Info Only
 
 1.86 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **Demo Kit Search Suggestions in Global Search** 
-
-
 
 </td>
 <td valign="top">
@@ -1181,21 +907,15 @@ At the bottom of the popover, you have the *Results by Category* section from wh
 
 <sub>Changed•Feature•Info Only•1.86</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-01-28
-
-
 
 </td>
 </tr>
@@ -1203,6 +923,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.118](what-s-new-in-sapui5-1-118-3eecbde.md "With this release SAPUI5 is upgraded from version 1.117 to 1.118.")
 
 [What's New in SAPUI5 1.117](what-s-new-in-sapui5-1-117-029d3b4.md "With this release SAPUI5 is upgraded from version 1.116 to 1.117.")
 

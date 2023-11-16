@@ -43,35 +43,25 @@ To view the list of operations that can be performed on any data object or attri
 
 Operation
 
-
-
 </th>
 <th valign="top">
 
 Syntax
-
-
 
 </th>
 <th valign="top">
 
 Input
 
-
-
 </th>
 <th valign="top">
 
 Description
 
-
-
 </th>
 <th valign="top">
 
 Example
-
-
 
 </th>
 </tr>
@@ -80,28 +70,20 @@ Example
 
 Update
 
-
-
 </td>
 <td valign="top" rowspan="2">
 
 *UPDATE*\(`<Target>, <Source>`\)
-
-
 
 </td>
 <td valign="top">
 
 `Target Entity`
 
-
-
 </td>
 <td valign="top">
 
 The target data object or attribute that should be updated as per the value of the `Source Entity` or `Expression`.
-
-
 
 </td>
 <td valign="top" rowspan="2">
@@ -110,16 +92,12 @@ The target data object or attribute that should be updated as per the value of t
 
 The data object, `Employee_Table.Employee Name` is updated as per the value of `Employee.Employee Name`.
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
 `Source Entity` or `Source Expression`.
-
-
 
 </td>
 <td valign="top">
@@ -138,28 +116,20 @@ The value of the `Target Entity` is updated to the value of the `Source Entity` 
 
 Append
 
-
-
 </td>
 <td valign="top" rowspan="2">
 
 *APPEND*\(`<Target>, <Source>`\)
-
-
 
 </td>
 <td valign="top">
 
 `Target Entity`
 
-
-
 </td>
 <td valign="top">
 
 The target data object of type *Table* to which the `Source` has to be appended.
-
-
 
 </td>
 <td valign="top" rowspan="2">
@@ -168,8 +138,6 @@ The target data object of type *Table* to which the `Source` has to be appended.
 
 The data object `Flight` is appended to the data object `FlightTable`.
 
-
-
 </td>
 </tr>
 <tr>
@@ -177,14 +145,10 @@ The data object `Flight` is appended to the data object `FlightTable`.
 
 `Source Entity` or `Source Expression` 
 
-
-
 </td>
 <td valign="top">
 
 A data object that should be appended to the `Target` data object. Source data object should be of type *Structure* or *Table* or a rule that returns a data object of type *Structure* or *Table*.
-
-
 
 </td>
 </tr>
@@ -228,15 +192,11 @@ There are two types of value help:
     <td valign="top">
     
     **Code**
-
-
     
     </td>
     <td valign="top">
     
     **Description**
-
-
     
     </td>
     </tr>
@@ -244,15 +204,11 @@ There are two types of value help:
     <td valign="top">
     
     E001
-
-
     
     </td>
     <td valign="top">
     
     Smartphone
-
-
     
     </td>
     </tr>
@@ -260,15 +216,11 @@ There are two types of value help:
     <td valign="top">
     
     E002
-
-
     
     </td>
     <td valign="top">
     
     Laptop
-
-
     
     </td>
     </tr>
@@ -276,15 +228,11 @@ There are two types of value help:
     <td valign="top">
     
     E003
-
-
     
     </td>
     <td valign="top">
     
     Tablet
-
-
     
     </td>
     </tr>
@@ -292,15 +240,11 @@ There are two types of value help:
     <td valign="top">
     
     E004
-
-
     
     </td>
     <td valign="top">
     
     Smartphone
-
-
     
     </td>
     </tr>

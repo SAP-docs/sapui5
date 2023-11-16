@@ -19,28 +19,20 @@ The following tables show the ESLint rules that should be enabled for the SAPUI5
 
 Rule
 
-
-
 </th>
 <th valign="top">
 
 ESLint default
-
-
 
 </th>
 <th valign="top">
 
 Core
 
-
-
 </th>
 <th valign="top">
 
 Comment
-
-
 
 </th>
 </tr>
@@ -49,28 +41,20 @@ Comment
 
 `no-cond-assign`
 
-
-
 </td>
 <td valign="top">
 
 error
 
-
-
 </td>
 <td valign="top">
 
 error
-
-
 
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -79,28 +63,20 @@ error
 
 `no-console`
 
-
-
 </td>
 <td valign="top">
 
 error
 
-
-
 </td>
 <td valign="top">
 
 error
-
-
 
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -109,28 +85,20 @@ error
 
 `no-constant-condition`
 
-
-
 </td>
 <td valign="top">
 
 error
 
-
-
 </td>
 <td valign="top">
 
 error
-
-
 
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -139,28 +107,20 @@ error
 
 `no-comma-dangle`
 
-
-
 </td>
 <td valign="top">
 
 error
-
-
 
 </td>
 <td valign="top">
 
 **error/warning**
 
-
-
 </td>
 <td valign="top">
 
 can be set to warning if lib only supports IE9
-
-
 
 </td>
 </tr>
@@ -169,28 +129,20 @@ can be set to warning if lib only supports IE9
 
 `no-control-regex`
 
-
-
 </td>
 <td valign="top">
 
 error
 
-
-
 </td>
 <td valign="top">
 
 error
-
-
 
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -199,28 +151,20 @@ error
 
 `no-debugger`
 
-
-
 </td>
 <td valign="top">
 
 error
 
-
-
 </td>
 <td valign="top">
 
 error
-
-
 
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -229,28 +173,20 @@ error
 
 `no-dupe-keys`
 
-
-
 </td>
 <td valign="top">
 
 error
 
-
-
 </td>
 <td valign="top">
 
 error
-
-
 
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -259,28 +195,20 @@ error
 
 `no-empty`
 
-
-
 </td>
 <td valign="top">
 
 error
 
-
-
 </td>
 <td valign="top">
 
 error
-
-
 
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -289,28 +217,20 @@ error
 
 `no-empty-class`
 
-
-
 </td>
 <td valign="top">
 
 error
 
-
-
 </td>
 <td valign="top">
 
 error
-
-
 
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -319,28 +239,20 @@ error
 
 `no-ex-assign`
 
-
-
 </td>
 <td valign="top">
 
 error
 
-
-
 </td>
 <td valign="top">
 
 error
-
-
 
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -349,28 +261,20 @@ error
 
 `no-extra-boolean-cast`
 
-
-
 </td>
 <td valign="top">
 
 error
-
-
 
 </td>
 <td valign="top">
 
 **warning**
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -379,28 +283,20 @@ error
 
 `no-extra-parens`
 
-
-
 </td>
 <td valign="top">
 
 off
 
-
-
 </td>
 <td valign="top">
 
 off
-
-
 
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -409,28 +305,20 @@ off
 
 `no-extra-semi`
 
-
-
 </td>
 <td valign="top">
 
 error
 
-
-
 </td>
 <td valign="top">
 
 error
-
-
 
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -439,28 +327,20 @@ error
 
 `no-func-assign`
 
-
-
 </td>
 <td valign="top">
 
 error
 
-
-
 </td>
 <td valign="top">
 
 error
-
-
 
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -469,28 +349,20 @@ error
 
 `no-inner-declarations`
 
-
-
 </td>
 <td valign="top">
 
 error
 
-
-
 </td>
 <td valign="top">
 
 error
-
-
 
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -499,28 +371,20 @@ error
 
 `no-invalid-regexp`
 
-
-
 </td>
 <td valign="top">
 
 error
 
-
-
 </td>
 <td valign="top">
 
 error
-
-
 
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -529,28 +393,20 @@ error
 
 `no-negated-in-lhs`
 
-
-
 </td>
 <td valign="top">
 
 error
 
-
-
 </td>
 <td valign="top">
 
 error
-
-
 
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -559,28 +415,20 @@ error
 
 `no-obj-calls`
 
-
-
 </td>
 <td valign="top">
 
 error
 
-
-
 </td>
 <td valign="top">
 
 error
-
-
 
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -589,28 +437,20 @@ error
 
 `no-regex-spaces`
 
-
-
 </td>
 <td valign="top">
 
 error
 
-
-
 </td>
 <td valign="top">
 
 error
-
-
 
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -619,28 +459,20 @@ error
 
 `no-sparse-arrays`
 
-
-
 </td>
 <td valign="top">
 
 error
 
-
-
 </td>
 <td valign="top">
 
 error
-
-
 
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -649,28 +481,20 @@ error
 
 `no-unreachable`
 
-
-
 </td>
 <td valign="top">
 
 error
 
-
-
 </td>
 <td valign="top">
 
 error
-
-
 
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -679,28 +503,20 @@ error
 
 `use-isnan`
 
-
-
 </td>
 <td valign="top">
 
 error
 
-
-
 </td>
 <td valign="top">
 
 error
-
-
 
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -709,28 +525,20 @@ error
 
 `valid-jsdoc`
 
-
-
 </td>
 <td valign="top">
 
 off
-
-
 
 </td>
 <td valign="top">
 
 **warning**
 
-
-
 </td>
 <td valign="top">
 
 `requireReturn` = false
-
-
 
 </td>
 </tr>
@@ -739,28 +547,20 @@ off
 
 `valid-typeof`
 
-
-
 </td>
 <td valign="top">
 
 error
 
-
-
 </td>
 <td valign="top">
 
 error
-
-
 
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -775,28 +575,20 @@ error
 
 Rule
 
-
-
 </th>
 <th valign="top">
 
 ESLint default
-
-
 
 </th>
 <th valign="top">
 
 Core
 
-
-
 </th>
 <th valign="top">
 
 Comment
-
-
 
 </th>
 </tr>
@@ -805,28 +597,20 @@ Comment
 
 `block-scoped-var`
 
-
-
 </td>
 <td valign="top">
 
 off
-
-
 
 </td>
 <td valign="top">
 
 **error**
 
-
-
 </td>
 <td valign="top">
 
 currently only warning because of wrong behaviour in switch statement
-
-
 
 </td>
 </tr>
@@ -835,28 +619,20 @@ currently only warning because of wrong behaviour in switch statement
 
 `complexity`
 
-
-
 </td>
 <td valign="top">
 
 off
 
-
-
 </td>
 <td valign="top">
 
 off
-
-
 
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -865,28 +641,20 @@ off
 
 `consistent-return`
 
-
-
 </td>
 <td valign="top">
 
 error
-
-
 
 </td>
 <td valign="top">
 
 **warning**
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -895,28 +663,20 @@ error
 
 `curly`
 
-
-
 </td>
 <td valign="top">
 
 error
 
-
-
 </td>
 <td valign="top">
 
 error
-
-
 
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -925,28 +685,20 @@ error
 
 `default-case`
 
-
-
 </td>
 <td valign="top">
 
 off
-
-
 
 </td>
 <td valign="top">
 
 **warning**
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -955,28 +707,20 @@ off
 
 `dot-notation`
 
-
-
 </td>
 <td valign="top">
 
 error
-
-
 
 </td>
 <td valign="top">
 
 **off**
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -985,28 +729,20 @@ error
 
 `eqeqeq`
 
-
-
 </td>
 <td valign="top">
 
 error
-
-
 
 </td>
 <td valign="top">
 
 **warning**
 
-
-
 </td>
 <td valign="top">
 
 `smart`
-
-
 
 </td>
 </tr>
@@ -1015,28 +751,20 @@ error
 
 `guard-for-in`
 
-
-
 </td>
 <td valign="top">
 
 off
-
-
 
 </td>
 <td valign="top">
 
 **error**
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -1045,28 +773,20 @@ off
 
 `no-alert`
 
-
-
 </td>
 <td valign="top">
 
 error
 
-
-
 </td>
 <td valign="top">
 
 error
-
-
 
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -1075,28 +795,20 @@ error
 
 `no-caller`
 
-
-
 </td>
 <td valign="top">
 
 error
 
-
-
 </td>
 <td valign="top">
 
 error
-
-
 
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -1105,28 +817,20 @@ error
 
 `no-div-regex`
 
-
-
 </td>
 <td valign="top">
 
 off
-
-
 
 </td>
 <td valign="top">
 
 **error**
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -1135,28 +839,20 @@ off
 
 `no-else-return`
 
-
-
 </td>
 <td valign="top">
 
 off
 
-
-
 </td>
 <td valign="top">
 
 off
-
-
 
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -1165,28 +861,20 @@ off
 
 `no-empty-label`
 
-
-
 </td>
 <td valign="top">
 
 error
 
-
-
 </td>
 <td valign="top">
 
 error
-
-
 
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -1195,28 +883,20 @@ error
 
 `no-eq-null`
 
-
-
 </td>
 <td valign="top">
 
 off
 
-
-
 </td>
 <td valign="top">
 
 off
-
-
 
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -1225,28 +905,20 @@ off
 
 `no-eval`
 
-
-
 </td>
 <td valign="top">
 
 error
 
-
-
 </td>
 <td valign="top">
 
 error
-
-
 
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -1255,28 +927,20 @@ error
 
 `no-extend-native`
 
-
-
 </td>
 <td valign="top">
 
 error
 
-
-
 </td>
 <td valign="top">
 
 error
-
-
 
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -1285,28 +949,20 @@ error
 
 `no-fallthrough`
 
-
-
 </td>
 <td valign="top">
 
 error
 
-
-
 </td>
 <td valign="top">
 
 error
-
-
 
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -1315,28 +971,20 @@ error
 
 `no-floating-decimal`
 
-
-
 </td>
 <td valign="top">
 
 off
-
-
 
 </td>
 <td valign="top">
 
 **error**
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -1345,28 +993,20 @@ off
 
 `no-implied-eval`
 
-
-
 </td>
 <td valign="top">
 
 error
 
-
-
 </td>
 <td valign="top">
 
 error
-
-
 
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -1375,28 +1015,20 @@ error
 
 `no-labels`
 
-
-
 </td>
 <td valign="top">
 
 error
 
-
-
 </td>
 <td valign="top">
 
 error
-
-
 
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -1405,28 +1037,20 @@ error
 
 `no-iterator`
 
-
-
 </td>
 <td valign="top">
 
 error
 
-
-
 </td>
 <td valign="top">
 
 error
-
-
 
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -1435,28 +1059,20 @@ error
 
 `no-lone-blocks`
 
-
-
 </td>
 <td valign="top">
 
 error
 
-
-
 </td>
 <td valign="top">
 
 error
-
-
 
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -1465,28 +1081,20 @@ error
 
 `no-loop-func`
 
-
-
 </td>
 <td valign="top">
 
 error
 
-
-
 </td>
 <td valign="top">
 
 error
-
-
 
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -1495,28 +1103,20 @@ error
 
 `no-multi-str`
 
-
-
 </td>
 <td valign="top">
 
 error
 
-
-
 </td>
 <td valign="top">
 
 error
-
-
 
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -1525,28 +1125,20 @@ error
 
 `no-native-reassign`
 
-
-
 </td>
 <td valign="top">
 
 error
 
-
-
 </td>
 <td valign="top">
 
 error
-
-
 
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -1555,28 +1147,20 @@ error
 
 `no-new`
 
-
-
 </td>
 <td valign="top">
 
 error
 
-
-
 </td>
 <td valign="top">
 
 error
-
-
 
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -1585,28 +1169,20 @@ error
 
 `no-new-func`
 
-
-
 </td>
 <td valign="top">
 
 error
 
-
-
 </td>
 <td valign="top">
 
 error
-
-
 
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -1615,28 +1191,20 @@ error
 
 `no-new-wrappers`
 
-
-
 </td>
 <td valign="top">
 
 error
-
-
 
 </td>
 <td valign="top">
 
 **warning**
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -1645,28 +1213,20 @@ error
 
 `no-octal`
 
-
-
 </td>
 <td valign="top">
 
 error
 
-
-
 </td>
 <td valign="top">
 
 error
-
-
 
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -1675,28 +1235,20 @@ error
 
 `no-octal-escape`
 
-
-
 </td>
 <td valign="top">
 
 error
 
-
-
 </td>
 <td valign="top">
 
 error
-
-
 
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -1705,28 +1257,20 @@ error
 
 `no-proto`
 
-
-
 </td>
 <td valign="top">
 
 error
 
-
-
 </td>
 <td valign="top">
 
 error
-
-
 
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -1735,28 +1279,20 @@ error
 
 `no-redeclare`
 
-
-
 </td>
 <td valign="top">
 
 error
-
-
 
 </td>
 <td valign="top">
 
 **warning**
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -1765,28 +1301,20 @@ error
 
 `no-return-assign`
 
-
-
 </td>
 <td valign="top">
 
 error
 
-
-
 </td>
 <td valign="top">
 
 error
-
-
 
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -1795,28 +1323,20 @@ error
 
 `no-script-url`
 
-
-
 </td>
 <td valign="top">
 
 error
 
-
-
 </td>
 <td valign="top">
 
 error
-
-
 
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -1825,28 +1345,20 @@ error
 
 `no-self-compare`
 
-
-
 </td>
 <td valign="top">
 
 off
-
-
 
 </td>
 <td valign="top">
 
 **error**
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -1855,28 +1367,20 @@ off
 
 `no-sequences`
 
-
-
 </td>
 <td valign="top">
 
 error
 
-
-
 </td>
 <td valign="top">
 
 error
-
-
 
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -1885,28 +1389,20 @@ error
 
 `no-unused-expressions`
 
-
-
 </td>
 <td valign="top">
 
 error
-
-
 
 </td>
 <td valign="top">
 
 **warning**
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -1915,28 +1411,20 @@ error
 
 `no-warning-comments`
 
-
-
 </td>
 <td valign="top">
 
 off
-
-
 
 </td>
 <td valign="top">
 
 **warning**
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -1945,28 +1433,20 @@ off
 
 `no-with`
 
-
-
 </td>
 <td valign="top">
 
 error
 
-
-
 </td>
 <td valign="top">
 
 error
-
-
 
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -1975,28 +1455,20 @@ error
 
 `radix`
 
-
-
 </td>
 <td valign="top">
 
 off
-
-
 
 </td>
 <td valign="top">
 
 **error**
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -2005,28 +1477,20 @@ off
 
 `wrap-life`
 
-
-
 </td>
 <td valign="top">
 
 off
-
-
 
 </td>
 <td valign="top">
 
 **error**
 
-
-
 </td>
 <td valign="top">
 
 any
-
-
 
 </td>
 </tr>
@@ -2035,28 +1499,20 @@ any
 
 `yoda`
 
-
-
 </td>
 <td valign="top">
 
 error
 
-
-
 </td>
 <td valign="top">
 
 error
-
-
 
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -2071,21 +1527,15 @@ error
 
 Rule
 
-
-
 </th>
 <th valign="top">
 
 ESLint default
 
-
-
 </th>
 <th valign="top">
 
 Core
-
-
 
 </th>
 </tr>
@@ -2094,21 +1544,15 @@ Core
 
 `no-extra-strict`
 
-
-
 </td>
 <td valign="top">
 
 error
 
-
-
 </td>
 <td valign="top">
 
 error
-
-
 
 </td>
 </tr>
@@ -2117,21 +1561,15 @@ error
 
 `strict`
 
-
-
 </td>
 <td valign="top">
 
 off
 
-
-
 </td>
 <td valign="top">
 
 **error**
-
-
 
 </td>
 </tr>
@@ -2146,28 +1584,20 @@ off
 
 Rule
 
-
-
 </th>
 <th valign="top">
 
 ESLint default
-
-
 
 </th>
 <th valign="top">
 
 Core
 
-
-
 </th>
 <th valign="top">
 
 Comment
-
-
 
 </th>
 </tr>
@@ -2176,28 +1606,20 @@ Comment
 
 `no-catch-shadow`
 
-
-
 </td>
 <td valign="top">
 
 error
 
-
-
 </td>
 <td valign="top">
 
 error
-
-
 
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -2206,28 +1628,20 @@ error
 
 `no-delete-var`
 
-
-
 </td>
 <td valign="top">
 
 error
 
-
-
 </td>
 <td valign="top">
 
 error
-
-
 
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -2236,28 +1650,20 @@ error
 
 `no-label-var`
 
-
-
 </td>
 <td valign="top">
 
 error
 
-
-
 </td>
 <td valign="top">
 
 error
-
-
 
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -2266,28 +1672,20 @@ error
 
 `no-shadow`
 
-
-
 </td>
 <td valign="top">
 
 error
 
-
-
 </td>
 <td valign="top">
 
 error
-
-
 
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -2296,28 +1694,20 @@ error
 
 `no-shadow-restricted-names`
 
-
-
 </td>
 <td valign="top">
 
 error
 
-
-
 </td>
 <td valign="top">
 
 error
-
-
 
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -2326,28 +1716,20 @@ error
 
 `no-undef`
 
-
-
 </td>
 <td valign="top">
 
 error
 
-
-
 </td>
 <td valign="top">
 
 error
-
-
 
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -2356,28 +1738,20 @@ error
 
 `no-undefined`
 
-
-
 </td>
 <td valign="top">
 
 off
 
-
-
 </td>
 <td valign="top">
 
 off
-
-
 
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -2386,28 +1760,20 @@ off
 
 `no-undef-init`
 
-
-
 </td>
 <td valign="top">
 
 error
 
-
-
 </td>
 <td valign="top">
 
 error
-
-
 
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -2416,28 +1782,20 @@ error
 
 `no-unused-vars`
 
-
-
 </td>
 <td valign="top">
 
 error
 
-
-
 </td>
 <td valign="top">
 
 error
-
-
 
 </td>
 <td valign="top">
 
 `vars = all`, `args` = none
-
-
 
 </td>
 </tr>
@@ -2446,28 +1804,20 @@ error
 
 `no-use-before-define`
 
-
-
 </td>
 <td valign="top">
 
 error
-
-
 
 </td>
 <td valign="top">
 
 **warning**
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -2482,21 +1832,15 @@ error
 
 Rule
 
-
-
 </th>
 <th valign="top">
 
 ESLint default
 
-
-
 </th>
 <th valign="top">
 
 Core
-
-
 
 </th>
 </tr>
@@ -2505,21 +1849,15 @@ Core
 
 `handle-callback-err`
 
-
-
 </td>
 <td valign="top">
 
 off
 
-
-
 </td>
 <td valign="top">
 
 off
-
-
 
 </td>
 </tr>
@@ -2528,21 +1866,15 @@ off
 
 `no-mixed-requires`
 
-
-
 </td>
 <td valign="top">
 
 off
 
-
-
 </td>
 <td valign="top">
 
 off
-
-
 
 </td>
 </tr>
@@ -2551,21 +1883,15 @@ off
 
 `no-new-require`
 
-
-
 </td>
 <td valign="top">
 
 off
 
-
-
 </td>
 <td valign="top">
 
 off
-
-
 
 </td>
 </tr>
@@ -2574,21 +1900,15 @@ off
 
 `no-path-concat`
 
-
-
 </td>
 <td valign="top">
 
 off
 
-
-
 </td>
 <td valign="top">
 
 off
-
-
 
 </td>
 </tr>
@@ -2597,21 +1917,15 @@ off
 
 `no-process-exit`
 
-
-
 </td>
 <td valign="top">
 
 off
 
-
-
 </td>
 <td valign="top">
 
 off
-
-
 
 </td>
 </tr>
@@ -2620,21 +1934,15 @@ off
 
 `no-restricted-modules`
 
-
-
 </td>
 <td valign="top">
 
 off
 
-
-
 </td>
 <td valign="top">
 
 off
-
-
 
 </td>
 </tr>
@@ -2643,21 +1951,15 @@ off
 
 `no-sync`
 
-
-
 </td>
 <td valign="top">
 
 off
 
-
-
 </td>
 <td valign="top">
 
 off
-
-
 
 </td>
 </tr>
@@ -2672,28 +1974,20 @@ off
 
 Rule
 
-
-
 </th>
 <th valign="top">
 
 ESLint default
-
-
 
 </th>
 <th valign="top">
 
 Core
 
-
-
 </th>
 <th valign="top">
 
 Comment
-
-
 
 </th>
 </tr>
@@ -2702,28 +1996,20 @@ Comment
 
 `brace-style`
 
-
-
 </td>
 <td valign="top">
 
 off
-
-
 
 </td>
 <td valign="top">
 
 **error**
 
-
-
 </td>
 <td valign="top">
 
 `singleLine = false` 
-
-
 
 </td>
 </tr>
@@ -2732,28 +2018,20 @@ off
 
 `camelcase`
 
-
-
 </td>
 <td valign="top">
 
 error
-
-
 
 </td>
 <td valign="top">
 
 warning
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -2762,28 +2040,20 @@ warning
 
 `consistent-this`
 
-
-
 </td>
 <td valign="top">
 
 off
-
-
 
 </td>
 <td valign="top">
 
 **error**
 
-
-
 </td>
 <td valign="top">
 
 `that`
-
-
 
 </td>
 </tr>
@@ -2792,28 +2062,20 @@ off
 
 `eol-last`
 
-
-
 </td>
 <td valign="top">
 
 error
-
-
 
 </td>
 <td valign="top">
 
 **off**
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -2822,28 +2084,20 @@ error
 
 `func-names`
 
-
-
 </td>
 <td valign="top">
 
 off
 
-
-
 </td>
 <td valign="top">
 
 off
-
-
 
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -2852,28 +2106,20 @@ off
 
 `func-style`
 
-
-
 </td>
 <td valign="top">
 
 off
 
-
-
 </td>
 <td valign="top">
 
 off
-
-
 
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -2882,28 +2128,20 @@ off
 
 `new-cap`
 
-
-
 </td>
 <td valign="top">
 
 error
-
-
 
 </td>
 <td valign="top">
 
 **warning**
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -2912,28 +2150,20 @@ error
 
 `new-parens`
 
-
-
 </td>
 <td valign="top">
 
 error
 
-
-
 </td>
 <td valign="top">
 
 error
-
-
 
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -2942,28 +2172,20 @@ error
 
 `no-nested-ternary`
 
-
-
 </td>
 <td valign="top">
 
 off
-
-
 
 </td>
 <td valign="top">
 
 **error**
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -2972,28 +2194,20 @@ off
 
 `no-array-constructor`
 
-
-
 </td>
 <td valign="top">
 
 error
 
-
-
 </td>
 <td valign="top">
 
 error
-
-
 
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -3002,28 +2216,20 @@ error
 
 `no-lonely-if`
 
-
-
 </td>
 <td valign="top">
 
 off
-
-
 
 </td>
 <td valign="top">
 
 **error**
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -3032,28 +2238,20 @@ off
 
 `no-new-object`
 
-
-
 </td>
 <td valign="top">
 
 error
 
-
-
 </td>
 <td valign="top">
 
 error
-
-
 
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -3062,28 +2260,20 @@ error
 
 `no-spaced-func`
 
-
-
 </td>
 <td valign="top">
 
 error
 
-
-
 </td>
 <td valign="top">
 
 error
-
-
 
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -3092,28 +2282,20 @@ error
 
 `no-space-before-semi`
 
-
-
 </td>
 <td valign="top">
 
 error
 
-
-
 </td>
 <td valign="top">
 
 error
-
-
 
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -3122,28 +2304,20 @@ error
 
 `no-ternary`
 
-
-
 </td>
 <td valign="top">
 
 off
 
-
-
 </td>
 <td valign="top">
 
 off
-
-
 
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -3152,28 +2326,20 @@ off
 
 `no-trailing-spaces`
 
-
-
 </td>
 <td valign="top">
 
 error
-
-
 
 </td>
 <td valign="top">
 
 **off**
 
-
-
 </td>
 <td valign="top">
 
 error, but too many places to change
-
-
 
 </td>
 </tr>
@@ -3182,28 +2348,20 @@ error, but too many places to change
 
 `no-underscore-dangle`
 
-
-
 </td>
 <td valign="top">
 
 error
-
-
 
 </td>
 <td valign="top">
 
 **off**
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -3212,28 +2370,20 @@ error
 
 `no-wrap-func`
 
-
-
 </td>
 <td valign="top">
 
 error
 
-
-
 </td>
 <td valign="top">
 
 error
-
-
 
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -3242,28 +2392,20 @@ error
 
 `no-mixed-spaces-and-tabs`
 
-
-
 </td>
 <td valign="top">
 
 error
 
-
-
 </td>
 <td valign="top">
 
 error
-
-
 
 </td>
 <td valign="top">
 
 `smart`
-
-
 
 </td>
 </tr>
@@ -3272,28 +2414,20 @@ error
 
 `quotes`
 
-
-
 </td>
 <td valign="top">
 
 off
 
-
-
 </td>
 <td valign="top">
 
 off
-
-
 
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -3302,28 +2436,20 @@ off
 
 `quote-props`
 
-
-
 </td>
 <td valign="top">
 
 off
 
-
-
 </td>
 <td valign="top">
 
 off
-
-
 
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -3332,28 +2458,20 @@ off
 
 `semi`
 
-
-
 </td>
 <td valign="top">
 
 error
 
-
-
 </td>
 <td valign="top">
 
 error
-
-
 
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -3362,28 +2480,20 @@ error
 
 `sort-vars`
 
-
-
 </td>
 <td valign="top">
 
 off
 
-
-
 </td>
 <td valign="top">
 
 off
-
-
 
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -3392,28 +2502,20 @@ off
 
 `keyword-spacing`
 
-
-
 </td>
 <td valign="top">
 
 off
-
-
 
 </td>
 <td valign="top">
 
 **error**
 
-
-
 </td>
 <td valign="top">
 
 `“after”: true`
-
-
 
 </td>
 </tr>
@@ -3422,28 +2524,20 @@ off
 
 `space-in-brackets`
 
-
-
 </td>
 <td valign="top">
 
 off
 
-
-
 </td>
 <td valign="top">
 
 off
-
-
 
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -3452,28 +2546,20 @@ off
 
 `space-infix-ops`
 
-
-
 </td>
 <td valign="top">
 
 error
 
-
-
 </td>
 <td valign="top">
 
 error
-
-
 
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -3482,28 +2568,20 @@ error
 
 `space-return-throw-case`
 
-
-
 </td>
 <td valign="top">
 
 error
 
-
-
 </td>
 <td valign="top">
 
 error
-
-
 
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -3512,28 +2590,20 @@ error
 
 `space-unary-ops`
 
-
-
 </td>
 <td valign="top">
 
 off
-
-
 
 </td>
 <td valign="top">
 
 **error**
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -3542,28 +2612,20 @@ off
 
 `max-nested-callbacks`
 
-
-
 </td>
 <td valign="top">
 
 off
-
-
 
 </td>
 <td valign="top">
 
 **warning**
 
-
-
 </td>
 <td valign="top">
 
 `3`
-
-
 
 </td>
 </tr>
@@ -3572,28 +2634,20 @@ off
 
 `one-var`
 
-
-
 </td>
 <td valign="top">
 
 off
 
-
-
 </td>
 <td valign="top">
 
 off
-
-
 
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -3602,28 +2656,20 @@ off
 
 `wrap-regex`
 
-
-
 </td>
 <td valign="top">
 
 off
 
-
-
 </td>
 <td valign="top">
 
 off
-
-
 
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -3638,21 +2684,15 @@ off
 
 Rule
 
-
-
 </th>
 <th valign="top">
 
 ESLint default
 
-
-
 </th>
 <th valign="top">
 
 SAPUI5 Core
-
-
 
 </th>
 </tr>
@@ -3661,21 +2701,15 @@ SAPUI5 Core
 
 `max-depth`
 
-
-
 </td>
 <td valign="top">
 
 off
 
-
-
 </td>
 <td valign="top">
 
 off
-
-
 
 </td>
 </tr>
@@ -3684,21 +2718,15 @@ off
 
 `max-len`
 
-
-
 </td>
 <td valign="top">
 
 off
 
-
-
 </td>
 <td valign="top">
 
 off
-
-
 
 </td>
 </tr>
@@ -3707,21 +2735,15 @@ off
 
 `max-params`
 
-
-
 </td>
 <td valign="top">
 
 off
 
-
-
 </td>
 <td valign="top">
 
 off
-
-
 
 </td>
 </tr>
@@ -3730,21 +2752,15 @@ off
 
 `max-statements`
 
-
-
 </td>
 <td valign="top">
 
 off
 
-
-
 </td>
 <td valign="top">
 
 off
-
-
 
 </td>
 </tr>
@@ -3753,21 +2769,15 @@ off
 
 `no-bitwise`
 
-
-
 </td>
 <td valign="top">
 
 off
 
-
-
 </td>
 <td valign="top">
 
 off
-
-
 
 </td>
 </tr>
@@ -3776,21 +2786,15 @@ off
 
 `no-plus`
 
-
-
 </td>
 <td valign="top">
 
 off
 
-
-
 </td>
 <td valign="top">
 
 off
-
-
 
 </td>
 </tr>

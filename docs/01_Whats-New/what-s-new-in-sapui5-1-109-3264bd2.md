@@ -13,49 +13,35 @@ With this release SAPUI5 is upgraded from version 1.108 to 1.109.
 
 Version
 
-
-
 </th>
 <th valign="top">
 
 Type
-
-
 
 </th>
 <th valign="top">
 
 Category
 
-
-
 </th>
 <th valign="top">
 
 Title
-
-
 
 </th>
 <th valign="top">
 
 Description
 
-
-
 </th>
 <th valign="top">
 
 Action
 
-
-
 </th>
 <th valign="top">
 
 Available as of
-
-
 
 </th>
 </tr>
@@ -64,28 +50,20 @@ Available as of
 
 1.109 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.fl.variants.VariantManagement`** 
-
-
 
 </td>
 <td valign="top">
@@ -99,21 +77,15 @@ Control
 
 <sub>Changed•Control•Info Only•1.109</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-12-01
-
-
 
 </td>
 </tr>
@@ -122,28 +94,20 @@ Info Only
 
 1.109 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.comp.smartvariants.SmartVariantManagement`** 
-
-
 
 </td>
 <td valign="top">
@@ -157,21 +121,15 @@ Control
 
 <sub>Changed•Control•Info Only•1.109</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-12-01
-
-
 
 </td>
 </tr>
@@ -180,28 +138,20 @@ Info Only
 
 1.109 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.Table`** 
-
-
 
 </td>
 <td valign="top">
@@ -212,21 +162,15 @@ If a user selects all rows in a table using the *Select All* checkbox, **only** 
 
 <sub>Changed•Control•Info Only•1.109</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-12-01
-
-
 
 </td>
 </tr>
@@ -235,28 +179,20 @@ Info Only
 
 1.109 
 
-
-
 </td>
 <td valign="top">
 
 Deprecated 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **Deprecations** 
-
-
 
 </td>
 <td valign="top">
@@ -267,21 +203,15 @@ There are currently no major deprecations. For a complete list of all deprecatio
 
 <sub>Deprecated•Feature•Info Only•1.109</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-12-01
-
-
 
 </td>
 </tr>
@@ -290,28 +220,20 @@ Info Only
 
 1.109 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **SAPUI5 OData V4 Model** 
-
-
 
 </td>
 <td valign="top">
@@ -328,21 +250,15 @@ The new version of the SAPUI5 OData V4 model introduces the following features:
 
 <sub>Changed•Feature•Info Only•1.109</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-12-01
-
-
 
 </td>
 </tr>
@@ -351,28 +267,20 @@ Info Only
 
 1.109 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **SAPUI5 OData V2 Model** 
-
-
 
 </td>
 <td valign="top">
@@ -386,21 +294,15 @@ The new version of the SAPUI5 OData V2 model introduces the following features:
 
 <sub>Changed•Feature•Info Only•1.109</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-12-01
-
-
 
 </td>
 </tr>
@@ -409,28 +311,20 @@ Info Only
 
 1.109 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 SAP Fiori Elements 
 
-
-
 </td>
 <td valign="top">
 
 **SAP Fiori elements for OData V2 and SAP Fiori elements for OData V4** 
-
-
 
 </td>
 <td valign="top">
@@ -444,21 +338,15 @@ The following changes and new features are available for both SAP Fiori elements
 
 <sub>Changed•SAP Fiori Elements•Info Only•1.109</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-12-01
-
-
 
 </td>
 </tr>
@@ -467,28 +355,20 @@ Info Only
 
 1.109 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 SAP Fiori Elements 
 
-
-
 </td>
 <td valign="top">
 
 **SAP Fiori elements for OData V2** 
-
-
 
 </td>
 <td valign="top">
@@ -504,21 +384,15 @@ The following changes and new features are available for SAP Fiori elements for 
 
 <sub>Changed•SAP Fiori Elements•Info Only•1.109</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-12-01
-
-
 
 </td>
 </tr>
@@ -527,28 +401,20 @@ Info Only
 
 1.109 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 SAP Fiori Elements 
 
-
-
 </td>
 <td valign="top">
 
 **SAP Fiori elements for OData V4** 
-
-
 
 </td>
 <td valign="top">
@@ -566,21 +432,15 @@ The following changes and new features are available for SAP Fiori elements for 
 
 <sub>Changed•SAP Fiori Elements•Info Only•1.109</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-12-01
-
-
 
 </td>
 </tr>
@@ -589,28 +449,20 @@ Info Only
 
 1.109 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.IllustratedMessage`** 
-
-
 
 </td>
 <td valign="top">
@@ -621,21 +473,15 @@ We have updated the illustrations in the default set. For more information, see 
 
 <sub>Changed•Control•Info Only•1.109</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-12-01
-
-
 
 </td>
 </tr>
@@ -644,28 +490,20 @@ Info Only
 
 1.109 
 
-
-
 </td>
 <td valign="top">
 
 UI Changed 
-
-
 
 </td>
 <td valign="top">
 
 Announcement 
 
-
-
 </td>
 <td valign="top">
 
 **Object Pages: Variant Management Enabled by Default for Tables and Charts** 
-
-
 
 </td>
 <td valign="top">
@@ -679,21 +517,15 @@ Object page tables and charts now have variant management enabled by default. Us
 
 <sub>UI Changed•Announcement•Info Only•1.109</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-12-01
-
-
 
 </td>
 </tr>
@@ -702,28 +534,20 @@ Info Only
 
 1.109 
 
-
-
 </td>
 <td valign="top">
 
 UI Changed 
-
-
 
 </td>
 <td valign="top">
 
 Announcement 
 
-
-
 </td>
 <td valign="top">
 
 **SAP Fiori elements for OData V4: Value Help Titles Aligned** 
-
-
 
 </td>
 <td valign="top">
@@ -737,21 +561,15 @@ We harmonized the titles for value help dialogs. The title of the value help for
 
 <sub>UI Changed•Announcement•Info Only•1.109</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-12-01
-
-
 
 </td>
 </tr>
@@ -760,28 +578,20 @@ Info Only
 
 1.109 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.integration.widgets.Card`** 
-
-
 
 </td>
 <td valign="top">
@@ -801,21 +611,15 @@ Control
 
 <sub>Changed•Control•Info Only•1.109</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-12-01
-
-
 
 </td>
 </tr>
@@ -824,28 +628,20 @@ Info Only
 
 1.109 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.LightBox`** 
-
-
 
 </td>
 <td valign="top">
@@ -856,21 +652,15 @@ We are now using the `IllustratedMessage` control to show errors when an image c
 
 <sub>Changed•Control•Info Only•1.109</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-12-01
-
-
 
 </td>
 </tr>
@@ -878,6 +668,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.118](what-s-new-in-sapui5-1-118-3eecbde.md "With this release SAPUI5 is upgraded from version 1.117 to 1.118.")
 
 [What's New in SAPUI5 1.117](what-s-new-in-sapui5-1-117-029d3b4.md "With this release SAPUI5 is upgraded from version 1.116 to 1.117.")
 

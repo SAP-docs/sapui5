@@ -35,14 +35,10 @@ You can also use SAP Fiori tools to extend and customize specific features of th
 
 Feature
 
-
-
 </th>
 <th valign="top">
 
 Setting
-
-
 
 </th>
 </tr>
@@ -51,14 +47,10 @@ Setting
 
 Display/Hide the *Export to Excel* button in the table toolbar
 
-
-
 </td>
 <td valign="top">
 
 Change the `ExporttoExcel` property to `True/False`.
-
-
 
 </td>
 </tr>
@@ -67,14 +59,10 @@ Change the `ExporttoExcel` property to `True/False`.
 
 Change the column width.
 
-
-
 </td>
 <td valign="top">
 
 Choose the column of a table in the outline of the Page Editor, and change the `Width` property as needed.
-
-
 
 </td>
 </tr>
@@ -83,16 +71,12 @@ Choose the column of a table in the outline of the Page Editor, and change the `
 
 Center-align status columns
 
-
-
 </td>
 <td valign="top">
 
 Choose the column of the table in the outline of Page Editor, and set the `HAlign` property to `Center`.
 
 For vertical alignment of the whole responsive table, see [Tables](tables-c0f6592.md).
-
-
 
 </td>
 </tr>
@@ -101,14 +85,10 @@ For vertical alignment of the whole responsive table, see [Tables](tables-c0f659
 
 Disable standard system behavior for list report tables \(analytical, grid, tree tables\): Table should not occupy the entire space available in the container.
 
-
-
 </td>
 <td valign="top">
 
 In the table, set the `Fit Content` property with the Page Editor.
-
-
 
 </td>
 </tr>
@@ -116,8 +96,6 @@ In the table, set the `Fit Content` property with the Page Editor.
 <td valign="top">
 
 Change the layout of the list report table for better readability for a high number of columns.
-
-
 
 </td>
 <td valign="top">
@@ -132,8 +110,6 @@ In the table, set the `PopinLayout` property with the Page Editor to one of the 
 
 
 The default layout is `Block`.
-
-
 
 </td>
 </tr>
@@ -150,14 +126,10 @@ The default layout is `Block`.
 
 Feature
 
-
-
 </th>
 <th valign="top">
 
 Setting
-
-
 
 </th>
 </tr>
@@ -166,14 +138,10 @@ Setting
 
 Change the avatar shape in the object page dynamic header from a square to a circle
 
-
-
 </td>
 <td valign="top">
 
 On the header of the object page, set the `displayShape` property to `Circle`.
-
-
 
 </td>
 </tr>
@@ -182,14 +150,10 @@ On the header of the object page, set the `displayShape` property to `Circle`.
 
 Hide the anchor bar
 
-
-
 </td>
 <td valign="top">
 
 On the page layout node, set the `ShowAnchorBar` property to `false`.
-
-
 
 </td>
 </tr>
@@ -198,14 +162,10 @@ On the page layout node, set the `ShowAnchorBar` property to `false`.
 
 Switch to tabs
 
-
-
 </td>
 <td valign="top">
 
 On the page layout node, set the property `useIconTabBar` to `true`.
-
-
 
 </td>
 </tr>
@@ -214,14 +174,10 @@ On the page layout node, set the property `useIconTabBar` to `true`.
 
 Display the *Export to Excel* button in the table toolbar
 
-
-
 </td>
 <td valign="top">
 
 In the table node, set the `UseExporttoExcel` property to `true`.
-
-
 
 </td>
 </tr>
@@ -230,8 +186,6 @@ In the table node, set the `UseExporttoExcel` property to `true`.
 
 Show header content in edit mode
 
-
-
 </td>
 <td valign="top">
 
@@ -239,16 +193,12 @@ On the page layout node, set the `showHeaderContent` property to `true` or `fals
 
 Alternatively, you can make a binding change if you need to change the value according to a property or an expression. For more information, see [Creating a Binding Change](creating-a-binding-change-4754094.md).
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
 Don't collapse headers when scrolling down
-
-
 
 </td>
 <td valign="top">
@@ -277,8 +227,6 @@ Change the default `growingThreshold` value for the object page’s `sap.m.Table
 
 In the outline, select the table whose value needs to be changed, and set the new value for the `growingThreshold` property.
 
-
-
 </td>
 </tr>
 <tr>
@@ -290,16 +238,12 @@ By default, object page tables are automatically set to `editable` if the object
 
 However, in a table with only non-editable content, there is no tab stop.
 
-
-
 </td>
 <td valign="top">
 
 Set the `editable` property of the table to `false`. The inner table's `navigationMode` property is set to `Navigation`.
 
 Users can then navigate through the entire focusable table content, and not only through the editable fields.
-
-
 
 </td>
 </tr>
@@ -310,14 +254,10 @@ Enable *Include Item In Selection* for tables.
 
 By setting this property to true, the item selection is displayed even if a user navigates away from a table.
 
-
-
 </td>
 <td valign="top">
 
 On the table, set the `includeItemInSelection` property to `True`.
-
-
 
 </td>
 </tr>
@@ -326,14 +266,10 @@ On the table, set the `includeItemInSelection` property to `True`.
 
 Enable the *Save and Edit* button in non-draft applications. Users can choose this button to save the current changes. The object page stays in edit mode so that they can continue editing.
 
-
-
 </td>
 <td valign="top">
 
 In the SAPUI5 Visual Editor, go to the object page of your app. Switch to edit mode and choose the `Save and Edit` button from the outline panel. Change the visibility to `true`. In the change file that's created, change the new value from `true` to `{ui>/editable}`.
-
-
 
 </td>
 </tr>
@@ -341,8 +277,6 @@ In the SAPUI5 Visual Editor, go to the object page of your app. Switch to edit m
 <td valign="top">
 
 Change the layout of the object table for better readability for a high number of columns.
-
-
 
 </td>
 <td valign="top">
@@ -358,8 +292,6 @@ On the table, set the `PopinLayout` property to one of the following values:
 
 The default layout is `Block`.
 
-
-
 </td>
 </tr>
 <tr>
@@ -367,14 +299,10 @@ The default layout is `Block`.
 
 Hide the *Paste* button on the table toolbar.
 
-
-
 </td>
 <td valign="top">
 
 On the table, set the Show Paste Button attribute to `false`.
-
-
 
 </td>
 </tr>

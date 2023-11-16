@@ -27,5 +27,5 @@ The service responds to the request with a valid JSON:
 
 [Frame Options](frame-options-62d9c4d.md "frameOptions is used to prevent security vulnerabilities like clickjacking. With the frameOptions configuration you define whether SAPUI5 is allowed to run embedded in a frame or only from trusted origins or not at all.")
 
-[Configuration Options and URL Parameters](../04_Essentials/configuration-options-and-url-parameters-91f2d03.md "The complete list of configuration options available in SAPUI5 can be found in the API Reference under sap.ui.core.Configuration. The following table shows a subset of the available configuration options.")
+[Configuration Options and URL Parameters](../04_Essentials/configuration-options-and-url-parameters-91f2d03.md "The following tables show available configuration options.")
 

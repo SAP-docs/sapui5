@@ -10,7 +10,7 @@ We first introduce you to the basic development paradigms like *Model-View-Contr
 
 ## Preview
 
-![Preview of the UI5 application that is going to be built in this tutorial. Contains a Hello World upper part with buttons and a text input. The lower part shows list of invoices with details, grouped by vendors.](images/UI5_Walkthrough_Step_38_fb12cea.png)
+![Preview of the UI5 application that is going to be built in this tutorial. Contains a Hello World header with buttons and a text input. The lower part shows list of invoices with details, grouped by vendor names.](images/UI5_Walkthrough_Step_38_fb12cea.png)
 
 
 

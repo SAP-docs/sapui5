@@ -71,21 +71,15 @@ In ABAP, a yellow arrow indicates the line of code that is currently being execu
 
 Function
 
-
-
 </th>
 <th valign="top">
 
 ABAP
 
-
-
 </th>
 <th valign="top">
 
 JavaScript
-
-
 
 </th>
 </tr>
@@ -94,21 +88,15 @@ JavaScript
 
 Step-by-step execution, also stepping into functions and loops
 
-
-
 </td>
 <td valign="top">
 
 `F5`
 
-
-
 </td>
 <td valign="top">
 
 `F11`
-
-
 
 </td>
 </tr>
@@ -117,21 +105,15 @@ Step-by-step execution, also stepping into functions and loops
 
 Step-by-step execution, stepping over functions
 
-
-
 </td>
 <td valign="top">
 
 `F6`
 
-
-
 </td>
 <td valign="top">
 
 `F10`
-
-
 
 </td>
 </tr>
@@ -140,21 +122,15 @@ Step-by-step execution, stepping over functions
 
 Skipping the rest of the current function and stepping out to the last cursor position
 
-
-
 </td>
 <td valign="top">
 
 `F7`
 
-
-
 </td>
 <td valign="top">
 
 `SHIFT+F11`
-
-
 
 </td>
 </tr>
@@ -163,21 +139,15 @@ Skipping the rest of the current function and stepping out to the last cursor po
 
 Resume execution
 
-
-
 </td>
 <td valign="top">
 
 `F8`
 
-
-
 </td>
 <td valign="top">
 
 `F8` 
-
-
 
 </td>
 </tr>

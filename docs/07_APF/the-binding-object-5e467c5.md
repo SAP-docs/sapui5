@@ -23,14 +23,10 @@ The properties used in the `binding` object denote the following:
 
 Property
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -39,14 +35,10 @@ Description
 
 `id` 
 
-
-
 </td>
 <td valign="top">
 
 Unique ID of type string
-
-
 
 </td>
 </tr>
@@ -55,14 +47,10 @@ Unique ID of type string
 
 `requiredFilters` 
 
-
-
 </td>
 <td valign="top">
 
 Contract between binding and request; specify the target properties for converting selected data into filter expressions
-
-
 
 </td>
 </tr>
@@ -71,14 +59,10 @@ Contract between binding and request; specify the target properties for converti
 
 `representations` 
 
-
-
 </td>
 <td valign="top">
 
 An array of `representation` objects.
-
-
 
 </td>
 </tr>

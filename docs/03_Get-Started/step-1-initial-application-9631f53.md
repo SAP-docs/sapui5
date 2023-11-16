@@ -23,10 +23,5 @@ In this tutorial, you don't have to worry about creating any test data. Everythi
 
 You can do this tutorial with SAP Web IDE \(from SAPUI5 version 1.50\) or with your own development environment. Just download the initial version of the final app from the [Samples](https://ui5.sap.com/#/entity/sap.suite.ui.commons.tutorial.icecream), extract the archive, and start coding.
 
-For more information, check the following sections of the tutorials overview page \(see [Get Started: Setup, Tutorials, and Demo Apps](get-started-setup-tutorials-and-demo-apps-8b49fc1.md)\):
-
--   [Downloading Code for a Tutorial Step](get-started-setup-tutorials-and-demo-apps-8b49fc1.md#loio8b49fc198bf04b2d9800fc37fecbb218__tutorials_download)
-
--   [Adapting Code to Your Development Environment](get-started-setup-tutorials-and-demo-apps-8b49fc1.md#loio8b49fc198bf04b2d9800fc37fecbb218__tutorials_adaptation)
-
+For more information check the [Downloading Code for a Tutorial Step](get-started-setup-tutorials-and-demo-apps-8b49fc1.md#loio8b49fc198bf04b2d9800fc37fecbb218__tutorials_download) section of the tutorials overview page [Get Started: Setup, Tutorials, and Demo Apps](get-started-setup-tutorials-and-demo-apps-8b49fc1.md).
 

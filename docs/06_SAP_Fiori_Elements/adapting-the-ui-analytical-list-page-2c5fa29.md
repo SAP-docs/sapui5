@@ -28,14 +28,10 @@ We recommend that you use [SAP Fiori tools](https://help.sap.com/viewer/product/
 
 Feature
 
-
-
 </th>
 <th valign="top">
 
 Setting
-
-
 
 </th>
 </tr>
@@ -44,14 +40,10 @@ Setting
 
 Collapse smart filter bar
 
-
-
 </td>
 <td valign="top">
 
 Configure the `headerExpanded` property for the template to collapse and hide the filter bar.
-
-
 
 </td>
 </tr>
@@ -60,14 +52,10 @@ Configure the `headerExpanded` property for the template to collapse and hide th
 
 Freeze filter bar on scroll
 
-
-
 </td>
 <td valign="top">
 
 Configure the `preserveHeaderStateonScroll` property for the template to freeze the filter bar.
-
-
 
 </td>
 </tr>
@@ -75,8 +63,6 @@ Configure the `preserveHeaderStateonScroll` property for the template to freeze 
 <td valign="top">
 
 Variant management options
-
-
 
 </td>
 <td valign="top">
@@ -97,14 +83,10 @@ Configure the following page variant properties to enable the variant management
 
 Share icon
 
-
-
 </td>
 <td valign="top">
 
 Configure the `visible` property to hide or unhide the share icon.
-
-
 
 </td>
 </tr>
@@ -112,8 +94,6 @@ Configure the `visible` property to hide or unhide the share icon.
 <td valign="top">
 
 Clear button
-
-
 
 </td>
 <td valign="top">
@@ -134,14 +114,10 @@ The clear button may appear on the smart filter bar or on the header area based 
 
 Table toolbar
 
-
-
 </td>
 <td valign="top">
 
 Configure the `visible` property of the table toolbar to hide or unhide table toolbar.
-
-
 
 </td>
 </tr>
@@ -150,14 +126,10 @@ Configure the `visible` property of the table toolbar to hide or unhide table to
 
 Page footer
 
-
-
 </td>
 <td valign="top">
 
 Configure the `visible` property of the page footer to hide or unhide page footer.
-
-
 
 </td>
 </tr>
@@ -165,8 +137,6 @@ Configure the `visible` property of the page footer to hide or unhide page foote
 <td valign="top">
 
 Chart
-
-
 
 </td>
 <td valign="top">
@@ -201,14 +171,10 @@ Use the following smart chart properties on the UI Adaptation layer:
 
 Feature
 
-
-
 </th>
 <th valign="top">
 
 Setting
-
-
 
 </th>
 </tr>
@@ -217,14 +183,10 @@ Setting
 
 Ignored chart types
 
-
-
 </td>
 <td valign="top">
 
 Configure the `ignoredChartType` property to hide certain chart types. Upon entering the value as comma-separated chart types, the mentioned charts do not show up in the list of available charts.
-
-
 
 </td>
 </tr>
@@ -233,14 +195,10 @@ Configure the `ignoredChartType` property to hide certain chart types. Upon ente
 
 No data
 
-
-
 </td>
 <td valign="top">
 
 Configure the `noData` property that allows you to override the default text when chart has no data to display.
-
-
 
 </td>
 </tr>
@@ -249,14 +207,10 @@ Configure the `noData` property that allows you to override the default text whe
 
 Selection mode
 
-
-
 </td>
 <td valign="top">
 
 Configure the `selectionMode` property that lets you select the mode \(single, multiple, or none\).
-
-
 
 </td>
 </tr>
@@ -265,14 +219,10 @@ Configure the `selectionMode` property that lets you select the mode \(single, m
 
 Show chart type selection button
 
-
-
 </td>
 <td valign="top">
 
 Configure the `showChartTypeSelectionButton` property that controls the visibility of the chart type button \(users could change the chart type\).
-
-
 
 </td>
 </tr>
@@ -281,14 +231,10 @@ Configure the `showChartTypeSelectionButton` property that controls the visibili
 
 Show download button
 
-
-
 </td>
 <td valign="top">
 
 Configure the `showDownloadButton` property that controls the visibility of the chart download button \(users can download the chart as an image\).
-
-
 
 </td>
 </tr>
@@ -297,14 +243,10 @@ Configure the `showDownloadButton` property that controls the visibility of the 
 
 Show legend button
 
-
-
 </td>
 <td valign="top">
 
 Configure the `showLegendButton` property that controls the visibility of the legend button \(users can toggle the visibility of the chart legends\).
-
-
 
 </td>
 </tr>
@@ -323,14 +265,10 @@ Configure the `showLegendButton` property that controls the visibility of the le
 
 Chart Type
 
-
-
 </th>
 <th valign="top">
 
 ignoredChartTypes value
-
-
 
 </th>
 </tr>
@@ -339,14 +277,10 @@ ignoredChartTypes value
 
 Bar Chart
 
-
-
 </td>
 <td valign="top">
 
 bar
-
-
 
 </td>
 </tr>
@@ -355,14 +289,10 @@ bar
 
 Column Chart
 
-
-
 </td>
 <td valign="top">
 
 column
-
-
 
 </td>
 </tr>
@@ -371,14 +301,10 @@ column
 
 Line Chart
 
-
-
 </td>
 <td valign="top">
 
 line
-
-
 
 </td>
 </tr>
@@ -387,14 +313,10 @@ line
 
 Combined Column Line Chart
 
-
-
 </td>
 <td valign="top">
 
 combination
-
-
 
 </td>
 </tr>
@@ -403,14 +325,10 @@ combination
 
 Pie Chart
 
-
-
 </td>
 <td valign="top">
 
 pie
-
-
 
 </td>
 </tr>
@@ -419,14 +337,10 @@ pie
 
 Doughnut Chart
 
-
-
 </td>
 <td valign="top">
 
 donut
-
-
 
 </td>
 </tr>
@@ -435,14 +349,10 @@ donut
 
 Scatter Plot
 
-
-
 </td>
 <td valign="top">
 
 scatter
-
-
 
 </td>
 </tr>
@@ -451,14 +361,10 @@ scatter
 
 Bubble Chart
 
-
-
 </td>
 <td valign="top">
 
 bubble
-
-
 
 </td>
 </tr>
@@ -467,14 +373,10 @@ bubble
 
 Heat Map
 
-
-
 </td>
 <td valign="top">
 
 heatmap
-
-
 
 </td>
 </tr>
@@ -483,14 +385,10 @@ heatmap
 
 Bullet Chart
 
-
-
 </td>
 <td valign="top">
 
 bullet
-
-
 
 </td>
 </tr>
@@ -499,14 +397,10 @@ bullet
 
 Vertical Bullet Chart
 
-
-
 </td>
 <td valign="top">
 
 vertical\_bullet
-
-
 
 </td>
 </tr>
@@ -515,14 +409,10 @@ vertical\_bullet
 
 Stacked Bar Chart
 
-
-
 </td>
 <td valign="top">
 
 stacked\_bar
-
-
 
 </td>
 </tr>
@@ -531,14 +421,10 @@ stacked\_bar
 
 Stacked Column Chart
 
-
-
 </td>
 <td valign="top">
 
 stacked\_column
-
-
 
 </td>
 </tr>
@@ -547,14 +433,10 @@ stacked\_column
 
 Combined Stacked Line Chart
 
-
-
 </td>
 <td valign="top">
 
 stacked\_combination
-
-
 
 </td>
 </tr>
@@ -563,14 +445,10 @@ stacked\_combination
 
 Horizontal Combined Stacked Line Chart
 
-
-
 </td>
 <td valign="top">
 
 horizontal\_stacked\_combination
-
-
 
 </td>
 </tr>
@@ -579,14 +457,10 @@ horizontal\_stacked\_combination
 
 Bar Chart with 2 X-Axes
 
-
-
 </td>
 <td valign="top">
 
 dual\_bar
-
-
 
 </td>
 </tr>
@@ -595,14 +469,10 @@ dual\_bar
 
 Column Chart with 2 Y-Axes
 
-
-
 </td>
 <td valign="top">
 
 dual\_column
-
-
 
 </td>
 </tr>
@@ -611,14 +481,10 @@ dual\_column
 
 Line Chart with 2 Y-Axes
 
-
-
 </td>
 <td valign="top">
 
 dual\_line
-
-
 
 </td>
 </tr>
@@ -627,14 +493,10 @@ dual\_line
 
 Stacked Bar Chart with 2 X-Axes
 
-
-
 </td>
 <td valign="top">
 
 dual\_stacked\_bar
-
-
 
 </td>
 </tr>
@@ -643,14 +505,10 @@ dual\_stacked\_bar
 
 Stacked Column Chart with 2 Y-Axes
 
-
-
 </td>
 <td valign="top">
 
 dual\_stacked\_column
-
-
 
 </td>
 </tr>
@@ -659,14 +517,10 @@ dual\_stacked\_column
 
 Combined Column Line Chart with 2 Y-Axes
 
-
-
 </td>
 <td valign="top">
 
 dual\_combination
-
-
 
 </td>
 </tr>
@@ -675,14 +529,10 @@ dual\_combination
 
 Combined Bar Line Chart with 2 X-Axes
 
-
-
 </td>
 <td valign="top">
 
 dual\_stacked\_combination
-
-
 
 </td>
 </tr>
@@ -691,14 +541,10 @@ dual\_stacked\_combination
 
 Combined Stacked Line Chart with 2 Y-Axes
 
-
-
 </td>
 <td valign="top">
 
 dual\_horizontal\_combination
-
-
 
 </td>
 </tr>
@@ -707,14 +553,10 @@ dual\_horizontal\_combination
 
 Horizontal Combined Stacked Line Chart with 2 X-Axes
 
-
-
 </td>
 <td valign="top">
 
 dual\_horizontal\_stacked\_combination
-
-
 
 </td>
 </tr>
@@ -723,14 +565,10 @@ dual\_horizontal\_stacked\_combination
 
 100% Stacked Bar Chart
 
-
-
 </td>
 <td valign="top">
 
 100\_stacked\_bar
-
-
 
 </td>
 </tr>
@@ -739,14 +577,10 @@ dual\_horizontal\_stacked\_combination
 
 100% Stacked Column Chart
 
-
-
 </td>
 <td valign="top">
 
 100\_stacked\_column
-
-
 
 </td>
 </tr>
@@ -755,14 +589,10 @@ dual\_horizontal\_stacked\_combination
 
 100% Stacked Bar Chart with 2 X-Axes
 
-
-
 </td>
 <td valign="top">
 
 100\_dual\_stacked\_bar
-
-
 
 </td>
 </tr>
@@ -771,14 +601,10 @@ dual\_horizontal\_stacked\_combination
 
 100% Stacked Column Chart with 2 Y-Axes
 
-
-
 </td>
 <td valign="top">
 
 100\_dual\_stacked\_column
-
-
 
 </td>
 </tr>
@@ -787,14 +613,10 @@ dual\_horizontal\_stacked\_combination
 
 Waterfall Chart
 
-
-
 </td>
 <td valign="top">
 
 waterfall
-
-
 
 </td>
 </tr>
@@ -803,14 +625,10 @@ waterfall
 
 Horizontal Waterfall Chart
 
-
-
 </td>
 <td valign="top">
 
 horizontal\_waterfall
-
-
 
 </td>
 </tr>
@@ -831,14 +649,10 @@ horizontal\_waterfall
 
 Feature
 
-
-
 </th>
 <th valign="top">
 
 Setting
-
-
 
 </th>
 </tr>
@@ -847,14 +661,10 @@ Setting
 
 Chart personalisation button
 
-
-
 </td>
 <td valign="top">
 
 Configure the `visible` property to display or hide the Settings icon of chart personalisation
-
-
 
 </td>
 </tr>
@@ -863,14 +673,10 @@ Configure the `visible` property to display or hide the Settings icon of chart p
 
 C\_ContrItemMonitoringResults--chart-btnDrillDownText
 
-
-
 </td>
 <td valign="top">
 
 Visibility: To drill down within the chart toolbar
-
-
 
 </td>
 </tr>
@@ -891,14 +697,10 @@ Visibility: To drill down within the chart toolbar
 
 Feature
 
-
-
 </th>
 <th valign="top">
 
 Setting
-
-
 
 </th>
 </tr>
@@ -907,14 +709,10 @@ Setting
 
 C\_ContrItemMonitoringResults--table-nodata
 
-
-
 </td>
 <td valign="top">
 
 Allows you to override the default text when chart has no data to display
-
-
 
 </td>
 </tr>
@@ -923,14 +721,10 @@ Allows you to override the default text when chart has no data to display
 
 Personalization
 
-
-
 </td>
 <td valign="top">
 
 Configure the `visible` property to display or hide the *Settings* icon of table personalisation.
-
-
 
 </td>
 </tr>
@@ -939,14 +733,10 @@ Configure the `visible` property to display or hide the *Settings* icon of table
 
 Export to Excel
 
-
-
 </td>
 <td valign="top">
 
 The *Export to Excel* button is visible on the UI by default. You can hide this button by setting the `UseExporttoExcel` property to `False` using the UI adaptation.
-
-
 
 </td>
 </tr>
@@ -955,14 +745,10 @@ The *Export to Excel* button is visible on the UI by default. You can hide this 
 
 C\_ContrItemMonitoringResults--table
 
-
-
 </td>
 <td valign="top">
 
 Show Row Count
-
-
 
 </td>
 </tr>
@@ -985,14 +771,10 @@ Each column of the smart table can also be tweaked in UI Adaptation. The smart t
 
 Property
 
-
-
 </th>
 <th valign="top">
 
 Setting
-
-
 
 </th>
 </tr>
@@ -1001,14 +783,10 @@ Setting
 
 `visible` 
 
-
-
 </td>
 <td valign="top">
 
 Hide or unhide a column.
-
-
 
 </td>
 </tr>
@@ -1017,14 +795,10 @@ Hide or unhide a column.
 
 `width` 
 
-
-
 </td>
 <td valign="top">
 
 Adjust the column width
-
-
 
 </td>
 </tr>
@@ -1033,14 +807,10 @@ Adjust the column width
 
 `autoResizable` 
 
-
-
 </td>
 <td valign="top">
 
 Expand column to the maximum width of the content
-
-
 
 </td>
 </tr>
@@ -1049,14 +819,10 @@ Expand column to the maximum width of the content
 
 `inResult` 
 
-
-
 </td>
 <td valign="top">
 
 Ensures the column is always used in the query, which affects the aggregation level
-
-
 
 </td>
 </tr>
@@ -1065,14 +831,10 @@ Ensures the column is always used in the query, which affects the aggregation le
 
 `resizable` 
 
-
-
 </td>
 <td valign="top">
 
 Resize column width
-
-
 
 </td>
 </tr>
@@ -1081,14 +843,10 @@ Resize column width
 
 `showSortMenuEntry` 
 
-
-
 </td>
 <td valign="top">
 
 Displays column with a sort tab for personalization
-
-
 
 </td>
 </tr>
@@ -1097,14 +855,10 @@ Displays column with a sort tab for personalization
 
 `sortOrder` 
 
-
-
 </td>
 <td valign="top">
 
 Allows sorting in ascending or descending. The default value is ascending.
-
-
 
 </td>
 </tr>
@@ -1113,14 +867,10 @@ Allows sorting in ascending or descending. The default value is ascending.
 
 `sorted` 
 
-
-
 </td>
 <td valign="top">
 
 Displays sorted items when sort is available in column header
-
-
 
 </td>
 </tr>
@@ -1129,14 +879,10 @@ Displays sorted items when sort is available in column header
 
 `summed` 
 
-
-
 </td>
 <td valign="top">
 
 Displays the total sum of a column
-
-
 
 </td>
 </tr>
@@ -1159,14 +905,10 @@ Each button of the *Adapt Filters* dialog in Visual Filter mode can be tweaked v
 
 Property
 
-
-
 </th>
 <th valign="top">
 
 Setting
-
-
 
 </th>
 </tr>
@@ -1175,14 +917,10 @@ Setting
 
 `visible` 
 
-
-
 </td>
 <td valign="top">
 
 Hide or reveal a button
-
-
 
 </td>
 </tr>
@@ -1191,14 +929,10 @@ Hide or reveal a button
 
 `width` 
 
-
-
 </td>
 <td valign="top">
 
 Adjust the width of a button
-
-
 
 </td>
 </tr>
@@ -1207,14 +941,10 @@ Adjust the width of a button
 
 `icon` 
 
-
-
 </td>
 <td valign="top">
 
 Lets you configure a button icon
-
-
 
 </td>
 </tr>
@@ -1223,14 +953,10 @@ Lets you configure a button icon
 
 `activeIcon` 
 
-
-
 </td>
 <td valign="top">
 
 The source property of an alternative icon for the active \(depressed\) state of the button
-
-
 
 </td>
 </tr>
@@ -1239,14 +965,10 @@ The source property of an alternative icon for the active \(depressed\) state of
 
 `text` 
 
-
-
 </td>
 <td valign="top">
 
 Allows you to change button text
-
-
 
 </td>
 </tr>
@@ -1255,14 +977,10 @@ Allows you to change button text
 
 `busy` 
 
-
-
 </td>
 <td valign="top">
 
 Denotes whether a control is currently in busy state
-
-
 
 </td>
 </tr>
@@ -1271,14 +989,10 @@ Denotes whether a control is currently in busy state
 
 `enabled` 
 
-
-
 </td>
 <td valign="top">
 
 Enable or disable a button
-
-
 
 </td>
 </tr>
@@ -1287,14 +1001,10 @@ Enable or disable a button
 
 `blocked` 
 
-
-
 </td>
 <td valign="top">
 
 Denotes whether a control is currently in blocked state
-
-
 
 </td>
 </tr>

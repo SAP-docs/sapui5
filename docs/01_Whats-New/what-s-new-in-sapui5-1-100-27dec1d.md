@@ -15,49 +15,35 @@ With this release SAPUI5 is upgraded from version 1.99 to 1.100.
 
 Version
 
-
-
 </th>
 <th valign="top">
 
 Type
-
-
 
 </th>
 <th valign="top">
 
 Category
 
-
-
 </th>
 <th valign="top">
 
 Title
-
-
 
 </th>
 <th valign="top">
 
 Description
 
-
-
 </th>
 <th valign="top">
 
 Action
 
-
-
 </th>
 <th valign="top">
 
 Available as of
-
-
 
 </th>
 </tr>
@@ -66,28 +52,20 @@ Available as of
 
 1.100 
 
-
-
 </td>
 <td valign="top">
 
 New 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **New Theme Flavors Available for SAP Fiori User Experience \(Experimental\)** 
-
-
 
 </td>
 <td valign="top">
@@ -110,21 +88,15 @@ To preview the new theme flavors, see
 
 <sub>New•Feature•Info Only•1.100</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only
 
-
-
 </td>
 <td valign="top">
 
 2022-03-24
-
-
 
 </td>
 </tr>
@@ -133,28 +105,20 @@ Info Only
 
 1.100 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **SAPUI5 Bootstrapping** 
-
-
 
 </td>
 <td valign="top">
@@ -165,21 +129,15 @@ For all long-term maintenance versions of SAPUI5 starting from 1.71, you can now
 
 <sub>Changed•Feature•Info Only•1.100</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-03-24
-
-
 
 </td>
 </tr>
@@ -188,28 +146,20 @@ Info Only
 
 1.100 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **SAPUI5 OData V2 Model** 
-
-
 
 </td>
 <td valign="top">
@@ -220,21 +170,15 @@ You can now access the status of a `Context` in bindings with the `@$ui5.context
 
 <sub>Changed•Feature•Info Only•1.100</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-03-24
-
-
 
 </td>
 </tr>
@@ -243,28 +187,20 @@ Info Only
 
 1.100 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **SAPUI5 OData V4 Model** 
-
-
 
 </td>
 <td valign="top">
@@ -280,21 +216,15 @@ The new version of the SAPUI5 OData V4 model introduces the following features:
 
 <sub>Changed•Feature•Info Only•1.100</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-03-24
-
-
 
 </td>
 </tr>
@@ -303,28 +233,20 @@ Info Only
 
 1.100 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.QuickView`** 
-
-
 
 </td>
 <td valign="top">
@@ -335,21 +257,15 @@ The control now displays a language-dependent “–” symbol when the text for
 
 <sub>Changed•Control•Info Only•1.100</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-03-24
-
-
 
 </td>
 </tr>
@@ -358,28 +274,20 @@ Info Only
 
 1.100 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.Select`** 
-
-
 
 </td>
 <td valign="top">
@@ -390,21 +298,15 @@ The `sap.m.Select` control has a new `liveChange` event that fires when the user
 
 <sub>Changed•Control•Info Only•1.100</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-03-24
-
-
 
 </td>
 </tr>
@@ -413,28 +315,20 @@ Info Only
 
 1.100 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.comp.smartfield.SmartField`** 
-
-
 
 </td>
 <td valign="top">
@@ -451,21 +345,15 @@ You can format the date in the `sap.ui.core.CustomData` class with `key:“dateF
 
 <sub>Changed•Control•Info Only•1.100</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-03-24
-
-
 
 </td>
 </tr>
@@ -474,28 +362,20 @@ Info Only
 
 1.100 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.comp.smartfilterbar.SmartFilterBar`** 
-
-
 
 </td>
 <td valign="top">
@@ -506,21 +386,15 @@ Control
 
 <sub>Changed•Control•Info Only•1.100</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-03-24
-
-
 
 </td>
 </tr>
@@ -529,28 +403,20 @@ Info Only
 
 1.100 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.integration.widgets.Card`** 
-
-
 
 </td>
 <td valign="top">
@@ -566,21 +432,15 @@ Control
 
 <sub>Changed•Control•Info Only•1.100</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-03-24
-
-
 
 </td>
 </tr>
@@ -589,28 +449,20 @@ Info Only
 
 1.100 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 SAP Fiori Elements 
 
-
-
 </td>
 <td valign="top">
 
 **SAP Fiori elements for OData V2** 
-
-
 
 </td>
 <td valign="top">
@@ -628,21 +480,15 @@ The following changes and new features are available for SAP Fiori elements for 
 
 <sub>Changed•SAP Fiori Elements•Info Only•1.100</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-03-24
-
-
 
 </td>
 </tr>
@@ -651,28 +497,20 @@ Info Only
 
 1.100 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 SAP Fiori Elements 
 
-
-
 </td>
 <td valign="top">
 
 **SAP Fiori elements for OData V4** 
-
-
 
 </td>
 <td valign="top">
@@ -698,21 +536,15 @@ The following changes and new features are available for SAP Fiori elements for 
 
 <sub>Changed•SAP Fiori Elements•Info Only•1.100</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-03-24
-
-
 
 </td>
 </tr>
@@ -720,6 +552,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.118](what-s-new-in-sapui5-1-118-3eecbde.md "With this release SAPUI5 is upgraded from version 1.117 to 1.118.")
 
 [What's New in SAPUI5 1.117](what-s-new-in-sapui5-1-117-029d3b4.md "With this release SAPUI5 is upgraded from version 1.116 to 1.117.")
 

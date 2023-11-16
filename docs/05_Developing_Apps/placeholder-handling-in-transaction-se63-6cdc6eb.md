@@ -11,21 +11,15 @@ Source texts with placeholders are transformed when displayed in transaction `SE
 
 Type
 
-
-
 </th>
 <th valign="top">
 
 What is it?
 
-
-
 </th>
 <th valign="top">
 
 How is it Displayed in Transaction SE63?
-
-
 
 </th>
 </tr>
@@ -34,16 +28,12 @@ How is it Displayed in Transaction SE63?
 
 Placeholder
 
-
-
 </td>
 <td valign="top">
 
 Number in braces
 
 Example: `{0}`
-
-
 
 </td>
 <td valign="top">
@@ -52,16 +42,12 @@ With an additional ampersand
 
 Example: `{&0}`
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
 Escaped placeholder
-
-
 
 </td>
 <td valign="top">
@@ -70,16 +56,12 @@ Placeholder enclosed in apostrophes
 
 Example: `'{0}'`
 
-
-
 </td>
 <td valign="top">
 
 Without apostrophes
 
 Example: `{0}`
-
-
 
 </td>
 </tr>
@@ -97,14 +79,10 @@ When the texts are written back to the database, the placeholders and escaped pl
 > 
 > Source Text
 > 
-> 
-> 
 > </th>
 > <th valign="top">
 > 
 > How is it Displayed in Transaction SE63?
-> 
-> 
 > 
 > </th>
 > </tr>
@@ -113,14 +91,10 @@ When the texts are written back to the database, the placeholders and escaped pl
 > 
 > Mark''s placeholder is used \{0\} times.
 > 
-> 
-> 
 > </td>
 > <td valign="top">
 > 
 > Mark's placeholder is used \{&0\} times.
-> 
-> 
 > 
 > </td>
 > </tr>
@@ -129,14 +103,10 @@ When the texts are written back to the database, the placeholders and escaped pl
 > 
 > Note that '\{0\}' is an escaped placeholder.
 > 
-> 
-> 
 > </td>
 > <td valign="top">
 > 
 > Note that \{0\} is an escaped placeholder.
-> 
-> 
 > 
 > </td>
 > </tr>

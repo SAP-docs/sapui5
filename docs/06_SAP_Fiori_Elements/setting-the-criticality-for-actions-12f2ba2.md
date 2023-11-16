@@ -65,14 +65,10 @@ Two supported values for `Criticality` are:
 
 Value
 
-
-
 </th>
 <th valign="top">
 
 Outcome
-
-
 
 </th>
 </tr>
@@ -81,14 +77,10 @@ Outcome
 
 UI.CriticalityType/Positive or 3
 
-
-
 </td>
 <td valign="top">
 
 Positive/Green status \(Completed/Available/On Track/Acceptable\)
-
-
 
 </td>
 </tr>
@@ -97,14 +89,10 @@ Positive/Green status \(Completed/Available/On Track/Acceptable\)
 
 UI.CriticalityType/Negative or 1
 
-
-
 </td>
 <td valign="top">
 
 Negative/Red status \(Attention/Overload/Alert\)
-
-
 
 </td>
 </tr>

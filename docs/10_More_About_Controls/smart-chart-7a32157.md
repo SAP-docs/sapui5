@@ -48,35 +48,25 @@ The following table shows a selection of the annotations used by the `SmartChart
 
 Element
 
-
-
 </th>
 <th valign="top">
 
 Annotation
-
-
 
 </th>
 <th valign="top">
 
 Value
 
-
-
 </th>
 <th valign="top">
 
 Mandatory
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -85,35 +75,25 @@ Description
 
 Entity type
 
-
-
 </td>
 <td valign="top">
 
 `sap:semantics` 
-
-
 
 </td>
 <td valign="top">
 
 aggregate
 
-
-
 </td>
 <td valign="top">
 
 Yes
 
-
-
 </td>
 <td valign="top">
 
 Enables the aggregation of dimensions and measures.
-
-
 
 </td>
 </tr>
@@ -122,35 +102,25 @@ Enables the aggregation of dimensions and measures.
 
 Dimensions
 
-
-
 </td>
 <td valign="top">
 
 `sap:aggregation-role` 
-
-
 
 </td>
 <td valign="top">
 
 dimension
 
-
-
 </td>
 <td valign="top">
 
 Yes
 
-
-
 </td>
 <td valign="top">
 
 Defines the dimensions.
-
-
 
 </td>
 </tr>
@@ -159,35 +129,25 @@ Defines the dimensions.
 
 Measures
 
-
-
 </td>
 <td valign="top">
 
 `sap:aggregation-role` 
-
-
 
 </td>
 <td valign="top">
 
 measure
 
-
-
 </td>
 <td valign="top">
 
 Yes
 
-
-
 </td>
 <td valign="top">
 
 Defines the measures.
-
-
 
 </td>
 </tr>

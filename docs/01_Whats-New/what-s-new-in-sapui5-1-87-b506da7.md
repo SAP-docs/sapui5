@@ -15,49 +15,35 @@ With this release SAPUI5 is upgraded from version 1.86 to 1.87.
 
 Version
 
-
-
 </th>
 <th valign="top">
 
 Type
-
-
 
 </th>
 <th valign="top">
 
 Category
 
-
-
 </th>
 <th valign="top">
 
 Title
-
-
 
 </th>
 <th valign="top">
 
 Description
 
-
-
 </th>
 <th valign="top">
 
 Action
 
-
-
 </th>
 <th valign="top">
 
 Available as of
-
-
 
 </th>
 </tr>
@@ -66,28 +52,20 @@ Available as of
 
 1.87 
 
-
-
 </td>
 <td valign="top">
 
 Deprecated 
-
-
 
 </td>
 <td valign="top">
 
 Announcement 
 
-
-
 </td>
 <td valign="top">
 
 **End of Support for Microsoft Internet Explorer 11 after SAPUI5 1.87** 
-
-
 
 </td>
 <td valign="top">
@@ -98,21 +76,15 @@ SAPUI5 1.87 is the last version to support Microsoft Internet Explorer 11. For m
 
 <sub>Deprecated•Announcement•Info Only•1.87</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only
 
-
-
 </td>
 <td valign="top">
 
 2021-02-25
-
-
 
 </td>
 </tr>
@@ -121,28 +93,20 @@ Info Only
 
 1.87 
 
-
-
 </td>
 <td valign="top">
 
 New 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.ExpandableText`** 
-
-
 
 </td>
 <td valign="top">
@@ -153,21 +117,15 @@ You can use the control to display long texts, for example, inside a table, list
 
 <sub>New•Control•Info Only•1.87</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-02-25
-
-
 
 </td>
 </tr>
@@ -176,28 +134,20 @@ Info Only
 
 1.87 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **New Type for Spreadsheet Export** 
-
-
 
 </td>
 <td valign="top">
@@ -210,21 +160,15 @@ For more information, see [Spreadsheet Export](../04_Essentials/spreadsheet-expo
 
 <sub>Changed•Feature•Info Only•1.87</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-02-25
-
-
 
 </td>
 </tr>
@@ -233,28 +177,20 @@ Info Only
 
 1.87 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **SAPUI5 OData V4 Model** 
-
-
 
 </td>
 <td valign="top">
@@ -274,21 +210,15 @@ For more information, see [OData V4 Model](../04_Essentials/odata-v4-model-5de13
 
 <sub>Changed•Feature•Info Only•1.87</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-02-25
-
-
 
 </td>
 </tr>
@@ -297,28 +227,20 @@ Info Only
 
 1.87 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.f.Card`** 
-
-
 
 </td>
 <td valign="top">
@@ -329,21 +251,15 @@ We no longer apply default `min-height` in the control, which allows smaller car
 
 <sub>Changed•Control•Info Only•1.87</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-02-25
-
-
 
 </td>
 </tr>
@@ -352,28 +268,20 @@ Info Only
 
 1.87 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.f.GridList`** 
-
-
 
 </td>
 <td valign="top">
@@ -391,21 +299,15 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.f.Gr
 
 <sub>Changed•Control•Info Only•1.87</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-02-25
-
-
 
 </td>
 </tr>
@@ -414,28 +316,20 @@ Info Only
 
 1.87 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.BadgeCustomData`** 
-
-
 
 </td>
 <td valign="top">
@@ -446,21 +340,15 @@ We have added a new `animation` property that enables you to choose the animatio
 
 <sub>Changed•Control•Info Only•1.87</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-02-25
-
-
 
 </td>
 </tr>
@@ -469,28 +357,20 @@ Info Only
 
 1.87 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.Dialog`** 
-
-
 
 </td>
 <td valign="top">
@@ -501,21 +381,15 @@ You can now drag and resize the dialog using the keyboard. To enable this behavi
 
 <sub>Changed•Control•Info Only•1.87</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-02-25
-
-
 
 </td>
 </tr>
@@ -524,28 +398,20 @@ Info Only
 
 1.87 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.Image`** 
-
-
 
 </td>
 <td valign="top">
@@ -556,21 +422,15 @@ With the new `lazyLoading` property, you can now ensure that off-screen images a
 
 <sub>Changed•Control•Info Only•1.87</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-02-25
-
-
 
 </td>
 </tr>
@@ -579,28 +439,20 @@ Info Only
 
 1.87 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.PlanningCalendar`** 
-
-
 
 </td>
 <td valign="top">
@@ -618,21 +470,15 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.Pl
 
 <sub>Changed•Control•Info Only•1.87</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-02-25
-
-
 
 </td>
 </tr>
@@ -641,28 +487,20 @@ Info Only
 
 1.87 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.Text`** 
-
-
 
 </td>
 <td valign="top">
@@ -673,21 +511,15 @@ The new `emptyIndicatorMode` property allows developers to display an empty text
 
 <sub>Changed•Control•Info Only•1.87</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-02-25
-
-
 
 </td>
 </tr>
@@ -696,28 +528,20 @@ Info Only
 
 1.87 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.Title`** 
-
-
 
 </td>
 <td valign="top">
@@ -728,21 +552,15 @@ You can now place a link as a title. To enable this functionality, we have intro
 
 <sub>Changed•Control•Info Only•1.87</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-02-25
-
-
 
 </td>
 </tr>
@@ -751,28 +569,20 @@ Info Only
 
 1.87 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.comp.smartchart.SmartChart`** 
-
-
 
 </td>
 <td valign="top">
@@ -792,21 +602,15 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.c
 
 <sub>Changed•Control•Info Only•1.87</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-02-25
-
-
 
 </td>
 </tr>
@@ -815,28 +619,20 @@ Info Only
 
 1.87 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.comp.smartfield.SmartField`, `sap.ui.comp.smartform.SmartForm`** 
-
-
 
 </td>
 <td valign="top">
@@ -863,21 +659,15 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.c
 
 <sub>Changed•Control•Info Only•1.87</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-02-25
-
-
 
 </td>
 </tr>
@@ -886,28 +676,20 @@ Info Only
 
 1.87 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.comp.smartfield.SmartField`** 
-
-
 
 </td>
 <td valign="top">
@@ -920,21 +702,15 @@ We have extended `sap.m.ComboBox` with our own control `sap.ui.comp.smartfield.C
 
 <sub>Changed•Control•Info Only•1.87</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-02-25
-
-
 
 </td>
 </tr>
@@ -943,28 +719,20 @@ Info Only
 
 1.87 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.comp.smarttable.SmartTable`** 
-
-
 
 </td>
 <td valign="top">
@@ -977,21 +745,15 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.c
 
 <sub>Changed•Control•Info Only•1.87</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-02-25
-
-
 
 </td>
 </tr>
@@ -1000,28 +762,20 @@ Info Only
 
 1.87 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.comp.smartvariants.SmartVariantManagement`** 
-
-
 
 </td>
 <td valign="top">
@@ -1039,21 +793,15 @@ For more information, see the [Sample](https://ui5.sap.com/#/entity/sap.ui.comp.
 
 <sub>Changed•Control•Info Only•1.87</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-02-25
-
-
 
 </td>
 </tr>
@@ -1062,28 +810,20 @@ Info Only
 
 1.87 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.integration.widgets.Card`** 
-
-
 
 </td>
 <td valign="top">
@@ -1105,21 +845,15 @@ Control
 
 <sub>Changed•Control•Info Only•1.87</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-02-25
-
-
 
 </td>
 </tr>
@@ -1128,28 +862,20 @@ Info Only
 
 1.87 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.layout.cssgrid.ResponsiveColumnLayout`** 
-
-
 
 </td>
 <td valign="top">
@@ -1160,21 +886,15 @@ We have enhanced the layout with higher density of responsive breakpoints, provi
 
 <sub>Changed•Control•Info Only•1.87</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-02-25
-
-
 
 </td>
 </tr>
@@ -1183,28 +903,20 @@ Info Only
 
 1.87 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 SAP Fiori Elements 
 
-
-
 </td>
 <td valign="top">
 
 **SAP Fiori elements for OData V2** 
-
-
 
 </td>
 <td valign="top">
@@ -1226,21 +938,15 @@ The following changes and new features are available for SAP Fiori elements for 
 
 <sub>Changed•SAP Fiori Elements•Info Only•1.87</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-02-25
-
-
 
 </td>
 </tr>
@@ -1249,28 +955,20 @@ Info Only
 
 1.87 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 SAP Fiori Elements 
 
-
-
 </td>
 <td valign="top">
 
 **SAP Fiori elements for OData V4** 
-
-
 
 </td>
 <td valign="top">
@@ -1300,21 +998,15 @@ The following changes and new features are available for SAP Fiori elements for 
 
 <sub>Changed•SAP Fiori Elements•Info Only•1.87</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-02-25
-
-
 
 </td>
 </tr>
@@ -1323,28 +1015,20 @@ Info Only
 
 1.87 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **Demo Kit HTML Title** 
-
-
 
 </td>
 <td valign="top">
@@ -1355,21 +1039,15 @@ We’ve improved the HTML title tag of the Demo Kit app to contain more informat
 
 <sub>Changed•Feature•Info Only•1.87</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2021-02-25
-
-
 
 </td>
 </tr>
@@ -1377,6 +1055,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.118](what-s-new-in-sapui5-1-118-3eecbde.md "With this release SAPUI5 is upgraded from version 1.117 to 1.118.")
 
 [What's New in SAPUI5 1.117](what-s-new-in-sapui5-1-117-029d3b4.md "With this release SAPUI5 is upgraded from version 1.116 to 1.117.")
 

@@ -10,9 +10,9 @@ The editing status reflects the state of the object or entry in terms of the pro
 
 ## Editing Status for Table Items
 
-The list report allows users to view the editing status of the objects displayed. The editing status is calculated from the draft administrative data that is added in the back end.
+End users can view the editing status of the objects displayed on the list report. In a list report with responsive tables, the editing status is shown in the key column. In a list report with grid tables, the editing status is shown in a separate column. The editing status is calculated from the draft administrative data that is added in the back end.
 
-**Draft Administrative Data: Visualization**
+**Draft Administrative Data: Visualization in List Report Page with Responsive Table**
 
 
 <table>
@@ -21,14 +21,10 @@ The list report allows users to view the editing status of the objects displayed
 
 Editing Status
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -37,14 +33,10 @@ Description
 
 ![](images/ListReport_Edit_Draft_4e387a1.png)
 
-
-
 </td>
 <td valign="top">
 
 Draft: my own draft
-
-
 
 </td>
 </tr>
@@ -53,14 +45,10 @@ Draft: my own draft
 
 ![](images/ListReport_Edit_Active_3bbd126.png)
 
-
-
 </td>
 <td valign="top">
 
 Active version
-
-
 
 </td>
 </tr>
@@ -69,14 +57,10 @@ Active version
 
 ![](images/ListReport_Edit_Unsaved_8916c63.jpg)
 
-
-
 </td>
 <td valign="top">
 
 Active version with draft created by another user; no longer locked
-
-
 
 </td>
 </tr>
@@ -85,14 +69,10 @@ Active version with draft created by another user; no longer locked
 
 ![](images/ListReport_Edit_Locked_bfd9208.jpg)
 
-
-
 </td>
 <td valign="top">
 
 Active version with draft created by another user; locked
-
-
 
 </td>
 </tr>
@@ -104,9 +84,9 @@ Active version with draft created by another user; locked
 
 ## Access to Administrative Data
 
-For the statuses *Unsaved Changes by Another User* and *Locked by Another User*, the name of the user who last changed the object is visible directly in the line item in the list report \(see above\). Note that if the user's full name is not available in the master data in the back-end system, only the technical user name is displayed. If the technical name is also not available, the message then indicates that the unsaved changes or the lock on the object belongs to "another user".
+For the statuses *Unsaved Changes by Another User* and *Locked by Another User*, the name of the user who last changed the object is visible directly in the line item in the list report. Note that if the user's full name isn't available in the master data in the back-end system, only the technical user name is displayed. If the technical name is also not available, the message then indicates that the unsaved changes or the lock on the object belongs to "another user".
 
-In addition, for the statuses *Own Draft*, *Unsaved Changes by Another User*, and *Locked by Another User*, a link accesses a popover to allow you to view the user who last changed the object and the time of the change. Note that if the user's full name is not available in the master data in the back-end system, only the technical user name is displayed.
+In addition, for the statuses *Own Draft*, *Unsaved Changes by Another User*, and *Locked by Another User*, a link accesses a popover to allow you to view the user who last changed the object and the time of the change. Note that if the user's full name isn't available in the master data in the back-end system, only the technical user name is displayed.
 
 
 
@@ -118,23 +98,19 @@ A static filter attribute is available for all applications, which is added to t
 
 The drop-down values are as follows:
 
-**Drop-Down Values**
+**Dropdown Values**
 
 
 <table>
 <tr>
 <th valign="top">
 
-Drop-Down Value
-
-
+Dropdown Value
 
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -143,14 +119,10 @@ Description
 
 *All* 
 
-
-
 </td>
 <td valign="top">
 
 Displays all entities
-
-
 
 </td>
 </tr>
@@ -159,14 +131,10 @@ Displays all entities
 
 *Own Draft* 
 
-
-
 </td>
 <td valign="top">
 
 Displays a user’s own draft only
-
-
 
 </td>
 </tr>
@@ -175,14 +143,10 @@ Displays a user’s own draft only
 
 *Locked by Another User* 
 
-
-
 </td>
 <td valign="top">
 
 Displays all entities that are currently in progress by someone
-
-
 
 </td>
 </tr>
@@ -191,14 +155,10 @@ Displays all entities that are currently in progress by someone
 
 *Unsaved Changes by Another User* 
 
-
-
 </td>
 <td valign="top">
 
 Displays all entities with unsaved changes \(lock expired, draft of someone is still available\)
-
-
 
 </td>
 </tr>
@@ -207,14 +167,10 @@ Displays all entities with unsaved changes \(lock expired, draft of someone is s
 
 *Unchanged* 
 
-
-
 </td>
 <td valign="top">
 
 Displays all entities that have no draft
-
-
 
 </td>
 </tr>

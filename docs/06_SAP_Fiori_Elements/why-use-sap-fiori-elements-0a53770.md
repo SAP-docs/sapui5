@@ -13,8 +13,6 @@ Here's why – in a nutshell.
 
 ![](images/StopWatch_f6dd642.png)
 
-
-
 </td>
 <td valign="top">
 
@@ -33,8 +31,6 @@ Here's why – in a nutshell.
 
 ![](images/Data_Consistency_ba4b763.png)
 
-
-
 </td>
 <td valign="top">
 
@@ -52,8 +48,6 @@ Here's why – in a nutshell.
 <td valign="top">
 
 ![](images/GrothUpArrows_5d9c969.png)
-
-
 
 </td>
 <td valign="top">

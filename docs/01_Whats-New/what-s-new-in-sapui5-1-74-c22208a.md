@@ -15,49 +15,35 @@ With this release SAPUI5 is upgraded from version 1.73 to 1.74.
 
 Version
 
-
-
 </th>
 <th valign="top">
 
 Type
-
-
 
 </th>
 <th valign="top">
 
 Category
 
-
-
 </th>
 <th valign="top">
 
 Title
-
-
 
 </th>
 <th valign="top">
 
 Description
 
-
-
 </th>
 <th valign="top">
 
 Action
 
-
-
 </th>
 <th valign="top">
 
 Available as of
-
-
 
 </th>
 </tr>
@@ -66,28 +52,20 @@ Available as of
 
 1.74 
 
-
-
 </td>
 <td valign="top">
 
 New 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **Test Recorder** 
-
-
 
 </td>
 <td valign="top">
@@ -102,21 +80,15 @@ For more information, see [Test Recorder](../04_Essentials/test-recorder-2535ef9
 
 <sub>New•Feature•Info Only•1.74</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only
 
-
-
 </td>
 <td valign="top">
 
 2020-01-30
-
-
 
 </td>
 </tr>
@@ -125,28 +97,20 @@ Info Only
 
 1.74 
 
-
-
 </td>
 <td valign="top">
 
 New 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **Rule Builder Control** 
-
-
 
 </td>
 <td valign="top">
@@ -157,21 +121,15 @@ You can model a text rule to perform an append operation on data objects or attr
 
 <sub>New•Feature•Info Only•1.74</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-01-30
-
-
 
 </td>
 </tr>
@@ -180,28 +138,20 @@ Info Only
 
 1.74 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **Card Explorer** 
-
-
 
 </td>
 <td valign="top">
@@ -212,21 +162,15 @@ We have enhanced the functionality to download samples from the Card Explorer, a
 
 <sub>Changed•Feature•Info Only•1.74</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-01-30
-
-
 
 </td>
 </tr>
@@ -235,28 +179,20 @@ Info Only
 
 1.74 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **Navigation in Nested Components** 
-
-
 
 </td>
 <td valign="top">
@@ -267,21 +203,15 @@ In recent releases, the capabilities to [Navigate with Nested Components](../04_
 
 <sub>Changed•Feature•Info Only•1.74</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-01-30
-
-
 
 </td>
 </tr>
@@ -290,28 +220,20 @@ Info Only
 
 1.74 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **Negative Predefined CSS Margin Classes** 
-
-
 
 </td>
 <td valign="top">
@@ -333,21 +255,15 @@ For more information, see [Using Predefined CSS Margin Classes](../04_Essentials
 
 <sub>Changed•Feature•Info Only•1.74</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-01-30
-
-
 
 </td>
 </tr>
@@ -356,28 +272,20 @@ Info Only
 
 1.74 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **Responsive Padding Enablement** 
-
-
 
 </td>
 <td valign="top">
@@ -388,21 +296,15 @@ We've introduced responsive paddings to the `sap.m.IconTabBar`, `sap.m.ObjectHea
 
 <sub>Changed•Feature•Info Only•1.74</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-01-30
-
-
 
 </td>
 </tr>
@@ -411,28 +313,20 @@ Info Only
 
 1.74 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **SAPUI5 OData V4 Model** 
-
-
 
 </td>
 <td valign="top">
@@ -456,21 +350,15 @@ For more information, see [OData V4 Model](../04_Essentials/odata-v4-model-5de13
 
 <sub>Changed•Feature•Info Only•1.74</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-01-30
-
-
 
 </td>
 </tr>
@@ -479,28 +367,20 @@ Info Only
 
 1.74 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.Avatar`** 
-
-
 
 </td>
 <td valign="top">
@@ -511,21 +391,15 @@ We've added *remove* and *reveal* actions in the `Avatar` design-time metadata. 
 
 <sub>Changed•Control•Info Only•1.74</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-01-30
-
-
 
 </td>
 </tr>
@@ -534,28 +408,20 @@ Info Only
 
 1.74 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.ColorPalette`** 
-
-
 
 </td>
 <td valign="top">
@@ -566,21 +432,15 @@ We have introduced a *Recent Colors* section, showing the last 5 recently used c
 
 <sub>Changed•Control•Info Only•1.74</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-01-30
-
-
 
 </td>
 </tr>
@@ -589,28 +449,20 @@ Info Only
 
 1.74 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.DateRangeSelection`** 
-
-
 
 </td>
 <td valign="top">
@@ -621,21 +473,15 @@ We have introduced the ability to select month and year ranges. This improves th
 
 <sub>Changed•Control•Info Only•1.74</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-01-30
-
-
 
 </td>
 </tr>
@@ -644,28 +490,20 @@ Info Only
 
 1.74 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.List`, `sap.m.Table`, `sap.m.Tree`** 
-
-
 
 </td>
 <td valign="top">
@@ -676,21 +514,15 @@ The busy indicator is now displayed in the center of the visible area of the UIs
 
 <sub>Changed•Control•Info Only•1.74</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-01-30
-
-
 
 </td>
 </tr>
@@ -699,28 +531,20 @@ Info Only
 
 1.74 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.NavContainer`** 
-
-
 
 </td>
 <td valign="top">
@@ -731,21 +555,15 @@ In version 1.69, the default value for the `defaultTransitionName` property was 
 
 <sub>Changed•Control•Info Only•1.74</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-01-30
-
-
 
 </td>
 </tr>
@@ -754,28 +572,20 @@ Info Only
 
 1.74 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.NotificationListItem`** 
-
-
 
 </td>
 <td valign="top">
@@ -786,21 +596,15 @@ The avatar background color can now be managed by the application developer usin
 
 <sub>Changed•Control•Info Only•1.74</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-01-30
-
-
 
 </td>
 </tr>
@@ -809,28 +613,20 @@ Info Only
 
 1.74 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.plugins.DataStateIndicator`** 
-
-
 
 </td>
 <td valign="top">
@@ -841,21 +637,15 @@ This plugin for the table controls \(`sap.m.List, sap.m.Table, sap.ui.table.Tabl
 
 <sub>Changed•Control•Info Only•1.74</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-01-30
-
-
 
 </td>
 </tr>
@@ -864,28 +654,20 @@ Info Only
 
 1.74 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.Select`** 
-
-
 
 </td>
 <td valign="top">
@@ -896,21 +678,15 @@ With the new `required` property, you can now indicate whether user input is req
 
 <sub>Changed•Control•Info Only•1.74</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-01-30
-
-
 
 </td>
 </tr>
@@ -919,28 +695,20 @@ Info Only
 
 1.74 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.StandardListItem`** 
-
-
 
 </td>
 <td valign="top">
@@ -951,21 +719,15 @@ The new `infoStateInverted` property changes the rendering behavior of the infor
 
 <sub>Changed•Control•Info Only•1.74</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-01-30
-
-
 
 </td>
 </tr>
@@ -974,28 +736,20 @@ Info Only
 
 1.74 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.Table`** 
-
-
 
 </td>
 <td valign="top">
@@ -1006,21 +760,15 @@ A more comprehensive message text is now shown if no data is available because a
 
 <sub>Changed•Control•Info Only•1.74</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-01-30
-
-
 
 </td>
 </tr>
@@ -1029,28 +777,20 @@ Info Only
 
 1.74 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.ViewSettingsDialog`** 
-
-
 
 </td>
 <td valign="top">
@@ -1061,21 +801,15 @@ We have introduced a new button to display only the selected items in the filter
 
 <sub>Changed•Control•Info Only•1.74</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-01-30
-
-
 
 </td>
 </tr>
@@ -1084,28 +818,20 @@ Info Only
 
 1.74 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.Wizard`** 
-
-
 
 </td>
 <td valign="top">
@@ -1116,21 +842,15 @@ We have enhanced the `sap.m.Wizard` control for better integration in the `sap.f
 
 <sub>Changed•Control•Info Only•1.74</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-01-30
-
-
 
 </td>
 </tr>
@@ -1139,28 +859,20 @@ Info Only
 
 1.74 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.tnt.InfoLabel`** 
-
-
 
 </td>
 <td valign="top">
@@ -1173,21 +885,15 @@ We have introduced the option to add an icon to the `sap.tnt.InfoLabel` content.
 
 <sub>Changed•Control•Info Only•1.74</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-01-30
-
-
 
 </td>
 </tr>
@@ -1196,28 +902,20 @@ Info Only
 
 1.74 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.comp.smartfield.SmartField`, `sap.ui.comp.smartfilterbar.SmartFilterBar`** 
-
-
 
 </td>
 <td valign="top">
@@ -1228,21 +926,15 @@ We've introduced support for fiscal dates. The service metadata property must be
 
 <sub>Changed•Control•Info Only•1.74</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-01-30
-
-
 
 </td>
 </tr>
@@ -1251,28 +943,20 @@ Info Only
 
 1.74 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.comp.smartfilterbar.SmartFilterBar`, `sap.ui.comp.smarttable.SmartTable`** 
-
-
 
 </td>
 <td valign="top">
@@ -1283,21 +967,15 @@ We've updated the available exclude operators to match the include operators for
 
 <sub>Changed•Control•Info Only•1.74</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-01-30
-
-
 
 </td>
 </tr>
@@ -1306,28 +984,20 @@ Info Only
 
 1.74 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.comp.valuehelpdialog.ValueHelpDialog`** 
-
-
 
 </td>
 <td valign="top">
@@ -1338,21 +1008,15 @@ We've improved the behavior of the `ValueHelpDialog` basic search for `SmartFilt
 
 <sub>Changed•Control•Info Only•1.74</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-01-30
-
-
 
 </td>
 </tr>
@@ -1361,28 +1025,20 @@ Info Only
 
 1.74 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.export.Spreadsheet`** 
-
-
 
 </td>
 <td valign="top">
@@ -1393,21 +1049,15 @@ This class has been further improved to facilitate the export functions. The cla
 
 <sub>Changed•Control•Info Only•1.74</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-01-30
-
-
 
 </td>
 </tr>
@@ -1416,28 +1066,20 @@ Info Only
 
 1.74 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.integration.widgets.Card`** 
-
-
 
 </td>
 <td valign="top">
@@ -1462,21 +1104,15 @@ Control
 
 <sub>Changed•Control•Info Only•1.74</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-01-30
-
-
 
 </td>
 </tr>
@@ -1485,28 +1121,20 @@ Info Only
 
 1.74 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.uxap.ObjectPageLayout`** 
-
-
 
 </td>
 <td valign="top">
@@ -1517,21 +1145,15 @@ You can now move the corresponding section numbers that are displayed in the `An
 
 <sub>Changed•Control•Info Only•1.74</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-01-30
-
-
 
 </td>
 </tr>
@@ -1540,28 +1162,20 @@ Info Only
 
 1.74 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 SAP Fiori Elements 
 
-
-
 </td>
 <td valign="top">
 
 **SAP Fiori Elements** 
-
-
 
 </td>
 <td valign="top">
@@ -1597,21 +1211,15 @@ SAP Fiori Elements
 
 <sub>Changed•SAP Fiori Elements•Info Only•1.74</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-01-30
-
-
 
 </td>
 </tr>
@@ -1620,28 +1228,20 @@ Info Only
 
 1.74 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 User Documentation 
 
-
-
 </td>
 <td valign="top">
 
 **Performance Checklist** 
-
-
 
 </td>
 <td valign="top">
@@ -1652,21 +1252,15 @@ Ensuring that your SAPUI5 apps run fast is an important topic in application dev
 
 <sub>Changed•User Documentation•Info Only•1.74</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-01-30
-
-
 
 </td>
 </tr>
@@ -1674,6 +1268,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.118](what-s-new-in-sapui5-1-118-3eecbde.md "With this release SAPUI5 is upgraded from version 1.117 to 1.118.")
 
 [What's New in SAPUI5 1.117](what-s-new-in-sapui5-1-117-029d3b4.md "With this release SAPUI5 is upgraded from version 1.116 to 1.117.")
 

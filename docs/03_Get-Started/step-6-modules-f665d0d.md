@@ -8,11 +8,7 @@ In SAPUI5, resources are often referred to as modules. In this step, we replace 
 
 ## Preview
 
-  
-  
-**A message toast displays the "Hello World" message**
-
-![](images/UI5_Walkthrough_Step_06_2f629a9.png "A message toast displays the "Hello World" message")
+![A message toast displays the Hello World message](images/UI5_Walkthrough_Step_06_2f629a9.png)
 
 
 

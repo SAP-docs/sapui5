@@ -14,7 +14,7 @@ In this step, we will use the SAPUI5 navigation features to load and show a sepa
   
 **A second page is added to display the invoice**
 
-![](images/UI5_Walkthrough_Step_30_94152a5.png "A second page is added to display the invoice")
+![A page consisting of Walkthrough - Details header and Invoice as body text](images/UI5_Walkthrough_Step_30_94152a5.png "A second page is added to display the invoice")
 
 
 

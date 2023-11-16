@@ -469,14 +469,10 @@ You can select chart data points and segments in a chart. These selections influ
 
 The Chart Type…
 
-
-
 </th>
 <th valign="top">
 
 Displays…
-
-
 
 </th>
 </tr>
@@ -485,14 +481,10 @@ Displays…
 
 Bar
 
-
-
 </td>
 <td valign="top">
 
 Top or bottom three records
-
-
 
 </td>
 </tr>
@@ -501,14 +493,10 @@ Top or bottom three records
 
 Line
 
-
-
 </td>
 <td valign="top">
 
 First or last six data points
-
-
 
 </td>
 </tr>
@@ -519,14 +507,10 @@ Donut
 
 \(currently only supported in SAP Fiori elements for OData V2\)
 
-
-
 </td>
 <td valign="top">
 
 Top or bottom two records
-
-
 
 </td>
 </tr>
@@ -595,14 +579,10 @@ You can change the formatting of the text that appears on the vual filter chart 
 
 Text Arrangement Type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -611,14 +591,10 @@ Description
 
 TextFirst
 
-
-
 </td>
 <td valign="top">
 
 Use the visual filter to combine measures or item counts with filter values. The ChartDefault type that has the sap:text first, followed by the ID in brackets, for example, "Notebook \(001\)"
-
-
 
 </td>
 </tr>
@@ -627,14 +603,10 @@ Use the visual filter to combine measures or item counts with filter values. The
 
 TextLast
 
-
-
 </td>
 <td valign="top">
 
 ID followed by the sap:text in brackets, for example, "001 \(Notebook\)".
-
-
 
 </td>
 </tr>
@@ -643,14 +615,10 @@ ID followed by the sap:text in brackets, for example, "001 \(Notebook\)".
 
 TextOnly
 
-
-
 </td>
 <td valign="top">
 
 Shows only the sap:text, for example, "Notebook"
-
-
 
 </td>
 </tr>
@@ -659,14 +627,10 @@ Shows only the sap:text, for example, "Notebook"
 
 TextSeparate
 
-
-
 </td>
 <td valign="top">
 
 Shows only the ID, for example, "002"
-
-
 
 </td>
 </tr>
@@ -757,14 +721,10 @@ The IN/OUT parameter values take precedence over the `SelectionVariant` values f
 
 Scenario
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -774,8 +734,6 @@ Description
 **Scenario 1**: Annotation configuration
 
 Chart dimension = “Status”, Select Option in SV = \[\(“Status”, Values = “In Progress”, “New”\), \(“Project”, Values=”List Report”\)\]
-
-
 
 </td>
 <td valign="top">
@@ -795,8 +753,6 @@ Chart dimension = “Status”, Select Option in SV = \[\(“Status”, Values =
 **Scenario 2**: Overriding annotation configuration from filter bar
 
 Change the project value from `List Report` to `Analytical List Page` on the filter bar.
-
-
 
 </td>
 <td valign="top">
@@ -823,14 +779,10 @@ In SAP Fiori elements for OData V2, you can render the visual filter with a para
 
 Scenario
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -841,14 +793,10 @@ Scenario 1: Annotation configuration
 
 Parameter in SelectionVariant = \[\(“P\_DisplayCurrency”, Value=”USD”\)\]
 
-
-
 </td>
 <td valign="top">
 
 The chart renders records with the currency unit USD.
-
-
 
 </td>
 </tr>
@@ -859,14 +807,10 @@ Scenario 2: Overriding annotation configurations on the filter bar
 
 Change USD to EUR on the filter bar
 
-
-
 </td>
 <td valign="top">
 
 If you specify EUR as a value for `P_DisplayCurrency` in the filter bar, the chart re-renders with records that have the currency unit EUR
-
-
 
 </td>
 </tr>
@@ -926,14 +870,10 @@ If the use case requires you to show a dimension with different measures, consid
 
 Do
 
-
-
 </th>
 <th valign="top">
 
 Don't
-
-
 
 </th>
 </tr>
@@ -942,14 +882,10 @@ Don't
 
 ![](images/ALP_VFB_LineChartDO_ace802e.jpg)
 
-
-
 </td>
 <td valign="top">
 
 ![](images/ALP_VFB_LineChartDONT_f95c7de.jpg)
-
-
 
 </td>
 </tr>
@@ -958,14 +894,10 @@ Don't
 
 **For each dimension, display exactly one representation in the visual filter bar.**
 
-
-
 </td>
 <td valign="top">
 
 **Do not use the same filter dimension with different measures.**
-
-
 
 </td>
 </tr>

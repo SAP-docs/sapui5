@@ -144,64 +144,46 @@ To control the start the starting point of numbers which should be displyed in c
     <th valign="top">
 
     Number
-
-
     
     </th>
     <th valign="top">
 
     `FLOOR` 
-
-
     
     </th>
     <th valign="top">
 
     `CEILING` 
-
-
     
     </th>
     <th valign="top">
 
     `TOWARDS_ZERO` 
-
-
     
     </th>
     <th valign="top">
 
     `AWAY_FROM_ZERO` 
-
-
     
     </th>
     <th valign="top">
 
     `HALF_FLOOR` 
-
-
     
     </th>
     <th valign="top">
 
     `HALF_CEILING` 
-
-
     
     </th>
     <th valign="top">
 
     `HALF_TOWARDS_ZERO` 
-
-
     
     </th>
     <th valign="top">
 
     `HALF_AWAY_FROM_ZERO` 
-
-
     
     </th>
     </tr>
@@ -209,64 +191,46 @@ To control the start the starting point of numbers which should be displyed in c
     <td valign="top">
     
     2.21
-
-
     
     </td>
     <td valign="top">
     
     2.2
-
-
     
     </td>
     <td valign="top">
     
     2.3
-
-
     
     </td>
     <td valign="top">
     
     2.2
-
-
     
     </td>
     <td valign="top">
     
     2.3
-
-
     
     </td>
     <td valign="top">
     
     2.2
-
-
     
     </td>
     <td valign="top">
     
     2.2
-
-
     
     </td>
     <td valign="top">
     
     2.2
-
-
     
     </td>
     <td valign="top">
     
     2.2
-
-
     
     </td>
     </tr>
@@ -274,64 +238,46 @@ To control the start the starting point of numbers which should be displyed in c
     <td valign="top">
     
     2.25
-
-
     
     </td>
     <td valign="top">
     
     2.2
-
-
     
     </td>
     <td valign="top">
     
     2.3
-
-
     
     </td>
     <td valign="top">
     
     2.2
-
-
     
     </td>
     <td valign="top">
     
     2.3
-
-
     
     </td>
     <td valign="top">
     
     2.2
-
-
     
     </td>
     <td valign="top">
     
     2.3
-
-
     
     </td>
     <td valign="top">
     
     2.2
-
-
     
     </td>
     <td valign="top">
     
     2.3
-
-
     
     </td>
     </tr>
@@ -339,64 +285,46 @@ To control the start the starting point of numbers which should be displyed in c
     <td valign="top">
     
     2.29
-
-
     
     </td>
     <td valign="top">
     
     2.2
-
-
     
     </td>
     <td valign="top">
     
     2.3
-
-
     
     </td>
     <td valign="top">
     
     2.2
-
-
     
     </td>
     <td valign="top">
     
     2.3
-
-
     
     </td>
     <td valign="top">
     
     2.3.
-
-
     
     </td>
     <td valign="top">
     
     2.3
-
-
     
     </td>
     <td valign="top">
     
     2.3
-
-
     
     </td>
     <td valign="top">
     
     2.3
-
-
     
     </td>
     </tr>
@@ -404,64 +332,46 @@ To control the start the starting point of numbers which should be displyed in c
     <td valign="top">
     
     \-2.21
-
-
     
     </td>
     <td valign="top">
     
     \-2.3
-
-
     
     </td>
     <td valign="top">
     
     \-2.2
-
-
     
     </td>
     <td valign="top">
     
     \-2.2
-
-
     
     </td>
     <td valign="top">
     
     \-2.2
-
-
     
     </td>
     <td valign="top">
     
     \-2.2
-
-
     
     </td>
     <td valign="top">
     
     \-2.2
-
-
     
     </td>
     <td valign="top">
     
     \-2.2
-
-
     
     </td>
     <td valign="top">
     
     \-2.2
-
-
     
     </td>
     </tr>
@@ -469,64 +379,46 @@ To control the start the starting point of numbers which should be displyed in c
     <td valign="top">
     
     \-2.25
-
-
     
     </td>
     <td valign="top">
     
     \-2.3
-
-
     
     </td>
     <td valign="top">
     
     \-2.2
-
-
     
     </td>
     <td valign="top">
     
     \-2.2
-
-
     
     </td>
     <td valign="top">
     
     \-2.3
-
-
     
     </td>
     <td valign="top">
     
     \-2.3
-
-
     
     </td>
     <td valign="top">
     
     \-2.2
-
-
     
     </td>
     <td valign="top">
     
     \-2.2
-
-
     
     </td>
     <td valign="top">
     
     \-2.3
-
-
     
     </td>
     </tr>
@@ -534,64 +426,46 @@ To control the start the starting point of numbers which should be displyed in c
     <td valign="top">
     
     \-2.29
-
-
     
     </td>
     <td valign="top">
     
     \-2.3
-
-
     
     </td>
     <td valign="top">
     
     \-2.2
-
-
     
     </td>
     <td valign="top">
     
     \-2.2
-
-
     
     </td>
     <td valign="top">
     
     \-2.3
-
-
     
     </td>
     <td valign="top">
     
     \-2.3
-
-
     
     </td>
     <td valign="top">
     
     \-2.3
-
-
     
     </td>
     <td valign="top">
     
     \-2.3
-
-
     
     </td>
     <td valign="top">
     
     \-2.3
-
-
     
     </td>
     </tr>

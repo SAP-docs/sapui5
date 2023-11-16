@@ -12,7 +12,7 @@ The list of invoices is already looking nice, but what is an invoice without a p
   
 **The list of invoices with prices and number units**
 
-![](images/UI5_Walkthrough_Step_20_dc9e919.png "The list of invoices with prices and number units")
+![The graphic has an explanatory text.](images/UI5_Walkthrough_Step_20_dc9e919.png "The list of invoices with prices and number units")
 
 
 

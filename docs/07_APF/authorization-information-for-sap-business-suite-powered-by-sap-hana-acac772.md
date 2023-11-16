@@ -13,14 +13,10 @@ In particular, for APF runtime and design time, analytic privileges are needed f
 
 **Runtime**
 
-
-
 </td>
 <td valign="top">
 
 `sap.hba.r.apf.core.v/AnalysisPathQuery`
-
-
 
 </td>
 </tr>
@@ -29,8 +25,6 @@ In particular, for APF runtime and design time, analytic privileges are needed f
 
 `sap.hba.r.apf.core.v/AnalysisPathCountQuery`
 
-
-
 </td>
 </tr>
 <tr>
@@ -38,16 +32,12 @@ In particular, for APF runtime and design time, analytic privileges are needed f
 
 `sap.hba.r.apf.core.v/AnalyticalConfigurationQuery`
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
 `sap.hba.r.apf.core.v/TextElementQuery`
-
-
 
 </td>
 </tr>
@@ -56,14 +46,10 @@ In particular, for APF runtime and design time, analytic privileges are needed f
 
 **Design Time**
 
-
-
 </td>
 <td valign="top">
 
 `sap.hba.r.apf.core.v/ApplicationQuery`
-
-
 
 </td>
 </tr>
@@ -72,16 +58,12 @@ In particular, for APF runtime and design time, analytic privileges are needed f
 
 `sap.hba.r.apf.core.v/AnalyticalConfigurationQuery`
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
 `sap.hba.r.apf.core.v/TextElementQuery`
-
-
 
 </td>
 </tr>

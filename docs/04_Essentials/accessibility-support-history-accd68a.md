@@ -15,14 +15,10 @@ The following table shows the availability of the different accessibility featur
 
 Feature
 
-
-
 </th>
 <th valign="top">
 
 Available as of version
-
-
 
 </th>
 </tr>
@@ -31,14 +27,10 @@ Available as of version
 
 HCW Theme
 
-
-
 </td>
 <td valign="top">
 
 1.46
-
-
 
 </td>
 </tr>
@@ -47,14 +39,10 @@ HCW Theme
 
 Screen Reader Support
 
-
-
 </td>
 <td valign="top">
 
 1.30
-
-
 
 </td>
 </tr>
@@ -63,14 +51,10 @@ Screen Reader Support
 
 Keyboard Handling
 
-
-
 </td>
 <td valign="top">
 
 1.26
-
-
 
 </td>
 </tr>
@@ -79,14 +63,10 @@ Keyboard Handling
 
 HCB Theme
 
-
-
 </td>
 <td valign="top">
 
 1.26
-
-
 
 </td>
 </tr>
@@ -101,14 +81,10 @@ HCB Theme
 
 Enhancements and Updates
 
-
-
 </th>
 <th valign="top">
 
 As of version
-
-
 
 </th>
 </tr>
@@ -119,14 +95,10 @@ Update of the reference test environment.
 
 Latest update with UI5 1.102
 
-
-
 </td>
 <td valign="top">
 
 For the versions, see SAP Note [2564165](https://me.sap.com/notes/2564165).
-
-
 
 </td>
 </tr>
@@ -135,14 +107,10 @@ For the versions, see SAP Note [2564165](https://me.sap.com/notes/2564165).
 
 We have prevented the overwrite of the Windows high contrast setting for all themes when using Chrome and Edge browsers.
 
-
-
 </td>
 <td valign="top">
 
 1.101
-
-
 
 </td>
 </tr>
@@ -151,14 +119,10 @@ We have prevented the overwrite of the Windows high contrast setting for all the
 
 We have enhanced SAPUI5 accessibility support according to the latest WAI-ARIA 1.1 specification
 
-
-
 </td>
 <td valign="top">
 
 1.84
-
-
 
 </td>
 </tr>
@@ -167,14 +131,10 @@ We have enhanced SAPUI5 accessibility support according to the latest WAI-ARIA 1
 
 we have prevented the automatic insertion of role `application` on the body of the SAPUI5 applications. After the change, a mode-based screen reader will start operating in reading mode as its default mode. For more information, please refer to SAP Note [2925884](https://me.sap.com/notes/2925884).
 
-
-
 </td>
 <td valign="top">
 
 1.78
-
-
 
 </td>
 </tr>
@@ -183,14 +143,10 @@ we have prevented the automatic insertion of role `application` on the body of t
 
 SAPUI5 is following the SAP ‘s updated design and development guidelines, as well as the testing procedures and accessibility reporting, that are based on WCAG 2.1 level A and AA.
 
-
-
 </td>
 <td valign="top">
 
 1.75
-
-
 
 </td>
 </tr>

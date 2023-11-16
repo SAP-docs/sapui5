@@ -64,14 +64,10 @@ In addition to mouse and touch gestures, keyboard shortcuts are available for na
 
 Keyboard shortcut
 
-
-
 </th>
 <th valign="top">
 
 Function
-
-
 
 </th>
 </tr>
@@ -80,14 +76,10 @@ Function
 
 [DIRECTIONAL ARROW\]
 
-
-
 </td>
 <td valign="top">
 
 Pan the image.
-
-
 
 </td>
 </tr>
@@ -96,14 +88,10 @@ Pan the image.
 
 [\+\]
 
-
-
 </td>
 <td valign="top">
 
 Zoom into the image.
-
-
 
 </td>
 </tr>
@@ -112,14 +100,10 @@ Zoom into the image.
 
 [\-\]
 
-
-
 </td>
 <td valign="top">
 
 Zoom out of the image.
-
-
 
 </td>
 </tr>

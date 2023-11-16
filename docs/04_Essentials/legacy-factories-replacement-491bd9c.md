@@ -15,14 +15,10 @@ The SAPUI5 framework by default uses synchronous requests internally in several 
 
 Legacy, synchronous API
 
-
-
 </th>
 <th valign="top">
 
 Modern API
-
-
 
 </th>
 </tr>
@@ -30,8 +26,6 @@ Modern API
 <td valign="top" colspan="2">
 
 Declarative App Description
-
-
 
 </td>
 </tr>
@@ -75,8 +69,6 @@ sap.ui.require(['sap/ui/core/Component'], function(Component){
 <td valign="top" colspan="2">
 
 Components - Some API still experimental
-
-
 
 </td>
 </tr>
@@ -203,8 +195,6 @@ sap.ui.require(['sap/ui/core/Component'], function(Component){
 
 i18n texts
 
-
-
 </td>
 </tr>
 <tr>
@@ -248,8 +238,6 @@ sap.ui.require(['sap/base/i18n/ResourceBundle'], function(Resource){
 <td valign="top" colspan="2">
 
 Views
-
-
 
 </td>
 </tr>
@@ -395,8 +383,6 @@ sap.ui.require(['sap/ui/core/mvc/View'], function(View){
 
 Controllers
 
-
-
 </td>
 </tr>
 <tr>
@@ -432,8 +418,6 @@ sap.ui.require(['sap/ui/core/mvc/Controller'], function(Controller){
 
 Extension Points
 
-
-
 </td>
 </tr>
 <tr>
@@ -468,8 +452,6 @@ sap.ui.require(['sap/ui/core/ExtensionPoint'], function(ExtensionPoint){
 <td valign="top" colspan="2">
 
 Fragments
-
-
 
 </td>
 </tr>
@@ -540,8 +522,6 @@ sap.ui.require(['sap/ui/core/Fragment'], function(Fragment){
 <td valign="top" colspan="2">
 
 Version Info
-
-
 
 </td>
 </tr>

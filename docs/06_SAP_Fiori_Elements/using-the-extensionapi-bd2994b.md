@@ -38,14 +38,10 @@ This gets you an object that is specific to the template you are currently enhan
 
 Template
 
-
-
 </th>
 <th valign="top">
 
 Instance
-
-
 
 </th>
 </tr>
@@ -54,14 +50,10 @@ Instance
 
 List Report
 
-
-
 </td>
 <td valign="top">
 
 `sap.suite.ui.generic.template.ListReport.extensionAPI.ExtensionAPI` 
-
-
 
 </td>
 </tr>
@@ -70,14 +62,10 @@ List Report
 
 Object Page
 
-
-
 </td>
 <td valign="top">
 
 `sap.suite.ui.generic.template.ObjectPage.extensionAPI.ExtensionAPI` 
-
-
 
 </td>
 </tr>
@@ -86,14 +74,10 @@ Object Page
 
 Analytical List Page
 
-
-
 </td>
 <td valign="top">
 
 `sap.suite.ui.generic.template.AnalyticalListPage.extensionAPI.ExtensionAPI`
-
-
 
 </td>
 </tr>
@@ -106,8 +90,6 @@ Analytical List Page
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -158,14 +140,10 @@ For more information, see [ExtensionAPI](https://ui5.sap.com/#/api/sap.suite.ui.
 
 Parameter Name
 
-
-
 </th>
 <th valign="top">
 
 Details
-
-
 
 </th>
 </tr>
@@ -174,14 +152,10 @@ Details
 
 `@param {string} sFunctionName` 
 
-
-
 </td>
 <td valign="top">
 
 Name of the function or action
-
-
 
 </td>
 </tr>
@@ -190,14 +164,10 @@ Name of the function or action
 
 `@param {array|sap.ui.model.Context} vContext`
 
-
-
 </td>
 <td valign="top">
 
 Denotes the binding context
-
-
 
 </td>
 </tr>
@@ -206,14 +176,10 @@ Denotes the binding context
 
 `@param {map} [mUrlParameters]`
 
-
-
 </td>
 <td valign="top">
 
 Denotes URL parameters \(name-value pairs\) for the function or action. This is not present in `oSettings` for backward compatibility
-
-
 
 </td>
 </tr>
@@ -222,14 +188,10 @@ Denotes URL parameters \(name-value pairs\) for the function or action. This is 
 
 `@param {object} oSettings`
 
-
-
 </td>
 <td valign="top">
 
 Sets parameters for invoking application controller's `invokeActions` method
-
-
 
 </td>
 </tr>
@@ -238,14 +200,10 @@ Sets parameters for invoking application controller's `invokeActions` method
 
 `@param {boolean} oSettings.bInvocationGroupingChangeSet`
 
-
-
 </td>
 <td valign="top">
 
 Determines whether common or unique changeset is sent in batches
-
-
 
 </td>
 </tr>
@@ -254,14 +212,10 @@ Determines whether common or unique changeset is sent in batches
 
 `@returns {Promise} A <code>Promise</code>`
 
-
-
 </td>
 <td valign="top">
 
 Performs asynchronous execution of the action, resolving the same result as the `<code>Promise</code>`
-
-
 
 </td>
 </tr>
@@ -270,14 +224,10 @@ Performs asynchronous execution of the action, resolving the same result as the 
 
 `@throws {Error}`
 
-
-
 </td>
 <td valign="top">
 
 Throws an error when the OData function import does not exists or the action input parameters are invalid
-
-
 
 </td>
 </tr>
@@ -304,14 +254,10 @@ This gets you an object that is specific to the template you are currently enhan
 
 Template
 
-
-
 </th>
 <th valign="top">
 
 Instance
-
-
 
 </th>
 </tr>
@@ -320,14 +266,10 @@ Instance
 
 List Report
 
-
-
 </td>
 <td valign="top">
 
 `sap.fe.templates.ListReport.ExtensionAPI` 
-
-
 
 </td>
 </tr>
@@ -336,14 +278,10 @@ List Report
 
 Object Page
 
-
-
 </td>
 <td valign="top">
 
 `sap.fe.templates.ObjectPage.ExtensionAPI` 
-
-
 
 </td>
 </tr>

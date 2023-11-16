@@ -23,7 +23,7 @@ Once you've enabled *My Home* in SAP S/4HANA Cloud, the *Add Card to Insights* o
 ![](images/Add_Cards_to_Insights_ALP_401e0b0.png "Add Card to Insights Option in the Chart Toolbar of Analytical List Page")
 
 > ### Note:  
-> -   This feature only supports single view scenarios with responsive tables in list report applications.
+> -   This feature only supports single view scenarios and single entity-multi view scenarios with responsive tables in list report applications.
 > 
 > -   The card creation dialog shows only those columns that are supported for a card. The card supports single-valued `DataField` based columns. It also supports columns with field values displayed as links such as `DataFieldWithUrl`, semantic links, and `DataField` with `QuickViewFacets`. In addition, SAP Fiori elements for OData V4 also supports `DataFieldWithIntentBasedNavigation` and `DataFieldWithNavigationPath` columns.
 > 

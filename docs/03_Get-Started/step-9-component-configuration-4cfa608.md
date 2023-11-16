@@ -14,7 +14,7 @@ In this step, we will encapsulate all UI assets in a component that is independe
   
 **An input field and a description displaying the value of the input field \(No visual changes to last step\)**
 
-![](images/UI5_Walkthrough_Step_09_cac9bcf.png "An input field and a description displaying the value of the input field (No
+![The graphic has an explanatory text](images/UI5_Walkthrough_Step_09_cac9bcf.png "An input field and a description displaying the value of the input field (No
 					visual changes to last step)")
 
 
@@ -27,7 +27,7 @@ You can view and download all files at [Walkthrough - Step 9](https://ui5.sap.co
   
 **Folder Structure for this Step**
 
-![](images/SAPUI5_Walkthrough_Step_09_1e237a3.png "Folder Structure for this Step")
+![The graphic has an explanatory text](images/SAPUI5_Walkthrough_Step_09_1e237a3.png "Folder Structure for this Step")
 
 After this step your project structure will look like the figure above. We will create the `Component.js` file now and modify the related files in the app.
 
@@ -89,7 +89,7 @@ sap.ui.define([
 
          // set i18n model
          const i18nModel = new ResourceModel({
-            bundleName: "sap.ui.demo.walkthrough.i18n.i18n"
+            bundleName: "ui5.walkthrough.i18n.i18n"
          });
          this.setModel(i18nModel, "i18n");
       }

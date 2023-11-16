@@ -15,14 +15,10 @@ To get an overview of how an APF-based app looks and how to use it, you can view
 
 Title
 
-
-
 </th>
 <th valign="top">
 
 Video
-
-
 
 </th>
 </tr>
@@ -31,12 +27,8 @@ Video
 
 UI Overview
 
-
-
 </td>
 <td valign="top">
-
-
 
 
 
@@ -47,12 +39,8 @@ UI Overview
 
 Creating an Analysis Path
 
-
-
 </td>
 <td valign="top">
-
-
 
 
 
@@ -63,12 +51,8 @@ Creating an Analysis Path
 
 Further Options for Analysis Paths
 
-
-
 </td>
 <td valign="top">
-
-
 
 
 
@@ -79,12 +63,8 @@ Further Options for Analysis Paths
 
 Filtering Data in Analysis Paths
 
-
-
 </td>
 <td valign="top">
-
-
 
 
 
@@ -95,12 +75,8 @@ Filtering Data in Analysis Paths
 
 Insight to Action
 
-
-
 </td>
 <td valign="top">
-
-
 
 
 

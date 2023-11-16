@@ -34,14 +34,10 @@ The properties used in the facet filter object denote the following:
 
 Property
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -50,14 +46,10 @@ Description
 
 `description` 
 
-
-
 </td>
 <td valign="top">
 
 Contains the string entered as label so that a specific facet filter object can easily be found in the file.
-
-
 
 </td>
 </tr>
@@ -66,14 +58,10 @@ Contains the string entered as label so that a specific facet filter object can 
 
 `id` 
 
-
-
 </td>
 <td valign="top">
 
 Unique ID of type string
-
-
 
 </td>
 </tr>
@@ -82,8 +70,6 @@ Unique ID of type string
 
 `property` 
 
-
-
 </td>
 <td valign="top">
 
@@ -91,16 +77,12 @@ Filter property for the facet filter.
 
 If `alias` is not defined, `property` is also used as select property for `valueHelpRequest`.
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
 `alias` 
-
-
 
 </td>
 <td valign="top">
@@ -111,8 +93,6 @@ Used if the field name of the property of the facet filter is different in the `
 
 If `property` and `alias` are the same, `alias` can be omitted.
 
-
-
 </td>
 </tr>
 <tr>
@@ -120,14 +100,10 @@ If `property` and `alias` are the same, `alias` can be omitted.
 
 `valueHelpRequest` 
 
-
-
 </td>
 <td valign="top">
 
 ID of the request used for providing a value help to select values in the facet filter.
-
-
 
 </td>
 </tr>
@@ -136,14 +112,10 @@ ID of the request used for providing a value help to select values in the facet 
 
 `filterResolutionRequest` 
 
-
-
 </td>
 <td valign="top">
 
 ID of the request used for resolving a filter into single values for the value help.
-
-
 
 </td>
 </tr>
@@ -152,14 +124,10 @@ ID of the request used for resolving a filter into single values for the value h
 
 `multiSelection` 
 
-
-
 </td>
 <td valign="top">
 
 Defines whether selection of multiple values is possible.
-
-
 
 </td>
 </tr>
@@ -168,14 +136,10 @@ Defines whether selection of multiple values is possible.
 
 `preselectionDefaults` 
 
-
-
 </td>
 <td valign="top">
 
 Array of values that are preselected in the facet filter.
-
-
 
 </td>
 </tr>
@@ -184,14 +148,10 @@ Array of values that are preselected in the facet filter.
 
 `preselectionFunction` 
 
-
-
 </td>
 <td valign="top">
 
 Path to the function used if the preselected values need to be calculated.
-
-
 
 </td>
 </tr>
@@ -200,14 +160,10 @@ Path to the function used if the preselected values need to be calculated.
 
 `label` 
 
-
-
 </td>
 <td valign="top">
 
 Defines the label text.
-
-
 
 </td>
 </tr>

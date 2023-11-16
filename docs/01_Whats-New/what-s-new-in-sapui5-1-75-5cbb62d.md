@@ -15,49 +15,35 @@ With this release SAPUI5 is upgraded from version 1.74 to 1.75.
 
 Version
 
-
-
 </th>
 <th valign="top">
 
 Type
-
-
 
 </th>
 <th valign="top">
 
 Category
 
-
-
 </th>
 <th valign="top">
 
 Title
-
-
 
 </th>
 <th valign="top">
 
 Description
 
-
-
 </th>
 <th valign="top">
 
 Action
 
-
-
 </th>
 <th valign="top">
 
 Available as of
-
-
 
 </th>
 </tr>
@@ -66,28 +52,20 @@ Available as of
 
 1.75 
 
-
-
 </td>
 <td valign="top">
 
 New 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **Accessibility Enhancement** 
-
-
 
 </td>
 <td valign="top">
@@ -98,21 +76,15 @@ SAPUI5 is following the SAP ‘s updated design and development guidelines, as w
 
 <sub>New•Feature•Info Only•1.75</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only
 
-
-
 </td>
 <td valign="top">
 
 2020-02-27
-
-
 
 </td>
 </tr>
@@ -121,28 +93,20 @@ Info Only
 
 1.75 
 
-
-
 </td>
 <td valign="top">
 
 New 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **Browser and Platform Support** 
-
-
 
 </td>
 <td valign="top">
@@ -153,21 +117,15 @@ SAPUI5 now supports the latest Chromium-based version of Microsoft Edge. The nex
 
 <sub>New•Feature•Info Only•1.75</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-02-27
-
-
 
 </td>
 </tr>
@@ -176,28 +134,20 @@ Info Only
 
 1.75 
 
-
-
 </td>
 <td valign="top">
 
 New 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **UI Adaptation: Embedding External Content** 
-
-
 
 </td>
 <td valign="top">
@@ -208,21 +158,15 @@ If you have enabled an app for UI adaptation \(see [SAPUI5 Flexibility: Enable Y
 
 <sub>New•Feature•Info Only•1.75</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-02-27
-
-
 
 </td>
 </tr>
@@ -231,28 +175,20 @@ Info Only
 
 1.75 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **Card Explorer** 
-
-
 
 </td>
 <td valign="top">
@@ -263,21 +199,15 @@ We have introduced a schema validation feature in our samples in the Card Explor
 
 <sub>Changed•Feature•Info Only•1.75</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-02-27
-
-
 
 </td>
 </tr>
@@ -286,28 +216,20 @@ Info Only
 
 1.75 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **Currency Codes** 
-
-
 
 </td>
 <td valign="top">
@@ -320,21 +242,15 @@ If currency symbols are enabled \(formatting option `currencyCode: false`\), the
 
 <sub>Changed•Feature•Info Only•1.75</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-02-27
-
-
 
 </td>
 </tr>
@@ -343,28 +259,20 @@ Info Only
 
 1.75 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **SAPUI5 OData V2 Messages** 
-
-
 
 </td>
 <td valign="top">
@@ -375,21 +283,15 @@ With the new version of the SAPUI5 OData V2 model, the target of server messages
 
 <sub>Changed•Feature•Info Only•1.75</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-02-27
-
-
 
 </td>
 </tr>
@@ -398,28 +300,20 @@ Info Only
 
 1.75 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **SAPUI5 OData V4 Model** 
-
-
 
 </td>
 <td valign="top">
@@ -441,21 +335,15 @@ For more information, see [OData V4 Model](../04_Essentials/odata-v4-model-5de13
 
 <sub>Changed•Feature•Info Only•1.75</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-02-27
-
-
 
 </td>
 </tr>
@@ -464,28 +352,20 @@ Info Only
 
 1.75 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **Title Support in Nested Components** 
-
-
 
 </td>
 <td valign="top">
@@ -500,21 +380,15 @@ For more information, see [Using the title Property in Targets](../04_Essentials
 
 <sub>Changed•Feature•Info Only•1.75</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-02-27
-
-
 
 </td>
 </tr>
@@ -523,28 +397,20 @@ Info Only
 
 1.75 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.InitialPagePattern`** 
-
-
 
 </td>
 <td valign="top">
@@ -555,21 +421,15 @@ We have introduced the initial page floorplan as a Demo Kit sample. The floorpla
 
 <sub>Changed•Control•Info Only•1.75</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-02-27
-
-
 
 </td>
 </tr>
@@ -578,28 +438,20 @@ Info Only
 
 1.75 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.Link`** 
-
-
 
 </td>
 <td valign="top">
@@ -610,21 +462,15 @@ The `text` property can now be changed using UI adaptation at runtime. This enab
 
 <sub>Changed•Control•Info Only•1.75</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-02-27
-
-
 
 </td>
 </tr>
@@ -633,28 +479,20 @@ Info Only
 
 1.75 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.MessageBox`** 
-
-
 
 </td>
 <td valign="top">
@@ -665,21 +503,15 @@ We have introduced a new `emphasizedAction` property. This allows developers to 
 
 <sub>Changed•Control•Info Only•1.75</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-02-27
-
-
 
 </td>
 </tr>
@@ -688,28 +520,20 @@ Info Only
 
 1.75 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.ObjectStatus`** 
-
-
 
 </td>
 <td valign="top">
@@ -720,21 +544,15 @@ We have enhanced the `sap.ui.core.IndicationColor` palette. Three new colors wer
 
 <sub>Changed•Control•Info Only•1.75</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-02-27
-
-
 
 </td>
 </tr>
@@ -743,28 +561,20 @@ Info Only
 
 1.75 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.comp.smartfilterbar.SmartFilterBar`** 
-
-
 
 </td>
 <td valign="top">
@@ -780,21 +590,15 @@ Control
 
 <sub>Changed•Control•Info Only•1.75</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-02-27
-
-
 
 </td>
 </tr>
@@ -803,28 +607,20 @@ Info Only
 
 1.75 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.integration.widgets.Card`** 
-
-
 
 </td>
 <td valign="top">
@@ -842,21 +638,15 @@ For more information, see the [Adaptive Card](https://ui5.sap.com/test-resources
 
 <sub>Changed•Control•Info Only•1.75</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-02-27
-
-
 
 </td>
 </tr>
@@ -865,28 +655,20 @@ Info Only
 
 1.75 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.table.AnalyticalTable`, `sap.ui.table.Table, sap.ui.table.TreeTable`** 
-
-
 
 </td>
 <td valign="top">
@@ -897,21 +679,15 @@ A more comprehensive message text is now shown if no data is available because a
 
 <sub>Changed•Control•Info Only•1.75</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-02-27
-
-
 
 </td>
 </tr>
@@ -920,28 +696,20 @@ Info Only
 
 1.75 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 SAP Fiori Elements 
 
-
-
 </td>
 <td valign="top">
 
 **SAP Fiori Elements** 
-
-
 
 </td>
 <td valign="top">
@@ -969,21 +737,15 @@ SAP Fiori Elements
 
 <sub>Changed•SAP Fiori Elements•Info Only•1.75</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-02-27
-
-
 
 </td>
 </tr>
@@ -992,28 +754,20 @@ Info Only
 
 1.75 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 SAP Fiori Elements 
 
-
-
 </td>
 <td valign="top">
 
 **UX Improvement** 
-
-
 
 </td>
 <td valign="top">
@@ -1031,21 +785,15 @@ SAP Fiori Elements
 
 <sub>Changed•SAP Fiori Elements•Info Only•1.75</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-02-27
-
-
 
 </td>
 </tr>
@@ -1054,28 +802,20 @@ Info Only
 
 1.75 
 
-
-
 </td>
 <td valign="top">
 
 New 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **Demo Kit Improvements** 
-
-
 
 </td>
 <td valign="top">
@@ -1092,21 +832,15 @@ The search highlighting functionality is now also available in the *Documentatio
 
 <sub>New•Feature•Info Only•1.75</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-02-27
-
-
 
 </td>
 </tr>
@@ -1114,6 +848,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.118](what-s-new-in-sapui5-1-118-3eecbde.md "With this release SAPUI5 is upgraded from version 1.117 to 1.118.")
 
 [What's New in SAPUI5 1.117](what-s-new-in-sapui5-1-117-029d3b4.md "With this release SAPUI5 is upgraded from version 1.116 to 1.117.")
 

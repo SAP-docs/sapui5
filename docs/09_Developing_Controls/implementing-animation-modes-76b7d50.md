@@ -43,5 +43,5 @@ The attribute can be selected in CSS with `html[data-sap-ui-animation-mode="<mod
 **Related Information**  
 
 
-[Configuration Options and URL Parameters](../04_Essentials/configuration-options-and-url-parameters-91f2d03.md "The complete list of configuration options available in SAPUI5 can be found in the API Reference under sap.ui.core.Configuration. The following table shows a subset of the available configuration options.")
+[Configuration Options and URL Parameters](../04_Essentials/configuration-options-and-url-parameters-91f2d03.md "The following tables show available configuration options.")
 

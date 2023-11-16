@@ -18,8 +18,3 @@ Hover over the shapes to find out more about some key benefits of SAPUI5. Please
 
 ![](images/Image_Map_Best_Practices_Overview_ba827f7.png)
 
-
-
-> ### Tip:  
-> All demo apps, templates, and tutorials in the SAPUI5 Demo Kit follow these recommendations.
-

@@ -13,14 +13,10 @@ The default value of the `UI.Hidden` annotation is `true`, that is, a feature us
 
 Annotation
 
-
-
 </th>
 <th valign="top">
 
 System Behavior
-
-
 
 </th>
 </tr>
@@ -29,14 +25,10 @@ System Behavior
 
 `Hiding Features Using<Annotation Term="UI.Hidden" Bool="false"/>`
 
-
-
 </td>
 <td valign="top">
 
 The feature is visible
-
-
 
 </td>
 </tr>
@@ -45,14 +37,10 @@ The feature is visible
 
 `<Annotation Term="UI.Hidden" Bool="true"/>`
 
-
-
 </td>
 <td valign="top">
 
 The feature is not visible
-
-
 
 </td>
 </tr>
@@ -60,8 +48,6 @@ The feature is not visible
 <td valign="top">
 
 `<Annotation Term="UI.Hidden" Path="Edit_ac"/>`
-
-
 
 </td>
 <td valign="top">
@@ -80,14 +66,10 @@ The feature is visible if the path evaluates to `false` and is not visible if th
 
 `<Annotation Term="UI.Hidden" />` 
 
-
-
 </td>
 <td valign="top">
 
 The default value is `true` so the feature will not be visible
-
-
 
 </td>
 </tr>

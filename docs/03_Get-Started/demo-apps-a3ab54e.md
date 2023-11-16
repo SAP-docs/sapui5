@@ -30,28 +30,20 @@ The following tables give an overview of what each demo app shows.
 
 Demo App
 
-
-
 </th>
 <th valign="top">
 
 Feature
-
-
 
 </th>
 <th valign="top">
 
 Layouts
 
-
-
 </th>
 <th valign="top">
 
 Specific Topic
-
-
 
 </th>
 </tr>
@@ -59,8 +51,6 @@ Specific Topic
 <td valign="top">
 
 *Shopping Cart*
-
-
 
 </td>
 <td valign="top">
@@ -75,8 +65,6 @@ Specific Topic
 
 Input validation \(see [Validation Messages](../04_Essentials/validation-messages-a90d93d.md)\)
 
-
-
 </td>
 <td valign="top">
 
@@ -85,8 +73,6 @@ Input validation \(see [Validation Messages](../04_Essentials/validation-message
 `sap.ui.layout.VerticalLayout`
 
 `sap.ui.layout.form.SimpleForm`
-
-
 
 </td>
 <td valign="top">
@@ -103,16 +89,12 @@ Formatting
 
 Local storage
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
 *Browse Orders*
-
-
 
 </td>
 <td valign="top">
@@ -125,8 +107,6 @@ Local storage
 
 [Expression Binding](../04_Essentials/expression-binding-daf6852.md)
 
-
-
 </td>
 <td valign="top">
 
@@ -135,8 +115,6 @@ Local storage
 `sap.ui.layout.form.SimpleForm`
 
 `sap.f.FlexibleColumnLayout`
-
-
 
 </td>
 <td valign="top">
@@ -149,16 +127,12 @@ Formatting
 
 [Mock Server](../04_Essentials/mock-server-69d3cbd.md) \(OData V2\)
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
 *Shop Administration Tool*
-
-
 
 </td>
 <td valign="top">
@@ -173,8 +147,6 @@ Formatting
 
 [Custom Controls](../09_Developing_Controls/developing-controls-8dcab00.md)
 
-
-
 </td>
 <td valign="top">
 
@@ -184,14 +156,10 @@ Formatting
 
 `sap.uxap.ObjectPageLayout`
 
-
-
 </td>
 <td valign="top">
 
 Formatting
-
-
 
 </td>
 </tr>
@@ -200,21 +168,15 @@ Formatting
 
 *Employee Directory*
 
-
-
 </td>
 <td valign="top">
 
 [XML View](../04_Essentials/xml-view-91f2928.md)
 
-
-
 </td>
 <td valign="top">
 
 `sap.ui.layout.form.SimpleForm`
-
-
 
 </td>
 <td valign="top">
@@ -223,16 +185,12 @@ Formatting
 
 [Routing and Navigation](../04_Essentials/routing-and-navigation-3d18f20.md)
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
 *Bulletin Board*
-
-
 
 </td>
 <td valign="top">
@@ -241,14 +199,10 @@ Formatting
 
 [Busy Indicators](../10_More_About_Controls/busy-indicators-0dd2110.md)
 
-
-
 </td>
 <td valign="top">
 
 `sap.ui.layout.form.SimpleForm`
-
-
 
 </td>
 <td valign="top">
@@ -261,8 +215,6 @@ Formatting
 
 Custom type
 
-
-
 </td>
 </tr>
 <tr>
@@ -270,16 +222,12 @@ Custom type
 
 *Manage Products*
 
-
-
 </td>
 <td valign="top">
 
 [XML View](../04_Essentials/xml-view-91f2928.md)
 
 [Busy Indicators](../10_More_About_Controls/busy-indicators-0dd2110.md)
-
-
 
 </td>
 <td valign="top">
@@ -295,16 +243,12 @@ Formatting
 
 [Mock Server](../04_Essentials/mock-server-69d3cbd.md) \(OData V2\)
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
 *UI Adaptation at Runtime*
-
-
 
 </td>
 <td valign="top">
@@ -320,8 +264,6 @@ Formatting
 <td valign="top">
 
 [SAPUI5 Flexibility: Enable Your App for UI Adaptation](../05_Developing_Apps/sapui5-flexibility-enable-your-app-for-ui-adaptation-f1430c0.md)
-
-
 
 </td>
 </tr>
@@ -332,8 +274,6 @@ Formatting
 
 *for SAP Fiori Elements*
 
-
-
 </td>
 <td valign="top">
 
@@ -349,8 +289,6 @@ Formatting
 
 [SAPUI5 Flexibility: Enable Your App for UI Adaptation](../05_Developing_Apps/sapui5-flexibility-enable-your-app-for-ui-adaptation-f1430c0.md)
 
-
-
 </td>
 </tr>
 <tr>
@@ -358,21 +296,15 @@ Formatting
 
 *APF Demo Application*
 
-
-
 </td>
 <td valign="top">
 
 [XML View](../04_Essentials/xml-view-91f2928.md)
 
-
-
 </td>
 <td valign="top">
 
 `sap.ui.layout.VerticalLayout`
-
-
 
 </td>
 <td valign="top">
@@ -381,8 +313,6 @@ Formatting
 
 Component Container
 
-
-
 </td>
 </tr>
 <tr>
@@ -390,21 +320,15 @@ Component Container
 
 *APF Configuration Modeler*
 
-
-
 </td>
 <td valign="top">
 
 [XML View](../04_Essentials/xml-view-91f2928.md)
 
-
-
 </td>
 <td valign="top">
 
 `sap.ushell.ui.shell.ShellHeader`
-
-
 
 </td>
 <td valign="top">
@@ -413,8 +337,6 @@ Component Container
 
 Component Container
 
-
-
 </td>
 </tr>
 <tr>
@@ -422,14 +344,10 @@ Component Container
 
 *Chart Demo App*
 
-
-
 </td>
 <td valign="top">
 
 [XML View](../04_Essentials/xml-view-91f2928.md)
-
-
 
 </td>
 <td valign="top">
@@ -458,28 +376,20 @@ Component Container
 
 Demo App
 
-
-
 </th>
 <th valign="top">
 
 `sap.m`
-
-
 
 </th>
 <th valign="top">
 
 `sap.m.semantic`
 
-
-
 </th>
 <th valign="top">
 
 Other Libraries
-
-
 
 </th>
 </tr>
@@ -487,8 +397,6 @@ Other Libraries
 <td valign="top">
 
 *Shopping Cart*
-
-
 
 </td>
 <td valign="top">
@@ -529,21 +437,15 @@ Other Libraries
 
 `Wizard`
 
-
-
 </td>
 <td valign="top">
 
  
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -551,8 +453,6 @@ Other Libraries
 <td valign="top">
 
 *Browse Orders*
-
-
 
 </td>
 <td valign="top">
@@ -573,8 +473,6 @@ Other Libraries
 
 `Table`
 
-
-
 </td>
 <td valign="top">
 
@@ -586,14 +484,10 @@ Other Libraries
 
 `SendEmailAction`
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -601,8 +495,6 @@ Other Libraries
 <td valign="top">
 
 *Shop Administration Tool*
-
-
 
 </td>
 <td valign="top">
@@ -625,8 +517,6 @@ Other Libraries
 
 `Toolbar`
 
-
-
 </td>
 <td valign="top">
 
@@ -643,16 +533,12 @@ Other Libraries
 
 Micro charts of `sap.ui.comp.smartmicrochart`
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
 *Employee Directory*
-
-
 
 </td>
 <td valign="top">
@@ -665,8 +551,6 @@ Micro charts of `sap.ui.comp.smartmicrochart`
 
 `Toolbar`
 
-
-
 </td>
 <td valign="top">
 
@@ -677,8 +561,6 @@ Micro charts of `sap.ui.comp.smartmicrochart`
 
  
 
-
-
 </td>
 </tr>
 <tr>
@@ -686,14 +568,10 @@ Micro charts of `sap.ui.comp.smartmicrochart`
 
 *Hello World*
 
-
-
 </td>
 <td valign="top">
 
 `App`
-
-
 
 </td>
 <td valign="top">
@@ -712,8 +590,6 @@ Micro charts of `sap.ui.comp.smartmicrochart`
 
 *Bulletin Board*
 
-
-
 </td>
 <td valign="top">
 
@@ -725,8 +601,6 @@ Micro charts of `sap.ui.comp.smartmicrochart`
 
 `Toolbar`
 
-
-
 </td>
 <td valign="top">
 
@@ -734,14 +608,10 @@ Micro charts of `sap.ui.comp.smartmicrochart`
 
 `SendEmailAction`
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -750,8 +620,6 @@ Micro charts of `sap.ui.comp.smartmicrochart`
 
 *Manage Products*
 
-
-
 </td>
 <td valign="top">
 
@@ -759,16 +627,12 @@ Micro charts of `sap.ui.comp.smartmicrochart`
 
 `Toolbar`
 
-
-
 </td>
 <td valign="top">
 
 `FullscreenPage`
 
 `SendEmailAction`
-
-
 
 </td>
 <td valign="top">
@@ -781,8 +645,6 @@ Micro charts of `sap.ui.comp.smartmicrochart`
 <td valign="top">
 
 *APF Demo Application*
-
-
 
 </td>
 <td valign="top">
@@ -825,8 +687,6 @@ Micro charts of `sap.ui.comp.smartmicrochart`
 
 `ToolSpacer`
 
-
-
 </td>
 <td valign="top">
 
@@ -843,8 +703,6 @@ Micro charts of `sap.ui.comp.smartmicrochart`
 <td valign="top">
 
 *APF Configuration Modeler*
-
-
 
 </td>
 <td valign="top">
@@ -875,8 +733,6 @@ Micro charts of `sap.ui.comp.smartmicrochart`
 
 `Vbox`
 
-
-
 </td>
 <td valign="top">
 
@@ -894,8 +750,6 @@ Micro charts of `sap.ui.comp.smartmicrochart`
 
 *Chart Demo App*
 
-
-
 </td>
 <td valign="top">
 
@@ -904,8 +758,6 @@ Micro charts of `sap.ui.comp.smartmicrochart`
 `SplitApp`
 
 `Toolbar`
-
-
 
 </td>
 <td valign="top">
@@ -920,8 +772,6 @@ Micro charts of `sap.ui.comp.smartmicrochart`
 `sap.viz.ui5.controls.VizFrame`
 
 D3 charts \([https://d3js.org](https://d3js.org)\)
-
-
 
 </td>
 </tr>

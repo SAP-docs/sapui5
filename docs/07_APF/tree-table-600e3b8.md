@@ -11,14 +11,10 @@ For hierarchical steps, there is only one representation available to vizualize 
 
 Field
 
-
-
 </th>
 <th valign="top">
 
 Explanation
-
-
 
 </th>
 </tr>
@@ -27,14 +23,10 @@ Explanation
 
 Visualization
 
-
-
 </td>
 <td valign="top">
 
 Prefilled with *Tree Table*
-
-
 
 </td>
 </tr>
@@ -42,8 +34,6 @@ Prefilled with *Tree Table*
 <td valign="top">
 
 Basic Data
-
-
 
 </td>
 <td valign="top">
@@ -54,8 +44,6 @@ If you have selected both a key property and the corresponding text property for
 
 The default label text for each property is derived from the `sap:label` annotation of the property. You can see that the default text is used when you see *Label \(Default\)* in front of the entry field. You can overwrite the default text with your own label text as required. When you delete the label text, the default label is displayed again.
 
-
-
 </td>
 </tr>
 <tr>
@@ -63,14 +51,10 @@ The default label text for each property is derived from the `sap:label` annotat
 
 Sorting
 
-
-
 </td>
 <td valign="top">
 
 You can define whether certain measures are applied to the data request and subsequently to the chart as sorting criteria. You can also specify the sorting direction \(ascending or descending\) for each measure. If you don’t specify a sorting field, the data is displayed in the order provided by the OData service.
-
-
 
 </td>
 </tr>
@@ -79,16 +63,12 @@ You can define whether certain measures are applied to the data request and subs
 
 Corner Texts for Thumbnail
 
-
-
 </td>
 <td valign="top">
 
 The texts that are displayed in the four corners of the thumbnail in the analysis path display. All of them are optional.
 
 The fields are prefilled with the texts entered at step level, if applicable. When a text is entered or changed on representation level, this text takes precedence over the corresponding text entered at step level and is displayed at runtime. When you now again change the same text at step level, this change is not copied to the representation and also not reflected at runtime. This only applies to those representations where a change has been made on representation level.
-
-
 
 </td>
 </tr>

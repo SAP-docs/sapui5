@@ -13,7 +13,7 @@ The behavior of the available modes is as follows:
 
     App developers can enable inline creation of entries. In this mode, a new line is created and the fields can be modified inline but automatic navigation isn't triggered. When a new entry is created, the line is highlighted in blue. This highlight disappears once the data is saved.
 
--   **Empty Row Mode**: In create or edit mode, one new empty row is added to the table. In a responsive table, the empty row is added at the top. In a grid table, the empty row is added at the bottom. There is no corresponding entry in the draft table for the empty row. When you begin to add data to a field in an empty row, a new empty row is automatically added.
+-   **Empty Row Mode**: In create or edit mode, one new empty row is added to the table. In a responsive table, the empty row is added at the top. In a grid table, the empty row is added at the bottom. There is no corresponding entry in the draft table for the empty row. When you begin to add data to a field in an existing empty row, a new empty row is automatically added.
 
     The automatically added empty row is removed if the user doesn't add any data. It isn't required to manually remove the empty row.
 
@@ -172,9 +172,11 @@ A section ID defined in the annotation must match the section ID defined in the 
 
 
 
-### Changing the Default Sort Order
+### Changing the Default Sort Order for New Inline Rows
 
-Based on the default sort order, each newly created row is placed at the top of the table. You can change the default sort order and specify your own using the `disableDefaultInlineCreateSort` setting as shown here in this `manifest.json` code sample.
+By default, the table rows of the object page are sorted according to the sorting order defined in back end. End users can define own sorting order using the table personalization settings. Application developers can also modify the sort order using API extensions. For more information about the API extension, see [API Reference](https://ui5.sap.com/#/api/sap.suite.ui.generic.template.ObjectPage.controllerFrameworkExtensions%23methods/Summary)..
+
+In the edit mode, the newly created inline rows are placed at the top of the table, by default, irrespective of the existing sorting order defined for the table. This default sort order allows easy access for the end users to the new inline row. Application developers can turn off this feature by setting `disableDefaultInlineCreateSort` to `true` in the `manifest.json` file as shown in the following sample code. Once turned off, the new inline rows are sorted according to the sorting order applied on the table.
 
 > ### Sample Code:  
 > ```

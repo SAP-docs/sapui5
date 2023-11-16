@@ -12,7 +12,7 @@ Sometimes we need to define some more fine-granular layouts and this is when we 
   
 **The space between the button and the input field is now smaller and the output text is bold**
 
-![](images/UI5_Walkthrough_Step_14_d9a40e5.png "The space between the button and the input field is now smaller and the
+![The graphic has an explanatory text.](images/UI5_Walkthrough_Step_14_d9a40e5.png "The space between the button and the input field is now smaller and the
 					output text is bold")
 
 > ### Caution:  

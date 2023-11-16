@@ -15,14 +15,10 @@ To create a representation, select the step you want to create the representatio
 
 Field
 
-
-
 </th>
 <th valign="top">
 
 Explanation
-
-
 
 </th>
 </tr>
@@ -30,8 +26,6 @@ Explanation
 <td valign="top">
 
 Visualization
-
-
 
 </td>
 <td valign="top">
@@ -43,16 +37,12 @@ Select a chart type or table representation from the value help.
 
 In the analysis step gallery, the chart type is indicated by an icon and a label.
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
 Basic Data
-
-
 
 </td>
 <td valign="top">
@@ -65,16 +55,12 @@ The default label text for each property is derived from the `sap:label` annotat
 
 Ensure that all properties of drill-down dimensions that are selected for the step are also used in the representation for this step. Otherwise the data may not be displayed correctly.
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
 Sorting
-
-
 
 </td>
 <td valign="top">
@@ -95,16 +81,12 @@ If sorting criteria have been defined in the Data Reduction section of the step 
 
 Corner Texts for Thumbnail
 
-
-
 </td>
 <td valign="top">
 
 The texts that are displayed in the four corners of the thumbnail in the analysis path display. All of them are optional.
 
 The fields are prefilled with the texts entered at step level, if applicable. When a text is entered or changed on representation level, this text takes precedence over the corresponding text entered at step level and is displayed at runtime. When you now again change the same text at step level, this change is not copied to the representation and also not reflected at runtime. This only applies to those representations where a change has been made on representation level.
-
-
 
 </td>
 </tr>

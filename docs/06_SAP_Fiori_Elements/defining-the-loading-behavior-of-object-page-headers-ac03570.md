@@ -24,14 +24,10 @@ You can bundle requests so they are sent out as batch requests. SAP Fiori elemen
 
 Name
 
-
-
 </th>
 <th valign="top">
 
 Used for...
-
-
 
 </th>
 </tr>
@@ -39,8 +35,6 @@ Used for...
 <td valign="top">
 
 Heroes
-
-
 
 </td>
 <td valign="top">
@@ -59,14 +53,10 @@ Heroes
 
 Workers
 
-
-
 </td>
 <td valign="top">
 
 All tables
-
-
 
 </td>
 </tr>
@@ -75,14 +65,10 @@ All tables
 
 Decoration
 
-
-
 </td>
 <td valign="top">
 
 All 1-n \(multiplicity\) micro charts in the header
-
-
 
 </td>
 </tr>
@@ -90,8 +76,6 @@ All 1-n \(multiplicity\) micro charts in the header
 <td valign="top">
 
 LongRunners
-
-
 
 </td>
 <td valign="top">

@@ -14,7 +14,7 @@ This way, they are all in a central place and can be easily translated into othe
   
 **An input field and a description displaying the value of the input field \(No visual changes to last step\)**
 
-![](images/UI5_Walkthrough_Step_08_0eb579e.png "An input field and a description displaying the value of the input field (No
+![The graphic has an explanatory text](images/UI5_Walkthrough_Step_08_0eb579e.png "An input field and a description displaying the value of the input field (No
 					visual changes to last step)")
 
 

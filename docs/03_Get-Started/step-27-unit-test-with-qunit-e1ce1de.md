@@ -17,7 +17,7 @@ Actually, every feature that we added to the app so far, would require a separat
   
 **A unit test for our formatters is now available**
 
-![](images/UI5_Walkthrough_Step_27_0d29491.png "A unit test for our formatters is now available")
+![Preview of the unit test](images/UI5_Walkthrough_Step_27_0d29491.png "A unit test for our formatters is now available")
 
 
 
@@ -40,7 +40,7 @@ We add a new folder `unit` under the `test` folder and a `model` subfolder where
 ```js
 sap.ui.define([
 	"ui5/walkthrough/model/formatter",
-	"sap/ui/model/resource/ResourceModel"
+	"sap/ui/model/resource/ResourceModel",
 ], (formatter, ResourceModel) => {
 	"use strict";
 

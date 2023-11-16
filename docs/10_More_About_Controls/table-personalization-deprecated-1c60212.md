@@ -38,21 +38,15 @@ The personalization settings retrieved with this method take the form of an obje
 
 Property
 
-
-
 </th>
 <th valign="top">
 
 Type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -61,21 +55,15 @@ Description
 
 `id`
 
-
-
 </td>
 <td valign="top">
 
 string
 
-
-
 </td>
 <td valign="top">
 
 The ID of the column
-
-
 
 </td>
 </tr>
@@ -84,21 +72,15 @@ The ID of the column
 
 `order`
 
-
-
 </td>
 <td valign="top">
 
 integer
 
-
-
 </td>
 <td valign="top">
 
 The order of the column. Starts with `0`
-
-
 
 </td>
 </tr>
@@ -107,21 +89,15 @@ The order of the column. Starts with `0`
 
 `text`
 
-
-
 </td>
 <td valign="top">
 
 string
 
-
-
 </td>
 <td valign="top">
 
 The text of the column header
-
-
 
 </td>
 </tr>
@@ -130,21 +106,15 @@ The text of the column header
 
 `visible`
 
-
-
 </td>
 <td valign="top">
 
 boolean
 
-
-
 </td>
 <td valign="top">
 
 Specifies whether the column is visible \(true\) or not \(false\)
-
-
 
 </td>
 </tr>

@@ -50,30 +50,9 @@ To download the code from the Demo Kit, follow these steps:
 
 3.  Extract the project folder to a desired location on your local machine.
 
-4.  **If you use UI5 Tooling \(recommended\):** At your chosen location, open a new shell and execute `npm install`. After all dependencies have been installed, enter `npm start` to start the development server. \(**Note:** if they're not already present, you may have to create and adjust some project configuration files first; see the [Walkthrough Tutorial](walkthrough-tutorial-3da5f4b.md) for an example.\)
+4.  **If you use UI5 Tooling \(recommended\):** At your chosen location, open a new shell and execute `npm install`. After all dependencies have been installed, enter `npm start` to start the development server. \(**Note:** if they're not already present, you may have to create and adapt some project configuration files first; see the [Walkthrough Tutorial](walkthrough-tutorial-3da5f4b.md) for an example.\)
 
 5.  Test your project setup by opening one of its HTML pages in your development environment and making sure that the app displays the features exactly as shown in the preview of the step.
-
-
-
-
-<a name="loio8b49fc198bf04b2d9800fc37fecbb218__tutorials_adaptation"/>
-
-## Adapting Code to Your Development Environment
-
-You might have to adapt parts of the coding to your local development environment to make the app work. Please check the following settings carefully:
-
--   **Project Path and Deployment**
-
-    All tutorials assume that the app is deployed and can be accessed under a certain path on a web server. You will not be able to run the app without a Web server as the browser does not allow you to load the required resources locally due to security restrictions.
-
--   **SAPUI5 Resources**
-
-    You can either download and deploy the runtime to your \(local\) Web server or reference the CDN version located at `https://ui5.sap.com/resources/sap-ui-core.js`. Some development environments such as the SAP Web IDE also provide a local runtime for testing purposes. If you download the code from the samples in the Demo Kit, you will have to adapt the **resource path in the bootstrap section** of all HTML pages included in the project. In the tutorial code, we assume that SAPUI5 can be accessed from the `/resources` path of the server.
-
--   **Accessing Remote Services**
-
-    Browsers typically prevent accessing remote resources due to the Cross-Origin Resource Sharing \(CORS\) policy. If you would like to call a real service or remote resources, you will have to either configure the development environment or the remote server to accept these requests. This strongly depends on the development environment and is described in more detail below.
 
 
 

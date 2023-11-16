@@ -65,8 +65,6 @@ The generated IDs change whenever the control structure of the app changes. The 
 
 **Views**
 
-
-
 </td>
 <td valign="top">
 
@@ -147,14 +145,10 @@ The generated IDs change whenever the control structure of the app changes. The 
 
 **Extension points** 
 
-
-
 </td>
 <td valign="top">
 
 If you use extension points, use stable IDs for nested views and prefixes for nested controls of a fragment.
-
-
 
 </td>
 </tr>
@@ -162,8 +156,6 @@ If you use extension points, use stable IDs for nested views and prefixes for ne
 <td valign="top">
 
 **Controls** 
-
-
 
 </td>
 <td valign="top">
@@ -212,8 +204,6 @@ If you use extension points, use stable IDs for nested views and prefixes for ne
 
 **Components** 
 
-
-
 </td>
 <td valign="top">
 
@@ -249,8 +239,6 @@ new Shell({
 <td valign="top">
 
 **Embedded Components** 
-
-
 
 </td>
 <td valign="top">
@@ -323,8 +311,6 @@ If you want to add an embedded component with a stable ID, you have two options:
 
 **XML fragments** 
 
-
-
 </td>
 <td valign="top">
 
@@ -380,28 +366,20 @@ Let's say you're building an app with a component called `myProducts`. You're us
 
 Component
 
-
-
 </th>
 <th valign="top">
 
 Views
-
-
 
 </th>
 <th valign="top">
 
 Contained Views
 
-
-
 </th>
 <th valign="top">
 
 Concatenated IDs
-
-
 
 </th>
 </tr>
@@ -410,28 +388,20 @@ Concatenated IDs
 
 `myProducts` 
 
-
-
 </td>
 <td valign="top" rowspan="2">
 
 `worklist` 
-
-
 
 </td>
 <td valign="top">
 
 `page` 
 
-
-
 </td>
 <td valign="top">
 
 `myProducts---worklist--page` 
-
-
 
 </td>
 </tr>
@@ -440,14 +410,10 @@ Concatenated IDs
 
 `table` 
 
-
-
 </td>
 <td valign="top">
 
 `myProducts---worklist--table` 
-
-
 
 </td>
 </tr>
@@ -456,21 +422,15 @@ Concatenated IDs
 
 `product` 
 
-
-
 </td>
 <td valign="top">
 
 `page` 
 
-
-
 </td>
 <td valign="top">
 
 `myProducts---product--page` 
-
-
 
 </td>
 </tr>
@@ -479,14 +439,10 @@ Concatenated IDs
 
 `objectHeader` 
 
-
-
 </td>
 <td valign="top">
 
 `myProducts---product--objectHeader` 
-
-
 
 </td>
 </tr>

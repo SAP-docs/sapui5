@@ -71,35 +71,25 @@ Except for `ActionListItem`, list items do **not** by default fire an event unle
 
 Type
 
-
-
 </th>
 <th valign="top">
 
 Press Event
-
-
 
 </th>
 <th valign="top">
 
 detailPress Event
 
-
-
 </th>
 <th valign="top">
 
 Icon
 
-
-
 </th>
 <th valign="top">
 
 Active Feedback
-
-
 
 </th>
 </tr>
@@ -108,35 +98,25 @@ Active Feedback
 
 **Inactive \(default\)**
 
+</td>
+<td valign="top">
 
+\--
 
 </td>
 <td valign="top">
 
 \--
 
-
-
 </td>
 <td valign="top">
 
 \--
 
-
-
 </td>
 <td valign="top">
 
 \--
-
-
-
-</td>
-<td valign="top">
-
-\--
-
-
 
 </td>
 </tr>
@@ -145,35 +125,25 @@ Active Feedback
 
 **Active**
 
-
-
 </td>
 <td valign="top">
 
 yes
-
-
 
 </td>
 <td valign="top">
 
 \--
 
-
-
 </td>
 <td valign="top">
 
 \--
 
-
-
 </td>
 <td valign="top">
 
 yes
-
-
 
 </td>
 </tr>
@@ -182,35 +152,25 @@ yes
 
 **Navigation**
 
-
-
 </td>
 <td valign="top">
 
 yes
-
-
 
 </td>
 <td valign="top">
 
 \--
 
-
-
 </td>
 <td valign="top">
 
 \>
 
-
-
 </td>
 <td valign="top">
 
 yes
-
-
 
 </td>
 </tr>
@@ -219,35 +179,25 @@ yes
 
 **Detail**
 
-
-
 </td>
 <td valign="top">
 
 \--
-
-
 
 </td>
 <td valign="top">
 
 yes
 
-
-
 </td>
 <td valign="top">
 
 \(\>\)
 
-
-
 </td>
 <td valign="top">
 
 \--
-
-
 
 </td>
 </tr>
@@ -256,35 +206,25 @@ yes
 
 **DetailAndActive**
 
-
-
 </td>
 <td valign="top">
 
 yes
 
-
-
 </td>
 <td valign="top">
 
 yes
-
-
 
 </td>
 <td valign="top">
 
 \(\>\)
 
-
-
 </td>
 <td valign="top">
 
 yes \(content only\)
-
-
 
 </td>
 </tr>

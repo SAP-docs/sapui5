@@ -15,14 +15,10 @@ The following is a list of cards that are available in SAP Fiori elements for OD
 
 Card Type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -31,14 +27,10 @@ Description
 
 Table
 
-
-
 </td>
 <td valign="top">
 
 Table cards display a list of records according to the configuration in the `com.sap.vocabularies.UI.v1.LineItem` term. Table cards displays data in a 3-column table layout.
-
-
 
 </td>
 </tr>
@@ -47,14 +39,10 @@ Table cards display a list of records according to the configuration in the `com
 
 List
 
-
-
 </td>
 <td valign="top">
 
 List cards display lists of records according to the configuration in the `com.sap.vocabularies.UI.v1.LineItem` term. List cards display up to six fields of data in each list item.
-
-
 
 </td>
 </tr>
@@ -63,14 +51,10 @@ List cards display lists of records according to the configuration in the `com.s
 
 Analytical Chart
 
-
-
 </td>
 <td valign="top">
 
 Analytical chart cards show data in a variety of chart formats. They can be line, bubble, donut, column, stacked column, vertical column, combination, or scatter chart cards. The value of the template property points to the generic card component `sap.ovp.cards.charts.analytical`.
-
-
 
 </td>
 </tr>
@@ -79,14 +63,10 @@ Analytical chart cards show data in a variety of chart formats. They can be line
 
 Link List
 
-
-
 </td>
 <td valign="top">
 
 Link list cards display a list of links with an image or icon and a \(optional\) subtitle for each of the links.
-
-
 
 </td>
 </tr>
@@ -120,14 +100,10 @@ The following additional card types are available only in SAP Fiori elements for
 
 Card Type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -136,14 +112,10 @@ Description
 
 Stack
 
-
-
 </td>
 <td valign="top">
 
 Stack cards aggregate a set of cards of the same type, which are based on a common topic or action. When clicked, stack cards can display up to 20 cards in an object stream.
-
-
 
 </td>
 </tr>
@@ -152,14 +124,10 @@ Stack cards aggregate a set of cards of the same type, which are based on a comm
 
 Quick View
 
-
-
 </td>
 <td valign="top">
 
 Quick view cards display detailed information about a single record, in greater depth than would be displayed in a table or list.
-
-
 
 </td>
 </tr>

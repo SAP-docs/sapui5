@@ -15,14 +15,10 @@ You can use the same annotation file with different qualifiers to present charts
 
 Annotation
 
-
-
 </th>
 <th valign="top">
 
 What it Does
-
-
 
 </th>
 </tr>
@@ -31,14 +27,10 @@ What it Does
 
 `UI.Identification`
 
-
-
 </td>
 <td valign="top">
 
 Specify the navigation targets activated when the user clicks the card and list the parameters to pass to the target application. This definition is mandatory. For more information, see [Configuring Card Navigation](configuring-card-navigation-530f9e6.md).
-
-
 
 </td>
 </tr>
@@ -47,14 +39,10 @@ Specify the navigation targets activated when the user clicks the card and list 
 
 `UI.SelectionVariant.SelectOptions`
 
-
-
 </td>
 <td valign="top">
 
 Specify the filter values that are applied to the card, which are applied when retrieving the card data.
-
-
 
 </td>
 </tr>
@@ -63,14 +51,10 @@ Specify the filter values that are applied to the card, which are applied when r
 
 `UI.PresentationVariant.SortOrder`
 
-
-
 </td>
 <td valign="top">
 
 Specify the sort order to be used.
-
-
 
 </td>
 </tr>
@@ -78,8 +62,6 @@ Specify the sort order to be used.
 <td valign="top">
 
 `UI.PresentationVariant.MaxItems`
-
-
 
 </td>
 <td valign="top">
@@ -98,14 +80,10 @@ Limit the maximum number of records to be fetched from the backend. If this vari
 
 `UI.Chart`
 
-
-
 </td>
 <td valign="top">
 
 Specify the dimensions and measures that make up the chart, the chart type, and the way that the measures/dimensions are used for the chart. This definition is mandatory.
-
-
 
 </td>
 </tr>
@@ -114,14 +92,10 @@ Specify the dimensions and measures that make up the chart, the chart type, and 
 
 `UI.Chart.MeasureAttributes.Measure`
 
-
-
 </td>
 <td valign="top">
 
 Defines the measures used in the chart.
-
-
 
 </td>
 </tr>
@@ -130,14 +104,10 @@ Defines the measures used in the chart.
 
 `UI.Chart.MeasureAttributes.Role`
 
-
-
 </td>
 <td valign="top">
 
 The manner in which a measure is used within the chart. This is configured differently for each chart type, as described below.
-
-
 
 </td>
 </tr>
@@ -146,14 +116,10 @@ The manner in which a measure is used within the chart. This is configured diffe
 
 `UI.Chart.DimensionAttributes.Dimension`
 
-
-
 </td>
 <td valign="top">
 
 These are the dimensions used in the chart.
-
-
 
 </td>
 </tr>
@@ -162,14 +128,10 @@ These are the dimensions used in the chart.
 
 `UI.Chart.DimensionAttributes.Role`
 
-
-
 </td>
 <td valign="top">
 
 The manner in which a dimension is used within the chart. This is configured differently for each chart type, as described below.
-
-
 
 </td>
 </tr>

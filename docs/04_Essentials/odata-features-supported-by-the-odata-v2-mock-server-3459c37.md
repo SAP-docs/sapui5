@@ -20,14 +20,10 @@ The following table lists the OData features that are supported by the mock serv
 
 Feature
 
-
-
 </th>
 <th valign="top">
 
 Status
-
-
 
 </th>
 </tr>
@@ -36,14 +32,10 @@ Status
 
 CRUD calls
 
-
-
 </td>
 <td valign="top">
 
 Supported
-
-
 
 </td>
 </tr>
@@ -52,14 +44,10 @@ Supported
 
 Navigations
 
-
-
 </td>
 <td valign="top">
 
 Supported; only single navigations are supported, e.g. "/a\(\)/b/". Further navigation chaining is not supported.
-
-
 
 </td>
 </tr>
@@ -68,8 +56,6 @@ Supported; only single navigations are supported, e.g. "/a\(\)/b/". Further navi
 
 **Query String options:** 
 
-
-
 </td>
 </tr>
 <tr>
@@ -77,14 +63,10 @@ Supported; only single navigations are supported, e.g. "/a\(\)/b/". Further navi
 
 \- Orderby System Query Option \(`$orderby`\)
 
-
-
 </td>
 <td valign="top">
 
 Supported
-
-
 
 </td>
 </tr>
@@ -93,14 +75,10 @@ Supported
 
 \- Top System Query Option \(`$top`\)
 
-
-
 </td>
 <td valign="top">
 
 Supported
-
-
 
 </td>
 </tr>
@@ -109,14 +87,10 @@ Supported
 
 \- Skip System Query Option \(`$skip`\)
 
-
-
 </td>
 <td valign="top">
 
 Supported
-
-
 
 </td>
 </tr>
@@ -125,14 +99,10 @@ Supported
 
 \- Filter System Query Option \(`$filter`\)
 
-
-
 </td>
 <td valign="top">
 
 Supported; `eq`, `ne`, `gt`, `lt`, `ge`, `le`, `substringof`, `startswith`, `endswith`, `and`, `or` 
-
-
 
 </td>
 </tr>
@@ -141,14 +111,10 @@ Supported; `eq`, `ne`, `gt`, `lt`, `ge`, `le`, `substringof`, `startswith`, `end
 
 \- Expand System Query Option \(`$expand`\)
 
-
-
 </td>
 <td valign="top">
 
 Supported
-
-
 
 </td>
 </tr>
@@ -157,14 +123,10 @@ Supported
 
 \- Select System Query Option \(`$select`\)
 
-
-
 </td>
 <td valign="top">
 
 Supported
-
-
 
 </td>
 </tr>
@@ -173,14 +135,10 @@ Supported
 
 \- Inlinecount System Query Option \(`$inlinecount`\)
 
-
-
 </td>
 <td valign="top">
 
 Supported
-
-
 
 </td>
 </tr>
@@ -189,14 +147,10 @@ Supported
 
 \- Format System Query Option \(`$format`\)
 
-
-
 </td>
 <td valign="top">
 
 Supported; only JSON format is allowed
-
-
 
 </td>
 </tr>
@@ -205,14 +159,10 @@ Supported; only JSON format is allowed
 
 Batch processing
 
-
-
 </td>
 <td valign="top">
 
 Supported
-
-
 
 </td>
 </tr>
@@ -221,14 +171,10 @@ Supported
 
 Multiple services
 
-
-
 </td>
 <td valign="top">
 
 Supported; we recommend to create one Mock Server instance per service
-
-
 
 </td>
 </tr>
@@ -237,14 +183,10 @@ Supported; we recommend to create one Mock Server instance per service
 
 Update via `MERGE`/`PATCH` 
 
-
-
 </td>
 <td valign="top">
 
 Supported
-
-
 
 </td>
 </tr>
@@ -253,14 +195,10 @@ Supported
 
 ETag handling
 
-
-
 </td>
 <td valign="top">
 
 Supported
-
-
 
 </td>
 </tr>
@@ -277,14 +215,10 @@ The following table lists the OData features that are **not** supported by the m
 
 Feature
 
-
-
 </th>
 <th valign="top">
 
 Status
-
-
 
 </th>
 </tr>
@@ -293,14 +227,10 @@ Status
 
 Service operations \(function imports\)
 
-
-
 </td>
 <td valign="top">
 
 Unsupported, but can be extended
-
-
 
 </td>
 </tr>
@@ -309,14 +239,10 @@ Unsupported, but can be extended
 
 Annotations
 
-
-
 </td>
 <td valign="top">
 
 Unsupported
-
-
 
 </td>
 </tr>
@@ -325,14 +251,10 @@ Unsupported
 
 Getting individual properties of an entity \(`$value`\)
 
-
-
 </td>
 <td valign="top">
 
 Unsupported
-
-
 
 </td>
 </tr>
@@ -341,14 +263,10 @@ Unsupported
 
 `Edm.DateTime` keys
 
-
-
 </td>
 <td valign="top">
 
 Unsupported
-
-
 
 </td>
 </tr>
@@ -357,14 +275,10 @@ Unsupported
 
 `Edm.DateTime` values
 
-
-
 </td>
 <td valign="top">
 
 All dates have to be either before 2017 or after; you cannot use mixed values
-
-
 
 </td>
 </tr>
@@ -373,14 +287,10 @@ All dates have to be either before 2017 or after; you cannot use mixed values
 
 `metadata.xml` with properties from `datetimeoffset` 
 
-
-
 </td>
 <td valign="top">
 
 Unsupported
-
-
 
 </td>
 </tr>
@@ -389,14 +299,10 @@ Unsupported
 
 Key of type `Edm.Boolean` 
 
-
-
 </td>
 <td valign="top">
 
 Unsupported
-
-
 
 </td>
 </tr>
@@ -405,14 +311,10 @@ Unsupported
 
 Key of type `Edm.Int64` 
 
-
-
 </td>
 <td valign="top">
 
 Unsupported
-
-
 
 </td>
 </tr>
@@ -421,16 +323,12 @@ Unsupported
 
 `$links` and `#AddressingLinksBetweenEntries` 
 
-
-
 </td>
 <td valign="top">
 
 Unsupported
 
 For more information see [Addressing Links between Entries](http://www.odata.org/documentation/odata-version-2-0/uri-conventions/#AddressingLinksBetweenEntries) and [Referencing Requests in a Change Set](http://www.odata.org/documentation/odata-version-2-0/batch-processing/#ReferencingRequestsInAChangeSet) on [http://www.odata.org/](http://www.odata.org/).
-
-
 
 </td>
 </tr>
@@ -439,14 +337,10 @@ For more information see [Addressing Links between Entries](http://www.odata.org
 
 Multiple navigation properties
 
-
-
 </td>
 <td valign="top">
 
 Unsupported
-
-
 
 </td>
 </tr>
@@ -455,14 +349,10 @@ Unsupported
 
 Response in byte array format
 
-
-
 </td>
 <td valign="top">
 
 Unsupported
-
-
 
 </td>
 </tr>
@@ -471,14 +361,10 @@ Unsupported
 
 Combination of the system queries `$select` and `$expand` in mocked OData services
 
-
-
 </td>
 <td valign="top">
 
 Unsupported
-
-
 
 </td>
 </tr>
@@ -487,14 +373,10 @@ Unsupported
 
 Filter query string operator \(`$filter`\) with one of the functions `substringof(string po, string p1)`, `endswith(string p0, string p1)` or `startswith(string p0, string p1)` 
 
-
-
 </td>
 <td valign="top">
 
 Does not support input strings \(`p0` or `p1`\) containing a comma `,`.
-
-
 
 </td>
 </tr>
@@ -503,14 +385,10 @@ Does not support input strings \(`p0` or `p1`\) containing a comma `,`.
 
 Key values containing a comma
 
-
-
 </td>
 <td valign="top">
 
 Unsupported
-
-
 
 </td>
 </tr>
@@ -519,14 +397,10 @@ Unsupported
 
 System query option `$expand` with multiple multi-level navigation properties with the same root navigation property
 
-
-
 </td>
 <td valign="top">
 
 Unsupported
-
-
 
 </td>
 </tr>
@@ -535,14 +409,10 @@ Unsupported
 
 Filter query `$filter` on fields from type `edm.datetime` 
 
-
-
 </td>
 <td valign="top">
 
 Unsupported
-
-
 
 </td>
 </tr>

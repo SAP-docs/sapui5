@@ -25,35 +25,25 @@ It is possible to aggregate several property values into one column, for example
 
 Additional Property
 
-
-
 </th>
 <th valign="top">
 
 Type
-
-
 
 </th>
 <th valign="top">
 
 Sample
 
-
-
 </th>
 <th valign="top">
 
 Optional
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -62,28 +52,20 @@ Description
 
 `inputFormat` 
 
-
-
 </td>
 <td valign="top">
 
 `string` 
-
-
 
 </td>
 <td valign="top">
 
 `"([0-9]{3})([0-9]{4})"` 
 
-
-
 </td>
 <td valign="top">
 
 Yes
-
-
 
 </td>
 <td valign="top">
@@ -92,8 +74,6 @@ Used as a regular expression that determines specific parts of the original valu
 
 `inputFormat` is ignored if no `template` is provided.
 
-
-
 </td>
 </tr>
 <tr>
@@ -101,35 +81,25 @@ Used as a regular expression that determines specific parts of the original valu
 
 `template` 
 
-
-
 </td>
 <td valign="top">
 
 `string` 
-
-
 
 </td>
 <td valign="top">
 
 `"{0} (Company code {1})"` 
 
-
-
 </td>
 <td valign="top">
 
 Yes
 
-
-
 </td>
 <td valign="top">
 
 A textual template that can be filled with multiple values from various business objects. Each placeholder is a number within curly brackets that represents an index of a property array.
-
-
 
 </td>
 </tr>
@@ -138,14 +108,10 @@ A textual template that can be filled with multiple values from various business
 
 `wrap` 
 
-
-
 </td>
 <td valign="top">
 
 `boolean` 
-
-
 
 </td>
 <td valign="top">
@@ -157,14 +123,10 @@ A textual template that can be filled with multiple values from various business
 
 Yes
 
-
-
 </td>
 <td valign="top">
 
 A Boolean value that indicates if the text column supports wrapping of the cell content. Apart from automatic text wrapping depending on the cell width, it automatically converts all \\n to \\r\\n line breaks. These manual line breaks are then visible in the generated xlsx file.
-
-
 
 </td>
 </tr>
@@ -207,21 +169,15 @@ The type `Boolean` handles all variations of Boolean values. It allows for displ
 
 Additional Property
 
-
-
 </th>
 <th valign="top">
 
 Type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -230,21 +186,15 @@ Description
 
 `trueValue` 
 
-
-
 </td>
 <td valign="top">
 
 `string` 
 
-
-
 </td>
 <td valign="top">
 
 Defines the textual representation of a Boolean type that has the value `true`.
-
-
 
 </td>
 </tr>
@@ -253,21 +203,15 @@ Defines the textual representation of a Boolean type that has the value `true`.
 
 `falseValue` 
 
-
-
 </td>
 <td valign="top">
 
 `string` 
 
-
-
 </td>
 <td valign="top">
 
 Defines the textual representation of a Boolean type that has the value `false`.
-
-
 
 </td>
 </tr>
@@ -308,35 +252,25 @@ The type `Number` represents a simple numeric value without any specific formatt
 
 Additional Property
 
-
-
 </th>
 <th valign="top">
 
 Output Sample
-
-
 
 </th>
 <th valign="top">
 
 Type
 
-
-
 </th>
 <th valign="top">
 
 Optional
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -344,8 +278,6 @@ Description
 <td valign="top">
 
 `scale` 
-
-
 
 </td>
 <td valign="top">
@@ -358,28 +290,20 @@ Description
 
 1234.567
 
-
-
 </td>
 <td valign="top">
 
 `number` 
-
-
 
 </td>
 <td valign="top">
 
 Yes
 
-
-
 </td>
 <td valign="top">
 
 Sets a fixed number of decimals. The scale is applied to the whole column and displays exactly the number of decimals that is configured. If the actual value has fewer or more decimal places, it is filled with additional zeros or gets cut off to match the configured number of decimals. This property accepts a positive integer value. Negative values are treated like zero.
-
-
 
 </td>
 </tr>
@@ -388,8 +312,6 @@ Sets a fixed number of decimals. The scale is applied to the whole column and di
 
 `autoScale` 
 
-
-
 </td>
 <td valign="top">
 
@@ -397,21 +319,15 @@ Sets a fixed number of decimals. The scale is applied to the whole column and di
 
 60 mp/h
 
-
-
 </td>
 <td valign="top">
 
 `boolean`
 
-
-
 </td>
 <td valign="top">
 
 Yes
-
-
 
 </td>
 <td valign="top">
@@ -420,16 +336,12 @@ Allows you to automatically apply a specific scale for the given unit of measure
 
 If no code list is available or the code list does not contain a particular unit of measure, the `scale` property is taken into account. If the `scale` property is not provided, the number is displayed in raw format.
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
 `delimiter` 
-
-
 
 </td>
 <td valign="top">
@@ -438,28 +350,20 @@ If no code list is available or the code list does not contain a particular unit
 
 1,234,567
 
-
-
 </td>
 <td valign="top">
 
 `boolean` 
-
-
 
 </td>
 <td valign="top">
 
 Yes
 
-
-
 </td>
 <td valign="top">
 
 Specifies if the numeric value is shown in groups of thousands. If set to `true`, the thousands delimiter is shown. The delimiter is embedded in the number format and therefore requires a particular scale. If the `scale` property is not defined, this is treated like a scale of zero, and float values might get rounded down . Default value is `false`.
-
-
 
 </td>
 </tr>
@@ -467,8 +371,6 @@ Specifies if the numeric value is shown in groups of thousands. If set to `true`
 <td valign="top">
 
 `unit` 
-
-
 
 </td>
 <td valign="top">
@@ -479,21 +381,15 @@ Specifies if the numeric value is shown in groups of thousands. If set to `true`
 
 120 km/h
 
-
-
 </td>
 <td valign="top">
 
 `string` 
 
-
-
 </td>
 <td valign="top">
 
 Yes
-
-
 
 </td>
 <td valign="top">
@@ -512,8 +408,6 @@ Specifies the unit of measurement \(UoM\). The UoM is shown next to the numeric 
 
 `unitProperty` 
 
-
-
 </td>
 <td valign="top">
 
@@ -523,28 +417,20 @@ Specifies the unit of measurement \(UoM\). The UoM is shown next to the numeric 
 
 120 km/h
 
-
-
 </td>
 <td valign="top">
 
 `string` 
-
-
 
 </td>
 <td valign="top">
 
 Yes
 
-
-
 </td>
 <td valign="top">
 
 References a business object property that contains the UoM for this particular numeric type.
-
-
 
 </td>
 </tr>
@@ -593,21 +479,15 @@ The types `Date`, `DateTime`, and `Time` handle the date and time information. T
 
 Type
 
-
-
 </th>
 <th valign="top">
 
 Output Sample
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -616,8 +496,6 @@ Description
 
 `Date` 
 
-
-
 </td>
 <td valign="top">
 
@@ -625,14 +503,10 @@ Description
 
 24.03.2017
 
-
-
 </td>
 <td valign="top">
 
 Represents a date without time-related information. Due to the use of built-in formats, `Date` is displayed based on the user's locale in the operating system. This can lead to different representations for different users.
-
-
 
 </td>
 </tr>
@@ -641,16 +515,12 @@ Represents a date without time-related information. Due to the use of built-in f
 
 `DateTime` 
 
-
-
 </td>
 <td valign="top">
 
 08/31/2016 23:01
 
 31.08.2016 23:01
-
-
 
 </td>
 <td valign="top">
@@ -659,8 +529,6 @@ Represents values that contain date- and time-related information. Due to the us
 
 The locale has no effect on any time zone formatting. All values in columns of type `DateTime` are related to UTC because it is not possible to pass time zone offset information into the Office Open XML standard representation of time stamps. For columns of type `DateTime`, a UTC suffix is automatically added to the column header.
 
-
-
 </td>
 </tr>
 <tr>
@@ -668,21 +536,15 @@ The locale has no effect on any time zone formatting. All values in columns of t
 
 `Time` 
 
-
-
 </td>
 <td valign="top">
 
 13:21:14
 
-
-
 </td>
 <td valign="top">
 
 Represents values that contain time-related information only. Time information can use the following units: hours, minutes, seconds, and milliseconds. Contrary to `Date` and `DateTime`, the built-in formats for `Time` are the same for every locale in the operating system.
-
-
 
 </td>
 </tr>
@@ -695,28 +557,20 @@ Represents values that contain time-related information only. Time information c
 
 Additional Property
 
-
-
 </th>
 <th valign="top">
 
 Type
-
-
 
 </th>
 <th valign="top">
 
 Optional
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -725,21 +579,15 @@ Description
 
 `calendar` 
 
-
-
 </td>
 <td valign="top">
 
 `string` 
 
-
-
 </td>
 <td valign="top">
 
 Yes
-
-
 
 </td>
 <td valign="top">
@@ -757,8 +605,6 @@ The calendar property supports values of type `sap.ui.core.CalendarType` althoug
 
 If the `calendar` property has not been defined, the `sap.ui.core.Configuration#getCalendarType` function is used to determine the default value. In a SAP Fiori launchpad environment, the `sap.ui.core.Configuration#getCalendarType` function returns the configured `sap.ui.core.CalendarType`. If this function does not provide any `sap.ui.core.CalendarType`, it automatically uses `sap.ui.core.CalendarType.Gregorian` as fallback. If no value has been set, `Configuration#getCalendarType` automatically uses the calendar type preferred by the current session locale.
 
-
-
 </td>
 </tr>
 <tr>
@@ -766,21 +612,15 @@ If the `calendar` property has not been defined, the `sap.ui.core.Configuration#
 
 `format` 
 
-
-
 </td>
 <td valign="top">
 
 `string` 
 
-
-
 </td>
 <td valign="top">
 
 Yes
-
-
 
 </td>
 <td valign="top">
@@ -802,14 +642,10 @@ The list below shows some sample formats and their output:
 
 Format Template
 
-
-
 </th>
 <th valign="top">
 
 Output Sample
-
-
 
 </th>
 </tr>
@@ -818,14 +654,10 @@ Output Sample
 
 yyyy-mm-dd h:mm
 
-
-
 </td>
 <td valign="top">
 
 2007-12-24 18:21
-
-
 
 </td>
 </tr>
@@ -834,14 +666,10 @@ yyyy-mm-dd h:mm
 
 h:mm:ss AM/PM
 
-
-
 </td>
 <td valign="top">
 
 9:32:24 AM
-
-
 
 </td>
 </tr>
@@ -850,14 +678,10 @@ h:mm:ss AM/PM
 
 d-mmm-yy
 
-
-
 </td>
 <td valign="top">
 
 12-Apr-17
-
-
 
 </td>
 </tr>
@@ -866,14 +690,10 @@ d-mmm-yy
 
 dddd, d.mmmm yyyy
 
-
-
 </td>
 <td valign="top">
 
 Wednesday, 22. April 2017
-
-
 
 </td>
 </tr>
@@ -888,21 +708,15 @@ Wednesday, 22. April 2017
 
 `inputFormat` 
 
-
-
 </td>
 <td valign="top">
 
 `string` 
 
-
-
 </td>
 <td valign="top">
 
 Yes
-
-
 
 </td>
 <td valign="top">
@@ -916,21 +730,15 @@ Allows you to parse a textual date representation based on a given pattern. The 
 
 Value
 
-
-
 </th>
 <th valign="top">
 
 Input Format
 
-
-
 </th>
 <th valign="top">
 
 Parsed Value
-
-
 
 </th>
 </tr>
@@ -939,21 +747,15 @@ Parsed Value
 
 20200123
 
-
-
 </td>
 <td valign="top">
 
 yyyymmdd
 
-
-
 </td>
 <td valign="top">
 
 01/23/2020
-
-
 
 </td>
 </tr>
@@ -962,29 +764,21 @@ yyyymmdd
 
 2020-04-21
 
-
-
 </td>
 <td valign="top">
 
 yyyy-mm-dd
-
-
 
 </td>
 <td valign="top">
 
 04/21/2020
 
-
-
 </td>
 </tr>
 </table>
 
 `inputFormat` is case-insensitive.
-
-
 
 </td>
 </tr>
@@ -993,21 +787,15 @@ yyyy-mm-dd
 
 `utc` 
 
-
-
 </td>
 <td valign="top">
 
 `boolean` 
 
-
-
 </td>
 <td valign="top">
 
 Yes
-
-
 
 </td>
 <td valign="top">
@@ -1026,21 +814,15 @@ The date and time information is exported based on the UTC time zone. The defaul
 
 `timezone` 
 
-
-
 </td>
 <td valign="top">
 
 `string` 
 
-
-
 </td>
 <td valign="top">
 
 Yes
-
-
 
 </td>
 <td valign="top">
@@ -1059,21 +841,15 @@ The date and time information is exported based on the given IANA \(Internet Ass
 
 `timezoneProperty` 
 
-
-
 </td>
 <td valign="top">
 
 `string` 
 
-
-
 </td>
 <td valign="top">
 
 Yes
-
-
 
 </td>
 <td valign="top">
@@ -1092,21 +868,15 @@ References the OData property that contains the IANA time zone, which is used to
 
 `displayTimezone` 
 
-
-
 </td>
 <td valign="top">
 
 `boolean` 
 
-
-
 </td>
 <td valign="top">
 
 Yes
-
-
 
 </td>
 <td valign="top">
@@ -1173,28 +943,20 @@ The type `Currency` handles currencies as an aggregation of a value and a partic
 
 Additional Property
 
-
-
 </th>
 <th valign="top">
 
 Type
-
-
 
 </th>
 <th valign="top">
 
 Mandatory
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -1203,28 +965,20 @@ Description
 
 `unitProperty` 
 
-
-
 </td>
 <td valign="top">
 
 `string` 
-
-
 
 </td>
 <td valign="top">
 
 Yes
 
-
-
 </td>
 <td valign="top">
 
 References the business object property that contains the UoM for this particular currency. This property is required even if the UoM is not displayed.
-
-
 
 </td>
 </tr>
@@ -1233,28 +987,20 @@ References the business object property that contains the UoM for this particula
 
 `displayUnit` 
 
-
-
 </td>
 <td valign="top">
 
 `boolean` 
-
-
 
 </td>
 <td valign="top">
 
 No
 
-
-
 </td>
 <td valign="top">
 
 Defines if the UoM is shown in the column. If set to `true`, the UoM is displayed after the actual value. The default value is `true`.
-
-
 
 </td>
 </tr>
@@ -1263,28 +1009,20 @@ Defines if the UoM is shown in the column. If set to `true`, the UoM is displaye
 
 `scale` 
 
-
-
 </td>
 <td valign="top">
 
 `integer` 
-
-
 
 </td>
 <td valign="top">
 
 No
 
-
-
 </td>
 <td valign="top">
 
 Property that is equivalent to the `scale` property of the internal numeric type. It applies a fixed number of decimals to all cells within the currency column regardless of the corresponding UoM.
-
-
 
 </td>
 </tr>
@@ -1324,28 +1062,20 @@ The type `Enumeration` is used for mapping values to a particular key. This is u
 
 Additional Property
 
-
-
 </th>
 <th valign="top">
 
 Type
-
-
 
 </th>
 <th valign="top">
 
 Mandatory
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -1354,28 +1084,20 @@ Description
 
 `valueMap` 
 
-
-
 </td>
 <td valign="top">
 
 `object|map` 
-
-
 
 </td>
 <td valign="top">
 
 Yes
 
-
-
 </td>
 <td valign="top">
 
 Contains `object` as an associative array or `map`, which holds all the key value pairs that are used for mapping the raw data to an explicit value. The raw data is used as a key to look up the actual value.
-
-
 
 </td>
 </tr>
@@ -1426,28 +1148,20 @@ The type `Percentage` represents numeric values that are transformed into percen
 
 Additional Property
 
-
-
 </th>
 <th valign="top">
 
 Output Sample
-
-
 
 </th>
 <th valign="top">
 
 Type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -1456,28 +1170,20 @@ Description
 
 `scale` 
 
-
-
 </td>
 <td valign="top">
 
 89.706%
-
-
 
 </td>
 <td valign="top">
 
 `number` 
 
-
-
 </td>
 <td valign="top">
 
 Sets a fixed number of decimals. The scale is applied to the whole column and displays exactly the number of decimals that is configured. If the actual value has fewer or more decimal places, it is filled with additional zeros or gets cut off to match the configured number of decimals. This property accepts a positive integer value. Negative values are treated like zero.
-
-
 
 </td>
 </tr>
@@ -1486,28 +1192,20 @@ Sets a fixed number of decimals. The scale is applied to the whole column and di
 
 `delimiter` 
 
-
-
 </td>
 <td valign="top">
 
 1,754%
-
-
 
 </td>
 <td valign="top">
 
 `boolean` 
 
-
-
 </td>
 <td valign="top">
 
 Specifies if the numeric value is shown in groups of thousands. If set to `true`, the thousands delimiter is shown. The delimiter is embedded in the number format and therefore requires a particular scale. If the `scale` property is not defined, this is treated like a scale of zero, and float values might get rounded down . Default value is `false`.
-
-
 
 </td>
 </tr>

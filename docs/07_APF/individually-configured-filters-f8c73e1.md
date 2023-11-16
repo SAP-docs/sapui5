@@ -35,14 +35,10 @@ Not all of the fields are relevant for each use case. For example, you can confi
 
 Field
 
-
-
 </th>
 <th valign="top">
 
 Explanation
-
-
 
 </th>
 </tr>
@@ -51,21 +47,15 @@ Explanation
 
 Basic Data
 
-
-
 </td>
 <td valign="top">
 
 Filter Title
 
-
-
 </td>
 <td valign="top">
 
 The label displayed for the filter at runtime.
-
-
 
 </td>
 </tr>
@@ -73,8 +63,6 @@ The label displayed for the filter at runtime.
 <td valign="top">
 
 Property
-
-
 
 </td>
 <td valign="top">
@@ -86,16 +74,12 @@ The property for which you want to configure a filter. The value help is populat
 
 The filter property is also used as the property displayed in the filter at runtime if an alias is not defined. Values that the user selects in the filter are handed over to the entire analysis path as filter.
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
 Do Not Show Filter at Runtime
-
-
 
 </td>
 <td valign="top">
@@ -114,14 +98,10 @@ Select this checkbox if you do not want to expose this filter at runtime. This i
 
 Selection Mode
 
-
-
 </td>
 <td valign="top">
 
 Choose whether you want to allow single selection or multiple selections.
-
-
 
 </td>
 </tr>
@@ -130,14 +110,10 @@ Choose whether you want to allow single selection or multiple selections.
 
 Default Values
 
-
-
 </td>
 <td valign="top">
 
 Default Value Mode
-
-
 
 </td>
 <td valign="top">
@@ -165,8 +141,6 @@ Select *Function* if you want to specify a JavaScript function that calculates t
 
 Default Values/Function
 
-
-
 </td>
 <td valign="top">
 
@@ -190,14 +164,10 @@ If you want to enter a date as a fixed default value, you can do so in one of th
 
 Value Help
 
-
-
 </td>
 <td valign="top">
 
 Value Help Mode
-
-
 
 </td>
 <td valign="top">
@@ -208,8 +178,6 @@ Select *Configured List of Values* if you want to enter the values for the value
 
 Select *None* if none of the above options applies. The values in the value help can then result only from default values or from a context that is handed over from outside, for example, from a Smart Business KPI tile.
 
-
-
 </td>
 </tr>
 <tr>
@@ -217,14 +185,10 @@ Select *None* if none of the above options applies. The values in the value help
 
 Values \(displayed only when you select *Configured List of Values*\)
 
-
-
 </td>
 <td valign="top">
 
 Manual list of values for the value help.
-
-
 
 </td>
 </tr>
@@ -233,8 +197,6 @@ Manual list of values for the value help.
 
 The following fields are displayed only when you select *Value Help Request*.
 
-
-
 </td>
 </tr>
 <tr>
@@ -242,14 +204,10 @@ The following fields are displayed only when you select *Value Help Request*.
 
 Service
 
-
-
 </td>
 <td valign="top">
 
 Path to the OData service root. If you use ABAP CDS views or BW OData queries, select a service from the value help, which lists all services available on SAP Gateway. If you use calculation views, you must enter the service manually.
-
-
 
 </td>
 </tr>
@@ -258,14 +216,10 @@ Path to the OData service root. If you use ABAP CDS views or BW OData queries, s
 
 Entity Set
 
-
-
 </td>
 <td valign="top">
 
 Entity set that corresponds to the data source, for example, the SAP HANA view. This field is mandatory if a service has been entered.
-
-
 
 </td>
 </tr>
@@ -274,16 +228,12 @@ Entity set that corresponds to the data source, for example, the SAP HANA view. 
 
 Properties
 
-
-
 </td>
 <td valign="top">
 
 The properties that determine the values in the value help. Select at least the filter property or the alias property. You can also select further properties. For example, you can select CompanyCode and Revenue so that the value help lists those company codes for which revenue exists.
 
 If you select both a filter property and the corresponding text property, for example, CompanyCode and CompanyCodeName, a concatenation of key and text is displayed in the filter at runtime and you can search for both of them.
-
-
 
 </td>
 </tr>
@@ -292,14 +242,10 @@ If you select both a filter property and the corresponding text property, for ex
 
 Alias
 
-
-
 </td>
 <td valign="top">
 
 The property displayed in the filter. It is used if the field name of the filter’s property is different in the value help request. If the property and the alias are the same, the alias can be omitted.
-
-
 
 </td>
 </tr>
@@ -308,14 +254,10 @@ The property displayed in the filter. It is used if the field name of the filter
 
 Context Resolution
 
-
-
 </td>
 <td valign="top">
 
 Use Value Help Request
-
-
 
 </td>
 <td valign="top">
@@ -326,16 +268,12 @@ When you select the checkbox, all context resolution fields are filled with the 
 
 If you change the value help entries, the context resolution entries are updated accordingly.
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
 Service
-
-
 
 </td>
 <td valign="top">
@@ -348,8 +286,6 @@ You should specify a context resolution request if there is a possibility that a
 
 If you did not specify a context resolution request, but a context resolution is necessary to be able to display the values in the value help, the filter for the corresponding property is not displayed on the UI. Instead, the context is applied to the analysis path in the background.
 
-
-
 </td>
 </tr>
 <tr>
@@ -357,14 +293,10 @@ If you did not specify a context resolution request, but a context resolution is
 
 Entity Set
 
-
-
 </td>
 <td valign="top">
 
 Entity set that corresponds to the data source, for example, the SAP HANA view.
-
-
 
 </td>
 </tr>
@@ -373,14 +305,10 @@ Entity set that corresponds to the data source, for example, the SAP HANA view.
 
 Properties
 
-
-
 </td>
 <td valign="top">
 
 The properties that determine which values are preselected in the filter. Select at least the filter property or the alias property. You can also select further properties.
-
-
 
 </td>
 </tr>

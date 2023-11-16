@@ -16,21 +16,15 @@ In this document, you can find the details of all the extension functions that c
 
 Method
 
-
-
 </th>
 <th valign="top">
 
 Supported Floorplans
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -39,8 +33,6 @@ Description
 
 `onInitSmartFilterBar` 
 
-
-
 </td>
 <td valign="top">
 
@@ -48,14 +40,10 @@ List Report
 
 Analytical List Page
 
-
-
 </td>
 <td valign="top">
 
 This extension function is called when the `SmartFilterbar` has been initialized.
-
-
 
 </td>
 </tr>
@@ -63,8 +51,6 @@ This extension function is called when the `SmartFilterbar` has been initialized
 <td valign="top">
 
 `provideExtensionAppStateData` 
-
-
 
 </td>
 <td valign="top">
@@ -74,8 +60,6 @@ List Report
 Analytical List Page
 
 Overview Page
-
-
 
 </td>
 <td valign="top">
@@ -89,16 +73,12 @@ Allow extensions to store their specific state. This means that the implementing
 
 Note that the call is ignored if `oAppState` is faulty.
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
 `restoreExtensionAppStateData` 
-
-
 
 </td>
 <td valign="top">
@@ -109,14 +89,10 @@ Analytical List Page
 
 Overview Page
 
-
-
 </td>
 <td valign="top">
 
 Enable extensions to restore their state based on a previously stored state. In this case, the implementing controller extension can call `fnGetAppStateData` \(`oControllerExtension`\) to retrieve the state information that is stored in the current state for this controller extension. The function returns undefined if no state or a faulty state was stored.
-
-
 
 </td>
 </tr>
@@ -124,8 +100,6 @@ Enable extensions to restore their state based on a previously stored state. In 
 <td valign="top">
 
 `ensureFieldsForSelect` 
-
-
 
 </td>
 <td valign="top">
@@ -135,8 +109,6 @@ List Report
 Analytical List Page
 
 Object Page
-
-
 
 </td>
 <td valign="top">
@@ -161,8 +133,6 @@ For each custom field the extension must call `fnEnsureSelectionProperty` \(`oCo
 
 `addFilters` 
 
-
-
 </td>
 <td valign="top">
 
@@ -173,8 +143,6 @@ Analytical List Page
 Object Page
 
 Overview Page
-
-
 
 </td>
 <td valign="top">
@@ -197,14 +165,10 @@ For each filter the extension must call `fnAddFilter` \(`oControllerExtension`, 
 
 `provideExtensionStateData` 
 
-
-
 </td>
 <td valign="top">
 
 Object Page
-
-
 
 </td>
 <td valign="top">
@@ -222,8 +186,6 @@ Allow extensions to store their specific state. The implementing controller exte
 
 The values for the lifecycle object parameters \(Page, Permanent etc.\) are provided in extension implementation.
 
-
-
 </td>
 </tr>
 <tr>
@@ -231,14 +193,10 @@ The values for the lifecycle object parameters \(Page, Permanent etc.\) are prov
 
 `restoreExtensionStateData` 
 
-
-
 </td>
 <td valign="top">
 
 Object Page
-
-
 
 </td>
 <td valign="top">
@@ -249,8 +207,6 @@ In this case, the implementing controller extension can call `fnGetExtensionStat
 
 `bIsSameAsLast` is a boolean. The true value indicates that the state cannot be adapted, since view remains as it was left the last time.
 
-
-
 </td>
 </tr>
 <tr>
@@ -258,14 +214,10 @@ In this case, the implementing controller extension can call `fnGetExtensionStat
 
 `provideStartupExtension` 
 
-
-
 </td>
 <td valign="top">
 
 Overview Page
-
-
 
 </td>
 <td valign="top">
@@ -274,8 +226,6 @@ Modifies the selection variant that is to be set to the filter bar.
 
 The parameter, while calling this function, is a reference to the custom selection variant expected by the overview page.
 
-
-
 </td>
 </tr>
 <tr>
@@ -283,14 +233,10 @@ The parameter, while calling this function, is a reference to the custom selecti
 
 `provideExtensionNavigation` 
 
-
-
 </td>
 <td valign="top">
 
 Overview Page
-
-
 
 </td>
 <td valign="top">
@@ -299,8 +245,6 @@ This function is used to get a new or modified custom navigation entry to the co
 
 This function is called with the standard navigation entry details \(if present\) for a particular card and context.
 
-
-
 </td>
 </tr>
 <tr>
@@ -308,14 +252,10 @@ This function is called with the standard navigation entry details \(if present\
 
 `provideCustomActionPress` 
 
-
-
 </td>
 <td valign="top">
 
 Overview Page
-
-
 
 </td>
 <td valign="top">
@@ -324,8 +264,6 @@ This function captures the press event and returns the event corresponding to it
 
 The method provided to this function is defined in the controller extension.
 
-
-
 </td>
 </tr>
 <tr>
@@ -333,14 +271,10 @@ The method provided to this function is defined in the controller extension.
 
 `provideCustomParameter` 
 
-
-
 </td>
 <td valign="top">
 
 Overview Page
-
-
 
 </td>
 <td valign="top">
@@ -348,8 +282,6 @@ Overview Page
 This function takes the name or key corresponding to a method that is then returned. The method that is returned resolves to give the custom parameters.
 
 The method that returns is also defined in the extension controller.
-
-
 
 </td>
 </tr>

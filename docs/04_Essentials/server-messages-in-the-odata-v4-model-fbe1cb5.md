@@ -13,22 +13,16 @@ Messages transported via an OData V4 service response are parsed and reported to
 
 OData V4 Message
 
-
-
 </th>
 <th valign="top" align="center">
 
 UI5 Message
-
-
 
 </th>
 <th valign="top" align="center">
 
 Details
 
-
-
 </th>
 </tr>
 <tr>
@@ -36,22 +30,16 @@ Details
 
 `code`
 
-
-
 </td>
 <td valign="top">
 
 `code`
-
-
 
 </td>
 <td valign="top">
 
 language-independent message code
 
-
-
 </td>
 </tr>
 <tr>
@@ -59,22 +47,16 @@ language-independent message code
 
 `message`
 
-
-
 </td>
 <td valign="top">
 
 `message`
-
-
 
 </td>
 <td valign="top">
 
 language-dependent message text
 
-
-
 </td>
 </tr>
 <tr>
@@ -82,14 +64,10 @@ language-dependent message text
 
 `target`
 
-
-
 </td>
 <td valign="top" rowspan="2">
 
 `target`
-
-
 
 </td>
 <td valign="top" rowspan="2">
@@ -106,8 +84,6 @@ language-dependent message text
 
 `additionalTargets`\*
 
-
-
 </td>
 </tr>
 <tr>
@@ -115,21 +91,15 @@ language-dependent message text
 
 `transition`
 
-
-
 </td>
 <td valign="top">
 
 `persistent`
 
-
-
 </td>
 <td valign="top">
 
 manages the message lifecycle
-
-
 
 </td>
 </tr>
@@ -138,21 +108,15 @@ manages the message lifecycle
 
 `numericSeverity`\*
 
-
-
 </td>
 <td valign="top">
 
 `type`
 
-
-
 </td>
 <td valign="top">
 
 classification of end-user messages
-
-
 
 </td>
 </tr>
@@ -161,27 +125,21 @@ classification of end-user messages
 
 `longtextURL`\*
 
-
-
 </td>
 <td valign="top">
 
 `descriptionURL`
-
-
 
 </td>
 <td valign="top">
 
 a property of `Edm.String` type, which is nullable
 
-
-
 </td>
 </tr>
 </table>
 
-\*\) In the error response this is represented by an instance annotation in the SAP Common vocabulary, [com.sap.vocabularies.Common.v1](https://github.com/SAP/odata-vocabularies/blob/master/vocabularies/Common.md)
+\*\) In the error response this is represented by an instance annotation in the SAP Common vocabulary, [com.sap.vocabularies.Common.v1](https://github.com/SAP/odata-vocabularies/blob/-/vocabularies/Common.md)
 
 End user messages contain the following information:
 
@@ -195,7 +153,7 @@ End user messages contain the following information:
 
 -   `transition`
 
--   `numericSeverity` - specifies a m – classification of end user messages; allowed values: 1 \(success\), 2 \(info\), 3 \(warning\), 4 \(error\); `numericSeverity` is mapped to the specific `sap.ui.core.MessageType`
+-   `numericSeverity` – classification of end user messages; allowed values: 1 \(success\), 2 \(info\), 3 \(warning\), 4 \(error\); `numericSeverity` is mapped to the specific `sap.ui.core.MessageType`
 
 -   `longtextUrl` – optional; is omitted if there is no long text available for the corresponding message.
 
@@ -240,21 +198,15 @@ Three different types of messages result from the possible combinations of the s
 
  
 
-
-
 </th>
 <th valign="top">
 
 State
 
-
-
 </th>
 <th valign="top">
 
 Transition
-
-
 
 </th>
 </tr>
@@ -263,21 +215,15 @@ Transition
 
 Unbound
 
-
-
 </td>
 <td valign="top">
 
 ![](images/ICON_CANCEL_38d78b4.png)
 
-
-
 </td>
 <td valign="top">
 
 ![](images/ICON_OKAY_0d13ebb.png)
-
-
 
 </td>
 </tr>
@@ -286,21 +232,15 @@ Unbound
 
 Bound
 
-
-
 </td>
 <td valign="top">
 
 ![](images/ICON_OKAY_0d13ebb.png)
 
-
-
 </td>
 <td valign="top">
 
 ![](images/ICON_OKAY_0d13ebb.png)
-
-
 
 </td>
 </tr>
@@ -494,21 +434,15 @@ The table shows the supported severity values and their mapping to the specific 
 
 numericSeverity
 
-
-
 </th>
 <th valign="top">
 
 Type
 
-
-
 </th>
 <th valign="top">
 
 Comment
-
-
 
 </th>
 </tr>
@@ -517,21 +451,15 @@ Comment
 
 1
 
-
-
 </td>
 <td valign="top">
 
 `sap.ui.core.MessageType.Success`
 
-
-
 </td>
 <td valign="top">
 
 Positive feedback - no action required
-
-
 
 </td>
 </tr>
@@ -540,21 +468,15 @@ Positive feedback - no action required
 
 2
 
-
-
 </td>
 <td valign="top">
 
 `sap.ui.core.MessageType.Information`
 
-
-
 </td>
 <td valign="top">
 
 Additional information - no action required
-
-
 
 </td>
 </tr>
@@ -563,21 +485,15 @@ Additional information - no action required
 
 3
 
-
-
 </td>
 <td valign="top">
 
 `sap.ui.core.MessageType.Warning`
 
-
-
 </td>
 <td valign="top">
 
 Warning - action may be required
-
-
 
 </td>
 </tr>
@@ -586,21 +502,15 @@ Warning - action may be required
 
 4
 
-
-
 </td>
 <td valign="top">
 
 `sap.ui.core.MessageType.Error`
 
-
-
 </td>
 <td valign="top">
 
 Error - action is required
-
-
 
 </td>
 </tr>
@@ -686,5 +596,5 @@ Let `messageModel` be the named message model. A table row with messages can be 
 **Related Information**  
 
 
-[https://github.com/SAP/odata-vocabularies/blob/master/vocabularies/Common.md](https://github.com/SAP/odata-vocabularies/blob/master/vocabularies/Common.md)
+[https://github.com/SAP/odata-vocabularies/blob/-/vocabularies/Common.md](https://github.com/SAP/odata-vocabularies/blob/-/vocabularies/Common.md)
 

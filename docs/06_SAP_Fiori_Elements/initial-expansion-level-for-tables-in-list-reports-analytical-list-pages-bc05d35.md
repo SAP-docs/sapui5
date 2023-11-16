@@ -22,14 +22,10 @@ You can set the number of expanded levels for tables in List Reports and Analyti
 
 Table Type
 
-
-
 </th>
 <th valign="top">
 
 Expected Behavior
-
-
 
 </th>
 </tr>
@@ -38,14 +34,10 @@ Expected Behavior
 
 Analytical Table
 
-
-
 </td>
 <td valign="top">
 
 The default `initialExpansionLevel` is 0.
-
-
 
 </td>
 </tr>
@@ -54,14 +46,10 @@ The default `initialExpansionLevel` is 0.
 
 Responsive Table
 
-
-
 </td>
 <td valign="top">
 
 Irrespective of the value of the `initialExpansionLevel`, the responsive table expands to one level. The groups are always expanded and you can group using table settings.
-
-
 
 </td>
 </tr>
@@ -70,16 +58,12 @@ Irrespective of the value of the `initialExpansionLevel`, the responsive table e
 
 Tree Table
 
-
-
 </td>
 <td valign="top">
 
 In List Reports, the first level is automatically expanded.
 
 In Analytical List Pages, the default `initialExpansionLevel` is 0.
-
-
 
 </td>
 </tr>

@@ -12,7 +12,7 @@ Sometimes the predefined types of SAPUI5 are not flexible enough and you want to
   
 **The price is now formatted according to its number**
 
-![](images/UI5_Walkthrough_Step_21_636b700.png "The price is now formatted according to its number")
+![A list of invoices is displayed below the panel.](images/UI5_Walkthrough_Step_21_636b700.png "The price is now formatted according to its number")
 
 
 

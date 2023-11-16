@@ -31,14 +31,10 @@ The following configurations are supported for entity sets:
 
 EntitySet1: self
 
-
-
 </td>
 <td valign="top">
 
 Only <EntitySet1\> is to be refreshed
-
-
 
 </td>
 </tr>
@@ -47,14 +43,10 @@ Only <EntitySet1\> is to be refreshed
 
 EntitySet2: `includingDependents` 
 
-
-
 </td>
 <td valign="top">
 
 Refresh <EntitySet2\> along with all its dependents \(navigation property\)
-
-
 
 </td>
 </tr>

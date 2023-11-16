@@ -84,7 +84,7 @@ For more details, see the *API Reference* for [`Opa5`](https://ui5.sap.com/#/api
 
 ## URL Parameters
 
-As of version 1.48, OPA supports overwriting global configuration parameters for a single execution from URL. On startup, OPA parses `window.location.href` and extracts all search parameters starting with 'opa'. The prefix is removed and the resulting string has its first character changed to lower case. For example, the `?opaExecutionDelay=600` string in a URL sets the value of `executionDelay` to 600 ms. All OPA config parameters of primitive string and number types that are documented in `Opa.resetConfig()` could be overwritten.
+As of version 1.48, OPA supports overwriting global configuration parameters for a single execution from URL. On startup, OPA parses `window.location.search` and extracts all search parameters starting with 'opa'. The prefix is removed and the resulting string has its first character changed to lower case. For example, the `?opaExecutionDelay=600` string in a URL sets the value of `executionDelay` to 600 ms. All OPA config parameters of primitive string and number types that are documented in `Opa.resetConfig()` could be overwritten.
 
 All URL parameters that do not start with 'opa' are considered relevant for the application being tested and are passed to it. Application parameters from a URL always overwrite the application parameters provided in `Opa5.extendConfig()`.
 
@@ -147,28 +147,20 @@ There are OPA5 rules that limit the ways you can use busy controls. Some OPA5 fe
 
 `OPA5.config` `autoWait` 
 
-
-
 </th>
 <th valign="top" align="center">
 
 `waitFor` actions
-
-
 
 </th>
 <th valign="top" align="center">
 
 `waitFor` `autoWait` 
 
-
-
 </th>
 <th valign="top" align="center">
 
 verify busy control
-
-
 
 </th>
 </tr>
@@ -177,28 +169,20 @@ verify busy control
 
 ✓
 
-
-
 </td>
 <td valign="top" align="center">
 
 ✓
-
-
 
 </td>
 <td valign="top" align="center">
 
 any
 
-
-
 </td>
 <td valign="top" align="center">
 
 X
-
-
 
 </td>
 </tr>
@@ -207,28 +191,20 @@ X
 
 ✓
 
-
-
 </td>
 <td valign="top" align="center">
 
 X
-
-
 
 </td>
 <td valign="top" align="center">
 
 true / not modified
 
-
-
 </td>
 <td valign="top" align="center">
 
 X
-
-
 
 </td>
 </tr>
@@ -237,28 +213,20 @@ X
 
 ✓
 
-
-
 </td>
 <td valign="top" align="center">
 
 X
-
-
 
 </td>
 <td valign="top" align="center">
 
 false
 
-
-
 </td>
 <td valign="top" align="center">
 
 ✓
-
-
 
 </td>
 </tr>
@@ -267,28 +235,20 @@ false
 
 X
 
-
-
 </td>
 <td valign="top" align="center">
 
 ✓
-
-
 
 </td>
 <td valign="top" align="center">
 
 any
 
-
-
 </td>
 <td valign="top" align="center">
 
 X
-
-
 
 </td>
 </tr>
@@ -297,28 +257,20 @@ X
 
 X
 
-
-
 </td>
 <td valign="top" align="center">
 
 X
-
-
 
 </td>
 <td valign="top" align="center">
 
 false / not modified
 
-
-
 </td>
 <td valign="top" align="center">
 
 ✓
-
-
 
 </td>
 </tr>
@@ -327,28 +279,20 @@ false / not modified
 
 X
 
-
-
 </td>
 <td valign="top" align="center">
 
 X
-
-
 
 </td>
 <td valign="top" align="center">
 
 true
 
-
-
 </td>
 <td valign="top" align="center">
 
 X
-
-
 
 </td>
 </tr>

@@ -15,49 +15,35 @@ With this release SAPUI5 is upgraded from version 1.77 to 1.78.
 
 Version
 
-
-
 </th>
 <th valign="top">
 
 Type
-
-
 
 </th>
 <th valign="top">
 
 Category
 
-
-
 </th>
 <th valign="top">
 
 Title
-
-
 
 </th>
 <th valign="top">
 
 Description
 
-
-
 </th>
 <th valign="top">
 
 Action
 
-
-
 </th>
 <th valign="top">
 
 Available as of
-
-
 
 </th>
 </tr>
@@ -66,28 +52,20 @@ Available as of
 
 1.78 
 
-
-
 </td>
 <td valign="top">
 
 New 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **Special Messaging Support for Visually Impaired Users \(Experimental\)** 
-
-
 
 </td>
 <td valign="top">
@@ -98,21 +76,15 @@ We have introduced a way to programmatically expose dynamic content changes, tha
 
 <sub>New•Feature•Info Only•1.78</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only
 
-
-
 </td>
 <td valign="top">
 
 2020-05-21
-
-
 
 </td>
 </tr>
@@ -121,28 +93,20 @@ Info Only
 
 1.78 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **SAPUI5 OData V2 Model** 
-
-
 
 </td>
 <td valign="top">
@@ -159,21 +123,15 @@ The new version of the SAPUI5 OData V2 model introduces the following features:
 
 <sub>Changed•Feature•Info Only•1.78</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-05-21
-
-
 
 </td>
 </tr>
@@ -182,28 +140,20 @@ Info Only
 
 1.78 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **SAPUI5 OData V4 Model** 
-
-
 
 </td>
 <td valign="top">
@@ -223,21 +173,15 @@ For more information, see [OData V4 Model](../04_Essentials/odata-v4-model-5de13
 
 <sub>Changed•Feature•Info Only•1.78</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-05-21
-
-
 
 </td>
 </tr>
@@ -246,28 +190,20 @@ Info Only
 
 1.78 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **Screen Reader Support Enhancement** 
-
-
 
 </td>
 <td valign="top">
@@ -278,21 +214,15 @@ We have removed the `application` role from the body of SAPUI5 apps. Following t
 
 <sub>Changed•Feature•Info Only•1.78</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-05-21
-
-
 
 </td>
 </tr>
@@ -301,28 +231,20 @@ Info Only
 
 1.78 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **Spreadsheet Export** 
-
-
 
 </td>
 <td valign="top">
@@ -333,21 +255,15 @@ Fiscal date formats can now be used during the export. The input format for the 
 
 <sub>Changed•Feature•Info Only•1.78</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-05-21
-
-
 
 </td>
 </tr>
@@ -356,28 +272,20 @@ Info Only
 
 1.78 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.ColorPalette`** 
-
-
 
 </td>
 <td valign="top">
@@ -388,21 +296,15 @@ We have added a new `setColorPickerSelectedColor` setter, which enables develope
 
 <sub>Changed•Control•Info Only•1.78</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-05-21
-
-
 
 </td>
 </tr>
@@ -411,28 +313,20 @@ Info Only
 
 1.78 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.IconTabBar`** 
-
-
 
 </td>
 <td valign="top">
@@ -448,21 +342,15 @@ Control
 
 <sub>Changed•Control•Info Only•1.78</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-05-21
-
-
 
 </td>
 </tr>
@@ -471,28 +359,20 @@ Info Only
 
 1.78 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.InputBase` \(Experimental\)** 
-
-
 
 </td>
 <td valign="top">
@@ -503,21 +383,15 @@ The class now supports the possibility to add links as part of the `ValueStateTe
 
 <sub>Changed•Control•Info Only•1.78</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-05-21
-
-
 
 </td>
 </tr>
@@ -526,28 +400,20 @@ Info Only
 
 1.78 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.List`, `sap.m.Table`** 
-
-
 
 </td>
 <td valign="top">
@@ -558,21 +424,15 @@ The `List` and `Table` controls now provide a method to scroll the list of items
 
 <sub>Changed•Control•Info Only•1.78</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-05-21
-
-
 
 </td>
 </tr>
@@ -581,28 +441,20 @@ Info Only
 
 1.78 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.MultiComboBox`, `sap.m.MultiInput`** 
-
-
 
 </td>
 <td valign="top">
@@ -613,21 +465,15 @@ When the `sap.m.MultiComboBox` and `sap.m.MultiInput` controls contain only one 
 
 <sub>Changed•Control•Info Only•1.78</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-05-21
-
-
 
 </td>
 </tr>
@@ -636,28 +482,20 @@ Info Only
 
 1.78 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.comp.smartfilterbar.SmartFilterBar`, `sap.ui.comp.smartfield.SmartField`** 
-
-
 
 </td>
 <td valign="top">
@@ -671,21 +509,15 @@ Control
 
 <sub>Changed•Control•Info Only•1.78</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-05-21
-
-
 
 </td>
 </tr>
@@ -694,28 +526,20 @@ Info Only
 
 1.78 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.comp.smartfilterbar.SmartFilterBar`** 
-
-
 
 </td>
 <td valign="top">
@@ -729,21 +553,15 @@ Control
 
 <sub>Changed•Control•Info Only•1.78</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-05-21
-
-
 
 </td>
 </tr>
@@ -752,28 +570,20 @@ Info Only
 
 1.78 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.comp.ValueHelpDialog`** 
-
-
 
 </td>
 <td valign="top">
@@ -784,21 +594,15 @@ When the `ValueHelpDialog` of `SmartField` or `SmartFilterBar` is open, the tabl
 
 <sub>Changed•Control•Info Only•1.78</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-05-21
-
-
 
 </td>
 </tr>
@@ -807,28 +611,20 @@ Info Only
 
 1.78 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.layout.Splitter`** 
-
-
 
 </td>
 <td valign="top">
@@ -842,21 +638,15 @@ Control
 
 <sub>Changed•Control•Info Only•1.78</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-05-21
-
-
 
 </td>
 </tr>
@@ -865,28 +655,20 @@ Info Only
 
 1.78 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 SAP Fiori Elements 
 
-
-
 </td>
 <td valign="top">
 
 **SAP Fiori Elements** 
-
-
 
 </td>
 <td valign="top">
@@ -908,21 +690,15 @@ SAP Fiori Elements
 
 <sub>Changed•SAP Fiori Elements•Info Only•1.78</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2020-05-21
-
-
 
 </td>
 </tr>
@@ -930,6 +706,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.118](what-s-new-in-sapui5-1-118-3eecbde.md "With this release SAPUI5 is upgraded from version 1.117 to 1.118.")
 
 [What's New in SAPUI5 1.117](what-s-new-in-sapui5-1-117-029d3b4.md "With this release SAPUI5 is upgraded from version 1.116 to 1.117.")
 

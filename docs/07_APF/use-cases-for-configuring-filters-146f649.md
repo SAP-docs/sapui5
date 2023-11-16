@@ -17,35 +17,25 @@ The following table compares the typical use cases derived from these options an
 
  
 
-
-
 </th>
 <th valign="top">
 
 Use Case 1: Filter Independent of Smart Business
-
-
 
 </th>
 <th valign="top">
 
 Use Case 2: Filter Determined by Smart Business Context
 
-
-
 </th>
 <th valign="top">
 
 Use Case 3: Filter with Default Values Determined by Smart Business Context
 
-
-
 </th>
 <th valign="top">
 
 Use Case 4: No Filter
-
-
 
 </th>
 </tr>
@@ -54,35 +44,25 @@ Use Case 4: No Filter
 
 **Filter configured?**
 
+</td>
+<td valign="top">
 
+Yes
 
 </td>
 <td valign="top">
 
 Yes
 
-
-
 </td>
 <td valign="top">
 
 Yes
-
-
-
-</td>
-<td valign="top">
-
-Yes
-
-
 
 </td>
 <td valign="top">
 
 No
-
-
 
 </td>
 </tr>
@@ -91,35 +71,25 @@ No
 
 **Value help request configured?**
 
-
-
 </td>
 <td valign="top">
 
 Yes
-
-
 
 </td>
 <td valign="top">
 
 No
 
-
-
 </td>
 <td valign="top">
 
 Yes
 
-
-
 </td>
 <td valign="top">
 
 No
-
-
 
 </td>
 </tr>
@@ -128,35 +98,25 @@ No
 
 **Filter passed with Smart Business context?**
 
-
-
 </td>
 <td valign="top">
 
 No
 
+</td>
+<td valign="top">
 
+Yes
 
 </td>
 <td valign="top">
 
 Yes
 
-
-
 </td>
 <td valign="top">
 
 Yes
-
-
-
-</td>
-<td valign="top">
-
-Yes
-
-
 
 </td>
 </tr>

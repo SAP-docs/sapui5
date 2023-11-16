@@ -30,15 +30,11 @@ Applications benefit from the configuration of the SAPUI5 module loader to work 
     <th valign="top" align="center">
 
     Expression Binding\(s\)
-
-
     
     </th>
     <th valign="top" align="center">
 
     Resource to be Preloaded
-
-
     
     </th>
     </tr>
@@ -46,15 +42,11 @@ Applications benefit from the configuration of the SAPUI5 module loader to work 
     <td valign="top">
     
     "odata.compare", e.g. `value="{=odata.compare(2,3)}"` 
-
-
     
     </td>
     <td valign="top">
     
     `sap.ui.model.odata.v4.ODataUtils`
-
-
     
     </td>
     </tr>
@@ -62,15 +54,11 @@ Applications benefit from the configuration of the SAPUI5 module loader to work 
     <td valign="top">
     
     "odata.uriEncode", e.g. `value="{=odata.uriEncode('foo', 'Edm.String')}"` 
-
-
     
     </td>
     <td valign="top">
     
     `sap.ui.model.odata.ODataUtils`
-
-
     
     </td>
     </tr>
@@ -78,15 +66,11 @@ Applications benefit from the configuration of the SAPUI5 module loader to work 
     <td valign="top">
     
     "odata.fillUriTemplate", e.g. `value="{=odata.fillUriTemplate('http://foo/{t},{m}', {'t': ${/mail}, 'm': ${/tel}})}"` 
-
-
     
     </td>
     <td valign="top">
     
     `sap.ui.thirdparty.URITemplate`
-
-
     
     </td>
     </tr>

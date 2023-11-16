@@ -11,14 +11,10 @@ Modification-free, cost-saving, easy to use, and performant: Discover the new fl
 
 Flexibility is key! Enterprise software must adapt to rapidly changing environments. For example, customers need their apps to fit their processes without long IT projects to adapt them, and cloud providers want to run the same software for everyone to reduce TCO. You think adapting the user interface of SAP Fiori apps \(for example, by adding, hiding or rearranging fields\) is a complex process? Think again! SAPUI5 flexibility features allow upgrade-safe and modification-free UI changes on different levels \(for example, at customer side\) that can be performed by different users \(end users, key users, and developers\).
 
-
-
 </td>
 <td valign="top">
 
 ![Examples for UI adaptation: dragging and dropping groups of fields as well as adding and renaming fields](images/SAPUI5_Flexibility_Services_-_RTA_3e54c0d.gif)
-
-
 
 </td>
 </tr>

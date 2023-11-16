@@ -124,21 +124,15 @@ You can define your custom pages by implementing an XML view and using the follo
 
 Property Name
 
-
-
 </th>
 <th valign="top">
 
 Supported Values
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -147,21 +141,15 @@ Description
 
 type
 
-
-
 </td>
 <td valign="top">
 
 "Component"
 
-
-
 </td>
 <td valign="top">
 
 Type of the custom page, where the usage of `"Component"` ensures the support of features provided with the flexible programming model.
-
-
 
 </td>
 </tr>
@@ -170,21 +158,15 @@ Type of the custom page, where the usage of `"Component"` ensures the support of
 
 id
 
-
-
 </td>
 <td valign="top">
 
 "<unique\_page\_id\>"
 
-
-
 </td>
 <td valign="top">
 
 Unique page identifier
-
-
 
 </td>
 </tr>
@@ -193,21 +175,15 @@ Unique page identifier
 
 name
 
-
-
 </td>
 <td valign="top">
 
 "sap.fe.core.fpm"
 
-
-
 </td>
 <td valign="top">
 
 The usage of `"sap.fe.core.fpm"` ensures the support of features provided with the flexible programming model.
-
-
 
 </td>
 </tr>
@@ -216,21 +192,15 @@ The usage of `"sap.fe.core.fpm"` ensures the support of features provided with t
 
 viewName
 
-
-
 </td>
 <td valign="top">
 
 "<name\_of\_custom\_xml\_view\>"
 
-
-
 </td>
 <td valign="top">
 
 The name contains `sap.app.id` as a prefix, followed by the path in the app/webapp folder and the name of the XML view.
-
-
 
 </td>
 </tr>
@@ -239,21 +209,15 @@ The name contains `sap.app.id` as a prefix, followed by the path in the app/weba
 
 entitySet
 
-
-
 </td>
 <td valign="top">
 
 "<name\_of\_entity\_set\>"
 
-
-
 </td>
 <td valign="top">
 
 The name of the entity set.
-
-
 
 </td>
 </tr>

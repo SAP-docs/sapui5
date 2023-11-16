@@ -95,28 +95,20 @@ Follow the guidelines mentioned in the following table for adding `DataFields` a
 
 Standard List Item Property
 
-
-
 </th>
 <th valign="top">
 
 Entity Annotation
-
-
 
 </th>
 <th valign="top">
 
 Location of the Property on the List Item UI
 
-
-
 </th>
 <th valign="top">
 
 Additional Comments
-
-
 
 </th>
 </tr>
@@ -125,28 +117,20 @@ Additional Comments
 
 `title`
 
-
-
 </td>
 <td valign="top">
 
 First data field of `UI.LineItem`
-
-
 
 </td>
 <td valign="top">
 
 Top left
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -155,28 +139,20 @@ Top left
 
 `description`
 
-
-
 </td>
 <td valign="top">
 
 Second data field of `UI.LineItem`
-
-
 
 </td>
 <td valign="top">
 
 Bottom left
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -185,28 +161,20 @@ Bottom left
 
 `info`
 
-
-
 </td>
 <td valign="top">
 
 First data point
-
-
 
 </td>
 <td valign="top">
 
 Top right
 
-
-
 </td>
 <td valign="top">
 
 If no data point exists, then the next data field is used, that is, the third data field.
-
-
 
 </td>
 </tr>
@@ -215,28 +183,20 @@ If no data point exists, then the next data field is used, that is, the third da
 
 `infoState`
 
-
-
 </td>
 <td valign="top">
 
 First data point or criticality, or first data point or `CriticalityCalculation` 
-
-
 
 </td>
 <td valign="top">
 
 Color
 
-
-
 </td>
 <td valign="top">
 
 If no data point exists, then the default state is set to `None`.
-
-
 
 </td>
 </tr>
@@ -245,28 +205,20 @@ If no data point exists, then the default state is set to `None`.
 
 `icon`
 
-
-
 </td>
 <td valign="top">
 
 First data field marked with the `UI.IsImageURL` annotation
-
-
 
 </td>
 <td valign="top">
 
  
 
-
-
 </td>
 <td valign="top">
 
 The order of this data field is not important. It can be placed anywhere under the `UI.LineItem`.
-
-
 
 </td>
 </tr>
@@ -367,28 +319,20 @@ Follow the guidelines in the following table for adding `DataFields` and `DataPo
 
 Object List Item Property
 
-
-
 </th>
 <th valign="top">
 
 Entity Annotation
-
-
 
 </th>
 <th valign="top">
 
 Location of the Property on the List Item UI
 
-
-
 </th>
 <th valign="top">
 
 Additional Comments
-
-
 
 </th>
 </tr>
@@ -397,28 +341,20 @@ Additional Comments
 
 `title`
 
-
-
 </td>
 <td valign="top">
 
 First data field of `UI.LineItem`
-
-
 
 </td>
 <td valign="top">
 
 Top left
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -427,28 +363,20 @@ Top left
 
 First`ObjectAttribute`\(under the attributes aggregation\)
 
-
-
 </td>
 <td valign="top">
 
 Second data field of `UI.LineItem`
-
-
 
 </td>
 <td valign="top">
 
 Middle left
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -457,28 +385,20 @@ Middle left
 
 `number`
 
-
-
 </td>
 <td valign="top">
 
 First data point
-
-
 
 </td>
 <td valign="top">
 
 Top right
 
-
-
 </td>
 <td valign="top">
 
 If no data point exists, then the next data field is used, that is, the third data field.
-
-
 
 </td>
 </tr>
@@ -487,28 +407,20 @@ If no data point exists, then the next data field is used, that is, the third da
 
 `numberState`
 
-
-
 </td>
 <td valign="top">
 
 First data point or criticality, or first data point or `CriticalityCalculation` 
-
-
 
 </td>
 <td valign="top">
 
 Color
 
-
-
 </td>
 <td valign="top">
 
 If no data point exists, then the default state is set to `None`.
-
-
 
 </td>
 </tr>
@@ -517,28 +429,20 @@ If no data point exists, then the default state is set to `None`.
 
 `firstStatus`
 
-
-
 </td>
 <td valign="top">
 
 Second data point
-
-
 
 </td>
 <td valign="top">
 
 Middle right
 
-
-
 </td>
 <td valign="top">
 
 If no data point exists, then the next data field is used. That is, the third data field is used if one data point is provided, or the fourth data field is used if none is provided.
-
-
 
 </td>
 </tr>
@@ -547,28 +451,20 @@ If no data point exists, then the next data field is used. That is, the third da
 
 Second `ObjectAttribute`\(under the attributes aggregation\)
 
-
-
 </td>
 <td valign="top">
 
 Third data field
-
-
 
 </td>
 <td valign="top">
 
 Bottom left
 
-
-
 </td>
 <td valign="top">
 
 If the third data field is already used, the next available data field is used. For example, the fifth data field is used if no data points were provided, or the fourth data field is used if only one data point was provided.
-
-
 
 </td>
 </tr>
@@ -577,28 +473,20 @@ If the third data field is already used, the next available data field is used. 
 
 `secondStatus`
 
-
-
 </td>
 <td valign="top">
 
 Third data point
-
-
 
 </td>
 <td valign="top">
 
 Bottom right
 
-
-
 </td>
 <td valign="top">
 
 If no data points exist, the next data field is used. That is, the fourth data field is used if two data points were provided, or the fifth data field is used if only one data point was provided, or sixth data field if none is provided.
-
-
 
 </td>
 </tr>

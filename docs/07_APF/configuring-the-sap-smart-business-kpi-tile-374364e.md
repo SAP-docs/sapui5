@@ -24,14 +24,10 @@ You can create a KPI tile for the following use cases:
 
 Use Case
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -40,14 +36,10 @@ Description
 
 Shipped APF-based application – unchanged
 
-
-
 </td>
 <td valign="top">
 
 A shipped Business Server Pages \(BSP\) application that you use as is without making any changes.
-
-
 
 </td>
 </tr>
@@ -56,14 +48,10 @@ A shipped Business Server Pages \(BSP\) application that you use as is without m
 
 Shipped APF-based application – enhanced
 
-
-
 </td>
 <td valign="top">
 
 A shipped BSP application that you have enhanced, that is, you have imported the APF configuration and changed it using the APF Configuration Modeler.
-
-
 
 </td>
 </tr>
@@ -72,14 +60,10 @@ A shipped BSP application that you have enhanced, that is, you have imported the
 
 Generic runtime application
 
-
-
 </td>
 <td valign="top">
 
 The generic APF runtime application is used to execute an APF configuration that you created using the APF Configuration Modeler.
-
-
 
 </td>
 </tr>
@@ -88,16 +72,12 @@ The generic APF runtime application is used to execute an APF configuration that
 
 New application
 
-
-
 </td>
 <td valign="top">
 
 An application you have created using the APF Configuration Modeler without using the generic runtime application.
 
 This requires defining your own BSP application and target mapping.
-
-
 
 </td>
 </tr>
@@ -127,35 +107,25 @@ Depending on your use case, enter the following data:
 
  
 
-
-
 </th>
 <th valign="top">
 
 Shipped BSP Application - Unchanged
-
-
 
 </th>
 <th valign="top">
 
 Shipped BSP Application – Enhanced
 
-
-
 </th>
 <th valign="top">
 
 Generic Runtime Application
 
-
-
 </th>
 <th valign="top">
 
 New Application
-
-
 
 </th>
 </tr>
@@ -164,35 +134,25 @@ New Application
 
 **Semantic Object**
 
-
-
 </td>
 <td valign="top">
 
 As defined in target mapping of the application
 
-
-
 </td>
 <td valign="top">
 
 As defined in target mapping of the application
-
-
 
 </td>
 <td valign="top">
 
 Prefilled: FioriApplication
 
-
-
 </td>
 <td valign="top">
 
 As defined in your own target mapping
-
-
 
 </td>
 </tr>
@@ -201,35 +161,25 @@ As defined in your own target mapping
 
 **Action**
 
-
-
 </td>
 <td valign="top">
 
 As defined in target mapping of the application
 
-
-
 </td>
 <td valign="top">
 
 As defined in target mapping of the application
-
-
 
 </td>
 <td valign="top">
 
 Prefilled: executeAPFConfiguration
 
-
-
 </td>
 <td valign="top">
 
 As defined in your own target mapping
-
-
 
 </td>
 </tr>
@@ -238,35 +188,25 @@ As defined in your own target mapping
 
 **Configuration**
 
-
-
 </td>
 <td valign="top">
 
 Not applicable
 
+</td>
+<td valign="top">
 
+Select the configuration you want to launch
 
 </td>
 <td valign="top">
 
 Select the configuration you want to launch
 
-
-
 </td>
 <td valign="top">
 
 Select the configuration you want to launch
-
-
-
-</td>
-<td valign="top">
-
-Select the configuration you want to launch
-
-
 
 </td>
 </tr>
@@ -332,28 +272,20 @@ Depending on your use case, enter the following data:
 
  
 
-
-
 </th>
 <th valign="top">
 
 Shipped BSP Application – Enhanced
-
-
 
 </th>
 <th valign="top">
 
 Generic Runtime Application
 
-
-
 </th>
 <th valign="top">
 
 New Application
-
-
 
 </th>
 </tr>
@@ -362,28 +294,20 @@ New Application
 
 **Semantic Object**
 
-
-
 </td>
 <td valign="top">
 
 As defined in target mapping of the application
-
-
 
 </td>
 <td valign="top">
 
 `FioriApplication` \(automatically filled based on selected configuration\)
 
-
-
 </td>
 <td valign="top">
 
 As defined in your own target mapping
-
-
 
 </td>
 </tr>
@@ -392,28 +316,20 @@ As defined in your own target mapping
 
 **Action**
 
-
-
 </td>
 <td valign="top">
 
 As defined in target mapping of the application
-
-
 
 </td>
 <td valign="top">
 
 `executeAPFConfigurationS4HANA` or `executeAPFConfiguration`\(automatically filled based on selected configuration.\)
 
-
-
 </td>
 <td valign="top">
 
 As defined in your own target mapping
-
-
 
 </td>
 </tr>
@@ -422,28 +338,20 @@ As defined in your own target mapping
 
 **Configuration**
 
+</td>
+<td valign="top">
 
+Select the configuration you want to launch.
 
 </td>
 <td valign="top">
 
 Select the configuration you want to launch.
 
-
-
 </td>
 <td valign="top">
 
 Select the configuration you want to launch.
-
-
-
-</td>
-<td valign="top">
-
-Select the configuration you want to launch.
-
-
 
 </td>
 </tr>

@@ -58,14 +58,10 @@ You can display several optional indicators right after the title. They are cons
 
 Optional Indicator
 
-
-
 </th>
 <th valign="top">
 
 API Properties
-
-
 
 </th>
 </tr>
@@ -74,14 +70,10 @@ API Properties
 
 ![](images/Favorite_icon_7813cf4.png)*Favorite* 
 
-
-
 </td>
 <td valign="top">
 
 `markFavorite` 
-
-
 
 </td>
 </tr>
@@ -90,14 +82,10 @@ API Properties
 
 ![](images/Flagged_icon_4c5abbf.png)*Flagged* 
 
-
-
 </td>
 <td valign="top">
 
 `markFlagged` 
-
-
 
 </td>
 </tr>
@@ -106,14 +94,10 @@ API Properties
 
 ![](images/Locked_icon_52d023e.png)*Locked* 
 
-
-
 </td>
 <td valign="top">
 
 `markLocked` 
-
-
 
 </td>
 </tr>
@@ -122,14 +106,10 @@ API Properties
 
 ![](images/Unsaved_changes_icon_f89451a.png)*Unsaved changes* 
 
-
-
 </td>
 <td valign="top">
 
 `markChanges` 
-
-
 
 </td>
 </tr>
@@ -138,14 +118,10 @@ API Properties
 
 ![](images/Title_selector_icon_d7144c2.png)*Selector* 
 
-
-
 </td>
 <td valign="top">
 
 `showTitleSelector` 
-
-
 
 </td>
 </tr>

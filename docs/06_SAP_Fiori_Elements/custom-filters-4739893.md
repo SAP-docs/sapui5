@@ -18,15 +18,11 @@ Add custom filters to your overview page application. It provides the end users 
     <th valign="top">
 
     Property
-
-
     
     </th>
     <th valign="top">
 
     Description
-
-
     
     </th>
     </tr>
@@ -34,8 +30,6 @@ Add custom filters to your overview page application. It provides the end users 
     <td valign="top">
     
     `groupId` 
-
-
     
     </td>
     <td valign="top">
@@ -53,15 +47,11 @@ Add custom filters to your overview page application. It provides the end users 
     <td valign="top">
     
     `key` 
-
-
     
     </td>
     <td valign="top">
     
     Enter a property of an entity type to define the filter criteria.
-
-
     
     </td>
     </tr>
@@ -69,15 +59,11 @@ Add custom filters to your overview page application. It provides the end users 
     <td valign="top">
     
     `visibleInAdvancedArea` 
-
-
     
     </td>
     <td valign="top">
     
     Enable this property to view custom filters on the filter bar.
-
-
     
     </td>
     </tr>
@@ -85,15 +71,11 @@ Add custom filters to your overview page application. It provides the end users 
     <td valign="top">
     
     `Input id` 
-
-
     
     </td>
     <td valign="top">
     
     Enter a property of an entity type to define the input criteria.
-
-
     
     </td>
     </tr>

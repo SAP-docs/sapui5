@@ -44,21 +44,15 @@ Up to version 1.52, only `sap.uxap.ObjectPageHeader` could have been used to bui
 
 Header area
 
-
-
 </th>
 <th valign="top">
 
 `sap.uxap.ObjectPageLayout` aggregation
 
-
-
 </th>
 <th valign="top">
 
 App must provide:
-
-
 
 </th>
 </tr>
@@ -67,21 +61,15 @@ App must provide:
 
 Header Title
 
-
-
 </td>
 <td valign="top">
 
 `headerTitle` \(0..1\)
 
-
-
 </td>
 <td valign="top">
 
 An instance of the `sap.uxap.ObjectPageHeader` control
-
-
 
 </td>
 </tr>
@@ -90,14 +78,10 @@ An instance of the `sap.uxap.ObjectPageHeader` control
 
 Header Content
 
-
-
 </td>
 <td valign="top">
 
 `headerContent` \(0..n\)
-
-
 
 </td>
 <td valign="top">
@@ -130,21 +114,15 @@ As of version 1.52, a new `sap.uxap.ObjectPageDynamicHeaderTitle` control can be
 
 Header Area
 
-
-
 </th>
 <th valign="top">
 
 `sap.uxap.ObjectPageLayout` aggregation
 
-
-
 </th>
 <th valign="top">
 
 App Must Provide:
-
-
 
 </th>
 </tr>
@@ -153,21 +131,15 @@ App Must Provide:
 
 Header Title
 
-
-
 </td>
 <td valign="top">
 
 `headerTitle` \(0..1\)
 
-
-
 </td>
 <td valign="top">
 
 An instance of the `sap.uxap.ObjectPageDynamicHeaderTitle` control
-
-
 
 </td>
 </tr>
@@ -176,14 +148,10 @@ An instance of the `sap.uxap.ObjectPageDynamicHeaderTitle` control
 
 Header Content
 
-
-
 </td>
 <td valign="top">
 
 `headerContent` \(0..n\)
-
-
 
 </td>
 <td valign="top">

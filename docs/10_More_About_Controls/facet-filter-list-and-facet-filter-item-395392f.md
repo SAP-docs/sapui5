@@ -21,14 +21,10 @@ The following properties of `FacetFilterList` affect the display of lists in the
 
 Property
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -37,14 +33,10 @@ Description
 
 `title`
 
-
-
 </td>
 <td valign="top">
 
 Facet name
-
-
 
 </td>
 </tr>
@@ -53,16 +45,12 @@ Facet name
 
 `mode`
 
-
-
 </td>
 <td valign="top">
 
 Controls the selection mode for the list
 
 This property is overridden from `ListBase` and only allows `SingleSelectMaster` or `MultiSelect` settings. `MultiSelect` is the default: This setting displays the *All* checkbox above the filter list to allow the user to select all filters. This does not actually select individual filters to avoid performance overhead for lists with a large number of items.
-
-
 
 </td>
 </tr>
@@ -71,16 +59,12 @@ This property is overridden from `ListBase` and only allows `SingleSelectMaster`
 
 `sequence`
 
-
-
 </td>
 <td valign="top">
 
 Controls the order in which the facets are displayed in the toolbar
 
 Lists appear in the toolbar in ascending order according to sequence \(assuming left to right\). Lists with a sequence less than 0 are placed last, not before facets with sequence of zero. Only active lists are displayed regardless of sequence setting.
-
-
 
 </td>
 </tr>
@@ -89,14 +73,10 @@ Lists appear in the toolbar in ascending order according to sequence \(assuming 
 
 `active`
 
-
-
 </td>
 <td valign="top">
 
 Indicates if a facet filter list is active and should appear on the toolbar; this is only applicable for the simple type as all facet filter lists are active in the light type
-
-
 
 </td>
 </tr>
@@ -105,14 +85,10 @@ Indicates if a facet filter list is active and should appear on the toolbar; thi
 
 `allCount`
 
-
-
 </td>
 <td valign="top">
 
 The `allCount` value can be set to the number of filter matches in the target data set given the currently selected filters for the facet filter list.
-
-
 
 </td>
 </tr>
@@ -134,14 +110,10 @@ The `FacetFilterItem` control extends and supports all features of `sap.m.ListIt
 
 Property
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -150,14 +122,10 @@ Description
 
 `text`
 
-
-
 </td>
 <td valign="top">
 
 Filter item name
-
-
 
 </td>
 </tr>
@@ -166,16 +134,12 @@ Filter item name
 
 `key`
 
-
-
 </td>
 <td valign="top">
 
 Unique identifier of the filter item; used to filter the target data set
 
 If `key` is not set, `text` is used as the key value.
-
-
 
 </td>
 </tr>

@@ -17,7 +17,7 @@ We haven’t thought about testing our interaction with the app yet, so in this 
   
 **An OPA test opens the "Hello" dialog from step 16**
 
-![](images/UI5_Walkthrough_Step_28_250d5b9.png "An OPA test opens the "Hello" dialog from step 16")
+![The graphic has an explanatory text.](images/UI5_Walkthrough_Step_28_250d5b9.png "An OPA test opens the "Hello" dialog from step 16")
 
 
 
@@ -29,7 +29,7 @@ You can view and download all files at [Walkthrough - Step 28](https://ui5.sap.c
   
 **Folder Structure for this Step**
 
-![](images/SAPUI5_Walkthrough_Step_29_2_72406ab.png "Folder Structure for this Step")
+![The graphic has an explanatory text.](images/SAPUI5_Walkthrough_Step_29_2_72406ab.png "Folder Structure for this Step")
 
 We add a new folder `integration` below the `test` folder, where we put our new test cases. Page objects that help structuring such integration tests are put in the `pages` subfolder that we also create now.
 

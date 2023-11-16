@@ -55,14 +55,10 @@ The following table outlines what the Scene Tree button looks like in these diff
 
 Scene Tree button state
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -71,14 +67,10 @@ Description
 
 ![](images/Scene_Tree_button_-_Scene_Tree_displayed_e39d556.png)
 
-
-
 </td>
 <td valign="top">
 
 Scene Tree is shown \(this is the default state\).
-
-
 
 </td>
 </tr>
@@ -87,14 +79,10 @@ Scene Tree is shown \(this is the default state\).
 
 ![](images/Scene_Tree_button_-_Scene_Tree_hidden_4691ac6.png)
 
-
-
 </td>
 <td valign="top">
 
 Scene Tree is hidden.
-
-
 
 </td>
 </tr>
@@ -103,14 +91,10 @@ Scene Tree is hidden.
 
 ![](images/Scene_Tree_button_-_Scene_Tree_disabled_166d9b5.png)
 
-
-
 </td>
 <td valign="top">
 
 Scene Tree is disabled, or, if a 2D file is loaded into the Viewer application.
-
-
 
 </td>
 </tr>

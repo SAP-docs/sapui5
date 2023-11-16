@@ -23,11 +23,7 @@ We start with an initial app that simply retrieves data from an OData V4 service
 > 
 > You can view and download the samples for all steps in the Demo Kit at [OData V4](https://ui5.sap.com/#/entity/sap.ui.core.tutorial.odatav4). Depending on your development environment you might have to adjust resource paths and configuration entries.
 > 
-> For more information, check the following sections of the tutorial overview page \(see [Get Started: Setup, Tutorials, and Demo Apps](get-started-setup-tutorials-and-demo-apps-8b49fc1.md)\):
-> 
-> -   [Downloading Code for a Tutorial Step](get-started-setup-tutorials-and-demo-apps-8b49fc1.md#loio8b49fc198bf04b2d9800fc37fecbb218__tutorials_download)
-> 
-> -   [Adapting Code to Your Development Environment](get-started-setup-tutorials-and-demo-apps-8b49fc1.md#loio8b49fc198bf04b2d9800fc37fecbb218__tutorials_adaptation)
+> For more information check the [Downloading Code for a Tutorial Step](get-started-setup-tutorials-and-demo-apps-8b49fc1.md#loio8b49fc198bf04b2d9800fc37fecbb218__tutorials_download) section of the tutorials overview page [Get Started: Setup, Tutorials, and Demo Apps](get-started-setup-tutorials-and-demo-apps-8b49fc1.md).
 
 **Related Information**  
 

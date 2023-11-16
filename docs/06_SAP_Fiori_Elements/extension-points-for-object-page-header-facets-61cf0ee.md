@@ -267,21 +267,15 @@ You can define your custom header facet by implementing an `xmlfragment` and usi
 
 Property Name
 
-
-
 </th>
 <th valign="top">
 
 Supported Values
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -290,21 +284,15 @@ Description
 
 template
 
-
-
 </td>
 <td valign="top">
 
 Module Path of "XMLFragment"
 
-
-
 </td>
 <td valign="top">
 
 Defining the target fragment follows the syntax of defining a fragment via `Fragment.load`.
-
-
 
 </td>
 </tr>
@@ -313,21 +301,15 @@ Defining the target fragment follows the syntax of defining a fragment via `Frag
 
 templateEdit\*
 
-
-
 </td>
 <td valign="top">
 
 Module Path of the editable "XMLFragment"
 
-
-
 </td>
 <td valign="top">
 
 The fragment for the editable version of the header facet.
-
-
 
 </td>
 </tr>
@@ -336,21 +318,15 @@ The fragment for the editable version of the header facet.
 
 title\*
 
-
-
 </td>
 <td valign="top">
 
 Text | Binding Expression
 
-
-
 </td>
 <td valign="top">
 
 Title of the header facet \(usually a binding path to an i18n text\). If you do not specify it here, you should add the title in the `xmlfragment`.
-
-
 
 </td>
 </tr>
@@ -359,21 +335,15 @@ Title of the header facet \(usually a binding path to an i18n text\). If you do 
 
 subTitle\*
 
-
-
 </td>
 <td valign="top">
 
 Text | Binding Expression
 
-
-
 </td>
 <td valign="top">
 
 Subtitle of the header facet \(usually a binding path to an i18n text\).
-
-
 
 </td>
 </tr>
@@ -382,21 +352,15 @@ Subtitle of the header facet \(usually a binding path to an i18n text\).
 
 stashed\*
 
-
-
 </td>
 <td valign="top">
 
 Boolean
 
-
-
 </td>
 <td valign="top">
 
 Defines if the header facet is stashed in personalization. The default setting is `false`.
-
-
 
 </td>
 </tr>
@@ -405,21 +369,15 @@ Defines if the header facet is stashed in personalization. The default setting i
 
 visible\*
 
-
-
 </td>
 <td valign="top">
 
 Boolean | Binding Expression
 
-
-
 </td>
 <td valign="top">
 
 Defines if the header facet is displayed in the header area. The default setting is `true`.
-
-
 
 </td>
 </tr>
@@ -428,21 +386,15 @@ Defines if the header facet is displayed in the header area. The default setting
 
 position
 
-
-
 </td>
 <td valign="top">
 
  
 
-
-
 </td>
 <td valign="top">
 
 The properties in this group define the position of the header facet relative to another facet.
-
-
 
 </td>
 </tr>
@@ -451,21 +403,15 @@ The properties in this group define the position of the header facet relative to
 
 position.placement\*
 
-
-
 </td>
 <td valign="top">
 
 "Before" | "After"
 
-
-
 </td>
 <td valign="top">
 
 Defines the placement: either "Before" or "After" \(default\) the referenced facet \(anchor\).
-
-
 
 </td>
 </tr>
@@ -474,21 +420,15 @@ Defines the placement: either "Before" or "After" \(default\) the referenced fac
 
 position.anchor
 
-
-
 </td>
 <td valign="top">
 
 Facet Key
 
-
-
 </td>
 <td valign="top">
 
 The key of another header facet to be used as the placement anchor. Header facets defined via the `Facet` annotation can be referenced by its `FacetKey`.
-
-
 
 </td>
 </tr>
@@ -496,8 +436,6 @@ The key of another header facet to be used as the placement anchor. Header facet
 <td valign="top">
 
 requestGroupId
-
-
 
 </td>
 <td valign="top">
@@ -510,14 +448,10 @@ requestGroupId
 
 | "LongRunners"
 
-
-
 </td>
 <td valign="top">
 
 Enables the grouping of back-end requests retrieving the header facet data in different $batch groups according to their loading time. You should separate long runners from fast runners to optimize the overall user experience. For more information, refer to [Defining the Loading Behavior of Object Page Headers](defining-the-loading-behavior-of-object-page-headers-ac03570.md).
-
-
 
 </td>
 </tr>
@@ -526,21 +460,15 @@ Enables the grouping of back-end requests retrieving the header facet data in di
 
 flexSettings
 
-
-
 </td>
 <td valign="top">
 
  
 
-
-
 </td>
 <td valign="top">
 
 Defines the key user adaptation behavior of the header facet.
-
-
 
 </td>
 </tr>
@@ -548,8 +476,6 @@ Defines the key user adaptation behavior of the header facet.
 <td valign="top">
 
 flexSettings.designtime
-
-
 
 </td>
 <td valign="top">
@@ -566,14 +492,10 @@ flexSettings.designtime
 
 | "not-removable"
 
-
-
 </td>
 <td valign="top">
 
 Defines which settings are available for key user adaptation at design time. For example, the value "not-adaptable-visibility" means that all actions that influence the visibility are disabled. Remove and make visible are not possible, but moving the header facet is enabled.
-
-
 
 </td>
 </tr>
@@ -723,21 +645,15 @@ You can define your custom header fields by implementing an `xmlfragment` and us
 
 Property Name
 
-
-
 </th>
 <th valign="top">
 
 Supported Values
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -746,21 +662,15 @@ Description
 
 key
 
-
-
 </td>
 <td valign="top">
 
 Module Path of "XMLFragment"
 
-
-
 </td>
 <td valign="top">
 
 Defining the target fragment follows the syntax of defining a fragment via `Fragment.load`.
-
-
 
 </td>
 </tr>
@@ -769,21 +679,15 @@ Defining the target fragment follows the syntax of defining a fragment via `Frag
 
 label\*
 
-
-
 </td>
 <td valign="top">
 
 Text | Binding Expression
 
-
-
 </td>
 <td valign="top">
 
 Label of the field \(usually a binding path to an i18n text\). If you do not specify it here, you should add a label in the `xmlfragment`.
-
-
 
 </td>
 </tr>
@@ -792,21 +696,15 @@ Label of the field \(usually a binding path to an i18n text\). If you do not spe
 
 template
 
-
-
 </td>
 <td valign="top">
 
 Module Path of "XMLFragment"
 
-
-
 </td>
 <td valign="top">
 
 Defining the target fragment follows the syntax of defining a fragment via `Fragment.load`.
-
-
 
 </td>
 </tr>
@@ -815,21 +713,15 @@ Defining the target fragment follows the syntax of defining a fragment via `Frag
 
 position
 
-
-
 </td>
 <td valign="top">
 
  
 
-
-
 </td>
 <td valign="top">
 
 The properties in this group define the position of the header facet relative to another facet.
-
-
 
 </td>
 </tr>
@@ -838,21 +730,15 @@ The properties in this group define the position of the header facet relative to
 
 position.placement\*
 
-
-
 </td>
 <td valign="top">
 
 "Before" | "After"
 
-
-
 </td>
 <td valign="top">
 
 Defines the placement: either "Before" or "After" \(default\) the referenced facet \(anchor\).
-
-
 
 </td>
 </tr>
@@ -861,21 +747,15 @@ Defines the placement: either "Before" or "After" \(default\) the referenced fac
 
 position.anchor
 
-
-
 </td>
 <td valign="top">
 
 Facet Key
 
-
-
 </td>
 <td valign="top">
 
 The key of another header field to be used as the placement anchor. Header fields defined via the field group, including a property annotation, can be referenced by the corresponding property name.
-
-
 
 </td>
 </tr>

@@ -60,14 +60,10 @@ The properties used in the application configuration file denote the following:
 
 Property
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -76,14 +72,10 @@ Description
 
 `appName` 
 
-
-
 </td>
 <td valign="top">
 
 The name of the application is displayed in the header of the application. It is retrieved from a translatable text property using a text key. Therefore, the value of the property `appName` must be a text key.
-
-
 
 </td>
 </tr>
@@ -92,14 +84,10 @@ The name of the application is displayed in the header of the application. It is
 
 `appTitle` 
 
-
-
 </td>
 <td valign="top">
 
 The title is displayed in the title bar of the Web browser. It is optional and can be used to overwrite the <code><i class="varname">&lt;title&gt;</i></code> tag of the index.html file. The property `appTitle` can be a text key, but it can also be text that is not translated.
-
-
 
 </td>
 </tr>
@@ -108,14 +96,10 @@ The title is displayed in the title bar of the Web browser. It is optional and c
 
 `analyticalConfigurationLocation` 
 
-
-
 </td>
 <td valign="top">
 
 The location of analytical configuration file for APF; for more information, see [Analytical Configuration](analytical-configuration-5a467c5.md).
-
-
 
 </td>
 </tr>
@@ -124,14 +108,10 @@ The location of analytical configuration file for APF; for more information, see
 
 `applicationMessageDefinitionLocation` 
 
-
-
 </td>
 <td valign="top">
 
 The location of the message definition file for the application. If the application uses the `MessageHandling` component of APF, this definition is used to retrieve further information for message handling, such as a text.
-
-
 
 </td>
 </tr>
@@ -139,8 +119,6 @@ The location of the message definition file for the application. If the applicat
 <td valign="top">
 
 `textResourceLocations` 
-
-
 
 </td>
 <td valign="top">
@@ -151,16 +129,12 @@ Text resource files can be of type `*.hdbtextbundle` or `*.properties` and conta
 
 At runtime, a text key is resolved by checking all specified resource files in turn.
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
 `persistence` 
-
-
 
 </td>
 <td valign="top">
@@ -187,14 +161,10 @@ Contains two properties:
 
 `smartBusiness` 
 
-
-
 </td>
 <td valign="top">
 
 The Smart Business runtime service, which is used to fetch information related to Smart Business filters using the evaluation ID.
-
-
 
 </td>
 </tr>

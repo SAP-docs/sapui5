@@ -17,28 +17,20 @@ The following table shows the system behavior for the list report and object pag
 
 Editing Status Filter in List Report
 
-
-
 </th>
 <th valign="top">
 
 In a List Report
-
-
 
 </th>
 <th valign="top">
 
 While Navigating to an Object Page
 
-
-
 </th>
 <th valign="top">
 
 Navigating back to a List Report
-
-
 
 </th>
 </tr>
@@ -47,28 +39,20 @@ Navigating back to a List Report
 
 *All \(Hiding Drafts\)* 
 
-
-
 </td>
 <td valign="top">
 
 Only the saved objects with their respective data are displayed in the list report table
-
-
 
 </td>
 <td valign="top">
 
 Saved object is displayed with a *Return to Draft* button if a draft exists for this object
 
-
-
 </td>
 <td valign="top">
 
 Only the saved objects with their respective data are displayed in the list report table
-
-
 
 </td>
 </tr>

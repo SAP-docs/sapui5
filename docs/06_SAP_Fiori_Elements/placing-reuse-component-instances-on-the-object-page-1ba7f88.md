@@ -167,14 +167,10 @@ You place reuse components into empty custom subsections using the SAPUI5 routin
 
 Property
 
-
-
 </th>
 <th valign="top">
 
 Value
-
-
 
 </th>
 </tr>
@@ -183,14 +179,10 @@ Value
 
 type
 
-
-
 </td>
 <td valign="top">
 
 component
-
-
 
 </td>
 </tr>
@@ -199,14 +191,10 @@ component
 
 controlAggregation
 
-
-
 </td>
 <td valign="top">
 
 blocks
-
-
 
 </td>
 </tr>
@@ -215,14 +203,10 @@ blocks
 
 clearControlAggregation
 
-
-
 </td>
 <td valign="top">
 
 true
-
-
 
 </td>
 </tr>
@@ -231,14 +215,10 @@ true
 
 name
 
-
-
 </td>
 <td valign="top">
 
 path to your reuse component
-
-
 
 </td>
 </tr>
@@ -247,14 +227,10 @@ path to your reuse component
 
 parent
 
-
-
 </td>
 <td valign="top">
 
 name of your object page
-
-
 
 </td>
 </tr>
@@ -263,14 +239,10 @@ name of your object page
 
 controlID
 
-
-
 </td>
 <td valign="top">
 
 ID of your custom subsection
-
-
 
 </td>
 </tr>
@@ -279,14 +251,10 @@ ID of your custom subsection
 
 options \> settings
 
-
-
 </td>
 <td valign="top">
 
 any settings of your reuse component
-
-
 
 </td>
 </tr>

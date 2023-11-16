@@ -6,6 +6,9 @@ The key performance indicator \(KPI\) tag is an abbreviated and clickable title 
 
 
 
+> ### Note:  
+> This topic is only applicable to analytical services. For KPIs in non-analytical services in SAP Fiori elements for OData V4, see [Creating Key Performance Indicators](creating-key-performance-indicators-8874399.md).
+
 Each KPI can have its own OData source, entity set, and annotation file. The KPI value changes if an action is executed on the transactional content. For example, releasing sales orders affects a related KPI and posting an accounting document affects certain financial KPIs.
 
 ![](images/KPI_Tags_Annotation_flowchart_fc0488b.png)
@@ -448,21 +451,15 @@ The abbreviation of the KPI title is based on the following logic:
 
 If a KPI name is
 
-
-
 </th>
 <th valign="top">
 
 Abbreviation is based on
 
-
-
 </th>
 <th valign="top">
 
 Example
-
-
 
 </th>
 </tr>
@@ -471,14 +468,10 @@ Example
 
 One word
 
-
-
 </td>
 <td valign="top">
 
 First three letters
-
-
 
 </td>
 <td valign="top">
@@ -487,8 +480,6 @@ KPI Name: TargetMargin
 
 KPI Title: *TAR*
 
-
-
 </td>
 </tr>
 <tr>
@@ -496,14 +487,10 @@ KPI Title: *TAR*
 
 Two words
 
-
-
 </td>
 <td valign="top">
 
 First letter of each word
-
-
 
 </td>
 <td valign="top">
@@ -512,8 +499,6 @@ KPI Name: Actual Cost
 
 KPI Title: *AC*
 
-
-
 </td>
 </tr>
 <tr>
@@ -521,14 +506,10 @@ KPI Title: *AC*
 
 Three words or more
 
-
-
 </td>
 <td valign="top">
 
 First letter of first three words
-
-
 
 </td>
 <td valign="top">
@@ -536,8 +517,6 @@ First letter of first three words
 KPI Name: Actual Margin Relative
 
 KPI Title: *AMR*
-
-
 
 </td>
 </tr>

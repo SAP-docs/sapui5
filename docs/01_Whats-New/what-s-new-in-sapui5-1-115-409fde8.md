@@ -16,49 +16,35 @@ With this release SAPUI5 is upgraded from version 1.114 to 1.115.
 
 Version
 
-
-
 </th>
 <th valign="top">
 
 Type
-
-
 
 </th>
 <th valign="top">
 
 Category
 
-
-
 </th>
 <th valign="top">
 
 Title
-
-
 
 </th>
 <th valign="top">
 
 Description
 
-
-
 </th>
 <th valign="top">
 
 Action
 
-
-
 </th>
 <th valign="top">
 
 Available as of
-
-
 
 </th>
 </tr>
@@ -67,28 +53,20 @@ Available as of
 
 1.115 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.p13n.Engine`** 
-
-
 
 </td>
 <td valign="top">
@@ -99,21 +77,15 @@ We have added more samples for the `Engine` and deprecated the following entitie
 
 <sub>Changed•Feature•Info Only•1.115</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-06-15
-
-
 
 </td>
 </tr>
@@ -122,28 +94,20 @@ Info Only
 
 1.115 
 
-
-
 </td>
 <td valign="top">
 
 Deprecated 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.table.AnalyticalTable`, `sap.ui.table.Table`, `sap.ui.table.TreeTable`** 
-
-
 
 </td>
 <td valign="top">
@@ -154,21 +118,15 @@ We have deprecated the `editable` property. For more information, see the [API R
 
 <sub>Deprecated•Control•Info Only•1.115</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-06-15
-
-
 
 </td>
 </tr>
@@ -177,28 +135,20 @@ Info Only
 
 1.115 
 
-
-
 </td>
 <td valign="top">
 
 New 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **Introduction of `sap.ui.mdc` library \(experimental\)** 
-
-
 
 </td>
 <td valign="top">
@@ -209,21 +159,15 @@ We have introduced the `sap.ui.mdc` library experimentally. This library contain
 
 <sub>New•Feature•Info Only•1.115</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-06-15
-
-
 
 </td>
 </tr>
@@ -232,28 +176,20 @@ Info Only
 
 1.115 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 SAP Fiori Elements 
 
-
-
 </td>
 <td valign="top">
 
 **SAP Fiori elements for OData V2** 
-
-
 
 </td>
 <td valign="top">
@@ -267,21 +203,15 @@ The following changes and new features are available for SAP Fiori elements for 
 
 <sub>Changed•SAP Fiori Elements•Info Only•1.115</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-06-15
-
-
 
 </td>
 </tr>
@@ -290,28 +220,20 @@ Info Only
 
 1.115 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 SAP Fiori Elements 
 
-
-
 </td>
 <td valign="top">
 
 **SAP Fiori elements for OData V4** 
-
-
 
 </td>
 <td valign="top">
@@ -325,21 +247,15 @@ The following changes and new features are available for SAP Fiori elements for 
 
 <sub>Changed•SAP Fiori Elements•Info Only•1.115</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-06-15
-
-
 
 </td>
 </tr>
@@ -348,28 +264,20 @@ Info Only
 
 1.115 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **SAPUI5 OData V4 Model** 
-
-
 
 </td>
 <td valign="top">
@@ -389,21 +297,15 @@ The new version of the SAPUI5 OData V4 model introduces the following features:
 
 <sub>Changed•Feature•Info Only•1.115</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-06-15
-
-
 
 </td>
 </tr>
@@ -412,28 +314,20 @@ Info Only
 
 1.115 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **SAPUI5 OData Types** 
-
-
 
 </td>
 <td valign="top">
@@ -458,21 +352,15 @@ For more information, see, for example, the [API Reference](https://ui5.sap.com/
 
 <sub>Changed•Feature•Info Only•1.115</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-06-15
-
-
 
 </td>
 </tr>
@@ -481,28 +369,20 @@ Info Only
 
 1.115 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.integration.widgets.Card`** 
-
-
 
 </td>
 <td valign="top">
@@ -520,21 +400,15 @@ Control
 
 <sub>Changed•Control•Info Only•1.115</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-06-15
-
-
 
 </td>
 </tr>
@@ -543,28 +417,20 @@ Info Only
 
 1.115 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.comp.filterbar.FilterBar`, `sap.ui.comp.smartfilterbar.SmartFilterBar`, `sap.ui.comp.smartfield.SmartField`, `sap.ui.comp.valuehelpdialog.ValueHelpDialog`, and `sap.m.P13nConditionPanel`** 
-
-
 
 </td>
 <td valign="top">
@@ -578,21 +444,15 @@ To improve the user experience, we have enabled these controls to display a numb
 
 <sub>Changed•Control•Info Only•1.115</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-06-15
-
-
 
 </td>
 </tr>
@@ -601,28 +461,20 @@ Info Only
 
 1.115 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.comp.smartfield.SmartField`** 
-
-
 
 </td>
 <td valign="top">
@@ -633,21 +485,15 @@ We have improved the support for the `Common.isTimezone` annotation. It is now a
 
 <sub>Changed•Control•Info Only•1.115</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-06-15
-
-
 
 </td>
 </tr>
@@ -656,28 +502,20 @@ Info Only
 
 1.115 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.comp.valuehelpdialog.ValueHelpDialog`** 
-
-
 
 </td>
 <td valign="top">
@@ -688,21 +526,15 @@ The control now supports `In` parameters for `MultiComboBox` filters.
 
 <sub>Changed•Control•Info Only•1.115</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-06-15
-
-
 
 </td>
 </tr>
@@ -711,28 +543,20 @@ Info Only
 
 1.115 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **sap.m.Button** 
-
-
 
 </td>
 <td valign="top">
@@ -745,21 +569,15 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.Bu
 
 <sub>Changed•Control•Info Only•1.115</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-06-15
-
-
 
 </td>
 </tr>
@@ -768,28 +586,20 @@ Info Only
 
 1.115 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **sap.m.DynamicDateRange** 
-
-
 
 </td>
 <td valign="top">
@@ -802,21 +612,15 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.Dy
 
 <sub>Changed•Control•Info Only•1.115</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-06-15
-
-
 
 </td>
 </tr>
@@ -825,28 +629,20 @@ Info Only
 
 1.115 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **sap.m.Wizard** 
-
-
 
 </td>
 <td valign="top">
@@ -857,21 +653,15 @@ We have provided an API that will allow the application to change the H level ba
 
 <sub>Changed•Control•Info Only•1.115</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-06-15
-
-
 
 </td>
 </tr>
@@ -880,28 +670,20 @@ Info Only
 
 1.115 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **sap.f.SidePanel** 
-
-
 
 </td>
 <td valign="top">
@@ -914,21 +696,15 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.f.Si
 
 <sub>Changed•Control•Info Only•1.115</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2023-06-15
-
-
 
 </td>
 </tr>
@@ -936,6 +712,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.118](what-s-new-in-sapui5-1-118-3eecbde.md "With this release SAPUI5 is upgraded from version 1.117 to 1.118.")
 
 [What's New in SAPUI5 1.117](what-s-new-in-sapui5-1-117-029d3b4.md "With this release SAPUI5 is upgraded from version 1.116 to 1.117.")
 

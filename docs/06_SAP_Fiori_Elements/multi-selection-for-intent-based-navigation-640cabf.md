@@ -17,21 +17,15 @@ By default, multi-selection for intent-based navigation is enabled.
 > 
 > Record
 > 
-> 
-> 
 > </th>
 > <th valign="top">
 > 
 > P1
 > 
-> 
-> 
 > </th>
 > <th valign="top">
 > 
 > P2
-> 
-> 
 > 
 > </th>
 > </tr>
@@ -40,21 +34,15 @@ By default, multi-selection for intent-based navigation is enabled.
 > 
 > 1
 > 
-> 
-> 
 > </td>
 > <td valign="top">
 > 
 > A
 > 
-> 
-> 
 > </td>
 > <td valign="top">
 > 
 > X
-> 
-> 
 > 
 > </td>
 > </tr>
@@ -63,21 +51,15 @@ By default, multi-selection for intent-based navigation is enabled.
 > 
 > 2
 > 
-> 
-> 
 > </td>
 > <td valign="top">
 > 
 > B
 > 
-> 
-> 
 > </td>
 > <td valign="top">
 > 
 > Y
-> 
-> 
 > 
 > </td>
 > </tr>
@@ -86,21 +68,15 @@ By default, multi-selection for intent-based navigation is enabled.
 > 
 > 3
 > 
-> 
-> 
 > </td>
 > <td valign="top">
 > 
 > A
 > 
-> 
-> 
 > </td>
 > <td valign="top">
 > 
 > Y
-> 
-> 
 > 
 > </td>
 > </tr>

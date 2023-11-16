@@ -11,14 +11,10 @@ The following keys and key combinations are used for navigation in one-dimension
 
 Key combination
 
-
-
 </th>
 <th valign="top">
 
 Behavior
-
-
 
 </th>
 </tr>
@@ -27,16 +23,12 @@ Behavior
 
 [Up arrow\], [Left arrow\]
 
-
-
 </td>
 <td valign="top">
 
 If focus is on an item, move focus to the **previous** item.
 
 If focus is on the first item, do nothing.
-
-
 
 </td>
 </tr>
@@ -45,8 +37,6 @@ If focus is on the first item, do nothing.
 
 [Down arrow\], [Right arrow\]
 
-
-
 </td>
 <td valign="top">
 
@@ -54,16 +44,12 @@ If focus is on an item, move focus to the **next** item.
 
 If focus is on the last item, do nothing.
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
 [Page up\]
-
-
 
 </td>
 <td valign="top">
@@ -75,16 +61,12 @@ If focus is on an item, move focus **up/ left** by page size.
 
 If focus is on the last item, do nothing.
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
 [Page down\]
-
-
 
 </td>
 <td valign="top">
@@ -96,8 +78,6 @@ If focus is on an item, move focus **down/ right** by page size.
 
 If focus is on the first item, do nothing.
 
-
-
 </td>
 </tr>
 <tr>
@@ -105,14 +85,10 @@ If focus is on the first item, do nothing.
 
 [Home\]
 
-
-
 </td>
 <td valign="top">
 
 If focus is on an item, move focus to the **first** item.
-
-
 
 </td>
 </tr>
@@ -121,14 +97,10 @@ If focus is on an item, move focus to the **first** item.
 
 [End\]
 
-
-
 </td>
 <td valign="top">
 
 If focus is on an item, move focus to the **last** item.
-
-
 
 </td>
 </tr>

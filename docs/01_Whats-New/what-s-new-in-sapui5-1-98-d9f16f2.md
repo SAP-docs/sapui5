@@ -15,49 +15,35 @@ With this release SAPUI5 is upgraded from version 1.97 to 1.98.
 
 Version
 
-
-
 </th>
 <th valign="top">
 
 Type
-
-
 
 </th>
 <th valign="top">
 
 Category
 
-
-
 </th>
 <th valign="top">
 
 Title
-
-
 
 </th>
 <th valign="top">
 
 Description
 
-
-
 </th>
 <th valign="top">
 
 Action
 
-
-
 </th>
 <th valign="top">
 
 Available as of
-
-
 
 </th>
 </tr>
@@ -66,28 +52,20 @@ Available as of
 
 1.98 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **SAPUI5 OData V2 Model** 
-
-
 
 </td>
 <td valign="top">
@@ -107,21 +85,15 @@ The new version of the SAPUI5 OData V2 model introduces the following features:
 
 <sub>Changed•Feature•Info Only•1.98</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only
 
-
-
 </td>
 <td valign="top">
 
 2022-01-27
-
-
 
 </td>
 </tr>
@@ -130,28 +102,20 @@ Info Only
 
 1.98 
 
-
-
 </td>
 <td valign="top">
 
 UI Changed 
-
-
 
 </td>
 <td valign="top">
 
 Announcement 
 
-
-
 </td>
 <td valign="top">
 
 **Chart Personalization Dialog Updated** 
-
-
 
 </td>
 <td valign="top">
@@ -165,21 +129,15 @@ We have improved the dialog based on UX research. The panel for the dimension an
 
 <sub>UI Changed•Announcement•Info Only•1.98</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-01-27
-
-
 
 </td>
 </tr>
@@ -188,28 +146,20 @@ Info Only
 
 1.98 
 
-
-
 </td>
 <td valign="top">
 
 UI Changed 
-
-
 
 </td>
 <td valign="top">
 
 Announcement 
 
-
-
 </td>
 <td valign="top">
 
 **Draft-Enabled Apps \(OData V2\): Draft Toggle Button Moved** 
-
-
 
 </td>
 <td valign="top">
@@ -223,21 +173,15 @@ In draft-enabled list reports and object pages, the *Hide/Show Draft Values* tog
 
 <sub>UI Changed•Announcement•Info Only•1.98</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-01-27
-
-
 
 </td>
 </tr>
@@ -246,28 +190,20 @@ Info Only
 
 1.98 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Feature 
 
-
-
 </td>
 <td valign="top">
 
 **SAPUI5 OData V4 Model** 
-
-
 
 </td>
 <td valign="top">
@@ -289,21 +225,15 @@ The new version of the SAPUI5 OData V4 model introduces the following features:
 
 <sub>Changed•Feature•Info Only•1.98</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-01-27
-
-
 
 </td>
 </tr>
@@ -312,28 +242,20 @@ Info Only
 
 1.98 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.DateTimePicker`, `sap.m.TimePicker`** 
-
-
 
 </td>
 <td valign="top">
@@ -344,21 +266,15 @@ We have introduced a shortcut button that focuses the current time. The button i
 
 <sub>Changed•Control•Info Only•1.98</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-01-27
-
-
 
 </td>
 </tr>
@@ -367,28 +283,20 @@ Info Only
 
 1.98 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.DynamicDateRange` \(Experimental\)** 
-
-
 
 </td>
 <td valign="top">
@@ -406,21 +314,15 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.Dy
 
 <sub>Changed•Control•Info Only•1.98</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-01-27
-
-
 
 </td>
 </tr>
@@ -429,28 +331,20 @@ Info Only
 
 1.98 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.IconTabBar`** 
-
-
 
 </td>
 <td valign="top">
@@ -461,21 +355,15 @@ There is a change in the way how the control computes and displays the number of
 
 <sub>Changed•Control•Info Only•1.98</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-01-27
-
-
 
 </td>
 </tr>
@@ -484,28 +372,20 @@ Info Only
 
 1.98 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.Label`** 
-
-
 
 </td>
 <td valign="top">
@@ -516,21 +396,15 @@ We have introduced a new `showColon` property. If set to `true`, a colon \(:\) c
 
 <sub>Changed•Control•Info Only•1.98</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-01-27
-
-
 
 </td>
 </tr>
@@ -539,28 +413,20 @@ Info Only
 
 1.98 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.List`** 
-
-
 
 </td>
 <td valign="top">
@@ -571,21 +437,15 @@ You can now display an avatar in your list instead of an image or icon. We have 
 
 <sub>Changed•Control•Info Only•1.98</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-01-27
-
-
 
 </td>
 </tr>
@@ -594,28 +454,20 @@ Info Only
 
 1.98 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.p13n*`** 
-
-
 
 </td>
 <td valign="top">
@@ -645,21 +497,15 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.p1
 
 <sub>Changed•Control•Info Only•1.98</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-01-27
-
-
 
 </td>
 </tr>
@@ -668,28 +514,20 @@ Info Only
 
 1.98 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.SinglePlanningCalendar`** 
-
-
 
 </td>
 <td valign="top">
@@ -700,21 +538,15 @@ With the new `firstDayOfWeek` property, you can now set the first day of a week 
 
 <sub>Changed•Control•Info Only•1.98</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-01-27
-
-
 
 </td>
 </tr>
@@ -723,28 +555,20 @@ Info Only
 
 1.98 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.upload.UploadSet`** 
-
-
 
 </td>
 <td valign="top">
@@ -755,21 +579,15 @@ For the `uploadCompleted` event, an additional JSON response object is now passe
 
 <sub>Changed•Control•Info Only•1.98</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-01-27
-
-
 
 </td>
 </tr>
@@ -778,28 +596,20 @@ Info Only
 
 1.98 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.comp.smartchart.SmartChart`** 
-
-
 
 </td>
 <td valign="top">
@@ -825,21 +635,15 @@ The following changes have been made:
 
 <sub>Changed•Control•Info Only•1.98</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-01-27
-
-
 
 </td>
 </tr>
@@ -848,28 +652,20 @@ Info Only
 
 1.98 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.comp.smartfilterbar.SmartFilterBar` and `sap.ui.comp.smartfield.SmartField`** 
-
-
 
 </td>
 <td valign="top">
@@ -880,21 +676,15 @@ Control
 
 <sub>Changed•Control•Info Only•1.98</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-01-27
-
-
 
 </td>
 </tr>
@@ -903,28 +693,20 @@ Info Only
 
 1.98 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.comp.smartfilterbar.SmartFilterBar`** 
-
-
 
 </td>
 <td valign="top">
@@ -942,21 +724,15 @@ Control
 
 <sub>Changed•Control•Info Only•1.98</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-01-27
-
-
 
 </td>
 </tr>
@@ -965,28 +741,20 @@ Info Only
 
 1.98 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.comp.valuehelpdialog.ValueHelpDialog`** 
-
-
 
 </td>
 <td valign="top">
@@ -997,21 +765,15 @@ After introducing the visualization of multiple consecutive whitespace character
 
 <sub>Changed•Control•Info Only•1.98</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-01-27
-
-
 
 </td>
 </tr>
@@ -1020,28 +782,20 @@ Info Only
 
 1.98 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.integration.widgets.Card`** 
-
-
 
 </td>
 <td valign="top">
@@ -1063,21 +817,15 @@ Control
 
 <sub>Changed•Control•Info Only•1.98</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-01-27
-
-
 
 </td>
 </tr>
@@ -1086,28 +834,20 @@ Info Only
 
 1.98 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.ui.richtexteditor.RichTextEditor`** 
-
-
 
 </td>
 <td valign="top">
@@ -1118,21 +858,15 @@ We have updated the TinyMCE version 5 used in `sap.ui.richtexteditor.RichTextEdi
 
 <sub>Changed•Control•Info Only•1.98</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-01-27
-
-
 
 </td>
 </tr>
@@ -1141,28 +875,20 @@ Info Only
 
 1.98 
 
-
-
 </td>
 <td valign="top">
 
 Deprecated 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.f.IllustratedMessage` / `sap.m.IllustratedMessage`** 
-
-
 
 </td>
 <td valign="top">
@@ -1173,21 +899,15 @@ The `sap.f.IllustratedMessage` and its related classes are now moved to the `sap
 
 <sub>Deprecated•Control•Info Only•1.98</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-01-27
-
-
 
 </td>
 </tr>
@@ -1196,28 +916,20 @@ Info Only
 
 1.98 
 
-
-
 </td>
 <td valign="top">
 
 Deprecated 
-
-
 
 </td>
 <td valign="top">
 
 Control 
 
-
-
 </td>
 <td valign="top">
 
 **`sap.m.P13n*`** 
-
-
 
 </td>
 <td valign="top">
@@ -1237,21 +949,15 @@ The following entities have been deprecated and replaced with the new personaliz
 
 <sub>Deprecated•Control•Info Only•1.98</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-01-27
-
-
 
 </td>
 </tr>
@@ -1260,28 +966,20 @@ Info Only
 
 1.98 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 SAP Fiori Elements 
 
-
-
 </td>
 <td valign="top">
 
 **SAP Fiori elements for OData V2** 
-
-
 
 </td>
 <td valign="top">
@@ -1307,21 +1005,15 @@ The following changes and new features are available for SAP Fiori elements for 
 
 <sub>Changed•SAP Fiori Elements•Info Only•1.98</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-01-27
-
-
 
 </td>
 </tr>
@@ -1330,28 +1022,20 @@ Info Only
 
 1.98 
 
-
-
 </td>
 <td valign="top">
 
 Changed 
-
-
 
 </td>
 <td valign="top">
 
 SAP Fiori Elements 
 
-
-
 </td>
 <td valign="top">
 
 **SAP Fiori elements for OData V4** 
-
-
 
 </td>
 <td valign="top">
@@ -1373,21 +1057,15 @@ The following changes and new features are available for SAP Fiori elements for 
 
 <sub>Changed•SAP Fiori Elements•Info Only•1.98</sub>
 
-
-
 </td>
 <td valign="top">
 
 Info Only 
 
-
-
 </td>
 <td valign="top">
 
 2022-01-27
-
-
 
 </td>
 </tr>
@@ -1395,6 +1073,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.118](what-s-new-in-sapui5-1-118-3eecbde.md "With this release SAPUI5 is upgraded from version 1.117 to 1.118.")
 
 [What's New in SAPUI5 1.117](what-s-new-in-sapui5-1-117-029d3b4.md "With this release SAPUI5 is upgraded from version 1.116 to 1.117.")
 

@@ -8,11 +8,7 @@ In this step, we replace the text with a button and show the “Hello World” m
 
 ## Preview
 
-  
-  
-**A Say Hello button is added**
-
-![](images/UI5_Walkthrough_Step_05_cedfdf8.png "A Say Hello button is added")
+![A Say Hello button is added](images/UI5_Walkthrough_Step_05_cedfdf8.png)
 
 
 

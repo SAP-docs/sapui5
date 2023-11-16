@@ -13,21 +13,15 @@ SAPUI5 provides the following configuration options for `frameOptions`:
 
 Mode
 
-
-
 </th>
 <th valign="top">
 
 Default
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -36,21 +30,15 @@ Description
 
 allow
 
-
-
 </td>
 <td valign="top">
 
 X
 
-
-
 </td>
 <td valign="top">
 
 Allows to be embedded from all origins
-
-
 
 </td>
 </tr>
@@ -58,8 +46,6 @@ Allows to be embedded from all origins
 <td valign="top">
 
 deny
-
-
 
 </td>
 <td valign="top">
@@ -71,16 +57,12 @@ deny
 
 Denies to be embedded from all origins
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
 trusted
-
-
 
 </td>
 <td valign="top">
@@ -91,8 +73,6 @@ trusted
 <td valign="top">
 
 Allows to be embedded from trusted origins according to the same-origin policy and to be embedded to origins allowed by the allowlist service
-
-
 
 </td>
 </tr>
@@ -107,28 +87,20 @@ With `frameOptionsConfig` the following additional configuration options can be 
 
 Parameter
 
-
-
 </th>
 <th valign="top">
 
 Type
-
-
 
 </th>
 <th valign="top">
 
 Default
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -137,14 +109,10 @@ Description
 
 `callback` 
 
-
-
 </td>
 <td valign="top">
 
 `function(bSuccess)` 
-
-
 
 </td>
 <td valign="top">
@@ -168,28 +136,20 @@ Function that is called with the success state
 
 `timeout` 
 
-
-
 </td>
 <td valign="top">
 
 `number` 
-
-
 
 </td>
 <td valign="top">
 
 `10000` 
 
-
-
 </td>
 <td valign="top">
 
 After the delay, the page remains blocked and the provided callback is invoked \(milliseconds\)
-
-
 
 </td>
 </tr>
@@ -198,28 +158,20 @@ After the delay, the page remains blocked and the provided callback is invoked \
 
 `blockEvents` 
 
-
-
 </td>
 <td valign="top">
 
 `boolean` 
-
-
 
 </td>
 <td valign="top">
 
 `true` 
 
-
-
 </td>
 <td valign="top">
 
 Defines whether keyboard, mouse and touch events are blocked
-
-
 
 </td>
 </tr>
@@ -228,28 +180,20 @@ Defines whether keyboard, mouse and touch events are blocked
 
 `showBlockLayer` 
 
-
-
 </td>
 <td valign="top">
 
 `boolean` 
-
-
 
 </td>
 <td valign="top">
 
 `true` 
 
-
-
 </td>
 <td valign="top">
 
 Defines whether an invisible block layer is rendered to prevent interaction with the UI
-
-
 
 </td>
 </tr>
@@ -258,28 +202,20 @@ Defines whether an invisible block layer is rendered to prevent interaction with
 
 `allowSameOrigin` 
 
-
-
 </td>
 <td valign="top">
 
 `boolean` 
-
-
 
 </td>
 <td valign="top">
 
 `true` 
 
-
-
 </td>
 <td valign="top">
 
 Defines whether same origin domains are allowed or not
-
-
 
 </td>
 </tr>
@@ -288,14 +224,10 @@ Defines whether same origin domains are allowed or not
 
 `allowlist` 
 
-
-
 </td>
 <td valign="top">
 
 `string[]` 
-
-
 
 </td>
 <td valign="top">
@@ -306,8 +238,6 @@ Defines whether same origin domains are allowed or not
 <td valign="top">
 
 Contains the domain allowlist, for example `[".example.com"]`, `["hana.ondemand.com"]`.
-
-
 
 </td>
 </tr>
@@ -401,5 +331,5 @@ Alternatively, a `<meta>` tag can be used to configure the `allowlistService` an
 
 [Allowlist Service](allowlist-service-d04a6d4.md "SAPUI5 supports the configuration of a central allowlist service.")
 
-[Configuration Options and URL Parameters](../04_Essentials/configuration-options-and-url-parameters-91f2d03.md "The complete list of configuration options available in SAPUI5 can be found in the API Reference under sap.ui.core.Configuration. The following table shows a subset of the available configuration options.")
+[Configuration Options and URL Parameters](../04_Essentials/configuration-options-and-url-parameters-91f2d03.md "The following tables show available configuration options.")
 

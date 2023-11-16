@@ -84,14 +84,10 @@ On mobile devices, the *Technical Information* dialog provides some additional f
 
 ![Technical Information in Mobile App](images/Mobile_Technical_Information_Dialog_1_f11a082.jpg)
 
-
-
 </td>
 <td valign="top">
 
 ![Technical Information in Mobile App](images/Mobile_Technical_Information_Dialog_2_d1e10c1.jpg)
-
-
 
 </td>
 </tr>
@@ -100,14 +96,10 @@ On mobile devices, the *Technical Information* dialog provides some additional f
 
 ![Technical Information in Mobile App](images/Mobile_Technical_Information_Dialog_3_ca7ba5f.jpg)
 
-
-
 </td>
 <td valign="top">
 
 ![Technical Information in Mobile App](images/Mobile_Technical_Information_Dialog_4_fc573fe.jpg)
-
-
 
 </td>
 </tr>

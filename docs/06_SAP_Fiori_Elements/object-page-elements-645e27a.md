@@ -86,14 +86,10 @@ The object page is made up of the following elements:
 
 Subject
 
-
-
 </th>
 <th valign="top">
 
 Link
-
-
 
 </th>
 </tr>
@@ -102,14 +98,10 @@ Link
 
 Controls related to object pages
 
-
-
 </td>
 <td valign="top">
 
 [sap.uxap](../10_More_About_Controls/sap-uxap-de71337.md) 
-
-
 
 </td>
 </tr>
@@ -118,16 +110,12 @@ Controls related to object pages
 
 Annotations used to set up various elements of object pages
 
-
-
 </td>
 <td valign="top">
 
 [Configuring Object Page Features](configuring-object-page-features-d26d3dd.md)
 
 [Configuring Further Common Features](configuring-further-common-features-a4d3c46.md)
-
-
 
 </td>
 </tr>
