@@ -196,7 +196,7 @@ sap.ui.define([
 	"use strict";
 
 	return {
-		init() {
+		init() => {
 			// create
 			const oMockServer = new MockServer({
 				rootUri: sap.ui.require.toUrl("ui5/walkthrough") + "/V2/Northwind/Northwind.svc/"
