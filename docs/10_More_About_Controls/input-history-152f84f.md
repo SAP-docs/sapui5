@@ -158,7 +158,7 @@ Here is an example of how to disable the feature for the `SmartField`:
 
 > ### Sample Code:  
 > ```xml
-> <smartField:SmartField id="idCategory" value="{Category}" historyEnabled="false"> <smartField:SmartField id="idCategory" value="{Category}" historyEnabled="false"> 
+> <smartField:SmartField id="idCategory" value="{Category}" historyEnabled="false">
 > ```
 
 For the `SmartFilterBar`, the `historyEnabled` property is in the `ControlConfiguration` object so that it can control individual fields in `SmartFilterBar`. Here is an example of how to disable it for `SmartFilterBar`:
