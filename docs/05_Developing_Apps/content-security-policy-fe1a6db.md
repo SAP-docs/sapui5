@@ -178,7 +178,7 @@ Certain libraries at least partly still require `'unsafe-eval'`, including the f
 -   `sap.ui.vbm`
 -   `sap.ushell`
 
-The above list assumes that the app runs using library preloads \(recommended, see [Ensure that Library Preloads are Enabled](performance-speed-up-your-app-408b40e.md#loio408b40efed3c416681e1bd8cdd8910d4__section_LibraryPreloads)\). If the appication runs without preloads, more libraries require `unsafe-eval`.
+The above list assumes that the app runs using library preloads \(recommended, see [Ensure that Library Preloads are Enabled](performance-speed-up-your-app-408b40e.md#loio408b40efed3c416681e1bd8cdd8910d4__section_LibraryPreloads)\). If the application runs without preloads, more libraries require `unsafe-eval`.
 
 </td>
 <td valign="top">
