@@ -62,6 +62,7 @@ The following prerequisites apply:
 
 -   On the object page, *Mass Edit* is only available in edit mode.
 
+-   For service backends based on CAP Node.js, support for mass edit must be enabled by setting a feature flag as described in the [CAP documentation](https://cap.cloud.sap/docs/releases/dec23#sapui5-mass-edit).
 
 Once a user clicks on the *Mass Edit* button, a dialog opens showing all the editable and visible fields from the table. The user is able to set a value for every editable field of the selected records, or even clear all values for the field from the selected records in one go.
 
