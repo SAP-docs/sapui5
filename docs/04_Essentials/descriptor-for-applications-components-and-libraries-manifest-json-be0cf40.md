@@ -2885,14 +2885,18 @@ For the following namespaces, the indicated teams are responsible:
 The component declares the existence of the application descriptor by specifying `manifest: "json"` in the component metadata. Setting this flag makes the component load the `manifest.json` file and read the relevant entries for SAPUI5. This metadata is used to define the dependencies that need to be loaded in order to start the component. The following code snippet shows how to add the manifest link:
 
 ```js
-sap.ui.define(['sap/ui/core/UIComponent'], function(UIComponent) {
-	
-	return UIComponent.extend("sap.samples.Component", {
-		metadata  : { 
-			manifest: "json"
+sap.ui.define([
+	"sap/ui/core/UIComponent"
+], (UIComponent) => {
+	"use strict";
+	return UIComponent.extend("my.sample.Component", {
+		metadata: { 
+			manifest: "json",
+			interfaces: [
+				"sap.ui.core.IAsyncContentCreation"
+			]
 		}
 	});
-
 });
 ```
 
@@ -2900,18 +2904,13 @@ sap.ui.define(['sap/ui/core/UIComponent'], function(UIComponent) {
 
 ## SAPUI5 API
 
-At runtime, the `manifest.json` content can be accessed from the component via the component metadata:
+At runtime, the manifest content can be accessed from the component via the following `sap.ui.core.Component` APIs:
 
 ```js
-// get the component class
-sap.ui.require(['sap/samples/Component'], function(SampleComponent) {
-
-	// getting complete manifest from component metadata
-	SampleComponent.getMetadata().getManifest();
-	//or getting a namespace
-	SampleComponent.getMetadata().getManifestEntry("sap.app");
-	
-});
+// Given: oComponent === instance of sap.ui.core.Component (e.g. returned by sap.ui.core.mvc.Controller#getOwnerComponent).
+oComponent.getManifest(); // returns: reference to the entire manifest object if it exists. Otherwise, null.
+oComponent.getManifestEntry("sap.app"); // returns: reference to the configuration section of the manifest.
+oComponent.getManifestEntry("/sap.ui5/dependencies/libs"); // returns: reference or value of the manifest configuration by path, of which the syntax must start with a slash.
 ```
 
 [sap.ui.core.UIComponent](https://ui5.sap.com/#/api/sap.ui.core.UIComponent)
