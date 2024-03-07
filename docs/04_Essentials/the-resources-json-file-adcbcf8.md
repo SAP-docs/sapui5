@@ -481,8 +481,8 @@ The SAPUI5 build determines this from the naming convention `**themes/<theme>/**
         ...
  
         {
-            "name": "themes/sap_belize/library.less",
-            "theme":"sap_belize",
+            "name": "themes/sap_horizon/library.less",
+            "theme":"sap_horizon",
             "size": 311,
             "designtime": true
         }

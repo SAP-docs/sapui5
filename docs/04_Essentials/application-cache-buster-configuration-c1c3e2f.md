@@ -11,7 +11,7 @@ The following code shows an example how the configuration is added to activate t
 <script id="sap-ui-bootstrap"
   src="resources/sap-ui-core.js"
   data-sap-ui-libs="sap.ui.core,sap.m,sap.ui.table"
-  data-sap-ui-theme="sap_belize"
+  data-sap-ui-theme="sap_horizon"
   data-sap-ui-appCacheBuster="./"></script>
 ```
 

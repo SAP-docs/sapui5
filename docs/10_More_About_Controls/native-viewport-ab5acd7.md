@@ -10,7 +10,9 @@ The Native Viewport control \(`sap.ui.vk.NativeViewport`\) provides a rendering 
 
 ## API Reference / Sample
 
--   [`sap.ui.vk.NativeViewport`](https://ui5.sap.com/#/api/sap.ui.vk.NativeViewport) in the *API Reference* in the Demo Kit
+Here's where you can find the Native Viewport control in the Demo Kit:
+
+-   [`sap.ui.vk.NativeViewport`](https://ui5.sap.com/#/api/sap.ui.vk.NativeViewport)
 
 
 
@@ -112,6 +114,8 @@ Zoom out of the image.
 
 
 ## Constraints
+
+The following restrictions apply:
 
 -   The `NativeViewport` control only loads 2D images. For loading 3D models, use the `sap.ui.vk.Viewport` control.
 -   Currently, the `NativeViewport` control does not support interactive SVG files; that is, any links in an SVG file will not work in the Native Viewport.

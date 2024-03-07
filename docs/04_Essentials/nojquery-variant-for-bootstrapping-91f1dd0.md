@@ -19,7 +19,7 @@ In this variant, you include the `resources/sap-ui-core-noJQuery.js` file in you
             id="sap-ui-bootstrap"            
             src="resources/sap-ui-core-nojQuery.js" 
             data-sap-ui-libs="sap.m"
-            data-sap-ui-theme="sap_belize" >
+            data-sap-ui-theme="sap_horizon" >
     </script> 
 ```
 

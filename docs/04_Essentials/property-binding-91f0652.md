@@ -57,7 +57,7 @@ If you are working with **XML views**, make sure that you've turned on complex b
 <script
 	id="sap-ui-bootstrap"
 	src="https://sdk.openui5.org/resources/sap-ui-core.js"
-	data-sap-ui-theme="sap_belize"
+	data-sap-ui-theme="sap_horizon"
 	data-sap-ui-bindingSyntax="complex"
 	data-sap-ui-async="true"
 	data-sap-ui-onInit="module:sap/ui/sample/main"

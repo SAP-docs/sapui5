@@ -1,16 +1,11 @@
 <!-- loio2359b636a11a4236bb754c2bbf31e97f -->
 
-<link rel="stylesheet" type="text/css" href="../css/sap-icons.css"/>
-
 # What's New in SAPUI5 1.120
 
 With this release SAPUI5 is upgraded from version 1.119 to 1.120.
 
 > ### Tip:  
 > If you want to do a search across all versions of the What's New content, you can also find it in the [SAPUI5 What's New viewer](https://help.sap.com/whats-new/67f60363b57f4ac0b23efd17fa192d60).
-
-> ### Note:  
-> Content marked as <span style="color:#666666;"><span class="SAP-icons"></span></span>**[Preview](https://help.sap.com/docs/whats-new-disclaimer)** is provided as a courtesy, without a warranty, and may be subject to change. For more information, see the [preview disclaimer](https://help.sap.com/docs/whats-new-disclaimer).
 
 ****
 
@@ -56,108 +51,31 @@ Available as of
 <tr>
 <td valign="top">
 
-Upcoming
+1.120 
 
 </td>
 <td valign="top">
 
-Deleted 
+Changed 
 
 </td>
 <td valign="top">
 
-Announcement 
+Control 
 
 </td>
 <td valign="top">
 
-**End of Cloud Provisioning for SAPUI5 Versions \(Q4/2023\)** 
+**`sap.ui.table.Table`** 
 
 </td>
 <td valign="top">
 
-**End of Cloud Provisioning for SAPUI5 Versions \(Q4/2023\)**
+**`sap.ui.table.Table`**
 
-The following SAPUI5 versions will be removed from the SAPUI5 Content Delivery Network \(CDN\) after the end of Q4/2023.
+With SAPUI5 version 1.120.2, we have introduced the `findOn` function for selection plugins, which allows you to search for these plugins in a given table.
 
-**Minor Versions Reaching Their End of Cloud Provisioning**
-
-The following versions including all patches will be removed entirely:
-
--   1.106
--   1.107
-
-**Action**: Upgrade to a version that’s still in maintenance.
-
-**Patch Versions Reaching Their End of Cloud Provisioning**
-
-The following patches will be removed:
-
--   Long-term maintenance versions:
-
-    -   1.38.58
-    -   1.71.51 to 1.71.52
-    -   1.84.29 to 1.84.30
-    -   1.96.14 to 1.96.15
-
-    **Action**: Upgrade to the latest available patch for the respective SAPUI5 version.
-
--   Other versions:
-
-    -   1.102.8 to 1.102.11
-    -   1.105.2 to 1.105.3
-    -   1.109.0 to 1.109.3
-
-    **Action**: Upgrade to a version that’s still in maintenance.
-
-
-For more information, see [UI5 Releases Ending Service in 2023](https://blogs.sap.com/2022/12/05/ui5-releases-ending-service-in-2023/) and [Version Overview](https://ui5.sap.com/versionoverview.html).
-
-<sub><span style="color:#666666;"><span class="SAP-icons"></span></span>**[Preview](https://help.sap.com/docs/whats-new-disclaimer)**•Deleted•Announcement•Required•Upcoming</sub>
-
-</td>
-<td valign="top">
-
-Required 
-
-</td>
-<td valign="top">
-
-2023-12-31
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-1.121
-
-</td>
-<td valign="top">
-
-UI Changed 
-
-</td>
-<td valign="top">
-
-Announcement 
-
-</td>
-<td valign="top">
-
-**Gantt Chart: Improved Time Zone Support** 
-
-</td>
-<td valign="top">
-
-**Gantt Chart: Improved Time Zone Support**
-
-> ### Note:  
-> The following information concerns important upcoming changes for end users. These changes may require end users to adjust and/or test cases to be adapted, but they won't stop or disrupt software or processes.
-
-The Gantt chart will provide improved support for time zones. This development will offer seamless compatibility with SAP Fiori launchpad time zones as well as Gantt-chart-specific time zones including support for daylight saving time shifts. In addition, applications will also be able to use any IANA time zone that is only applicable to the Gantt chart.
-
-<sub><span style="color:#666666;"><span class="SAP-icons"></span></span>**[Preview](https://help.sap.com/docs/whats-new-disclaimer)**•UI Changed•Announcement•Info Only•Upcoming</sub>
+<sub>Changed•Control•Info Only•1.120</sub>
 
 </td>
 <td valign="top">
@@ -167,7 +85,91 @@ Info Only
 </td>
 <td valign="top">
 
-2024-02-22
+2023-11-02
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+1.120 
+
+</td>
+<td valign="top">
+
+New 
+
+</td>
+<td valign="top">
+
+Control 
+
+</td>
+<td valign="top">
+
+**`sap.m.VariantManagement`** 
+
+</td>
+<td valign="top">
+
+**`sap.m.VariantManagement`**
+
+We have introduced `sap.m.VariantManagement`, which replaces `sap.ui.comp.variants.VariantManagement` and offers a set of equivalent features. For more information, see [How to replace sap.ui.comp.variants.VariantManagement](../10_More_About_Controls/how-to-replace-sap-ui-comp-variants-variantmanagement-0b64485.md) andthe [API Reference](https://ui5.sap.com/#/api/sap.m.VariantManagement).
+
+<sub>New•Control•Info Only•1.120</sub>
+
+</td>
+<td valign="top">
+
+Info Only 
+
+</td>
+<td valign="top">
+
+2023-11-02
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+1.120 
+
+</td>
+<td valign="top">
+
+Deprecated 
+
+</td>
+<td valign="top">
+
+Announcement 
+
+</td>
+<td valign="top">
+
+**Deprecation of *Belize* Themes** 
+
+</td>
+<td valign="top">
+
+**Deprecation of *Belize* Themes**
+
+We have deprecated the *Belize* \(theme IDs: `sap_belize`, `sap_belize_plus`, `sap_belize_hcb`, `sap_belize_hcw`\) theme family as of SAPUI5 version 1.120.2.
+
+We recommend that you switch to the *Horizon* theme family \(theme IDs: `sap_horizon`, `sap_horizon_dark`, `sap_horizon_hcb`, `sap_horizon_hcw`\).
+
+<sub>Deprecated•Announcement•Recommended•1.120</sub>
+
+</td>
+<td valign="top">
+
+Recommended 
+
+</td>
+<td valign="top">
+
+2023-11-02
 
 </td>
 </tr>
@@ -326,7 +328,7 @@ Feature
 
 **`sap.m.table.ColumnWidthController`**
 
-We have now enabled the resizing of columns for `sap.m.Table` and `sap.ui.table.Table` and not just `sap.ui.mdc.Table`. To enable this feature, we have made `ColumnWidthController` available as an extension of `sap.m.p13n.SelectionController`. For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.table.ColumnWidthController), the [Sample](https://ui5.sap.com/#/entity/sap.ui.table.Table/sample/sap.m.sample.p13n.EngineGridTable) for `sap.ui.table.Table`, and the [Sample](https://ui5.sap.com/#/entity/sap.m.Table/sample/sap.m.sample.p13n.Engine) for `sap.m.Table`.
+We have now enabled the resizing of columns for `sap.m.Table` and `sap.ui.table.Table`, and not just `sap.ui.mdc.Table`. To enable this feature, we have made `ColumnWidthController` available as an extension of `sap.m.p13n.SelectionController`. For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.table.ColumnWidthController), the [Sample](https://ui5.sap.com/#/entity/sap.ui.table.Table/sample/sap.m.sample.p13n.EngineGridTable) for `sap.ui.table.Table`, and the [Sample](https://ui5.sap.com/#/entity/sap.m.Table/sample/sap.m.sample.p13n.Engine) for `sap.m.Table`.
 
 <sub>New•Feature•Info Only•1.120</sub>
 
@@ -502,7 +504,7 @@ SAP Fiori elements for OData V4
 
 The following changes and new features are available for SAP Fiori elements for OData V4:
 
--   We've added more keys that can be overridden by application developers using the custom i18n file approach. You can now override the following keys:
+-   Application developers can now override more keys using the custom i18n file approach. You can now override the following keys:
 
     -   `M_ROW_LEVEL_NAVIGATION_FAILURE_CHART_REASON_EXTERNAL_NAVIGATION_CONFIGURED`
 
@@ -523,6 +525,12 @@ The following changes and new features are available for SAP Fiori elements for 
 -   You can now add Key Performance Indicators \(KPI\) in non-analytical services. For more information, see [Creating Key Performance Indicators](../06_SAP_Fiori_Elements/creating-key-performance-indicators-8874399.md).
 
 -   You can now edit a multi-input field in a table on the object page. For more information, see [Using the Multi-Input Field on the Object Page](../06_SAP_Fiori_Elements/using-the-multi-input-field-on-the-object-page-04ff5b1.md).
+
+-   As of 1.120.2, we recalculate the default values in empty row mode when refreshing the table using a side effect. For more information, see [Prefilling Fields Using the DefaultValuesFunction](../06_SAP_Fiori_Elements/prefilling-fields-using-the-defaultvaluesfunction-5ada91c.md).
+
+-   As of 1.120.2, we support the `preferredMode=edit` parameter, that allows you to open an object page directly in edit mode. For more information, see [Handling of the preferredMode Parameter](../06_SAP_Fiori_Elements/handling-of-the-preferredmode-parameter-bfaf3cc.md).
+
+-   As of 1.120.2, you can enable the `singleDraftForCreate` setting using the `EditFlow` controller extension. For more information, see [Form Entry Object Page](../06_SAP_Fiori_Elements/form-entry-object-page-533f7e7.md).
 
 
 <sub>Changed•SAP Fiori Elements•Info Only•1.120</sub>
@@ -802,6 +810,49 @@ Changed
 </td>
 <td valign="top">
 
+Announcement 
+
+</td>
+<td valign="top">
+
+**Apply Best Practices to Become Future-Ready \(as of 1.120.2\)** 
+
+</td>
+<td valign="top">
+
+**Apply Best Practices to Become Future-Ready \(as of 1.120.2\)**
+
+The SAPUI5 framework has been evolving constantly, for instance to account for features in browser development \(such as modern ECMAScript support\) or their end of maintenance \(such as the end of IE11 support\). Substantial modularization efforts were a crucial step on this journey, which continues towards a future major version upgrade. In recent releases, but particularly with SAPUI5 1.120, a significant number of improvements have been introduced, for example the replacement of legacy APIs of the `Core` and `Configuration` modules.
+
+To make sure that your code bases, that is, your SAPUI5 applications and libraries, do not become legacy but are ready for the future, please continue applying best practices. To support your efforts, we are updating the documentation in many places, with SAPUI5 1.120 but also beyond. [Best Practices for Developers](../03_Get-Started/best-practices-for-developers-28fcd55.md) aims to be a good starting point for you, collecting fundamental information and offering practical guidance. Thanks for your support!
+
+<sub>Changed•Announcement•Info Only•1.120</sub>
+
+</td>
+<td valign="top">
+
+Info Only 
+
+</td>
+<td valign="top">
+
+2023-11-02
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+1.120 
+
+</td>
+<td valign="top">
+
+Changed 
+
+</td>
+<td valign="top">
+
 Feature 
 
 </td>
@@ -814,9 +865,7 @@ Feature
 
 **Updated Configuration of the SAPUI5 Runtime**
 
-We have implemented a modular, future-proof solution for configuration handling and deprecated the legacy `sap.ui.core.Configuration` module. To reflect these deprecations and the entities replacing them, the API Reference has been updated accordingly; the documentation will be gradually updated as well. For an updated list of configuration options, see [Configuration of the SAPUI5 Runtime](../04_Essentials/configuration-of-the-sapui5-runtime-91f08de.md) and [Configuration Options and URL Parameters](../04_Essentials/configuration-options-and-url-parameters-91f2d03.md).
-
-For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.core.Configuration).
+We have implemented a modular, future-proof solution for configuration handling, and deprecated the legacy `sap.ui.core.Configuration` module. To reflect these deprecations and the entities replacing them, the API Reference has been updated and documentation on the [Deprecated Configuration API](../04_Essentials/deprecated-configuration-api-2acafbf.md) has been added \(as of 1.120.2\). For an updated list of configuration options, see [Configuration of the SAPUI5 Runtime](../04_Essentials/configuration-of-the-sapui5-runtime-91f08de.md) and [Configuration Options and URL Parameters](../04_Essentials/configuration-options-and-url-parameters-91f2d03.md).
 
 <sub>Changed•Feature•Info Only•1.120</sub>
 
@@ -900,7 +949,14 @@ Feature
 
 **Localization**
 
-We now use the localization content of the Unicode Common Locale Data Repository \(CLDR\) version 43.0.0.
+-   We now use the localization content of the Unicode Common Locale Data Repository \(CLDR\) version 43.0.0.
+
+-   We now support the following additional locales \(as of 1.120.5\):
+
+    -   mk\_MK
+    -   cnr\_ME
+    -   sr\_Cyrl\_RS
+
 
 <sub>Changed•Feature•Info Only•1.120</sub>
 
@@ -994,13 +1050,25 @@ The new version of the SAPUI5 OData V4 model introduces the following features:
 
         For more information, see the API Reference for [`Context#getParent`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.Context%23methods/getParent) and [`Context#requestParent`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.Context%23methods/requestParent).
 
-    -   Creation of new root nodes
+    -   Creating new root nodes
 
         For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataListBinding%23methods/create).
 
-    -   Deletion of nodes even if an initial expansion has been set via the `expandTo` parameter of `$$aggregation` / `v4.ODataListBinding#setAggregation`
+    -   Moving nodes to become root nodes \(as of 1.120.2\)
+
+        For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.Context%23methods/move).
+
+    -   Deleting nodes, even if an initial expansion has been set using the `expandTo` parameter of `$$aggregation` / `v4.ODataListBinding#setAggregation`
 
         For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.Context%23methods/delete).
+
+    -   Creating nodes, even if an initial expansion has been set using the `expandTo` parameter of `$$aggregation` / `v4.ODataListBinding#setAggregation` \(as of 1.120.2\)
+
+        For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.model.odata.v4ODataListBinding%23methods/create).
+
+    -   Moving nodes, even if the hierarchy has been fully expanded using the `expandTo` parameter of `$$aggregation` / `v4.ODataListBinding#setAggregation` \(as of 1.120.2\).
+
+        For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.Context%23methods/move).
 
 
 -   The `withCredentials` model parameter is no longer experimental; you can now use it in productive applications.
@@ -1047,7 +1115,9 @@ Feature
 
 **Deprecations**
 
-We have deprecated all entities of `sap.ui.core.Core`, except the `ready` method.For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.core.Core).
+We have deprecated all entities of `sap.ui.core.Core`, except for the `ready` method. For more information, see [Deprecated Core API](../04_Essentials/deprecated-core-api-798dd9a.md) \(as of 1.120.2\)and the [API Reference](https://ui5.sap.com/#/api/sap.ui.core.Core).
+
+We have also deprecated the entire `sap.ui.core.Configuration` module. For more information, see *Updated Configuration of the SAPUI5 Runtime* in this What's New \(as of 1.120.2\).
 
 We have deprecated the following entities of `sap.ui.comp`:
 

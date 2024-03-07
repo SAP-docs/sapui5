@@ -60,7 +60,12 @@ Changes coming in from other flex layers are not considered in the following sce
 -   When navigating from integration cards, as the user's intention is to return to the same application state as when the card was created.
 
 
-In these scenarios, the following changes aren't retained from the `iAppState`: the filter fields or table columns that were removed, and changes in the position of the filter fields or table columns.
+> ### Restriction:  
+> In the preceding scenarios, the following changes by the end user aren't retained or restored while navigating back to SAP Fiori elements for OData V4 application:
+> 
+> -   The filter fields or table columns that were removed
+> 
+> -   Changes in the position of the filter fields or table columns
 
 > ### Note:  
 > Restoring a shared URL reinstates the last state of the control if variant management isn't enabled. For example, consider the following scenario:
@@ -70,15 +75,6 @@ In these scenarios, the following changes aren't retained from the `iAppState`: 
 > -   User A loads the application and adds two new columns. To share the application link as an email to user B, user A clicks the *Share* menu button and then *Send Email*.
 > 
 > -   When user B accesses this application, they see the table with the changes made by user A. It means user B sees the last state of the table and not the state as seen by the key user.
-
-> ### Restriction:  
-> Chart handling with respect to `iAppState` restore has several restrictions such as :
-> 
-> -   Changes coming in from other flex layers, such as changes made by key users, aren't considered for charts.
-> 
-> -   Any dimension or measure removed from the settings is retained in the settings even after a `iAppState` restore.
-> 
-> -   Any changes to the order of a dimension or measure in the chart using personalization isn't retained after a `iAppState` restore.
 
 > ### Note:  
 > -   Any filter field value coming from other layers is still overwritten by values for this field coming from SAP Fiori launchpad. For more information, see [Configuring Default Filter Values](configuring-default-filter-values-f27ad7b.md).

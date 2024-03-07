@@ -47,6 +47,6 @@ If you do not have existing access to SAP Business Application Studio, you can g
 
 5.  [Create an Empty SAPUI5 Project](https://developers.sap.com/tutorials/sapui5-101-create-project.html)
 
-    With this step, you set up an empty SAPUI5 freestyle app project.
+    With this step, you set up an empty freestyle SAPUI5 app project.
 
 

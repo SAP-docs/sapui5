@@ -93,13 +93,6 @@ We add an `sap/m/Input` control to the view. With this, the user can enter a rec
 -   `/recipient/name` declares the path in the model.
 
 
-
-
-## Conventions
-
--   Use Hungarian notation for variable names.
-
-
 **Related Information**  
 
 

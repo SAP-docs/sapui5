@@ -22,9 +22,11 @@ In this step, we set up the initial app.
 
 ## Setup
 
-To set up your project for this tutorial, download the files for *Step 1* from the *Samples* in the Demo Kit at [Worklist App - Step 1](https://ui5.sap.com/#/entity/sap.m.tutorial.worklist/sample/sap.m.tutorial.worklist.01). The code contains a preconfigured application project that can be used as a starting point to develop the worklist app. You can deploy the downloaded application to a \(local\) Web server and call the `webapp/test/mockServer.html` file in your browser manually to start the app.
+1.  To set up your project for this tutorial, download the files at [Worklist App - Step 1](https://ui5.sap.com/#/entity/sap.m.tutorial.worklist/sample/sap.m.tutorial.worklist.01).
 
-To access the real service, you would need to set up a proxy service that connects your app project deployed on a Web server to the remote service. Due to the so called same-origin policy browsers deny AJAX requests to service endpoints in case the domain/subdomain, protocol, or port differ from the app’s domain/subdomain, protocol, or port. Cross-origin resource sharing \(CORS\) makes it possible to break out of these restrictions derived from the same-origin policy. With CORS the server and browser agree which cross-origin requests are allowed. Another way to bypass the same-origin policy is using a proxy on the same host of the app. To keep it simple, our app contains a test page to run the app with local mock data instead of retrieving the data from a real server hosted somewhere else. This way we won’t have any issues related to the same-origin policy of the browsers, as long as we run the app with our mock server.
+2.  Extract the downloaded `.zip` file at the desired location on your local machine.
+3.  Open a shell in the extracted folder and execute `npm install`.
+4.  Execute `npm start` to start the web server and to open a new browser window hosting `test/mockServer.html`.
 
 > ### Note:  
 > The texts in the `i18n.properties` file are automatically generated based on the template Customizing \(OData entity set, entities, properties, and texts\). The result can be incorrect texts like "Enter an <Products\> name or a part of it." You should therefore revise the generated texts in the `i18n.properties` file.

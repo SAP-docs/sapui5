@@ -22,7 +22,7 @@ A minimalistic `index.html` file is needed to test the project configuration. Th
     		<script
     			id="sap-ui-bootstrap"
     			src="/resources/sap-ui-core.js"
-    			data-sap-ui-theme="sap_belize"
+    			data-sap-ui-theme="sap_horizon"
     			data-sap-ui-libs="sap.m"
     			data-sap-ui-compatVersion="edge"
                    data-sap-ui-async="true"

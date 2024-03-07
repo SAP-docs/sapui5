@@ -146,6 +146,43 @@ This can also be achieved via a function import, by annotating a side effect aga
 
 
 
+### Setting Section Title to the Control within Reuse Component
+
+You can use the `setAsTitleOwner` extension API to hide the title of the section or subsection. This API replaces the title of the required control with the section or subsection title.
+
+**Scenario 1: Reuse component contains a table or chart** 
+
+-   Define the `initialise` method of a table or chart in the reuse component
+
+    > ### Sample Code:  
+    > ```
+    > <st:SmartTable id="SalesPriceFacetID" initialise="SalesPriceInitialise"/>
+    > ```
+
+-   Define the same event in the controller and call the `setAsTitleOwner` extension API with the parameter `SmartTable` or `SmartChart`
+
+    > ### Sample Code:  
+    > ```
+    > SalesPriceInitialise: function(oEvent) {
+    > 	var oSmartTable = oEvent.getSource();
+    > 	var oExtensionAPI = extensionAPI.getExtensionAPI(oSmartTable);
+    > 	oExtensionAPI.setAsTitleOwner(oSmartTable);
+    > 
+    > }
+    > ```
+
+
+**Scenario 2: Reuse component with other controls** 
+
+You must call the `setAsTitleOwner` extension API with the control as the parameter, during the `onInit` event of the controller. This allows you to hide the title of the section or subsection containing the reuse component, and merge it with the title of the control.
+
+> ### Note:  
+> The control must have a header or text property
+
+For more information, see [Adding Titles to Object Page Tables](adding-titles-to-object-page-tables-d9a4539.md).
+
+
+
 <a name="loio1ba7f888dbf04121a62965b664496616__section_i1j_2bt_d4b"/>
 
 ## Additional Features in SAP Fiori Elements for OData V4

@@ -2,8 +2,11 @@
 
 # Navigation to an Object Page in Edit Mode
 
-> ### Note:  
-> This topic is currently only applicable to SAP Fiori elements for OData V2.
+
+
+<a name="loio8665847a17a14e1abdcebe3e235c8c68__section_nd2_kmz_c1c"/>
+
+## Additional Features in SAP Fiori Elements for OData V2
 
 You can now configure navigation from the list report to an object page directly in edit mode. You can find the manifest settings here:
 
@@ -32,17 +35,39 @@ You can prevent navigation from the object page as a result of the save action b
 
 > ### Sample Code:  
 > ```
->                 "pages": {
->                     "ObjectPage|STTA_C_MP_Product": {
->                         "entitySet": "STTA_C_MP_Product",
->                         "component": {
->                             "name": "sap.suite.ui.generic.template.ObjectPage",
->                             "settings": {
->    "navToListOnSave": false
+> "pages": {
+>         "ObjectPage|STTA_C_MP_Product": {
+>             "entitySet": "STTA_C_MP_Product",
+>             "component": {
+>                 "name": "sap.suite.ui.generic.template.ObjectPage",
+>                 "settings": {
+>                     "navToListOnSave": false
 > 
->                                 }
 >                             }
->                         }….
-> 
+>                         }
+>                     }….
+> ```
+
+
+
+<a name="loio8665847a17a14e1abdcebe3e235c8c68__section_x43_wmz_c1c"/>
+
+## Additional Features in SAP Fiori Elements for OData V4
+
+
+
+### Manifest Setting for Opening an Object Page in Edit Mode
+
+You can directly open an object page in edit mode by setting `"openInEditMode": true` in the `manifest.json` file.
+
+> ### Sample Code:  
+> ```
+> "options": {
+>      "settings": {
+>         "entitySet": "LineItems",
+>            ...
+> 			"openInEditMode": true
+>       }
+> }
 > ```
 

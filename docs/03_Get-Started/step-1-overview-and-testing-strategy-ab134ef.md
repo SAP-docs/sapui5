@@ -21,9 +21,11 @@ In this step, we will take a look at the prototype and define the test strategy 
 
 ## Coding
 
-To set up your project for this tutorial, download the files for *Step 1* from the *Samples* in the Demo Kit at [Testing - Step 1](https://ui5.sap.com/#/entity/sap.m.tutorial.testing/sample/sap.m.tutorial.testing.01). Copy the code to your workspace and make sure that the application runs by calling the `webapp/test/mockServer.html` file.
+1.  To set up your project for this tutorial, download the files at [Testing - Step 1](https://ui5.sap.com/#/entity/sap.m.tutorial.testing/sample/sap.m.tutorial.testing.01).
 
-Depending on your development environment, you might have to adjust resource paths and configuration entries. The project structure and the files provided with this tutorial are explained in detail in the [Walkthrough](walkthrough-tutorial-3da5f4b.md) tutorial.
+2.  Extract the downloaded `.zip` file at the desired location on your local machine.
+3.  Open a shell in the extracted folder and execute `npm install`.
+4.  Execute `npm start` to start the web server and to open a new browser window hosting your newly created `test/mockServer.html`.
 
 After downloading *Step 1*, you should have the following files:
 

@@ -47,7 +47,7 @@ If you find a bug or have an idea for a new feature - just go ahead and propose 
 
 ## Resources
 
-For the OpenUI5 version, visit [http://openui5.org/](http://openui5.org/) where you can download the runtime and the Demo Kit \(SDK\) at [http://openui5.org/download.html](http://openui5.org/download.html).
+For the OpenUI5 version, visit [https://openui5.org/](https://openui5.org/) where you can download the runtime and the Demo Kit \(SDK\) at [https://openui5.org/releases/](https://openui5.org/releases/).
 
 For the SAPUI5 resources, check your platform installation.
 

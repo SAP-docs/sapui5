@@ -24,7 +24,7 @@ There is a small icon right next to the currency code. After pressing this icon 
   
 **Value Help**
 
-![](images/Smart_Controls_Tutorial_Step_02b_e9a36ea.jpg "Value Help")
+![](images/Smart_Controls_Tutorial_Step_02b_e9a36ea.png "Value Help")
 
 
 

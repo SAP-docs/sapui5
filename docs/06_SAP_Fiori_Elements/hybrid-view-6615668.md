@@ -58,5 +58,5 @@ Setting the `"defaultPath"` to `"both"` ensures that the default view that is lo
 **Related Information**  
 
 
-[Configuring the Content Area](configuring-the-content-area-fc7d73c.md "Visualize data from the main entity set and seamlessly navigate to an application. Define a valid chart or LineItem annotation to render content for the chart area and table area.")
+[Configuring the Content Area](configuring-the-content-area-fc7d73c.md "Visualize data from the main entity set and seamlessly navigate to an application. Define a valid UI.Chart or UI.LineItem annotation to render content for the chart area and table area. For more information, see Descriptor Configuration for the Analytical List Page.")
 

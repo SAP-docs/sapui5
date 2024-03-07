@@ -35,7 +35,7 @@ This means that the implementation of a reuse component must not store any infor
 
 ## Handling Properties
 
-A reuse component may expose properties that can be used to communicate with the embedding application. For each of these properties, setter and getter methods are created automatically. The embedding application does not communicate with the reuse component instance by directly calling these methods. It does not even have access to the reuse component instance. For more information, see [Including Reuse Components on an Object Page](including-reuse-components-on-an-object-page-d869d7a.md) .
+A reuse component may expose properties that can be used to communicate with the embedding application. For each of these properties, setter and getter methods are created automatically. The embedding application does not communicate with the reuse component instance by directly calling these methods. It does not even have access to the reuse component instance. For more information, see [Including Reuse Components on an Object Page](including-reuse-components-on-an-object-page-d869d7a.md).
 
 
 

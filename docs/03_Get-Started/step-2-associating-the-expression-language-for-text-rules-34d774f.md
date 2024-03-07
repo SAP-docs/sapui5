@@ -82,7 +82,7 @@ The code also sets a binding context path on `RuleBuilder` to the specific rule 
          */
         onInit: function () {
 
-            sap.ui.getCore().applyTheme("sap_belize");
+            sap.ui.getCore().applyTheme("sap_horizon");
 
             // apply compact density for desktop, the cozy design otherwise
             this.getView().addStyleClass(sap.ui.Device.system.desktop ? "sapUiSizeCompact" : "sapUiSizeCozy");

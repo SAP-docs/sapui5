@@ -10,8 +10,10 @@ The `sap.ui.vk.Viewport` control provides a rendering canvas for the 3D elements
 
 ## API Reference / Sample
 
--   [`sap.ui.vk.Viewport`](https://ui5.sap.com/#/api/sap.ui.vk.Viewport) in the *API Reference* in the Demo Kit
--   [3D Viewer - Step 3 - 3D Viewer Using the Viewport Control](https://ui5.sap.com/#/entity/sap.ui.vk.tutorial.VIT/sample/sap.ui.vk.tutorial.VIT.03) in the Demo Kit
+Here's where you can find the Viewport control in the Demo Kit:
+
+-   [`sap.ui.vk.Viewport`](https://ui5.sap.com/#/api/sap.ui.vk.Viewport)
+-   [3D Viewer - Step 3 - 3D Viewer Using the Viewport Control](https://ui5.sap.com/#/entity/sap.ui.vk.tutorial.VIT/sample/sap.ui.vk.tutorial.VIT.03)
 
 
 
@@ -125,12 +127,14 @@ Zoom out of the scene.
 
 ## Constraints
 
--   The Viewport control loads 3D models in the SAP VDS \(`.vds`\) format only. Some 2D image formats can be loaded by the `sap.ui.vk.NativeViewport` control. See Native Viewport.
+The following restrictions apply:
+
+-   The Viewport control loads 3D models in the SAP VDS \(`.vds`\) format only. Some 2D image formats can be loaded by the `sap.ui.vk.NativeViewport` control. See [Native Viewport](native-viewport-ab5acd7.md).
+
+**Related Information**  
 
 
+[Scene Tree](scene-tree-ab70215.md "")
 
-## Related Information
-
--   [Scene Tree](scene-tree-ab70215.md)
--   [Native Viewport](native-viewport-ab5acd7.md)
+[Native Viewport](native-viewport-ab5acd7.md "The Native Viewport control (sap.ui.vk.NativeViewport) provides a rendering canvas for 2D images loaded into the Viewer application.")
 

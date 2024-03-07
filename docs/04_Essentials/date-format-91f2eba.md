@@ -6,7 +6,7 @@ The `sap.ui.core.format.DateFormat` class can be used to parse a string represen
 
 `DateFormat` formats and parses date and time values according to a set of format options. It can also be used to format intervals. A pattern base on Locale Data Markup Language \(LDML\) date format notation can be given and the date is formatted following the given pattern. `DateFormat` can also format the date and time into relative values on "day" level.
 
-An `sap.ui.core.format.DateFormat` instance takes the time zone from `sap.ui.core.Configuration#getTimezone` and considers it when using the `format` and `parse` methods. This means that dates are converted to the configured time zone. However, for instances created with `sap.ui.core.format.DateFormat#getDateTimeWithTimezoneInstance`, the `format` and `parse` methods accept a time zone parameter which is preferred over the `timezone` configuration parameter from `sap.ui.core.Configuration#getTimezone`.
+An `sap.ui.core.format.DateFormat` instance takes the time zone from `sap/base/i18n/Localization.getTimezone` and considers it when using the `format` and `parse` methods. This means that dates are converted to the configured time zone. However, for instances created with `sap.ui.core.format.DateFormat#getDateTimeWithTimezoneInstance`, the `format` and `parse` methods accept a time zone parameter which is preferred over the `timezone` configuration parameter from `sap/base/i18n/Localization.getTimezone`.
 
 If no time zone is configured, the browser's local time zone is used.
 

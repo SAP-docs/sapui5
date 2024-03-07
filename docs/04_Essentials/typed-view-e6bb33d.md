@@ -17,37 +17,39 @@ A typed view implements its own `View#createContent` method. It must either retu
 The following example shows the definition of a view of type `myapp.views.MyView`:
 
 ```js
- sap.ui.define([
+sap.ui.define([
   "sap/ui/core/mvc/View",
   "sap/m/Panel"
 ], function(View, Panel) {
+  "use strict";
   return View.extend("myapp.views.MyView", {
     // define, which controller to use
     getControllerName: function() {
       return "myapp.controller.Main";
     },
-    // whether the ID of content controls should be prefixed automatically with the view ID
-    getAutoPrefixId: function() {
-      return true; // default is false
-    },
-    // create view content and return the root control(s)
-    createContent: function() {
-      return new Promise(function(res, rej) {
-          res(new Panel({...}));
-      }).catch(function(err) {
-          rej(err);
+    // create view content and return the root control
+    createContent: async function(oController) {
+      // "createContent" allows for asynchronous actions
+      const someControl = await oController.loadFragment(...);
+
+      return new Panel({
+        //create stable id, prefixed with the view id
+        id: this.createId("myPanel"),
+        headerText: "My Panel",
+        content: [someControl, /* ... */]
       });
     }
   });
 });
 ```
 
-Besides the `createContent` method, a view can implement the methods `getControllerName` and`getAutoPrefixId`:
+Besides the `createContent` method, a view can implement the `getControllerName` method, which defines the name of the view controller that should be instantiated and used for the view. The name must be in class name notation \(i.e. dot notation\) **without** the `.controller` suffix. The suffix will be added by the framework when loading the module containing the controller.
 
--   `getControllerName`: Defines the name of the view controller that should be instantiated and used for the view. The name must be in class name notation \(i.e. dot notation\) **without** the `.controller` suffix. The suffix will be added by the framework when loading the module containing the controller.
+> ### Note:  
+> A Typed View must not specify a `type`, since the class inheriting from `sap/ui/core/mvc/View` is sufficient.
 
--   `getAutoPrefixId`: Defines whether the IDs of controls created during the execution of `createContent` will automatically be prefixed with the ID of the view. The default implementation of this method returns `false`. Auto-prefixing is only available for synchronous content creation. For asynchronous content creation use [`sap.ui.core.mvc.View#createId`](https://ui5.sap.com/#/api/sap.ui.core.mvc.View/methods/createId) instead in order to prefix the IDs programmatically.
-
+> ### Caution:  
+> Contrary to `JSView`s, Typed Views are modeled as classes extending the `sap/ui/core/mvc/View` base class. When migrating `JSView`s to Typed Views, make sure that your corresponding Controller does not use the same fully qualified class name. For a best practice recommendation on structuring an application project, see [Folder Structure: Where to Put Your Files](../05_Developing_Apps/folder-structure-where-to-put-your-files-003f755.md).
 
 
 
@@ -60,11 +62,10 @@ The preferred way of instantiating a typed view is via the factory function [`sa
 **Example:** Instantiating a typed view with `View.create`:
 
 ```js
- View.create({
+const oView = await View.create({
     viewName: "module:myapp/views/MyView"
-  }).then(oView) {
+  })
     oView.placeAt("content");
-  });
 ```
 
 
@@ -81,8 +82,38 @@ A typed view in XML can be declared via the class `sap.ui.core.mvc.View`. Using 
 <mvc:View viewName="module:myapp/views/MyView" />
 ```
 
+
+
+<a name="loioe6bb33d076dc4f23be50c082c271b9f0__section_gjh_kdr_k1c"/>
+
+## View Declaration in `manifest.json`
+
+A typed view can be described in a manifest in a fashion similar to the instantiation shown above.
+
+More information on the `sap.ui5/routing` section can be found in [Routing Configuration](routing-configuration-9023130.md).
+
+```
+{
+  "sap.ui5": {
+    "rootView": {
+      "viewName": "module:myapp/views/MyView"
+    },
+    "routing": {
+      "targets": {
+        "myHome": {
+          "name": "module:myapp/views/MyHomeView"
+        }
+        /* other views, e.g. XML ... */
+      }
+    }
+  }
+}
+```
+
 **Related Information**  
 
+
+[Typed View Sample](https://ui5.sap.com/entity/sap.ui.core.mvc.View/sample/sap.ui.core.sample.View.navigationTypedView)
 
 [API Reference: `sap.ui.core.mvc.View`](https://ui5.sap.com/#/api/sap.ui.core.mvc.View)
 

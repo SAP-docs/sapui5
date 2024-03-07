@@ -58,6 +58,26 @@ var oList = oModel.bindList("/SalesOrderList"),
 
 
 
+### Relative Access
+
+To access a list relative to an existing [sap.ui.model.odata.v4.Context](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.Context), use [`#getObject`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.Context%23methods/getObject) if that list is already loaded on the client by that context's binding. For example, when all items have been expanded in a list binding of sales orders,`oSalesOrderContext.getObject("SO_2_SOITEM")` would return them. Note that [`#requestObject`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.Context%23methods/requestObject) cannot be used to fetch additional entities. To access a list that is not already loaded on the client, you need to create a new relative list binding as follows. You can also $expand further navigation properties; see [sap.ui.model.odata.v4.ODataModel\#bindList](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataModel/methods/bindList) .
+
+```js
+ // assuming oContext already exists
+const oListBinding = oContext.getModel().bindList("SO_2_SOITEM", oContext, [
+        new Sorter("ItemPosition")
+    ], [
+        new Filter("Quantity", FilterOperator.GT, "0")
+    ], {
+        $expand : {SOITEM_2_SCHDL : {$select : ["Quantity"]}},
+        $select : ["ItemPosition"]
+    });
+const aContexts = await oListBinding.requestContexts();
+// now access aContexts[0].getObject().ItemPosition etc.
+```
+
+
+
 <a name="loio17b30ac2d5474078be31e695e97450cc__section_tvt_bdc_v3b"/>
 
 ## Single Entities
@@ -79,6 +99,23 @@ oContextBinding.requestObject("Note").then(function (sNote) {
 
 
 
+### Relative Access
+
+To access a single entity relative to an existing [sap.ui.model.odata.v4.Context](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.Context), use [`#getObject`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.Context%23methods/getObject) if that entity is already loaded on the client by that context's binding. Note that [`#requestObject`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.Context%23methods/requestObject) cannot be used to fetch additional entities. To access a single entity that is not already loaded on the client, you need to create a new relative context binding as follows. You can also $expand further navigation properties; see [sap.ui.model.odata.v4.ODataModel\#bindContext](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataModel/methods/bindContext) .
+
+```js
+
+// assuming oContext already exists
+const oContextBinding = oContext.getModel().bindContext("toOther", oContext, {
+    $expand : {"toYetAnother" : {$select : ["A", "B", "C"]},
+    $select : ["AProperty", "AnotherProperty", "YetAnotherProperty"]
+});
+const oOtherEntity = await oContextBinding.getBoundContext().requestObject();
+// now access oOtherEntity.AProperty, oOtherEntity.toYetAnother.A etc.
+```
+
+
+
 <a name="loio17b30ac2d5474078be31e695e97450cc__section_hg5_cdc_v3b"/>
 
 ## Single Properties
@@ -96,4 +133,10 @@ oNote.requestValue().then(function (sValue) {
     // Note: We cannot use setValue as oNote is an absolute property binding
 });
 ```
+
+
+
+### Relative Access
+
+To access single properties relative to an existing [sap.ui.model.odata.v4.Context](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.Context), use [`#getProperty`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.Context%23methods/getProperty) for access to already loaded properties, or [`#requestProperty`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.Context%23methods/requestProperty) in order to fetch additional properties not yet loaded on the client. You can also use [`#getObject`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.Context%23methods/getObject) to access the complete data the context points to or any part thereof, but [`#requestObject`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.Context%23methods/requestObject) cannot be used to fetch additional properties. The value of a property can be modified using [`#setProperty`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.Context%23methods/setProperty).
 

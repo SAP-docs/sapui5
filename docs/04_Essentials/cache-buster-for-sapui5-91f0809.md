@@ -18,7 +18,7 @@ The cache buster mechanism is part of the resource servlet. In general, requests
   	id="sap-ui-bootstrap"
   	src="resources/sap-ui-cachebuster/sap-ui-core.js"
   	data-sap-ui-libs="sap.ui.core,sap.m,sap.ui.table"
-	data-sap-ui-theme="sap_belize"></script>
+	data-sap-ui-theme="sap_horizon"></script>
 ```
 
 The bootstrap JavaScript will be included via the URL `resources/sap-ui-cachebuster/sap-ui-core.js` instead of `resources/sap-ui-core.js`.

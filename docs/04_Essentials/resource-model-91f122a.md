@@ -16,7 +16,8 @@ After the resource model has been instantiated, you have a model containing the 
 
 
 
-![](images/Resource_Model_46a5dad.png)
+![The resource model is a wrapper for language-specific resource bundle files that are used to bind texts of a control to
+							language-dependent resource bundle properties.](images/Resource_Model_46a5dad.png)
 
 **Related Information**  
 

@@ -21,7 +21,7 @@ By setting the `async=true` configuration parameter, the module loader loads the
 <script
     id="sap-ui-bootstrap"
     src="resources/sap-ui-core.js"
-    data-sap-ui-theme="sap_belize"
+    data-sap-ui-theme="sap_horizon"
     data-sap-ui-async="true"
     data-sap-ui-onInit="module:my/app/main"
     data-sap-ui-resourceRoots='{"my.app": "./"}'
@@ -41,7 +41,7 @@ Alternatively, you can influence the loading behavior of the preload files witho
 
 -   `async` \(recommended\)
 
-    If you set the `preload` configuration option to `async`, the runtime loads the modules for all declared libraries asynchronously. Thus, for any code that follows the SAPUI5 bootstrap tag, the framework cannot make sure that the classes are already available. Therefore, the application must delay the access to the SAPUI5 APIs by using the `Core.attachInitEvent` method. SAPUI5 supports the `async` mode only for libraries that are loaded by the SAPUI5 core. Libraries that are loaded dynamically by using the `sap.ui.getCore().loadLibrary()` API will be loaded synchronously by default for compatibility reasons. Only when a configuration object with a property of `async:true` is passed, the bundle is loaded asynchronously.
+    If you set the `preload` configuration option to `async`, the runtime loads the modules for all declared libraries asynchronously. Thus, for any code that follows the SAPUI5 bootstrap tag, the framework cannot make sure that the classes are already available. Therefore, the application must delay the access to the SAPUI5 APIs by using the `Core.attachInitEvent` method. Libraries can be loaded dynamically by using the `sap/ui/core/Lib.load()` API, which loads the bundle asynchronously as well.
 
 -   `sync`
 
@@ -58,7 +58,7 @@ You can easily check this with an existing application by specifying the `sap-ui
 <script
     id="sap-ui-bootstrap"
     src="resources/sap-ui-core.js"
-    data-sap-ui-theme="sap_belize"
+    data-sap-ui-theme="sap_horizon"
     data-sap-ui-preload="async"
     data-sap-ui-onInit="module:my/app/main"
     data-sap-ui-resourceRoots='{"my.app": "./"}'

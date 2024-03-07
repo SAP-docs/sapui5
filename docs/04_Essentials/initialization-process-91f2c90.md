@@ -88,7 +88,7 @@ The files are loaded in the following sequence:
 
 1.  Library bootstrap file `/<context-path>/resources/<library-name>/library.js` 
 
-    A JavaScript file that contains the JavaScript code for all enumeration types provided by the library as well as library-specific initialization code that is independent from the controls in the library. The file calls the `sap.ui.getCore().initLibrary` method with an object that describes the content of the library \(list of contained controls, elements etc.\). For libraries that have been developed with SAPUI5 application development tools or the SAPUI5 offline build tools, this file is generated automatically during the build
+    A JavaScript file that contains the JavaScript code for all enumeration types provided by the library as well as library-specific initialization code that is independent from the controls in the library. The file calls the `sap/ui/core/Lib.init` method with an object that describes the content of the library \(list of contained controls, elements etc.\). For libraries that have been developed with SAPUI5 application development tools or the SAPUI5 offline build tools, this file is generated automatically during the build
 
 2.  Library style sheet file `/<context-path>/resources/<library-name>/themes/<theme-name>/library.css`
 

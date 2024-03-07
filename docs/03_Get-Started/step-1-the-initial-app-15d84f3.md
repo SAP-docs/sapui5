@@ -24,9 +24,11 @@ The structure and data model created in this step will be used throughout this t
 
 ## Setup
 
-To set up your project for this tutorial, download the files at [OData V4 - Step 1](https://ui5.sap.com/#/entity/sap.ui.core.tutorial.odatav4/sample/sap.ui.core.tutorial.odatav4.01). Copy or import the code to your workspace and make sure that the application runs by calling the `webapp/index.html` file.
+1.  To set up your project for this tutorial, download the files at [OData V4 - Step 1](https://ui5.sap.com/#/entity/sap.ui.core.tutorial.odatav4/sample/sap.ui.core.tutorial.odatav4.01).
 
-Depending on your development environment, you might have to adjust resource paths and configuration entries. The project structure and the files provided with this tutorial are explained in detail in the [Walkthrough](walkthrough-tutorial-3da5f4b.md) tutorial.
+2.  Extract the downloaded `.zip` file at the desired location on your local machine.
+3.  Open a shell in the extracted folder and execute `npm install`.
+4.  Execute `npm start` to start the web server and to open a new browser window hosting your newly created `index.html`.
 
 You should now have the following files:
 

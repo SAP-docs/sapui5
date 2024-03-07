@@ -43,7 +43,7 @@ Update the `index.html` file to reference the `viewportScenetreeStepnav` namespa
     <script id="sap-ui-bootstrap"
         src="https://ui5.sap.com/resources/sap-ui-core.js"
         data-sap-ui-libs="sap.ui.vk, sap.m, sap.ui.core"
-        data-sap-ui-theme="sap_belize"
+        data-sap-ui-theme="sap_horizon"
         data-sap-ui-bindingSyntax="complex"
         data-sap-ui-resourceroots='{
             "viewportScenetreeStepnav": "./"

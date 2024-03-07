@@ -32,7 +32,21 @@ The OData meta model knows how to follow "14.2.1 Attribute Target" described in 
 
 -   Use [`sap.ui.model.odata.v4.AnnotationHelper`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.AnnotationHelper) instead of `sap.ui.model.odata.AnnotationHelper`. The ability to follow a path has been built into the V4 OData meta model itself. See `field>Value/$Path@com.sap.vocabularies.Common.v1.Label` in the code example below. Instead of `sap.ui.model.odata.AnnotationHelper.format`, you can use `sap.ui.model.odata.v4.AnnotationHelper.value` or `sap.ui.model.odata.v4.AnnotationHelper.format`. You can use both as a computed annotation.
 
--   Computed annotations start with "@@", for example `<Text text="{meta>Value/@@sap.ui.model.odata.v4.AnnotationHelper.value}" />`. Their name without the "@@" prefix refers to a function in the global namespace which computes an annotation value from the metadata addressed by the preceding path. For more information, see [ODataMetaModel.requestObject](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataMetaModel/methods/requestObject) .
+-   Computed annotations start with "@@", for example `<Text text="{meta>Value/@@AnnotationHelper.value}" />`. Their name without the "@@" prefix refers to a function which computes an annotation value from the metadata addressed by the preceding path.
+
+    The function name behind "@@" \(`"AnnotationHelper.value"` in the example\) is resolved in the following cases:
+
+    -   When [processing an XML template](xml-templating-5ee619f.md): via a `template:require` attribute at the node or one of its parent nodes, or via `<template:alias>`
+
+    -   In a binding within an XML view \(since 1.121\): via a [`core:require`](require-modules-in-xml-view-and-fragment-b11d853.md) attribute at the control or one of its parent controls \(for example, the view\). This requires that UI5 uses `data-sap-ui-bindingSyntax="complex"` or `compatVersion="edge"` as described in [Property Binding](property-binding-91f0652.md), so that complex, JSON-like bindings are allowed.
+    -   In [`ODataMetaModel.requestObject`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataMetaModel/methods/requestObject): via `mParameters.scope`
+    -   In all three situations, but deprecated since 1.120: via a global name \(like `sap.ui.model.odata.v4.AnnotationHelper.value`\)
+
+        > ### Note:  
+        > The usage of global names \(such as `sap.ui.model.odata.v4.AnnotationHelper.value`\) is deprecated since 1.120. Use `template:require` instead as shown in the example below.
+
+
+    For more information, see [ODataMetaModel.requestObject](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataMetaModel/methods/requestObject).
 
 -   Ensure that the view is loaded asynchronously. In this case, there is no longer a need to preload metadata, because the template processor waits for every binding to be resolved before proceeding.
 
@@ -168,7 +182,7 @@ The first `<template:with>` defines `entityType` to be the type of the set `Busi
 
 [OData V4 Metadata JSON Format](odata-v4-metadata-json-format-87aac89.md "The OData V4 model provides access to metadata in a streamlined JSON format which is described in the section below.")
 
-[getMetaModel](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataModel/methods/sap.ui.model.odata.v4.ODataModel.getMetadata)
+[getMetaModel](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataModel%23methods/getMetaModel)
 
 [sap.ui.model.odata.v4.ODataMetaModel](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataMetaModel)
 
@@ -177,6 +191,4 @@ The first `<template:with>` defines `entityType` to be the type of the set `Busi
 [sap.ui.model.odata.v4.ODataMetaModel\#getObject](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataMetaModel/methods/getObject)
 
 [sap.ui.model.odata.v4.ODataMetaModel\#bindList](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataMetaModel/methods/bindList)
-
-[sap.ui.model.odata.ODataMetaModel\#loaded](https://ui5.sap.com/#/api/sap.ui.model.odata.ODataMetadata/methods/loaded)
 

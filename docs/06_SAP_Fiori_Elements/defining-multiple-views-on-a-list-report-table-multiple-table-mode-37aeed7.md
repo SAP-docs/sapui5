@@ -1114,37 +1114,38 @@ To define multiple views using multiple table mode, perform the following steps:
 
     > ### Sample Code:  
     > ```
-    > 1- "SalesOrderManageList": {
-    > 2-      "type": "Component",
-    > 3-      "id": "SalesOrderManageList",
-    > 4-	"name": "sap.fe.templates.ListReport",
-    > 5-	"options": {
-    > 6-	     "settings": {
-    > 7-	          "contextPath": "/SalesOrderManage",
-    > 8-	          "views": {
-    > 9-	               "paths": [
-    > 10-	                    {
-    > 11-	                         "key": "tab1",
-    > 12-	                         "annotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#Good"
-    > 13-	                    },
-    > 14-	                    {
-    > 15-	                         "key": "tab2",
-    > 16-	                         "annotationPath": "com.sap.vocabularies.UI.v1.SelectionPresentationVariant#UncompletePV"
-    > 17-	                    },
-    > 18-	                    {
-    > 19-	                         "key": "tab3",
-    > 20-	                         "annotationPath": "com.sap.vocabularies.UI.v1.SelectionPresentationVariant#PVandSV"
-    > 21-	                    }
-    > 22-	               ],
-    > 23-	               ShowCounts : false
-    > 24-	          },
-    > 25-	          "controlConfiguration": {
-    > 26-	             ...
-    > 27-               }
-    > 28-	     },
-    > 29-	     ...
-    > 30-     }
-    > 31-}
+    > 
+    > "SalesOrderManageList": {
+    >     "type": "Component",
+    >     "id": "SalesOrderManageList",
+    >     "name": "sap.fe.templates.ListReport",
+    >     "options": {
+    >         "settings": {
+    >             "contextPath": "/SalesOrderManage",
+    >             "views": {
+    >                 "paths": [
+    > 	            {
+    > 	                "key": "tab1",
+    > 	                "annotationPath":        "com.sap.vocabularies.UI.v1.SelectionVariant#Good"
+    > 	            },
+    > 	            {
+    > 	                "key": "tab2",
+    > 	                "annotationPath": "com.sap.vocabularies.UI.v1.SelectionPresentationVariant#UncompletePV"
+    > 	            },
+    > 	            { 
+    > 	                "key": "tab3",
+    > 	                "annotationPath": "com.sap.vocabularies.UI.v1.SelectionPresentationVariant#PVandSV"
+    > 	            }
+    > 	        ],
+    > 	        "showCounts" : false
+    > 	    },
+    > 	    "controlConfiguration": {
+    > 	        ...
+    >             }
+    > 	},
+    > 	...
+    >     }
+    > }
     > ```
 
     **Settings**
@@ -1171,7 +1172,7 @@ To define multiple views using multiple table mode, perform the following steps:
     <tr>
     <td valign="top">
     
-    `ShowCounts`
+    `showCounts`
     
     </td>
     <td valign="top">

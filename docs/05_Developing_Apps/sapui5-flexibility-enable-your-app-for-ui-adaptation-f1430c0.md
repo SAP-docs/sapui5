@@ -125,23 +125,35 @@ In general, you can change your app without any problems, as long as you keep th
 
 ## Enabling UI Adaptation for Apps Running Standalone
 
-In addition, for SAPUI5 apps running standalone \(not in an SAP Fiori launchpad\), you need to declare a dependency to the `sap.ui.fl` library in the `manifest.json` file, under `sap.ui5/dependencies/libs`.
+In addition, for SAPUI5 apps running standalone \(not in an SAP Fiori launchpad\), you need the following:
 
-> ### Sample Code:  
-> manifest.json
-> 
-> ```
->     "sap.ui5": {
->         "dependencies": {
->             …
->             "libs": {
->                 "sap.ui.fl": {},
->                 …
->             }
->         },
->         …
-> 
-> ```
+-   A back end needs to be available, and you need to set it up.
+
+    If you're developing on SAP BTP, Cloud Foundry environment, you need to set up the [UI5 flexibility service for key users](https://help.sap.com/docs/ui5-flexibility-for-key-users).
+
+-   Make sure that the `sap.ui.fl` library is loaded. You can do this in either of the following ways:
+
+    -   Configure the KeyUserConnector in the SAPUI5 bootstrap. For more information, see [Bootstrapping SAPUI5 Flexibility](../04_Essentials/bootstrapping-sapui5-flexibility-642dab2.md).
+
+    -   Declare a dependency to the `sap.ui.fl` library in the `manifest.json` file, under `sap.ui5/dependencies/libs`.
+
+        > ### Sample Code:  
+        > manifest.json
+        > 
+        > ```
+        >     "sap.ui5": {
+        >         "dependencies": {
+        >             …
+        >             "libs": {
+        >                 "sap.ui.fl": {},
+        >                 …
+        >             }
+        >         },
+        >         …
+        > 
+        > ```
+
+
 
 
 

@@ -12,18 +12,18 @@ Internally, we prefer to pass an object to the test for retrieving the values - 
 
 ```js
 // "Bar" required from module "sap/m/Bar"
-// "Core" required from module "sap/ui/core/Core"
+// "nextUIUpdate" required from module "sap/ui/qunit/utils/nextUIUpdate"
 function renderBarInPageTestCase(sTestName, oOptions) {
-    QUnit.test(sTestName, function (assert) { 
+    QUnit.test(sTestName, async(assert) => { 
         // System under Test
-        var oBar = new Bar();
+        const oBar = new Bar();
 
         oBar.placeAt("qunit-fixture");
 
         // Act
         oBar.applyTagAndContextClassFor(oOptions.context);
 
-        Core.applyChanges();
+        await nextUIUpdate();
 
         // Assert
        assert.strictEqual(oBar.getDomRef().nodeName, oOptions.expectedTag.toUpperCase());
@@ -55,43 +55,6 @@ renderBarInPageTestCase("Should render the header context", {
 
 
 
-## Testing Control Events
-
-You cannot test for event parameters in SAPUI5 so you have to record them. Nevertheless, you can still use Sinon to retain the spy's call counting capabilities. Here is a working example for this:
-
-```js
-// "HashChanger" required from module "sap/ui/core/routing/HashChanger"
-QUnit.test("Should set the Hash", function(assert) { 
-    //Arrange
-    var aCalls = [],
-        fnHashChanged = function(oEvt) {
-                 aCalls.push({ newHash : oEvt.getParameter("newHash"), oldHash : oEvt.getParameter("oldHash") });
-        },
-        oSpy = this.spy(fnHashChanged);
-
-    
-    //System under Test
-    var oHashChanger = new HashChanger();
-    oHashChanger.init();
-    oHashChanger.attachEvent("hashChanged", oSpy);
-
-    //Act
-    oHashChanger.setHash("one", true);
-    oHashChanger.setHash("two");
-
-    //Assert
-    assert.strictEqual(oSpy.callCount, 2, "did change the Hash two times");
-
-    assert.strictEqual(aCalls[0].newHash, "one", "first event was correct"); 
-    assert.strictEqual(aCalls[1].newHash, "two", "second event was correct");
-    
-    //Cleanup
-    oHashChanger.destroy();
-});
-```
-
-
-
 ## Testing User Interactions
 
 When testing user interactions, you can use `sap.ui.test.qunit` to trigger events.
@@ -102,11 +65,11 @@ Here is an example for when a user presses [Esc\] on the select:
 // "Item" required from module "sap/ui/core/Item"
 // "Select" required from module "sap/m/Select"
 // "KeyCodes" required from module "sap/ui/events/KeyCodes"
-// "Core" required from module "sap/ui/core/Core"
+// "nextUIUpdate" required from module "sap/ui/qunit/utils/nextUIUpdate"
 // "QUnitUtils" required from module "sap/ui/qunit/QUnitUtils"
-QUnit.test("Should close the popup menu if it is open and you press escape", function(assert) {
+QUnit.test("Should close the popup menu if it is open and you press escape", async(assert) => {
     // Arrange
-    var oConstructor = {
+    const oConstructor = {
         items: [
         new Item({
             key: "0",
@@ -121,15 +84,15 @@ QUnit.test("Should close the popup menu if it is open and you press escape", fun
     };
 
     // System under test
-    var oSelect = new Select(oConstructor);
+    const oSelect = new Select(oConstructor);
 
     oSelect.placeAt("select-content");
-    Core.applyChanges();
+    await nextUIUpdate();
 
     // Arrange after rendering
     oSelect.focus();
-    var fnEscapeSpy = this.spy(oSelect, "onsapescape");
-    var fnCloseSpy = this.spy(oSelect, "close");
+    const fnEscapeSpy = this.spy(oSelect, "onsapescape");
+    const fnCloseSpy = this.spy(oSelect, "close");
 
     // Act
     QUnitUtils.triggerKeydown(oSelect.getDomRef(), KeyCodes.ESCAPE);
@@ -145,26 +108,95 @@ QUnit.test("Should close the popup menu if it is open and you press escape", fun
 
 
 
-## Testing the Re-rendering
+<a name="loio0ddcc60b05ee40dea1a3be09e8fee8f7__section_REREN"/>
 
-In this example, you will test to see whether the control fails to rerender. The control has overwritten the setter of the tooltip property to avoid triggering a re-rendering.
+## Rendering and Re-rendering Controls within Tests
 
-To test this, we add an `eventDelegate` to see how often the rendering function is called. We need to make sure that we apply the changes after setting the property because we want SAPUI5 to render synchronously:
+In the rendering tests part, you have to place your control in the DOM. The best place to put it is the `qunit-fixture` div, since its content gets deleted after every test.
+
+Make sure you destroy your control, since SAPUI5 will keep a reference to it and may also rerender it.
+
+It's crucial that you wait for the Promise of `sap/ui/qunit/utils/nextUIUpdate` after each time you've caused a rerendering.
+
+Executing the module returns a Promise which resolves after rendering. If you don't wait for the Promise, the DOM won't be updated yet.
+
+You can use the following template to make sure that you remember to destroy your control:
+
+```js
+// "nextUIUpdate" required from module "sap/ui/qunit/utils/nextUIUpdate"
+QUnit.test("Should do Something", async(assert) => {
+    // Arrange
+    const oConstructor = {
+
+    };
+
+    // System under Test
+    const oMyControl = new nameSpace.myControl(oConstructor);
+    oMyControl.placeAt("qunit-fixture");
+
+    // Wait for the rendering before proceeding the test
+    await nextUIUpdate();
+
+    // Act
+
+    // Assert
+
+    // Cleanup
+    oMyControl.destroy();
+});
+```
+
+> ### Caution:  
+> Using `nextUIUpdate` in combination with fake timers has some pitfalls. If fake timers are used, you need to pass the `clock` of the fake timer to the `nextUIUpdate` function call.
+> 
+> When working with a fake timer, keep in mind to either execute all timeouts before restoring the fake timer or to make sure that no rendering is pending. Not executing the pending timeouts can lead to issues within the following tests, for example by interupting the rendering lifecycle.
+
+Example usage of `nextUIUpdate` in combination with a fake timer:
+
+```js
+// nextUIUpdate with fake timer
+QUnit.test("Test with fake timers", async() => {
+    this.clock = sinon.useFakeTimers();
+
+    // Coding which requires rendering, e.g.
+    const oButton = new Button();
+    oButton.placeAt("qunit-fixture");
+
+    await nextUIUpdate(this.clock);
+
+    // Continue with your test
+
+    // Release all timers at the end of the test
+    // to avoid e.g. blocking the rendering within
+    // following tests and to ensure that other
+    // timeouts triggered through integration are
+    // released
+    oButton.destroy()
+    this.clock.runAll();
+    this.clock.restore();
+}
+```
+
+In the example below, you will test to see whether the control fails to rerender. The control has overwritten the setter of the tooltip property to avoid triggering a re-rendering.
+
+To test this, we add an `eventDelegate` to see how often the rendering function is called. We need to make sure that we wait for the next rendering:
 
 ```js
 // "Label" required from module "sap/m/Label"
-// "Core" required from module "sap/ui/core/Core"
-QUnit.test("Should suppress rerendering when tooltip is set", function(assert) { 
+// "nextUIUpdate" required from module "sap/ui/qunit/utils/nextUIUpdate"
+QUnit.test("Should suppress rerendering when tooltip is set", async(assert) => { 
     // Arrange
-    var oConstructor = {
+    const oConstructor = {
         tooltip : "foo"
         };
-    var oRerenderingSpy = this.spy();
+    const oRerenderingSpy = this.spy();
 
     // System under Test
-    var oLabel = new Label(oConstructor);
+    const oLabel = new Label(oConstructor);
     oLabel.placeAt("qunit-fixture");
-    Core.applyChanges();
+
+    // wait for rendering
+    await nextUIUpdate();
 
     oLabel.addEventDelegate({
         onBeforeRendering : oRerenderingSpy
@@ -172,7 +204,9 @@ QUnit.test("Should suppress rerendering when tooltip is set", function(assert) {
 
     // Act
     oLabel.setTooltip("bar");
-    Core.applyChanges();
+
+   // wait for rendering
+    await nextUIUpdate();
 
     // Assert
     assert.strictEqual(oRerenderingSpy.callCount, 0, "Did not rerender");
@@ -267,21 +301,21 @@ We use `clock.tick` to trigger the server response. If you didn't do this, the t
 
 ```js
 // "Label" required from module "sap/m/Label"
-// "Core" required from module "sap/ui/core/Core"
+// "nextUIUpdate" required from module "sap/ui/qunit/utils/nextUIUpdate"
 
 //Your test:
-QUnit.test("Should do something with the model", function(assert) {
+QUnit.test("Should do something with the model", async(assert) => {
     // Arrange
-    var oModel = createODataModel(),
+    const oModel = createODataModel(),
         oMockServer = startMockServer(50);
 
     // System under Test
-    var oLabel = new Label({
+    const oLabel = new Label({
         text : "{/myProperty}"
     });
 
     oLabel.placeAt("qunit-fixture");
-    Core.applyChanges();
+    await nextUIUpdate();
 
     // Act - trigger the request
     sinon.clock.tick(50);
@@ -293,6 +327,25 @@ QUnit.test("Should do something with the model", function(assert) {
     oModel.destroy();
     oMockServer.stop();
     sinon.clock.reset() 
+});
+```
+
+
+
+<a name="loio0ddcc60b05ee40dea1a3be09e8fee8f7__section_ljv_b3r_rzb"/>
+
+## Testing for a Theme Change
+
+```js
+sap.ui.require(["sap/ui/core/Theming"], (Theming) => {
+    QUnit.test("Check if theme change was done correctly", function(assert){
+        const myTestFunction = () => {
+            // Test changes are applied
+            Theming.detachApplied(myTestFunction);
+        }
+        Theming.setTheme("myTestTheme");
+        Theming.attachApplied(myTestFunction);
+    });
 });
 ```
 

@@ -393,7 +393,7 @@ The following changes and new features are available for SAP Fiori elements for 
 
 -   The creation of an object using a dialog is now supported in multi-view applications. For more information, see [Enabling Object Creation Using the Dialog in the List Report](../06_SAP_Fiori_Elements/enabling-object-creation-using-the-dialog-in-the-list-report-ceb9284.md).
 
--   You can now enable the history of recently entered values for any field in the smart filter bar. For more information, see [Enable the History of Recently Entered Values](../06_SAP_Fiori_Elements/enable-the-history-of-recently-entered-values-37dbf1f.md).
+-   You can now enable the history of recently entered values for any field in the smart filter bar. For more information, see [Enabling the History of Recently Entered Values](../06_SAP_Fiori_Elements/enabling-the-history-of-recently-entered-values-37dbf1f.md).
 
 -   You can now configure a data refresh upon back navigation from an external app when keep-alive mode is enabled. For more information, see [Refresh Entity Sets in sap-keep-alive Mode](../06_SAP_Fiori_Elements/refresh-entity-sets-in-sap-keep-alive-mode-3c65f2c.md).
 
@@ -479,6 +479,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.119](what-s-new-in-sapui5-1-119-0b1903a.md "With this release SAPUI5 is upgraded from version 1.118 to 1.119.")
 
 [What's New in SAPUI5 1.118](what-s-new-in-sapui5-1-118-3eecbde.md "With this release SAPUI5 is upgraded from version 1.117 to 1.118.")
 

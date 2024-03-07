@@ -83,7 +83,9 @@ Overview Page
 
 Analytical List Page
 
-[Defining Custom Actions](defining-custom-actions-c3de5c0.md)
+[Defining Custom Actions](defining-custom-actions-c3de5c0.md)\(OData V2\)
+
+[Adding Custom Actions Using Extension Points](adding-custom-actions-using-extension-points-7619517.md)\(OData V4\)
 
 </td>
 </tr>
@@ -186,7 +188,9 @@ Object Page
 
 Analytical List Page
 
-[Defining Custom Actions](defining-custom-actions-c3de5c0.md)
+[Defining Custom Actions](defining-custom-actions-c3de5c0.md)\(OData V2\)
+
+[Adding Custom Actions Using Extension Points](adding-custom-actions-using-extension-points-7619517.md)\(OData V4\)
 
 </td>
 </tr>
@@ -313,7 +317,9 @@ depends \(see linked topics\)
 
 Analytical List Page
 
-[Defining Custom Actions](defining-custom-actions-c3de5c0.md)
+[Defining Custom Actions](defining-custom-actions-c3de5c0.md)\(OData V2\)
+
+[Adding Custom Actions Using Extension Points](adding-custom-actions-using-extension-points-7619517.md)\(OData V4\)
 
 </td>
 </tr>
@@ -733,6 +739,37 @@ UI.OperationGroupingType/ChangeSet
 
 
 
+### Prefilling Action Parameters with Calculated Default Values
+
+You can calculate default values for action parameters through a back-end function. As a result on the UI, when the user opens the action parameter dialog, the parameter fields are prefilled with the returned values of the back-end function.
+
+To achieve this, application developers must annotate the action with `Common.DefaultValuesFunction`.
+
+> ### Sample Code:  
+> `DefaultValuesFunction` for function import actions
+> 
+> ```
+> <FunctionImport Name="GetDefaultsForSetText" ReturnType="cds_zrc_dv_defaultvalues.ZRC_DV_A_SetText" m:HttpMethod="GET" sap:action-for="cds_zrc_dv_defaultvalues.RootType">
+> <Parameter Name="UUID" Type="Edm.Guid" Mode="In"/>
+> </FunctionImport>
+>  
+> <Annotations xmlns=http://docs.oasis-open.org/odata/ns/edm Target="cds_zrc_dv_defaultvalues.cds_zrc_dv_defaultvalues_Entities/SetText">
+> <Annotation Term="com.sap.vocabularies.Common.v1.SideEffects" Qualifier="Action">
+> <Record>
+> <PropertyValue Property="TargetProperties">
+> <Collection>
+> <PropertyPath>Text</PropertyPath>
+> </Collection>
+> </PropertyValue>
+> </Record>
+> </Annotation>
+> <Annotation Term="com.sap.vocabularies.Common.v1.DefaultValuesFunction" String="GetDefaultsForSetText"/>
+> </Annotations>
+> 
+> ```
+
+
+
 <a name="loiocbf16c599f2d4b8796e3702f7d4aae6c__section_egb_j2l_ylb"/>
 
 ## Additional Features in SAP Fiori Elements for OData V2
@@ -812,6 +849,8 @@ For internal use only! Corresponding CDS annotation:
 ### Prefilling Action Parameter Values Using `DefaultValuesFunction`
 
 The action parameters can be prefilled with the values returned from a default value function.
+
+In case a single record is selected and an action is called that calls the `DefaultValuesFunction` function import, then the default values fetched from the function import gets populated in the parameter dialog, irrespective of the existing value present for the selected record. In case of multiple selections, default values fetched from the `DefaultValuesFunction` gets populated in the parameter dialog and the remaining input parameter remains empty.
 
 For more information, see [Prefilling Fields Using the DefaultValuesFunction](prefilling-fields-using-the-defaultvaluesfunction-5ada91c.md).
 
@@ -1362,7 +1401,7 @@ The following default values are available:
 
     To achieve this, application developers must annotate the action with `Common.DefaultValuesFunction`.
 
-    A returned value of the function is taken into account only if there isn't already a default coming from either the user application preferences or the `UI. ParameterDefaultValue` annotation set on the corresponding action parameter.
+    A returned value of the function is taken into account only if there isn't already a default coming from either the user application preferences or the `UI.ParameterDefaultValue` annotation set on the corresponding action parameter.
 
     In multiselection scenarios \(when the user has selected multiple table lines to execute a bound action\), the function is called for each context. The parameter value is only prefilled if all returned values are the same.
 
@@ -1841,8 +1880,6 @@ To get the key, you need to select the action applicable in your specific scenar
 [Adding Confirmation Popovers for Actions](adding-confirmation-popovers-for-actions-87130de.md "You can display a confirmation popover when a user triggers an action.")
 
 [Using Action Control for Context-Dependent Actions](using-action-control-for-context-dependent-actions-5b0b686.md "Action control refers to the ability of applications to be able to configure app-specific actions so that they are only enabled for certain instances of the object, but not others.")
-
-[Adding Action-Specific Messages to Confirmation Dialog Boxes](adding-action-specific-messages-to-confirmation-dialog-boxes-f5a04c7.md "You can create message texts for specific critical actions. They are displayed in the confirmation dialog box for the action.")
 
 [Configuring Navigation](configuring-navigation-a424275.md "SAP Fiori elements control the navigation within an app (internal navigation) and the navigation to and from an app (external navigation).")
 

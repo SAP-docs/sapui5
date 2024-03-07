@@ -38,7 +38,7 @@ The generated IDs change whenever the control structure of the app changes. The 
 
 -   Inline help tools
 
-    These tools display user assistance information directly in the app and depend on stable IDs \(example: [Web Assistant](https://enable-now.sap.com/ic/pub/int/index.html?show=group!GR_CF44F241F6233280#group!GR_FE31C8798B894A1)\).
+    These tools display user assistance information directly in the app and depend on stable IDs \(example: [SAP Companion](https://enable-now.sap.com/ic/pub/int/index.html?show=group!GR_CF44F241F6233280#group!GR_FE31C8798B894A1)\).
 
 
 > ### Tip:  

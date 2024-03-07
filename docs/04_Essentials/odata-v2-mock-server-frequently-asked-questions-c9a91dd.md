@@ -88,7 +88,7 @@ var sMetadataUrl = "testdata/rmtsampleflight/metadata.xml"// url to the service 
 The OData model uses JSON to fetch the data:
 
 ```js
-var oModel = new sap.ui.model.odata.ODataModel(sUri, true);
+var oModel = new sap.ui.model.odata.v2.ODataModel(sUri, true);
 ```
 
 

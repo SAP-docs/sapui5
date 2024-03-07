@@ -14,7 +14,7 @@ A *Paste* button is shown in the table toolbar. Once you have copied data from a
 
     ![](images/Excel_Copy_paste_0_d66f42d.png)
 
--   In edit mode, the smart table only has editable fields. It also contains multiple editable fields in a single column, for example, value and unit of measure.
+-   In edit mode, the table only has editable fields. It also contains multiple editable fields in a single column, for example value and unit of measure.
 
     ![](images/Excel_copy_paste_2_2af66fc.png)
 
@@ -22,7 +22,7 @@ A *Paste* button is shown in the table toolbar. Once you have copied data from a
 
     ![](images/Excel_copy_paste_0a_17355b2.png)
 
--   The smart table has both editable and non-editable fields.
+-   The table has both editable and non-editable fields.
 
     ![](images/Excel_copy_paste_3_766e2e9.png)
 
@@ -35,7 +35,7 @@ A *Paste* button is shown in the table toolbar. Once you have copied data from a
 
 
 > ### Note:  
-> -   Only the pasting of simple data fields is supported. Complex fields, such as smart links, images, connected fields, multi-input fields, and field groups, are not supported.
+> -   Only the pasting of simple data fields is supported. Complex fields, such as links, images, connected fields, multi-input fields, and field groups, are not supported.
 > 
 > -   If there are validation errors, an error message is shown in a dialog box so that the user can take action.
 > 
@@ -45,7 +45,7 @@ A *Paste* button is shown in the table toolbar. Once you have copied data from a
 > 
 > -   This feature is not supported for tables with custom columns and custom tables.
 > 
-> -   In the object page, the *Export to Spreadsheet* feature is available by default only if the copy/paste feature is available. For more information, see [Adapting the UI: List Report and Object Page](adapting-the-ui-list-report-and-object-page-0d2f1a9.md) for SAP Fiori elements for OData V2 [Using the Export Feature](using-the-export-feature-4bab6f2.md) for SAP Fiori elements for OData V4.
+> -   In the object page, the *Export to Spreadsheet* feature is available by default only if the copy/paste feature is available. For more information, see [Adapting the UI: List Report and Object Page](adapting-the-ui-list-report-and-object-page-0d2f1a9.md) for SAP Fiori elements for OData V2 and [Using the Export Feature](using-the-export-feature-4bab6f2.md) for SAP Fiori elements for OData V4.
 
 
 
@@ -124,4 +124,6 @@ The paste option can be disabled with the `enablePaste` parameter.
 >                             }
 > 
 > ```
+
+Users can also copy multiple rows as well as ranges of rows and columns to the clipboard. For more information, see the *Copying Multiple Rows and Range Selections* section under *Additional Features in SAP Fiori Elements for OData V4* in [Tables](tables-c0f6592.md).
 

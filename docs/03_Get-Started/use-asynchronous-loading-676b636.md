@@ -18,7 +18,7 @@ Add the bootstrapping tag `data-sap-ui-async="true"` to your `index.html` file. 
 <script 
 	id="sap-ui-bootstrap"
 	src="/resources/sap-ui-core.js"
-	data-sap-ui-theme="sap_belize"
+	data-sap-ui-theme="sap_horizon"
 	data-sap-ui-compatVersion="edge"
 	data-sap-ui-async="true"
 	data-sap-ui-onInit="module:my/app/main"

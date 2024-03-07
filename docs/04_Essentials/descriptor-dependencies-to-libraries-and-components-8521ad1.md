@@ -8,6 +8,8 @@ The performance-relevant attributes have been introduced with the version 3 of t
 
 
 
+<a name="loio8521ad1955f340f9a6207d615c88d7fd__section_DEPLIB"/>
+
 ## Dependencies to Libraries
 
 The following dependencies to libraries can be implemented:
@@ -53,21 +55,23 @@ For **libraries**, modify the `.library` file as shown in the follown code sampl
 In a second step, modify the `library.js` file as follows:
 
 ```
-sap.ui.getCore().initLibrary({
-   ...
-   dependencies : ["sap.ui.core","sap.m"], // lazy libs are not declared here
+sap.ui.define(['sap/ui/core/Lib'], function(Library) {
+  Library.init({
+    ...
+    dependencies : ["sap.ui.core","sap.m"] // lazy libs are not declared here
+  });
+});
 ```
 
 > ### Note:  
-> In all cases, the lazy libraries need to be loaded manually in the application or library via the `loadLibrary` API:
+> In all cases, the lazy libraries need to be loaded manually in the application or library via the `sap/ui/core/Lib.load` API:
 > 
 > ```
-> 
-> sap.ui.getCore().loadLibrary("sap.suite.ui.commons", { async: true }).then(...);
+> Library.load("sap.suite.ui.commons").then(...);
 > ```
 
 > ### Tip:  
-> Execute the `loadLibrary` before any resource of the library is required to preload the complete library instead of loading each resource individually.
+> Execute the `load` method before any resource of the library is required to preload the complete library instead of loading each resource individually.
 > 
 > Always use the async API as this is the preferred and performant way. If your code relies on synchronous loading, it needs to be refactored to support the async API.
 
@@ -84,8 +88,9 @@ In this scenario, the library is the leading container and **no** component prel
 For loading lazy components inside a library, proceed with the library mechanisms as described above:
 
 ```
-
-sap.ui.getCore().loadLibrary("sap.suite.ui.commons", { async: true }).then(...);
+sap.ui.define(['sap/ui/core/Lib'], function(Library) {
+  Library.load("sap.suite.ui.commons").then(...); // lazy loading
+});
 ```
 
 **Scenario 2:** Standalone component

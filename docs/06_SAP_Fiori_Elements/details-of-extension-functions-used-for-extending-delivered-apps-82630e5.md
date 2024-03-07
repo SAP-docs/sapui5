@@ -290,5 +290,5 @@ The method that returns is also defined in the extension controller.
 **Related Information**  
 
 
-[Extending Delivered Apps Using Adaptation Extensions](extending-delivered-apps-using-adaptation-extensions-52fc48b.md "You can extend delivered apps based on SAP Fiori elements by using the Visual Editor on SAP Business Application Studio. It allows you to create adaptation projects on top of delivered apps.")
+[Extending Delivered Apps Using Adaptation Extensions](extending-delivered-apps-using-adaptation-extensions-52fc48b.md "You can extend delivered apps based on SAP Fiori elements by using the SAPUI5 Visual Editor in SAP Business Application Studio. It allows you to create adaptation projects on top of delivered apps.")
 

@@ -16,7 +16,7 @@ In the following example, `"_supportedMaterial"` is a one-to-many `navigationPro
 > 
 > ```
 
-You can use the navigation property inside a `UI.DataField` to display values of the target entity. The following example shows how to display the `"material"` property of every associated `"SupportedMaterial"`:
+You can use the navigation property inside a `UI.DataField` to display the values of the target entity. The following example shows how to display the `"material"` property of every associated `"SupportedMaterial"`:
 
 > ### Sample Code:  
 > XML Annotation
@@ -76,7 +76,7 @@ The multi-input field is also available for tables.
 > ### Restriction:  
 > Note the following for SAP Fiori elements for OData V4:
 > 
-> -   You cannot mark multi-input fields as mandatory.
+> -   You cannot mark the multi-input field as mandatory using the `Common.fieldControl` annotation. You can instead use the `Capabilities.InsertRestrictions` annotation to specify whether the field can be edited and the `Capabilities.DeleteRestrictions` annotation to specify whether it can be deleted.
 > 
 > -   You cannot use the multi-input field if you need to display more than 100 selected values, since this isn't supported. In this case we recommend that you use a table instead.
 

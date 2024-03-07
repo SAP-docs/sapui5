@@ -173,8 +173,9 @@ You can also add custom currencies via the formatting settings in the core confi
 Adding a currency with a key which is already available in the CLDR will overwrite the CLDR currency. By this, you can overdefine single currencies, in case the CLDR provided formatting is not sufficient.
 
 ```js
+// "Formatting" required from module "sap/base/i18n/Formatting"
 // "NumberFormat" required from module "sap/ui/core/format/NumberFormat"
-sap.ui.getCore().getConfiguration().getFormatSettings().addCustomCurrencies({
+Formatting.addCustomCurrencies({
 	     "MyCoin": {
             "symbol": "MC"
         },

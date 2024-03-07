@@ -55,7 +55,7 @@ If you want to make additional libraries known in your app, without directly loa
 
 If a library preload contains reuse components and this preload is configured to be loaded lazily \(via `"lazy": true` in the dependencies of the `manifest.json`\), the library isn't available upon creation of the related component.
 
-In this case, you need to use `sap.ui.getCore().loadLibrary("my.library")` before creating the component \(e.g with `Component.create({ name: "my.component" })` or component usage `myComponent.createComponent("myUsage")`\).
+In this case, you need to use `sap/ui/core/Lib.load("my.library")` before creating the component \(e.g with `Component.create({ name: "my.component" })` or component usage `myComponent.createComponent("myUsage")`\).
 
 An indicator that a component is inside a library is the existence of an entry `sap.app/embeddedBy` in its `manifest.json` file.
 

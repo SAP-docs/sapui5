@@ -6,7 +6,7 @@ Depending on the different use cases, you can use different binding types: Prope
 
 
 
-![](images/DataBinding_Binding_Types_950f3d5.png)
+![UI5 uses different types of data binding: Property binding, context binding, and list binding.](images/DataBinding_Binding_Types_950f3d5.png)
 
 -   **Property binding** allows properties of the control to get automatically initialized and updated from model data. You can only bind control properties to model properties of a matching type, or you use a formatter or a data type to parse and convert the data as needed For more information, see [Formatting, Parsing, and Validating Data](formatting-parsing-and-validating-data-07e4b92.md).
 

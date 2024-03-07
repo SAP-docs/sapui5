@@ -2,10 +2,10 @@
 
 # Form Entry Object Page
 
-The form entry object page is a variation of the standard object page layout in which the header and navigation bar are not displayed.
+The form entry object page is a variation of the standard object page layout in which the header and navigation bar aren't displayed.
 
 > ### Note:  
-> This topic is currently only applicable to SAP Fiori elements for OData V4.
+> This topic is only applicable to SAP Fiori elements for OData V4.
 
 You can use the form entry object page as an alternative to a list report object page pattern when you only want to provide a page for data entry.
 
@@ -34,7 +34,7 @@ For a page to be considered a form entry object page, you must make the followin
 > }  
 > ```
 
-In addition, if you want your application to start automatically in creation mode you have to specify the following in your main application `Component.js`:
+In addition, if you want your application to start automatically in creation mode you've to specify the following in your main application `Component.js`:
 
 > ### Sample Code:  
 > ```
@@ -79,7 +79,15 @@ Application developers can enable the `singleDraftForCreate` setting in the `man
 > }
 > ```
 
-This setting ensures that end users can create a new entity only after they have actively saved the changes they have made to the current entity. Whenever an end user attempts to create a new entity, the application checks for entities with the properties `IsActiveEntity=false` and `HasActiveEntity=false`. If an entity matches these properties, it is considered as a draft and the application displays the entity in edit mode.
+This setting ensures that end users can create a new entity only after they've actively saved the changes they've made to the current entity. Whenever an end user attempts to create a new entity, the application checks for entities with the properties `IsActiveEntity=false` and `HasActiveEntity=false`. If an entity matches these properties, it's considered as a draft and the application displays the entity in edit mode.
 
 If there are no unsaved entities, the end user can create a new entity.
+
+
+
+<a name="loio533f7e7f59854cb08ce8074814ae83c5__section_tcx_53c_lzb"/>
+
+## Enabling the `singleDraftForCreate` Setting Using Extensions
+
+Application developers can enable the `singleDraftForCreate` setting using the `EditFlow` controller extension. If the `editFlow.createDocument(ListBinding, {singleDraftForCreate: true})` setting is enabled, it allows end users to create a new entity. The application launches the newly created entity in edit mode only if no unsaved drafts exist. If any unsaved draft exists, the application opens the latest unsaved draft in edit mode instead.
 

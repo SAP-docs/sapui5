@@ -20,7 +20,7 @@ You can add further subpages manually in the `manifest.json` file post-generatio
 
 ## Additional Features in SAP Fiori Elements for OData V2
 
-You can also use the SAP Fiori generator to create one subpage \(detail page\) for the object page when you create your app. This is expressed in the code as a 1:n association to the root entity and is rendered as a table on the page.
+You can also use the SAP Fiori generator to create a subpage \(detail page\) for the object page when you create your app. This is expressed in the code as a 1:n association to the root entity and is rendered as a table on the page.
 
 ```json
 
@@ -95,7 +95,7 @@ To add a subpage manually, you need two objects in the `manifest.json` file.
 
 ```
 
-To remove the `SubPage`, the route and the target must be removed.
+To remove the `Subpage`, the route and the target must be removed.
 
 
 
@@ -103,5 +103,5 @@ To remove the `SubPage`, the route and the target must be removed.
 
 ## More Information
 
-For information about defining an external navigation target using intent-based navigation, see , the route and the target need to be removed.[Changing Navigation to Object Page](changing-navigation-to-object-page-8bd546e.md).
+For information about defining an external navigation target using intent-based navigation, see [Changing Navigation to Object Page](changing-navigation-to-object-page-8bd546e.md). .
 

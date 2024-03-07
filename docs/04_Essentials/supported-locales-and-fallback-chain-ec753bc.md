@@ -10,6 +10,8 @@ You can configure a list of supported locales and a fallback locale in your appâ
 > 2.  More severely, a missing entry in `supportedLocales` leads to a language fallback, even though the texts for the corresponding language are available.
 > 
 > 3.  Only use the `supportedLocales` feature if you are in control of adding and deleting properties files for resource bundles. If you use translation tools which control the lifecycle of properties files but are not able to update `supportedLocales`, you cannot make use of the `supportedLocales` feature yet.
+> 
+> 4.  The language tags can use modern or legacy ISO639 language codes. Whatever language code is used in the list of `supportedLocales` will also be used when requesting a file from the server. If the locale contains a legacy language code like "iw" and the `supportedLocales` contains \[...,"he",...\], "he" will be used in the URL. This mapping works in both directions.
 
 
 

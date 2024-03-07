@@ -5,6 +5,8 @@
 @font-face{font-family:'BusinessSuiteInAppSymbols-V2';src: url('./BusinessSuiteInAppSymbols-V2.woff') format('woff');font-weight: normal;font-style: normal;}
 @font-face{font-family:'bwicons';src: url('./bwicons.ttf') format('truetype');font-weight: normal;font-style: normal;}
 @font-face{font-family:'FPA-icons';src: url('./FPA-icons.woff') format('woff');font-weight: normal;font-style: normal;}
+@font-face{font-family:'FPA-icons-V2';src: url('./FPA-icons-V2.woff') format('woff');font-weight: normal;font-style: normal;}
+@font-face{font-family:'FPA-icons-V3';src: url('./font/FPA-icons-V3.woff') format('woff');font-weight: normal;font-style: normal;}
 @font-face{font-family:'ITOA_FontIcon';src: url('./ITOA_FontIcon.eot');src: url('./ITOA_FontIcon.eot?#iefix') format('embedded-opentype'),url('./ITOA_FontIcon.ttf') format('truetype');font-weight: normal;font-style: normal;}
 @font-face{font-family:'NS-SAP-icons';src: url('./NS-SAP-icons.woff') format('woff');font-weight: normal;font-style: normal;}
 @font-face{font-family:'NS-SAP-icons-extended';src: url('./NS-SAP-icons-extended.woff') format('woff');font-weight: normal;font-style: normal;}
@@ -17,10 +19,14 @@
 @font-face{font-family:'SAP-icons-V5';src: url('./SAP-icons-V5.woff') format('woff');font-weight: normal;font-style: normal;}
 @font-face{font-family:'SAP-icons-extended';src: url('./SAP-icons-extended.woff') format('woff');font-weight:normal;font-style:normal;}
 @font-face{font-family:'SAP-icons-TNT';src: url('./SAP-icons-TNT.woff') format('woff');font-weight: normal;font-style: normal;}
+@font-face{font-family:'SAP-icons-TNT-V2';src: url('./SAP-icons-TNT-V2.woff') format('woff');font-weight: normal;font-style: normal;}
+@font-face{font-family:'SAP-icons-TNT-V3';src: url('./SAP-icons-TNT-V3.woff') format('woff');font-weight: normal;font-style: normal;}
 @font-face{font-family:'SAP-icons-watt';src: url('./SAP-icons-watt.ttf') format('truetype');font-weight:normal;font-style:normal;}
 @font-face{font-family:'sap-launch-icons';src: url('./sap-launch-icons.ttf') format('truetype');font-weight:normal;font-style:normal;}
 @font-face{font-family:'sapsportsone';src: url('./sapsportsone.woff') format('woff');font-weight:normal;font-style:normal;}
 @font-face{font-family:'ve-icon-set';src: url('./ve-icon-set.woff') format('woff');font-weight:normal;font-style:normal;}
+@font-face{font-family:'FluentSystemIcons-Filled';src: url('./FluentSystemIcons-Filled.woff') format('woff');font-weight:normal;font-style:normal;}
+@font-face{font-family:'FluentSystemIcons-Regular';src: url('./FluentSystemIcons-Regular.woff') format('woff');font-weight:normal;font-style:normal;}
 .Ariba-icons {font-family:Ariba_icon_library;}
 .Belize-icons {font-family:SAPGUI-Belize-Icons;}
 .BusinessSuiteInAppSymbols {font-family:BusinessSuiteInAppSymbols;}
@@ -28,6 +34,8 @@
 .BusinessSuiteInAppSymbols-V2 {font-family:BusinessSuiteInAppSymbols-V2;}
 .BW-icons {font-family:bwicons;}
 .FPA-icons {font-family:FPA-icons;}
+.FPA-icons-V2 {font-family:FPA-icons-V2;}
+.FPA-icons-V3 {font-family:FPA-icons-V3;}
 .ITOA_FontIcon {font-family:ITOA_FontIcon;}
 .NS-SAP-icons {font-family:NS-SAP-icons;}
 .NS-SAP-icons-extended {font-family:NS-SAP-icons-extended;}
@@ -40,7 +48,11 @@
 .SAP-icons-V5 {font-family:SAP-icons-V5;}
 .SAP-icons-extended {font-family:SAP-icons-extended;}
 .SAP-icons-TNT {font-family:SAP-icons-TNT;}
+.SAP-icons-TNT-V2 {font-family:SAP-icons-TNT-V2;}
+.SAP-icons-TNT-V3 {font-family:SAP-icons-TNT-V3;}
 .SAP-icons-watt {font-family:SAP-icons-watt;}
 .sap-launch-icons {font-family:sap-launch-icons;}
 .sapsportsone {font-family:sapsportsone;}
 .ve-icon-set {font-family:ve-icon-set;}
+.FluentSystemIcons-Filled {font-family:FluentSystemIcons-Filled;}
+.FluentSystemIcons-Regular {font-family:FluentSystemIcons-Regular;}

@@ -24,9 +24,11 @@ Usually you start the development of an app with local mock data first. This way
 
 ## Coding
 
-To set up your project for this tutorial, download the files for *Step 1* in the Demo Kit at [Mock Server - Step 1](https://ui5.sap.com/#/entity/sap.ui.core.tutorial.mockserver/sample/sap.ui.core.tutorial.mockserver.01). Copy the code to your workspace and make sure that the application runs by calling the `webapp/test/mockServer.html` file.
+1.  To set up your project for this tutorial, download the files at [Mock Server - Step 1](https://ui5.sap.com/#/entity/sap.ui.core.tutorial.mockserver/sample/sap.ui.core.tutorial.mockserver.01).
 
-Depending on your development environment you might have to adjust resource paths and configuration entries. The project structure and the files coming with this tutorial are explained in detail in the [Walkthrough](walkthrough-tutorial-3da5f4b.md) tutorial.
+2.  Extract the downloaded `.zip` file at the desired location on your local machine.
+3.  Open a shell in the extracted folder and execute `npm install`.
+4.  Execute `npm start` to start the web server and to open a new browser window hosting your newly created `test/mockServer.html`.
 
 You should have the same files as displayed in the following figure:
 

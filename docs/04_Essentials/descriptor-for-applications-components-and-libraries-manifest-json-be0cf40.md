@@ -1057,6 +1057,23 @@ Version 61
 
 </td>
 </tr>
+<tr>
+<td valign="top">
+
+Version 62
+
+</td>
+<td valign="top">
+
+\>=1.121
+
+</td>
+<td valign="top">
+
+1.61.0
+
+</td>
+</tr>
 </table>
 
 For more information on the new fields introduced in each version, check out [Migration Information for Upgrading the Descriptor File](migration-information-for-upgrading-the-descriptor-file-a110f76.md)
@@ -1826,7 +1843,12 @@ Mandatory; contains objects with device types on which the app is running, such 
 </td>
 <td valign="top">
 
-Indicates whether an app shall run in full screen mode \(`true`\), or not \(`false`\)
+Indicates whether SAP Fiori launchpad shall render the target application utilizing the full width of the viewport \(`true`\) or not \(`false`\). For more information, see [Letterboxing](https://experience.sap.com/fiori-design-web/letter-boxing/).
+
+> ### Note:  
+> This parameter is currently subject to SAP Fiori launchpad only and has no effect on standalone or SAP Fiori elements applications. Standalone applications can use `sap.m.Shell` to restrict the application width.
+
+
 
 </td>
 </tr>
@@ -1945,8 +1967,6 @@ Defines models that should be created or destroyed along the component's lifecyc
 
     > ### Example:  
     > You can overwrite the default binding mode with the `defaultBindingMode` attribute \(enumeration of type `sap.ui.model.BindingMode`, with values. `Default`, `OneTime`, `OneWay`, `TwoWay`\). For OData models constructor see the following:
-    > 
-    > -   [sap.ui.model.odata.ODataModel](https://ui5.sap.com/#/api/sap.ui.model.odata.ODataModel/constructor)
     > 
     > -   [sap.ui.model.odata.v2.ODataModel](https://ui5.sap.com/#/api/sap.ui.model.odata.v2.ODataModel/constructor)
     > 
@@ -2435,7 +2455,7 @@ Current version of the `manifest.json`
 ```
 
 {
-    "_version": "1.60.0",
+    "_version": "1.61.0",
  
     "start_url": "index.html",
  
@@ -2657,7 +2677,7 @@ Current version of the `manifest.json`
                         }
                     }
                 }
-        }
+            }
         }
     },
  
@@ -2687,7 +2707,7 @@ Current version of the `manifest.json`
             }]
         },
         "dependencies": {
-            "minUI5Version": "1.120.0",
+            "minUI5Version": "1.121.0",
             "libs": {
                 "sap.m": {
                     "minVersion": "1.34.0"
@@ -2822,6 +2842,7 @@ Current version of the `manifest.json`
     "sap.package": {},
     "sap.insights": {},
     "sap.bpa.task": {},
+    "sap.cards.ap": {},
     "sap.fe": {},
     "sap.card": {}
 }
@@ -2877,6 +2898,8 @@ For the following namespaces, the indicated teams are responsible:
 
 -   sap.card - in SAPUI5 responsibility
 
+-   sap.cards.ap - in Cards for signature micro experience responsibility
+
 
 
 
@@ -2885,18 +2908,14 @@ For the following namespaces, the indicated teams are responsible:
 The component declares the existence of the application descriptor by specifying `manifest: "json"` in the component metadata. Setting this flag makes the component load the `manifest.json` file and read the relevant entries for SAPUI5. This metadata is used to define the dependencies that need to be loaded in order to start the component. The following code snippet shows how to add the manifest link:
 
 ```js
-sap.ui.define([
-	"sap/ui/core/UIComponent"
-], (UIComponent) => {
-	"use strict";
-	return UIComponent.extend("my.sample.Component", {
-		metadata: { 
-			manifest: "json",
-			interfaces: [
-				"sap.ui.core.IAsyncContentCreation"
-			]
+sap.ui.define(['sap/ui/core/UIComponent'], function(UIComponent) {
+	
+	return UIComponent.extend("sap.samples.Component", {
+		metadata  : { 
+			manifest: "json"
 		}
 	});
+
 });
 ```
 
@@ -2904,13 +2923,18 @@ sap.ui.define([
 
 ## SAPUI5 API
 
-At runtime, the manifest content can be accessed from the component via the following `sap.ui.core.Component` APIs:
+At runtime, the `manifest.json` content can be accessed from the component via the component metadata:
 
 ```js
-// Given: oComponent === instance of sap.ui.core.Component (e.g. returned by sap.ui.core.mvc.Controller#getOwnerComponent).
-oComponent.getManifest(); // returns: reference to the entire manifest object if it exists. Otherwise, null.
-oComponent.getManifestEntry("sap.app"); // returns: reference to the configuration section of the manifest.
-oComponent.getManifestEntry("/sap.ui5/dependencies/libs"); // returns: reference or value of the manifest configuration by path, of which the syntax must start with a slash.
+// get the component class
+sap.ui.require(['sap/samples/Component'], function(SampleComponent) {
+
+	// getting complete manifest from component metadata
+	SampleComponent.getMetadata().getManifest();
+	//or getting a namespace
+	SampleComponent.getMetadata().getManifestEntry("sap.app");
+	
+});
 ```
 
 [sap.ui.core.UIComponent](https://ui5.sap.com/#/api/sap.ui.core.UIComponent)

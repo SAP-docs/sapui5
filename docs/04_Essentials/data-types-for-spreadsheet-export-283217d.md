@@ -601,9 +601,9 @@ Allows users to select a calendar other than the Gregorian calendar. The followi
 -   Gregorian \(default\)
 
 
-The calendar property supports values of type `sap.ui.core.CalendarType` although not all options are available for the export. Islamic and Japanese representation only takes effect if the displayed `Date`/`DateTime` shows some date-related information. Therefore, it does not make sense to use it for the type `Time`.
+The calendar property supports values of type `sap/base/i18n/date/CalendarType` although not all options are available for the export. Islamic and Japanese representation only takes effect if the displayed `Date`/`DateTime` shows some date-related information. Therefore, it does not make sense to use it for the type `Time`.
 
-If the `calendar` property has not been defined, the `sap.ui.core.Configuration#getCalendarType` function is used to determine the default value. In a SAP Fiori launchpad environment, the `sap.ui.core.Configuration#getCalendarType` function returns the configured `sap.ui.core.CalendarType`. If this function does not provide any `sap.ui.core.CalendarType`, it automatically uses `sap.ui.core.CalendarType.Gregorian` as fallback. If no value has been set, `Configuration#getCalendarType` automatically uses the calendar type preferred by the current session locale.
+If the `calendar` property has not been defined, the `sap/base/i18n/Formatting.getCalendarType` function is used to determine the default value. In a SAP Fiori launchpad environment, the `sap/base/i18n/Formatting.getCalendarType` function returns the configured `sap/base/i18n/date/CalendarType`. If this function does not provide any `sap/base/i18n/date/CalendarType`, it automatically uses `sap/base/i18n/date/CalendarType.Gregorian` as fallback. If no value has been set, `Formatting.getCalendarType` automatically uses the calendar type preferred by the current session locale.
 
 </td>
 </tr>
@@ -627,7 +627,7 @@ Yes
 
 Defines a specific format that gets applied to `Date`/`DateTime`/`Time`. The format overrides the default formatting of the respective type which means that you can assign a format that shows only time-related information even to a column of type `Date`, which usually shows no time-related information.
 
-If the `format` property has not been defined, the `sap.ui.core.Configuration.FormatSettings#getDatePattern` and `sap.ui.core.Configuration.FormatSettings#getTimePattern` functions are used to determine the default format pattern. In a SAP Fiori launchpad environment, these functions return the patterns configured in the settings of the SAP Fiori launchpad. While columns of type `sap.ui.export.EdmType.Date` require a date pattern and columns of type `sap.ui.export.EdmType.Time` require a time pattern, for columns of type `sap.ui.export.EdmType.DateTime`, both patterns need to be maintained. If no related pattern is available, the `format` property remains undefined.
+If the `format` property has not been defined, the `sap/base/i18n/Formatting.getDatePattern` and `sap/base/i18n/Formatting.getTimePattern` functions are used to determine the default format pattern. In a SAP Fiori launchpad environment, these functions return the patterns configured in the settings of the SAP Fiori launchpad. While columns of type `sap.ui.export.EdmType.Date` require a date pattern and columns of type `sap.ui.export.EdmType.Time` require a time pattern, for columns of type `sap.ui.export.EdmType.DateTime`, both patterns need to be maintained. If no related pattern is available, the `format` property remains undefined.
 
 The format template needs to match the following regular expression to be valid:
 

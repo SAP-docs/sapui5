@@ -10,8 +10,10 @@ The `sap.ui.vk.SceneTree` control presents a hierarchical view of the nodes in a
 
 ## API Reference / Sample
 
--   [sap.ui.vk.SceneTree](https://ui5.sap.com/#/api/sap.ui.vk.SceneTree) in the *API Reference* in the Demo Kit
--   [3D Viewer - Step 4 - Add a Scene Tree](https://ui5.sap.com/#/entity/sap.ui.vk.tutorial.VIT/sample/sap.ui.vk.tutorial.VIT.04) in the Demo Kit
+Here's where you can find the Scene Tree control in the Demo Kit:
+
+-   [sap.ui.vk.SceneTree](https://ui5.sap.com/#/api/sap.ui.vk.SceneTree)
+-   [3D Viewer - Step 4 - Add a Scene Tree](https://ui5.sap.com/#/entity/sap.ui.vk.tutorial.VIT/sample/sap.ui.vk.tutorial.VIT.04)
 
 
 
@@ -135,9 +137,8 @@ If you toggle the visibility for a node that has child nodes, the visibility cha
 > 
 > ![Demonstrating toggle feature.](images/Image_UI5_Visualization_Scene_Tree_Note_2_20fc845.png)
 
+**Related Information**  
 
 
-## Related Information
-
--   [Viewport](viewport-acd3467.md)
+[Viewport](viewport-acd3467.md "")
 

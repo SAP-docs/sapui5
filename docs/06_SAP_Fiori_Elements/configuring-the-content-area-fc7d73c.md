@@ -2,7 +2,7 @@
 
 # Configuring the Content Area
 
-Visualize data from the main entity set and seamlessly navigate to an application. Define a valid `chart` or `LineItem` annotation to render content for the chart area and table area.
+Visualize data from the main entity set and seamlessly navigate to an application. Define a valid `UI.Chart` or `UI.LineItem` annotation to render content for the chart area and table area. For more information, see [Descriptor Configuration for the Analytical List Page](descriptor-configuration-for-the-analytical-list-page-2a9df06.md).
 
 
 

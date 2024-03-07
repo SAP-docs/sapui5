@@ -34,7 +34,7 @@ Because of the use of а third-party component some additional restrictions appl
     </th>
     <th valign="top">
 
-    TinyMCE Version
+    Available TinyMCE Version
     
     </th>
     </tr>
@@ -62,7 +62,21 @@ Because of the use of а third-party component some additional restrictions appl
     </td>
     <td valign="top">
     
+    -   4.7.13
+
+        Introduced with SAPUI5 1.71.0
+
+        Replaced by 4.9.10 with SAPUI5 1.71.49
+
     -   4.9.10
+
+        Introduced with 1.71.49
+
+        Deprecated as of 1.71.62
+
+    -   6.5.1
+
+        Introduced with 1.71.62
 
 
 
@@ -79,6 +93,12 @@ Because of the use of а third-party component some additional restrictions appl
     
     -   4.9.10
 
+        Deprecated as of 1.84.42
+
+    -   6.5.1
+
+        Introduced with 1.84.42
+
 
 
     
@@ -94,7 +114,16 @@ Because of the use of а third-party component some additional restrictions appl
     
     -   4.9.10
 
+        Deprecated as of 1.96.28
+
     -   5.5.1
+
+        Deprecated as of 1.96.28
+
+    -   6.5.1
+
+        Introduced with 1.96.28
+
 
 
     
@@ -110,8 +139,23 @@ Because of the use of а third-party component some additional restrictions appl
     
     -   4.9.10
 
+        Deprecated as of 1.108.0
+
     -   5.10.2
+    -   6.1.0
+
+        Replaced by 6.3.1 in 1.108.10
+
+    -   6.3.1
+
+        Introduced with 1.108.10
+
+        Replaced by 6.5.1 in 1.108.20
+
     -   6.5.1
+
+        Introduced with 1.108.20
+
 
 
     
@@ -120,46 +164,15 @@ Because of the use of а third-party component some additional restrictions appl
     <tr>
     <td valign="top">
     
-    1.111
-    
-    </td>
-    <td valign="top">
-    
-    -   4.9.10
-
-    -   5.10.2
-    -   6.5.1
-
-
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-    1.114
-    
-    </td>
-    <td valign="top">
-    
-    -   4.9.10
-
-    -   5.10.2
-    -   6.5.1
-
-
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-    Current
+    1.120
     
     </td>
     <td valign="top">
     
     -   5.10.2
+
+        Deprecated as of 1.120.0
+
     -   6.5.1
 
 

@@ -77,7 +77,7 @@ sap.ui.define([
 
 		onInit: function () {
 
-			sap.ui.getCore().applyTheme("sap_belize");
+			sap.ui.getCore().applyTheme("sap_horizon");
 
 			// apply compact density for desktop, the cozy design otherwise
 			this.getView().addStyleClass(sap.ui.Device.system.desktop ? "sapUiSizeCompact" : "sapUiSizeCozy");

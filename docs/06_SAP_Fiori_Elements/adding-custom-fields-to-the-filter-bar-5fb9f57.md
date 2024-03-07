@@ -68,11 +68,11 @@ For an example with step-by-step instructions, see [Adding Filterable Field to t
 
 ### Adding Custom Filter Fields to Exported File
 
-When exporting table content which includes filter fields, they are included by default. The custom filters, however, will show the values as passed to the query.
+When exporting table content which includes filter fields, they are included by default. The custom filters, however, show the values as they are passed to the query.
 
 For example, if user-entered value in the filter bar is `Cost=Low`, the filter value passed to the query is `OverallCost<1000`.
 
-To show the filter value as shown in the filter bar, such as `Cost=Low`, you can use the extension method `onBeforeExportTableExtension` in the controller extension. This extension method is supported for exporting tables on analytical list pages, list reports and object pages.
+To show the filter value as shown in the filter bar, such as `Cost=Low`, you can use the extension method `onBeforeExportTableExtension`
 
 > ### Sample Code:  
 > ```
@@ -137,7 +137,9 @@ To show the filter value as shown in the filter bar, such as `Cost=Low`, you can
 > 		}
 > 	};
 > });
-> 
+>  in the controller extension.
+>                     This extension method is supported for exporting tables on analytical list
+>                     pages, list reports and object pages.
 > ```
 
 
@@ -146,12 +148,12 @@ To show the filter value as shown in the filter bar, such as `Cost=Low`, you can
 
 ## Additional Features in SAP Fiori Elements for OData V4
 
-You can configure the `FilterBar` locally via the section `@com.sap.vocabularies.UI.v1.SelectionFields` in the `controlConfiguration` of the `manifest.json` for the list report target:
+You can configure the `FilterBar` in the controller extension. locally using the section `@com.sap.vocabularies.UI.v1.SelectionFields` in the `controlConfiguration` of the `manifest.json` for the list report target:
 
 > ### Sample Code:  
 > `manifest.json`
 > 
-> ```
+> ```json
 >     ...
 >             "targets": {
 >                 "SalesOrderManageList": {
@@ -189,7 +191,7 @@ You can use the `filterFields` setting to add custom filters. The pattern looks 
 > ### Sample Code:  
 > `manifest.json`
 > 
-> ```
+> ```json
 > "<key>": {
 >     "label": <UILabel>,                   // static string or i18n binding, e.g. "MyText" or "{i18n>MyCustomLabel}"
 >     "property": <FullPropertyPath>,       // the full path to the property to be filtered, e.g. "Rating" or "_Partner/Rating"
@@ -247,15 +249,51 @@ You can build these custom filter fields for different properties of the `SalesO
 > });
 > ```
 
-The function `setFilterValues` that is used is part of the list report's `ControllerExtensionAPI`.
+The used function `setFilterValues` is part of the list report's `ControllerExtensionAPI`.
 
 For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.fe.templates.ListReport.ExtensionAPI/methods/setFilterValues) in the Demo Kit. 
 
 
 
+### Custom Filter Field: MultiValue Example
+
+When using controls that allow several values to be selected, you need to use a multi-valued field. In this case, each of the possible values provided by the configured control is handled using an operator function. This operator functon is used as a callback that only provides one parameter, including an array of input valus provided by the end user.
+
+> ### Sample Code:  
+> ```js
+> onMultiValueRatingLevels: function (values) {
+>     const filters = [];
+>     values.forEach((value) => {
+>         switch (value) {
+>             case "low":
+>                 filters.push(new Filter({ path: "Rating", operator: FilterOperator.EQ, value1: 1 }));
+>                 break;
+>             case "medium":
+>                 filters.push(new Filter({ path: "Rating", operator: FilterOperator.EQ, value1: 2 }));
+>                 filters.push(new Filter({ path: "Rating", operator: FilterOperator.EQ, value1: 3 }));
+>                 filters.push(new Filter({ path: "Rating", operator: FilterOperator.EQ, value1: 4 }));
+>                 break;
+>             case "high":
+>                 filters.push(new Filter({ path: "Rating", operator: FilterOperator.EQ, value1: 5 }));
+>                 break;
+>             default:
+>                 return null;
+>                 }
+>             });
+>  
+>         return new Filter({
+>             filters: filters
+>     });
+> }
+> ```
+
+Check out our live example in the flexible programming model explorer at [Custom Filters](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/filterBar/filterBarCustoms).
+
+
+
 ### Custom Filter Field with Custom Filter Operators
 
-If you want to avoid your users having to enter the exact values of a `SalesOrder` property, for example, and instead want to define your own value set to be used for input selection, you can use a custom filter operator:
+In some cases, you may want to use a custom filter operator. For example, you may want to avoid your users having to enter the exact values of a `SalesOrder` property. Instead, you can define your own value set to be used for input selection.
 
 > ### Sample Code:  
 > Custom Rating Filter Operator
@@ -277,7 +315,7 @@ If you want to avoid your users having to enter the exact values of a `SalesOrde
 > </core:FragmentDefinition>
 > ```
 
-In the following example, these custom filter operators are defined in function `ratingLevels()` of file `SalesOrder/ext/CustomRating.js` and returned as custom filter conditions containing the values that you want to define:
+In the following example, these custom filter operators are defined in the file `SalesOrder/ext/CustomRating.js` using the function `ratingLevels()` and returned as custom filter conditions containing the values that you want to define:
 
 > ### Sample Code:  
 > Implementation of the Custom Rating Operator
@@ -313,9 +351,9 @@ In this function, you define new filter objects for every value \("Low", "Medium
 
 
 
-### Custom Filter Fields Marked as Mandatory
+### Custom Filter Fields Marked as Required
 
-You can also define your custom filter as mandatory by setting it to `required = true` in the `manifest.json`. As a result, the field is automatically marked with an asterisk. If you additionally want a dynamic indicator, such as a red frame around a field, you must implement this in your custom template yourself. The following sample code is an example of a handler that visualizes a red frame around a mandatory input field that is missing a string value:
+You can also define your custom filter as required by setting it to `required = true` in the `manifest.json`. As a result, the field is automatically marked with an asterisk. If you additionally want a dynamic indicator, such as a red frame around a field, you must implement this in your custom template yourself. The following sample code is an example of a handler that visualizes a red frame around a required input field that is missing a string value:
 
 > ### Sample Code:  
 > ```
@@ -329,7 +367,7 @@ You can also define your custom filter as mandatory by setting it to `required =
 > </core:FragmentDefinition>
 > ```
 
-The red frame is switched on or off by the formatter `onFilterInputFormatValue()` in the file `SalesOrder/ext/CustomFilter.js` that updates the value state of the input field:
+The red frame is switched on or off using the formatter `onFilterInputFormatValue()` in the file `SalesOrder/ext/CustomFilter.js` that updates the value state of the input field:
 
 > ### Sample Code:  
 > ```js
@@ -354,5 +392,28 @@ You can explore and work with the coding yourself. Check out our live example in
 > ### Note:  
 > For custom filters, SAP Fiori elements provides an internal model called `filterValues`, which is bound to each custom filter field and contains the filtered values specific to the filter field.
 > 
-> To support variant management handling, as well as app state handling, the value-providing property of the filter control that is used should be bound against the relative path "\{filterValues\>\}".
+> To support variant management handling and app state handling, the value-providing property of the filter control that is used should be bound against the relative path `{filterValues>}`.
+
+
+
+<a name="loio5fb9f57fcf12401bbe39a635e9a32a4e__section_oxl_zgf_tzb"/>
+
+## Custom Filter Fields With Metadata Binding
+
+You can define custom columns with metadata binding. You can also use metadata binding to define the label for custom filters and custom form elements.
+
+> ### Sample Code:  
+> ```
+> "MyCustomSoldToPartyThing": {
+>   "label": "{metaModel>/SalesOrderManage/SoldToParty@com.sap.vocabularies.Common.v1.Label}",
+>   "property": "Rating",
+>   "template": "SalesOrder.ext.CustomSoldToParty",
+>   "required": true,
+>   "position": {
+>         "placement": "After",
+>         "anchor": "MyCustomRatingThing"
+>     }
+> }
+> 
+> ```
 

@@ -22,22 +22,6 @@ The formatter functions can be used in binding expressions and `<template:if>` i
 
 The following formatter functions exist:
 
--   `createPropertySetting`: Creates a property setting which is either a constant value or a binding info object from the given parts and from the optional root formatter function. Each part can have one of the following types:
-
-    -   boolean, number, undefined: The part is a constant value.
-
-    -   string: The part is a data binding expression with complex binding syntax \(for example, as created by format\) and is parsed accordingly to create either a constant value or a binding info object. Proper backslash escaping must be used for constant values with curly braces.
-
-    -   object: The part is a binding info object if it has a "path" or "parts" property, otherwise it is a constant value.
-
-
-    If a binding info object is not the only part and has a `parts` property itself, then it must have no other properties except `formatter`. This applies to expression bindings and data binding expressions that are created by `format`. If all parts are constant values, the resulting property setting is also a constant value computed by applying the root formatter function to the constant parts once. If at least one part is a binding info object, the resulting property setting is also a binding info object and the root formatter function will be applied again and again to the current values of all parts, no matter whether constant or variable.
-
-    > ### Note:  
-    > The root formatter function should not rely on its `this` value because it depends on how the function is called.
-    > 
-    > A single data binding expression can be given directly to `applySettings`; you do **not** need to call `this` function first.
-
 -   `format`: General purpose method that handles proper escaping and formatting of constant values and provides binding expressions with suitable types. `format` supports the following constructs:
 
     -   The *"14.4 Constant Expressions"* for *"edm:Bool"*, *"edm:Date"*, *"edm:DateTimeOffset"*, *"edm:Decimal"*, *"edm:Float"*, *"edm:Guid"*, *"edm:Int"*, *"edm:TimeOfDay"*.

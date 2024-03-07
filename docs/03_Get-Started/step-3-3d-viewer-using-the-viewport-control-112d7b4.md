@@ -42,7 +42,7 @@ Update the `index.html` file to reference the `standaloneViewport` namespace, wh
         <script id="sap-ui-bootstrap"
             src="https://ui5.sap.com/resources/sap-ui-core.js"
             data-sap-ui-libs="sap.ui.vk"
-            data-sap-ui-theme="sap_belize"
+            data-sap-ui-theme="sap_horizon"
             data-sap-ui-bindingSyntax="complex"
             data-sap-ui-resourceroots='{
                 "standaloneViewport": "./"

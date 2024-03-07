@@ -4,9 +4,9 @@
 
 Applications can configure the mode in which the object page is initially launched using the `preferredMode` parameter.
 
-The `preferredMode=create` is a URL parameter that can be used by applications to trigger the direct launch of the object page in create mode even when the navigation target is the list report template.
+You can configure the list report and object page app in the SAP Fiori launchpad with a start-up parameter `preferredMode=create`, then on launching the app from the tile, the object page is directly loaded in create mode.
 
-If we configure the list report and object page app in the SAP Fiori launchpad with a start-up parameter `preferredMode=create`, then on navigating to the app, the object page is directly loaded in create mode. This behavior is also achieved if `preferredMode=create` is added to the navigation URL: \(…`#SalesOrder-manage?preferredMode=create`\). Application developers can also add URL parameters after `preferredMode=create` to pass specific values to be used in the creation process.
+This behavior is also achieved if `preferredMode=create` is added to the navigation URL during external navigation:\(…`#SalesOrder-manage?preferredMode=create`\). You can also add URL parameters after `preferredMode=create` to pass specific values to be used in the creation process.
 
 > ### Example:  
 > To set the value 01 for the `DefectCategory` field, enter the URL `…#Defect-displayWorklist?preferredMode=create&DefectCategory=01`.
@@ -67,7 +67,7 @@ create
 
 *Create Object Page* is opened in the target application.
 
-In case of draft applications, a new draft is created by using the `POST` call, by default. Users can override this behavior and configure applications to call a function import annotated with `newAction`..
+In case of draft-enabled applications, a new draft is created by using the `POST` call, by default. Users can override this behavior and configure applications to call a function import annotated with `newAction`.
 
 You can use URL parameters to prefill specific values. This is currently not supported for draft creation via `newAction`. For example, to set the value 01 for the *DefectCategory* field, enter the URL `…#Defect-displayWorklist?preferredMode=create&DefectCategory=01`.
 
@@ -116,7 +116,7 @@ If the specified mode isn't suitable for the current draft state, there is no si
 
 You can use this value to automatically trigger an unbound action when an app is started with this startup parameter during an external navigation scenario.The startup parameters must contain the mandatory specification of the unbound action and values for the inbound parameters of that action.
 
-The target app must expose the unbound action. The following example shows how you can do this in the `manifest.json`:
+The target app must expose the unbound action. The following example shows how you can do this in the `manifest.json` :
 
 > ### Sample Code:  
 > ```
@@ -134,7 +134,7 @@ The target app must expose the unbound action. The following example shows how y
 > 
 > ```
 
-This snippet shows two unbound actions `myCreate1` and `myCreate3` that are used by this feature. These actions are defined in the `metadata.xml` of the service as follows:
+This snippet shows two unbound actions, `myCreate1` and `myCreate3`, that are used by this feature. These actions are defined in the `metadata.xml` of the service as follows:
 
 > ### Sample Code:  
 > ```
@@ -149,9 +149,9 @@ This snippet shows two unbound actions `myCreate1` and `myCreate3` that are used
 > 
 > ```
 
-The source app passes the startup parameter `mode/preferredMode` as `callUnboundAction`. `myActionName` is used to specify the unbound action that is called. The actions must be addressed by their logical names and not by their technical names.
+The source app passes the startup parameter `mode/preferredMode` as `callUnboundAction`. `myActionName` is used to specify the unbound action that is called. The actions must be addressed by their logical names and not by their technical names.Moreover, the source app can also pass values for any inbound parameter of the specified action. For example, to invoke the
 
-Moreover, the source app can also pass values for any inbound parameter of the specified action. For example, to invoke the `myCreate1` function import with the inbound parameters `ResultIsActiveEntity` and `Name`, pass the startup parameter in the URL as shown here:
+Moreover, the source app can also pass values for any inbound parameter of the specified action. For example, values, the object page opens in create mode.`myCreate1` function import with the inbound parameters `ResultIsActiveEntity` and `Name`, pass the startup parameter in the URL as shown in the following sample code:
 
 > ### Sample Code:  
 > ```
@@ -175,9 +175,9 @@ Moreover, the source app can also pass values for any inbound parameter of the s
 
 The `preferredMode` parameter works as follows:
 
--   If the application has defined a create action \(property `NewAction` of the annotation `StickySupported` or `DraftRoot`\) and if this is dependent on the mandatory parameters, then on launch of the app the action parameter dialog requests the user to enter the parameters. After entering the parameter values, the object page opens in create mode.
+-   If the application has defined a create action \(property `NewAction` of the annotation `StickySupported` or `DraftRoot`
 
--   If the application has not defined a create action or if this is not dependent on the mandatory parameters, then on launch of the app the object page doesn't open in create mode.
+-   \) and if this is dependent on the mandatory parameters, thenIf the application has not defined a create action or if this is not dependent on the mandatory parameters, then on launch of the app the object page doesn't open in create mode.
 
 -   Applications can also define `createWith:` followed by the desired action as the `preferredMode` value. In this case, this action is called when the app is opened in create mode.
 
@@ -223,7 +223,7 @@ The `preferredMode` parameter works as follows:
 
 When `preferredMode=create` is used with URL parameter values, there's a difference in the handling of the parameters based on creation mode:
 
--   For POST-based create, the values are only considered if they are also specified via the "`useForCreate`" manifest property in the target application. URL parameters that are not defined with the "`useForCreate`" manifest property are not passed to the back end during the creation process.
+-   For POST-based create, the values are only considered if they are also specified using the "`useForCreate`" manifest property in the target application. URL parameters that are not defined with the "`useForCreate`" manifest property are not passed to the back end during the creation process.
 
     > ### Sample Code:  
     > Manifest changes to specify parameters relevant for `useForCreate`
@@ -254,11 +254,11 @@ When `preferredMode=create` is used with URL parameter values, there's a differe
 
 ### Passing Parameters when Using `preferredMode=edit`
 
-If an application is configured with the startup parameter `preferredMode=edit` or contains the URL parameter `preferredMode=edit` followed by a technical key or semantic key, then the object page can be launched directly in the edit mode. When the object page opens in the edit mode, a draft is created if one doesn't exist yet.
+If an application is configured with the startup parameter `preferredMode=edit` or contains the URL parameter `preferredMode=edit` followed by a technical key or semantic key, then the object page can be launched directly in edit mode. When the object page opens in edit mode, a draft is created if one doesn't exist yet.
 
 -   `preferredMode=edit` as a startup parameter
 
-    You can configure `preferredMode=edit` as a startup parameter either in the SAP Fiori launchpad configuration or in the `Component.js` file of the application, along with a key pointing to the object page that needs to be opened in the edit mode.
+    You can configure `preferredMode=edit` as a startup parameter either in the SAP Fiori launchpad configuration or in the `Component.js` file of the application, along with a key pointing to the object page that needs to be opened in edit mode.
 
     > ### Sample Code:  
     > ```
@@ -281,7 +281,7 @@ If an application is configured with the startup parameter `preferredMode=edit` 
 
 -   `preferredMode=edit` as an URL parameter
 
-    You can also use the `preferredMode=edit` parameter directly as an URL parameter along with the key pointing to the object page, that prompts the navigation to the respective object page in the edit mode.
+    You can also use the `preferredMode=edit` parameter directly as a URL parameter along with the key pointing to the object page, that prompts the navigation to the respective object page in edit mode.
 
     > ### Sample Code:  
     > ```

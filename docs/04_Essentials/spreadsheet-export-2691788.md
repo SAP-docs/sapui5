@@ -78,15 +78,16 @@ If the library is loaded on demand, it will only be available when it is actuall
 
 ```js
 sap.ui.define([
+    "sap/ui/core/Lib"
     "sap/ui/core/mvc/Controller"
-], function(Controller) {
+], function(Library, Controller) {
     "use strict";
  
     return Controller.extend("sample.Spreadsheet", {
  
         onExport: function() {
             // loadLibrary is only needed when the library is not added as a dependent in bootstrap or any other dependency mechanism used in your project.
-            var oExportLibLoadPromise = sap.ui.getCore().loadLibrary("sap.ui.export", true);
+            var oExportLibLoadPromise = Library.load("sap.ui.export");
          
             oExportLibLoadPromise.then(function() {
                 sap.ui.require(["sap/ui/export/Spreadsheet"], function(Spreadsheet) {

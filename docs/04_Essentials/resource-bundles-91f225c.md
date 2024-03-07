@@ -8,6 +8,15 @@ Resource bundles are a collection of `*.properties` files. All files are named w
 
 When a localized text is needed, the application uses the SAPUI5 APIs to load the properties file that matches the current language best. The same applies to any other localized data that can be represented as a string, for example, a date formatter string. To retrieve a text from the properties file, the application uses the \(language-independent\) key. If no text can be found for this key, the next best matching file is loaded and checked for the text. Finally, if no file matches, the raw file is loaded and checked.
 
+> ### Note:  
+> JDK uses old language names for a few ISO639 codes \("iw" for "he", "ji" for "yi", and "no" for "nb"\).
+> 
+> If you wish a finer control over the mapping from the desired locale to the corresponding file name, you have several options:
+> 
+> -   Make use of [Supported Locales](supported-locales-and-fallback-chain-ec753bc.md) \(recommended\).
+> 
+> -   Convert newer codes to older ones before creating the file names.
+
 > ### Example:  
 > The resource bundle `myapp.i18n.messagebundle` consists of the following individual files:
 > 

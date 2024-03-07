@@ -28,7 +28,7 @@ You can provide additional configuration information in the following ways:
 
 ## Available Configuration Options
 
-UI5 supports different possibilities to provide values for the available configuration parameters. Options 2 to 6 require you to provide them before the application boots up. They are technically equivalent, however at runtime they will be evaluated in the order given below. The list below is therefore sorted in ascending order of precedence:
+UI5 supports different possibilities to provide values for the available configuration parameters. Options 2 to 7 require you to provide them before the application boots up. They are technically equivalent, however at runtime they will be evaluated in the order given below. The list below is therefore sorted in ascending order of precedence:
 
 1.  Effective framework default values
 2.  UI5-supported configuration options provided in `globalThis["sap-ui-config"]`

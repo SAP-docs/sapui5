@@ -51,10 +51,6 @@ Detailed description of the steps needed to create a descriptor V2 for applicati
                 "tablet": true,
                 "phone": true
             },
-            "supportedThemes": [
-                "sap_hcb",
-                "sap_belize"
-            ]
         },
         "sap.ui5": {
             "resources": {
@@ -308,11 +304,11 @@ Detailed description of the steps needed to create a descriptor V2 for applicati
 
     If your app does not have icons, remove the icons section or the corresponding icon attributes from the `manifest.json` file.
 
-8.  Fill the `deviceTypes` and `supportedThemes` attributes in the `sap.ui` namespace in the `manifest.json` file.
+8.  Fill the `deviceTypes` attribute in the `sap.ui` namespace in the `manifest.json` file.
 
-    Return to the `manifest.json` file and ensure that the `deviceTypes` and `supportedThemes` attributes in the `manifest.json` are correct for your application. If not, adapt the entries accordingly.
+    Return to the `manifest.json` file and ensure that the `deviceTypes` attribute in the `manifest.json` is correct for your application. If not, adapt the entries accordingly.
 
-    **Example: `deviceTypes` and `supportedThemes` in the `sap.ui` namespace in the `manifest.json` file**
+    **Example: `deviceTypes` in the `sap.ui` namespace in the `manifest.json` file**
 
     ```js
     "sap.ui": {
@@ -322,10 +318,7 @@ Detailed description of the steps needed to create a descriptor V2 for applicati
             "tablet": true,
             "phone": true
         },
-        "supportedThemes": [
-            "sap_hcb",
-            "sap_belize"
-        ]
+    
     ```
 
 9.  Fill the `resources` attribute in the `sap.ui5` namespace.

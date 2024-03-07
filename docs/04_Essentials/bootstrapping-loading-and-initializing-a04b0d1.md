@@ -15,13 +15,13 @@ The following code snippet shows a typical bootstrap script tag:
 <script id="sap-ui-bootstrap" 
      type="text/javascript"
      src="resources/sap-ui-core.js"
-     data-sap-ui-theme="sap_belize"
+     data-sap-ui-theme="sap_horizon"
      data-sap-ui-libs="sap.m"
      data-sap-ui-compatVersion="edge">
 </script>
 ```
 
-The attributes `data-sap-ui-theme="sap_belize"` and `data-sap-ui-libs="sap.m"` already provide examples of how SAPUI5 runtime can be configured to the needs of an application.
+The attributes `data-sap-ui-theme="sap_horizon"` and `data-sap-ui-libs="sap.m"` already provide examples of how SAPUI5 runtime can be configured to the needs of an application.
 
 
 

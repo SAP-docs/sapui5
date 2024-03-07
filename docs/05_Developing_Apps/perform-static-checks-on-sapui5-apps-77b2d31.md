@@ -12,7 +12,7 @@ The static checks verify the following:
 -   Is the SAPUI5 app active?
 -   Does the corresponding ICF node exist under `/sap/bc/ui5_ui5`?
 
-These checks have been delivered via the Code Inspector. For more information, call transaction `SCI` and click on the <span class="SAP-icons"></span> button. In the Performace Assistant window, click on the link in **For more information, see the extended help in Code Inspector.** The extended help describes how you can perform the above checks for your own SAPUI5 apps.
+These checks have been delivered via the Code Inspector. For more information, call transaction `SCI` and click on the <span class="SAP-icons-V5"></span> button. In the Performace Assistant window, click on the link in **For more information, see the extended help in Code Inspector.** The extended help describes how you can perform the above checks for your own SAPUI5 apps.
 
 **Related Information**  
 

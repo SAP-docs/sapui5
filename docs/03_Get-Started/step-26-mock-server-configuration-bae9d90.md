@@ -26,7 +26,7 @@ You can view and download all files at [Walkthrough - Step 26](https://ui5.sap.c
   
 **Folder Structure for this Step**
 
-![](images/SAPUI5_Walkthrough_Step_27_2_7a5e2b0.png "Folder Structure for this Step")
+![The graphic has an explanatory text.](images/SAPUI5_Walkthrough_Step_27_2_7a5e2b0.png "Folder Structure for this Step")
 
 The folder structure of our app project is clearly separating test and productive files after this step. The new `test` folder now contains a new HTML page `mockServer.html` which will launch our application in test mode without calling the real service.
 

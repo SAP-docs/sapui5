@@ -161,8 +161,6 @@ The `UI.Chart Description` property is used for the subtitle.
 
 For semantic coloring, both `Criticality` and `CriticalityCalculation` are supported \(`Criticality` overrides `CriticalityCalculation`\).
 
-For semantic coloring, both `Criticality` and `CriticalityCalculation` are supported \(`Criticality` overrides `CriticalityCalculation`\).
-
 Mandatory:
 
 1.  `UI.Chart` → `ChartType`: “`Bullet`”

@@ -23,3 +23,13 @@ The individual capabilities of SAPUI5 help you to easily build enterprise apps. 
 -   **Unlimited usage in SAP and non-SAP**: SAPUI5 qualities are also available for non-SAP technology stacks and as open source \(OpenUI5\).
 
 
+
+
+<a name="loiobf2d55eaa33b44a78ef95e7946d658e8__section_lmp_12y_1gb"/>
+
+## Key Concepts
+
+Hover over the shapes to find out more about some key benefits of SAPUI5. Please note: The shapes do not link to other pages.
+
+![Key concepts of UI5 are: Async Loading, Modular Core, Performance, Innovation, UI5 Tooling, and Open Standards](images/Image_Map_Best_Practices_Overview_ba827f7.png)
+

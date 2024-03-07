@@ -4,20 +4,24 @@
 
 The `library.js` file is a JavaScript file that contains the JavaScript code for all enumeration types provided by the library as well as library-specific initialization code that is independent from the controls in the library.
 
-The file calls the `sap.ui.getCore().initLibrary` method with an object that describes the content of the library \(list of contained controls, elements etc.\). For more informarion about the object parameter, see[sap.ui.getCore\(\).initLibrary](https://ui5.sap.com/#/api/sap.ui.core.Core/methods/initLibrary)
+The file calls the `sap/ui/core/Lib.init` method with an object that describes the content of the library \(list of contained controls, elements etc.\). For more informarion about the object parameter, see[`sap/ui/core/Lib.init`](https://ui5.sap.com/#/api/sap.ui.core.Lib%23methods/sap.ui.core.Lib.init)
 
 The library style sheet file \(`library.css`\) contains all styles relevant for this library. For libraries that have been developed with the SAPUI5 application development tools, this file is also generated automatically during the build.
 
-In a `library.js` file, the call to `sap.ui.getCore().initLibrary()` takes care of creating the namespace object of the library and returns a library object that you can use to write types or helpers:
+In a `library.js` file, the call to `sap/ui/core/Lib.init` takes care of creating the namespace object of the library and returns a library object that you can use to write types or helpers:
 
 ```js
-sap.ui.define(function() {
+sap.ui.define([
+		'sap/ui/base/DataType',
+		'sap/ui/core/Lib'
+	], function(DataType, Library) {
  
 	"use strict";
 
 	// initialize the library with global name "my.lib"
-	var oThisLibrary = sap.ui.getCore().initLibrary({
+	var oThisLibrary = Library.init({
 		name: "my.lib",
+		apiVersion: 2
 		...
 	});	
  
@@ -36,6 +40,9 @@ sap.ui.define(function() {
 		Color1: …
 	};
  
+	//  An enum type must be registered by calling the "DataType.registerEnum()" method
+	DataType.registerEnum("my.lib.ValueColor", oThisLibrary.ValueColor);
+
 	// don’t forget to return the value
 	return oThisLibrary;
  

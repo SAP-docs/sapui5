@@ -4,7 +4,7 @@
 
 SAP Fiori elements allows you to specify a `UI.SelectionPresentationVariant`.
 
-You use the `UI.SelectionPresentationVariant` to configure the default visualizations and default filter values of the main content area when an application is launched using the *Standard* variant. The `UI.SelectionPresentationVariant` can contain references to the `UI.SelectionVariant` and the `UI.PresentationVariant`. You use the `UI.SelectionVariant` to define default filter values, and the `UI.PresentationVariant` can contain the configurations for tables and charts, including, for example, the sort order.
+You use the `UI.SelectionPresentationVariant` to configure the default visualizations, grouping, and filter values of the main content area when an application is launched using the *Standard* variant. The `UI.SelectionPresentationVariant` must contain references to the `UI.SelectionVariant` and the `UI.PresentationVariant`. You use the `UI.SelectionVariant` to define default filter values, and the `UI.PresentationVariant` can contain the configurations for tables and charts, including, for example, the sort order or grouping.
 
 SAP Fiori elements uses the `UI.LineItem` annotation and the `UI.Chart` annotation to bring up tables and charts.
 
@@ -16,28 +16,7 @@ SAP Fiori elements uses the `UI.LineItem` annotation and the `UI.Chart` annotati
 
 ### Descriptor Settings
 
-**Configuration Sample**
-
-> ### Sample Code:  
-> ```
-> "targets": {
->     "SalesOrderManageList": {
->         "type": "Component",
->         "id": "SalesOrderManageList",
->         "name": "sap.fe.templates.ListReport",
->         "options": {
->             "settings": {
->                 "contextPath": "/SalesOrderManage",
->                 "variantManagement": "Page",
->                 "defaultTemplateAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionPresentationVariant#SPVPath", // This is where app developer provides fe the right SPV to be used
->                 "initialLoad": true,
->                  .....
->                  .....
->             }
->         }
->     }
-> }
-> ```
+For more information, see the V2 and V4 specific sections.
 
 
 
@@ -590,13 +569,11 @@ SAP Fiori elements uses the `UI.LineItem` annotation and the `UI.Chart` annotati
 > 
 > ```
 
--   In SAP Fiori elements for OData V2, for the list report, the `UI.Chart` annotation is applicable when you use it within a multiple view scenario.
+The `UI.Chart` annotation is applicable for the following:
 
+-   The main chart in the analytical list page \(ALP\). For more information about the descriptor configuration in SAP Fiori elements for OData V4, see [Descriptor Configuration for the Analytical List Page](descriptor-configuration-for-the-analytical-list-page-2a9df06.md).
 
--   For the analytical list page, the `UI.Chart` is only supported for the chart in the main content area. You can't use it within a multiple view scenario.
-
-
-For more information about the usage within a multiple view scenario, see [Defining Multiple Views on a List Report Table - Multiple Table Mode](defining-multiple-views-on-a-list-report-table-multiple-table-mode-37aeed7.md) and [Defining Multiple Views on a List Report with Different Entity Sets and Table Settings](defining-multiple-views-on-a-list-report-with-different-entity-sets-and-table-settings-b6b59e4.md).
+-   Usage within multiple views for the list report tables. For more information, see [Defining Multiple Views on a List Report Table - Multiple Table Mode](defining-multiple-views-on-a-list-report-table-multiple-table-mode-37aeed7.md) and [Defining Multiple Views on a List Report with Different Entity Sets and Table Settings](defining-multiple-views-on-a-list-report-with-different-entity-sets-and-table-settings-b6b59e4.md).
 
 
 
@@ -604,48 +581,33 @@ For more information about the usage within a multiple view scenario, see [Defin
 
 ## Configuring the Default Visualization
 
-> ### Restriction:  
-> -   In SAP Fiori elements for OData V2, the information provided in the section isn't applicable to the object page.
+> ### Note:  
+> -   The information provided in the section isn't applicable to the object page.
 > 
-> -   In SAP Fiori elements for OData V4, the information provided in the section isn't applicable to the object page, analytical list page \(ALP\), and charts in the list report.
+> -   In a multiple view scenario, the following logic is used to fetch the `UI.PresentationVariant` annotation only if it is undefined. For more information about the multiple view configuration, see [Defining Multiple Views on a List Report Table - Multiple Table Mode](defining-multiple-views-on-a-list-report-table-multiple-table-mode-37aeed7.md) and [Defining Multiple Views on a List Report with Different Entity Sets and Table Settings](defining-multiple-views-on-a-list-report-with-different-entity-sets-and-table-settings-b6b59e4.md).
+> -   In SAP Fiori elements for OData V4, the information provided in the section isn't applicable to the analytical list page \(ALP\) flavor. For more information about the configuration in ALP, see [Descriptor Configuration for the Analytical List Page](descriptor-configuration-for-the-analytical-list-page-2a9df06.md).
 
-To configure the default visualization, the `UI.SelectionPresentationVariant` must be defined against the main entity set.
+You can control the default visualization by using a setting in the `manifest.json` file. This setting allows you to define `UI.SelectionPresentationVariant` \(with a qualifier\). When `UI.SelectionPresentationVariant` is defined, you must use the associated annotations such as `UI.SelectionVariant` \(for filter bar defaults\) and `UI.PresentationVariant` \(for default visualization\).
 
-Application developers can provide the path to the `UI.SelectionPresentationVariant` via the manifest.
+Defining the manifest setting is optional. If the setting isn’t defined, SAP Fiori elements uses the fallback mechanism in the following order:
 
-SAP Fiori elements then checks in the annotation for the `UI.SelectionPresentationVariant` specified in the manifest, such as `SPVPath`. This can lead to the following situations:
+-   SAP Fiori elements first checks for a default \(unqualified\) `UI.SelectionPresentationVariant` and, if found, uses the associated selection/presentation variants.
 
--   If a `UI.SelectionPresentationVariant` is found, SAP Fiori elements looks for the presentation variant associated with it.
+-   If a default `UI.SelectionPresentationVariant` \(or its associated selection or presentation variant\) is **not** found, SAP Fiori elements checks for a default \(unqualified\) `UI.SelectionVariant` and default \(unqualified\) `UI.PresentationVariant`.
 
-    -   If a presentation variant is found, SAP Fiori elements uses the `LineItem`, or, in case of an analytical list page, the `Chart` that is associated with the presentation variant. If the presentation variant does not have a `LineItem` or `Chart` associated with it, SAP Fiori elements looks for the default `LineItem` or `Chart` \(`UI.LineItem` or `UI.Chart` without a qualifier\) and renders the table accordingly. If no `LineItem` or `Chart` is found, SAP Fiori elements renders a blank table or a blank chart, and users can still use the personalization of the control to render the required table or chart.
+-   If `UI.SelectionVariant` is **not** found, SAP Fiori elements displays a filter bar with a search field only. For draft-enabled applications, a draft editing status is also displayed along with the filter bar and a search field.
 
-    -   If a presentation variant is **not** found, SAP Fiori elements raises an error and stops loading the application so that the application developer can ensure the correct annotations.
+    The end users can use the personalization of the control to display additional filter fields.
 
+-   If `UI.PresentationVariant` **not** is found, SAP Fiori elements checks for a default `UI.LineItem` or `UI.Chart` for the visualization.
 
--   If a `UI.SelectionPresentationVariant` is **not** found, SAP Fiori elements raises an error and stops loading the application so that the application developer can ensure the correct annotations.
-
-
-If the application developer hasn't explicitly specified the `UI.SelectionPresentationVariant` to be used via the manifest entry, SAP Fiori elements looks for the default \(unqualified\) `UI.SelectionPresentationVariant` in the annotation. This can lead to the following situations:
-
--   If a default `UI.SelectionPresentationVariant` is found, SAP Fiori elements uses the associated presentation variant to determine the default visualization for the table or chart. If no presentation variant is found, SAP Fiori elements raises an error and stops loading the application so that the application developer can ensure the correct annotations.
-
--   If a default `UI.SelectionPresentationVariant` is **not** found, SAP Fiori elements checks for the default presentation variant \(unqualified presentation variant\) and default selection variant \(unqualified selection variant\).
-
-    -   If a default presentation variant is found, SAP Fiori elements uses the associated `LineItem` or `Chart` annotation. If no `LineItem` or `Chart` is found, SAP Fiori elements renders a blank table, and users can still use the personalization of the control to render the required table.
-
-    -   If a default presentation variant is **not** found, SAP Fiori elements looks for the default `LineItem` \(unqualified `LineItem`\) or default `Chart` \(unqualified `Chart`\) annotation.
-
-        -   If a default `LineItem` or `Chart` annotation is found, SAP Fiori elements renders the table or chart accordingly.
-
-        -   If a default `LineItem` or `Chart` annotation is **not** found, SAP Fiori elements renders a blank table or chart, and users can still use the personalization of the control to render the required table or chart.
-
-
+-   Finally, if none of the above annotations are found, the SAP Fiori elements renders an empty table or empty chart, and the end users can still use the personalization of the control to render the required table or chart.
 
 
 > ### Note:  
-> In the multiple view layout for tables, the `UI.SelectionPresentationVariant` in the manifest has no effect if it has already been configured for the multiple view scenario. If no `UI.SelectionPresentationVariant` is configured, that is, if only a selection variant is configured, as is the case for the single table mode, or also for a tab within the multiple view layout for tables, then the presentation variant is calculated based on the logic described.
+> -   In all the preceding cases provided, if a `UI.SelectionPresentationVariant` is found but the associated `UI.PresentationVariant` is **not** found, SAP Fiori elements raises an error and stops loading the application. SAP Fiori elements behaves in the same manner when you define a `UI.SelectionPresentationVariant` correctly, but you miss to define a \(correct\) association to `UI.PresentationVariant`. Hence, you must always ensure to define the correct path for the default selection presentation variant in the manifest and the correct association to `UI.PresentationVariant`.
 > 
-> For more information, see [Multiple Views on List Report Tables](multiple-views-on-list-report-tables-a37df40.md).
+> -   If a`UI.PresentationVariant` is found but the visualization isn't defined, then we fallback to default \(unqualified\) `UI.LineItem` \(or default `UI.Chart`\) annotation. If these annotations are not found, SAP Fiori elements renders an empty table \(or chart\), and the end users can still use the personalization of the control to configure the required table \(or chart\).
 
 
 

@@ -53,7 +53,7 @@ You can view and download all files at [Flexible Column Layout App - Step 2](htt
 			"libs": {
 				"sap.ui.core": {},
 				"sap.f": {}
-			}
+				}
 		},
 		"config": {
 			"fullWidth": true

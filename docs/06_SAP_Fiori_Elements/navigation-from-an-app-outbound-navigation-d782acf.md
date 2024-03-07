@@ -322,15 +322,15 @@ If `RequiresContext` is true, then the button is disabled until a selection is m
       
     **SAP Fiori launchpad: Maintain the Supported Devices for the Combination of Semantic Object and Action**
 
-    ![](images/SupportedDevice_41cc89e.png "SAP Fiori launchpad: Maintain the Supported Devices for the Combination of Semantic
-    								Object and Action")
+    ![](images/SupportedDevice_41cc89e.png "SAP Fiori launchpad: Maintain the Supported Devices for the
+    								Combination of Semantic Object and Action")
 
       
       
     **SAP Fiori launchpad: Maintain the Mandatory Parameters for Semantic Object and Action**
 
-    ![](images/mandatoryparameters_45f06a4.png "SAP Fiori launchpad: Maintain the Mandatory Parameters for Semantic Object and
-    								Action")
+    ![](images/mandatoryparameters_45f06a4.png "SAP Fiori launchpad: Maintain the Mandatory Parameters for Semantic
+    								Object and Action")
 
     > ### Note:  
     > -   As already shown, you maintain mandatory parameters for navigation in SAP Fiori launchpad, for example a sales order ID. If you have specified `RequiresContext: False`, for the combination of semantic object and action, and for this combination you maintain a mandatory parameter in SAP Fiori launchpad, these settings contradict each other and the button isn't displayed.
@@ -591,29 +591,15 @@ During external outbound navigation, the following data is removed from the navi
 
 ### Handling Information from the Navigation Entity Set
 
-When outbound navigation is triggered, the information that comes from the navigation entity set is prepared in accordance with the following rules:
+When an outbound navigation is triggered, the information that comes from the navigation entity set is prepared in accordance with the following rules:
 
 1.  If there's no conflicting property, that is, if the property with a given technical name **only** comes from one entity set, then the property value is passed against the property name **without** any leading entity set name.
 
-2.  If the exact technical name of the property is found in more than one entity set, this is considered as a conflict. In case of such a conflict, the properties from each entity set are also always passed \(together with the appended names of the entity sets\) in addition to the property value that is passed without the prefix of the names of the entity sets.
+2.  If the exact technical name of the property is found in more than one entity set, this is considered as a conflict. In case of such a conflict, the properties from each entity set are also always passed \(together with the appended names of the entity sets\) in addition to the property value that is passed without the prefix of the names of the entity sets. For property names without a prefix, values from a specific selection are passed. For example, a page context and a table have the same property. When the navigation is triggered from the table context, then the table selection is prioritized, and this value is passed.
 
 
-The following conflict resolutions are available:
-
--   Conflict resolution at the same level
-
-    -   If the property also comes from the main entity set, then the main entity value is considered for the property \(see scenario 3 below\).
-
-    -   If the same property from the main entity set is **not** present, and only the current entity set is present, the current entity set value is considered for the property \(see scenarios 4 and 5\).
-
-    -   If the same property is **not** from the main entity set, and **not** from the current entity set, and **only** from other navigation entity sets, then the last value from the context is used for the property.
-
-
--   Conflict resolution at different levels
-
-    -   If the conflict is at different levels, like between the filter bar and a table, or between the page context and a table, the more specific selection, namely the table, always wins. Similarly, the micro chart context wins if there's a conflict when navigating from a micro chart \(see scenarios 1 and 2\).
-
-
+> ### Note:  
+> Properties from navigation entities aren't included in the navigation context. For example, when a specific context within a table is selected, only the properties associated with the table entity set are considered. Any property associated with the navigation entity is ignored.
 
 > ### Example:  
 > In the following scenarios, "SO" represents the "main entity set" to which the list report is bound. All entity sets starting with "\_" are the associated navigation entity sets.
@@ -624,13 +610,11 @@ The following conflict resolutions are available:
 > 
 >     Selected table context: "SO.OrderID"="123" | "SO.OrderType"="Standard" | "\_PO.Status"="Prepared" | "\_PO.Responsible"="ABC"
 > 
->     Merged context: "OrderID"="123" | "OrderType"="Standard" | "Status"="Prepared" | "Responsible"="ABC" | "SO.Status"="In Process" | "SO.\_PO.Status"="Prepared"
+>     Merged context: "OrderID"="123" | "OrderType"="Standard" | "Status"="In Process"
 > 
->     -   "Status" is passed with the most specific value
+>     -   "OrderType" is passed with the most specific value
 > 
->     -   Due to the conflicting values in entities with the same property name, in addition "SO.Status" and "SO.\_PO.Status" is passed
-> 
->     -   "\_PO.Responsible" is simply passed as "Responsible" – this avoids a property name conflict
+>     -   Information coming from the navigation entity set \("\_PO"\) is ignored by both the page context and the selected row context
 > 
 > 
 > -   Scenario 2 \(object page\)
@@ -639,12 +623,11 @@ The following conflict resolutions are available:
 > 
 >     Selected table \(\_Item\) context: "\_Item.ItemNumber"="10" | "\_Item.Price" = "20 EUR" | "\_Item.\_ReferenceSO.SalesOrder"="789" | "\_Item.\_ReferenceSO.OrderType" = "Standard"
 > 
->     Merged context: "SalesOrder"="789" | "ItemNumber"="10" | "Price"="20 EUR" | "SalesCategory"="Resale" | "OrderType"="Standard" | "SO.Price"="400 EUR" | "SO.\_Item.Price"="20 EUR" | "SO.SalesOrder"="123" | "SO.\_ReferenceSO.SalesOrder"="456" | "SO.\_Item.\_ReferenceSO.SalesOrder"="789"
+>     Merged context: "SalesOrder"="123" | "ItemNumber"="10" | "Price"="20 EUR" | "SO.Price"="400 EUR" | "SO.\_Item.Price"="20 EUR"
 > 
->     -   "123" \(from header\) vs "789" \(from more specific control – table\)
+>     -   "Price" is passed with the value "20 EUR" \(value from a more specific context such as from a selected row context\). We also pass "SO.Price" and "SO.\_Item.Price" due to a conflict with this property
 > 
->     -   Target app gets conflicting property values with full entity set names
-> 
+>     -   Information coming from the navigation entity set \("\_ReferenceS"\) is ignored by the page context and the selected row context
 > 
 > -   Scenario 3 \(object page\)
 > 
@@ -652,35 +635,20 @@ The following conflict resolutions are available:
 > 
 >     Selected table \(\_Item\) context: "\_Item.ItemNumber"="10" | "SO.OrderType" = "Standard" | "\_Item.OrderType" = "InHouse" | "\_ReferenceOrder.OrderType"="Outsource"
 > 
->     Merged context: "SalesOrder"="123" | "ItemNumber"="10" | "OrderType"="Standard" | "SO.OrderType" = "Standard" | "SO.\_Item.OrderType" = "InHouse" | "SO.\_Item.\_ReferenceOrder.OrderType"="Outsource" | "SO.\_ReferenceOrder.OrderType"="Express"
+>     Merged context: "SalesOrder"="123" | "ItemNumber"="10" | "OrderType"="InHouse"
 > 
->     -   "OrderType" = "Standard", since the main entity set always wins at the same level
-> 
->     -   "SO.\_ReferenceOrder.OrderType"="Outsource", because the table-specific value wins over the header value
+>     -   "OrderType" = "InHouse" - all other values are ignored as they come from navigation entity set
 > 
 > 
-> -   Scenario 4 \(object page\)
-> 
->     OP page context has: "SO.SalesOrder"="123" | "\_ReferenceOrder.OrderType"="Express"
-> 
->     Selected table \(\_Item\) context: "\_Item.ItemNumber"="10" | "\_Item.OrderType" = "InHouse" | "\_Item.\_ReferenceOrder.OrderType"="Outsource"
-> 
->     Merged context: "SalesOrder"="123" | "ItemNumber"="10" | "OrderType"="InHouse" | "SO.\_Item.OrderType" = "InHouse" | "SO.\_Item.\_ReferenceOrder.OrderType"="Outsource" | "SO.\_ReferenceOrder.OrderType"="Express"
-> 
->     -   "OrderType"="InHouse", because the same property from the main entity is **not** found, but the property that comes from the current entity set is found
-> 
-> 
-> -   Scenario 5 \(subobject page\)
+> -   Scenario 4 \(subobject page\)
 > 
 >     Sub-OP page \(\_Item page\) context has: "\_Item.ItemNumber"="10"
 > 
 >     Selected table \(\_SubItem\) context: "\_SubItem.ItemNumber"="101" | "\_Item.ItemNumber"="10" | "\_ReferenceItem.ItemNumber"="200"
 > 
->     Merged context: "ItemNumber"="101" | "SO.\_Item.ItemNumber"="10" | "SO.\_Item.\_SubItem.ItemNumber"="101" | "SO.\_Item.\_SubItem.\_ReferenceItem.ItemNumber"="200"
+>     Merged context: "ItemNumber"="101" | "SO.\_Item.ItemNumber"="10" | "SO.\_Item.\_SubItem.ItemNumber"="101"
 > 
->     -   "ItemNumber"="101", because in the more specific table entity set, the `ItemNumber` property does **not** come from the main entity set \(that is, from `SO.ItemNumber`\), but the property is found in the current entity set \(`SubItems`\)
-> 
->     -   The `ItemNumber` from the immediate parent \(\_Item\), which is also found, does **not** have any impact
+>     -   "ItemNumber" is passed with the value "101" \(value from a more specific context such as from a selected row context\). We also pass "SO.\_Item.ItemNumber" and "SO.\_Item.\_SubItem.ItemNumber" due to the conflict with this property
 
 **Special Handling of Semantic Links**
 
@@ -695,7 +663,7 @@ For semantic links, the value from the field shown as the link is passed rather 
 > 
 >     Assumption: "\_PO.Status" is the field that has the semantic link
 > 
->     Merged context that is passed when semantic link "\_PO.Status" is clicked: "OrderID"="123" | "OrderType"="Standard" | "Status"="Prepared" | "Responsible"="ABC" | "SO.Status"="In Process" | "\_PO.Status"="Prepared"
+>     Merged context that is passed when semantic link "\_PO.Status" is clicked: "OrderID"="123" | "OrderType"="Standard" | "Status"="Prepared" | "SO.Status"="In Process" | "\_PO.Status"="Prepared"
 > 
 >     Note that "Status" holds the value \("Prepared"\) from the semantic link field and not the main entity set field at the same level, because the semantic field is the more specific context here – and the navigation is triggered from the semantic field.
 

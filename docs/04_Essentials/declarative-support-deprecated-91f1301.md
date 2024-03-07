@@ -29,7 +29,7 @@ The following example shows the concept by combining a `sap.m.input` with a `sap
 	<script id="sap-ui-bootstrap"
 	     type="text/javascript"
 	     src="resources/sap-ui-core.js"
-	     data-sap-ui-theme="sap_belize"
+	     data-sap-ui-theme="sap_horizon"
 	     data-sap-ui-libs="sap.m"
 	     data-sap-ui-modules="sap.ui.core.plugin.DeclarativeSupport"
 	     >

@@ -5,7 +5,7 @@
 Applications can control how the field is represented by using annotations or metadata.
 
 > ### Note:  
-> This topic is currently only applicable to SAP Fiori elements for OData V4.
+> This topic is only applicable to SAP Fiori elements for OData V4.
 
 
 
@@ -735,6 +735,8 @@ SAP Fiori elements allows you to enable stream support so that users can upload 
 ## Representation as a Timestamp with Timezone Information
 
 You can display a timestamp together with a timezone.
+
+If you annotate a property that contains a timezone code with `@Common.IsTimezone`, the UI in display mode shows the timezone as a text.
 
 ![](images/Timestamp_with_Timezone_cb85f47.png)
 

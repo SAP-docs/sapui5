@@ -98,3 +98,5 @@ The following graphic illustrates this behavior:
 
 [Samples](https://ui5.sap.com/#/entity/sap.ui.mdc)
 
+[UI5 MDC Tutorial](https://github.com/SAP-samples/ui5-mdc-json-tutorial)
+

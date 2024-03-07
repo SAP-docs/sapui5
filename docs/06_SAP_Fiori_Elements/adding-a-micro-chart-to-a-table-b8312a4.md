@@ -4,13 +4,16 @@
 
 You can add a micro chart to the column of a responsive table in both the list report and the object page.
 
-To add a micro chart to a table, use the annotation term `UI.LineItem` and the complex type `DataFieldForAnnotation`. The micro charts are then displayed within the table column as shown below:
+To add a micro chart to a table, use the annotation term `UI.LineItem` and the complex type `DataFieldForAnnotation`. The micro charts are then displayed within the table column as shown in the following screenshot:
 
   
   
 **Micro Chart in List Report**
 
 ![](images/Micro_Chart_in_List_Report_b010c13.png "Micro Chart in List Report")
+
+> ### Note:  
+> You cannot sort and filter the measures and dimensions in a micro chart from the column header. These measures and dimensions are available in the *Settings* menu *Sorting and Filtering* menu if they are direct properties of the table entity.
 
 
 
@@ -132,6 +135,8 @@ The `Label` property of the `UI.DataFieldForAnnotation` is used for the text of 
 > ```
 
 > ### Sample Code:  
+> CAP CDS Annotation
+> 
 > ```
 > 
 > @Consumption.semanticObject: 'EPMProduct'
@@ -227,9 +232,7 @@ The `Label` property of the `UI.DataFieldForAnnotation` is used for the text of 
 > 
 > @UI.lineItem: [
 >   {
->     importance: #HIGH,
->     position: 70 
->   }
+>     importance: #HIGH,UI.Chart Annotations
 > ]
 > price;
 > }
@@ -238,7 +241,7 @@ The `Label` property of the `UI.DataFieldForAnnotation` is used for the text of 
 
 
 
-### UI.Chart Annotations
+### 
 
 -   Area Micro Chart
 
@@ -276,7 +279,7 @@ The `Label` property of the `UI.DataFieldForAnnotation` is used for the text of 
     > ```
 
     > ### Sample Code:  
-    > ABAP CDS Annotation
+    > UI.CABAP CDS Annotation
     > 
     > ```
     > 
@@ -368,7 +371,7 @@ The `Label` property of the `UI.DataFieldForAnnotation` is used for the text of 
 
 
 > ### Recommendation:  
-> Refer the documentation for [Micro Chart Facet](micro-chart-facet-e219fd0.md) to see code samples for these micro charts:
+> Check out [Micro Chart Facet](micro-chart-facet-e219fd0.md) to see code samples for these micro charts:
 > 
 > -   Radial micro chart
 > 
@@ -382,7 +385,7 @@ The `Label` property of the `UI.DataFieldForAnnotation` is used for the text of 
 
 **Restriction**
 
-The template doesn't currently support the use of navigation properties within the `UI.Chart` term for the micro chart \(see example below\).
+The template doesn't support the use of navigation properties within the `UI.Chart` term for the micro chart \(see the following example\).
 
   
   
@@ -396,10 +399,10 @@ The template doesn't currently support the use of navigation properties within t
 
 The `DataPoint` property of the `MeasureAttributes` of the `UI.Chart` annotation should point to the `UI.DataPoint` annotation.
 
-The `SmartMicroChart` control supports the `Criticality` and `CriticalityCalculation` properties of a `UI.DataPoint`. For an example of how to use the `CriticalityCalculation`, see the area micro chart annotation example. For an example of how to use the `Criticality` property, see the bullet micro chart annotation example.
+The `SmartMicroChart` control supports the `Criticality` and `CriticalityCalculation` properties of a `UI.DataPoint`. For an example of how to use the `CriticalityCalculation`, see the following area micro chart annotation example. For an example of how to use the `Criticality` property, see the following bullet micro chart annotation example.
 
 > ### Note:  
-> Although the `Title` for the `UI.DataPoint` is mandatory, it is not used by the micro chart.
+> The `Title` for the `UI.DataPoint` is required,but the micro chart does not use it.
 
 -   Area Micro Chart
 
@@ -704,7 +707,7 @@ The `SmartMicroChart` control supports the `Criticality` and `CriticalityCalcula
 
 ## Additional Features in SAP Fiori Elements for OData V4
 
-The micro chart won't show any title, description, dimension, measure labels or footers showing the unit of measure. By default, the size for a micro chart is "XS".
+The micro chart doesn't show any title, description, dimension, measure labels or footers showing the unit of measure. By default, the size for a micro chart is "XS".
 
 To add a micro chart to a table, add the `DataFieldForAnnotation`, which has a reference to the micro chart, to the `LineItem` annotation as shown in the sample code:
 
@@ -745,12 +748,12 @@ To add a micro chart to a table, add the `DataFieldForAnnotation`, which has a r
 
 ### Configuring a Micro Chart for a Responsive Table
 
-You can configure the size of a micro chart via the property `microChartSize` in the manifest. By default, the size for a micro chart is "XS". You can also influence if the chart labels are displayed or not via the property `showMicroChartLabel` in the manifest as shown in the sample code:
+You can configure the size of a micro chart using the property `microChartSize` in the manifest. By default, the size for a micro chart is "XS". You can also specify whether the chart labels are displayed or not using the property `showMicroChartLabel` in the manifest as shown in the following code sample:
 
 > ### Sample Code:  
 > Configuration for a Responsive Table
 > 
-> ```
+> ```json
 > "options":{
 >     "settings":{
 >         "controlConfiguration": {
@@ -773,8 +776,8 @@ You can configure the size of a micro chart via the property `microChartSize` in
 > }
 > ```
 
-The default value is false and the labels are not shown.
+The default value is `false` which means the labels are not displayed.
 
 > ### Note:  
-> Unlike the micro chart used in an object page header, it is possible that the micro chart used in a table is not rendered at all. This happens if an error occurs when retrieving the data, or if no data is available in the back end.
+> A micro chart used in a table may not be rendered if an error occurs when retrieving the data or if no data is available in the back end.
 

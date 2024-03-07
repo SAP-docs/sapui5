@@ -194,6 +194,8 @@ This groups the fields in a form-like display, as shown in the following screens
 > -   If there is no `Headerfacet` annotation and if the `Headerinfo` annotation doesn’t contain any images, then the expand or collapse button and the pin button are hidden from the object page header.
 > 
 > -   If a subsection contains only one group, and the subsection title is same as group title, then the group title is hidden.
+> 
+> -   If `UI.FieldGroup` has only one `UI.MultiLineText` based property and no other controls, the label of the corresponding `TextArea` control is hidden, and only the section or subsection title is displayed. However, you must ensure that a meaningful label is assigned to the `TextArea` control as it is accessed by the screen reader programs.
 
 
 
@@ -484,8 +486,7 @@ You can see what the result looks like in the following screenshot:
   
 **FieldGroup Column "Sold-To Party" with Field Labels**
 
-![](images/FieldGroup_Column_Sold-To_Party_with_Field_Labels_81e38b2.png "FieldGroup Column "Sold-To Party" with Field
-                        Labels")
+![](images/FieldGroup_Column_Sold-To_Party_with_Field_Labels_81e38b2.png "FieldGroup Column "Sold-To Party" with Field Labels")
 
 For more information about how to find the right key for a column, see [Finding the Right Key for the Anchor](finding-the-right-key-for-the-anchor-6ffb084.md).
 

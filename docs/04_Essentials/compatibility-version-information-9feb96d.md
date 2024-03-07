@@ -21,7 +21,7 @@ The compatibility version configuration works as follows:
     <script id="sap-ui-bootstrap" 
             type="text/javascript"
             src="resources/sap-ui-core.js"
-            data-sap-ui-theme="sap_belize"
+            data-sap-ui-theme="sap_horizon"
             data-sap-ui-libs="sap.m"
             data-sap-ui-compatVersion="1.18"
             data-sap-ui-compatVersion-xyz="1.16"

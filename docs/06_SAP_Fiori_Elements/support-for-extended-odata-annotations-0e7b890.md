@@ -86,9 +86,9 @@ The following annotations are supported:
 
 <a name="loio0e7b890677c240b8ba65f8e8d417c048__section_i2h_pzv_wpb"/>
 
-## Support of `ODATA.Concat`
+## Support of `odata.concat` function
 
-The `ODATA.Concat` function is supported on the title of the object page header. App developers can use it to set the title as a concatenation of a text and value from the database.
+The `odata.concat` function is supported on the title of the object page header. App developers can use it to set the title as a concatenation of a text and value from the database.
 
 > ### Sample Code:  
 > ```

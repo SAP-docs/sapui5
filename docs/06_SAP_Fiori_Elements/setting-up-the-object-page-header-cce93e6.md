@@ -174,3 +174,5 @@ This sample code is a selectable version of the code shown above for setting up 
 
 For information on display options for a object, see [Using Images, Initials, and Icons](using-images-initials-and-icons-5760b63.md).
 
+You can display a custom status message for an object on the object page header. For more information, see [Extension Points for Object Page Header Facets](extension-points-for-object-page-header-facets-61cf0ee.md).
+

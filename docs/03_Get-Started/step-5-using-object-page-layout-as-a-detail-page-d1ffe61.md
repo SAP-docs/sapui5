@@ -61,7 +61,7 @@ You can view and download all files at [Flexible Column Layout App - Step 5](htt
 				"sap.m": {},
 				"sap.f": {},
 				"sap.uxap": {}
-			}
+				}
 		},
 		"config": {
 			"fullWidth": true

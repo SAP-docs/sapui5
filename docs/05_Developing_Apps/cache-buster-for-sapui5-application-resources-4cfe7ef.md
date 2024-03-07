@@ -25,7 +25,7 @@ Example \(snippet from the sample app `/UI5/SIMPLETEST`\):
     <script src="resources/sap-ui-cachebuster/sap-ui-core.js"
       id="sap-ui-bootstrap"
       data-sap-ui-libs="sap.m"
-      data-sap-ui-theme="sap_belize"
+      data-sap-ui-theme="sap_horizon"
       data-sap-ui-appCachebuster="./">
     </script>
   …

@@ -33,7 +33,7 @@ You can view and download all files in the Demo Kit at [Mock Server - Step 2](ht
 	<title>Mock Server Tutorial</title>
 	<script id="sap-ui-bootstrap"
 		src="resources/sap-ui-core.js"
-		data-sap-ui-theme="sap_belize"
+		data-sap-ui-theme="sap_horizon"
 		data-sap-ui-resourceroots='{
 			"sap.ui.demo.MockServer": "../"
 		}'

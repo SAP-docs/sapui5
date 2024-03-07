@@ -6,7 +6,7 @@ A model in the Model View Controller concept holds the data and provides methods
 
 
 
-![](images/SAPUI5_Models_a99f157.png)
+![UI5 provides the following models: JSON, XML, Resource (all client-side); OData V2 and OData V4 (both server-side).](images/SAPUI5_Models_a99f157.png)
 
 SAPUI5 provides the following predefined models. For an overview of the binding modes supported by them, see [One-time Binding, One-way Binding, and Two-way Binding](data-binding-68b9644.md#loio68b9644a253741e8a4b9e4279a35c247__section_BindingModes).
 

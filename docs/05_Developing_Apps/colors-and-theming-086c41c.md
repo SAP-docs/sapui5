@@ -20,25 +20,25 @@ Different people perceive and interpret colors in different ways, which is somet
     -   With the URL parameter `sap-ui-theme`
 
         ```
-        sap-ui-theme=sap_horizon_3_hcb
+        sap-ui-theme=sap_horizon_hcb
         ```
 
         and
 
         ```
-        sap-ui-theme=sap_horizon_3_hcw
+        sap-ui-theme=sap_horizon_hcw
         ```
 
     -   From the API using the core method `applyTheme`
 
         ```
-        sap.ui.getCore().applyTheme(“sap_horizon_3_hcb”);
+        sap.ui.getCore().applyTheme(“sap_horizon_hcb”);
         ```
 
         or
 
         ```
-        sap.ui.getCore().applyTheme(“sap_horizon_3_hcw”);
+        sap.ui.getCore().applyTheme(“sap_horizon_hcw”);
         ```
 
 
@@ -59,7 +59,7 @@ Different people perceive and interpret colors in different ways, which is somet
 
     -   `resources/sap/m/themes/base/library-parameters.json`
 
-    -   `resources/sap/m/themes/sap_hcb/library-parameters.json`
+    -   `resources/sap/m/themes/sap_horizon_hcb/library-parameters.json`
 
 
 -   Use `REM`/`EM` instead of `PX` as a unit.

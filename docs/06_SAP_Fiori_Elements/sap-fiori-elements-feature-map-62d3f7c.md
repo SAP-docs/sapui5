@@ -31,11 +31,11 @@ You can use extension points to extend your generated app during the creation pr
 
 **Filter Usage for *Supported Floorplans* Column in Table** 
 
--   Features available for both OData versions are given without parentheses, as in *List report* and *Overview page*.
+-   Features available for both OData versions are given without parentheses, as in *List report* and *Object page*.
 
--   To search for features available in OData V2, choose both *List report \(OData V2\)* and *List report*.
+-   To search for features available only in SAP Fiori elements for OData V2, choose *List report \(OData V2\)*.
 
--   To search for features available in OData V4, choose *List report*.
+-   To search for features available only in SAP Fiori elements for OData V4, choose *List report \(OData V4\)*.
 
 
 
@@ -214,13 +214,15 @@ Add card to insights
   
 **Add Card to Insights Option in List Report Table Toolbar**
 
-![](images/Add_Cards_to_Insights_New_fe526c6.png "Add Card to Insights Option in List Report Table Toolbar")
+![](images/Add_Cards_to_Insights_New_fe526c6.png "Add Card to Insights Option in List Report Table
+										Toolbar")
 
   
   
 **Add Card to Insights Option in Analytical List Page Chart Toolbar**
 
-![](images/Add_Cards_to_Insights_ALP_401e0b0.png "Add Card to Insights Option in Analytical List Page Chart Toolbar")
+![](images/Add_Cards_to_Insights_ALP_401e0b0.png "Add Card to Insights Option in Analytical List Page Chart
+										Toolbar")
 
 </td>
 <td valign="top">
@@ -1200,6 +1202,80 @@ Contact quick view
 <tr>
 <td valign="top">
 
+Context-dependent value help
+
+</td>
+<td valign="top">
+
+-   Object page
+-   List report
+-   Analytical list report
+
+
+
+</td>
+<td valign="top">
+
+[Field Help](field-help-a5608ea.md)
+
+</td>
+<td valign="top">
+
+[Value Help Dialog](https://experience.sap.com/fiori-design-web/value-help-dialog/)
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+context dependent fields
+
+context-dependent values
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Context-dependent actions
+
+</td>
+<td valign="top">
+
+-   Object page
+-   List report
+-   Analytical list report
+
+
+
+</td>
+<td valign="top">
+
+[Actions](actions-cbf16c5.md)
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+contect dependent actions
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
 Copying and Pasting from Spreadsheet Applications to Tables
 
 </td>
@@ -1894,6 +1970,41 @@ pre-fill
 <tr>
 <td valign="top">
 
+Defining the order of standard actions
+
+</td>
+<td valign="top">
+
+-   List report
+-   Object page
+
+
+
+</td>
+<td valign="top">
+
+[Adding Actions to Tables](adding-actions-to-tables-b623e0b.md)
+
+</td>
+<td valign="top">
+
+[Action Placement](https://experience.sap.com/fiori-design-web/action-placement/)
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
 Dialog box
 
 </td>
@@ -1913,8 +2024,6 @@ Dialog box
 [Adapting Texts in the Delete Dialog Box \(Object Page Header\)](adapting-texts-in-the-delete-dialog-box-object-page-header-1fd8e52.md)
 
 [Adapting Texts in the Delete Dialog Box \(Object Page with Nested Smart Table\)](adapting-texts-in-the-delete-dialog-box-object-page-with-nested-smart-table-b95adf3.md)
-
-[Adding Action-Specific Messages to Confirmation Dialog Boxes](adding-action-specific-messages-to-confirmation-dialog-boxes-f5a04c7.md)
 
 [Adapting Texts for Confirmation Dialog Box When Deleting Lines in a Table](adapting-texts-for-confirmation-dialog-box-when-deleting-lines-in-a-table-0d1fbf4.md)
 
@@ -2125,6 +2234,50 @@ Editing status
 <tr>
 <td valign="top">
 
+Empty row mode for table entries
+
+</td>
+<td valign="top">
+
+-   Object page
+
+
+
+</td>
+<td valign="top">
+
+[Enabling Inline Creation Mode or Empty Row Mode for Table Entries](enabling-inline-creation-mode-or-empty-row-mode-for-table-entries-cfb04f0.md)
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+  
+  
+**Empty Row Mode**
+
+![](images/Default_Empty_Rows_in_Object_Page_Tables_cb2ce33.png "Empty Row Mode")
+
+</td>
+<td valign="top">
+
+empty rows
+
+emptyrow
+
+emptyrows
+
+row mode
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
 Export to spreadsheet
 
 </td>
@@ -2247,7 +2400,7 @@ Filter bar
 
 [Configuring Default Settings \(Visualizations, Sort Order, Filter Values\)](configuring-default-settings-visualizations-sort-order-filter-values-49a6ba5.md)
 
-[Enable the History of Recently Entered Values](enable-the-history-of-recently-entered-values-37dbf1f.md)
+[Enabling the History of Recently Entered Values](enabling-the-history-of-recently-entered-values-37dbf1f.md)
 
 </td>
 <td valign="top">
@@ -2593,6 +2746,44 @@ FormElement building block
 <tr>
 <td valign="top">
 
+Freeze the first column in a table
+
+</td>
+<td valign="top">
+
+-   List report
+-   Object report
+-   Analytical list report
+
+
+
+</td>
+<td valign="top">
+
+[Tables](tables-c0f6592.md)
+
+</td>
+<td valign="top">
+
+[Table Overview](https://experience.sap.com/fiori-design-web/table-overview/)
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+freeze table columns
+
+freezing columns
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
 Generic tag
 
 </td>
@@ -2769,6 +2960,43 @@ Highlighting line items based on criticality
 <tr>
 <td valign="top">
 
+History of recently entered values
+
+</td>
+<td valign="top">
+
+-   List report
+-   Object page
+
+
+
+</td>
+<td valign="top">
+
+[Enabling the History of Recently Entered Values](enabling-the-history-of-recently-entered-values-37dbf1f.md)
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+recently entered values
+
+history of recent values
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
 Icon tab bar
 
 </td>
@@ -2870,7 +3098,7 @@ HeaderInfo
 <tr>
 <td valign="top">
 
-Inline creation of table entries
+Inline creation mode for table entries
 
 </td>
 <td valign="top">
@@ -3136,6 +3364,40 @@ Label
 <td valign="top">
 
 fields
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Launch object page in edit mode
+
+</td>
+<td valign="top">
+
+Object page
+
+</td>
+<td valign="top">
+
+[Handling of the preferredMode Parameter](handling-of-the-preferredmode-parameter-bfaf3cc.md)
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+preferred mode
+
+preferredmode
 
 </td>
 </tr>
@@ -4907,6 +5169,47 @@ free-style
 <tr>
 <td valign="top">
 
+Share to Microsoft Teams
+
+</td>
+<td valign="top">
+
+-   List report
+-   Object page
+
+
+
+</td>
+<td valign="top">
+
+[The Share Functionality](the-share-functionality-022bf0d.md)
+
+</td>
+<td valign="top">
+
+[Header Toolbar](https://experience.sap.com/fiori-design-web/header-toolbar/)
+
+</td>
+<td valign="top">
+
+![](images/Microsoft_Teams_Share_Menu_As_Chat_and_As_Tab_f2cb0d3.png)
+
+</td>
+<td valign="top">
+
+MS Teams
+
+Share as chat
+
+Share as tab
+
+Sharing
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
 Smart link
 
 </td>
@@ -5664,6 +5967,41 @@ Tree table
 <td valign="top">
 
  
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Tree table hierarchy
+
+</td>
+<td valign="top">
+
+-   List report \(OData V4\)
+-   Object page \(OData V4\)
+
+
+
+</td>
+<td valign="top">
+
+[Setting the Table Type](setting-the-table-type-7f844f1.md)
+
+</td>
+<td valign="top">
+
+[Tree Table](https://experience.sap.com/fiori-design-web/tree-table/)
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+TreeTable
 
 </td>
 </tr>

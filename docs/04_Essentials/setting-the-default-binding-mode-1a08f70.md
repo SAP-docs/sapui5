@@ -4,6 +4,8 @@
 
 The default binding mode applies when a model instance is created. You can overwrite the default binding mode after model creation.
 
+Here's what you need to know:
+
 -   To change the default binding mode, call the `setDefaultBindingMode` method on the model as follows:
 
     ```js

@@ -75,15 +75,29 @@ The patch version number of the SAPUI5 version and the OpenUI5 version that is i
 
 OpenUI5 includes the core runtime libraries and some additional libraries.
 
-To access the SAPUI5 version at runtime, you can use the following code:
+To access the SAPUI5 or OpenUI5 version at runtime, you can use the following code:
 
 ```js
 sap.ui.require([
     "sap/ui/VersionInfo",
     "sap/base/util/Version"
 ], function(VersionInfo, VersionUtil) {
+    //access the SAPUI5 version at runtime
     VersionInfo.load().then(function(oCurrentVersionInfo) {
-        var oVersionUtil = new VersionUtil(oCurrentVersionInfo.version);
+        var oSAPUI5Version = new VersionUtil(oCurrentVersionInfo.version);
+        // ...
+    });
+});
+```
+
+```js
+sap.ui.require([
+    "sap/ui/VersionInfo",
+    "sap/base/util/Version"
+], function(VersionInfo, VersionUtil) {
+    //access the OpenUI5 version at runtime
+    VersionInfo.load().then(function(oCurrentVersionInfo) {
+        var oOpenUI5Version = new VersionUtil(oCurrentVersionInfo.version);
         // ...
     });
 });

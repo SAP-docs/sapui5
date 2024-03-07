@@ -18,7 +18,7 @@ The *Share* functionality allows users to share the current application state us
 
 -   *Share: Microsoft Teams*
 
-    ![](images/Microsoft_Teams_Share_Menu_As_Chat_and_As_Tab_f2cb0d3.png)
+    ![](images/Share_Microsoft_Teams_-_All_Options_None_Selected_f6ca832.png)
 
     When a user clicks the *Share* button and then the *Share: Microsoft Teams* option, a separate window opens with the available sharing options:
 
@@ -29,6 +29,10 @@ The *Share* functionality allows users to share the current application state us
     -   As Tab
 
         Work efficiently with a group of co-workers on specific content that you share in the form of a Microsoft Teams tab. Use the Microsoft Teams environment to work on the same context of an SAP Fiori application, and use the tab conversation option in parallel to share ideas, discuss, and collaborate.
+
+    -   As Card
+
+        Communicate better with your co-workers using Microsoft Teams by providing a collaborative view that shows application content in a new window and enables you to have a meaningful conversation.
 
 
     Please note the following:
@@ -117,6 +121,90 @@ Make the following changes in the `OPExtend.controller.js` file:
 >     }
 > );
 > ```
+
+
+
+### Hiding Specific *Share* Menu Options
+
+You can control the visibility of the share options displayed in the *Share* menu. You cannot hide the *Save as Tile* option, as it is always visible to end users. However, you can control the visibility of the *Send E-mail* and *Share: Microsoft Teams* options by configuring the `manifest.json` file.
+
+This configuration can be done at both application level and page level. If the application-level settings for the share options’ visibility is set to `true` \(or is undefined\), then its visibility is inherited from the page-level settings. If the application-level settings for the share options’ visibility is set to `false`, then the specific share option is hidden, and the page-level settings aren't considered.
+
+In the following sample code, the *Share: Microsoft Teams* option is hidden by setting `showMsTeamsOptions` to `false`, whereas the `showSendEmail` setting depends on the expression value, which can be either `true` or `false`.
+
+> ### Sample Code:  
+> Application-level settings
+> 
+> ```
+> "sap.fe": {
+>         "app": {
+>             "share": {
+>                 "showSendEmail": "{= !${isVerified} }",
+>                 "teams": {
+>                     "showMsTeamsOptions": false
+>                 }
+>             },
+>             ...
+>         }
+>     }
+> ```
+
+The following sample code shows you how the share options' visibility setting is configured at page level:
+
+The *Send E-mail* option is only hidden in the list report. The *Share: Microsoft Teams* option is displayed on the object page but is conditionally shown in the list report.
+
+> ### Sample Code:  
+> Page-level settings
+> 
+> ```
+> "sap.ui5": {
+>         "routing": {
+>             "targets": {
+>                 "SalesOrderManageList": {
+>                     "type": "Component",
+>                     "id": "SalesOrderManageList",
+>                     "name": "sap.fe.templates.ListReport",
+>                     "options": {
+>                         "settings": {
+>                             "share": {
+>                              "showSendEmail": false,
+>                                 "teams": {
+>                                     "showMsTeamsOptions": "{= ${Delivered} }"
+>                                 },
+>                                 …
+>                             }
+>                         }
+>                     },
+>                     …
+>                 },
+>                 "SalesOrderManageObjectPage": {
+>                     "type": "Component",
+>                     "id": "SalesOrderManageObjectPage",
+>                     "name": "sap.fe.templates.ObjectPage",
+>                     "options": {
+>                         "settings": {
+>                             "share": {
+>                                 "teams": {
+>                                     "showMsTeamsOptions": true
+>                                 },
+>                             },
+>                             …
+>                         }
+>                     },
+>                     …
+>                 },
+>                 …
+>             }
+>         }
+>     }
+> 
+> 
+> ```
+
+> ### Note:  
+> -   The visibility of the *Share: Microsoft Teams › As Card* option, that is enabled using the `asCard` setting, is overridden if the visibility setting of the *Share: Microsoft Teams* option using `showMsteamsOptions` evaluates to `false` in the manifest.
+> 
+> -   The `showMsTeamsOptions` property is applicable only to apps that run on SAP Fiori launchpad, where the integration with *Share: Microsoft Teams* is available. The *Share: Microsoft Teams* option is a part of collaborative ERP \(enterprise resource planning\) within the SAP S/4HANA family of products and requires `ushell` and SAP Fiori launchpad configuration.
 
 
 

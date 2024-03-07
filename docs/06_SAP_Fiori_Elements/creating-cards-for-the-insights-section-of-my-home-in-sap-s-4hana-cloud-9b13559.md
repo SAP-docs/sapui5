@@ -2,11 +2,11 @@
 
 # Creating Cards for the Insights Section of *My Home* in SAP S/4HANA Cloud
 
-An option for tables in the list report or charts in the analytical list page allows users to create cards that can be added to the *Insights* section of *My Home* in SAP S/4HANA Cloud.
+An option for tables in the list report or charts in the analytical list page allows end users to create cards that can be added to the *Insights* section of *My Home* in SAP S/4HANA Cloud.
 
 **Prerequisites**
 
-Application developers must enable *My Home* in SAP S/4HANA Cloud to create and add cards. For more information, see [*My Home* in SAP S/4HANA Cloud](https://help.sap.com/docs/SAP_S4HANA_CLOUD/4fc8d03390c342da8a60f8ee387bca1a/8a60279e8d2041b5ad8d3455fab0f3ef.html).
+You must enable *My Home* in SAP S/4HANA Cloud to create and add cards. For more information, see [*My Home* in SAP S/4HANA Cloud](https://help.sap.com/docs/SAP_S4HANA_CLOUD/4fc8d03390c342da8a60f8ee387bca1a/8a60279e8d2041b5ad8d3455fab0f3ef.html).
 
 Once you've enabled *My Home* in SAP S/4HANA Cloud, the *Add Card to Insights* option automatically appears in the overflow toolbar of the table in list report applications and the overflow toolbar of the chart in analytical list page applications.
 
@@ -23,27 +23,25 @@ Once you've enabled *My Home* in SAP S/4HANA Cloud, the *Add Card to Insights* o
 ![](images/Add_Cards_to_Insights_ALP_401e0b0.png "Add Card to Insights Option in the Chart Toolbar of Analytical List Page")
 
 > ### Note:  
-> -   This feature only supports single view scenarios and single entity-multi view scenarios with responsive tables in list report applications.
+> The card creation dialog shows only those columns that are supported for a card. The card supports single-valued `DataField` based columns. It also supports columns with field values displayed as links such as `DataFieldWithUrl`, semantic links, and `DataField` with `QuickViewFacets`. In addition, SAP Fiori elements for OData V4 also supports `DataFieldWithIntentBasedNavigation` and `DataFieldWithNavigationPath` columns.
 > 
-> -   The card creation dialog shows only those columns that are supported for a card. The card supports single-valued `DataField` based columns. It also supports columns with field values displayed as links such as `DataFieldWithUrl`, semantic links, and `DataField` with `QuickViewFacets`. In addition, SAP Fiori elements for OData V4 also supports `DataFieldWithIntentBasedNavigation` and `DataFieldWithNavigationPath` columns.
+> The columns that are not supported by the card creation dialog include:
 > 
->     The columns that are not supported by the card creation dialog include:
+> -   Image
 > 
->     -   Image
+> -   Multi-valued based columns
 > 
->     -   Multi-valued based columns
+> -   `FieldGroup` based columns
 > 
->     -   `FieldGroup` based columns
+> -   Columns with inline action
 > 
->     -   Columns with inline action
+> -   Columns with navigation button
 > 
->     -   Columns with navigation button
+> -   `DataFieldForAnnotation` based columns \(for contact or address fields\)
 > 
->     -   `DataFieldForAnnotation` based columns \(for contact or address fields\)
-> 
->     -   Custom columns
+> -   Custom columns
 
-Application developers can switch off the option to add cards to *Insights* section of *My Home* using the manifest setting.
+You can switch off the option to add cards to the *Insights* section of *My Home* using the manifest setting.
 
 
 
@@ -97,6 +95,9 @@ Similarly, using the `manifest.json`, analytical list page applications can choo
 
 ## Additional Features in SAP Fiori Elements for OData V4
 
+> ### Note:  
+> The card creation feature only supports single view scenarios and single entity-multi view scenarios with responsive tables in list report applications.
+
 To disable the *Add Card to Insights* option in the table toolbar, add the following settings to the manifest:
 
 > ### Sample Code:  
@@ -112,7 +113,6 @@ To disable the *Add Card to Insights* option in the table toolbar, add the follo
 > ```
 
 > ### Note:  
-> The *Add Card to Insights* option isn't available if the list report application is configured as a flavor of the analytical list page.
 
 To disable the *Add Card to Insights* option in the chart toolbar, add the following manifest settings:
 

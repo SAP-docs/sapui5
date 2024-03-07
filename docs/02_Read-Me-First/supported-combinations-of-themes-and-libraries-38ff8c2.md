@@ -63,6 +63,63 @@ The following table shows the [Available Themes](../04_Essentials/available-them
 1.101
 
 </th>
+<th valign="top">
+
+1.120
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+`sap_horizon` 
+
+</td>
+<td valign="top">
+
+n/a
+
+</td>
+<td valign="top">
+
+n/a
+
+</td>
+<td valign="top">
+
+n/a
+
+</td>
+<td valign="top">
+
+n/a
+
+</td>
+<td valign="top">
+
+n/a
+
+</td>
+<td valign="top">
+
+n/a
+
+</td>
+<td valign="top">
+
+![Supported](images/Green_Led_3cb17ee.gif)
+
+</td>
+<td valign="top">
+
+![Supported](images/Green_Led_3cb17ee.gif)
+
+</td>
+<td valign="top">
+
+![Supported](images/Green_Led_3cb17ee.gif)
+
+</td>
 </tr>
 <tr>
 <td valign="top">
@@ -103,6 +160,11 @@ n/a
 <td valign="top">
 
 n/a
+
+</td>
+<td valign="top">
+
+![Supported](images/Green_Led_3cb17ee.gif)
 
 </td>
 <td valign="top">
@@ -159,11 +221,16 @@ n/a
 ![Supported](images/Green_Led_3cb17ee.gif)
 
 </td>
+<td valign="top">
+
+![Supported](images/Green_Led_3cb17ee.gif)
+
+</td>
 </tr>
 <tr>
 <td valign="top">
 
-`sap_horizon` 
+`sap_fiori_3` 
 
 </td>
 <td valign="top">
@@ -183,17 +250,22 @@ n/a
 </td>
 <td valign="top">
 
-n/a
+![Supported](images/Green_Led_3cb17ee.gif)
 
 </td>
 <td valign="top">
 
-n/a
+![Supported](images/Green_Led_3cb17ee.gif)
 
 </td>
 <td valign="top">
 
-n/a
+![Supported](images/Green_Led_3cb17ee.gif)
+
+</td>
+<td valign="top">
+
+![Supported](images/Green_Led_3cb17ee.gif)
 
 </td>
 <td valign="top">
@@ -236,48 +308,6 @@ n/a
 <td valign="top">
 
 n/a
-
-</td>
-<td valign="top">
-
-![Supported](images/Green_Led_3cb17ee.gif)
-
-</td>
-<td valign="top">
-
-![Supported](images/Green_Led_3cb17ee.gif)
-
-</td>
-<td valign="top">
-
-![Supported](images/Green_Led_3cb17ee.gif)
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-`sap_fiori_3` 
-
-</td>
-<td valign="top">
-
-n/a
-
-</td>
-<td valign="top">
-
-n/a
-
-</td>
-<td valign="top">
-
-n/a
-
-</td>
-<td valign="top">
-
-![Supported](images/Green_Led_3cb17ee.gif)
 
 </td>
 <td valign="top">
@@ -349,6 +379,11 @@ n/a
 ![Supported](images/Green_Led_3cb17ee.gif)
 
 </td>
+<td valign="top">
+
+![Supported](images/Green_Led_3cb17ee.gif)
+
+</td>
 </tr>
 <tr>
 <td valign="top">
@@ -396,6 +431,11 @@ n/a
 <td valign="top">
 
 ![Supported](images/Green_Led_3cb17ee.gif)
+
+</td>
+<td valign="top">
+
+![Not Supported](images/warning_gray_obj_d355123.png)
 
 </td>
 </tr>
@@ -447,6 +487,11 @@ n/a
 ![Supported](images/Green_Led_3cb17ee.gif)
 
 </td>
+<td valign="top">
+
+![Not Supported](images/warning_gray_obj_d355123.png)
+
+</td>
 </tr>
 <tr>
 <td valign="top">
@@ -457,6 +502,11 @@ n/a
 <td valign="top">
 
 ![Supported](images/Green_Led_3cb17ee.gif)
+
+</td>
+<td valign="top">
+
+![Not Supported](images/warning_gray_obj_d355123.png)
 
 </td>
 <td valign="top">
@@ -541,10 +591,15 @@ n/a
 ![Not Supported](images/warning_gray_obj_d355123.png)
 
 </td>
+<td valign="top">
+
+![Not Supported](images/warning_gray_obj_d355123.png)
+
+</td>
 </tr>
 </table>
 
-![Supported](images/Green_Led_3cb17ee.gif) = Supported, ![Not Supported](images/warning_gray_obj_d355123.png) = Not Supported
+![Supported](images/Green_Led_3cb17ee.gif) = Supported ![Not Supported](images/warning_gray_obj_d355123.png) = Not Supported
 
 
 
@@ -556,7 +611,9 @@ Should you decide to ignore the deprecation of libraries and continue, for examp
 
 The `sap_bluecrystal` theme is also no longer supported, but offers full coverage of the `sap.ui.commons` and the `sap.ui.ux3` library. It is currently still shipped, **but will be removed in one of the next versions.**
 
-The `sap_belize` theme offers an initial implementation for the `sap.ui.commons` and the `sap.ui.ux3` library to allow for a smoother transition, but it is not supported for this library and will not be maintained. We recommend that you consider migrating your existing apps to actively developed libraries, such as `sap.m`, and use `sap_belize` as the default theme going forward.
+The `sap_belize` theme offers an initial implementation for the `sap.ui.commons` and the `sap.ui.ux3` libraries to allow for a smoother transition, but it is not supported for this library and will not be maintained. We recommend that you consider migrating your existing apps to actively developed libraries, such as `sap.m`, and use the most current theme as the default theme going forward.
+
+The following table shows how the available themes interact with the `sap.ui.commons` and the `sap.ui.ux3` libraries:
 
 **Themes for the Deprecated Libraries sap.ui.commons and sap.ui.ux3**
 
@@ -595,6 +652,11 @@ The `sap_belize` theme offers an initial implementation for the `sap.ui.commons`
 </th>
 <th valign="top">
 
+1.69
+
+</th>
+<th valign="top">
+
 1.71
 
 </th>
@@ -608,11 +670,16 @@ The `sap_belize` theme offers an initial implementation for the `sap.ui.commons`
 1.101
 
 </th>
+<th valign="top">
+
+1.120
+
+</th>
 </tr>
 <tr>
 <td valign="top">
 
-sap\_horizon\_dark
+`sap_horizon` 
 
 </td>
 <td valign="top">
@@ -648,6 +715,73 @@ n/a
 <td valign="top">
 
 n/a
+
+</td>
+<td valign="top">
+
+![Not Supported](images/warning_gray_obj_d355123.png)
+
+</td>
+<td valign="top">
+
+![Not Supported](images/warning_gray_obj_d355123.png)
+
+</td>
+<td valign="top">
+
+![Not Supported](images/warning_gray_obj_d355123.png)
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`sap_horizon_dark` 
+
+</td>
+<td valign="top">
+
+n/a
+
+</td>
+<td valign="top">
+
+n/a
+
+</td>
+<td valign="top">
+
+n/a
+
+</td>
+<td valign="top">
+
+n/a
+
+</td>
+<td valign="top">
+
+n/a
+
+</td>
+<td valign="top">
+
+n/a
+
+</td>
+<td valign="top">
+
+n/a
+
+</td>
+<td valign="top">
+
+n/a
+
+</td>
+<td valign="top">
+
+![Not Supported](images/warning_gray_obj_d355123.png)
 
 </td>
 <td valign="top">
@@ -672,43 +806,6 @@ n/a
 <td valign="top">
 
 n/a
-
-</td>
-<td valign="top">
-
-n/a
-
-</td>
-<td valign="top">
-
-n/a
-
-</td>
-<td valign="top">
-
-n/a
-
-</td>
-<td valign="top">
-
-n/a
-
-</td>
-<td valign="top">
-
-n/a
-
-</td>
-<td valign="top">
-
-![Not Supported](images/warning_gray_obj_d355123.png)
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-`sap_horizon` 
 
 </td>
 <td valign="top">
@@ -798,6 +895,132 @@ n/a
 ![Not Supported](images/warning_gray_obj_d355123.png)
 
 </td>
+<td valign="top">
+
+![Not Supported](images/warning_gray_obj_d355123.png)
+
+</td>
+<td valign="top">
+
+![Not Supported](images/warning_gray_obj_d355123.png)
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`sap_fiori_3_dark` 
+
+</td>
+<td valign="top">
+
+n/a
+
+</td>
+<td valign="top">
+
+n/a
+
+</td>
+<td valign="top">
+
+n/a
+
+</td>
+<td valign="top">
+
+n/a
+
+</td>
+<td valign="top">
+
+n/a
+
+</td>
+<td valign="top">
+
+n/a
+
+</td>
+<td valign="top">
+
+![Not Supported](images/warning_gray_obj_d355123.png)
+
+</td>
+<td valign="top">
+
+![Not Supported](images/warning_gray_obj_d355123.png)
+
+</td>
+<td valign="top">
+
+![Not Supported](images/warning_gray_obj_d355123.png)
+
+</td>
+<td valign="top">
+
+![Not Supported](images/warning_gray_obj_d355123.png)
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`sap_fiori_3_hcb`
+
+`sap_fiori_3_hcw`
+
+</td>
+<td valign="top">
+
+n/a
+
+</td>
+<td valign="top">
+
+n/a
+
+</td>
+<td valign="top">
+
+n/a
+
+</td>
+<td valign="top">
+
+n/a
+
+</td>
+<td valign="top">
+
+n/a
+
+</td>
+<td valign="top">
+
+![Not Supported](images/warning_gray_obj_d355123.png)
+
+</td>
+<td valign="top">
+
+![Not Supported](images/warning_gray_obj_d355123.png)
+
+</td>
+<td valign="top">
+
+![Not Supported](images/warning_gray_obj_d355123.png)
+
+</td>
+<td valign="top">
+
+![Not Supported](images/warning_gray_obj_d355123.png)
+
+</td>
+<td valign="top">
+
+![Not Supported](images/warning_gray_obj_d355123.png)
+
+</td>
 </tr>
 <tr>
 <td valign="top">
@@ -845,6 +1068,16 @@ n/a
 <td valign="top">
 
 ![Not Supported](images/warning_gray_obj_d355123.png)
+
+</td>
+<td valign="top">
+
+![Not Supported](images/warning_gray_obj_d355123.png)
+
+</td>
+<td valign="top">
+
+![Deprecated](images/Yellow_Led_3ea53dc.gif)
 
 </td>
 </tr>
@@ -896,11 +1129,31 @@ n/a
 ![Not Supported](images/warning_gray_obj_d355123.png)
 
 </td>
+<td valign="top">
+
+![Not Supported](images/warning_gray_obj_d355123.png)
+
+</td>
+<td valign="top">
+
+![Deprecated](images/Yellow_Led_3ea53dc.gif)
+
+</td>
 </tr>
 <tr>
 <td valign="top">
 
 `sap_bluecrystal` 
+
+</td>
+<td valign="top">
+
+![Deprecated](images/Yellow_Led_3ea53dc.gif)
+
+</td>
+<td valign="top">
+
+![Deprecated](images/Yellow_Led_3ea53dc.gif)
 
 </td>
 <td valign="top">
@@ -953,6 +1206,16 @@ n/a
 <td valign="top">
 
 ![Supported](images/Green_Led_3cb17ee.gif)
+
+</td>
+<td valign="top">
+
+![Deprecated](images/Yellow_Led_3ea53dc.gif)
+
+</td>
+<td valign="top">
+
+![Deprecated](images/Yellow_Led_3ea53dc.gif)
 
 </td>
 <td valign="top">
@@ -1037,6 +1300,16 @@ n/a
 ![Removed](images/Red_Led_5befb5a.gif)
 
 </td>
+<td valign="top">
+
+![Removed](images/Red_Led_5befb5a.gif)
+
+</td>
+<td valign="top">
+
+![Removed](images/Red_Led_5befb5a.gif)
+
+</td>
 </tr>
 <tr>
 <td valign="top">
@@ -1057,6 +1330,16 @@ n/a
 <td valign="top">
 
 ![Deprecated](images/Yellow_Led_3ea53dc.gif)
+
+</td>
+<td valign="top">
+
+![Removed](images/Red_Led_5befb5a.gif)
+
+</td>
+<td valign="top">
+
+![Removed](images/Red_Led_5befb5a.gif)
 
 </td>
 <td valign="top">
@@ -1131,13 +1414,23 @@ n/a
 ![Removed](images/Red_Led_5befb5a.gif)
 
 </td>
+<td valign="top">
+
+![Removed](images/Red_Led_5befb5a.gif)
+
+</td>
+<td valign="top">
+
+![Removed](images/Red_Led_5befb5a.gif)
+
+</td>
 </tr>
 </table>
 
-![Supported](images/Green_Led_3cb17ee.gif) = Supported, ![Not Supported](images/warning_gray_obj_d355123.png) = Not Supported, ![Deprecated](images/Yellow_Led_3ea53dc.gif) = Deprecated, ![Removed](images/Red_Led_5befb5a.gif) = Removed
+![Supported](images/Green_Led_3cb17ee.gif) = Supported ![Not Supported](images/warning_gray_obj_d355123.png) = Not Supported ![Deprecated](images/Yellow_Led_3ea53dc.gif) = Deprecated ![Removed](images/Red_Led_5befb5a.gif) = Removed
 
 **Related Information**  
 
 
-[Deprecated Themes and Libraries](deprecated-themes-and-libraries-a87ca84.md "As SAPUI5 evolves over time, some of the UI controls are replaced by others, or their concepts abandoned entirely. This chapter gives an overview on theme and library level of the most important deprecations. Individual control deprecations and more information about the controls replacing them can be found in the API reference within the Demo Kit.")
+[Deprecated Themes and Libraries](deprecated-themes-and-libraries-a87ca84.md "As SAPUI5 evolves over time, some of the UI controls are replaced by others, or their concepts abandoned entirely. This chapter gives an overview of the most important deprecations at theme and library level. Individual control deprecations and more information about the controls replacing them can be found in the API reference within the Demo Kit.")
 

@@ -108,7 +108,7 @@ Sometimes errors are not as easy to spot and you actually need to debug the Java
   
 **Technical information dialog**
 
-![Displays general information about the application, SAPUI5, and user browser](images/UI5_Walkthrough_Step_29b_34c4b02.png "Technical information dialog ")
+![Displays general information about the application, UI5,, and user browser](images/UI5_Walkthrough_Step_29b_34c4b02.png "Technical information dialog ")
 
 For a more detailed explanation of the SAPUI5 support tools, go through the [Troubleshooting Tutorial](troubleshooting-tutorial-5661952.md) tutorial.
 

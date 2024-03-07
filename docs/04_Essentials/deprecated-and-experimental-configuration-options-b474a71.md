@@ -70,34 +70,6 @@ This configuration parameter defines UI areas that shall be created in advance; 
 <tr>
 <td valign="top">
 
-`async`
-
-\(deprecated\)
-
-</td>
-<td valign="top">
-
-Type: `boolean`
-
-Default value: `false`
-
-This configuration setting enables the module loader to load both modules and library-preload files asynchronously. Activating this feature requires intensive application-side cooperation and testing to ensure a stable and fully working application. In case you encounter issues, or if you want to prepare your application in advance, see [Is Your Application Ready for Asynchronous Loading?](../03_Get-Started/is-your-application-ready-for-asynchronous-loading-493a15a.md)
-
-</td>
-<td valign="top">
-
-![YES](../02_Read-Me-First/images/Checked_Okay_3929e46.png)
-
-</td>
-<td valign="top">
-
-![NO](images/Cancel_dfb38de.png)
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
 `auto-aria-body-role`
 
 \(deprecated\)
@@ -294,6 +266,42 @@ If set to `true`, additional information for text resources is provided that all
 <td valign="top">
 
 ![YES](../02_Read-Me-First/images/Checked_Okay_3929e46.png)
+
+</td>
+<td valign="top">
+
+![NO](images/Cancel_dfb38de.png)
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`preload`
+
+\(deprecated\)
+
+</td>
+<td valign="top">
+
+[Type](configuration-options-and-url-parameters-91f2d03.md#loio91f2d03b6f4d1014b6dd926db0e91070__section_TVT): `string`
+
+Default value: `auto`
+
+Defines the loading behaviour of the so-called preload files. They contain all modules of a library. The contained modules are only loaded, but not executed until they are used by the application.
+
+The values are used as follows:
+
+-   When set to `auto`, the runtime loads preload files asynchronously if the bootstrap configuration parameter `async` is set as `async=true`. We recommend to use the `async=true` configuration parameter in the bootstrap, as it switches many module-related APIs to `async`, including the loading behaviour of the preload files.
+-   Preload files for the declared libraries are loaded synchronously when the `async` bootstrap configuration parameter is set to`false` \(`async=false`\) or not set at all. Best practices discourage such behavior.
+-   For any other value \(for example blank\), the preload feature is deactivated and modules are loaded on demand.
+
+
+
+</td>
+<td valign="top">
+
+![NO](images/Cancel_dfb38de.png)
 
 </td>
 <td valign="top">

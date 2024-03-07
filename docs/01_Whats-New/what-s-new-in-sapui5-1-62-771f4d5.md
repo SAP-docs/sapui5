@@ -838,7 +838,7 @@ Feature
 
 **Demo Kit Landing Page**
 
--   We added a block on the welcome page about the *UI5 Evolution* project. It contains a short description with a link to the interactive documentation page about the project. For more information, see [Best Practices for App Developers](../03_Get-Started/best-practices-for-app-developers-28fcd55.md).
+-   We added a block on the welcome page about the *UI5 Evolution* project. It contains a short description with a link to the interactive documentation page about the project. For more information, see [Best Practices for Developers](../03_Get-Started/best-practices-for-developers-28fcd55.md).
 
 -   We added a live code editor to the Demo Kit welcome page that showcases a simple app. You can edit the code directly and see your changes immediately in the *Result* area.
 
@@ -867,6 +867,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.119](what-s-new-in-sapui5-1-119-0b1903a.md "With this release SAPUI5 is upgraded from version 1.118 to 1.119.")
 
 [What's New in SAPUI5 1.118](what-s-new-in-sapui5-1-118-3eecbde.md "With this release SAPUI5 is upgraded from version 1.117 to 1.118.")
 

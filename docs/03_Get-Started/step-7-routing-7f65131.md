@@ -296,7 +296,7 @@ We initialize the router and bind to its `onBeforeRouteMatched` event, and we in
 				"sap.m": {},
 				"sap.f": {},
 				"sap.uxap": {}
-			}
+				}
 		},
 		"config": {
 			"fullWidth": true

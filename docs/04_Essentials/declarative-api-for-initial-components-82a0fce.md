@@ -10,7 +10,7 @@ The declarative API enables you to define the initially started component direct
 
 ## Using the `ComponentSupport` Module
 
-With the declarative `sap/ui/core/ComponentSupport` API it is possible to define the initially started component directly in the HTML markup instead of the imperative way using JavaScript. The declarative `ComponentSupport` is not activated by default, but must be enabled via the bootstrap:
+With the declarative `sap/ui/core/ComponentSupport` API it is possible to define the initially started component directly in the HTML markup instead of the imperative way using JavaScript or TypeScript. The declarative `ComponentSupport` is not activated by default, but must be enabled via the bootstrap:
 
 ```html
 <!-- index.html -->
@@ -46,12 +46,59 @@ This module scans the DOM for HTML elements containing a special data attribute 
 ## Declarative Configuration of `ComponentContainer`
 
 > ### Caution:  
-> As HTML is case-insensitive, property or event names with upper-case characters have to be "escaped" with the hyphen character. This is similar to CSS attributes. In the following sample, the `handleValidation` and `componentCreated` arguments of the `ComponentContainer` constructor are used:
+> As HTML is case-insensitive, property or event names with upper-case characters have to be "escaped" with the hyphen character. This is similar to CSS attributes. In the following sample, the `handleValidation` argument of the `ComponentContainer` constructor is used:
 > 
 > ```html
 > 
-> <div data-sap-ui-component ... data-handle-validation="true" data-component-created="onComponentCreated"<</div>
+> <div data-sap-ui-component ... data-handle-validation="true"></div>
 > 
+> ```
+
+> ### Note:  
+> The following data attributes for registering event handlers have been deprecated since SAPUI5 version 1.120 and won't work in the next major version because of the removal of accessing the global namespace:
+> 
+> -   `data-component-created`
+> 
+> -   `data-component-failed`
+> 
+> 
+> Alternatively, you can provide your own module in the bootstrap via `oninit`, in which you create an instance of the `ComponentContainer` in the JavaScript code:
+> 
+> ```html
+> <!-- index.html -->
+> <head>
+>     <script id="sap-ui-bootstrap"
+>         src="resources/sap-ui-core.js"
+>         data-sap-ui-onInit="module:sap/ui/demo/myBootstrap"> <!-- Execute custom module on init -->
+>     </script>
+> </head>
+> <body id="content" class="sapUiBody sapUiSizeCompact" role="application">
+> </body>
+> ```
+> 
+> ```
+> // sap/ui/demo/myBootstrap.js
+> sap.ui.define(["sap/ui/core/ComponentContainer"], function(ComponentContainer) {
+> 
+>     const oComponentContainer = new ComponentContainer({
+>         manifest: true,
+>         name: "sap.ui.core.samples.formatting",
+>         handleValidation: true,
+>         componentCreated: function(oEvent) {
+>             // handle the created component
+>             const oComponent = oEvent.getParameter("component");
+>             ...
+>         },
+>         componentFailed: function(oEvent) {
+>             // handle the failed case
+>             const oReason = oEvent.getParameter("reason");
+>             ...
+>         }
+>     });
+> 
+>     oComponentContainer.placeAt("content");
+> 
+> });
 > ```
 
 

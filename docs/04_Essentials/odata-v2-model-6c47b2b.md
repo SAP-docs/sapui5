@@ -11,7 +11,7 @@ The OData model is a server-side model, meaning that the data set is only availa
 
 The OData model currently supports OData version 2.0.
 
-The following two versions of the OData model are implemented: `sap.ui.model.odata.ODataModel` and `sap.ui.model.odata.v2.ODataModel`. The `v2.ODataModel` has an improved feature set and new features will only be implemented in this model. `sap.ui.model.odata.ODataModel` is deprecated. We recommend to only use `v2.ODataModel`.
+The following version of the OData model is implemented: `sap.ui.model.odata.v2.ODataModel`. The `v2.ODataModel` has an improved feature set and new features will only be implemented in this model. `sap.ui.model.odata.ODataModel` is deprecated. We recommend to only use `v2.ODataModel`.
 
 The following table shows the supported features for both OData models:
 
@@ -680,7 +680,7 @@ The `create` and `update` methods also require a mandatory `oData` parameter for
 
 ## Concurrency Control and ETags
 
-OData uses HTTP ETags for optimistic concurrency control. The service must be configured to provide them. The ETag can be passed within the parameters map for updating or deleting entities. If no ETag is passed, the ETag of the cached entity is used, if it is loaded already.
+OData uses HTTP ETags for optimistic concurrency control. The service must be configured to provide them. The ETag can be passed within the parameters map when updating or deleting entities. If no ETag is passed, the ETag of the cached entity is used, if it is loaded already.
 
 <a name="loio30362c1cafd244dd86752e28993bbcdd"/>
 
@@ -1126,7 +1126,7 @@ SAPUI5 uses the concept of a "current language" \(see [Identifying the Language 
 
 The implementation `sap.ui.model.odata.ODataMetaModel` offers a unified access to both OData Version 2.0 metadata and Version 4.0 annotations.
 
-It uses the existing `sap.ui.model.odata.ODataMetadata` as a foundation and merges the OData Version 4.0 annotations from the existing `sap.ui.model.odata.ODataAnnotations` directly into the corresponding entity or property.
+It uses the existing `sap.ui.model.odata.ODataMetadata` as a foundation and merges the OData Version 4.0 annotations from the existing `sap.ui.model.odata.v2.ODataAnnotations` directly into the corresponding entity or property.
 
 You can get an instance of `sap.ui.model.odata.ODataMetaModel` from an instance of `sap.ui.model.odata.v2.ODataModel`, see [XML Templating](xml-templating-5ee619f.md).
 
@@ -1296,9 +1296,9 @@ Each of these queries is self-contained. The query can refer to properties of th
 
 
 
-## OData v4 Annotations
+## OData V4 Annotations
 
-Each element of the entity model \(except *association set end*\) can be annotated. These annotations from the existing `sap.ui.model.odata.ODataAnnotations` are merged directly into the corresponding element. The following code snippet shows how the structure from the existing `sap.ui.model.odata.ODataMetadata`, as explained above and including extensions and constraints such as `nullable` or `maxLength`, is fleshed out with lifted v2 annotations and inlined v4 annotations, such as `Org.OData.Measures.V1.Unit` or `com.sap.vocabularies.UI.v1.Identification`. If you want to navigate the structure, for example for XML templating, it is important to understand this structure.
+Each element of the entity model \(except *association set end*\) can be annotated. These annotations from the existing `sap.ui.model.odata.v2.ODataAnnotations` are merged directly into the corresponding element. The following code snippet shows how the structure from the existing `sap.ui.model.odata.ODataMetadata`, as explained above and including extensions and constraints such as `nullable` or `maxLength`, is fleshed out with lifted v2 annotations and inlined v4 annotations, such as `Org.OData.Measures.V1.Unit` or `com.sap.vocabularies.UI.v1.Identification`. If you want to navigate the structure, for example for XML templating, it is important to understand this structure.
 
 ODataMetaModel JSON Format:
 
@@ -1374,7 +1374,7 @@ ODataMetaModel JSON Format:
 
 ## Enhancement of the OData Meta Model
 
-In addition to the easy access to the SAP-specific OData annotations, such as `sap:label`, corresponding vocabulary-based annotations are mixed in if they are not yet defined in the OData Version 4.0 annotations of the existing `sap.ui.model.odata.ODataAnnotations`.
+In addition to the easy access to the SAP-specific OData annotations, such as `sap:label`, corresponding vocabulary-based annotations are mixed in if they are not yet defined in the OData Version 4.0 annotations of the existing `sap.ui.model.odata.v2.ODataAnnotations`.
 
 > ### Note:  
 > Annotation terms are not merged, but replaced as a whole \("PUT" semantics\). If the same annotation term with the same target is also contained in an annotation file, the complete OData V4 annotation converted from the OData V2 annotation is replaced by the one contained in the annotation file for the specified target. Converted annotations never use a qualifier and are only overwritten by the same annotation term without a qualifier.

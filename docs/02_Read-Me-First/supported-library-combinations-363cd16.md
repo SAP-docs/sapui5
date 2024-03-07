@@ -39,5 +39,5 @@ These libraries can **only** be used in combination with the following libraries
 **Related Information**  
 
 
-[Deprecated Themes and Libraries](deprecated-themes-and-libraries-a87ca84.md "As SAPUI5 evolves over time, some of the UI controls are replaced by others, or their concepts abandoned entirely. This chapter gives an overview on theme and library level of the most important deprecations. Individual control deprecations and more information about the controls replacing them can be found in the API reference within the Demo Kit.")
+[Deprecated Themes and Libraries](deprecated-themes-and-libraries-a87ca84.md "As SAPUI5 evolves over time, some of the UI controls are replaced by others, or their concepts abandoned entirely. This chapter gives an overview of the most important deprecations at theme and library level. Individual control deprecations and more information about the controls replacing them can be found in the API reference within the Demo Kit.")
 

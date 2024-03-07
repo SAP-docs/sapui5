@@ -120,7 +120,7 @@ Latest version
 </td>
 <td valign="top" rowspan="2">
 
-Latest version and latest Extended Support Release \(ESR\)<sup>8</sup>
+Latest version and latest Extended Support Release \(ESR\)<sup>9</sup>
 
 </td>
 <td valign="top" align="center">
@@ -132,7 +132,7 @@ Latest version and latest Extended Support Release \(ESR\)<sup>8</sup>
 <tr>
 <td valign="top">
 
-Touch<sup>5, 6, 7</sup>
+Touch<sup>5, 6, 8</sup>
 
 </td>
 <td valign="top">
@@ -154,17 +154,17 @@ Latest version
 </td>
 <td valign="top">
 
-Latest version<sup>8</sup>
+Latest version<sup>9</sup>
 
 </td>
 <td valign="top">
 
-Latest version<sup>8</sup>
+Latest version<sup>9</sup>
 
 </td>
 <td valign="top">
 
-Latest version
+Latest version<sup>7</sup>
 
 </td>
 </tr>
@@ -223,7 +223,7 @@ iOS & iPadOS<sup>3</sup>
 </td>
 <td valign="top">
 
-Phone and Tablet<sup>5,6, 7</sup>
+Phone and Tablet<sup>5,6, 8</sup>
 
 </td>
 <td valign="top">
@@ -238,7 +238,7 @@ Latest version
 </td>
 <td valign="top">
 
-Latest version<sup>8</sup>
+Latest version<sup>9</sup>
 
 </td>
 <td valign="top" align="center">
@@ -258,7 +258,7 @@ Latest version<sup>8</sup>
 </td>
 <td valign="top">
 
-Latest version
+Latest version<sup>7</sup>
 
 </td>
 </tr>
@@ -270,7 +270,7 @@ Android<sup>4</sup>
 </td>
 <td valign="top">
 
-Phone and Tablet<sup>5,6, 7</sup>
+Phone and Tablet<sup>5,6, 8</sup>
 
 </td>
 <td valign="top">
@@ -305,7 +305,7 @@ Latest version
 </td>
 <td valign="top">
 
-Latest version
+Latest version<sup>7</sup>
 
 </td>
 </tr>
@@ -316,9 +316,10 @@ Latest version
  3\) We use current Apple iPhone and iPad devices for testing and reproducing the reported issues.  
  4\) Android-based devices are very fragmented in matters of operating system variants and hardware diversity. We use current Samsung Galaxy S and Galaxy Tab S series devices for testing and reproducing the reported issues.  
  5\) Not supported for `sap.ui.commons` and `sap.ui.ux3`.  
- 6\)  Not supported for `sap.sac.df`.  
-7\) Not supported for `sap.gantt`. Note that gantt charts consuming `sap.gantt` can be displayed on tablet devices.  
- 8\) Not supported for `sap.ui.vbm`.
+ 6\) Not supported for `sap.sac.df`.  
+ 7\) With the removal of the SAP Fiori Client from the Public App stores, preferable native browsers should be used on mobile devices. For more information see, [2992772](https://me.sap.com/notes/2992772).  
+8\) Not supported for `sap.gantt`. Note that gantt charts consuming `sap.gantt` can be displayed on tablet devices.  
+ 9\) Not supported for `sap.ui.vbm`.
 
 
 

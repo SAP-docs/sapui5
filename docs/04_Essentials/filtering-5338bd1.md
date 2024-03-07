@@ -45,7 +45,7 @@ The `ODataListBinding` allows to set static and dynamic filters:
 
 -   To set a static filter, use the `$filter` system query option in the binding parameters. The static filter value is sent with every data service request for the binding; you may specify any filter value allowed in OData V4. The static filter cannot be overwritten for an existing binding.
 
--   The dynamic filter is an instance of [sap.ui.model.Filter](https://ui5.sap.com/#/api/sap.ui.model.Filter) , or an array thereof. For an array, the filters are combined with a logical AND. You can set the initial value for the dynamic filter in [ODataModel.bindList](https://ui5.sap.com/#/api/ODataModel.bindList) or declaratively in an XML view with the `filters` property in an aggregation's binding information. To set the dynamic filter, use the [ODataListBinding.filter](https://ui5.sap.com/#/api/ODataListBinding.filter) method. This filter overwrites the initial value specified on binding construction.
+-   The dynamic filter is an instance of [sap.ui.model.Filter](https://ui5.sap.com/#/api/sap.ui.model.Filter) , or an array thereof. For an array, the filters are combined with a logical AND. You can set the initial value for the dynamic filter in [ODataModel\#bindList](https://ui5.sap.com/#/api/ODataModel%23methods/bindList) or declaratively in an XML view with the `filters` property in an aggregation's binding information. To set the dynamic filter, use the [ODataListBinding\#filter](https://ui5.sap.com/#/api/ODataListBinding%23methods/filter) method. This filter overwrites the initial value specified on binding construction.
 
 
 The `ODataListBinding` combines the dynamic filter and static filter with a logical AND.

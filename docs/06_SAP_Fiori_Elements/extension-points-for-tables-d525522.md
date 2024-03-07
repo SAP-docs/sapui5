@@ -418,7 +418,7 @@ tooltip
 </td>
 <td valign="top">
 
-any Unicode string, a string containing an `i18n` text.
+any Unicode string, a string containing an `i18n` text
 
 </td>
 <td valign="top">

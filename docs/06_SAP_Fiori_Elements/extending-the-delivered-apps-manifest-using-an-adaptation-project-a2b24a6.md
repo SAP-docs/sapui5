@@ -567,10 +567,10 @@ Once the annotation file is added, you can continue as follows:
 >             "changeType": "appdescr_app_addAnnotationsToOData",
 >             "content": {
 >                 "dataSourceId": "mainService",
->                 "annotations": ["localAnnotationsNew"],
+>                 "annotations": ["customer.localAnnotationsNew"],
 >                 "annotationsInsertPosition": "END",
 >                 "dataSource": {
->                     "localAnnotationsNew": {
+>                     "customer.localAnnotationsNew": {
 >                         "uri": "changes/annotations/annotations.xml",
 >                         "type": "ODataAnnotation"
 >                     }

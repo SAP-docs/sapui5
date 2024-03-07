@@ -72,9 +72,10 @@ To get all loaded style sheets, you simply need to call the `document.styleSheet
 By custom CSS files we mean all files and styles that are not included within a standard `library.css` file. Here is an example function that filters all loaded styles and returns only those specific file paths. Once you have a list of all custom CSS files, you can do your further analysis.
 
 ```
+// "Theming" required from module "sap/ui/core/Theming"
 getExternalStyleSheets: function() {
   return Array.from(document.styleSheets).filter(function(styleSheet) {
-    var themeName = sap.ui.getCore().getConfiguration().getTheme(),
+    var themeName = Theming.getTheme(),
       styleSheetEnding = "/themes/" + themeName + "/library.css",
       hasHref = !styleSheet.href || !styleSheet.href.endsWith(styleSheetEnding),
       hasRules = !!styleSheet.rules;

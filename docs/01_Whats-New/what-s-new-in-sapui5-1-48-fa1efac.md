@@ -89,7 +89,7 @@ Announcement
 </td>
 <td valign="top">
 
-Info Only
+Info Only 
 
 </td>
 <td valign="top">
@@ -1718,7 +1718,7 @@ SAP Fiori Elements
 
         You can create message texts for specific critical actions. They are displayed in the confirmation dialog box for the action.
 
-        For more information, see [Adding Action-Specific Messages to Confirmation Dialog Boxes](../06_SAP_Fiori_Elements/adding-action-specific-messages-to-confirmation-dialog-boxes-f5a04c7.md).
+        For more information, see [Adding Confirmation Popovers for Actions](../06_SAP_Fiori_Elements/adding-confirmation-popovers-for-actions-87130de.md).
 
     -   List report and object page now support the use of the *High-Contrast White* theme.
 
@@ -1960,6 +1960,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.119](what-s-new-in-sapui5-1-119-0b1903a.md "With this release SAPUI5 is upgraded from version 1.118 to 1.119.")
 
 [What's New in SAPUI5 1.118](what-s-new-in-sapui5-1-118-3eecbde.md "With this release SAPUI5 is upgraded from version 1.117 to 1.118.")
 

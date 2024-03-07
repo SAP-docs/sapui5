@@ -12,7 +12,7 @@ Model, view, and controller are assigned the following roles:
 
 
 
-![](images/SAPUI5_Model-View-Controller_Concept_1eb2161.png)
+![UI5 separates data model, UI view, and application logic (controller). ](images/SAPUI5_Model-View-Controller_Concept_1eb2161.png)
 
 
 

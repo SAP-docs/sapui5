@@ -232,7 +232,8 @@ After that, here is what you need to do:
                  });
     	     oPersInfo.addControl(this);
     
-    	     this._oSmartVM.addPersonalizableControl(oPersInfo);					        
+    	     this._oSmartVM.addPersonalizableControl(oPersInfo);
+    		this._replaceVariantManagement(this._oSmartVM);					        
                  sap.ui.comp.filterbar.FilterBar.prototype._initializeVariantManagement.apply(this, arguments);
     
     	 } else {

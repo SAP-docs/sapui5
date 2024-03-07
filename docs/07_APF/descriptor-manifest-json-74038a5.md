@@ -185,8 +185,8 @@ The `sap.app` namespace also contains the title of the application. This “titl
                         "phone": false
                 },
                 "supportedThemes": [
-                        "sap_hcb",
-                        "sap_belize"
+                        "sap_horizon_hcb",
+                        "sap_horizon"
                 ]
         },
         "sap.ui5": {

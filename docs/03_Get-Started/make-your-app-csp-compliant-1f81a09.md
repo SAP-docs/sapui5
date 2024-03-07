@@ -19,7 +19,7 @@ Don't use directly executable code in your HTML files, because this makes them v
 <script id="sap-ui-bootstrap"
 	src="resources/sap-ui-core.js"
 	data-sap-ui-preload="async"
-	data-sap-ui-theme="sap_belize"
+	data-sap-ui-theme="sap_horizon"
 	data-sap-ui-oninit="module:sap/ui/core/ComponentSupport">
 </script>
 <body class="sapUiBody" id="content">

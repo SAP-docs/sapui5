@@ -19,7 +19,7 @@ Comprehensive overview of QUnit testing for controls.
 -   If your test is too long, you're squeezing too much stuff into one of your control's functions. Divide the complexity, then your test will be simpler and your productive code will be better.
 -   Don't test general SAPUI5 functionality. Only test things actually done by your control \(see "What Should You Test?" below\).
 -   Never write an `if` in a test. It is a sign that you're either not stubbing correctly or you're testing multiple things in one test.
--   Never use the `expect` QUnit statement. You should always write your test in a way that every assertion you set up will be hit 100%.
+-   Use the `expect` QUnit statement to specify how many assertions are expected. You should always write your test in a way that every assertion will be executed. This is especially important if you want to test asynchronous behavior. Using `expect` helps you find out if all asynchronous operations have been resolved and all expected code paths have been passed.
 -   Whenever you encounter a Bug/Ticket, start by writing a QUnit that fails first, and *then* fix the code.
 -   Write your tests as small as possible: don't add a statement that is not needed for the test, such as an ID in the control's constructor properties.
 -   Use fake timers to avoid as many async tests as possible.
@@ -122,64 +122,23 @@ If you don't use Sinon sandboxes, revert all the spies/stubs/mocks.
 
 
 
-## Rendering Tests
-
-In the rendering tests part, you have to place your control in the DOM. The best place to put it is the `qunit-fixture` div, since its content gets deleted after every test.
-
-Make sure you destroy your control, since SAPUI5 will keep a reference to it and may also rerender it.
-
-It's crucial that you call `sap.ui.getCore().applyChanges()` after each time you have caused a rerendering.
-
-The call to this function synchronizes the changes of your control with the DOM. If you do not make this call, the DOM will not be updated.
-
-You can use the following template to make sure that you don't forget to destroy your control:
-
-```js
-QUnit.test("Should do Something", function(assert) {
-    // Arrange
-        var oContructor = {
-        
-    };
-    
-    // System under Test
-    var oMyControl = new nameSpace.myControl(oContructor);
-    oMyControl.placeAt("qunit-fixture");
-    sap.ui.getCore().applyChanges();
-
-    // Act
-    
-    // Assert
-
-    // Cleanup
-    oMyControl.destroy();
-});
-```
-
-
-
 ## Pitfalls
 
 
 
 ### Sinon fake timers
 
-If you are using `sinon.qunit`, it will automatically use fake timers by itself. Fake timers will prevent any `setTimeout/setIntervall` function from being executed, unless you call `this.clock.tick(milliseconds)` in your test. This means that a Mock Server with auto-respond will not respond and OPA will not be able to wait for controls.
+Using fake timers can be error-prone. Fake timers should only be used with care in specific scenarios. In order to avoid pitfalls using fake timers, see the following documentation:
 
-In addition, control events might be fired inside of a `setTimeout(, 0)`, so the event might not be triggered at all.
+-   For general information: [Fake Timers](sinon-js-spies-stubs-mocks-faked-timers-and-xhr-457eaad.md#loio457eaada68a24187858fd5e8b21a4892__section_FAKETIM)
 
-
-
-### Testing SAPUI5 control events with Sinon
-
-If you want to test SAPUI5 events, you can use spies to test how often they are called. If you try to test the parameters, however, you cannot do this with spies as SAPUI5 uses an eventPool that reuses the same object again. This means that after an event is set, all of the parameters will be deleted, Sinon will keep a reference to the object without properties.
-
-The effect of this is that you cannot assert on them anymore. The workaround is to use a stub with a custom implementation that saves a copy of the parameters to your test function scope.
-
-An example of this is shown in the cookbook below \(events\).
+-   For using fake timers in combination with rendering: [Rendering and Re-rendering Controls Within Tests](cookbook-for-testing-controls-with-qunit-0ddcc60.md#loio0ddcc60b05ee40dea1a3be09e8fee8f7__section_REREN)
 
 
 
 ### I've set a property on my control: Why aren't the changes in the DOM?
 
-The most likely reason for this is that `sap.ui.getCore().applyChanges()` was not called. SAPUI5 does not render synchronously, but calling this function will render immediately.
+The most likely reason for this is that it didn't wait for the `sap/ui/qunit/utils/nextUIUpdate` Promise. SAPUI5 does not render synchronously, but waiting for the Promise will proceed the test after the rendering is done.
+
+For more information, see [Rendering and Re-rendering Controls Within Tests](cookbook-for-testing-controls-with-qunit-0ddcc60.md#loio0ddcc60b05ee40dea1a3be09e8fee8f7__section_REREN)
 

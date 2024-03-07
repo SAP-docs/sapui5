@@ -79,7 +79,7 @@ To add a title to an object page table, provide a string value to the `TypeNameP
 
 Take the following into account:
 
--   As `TypeNamePlural` is a mandatory parameter, if the subsection title and the table title are identical, the table title is not displayed.
+-   `TypeNamePlural` is a mandatory parameter.
 
 -   If the `UI.HeaderInfo` annotation hasn't been entered, the table title is also not displayed.
 
@@ -95,5 +95,11 @@ The results look like this:
 ![](images/Adding_Titles_to_Object_page_8920264.png "Title for single table in object page section")
 
 > ### Note:  
-> If the subsection has only one type of content \(table or chart\), and the subsection title corresponds to the control title, then only the control title is displayed in the subsection.
+> If a section or a subsection has only one type of control \(table or chart\), then the title of the section or subsection is hidden and is set as the control title.
+> 
+> Sections with tables or charts, whether custom or embedded, can choose to hide the section title and set it as the title for the table or chart.
+> 
+> For more information about setting section title to the control within reuse component , see [Placing Reuse Component Instances on the Object Page](placing-reuse-component-instances-on-the-object-page-1ba7f88.md).
+> 
+> For more information about setting section title to the control within custom section, see [Adding a Section to an Object Page](adding-a-section-to-an-object-page-a357047.md).
 

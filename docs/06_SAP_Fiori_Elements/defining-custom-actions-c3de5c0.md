@@ -7,7 +7,9 @@ Define custom actions by using the extensions in the app descriptor file. You ca
 
 
 > ### Note:  
-> This topic is currently only applicable to SAP Fiori elements for OData V2.
+> -   This topic is only applicable to SAP Fiori elements for OData V2.
+> 
+> -   You can also define custom actions in SAP Fiori elements for OData V4. For more information, see [Adding Custom Actions Using Extension Points](adding-custom-actions-using-extension-points-7619517.md).
 
 
 

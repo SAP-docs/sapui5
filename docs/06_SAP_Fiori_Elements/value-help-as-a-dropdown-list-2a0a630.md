@@ -53,30 +53,30 @@ In the following example the currency code is implemented as a dropdown list box
 > XML Annotation
 > 
 > ```xml
-> <Annotations Target="sap.fe.officesupplies.CatalogAdminService.Products/currency_code">
->    <Annotation Term="Common.Label" String="Currency"/>
->    <Annotation Term="Common.Text" Path="currency/name">
->       <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly"/>
+> <Annotations Target="sap.fe.officesupplies.CatalogAdminService.Products/currency_code">
+>    <Annotation Term="Common.Label" String="Currency"/>
+>    <Annotation Term="Common.Text" Path="currency/name">
+>       <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly"/>
 >    </Annotation>
->    <Annotation Term="Common.ValueListWithFixedValues" Bool="true"/>
->    <Annotation Term="Common.ValueList">
->      <Record Type="Common.ValueListType">
->        <PropertyValue Property="Label" String="Currency"/>
->        <PropertyValue Property="CollectionPath" String="Currencies"/>
->        <PropertyValue Property="Parameters">
+>    <Annotation Term="Common.ValueListWithFixedValues" Bool="true"/>
+>    <Annotation Term="Common.ValueList">
+>      <Record Type="Common.ValueListType">
+>        <PropertyValue Property="Label" String="Currency"/
+>        <PropertyValue Property="CollectionPath" String="Currencies"/>
+>        <PropertyValue Property="Parameters">
 >          <Collection>
->             <Record Type="Common.ValueListParameterInOut">
->                <PropertyValue Property="LocalDataProperty" PropertyPath="currency_code"/>
->                <PropertyValue Property="ValueListProperty" String="code"/>
+>             <Record Type="Common.ValueListParameterInOut">
+>                <PropertyValue Property="LocalDataProperty" PropertyPath="currency_code"/>
+>                <PropertyValue Property="ValueListProperty" String="code"/>
 >             </Record>
->             <Record Type="Common.ValueListParameterDisplayOnly">
->                <PropertyValue Property="ValueListProperty" String="name"/>
+>             <Record Type="Common.ValueListParameterDisplayOnly">
+>                <PropertyValue Property="ValueListProperty" String="name"/>
 >             </Record>
 >          </Collection>
 >       </PropertyValue>
 >     </Record>
 >    </Annotation>
->    <Annotation Term="Core.Description" String="A currency code as specified in ISO 4217"/>
+>    <Annotation Term="Core.Description" String="A currency code as specified in ISO 4217"/>
 > </Annotations>
 > ```
 
@@ -89,10 +89,10 @@ In the following example the currency code is implemented as a dropdown list box
 > 	@Consumption.valueHelpDefinition:
 > 	[{
 > 	  entity :{
-> 		 name    : 'Currencies',
+> 		 name    : 'Currencies',
 > 		 element : 'code'
 > 		},
-> 	    label  : 'Currency'
+> 	    label  : 'Currency'
 > 	}]
 > 
 > 	@ObjectModel: {
@@ -103,7 +103,6 @@ In the following example the currency code is implemented as a dropdown list box
 > 	@UI.textArrangement: #TEXT_ONLY
 >    currency_code;
 > }
-> 
 > ```
 
 > ### Sample Code:  

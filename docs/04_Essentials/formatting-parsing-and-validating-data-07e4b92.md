@@ -6,7 +6,8 @@ Data that is presented on the UI often has to be converted so that is human read
 
 
 
-![](images/DataBinding_Formatter_40f0541.png)
+![When data is exchanged between the View and the Model, it often has to be converted by formatting, validating or
+                            parsing.](images/DataBinding_Formatter_40f0541.png)
 
 Formatters are used to define the formatting of data on the UI while data types work in both directions: they format the data on the UI and parse and validate user input that is entered.
 

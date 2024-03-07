@@ -12,8 +12,6 @@ You can define an alternative route from where to load SAPUI5 flexibility.
 
 If you want SAPUI5 flexibility to be loaded from the default location as part of the SAPUI5 bootstrap, you don't need to do anything.
 
-If you'd like SAPUI5 flexibility to be loaded from an alternative location, use the configuration parameter `flexibilityServices`=<code>"<i class="varname">&lt;/path/to/alternative/location&gt;</i>"</code>.
-
 If you'd like to disable SAPUI5 flexibility during SAPUI5 bootstrap, set the parameter value to an empty string.
 
 
@@ -30,7 +28,7 @@ You provide the list of connectors as a string, because `flexibilityServices` is
 
 ### Configuring the Connectors for Layering
 
-The connectors control the layers to which changes are written. Every connector has a default layering configuration, but you can limit this default by specifying certain layers. Example: As a result of the following string, only the SessionStorage connector is used for CUSTOMER layer content:
+The connectors control the layers to which changes are written. Every connector has a default layering configuration, but you can limit this default by specifying certain layers. Example: As a result of the following string, only the SessionStorage connector is used for CUSTOMER layer content \(see [Layering Concept](layering-concept-9e63057.md)\):
 
 `flexibilityServices ='[{"connector": "SessionStorageConnector", layers: ["CUSTOMER"]}]’`
 
@@ -141,6 +139,15 @@ Used to connect personalization within an SAPUI5 application on SAP BTP, Cloud F
 
 ### Connectors for Testing and Demo Purposes
 
+> ### Note:  
+> To apply the mocked data correctly, you need a dependency to the `sap.ui.fl` library. You can establish this through dependencies within the used libraries or via the applications manifest.
+> 
+> Alternatively, add `sap.ui.fl` to the bootstrap of the test setup:
+> 
+> ```html
+> data-sap-ui-libs = '…,sap.ui.fl'
+> ```
+
 
 <table>
 <tr>
@@ -200,6 +207,14 @@ Used to store all entries within the session storage of the browser.
 > ### Note:  
 > This is the recommended connector for testing.
 
+**Example:**
+
+If you want to verify that a user can add additional files, the configuration should look like this:
+
+```
+data-sap-ui-flexibilityServices = '[{"connector": "SessionStorageConnector"}]'
+```
+
 
 
 </td>
@@ -251,22 +266,7 @@ The mocked file contains the data as JSON with the following structure:
 
 ```
 
-> ### Note:  
-> To apply the mocked data correctly, you need a dependency to the `sap.ui.fl` library. You can establish this through dependencies within the used libraries or via the applications manifest.
-> 
-> Alternatively, add `sap.ui.fl` to the bootstrap of the test setup:
-> 
-> ```html
-> data-sap-ui-flexibilityServices = '…,sap.ui.fl'
-> ```
-
-
-
-</td>
-</tr>
-</table>
-
-**Examples:**
+**Example:**
 
 If you want to verify that a mocked back-end system provides data, the configuration should look like this:
 
@@ -274,13 +274,15 @@ If you want to verify that a mocked back-end system provides data, the configura
 data-sap-ui-flexibilityServices = '[{"connector": "ObjectPathConnector", "path": "/some/path/to/the/mocked/data.json"}]'
 ```
 
-If you want to verify that a key user can add additional files, the configuration should look like this:
 
-```
-data-sap-ui-flexibilityServices = '[{"connector": "SessionStorageConnector"}]'
-```
 
-If you want to verify both, that a mocked back-end system provides data and a key user can add additional files, the configuration should look like this:
+</td>
+</tr>
+</table>
+
+**Example:**
+
+If you want to verify both, that a mocked back-end system provides data and a user can add additional files, the configuration should look like this:
 
 ```
 data-sap-ui-flexibilityServices = '[{"connector": "ObjectPathConnector", "path": "/some/path/to/the/mocked/data.json"},{"connector": "SessionStorageConnector"}]'
@@ -290,10 +292,6 @@ data-sap-ui-flexibilityServices = '[{"connector": "ObjectPathConnector", "path":
 > There are additional connectors for internal usage or super classes which must not be used within a configuration.
 
 
-
-You can get the value of the parameter using the method `getFlexibilityServices` of class `sap.ui.core.Configuration`.
-
-For more information on how to set a configuration parameter as well as how to retrieve its current value, see [`sap.ui.core.Configuration`](https://ui5.sap.com/#/api/sap.ui.core.Configuration).
 
 **Related Information**  
 

@@ -77,10 +77,10 @@ The coding of the test page looks as follows:
 // "Label" required from module "sap/ui/commons/Label"
 // "TextField" required from module "sap/ui/commons/TextField"
 // "TextView" required from module "sap/ui/commons/TextView"
-var sLocale = sap.ui.getCore().getConfiguration().getLanguage();
+// "Localization" required from module "sap/base/i18n/Localization"
 ResourceBundle.create({
 	url : "res/i18n.properties", 
-	locale: sLocale,
+	locale: Localization.getLanguage(),
 	supportedLocales: ["", "de"],
 	fallbackLocale: ""
 }).then(function(oBundle) {

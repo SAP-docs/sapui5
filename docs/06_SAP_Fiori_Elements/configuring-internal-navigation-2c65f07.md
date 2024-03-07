@@ -88,11 +88,11 @@ A chevron indicates the navigation options. The user can navigate by clicking on
 
 The chevron navigation from a list report can also be modified using [onListNavigationExtension](https://ui5.sap.com/#/api/sap.suite.ui.generic.template.ListReport.controllerFrameworkExtensions) to navigate to deeper-hierarchy child pages of the same app. However, it is not recommended to do so. For more information on configuring navigation restrictions, refer to [Adding Actions to Tables](adding-actions-to-tables-b623e0b.md).
 
-**Show item list in a list report and parent on an object page** 
+**Showing Item List in a List Report and Parent on an Object Page** 
 
-Users can enable applications to display item lists in a list report, and parent/main object along with its child entities on an object page. This can be achieved by mapping child entity to a list report page and enabling navigation to the parent/main object.
+You can enable applications to display item lists in a list report and parent/main object along with its child entities on an object page. To do this, you need to map a child entity to a list report page and enable navigation to the parent/main object.
 
-Add the below configuration in the manifest to direct the *Create* action in a list report to the main entity:
+Add the following configuration in the manifest to direct the *Create* action in a list report to the main entity:
 
 > ### Sample Code:  
 > `manifest.json`
@@ -161,7 +161,7 @@ In the `manifest.json`, you define the "navigation" section for each "target". T
 >                 "type": "Component",
 >                 "id":  "ArtistDetail",                 
 >                 "name": "sap.fe.templates.ObjectPage",
->                "option"”: {
+>                "options": {
 >                  "setting": {
 >                   …..
 >                   …..

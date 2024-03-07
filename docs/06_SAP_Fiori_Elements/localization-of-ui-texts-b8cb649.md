@@ -949,6 +949,40 @@ Title text displayed for the create dialog if `createWithParameterDialog` is con
 </td>
 </tr>
 <tr>
+<td valign="top">
+
+`T_PAGINATOR_CONTROL_PAGINATOR_TOOLTIP_UP` 
+
+</td>
+<td valign="top">
+
+Previous Item
+
+</td>
+<td valign="top">
+
+Tooltip text that is displayed when the focus is on the previous paginator button on a subobject page.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`T_PAGINATOR_CONTROL_PAGINATOR_TOOLTIP_DOWN` 
+
+</td>
+<td valign="top">
+
+Next Item
+
+</td>
+<td valign="top">
+
+Tooltip text that is displayed when the focus is on the next paginator button on a subobject page.
+
+</td>
+</tr>
+<tr>
 <td valign="top" colspan="3">
 
 **Object Page and Sub Object Page Keys from`..>>lib>i18n`** 
@@ -1505,12 +1539,25 @@ Text displayed within the discard confirmation dialog when a user navigates away
 </td>
 <td valign="top">
 
-Perform this action ?
+Confirm this action ?
 
 </td>
 <td valign="top">
 
 Text within the confirmation dialog that comes up when a user clicks on an action that requires confirmation.
+
+The key can also be interpreted as `ACTION_CONFIRM|<EntitySetName><ActionName>`.
+
+Add the key value pair and the message text to the i18n.properties file of your application, as follows:
+
+> ### Sample Code:  
+> ```
+> #XMSG: Messagebox text for confirming an action question
+> ACTION_CONFIRM|STTA_C_MP_ProductActivation = Confirm Activation?
+> 
+> ```
+
+
 
 </td>
 </tr>
@@ -1650,17 +1697,6 @@ The URL reflects the folder path to the resource model. The model's name, `i18n|
 
 
 
-### 
-
-You can add action-specific confirmation messages for function import actions. The key to be added in `i18n`.properties must be of the following format: `ACTION_CONFIRM|<FunctionImportName>`
-
-> ### Example:  
-> \#XMSG: Messagebox text for confirming an action question
-> 
-> `ACTION_CONFIRM|STTA_C_MP_ProductActivation = Are you sure you really want to activate ?`
-
-
-
 <a name="loiob8cb649973534f08a6047692f8c6830d__section_qty_nb1_zlb"/>
 
 ## Additional Features in SAP Fiori Elements for OData V4
@@ -1710,7 +1746,7 @@ Recommendation
 </td>
 <td valign="top">
 
-Perform this action?
+Confirm this action?
 
 </td>
 <td valign="top">
@@ -2230,7 +2266,7 @@ Applications should overwrite the default text with the concrete object.
 </td>
 <td valign="top">
 
-Do you still want to delete the remaining objects?
+Delete the remaining objects?
 
 </td>
 <td valign="top">
@@ -2254,7 +2290,7 @@ Applications should overwrite the default text with the concrete objects.
 </td>
 <td valign="top">
 
-Do you still want to delete the remaining object?
+Delete the remaining objects?
 
 </td>
 <td valign="top">
@@ -2552,7 +2588,7 @@ Cancel button text on the object page.
 </td>
 <td valign="top">
 
-Object was created
+Object created
 
 </td>
 <td valign="top">
@@ -2574,7 +2610,7 @@ Applications should overwrite the default text with the concrete object.
 </td>
 <td valign="top">
 
-Object was saved
+Object saved
 
 </td>
 <td valign="top">
@@ -3150,7 +3186,7 @@ Label of the action name in the action parameter dialog.
 
 \{0\} of \{1\} \{3\} can't be edited.
 
-Do you want to edit the remaining \{2\} \{3\}?
+Edit the remaining \{2\} \{3\}?
 
 </td>
 <td valign="top">
@@ -3194,7 +3230,7 @@ Text that is shown within warning message box when some of the selected objects 
 </td>
 <td valign="top">
 
-Somebody is working on the \{0\} \(a draft exists or changes haven't been saved\).
+Another user is working on the \{0\} \(a draft exists or changes haven't been saved\).
 
 </td>
 <td valign="top">
@@ -3387,28 +3423,6 @@ Applications should overwrite the default text with the concrete object.
 <tr>
 <td valign="top">
 
-
-
-</td>
-<td valign="top">
-
-
-
-</td>
-<td valign="top">
-
-
-
-</td>
-<td valign="top">
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
 `OBJECTPAGESTATE_ERROR`
 
 \(deprecated key: `OBJECTPAGESTATE_ISSUE`\)
@@ -3580,7 +3594,7 @@ Example: `M_COMMON_TABLE_DELETE|_Items=MyCustomDeleteText`
 </td>
 <td valign="top">
 
-Direct navigation to the object details isn\\u2019t possible from this insights card.
+Direct navigation to the object details isn't possible from thisIinsights card.
 
 </td>
 <td valign="top">
@@ -3605,7 +3619,7 @@ Provide the new custom texts in this custom resource bundle with the same key as
 > ### Example:  
 > -   SAP Fiori elements default values \(resource bundle of SAP Fiori elements\):
 > 
->     `C_OPERATIONS_ACTION_CONFIRM_MESSAGE=Do you really want to perform this action?`
+>     `C_OPERATIONS_ACTION_CONFIRM_MESSAGE=Confirm this action?`
 > 
 >     `C_TRANSACTION_HELPER_OBJECT_PAGE_CONFIRM_DELETE_WITH_OBJECTTITLE_PLURAL=Delete the selected objects?`
 > 
@@ -3613,11 +3627,11 @@ Provide the new custom texts in this custom resource bundle with the same key as
 > 
 > -   Text values from `i18n/customSalesOrderLR.properties` \(custom resource bundle of the application\):
 > 
->     `C_OPERATIONS_ACTION_CONFIRM_MESSAGE|SalesOrderManage|ReturnInProcess=Can you please confirm if you really want to trigger the returns?`
+>     `C_OPERATIONS_ACTION_CONFIRM_MESSAGE|SalesOrderManage|ReturnInProcess=Confirm the returns?`
 > 
->     `C_TRANSACTION_HELPER_OBJECT_PAGE_CONFIRM_DELETE_WITH_OBJECTTITLE_PLURAL|SalesOrderManage=Do you want to delete the selected Sales Orders?`
+>     `C_TRANSACTION_HELPER_OBJECT_PAGE_CONFIRM_DELETE_WITH_OBJECTTITLE_PLURAL|SalesOrderManage=Delete the selected Sales Orders?`
 > 
->     `C_TRANSACTION_HELPER_OBJECT_PAGE_CONFIRM_DELETE_WITH_OBJECTTITLE_SINGULAR|SalesOrderManage=Do you want to delete this Sales Order?`
+>     `C_TRANSACTION_HELPER_OBJECT_PAGE_CONFIRM_DELETE_WITH_OBJECTTITLE_SINGULAR|SalesOrderManage=Delete this Sales Order?`
 > 
 >     Since the application has defined new texts for the above-mentioned resources, while triggering the confirmation action *Returns in Process*, we see the custom text: "Can you please confirm if you really want to trigger the returns?" instead of "Are you sure that you want to execute this action?" in the action parameter popup.
 
@@ -3669,7 +3683,7 @@ For resources that are shared across multiple entity sets, append the navigation
 > ### Example:  
 > `C_TRANSACTION_HELPER_OBJECT_PAGE_CONFIRM_DELETE_WITH_OBJECTTITLE_SINGULAR=Delete this object?` \(resource bundle of SAP Fiori elements\)
 > 
-> `C_TRANSACTION_HELPER_OBJECT_PAGE_CONFIRM_DELETE_WITH_OBJECTTITLE_SINGULAR|_Items=Do you want to delete this Sales Order Item?` 
+> `C_TRANSACTION_HELPER_OBJECT_PAGE_CONFIRM_DELETE_WITH_OBJECTTITLE_SINGULAR|_Items=Delete this Sales Order Item?` 
 
 For overriding actions that have parameters, some of the text in the action parameter popovers can be overridden. Confirmation actions also get a confirmation popover that has text that can be overridden. To override these texts, the action name along with the entity set name has to be provided. This is a mandatory piece of information, even if the application needs the custom text for an action that is used in only 1 entity set. If the entity set name is not appended, the resource bundle text from SAP Fiori elements is used as a fallback.
 
@@ -3677,16 +3691,16 @@ For overriding actions that have parameters, some of the text in the action para
 > To override the text with a key from a navigation entity set, you must use the navigation property name instead of the entity set name of the navigation entity. In the above example, `_Items` is the navigation property set name of the navigation entity `Items`.
 
 > ### Example:  
-> `C_OPERATIONS_ACTION_CONFIRM_MESSAGE=Are you sure that you want to execute this action?`
+> `C_OPERATIONS_ACTION_CONFIRM_MESSAGE=Confirm this action?`
 > 
 > \(resource bundle of SAP Fiori elements - this text is shown for all confirmation actions, irrespective of the action name or the entity\)
 > 
-> `C_OPERATIONS_ACTION_CONFIRM_MESSAGE|SalesOrderManage|ReturnInProcess=Can you please confirm if you really want to trigger the returns?`
+> `C_OPERATIONS_ACTION_CONFIRM_MESSAGE|SalesOrderManage|ReturnInProcess=Confirm the returns?`
 
 In the preceding example, the developer wants to show the custom message only when a user clicks the `ReturnsInProcess` action of the `SalesOrderManage` entity set. For a second action in the same entity set the last part of the key is different, since the action name is different.
 
 If the action name is the same but the entity differs, then the second part of the key name above is different and SAP Fiori elements uses the correct key based on the entity set to which the clicked action is associated.
 
 > ### Example:  
-> `C_OPERATIONS_ACTION_CONFIRM_MESSAGE|_Items|ReturnInProcess=Can you please confirm if you really want to trigger the returns for the chosen items?` 
+> `C_OPERATIONS_ACTION_CONFIRM_MESSAGE|_Items|ReturnInProcess=Confirm the returns for the selected items?` 
 

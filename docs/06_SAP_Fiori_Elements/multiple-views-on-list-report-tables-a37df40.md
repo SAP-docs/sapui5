@@ -31,6 +31,9 @@ You have the following options:
     ![](images/Multiple_Table_Mode_1be5a97.png "Multiple Table Mode")
 
 
+> ### Note:  
+> If a property used in multiple views is not listed in the `SelectionFields`, you need to remove the property in the `FilterBar`. Users should not be able to add it using the adapt filter.
+
 
 
 <a name="loioa37df408044e41ef84e67207c8658d4f__section_djj_44x_cmb"/>

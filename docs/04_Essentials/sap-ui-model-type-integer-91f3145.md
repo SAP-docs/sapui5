@@ -4,7 +4,7 @@
 
 The `Integer` data type represents an integer value.
 
-The source value for this data type, that is, the value given in the model, must be given as a number and is transformed into the type of the bound control property:
+The source value for this data type, that is, the value given in the model, must be given as a number and is transformed into the type of the bound control property as follows:
 
 -   `float`: Value is rounded using `Math.floor` 
 

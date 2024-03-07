@@ -41,5 +41,5 @@ For more information on creating app extensions, see:
 
 ## Additional Features in SAP Fiori Elements for OData V4
 
-For information about the `ExtensionAPI`, see [API Reference](https://ui5.sap.com/#/api/sap.fe.templates.ExtensionAPI).
+For information about the `ExtensionAPI`, see [API Reference](https://ui5.sap.com/#/api/sap.fe.core.ExtensionAPI).
 

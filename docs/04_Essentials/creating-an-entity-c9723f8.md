@@ -45,7 +45,10 @@ If you have called [`ODataListBinding#create`](https://ui5.sap.com/#/api/sap.ui.
             oContext.created().then(function () {
                     // sales order successfully created
                 }, function (oError) {
-                    // handle rejection of entity creation; if oError.canceled === true then the transient entity has been deleted 
+                    // handle rejection of entity creation; if oError.canceled === true then the transient entity has been deleted
+                        if (!oError.canceled) {
+                            throw oError; // unexpected error
+                        }
                 });
         },
  

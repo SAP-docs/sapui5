@@ -98,6 +98,36 @@ The following extension options are available:
 
 
 
+### Showing Custom Status Message of the Object on the Object Page Header
+
+You can display a custom status message of an object as a message strip on the object page header using the `setCustomMessage` extension API. By using the `setCustomMessage` extension in the `extensionAPI` class, you can define the custom message in `messagetext` and `messagetype`. The following example shows how to define a custom status message:
+
+> ### Sample Code:  
+> ```
+> sap.ui.define([
+> ], function () {
+>     return {
+>         onInit: function () {
+>             this.extensionAPI.attachPageDataLoaded(this.onPageDataLoaded.bind(this));
+>         },
+>         onPageDataLoaded: function(oEvent) {
+>             var quantity = oEvent.context.getObject().quantity;
+>             var oMsg = {
+>                 message: quantity == 0 ? "Product Not Available!" : "Product Available!",
+>                 type: quantity == 0 ? sap.ui.core.MessageType.Error : sap.ui.core.MessageType.Success
+>             }
+>             this.extensionAPI.setCustomMessage(oMsg);
+>         }
+>         ....
+>     }
+> });
+> 
+> ```
+
+For more information, see [Setting Up the Object Page Header](setting-up-the-object-page-header-cce93e6.md).
+
+
+
 <a name="loio61cf0ee828824903907464c80dd0d88c__section_svv_3r5_rnb"/>
 
 ## Additional Features in SAP Fiori Elements for OData V4

@@ -10,7 +10,7 @@ The `Chart` building block provides an easy way to instantiate a chart based on 
 
 ## Usage
 
-Ensure that the entity set referred for the `Chart` building block supports aggregation. For more information , see the subsection *Enabling Aggregation in the Back End* in [Configuring Charts](configuring-charts-653ed0f.md).
+Ensure that the entity set referred for the `Chart` building block supports aggregation. For more information, see the subsection *Enabling Aggregation in the Back End* in [Configuring Charts](configuring-charts-653ed0f.md).
 
 > ### Sample Code:  
 > `Chart` Building Block
@@ -37,6 +37,10 @@ Applications can do the following with the chart building block:
 -   Configure the chart title and control header visibility.
 
 -   Control the visibility of tabs within the chart personalization options.
+
+-   Get and set the presentation variants associated with the chart building block using the public APIs: `getPresentationVariant()` and `setPresentationVariant()`.
+
+-   Get and set the currently visible variant ID.
 
 
 Check out our live example in the flexible programming model explorer at [Chart Title](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/chart/chartDefault).

@@ -107,7 +107,7 @@ In the example below, the standard navigation from the list report to the object
 
 ### SAP Fiori Elements for OData V4
 
-You can define an external navigation using intent-based navigation in the `manifest.json` file. This allows end user to navigate to an external FLP-based application instead of the normal internal navigation to an object page or sub-object page. to remove the navigation option to an object page or a sub-object page. The `manifest.json` snippet below shows an example change that would be needed to navigate to an intent-based external navigation instead of the regular sub-object page navigation. The same can also be done at any sub-object level or at the object page level..
+You can define an external navigation using intent-based navigation in the `manifest.json` file. This allows end users to navigate to an external FLP-based application instead of the normal internal navigation to an object page or subobject page, to remove the navigation option to an object page or a subobject page. The `manifest.json` snippet below shows an example change that would be needed to navigate to an intent-based external navigation instead of the regular subobject page navigation. The same can also be done at any subobject level or at the object page level..
 
 > ### Sample Code:  
 > `manifest.json`
@@ -206,5 +206,5 @@ You can also use a `display` section within the `navigation` section instead of 
 > ```
 
 > ### Note:  
-> If both `display` and `detail` are given the manifest, then `display` has priority for the outbound navigation.
+> If both `display` and `detail` are given in the manifest, then `display` has priority for the outbound navigation.
 

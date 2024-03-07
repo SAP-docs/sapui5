@@ -19,7 +19,7 @@ The following artifacts are generated:
 
 ![](images/Folder_Structure_for_List_Report_and_Object_Page_c33e8a1.png "Folder Structure for List Report and Object Page")
 
-For more information on generated files, see the **Projects** section of [https://help.sap.com/docs/SAP\_FIORI\_tools/17d50220bcd848aa854c9c182d65b699/db44d45051794d778f1dd50def0fa267.html](https://help.sap.com/docs/SAP_FIORI_tools/17d50220bcd848aa854c9c182d65b699/db44d45051794d778f1dd50def0fa267.html)
+For more information on generated files, see the **Projects** section of [Generating an Application](https://help.sap.com/docs/SAP_FIORI_tools/17d50220bcd848aa854c9c182d65b699/db44d45051794d778f1dd50def0fa267.html).
 
 
 

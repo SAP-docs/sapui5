@@ -14,19 +14,15 @@ If you're creating apps in one of those development environments, SAP Fiori tool
 
 ## Generating Apps Using Templates
 
-SAP Fiori tools offers a number of templates that you can use to quickly create an SAP Fiori app. These templates are available both for SAP Fiori elements apps and SAPUI5 freestyle apps. The following templates are available:
+SAP Fiori tools offers a number of templates that you can use to quickly create an SAP Fiori app. These templates are available both for SAP Fiori elements apps and freestyle SAPUI5 apps. The following templates are available:
 
--   Basic \(SAPUI5 freestyle\)
+-   Basic \(freestyle SAPUI5\)
 
     The basic template serves as a starting point when you want to start from scratch, but also want to make sure that everything is set up properly.
 
--   Worklist \(SAP Fiori elements and SAPUI5 freestyle\)
+-   Worklist \(SAP Fiori elements\)
 
     A worklist displays a collection of items to be processed by the user and usually involves reviewing details of a list item and taking action.
-
--   List-Detail \(SAPUI5 freestyle\)
-
-    The list-detail template is a variant of the flexible column layout. It displays multiple floorplans on a single page that represent different levels of information for a selected item.
 
 -   List Report Object Page \(SAP Fiori elements\)
 

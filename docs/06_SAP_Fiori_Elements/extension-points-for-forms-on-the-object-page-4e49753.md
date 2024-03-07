@@ -268,3 +268,23 @@ You can use the UI model within the fragment to react to changes of the `editMod
 
 You can explore and work with the coding yourself. Check out our live example in the flexible programming model explorer at [Custom Form Element](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/customElements/customElementsOverview/customFormElementContent).
 
+
+
+### Custom Fields With Metadata Binding
+
+You can use metadata binding as an alternative to `i18n` approach to define the label for custom fields or custom form elements.
+
+> ### Sample Code:  
+> manifest.json
+> 
+> ```
+> "customFormElementAnchor3": {
+>     "template": "ObjectPageStructure.ext.CustomField",
+>   "label": "{metaModel>/SalesOrderManage/SoldToParty@com.sap.vocabularies.Common.v1.Label}",
+>   "position": {
+>     "placement": "After",
+>     "anchor": "customFormElementAnchor"
+>   }
+> }
+> ```
+

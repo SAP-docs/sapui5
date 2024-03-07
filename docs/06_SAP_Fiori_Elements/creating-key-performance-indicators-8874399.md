@@ -8,7 +8,7 @@ The key performance indicator \(KPI\) tag is an abbreviated and clickable title 
 
 In SAP Fiori elements, you can create KPI tags using annotations in an analytical service. For more information, see [Creating Key Performance Indicator Tags](creating-key-performance-indicator-tags-d80a360.md).
 
-In SAP Fiori elements for OData V4, you can also create KPI tags in a non-analytical service using manifest-based configuration. To create the tags, add a `keyPerformanceIndicators` section to the `manifest.json` file, define the name of the KPI and add the fragment with the KPI definition.
+In SAP Fiori elements for OData V4, you can also create KPI tags that do not require an analytical service using manifest-based configuration. To create the tags, add a `keyPerformanceIndicators` section to the `manifest.json` file, define the name of the KPI and add the fragment with the KPI definition.
 
 > ### Sample Code:  
 > `manifest.json`

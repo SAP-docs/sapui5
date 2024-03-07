@@ -9,9 +9,9 @@ In apps that use draft handling, you can enable the inline creation mode or empt
 
 The behavior of the available modes is as follows:
 
--   **Inline Creation Mode**: In create or edit mode, users can choose *Create Entry* to add new entries to a section in a table. By default, a new entry is created and the system automatically navigates to the item's object page.
+-   **Inline Creation Mode**: When adding new entries to a table section, a new line is created and the fields can be modified inline without triggering automatic navigation to the item's object page. When a new entry is created, the line is highlighted in blue. This highlight disappears once the data is saved.
 
-    App developers can enable inline creation of entries. In this mode, a new line is created and the fields can be modified inline but automatic navigation isn't triggered. When a new entry is created, the line is highlighted in blue. This highlight disappears once the data is saved.
+    By default, a new entry is created and the system automatically navigates to the item's object page.
 
 -   **Empty Row Mode**: In create or edit mode, one new empty row is added to the table. In a responsive table, the empty row is added at the top. In a grid table, the empty row is added at the bottom. There is no corresponding entry in the draft table for the empty row. When you begin to add data to a field in an existing empty row, a new empty row is automatically added.
 
@@ -28,27 +28,97 @@ The behavior of the available modes is as follows:
     -   In a grid table, the *Create* button is visible. When you select *Create* in the grid table toolbar, the table scrolls to the bottom of the table to display the empty row and automatically sets the focus on the first editable field of the empty row.
 
 
+    > ### Note:  
+    > You can see the newly created record at the top of the table. If a user repeatedly clicks the *Create* button, the "latest new" record is moved to the top of the new records.
 
-The empty row mode also supports required fields. These fields are declared using `Capabilities.InsertRestrictions.RequiredProperties`.
+    **Support of Required Fields**
 
-> ### Sample Code:  
-> XML Annotation
-> 
-> ```xml
-> <Annotations Target="com.c_salesordermanage_sd.SalesOrderManage/_Item">
->     <Annotation Term="Capabilities.InsertRestrictions">
->         <Record Type="Capabilities.InsertRestrictionsType">
->             <PropertyValue Property="RequiredProperties">
->                 <Collection>
->                     <PropertyPath>RequestedQuantity</PropertyPath>
->                     <PropertyPath>Material</PropertyPath>
->                 </Collection>
->             </PropertyValue>
->         </Record>
->     </Annotation>
-> </Annotations>
-> 
-> ```
+    The empty row mode also supports required fields. These fields are declared using `Capabilities.InsertRestrictions.RequiredProperties`.
+
+    > ### Sample Code:  
+    > XML Annotation
+    > 
+    > ```xml
+    > <Annotations Target="com.c_salesordermanage_sd.SalesOrderManage/_Item">
+    >     <Annotation Term="Capabilities.InsertRestrictions">
+    >         <Record Type="Capabilities.InsertRestrictionsType">
+    >             <PropertyValue Property="RequiredProperties">
+    >                 <Collection>
+    >                     <PropertyPath>RequestedQuantity</PropertyPath>
+    >                     <PropertyPath>Material</PropertyPath>
+    >                 </Collection>
+    >             </PropertyValue>
+    >         </Record>
+    >     </Annotation>
+    > </Annotations>
+    > 
+    > ```
+
+    **Support of Default Values**
+
+    If you want to set default values for an empty row, use a `DefaultValuesFunction`.
+
+    > ### Sample Code:  
+    > `DefaultValuesFunction` for create entity
+    > 
+    > ```
+    > <FunctionImport Name="GetDefaultsForRoot" ReturnType="cds_zrc_dv_defaultvalues.ZRC_DV_A_Create" m:HttpMethod="GET"/> 
+    >  
+    > <Annotations xmlns=http://docs.oasis-open.org/odata/ns/edm Target="cds_zrc_dv_defaultvalues.cds_zrc_dv_defaultvalues_Entities/Root">
+    > <Annotation Term="com.sap.vocabularies.Common.v1.DefaultValuesFunction" String="GetDefaultsForRoot"/>
+    > </Annotations>
+    > 
+    > ```
+
+    For more information, see [Prefilling Fields When Creating a New Entity](prefilling-fields-when-creating-a-new-entity-11ff444.md) and [Prefilling Fields When Creating a New Entity Using an Extension Point](prefilling-fields-when-creating-a-new-entity-using-an-extension-point-189e2d8.md).
+
+    > ### Sample Code:  
+    > `DefaultValuesFunction` for navigation property/item create
+    > 
+    > ```
+    > <FunctionImport Name="GetDefaultsForItem" ReturnType="cds_zrc_dv_defaultvalues.ZRC_DV_A_Create" m:HttpMethod="GET" sap:action-for="cds_zrc_dv_defaultvalues.RootType">
+    > <Parameter Name="UUID" Type="Edm.Guid" Mode="In"/>
+    > </FunctionImport>
+    >  
+    > <Annotations xmlns=http://docs.oasis-open.org/odata/ns/edm Target="cds_zrc_dv_defaultvalues.RootType/to_Item">
+    > <Annotation Term="com.sap.vocabularies.Common.v1.DefaultValuesFunction" String="GetDefaultsForItem"/>
+    > </Annotations>
+    > 
+    > ```
+
+    **Recalculating Default Values**
+
+    If you're using a property that influences the result of the `DefaultValuesFunction`, you must annotate a side effect for each table that uses the `DefaultValuesFunction`. Doing so ensures that the existing empty row always gets the new calculated value. In the side effects, use the navigation property that represents the table as the target entity.
+
+    > ### Sample Code:  
+    > ```
+    > SideEffects #TableIsRefreshed: {
+    >       SourceProperties: [CustomerNumber],
+    >       TargetEntities  : [_Item]
+    >   }
+    > 
+    > ```
+
+    > ### Sample Code:  
+    > XML Annotation
+    > 
+    > ```xml
+    > <Annotation Term="Common.SideEffects" Qualifier=" TableIsRefreshed ">
+    >      <Record Type="Common.SideEffectsType">
+    >           <PropertyValue Property="SourceProperties">
+    >           <Collection>
+    >           <PropertyPath>CustomerNumber</PropertyPath>
+    >           </Collection>
+    >           </PropertyValue>
+    >           <PropertyValue Property="TargetEntities">
+    >           <Collection>
+    >           <NavigationPropertyPath>_Item</NavigationPropertyPath>
+    >           </Collection>
+    >      </Record>
+    > </Annotation>
+    > 
+    > ```
+
 
 > ### Note:  
 > -   You can make the object page tables insertable or not insertable using the `InsertRestrictions` annotation. For more information, see [Adding Actions to Tables](adding-actions-to-tables-b623e0b.md).
@@ -174,9 +244,9 @@ A section ID defined in the annotation must match the section ID defined in the 
 
 ### Changing the Default Sort Order for New Inline Rows
 
-By default, the table rows of the object page are sorted according to the sorting order defined in back end. End users can define own sorting order using the table personalization settings. Application developers can also modify the sort order using API extensions. For more information about the API extension, see [API Reference](https://ui5.sap.com/#/api/sap.suite.ui.generic.template.ObjectPage.controllerFrameworkExtensions%23methods/Summary)..
+By default, the table rows of the object page are sorted according to the sort order defined in the back end. End users can define their own sort order using the table personalization settings. You can also modify the sort order using API extensions. For more information about the API extension, see [API Reference](https://ui5.sap.com/#/api/sap.suite.ui.generic.template.ObjectPage.controllerFrameworkExtensions%23methods/Summary).
 
-In the edit mode, the newly created inline rows are placed at the top of the table, by default, irrespective of the existing sorting order defined for the table. This default sort order allows easy access for the end users to the new inline row. Application developers can turn off this feature by setting `disableDefaultInlineCreateSort` to `true` in the `manifest.json` file as shown in the following sample code. Once turned off, the new inline rows are sorted according to the sorting order applied on the table.
+In edit mode, the newly created inline rows are placed at the top of the table by default, irrespective of the existing sort order defined for the table. This default sort order allows easy access to the new inline row for the end users. You can turn off this feature by setting `disableDefaultInlineCreateSort` to `true` in the `manifest.json` file as shown in the following sample code:
 
 > ### Sample Code:  
 > ```
@@ -200,20 +270,19 @@ In the edit mode, the newly created inline rows are placed at the top of the tab
 >                                     }
 >                                 }
 >                             }
->                         },
-> 
+>                         }
+>                    }
 > ```
 
-This flag is evaluated only if the `"createMode":"inline"` flag is available in the `manifest.json` file.
+Once the `disableDefaultInlineCreateSort` setting is turned off, the new inline rows are sorted according to the sort order applied on the table.
 
-> ### Note:  
-> You can see the newly created record at the top of the table. If a user repeatedly clicks the *Create* button, the "latest new" record is moved to the top of the new records.
+The `disableDefaultInlineCreateSort` setting is evaluated only if the `"createMode":"inline"` flag is available in the `manifest.json` file.
 
 
 
 ### Behavior of Rows in Empty Row Mode
 
-If you shift your focus away from the input field of a row, then the current row is converted to draft after an interval of 20 seconds. This behavior is similar to the behavior of generic draft handling .For more information, see [Draft Handling](draft-handling-ed9aa41.md).
+If you shift your focus away from the input field of a row, then the current row is converted to draft after an interval of 20 seconds. This behavior is similar to the behavior of generic draft handling.For more information, see [Draft Handling](draft-handling-ed9aa41.md).
 
 The current row is converted to draft immediately only if a structural side effect is defined on the corresponding table.
 

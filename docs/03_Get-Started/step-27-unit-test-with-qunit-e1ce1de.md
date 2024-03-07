@@ -29,7 +29,7 @@ You can view and download all files at [Walkthrough - Step 27](https://ui5.sap.c
   
 **Folder Structure for this Step**
 
-![](images/SAPUI5_Walkthrough_Step_28_2_1b5613a.png "Folder Structure for this Step")
+![The graphic has an explanatory text.](images/SAPUI5_Walkthrough_Step_28_2_1b5613a.png "Folder Structure for this Step")
 
 We add a new folder `unit` under the `test` folder and a `model` subfolder where we will place our formatter unit test. The folder structure matches the app structure to easily find the corresponding unit tests.
 

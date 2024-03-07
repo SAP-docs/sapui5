@@ -355,8 +355,6 @@ You can use one of the following two approaches:
 > ### Restriction:  
 > -   Parameter support is currently only available for read-only services. For editable services, parameter support is currently unavailable because of back-end restrictions.
 > 
-> -   Charts and analytical tables currently don't support parameterized entities.
-> 
 > -   Parameter values aren't passed when an external navigation is triggered.
 > 
 > -   Parameters aren't supported if multiple view mode is used – unless single-table mode is used, where the data from all views comes from the same table that is part of the main entity set.

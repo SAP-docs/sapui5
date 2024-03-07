@@ -4,9 +4,9 @@
 
 Overview of the replacement of global functions with the factory functions
 
-The AMD module syntax already avoids Globals and enforces the strict dependency declaration. The following table shows how APIs which use synchronous requests to fetch modules or resources internally, can be replaced with asynchronous alternatives. The W3C has already deprecated the use of synchronous requests in the browser main thread, so this replacement prepares your applications for the removal of synchronous requests.
+The AMD module syntax already avoids Globals and enforces the strict dependency declaration. The following table shows how APIs which use synchronous requests to fetch modules or resources internally, can be replaced with asynchronous alternatives. The WHATWG has already deprecated the use of synchronous requests in the browser main thread, so this replacement prepares your applications for the removal of synchronous requests.
 
-The SAPUI5 framework by default uses synchronous requests internally in several places. Most have already been replaced by asynchronous alternatives, or prepared to exchange the synchronous behaviour shown below. The asynchronous adoption starts from the beginning with the bootstrap script tag, where the `async` configuration parameter should be set to `true`. Applications can register an event callback via [`sap.ui.getCore()#attachInit`](https://ui5.sap.com/#/api/sap.ui.core.Core/methods/attachInit). . The examples below show only the most frequently used synchronous APIs. There are more of these APIs, and most often the asynchronous alternatives return a `Promise` that can be used to retrieve the former return value.
+The SAPUI5 framework by default uses synchronous requests internally in several places. Most have already been replaced by asynchronous alternatives, or prepared to exchange the synchronous behaviour shown below. The asynchronous adoption starts from the beginning with the bootstrap script tag, where the `async` configuration parameter should be set to `true`. The examples below show only the most frequently used synchronous APIs. There are more of these APIs, and most often the asynchronous alternatives return a `Promise` that can be used to retrieve the former return value.
 
 
 <table>
@@ -25,7 +25,7 @@ Modern API
 <tr>
 <td valign="top" colspan="2">
 
-Declarative App Description
+Components
 
 </td>
 </tr>
@@ -33,56 +33,9 @@ Declarative App Description
 <td valign="top">
 
 ```
-
-sap.ui.component({
-
-    name: "my.comp"
-
-});
-
-```
-
-
-
-</td>
-<td valign="top">
-
-```
-
-sap.ui.require(['sap/ui/core/Component'], function(Component){
-
-    Component.create({
-
-        name: "my.comp"
-
-        // default: manifest: true
-
-    }).then(function(oComp) { ... });
-});
-```
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top" colspan="2">
-
-Components - Some API still experimental
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-```
-
 var oComponentInstance = sap.ui.component({
-
     name: "my.comp"
-
 });
-
 ```
 
 
@@ -91,31 +44,21 @@ var oComponentInstance = sap.ui.component({
 <td valign="top">
 
 ```
-
-sap.ui.require(['sap/ui/core/Component'], function(Component){
-
+sap.ui.require(["sap/ui/core/Component"], (Component)=> {
     Component.create({
-
         name: "my.comp"
-
-    }).then(function(oComp) { ... });
+    }).then((oComp) => {/*...*/});
 });
 ```
 
 Alternatively, migrate to `componentUsages` with an additional adaption in the `manifest.json` file:
 
 ```
-
 createContent: function() {
-
    var oReuseComponentPromise = this.createComponent({
-
-    "usage": "reuse"
-
-  }).then(function(oComp) { ... });
-
+      "usage": "reuse"
+  }).then((oComp) => {/*...*/});
 }
-
 ```
 
 
@@ -126,13 +69,9 @@ createContent: function() {
 <td valign="top">
 
 ```
-
 var oComponentClass = sap.ui.component.load({
-
     name: "my.comp"
-
 });
-
 ```
 
 
@@ -141,21 +80,13 @@ var oComponentClass = sap.ui.component.load({
 <td valign="top">
 
 ```
-
-sap.ui.require(['sap/ui/core/Component'], function(Component){
-
+sap.ui.require(["sap/ui/core/Component"], (Component) => {
     Component.load({
-
         name: "my.comp"
-
-    }).then(function(oClass) {
-
-        var oComponentInstance = new oClass({...});
-
+    }).then((oClass) => {
+        var oComponentInstance = new oClass({/*...*/});
     });
-
 });
-
 ```
 
 
@@ -175,15 +106,9 @@ var oComponentInstance = sap.ui.component("my-comp-id");
 <td valign="top">
 
 ```
-
-sap.ui.require(['sap/ui/core/Component'], function(Component){
-
- 
-
+sap.ui.require(["sap/ui/core/Component"], (Component) => {
     var oComponentInstance = Component.get("my-comp-id");
-
 });
-
 ```
 
 
@@ -201,13 +126,9 @@ i18n texts
 <td valign="top">
 
 ```
-
 jQuery.sap.resources({
-
     url: "mybundle.properties"
-
 });
-
 ```
 
 
@@ -216,17 +137,13 @@ jQuery.sap.resources({
 <td valign="top">
 
 ```
-
 // sap/ui/Resources -> sap/base/i18n/ResourceBundle
 
-sap.ui.require(['sap/base/i18n/ResourceBundle'], function(Resource){
-
+sap.ui.require(["sap/base/i18n/ResourceBundle"], (Resource) => {
     ResourceBundle.create({
-
         url: "mybundle.properties",
 	   async: true
-
-    }).then(function(oResource) { ... });
+    }).then((oResource) => {/*...*/});
 });
 ```
 
@@ -245,15 +162,10 @@ Views
 <td valign="top">
 
 ```
-
 var oView = sap.ui.view({
-
     viewName: "my.View",
-
     type: "XML"
-
 });
-
 ```
 
 
@@ -262,16 +174,11 @@ var oView = sap.ui.view({
 <td valign="top">
 
 ```
-
-sap.ui.require(['sap/ui/core/mvc/View'], function(View){
-
+sap.ui.require(["sap/ui/core/mvc/View"], (View) => {
     View.create({ 
-
         viewName: "my.View",
-
         type: "XML"
-
-    }).then(function(oView) { ... });
+    }).then((oView) => {/*...*/});
 });
 ```
 
@@ -283,13 +190,9 @@ sap.ui.require(['sap/ui/core/mvc/View'], function(View){
 <td valign="top">
 
 ```
-
 var oView = sap.ui.xmlview({
-
     viewName: "my.View"
-
 });
-
 ```
 
 
@@ -298,14 +201,10 @@ var oView = sap.ui.xmlview({
 <td valign="top">
 
 ```
-
-sap.ui.require(['sap/ui/core/mvc/XMLView'], function(XMLView){
-
+sap.ui.require(["sap/ui/core/mvc/XMLView"], (XMLView) => {
     XMLView.create({ 
-
         viewName: "my.View"
-
-    }).then(function(oView) { ... });
+    }).then((oView) => {/*...*/});
 });
 ```
 
@@ -317,13 +216,9 @@ sap.ui.require(['sap/ui/core/mvc/XMLView'], function(XMLView){
 <td valign="top">
 
 ```
-
-var oView = sap.ui.jsview({
-								
-    viewName: "my.View"
-								
+var oView = sap.ui.jsview({							
+    viewName: "my.View"						
 });
-
 ```
 
 
@@ -331,12 +226,10 @@ var oView = sap.ui.jsview({
 </td>
 <td valign="top">
 
-For defining views, use `View.extend`. For loading and creating a view instance, use `View.create`.
+For defining views, use `View.extend`. For loading and creating a view instance, use `View.create`. Refer also to the dedicated [Typed View](typed-view-e6bb33d.md) documentation and the [code sample](https://ui5.sap.com/#/entity/sap.ui.core.mvc.View/sample/sap.ui.core.sample.View.navigationTypedView).
 
 ```
-
-sap.ui.define(['sap/ui/core/mvc/View', 'sap/m/Panel'], function(View, Panel){
-								
+sap.ui.define(["sap/ui/core/mvc/View", "sap/m/Panel"], function(View, Panel){					
     return View.extend("my.View", {
 
 		// define, which controller to use
@@ -350,27 +243,21 @@ sap.ui.define(['sap/ui/core/mvc/View', 'sap/m/Panel'], function(View, Panel){
 		},
 
 		// create view content and return the root control(s)
-		createContent: function() {
-			return new Promise(function(res, rej) {
-				res(new Panel({...}));
-			}).catch(function(oError) {
-				throw oError;
+		createContent: async function() {
+			const someControl = await somethingAsync();
+			return new Panel({
+				content: [someControl, /*...*/]
 			});
-    	}
-								
+    	}						
     });
 });
-
 ```
 
 ```
-sap.ui.require(['sap/ui/core/mvc/View'], function(View){
-								
-    View.create({ 
-						
-        viewName: "my.View"
-								
-    }).then(function(oView) { ... });
+sap.ui.require(["sap/ui/core/mvc/View"], (View) => {
+    View.create({ 		
+        viewName: "module:my/View"			
+    }).then((oView) => {/*...*/});
 });
 ```
 
@@ -389,7 +276,7 @@ Controllers
 <td valign="top">
 
 ```
-var oController = sap.ui.controller({ ... });
+var oController = sap.ui.controller({/*...*/});
 ```
 
 
@@ -397,15 +284,25 @@ var oController = sap.ui.controller({ ... });
 </td>
 <td valign="top">
 
+To define an `sap/ui/core/mvc/Controller` subclass, you can simply extend it:
+
+```
+sap.ui.require(["sap/ui/core/mvc/Controller"], (Controller) => {
+    return Controller.extend("my.sample.ControllerClass", {
+
+        /* lifecycle hooks, controller methods etc. */
+        onInit: function() {/*...*/}
+    });
+});
 ```
 
-sap.ui.require(['sap/ui/core/mvc/Controller'], function(Controller){
+To manually instantiate a Controller class, you can use the `Controller.create()` factory function:
 
+```
+sap.ui.require(["sap/ui/core/mvc/Controller"], (Controller) => {
     Controller.create({ 
-
-        ...
-
-    }).then(function(oController) { ... });
+        // ...
+    }).then((oController) => {/*...*/});
 });
 ```
 
@@ -424,7 +321,7 @@ Extension Points
 <td valign="top">
 
 ```
-var aControls = sap.ui.extensionpoint( ... );
+var aControls = sap.ui.extensionpoint(/*...*/);
 ```
 
 
@@ -433,14 +330,10 @@ var aControls = sap.ui.extensionpoint( ... );
 <td valign="top">
 
 ```
-
-sap.ui.require(['sap/ui/core/ExtensionPoint'], function(ExtensionPoint){
-
+sap.ui.require(["sap/ui/core/ExtensionPoint"], (ExtensionPoint) => {
     ExtensionPoint.load({ 
-
-        ...
-
-    }).then(function(aControls) { ... });
+        // ...
+    }).then((aControls) => {/*...*/});
 });
 ```
 
@@ -459,15 +352,25 @@ Fragments
 <td valign="top">
 
 ```
-
+// generic factory function
 var aControls = sap.ui.fragment({ 
-
     name: "my.fragment",
-
     type: "XML"
-
 });
+```
 
+```
+// JS fragments
+var aControls = sap.ui.jsfragment({ 
+    name: "my.fragment"
+});
+```
+
+```
+// XML Fragments
+var aControls = sap.ui.xmlfragment({ 
+    name: "my.fragment"
+});
 ```
 
 
@@ -475,20 +378,21 @@ var aControls = sap.ui.fragment({
 </td>
 <td valign="top">
 
-If you're instantiating your fragment in a controller which extends `sap.ui.core.mvc.Controller`, you can use the `loadFragment` function:
+If you're instantiating your fragment inside a controller which extends `sap.ui.core.mvc.Controller`, you can use the `loadFragment` function:
 
 ```
-
-sap.ui.define(['sap/ui/core/mvc/Controller'], function(Controller){
-
+sap.ui.define(["sap/ui/core/mvc/Controller"], (Controller) => {
     return Controller.extend("my.MyController", {
 
-        onInit: function(){
+        onInit: function() {
+            // Beware: The controller's "onInit" lifecycle hook is NOT an async function;
+            //         returning a Promise is not supported by the framework.
+            //         Any asynchronous behavior must be handled manually.
             this.loadFragment({
-                name: "my.fragment"
-            }).then(function(aControls) { ... });
+                name: "my.fragment",
+                type: "XML" // or type: "JS"
+            }).then((oControl) => {/*...*/});
         }
-        
     });
 });
 ```
@@ -496,23 +400,28 @@ sap.ui.define(['sap/ui/core/mvc/Controller'], function(Controller){
 If you're instantiating your fragment outside a controller, you can use the static `Fragment.load` function:
 
 ```
+sap.ui.require([
+    "sap/ui/core/Component", 
+    "sap/ui/core/Fragment"
+    ], (Component, Fragment) => {
+    // ...
 
-sap.ui.require(['sap/ui/core/Fragment'], function(Fragment){
+    // "oPage" is an exemplary sap.m.Page control
+    const oComponent = Component.getOwnerComponentFor(oPage);
 
-    Fragment.load({
-
-        name: "my.fragment",
-
-        type: "XML"
-
-    }).then(function(aControls) { ... });
+    oComponent.runAsOwner(function() {
+        Fragment.load({
+            name: "my.fragment",
+            type: "XML" // or type: "JS"
+        }).then((oControl) => {/*...*/});
+    });
 });
 ```
 
 > ### Caution:  
-> Please make sure that you are correctly chaining to the `loadFragment` or `Fragment.load` Promise!
+> -   Make sure you assign the correct owner component by running the `runAsOwner()` call on the Component instance. See [The Owner Component](the-owner-component-a7a3138.md) for more information.
 > 
-> Calling `sap.ui.getCore().byId("...")` or `oController.byId("...")` will result in `undefined` if called before the `loadFragment` or `Fragment.load` Promise is resolved.
+> -   Make sure that you are correctly chaining to the `loadFragment` or `Fragment.load` Promise! Calling `oController.byId("...")` will result in `undefined` if called before the`loadFragment` or `Fragment.load` Promise is resolved.
 
 
 
@@ -538,14 +447,10 @@ var oVersionInfo = sap.ui.getVersionInfo();
 <td valign="top">
 
 ```
-
-sap.ui.require(['sap/ui/core/VersionInfo'], function(VersionInfo){
-
+sap.ui.require(["sap/ui/core/VersionInfo"], (VersionInfo) => {
     VersionInfo.load({ 
-
-        ...
-
-    }).then(function(oVersionInfo) { ... });
+        // ...
+    }).then((oVersionInfo) => {/*...*/});
 });
 ```
 

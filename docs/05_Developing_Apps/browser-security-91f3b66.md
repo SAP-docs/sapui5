@@ -16,7 +16,7 @@ Browsers also offer possible attack vectors, such as Cross-Site-Scripting \(XSS\
 
 Cross-Site-Scripting has become the most prominent security issue of web applications within the last years and also the most dangerous one, as it allows several ways of exploitation. Once malicious code is running within your browser, it can be used to steal your session cookies, to trigger requests within the current session, or even to exploit a known browser vulnerability to do native code execution.
 
-For SAPUI5 applications, XSS vulnerabilities can exist on different levels:
+For SAPUI5 applications, XSS vulnerabilities can exist on the following different levels:
 
 -   Within the HTML page or custom data transports sent to the browser from the server
 

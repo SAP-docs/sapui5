@@ -10,9 +10,11 @@ This control is intended to help application developers include simple 3D visual
 
 ## API Reference / Sample
 
--   [`sap.ui.vk.Viewer`](https://ui5.sap.com/#/api/sap.ui.vk.Viewer) in the *API Reference* in the Demo Kit
--   [3D Viewer - Step 1 - 3D Viewer With Single File Loading](https://ui5.sap.com/#/entity/sap.ui.vk.tutorial.VIT/sample/sap.ui.vk.tutorial.VIT.01) in the Demo Kit
--   [3D Viewer - Step 2 - 3D Viewer With Multiple File Loading](https://ui5.sap.com/#/entity/sap.ui.vk.tutorial.VIT/sample/sap.ui.vk.tutorial.VIT.02) in the Demo Kit
+Here's where you can find the Viewer control in the Demo Kit:
+
+-   [`sap.ui.vk.Viewer`](https://ui5.sap.com/#/api/sap.ui.vk.Viewer)
+-   [3D Viewer - Step 1 - 3D Viewer With Single File Loading](https://ui5.sap.com/#/entity/sap.ui.vk.tutorial.VIT/sample/sap.ui.vk.tutorial.VIT.01)
+-   [3D Viewer - Step 2 - 3D Viewer With Multiple File Loading](https://ui5.sap.com/#/entity/sap.ui.vk.tutorial.VIT/sample/sap.ui.vk.tutorial.VIT.02)
 
 
 
@@ -26,7 +28,7 @@ Most applications require the simplest possible visualisation capability, which 
 
 ## Prerequisites
 
--   You must be able to create or obtain files in the SAP VDS \(`.vds`\) format to be able to display them in the Viewer.
+You must be able to create or obtain files in the SAP VDS \(`.vds`\) format to be able to display them in the Viewer.
 
 
 
@@ -62,13 +64,15 @@ If the Toolbar feature is enabled, 'disabling' the Scene Tree or View Gallery fe
 
 ## Constraints
 
+The following restrictions apply:
+
 -   The Viewer control is only capable of loading the SAP VDS file \(`.vds`\) format and limited image formats supported by browsers.
 -   The Viewer control is designed for simple consumption scenarios. If an application demands more control of the elements in the Viewer or extended functionality, then the developer may need to compose their own 'Viewer' from the various Visual Interaction toolkit controls.
 
+**Related Information**  
 
 
-## Related Information
+[Step 1: 3D Viewer With Single File Loading](../03_Get-Started/step-1-3d-viewer-with-single-file-loading-0e21912.md "In this step, you will be creating a 3D Viewer application that allows a user to load a single 2D image or 3D model that is stored locally or remotely.")
 
--   [Step 1: 3D Viewer With Single File Loading](../03_Get-Started/step-1-3d-viewer-with-single-file-loading-0e21912.md)
--   [Step 2: 3D Viewer With Multiple File Loading](../03_Get-Started/step-2-3d-viewer-with-multiple-file-loading-80b0b57.md)
+[Step 2: 3D Viewer With Multiple File Loading](../03_Get-Started/step-2-3d-viewer-with-multiple-file-loading-80b0b57.md "In this step, you will be creating a Viewer application that allows a user to load multiple 3D resources stored locally.")
 

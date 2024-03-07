@@ -19,7 +19,7 @@ SAPUI5 then requires \(loads\) the plugin `sap.ui.core.plugin.DeclarativeSupport
 <script id="sap-ui-bootstrap"
   type="text/javascript"
   src="resources/sap-ui-core.js"
-  data-sap-ui-theme="sap_belize"
+  data-sap-ui-theme="sap_horizon"
   data-sap-ui-libs="sap.m"
   data-sap-ui-modules="sap.ui.core.plugin.DeclarativeSupport"
   >

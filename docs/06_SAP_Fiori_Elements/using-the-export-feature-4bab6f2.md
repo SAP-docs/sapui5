@@ -5,7 +5,7 @@
 You can export a table into a spreadsheet or to PDF.
 
 > ### Note:  
-> This topic is only applicable to SAP Fiori elements for OData V4. For more information on the export option in V2, see [Adapting the UI: List Report and Object Page](adapting-the-ui-list-report-and-object-page-0d2f1a9.md).
+> This topic is only applicable to SAP Fiori elements for OData V4. For more information about the export option in SAP Fiori elements for OData V2, see [Adapting the UI: List Report and Object Page](adapting-the-ui-list-report-and-object-page-0d2f1a9.md).
 
 
 
@@ -13,15 +13,15 @@ You can export a table into a spreadsheet or to PDF.
 
 ## Export to Spreadsheet
 
-By default, export is enabled in the list report and on the object page. When enabled, the *Export* button is displayed in the table toolbar. When selected, it exports the values in the table .
-
-On the object page, the paste feature is also available by default. For more details, see [Copying and Pasting from Spreadsheet Applications to Tables](copying-and-pasting-from-spreadsheet-applications-to-tables-f6a8fd2.md).
+By default, the export feature is enabled in the list report and on the object page. When the feature is enabled, the *Export* button is displayed in the table toolbar. When selected, it exports the values in the table.
 
 ![](images/Object_Page_Export_to_Excel_2559ec3.png)
 
-To disable the feature in the list report and enable it in the object page, use the `enableExport` property of the manifest of the application and set it to false/true. In the `controlConfiguration` section of the page, annotate the `LineItem` on which the export should be disabled/enabled as shown in the code sample below:
+To disable the feature in the list report and enable it in the object page, use the `enableExport` property of the manifest of the application and set it to `false` or `true`. In the `controlConfiguration` section of the page, annotate the `LineItem` on which the export should be disabled or enabled, as shown in the following code sample:
 
 > ### Sample Code:  
+> `manifest.json`
+> 
 > ```
 > "SalesOrderManageList": {
 >    "type": "Component",
@@ -93,12 +93,14 @@ Clicking the drop-down arrow opens a menu with two additional options:
 ![](images/Object_Page_Options_for_Export_to_Excel_8bd12db.png)
 
 > ### Note:  
-> You can export the custom columns you have defined via manifest settings. To allow the export of your custom column, you must maintain the `"properties"` array in the definition of the custom column. For more information about how to define custom columns, see the section Sorting and Filtering in the topic [Extension Points for Tables](extension-points-for-tables-d525522.md). The properties will be exported into the spreadsheet as described for a `FieldGroup`.
+> -   You can export the custom columns you have defined using manifest settings. To allow the export of your custom column, you must maintain the `"properties"` array in the definition of the custom column. For more information about defining custom columns, see the *Extension Points for Tables* section in [Extension Points for Tables](extension-points-for-tables-d525522.md).. The properties will be exported into the spreadsheet as described for a `FieldGroup`.
+> 
+> -   If your domain model contains sensitive data \(data annotated as `PersonalData.IsPotentiallySensitive`\), enabling the export to a spreadsheet could lead to exposing this data, as the end user cannot choose where the data will be stored. You can disable the export feature using the `enableExport` property in the manifest. This ensures that access control is enforced and stays within the application.
 
 > ### Restriction:  
 > -   The columns containing a multi-input field \(1:N\), `DataFieldForAnnotation` that points to `Charts` or a `DataFieldForAction`, are exported without any content.
 > 
-> -   Columns containing a property with a dynamic `UI.Hidden` expression are still exported
+> -   Columns containing a property with a dynamic `UI.Hidden` expression are still exported.
 > 
 > -   The numbers exceeding 15 digits are rounded in the spreadsheet file \(this is a JavaScript restriction\).
 
@@ -118,4 +120,7 @@ To enable the export to PDF, you must configure the following annotations at ser
 
     For more information, see [https://github.com/SAP/odata-vocabularies/blob/main/vocabularies/PDF.md](https://github.com/SAP/odata-vocabularies/blob/main/vocabularies/PDF.md).
 
+
+> ### Restriction:  
+> Export to PDF is not supported for tables containing a column with a multi-input field \(1:N\). Attempting to export the table may lead to a back-end error.
 

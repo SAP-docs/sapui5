@@ -4,7 +4,7 @@
 
 You can use table personalization to modify the settings of a table.
 
-Application developers can control the table personalization options that end users see.
+You can control the table personalization options that end users see.
 
 
 
@@ -12,7 +12,7 @@ Application developers can control the table personalization options that end us
 
 ## Filter Option
 
-By default, filtering is:
+The default settings for filtering are as follows:
 
 -   Disabled in the page-level variant
 
@@ -20,7 +20,7 @@ By default, filtering is:
 
 
 > ### Note:  
-> The filter option is available via table personalization settings for responsive tables. For other table types, the filter option, when enabled, is also available after selecting the column header in addition to the personalization settings.
+> The filter option is available in the table personalization settings for responsive tables. For other table types, the filter option, when enabled, is also available after selecting the column header in addition to the personalization settings.
 
 
 
@@ -35,10 +35,12 @@ By default, filtering is:
 In harmonized variant management, by default, you cannot set a filter in the table personalization settings. To enable filtering, set the `enableTableFilterInPageVariant` property in the manifest. If `smartVariantManagement` is set to `false`, then table filter is enabled by default.
 
 > ### Sample Code:  
+> `manifest.json`
+> 
 > ```
 > 
 > "sap.ui.generic.app": {
->         "_version": "1.3.0",
+>     "_version": "1.3.0",
 >         "settings": {
 >         "forceGlobalRefresh": true
 >         },
@@ -53,7 +55,6 @@ In harmonized variant management, by default, you cannot set a filter in the tab
 >                         "enableTableFilterInPageVariant": true
 >                     }
 >                 },
-> 
 > ```
 
 
@@ -92,13 +93,16 @@ In the list report, you can set the variant management to `"Page"` level or to `
 
 -   `"None"` \(object page\): With this setting, variant management is disabled.
 
--   `"Control"` level: With this setting, table personalization is enabled. Four settings are available:
+-   `"Control"` level: With this setting, table personalization is enabled. The following settings are available:
 
     -   Filtering
 
-        Users can filter table data choosing one or multiple column values \(unless filtering is disabled\). You can use the `@com.sap.vocabularies.UI.v1.HiddenFilter` annotation to exclude those columns you don't want to be filterable.
+        Users can filter table data choosing one or multiple property values \(unless filtering is disabled\). You can use the `@com.sap.vocabularies.UI.v1.HiddenFilter` annotation to exclude those columns you don't want to be filterable.
 
         ![](images/Filtering_Columns_3868aad.png)
+
+        > ### Note:  
+        > Filtering of navigation properties is only available for properties used in the `LineItem`.
 
     -   Sorting
 
@@ -107,7 +111,7 @@ In the list report, you can set the variant management to `"Page"` level or to `
         You can use the `@.OData.Capabilities.V1.SortRestrictions` annotation to exclude those columns you don’t want to be sortable. You can use the `@.OData.Capabilities.V1.NavigationRestrictions` annotation to exclude navigation properties.
 
         > ### Note:  
-        > Defining sort restrictions is currently only possible for first-level navigation entities.
+        > Defining sort restrictions is only possible for first-level navigation entities.
 
         You can use `SortRestrictions` to define your desired `RestrictedProperty` in the `NavigationRestrictions`. Use `SortRestrictions` to either restrict all properties of an entity by setting `Sortable` to `false`, or to disable sorting of individual properties using `NonSortableProperties`. To add sort retrictions for navigation properties, the list of `NonSortableProperties` must be prefixed with the `NavigationPropertyPath`.
 
@@ -173,15 +177,15 @@ In the list report, you can set the variant management to `"Page"` level or to `
         > ```
 
         > ### Note:  
-        > Sorting on navigation properties can currently lead to issues in CAP NodeJS when using an SQLite DB.
+        > Sorting on navigation properties can lead to issues in CAP NodeJS when using an SQLite DB.
 
     -   Adding or removing columns
 
-        Users can add or remove all properties of the root entity of a given table and its 1:1 navigation entities. Selected properties are shown at the top of the list. For all properties of navigation entities, the name of the navigation entity is shown below the name of the property using a gray font, as shown in the following screenshot:Users can sort tables by choosing individual columns or multiple columns \(unless sorting is disabled\). Users can sort each column in ascending or descending order.
+        Users can add or remove all properties of the root entity of a given table and its 1:1 navigation entities. Selected properties are shown at the top of the list. For all properties of navigation entities, the name of the navigation entity is shown below the name of the property using a gray font, as shown in the following screenshot. Users can sort tables by choosing individual columns or multiple columns \(unless sorting is disabled\). Users can sort each column in ascending or descending order.
 
         ![](images/Adding_or_Removing_Columns_caf79df.png)
 
-    -   Grouping \(available only for analytical tables\)
+    -   Grouping \(available for analytical and responsive tables\)
 
 
     By default, the control variant management enables all settings, but you can enable or disable each of these separately using the `"personalization"` setting in the manifest.
@@ -193,54 +197,54 @@ In the list report, you can set the variant management to `"Page"` level or to `
 
 ### Choosing Personalization Settings
 
-Variant management on control level enables filtering, sorting, adding/removing columns, and grouping by default. Use the `"personalization"` setting in the manifest to change the default behavior.
+Variant management on control level enables filtering, sorting, adding or removing columns, and grouping by default. Use the `"personalization"` setting in the manifest to change the default behavior.
 
 > ### Sample Code:  
-> Using the `"personalization"` setting
+> `manifest.json`
 > 
 > ```
 > Users can sort tables by choosing individual columns or"BusinessPartnersList": {
->    "type": "Component",
->    "id": "BusinessPartnersList",
->    "name": "sap.fe.templates.ListReport",
->    "options": {
->       "settings": {
->          "contextPath": "/BusinessPartners",
->          "variantManagement": "Control",
->          "controlConfiguration": {
->             "@com.sap.vocabularies.UI.v1.LineItem": {
->                "tableSettings": {
->                   "type": "AnalyticalTable",
->                   "personalization": {
->    	"column" : true,
->   	 "sort" : false,
->   	 "filter" : true, 
->  	"group": true
->  	}
->                }
+>     "type": "Component",
+>     "id": "BusinessPartnersList",
+>     "name": "sap.fe.templates.ListReport",
+>     "options": {
+>         "settings": {
+>             "contextPath": "/BusinessPartners",
+>             "variantManagement": "Control",
+>             "controlConfiguration": {
+>                 "@com.sap.vocabularies.UI.v1.LineItem": {
+>                     "tableSettings": {
+>                         "type": "AnalyticalTable",
+>                         "personalization": {
+>                             "column" : true,
+>   	                        "sort" : false,
+>   	                        "filter" : true, 
+>                 	        "group": true
+>  	                    }
+>                     }
+>                 }
 >             }
->          }
->       }
->    }
+>         }
+>     }
 > },
 > 
 > ```
 
 You can use the following values for the `"personalization"` setting:
 
--   true \(default\): Every table setting is enabled. If you add a new feature, like grouping, this is enabled as well.
+-   `true` \(default\): Every table setting is enabled. If you add a new feature, like grouping, this is enabled as well.
 
--   false: Every table setting is disabled.
+-   `false`: Every table setting is disabled.
 
--   object: If you use the value 'object', you must also define the values `"column"`, `"sort"` and `"filter"`. If the table is an analytical table, you can also configure the `"group"`. In this case omitting a setting is treated as false, which prevents apps from getting new features in upcoming releases. You can see this in the sample code above, where the object is used as a value for an analytical table.
+-   `object`: If you use the value `"object"`, you must also define the values `"column"`, `"sort"` and `"filter"`. If the table is an analytical table, you can also configure the `"group"`. In this case omitting a setting is treated as false, which prevents apps from getting new features in upcoming releases. You can see this in the sample code above, where the object is used as a value for an analytical table.
 
 
 > ### Note:  
-> -   Sorting, grouping, and filtering applies to the properties visible in a column. For example, for properties with text arrangement set as `#TextFirst`, the property itself or its text can be sorted, grouped, or filtered. For properties with text arrangement set as `#TextOnly`, sorting and grouping applies to the text. .
+> -   Sorting and filtering is available for the properties visible in a column. For example, for properties with text arrangement set as `#TextFirst`, the property itself or its text can be sorted or grouped. For properties with text arrangement set as \#TextOnly, sorting and grouping is only available for their text. Filtering for properties, however, does not take into account their text arrangement. For example, filtering on the \#TextOnly properties is available for the property itself and not its texts. Filtering on its text may be available if no filter restriction is defined for the text property.
 > 
-> -   If a label is defined for a column within the `LineItem`, then the label is used in the Sort, Group, and Filter menus if the column displays a single property. For example, a property with a text annotation `#TextOnly`,
+> -   If a label is defined for a column within the `LineItem`, then this label is used in the *Sort* and *Group* menus if the column displays a single property. In the *Filter* menu, the property name is displayed instead.
 > 
 > -   For properties with text arrangement set as `#TextOnly`, if its text is annotated as `UI.Hidden = true`, then the annotation is ignored. This text property can still be sorted and grouped.
 > 
-> -   If a `sortOrder` is set via a presentation variant on a property with text arrangement set as `#TextOnly`, the sorting is applied on the property and not the text. The sort indicator will not appear in the header column containing the property as the property is not visible on the table. This also applies for the sort and group tabs on the table personalisation dialog.
+> -   If a `sortOrder` is set using a presentation variant on a property with text arrangement set as `#TextOnly`, the sorting is applied on the property and not the text. The sort indicator will not appear in the header column containing the property, as the property is not visible on the table. This also applies for the sort and group tabs on the table personalization dialog.
 

@@ -15,7 +15,7 @@ For more information about this control, see the [API Reference](https://ui5.sap
 
 ## Overview
 
-The `SmartVariantManagement` control is a specialization of the `sap.m.VariantManagement` control. This basic control handles the visual representation of variants, or views, on the user interface.
+The `SmartVariantManagement` control encapsulates the `sap.m.VariantManagement` control. This basic control handles the visual representation of variants, or views, on the user interface.
 
 > ### Note:  
 > You can define views for specific selections of data on the user interface, for example, based on filter settings. Views are also called variants, usually in a more technical context, for example, in the API names and texts of the control.
@@ -239,8 +239,6 @@ You can define favorites in the *Manage Views* dialog. Favorites selected in the
 ### How can users share their views?
 
 The `SmartVariantManagement` control allows you as the end user to share your views with other users. This can be done by making them public by selecting *Public* in the *Save View* dialog when saving a new view.
-
-When you want to save the view, you have to select a transport request. The selection you get depends on the setup of your system and how you use SAPUI5 flexibility. The transport function for the SAPUI5 flexibility back end has to be enabled. For more information about sharing views, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.comp.variants.VariantManagement/methods/getShowShare) and the [sample](https://ui5.sap.com/#/entity/sap.ui.comp.tutorial.smartControls/sample/sap.ui.comp.tutorial.smartControls.07).
 
 
 

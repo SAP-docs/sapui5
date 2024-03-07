@@ -33,11 +33,11 @@ There are many view types, for example JavaScript, JSON, or HTML. However, we st
 
 ## Controller: Find the best location for your controllers
 
-Every view you create should have its own controller with a corresponding file name. For example: If your view is called `App.view.xml`, then the matching controller should be named `App.controller.js`.
+Every view you create should have its own controller with a corresponding file name. For example: If your view is called `App.view.xml`, then the matching controller should be named `App.controller.js` \(in JavaScript\) or `App.controller.ts` \(in TypeScript\).
 
 There is one special case: The so called `BaseController` is not directly related to a view. It is quite common that several controllers use the same functions. You can place these shared functions in the `BaseController` from which all other instantiated controllers will inherit. In other words: Every function you place in the `BaseController` is available for all your controllers. This makes your app code definitely easier to maintain, and you save some lines of code!
 
-The controllers are written in JavaScript and contain all the app logic. They should be placed in the `controller` folder. However, not all JavaScript code belongs in the `controller` folder. For example, formatter logic. The main function of this type of JavaScript file is to format data. That's why you should place it in the `models` folder of your application.
+The controllers are written in JavaScript or TypeScript and contain the app logic. They should be placed in the `controller` folder. However, not all relevant code belongs in the `controller` folder. Consider formatter logic, for example, which has mainly the function to format data. That's why you should rather place it in the `models` folder of your application.
 
 -   Learn how: Walkthrough Tutorial [Step 5: Controllers](step-5-controllers-50579dd.md)
 -   Find our more: [Controller](../04_Essentials/controller-121b8e6.md)

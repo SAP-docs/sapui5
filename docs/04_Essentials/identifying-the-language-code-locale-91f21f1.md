@@ -4,16 +4,12 @@
 
 For the identification of languages, the framework uses a language code of type `string`.
 
-The language can be set, for example, by using the following options:
+The language can be set via the `language` parameter as described in [Available Configuration Options](configuration-of-the-sapui5-runtime-91f08de.md#loio91f08de06f4d1014b6dd926db0e91070__section_ACO).
 
--   URL parameter `sap-ui-language` and configuration parameter `language`
-
--   Script tag attribute `data-sap-ui-language`
-
--   Global configuration variable `window["sap-ui-config"].language`
-
--   URL parameter `sap-language`
-
+> ### Note:  
+> If you need to provide the language as a parameter, we recommend using the `sap-ui-language` parameter.
+> 
+> Besides `sap-ui-language`, also the `sap-locale` and `sap-language` parameters exist, which should only be used in the context of ABAP-based SAP application servers.
 
 These SAPUI5 configuration options accept the following formats:
 
@@ -39,7 +35,7 @@ These SAPUI5 configuration options accept the following formats:
     </th>
     <th valign="top">
 
-    BCP47 Language Tag
+    BCP 47 Language Tag
     
     </th>
     <th valign="top">
@@ -61,7 +57,7 @@ These SAPUI5 configuration options accept the following formats:
     </td>
     <td valign="top">
     
-    `ZH` is the SAP language code for Simplified Chinese. The most generic representation in BCP47 is `zh-Hans`. `zh-CN` \(Chinese, China\) is another representation, but SAPUI5 decided to use `zh-Hans`.
+    `ZH` is the SAP language code for Simplified Chinese. The most generic representation in BCP 47 is `zh-Hans`. `zh-CN` \(Chinese, China\) is another representation, but SAPUI5 decided to use `zh-Hans`.
     
     </td>
     </tr>
@@ -78,7 +74,7 @@ These SAPUI5 configuration options accept the following formats:
     </td>
     <td valign="top">
     
-    `ZF` is the SAP language code for Traditional Chinese. The most generic representation in BCP47 is `zh-Hant`. `zh-TW` \(Chinese, Taiwan\) is another representation, but SAPUI5 decided to use `zh-Hant`.
+    `ZF` is the SAP language code for Traditional Chinese. The most generic representation in BCP 47 is `zh-Hant`. `zh-TW` \(Chinese, Taiwan\) is another representation, but SAPUI5`zh-Hant`.
     
     </td>
     </tr>
@@ -96,6 +92,23 @@ These SAPUI5 configuration options accept the following formats:
     <td valign="top">
     
     `SH` is the SAP language code for Serbian \(Latin script\).
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    `CT`
+    
+    </td>
+    <td valign="top">
+    
+    `cnr`
+    
+    </td>
+    <td valign="top">
+    
+    `CT` is the SAP language code for Montenegrin.
     
     </td>
     </tr>
@@ -180,7 +193,7 @@ These SAPUI5 configuration options accept the following formats:
     </td>
     <td valign="top">
     
-    `1Q` is a technical SAP language code used in support scenarios, for example for translation issues. When you select this language code, the technical keys are displayed instead of the actual data. As no ISO639 code for this exists, the information has been added as a BCP47 private extension to the `en-US` language tag: "trc" stands for "trace" or "traceability".
+    `1Q` is a technical SAP language code used in support scenarios, for example for translation issues. When you select this language code, the technical keys are displayed instead of the actual data. As no ISO639 code for this exists, the information has been added as a BCP 47 private extension to the `en-US` language tag: "trc" stands for "trace" or "traceability".
     
     </td>
     </tr>
@@ -197,7 +210,7 @@ These SAPUI5 configuration options accept the following formats:
     </td>
     <td valign="top">
     
-    `2Q` is also used as a technical SAP language code in support scenarios and displays a pseudo translation \("psd" in the private extensions name\).
+    `` is also used as a technical SAP language code in support scenarios and displays a pseudo translation \("psd" in the private extensions name\).
     
     </td>
     </tr>
@@ -221,9 +234,9 @@ These SAPUI5 configuration options accept the following formats:
     </table>
     
     > ### Note:  
-    > Only these SAP-proprietary language codes are understood by SAPUI5. Other SAP-proprietary language codes are not automatically transformed. If you develop your app to run in the SAP Fiori launchpad, all other SAP-proprietary language codes are handled by the SAP Fiori launchpad.
+    > Only these SAP-proprietary language codes are understood by SAPUI5SAP Fiori launchpad, all other SAP-proprietary language codes are handled by the . Other SAP-proprietary language codes are not automatically transformed. If you develop your app to run in the SAP Fiori launchpad.
     > 
-    > If you don't make use of the SAP Fiori launchpad, you may have to explicitly implement the language handling. You can use the `sap.ui.getCore().setLanguage()` method to provide both settings, a BCP47 language code and the corresponding SAP-proprietary language\) in one call. SAPUI5 will then use one of the two codes where appropriate \(e.g. BCP47 for the retrieval of translated texts or in HTTP Accept Headers, but the proprietary SAP language code when propagating the `sap-language` URL parameter to an OData service\).
+    > If you don't make use of the SAP Fiori launchpad. Other, you may have to explicitly implement the language handling. You can use the `sap/base/i18n/Localization.setLanguage()` method to provide both settings, a BCP 47 language code and the corresponding SAP-proprietary language\) in one call. SAPUI5 will then use one of the two codes where appropriate \(e.g. BCP 47 for the retrieval of translated texts or in HTTP Accept Headers, but the proprietary SAP language code when propagating the `sap-language` URL parameter to an OData service\).
 
 
 
@@ -236,30 +249,29 @@ SAPUI5 has the notion of a current language. It is determined during the SAPUI5 
 
 1.  Hard-coded SAPUI5 default locale `en`
 
-2.  Potentially configured browser language \(`window.navigator.browserLanguage`\)
+2.  Browser-derived language
 
-3.  Potentially configured user language \(`window.navigator.userLanguage`\)
+3.  `sap-ui-language` configuration parameter \(consider the order of the [Available Configuration Options](configuration-of-the-sapui5-runtime-91f08de.md#loio91f08de06f4d1014b6dd926db0e91070__section_ACO)\)
 
-4.  General language information from the browser \(`window.navigator.language`\)
+4.  `sap-language` configuration parameter \(consider the order of the [Available Configuration Options](configuration-of-the-sapui5-runtime-91f08de.md#loio91f08de06f4d1014b6dd926db0e91070__section_ACO)\)
 
-5.  Android: Language contained in the user agent string \(`window.navigator.userAgent`\)
+5.  `sap-locale` configuration parameter \(consider the order of the [Available Configuration Options](configuration-of-the-sapui5-runtime-91f08de.md#loio91f08de06f4d1014b6dd926db0e91070__section_ACO)\)
 
-6.  First language from the list of the user’s preferred languages \(`window.navigator.languages[0]`\) \(For more information, see [https://developer.mozilla.org](https://developer.mozilla.org/en/docs/Web/API/NavigatorLanguage/languages).\)
+6.  Locale configured in the application coding \(for more information, see [API Reference: `sap/base/i18n/Localization.setLanguage`](https://ui5.sap.com/#/api/module:sap/base/i18n/Localization.setLanguage). \)
 
-7.  Locale configured in the application coding \(For more information, see [API Reference: `sap.ui.core.Configuration`](https://ui5.sap.com/#/api/sap.ui.core.Configuration). \)
+    ```js
+        sap.ui.require(["sap/base/i18n/Localization"], (Localization) => {
+            // Change the language using the API
+            Localization.setLanguage(...);
+    		
+            // Retrieve the current language
+            const sLanguage = Localization.getLanguage();
+        });
+    ```
 
-8.  Locale configured via URL parameters
-
-
-After the bootstrap, the language can be changed by calling `sap.ui.getCore().setLanguage(…)`. A call to this method does not guarantee that all already existing translatable texts will be adapted. You use the configuration API to retrieve the resulting current language as follows:
-
-```js
-
-var sCurrentLocale = sap.ui.getCore().getConfiguration().getLanguage();
-```
-
-For more information, see [API Reference: `sap.ui.core.Configuration.setLanguage`](https://ui5.sap.com/#/api/sap.ui.core.Configuration/methods/setLanguage).
 
 > ### Note:  
-> The syntax of the returned value depends on the syntax used for configuration. If the information source is one of the browser language properties, the returned language most likely is in BCP-47 format. If it is configured as a URL parameter, the user might have chosen the JDK Locale syntax.
+> A call to the [`Localization.setLanguage`](https://ui5.sap.com/#/api/module:sap/base/i18n/Localization.setLanguage). method does not guarantee that all already existing translatable texts will be adapted.
+> 
+> The syntax of the value returned from `getLanguage` depends on the syntax used for configuration. If the information source is one of the browser language properties, the returned language most likely is in BCP-47 format. If it is configured as a URL parameter, the user might have chosen the JDK-locale syntax.
 

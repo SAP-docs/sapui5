@@ -2,7 +2,26 @@
 
 # The `Share` Building Block
 
-Freestyle applications can also use the "`Share`" functionality that allows users to share the current application state using the options *Send Email*, *Share to Microsoft Teams*, *Save as Tile*, and *Share in SAP Jam* \(on platforms that are integrated with SAP Jam\). Check out our live example in the flexible programming model explorer at [Share Building Block Usage](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/features/shareDefault) and [Share Controller Extension Usage](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/controllerExtensions/controllerExtensionsOverview/shareExtensibility).
+Freestyle applications can also use the "`Share`" functionality that allows users to share the current application state using the options *Send Email*, *Share to Microsoft Teams*, *Save as Tile*, and *Share in SAP Jam* \(on platforms that are integrated with SAP Jam\).
+
+
+
+<a name="loio41b02dfe1ac44d72bb766f5fc3e3d244__section_qfd_qdn_j1c"/>
+
+## Configuring the Visibility of *Send Email* Option
+
+Application developers can control the visibility of the *Send Email* option within the `Share` building block by configuring the `showSendEmail` key under the `shareOptions`. The property values can be either boolean or binding.
+
+> ### Sample Code:  
+> ```
+> <macros:Share id="shareWithStaticProperties">
+>     <macros:shareOptions showSendEmail="false" />
+> </macros:Share>
+> ```
+
+
+
+Check out our live example in the flexible programming model explorer at [Share Building Block Usage](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/features/shareDefault) and [Share Controller Extension Usage](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/controllerExtensions/controllerExtensionsOverview/shareExtensibility).
 
 
 

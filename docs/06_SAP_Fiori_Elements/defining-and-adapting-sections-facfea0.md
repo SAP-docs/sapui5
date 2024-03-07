@@ -4,17 +4,17 @@
 
 The object page content is arranged into sections and subsections that you can configure.
 
-You use the `com.sap.vocabularies.UI.v1.Facets` annotations to build sections. Different facets have been defined to display important information in the content area sections.
+You can use the `com.sap.vocabularies.UI.v1.Facets` annotations to build sections. Different facets have been defined to display important information in the content area sections.
 
 
 
-A facet contains collection facets \(`UI.CollectionFacet`\) as well as reference facets \(`UI.ReferenceFacet`\). Collection facets are made up of a list of records, each of which represents a reference facet. Reference facets represent a reference, for example, to a `UI.LineItem` \(list on the object page\), `UI.Chart` \(Chart\), or `UI.Identification` annotation.
+A facet contains collection facets \(`UI.CollectionFacet`\) as well as reference facets \(`UI.ReferenceFacet`\). Collection facets are made up of a list of records, each representing a reference facet. Reference facets represent a reference, for example, to a `UI.LineItem` \(list on the object page\), `UI.Chart` \(Chart\), or `UI.Identification` annotation.
 
-A collection or reference facet directly under the `UI.Facets` represents a section. A section can also have subsections under it. It is achieved by adding a collection facet under the `UI.Facet` and then adding reference or collection facets underneath this collection facet.
+A collection or reference facet directly under the `UI.Facets` represents a section. A section can also have subsections under it. To create a subsection, add a collection facet under the `UI.Facet` and then add reference or collection facets underneath this collection facet.
 
 Note the following behavior:
 
--   In SAP Fiori elements for OData V2, all reference facets that are part of the second-level collection facet are arranged one beside the other \(the reference facets outside the collection facet are ignored in this case\). If there is no second-level collection facet, then all reference facets are considered.
+-   In SAP Fiori elements for OData V2, all reference facets that are part of the second-level collection facet are arranged one beside the other \(the reference facets outside the collection facet are ignored in this case\). If there is no second-level collection facet, all reference facets are considered.
 
 -   In SAP Fiori elements for OData V4, all reference facets that are part of the second-level collection facet are arranged one beside the other. The reference facets outside the second-level collection facet are also considered and shown as separate subsections.
 
@@ -153,14 +153,16 @@ You can hide and display sections based on properties.
 > ```
 
 > ### Tip:  
-> -   The section title is not displayed in the content area as the first section object page uses an anchor bar for sections. The title is not displayed in the content area for a section if the object page uses an icon tab bar for sections.
+> -   You must not use a comma \(,\) in a section or subsection title, as commas serve as delimiters in SAP Fiori elements. A comma is used while grouping backend messages for a field within the section or subsection.
 > 
-> -   If a subsection contains only one type of content, such as a table or a chart, and the subsection title is the same as the control title, then only the control title is displayed in the subsection.
+> -   If the object page uses an icon tab bar for sections, then the section title isn't displayed in the content area. If the object page uses an anchor bar for sections, then only the title of the first section is hidden in the content area.
+> 
+> -   From SAPUI5 1.121 version onwards, if a section or a subsection contains only a table or a chart as a control, then the section or subsection title is hidden and the same is set as the control title.
+> 
+>     This logic doesn't apply to sections or subsections with multiple controls, as the UI adaptation ensures that only a single control is displayed in the section or subsection during runtime.
 > 
 > 
-> ![](images/Subsection_Control_Title_34d0a6a.png)
-> 
-> -   In SAP Fiori elements for OData V2 if a section contains only one type of content, such as a table or a chart, and the section title is the same as the control title, then only the control title is displayed in the section.
+> ![](images/section-subsection_title_08a8f08.png)
 
 
 
@@ -179,14 +181,14 @@ For more information, see [Grouping of Fields](grouping-of-fields-7d7a0c4.md).
 
 ## Rendering a Table in a Section
 
-To render a table in a section, here's what you do:
+To render a table in a section, follow these steps:
 
-1.  Include a list in the section, indicated by `com.sap.vocabularies.UI.v1.LineItem` or `com.sap.vocabularies.UI.v1.PresentationVariant`. If `PresentationVariant` is specified, then it must have `UI.LineItem` as the first property of the "Visualizations".
+1.  Include a list in the section, indicated by `com.sap.vocabularies.UI.v1.LineItem` or `com.sap.vocabularies.UI.v1.PresentationVariant`. In SAP Fiori elements for OData V4, `UI.v1.SelectionPresentationVariant` is also supported. If `PresentationVariant` is specified, then it must have `UI.LineItem` as the first property of the "Visualizations". If a`SelectionPresentationVariant` is specified, it must contain a valid `PresentationVariant` with `UI.LineItem` as the first property of the "Visualizations".
 
 2.  To render a *Create* button, set `Org.OData.Capabilities.V1.InsertRestrictions/Insertable/Bool` to `true` for the entity set. For more information, see the section **Generic Actions** in [Adding Actions to Tables](adding-actions-to-tables-b623e0b.md).
 
 
-See also [Enabling Inline Creation Mode or Empty Row Mode for Table Entries](enabling-inline-creation-mode-or-empty-row-mode-for-table-entries-cfb04f0.md).
+For more information, see [Enabling Inline Creation Mode or Empty Row Mode for Table Entries](enabling-inline-creation-mode-or-empty-row-mode-for-table-entries-cfb04f0.md).
 
 
 
@@ -250,7 +252,7 @@ If you define your facets in an annotation file in your project, you can add the
 
 
 
-It is mandatory to define an ID for collection facets but optional for reference facets. If you have defined an ID for the facet of your table, use this ID in the manifest instead of the generated one. If you have not defined an ID for the reference facet of your table, the ID is derived from the annotation path by replacing */@* with *::*, for example, `to_ProductText::com.sap.vocabularies.UI.v1.LineItem`. Don't add an ID in the annotation after delivering your app, as this ID is also used to build the stable IDs of all controls used in that section.
+It is mandatory to define an ID for collection facets but optional for reference facets. If you have defined an ID for the facet of your table, use this ID in the manifest instead of the generated one. If you have not defined an ID for the reference facet of your table, the ID is derived from the annotation path by replacing `/@` with `::`, for example, `to_ProductText::com.sap.vocabularies.UI.v1.LineItem`. Don't add an ID in the annotation after delivering your app, as this ID is also used to build the stable IDs of all controls used in that section.
 
 > ### Note:  
 > All facets are displayed on the same page. The link from a facet leads you to the related section on the same page. The facet annotation label is used twice: Once for the facet in the header area and once for the section's title.
@@ -286,7 +288,7 @@ When increasing the section and table height to use available free space on the 
 
 If your table has many entries, see the information regarding the `MultiSelectionPlugin` at [Enabling Multiple Selection in Tables](enabling-multiple-selection-in-tables-116b5d8.md).
 
-For information about the icon tab bar, see *Adapting the UI: Object Page* \> *Switch to tabs*in [Adapting the UI: List Report and Object Page](adapting-the-ui-list-report-and-object-page-0d2f1a9.md).
+For more information about the icon tab bar, see *Adapting the UI: Object Page* \> *Switch to tabs*in [Adapting the UI: List Report and Object Page](adapting-the-ui-list-report-and-object-page-0d2f1a9.md).
 
 
 

@@ -139,6 +139,32 @@ The object page of the *Manage Products* app shows the new section *Product Desc
 
 
 
+### Setting Section Title to the Control within Custom Section
+
+To hide the section title or subsection title, you can call the `setAsTitleOwner` extension API. This allows you to replace the control title with the section or subsection title.
+
+Define the `initialise` method of a table or chart in the extension fragment component
+
+> ### Sample Code:  
+> ```
+> <st:SmartTable id="SalesPriceFacetID" initialise="SalesPriceInitialise"/>
+> ```
+
+Define the same event in the controller and call the `setAsTitleOwner` extension API with the parameter `SmartTable` or `SmartChart`
+
+> ### Sample Code:  
+> ```
+> SalesPriceInitialise: function(oEvent) {
+> 	var oSmartTable = oEvent.getSource();
+> 	var oExtensionAPI = extensionAPI.getExtensionAPI(oSmartTable);
+> 	oExtensionAPI.setAsTitleOwner(oSmartTable);
+> }
+> ```
+
+For more information, see [Adding Titles to Object Page Tables](adding-titles-to-object-page-tables-d9a4539.md).
+
+
+
 <a name="loioa357047be956436ebb1dfebf1aa29af2__section_e23_tdf_d4b"/>
 
 ## Additional Features in SAP Fiori Elements for OData V4

@@ -149,7 +149,7 @@ The following code samples show how to create your annotations for the chart fac
 > );
 > ```
 
-The chart definition contains measures on which the aggregations calculations are done, and dimensions, which categorize these measures. In the chart, these measures are displayed as labels on the x and on the y axis.
+The chart definition contains measures on which the aggregations calculations are done, and dimensions, which categorize these measures.
 
 > ### Note:  
 > The use of navigation properties within the `UI.Chart` term isn’t supported.
@@ -558,11 +558,13 @@ For charts to work, the entity set must support aggregation. SAP Fiori elements 
 > 
 > -   Charts currently don't support parameterized entities.
 > 
+> -   Filter fields coming from associated entity sets are not displayed in the filter tabs during chart personalization.
+> 
 > -   Properties such as measures, dimensions, and text associations that come from associated entity sets are currently not supported.
 > 
 > -   Chart personalization settings or selections aren't part of the variant changes and aren't saved in the `iAppState`.
 > 
-> -   The criticality via the `UI.CriticalityCalculation` annotation is currently not supported.
+> -   Semantic coloring using the `UI.Criticality` and `UI.CriticalityCalculation` annotations isn't supported.
 > 
 > -   For CAP CDS versions 3 or lower, the chart doesn't load properly if the parent entity set is non-aggregate based.
 > 
