@@ -37,7 +37,7 @@ import JSONModel from "sap/ui/model/json/JSONModel";
 /**
  * @namespace ui5.walkthrough.controller
  */
-export default class App extends Controller {
+export default class InvoiceList extends Controller {
     
     onInit(): void {
         const viewModel = new JSONModel({
