@@ -262,6 +262,7 @@ These custom actions are displayed as buttons on the UI. When the user selects t
                                             "text": "<button text>",
                                             "press": "<handler function>",
                                             "requiresSelection": <true| false >,
+                                            "applicablePath": <path>,
                                             "command": "<CustomActionCommandName>"
                                          },
                                         "<Action 2>": {
@@ -325,7 +326,7 @@ These custom actions are displayed as buttons on the UI. When the user selects t
                                             "id" : "<id>",
                                             "text" : "<button text>",
                                             "press" : "<handler function>"
-                                            "applicablePath": "<property name>",
+                                            "applicablePath": "<path>",
                                             "command": "<CustomCommandName>"
                                         },
                                         "<Action 2>": { 
@@ -391,6 +392,7 @@ These custom actions are displayed as buttons on the UI. When the user selects t
                               "id" : "<id>",
                               "text" : "<button text>",
                               "press" : "<handler function>"
+                              "applicablePath": <path>,
                             },
                             "<Action 2>": { ... }
                           }
@@ -448,6 +450,7 @@ These custom actions are displayed as buttons on the UI. When the user selects t
                                       "id": "<id>",
                                       "text": "<button text>",
                                       "press": "<handler function>",
+                                      "applicablePath": <path>,
                                       "determining": true
                                    }
                                 }

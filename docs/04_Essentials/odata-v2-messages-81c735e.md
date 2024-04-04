@@ -2,7 +2,7 @@
 
 # OData V2 Messages
 
-OData V2 messages are either created automatically by `sap.ui.model.odata.ODataMessageParser` and processed by the `sap.ui.model.odata.v2.ODataModel` or can be created manually by the application.
+OData V2 messages are created automatically by `sap.ui.model.odata.ODataMessageParser` and processed by the `sap.ui.model.odata.v2.ODataModel`.
 
 
 
@@ -14,41 +14,7 @@ The target of these messages can be empty. In this case, the message has no spec
 
 ## Lifecycle
 
-OData V2 messages are kept until a message from the server for the same path arrives. The server always sends all messages for a specific target which means that all current messages are replaced with the ones sent by the server, except for `persistent` UI messages. Back-end messages with property `transition` set to `true` are parsed to `persistent` UI messages.
-
-
-
-<a name="loio81c735e69d354de98b0bd139e4bd4e10__section_vn1_jbj_rhb"/>
-
-## Manually Created Messages
-
-To create messages manually that are handled like OData messages, use `model` as message processor as follows:
-
-```js
-// oMyModel is defined elsewhere...
-// "Input" required from module "sap/m/Input"
-// "TypeFloat" required from module "sap/ui/model/type/Float"
-// "Message" required from module "sap/ui/core/message/Message"
-// "coreLibrary" required from module "sap/ui/core/library"
-
-var oMessageManager = sap.ui.getCore().getMessageManager();
-
-oMessageManager.registerMessageProcessor(oMyModel);
-
-var oInput = new Input({
-    id: "myInputId",
-    value: { path: "/Products(1)/Price", type: new TypeFloat() }
-});
-
-oMessageManager.addMessages(
-    new Message({
-        message: "Price must contain only numbers",
-        type: coreLibrary.MessageType.Error,
-        target: "/Products(1)/Price",
-        processor: oMyModel
-    })
-);
-```
+OData V2 messages are kept until a message from the server for the same path arrives. The server always sends all messages for a specific target which means that all current messages are replaced with the ones sent by the server, except for `persistent` UI messages. Back-end messages with the `transition` property set to `true` are parsed to `persistent` UI messages.
 
 
 
@@ -66,7 +32,7 @@ For other back-end service types, an application can implement its own parser, s
 
 ## OData V2 Message Parser
 
-The `ODataMessageParser` is created automatically for all `v2.ODataModel` instances and parses all responses from the server. The `ODataModel` implements the message processor interface and is used to propagate the messages to the message manager. In case of an error response, the response body is parsed for error messages. In case of a successful response, the "sap-message" header is parsed as a JSON-formatted error object. The name of the header field can be changed by calling the `setHeaderField()` method on the `ODataMessageParser`.
+The `ODataMessageParser` is created automatically for all `v2.ODataModel` instances and parses all responses from the server. The `ODataModel` implements the message processor interface and is used to propagate the messages to the `sap.ui.core.Messaging` module. In case of an error response, the response body is parsed for error messages. In case of a successful response, the "sap-message" header is parsed as a JSON-formatted error object. The name of the header field can be changed by calling the `setHeaderField()` method on the `ODataMessageParser`.
 
 
 
@@ -151,7 +117,7 @@ This can happen when an OData entity is changed and the same entity is requested
 
 If the change operation fails, a UI message is created. But this UI message is deleted directly afterwards via the messaging lifecycle since the read operation of the same entity does not return any message. There are two options to get the expected behavior in this scenario:
 
-**Solution 1**: Mark the UI message as persistent. By this, the message lifecycle will not delete the UI message, but the application has to take care of cleaning up such messages by using the `sap.ui.core.message.MessageManager` APIs.
+**Solution 1**: Mark the UI message as persistent. By this, the message lifecycle will not delete the UI message, but the application has to take care of cleaning up such messages by using the `sap.ui.core.Messaging` APIs.
 
 **Solution 2**: Defer the read operation. By this, the UI message is also not deleted, but the application has to make sure the read operation is triggered at an appropriate point in time.
 
@@ -162,7 +128,7 @@ If the change operation fails, a UI message is created. But this UI message is d
 
 [API Reference: `sap.ui.model.odata.v2.ODataModel`](https://ui5.sap.com/#/api/sap.ui.model.odata.v2.ODataModel)
 
-[API Reference: `sap.ui.core.message.MessageManager`](https://ui5.sap.com/#/api/sap.ui.core.message.MessageManager)
+[API Reference: `sap.ui.core.Messaging`](https://ui5.sap.com/#/api/module:sap/ui/core/Messaging)
 
 [API Reference: `sap.ui.model.message.MessageModel`](https://ui5.sap.com/#/api/sap.ui.model.message.MessageModel)
 

@@ -2,7 +2,7 @@
 
 # The `Share` Building Block
 
-Freestyle applications can also use the "`Share`" functionality that allows users to share the current application state using the options *Send Email*, *Share to Microsoft Teams*, *Save as Tile*, and *Share in SAP Jam* \(on platforms that are integrated with SAP Jam\).
+Freestyle SAPUI5 applications can also use the "`Share`" functionality that allows users to share the current application state using the options *Send Email*, *Share to Microsoft Teams*, *Save as Tile*, and *Share in SAP Jam* \(on platforms that are integrated with SAP Jam\).
 
 
 

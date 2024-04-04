@@ -78,7 +78,7 @@ Take the following into account:
 
 Make sure you do not use the following:
 
--   Services provided by the namespace `sap.ui.generic.app` or `sap.fe.navigation`, since these services are intended for use only by freestyle-apps or within the generic list report and object page and analytical list page template implementation.
+-   Services provided by the namespace `sap.ui.generic.app` or `sap.fe.navigation`, since these services are intended for use only by freestyle SAPUI5 apps or within the generic list report and object page and analytical list page template implementation.
 -   Services provided directly by the namespace `sap.ui.generic.template`. Unwanted side effects may occur if two layers \(template coding and extension coding\) access these services at the same time.
 
 

@@ -224,11 +224,37 @@ The filter bar only shows filter fields defined via the `@com.sap.vocabularies.U
 
 ### Including Navigation Properties
 
-To include navigation properties for filtering, you can directly define them within the same annotation so that they appear as filter fields in the filter bar. To add further filter fields to the adaptation, you can use the `navigationProperties` setting. It is an array of \(navigation\) property paths relative to the current entity type. If the path points to a navigation property or a complex property, all simple properties of that type are added to the adaptation. If the path points to a simple property, then only this field becomes available as a filter field.
+To include navigation properties for filtering, you can directly define them within the same annotation so that they appear as filter fields in the filter bar. To add further filter fields to the adaptation, you can use the `navigationProperties` setting in the `manifest.json` file. It is an array of \(navigation\) property paths relative to the current entity type. If the path points to a navigation property or a complex property, all simple properties of that type are added to the adaptation. If the path points to a simple property, then only this field becomes available as a filter field.
 
 > ### Sample Code:  
+> XML Annotation
+> 
 > ```
-> navigationProperties:  [ "_DistributionChannel", "_Partner/FullName" ]
+> "ListReport": {
+>     ...
+>     "options": {
+>         "settings": {
+>             ...
+>             "controlConfiguration": {
+>                 ...
+>                 "@com.sap.vocabularies.UI.v1.SelectionFields": {
+>                     "navigationProperties":  [ "_DistributionChannel", "_Partner/FullName" ],
+>                     ...
+>                 }
+>             },
+>             ...
+>         }
+>     }
+> },
+> ```
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> UI.SelectionFields : [
+>         _Supplier.name
+>     ],
 > ```
 
 -   all properties of the navigation type `_DistributionChannel` will be added to the filter adaptation \(unless they are marked as `Hidden` or `HiddenFilter`\)

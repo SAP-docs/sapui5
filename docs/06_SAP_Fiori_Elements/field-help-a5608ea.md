@@ -5,7 +5,7 @@
 A field can be associated with a helper control, depending on how the field is configured.
 
 > ### Note:  
-> This topic is currently only applicable to SAP Fiori elements for OData V4.
+> This topic is only applicable to SAP Fiori elements for OData V4.
 
 Fields can have an associated value help, or a drop-down list for several fixed values, for example. Fields can also have a date or date-time picker. This topic provides information about the supported associations and how applications can enable them.
 
@@ -365,7 +365,7 @@ The following sample code shows an example for the usage of the annotation term 
 > ### Note:  
 > -   Ensure that the `ValueListForValidation` contains the qualifier of the `ValueList` or `ValueListMapping` to be used for validation.
 > 
-> -   User input that does not match the entries in the `ValueListForValidation` aren't stored in the back end \(not even for drafts\).
+> -   User input that does not match the entries in the `ValueListForValidation` aren't stored in the back end \(not even for drafts\). Use this feature only in cases where the value can't be transferred to the back end.
 > 
 > -   App developers have two options to configure the `ValueListForValidation`:
 > 
@@ -416,7 +416,7 @@ You can use the annotation term `Common.ValueListRelevantQualifiers` to configur
 > ```
 
 > ### Note:  
-> Context-dependent value help currently does not support individual In/Out parameters for the different `ValueList` definitions. All `ValueList` definitions must have the same In/Out parameters.
+> `ValueList` definitions. All `ValueList` definitions must have the same In/Out parameters.
 
 
 
@@ -459,7 +459,7 @@ The annotation `InitialValueIsSignificant` allows you to identify an initial val
 > CDS Annotation for `InitialValueIsSignificant`
 > 
 > ```
-> ShippingCondition             : ShippingCondition : ShippingCondition @(Common : {
+> Context-dependent value help currently does not support individual In/Out parameters for the differentShippingCondition             : ShippingCondition : ShippingCondition @(Common : {
 >     Text            : _ShippingCondition.ShippingCondition_Text,
 >     TextArrangement : #TextFirst,
 >     IsUpperCase     : true,
@@ -850,6 +850,18 @@ You achieve this by setting the property "FetchValues = 2".
 ## Fixed Values
 
 For information about fixed values, please see the topic [Value Help as a Dropdown List](value-help-as-a-dropdown-list-2a0a630.md).
+
+
+
+<a name="loioa5608eabcc184aee99e1a7d88b28816c__section_n45_zgm_s1c"/>
+
+## History of Recently Entered Values
+
+Filter bar fields can show the history of recently entered values. It's especially useful when the end users frequently select the same values from a large list.
+
+When enabled, this feature saves the values a user has entered in the field. When the user sets the focus on the field, a list of recently entered values is displayed. When the user starts typing, the list is filtered according to their input. If the field has no previously entered values, the list will not be displayed even if this feature is enabled.
+
+To enable the history of recently entered values, enable the `INPUTFIELD_HISTORY` parameter in SAP Fiori launchpad. For more information, see [Manage Launchpad Settings](https://help.sap.com/docs/SAP_S4HANA_CLOUD/4fc8d03390c342da8a60f8ee387bca1a/22d573aead754b80abca18ec71872fb7.html).
 
 
 

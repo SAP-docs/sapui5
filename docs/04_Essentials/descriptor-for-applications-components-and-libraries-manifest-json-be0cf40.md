@@ -1074,6 +1074,23 @@ Version 62
 
 </td>
 </tr>
+<tr>
+<td valign="top">
+
+Version 63
+
+</td>
+<td valign="top">
+
+\>=1.122
+
+</td>
+<td valign="top">
+
+1.62.0
+
+</td>
+</tr>
 </table>
 
 For more information on the new fields introduced in each version, check out [Migration Information for Upgrading the Descriptor File](migration-information-for-upgrading-the-descriptor-file-a110f76.md)
@@ -2455,14 +2472,14 @@ Current version of the `manifest.json`
 ```
 
 {
-    "_version": "1.61.0",
+    "_version": "1.62.0",
  
     "start_url": "index.html",
  
     "sap.app": {
         "id": "sap.fiori.appName",
         "type": "application",
-        "i18n": "",
+        "i18n": "i18n/i18n.properties",
         "applicationVersion": {
             "version": "1.2.2"
         },
@@ -2707,7 +2724,7 @@ Current version of the `manifest.json`
             }]
         },
         "dependencies": {
-            "minUI5Version": "1.121.0",
+            "minUI5Version": "1.122.0",
             "libs": {
                 "sap.m": {
                     "minVersion": "1.34.0"
@@ -2908,14 +2925,18 @@ For the following namespaces, the indicated teams are responsible:
 The component declares the existence of the application descriptor by specifying `manifest: "json"` in the component metadata. Setting this flag makes the component load the `manifest.json` file and read the relevant entries for SAPUI5. This metadata is used to define the dependencies that need to be loaded in order to start the component. The following code snippet shows how to add the manifest link:
 
 ```js
-sap.ui.define(['sap/ui/core/UIComponent'], function(UIComponent) {
-	
-	return UIComponent.extend("sap.samples.Component", {
+sap.ui.define([
+	"sap/ui/core/UIComponent"
+], (UIComponent) => {
+	"use strict";
+	return UIComponent.extend("my.sample.Component", {
 		metadata  : { 
-			manifest: "json"
+			manifest: "json",
+			interfaces: [
+				"sap.ui.core.IAsyncContentCreation"
+			]
 		}
 	});
-
 });
 ```
 
@@ -2923,18 +2944,13 @@ sap.ui.define(['sap/ui/core/UIComponent'], function(UIComponent) {
 
 ## SAPUI5 API
 
-At runtime, the `manifest.json` content can be accessed from the component via the component metadata:
+At runtime, the manifest content can be accessed from the component via the following `sap.ui.core.Component` APIs:
 
 ```js
-// get the component class
-sap.ui.require(['sap/samples/Component'], function(SampleComponent) {
-
-	// getting complete manifest from component metadata
-	SampleComponent.getMetadata().getManifest();
-	//or getting a namespace
-	SampleComponent.getMetadata().getManifestEntry("sap.app");
-	
-});
+// Given: oComponent === instance of sap.ui.core.Component (e.g. returned by sap.ui.core.mvc.Controller#getOwnerComponent)
+oComponent.getManifest(); // returns reference to the entire manifest object if it exists; otherwise returns null
+oComponent.getManifestEntry("sap.app"); // returns reference to the configuration section of the manifest
+oComponent.getManifestEntry("/sap.ui5/dependencies/libs"); // returns reference or value of the manifest configuration by path; the syntax must start with a slash
 ```
 
 [sap.ui.core.UIComponent](https://ui5.sap.com/#/api/sap.ui.core.UIComponent)

@@ -7,6 +7,9 @@ The following tables show deprecated and experimental configuration options.
 > ### Note:  
 > In earlier framework versions, the configuration options available in SAPUI5 could be found in the [API Reference via the `sap.ui.core.Configuration`](https://ui5.sap.com/#/api/sap.ui.core.Configuration). This legacy module has been deprecated with SAPUI5 1.120 and replaced by a modular, future-proof solution for configuration handling.
 
+> ### Note:  
+> The SAPUI5 configuration options now follow a consistent naming scheme based on kebab-case notation. Configuration options in older framework versions or code samples \(especially those from before SAPUI5 1.120\) may follow the former camelCase notation. Typically, you should now use \(or search for\) the newer names, e.g. `log-level` instead of `logLevel`.
+
 
 
 <a name="loiob474a712ca364d40a1b0a804baf2d734__section_ix3_4bv_fzb"/>

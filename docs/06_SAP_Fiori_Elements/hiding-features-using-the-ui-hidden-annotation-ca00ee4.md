@@ -581,26 +581,6 @@ You cannot use the `UI.Hidden` annotation to hide the entire `UI.FieldGroup` and
 
 You cannot use the `UI.Hidden` annotation to hide the entire `UI.FieldGroup` and `UI.Identification`. If you want to hide these, you have to hide all `DataField` records within them or use the `UI.Hidden` to hide the wrapper around the `FieldGroup` which is normally the `ReferenceFacet` or the `DataFieldForAnnotation` as shown in the examples in this page.
 
-**DataField Records in Tables**
-
-To hide table columns, the `UI.Hidden` path needs to refer to the property of the header instance, for example:
-
-`<Annotation Term="UI.Hidden" Path="to_Product/Edit_ac">`
-
-In the following example, `STTA_C_MP_Product` is the entity set of the object page header and `STTA_C_MP_ProductText` is the entity set of the smart table on the object page, and `to_Product` is the navigation property from `STTA_C_MP_ProductText` to `STTA_C_MP_Product`.
-
-  
-  
-**DataField Records in Object Page Tables**
-
-![](images/Data_Field_Records_Smart_Tables_74a9d75.png "DataField Records in Object Page
-                    Tables")
-
-> ### Note:  
-> Hiding DataField Records
-> 
-> The *See More* button is visible even if the content within it is hidden.
-
 
 
 <a name="loioca00ee45fe344a73998f482cb2e669bb__section_lvf_5yz_dnb"/>
@@ -614,61 +594,4 @@ You cannot use the `UI.Hidden` annotation to hide the entire `UI.FieldGroup` and
 **DataField Records in Facets**
 
 You cannot use the `UI.Hidden` annotation to hide the entire `UI.FieldGroup` and `UI.Identification`. If you want to hide these, you've to hide all `DataField` records within them or use the `UI.Hidden` to hide the wrapper around the `FieldGroup` which is normally the `ReferenceFacet` or the `DataFieldForAnnotation` as shown in the examples in this page.
-
-**DataField Records in Tables**
-
-If `UI.Hidden` is provided a static `true` value for any field, then the column isn't rendered at all. But if there is a path based value for this, the field isn't shown for the instances for which the `UI.Hidden` evaluates to `true`.
-
-> ### Note:  
-> For a path based value for `UI.Hidden`, even if the path evaluates to `true` for all the rows, only the field is hidden and not the entire table column.
-
-  
-  
-**DataField Records in Tables**
-
-![](images/DataFieldRecords1_bd2e691.png "DataField Records in Tables")
-
-> ### Sample Code:  
-> ```
-> <Annotation Term="UI.LineItem">
->     <Collection>
->         <Record Type="UI.DataFieldForAnnotation">
->             <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#multipleActionFields" />
->             <PropertyValue Property="Label" String="Sold-To Party" />
->             <Annotation Term="UI.Hidden" Path="Delivered" />
->         </Record>
->     </Collection>
-> </Annotation>
-> ```
-
-> ### Sample Code:  
-> ABAP CDS Annotation
-> 
-> ```
-> @UI.lineItem: [
->   {
->     hidden: true,
->     label: ‘Sold-To Party’,
->     type: #AS_FIELDGROUP, 
->     hidden: #(‘Delivered’),
->     valueQualifier: ' multipleActionFields'
->   }
-> ]
-> TEST;
-> ```
-
-> ### Sample Code:  
-> CAP CDS Annotation
-> 
-> ```
-> LineItem                                        : {
->         $value             : [
->         {
->             $Type             : 'UI.DataFieldForAnnotation',
->             Target            : '@UI.FieldGroup#multipleActionFields',
->             Label             : 'Sold-To Party,
->             ![@UI.Hidden] : Delivered
->         }
-> ]
-> ```
 

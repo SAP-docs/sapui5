@@ -27,9 +27,13 @@ The following restrictions apply when you use modern ECMAScript:
 
     For more information, see [Defining and Loading SAPUI5 Modules](ecmascript-support-0cb44d7.md#loio0cb44d7a147640a0890cefa5fd7c7f8e__section_UI5Mod) \(*Expressions as Dependencies* and following\), [SAPUI5 Inheritance](ecmascript-support-0cb44d7.md#loio0cb44d7a147640a0890cefa5fd7c7f8e__section_UI5Inherit) \(*Expressions as Class Names* and following\), and [Library Initialization](ecmascript-support-0cb44d7.md#loio0cb44d7a147640a0890cefa5fd7c7f8e__section_libInit).
 
-4.  Do not use async functions or Promises for defining a module or for event handlers.
+4.  Do not use async functions or Promises for defining a module.
 
-    For more information, see *Asynchronous Factory Function* and *Event Handler Registration* in [Defining and Loading SAPUI5 Modules](ecmascript-support-0cb44d7.md#loio0cb44d7a147640a0890cefa5fd7c7f8e__section_UI5Mod).
+    For more information, see *Asynchronous Factory Function* in [Defining and Loading SAPUI5 Modules](ecmascript-support-0cb44d7.md#loio0cb44d7a147640a0890cefa5fd7c7f8e__section_UI5Mod).
+
+5.  Do not use async functions when implementing predefined lifecycle hooks, such as [`sap/ui/core/mvc/Controller#onInit`](https://ui5.sap.com/#/api/sap.ui.core.mvc.Controller%23methods/onInit).
+
+    For more information, see [Async Functions and Event Handlers](ecmascript-support-0cb44d7.md#loio0cb44d7a147640a0890cefa5fd7c7f8e__section_EHR).
 
 
 
@@ -72,7 +76,7 @@ Please continue to use the regular SAPUI5 APIs `sap.ui.define` and `sap.ui.requi
 
 
 
-### Asynchronous Factory Function
+### Asynchronous Factory Functions
 
 Do **not** use an `async` factory function when loading or defining SAPUI5 modules. The SAPUI5 Loader will not wait for a returned Promise.
 
@@ -101,68 +105,6 @@ Do **not** return a Promise when loading or defining SAPUI5 modules.
 > ], (Controller) => {
 >     "use strict";
 >     return Promise.resolve(Controller.extend("my.app.controller.MyController", {}));
-> });
-> ```
-
-
-
-### Event Handler Registration
-
-> ### Caution:  
-> If you intend to use async functions as callbacks or hooks, you have to make sure that the respective API doesn't break and that you stay compliant with the API's signature and return value type. For example, an API which expects no return value should not return a Promise.
-
-When registering to browser or control events and implementing an event handler as an async function, SAPUI5 simply calls the event handler function without handling the returned Promise and without considering the execution order.
-
-> ### Restriction:  
-> **Not supported** 
-> 
-> ```
-> sap.ui.require(["sap/m/Button"], (Button) => {
->     const oButton = new Button({
->         text: "Press me",
->         press: async (event) => { // async event handler function
->             await doSomething() // do something async, e.g. request data and wait for it...
->             console.log("Data received!");
->         }
->     });
-> });
-> ```
-
-As an alternative, you could use a typical `then` Promise:
-
-> ### Example:  
-> **Supported usage** 
-> 
-> ```
-> sap.ui.require(["sap/m/Button"], (Button) => {
->     const oButton = new Button({
->         text: "Press me",
->         press: () => {
->             // do something async, e.g. request data and wait for it...
->             doSomething().then(
->                 () => console.log("Data received!")
->             );
->         }
->     });
-> });
-> ```
-
-Or, for still using `await`, you could wrap your async function:
-
-> ### Example:  
-> **Supported usage** 
-> 
-> ```
-> sap.ui.require(["sap/m/Button"], (Button) => {
->     const oButton = new Button({
->         text: "Press me",
->         press: () => {
->             (async () => { // async wrapper
->                 await doSomething() // do something async, e.g. request data and wait for it...
->                 console.log("Data received!");
->             })()
->         }
->     });
 > });
 > ```
 
@@ -201,7 +143,8 @@ Do **not** use a spread element as a parameter in the context of the `sap.ui.def
 >     "sap/ui/core/mvc/Controller", 
 >     "sap/ui/mode/Filter", 
 >     "sap/ui/model/FilterOperator", 
->     "sap/ui/model/json/JSONModel"];
+>     "sap/ui/model/json/JSONModel"
+> ];
 > sap.ui.define([
 >   ...dependencies
 > ], (Controller, Filter, FilterOperator, JSONModel) => {
@@ -232,13 +175,153 @@ The usage of template literals with one or more expressions in the context of th
 > ```
 > // Do NOT use template literals with one or more
 > // expressions inside an sap.ui.define or sap.ui.require call.
-> const sLibName = `ui/core`
+> const sLibName = `ui/core`;
 >  
 > sap.ui.define([
->   `sap/{sLibName}/mvc/Controller`
+>   `sap/${sLibName}/mvc/Controller`
 > ], (Controller) => {
 > });
 > ```
+
+
+
+<a name="loio0cb44d7a147640a0890cefa5fd7c7f8e__section_EHR"/>
+
+## Async Functions and Event Handlers
+
+
+
+### SAPUI5 Lifecycle Hooks
+
+Do **NOT** use async functions when implementing predefined SAPUI5 lifecycle hook methods. SAPUI5 might introduce an optional return type for such functions later. Using async functions here already would result in a return value that might conflict with such a later change.
+
+Lifecycle hook methods should also refrain from returning a value in their implementation. The lifecycle hooks include the following methods:
+
+
+<table>
+<tr>
+<th valign="top" align="center">
+
+Framework Class
+
+</th>
+<th valign="top" align="center">
+
+Lifecycle Hooks
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+`sap/ui/core/mvc/Controller`
+
+</td>
+<td valign="top">
+
+`onInit()`
+
+`onExit()`
+
+`onBeforeRendering()`
+
+`onAfterRendering()`
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`sap/ui/core/Element`
+
+`sap/ui/core/Control`
+
+</td>
+<td valign="top">
+
+`init()`
+
+`exit()`
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`sap/ui/core/Control`
+
+</td>
+<td valign="top">
+
+`onBeforeRendering()`
+
+`onAfterRendering()`
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`sap/ui/core/Component`
+
+`sap/ui/core/UIComponent`
+
+</td>
+<td valign="top">
+
+`init()`
+
+`exit()`
+
+`onActivate()`
+
+`onDeactivate()`
+
+</td>
+</tr>
+</table>
+
+> ### Restriction:  
+> **Not supported** 
+> 
+> ```
+> sap.ui.require(["sap/ui/core/mvc/Controller"], (Controller) => {
+>   return Controller.extend("my.controller.Sample", {
+>       // Do NOT use async event handlers for lifecycle hooks such as "onInit" or "onExit"
+>       onInit: async() => {
+>           await doSomething();
+>       },
+>       onExit: async() => {
+>           await doSomethingOnExit();
+>       }
+>   });
+> });
+> ```
+
+
+
+### Control Event Listeners
+
+You can implement an asynchronous event handler for control events. However, SAPUI5 directly invokes the event handler without taking into account the returned Promise or any execution order.
+
+> ### Example:  
+> **Supported usage** 
+> 
+> ```
+> sap.ui.require(["sap/m/Button"], (Button) => {
+>     const oButton = new Button({
+>         text: "Press me",
+>         press: async() => { // async "press" event handler
+>           await doSomethingAsync();
+>         }
+>     });
+> });
+> ```
+
+> ### Caution:  
+> Error Handling
+> 
+> Errors in asynchronous event handlers must be carefully managed. If you use an `await` inside an event handler and it throws an error, this typically won't be caught by the control that fired the event.
 
 
 
@@ -298,7 +381,7 @@ Do **not** use an expression, only a literal, in the class name parameter inside
 
 
 
-### Variable Usage as Class Name
+### Variable Usages as Class Name
 
 Do **not** use a variable as the class name parameter inside the `extend` call.
 
@@ -318,7 +401,7 @@ Do **not** use a variable as the class name parameter inside the `extend` call.
 
 
 
-### Template Literal as Class Name
+### Template Literals as Class Name
 
 The usage of template literals with one or more expressions as the class name parameter inside the `extend` call is **not** supported.
 
@@ -339,20 +422,13 @@ The usage of template literals with one or more expressions as the class name pa
 > **Not supported** 
 > 
 > ```
-> // Do NOT use template literals with one or more
-> // expressions inside the extend call
+> // Do NOT use template literals with one or more expressions inside the extend call
 > const sControllerPath = "my.app.controller.";
 > sap.ui.define([
 >     "sap/ui/core/mvc/Controller"
 > ], (Controller) => {
 >     "use strict";
->     return Controller.extend(`{sControllerPath}MyController`, {});
-> });// Using template literals without any expressions inside the extend call
-> sap.ui.define([
->     "sap/ui/core/mvc/Controller"
-> ], (Controller) => {
->     "use strict";
->     return Controller.extend(`my.app.controller.MyController`, {});
+>     return Controller.extend(`${sControllerPath}MyController`, {});
 > });
 > ```
 
@@ -397,7 +473,7 @@ An SAPUI5 library is typically initialized via an accompanying `library.js`. Wit
 
 
 
-### Expression as Parameter
+### Expressions as Parameter
 
 Do **not** use an expression for the library name when initializing a library.
 
@@ -405,7 +481,7 @@ Do **not** use an expression for the library name when initializing a library.
 > **Not supported** 
 > 
 > ```
-> // Using template literals without any expressions inside the extend call// Do NOT use an expression for the library name when initializing a library
+> // Do NOT use an expression for the library name when initializing a library
 > const libraryName = "lib";
 > sap.ui.define([
 >     "sap/ui/core/Lib"
@@ -419,7 +495,7 @@ Do **not** use an expression for the library name when initializing a library.
 
 
 
-### Variable Usage as Parameter
+### Variable Usages as Parameter
 
 Do **not** use a variable for the library name when initializing a library.
 
@@ -441,7 +517,7 @@ Do **not** use a variable for the library name when initializing a library.
 
 
 
-### Spread Element as Parameter
+### Spread Elements as Parameter
 
 Do **not** use a spread element for the library name when initializing a library.
 
@@ -465,7 +541,7 @@ Do **not** use a spread element for the library name when initializing a library
 
 
 
-### Template Literal as Parameter
+### Template Literals as Parameter
 
 Do **not** use a template literal with one or more expressions for the library name when initializing a library.
 
@@ -481,7 +557,7 @@ Do **not** use a template literal with one or more expressions for the library n
 > ], (Library) => {
 >     "use strict";
 >     const thisLib = Library.init({
->         name: "my.{libraryName}"
+>         name: `my.${libraryName}`
 >     });
 > });
 > ```

@@ -2,7 +2,7 @@
 
 # Value Help as a Dropdown List
 
-If your value help contains a fixed number of values, a dropdown list will be rendered.
+If your value help contains a fixed number of values, a dropdown list is rendered.
 
 For more information on how value help annotations are set in CDS, search for *UI Annotations* in the documentation of your SAP NetWeaver version on the SAP Help Portal at [https://help.sap.com/viewer/p/SAP\_NETWEAVER](https://help.sap.com/viewer/p/SAP_NETWEAVER).
 
@@ -47,7 +47,7 @@ This is the rendering result:
 
 If the entity set of a value help has a fairly stable number of instances, you can render an input field with a value help and dropdown list box \(`sap.m.ComboBox` and in cases of multi selection a `sap.m.MultiComboBox`\) using the annotation `Common.ValueListWithFixedValues`.
 
-In the following example the currency code is implemented as a dropdown list box:
+In the following example, the currency code is implemented as a dropdown list box:
 
 > ### Sample Code:  
 > XML Annotation
@@ -84,7 +84,6 @@ In the following example the currency code is implemented as a dropdown list box
 > ABAP CDS Annotation
 > 
 > ```
-> 
 > annotate view PRODUCTS with {
 > 	@Consumption.valueHelpDefinition:
 > 	[{
@@ -192,4 +191,195 @@ You can use `FilterRestrictions` annotations and set the `AllowedExpressions` pr
 >     ]
 > }
 > ```
+
+
+
+### Using a Radio Button Group to Display a Fixed Value List
+
+If the value help has a fixed set of values, you can render the value help as a radio button group instead of a dropdown list. To do this, you can use the `Common.ValueListShowValuesImmediately` annotation or configure the format option in the `manifest.json` file as `fieldEditStyle="RadioButtons"`.
+
+By default, the radio button group is rendered in a vertical layout. You can also configure the radio button group to render in a horizontal layout by setting `radioButtonsHorizontalLayout` as `true` in the `manifest.json` file.
+
+
+
+> ### Note:  
+> -   Radio buttons support only those fields with `ValueListWithFixedValues :true` and `ValueList` annotation.
+> 
+> -   The `ValueListParameterInOut` or `ValueListParameterOut` annotation must refer to the field itself using the `LocalDataProperty` parameter.
+> 
+> -   The radio button labels are obtained from the `Common.Text` annotation. The labels can also be obtained from the `ValueListParameterInOut` or `ValueListParameterOut` annotation. The `TextArrangement` annotation isn’t supported.
+> 
+> -   We allow the use of a radio button group only for fields that contain non-Boolean values as the value list.
+> 
+> -   We don't recommend the use of radio button group for non-mandatory fields, because of their default selection behavior.
+
+> ### Tip:  
+> We recommend the use of a radio button group for fields with a value list that has no more than 8 values. For more information, see [Radio Button](https://experience.sap.com/fiori-design-web/radio-button/#do-not-use-the-radio-button-if).
+
+> ### Restriction:  
+> -   Radio buttons don’t support multiple value lists and value lists within the `ValueListRelevantQualifiers` annotation.
+> 
+> -   Radio buttons must not be used for value lists with dependencies as specified in the `ValueListParameterInOut` or `ValueListParameterIn` annotation.
+> 
+> -   Radio buttons don't consider the filters specified in the `ValueListParameterConstant` annotation, thereby enabling all values to remain unfiltered and displayed on the UI.
+
+The data element `FieldWithRadioButtons` is displayed as a radio button group using the `Common.ValueListShowValuesImmediately` annotation as shown in the following sample code:
+
+> ### Sample Code:  
+> XML Annotation
+> 
+> ```
+> <Annotations Target="sap.fe.core.ValueHelpRadioButtons.RootElement/PropWithValueList">
+>   <Annotation Term="Common.Label" String="Radio button field via annotation"/>
+>   <Annotation Term="Common.ValueListWithFixedValues" Bool="true">
+>     <Annotation Term="Common.ValueListShowValuesImmediately" Bool="true"/>
+>   </Annotation>
+>   <Annotation Term="Common.ValueList">
+>     <Record Type="Common.ValueListType">
+>       <PropertyValue Property="Label" String="Value list with fixed values"/>
+>       <PropertyValue Property="CollectionPath" String="FixedValueListEntity"/>
+>       <PropertyValue Property="Parameters">
+>         <Collection>
+>           <Record Type="Common.ValueListParameterInOut">
+>             <PropertyValue Property="LocalDataProperty" PropertyPath="PropWithValueList"/>
+>             <PropertyValue Property="ValueListProperty" String="KeyProp"/>
+>           </Record>
+>         </Collection>
+>       </PropertyValue>
+>     </Record>
+>   </Annotation>
+> </Annotations>
+> ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> No ABAP CDS annotation sample is available. Please use the local XML annotation.
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> FieldWithRadioButtons  : String @(Common: {
+> 		ValueListWithFixedValues                                       : true,
+> 		ValueListWithFixedValues.@Common.ValueListShowValuesImmediately: true,
+> 		ValueList                                                      : {
+> 			CollectionPath: 'FixedValueListEntity',
+> 			Parameters    : [
+> 				{
+> 					$Type            : 'Common.ValueListParameterInOut',
+> 					LocalDataProperty: FieldWithRadioButtons,
+> 					ValueListProperty: 'KeyProp'
+> 				}
+> 			]
+> 		}
+> });
+>  
+> @cds.autoexpose
+> entity FixedValueListEntity {
+> 		key KeyProp     : Integer @Common.Text : Description;
+> 			Description : String
+> }
+> ```
+
+  
+  
+**Radio Buttons in Vertical Layout Using Annotation**
+
+![](images/Radio_button-vertical_layout_6560590.png "Radio Buttons in Vertical Layout Using Annotation")
+
+The data element `FieldWithFixedValueList` is rendered as a radio button group in a horizontal layout by setting the format option `fieldEditStyle= "RadioButton"` in the `manifest.json` file as shown in the following sample code:
+
+> ### Sample Code:  
+> XML Annotation
+> 
+> ```
+> <Annotations Target="sap.fe.core.ValueHelpRadioButtons.RootElement/PropWithValueList">
+>   <Annotation Term="Common.Label" String="Radio button field via annotation"/>
+>   <Annotation Term="Common.ValueListWithFixedValues" Bool="true">
+>   </Annotation>
+>   <Annotation Term="Common.ValueList">
+>     <Record Type="Common.ValueListType">
+>       <PropertyValue Property="Label" String="Value list with fixed values"/>
+>       <PropertyValue Property="CollectionPath" String="FixedValueListEntity"/>
+>       <PropertyValue Property="Parameters">
+>         <Collection>
+>           <Record Type="Common.ValueListParameterInOut">
+>             <PropertyValue Property="LocalDataProperty" PropertyPath="PropWithValueList"/>
+>             <PropertyValue Property="ValueListProperty" String="KeyProp"/>
+>           </Record>
+>         </Collection>
+>       </PropertyValue>
+>     </Record>
+>   </Annotation>
+> </Annotations>
+> ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> No ABAP CDS annotation sample is available. Please use the local XML annotation.
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> FieldWithRadioButtonsViaManifest  : String @(Common: {
+> 		ValueListWithFixedValues    : true,
+> 		ValueList                   : {
+> 			CollectionPath: 'FixedValueListEntity',
+> 			Parameters    : [
+> 				{
+> 					$Type            : 'Common.ValueListParameterInOut',
+> 					LocalDataProperty: FieldWithRadioButtonsViaManifest,
+> 					ValueListProperty: 'KeyProp'
+> 				}
+> 			]
+> 		}
+> });
+>  
+> @cds.autoexpose
+> entity FixedValueListEntity {
+> key KeyProp     : Integer @Common.Text : Description;
+>     Description : String
+> }
+>  
+> UI.FieldGroup #MyFieldGroup : {
+>     Label: 'Line item data',
+>     Data : [
+>       {Value: FieldWithRadioButtonsViaManifest}
+> 	]
+> }
+>  
+> 
+> 
+> ```
+
+> ### Sample Code:  
+> manifest.json
+> 
+> ```
+> ...
+> "controlConfiguration": {
+> 	"@com.sap.vocabularies.UI.v1.FieldGroup#MyFieldGroup": {
+> 		"fields": {
+> 			"DataField::FieldWithRadioButtonsViaManifest": {
+> 				"formatOptions": {
+> 					"fieldEditStyle"              : "RadioButtons",
+> 					"radioButtonsHorizontalLayout": true
+> 				}
+> 			}
+> 		}
+> 	}
+> }
+> ...
+> 
+> 
+> ```
+
+
+
+### Radio Buttons in Horizontal Layout Using Manifest Setting
+
+![](images/Radio_button-horizontal_layout_a267511.png)
 

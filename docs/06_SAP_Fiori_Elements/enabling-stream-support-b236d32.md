@@ -270,7 +270,7 @@ You can click on the document link to open the content of the stream property. S
 
 An avatar is rendered instead of the icon and link representation when one of the following two conditions is fulfilled:
 
--   The `Edm.Stream` property is annotated with `UI.IsImage` which, in turn, is annotated with `Common.IsNaturalPerson`..
+-   The `Edm.Stream` property is annotated with `UI.IsImage` which, in turn, is annotated with `Common.IsNaturalPerson`.
 
 -   The `Core.MediaType` annotation starts with 'image/', as in 'image/gif'
 

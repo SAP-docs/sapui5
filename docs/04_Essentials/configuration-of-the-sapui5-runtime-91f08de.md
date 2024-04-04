@@ -42,6 +42,9 @@ UI5 supports different possibilities to provide values for the available configu
 Configuration options must be provided in kebab-case notation, i.e. as hyphenated names, starting with the `sap-ui` prefix, which serves to distinguish UI5 configuration options from options defined by others. If a configuration option is defined multiple times, the first match will be applied.
 
 > ### Note:  
+> The SAPUI5 configuration options now follow a consistent naming scheme based on kebab-case notation. Configuration options in older framework versions or code samples \(especially those from before SAPUI5 1.120\) may follow the former camelCase notation. Typically, you should now use \(or search for\) the newer names, e.g. `log-level` instead of `logLevel`.
+
+> ### Note:  
 > The `sap-ui` prefix must be omitted for options provided in `globalThis["sap-ui-config"]`. The options given there are prefixed with `sap-ui` implicitly.
 
 As the configuration is evaluated during bootstrap, the configuration object must be created before SAPUI5 is bootstrapped; it cannot be evaluated otherwise. As a consequence, using the global configuration object requires another script tag referencing a file containing the configuration \(see the example in *\[2\] Global Configuration Object*\).

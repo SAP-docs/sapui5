@@ -65,7 +65,7 @@ The binding context for the unnamed model is already preset. By default, if the 
 
 ## General Structure of a Reuse Component Project
 
-A reuse component that can be used within a SAP Fiori elements-based application cannot be used in a freestyle application. Provide two separate components that refer to a common implementation.
+A reuse component that can be used within a SAP Fiori elements-based application cannot be used in a freestyle SAPUI5 application. Provide two separate components that refer to a common implementation.
 
 **Stable IDs**
 

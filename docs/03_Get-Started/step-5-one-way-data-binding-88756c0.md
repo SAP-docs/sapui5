@@ -22,48 +22,38 @@ You can view and download all files in the Demo Kit at [Data Binding - Step 5](h
 
 
 
-## webapp/index.js
+## webapp/Component.js
+
+Insert the highlighted code into the `Component.js` file. The `init` function calls the init function of its parent, retrieves the default model instance bound to the component, and sets the default binding mode to one-way data binding.
 
 ```js
-sap.ui.require([
-	"sap/ui/model/json/JSONModel",
-	"sap/ui/core/mvc/XMLView",
+sap.ui.define([
+	"sap/ui/core/UIComponent",
 	"sap/ui/model/BindingMode"
-], function (JSONModel, XMLView, BindingMode) {
+], (UIComponent, BindingMode) => {
 	"use strict";
 
-	// Attach an anonymous function to the SAPUI5 'init' event
-	sap.ui.getCore().attachInit(function () {
-		// Create a JSON model from an object literal
-		var oModel = new JSONModel({
-			firstName: "Harry",
-			lastName: "Hawk",
-			enabled: true,
-			panelHeaderText: "Data Binding Basics"
-		});
+	return UIComponent.extend("ui5.databinding.Component", {
+		metadata : {
+			interfaces: ["sap.ui.core.IAsyncContentCreation"],
+			manifest: "json"
+		},
 
-		oModel.setDefaultBindingMode(BindingMode.OneWay);
+		init() {
+			// call the init function of the parent
+			UIComponent.prototype.init.apply(this, arguments);
 
-
-		// Assign the model object to the SAPUI5 core
-		sap.ui.getCore().setModel(oModel);
-
-		// Display the XML view called "App"
-		new XMLView({
-			viewName: "sap.ui.demo.db.view.App"
-		}).placeAt("content");
+			this.getModel().setDefaultBindingMode(BindingMode.OneWay);
+		}
 	});
 });
-
 ```
 
-Insert the single highlighted line immediately after the creation of the model object in `index.js`.
-
-Now, no matter what state the checkbox is in, the input fields remain open for input because one-way data binding ensures that data flows only from the model to the UI, but never in the other direction.
+Now, no matter what state the checkbox is in, the input fields remain open for input, because one-way data binding ensures that data flows only from the model to the UI, but never in the other direction.
 
 The binding mode \(one-way or two-way\) is set on the model itself. Therefore, unless you specifically alter it, a binding instance will always be created using the model's default binding mode.
 
-Should you wish to alter the binding mode, then there are two ways of doing this:
+Should you wish to alter the binding mode, you have two ways of doing this:
 
 -   Alter the model's default binding mode. This is the approach used above.
 

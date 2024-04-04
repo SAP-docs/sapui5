@@ -185,7 +185,7 @@ You can define a chart against a draft-enabled entity. In this case, only active
 
 ### Enabling the Chart Facet in a List Report
 
-You can configure a chart to be part of the content area via the `manifest.json`. For more information, see the section *Enabling the ALP in SAP Fiori Elements for OData V4* in [Descriptor Configuration for the Analytical List Page](descriptor-configuration-for-the-analytical-list-page-2a9df06.md).
+You can configure a chart to be part of the content area using the `manifest.json`. For more information, see the section *Enabling the ALP in SAP Fiori Elements for OData V4* in [Descriptor Configuration for the Analytical List Page](descriptor-configuration-for-the-analytical-list-page-2a9df06.md).
 
 
 
@@ -355,23 +355,25 @@ For charts to work, the entity set must support aggregation. SAP Fiori elements 
     > ```
     > <Annotations Target="com.c_salesordermanage_sd_aggregate.SalesOrderManage">
     >     <Annotation Term="Aggregation.ApplySupported">
-    >         <Annotation Term="Analytics.AggregatedProperty">
-    >             <Record Type="Analytics.AggregatedPropertyType">
-    >                 <PropertyValue Property="Name" String="minPrice"/>
-    >                 <PropertyValue Property="AggregationMethod" String="min"/>
-    >                 <PropertyValue Property="AggregatableProperty" PropertyPath="NetPricing"/>
-    >                 <Annotation Term="Common.Label" String="Minimum Net Price"/>
-    >             </Record>
-    >         </Annotation>
-    >         <Annotation Term="Analytics.AggregatedProperty" Qualifier="max">
-    >             <Record Type="Analytics.AggregatedPropertyType">
-    >                 <PropertyValue Property="Name" String="maximumPrice"/>
-    >                 <PropertyValue Property="AggregationMethod" String="max"/>
-    >                 <PropertyValue Property="AggregatableProperty" PropertyPath="NetPricing"/>
-    >                 <Annotation Term="Common.Label" String="Maximum Net Price"/>
-    >             </Record>
-    >         </Annotation>
+    >         …
+    >         …
     >     </Annotation>
+    >     <Annotation Term="Analytics.AggregatedProperty">
+    >         <Record Type="Analytics.AggregatedPropertyType">
+    >             <PropertyValue Property="Name" String="minPrice"/>
+    >             <PropertyValue Property="AggregationMethod" String="min"/>
+    >             <PropertyValue Property="AggregatableProperty" PropertyPath="NetPricing"/>
+    >             <Annotation Term="Common.Label" String="Minimum Net Price"/>
+    >          </Record>
+    >     </Annotation>
+    >     <Annotation Term="Analytics.AggregatedProperty" Qualifier="max">
+    >         <Record Type="Analytics.AggregatedPropertyType">
+    >             <PropertyValue Property="Name" String="maximumPrice"/>
+    >             <PropertyValue Property="AggregationMethod" String="max"/>
+    >             <PropertyValue Property="AggregatableProperty" PropertyPath="NetPricing"/>
+    >             <Annotation Term="Common.Label" String="Maximum Net Price"/>
+    >          </Record>
+    >     </Annotation>   
     > </Annotations>
     > ```
 
@@ -557,8 +559,6 @@ For charts to work, the entity set must support aggregation. SAP Fiori elements 
 > The following restrictions apply regarding the support of the chart control:
 > 
 > -   Charts currently don't support parameterized entities.
-> 
-> -   Filter fields coming from associated entity sets are not displayed in the filter tabs during chart personalization.
 > 
 > -   Properties such as measures, dimensions, and text associations that come from associated entity sets are currently not supported.
 > 

@@ -22,7 +22,7 @@ At the time the binding is resolved, `field>Value` refers to `meta>/dataServices
 
 <Label text="Phone"/>
 <Text text="{path : 'PhoneNumber', type : 'sap.ui.model.odata.type.String', constraints : {'maxLength':'30'}}" />
-Custom Formatter Functions
+
 ```
 
 

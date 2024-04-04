@@ -6,7 +6,7 @@ SAP Fiori elements handles table groupings automatically.
 
 The grouping of rows is supported in analytical tables \(`sap.ui.Table.AnalyticalTable`\) and responsive tables \(`sap.m.Table`\). Grid tables and tree tables are not supported.
 
-Table grouping of rows looks like this:
+An example of table grouping of rows is shown in the following screenshot:
 
 ![](images/Table_Grouping_b36df77.png)
 
@@ -538,6 +538,13 @@ You can see the grouping applied on the *Country* property, and the totals for t
 End users can always change groups and totals via the column header and the aggregation icon of the analytical table:
 
 ![](images/ALP_Changing_Groupings_and_Totals_d94d57a.png)
+
+> ### Note:  
+> If no `PresentationVariant` is defined for the analytical table, a total is provided by default for all the columns with an aggregable property.
+> 
+> If a PresentationVariant is defined, a total is provided for the columns with aggregable properties listed in the `Total` attribute of the `PresentationVariant`.
+> 
+> If the `Total` attribute is defined but empty, total isn't provided. If the `Total` attribute is missing, a total is provided by default for all the columns with an aggregable property.
 
 
 

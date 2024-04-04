@@ -315,7 +315,12 @@ The third argument of the base Unit type constructor is a list of dynamic format
 
 <a name="loio8e618a8d93cb4f92adc911b96047eb8d__section_LUM"/>
 
-## Legacy Unit Mapping
+## Legacy Unit Mapping \(deprecated\)
+
+> ### Caution:  
+> **Legacy unit mapping is deprecated as of SAPUI5 1.122.0**
+> 
+> With UI5 version 1.122.0, this map is no longer maintained; the state of this mapping corresponds to UI5 version 1.119.0.
 
 With the upgrade of the CLDR version from 35.1 to 41, released with SAPUI5 version 1.110, some unit keys have changed. To support the formatting of legacy unit keys, a mapping has been added. A user is able to load legacy unit keys from his back end, which are then mapped to the new unit keys. When parsing user input, only the new unit keys are returned. Updating or changing entries containing legacy unit keys results in replacing the legacy unit key with a new unit key.
 

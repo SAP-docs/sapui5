@@ -364,6 +364,8 @@ If a field is annotated with `FieldControl` set to `mandatory`, an asterisk \(\*
 
 If you shift your focus away from the input field of a row, the current row is converted immediately to draft.
 
+Deleting an empty row clears its contents and removes any error messages related to it. It is then replaced with a new empty row.
+
 
 
 ### Enabling and Disabling Empty Row Mode

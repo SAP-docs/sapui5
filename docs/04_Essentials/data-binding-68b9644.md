@@ -11,15 +11,15 @@ You use data binding to bind UI elements to data sources to keep the data in syn
 
 SAPUI5 follows the "Model View Controller" \(MVC\) paradigm, which means that we clearly separate data sources \(model\), UI \(view\), and application logic \(controller\) from each other. Data binding defines how models and views communicate with each other.
 
-Depending on which external data source you use, you can choose between different model types to represent it. SAPUI5 supports OData V4 \(with restrictions\), OData V2, JSON, and XML models.
+Depending on which external data source you use, you can choose between different model types to represent it. SAPUI5 supports OData V4, OData V2, JSON, and XML models.
 
 There are also internal data sources that are defined in the app for specific purposes. For those, an app contains the following models:
 
 -   The **resource model** is used in communication with the resource bundle that contains translatable texts in multiple languages.
 
--   The **device model** holds device-specific settings, which can be retrieved from the `sap/ui/Device` module provided by the framework.
-
 -   **View models** can be, for example, JSON models that communicate with a corresponding JSON object. JSON data can also be edited in the app, but they are not stored - as soon as you refresh the browser or restart the app, the changes are reset.
+
+-   A JSON model can be used together with the `sap/ui/Device` module to create a **device model** that contains device-specific settings. For an example, see our Walkthrough tutorial, [Step 35: Device Adaptation](../03_Get-Started/step-35-device-adaptation-d63a15e.md).
 
 
 Most of the models are client-side models. This means that all data is initially loaded to the model when the app is started. All actions performed on the data are only executed on the client, and are only sent back to the data source when this is triggered by the app. Client-side models are therefore only recommended for small data sets.

@@ -50,21 +50,6 @@ You can add criticality to an action button via annotations. For more informatio
 
 
 
-<a name="loiof65e8b196335457cbfc891418ec25cfd__section_igr_pyx_qmb"/>
-
-## Additional Features in SAP Fiori Elements for OData V2
-
-> ### Note:  
-> In non-draft applications, users can choose the *Save and Edit* button to save the current changes. The object page stays in edit mode so that they can continue editing. You can enable this feature via SAPUI5 Visual Editor. For more information, see [Adapting the UI: List Report and Object Page](adapting-the-ui-list-report-and-object-page-0d2f1a9.md).
-> 
-> If this feature is enabled, you have to make following changes:
-> 
-> -   Change the type of the *Save and Edit* button to `Emphasized` and of the *Save* button to `Transparent`. You can do so by changing the `Type` property of both buttons in SAPUI5 Visual Editor.
-> 
-> -   Place the *Save and Edit* button as the first button in the footer and the *Save* button as the second button, using SAPUI5 Visual Editor.
-
-
-
 <a name="loiof65e8b196335457cbfc891418ec25cfd__section_ayc_fnz_qsb"/>
 
 ## Additional Features in SAP Fiori Elements for OData V4

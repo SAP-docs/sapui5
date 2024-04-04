@@ -4,8 +4,6 @@
 
 Global side effects are those side effects that are defined without any source properties or source entities.
 
-You can use [SAP Fiori tools](https://help.sap.com/viewer/product/SAP_FIORI_tools/Latest/en-US), which is a set of extensions for SAP Business Application Studio and Visual Studio Code, to build your apps.
-
 > ### Note:  
 > Global side effecst are only applicable to draft-enabled applications.
 

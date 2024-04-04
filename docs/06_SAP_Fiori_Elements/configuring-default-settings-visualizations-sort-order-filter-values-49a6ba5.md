@@ -585,7 +585,10 @@ The `UI.Chart` annotation is applicable for the following:
 > -   The information provided in the section isn't applicable to the object page.
 > 
 > -   In a multiple view scenario, the following logic is used to fetch the `UI.PresentationVariant` annotation only if it is undefined. For more information about the multiple view configuration, see [Defining Multiple Views on a List Report Table - Multiple Table Mode](defining-multiple-views-on-a-list-report-table-multiple-table-mode-37aeed7.md) and [Defining Multiple Views on a List Report with Different Entity Sets and Table Settings](defining-multiple-views-on-a-list-report-with-different-entity-sets-and-table-settings-b6b59e4.md).
+> 
 > -   In SAP Fiori elements for OData V4, the information provided in the section isn't applicable to the analytical list page \(ALP\) flavor. For more information about the configuration in ALP, see [Descriptor Configuration for the Analytical List Page](descriptor-configuration-for-the-analytical-list-page-2a9df06.md).
+> 
+>     However, SAP Fiori elements for OData V4 supports rendering of tables using the `PresentationVariant` or `SelectionPresentationVariant` annotation in an object page facet. For more information, see [Defining and Adapting Sections](defining-and-adapting-sections-facfea0.md).
 
 You can control the default visualization by using a setting in the `manifest.json` file. This setting allows you to define `UI.SelectionPresentationVariant` \(with a qualifier\). When `UI.SelectionPresentationVariant` is defined, you must use the associated annotations such as `UI.SelectionVariant` \(for filter bar defaults\) and `UI.PresentationVariant` \(for default visualization\).
 
@@ -605,7 +608,7 @@ Defining the manifest setting is optional. If the setting isn’t defined, SAP F
 
 
 > ### Note:  
-> -   In all the preceding cases provided, if a `UI.SelectionPresentationVariant` is found but the associated `UI.PresentationVariant` is **not** found, SAP Fiori elements raises an error and stops loading the application. SAP Fiori elements behaves in the same manner when you define a `UI.SelectionPresentationVariant` correctly, but you miss to define a \(correct\) association to `UI.PresentationVariant`. Hence, you must always ensure to define the correct path for the default selection presentation variant in the manifest and the correct association to `UI.PresentationVariant`.
+> -   In all the preceding cases, if a `UI.SelectionPresentationVariant` is found but the associated `UI.PresentationVariant` is **not** found, SAP Fiori elements raises an error and stops loading the application. SAP Fiori elements behaves in the same manner when you define a `UI.SelectionPresentationVariant` correctly, but you miss to define a \(correct\) association to `UI.PresentationVariant`. Hence, you must always ensure to define the correct path for the default selection presentation variant in the manifest and the correct association to `UI.PresentationVariant`.
 > 
 > -   If a`UI.PresentationVariant` is found but the visualization isn't defined, then we fallback to default \(unqualified\) `UI.LineItem` \(or default `UI.Chart`\) annotation. If these annotations are not found, SAP Fiori elements renders an empty table \(or chart\), and the end users can still use the personalization of the control to configure the required table \(or chart\).
 
@@ -634,6 +637,7 @@ Application developers can also specify the `SelectionVariant` or `PresentationV
 >                         <PropertyValue Property="Ranges">
 >                             <Collection>
 >                                <Record Type="UI.SelectionRangeType">
+>                                    <PropertyValue Property="Sign" EnumMember="UI. SelectionRangeSignType/I" />
 >                                    <PropertyValue Property="Option" EnumMember="UI.SelectionRangeOptionType/EQ" />
 >                                    <PropertyValue Property="Low" String="A" />
 >                                 </Record>
@@ -647,6 +651,8 @@ Application developers can also specify the `SelectionVariant` or `PresentationV
 >      <PropertyValue Property="PresentationVariant" Path="@UI.PresentationVariant" />
 >    </Record>
 > </Annotation>
+> 
+>  
 > 
 > <Annotation Term="UI.PresentationVariant">
 >     <Record>
@@ -665,7 +671,6 @@ Application developers can also specify the `SelectionVariant` or `PresentationV
 >         </PropertyValue>
 >     </Record>
 > </Annotation>
-> 
 > ```
 
 > ### Sample Code:  
@@ -684,8 +689,9 @@ Application developers can also specify the `SelectionVariant` or `PresentationV
 >             SelectOptions : [{
 >                 PropertyName : OverallSDProcessStatus,
 >                 Ranges       : [{
+>                       Sign : #I,
 >                     Option : #EQ,
->                     Low    : 'A'
+>                    Low    : 'A'
 >                 }]
 >             }]
 >         },
@@ -697,7 +703,6 @@ Application developers can also specify the `SelectionVariant` or `PresentationV
 >         SortOrder      : [{Property : ID}],
 >         Visualizations : ['@UI.LineItem']
 >     }
-> 
 > ```
 
 For more information about the `UI.SelectionPresentationVariant`, see the version-specific sections in this topic.

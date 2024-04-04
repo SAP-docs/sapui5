@@ -32,7 +32,7 @@ The reuse component instance cannot only receive information about the object th
 ## Additional Features in SAP Fiori Elements for OData V2
 
 > ### Note:  
-> A reuse component that can be used within an SAP Fiori elements-based application cannot be used in a freestyle application. If reuse component owners want to provide the functionality for both types of applications, they need to provide two components, one for each use case.
+> A reuse component that can be used within an SAP Fiori elements-based application cannot be used in a freestyle SAPUI5 application. If reuse component owners want to provide the functionality for both types of applications, they need to provide two components, one for each use case.
 > 
 > We recommend factoring out as much coding as possible into artifacts that are shared by both components.
 
@@ -117,7 +117,7 @@ If the reuse component uses its own OData service, make sure you declare it as a
 ## Additional Features in SAP Fiori Elements for OData V4
 
 > ### Note:  
-> SAP Fiori elements for OData V4 is compatible with freestyle reuse components, but incompatible with SAP Fiori elements for OData V2 reuse components.
+> SAP Fiori elements for OData V4 is compatible with freestyle SAPUI5 reuse components, but incompatible with SAP Fiori elements for OData V2 reuse components.
 
 The following example embeds one reuse component:
 

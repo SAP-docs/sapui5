@@ -239,12 +239,20 @@ You can use the following values for the `"personalization"` setting:
 -   `object`: If you use the value `"object"`, you must also define the values `"column"`, `"sort"` and `"filter"`. If the table is an analytical table, you can also configure the `"group"`. In this case omitting a setting is treated as false, which prevents apps from getting new features in upcoming releases. You can see this in the sample code above, where the object is used as a value for an analytical table.
 
 
-> ### Note:  
-> -   Sorting and filtering is available for the properties visible in a column. For example, for properties with text arrangement set as `#TextFirst`, the property itself or its text can be sorted or grouped. For properties with text arrangement set as \#TextOnly, sorting and grouping is only available for their text. Filtering for properties, however, does not take into account their text arrangement. For example, filtering on the \#TextOnly properties is available for the property itself and not its texts. Filtering on its text may be available if no filter restriction is defined for the text property.
-> 
-> -   If a label is defined for a column within the `LineItem`, then this label is used in the *Sort* and *Group* menus if the column displays a single property. In the *Filter* menu, the property name is displayed instead.
-> 
-> -   For properties with text arrangement set as `#TextOnly`, if its text is annotated as `UI.Hidden = true`, then the annotation is ignored. This text property can still be sorted and grouped.
-> 
-> -   If a `sortOrder` is set using a presentation variant on a property with text arrangement set as `#TextOnly`, the sorting is applied on the property and not the text. The sort indicator will not appear in the header column containing the property, as the property is not visible on the table. This also applies for the sort and group tabs on the table personalization dialog.
+
+
+### Personalization for Properties with Text Arrangement
+
+Note the following when enabling personalization for properties that have a text arrangement annotation:
+
+-   Sorting and filtering is available for the properties visible in a column. For example, for properties with text arrangement set as `#TextFirst`, the property itself or its text can be sorted or grouped. For properties with text arrangement set as`#TextOnly`, sorting and grouping is only available for their text. Filtering for properties, however, does not take into account their text arrangement. For example, filtering on the `#TextOnly` properties is available for the property itself and not its texts. Filtering on its text may be available if no filter restriction is defined for the text property.
+
+-   If a label is defined for a column within the `LineItem`, then this label is used in the *Sort* and *Group* menus if the column displays a single property. In the *Filter* menu, the property name is displayed instead.
+
+-   For properties with text arrangement set as `#TextOnly`, if its text is annotated as `UI.Hidden = true`, then the annotation is ignored. This text property can still be sorted and grouped.
+
+-   If a `sortOrder` is set using a presentation variant on a property with text arrangement set as `#TextOnly`, the sorting is applied on the property and not the text. The sort indicator will not appear in the header column containing the property, as the property is not visible on the table. This also applies for the sort and group tabs on the table personalization dialog.
+
+-   If a column contains a property with a `TextArrangement` annotation and the target property of the `TextArrangement` is not part of the `lineItems`, this target property is not available in the personalization dialog under the *Columns* tab.
+
 

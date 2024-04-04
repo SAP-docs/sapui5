@@ -63,6 +63,9 @@ The following prerequisites apply:
 -   On the object page, *Mass Edit* is only available in edit mode.
 
 
+> ### Note:  
+> You can enable the mass edit feature for backend services based on CAP Node.js by setting a feature flag. For more information, see [https://cap.cloud.sap/docs/releases/dec23\#sapui5-mass-edit](https://cap.cloud.sap/docs/releases/dec23#sapui5-mass-edit).
+
 Once a user clicks on the *Mass Edit* button, a dialog opens showing all the editable and visible fields from the table. The user is able to set a value for every editable field of the selected records, or even clear all values for the field from the selected records in one go.
 
 The *Mass Edit* button isn't visible if the table entity has an update restriction set to static false. Visibility can also be controlled via a value for `UI.UpdateHidden` \(you can use a path-based value, but can only point to the parent path for a table on an object page or subobject page, and to a singleton in a list report table\).
@@ -106,7 +109,7 @@ The *Mass Edit* button isn't enabled if the update restriction points to a path 
 > 
 >     -   progress indicator fields
 > 
->     -   `DataFieldForAnnotation` based fields
+>     -   `DataFieldForAnnotation` based fields such as:
 > 
 >         -   micro chart based fields
 > 

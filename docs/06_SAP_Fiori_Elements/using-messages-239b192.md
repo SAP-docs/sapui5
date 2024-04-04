@@ -20,7 +20,7 @@ Back-end systems can generate either a state message or a transition message.
 
 
 > ### Note:  
-> If the back end sends a message with multiple target IDs, you must ensure that all the fields corresponding to the different targets are on the same page in the UI.
+> You can configure multiple targets in a single message rather than configuring each target in multiple messages. This type of configuration must be used only during special scenarios. One scenario is while some fields are individually correct but erroneous when considered collectively. For example, the begin date value surpasses the end date value. Another scenario is while highlighting the unit of measure value of an associated erroneous field. In these scenarios, you must ensure that the fields corresponding to different targets are on the same page in the UI.
 
 
 

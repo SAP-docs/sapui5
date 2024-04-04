@@ -17,7 +17,7 @@
 
 [Responsiveness Options: Example](responsiveness-options-example-69efbe7.md "When using SAP Fiori elements, you can make use of specific responsiveness options. For example, in pages that have toolbars (such as list report tables, object page tables, and smart chart toolbars), the system evaluates the com.sap.vocabularies.UI.v1.Importance for each field:")
 
-[Value Help as a Dropdown List](value-help-as-a-dropdown-list-2a0a630.md "If your value help contains a fixed number of values, a dropdown list will be rendered.")
+[Value Help as a Dropdown List](value-help-as-a-dropdown-list-2a0a630.md "If your value help contains a fixed number of values, a dropdown list is rendered.")
 
 [Using Images, Initials, and Icons](using-images-initials-and-icons-5760b63.md "SAP Fiori elements supports the use of images, initials, and icons.")
 

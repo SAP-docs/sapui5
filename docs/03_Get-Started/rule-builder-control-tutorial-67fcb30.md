@@ -36,6 +36,9 @@ You can model rules using an expression language. There are two expression langu
 
     `customer_name of the customer is equal to 'John`
 
+    > ### Caution:  
+    > Deprecated as of version 1.120.2. Instead, use expression Language 2.0 \(DMN SFEEL\).
+
 -   **Expression Language 2.0 \(DMN SFEEL\)**: Expression language 2.0 or DMN SFEEL is a subset of the Friendly Enough Expression Language \(FEEL\), provides a standard syntax for rule conditions, and reduces ambiguities while modeling a rule. A typical rule condition in expression language 2.0 is as shown below:
 
     `customer.customer name MATCHES 'John'`

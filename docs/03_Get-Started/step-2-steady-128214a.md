@@ -31,12 +31,12 @@ You can view and download all files at [Quick Start - Step 2](https://ui5.sap.co
 ```js
 sap.ui.define([
 	"sap/ui/core/mvc/XMLView"
-], function (XMLView) {
+], (XMLView) => {
 	"use strict";
 
-	XMLView.create({viewName: "Quickstart.App"}).then(function (oView) {
-		oView.placeAt("content");
-	});
+	XMLView.create({
+		viewName: "ui5.quickstart.App"
+	}).then((oView) => oView.placeAt("content"));
 });
 ```
 
@@ -52,7 +52,7 @@ Similar to the step before, the view is placed in the element with the `content`
 
 ```xml
 <mvc:View
-	controllerName="Quickstart.App"
+	controllerName="ui5.quickstart.App"
 	displayBlock="true"
 	xmlns="sap.m"
 	xmlns:mvc="sap.ui.core.mvc">
@@ -88,11 +88,11 @@ We outsource the controller logic to an app controller. The `.onPress` event now
 sap.ui.define([
 	"sap/ui/core/mvc/Controller",
 	"sap/m/MessageToast"
-], function (Controller, MessageToast) {
+], (Controller, MessageToast) => {
 	"use strict";
 
-	return Controller.extend("Quickstart.App", {
-		onPress: function () {
+	return Controller.extend("ui5.quickstart.App", {
+		onPress() {
 			MessageToast.show("Hello App!");
 		}
 	});

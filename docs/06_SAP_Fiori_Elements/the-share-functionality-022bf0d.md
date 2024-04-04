@@ -14,7 +14,7 @@ The *Share* functionality allows users to share the current application state us
 
 -   *Save as Tile*
 
-    When a user chooses this option, the corresponding *Save as Tile* dialog is displayed. When a user chooses the tile, the application page opens in the same state in which the tile was created. Application developers can customize the title and the sub-title of the tile. In the list report, a dynamic tile with a record count is created, where the applied filter is also taken into account.
+    When a user chooses this option, the corresponding *Save as Tile*When a user chooses this option, the link to the page opens in the default email client that is configured in the system. When a dialog is displayed. When a user chooses the tile, the application page opens in the same state in which the tile was created. Application developers can customize the title and the sub-title of the tile. In the list report, a dynamic tile with a record count is created, where the applied filter is also taken into account.
 
 -   *Share: Microsoft Teams*
 
@@ -33,6 +33,9 @@ The *Share* functionality allows users to share the current application state us
     -   As Card
 
         Communicate better with your co-workers using Microsoft Teams by providing a collaborative view that shows application content in a new window and enables you to have a meaningful conversation.
+
+        > ### Caution:  
+        > If your application contains sensitive and personal data, enabling the *Share: Microsoft Teams* › *As Card* option results in the transfer of this information outside the SAP S/4HANA environment. Application teams need to carefully consider whether such data should be excluded by providing the corresponding annotation. For sensitive personal data, you can use `com.sap.vocabularies.PersonalData.v1.IsPotentiallySensitive`, and for personal data you can use `com.sap.vocabularies.PersonalData.v1.IsPotentiallyPersonal`. If you enable this feature for your business users, use the applicable information channels to inform them accordingly.
 
 
     Please note the following:

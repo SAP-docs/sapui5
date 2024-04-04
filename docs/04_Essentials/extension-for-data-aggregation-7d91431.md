@@ -138,6 +138,8 @@ Use the `grandTotalAtBottomOnly` or `subtotalsAtBottomOnly` property with values
 
 Filters are provided to the list binding as described in [Filtering](filtering-5338bd1.md). The `Filter` objects are analyzed automatically to perform the filtering before the aggregation where possible using the `filter()` transformation. The remaining filters, including the provided `$filter` parameter of the binding, are applied after the aggregation either via the system query option `$filter` or within the system query option `$apply`, using again the `filter()` transformation.
 
+Note that `Filter` objects are not supported for aggregatable properties with an alias.For more information, see the `name` property of the `aggregate` map of the `oAggregation` parameter of [`v4.ODataListBinding#setAggregation`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataListBinding%23methods/setAggregation).
+
 
 
 <a name="loio7d914317c0b64c23824bf932cc8a4ae1__section_SBDA"/>

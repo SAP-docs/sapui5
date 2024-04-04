@@ -165,7 +165,7 @@ sap.ui.define([
 }); 
 ```
 
-The `this` context of a formatter function is generally set to the control \(or managed object\) that owns the binding. However, in XML views, the reference to the formatter is done in the view controller by putting a dot \(`.`\) in front of the name of the formatter function \(`{ formatter: '.myformatter' }`\). In this case, the formatter's `this` context is bound to the controller.
+The `this` context of a formatter function is generally set to the control \(or managed object\) that owns the binding. In XML views, however, the view should contain a reference to the formatter function, which resides in the view controller. This is done by putting a dot \(`.`\) in front of the name of the formatter function \(`{ formatter: '.myformatter' }`\). In this case, the formatter's `this` context is bound to the controller.
 
 ```xml
 <mvc:View

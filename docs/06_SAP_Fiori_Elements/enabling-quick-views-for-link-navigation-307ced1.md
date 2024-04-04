@@ -45,19 +45,18 @@ To do so, perform the following steps:
     > ```
 
     > ### Sample Code:  
-    > ABAP CDS Annotation
-    > 
     > ```
     > annotate view STTA_C_MP_PRODUCT with {
     >   @Consumption.semanticObject: 'EPMProduct'
     >   supplier;
-    > }
+    > }ABAP CDS
+    >                             Annotation
     > ```
 
 2.  In the metadata document, you can find the reference to the association end type. Check for a referential constraint that includes the identified property as `Dependent`. For the `Supplier` property in the entity type STTA\_C\_MP\_ProductType, that has a set of navigation properties, only `to_Supplier` includes the `Supplier` property as `Dependent`.
 
     ```
-    
+    ABAP CDS
     <Association Name="assoc_2CCAF987BA334B3BD1DF2404F50BC9C5" sap:content-version="1">
         <End Type="STTA_PROD_MAN.STTA_C_MP_ProductType" Multiplicity="1" Role="FromRole_assoc_2CCAF987BA334B3BD1DF2404F50BC9C5"/>
         <End Type="STTA_PROD_MAN.STTA_C_MP_SupplierType" Multiplicity="0..1" Role="ToRole_assoc_2CCAF987BA334B3BD1DF2404F50BC9C5"/>
@@ -227,9 +226,8 @@ To define a quick view for a source property with a `ReferentialConstraint` on a
     > 
     > ```
     > annotate ProductSupplier with {
-    >     @Common.SemanticObject : 'EPMProduct'
-    >     Supplier
-    > };
+    > Supplier @Common.SemanticObject: 'EPMProduct';
+    > }
     > ```
 
 2.  In the metadata document, you can find the reference to the association end type. In the `navigationProperties` of your entity, check for a `ReferentialConstraint` that includes the previously identified property \(`Supplier`\). This property must be in the property attributes of the `ReferentialConstraint`. In this example, it references the “`CustomerID`” property of the “`Customer`” entity \(the association end type\).
@@ -515,6 +513,9 @@ A quick view for link navigation is generated and can look like this:
 ![](images/Quick_View_for_Smart_Link_Navigation_c61cade.png)
 
 This video shows the step-by-step procedure for enabling quick views for link navigation: 
+
+> ### Note:  
+> If the user can't navigate to the target application, no link is displayed.
 
 For more information about the system behavior and configuration options, see [Configuring the Content of Quick Views](configuring-the-content-of-quick-views-c245ad7.md).
 

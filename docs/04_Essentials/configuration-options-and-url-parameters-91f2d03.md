@@ -7,6 +7,9 @@ The following tables show available configuration options.
 > ### Note:  
 > In earlier framework versions, the configuration options available in SAPUI5 could be found in the [API Reference via the `sap.ui.core.Configuration`](https://ui5.sap.com/#/api/sap.ui.core.Configuration). This legacy module has been deprecated with SAPUI5 1.120 and replaced by a modular, future-proof solution for configuration handling.
 
+> ### Note:  
+> The SAPUI5 configuration options now follow a consistent naming scheme based on kebab-case notation. Configuration options in older framework versions or code samples \(especially those from before SAPUI5 1.120\) may follow the former camelCase notation. Typically, you should now use \(or search for\) the newer names, e.g. `log-level` instead of `logLevel`.
+
 The available configuration options are given below the topic they belong to, e.g. **Localization**, **Theming**, etc. Often, these topics correspond to modules with the same name, which provide methods to retrieve and set the values of their associated configuration options.
 
 Some configuration options can also be set via URL parameters, which is indicated by an entry in the corresponding column in the tables below. URL parameter names are composed of the `sap-ui-` prefix together with the name of the configuration option, for example: `sap-ui-log-level=ALL`. An application may set the `ignore-url-parameters` option to `true` to disable configuration URL parameters.

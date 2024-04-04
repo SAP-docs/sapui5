@@ -10,7 +10,7 @@ You can use SAPUI5 flexibility to extend your SAP Fiori apps.
 
 ## Overview
 
-SAPUI5 flexibility \(see [SAPUI5 Flexibility: Adapting UIs Made Easy](../04_Essentials/sapui5-flexibility-adapting-uis-made-easy-a8e55aa.md)\) allows you to extend SAPUI5 freestyle or SAP Fiori elements applications without modifications of base artefacts. To use this type of extensibility, you need an adaptation project in SAP Business Application Studio. It allows you to make changes that are also available in key user adaptation \(see [SAPUI5 Flexibility: Enable Your App for UI Adaptation](../05_Developing_Apps/sapui5-flexibility-enable-your-app-for-ui-adaptation-f1430c0.md)\) as well as to extend views with XML fragments \(see [XML Fragments](../04_Essentials/xml-fragments-2c677b5.md)\) and extend controllers with controller extensions.
+SAPUI5 flexibility \(see [SAPUI5 Flexibility: Adapting UIs Made Easy](../04_Essentials/sapui5-flexibility-adapting-uis-made-easy-a8e55aa.md)\) allows you to extend freestyle SAPUI5 or SAP Fiori elements applications without modifications of base artefacts. To use this type of extensibility, you need an adaptation project in SAP Business Application Studio. It allows you to make changes that are also available in key user adaptation \(see [SAPUI5 Flexibility: Enable Your App for UI Adaptation](../05_Developing_Apps/sapui5-flexibility-enable-your-app-for-ui-adaptation-f1430c0.md)\) as well as to extend views with XML fragments \(see [XML Fragments](../04_Essentials/xml-fragments-2c677b5.md)\) and extend controllers with controller extensions.
 
 
 

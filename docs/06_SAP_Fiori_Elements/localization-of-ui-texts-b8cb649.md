@@ -3037,6 +3037,104 @@ Applications should overwrite the default text and replace "Item" with the concr
 <tr>
 <td valign="top">
 
+`M_PAGINATOR_ANNOUNCEMENT_TITLE_LOADED` 
+
+</td>
+<td valign="top">
+
+The "\{0\}" was loaded
+
+</td>
+<td valign="top">
+
+This text is used only by the screen reader programs, when the user clicks the paginator button to navigate through the next or the previous object, and the object loads successfully.
+
+`Parameter: {0} = title defined for the object`
+
+This key isn't used if no title is defined, and instead we use the following key: `M_PAGINATOR_ANNOUNCEMENT_OBJECT_LOADED`
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`M_PAGINATOR_TITLE_TOP` 
+
+</td>
+<td valign="top">
+
+You've reached the top of the list
+
+</td>
+<td valign="top">
+
+This text is used only by the screen reader programs. It is relevant when the user clicks the "Previous" paginator button while being positioned on the second object from the top. Once the top object is successfully loaded, the focus shifts to the other paginator button \("Next"\), and this text is read out by the screen reader programs.
+
+The screen reader program reads the combined text obtained from the `M_PAGINATOR_ANNOUNCEMENT_TITLE_LOADED` and `M_PAGINATOR_TITLE_TOP` keys.
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`M_PAGINATOR_TITLE_BOTTOM` 
+
+</td>
+<td valign="top">
+
+You've reached the end of the list
+
+</td>
+<td valign="top">
+
+This text is used only by the screen reader programs. It is relevant when the user clicks the "Next" paginator button while being positioned on the second-last object from the bottom. Once the last object is successfully loaded, the focus shifts to the other paginator button \("Previous"\), and the text is read out by screen reader programs.
+
+The screen reader program reads the combined text obtained from the `M_PAGINATOR_ANNOUNCEMENT_TITLE_LOADED` and `M_PAGINATOR_TITLE_BOTTOM` keys.
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`M_PAGINATOR_ANNOUNCEMENT_OBJECT_LOADED` 
+
+</td>
+<td valign="top">
+
+The object was loaded
+
+</td>
+<td valign="top">
+
+This text is used only by the screen reader programs when the user clicks the paginator button to load the next or the previous object. The object is successfully loaded but no title defined for the object.
+
+</td>
+<td valign="top">
+
+Applications should overwrite the default text and replace "object" with the concrete object.
+
+Example: *The sales order was loaded.*
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
 `ST_DRAFT_DATALOSS_POPUP_MESSAGE_CREATE` 
 
 </td>

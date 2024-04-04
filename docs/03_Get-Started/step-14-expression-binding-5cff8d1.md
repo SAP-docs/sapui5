@@ -20,113 +20,69 @@ Expression binding allows you to display a value on the screen that has been cal
 
 You can view and download all files in the Demo Kit at [Data Binding - Step 14](https://ui5.sap.com/#/entity/sap.ui.core.tutorial.databinding/sample/sap.ui.core.tutorial.databinding.14).
 
+1.  Add a new property called `priceThreshold` with a value of 20 to the `data.json` file.
 
+    **webapp/model/data.json**
 
-## webapp/view/App.view.xml
+    ```
+    {
+    	"firstName": "Harry",
+    	"lastName": "Hawk",
+    	"enabled": true,
+    	"address": {
+    		"street": "Dietmar-Hopp-Allee 16",
+    		"city": "Walldorf",
+    		"zip": "69190",
+    		"country": "Germany"
+    	},
+    	"salesAmount": 12345.6789,
+    	"priceThreshold": 20,
+    	"currencyCode": "EUR"
+    }
+    ```
 
-```xml
-...
-		</content>
-	</Panel>
-	<Panel headerText="{i18n>panel3HeaderText}" class="sapUiResponsiveMargin" width="auto">
-		<List headerText="{i18n>productListTitle}" items="{products>/Products}">
-			<items>
-				<ObjectListItem
-					press=".onItemSelected"
-					type="Active"
-					title="{products>ProductName}"
-					number="{
-						parts: [
-							{path: 'products>UnitPrice'},
-							{path: '/currencyCode'}
-						],
-						type: 'sap.ui.model.type.Currency',
-						formatOptions: { showMeasure: false }
-					}"
-					numberUnit="{/currencyCode}"
-					numberState="{= ${products>UnitPrice} > ${/priceThreshold} ? 'Error' : 'Success' }">
-					<attributes>
-						<ObjectAttribute text="{products>QuantityPerUnit}"/>
-						<ObjectAttribute title="{i18n>stockValue}"
-							text="{
-								parts: [
-									{path: 'products>UnitPrice'},
-									{path: 'products>UnitsInStock'},
-									{path: '/currencyCode'}
-								],
-								formatter: '.formatStockValue'
-							}"/>
-					</attributes>
-				</ObjectListItem>
-			</items>
-		</List>
-	</Panel>
-...
-```
+2.  In the `App.view.xml file`, add a new `numberState` property to the `ObjectListItem` element within the `List`. The value of this property is an expression that will be evaluated for each item. The expression checks each invoice value against the price threshold and returns a number state depending on the outcome.
 
-In the XML view, we add a new `numberState` property to the `ObjectListItem` element within the `List`. The value of this property is an expression that will be evaluated for each item.
+    **webapp/view/App.view.xml**
 
+    ```xml
+    ...
+    	<Panel headerText="{i18n>panel3HeaderText}" class="sapUiResponsiveMargin" width="auto">
+    		<List headerText="{i18n>productListTitle}" items="{products>/Products}">
+    			<items>
+    				<ObjectListItem
+    					press=".onItemSelected"
+    					type="Active"
+    					title="{products>ProductName}"
+    					number="{
+    						parts: [
+    							{path: 'products>UnitPrice'},
+    							{path: '/currencyCode'}
+    						],
+    						type: 'sap.ui.model.type.Currency',
+    						formatOptions: { showMeasure: false }
+    					}"
+    					numberUnit="{/currencyCode}"
+    					numberState="{= ${products>UnitPrice} > ${/priceThreshold} ? 'Error' : 'Success' }">
+    					<attributes>
+    						<ObjectAttribute text="{products>QuantityPerUnit}"/>
+    						<ObjectAttribute title="{i18n>stockValue}"
+    							text="{
+    								parts: [
+    									{path: 'products>UnitPrice'},
+    									{path: 'products>UnitsInStock'},
+    									{path: '/currencyCode'}
+    								],
+    								formatter: '.formatStockValue'
+    							}"/>
+    					</attributes>
+    				</ObjectListItem>
+    			</items>
+    		</List>
+    	</Panel>
+    ...
+    ```
 
-
-## webapp/index.js
-
-```js
-sap.ui.require([
-	"sap/ui/model/json/JSONModel",
-	"sap/ui/core/mvc/XMLView",
-	"sap/ui/model/resource/ResourceModel"
-], function (JSONModel, XMLView, ResourceModel) {
-	"use strict";
-
-	// Attach an anonymous function to the SAPUI5 'init' event
-	sap.ui.getCore().attachInit(function () {
-
-		var oProductModel = new JSONModel();
-		oProductModel.loadData("./model/Products.json");
-		sap.ui.getCore().setModel(oProductModel, "products");
-
-		var oModel = new JSONModel({
-			firstName: "Harry",
-			lastName: "Hawk",
-			enabled: true,
-			address: {
-				street: "Dietmar-Hopp-Allee 16",
-				city: "Walldorf",
-				zip: "69190",
-				country: "Germany"
-			},
-			salesAmount: 12345.6789,
-			priceThreshold: 20,
-			currencyCode: "EUR"
-		});
-
-		// Assign the model object to the SAPUI5 core
-		sap.ui.getCore().setModel(oModel);
-
-		var oResourceBundle = new ResourceModel({
-			bundleName: "sap.ui.demo.db.i18n.i18n",
-			supportedLocales: ["", "de"],
-			fallbackLocale: ""
-		});
-
-		sap.ui.getCore().setModel(oResourceModel, "i18n");
-
-		// Display the XML view called "App"
-		var oView = new XMLView({
-			viewName: "sap.ui.demo.db.view.App"
-		});
-
-		// Register the view with the message manager
-		sap.ui.getCore().getMessageManager().registerObject(oView, true);
-
-		// Insert the view into the DOM
-		oView.placeAt("content");
-	});
-});
-
-```
-
-We add a new property called `priceThreshold` against which each invoice value will be checked.
 
 As a result of binding an expression to the `numberState` property, the error status \(color\) of the price field will change depending on the invoice value.
 

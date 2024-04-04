@@ -58,7 +58,7 @@ Description
 <tr>
 <td valign="top">
 
-`KeyUserConnector`
+`BtpServiceConnector`
 
 </td>
 <td valign="top">
@@ -68,9 +68,33 @@ Description
 </td>
 <td valign="top">
 
-Used to connect key user adaptation and shared views on SAP BTP, Cloud Foundry environment
+Used to connect key user adaptation, shared views, **and end-user personalization** on SAP BTP, Cloud Foundry environment.
 
-For more information, see [Developing Applications Running Standalone](https://help.sap.com/docs/UI5_FLEXIBILITY_KEY_USER/0f8b49c4dfc94bc0bda25a19aa93d5b2/7f1c8c8aa7e1487a9d79a0b001e8060b.html/?&version=Cloud#adding-sapui5-flexibility-services-to-the-sapui5-bootstrap) and [Developing Applications Running in the SAP Cloud Portal Service](https://help.sap.com/docs/UI5_FLEXIBILITY_KEY_USER/0f8b49c4dfc94bc0bda25a19aa93d5b2/55433c585c5a43ef96d9b8d4bc4bc464.html/?&version=Cloud#adding-sapui5-flexibility-services-to-the-sapui5-bootstrap).
+For more information, see [Developing Applications Running Standalone](https://help.sap.com/docs/UI5_FLEXIBILITY_KEY_USER/0f8b49c4dfc94bc0bda25a19aa93d5b2/7f1c8c8aa7e1487a9d79a0b001e8060b.html/?&version=Cloud#adding-sapui5-flexibility-services-to-the-sapui5-bootstrap).
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`KeyUserConnector` 
+
+</td>
+<td valign="top">
+
+`CUSTOMER`
+
+</td>
+<td valign="top">
+
+> ### Caution:  
+> .
+> 
+> If you develop apps running standalone on SAP BTP, Cloud Foundry environment, we strongly recommend that you replace the `KeyUserConnector` with the `BtpServiceConnector` in your SAPUI5 bootstrap.
+
+Used to connect key user adaptation and shared views on SAP BTP, Cloud Foundry environment.
+
+For more information, see [Developing Applications Running in the SAP Cloud Portal Service](https://help.sap.com/docs/UI5_FLEXIBILITY_KEY_USER/0f8b49c4dfc94bc0bda25a19aa93d5b2/55433c585c5a43ef96d9b8d4bc4bc464.html/?&version=Cloud#adding-sapui5-flexibility-services-to-the-sapui5-bootstrap).
 
 </td>
 </tr>

@@ -1,6 +1,6 @@
 <!-- loio0a5377076f4e4ccba055a9072befadbd -->
 
-# Why Use SAP Fiori Elements?
+# Why Use SAP Fiori elements?
 
 Here's why – in a nutshell.
 
@@ -65,5 +65,5 @@ Here's why – in a nutshell.
 </table>
 
 > ### Note:  
-> The initial effort for creating an app using SAP Fiori elements might be higher than creating a freestyle SAP Fiori app. However, you will be richly rewarded for this effort after you've created more apps this way because your apps will benefit from using the framework and the included features.
+> The initial effort for creating an app using SAP Fiori elements might be higher than creating a freestyle SAPUI5 app. However, you will be richly rewarded for this effort after you've created more apps this way because your apps will benefit from using the framework and the included features.
 

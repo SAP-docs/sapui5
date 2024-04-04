@@ -55,12 +55,13 @@ You can view and download all files at [Quick Start - Step 1](https://ui5.sap.co
     	<title>Quickstart Tutorial</title>
     	<script id="sap-ui-bootstrap"
     		src="resources/sap-ui-core.js"
-    		data-sap-ui-theme="sap_horizon"
     		data-sap-ui-libs="sap.m"
-    		data-sap-ui-resourceroots='{"ui5.quickstart": "./"}'
-    		data-sap-ui-onInit="module:ui5/quickstart/index"
-    		data-sap-ui-compatVersion="edge"
-    		data-sap-ui-async="true">
+    		data-sap-ui-compat-version="edge"
+    		data-sap-ui-async="true"
+    		data-sap-ui-on-init="module:ui5/quickstart/index"
+    		data-sap-ui-resource-roots='{
+    			"ui5.quickstart": "./"
+    		}'>
     	</script>
     </head>
     <body class="sapUiBody" id="content"></body>
@@ -90,7 +91,7 @@ You can view and download all files at [Quick Start - Step 1](https://ui5.sap.co
     
     	new Button({
     		text: "Ready...",
-    		press: function () {
+    		press() {
     			MessageToast.show("Hello World!");
     		}
     	}).placeAt("content");

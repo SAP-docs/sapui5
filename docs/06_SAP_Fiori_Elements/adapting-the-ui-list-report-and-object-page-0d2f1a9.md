@@ -50,7 +50,7 @@ Display/Hide the *Export to Excel* button in the table toolbar
 </td>
 <td valign="top">
 
-Change the `ExporttoExcel` property to `True/False`.
+Change the `useExportToExcel` property to `True/False`.
 
 </td>
 </tr>
@@ -74,7 +74,7 @@ Center-align status columns
 </td>
 <td valign="top">
 
-Choose the column of the table in the outline of Page Editor, and set the `HAlign` property to `Center`.
+Choose the column of the table in the outline of Page Editor, and set the `hAlign` property to `Center`.
 
 For vertical alignment of the whole responsive table, see [Tables](tables-c0f6592.md).
 
@@ -88,7 +88,7 @@ Disable standard system behavior for list report tables \(analytical, grid, tree
 </td>
 <td valign="top">
 
-In the table, set the `Fit Content` property with the Page Editor.
+In the table, set the `fitContent` property with the Page Editor.
 
 </td>
 </tr>
@@ -100,7 +100,7 @@ Change the layout of the list report table for better readability for a high num
 </td>
 <td valign="top">
 
-In the table, set the `PopinLayout` property with the Page Editor to one of the following values:
+In the table, set the `popinLayout` property with the Page Editor to one of the following values:
 
 -   `Block`
 
@@ -153,7 +153,7 @@ Hide the anchor bar
 </td>
 <td valign="top">
 
-On the page layout node, set the `ShowAnchorBar` property to `false`.
+On the page layout node, set the `showAnchorBar` property to `false`.
 
 </td>
 </tr>
@@ -177,7 +177,7 @@ Display the *Export to Excel* button in the table toolbar
 </td>
 <td valign="top">
 
-In the table node, set the `UseExporttoExcel` property to `true`.
+In the table node, set the `useExportToExcel` property to `true`.
 
 </td>
 </tr>
@@ -203,7 +203,7 @@ Don't collapse headers when scrolling down
 </td>
 <td valign="top">
 
-On the page layout node, set the `Always show content header` property to `true`.
+On the page layout node, set the `alwaysShowContentHeader` property to `true`.
 
 > ### Note:  
 > On tablets and mobile phones, the header collapses automatically.
@@ -269,7 +269,7 @@ Enable the *Save and Edit* button in non-draft applications. Users can choose th
 </td>
 <td valign="top">
 
-In the SAPUI5 Visual Editor, go to the object page of your app. Switch to edit mode and choose the `Save and Edit` button from the outline panel. Change the visibility to `true`. In the change file that's created, change the new value from `true` to `{ui>/editable}`.
+In outline view of the object page select the `Save and Edit` action from the `Actions` within `Footer` and change the visibility to `{ui>/editable}`.
 
 </td>
 </tr>
@@ -281,7 +281,7 @@ Change the layout of the object table for better readability for a high number o
 </td>
 <td valign="top">
 
-On the table, set the `PopinLayout` property to one of the following values:
+On the table, set the `popinLayout` property to one of the following values:
 
 -   `Block`
 
@@ -291,18 +291,6 @@ On the table, set the `PopinLayout` property to one of the following values:
 
 
 The default layout is `Block`.
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Hide the *Paste* button on the table toolbar.
-
-</td>
-<td valign="top">
-
-On the table, set the Show Paste Button attribute to `false`.
 
 </td>
 </tr>

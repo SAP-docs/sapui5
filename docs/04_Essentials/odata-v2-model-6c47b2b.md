@@ -3595,7 +3595,7 @@ The property annotated as `com.sap.vocabularies.CodeList.v1.StandardCode` is int
 
 With the metadata above, you can use the `sap.ui.model.odata.type.Currency` and `sap.ui.model.odata.type.Unit` data types in an input field as shown in the following example. The data types use a composite binding with the amount or measure as its first part, the currency code or unit as its second part, and the information about the code list customizing that has to be used as its third part.
 
-**Example how to use currency and unit types in a freestyle application:**
+**Example how to use currency and unit types in a freestyle SAPUI5 application:**
 
 ```js
 ...

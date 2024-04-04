@@ -139,45 +139,13 @@ sap.ui.define(['sap/m/Input'], function(Input) {
 
 ### Exceptions
 
-SAPUI5 provides a couple of static modules and \(factory\) functions that can be referred to via their global name:
+SAPUI5 provides a couple of static functions that can be referred to via their global name:
 
 -   `sap.ui.define`
 
+-   `sap.ui.loader`
+
 -   `sap.ui.require`
-
--   Factory functions and core references:
-
-    -   `sap.ui.getCore`
-
-    -   `sap.ui.component`\(deprecated\): Use [`sap.ui.core.Component.create`](https://ui5.sap.com/#/api/sap.ui.core.Component/methods/sap.ui.core.Component.create) instead.
-
-    -   `sap.ui.fragment`\(deprecated\): Use [`sap.ui.core.mvc.Controller.loadFragment`](https://ui5.sap.com/#/api/sap.ui.core.mvc.Controller/methods/loadFragment) or [`sap.ui.core.Fragment.load`](https://ui5.sap.com/#/api/sap.ui.core.Fragment/methods/sap.ui.core.Fragment.load) instead.
-
-    -   `sap.ui.htmlfragment`\(deprecated\): Use [`sap.ui.core.mvc.Controller.loadFragment`](https://ui5.sap.com/#/api/sap.ui.core.mvc.Controller/methods/loadFragment) or [`sap.ui.core.Fragment.load`](https://ui5.sap.com/#/api/sap.ui.core.Fragment/methods/sap.ui.core.Fragment.load) instead.
-
-    -   `sap.ui.jsfragment`\(deprecated\): Use [`sap.ui.core.mvc.Controller.loadFragment`](https://ui5.sap.com/#/api/sap.ui.core.mvc.Controller/methods/loadFragment) or [`sap.ui.core.Fragment.load`](https://ui5.sap.com/#/api/sap.ui.core.Fragment/methods/sap.ui.core.Fragment.load) instead.
-
-    -   `sap.ui.jsview`\(deprecated\): Use [`sap.ui.core.mvc.View.create`](https://ui5.sap.com/#/api/sap.ui.core.mvc.View/methods/sap.ui.core.mvc.View.create) instead.
-
-    -   `sap.ui.template`\(deprecated\): Use [`sap.ui.core.mvc.XMLView.create`](https://ui5.sap.com/#/api/sap.ui.core.mvc.XMLView/methods/sap.ui.core.mvc.XMLView.create) instead.
-
-    -   `sap.ui.view`\(deprecated\): Use [`sap.ui.core.mvc.View.create`](https://ui5.sap.com/#/api/sap.ui.core.mvc.View/methods/sap.ui.core.mvc.View.create) instead.
-
-    -   `sap.ui.xmlfragment`\(deprecated\): Use [`sap.ui.core.mvc.Controller.loadFragment`](https://ui5.sap.com/#/api/sap.ui.core.mvc.Controller/methods/loadFragment) or [`sap.ui.core.Fragment.load`](https://ui5.sap.com/#/api/sap.ui.core.Fragment/methods/sap.ui.core.Fragment.load) instead.
-
-    -   `sap.ui.xmlview`\(deprecated\): Use [`sap.ui.core.mvc.XMLView.create`](https://ui5.sap.com/#/api/sap.ui.core.mvc.XMLView/methods/sap.ui.core.mvc.XMLView.create) instead.
-
-
--   Commonly used names \(However they can also be used as AMD references via `sap/ui/Global`\):
-
-    -   `sap.ui.getVersionInfo (Global.getVersionInfo())`\(deprecated\): Please see the following [`documentation`](https://ui5.sap.com/#/api/sap.ui/methods/sap.ui.getVersionInfo).
-
-    -   `sap.ui.lazyRequire`\(deprecated\): Please see the following [`documentation`](https://ui5.sap.com/#/api/sap.ui/methods/sap.ui.lazyRequire).
-
-    -   `sap.ui.resource`\(deprecated\): Please see the following [`documentation`](https://ui5.sap.com/#/api/sap.ui/methods/sap.ui.resource).
-
-    -   `sap.ui.version`
-
 
 
 

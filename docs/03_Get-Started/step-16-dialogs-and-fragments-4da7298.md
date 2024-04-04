@@ -109,21 +109,21 @@ sap.ui.define([
             MessageToast.show(sMsg);
         },
 
-        onOpenDialog() {
+        async onOpenDialog() {
             // create dialog lazily
-            this.pDialog ??= this.loadFragment({
+            this.oDialog ??= await this.loadFragment({
                 name: "ui5.walkthrough.view.HelloDialog"
             });
         
-            this.pDialog.then((oDialog) => oDialog.open());
+            this.oDialog.open();
         }
     });
 });
 ```
 
-If the dialog in the fragment does not exist yet, the fragment is instantiated by calling the `loadFragment` API.
+Using `async`/`await`, we handle the opening of the dialog asynchronously every time the event is triggered.
 
-As you can see in the snippet above, we store the loading `Promise` of the dialog fragment on the controller instance. This allows us to handle the opening of the dialog asynchronously on each click of the `helloDialogButton` button.
+If the dialog fragment does not exist yet, the fragment is instantiated by calling the `loadFragment` API. We then store the dialog on the controller instance. This allows us to reuse the dialog every time the event is triggered.
 
 > ### Tip:  
 > To reuse the dialog opening and closing functionality in other controllers, you can create a new file `ui5.walkthrough.controller.BaseController`, which extends `sap.ui.core.mvc.Controller`, and put all your dialog-related coding into this controller. Now, all the other controllers can extend from `ui5.walkthrough.controller.BaseController` instead of `sap.ui.core.mvc.Controller`.

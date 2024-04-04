@@ -56,9 +56,9 @@ The syntax is similar to a view, but since fragments do not have a controller th
 
 In the `HelloPanel` controller, we define a new event handler function `onOpenDialog`, which calls the dialog in the `HelloDialog` fragment when triggered. To do so, we need to import the `sap.m.Dialog` module.
 
-We store the loading `Promise` of the dialog fragment on the controller instance. This allows us to handle the opening of the dialog asynchronously every time the event is triggered.
+Using `async`/`await`, we handle the opening of the dialog asynchronously every time the event is triggered.
 
-If the dialog in the fragment does not exist yet, the fragment is instantiated by calling the `loadFragment` API.
+If the dialog fragment does not exist yet, the fragment is instantiated by calling the `loadFragment` API. We then store the dialog on the controller instance. This allows us to reuse the dialog every time the event is triggered.
 
 ```js
 import Controller from "sap/ui/core/mvc/Controller";
@@ -72,27 +72,22 @@ import Dialog from "sap/m/Dialog";
  * @namespace ui5.walkthrough.controller
  */
 export default class HelloPanel extends Controller {
-    private dialogPromise: Promise<Dialog>;
+    private dialog: Dialog;
 
     onShowHello(): void {
         ...
     }
-    onOpenDialog(): void {
-    // create dialog lazily
-        if (!this.dialogPromise) {
-            this.dialogPromise = <Promise<Dialog>> this.loadFragment({
-                name: "ui5.walkthrough.view.HelloDialog"
-            });
-        } 
-        this.dialogPromise.then(function(oDialog) {
-            oDialog.open();
-        });
+    async onOpenDialog(): Promise<void> {
+      this.dialog = await <Promise<Dialog>> this.loadFragment({
+         name: "ui5.walkthrough.view.HelloDialog"
+      });
+      this.dialog.open();
     }   
 };
 ```
 
-> ### Tip:  
-> To reuse the dialog opening and closing functionality in other controllers, you can create a new file `ui5.walkthrough.controller.BaseController`, which extends `sap.ui.core.mvc.Controller`, and put all your dialog-related coding into this controller. Now, all the other controllers can extend from `ui5.walkthrough.controller.BaseController` instead of `sap.ui.core.mvc.Controller`.
+> ### Note:  
+> `ui5.walkthrough.controller.BaseController`, which extends `sap.ui.core.mvc.Controller`, and put all your dialog-related coding into this controller. Now, all the other controllers can extend from `ui5.walkthrough.controller.BaseController` instead of `sap.ui.core.mvc.Controller`.
 
 
 
@@ -100,7 +95,7 @@ export default class HelloPanel extends Controller {
 
 ## webapp/i18n/i18n.properties
 
-We add a new text for the button to open the dialog to the text bundle. We will add this button to the `HelloPanel` view in the next step.
+We add a new text for the button to open the dialog to the text bundle. We will add this button to the `HelloPanel` view in the next step.To reuse the dialog opening and closing functionality in other controllers, you can create a new file
 
 ```ini
 # App Descriptor
@@ -156,7 +151,7 @@ We add a new button to the view to open the dialog and assign an unique `id` to 
 
 We will need the new `id="helloDialogButton"` in [Step 28: Integration Test with OPA](step-28-integration-test-with-opa-9bf4dce.md).
 
-It is a good practice to set a unique ID like `helloWorldButton` to key controls of your app so that can be identified easily. If the `id` attribute is not specified, the SAPUI5 runtime generates unique but changing ID like "\_\_button23" for the control. Inspect the DOM elements of your app in the browser to see the difference.
+It is a good practice to set a unique ID like `helloWorldButton`To reuse the dialog opening and closing functionality in other controllers, you can create a new file to key controls of your app so that can be identified easily. If the `id` attribute is not specified, the SAPUI5 runtime generates unique but changing ID like "\_\_button23" for the control. Inspect the DOM elements of your app in the browser to see the difference.
 
 **Related Information**  
 

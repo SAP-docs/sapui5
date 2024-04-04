@@ -11,39 +11,9 @@ Make sure you have read the following information: [Read Before Extending a Gene
 > 
 > After you've created an app extension, its display \(for example, control placement and layout\) and system behavior \(for example, model and binding usage, busy handling\) lies within the application's responsibility. SAP Fiori elements provides support only for the official `extensionAPI` functions. Don't access or manipulate controls, properties, models, or other internal objects created by the SAP Fiori elements framework.
 
-
-
-<a name="loioa892eb8ae1fb498a9bc6c5194432e820__section_p1t_2px_znb"/>
-
-## Additional Features in SAP Fiori Elements for OData V2
-
 You can either use [SAP Fiori tools](https://help.sap.com/viewer/product/SAP_FIORI_tools/Latest/en-US), which is a set of extensions for SAP Business Application Studio and Visual Studio Code to create extensions, or you can create them manually.
 
 For more information, see [Configure Page Elements](https://help.sap.com/docs/SAP_FIORI_tools/17d50220bcd848aa854c9c182d65b699/047507c86afa4e96bb3d284adb9f4726.html).
-
-In list reports and object pages, you can use [SAP Fiori tools](https://help.sap.com/viewer/product/SAP_FIORI_tools/Latest/en-US) to add the following extensions:
-
--   List report
-
-    -   Filter
-
-    -   Action
-
-    -   Column
-
-
--   Object page
-    -   Action
-
-    -   Facet
-
-    -   Column
-
-    -   Header
-
-    -   Form
-
-
 
 > ### Note:  
 > We've removed videos showing step-by-step procedures using SAP Web IDE, which SAP no longer actively supports. You can still access the video using an older version of this document.

@@ -28,7 +28,9 @@ In the figure below, the collection facet for *General Information* combines two
 ![](images/Object_Page_Collection_Facet_a7f074e.png "Object Page: CollectionFacet")
 
 > ### Note:  
-> `UI.CollectionFacets` at third level and beyond are not considered.
+> -   `UI.CollectionFacets` at third level and beyond are not considered.
+> 
+> -   You must not use `UI.CollectionFacet` if there is only one `UI.ReferenceFacet` within it, as there can be rendering issues. In such cases, you can directly use `UI.ReferenceFacet` without the `UI.CollectionFacet` wrapper.
 
 Furthermore, reference facets can refer to identification sections, the field group, contact, or line item annotations. For line items, a list is rendered.
 
@@ -157,7 +159,7 @@ You can hide and display sections based on properties.
 > 
 > -   If the object page uses an icon tab bar for sections, then the section title isn't displayed in the content area. If the object page uses an anchor bar for sections, then only the title of the first section is hidden in the content area.
 > 
-> -   From SAPUI5 1.121 version onwards, if a section or a subsection contains only a table or a chart as a control, then the section or subsection title is hidden and the same is set as the control title.
+> -   For object pages configured with *Page* section layout mode, the following applies: if a section/subsection contains only a table or a chart as a control, the title of the section or subsection is hidden but the titleof the control is replaced with the title from the section or subsection. In *Tabs* mode, this only applies to subsections but isn't applied to sections. This special logic is also not invoked if the section or subsection has multiple controls configured within it and, at runtime, due to dynamic visibility or UI adaptation, the section/subsection has a single visible control.
 > 
 >     This logic doesn't apply to sections or subsections with multiple controls, as the UI adaptation ensures that only a single control is displayed in the section or subsection during runtime.
 > 
@@ -184,6 +186,71 @@ For more information, see [Grouping of Fields](grouping-of-fields-7d7a0c4.md).
 To render a table in a section, follow these steps:
 
 1.  Include a list in the section, indicated by `com.sap.vocabularies.UI.v1.LineItem` or `com.sap.vocabularies.UI.v1.PresentationVariant`. In SAP Fiori elements for OData V4, `UI.v1.SelectionPresentationVariant` is also supported. If `PresentationVariant` is specified, then it must have `UI.LineItem` as the first property of the "Visualizations". If a`SelectionPresentationVariant` is specified, it must contain a valid `PresentationVariant` with `UI.LineItem` as the first property of the "Visualizations".
+
+    > ### Sample Code:  
+    > XML Annotation
+    > 
+    > ```
+    >         <Annotation Term="UI.Facets">
+    >           <Collection>
+    >             <Record Type="UI.CollectionFacet">
+    >               <PropertyValue Property="ID" String="FacetIdentifier1"/>
+    >               <PropertyValue Property="Label" String="Section 1"/>
+    >               <PropertyValue Property="Facets">
+    >                 <Collection>
+    >                   <Record Type="UI.ReferenceFacet">
+    >                     <PropertyValue Property="ID" String="FacetIdentifier2"/>
+    >                     <PropertyValue Property="Target" AnnotationPath=_Child/@UI.LineItem/>
+    >                   </Record>
+    >                 </Collection>
+    >               </PropertyValue>
+    >             </Record>
+    > 
+    >             <Record Type="UI.CollectionFacet">
+    >               <PropertyValue Property="ID" String="FacetIdentifier2"/>
+    >               <PropertyValue Property="Label" String="Section 2"/>
+    >               <PropertyValue Property="Facets">
+    >                 <Collection>
+    >                   <Record Type="UI.ReferenceFacet">
+    >                     <PropertyValue Property="ID" String="FacetIdentifier2"/>
+    >                     <PropertyValue Property="Target" AnnotationPath=_Child/@UI.SelectionPresentationVariant#mySPV/>
+    >                   </Record>
+    >                 </Collection>
+    >               </PropertyValue>
+    >             </Record>
+    >           </Collection>
+    >         </Annotation>
+    > ```
+
+    > ### Sample Code:  
+    > CAP CDS Annotation
+    > 
+    > ```
+    >     Facets                              : [
+    >       {
+    >         $Type : 'UI.CollectionFacet',
+    >         ID    : 'FacetIdentifier1',
+    >         Label : 'Section 1',
+    >         Facets: [{
+    >           $Type : 'UI.ReferenceFacet',
+    >           ID    : 'FacetIdentifier2',
+    >           Target: '_Child/@UI.LineItem'
+    >         }]
+    >       },
+    >       {
+    >         $Type : 'UI.CollectionFacet',
+    >         ID    : 'FacetIdentifier2',
+    >         Label : 'Section 2',
+    >         Facets: [{
+    >           $Type : 'UI.ReferenceFacet',
+    >           ID    : 'FacetIdentifier2',
+    >           Target: '_Child/@UI.SelectionPresentationVariant#mySPV'
+    >         }]
+    >       }
+    >     ]
+    > ```
+
+    Check out our live example in the flexible programming model explorer at [Table Extensibility](https://ui5.sap.com/test-https://latest.testapp.sapfe.c.eu-de-2.cloud.sap/test-resources/sap/fe/core/fpmExplorer/index.html#/controllerExtensions/tableExtensibility).
 
 2.  To render a *Create* button, set `Org.OData.Capabilities.V1.InsertRestrictions/Insertable/Bool` to `true` for the entity set. For more information, see the section **Generic Actions** in [Adding Actions to Tables](adding-actions-to-tables-b623e0b.md).
 
@@ -332,7 +399,7 @@ You can also use the `useColumnLayoutForSmartForm` switch in the manifest, at `s
 ## Additional Features in SAP Fiori Elements for OData V4
 
 > ### Remember:  
-> If you use a chart or table for the `UI.ReferenceFacet`, ensure that this is the only content and does not have another peer `ReferenceFacet` to avoid rendering issues. Note that the order of defined `ReferenceFacets` inside a mixed `CollectionFacet` behaves as follows:
+> If you use a chart or table for the `UI.ReferenceFacet`, ensure that this is the only content and does not have another peer `ReferenceFacet` pointing to the chart or table, to avoid rendering issues. Note that the order of defined `ReferenceFacets` inside a mixed `CollectionFacet` behaves as follows:
 > 
 > All charts or tables are pushed together and are either displayed at the beginning or at the end of the `CollectionFacet`, followed or preceded by a field group. The order depends on whether the first `ReferenceFacet` in the `CollectionFacet` is a chart or table, or a field group.
 
@@ -382,6 +449,14 @@ To choose a tab visualization, you must use the `sectionLayout` property in the 
 >     }
 > }
 > ```
+
+
+
+### Special Handling of Text Area Label as a Single Field in a Section or Subsection
+
+If `UI.FieldGroup` has only one property based on `UI.MultiLineText` and no other controls, the label of the corresponding `TextArea` control is hidden, as the section or subsection title suffices as the label.
+
+However, you must use a meaningful label for the `TextArea` control to ensure its compatibility with the screen reader programs.
 
 
 

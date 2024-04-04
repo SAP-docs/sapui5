@@ -12,7 +12,7 @@ For the absolute property bindings of singletons, see [Absolute Property Binding
 
 A relative list or context binding creates a data service request once it has a context in the following cases:
 
--   The relative binding has parameters, such as OData query options like `$select`, or binding-specific parameters with a name starting with `$$` see the *Parameters* subsection below. If you want a relative binding to create its own data service request, use the binding-specific parameter `$$ownRequest`.
+-   The relative binding has parameters, such as OData query options like `$select`, or binding-specific parameters with a name starting with `$$`; for more information, see [Parameters](parameters-1ab4f62.md). If you want a relative binding to create its own data service request, use the binding-specific parameter `$$ownRequest`.
 
 -   You specify a dynamic filter or dynamic sorter for a list binding and use `sap.ui.model.odata.OperationMode.Server`, see sections [Filtering](filtering-5338bd1.md) and [Sorting](sorting-d2ce3f5.md).
 

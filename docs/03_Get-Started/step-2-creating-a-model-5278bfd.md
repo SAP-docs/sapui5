@@ -43,47 +43,47 @@ In this tutorial, we will focus on JSON models since they are the simplest ones 
 
 You can view and download all files in the Demo Kit at [Data Binding - Step 2](https://ui5.sap.com/#/entity/sap.ui.core.tutorial.databinding/sample/sap.ui.core.tutorial.databinding.02).
 
+1.  Create a new folder named `model` in the `webapp` folder. In this folder, create a file called `data.json` with the following content:
+
+    **webapp/model/data.json \(New\)**
+
+    ```
+    {
+    	"greetingText" : "Hi, my name is Harry Hawk"
+    }
+    ```
+
+2.  Create a new JSON model in the `manifest.json` and set its path via a URI. This binds the model object to the app component and makes it globally available to all controls used within the application.
+
+    **webapp/manifest.json**
+
+    ```
+    ...
+    	"sap.ui5": {
+    		"dependencies": {
+    			"minUI5Version": "1.120.0",
+    			"libs": {
+    				"sap.m": {},
+    				"sap.ui.core": {},
+    				"sap.ui.layout": {}
+    			}
+    		},
+    		"models": {
+    			"": {
+    				"type": "sap.ui.model.json.JSONModel",
+    				"uri": "./model/data.json"
+    			}
+    		},
+    ...
+    ```
 
 
-## webapp/index.js
+Generally speaking, a model object holding business data should be bound to the app's `Component.js` or to the view that displays the data. For an example, see the Walkthrough tutorial, [Step 7: JSON Model](step-7-json-model-70ef981.md) \(binding to the View\) or [Step 9: Component Configuration](step-9-component-configuration-4cfa608.md) \(binding to the Component\).
 
-```js
-sap.ui.require([
-	"sap/m/Text",
-	"sap/ui/model/json/JSONModel"
-], function (Text, JSONModel) {
-	"use strict";
-
-	// Attach an anonymous function to the SAPUI5 'init' event
-	sap.ui.getCore().attachInit(function () {
-		// Create a JSON model from an object literal
-		var oModel = new JSONModel({
-			greetingText: "Hi, my name is Harry Hawk"
-		});
-
-		// Assign the model object to the SAPUI5 core
-		sap.ui.getCore().setModel(oModel);
-
-
-		// Create a text UI element that displays a hardcoded text string
-		new Text({text: "Hi, my name is Harry Hawk"}).placeAt("content");
-	});
-});
-
-```
-
-Create a new JSON model passing the data as object literal and store the resulting model instance in a local variable called `oModel`.
-
-Set `oModel` to be the default model within the entire SAPUI5 core.
-
-This makes the model object globally available to all controls used within the application.
-
-In this case we have bound the model object to the SAPUI5 core. This has been done for simplicity, but is not considered good practice. Generally speaking, a model object holding business data should be bound to the app's `Component.js` or to the view that displays the data. For an example, see the Walkthrough tutorial, [Step 7: JSON Model](step-7-json-model-70ef981.md) \(binding to the View\) or [Step 9: Component Configuration](step-9-component-configuration-4cfa608.md) \(binding to the Component\).
+The text that is displayed on the UI is still hard-coded and not taken from the model - we will bind the property `greetingText` to our UI control in the next step.
 
 > ### Note:  
 > Models can be set on every control by calling `setModel()`. The model is then propagated to all aggregated child controls \(and their children, and so on…\). All child control will then have access to that model
-
-The text that is displayed on the UI is still hard-coded and not taken from the model - we will bind the property `greetingText` to our UI control in the next step.
 
 **Related Information**  
 

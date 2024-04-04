@@ -27,264 +27,213 @@ It will automatically create as many child controls as are needed to display the
 
 You can view and download all files in the Demo Kit at [Data Binding - Step 12](https://ui5.sap.com/#/entity/sap.ui.core.tutorial.databinding/sample/sap.ui.core.tutorial.databinding.12).
 
+1.  Add a new entry `products` to the `models` entry under `sap.ui5` in the `manifest.json` file:
 
+    **webapp/manifest.json**
 
-## webapp/index.js
+    ```
+    ...
+    	"sap.ui5": {
+    		"handleValidation": true,
+    		"dependencies": {
+    			"minUI5Version": "1.120.0",
+    			"libs": {
+    				"sap.m": {},
+    				"sap.ui.core": {},
+    				"sap.ui.layout": {}
+    			}
+    		},
+    		"models": {
+    			"": {
+    				"type": "sap.ui.model.json.JSONModel",
+    				"uri": "./model/data.json"
+    			},
+    			"products" : {
+    				"type": "sap.ui.model.json.JSONModel",
+    				"uri": "./model/Products.json"
+    			},
+    			"i18n": {
+    				"type": "sap.ui.model.resource.ResourceModel",
+    				"settings": {
+    					"bundleName": "ui5.databinding.i18n.i18n",
+    					"supportedLocales": [
+    						"",
+    						"de"
+    					],
+    					"fallbackLocale": ""
+    				}
+    			}
+    		},
+    ...
+    ```
 
-```js
-sap.ui.require([
-	"sap/ui/model/json/JSONModel",
-	"sap/ui/core/mvc/XMLView",
-	"sap/ui/model/resource/ResourceModel"
-], function (JSONModel, XMLView, ResourceModel) {
-	"use strict";
+2.  Create a new file named `Products.json` in the `model` folder. Enter the data for the products:
 
-	// Attach an anonymous function to the SAPUI5 'init' event
-	sap.ui.getCore().attachInit(function () {
-		var oProductModel = new JSONModel();
-		oProductModel.loadData("./model/Products.json");
-		sap.ui.getCore().setModel(oProductModel, "products");
+    **webapp/model/Products.json \(New\)**
 
+    ```
+    { "Products": [ {
+         "ProductID": 1,
+         "ProductName": "Chai",
+         "SupplierID": 1,
+         "CategoryID": 1,
+         "QuantityPerUnit": "10 boxes x 20 bags",
+         "UnitPrice": "18.0000",
+         "UnitsInStock": 39,
+         "UnitsOnOrder": 0,
+         "ReorderLevel": 10,
+         "Discontinued": false
+        }, {
+         "ProductID": 2,
+         "ProductName": "Chang",
+         "SupplierID": 1,
+         "CategoryID": 1,
+         "QuantityPerUnit": "24 - 12 oz bottles",
+         "UnitPrice": "19.0000",
+         "UnitsInStock": 17,
+         "UnitsOnOrder": 40,
+         "ReorderLevel": 25,
+         "Discontinued": true
+        }, {
+         "ProductID": 3,
+         "ProductName": "Aniseed Syrup",
+         "SupplierID": 1,
+         "CategoryID": 2,
+         "QuantityPerUnit": "12 - 550 ml bottles",
+         "UnitPrice": "10.0000",
+         "UnitsInStock": 0,
+         "UnitsOnOrder": 70,
+         "ReorderLevel": 25,
+         "Discontinued": false
+        }, {
+         "ProductID": 4,
+         "ProductName": "Chef Anton's Cajun Seasoning",
+         "SupplierID": 2,
+         "CategoryID": 2,
+         "QuantityPerUnit": "48 - 6 oz jars",
+         "UnitPrice": "22.0000",
+         "UnitsInStock": 53,
+         "UnitsOnOrder": 0,
+         "ReorderLevel": 0,
+         "Discontinued": false
+        }, {
+         "ProductID": 5,
+         "ProductName": "Chef Anton's Gumbo Mix",
+         "SupplierID": 2,
+         "CategoryID": 2,
+         "QuantityPerUnit": "36 boxes",
+         "UnitPrice": "21.3500",
+         "UnitsInStock": 0,
+         "UnitsOnOrder": 0,
+         "ReorderLevel": 0,
+         "Discontinued": true
+        }]
+      }
+    ```
 
-		var oModel = new JSONModel({
-			firstName: "Harry",
-			lastName: "Hawk",
-			enabled: true,
-			address: {
-				street: "Dietmar-Hopp-Allee 16",
-				city: "Walldorf",
-				zip: "69190",
-				country: "Germany"
-			},
-			salesAmount: 12345.6789,
-			currencyCode: "EUR"
-		});
+3.  In the `App.view.xml` file, add a new panel with an `sap.m.List` control containing the`sap.m.ObjectListItem` template control as shown below. Note that the template control is only present once in the XML view. It will be automatically cloned for each entry in the products' JSON model.
 
-		// Assign the model object to the SAPUI5 core
-		sap.ui.getCore().setModel(oModel);
+    **webapp/view/App.view.xml**
 
-		var oResourceModel = new ResourceModel({
-			bundleName: "sap.ui.demo.db.i18n.i18n",
-			supportedLocales: ["", "de"],
-			fallbackLocale: ""
-		});
+    ```xml
+    ...
+    	<Panel headerText="{i18n>panel3HeaderText}" class="sapUiResponsiveMargin" width="auto">
+    		<List headerText="{i18n>productListTitle}" items="{products>/Products}">
+    			<items>
+    				<ObjectListItem title="{products>ProductName}"
+    					number="{
+    						parts: [
+    							{path: 'products>UnitPrice'},
+    							{path: '/currencyCode'}
+    						],
+    						type: 'sap.ui.model.type.Currency',
+    						formatOptions: { showMeasure: false }
+    					}"
+    					numberUnit="{/currencyCode}">
+    					<attributes>
+    						<ObjectAttribute text="{products>QuantityPerUnit}"/>
+    						<ObjectAttribute title="{i18n>stockValue}"
+    							text="{
+    								parts: [
+    									{path: 'products>UnitPrice'},
+    									{path: 'products>UnitsInStock'},
+    									{path: '/currencyCode'}
+    								],
+    								formatter: '.formatStockValue'
+    							}"/>
+    					</attributes>
+    				</ObjectListItem>
+    			</items>
+    		</List>
+    	</Panel>
+    </mvc:View>
+    ```
 
-		sap.ui.getCore().setModel(oResourceModel, "i18n");
+4.  Also, add another formatter to the `App.controller.js` file to calculate the value of the stock of each product.
 
-		// Create the XML view called "App"
-		var oView = new XMLView({
-			viewName: "sap.ui.demo.db.view.App"
-		});
+    **webapp/controller/App.controller.js**
 
-		// Register the view with the message manager
-		sap.ui.getCore().getMessageManager().registerObject(oView, true);
+    ```js
+    sap.ui.define([
+    	"sap/m/library",
+    	"sap/ui/core/mvc/Controller",
+    	"sap/ui/model/type/Currency"
+    ], (mobileLibrary, Controller, Currency) => {
+    	"use strict";
+    
+    	return Controller.extend("ui5.databinding.controller.App", {
+    		formatMail(sFirstName, sLastName) {
+    			const oBundle = this.getView().getModel("i18n").getResourceBundle();
+    
+    			return mobileLibrary.URLHelper.normalizeEmail(
+    				sFirstName + "." + sLastName + "@example.com",
+    				oBundle.getText("mailSubject", [sFirstName]),
+    				oBundle.getText("mailBody"));
+    		},
+    
+    		formatStockValue(fUnitPrice, iStockLevel, sCurrCode) {
+    			const oCurrency = new Currency();
+    
+    			return oCurrency.formatValue([fUnitPrice * iStockLevel, sCurrCode], "string");
+    		}
+    	});
+    });
+    ```
 
-		// Display the view
-		oView.placeAt("content");
-	});
-});
+5.  Finally, add the missing texts to the `i18n.properties` and `i18n_de.properties` files, which will be used in the newly added UI elements.
 
-```
+    **webapp/i18n/i18n.properties**
 
+    ```ini
+    ... 
+    # Screen titles
+    panel1HeaderText=Data Binding Basics
+    panel2HeaderText=Address Details
+    panel3HeaderText=Aggregation Binding
+    
+    ...
+    
+    # Product list
+    productListTitle=Product List
+    stockValue=Current Stock Value
+    ```
 
+    **webapp/i18n/i18n\_de.properties**
 
-## webapp/view/App.view.xml
+    ```ini
+    ...
+    # Screen titles
+    panel1HeaderText=Data Binding Grundlagen
+    panel2HeaderText=Adressdetails
+    panel3HeaderText=Aggregation Binding
+    
+    ...
+    
+    # Product list
+    productListTitle=Artikelliste
+    stockValue=Lagerbestand Wert
+    ```
 
-```xml
-...
-					<Input description="{/currencyCode}" enabled="{/enabled}" id="salesAmount"
-						value="{
-							parts: [
-								{path: '/salesAmount'},
-								{path: '/currencyCode'}
-							],
-							type: 'sap.ui.model.type.Currency',
-							formatOptions: {showMeasure: false}
-						}" width="200px"/>
-				</l:VerticalLayout>
-			</l:HorizontalLayout>
-		</content>
-	</Panel>
-	<Panel headerText="{i18n>panel3HeaderText}" class="sapUiResponsiveMargin" width="auto">
-		<List headerText="{i18n>productListTitle}" items="{products>/Products}">
-			<items>
-				<ObjectListItem title="{products>ProductName}"
-					number="{
-						parts: [
-							{path: 'products>UnitPrice'},
-							{path: '/currencyCode'}
-						],
-						type: 'sap.ui.model.type.Currency',
-						formatOptions: { showMeasure: false }
-					}"
-					numberUnit="{/currencyCode}">
-					<attributes>
-						<ObjectAttribute text="{products>QuantityPerUnit}"/>
-						<ObjectAttribute title="{i18n>stockValue}"
-							text="{
-								parts: [
-									{path: 'products>UnitPrice'},
-									{path: 'products>UnitsInStock'},
-									{path: '/currencyCode'}
-								],
-								formatter: '.formatStockValue'
-							}"/>
-					</attributes>
-				</ObjectListItem>
-			</items>
-		</List>
-	</Panel>
-...
-```
-
-We add a new panel to the view.
-
-
-
-## webapp/controller/App.controller.js
-
-```js
-sap.ui.define([
-	"sap/ui/core/mvc/Controller",
-	"sap/m/library",
-	"sap/ui/core/Locale",
-	"sap/ui/core/LocaleData",
-	"sap/ui/model/type/Currency"
-
-], function (Controller, mobileLibrary, Locale, LocaleData, Currency) {
-	"use strict";
-	return Controller.extend("sap.ui.demo.db.controller.App", {
-		formatMail: function(sFirstName, sLastName) {
-			var oBundle = this.getView().getModel("i18n").getResourceBundle();
-			return mobileLibrary.URLHelper.normalizeEmail(
-				sFirstName + "." + sLastName + "@example.com",
-				oBundle.getText("mailSubject", [sFirstName]),
-				oBundle.getText("mailBody"));
-		},
-		formatStockValue: function(fUnitPrice, iStockLevel, sCurrCode) {
-			var sBrowserLocale = sap.ui.getCore().getConfiguration().getLanguage();
-			var oLocale = new Locale(sBrowserLocale);
-			var oLocaleData = new LocaleData(oLocale);
-			var oCurrency = new Currency(oLocaleData.mData.currencyFormat);
-			return oCurrency.formatValue([fUnitPrice * iStockLevel, sCurrCode], "string");
-
-		}
-	});
-});
-
-```
-
-
-
-## webapp/model/Products.json \(New\)
-
-```js
-{ "Products": [ {
-     "ProductID": 1,
-     "ProductName": "Chai",
-     "SupplierID": 1,
-     "CategoryID": 1,
-     "QuantityPerUnit": "10 boxes x 20 bags",
-     "UnitPrice": "18.0000",
-     "UnitsInStock": 39,
-     "UnitsOnOrder": 0,
-     "ReorderLevel": 10,
-     "Discontinued": false
-    }, {
-     "ProductID": 2,
-     "ProductName": "Chang",
-     "SupplierID": 1,
-     "CategoryID": 1,
-     "QuantityPerUnit": "24 - 12 oz bottles",
-     "UnitPrice": "19.0000",
-     "UnitsInStock": 17,
-     "UnitsOnOrder": 40,
-     "ReorderLevel": 25,
-     "Discontinued": true
-    }, {
-     "ProductID": 3,
-     "ProductName": "Aniseed Syrup",
-     "SupplierID": 1,
-     "CategoryID": 2,
-     "QuantityPerUnit": "12 - 550 ml bottles",
-     "UnitPrice": "10.0000",
-     "UnitsInStock": 0,
-     "UnitsOnOrder": 70,
-     "ReorderLevel": 25,
-     "Discontinued": false
-    }, {
-     "ProductID": 4,
-     "ProductName": "Chef Anton's Cajun Seasoning",
-     "SupplierID": 2,
-     "CategoryID": 2,
-     "QuantityPerUnit": "48 - 6 oz jars",
-     "UnitPrice": "22.0000",
-     "UnitsInStock": 53,
-     "UnitsOnOrder": 0,
-     "ReorderLevel": 0,
-     "Discontinued": false
-    }, {
-     "ProductID": 5,
-     "ProductName": "Chef Anton's Gumbo Mix",
-     "SupplierID": 2,
-     "CategoryID": 2,
-     "QuantityPerUnit": "36 boxes",
-     "UnitPrice": "21.3500",
-     "UnitsInStock": 0,
-     "UnitsOnOrder": 0,
-     "ReorderLevel": 0,
-     "Discontinued": true
-    }]
-  }
-```
-
-We now use a new JSON model file for product data.
-
-
-
-## webapp/i18n/i18n.properties
-
-```ini
-... 
-# Screen titles
-panel1HeaderText=Data Binding Basics
-panel2HeaderText=Address Details
-panel3HeaderText=Aggregation Binding
-
-# Invoice List
-invoiceListTitle=Invoices
-statusA=New
-statusB=In Progress
-statusC=Done
-
-# Product list
-productListTitle=Product List
-stockValue=Current Stock Value
-```
-
-
-
-## webapp/i18n/i18n\_de.properties
-
-```ini
-...
-# Screen titles
-panel1HeaderText=Data Binding Basics
-panel2HeaderText=Adressdetails
-panel3HeaderText=Aggregation Binding
-
-# Invoice List
-invoiceListTitle=Rechnungen
-statusA=Neu
-statusB=Laufend
-statusC=Abgeschlossen
-
-# Product list
-productListTitle=Artikelliste
-stockValue=Lagerbestand Wert
-```
-
-We add the missing texts.
 
 **Related Information**  
 

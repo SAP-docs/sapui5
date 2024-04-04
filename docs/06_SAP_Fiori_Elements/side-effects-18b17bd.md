@@ -261,6 +261,99 @@ You can define side effects either in the back end or in local annotation files.
 
 
 
+### Defining Side Effects on Unbound Actions
+
+In SAP Fiori elements for OData V4, you can define side effects on unbound actions. As these actions are not bound to a context, the definition must use an absolute path.
+
+As shown in the following code sample, this allows you to influence all the entities of a list when completing an unbound action, refreshing the entire entity list.
+
+> ### Sample Code:  
+> XML Annotation
+> 
+> ```xml
+> <Schema Namespace="sap.fe.core.Service" xmlns=http://docs.oasis-open.org/odata/ns/edm>
+>     <EntityContainer Name="EntityContainer">
+>         <ActionImport Name="unBoundAction" Action="sap.fe.core.Service.unBoundAction" />
+>         ...
+>     </EntityContainer>
+>     ...
+>     <Action Name="unBoundAction" IsBound="false" />
+>     ...
+>     <Annotations Target="sap.fe.core.Service.RootEntity">
+>         <Annotation Term="UI.LineItem" Qualifier="sample7">
+>             <Collection>
+>                 <Record Type="UI.DataFieldForAction">
+>                     <PropertyValue Property="Label" String="Table Refresh" />
+>                     <PropertyValue Property="Action" String="sap.fe.core.Service.EntityContainer/unBoundAction" />
+>                     <PropertyValue Property="InvocationGrouping" EnumMember="UI.OperationGroupingType/ChangeSet" />
+>                 </Record>
+>                 ...
+>             </Collection>
+>         </Annotation>
+>     </Annotations>
+>     <Annotations Target="sap.fe.core.Service.UnboundAction()">
+>         <Annotation Term="Common.SideEffects">
+>             <Record Type="Common.SideEffectsType">
+>                 <PropertyValue Property="TargetEntities">
+>                     <Collection>
+>                         <NavigationPropertyPath>"/sap.fe.core.Service.EntityContainer/RootEntity"
+>                         </NavigationPropertyPath>
+>                     </Collection>
+>                 </PropertyValue>
+>             </Record>
+>         </Annotation>
+>     </Annotations>
+> </Schema>
+> ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> No ABAP CDS annotation sample is available. Please use the local XML annotation.
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> // LineItem annotation with an unbound action
+> annotate RootEntity with @(
+>     UI    : {
+>         …
+>             LineItem : [
+>                 {
+>                     $Type             : 'UI.DataFieldForAction',
+>                     Label             : 'My Unbound action',
+>                     Action            : 'MyService.EntityContainer/unBoundAction',
+>                     InvocationGrouping: #ChangeSet
+>                 },
+>                 {
+>                     $Type: 'UI.DataField',
+>                     Value: property1,
+>                 },
+>                 {
+>                     $Type: 'UI.DataField',
+>                     Value: property2
+>       },
+>       {
+>         $Type: 'UI.DataField',
+>         Value: property3
+>       }
+>     ],
+>   },
+> …
+> );
+> 
+> //actions and corresponding side effects for different samples
+> service MyService {
+> 
+> //Side effect annotation using an abosolute path
+> @Common.SideEffects: {TargetEntities: ['/MyService.EntityContainer/RootEntity']}
+>     action unBoundAction();
+> }
+> ```
+
+
+
 ### Target Entities
 
 The list is refreshed if a 1:n association is mentioned as a target entity.

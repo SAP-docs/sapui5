@@ -745,5 +745,5 @@ For more information, see the section *Date Picker and Date/Time Picker* in [Fie
 **Related Information**  
 
 
-[Value Help as a Dropdown List](value-help-as-a-dropdown-list-2a0a630.md "If your value help contains a fixed number of values, a dropdown list will be rendered.")
+[Value Help as a Dropdown List](value-help-as-a-dropdown-list-2a0a630.md "If your value help contains a fixed number of values, a dropdown list is rendered.")
 

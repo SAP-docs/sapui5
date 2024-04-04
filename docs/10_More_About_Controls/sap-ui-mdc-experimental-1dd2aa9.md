@@ -10,6 +10,10 @@ The `sap.ui.mdc` library contains composite, metadata-driven controls that assem
 > ### Note:  
 > The following sections only provide additional information for some of the controls. For a complete list of all controls and their documentation, see the [API Reference](https://ui5.sap.com/#/api) and the [Samples](https://ui5.sap.com/#/controls). 
 
+For more information about this control, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.mdc) and the [samples](https://ui5.sap.com/#/entity/sap.ui.mdc).
+
+For more information, see also the [UI5 MDC Tutorial](https://github.com/SAP-samples/ui5-mdc-json-tutorial).
+
 
 
 <a name="loio1dd2aa91115d43409452a271d11be95b__section_y3w_kvf_qxb"/>
@@ -93,10 +97,4 @@ The following graphic illustrates this behavior:
 [Supported Library Combinations](../02_Read-Me-First/supported-library-combinations-363cd16.md "SAPUI5 provides a set of JavaScript and CSS libraries, which can be combined in an application using the combinations that are supported.")
 
 [Browser and Platform Support](../02_Read-Me-First/browser-and-platform-support-74b59ef.md "Here you can find information on the browser and platform support for the SAPUI5 libraries on iOS, Android, macOS, and Windows platforms.")
-
-[API Reference: `sap.ui.mdc`](https://ui5.sap.com/#/api/sap.ui.mdc)
-
-[Samples](https://ui5.sap.com/#/entity/sap.ui.mdc)
-
-[UI5 MDC Tutorial](https://github.com/SAP-samples/ui5-mdc-json-tutorial)
 

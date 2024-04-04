@@ -179,6 +179,21 @@ Because of the use of а third-party component some additional restrictions appl
     
     </td>
     </tr>
+    <tr>
+    <td valign="top">
+    
+    1.122
+    
+    </td>
+    <td valign="top">
+    
+    -   5.10.9
+    -   6.8.2
+
+
+    
+    </td>
+    </tr>
     </table>
     
 -   Accessibility features that the wrapper control provides, like high-contrast themes and keyboard handling, are not fully available for the native toolbar.

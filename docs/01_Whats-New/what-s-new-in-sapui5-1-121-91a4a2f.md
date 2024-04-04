@@ -1,16 +1,11 @@
 <!-- loio91a4a2f59e444ada8d003369a580f61d -->
 
-<link rel="stylesheet" type="text/css" href="../css/sap-icons.css"/>
-
 # What's New in SAPUI5 1.121
 
 With this release SAPUI5 is upgraded from version 1.120 to 1.121.
 
 > ### Tip:  
 > If you want to do a search across all versions of the What's New content, you can also find it in the [SAPUI5 What's New viewer](https://help.sap.com/whats-new/67f60363b57f4ac0b23efd17fa192d60).
-
-> ### Note:  
-> Content marked as <span style="color:#666666;"><span class="SAP-icons-V5"></span></span>**[Preview](https://help.sap.com/docs/whats-new-disclaimer)** is provided as a courtesy, without a warranty, and may be subject to change. For more information, see the [preview disclaimer](https://help.sap.com/docs/whats-new-disclaimer).
 
 ****
 
@@ -52,50 +47,6 @@ Action
 Available as of
 
 </th>
-</tr>
-<tr>
-<td valign="top">
-
-1.122 
-
-</td>
-<td valign="top">
-
-Changed 
-
-</td>
-<td valign="top">
-
-Announcement 
-
-</td>
-<td valign="top">
-
-**Overview Page: Improved Filtering on Custom Cards** 
-
-</td>
-<td valign="top">
-
-**Overview Page: Improved Filtering on Custom Cards**
-
-> ### Note:  
-> The following information concerns important upcoming changes for end users. These changes may require end users to adjust and/or test cases to be adapted, but they won't stop or disrupt software or processes.
-
-For overview page applications, we are improving the behavior of filters on custom cards. As of SAPUI5 1.122, we are providing an extension API that application developers can use to ensure correct filtering is applied on custom cards.
-
-<sub><span style="color:#666666;"><span class="SAP-icons-V5"></span></span>**[Preview](https://help.sap.com/docs/whats-new-disclaimer)**•Changed•Announcement•Info Only•1.122</sub>
-
-</td>
-<td valign="top">
-
-Info Only 
-
-</td>
-<td valign="top">
-
-2024-03-21
-
-</td>
 </tr>
 <tr>
 <td valign="top">

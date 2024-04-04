@@ -23,7 +23,7 @@ The following table types are available:
 
 
 
-The table representation that suits the service is chosen by default during the app creation. The responsive table is chosen as the default table type. The analytical table is chosen as default table type for analytical services.
+The table representation that suits the service is chosen by default during the app creation. The responsive table is chosen as the default table type. The analytical table is chosen as the default table type for analytical services.
 
 Application developers can change the default table type to suit their needs. For more information about the table types, see [Tables: Which One Should I Choose?](../10_More_About_Controls/tables-which-one-should-i-choose-148892f.md).
 
@@ -57,7 +57,7 @@ Applications can change the single-selection mode to multi-selection mode. For m
 
 ## Showing or Hiding Columns Based on Importance and Available Screen Size in Responsive Tables
 
-You can show or hide columns of list report and object page tables depending on the screen width, for example if the browser window is small, if the app is running on a device with a smaller screen, or if you're using the flexible column layout. The value of the `UI.Importance` annotation for the field determines which columns are hidden or moved when the screen size is reduced.
+You can show or hide columns of the list report and object page tables depending on the screen width. For example if the browser window is small, if the app is running on a device with a smaller screen, or if you're using the flexible column layout. The value of the `UI.Importance` annotation for the field determines which columns are hidden or moved when the screen size is reduced.
 
 You can use the `UI.Importance` annotation to set the importance for table columns as follows:
 
@@ -68,7 +68,7 @@ You can use the `UI.Importance` annotation to set the importance for table colum
 -   `None` \(default\) and `Medium`: Columns with `None` \(default\) and `Medium` importance settings are hidden automatically when the screen size is reduced.
 
 
-For columns with `Low`, `None`, and `Medium` settings, the *Show More per Row* /*Show Less per Row* buttons appear in the table toolbar only if there is at least one hidden column. When the end user clicks the *Show More per Row* button, the hidden column information appears as a text in the pop-in area. To hide the pop-in area, click the *Show Less per Row* button.
+For columns with `Low`, `None`, and `Medium` settings, the *Show More per Row* /*Show Less per Row* buttons appear in the table toolbar only if there's at least one hidden column. When the end user clicks the *Show More per Row* button, the hidden column information appears as a text in the pop-in area. To hide the pop-in area, click the *Show Less per Row* button.
 
 > ### Note:  
 > -   Columns that have no importance setting \(`None`\) but contain a semantic key are considered as `High` importance \(also when used in a `FieldGroup`\).
@@ -104,6 +104,69 @@ For columns with `Low`, `None`, and `Medium` settings, the *Show More per Row* /
 
 
 
+<a name="loioc0f6592a592e47f9bb6d09900de47412__section_zln_qlc_s1c"/>
+
+## Hiding Table Columns Using the `UI.Hidden` Annotation
+
+You can hide the table columns or specific fields within the table column in an analytical list page, list report, and object page. To hide the entire table column, set the `UI.Hidden` annotation value for any field as static `true`. To hide a specific field of a table column, set the `UI.Hidden` annotation value as a path-based value and the fields for which `UI.Hidden` evaluates to `true` is hidden.
+
+> ### Note:  
+> If the path-based value for `UI.Hidden` evaluates to `true` for all the rows, then only the fields are hidden and not the entire table column.
+
+  
+  
+**DataField Records in Tables**
+
+![](images/DataFieldRecords1_bd2e691.png "DataField Records in Tables")
+
+> ### Sample Code:  
+> XML Annotation
+> 
+> ```
+> <Annotation Term="UI.LineItem">
+>     <Collection>
+>         <Record Type="UI.DataFieldForAnnotation">
+>             <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#multipleActionFields" />
+>             <PropertyValue Property="Label" String="Sold-To Party" />
+>             <Annotation Term="UI.Hidden" Path="Delivered" />
+>         </Record>
+>     </Collection>
+> </Annotation>
+> ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> ```
+> @UI.lineItem: [
+>   {
+>     hidden: true,
+>     label: ‘Sold-To Party’,
+>     type: #AS_FIELDGROUP, 
+>     hidden: #(‘Delivered’),
+>     valueQualifier: ' multipleActionFields'
+>   }
+> ]
+> TEST;
+> ```
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> LineItem                                        : {
+>         $value             : [
+>         {
+>             $Type             : 'UI.DataFieldForAnnotation',
+>             Target            : '@UI.FieldGroup#multipleActionFields',
+>             Label             : 'Sold-To Party,
+>             ![@UI.Hidden] : Delivered
+>         }
+> ]
+> ```
+
+
+
 <a name="loioc0f6592a592e47f9bb6d09900de47412__section_u3p_z5q_sqb"/>
 
 ## Searching for Rows in a Table on an Object Page
@@ -126,16 +189,16 @@ You can customize the width of a column defined in a line item using the UI anno
 
 ## Copying Multiple Rows and Range Selections
 
-Users can copy multiple rows as well as ranges of rows and columns to the clipboard. The selected content \(rows or ranges\) then can be pasted to another application such as Microsoft Excel, Microsoft Word, or to another SAP Fiori elements table. Note that the copying from a table functionality doesn’t split the content for fields that contain an amount together with a unit of measure or currency, as well as for fields that contain a value and its description. After copying, users need to adapt such content before pasting it to an SAP Fiori elements table.
+Users can copy multiple rows as well as ranges of rows and columns to the clipboard. The selected content \(rows or ranges\) can then be pasted to another application such as Microsoft Excel, Microsoft Word, or to another SAP Fiori elements table. Note that the copying from a table functionality doesn’t split the content for fields that contain an amount together with a unit of measure or currency, as well as for fields that contain a value and its description. After copying, users need to adapt such content before pasting it to an SAP Fiori elements table.
 
 > ### Note:  
 > -   Selecting a range only works for non-responsive tables.
 > 
-> -   When using custom columns in SAP Fiori elements for OData V4, the cell content are the properties listed in the `property` array of the custom column definition. For more information, see [Extension Points for Tables](extension-points-for-tables-d525522.md).
+> -   When using custom columns in SAP Fiori elements for OData V4, the cell content is the properties listed in the `property` array of the custom column definition. For more information, see [Extension Points for Tables](extension-points-for-tables-d525522.md).
 > 
 > -   Copying can't be disabled in SAP Fiori elements for OData V4. However, the *Copy* button in a responsive table is hidden if the selection is set to `None`.
 
-To select a range with your mouse, click and hold while making a selection. You may also use keyboard shortcuts.
+To select a range with your mouse, click and hold while making a selection. You can also use keyboard shortcuts.
 
 
 <table>
@@ -159,7 +222,7 @@ Behavior
 </td>
 <td valign="top">
 
-Selects the cell the focus is set on, If used inside a selection, removes the selection.
+Selects the cell that the focus is set on, If used inside a selection, removes the selection.
 
 </td>
 </tr>
@@ -239,9 +302,9 @@ You can set the vertical alignment property for a responsive table using the `ta
 
 
 
-### Showing/Hiding the *Copy* Button
+### Showing/Hiding the *Copy to Clipboard* Button
 
-By default, the *Copy* button is displayed in the table toolbar if the selection mode, such as single selection or multi selection, is configured for the corresponding table. However, you can also configure the visibility of the *Copy* button by defining the `copy` settings in the `manifest.json` file. If `copy` is set to `true`, the *Copy* button is shown in the table toolbar. If `copy` is set to `false`, the *Copy* button is hidden from the table toolbar.
+By default, the *Copy to Clipboard* button is displayed in the table toolbar if the selection mode, such as single selection or multi selection, is configured for the corresponding table. However, you can also configure the visibility of the *Copy to Clipboard* button by defining the `copy` settings in the `manifest.json` file. If `copy` is set to `true`, the *Copy to Clipboard* button is shown in the table toolbar. If `copy` is set to `false`, the *Copy to Clipboard* button is hidden from the table toolbar.
 
 > ### Sample Code:  
 > Settings for the List Report Page
@@ -329,13 +392,37 @@ By default, the *Copy* button is displayed in the table toolbar if the selection
 
 
 
+### Hiding Table Columns Using the `UI.Hidden` Annotation in an Object Page
+
+Table columns in the object page can be hidden using the `UI.Hidden` annotation either with a boolean value `true` or with a path referring to the property of the parent instance. The`to_Product` is the navigation property pointing to the parent entityas shown in the following example:
+
+> ### Sample Code:  
+> ```
+> <Annotation Term="UI.LineItem">
+> 	<Collection>
+> 		<Record Type="UI.DataField">
+> 			<PropertyValue Property="Value" Path="SoldToParty" />
+> 			<Annotation Term="UI.Hidden" Path="to_Product/Delivered" />
+> 		</Record>
+> 	</Collection>
+> </Annotation>
+> ```
+
+> ### Note:  
+> You must not use the `UI.Hidden` annotation with a path for columns that supports grouping, sorting, or filtering. Since these operations are performed in the back end, it can lead to UX inconsistency.
+
+> ### Restriction:  
+> For tables in the list page and analytical list page, the `UI.Hidden` annotation with a path must only point to a field within the same entity.
+
+
+
 <a name="loioc0f6592a592e47f9bb6d09900de47412__section_ey5_lvv_gnb"/>
 
 ## Additional Features in SAP Fiori Elements for OData V4
 
-A responsive table is used by default. You can change this in the `manifest.json` file.
+A responsive table is used by default. You can change the table type in the `manifest.json` file.
 
-Analytical tables are not supported on draft-enabled entities.
+Analytical tables aren't supported on draft-enabled entities.
 
 
 
@@ -383,7 +470,7 @@ The search restriction for a table is first looked up in the parent entity \(usi
     > ### Sample Code:  
     > ABAP CDS Annotation
     > 
-    > No ABAP CDS annotation sample is available. Please use the local XML annotation.
+    > No ABAP CDS annotation sample is available. Use the local XML annotation.
 
     > ### Sample Code:  
     > CAP CDS Annotation \(non-containment scenario\)
@@ -465,7 +552,7 @@ The search restriction for a table is first looked up in the parent entity \(usi
     > ### Sample Code:  
     > ABAP CDS Annotation
     > 
-    > No ABAP CDS annotation sample is available. Please use the local XML annotation.
+    > No ABAP CDS annotation sample is available. Use the local XML annotation.
 
     > ### Sample Code:  
     > CAP CDS Annotation \(non-containment scenario\)
@@ -496,7 +583,7 @@ The search restriction for a table is first looked up in the parent entity \(usi
     > ### Sample Code:  
     > ABAP CDS Annotation
     > 
-    > No ABAP CDS annotation sample is available. Please use the local XML annotation.
+    > No ABAP CDS annotation sample is available. Use the local XML annotation.
 
     > ### Sample Code:  
     > CAP CDS Annotation \(containment scenario\)
@@ -514,7 +601,7 @@ The search restriction for a table is first looked up in the parent entity \(usi
 
 ### Freezing Table Columns
 
-You can freeze the first columns of a table so that they always remain visible when scrolling the table horizontally. To do this, add the `frozenColumnCount` parameter to the table's manifest. This also specifies how many columns should be frozen.
+You can freeze the first columns of a table so that they always remain visible when scrolling the table horizontally. To do this, add the `frozenColumnCount` parameter to the table's manifest. This parameter also specifies how many columns can be frozen.
 
 > ### Sample Code:  
 > `manifest.json`
@@ -533,7 +620,7 @@ You can freeze the first columns of a table so that they always remain visible w
 > ```
 
 > ### Note:  
-> This option is not available for the responsive table.
+> This option isn't available for the responsive table.
 
 
 
