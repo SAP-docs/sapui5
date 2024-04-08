@@ -39,7 +39,7 @@ This will install the type definitions for OpenUI5 and update the `package.json`
 
 <a name="loio0feb70c39c5e4074893c294667b3f36b__section_rpg_y4q_nzb"/>
 
-## webapp.index.ts
+## webapp/index.ts
 
 We then make some changes to our `index.ts` file: We remove the `alert` method and instantiate an SAPUI5 `Text` control instead; its options are passed to the constructor with a TypeScript object. For our control we set the `text` property to the value “Hello World”.
 
