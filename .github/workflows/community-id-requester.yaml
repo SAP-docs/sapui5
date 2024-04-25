@@ -6,7 +6,7 @@ name: SAP Community profile URL requester
 
 # What it does:
 # Adds a comment to the issue or pull request asking the author for
-# their SAP Community profile URL ('community ID').
+# their SAP Community ID.
 
 # Why we need it:
 # So that we can properly recognize the contribution in SAP Community.
@@ -43,7 +43,7 @@ jobs:
 
       - id: checkout
         name: Check out the repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           token: ${{ steps.token_gen.outputs.app_token }}
 
@@ -88,5 +88,5 @@ jobs:
         name: Ask for SAP Community profile URL if label added for first time and no prev labeled issue / pr
         if: env.LABELADDITIONCOUNT == 1 && env.OBJECTCOUNT <= 1
         run: |
-          printf "Thank you for your valuable ${CONTRIBUTIONTYPE} contribution, @${CONTRIBUTOR}! So that we can [recognize your contribution in SAP Community](https://github.com/SAP-docs/contribution-guidelines/blob/main/docs/recognition.md), please tell us your SAP Community profile URL in a reply to this comment; don't include any other text, just the URL on its own, like this:\n\n\`\`\`\nhttps://people.sap.com/your-user-name\n\`\`\`\n\nThanks!" \
+          printf "Thank you for your valuable ${CONTRIBUTIONTYPE} contribution, @${CONTRIBUTOR}! So that we can [recognize your contribution in the SAP Community](https://github.com/SAP-docs/contribution-guidelines/blob/main/docs/recognition.md), please check your SAP Community user ID (this is a number) in your [personal settings page](https://community.sap.com/t5/user/myprofilepage/tab/personal-profile) and share it with us in a reply to this comment. Make sure you just include the number in the reply.\n\nYour user ID is displayed as follows:\n\n**Change display name for User ID N**\n\nwhere N is your user ID. For example, [53 is the user ID of the user 'qmacro'](https://community.sap.com/t5/user/viewprofilepage/user-id/53).\n\nPlease note that we are currently refactoring our profile and badge system on the SAP Community, and will start assigning badges again when that's complete." \
           | gh $OBJECTTYPE comment $OBJECTNR --body-file -
