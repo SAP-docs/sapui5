@@ -14,9 +14,13 @@ Back-end systems can generate either a state message or a transition message.
 
 -   Transition message
 
-    A transition message does not affect the state of the object, but is rather 'transient' in nature and refers only to the last action that was executed , for example "Document can't be printed as printer is not available" or "Order cannot be released because the specified quantity is not available in stock".
+    A transition message does not affect the state of the object, but is rather 'transient' in nature and refers only to the last action that was executed , for example "Document can't be printed as printer is not available" or "Order cannot be released because the specified quantity is not available in stock". As such, they are not stored in backend and are only sent in response for the specific request (fire and forget).
 
     Transition messages are shown in the message dialog in the list report and on the object page \(or subobject page\) in display mode. The only exception is if there is exactly one transition success message, since in this case the message is shown in a message toast.
+
+**Backend Validation messages after a field change**
+
+Applications should not validate each and every change from end user - when end user is still working on the draft. Instead, these validations must only be done after the user tries to activate the draft (Save action) or trigger an explicit validation (Enter/Validate action on mobile). At this time, the applications should return state messages for the fields that are not having the right values. Since the draft was not activated, the end user will return to the draft version to allow for correcting the values. As the user corrects each of the field, the backend must ensure that a new validation on the changed field and accordingly manage the state message corresponding to that field. Note that there should be no validation triggered when user changes the value of other fields (those that do not have a warning/error) as the user is still working on the draft!
 
 
 > ### Note:  
@@ -49,6 +53,48 @@ Transition messages are always shown in message dialog - this is true also in ed
 
 For more detailed information, see [Server Messages in the OData V4 Model](../04_Essentials/server-messages-in-the-odata-v4-model-fbe1cb5.md).
 
+### State messages
+State Messages are always send with the body in a complex type (the name of it is annotated via @com.sap.vocabularies.Common.v1.Messages) but only if requested from the client. Once requested the model removes the existing state messages for this entity and fills the message model again with the returned ones from the backend.
+
+Applications have to take care they annotate side effects with the target to the message property for every action call or property change that can result into new or removed messages. It's designed like this because not every update results to changed messages. If it's just a dump patch without business logic behind it does not make any sense to remove the messages on the client, read them in the backend and transfer them again to the client. 
+
+For example:
+```
+<Annotation Term="com.sap.vocabularies.Common.v1.SideEffects" Qualifier="CustomerChange">
+    <Record>
+        <PropertyValue Property="SourceProperties">
+            <Collection>
+                <PropertyPath>Customer</PropertyPath>
+            </Collection>
+        </PropertyValue>
+        <PropertyValue Property="TargetProperties">
+            <Collection>
+                <PropertyPath>SAP__Messages</PropertyPath>
+            </Collection>
+        </PropertyValue>
+    </Record>
+</Annotation>
+```
+
+If an app wants to read the messages for all properties a side effect with the entity as source entity can be added, for example:
+```
+<Annotation Term="com.sap.vocabularies.Common.v1.SideEffects" Qualifier="AllwaysReadStateMessages">
+    <Record>
+        <PropertyValue Property="SourceEntities">
+            <Collection>
+                <NavigationPropertyPath />
+            </Collection>
+        </PropertyValue>
+        <PropertyValue Property="TargetProperties">
+            <Collection>
+                <PropertyPath>SAP__Messages</PropertyPath>
+            </Collection>
+        </PropertyValue>
+    </Record>
+</Annotation>
+```
+
+As it is very likely that actions that return an entity which contains an annotated message property also changes state messages it was decided that in the case no side effect was annotated at all we implicitly request for the message property.
 
 
 ### Bound and Unbound Messages
@@ -141,7 +187,6 @@ The message dialog consists of the following components:
     **Message Dialog: Chevron Navigation to Message Details**
 
     ![](images/Message_Dialog_Chevron_Navigation_to_Details_6971667.png "Message Dialog: Chevron Navigation to Message Details")
-
 
 
 
