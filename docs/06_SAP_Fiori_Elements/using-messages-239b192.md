@@ -56,7 +56,7 @@ For more detailed information, see [Server Messages in the OData V4 Model](../04
 ### State messages
 State Messages are always send with the body in a complex type (the name of it is annotated via @com.sap.vocabularies.Common.v1.Messages) but only if requested from the client. Once requested the model removes the existing state messages for this entity and fills the message model again with the returned ones from the backend.
 
-Applications have to take care they annotate side effects with the target to the message property for every action call or property change that can result into new or removed messages. It's designed like this because not every update results to changed messages. If it's just a dump patch without business logic behind it does not make any sense to remove the messages on the client, read them in the backend and transfer them again to the client. 
+Applications have to take care they annotate side effects with the target to the message property for property change that can result into new or removed messages. It's designed like this because not every update results to changed messages. If it's just a dump patch without business logic behind it does not make any sense to remove the messages on the client, read them in the backend and transfer them again to the client. Also, if applications add a side effect to an action, then they have to take care to also add a side effect with the target to the message target.
 
 For example:
 ```
@@ -94,7 +94,7 @@ If an app wants to read the messages for all properties a side effect with the e
 </Annotation>
 ```
 
-As it is very likely that actions that return an entity which contains an annotated message property also changes state messages it was decided that in the case no side effect was annotated at all we implicitly request for the message property.
+For actions without side effects that return an entity which contains an annotated message property, there is always an implicit request for the message property (even without the applications adding any side effect with target to the message property).
 
 
 ### Bound and Unbound Messages
