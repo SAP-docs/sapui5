@@ -1286,7 +1286,7 @@ Object page
 </td>
 <td valign="top">
 
-[Copying and Pasting from Spreadsheet Applications to Tables](copying-and-pasting-from-spreadsheet-applications-to-tables-f6a8fd2.md)
+[Copying and Pasting from External Applications to Tables](copying-and-pasting-from-external-applications-to-tables-f6a8fd2.md)
 
 </td>
 <td valign="top">

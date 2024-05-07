@@ -112,8 +112,8 @@ Here is a sample HTML bootstrap file for Gherkin. In this example, the feature f
     <script
       id="sap-ui-bootstrap"
       src="https://openui5nightly.hana.ondemand.com/resources/sap-ui-core.js"
-      data-sap-ui-resourceroots='{"GherkinWithOPA5": "./"}'
-      data-sap-ui-loglevel="INFO"
+      data-sap-ui-resource-roots='{"GherkinWithOPA5": "./"}'
+      data-sap-ui-log-level="INFO"
     ></script>
 
     <script>
@@ -251,20 +251,25 @@ Here is a simple stub for a test Web site \(you may need to update the bootstrap
 Here's some simple code for an app:
 
 ```js
-sap.ui.getCore().attachInit(function() {
+sap.ui.require([
+  "sap/m/Button",
+  "sap/ui/core/Core",
+  "sap/ui/layout/VerticalLayout"
+], function(Button, Core, VerticalLayout) {
   "use strict";
 
-  var oLayout = new sap.ui.layout.VerticalLayout({id: "layout"});
+  Core.ready().then( () => {
+    var oLayout = new VerticalLayout({id: "layout"});
 
-  var oButton = new sap.m.Button({
-    id: "life-saving-button",
-    text: "Save a Lemming",
-    press: function() {}
+    var oButton = new Button({
+      id: "life-saving-button",
+      text: "Save a Lemming",
+      press: function() {}
+    });
+
+    oLayout.addContent(oButton);
+    oLayout.placeAt("uiArea");
   });
-
-  oLayout.addContent(oButton);
-  oLayout.placeAt("uiArea");
-
 });
 ```
 

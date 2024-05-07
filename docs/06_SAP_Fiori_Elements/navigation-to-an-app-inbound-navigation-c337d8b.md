@@ -96,6 +96,9 @@ Applications can also trigger deep linking directly to the n-th level of a subob
 > 
 > -   `allowDeepLinking` is not required or relevant for the object page. Deep linking to an object page always happens if the URL has all the technical or semantic keys of the entity set of the object page. It is only required for the deep linking to subobject page.
 
+> ### Restriction:  
+> We don't support deep linking for applications that are configured with parameters or mandatory filters.
+
 
 
 <a name="loioc337d8bde8c544598969c8e4edaab262__section_zst_cld_hmb"/>

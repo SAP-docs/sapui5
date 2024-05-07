@@ -30,7 +30,7 @@ For more information, see [Adding Actions to Tables](adding-actions-to-tables-b6
   
 **Example: Table Toolbar Actions and Inline Actions**
 
-![](images/Actions_in_the_Table_Toolbar_856c5a4.jpg "Example: Table Toolbar Actions and Inline Actions")
+![](images/Actions_in_the_Table_Toolbar_856c5a4.png "Example: Table Toolbar Actions and Inline Actions")
 
 
 

@@ -53,12 +53,12 @@ Let's say that you are facing a performance issue in your app, so let's check so
     		src="https://sdk.openui5.org/resources/sap-ui-core.js"
     		data-sap-ui-theme="sap_horizon"
     		data-sap-ui-libs="sap.f"
-    		data-sap-ui-resourceroots='{
+    		data-sap-ui-resource-roots='{
     			"sap.ui.demo.HeapOfShards": "./",
     			"sap.ui.demo.DoesNotExist": "./DoesNotExist"
     		}'
-    		data-sap-ui-oninit="module:sap/ui/core/ComponentSupport"
-    		data-sap-ui-compatVersion="edge"
+    		data-sap-ui-on-init="module:sap/ui/core/ComponentSupport"
+    		data-sap-ui-compat-version="edge"
     		data-sap-ui-async="true">
     	</script>
     […]

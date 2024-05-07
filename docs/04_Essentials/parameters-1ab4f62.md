@@ -4,7 +4,7 @@
 
 When creating a binding, you can provide a parameter map which can contain the following:
 
--   OData query options; the values determine parameters for data service requests triggered by the binding. For more information about these options, see [OData Version 4.0 Part 2: URL Conventions, 5 Query Options](http://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part2-url-conventions.html).
+-   OData query options; the values determine parameters for data service requests initiated by the binding. For more information about these options, see [OData Version 4.0 Part 2: URL Conventions, 5 Query Options](http://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part2-url-conventions.html).
 
 -   Binding-specific parameters start with `"$$"` and influence the behavior of the binding as follows:
 
@@ -20,7 +20,7 @@ When creating a binding, you can provide a parameter map which can contain the f
 
 -   `$$patchWithoutSideEffects`: Set to `true` to switch off implicit loading of side effects via PATCH requests. This sets the"return=minimal" preference and requires the service to return an ETag header for "204 No Content" responses. If not specified, the value of the parent binding is used. All values other than `true` lead to an error.
 
--   `$$inheritExpandSelect`: For operation bindings only. Set to `true` to ensure that $expand and $select from the parent binding are used in the request sent on `#execute`. If set to `true`, the binding must not set the $expand itself, the operation must be bound, and the return value and the binding parameter must belong to the same entity set.
+-   `$$inheritExpandSelect`: For operation bindings only. Set to `true` to ensure that $expand and $select from the parent binding are used in the request sent on `#invoke`. If set to `true`, the binding must not set the $expand itself, the operation must be bound, and the return value and the binding parameter must belong to the same entity set.
 
 
 

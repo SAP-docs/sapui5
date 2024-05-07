@@ -222,7 +222,7 @@ For more information about page variants, see the [sample](https://ui5.sap.com/#
 
 ## Favorites
 
-If you want to use favorites to manage your views, you have to set the `useFavorites` property in the `VariantManagement` control to `true` \(default is `false`\).
+If you want to use favorites to manage your views, you have to set the `useFavorites` property in `SmartVariantManagementBase` to `true` \(default is `false`\).
 
 In the `VariantManagement` control, each `VariantItem` has a `favorite` property that determines if the `VariantItem` in question is treated as a favorite.
 

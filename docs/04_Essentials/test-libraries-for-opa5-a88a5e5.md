@@ -23,7 +23,7 @@ There are 3 simple steps to start using a test library:
     ```html
     <script id="sap-ui-bootstrap"
         src="../../resources/sap-ui-core.js"
-        data-sap-ui-resourceroots='{
+        data-sap-ui-resource-roots='{
             "my.application.test.integration": "./",
             "my.awesome.testlibrary.integration.testLibrary" : "../../../test-resources/my/awesome/testlibrary/integration/testLibrary"
     

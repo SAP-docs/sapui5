@@ -24,7 +24,7 @@ The type must be specified if the return value is a primitive type.
 
 Often it is not feasible for the operation to be called immediately, for example if there are parameters that the user has to enter first. In such cases, use an ODataContextBinding as element binding at a layout element in the view, for example a `<Form>` or a `<VBox>` \(see the [ODataContextBinding](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataContextBinding) API documentation in the Demo Kit\). Mark the operation as **deferred** by inserting an ellipsis \("..."\) in the brackets, for example `GetNextAvailableItem(...)`. Access the return value from child elements using relative bindings. When used like this, the context binding is called an **operation binding** or more specifically, a **function binding** or **action binding** depending on the type of OData operation it is used for.
 
-If the operation binding defers operation execution, you need to call its `execute` method to execute the operation. See below for an example.
+If the operation binding defers operation invocation, you need to call its `invoke` method to invoke the operation. See below for an example.
 
 **View:**
 
@@ -40,7 +40,7 @@ If the operation binding defers operation execution, you need to call its `execu
 
 ```js
 onGetNextAvailableItem : function (oEvent) {
-    this.getView().byId("getNextAvailableItem").getObjectBinding().execute();
+    this.getView().byId("getNextAvailableItem").getObjectBinding().invoke();
 }
 ```
 
@@ -68,15 +68,15 @@ If the function returns a primitive value or a collection, the binding for the r
 </VBox>
 ```
 
-`execute` returns a promise which is resolved if the operation was successful and rejected with an error if this was not the case. Note that the promise is **not** fulfilled with the action's result: Use dependent bindings to access the result.
+`invoke` returns a promise which is resolved if the operation was successful and rejected with an error if this was not the case. Note that the promise is **not** fulfilled with the action's result: Use dependent bindings to access the result.
 
-`refresh` is silently ignored on a deferred function binding as long as it has not yet been executed. Afterwards, a `refresh` calls the function again.
+`refresh` is silently ignored on a deferred function binding as long as it has not yet been invoked. Afterwards, a `refresh` calls the function again.
 
 
 
 ## Action Bindings
 
-Action bindings must be deferred, otherwise the application cannot control when the action is executed. A deferred action binding is declared exactly like a deferred function binding:
+Action bindings must be deferred, otherwise the application cannot control when the action is invoked. A deferred action binding is declared exactly like a deferred function binding:
 
 **View:**
 
@@ -86,9 +86,9 @@ Action bindings must be deferred, otherwise the application cannot control when 
 </Form>
 ```
 
-You append "\(...\)" even though the action's resource URL does not contain them. However, they are needed to mark the binding as deferred. In `execute`, the binding uses the metadata to distinguish between action and function and to build the correct operation resource path.
+You append "\(...\)" even though the action's resource URL does not contain them. However, they are needed to mark the binding as deferred. In `invoke`, the binding uses the metadata to distinguish between action and function and to build the correct operation resource path.
 
-`refresh` is always silently ignored on a deferred action binding to prevent the action from being executed accidentally \(for example by calling the `refresh` method on the ODataModel instance `oModel.refresh()`\).
+`refresh` is always silently ignored on a deferred action binding to prevent the action from being invoked accidentally \(for example by calling the `refresh` method on the ODataModel instance `oModel.refresh()`\).
 
 
 
@@ -151,7 +151,7 @@ Alternatively, operation parameters can be set by calling the function `setParam
 
 ```js
 onSubmit : function (oEvent) {
-    this.getView().byId("Submit").getObjectBinding().setParameter("Comment", sComment).execute();
+    this.getView().byId("Submit").getObjectBinding().setParameter("Comment", sComment).invoke();
 }
 ```
 
@@ -199,7 +199,7 @@ var oModel = this.getView().getModel(),
     oSalesOrderContext = oTable.getSelectedItem().getBindingContext(),
     oAction = oModel.bindContext("name.space.InvoiceCreated(...)", oSalesOrderContext);
  
-oAction.execute().then(
+oAction.invoke().then(
     function () {
         MessageToast.show("Invoice created for sales order " + oSalesOrderContext.getProperty("SalesOrderID"));
     },
@@ -217,7 +217,7 @@ To call actions or functions bound to a collection specified by an OData entity 
 ```js
 var oModel = this.getView().getModel();
  
-oModel.bindContext("/LeaveRequests/name.space.DestroyOutdated(...)").execute();
+oModel.bindContext("/LeaveRequests/name.space.DestroyOutdated(...)").invoke();
 ```
 
 The same example with a relative binding and the header context of the list binding as parent context:
@@ -228,17 +228,17 @@ var oModel = this.getView().getModel(),
     oListBinding = this.byId("leaveRequests").getBinding("items"),
     oHeaderContext = oListBinding.getHeaderContext();
 
-oModel.bindContext("name.space.DestroyOutdated(...)", oHeaderContext).execute(); 
+oModel.bindContext("name.space.DestroyOutdated(...)", oHeaderContext).invoke(); 
 ```
 
 > ### Note:  
 > -   The path of an operation binding may also start with a navigation property.
 > 
->     Example: The operation binding has a relative path `BP_2_PRODUCT/name.space.Change(...)`. You set its binding context from the selected item in a table bound to `/BusinessPartners`. When you call `execute` on the operation binding, the "change" action is executed with the selected business partner's navigation property `BP_2_PRODUCT` as binding parameter.
+>     Example: The operation binding has a relative path `BP_2_PRODUCT/name.space.Change(...)`. You set its binding context from the selected item in a table bound to `/BusinessPartners`. When you call `invoke` on the operation binding, the "change" action is invoked with the selected business partner's navigation property `BP_2_PRODUCT` as binding parameter.
 > 
 > -   The parent binding of a deferred operation must not be a deferred operation itself.
 > 
-> -   When executing a bound action, you can use the `bIgnoreETag` argument of [`ODataContextBinding#execute`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataContextBinding/methods/execute) to actively ignore the ETag match that normally happens \(technically, the header *"If-Match : \*"* will be used\). This is useful if a second bound action for the same entity is to be executed within the same batch \(especially if it is in a different change set\). An example would be "prepare" and "activate" for draft handling. Without this, the second bound action would be rejected, because the client sent the initial ETag via the *"If-Match"* header, but the first bound action changes that ETag on the server before the second one is executed.
+> -   When invoking a bound action, you can use the `bIgnoreETag` argument of [`ODataContextBinding#invoke`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataContextBinding/methods/invoke) to actively ignore the ETag match that normally happens \(technically, the header *"If-Match : \*"* will be used\). This is useful if a second bound action for the same entity is to be invoked within the same batch \(especially if it is in a different change set\). An example would be "prepare" and "activate" for draft handling. Without this, the second bound action would be rejected, because the client sent the initial ETag via the *"If-Match"* header, but the first bound action changes that ETag on the server before the second one is invoked.
 
 
 
@@ -271,9 +271,9 @@ In some cases an action should not be performed in case warnings are present, un
 
 The strict handling is requested by the client with the HTTP request header `Prefer:handling=strict`. The server replies with HTTP status code `412 Precondition Failed` and the response header `Preference-Applied:handling=strict` if the request fails because the preference was applied.
 
-To request this behavior, you have to provide `fnOnStrictHandlingFailed` as a callback function when invoking [`sap.ui.model.odata.v4.ODataContextBinding#execute`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataContextBinding/methods/execute) . This callback is called if the action is rejected with HTTP status code `412 Precondition Failed` and the response header `Preference-Applied:handling=strict`. All relevant messages of the OData error are passed to the callback as an array of [`sap.ui.core.message.Message`](https://ui5.sap.com/#/api/sap.ui.core.message.Message) . These messages are not reported to the message model. The callback may be used to visualize the messages and has to return a `Promise` resolving with a `boolean` value. If this `Promise` resolves with `true`, the bound action is repeated, now without requesting `Prefer:handling=strict`. Otherwise, the `Promise` returned by `sap.ui.model.odata.v4.ODataContextBinding#execute` will be canceled.
+To request this behavior, you have to provide `fnOnStrictHandlingFailed` as a callback function when invoking [`sap.ui.model.odata.v4.ODataContextBinding#invoke`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataContextBinding/methods/invoke) . This callback is called if the action is rejected with HTTP status code `412 Precondition Failed` and the response header `Preference-Applied:handling=strict`. All relevant messages of the OData error are passed to the callback as an array of [`sap.ui.core.message.Message`](https://ui5.sap.com/#/api/sap.ui.core.message.Message) . These messages are not reported to the message model. The callback may be used to visualize the messages and has to return a `Promise` resolving with a `boolean` value. If this `Promise` resolves with `true`, the bound action is repeated, now without requesting `Prefer:handling=strict`. Otherwise, the `Promise` returned by `sap.ui.model.odata.v4.ODataContextBinding#invoke` will be canceled.
 
-It is possible to include multiple actions in the same change set, for example when executing an action on multiple items in a list. If one or more of the actions is rejected with HTTP status code `412 Precondition Failed` and the response header `Preference-Applied:handling=strict`, **all** of the actions included in the change set are rejected. The `fnOnStrictHandlingFailed` callback will then be invoked for all rejected actions; each callback instance only recieves the relevant messages for its associated action. This means that it's possible that no messages will be given to some of the callbacks.
+It is possible to include multiple actions in the same change set, for example when invoking an action on multiple items in a list. If one or more of the actions is rejected with HTTP status code `412 Precondition Failed` and the response header `Preference-Applied:handling=strict`, **all** of the actions included in the change set are rejected. The `fnOnStrictHandlingFailed` callback will then be invoked for all rejected actions; each callback instance only recieves the relevant messages for its associated action. This means that it's possible that no messages will be given to some of the callbacks.
 
 To enable strict handling for the above example, the controller code snippet may look like this:
 
@@ -306,7 +306,7 @@ To enable strict handling for the above example, the controller code snippet may
 >  
 > // controller code:
 > // event handler that invokes the bound action
-> onExecuteAction : function () {
+> onInvokeAction : function () {
 >   var that = this;
 >  
 > ...
@@ -322,7 +322,7 @@ To enable strict handling for the above example, the controller code snippet may
 >         }
 >     }
 >  
->     oAction.execute(undefined, undefined, onStrictHandlingFailed).then(
+>     oAction.invoke(undefined, undefined, onStrictHandlingFailed).then(
 >       function () {
 >         MessageToast.show("Invoice created for sales order");
 >       },
@@ -356,7 +356,7 @@ See also the example in the Demo Kit: [Controller Code for `sap.ui.core.sample.o
 According to the [OData 4.0 specification \("11.5.2 Advertising Available Operations within a Payload"\)](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752309) services may return available actions and functions bound to a particular entity as part of the entity representation within the payload. Data for an advertised operation within an entity is sent as property starting with `#<namespace>.<action>` of that entity. If the entity does not advertise the operation, it does not contain this property. To access the advertised operation in a binding, the same format has to be used. See the following example:
 
 > ### Example:  
-> Enable a button to trigger an action `AcSetIsOccupied` available on entity type of entity set `EMPLOYEES` depending on advertisement of this action on the entity `EMPLOYEES('1')`
+> Enable a button to initiate an action `AcSetIsOccupied` available on entity type of entity set `EMPLOYEES` depending on advertisement of this action on the entity `EMPLOYEES('1')`
 
 ```
 <FlexBox binding="{/EMPLOYEES('1')}">
@@ -398,21 +398,21 @@ You can access the results of the operation by calling `getObject()` from the bo
 
 ```js
 // let oOperation be the operation's context binding
-oOperation.execute().then(function () {
-    // Note: execute does not deliver the results
+oOperation.invoke().then(function () {
+    // Note: invoke does not deliver the results
 
     var oResults = oOperation.getBoundContext().getObject();
     ...
 });
 ```
 
-The promise returned by the operation binding's [`execute`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataContextBinding/methods/execute) method may resolve with a *return value context* provided the conditions specified in [`execute`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataContextBinding/methods/execute) are met. The operation binding may be bound to an entity or a collection of entities.
+The promise returned by the operation binding's [`invoke`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataContextBinding/methods/invoke) method may resolve with a *return value context* provided the conditions specified in [`invoke`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataContextBinding/methods/invoke) are met. The operation binding may be bound to an entity or a collection of entities.
 
 The typical use case for *return value context* is when you call a bound operation with a `C1` context defining its binding parameter and the bound operation returns a *different version* of the entity used as binding parameter. `C1` is the binding context of an "object page" container displaying properties of the corresponding entity. You need to replace `C1` as binding context of the object page by the*return value context*. This way, the *different version* of the entity is displayed without a further read request. If the bound operation returns the entity used as binding parameter, the changes will automatically be copied to the binding parameter.
 
 If the operation binding fulfills the conditions for returning a context, you can set the `$$inheritExpandSelect` parameter for the binding: The request for the bound operation is then sent with the same `$expand` and `$select` query options used to load the operation's binding parameter. This way you guarantee that all fields of the object page are available in the operation response.
 
-If the `C1` context belongs to a list binding, for example in a list report, you can pass the `bReplaceWithRVC` flag to the operation binding's `execute` method in order to immediately replace `C1` in the list with the return value context and return that list context instead. This way, the *different version* of the entity is displayed even inside the list report without a further read request. For more information, see [`sap.ui.model.odata.v4.ODataContextBinding#execute`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataContextBinding/methods/execute) and [Draft Handling with the OData V4 Model](draft-handling-with-the-odata-v4-model-40986e6.md).
+If the `C1` context belongs to a list binding, for example in a list report, you can pass the `bReplaceWithRVC` flag to the operation binding's `invoke` method in order to immediately replace `C1` in the list with the return value context and return that list context instead. This way, the *different version* of the entity is displayed even inside the list report without a further read request. For more information, see [`sap.ui.model.odata.v4.ODataContextBinding#invoke`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataContextBinding/methods/invoke) and [Draft Handling with the OData V4 Model](draft-handling-with-the-odata-v4-model-40986e6.md).
 
 Sample object page to display an `Artist` entity
 
@@ -443,7 +443,7 @@ onInit : function () {
 onEdit : function () {
     var that = this;
     oModel.bindContext("name.space.EditAction(...)", this.byId("objectPage").getBindingContext(), {$$inheritExpandSelect : true})
-        .execute()
+        .invoke()
         .then(function (oInactiveArtistContext) {
             that.byId("objectPage").setBindingContext(oInactiveArtistContext);
         });

@@ -195,7 +195,7 @@ This groups the fields in a form-like display, as shown in the following screens
 > 
 > -   If a subsection contains only one group, and the subsection title is same as group title, then the group title is hidden.
 > 
-> -   If `UI.FieldGroup` has only one `UI.MultiLineText` based property and no other controls, the label of the corresponding `TextArea` control is hidden, and only the section or subsection title is displayed. However, you must ensure that a meaningful label is assigned to the `TextArea` control as it is accessed by the screen reader programs.
+> -   If `UI.FieldGroup` has only one `UI.MultiLineText` based property and no other controls, the label of the corresponding `TextArea` control is hidden, and only the section or subsection title is displayed. However, you must ensure that a meaningful label is assigned to the `TextArea` control as it is accessed by the screen reader programs. This special logic is also not invoked if the `UI.FieldGroup` has multiple controls configured within it and, at runtime, due to dynamic visibility or UI adaptation, the `TextArea` control is found to be the only visible control.
 
 
 

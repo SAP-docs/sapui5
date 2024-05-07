@@ -125,7 +125,7 @@ Since the coding is essentially identical with step 5 and step 6, we do not make
 		useTablePersonalisation="true" 
 		header="Products" 
 		showRowCount="true"
-		useExportToExcel="false" 
+		enableExport="false" 
 		enableAutoBinding="true"
 		persistencyKey="SmartTablePKey">
 	</smartTable:SmartTable>
@@ -175,14 +175,14 @@ sap.ui.define([
 	<script id="sap-ui-bootstrap"
 		src="../../../../../../../../../resources/sap-ui-core.js"
 		data-sap-ui-theme="sap_horizon"
-		data-sap-ui-flexibilityServices='[{"connector": "LocalStorageConnector"}]'
-		data-sap-ui-resourceroots='{
+		data-sap-ui-flexibility-services='[{"connector": "LocalStorageConnector"}]'
+		data-sap-ui-resource-roots='{
 			"sap.ui.demo.smartControls": "./"
 		}'
-		data-sap-ui-oninit="module:sap/ui/demo/smartControls/initMockServer"
-		data-sap-ui-compatVersion="edge"
+		data-sap-ui-on-init="module:sap/ui/demo/smartControls/initMockServer"
+		data-sap-ui-compat-version="edge"
 		data-sap-ui-async="true"
-		data-sap-ui-frameOptions="trusted">
+		data-sap-ui-frame-options="trusted">
 	</script>
 </head>
 ```

@@ -217,7 +217,7 @@ The existing `titleChanged` event is extended with the following properties:
 
 -   `propagated`: whether the event is propagated from the router of a nested component
 -   `nestedHistory`: an array which contains the title and title history information of both the current router and the routers of the nested component\(s\). An application doesn't need to merge `nestedHistory` with the existing history parameter, because `nestedHistory` also contains the title history of the current router. Each element in the array has the following properties:
-    -   `ownerComponentId`: the ID of the component whose router fired the event. The router instance of this component can be retrieved by using the property `sap.ui.getCore().getComponent(sOwnerComponentId).getRouter()` which can be used for applying the `hash` of one title history entry to the browser. See the `hash` property for more information.
+    -   `ownerComponentId`: the ID of the component whose router fired the event. The router instance of this component can be retrieved by using the property `Component.getComponentbyId(sOwnerComponentId).getRouter()` which can be used for applying the `hash` of one title history entry to the browser. See the `hash` property for more information.
     -   `history`: an array which contains the previous titles fired on the router. If the current event is fired on this router directly, the array contains the current title information as well, so that the application doesn't need to consider the existing `title` property of the event anymore. Each element in the array contains the following properties:
         -   `title`: the title
         -   `hash`: the browser hash part that belongs to this router when the event was fired. When only one component is created in the application, the entire browser hash can be used by the router of this component. Some applications use the global hash changer:
@@ -229,7 +229,8 @@ The existing `titleChanged` event is extended with the following properties:
             to apply the hash to the browser. However, with nested components all component instances share the browser hash. The global hash changer then can't be used anymore, because it overwrites the entire browser hash without considering the other components. Instead, the application can parse the hash by using the method `getRouteInfoByHash` and navigate to the route by using the method `navTo`:
 
             ```
-            var oRouter = sap.ui.getCore().getComponent(sOwnerComponentId).getRouter();
+            // "Component" required from module "sap/ui/core/Component"
+            var oRouter = Component.getComponent(sOwnerComponentId).getRouter();
             var oRouteInfo = oRouter.getRouteInfoByHash(sHash);
             if (oRouteInfo) {
               oRouter.navTo(oRouteInfo.name, oRouteInfo.arguments);

@@ -21,8 +21,8 @@ Most error messages are sufficient to figure out what has gone wrong, for exampl
 >     <script
 >       id="sap-ui-bootstrap"
 >       src="https://openui5nightly.hana.ondemand.com/resources/sap-ui-core.js"
->       data-sap-ui-resourceroots='{"GherkinWithOPA5": "./"}'
->       data-sap-ui-loglevel="INFO">
+>       data-sap-ui-resource-roots='{"GherkinWithOPA5": "./"}'
+>       data-sap-ui-log-level="INFO">
 >     </script>
 > ```
 

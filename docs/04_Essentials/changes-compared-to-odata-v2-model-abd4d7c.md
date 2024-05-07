@@ -63,19 +63,19 @@ Minimize APIs required for batch control: Model does not support the methods `ge
 </td>
 <td valign="top">
 
-Simplification: Batch groups are solely defined via binding parameters with the corresponding parameters on the model as default. Application groups are by default deferred; there is no need to set or get deferred groups. You just need the `submitBatch` method on the model to control execution of the batch. You can use the predefined batch group `"$direct"` to switch off batch either for the complete model or for a specific binding \(only possible for the complete model in V2\). For more information, see [Batch Control](batch-control-74142a3.md).
+Simplification: Batch groups are solely defined via binding parameters with the corresponding parameters on the model as default. Application groups are by default deferred; there is no need to set or get deferred groups. You just need the `submitBatch` method on the model to control invocation of the batch. You can use the predefined batch group `"$direct"` to switch off batch either for the complete model or for a specific binding \(only possible for the complete model in V2\). For more information, see [Batch Control](batch-control-74142a3.md).
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-OData operations executed via binding: Model does not support the method `callFunction`.
+OData operations invoked via binding: Model does not support the method `callFunction`.
 
 </td>
 <td valign="top">
 
-Simplification: Use an operation binding instead; it is now much easier to bind operation execution results to controls.
+Simplification: Use an operation binding instead; it is now much easier to bind operation invocation results to controls.
 
 </td>
 </tr>
@@ -87,7 +87,7 @@ No CRUD methods on model: Model does not support the methods `create`, `read`, `
 </td>
 <td valign="top">
 
-Simplification: `read`, `update`, `create` and `remove` operations are available implicitly via the bindings. Bindings can also be used without controls. It is not possible to trigger requests for specific OData URLs. For more information, see [Accessing Data in Controller Code](accessing-data-in-controller-code-17b30ac.md).
+Simplification: `read`, `update`, `create` and `remove` operations are available implicitly via the bindings. Bindings can also be used without controls. It is not possible to initiate requests for specific OData URLs. For more information, see [Accessing Data in Controller Code](accessing-data-in-controller-code-17b30ac.md).
 
 </td>
 </tr>

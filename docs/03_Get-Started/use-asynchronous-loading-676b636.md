@@ -19,44 +19,47 @@ Add the bootstrapping tag `data-sap-ui-async="true"` to your `index.html` file. 
 	id="sap-ui-bootstrap"
 	src="/resources/sap-ui-core.js"
 	data-sap-ui-theme="sap_horizon"
-	data-sap-ui-compatVersion="edge"
+	data-sap-ui-compat-version="edge"
 	data-sap-ui-async="true"
-	data-sap-ui-onInit="module:my/app/main"
-	data-sap-ui-resourceroots='{"my.app": "./"}'
+	data-sap-ui-on-init="module:my/app/main"
+	data-sap-ui-resource-roots='{"my.app": "./"}'
 >
 ```
 
-Setting `async=true` leverages the browser's capabilities to execute multiple requests in parallel, without blocking the UI. The attribute `data-sap-ui-onInit` defines the module `my.app.Main`, which will be loaded initially.
+Setting `async=true` leverages the browser's capabilities to execute multiple requests in parallel, without blocking the UI. The attribute `data-sap-ui-on-init` defines the module `my.app.Main`, which will be loaded initially.
 
 > ### Note:  
 > Configuration of the bootstrap can only be done for standalone applications and when the bootstrap is under control of the developer. The bootstrap of applications from a Fiori launchpad is managed by the launchpad.
 
 > ### Note:  
-> The `data-sap-ui-async="true"` configuration option requires extensive testing as well as cooperation on the application side to ensure a stable and fully working application. It is, therefore, **not** activated automatically, but needs to be configured accordingly. If you encounter issues or want to prepare your application for asynchronous loading, see [Is Your Application Ready for Asynchronous Loading?](is-your-application-ready-for-asynchronous-loading-493a15a.md) The bootstrap attribute `data-sap-ui-async="true"` affects both modules **and** preload files. If it is not possible to load the modules asynchronously \(e.g. for compatibility reasons\), use `data-sap-ui-preload="async"` to configure at least the preloads for asynchronous loading. For further information, see [Standard Variant for Bootstrapping](../04_Essentials/standard-variant-for-bootstrapping-91f1f45.md).
+> The `data-sap-ui-async="true"` configuration option requires extensive testing as well as cooperation on the application side to ensure a stable and fully working application. It is, therefore, **not** activated automatically, but needs to be configured accordingly. If you encounter issues or want to prepare your application for asynchronous loading, see [Is Your Application Ready for Asynchronous Loading?](is-your-application-ready-for-asynchronous-loading-493a15a.md) The bootstrap attribute `data-sap-ui-async="true"` affects both modules **and** preload files.
 
 If you listen to the `init` event as part of your `index.html` page, make sure that you implement the asynchronous behavior also here, as shown in the following code snippet:
 
 ```html
 <script>
-	sap.ui.getCore().attachInit(function() {
-		sap.ui.require(["sap/ui/core/ComponentContainer"], function(ComponentContainer) {
-			new ComponentContainer({
-				name: "your.component",
-				async: true,
-				height: "100%",
-				manifest: true,
-				componentCreated: function(oParams) {
-					var oComponent = oParams.getParameter("component");
-					// do something with the component instance
-				}
-			}).placeAt("content");
-		});
-	});
+    sap.ui.require([
+        "sap/ui/core/ComponentContainer",
+        "sap/ui/core/Core"
+    ], function(ComponentContainer, Core) {
+        Core.ready().then( () => {
+            new ComponentContainer({
+                name: "your.component",
+                async: true,
+                height: "100%",
+                manifest: true,
+                componentCreated: function(oParams) {
+                    var oComponent = oParams.getParameter("component");
+                    // do something with the component instance
+                }
+            }).placeAt("content");
+        });
+    });
 </script>
 ```
 
 > ### Note:  
-> Please note that this variant with inline scripting is not CSP-compliant. It is better to create a module with `sap.ui.define` which contains the startup code and load it via `data-sap-ui-onInit="module:my/app/main"` \( this usually also requires a declaration of `data-sap-ui-resourceroots`, e.g.: `data-sap-ui-resourceroots='{"my.app": "./"}` \).
+> Please note that this variant with inline scripting is not CSP-compliant. It is better to create a module with `sap.ui.define` which contains the startup code and load it via `data-sap-ui-on-init="module:my/app/main"` \( this usually also requires a declaration of `data-sap-ui-resource-roots`, e.g.: `data-sap-ui-resource-roots='{"my.app": "./"}` \).
 
 > ### Note:  
 > Applications without a descriptor file can declare additional dependencies explicitly via the bootstrap parameter `data-sap-ui-libs`. If those dependencies are not listed, such as transitive dependencies that are inherited from a listed library, SAPUI5 will load them automatically, but then has to first read the configured libraries and find out about these dependencies. This can take time as the application might benefit less from parallel loading.

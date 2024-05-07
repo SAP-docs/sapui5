@@ -201,7 +201,7 @@ export default class Component extends UIComponent {
 
 Let's explore how we can create a component in a simple and straightforward way directly in the HTML markup of our `index.html` file. To do this, we need to make a few changes in our HTML document.
 
-First, we need to remove the reference to the `ui5/walkthrough/index` module from the `data-sap-ui-onInit` attribute. Instead, we set it to the `sap/ui/core/ComponentSupport` module. Next, we add a `div` tag to the body of our HTML file. Inside, we add a special data attribute called `data-sap-ui-component`. This attribute is important because the `sap/ui/core/ComponentSupport` module scans the HTML elements for it. Any element marked with it will be considered a container element into which a `sap/ui/core/ComponentContainer` is inserted. We can also use additional data attributes to define the constructor arguments for the `ComponentContainer` instance. We transfer the arguments used to configure the `CompontentContainer` instance in the `index.ts` file to data attributes on our `div` tag.
+First, we need to remove the reference to the `ui5/walkthrough/index` module from the `data-sap-ui-on-init` attribute. Instead, we set it to the `sap/ui/core/ComponentSupport` module. Next, we add a `div` tag to the body of our HTML file. Inside, we add a special data attribute called `data-sap-ui-component`. This attribute is important because the `sap/ui/core/ComponentSupport` module scans the HTML elements for it. Any element marked with it will be considered a container element into which a `sap/ui/core/ComponentContainer` is inserted. We can also use additional data attributes to define the constructor arguments for the `ComponentContainer` instance. We transfer the arguments used to configure the `CompontentContainer` instance in the `index.ts` file to data attributes on our `div` tag.
 
 It's worth noting that the `ComponentSupport` module enforces asynchronous loading of the respective component, so we don't need to set the `async` attribute to `true` in this case. It also sets the `autoPrefixId` property to `true` by default, so we don't need to set this attribute here either.
 
@@ -215,10 +215,10 @@ It's worth noting that the `ComponentSupport` module enforces asynchronous loadi
 		id="sap-ui-bootstrap"
 		src="resources/sap-ui-core.js"
 		data-sap-ui-theme="sap_horizon"
-		data-sap-ui-compatVersion="edge"
+		data-sap-ui-compat-version="edge"
 		data-sap-ui-async="true"
-		data-sap-ui-oninit="module:sap/ui/core/ComponentSupport"
-		data-sap-ui-resourceroots='{
+		data-sap-ui-on-init="module:sap/ui/core/ComponentSupport"
+		data-sap-ui-resource-roots='{
 			"ui5.walkthrough": "./"
 		}'>
 	</script>

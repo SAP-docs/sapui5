@@ -20,7 +20,7 @@ You have the following options:
       
     **Single Table Mode**
 
-    ![](images/Single_Table_Mode_8a3bdfd.png "Single Table Mode")
+    ![](images/Single_Table_Mode_8a3bdfd.jpg "Single Table Mode")
 
 -   **A separate table for each view \("multiple table mode"\)**: If there are n views, the UI contains n table instances. This results in n separate table toolbars and n separate table variant managements. An icon tab bar is rendered above the table for switching between the views \(table instances\). Only the table on the currently selected tab is visible.
 

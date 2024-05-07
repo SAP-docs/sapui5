@@ -404,6 +404,34 @@ You can add further clearing functionality by implementing the controller extens
 > }
 > ```
 
+
+
+### Hiding Filter Fields in the *Adapt Filters* Dialog
+
+You can hide an explicitly included property in the *Adapt Filters* dialog using the `manifest.json` configuration mentioned here.
+
+> ### Sample Code:  
+> ```
+> "SalesOrderManageList": {
+>     "options": {
+>         "settings": {
+>             "controlConfiguration": {
+>                 "@com.sap.vocabularies.UI.v1.SelectionFields": {
+>                     "filterFields": {
+>     "postingDate": {
+>         "availability": "Adaptation"
+>     }
+> }
+>                 }
+>             }
+>         }
+>     }
+> }
+> 
+> ```
+
+All properties are included in the *Adapt Filters* dialog, except the ones that have filter restrictions and those that are marked as `@UI.Hidden`.
+
 **Related Information**  
 
 

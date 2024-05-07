@@ -10,7 +10,7 @@ The OData V4 model keeps data with respect to bindings, which allows different v
 
 ## Relative Bindings
 
-An OData V4 binding may or may not trigger own data requests. Data sharing between a parent binding and a dependent binding is possible if the dependent binding does not send its own data requests. Both bindings will then use the same data storage and may share data that is accessed by both bindings. To this end, the dependent binding has to be relative to a `sap.ui.model.odata.v4.Context`, and the dependent binding must not have any binding parameters. The only exception is the `$$noPatch` binding parameter of the OData V4 property binding.
+An OData V4 binding may or may not initiate own data requests. Data sharing between a parent binding and a dependent binding is possible if the dependent binding does not send its own data requests. Both bindings will then use the same data storage and may share data that is accessed by both bindings. To this end, the dependent binding has to be relative to a `sap.ui.model.odata.v4.Context`, and the dependent binding must not have any binding parameters. The only exception is the `$$noPatch` binding parameter of the OData V4 property binding.
 
 The following example shows a typical list-detail scenario with a list of objects and the details of the selected object:
 
@@ -47,7 +47,7 @@ Editing any properties shown in the list or the detail section will automaticall
 
 The OData V4 model can help you to get such a row context in the detail view controller, without knowledge about the list view. Mark the table's list binding in the list view with the `$$getKeepAliveContext` parameter; for more information see [`sap.ui.model.odata.v4.ODataModel#bindList`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataModel%23methods/bindList). Then call [`sap.ui.model.odata.v4.ODataModel#getKeepAliveContext`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataModel%23methods/getKeepAliveContext) with a binding path to the entity. This function always returns such a context that shares data with a binding having a matching collection path and `$$getKeepAliveContext` set. If such a list binding exists, it returns a context with that path. If necessary, it creates such a context and requests its entity using the given group ID. This context is set to **keep-alive** \(see [Extending the Lifetime of a Context that is not Used Exclusively by a Table Collection](data-reuse-648e360.md#loio648e360fa22d46248ca783dc6eb44531__section_ELC) below\). If no marked list binding exists, a temporary binding is used; as soon as a binding with `$$getKeepAliveContext` is created with or resolves to the matching collection path, the context and its data are moved to this binding and share the data with the list. The temporary binding is destroyed afterwards. See also [`sap.ui.model.odata.v4.ODataModel#requestKeyPredicate`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataModel/methods/requestKeyPredicate) in order to create proper URI-encoded key predicates within the binding path for the entity.
 
-You do not have to take care whether the `$$getKeepAliveContext` binding currently exists; you can simply use the context as if the list was there. Even `replaceWith` works when given another context from `getKeepAliveContext` \(for example when canceling a draft and replacing it with the active instance\), and `ODataContextBinding#execute` supports the `bReplaceWithRVC` parameter \(for example to replace the active version with the draft after an *Edit* action\). When the list later appears, both contexts - the active one and the replaced one - will be moved to it, and the data is merged when the list reads it from the back end.
+You do not have to take care whether the `$$getKeepAliveContext` binding currently exists; you can simply use the context as if the list was there. Even `replaceWith` works when given another context from `getKeepAliveContext` \(for example when canceling a draft and replacing it with the active instance\), and `ODataContextBinding#invoke` supports the `bReplaceWithRVC` parameter \(for example to replace the active version with the draft after an *Edit* action\). When the list later appears, both contexts - the active one and the replaced one - will be moved to it, and the data is merged when the list reads it from the back end.
 
 Be aware that the usage of a temporary binding has the consequence that the context may change the binding during its lifetime. So don't keep a reference to it, always take it from the context. Note also that these contexts are kept alive and you must call `setKeepAlive(false)` if you do not need them anymore.
 
@@ -99,9 +99,9 @@ onPatternMatched : function (oEvent) {
 
 The data of the returned entity is synchronized into the binding parameter of the bound action if the following conditions apply:
 
--   The conditions for a return value context as described for the `execute` method of `sap.ui.model.odata.v4.ODataContextBinding` are fulfilled.
+-   The conditions for a return value context as described for the `invoke` method of `sap.ui.model.odata.v4.ODataContextBinding` are fulfilled.
 
-    For more information, see the [API Reference: `sap.ui.model.odata.v4.ODataContextBinding#execute`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataContextBinding%23methods/execute). 
+    For more information, see the [API Reference: `sap.ui.model.odata.v4.ODataContextBinding#invoke`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataContextBinding%23methods/invoke). 
 
 -   The returned entity has the same key predicate as the binding parameter.
 

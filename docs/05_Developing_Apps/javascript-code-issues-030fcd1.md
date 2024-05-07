@@ -337,7 +337,7 @@ See also: [sap.ui.core.Control - attachBrowserEvent](https://ui5.sap.com/#/api/s
 
 When you create typed views or applications that will be running together with views or applications from other sources \(that are not owned by you\), or typed views that will be instantiated several times in parallel, you must not create stable IDs for your controls, fragments, or views in SAPUI5. Doing so might result in duplicate ID errors that will break your app. Especially when running together with other apps, there could be name clashes or other errors.
 
-Use the `createId()` function of a view or controller instead. This is done automatically in XMLViews and JSONViews \(**deprecated** as of UI5 version 1.120\). The `createId()` function adds the View ID as a prefix, thus recursively ensuring uniqueness of the ID \(for example: `__page0--__dialog0`\).
+Use the `createId()` function of a view or controller instead. This is done automatically in XMLViewsand JSONViews \(**deprecated** as of UI5 version 1.120\). The `createId()` function adds the View ID as a prefix, thus recursively ensuring uniqueness of the ID \(for example: `__page0--__dialog0`\).
 
 **Examples**
 

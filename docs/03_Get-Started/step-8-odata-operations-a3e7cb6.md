@@ -41,7 +41,7 @@ You can view and download all files at [OData V4 - Step 8](https://ui5.sap.com/#
 			var oModel = this.getView().getModel(),
 				oOperation = oModel.bindContext("/ResetDataSource(...)");
 
-			oOperation.execute().then(function () {
+			oOperation.invoke().then(function () {
 					oModel.refresh();
 					MessageToast.show(this._getText("sourceResetSuccessMessage"));
 				}.bind(this), function (oError) {
@@ -57,9 +57,9 @@ You can view and download all files at [OData V4 - Step 8](https://ui5.sap.com/#
 
 The `onResetDataSource` event handler calls the `ResetDataSource` action, which is an action of the *TripPin* OData service that resets the data of the service to its original state.
 
-We call that action by first creating a deferred operation binding on the model. The `(…)` part of the binding syntax marks the binding as deferred. We use a deferred binding because we want to control when the action is executed. Since it is deferred, we need to explicitly call its `execute` method.
+We call that action by first creating a deferred operation binding on the model. The `(…)` part of the binding syntax marks the binding as deferred. We use a deferred binding because we want to control when the action is invoked. Since it is deferred, we need to explicitly call its `invoke` method.
 
-The execution is asynchronous, therefore the execute method returns a `Promise`. We attach simple success and error handlers to that `Promise` by calling its `then` method.
+The invocation is asynchronous; the `invoke` method therefore returns a `Promise`. We attach simple success and error handlers to that `Promise` by calling its `then` method.
 
 > ### Note:  
 > Many of the methods in the OData V4 API of SAPUI5 return a `Promise` to manage asynchronous processing

@@ -38,7 +38,7 @@ The OData meta model knows how to follow "14.2.1 Attribute Target" described in 
 
     -   When [processing an XML template](xml-templating-5ee619f.md): via a `template:require` attribute at the node or one of its parent nodes, or via `<template:alias>`
 
-    -   In a binding within an XML view \(since 1.121\): via a [`core:require`](require-modules-in-xml-view-and-fragment-b11d853.md) attribute at the control or one of its parent controls \(for example, the view\). This requires that UI5 uses `data-sap-ui-bindingSyntax="complex"` or `compatVersion="edge"` as described in [Property Binding](property-binding-91f0652.md), so that complex, JSON-like bindings are allowed.
+    -   In a binding within an XML view \(since 1.121\): via a [`core:require`](require-modules-in-xml-view-and-fragment-b11d853.md) attribute at the control or one of its parent controls \(for example, the view\).
     -   In [`ODataMetaModel.requestObject`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataMetaModel/methods/requestObject): via `mParameters.scope`
     -   In all three situations, but deprecated since 1.120: via a global name \(like `sap.ui.model.odata.v4.AnnotationHelper.value`\)
 

@@ -150,11 +150,11 @@ To get more insight into the client-server communication, we open the *Console* 
 > ### Note:  
 > To monitor the client-server communication in a productive app, you would use the *Network* tab of the developer tools.
 > 
-> In this tutorial, we are using a mock server instead of a real OData service so that we can execute the code in every environment. The mock server does not generate any network traffic, so we use the *Console* tab to monitor the communication.
+> In this tutorial, we are using a mock server instead of a real OData service so that we can run the code in every environment. The mock server does not generate any network traffic, so we use the *Console* tab to monitor the communication.
 > 
 > If you want to switch to the real service, do the following:
 > 
-> 1.  In the `index.html` file, remove the line `data-sap-ui-oninit="module:sap/ui/core/tutorial/odatav4/initMockServer"`.
+> 1.  In the `index.html` file, remove the line `data-sap-ui-on-init="module:sap/ui/core/tutorial/odatav4/initMockServer"`.
 > 
 > 2.  Check the URI of the default data source in the `manifest.json` file. Depending on the environment, change it to something that avoids cross-origin resource sharing \(CORS\) problems. For more information, see [Request Fails Due to Same-Origin Policy \(Cross-Origin Resource Sharing - CORS\)](../04_Essentials/request-fails-due-to-same-origin-policy-cross-origin-resource-sharing-cors-5bb388f.md)
 

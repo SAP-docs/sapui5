@@ -15,6 +15,20 @@ You can use semantic date values, such as *Today* or *Last Week*, on the filter 
 
 The semantic date control can be enabled for the fields in the filter bar by setting the `useDateRange` flag to `true` in the manifest. By default, the value is `false` and date picker control is rendered by the filter bar.
 
+The property must have `sap:filter-restriction="interval"` in the metadata. For example:
+
+> ### Sample Code:  
+> ```
+> <Property Name="DeliveryDate" Type="Edm.DateTime" sap:label="Delivery Date" Precision="0" sap:display-format="Date" sap:filter-restriction="interval" />
+> ```
+
+> ### Sample Code:  
+> Example for CDS
+> 
+> ```
+> @Consumption.filter.selectionType: #INTERVAL
+> ```
+
 > ### Sample Code:  
 > Enable a date range filter with all default range types
 > 
@@ -142,9 +156,7 @@ The following types of settings exist, either at the property level or at the de
     > 
     > -   If you define the semantic date range feature by providing specific fields, you cannot render the fields from the navigation property of the leading entity set as a semantic date range in the filter bar.
     > 
-    > -   `DateTimeOffset` fields with filter restrictions as intervals are rendered as a date range control. Fields with `sap:filter-restriction="single-value"` are rendered as date pickers in both the list report and the analytical list page.
-    > 
-    > -   Fields with `sap:filter-restriction="multi-value"` are rendered as date pickers in both the list report and the analytical list page.
+    > -   Filter fields with `sap:filter-restriction= "single-value"` or `"multi-value"` are rendered as date pickers in both the list report and the analytical list page.
 
 -   You can also set a default value for a semantic date range. The default value can be used together with `customdateRangeImplementation`, `filter`, or `selectedValues`. It can also be added without any filters. The default value should be part of the list of values for the field. For example, if you exclude `TOMORROW` as a value for the field `CreatedDate`, do not add `TOMORROW` as a `defaultValue`.
 

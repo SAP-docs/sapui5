@@ -107,7 +107,7 @@ Instance creation of controller and XML view:
 			src='/sapui5/resources/sap-ui-core.js'
 			data-sap-ui-theme='sap_horizon'
 			data-sap-ui-libs='sap.m,sap.ui.layout'
-			data-sap-ui-resourceroots='{"my.own": "."}'
+			data-sap-ui-resource-roots='{"my.own": "."}'
 	</script>
 
 	<script>

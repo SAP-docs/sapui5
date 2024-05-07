@@ -36,7 +36,7 @@ The reuse of data in different bindings may help to avoid unnecessary requests. 
 
 ## Early Requests for Metadata and Security Token
 
-The requests for the service's root `$metadata` document and annotation files and for the security token may be on the "critical execution path": By default, these requests are sent lazily when the SAPUI5 application starts, for example only when the corresponding information is needed. This delays application startup until these requests have returned.
+The requests for the service's root `$metadata` document and annotation files and for the security token may be on the "critical invocation path": By default, these requests are sent lazily when the SAPUI5 application starts, for example only when the corresponding information is needed. This delays application startup until these requests have returned.
 
 If you construct the model with an `earlyRequests` parameter, the requests are sent as early as possible and application startup performance may improve. Consider using the [Manifest Model Preload](manifest-model-preload-26ba6a5.md), so that the requests are submitted even earlier.
 

@@ -13,7 +13,7 @@ Applications provide an index file named `sap-ui-cachebuster-info.json` \(create
 
 The server instructs the client to cache all the above resources \(not using the 304/not modified mechanism\). For the index file we are using the 304/not modified mechanism to avoid to load when it has not been changed.
 
-On the client side, we initially load this file of the application when enabled via configuration option `sap-ui-appcachebuster` and use this for the XHR requests. If the request path is contained in the above mentioned index file we simply add the time stamp as leading path segment to this request. If the time stamp doesn’t change the URL is unique and therefore it will be taken from cache. Once the file is modified the URL parameter will be changed and therefore loaded again from the back end.
+On the client side, we initially load this file of the application when enabled via configuration option `sap-ui-app-cache-buster` and use this for the XHR requests. If the request path is contained in the above mentioned index file we simply add the time stamp as leading path segment to this request. If the time stamp doesn’t change the URL is unique and therefore it will be taken from cache. Once the file is modified the URL parameter will be changed and therefore loaded again from the back end.
 
 The server has to delete the time stamp from this URL to look up the file properly. For SAP NetWeaver AS for ABAP, the logic is implemented in the ICF handler. Both back end implementations, SAP NetWeaver AS for Java and SAP NetWeaver AS for ABAP, also generate the index file on-the-fly.
 

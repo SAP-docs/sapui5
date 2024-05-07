@@ -124,3 +124,38 @@ To enable the export to PDF, you must configure the following annotations at ser
 > ### Restriction:  
 > Export to PDF is not supported for tables containing a column with a multi-input field \(1:N\). Attempting to export the table may lead to a back-end error.
 
+
+
+<a name="loio4bab6f2043814257974b52d4dafe1dcd__section_okc_mcp_w1c"/>
+
+## Set the Limit for Request Size
+
+You can configure the limit for the count of records that can be obtained within a single request from the service. To do this, you must configure the `exportRequestSize` parameter in the table settings. The default value of the records that can be obtained within a single request is 1000.
+
+> ### Sample Code:  
+> ```
+> {
+> 	"sap.ui5": {
+> 		"routing": {
+> 			"targets": {
+> 				"SalesOrderManageList": {
+> 					"options": {
+> 						"settings": {
+> 							"controlConfiguration": {
+> 								"@com.sap.vocabularies.UI.v1.LineItem": {
+> 									"tableSettings": {
+> 										"exportRequestSize":3000
+> 									}
+> 								}
+> 							}
+> 						}
+> 					}
+> 				}
+> 			}
+> 		}
+> 	}
+> }
+> ```
+
+The Table building block also supports the `exportRequestSize` parameter. For more information about the Table API, see [API Reference](https://ui5.sap.com/#/api/sap.fe.macros.Table%23controlProperties).
+

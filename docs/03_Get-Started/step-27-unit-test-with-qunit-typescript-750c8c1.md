@@ -123,7 +123,7 @@ First, we load some basic QUnit functionality via script tags. Other QUnit tests
 	<script
 		id="sap-ui-bootstrap"
 		src="../../resources/sap-ui-core.js"
-		data-sap-ui-resourceroots='{
+		data-sap-ui-resource-roots='{
 			"ui5.walkthrough": "../../"
 		}'
 		data-sap-ui-async="true">

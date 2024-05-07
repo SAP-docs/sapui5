@@ -80,10 +80,10 @@ We also add the `sapUiBody` class, which provides additional theme-dependent sty
 		id="sap-ui-bootstrap"
 		src="resources/sap-ui-core.js"
 		data-sap-ui-theme="sap_horizon"
-		data-sap-ui-compatVersion="edge"
+		data-sap-ui-compat-version="edge"
 		data-sap-ui-async="true"
-		data-sap-ui-onInit="module:ui5/walkthrough/index"
-		data-sap-ui-resourceroots='{
+		data-sap-ui-on-init="module:ui5/walkthrough/index"
+		data-sap-ui-resource-roots='{
 			"ui5.walkthrough": "./"
 		}'>
 	</script>

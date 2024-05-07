@@ -279,6 +279,34 @@ You can see the result in the following chart:
 
 
 
+### Supporting Charts with Time Axis
+
+The time axis is automatically enabled for a chart when its dimension is one of the following types:
+
+-   `Edm.Date`
+
+-   `Edm.TimeOfDay`
+
+-   `Edm.DateTimeOffset`
+
+
+Additionally, the time axis is enabled when the dimension is of type `String` and is annotated with one of the following annotations:
+
+-   `@Common.IsFiscalYear`
+
+-   `@Common.IsFiscalYearPeriod`
+
+-   `@Common.IsCalendarYearMonth`
+
+-   `@Common.IsCalendarYearQuarter`
+
+-   `@Common.IsCalendarYearWeek`
+
+-   `@Common.IsCalendarDate`
+
+
+
+
 ### Enabling Aggregation in the Back End
 
 For charts to work, the entity set must support aggregation. SAP Fiori elements supports transformation aggregation \(both standard aggregation methods and custom aggregation methods are supported\).
@@ -558,17 +586,11 @@ For charts to work, the entity set must support aggregation. SAP Fiori elements 
 > ### Restriction:  
 > The following restrictions apply regarding the support of the chart control:
 > 
-> -   Charts currently don't support parameterized entities.
-> 
 > -   Properties such as measures, dimensions, and text associations that come from associated entity sets are currently not supported.
 > 
 > -   Chart personalization settings or selections aren't part of the variant changes and aren't saved in the `iAppState`.
 > 
 > -   Semantic coloring using the `UI.Criticality` and `UI.CriticalityCalculation` annotations isn't supported.
-> 
-> -   For CAP CDS versions 3 or lower, the chart doesn't load properly if the parent entity set is non-aggregate based.
-> 
-> -   When you use draft-enabled entities or charts, sorting on virtual properties and measures causes issues if you use CAP NodeJs. This is because of a CAP limitation that is fixed as of @sap/cds 6.0.0.
 > 
 > -   Aggregations on draft-enabled entities are currently **not** supported in ABAP CDS, since currently `$apply` with or without a filter on draft or transactional entities isn't supported by SADL.
 

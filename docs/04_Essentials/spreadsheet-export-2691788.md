@@ -174,5 +174,5 @@ The `beforeExport` event also provides the additional export settings defined by
 
 [API Reference: `sap.ui.export.EdmType`](https://ui5.sap.com/#/api/sap.ui.export.EdmType)
 
-[SAP Gateway Export versus Client Export](sap-gateway-export-versus-client-export-e7f52f4.md "To decide which type of export to use, have a look at the following criteria.")
+[Export Features](export-features-e7f52f4.md "The SmartTable control offers various types of exports. The SmartTable control supports features such as file compression, header row, localization, meta information, hierarchies, data types, and Read Access Logging (RAL) support.")
 

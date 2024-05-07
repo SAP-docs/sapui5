@@ -49,7 +49,7 @@ You can view and download all files at [3D Viewer - Step 1 - 3D Viewer With Sing
 
     -   the `sap.ui.vk`3D Viewer - Step 1 - 3D Viewer With Single library, which contains the controls for adding 3D visualization functionality \(the `sap.ui.vk` value in the `data-sap-ui-libs` property\)
 
-    -   the component file called `Component.js` \(the `data-sap-ui-resourceroots` property\)
+    -   the component file called `Component.js` \(the `data-sap-ui-resource-roots` property\)
 
 
     We specify that resources related to `singleFile` are located in the same folder as this `index.html` file.
@@ -65,8 +65,7 @@ You can view and download all files at [3D Viewer - Step 1 - 3D Viewer With Sing
             src="resources/sap-ui-core.js"
             data-sap-ui-libs="sap.ui.vk, sap.m"
             data-sap-ui-theme="sap_horizon"
-            data-sap-ui-bindingSyntax="complex"
-            data-sap-ui-resourceroots='{
+            data-sap-ui-resource-roots='{
                 "singleFile": "./"
              }' >
         </script>

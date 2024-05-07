@@ -73,6 +73,30 @@ To override an image within the base theme an additional rule has to be added to
 
 
 
+<a name="loio5e08ff90b7434990bcb459513d8c52c4__section_rwz_wl3_1bc"/>
+
+## CSS Math Functions
+
+[CSS Math Functions](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Functions#math_functions) must be escaped in LESS to prevent incorrect calculations and syntax errors.
+
+**Example for calc:**
+
+```css
+.sapUiMyControl {
+    width: ~"calc(100% - 3rem)";
+}
+```
+
+**Example for min + calc:**
+
+```css
+.sapUiMyControl {
+    height: ~"min(48rem, calc(80vh - 5rem))";
+}
+```
+
+
+
 ## LESS Theme Parameters
 
 For LESS theme parameters, the following guidelines apply:

@@ -282,7 +282,7 @@ The `disableDefaultInlineCreateSort` setting is evaluated only if the `"createMo
 
 ### Behavior of Rows in Empty Row Mode
 
-If you shift your focus away from the input field of a row, then the current row is converted to draft after an interval of 20 seconds. This behavior is similar to the behavior of generic draft handling.For more information, see [Draft Handling](draft-handling-ed9aa41.md).
+If you shift your focus away from the input field of a row, then the current row is converted to draft after an interval of 20 seconds. This behavior is similar to the behavior of generic draft handling. For more information, see [Draft Handling](draft-handling-ed9aa41.md).
 
 The current row is converted to draft immediately only if a structural side effect is defined on the corresponding table.
 

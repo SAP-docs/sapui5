@@ -50,6 +50,8 @@ The table containing additional custom columns can look like this:
     > ### Note:  
     > If the content of your custom column refers to a property \(such as`{Price}`\), you need to include a corresponding `"leadingProperty"` entry in the `CustomData` of the column definition.
 
+    In the example project webapp/ext/fragments/ListReportResponsiveTableColumns.fragment.xml, enter the following:
+
     > ### Sample Code:  
     > ```
     > <core:FragmentDefinition xmlns:core="sap.ui.core"
@@ -72,7 +74,7 @@ The table containing additional custom columns can look like this:
     > 
     > ```
 
-    In the example project webapp/ext/fragments/ListReportResponsiveTableColumns.fragment.xml, enter the following:
+    In the example project webapp/ext/fragments/ListReportResponsiveTableCells.fragment.xml, enter the following:
 
     > ### Sample Code:  
     > ```

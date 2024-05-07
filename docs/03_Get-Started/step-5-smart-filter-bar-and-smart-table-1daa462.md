@@ -82,7 +82,7 @@ You can view and download all files in the *Samples* in the Demo Kit at [Smart C
 		useTablePersonalisation="false" 
 		header="Products" 
 		showRowCount="true"
-		useExportToExcel="false" 
+		enableExport="false" 
 		enableAutoBinding="true">
 	</smartTable:SmartTable>
 </mvc:View>
@@ -114,9 +114,9 @@ We see that two new controls have been added to the `view.xml`. In the `SmartFil
 
     Specifies that the number of products appears after the title. In order for this count to work, the `SmartTable` needs to do the binding internally, which will be the case if either `smartFilterId` is specified or `enableAutoBinding` is set to `true` \(see below\).
 
--   `useExportToExcel="false"`
+-   `enableExport="false"`
 
-    Offers an export to Microsoft Excel. In our case, we must set this value to `false` since the mock server does not support the proper format needed for such an export. The server must return a metadata document with `sap:supported-formats="xlsx"` to support this.
+    Offers an export to Microsoft Excel. In our case, we must set this value to `false` since the mock server does not support the proper format needed for such an export.
 
 -   `enableAutoBinding="true"`
 

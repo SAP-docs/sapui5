@@ -91,8 +91,8 @@ In this step, we change the `index.html` page to make it load the SAPUI5 framewo
 
 -   We configure the bootstrapping process to run asynchronously. This means that the SAPUI5 resources can be loaded simultaneously in the background for performance reasons.
 
--   With the `data-sap-ui-onInit` attribute, we define that the `ui5/walkthrough/index` module is to be loaded initially in a declarative way. With this, we avoid directly executable JavaScript code in the HTML file. This makes our app more secure. Note that the path to our file includes the namespace, whereby the "." characters are replaced by "/" \(see explanation below\). We've created the `index.ts` script that this attribute refers to already in the previous step.
--   The `data-sap-ui-resourceroots` attribute lets you map a namespace to a specific path. We define the`ui5.walkthrough` namespace and map it relative to the location of `index.html`. In this way, we tell the SAPUI5 core that resources in the `ui5.walkthrough` namespace are located in the same folder as `index.html`.
+-   With the `data-sap-ui-on-init` attribute, we define that the `ui5/walkthrough/index` module is to be loaded initially in a declarative way. With this, we avoid directly executable JavaScript code in the HTML file. This makes our app more secure. Note that the path to our file includes the namespace, whereby the "." characters are replaced by "/" \(see explanation below\). We've created the `index.ts` script that this attribute refers to already in the previous step.
+-   The `data-sap-ui-resource-roots` attribute lets you map a namespace to a specific path. We define the`ui5.walkthrough` namespace and map it relative to the location of `index.html`. In this way, we tell the SAPUI5 core that resources in the `ui5.walkthrough` namespace are located in the same folder as `index.html`.
 
 
 ```html
@@ -105,10 +105,10 @@ In this step, we change the `index.html` page to make it load the SAPUI5 framewo
 		id="sap-ui-bootstrap"
 		src="resources/sap-ui-core.js"
 		data-sap-ui-theme="sap_horizon"
-		data-sap-ui-compatVersion="edge"
+		data-sap-ui-compat-version="edge"
 		data-sap-ui-async="true"
-		data-sap-ui-onInit="module:ui5/walkthrough/index"
-		data-sap-ui-resourceroots='{
+		data-sap-ui-on-init="module:ui5/walkthrough/index"
+		data-sap-ui-resource-roots='{
 			"ui5.walkthrough": "./"
 		}'>
 	</script>

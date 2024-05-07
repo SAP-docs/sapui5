@@ -637,7 +637,7 @@ Application developers can also specify the `SelectionVariant` or `PresentationV
 >                         <PropertyValue Property="Ranges">
 >                             <Collection>
 >                                <Record Type="UI.SelectionRangeType">
->                                    <PropertyValue Property="Sign" EnumMember="UI. SelectionRangeSignType/I" />
+>                                    <PropertyValue Property="Sign" EnumMember="UI.SelectionRangeSignType/I" />
 >                                    <PropertyValue Property="Option" EnumMember="UI.SelectionRangeOptionType/EQ" />
 >                                    <PropertyValue Property="Low" String="A" />
 >                                 </Record>

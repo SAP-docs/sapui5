@@ -77,11 +77,12 @@ To show the filter value as shown in the filter bar, such as `Cost=Low`, you can
 > ### Sample Code:  
 > ```
 > sap.ui.define([
-> 	"sap/ui/export/util/Filter"
-> ], function (ExportFilter) {
-> 	"use strict";
-> 
-> 	return {
+>     "sap/ui/core/Element",
+> >   "sap/ui/export/util/Filter"
+> > ], function (Element, ExportFilter) {
+> >   "use strict";
+> > 
+> >   return {
 > 		onInit: function () {
 > 			//...
 > 		},
@@ -102,7 +103,7 @@ To show the filter value as shown in the filter bar, such as `Cost=Low`, you can
 > 			var aFilterSettings = oExportParams.filterSettings;
 > 			// Find the "Cost" combobox in smart filter bar
 >             var COST_COMBOBOX_ID = "STTA_MP::sap.suite.ui.generic.template.ListReport.view.ListReport::STTA_C_MP_Product--CustomFilter-OverallCost-combobox";
-> 			var oCostCombobox = sap.ui.getCore().byId(COST_COMBOBOX_ID);
+> 			var oCostCombobox = Element.getElementById(COST_COMBOBOX_ID);
 > 			
 > 			if (oCostCombobox && oCostCombobox.getValue()) {
 > 				var oRawValue, sNewCostValue;
@@ -155,7 +156,7 @@ You can configure the `FilterBar` in the controller extension. locally using the
 > 
 > ```json
 >     ...
->             "targets": {
+> "targets": {
 >                 "SalesOrderManageList": {
 >                     "type": "Component",
 >                     "id": "SalesOrderManageList",
@@ -170,6 +171,7 @@ You can configure the `FilterBar` in the controller extension. locally using the
 >                                         "MyCustomRatingThing": {
 >                                             "label": "{i18n>CustomRatingFilter}",
 >                                             "property": "Rating",
+> "availability": "Default",
 >                                             "template": "SalesOrder.ext.CustomRatingFilter",
 >                                             "required": true,
 >                                             "position": {
@@ -192,16 +194,18 @@ You can use the `filterFields` setting to add custom filters. The pattern looks 
 > `manifest.json`
 > 
 > ```json
-> "<key>": {
->     "label": <UILabel>,                   // static string or i18n binding, e.g. "MyText" or "{i18n>MyCustomLabel}"
->     "property": <FullPropertyPath>,       // the full path to the property to be filtered, e.g. "Rating" or "_Partner/Rating"
->     "template": <XmlFragmentPath>,        // the path to the Xml Template containing the filter control, e.g. "SalesOrder.ext.CustomRatingFilter"
->     "required": (false) | true,           // filter field is (not) mandatory, i.e. it requires a value
->     "position": {
->         "placement": "Before"|"After",
->         "anchor": "<Key_of_filter_field>"    // for annotation based filterfields, the property is the key, e.g. "SalesOrder", "_Patner::FullName" (slashes are replaced by ::)
->     }
+> "": {
+> "label": , // static string or i18n binding, e.g. "MyText" or "{i18n>MyCustomLabel}"
+> "property": , // the full path to the property to be filtered, e.g. "Rating" or "_Partner/Rating"
+> "template": , // the path to the Xml Template containing the filter control, e.g. "SalesOrder.ext.CustomRatingFilter"
+> "required": (false) | true, // filter field is (not) mandatory, i.e. it requires a value
+> "availability": "Default" | "Hidden" | "Adoption", //Toggling visibility of the filter. Adoption = shown in Adapt filters dialog
+> "position": {
+> "placement": "Before"|"After",
+> "anchor": "<Key_of_filter_field>" // for annotation based filterfields, the property is the key, e.g. "SalesOrder", "_Patner::FullName" (slashes are replaced by ::)
 > }
+> }
+> 
 > ```
 
 

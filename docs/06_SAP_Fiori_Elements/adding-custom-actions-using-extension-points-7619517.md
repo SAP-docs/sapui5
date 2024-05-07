@@ -286,15 +286,15 @@ These custom actions are displayed as buttons on the UI. When the user selects t
 
         -   `<ComponentName>`: You can use the component name used in the pages structure of `sap.ui.generic.app` namespace in the manifest. For example, `sap.suite.ui.generic.template.ListReport`.
 
-        -   `<Component ID without app ID prefix>`: You can get the corresponding component first,that can be fetched in the following ways:
+        -   `<Component ID without app ID prefix>`: You can get the corresponding component first, that can be fetched in the following ways:
 
-            -   Using the correspoding xml view
+            -   Using the corresponding xml view
 
-                For example, `sap.ui.getCore().byId('STTA_MP::sap.suite.ui.generic.template.ListReport.view.ListReport::STTA_C_MP_Product').getController().getOwnerComponent().getId()` where `STTA_MP::sap.suite.ui.generic.template.ListReport.view.ListReport::STTA_C_MP_Product` is the `XmlView` ID.
+                For example, `Element.getElementById('STTA_MP::sap.suite.ui.generic.template.ListReport.view.ListReport::STTA_C_MP_Product').getController().getOwnerComponent().getId()` where `STTA_MP::sap.suite.ui.generic.template.ListReport.view.ListReport::STTA_C_MP_Product` is the `XmlView` ID, and `Element` is required from module `sap/ui/core/Element`.
 
             -   Using `ComponentContainer`
 
-                `sap.ui.getCore().byId('__xmlview0-__clone0--host').getComponent()` where `__xmlview0-__clone0--host` is the `ComponentContainer` ID.
+                `Element.getElementById('__xmlview0-__clone0--host').getComponent()` where `__xmlview0-__clone0--host` is the `ComponentContainer` ID, and `Element` is requred from module `sap/ui/core/Element`.
 
 
             The result is generated in this `<app component prefix>---<local component ID>` format. For example, a`pplication-EPMProduct-manage_st-component---sap.suite.ui.generic.template.ListReport::STTA_C_MP_Product`. You can remove the app component prefix from the string along with the dashes.
@@ -326,7 +326,7 @@ These custom actions are displayed as buttons on the UI. When the user selects t
                                             "id" : "<id>",
                                             "text" : "<button text>",
                                             "press" : "<handler function>"
-                                            "applicablePath": "<path>",
+                                            "applicablePath": <path>,
                                             "command": "<CustomCommandName>"
                                         },
                                         "<Action 2>": { 
@@ -361,6 +361,7 @@ These custom actions are displayed as buttons on the UI. When the user selects t
                               "id" : "<id>",
                               "text" : "<button text>",
                               "press" : "<handler function>",
+                              "applicablePath": <path>,
                               "requiresSelection": <true|false>
                             },
                             "<SmartTable Action 2>": { ... }

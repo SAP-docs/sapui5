@@ -46,10 +46,10 @@ The new `localService` folder contains a `metadata.xml` service description file
 		id="sap-ui-bootstrap"
 		src="../resources/sap-ui-core.js"
 		data-sap-ui-theme="sap_horizon"
-		data-sap-ui-compatVersion="edge"
+		data-sap-ui-compat-version="edge"
 		data-sap-ui-async="true"
-		data-sap-ui-oninit="module:ui5/walkthrough/test/initMockServer"
-		data-sap-ui-resourceroots='{
+		data-sap-ui-on-init="module:ui5/walkthrough/test/initMockServer"
+		data-sap-ui-resource-roots='{
 			"ui5.walkthrough": "../"
 		}'>
 	</script>
@@ -65,7 +65,7 @@ We copy the `index.html` to a separate file in the `webapp/test` folder and name
 
 From this point on, you have two different entry pages: One for the real “connected” app \(`index.html`\) and one for local testing \(`mockServer.html`\). You can freely decide if you want to do the next steps on the real service data or on the local data within the app.
 
-We modify the `mockServer.html` file and change the page title to distinguish it from the productive start page. In the bootstrap, the `data-sap-ui-resourceroots` property is also changed. The namespace now points to the folder above \(`"../"`\), because the `mockServer.html` file is now in a subfolder of the `webapp` folder. Instead of loading the app component directly, we now call a script `initMockServer.js`.
+We modify the `mockServer.html` file and change the page title to distinguish it from the productive start page. In the bootstrap, the `data-sap-ui-resource-roots` property is also changed. The namespace now points to the folder above \(`"../"`\), because the `mockServer.html` file is now in a subfolder of the `webapp` folder. Instead of loading the app component directly, we now call a script `initMockServer.js`.
 
 
 

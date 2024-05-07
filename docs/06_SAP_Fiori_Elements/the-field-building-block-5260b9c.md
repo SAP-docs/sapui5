@@ -162,10 +162,11 @@ For information about the `Field` API, see the [API Reference](https://ui5.sap.c
     > </macros:Field>
     > ```
 
+      
+      
+    **Radio Buttons in Horizontal Layout**
 
+    ![](images/Radio_button-horizontal_layout_a267511.png "Radio Buttons in Horizontal
+    							Layout")
 
-
-### Radio Buttons in Horizontal Layout
-
-![](images/Radio_button-horizontal_layout_a267511.png)
 

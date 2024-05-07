@@ -39,24 +39,28 @@ Perform these steps:
     You have to implement the `adaptTransientMessageExtension` function within the list report controller extension, the object page controller extension, or the analytical list page extension, respectively.
 
     ```
-    adaptTransientMessageExtension:function() {
-    		if(sap.ui.getCore().getMessageManager().getMessageModel().oData.length) {
-    				var msgText = "This message has been added through List Extension" ;
-    				var consolidatedMessage = new sap.ui.core.message.Message({
-    					message: msgText,
-    					type: sap.ui.core.MessageType.Information,
-    					target: '',
-    					persistent: true
-    				});
-    				sap.ui.getCore().getMessageManager().addMessages(consolidatedMessage);
-    		}		
-    }
-    
+        // "Messaging" required from module "sap/ui/core/Messaging"
+        // "Message" required from module "sap/ui/core/message/Message"
+        // "MessageType" required from module "sap/ui/core/MessageType"
+        adaptTransientMessageExtension:function() {
+                if (Messaging.getMessageModel().oData.length) {
+                        var msgText = "This message has been added through List Extension" ;
+                        var consolidatedMessage = new Message({
+                            message: msgText,
+                            type: MessageType.Information,
+                            target: '',
+                            persistent: true
+                        });
+                        Messaging.addMessages(consolidatedMessage);
+                }		
+        }
+        
+        ```
     ```
 
 
 > ### Note:  
-> The extension point is only available for transient messages. Do not make any changes to state messages from the message model \(`sap.ui.getCore().getMessageManager().getMessageModel()`\).
+> The extension point is only available for transient messages. Do not make any changes to state messages from the message model \(`Messaging.getMessageManager().getMessageModel()`\) where `Messaging` is required from module `sap/ui/core/Messaging`.
 > 
 > Do not alter the target of any message from the message model as this may cause the message model services to stop working.
 

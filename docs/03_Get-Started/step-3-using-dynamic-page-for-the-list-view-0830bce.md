@@ -73,14 +73,14 @@ First, we add the `sap.m` library as a dependency in the `manifest.json`.
 	<script id="sap-ui-bootstrap"
 		src="https://sdk.openui5.org/resources/sap-ui-core.js"
 		data-sap-ui-theme="sap_horizon"
-		data-sap-ui-resourceroots='{
+		data-sap-ui-resource-roots='{
 			"sap.ui.demo.fiori2": "./",
 			"sap.ui.demo.mock": "https://sdk.openui5.org/test-resources/sap/ui/documentation/sdk/"
 		}'
-		data-sap-ui-oninit="module:sap/ui/core/ComponentSupport"
-		data-sap-ui-compatVersion="edge"
+		data-sap-ui-on-init="module:sap/ui/core/ComponentSupport"
+		data-sap-ui-compat-version="edge"
 		data-sap-ui-async="true"
-		data-sap-ui-frameOptions="trusted">
+		data-sap-ui-frame-options="trusted">
 	</script>
 	...
 ```

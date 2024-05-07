@@ -153,11 +153,10 @@ In the assertions section we define a `waitFor` statement that checks if a `sap.
 		id="sap-ui-bootstrap"
 		src="../../resources/sap-ui-core.js"
 		data-sap-ui-theme="sap_horizon"
-		data-sap-ui-resourceroots='{
+		data-sap-ui-resource-roots='{
 			"ui5.walkthrough": "../../"
 		}'
-		data-sap-ui-animation="false"
-		data-sap-ui-compatVersion="edge"
+		data-sap-ui-compat-version="edge"
 		data-sap-ui-async="true">
 	</script>
 

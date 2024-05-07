@@ -1,8 +1,8 @@
 <!-- loioe7f52f49994347cbadde95620238f3f8 -->
 
-# SAP Gateway Export versus Client Export
+# Export Features
 
-To decide which type of export to use, have a look at the following criteria.
+The `SmartTable` control offers various types of exports. The `SmartTable` control supports features such as file compression, header row, localization, meta information, hierarchies, data types, and Read Access Logging \(RAL\) support.
 
 The `SmartTable` control offers the following types of exports:
 
@@ -19,7 +19,7 @@ The `SmartTable` control offers the following types of exports:
 
 <a name="loioe7f52f49994347cbadde95620238f3f8__section_qdb_rl2_lfb"/>
 
-## Comparison of Export Types
+## Overview of Export Features
 
 To find out which export suits your requirements best, check out the following table:
 
@@ -247,8 +247,6 @@ If configured, Read Access Logging tracks who has access to which data at which 
 
 **Related Information**  
 
-
-[API Reference: `sap.ui.comp.smarttable.ExportType`](https://ui5.sap.com/#/api/sap.ui.comp.smarttable.ExportType)
 
 [API Reference: `SmartTable`](https://ui5.sap.com/#/api/sap.ui.comp.smarttable.SmartTable/controlProperties)
 

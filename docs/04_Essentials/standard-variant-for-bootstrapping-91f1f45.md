@@ -9,12 +9,6 @@ The library preload file `library-preload.js` contains all modules of a certain 
 > ### Note:  
 > An application must **not** reference the `library-preload.js`. If preload files exist, SAPUI5 automatically loads them. The dependencies to libraries are defined as part of the manifest namespace `sap.ui5/dependencies/libs`. For further information, see [Descriptor for Applications, Components, and Libraries \(manifest.json\)](descriptor-for-applications-components-and-libraries-manifest-json-be0cf40.md).
 
-
-
-<a name="loio91f1f4536f4d1014b6dd926db0e91070__section_ob3_llh_1gb"/>
-
-## Option 1 \(Recommended\)
-
 By setting the `async=true` configuration parameter, the module loader loads the modules and preload files asynchronously. You can enable it in an existing application by specifying the `sap-ui-async` configuration parameter in the start URL, or by adding the `data-sap-ui-async` attribute to the bootstrap tag:
 
 ```html
@@ -23,56 +17,13 @@ By setting the `async=true` configuration parameter, the module loader loads the
     src="resources/sap-ui-core.js"
     data-sap-ui-theme="sap_horizon"
     data-sap-ui-async="true"
-    data-sap-ui-onInit="module:my/app/main"
-    data-sap-ui-resourceRoots='{"my.app": "./"}'
+    data-sap-ui-on-init="module:my/app/main"
+    data-sap-ui-resource-roots='{"my.app": "./"}'
 ></script>
 ```
 
 > ### Note:  
 > Before you use the `async` configuration parameter, make sure your app is ready for asynchronous loading, see [Best Practices for Loading Modules](best-practices-for-loading-modules-00737d6.md) and [Is Your Application Ready for Asynchronous Loading?](../03_Get-Started/is-your-application-ready-for-asynchronous-loading-493a15a.md).
-
-
-
-<a name="loio91f1f4536f4d1014b6dd926db0e91070__section_ypn_xlh_1gb"/>
-
-## Option 2
-
-Alternatively, you can influence the loading behavior of the preload files without affecting other single modules by setting the `preload` configuration parameter to one of the following values:
-
--   `async` \(recommended\)
-
-    If you set the `preload` configuration option to `async`, the runtime loads the modules for all declared libraries asynchronously. Thus, for any code that follows the SAPUI5 bootstrap tag, the framework cannot make sure that the classes are already available. Therefore, the application must delay the access to the SAPUI5 APIs by using the `Core.attachInitEvent` method. Libraries can be loaded dynamically by using the `sap/ui/core/Lib.load()` API, which loads the bundle asynchronously as well.
-
--   `sync`
-
-    If you set the `preload` configuration parameter to `sync`, the runtime loads the modules for all declared libraries synchronously. After processing the bootstrap tag, all preload files of all libraries are loaded and the libraries are initialized as usual. The `preload=sync` mode should be transparent for most applications.
-
--   `auto`
-
-    The `preload=auto` configuration parameter is the default value. This mode checks whether SAPUI5 runtime uses optimized sources. If optimized sources are used, it enables the `preload=sync` option to further optimize the runtime. For normal or debug sources, the preload is deactivated.
-
-
-You can easily check this with an existing application by specifying the `sap-ui-preload=<mode>` parameter in the start URL or by adding the `data-sap-ui-preload` attribute to the bootstrap tag:
-
-```html
-<script
-    id="sap-ui-bootstrap"
-    src="resources/sap-ui-core.js"
-    data-sap-ui-theme="sap_horizon"
-    data-sap-ui-preload="async"
-    data-sap-ui-onInit="module:my/app/main"
-    data-sap-ui-resourceRoots='{"my.app": "./"}'
-></script>
-```
-
-> ### Note:  
-> Using the `async=true` or `preload=async` configuration parameters requires extensive testing and cooperation on application side to ensure a stable and fully working application. It is, therefore, not activated automatically, but only by configuration. If you encounter issues, or if you want to prepare your application in advance, see [Is Your Application Ready for Asynchronous Loading?](../03_Get-Started/is-your-application-ready-for-asynchronous-loading-493a15a.md).
-
-> ### Note:  
-> Preload sources are always optimized. However, using the `debug=true` configuration parameter always disables the loading of preload files.
-
-> ### Note:  
-> You can combine the `async` or `preload` configuration parameters with other bootstrap variants such as `sap-ui-core-noJQuery`.
 
 **Related Information**  
 

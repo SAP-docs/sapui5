@@ -271,18 +271,6 @@ ID of the bootstrap script tag
 <tr>
 <td valign="top">
 
-`sap-ui-library-*`
-
-</td>
-<td valign="top">
-
-Prefix for UI libraries script tags
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
 `sap-ui-theme-*`
 
 </td>
@@ -295,60 +283,12 @@ Prefix for theme stylesheets link tags
 <tr>
 <td valign="top">
 
-`sap-ui-highlightrect`
-
-</td>
-<td valign="top">
-
-ID of the highlight rect for controls in TestSuite
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-`sap-ui-blindlayer-*`
-
-</td>
-<td valign="top">
-
-ID for `BlockLayer`
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
 `sap-ui-static`
 
 </td>
 <td valign="top">
 
 ID of the static popup area of UI5
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-`sap-ui-TraceWindowRoot`
-
-</td>
-<td valign="top">
-
-ID of the `TraceWindowRoot`
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-`sap-ui-xmldata`
-
-</td>
-<td valign="top">
-
-ID of the `XML Data Island`
 
 </td>
 </tr>

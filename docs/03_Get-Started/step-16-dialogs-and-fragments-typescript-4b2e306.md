@@ -78,7 +78,7 @@ export default class HelloPanel extends Controller {
         ...
     }
     async onOpenDialog(): Promise<void> {
-      this.dialog = await <Promise<Dialog>> this.loadFragment({
+      this.dialog ??= await <Promise<Dialog>> this.loadFragment({
          name: "ui5.walkthrough.view.HelloDialog"
       });
       this.dialog.open();

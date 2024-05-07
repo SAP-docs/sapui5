@@ -44,8 +44,7 @@ Update the `index.html` file to reference the `viewportScenetree` namespace, whi
         src="https://ui5.sap.com/resources/sap-ui-core.js"
         data-sap-ui-libs="sap.ui.vk, sap.m"
         data-sap-ui-theme="sap_horizon"
-        data-sap-ui-bindingSyntax="complex"
-        data-sap-ui-resourceroots='{
+        data-sap-ui-resource-roots='{
             "viewportScenetree": "./"
         }'>
     </script>

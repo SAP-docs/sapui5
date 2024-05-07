@@ -106,7 +106,7 @@ As an alternative to programmatically chaining to the Core's ready state, you ca
 ```
 <script id='sap-ui-bootstrap'
     data-sap-ui-async='true'
-    data-sap-ui-resourceroots='{"my": "./"}'
+    data-sap-ui-resource-roots='{"my": "./"}'
     data-sap-ui-on-init='module:my/initModule'
     ...>
 </script>

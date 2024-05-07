@@ -6,7 +6,7 @@ To instantiate views asychronously, SAPUI5 provides the factory method `View.cre
 
 To pass the required information for the instantiation, use an object with the following properties:
 
--   `type`: The type can be `JSON`, `JS`, `XML` or `HTML`. All possible types are declared in the enumeration `sap.ui.core.mvc.ViewType`.
+-   `type`: The type can be `JSON`, `JS`, `HTML`, or`XML`. All possible types are declared in the enumeration `sap.ui.core.mvc.ViewType`.
 
 -   `viewName`: View name corresponding to the module concept
 

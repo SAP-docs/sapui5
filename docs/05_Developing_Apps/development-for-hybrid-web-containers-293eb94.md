@@ -71,7 +71,7 @@ Example:
 <script>
 <!-- put the following code in the beginning of the application code -->
 function appReady(){
-    sap.ui.getCore().setModel(new sap.ui.model.odata.v2.ODataModel(<ODATA_URL>));
+    // your code with AJAX requests
 }
 <!-- bind to the deviceready event -->
 document.addEventListener("deviceready", appReady, false);

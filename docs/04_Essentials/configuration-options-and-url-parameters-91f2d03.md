@@ -1133,7 +1133,7 @@ This configuration setting enables the module loader to load both modules and li
 <tr>
 <td valign="top">
 
-`exclude-jquery-compat`
+`excludejquerycompat`
 
 </td>
 <td valign="top">

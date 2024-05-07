@@ -12,7 +12,7 @@ In general, most library combinations are supported. However, restrictions apply
 
 -   `sap.ui.richtexteditor`\*
 
--   `sap.ui.suite`
+-   `sap.ui.suite` \(deprecated\)
 
 -   `sap.ui.ux3` \(deprecated\)
 

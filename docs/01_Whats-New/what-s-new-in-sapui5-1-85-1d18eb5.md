@@ -586,7 +586,7 @@ The following changes and new features are available for SAP Fiori elements for 
 
 -   You can now have several entity sets in parallel in the list report. The list report shows multiple tables via tabs, and each table can be based on different entity sets. For more information, see [Defining Multiple Views on a List Report with Different Entity Sets and Table Settings](../06_SAP_Fiori_Elements/defining-multiple-views-on-a-list-report-with-different-entity-sets-and-table-settings-b6b59e4.md).
 
--   If the copy/paste feature is available on the object page, the 'Export to Spreadsheet' feature is now available by default. It can be disabled. A message is displayed to users when they click on the *Paste* button to paste data into tables, informing about the correct keyboard shortcut combination they should use, based on the desktop device they are using. For more information, see [Copying and Pasting from Spreadsheet Applications to Tables](../06_SAP_Fiori_Elements/copying-and-pasting-from-spreadsheet-applications-to-tables-f6a8fd2.md).
+-   If the copy/paste feature is available on the object page, the 'Export to Spreadsheet' feature is now available by default. It can be disabled. A message is displayed to users when they click on the *Paste* button to paste data into tables, informing about the correct keyboard shortcut combination they should use, based on the desktop device they are using. For more information, see [Copying and Pasting from External Applications to Tables](../06_SAP_Fiori_Elements/copying-and-pasting-from-external-applications-to-tables-f6a8fd2.md).
 
 -   By using the *Information* criticality type on the `LineItem`, you can now highlight \(in blue\) new items that were created outside of the app \(for example, through an API in the back end, or as a side effect\) and need the user's attention, . For more information, see [Highlighting Line Items Based on Criticality](../06_SAP_Fiori_Elements/highlighting-line-items-based-on-criticality-0d501b1.md).
 
@@ -609,6 +609,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.121](what-s-new-in-sapui5-1-121-91a4a2f.md "With this release SAPUI5 is upgraded from version 1.120 to 1.121.")
 
 [What's New in SAPUI5 1.120](what-s-new-in-sapui5-1-120-2359b63.md "With this release SAPUI5 is upgraded from version 1.119 to 1.120.")
 

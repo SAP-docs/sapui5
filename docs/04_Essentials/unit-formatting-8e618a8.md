@@ -10,7 +10,7 @@ SAPUI5 supports the formatting and parsing of units. These unit formats are by d
 
 ## Introduction
 
-Similar to the formatting of currencies, the new unit formatting feature allows you to combine a number value with a localized unit string. Still the actual numbers themselves can be formatted in all kinds of styles, for example, with different decimals or fraction digits.
+Similar to the formatting of currencies, the unit formatting feature allows you to combine a number value with a localized unit string. Still the actual numbers themselves can be formatted in all kinds of styles, for example, with different decimals or fraction digits.
 
 With version 1.54 all language files will include the CLDR data for formatting. You can check out the public CLDR github repository for an overview of all supported languages and units: [https://github.com/unicode-cldr/cldr-units-modern](https://github.com/unicode-cldr/cldr-units-modern)
 
@@ -50,16 +50,16 @@ Essentially, the new unit formatting can be combined together with the existing 
 ```
 
 // new unit formatter, decimals are limited to 2, and the output style is set to "short"
-sap.ui.require(["sap/ui/core/format/NumberFormat"], function(NumberFormat) {
-   var en = new sap.ui.core.Locale("en");
+sap.ui.require(["sap/ui/core/Locale", "sap/ui/core/format/NumberFormat"], function(Locale, NumberFormat) {
+   var en = new Locale("en");
    var oUnitFormat = NumberFormat.getUnitInstance({decimals:2, style:"short"}, en);
    console.log(oUnitFormat.format(12345.678, "speed-mile-per-hour")); // output:  12.35K mph
    console.log(oUnitFormat.parse("12.35K mph")); // output: [12350, "speed-mile-per-hour"]
 });
 
 // new unit formatter, decimals are limited to 2, and the output style is set to "long"
-sap.ui.require(["sap/ui/core/format/NumberFormat"], function(NumberFormat) {
-   var en = new sap.ui.core.Locale("en");
+sap.ui.require(["sap/ui/core/Locale", "sap/ui/core/format/NumberFormat"], function(Locale, NumberFormat) {
+   var en = new Locale("en");
    var oUnitFormat = NumberFormat.getUnitInstance({decimals:2, style:"long"}, en);
    console.log(oUnitFormat.format(12345.678, "speed-mile-per-hour")); // output: 12.35 thousand mph
    console.log(oUnitFormat.parse("12.35 thousand mph")); // output: [12350, "speed-mile-per-hour"]
@@ -69,8 +69,8 @@ sap.ui.require(["sap/ui/core/format/NumberFormat"], function(NumberFormat) {
 The unit’s `displayname` can also be retrieved based on the data from the CLDR.
 
 ```
-sap.ui.require(["sap/ui/core/format/NumberFormat", "sap/ui/core/Locale", "sap/ui/core/LocaleData"],
-    function(NumberFormat, Locale, LocaleData) {
+sap.ui.require(["sap/ui/core/Locale", "sap/ui/core/LocaleData"],
+    function(Locale, LocaleData) {
     console.log(LocaleData.getInstance(new Locale("en")).getUnitDisplayName("speed-mile-per-hour")); // output: miles/hour
 });
 ```
@@ -83,8 +83,8 @@ Depending on the set locale/language, the output also correctly regards grammati
 
 ```
 
-sap.ui.require(["sap/ui/core/format/NumberFormat"], function(NumberFormat) {
-   var ar = new sap.ui.core.Locale("ar");
+sap.ui.require(["sap/ui/core/Locale", "sap/ui/core/format/NumberFormat"], function(Locale, NumberFormat) {
+   var ar = new Locale("ar");
    var oUnitFormat = NumberFormat.getUnitInstance({decimals:2, style:"long"}, ar);
    console.log(oUnitFormat.format(123456.789, "angle-revolution")); // 123.46 ألف دورة
    console.log(oUnitFormat.format(1, "angle-revolution")); // دورة
@@ -95,8 +95,8 @@ And here’s an example of right-to-left orientation in Hebrew:
 
 ```
 
-sap.ui.require(["sap/ui/core/format/NumberFormat"], function(NumberFormat) {
-   var he = new sap.ui.core.Locale("he");
+sap.ui.require(["sap/ui/core/Locale", "sap/ui/core/format/NumberFormat"], function(Locale, NumberFormat) {
+   var he = new Locale("he");
    var oUnitFormat = NumberFormat.getUnitInstance({decimals:2, style:"long"}, he);
    console.log(oUnitFormat.format(12345.678, "speed-mile-per-hour")); // ‏12.35 אלף mph
 });
@@ -123,7 +123,7 @@ In the following example, you can see how this is done for a specific instance.
 
 sap.ui.require(["sap/ui/core/format/NumberFormat"], function(NumberFormat) {
  
-       var oFormat = sap.ui.core.format.NumberFormat.getUnitInstance({
+       var oFormat = NumberFormat.getUnitInstance({
               customUnits: {
                      "zomb": {
                             "unitPattern-count-one": "{0} Zombie...",
@@ -166,8 +166,8 @@ You can also add custom units via the format settings in the Core configuration.
 Adding a unit with a key which is already available in the CLDR, will overwrite the CLDR unit. This way you can overdefine single units, in case the CLDR provided formatting is not sufficient.
 
 ```
-sap.ui.require(["sap/ui/core/format/NumberFormat"], function(NumberFormat) {
-   sap.ui.getCore().getConfiguration().getFormatSettings().addCustomUnits({
+sap.ui.require(["sap/base/i18n/Formatting", "sap/ui/core/format/NumberFormat"], function(Formatting, NumberFormat) {
+   Formatting.addCustomUnits({
        "cats": {
           "displayName": "kitties",
           "unitPattern-count-one": "{0} kitty",
@@ -204,7 +204,7 @@ sap.ui.require(["sap/ui/core/format/NumberFormat"], function(NumberFormat) {
 Additionally, you can now define unit mappings, in order to use aliases for some units. A typical use-case is to map from an ISO unit code to a CLDR key. Of course you can also map to custom units as shown below.
 
 ```
-sap.ui.getCore().getConfiguration().getFormatSettings().addUnitMappings({
+Formatting.addUnitMappings({
    "kitties": "cats", // maps to a custom defined unit
    "mySpeedAlias": "speed-kilometer-per-hour" // maps to an existing the CLDR unit
 });
@@ -220,9 +220,9 @@ When using either instance, exclusive or globally configured custom units, you c
 > Globally configured custom units:
 > 
 > ```
-> sap.ui.require(["sap/ui/core/format/NumberFormat"], function(NumberFormat) {
+> sap.ui.require(["sap/base/i18n/Formatting", "sap/ui/core/format/NumberFormat"], function(Formatting, NumberFormat) {
 >    // define a new unit called Lux
->    sap.ui.getCore().getConfiguration().getFormatSettings().addCustomUnits({
+>    Formatting.addCustomUnits({
 >        "lux": {
 >           "displayName": "Lux",
 >           "unitPattern-count-one": "{0} lx",
@@ -244,7 +244,7 @@ When using either instance, exclusive or globally configured custom units, you c
 > 
 > sap.ui.require(["sap/ui/core/format/NumberFormat"], function(NumberFormat) {
 >     // define a new unit called Lux
->     var oFormat = sap.ui.core.format.NumberFormat.getUnitInstance({
+>     var oFormat = NumberFormat.getUnitInstance({
 >         customUnits: {
 >             "lux": {
 >                  "displayName": "Lux",
@@ -274,7 +274,7 @@ To demonstrate this, we can consider an example with electric meters. Typically 
 ```
 
 // defining a new custom Type as a subclass of the sap.ui.model.type.Unit type
-sap.ui.require(["sap/ui/model/type/Unit", "sap/ui/core/format/NumberFormat"], function(UnitType, NumberFormat) {
+sap.ui.require(["sap/ui/model/type/Unit"], function(UnitType) {
  
        UnitType.extend("sap.ui.core.samples.MeterType", {
               constructor: function(oFormatOptions, oConstraints){

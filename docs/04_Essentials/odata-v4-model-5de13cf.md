@@ -17,7 +17,7 @@ The OData V4 model supports the following:
 
 -   Deleting entities
 
--   Operation \(function and action\) execution
+-   Operation \(function and action\) invocation
 
 -   Grouping data requests in a batch request
 

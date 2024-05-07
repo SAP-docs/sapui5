@@ -32,7 +32,7 @@ Additionally, we will demonstrate how to mock an additional request that is not 
 
 This tutorial assumes you have access to the SAP Business Application Studio. For more information, see [App Development Using SAP Business Application Studio](../05_Developing_Apps/app-development-using-sap-business-application-studio-6bbad66.md).
 
-You should also be familiar with the concepts explained in the [Walkthrough Tutorial](walkthrough-tutorial-3da5f4b.md) tutorial and with the OData specification.
+You should also be familiar with the concepts explained in the [Walkthrough Tutorial \(JavaScript\)](walkthrough-tutorial-javascript-3da5f4b.md) tutorial and with the OData specification.
 
 **Related Information**  
 

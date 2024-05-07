@@ -50,23 +50,6 @@ var oInput = new sap.m.Input({
 
 You can also use a complex syntax for property bindings. This complex syntax allows you to define additional binding information to be contained in the `settings` object, such as a formatter function.
 
-If you are working with **XML views**, make sure that you've turned on complex binding syntax in your bootstrap script, as shown here:
-
-```html
-
-<script
-	id="sap-ui-bootstrap"
-	src="https://sdk.openui5.org/resources/sap-ui-core.js"
-	data-sap-ui-theme="sap_horizon"
-	data-sap-ui-bindingSyntax="complex"
-	data-sap-ui-async="true"
-	data-sap-ui-onInit="module:sap/ui/sample/main"
-	data-sap-ui-resourceRoots='{"sap.ui.sample": "./"}'>
-</script>
-```
-
-You can also use `data-sap-ui-compatVersion="edge"` to enable complex bindings.
-
 You can then set the `bindingMode` or other additional properties like this:
 
 ```xml
@@ -277,7 +260,8 @@ oControl = new sap.m.Input({
 Predefined data types also offer visual feedback for erroneous user input. To turn this feature on, add the following line to your controller's `init` function:
 
 ```js
-sap.ui.getCore().getMessageManager().registerObject(this.getView(), true);
+// "Messaging" required from module "sap/ui/core/Messaging"
+Messaging.registerObject(this.getView(), true);
 ```
 
 For other ways to activate this feature, such as using the `handleValidation` property, see [Validation Messages](validation-messages-a90d93d.md).
@@ -331,17 +315,18 @@ By default, all bindings of a model instance have the default binding mode of th
 // "Input" required from module "sap/m/Input"
 // "BindingMode" required from module "sap/ui/model/BindingMode"
 	var oModel = new JSONModel();
-	// default binding mode is two way
+	// default binding mode is two-way
 	oModel.setData(myData);
-	sap.ui.getCore().setModel(oModel);
 	var oInputFirstName = new Input ();
-	
+	oInputFirstName.setModel(oModel);
+
 	// bind value property one way only
 	// propertyname, formatter function, binding mode
 	oInputFirstName.bindValue("/firstName", null, BindingMode.OneWay);
 	oInputFirstName.placeAt("target1");
 
-	oInputLastName = new Input();
+	var oInputLastName = new Input();
+	oInputLastName.setModel(oModel);
 	// bind value property two way (default)
 	oInputLastName.bindValue("/lastName");
 	oInputLastName.placeAt("target2");

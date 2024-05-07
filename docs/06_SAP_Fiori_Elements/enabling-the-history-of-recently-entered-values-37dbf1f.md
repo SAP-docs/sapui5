@@ -2,7 +2,7 @@
 
 # Enabling the History of Recently Entered Values
 
-You can enable the history of the most recently entered values in a field within the filter bar, when you move the cursor to that field again. It is enabled by default for some of the controls that are used as a filter, such as for multi-input fields. However, it may not be enabled for other controls such as drop-down list.
+You can enable the history of the most recently entered values for any field, when you move the cursor back to that field. It is enabled by default for some of the controls that are used as a filter, such as for multi-input fields. However, it may not be enabled for controls such as drop-down list.
 
 
 
@@ -17,10 +17,6 @@ To enable the history of recently entered values, you must enable the `INPUTFIEL
 <a name="loio37dbf1f30127420d9c585bc1ad80086b__section_ztn_mph_tzb"/>
 
 ## Additional Features in SAP Fiori Elements for OData V2
-
-
-
-### Context
 
 In the manifest, per field, you can specify whether or not the history should be enabled:
 
@@ -57,6 +53,29 @@ You can also specify the same behavior for all the fields, or as a default for t
 > ```
 
 Possible values for `historyEnabled` are *enabled*, *disabled*, or *auto*. *Auto* is the default setting, which means that the behavior depends on the used control type \(it depends on annotations according to the logic of the `SmartFilterBar`. For more information, see [SmartFilterBar](https://sapui5untested.int.sap.eu2.hana.ondemand.com/#/api/sap.ui.comp.smartfilterbar.SmartFilterBar)\).
+
+
+
+<a name="loio37dbf1f30127420d9c585bc1ad80086b__section_ypz_j2y_51c"/>
+
+## Additional Features in SAP Fiori Elements for OData V4
+
+The history of recently entered values is enabled for SAP Fiori elements for OData V4 by default. However, you can disable this setting for each field by using the manifest settings.
+
+> ### Sample Code:  
+> ```
+> "sap.fe": {
+>     "historySettings": {
+>              "fields": {
+>                  "/SalesOrderManage/SoldToParty": {
+>                          "historyEnabled": false
+>                                                   }
+>                   }
+>            }
+>         }
+> ```
+
+Here, `<propertyPath>` refers to the property path in the OData service.
 
 **Related Information**  
 

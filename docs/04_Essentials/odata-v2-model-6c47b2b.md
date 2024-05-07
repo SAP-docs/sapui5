@@ -3600,28 +3600,42 @@ With the metadata above, you can use the `sap.ui.model.odata.type.Currency` and 
 ```js
 ...
 <Input value="{
-   mode:'TwoWay', 
-   parts:[
-      'WeightMeasure', 
-      'WeightUnit', 
-      {
-         mode:'OneTime', 
-         path:'/##@@requestUnitsOfMeasure', 
-         targetType:'any'}], 
-   type:'sap.ui.model.odata.type.Unit'}"/>
+  mode:'TwoWay',
+  parts:[{
+    path : 'WeightMeasure',
+    type : 'sap.ui.model.odata.type.Decimal',
+    constraints : {'precision' : 13, 'scale' : 3, 'nullable' : false}
+  }, {
+    path : 'WeightUnit',
+    type : 'sap.ui.model.odata.type.String',
+    constraints : {'maxLength' : 5, 'nullable' : false}, formatOptions : {'parseKeepsEmptyString' : true}
+  }, {
+    mode : 'OneTime',
+    path : '/##@@requestUnitsOfMeasure',
+    targetType : 'any'
+ }],
+ type : 'sap.ui.model.odata.type.Unit'}"/>
 ...
 <Input value="{
-   mode:'TwoWay', 
-   parts:[
-      'Price', 
-      'CurrencyCode', 
-      {
-         mode:'OneTime', 
-         path:'/##@@requestCurrencyCodes', 
-         targetType:'any'}], 
-   type:'sap.ui.model.odata.type.Currency'}"/>
+   mode : 'TwoWay',
+   parts : [{
+    path : 'Price',
+    type : 'sap.ui.model.odata.type.Decimal',
+    constraints : {'precision' : 16, 'scale' : 3, 'nullable' : false}
+  }, {
+    path : 'CurrencyCode',
+    type : 'sap.ui.model.odata.type.String',
+    constraints : {'maxLength' : 5, 'nullable' : false}, formatOptions : {'parseKeepsEmptyString' : true}
+  }, {
+    mode : 'OneTime',
+    path : '/##@@requestCurrencyCodes',
+    targetType : 'any'
+  }],
+  type : 'sap.ui.model.odata.type.Currency'}"/>
 ...
 ```
 
 The code lists are automatically requested only once per browser session and code list URL.
+
+Note that the format options of the `Decimal` type for the `'WeightMeasure'` or `'Price'` part may additionally influence the number of displayed and allowed decimals.For more information, see [`sap.ui.model.odata.type.Currency#formatValue`](https://ui5.sap.com/#/api/sap.ui.model.odata.type.Currency%23methods/formatValue) and [`sap.ui.model.odata.type.Unit#formatValue`](https://ui5.sap.com/#/api/sap.ui.model.odata.type.Unit%23methods/formatValue).
 

@@ -47,6 +47,21 @@ Check out our live example in the flexible programming model explorer at [Chart 
 
 
 
+<a name="loio52d065ab8bb740c58c834a0c985e3b9e__section_ttc_4qn_y1c"/>
+
+## Using the `SelectionVariant` Format
+
+The following methods are available for interacting with the `Chart` building block using the `SelectionVariant` format:
+
+-   `async getSelectionVariant () : Promise<SelectionVariant>`
+
+-   `async setSelectionVariant (selectionVariant : SelectionVariant, prefillDescriptions : Boolean)`
+
+
+Check out our live example in the flexible programming model explorer at [Chart - Interacting with the Chart Building Block using the Selection Variant Format \(get and set\)](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/chart/chartPublicAPIs).
+
+
+
 <a name="loio52d065ab8bb740c58c834a0c985e3b9e__section_qqf_ljs_j5b"/>
 
 ## API

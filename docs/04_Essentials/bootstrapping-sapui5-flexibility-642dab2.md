@@ -236,7 +236,7 @@ Used to store all entries within the session storage of the browser.
 If you want to verify that a user can add additional files, the configuration should look like this:
 
 ```
-data-sap-ui-flexibilityServices = '[{"connector": "SessionStorageConnector"}]'
+data-sap-ui-flexibility-services = '[{"connector": "SessionStorageConnector"}]'
 ```
 
 
@@ -295,7 +295,7 @@ The mocked file contains the data as JSON with the following structure:
 If you want to verify that a mocked back-end system provides data, the configuration should look like this:
 
 ```
-data-sap-ui-flexibilityServices = '[{"connector": "ObjectPathConnector", "path": "/some/path/to/the/mocked/data.json"}]'
+data-sap-ui-flexibility-services = '[{"connector": "ObjectPathConnector", "path": "/some/path/to/the/mocked/data.json"}]'
 ```
 
 
@@ -309,7 +309,7 @@ data-sap-ui-flexibilityServices = '[{"connector": "ObjectPathConnector", "path":
 If you want to verify both, that a mocked back-end system provides data and a user can add additional files, the configuration should look like this:
 
 ```
-data-sap-ui-flexibilityServices = '[{"connector": "ObjectPathConnector", "path": "/some/path/to/the/mocked/data.json"},{"connector": "SessionStorageConnector"}]'
+data-sap-ui-flexibility-services = '[{"connector": "ObjectPathConnector", "path": "/some/path/to/the/mocked/data.json"},{"connector": "SessionStorageConnector"}]'
 ```
 
 > ### Caution:  

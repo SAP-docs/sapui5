@@ -19,7 +19,7 @@ The `FilterBar` building block allows application developers to embed a filter b
 Default values using `UI.SelectionVariant` and `Common.FilterDefaultValue` as well as custom filters are supported. Check out our live example in the flexible programming model explorer at [Filter Bar - Overview](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/filterBar/filterBarDefault).
 
 > ### Note:  
-> When using the `FilterBar` building block in an object page, a custom section or a custom subsection, make sure all the controls that need to be filtered are part of the same UI fragment as the `FilterBar` building block.
+> When using the `FilterBar` building block in a custom section or a custom subsection that deals with the navigation entity, make sure all the controls that need to be filtered by the filter bar are part of the same UI fragment as the `FilterBar` building block.
 
 > ### Restriction:  
 > The `FilterBar` building block has no provision to bring up the visual filter bar.
@@ -47,7 +47,7 @@ The following methods are available for interacting with the `FilterBar` buildin
 -   `async setSelectionVariant (selectionVariant : SelectionVariant)`
 
 
-Check out our live example in the flexible programming model explorer at [Filter Bar - Interacting with the Filter Bar via Selection Variant Format \(get and set\)](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/filterBar/filterBarSVPublicAPIs).
+Check out our live example in the flexible programming model explorer at [Filter Bar - Interacting with the Filter Bar using the Selection Variant Format \(get and set\)](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/filterBar/filterBarSVPublicAPIs).
 
 > ### Restriction:  
 > Custom filters are not part of the `getSelectionVariant` and `setSelectionVariant` APIs.

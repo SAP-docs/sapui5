@@ -377,9 +377,9 @@ The data element `FieldWithFixedValueList` is rendered as a radio button group i
 > 
 > ```
 
+  
+  
+**Radio Buttons in Horizontal Layout Using Manifest Setting**
 
-
-### Radio Buttons in Horizontal Layout Using Manifest Setting
-
-![](images/Radio_button-horizontal_layout_a267511.png)
+![](images/Radio_button-horizontal_layout_a267511.png "Radio Buttons in Horizontal Layout Using Manifest Setting")
 

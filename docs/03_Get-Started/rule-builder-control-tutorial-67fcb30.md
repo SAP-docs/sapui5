@@ -30,7 +30,7 @@ The visualization provided by the `RuleBuilder` component contains text parts an
 
 ## Expression Languages
 
-You can model rules using an expression language. There are two expression languages supported by the rule builder:
+You can model rules using an expression language. There are two expression languages supported by the rule builder.
 
 -   **Expression Language 1.0 \(Rule Expression Language\)**: Expression language 1.0 enable users to define business decision logic in simple readable syntax. This is the default language supported by the rule builder. A typical rule condition in expression language 1.0 is as shown below:
 
@@ -140,7 +140,7 @@ For more information, see the documentation for the SAP HANA Rules Framework on 
 
 This tutorial uses the OData V2 mock server to provide the required data. Before proceeding with this tutorial, ensure that you are familiar with the concepts introduced in the following tutorials:
 
--   [Walkthrough Tutorial](walkthrough-tutorial-3da5f4b.md), specifically [Step 26: Mock Server Configuration](step-26-mock-server-configuration-bae9d90.md)
+-   [Walkthrough Tutorial \(JavaScript\)](walkthrough-tutorial-javascript-3da5f4b.md), specifically [Step 26: Mock Server Configuration](step-26-mock-server-configuration-bae9d90.md)
 -   [OData V2 Mock Server Tutorial](odata-v2-mock-server-tutorial-3a9728e.md)
 
 > ### Note:  

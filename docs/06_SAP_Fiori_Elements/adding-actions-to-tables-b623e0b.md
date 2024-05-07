@@ -227,7 +227,7 @@ Annotation-based actions can be inline actions. Inline actions are used to trigg
   
 **Example: Actions in the Table Toolbar**
 
-![](images/Actions_in_the_Table_Toolbar_856c5a4.jpg "Example: Actions in the Table Toolbar")
+![](images/Actions_in_the_Table_Toolbar_856c5a4.png "Example: Actions in the Table Toolbar")
 
 
 

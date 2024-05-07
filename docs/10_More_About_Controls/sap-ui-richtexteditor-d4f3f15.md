@@ -72,11 +72,17 @@ Because of the use of а third-party component some additional restrictions appl
 
         Introduced with 1.71.49
 
-        Deprecated as of 1.71.62
+        **TinyMCE v4 deprecated as of 1.71.62**
 
     -   6.5.1
 
         Introduced with 1.71.62
+
+        Replaced by 6.8.2 in 1.71.65
+
+    -   6.8.2
+
+        Introduced with 1.71.65
 
 
 
@@ -93,11 +99,17 @@ Because of the use of а third-party component some additional restrictions appl
     
     -   4.9.10
 
-        Deprecated as of 1.84.42
+        **TinyMCE v4 deprecated as of 1.84.42**
 
     -   6.5.1
 
         Introduced with 1.84.42
+
+        Replaced by 6.8.2 in 1.84.45
+
+    -   6.8.2
+
+        Introduced with 1.84.45
 
 
 
@@ -114,15 +126,27 @@ Because of the use of а third-party component some additional restrictions appl
     
     -   4.9.10
 
-        Deprecated as of 1.96.28
+        **TinyMCE v4 deprecated as of 1.96.28**
 
     -   5.5.1
 
-        Deprecated as of 1.96.28
+        Replaced by 5.10.9 in 1.96.31
+
+    -   5.10.9
+
+        Introduced with 1.96.31
+
+        **TinyMCE v5 deprecated as of 1.96.31**
 
     -   6.5.1
 
         Introduced with 1.96.28
+
+        Replaced by 6.8.2 in 1.96.31
+
+    -   6.8.2
+
+        Introduced with 1.96.31
 
 
 
@@ -139,9 +163,16 @@ Because of the use of а third-party component some additional restrictions appl
     
     -   4.9.10
 
-        Deprecated as of 1.108.0
+        **TinyMCE v4 deprecated as of 1.108.0**
 
     -   5.10.2
+
+        Replaced by 5.10.9 in 1.108.27
+
+    -   5.10.9
+
+        Introduced with 1.108.27
+
     -   6.1.0
 
         Replaced by 6.3.1 in 1.108.10
@@ -155,6 +186,12 @@ Because of the use of а third-party component some additional restrictions appl
     -   6.5.1
 
         Introduced with 1.108.20
+
+        Replaced by 6.8.2 in 1.108.27
+
+    -   6.8.2
+
+        Introduced with 1.108.27
 
 
 
@@ -171,9 +208,22 @@ Because of the use of а third-party component some additional restrictions appl
     
     -   5.10.2
 
-        Deprecated as of 1.120.0
+        **TinyMCE v5 deprecated as of 1.120.0**
+
+        Replaced by 5.10.9 in 1.120.11
+
+    -   5.10.9
+
+        Introduced with 1.120.11
 
     -   6.5.1
+
+        Replaced by 6.8.2 in 1.120.11
+
+    -   6.8.2
+
+        Introduced with 1.120.11
+
 
 
     

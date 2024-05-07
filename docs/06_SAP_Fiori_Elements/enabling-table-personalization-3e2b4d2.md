@@ -181,7 +181,7 @@ In the list report, you can set the variant management to `"Page"` level or to `
 
     -   Adding or removing columns
 
-        Users can add or remove all properties of the root entity of a given table and its 1:1 navigation entities. Selected properties are shown at the top of the list. For all properties of navigation entities, the name of the navigation entity is shown below the name of the property using a gray font, as shown in the following screenshot. Users can sort tables by choosing individual columns or multiple columns \(unless sorting is disabled\). Users can sort each column in ascending or descending order.
+        Users can add or remove all properties of the root entity of a given table. Selected properties are shown at the top of the list. Users can sort tables by choosing individual columns or multiple columns \(unless sorting is disabled\). Users can sort each column in ascending or descending order.
 
         ![](images/Adding_or_Removing_Columns_caf79df.png)
 
@@ -197,7 +197,7 @@ In the list report, you can set the variant management to `"Page"` level or to `
 
 ### Choosing Personalization Settings
 
-Variant management on control level enables filtering, sorting, adding or removing columns, and grouping by default. Use the `"personalization"` setting in the manifest to change the default behavior.
+or removing columns, and grouping by default. Use the `"personalization"` setting in the manifest to change the default behavior.
 
 > ### Sample Code:  
 > `manifest.json`
@@ -243,9 +243,9 @@ You can use the following values for the `"personalization"` setting:
 
 ### Personalization for Properties with Text Arrangement
 
-Note the following when enabling personalization for properties that have a text arrangement annotation:
+Note the following when enabling personalization for properties that have a text arrangement annotation:Variant management on control level enables filtering, sorting, adding
 
--   Sorting and filtering is available for the properties visible in a column. For example, for properties with text arrangement set as `#TextFirst`, the property itself or its text can be sorted or grouped. For properties with text arrangement set as`#TextOnly`, sorting and grouping is only available for their text. Filtering for properties, however, does not take into account their text arrangement. For example, filtering on the `#TextOnly` properties is available for the property itself and not its texts. Filtering on its text may be available if no filter restriction is defined for the text property.
+-   Sorting and filtering is available for the properties visible in a column. For example, for properties with text arrangement set as `#TextFirst`Variant management on control level enables filtering, sorting,, the property itself or its text can be sorted or grouped. For properties with text arrangement set as`#TextOnly`, sorting and grouping is only available for their text. Filtering for properties, however, does not take into account their text arrangement. For example, filtering on the `#TextOnly` properties is available for the property itself and not its texts. Filtering on its text may be available if no filter restriction is defined for the text property.
 
 -   If a label is defined for a column within the `LineItem`, then this label is used in the *Sort* and *Group* menus if the column displays a single property. In the *Filter* menu, the property name is displayed instead.
 

@@ -3047,11 +3047,15 @@ The "\{0\}" was loaded
 </td>
 <td valign="top">
 
-This text is used only by the screen reader programs, when the user clicks the paginator button to navigate through the next or the previous object, and the object loads successfully.
+This text is used only be screen reader programs.
+
+When a user uses the paginator button to navigate through a list of sales order items, for example, the screen reader informs the user about which specific object was loaded and is now in focus.
 
 `Parameter: {0} = title defined for the object`
 
-This key isn't used if no title is defined, and instead we use the following key: `M_PAGINATOR_ANNOUNCEMENT_OBJECT_LOADED`
+If no title is defined, we use the following key instead:
+
+`M_PAGINATOR_ANNOUNCEMENT_OBJECT_LOADED`
 
 </td>
 <td valign="top">
@@ -3073,7 +3077,7 @@ You've reached the top of the list
 </td>
 <td valign="top">
 
-This text is used only by the screen reader programs. It is relevant when the user clicks the "Previous" paginator button while being positioned on the second object from the top. Once the top object is successfully loaded, the focus shifts to the other paginator button \("Next"\), and this text is read out by the screen reader programs.
+When a user uses the paginator button to navigate through a list of sales order items, for example, the screen reader informs the user with this text that they've reached the top of the list. At the same time, the focus shifts from the 'Previous' paginator button to the 'Next' paginator button.
 
 The screen reader program reads the combined text obtained from the `M_PAGINATOR_ANNOUNCEMENT_TITLE_LOADED` and `M_PAGINATOR_TITLE_TOP` keys.
 
@@ -3097,7 +3101,7 @@ You've reached the end of the list
 </td>
 <td valign="top">
 
-This text is used only by the screen reader programs. It is relevant when the user clicks the "Next" paginator button while being positioned on the second-last object from the bottom. Once the last object is successfully loaded, the focus shifts to the other paginator button \("Previous"\), and the text is read out by screen reader programs.
+When a user uses the paginator button to navigate through a list of sales order items, for example, the screen reader informs the user with this text that they've reached the bottom of the list. At the same time, the focus shifts from the 'Next' paginator button to the 'Previous' paginator button.
 
 The screen reader program reads the combined text obtained from the `M_PAGINATOR_ANNOUNCEMENT_TITLE_LOADED` and `M_PAGINATOR_TITLE_BOTTOM` keys.
 
@@ -3121,7 +3125,7 @@ The object was loaded
 </td>
 <td valign="top">
 
-This text is used only by the screen reader programs when the user clicks the paginator button to load the next or the previous object. The object is successfully loaded but no title defined for the object.
+This text is used only by screen reader programs. When a user uses the paginator button to navigate through a list of sales order items, for example, the screen reader informs the user that the object was loaded. This text is used when no title is defined for the object.
 
 </td>
 <td valign="top">

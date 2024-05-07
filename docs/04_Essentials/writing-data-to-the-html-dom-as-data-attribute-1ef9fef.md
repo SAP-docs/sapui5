@@ -45,18 +45,6 @@ This results in the following HTML:
 <button ...  data-myData="Hello"  ... >
 ```
 
-This is done similarly in HTML views:
-
-```html
-
-<div data-sap-ui-type="sap.m.Button" data-text="This button has custom data written to the DOM">
-   <div data-sap-ui-aggregation="customData">
-      <div data-sap-ui-type="sap.ui.core.CustomData" data-key="mydata" data-value="Hello" data-write-to-dom="true"/>
-   </div>
-</div>
-
-```
-
 The CSS can now use attribute selectors to check the presence or the value of the custom data attribute:
 
 ```

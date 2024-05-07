@@ -73,14 +73,28 @@ You can link the `Table` building block to a `FilterBar` that is defined in the 
 
 Check out our live example in the flexible programming model explorer at [Table - FilterBar](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/table/tableFilterBar) and [Custom View with BuildingBlock Table](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/customElements/customElementsOverview/customViewWithMacroTableContent).
 
-You can use the `getPresentationVariant()` and `setPresentationVariant()` methods to programmatically get and set the presentation variants corresponding to the table building block. For more information, see [Table - Interacting via APIs / Table in Display Mode](https://latest.testapp.sapfe.c.eu-de-2.cloud.sap/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/table/tablePublicAPIs).
+You can use the `getPresentationVariant()` and `setPresentationVariant()` methods to programmatically get and set the presentation variants corresponding to the table building block. Check out our live example in the flexible programming model explorer at [Table - Interacting via APIs](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/table/tablePublicAPIs).
 
-> ### Note:  
-> Only responsive tables and grid tables support the use of `getPresentationVariant()` and `setPresentationVariant()` methods.
+You can use the `setCurrentVariantID` and `getCurrentVariantID` methods to programmatically set and get the current variant ID corresponding to the table building block. Check out our live example in the flexible programming model explorer at [Table Extensibility](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/controllerExtensions/tableExtensibility).
 
 You can send and remove messages related to the table by using the `sendMessage` and `removeMessage` methods. Check out our live example in the flexible programming model explorer at [Table Messages](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/table/tableMessages).
 
 If the entity linked to the table is searchable, the *Search* field is displayed in the toolbar of the table. You can disable the *Search* field using the `isSearchable` parameter. Check out our live example in the flexible programming model explorer at [Table - Settings](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/table/tableCustoms).
+
+
+
+<a name="loio3801656db27b4b7a9099b6ed5fa1d769__section_ttc_4qn_y1c"/>
+
+## Using the `SelectionVariant` Format
+
+The following methods are available for interacting with the `Table` building block using the `SelectionVariant` format:
+
+-   `async getSelectionVariant () : Promise<SelectionVariant>`
+
+-   `async setSelectionVariant (selectionVariant : SelectionVariant, prefillDescriptions : Boolean)`
+
+
+Check out our live example in the flexible programming model explorer at [Table - Interacting with the Table Building Block using the Selection Variant Format \(get and set\)](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/table/tablePublicAPIs).
 
 
 

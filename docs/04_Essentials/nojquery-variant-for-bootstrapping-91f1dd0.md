@@ -4,7 +4,7 @@
 
 The noJQuery variant supports bootstrapping for an application that already integrates jQuery or uses a different jQuery version than SAPUI5.
 
-In this variant, you include the `resources/sap-ui-core-noJQuery.js` file in your HTML page. Make sure that jQuery and `jquery-ui-position` have been loaded beforehand. The following code snippet shows an example:
+In this variant, you include the `resources/sap-ui-core-nojQuery.js` file in your HTML page. Make sure that jQuery and `jquery-ui-position` have been loaded beforehand. The following code snippet shows an example:
 
 ```html
 

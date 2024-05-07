@@ -46,7 +46,7 @@ If you want to make additional libraries known in your app, without directly loa
 		"libs": {
 			"sap.ui.core": {},
 			"sap.m": {},
-			"sap.ui.layout": {
+			"my.heavy.charting": {
 				"lazy": true
 			}
 		},
@@ -55,13 +55,14 @@ If you want to make additional libraries known in your app, without directly loa
 
 If a library preload contains reuse components and this preload is configured to be loaded lazily \(via `"lazy": true` in the dependencies of the `manifest.json`\), the library isn't available upon creation of the related component.
 
-In this case, you need to use `sap/ui/core/Lib.load("my.library")` before creating the component \(e.g with `Component.create({ name: "my.component" })` or component usage `myComponent.createComponent("myUsage")`\).
+In the above case you need to use `sap/ui/core/Lib.load({name: "my.heavy.charting"})` before creating the component \(e.g with `Component.create({ name: "my.component" })` or component usage `myComponent.createComponent("myUsage")`\).
 
 An indicator that a component is inside a library is the existence of an entry `sap.app/embeddedBy` in its `manifest.json` file.
 
 **Additional Information:**
 
 -   [Descriptor for Applications, Components, and Libraries \(manifest.json\)](../04_Essentials/descriptor-for-applications-components-and-libraries-manifest-json-be0cf40.md)
+-   `API Reference:` [`sap/ui/core/Lib.load()`](https://ui5.sap.com/#/api/sap.ui.core.Lib%23methods/sap.ui.core.Lib.load)
 
 
 
@@ -74,6 +75,7 @@ In order to ensure that all static SAPUI5 resources are served with the lowest p
 **Additional Information:**
 
 -   [Variant for Bootstrapping from Content Delivery Network](../04_Essentials/variant-for-bootstrapping-from-content-delivery-network-2d3eb2f.md)
+-   Certain restrictions apply when using the SAP CDN. For more information, see SAP Note [2943781](https://me.sap.com/notes/2943781).
 
 
 
@@ -133,7 +135,7 @@ For more information, see:
 
 ## Use "manifest first" to Load the Component
 
-Load the `manifest.json` descriptor file of the component first to analyze and preload the dependencies when loading the component. For more information, see [Manifest First Function](../04_Essentials/descriptor-for-applications-components-and-libraries-manifest-json-be0cf40.md#loiobe0cf40f61184b358b5faedaec98b2da__manifirst).
+When creating a component manually, make sure the `manifest.json` descriptor file is loaded first, so that the dependencies are analyzed and preloaded when the component is loaded. For more information, see [Manifest First Function](../04_Essentials/descriptor-for-applications-components-and-libraries-manifest-json-be0cf40.md#loiobe0cf40f61184b358b5faedaec98b2da__manifirst).
 
 ```js
 // "Component" required from module "sap/ui/core/Component"
@@ -155,7 +157,7 @@ In some cases it may happen that preloads are not enabled, or that modules of so
 
 -   A subset of libraries in the `sap.ui5/dependencies/libs` section of the `manifest.json` is declared with the `lazy` loading option, but these `lazy` libraries aren't preloaded manually before their modules are used. For more information, see [Descriptor Dependencies to Libraries and Components](../04_Essentials/descriptor-dependencies-to-libraries-and-components-8521ad1.md).
 
--   Neither `sap-ui-async` nor `data-sap-ui-preload` is enabled in the bootstrap configuration options. Note that if `sap-ui-async` is set to `true`, the value of the preload configuration is automatically set to `"async"`. If `sap-ui-async` can't be enabled yet, the `"async"` value has to be applied in the `sap-ui-preload` bootstrap option manually in order to enable preloading libraries asynchronously.
+-   Neither `sap-ui-async` nor `sap-ui-preload` is enabled in the bootstrap configuration options.Note that if `sap-ui-async` is set to `true`, the value of the preload configuration is automatically set to `"async"`.
 
 -   Debug sources are enabled in the bootstrap \(`data-sap-ui-debug=true`\) or via the URL \(`sap-ui-debug=true`\).
 
@@ -188,11 +190,7 @@ In this case, use the `data-sap-ui-async="true"` setting in the bootstrap.
 
 ### Too many requests
 
-You can use the [UI5 Tooling](https://sap.github.io/ui5-tooling/) to bundle and minimize all relevant component files by creating a component-preload file.
-
-If you're using apps with grunt as a web server, you can use the `openui5_preload` task; for more information see [Optimizing OpenUI5/SAPUI5 Apps](http://scn.sap.com/community/developer-center/front-end/blog/2015/02/18/optimizing-openui5-apps) in the SAPUI5 Developer Center on SAP SCN.
-
-If you're using SAP Web IDE, refer to [Application Build](https://help.sap.com/viewer/825270ffffe74d9f988a0f0066ad59f0/CF/en-US/dfb26ef028624cf486a8bbb0bfd459ff.html) in the SAP Web IDE documentation.
+You can use [UI5 Tooling](https://sap.github.io/ui5-tooling/) to bundle and minimize all relevant component files by creating a component-preload file.
 
 
 
@@ -216,7 +214,7 @@ If you're using SAP Web IDE, refer to [Application Build](https://help.sap.com/v
 
 Since UI5 version 1.58, the global `jquery.sap.*` modules are deprecated. Please use the modularised variant of the module. If you're still using the `jquery.sap.*` variants, a so-called "stubbing layer" may load the old module synchronously!
 
-You can find a list of modules in the [Legacy jQuery.sap Replacement](../04_Essentials/legacy-jquery-sap-replacement-a075ed8.md) documentation.
+You can find a list of modules in the [Deprecated jQuery.sap API Replacement](../04_Essentials/deprecated-jquery-sap-api-replacement-a075ed8.md) documentation.
 
 The usages can either be replaced manually or by the [UI5 Migration Tool](https://github.com/SAP/ui5-migration).
 
@@ -229,7 +227,7 @@ The usages can either be replaced manually or by the [UI5 Migration Tool](https:
 
 ## Migrate Synchronous Variants of UI5 Factories to Asynchronous Variants
 
-Check if the application uses synchronous UI5 factories. Many asynchronous variants are available, e.g. for Components, Resource Bundles, Controllers, Views, and Fragments. Please visit the following overview:[Legacy Factories Replacement](../04_Essentials/legacy-factories-replacement-491bd9c.md).
+Check if the application uses synchronous UI5 factories. Many asynchronous variants are available, e.g. for Components, Resource Bundles, Controllers, Views, and Fragments.Please visit the following overview: [Deprecated Factories Replacement](../04_Essentials/deprecated-factories-replacement-491bd9c.md).
 
 
 
@@ -337,7 +335,7 @@ You can further optimize your code by doing the following:
 
     For a quick start, follow the [OData V4 Tutorial](../03_Get-Started/odata-v4-tutorial-bcdbde6.md) tutorial.
 
--   If you use data binding with an OData V2 service as a back end, you should consider switching your OData model to our more updated OData V2 model. For more information, see [OData V2 Model](../04_Essentials/odata-v2-model-6c47b2b.md#loio6c47b2b39db9404582994070ec3d57a2).
+-   If you use data binding with an OData V2 service as a back end, you must not use the deprecated `sap.ui.model.odata.ODataModel` anymore. For more information, see [OData V2 Model](../04_Essentials/odata-v2-model-6c47b2b.md#loio6c47b2b39db9404582994070ec3d57a2).
 
 -   Optimize dependent bindings as described here: [Optimizing Dependent Bindings](../04_Essentials/odata-v2-model-6c47b2b.md#loio62149734b5c24507868e722fe87a75db).
 

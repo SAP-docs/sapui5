@@ -13,7 +13,7 @@ To activate cache busting on the level of single application resources and cache
 
 -   Change the value of the `src` attribute pointing to the SAPUI5 core to `resources/sap-ui-cachebuster/sap-ui-core.js`.
 
--   Add the attribute `data-sap-ui-appCacheBuster="./"`.
+-   Add the attribute `data-sap-ui-app-cache-buster="./"`.
 
 
 Example \(snippet from the sample app `/UI5/SIMPLETEST`\):
@@ -26,7 +26,7 @@ Example \(snippet from the sample app `/UI5/SIMPLETEST`\):
       id="sap-ui-bootstrap"
       data-sap-ui-libs="sap.m"
       data-sap-ui-theme="sap_horizon"
-      data-sap-ui-appCachebuster="./">
+      data-sap-ui-app-cache-buster="./">
     </script>
   …
 </html>

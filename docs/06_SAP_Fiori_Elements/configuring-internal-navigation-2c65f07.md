@@ -326,7 +326,24 @@ Application developers can disable the navigation using the setting `navigateToI
 > `navigateToInstance`
 > 
 > ```
-> 
+> “com.sap.vocabularies.UI.v1.LineItem": {
+>     "tableSettings": {
+>         ...,
+>         ...
+>     },
+>     "actions": {
+>         "DataFieldForAction::com.c_salesordermanage_sd.AddRandomItem": {
+>             "afterExecution": {
+>                 "navigateToInstance": false
+>             }
+>         },
+>         "DataFieldForAction::com.c_salesordermanage_sd.DummyBoundAction": {
+>             "afterExecution": {
+>                 "navigateToInstance": false
+>             }
+>         }
+>     }
+> }
 > ```
 
 The key should always start with `DataFieldForAction::`, followed by the action name.

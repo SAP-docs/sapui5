@@ -15,12 +15,7 @@ The `AnnotationHelper` connects all the pieces related to XML templating: It kno
 
 ## Formatter Functions
 
-The formatter functions can be used in binding expressions and `<template:if>` instructions for test conditions.
-
-> ### Note:  
-> To use formatter functions, you need to enable the extended binding syntax by setting the configuration option `xx-bindingSyntax` to `complex`. For more information, see [Composite Binding](composite-binding-a2fe8e7.md). If the extended binding syntax is not enabled and expressions are created by means of the annotation helper's format functions, the following warning is issued in the console: *Complex binding syntax not active*.
-
-The following formatter functions exist:
+The formatter functions can be used in binding expressions and `<template:if>` instructions for test conditions. The following formatter functions exist:
 
 -   `format`: General purpose method that handles proper escaping and formatting of constant values and provides binding expressions with suitable types. `format` supports the following constructs:
 

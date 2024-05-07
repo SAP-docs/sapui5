@@ -89,7 +89,7 @@ As mentioned above, we use the same content as in the previous step, so we refra
 		useTablePersonalisation="true" 
 		header="Products" 
 		showRowCount="true"
-		useExportToExcel="false" 
+		enableExport="false" 
 		enableAutoBinding="true">
 	</smartTable:SmartTable>
 </mvc:View>

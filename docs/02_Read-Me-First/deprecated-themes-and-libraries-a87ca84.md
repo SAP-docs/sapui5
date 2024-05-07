@@ -66,7 +66,7 @@ Switch to `sap_horizon`.
 </td>
 <td valign="top">
 
-1.48
+1.46
 
 </td>
 <td valign="top">

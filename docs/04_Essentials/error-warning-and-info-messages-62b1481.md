@@ -4,7 +4,7 @@
 
 SAPUI5 provides a central place for storing and managing info, warning, and error messages.
 
-Messages can be used to notify the user about specific states of the application and can help the user to correct their incorrect inputs. The central `MessageManager` for storing messages is available globally by calling `sap.ui.getCore().getMessageManager()` and the central `MessageModel` for managing messages is available by calling `sap.ui.getCore().getMessageManager().getMessageModel()`.
+Messages can be used to notify the user about specific states of the application and can help the user to correct their incorrect inputs. The central `Messaging` module can be required from `sap/ui/core/Messaging`, and the central `MessageModel` for managing messages is available by calling `Messaging.getMessageModel()`.
 
 
 
@@ -45,7 +45,7 @@ There are several ways to create messages automatically and push them into the c
 
 You can also create messages manually or extend the messaging features provided by the framework:
 
--   You can create custom messages manually via the central `sap.ui.core.message.MessageManager` APIs. For these manually created messages, the application has to ensure a proper message lifecycle.
+-   You can create custom messages manually via the central `Messaging` APIs, for example `Messaging.addMessages()`, with `Messaging` required from the `sap/ui/core/Messaging` module. For these manually created messages, the application has to ensure a proper message lifecycle.
 
 -   For custom target formats, you can use the custom message processor. The own message processor has to inherit from the class `sap.ui.core.message.MessageProcessor`.
 

@@ -28,7 +28,7 @@ In all other cases, a relative binding reads data from its parent binding that c
 The point in time that is used to actually send the request is determined as explained in the section [Batch Control](batch-control-74142a3.md). Bindings which create own data service requests cache data from data service responses. They do not send a data service request if data can be served from this cache.
 
 > ### Note:  
-> List bindings read data in pages, i.e. they only access a certain index range from their bound collection; they only trigger a new data service request if indexes are accessed which have not yet been read.
+> List bindings read data in pages, i.e. they only access a certain index range from their bound collection; they only initiate a new data service request if indexes are accessed which have not yet been read.
 
 You can delete the cache for an absolute binding using its `refresh` method. The method also deletes the caches of child bindings of the absolute binding.
 
@@ -82,7 +82,7 @@ An example can be seen in the [SalesOrders](https://ui5.sap.com/#/sample/sap.ui.
 > refresh with allow removal
 > 
 > ```js
-> oAction.execute("confirmSalesOrderActionGroup").then(function () {
+> oAction.invoke("confirmSalesOrderActionGroup").then(function () {
 >     oConfirmedSalesOrderContext.refresh(undefined, true); // bAllowRemoval = true
 > });
 > ```
@@ -128,7 +128,7 @@ The above sample shows an absolute list binding: A table's `items` aggregation i
 > ### Note:  
 > The `BillingStatus` remains empty and logs an error to the browser console as this structural property is not part of the `$select` specified for the list binding.
 
-The lower table for the line items has a relative binding. As it has parameters defined, it triggers its own data service request once it receives its binding context.
+The lower table for the line items has a relative binding. As it has parameters defined, it initiates its own data service request once it receives its binding context.
 
 
 
@@ -179,7 +179,7 @@ For details, see [`sap.ui.model.odata.v4.ODataModel#bindProperty`](https://ui5.s
 
 Editing properties of an entity sometimes causes side effects on other properties within the same or a related entity. Normally, a `PATCH` request which sends the user's input to the server includes side effects for the same entity \(if relevant for the UI\) within its response. Sometimes, however, an application needs more control on how and when this happens, or needs side effects on related entities as well.
 
-You can use [sap.ui.model.odata.v4.Context\#requestSideEffects](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.Context/methods/requestSideEffects) to load side effects. This method can be called on the bound context of a context binding, a row context of a list binding, the header context of a list binding, or on the return value context of an operation binding. Collection-valued navigation properties are fully supported, so an efficient request is sent instead of a simple refresh. The `validateFieldGroup` event provides a suitable point in time to request side effects after a certain group of fields has been changed. Using the `validateFieldGroup` event allows to trigger the side effect request early enough, so that it is sent in the same batch request as the `PATCH` request. For more information, see [Field Groups](field-groups-5b07753.md). The API strikes a balance between the generic annotation-based use and specific hard-coded uses. The `TargetEntities` and `TargetProperties` of the `com.sap.vocabularies.Common.v1.SideEffects` annotation can be used directly as input for `sap.ui.model.odata.v4.Context#requestSideEffects`. Note that the OData V4 model does not evaluate the `SourceEntities` and`SourceProperties` of the `com.sap.vocabularies.Common.v1.SideEffects` annotation. When requested from the OData V4 meta model, the annotation value looks as follows:
+You can use [sap.ui.model.odata.v4.Context\#requestSideEffects](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.Context/methods/requestSideEffects) to load side effects. This method can be called on the bound context of a context binding, a row context of a list binding, the header context of a list binding, or on the return value context of an operation binding. Collection-valued navigation properties are fully supported, so an efficient request is sent instead of a simple refresh. The `validateFieldGroup` event provides a suitable point in time to request side effects after a certain group of fields has been changed. Using the `validateFieldGroup` event allows to initiate the side effect request early enough, so that it is sent in the same batch request as the `PATCH` request. For more information, see [Field Groups](field-groups-5b07753.md). The API strikes a balance between the generic annotation-based use and specific hard-coded uses. The `TargetEntities` and `TargetProperties` of the `com.sap.vocabularies.Common.v1.SideEffects` annotation can be used directly as input for `sap.ui.model.odata.v4.Context#requestSideEffects`. Note that the OData V4 model does not evaluate the `SourceEntities` and`SourceProperties` of the `com.sap.vocabularies.Common.v1.SideEffects` annotation. When requested from the OData V4 meta model, the annotation value looks as follows:
 
 ```json
 {
@@ -225,5 +225,5 @@ The OData V4 model automatically determines the system query options `$top` and 
 
 ```
 
-An additional paging mechanism is Server-Driven Paging, for which the server returns only a part of the requested data in order to limit the response size. This mechanism is supported by the OData V4 model since SAPUI5 1.72. The model will provide the data retrieved with the response to the control or application. A follow-up request is not triggered automatically, but only once the control or application request additional data from the model.
+An additional paging mechanism is Server-Driven Paging, for which the server returns only a part of the requested data in order to limit the response size. This mechanism is supported by the OData V4 model since SAPUI5 1.72. The model will provide the data retrieved with the response to the control or application. A follow-up request is not initiated automatically but only once the control or application request additional data from the model.
 

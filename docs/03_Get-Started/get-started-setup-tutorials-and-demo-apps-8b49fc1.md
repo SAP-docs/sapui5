@@ -27,17 +27,6 @@ Set up your development environment and go through our tutorials. They introduce
 
 
 
-> ### Tip:  
-> **Learn with openSAP:**
-> 
-> The openSAP course [Developing Web Apps with SAPUI5](https://open.sap.com/courses/ui51) introduces you to the main concepts of SAPUI5.
-> 
-> The JavaScript exercises for each unit will give you the technical background needed to develop your own responsive Web apps. We’ll start from scratch with the very basics and lots of hands-on coding. As we go through the weeks of this course, you’ll learn more about the powerful development concepts and truly master SAPUI5.
-> 
-> The openSAP course [Evolved Web Apps with SAPUI5](https://open.sap.com/courses/ui52) for more experienced SAPUI5 developers and ambitious beginners introduces more advanced scenarios and concepts.
-
-
-
 <a name="loio8b49fc198bf04b2d9800fc37fecbb218__tutorials_download"/>
 
 ## Downloading Code for a Tutorial Step
@@ -50,7 +39,7 @@ To download the code from the Demo Kit, follow these steps:
 
 3.  Extract the project folder to a desired location on your local machine.
 
-4.  **If you use UI5 Tooling \(recommended\):** At your chosen location, open a new shell and execute `npm install`. After all dependencies have been installed, enter `npm start` to start the development server. \(**Note:** if they're not already present, you may have to create and adapt some project configuration files first; see the [Walkthrough Tutorial](walkthrough-tutorial-3da5f4b.md) for an example.\)
+4.  **If you use UI5 Tooling \(recommended\):** At your chosen location, open a new shell and execute `npm install`. After all dependencies have been installed, enter `npm start` to start the development server. \(**Note:** if they're not already present, you may have to create and adapt some project configuration files first; see the [Walkthrough Tutorial \(JavaScript\)](walkthrough-tutorial-javascript-3da5f4b.md) for an example.\)
 
 5.  Test your project setup by opening one of its HTML pages in your development environment and making sure that the app displays the features exactly as shown in the preview of the step.
 

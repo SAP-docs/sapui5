@@ -8,13 +8,13 @@ The OData V4 model sends requests in the following cases:
 
 -   **Implicit read requests** to retrieve data for a binding
 
-    Example: A list binding with the absolute path `/SalesOrderList` triggers a `GET SalesOrderList` to read data.
+    Example: A list binding with the absolute path `/SalesOrderList` initiates a `GET SalesOrderList` to read data.
 
 -   **Implicit update requests** via two-way binding
 
-    Example: Update a sales order's note through a property binding with the relative path `Note`, which has a context with path `/SalesOrderList(SalesOrderID='42')` triggering `PATCH SalesOrderList(SalesOrderID='42')` with the note's value as JSON payload.
+    Example: Update a sales order's note through a property binding with the relative path `Note`, which has a context with path `/SalesOrderList(SalesOrderID='42')` initiating `PATCH SalesOrderList(SalesOrderID='42')` with the note's value as JSON payload.
 
--   **Explicit requests** triggered through API calls like `ODataListBinding.refresh` or `ODataContextBinding.execute`
+-   **Explicit requests** triggered through API calls like `ODataListBinding.refresh` or `ODataContextBinding.invoke`
 
 
 For each of these cases, it is possible to specify a group ID of type `string`.
@@ -23,7 +23,7 @@ A group ID has one of the following [submit modes](https://ui5.sap.com/#/api/sap
 
 -   `sap.ui.model.odata.v4.SubmitMode.API` - Requests associated with the group ID are sent in a batch request via [`sap.ui.model.odata.v4.ODataModel#submitBatch`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataModel/methods/submitBatch) .
 
--   `sap.ui.model.odata.v4.SubmitMode.Auto` - Requests associated with the group ID are sent in a batch request which is triggered automatically before rendering.
+-   `sap.ui.model.odata.v4.SubmitMode.Auto` - Requests associated with the group ID are sent in a batch request which is initiated automatically before rendering.
 
 -   `sap.ui.model.odata.v4.SubmitMode.Direct` - Requests associated with the group ID are sent directly without batch. Note that some features of the OData V4 model rely on the correct order of request processing in the back end. This is only guaranteed for requests made in batch requests.
 
@@ -37,7 +37,7 @@ The following group IDs are possible:
 -   An application group ID is a non-empty string consisting of alphanumeric characters from the basic Latin alphabet, including the underscore. By default, an application group has the submit mode `sap.ui.model.odata.v4.SubmitMode.API`. It is possible to use a different submit mode; for details see section [Define submit mode for an application group ID](batch-control-74142a3.md#loio74142a38e3d4467c8d6a70b28764048f__section_e1x_pfg_1cb).
 
 
-To specify the group ID for implicit requests, use the parameters `$$groupId` \(group ID for read requests\) and `$$updateGroupId` \(group ID for update requests\) for the binding which triggers the request \(see the [ODataModel.bindList](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataModel/methods/bindList), [ODataModel.bindContext](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataModel/methods/bindContext) and [ODataModel.bindProperty](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataModel/methods/bindProperty) API documentation\).
+To specify the group ID for implicit requests, use the parameters `$$groupId` \(group ID for read requests\) and `$$updateGroupId` \(group ID for update requests\) for the binding which initiates the request \(see the [ODataModel.bindList](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataModel/methods/bindList), [ODataModel.bindContext](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataModel/methods/bindContext) and [ODataModel.bindProperty](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataModel/methods/bindProperty) API documentation\).
 
 Batch requests for update groups with a submit mode different from `$direct` are queued per group ID. A batch request with changes is only sent if the previous batch request for the same group ID is returned and processed. In this case, all submitted changes for that group ID are combined in one batch request; changes associated with different calls to [ODataModel.submitBatch](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataModel/methods/submitBatch) use different change sets inside the batch request.
 
@@ -69,7 +69,7 @@ XML view sample: Declares controls which create the context binding \(in the `Si
 
 On instantiation of an OData V4 model, you can provide both a group ID and an update group ID; they are used as defaults if the corresponding binding parameter is not specified. The default for the group ID is `"$auto"`. The value of group ID is used as a default for the update group ID.
 
-For explicit requests, the group ID can be specified as an optional parameter to the corresponding API method. The group ID or update group ID of the binding is used as a default. For more information, see the [ODataContextBinding.execute](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataContextBinding/methods/execute), [ODataContextBinding.refresh](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataContextBinding/methods/refresh), [ODataListBinding.refresh](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataListBinding/methods/refresh), [ODataPropertyBinding.refresh](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataPropertyBinding/methods/refresh) and [ODataPropertyBinding.setValue](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataPropertyBinding/methods/setValue) API documentation in the Demo Kit.
+For explicit requests, the group ID can be specified as an optional parameter to the corresponding API method. The group ID or update group ID of the binding is used as a default. For more information, see the [ODataContextBinding.invoke](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataContextBinding/methods/invoke), [ODataContextBinding.refresh](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataContextBinding/methods/refresh), [ODataListBinding.refresh](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataListBinding/methods/refresh), [ODataPropertyBinding.refresh](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataPropertyBinding/methods/refresh) and [ODataPropertyBinding.setValue](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataPropertyBinding/methods/setValue) API documentation in the Demo Kit.
 
 
 
@@ -81,10 +81,10 @@ The OData V4 model automatically puts all non-GET requests into a single change 
 
 ## Resetting Property Changes
 
-You can set an update group ID for a binding so that property changes are collected in a batch queue. The `ODataModel.submitBatch` method sends all these changes for a given batch group at once and the `ODataModel.resetChanges` method resets the changes. With these methods, you can, for example, implement a *Save* and a *Cancel* button for a form: *Save* triggers `submitBatch`, and *Cancel* triggers *resetChanges*.
+You can set an update group ID for a binding so that property changes are collected in a batch queue. The `ODataModel.submitBatch` method sends all these changes for a given batch group at once and the `ODataModel.resetChanges` method resets the changes. With these methods, you can, for example, implement a *Save* and a *Cancel* button for a form: *Save* initiates `submitBatch`, and *Cancel* initiates *resetChanges*.
 
 > ### Note:  
-> The `resetChanges` method only resets all implicit update requests via two-way binding for the given group, while read requests or requests from `ODataContextBinding.execute` remain in the queue and are sent when the `submitBatch` method is called.
+> The `resetChanges` method only resets all implicit update requests via two-way binding for the given group, while read requests or requests from `ODataContextBinding.invoke` remain in the queue and are sent when the `submitBatch` method is called.
 
 The list and context binding also offer the `resetChanges` method which resets changes for the binding and its child bindings.
 
@@ -188,7 +188,7 @@ The following example shows how to set the submit mode `sap.ui.model.odata.v4.Su
 
 [ODataModel.bindProperty](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataModel/methods/bindProperty)
 
-[ODataContextBinding.execute](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataContextBinding/methods/execute)
+[ODataContextBinding.invoke](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataContextBinding/methods/invoke)
 
 [ODataContextBinding.refresh](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataContextBinding/methods/refresh)
 

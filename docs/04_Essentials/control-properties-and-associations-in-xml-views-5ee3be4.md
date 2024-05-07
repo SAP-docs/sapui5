@@ -11,7 +11,7 @@ Property values for controls in XML views are specified as attributes of the XML
 > ### Note:  
 > The XML view offers special handling for context bindings and style classes. You can specify them via the `binding` and `class` attributes on a control's XML node.
 > 
-> Please be aware that these attributes are not properties of the respective controls and thus are not supported by a control's constructor. For more information, see [Context Binding \(Element Binding\)](context-binding-element-binding-91f05e8.md) and [Using CSS Style Sheets in XML Views \(deprecated\)](using-css-style-sheets-in-xml-views-deprecated-b564935.md).
+> Please be aware that these attributes are not properties of the respective controls and thus are not supported by a control's constructor. For more information, see [Context Binding \(Element Binding\)](context-binding-element-binding-91f05e8.md)and [Using CSS Style Sheets in XML Views \(deprecated\)](using-css-style-sheets-in-xml-views-deprecated-b564935.md).
 
 > ### Note:  
 > Escape characters that have a special meaning in XML \(like `<`, or `&`\) when they occur in a property value. Use XML entities instead \(like `&lt;` instead of a `<`, or `&amp;` instead of `&`\).

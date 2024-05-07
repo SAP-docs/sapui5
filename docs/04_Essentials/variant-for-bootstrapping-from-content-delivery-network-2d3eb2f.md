@@ -27,7 +27,7 @@ The specific version allows you to select a particular fixed version for bootstr
 ```html
 <script id="sap-ui-bootstrap"
     type="text/javascript"
-    src="https://ui5.sap.com/1.122.0/resources/sap-ui-core.js"
+    src="https://ui5.sap.com/1.123.0/resources/sap-ui-core.js"
     data-sap-ui-theme="sap_horizon"
     data-sap-ui-async="true"
     data-sap-ui-libs="sap.m"></script>
@@ -51,9 +51,9 @@ The evergreen version allows you to automatically select the latest available pa
     <script id="sap-ui-bootstrap"
         src="https://ui5.sap.com/1.108/resources/sap-ui-core.js"
         data-sap-ui-async="true"
-        data-sap-ui-onInit="module:sap/ui/core/ComponentSupport"
-        data-sap-ui-resourceRoots='{ "my.app": "./" }'
-        data-sap-ui-...="..."></script>
+        data-sap-ui-on-init="module:sap/ui/core/ComponentSupport"
+        data-sap-ui-resource-roots='{ "my.app": "./" }'
+    </script>
 </head>
 <body id="content" class="sapUiBody">
     <div data-sap-ui-component
@@ -67,7 +67,7 @@ The evergreen version allows you to automatically select the latest available pa
 
 The first segment of the URL after the host name is used to specify an evergreen version, which needs to be provided in the following form: `release_number.version_number`. For more information, see [Versioning and Maintenance of SAPUI5](../02_Read-Me-First/versioning-and-maintenance-of-sapui5-91f0214.md). All long-term maintenance versions \>= 1.71 can be used as evergreen versions to bootstrap SAPUI5 applications. You can find the available versions with long-term maintenance status at [https://ui5.sap.com/versionoverview.html](https://ui5.sap.com/versionoverview.html).
 
-When using the patch-level independent bootstrap you must use `data-sap-ui-async="true"` and the `data-sap-ui-onInit` callback. Ideally, you refer to a module, for example `sap/ui/core/ComponentSupport` to bootstrap your Component; see [Declarative API for Initial Components](declarative-api-for-initial-components-82a0fce.md). You can also refer to a custom module.
+When using the patch-level independent bootstrap you must use `data-sap-ui-async="true"` and the `data-sap-ui-on-init` callback. Ideally, you refer to a module, for example `sap/ui/core/ComponentSupport` to bootstrap your Component; see [Declarative API for Initial Components](declarative-api-for-initial-components-82a0fce.md). You can also refer to a custom module.
 
 > ### Note:  
 > Evergreen versions only support asynchronous bootstrapping. Therefore, the `data-sap-ui-async` bootstrap attribute must be set to `true`.

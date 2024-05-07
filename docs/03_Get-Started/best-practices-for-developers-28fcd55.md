@@ -67,8 +67,8 @@ Some APIs may be only partially deprecated, for instance passing a non-object `v
 -   [Don't Use Deprecated or Experimental Features](don-t-use-deprecated-or-experimental-features-a8bd1a8.md)
 -   [Use Only Public APIs](use-only-public-apis-b0d5fe2.md)
 -   [Adapting to the Modularization of the Core](../04_Essentials/adapting-to-the-modularization-of-the-core-b8fdf0c.md)
--   [Legacy jQuery.sap Replacement](../04_Essentials/legacy-jquery-sap-replacement-a075ed8.md)
--   [Legacy Factories Replacement](../04_Essentials/legacy-factories-replacement-491bd9c.md)
+-   [Deprecated jQuery.sap API Replacement](../04_Essentials/deprecated-jquery-sap-api-replacement-a075ed8.md)
+-   [Deprecated Factories Replacement](../04_Essentials/deprecated-factories-replacement-491bd9c.md)
 
 
 
@@ -181,7 +181,7 @@ In the following we'll focus on crucial aspects of app development, specifically
 
 ### Asynchronous Loading
 
--   Use asynchronous loading for views, fragments, and components to enhance performance; see, for example, [Legacy Factories Replacement](../04_Essentials/legacy-factories-replacement-491bd9c.md).
+-   Use asynchronous loading for views, fragments, and components to enhance performance; see, for example, [Deprecated Factories Replacement](../04_Essentials/deprecated-factories-replacement-491bd9c.md).
 -   Implement the `sap.ui.core.IAsyncContentCreation` marker interface in your [Component.js file](../04_Essentials/component-controller-27ce0e4.md) to allow the content to be created fully asynchronously and for a stricter handling of certain types of errors during its view processing.
 -   Load libraries via the new asynchronous APIs in advance before accessing code. Ensure that dependent librares are preloaded through the `manifest.json` in the `sap.ui5/dependencies/libs` section if not already maintained there. For more information, see [Ensure that Library Preloads are Enabled](../05_Developing_Apps/performance-speed-up-your-app-408b40e.md#loio408b40efed3c416681e1bd8cdd8910d4__section_LibraryPreloads).
 
@@ -212,11 +212,12 @@ When creating instances of SAPUI5 controls programmatically \(i.e. not declarati
 
 -   When creating data binding programmatically, add the data types to the dependency list and create instances on your own. Do **not** specify their global names.
 
--   When an [Expression Binding](../04_Essentials/expression-binding-daf6852.md) refers to any of the built-in global names `odata.compare`, `odata.fillUriTemplate`, or `odata.uriEncode`, the corresponding modules must be required by the surrounding code \(either via [`template:require`](../04_Essentials/require-263f6e5.md), [`core:require`](../04_Essentials/require-modules-in-xml-view-and-fragment-b11d853.md), or in the controller code\):
+-   When an [Expression Binding](../04_Essentials/expression-binding-daf6852.md) refers to any of the built-in global symbols `odata.compare`, `odata.fillUriTemplate`, or `odata.uriEncode`, the corresponding modules must be required by the surrounding code \(either via [`template:require`](../04_Essentials/require-263f6e5.md), [`core:require`](../04_Essentials/require-modules-in-xml-view-and-fragment-b11d853.md), or in the controller code\):
 
     -   `odata.compare`: `sap/ui/model/odata/v4/ODataUtils`
     -   `odata.fillUriTemplate`: `sap/ui/thirdparty/URITemplate`
     -   `odata.uriEncode`: `sap/ui/model/odata/ODataUtils`
+    -   To cover **all** built-in global symbols of the `odata` namespace at once, you can import `sap/ui/model/odata/ODataExpressionAddons`
 
 
 **Additional Information:**

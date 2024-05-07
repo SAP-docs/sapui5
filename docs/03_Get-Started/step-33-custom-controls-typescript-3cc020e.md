@@ -316,12 +316,12 @@ While the application would run successfully, the editor still displays an error
 
 The solution is to use the [ts-interface-generator](https://www.npmjs.com/package/@ui5/ts-interface-generator), a small tool that scans the project for any controls \(as well as other subclasses of `sap.ui.ManagedObject`\) and generates TypeScript interface definitions declaring those generated methods:
 
--   Open a new terminal window in your app root folder and execute `npm install @ui5/ts-inteface-generator --save-dev` to install this package as a new development dependency in your `package.json`.
+-   Open a new terminal window in your app root folder and execute `npm install @ui5/ts-inteface-generator --save-` to install this package as a new development dependency in your `package.json`.
 
--   Run `ui5-serve`. This starts the interface generator tool in "watch" mode and creates the required interface definition \(after a short startup delay during which all existing types in the project and in UI5 are scanned\).
+-   Run `ui5 serve`. This starts the interface generator tool in "watch" mode and creates the required interface definition \(after a short startup delay during which all existing types in the project and in UI5 are scanned\).
 
 
-You can inspect the generated file`webapp/control/ProductRating.gen.d.ts` next to the control implementation. It defines an interface with the same name as the control class and declares the same module name. This causes [TypeScript to merge the definitions](https://www.typescriptlang.org/docs/handbook/declaration-merging.html) and to assume that the interface methods also exist in the class.
+You can inspect the generated file `webapp/control/ProductRating.gen.d.ts` next to the control implementation. It defines an interface with the same name as the control class and declares the same module name. This causes [TypeScript to merge the definitions](https://www.typescriptlang.org/docs/handbook/declaration-merging.html) and to assume that the interface methods also exist in the class.
 
 As a result, the TypeScript error message related to the new `ProductRating` control is gone and code completion is also available for all control API methods.
 

@@ -6,7 +6,7 @@ Prerequisite steps for the 3D Viewer tutorial.
 
 Before proceeding with the 3D Viewer tutorial, ensure that you are familiar with the concepts introduced in the following tutorials:
 
--   [Walkthrough Tutorial](walkthrough-tutorial-3da5f4b.md)
+-   [Walkthrough Tutorial \(JavaScript\)](walkthrough-tutorial-javascript-3da5f4b.md)
 
 -   [Data Binding Tutorial](data-binding-tutorial-e531093.md)
 

@@ -76,7 +76,7 @@ You can view and download all files in the *Samples* in the Demo Kit at [Smart C
              useTablePersonalisation="true" 
              header="Products" 
              showRowCount="true"
-             useExportToExcel="false" 
+             enableExport="false" 
              enableAutoBinding="true"
              persistencyKey="SmartTablePKey">
        </smartTable:SmartTable>
@@ -128,7 +128,7 @@ The example shows the view management **without** a page variant.
              useTablePersonalisation="true" 
              header="Products" 
              showRowCount="true"
-             useExportToExcel="false" 
+             enableExport="false" 
              enableAutoBinding="true"
              persistencyKey="SmartTablePKey">
        </smartTable:SmartTable>

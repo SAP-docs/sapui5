@@ -162,7 +162,7 @@ For help with specific problems see our [First-Aid Kit](first-aid-kit-dfe4f79.md
 
 ## Get Help
 
-If you're stuck and need help with a development task, you can also post a question in the SAPUI5-related forums, for example in the [SAP Community](https://www.sap.com/community/topic/ui5.html) or on [Stack Overflow](https://stackoverflow.com/search?q=sapui5).
+If you're stuck and need help with a development task, you can also post a question in the SAPUI5-related forums, for example in the [SAP Community](https://community.sap.com/t5/c-khhcw49343/SAPUI5/pd-p/500983881501772639608291559920477) or on [Stack Overflow](https://stackoverflow.com/tags/sapui5/info).
 
 **Related Information**  
 

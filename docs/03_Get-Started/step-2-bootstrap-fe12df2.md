@@ -44,10 +44,10 @@ First, let's enhance your UI5 Tooling setup:
 		src="resources/sap-ui-core.js"
 		data-sap-ui-theme="sap_horizon"
 		data-sap-ui-libs="sap.m"
-		data-sap-ui-compatVersion="edge"
+		data-sap-ui-compat-version="edge"
 		data-sap-ui-async="true"
-		data-sap-ui-onInit="module:ui5/walkthrough/index"
-		data-sap-ui-resourceroots='{
+		data-sap-ui-on-init="module:ui5/walkthrough/index"
+		data-sap-ui-resource-roots='{
 			"ui5.walkthrough": "./"
 		}'>
 
@@ -96,7 +96,7 @@ In the next steps, the structure of a UI5 module will be explained in detail.
 **Related Information**  
 
 
-[Compatibility Version Information](../04_Essentials/compatibility-version-information-9feb96d.md "Compatibility version flags allow applications to react to incompatible changes in SAPUI5.")
+[Compatibility Version Information \(deprecated\)](../04_Essentials/compatibility-version-information-deprecated-9feb96d.md "Compatibility version flags allow applications to react to incompatible changes in SAPUI5.")
 
 [Bootstrapping: Loading and Initializing](../04_Essentials/bootstrapping-loading-and-initializing-a04b0d1.md "To use SAPUI5 features in your HTML page, you have to load and initialize the SAPUI5 library.")
 

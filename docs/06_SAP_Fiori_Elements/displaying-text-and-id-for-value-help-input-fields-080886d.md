@@ -186,7 +186,7 @@ For `DataField` record types that are bound to value help and rendered as a `Sma
 
 Also, for `DataFieldWithNavigationPath` record types, for the value that is bound to the value help, the field shows descriptive text and ID by default.
 
-This behaviour is applicable for tables, object page headers, and object page form sections. You can change it according to your requirements using the `TextArrangement` configuration \(for example `TextFirst`, `TextLast`, `TextOnly`, etc\).
+This behavior is applicable for tables, object page headers, and object page form sections. You can change it according to your requirements using the `TextArrangement` configuration \(for example `TextFirst`, `TextLast`, `TextOnly`\).
 
 The functionality is not supported for the following `recordtype`: `DataFieldWithIntentBasedNavigation` and `Communication.Contact`.
 

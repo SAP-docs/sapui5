@@ -78,9 +78,9 @@ aggregations: {
 
 <a name="loio64a5e1775bf04d4883db18c9de7d83bd__section_fbk_l3q_ddb"/>
 
-## Aggregation Forwarding in XML Composite Controls
+## Aggregation Forwarding in XML Composite Controls \(Deprecated\)
 
-If you use aggregation forwarding with `idSuffix` for an XML composite control, you define this as follows:
+If you use aggregation forwarding with `idSuffix` for an XML composite control \(deprecated\), you define this as follows:
 
 ```js
 sap.ui.define([

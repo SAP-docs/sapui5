@@ -1,6 +1,6 @@
 <!-- loioa075ed88ef324261bca41813a6ac4a1c -->
 
-# Legacy jQuery.sap Replacement
+# Deprecated jQuery.sap API Replacement
 
 Overview of the mapping of legacy APIs to the new APIs for the migration
 

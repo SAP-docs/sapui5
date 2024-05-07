@@ -34,11 +34,11 @@ You can view and download all files in the Demo Kit at [Mock Server - Step 2](ht
 	<script id="sap-ui-bootstrap"
 		src="resources/sap-ui-core.js"
 		data-sap-ui-theme="sap_horizon"
-		data-sap-ui-resourceroots='{
+		data-sap-ui-resource-roots='{
 			"sap.ui.demo.MockServer": "../"
 		}'
-		data-sap-ui-oninit="module:sap/ui/demo/MockServer/test/initMockServer"
-		data-sap-ui-compatVersion="edge"
+		data-sap-ui-on-init="module:sap/ui/demo/MockServer/test/initMockServer"
+		data-sap-ui-compat-version="edge"
 		data-sap-ui-async="true">
 	</script>
 </head>

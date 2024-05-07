@@ -1,70 +1,45 @@
 <!-- loiof6a8fd2812d9442a9bba2f6fb296c42e -->
 
-# Copying and Pasting from Spreadsheet Applications to Tables
+# Copying and Pasting from External Applications to Tables
 
-You can copy and paste data from spreadsheet applications to responsive tables and grid tables.
+End users can copy and paste data from external applications or other SAP Fiori elements applications to tables that are editable.
 
-A *Paste* button is shown in the table toolbar. Once you have copied data from a spreadsheet application, the focus can be anywhere in the table except for the cells. You can trigger the browser paste \([CTRL\] + [V\]  for Microsoft Windows, [CMD\] + [V\]  for macOS\) or click *Paste* on the smart table. The paste function in a smart table is available for the following scenarios:
+The *Copy* button is shown in the table toolbar by default. The *Paste* icon is shown only if the table supports the paste action.
 
--   In edit mode, the smart table only has editable fields.
+The paste action is available for the following scenarios:
 
-    ![](images/Excel_copy_paste_1_428f114.png)
+-   Table-level paste
 
-    Sample data:
+    Here, a new row is created to paste data copied from the clipboard. Once end users have copied data to clipboard from an external application such as a spreadsheet, they can focus anywhere on the table or select an empty row to paste data. They can trigger the browser paste \([CTRL\] + [V\]  for Microsoft Windows, [CMD\] + [V\]  for macOS\) or click the *Paste* icon in the table. New rows are created only for draft-enabled applications, and for tables with the creation mode set as `inline` or `creationRows`.
 
-    ![](images/Excel_Copy_paste_0_d66f42d.png)
+-   Cell-level paste
 
--   In edit mode, the table only has editable fields. It also contains multiple editable fields in a single column, for example value and unit of measure.
-
-    ![](images/Excel_copy_paste_2_2af66fc.png)
-
-    Sample data:
-
-    ![](images/Excel_copy_paste_0a_17355b2.png)
-
--   The table has both editable and non-editable fields.
-
-    ![](images/Excel_copy_paste_3_766e2e9.png)
-
-    Sample data:
-
-    ![](images/Excel_copy_paste_4_b6af7fd.png)
+    Here, end users can either add a new value or update existing values within a cell or a group of cells. To paste the data, they must either select a single cell or a group of cells within the table. If the selected cell or cells contain active or draft rows, their values are replaced with data from the clipboard. New rows are created to paste additional data if an empty row is part of the selected cells.
 
     > ### Note:  
-    > You have to maintain the placeholder for non-editable fields in spreadsheet applications. The fields can also be empty.
+    > Only grid tables support the cell-level paste.
 
+
+> ### Tip:  
+> For preparation of data for pasting, SAP Fiori elements recommends using exported spreadsheet format that contains split cells with multiple values. This helps to avoid formatting issues during the paste action.
 
 > ### Note:  
 > -   Only the pasting of simple data fields is supported. Complex fields, such as links, images, connected fields, multi-input fields, and field groups, are not supported.
 > 
 > -   If there are validation errors, an error message is shown in a dialog box so that the user can take action.
 > 
-> -   All records that a user pastes are part of one POST batch call. The duration of the POST call increases with the number of records pasted.
+> -   If new rows are created during the paste action, all these rows will be included in a single `POST` batch call. The duration of the `POST` call increases with the number of rows pasted.
 > 
-> -   The order of the data copied from a spreadsheet application might differ from the order in the table after you have pasted it. SAP Fiori elements cannot control this.
+> -   For new rows created during the paste action, the order of the data copied from a spreadsheet or external application might differ from the order in the table after you have inserted it.SAP Fiori elements cannot control this.
+> -   This feature is not supported for tables with custom columns or custom tables.
 > 
-> -   This feature is not supported for tables with custom columns and custom tables.
-> 
-> -   In the object page, the *Export to Spreadsheet* feature is available by default only if the copy/paste feature is available. For more information, see [Adapting the UI: List Report and Object Page](adapting-the-ui-list-report-and-object-page-0d2f1a9.md) for SAP Fiori elements for OData V2 and [Using the Export Feature](using-the-export-feature-4bab6f2.md) for SAP Fiori elements for OData V4.
+> -   In the object page, the *Export to Spreadsheet* feature is available by default only if the copy/paste feature is available. For more information, see [Using the Export Feature](using-the-export-feature-4bab6f2.md).
 
 
 
 <a name="loiof6a8fd2812d9442a9bba2f6fb296c42e__section_u4k_cnp_gnb"/>
 
 ## Additional Features in SAP Fiori Elements for OData V2
-
-
-
-### Prerequisites
-
-In SAP Fiori elements for OData V2, you need to fulfill these prerequisites to use this feature:
-
--   The app is draft-enabled.
-
--   Inline creation is enabled for the object page table. For more information, see [Enabling Inline Creation Mode or Empty Row Mode for Table Entries](enabling-inline-creation-mode-or-empty-row-mode-for-table-entries-cfb04f0.md).
-
--   The create action is supported in the object page table.
-
 
 The paste function in a smart table is also available if the smart table contains an inline action.
 
@@ -74,8 +49,9 @@ Sample data:
 
 ![](images/Excel_copy_paste_6_fa98abc.png)
 
-> ### Note:  
-> Do not make entries for inline actions since the actions are not actual columns in the smart table.
+Note that the columns containing inline actions are ignored by the paste operation. Therefore, they must be omitted from the source while copying,, as demonstrated in the example
+
+Read only columns are also ignored by the paste operation. However, these columns are exported along with the rest of the data, when the data is exported to a spreadsheet . They are a part of the format for preparing data in spreadsheets.
 
 
 

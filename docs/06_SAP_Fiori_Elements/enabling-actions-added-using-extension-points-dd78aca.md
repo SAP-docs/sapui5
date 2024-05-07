@@ -127,14 +127,12 @@ In case of draft-enabled applications, if the draft information of the object pa
 > ### Sample Code:  
 > ```
 > 
-> onAfterRendering: function(oEvent) {
->     var oButton = sap.ui.getCore().byId("STTA_MP::sap.suite.ui.generic.template.ObjectPage.view.Details::STTA_C_MP_Product--action::ObjectPageCustomAction");
->     oButton.bindElement("DraftAdministrativeData");
->     oButton.bindProperty("visible", {
->         path: "DraftIsCreatedByMe"
->     });
-> },
-> 
+>  // "Element" required from module "sap/ui/core/Element"
+> > onAfterRendering: function(oEvent) {
+> >     var oButton = Element.getElementbyId("STTA_MP::sap.suite.ui.generic.template.ObjectPage.view.Details::STTA_C_MP_Product--action::ObjectPageCustomAction");
+> >     oButton.bindElement("DraftAdministrativeData");
+> >     oButton.bindProperty("visible", {
+> >         path: "DraftIsCreatedByMe"
 > ```
 
 

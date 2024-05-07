@@ -4,7 +4,7 @@
 
 Check out the learning resources we've provided for you.
 
-The list is continually growing. Our learing resources are provided on the following different channels:
+The list is continually growing. Our learning resources are provided on the following different channels:
 
 **Tutorials**
 

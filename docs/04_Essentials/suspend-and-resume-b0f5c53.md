@@ -8,19 +8,19 @@ You can suspend a [`list binding`](https://ui5.sap.com/#/api/sap.ui.model.odata.
 
 Typical use cases for suspend and resume are:
 
-1.  **Trigger read requests for controls in the view later not when the view is initialized:**
+1.  **Initiate read requests for controls in the view later; not when the view is initialized:**
 
-    In some situations you may want to suppress OData requests and change events triggered by an OData V4 binding for a certain period of time. This is useful for value help dialogs, such as the value help for the `/BusinessPartnerList` when creating a sales order in the [`SalesOrders OData V4 sample`](https://ui5.sap.com/#/entity/sap.ui.model.odata.v4.ODataModel/sample/sap.ui.core.sample.odata.v4.SalesOrders).
+    In some situations you may want to suppress OData requests and change events initiated by an OData V4 binding for a certain period of time. This is useful for value help dialogs, such as the value help for the `/BusinessPartnerList` when creating a sales order in the [`SalesOrders OData V4 sample`](https://ui5.sap.com/#/entity/sap.ui.model.odata.v4.ODataModel/sample/sap.ui.core.sample.odata.v4.SalesOrders).
 
 2.  **Avoid intermediate request when modifying the binding multiple times**
 
-    You want to add a filter and change the sorting of a list binding. If the binding is not suspended, it will trigger a request after calling the `filter` method, and a second request after calling the `sort` method. If it is suspended, only one request with the updated filter and sort criteria is sent on `resume`.
+    You want to add a filter and change the sorting of a list binding. If the binding is not suspended, it will initiate a request after calling the `filter` method, and a second request after calling the `sort` method. If it is suspended, only one request with the updated filter and sort criteria is sent on `resume`.
 
 
 The code below shows a snippet from the [`SalesOrders OData V4 sample`](https://ui5.sap.com/#/entity/sap.ui.model.odata.v4.ODataModel/sample/sap.ui.core.sample.odata.v4.SalesOrders) which delays the request to `/BusinessPartnerList` until the *Create Sales Order* dialog is displayed.
 
 > ### Note:  
-> The `suspended` flag in the binding info triggers a call to the suspend method of the corresponding binding once it is created.
+> The `suspended` flag in the binding info initiates a call to the suspend method of the corresponding binding once it is created.
 
 > ### Example:  
 > View
@@ -37,7 +37,7 @@ The code below shows a snippet from the [`SalesOrders OData V4 sample`](https://
 > </Dialog>
 > ```
 
-The controller code to open the dialog resumes the list binding on `/BusinessPartnerList` and thus triggers the request.
+The controller code to open the dialog resumes the list binding on `/BusinessPartnerList` and thus initiates the request.
 
 > ### Example:  
 > Controller
@@ -50,7 +50,7 @@ The controller code to open the dialog resumes the list binding on `/BusinessPar
 > }
 > ```
 
-When a binding is suspended, all methods which may trigger CRUD requests for this binding, for example `ODataListBinding.create` throw an error. This is also true for dependent bindings of a suspended binding. However methods that cause the binding to be refreshed completely are allowed. These methods are:
+When a binding is suspended, all methods which may initiate CRUD requests for this binding, for example `ODataListBinding.create`, throw an error. This is also true for dependent bindings of a suspended binding. However methods that cause the binding to be refreshed completely are allowed. These methods are:
 
 -   [`ODataContextBinding.changeParameters`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataContextBinding/methods/changeParameters) 
 

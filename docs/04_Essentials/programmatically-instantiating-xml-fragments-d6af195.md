@@ -44,7 +44,7 @@ this.loadFragment({
 > ### Caution:  
 > Make sure that you are correctly chaining to the `loadFragment` Promise!
 > 
-> Calling `sap.ui.getCore().byId("...")` or `oController.byId("...")` before the `loadFragment` Promise is resolved will result in `undefined`.
+> Calling `Element.getElementById("...")` \(with `Element` required from module `sap/ui/core/Element`\) or `oController.byId("...")` before the `loadFragment` Promise is resolved, will result in `undefined`.
 
 **Related Information**  
 

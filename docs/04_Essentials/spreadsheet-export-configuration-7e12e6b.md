@@ -514,6 +514,28 @@ Defines the number of records that are requested from the service with a single 
 
 </td>
 </tr>
+<tr>
+<td valign="top">
+
+`downloadLimit` 
+
+</td>
+<td valign="top">
+
+`number` 
+
+</td>
+<td valign="top">
+
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
+
+</td>
+<td valign="top">
+
+Defines the maximum number of rows that can be exported. If not specified, all rows are exported.
+
+</td>
+</tr>
 </table>
 
 The following code shows you an example of data source configuration:

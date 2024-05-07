@@ -46,7 +46,7 @@ To build CSP-compliant SAPUI5 without inline scripts, avoid the following:
 
 ### Policies Without `script-src 'unsafe-eval'`
 
-`eval()` is currently still required in some parts of SAPUI5 for synchronous loading and other functionality. However, we recommend loading JavaScript resources asynchronously, which also avoids the use of `eval()`. For more information about asynchronous loading, see [Modules and Dependencies](../04_Essentials/modules-and-dependencies-91f23a7.md). For more information about avoiding synchronous APIs that might lead to synchronous loading, see [Legacy Factories Replacement](../04_Essentials/legacy-factories-replacement-491bd9c.md).
+`eval()` is currently still required in some parts of SAPUI5 for synchronous loading and other functionality. However, we recommend loading JavaScript resources asynchronously, which also avoids the use of `eval()`. For more information about asynchronous loading, see [Modules and Dependencies](../04_Essentials/modules-and-dependencies-91f23a7.md).For more information about avoiding synchronous APIs that might lead to synchronous loading, see [Deprecated Factories Replacement](../04_Essentials/deprecated-factories-replacement-491bd9c.md).
 
 For a CSP policy that doesn't allow `eval()` you must also avoid the following elements when developing SAPUI5 apps:
 

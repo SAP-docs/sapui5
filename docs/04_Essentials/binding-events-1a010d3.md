@@ -25,9 +25,9 @@ For applications, the OData V4 model supports the following events:
 
 -   The `createSent` and `createCompleted` events at the `ODataListBinding` are typically used by applications to lock the UI for the created entity to avoid modifications while the data for the created entity is sent to the back end, but the response from the back end is not yet processed on the client. For each `createSent` event, a `createCompleted` event is fired.
 
-    -   The `createSent` event is fired each time a POST request that is triggered for an `ODataListBinding#create` is sent to the backend.
+    -   The `createSent` event is fired each time a POST request that is initiated for an `ODataListBinding#create` is sent to the backend.
 
-    -   The `createCompleted` event is fired each time the backend has responded to a POST request triggered for an `ODataListBinding#create`.
+    -   The `createCompleted` event is fired each time the back end has responded to a POST request initiated for an `ODataListBinding#create`.
 
 
     For more information, see [`ODataListBinding#create`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataListBinding/methods/create).

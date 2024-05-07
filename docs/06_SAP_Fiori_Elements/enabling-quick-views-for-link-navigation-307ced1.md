@@ -209,7 +209,7 @@ To define a quick view for a source property with a `ReferentialConstraint` on a
     > ```
 
     > ### Note:  
-    > The `SemanticObject` annotation can also be a path to a property of type `String:`.
+    > The `SemanticObject` annotation can be a string, a path to a property of type `String`, or a dynamic expression using `EdmJson`.
 
     > ### Sample Code:  
     > ABAP CDS Annotation

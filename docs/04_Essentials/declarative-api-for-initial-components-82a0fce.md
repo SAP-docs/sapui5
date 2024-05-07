@@ -17,7 +17,7 @@ With the declarative `sap/ui/core/ComponentSupport` API it is possible to define
 <script id="sap-ui-bootstrap"
     src="/resources/sap-ui-core.js"
     ...
-    data-sap-ui-oninit="module:sap/ui/core/ComponentSupport"
+    data-sap-ui-on-init="module:sap/ui/core/ComponentSupport"
     ...>
 </script>
 ```
@@ -62,14 +62,14 @@ This module scans the DOM for HTML elements containing a special data attribute 
 > -   `data-component-failed`
 > 
 > 
-> Alternatively, you can provide your own module in the bootstrap via `oninit`, in which you create an instance of the `ComponentContainer` in the JavaScript code:
+> Alternatively, you can provide your own module in the bootstrap via `on-init`, in which you create an instance of the `ComponentContainer` in the JavaScript code:
 > 
 > ```html
 > <!-- index.html -->
 > <head>
 >     <script id="sap-ui-bootstrap"
 >         src="resources/sap-ui-core.js"
->         data-sap-ui-onInit="module:sap/ui/demo/myBootstrap"> <!-- Execute custom module on init -->
+>         data-sap-ui-on-init="module:sap/ui/demo/myBootstrap"> <!-- Execute custom module on init -->
 >     </script>
 > </head>
 > <body id="content" class="sapUiBody sapUiSizeCompact" role="application">
@@ -122,13 +122,13 @@ See also [`ComponentSupport`](https://ui5.sap.com/#/api/module:sap/ui/core/Compo
 
 ## Delay the Initial Component Instantiation
 
-In some cases, the component initialisation must wait until all pre-required modules have been loaded. If this is the case, the `ComponentSupport` module needs to be executed later, and you have to replace the `onInit` module execution in the bootstrap with a custom module:
+In some cases, the component initialisation must wait until all pre-required modules have been loaded. If this is the case, the `ComponentSupport` module needs to be executed later, and you have to replace the `on-init` module execution in the bootstrap with a custom module:
 
 ```html
 <!-- index.html -->
 <script id="sap-ui-bootstrap"
     src="resources/sap-ui-core.js"
-    data-sap-ui-onInit="module:sap/ui/demo/myBootstrap"> <!-- Execute custom module on init -->
+    data-sap-ui-on-init="module:sap/ui/demo/myBootstrap"> <!-- Execute custom module on init -->
 </script>
 ```
 

@@ -908,7 +908,7 @@ Feature
 
 You can now take the Walkthrough tutorial with UI5 Tooling as our preferred development environment; the sample code for all tutorial steps has been updated to work with UI5 Tooling out of the box. We also included features of modern ECMAScript and added an additional step showing how to build an application.
 
-For more information, see [Walkthrough Tutorial](../03_Get-Started/walkthrough-tutorial-3da5f4b.md).
+For more information, see [Walkthrough Tutorial \(JavaScript\)](../03_Get-Started/walkthrough-tutorial-javascript-3da5f4b.md).
 
 <sub>Changed•Feature•Info Only•1.120</sub>
 
@@ -1392,6 +1392,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.121](what-s-new-in-sapui5-1-121-91a4a2f.md "With this release SAPUI5 is upgraded from version 1.120 to 1.121.")
 
 [What's New in SAPUI5 1.119](what-s-new-in-sapui5-1-119-0b1903a.md "With this release SAPUI5 is upgraded from version 1.118 to 1.119.")
 

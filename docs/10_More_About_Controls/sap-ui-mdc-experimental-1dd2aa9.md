@@ -12,7 +12,7 @@ The `sap.ui.mdc` library contains composite, metadata-driven controls that assem
 
 For more information about this control, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.mdc) and the [samples](https://ui5.sap.com/#/entity/sap.ui.mdc).
 
-For more information, see also the [UI5 MDC Tutorial](https://github.com/SAP-samples/ui5-mdc-json-tutorial).
+For more information, see also the [SAPUI5 MDC Tutorial](https://github.com/SAP-samples/ui5-mdc-json-tutorial).
 
 
 

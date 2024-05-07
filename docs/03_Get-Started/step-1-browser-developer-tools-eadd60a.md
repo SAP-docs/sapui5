@@ -88,7 +88,7 @@ Most modern web browsers contain some form of Developer Tools. They allow you to
 
 2.  Examine the `button` element by expanding the structure.
 
-3.  On the *Console* tab, enter `myView=sap.ui.getCore().byId("container-HeapOfShards---app")`.
+3.  On the *Console* tab, enter `myView=sap.ui.require("sap/ui/core/Element").getElementbyId("container-HeapOfShards---app")`.
 
 4.  On the *Console* tab, enter `myView.byId("myButton")`.
 
@@ -122,7 +122,7 @@ Most modern web browsers contain some form of Developer Tools. They allow you to
 > <tr>
 > <td valign="top">
 > 
-> `sap.ui.getCore().byId("container-HeapOfShards---app--myButton")` 
+> `Element.getElementbyId("container-HeapOfShards---app--myButton")`, with `Element` required from module `sap/ui/core/Element` 
 > 
 > </td>
 > <td valign="top">

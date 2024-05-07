@@ -29,16 +29,18 @@ Different people perceive and interpret colors in different ways, which is somet
         sap-ui-theme=sap_horizon_hcw
         ```
 
-    -   From the API using the core method `applyTheme`
+    -   From the API using the `Theming.setTheme` method, with `Theming` required from the `sap/ui/core/Theming` module
 
         ```
-        sap.ui.getCore().applyTheme(“sap_horizon_hcb”);
+        // "Theming" required from module "sap/ui/core/Theming"
+        Theming.setTheme(“sap_horizon_hcb”);
         ```
 
         or
 
         ```
-        sap.ui.getCore().applyTheme(“sap_horizon_hcw”);
+        // "Theming" required from module "sap/ui/core/Theming"
+        Theming.setTheme(“sap_horizon_hcw”);
         ```
 
 

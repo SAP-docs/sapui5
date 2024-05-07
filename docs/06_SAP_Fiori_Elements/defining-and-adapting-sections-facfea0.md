@@ -30,7 +30,7 @@ In the figure below, the collection facet for *General Information* combines two
 > ### Note:  
 > -   `UI.CollectionFacets` at third level and beyond are not considered.
 > 
-> -   You must not use `UI.CollectionFacet` if there is only one `UI.ReferenceFacet` within it, as there can be rendering issues. In such cases, you can directly use `UI.ReferenceFacet` without the `UI.CollectionFacet` wrapper.
+> -   You must not use `UI.CollectionFacet` under `UI.Facets` at design time, if the collection facet has only one `UI.ReferenceFacet` within it, as there can be rendering issues. In such cases, you can directly use `UI.ReferenceFacet` under the `UI.Facets`.
 
 Furthermore, reference facets can refer to identification sections, the field group, contact, or line item annotations. For line items, a list is rendered.
 
@@ -159,9 +159,7 @@ You can hide and display sections based on properties.
 > 
 > -   If the object page uses an icon tab bar for sections, then the section title isn't displayed in the content area. If the object page uses an anchor bar for sections, then only the title of the first section is hidden in the content area.
 > 
-> -   For object pages configured with *Page* section layout mode, the following applies: if a section/subsection contains only a table or a chart as a control, the title of the section or subsection is hidden but the titleof the control is replaced with the title from the section or subsection. In *Tabs* mode, this only applies to subsections but isn't applied to sections. This special logic is also not invoked if the section or subsection has multiple controls configured within it and, at runtime, due to dynamic visibility or UI adaptation, the section/subsection has a single visible control.
-> 
->     This logic doesn't apply to sections or subsections with multiple controls, as the UI adaptation ensures that only a single control is displayed in the section or subsection during runtime.
+> -   For object pages configured with *Page* section layout mode, the following applies: if a section/subsection contains only a table or a chart as a control, the title of the section or subsection is hidden but the title of the control is replaced with the title from the section or subsection. In *Tabs* mode, this only applies to subsections but isn't applied to sections. This special logic is also not invoked if the section or subsection has multiple controls configured within it and, at runtime, due to dynamic visibility or UI adaptation, the section/subsection has a single visible control.
 > 
 > 
 > ![](images/section-subsection_title_08a8f08.png)
@@ -175,7 +173,7 @@ You can hide and display sections based on properties.
 > ### Note:  
 > We've removed videos showing step-by-step procedures using SAP Web IDE, which SAP no longer actively supports. You can still access the video using an older version of this document.
 
-For more information, see [Grouping of Fields](grouping-of-fields-7d7a0c4.md).
+For more information, see [Grouping of Fields](grouping-of-fields-cb1748e.md).
 
 
 
@@ -399,9 +397,7 @@ You can also use the `useColumnLayoutForSmartForm` switch in the manifest, at `s
 ## Additional Features in SAP Fiori Elements for OData V4
 
 > ### Remember:  
-> If you use a chart or table for the `UI.ReferenceFacet`, ensure that this is the only content and does not have another peer `ReferenceFacet` pointing to the chart or table, to avoid rendering issues. Note that the order of defined `ReferenceFacets` inside a mixed `CollectionFacet` behaves as follows:
-> 
-> All charts or tables are pushed together and are either displayed at the beginning or at the end of the `CollectionFacet`, followed or preceded by a field group. The order depends on whether the first `ReferenceFacet` in the `CollectionFacet` is a chart or table, or a field group.
+> If you use a chart or table for the `UI.ReferenceFacet`, ensure that this is the only content and does not have another peer `ReferenceFacet` to avoid rendering issues.
 
 
 

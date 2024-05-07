@@ -166,7 +166,7 @@ Finally, we create a new `opaTests.qunit.html` file under `webapp/test/integrati
 
 This HTML page contains our test suite for all OPA tests of the app. We use the same namespace as for our application.
 
-Then we load the basic QUnit functionality via script tags from SAPUI5 so that we can execute the test journey. In `data-sap-ui-onInit` we define that the module `opaTests.qunit` is loaded initially, which then again loads our `NavigationJourney`.
+Then we load the basic QUnit functionality via script tags from SAPUI5 so that we can execute the test journey. In `data-sap-ui-on-init` we define that the module `opaTests.qunit` is loaded initially, which then again loads our `NavigationJourney`.
 
 ```html
 <!DOCTYPE html>
@@ -179,13 +179,12 @@ Then we load the basic QUnit functionality via script tags from SAPUI5 so that w
 		id="sap-ui-bootstrap"
 		src="../../resources/sap-ui-core.js"
 		data-sap-ui-theme="sap_horizon"
-		data-sap-ui-resourceroots='{
+		data-sap-ui-resource-roots='{
 			"ui5.walkthrough": "../../"
 		}'
-		data-sap-ui-animation="false"
-		data-sap-ui-compatVersion="edge"
+		data-sap-ui-compat-version="edge"
 		data-sap-ui-async="true"
-		data-sap-ui-oninit="module:ui5/walkthrough/test/integration/opaTests.qunit">
+		data-sap-ui-on-init="module:ui5/walkthrough/test/integration/opaTests.qunit">
 	</script>
 
 	<link rel="stylesheet" type="text/css" href="../../resources/sap/ui/thirdparty/qunit-2.css">

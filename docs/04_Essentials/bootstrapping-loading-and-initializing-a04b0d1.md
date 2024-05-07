@@ -17,7 +17,7 @@ The following code snippet shows a typical bootstrap script tag:
      src="resources/sap-ui-core.js"
      data-sap-ui-theme="sap_horizon"
      data-sap-ui-libs="sap.m"
-     data-sap-ui-compatVersion="edge">
+     data-sap-ui-compat-version="edge">
 </script>
 ```
 
@@ -173,23 +173,6 @@ This file contains most of the modules that are contained in the `sap.ui.core` l
 > An application must not reference this file. If the configuration option is set to `preload`, SAPUI5 automatically loads the file.
 
 For more information, see [Standard Variant for Bootstrapping](standard-variant-for-bootstrapping-91f1f45.md).
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-`sap-ui-core-lean.js`
-
-</td>
-<td valign="top">
-
-This bootstrap file is similar to the `sap-ui-core.js` file, but in this use case only the jQuery and one SAPUI5 file are loaded immediately and the other files are loaded dynamically.
-
-> ### Caution:  
-> This use case is usually **not** used and may be removed in future.
-
-
 
 </td>
 </tr>

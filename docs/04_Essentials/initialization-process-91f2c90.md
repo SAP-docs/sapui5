@@ -41,38 +41,40 @@ For a detailed usage guide, please see the [`ComponentSupport` documentation](de
 
 
 
-### Standalone `data-sap-ui-oninit` module
+### Standalone `data-sap-ui-on-init` module
 
-Besides using `sap.ui.core.ComponentSupport`, you can also define a data attribute called `data-sap-ui-oninit` on the SAPUI5 bootstrap script element.
+Besides using `sap.ui.core.ComponentSupport`, you can also define a data attribute called `data-sap-ui-on-init` on the SAPUI5 bootstrap script element.
 
-This attribute should reference a valid SAPUI5 module as shown in the snippet below. In this sample you can also see how to use the `data-sap-ui-resourceroots` as part of your init module path.
+This attribute should reference a valid SAPUI5 module as shown in the snippet below. In this sample you can also see how to use the `data-sap-ui-resource-roots` as part of your init module path.
 
 ```html
 <script id="sap-ui-bootstrap"
         src="https://ui5.sap.com/resources/sap-ui-core.js"
        ...
-        data-sap-ui-resourceroots='{"Startup": "./some/folder"}'
-        data-sap-ui-oninit="module:Startup/my/module"
+        data-sap-ui-resource-roots='{"Startup": "./some/folder"}'
+        data-sap-ui-on-init="module:Startup/my/module"
        ...
         data-sap-ui-async="true">
 </script>
 ```
 
-The SAPUI5 core will make sure that the `data-sap-ui-oninit` module is loaded and executed at the correct point in time after the initialization process of the framework. Inside this module you can then execute additional application code, e.g. create a new XML View instance.
+The SAPUI5 core will make sure that the `data-sap-ui-on-init` module is loaded and executed at the correct point in time after the initialization process of the framework. Inside this module you can then execute additional application code, e.g. create a new XML View instance.
 
-Additionally, a dedicated `oninit` module allows for better [CSP compliance](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) depending on your requirements, since no additional inline `<script>` tag is needed.
+Additionally, a dedicated `on-init` module allows for better [CSP compliance](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) depending on your requirements, since no additional inline `<script>` tag is needed.
 
 Please also have a look at our tutorial section, including the [Quickstart Tutorial](../03_Get-Started/quickstart-tutorial-592f36f.md) tutorial for a broader sample.
 
 
 
-### `attachInit` function
+### `Core.ready()` Promise
 
-The callback of the [`attachInit`](https://ui5.sap.com/#/api/sap.ui.core.Core/methods/attachInit) function is executed directly after the framework has been initialized. This code can be written inside your main HTML file in a separate inline `<script>` tag:
+The `Core.ready()` function, where `Core` is required from the `sap/ui/core/Core` module, returns a promise which resolves after the framework has been initialized. This code can be written inside your main HTML file in a separate inline `<script>` tag:
 
 ```js
-sap.ui.getCore().attachInit(function(){
-    // application can be started
+sap.ui.require(["sap/ui/core/Core"], function (Core) {
+    Core.ready().then( () => {
+        // application can be started
+    });
 });
 ```
 
@@ -101,7 +103,7 @@ The files are loaded in the following sequence:
 
 ## Dynamic Loading of Libraries
 
-SAPUI5 provides the `sap.ui.getCore().loadLibary()` method to load libraries at runtime in addition to the libraries declared in the runtime configuration.
+SAPUI5 provides the `Libary.load()` method to load libraries at runtime in addition to the libraries declared in the runtime configuration. `Library` is required from the `sap/ui/core/Lib` module.
 
 After loading, you can use all controls from the library. For these additional libraries, the same restriction apply as for the declared libraries: Accessing the document object model \(DOM\) is only possible after the `document.ready` event of the HTML page. Also, rendering applies for these libraries in the same way as for the declared libraries.
 

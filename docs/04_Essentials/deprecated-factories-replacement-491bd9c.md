@@ -1,6 +1,6 @@
 <!-- loio491bd9c70b9f4c4d913c8c7b4a970833 -->
 
-# Legacy Factories Replacement
+# Deprecated Factories Replacement
 
 Overview of the replacement of global functions with the factory functions
 

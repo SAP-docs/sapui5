@@ -59,9 +59,9 @@ Both resources are also available online via the content delivery network provid
 
 Technically, you can switch between OpenUI5 and SAPUI5 \(provided you have a product where SAPUI5 is included\), for example, if you want to use the SAPUI5-specific features.
 
-Just check first which SAPUI5 version you need, because the version numbers of OpenUI5 and SAPUI5 might differ on patch level \(last number\). You can find this information in the technical information dialog \([Ctrl\] + [Alt\] + [Shift\] + [P\] \).
+First, check which SAPUI5 version you need, because the version numbers of OpenUI5 and SAPUI5 might differ on patch level \(last number\). You can find this information in the technical information dialog \([Ctrl\] + [Alt\] + [Shift\] + [P\] \).
 
-If you're using the content delivery network, you can simply replace the bootstrapping reference to `https://sdk.openui5.org/<1.xx.yy>/` with a reference to `https://ui5.sap.com/<1.xx.zz>/`. For more information, see [Variant for Bootstrapping from Content Delivery Network](../04_Essentials/variant-for-bootstrapping-from-content-delivery-network-2d3eb2f.md).
+If you're using the content delivery network, you can simply refer to `https://sdk.openui5.org/` \(for OpenUI5\) or `https://ui5.sap.com/` \(for SAPUI5\), respectively. For more information, see [Variant for Bootstrapping from Content Delivery Network](../04_Essentials/variant-for-bootstrapping-from-content-delivery-network-2d3eb2f.md).
 
 For all other cases, replace the runtime. Since the technical names \(of controls, libraries, etc.\) and APIs are the same in both OpenUI5 and SAPUI5, the code will still work and you can start enhancing it directly.
 

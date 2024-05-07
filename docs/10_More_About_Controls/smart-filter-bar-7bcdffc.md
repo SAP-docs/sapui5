@@ -33,7 +33,7 @@ In addition to the `$metadata` document, you can also have an additional configu
 
 The `FieldGroup` annotation is used by the `SmartFilterBar` control to create a grouping of the fields. The grouping is shown in the filter dialog. Any label specified in this dialog is used to override the default label of the property. Only `sap:filterable` fields are enabled in the `SmartFilterBar` control by default \(default is `true` when `null`\).
 
-The `SmartFilterBar` control creates filters lazily. This is done because applications often define a large number of filters, but then only use a subset of filters in the `SmartFilterBar` control. This way, only **visible** filters are created initially \(the properties relevant for `FilterGroupItem` in the `FilterBar` control are `visibleInFilterBar` and `partOfCurrentVariant`\). All other filters will be created at a later point in time, once they have been made visible or requested via the APIs.
+The `SmartFilterBar` control creates filters lazily. This is done because applications often define a large number of filters, but then only use a subset of filters in the `SmartFilterBar` control. This way, only **visible** filters are created initially \(the property relevant for `FilterGroupItem` in the `FilterBar` control is `visibleInFilterBar` and a value\). All other filters will be created at a later point in time, once they have been made visible or requested via the APIs.
 
 > ### Caution:  
 > Calling `getFilterGroupItems` of the `FilterBar` control always leads to an instantiation of **all** filters that have been defined. If the application needs to react to specific filters only, it is recommended to use `determineFilterItemByName` to obtain a specific filter item instead of calling `getFilterGroupItems` and iterating through the filters.
@@ -72,12 +72,8 @@ If a `SelectionVariant` annotation entry is provided without a qualifier, it wil
 
 The new standard view has filter values based on the information provided in `SelectionVariant` and is enhanced by the \_CUSTOM part of the existing standard view.
 
-The filter visibility is also taken over from the existing standard view. However, all filters that are part of `SelectionVariant` are also treated as if defined in the `partOfCurrentVariant` property of the `FilterBar` control. So these filters will at least be visible in the *Filters* dialog.
-
 > ### Tip:  
 > Replacing the standard view greatly influences all other views, since views always show a delta of visible filters in comparison to the standard view.
-
-All further new views that are based on `SelectionVariant` are treated the same way: The filters in `SelectionVariant` are handled as if defined in `partOfCurrentVariant`.
 
 
 

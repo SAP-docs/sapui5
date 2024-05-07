@@ -7,7 +7,7 @@ You can pass the variant ID as part of the navigation context \(or as a URL para
 The URL parameter value should be an ID of the variant that exists in the target app. Ensure that the variant name is not passed as the URL parameter.
 
 > ### Note:  
-> To find the variant ID, find the instance of the control for the control level variant, and the instance of the filter bar for the page level variant. For example, find `sap.ui.getCore().byId`, which is the stable ID of the control, and call `getCurrentVariantId()`, which is the API on the control instance. This gives the variant ID to be used in the source app's manifest.
+> To find the variant ID, find the instance of the control for the control level variant, and the instance of the filter bar for the page level variant. For example, find `Element.getElementById` where `Element` is required from module `sap/ui/core/Element`, which is the stable ID of the control, and call `getCurrentVariantId()`, which is the API on the control instance. This gives the variant ID to be used in the source app's manifest.
 
 You can choose to pass a page variant or a control variant using these parameters:
 

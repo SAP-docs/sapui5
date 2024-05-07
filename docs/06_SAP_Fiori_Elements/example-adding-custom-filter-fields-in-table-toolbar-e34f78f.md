@@ -67,16 +67,16 @@ Using an extension in the object page table, you can define filter fields such a
 
     > ### Sample Code:  
     > ```
-    > 
+    > > // "Element" required from module "sap/ui/core/Element"
     > onCustomFilterChange: function(oEvent) {
-    > 			var smartTable = sap.ui.getCore().byId("STTA_MP::sap.suite.ui.generic.template.ObjectPage.view.Details::STTA_C_MP_Product--to_ProductText::com.sap.vocabularies.UI.v1.LineItem::Table");
-    > 			smartTable.rebindTable();
-    > 	},
+    >   var smartTable = Element.getElementById("STTA_MP::sap.suite.ui.generic.template.ObjectPage.view.Details::STTA_C_MP_Product--to_ProductText::com.sap.vocabularies.UI.v1.LineItem::Table");
+    >   smartTable.rebindTable();
+    > },
     > 
     > onBeforeRebindTableExtension: function (oEvent) {
     > 	var oBindingParams = oEvent.getParameter("bindingParams");
     > 	oBindingParams.parameters = oBindingParams.parameters || {};
-    > 	var customFilter = sap.ui.getCore().byId("STTA_MP::sap.suite.ui.generic.template.ObjectPage.view.Details::STTA_C_MP_Product--filterId");
+    > 	var customFilter = Element.getElementById("STTA_MP::sap.suite.ui.generic.template.ObjectPage.view.Details::STTA_C_MP_Product--filterId");
     > 	var key = customFilter.getSelectedKey();
     > 	switch (key) {
     > 		case "0" :

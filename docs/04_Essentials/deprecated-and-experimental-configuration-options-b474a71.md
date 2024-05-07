@@ -1,8 +1,8 @@
 <!-- loiob474a712ca364d40a1b0a804baf2d734 -->
 
-# Deprecated and Experimental Configuration Options
+# Deprecated andExperimental Configuration Options
 
-The following tables show deprecated and experimental configuration options.
+The following tables showdeprecated and experimental configuration options.
 
 > ### Note:  
 > In earlier framework versions, the configuration options available in SAPUI5 could be found in the [API Reference via the `sap.ui.core.Configuration`](https://ui5.sap.com/#/api/sap.ui.core.Configuration). This legacy module has been deprecated with SAPUI5 1.120 and replaced by a modular, future-proof solution for configuration handling.
@@ -45,6 +45,41 @@ by URL parameter
 <tr>
 <td valign="top">
 
+`animation`
+
+\(deprecated\)
+
+</td>
+<td valign="top">
+
+Type: `boolean`
+
+Default value: `true`
+
+For all controls that implement the `animation` parameter, the `animation-mode` is set as follows:
+
+-   If `animation` is set to `true`, this is interpreted as `animation-mode` `full`
+
+-   If `animation` is set to `false`, this is interpreted as `animation-mode` `minimal`
+
+
+
+
+</td>
+<td valign="top">
+
+![YES](../02_Read-Me-First/images/Checked_Okay_3929e46.png)
+
+</td>
+<td valign="top">
+
+![YES](../02_Read-Me-First/images/Checked_Okay_3929e46.png)
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
 `areas`
 
 \(deprecated\)
@@ -56,7 +91,7 @@ Type: `string[]`
 
 Default value: `null`
 
-This configuration parameter defines UI areas that shall be created in advance; use `` to create new UI areas and `sap.ui.getCore().getUIArea(id).destroy()` to delete existing UI areas at runtime.
+This configuration parameter defines UI areas that shall be created in advance.
 
 </td>
 <td valign="top">
@@ -145,7 +180,7 @@ Default value: `1.14`
 > ### Note:  
 > Applications must set this option to `edge`. **Other version definitions are deprecated.**
 
-For more information, see [Compatibility Version Information](compatibility-version-information-9feb96d.md).
+For more information, see [Compatibility Version Information \(deprecated\)](compatibility-version-information-deprecated-9feb96d.md).
 
 </td>
 <td valign="top">
@@ -738,6 +773,36 @@ Whether the customizing is disabled or not.
 <tr>
 <td valign="top">
 
+`xx-future`
+
+\(experimental\)
+
+</td>
+<td valign="top">
+
+Type: `boolean`
+
+Default value: `false`
+
+Whether to enforce throwing exceptions for fatal warnings and errors. This helps you to detect and resolve critical issues which may prevent projects from running in future framework versions such as UI5 2.x.
+
+For a version-dependent guidance, see *Strict Error Handling* in [Best Practices for Developers](../03_Get-Started/best-practices-for-developers-28fcd55.md).
+
+</td>
+<td valign="top">
+
+![YES](../02_Read-Me-First/images/Checked_Okay_3929e46.png)
+
+</td>
+<td valign="top">
+
+![NO](images/Cancel_dfb38de.png)
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
 `xx-handle-validation`
 
 \(experimental\)
@@ -1088,7 +1153,7 @@ Possible values are:
     See also:
 
     -   [`onInit` function/module](standard-variant-for-bootstrapping-91f1f45.md)
-    -   [`sap.ui.getCore().attachInit`](initialization-process-91f2c90.md#loio91f2c9076f4d1014b6dd926db0e91070)
+    -   [`Core.ready`](initialization-process-91f2c90.md#loio91f2c9076f4d1014b6dd926db0e91070)
 
 
 

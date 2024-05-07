@@ -37,9 +37,10 @@ You must implement `sap.ui.core.InvisibleMessage` when using dynamically generat
 sap.ui.define([
 	'sap/ui/core/mvc/Controller',
 	'sap/m/MessageStrip',
+	'sap/ui/core/Element',
 	'sap/ui/core/InvisibleMessage',
 	'sap/ui/core/library'
-], function(Controller, MessageStrip, InvisibleMessage, library) {
+], function(Controller, MessageStrip, Element, InvisibleMessage, library) {
 	"use strict";
 ​
 	var InvisibleMessageMode = library.InvisibleMessageMode;
@@ -52,7 +53,7 @@ sap.ui.define([
 ​
         // Create and show message strip with InvisibleMessage announcement based on a certain condition
         showMessageStrip: function () {
-            var oMessageStrip = sap.ui.getCore().byId("msgStrip");
+            var oMessageStrip = Element.getElementById("msgStrip");
             var iProductItems= this.getView().getModel().getProperty("/productItems");
 ​
             if (oMessageStrip) {

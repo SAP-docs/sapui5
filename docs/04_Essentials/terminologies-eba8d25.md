@@ -326,10 +326,10 @@ sap.ui.require(["sap/ui/core/Component"], function(Component) {
 > ### Note:  
 > The activation of terminologies via URL parameter is mainly intended for testing purposes.
 
-Another option is to attach the URL parameter `sap-ui-activeTerminologies` with a comma-separated list of terminologies to the URL:
+Another option is to attach the URL parameter `sap-ui-active-terminologies` with a comma-separated list of terminologies to the URL:
 
 ```html
-?sap-ui-activeTerminologies=travel,services
+?sap-ui-active-terminologies=travel,services
 
 ```
 
@@ -340,13 +340,13 @@ Another option is to attach the URL parameter `sap-ui-activeTerminologies` with 
 > ### Note:  
 > The activation of terminologies via the bootstrap configuration is mainly intended for testing purposes.
 
-A third option is to provide the list of active terminologies \(also comma-separated\) in the bootstrap configuration via the `data-sap-ui-activeTerminologies` attribute:
+A third option is to provide the list of active terminologies \(also comma-separated\) in the bootstrap configuration via the `data-sap-ui-active-terminologies` attribute:
 
 ```html
 <script id="sap-ui-bootstrap"
      type="text/javascript"
      src="resources/sap-ui-core.js"
-     data-sap-ui-activeTerminologies="travel,services">
+     data-sap-ui-active-terminologies="travel,services">
 </script>
 ```
 

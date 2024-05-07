@@ -448,3 +448,56 @@ There was no attempt to apply the change either because required controls were n
 
 For more information, see [SAPUI5 Flexibility: Adapting UIs Made Easy](sapui5-flexibility-adapting-uis-made-easy-a8e55aa.md).
 
+<a name="loio36fa7ca76d2d462faaec6ee71dbc2c0e"/>
+
+<!-- loio36fa7ca76d2d462faaec6ee71dbc2c0e -->
+
+## SAP Fiori Elements
+
+With this feature, the system helps you collect the data related to issues you encounter when creating an SAP Fiori elements app.
+
+> ### Note:  
+> This feature is available only in SAP Fiori elements applications. You can use it only for list report, object page, worklist, and analytical list page applications.
+
+After you have opened the *Diagnostics* window, perform the following steps:
+
+1.  Choose *Copy*.
+
+    By default, the system copies plain text to the clipboard. You can also choose to copy HTML.
+
+    The system automatically collects the following relevant data and copies them to your clipboard:
+
+    -   Data collected from the application:
+
+        -   Used UI5 version and build date
+
+        -   Absolute URL to manifest.json of the current application
+
+        -   Application component \(technical name\)
+
+        -   Used SAP Fiori elements floorplan
+
+        -   Data sources
+
+        -   Absolute URL to metadata document
+
+        -   Absolute URLs to local and backend annotations
+
+
+    -   Data which is added when copying:
+
+        -   Absolute application URL
+
+        -   Date and time the data was collected
+
+        -   Status of application \(for example, loading, rendered, or failed\)
+
+        -   Error message if the application did not finish loading
+
+
+
+2.  Paste the data from your clipboard into a new ticket.
+
+3.  To complete the ticket, under *Provide*, enter the login credentials for the system, as well as the steps to reproduce the issue.
+
+

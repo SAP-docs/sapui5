@@ -43,7 +43,7 @@ var SearchField = Control.extend("SearchField", {
 
 Since SAPUI5 version 1.60, properties and associations can be configured with `hidden` visibility. In this case, no mutators and no API documentation will be generated for these properties and associations. It is possible to bind data of hidden properties inside a control.
 
-The two aggregations with visibility set to `hidden` are defined in the code snippets above. These aggregations are used to hold the inner controls. Aggregations are used to define a parent-child relationship between a parent control and its children \(controls or elements\). The knowledge about this relationship is, for example, relevant for the SAPUI5 core to dispatch events properly, or to cleanup the children when the parent is destroyed. Hidden aggregations are control internal and are used especially to register the inner controls within the control hierarchy without making them publicly available. Because hidden aggregations are only used internally within a composite control for hidden aggregations, no typed `accessor` functions are generated, they are not cloned, and data binding is not enabled.
+The two aggregations with visibility set to `hidden` are defined in the code snippets above. These aggregations are used to hold the inner controls. Aggregations are used to define a parent-child relationship between a parent control and its children \(controls or elements\). The knowledge about this relationship is, for example, relevant for the SAPUI5 core to dispatch events properly, or to cleanup the children when the parent is destroyed. Hidden aggregations are control internal and are used especially to register the inner controls within the control hierarchy without making them publicly available. Because hidden aggregations are only used internally within a composite control for hidden aggregations, no typed `accessor` functions or `mutators` are generated, they are not cloned, and data binding is not enabled.
 
 
 
@@ -55,7 +55,7 @@ The control implementation, that is, its behavior, contains the code for initial
 
 ### Init
 
-The `init` function contains the composite's parts and stores references to them. If you want to hide the composite parts, you should **not** assign an ID to those parts, but rather let the framework compute the IDs automatically. This reduces the possibility that a composite's parts are accessed from outside via the `sap.ui.getCore().byId(...)` function.
+The `init` function contains the composite's parts and stores references to them. If you want to hide the composite parts, you should **not** assign an ID to those parts, but rather let the framework compute the IDs automatically. This reduces the possibility that a composite's parts are accessed from outside via the `Element.getElementById(...)` function, where `Element` is required from module `sap/ui/core/Element`.
 
 If you have to assign IDs to the composite parts, then you should create those IDs by concatenating the main control ID \(ID of your composite instance\) with a single dash \(`-`\) and an additional ID for the part like in the following example:
 

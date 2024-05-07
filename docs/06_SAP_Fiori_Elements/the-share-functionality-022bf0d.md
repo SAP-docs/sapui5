@@ -205,9 +205,7 @@ The *Send E-mail* option is only hidden in the list report. The *Share: Microsof
 > ```
 
 > ### Note:  
-> -   The visibility of the *Share: Microsoft Teams › As Card* option, that is enabled using the `asCard` setting, is overridden if the visibility setting of the *Share: Microsoft Teams* option using `showMsteamsOptions` evaluates to `false` in the manifest.
-> 
-> -   The `showMsTeamsOptions` property is applicable only to apps that run on SAP Fiori launchpad, where the integration with *Share: Microsoft Teams* is available. The *Share: Microsoft Teams* option is a part of collaborative ERP \(enterprise resource planning\) within the SAP S/4HANA family of products and requires `ushell` and SAP Fiori launchpad configuration.
+> The `showMsTeamsOptions` property is applicable only to apps that run on SAP Fiori launchpad, where the integration with *Share: Microsoft Teams* is available. The *Share: Microsoft Teams* option is a part of collaborative ERP \(enterprise resource planning\) within the SAP S/4HANA family of products and requires `ushell` and SAP Fiori launchpad configuration.
 
 
 
