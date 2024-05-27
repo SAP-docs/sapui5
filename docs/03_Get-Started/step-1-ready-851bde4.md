@@ -116,11 +116,11 @@ You can view and download all files at [Quick Start - Step 1](https://ui5.sap.co
 
 7.  Open a terminal in the app root folder and execute `npm i -D @ui5/cli` to install UI5 Tooling.
 
-8.  Execute `ui5 init` in the app root folder.
+8.  Execute `npx ui5 init` in the app root folder.
 
-9.  Execute `ui5 use OpenUI5`
+9.  Execute `npx ui5 use OpenUI5`
 
-10. Execute `ui5 add sap.m sap.tnt sap.ui.core sap.ui.layout themelib_sap_horizon`
+10. Execute `npx ui5 add sap.m sap.tnt sap.ui.core sap.ui.layout themelib_sap_horizon`
 
 11. Execute `npm start` to start the web server and to open a new browser window hosting your newly created `index.html`.
 
