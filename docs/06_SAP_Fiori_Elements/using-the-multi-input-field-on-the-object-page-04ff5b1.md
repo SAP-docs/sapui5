@@ -36,7 +36,8 @@ You can use the navigation property inside a `UI.DataField` to display the value
 > ABAP CDS Annotation
 > 
 > ```
-> @UI: {  lineItem: [ { value: '_SupportedMaterials.Material', label: 'Supported Materials' } ] }  
+> @UI: {  lineItem: [ { value: '_SupportedMaterials.Material', label: 'Supported Materials' } ] }
+> @UI.fieldGroup: [{position: 10, qualifier: 'FieldgroupID',  value: '_SupportedMaterials.Material'} ]
 > _SupportedMaterials;
 > ```
 
