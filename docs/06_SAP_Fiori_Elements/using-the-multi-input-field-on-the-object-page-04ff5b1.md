@@ -10,10 +10,13 @@ You must define a 1:N association in the data model.
 
 In the following example, `"_supportedMaterial"` is a one-to-many `navigationProperty` pointing to the `"SupportedMaterial"` entity:
 
-> ### Sample Code:  
+> ### Sample Code for :  
 > ```
+> // For CAP
 > _SupportedMaterials : Composition of many SupportedMaterial on _SupportedMaterials.owner = $self;
-> 
+>
+> // For RAP On Premise
+>    composition [0..*] of SupportedMaterial as _SupportedMaterials 
 > ```
 
 You can use the navigation property inside a `UI.DataField` to display the values of the target entity. The following example shows how to display the `"material"` property of every associated `"SupportedMaterial"`:
