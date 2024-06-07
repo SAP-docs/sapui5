@@ -56,15 +56,17 @@ Before attempting to migrate or upgrade to a higher SAPUI5 version, make sure th
 
 ### Deprecated APIs
 
-In general, **you must not use deprecated APIs** anymore, such as `sap.ui.getCore()`. Deprecated APIs can be found in the [API Reference](https://ui5.sap.com/#/api/deprecated), in the [What's New Viewer](https://help.sap.com/whats-new/67f60363b57f4ac0b23efd17fa192d60?Type=Deleted%3BDeprecated), and in the reports by our [Support Assistant](../04_Essentials/support-assistant-57ccd7d.md).
+In general, **you must not use deprecated APIs** anymore, such as `sap.ui.getCore()`. Deprecated APIs can be found in the [API Reference](https://ui5.sap.com/#/api/deprecated), in the [What's New Viewer](https://help.sap.com/whats-new/67f60363b57f4ac0b23efd17fa192d60?Type=Deleted%3BDeprecated), and in the reports by our [Support Assistant](../04_Essentials/support-assistant-57ccd7d.md) and [UI5 linter](https://github.com/SAP/ui5-linter). For new projects we recommend the use of TypeScript, because usage of deprecated APIs can then be detected easily.
 
 Also, see the relevant warnings and errors logged to the browser's dev console during runtime. You might need to increase the `sap-ui-log-level`; for more information, see [Logging and Tracing](../04_Essentials/logging-and-tracing-9f4d62c.md).
 
-Some APIs may be only partially deprecated, for instance passing a non-object `vName` to [`sap.ui.core.theming.Parameters.get`](https://ui5.sap.com/#/api/sap.ui.core.theming.Parameters%23methods/sap.ui.core.theming.Parameters.get) . Refer to the `API Reference` for individual APIs.
+Some APIs may be only partially deprecated, for instance passing a non-object `vName` to [`sap.ui.core.theming.Parameters.get`](https://ui5.sap.com/#/api/sap.ui.core.theming.Parameters%23methods/sap.ui.core.theming.Parameters.get) . Refer to the API Reference for individual APIs.
 
 **Additional Information:**
 
 -   [Don't Use Deprecated or Experimental Features](don-t-use-deprecated-or-experimental-features-a8bd1a8.md)
+-   [Deprecated Core API](../04_Essentials/deprecated-core-api-798dd9a.md)
+-   [Deprecated Configuration API](../04_Essentials/deprecated-configuration-api-2acafbf.md)
 -   [Use Only Public APIs](use-only-public-apis-b0d5fe2.md)
 -   [Adapting to the Modularization of the Core](../04_Essentials/adapting-to-the-modularization-of-the-core-b8fdf0c.md)
 -   [Deprecated jQuery.sap API Replacement](../04_Essentials/deprecated-jquery-sap-api-replacement-a075ed8.md)
@@ -82,7 +84,7 @@ Some APIs may be only partially deprecated, for instance passing a non-object `v
 
 -   Use `sap.ui.require` for requiring a module lazily at a later point in time.
 
--   Add only valid module IDs from the API Reference \(documented as Module: .../.../..\) to the dependency list.
+-   Add only valid module IDs from the API Reference \(documented as Module: .../.../...\) to the dependency list.
 
 
     <table>
@@ -183,7 +185,7 @@ In the following we'll focus on crucial aspects of app development, specifically
 
 -   Use asynchronous loading for views, fragments, and components to enhance performance; see, for example, [Deprecated Factories Replacement](../04_Essentials/deprecated-factories-replacement-491bd9c.md).
 -   Implement the `sap.ui.core.IAsyncContentCreation` marker interface in your [Component.js file](../04_Essentials/component-controller-27ce0e4.md) to allow the content to be created fully asynchronously and for a stricter handling of certain types of errors during its view processing.
--   Load libraries via the new asynchronous APIs in advance before accessing code. Ensure that dependent librares are preloaded through the `manifest.json` in the `sap.ui5/dependencies/libs` section if not already maintained there. For more information, see [Ensure that Library Preloads are Enabled](../05_Developing_Apps/performance-speed-up-your-app-408b40e.md#loio408b40efed3c416681e1bd8cdd8910d4__section_LibraryPreloads).
+-   Make sure that dependent libraries and components are preloaded before modules from the respective preload are accessed. For example, if the `sap.f.FlexibleColumnLayout` control is part of the root view, `"sap.f": {}` should be included in the `sap.ui5/dependencies/libs` section of the `manifest.json`. Avoid setting `{ "lazy": true }` if the application does not intend to preload the bundle manually. For more information, see [Ensure that Library Preloads are Enabled](../05_Developing_Apps/performance-speed-up-your-app-408b40e.md#loio408b40efed3c416681e1bd8cdd8910d4__section_LibraryPreloads).
 
 **Additional Information:**
 
@@ -231,7 +233,7 @@ When creating instances of SAPUI5 controls programmatically \(i.e. not declarati
 
 -   During SAPUI5 bootstrapping, assign `module:sap/ui/core/ComponentSupport` or a separate JavaScript file to `data-sap-ui-on-init`.
 
--   Avoid inline scripts or styles in HTML.
+-   Avoid inline scripts or inline styles.
 
 
 **Additional Information:**
@@ -241,6 +243,15 @@ When creating instances of SAPUI5 controls programmatically \(i.e. not declarati
 
 
 ### Component / `manifest.json`
+
+**Component Creation**
+
+-   To create a root component, favor leveraging the `sap/ui/core/ComponentSupport` module over the `sap.ui.core.ComponentContainer`.
+
+-   When creating a component via `sap.ui.core.ComponentContainer`, avoid setting a falsy value to the `manifest` property if the `async` property is kept undefined. Do not set the `async` property to `false`.
+
+-   `sap.ui.core.Component#createComponent` must not be used with `async: false`.
+
 
 **`manifest.json`**
 
@@ -304,7 +315,10 @@ Take care of destroying programatically created models to prevent memory leaks.
 
 **OData V2 Model**
 
-[`v2.ODataModel#createEntry`](https://ui5.sap.com/#/api/sap.ui.model.odata.v2.ODataModel%23methods/createEntry) : Defining an array for the `mParameters.properties` is deprecated since SAPUI5 1.120. Pass the initial values as an object instead.
+-   [`v2.ODataModel#createEntry`](https://ui5.sap.com/#/api/sap.ui.model.odata.v2.ODataModel%23methods/createEntry) : Defining an array for the `mParameters.properties` is deprecated since SAPUI5 1.120. Pass the initial values as an object instead.
+
+-   [`v2.ODataModel#refreshSecurityToken`](https://ui5.sap.com/#/api/sap.ui.model.odata.v2.ODataModel%23methods/refreshSecurityToken) : Pass `true` for the `bAsync` parameter explicitly as its default value is `false`.
+
 
 **JSON Model**
 
@@ -346,7 +360,7 @@ Implement strict error handling to address critical issues.
 
 -   When utilizing [`RenderManager#icon`](https://ui5.sap.com/#/api/sap.ui.core.RenderManager%23methods/icon) during rendering, include a dependency to `sap/ui/core/IconPool` in your code.
 
--   Don't use `Control#rerender` to rerender a control as it's deprecated. Use [`Control#invalidate`](https://ui5.sap.com/#/api/sap.ui.core.Control%23methods/invalidate) instead.
+-   Don't use `Control#rerender` to rerender a control as it's deprecated. Use [`Control#invalidate`](https://ui5.sap.com/#/api/sap.ui.core.Control%23methods/invalidate) instead if required.
 
 
 **Additional Information:**
@@ -387,9 +401,9 @@ Implement strict error handling to address critical issues.
 
 ### Bundling
 
-Prevent bundling modules \(`Component-preload.js`\) into strings.
+Prevent bundling modules \(`library-preload.js`\) into strings.
 
--   Avoid generating the application bundle with an outdated standard Grunt task. Leverage UI5 Tooling to build the bundle.
+-   Avoid generating the library bundle with an outdated standard Grunt task. Leverage UI5 Tooling to build the bundle.
 
 -   Avoid declaring `var`, `let`, or `const` in the global scope above `sap.ui.define`.
 
@@ -409,4 +423,6 @@ Prevent bundling modules \(`Component-preload.js`\) into strings.
     -   If tests create implementations of such entities, they must be implemented in a way that a module lookup can find them: either as individual files or as embedded and named `sap.ui.define` statements.
     -   As modules can only be loaded and executed once, each test implementation must have a unique module name. The same name cannot be used multiple times as was the case with globals.
 
+-   Transform existing QUnit tests that are based on the outdated QUnit 1 version to using QUnit 2, i.e. `qunit-2.js` and `qunit-2.css`. Make sure to load QUnit only once when initiating QUnit tests.
+-   Do not rely on the outdated Blanket.js \(`qunit-coverage.js`\) anymore. As of SAPUI5 1.113, code coverage measurement via IstanbulJS \(`qunit-coverage-istanbul.js`\) is the recommended option. For more information, see [Code Coverage Measurement](../04_Essentials/code-coverage-measurement-7ef3242.md).
 

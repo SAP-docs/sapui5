@@ -124,3 +124,16 @@ SAP Business Suite systems from version 7.00 containing the UI add-on for SAP Ne
 > ### Note:  
 > From SAP NetWeaver 7.4 SP1, all required SAPUI5 parts listed above are already part of software component `SAP_UI`.
 
+
+
+<a name="loio91f346786f4d1014b6dd926db0e91070__section_h3f_5jc_3bc"/>
+
+## Troubleshooting
+
+If something isn't working as expected, these Guided Answers trees may help you identify the cause of the issue:
+
+-   [SAPUI5 App Cannot Be Opened in SAP Fiori Launchpad](https://ga.support.sap.com/dtp/viewer/index.html#/tree/3413/actions/54434)
+
+-   [SAPUI5 Application Index](https://ga.support.sap.com/dtp/viewer/index.html#/tree/3417/actions/54575)
+
+

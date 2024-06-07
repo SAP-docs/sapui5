@@ -286,3 +286,50 @@ You can enrich the body of the object page with additional sections. To do so, y
 
 The object page of the app shows the new section.
 
+
+
+### Merging Section Title with Control Title in Custom Sections
+
+For custom sections configured with **Page** layout mode, if there's only one control within the section, the section title is merged with the control title, hiding the section title. The merging of titles occurs automatically for custom sections that utilize standard building blocks without any layout.
+
+For sections that use standard building blocks within a layout, you can define a `onSectionLoaded` property in the `manifest.json` file. The value of the `onSectionLoaded` property must be the name of the method defined in the custom controller. This method must invoke the `setAsSectionTitleOwner` extension API within `sap.fe.templates/src/sap/fe/templates/ObjectPage/ExtensionAPI.ts`. You must ensure that the correct control is passed while invoking the extension API, as the section title is merged with the title of this control.
+
+> ### Sample Code:  
+> Manifest setting for merging title within custom sections
+> 
+> ```
+> "routing":{
+>    "targets":{
+>       "SalesOrderManageObjectPage":{
+>          "options":{
+>             "settings":{
+>                "sectionLayout": "Page",
+>                "content":{
+>                   "body":{
+>                      "sections":{
+>                         "customSectionTableHBox":{
+>                            "type": "XMLFragment",
+>                            "template": "SalesOrder.custom.CustomSectionBuildingBlockTableHBox",
+>                            "title": "HBox Table",
+>                            "onSectionLoaded": "SalesOrder.custom.CustomSection.callShowSectionTitle"
+>                         }
+>                      }
+>                   }
+>                }
+>             }
+>          }
+>       }
+>    }
+> }
+> ```
+
+> ### Sample Code:  
+> Custom controller method that sets the right control
+> 
+> ```
+> callShowSectionTitle(section){
+>    const control = section.getSubSections()[0].getBlocks()[0].getContent().getItems()[0];
+>    this.setAsSectionTitleOwner(control);
+> }
+> ```
+

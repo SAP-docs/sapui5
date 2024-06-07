@@ -204,6 +204,23 @@ Note
 <tr>
 <td valign="top">
 
+`sap.sac.grid`
+
+</td>
+<td valign="top">
+
+1.112
+
+</td>
+<td valign="top">
+
+Removed as of 1.114. Use `sap.sac.df.FlexAnalysis` instead.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
 `sap.ui.suite`
 
 </td>

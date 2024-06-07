@@ -552,7 +552,7 @@ End users can always change groups and totals via the column header and the aggr
 
 -   Filtering on aggregatable properties is currently not supported and is also removed from the filter bar and from the filter dialog of the table.
 
--   If a group has multiple units or currencies in its data, the total cannot be computed. It then displays an asterisk \("\*"\) instead of the aggregated value.
+-   If a group has multiple units or currencies in its data, the total canot be computed. It then displays an asterisk \("\*"\) instead of the aggregated value.
 
 -   Only one level of grouping is supported in a responsive table. If you have specified multiple levels through a `PresentationVariant`, for example, only the first level is applied.
 

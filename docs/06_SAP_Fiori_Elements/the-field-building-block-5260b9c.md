@@ -169,4 +169,18 @@ For information about the `Field` API, see the [API Reference](https://ui5.sap.c
     ![](images/Radio_button-horizontal_layout_a267511.png "Radio Buttons in Horizontal
     							Layout")
 
+4.  The field building block can be used for displaying and editing data from a JSON model. It can be used also for presenting a hard-coded string using the `value` property.
+
+    > ### Note:  
+    > This functionality supports text fields, date and time picker, fields with value help, and object status. It doesn't support editing of rating indicator field.
+
+    > ### Sample Code:  
+    > ```
+    > <macros:Field 
+    >     id="myCustomField" 
+    >     metaPath="/RootEntity/name" 
+    >     value="{myJSONModel>/customModelBindingPath}" 
+    > />
+    > ```
+
 

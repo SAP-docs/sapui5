@@ -220,5 +220,5 @@ We therefore offer the `overrides` keyword as an additional name for this defini
 
 [UI5 Babel Transformer Plugin](https://github.com/ui5-community/babel-plugin-transform-modules-ui5/)
 
-[API Reference: `sap.ui.core.mvc.ControllerExtension.override`](https://ui5.sap.com/#/api/sap.ui.core.mvc.ControllerExtension/methods/sap.ui.core.mvc.ControllerExtension.override)
+[API Reference: `sap.ui.core.mvc.ControllerExtension.override`](https://ui5.sap.com/#/api/sap.ui.core.mvc.ControllerExtension%23methods/sap.ui.core.mvc.ControllerExtension.override)
 

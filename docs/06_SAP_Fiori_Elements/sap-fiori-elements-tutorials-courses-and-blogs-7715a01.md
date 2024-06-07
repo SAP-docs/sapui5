@@ -16,12 +16,14 @@ The list is continually growing. Our learning resources are provided on the foll
 
 -   [Use the Mockserver and OPA Test Library with SAP Fiori Elements for OData V4 Applications](https://developers.sap.com/group.fiori-elements-mockserver-opa.html)
 
+-   [Work with SAPUI5 Adaptation Projects to Make Changes and Extend the Source Code of an Application Variant of an SAP Fiori Application in SAP S/4HANA Cloud Public Edition](https://developers.sap.com/group.sapui5-adaptation-projects.html)
+
 
 **Courses and Learning Journeys**
 
 -   [Developing and Extending SAP Fiori Elements Apps](https://open.sap.com/courses/fiori-ea1)
 
--   [Developing an SAP Fiori elements App Based on a CAP OData V4 Service](https://learning.sap.com/learning-journey/developing-an-sap-fiori-elements-app-based-on-a-cap-odata-v4-service)
+-   [Developing an SAP Fiori Elements App Based on a CAP OData V4 Service](https://learning.sap.com/learning-journey/developing-an-sap-fiori-elements-app-based-on-a-cap-odata-v4-service)
 
 
 **Blogs**

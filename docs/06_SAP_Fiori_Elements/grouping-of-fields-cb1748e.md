@@ -194,8 +194,6 @@ This groups the fields in a form-like display, as shown in the following screens
 > -   If there is no `Headerfacet` annotation and if the `Headerinfo` annotation doesn’t contain any images, then the expand or collapse button and the pin button are hidden from the object page header.
 > 
 > -   If a subsection contains only one group, and the subsection title is same as group title, then the group title is hidden.
-> 
-> -   If `UI.FieldGroup` has only one `UI.MultiLineText` based property and no other controls, the label of the corresponding `TextArea` control is hidden, and only the section or subsection title is displayed. However, you must ensure that a meaningful label is assigned to the `TextArea` control as it is accessed by the screen reader programs. This special logic is also not invoked if the `UI.FieldGroup` has multiple controls configured within it and, at runtime, due to dynamic visibility or UI adaptation, the `TextArea` control is found to be the only visible control.
 
 
 
@@ -661,9 +659,47 @@ For more information about how to configure navigation using fields, see [Naviga
 
 
 
+### Merging the `TextArea` Label with the Section or Subsection Title
+
+By default, the `TextArea` label is always displayed. However, if `UI.FieldGroup` has only one `UI.MultiLineText`-based property and no other controls, the label of the corresponding `TextArea` control can be hidden. To do this, in the `manifest.json` file, configure `useSingleTextAreaFieldAsNotes` to `true`.
+
+> ### Note:  
+> The setting is at section-level and applies for all TextArea controls within the section. This logic is applicable only if the `TextArea` control is the only control within the `UI.FieldGroup`, at design time. This logic is not invoked due to dynamic visibility of other fields within the same `UI.FieldGroup`, at runtime, or because of UI adaptation, the `TextArea` control is found to be the only visible control.
+
+> ### Sample Code:  
+> manifest.json
+> 
+> ```
+> "sap.ui5": {
+>         "routing": {
+>             "targets": {
+>                 "SalesOrderManageObjectPage": {
+>                     "options": {
+>                         "settings": {
+>                             "content": {
+>                                 "body": {
+>                                     "sections": {
+>                                         "ReferenceFacet1": {
+>                                             "useSingleTextAreaFieldAsNotes": true
+>                                         }
+>                                     }
+>                                 }
+>                             }
+>                         }
+>                     }
+>                 }
+>             }
+>         }
+>     }
+> ```
+
+When this setting is set to `true`, only the section or subsection title is displayed. However, you must ensure that a meaningful label is assigned to the `TextArea` control as it is accessed by screen reader programs.
+
+
+
 <a name="loiocb1748ea9b984251addc03718d98df35__section_yr3_gt2_m4b"/>
 
 ## More Information
 
-For more information, see the section about [forms and form groups](https://experience.sap.com/fiori-design-web/form/), and about [forms in the object page](https://experience.sap.com/fiori-design-web/object-page/#forms) in the SAP Fiori design guidelinesc.
+For more information, see the section about [forms and form groups](https://experience.sap.com/fiori-design-web/form/), and about [forms in the object page](https://experience.sap.com/fiori-design-web/object-page/#forms) in the SAP Fiori design guidelines.
 

@@ -479,7 +479,7 @@ As an application developer, there are different ways to configure custom action
     -   Actions that require none of the above. The system triggers the action.
 
 
--   Custom actions \(via manifest extension\)
+-   Custom actions \(using manifest extension\)
 
     Application developers can also configure custom actions by changing the `manifest.json` file. For more information, see [Adding Custom Actions Using Extension Points](adding-custom-actions-using-extension-points-7619517.md).
 
@@ -494,7 +494,7 @@ As an application developer, there are different ways to configure custom action
 
 ### Global Actions
 
-Global actions are placed at the top of the page and refer to the whole page \(for example *Display Log*\). They can be configured either via annotations \(applicable for the object page only\), or via manifest entries \(applicable for the list report and object page\).
+Global actions are placed at the top of the page and refer to the whole page \(for example *Display Log*\). They can be configured either by using annotations \(applicable for the object page only\), or by using manifest entries \(applicable for the list report and object page\).
 
 
 
@@ -538,7 +538,7 @@ When you configure navigation buttons, you have two options:
 
 ### Context-Independent Actions for External Navigation
 
-The following coding sample shows the annotations for a context -independent action for external navigation \(`UI.DataFieldForIntentBasedNavigation`\) \(Property="`RequiresContext`" Bool="`false`"\):
+The following coding sample shows the annotations for a context-independent action for external navigation \(`UI.DataFieldForIntentBasedNavigation`\) \(Property="`RequiresContext`" Bool="`false`"\):
 
 > ### Sample Code:  
 > XML Annotation
@@ -633,7 +633,7 @@ In SAP Fiori elements for OData V2, you can choose to pass the context when the 
 
 In SAP Fiori elements for OData V4, it depends on the configuration of the `IsBound` property. Context is only passed for actions with `IsBound=true`. For more information, see the section *Additional Features in SAP Fiori Elements for OData V4* in this topic.
 
-**Grouping of Multiple Invocations of the Same Action via Multiple Selections in the Table**
+**Grouping of Multiple Invocations of the Same Action Using Multiple Selections in the Table**
 
 Application developers can control the grouping of the multiple invocations of the action for each instance when an action is executed.
 
@@ -806,7 +806,6 @@ Context-dependent function imports provide an `sap:action-for` annotation defini
 Bound actions can have parameters that are defined by the backend. If the name of the parameter matches with any property of the bound entity, then the value of that property is used from the selected row. In case of multi select, the action parameters are not filled with the selected context values.
 
 > ### Note:  
-> Bound action parameters that matches with the key properties of the bound entity are not displayed in the action parameter dialog.
 
 **Unbound Actions \(Context-Independent\)**
 
@@ -862,7 +861,7 @@ For more information, see [Prefilling Fields Using the DefaultValuesFunction](pr
 
 
 
-### Enabling Custom Actions Defined via Annotations
+### Enabling Custom Actions Defined Using Annotations
 
 You can use annotations to control the enablement of operations \(annotation-based actions\) – in this case `Core.OperationAvailable`. This property can be set either to a static value \(Boolean `true` or `false`\), or to a dynamic value \(path pointing to a property\).
 
@@ -1010,7 +1009,7 @@ Actions can either be classified as bound or unbound. Bound actions are those th
 > ```
 
 > ### Note:  
-> When an action is inside a control, the bound and unbound actions are referred to differently. A bound action is referred via `<SchemaNamespace>.<ActionName>`, while an unbound action is referred via `<SchemaNamespace>.<EntityContainerName>/<ActionImportName>`.
+> When an action is inside a control, the bound and unbound actions are referred to differently. A bound action is referred in `<SchemaNamespace>.<ActionName>`, while an unbound action is referred in `<SchemaNamespace>.<EntityContainerName>/<ActionImportName>`.
 
 -   Bound Action
 
@@ -1021,7 +1020,7 @@ Actions can either be classified as bound or unbound. Bound actions are those th
     > <Record Type="UI.DataFieldForAction">
     >         <PropertyValue Property="Label" String="Reunion" />
     >         <PropertyValue Property="Action" String="com.sap.gateway.srvd.sadl_gw_appmusicro_definition.v0001.REUNION" /> 
-    >                <!-- The bound action (REUNION) is referred above via <SchemaNamespace>.<ActionName> -->
+    >                <!-- The bound action (REUNION) is referred above in <SchemaNamespace>.<ActionName> -->
     > </Record>
     > 
     > ```
@@ -1060,7 +1059,7 @@ Actions can either be classified as bound or unbound. Bound actions are those th
     > <Record Type="UI.DataFieldForAction">
     >         <PropertyValue Property="Label" String="Break Up" />
     >         <PropertyValue Property="Action" String="com.sap.gateway.srvd.sadl_gw_appmusicro_definition.v0001.MyContainer/BREAK_ACTION" />
-    >                <!-- The unbound action (BREAK_ACTION) is referred above via <SchemaNamespace>.<EntityContainerName>/<ActionImportName> -->
+    >                <!-- The unbound action (BREAK_ACTION) is referred above in <SchemaNamespace>.<EntityContainerName>/<ActionImportName> -->
     > </Record>
     > 
     > ```
@@ -1091,7 +1090,7 @@ Actions can either be classified as bound or unbound. Bound actions are those th
     > ```
 
 
-The visibility of the action is controlled via the `UI.Hidden` annotation and the enablement is controlled via the `OperationAvailable` annotation.
+The visibility of the action is controlled using the `UI.Hidden` annotation and the enablement is controlled using the `OperationAvailable` annotation.
 
 
 
@@ -1124,7 +1123,7 @@ You can use the `UI.CreateHidden`, `UI.DeleteHidden`, and `UI.UpdateHidden` anno
 > </Annotations>
 > ```
 
-Please note that the path pointing to the singleton property must be absolute and via the `EntityContainer`.
+Please note that the path pointing to the singleton property must be absolute and using the `EntityContainer`.
 
 The CAP CDS syntax to define such a reference uses the inline `edmJson` mechanism.
 
@@ -1144,7 +1143,7 @@ The CAP CDS syntax to define such a reference uses the inline `edmJson` mechanis
 
 Unlike bound actions, where a context must be passed, static actions don’t need a user-selected context to be passed. But, in contrast to unbound actions, some context is always passed to static actions, namely the header context of the collection for which the static action is defined.
 
-You define a static action via the `"Collection(...)"` in the `Type` property of the `"_it"` parameter, as shown in the following code sample:
+You define a static action using the `"Collection(...)"` in the `Type` property of the `"_it"` parameter, as shown in the following code sample:
 
 > ### Sample Code:  
 > XML Annotation
@@ -1301,7 +1300,7 @@ Annotations showing a collection:
 > ### Note:  
 > Bound actions have the defined OData binding parameter alias as the first parameter \(`"_it"` in the example above\).
 
-More information about the parameter itself, such as the label for the parameter, or whether it's mandatory, comes via the annotation for the action:
+More information about the parameter itself, such as the label for the parameter, or whether it's mandatory, comes from the annotation for the action:
 
 > ### Sample Code:  
 > ```
@@ -1546,7 +1545,7 @@ The following default values are available:
     > ```
 
     > ### Note:  
-    > Hidden or read-only parameter fields are intended to not allow data input by the user. However, you can still pass values via default values.
+    > Hidden or read-only parameter fields are intended to not allow data input by the user. However, you can still pass values using default values.
 
 -   Evaluation Order
 
@@ -1656,7 +1655,7 @@ In the following screenshot, *My Menu Button* has grouped three actions:
 
 -   *My First Action* and *My Second Action* are actions from the `manifest.json`.
 
--   *Bound Action with params* is an action maintained via annotations.
+-   *Bound Action with params* is an action maintained using annotations.
 
 
 ![](images/Grouping_Actions_as_Menu_Buttons_d7ed70d.png)
@@ -1822,9 +1821,9 @@ You can either use an already existing entry from the `"menu"` definition, or us
 
 
 
-### Overriding Annotation-Based Actions via the Manifest
+### Overriding Annotation-Based Actions Using the Manifest
 
-For certain properties, you can overwrite the annotation-based values via the manifest.
+For certain properties, you can overwrite the annotation-based values using the manifest.
 
 > ### Caution:  
 > By doing so, the annotation-based logic is ignored for the specified action and doesn't consider any default behavior \(like a bound action only being enabled when an item in a table is selected\).

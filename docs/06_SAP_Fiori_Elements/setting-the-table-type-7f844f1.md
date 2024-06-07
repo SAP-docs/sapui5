@@ -409,8 +409,6 @@ You can activate the tree table in the `manifest.json`. To do so, set the table 
 
 > ### Restriction:  
 > -   The tree table is only supported when using the ABAP RESTful Application Programming Model \(RAP\).
-> 
-> -   Edit scenarios are not supported.
 
 
 
@@ -425,4 +423,6 @@ For information about setting up tables in the list report through annotations, 
 For information about setting up tables in the object page, see [Settings for Object Page Tables](settings-for-object-page-tables-47425bb.md).
 
 For information about table groupings, see [Table Groupings](table-groupings-d344c5a.md).
+
+For information about tree tables, see [Tree Tables](tree-tables-7cf7a31.md).
 

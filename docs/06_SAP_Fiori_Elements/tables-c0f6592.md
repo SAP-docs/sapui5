@@ -57,7 +57,7 @@ Applications can change the single-selection mode to multi-selection mode. For m
 
 ## Context Menu in Tables
 
-The application provides a context menu for tables in the list report and object page. The context menu is a default option that appears only when end users select a row or a set of rows and then initiate an action by performing a right-click. The context menu contains all actions that appear on the table toolbar and an additional option to open the selected row or rows in a new browser tab or window. Inline actions are not included as part of context menu actions.
+The application provides a context menu for tables in the list report and object page. The context menu is a default option that appears only when end users perform a right-click on a row or a set of selected rows. The context menu contains all actions that appears on the table toolbar which requires row selection and an additional option to open the selected row\(s\) in a new browser tab or window. Inline actions are not included as part of context menu actions.
 
 
 
@@ -428,7 +428,11 @@ Table columns in the object page can be hidden using the `UI.Hidden` annotation 
 The list report and object page tables have a context menu listing the actions.
 
 > ### Note:  
-> The *Open in New Tab or Window* option won't be available in the context menu if the list report or object page extension controller implements the `onListNavigationExtension` method.
+> The *Open in New Tab or Window* option won't be available in the context menu in the following cases:
+> 
+> -   The list report or object page extension controller implements the `onListNavigationExtension` method.
+> 
+> -   The list report table is configured in direct edit mode. For more information about direct edit mode, see [Navigation to an Object Page in Edit Mode](navigation-to-an-object-page-in-edit-mode-8665847.md).
 
 Application developers have the option to exclude the custom actions in the context menu using `excludeFromContextMenu` as shown in the following sample code:
 

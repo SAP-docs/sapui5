@@ -180,19 +180,17 @@ During inbound navigation to flexible column layout application, if the navigati
 > ### Sample Code:  
 > ```
 > "pages": {
->                   "ObjectPage|C_STTA_BusinessPartner": {
->                   "entitySet": "C_STTA_BusinessPartner",
-> 	             "defaultLayoutType": "TwoColumnsMidExpanded",
->                   "defaultLayoutTypeIfExternalNavigation": "MidColumnFullScreen",
->                    "component": {
->                      "name": "sap.suite.ui.generic.template.ObjectPage"
-> 						   "settings':{
-> 								"allowDeepLinking": true
-> 										 }
->                     },
->                     "pages": { 
->         .....
-> 
+>     "ObjectPage|C_STTA_BusinessPartner": {
+>         "entitySet": "C_STTA_BusinessPartner",
+>         "defaultLayoutType": "TwoColumnsMidExpanded",
+>         "defaultLayoutTypeIfExternalNavigation": "MidColumnFullScreen",
+>         "component": {
+>             "name": "sap.suite.ui.generic.template.ObjectPage"
+>              "settings':{"allowDeepLinking": true
+>         }
+>     },
+>     "pages": {
+> .....
 > ```
 
 > ### Note:  

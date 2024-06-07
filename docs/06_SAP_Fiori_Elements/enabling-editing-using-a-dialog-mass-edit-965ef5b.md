@@ -103,8 +103,6 @@ The *Mass Edit* button isn't enabled if the update restriction points to a path 
 > 
 >     -   date-time fields
 > 
->     -   value help fields with a dropdown list
-> 
 >     -   image based fields
 > 
 >     -   progress indicator fields
@@ -117,8 +115,6 @@ The *Mass Edit* button isn't enabled if the update restriction points to a path 
 > 
 >         -   fields coming from a `FieldGroup`-based field in the table
 > 
-> 
->     -   rating fields
 > 
 >     -   multi-valued fields
 > 
