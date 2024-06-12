@@ -21,5 +21,5 @@ You can use [SAP Fiori tools](https://help.sap.com/viewer/product/SAP_FIORI_tool
 
 ## Generating an App
 
-You can generate a SAP Fiori application using the SAP Fiori generator. For more information on generating an app using SAP Business Application Studio and Visual Studio Code, see [Generate an Application](https://help.sap.com/docs/SAP_FIORI_tools/17d50220bcd848aa854c9c182d65b699/db44d45051794d778f1dd50def0fa267.html).
+You can generate a SAP Fiori application using the SAP Fiori generator. For more information about generating an app using SAP Business Application Studio and Visual Studio Code, see [Generate an Application](https://help.sap.com/docs/SAP_FIORI_tools/17d50220bcd848aa854c9c182d65b699/db44d45051794d778f1dd50def0fa267.html).
 

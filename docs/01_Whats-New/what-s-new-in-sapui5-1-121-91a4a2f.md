@@ -1913,7 +1913,7 @@ Control
 
 **`sap.ui.comp.smarttable.SmartTable`**
 
--   If you want to hide a property from the table but not from the remaining UI \(for example, if you still want to filter for this property\), you can use the `com.sap.vocabularies.UI.v1.Hidden` annotation. For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.p13n.Engine) and the [Sample](https://ui5.sap.com/#/entity/sap.ui.comp.smarttable.SmartTable/sample/sap.ui.comp.sample.smarttable).
+-   If you want to hide a property from the table but not from the remaining UI \(for example, if you still want to filter for this property\), you can use the `com.sap.vocabularies.UI.v1.Hidden` annotation. For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.comp.smarttable.SmartTable%23annotations/Hidden) and the [Sample](https://ui5.sap.com/#/entity/sap.ui.comp.smarttable.SmartTable/sample/sap.ui.comp.sample.smarttable).
 
 -   To provide the reason why a variant has been applied, for example, for the update of the application status, we have introduced a new `variantContext` parameter for the `afterVariantApply` event. For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.comp.smarttable.SmartTable%23events/afterVariantApply).
 
@@ -1936,6 +1936,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.122](what-s-new-in-sapui5-1-122-5d078da.md "With this release SAPUI5 is upgraded from version 1.121 to 1.122.")
 
 [What's New in SAPUI5 1.120](what-s-new-in-sapui5-1-120-2359b63.md "With this release SAPUI5 is upgraded from version 1.119 to 1.120.")
 

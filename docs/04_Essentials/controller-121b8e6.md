@@ -155,7 +155,7 @@ All public methods need to stay compatible:
 
 
 > ### Note:  
-> Within the methods of a controller extension, the reserved base member allows access to the public functions of the extended controller.
+> Within the methods of a controller extension, the reserved `base` member allows access to the public functions of the extended controller.
 > 
 > Functionality can be called by using `this.base.basePublicMethod()`.
 

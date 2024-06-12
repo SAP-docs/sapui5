@@ -1,6 +1,6 @@
 <!-- loio0a5377076f4e4ccba055a9072befadbd -->
 
-# Why Use SAP Fiori elements?
+# Why Use SAP Fiori Elements?
 
 Here's why – in a nutshell.
 

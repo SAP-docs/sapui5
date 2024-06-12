@@ -10,14 +10,14 @@ The paste action is available for the following scenarios:
 
 -   Table-level paste
 
-    Here, a new row is created to paste data copied from the clipboard. Once end users have copied data to clipboard from an external application such as a spreadsheet, they can focus anywhere on the table or select an empty row to paste data. They can trigger the browser paste \([CTRL\] + [V\]  for Microsoft Windows, [CMD\] + [V\]  for macOS\) or click the *Paste* icon in the table. New rows are created only for draft-enabled applications, and for tables with the creation mode set as `inline` or `creationRows`.
+    Here, a new row is created to paste data copied from the clipboard. Once end users have copied data to the clipboard from an external application such as a spreadsheet, they can focus anywhere on the table or select an empty row to paste data. They can trigger the browser paste \([CTRL\] + [V\]  for Microsoft Windows, [CMD\] + [V\]  for macOS\) or click the *Paste* icon in the table. New rows are created only for draft-enabled applications, and for tables with creation mode set to `inline` or `creationRows`.
 
 -   Cell-level paste
 
     Here, end users can either add a new value or update existing values within a cell or a group of cells. To paste the data, they must either select a single cell or a group of cells within the table. If the selected cell or cells contain active or draft rows, their values are replaced with data from the clipboard. New rows are created to paste additional data if an empty row is part of the selected cells.
 
     > ### Note:  
-    > Only grid tables support the cell-level paste.
+    > Only grid tables and responsive tables support the cell-level paste.
 
 
 > ### Tip:  
@@ -26,11 +26,13 @@ The paste action is available for the following scenarios:
 > ### Note:  
 > -   Only the pasting of simple data fields is supported. Complex fields, such as links, images, connected fields, multi-input fields, and field groups, are not supported.
 > 
-> -   If there are validation errors, an error message is shown in a dialog box so that the user can take action.
+> -   When pasting to cells containing both ID and text, the property itself is updated but its text description is updated only after saving.
 > 
-> -   If new rows are created during the paste action, all these rows will be included in a single `POST` batch call. The duration of the `POST` call increases with the number of rows pasted.
+> -   If there are validation errors, an error message is shown in a dialog box so that the end user can take action.
 > 
-> -   For new rows created during the paste action, the order of the data copied from a spreadsheet or external application might differ from the order in the table after you have inserted it.SAP Fiori elements cannot control this.
+> -   If new rows are created during the paste action, all these rows are included in a single `POST` batch call. The duration of the `POST` call increases with the number of rows pasted.
+> 
+> -   For new rows created during the paste action, the order of the data copied from a spreadsheet or external application might differ from the order in the table after the end user has inserted it.SAP Fiori elements cannot control this.
 > -   This feature is not supported for tables with custom columns or custom tables.
 > 
 > -   In the object page, the *Export to Spreadsheet* feature is available by default only if the copy/paste feature is available. For more information, see [Using the Export Feature](using-the-export-feature-4bab6f2.md).
@@ -49,9 +51,9 @@ Sample data:
 
 ![](images/Excel_copy_paste_6_fa98abc.png)
 
-Note that the columns containing inline actions are ignored by the paste operation. Therefore, they must be omitted from the source while copying,, as demonstrated in the example
+Note that the columns containing inline actions are ignored by the paste operation. Therefore, they must be omitted from the source while copying, as shown in the screenshot.
 
-Read only columns are also ignored by the paste operation. However, these columns are exported along with the rest of the data, when the data is exported to a spreadsheet . They are a part of the format for preparing data in spreadsheets.
+Read-only columns are also ignored by the paste operation. However, these columns are exported along with the rest of the data when the data is exported to a spreadsheet. They are a part of the format for preparing data in spreadsheets.
 
 
 
@@ -71,6 +73,8 @@ To generate an example with the expected format for pasting your data, export th
 > -   The user has to maintain the placeholder for inline actions in the spreadsheet application. The column fields can also be empty.
 > 
 > -   Properties annotated with a text arrangement set to text only cannot be pasted.
+> 
+> -   When a user pastes data into a table, SAP Fiori elements for OData V4 verifies that the pasted content aligns with the designated data field type. However, additional checks such as field editability and validation of values against fixed value lists are not performed by the front end. Therefore, strict validation by the back end needs to be ensured.
 
 The paste option can be disabled with the `enablePaste` parameter.
 
@@ -101,5 +105,5 @@ The paste option can be disabled with the `enablePaste` parameter.
 > 
 > ```
 
-Users can also copy multiple rows as well as ranges of rows and columns to the clipboard. For more information, see the *Copying Multiple Rows and Range Selections* section under *Additional Features in SAP Fiori Elements for OData V4* in [Tables](tables-c0f6592.md).
+Users can also copy multiple rows as well as ranges of rows and columns to the clipboard. For more information, see the *Copying Multiple Rows and Range Selections* section in [Tables](tables-c0f6592.md).
 

@@ -4,6 +4,10 @@
 
 You can enable the history of the most recently entered values for any field, when you move the cursor back to that field. It is enabled by default for some of the controls that are used as a filter, such as for multi-input fields. However, it may not be enabled for controls such as drop-down list.
 
+If you have fields that contain personal sensitive data, you can use the `com.sap.vocabularies.PersonalData.v1.IsPotentiallySensitive` annotation to disable the storing of data in the history.
+
+End users can delete the history of the recently entered values. For more information, see [Input History](../10_More_About_Controls/input-history-152f84f.md).
+
 
 
 <a name="loio37dbf1f30127420d9c585bc1ad80086b__section_ic3_jhs_yqb"/>
@@ -52,7 +56,7 @@ You can also specify the same behavior for all the fields, or as a default for t
 > 
 > ```
 
-Possible values for `historyEnabled` are *enabled*, *disabled*, or *auto*. *Auto* is the default setting, which means that the behavior depends on the used control type \(it depends on annotations according to the logic of the `SmartFilterBar`. For more information, see [SmartFilterBar](https://sapui5untested.int.sap.eu2.hana.ondemand.com/#/api/sap.ui.comp.smartfilterbar.SmartFilterBar)\).
+Possible values for `historyEnabled` are *enabled*, *disabled*, or *auto*. *Auto* is the default setting, which means that the behavior depends on the used control type.
 
 
 
@@ -67,12 +71,12 @@ The history of recently entered values is enabled for SAP Fiori elements for ODa
 > "sap.fe": {
 >     "historySettings": {
 >              "fields": {
->                  "/SalesOrderManage/SoldToParty": {
+>                  <propertyPath>: {
 >                          "historyEnabled": false
->                                                   }
->                   }
->            }
->         }
+>                         }
+>                     }
+>                 }
+>             }
 > ```
 
 Here, `<propertyPath>` refers to the property path in the OData service.

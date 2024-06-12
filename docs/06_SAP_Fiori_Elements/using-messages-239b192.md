@@ -47,7 +47,7 @@ Transition messages are always shown in message dialog - this is true also in ed
 
 ## Additional Features in SAP Fiori Elements for OData V4
 
-For more detailed information, see [Server Messages in the OData V4 Model](../04_Essentials/server-messages-in-the-odata-v4-model-fbe1cb5.md).
+For more information about the different transport channels for the different kinds of messages and about the lifecycle management of these messages, see [Server Messages in the OData V4 Model](../04_Essentials/server-messages-in-the-odata-v4-model-fbe1cb5.md).
 
 
 
@@ -57,14 +57,13 @@ SAP Fiori elements provides two main types of message handling, depending on whe
 
 Unbound messages are always considered as transition messages.
 
--   Bound transition messages are shown in a new message dialog also in edit mode if a dialog is already open \(for example, an action parameter dialog\). Only messages with targets that are the same as the fields within the original dialog are shown inline in the same dialog.
-
--   Bound transition messages triggered from an action without a dialog are shown in a message popover in edit mode alongside any existing state messages.
-
-
 – Handling Bound Messages –
 
-A message popover is used to display a summarized list of different types of bound messages \(messages that are specific to a particular instance, for example for a sales order selected in a list report and shown in an object page\). It provides a handy and systemized way to navigate and explore details for every message. The message popover automatically displays messages that are sent from the back end as part of the request-response cycle. The messages for subitems are also shown \(for example, if the message popover is bound to a sales order item, the messages for the underlying sales order items are shown as well\). In addition, messages are grouped by the name of the message group the current item belongs to, or else categorized under ‘General’.
+Bound messages \(both state and transition\) are shown in a message popover in edit mode. The message popover allows to display a summarized list of different types of bound messages. In addition, it provides a handy and systemized way to navigate to messages and view the details. The messages for subitems are also shown. Messages are grouped based on the name of the message group the current item belongs to, or else categorized under ‘General’.
+
+Bound transition messages are shown in the message dialog in the list report and on the object page \(or subobject page\) in display mode. State messages are not supported. If there is exactly one transition success message, the message is shown in a message toast.
+
+Bound transition messages, unlike state messages, are always removed whenever the user triggers a new action or changes data.
 
 Usage
 

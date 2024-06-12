@@ -41,7 +41,7 @@ Application developers can control the editability of all fields in one go using
 > 
 > ```
 
-`UpdateRestrictions` is ignored for the main entity set due to `EditAction`. You can, however, edit the fields originating from another entity in the tables and forms in object pages and subobject pages, provided that the list report entity set can be updated. If the list report entity set can be updated, the editability of a field further depends on the *edit* state of the UI and the field control of the property. If the entity cannot be updated, you cannot edit the field, regardless of the state of the UI and the field control of the property.
+`UpdateRestrictions` is ignored for the main entity set. You can, however, edit the fields originating from another entity in the tables and forms in object pages and subobject pages, provided that the list report entity set can be updated. If the list report entity set can be updated, the editability of a field further depends on the *edit* state of the UI and the field control of the property. If the entity cannot be updated, you cannot edit the field, regardless of the state of the UI and the field control of the property.
 
 For more information about the field control, see [Further Features of the Field](further-features-of-the-field-f49a0f7.md).
 
@@ -90,7 +90,7 @@ If `NavigationRestrictions` has `Updatable=false`, the child entity records cann
 > 
 > ```
 
-For more information on how to control the editability for the main entity set that has an `EditAction`, see the section *Enablement of Operations* in the topic [Adding Actions to Tables](adding-actions-to-tables-b623e0b.md) \(under *Additional Features in SAP Fiori elements for OData V4*\).
+For more information on how to control the editability for the main entity set, see the *Enabling Custom Actions Defined Using Annotations* section in [Actions](actions-cbf16c5.md) .
 
 Both Boolean and path values of `UpdateRestrictions.Updatable` are supported.
 

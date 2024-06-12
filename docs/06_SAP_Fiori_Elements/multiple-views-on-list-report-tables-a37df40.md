@@ -136,6 +136,22 @@ Make the settings as shown in the following sample code:
 
 You can also define and configure custom views for a list report using a controller extension. For more information, see [Extension Points for Views in the List Report](extension-points-for-views-in-the-list-report-eb37203.md).
 
+SAP Fiori elements for OData V4 refreshes the content of a view and the counts for each view:
+
+-   when the view is first opened
+
+-   after changes are made in a filter
+
+
+In addition, you can control the view and count refresh using the following dedicated APIs:
+
+-   [`setTabContentToBeRefreshedOnNextOpening`](https://ui5.sap.com/#/api/setTabContentToBeRefreshedOnNextOpening)
+
+-   [`refreshTabsCount`](https://ui5.sap.com/#/api/refreshTabsCount)
+
+
+Check out our live example in the flexible programming model explorer at [Multi Mode Extensibility](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/controllerExtensions/multiModeExtensibility).
+
 **Related Information**  
 
 
