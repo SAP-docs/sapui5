@@ -25,7 +25,7 @@ JSDoc for the class should use the `@alias` tag to make sure that the variable i
 The `extend` function makes sure that the respective namespace is created:
 
 ```js
-sap.ui.define(["sap/ui/base/Object"], function (BaseObject) {
+sap.ui.define(["sap/ui/base/Object"], function(BaseObject) {
 
     /**
      * Constructor for a new MyClass instance.

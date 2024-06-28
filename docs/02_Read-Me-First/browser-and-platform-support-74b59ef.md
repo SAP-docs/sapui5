@@ -181,7 +181,7 @@ Desktop
 </td>
 <td valign="top">
 
-Latest 2 versions
+Latest major 2 versions
 
 </td>
 <td valign="top">
@@ -275,7 +275,7 @@ Phone and Tablet<sup>5,6, 8</sup>
 </td>
 <td valign="top">
 
-Latest 3 versions supported by Google
+Latest major 3 versions supported by Google
 
 </td>
 <td valign="top" align="center">

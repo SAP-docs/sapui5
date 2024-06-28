@@ -210,7 +210,7 @@ You can create such an inline creation row by calling [`sap.ui.model.odata.v4.OD
 
 
 
-<a name="loioc9723f8265f644af91c0ed941e114d46__section_hy5_yxw_rxb"/>
+<a name="loioc9723f8265f644af91c0ed941e114d46__section_CST"/>
 
 ## Context States
 

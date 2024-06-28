@@ -9,7 +9,7 @@ Once the generation is complete and the node modules have been installed, the ap
 
 The new app or component reuses the views and controllers from `sap.suite.ui.generic.template`. The resource links and route definitions for navigation are in the app descriptor file \(`manifest.json`\). You can find the destination configuration for preview in the `ui5*.yaml` files.
 
-You can use the run configurations \(palette command `Fiori: Open Run Configurations`\) to adapt the destinations for preview
+You can use the run configurations \(palette command `Fiori: Open Run Configurations`\) to adapt the destinations for preview.
 
 The following artifacts are generated:
 
@@ -19,7 +19,7 @@ The following artifacts are generated:
 
 ![](images/Folder_Structure_for_List_Report_and_Object_Page_c33e8a1.png "Folder Structure for List Report and Object Page")
 
-For more information on generated files, see the **Projects** section of [Generating an Application](https://help.sap.com/docs/SAP_FIORI_tools/17d50220bcd848aa854c9c182d65b699/db44d45051794d778f1dd50def0fa267.html).
+For more information about generated files, see the **Projects** section of [Generating an Application](https://help.sap.com/docs/SAP_FIORI_tools/17d50220bcd848aa854c9c182d65b699/db44d45051794d778f1dd50def0fa267.html).
 
 
 

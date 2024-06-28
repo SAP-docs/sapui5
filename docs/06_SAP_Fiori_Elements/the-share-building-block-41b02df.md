@@ -2,7 +2,7 @@
 
 # The `Share` Building Block
 
-Freestyle SAPUI5 applications can also use the "`Share`" functionality that allows users to share the current application state using the options *Send Email*, *Share to Microsoft Teams*, *Save as Tile*, and *Share in SAP Jam* \(on platforms that are integrated with SAP Jam\).
+Freestyle SAPUI5 applications can also use the "`Share`" functionality that allows end users to share the current application state using the options *Send Email*, *Share to Microsoft Teams*, *Save as Tile*, and *Share in SAP Jam* \(on platforms that are integrated with SAP Jam\).
 
 
 
@@ -10,7 +10,7 @@ Freestyle SAPUI5 applications can also use the "`Share`" functionality that allo
 
 ## Configuring the Visibility of *Send Email* Option
 
-Application developers can control the visibility of the *Send Email* option within the `Share` building block by configuring the `showSendEmail` key under the `shareOptions`. The property values can be either boolean or binding.
+You can control the visibility of the *Send Email* option within the `Share` building block by configuring the `showSendEmail` key under the `shareOptions`. The property values can be either boolean or binding.
 
 > ### Sample Code:  
 > ```

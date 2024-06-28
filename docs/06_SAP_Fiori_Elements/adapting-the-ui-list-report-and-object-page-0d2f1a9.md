@@ -50,7 +50,7 @@ Display/Hide the *Export to Excel* button in the table toolbar
 </td>
 <td valign="top">
 
-Change the `useExportToExcel` property to `True/False`.
+Change the `enableExport` property to `True/False`.
 
 </td>
 </tr>
@@ -83,12 +83,14 @@ For vertical alignment of the whole responsive table, see [Tables](tables-c0f659
 <tr>
 <td valign="top">
 
-Disable standard system behavior for list report tables \(analytical, grid, tree tables\): Table should not occupy the entire space available in the container.
+Modify the standard list report behavior for analytical, grid, and tree table types to not occupy the entire space available in the container.
 
 </td>
 <td valign="top">
 
-In the table, set the `fitContent` property with the Page Editor.
+Set the `fitContent` property of the dynamic page to `false` with the Page Editor.
+
+By default, `fitContent` is set to `true` for analytical, grid, and tree table types in list report pages.
 
 </td>
 </tr>

@@ -16,6 +16,9 @@ You can use the `MicroChart` building block stand alone in any container as show
 > />
 > ```
 
+> ### Note:  
+> The `contextPath` is optional if `metaPath` is provided with an absolute path. If `metaPath` is relative and there is no `contextPath` given, then we consider the parent binding path as the value of `contextPath`.
+
 Applications can influence the size of the rendered micro chart, control the visibility of the header, and handle no data scenario. Check out our live example in the flexible programming model explorer at [Micro Chart-Overview](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/microchart/microChartDefault).
 
 

@@ -6,28 +6,15 @@ The view in the Model-View-Controller \(MVC\) concept is responsible for definin
 
 The following predefined view types are available:
 
--   **XML view** \(file or string in XML format\); this type supports a mix of XML and plain HTML,
+-   **XML view**, a file or string in XML format
 
--   **JSON view** \(file or string in JSON format\),
-
--   **Typed view**, constructed in a programmatic manner.
+-   **Typed view**, constructed in a programmatic manner
 
 
 > ### Note:  
-> We recommend to use XML views, because XML views force a clear separation of the UI definition from the application logic \(which has to be implemented in the controller\). This makes the code more readable and easier to support.
+> We recommend using XML views unless you need the dynamics possible by the programmatic nature of Typed Views. The declarative approach used by XML views comes with many benefits; for example, the code is often more readable and easier to support.
 > 
-> Therefore, we concentrate on XML views and only provide examples for XML views throughout this documentation.
-
-
-
-<a name="loio91f27e3e6f4d1014b6dd926db0e91070__section_fxz_jf5_y4b"/>
-
-## Typed Views
-
-A view can also be defined as a [typed view](typed-view-e6bb33d.md), representing its own class.
-
-> ### Note:  
-> Typed views are available since SAPUI5 1.88
+> Throughout this documentation, the code examples mainly use XML views.
 
 **Related Information**  
 

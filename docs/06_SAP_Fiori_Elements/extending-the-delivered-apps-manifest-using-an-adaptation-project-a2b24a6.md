@@ -5,7 +5,9 @@
 You can extend the SAP-delivered list report and object page apps that are developed on SAP Fiori elements.
 
 > ### Note:  
-> This topic is currently only applicable to SAP Fiori elements for OData V2.
+> This topic is only applicapble to SAP Fiori elements for OData V2.
+
+To know how you can extend the delivered apps manifest for SAP Fiori elements for OData V4, see the section **Adaptation by Application Developers** in the [Adapting the UI](adapting-the-ui-59bfd31.md) topic.
 
 The delivered apps can be extended by adding a new node in the object page or by modifying the manifest configurations settings through the adaptation project. By configuring the adaptation project manifest, you can enable the following features:
 
@@ -70,9 +72,9 @@ You must add the parameters in the `changeType`, `layer`, `parentPage`, and `chi
 
 <a name="loioa2b24a69baef4b91af2293ccc6b5871f__section_n1d_xdl_4pb"/>
 
-## Defining Configurations for the Newly Extended Node
+## Defining Configurations for a Node
 
-Define the following definition in the `manifest.appdescr_variant` file as part of the `content[]`:
+The following is a sample definition to set the `createMode` and table type for a node in the object page. It should be added to the `manifest.appdescr_variant` file of the adaptation project.
 
 > ### Sample Code:  
 > ```
@@ -109,7 +111,7 @@ You must add the parameters in the `changeType`, `parentPage`, and `entityProper
 
 -   `entityPropertyChange` contains the following:
 
-    -   `propertyPath` is the path in the manifest where the changes have to be added. For example, `component/settings/sections/extendedFacetId`, where `extendedFacetId` is the reference facet ID of the new node.
+    -   `propertyPath` is the path in the manifest where the changes have to be added. For example, `component/settings/sections/extendedFacetId`, where `extendedFacetId` is the reference facet ID of the new node. If you are modifying an existing node using the adaptation project, you must specify the facet ID of the section.
 
     -   `operation` should be set as `UPSERT`.
 

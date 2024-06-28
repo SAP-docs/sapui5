@@ -31,7 +31,7 @@ You can view all files at [OpenUI5 TypeScript Walkthrough - Step 20: Data Types]
 We want to display in our list view the price in Euro, and typically the currency is part of our data model in the back end. Here this is not the case, so we need to define it directly in the app. We therefore create a controller for the invoice list and define a view model for the currency code for Euro. It is a simple JSON model with just one key `currency` and the value `EUR`.
 
 ```js
-*import Controller from "sap/ui/core/mvc/Controller";
+import Controller from "sap/ui/core/mvc/Controller";
 import JSONModel from "sap/ui/model/json/JSONModel";
 
 /**

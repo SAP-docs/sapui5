@@ -206,7 +206,7 @@ The *Delete* button allows users to delete the instance of the object page.
 >     </Annotation>
 >     ```
 > 
-> 2.  The visibility of the *Edit* button can be controlled by the `updateHidden` annotation under `entityType` annotations \(it can be path-based if the apps need to hide the *Edit* button, for example for specific instances only\).
+> 2.  The visibility of the *Edit* button can be controlled by the `updateHidden` annotation under the entity set \(it can be path-based if the apps need to hide the *Edit* button, for example for specific instances only\).
 > 
 >     > ### Sample Code:  
 >     > XML Annotation

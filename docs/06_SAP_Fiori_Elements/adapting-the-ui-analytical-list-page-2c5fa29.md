@@ -736,7 +736,7 @@ Export to Excel
 </td>
 <td valign="top">
 
-The *Export to Excel* button is visible on the UI by default. You can hide this button by setting the `UseExporttoExcel` property to `False` using the UI adaptation.
+The *Export to Excel* button is visible on the UI by default. You can hide this button by setting the `enableExport` property to `False` using the UI adaptation.
 
 </td>
 </tr>

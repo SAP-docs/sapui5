@@ -220,13 +220,13 @@ QUnit.test("Should suppress rerendering when tooltip is set", async(assert) => {
 
 
 
-## Testing with Models
+## Testing with Server-Side Models
 
-As your control should work together with models, it makes sense to do integration tests with a mock server. This is especially important for more complex controls, e.g. using paging. When testing with models, you need to make sure that you also set up/destroy the model itself inside your test. In the following, we will show an example using the OData V2 mock server:
+For bindable properties of your control, it should be possible to bind them to server-side models, i.e. models for which not all data is available on the client but is loaded asynchronously from a server. This is especially important for more complex controls, e.g. with an aggregation which may be bound to a collection loaded using paging. A typical example for server-side models are UI5's OData models. When testing with models, you need to make sure that you also set up/destroy the model itself inside your test. In the following, we will show an example using the OData V2 mock server:
 
 ```js
 
-// "MockServer" required from module "sap/ui/app/MockServer"
+// "MockServer" required from module "sap/ui/core/util/MockServer"
 
 function startMockServer(iRespondAfter) {
     // configure respond to requests delay
@@ -236,7 +236,7 @@ function startMockServer(iRespondAfter) {
     });
 
     // create mockserver
-    var oMockServer = new MockServer({
+    const oMockServer = new MockServer({
         rootUri : "http://sap.com/service/"
     });
 
@@ -249,7 +249,7 @@ function startMockServer(iRespondAfter) {
 //Your test:
 QUnit.test("Should do something with the model", function (assert) {
     //Arrange
-    var oMockServer = startMockServer(0),
+    const oMockServer = startMockServer(0);
     
     // System under Test + Act
 
@@ -264,12 +264,12 @@ After setting up the OData V2 mock server, we set up the model as follows:
 
 ```js
 
-// "ODataModel" required from module "sap/ui/model/v2/ODataModel"
+// "ODataModel" required from module "sap/ui/model/odata/v2/ODataModel"
 // "jQuery" required from module "sap/ui/thirdparty/jquery"
 
 function createODataModel(sURL, mSettings) {
     sURL = sURL || "http://sap.com/service/";
-    var oModel = new ODataModel(sURL);
+    const oModel = new ODataModel(sURL);
     
     mSettings = mSettings || {};
     jQuery.each(mSettings, function(sProperty, vValue) {
@@ -283,9 +283,9 @@ function createODataModel(sURL, mSettings) {
 //Your test:
 QUnit.test("Should do something with the model", function(assert) {
     // Arrange
-    var oModel = createODataModel(),
-    oMockServer = startMockServer(0),
-    done = assert.async();
+    const oModel = createODataModel();
+    const oMockServer = startMockServer(0);
+    const done = assert.async();
 
     // System under Test + Act + call done();
 
@@ -306,8 +306,8 @@ We use `clock.tick` to trigger the server response. If you didn't do this, the t
 //Your test:
 QUnit.test("Should do something with the model", async(assert) => {
     // Arrange
-    const oModel = createODataModel(),
-        oMockServer = startMockServer(50);
+    const oModel = createODataModel();
+    const oMockServer = startMockServer(50);
 
     // System under Test
     const oLabel = new Label({
