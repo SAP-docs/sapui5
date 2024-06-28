@@ -69,7 +69,7 @@ You can change the order of action buttons for both manifest-based actions and a
 
 [Adding Action Buttons to Forms in Sections](adding-action-buttons-to-forms-in-sections-e64efda.md "You can add action buttons to the forms contained in sections. These forms are indicated by com.sap.vocabularies.UI.v1.FieldGroup. A form action button is then displayed in the toolbar of the object page section that contains the form.")
 
-[Defining Determining Actions](defining-determining-actions-1743323.md "You can add a determining action button to the footer of the object page.")
+[Defining Determining Actions](defining-determining-actions-1743323.md "You can add a determining action button to the footer of the object page, but you must add such a button only in edit mode.")
 
 [Setting the Criticality for Actions](setting-the-criticality-for-actions-12f2ba2.md "You can add criticality to an action button via annotations.")
 

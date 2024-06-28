@@ -126,6 +126,8 @@ The *Mass Edit* button isn't enabled if the update restriction points to a path 
 > 
 >         For more information, see [Field Help](field-help-a5608ea.md).
 > 
+>     -   value help fields with a dropdown list that have fixed values \(`@Common.ValueListWithFixedValues: true`\)
+> 
 > 
 > -   Validation from the server for updates made in the *Mass Edit* dialog is currently not supported. There's no communication with the back end until users choose *Save* in the *Mass Edit* dialog.
 > 

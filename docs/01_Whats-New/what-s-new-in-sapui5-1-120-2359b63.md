@@ -1126,6 +1126,8 @@ We have deprecated the following entities of `sap.ui.comp`:
 -   `smarttable.ExportType.GW`
 
 
+We have changed the status of the `sap.ui.webc` library from experimental to deprecated.
+
 For a complete list of all deprecations, see [Deprecated APIs](https://ui5.sap.com/#/api/deprecated).
 
 <sub>Deprecated•Feature•Info Only•1.120</sub>
@@ -1392,6 +1394,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.123](what-s-new-in-sapui5-1-123-9d00ac7.md "With this release SAPUI5 is upgraded from version 1.122 to 1.123.")
 
 [What's New in SAPUI5 1.122](what-s-new-in-sapui5-1-122-5d078da.md "With this release SAPUI5 is upgraded from version 1.121 to 1.122.")
 

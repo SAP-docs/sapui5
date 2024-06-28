@@ -24,15 +24,15 @@ The state of the application is preserved when users refresh or navigate away fr
 
 -   Data from custom UI elements. For more information, see [Custom State Handling for Extended Apps](custom-state-handling-for-extended-apps-89fa878.md).
 
--   > ### Note:  
-    > -   If a potentially sensitive field \(a property that is annotated via the `PersonalData.v1.IsPotentiallySensitive` annotation\) is changed, SAP Fiori elements doesn't store/restore this information. Any changes added by users are therefore lost upon refresh. This is not applicable if the field is used in filter context.
-    > 
-    > -   In SAP Fiori elements for OData V2, changes to the visibility of filter fields in the filter bar aren't stored/restored. However, if any new filter fields containing values are added from the *Adapt Filters* dialog, then they're stored as a part of the `iAppState`.
-    > 
-    > -   Selections in a chart and a table, as well as the scroll position in a table, are not stored/restored.
-    > 
-    > -   Refreshing the browser doesn't restore the `iAppState` if SAP Fiori launchpad isn't configured to persist it in the back end.
 
+> ### Note:  
+> -   If a potentially sensitive field \(a property that is annotated via the `PersonalData.v1.IsPotentiallySensitive` annotation\) is changed, SAP Fiori elements doesn't store/restore this information. Any changes added by users are therefore lost upon refresh. This is not applicable if the field is used in filter context.
+> 
+> -   In SAP Fiori elements for OData V2, changes to the visibility of filter fields in the filter bar aren't stored/restored. However, if any new filter fields containing values are added from the *Adapt Filters* dialog, then they're stored as a part of the `iAppState`. The order of the filter fields in the smart filter fields is not stored or restored from the `iAppState`.
+> 
+> -   Selections in a chart and a table, as well as the scroll position in a table, are not stored/restored.
+> 
+> -   Refreshing the browser doesn't restore the `iAppState` if SAP Fiori launchpad isn't configured to persist it in the back end.
 
 
 

@@ -383,7 +383,7 @@ Feature
 
 We have started to work on supporting recursive hierarchies and deferred deletion. Both features are work in progress. As of now, they are flagged as experimental and must not be used for productive applications.
 
-For more information, see [Recursive Hierarchy](../04_Essentials/extension-for-data-aggregation-7d91431.md#loio7d914317c0b64c23824bf932cc8a4ae1__section_RCH) and [Deleting an Entity](../04_Essentials/deleting-an-entity-2613ebc.md).
+For more information, see [Recursive Hierarchy](../04_Essentials/data-aggregation-and-recursive-hierarchy-7d91431.md#loio7d914317c0b64c23824bf932cc8a4ae1__section_RCH) and [Deleting an Entity](../04_Essentials/deleting-an-entity-2613ebc.md).
 
 <sub>Changed•Feature•Info Only•1.105</sub>
 
@@ -690,6 +690,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.123](what-s-new-in-sapui5-1-123-9d00ac7.md "With this release SAPUI5 is upgraded from version 1.122 to 1.123.")
 
 [What's New in SAPUI5 1.122](what-s-new-in-sapui5-1-122-5d078da.md "With this release SAPUI5 is upgraded from version 1.121 to 1.122.")
 

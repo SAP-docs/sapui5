@@ -5,7 +5,7 @@
 Application developers can control important features of the field.
 
 > ### Note:  
-> This topic is currently only applicable to SAP Fiori elements for OData V4.
+> This topic is only applicable to SAP Fiori elements for OData V4.
 
 
 
@@ -500,7 +500,7 @@ For example, `IsFiscalYearPeriod` indicates that the annotated `Edm.String` prop
 > 
 > ```
 
-For further information on ABAP and CDS semantics annotations, see [Semantics Annotations](https://help.sap.com/docs/abap-cloud/abap-rap/semantics-annotations).
+For more information about ABAP and CDS semantics annotations, see [Semantics Annotations](https://help.sap.com/docs/abap-cloud/abap-rap/semantics-annotations).
 
 Check out our live example in the flexible programming model explorer at [Field - Fiscal types](https://sapui5.hana.ondemand.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/fieldFiscals).
 
@@ -510,7 +510,7 @@ Check out our live example in the flexible programming model explorer at [Field 
 
 ## Visibility and Enablement of the Field
 
-The visibility of the field is affected by the `UI.Hidden` annotation, which can be given either at property level or field level.
+The visibility of the field is affected by the `UI.Hidden` annotation, that can be given either at property level or field level.
 
 
 
@@ -571,7 +571,7 @@ The visibility of the field is affected by the `UI.Hidden` annotation, which can
 > ### Sample Code:  
 > ABAP CDS Annotation
 > 
-> ABAP CDS does not support `Measures.ISOCurrency`. Please use the local XML annotation.
+> ABAP CDS does not support `Measures.ISOCurrency`.Use the local XML annotation.
 
 > ### Sample Code:  
 > CAP CDS Annotation
@@ -588,7 +588,7 @@ The visibility of the field is affected by the `UI.Hidden` annotation, which can
 
 
 
-### The property ID of the entity `ProductsType` is always invisible
+### The property ID of the entity `ProductsType` is always hidden
 
 > ### Sample Code:  
 > XML Annotation
@@ -625,7 +625,7 @@ The visibility of the field is affected by the `UI.Hidden` annotation, which can
 
 ### `UI.Hidden` can also be path based
 
-The property `ModifiedAt` is invisible in the `FieldGroup` with the qualifier `AdministrativeData` if the property `HasDraftEntity` is set to `true` – all other appearances of the property `ModifiedAt` are not influenced.
+The property `ModifiedAt` is hidden in the `FieldGroup` with the qualifier `AdministrativeData` if the property `HasDraftEntity` is set to `true` – all other appearances of the property `ModifiedAt` are not influenced.
 
 > ### Sample Code:  
 > XML Annotation
@@ -675,7 +675,7 @@ The property `ModifiedAt` is invisible in the `FieldGroup` with the qualifier `A
 > ### Note:  
 > ABAP CDS does not allow a `UI.hidden` annotation pointing to a path. Please use the local XML annotation.
 
-The property `ModifiedAt` is always invisible \(wherever the property appears\) if the property `HasDraftEntity` is set to `true` – in all other cases it’s visible.
+The property `ModifiedAt` is always hidden \(wherever the property appears\) if the property `HasDraftEntity` is set to `true` – in all other cases it’s visible.
 
 > ### Sample Code:  
 > XML Annotation
@@ -711,7 +711,7 @@ The property `ModifiedAt` is always invisible \(wherever the property appears\) 
 > ```
 
 > ### Note:  
-> ABAP CDS does not allow a `UI.hidden` annotation pointing to a path. Please use the local XML annotation.
+> ABAP CDS does not allow a `UI.hidden` annotation pointing to a path. Use the local XML annotation.
 
 
 
@@ -753,7 +753,7 @@ In addition, the value of the `FieldControl` determines how the field behaves. I
 > ```
 
 > ### Note:  
-> `@ObjectModel.mandatory` can be applied on the ABAP CDS view only. This is **not** possible via metadata extensions. Furthermore, only `@ObjectModel.mandatory` is exposed and not `@ObjectModel.readOnly`.
+> `@ObjectModel.mandatory` can be applied on the ABAP CDS view only. This is **not** possible using metadata extensions. Furthermore, only `@ObjectModel.mandatory` is exposed and not `@ObjectModel.readOnly`.
 
 
 

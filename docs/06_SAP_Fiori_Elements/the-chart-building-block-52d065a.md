@@ -26,11 +26,14 @@ Ensure that the entity set referred for the `Chart` building block supports aggr
 > ></macros:Chart>
 > ```
 
-Applications can do the following with the chart building block:
+> ### Note:  
+> The `contextPath` is optional if `metaPath` is provided with an absolute path. If `metaPath` is relative and there is no `contextPath` given, then we consider the parent binding path as the value of `contextPath`.
 
--   Link chart building block with the filter building block.
+Applications can do the following with the `Chart` building block:
 
--   Enable chart building block for variant management.
+-   Link `Chart` building block with the `FilterBar` building block.
+
+-   Enable `Chart` building block for variant management.
 
 -   Add custom actions.
 
@@ -38,9 +41,9 @@ Applications can do the following with the chart building block:
 
 -   Control the visibility of tabs within the chart personalization options.
 
--   Get and set the presentation variants associated with the chart building block using the public APIs: `getPresentationVariant()` and `setPresentationVariant()`.
+-   Get and set the presentation variants associated with the `Chart` building block using the public APIs: `getPresentationVariant()` and `setPresentationVariant()`.
 
-    Get and set the selection variants associated with the chart building block using the public APIs: `getSelectionVariant()` and `setSelectionVariant()`.
+    Get and set the selection variants associated with the `Chart` building block using the public APIs: `getSelectionVariant()` and `setSelectionVariant()`.
 
     Check out our live example in the flexible programming model explorer at [Chart - Interacting via APIs](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/chart/chartPublicAPIs).
 

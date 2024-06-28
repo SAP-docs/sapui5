@@ -93,9 +93,7 @@ Things may get a little messy as your app is growing with your requirements. The
 
 -   Learn how: Walkthrough tutorial [Step 15: Nested Views](step-15-nested-views-df8c9c3.md)
 
--   Find out more:
-
-    -   [Reusing UI Parts: Fragments](../04_Essentials/reusing-ui-parts-fragments-36a5b13.md)
+-   Find out more: [Reusing UI Parts: Fragments](../04_Essentials/reusing-ui-parts-fragments-36a5b13.md)
 
 
 

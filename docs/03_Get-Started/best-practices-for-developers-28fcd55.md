@@ -283,7 +283,7 @@ Prevent bundling modules \(`Component-preload.js`\) into strings.
 
 -   Don't use `sap.ui.getCore().byId()` or `Element.getElementById()`. Use `this.byId()` or `this.getView().byId()` to address controls in your views or fragments.
 
--   Don't use native HTML or inline CSS style within your XML view or fragment. Instead, consider using the [`sap.ui.core.HTML`](https://ui5.sap.com/#/api/sap.ui.core.HTML) control or your own notepad control. Existing inline CSS must be migrated to an external style sheet.
+-   Don't use native HTML, SVG, or inline CSS style within your XML view or fragment. Instead, consider using the [`sap.ui.core.HTML`](https://ui5.sap.com/#/api/sap.ui.core.HTML) control or your own notepad control. Existing inline CSS must be migrated to an external style sheet.
 
 -   Don't use view cloning via `sap.ui.core.mvc.View#clone` as it's deprecated. Instead, call the respective factory function \(e.g. `XMLView.create`\) with the View's name.
 

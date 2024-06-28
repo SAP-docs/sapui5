@@ -172,7 +172,7 @@ Application developers can selectively change the target when chevron navigation
     > override: {
     >     routing: {
     >         onBeforeNavigation: function(oContextInfo) {
-    >             var oLineContext = oContextInfo.sourceBindingContext,
+    >             var oLineContext = oContextInfo.bindingContext.getObject( ),
     >             oNav = this.base.getExtensionAPI().intentBasedNavigation;
     >             // for salesOrder 6437 navigate to FreeStyle App
     >             if (oLineContext.SalesOrder === "6437") {

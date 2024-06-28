@@ -143,14 +143,14 @@ The object page of the *Manage Products* app shows the new section *Product Desc
 
 To hide the section title or subsection title, you can call the `setAsTitleOwner` extension API. This allows you to replace the control title with the section or subsection title.
 
-Define the `initialise` method of a table or chart in the extension fragment component
+Define the `initialise` method of a table or chart in the extension fragment component.
 
 > ### Sample Code:  
 > ```
 > <st:SmartTable id="SalesPriceFacetID" initialise="SalesPriceInitialise"/>
 > ```
 
-Define the same event in the controller and call the `setAsTitleOwner` extension API with the parameter `SmartTable` or `SmartChart`
+Define the same event in the controller and call the `setAsTitleOwner` extension API with the parameter `SmartTable` or `SmartChart`.
 
 > ### Sample Code:  
 > ```

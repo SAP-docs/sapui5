@@ -2,7 +2,7 @@
 
 # Migrating from `registerControllerExtensions` API
 
-As of SAPUI5 1.124 release, the [`registerControllerExtensions`](https://ui5.sap.com/#/api/sap.suite.ui.generic.template.extensionAPI.extensionAPI%23methods/sap.suite.ui.generic.template.extensionAPI.extensionAPI.registerControllerExtensions)API is getting deprecated. It is planned to be removed from the SAPUI5 version 2.0.
+As of SAPUI5 1.120 release, the [`registerControllerExtensions`](https://ui5.sap.com/#/api/sap.suite.ui.generic.template.extensionAPI.extensionAPI%23methods/sap.suite.ui.generic.template.extensionAPI.extensionAPI.registerControllerExtensions)API is getting deprecated. It is planned to be removed from the SAPUI5 version 2.0.
 
 > ### Note:  
 > This topic is only applicable to SAP Fiori elements for OData V2.

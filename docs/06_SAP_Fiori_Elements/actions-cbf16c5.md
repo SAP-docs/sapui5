@@ -83,9 +83,9 @@ Overview Page
 
 Analytical List Page
 
-[Defining Custom Actions](defining-custom-actions-c3de5c0.md)\(OData V2\)
+[Defining Custom Actions](defining-custom-actions-c3de5c0.md) \(OData V2\)
 
-[Adding Custom Actions Using Extension Points](adding-custom-actions-using-extension-points-7619517.md)\(OData V4\)
+[Adding Custom Actions Using Extension Points](adding-custom-actions-using-extension-points-7619517.md) \(OData V4\)
 
 </td>
 </tr>
@@ -188,9 +188,9 @@ Object Page
 
 Analytical List Page
 
-[Defining Custom Actions](defining-custom-actions-c3de5c0.md)\(OData V2\)
+[Defining Custom Actions](defining-custom-actions-c3de5c0.md) \(OData V2\)
 
-[Adding Custom Actions Using Extension Points](adding-custom-actions-using-extension-points-7619517.md)\(OData V4\)
+[Adding Custom Actions Using Extension Points](adding-custom-actions-using-extension-points-7619517.md) \(OData V4\)
 
 </td>
 </tr>
@@ -317,9 +317,9 @@ depends \(see linked topics\)
 
 Analytical List Page
 
-[Defining Custom Actions](defining-custom-actions-c3de5c0.md)\(OData V2\)
+[Defining Custom Actions](defining-custom-actions-c3de5c0.md) \(OData V2\)
 
-[Adding Custom Actions Using Extension Points](adding-custom-actions-using-extension-points-7619517.md)\(OData V4\)
+[Adding Custom Actions Using Extension Points](adding-custom-actions-using-extension-points-7619517.md) \(OData V4\)
 
 </td>
 </tr>

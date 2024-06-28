@@ -23,6 +23,8 @@ The paste action is available for the following scenarios:
 > ### Tip:  
 > For preparation of data for pasting, SAP Fiori elements recommends using exported spreadsheet format that contains split cells with multiple values. This helps to avoid formatting issues during the paste action.
 
+![A screenshot of a table before and after copying from a spreadsheet.](images/Copying_Data_from_a_Table_3e5d9c8.png)
+
 > ### Note:  
 > -   Only the pasting of simple data fields is supported. Complex fields, such as links, images, connected fields, multi-input fields, and field groups, are not supported.
 > 
@@ -32,7 +34,7 @@ The paste action is available for the following scenarios:
 > 
 > -   If new rows are created during the paste action, all these rows are included in a single `POST` batch call. The duration of the `POST` call increases with the number of rows pasted.
 > 
-> -   For new rows created during the paste action, the order of the data copied from a spreadsheet or external application might differ from the order in the table after the end user has inserted it.SAP Fiori elements cannot control this.
+> -   For new rows created during the paste action, the order of the data copied from a spreadsheet or external application might differ from the order in the table after the end user has inserted it. SAP Fiori elements cannot control this.
 > -   This feature is not supported for tables with custom columns or custom tables.
 > 
 > -   In the object page, the *Export to Spreadsheet* feature is available by default only if the copy/paste feature is available. For more information, see [Using the Export Feature](using-the-export-feature-4bab6f2.md).
@@ -74,7 +76,7 @@ To generate an example with the expected format for pasting your data, export th
 > 
 > -   Properties annotated with a text arrangement set to text only cannot be pasted.
 > 
-> -   When a user pastes data into a table, SAP Fiori elements for OData V4 verifies that the pasted content aligns with the designated data field type. However, additional checks such as field editability and validation of values against fixed value lists are not performed by the front end. Therefore, strict validation by the back end needs to be ensured.
+> -   When a user pastes data into a table, SAP Fiori elements for OData V4 verifies that the pasted content aligns with the designated data field type. However, additional checks such as field editability and validation of values against fixed value lists are not performed by the front end. Therefore, you must ensure strict validation by the back end.
 
 The paste option can be disabled with the `enablePaste` parameter.
 
