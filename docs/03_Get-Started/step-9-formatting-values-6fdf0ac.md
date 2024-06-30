@@ -56,6 +56,8 @@ You can view and download all files in the Demo Kit at [Data Binding - Step 9](h
     **webapp/view/App.view.xml**
 
     ```xml
+    <mvc:View 
+       controllerName="ui5.databinding.controller.App"
     ...
     <Panel headerText="{i18n>panel2HeaderText}" class="sapUiResponsiveMargin" width="auto">
     		<content>
