@@ -167,7 +167,7 @@ You can hide the table columns or specific fields within the table column in an 
 >         {
 >             $Type             : 'UI.DataFieldForAnnotation',
 >             Target            : '@UI.FieldGroup#multipleActionFields',
->             Label             : 'Sold-To Party,
+>             Label             : 'Sold-To Party',
 >             ![@UI.Hidden] : Delivered
 >         }
 > ]
