@@ -125,6 +125,8 @@ The *Mass Edit* button isn't enabled if the update restriction points to a path 
 >     -   fields that have context-dependent value help
 > 
 >         For more information, see [Field Help](field-help-a5608ea.md).
+>  
+>     -   Value Helps with Fixed Values that are rendered as a Dropdown (@Common.ValueListWithFixedValues: true)
 > 
 >     -   value help fields with a dropdown list that have fixed values \(`@Common.ValueListWithFixedValues: true`\)
 > 
