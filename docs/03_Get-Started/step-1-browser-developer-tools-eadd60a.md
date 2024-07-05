@@ -14,7 +14,7 @@ Most modern web browsers contain some form of Developer Tools. They allow you to
 
 <-- Add the following lines to the package.json : 
 "scripts": {
-  "start": "ui5 serve -o test/mockServer.html"
+  "start": "ui5 serve -o index.html"
 },
 -->
 1.  Download the example app with errors at [Troubleshooting](https://ui5.sap.com/#/entity/sap.ui.core.tutorial.troubleshooting/sample/sap.ui.core.tutorial.troubleshooting.01).
