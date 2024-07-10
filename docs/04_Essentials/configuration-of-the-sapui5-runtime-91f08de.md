@@ -7,7 +7,7 @@ SAPUI5 provides several options for the configuration of the SAPUI5 runtime. The
 > ### Note:  
 > In earlier framework versions, the configuration options available in SAPUI5 could be found in the [API Reference via the `sap.ui.core.Configuration`](https://ui5.sap.com/#/api/sap.ui.core.Configuration). This legacy module has been deprecated with SAPUI5 1.120 and replaced by a modular, future-proof solution for configuration handling.
 
-When the SAPUI5 bootstrap script is included in a page, the SAPUI5 runtime will automatically be initialized as soon as the script is loaded and executed by the browser. For simple use cases and for a default SAPUI5 installation, this should already be sufficient to build and run UI5 applications. The only configuration option you should specify is `data-sap-ui-compat-version="edge"` to run SAPUI5 with the latest feature set.
+When the SAPUI5 bootstrap script is included in a page, the SAPUI5 runtime will automatically be initialized as soon as the script is loaded and executed by the browser. For simple use cases and for a default SAPUI5 installation, this should already be sufficient to build and run UI5 applications.The only configuration option you should specify is `data-sap-ui-compat-version="edge"` to run SAPUI5 with the latest feature set.
 
 A typical bootstrap script looks like this:
 
@@ -137,7 +137,7 @@ You can use this attribute instead of attaching individual options with individu
 <script id="sap-ui-bootstrap"
 	src="resources/sap-ui-core.js"
 	data-sap-ui-config="
-		\"anmination-mode\":\"full\",
+	\"anmination-mode\":\"full\",
 		\"compat-version\":\"edge\"
 	">
 </script>

@@ -2,7 +2,7 @@
 
 # The `FilterField` Building Block
 
-The `FilterField` building block allows app developers to add custom XML fragments as filter fields to a `FilterBar` building block in the following way:
+The `FilterField` building block allows you to add custom XML fragments as filter fields to a `FilterBar` building block in the following way:
 
 > ### Sample Code:  
 > ```

@@ -584,6 +584,8 @@ The `UI.Chart` annotation is applicable for the following:
 > ### Note:  
 > -   The information provided in the section isn't applicable to the object page.
 > 
+> -   When defining a `PresentationVariant`, the `Visualizations` annotation should be provided and point to a valid visualization.
+> 
 > -   In a multiple view scenario, the following logic is used to fetch the `UI.PresentationVariant` annotation only if it is undefined. For more information about the multiple view configuration, see [Defining Multiple Views on a List Report Table - Multiple Table Mode](defining-multiple-views-on-a-list-report-table-multiple-table-mode-37aeed7.md) and [Defining Multiple Views on a List Report with Different Entity Sets and Table Settings](defining-multiple-views-on-a-list-report-with-different-entity-sets-and-table-settings-b6b59e4.md).
 > 
 > -   In SAP Fiori elements for OData V4, the information provided in the section isn't applicable to the analytical list page \(ALP\) flavor. For more information about the configuration in ALP, see [Descriptor Configuration for the Analytical List Page](descriptor-configuration-for-the-analytical-list-page-2a9df06.md).
@@ -709,6 +711,72 @@ For more information about the `UI.SelectionPresentationVariant`, see the versio
 
 
 
+<a name="loio49a6ba5b8d6946208322a9f7e16837c2__section_tnc_ld2_qbc"/>
+
+## Requesting Additional Properties
+
+You can request additional properties for tables and charts even if these properties are not displayed by using the `com.sap.vocabularies.UI.v1.PresentationVariant` annotation term and the `RequestAtLeast` property.
+
+> ### Sample Code:  
+> XML Annotation
+> 
+> ```
+> <Annotations xmlns=http://docs.oasis-open.org/odata/ns/edm Target="ZFAR_CUSTOMER_LINE_ITEMS2_SRV.Item">
+>     <Annotation Term="com.sap.vocabularies.UI.v1.PresentationVariant">
+>         <Record>
+>             <PropertyValue Property="Visualizations">
+>                 <Collection>
+>                     <AnnotationPath>@UI.LineItem</AnnotationPath>
+>                 </Collection>
+>             </PropertyValue>
+>             <PropertyValue Property="RequestAtLeast">
+>                 <Collection>
+>                     <PropertyPath>Customer</PropertyPath>
+>                     <PropertyPath>CompanyCode</PropertyPath>
+>                </Collection>
+>             </PropertyValue>
+>         </Record>
+>     </Annotation>
+> </Annotations>
+> ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> ```
+> @UI.PresentationVariant: [
+>   {
+>     requestAtLeast: [
+>       'CUSTOMER',
+>       'COMPANYCODE'
+>     ],
+>     visualizations: [{type: #AS_LINEITEM }]
+>   }
+> ]
+> annotate view ITEM with {
+>  
+> }
+> ```
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> annotate ZFAR_CUSTOMER_LINE_ITEMS2_SRV.Item @(
+>   com.sap.vocabularies.UI.v1.PresentationVariant : {
+>     Visualizations : [
+>         '@UI.LineItem'
+>     ],
+>     RequestAtLeast : [
+>         Customer,
+>         CompanyCode
+>     ]
+>   }
+> );
+> ```
+
+
+
 <a name="loio49a6ba5b8d6946208322a9f7e16837c2__section_jvb_hvt_hvb"/>
 
 ## Configuring the Default Sort Order
@@ -749,10 +817,7 @@ You can define whether the default sort order for tables and charts is ascending
 > ```
 > @UI.PresentationVariant: [
 >   {
->     requestAtLeast: [
->       'CUSTOMER',
->       'COMPANYCODE'
->     ],
+>     
 >     sortOrder: [
 >       {
 >         by: 'COMPANYCODE',
@@ -780,10 +845,7 @@ You can define whether the default sort order for tables and charts is ascending
 >     Visualizations : [
 >         '@UI.LineItem'
 >     ],
->     RequestAtLeast : [
->         Customer,
->         CompanyCode
->     ],
+>     
 >     SortOrder : [
 >         {
 >             Property : CompanyCode,

@@ -64,16 +64,14 @@ sap.ui.define(['sap/ui/core/Lib'], function(Library) {
 ```
 
 > ### Note:  
-> In all cases, the lazy libraries need to be loaded manually in the application or library via the `sap/ui/core/Lib.load` API:
+> In all cases, the lazy libraries need to be loaded manually in the application or library via the [`sap/ui/core/Lib.load`](https://ui5.sap.com/#/api/sap.ui.core.Lib%23methods/sap.ui.core.Lib.load) API:
 > 
 > ```
-> Library.load("sap.suite.ui.commons").then(...);
+> Lib.load({name: "..."}).then(/*...*/);
 > ```
 
 > ### Tip:  
 > Execute the `load` method before any resource of the library is required to preload the complete library instead of loading each resource individually.
-> 
-> Always use the async API as this is the preferred and performant way. If your code relies on synchronous loading, it needs to be refactored to support the async API.
 
 
 
@@ -83,15 +81,9 @@ sap.ui.define(['sap/ui/core/Lib'], function(Library) {
 
 **Scenario 1:** UI library contains multiple components
 
-In this scenario, the library is the leading container and **no** component preload is available. This means, that you maintain the library dependency as described above. This is true for all kinds of component dependencies, also for `sap.ui5/extends/component`. If the extended component originates in a library, do **not** use `sap.ui5.extends/component`, but only declare the library dependency. Otherwise, the component dependency causes a 404 request.
+In this scenario, the library is the leading container and **no** component preload is available. This means, that you maintain the library dependency as described above. This is true for all kinds of component dependencies, also for `sap.ui5/extends/component`. If the extended component originates in a library, do **not** use `sap.ui5/extends/component`, but only declare the library dependency. Otherwise, the component dependency causes a 404 request.
 
-For loading lazy components inside a library, proceed with the library mechanisms as described above:
-
-```
-sap.ui.define(['sap/ui/core/Lib'], function(Library) {
-  Library.load("sap.suite.ui.commons").then(...); // lazy loading
-});
-```
+For loading lazy components inside a library, proceed with the library mechanisms as described above.
 
 **Scenario 2:** Standalone component
 
@@ -125,7 +117,7 @@ For loading and instantiating \(lazy\) standalone components, use the `createCom
 // Asynchronously (default) creates a new component instance.
 // The given name parameter has to correspond to an entry in the "sap.ui5/componentUsages" section of the manifest.json.
 
-var oReuseComponentPromise = this.createComponent("myReuseComponent");
+var pReuseComponentPromise = this.createComponent("myReuseComponent");
 
 
 ```
@@ -145,7 +137,7 @@ For more information, see: [Using and Nesting Components](using-and-nesting-comp
 
 [Using and Nesting Components](using-and-nesting-components-346599f.md "You can use a ComponentContainer to wrap a UIComponent and reuse it anywhere within the SAPUI5 control tree. With the ComponentContainer you can nest components inside other components.")
 
-[API Reference: `loadLibrary`](https://ui5.sap.com/#/api/sap.ui.core.Core%23methods/loadLibrary)
+[API Reference: `sap/ui/core/Lib.load`](https://ui5.sap.com/#/api/sap.ui.core.Lib%23methods/sap.ui.core.Lib.load)
 
 [API Reference: `sap.ui.core.Component`](https://ui5.sap.com/#/api/sap.ui.core.Component)
 

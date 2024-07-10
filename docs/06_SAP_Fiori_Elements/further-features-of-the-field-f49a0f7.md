@@ -5,7 +5,7 @@
 Application developers can control important features of the field.
 
 > ### Note:  
-> This topic is currently only applicable to SAP Fiori elements for OData V4.
+> This topic is only applicable to SAP Fiori elements for OData V4.
 
 
 
@@ -207,6 +207,37 @@ The `TextArrangement` value at entity set level is considered as a fallback only
 
 
 
+<a name="loiof49a0f7eaafe444daf4cd62d48120ad0__section_fy3_gpy_gbc"/>
+
+## Displaying Readable IDs Instead of `Edm.Guid` Values Using `Common.ExternalID`
+
+For the properties of `Edm.Guid` type, you can define a `Common.ExternalID` annotation that displays a readable identifier of an item. Using this, the readable ID is displayed on the UI instead of the `Edm.Guid` value. The `Common.ExternalID` annotation is supported for both the fields and filter fields.
+
+The following code snippets show a `Common.ExternalID` annotation at the `myGuidProperty` that is an `Edm.Guid` property. It points to the readable ID that is the `externalId` property.
+
+> ### Sample Code:  
+> XML Annotation
+> 
+> ```
+>       <Annotations Target="ExternalIdService.Entities/myGuidProperty">
+>         <Annotation Term="Common.ExternalID" Path="externalId"/>
+>       </Annotations>
+> ```
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> annotate ExternalIdService.Entities : myGuidProperty with @(Common: {ExternalID: externalId});
+> 
+> ```
+
+The `Common.Text` and `Common.TextArrangement` annotations are evaluated only for the readable ID property instead of the `GUID` property. However, while the `GUID` property is not visible on the UI, it is a part of the field as a technical identifier of an item or for filter fields.
+
+Value helps for a field with an `ExternalID` property are to be defined at the `Edm.Guid` property. The entity type that is shown in the value help \(defined in the `collectionPat`h of the `Common.ValueList` annotation\) can have `Edm.Guid` properties pointing to the readable ID properties.
+
+
+
 <a name="loiof49a0f7eaafe444daf4cd62d48120ad0__section_xg1_4mw_kwb"/>
 
 ## Fiscal Annotations
@@ -244,7 +275,7 @@ ABAP CDS Annotation
 </td>
 <td valign="top">
 
-PPP
+YYYYPPP
 
 </td>
 <td valign="top">
@@ -266,7 +297,7 @@ d
 </td>
 <td valign="top">
 
-`?`
+`N/A`
 
 </td>
 </tr>
@@ -278,7 +309,7 @@ d
 </td>
 <td valign="top">
 
-YYYYPPP
+PPP
 
 </td>
 <td valign="top">
@@ -375,7 +406,7 @@ YYYYWW
 <tr>
 <td valign="top">
 
-`?`
+`N/A`
 
 </td>
 <td valign="top">
@@ -391,7 +422,7 @@ YYYYWW
 </tr>
 </table>
 
-For example, `IsFiscalYearPeriod` indicates that the annotated `Edm.String` property is a string based on a fiscal date following the PPP pattern.
+For example, `IsFiscalYearPeriod` indicates that the annotated `Edm.String` property is a string based on a fiscal date following the YYYYPPP pattern.
 
 > ### Sample Code:  
 > XML Annotation
@@ -469,6 +500,8 @@ For example, `IsFiscalYearPeriod` indicates that the annotated `Edm.String` prop
 > 
 > ```
 
+For more information about ABAP and CDS semantics annotations, see [Semantics Annotations](https://help.sap.com/docs/abap-cloud/abap-rap/semantics-annotations).
+
 Check out our live example in the flexible programming model explorer at [Field - Fiscal types](https://sapui5.hana.ondemand.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/fieldFiscals).
 
 
@@ -477,7 +510,7 @@ Check out our live example in the flexible programming model explorer at [Field 
 
 ## Visibility and Enablement of the Field
 
-The visibility of the field is affected by the `UI.Hidden` annotation, which can be given either at property level or field level.
+The visibility of the field is affected by the `UI.Hidden` annotation, that can be given either at property level or field level.
 
 
 
@@ -538,7 +571,7 @@ The visibility of the field is affected by the `UI.Hidden` annotation, which can
 > ### Sample Code:  
 > ABAP CDS Annotation
 > 
-> ABAP CDS does not support `Measures.ISOCurrency`. Please use the local XML annotation.
+> ABAP CDS does not support `Measures.ISOCurrency`.Use the local XML annotation.
 
 > ### Sample Code:  
 > CAP CDS Annotation
@@ -555,7 +588,7 @@ The visibility of the field is affected by the `UI.Hidden` annotation, which can
 
 
 
-### The property ID of the entity `ProductsType` is always invisible
+### The property ID of the entity `ProductsType` is always hidden
 
 > ### Sample Code:  
 > XML Annotation
@@ -592,7 +625,7 @@ The visibility of the field is affected by the `UI.Hidden` annotation, which can
 
 ### `UI.Hidden` can also be path based
 
-The property `ModifiedAt` is invisible in the `FieldGroup` with the qualifier `AdministrativeData` if the property `HasDraftEntity` is set to `true` – all other appearances of the property `ModifiedAt` are not influenced.
+The property `ModifiedAt` is hidden in the `FieldGroup` with the qualifier `AdministrativeData` if the property `HasDraftEntity` is set to `true` – all other appearances of the property `ModifiedAt` are not influenced.
 
 > ### Sample Code:  
 > XML Annotation
@@ -642,7 +675,7 @@ The property `ModifiedAt` is invisible in the `FieldGroup` with the qualifier `A
 > ### Note:  
 > ABAP CDS does not allow a `UI.hidden` annotation pointing to a path. Please use the local XML annotation.
 
-The property `ModifiedAt` is always invisible \(wherever the property appears\) if the property `HasDraftEntity` is set to `true` – in all other cases it’s visible.
+The property `ModifiedAt` is always hidden \(wherever the property appears\) if the property `HasDraftEntity` is set to `true` – in all other cases it’s visible.
 
 > ### Sample Code:  
 > XML Annotation
@@ -678,7 +711,7 @@ The property `ModifiedAt` is always invisible \(wherever the property appears\) 
 > ```
 
 > ### Note:  
-> ABAP CDS does not allow a `UI.hidden` annotation pointing to a path. Please use the local XML annotation.
+> ABAP CDS does not allow a `UI.hidden` annotation pointing to a path. Use the local XML annotation.
 
 
 
@@ -720,7 +753,7 @@ In addition, the value of the `FieldControl` determines how the field behaves. I
 > ```
 
 > ### Note:  
-> `@ObjectModel.mandatory` can be applied on the ABAP CDS view only. This is **not** possible via metadata extensions. Furthermore, only `@ObjectModel.mandatory` is exposed and not `@ObjectModel.readOnly`.
+> `@ObjectModel.mandatory` can be applied on the ABAP CDS view only. This is **not** possible using metadata extensions. Furthermore, only `@ObjectModel.mandatory` is exposed and not `@ObjectModel.readOnly`.
 
 
 

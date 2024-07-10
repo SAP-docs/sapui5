@@ -193,11 +193,18 @@ In the list report, you can set the variant management to `"Page"` level or to `
     For more information, see [Managing Variants](managing-variants-8ce658e.md) and [Enabling Variant Management on the Object Page](enabling-variant-management-on-the-object-page-f26d42b.md).
 
 
+For a responsive table, the user can open the sorting, filtering, and grouping dialog by clicking on the column header.
+
+![](images/Sorting_Filtering_and_Grouping_Dialog_f1dd67d.png)
+
+> ### Note:  
+> When the user selects the Filter menu, the default properties displayed for sorting, filtering, and grouping are the properties visible in the column. Any sorting and filtering restrictions are reflected in this dialog. The TextArrangement also has an impact as described in the [Personalization for Properties with Text Arrangement](enabling-table-personalization-3e2b4d2.md#loio3e2b4d212b66481a829ccef1dc0ca16b__personalization_text_arrangement)subsection of this topic.
+
 
 
 ### Choosing Personalization Settings
 
-or removing columns, and grouping by default. Use the `"personalization"` setting in the manifest to change the default behavior.
+Variant management on control level enables filtering, sorting, or removing columns, and grouping by default. Use the `"personalization"` setting in the manifest to change the default behavior.
 
 > ### Sample Code:  
 > `manifest.json`
@@ -243,9 +250,9 @@ You can use the following values for the `"personalization"` setting:
 
 ### Personalization for Properties with Text Arrangement
 
-Note the following when enabling personalization for properties that have a text arrangement annotation:Variant management on control level enables filtering, sorting, adding
+Note the following when enabling personalization for properties that have a text arrangement annotation:
 
--   Sorting and filtering is available for the properties visible in a column. For example, for properties with text arrangement set as `#TextFirst`Variant management on control level enables filtering, sorting,, the property itself or its text can be sorted or grouped. For properties with text arrangement set as`#TextOnly`, sorting and grouping is only available for their text. Filtering for properties, however, does not take into account their text arrangement. For example, filtering on the `#TextOnly` properties is available for the property itself and not its texts. Filtering on its text may be available if no filter restriction is defined for the text property.
+-   Sorting and filtering is available for the properties visible in a column. For example, for properties with text arrangement set as `#TextFirst`, the property itself or its text can be sorted or grouped. For properties with text arrangement set as `#TextOnly`, sorting and grouping is only available for their text. Filtering for properties, however, does not take into account their text arrangement. For example, filtering on the `#TextOnly` properties is available for the property itself and not its texts. Filtering on its text may be available if no filter restriction is defined for the text property.
 
 -   If a label is defined for a column within the `LineItem`, then this label is used in the *Sort* and *Group* menus if the column displays a single property. In the *Filter* menu, the property name is displayed instead.
 

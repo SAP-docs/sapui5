@@ -285,8 +285,6 @@ The time axis is automatically enabled for a chart when its dimension is one of 
 
 -   `Edm.Date`
 
--   `Edm.TimeOfDay`
-
 -   `Edm.DateTimeOffset`
 
 

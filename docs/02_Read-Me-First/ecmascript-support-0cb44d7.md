@@ -2,7 +2,7 @@
 
 # ECMAScript Support
 
-Since SAPUI5 1.116, the framework leverages features of modern ECMAScript, up to and including [ES2022](https://262.ecma-international.org/13.0/). You have to consider certain restrictions when using modern ECMAScript with your SAPUI5 project.
+Since SAPUI5 1.116, the framework leverages features of modern ECMAScript, up to and including ES2022. You have to consider certain restrictions when using modern ECMAScript with your SAPUI5 project.
 
 > ### Caution:  
 > The restrictions described here apply to the usage of modern ECMAScript features in projects that are written in native JavaScript. If your project is written in TypeScript, you only have to make sure that the listed constraints are met by the transpiled code.
@@ -561,4 +561,9 @@ Do **not** use a template literal with one or more expressions for the library n
 >     });
 > });
 > ```
+
+**Related Information**  
+
+
+[ECMAScript2022 Language Specification](https://262.ecma-international.org/13.0/)
 

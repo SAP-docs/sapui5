@@ -563,9 +563,9 @@ The `SmartTable` control is an OData-based control in V2 that automatically gene
 
 <a name="loio148892ff9aea4a18b912829791e38f3e__section_ymw_zhx_y1c"/>
 
-## Table \(`sap.ui.mdc`\) \(experimental\)
+## Table \(`sap.ui.mdc`\)
 
 [\(sap.ui.mdc.Table\)](https://ui5.sap.com/#/api/sap.ui.mdc.Table)
 
-The `Table` control \(experimental\) is a metadata-driven control. All attributes mentioned in the table above depend on which `type` aggregation is used for `Table`. The use of certain types of tables, for example, tree table and analytical table, depends on the delegate implementation and on which SAPUI5 model is used.
+The `Table` control is a metadata-driven control. All attributes mentioned in the table above depend on which `type` aggregation is used for `Table`. The use of certain types of tables, for example, tree table and analytical table, depends on the delegate implementation and on which SAPUI5 model is used.
 

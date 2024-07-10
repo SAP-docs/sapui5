@@ -25,6 +25,32 @@ The attributes `data-sap-ui-theme="sap_horizon"` and `data-sap-ui-libs="sap.m"` 
 
 
 
+<a name="loioa04b0d10fb494d1cb722b9e341b584ba__section_sct_d5h_4bc"/>
+
+## `Core.ready` State
+
+After bootstrapping, you can use the `sap/ui/core/Core` singleton to either `await` the Core's `ready` state or provide a callback function:
+
+```js
+sap.ui.require(["sap/ui/core/Core"], async (Core) => {
+    // Either usage of Core.ready() as a Promise
+    await Core.ready();
+    // ...
+
+    // Or usage of a callback function
+    Core.ready(() => {
+        // ...
+    });
+});
+```
+
+> ### Note:  
+> The module export of `sap/ui/core/Core` is **not** a class, but the singleton `Core` instance itself.
+> 
+> The `sap.ui.core.Core` class must not be instantiated, except by the framework itself.
+
+
+
 <a name="loioa04b0d10fb494d1cb722b9e341b584ba__section_OBBU"/>
 
 ## Overview of Bootstrap Base URLs

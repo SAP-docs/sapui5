@@ -35,7 +35,7 @@ For information about the `Field` API, see the [API Reference](https://ui5.sap.c
 
 ## Examples
 
-1.  When you use a `Field` building block, the differences in the bound data elements result in different UI appearances. You can see this in the examples given below.
+1.  When you use a `Field` building block, the differences in the bound data elements result in different UI appearances, as shown in the following examples:
 
     -   A data element of type `Time` will appear as an input field with a time picker value help in edit mode.
 
@@ -59,7 +59,7 @@ For information about the `Field` API, see the [API Reference](https://ui5.sap.c
 
         ![](images/Building_Block_Time_Data_Field_f400a6e.png)
 
-    -   A numerical field with a currency using the type `Currency` from sap/cds/common will appear as 2 input fields.
+    -   A numerical field with a currency using the `Currency` type from `sap/cds/common` will appear as 2 input fields.
 
         While the XML in the custom section fragment looks the same as in the previous example, a data element with a currency will appear as 2 input fields: one for the numerical value and one for the selection of the currency in edit mode.
 
@@ -145,11 +145,11 @@ For information about the `Field` API, see the [API Reference](https://ui5.sap.c
         ![](images/Building_Block_Currency_Field_Display_Mode_9e7718e.png)
 
 
-3.  If the referenced data element is configured to have a value list with fixed values, you can use the field building block to render the field as a radio button group. To do this, set `formatOption` as `fieldEditStyle="RadioButtons"` For more information, see [Value Help as a Dropdown List](value-help-as-a-dropdown-list-2a0a630.md).
+3.  If the referenced data element is configured to have a value list with fixed values, you can use the `Field` building block to render the field as a radio button group. To do this, set `formatOption` as `fieldEditStyle="RadioButtons"` For more information, see [Value Help as a Dropdown List](value-help-as-a-dropdown-list-2a0a630.md).
 
     By default, the radio button group is rendered in a vertical layout. You can also configure the radio button group to render in a horizontal layout by setting `radioButtonsHorizontalLayout` as `true` in the `manifest.json` file.
 
-    In the following sample code, the data element `FieldWithFixedValueList` has a value list containing fixed values, and the field building block is configured to render the field as a radio button group in a horizontal layout.
+    In the following sample code, the data element `FieldWithFixedValueList` has a value list containing fixed values, and the `Field` building block is configured to render the field as a radio button group in a horizontal layout.
 
     > ### Sample Code:  
     > XML Annotation
@@ -168,5 +168,19 @@ For information about the `Field` API, see the [API Reference](https://ui5.sap.c
 
     ![](images/Radio_button-horizontal_layout_a267511.png "Radio Buttons in Horizontal
     							Layout")
+
+4.  The `Field` building block can be used for displaying and editing data from a JSON model. It can be used also for presenting a hard-coded string using the `value` property.
+
+    > ### Note:  
+    > This functionality supports text fields, date and time picker, fields with value help, and object status. It doesn't support editing of rating indicator field.
+
+    > ### Sample Code:  
+    > ```
+    > <macros:Field 
+    >     id="myCustomField" 
+    >     metaPath="/RootEntity/name" 
+    >     value="{myJSONModel>/customModelBindingPath}" 
+    > />
+    > ```
 
 

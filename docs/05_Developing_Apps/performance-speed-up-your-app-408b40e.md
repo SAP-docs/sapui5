@@ -37,7 +37,7 @@ Please use the `manifest.json` application descriptor file to declare dependenci
 
 Make sure that you don't load too many dependencies. In most apps it's enough to load the libraries `sap.ui.core` and `sap.m` by default, and add additional libraries only when needed.
 
-If you want to make additional libraries known in your app, without directly loading them during the app start, you can add them to the dependency declaration in the `manifest.json` file with the `lazy` loading option. This makes sure that the libraries are only loaded when they're needed:
+If you want to make additional libraries known in your app, without directly loading them during the app start, you can add them to the dependency declaration in the `manifest.json` file with the `lazy` loading option:
 
 ```json
 "sap.ui5": {
@@ -53,16 +53,12 @@ If you want to make additional libraries known in your app, without directly loa
 ...
 ```
 
-If a library preload contains reuse components and this preload is configured to be loaded lazily \(via `"lazy": true` in the dependencies of the `manifest.json`\), the library isn't available upon creation of the related component.
-
-In the above case you need to use `sap/ui/core/Lib.load({name: "my.heavy.charting"})` before creating the component \(e.g with `Component.create({ name: "my.component" })` or component usage `myComponent.createComponent("myUsage")`\).
-
-An indicator that a component is inside a library is the existence of an entry `sap.app/embeddedBy` in its `manifest.json` file.
+If a library preload is configured to be loaded lazily \(`"lazy": true`\), the library isn't available upon creation of the related component. In this case, you need to ensure yourself that the library is preloaded, e.g. via `sap/ui/core/Lib.load({name: "my.heavy.charting"})`, before any module from that library is used.
 
 **Additional Information:**
 
 -   [Descriptor for Applications, Components, and Libraries \(manifest.json\)](../04_Essentials/descriptor-for-applications-components-and-libraries-manifest-json-be0cf40.md)
--   `API Reference:` [`sap/ui/core/Lib.load()`](https://ui5.sap.com/#/api/sap.ui.core.Lib%23methods/sap.ui.core.Lib.load)
+-   API Reference: [`sap/ui/core/Lib.load()`](https://ui5.sap.com/#/api/sap.ui.core.Lib%23methods/sap.ui.core.Lib.load)
 
 
 

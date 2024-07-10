@@ -14,7 +14,7 @@ The OData V4 model sends requests in the following cases:
 
     Example: Update a sales order's note through a property binding with the relative path `Note`, which has a context with path `/SalesOrderList(SalesOrderID='42')` initiating `PATCH SalesOrderList(SalesOrderID='42')` with the note's value as JSON payload.
 
--   **Explicit requests** triggered through API calls like `ODataListBinding.refresh` or `ODataContextBinding.invoke`
+-   **Explicit requests** initiated through API calls like `ODataListBinding.refresh` or `ODataContextBinding.invoke`
 
 
 For each of these cases, it is possible to specify a group ID of type `string`.

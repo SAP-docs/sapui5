@@ -32,7 +32,7 @@ You can view all files at [OpenUI5 TypeScript Walkthrough - Step 15: Nested View
 In our `webapp/controller` folder we create a new `HelloPanel.controller.ts` file and move the `onShowHello` method from the app controller to it, so we get a reusable asset.
 
 ```js
-*import Controller from "sap/ui/core/mvc/Controller";
+import Controller from "sap/ui/core/mvc/Controller";
 import MessageToast from "sap/m/MessageToast";
 import JSONModel from "sap/ui/model/json/JSONModel";
 import ResourceModel from "sap/ui/model/resource/ResourceModel";
