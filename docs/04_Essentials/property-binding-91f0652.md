@@ -109,6 +109,8 @@ To **remove** a property binding, you can use the `unbindProperty` method. The p
 oTextField.unbindProperty("value");
 ```
 
+You can also bind multiple paths by combining them as parts of a binding. For more information, see [Composite Binding](composite-binding-a2fe8e7.md).
+
 
 
 <a name="loio91f0652b6f4d1014b6dd926db0e91070__section_N10078_N10013_N10001"/>

@@ -20,6 +20,10 @@ Let's get you ready for your journey! We bootstrap SAPUI5 in an HTML page and im
 
 <a name="loio851bde42e4e1410c96abbe402fa9128c__section_zzy_mpc_1gb"/>
 
+## Setup
+
+Install UI5 Tooling globally on your local machine by executing following command `npm install --global @ui5/cli`.
+
 ## Coding
 
 You can view and download all files at [Quick Start - Step 1](https://ui5.sap.com/#/sample/sap.m.tutorial.quickstart.01/preview).

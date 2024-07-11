@@ -11,7 +11,7 @@ This example explains how to use an extension point if you want to apply custom 
 ## Context
 
 > ### Note:  
-> This topic is currently only applicable to SAP Fiori elements for OData V2.
+> This topic is only applicable to SAP Fiori elements for OData V2.
 
 > ### Caution:  
 > Use app extensions with caution and only if you cannot produce the required behavior by other means, such as manifest settings or annotations. To correctly integrate your app extension coding with SAP Fiori elements, use only the `extensionAPI` of SAP Fiori elements. For more information, see [Using the extensionAPI](using-the-extensionapi-bd2994b.md).
@@ -31,7 +31,7 @@ This example explains how to use an extension point if you want to apply custom 
     >       ... 
     >       "sap.ui.controllerExtensions": { 
     >          ...
-    >          "sap.suite.ui.generic.template.ListReport.view.Details": { 
+    >          "sap.suite.ui.generic.template.ObjectPage.view.Details": { 
     >             ... 
     >             "controllerName": "STTA_MP.ext.controller.DetailsExtension",
     >             ...
@@ -43,7 +43,7 @@ This example explains how to use an extension point if you want to apply custom 
 
 2.  Implement your controller extension.
 
-    You have to implement a `onBeforeRebindTableExtension` function within the object page controller extension. Here, it is`DetailsExtension.controller.js`. In this example, three tables are used on the object page.To identify the tables, you should use the table ID.
+    You have to implement a `onBeforeRebindTableExtension` function within the object page controller extension. Here, it is`DetailsExtension.controller.js`. If the object page has multiple tables, use the `tableId` to identify the specific table, as shown in the following example:
 
     > ### Sample Code:  
     > ```

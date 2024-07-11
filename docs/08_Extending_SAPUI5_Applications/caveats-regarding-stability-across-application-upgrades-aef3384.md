@@ -51,5 +51,5 @@ Many possible reasons exist that modifications can not be applied any longer or 
 -   Other extension types have similar caveats.
 
 
-In addition to this, all content changes such as additions, removals, and structure changes may affect CSS and JavaScript code which relies of the position of certain elements in the DOM. Partly these caveats are compatibility requirements for applications, partly they are suggestions for customizing development how to create more robust extensions.
+In addition to this, all content changes such as additions, removals, and structure changes may affect CSS and JavaScript code which relies on the position of certain elements in the DOM. Partly these caveats are compatibility requirements for applications, partly they are suggestions for customizing development how to create more robust extensions.
 

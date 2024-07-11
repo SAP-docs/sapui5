@@ -155,7 +155,7 @@ Feature
 
 **Introduction of `sap.ui.mdc` library \(experimental\)**
 
-We have introduced the `sap.ui.mdc` library experimentally. This library contains smart composite controls that are metadata-driven and allow applications to use them with any SAPUI5 model and any data protocol. For more information, see [sap.ui.mdc \(experimental\)](../10_More_About_Controls/sap-ui-mdc-experimental-1dd2aa9.md) and the [API Reference](https://ui5.sap.com/#/api/sap.ui.mdc).
+We have introduced the `sap.ui.mdc` library experimentally. This library contains smart composite controls that are metadata-driven and allow applications to use them with any SAPUI5 model and any data protocol. For more information, see [sap.ui.mdc](../10_More_About_Controls/sap-ui-mdc-1dd2aa9.md) and the [API Reference](https://ui5.sap.com/#/api/sap.ui.mdc).
 
 <sub>New•Feature•Info Only•1.115</sub>
 
@@ -712,6 +712,10 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.123](what-s-new-in-sapui5-1-123-9d00ac7.md "With this release SAPUI5 is upgraded from version 1.122 to 1.123.")
+
+[What's New in SAPUI5 1.122](what-s-new-in-sapui5-1-122-5d078da.md "With this release SAPUI5 is upgraded from version 1.121 to 1.122.")
 
 [What's New in SAPUI5 1.121](what-s-new-in-sapui5-1-121-91a4a2f.md "With this release SAPUI5 is upgraded from version 1.120 to 1.121.")
 

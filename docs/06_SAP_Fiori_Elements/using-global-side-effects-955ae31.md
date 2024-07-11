@@ -5,7 +5,7 @@
 Global side effects are those side effects that are defined without any source properties or source entities.
 
 > ### Note:  
-> Global side effecst are only applicable to draft-enabled applications.
+> Global side effects are only applicable to draft-enabled applications.
 
 Global side effects can be annotated under each entity separately. When you press [Enter\] on any input field, the global side effect defined under the corresponding entity is triggered.
 

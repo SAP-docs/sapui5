@@ -93,7 +93,7 @@ Clicking the drop-down arrow opens a menu with two additional options:
 ![](images/Object_Page_Options_for_Export_to_Excel_8bd12db.png)
 
 > ### Note:  
-> -   You can export the custom columns you have defined using manifest settings. To allow the export of your custom column, you must maintain the `"properties"` array in the definition of the custom column. For more information about defining custom columns, see the *Extension Points for Tables* section in [Extension Points for Tables](extension-points-for-tables-d525522.md).. The properties will be exported into the spreadsheet as described for a `FieldGroup`.
+> -   You can export the custom columns you have defined using manifest settings. To allow the export of your custom column, you must maintain the `"properties"` array in the definition of the custom column. For more information about defining custom columns, see the *Extension Points for Tables* section in [Extension Points for Tables](extension-points-for-tables-d525522.md). The properties will be exported into the spreadsheet as described for a `FieldGroup`.
 > 
 > -   If your domain model contains sensitive data \(data annotated as `PersonalData.IsPotentiallySensitive`\), enabling the export to a spreadsheet could lead to exposing this data, as the end user cannot choose where the data will be stored. You can disable the export feature using the `enableExport` property in the manifest. This ensures that access control is enforced and stays within the application.
 
@@ -103,6 +103,73 @@ Clicking the drop-down arrow opens a menu with two additional options:
 > -   Columns containing a property with a dynamic `UI.Hidden` expression are still exported.
 > 
 > -   The numbers exceeding 15 digits are rounded in the spreadsheet file \(this is a JavaScript restriction\).
+
+You can influence how both regular and custom columns are exported. To do that, set the following properties in the `Columns` key of the `manifest.json`:
+
+-   `type`: Data type of the field. If this property is omitted, the property is processed as a string field. For the list of supported types, see [`sap.ui.export.EdmType`](https://ui5.sap.com/#/api/sap.ui.export.EdmType).
+
+-   `properties`: A field name or an array of field names in the data source feed.
+
+-   `template`: A formatting template that supports indexed placeholders within curly brackets.
+
+-   `width`: Width of the column in characters. There is no 1:1 correspondence between character widths in the exported spreadsheet and CSS units. The width of one character is approximately 0.5 em in CSS units, depending on the fonts that are used in the table and in the resulting spreadsheet. The default value is 10 characters.
+
+
+> ### Restriction:  
+> This export to spreadsheet configuration is not supported when using the `Table` building block.
+
+> ### Sample Code:  
+> `manifest.json`
+> 
+> ```json
+> "controlConfiguration": {
+>     "@com.sap.vocabularies.UI.v1.LineItem": {
+>         "tableSettings": {
+>             "personalization": true
+>         },
+>         "columns": {
+>             "DataField::OverallSDProcessStatus": {
+>                 "horizontalAlign": "Center",
+>                 "exportSettings":
+>                 {
+>                     "template": "{0}",
+>                     "width": "5"
+>                 }
+>             },
+>             "CustomColumnSorting":{
+>                 "header": " {i18n > LRCustomColumnSorting}",
+>                 "availability": "Default",
+>                 "template": "SalesOrder.custom.CustomColumn.CustomColumnSorting",
+>                 "properties": [
+>                     "ID",
+>                     "TotalNetAmount",
+>                     "_CustomerPaymentTerms/CustomerPaymentTerms",
+>                     "_ShipToParty/BusinessPartner"
+>                 ],
+>                 "exportSettings":
+>                 {
+>                     "property": ["ID", "TotalNetAmount"],
+>                     "template": " {0} {1}",
+>                     "type": "String",
+>                     "width": "100"
+>                 }
+>             }
+>         }
+>     }
+> }
+> ```
+
+  
+  
+**Example of a Table To Be Exported to a Spreadsheet**
+
+![](images/Example_of_a_table_to_be_exported_to_a_spreadsheet_4f3fed0.png "Example of a Table To Be Exported to a Spreadsheet")
+
+  
+  
+**Example of the Exported Spreadsheet**
+
+![](images/Example_of_an_exported_spreadsheet_1400ee1.png "Example of the Exported Spreadsheet")
 
 
 

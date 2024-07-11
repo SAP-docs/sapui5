@@ -63,13 +63,12 @@ In the `manifest.json` descriptor file of your app, you can now change the data 
 
 ```js
 {
-  "_version": "1.12.0",
+  "_version": "1.59.0",
   "sap.app": {
 	...
 	"dataSources": {
 	  "invoiceRemote": {
-
-		"uri": "Northwind/V2/northwind/northwind.svc/",
+		"uri": "/V2/Northwind/Northwind.svc/",
 		"type": "OData",
 		"settings": {
 		  "odataVersion": "2.0"

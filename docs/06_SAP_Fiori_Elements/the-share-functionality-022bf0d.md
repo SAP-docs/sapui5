@@ -14,7 +14,7 @@ The *Share* functionality allows users to share the current application state us
 
 -   *Save as Tile*
 
-    When a user chooses this option, the corresponding *Save as Tile*When a user chooses this option, the link to the page opens in the default email client that is configured in the system. When a dialog is displayed. When a user chooses the tile, the application page opens in the same state in which the tile was created. Application developers can customize the title and the sub-title of the tile. In the list report, a dynamic tile with a record count is created, where the applied filter is also taken into account.
+    When a user chooses this option, the corresponding *Save as Tile*. When a user chooses this option, the link to the page opens in the default email client that is configured in the system. When a dialog is displayed. When a user chooses the tile, the application page opens in the same state in which the tile was created. Application developers can customize the title and the sub-title of the tile. In the list report, a dynamic tile with a record count is created, where the applied filter is also taken into account.
 
 -   *Share: Microsoft Teams*
 
@@ -40,7 +40,7 @@ The *Share* functionality allows users to share the current application state us
 
     Please note the following:
 
-    The *Share: Microsoft Teams* option is only available if the required settings have been made by a system administrator. The *Share: Microsoft Teams* option is part of collaborative ERP \(enterprise resource planning\) within the SAP S/4HANA family of products. So this option is not available for all users.
+    The *Share: Microsoft Teams* option is only available if the required settings have been made by a system administrator. The *Share: Microsoft Teams* option is part of collaborative ERP \(enterprise resource planning\) within either SAP S/4HANA Cloud or SAP S/4HANA. So this option is not available for all users.
 
     -   System administrators for SAP S/4HANA Cloud can find the required information at [Integrating Microsoft Teams](https://help.sap.com/docs/SAP_S4HANA_CLOUD/0f69f8fb28ac4bf48d2b57b9637e81fa/257ec7408db6420682462cd1d000e744.html).
 

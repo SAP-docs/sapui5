@@ -2,7 +2,7 @@
 
 # Prefilling Fields When Creating a New Entity Using an Extension Point
 
-When you create a new entity, y can prefill fields with specific values.
+When you create a new entity, you can prefill fields with specific values.
 
 > ### Note:  
 > This topic is currently only applicable to SAP Fiori elements for OData V2.

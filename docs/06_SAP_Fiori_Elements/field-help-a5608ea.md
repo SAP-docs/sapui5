@@ -514,7 +514,7 @@ Some scenarios require more than one value help.
 
 ### Value Help with `TextArrangement`
 
-You can use the `UI.TextArrangement` annotation to configure the display format of a table column of the value help. The following two options are available:
+You can use the `UI.TextArrangement` annotation to configure the display format of a table column of the value help. The following options are available:
 
 -   Value Help with a Dialog
 
@@ -784,6 +784,41 @@ You can use the `UI.TextArrangement` annotation to configure the display format 
     </table>
     
     \*2\): If you define the `Common.Text` annotation without the `UI.TextArrangement`, the display format is `DescriptionValue`.
+
+-   Best Practices for Value Help for `Edm.Guid`Type Fields
+
+    For `Edm.Guid` type fields, you must not define the `Common.Text` annotation with the description path and the `Common.TextArrangement` with the `TextOnly` display format. Instead, annotate the `Common.ExternalID` with the description path, as shown in the following example:
+
+    > ### Sample Code:  
+    > Using Annotation `Common.ExternalID`
+    > 
+    > ```
+    >     category @Common : {
+    >         //Text : category.name,
+    >         //TextArrangement : #TextOnly,
+    >         ExternalID : category.name, //or readable identifier
+    >         FieldControl : #Mandatory,
+    >         ValueList : {
+    >             $Type : 'Common.ValueListType',
+    >             CollectionPath : 'Categories',
+    >             Label : '{i18n>Categories}',
+    >             Parameters : [
+    >                 {
+    >                     $Type : 'Common.ValueListParameterInOut',
+    >                     LocalDataProperty : category_ID,
+    >                     ValueListProperty : 'ID',
+    >                 }
+    >                 ,
+    >                 {
+    >                     $Type : 'Common.ValueListParameterDisplayOnly',
+    >                     ValueListProperty : 'name',
+    >                 },
+    >             ],
+    >         },
+    >     };
+    > ```
+
+    For more information about using `Common.ExternalID` annotation, see [Displaying Readable IDs Instead of Edm.Guid Values Using Common.ExternalID](further-features-of-the-field-f49a0f7.md#loiof49a0f7eaafe444daf4cd62d48120ad0__section_fy3_gpy_gbc).
 
 
 > ### Tip:  

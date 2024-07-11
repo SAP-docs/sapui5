@@ -1,6 +1,6 @@
 <!-- loio1dd2aa91115d43409452a271d11be95b -->
 
-# sap.ui.mdc \(experimental\)
+# sap.ui.mdc
 
 The `sap.ui.mdc` library contains composite, metadata-driven controls that assemble UI elements with predefined user experience and various functionalities. The controls can be used as a basis for scalable application development and can be implemented for use with any SAPUI5 model and data protocol.
 

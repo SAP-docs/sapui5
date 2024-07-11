@@ -12,6 +12,11 @@ Most modern web browsers contain some form of Developer Tools. They allow you to
 
 ## Opening the Example App and the Developer Tools
 
+<-- Add the following lines to the package.json : 
+"scripts": {
+  "start": "ui5 serve -o index.html"
+},
+-->
 1.  Download the example app with errors at [Troubleshooting](https://ui5.sap.com/#/entity/sap.ui.core.tutorial.troubleshooting/sample/sap.ui.core.tutorial.troubleshooting.01).
 
 2.  Extract the downloaded `.zip` file at the desired location on your local machine.
@@ -88,7 +93,7 @@ Most modern web browsers contain some form of Developer Tools. They allow you to
 
 2.  Examine the `button` element by expanding the structure.
 
-3.  On the *Console* tab, enter `myView=sap.ui.require("sap/ui/core/Element").getElementbyId("container-HeapOfShards---app")`.
+3.  On the *Console* tab, enter `myView=sap.ui.require("sap/ui/core/Element").getElementById("container-HeapOfShards---app")`.
 
 4.  On the *Console* tab, enter `myView.byId("myButton")`.
 
@@ -122,7 +127,7 @@ Most modern web browsers contain some form of Developer Tools. They allow you to
 > <tr>
 > <td valign="top">
 > 
-> `Element.getElementbyId("container-HeapOfShards---app--myButton")`, with `Element` required from module `sap/ui/core/Element` 
+> `Element.getElementById("container-HeapOfShards---app--myButton")`, with `Element` required from module `sap/ui/core/Element` 
 > 
 > </td>
 > <td valign="top">

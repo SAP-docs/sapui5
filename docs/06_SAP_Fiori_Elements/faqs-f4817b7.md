@@ -96,7 +96,7 @@ You can get answers to the commonly asked questions, know more about SAP Fiori e
 
 -   **I need to show a warning message when a user triggers an action to ensure the user confirms that the action really should be executed. Can this be achieved?**
 
-    Yes. For more information, see the *Confirmation Popup for Actions that Fail with 412 Warnings* section in [Confirmation Popups](confirmation-popups-9a53662.md).
+    Yes. For more information, see the [Confirmation Popup for Actions that Fail with 412 Warnings](confirmation-popups-9a53662.md#loio9a536627a6a94de084b0605eb164d2c8__section_n3z_htm_vsb) section in [Confirmation Popups](confirmation-popups-9a53662.md).
 
 
 
@@ -117,15 +117,15 @@ You can get answers to the commonly asked questions, know more about SAP Fiori e
 
 -   **How can I be sure that sensitive data isn't sent across when navigating between SAP Fiori elements applications? Can I explicitly keep certain information out of the navigation context?**
 
-    You can check the *Handling Sensitive and Inapplicable Data* section of *Additional Features in SAP Fiori elements for OData V4* in [Navigation from an App \(Outbound Navigation\)](navigation-from-an-app-outbound-navigation-d782acf.md).
+    You can check the [Handling Sensitive and Inapplicable Data](navigation-from-an-app-outbound-navigation-d782acf.md#loiod782acf8bfd74107ad6a04f0361c5f62__sensitive_inapplicable_data_subsection) subsection in [Navigation from an App \(Outbound Navigation\)](navigation-from-an-app-outbound-navigation-d782acf.md).
 
 -   **My source app and target app use different field names for the same business field. How can I ensure that the correct context value for a field is passed during navigation?**
 
-    You can use the mechanism described in the *Semantic Object Mapping* section in the *Additional Features in SAP Fiori elements for OData V4* of [Navigation from an App \(Outbound Navigation\)](navigation-from-an-app-outbound-navigation-d782acf.md).
+    You can use the mechanism described in the [Semantic Object Mapping](navigation-from-an-app-outbound-navigation-d782acf.md#loiod782acf8bfd74107ad6a04f0361c5f62__semantic_object_mapping_subsection) subsection in [Navigation from an App \(Outbound Navigation\)](navigation-from-an-app-outbound-navigation-d782acf.md).
 
 -   **I don’t want users to see certain intents when using the navigation links. Can I exclude them?**
 
-    Yes, you can use the `Common.SemanticObjectUnavailableActions` annotation as described in the *Hiding Unwanted Actions from a Semantic Object* section in *Additional Features in SAP Fiori elements for OData V4* in [Navigation from an App \(Outbound Navigation\)](navigation-from-an-app-outbound-navigation-d782acf.md).
+    Yes, you can use the `Common.SemanticObjectUnavailableActions` annotation as described in the [Hiding Unwanted Actions from a Semantic Object](navigation-from-an-app-outbound-navigation-d782acf.md#loiod782acf8bfd74107ad6a04f0361c5f62__hiding_unwanted_actions_subsection) subsection in [Navigation from an App \(Outbound Navigation\)](navigation-from-an-app-outbound-navigation-d782acf.md).
 
 -   **Is it possible to directly navigate to an object page or subobject page without loading the list report app?**
 
@@ -144,19 +144,19 @@ You can get answers to the commonly asked questions, know more about SAP Fiori e
 
 -   **How can I ensure that my action is enabled only upon selection of table records? How can I ensure that the context is passed to the action?**
 
-    You can configure your actions using specific annotations. For more information about bound/unbound actions, see the *Actions Calling OData Function Imports* section in the *Additional Features in SAP Fiori elements for OData V4* in [Actions](actions-cbf16c5.md).
+    You can configure your actions using specific annotations. For more information about bound/unbound actions, see the [Actions Calling OData Function Imports](actions-cbf16c5.md#loiocbf16c599f2d4b8796e3702f7d4aae6c__actions_calling_subsection) subsection in [Actions](actions-cbf16c5.md).
 
 -   **How can end users pass additional parameters to the action? Can these action parameters have default values?**
 
-    Yes, the action parameters can have default values. For more information, see the *Action Parameters* section in the *Additional Features in SAP Fiori elements for OData V4* in [Actions](actions-cbf16c5.md).
+    Yes, the action parameters can have default values. For more information, see the [Action Parameters](actions-cbf16c5.md#loiocbf16c599f2d4b8796e3702f7d4aae6c__action_parameters_subsection) subsection in [Actions](actions-cbf16c5.md).
 
 -   **Is it possible to group my actions under a menu button?**
 
-    Yes, you can group actions under a menu button. For more information, see the *Grouping Actions as Menu Button* section in the *Additional Features in SAP Fiori elements for OData V4* in [Actions](actions-cbf16c5.md).
+    Yes, you can group actions under a menu button. For more information, see the [Grouping Actions as Menu Button](actions-cbf16c5.md#loiocbf16c599f2d4b8796e3702f7d4aae6c__grouping_actions_subsection) subsection in [Actions](actions-cbf16c5.md).
 
 -   **How do I control the visibility/enablement of the standard *Create* button in a list report table?**
 
-    You can control the visibility or enablement of the standard *Create* button in a list report table by using the `OperationAvailable` annotation. For more information, see the *Standard Action: Create* section in the *Additional Features in SAP Fiori elements for OData V4* in [Actions in the List Report](actions-in-the-list-report-993e99e.md).
+    You can control the visibility or enablement of the standard *Create* button in a list report table by using the `OperationAvailable` annotation. For more information, see the [Standard Action: Create](actions-in-the-list-report-993e99e.md#loio993e99eae4414b73bc7afef9518c79bf__standard_action_create_subsection) subsection in [Actions in the List Report](actions-in-the-list-report-993e99e.md).
 
 -   **Can I define app-level critical actions that are shown emphasized rather than the default emphasized buttons such as *Edit* and *Save* of SAP Fiori elements?** 
 
@@ -179,7 +179,7 @@ You can get answers to the commonly asked questions, know more about SAP Fiori e
 
 -   **Is there a support for parameterized entities to ensure that the users can provide parameters \(for example, `DisplayCurrency`\) in the filter bar that are then handled accordingly in the back end? That is, not as filters but as parameters to normalize the unit of measure or currency, for example?**
 
-    Yes, we support parameterized entity sets. For more information, see the *Supporting Parameterized Entities* section in the *Additional Features in SAP Fiori elements for OData V4* in [Configuring Filter Bars](configuring-filter-bars-4bd7590.md).
+    Yes, we support parameterized entity sets. For more information, see the [Supporting Parameterized Entities](configuring-filter-bars-4bd7590.md#loio4bd7590569c74c61a0124c6e370030f6__suppprting_parameterized_entities_subsection) subsection in [Configuring Filter Bars](configuring-filter-bars-4bd7590.md).
 
 -   **I want my users to be able to filter for a value based on the associated measure. For example, to filter the month that has the highest sales. Is this possible?**
 
@@ -248,7 +248,7 @@ You can get answers to the commonly asked questions, know more about SAP Fiori e
 
     SAP Fiori elements also supports several table types. You can show or hide columns of list report and object page tables depending on the screen width. For example, if the browser window is small or the app is running on a device with a small screen, or if you're using the flexible column layout.
 
-    The value of the `UI.Importance` annotation for the field determines which columns are hidden or moved when the screen size is reduced. For more information, see the *Show/Hide Columns Based on Importance and Available Screen Size* section in [Tables](tables-c0f6592.md).
+    The value of the `UI.Importance` annotation for the field determines which columns are hidden or moved when the screen size is reduced. For more information, see the [Showing or Hiding Columns Based on Importance and Available Screen Size in Responsive Tables](tables-c0f6592.md#loioc0f6592a592e47f9bb6d09900de47412__section_kgk_phh_wpb) section in [Tables](tables-c0f6592.md).
 
 -   **Can I allow users to edit multiple records in one go \(mass edit or bulk edit\)?**
 
@@ -273,7 +273,7 @@ You can get answers to the commonly asked questions, know more about SAP Fiori e
 
 -   **What is the main difference in the handling of aggregations in OData V2 and OData V4?**
 
-    In OData V2, the UI has to pass only the required properties in the call and the back end ensures that an aggregation is performed on all the measure properties. In OData V4, the client has to explicitly pass the properties as dimensions or measures when the call is made, thus allowing greater flexibility while using the property. For more information, see the *Enabling Aggregation in the Back End* section in the *Additional Features in SAP Fiori elements for OData V4* in [Configuring Charts](configuring-charts-653ed0f.md).
+    In OData V2, the UI has to pass only the required properties in the call and the back end ensures that an aggregation is performed on all the measure properties. In OData V4, the client has to explicitly pass the properties as dimensions or measures when the call is made, thus allowing greater flexibility while using the property. For more information, see the [Enabling Aggregation in the Back End](configuring-charts-653ed0f.md#loio653ed0f4f0d743dbb33ace4f68886c4e__enabling_aggregation_subsection) subsection in [Configuring Charts](configuring-charts-653ed0f.md).
 
 -   **Can I use charts in the list report, especially in a draft-based lt report and an object page, or is the use of charts limited to the ALP flavor of the list report?**
 
