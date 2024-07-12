@@ -12,21 +12,24 @@ Most modern web browsers contain some form of Developer Tools. They allow you to
 
 ## Opening the Example App and the Developer Tools
 
-<-- Add the following lines to the package.json : 
-"scripts": {
-  "start": "ui5 serve -o index.html"
-},
--->
+
+
 1.  Download the example app with errors at [Troubleshooting](https://ui5.sap.com/#/entity/sap.ui.core.tutorial.troubleshooting/sample/sap.ui.core.tutorial.troubleshooting.01).
 
 2.  Extract the downloaded `.zip` file at the desired location on your local machine.
-3.  Open a shell in the extracted folder and execute `npm install`.
-4.  Execute `npm start` to start the web server and to open a new browser window hosting your newly created `index.html`.
+3.  Add the following lines to the package.json : 
+  ```
+  "scripts": {
+    "start": "ui5 serve -o index.html"
+  },
+  ```
+4.  Open a shell in the extracted folder and execute `npm install`.
+5.  Execute `npm start` to start the web server and to open a new browser window hosting your newly created `index.html`.
 
     > ### Note:  
     > If you run the app within the Demo Kit frame, this step will not work as described. Open the app in a new tab first with ![Open in New Tab](images/Icon_Open_in_New_Tab_ebdf48e.png).
 
-5.  Open the *Developer Tools* by pressing [F12\].
+6.  Open the *Developer Tools* by pressing [F12\].
 
 
 
