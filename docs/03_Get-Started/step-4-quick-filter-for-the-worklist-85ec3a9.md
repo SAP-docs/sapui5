@@ -26,11 +26,12 @@ You can view and download all files in the Demo Kit at [Worklist App - Step 4](h
 
 ```xml
 <mvc:View
-	controllerName="myCompany.myApp.controller.Worklist"
+	controllerName="mycompany.myapp.MyWorklistApp.controller.Worklist"
+	xmlns="sap.m"
 	xmlns:mvc="sap.ui.core.mvc"
-	xmlns:semantic="sap.m.semantic"
-	xmlns="sap.m">
-	<semantic:FullscreenPage
+	xmlns:semantic="sap.f.semantic">
+
+	<semantic:SemanticPage
 		id="page"
 		navButtonPress="onNavBack"
 		showNavButton="true"
@@ -80,7 +81,7 @@ You can view and download all files in the Demo Kit at [Worklist App - Step 4](h
 				id="shareEmail"
 				press="onShareEmailPress"/>
 		</semantic:sendEmailAction>
-	</semantic:FullscreenPage>
+	</semantic:SemanticPage>
 </mvc:View>
 
 ```
