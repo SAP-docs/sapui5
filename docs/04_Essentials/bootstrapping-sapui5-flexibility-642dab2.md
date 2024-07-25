@@ -12,7 +12,19 @@ You can define an alternative route from where to load SAPUI5 flexibility.
 
 If you want SAPUI5 flexibility to be loaded from the default location as part of the SAPUI5 bootstrap, you don't need to do anything.
 
-If you'd like to disable SAPUI5 flexibility during SAPUI5 bootstrap, set the parameter value to an empty string.
+If you have a specific use case, you can change the default behavior using the `flexibilityServices` parameter in the SAPUI5 bootstrap. For example, if you'd like to disable SAPUI5 flexibility during SAPUI5 bootstrap, set the value of the `flexibilityServices` parameter to an empty string. Here's an example
+
+> ### Sample Code:  
+> ```
+> <script
+>     id="sap-ui-bootstrap"
+>     src=resources/sap-ui-core.js       
+> 
+>     data-sap-ui-flexibilityServices=""
+>     data-sap-ui-preload="async" >
+> </script>
+> 
+> ```
 
 
 
@@ -63,7 +75,7 @@ Description
 </td>
 <td valign="top">
 
-`CUSTOMER`
+`CUSTOMER, PUBLIC, USER`
 
 </td>
 <td valign="top">
@@ -82,7 +94,7 @@ For more information, see [Developing Applications Running Standalone](https://h
 </td>
 <td valign="top">
 
-`CUSTOMER`
+`CUSTOMER, PUBLIC`
 
 </td>
 <td valign="top">
@@ -131,7 +143,7 @@ Description
 </td>
 <td valign="top">
 
-`CUSTOMER, USER`
+`CUSTOMER, PUBLIC, USER`
 
 </td>
 <td valign="top">

@@ -24,7 +24,36 @@ The control allows the consuming application to build list patterns based on ODa
 The consuming application can overwrite the OData default information. The `SmartTable` control offers you additional built-in features, such as a row count and an export to a spreadsheet application.
 
 > ### Note:  
-> Once the `SmartTable` control has been initialized, most of the property and aggregation changes \(for example, for `entitySet` or `persistencyKey`\) won't have any effect. Also, **any changes of the inner table are not recognized**, for example, by the personalization settings, and therefore **must not be made**.
+> Once the `SmartTable` control has been initialized, most of the property and aggregation changes \(for example, for `entitySet` or `persistencyKey`\) won't have any effect. Some of these static properties are the following:
+> 
+> -   `entitySet`
+> 
+> -   `ignoredFields`
+> 
+> -   `initiallyVisibleFields`
+> 
+> -   `ignoreFromPersonalisation`
+> 
+> -   `tableType`
+> 
+> -   `useTablePersonalisation`
+> 
+> -   `enableAutoBinding`
+> 
+> -   `persistencyKey`
+> 
+> -   `smartFilterId`
+> 
+> -   `showDetailsButton`
+> 
+> -   `enableAutoColumnWidth`
+> 
+> -   `customizeConfig`
+> 
+> -   `useColumnLabelsAsTooltips`
+> 
+> 
+> Also, **any changes of the inner table are not recognized**, for example, by the personalization settings, and therefore **must not be made**.
 
 
 

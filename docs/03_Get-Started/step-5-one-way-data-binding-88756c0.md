@@ -10,9 +10,9 @@ In contrast to the two-way binding behavior shown above, one-way data binding is
 
   
   
-**Two-way data binding disabled for the checkbox**
+**Two input fields and a checkbox**
 
-![](images/Tutorial_Data_Binding_Step_4_61d68f1.png "Two-way data binding disabled for the checkbox")
+![The graphic has an explanatory text](images/Tutorial_Data_Binding_Step_4_61d68f1.png "Two input fields and a checkbox")
 
 
 

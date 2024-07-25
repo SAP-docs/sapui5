@@ -369,7 +369,7 @@ Extend the manifest for the filter field as follows to set a default value for a
 > 
 > ```
 
-The value set to `operator` is set as the default operator for the semantic date field. In this case, the default value is `"YESTERDAY"`. Currently, `"defaultValues"` support only operators that don't need parameter values: `NextXDays`, for example, isn’t supported because it requires `"X"` \(the number of days as a parameter\).
+The value set to `operator` is set as the default operator for the semantic date field. In this case, the default value is `"YESTERDAY"`.
 
 Here's a list of fully supported operators:
 
@@ -892,6 +892,95 @@ You can use the `operatorConfiguration` settings to include and exclude specific
     >     > ### Example:  
     >     > If `"_Items"` is the navigation property and `"DispatchDate"` is the property, then the `filterField` for which `"settings"` is defined will be `"_Items::DispatchDate"`.
 
+
+
+
+### Enabling Additional Date Range Operators
+
+You can now use additional date range operators for single range-based fields of type `Edm.Date` or `Edm.DateTimeOffset`. Using these operators, you can combine the single value date operators, such as `TODAY` or `TOMORROW,` with the *FROM* or *TO* operations.
+
+The following additional operators are available:
+
+-   "FROMTODAY"
+
+-   "FROMTOMORROW"
+
+-   "FROMYESTERDAY"
+
+-   "FROMFIRSTDAYWEEK"
+
+-   "FROMLASTDAYWEEK"
+
+-   "FROMFIRSTDAYMONTH"
+
+-   "FROMLASTDAYMONTH"
+
+-   "FROMFIRSTDAYQUARTER"
+
+-   "FROMLASTDAYQUARTER"
+
+-   "FROMFIRSTDAYYEAR"
+
+-   "FROMLASTDAYYEAR"
+
+-   "TOTODAY"
+
+-   "TOTOMORROW"
+
+-   "TOYESTERDAY"
+
+-   "TOFIRSTDAYWEEK"
+
+-   "TOLASTDAYWEEK"
+
+-   "TOFIRSTDAYMONTH"
+
+-   "TOLASTDAYMONTH"
+
+-   "TOFIRSTDAYQUARTER"
+
+-   "TOLASTDAYQUARTER"
+
+-   "TOFIRSTDAYYEAR"
+
+-   "TOLASTDAYYEAR"
+
+
+These additional semantic date operators are not available by default. To enable them, you can extend the manifest configuration as shown in the following sample code:
+
+> ### Sample Code:  
+> ```
+> "targets": {
+>    "SalesOrderManageList": {
+>       "options": {
+>          "settings": {
+>             "controlConfiguration": {
+>                "@com.sap.vocabularies.UI.v1.SelectionFields": {
+>                   "filterFields": {
+>                      "SalesOrderDate": {
+>                         "settings": {
+>                            "operatorConfiguration": [
+>                            {
+>                               "path": "key",
+>                               "equals": "FROMTODAY",
+>                               "exclude": false // By default, "exclude" is set to true for all these additional date range operators and have to be explicitly set to false in case the operator needs to be enabled
+>                            },
+>                           {
+>                              "path": "key",
+>                              "equals": "TOYESTERDAY",
+>                              "exclude": false
+>                           }]
+>                        }
+>                     },
+>                     …….
+>                     …….
+>                  }
+> ```
+
+You can also use these additional semantic date range operators as default values for the filter fields.
+
+> ### Note:  
+> These operators are not available when using the `Filter Bar` building block. They are also not available as filters in the table or chart within the object page.
 
 
 

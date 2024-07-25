@@ -38,7 +38,7 @@ For the filter control variant or the page variant, the following behavior appli
 -   SAP Fiori elements loads the user's default variant \(if configured\) when navigation to the list report template is triggered with **no** navigation context. If no user default variant is found, the standard variant is used as the fallback option. Only in this case does SAP Fiori elements apply the user default values of FLP.
 
 
-For more information, see [Loading Behavior Based on the Chosen Variant](loading-behavior-based-on-the-chosen-variant-9f4e119.md).
+For more information, see [Loading Behavior of Data on Initial Launch of the Application](loading-behavior-of-data-on-initial-launch-of-the-application-9f4e119.md).
 
 <a name="topic_ctc_rlg_mqb"/>
 

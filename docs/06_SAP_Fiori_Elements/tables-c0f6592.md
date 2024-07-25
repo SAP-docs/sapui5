@@ -14,6 +14,10 @@ The following table types are available:
 
     Desktop-centric table type that allows users to scroll in both directions. This table type can handle a large number of items and columns.
 
+-   Tree table
+
+    This table type provides a comprehensive set of features to display hierarchical data.
+
 -   Analytical table
 
     Contains data structured in rows and columns. It provides several powerful options for working with data, including advanced grouping and aggregations.

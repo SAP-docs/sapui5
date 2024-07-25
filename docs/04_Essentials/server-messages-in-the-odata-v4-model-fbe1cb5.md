@@ -270,6 +270,8 @@ There are three different channels for transporting messages to the client:
 
 Only transition messages are transported in the error response. The messages may be bound or unbound. Error messages are always reported in the error response in JSON format, as described in the OData JSON Format Version 4.0 in Section *19 Error Response*, with the following additions:
 
+-   If more than one message should be returned, the outer message needs to be any of the error messages. All other messages are provided as detail messages. All messages, both the outer and the detail messages, are reported to the message model.
+
 -   The instance annotation `com.sap.vocabularies.Common.v1.longtextUrl` can be used to provide a long text URL, which can be a relative or an absolute path. Relative paths are treated as relative to the request URL. Absolute paths are treated as relative to the server.
 
 -   `target` is relative to the requested resource.

@@ -2,7 +2,7 @@
 
 # Spreadsheet Export Configuration
 
-To perform a spreadsheet export for any content other than `SmartTable`, you have to set up the configuration for the columns and data sources, and you can configure some other additional properties.
+To perform a spreadsheet export for any content other than `SmartTable` or `sap.ui.mdc.Table`, you have to set up the configuration for the columns and data sources, and you can configure some other additional properties.
 
 
 
@@ -269,7 +269,7 @@ The `label` property is optional, and its value must be of type `string`. Its va
 
 The optional `type` property defines the data type for this column and needs to match one of the values of the `sap.ui.export.EdmType` enumeration. If the `type` property has not been defined or the enumeration does not contain its value, the default type \(`sap.ui.export.EdmType.String`\) is used. For more information, see the [API Reference: `EdmType`](https://ui5.sap.com/#/api/sap.ui.export.EdmType). 
 
-The optional `width` property defines the column width based on the number of characters that can be visible. The Office Open XML spreadsheet standard uses a width calculation that is not equivalent to the CSS sizes. Therefore, the calculation is handled by the library. If no `width` property has been provided, or if its value is greater than *1*, the default width is used. The default width is 10 characters. If the column header text has a length that is greater than the actual width, it will override the width with the length of the column header text.
+The optional `width` property defines the column width based on the number of characters that can be visible. The Office Open XML spreadsheet standard uses a width calculation that is not equivalent to the CSS sizes. Therefore, the calculation is handled by the library. If no `width` property has been provided, or if its value is smaller than *1*, the default width is used. The default width is 10 characters. If the column header text has a length that is greater than the actual width, it will override the width with the length of the column header text.
 
 The optional `textAlign` property defines the horizontal text alignment. Its value must be of type `string` and either be `left`, `right`, or `center`. Other CSS alignments like `begin` or `end` are not supported. If no `textAlign` property has been provided or its value is empty or not supported, the default alignment is used. The default alignment is defined by the type of the column. This is done by the application using the scenario and the generated Office Open XML spreadsheet, for example, Microsoft Excel.
 
@@ -317,7 +317,7 @@ var exportConfiguration = {
 
 ### Data Source Configuration
 
-Apart from the column configuration, data source configuration is the most important configuration for the export process. Data source configuration is mandatory. It can be a JSON array containing all data, a JSON object, `sap.ui.model.ListBinding`, or `sap.ui.model.TreeBinding` with the following properties:
+Apart from the column configuration, data source configuration is the most important configuration for the export process. Data source configuration is mandatory. It can be a JSON array containing all data, a JSON object, `sap.ui.model.ListBinding`, or `sap.ui.model.TreeBinding`. If it is a JSON object, the following properties are required:
 
 **Data Source Configuration Properties**
 
@@ -407,7 +407,7 @@ Request URL that is needed to request the data with all the filters and its orde
 </td>
 <td valign="top">
 
-URL of the data service that serves the entity which is requested by the `dataUrl`". It is usually a substring of `dataUrl`. The URL can either be relative or absolute. If `dataUrl` is relative, `serviceUrl` must not be absolute.
+URL of the data service that serves the entity which is requested by the `dataUrl`. It is usually a substring of `dataUrl`. The URL can either be relative or absolute. If `dataUrl` is relative, `serviceUrl` must not be absolute.
 
 > ### Note:  
 > This property is required if OData batch requests are enabled.
@@ -655,6 +655,11 @@ We recommend to use this property because there are often several similar apps t
 
 Identifies the application version through which a particular Office Open XML spreadsheet was created. This can be helpful for debugging because you can identify the version that caused the issues and compare it to previous builds. The more detailed your version information is, the easier it will be to identify your application changes within your source code management system.
 
+> ### Note:  
+> You can only include the major and minor version in the version information. If you use more than one period as a separator, this can cause corrupt spreadsheet files in some system locales, which is also checked by the validation.
+
+
+
 </td>
 </tr>
 <tr>
@@ -741,7 +746,7 @@ var exportConfiguration = {
     workbook: {
         context: {
             application: "Supplier Invoices List",
-            version: "6.1.0-SNAPSHOT",
+            version: "6.1",
             title: "Supplier Invoices",
             modifiedBy: "Doe, John",
             sheetName: "Invoices"
@@ -789,7 +794,7 @@ The following properties are available for configuration:
 
 -   `count` \(type `number`\)
 
-    The value of this property must be positive. It restricts the amount of exported data, which avoids browser crashes during the transfer of very large amounts of data.
+    The value of this property must be positive. This property is only used if `dataSource` is a plain string. If this is the case, it is taken over as `dataSource.count`.
 
 -   `worker` \(type `boolean`\)
 
@@ -841,7 +846,7 @@ var exportConfiguration = {
 
 ### Starting the Export Process
 
-After you have created a valid configuration, you will have to create a new`sap.ui.export.Spreadsheet` instance and initialize it with the previously created configuration. After the instance has been initialized, you can start the export process by calling the `build` method. Everything else will be handled by the export library. The result will be an Office Open XML spreadsheet which is automatically downloaded. The export library does not offer you any events to which you can register. If you need to perform additional steps after the export has been completed, you can use the `Promise` that is returned by the `build` method.
+After you have created a valid configuration, you will have to create a new `sap.ui.export.Spreadsheet` instance and initialize it with the previously created configuration. After the instance has been initialized, you can start the export process by calling the `build` method. Everything else will be handled by the export library. The result will be an Office Open XML spreadsheet which is automatically downloaded. The export library does not offer you any events to which you can register. If you need to perform additional steps after the export has been completed, you can use the `Promise` that is returned by the `build` method.
 
 The following code sample shows the start of an export:
 

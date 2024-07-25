@@ -84,7 +84,7 @@ You have the following options:
 
 By default, the icon tab bar for multiple views remains visible while scrolling. You can hide it by setting `stickyMultiTabHeader` to `false`.
 
-Additionally, you can control the visibility of the view by setting the `"visibile"` property, which can be one of the following:
+Additionally, you can control the visibility of the view by setting the `"visible"` property, which can be one of the following:
 
 -   a Boolean value
 

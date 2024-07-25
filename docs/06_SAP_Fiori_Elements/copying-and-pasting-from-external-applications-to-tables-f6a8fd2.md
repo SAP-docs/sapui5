@@ -107,5 +107,8 @@ The paste option can be disabled with the `enablePaste` parameter.
 > 
 > ```
 
-Users can also copy multiple rows as well as ranges of rows and columns to the clipboard. For more information, see the *Copying Multiple Rows and Range Selections* section in [Tables](tables-c0f6592.md).
+Users can also copy multiple rows as well as ranges of rows and columns to the clipboard. For more information, see the [Copying Multiple Rows and Range Selections](tables-c0f6592.md#loioc0f6592a592e47f9bb6d09900de47412__section_pth_3mb_dzb) section in [Tables](tables-c0f6592.md).
+
+> ### Restriction:  
+> You can't paste content in a cell that contains a navigation property.
 

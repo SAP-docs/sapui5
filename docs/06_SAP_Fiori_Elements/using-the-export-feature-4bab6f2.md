@@ -93,7 +93,7 @@ Clicking the drop-down arrow opens a menu with two additional options:
 ![](images/Object_Page_Options_for_Export_to_Excel_8bd12db.png)
 
 > ### Note:  
-> -   You can export the custom columns you have defined using manifest settings. To allow the export of your custom column, you must maintain the `"properties"` array in the definition of the custom column. For more information about defining custom columns, see the *Extension Points for Tables* section in [Extension Points for Tables](extension-points-for-tables-d525522.md). The properties will be exported into the spreadsheet as described for a `FieldGroup`.
+> -   You can export the custom columns you have defined using manifest settings. To allow the export of your custom column, you must maintain the `"properties"` array in the definition of the custom column. For more information about defining custom columns, see [Extension Points for Tables](extension-points-for-tables-d525522.md). The properties will be exported into the spreadsheet as described for a `FieldGroup`.
 > 
 > -   If your domain model contains sensitive data \(data annotated as `PersonalData.IsPotentiallySensitive`\), enabling the export to a spreadsheet could lead to exposing this data, as the end user cannot choose where the data will be stored. You can disable the export feature using the `enableExport` property in the manifest. This ensures that access control is enforced and stays within the application.
 

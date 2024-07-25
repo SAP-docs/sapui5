@@ -154,11 +154,13 @@ For details, see [`sap.ui.model.odata.v4.ODataModel#bindProperty`](https://ui5.s
 
 
 
-<a name="loiofccfb2eb41414f0792c165e69a878717__section_g5j_v1r_mgb"/>
+<a name="loiofccfb2eb41414f0792c165e69a878717__section_PBOV"/>
 
 ## Property Binding With an Object Value
 
-A property binding can have an object value, if the target type specified in the corresponding control property's binding info is "any" and the binding is relative or points to metadata. The binding's mode has to be `OneTime`, see [sap.ui.model.BindingMode](https://ui5.sap.com/#/api/sap.ui.model.BindingMode), unless the binding is for an action advertisement.
+A property binding can have an object value if the target type specified in the corresponding control property's binding info is "any" and the binding is relative or points to metadata. The binding's mode has to be `OneTime`, see [sap.ui.model.BindingMode](https://ui5.sap.com/#/api/sap.ui.model.BindingMode), unless the binding is for an action advertisement.
+
+A `OneWay` binding mode is also supported \(**experimental** as of UI5 version 1.126.0\) for relative read-only data \(not metadata!\) bindings, but client-side updates of the object are not supported, and [`$$patchWithoutSideEffects`](parameters-1ab4f62.md) should be used for the parent entity.
 
 **Example: Using the controller method `'formatPhoneNumbersAsCSV'` to show a comma-separated list of phone numbers for business partner contacts**
 

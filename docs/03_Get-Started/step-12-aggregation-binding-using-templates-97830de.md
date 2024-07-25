@@ -17,9 +17,9 @@ It will automatically create as many child controls as are needed to display the
 
   
   
-**List with aggregation binding**
+**A third panel with a list of products is displayed**
 
-![](images/Tutorial_Data_Binding_Step_12_1642433.png "List with aggregation binding")
+![The graphic has an explanatory text](images/Tutorial_Data_Binding_Step_12_1642433.png "A third panel with a list of products is displayed")
 
 
 

@@ -187,26 +187,29 @@ You can define side effects either in the \*`MPC_EXT` class or in the local anno
 > ### Example:  
 > **Side effect after executing an action**
 > 
-> After executing an action, but only if the returned entity is different from the entity for which the action was called, the related list binding is refreshed. Therefore, you need to define a side effect annotation for those cases in which any other entity or an association might be changed due to an action call. The target definition’s property path that may cover both properties and entities has to express a binding parameter name referring to the entity to which the action is bound.
-> 
-> > ### Note:  
-> > The following sample code is valid for both draft and non-draft applications.
+> After executing an action, if the returned entity is different from the entity for which the action was called, then the related list binding is refreshed. Alternatively, you need to define a side effect annotation explicitly if any other entity or an association is changed due to an action call.
 > 
 > > ### Sample Code:  
 > > XML Annotation
 > > 
 > > ```
-> > <Annotations Target="CA_OC_MANAGE_OR_ITEMS_SRV.CA_OC_MANAGE_OR_ITEMS_SRV_Entities/IssueOutput">
-> >     <Annotation Term="com.sap.vocabularies.Common.v1.SideEffects">
-> >         <Record>
-> >             <PropertyValue Property="TargetProperties">
-> >                 <Collection> 
-> >                     <String>_it/to_OutputRequestItemStatus/OutputRequestItemStatus_Text</String>
-> >                 </Collection>
-> >             </PropertyValue>
-> >         </Record>
-> >     </Annotation>
-> > </Annotations>
+> > <!-- In the below example the function import action "Setcurrency"  is expected to refresh the "Currency_Code_Text"  which is coming from the associated entity  "to_Currency" -->
+> >             <Annotations Target="STTA_SALES_ORDER_WD_20_SRV.STTA_SALES_ORDER_WD_20_SRV_Entities/Setcurrency">
+> >                     <Record>
+> >                         <PropertyValue Property="TargetProperties">
+> >                             <Collection>
+> >                                 <PropertyPath>to_Currency/Currency_Code_Text</PropertyPath>
+> >                             </Collection>
+> >                         </PropertyValue>
+> >                         <!-- Side Effects for action annotation with an entity as a target. Here controls associated with “to_Item” will be refreshed-->
+> >                             <PropertyValue Property="TargetEntities">
+> >                             <Collection>
+> >                                 <NavigationPropertyPath>to_Item</NavigationPropertyPath>
+> >                             </Collection>
+> >                         </PropertyValue>
+> >                     </Record>
+> >                 </Annotation>
+> >             </Annotations>
 > > ```
 
 > ### Example:  

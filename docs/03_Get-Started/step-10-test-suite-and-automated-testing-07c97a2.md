@@ -31,7 +31,7 @@ You can view and download all files in the *Samples* in the Demo Kit at [Testing
 <html>
 <head>
 	<title>QUnit test suite for Bulletin Board</title>
-	<script src="../resources/sap/ui/qunit/qunit-redirect.js"></script>
+	<script src="resources/sap/ui/qunit/qunit-redirect.js"></script>
 	<script src="testsuite.qunit.js" data-sap-ui-testsuite></script>
 </head>
 <body>

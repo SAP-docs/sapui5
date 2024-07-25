@@ -10,9 +10,9 @@ So far, we have created a currency field that can format itself correctly. The c
 
   
   
-**A message appears**
+**An error message is displayed upon entering text into the currency amount input field**
 
-![](images/Tutorial_Data_Binding_Step_11_3_e67207b.png "A message appears")
+![The graphic has an explanatory text](images/Tutorial_Data_Binding_Step_11_3_e67207b.png "An error message is displayed upon entering text into the currency amount input field")
 
 
 

@@ -53,12 +53,34 @@ User-specific personalization settings \(for object pages\)
 </td>
 </tr>
 <tr>
-<td valign="top" rowspan="2">
+<td valign="top">
+
+`PUBLIC` 
+
+</td>
+<td valign="top">
+
+Customer
+
+</td>
+<td valign="top">
+
+End users
+
+</td>
+<td valign="top">
+
+Views that the end user saves as *Public* 
+
+</td>
+</tr>
+<tr>
+<td valign="top">
 
 `CUSTOMER` 
 
 </td>
-<td valign="top" rowspan="2">
+<td valign="top">
 
 Customer
 
@@ -71,18 +93,6 @@ Key users
 <td valign="top">
 
 UI changes to adapt apps for all users made using key user adaptation
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-End users
-
-</td>
-<td valign="top">
-
-Views that the end user saves as *Public* 
 
 </td>
 </tr>

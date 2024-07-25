@@ -171,7 +171,7 @@ This could render 3 KPIs, as shown in the image below:
 ![](images/Representation_as_Three_KPIs_423321f.png)
 
 > ### Tip:  
-> If you add a semantic object annotation to the value field of the `DataPoint`, the value is shown as a link but does not show any criticality information. For more information about adding the semantic object annotation, see the section *Using a Link Control* in [Navigation from an App \(Outbound Navigation\)](navigation-from-an-app-outbound-navigation-d782acf.md).
+> If you add a semantic object annotation to the value field of the `DataPoint`, the value is shown as a link but does not show any criticality information. For more information about adding the semantic object annotation, see the [subsection](navigation-from-an-app-outbound-navigation-d782acf.md#loiod782acf8bfd74107ad6a04f0361c5f62__optionsIBN) in [Navigation from an App \(Outbound Navigation\)](navigation-from-an-app-outbound-navigation-d782acf.md).
 
 
 
@@ -342,8 +342,6 @@ This allows applications to specify more details on the contact information disp
 For more information, see [Adding a Contact Facet](adding-a-contact-facet-a6a8c0c.md). The topic describes how a contact facet can be added to an object page form field. Similarly, you can add a table field by adding a reference to the `Communication.Contact` annotation in the `UI.LineItem` annotation: `UI.DataFieldForAnnotation`
 
 > ### Sample Code:  
-> XML Annotation
-> 
 > ```
 > <Annotations Target="clouds.products.CatalogService.Products">
 >     <Annotation Term="UI.LineItem">
@@ -365,7 +363,8 @@ For more information, see [Adding a Contact Facet](adding-a-contact-facet-a6a8c0
 >     <Annotation Term="Common.Label" String="Email"/>
 >     <Annotation Term="Communication.IsEmailAddress" Bool="true"/>
 > </Annotations>
-> 
+> XML
+> 					Annotation
 > ```
 
 > ### Sample Code:  
@@ -431,7 +430,7 @@ Application developers can specify links for phone numbers or email addresses by
 ```
 
 ```xml
-<Annotations Target="sap.fe.manageitems.TechnicalTestingService.LineItems/emailAddress">
+XML<Annotations Target="sap.fe.manageitems.TechnicalTestingService.LineItems/emailAddress">
     <Annotation Term="Common.Label" String="Email"/>
     <Annotation Term="Communication.IsEmailAddress" Bool="true"/>
 </Annotations>
@@ -740,7 +739,102 @@ If you annotate a property that contains a timezone code with `@Common.IsTimezon
 
 ![](images/Timestamp_with_Timezone_cb85f47.png)
 
-For more information, see the section *Date Picker and Date/Time Picker* in [Field Help](field-help-a5608ea.md).
+For more information, see the [Date Picker and Date/Time Picker](field-help-a5608ea.md#loioa5608eabcc184aee99e1a7d88b28816c__section_jxp_rtv_s4b) section in [Field Help](field-help-a5608ea.md).
+
+
+
+<a name="loioc18ada4bc56e427a9a2df2d1898f28a5__section_hkn_33r_wbc"/>
+
+## Representation as a Masked Input Field
+
+A field can be rendered as a masked input field, allowing end users to enter values only in the specified format. No other formats are accepted by these fields. Examples of such fields include a postal code, a product activation key, or a phone number with an area code.
+
+![](images/Masked_Input_Field_6a86d90.png)
+
+For example, if the mask symbol is `S^AP-AA-999`, the end user input value must be `DE239`. The value displayed on the UI is `SAP-DE-239`. The characters used as mask symbols such as `SAP`, `I`, or special characters such as `()` are only displayed on the UI and not saved in the back end.
+
+> ### Sample Code:  
+> XML Annotation
+> 
+> ```
+> <Annotations Target="sap.fe.core.MaskInputMassEdit.MainEntity/MaskedInputPhone"> 
+>           <Annotation Term="UI.InputMask"> 
+>               <Record> 
+>                    <PropertyValue Property="Mask" String="(***) *** ******"/> 
+>                    <PropertyValue Property="Placeholder" String="_"/> 
+>               </Record> 
+>           </Annotation> 
+>           <Annotation Term="UI.Placeholder" String="Enter twelve-digit number"/> 
+> </Annotations> 
+> 
+> <Annotations Target="sap.fe.core.MaskInputMassEdit.MainEntity/MaskedInputRegistration"> 
+>           <Annotation Term="UI.InputMask"> 
+>                 <Record> 
+>                    <PropertyValue Property="Mask" String="I____-__"/> 
+>                    <PropertyValue Property="Placeholder" String="_"/> 
+>                    <PropertyValue Property="Rules"> 
+>                         <Collection> 
+>                                   <Record> 
+>                                        <PropertyValue Property="MaskSymbol" String="_"/> 
+>                                        <PropertyValue Property="RegExp" String="[0-9]"/> 
+>                                   </Record> 
+>                         </Collection> 
+>                    </PropertyValue> 
+>                </Record> 
+>           </Annotation> 
+> 
+> 
+> 
+> ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> No ABAP CDS annotation sample is available. Please use the local XML annotation.
+
+> ### Sample Code:  
+> CDS Annotation
+> 
+> ```
+> MaskedInputPhone   : String          @( 
+>       UI.InputMask  : { 
+>          Mask       : '(***) *** ******', 
+>          Placeholder: '_', 
+>       }, 
+>       UI.Placeholder: 'Enter twelve-digit number' 
+>       ); 
+>      MaskedInputRegistration    : String          @( 
+>       UI.InputMask  : { 
+>         Mask       : 'I****-**', 
+>         Placeholder: '_', 
+>         Rules      : [{ 
+>          MaskSymbol: '*', 
+>          RegExp    : '[0-9]' 
+>         }] 
+>       }, 
+>       UI.Placeholder: 'Enter digits registration number' 
+> ); 
+>      MaskedInputSAP            : String          @(
+>   UI.InputMask  : {
+>     Mask             : 'S^AP-AA-999',
+>     PlaceholderSymbol: '_',
+>     Rules            : [
+>       {
+>         MaskSymbol: '9',
+>         RegExp    : '[0-9]'
+>       },
+>       {
+>         MaskSymbol: 'A',
+>         RegExp    : '[A-Z]'
+>       }
+>     ]
+>   },
+>   UI.Placeholder: 'Starts with SAP followed by two uppercase letter and three digits'
+> );
+> ```
+
+> ### Note:  
+> You must ensure that placeholder symbols do not match the mask symbols.
 
 **Related Information**  
 

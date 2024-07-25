@@ -936,7 +936,7 @@ Make the following settings in the `manifest.json` to specify the `SelectionPres
 
 [Configuring Charts](configuring-charts-653ed0f.md "You can add a chart facet to a content section within the list report and object page.")
 
-[Loading Behavior Based on the Chosen Variant](loading-behavior-based-on-the-chosen-variant-9f4e119.md "Several factors affect the loading behavior of the content area based on the chosen variant.")
+[Loading Behavior of Data on Initial Launch of the Application](loading-behavior-of-data-on-initial-launch-of-the-application-9f4e119.md "Several factors affect the loading behavior of data on initial launch of the application.")
 
 [Initial Expansion Level for Tables in List Reports & Analytical List Pages](initial-expansion-level-for-tables-in-list-reports-analytical-list-pages-bc05d35.md "You can set the number of expanded levels for tables in List Reports and Analytical List Pages using the initialExpansionLevel property of the PresentationVariant annotation.")
 

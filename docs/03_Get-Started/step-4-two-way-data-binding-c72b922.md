@@ -10,9 +10,9 @@ In the examples used so far, we have used a read-only field to display the value
 
   
   
-**Input fields can be enabled or disabled**
+**Two input fields and a checkbox to enable or disable them**
 
-![](images/Tutorial_Data_Binding_Step_4_61d68f1.png "Input fields can be enabled or disabled")
+![The graphic has an explanatory text](images/Tutorial_Data_Binding_Step_4_61d68f1.png "Two input fields and a checkbox to enable or disable them")
 
 
 

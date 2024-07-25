@@ -12,11 +12,13 @@ A facet contains collection facets \(`UI.CollectionFacet`\) as well as reference
 
 A collection or reference facet directly under the `UI.Facets` represents a section. A section can also have subsections under it. To create a subsection, add a collection facet under the `UI.Facet` and then add reference or collection facets underneath this collection facet.
 
+All reference facets that are part of the second-level collection facet are arranged one beside the other.
+
 Note the following behavior:
 
--   In SAP Fiori elements for OData V2, all reference facets that are part of the second-level collection facet are arranged one beside the other \(the reference facets outside the collection facet are ignored in this case\). If there is no second-level collection facet, all reference facets are considered.
+-   In SAP Fiori elements for OData V2, the reference facets outside the second-level collection facet are ignored.. If there is no second-level collection facet, all reference facets are considered.
 
--   In SAP Fiori elements for OData V4, all reference facets that are part of the second-level collection facet are arranged one beside the other. The reference facets outside the second-level collection facet are also considered and shown as separate subsections.
+-   In SAP Fiori elements for OData V4, the reference facets outside the second-level collection facet are considered and shown as separate subsections.
 
 
 In the figure below, the collection facet for *General Information* combines two reference facets that both point to a field group.
@@ -248,7 +250,7 @@ To render a table in a section, follow these steps:
     >     ]
     > ```
 
-    Check out our live example in the flexible programming model explorer at [Table Extensibility](https://ui5.sap.com/test-https://latest.testapp.sapfe.c.eu-de-2.cloud.sap/test-resources/sap/fe/core/fpmExplorer/index.html#/controllerExtensions/tableExtensibility).
+    Check out our live example in the flexible programming model explorer at [Table Extensibility](https://sapui5.hana.ondemand.com/test-resources/sap/fe/core/fpmExplorer/index.html#/controllerExtensions/tableExtensibility).
 
 2.  To render a *Create* button, set `Org.OData.Capabilities.V1.InsertRestrictions/Insertable/Bool` to `true` for the entity set. For more information, see the section **Generic Actions** in [Adding Actions to Tables](adding-actions-to-tables-b623e0b.md).
 

@@ -8,11 +8,7 @@ In this step, we create a basic application and simply place some text on the sc
 
 ## Preview
 
-  
-  
-**Screen with text**
-
-![](images/Tutorial_Data_Binding_Step_1_6d391d5.png "Screen with text")
+![The browser shows the text "Hi, my name is Harry Hawk"](images/Tutorial_Data_Binding_Step_1_6d391d5.png)
 
 
 

@@ -68,16 +68,16 @@ The following control types are available:
 
 -   Date picker
 
--   Drop-down list \(combo box\)
+-   Dropdown list \(combo box\)
 
 -   Input
 
--   Select drop-down list \(`sap.m.Select`\)
+-   Select dropdown list \(`sap.m.Select`\)
 
 
 It depends on the related data types and configurations **which** control types are rendered, for example:
 
--   If the relevant OData property is of type `Edm.String`, the `SmartField` control can be configured to render a combo box or a select drop-down list.
+-   If the relevant OData property is of type `Edm.String`, the `SmartField` control can be configured to render a combo box or a select dropdown list.
 
 -   If the relevant OData property is of type `Edm.Boolean`, the `SmartField` control can be configured to render a combo box.
 
@@ -334,6 +334,30 @@ You have the following options:
 
 
 Using the `preventInitialDataFetchInValueHelpDialog` property, you can prevent the query from being fired immediately when the value help dialog is opened.
+
+
+
+### Text
+
+The `Text` annotation defines the field description and where it is taken from. It can be configured with V2 or V4 annotations. For more information, see the [API Reference: `Text`](https://ui5.sap.com/#/api/sap.ui.comp.smartfield.SmartField%23annotations/Text).
+
+The configuration takes place as follows:
+
+-   For the local text annotation – it’s set at a property level. The description is derived from the local text or navigational property.
+-   For the `ValueList` text annotation \(with applied `ValueList` annotation\) – it’s set at the `ValueList` `Collection` level. The text is derived from the `ValueList` `Collection` text configuration. If a local text annotation is applied, it will be taken into consideration at the start as initial text value. This prevents the initial call for description from taking place. If the value is changed, the description is taken accordingly from the `ValueList` `Collection` item.
+
+> ### Note:  
+> The local text annotation won’t be considered in the scenario where the `SmartField` is in `edit` mode and is configured with fixed values \(rendered as a dropdown list\).
+
+With the `textInEditModeSource` property of the `SmartField`, you can additionally configure the control at view level where the text is taken from.
+
+For more information, see the [API Reference: `TextInEditModeSource`](https://ui5.sap.com/#/api/sap.ui.comp.smartfield.SmartField%23controlProperties). 
+
+
+
+### TextArrangement
+
+The `TextArrangement` annotation describes the arrangement of an ID value and its description. For more information, see the [API Reference: `TextArrangement`](https://ui5.sap.com/#/api/sap.ui.comp.smartfield.SmartField%23annotations/TextArrangement). 
 
 
 

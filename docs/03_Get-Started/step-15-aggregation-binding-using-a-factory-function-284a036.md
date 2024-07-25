@@ -10,9 +10,9 @@ Instead of hard-coding a single template control, we use a factory function to g
 
   
   
-**Controls generated based on data**
+**A different type of list item is displayed for a discontinued product**
 
-![](images/Tutorial_Data_Binding_Step_15_db27ba8.png "Controls generated based on data")
+![The graphic has an explanatory text](images/Tutorial_Data_Binding_Step_15_db27ba8.png "A different type of list item is displayed for a discontinued product")
 
 
 
