@@ -66,6 +66,25 @@ First, we add the `sap.m` library as a dependency in the `manifest.json`.
 
 <a name="loio0830bce271bf42d98c2740bed43d435d__section_ddz_pjj_l4b"/>
 
+## ui5.yaml \[MODIFY\]
+```yaml
+specVersion: "3.0"
+metadata:
+  name: tutorial.fiori2
+type: application
+framework:
+  name: OpenUI5
+  version: "1.125.0"
+  libraries:
+    - name: sap.ui.core
+    - name: sap.m    
+    - name: sap.f
+    - name: themelib_sap_horizon
+```
+we add the `sap.m` and `sap.f` library as a dependency in the `ui5.yaml`.
+
+<a name="loio0830bce271bf42d98c2740bed43d435d__section_ddz_pjj_l4b"/>
+
 ## webapp/index.html \[MODIFY\]
 
 ```html
