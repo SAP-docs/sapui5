@@ -282,7 +282,7 @@ You can use one of the following two approaches:
     >             $Type: 'Capabilities.FilterRestrictionsType',
     >             FilterExpressionRestrictions: [{
     >                 Property: 'Set/SalesOrganization',
-    >                 AllowedExpressions: 'MultiValue’
+    >                 AllowedExpressions: 'MultiValue'
     >             }]
     >     }
     > }
@@ -374,4 +374,3 @@ You can use one of the following two approaches:
 For more information about how to configure filter bars, see [Adapting the Filter Bar](adapting-the-filter-bar-609c39a.md).
 
 For information about the initial loading of data, see [Loading Behavior of Data on Initial Launch of the Application](loading-behavior-of-data-on-initial-launch-of-the-application-9f4e119.md).
-
