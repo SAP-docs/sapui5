@@ -20,7 +20,7 @@ You can view and download all files at [Walkthrough - Step 10](https://ui5.sap.c
 
 
 
-## webapp/manifest.json \(New\)
+## webapp/manifest.json
 
 ```
 {
