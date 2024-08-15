@@ -9,5 +9,5 @@ For SAP Fiori elements for OData V4, if you’re using CAP, you must ensure the 
 > ### Example:  
 > You must ensure that the setting for the total number of requests of OData batches is high enough in case you want to use the `InvocationGrouping: Changeset`.
 
-For more information, see [https://cap.cloud.sap/docs/guides/security/aspects](https://cap.cloud.sap/docs/guides/security/aspects) and the section *Grouping of Multiple Invocations of the Same Action via Multiple Selections in the Table* in [Actions](actions-cbf16c5.md).
+For more information, see [https://cap.cloud.sap/docs/guides/security/aspects](https://cap.cloud.sap/docs/guides/security/aspects) and the section [Grouping of Multiple Invocations of the Same Action via Multiple Selections in the Table](actions-cbf16c5.md#loiocbf16c599f2d4b8796e3702f7d4aae6c__handlingWithinButtons) in [Actions](actions-cbf16c5.md).
 

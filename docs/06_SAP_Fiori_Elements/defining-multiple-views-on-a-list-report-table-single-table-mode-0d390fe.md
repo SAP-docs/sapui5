@@ -636,11 +636,16 @@ To define multiple views using single table mode, perform the following steps:
     > 34  }}}
     > ```
 
+    > ### Note:  
+    > If `showCounts` is set to `true`, the segmented buttons show the count next to the button label and no count is shown next to the title of the table.
+    > 
+    > If `showCounts` is set to `false`, no count is shown next to the button label, nor next to the title of the table.
+
       
       
     **Multiple Views on a List Report Table - Single Table Mode**
 
-    ![](images/Multiple_Views_on_a_List_Report_Table_ec09b05.png "Multiple Views on a List Report Table - Single Table Mode")
+    ![](images/Multiple_Views_on_a_List_Report_Table_-_Single_Table_Mode_975a002.png "Multiple Views on a List Report Table - Single Table Mode")
 
 
 **Related Information**  

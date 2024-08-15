@@ -121,7 +121,7 @@ It contains the following text:
         >         unsavedChanges: "My unsaved changes",
         >         undeletableText: "My undeletable text"
         >     };
-        >     return this.extenionAPI.securedExecution(function() {
+        >     return this.extensionAPI.securedExecution(function() {
         >         return new Promise(function(resolve) {
         >             ...
         >             resolve(oMessageText);

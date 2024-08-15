@@ -173,13 +173,15 @@ For more information about the smart filter bar, see [SmartFilterBar](https://ui
 
 
 
-### Hiding Navigation Properties from Filtering
+### Including Navigation Properties
 
-The 1:1 navigation properties that can be filtered are included in the *Adapt Filters* dialog by default. You can also directly define navigation properties that must be added for the filtering. To add the specific navigation properties, you can use the `navigationProperties` setting in the `manifest.json` file. It is an array of \(navigation\) property paths relative to the current entity type. If the path points to a navigation property or a complex property, all simple properties of that type are added to the filter adaptation and all other navigation properties are excluded from the *Adapt Filters* dialog.
+From SAPUI5 version 1.126.0 onwards, the filters in the *Adapt Filters* dialog include properties only from the main entity set. The filterable fields from the navigation entities are not added as filters by default. You can add them by configuring the `manifest.json` file. You can choose to add either all properties or a specific property of the navigation entities as filters.
 
-For example, you can see that all properties \(except the properties annotated as either `Hidden` or `HiddenFilter`\) of the navigation type `to_Currency` and `to_DeliveryStatus` are added to the *Adapt Filters* dialog as shown in the following code sample:
+In the following sample code, you can see that only the `EmailAddress` property from the `Supplier` entity and all filterable properties of the navigation type `DeliveryStatus` \(except the properties annotated with `Hidden` or `HiddenFilter`\) are included as filters in the *Adapt Filters* dialog.
 
 > ### Sample Code:  
+> manifest.json
+> 
 > ```
 > "ListReport|C_STTA_SalesOrder_WD_20": {
 >     "entitySet": "C_STTA_SalesOrder_WD_20",
@@ -190,27 +192,15 @@ For example, you can see that all properties \(except the properties annotated a
 >             "tableSettings": {
 > …
 >             },
-> 
+>  
 >             "filterSettings": {
 >                 "navigationProperties": [
->                     "to_Currency",
+>                     "to_Supplier/EmailAddress ",
 >                     "to_DeliveryStatus"
 >                 ]
 >             }
 >         }
 > ```
-
-You can hide the filter fields of all navigation properties from the *Adapt Filters* dialog. To do so, set `"navigationProperties": []` as shown in the code sample here:
-
-> ### Sample Code:  
-> ```
-> "filterSettings": {
->     "navigationProperties": []
-> }
-> ```
-
-> ### Note:  
-> You can only define navigation properties within a single level. Nested navigation properties aren't supported.
 
 
 
@@ -224,7 +214,7 @@ The filter bar only shows filter fields defined via the `@com.sap.vocabularies.U
 
 ### Including Navigation Properties
 
-To include navigation properties for filtering, you can directly define them within the same annotation so that they appear as filter fields in the filter bar. To add further filter fields to the adaptation, you can use the `navigationProperties` setting in the `manifest.json` file. It is an array of \(navigation\) property paths relative to the current entity type. If the path points to a navigation property or a complex property, all simple properties of that type are added to the adaptation. If the path points to a simple property, then only this field becomes available as a filter field.
+To include navigation properties as filters, you can directly define them within the same annotation so that they appear as filter fields in the filter bar. To adapt the filter bar by adding further filter fields, you can use the `navigationProperties` setting in the `manifest.json` file. The `navigationProperties` setting is an array of \(navigation\) property paths relative to the current entity type. If the path points to a navigation property or a complex property, all simple properties of that type are added to the filter bar. If the path points to a simple property, then only this field is available as a filter field.
 
 > ### Sample Code:  
 > XML Annotation

@@ -365,7 +365,7 @@ This does **not** affect the default refresh behavior of the table entity set wh
 > 
 > -   When specifying an entity set, application developers must note the following:
 > 
->     -   Begin with a forward slash \("/"\) if the entity is a containment-based entity \(a parameterized entity\) and if you need to specify the full path of the resulting entity \("/Customer/Set"\) in the same manner as specified via the `"contextPath"` manifest property. For more information, see the section *Supporting Parameterized Entities* under *Additional Features in SAP Fiori Elements for OData V4* in [Configuring Filter Bars](configuring-filter-bars-4bd7590.md).
+>     -   Begin with a forward slash \("/"\) if the entity is a containment-based entity \(a parameterized entity\) and if you need to specify the full path of the resulting entity \("/Customer/Set"\) in the same manner as specified via the `"contextPath"` manifest property. For more information, see the section [Supporting Parameterized Entities](configuring-filter-bars-4bd7590.md#loio4bd7590569c74c61a0124c6e370030f6__suppprting_parameterized_entities_subsection) in [Configuring Filter Bars](configuring-filter-bars-4bd7590.md).
 > 
 >     -   If it is not a containment scenario/parameterized entity but a regular entity set, then the slash is not required at the beginning \(`"SalesOrderItem"`\).
 

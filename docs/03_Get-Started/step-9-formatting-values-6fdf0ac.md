@@ -10,9 +10,9 @@ We also want to provide our users a way of contacting Harry Hawk. Therefore we w
 
   
   
-**Address with e-mail link**
+**An e-mail link is added to the address panel**
 
-![](images/Tutorial_Data_Binding_Step_9_1161575.png "Address with e-mail link")
+![The graphic has an explanatory text](images/Tutorial_Data_Binding_Step_9_1161575.png "An e-mail link is added to the address panel")
 
 
 
@@ -56,10 +56,14 @@ You can view and download all files in the Demo Kit at [Data Binding - Step 9](h
     **webapp/view/App.view.xml**
 
     ```xml
-    <mvc:View 
-       controllerName="ui5.databinding.controller.App"
-    ...
-    <Panel headerText="{i18n>panel2HeaderText}" class="sapUiResponsiveMargin" width="auto">
+    <mvc:View
+    	controllerName="ui5.databinding.controller.App"
+    	xmlns="sap.m"
+    	xmlns:form="sap.ui.layout.form"
+    	xmlns:l="sap.ui.layout"
+    	xmlns:mvc="sap.ui.core.mvc">
+    	...
+    	<Panel headerText="{i18n>panel2HeaderText}" class="sapUiResponsiveMargin" width="auto">
     		<content>
     			<l:VerticalLayout>
     				<Label labelFor="address" text="{i18n>address}:"/>

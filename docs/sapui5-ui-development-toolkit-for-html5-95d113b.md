@@ -2,7 +2,7 @@
 
 # SAPUI5: UI Development Toolkit for HTML5
 
-Create apps with rich user interfaces for modern web business applications, responsive across browsers and devices, based on HTML5. \(Documentation patch 1.125.1\)
+Create apps with rich user interfaces for modern web business applications, responsive across browsers and devices, based on HTML5. \(Documentation patch 1.126.0\)
 
 
 

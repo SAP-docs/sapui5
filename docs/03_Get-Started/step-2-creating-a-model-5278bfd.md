@@ -30,12 +30,7 @@ In this tutorial, we will focus on JSON models since they are the simplest ones 
 
 ## Preview
 
-  
-  
-**Screen with text derived from a model object \(No visual changes to last step\)**
-
-![](images/Tutorial_Data_Binding_Step_1_6d391d5.png "Screen with text derived from a model object (No visual changes to last
-					step)")
+![The browser shows the text "Hi, my name is Harry Hawk"](images/Tutorial_Data_Binding_Step_1_6d391d5.png)
 
 
 

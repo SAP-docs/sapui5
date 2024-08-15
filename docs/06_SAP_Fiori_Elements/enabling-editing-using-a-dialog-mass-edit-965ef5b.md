@@ -32,10 +32,28 @@ For more information, see [Enabling Editing Using a Dialog \(Mass Edit\) in the 
 
 ## Additional Features in SAP Fiori Elements for OData V4
 
-Use the `"enableMassEdit"` property in the manifest to enable the feature as shown in the following sample code:
+In SAP Fiori elements for OData V4, you can use the mass edit dialog in the object page in edit mode and in the list report. Use the `enableMassEdit` property in the manifest to enable the feature. You can use the following settings for the `enableMassEdit` property:
+
+-   Undefined \(mass edit is disabled\)
+
+-   A Boolean property
+
+-   An object which can contain two properties:
+
+    -   `visibleFields`
+
+    -   `ignoredFields`
+
+
+
+The `visibleFields` property lets you specify which fields are available in the mass edit dialog, even if these fields are not displayed in the table.
+
+The `ignoredFields` property lets you hide specific fields from the mass edit dialog, even if these fields are displayed in the table.
+
+Both properties can contain a `FieldGroup` annotation and a comma-separated list of properties.
 
 > ### Sample Code:  
-> Manifest setting to toggle the mass edit functionality
+> The `manifest.json` setting to toggle the mass edit functionality
 > 
 > ```
 > "controlConfiguration": {
@@ -49,6 +67,73 @@ Use the `"enableMassEdit"` property in the manifest to enable the feature as sho
 >       ......
 > }
 > ```
+
+> ### Sample Code:  
+> The `manifest.json` setting to toggle the mass edit functionality using the `visibleFields` property
+> 
+> ```
+> "controlConfiguration": {
+>    "_Item/@com.sap.vocabularies.UI.v1.LineItem": {
+>       "tableSettings": {
+>          ......
+>          ......
+>          "enableMassEdit": {
+>              "visibleFields": "com.sap.vocabularies.UI.v1.FieldGroup#Include"
+>       },
+>       ......
+>       ......
+> }
+> ```
+
+> ### Sample Code:  
+> The `manifest.json` setting to toggle the mass edit functionality using the `ignoredFields` property
+> 
+> ```
+> "controlConfiguration": {
+>    _Item/@com.sap.vocabularies.UI.v1.LineItem: {
+>       "tableSettings": {
+>          ......
+>          ......
+>          "enableMassEdit": {
+>              "ignoredFields": "property2,property3"
+>       },
+>       ......
+>       ......
+> }
+> ```
+
+
+
+### Operation Grouping for Mass Edit
+
+You can define how the changes using mass edit should be applied:
+
+-   Grouped for all objects within the same request \(`ChangeSet`\)
+
+-   Separately for each object \(`Isolated`\)
+
+
+You can set the mode for mass editing by using the `operationGroupingMode` key in the `manifest.json`.
+
+> ### Sample Code:  
+> `manifest.json`
+> 
+> ```
+> "controlConfiguration": {
+>    _Item/@com.sap.vocabularies.UI.v1.LineItem: {
+>       "tableSettings": {
+>          ......
+>          ......
+>          "enableMassEdit": {
+>             ......
+>             "operationGroupingMode": "Isolated"
+>       },
+>       ......
+>       ......
+> }
+> ```
+
+The default mode for mass editing is `ChangeSet` on the object page and `Isolated` in the list report.
 
 
 
@@ -116,7 +201,7 @@ The *Mass Edit* button isn't enabled if the update restriction points to a path 
 >         -   fields coming from a `FieldGroup`-based field in the table
 > 
 > 
->     -   multi-valued fields
+>     -   multi-input fields
 > 
 >     -   fields coming from navigation entities
 > 

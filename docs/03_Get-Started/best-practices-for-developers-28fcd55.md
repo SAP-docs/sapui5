@@ -60,7 +60,9 @@ In general, **you must not use deprecated APIs** anymore, such as `sap.ui.getCor
 
 Also, see the relevant warnings and errors logged to the browser's dev console during runtime. You might need to increase the `sap-ui-log-level`; for more information, see [Logging and Tracing](../04_Essentials/logging-and-tracing-9f4d62c.md).
 
-Some APIs may be only partially deprecated, for instance passing a non-object `vName` to [`sap.ui.core.theming.Parameters.get`](https://ui5.sap.com/#/api/sap.ui.core.theming.Parameters%23methods/sap.ui.core.theming.Parameters.get) . Refer to the API Reference for individual APIs.
+Some APIs may be only partially deprecated, for instance passing a non-object `vName` to [`sap.ui.core.theming.Parameters.get`](https://ui5.sap.com/#/api/sap.ui.core.theming.Parameters%23methods/sap.ui.core.theming.Parameters.get). Refer to the API Reference for individual APIs.
+
+Using the native web API `XMLHttpRequest#open` with `false` as the third argument outside of workers is deprecated too, and browsers might end its support. Therefore, in addition to avoiding already deprecated SAPUI5 APIs, you must not call low-level APIs such as `jQuery.ajax` with a disabled `async` option either.
 
 **Additional Information:**
 
@@ -71,6 +73,7 @@ Some APIs may be only partially deprecated, for instance passing a non-object `v
 -   [Adapting to the Modularization of the Core](../04_Essentials/adapting-to-the-modularization-of-the-core-b8fdf0c.md)
 -   [Deprecated jQuery.sap API Replacement](../04_Essentials/deprecated-jquery-sap-api-replacement-a075ed8.md)
 -   [Deprecated Factories Replacement](../04_Essentials/deprecated-factories-replacement-491bd9c.md)
+-   [Synchronous `XMLHttpRequest`](https://xhr.spec.whatwg.org/#the-open()-method)
 
 
 
@@ -202,7 +205,7 @@ In the following we'll focus on crucial aspects of app development, specifically
 When creating instances of SAPUI5 controls programmatically \(i.e. not declaratively via XML View or Fragment\), then:
 
 -   Don't use the global name of a control. Require the corresponding module dependency instead.
--   Use `createId` to ensure there are no ID collisions, e.g. `View.createId` to prefix the control's ID with the view ID.
+-   Use `createId` to ensure there are no ID collisions, e.g. [`sap.ui.core.mvc.View#createId`](https://ui5.sap.com/#/api/sap.ui.core.mvc.View%23methods/createId) to prefix the control's ID with the view ID.
 
 **Additional Information:**
 
@@ -315,14 +318,14 @@ Take care of destroying programatically created models to prevent memory leaks.
 
 **OData V2 Model**
 
--   [`v2.ODataModel#createEntry`](https://ui5.sap.com/#/api/sap.ui.model.odata.v2.ODataModel%23methods/createEntry) : Defining an array for the `mParameters.properties` is deprecated since SAPUI5 1.120. Pass the initial values as an object instead.
+-   [`v2.ODataModel#createEntry`](https://ui5.sap.com/#/api/sap.ui.model.odata.v2.ODataModel%23methods/createEntry): Defining an array for the `mParameters.properties` is deprecated since SAPUI5 1.120. Pass the initial values as an object instead.
 
--   [`v2.ODataModel#refreshSecurityToken`](https://ui5.sap.com/#/api/sap.ui.model.odata.v2.ODataModel%23methods/refreshSecurityToken) : Pass `true` for the `bAsync` parameter explicitly as its default value is `false`.
+-   [`v2.ODataModel#refreshSecurityToken`](https://ui5.sap.com/#/api/sap.ui.model.odata.v2.ODataModel%23methods/refreshSecurityToken): Pass `true` for the `bAsync` parameter explicitly as its default value is `false`.
 
 
 **JSON Model**
 
-[`JSONModel#loadData`](https://ui5.sap.com/#/api/sap.ui.model.json.JSONModel%23methods/loadData) : Do **not** pass `false` to the `bAsync` and `bCache` parameters, which are deprecated.
+[`JSONModel#loadData`](https://ui5.sap.com/#/api/sap.ui.model.json.JSONModel%23methods/loadData): Do **not** pass `false` to the `bAsync` and `bCache` parameters, which are deprecated.
 
 **Additional Information:**
 
@@ -356,7 +359,7 @@ Implement strict error handling to address critical issues.
 
 -   Ensure a dependency on the renderer or embed it within the control class.
 
--   Migrate to the rendering `apiVersion 2` or `apiVersion 4`.For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.core.RenderManager%23overview).
+-   Migrate to the rendering `apiVersion 2` or `apiVersion 4`. For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.core.RenderManager%23overview).
 
 -   When utilizing [`RenderManager#icon`](https://ui5.sap.com/#/api/sap.ui.core.RenderManager%23methods/icon) during rendering, include a dependency to `sap/ui/core/IconPool` in your code.
 
@@ -382,7 +385,7 @@ Implement strict error handling to address critical issues.
 
 -   Don't use the global namespace of the library to add types. Use the return value of `Lib.init` instead to add them.
 
--   Migrate to the library `apiVersion 2`.For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.core.Lib%23methods/sap.ui.core.Lib.init).
+-   Migrate to the library `apiVersion 2`. For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.core.Lib%23methods/sap.ui.core.Lib.init).
 
 -   Use [`sap.ui.base.DataType.registerEnum`](https://ui5.sap.com/#/api/sap.ui.base.DataType%23methods/sap.ui.base.DataType.registerEnum) to register enums that shall be usable as a type of control properties.
 

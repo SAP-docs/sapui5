@@ -412,6 +412,27 @@ To change this behavior, you can use the parameter `inlineCreationRowsHiddenInEd
 
 
 
+### Defining the Default Creation Mode
+
+You can define the `InlineCreationRows` mode as the default creation mode that is used for all tables within an application, unless a specific creation mode has been set for a table.
+
+> ### Sample Code:  
+> `manifest.json`
+> 
+> ```
+> "sap.fe": {
+>         …
+>         "macros": {
+>             "table": {
+>                 "defaultCreationMode": "InlineCreationRows"
+>             }
+>         }
+>         …
+>     }
+> ```
+
+
+
 ### Supporting `RequiredProperties` for Draft Creation in Empty Row Mode
 
 If a field is marked with the `Capabilities.InsertRestrictions.RequiredProperties` annotation, an asterisk \(\*\) is displayed in the column header.

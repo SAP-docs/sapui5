@@ -10,6 +10,8 @@ You can use the OData service `/UI5/ABAP_REPOSITORY_SRV` to upload a SAPUI5 app,
 
 ## Prerequisites
 
+-   The OData service `/UI5/ABAP_REPOSITORY_SRV` is available as of SAP\_UI 753.
+
 -   Activate the `/UI5/ABAP_REPOSITORY_SRV` service in your back-end system as described here: [Activate and Maintain Services](https://help.sap.com/viewer/68bf513362174d54b58cddec28794093/latest/en-US/bb2bfe50645c741ae10000000a423f68.html).
 
 -   In transaction `SICF`, check for `/UI5/ABAP_REPOSITORY_SRV` that the `ui5` service \(namespace\) is activated as described here: [ICF Services](https://help.sap.com/viewer/68bf513362174d54b58cddec28794093/latest/en-US/a5f72651c294256ee10000000a445394.html).

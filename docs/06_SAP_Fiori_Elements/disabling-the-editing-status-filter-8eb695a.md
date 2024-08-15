@@ -4,9 +4,6 @@
 
 The editing status filter is enabled by default in the list report page of draft enabled applications.
 
-> ### Note:  
-> This topic is currently only applicable to SAP Fiori elements for OData V2.
-
   
   
 **Editing status filter**

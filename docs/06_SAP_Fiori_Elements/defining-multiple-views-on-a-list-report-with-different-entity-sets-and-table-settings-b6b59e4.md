@@ -71,42 +71,41 @@ To include different entity sets and table settings in multiple views, specify a
 >                  "settings": {
 >                      "condensedTableLayout": true,
 >                      "smartVariantManagement": false,
->                     "quickVariantSelectionX": {
->                         "showCounts": true,
+>                      "quickVariantSelectionX": {
 >                         "variants": {
 >                             "1": {
 >                                 "key": "1",
 >                                 "entitySet": "C_RequirementTrackingPurReq",
 >                                 "annotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#VAR1",
-> 							"tableSettings": { 
-> 								"type": "GridTable",
-> 								"multiSelect": false,
-> 								"selectAll": false,
-> 								"selectionLimit": 200 
-> 							}
+>                                 "tableSettings": { 
+>                                       "type": "GridTable",
+>                                       "multiSelect": false,
+>                                       "selectAll": false,
+>                                       "selectionLimit": 200 
+>                          }
 >                             },
 >                             "2": {
 >                                 "key": "2",
 >                                 "entitySet": "C_RequirementTrackingPurOrd",
 >                                 "annotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#VAR5",
-> 							"tableSettings": { 
-> 								"type": "GridTable",
-> 								"multiSelect": false,
-> 								"selectAll": false,
-> 								"selectionLimit": 200 
-> 							}
+>                                 "tableSettings": { 
+>                                       "type": "GridTable",
+>                                       "multiSelect": false,
+>                                       "selectAll": false,
+>                                       "selectionLimit": 200 
+>                          }
 >                             },
 >                             "3": {
 >                                 "key": "3",
 >                                 "entitySet": "C_RequirementTrackingPurReq",
 >                                 "annotationPath": "com.sap.vocabularies.UI.v1.SelectionPresentationVariant#VAR6",
 >                                 "showItemNavigationOnChart": true,
-> 							"tableSettings": { 
-> 								"type": "TreeTable",
-> 								"multiSelect": false,
-> 								"selectAll": false,
-> 								"selectionLimit": 200 
-> 							}
+>                                        "tableSettings": { 
+>                                             "type": "TreeTable",
+>                                             "multiSelect": false,
+>                                             "selectAll": false,
+>                                             "selectionLimit": 200 
+>                                 }
 >                             }
 >                         }
 >                     }
@@ -321,9 +320,9 @@ As a result, you can see the two tabs in the application:
 
 **Defining Different Table Configurations Using `controlConfiguration`**
 
-You can define different table configurations for each entity set by prefixing the annotation key with the name of the entity set in the controlConfiguration of the `manifest.json`.
+You can define different table configurations for each entity set. To do so, prefix the annotation key with the name of the entity set in the `controlConfiguration` of the `manifest.json` file.
 
-The following sample code shows different personalization settings per table \(with no personalization for EntityA and a column personalization and a filter personalization for EntityB\):
+The following sample code shows different personalization settings per table \(with no personalization for `EntityA` and a column personalization and a filter personalization for `EntityB`\):
 
 > ### Sample Code:  
 > `manifest.json`

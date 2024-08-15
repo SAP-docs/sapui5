@@ -355,11 +355,11 @@ The properties marked with the `PersonalData.IsPotentiallySensitive` annotation 
 > 
 > ```xml
 > <Annotations Target="ZEPM_C_User.C_UserDetailsType/CreditCardNumber">
-> 	<Annotation Term="com.sap.vocabularies.PersonalData.v1.IsPotentiallySensitive" />
+>     <Annotation Term="com.sap.vocabularies.PersonalData.v1.IsPotentiallySensitive" />
 > </Annotations>
 > 
 > <Annotations Target="ZEPM_C_SALESORDERITEMQUERY_CDS.ZEPM_C_SALESORDERITEMKPIResult/BusinessPartner">
-> 	<Annotation Term="UI.ExcludeFromNavigationContext />
+>     <Annotation Term="UI.ExcludeFromNavigationContext />
 > </Annotations>
 > ```
 
@@ -387,8 +387,8 @@ In the extension controller of the source app, you can pass an additional parame
 > ```
 > adaptNavigationParameterExtension: function(oSelectionVariant, oObjectInfo) {
 > if (oObjectInfo.semanticObject === "EPMSalesOrder" && oObjectInfo.action === "manage_sttasomv") {
-> 	oSelectionVariant.addParameter("<Key>", "<Value1>");
-> 	}
+>     oSelectionVariant.addParameter("<Key>", "<Value1>");
+>     }
 > }
 > 
 > ```
@@ -399,8 +399,8 @@ In the extension controller of the source app, you can pass an additional parame
 > ```
 > adaptNavigationParameterExtension: function(oSelectionVariant, oObjectInfo) {
 > if (oObjectInfo.semanticObject === "EPMSalesOrder" && oObjectInfo.action === "manage_sttasomv") {
-> 	oSelectionVariant.addParameter("<Key>", "<Value2>");
-> 	}
+>     oSelectionVariant.addParameter("<Key>", "<Value2>");
+>     }
 > }
 > 
 > ```
