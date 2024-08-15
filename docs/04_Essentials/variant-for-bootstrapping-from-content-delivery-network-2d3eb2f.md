@@ -26,13 +26,10 @@ The specific version allows you to select a particular fixed version for bootstr
 
 ```html
 <script id="sap-ui-bootstrap"
-    type="text/javascript"
     src="https://ui5.sap.com/1.126.0/resources/sap-ui-core.js"
-    data-sap-ui-theme="sap_horizon"
     data-sap-ui-async="true"
-    data-sap-ui-libs="sap.m"></script>
-
-
+    data-...="..."
+></script>
 ```
 
 The first segment of the URL after the host name is used to specify a concrete version, which needs to be provided in the following form: `release_number.version_number.patch_number`. For more information, see [Versioning and Maintenance of SAPUI5](../02_Read-Me-First/versioning-and-maintenance-of-sapui5-91f0214.md).
@@ -49,11 +46,12 @@ The evergreen version allows you to automatically select the latest available pa
 <head>
     <!-- ... -->
     <script id="sap-ui-bootstrap"
-        src="https://ui5.sap.com/1.108/resources/sap-ui-core.js"
+        src="https://ui5.sap.com/1.120/resources/sap-ui-core.js"
         data-sap-ui-async="true"
         data-sap-ui-on-init="module:sap/ui/core/ComponentSupport"
         data-sap-ui-resource-roots='{ "my.app": "./" }'
-    </script>
+        data-sap-ui-compat-version="edge"
+    ></script>
 </head>
 <body id="content" class="sapUiBody">
     <div data-sap-ui-component
@@ -61,7 +59,8 @@ The evergreen version allows you to automatically select the latest available pa
         data-name="my.app"
         data-height="100%"
         data-settings='{ "id": "myComponent" }'
-        data-...="..."></div>
+        data-...="..."
+    ></div>
 </body>
 ```
 
@@ -82,19 +81,6 @@ The default version of our libraries has the generic URL [https://ui5.sap.com/re
 
 > ### Caution:  
 > The default version is constantly being upgraded and this might have an impact on the stability of your application. Use this version for testing purposes only.
-> 
-> If you want to use the default version, you can use the following bootstrap scripts:
-> 
-> ```html
-> <script id="sap-ui-bootstrap"
->     type="text/javascript"
->     src="https://ui5.sap.com/resources/sap-ui-core.js"
->     data-sap-ui-theme="sap_horizon"
->     data-sap-ui-async="true"
->     data-sap-ui-libs="sap.m"></script>
-> 
-> ```
-
 
 
 ### Cache Control
