@@ -502,7 +502,7 @@ For example, `IsFiscalYearPeriod` indicates that the annotated `Edm.String` prop
 
 For more information about ABAP and CDS semantics annotations, see [Semantics Annotations](https://help.sap.com/docs/abap-cloud/abap-rap/semantics-annotations).
 
-Check out our live example in the flexible programming model explorer at [Field - Fiscal types](https://sapui5.hana.ondemand.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/fieldFiscals).
+Check out our live example in the flexible programming model explorer at [Field - Fiscal types](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/fieldFiscals).
 
 
 

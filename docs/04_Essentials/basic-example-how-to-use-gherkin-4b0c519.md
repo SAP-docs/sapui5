@@ -85,16 +85,7 @@ sap.ui.define([
 
 ```
 
-To execute Gherkin tests, you need to find a version of SAPUI5 or OpenUI5 that works for you. Here are some possibilities with different stability:
-
--   Stable: `https://ui5.sap.com/resources/sap-ui-core.js`
-
--   Stable: `https://sdk.openui5.org/resources/sap-ui-core.js`
-
--   Nightly: `https://openui5nightly.hana.ondemand.com/resources/sap-ui-core.js`
-
-
-Our examples all use the nightly OpenUI5 build.
+To execute Gherkin tests, you need to find a version of SAPUI5 or OpenUI5 that works for you. Our examples all use the nightly build from OpneUI5 Content Delivery Network: `https://sdk.openui5.org/nightly/resources/sap-ui-core.js`
 
 
 
@@ -111,7 +102,7 @@ Here is a sample HTML bootstrap file for Gherkin. In this example, the feature f
 
     <script
       id="sap-ui-bootstrap"
-      src="https://openui5nightly.hana.ondemand.com/resources/sap-ui-core.js"
+      src="https://sdk.openui5.org/nightly/resources/sap-ui-core.js"
       data-sap-ui-resource-roots='{"GherkinWithOPA5": "./"}'
       data-sap-ui-log-level="INFO"
     ></script>
@@ -233,7 +224,7 @@ Here is a simple stub for a test Web site \(you may need to update the bootstrap
     <title>Using Gherkin with OPA5 Website</title>
     <script
       id="sap-ui-bootstrap"
-      src="https://openui5nightly.hana.ondemand.com/resources/sap-ui-core.js"
+      src="https://sdk.openui5.org/nightly/resources/sap-ui-core.js"
       data-sap-ui-libs="sap.m,sap.ui.layout"
     ></script>
     <script src="WebsiteCode.js"></script>
