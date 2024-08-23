@@ -231,7 +231,7 @@ Removed as of 1.114. Use `sap.sac.df.FlexAnalysis` instead.
 </td>
 <td valign="top">
 
-Partly deprecated. For the deprecated parts, see [API Reference: `sap.ui.suite`](https://ui5.sap.com/#/api/sap.ui.suite). 
+ 
 
 </td>
 </tr>
@@ -260,41 +260,7 @@ Removed as of 1.120
 </td>
 <td valign="top">
 
-1.96.10
-
-</td>
-<td valign="top">
-
-Partly deprecated. For the deprecated parts, see [API Reference: `sap.ui.vtm`](https://ui5.sap.com/#/api/sap.ui.vtm). 
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-`sap.zen.commons`
-
-</td>
-<td valign="top">
-
-1.89
-
-</td>
-<td valign="top">
-
-Partly deprecated. For the deprecated parts, see [API Reference: `sap.zen.commons`](https://ui5.sap.com/#/api/sap.zen.commons). 
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-`sap.zen.crosstab`
-
-</td>
-<td valign="top">
-
-1.89
+1.96
 
 </td>
 <td valign="top">
@@ -305,6 +271,10 @@ Partly deprecated. For the deprecated parts, see [API Reference: `sap.zen.common
 </tr>
 <tr>
 <td valign="top">
+
+`sap.zen.commons`
+
+`sap.zen.crosstab`
 
 `sap.zen.dsh`
 
@@ -316,7 +286,7 @@ Partly deprecated. For the deprecated parts, see [API Reference: `sap.zen.common
 </td>
 <td valign="top">
 
-Partly deprecated. For the deprecated parts, see [API Reference: `sap.zen.dsh`](https://ui5.sap.com/#/api/sap.zen.dsh). 
+ 
 
 </td>
 </tr>
@@ -325,37 +295,7 @@ Partly deprecated. For the deprecated parts, see [API Reference: `sap.zen.dsh`](
 
 `sap.ui.commons`
 
-</td>
-<td valign="top">
-
-1.38
-
-</td>
-<td valign="top">
-
- 
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
 `sap.ui.ux3`
-
-</td>
-<td valign="top">
-
-1.38
-
-</td>
-<td valign="top">
-
- 
-
-</td>
-</tr>
-<tr>
-<td valign="top">
 
 `sap.makit`
 
@@ -391,17 +331,17 @@ Partly deprecated. For the deprecated parts, see [API Reference: `sap.zen.dsh`](
 <tr>
 <td valign="top">
 
-`sap.ca`
+`sap.ca.ui`
 
 </td>
 <td valign="top">
 
-1.22
+1.28
 
 </td>
 <td valign="top">
 
-Partly deprecated. For the deprecated parts, see [API Reference: `sap.ca`](https://ui5.sap.com/#/api/sap.ca). 
+ 
 
 </td>
 </tr>

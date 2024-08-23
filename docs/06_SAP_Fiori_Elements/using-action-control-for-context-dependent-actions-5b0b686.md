@@ -50,7 +50,7 @@ If the condition, as defined by the applicable-path variable, is not fulfilled, 
 
 You can use action control to enable or disable actions by adding the `OperationAvailable` term.
 
-For more information, see *Enabling Custom Actions Defined via Annotations* in the SAP Fiori elements for OData V4 specific section in [Actions](actions-cbf16c5.md).
+For more information, see the [Enabling Custom Actions Defined Using Annotations](actions-cbf16c5.md#loiocbf16c599f2d4b8796e3702f7d4aae6c__subsection_xkx_gwq_nsb) section in [Actions](actions-cbf16c5.md).
 
 
 

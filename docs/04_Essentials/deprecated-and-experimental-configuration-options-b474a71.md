@@ -588,36 +588,6 @@ Options: `sync | async | off`.
 <tr>
 <td valign="top">
 
-`xx-css-variables`
-
-\(experimental\)
-
-</td>
-<td valign="top">
-
-Type: `string`
-
-Default value: `false`
-
-Enable usage of CSS variables.
-
-Options: `false | true | additional`.
-
-</td>
-<td valign="top">
-
-![YES](../02_Read-Me-First/images/Checked_Okay_3929e46.png)
-
-</td>
-<td valign="top">
-
-![NO](images/Cancel_dfb38de.png)
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
 `xx-debug-module-loading`
 
 \(experimental\)

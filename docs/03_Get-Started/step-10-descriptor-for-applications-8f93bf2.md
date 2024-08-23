@@ -20,7 +20,7 @@ You can view and download all files at [Walkthrough - Step 10](https://ui5.sap.c
 
 
 
-## webapp/manifest.json
+## webapp/manifest.json \(New\)
 
 ```
 {
@@ -85,7 +85,7 @@ The content of the `manifest.json` file is a configuration object in JSON format
 
     -   `type`: Defines what we want to configure; here: an application.
 
-    -   `i18n`: Defines the path to the resource bundle file.
+    -   `i18n`: Defines the path to the resource bundle file. The `supportedLocales` and `fallbackLocale` properties are set to empty strings, as our demo app uses only one `i18n.properties` file for simplicity and we'd like to prevent the browser from trying to load additional `i18n_*.properties` files based on your browser settings and your locale.
 
     -   `title`: Title of the application in handlebars syntax referenced from the app's resource bundle.
 

@@ -13,7 +13,7 @@ The behavior of the available modes is as follows:
 
     By default, a new entry is created and the system automatically navigates to the item's object page.
 
--   **Empty Row Mode**: In create or edit mode, one new empty row is added to the table. In a responsive table, the empty row is added at the top. In a grid table, the empty row is added at the bottom. There is no corresponding entry in the draft table for the empty row. When you begin to add data to a field in an existing empty row, a new empty row is automatically added.
+-   **Empty Row Mode** existing empty row, a new empty row is automatically added. In a responsive table, the empty row is added at the top. In a grid table, the empty row is added at the bottom. There is no corresponding entry in the draft table for the empty row. When you begin to add data to a field in an existing empty row, a new empty row is automatically added.
 
     The automatically added empty row is removed if the user doesn't add any data. It isn't required to manually remove the empty row.
 
@@ -184,61 +184,81 @@ The list of `NonInsertableProperties` is first checked at the navigation propert
 > 
 > ```
 
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> ```
+> No ABAP CDS annotation is required, since the setting is made according to the modelling (create, update, delete, etc.) in RAP BDEF (behavior definition).
+> ```
+
 
 
 <a name="loiocfb04f0c58e7409992feb4c91aa9410b__section_app_g2l_hrb"/>
 
 ## Additional Features in SAP Fiori Elements for OData V2
 
+The `newPage` mode is the default mode to create new rows. In this mode, when the end user clicks *Create*, the application opens a new page where they can input their values.
 
+You can configure the values for `createMode` using the `manifest.json` file. The possible values are `inline`, `creationRows`, `creationRowsHiddenInEditMode`, and `newPage`.
 
-### Enabling Inline Creation Mode
+Unlike in `creationRows` mode, tables configured with `creationRowsHiddenInEditMode` mode don't include an empty row by default in edit mode. An empty row is added to the table once the user clicks *Create*.
 
-To enable inline creation mode in an object page table, set `"creationMode"` to `"Inline"`, as shown in the following sample code:
+> ### Note:  
+> In `creationRows` mode, if a field in a row is modified, then this empty row is converted to draft only after an interval of 20 seconds. This behaviour is similar to that of generic draft handling. For more information, see [Draft Handling](draft-handling-ed9aa41.md).
+> 
+> Once the data is entered to an empty row, it is immediately converted to a draft row only if a structural side effect is defined on the corresponding table or the end user explicitly presses [Enter\].
 
-```
+> ### Sample Code:  
+> manifest.json
+> 
+> ```
+> {
+>   "sap.ui.generic.app" : {
+>     "_version" : "1.3.0",
+>     "settings" : {
+>       "tableSettings" : {
+>         "createMode" : " creationRows"   // Applicable to all tables in object page and sub object page.
+>       }
+>     },
+>     "pages" : {
+>       "ListReport|C_STTA_SalesOrder_WD_20" : {
+>         "entitySet" : "C_STTA_SalesOrder_WD_20",
+>         "component" : {
+>           "name" : "sap.suite.ui.generic.template.ListReport",
+>           "list" : true
+>         },
+>         "pages" : {
+>           "ObjectPage|C_STTA_SalesOrder_WD_20" : {
+>             "entitySet" : "C_STTA_SalesOrder_WD_20",
+>             "component" : {
+>               "name" : "sap.suite.ui.generic.template.ObjectPage",
+>               "settings" : {
+>                 "createMode" : "inline",    // Applicable to all tables in the object page. Overrides the app level definition for create mode.
+>                 "sections" : {
+>                   "to_Item::com.sap.vocabularies.UI.v1.LineItem" : {
+>                     "navigationProperty" : "to_Item",
+>                     "entitySet" : "C_STTA_SalesOrderItem_WD_20",
+>                     "createMode" : "newPage",     // Applicable to the table in the section. Overrides the object page and app level definition for create mode.
+>                     "tableSettings" : {
+>                       "inlineDelete" : true
+>                     }
+>                   }
+>                 }
+>               }
+>             }
+>           }
+>         }
+>       }
+>     }
+>   }
+> }
+> ```
 
-"sap.ui.generic.app": {
-        "pages": [
-            {
-                "entitySet": "SEPMRA_C_PD_Product",
-                "component": {
-                    "name": "sap.suite.ui.generic.template.ListReport",
-                    "list": true
-                },
-                "pages": [
-                    {
-                        "entitySet": "SEPMRA_C_PD_Product",
-                        "component": {
-                            "name": "sap.suite.ui.generic.template.ObjectPage",
-                            "settings": {
-                                "sections": {
-                                                    "to_ProductText::com.sap.vocabularies.UI.v1.LineItem": {
-                                                            "navigationProperty": "to_ProductText",
-                                                            "entitySet": "SEPMRA_C_PD_ProductText",
-                                                            "createMode": "inline"
-                                                    }
-                                                }
-                                            }
-                        },
-                        "pages": [
-                            {
-                                "navigationProperty": "to_ProductText",
-                                "entitySet": "SEPMRA_C_PD_ProductText",
-                                "component": {
-                                    "name": "sap.suite.ui.generic.template.ObjectPage"
-                                }
-                            }
-                        ]
-                    }
-                ]
-            }
-        ]
-    },
-
-```
+In the sample code, the value of `createmode` for tables in all object pages is `creationRows`. However, the values of `createmode` for tables in the `C_STTA_SalesOrder_WD_20` and `C_STTA_SalesOrderItem_WD_20` object pages are `inline` and `newPage`, respectively.
 
 A section ID defined in the annotation must match the section ID defined in the manifest configuration, where the `createMode` setting is defined. For example, `<PropertyValue Property="ID" String="to_ProductText::com.sap.vocabularies.UI.v1.LineItem"/>`.
+
+The `createMode` value defined for tables in the section overrides the object page-level and application-level settings. The `createMode` value for the object page overrides the application-level setting.
 
 
 
@@ -277,22 +297,6 @@ In edit mode, the newly created inline rows are placed at the top of the table b
 Once the `disableDefaultInlineCreateSort` setting is turned off, the new inline rows are sorted according to the sort order applied on the table.
 
 The `disableDefaultInlineCreateSort` setting is evaluated only if the `"createMode":"inline"` flag is available in the `manifest.json` file.
-
-
-
-### Behavior of Rows in Empty Row Mode
-
-If you shift your focus away from the input field of a row, then the current row is converted to draft after an interval of 20 seconds. This behavior is similar to the behavior of generic draft handling. For more information, see [Draft Handling](draft-handling-ed9aa41.md).
-
-The current row is converted to draft immediately only if a structural side effect is defined on the corresponding table.
-
-
-
-### Enabling Empty Row Mode
-
-Similar to inline creation mode, to enable empty row mode, set `"createMode"` to `"creationRows"`.
-
-You can explicitly hide the empty row in edit mode and make the empty row available only in create mode. To hide the empty row in edit mode, set `"createMode"` to `"creationRowsHiddenInEditMode"`. With this configuration, the table doesn't contain an empty row upon loading. An empty row is added to the table only when you click the *Create* button.
 
 
 

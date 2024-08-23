@@ -57,7 +57,7 @@ To specify table settings on tab pages, you need to add `tableSettings` to the c
 > 
 > -   Ensure that the service/entity configured for the chart is **not** draft enabled or a read-only service/entity.
 
-To include different entity sets and table settings in multiple views, specify an entity set for each tab in the`"quickVariantSelectionX"` section. See lines 10 to 27 in the code snippet below.
+To include different entity sets and table settings in multiple views, specify an entity set for each tab in the`"quickVariantSelectionX"` section as shown in the following sample code:.
 
 > ### Sample Code:  
 > ```
@@ -79,9 +79,7 @@ To include different entity sets and table settings in multiple views, specify a
 >                                 "annotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#VAR1",
 >                                 "tableSettings": { 
 >                                       "type": "GridTable",
->                                       "multiSelect": false,
->                                       "selectAll": false,
->                                       "selectionLimit": 200 
+> 
 >                          }
 >                             },
 >                             "2": {
@@ -90,9 +88,7 @@ To include different entity sets and table settings in multiple views, specify a
 >                                 "annotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#VAR5",
 >                                 "tableSettings": { 
 >                                       "type": "GridTable",
->                                       "multiSelect": false,
->                                       "selectAll": false,
->                                       "selectionLimit": 200 
+> 
 >                          }
 >                             },
 >                             "3": {
@@ -102,9 +98,7 @@ To include different entity sets and table settings in multiple views, specify a
 >                                 "showItemNavigationOnChart": true,
 >                                        "tableSettings": { 
 >                                             "type": "TreeTable",
->                                             "multiSelect": false,
->                                             "selectAll": false,
->                                             "selectionLimit": 200 
+> 
 >                                 }
 >                             }
 >                         }
@@ -113,6 +107,12 @@ To include different entity sets and table settings in multiple views, specify a
 >             }
 >         }]    }
 > ```
+> 
+> ```
+> 
+> ```
+
+> ### Sample Code:  
 
 Under `"sap.ui.generic.app"/"pages"`, specify the leading entity set. This is used for the smart filter bar and for the footer. Each table or chart has its own `entitySet` which you specify under `"quickVariantSelectionX"/"variants"`. If you do not specify an entity set under `"/"variants"`, the leading entity set is used as a default.
 

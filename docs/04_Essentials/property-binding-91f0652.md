@@ -60,7 +60,7 @@ You can then set the `bindingMode` or other additional properties like this:
 	<Input
 		value="{
 			path:'/company/name', 
-			mode: 'sap.ui.model.BindingMode.OneWay' 
+			mode: 'OneWay' 
 		}"/>
 </mvc:View>
 ```

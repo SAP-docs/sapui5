@@ -861,6 +861,61 @@ You can define whether the default sort order for tables and charts is ascending
 
 
 
+<a name="loio49a6ba5b8d6946208322a9f7e16837c2__section_ock_pgh_1cc"/>
+
+## Configuring the Number of Rows Loaded
+
+You can define the number of table rows to be loaded initially by using the `com.sap.vocabularies.UI.v1.PresentationVariant` annotation term and the `MaxItems` property.
+
+> ### Sample Code:  
+> XML Annotation
+> 
+> ```
+> <Annotations xmlns=http://docs.oasis-open.org/odata/ns/edm Target="ZFAR_CUSTOMER_LINE_ITEMS2_SRV.Item">
+>     <Annotation Term="com.sap.vocabularies.UI.v1.PresentationVariant">
+>         <Record>
+>             <PropertyValue Property="Visualizations">
+>                 <Collection>
+>                     <AnnotationPath>@UI.LineItem</AnnotationPath>
+>                 </Collection>
+>             </PropertyValue>
+>             <PropertyValue Property="MaxItems" Int="50" />
+>         </Record>
+>     </Annotation>
+> </Annotations>
+> ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> ```
+> @UI.PresentationVariant: [
+>   {
+>     maxItems : 50,
+>     visualizations: [{type: #AS_LINEITEM }]
+>   }
+> ]
+> annotate view ITEM with {
+> 
+> }
+> ```
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> annotate ZFAR_CUSTOMER_LINE_ITEMS2_SRV.Item @(
+>   com.sap.vocabularies.UI.v1.PresentationVariant : {
+>     Visualizations : [
+>         '@UI.LineItem'
+>     ],
+>     MaxItems : 50
+>   }
+> );
+> ```
+
+
+
 <a name="loio49a6ba5b8d6946208322a9f7e16837c2__section_gfr_mvc_jsb"/>
 
 ## Configuring Default Filter Values

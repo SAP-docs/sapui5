@@ -22,8 +22,6 @@ Fields can have an associated value help, or a drop-down list for several fixed 
 Direct `ValueList` annotations under the property level annotations:
 
 > ### Sample Code:  
-> XML Annotation
-> 
 > ```xml
 > <Annotations Target="Self.ArtistsType/CountryOfOrigin">
 >     <Annotation Term="Common.ValueList">
@@ -846,7 +844,7 @@ Value help for draft-enabled entities only shows active documents.
 
 ## Value Help Using `FetchValuesType`
 
-By default, a value help requests the data immediately when the dialog is opened. Application developers can use the <code><a href="https://github.com/SAP/odata-vocabularies/blob/-/vocabularies/Common.md#FetchValuesType">FetchValuesType</a></code>Applications can bring up value help for fields, allowing end users to choose from to define that a value help doesn't load the data immediately, and that users can first maintain a filter and then request the data by choosing *Go*.
+By default, a value help requests the data immediately when the dialog is opened. Application developers can use the <code><a href="https://github.com/SAP/odata-vocabularies/blob/-/vocabularies/Common.md#FetchValuesType">FetchValuesType</a></code>Applications can bring up value help for fields, allowing end users to choose from to define that a value help doesn't load the data immediately, and that users can first maintain a filter and then request the data by choosing XML Annotation*Go*.
 
 You achieve this by setting the property "FetchValues = 2".
 
@@ -854,7 +852,7 @@ You achieve this by setting the property "FetchValues = 2".
 > `ValueList` with `FetchValues`
 > 
 > ```
-> <Annotation Term="Common.ValueList">
+>  XML<Annotation Term="Common.ValueList">
 >     <Record Type="Common.ValueListType">
 >         <PropertyValue Property="CollectionPath" String="ShippingCondition"/>
 >         <PropertyValue Property="Label" String="Shipping Condition"/>

@@ -72,6 +72,22 @@ The `TextArrangement` annotation describes the arrangement of an ID value and it
 
 
 
+<a name="loio7bcdffc056a94731b4341db73251e32b__section_cd5_r3j_dcc"/>
+
+## Integration with SAP Companion
+
+SAP Companion is an SAP tool providing end-users access to context sensitive field help in browser based UIs. The tool provides additional information directly on top of the application screen. For more information about SAP Companion, see [SAP Enable Now](https://help.sap.com/viewer/product/SAP_ENABLE_NOW/latest/en-US?task=use_task).
+
+To enable SAP Companion on a `SmartFilterBar` control, you need to set custom data on the control with the `sap-ui-DocumentationRef` key. To do this, you can use the `com.sap.vocabularies.Common.v1.DocumentationRef` annotation with your `SmartFilterBar` control on each property for which you want to provide SAP Companion support. A metadata annotation should be associated with the property related to the filter. Here is an example of an annotation for a `ContactID` `string-type` property:
+
+```
+<Annotations Target="ContactID">
+<Annotation Term="com.sap.vocabularies.Common.v1.DocumentationRef" String="VALUE"/>
+<Annotations>
+```
+
+
+
 <a name="loio7bcdffc056a94731b4341db73251e32b__section_ojy_pnc_wz"/>
 
 ## Integration with Other Controls

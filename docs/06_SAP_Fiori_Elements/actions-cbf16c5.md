@@ -631,7 +631,7 @@ The following coding sample shows the annotations for a context-dependent action
 
 In SAP Fiori elements for OData V2, you can choose to pass the context when the `UI.DataFieldForAction` button is invoked.
 
-In SAP Fiori elements for OData V4, it depends on the configuration of the `IsBound` property. Context is only passed for actions with `IsBound=true`. For more information, see the section *Additional Features in SAP Fiori Elements for OData V4* in this topic.
+In SAP Fiori elements for OData V4, it depends on the configuration of the `IsBound` property. Context is only passed for actions with `IsBound=true`. For more information, see the section [Additional Features in SAP Fiori Elements for OData V4](actions-cbf16c5.md#loiocbf16c599f2d4b8796e3702f7d4aae6c__section_ntd_h2l_ylb) in this topic.
 
 **Grouping of Multiple Invocations of the Same Action Using Multiple Selections in the Table**
 

@@ -46,7 +46,7 @@ The following properties are deprecated and no longer needed if you use the desc
 
 -   `config`: Static configuration; specify the name-value pairs that you need in the component
 
--   `extensions`: Extensions for components and views, see [Extending Apps](../08_Extending_SAPUI5_Applications/extending-apps-a264a9a.md)
+-   `customizing`: Extensions for components and views, see [Extending Apps](../08_Extending_SAPUI5_Applications/extending-apps-a264a9a.md)
 
     -   `sap.ui.viewExtensions`: Used for providing custom view content in a specified extension point in the standard application
 
@@ -166,4 +166,9 @@ UIComponent.extend("samples.components.shell.Component", {
 ```
 
 The getters and setters for these properties are generated automatically and can be overwritten if additional functionality is required.
+
+**Related Information**  
+
+
+[API Reference: `sap.ui.core.Component.MetadataOptions`](https://ui5.sap.com/#/api/sap.ui.core.Component.MetadataOptions)
 

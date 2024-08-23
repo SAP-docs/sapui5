@@ -307,7 +307,10 @@ Prevent bundling modules \(`Component-preload.js`\) into strings.
 
 ### Models
 
-Take care of destroying programatically created models to prevent memory leaks.
+-   Take care of destroying programatically created models to prevent memory leaks.
+
+-   Built-in framework models \(such as `ODataModel` or `JSONModel`\) and their related classes are considered *final*. They must not be modified or extended. For more information, see [Custom Model](../04_Essentials/custom-model-91f1c7e.md).
+
 
 **OData V4 Model**
 
@@ -363,13 +366,15 @@ Implement strict error handling to address critical issues.
 
 -   When utilizing [`RenderManager#icon`](https://ui5.sap.com/#/api/sap.ui.core.RenderManager%23methods/icon) during rendering, include a dependency to `sap/ui/core/IconPool` in your code.
 
--   Don't use `Control#rerender` to rerender a control as it's deprecated. Use [`Control#invalidate`](https://ui5.sap.com/#/api/sap.ui.core.Control%23methods/invalidate) instead if required.
+-   Don't rely on [`rerender`](https://ui5.sap.com/#/api/sap.ui.core.Control%23methods/rerender) as it is deprecated.
 
+-   Avoid overriding `invalidate` for unintended purposes. Custom logic before or after rendering should be implemented in `onBeforeRendering` or `onAfterRendering`. The actual rendering should be implemented in the `render` function of the control's renderer.
+-   Let the framework handle the invalidation instead of calling `invalidate` directly. It takes care of properly invalidating all affected controls, for example, when a managed control state changes via generated mutators or data binding.
 
 **Additional Information:**
 
 -   [`RenderManager`](https://ui5.sap.com/#/api/sap.ui.core.RenderManager)
--   [`RenderManager#icon`](https://ui5.sap.com/#/api/sap.ui.core.RenderManager%23methods/icon)
+-   [SAPUI5 Control Development Guidelines](../09_Developing_Controls/sapui5-control-development-guidelines-4549da6.md)
 
 
 

@@ -46,11 +46,11 @@ In SAP Fiori elements for OData V4, you can use the mass edit dialog in the obje
 
 
 
-The `visibleFields` property lets you specify which fields are available in the mass edit dialog, even if these fields are not displayed in the table.
+The `visibleFields` property lets you specify which fields are available in the mass edit dialog, even if these fields are not displayed in the table. The `ignoredFields` property lets you hide specific fields from the mass edit dialog, even if these fields are displayed in the table.
 
-The `ignoredFields` property lets you hide specific fields from the mass edit dialog, even if these fields are displayed in the table.
+You can use only either of these properties with an object. If the `visibleFields` property is set, then the `ignoredFields` property is ignored.
 
-Both properties can contain a `FieldGroup` annotation and a comma-separated list of properties.
+Both properties can contain a `FieldGroup` annotation or a comma-separated list of properties. A combination of both is not supported.
 
 > ### Sample Code:  
 > The `manifest.json` setting to toggle the mass edit functionality

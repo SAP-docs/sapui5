@@ -8,39 +8,47 @@ In web applications, modules can be located in different locations, such as serv
 
 The `sap.ui.loader.config` function associates a module name prefix with a URL prefix. All modules are loaded from the registered URL instead of the standard resource root URL:
 
-```js
+```
 sap.ui.loader.config({
 	paths: {
-		"my/module": "https://example.com/resources/my/module"
+		'my/module': 'https://example.com/resources/my/module'
 	}
 });
 ```
 
 Thus, it is possible to redirect the request for the application-specific modules to the corresponding web application:
 
-```js
-// Redirect the 'my.webapp' package to the local web app
-sap.ui.loader.config({
-	paths:{
-		"my/webapp": "my-webapp/resources/my/webapp"
-	}
-});
-sap.ui.require([
-	"sap/ui/core/Core",
-	"my/webapp/MyModule01", // loads /my-webapp/resources/my/webapp/MyModule01.js
-], (Core, MyModule01) => {
-	// ...
-});
+```html
+			
+	<script src="https://sdk.openui5.org/resources/sap-ui-core.js" ></script>
+
+	<script>
+		// redirect the 'my.webapp' package to the local web app
+		sap.ui.loader.config({
+			paths:{
+				"my/webapp": "my-webapp/resources/my/webapp"
+			}
+		});
+		
+		sap.ui.require([
+			'sap/ui/core/Core',	
+			'my/webapp/MyModule01’	// loads /my-webapp/resources/my/webapp/MyModule01.js
+		], function ( Core, MyModule01 ) {
+
+			//[…] use modules
+		}
+	</script>
 ```
 
 > ### Note:  
 > The registered URL above contains the transformed module name prefix `my/webapp/`. This allows a more flexible packaging of the modules, for example, if you decide to deploy all modules named `my.company.*` to the central URL `http://my.company/shared/` without packaging them into a two level hierarchy of subfolders:
 > 
-> ```js
+> ```
+> 
 > sap.ui.loader.config({
-> 	paths: {
-> 		"my/company": "http://my.company/shared/"
-> 	}
+>  	paths:{
+>    		"my/company": "http://my.company/shared/"
+>       }
 > });
 > ```
 > 

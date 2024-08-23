@@ -36,6 +36,8 @@ To enable the search function, `sap:searchable` must be set to `true` for the ro
 
 ## Additional Features in SAP Fiori Elements for OData V4
 
+In SAP Fiori elements for OData V4, the search is restricted to 1000 characters.
+
 For more information about how to enable and disable the *Search* field for analytical tables, see the corresponding section in [Setting the Table Type](setting-the-table-type-7f844f1.md).
 
 

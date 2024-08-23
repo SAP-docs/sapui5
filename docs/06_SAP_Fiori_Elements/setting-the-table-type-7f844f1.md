@@ -420,6 +420,8 @@ For a description of the available table types, see [Tables](tables-c0f6592.md).
 
 For information about setting up tables in the list report through annotations, see [Settings for List Report Tables](settings-for-list-report-tables-4c2d17a.md).
 
+For information about setting up a standard list or object list in the list report, see [Enabling Standard List Items and Object List Items](enabling-standard-list-items-and-object-list-items-4ed47aa.md).
+
 For information about setting up tables in the object page, see [Settings for Object Page Tables](settings-for-object-page-tables-47425bb.md).
 
 For information about table groupings, see [Table Groupings](table-groupings-d344c5a.md).
