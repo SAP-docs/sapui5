@@ -76,6 +76,9 @@ You have the following options:
     ![](images/Multiple_Views_with_Multiple_Entity_Sets_1f20511.png "Multiple views on a list report with different entity sets")
 
 
+> ### Restriction:  
+> You can't use `StandardList` nor `ObjectList` in the multiple view scenario.
+
 
 
 <a name="loioa37df408044e41ef84e67207c8658d4f__section_kyf_rqb_jqb"/>

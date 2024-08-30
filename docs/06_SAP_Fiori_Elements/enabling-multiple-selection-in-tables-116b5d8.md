@@ -96,13 +96,13 @@ You've two options:
 
 ### *Select All* and *Clear All* Options in the Table
 
-In the list report and object page, if `multiSelect` is enabled for responsive tables, the *Select All* checkbox is displayed by default in the column header. To enable the *Clear All* checkbox by default, you must set `selectAll` to `false` in the table configuration.
+In the list report and object page, if `multiSelect` is enabled for responsive tables, the *Select All* checkbox is displayed by default in the column header. To enable the *Clear All* button by default, you must set `selectAll` to `false` in the table configuration.
 
-For grid tables, analytical tables, and tree tables, the *Clear All* checkbox is visible by default if `multiSelect` is enabled in both list reports and object pages. If `multiSelect:true` and `selectAll:false`, the following applies:
+For grid tables, analytical tables, and tree tables, the *Clear All* button is visible by default if `multiSelect` is enabled in both list reports and object pages. If `multiSelect:true` and `selectAll:false`, the following applies:
 
 -   You can still select a range. If new data is loaded from the back-end system, the number of lines to be loaded is restricted to the specified limit. The default value for this limit is 200. If `selectAll:true`, the selection limit isn't evaluated.
 
--   The *Clear All* checkbox is still displayed instead of the *Select All* checkbox. You can choose this checkbox to reset all selections.
+-   The *Clear All* button is still displayed instead of the *Select All* button. You can choose this button to reset all selections.
 
 
 You can change the *Select All*/*Clear All* option in both the list report and object page by setting `selectAll` to `true/false` in the table configuration.

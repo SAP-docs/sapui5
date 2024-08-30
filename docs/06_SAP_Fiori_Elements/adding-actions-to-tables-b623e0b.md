@@ -302,51 +302,17 @@ The following code sample shows how to create your annotations for line item act
 >          <PropertyValue Property="Action" String="manage_st"/>
 >          <PropertyValue Property="Inline" Bool="true"/>
 >       </Record>
->       <Record Type="UI.DataFieldWithIntentBasedNavigation">
->          <PropertyValue Property="Label" String="Weight (with IBN)" /
-> 
-> ```
-
-> ### Sample Code:  
-> ABAP CDS Annotation
-> 
-> ```
-> @UI.lineItem: [
->   {
->     label: 'Copy with new Supplier',
->     dataAction: 'PUSHDOWN:STTA_C_MP_ProductCopywithparams',
->     invocationGrouping: #ISOLATED,
->     type: #FOR_ACTION,
->     position: 1 
->   },>
->          <PropertyValue Property="Value" Path="Weight"/>
->          <PropertyValue Property="SemanticObject" String="EPMProduct" /
->   {>
->     label: 'Activate',
->     dataAction: 'PUSHDOWN:STTA_C_MP_ProductActivation',
->     invocationGrouping: #CHANGE_SET,
->     type: #FOR_ACTION,
->     position: 2 
->          <PropertyValue Property="Action" String="manage_st"/
->   },>
->  {
 >       
->     importance: #HIGH,<
->     value: 'PRODUCT',/Record
->     type: #STANDARD,>
->     position: 3 
->    
->   },<
->   {/Collection
->     label: 'Copy',>
->     dataAction: 'PUSHDOWN:STTA_C_MP_ProductCopy',
+>       <Record Type="UI.DataFieldWithIntentBasedNavigation">
+>          < PropertyValue Property ="Label" String ="Weight (with IBN)" />
+>          < PropertyValue Property ="Action" String ="manage_st_test" />
+>          <PropertyValue Property="Value" Path="Weight"/>
+>          <PropertyValue Property="SemanticObject" String="EPMProduct" />
+>           <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+>       </Record>
+>     </Collection>
+> </Annotation>
 > 
->     invocationGrouping: #ISOLATED,<
->     type: #FOR_ACTION,/Annotation
->     position: 8 >
->   },
-> 
->   {
 > ```
 
 > ### Sample Code:  
@@ -424,7 +390,7 @@ In the example above, the order in which the record types are presented in the a
 
 -   With the next five record types, the `DataField` complex type is used to define the data for a column within the table.
 
--   With the last two record types, the `DataFieldForAction` and `DataFieldForIntentBasedNavigation` complex types are used and contain the `Inline` property, which is set to `true`. This means the action buttons appear in every row in the appropriate column within the table.
+-   With the last but two record types, the `DataFieldForAction` and `DataFieldForIntentBasedNavigation` complex types are used and contain the `Inline` property, which is set to `true`. This means the action buttons appear in every row in the appropriate column within the table.
 
 -   With the last record type, the `DataFieldWithIntentBasedNavigation` complex type is used to render the property value as a link allowing for navigation to the semantic object.
 

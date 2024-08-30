@@ -4,7 +4,7 @@
 
 In this step, you will learn how to use your browser's developers tools to troubleshoot your SAPUI5 app.
 
-Most modern web browsers contain some form of Developer Tools. They allow you to examine the details of the current web page. You can also use them to debug JavaScript code, analyze network performance, live-edit DOM elements, and much more. As an example, we will show you how to use the *Developer Tools* in Google Chrome. Other browsers have similar capabilities, and you can easily adapt the examples shown here to these browsers.
+Most modern web browsers contain some form of developer tools. They allow you to examine the details of the current web page. You can also use them to debug JavaScript code, analyze network performance, live-edit DOM elements, and much more. As an example, we will show you how to use the *Developer Tools* in Google Chrome. Other browsers have similar capabilities, and you can easily adapt the examples shown here to these browsers.
 
 
 
@@ -88,7 +88,7 @@ Most modern web browsers contain some form of Developer Tools. They allow you to
 
 2.  Examine the `button` element by expanding the structure.
 
-3.  On the *Console* tab, enter `myView=sap.ui.require("sap/ui/core/Element").getElementbyId("container-HeapOfShards---app")`.
+3.  On the *Console* tab, enter `myView=sap.ui.require("sap/ui/core/Element").getElementById("container-HeapOfShards---app")`.
 
 4.  On the *Console* tab, enter `myView.byId("myButton")`.
 
@@ -122,7 +122,7 @@ Most modern web browsers contain some form of Developer Tools. They allow you to
 > <tr>
 > <td valign="top">
 > 
-> `Element.getElementbyId("container-HeapOfShards---app--myButton")`, with `Element` required from module `sap/ui/core/Element` 
+> `Element.getElementById("container-HeapOfShards---app--myButton")`, with `Element` required from module `sap/ui/core/Element` 
 > 
 > </td>
 > <td valign="top">

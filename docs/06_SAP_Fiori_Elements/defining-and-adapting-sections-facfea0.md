@@ -161,7 +161,7 @@ You can hide and display sections based on properties.
 > 
 > -   If the object page uses an icon tab bar for sections, then the section title isn't displayed in the content area. If the object page uses an anchor bar for sections, then only the title of the first section is hidden in the content area.
 > 
-> -   For object pages configured with *Page* section layout mode, the following applies: if a section/subsection contains only a table or a chart as a control, the title of the section or subsection is hidden but the title of the control is replaced with the title from the section or subsection. In *Tabs* mode, this only applies to subsections but isn't applied to sections. This special logic is also not invoked if the section or subsection has multiple controls configured within it and, at runtime, due to dynamic visibility or UI adaptation, the section/subsection has a single visible control.
+> -   For object pages configured with *Page* section layout mode, the following applies: if a section/subsection contains only a table or a chart as a control, the title of the section or subsection is hidden but the title of the control is replaced with the title from the section or subsection. In *Tabs* mode, this only applies to subsections but isn't applied to sections. For SAP Fiori elements for OData V2, this special logic is also not invoked if the section or subsection has multiple controls configured within it and, at runtime, due to dynamic visibility or UI adaptation, the section/subsection has a single visible control.
 > 
 > 
 > ![](images/section-subsection_title_08a8f08.png)
@@ -252,7 +252,7 @@ To render a table in a section, follow these steps:
 
     Check out our live example in the flexible programming model explorer at [Table Extensibility](https://sapui5.hana.ondemand.com/test-resources/sap/fe/core/fpmExplorer/index.html#/controllerExtensions/tableExtensibility).
 
-2.  To render a *Create* button, set `Org.OData.Capabilities.V1.InsertRestrictions/Insertable/Bool` to `true` for the entity set. For more information, see the section **Generic Actions** in [Adding Actions to Tables](adding-actions-to-tables-b623e0b.md).
+2.  To render a *Create* button, set `Org.OData.Capabilities.V1.InsertRestrictions/Insertable/Bool` to `true` for the entity set. For more information, see the [Generic Actions](adding-actions-to-tables-b623e0b.md#loiob623e0bbbb2b4147b2d0516c463921a0__section_nx4_qpb_2nb)section in [Adding Actions to Tables](adding-actions-to-tables-b623e0b.md).
 
 
 For more information, see [Enabling Inline Creation Mode or Empty Row Mode for Table Entries](enabling-inline-creation-mode-or-empty-row-mode-for-table-entries-cfb04f0.md).
@@ -355,7 +355,7 @@ When increasing the section and table height to use available free space on the 
 
 If your table has many entries, see the information regarding the `MultiSelectionPlugin` at [Enabling Multiple Selection in Tables](enabling-multiple-selection-in-tables-116b5d8.md).
 
-For more information about the icon tab bar, see *Adapting the UI: Object Page* \> *Switch to tabs*in [Adapting the UI: List Report and Object Page](adapting-the-ui-list-report-and-object-page-0d2f1a9.md).
+For more information about the icon tab bar, see *Adapting the UI: Object Page* \> *Switch to tabs* in [Adapting the UI: List Report and Object Page](adapting-the-ui-list-report-and-object-page-0d2f1a9.md).
 
 
 

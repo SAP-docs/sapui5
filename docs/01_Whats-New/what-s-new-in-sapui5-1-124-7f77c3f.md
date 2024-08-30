@@ -431,7 +431,7 @@ The following changes and new features are available for SAP Fiori elements for 
 
 -   You can now perform edit operations such as cut and paste, drag and drop, and create on tree tables within a list report or an object page. For more information, see [Tree Tables](../06_SAP_Fiori_Elements/tree-tables-7cf7a31.md).
 
--   You can now perform certain configurations to define how columns are exported to a spreadsheet. For more information, see [Using the Export Feature](../06_SAP_Fiori_Elements/using-the-export-feature-4bab6f2.md).
+-   You can now perform certain configurations to define how columns are exported to a spreadsheet. For more information, see [Using the Export Button](../06_SAP_Fiori_Elements/using-the-export-button-4bab6f2.md).
 
 -   We now support a new building block for the tree table. For more information, see [Tree Tables](../06_SAP_Fiori_Elements/tree-tables-7cf7a31.md).
 
@@ -1026,6 +1026,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.125](what-s-new-in-sapui5-1-125-9d87044.md "With this release SAPUI5 is upgraded from version 1.124 to 1.125.")
 
 [What's New in SAPUI5 1.123](what-s-new-in-sapui5-1-123-9d00ac7.md "With this release SAPUI5 is upgraded from version 1.122 to 1.123.")
 

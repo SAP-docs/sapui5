@@ -144,7 +144,7 @@ If only single values need to be applied for the filter fields, application deve
 > 
 > -   When adding a date value, be sure to use the YYYY-MM-DD format.
 > 
-> -   Note the special handling for the `DisplayCurrency` field, for which default values can also come from SAP Fiori launchpad \(FLP\). For more information, see the section *Handling Default Values from SAP Fiori Launchpad \(FLP\)* in [Navigation to an App \(Inbound Navigation\)](navigation-to-an-app-inbound-navigation-c337d8b.md).
+> -   Note the special handling for the `DisplayCurrency` field, for which default values can also come from SAP Fiori launchpad \(FLP\). For more information, see the [Handling Default Values from SAP Fiori Launchpad \(FLP\)](navigation-to-an-app-inbound-navigation-c337d8b.md#loioc337d8bde8c544598969c8e4edaab262__HandlingDefault) section in [Navigation to an App \(Inbound Navigation\)](navigation-to-an-app-inbound-navigation-c337d8b.md).
 > 
 > -   For the analytical list page in SAP Fiori elements for OData V2, you must set the manifest property `filterDefaultsFromSelectionVariant`: true to ensure the filter defaults from the SelectionVariant are considered.
 
@@ -230,8 +230,6 @@ User-defined default values are applied and combined with the values from the st
 <a name="loiof27ad7bc1f9c4b0d947b1fb18c37e94c__section_o4y_t5m_rnb"/>
 
 ## Additional Features in SAP Fiori Elements for OData V4
-
-The filter fields that are applied as the default value are always made visible in the filter bar – even if they are not configured as part of `UI.SelectionFields`.
 
 > ### Restriction:  
 > You cannot define the default values for filter fields using `SelectionVariant` in analytical list page-based applications.

@@ -2330,7 +2330,7 @@ Export to spreadsheet
 </td>
 <td valign="top">
 
-[Using the Export Feature](using-the-export-feature-4bab6f2.md)
+[Using the Export Button](using-the-export-button-4bab6f2.md)
 
 </td>
 <td valign="top">

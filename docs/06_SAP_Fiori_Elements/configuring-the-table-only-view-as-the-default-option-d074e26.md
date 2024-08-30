@@ -6,7 +6,7 @@ In this mode, the data is displayed in the table format.
 
 
 
-Please see the sections *Additional Features in SAP Fiori Elements for OData V2* and *Additional Features in SAP Fiori Elements for OData V4* in this topic for the manifest configurations required to load the table-only view by default. For more information about configuring tables, see [Configuring Tables](configuring-tables-f4eb70f.md).
+Please see the sections [Additional Features in SAP Fiori Elements for OData V2](configuring-the-table-only-view-as-the-default-option-d074e26.md#loiod074e26b013647c7a93b8a9db9b51d2d__section_hyv_2r2_kqb) and [Additional Features in SAP Fiori Elements for OData V4](configuring-the-table-only-view-as-the-default-option-d074e26.md#loiod074e26b013647c7a93b8a9db9b51d2d__section_hjk_k2x_gqb) in this topic for the manifest configurations required to load the table-only view by default. For more information about configuring tables, see [Configuring Tables](configuring-tables-f4eb70f.md).
 
 
 

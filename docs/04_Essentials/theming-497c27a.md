@@ -6,10 +6,10 @@ SAPUI5 is an HTML UI library, therefore styling is done using Cascading Style Sh
 
 SAPUI5 supports you when creating and using different visual designs - called **themes** - that can be used alternatively and switched on the fly. This way, the same application can look very different, depending on the user's design preference or accessibility requirements. Existing themes can serve as a basis for new themes and, in case of new design trends, it is possible to create a matching theme for all existing applications without modifying the applications. The theme handling is decoupled from application development and done in a separate layer. The SAPUI5 library loads the required CSS files and offers ways of switching themes. For more information about the themes that are available, see [Available Themes](available-themes-da0d2e7.md).
 
-On top of pure CSS, SAPUI5 offers a variety of optional features that add value regarding modularization, modification, compatibility, and performance:
+SAPUI5 offers a variety of optional features that add value regarding modularization, modification, compatibility, and performance:
 
--   CSS variables, mixins, color calculations and other functions, provided by the Open Source library [LESS](http://lesscss.org/)
--   In particular, CSS variables are used for centrally defined and centrally modifiable colors
+-   [CSS custom properties](https://developer.mozilla.org/en-US/docs/Web/CSS/--*) providing all theming-related colors, metrics, ... \(available since SAPUI5 1.127.0\)
+-   Variables, mixins, color calculations, and other functions, provided by the Open Source library [LESS](http://lesscss.org/) \(deprecated since SAPUI5 1.127.0\)
 -   Compilation of one CSS file per control library from modular per-control CSS files
 -   Optimization/compression of CSS size
 -   Clean browser switch and mobile platform detection available \(inside CSS code\)
@@ -18,7 +18,11 @@ On top of pure CSS, SAPUI5 offers a variety of optional features that add value 
 
 To ensure these functions, SAPUI5 uses the following components:
 
--   A CSS generator with several functions: LESS processing \(CSS variables substitution etc.\), merge of CSS files created for different themes and controls for optimal runtime consumption, as well as compression or right-to-left substitution if required.
+-   A CSS generator with several functions: LESS processing \(CSS variables substitution, etc.\), merging of CSS files created for different themes and controls for optimal runtime consumption, as well as compression or right-to-left substitution if required.
+
+    > ### Tip:  
+    > With the availability of CSS custom properties, LESS processing is going to be removed as soon as all SAPUI5 libraries make consistent use of the CSS custom properties.
+
 -   The SAPUI5 runtime handles the loading of the appropriate CSS file for the control libraries used in the application page by adding `<style>` tags to the document head. There is also an API available for switching themes, which replaces the CSS URLs and therefore does not modify the application state.
 
 
