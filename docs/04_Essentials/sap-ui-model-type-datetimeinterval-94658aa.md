@@ -4,7 +4,7 @@
 
 The interval data types represent intervals between two date/time related properties.
 
-Three new types are used to format two date related properties from a model for displaying in the UI. Additionally they are used to parse and validate the values in UI controls before they are saved back to the model. All of the them are subtypes of `sap.ui.model.CompositeType` and are supposed to be set with a composite binding. The new interval types are:
+Three new types are used to format two date related properties from a model for displaying in the UI. Additionally they are used to parse and validate the values in UI controls before they are saved back to the model. All of them are subtypes of `sap.ui.model.CompositeType` and are supposed to be set with a composite binding. The new interval types are:
 
 -   `sap.ui.model.type.DateInterval` - represents a date interval \(without time\) which transforms the source values into a formatted date interval string and the other way around.
 
