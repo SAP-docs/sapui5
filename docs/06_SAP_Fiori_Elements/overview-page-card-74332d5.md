@@ -106,7 +106,7 @@ These annotation terms can be configured in the application manifest file, as sh
 
 Card actions are available as of SAPUI5 1.110. You can access and perform the card actions from the card header. The following card actions are available:
 
--   *Refresh*: this action retrieves the the entity bound to the card and reloads the card, displaying the latest data.
+-   *Refresh*: this action retrieves the entity bound to the card and reloads the card, displaying the latest data.
 
 -   *Add Card to Insights*: this action shows a preview of the card so that it can be added to the *Insights* section directly from the overview. Note that this action is only available if the *Insights* service is enabled.
 
@@ -121,7 +121,7 @@ Card actions are available as of SAPUI5 1.110. You can access and perform the ca
 
 You can add and use the analytical, list and table cards within the *Insights* section of *My Home* in SAP S/4HANA Cloud. The objective of displaying cards on the entry page is to visualize charts, KPI´s and counters in the form of interest cards.
 
-To add a card to the *Insights* section, select the *More* option from the card and choose *Add Card to Insights*. In the subsequent dialog box, you can update the card's *Title* and the *Subtitle*. Click *Add* to display the card in the *Insights* section .
+To add a card to the *Insights* section, select the *More* option from the card and choose *Add Card to Insights*. In the subsequent dialog box, you can update the card's *Title* and the *Subtitle*. Click *Add* to display the card in the *Insights* section.
 
 Note that only eight cards at a time can be displayed in the *Insights* section. If the maximum number of cards is already displayed on the entry page, the selected card is added to the *Edit Insights* dialog box. You can choose to select or deselect cards by editing the *Insights* section. For more information, see [*My Home* in SAP S/4HANA Cloud](https://help.sap.com/docs/SAP_S4HANA_CLOUD/4fc8d03390c342da8a60f8ee387bca1a/8a60279e8d2041b5ad8d3455fab0f3ef.html).
 
