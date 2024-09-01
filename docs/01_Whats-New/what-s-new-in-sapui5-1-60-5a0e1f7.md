@@ -184,17 +184,17 @@ UI5 evolutionThe hyphenation feature uses third-party and browser-native represe
 
 **Modular Core**
 
-Existing modules in the modulare core have been reworked to follow the AMD-like \(asynchronous module definition\) syntax of SAPUI5, which ensures that modules and their dependencies can be loaded and evaluated asynchronously. The Asynchronous Module Definition \(AMD\) specifies a mechanism for defining modules so that the module and its dependencies can be loaded asynchronously. It allows you to avoid accessing modules via global variables and enforces a strict dependency declaration. The documentation has been enhanced accordingly and also made more prominent.For more information, see [Modules and Dependencies](../04_Essentials/modules-and-dependencies-91f23a7.md).
+Existing modules in the modular core have been reworked to follow the AMD-like \(asynchronous module definition\) syntax of SAPUI5, which ensures that modules and their dependencies can be loaded and evaluated asynchronously. The Asynchronous Module Definition \(AMD\) specifies a mechanism for defining modules so that the module and its dependencies can be loaded asynchronously. It allows you to avoid accessing modules via global variables and enforces a strict dependency declaration. The documentation has been enhanced accordingly and also made more prominent. For more information, see [Modules and Dependencies](../04_Essentials/modules-and-dependencies-91f23a7.md).
 
-The core part of the framework has improved its modular structure by leveraging SAPUI5's AMD-like features such as [sap.ui.define](https://ui5.sap.com/#/api/sap.ui/methods/sap.ui.define) and [sap.ui.require](https://ui5.sap.com/#/api/sap.ui/methods/sap.ui.require). Already starting with 1.58, the former `jQuery.sap` modules were replaced by new, more granular modules. The new modules are separated either into a regular browser-dependent "UI" layer or into a "base" layer that is independent from the browser-native API and the DOM.For more information, see [Adapting to the Modularization of the Core](../04_Essentials/adapting-to-the-modularization-of-the-core-b8fdf0c.md).
+The core part of the framework has improved its modular structure by leveraging SAPUI5's AMD-like features such as [sap.ui.define](https://ui5.sap.com/#/api/sap.ui/methods/sap.ui.define) and [sap.ui.require](https://ui5.sap.com/#/api/sap.ui/methods/sap.ui.require). Already starting with 1.58, the former `jQuery.sap` modules were replaced by new, more granular modules. The new modules are separated either into a regular browser-dependent "UI" layer or into a "base" layer that is independent from the browser-native API and the DOM. For more information, see [Adapting to the Modularization of the Core](../04_Essentials/adapting-to-the-modularization-of-the-core-b8fdf0c.md).
 
 Several mechanisms have been introduced to allow existing applications to continue to run without changes. Nevertheless, all SAPUI5 projects should start to migrate their code and leverage the new core modules to get rid of the deprecated modules and benefit from current or upcoming improvements, especially towards the AMD-like syntax of SAPUI5.
 
-A comprehensive overview shows how you can replace legacy `jQuery.sap` modules and `jQuery` extensions with new modules or native browser APIs. For more information, see [Deprecated jQuery.sap API Replacement](../04_Essentials/deprecated-jquery-sap-api-replacement-a075ed8.md). The Support Assistant also comes with new rules to help identify legacy code, and best practices for module definition and asynchronous loading are also provided.For more information, see [Best Practices for Loading Modules](../04_Essentials/best-practices-for-loading-modules-00737d6.md).
+A comprehensive overview shows how you can replace legacy `jQuery.sap` modules and `jQuery` extensions with new modules or native browser APIs. For more information, see [Deprecated jQuery.sap API Replacement](../04_Essentials/deprecated-jquery-sap-api-replacement-a075ed8.md). The Support Assistant also comes with new rules to help identify legacy code, and best practices for module definition and asynchronous loading are also provided. For more information, see [Best Practices for Loading Modules](../04_Essentials/best-practices-for-loading-modules-00737d6.md).
 
 **Asynchronous API**
 
-In order to benefit from asynchronous behavior and to avoid synchronous requests \(as browsers start to deprecate sync XHR\), future-proof SAPUI5 code should use asynchronous APIs. One important step to get there with your existing code is to replace synchronous factory functions, such as global functions in the `sap.ui` namespace, with asynchronous alternatives. Many asynchronous factories are now available via a consistent and elegant API. The documentation provides examples of former sync factories and their preferred async alternatives.For more information, see [Deprecated Factories Replacement](../04_Essentials/deprecated-factories-replacement-491bd9c.md).
+In order to benefit from asynchronous behavior and to avoid synchronous requests \(as browsers start to deprecate sync XHR\), future-proof SAPUI5 code should use asynchronous APIs. One important step to get there with your existing code is to replace synchronous factory functions, such as global functions in the `sap.ui` namespace, with asynchronous alternatives. Many asynchronous factories are now available via a consistent and elegant API. The documentation provides examples of former sync factories and their preferred async alternatives. For more information, see [Deprecated Factories Replacement](../04_Essentials/deprecated-factories-replacement-491bd9c.md).
 
 <sub>New•Feature•Info Only•1.60</sub>
 
@@ -280,7 +280,7 @@ Control
 
 **`sap.ui.layout.cssgrid.CSSGrid`**
 
-`sap.m.FlexBox` which is the one-dimensional alternative for layouting.A layout control, used to create full-page layouts or user interface elements. It is a two-dimensional layout based on the browser-native CSS display grid that handles both columns and rows. The control can be used together with
+`sap.m.FlexBox` which is the one-dimensional alternative for layouting. A layout control, used to create full-page layouts or user interface elements. It is a two-dimensional layout based on the browser-native CSS display grid that handles both columns and rows. The control can be used together with
 
 ![](images/sap_ui_layout_cssgrid_CSSGrid_New_Control_2bdf9f5.png)
 
@@ -619,7 +619,7 @@ Control
 
 `sap.m.Image`
 
-To optimize app performance, we changed the default value of the `densityAware` property to `false`. App developers should enable this property only if the app provides the corresponding image versions for high-density devices.For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.Image/controlProperties).
+To optimize app performance, we changed the default value of the `densityAware` property to `false`. App developers should enable this property only if the app provides the corresponding image versions for high-density devices. For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.Image/controlProperties).
 
 <sub>Changed•Control•Info Only•1.60</sub>
 
@@ -701,9 +701,9 @@ Control
 
 **`sap.m.MultiComboBox`**
 
--   We have implemented a dropdown list with a two-column layout. You can now use the `MultiComboBox` with a two-column layout to display additional information for your options. To enable this feature, you need to set the `showSecondaryValues` property to `true`. This feature was initially available only for the `ComboBox` and has now been enabled for the `MultiComboBox` as well. This property indicates whether the text values of the `additionalText` property of a `sap.ui.core.ListItem` are shown.For more information, see the [Sample](https://ui5.sap.com/#/sample/sap.m.sample.MultiComboBoxTwoColumnsLayout/preview).
+-   We have implemented a dropdown list with a two-column layout. You can now use the `MultiComboBox` with a two-column layout to display additional information for your options. To enable this feature, you need to set the `showSecondaryValues` property to `true`. This feature was initially available only for the `ComboBox` and has now been enabled for the `MultiComboBox` as well. This property indicates whether the text values of the `additionalText` property of a `sap.ui.core.ListItem` are shown. For more information, see the [Sample](https://ui5.sap.com/#/sample/sap.m.sample.MultiComboBoxTwoColumnsLayout/preview).
 
--   We have introduced grouping in the suggestion list of `sap.m.MultiComboBox`. This feature allows you to easily group items by common characteristics and to display a header describing the characteristics for each group. If data binding is used, grouping is defined on the `Sorter` in data binding. Alternatively, a group header could be added programmatically, as an instance of `sap.ui.core.SeparatorItem` with `key` and/or `text` properties, by adding it to the `items` aggregation of the `sap.m.MultiComboBox` control.For more information, see the [Sample](https://sdk.openui5.org/#/sample/sap.m.sample.MultiComboBoxGrouping/preview).
+-   We have introduced grouping in the suggestion list of `sap.m.MultiComboBox`. This feature allows you to easily group items by common characteristics and to display a header describing the characteristics for each group. If data binding is used, grouping is defined on the `Sorter` in data binding. Alternatively, a group header could be added programmatically, as an instance of `sap.ui.core.SeparatorItem` with `key` and/or `text` properties, by adding it to the `items` aggregation of the `sap.m.MultiComboBox` control. For more information, see the [Sample](https://sdk.openui5.org/#/sample/sap.m.sample.MultiComboBoxGrouping/preview).
 
 
 <sub>Changed•Control•Info Only•1.60</sub>
@@ -786,7 +786,7 @@ Control
 
 **`sap.m.PlanningCalendar`**
 
-The `stickyHeader` property is no longer experimental.For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.PlanningCalendar).
+The `stickyHeader` property is no longer experimental. For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.PlanningCalendar).
 
 <sub>Changed•Control•Info Only•1.60</sub>
 
@@ -911,7 +911,7 @@ Control
 
 **`sap.m.UploadCollection`**
 
-The control's functionality has been unified, so the behavior is now more consistent, regardless of whether the `instantUpload` mode is enabled. With the new `beforeUploadTermination` event, you can adjust the control’s behavior when the file upload is terminated by the user before completion. If the default upload behavior is not applicable to your app, you can now also implement custom upload logic using the `CollectionUploader` class.For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.UploadCollection).
+The control's functionality has been unified, so the behavior is now more consistent, regardless of whether the `instantUpload` mode is enabled. With the new `beforeUploadTermination` event, you can adjust the control’s behavior when the file upload is terminated by the user before completion. If the default upload behavior is not applicable to your app, you can now also implement custom upload logic using the `CollectionUploader` class. For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.UploadCollection).
 
 <sub>Changed•Control•Info Only•1.60</sub>
 
@@ -952,7 +952,7 @@ Control
 
 **`sap.m.ViewSettingsDialog`**
 
-Several visual improvements were implemented - the *OK* button is now displayed as emphasized and there is a better visual separation of the items displayed in the *Sort By*, *Filter By* and *Group By* tabs.For more information, see the [Sample](https://ui5.sap.com/#/sample/sap.m.sample.ViewSettingsDialog/preview).
+Several visual improvements were implemented - the *OK* button is now displayed as emphasized and there is a better visual separation of the items displayed in the *Sort By*, *Filter By* and *Group By* tabs. For more information, see the [Sample](https://ui5.sap.com/#/sample/sap.m.sample.ViewSettingsDialog/preview).
 
 <sub>Changed•Control•Info Only•1.60</sub>
 
@@ -1034,7 +1034,7 @@ Control
 
 **`sap.ui.comp.smartmicrochart`**
 
-The `SmartAreaMicroChart`, `SmartLineMicroChart`, and `SmartColumnMicroChart` controls are now fully responsive and adapt to the size of their parent containers. In addition, `SmartColumnMicroChart` now supports column labels, and `SmartLineMicroChart` can include up to three lines.For more information, see the API Reference for [`SmartAreaMicroChart`](https://ui5.sap.com/#/api/sap.ui.comp.smartmicrochart.SmartAreaMicroChart), [`SmartLineMicroChart`](https://ui5.sap.com/#/api/sap.ui.comp.smartmicrochart.SmartLineMicroChart), and [`SmartColumnMicroChart`](https://ui5.sap.com/#/api/sap.ui.comp.smartmicrochart.SmartColumnMicroChart).
+The `SmartAreaMicroChart`, `SmartLineMicroChart`, and `SmartColumnMicroChart` controls are now fully responsive and adapt to the size of their parent containers. In addition, `SmartColumnMicroChart` now supports column labels, and `SmartLineMicroChart` can include up to three lines. For more information, see the API Reference for [`SmartAreaMicroChart`](https://ui5.sap.com/#/api/sap.ui.comp.smartmicrochart.SmartAreaMicroChart), [`SmartLineMicroChart`](https://ui5.sap.com/#/api/sap.ui.comp.smartmicrochart.SmartLineMicroChart), and [`SmartColumnMicroChart`](https://ui5.sap.com/#/api/sap.ui.comp.smartmicrochart.SmartColumnMicroChart).
 
 <sub>Changed•Control•Info Only•1.60</sub>
 
