@@ -103,7 +103,7 @@ The function `opaTest` is the main aspect for defining integration tests with OP
     Contains custom assertions that check a specific constellation in the application and the teardown function that removes our component again.
 
 
-In our journey, we create a very simple test that starts the `MainPage` and loads our app. Then, we carry out the the actions we defined in our `MainPage` and expect that they will be executed successfully. Finally, we shut down the page again by calling the function `iTeardownMyApp` on the `MainPage`.
+In our journey, we create a very simple test that starts the `MainPage` and loads our app. Then, we carry out the actions we defined in our `MainPage` and expect that they will be executed successfully. Finally, we shut down the page again by calling the function `iTeardownMyApp` on the `MainPage`.
 
 ```js
 import opaTest from "sap/ui/test/opaQunit";

@@ -261,7 +261,7 @@ Additionally, dynamic link list card supports contact annotation as default anno
     <tr>
     <td valign="top">
     
-    For any of the these annotation configuration:
+    For any of these annotation configuration:
 
     -   `UI.Identification` annotation with property `Action`
 
@@ -282,7 +282,7 @@ Additionally, dynamic link list card supports contact annotation as default anno
     <tr>
     <td valign="top">
     
-    For any of the these annotation configuration + default contact annotation:
+    For any of these annotation configuration + default contact annotation:
 
     -   `UI.Identification` annotation with property `Action`
 
