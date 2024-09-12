@@ -355,11 +355,11 @@ The properties marked with the `PersonalData.IsPotentiallySensitive` annotation 
 > 
 > ```xml
 > <Annotations Target="ZEPM_C_User.C_UserDetailsType/CreditCardNumber">
-> 	<Annotation Term="com.sap.vocabularies.PersonalData.v1.IsPotentiallySensitive" />
+>     <Annotation Term="com.sap.vocabularies.PersonalData.v1.IsPotentiallySensitive" />
 > </Annotations>
 > 
 > <Annotations Target="ZEPM_C_SALESORDERITEMQUERY_CDS.ZEPM_C_SALESORDERITEMKPIResult/BusinessPartner">
-> 	<Annotation Term="UI.ExcludeFromNavigationContext />
+>     <Annotation Term="UI.ExcludeFromNavigationContext />
 > </Annotations>
 > ```
 
@@ -387,8 +387,8 @@ In the extension controller of the source app, you can pass an additional parame
 > ```
 > adaptNavigationParameterExtension: function(oSelectionVariant, oObjectInfo) {
 > if (oObjectInfo.semanticObject === "EPMSalesOrder" && oObjectInfo.action === "manage_sttasomv") {
-> 	oSelectionVariant.addParameter("<Key>", "<Value1>");
-> 	}
+>     oSelectionVariant.addParameter("<Key>", "<Value1>");
+>     }
 > }
 > 
 > ```
@@ -399,8 +399,8 @@ In the extension controller of the source app, you can pass an additional parame
 > ```
 > adaptNavigationParameterExtension: function(oSelectionVariant, oObjectInfo) {
 > if (oObjectInfo.semanticObject === "EPMSalesOrder" && oObjectInfo.action === "manage_sttasomv") {
-> 	oSelectionVariant.addParameter("<Key>", "<Value2>");
-> 	}
+>     oSelectionVariant.addParameter("<Key>", "<Value2>");
+>     }
 > }
 > 
 > ```
@@ -571,7 +571,7 @@ During external outbound navigation, the following data is removed from the navi
     > ### Sample Code:  
     > ABAP CDS Annotation
     > 
-    > Path-based `FieldControl` isn't supported via ABAP CDS annotations.
+    > Path-based `FieldControl` isn't supported using ABAP CDS annotations.
 
     > ### Sample Code:  
     > CAP CDS Annotation
@@ -689,7 +689,7 @@ You can change the name of properties that are passed in the navigation context 
 
 If the target field name isn't from the global field catalog, you can use the target-mapping mechanism to convert the incoming global field catalog name to the target-specific field.
 
-To do this when navigating via the `DataFieldForIntentBasedNavigation` button, use the `Mapping` property in the `DataFieldForIntentBasedNavigation` annotation.
+To do this when navigating using the `DataFieldForIntentBasedNavigation` button, use the `Mapping` property in the `DataFieldForIntentBasedNavigation` annotation.
 
   
   
@@ -739,7 +739,7 @@ To do this when navigating via the `DataFieldForIntentBasedNavigation` button, u
 
 The value for the field is passed as the value for `ABC` rather than as the value for `SoldToParty`.
 
-Empty values aren't passed to the target application, unless explicitly set via *Define Conditions* in the filter bar.
+Empty values aren't passed to the target application, unless explicitly set using *Define Conditions* in the filter bar.
 
 
 
@@ -783,7 +783,7 @@ You can use `DataFieldWithURL` with absolute URL:
 
 
 
-### Navigation via Link
+### Navigation Using a Link
 
 The value of the property, against which the semantic object is configured, is passed directly in the navigation context. For example, if the property is `SoldToParty` and has the value `001`, the navigation context is `SoldToParty=001`. To achieve a different property in the navigation context, use the `SemanticObjectMapping` annotation.
 
@@ -829,7 +829,7 @@ Links are only editable if the field with the link representation has a value he
 
 
 
-### Navigation via Button
+### Navigation Using a Button
 
 Applications can selectively enable `DataFieldForIntentBasedNavigation` buttons using the "`NavigationAvailable`" property of the `DataFieldForIntentBasedNavigation` annotation. This Boolean property accepts `true` / `false` / `path` and points to a property that evaluates to `true/false`.
 

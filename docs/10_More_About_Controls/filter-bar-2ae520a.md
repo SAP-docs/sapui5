@@ -99,6 +99,16 @@ The buttons in the dialog offer the following functions:
 
 
 
+<a name="loio2ae520a67c44495ab5dbc69668c47a7f__section_ew2_4np_dcc"/>
+
+## Integration with SAP Companion
+
+SAP Companion is an SAP tool providing end-users access to context sensitive field help in browser based UIs. The tool provides additional information directly on top of the application screen. For more information about SAP Companion, see [SAP Enable Now](https://help.sap.com/viewer/product/SAP_ENABLE_NOW/latest/en-US?task=use_task).
+
+You can enable support for SAP Companion by setting custom data on each filter control with `sap-ui-DocumentationRef` key and the field help as value. When getting field help information, the field help data on the control is used.
+
+
+
 ## Integration with Value Help Dialog
 
 The filter bar is also used in the *Value Help* dialog scenarios. The filter bar property `advancedMode` must be set to `true` to enable this function.

@@ -18,6 +18,16 @@ By the end of this step, you will have created a Viewer application that allows 
 
 
 
+<a name="loio0e219128fe564855b91ae50d7a29424b__section_lv5_lvy_zbc"/>
+
+## Setup
+
+Open a terminal and install UI5 Tooling globally on your machine by executing the following command:
+
+`npm install --global @ui5/cli`
+
+
+
 ## Coding
 
 You can view and download all files at [3D Viewer - Step 1 - 3D Viewer With Single File Loading](https://ui5.sap.com/#/entity/sap.ui.vk.tutorial.VIT/sample/sap.ui.vk.tutorial.VIT.01).

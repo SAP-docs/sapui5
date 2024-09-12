@@ -183,4 +183,19 @@ For information about the `Field` API, see the [API Reference](https://ui5.sap.c
     > />
     > ```
 
+5.  You can bind the description of the `Field` with value help to a JSON model. To do it, use the `description` property.
+
+    > ### Note:  
+    > The `description` property should be used in conjunction with the `value` property.
+
+    > ### Sample Code:  
+    > ```
+    > <macros:Field 
+    >     id="myCustomField" 
+    >     metaPath="/RootEntity/name" 
+    >     value="{myJSONModel>/customModelBindingPath}"
+    >     description="{myJSONModel>/customModelDescriptionBindingPath}" 
+    > />
+    > ```
+
 

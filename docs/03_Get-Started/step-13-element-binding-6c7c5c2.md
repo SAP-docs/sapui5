@@ -10,9 +10,9 @@ Now we want to do something with that newly generated list. In most cases you wi
 
   
   
-**Element binding implemented, product details displayed per item**
+**A fourth panel with details for a selected product is displayed**
 
-![](images/Tutorial_Data_Binding_Step_13_872d2ed.png "Element binding implemented, product details displayed per item")
+![The graphic has an explanatory text](images/Tutorial_Data_Binding_Step_13_872d2ed.png "A fourth panel with details for a selected product is displayed")
 
 
 

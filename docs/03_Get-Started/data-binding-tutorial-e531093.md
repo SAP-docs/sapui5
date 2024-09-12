@@ -14,7 +14,7 @@ The UI uses data binding to bind controls to the model which holds the applicati
 
 ## Preview
 
-![](images/Tutorial_Data_Binding_896048e.png)
+![Preview of three panels of the UI5 application that is going to be built in this tutorial. Contains three panels with name input fields, address details, and a product list.](images/Tutorial_Data_Binding_896048e.png)
 
 > ### Tip:  
 > You don't have to do all tutorial steps sequentially, you can also jump directly to any step you want. Just download the code from the previous step, copy it to your workspace and make sure that the application runs by calling the `webapp/index.html` file.

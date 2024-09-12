@@ -505,7 +505,7 @@ First or last six data points
 
 Donut
 
-\(currently only supported in SAP Fiori elements for OData V2\)
+\(only supported in SAP Fiori elements for OData V2\)
 
 </td>
 <td valign="top">
@@ -845,7 +845,7 @@ Semantic coloring is based on the defined criticality in the `ValueCriticality` 
 > 
 > -   Chart measure semantic coloring takes precendence over dimension semantic coloring.
 
-For a sample annotation applicable to both SAP Fiori elements for OData V2 and SAP Fiori elements for OData V4, please see the OData V4-specific section *Support for Criticality Coloring* in [Configuring Charts](configuring-charts-653ed0f.md).
+For a sample annotation applicable to both SAP Fiori elements for OData V2 and SAP Fiori elements for OData V4, please see the [Support for Criticality Coloring](configuring-charts-653ed0f.md#loio653ed0f4f0d743dbb33ace4f68886c4e__criticality_coloring_subsection) section in [Configuring Charts](configuring-charts-653ed0f.md).
 
 
 
@@ -1098,7 +1098,7 @@ If the main entity set contains the text annotation for a unit, then that is dis
 
 ## Additional Features in SAP Fiori Elements for OData V4
 
-Application developers must ensure there is a manifest property for each visual filter that is to be rendered. For more information, see *Additional Features in SAP Fiori Elements for OData V4* in [Configuring the Visual Filter Bar](configuring-the-visual-filter-bar-33f3d80.md).
+Application developers must ensure there is a manifest property for each visual filter that is to be rendered. For more information, see the [Additional Features in SAP Fiori Elements for OData V4](configuring-the-visual-filter-bar-33f3d80.md#loio33f3d807c10b47d9a8141692d2619dc2__section_my4_mgz_jqb) section in [Configuring the Visual Filter Bar](configuring-the-visual-filter-bar-33f3d80.md).
 
 
 

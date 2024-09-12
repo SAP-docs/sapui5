@@ -80,7 +80,7 @@ In draft-enabled applications, a new draft is created by using the `POST` call, 
 You can use URL parameters to prefill specific values. This is currently not supported for draft creation via `newAction`. For example, to set the value 01 for the *DefectCategory* field, enter the URL `…#Defect-displayWorklist?preferredMode=create&DefectCategory=01`.
 
 > ### Note:  
-> The target application must specify in its `manifest.json` file which parameters are to be used from the incoming URL. In the following example, only the `Supplier` parameter is used.
+> The target application must specify in its `manifest.json` file which parameters are to be used from the incoming URL. In the following example, only the `DefectCategory` parameter is used.
 > 
 > ```
 > "sap.ui.generic.app": { 
@@ -105,24 +105,12 @@ You can use URL parameters to prefill specific values. This is currently not sup
 <tr>
 <td valign="top">
 
-mode
-
-</td>
-<td valign="top">
-
-If the specified mode isn't suitable for the current draft state, there is no silent fallback. However, the user gets an error message before the object page is opened in the potentially available mode.
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
 `callUnboundAction` 
 
 </td>
 <td valign="top">
 
-You can use this value to automatically trigger an unbound action when an app is started with this startup parameter during an external navigation scenario.The startup parameters must contain the mandatory specification of the unbound action and values for the inbound parameters of that action.
+You can use this value to automatically trigger an unbound action when an app is started with this startup parameter during an external navigation scenario. The startup parameters must contain the mandatory specification of the unbound action and values for the inbound parameters of that action.
 
 The target app must make the unbound action available. To do this, you can specify the changes in the `manifest.json` file, as shown in the following sample code:
 
@@ -159,11 +147,11 @@ The sample code shows two unbound actions, `myCreate1` and `myCreate3`, that are
 
 The source app passes the startup parameter `mode/preferredMode` as `callUnboundAction`. `myActionName` is used to specify the unbound action that is called. The actions must be addressed by their logical names and not by their technical names.
 
-Moreover, the source app can also pass values for any inbound parameter of the specified action. For example, values, the object page opens in create mode. `myCreate1` function import with the inbound parameters `ResultIsActiveEntity` and `Name`, pass the startup parameter in the URL as shown in the following sample code:
+Moreover, the source app can also pass values for any inbound parameter of the specified action. In the following sample code, `myCreate1` function import is called with the inbound parameters `ResultIsActiveEntity` and `Name`.
 
 > ### Sample Code:  
 > ```
-> #NewActionTest-NewActionTest?preferredMode=callUnboundAction& myActionName=myCreateWithNameAndStreet& ResultIsActiveEntity=true&Name=myName
+> #NewActionTest-NewActionTest?preferredMode=callUnboundAction&myActionName=myCreate1&ResultIsActiveEntity=true&Name=myName
 > ```
 
 

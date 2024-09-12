@@ -87,7 +87,7 @@ For loading lazy components inside a library, proceed with the library mechanism
 
 **Scenario 2:** Standalone component
 
-In this scenario, you only need to maintain a dependency to the component via the `sap.ui5/componentUsages` section of your component's`manifest.json` file. You have two ways to configure reuse components:
+In this scenario, you only need to maintain a dependency to the component via the `sap.ui5/componentUsages` section of your component's `manifest.json` file. You have two ways to configure reuse components:
 
 -   Add the **mandatory** components to `sap.ui5/componentUsages`. The declared components will be preloaded asynchronously by default.
 

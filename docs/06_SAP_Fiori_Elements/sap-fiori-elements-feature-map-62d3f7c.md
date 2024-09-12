@@ -1979,7 +1979,7 @@ Default values for action parameter dialog
 </td>
 <td valign="top">
 
-Section *Default Values for Action Parameters* in the topic [Actions](actions-cbf16c5.md)
+[Default Values for Action Parameters](actions-cbf16c5.md#loiocbf16c599f2d4b8796e3702f7d4aae6c__DefaultValuesActionParameters) section in [Actions](actions-cbf16c5.md)
 
 [Prefilling Fields Using the `DefaultValuesFunction`](prefilling-fields-using-the-defaultvaluesfunction-5ada91c.md)
 
@@ -2330,7 +2330,7 @@ Export to spreadsheet
 </td>
 <td valign="top">
 
-[Using the Export Feature](using-the-export-feature-4bab6f2.md)
+[Using the Export Button](using-the-export-button-4bab6f2.md)
 
 </td>
 <td valign="top">

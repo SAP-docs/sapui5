@@ -56,7 +56,7 @@ Possible Values for `"availability"`
 
 -   Hidden: The filter field is not visible in the filter bar or within the *Adapt Filters* dialog.
 
-    You must ensure that the entity corresponding to the visual filter \(which comes from the `valueList` property that is set in the manifest\) is enabled for aggregation. For more information, see *Enabling Aggregation in the Back End* under *Additional Features in SAP Fiori Elements for OData V4* in [Configuring Charts](configuring-charts-653ed0f.md).
+    You must ensure that the entity corresponding to the visual filter \(which comes from the `valueList` property that is set in the manifest\) is enabled for aggregation. For more information, see the [Enabling Aggregation in the Back End](configuring-charts-653ed0f.md#loio653ed0f4f0d743dbb33ace4f68886c4e__enabling_aggregation_subsection) section in [Configuring Charts](configuring-charts-653ed0f.md).
 
     > ### Remember:  
     > In addition to the settings described in [Configuring Charts](configuring-charts-653ed0f.md), ensure that the aggregation annotations are defined in the correct place:

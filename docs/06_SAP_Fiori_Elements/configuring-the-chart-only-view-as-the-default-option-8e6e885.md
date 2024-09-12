@@ -521,7 +521,7 @@ For more information about options that can be provided for the annotation path,
 
 ### Additional Chart Features
 
-For more information about additional chart features, see the *Additional Features in SAP Fiori Elements for OData V4* section in [Configuring Charts](configuring-charts-653ed0f.md).
+For more information about additional chart features, see the [Additional Features in SAP Fiori Elements for OData V4](configuring-charts-653ed0f.md#loio653ed0f4f0d743dbb33ace4f68886c4e__section_ymw_bdc_4nb) section in [Configuring Charts](configuring-charts-653ed0f.md).
 
 **Related Information**  
 

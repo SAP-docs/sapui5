@@ -861,6 +861,61 @@ You can define whether the default sort order for tables and charts is ascending
 
 
 
+<a name="loio49a6ba5b8d6946208322a9f7e16837c2__section_ock_pgh_1cc"/>
+
+## Configuring the Number of Rows Loaded
+
+You can define the number of table rows to be loaded initially by using the `com.sap.vocabularies.UI.v1.PresentationVariant` annotation term and the `MaxItems` property.
+
+> ### Sample Code:  
+> XML Annotation
+> 
+> ```
+> <Annotations xmlns=http://docs.oasis-open.org/odata/ns/edm Target="ZFAR_CUSTOMER_LINE_ITEMS2_SRV.Item">
+>     <Annotation Term="com.sap.vocabularies.UI.v1.PresentationVariant">
+>         <Record>
+>             <PropertyValue Property="Visualizations">
+>                 <Collection>
+>                     <AnnotationPath>@UI.LineItem</AnnotationPath>
+>                 </Collection>
+>             </PropertyValue>
+>             <PropertyValue Property="MaxItems" Int="50" />
+>         </Record>
+>     </Annotation>
+> </Annotations>
+> ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> ```
+> @UI.PresentationVariant: [
+>   {
+>     maxItems : 50,
+>     visualizations: [{type: #AS_LINEITEM }]
+>   }
+> ]
+> annotate view ITEM with {
+> 
+> }
+> ```
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> annotate ZFAR_CUSTOMER_LINE_ITEMS2_SRV.Item @(
+>   com.sap.vocabularies.UI.v1.PresentationVariant : {
+>     Visualizations : [
+>         '@UI.LineItem'
+>     ],
+>     MaxItems : 50
+>   }
+> );
+> ```
+
+
+
 <a name="loio49a6ba5b8d6946208322a9f7e16837c2__section_gfr_mvc_jsb"/>
 
 ## Configuring Default Filter Values
@@ -936,7 +991,7 @@ Make the following settings in the `manifest.json` to specify the `SelectionPres
 
 [Configuring Charts](configuring-charts-653ed0f.md "You can add a chart facet to a content section within the list report and object page.")
 
-[Loading Behavior Based on the Chosen Variant](loading-behavior-based-on-the-chosen-variant-9f4e119.md "Several factors affect the loading behavior of the content area based on the chosen variant.")
+[Loading Behavior of Data on Initial Launch of the Application](loading-behavior-of-data-on-initial-launch-of-the-application-9f4e119.md "Several factors affect the loading behavior of data on initial launch of the application.")
 
 [Initial Expansion Level for Tables in List Reports & Analytical List Pages](initial-expansion-level-for-tables-in-list-reports-analytical-list-pages-bc05d35.md "You can set the number of expanded levels for tables in List Reports and Analytical List Pages using the initialExpansionLevel property of the PresentationVariant annotation.")
 

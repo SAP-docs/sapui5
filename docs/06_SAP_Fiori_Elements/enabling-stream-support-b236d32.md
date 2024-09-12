@@ -5,7 +5,7 @@
 End users of SAP Fiori elements can upload, download, and delete files.
 
 > ### Note:  
-> Application developers must define `@Core.AcceptableMediaTypes`. This avoids security issues by enabling SAP Fiori elements to check for allowed file types. The back-end service framework must ensure that virus scan and related security handling is in place.
+> Application developers must define `@Core.AcceptableMediaTypes`. This avoids security issues by enabling SAP Fiori elements to check for allowed file types. The back-end service framework must ensure a virus scan and other security measures, such as maximum file size limitations and MIME-type restrictions, are in place.
 
 
 
@@ -180,7 +180,7 @@ To restrict the file size, add the attribute `MaxLength` to the `Property`. `Max
 > ### Note:  
 > The `odata.mediaEditLink` annotation is currently not supported.
 
-For more information, see [https://cap.cloud.sap/docs/guides/media-data](https://cap.cloud.sap/docs/guides/media-data).
+For more information, see [https://cap.cloud.sap/docs/guides/providing-services\#annotating-media-elements](https://cap.cloud.sap/docs/guides/providing-services#annotating-media-elements).
 
 
 

@@ -16,6 +16,16 @@ As you know SAPUI5 is all about HTML5. Let’s get started with building a first
 
 
 
+<a name="loioc20489e2a59d46e99c83f0510392cb6c__section_lv5_lvy_zbc"/>
+
+## Setup
+
+Open a terminal and install UI5 Tooling globally on your machine by executing the following command:
+
+`npm install --global @ui5/cli`
+
+
+
 <a name="loioc20489e2a59d46e99c83f0510392cb6c__section_js2_mhx_kzb"/>
 
 ## Coding
@@ -88,7 +98,7 @@ Hence, we create a new file named `manifest.json` in the webapp folder and defin
 {
   "_version": "1.60.0",
   "sap.app": {
-    "id": "ui5.walkthrough"
+    "id": "ui5.walkthrough",
     "type": "application",
     "title": "UI5 TypeScript Walkthrough",
     "applicationVersion": {

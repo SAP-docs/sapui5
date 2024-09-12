@@ -168,15 +168,14 @@ Application developers can then add the extension code to call the route defined
 >             .......
 >             .......
 >         }
->     }
-> }
-> );
+>     })
+> });
 > ```
 
 In addition, here's an example for the object page:
 
 > ### Sample Code:  
-> Extension code for the obect page
+> Extension code for the object page
 > 
 > ```
 > sap.ui.define(

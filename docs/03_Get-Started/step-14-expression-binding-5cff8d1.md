@@ -10,9 +10,9 @@ Expression binding allows you to display a value on the screen that has been cal
 
   
   
-**Values formatted**
+**Prices are color-coded depending on a selected threshold**
 
-![](images/Tutorial_Data_Binding_Step_14_b9fb758.png "Values formatted")
+![The graphic has an explanatory text](images/Tutorial_Data_Binding_Step_14_b9fb758.png "Prices are color-coded depending on a selected threshold")
 
 
 

@@ -18,11 +18,17 @@ Let's get you ready for your journey! We bootstrap SAPUI5 in an HTML page and im
 
 
 
-<a name="loio851bde42e4e1410c96abbe402fa9128c__section_zzy_mpc_1gb"/>
+<a name="loio851bde42e4e1410c96abbe402fa9128c__section_lv5_lvy_zbc"/>
 
 ## Setup
 
-Install UI5 Tooling globally on your local machine by executing following command `npm install --global @ui5/cli`.
+Open a terminal and install UI5 Tooling globally on your machine by executing the following command:
+
+`npm install --global @ui5/cli`
+
+
+
+<a name="loio851bde42e4e1410c96abbe402fa9128c__section_zzy_mpc_1gb"/>
 
 ## Coding
 

@@ -37,7 +37,7 @@ The paste action is available for the following scenarios:
 > -   For new rows created during the paste action, the order of the data copied from a spreadsheet or external application might differ from the order in the table after the end user has inserted it. SAP Fiori elements cannot control this.
 > -   This feature is not supported for tables with custom columns or custom tables.
 > 
-> -   In the object page, the *Export to Spreadsheet* feature is available by default only if the copy/paste feature is available. For more information, see [Using the Export Feature](using-the-export-feature-4bab6f2.md).
+> -   In the object page, the *Export to Spreadsheet* feature is available by default only if the copy/paste feature is available. For more information, see [Using the Export Button](using-the-export-button-4bab6f2.md).
 
 
 
@@ -107,5 +107,8 @@ The paste option can be disabled with the `enablePaste` parameter.
 > 
 > ```
 
-Users can also copy multiple rows as well as ranges of rows and columns to the clipboard. For more information, see the *Copying Multiple Rows and Range Selections* section in [Tables](tables-c0f6592.md).
+Users can also copy multiple rows as well as ranges of rows and columns to the clipboard. For more information, see the [Copying Multiple Rows and Range Selections](tables-c0f6592.md#loioc0f6592a592e47f9bb6d09900de47412__section_pth_3mb_dzb) section in [Tables](tables-c0f6592.md).
+
+> ### Restriction:  
+> You can't paste content in a cell that contains a navigation property.
 

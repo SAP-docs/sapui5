@@ -4,7 +4,7 @@
 
 Provides details about the data types supported by the spreadsheet export.
 
-All data types supported by the spreadsheet export are listed in the `sap.ui.export.EdmType` enumeration. During the export, the values are converted to a value that is in compliance with the Office Open XML requirements.
+All data types supported by the spreadsheet export are listed in the `sap.ui.export.EdmType` enumeration. During the export, the values are converted to a value that is in compliance with the Office Open XML specification.
 
 
 
@@ -625,7 +625,7 @@ Yes
 </td>
 <td valign="top">
 
-Defines a specific format that gets applied to `Date`/`DateTime`/`Time`. The format overrides the default formatting of the respective type which means that you can assign a format that shows only time-related information even to a column of type `Date`, which usually shows no time-related information.
+Defines a specific format that gets applied to `Date`/`DateTime`/`Time`. The format overrides the default formatting of the respective type, so you can assign a format that shows only time-related information even to a column of type `Date`, which usually shows no time-related information.
 
 If the `format` property has not been defined, the `sap/base/i18n/Formatting.getDatePattern` and `sap/base/i18n/Formatting.getTimePattern` functions are used to determine the default format pattern. In a SAP Fiori launchpad environment, these functions return the patterns configured in the settings of the SAP Fiori launchpad. While columns of type `sap.ui.export.EdmType.Date` require a date pattern and columns of type `sap.ui.export.EdmType.Time` require a time pattern, for columns of type `sap.ui.export.EdmType.DateTime`, both patterns need to be maintained. If no related pattern is available, the `format` property remains undefined.
 

@@ -269,8 +269,8 @@ To restrict the embedding to same-origin domains, set `frame-options` to `truste
 
 <script>
 globalThis["sap-ui-config"] = {
-    frame-options: 'trusted',
-    frame-options-config: {
+    "frame-options": "trusted",
+    "frame-options-config": {
         callback: function(bSuccess) {
             if (bSuccess) {
                 alert("App is allowed to run!");
@@ -295,9 +295,9 @@ To allow that the SAPUI5 application is embedded in cross-origin domains, config
 ```html
 <script>
 globalThis["sap-ui-config"] = {
-    allowlist-service: 'url/to/allowlist/service',
-    frame-options: 'trusted',
-    frame-options-config: {
+    "allowlist-service": "url/to/allowlist/service",
+    "frame-options": "trusted",
+    "frame-options-config": {
         callback: function(bSuccess) {
             if (bSuccess) {
                 alert("App is allowed to run!");

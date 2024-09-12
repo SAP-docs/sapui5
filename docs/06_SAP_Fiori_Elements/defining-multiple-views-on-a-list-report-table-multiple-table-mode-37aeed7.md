@@ -381,9 +381,7 @@ To define multiple views using multiple table mode, perform the following steps:
     > ```
 
     > ### Note:  
-    > -   If you want to enable auto-binding, don't use key user adaptation for changing the smart table's `enableAutoBinding` properties. From a performance perspective, this leads to back-end requests for each table instance. To achieve the required behavior \(that is, only rebind the currently visible table\), you can add an entry `enableAutoBinding: true` under `quickVariantSelectionX`. This ensures the behavior on list report page level.
-    > 
-    > -   Stable IDs: As there are separate table instances for each tab, table-specific IDs \(such as IDs for tables, toolbar actions, draft indicators in table columns\) get a suffix "-<key\>", where <key\> is the variant key you have specified in the manifest \(line 13\). This avoids duplicate ID errors and allows you to adapt specific tables via runtime adaptation \(for example, hiding a toolbar action for a specific table\).
+    > Stable IDs: As there are separate table instances for each tab, table-specific IDs \(such as IDs for tables, toolbar actions, draft indicators in table columns\) get a suffix "-<key\>", where <key\> is the variant key you have specified in the manifest \(line 13\). This avoids duplicate ID errors and allows you to adapt specific tables via runtime adaptation \(for example, hiding a toolbar action for a specific table\).
 
 3.  If you use charts in multiple table mode, you can implement the following features:
 
@@ -471,7 +469,6 @@ To define multiple views using multiple table mode, perform the following steps:
         ```
         
         "quickVariantSelectionX": {
-            "showCounts": true, 
             "variants": {
                "0": {
                     "key": "0",
@@ -542,7 +539,6 @@ To define multiple views using multiple table mode, perform the following steps:
 > ```
 > "settings": {
 >      "quickVariantSelectionX": {
->           "showCounts": true,
 >           "variants": {
 >                "0": {
 >                     "key": "1",
@@ -615,7 +611,6 @@ To define multiple views using multiple table mode, perform the following steps:
 > 
 > ```
 > "quickVariantSelectionX": {
->      "showCounts": true,
 >      "variants": {
 >           "0": {
 >                "key": "1",

@@ -28,7 +28,7 @@ The list report view includes the following main elements:
 
 -   Footer toolbar that can include optional actions
 
-For more information about the loading behavior of an app, see [Loading Behavior Based on the Chosen Variant](loading-behavior-based-on-the-chosen-variant-9f4e119.md).
+For more information about the loading behavior of an app, see [Loading Behavior of Data on Initial Launch of the Application](loading-behavior-of-data-on-initial-launch-of-the-application-9f4e119.md).
 
 
 

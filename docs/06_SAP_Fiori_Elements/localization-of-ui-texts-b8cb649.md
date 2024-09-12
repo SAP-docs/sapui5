@@ -6,8 +6,6 @@ If necessary, you can replace standard UI texts for apps that you have created w
 
 Standard texts are available in the generic framework \(for example, the button texts for draft concepts\) and belong to the template components \(for example, list report and object page\). The following sections describe how you replace texts in your generated apps.
 
-When you have created your specific application component, standard texts are available from a specific template component and from the generic template component.
-
 Standard texts can be overwritten by application-specific texts.
 
 Perform the following steps to replace the standard UI texts:
@@ -1701,7 +1699,7 @@ The URL reflects the folder path to the resource model. The model's name, `i18n|
 
 ## Additional Features in SAP Fiori Elements for OData V4
 
-When you have created your specific application component, standard UI texts are available from a specific template component \(`sap.fe.templates`\) and from the generic template component.
+When you have created your specific application component, standard UI texts are available from a specific template component \(`sap.fe.templates`\).
 
 > ### Tip:  
 > You can also use the building blocks provided by SAP Fiori elements in applications built without using one of our floorplans. If none of our floorplans suit your use case, you can build a custom app that still runs on the SAP Fiori elements framework, but where all pages are treated like custom pages. For more information about how to override the standard UI texts when you're using building blocks, see [Adapt i18n](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/guidance/adaptI18n).

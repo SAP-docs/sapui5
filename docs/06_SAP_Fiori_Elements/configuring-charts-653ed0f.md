@@ -185,7 +185,7 @@ You can define a chart against a draft-enabled entity. In this case, only active
 
 ### Enabling the Chart Facet in a List Report
 
-You can configure a chart to be part of the content area using the `manifest.json`. For more information, see the section *Enabling the ALP in SAP Fiori Elements for OData V4* in [Descriptor Configuration for the Analytical List Page](descriptor-configuration-for-the-analytical-list-page-2a9df06.md).
+You can configure a chart to be part of the content area using the `manifest.json`. For more information, see the [Enabling the ALP in SAP Fiori Elements for OData V4](descriptor-configuration-for-the-analytical-list-page-2a9df06.md#loio2a9df06673d34f72b238549d49da8bfb__section_b3f_qhf_1qb) section in [Descriptor Configuration for the Analytical List Page](descriptor-configuration-for-the-analytical-list-page-2a9df06.md).
 
 
 
@@ -579,7 +579,7 @@ For charts to work, the entity set must support aggregation. SAP Fiori elements 
 > 
 >     -   The back end supports transformation filters.
 > 
->     -   The annotations must be added for the aggregate entities. For more information about annotation samples, see the section *How to Set Transformation Filters on Aggregate Controls* in [Setting the Table Type](setting-the-table-type-7f844f1.md).
+>     -   The annotations must be added for the aggregate entities. For more information about annotation samples, see the [How to Set Transformation Filters on Aggregate Controls](setting-the-table-type-7f844f1.md#loio7f844f1021cd4791b8f7408eac7c1cec__AggregateControls) section in [Setting the Table Type](setting-the-table-type-7f844f1.md).
 
 > ### Restriction:  
 > The following restrictions apply regarding the support of the chart control:

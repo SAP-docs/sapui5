@@ -57,7 +57,7 @@ Users can switch between the draft and saved version using a dropdown in applica
 
 
 
-### Preparing the Draft for Activation on Tablet and Mobile Devices by Pressing [Enter\]
+### Preparing the Draft for Activation on Tablet and Mobile Devices
 
 The object page displays the *Validate* button to execute the `PreparationAction` call. The side effects, if configured, are also triggered along with the validate action.
 

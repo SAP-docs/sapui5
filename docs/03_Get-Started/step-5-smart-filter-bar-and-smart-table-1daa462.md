@@ -383,5 +383,5 @@ We have only listed a part of the `Products.json` entries since the actual value
 
 [Smart Filter Bar](../10_More_About_Controls/smart-filter-bar-7bcdffc.md "The sap.ui.comp.smartfilterbar.SmartFilterBar control analyzes the $metadata document of an OData service and renders a FilterBar control that can be used to filter, for example, a table or a chart.")
 
-[Smart Table](../10_More_About_Controls/smart-table-bed8274.md "The sap.ui.comp.smarttable.SmartTable control is used to create different types of tables based on OData V2 metadata. The control allows the user to define personalized table settings.")
+[Smart Table](../10_More_About_Controls/smart-table-bed8274.md "The sap.ui.comp.smarttable.SmartTable control is used to create different types of tables based on OData V2 metadata. The control allows users to use a number of built-in features, such as personalized table settings with sorting and filtering options, the calculation of column widths, column header menus, and a document export.")
 

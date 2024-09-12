@@ -149,7 +149,7 @@ The *Edit* and *Delete* buttons are displayed as shown above, if the following c
 > ### Note:  
 > If you want to specify conditions for deletion or updates \(using the `deletable-path` or `updatable path` annotation\), you need to ensure that you have not made the `sap:deletable` or `sap:updatable` setting in your annotations.
 
-For more information about the *Delete* button, see the *Enable or Disable Delete Button \(Using `deletable-path` Annotations\)* section in [Adding Actions to Tables](adding-actions-to-tables-b623e0b.md).
+For more information about the *Delete* button, see the [Enable or Disable *Delete* Button \(Using `deletable-path` Annotations\)](adding-actions-to-tables-b623e0b.md#loiob623e0bbbb2b4147b2d0516c463921a0__deletebutton) section in [Adding Actions to Tables](adding-actions-to-tables-b623e0b.md).
 
 
 
@@ -248,13 +248,13 @@ The *Delete* button allows users to delete the instance of the object page.
 >     > 
 >     > ```
 > 
->     For more information about the visibility of the *Delete* button, see the *Show or Hide the Delete Button* section in [Adding Actions to Tables](adding-actions-to-tables-b623e0b.md).
+>     For more information about the visibility of the *Delete* button, see the [Showing or Hiding the *Delete* Button](adding-actions-to-tables-b623e0b.md#loiob623e0bbbb2b4147b2d0516c463921a0__ShowHideDelete) section in [Adding Actions to Tables](adding-actions-to-tables-b623e0b.md).
 
 
 
 ### Edit Enablement
 
-If the application defines an `EditAction`, as shown in the sample annotation above, the `UpdateRestrictions` are completely ignored. Instead, `OperationAvailable` determines the enablement of the button. For more information about `OperationAvailable`, see the *Enabling Custom Actions Defined via Annotations* section in [Actions](actions-cbf16c5.md).
+If the application defines an `EditAction`, as shown in the sample annotation above, the `UpdateRestrictions` are completely ignored. Instead, `OperationAvailable` determines the enablement of the button. For more information about `OperationAvailable`, see the [Enabling Custom Actions Defined Using Annotations](actions-cbf16c5.md#loiocbf16c599f2d4b8796e3702f7d4aae6c__subsection_xkx_gwq_nsb) section in [Actions](actions-cbf16c5.md).
 
 -   If `OperationAvailable` = true \(static\) OR if `OperationAvailable` is not defined, the *Edit* button is visible \(provided that `updateHidden` doesn’t evaluate to false\) and enabled.
 
@@ -345,11 +345,11 @@ The following sample shows examples of global actions:
 
 You control the visibility of the custom global actions by using the `UI.Hidden` annotation. If static true or path-based evaluate to true, the action button is hidden.
 
-You also control the enablement of the `DataFieldForAction` buttons via the `OperationAvailable` mechanism in the same way as described in [Actions](actions-cbf16c5.md) in the *Enabling Custom Actions Defined via Annotations* section.
+You also control the enablement of the `DataFieldForAction` buttons via the `OperationAvailable` mechanism in the same way as described in the [Enabling Custom Actions Defined Using Annotations](actions-cbf16c5.md#loiocbf16c599f2d4b8796e3702f7d4aae6c__subsection_xkx_gwq_nsb) section in [Actions](actions-cbf16c5.md).
 
-The enablement of intent-based navigation \(IBN\) buttons can be controlled via the `"NavigationAvailable"` property, as described in [Navigation from an App \(Outbound Navigation\)](navigation-from-an-app-outbound-navigation-d782acf.md) in the *Navigation via Button* section.
+The enablement of intent-based navigation \(IBN\) buttons can be controlled via the `"NavigationAvailable"` property, as described in the [Navigation Using a Button](navigation-from-an-app-outbound-navigation-d782acf.md#loiod782acf8bfd74107ad6a04f0361c5f62__NavigationButton) section in [Navigation from an App \(Outbound Navigation\)](navigation-from-an-app-outbound-navigation-d782acf.md).
 
-The `UI.DataFieldForAction` can be bound or unbound actions. For more information, see the *Bound and Unbound Actions* section [Adding Actions to Tables](adding-actions-to-tables-b623e0b.md).
+The `UI.DataFieldForAction` can be bound or unbound actions. For more information, see the [Bound and Unbound Actions](actions-cbf16c5.md#loiocbf16c599f2d4b8796e3702f7d4aae6c__BoundUnbound) section in [Actions](actions-cbf16c5.md).
 
 **Related Information**  
 

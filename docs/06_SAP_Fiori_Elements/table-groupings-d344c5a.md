@@ -6,7 +6,7 @@ SAP Fiori elements handles table groupings automatically.
 
 The grouping of rows is supported in analytical tables \(`sap.ui.Table.AnalyticalTable`\) and responsive tables \(`sap.m.Table`\). Grid tables and tree tables are not supported.
 
-An example of table grouping of rows is shown in the following screenshot:
+An example of row grouping in a table is shown in the following screenshot:
 
 ![](images/Table_Grouping_b36df77.png)
 
@@ -544,16 +544,12 @@ End users can always change groups and totals via the column header and the aggr
 > 
 > If a PresentationVariant is defined, a total is provided for the columns with aggregable properties listed in the `Total` attribute of the `PresentationVariant`.
 > 
-> If the `Total` attribute is defined but empty, total isn't provided. If the `Total` attribute is missing, a total is provided by default for all the columns with an aggregable property.
+> If the `Total` attribute is defined but empty, no total is provided. If the `Total` attribute is missing, a total is provided by default for all the columns with an aggregable property.
 
-
-
-### Restrictions
-
--   Filtering on aggregatable properties is currently not supported and is also removed from the filter bar and from the filter dialog of the table.
-
--   If a group has multiple units or currencies in its data, the total cannot be computed. It then displays an asterisk \("\*"\) instead of the aggregated value.
-
--   Only one level of grouping is supported in a responsive table. If you have specified multiple levels through a `PresentationVariant`, for example, only the first level is applied.
-
+> ### Restriction:  
+> -   Filtering on aggregatable properties is not supported and is also removed from the filter bar and from the filter dialog of the table.
+> 
+> -   If a group has multiple units or currencies in its data, the total cannot be computed directly. In this case, the table displays a *Show Details* link which opens a popup. The total or subtotal amounts per unit or per currency are shown in the popup.
+> 
+> -   Only one level of grouping is supported in a responsive table. If you have specified multiple levels through a `PresentationVariant`, for example, only the first level is applied.
 

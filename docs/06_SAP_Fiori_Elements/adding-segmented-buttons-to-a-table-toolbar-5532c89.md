@@ -270,7 +270,9 @@ The following manifest settings are required for adding segmented buttons:
 > }
 > ```
 
-To show the number of records available next to the title of the segmented button, set `showCounts` to `true`.
+If `showCounts` is set to `true`, the segmented buttons show the count next to the button label and no count is shown next to the title of the table.
+
+If `showCounts` is set to `false`, no count is shown next to the button label, nor next to the title of the table.
 
 To hide the title of the table and show only the segmented buttons or the `selectionBox`, set the `hideTableTitle` to `true`. You should use this option only if the title of your `SelectionVariant` is self-explanatory and can replace the table title.
 
