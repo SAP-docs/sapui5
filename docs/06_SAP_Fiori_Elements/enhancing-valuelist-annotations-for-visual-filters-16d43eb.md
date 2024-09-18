@@ -89,7 +89,7 @@ You must enhance the value list annotation corresponding to a filter field with 
 > ```
 
 > ### Note:  
-> In SAP Fiori elements for OData V4, the `"CollectionPath"` of the corresponding value list annotation must point to the result entity set in the same manner as described in *Supporting Parameterized Entities* under *Additional Features in SAP Fiori Elements for OData V4* in [Configuring Filter Bars](configuring-filter-bars-4bd7590.md).
+> In SAP Fiori elements for OData V4, the `"CollectionPath"` of the corresponding value list annotation must point to the result entity set in the same manner as described in the [Supporting Parameterized Entities](configuring-filter-bars-4bd7590.md#loio4bd7590569c74c61a0124c6e370030f6__suppprting_parameterized_entities_subsection) section in [Configuring Filter Bars](configuring-filter-bars-4bd7590.md).
 
 In continuation with the value list annotations given in the example in [In/Out Mappings in the ValueList Annotation](in-out-mappings-in-the-valuelist-annotation-4de40b3.md), assume that the following visual filters have been defined:
 

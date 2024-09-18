@@ -294,10 +294,10 @@ You can set the `FilterRestrictions` to `SingleRange` as shown in the following 
 > ```
 > <Annotations Target="com.c_salesordermanage_sd.EntityContainer/SalesOrderManage">
 >     <Annotation Term="Capabilities.FilterRestrictions">
->         <RecordType="Capabilities.FilterRestrictionsType">
+>         <Record Type="Capabilities.FilterRestrictionsType">
 >             <PropertyValue Property="FilterExpressionRestrictions">
 >                 <Collection>
->                     <RecordType="Capabilities.FilterExpressionRestrictionType">
+>                     <Record Type="Capabilities.FilterExpressionRestrictionType">
 >                         <PropertyValueProperty="Property"PropertyPath="myDate"/>
 >                         <PropertyValueProperty="AllowedExpressions"String="SingleRange"/>
 >                     </Record>

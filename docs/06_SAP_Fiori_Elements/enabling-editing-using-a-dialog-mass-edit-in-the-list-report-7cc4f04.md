@@ -84,7 +84,7 @@ To use a `fieldgroup`, add its annotation path in the `manifest.json` file:
 > ```
 
 > ### Note:  
-> -   This feature is only supported for responsive tables.
+> -   This feature is only applicable to responsive tables and grid tables.
 > 
 > -   This feature isnot supported for smart multi-input fields, custom columns, and `DataFieldForAnnotations`.
 > 

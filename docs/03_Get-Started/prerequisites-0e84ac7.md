@@ -30,6 +30,16 @@ In some steps, additional files are needed. They will be explained in those step
 
 
 
+<a name="loio0e84ac7c9d3e4acaa49e61e6ee808649__section_lv5_lvy_zbc"/>
+
+## Setup
+
+Open a terminal and install UI5 Tooling globally on your machine by executing the following command:
+
+`npm install --global @ui5/cli`
+
+
+
 <a name="loio0e84ac7c9d3e4acaa49e61e6ee808649__section_jwr_b1b_mzb"/>
 
 ## Coding

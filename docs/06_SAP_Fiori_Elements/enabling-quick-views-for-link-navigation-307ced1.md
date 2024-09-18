@@ -197,38 +197,73 @@ To define a quick view for a source property with a `ReferentialConstraint` on a
 
 1.  Identify the property that has been annotated as a semantic object.
 
-    > ### Sample Code:  
-    > XML Annotation
-    > 
-    > ```xml
-    > 
-    > <Annotations Target="com.c_salesordermanage_sd.ProductSupplier/Supplier">
-    >    <Annotation Term="Common.SemanticObject" String="EPMProduct"/>
-    > </Annotations>
-    > 
-    > ```
+    -   The `SemanticObject` annotation as a string
 
-    > ### Note:  
-    > The `SemanticObject` annotation can be a string, a path to a property of type `String`, or a dynamic expression using `EdmJson`.
+        > ### Sample Code:  
+        > XML Annotation
+        > 
+        > ```xml
+        > 
+        > <Annotations Target="com.c_salesordermanage_sd.ProductSupplier/Supplier">
+        >    <Annotation Term="Common.SemanticObject" String="EPMProduct"/>
+        > </Annotations>
+        > 
+        > ```
 
-    > ### Sample Code:  
-    > ABAP CDS Annotation
-    > 
-    > ```
-    > annotate view ProductSupplier with {
-    >   @Consumption.semanticObject: 'EPMProduct'
-    >   supplier;
-    > }
-    > ```
+        > ### Sample Code:  
+        > ABAP CDS Annotation
+        > 
+        > ```
+        > annotate view ProductSupplier with {
+        >   @Consumption.semanticObject: 'EPMProduct'
+        >   supplier;
+        > }
+        > ```
 
-    > ### Sample Code:  
-    > CAP CDS Annotation:
-    > 
-    > ```
-    > annotate ProductSupplier with {
-    > Supplier @Common.SemanticObject: 'EPMProduct';
-    > }
-    > ```
+        > ### Sample Code:  
+        > CAP CDS Annotation:
+        > 
+        > ```
+        > annotate ProductSupplier with {
+        > Supplier @Common.SemanticObject: 'EPMProduct';
+        > }
+        > ```
+
+    -   The `SemanticObject` annotation defined using a path
+
+        > ### Sample Code:  
+        > XML Annotation
+        > 
+        > ```
+        > <Annotations Target="com.c_salesordermanage_sd.ProductSupplier/Supplier">
+        >              <Annotation Term="Common.SemanticObject" Path="supplierSemanticObject"/>
+        > </Annotations>
+        > ```
+
+    -   Semantic object defined with an `EdmJson` expression
+
+        > ### Sample Code:  
+        > XML Annotation
+        > 
+        > ```
+        > <Annotations Target="com.c_salesordermanage_sd.ProductSupplier/Supplier ">
+        >            <Annotation Term="Common.SemanticObject">
+        >                <If>
+        >                   <Eq>
+        >                       <Path>SupplierType</Path>
+        >                       <Int>2</Int>
+        >                   </Eq>
+        >                   <String>EPMProduct</String>
+        >                   <String>NoTarget</String>
+        >                </If>        
+        >             </Annotation>
+        > </Annotations>
+        > ```
+
+
+    Additionally, when using the `Field` building block, you can use a formatter or a binding expression to provide either a single semantic object or an array of semantic objects. For more information, see [Macros API](https://ui5.sap.com/#/api/sap.fe.macros.Field).
+
+    Check out our live example in the flexible programming model explorer at [Quick View](https://sapui5.hana.ondemand.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/field/fieldQuickView).
 
 2.  In the metadata document, you can find the reference to the association end type. In the `navigationProperties` of your entity, check for a `ReferentialConstraint` that includes the previously identified property \(`Supplier`\). This property must be in the property attributes of the `ReferentialConstraint`. In this example, it references the “`CustomerID`” property of the “`Customer`” entity \(the association end type\).
 

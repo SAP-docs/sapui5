@@ -12,6 +12,16 @@ In this step, we create a basic application and simply place some text on the sc
 
 
 
+<a name="loio4cde849dc18949b69bbe152a0aaa19c6__section_lv5_lvy_zbc"/>
+
+## Setup
+
+Open a terminal and install UI5 Tooling globally on your machine by executing the following command:
+
+`npm install --global @ui5/cli`
+
+
+
 ## Coding
 
 You can view and download all files in the Demo Kit at [Data Binding - Step 1](https://ui5.sap.com/#/entity/sap.ui.core.tutorial.databinding/sample/sap.ui.core.tutorial.databinding.01).
@@ -133,13 +143,13 @@ You can view and download all files in the Demo Kit at [Data Binding - Step 1](h
     </mvc:View>
     ```
 
-8.  Open a terminal in the app root folder and execute `npm i -D @ui5/cli` to install UI5 Tooling in the app root folder..
+8.  Open a terminal in the app root folder and execute `npm i -D @ui5/cli` to install UI5 Tooling in the app root folder.
 
-9.  Execute `npx ui5 init` in the app root folder.
+9.  Execute `ui5 init` in the app root folder.
 
-10. Execute `npx ui5 use OpenUI5`
+10. Execute `ui5 use OpenUI5`
 
-11. Execute `npx ui5 add sap.m sap.ui.core sap.ui.layout themelib_sap_horizon`
+11. Execute `ui5 add sap.m sap.ui.core sap.ui.layout themelib_sap_horizon`
 
 12. Execute `npm start` to start the web server and to open a new browser window hosting your newly created `index.html`.
 

@@ -138,7 +138,7 @@ Using fake timers can be error-prone. Fake timers should only be used with care 
 
 ### I've set a property on my control: Why aren't the changes in the DOM?
 
-The most likely reason for this is that it didn't wait for the `sap/ui/qunit/utils/nextUIUpdate` Promise. SAPUI5 does not render synchronously, but waiting for the Promise will proceed the test after the rendering is done.
+The most likely reason for this is that it didn't wait for the `sap/ui/test/utils/nextUIUpdate` Promise. SAPUI5 does not render synchronously, but waiting for the Promise will proceed the test after the rendering is done.
 
 For more information, see [Rendering and Re-rendering Controls Within Tests](cookbook-for-testing-controls-with-qunit-0ddcc60.md#loio0ddcc60b05ee40dea1a3be09e8fee8f7__section_REREN)
 

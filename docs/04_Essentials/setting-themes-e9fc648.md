@@ -25,7 +25,7 @@ You define which theme is used by your app either by using the `theme` configura
     > http://myserver.com/sap/myapp/?sap-ui-theme=my_custom_theme@/sap/public/bc/themes/~client-111
     > ```
     > 
-    > Although a full URL can be specified, the framework will only use the path information of the URL to prevent CSS-based attacks that would otherwise be possible by referencing CSS from a malicious server, unless the origin has been added to `sap-allowed-theme-origin`. For more information, see [Theme Origin Allowlist](setting-themes-e9fc648.md#loioe9fc648661d84ed89360bbec3ae02611__section_TOA). In a more complex landscape, for example, if the infrastructure of the UI theme designer is running on a separate server, a Web dispatcher can be used to combine both servers in one endpoint.
+    > Although a full URL can be specified, the framework will only use the path information of the URL to prevent CSS-based attacks that would otherwise be possible by referencing CSS from a malicious server, unless the origin has been added to `sap-allowed-theme-origins`. For more information, see [Theme Origin Allowlist](setting-themes-e9fc648.md#loioe9fc648661d84ed89360bbec3ae02611__section_TOA). In a more complex landscape, for example, if the infrastructure of the UI theme designer is running on a separate server, a Web dispatcher can be used to combine both servers in one endpoint.
 
     > ### Note:  
     > The UI theme designer infrastructure stores themes for multiple technologies in the same location, each in its own subdirectory \(`UI5/` for SAPUI5\). Other SAP products \(such as SAP Enterprise Portal\) append only the common root URL to the `theme` parameter. SAPUI5 therefore appends folder `UI5/` to any given path that is defined in the `theme` parameter.
@@ -83,7 +83,7 @@ To load an external custom theme, you can either declare it statically on the pa
 
 When configuring a theme with a `themeRoot` URL via the `theme` parameter, security restrictions apply. Absolute URLs to an origin other than the current page are cut off by default. The path segment will be resolved relative to the current page origin.
 
-In order to allow other origins to be used via the URL parameter, the `sap-allowed-theme-origin` configuration option can be used:
+In order to allow other origins to be used via the URL parameter, the `sap-allowed-theme-origins` configuration option can be used:
 
 `<meta name="sap-allowed-theme-origins" content="https://example.com">`
 

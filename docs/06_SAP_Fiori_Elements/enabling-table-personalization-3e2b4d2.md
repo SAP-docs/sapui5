@@ -32,7 +32,7 @@ The default settings for filtering are as follows:
 
 ### Enabling Table Filters
 
-In harmonized variant management, by default, you cannot set a filter in the table personalization settings. To enable filtering, set the `enableTableFilterInPageVariant` property in the manifest. If `smartVariantManagement` is set to `false`, then table filter is enabled by default.
+In harmonized variant management, by default, end users cannot set a filter in the table personalization settings. To enable filtering for end users, set the `enableTableFilterInPageVariant` property in the manifest. If `smartVariantManagement` is set to `false`, then table filter is enabled by default.
 
 > ### Sample Code:  
 > `manifest.json`
@@ -67,7 +67,7 @@ In harmonized variant management, by default, you cannot set a filter in the tab
 
 ### Enabling and Disabling Table Personalization
 
-The `"variantManagement"` setting in the manifest allows you to enable or disable the table personalization.
+The `"variantManagement"` setting in the `manifest.json` file allows you to enable or disable the table personalization settings for end users.
 
 > ### Sample Code:  
 > Enable or disable table personalization
@@ -97,7 +97,7 @@ In the list report, you can set the variant management to `"Page"` level or to `
 
     -   Filtering
 
-        Users can filter table data choosing one or multiple property values \(unless filtering is disabled\). You can use the `@com.sap.vocabularies.UI.v1.HiddenFilter` annotation to exclude those columns you don't want to be filterable.
+        End users can filter table data choosing one or multiple property values \(unless filtering is disabled\). You can use the `@com.sap.vocabularies.UI.v1.HiddenFilter` annotation to exclude those columns you don't want to be filterable.
 
         ![](images/Filtering_Columns_3868aad.png)
 
@@ -181,7 +181,7 @@ In the list report, you can set the variant management to `"Page"` level or to `
 
     -   Adding or removing columns
 
-        Users can add or remove all properties of the root entity of a given table. Selected properties are shown at the top of the list. Users can sort tables by choosing individual columns or multiple columns \(unless sorting is disabled\). Users can sort each column in ascending or descending order.
+        End users can add or remove all properties of the root entity of a given table. Selected properties are shown at the top of the list. Users can sort tables by choosing individual columns or multiple columns \(unless sorting is disabled\). Users can sort each column in ascending or descending order.
 
         ![](images/Adding_or_Removing_Columns_caf79df.png)
 
@@ -198,7 +198,7 @@ For a responsive table, the user can open the sorting, filtering, and grouping d
 ![](images/Sorting_Filtering_and_Grouping_Dialog_f1dd67d.png)
 
 > ### Note:  
-> When the user selects the Filter menu, the default properties displayed for sorting, filtering, and grouping are the properties visible in the column. Any sorting and filtering restrictions are reflected in this dialog. The TextArrangement also has an impact as described in the [Personalization for Properties with Text Arrangement](enabling-table-personalization-3e2b4d2.md#loio3e2b4d212b66481a829ccef1dc0ca16b__personalization_text_arrangement)subsection of this topic.
+> When the end user selects the Filter menu, the default properties displayed for sorting, filtering, and grouping are the properties visible in the column. Any sorting and filtering restrictions are reflected in this dialog. The TextArrangement also has an impact as described in the [Personalization for Properties with Text Arrangement](enabling-table-personalization-3e2b4d2.md#loio3e2b4d212b66481a829ccef1dc0ca16b__personalization_text_arrangement) subsection in this topic.
 
 
 
@@ -252,7 +252,7 @@ You can use the following values for the `"personalization"` setting:
 
 Note the following when enabling personalization for properties that have a text arrangement annotation:
 
--   Sorting and filtering is available for the properties visible in a column. For example, for properties with text arrangement set as `#TextFirst`, the property itself or its text can be sorted or grouped. For properties with text arrangement set as `#TextOnly`, sorting and grouping is only available for their text. Filtering for properties, however, does not take into account their text arrangement. For example, filtering on the `#TextOnly` properties is available for the property itself and not its texts. Filtering on its text may be available if no filter restriction is defined for the text property.
+-   Sorting and filtering is available for the properties visible in a column. For example, for properties with text arrangement set as `#TextFirst`, the property itself or its text can be sorted or grouped. For properties with text arrangement set as `#TextOnly`, sorting and grouping is only available for their text. However, filtering for properties with text arrangement \#TextOnly applies directly on the property itself and not on its text. Filtering on its text may also be available if no filter restriction is defined for the text property. When selecting the Filter menu from the column header, the default property will be the property and not its text.
 
 -   If a label is defined for a column within the `LineItem`, then this label is used in the *Sort* and *Group* menus if the column displays a single property. In the *Filter* menu, the property name is displayed instead.
 

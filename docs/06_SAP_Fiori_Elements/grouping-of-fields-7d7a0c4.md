@@ -664,7 +664,7 @@ For more information about how to configure navigation using fields, see [Naviga
 By default, the `TextArea` label is always displayed. However, if `UI.FieldGroup` has only one `UI.MultiLineText`-based property and no other controls, the label of the corresponding `TextArea` control can be hidden. To do this, in the `manifest.json` file, configure `useSingleTextAreaFieldAsNotes` to `true`.
 
 > ### Note:  
-> The setting is at section-level and applies for all TextArea controls within the section. This logic is applicable only if the `TextArea` control is the only control within the `UI.FieldGroup`, at design time. This logic is not invoked due to dynamic visibility of other fields within the same `UI.FieldGroup`, at runtime, or because of UI adaptation, the `TextArea` control is found to be the only visible control.
+> The setting is at section-level and applies for all TextArea controls within the section.
 
 > ### Sample Code:  
 > manifest.json

@@ -37,7 +37,7 @@ The paste action is available for the following scenarios:
 > -   For new rows created during the paste action, the order of the data copied from a spreadsheet or external application might differ from the order in the table after the end user has inserted it. SAP Fiori elements cannot control this.
 > -   This feature is not supported for tables with custom columns or custom tables.
 > 
-> -   In the object page, the *Export to Spreadsheet* feature is available by default only if the copy/paste feature is available. For more information, see [Using the Export Feature](using-the-export-feature-4bab6f2.md).
+> -   In the object page, the *Export to Spreadsheet* feature is available by default only if the copy/paste feature is available. For more information, see [Using the Export Button](using-the-export-button-4bab6f2.md).
 
 
 

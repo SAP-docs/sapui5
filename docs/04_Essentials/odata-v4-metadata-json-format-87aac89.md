@@ -6,7 +6,7 @@ The OData V4 model provides access to metadata in a streamlined JSON format whic
 
 It is different to the $metadata service's JSON format \(see [OData JSON Format Version 4.0](http://docs.oasis-open.org/odata/odata-json-format/v4.0/os/odata-json-format-v4.0-os.html)\) and the OData JSON Format for Common Schema Definition Language \(CSDL\) Version 4.0 \(see [corresponding specification](http://docs.oasis-open.org/odata/odata-json-csdl/v4.0/odata-json-csdl-v4.0.html)\), intended to simplify client-side processing.
 
-In the sections below, angled brackets indicate variable parts. The numbers next to each expression correspond to the numbered sections in the official specification, see [OData Version 4.0 Part 3: Common Schema Definition Language \(CSDL\) Plus Errata 03](http://docs.oasis-open.org/odata/odata-json-csdl/v4.0/odata-json-csdl-v4.0.html). Comments highlight optional properties, especially those that have certain default values.
+In the sections below, angled brackets indicate variable parts. The numbers next to each expression correspond to the numbered sections in the official specification, see [OData Version 4.0 Part 3: Common Schema Definition Language \(CSDL\) Plus Errata 03](https://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part3-csdl.html). Comments highlight optional properties, especially those that have certain default values.
 
 
 
@@ -16,9 +16,9 @@ We have prefixed constant property names with `"$"` as this is a legal first cha
 
 We assume that schema **aliases** have been resolved. We add a trailing dot after a schema's namespace, meaning qualified name "A.B" cannot clash with schema namespace "A.B.", for example. This trailing dot is also present for `"$Include"`, `"$TermNamespace"` and `"$TargetNamespace"` values.
 
-<code><b>$kind</b></code> has been added to each object with a \(qualified\) OData name and to almost each object which can be annotated via external targeting, but not to enum members. Actions and functions are arrays of overloads and `$kind` has been added to each overload.
+<code><b>$kind</b></code> has a value via the fallback rule "If targeting, but not to enum members. Actions and functions are arrays of overloads and has been added to each object with a \(qualified\) OData name and to almost each object which can be annotated via external targeting, but not to enum members. Actions and functions are arrays of overloads and `$kind` has been added to each overload.
 
-We assume each **enum member** has a value via the fallback rule "If no values are specified, the members are assigned consecutive integer values in the order of their appearance, starting with zero for the first member."
+We assume each **enum member**
 
 Facets like `MaxLength`, `Precision` and `Scale` are represented as numbers if possible \(`"$Scale" : "variable"` is the only exception\). `DefaultValue` is represented as a string for lack of type information in the general case. `"$MaxLength" : "max"` is omitted and will be treated the same as an unspecified length on the client-side.
 
@@ -42,12 +42,12 @@ We use the `"<key>@<14.3.1 Annotation Term>#<14.3.2 Annotation Qualifier>" : <va
 > ### Note:  
 > For segments which represent a path, such as the keys for the `"$ReferentialConstraint"` and`"$NavigationPropertyBinding"` maps, you need to use URL encoding for the slash character \(`"%2F"`\).
 > 
-> > ### Sample Code:  
-> > **Escaping the Slash Character**
+> > ### Example:  
+> > Escaping the Slash Character
 > > 
 > > ```xml
-> > <EntitySet Name="Customer" EntityType="...CustomerParameters">
-> > <NavigationPropertyBinding Path="Set/Parameters" Target="Customer"/>
+> > <EntitySet Name="Customer" EntityType="...CustomerParameters">
+> > <NavigationPropertyBinding Path="Set/Parameters" Target="Customer"/>
 > > ```
 > > 
 > > ```js
@@ -147,20 +147,48 @@ The following JSON file represents the metadata document which corresponds to `G
   "<5.1.1 Schema Namespace>.<11.1.1 TypeDefinition Name>" : {
     "$kind" : "TypeDefinition",
     "$UnderlyingType" : "<11.1.2 TypeDefinition UnderlyingType>",
-    "$MaxLength" : <11.1.3 MaxLength>, // optional, number
-    "$Precision" : <11.1.3 Precision>, // optional, number
-    "$Scale" : <11.1.3 Scale> | "variable", // optional, number or fixed string
+    "$MaxLength" : <11.1.3 MaxLengthConstant and dynamic expressions are used as values for annotations. Their JSON
+				representation is shown in the following two tables.
+{>, // optional, number
+    "$Precision" : <11.1.3 Precision
+  "$Version" : "<3.1.1 Edmx Version>",
+  "$Annotations" : {
+    "<14.2.1 Annotations Target>" : {
+      // Note: "<14.3.2 Annotation Qualifier>" defaults to "<14.2.2 Annotations Qualifier>",
+      // qualifiers are optional, "#" is omitted then
+      "@<14.3.1 Annotation Term>#>, // optional, number
+    "$Scale" : <<14.3.2 Annotation Qualifier>" : <value11.1.3 Scale> | "variable", // optional, number or fixed string
     "$Unicode" : false, // omit in case of default value: true
-    "$SRID" : "<11.1.3 SRID>" // optional
+    "$SRID" : "> // constant or dynamic expression
+      "@<14.3.1 Annotation Term<11.1.3 SRID>>#<14.3.2 Annotation Qualifier>@..." : <value> // annotation of an annotation
+    }
+  }," // optional
   },
-  "<5.1.1 Schema Namespace>.<12.1.1 Action Name>" : [{
+  "$EntityContainer" : "<5.1.1 Schema Namespace>.<13.1.1 EntityContainer Name>", // root entity container for this $metadata document
+  "$Reference" : {
+    // server-relative, dereferencable URLs (to $metadata) only!
+    "<3.3.1 Reference Uri>" : { "@..." : <value>,
+      "$Include" : ["<3.4.1 Include Namespace>.", ...], // optional
+      "$IncludeAnnotations" : [{
+        "$TermNamespace" : "<3.5.1 IncludeAnnotations TermNamespace>.",
+        "$Qualifier" : "<3.5.2 IncludeAnnotations Qualifier>", // optional
+        "$TargetNamespace" : "<3.5.3 IncludeAnnotations TargetNamespace>." // optional
+      }, ...] // optional
+    }
+  }, // optional
+  "<
+  "<5.1.1 Schema Namespace>.<12.1.1 Action Name5.1.1 Schema Namespace>" : {
+    "$kind" : "Schema",
+    "@..." : <value> // place inline annotations for schema itself here!
+  },
+  "<>" : [{
     "$kind" : "Action",
     "$IsBound" : true, // omit in case of default value: false
     "$EntitySetPath" : "<12.1.3 Action EntitySetPath>", // optional
     "$Parameter" : [{
       "$Name" : "<12.4.1 Parameter Name>",
       "$isCollection" : true, // omit in case of default value: false
-      "$Type" : "<12.4.2 Parameter Type>",
+      "$Type" : "5.1.1 Schema Namespace>.<12.4.2 Parameter Type>",
       "$Nullable" : false, // omit in case of default value: true
       "$MaxLength" : <12.4.4 MaxLength>, // optional, number
       "$Precision" : <12.4.4 Precision>, // optional, number
@@ -172,27 +200,92 @@ The following JSON file represents the metadata document which corresponds to `G
       "$Type" : "<12.3.1 ReturnType Type>",
       "$Nullable" : false, // omit in case of default value: true
       "$MaxLength" : <11.1.3 MaxLength>, // optional, number
-      "$Precision" : <11.1.3 Precision>, // optional, number
+      "$Precision" : <<8.1.1 EntityType Name>" : {
+    "$kind" : "EntityType",
+    "$BaseType" : "<11.1.3 Precision>, // optional, number
       "$Scale" : <11.1.3 Scale> | "variable", // optional, number or fixed string
       "$SRID" : "<11.1.3 SRID>" // optional
-    } // optional
+    } // optional8.1.2 EntityType BaseType>", // optional
+    "$Abstract" : true, // omit in case of default value: false
+    "$OpenType" : true, // omit in case of default value: false
+    "$HasStream" : true, // omit in case of default value: false
+    "$Key" : [
+      "<8.3.1 PropertyRef Name
   }, ...],
-  "<5.1.1 Schema Namespace>.<12.2.1 Function Name>" : [{
+  ">", // in case no Alias is given
+      {"<8.3.1 PropertyRef Alias>" : "<8.3.1 PropertyRef Name>"},
+      ...
+    ], // optional
+    "<6.1.1 Property Name>" : {
+      "$kind" : "Property",
+      "$Type" : "<5.1.1 Schema Namespace>.<12.2.1 Function Name>" : [{<6.1.2 Property Type>",
+      "$isCollection" : true, // omit in case of default value: false
+      "$Nullable" : false, // omit in case of default value: true
+      "$MaxLength" : <6.2.2 MaxLength>, // optional, number
+      "$Precision" : <6.2.3 Precision>, // optional, number
+      "$Scale" : <6.2.4 Scale> | "variable", // optional, number or fixed string
+      "$Unicode" : false, // omit in case of default value: true
+      "$SRID" : "<6.2.6 SRID>", // optional
+      "$DefaultValue" : "<6.2.7 DefaultValue>" // optional
+    },
+    "<7.1.1 NavigationProperty Name>" : {
+      "$kind" : "NavigationProperty",
+      "$isCollection" : true, // omit in case of default value: false
+      "$Type" : "<7.1.2 NavigationProperty Type>",
+      "$Nullable" : false, // omit in case of default value: true
+      "$Partner" : "<7.1.4 NavigationProperty Partner>", // optional
+      "$ContainsTarget" : true, // omit in case of default value: false
+      "$ReferentialConstraint" : {
+        "<7.2.1 ReferentialConstraint Property>" : "<7.2.2 ReferentialConstraint ReferencedProperty>",
+        "<7.2.1 ReferentialConstraint Property>@..." : <value>
+      }, // optional
+      "$OnDelete" : "<7.3.1. OnDelete Action>", // optional
+      "$OnDelete@..." : "<value>"
+    },
+  },
+  "<5.1.1 Schema Namespace>.<9.1.1 ComplexType Name>" : {
+    "$kind" : "ComplexType",
+    "$BaseType" : "<9.1.2 ComplexType BaseType>", // optional
+    "$Abstract" : true, // omit in case of default value: false
+    "$OpenType" : true, // omit in case of default value: false
+    "<6.1.1 Property Name>" : {
+      // see above
+    },
+    "<7.1.1 NavigationProperty Name>" : {
+      // see above
+    }
+  },
+  "<5.1.1 Schema Namespace>.<10.1.1 EnumType Name>" : {
+    "$kind" : "EnumType",
+    "$UnderlyingType" : "<10.1.2 EnumType UnderlyingType>", // omit in case of default value: Edm.Int32
+    "$IsFlags" : true, // omit in case of default value: false
+    "<10.2.1 Member Name>
     "$kind" : "Function",
     "$IsBound" : true, // omit in case of default value: false
     "$IsComposable" : true, // omit in case of default value: false
-    "$EntitySetPath" : "<12.2.4 Function EntitySetPath>", // optional
-    "$Parameter" : [{
+    "$EntitySetPath" : "<12.2.4 Function EntitySetPath" : "<>", // optional
+    "$Parameter" : [{10.2.2 Member Value>" // use string value in case of base type Edm.Int64, else number
+  },
+  "<5.1.1 Schema Namespace>.<11.1.1 TypeDefinition Name>
       // see above
     }, ...], // optional
     "$ReturnType" : {
       // see above
     }
   }, ...],
-  "<5.1.1 Schema Namespace>.<13.1.1 EntityContainer Name>" : {
+  "<5.1.1 Schema Namespace>" : {
+    "$kind" : "TypeDefinition",
+    "$UnderlyingType" : "<11.1.2 TypeDefinition UnderlyingType>",
+    "$MaxLength" : <11.1.3 MaxLength>, // optional, number
+    "$Precision" : <11.1.3 Precision>, // optional, number
+    "$Scale" : <11.1.3 Scale.<13.1.1 EntityContainer Name>" : {
     "$kind" : "EntityContainer"
 //      "$Extends" : "<13.1.2 EntityContainer Extends>", // not in the 1st step
-    "<13.2.1 EntitySet Name>" : {
+    "> | "variable", // optional, number or fixed string
+    "$Unicode" : false, // omit in case of default value: true
+    "$SRID" : "<11.1.3 SRID>" // optional
+  },
+  "<5.1.1 Schema Namespace>.<13.2.1 EntitySet Name>" : {
       "$kind" : "EntitySet",
       "$Type" : "<13.2.2 EntitySet EntityType>", // Note: renamed for consistency!
       "$IncludeInServiceDocument" : false, // omit in case of default value: true
@@ -238,8 +331,6 @@ The following JSON file represents the metadata document which corresponds to `G
 
 
 ## Constant and Dynamic Expressions
-
-Constant and dynamic expressions are used as values for annotations. Their JSON representation is shown in the following two tables.
 
 **Constant Expressions**
 
