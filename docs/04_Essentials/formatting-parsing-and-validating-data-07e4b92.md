@@ -24,29 +24,34 @@ If an error occurs during formatting or parsing, the following exception occurs:
 
 ## Formatters
 
-
-
 > ### Note:  
 > When using formatter functions, the binding is automatically switched to "one-way". So you can’t use a formatter function for "two-way" scenarios, but you can use [Data Types](formatting-parsing-and-validating-data-07e4b92.md#loio07e4b920f5734fd78fdaa236f26236d8__section_DataTypes).
 
-A simple formatter can be defined directly in the controller. For example, you can format name data with the first letter in upper case:
+A simple formatter can be defined directly in the controller. However, we recommend using a separate `formatter.js` file to group all your formatter functions, making them accessible throughout your app.
+
+For example, you can define a simple formatter to capitalize the first letter of a name as follows:
 
 ```js
-myFormatter: function(sName) {
-    return sName.charAt(0).toUpperCase() + sName.slice(1);
-}
+sap.ui.define([], function() {
+    return {
+        upperFirstLetter: function(sName) {
+            return sName.charAt(0).toUpperCase() + sName.slice(1);
+        }
+    }
+});
 ```
 
-> ### Note:  
-> We recommend to use a separate `formatter.js` file that groups the formatters and makes them globally available in your app. You can then load the formatters in any controller by defining a dependency and instantiating the formatter file in a `formatter` variable. For more information, see [Step 22: Custom Formatters](../03_Get-Started/step-22-custom-formatters-0f8626e.md) in the *Walkthrough* tutorial.
-
-When the formatter is defined in the controller, you can use it, for example, in an XML view:
+You can load the formatter via the [`require`](require-modules-in-xml-view-and-fragment-b11d853.md) attribute in your XML and assign the module to the `MyFormatter` alias, which can then be used as follows:
 
 ```xml
-<Text text="{
-    path : 'person/name',
-    formatter : '.myFormatter'
-}" />
+<Text xmlns="sap.m" xmlns:core="sap.ui.core" core:require="{
+		MyFormatter: 'path/to/formatter'
+	}"
+	text="{
+		path: 'person/name',
+		formatter: 'MyFormatter.upperFirstLetter'
+    }"
+/>
 ```
 
 > ### Note:  
@@ -54,6 +59,42 @@ When the formatter is defined in the controller, you can use it, for example, in
 
 > ### Caution:  
 > The automatic type determination for OData V4 interacts with `targetType` and can, thus, influence a formatter’s input values. For more information on type determination in OData V4, see [Type Determination](type-determination-53cdd55.md).
+
+
+
+### `this` Context for Formatter Functions
+
+By default, formatter functions are bound to the control instance unless explicitly specified otherwise. However, when a formatter is accessed via dot notation, the `this` context is bound to the parent object.
+
+For instance, in the sample above, when the formatter is invoked, the `this` context is assigned to the `MyFormatter` object.
+
+To ensure that the `this` context remains bound to the control instance, you can use the `.bind()` method in the formatter string and specify `$control` as shown below:
+
+```xml
+<Text xmlns="sap.m" xmlns:core="sap.ui.core" core:require="{
+		MyFormatter: 'path/to/formatter'
+	}"
+	text="{
+		path: 'person/name',
+		formatter: 'MyFormatter.upperFirstLetter.bind($control)'
+    }"
+/>
+```
+
+
+
+### `.bind()` Syntax in Formatter Functions
+
+The `.bind()` method allows you to explicitly set the `this` context in formatter functions. Note that the `.bind()` method accepts only a single argument when used in formatter strings.
+
+The following aguments are accepted:
+
+-   **`$control`**: Sets the this context to the control instance.
+-   **`$controller`**: Binds the formatter function to the corresponding view controller. This is helpful when the formatter function needs access to the controller's properties or methods.
+-   **Aliases from `core:require`**: Any alias defined in the `core:require` attribute can be used. This allows for flexible binding to custom objects or modules as needed.
+
+> ### Note:  
+> Arguments other than `$control` and `$controller` must not start with a '`$`' character as this prefix is reserved by the framework. This restriction also applies to the keys defined in the `core:require` attribute.
 
 
 

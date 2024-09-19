@@ -2,7 +2,7 @@
 
 # Step 7: \(Optional\) Resource Bundles and Multiple Languages
 
-The reason we have resource bundles is to allow an app to run in multiple languages without the need to change any code. To demonstrate this feature, we will create a German version of the app – in fact all we need to do is create a German version of the resource bundle file. In our code, the German locale needs to be activated for the ResourceModel.
+Resource bundles exist to enable an app to run in multiple languages without the need to change any code. To demonstrate this feature, let's create a German version of the app – in fact, all we need to do is create a German version of the resource bundle file. In our code, we activate the German locale for the ResourceModel.
 
 
 
@@ -26,7 +26,7 @@ You can view and download all files in the Demo Kit at [Data Binding - Step 7](h
 
 ## webapp/i18n/i18n\_de.properties \(New\)
 
-In the `i18n` folder, make a copy of the file `i18n.properties` and call it <code>i18n<b>_de</b>.properties</code>. Change the English text to the German text shown below. The suffix `de` is the locale for German language. As the locale `de` is already set in the `supportedLocales` configuration of the `manifest.json`, it will be taken into account.
+In the `i18n` folder, duplicate the `i18n.properties` file and rename its copy to <code>i18n<b>_de</b>.properties</code>. Replace the English text with the German text provided below. The suffix `de` represents the locale for the German language. Since the `de` locale is already set in the `supportedLocales` configuration of the `manifest.json`, it will be taken into account.
 
 ```ini
 # Field labels
@@ -38,7 +38,7 @@ enabled=Aktiviert
 panelHeaderText=Data Binding Grundlagen
 ```
 
-To test the outcome, append the `sap-language=DE` URL parameter to the URL in your browser, e.g. `http://localhost:port/index.html?sap-language=DE`. Once you remove this parameter, your app will be displayed in your browser's default language again.
+To check the result, append the `sap-language=DE` URL parameter to the URL in your browser, for example `http://localhost:port/index.html?sap-language=DE`. Once you remove this parameter, your app reverts to your browser's default language.
 
 **Related Information**  
 

@@ -540,11 +540,11 @@ End users can always change groups and totals via the column header and the aggr
 ![](images/ALP_Changing_Groupings_and_Totals_d94d57a.png)
 
 > ### Note:  
-> If no `PresentationVariant` is defined for the analytical table, a total is provided by default for all the columns with an aggregable property.
+> If no `PresentationVariant` is defined for the analytical table, a total is provided by default for all the columns with an aggregatable property.
 > 
-> If a PresentationVariant is defined, a total is provided for the columns with aggregable properties listed in the `Total` attribute of the `PresentationVariant`.
+> If a PresentationVariant is defined, a total is provided for the columns with aggregatable properties listed in the `Total` attribute of the `PresentationVariant`.
 > 
-> If the `Total` attribute is defined but empty, no total is provided. If the `Total` attribute is missing, a total is provided by default for all the columns with an aggregable property.
+> If the `Total` attribute is defined but empty, no total is provided. If the `Total` attribute is missing, a total is provided by default for all the columns with an aggregatable property.
 
 > ### Restriction:  
 > -   Filtering on aggregatable properties is not supported and is also removed from the filter bar and from the filter dialog of the table.

@@ -1122,7 +1122,7 @@ Possible values are:
 
     See also:
 
-    -   [`onInit` function/module](standard-variant-for-bootstrapping-91f1f45.md)
+    -   [`onInit` function/module](initialization-process-91f2c90.md#loio91f2c9076f4d1014b6dd926db0e91070)
     -   [`Core.ready`](initialization-process-91f2c90.md#loio91f2c9076f4d1014b6dd926db0e91070)
 
 

@@ -50,7 +50,7 @@ The system gives priority to the `Org.OData.Capabilities.V1.NavigationRestrictio
 >     </Record>
 >   </Annotation>
 > </Annotation>
-> .
+> 
 > ```
 
 > ### Sample Code:  
@@ -215,9 +215,7 @@ Applications can define custom table toolbar actions via enhancements to the `ma
 
 The following types of actions are supported:
 
--   Actions that trigger a back-end call through the OData service, for example, *Approve* or *Unblock*, represented by the complex type `DataFieldForAction`
-
-    .
+-   Actions that trigger a back-end call through the OData service, for example, *Approve* or *Unblock*, represented by the complex type `DataFieldForAction`.
 
 -   Actions that trigger navigation, for example to a different app, represented by the complex type `DataFieldForIntentBasedNavigation`. For more information, see [Navigation from an App \(Outbound Navigation\)](navigation-from-an-app-outbound-navigation-d782acf.md).
 
@@ -233,9 +231,7 @@ Annotation-based actions can be inline actions. Inline actions are used to trigg
 
 ### Specifying Text for App-Specific Actions
 
-To specify a text for your action, use the `com.sap.vocabularies.UI.v1.DataFieldForAction` property and specify the text to display. The following example shows you how to display an action to create a copy of the list item in the toolbar:
-
-![](images/List_Report_Annotation_DataFieldForAction_for_Defining_Application-Specific_Actions_fe9ce2d.png)
+To specify a text for your action, use the `com.sap.vocabularies.UI.v1.DataFieldForAction` property and specify the text to display.
 
 For more information about adding a button triggering external navigation, see [Navigation from an App \(Outbound Navigation\)](navigation-from-an-app-outbound-navigation-d782acf.md).
 
@@ -312,6 +308,43 @@ The following code sample shows how to create your annotations for line item act
 >       </Record>
 >     </Collection>
 > </Annotation>
+> 
+> ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> ```
+> @UI.lineItem: [
+>   {
+>     label: 'Copy with new Supplier',
+>     dataAction: 'PUSHDOWN:STTA_C_MP_ProductCopywithparams',
+>     invocationGrouping: #ISOLATED,
+>     type: #FOR_ACTION,
+>     position: 1
+>   },
+>   {
+>     label: 'Activate',
+>     dataAction: 'PUSHDOWN:STTA_C_MP_ProductActivation',
+>     invocationGrouping: #CHANGE_SET,
+>     type: #FOR_ACTION,
+>     position: 2
+>   },
+>   {
+>     label: 'Product',   
+>     importance: #HIGH,
+>     value: 'PRODUCT',
+>     type: #STANDARD,
+>     position: 3
+>   },
+>   {
+>     label: 'Copy',   
+>     dataAction: 'PUSHDOWN:STTA_C_MP_ProductCopy',
+>     invocationGrouping: #ISOLATED,
+>     type: #FOR_ACTION,
+>     position: 8
+>   }
+> ]
 > 
 > ```
 
@@ -528,7 +561,7 @@ The following code sample shows you how to hide or show the *Delete* button, dep
 
 ### Defining the Order of Standard Actions
 
-Application developers can define the order of standard actions in the table toolbar. The developer must define the properties, `anchor` and `position` for each action corresponding to the action key in the manifest. The following table shows the keys and the corresponding standard actions:
+You can define the order of standard actions in the table toolbar. The developer must define the properties, `anchor` and `position` for each action corresponding to the action key in the manifest. The following table shows the keys and the corresponding standard actions:
 
 
 <table>
@@ -635,7 +668,7 @@ Standard Action
 
 ### Enabling the `Update` or `Delete` Feature for the Table
 
-Application developers can control the editability of table fields using `UpdateRestrictions`.
+You can control the editability of table fields using `UpdateRestrictions`.
 
 ```xml
 <Annotations Target="com.c_salesordermanage_sd.EntityContainer/Material">
@@ -648,7 +681,7 @@ Application developers can control the editability of table fields using `Update
 
 ```
 
-Application developers can control the `Delete` functionality of tables by using `DeleteRestrictions`.
+You can control the `Delete` functionality of tables by using `DeleteRestrictions`.
 
 ```xml
 <Annotations Target="com.c_salesordermanage_sd.EntityContainer/Material">

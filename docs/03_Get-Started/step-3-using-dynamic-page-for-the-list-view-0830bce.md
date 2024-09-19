@@ -24,9 +24,11 @@ In this step, we create the list view of the app using `sap.f.DynamicPage` contr
 
 You can view and download all files at [Flexible Column Layout App - Step 3](https://ui5.sap.com/#/sample/sap.f.tutorial.fiori2.03/preview).
 
-webapp/manifest.json \[MODIFY\]
 
 
+<a name="loio0830bce271bf42d98c2740bed43d435d__section_hlh_rjj_l4b"/>
+
+## webapp/manifest.json \[MODIFY\]
 
 ```json
 {
@@ -71,11 +73,11 @@ First, we add the `sap.m` library as a dependency in the `manifest.json`.
 ```html
 	...
 	<script id="sap-ui-bootstrap"
-		src="https://sdk.openui5.org/resources/sap-ui-core.js"
+		src="resources/sap-ui-core.js"
 		data-sap-ui-theme="sap_horizon"
 		data-sap-ui-resource-roots='{
 			"sap.ui.demo.fiori2": "./",
-			"sap.ui.demo.mock": "https://sdk.openui5.org/test-resources/sap/ui/documentation/sdk/"
+			"sap.ui.demo.mock": "test-resources/sap/ui/documentation/sdk/"
 		}'
 		data-sap-ui-on-init="module:sap/ui/core/ComponentSupport"
 		data-sap-ui-compat-version="edge"

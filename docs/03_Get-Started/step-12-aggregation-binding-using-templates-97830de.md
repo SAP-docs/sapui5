@@ -2,13 +2,13 @@
 
 # Step 12: Aggregation Binding Using Templates
 
-Aggregation binding \(or "list binding"\) allows a control to be bound to a list within the model data and allows relative binding to the list entries by its child controls.
+Aggregation binding, also known as "list binding", lets a control bind to a list within the model data. This binding allows relative binding to the list entries by its child controls.
 
-It will automatically create as many child controls as are needed to display the data in the model using one of the following two approaches:
+The system automatically creates as many child controls as are needed to display the data in the model using one of two approaches:
 
--   Use template control that is cloned as many times as needed to display the data.
+-   It clones a template control as many times as necessary to display the data.
 
--   Use a factory function to generate the correct control per bound list entry based on the data received at runtime.
+-   It uses a factory function to generate the correct control for each bound list entry, based on the data received at runtime.
 
 
 
@@ -27,7 +27,7 @@ It will automatically create as many child controls as are needed to display the
 
 You can view and download all files in the Demo Kit at [Data Binding - Step 12](https://ui5.sap.com/#/entity/sap.ui.core.tutorial.databinding/sample/sap.ui.core.tutorial.databinding.12).
 
-1.  Add a new entry `products` to the `models` entry under `sap.ui5` in the `manifest.json` file:
+1.  Add a new entry named `products` to the `models` entry under `sap.ui5` in the `manifest.json` file:
 
     **webapp/manifest.json**
 
@@ -131,7 +131,7 @@ You can view and download all files in the Demo Kit at [Data Binding - Step 12](
       }
     ```
 
-3.  In the `App.view.xml` file, add a new panel with an `sap.m.List` control containing the`sap.m.ObjectListItem` template control as shown below. Note that the template control is only present once in the XML view. It will be automatically cloned for each entry in the products' JSON model.
+3.  In the `App.view.xml` file, add a new panel with an `sap.m.List` control containing the`sap.m.ObjectListItem` template control as shown below. Note that the template control is only present once in the XML view. It's automatically cloned for each entry in the products' JSON model.
 
     **webapp/view/App.view.xml**
 
@@ -200,7 +200,7 @@ You can view and download all files in the Demo Kit at [Data Binding - Step 12](
     });
     ```
 
-5.  Finally, add the missing texts to the `i18n.properties` and `i18n_de.properties` files, which will be used in the newly added UI elements.
+5.  Lastly, add the missing texts to the `i18n.properties` and `i18n_de.properties` files. These texts are used in the newly added UI elements.
 
     **webapp/i18n/i18n.properties**
 

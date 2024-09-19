@@ -4,7 +4,7 @@
 
 Now that we have a test folder in the app, we can start to increase our test coverage.
 
-Actually, every feature that we added to the app so far, would require a separate test case. We have totally neglected this so far, so let’s add a simple unit test for our custom formatter function from Step 23. We will test if the long text for our status is correct by comparing it with the texts from our resource bundle.
+Actually, every feature that we added to the app so far, would require a separate test case. We have totally neglected this so far, so let’s add a simple unit test for our custom formatter function from Step 22. We will test if the long text for our status is correct by comparing it with the texts from our resource bundle.
 
 > ### Note:  
 > In this tutorial, we focus on a simple use case for the test implementation. If you want to learn more about QUnit tests, have a look at our [Testing Tutorial](testing-tutorial-291c912.md) tutorial, especially [Step 2: A First Unit Test](step-2-a-first-unit-test-b81736e.md).
@@ -39,7 +39,7 @@ We add a new folder `unit` under the `test` folder and a `model` subfolder where
 
 We create a new `formatter.ts` file under `webapp/test/unit/model` where the unit test for the custom formatter is implemented. The `formatter` function that we want to test is from the `formatter.ts` file located in the `webapp/model` folder.
 
-The new formatter file just contains one QUnit module for our formatter function and one unit test for the formatter function. In the implementation of the `statusText` function that we created in Step 23, we use the translated texts when calling the formatter. As we do not want to test the SAPUI5 binding functionality, we just use text in the test instead of a `ResourceBundle`.
+The new formatter file just contains one QUnit module for our formatter function and one unit test for the formatter function. In the implementation of the `statusText` function that we created in Step 22, we use the translated texts when calling the formatter. As we do not want to test the SAPUI5 binding functionality, we just use text in the test instead of a `ResourceBundle`.
 
 Finally, we perform our assertions. We check each branch of the formatter logic by invoking the isolated formatter function with the values that we expect in the data model \(`A`, `B`, `C`, and everything else\). We strictly compare the result of the formatter function with the hard-coded strings that we expect from the resource bundle and give a meaningful error message if the test should fail.
 

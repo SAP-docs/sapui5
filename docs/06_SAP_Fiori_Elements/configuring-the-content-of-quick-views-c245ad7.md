@@ -550,7 +550,7 @@ The following image shows a *More Links* popover. Users can select actions to be
 
 
 > ### Note:  
-> When no QuickView annotations are defined and no target is resolved at runtime \(for example, the user does not have access to the target applications\), the field still appears as a link and a message is displayed when pressed.
+> When no `QuickView` annotations are defined and no target is resolved at runtime \(for example, the user does not have access to the target applications\), the field still appears as a link and a message is displayed when pressed.
 > 
 > ![](images/QuickView_Error_Message_ca67391.png)
 

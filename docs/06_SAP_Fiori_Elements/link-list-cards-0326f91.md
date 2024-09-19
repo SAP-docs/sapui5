@@ -8,7 +8,7 @@ Allows you to view a list of links with title, picture, icon, or subtitle.
 
 Link List card supports the following navigation types:
 
--   QuickView link: To view contact information from a collection. Example, Recent contact list
+-   Quick view link: To view contact information from a collection. Example, Recent contact list
 -   Cross App link: To access related applications. Example, intent-based navigation
 -   External URL link
 

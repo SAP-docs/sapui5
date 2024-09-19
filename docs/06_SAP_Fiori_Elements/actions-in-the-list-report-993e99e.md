@@ -216,8 +216,3 @@ The `InsertRestrictions` on the table entity set is completely ignored when you 
 
 For more information, see the **Enablement of Operations** section in [Adding Actions to Tables](adding-actions-to-tables-b623e0b.md).
 
-**Related Information**  
-
-
-[Configuring Custom Actions that Create New Objects](configuring-custom-actions-that-create-new-objects-8cd6877.md "Applications can configure custom actions that create new objects.")
-

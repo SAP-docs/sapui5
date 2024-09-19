@@ -244,7 +244,7 @@ Value helps for a field with an `ExternalID` property are to be defined at the `
 
 `Edm.String` properties can be annotated to indicate that they are based on a fiscal date.
 
-The following annotations are available for fiscal dates with the following paterns:
+The following annotations are available for fiscal dates with the following patterns:
 
 ****
 
@@ -502,7 +502,7 @@ For example, `IsFiscalYearPeriod` indicates that the annotated `Edm.String` prop
 
 For more information about ABAP and CDS semantics annotations, see [Semantics Annotations](https://help.sap.com/docs/abap-cloud/abap-rap/semantics-annotations).
 
-Check out our live example in the flexible programming model explorer at [Field - Fiscal types](https://sapui5.hana.ondemand.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/fieldFiscals).
+Check out our live example in the flexible programming model explorer at [Field - Fiscal types](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/fieldFiscals).
 
 
 
@@ -571,7 +571,7 @@ The visibility of the field is affected by the `UI.Hidden` annotation, that can 
 > ### Sample Code:  
 > ABAP CDS Annotation
 > 
-> ABAP CDS does not support `Measures.ISOCurrency`.Use the local XML annotation.
+> ABAP CDS does not support `Measures.ISOCurrency`. Use the local XML annotation.
 
 > ### Sample Code:  
 > CAP CDS Annotation
@@ -623,7 +623,7 @@ The visibility of the field is affected by the `UI.Hidden` annotation, that can 
 
 
 
-### `UI.Hidden` can also be path based
+### `UI.Hidden`: Path-Based
 
 The property `ModifiedAt` is hidden in the `FieldGroup` with the qualifier `AdministrativeData` if the property `HasDraftEntity` is set to `true` – all other appearances of the property `ModifiedAt` are not influenced.
 
@@ -757,7 +757,7 @@ In addition, the value of the `FieldControl` determines how the field behaves. I
 
 
 
-### Metadata Showing `FieldControl` within a `DataField` definition
+### Metadata Showing `FieldControl` Within a `DataField` Definition
 
 In SAP Fiori elements for OData V4, you can use the `common.FieldControl` annotation within the usage of properties \(as in `UI.LineItem` or `UI.FieldGroup`\). With this option you can control the enablement of a property within a specific field group, for example, or you can define a property to be read only in a tabular visualization, but to be editable as a form field.
 

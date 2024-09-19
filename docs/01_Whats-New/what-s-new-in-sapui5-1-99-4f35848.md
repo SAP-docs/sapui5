@@ -90,7 +90,7 @@ The new version of the SAPUI5 OData V4 model introduces the following features:
 </td>
 <td valign="top">
 
-Info Only
+Info Only 
 
 </td>
 <td valign="top">
@@ -552,9 +552,9 @@ The following changes and new features are available for SAP Fiori elements for 
 
 -   You can now also use semantic dates in the `FilterBar` building block. For more information, see [Building Blocks](../06_SAP_Fiori_Elements/building-blocks-24c1304.md).
 
--   You can now use the `UI.TextArrangement` annotation to configure the display format of a table column of the value help. For more information, see [Field Help](../06_SAP_Fiori_Elements/field-help-a5608ea.md).
+-   You can now use the `UI.TextArrangement` annotation to configure the display format of a table column of the value help. For more information, see [Adding Actions to Tables](../06_SAP_Fiori_Elements/adding-actions-to-tables-b623e0b.md).
 
--   Applications can now configure custom actions that create new objects. For more information, see [Configuring Custom Actions that Create New Objects](../06_SAP_Fiori_Elements/configuring-custom-actions-that-create-new-objects-8cd6877.md).
+-   Applications can now configure custom actions that create new objects. For more information, see [Adding Actions to Tables](../06_SAP_Fiori_Elements/adding-actions-to-tables-b623e0b.md).
 
 -   You can now provide a *Search* field in analytical list page apps. For more information, see [Setting the Table Type](../06_SAP_Fiori_Elements/setting-the-table-type-7f844f1.md).
 
@@ -579,6 +579,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.126](what-s-new-in-sapui5-1-126-1d98116.md "With this release SAPUI5 is upgraded from version 1.125 to 1.126.")
 
 [What's New in SAPUI5 1.125](what-s-new-in-sapui5-1-125-9d87044.md "With this release SAPUI5 is upgraded from version 1.124 to 1.125.")
 

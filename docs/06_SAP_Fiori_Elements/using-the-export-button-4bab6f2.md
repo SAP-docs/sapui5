@@ -118,6 +118,8 @@ You can influence how both regular and custom columns are exported. To do that, 
 
 -   `width`: Width of the column in characters. There is no 1:1 correspondence between character widths in the exported spreadsheet and CSS units. The width of one character is approximately 0.5 em in CSS units, depending on the fonts that are used in the table and in the resulting spreadsheet. The default value is 10 characters.
 
+-   `wrap`: A Boolean property indicating if the content should be wrapped.
+
 
 > ### Restriction:  
 > This export to spreadsheet configuration is not supported when using the `Table` building block.

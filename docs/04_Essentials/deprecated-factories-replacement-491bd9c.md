@@ -332,6 +332,7 @@ var aControls = sap.ui.extensionpoint(/*...*/);
 ```
 sap.ui.require(["sap/ui/core/ExtensionPoint"], (ExtensionPoint) => {
     ExtensionPoint.load({ 
+        async: true;
         // ...
     }).then((aControls) => {/*...*/});
 });
@@ -390,7 +391,7 @@ sap.ui.define(["sap/ui/core/mvc/Controller"], (Controller) => {
             //         Any asynchronous behavior must be handled manually.
             this.loadFragment({
                 name: "my.fragment",
-                type: "XML" // or type: "JS"
+                // ...
             }).then((oControl) => {/*...*/});
         }
     });
@@ -403,7 +404,7 @@ If you're instantiating your fragment outside a controller, you can use the stat
 sap.ui.require([
     "sap/ui/core/Component", 
     "sap/ui/core/Fragment"
-    ], (Component, Fragment) => {
+], (Component, Fragment) => {
     // ...
 
     // "oPage" is an exemplary sap.m.Page control

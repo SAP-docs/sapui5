@@ -2,7 +2,7 @@
 
 # Step 4: Two-Way Data Binding
 
-In the examples used so far, we have used a read-only field to display the value of a model property. We will now change the user interface so that the first and last name fields are displayed using `sap.m.Input` fields and an additional check box control is used to enable or disable both input fields. This arrangement illustrates a feature known as "two-way data binding". Now that the view contains more controls, we will also move the view definition into an XML file.
+In the examples we've looked at so far, we've displayed the value of a model property using a read-only field. We'll now change the user interface to display first and last name fields using `sap.m.Input` fields. We're also adding a check box control to enable or disable both input fields. This setup illustrates a feature known as "two-way data binding". As the view now contains more controls, we're also moving the view definition into an XML file.
 
 
 
@@ -55,17 +55,17 @@ You can view and download all files in the Demo Kit at [Data Binding - Step 4](h
     }
     ```
 
-    You can now refresh the application preview and select or deselect the checkbox. You will see that the input fields are automatically enabled or disabled in response to the state of the checkbox.
+    After these changes, refresh the application preview and select or deselect the checkbox. You'll notice that the input fields are automatically enabled or disabled in response to the state of the checkbox.
 
     ![](images/Tutorial_Data_Binding_Step_4_61d68f1.png)![](images/Tutorial_Data_Binding_Step_4_2_6222561.png)
 
-    It is clear that we have not written any code to transfer data between the user interface and the model, yet the `Input` controls are enabled or disabled according to the state of the checkbox. This behavior is the result of the fact that OData models and JSON models implement two-way data binding, and that for JSON Models two-way binding is the default behavior. For more information, see [Binding Modes](../04_Essentials/data-binding-68b9644.md#loio68b9644a253741e8a4b9e4279a35c247__section_BindingModes).
+    It is clear that we haven't written any code to transfer data between the user interface and the model, yet the `Input` controls are enabled or disabled according to the state of the checkbox. This behavior results from the fact that OData models and JSON models implement two-way data binding. For JSON models, two-way binding is the default behavior. For more information, see [Binding Modes](../04_Essentials/data-binding-68b9644.md#loio68b9644a253741e8a4b9e4279a35c247__section_BindingModes).
 
     Two things are happening here:
 
     -   Data binding allows the property of a control to derive its value from any suitable property in a model.
 
-    -   SAPUI5 automatically handles the transport of data both from the model to the controls, and back from the controls to the model. This is called two-way binding.
+    -   SAPUI5 automatically handles the transport of data from the model to the controls and back from the controls to the model. This is called two-way binding.
 
 
 

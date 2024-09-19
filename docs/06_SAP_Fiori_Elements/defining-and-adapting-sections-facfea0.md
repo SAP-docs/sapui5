@@ -250,7 +250,7 @@ To render a table in a section, follow these steps:
     >     ]
     > ```
 
-    Check out our live example in the flexible programming model explorer at [Table Extensibility](https://sapui5.hana.ondemand.com/test-resources/sap/fe/core/fpmExplorer/index.html#/controllerExtensions/tableExtensibility).
+    Check out our live example in the flexible programming model explorer at [Table Extensibility](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/controllerExtensions/tableExtensibility).
 
 2.  To render a *Create* button, set `Org.OData.Capabilities.V1.InsertRestrictions/Insertable/Bool` to `true` for the entity set. For more information, see the [Generic Actions](adding-actions-to-tables-b623e0b.md#loiob623e0bbbb2b4147b2d0516c463921a0__section_nx4_qpb_2nb)section in [Adding Actions to Tables](adding-actions-to-tables-b623e0b.md).
 

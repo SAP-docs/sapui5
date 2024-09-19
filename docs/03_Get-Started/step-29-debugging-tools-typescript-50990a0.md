@@ -38,6 +38,7 @@ We introduce a typo in the binding of the number attribute to simulate a frequen
 <mvc:View
     controllerName="ui5.walkthrough.controller.InvoiceList"
     xmlns="sap.m"
+    xmlns:core="sap.ui.core"
     xmlns:mvc="sap.ui.core.mvc">
 
     <List
@@ -79,9 +80,12 @@ We introduce a typo in the binding of the number attribute to simulate a frequen
                 numberState="{= ${invoice>ExtendedPrice} > 50 ? 'Error' : 'Success' }">
                 <firstStatus>
                     <ObjectStatus
+                        core:require="{
+                            Formatter: 'ui5/walkthrough/model/formatter'
+                        }"
                         text="{
                             path: 'invoice>Status',
-                            formatter: '.formatter.statusText'
+                            formatter: 'Formatter.statusText.bind($controller)'
                         }"/>
                 </firstStatus>
             </ObjectListItem>

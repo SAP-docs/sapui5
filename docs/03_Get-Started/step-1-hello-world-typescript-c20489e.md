@@ -98,7 +98,7 @@ Hence, we create a new file named `manifest.json` in the webapp folder and defin
 {
   "_version": "1.60.0",
   "sap.app": {
-    "id": "ui5.walkthrough",
+    "id": "ui5.walkthrough"
     "type": "application",
     "title": "UI5 TypeScript Walkthrough",
     "applicationVersion": {

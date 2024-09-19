@@ -18,9 +18,7 @@ The `preload` flag is located in `manifest.json` under `sap.ui5/models`:
 
 The flag is not active by default, as there are some prerequisites:
 
--   `sap.ui.component` is set to `"async=true"` and `manifest` \(API parameter name of `sap.ui.component`\).
-
--   Make sure that the specific model implementation class \(e.g. `name.of.my.ModelClass`\) is loaded before calling one of the available component factories, e.g. `Component.create` or `sap.ui.core.Component#createComponent`; otherwise the model implementation class will be loaded synchronously.
+-   The component is created asynchronously.
 
 -   As model events \(for example `attachMetadataLoaded`\) may be missed because they are fired before the component coding runs, we recommend using the `Promise` API \(e.g. `metadataLoaded`\) instead, depending on the model type.
 

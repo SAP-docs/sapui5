@@ -195,31 +195,31 @@ The `sap.app` namespace also contains the title of the application. This “titl
                         "minUI5Version": "1.38.1",
                         "libs": {
                                 "sap.ui.core": {
-                                        "minVersion": "1.38.1",
+                                        "minVersion": "1.38.1"
                                         "lazy" : false
                                 },
                                 "sap.ca.ui": {
-                                        "minVersion": "1.38.1",
+                                        "minVersion": "1.38.1"
                                         "lazy" : false
                                 },
                                 "sap.m": {
-                                        "minVersion": "1.38.1",
+                                        "minVersion": "1.38.1"
                                         "lazy" : false
                                 },
                                 "sap.ui.layout": {
-                                        "minVersion": "1.38.1",
+                                        "minVersion": "1.38.1"
                                         "lazy" : false
                                },
                                 "sap.ushell": {
-                                        "minVersion": "1.38.1",
+                                        "minVersion": "1.38.1"
                                         "lazy" : false
                                 },
                                 "sap.apf": {
-                                        "minVersion": "1.38.1",
+                                        "minVersion": "1.38.1"
                                         "lazy" : false
                                 },
                                 "sap.viz": {
-                                        "minVersion": "1.38.1",
+                                        "minVersion": "1.38.1"
                                         "lazy" : false
                                 }
                         }
@@ -236,10 +236,10 @@ The `sap.app` namespace also contains the title of the application. This “titl
                                 "type": "sap.ui.model.resource.ResourceModel",
                                 "uri": "i18n/texts.properties"
                         }
-                },
+                }
                 "config": {
                         "sapFiori2Adaptation": true
-                }
+                },
         }
 }
 ```

@@ -57,5 +57,5 @@ You can use any fragment but we recommend using the KPI building block to use th
 > </core:FragmentDefinition>
 > ```
 
-Check out our live example in the flexible programming model explorer at [Custom KPI Tags in List Report - Overview](https://sapui5.hana.ondemand.com/test-resources/sap/fe/core/fpmExplorer/index.html#/customElements/CustomKPITags/customKPIContent).
+Check out our live example in the flexible programming model explorer at [Custom KPI Tags in List Report - Overview](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/customElements/CustomKPITags/customKPIContent).
 

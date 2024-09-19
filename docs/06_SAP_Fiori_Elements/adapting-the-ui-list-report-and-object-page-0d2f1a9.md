@@ -179,7 +179,7 @@ Display the *Export to Excel* button in the table toolbar
 </td>
 <td valign="top">
 
-In the table node, set the `useExportToExcel` property to `true`.
+In the table node, set the `enableExport` property to `true`.
 
 </td>
 </tr>

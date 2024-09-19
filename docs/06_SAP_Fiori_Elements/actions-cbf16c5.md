@@ -1645,6 +1645,8 @@ The following sample code shows different ways to hide an action parameter:
 > 
 > ```
 
+If all the parameters of an action have been hidden by using the `UI.hidden` annotation and if all the parameters that have been annotated with `Common.FieldControlType/Mandatory` also have the `UI.ParameterDefaultValue` annotation, the action is performed without displaying a dialog. For more information about the `Common.FieldControlType/Mandatory` annotation, see the [Action Parameters](actions-cbf16c5.md#loiocbf16c599f2d4b8796e3702f7d4aae6c__action_parameters_subsection) subsection in this topic. For more information about the `UI.ParameterDefaultValue` annotation, see the [Default Values for Action Parameters](actions-cbf16c5.md#loiocbf16c599f2d4b8796e3702f7d4aae6c__DefaultValuesActionParameters) subsection in this topic.
+
 
 
 ### Grouping Actions as Menu Buttons

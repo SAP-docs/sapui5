@@ -101,10 +101,9 @@ We add a controller that will take care of setting the item's context on the vie
 sap.ui.define([
 	"sap/ui/core/mvc/Controller",
 	"sap/ui/model/json/JSONModel",
-	"../model/formatter",
 	"sap/ui/model/Filter",
 	"sap/ui/model/FilterOperator"
-], (Controller, JSONModel, formatter, Filter, FilterOperator) => {
+], (Controller, JSONModel, Filter, FilterOperator) => {
 	"use strict";
 
 	return Controller.extend("ui5.walkthrough.controller.InvoiceList", {

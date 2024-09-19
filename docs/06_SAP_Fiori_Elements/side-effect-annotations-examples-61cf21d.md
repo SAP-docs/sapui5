@@ -323,296 +323,40 @@ You can define side effects either in the \*`MPC_EXT` class or in the local anno
 
 > ### Note:  
 > You must always enclose the `type` of `TargetProperties` within quotes. For more information, see [Side Effect Type](https://github.com/SAP/odata-vocabularies/blob/main/vocabularies/Common.md#SideEffectsType) 
+> 
+> Side effects is configured according to the modeling \(create, update, delete, etc.\) in RAP BDEF \(behavior definition\).You can see the ABAP CDS annotation examples in the RAP documentation. For more information, see [Side Effects](https://help.sap.com/docs/abap-cloud/abap-rap/side-effects).
+
+Check out our live example in the flexible programming model explorer at [Side Effects](https://ui5.sap.com/test-https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/advancedFeatures/guidanceSideEffects).
+
+You can use the BO property`messages` as targets for side effects. All messages stored in `reported` are reloaded when the side effect is triggered.
+
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> ```
+>    side effects
+>        { field BookingFee affects field TotalPrice;
+>          determine action validateAgencyID executed on field AgencyID affects messages; }
+> ```
+
+The following sample code shows you an example with actions, multiple targets, and messages:
+
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> ```
+> side effects {
+>     field IntegerValue affects field ProgressIntegerValue, field RadialIntegerValue;
+>     field Timestamp affects field IANATimestamp;
+>     field Supplier affects entity toSupplier;
+>     action changeCriticality affects field CriticalityCode;
+>     action resetTimesChildCreated affects field TimesChildCreated, permissions ( action resetTimesChildCreated );
+>     action overwriteTimezone affects $self;
+>     determine action validateDate executed on field ValidTo affects messages;
+>     $self affects permissions ( update _Child );
+>     determine action updateTimes executed on entity _Child affects field TotalPieces;
+>   }
+> ```
 
 > ### Example:  
-> **User changes a source property and the system refresh the price**
-> 
-> > ### Sample Code:  
-> > XML Annotation
-> > 
-> > ```
-> > <Annotations Target="NAMESPACE.ENTITYTYPE">
-> >      <Annotation Term="com.sap.vocabularies.Common.v1.SideEffects" Qualifier="PriceChanged">
-> >           <Record>
-> >                <PropertyValue Property="SourceProperties">
-> >                     <Collection>
-> >                          <PropertyPath>Amount</PropertyPath>
-> >                          <PropertyPath>Discount</PropertyPath>
-> >                          <PropertyPath>Product/Property3</PropertyPath>
-> >                     </Collection>
-> >                </PropertyValue>
-> >                <PropertyValue Property="TargetProperties">
-> >                     <Collection>
-> >                          <PropertyPath>Price</PropertyPath>
-> >                     </Collection>
-> >                </PropertyValue>
-> >           </Record>
-> >      </Annotation>
-> > </Annotations>
-> > 
-> > ```
-> 
-> > ### Sample Code:  
-> > CAP CDS Annotation
-> > 
-> > ```
-> > 
-> > annotate NAMESPACE.ENTITYTYPE @(
-> >      Common.SideEffects #PriceChanged : {
-> >           SourceProperties : [
-> >                Amount,
-> >                Discount,
-> >                Product.Property3
-> >           ],
-> >           TargetProperties : [
-> >                'Price'
-> >           ]
-> >      }
-> > );
-> > 
-> > ```
-
-> ### Example:  
-> **User changes the supplier and the system refresh the 1:1 navigation `toSupplier`**
-> 
-> > ### Sample Code:  
-> > XML Annotation
-> > 
-> > ```
-> > <Annotations Target="NAMESPACE.ENTITYTYPE">
-> >      <Annotation Term="com.sap.vocabularies.Common.v1.SideEffects" Qualifier="SupplierChanged">
-> >           <Record>
-> >                <PropertyValue Property="SourceProperties">
-> >                     <Collection>
-> >                          <PropertyPath>Supplier</PropertyPath>
-> >                     </Collection>
-> >                </PropertyValue>
-> >                <PropertyValue Property="TargetEntities">
-> >                     <Collection>
-> >                          <NavigationPropertyPath>toSupplier</NavigationPropertyPath>
-> >                     </Collection>
-> >                </PropertyValue>
-> >           </Record>
-> >      </Annotation>
-> > </Annotations>
-> > ```
-> 
-> > ### Sample Code:  
-> > CAP CDS Annotation
-> > 
-> > ```
-> > 
-> > annotate NAMESPACE.ENTITYTYPE @(
-> >      Common.SideEffects #SupplierChanged : {
-> >           SourceProperties : [
-> >                Supplier
-> >           ],
-> >           TargetEntities : [
-> >                toSupplier
-> >           ]
-> >      }
-> > );
-> > ```
-
-> ### Example:  
-> **User changes the supplier and the system refresh the 1:1 navigation `toSupplier`**
-> 
-> User changes the supplier and the system refreshes the 1:1 association. If any header information or any other associated entity needs to be refreshed once a subitem has been created or deleted, add side effect annotations as follows:
-> 
-> > ### Sample Code:  
-> > XML Annotation
-> > 
-> > ```
-> > <Annotations Target="NAMESPACE.ENTITYTYPE">
-> >      <Annotation Term="com.sap.vocabularies.Common.v1.SideEffects" Qualifier="ReactonItemCreationOrDeletion">
-> >           <Record>
-> >                <PropertyValue Property="SourceEntities">
-> >                     <Collection>
-> >                          <NavigationPropertyPath>toSalesOrderItems</NavigationPropertyPath>
-> >                     </Collection>
-> >                </PropertyValue>
-> >                <PropertyValue Property="TargetProperties">
-> >                     <Collection>
-> >                         <PropertyPath>OverallAmount</PropertyPath>
-> >                     </Collection>
-> >                </PropertyValue>
-> >           </Record>
-> >      </Annotation>
-> > </Annotations>
-> > 
-> > ```
-> 
-> > ### Sample Code:  
-> > CAP CDS Annotation
-> > 
-> > ```
-> > 
-> > annotate NAMESPACE.ENTITYTYPE @(
-> >     Common.SideEffects #ReactonItemCreationOrDeletion : {
-> >         SourceEntities : [
-> >             toSalesOrderItems
-> >         ],
-> >         TargetProperties : [
-> >             'OverallAmount'
-> >         ]
-> >     }
-> > );
-> > ```
-> 
-> > ### Sample Code:  
-> > XML Annotation
-> > 
-> > ```
-> > <Annotations Target="NAMESPACE.ENTITYTYPE">
-> >      <Annotation Term="com.sap.vocabularies.Common.v1.SideEffects" Qualifier="ReactonItemCreationOrDeletion">
-> >          <Record>
-> >              <PropertyValue Property="SourceProperties">
-> >                  <Collection>
-> >                      <PropertyPath>toSalesOrderItems/Product</PropertyPath>
-> >                  </Collection>
-> >              </PropertyValue>
-> >              <PropertyValue Property="TargetProperties">
-> >                  <Collection>
-> >                      <PropertyPath>OverallAmount</PropertyPath>
-> >                  </Collection>
-> >              </PropertyValue>
-> >          </Record>
-> >      </Annotation>
-> > </Annotations>
-> > 
-> > ```
-> 
-> > ### Sample Code:  
-> > CAP CDS Annotation
-> > 
-> > ```
-> > 
-> > annotate NAMESPACE.ENTITYTYPE @(
-> >     Common.SideEffects #ReactonItemCreationOrDeletion : {
-> >         SourceProperties : [
-> >             toSalesOrderItems.Product
-> >         ],
-> >         TargetProperties : [
-> >             'OverallAmount'
-> >         ]
-> >     }
-> > );
-> > ```
-
-> ### Example:  
-> **Side effect after executing an action**
-> 
-> You need to define a side effect annotation for those cases in which any other entity or an association might be changed due to an action call. The target definition’s property path that may cover both properties and entities has to express a binding parameter name referring to the entity to which the action is bound.
-> 
-> > ### Sample Code:  
-> > XML Annotation
-> > 
-> > ```
-> > <Annotations Target="CA_OC_MANAGE_OR_ITEMS_SRV.CA_OC_MANAGE_OR_ITEMS_SRV_Entities/IssueOutput">
-> >     <Annotation Term="com.sap.vocabularies.Common.v1.SideEffects">
-> >         <Record>
-> >             <PropertyValue Property="TargetProperties">
-> >                 <Collection>
-> >                     <PropertyPath>_it/to_OutputRequestItemStatus/OutputRequestItemStatus_Text</PropertyPath>
-> >                 </Collection>
-> >             </PropertyValue>
-> >         </Record>
-> >     </Annotation>
-> > </Annotations>
-> > 
-> > ```
-> 
-> > ### Sample Code:  
-> > CAP CDS Annotation
-> > 
-> > ```
-> > 
-> > annotate CA_OC_MANAGE_OR_ITEMS_SRV.IssueOutput with @(
-> >     cds.odata.bindingparameter.name : '_it',
-> >     Common.SideEffects : {
-> >         TargetProperties : [
-> >             '_it.to_OutputRequestItemStatus.OutputRequestItemStatus_Text'
-> >         ]
-> >     }
-> > );
-> > ```
-> 
-> You can use side effects in the list report to refresh multiple lists from different entity sets using absolute paths as `TargetEntities` in the side effects annotation.
-> 
-> > ### Sample Code:  
-> > XML Annotation
-> > 
-> > ```
-> > <Annotations Target="namespace.to.action.ActionName">
-> >     <Annotation Term="Common.SideEffects">
-> >         <Record Type="Common.SideEffectsType">
-> >             <PropertyValue Property="TargetEntities">
-> >                 <Collection>
-> >                     <NavigationPropertyPath>/namespace.to.EntityContainer/EntityType1</NavigationPropertyPath>
-> >                     <NavigationPropertyPath>/namespace.to.EntityContainer/EntityType2</NavigationPropertyPath>
-> >                 </Collection>
-> >             </PropertyValue>
-> >         </Record>
-> >     </Annotation>
-> > </Annotations>
-> > ```
-> 
-> > ### Sample Code:  
-> > CAP CDS Annotation
-> > 
-> > ```
-> > annotate CA_OC_MANAGE_OR_ITEMS_SRV.IssueOutput with @(
-> >           Common.SideEffects : {
-> >               TargetEntities : [
-> >                   /namespace.to.EntityContainer/EntityType1,
-> >                   /namespace.to.EntityContainer/EntityType2
-> >               ]
-> >           }
-> >       );
-> > ```
-
-> ### Example:  
-> **Refresh the navigation target**
-> 
-> In this case, when the item tax amount is changed, the navigation property leading to the root \(`to_SalesOrder`\) is updated.
-> 
-> > ### Sample Code:  
-> > XML Annotation
-> > 
-> > ```
-> > <Annotations Target="STTA_SALES_ORDER_WD_20_SRV.C_STTA_SalesOrderItem_WD_20Type">
-> >      <Annotation Term="com.sap.vocabularies.Common.v1.SideEffects" Qualifier="TaxAmountChanged">
-> >           <Record>
-> >                <PropertyValue Property="SourceProperties">
-> >                     <Collection>
-> >                          <PropertyPath>TaxAmount</PropertyPath>
-> >                     </Collection>
-> >                </PropertyValue>
-> >                <PropertyValue Property="TargetEntities">
-> >                     <Collection>
-> >                          <NavigationPropertyPath>to_SalesOrder</NavigationPropertyPath>
-> >                     </Collection>
-> >                </PropertyValue>
-> >           </Record>
-> >      </Annotation>
-> > </Annotations>
-> > 
-> > ```
-> 
-> > ### Sample Code:  
-> > CAP CDS Annotation
-> > 
-> > ```
-> > 
-> > annotate STTA_SALES_ORDER_WD_20_SRV.C_STTA_SalesOrderItem_WD_20Type @(
-> >     Common.SideEffects #TaxAmountChanged : {
-> >         SourceProperties : [
-> >             TaxAmount
-> >         ],
-> >         TargetEntities : [
-> >             to_SalesOrder
-> >         ]
-> >     }
-> > );
-> > ```
 

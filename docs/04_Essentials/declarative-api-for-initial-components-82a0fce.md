@@ -10,15 +10,16 @@ The declarative API enables you to define the initially started component direct
 
 ## Using the `ComponentSupport` Module
 
-With the declarative `sap/ui/core/ComponentSupport` API it is possible to define the initially started component directly in the HTML markup instead of the imperative way using JavaScript or TypeScript. The declarative `ComponentSupport` is not activated by default, but must be enabled via the bootstrap:
+With the declarative `sap/ui/core/ComponentSupport` API, you can define the initially started component directly in the HTML markup instead of in the imperative way using JavaScript or TypeScript. The declarative `ComponentSupport` must be enabled via the bootstrap:
 
 ```html
 <!-- index.html -->
 <script id="sap-ui-bootstrap"
-    src="/resources/sap-ui-core.js"
-    ...
+    src="resources/sap-ui-core.js"
     data-sap-ui-on-init="module:sap/ui/core/ComponentSupport"
-    ...>
+    data-sap-ui-async="true"
+    data-sap-ui-resource-roots='{ "my.app": "./" }'
+    data-...="...">
 </script>
 ```
 
@@ -27,15 +28,15 @@ This module scans the DOM for HTML elements containing a special data attribute 
 ```html
 <!-- index.html -->
 <body id="content" class="sapUiBody sapUiSizeCompact" role="application">
-    ...
     <div data-sap-ui-component
-        data-id="container"
-        data-name="sap.ui.core.samples.formatting"
-        ...
+        data-id="myRootComponentContainer"
+        data-name="my.app"
+        data-height="100%"
+        data-settings='{ "id": "myRootComponent" }'
         data-handle-validation="true"
-        ...>
+        data-...="...">
     </div>
-    ...
+    <!-- ... -->
 </body>
 ```
 
@@ -65,45 +66,52 @@ This module scans the DOM for HTML elements containing a special data attribute 
 > Alternatively, you can provide your own module in the bootstrap via `on-init`, in which you create an instance of the `ComponentContainer` in the JavaScript code:
 > 
 > ```html
-> <!-- index.html -->
-> <head>
+> <!DOCTYPE html>
+> <html>
+>   <head>
+>     <!-- .... -->
 >     <script id="sap-ui-bootstrap"
->         src="resources/sap-ui-core.js"
->         data-sap-ui-on-init="module:sap/ui/demo/myBootstrap"> <!-- Execute custom module on init -->
->     </script>
-> </head>
-> <body id="content" class="sapUiBody sapUiSizeCompact" role="application">
-> </body>
+>       src="resources/sap-ui-core.js"
+>       data-sap-ui-on-init="module:my/app/bootstrap"
+>       data-sap-ui-resource-roots='{ "my.app": "./" }'
+>       data-sap-ui-async="true"
+>       data-...="..."
+>     ></script>
+>   </head>
+>   <body id="content" class="sapUiBody sapUiSizeCompact" role="application">
+>   </body>
+> </html>
 > ```
 > 
 > ```
-> // sap/ui/demo/myBootstrap.js
-> sap.ui.define(["sap/ui/core/ComponentContainer"], function(ComponentContainer) {
-> 
->     const oComponentContainer = new ComponentContainer({
->         manifest: true,
->         name: "sap.ui.core.samples.formatting",
->         handleValidation: true,
->         componentCreated: function(oEvent) {
->             // handle the created component
->             const oComponent = oEvent.getParameter("component");
->             ...
->         },
->         componentFailed: function(oEvent) {
->             // handle the failed case
->             const oReason = oEvent.getParameter("reason");
->             ...
->         }
->     });
-> 
->     oComponentContainer.placeAt("content");
-> 
+> // my/app/bootstrap.js
+> sap.ui.define([
+>   "sap/ui/core/ComponentContainer",
+>   "sap/ui/core/library"
+> ], (ComponentContainer, sapUiCoreLib) => {
+>   "use strict";
+>   const { Container } = sapUiCoreLib;
+>   const oComponentContainer = new ComponentContainer({
+>     name: "my.app",
+>     manifest: true,
+>     lifecycle: Container,
+>     handleValidation: true,
+>     componentCreated: function(oEvent) {
+>       const oComponent = oEvent.getParameter("component");
+>       // ...
+>     },
+>     componentFailed: function(oEvent) {
+>       const oReason = oEvent.getParameter("reason");
+>       // ...
+>     }
+>   });
+>   oComponentContainer.placeAt("content");
 > });
 > ```
 
 
 
-### Asynchronouos loading with `ComponentSupport`
+### Asynchronous loading with `ComponentSupport`
 
 The `ComponentSupport` module enforces asynchronous module loading of the component with "manifest first". This means, that the `manifest.json` file is loaded before evaluating the component to optimize loading behavior. In this way libraries and other dependencies can be loaded asynchronously and in parallel. To achieve this, the following settings for the ComponentContainer are applied by default:
 
@@ -127,24 +135,23 @@ In some cases, the component initialisation must wait until all pre-required mod
 ```html
 <!-- index.html -->
 <script id="sap-ui-bootstrap"
-    src="resources/sap-ui-core.js"
-    data-sap-ui-on-init="module:sap/ui/demo/myBootstrap"> <!-- Execute custom module on init -->
+  src="resources/sap-ui-core.js"
+  data-sap-ui-on-init="module:my/app/bootstrap"
+  data-sap-ui-resource-roots='{ "my.app": "./" }'
+  data-sap-ui-async="true"
+  data-...="...">
 </script>
 ```
 
 The custom module can load dependencies and execute code before activating the `ComponentSupport` module:
 
 ```js
-
-// sap/ui/demo/myBootstrap.js
-sap.ui.define(["sap/ui/demo/MyModule"], function(MyModule) {
-
+// my/app/bootstrap.js
+sap.ui.define(["my/app/MyModule"], (MyModule) => {
+  "use strict";
     // Execute code which needs to be executed before component initialization
-    MyModule.init().then(function() {
-        // Requiring the ComponentSupport module automatically executes the component initialisation for all declaratively defined components
-        sap.ui.require(["sap/ui/core/ComponentSupport"]);
-    });
-
+    // Requiring the ComponentSupport module automatically executes the component initialisation for all declaratively defined components
+    MyModule.init().then(() => sap.ui.require(["sap/ui/core/ComponentSupport"]));
 });
 ```
 

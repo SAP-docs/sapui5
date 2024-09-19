@@ -16,7 +16,7 @@ Although there is no visible difference, the text on the screen is now derived f
 
 You can view and download all files in the Demo Kit at [Data Binding - Step 3](https://ui5.sap.com/#/entity/sap.ui.core.tutorial.databinding/sample/sap.ui.core.tutorial.databinding.03).
 
-Set the `text` property of the `sap.m.Text` control to the value `{/greetingText}`. The curly brackets enclosing a binding path \(binding syntax\) are automatically interpreted as a binding. These binding instances are called `PropertyBindings`. In this case, the control's `text` property is bound to the `greetingText` property at the root of the default model, as the slash \(`/`\) at the beginning of the binding path denotes an absolute binding path.
+Assign the `text` property of the `sap.m.Text` control to the value `{/greetingText}`. The curly brackets enclosing a binding path \(binding syntax\) are automatically interpreted as a binding. These binding instances are called property bindings. In this scenario, the control's `text` property is bound to the `greetingText` property at the root of the default model. The slash \(`/`\) at the beginning of the binding path signifies an absolute binding path.
 
 **webapp/view/App.view.xml**
 

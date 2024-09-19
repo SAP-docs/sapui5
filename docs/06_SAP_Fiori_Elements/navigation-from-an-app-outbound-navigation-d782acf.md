@@ -652,7 +652,7 @@ When an outbound navigation is triggered, the information that comes from the na
 
 **Special Handling of Semantic Links**
 
-For semantic links, the value from the field shown as the link is passed rather than the value from another field that has the same technical name and is present elsewhere in the context. The rest of the merged context is passed as described in the rules above.
+If there are fields with the same technical name as the semantic link field that was clicked to trigger the navigation, for this field, only the value from the semantic link field is passed in the navigation context, and the values from other fields with this technical name are ignored. The merged context for the other fields is passed as described in the rules above.
 
 > ### Example:  
 > -   List report

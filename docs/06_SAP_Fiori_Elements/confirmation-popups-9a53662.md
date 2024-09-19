@@ -74,6 +74,9 @@ The following image shows an example of such a popup:
 
 ![](images/Confirmation_Popup_412_Warning_03381d1.png)
 
+> ### Note:  
+> A 412 message that doesn't indicate a warning severity is considered as a regular message. This means, if this is the only message, then an automatic retry of the action isn't offered, for example.
+
 
 
 <a name="loio9a536627a6a94de084b0605eb164d2c8__section_glf_hy4_wpb"/>

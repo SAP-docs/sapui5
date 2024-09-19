@@ -36,6 +36,7 @@ You can view and download all files at [Walkthrough - Step 29](https://ui5.sap.c
 <mvc:View
     controllerName="ui5.walkthrough.controller.InvoiceList"
     xmlns="sap.m"
+    xmlns:core="sap.ui.core"
     xmlns:mvc="sap.ui.core.mvc">
 
     <List
@@ -77,9 +78,12 @@ You can view and download all files at [Walkthrough - Step 29](https://ui5.sap.c
                 numberState="{= ${invoice>ExtendedPrice} > 50 ? 'Error' : 'Success' }">
                 <firstStatus>
                     <ObjectStatus
+                        core:require="{
+                            Formatter: 'ui5/walkthrough/model/formatter'
+                        }"
                         text="{
                             path: 'invoice>Status',
-                            formatter: '.formatter.statusText'
+                            formatter: 'Formatter.statusText.bind($controller)'
                         }"/>
                 </firstStatus>
             </ObjectListItem>

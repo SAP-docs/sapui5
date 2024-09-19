@@ -19,16 +19,14 @@ A minimalistic `index.html` file is needed to test the project configuration. Th
     	<head>
     		<meta charset="utf-8">
     		<title>SAPUI5 Walkthrough</title>
-    		<script
-    			id="sap-ui-bootstrap"
+    		<script id="sap-ui-bootstrap"
     			src="/resources/sap-ui-core.js"
-    			data-sap-ui-theme="sap_horizon"
     			data-sap-ui-libs="sap.m"
     			data-sap-ui-compat-version="edge"
-                   data-sap-ui-async="true"
-                   data-sap-ui-on-init="module:my/app/main"
-                   data-sap-ui-resource-roots='{"my.app": "./"}'
-     			></script>
+    			data-sap-ui-async="true"
+    			data-sap-ui-on-init="module:my/app/main"
+    			data-sap-ui-resource-roots='{"my.app": "./"}'>
+    		</script>
     	</head>
     	<body class="sapUiBody" id="content">
     	</body>
@@ -40,7 +38,7 @@ A minimalistic `index.html` file is needed to test the project configuration. Th
     **main.js**
 
     ```js
-    sap.ui.define(['sap/m/Text'], function(Text) {
+    sap.ui.define(["sap/m/Text"], function(Text) {
         new Text({
             text: "OpenUI5 is loaded successfully!"
         }).placeAt("content");
@@ -51,7 +49,7 @@ A minimalistic `index.html` file is needed to test the project configuration. Th
 > ### Caution:  
 > Adapt the path where the resources are located \(`src="/resources/sap-ui-core.js"`\) according to your installation. For OpenUI5 you can use `src="https://sdk.openui5.org/resources/sap-ui-core.js"`. For accessing SAPUI5 on the SAP Business Technology Platform, for example, use `src="https://ui5.sap.com/resources/sap-ui-core.js"`. 
 > 
-> You can use this reference to the latest stable version of SAPUI5 for the tutorial or for testing purposes, but never use this for productive use. In an actual app, you always have to specify an SAPUI5 version explicitly.
+> You can use this reference to the latest version of SAPUI5 for the tutorial or for testing purposes, but never use this for productive use. In an actual app, you always have to specify an SAPUI5 version explicitly.
 > 
 > For more information, see [Variant for Bootstrapping from Content Delivery Network](../04_Essentials/variant-for-bootstrapping-from-content-delivery-network-2d3eb2f.md).
 

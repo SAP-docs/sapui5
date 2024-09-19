@@ -26,16 +26,13 @@ The specific version allows you to select a particular fixed version for bootstr
 
 ```html
 <script id="sap-ui-bootstrap"
-    type="text/javascript"
-    src="https://ui5.sap.com/1.127.0/resources/sap-ui-core.js"
-    data-sap-ui-theme="sap_horizon"
+    src="https://ui5.sap.com/1.128.0/resources/sap-ui-core.js"
     data-sap-ui-async="true"
-    data-sap-ui-libs="sap.m"></script>
-
-
+    data-...="...">
+</script>
 ```
 
-The first segment of the URL after the host name is used to specify a concrete version, which needs to be provided in the following form: `release_number.version_number.patch_number`. For more information, see [Versioning and Maintenance of SAPUI5](../02_Read-Me-First/versioning-and-maintenance-of-sapui5-91f0214.md).
+The first segment of the URL after the host name is used to specify a concrete version, which needs to be provided in the following form: *`<majorVersion>.<minorVersion>.<patchNumber>`*. For more information, see [Versioning and Maintenance of SAPUI5](../02_Read-Me-First/versioning-and-maintenance-of-sapui5-91f0214.md).
 
 Check the available versions with the respective maintenance status at [https://ui5.sap.com/versionoverview.html](https://ui5.sap.com/versionoverview.html).
 
@@ -49,10 +46,11 @@ The evergreen version allows you to automatically select the latest available pa
 <head>
     <!-- ... -->
     <script id="sap-ui-bootstrap"
-        src="https://ui5.sap.com/1.108/resources/sap-ui-core.js"
+        src="https://ui5.sap.com/1.120/resources/sap-ui-core.js"
         data-sap-ui-async="true"
         data-sap-ui-on-init="module:sap/ui/core/ComponentSupport"
         data-sap-ui-resource-roots='{ "my.app": "./" }'
+        data-sap-ui-compat-version="edge">
     </script>
 </head>
 <body id="content" class="sapUiBody">
@@ -61,11 +59,12 @@ The evergreen version allows you to automatically select the latest available pa
         data-name="my.app"
         data-height="100%"
         data-settings='{ "id": "myComponent" }'
-        data-...="..."></div>
+        data-...="...">
+    </div>
 </body>
 ```
 
-The first segment of the URL after the host name is used to specify an evergreen version, which needs to be provided in the following form: `release_number.version_number`. For more information, see [Versioning and Maintenance of SAPUI5](../02_Read-Me-First/versioning-and-maintenance-of-sapui5-91f0214.md). All long-term maintenance versions \>= 1.71 can be used as evergreen versions to bootstrap SAPUI5 applications. You can find the available versions with long-term maintenance status at [https://ui5.sap.com/versionoverview.html](https://ui5.sap.com/versionoverview.html).
+The first segment of the URL after the host name is used to specify an evergreen version, which needs to be provided in the following version number combination: *`<majorVersion>.<minorVersion>`* without a patch number. For more information, see [Versioning and Maintenance of SAPUI5](../02_Read-Me-First/versioning-and-maintenance-of-sapui5-91f0214.md). All long-term maintenance versions \>= 1.71 can be used as evergreen versions to bootstrap SAPUI5 applications. You can find the available versions with long-term maintenance status at [https://ui5.sap.com/versionoverview.html](https://ui5.sap.com/versionoverview.html).
 
 When using the patch-level independent bootstrap you must use `data-sap-ui-async="true"` and the `data-sap-ui-on-init` callback. Ideally, you refer to a module, for example `sap/ui/core/ComponentSupport` to bootstrap your Component; see [Declarative API for Initial Components](declarative-api-for-initial-components-82a0fce.md). You can also refer to a custom module.
 
@@ -78,22 +77,10 @@ When using the patch-level independent bootstrap you must use `data-sap-ui-async
 
 ### Default Version
 
-The default version of our libraries has the generic URL [https://ui5.sap.com/resources/sap-ui-core.js](https://ui5.sap.com/resources/sap-ui-core.js) \(SAPUI5\). Approximately 2 weeks after the release of a new SAPUI5 version, this version becomes the default version.
+The default version of our libraries has the generic URL `https://ui5.sap.com/resources/sap-ui-core.js` \(SAPUI5\). Approximately 2 weeks after the release of a new SAPUI5 version, this version becomes the default version.
 
 > ### Caution:  
 > The default version is constantly being upgraded and this might have an impact on the stability of your application. Use this version for testing purposes only.
-> 
-> If you want to use the default version, you can use the following bootstrap scripts:
-> 
-> ```html
-> <script id="sap-ui-bootstrap"
->     type="text/javascript"
->     src="https://ui5.sap.com/resources/sap-ui-core.js"
->     data-sap-ui-theme="sap_horizon"
->     data-sap-ui-async="true"
->     data-sap-ui-libs="sap.m"></script>
-> 
-> ```
 
 
 

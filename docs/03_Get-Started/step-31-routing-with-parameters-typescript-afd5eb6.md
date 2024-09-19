@@ -93,7 +93,6 @@ Typically we'd use the key of the item in the back-end system to identify the se
 ```js
 import Controller from "sap/ui/core/mvc/Controller";
 import JSONModel from "sap/ui/model/json/JSONModel";
-import formatter from "../model/formatter";
 import { SearchField$SearchEvent } from "sap/m/SearchField";
 import Filter from "sap/ui/model/Filter";
 import FilterOperator from "sap/ui/model/FilterOperator";
@@ -105,11 +104,8 @@ import ObjectListItem from "sap/m/ObjectListItem";
 /**
  * @namespace ui5.walkthrough.controller
  */
-export default class App extends Controller {
-    public formatter = formatter;
-		
+export default class App extends Controller {	
 	…
-	
     onPress(event: Event): void {
         const item = <ObjectListItem> event.getSource();
 
