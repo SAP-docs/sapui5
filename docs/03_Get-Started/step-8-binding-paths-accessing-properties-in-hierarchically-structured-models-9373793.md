@@ -2,7 +2,7 @@
 
 # Step 8: Binding Paths: Accessing Properties in Hierarchically Structured Models
 
-In step 6 , we stated that the fields in a resource model are arranged in a flat structure; in other words, there can be no hierarchy of properties; however, this is true only for resource models. The properties within JSON and OData models almost always are arranged in a hierarchical structure. Therefore, we should take a look at how to reference fields in a hierarchically structured model object.
+In Step 6 , we stated that the fields in a resource model are arranged in a flat structure; in other words, there is no hierarchy of properties. However, this is only true for resource models. The properties within JSON and OData models are usually arranged in a hierarchical structure. So, let's explore how to reference fields in a hierarchically structured model object.
 
 
 
@@ -10,9 +10,9 @@ In step 6 , we stated that the fields in a resource model are arranged in a flat
 
   
   
-**Second panel with additional data**
+**A second panel with address data is added**
 
-![](images/Tutorial_Data_Binding_Step_8_12705f5.png "Second panel with additional data")
+![The graphic has an explanatory text](images/Tutorial_Data_Binding_Step_8_12705f5.png " A second panel with address data is added")
 
 
 
@@ -20,7 +20,7 @@ In step 6 , we stated that the fields in a resource model are arranged in a flat
 
 You can view and download all files in the Demo Kit at [Data Binding - Step 8](https://ui5.sap.com/#/entity/sap.ui.core.tutorial.databinding/sample/sap.ui.core.tutorial.databinding.08).
 
-1.  In the `data.json` file, add an additional sub-object called `address`. Within this object are four properties: `street`, `city`, `zip`, and `country`.
+1.  In the `data.json` file, add an additional sub-object named `address`. This object has four properties: `street`, `city`, `zip`, and `country`.
 
     **webapp/model/data.json**
 
@@ -38,11 +38,11 @@ You can view and download all files in the Demo Kit at [Data Binding - Step 8](h
     }
     ```
 
-2.  Add a new panel to the `App.view.xml`with a new `Label` and `FormattedText` pair of elements.
+2.  Add a new panel to the `App.view.xml` with a new `Label` and `FormattedText` pair of elements.
 
     The `text` property of the `Label` element is bound to the i18n resource bundle field `address`.
 
-    The `htmlText` property of the `FormattedText` element is bound to four JSON model properties: `/address/street`, `/address/zip`, `/address/city`, and `/address/country`. The resulting address format is achieved by separating each one of these JSON model property references with a hard-coded newline character while `zip` and `city` are separated by a space.
+    The `htmlText` property of the `FormattedText` element is bound to four JSON model properties: `/address/street`, `/address/zip`, `/address/city`, and `/address/country`. You can achieve the resulting address format by separating each one of these JSON model property references with a hard-coded newline character. Note that `zip` and `city` are separated by a space.
 
     **webapp/view/App.view.xml**
 
@@ -108,11 +108,11 @@ You can view and download all files in the Demo Kit at [Data Binding - Step 8](h
 
 
 > ### Note:  
-> The resource bundle files now contain new properties for the address and a new panel header text. Both panel properties have been numbered.
+> The resource bundle files now contain new properties for the address and a new panel header text. Both panel properties are numbered.
 > 
-> In the XML view, inside the curly brackets for the binding path of the `htmlText` element, notice that the first character is a forward slash. This is required for binding paths that make absolute references to properties in JSON and OData models, but must not be used for resource models. After the first forward slash character, the binding path syntax uses the object names and the property name separated by forward slash characters \(`{/address/street}`\).
+> In the XML view, inside the curly brackets for the binding path of the `htmlText` element, you'll notice that the first character is a forward slash. This is necessary for binding paths that make absolute references to properties in JSON and OData models, but you must not use it for resource models. After the first forward slash character, the binding path syntax uses the object name and the property names separated by forward slash characters \(`{/address/street}`\).
 > 
-> As has been mentioned previously, all binding path names are case-sensitive.
+> Remember, all binding path names are case-sensitive.
 
 **Related Information**  
 

@@ -90,9 +90,9 @@ The app contains a *Do Something* button and you want to make the button bigger.
 
 <a name="loio04b75eae78ef4bae9b40cd7540ae8bdc__section_ftz_34f_c1b"/>
 
-## Trying Different SAPUI5 Versions
+## Trying Different Framework Versions
 
-If you find a bug in your application, you can easily check whether it has already been fixed in a newer SAPUI5 version. Just try the app with a different SAPUI5 version:
+If you find a bug in your application, you can easily check whether it has already been fixed in a newer framework version:
 
 1.  Expand the *Technical Information* section and check the loaded version.
 
@@ -100,7 +100,7 @@ If you find a bug in your application, you can easily check whether it has alrea
 
 3.  Choose *Other* from the *Boot application with different UI5 version on next reload* dropdown list.
 
-4.  Enter a custom URL, for example `https://sdk.openui5.org/1.46.6/resources/sap-ui-core.js`.
+4.  Enter a custom URL, for example `https://sdk.openui5.org/nightly/resources/sap-ui-core.js`.
 
 5.  Choose *Activate Reboot URL*, confirm the dialog box, and reload the app.
 

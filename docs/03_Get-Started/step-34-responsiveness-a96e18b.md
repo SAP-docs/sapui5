@@ -32,6 +32,7 @@ You can view and download all files at [Walkthrough - Step 34](https://ui5.sap.c
 <mvc:View
 	controllerName="ui5.walkthrough.controller.InvoiceList"
 	xmlns="sap.m"
+	xmlns:core="sap.ui.core"
 	xmlns:mvc="sap.ui.core.mvc">
 	<Table
 		id="invoiceList"
@@ -88,6 +89,9 @@ You can view and download all files at [Walkthrough - Step 34](https://ui5.sap.c
 						emphasized="false"/>
 					<ObjectIdentifier title="{invoice>ProductName}" />
 					<Text
+						core:require="{
+								Formatter: 'ui5/walkthrough/model/formatter'
+						}"
 						text="{
 								parts: [
 									'invoice>Status',
@@ -95,8 +99,8 @@ You can view and download all files at [Walkthrough - Step 34](https://ui5.sap.c
 									'i18n>invoiceStatusB',
 									'i18n>invoiceStatusC'
 								],
-								formatter: '.formatter.statusText'
-							}"/>
+								formatter: 'Formatter.statusText.bind($controller)'
+						}"/>
 					<Text text="{invoice>ShipperName}" />
 					<ObjectNumber
 						number="{

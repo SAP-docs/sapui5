@@ -64,38 +64,13 @@ The `statusText` function gets the technical status from the data model as input
 
 
 
-## webapp/controller/InvoiceList.controller.js
-
-```js
-sap.ui.define([
-	"sap/ui/core/mvc/Controller",
-	"sap/ui/model/json/JSONModel",
-	"../model/formatter"
-], (Controller, JSONModel, formatter) => {
-	"use strict";
-
-	return Controller.extend("ui5.walkthrough.controller.InvoiceList", {
-		formatter: formatter,
-		onInit() {
-			const oViewModel = new JSONModel({
-				currency: "EUR"
-			});
-			this.getView().setModel(oViewModel, "view");
-		}
-	});
-});
-```
-
-To load our formatter functions, we have to add it to the `InvoiceList.controller.js`. In this controller, we first add a dependency to our custom `formatter` module. The controller simply stores the loaded formatter functions in the local property `formatter` to be able to access them in the view.
-
-
-
 ## webapp/view/InvoiceList.view.xml
 
 ```xml
 <mvc:View
     controllerName="ui5.walkthrough.controller.InvoiceList"
     xmlns="sap.m"
+    xmlns:core="sap.ui.core"
     xmlns:mvc="sap.ui.core.mvc">
     <List
         headerText="{i18n>invoiceListTitle}"
@@ -119,9 +94,12 @@ To load our formatter functions, we have to add it to the `InvoiceList.controlle
                 numberState="{= ${invoice>ExtendedPrice} > 50 ? 'Error' : 'Success' }">
                 <firstStatus>
                     <ObjectStatus
+                        core:require="{
+                            Formatter: 'ui5/walkthrough/model/formatter'
+                        }"
                         text="{
                             path: 'invoice>Status',
-                            formatter: '.formatter.statusText'
+                            formatter: 'Formatter.statusText.bind($controller)'
                         }"/>
                 </firstStatus>
             </ObjectListItem>
@@ -130,7 +108,9 @@ To load our formatter functions, we have to add it to the `InvoiceList.controlle
 </mvc:View>
 ```
 
-We add a status using the `firstStatus` aggregation to our `ObjectListItem` that will display the status of our invoice. The custom formatter function is specified with the reserved property `formatter` of the binding syntax. A `"."` in front of the formatter name means that the function is looked up in the controller of the current view. There we defined a property `formatter` that holds our formatter functions, so we can access it by `.formatter.statusText`.
+To load our formatter functions, we use the [`require`](../04_Essentials/require-modules-in-xml-view-and-fragment-b11d853.md) attribute with the `sap.ui.core` namespace URI, for which the `core` prefix is already defined in our XML view. This allows us to write the attribute as `core:require`. We then add our custom formatter module to the list of required modules and assign it the `Formatter` alias, making it available for use within the view.
+
+We add a status using the `firstStatus` aggregation to our `ObjectListItem` that will display the status of our invoice. The custom formatter function is specified with the reserved `formatter` property of the binding syntax. There, we use our `Formatter` alias that holds our formatter functions in order to access the desired function via `Formatter.statusText`. When called, we want the `this` context to be set to the current view controller's context. To achieve this, we use [`.bind($controller)`](../04_Essentials/formatting-parsing-and-validating-data-07e4b92.md).
 
 
 

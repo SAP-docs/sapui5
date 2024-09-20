@@ -1,8 +1,10 @@
 <!-- loioe7f52f49994347cbadde95620238f3f8 -->
 
-# Export Features
+# Spreadsheet Export Type Features
 
-The `SmartTable` control offers various types of exports. The `SmartTable` control supports features such as file compression, header row, localization, meta information, hierarchies, data types, and Read Access Logging \(RAL\) support.
+The `SmartTable` control offers different types of exports with various features. 
+
+
 
 The `SmartTable` control offers the following types of exports:
 

@@ -813,7 +813,7 @@ The following changes and new features are available for SAP Fiori elements for 
 
 -   We now support the synchronization of data between pages when using the flexible column layout. For more information, see [Enabling the Flexible Column Layout](../06_SAP_Fiori_Elements/enabling-the-flexible-column-layout-e762257.md).
 
--   You can now also export a table to PDF. For more information, see [Using the Export Feature](../06_SAP_Fiori_Elements/using-the-export-feature-4bab6f2.md).
+-   You can now also export a table to PDF. For more information, see [Using the Export Button](../06_SAP_Fiori_Elements/using-the-export-button-4bab6f2.md).
 
 -   We've made additional minor adaptations to the dialog for handling draft changes, for example for navigation, which results in the following UI changes:
 
@@ -1000,6 +1000,12 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.126](what-s-new-in-sapui5-1-126-1d98116.md "With this release SAPUI5 is upgraded from version 1.125 to 1.126.")
+
+[What's New in SAPUI5 1.125](what-s-new-in-sapui5-1-125-9d87044.md "With this release SAPUI5 is upgraded from version 1.124 to 1.125.")
+
+[What's New in SAPUI5 1.124](what-s-new-in-sapui5-1-124-7f77c3f.md "With this release SAPUI5 is upgraded from version 1.123 to 1.124.")
 
 [What's New in SAPUI5 1.123](what-s-new-in-sapui5-1-123-9d00ac7.md "With this release SAPUI5 is upgraded from version 1.122 to 1.123.")
 

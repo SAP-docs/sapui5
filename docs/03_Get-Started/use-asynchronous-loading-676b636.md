@@ -84,7 +84,7 @@ To configure the targets for asynchronous loading, please also check the [Routin
 ```json
 "sap.ui5": {
 	"rootView": {
-        "viewName": "sap.ui.demo.walkthrough.view.App",
+        "viewName": "my.app.view.App",
         "type": "XML",
         "id": "app",
          "async": true
@@ -93,7 +93,7 @@ To configure the targets for asynchronous loading, please also check the [Routin
         "config": {
             "routerClass": "sap.m.routing.Router",
             "viewType": "XML",
-            "path": "sap.ui.demo.walkthrough.view",
+            "path": "my.app.view",
             "controlId": "app",
             "controlAggregation": "pages",
             "async": true
@@ -104,7 +104,6 @@ To configure the targets for asynchronous loading, please also check the [Routin
 
 **Additional Information:**
 
--   Walkthrough tutorial, [Step 10: Descriptor for Applications](step-10-descriptor-for-applications-8f93bf2.md)
 -   Set the rootView and routing to async via [`sap.ui.core.IAsyncContentCreation`](https://ui5.sap.com/#/api/sap.ui.core.IAsyncContentCreation)
 
 
@@ -122,29 +121,20 @@ The following code shows a sample UIComponent implementing the interface:
 
 ```js
 sap.ui.define(["sap/ui/core/UIComponent"], function(UIComponent) {
-	return UIComponent.extend("sap.ui.demo.walkthrough.Component", {
+	return UIComponent.extend("my.app.Component", {
 		metadata: {
 			interfaces: ["sap.ui.core.IAsyncContentCreation"],
-			rootView: {
-				id: "app",
-				type: "XML",
-				viewName: "sap.ui.demo.walkthrough.view.App"
-			},
-			routing: {
-				config: {
-					controlId: "app",
-					controlAggregation: "pages",
-					routerClass: "sap.m.routing.Router",
-					viewType: "XML",
-					viewPath: "sap.ui.demo.walkthrough.view"
-				}
-			}
+			manifest: "json"
 		}
 	});
 });
 ```
 
 For more information on how `sap.ui.core.IAsyncContentCreation` affects the component's content creation, see [Methods Controlling the Initial Instantiation](../04_Essentials/methods-controlling-the-initial-instantiation-b430345.md).
+
+**Additional Information:**
+
+-   Walkthrough tutorial, [Step 10: Descriptor for Applications](step-10-descriptor-for-applications-8f93bf2.md)
 
 
 

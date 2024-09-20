@@ -8,11 +8,17 @@ In this step, we create a basic application and simply place some text on the sc
 
 ## Preview
 
-  
-  
-**Screen with text**
+![The browser shows the text "Hi, my name is Harry Hawk"](images/Tutorial_Data_Binding_Step_1_6d391d5.png)
 
-![](images/Tutorial_Data_Binding_Step_1_6d391d5.png "Screen with text")
+
+
+<a name="loio4cde849dc18949b69bbe152a0aaa19c6__section_lv5_lvy_zbc"/>
+
+## Setup
+
+Open a terminal and install UI5 Tooling globally on your machine by executing the following command:
+
+`npm install --global @ui5/cli`
 
 
 
@@ -125,7 +131,7 @@ You can view and download all files in the Demo Kit at [Data Binding - Step 1](h
     });
     ```
 
-7.  Create a new folder named `view` in the webapp folder. Now create a new file `App.view.xml` within the `view` folder. We start by placing the `sap.m.Text` control into the XML view. Since the value of the control's text property has been hard-coded, it is unrelated to any data that might exist within a model object. Therefore, data binding is **not** used here.
+7.  Create a new folder named `view` in the webapp folder. Then, create a new file `App.view.xml` within the `view` folder. We start by placing the `sap.m.Text` control into the XML view. Since the value of the control's text property is hard-coded, it doesn't relate to any data that might exist within a model object. Therefore, data binding is **not** used here.
 
     **webapp/view/App.view.xml \(New\)**
 
@@ -137,13 +143,13 @@ You can view and download all files in the Demo Kit at [Data Binding - Step 1](h
     </mvc:View>
     ```
 
-8.  Open a terminal in the app root folder and execute `npm i -D @ui5/cli` to install UI5 Tooling in the app root folder..
+8.  Open a terminal in the app root folder and execute `npm i -D @ui5/cli` to install UI5 Tooling in the app root folder.
 
-9.  Execute `npx ui5 init` in the app root folder.
+9.  Execute `ui5 init` in the app root folder.
 
-10. Execute `npx ui5 use OpenUI5`
+10. Execute `ui5 use OpenUI5`
 
-11. Execute `npx ui5 add sap.m sap.ui.core sap.ui.layout themelib_sap_horizon`
+11. Execute `ui5 add sap.m sap.ui.core sap.ui.layout themelib_sap_horizon`
 
 12. Execute `npm start` to start the web server and to open a new browser window hosting your newly created `index.html`.
 

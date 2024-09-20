@@ -588,36 +588,6 @@ Options: `sync | async | off`.
 <tr>
 <td valign="top">
 
-`xx-css-variables`
-
-\(experimental\)
-
-</td>
-<td valign="top">
-
-Type: `string`
-
-Default value: `false`
-
-Enable usage of CSS variables.
-
-Options: `false | true | additional`.
-
-</td>
-<td valign="top">
-
-![YES](../02_Read-Me-First/images/Checked_Okay_3929e46.png)
-
-</td>
-<td valign="top">
-
-![NO](images/Cancel_dfb38de.png)
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
 `xx-debug-module-loading`
 
 \(experimental\)
@@ -1152,7 +1122,7 @@ Possible values are:
 
     See also:
 
-    -   [`onInit` function/module](standard-variant-for-bootstrapping-91f1f45.md)
+    -   [`onInit` function/module](initialization-process-91f2c90.md#loio91f2c9076f4d1014b6dd926db0e91070)
     -   [`Core.ready`](initialization-process-91f2c90.md#loio91f2c9076f4d1014b6dd926db0e91070)
 
 

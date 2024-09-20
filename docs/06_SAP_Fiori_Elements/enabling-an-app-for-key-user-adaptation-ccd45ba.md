@@ -94,7 +94,7 @@ If the application developer has defined header facets as stashed in the manifes
 
 **Restricting the Adaptability**
 
-Application developers can restrict the adaptability of header facets via the manifest setting '`flexSettings'/'designtime`'. For example, the value '`not-adaptable-visibility`' means that all actions that influence visibility are disabled, that is, 'remove' and 'add' are not possible, but 'move' is enabled. For more details, refer to the section *Restrict adaptation for certain controls* in the topic [Enabling UI Adaptation: Other Things to Consider](../05_Developing_Apps/enabling-ui-adaptation-other-things-to-consider-de9fd55.md).
+Application developers can restrict the adaptability of header facets via the manifest setting '`flexSettings'/'designtime`'. For example, the value '`not-adaptable-visibility`' means that all actions that influence visibility are disabled, that is, 'remove' and 'add' are not possible, but 'move' is enabled. For more details, refer to the [Restrict Adaptation for Certain Controls](../05_Developing_Apps/enabling-ui-adaptation-other-things-to-consider-de9fd55.md#loiode9fd55c69af4b46863f5d26b5d796c4__section_restrictadaptation) section in the topic [Enabling UI Adaptation: Other Things to Consider](../05_Developing_Apps/enabling-ui-adaptation-other-things-to-consider-de9fd55.md).
 
 **Referencing Header Facets**
 

@@ -12,17 +12,11 @@ You can configure the entity sets that you want to refresh. To do so, upon navig
 
 
 
-<a name="loio3c65f2cc630c472da8328a6f3c193683__section_nfx_4gn_5tb"/>
+<a name="loio3c65f2cc630c472da8328a6f3c193683__section_lyg_rv3_3cc"/>
 
-## Additional Features in SAP Fiori Elements for OData V2
-
-
-
-### Entity Set Configuration
+## Entity Set Configuration
 
 The following configurations are supported for entity sets:
-
-****
 
 
 <table>
@@ -57,17 +51,51 @@ Refresh <EntitySet2\> along with all its dependents \(navigation property\)
 
 
 
-### Source Application Behavior
+<a name="loio3c65f2cc630c472da8328a6f3c193683__section_umb_yv3_3cc"/>
 
-**External Create Navigation**
+## Source Application Behavior
+
+
+
+### External Create Navigation
 
 Refresh occurs for the entity set of the table that gets triggered from the navigation, while moving back to the source application. You can't override this behavior in SAP Fiori elements for OData V2.
 
-**External Chevron Navigation**
 
-Refresh occurs for the entity set of the table that gets triggered from the navigation, while moving back to the source application. However, you can switch it off or override it by using the following manifest configuration:
+
+### External Chevron Navigation
+
+Refresh occurs for the entity set of the table that gets triggered from the navigation, while moving back to the source application. However, you can switch it off or override it by configuring the `manifest.json` file. For more information about the sample code, see the version-specific sections.
+
+
+
+### Other External Navigation Including Navigation Using Extension APIs
+
+Refresh is not performed by default. You can override the default behavior and refresh specific entity sets using the manifest configuration. You can configure the refresh strategies defined for specific outbound navigation by configuring the `manifest.json` file. For more information, see the version-specific sections.
+
+
+
+### Navigation Using Extensions
+
+While navigating back to the source application, if an external navigation is triggered using the `navigateExternal` API, the refresh strategies of the outbound target that is passed to the API is considered for refreshing the entity set. The entity sets specified in the manifest under `refreshStrategyOnAppRestore` of that specific outbound configuration are considered for refresh. The refresh mechanism is exactly the same as defined for the external navigation section.
+
+
+
+<a name="loio3c65f2cc630c472da8328a6f3c193683__section_nfx_4gn_5tb"/>
+
+## Additional Features in SAP Fiori Elements for OData V2
+
+
+
+### Source Application Behavior
+
+**Configure the Default Refresh Behavior During Chevron Navigation**
+
+You can either **switch off** or override the default refresh behavior settings in the `manifest.json` file. To **switch off**, the `entitySets` parameter must be empty. Otherwise, you can override it with your refresh requirements.
 
 > ### Sample Code:  
+> manifest.json
+> 
 > ```
 > "sap.app": {
 > 	...
@@ -111,13 +139,13 @@ Refresh occurs for the entity set of the table that gets triggered from the navi
 > }
 > ```
 
-If you want to **switch off** the default refresh behavior, leave the `entitySets` parameter empty. Otherwise, you can override it with your refresh requirements.
-
 **Other External Navigation Including Navigation Using Extension APIs**
 
-Refresh is not performed by default. You can override the default behavior and refresh specific entity sets using manifest configuration. You can configure the refresh strategies defined for specific outbound navigation as shown in the following code sample:
+The following sample code shows you how to configure `manifest.json` to define refresh strategies for specific outbound navigation. You can also define the default refresh strategies for external navigation for cases wherein an outbound navigation doesn’t have specific refresh strategies.
 
 > ### Sample Code:  
+> manifest.json
+> 
 > ```
 > "sap.app": {
 >    ...
@@ -180,11 +208,9 @@ Refresh is not performed by default. You can override the default behavior and r
 > 
 > ```
 
-As shown above, you can also define the default refresh strategies for external navigation for cases wherein an outbound navigation doesn’t have specific refresh strategies.
-
 **Navigation Using Extensions**
 
-While navigating back to the source application, if an external navigation is triggered using the `navigateExternal` API, the refresh strategies of the outbound target that is passed to the API is considered for refreshing the entity set. The entity sets specified in the manifest under `refreshStrategyOnAppRestore` of that specific outbound configuration are considered for refresh. You can check the following code:
+The following sample code shows you how to use extensions to navigate back to the souce application:
 
 > ### Sample Code:  
 > Extension Class
@@ -198,7 +224,7 @@ While navigating back to the source application, if an external navigation is tr
 > ```
 
 > ### Sample Code:  
-> Manifest File
+> manifest.json
 > 
 > ```
 > 
@@ -240,16 +266,14 @@ While navigating back to the source application, if an external navigation is tr
 > 
 > ```
 
-The refresh mechanism is exactly the same as defined for the external navigation section.
-
 > ### Note:  
-> For SAP Fiori elements for OData V2, if the back-end service isn’t ETag enabled, and the table in List Report is configured to be refreshed in Flexible Column Layout mode, the refresh is triggered for all of the table’s entity set dependents. To avoid this, enable ETag for your back-end service.
+> If the back-end service isn’t ETag enabled, and the table in List Report is configured to be refreshed in Flexible Column Layout mode, the refresh is triggered for all of the table’s entity set dependents. To avoid this, enable ETag for your back-end service.
 
 **Refresh in Scenarios Involving Navigation from Reuse Component or Extension View**
 
 Applications can also configure refresh on back navigation when the navigation was triggered using smart link from the reuse component or an extension view.
 
-Following is a sample code on a `stStart` function of a reuse component where extension API `setRefreshBehaviour` is used to refresh an entity set:
+The following sample code shows you a `stStart` function of a reuse component where extension API `setRefreshBehaviour` is used to refresh an entity set:
 
 > ### Sample Code:  
 > ```
@@ -365,7 +389,7 @@ This does **not** affect the default refresh behavior of the table entity set wh
 > 
 > -   When specifying an entity set, application developers must note the following:
 > 
->     -   Begin with a forward slash \("/"\) if the entity is a containment-based entity \(a parameterized entity\) and if you need to specify the full path of the resulting entity \("/Customer/Set"\) in the same manner as specified via the `"contextPath"` manifest property. For more information, see the section *Supporting Parameterized Entities* under *Additional Features in SAP Fiori Elements for OData V4* in [Configuring Filter Bars](configuring-filter-bars-4bd7590.md).
+>     -   Begin with a forward slash \("/"\) if the entity is a containment-based entity \(a parameterized entity\) and if you need to specify the full path of the resulting entity \("/Customer/Set"\) in the same manner as specified via the `"contextPath"` manifest property. For more information, see the section [Supporting Parameterized Entities](configuring-filter-bars-4bd7590.md#loio4bd7590569c74c61a0124c6e370030f6__suppprting_parameterized_entities_subsection) in [Configuring Filter Bars](configuring-filter-bars-4bd7590.md).
 > 
 >     -   If it is not a containment scenario/parameterized entity but a regular entity set, then the slash is not required at the beginning \(`"SalesOrderItem"`\).
 

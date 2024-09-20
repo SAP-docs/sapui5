@@ -4,7 +4,7 @@
 
 In this step, you will learn how to use your browser's developers tools to troubleshoot your SAPUI5 app.
 
-Most modern web browsers contain some form of Developer Tools. They allow you to examine the details of the current web page. You can also use them to debug JavaScript code, analyze network performance, live-edit DOM elements, and much more. As an example, we will show you how to use the *Developer Tools* in Google Chrome. Other browsers have similar capabilities, and you can easily adapt the examples shown here to these browsers.
+Most modern web browsers contain some form of developer tools. They allow you to examine the details of the current web page. You can also use them to debug JavaScript code, analyze network performance, live-edit DOM elements, and much more. As an example, we will show you how to use the *Developer Tools* in Google Chrome. Other browsers have similar capabilities, and you can easily adapt the examples shown here to these browsers.
 
 
 
@@ -12,11 +12,6 @@ Most modern web browsers contain some form of Developer Tools. They allow you to
 
 ## Opening the Example App and the Developer Tools
 
-<-- Add the following lines to the package.json : 
-"scripts": {
-  "start": "ui5 serve -o index.html"
-},
--->
 1.  Download the example app with errors at [Troubleshooting](https://ui5.sap.com/#/entity/sap.ui.core.tutorial.troubleshooting/sample/sap.ui.core.tutorial.troubleshooting.01).
 
 2.  Extract the downloaded `.zip` file at the desired location on your local machine.

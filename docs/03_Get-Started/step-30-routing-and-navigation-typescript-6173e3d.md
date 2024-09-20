@@ -236,7 +236,6 @@ What is still missing is the event handler that performs a navigation to the det
 ```js
 import Controller from "sap/ui/core/mvc/Controller";
 import JSONModel from "sap/ui/model/json/JSONModel";
-import formatter from "../model/formatter";
 import { SearchField$SearchEvent } from "sap/m/SearchField";
 import Filter from "sap/ui/model/Filter";
 import FilterOperator from "sap/ui/model/FilterOperator";
@@ -247,7 +246,6 @@ import Component from "../Component";
  * @namespace ui5.walkthrough.controller
  */
 export default class App extends Controller {
-    public formatter = formatter;
 		…
     onPress(): void {
         const router = (<Component> this.getOwnerComponent()).getRouter();
@@ -268,6 +266,7 @@ In the invoice list view we add a press event to the list item we just defined i
 <mvc:View
     controllerName="ui5.walkthrough.controller.InvoiceList"
     xmlns="sap.m"
+    xmlns:core="sap.ui.core"
     xmlns:mvc="sap.ui.core.mvc">
     ...
         <items>
@@ -289,9 +288,12 @@ In the invoice list view we add a press event to the list item we just defined i
                 press=".onPress" >
                 <firstStatus>
                     <ObjectStatus
+                        core:require="{
+                            Formatter: 'ui5/walkthrough/model/formatter'
+                        }"
                         text="{
                             path: 'invoice>Status',
-                            formatter: '.formatter.statusText'
+                            formatter: 'Formatter.statusText.bind($controller)'
                         }"/>
                 </firstStatus>
             </ObjectListItem>

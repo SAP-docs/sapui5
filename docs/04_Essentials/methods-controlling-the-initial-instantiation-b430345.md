@@ -59,7 +59,7 @@ You can use the following methods:
 
 
 > ### Note:  
-> The settings passed to the `sap.ui.core.Component.create` or `sap.ui.component` factory calls are not available in the `Init` and `createContent` methods. Use `componentData` instead. For more information, see [`sap.ui.core.Component.create`](https://ui5.sap.com/#/api/sap.ui.core.Component/methods/sap.ui.core.Component.create).
+> The settings passed to the `sap.ui.core.Component.create`or `sap.ui.component` factory calls are not available in the `init` and `createContent` methods. Use `componentData` instead. For more information, see [`sap.ui.core.Component.create`](https://ui5.sap.com/#/api/sap.ui.core.Component/methods/sap.ui.core.Component.create).
 
 You can also overwrite the getters and setters for component properties in the Component controller.
 

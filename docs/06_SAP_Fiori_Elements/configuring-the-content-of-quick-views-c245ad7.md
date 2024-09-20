@@ -179,7 +179,7 @@ The sample codes show a quick view facet containing field group, contact and Dat
 
         ![](images/Title_in_Quick_View_adc6a09.png)
 
-    -   If a main navigation has been defined using the `sap-tag` parameter `primaryAction`, the title is displayed as a link. For more information about how to define a primary action, see [Enabling the Flexible Column Layout](enabling-the-flexible-column-layout-e762257.md).
+    -   If a main navigation has been defined using the `sap-tag` parameter `primaryAction`, the title is displayed as a link. For more information about how to define a primary action, see [Primary actions](https://help.sap.com/docs/ABAP_PLATFORM_NEW/a7b390faab1140c087b8926571e942b7/ea131c68c5de4978a936d2286025ed0f.html?version=202310.001#primary-actions).
 
         In the example below, see the <code><i>Asia High tech</i></code> link:
 
@@ -550,7 +550,7 @@ The following image shows a *More Links* popover. Users can select actions to be
 
 
 > ### Note:  
-> When no QuickView annotations are defined and no target is resolved at runtime \(for example, the user does not have access to the target applications\), the field still appears as a link and a message is displayed when pressed.
+> When no `QuickView` annotations are defined and no target is resolved at runtime \(for example, the user does not have access to the target applications\), the field still appears as a link and a message is displayed when pressed.
 > 
 > ![](images/QuickView_Error_Message_ca67391.png)
 

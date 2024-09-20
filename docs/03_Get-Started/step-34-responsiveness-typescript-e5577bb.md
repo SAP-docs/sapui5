@@ -105,6 +105,7 @@ Instead of the `ObjectListItem` that we had before, we will now split the inform
 <mvc:View
 	controllerName="ui5.walkthrough.controller.InvoiceList"
 	xmlns="sap.m"
+	xmlns:core="sap.ui.core"
 	xmlns:mvc="sap.ui.core.mvc">
 	<Table
 		id="invoiceList"
@@ -161,6 +162,9 @@ Instead of the `ObjectListItem` that we had before, we will now split the inform
 						emphasized="false"/>
 					<ObjectIdentifier title="{invoice>ProductName}" />
 					<Text
+						core:require="{
+								Formatter: 'ui5/walkthrough/model/formatter'
+						}"
 						text="{
 								parts: [
 									'invoice>Status',
@@ -168,8 +172,8 @@ Instead of the `ObjectListItem` that we had before, we will now split the inform
 									'i18n>invoiceStatusB',
 									'i18n>invoiceStatusC'
 								],
-								formatter: '.formatter.statusText'
-							}"/>
+								formatter: 'Formatter.statusText.bind($controller)'
+						}"/>
 					<Text text="{invoice>ShipperName}" />
 					<ObjectNumber
 						number="{

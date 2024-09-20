@@ -154,11 +154,48 @@ The following screenshot shows an example of the outcome. Under an "Intermediary
 
 
 
+<a name="loio7cf7a31fd1ee490ab816ecd941bd2f1f__section_ak5_szn_tbc"/>
+
+## Create at a Position Calculated by the Back End
+
+By default, a new node is always displayed as the first child below its parent. You can use the `createInPlace` option to place the new node in its correct position calculated by the back end. If the new node cannot be visualized due to the filter criteria applied to the table, a message toast is displayed to the end user.
+
+> ### Note:  
+> In the flexible column layout, when using both the `NewPage` and `createInPlace` options of the `createMode` property, the new entry is shown \(for example, in a subobject page\), but no message toast is displayed if it cannot be shown on the object page due to the applied filter criteria.
+
+> ### Sample Code:  
+> `manifest.json`
+> 
+> ```json
+> "tableSettings": {
+>     "type": "TreeTable",
+>     "hierarchyQualifier": "NodesHierarchy",
+>     "personalization": true,
+>     "creationMode": {
+>         "name": "Inline",
+>         "createInPlace": true,
+>         "nodeType": {
+>             "propertyName": "nodeType",
+>             "values": {
+>                 "Zone": "Create a new Zone",
+>                 "Intermediary": "Create a new Intermediary node",
+>                 "Line": "Create a new Line item"
+>             }
+>         },
+>         "isCreateEnabled": ".extension.hierarchy-edit.custom.OPExtend.enableCreate"
+>     }
+> }
+> ```
+
+
+
 <a name="loio7cf7a31fd1ee490ab816ecd941bd2f1f__section_qkl_rms_gbc"/>
 
 ## Drag and Drop
 
-Drag and drop actions are supported by SAP Fiori elements for OData V4 as of SAPUI5 1.124. Drag and drop on a node is supported on the list report and the object page. Drag and drop between nodes is supported in the object page only.
+Drag and drop actions are supported by SAP Fiori elements for OData V4 as of SAPUI5 1.124.
+
+Drag and drop between siblings is supported if the `ChangeNextSiblingAction` term is defined in the `RecursiveHierarchyActions` annotation. When using the ABAP RESTful Application Programming Model \(RAP\), this annotation is not set for root entities. Hence, drag and drop between siblings is not supported in the list report.
 
 You can use two extensions to control the behavior of drag and drop:
 
@@ -174,7 +211,7 @@ You can use two extensions to control the behavior of drag and drop:
 
 
 
-In the following example; drag and drop is enabled.
+In the following example: drag and drop is enabled.
 
 > ### Sample Code:  
 > `manifest.json`
@@ -190,7 +227,7 @@ In the following example; drag and drop is enabled.
 > }
 > ```
 
-In the following example; `ControllerExtension` is used to control the behavior of drag and drop.
+In the following example: `ControllerExtension` is used to control the behavior of drag and drop.
 
 > ### Sample Code:  
 > `manifest.json`
@@ -245,6 +282,25 @@ The following screenshot shows another example of the outcome. Moving the "Dubli
 
 
 
+<a name="loio7cf7a31fd1ee490ab816ecd941bd2f1f__section_u4g_lrt_vbc"/>
+
+## Move Up and Move Down
+
+End users can move a node up or down between its siblings in a tree table. To place a node before its previous sibling or after its next sibling, select the node and choose *Move Up* or *Move Down* from the tree table toolbar.
+
+Moving a node up or down is supported if the `ChangeNextSiblingAction` term is defined in the `RecursiveHierarchyActions` annotation. When using the ABAP RESTful Application Programming Model \(RAP\), this annotation is not set for root entities. Hence, moving up or down a node is not supported in the list report.
+
+> ### Restriction:  
+> A node that is created without the option `createInPlace` is displayed as the first child below its parent and is therefore considered "out of place". Move operations are disabled for such nodes. Similarly, moving a node up is disabled if its previous sibling is an "out of place" node.
+> 
+> Moving a node up and down is also disabled in the following situations:
+> 
+> -   A sort is applied to the table.
+> 
+> -   The `isNodeMovable` or `isMoveToPositionAllowed` extension points return `false` \(see the previous section, [Drag and Drop](tree-tables-7cf7a31.md#loio7cf7a31fd1ee490ab816ecd941bd2f1f__section_qkl_rms_gbc)\).
+
+
+
 <a name="loio7cf7a31fd1ee490ab816ecd941bd2f1f__section_nl2_r1y_gbc"/>
 
 ## Cut and Paste
@@ -258,7 +314,7 @@ Both actions can be enabled or disabled by using the same extension points as fo
 -   `isMoveToPositionAllowed`: Define if a node can be pasted under a specific parent node.
 
 
-In the following example; the USA node can't be cut or dragged:
+In the following example: the USA node can't be cut or dragged:
 
   
   

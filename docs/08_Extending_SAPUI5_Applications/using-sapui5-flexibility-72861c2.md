@@ -6,73 +6,35 @@ You can use SAPUI5 flexibility to extend your SAP Fiori apps.
 
 
 
-<a name="loio72861c2eefd64ef392ae5b192a804d6b__section_w4p_rgf_n2b"/>
+SAPUI5 flexibility allows you to extend freestyle SAPUI5 or SAP Fiori elements applications without modifications of base artefacts. To use this type of extensibility, you have different options:
 
-## Overview
+-   **Key User Adaptation**
 
-SAPUI5 flexibility \(see [SAPUI5 Flexibility: Adapting UIs Made Easy](../04_Essentials/sapui5-flexibility-adapting-uis-made-easy-a8e55aa.md)\) allows you to extend freestyle SAPUI5 or SAP Fiori elements applications without modifications of base artefacts. To use this type of extensibility, you need an adaptation project in SAP Business Application Studio. It allows you to make changes that are also available in key user adaptation \(see [SAPUI5 Flexibility: Enable Your App for UI Adaptation](../05_Developing_Apps/sapui5-flexibility-enable-your-app-for-ui-adaptation-f1430c0.md)\) as well as to extend views with XML fragments \(see [XML Fragments](../04_Essentials/xml-fragments-2c677b5.md)\) and extend controllers with controller extensions.
+    Key user adaptation allows you to make UI changes at runtime, for example, adding and removing fields, setting default views, renaming and rearranging elements, and embedding content.
 
+    For an overview of features, see [Key User Adaptation](https://help.sap.com/docs/UI5_FLEXIBILITY/430e2c1a4ff241bc8162df4bf51e0730/328a550137344514ae085b924180d078.html).
 
+    For information on how to use key user adaptation, see [Adapting SAP Fiori UIs at Runtime - Key User Adaptation](https://help.sap.com/docs/SAP_S4HANA_CLOUD/4fc8d03390c342da8a60f8ee387bca1a/5c424437bf794f809087fdce391149f2.html).
 
-<a name="loio72861c2eefd64ef392ae5b192a804d6b__section_vjc_m3f_n2b"/>
+-   **Developer Adaptation**
 
-## Using SAPUI5 Flexibility for Controller Extensions
+    Developer adaptation needs an adaptation project in SAP Business Application Studio. It allows you to make changes that are also available in key user adaptation, as well as to extend views with XML fragments, extend controllers with controller extensions, replace or add an OData service, add annotations, and more.
 
-Controller extensions add or override functionality of existing applications. For more information, see [Using Controller Extension](../04_Essentials/using-controller-extension-21515f0.md).
+    For an overview of features, see [Developer Adaptation](https://help.sap.com/docs/UI5_FLEXIBILITY/430e2c1a4ff241bc8162df4bf51e0730/a3e9d764dc8841468f73fd7cabc07cec.html).
 
-By using SAPUI5 flexibility and adaptation projects, controller extensions are added to the reserved `extension` namespace of the controller. This is done in order to avoid name clashes with already existing functionality in the controller, for example `oMainControllerInstance.extension.my.sample.ControllerExtension.publicMethod()`.
+    For information on how to create an adaptation project in SAP Business Application Studio, see [Extending SAP Fiori Applications](https://help.sap.com/docs/bas/developing-sap-fiori-app-in-sap-business-application-studio/extending-sap-fiori-application).
 
-
-
-### Usage in a View
-
-The controller extension functionality can be used in views in the same way as a regular controller function. Deep namespaces are already supported in this scenario and it should work without additional effort.
-
-```
-<Button press=".extension.my.sample.ControllerExtension.publicMethod" text="Execute"></Button>
-```
-
-
-
-### Override Extension Functionality
-
-It is possible to override public or extend lifecycle methods of controller extension in another controller extension.
-
-```
-override: {
-    //override other extensions method by the namespace extension name
-    extension: {
-        "my.sample.ControllerExtension": {
-            publicMethod: function() {
-                //...
-            }
-        }
-    }
-}
-```
-
-You can also override an extension directly in a controller.
-
-> ### Sample Code:  
-> ```js
-> sap.ui.define(['sap/ui/core/mvc/Controller', 'my/extension/SampleExtension'],
->     function(Controller, SampleExtension) {
->     "use strict";
->     return MainController = Controller.extend("sample.Main", {
->         //inline override of an extension. E.g. to provide a hook implementation
->         sample: SampleExtension.override({
->             someHook: function() {},
->             someOtherMethod: function() {}
->         }),
->         onLifecycleHook: function() {
->         }
->     });
-> });
-> 
-> ```
 
 **Related Information**  
 
 
 [What is SAPUI5 Flexibility?](https://help.sap.com/docs/UI5_FLEXIBILITY/430e2c1a4ff241bc8162df4bf51e0730/e36d19b3d24f47199a9a82d3faa508c3.html)
+
+[SAPUI5 Flexibility: Adapting UIs Made Easy](../04_Essentials/sapui5-flexibility-adapting-uis-made-easy-a8e55aa.md "Modification-free, cost-saving, easy to use, and performant: Discover the new flexibility when adapting SAP Fiori UIs using SAPUI5 flexibility.")
+
+[SAPUI5 Flexibility: Enable Your App for UI Adaptation](../05_Developing_Apps/sapui5-flexibility-enable-your-app-for-ui-adaptation-f1430c0.md "Here's what you have to consider when developing apps that support UI adaptation.")
+
+[XML Fragments](../04_Essentials/xml-fragments-2c677b5.md "XML fragments are similar to XML view, but have no <View> tag as root element. Instead, there is an SAPUI5 control.")
+
+[Using Controller Extension](../04_Essentials/using-controller-extension-21515f0.md "Controller extensions allow you to add functionality to existing applications. They can be used for extensibility purposes, for example by a customer wishing to extend SAP-delivered applications, or as a reusable part that is added to the original application.")
 

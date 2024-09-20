@@ -1280,12 +1280,12 @@ Default value: `undefined`
 
 Defines code that has to be executed after the initialization.
 
-In case a string is provided, this must be either the name of a module indicated by the prefix `module:` \(like `module:myapp/main/Module`\) or the name of a property within the `globalThis` object containing a function. Provided modules will be loaded and executed after initialization.
+In case a string is provided, this must be either the name of a module indicated by the prefix `module:` \(like [`module:sap/ui/core/ComponentSupport`](https://ui5.sap.com/#/api/module:sap/ui/core/ComponentSupport)\) or the name of a property within the `globalThis` object containing a function. Provided modules will be loaded and executed after initialization.
 
 Within `globalThis["sap-ui-config"]["on-init"]` it is also possible to provide a function directly.
 
 > ### Caution:  
-> For productive scenarios, only the usage of a module is supported. Functions or function references to the `globalThis` object are only intended to be used within non-productive scenarios, for example testing or web-based debugging and code-sharing tools like Plunkr or JSBin.
+> For productive scenarios, only the usage of a module is supported. Functions or function references to the `globalThis` object are only intended to be used within non-productive scenarios, such as testing, web-based debugging, or sharing minimal samples.
 
 **Deprecation:** As of UI5 1.120, only module names should be provided for **productive** scenarios. Only for **non-productive** scenarios, references to functions available on the `globalThis` object might also be used.
 

@@ -50,7 +50,7 @@ sap.ui.define(["sap/ui/core/mvc/Controller"], function(Controller) {
       }
 
     });
-   }, true);
+   });
 
     // "Controller" required from module "sap/ui/core/mvc/Controller"
    Controller.create({

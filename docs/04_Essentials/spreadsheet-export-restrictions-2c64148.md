@@ -11,14 +11,7 @@ The following restrictions apply:
 <tr>
 <td valign="top">
 
-In Safari on iOS , the file name and file extension get lost due to a download attribute that is not supported. This issue is caused by the iOS Safari browser in every version before iOS 13.
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Columns of type `sap.ui.export.EdmType.Date` and `sap.ui.export.EdmType.DateTime` support multiple calendars as defined by `module:sap/base/18n/date/CalendarType`. However, not all values of the `sap/base/18n/date/CalendarType` enumeration are supported. For more information about supported values for the `calendar` property for columns of type `sap.ui.export.EdmType.Date` and `sap.ui.export.EdmType.DateTime`, see [`Date`, `Time`, and `DateTime`.](data-types-for-spreadsheet-export-283217d.md#loio283217d8f187401c8045723abc27e5e0__section_tg5_hyv_43b) 
+Columns of type `sap.ui.export.EdmType.Date` and `sap.ui.export.EdmType.DateTime` support multiple calendars as defined by `module:sap/base/18n/date/CalendarType`. However, not all values of the `module:sap/base/18n/date/CalendarType` enumeration are supported. For more information about supported values for the `calendar` property for columns of type `sap.ui.export.EdmType.Date` and `sap.ui.export.EdmType.DateTime`, see [`Date`, `Time`, and `DateTime`.](data-types-for-spreadsheet-export-283217d.md#loio283217d8f187401c8045723abc27e5e0__section_tg5_hyv_43b) 
 
 </td>
 </tr>
@@ -41,7 +34,7 @@ Custom columns are created by the application or SAP Fiori Elements and not by t
 <tr>
 <td valign="top">
 
-The maximum number of rows that can be exported is restricted to 1,048,576.
+The maximum number of rows that can be exported is restricted to 1,048,575 and a column header row.
 
 </td>
 </tr>
@@ -89,7 +82,7 @@ Semantic cell highlighting
 <tr>
 <td valign="top">
 
-Custom formatters
+Custom formatter functions
 
 </td>
 </tr>

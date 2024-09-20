@@ -163,9 +163,6 @@ sap.ui.define(['mylib/LabelRenderer'],
 });
 ```
 
-> ### Note:  
-> The modern signature no longer requires the `bExport` flag to be set for the enclosing `sap.ui.define` call. The renderer base class `sap.ui.core.Renderer` takes care of the necessary global export of the renderer. This allows non-SAP developers to write a renderer that complies with the documented restriction for `sap.ui.define` \(no use of `bExport = true` outside `sap.ui.core` projects\).
-
 
 
 ### Use as a generic method

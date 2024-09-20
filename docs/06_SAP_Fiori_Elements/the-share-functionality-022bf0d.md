@@ -2,50 +2,27 @@
 
 # The *Share* Functionality
 
-The *Share* functionality allows users to share the current application state using options such as *Send Email* and *Save as Tile*.
+The *Share* functionality allows end users to share the current application state using various options.
+
+The following options are available as part of the *Share* functionality:
+
+![](images/Share_Microsoft_Teams_-_All_Options_None_Selected_f6ca832.png)
 
 -   *Send Email*
 
-    When a user chooses this option, the link to the page opens in the default email client that is configured in the system. When a user chooses the link, the application page opens in the same state in which it was shared: filter settings, personalization options, and selections for charts and tables, as well app-specific button states such as the filter mode or view mode, are all transferred.
+    When an end user chooses this option, the link to the page opens in the default email client that is configured in the system. When they choose the link, the application page opens in the same state in which it was shared: filter settings, personalization options, and selections for charts and tables, as well app-specific button states such as the filter mode or view mode, are all transferred.
 
 -   *Share in SAP Jam*
 
-    You can also share the current application state using *Share in SAP Jam*. A dialog appears to allow users to select an existing Jam group, comments can be added, and Jam users can be tagged. Please note that this option is only available on platforms that are integrated with SAP Jam.
+    End users can also share the current application state using *Share in SAP Jam*. A dialog appears that allows them to select an existing Jam group, comments can be added, and Jam users can be tagged. This option is only available on platforms that are integrated with SAP Jam.
 
 -   *Save as Tile*
 
-    When a user chooses this option, the corresponding *Save as Tile*. When a user chooses this option, the link to the page opens in the default email client that is configured in the system. When a dialog is displayed. When a user chooses the tile, the application page opens in the same state in which the tile was created. Application developers can customize the title and the sub-title of the tile. In the list report, a dynamic tile with a record count is created, where the applied filter is also taken into account.
+    When an end user chooses this option, the corresponding *Save as Tile* dialog is displayed. When they choose the tile, the application page opens in the same state in which the tile was created. Application developers can customize the title and the sub-title of the tile. In the list report, a dynamic tile with a record count is created, where the applied filter is also taken into account.
 
 -   *Share: Microsoft Teams*
 
-    ![](images/Share_Microsoft_Teams_-_All_Options_None_Selected_f6ca832.png)
-
-    When a user clicks the *Share* button and then the *Share: Microsoft Teams* option, a separate window opens with the available sharing options:
-
-    -   As Chat
-
-        Collaborate and quickly resolve issues, if necessary, simply by using Microsoft Teams chat to share a direct link with co-workers. You can provide them with access to a specific state of an SAP Fiori application, for example, so they can easily process any requests you have or tasks that come up.
-
-    -   As Tab
-
-        Work efficiently with a group of co-workers on specific content that you share in the form of a Microsoft Teams tab. Use the Microsoft Teams environment to work on the same context of an SAP Fiori application, and use the tab conversation option in parallel to share ideas, discuss, and collaborate.
-
-    -   As Card
-
-        Communicate better with your co-workers using Microsoft Teams by providing a collaborative view that shows application content in a new window and enables you to have a meaningful conversation.
-
-        > ### Caution:  
-        > If your application contains sensitive and personal data, enabling the *Share: Microsoft Teams* › *As Card* option results in the transfer of this information outside the SAP S/4HANA environment. Application teams need to carefully consider whether such data should be excluded by providing the corresponding annotation. For sensitive personal data, you can use `com.sap.vocabularies.PersonalData.v1.IsPotentiallySensitive`, and for personal data you can use `com.sap.vocabularies.PersonalData.v1.IsPotentiallyPersonal`. If you enable this feature for your business users, use the applicable information channels to inform them accordingly.
-
-
-    Please note the following:
-
-    The *Share: Microsoft Teams* option is only available if the required settings have been made by a system administrator. The *Share: Microsoft Teams* option is part of collaborative ERP \(enterprise resource planning\) within either SAP S/4HANA Cloud or SAP S/4HANA. So this option is not available for all users.
-
-    -   System administrators for SAP S/4HANA Cloud can find the required information at [Integrating Microsoft Teams](https://help.sap.com/docs/SAP_S4HANA_CLOUD/0f69f8fb28ac4bf48d2b57b9637e81fa/257ec7408db6420682462cd1d000e744.html).
-
-    -   System administrators for SAP S/4HANA can find the required information at [Integration with Microsoft Teams](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/8308e6d301d54584a33cd04a9861bc52/849465e69b7a490a88049fe0b24fb01e.html?version=2023.000).
-
+    End users can collaborate with their co-workers using the *Share: Microsoft Teams* functionality. For more information, see [The Share: Microsoft Teams Functionality](the-share-microsoft-teams-functionality-ff89e4b.md).
 
 
 > ### Note:  
@@ -58,10 +35,6 @@ The *Share* functionality allows users to share the current application state us
 > -   In SAP Fiori elements for OData V2, for draft objects with an existing active instance the *Share* functionality will directly share the URL of the active instance.
 > 
 >     In SAP Fiori elements for OData V4, for draft objects with an existing active instance the *Share* functionality will use the semantic bookmarking feature \(see the corresponding section in this topic below\), but if semantic keys are not defined then the URL of the active instance is shared.
-> 
-> -   The *Share: Microsoft Teams* functionality uses application states to shorten long URLs. These application state records are cleaned up in case they aren't accessed for a long time. For more information, see [Cleanup of Expired Application State](https://help.sap.com/docs/ABAP_PLATFORM_NEW/a7b390faab1140c087b8926571e942b7/6107ee41f89a43c9af0aa279fe039cca.html).
-> 
-> -   Users who want to use the *Share: Microsoft Teams* feature in incognito mode will receive an error of type ***Authentication Information HTTP Status 401- Unauthorized***. To resolve this, users must allow third-party cookies for the incognito session.
 
 
 
@@ -85,7 +58,7 @@ During tile creation, you can change the tile type from dynamic to static using 
 
 You can also use controller extension methods to change the subject line of the email.
 
-For information about the `controllerextensions.Share` API, see the [API Reference](https://ui5.sap.com/#/api/sap.fe.core.controllerextensions.Share).
+For more information about the `controllerextensions.Share` API, see the [API Reference](https://ui5.sap.com/#/api/sap.fe.core.controllerextensions.Share).
 
 Make the following changes in the `manifest.json` file:
 
@@ -211,11 +184,11 @@ The *Send E-mail* option is only hidden in the list report. The *Share: Microsof
 
 ### Semantic Bookmarking
 
-Semantic bookmarking enables the sharing of an object page even while it is being edited by a user, that is, even when the object page has the status `draft`.
+Semantic bookmarking enables the sharing of an object page even while it is being edited by an end user, that is, even when the object page has the status `draft`.
 
-When a user clicks on the chevron in a list report table and navigates to an object page, the URL contains technical keys or semantic keys \(depending on whether the application developer has defined semantic keys in the metadata for the entity set of the list report\).
+When an end user clicks on the chevron in a list report table and navigates to an object page, the URL contains technical keys or semantic keys \(depending on whether the application developer has defined semantic keys in the metadata for the entity set of the list report\).
 
-Here’s an annotation snippet showing the semantic key annotation:
+The following sample codes shows the semantic key annotation:
 
 > ### Sample Code:  
 > XML Annotation
@@ -252,9 +225,9 @@ Here’s an annotation snippet showing the semantic key annotation:
 > ],
 > ```
 
-If the application developer does not define the annotations for the semantic keys, the URL contains only the technical keys. In this case, if user A shares the URL via the *Share* functionality with user B, user B will only be able to open the list report page if user A shares while being in display mode. If user A is already in edit mode when the URL is shared, then user B will not be able to open the link, since user B cannot access the draft of user A.
+If the application developer does not define the annotations for the semantic keys, the URL contains only the technical keys. In this case, if end user A shares the URL using the *Share* functionality with end user B, end user B will only be able to open the list report page if end user A shares while being in display mode. If end user A is already in edit mode when the URL is shared, then end user B will not be able to open the link, since end user B cannot access the draft of end user A.
 
-If, however, the application developer has defined semantic keys, the URL only contains semantic keys. In this case, user B will be able to open the shared URL, irrespective of whether user A shares the active copy \(display mode\) or the draft copy \(edit mode\). If user A shares the draft copy, then user B sees the corresponding active copy of the object.
+If, however, the application developer has defined semantic keys, the URL only contains semantic keys. In this case, end user B will be able to open the shared URL, irrespective of whether end user A shares the active copy \(display mode\) or the draft copy \(edit mode\). If end user A shares the draft copy, then end user B sees the corresponding active copy of the object.
 
 > ### Note:  
 > Semantic bookmarking is currently not supported in the following cases:

@@ -13,7 +13,7 @@ It displays information as a series of data points connected by a line.
 > 
 > -   Ensure that the dimension values linked to the chart either have a float-based field or the current values can be cast to float values.
 > 
-> -   The dimension values can also have string-based fields if they are annotated to denote calendar values. For more information about the sample code, see [Additional Features in SAP Fiori Elements for OData V4](line-micro-chart-e5cb2af.md#loioe5cb2afe0e484e4b803b0c82190895de__section_wv2_2sg_rwb).
+> -   The dimension values can also have string-based fields if they are annotated to denote calendar values. For more information about the sample code, see the [Additional Features in SAP Fiori Elements for OData V4](line-micro-chart-e5cb2af.md#loioe5cb2afe0e484e4b803b0c82190895de__section_wv2_2sg_rwb) section in this topic.
 
 For more information about this chart type, see [Samples](https://ui5.sap.com/1.82.5/#/entity/sap.suite.ui.microchart.LineMicroChart).
 

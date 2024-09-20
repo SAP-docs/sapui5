@@ -28,41 +28,48 @@ For more information, see the V2 and V4 specific sections.
 > XML Annotation
 > 
 > ```xml
-> <Annotation Term="UI.SelectionPresentationVariant" Qualifier="DefaultVariant">
->   <Record>
->     <PropertyValue Property="Text" String="Product Financial Analysis"/>
->     <PropertyValue Property="SelectionVariant" Path="@UI.SelectionVariant#DefaultSelectionVariant"/>
->     <PropertyValue Property="PresentationVariant" Path="@UI.PresentationVariant#DefaultPresentationVariant"/>
->   </Record>
-> </Annotation>
+> <Annotations Target="self.BookingType">
+>     ...
+>     <Annotation Term="UI.SelectionPresentationVariant" Qualifier="BookingSPV">
+>         <Record>
+>             <PropertyValue Property="Text" String="Default"/>
+>             <PropertyValue Property="SelectionVariant" Path="@UI.SelectionVariant#BookingSV"/>
+>             <PropertyValue Property="PresentationVariant" Path="@UI.PresentationVariant#BookingPV"/>
+>         </Record>
+>     </Annotation>
+>     ...
+> </Annotations>
+> 
 > ```
 
 > ### Sample Code:  
 > ABAP CDS Annotation
 > 
 > ```
-> @UI.SelectionPresentationVariant: [
->   {
->     text: 'Product Financial Analysis',
->     selectionvariantqualifier: 'DefaultSelectionVariant',
->     presentationvariantqualifier: 'DefaultPresentationVariant',
->     qualifier: 'DefaultVariant'
->   }
-> ]
-> annotate view VIEWNAME with {
-> 
+> //@Scope: [ENTITY] ("Booking")
+> @UI: {
+>     selectionPresentationVariant: [ {
+>         qualifier: 'BookingSPV',
+>         selectionVariantQualifier: 'BookingSV',
+>         presentationVariantQualifier: 'BookingPV'
+>     } ],
+>     ...
 > }
+> 
 > ```
 
 > ### Sample Code:  
 > CAP CDS Annotation
 > 
 > ```
-> UI.SelectionPresentationVariant #DefaultVariant : {
->     Text : 'Product Financial Analysis',
->     SelectionVariant : ![@UI.SelectionVariant#DefaultSelectionVariant],
->     PresentationVariant : ![@UI.PresentationVariant#DefaultPresentationVariant]
+> annotate TravelService.Travel with @UI: {
+>     SelectionPresentationVariant #BookingSPV : {
+>         SelectionVariant : ![@UI.SelectionVariant#BookingSV],
+>         PresentationVariant : ![@UI.PresentationVariant#BookingPV]
+>     }
+>     ...
 > }
+> 
 > ```
 
 
@@ -73,52 +80,65 @@ For more information, see the V2 and V4 specific sections.
 > XML Annotation
 > 
 > ```xml
-> <PropertyValue Property="SelectionVariant" Qualifier="DefaultSelectionVariant”>
->     <Record Type="UI.SelectionVariantType">
->         <PropertyValue Property="Text" String="Open"></PropertyValue>
->         <PropertyValue Property="SelectOptions">
->             <Collection>
->                 <Record Type="UI.SelectOptionType">
->                     <PropertyValue Property="PropertyName" PropertyPath="OverallSDProcessStatus" />
->                     <PropertyValue Property="Ranges">
->                         <Collection>
->                             <Record Type="UI.SelectionRangeType">
->                                 <PropertyValue Property="Option" EnumMember="UI.SelectionRangeOptionType/EQ" />
->                                 <PropertyValue Property="Low" String="A" />
->                             </Record>
->                         </Collection>
->                     </PropertyValue>
->                 </Record>
->             </Collection>
->         </PropertyValue>
->     </Record>
-> </PropertyValue>
+> <Annotations Target="self.BookingType">
+>     ...
+>     <Annotation Term="UI.SelectionVariant" Qualifier="BookingSV">
+>         <Record>
+>             <PropertyValue Property="SelectOptions">
+>                 <Collection>
+>                     <Record Type="UI.SelectOptionType">
+>                         <PropertyValue Property="PropertyName" PropertyPath="BookingStatus"/>
+>                         <PropertyValue Property="Ranges">
+>                             <Collection>
+>                                 <Record Type="UI.SelectionRangeType">
+>                                     <PropertyValue Property="Sign" EnumMember="UI.SelectionRangeSignType/I"/>
+>                                     <PropertyValue Property="Option" EnumMember="UI.SelectionRangeOptionType/EQ"/>
+>                                     <PropertyValue Property="Low" String="N"/>
+>                                 </Record>
+>                             </Collection>
+>                         </PropertyValue>
+>                     </Record>
+>                 </Collection>
+>             </PropertyValue>
+>         </Record>
+>     </Annotation>
+>     ...
+> </Annotations>
 > 
 > ```
 
 > ### Sample Code:  
 > ABAP CDS Annotation
 > 
-> No ABAP CDS annotation sample is available. Please use the local XML annotation.
+> ```
+> //@Scope: [ENTITY] (e.g. "Booking")
+> @UI: {
+>     selectionVariant: [ { 
+>         qualifier: 'BookingSV',
+>         filter: 'BookingStatus EQ "N"'
+>     } ]
+> }
+> 
+> ```
 
 > ### Sample Code:  
 > CAP CDS Annotation
 > 
 > ```
-> SelectionVariant #DefaultSelectionVariant : {
-> Text: 'Open',
-> SelectOptions: [
->     { $Type : 'UI.SelectOptionType',
->       PropertyName : OverallSDProcessStatus,
->       Ranges: [
->       {
->         $Type: 'UI.SelectionRangeType',
->         Option: #EQ,
->         Low: 'A'
->       }
->     ]
->    }
-> ]
+> annotate TravelService.Travel with @UI: {
+>     SelectionVariant #BookingSV: {
+>         SelectOptions: [ {
+>             $Type       : 'UI.SelectOptionType',
+>             PropertyName: BookingStatus,
+>             Ranges      : [ {
+>                 $Type : 'UI.SelectionRangeType',
+>                 Sign  : #I,
+>                 Option: #EQ,
+>                 Low   : 'N'
+>             } ]
+>         } ]
+>     },
+>     ...
 > }
 > 
 > ```
@@ -145,50 +165,48 @@ For more information, see the V2 and V4 specific sections.
 > XML Annotation for SAP Fiori elements for OData V4
 > 
 > ```xml
-> <Annotation Term="UI.PresentationVariant" Qualifier="DefaultPresentationVariant">
->   <Record>
->     <PropertyValue Property="Text" String="Default"/>
->     <PropertyValue Property="SortOrder">
->       <Collection>
->         <Record Type="Common.SortOrderType">
->           <PropertyValue Property="Property" PropertyPath="NetAmount"/>
->           <PropertyValue Property="Descending" Bool="true"/>
+> <Annotations Target="self.BookingType">
+>     ...
+>     <Annotation Term="UI.PresentationVariant" Qualifier="BookingPV">
+>         <Record>
+>             <PropertyValue Property="Text" String="Default"/>
+>             <PropertyValue Property="SortOrder">
+>                 <Collection>
+>                     <Record Type="Common.SortOrderType">
+>                         <PropertyValue Property="Property" PropertyPath="BookingID"/>
+>                         <PropertyValue Property="Descending" Bool="true"/>
+>                     </Record>
+>  
+>                 </Collection>
+>             </PropertyValue>
+>             <PropertyValue Property="Visualizations">
+>                 <Collection>
+>                     <AnnotationPath>@UI.LineItem</AnnotationPath>
+>                 </Collection>
+>             </PropertyValue>
 >         </Record>
->       </Collection>
->     </PropertyValue>
->     <PropertyValue Property="Visualizations">
->       <Collection>
->          <AnnotationPath>@UI.LineItem#Default</AnnotationPath>
->       </Collection>
->    </PropertyValue>
->   </Record>
-> </Annotation>
+>     </Annotation>
+>     ...
+> </Annotations>
+> 
 > ```
 
 > ### Sample Code:  
 > ABAP CDS Annotation
 > 
 > ```
-> @UI.PresentationVariant: [
->   {
->     text: 'Default',
->     sortOrder: [
->       {
->         by: 'NETAMOUNT',
->         direction: #DESC
->       }
->     ],
->     visualizations: [
->       {
->         type: #AS_LINEITEM,
->         qualifier: 'Default'
->       }
->     ],
->     qualifier: 'DefaultPresentationVariant'
->   }
-> ]
-> annotate view VIEWNAME with {
-> 
+> //@Scope: [ENTITY] ("Booking")
+> @UI: {
+>     presentationVariant: [ { 
+>         qualifier: 'BookingPV',
+>         sortOrder: [ {
+>             by: 'BookingID',
+>             direction: #DESC
+>         } ],
+>         visualizations: [ {
+>             type: #AS_LINEITEM
+>         } ]
+>    } ]
 > }
 > 
 > ```
@@ -197,18 +215,21 @@ For more information, see the V2 and V4 specific sections.
 > CAP CDS Annotation
 > 
 > ```
-> UI.PresentationVariant #DefaultPresentationVariant : {
->     Text : 'Default',
->     SortOrder : [
->         {
->             $Type : 'Common.SortOrderType',
->             Property : NetAmount,
->             Descending : true
->         }
->     ],
->     Visualizations : [
->         '@UI.LineItem#Default'
->     ]
+> annotate TravelService.Travel with @UI: {
+>     PresentationVariant #BookingPV: {
+>         SortOrder : [
+>             {
+>                 $Type : 'Common.SortOrderType',
+>                 Property : BookingID,
+>                 Descending : true
+>             }
+>         ],
+>         Visualizations : [
+>             '@UI.LineItem'
+>         ]
+>     },
+>     ...
+>     ...
 > }
 > 
 > ```
@@ -288,200 +309,116 @@ For more information, see the V2 and V4 specific sections.
 > XML Annotation
 > 
 > ```xml
-> <Annotation Term="UI.LineItem" Qualifier="Default">
->   <Collection>
->     <Record Type="UI.DataField">
->       <PropertyValue Property="Value" Path="DeliveryCalendarYear"/>
->         <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
->     </Record>
->     <Record Type="UI.DataField">
->       <PropertyValue Property="Value" Path="DeliveryCalendarMonth"/>
->         <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
->     </Record>
->     <Record Type="UI.DataField">
->       <PropertyValue Property="Value" Path="SalesOrder"/>
->         <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
->     </Record>
->     <Record Type="UI.DataFieldForIntentBasedNavigation">
->       <PropertyValue Property="Label" String="Manage Sales Order"/>
->       <PropertyValue Property="SemanticObject" String="EPMSalesOrder"/>
->       <PropertyValue Property="Action" String="manage_st"/>
->       <PropertyValue Property="RequiresContext" Bool="false"/>
->         <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
->     </Record>
->     <Record Type="UI.DataFieldWithIntentBasedNavigation">
->       <PropertyValue Property="SemanticObject" String="EPMSalesOrder"/>
->       <PropertyValue Property="Action" String="manage_st"/>
->       <PropertyValue Property="Value" Path="SalesOrder"/>
->       <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
->     </Record>
->     <Record Type="UI.DataField">
->       <PropertyValue Property="Label" String="Item"/>
->       <PropertyValue Property="Value" Path="SalesOrderItem"/>
->       <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
->     </Record>
->     <Record Type="UI.DataField">
->       <PropertyValue Property="Value" Path="Product"/>
->       <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
->     </Record>
->     <Record Type="UI.DataFieldWithIntentBasedNavigation">
->       <PropertyValue Property="SemanticObject" String="EPMProduct"/>
->       <PropertyValue Property="Action" String="manage_st"/>
->       <PropertyValue Property="Value" Path="Product"/>
->       <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
->     </Record>
->     <Record Type="UI.DataField">
->       <PropertyValue Property="Value" Path="ProductName"/>
->       <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
->     </Record>
->     <Record Type="UI.DataField">
->       <PropertyValue Property="Value" Path="MainProductCategory"/>
->       <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
->     </Record>
->     <Record Type="UI.DataField">
->       <PropertyValue Property="Label" String="Customer"/>
->       <PropertyValue Property="Value" Path="SoldToPartyCompanyName"/>
->       <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
->     </Record>
->     <Record Type="UI.DataField">
->       <PropertyValue Property="Value" Path="Quantity"/>
->       <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
->     </Record>
->     <Record Type="UI.DataField">
->       <PropertyValue Property="Value" Path="NetAmount"/>
->       <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
->     </Record>
-> </Collection>
-> </Annotation>
+> 
+> <Annotations Target="self.Container/Booking">
+> 
+>     <Annotation Term="UI.LineItem">
+>         <Collection>
+>             <Record Type="UI.DataField">
+>                 <PropertyValue Property="Value" Path="TravelID"/>
+>                 <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+>             </Record>
+>             <Record Type="UI.DataField">
+>                 <PropertyValue Property="Value" Path="BookingID"/>
+>                 <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+>             </Record>
+>             <Record Type="UI.DataField">
+>                 <PropertyValue Property="Value" Path="BookingDate"/>
+>                 <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+>             </Record>
+>             <Record Type="UI.DataField">
+>                 <PropertyValue Property="Value" Path="CustomerID"/>
+>                 <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+>             </Record>
+>             <Record Type="UI.DataField">
+>                 <PropertyValue Property="Value" Path="CarrierID"/>
+>                 <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+>             </Record>
+>             <Record Type="UI.DataField">
+>                 <PropertyValue Property="Value" Path="ConnectionID"/>
+>                 <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+>             </Record>
+>             <Record Type="UI.DataField">
+>                 <PropertyValue Property="Value" Path="FlightDate"/>
+>                 <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+>             </Record>
+>             <Record Type="UI.DataField">
+>                 <PropertyValue Property="Value" Path="FlightPrice"/>
+>                 <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+>             </Record>
+>             <Record Type="UI.DataField">
+>                 <PropertyValue Property="Criticality" Path="BookingStatusIndicator"/>
+>                 <PropertyValue Property="Value" Path="BookingStatus"/>
+>                 <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+>             </Record>
+>         </Collection>
+>     </Annotation>
+>     ...
+> </Annotations>
+> 
 > ```
 
 > ### Sample Code:  
 > ABAP CDS Annotation
 > 
 > ```
-> @Consumption.semanticObject: 'EPMSalesOrder'
+> //@Scope: [VIEW] ("BOOKING")
 > annotate view VIEWNAME with {
-> 
-> @UI.lineItem: [
->   {
->     importance: #HIGH,
->     position: 10 ,
->     qualifier: 'Default'
->   }
-> ]
-> DELIVERYCALENDARYEAR;
-> 
-> @UI.lineItem: [
->   {
->     importance: #HIGH,
->     position: 20 ,
->     qualifier: 'Default'
->   }
-> ]
-> DELIVERYCALENDARMONTH;
-> 
-> @UI.lineItem: [
->   {
->     importance: #HIGH,
->     position: 30 ,
->     qualifier: 'Default'
->   },
->   {
->     importance: #HIGH,
->     semanticObjectAction: 'manage_st',
->     type: #WITH_INTENT_BASED_NAVIGATION,
->     position: 50 ,
->     qualifier: 'Default'
->   },
->   {
->     importance: #HIGH,
->     label: 'Manage Sales Order',
->     semanticObjectAction: 'manage_st',
->     type: #FOR_INTENT_BASED_NAVIGATION,
->     position: 40 ,
->     qualifier: 'Default'
->   }
-> ]
-> SALESORDER;
-> 
-> @UI.lineItem: [
->   {
->     importance: #HIGH,
->     label: 'Item',
->     position: 60 ,
->     qualifier: 'Default'
->   }
-> ]
-> SALESORDERITEM;
-> 
-> @UI.lineItem: [
->   {
->     importance: #HIGH,
->     position: 70 ,
->     qualifier: 'Default'
->   },
->   {
->     importance: #HIGH,
->     semanticObjectAction: 'manage_st',
->     type: #WITH_INTENT_BASED_NAVIGATION,
->     position: 80 ,
->     qualifier: 'Default'
->   }
-> ]
-> PRODUCT;
-> 
-> @UI.lineItem: [
->   {
->     importance: #HIGH,
->     position: 90 ,
->     qualifier: 'Default'
->   }
-> ]
-> PRODUCTNAME;
-> 
-> @UI.lineItem: [
->   {
->     importance: #HIGH,
->     position: 100 ,
->     qualifier: 'Default'
->   }
-> ]
-> MAINPRODUCTCATEGORY;
-> 
-> @UI.lineItem: [
->   {
->     importance: #HIGH,
->     label: 'Customer',
->     position: 110 ,
->     qualifier: 'Default'
->   }
-> ]
-> SOLDTOPARTYCOMPANYNAME;
-> 
-> @UI.lineItem: [
->   {
->     importance: #HIGH,
->     position: 120 ,
->     qualifier: 'Default'
->   }
-> ]
-> QUANTITY;
-> 
-> @UI.lineItem: [
->   {
->     importance: #HIGH,
->     position: 130 ,
->     qualifier: 'Default'
->   }
-> ]
-> NETAMOUNT;
-> 
-> @Consumption.semanticObject: 'EPMSalesOrder'
-> SALESORDER;
-> 
-> @Consumption.semanticObject: 'EPMProduct'
-> PRODUCT;
-> 
+>     @UI.lineItem: [ {
+>         position: 10 ,
+>         importance: #HIGH
+>     } ]
+>     TravelID;
+>     
+>     @UI.lineItem: [ {
+>         position: 20 ,
+>         importance: #HIGH
+>     } ]
+>     BookingID;
+>     
+>     @UI.lineItem: [ {
+>         position: 30 ,
+>         importance: #HIGH
+>     } ]
+>     BookingDate;
+>     
+>     @UI.lineItem: [ {
+>         position: 40 ,
+>         importance: #HIGH
+>     } ]
+>     @UI.textArrangement: #TEXT_FIRST
+>     CustomerID;
+>     
+>     @UI.lineItem: [ {
+>         position: 50 ,
+>         importance: #HIGH
+>     } ]
+>     CarrierID;
+>     
+>     @UI.lineItem: [ {
+>         position: 60 ,
+>         importance: #HIGH
+>     } ]
+>     ConnectionID;
+>     
+>     @UI.lineItem: [ {
+>         position: 70 ,
+>         importance: #HIGH
+>     } ]
+>     FlightDate;
+>     
+>     @UI.lineItem: [ {
+>         position: 80 ,
+>         importance: #HIGH
+>     } ]
+>     FlightPrice;
+>     
+>     @UI.lineItem:       [ {
+>         position: 90,
+>         criticality: 'BookingStatusIndicator',
+>         importance: #HIGH
+>     } ]
+>     BookingStatus;
 > }
 > 
 > ```
@@ -490,79 +427,51 @@ For more information, see the V2 and V4 specific sections.
 > CAP CDS Annotation
 > 
 > ```
-> UI.LineItem #Default : [
+> UI.LineItem : [
 >     {
 >         $Type : 'UI.DataField',
->         Value : DeliveryCalendarYear,
->         ![@UI.Importance] : #High
->     },
->     {
->         $Type : 'UI.DataField',
->         Value : DeliveryCalendarMonth,
+>         Value : TravelID,
 >         ![@UI.Importance] : #High
 >     },
 >     {
 >         $Type : 'UI.DataField',
->         Value : SalesOrder,
->         ![@UI.Importance] : #High
->     },
->     {
->         $Type : 'UI.DataFieldForIntentBasedNavigation',
->         Label : 'Manage Sales Order',
->         SemanticObject : 'EPMSalesOrder',
->         Action : 'manage_st',
->         RequiresContext : false,
->         ![@UI.Importance] : #High
->     },
->     {
->         $Type : 'UI.DataFieldWithIntentBasedNavigation',
->         SemanticObject : 'EPMSalesOrder',
->         Action : 'manage_st',
->         Value : SalesOrder,
+>         Value : BookingID,
 >         ![@UI.Importance] : #High
 >     },
 >     {
 >         $Type : 'UI.DataField',
->         Label : 'Item',
->         Value : SalesOrderItem,
+>         Value : BookingDate,
 >         ![@UI.Importance] : #High
 >     },
 >     {
 >         $Type : 'UI.DataField',
->         Value : Product,
->         ![@UI.Importance] : #High
->     },
->     {
->         $Type : 'UI.DataFieldWithIntentBasedNavigation',
->         SemanticObject : 'EPMProduct',
->         Action : 'manage_st',
->         Value : Product,
+>         Value : CustomerID,
 >         ![@UI.Importance] : #High
 >     },
 >     {
 >         $Type : 'UI.DataField',
->         Value : ProductName,
+>         Value : CarrierID,
 >         ![@UI.Importance] : #High
 >     },
 >     {
 >         $Type : 'UI.DataField',
->         Value : MainProductCategory,
+>         Value : ConnectionID,
 >         ![@UI.Importance] : #High
 >     },
 >     {
 >         $Type : 'UI.DataField',
->         Label : 'Customer',
->         Value : SoldToPartyCompanyName,
+>         Value : FlightDate,
 >         ![@UI.Importance] : #High
 >     },
 >     {
 >         $Type : 'UI.DataField',
->         Value : Quantity,
+>         Value : FlightPrice,
 >         ![@UI.Importance] : #High
 >     },
 >     {
->         $Type : 'UI.DataField',
->         Value : NetAmount,
+>         $Type       : 'UI.DataField',
+>         Value       : BookingStatus,
+>         Criticality : BookingStatusIndicator,
 >         ![@UI.Importance] : #High
 >     }
 > ]
@@ -678,7 +587,7 @@ Application developers can also specify the `SelectionVariant` or `PresentationV
 > ### Sample Code:  
 > ABAP CDS Annotation
 > 
-> No ABAP CDS annotation sample is available. Please use the local XML annotation.
+> ABAP CDS annotation does not have an inline syntax. Please use the local XML annotation.
 
 > ### Sample Code:  
 > CAP CDS Annotation
@@ -861,6 +770,61 @@ You can define whether the default sort order for tables and charts is ascending
 
 
 
+<a name="loio49a6ba5b8d6946208322a9f7e16837c2__section_ock_pgh_1cc"/>
+
+## Configuring the Number of Rows Loaded
+
+You can define the number of table rows to be loaded initially by using the `com.sap.vocabularies.UI.v1.PresentationVariant` annotation term and the `MaxItems` property.
+
+> ### Sample Code:  
+> XML Annotation
+> 
+> ```
+> <Annotations xmlns=http://docs.oasis-open.org/odata/ns/edm Target="ZFAR_CUSTOMER_LINE_ITEMS2_SRV.Item">
+>     <Annotation Term="com.sap.vocabularies.UI.v1.PresentationVariant">
+>         <Record>
+>             <PropertyValue Property="Visualizations">
+>                 <Collection>
+>                     <AnnotationPath>@UI.LineItem</AnnotationPath>
+>                 </Collection>
+>             </PropertyValue>
+>             <PropertyValue Property="MaxItems" Int="50" />
+>         </Record>
+>     </Annotation>
+> </Annotations>
+> ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> ```
+> @UI.PresentationVariant: [
+>   {
+>     maxItems : 50,
+>     visualizations: [{type: #AS_LINEITEM }]
+>   }
+> ]
+> annotate view ITEM with {
+> 
+> }
+> ```
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> annotate ZFAR_CUSTOMER_LINE_ITEMS2_SRV.Item @(
+>   com.sap.vocabularies.UI.v1.PresentationVariant : {
+>     Visualizations : [
+>         '@UI.LineItem'
+>     ],
+>     MaxItems : 50
+>   }
+> );
+> ```
+
+
+
 <a name="loio49a6ba5b8d6946208322a9f7e16837c2__section_gfr_mvc_jsb"/>
 
 ## Configuring Default Filter Values
@@ -929,6 +893,57 @@ Make the following settings in the `manifest.json` to specify the `SelectionPres
 > ### Note:  
 > In this case, the `"defaultTemplateAnnotationPath"` must be a reference to the `SelectionPresentationVariant` and **not** to the `PresentationVariant` or `SelectionVariant`.
 
+
+
+### Requesting Additional Properties in Object Pages
+
+You can request additional properties for object pages or subobject pages even if these properties are not displayed using the `Org.OData.Core.V1.AlternateKeys` annotation.
+
+> ### Sample Code:  
+> XML Annotation
+> 
+> ```
+> <edmx:Reference Uri=https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Core.V1.xml>
+>     <edmx:Include Alias="Core" Namespace="Org.OData.Core.V1"/>
+> </edmx:Reference>
+> 
+> <Annotations Target="com.c_salesordermanage_sd.EntityContainer/SalesOrderManage">
+>     <Annotation Term="Core.AlternateKeys">
+>             <Collection>
+>                 <Record Type="Core.AlternateKey">
+>                         <PropertyValue Property="Key">
+>                             <Collection>
+>                                 <Record Type="Core.PropertyRef">
+>                                    <PropertyValue Property="Name" PropertyPath="someProperty1"/>
+>                                 </Record>
+>                                 <Record Type="Core.PropertyRef">
+>                                    <PropertyValue Property="Name" PropertyPath="someProperty2"/>
+>                                 </Record>
+>                             </Collection>
+>                         </PropertyValue>
+>                 </Record>
+>             </Collection>
+>     </Annotation>
+> </Annotations>
+> ```
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> annotate c_salesordermanage_sd.SalesOrderManage with @(
+>   Core.AlternateKeys: [{Key: [
+>     {
+>       Name : someProperty1
+>     },
+>     {
+>       Name : someProperty2
+>     }
+>   ]}]
+>  );
+> 
+> ```
+
 **Related Information**  
 
 
@@ -936,7 +951,7 @@ Make the following settings in the `manifest.json` to specify the `SelectionPres
 
 [Configuring Charts](configuring-charts-653ed0f.md "You can add a chart facet to a content section within the list report and object page.")
 
-[Loading Behavior Based on the Chosen Variant](loading-behavior-based-on-the-chosen-variant-9f4e119.md "Several factors affect the loading behavior of the content area based on the chosen variant.")
+[Loading Behavior of Data on Initial Launch of the Application](loading-behavior-of-data-on-initial-launch-of-the-application-9f4e119.md "Several factors affect the loading behavior of data on initial launch of the application.")
 
 [Initial Expansion Level for Tables in List Reports & Analytical List Pages](initial-expansion-level-for-tables-in-list-reports-analytical-list-pages-bc05d35.md "You can set the number of expanded levels for tables in List Reports and Analytical List Pages using the initialExpansionLevel property of the PresentationVariant annotation.")
 

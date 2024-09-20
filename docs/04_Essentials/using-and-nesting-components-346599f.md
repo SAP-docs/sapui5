@@ -18,42 +18,26 @@ If you want to share data with the inner component, you can use the `propagateMo
 
 You load and create a `UIComponent` in one of the following ways:
 
--   Load the component asynchronously in "manifest first" mode by specifying the component name:
+-   Load the component asynchronously in "manifest first" mode by specifying `manifest` with a truthy value:
 
     ```js
     	
     	// "ComponentContainer" required from module "sap/ui/core/ComponentContainer"
-    	var oContainer = new sap.ui.core.ComponentContainer({
+    	var oContainer = new ComponentContainer({
     		name: "samples.components.sample",
-    		manifest: true,
-    		async: true
+    		manifest: true
     	});
     	oContainer.placeAt("target");
     	
     ```
 
--   Load and create the component asynchronously before creating the container:
+-   Load and create the component asynchronously before creating the container, and in "manifest first" mode by default:
 
     ```js
     	// "Component" required from module "sap/ui/core/Component"
     	// "ComponentContainer" required from module "sap/ui/core/ComponentContainer"
     	Component.create({
     		name: "samples.components.sample",
-    	}).then(function(oComponent) {
-    		var oContainer = new ComponentContainer({
-    			component: oComponent
-    		});
-    		oContainer.placeAt("target");
-    	});
-    ```
-
--   Load and create the component asynchronously with "manifest first" mode by specifying the URL of the descriptor \(`manifest.json`\):
-
-    ```js
-    	// "Component" required from module "sap/ui/core/Component"
-    	// "ComponentContainer" required from module "sap/ui/core/ComponentContainer"
-    	Component.create({
-    		manifest: "samples/components/sample/manifest.json",
     	}).then(function(oComponent) {
     		var oContainer = new ComponentContainer({
     			component: oComponent
@@ -237,18 +221,12 @@ Recommended Code
 ```json
 {
   "sap.ui5": {
-    "dependencies": {
-      "components": {
-        "sap.reuse.component": {}
-      }
-    },
     "componentUsages": {
       "reuse": {
         "name": "sap.reuse.component",
         "lazy": false
       }
     }
-
   }
 }
 ```

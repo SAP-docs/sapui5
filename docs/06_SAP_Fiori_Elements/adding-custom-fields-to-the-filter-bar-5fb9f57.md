@@ -149,7 +149,7 @@ To show the filter value as shown in the filter bar, such as `Cost=Low`, you can
 
 ## Additional Features in SAP Fiori Elements for OData V4
 
-You can configure the `FilterBar` in the controller extension. locally using the section `@com.sap.vocabularies.UI.v1.SelectionFields` in the `controlConfiguration` of the `manifest.json` for the list report target:
+You can configure the `FilterBar` in the controller extension locally using the section `@com.sap.vocabularies.UI.v1.SelectionFields` in the `controlConfiguration` of the `manifest.json` for the list report target:
 
 > ### Sample Code:  
 > `manifest.json`

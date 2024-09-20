@@ -69,7 +69,7 @@ Perform these steps to be able to use the extension:
         >         return;
         >     }
         >     var oMessageText = {
-        >         title: "My title";
+        >         title: "My title",
         >         text: "My text",
         >         undeletableText: "My undeletable text"
         >     };
@@ -88,7 +88,7 @@ Perform these steps to be able to use the extension:
         >         return;
         >     }
         >     var oMessageText = {
-        >         title: "My title";
+        >         title: "My title",
         >         text: "My text",
         >         undeletableText: "My undeletable text"
         >     };
@@ -107,11 +107,11 @@ Perform these steps to be able to use the extension:
         >         return;
         >     }
         >     var oMessageText = {
-        >         title: "My title";
+        >         title: "My title",
         >         text: "My text",
         >         undeletableText: "My undeletable text"
         >     };
-        >     return this.extenionAPI.securedExecution(function() {
+        >     return this.extensionAPI.securedExecution(function() {
         >         return new Promise(function(resolve) {
         >             ...
         >             resolve(oMessageText);

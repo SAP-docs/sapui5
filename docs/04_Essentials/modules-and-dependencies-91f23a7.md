@@ -80,9 +80,9 @@ Therefore, you have to decide whether you want to use static or dynamic dependen
     });
     ```
 
--   **Dynamic** dependencies are resolved on demand after the initial module execution, as they are not needed for the initialisation of the module and are often tied to either a conditional or a user interaction.
+-   **Dynamic** dependencies are resolved on demand after the initial module execution as they're not needed for the initialisation of the module and are often tied to a conditional or a user interaction.
 
-    Dynamic dependencies should always be loaded asynchronously via `sap.ui.require`. The use of `jQuery.sap.require` is synchronous and considered as "bad practice" because `syncXHR` is deprecated by the Web Hypertext Application Technology Working Group \(WHATWG\).
+    Dynamic dependencies should always be loaded asynchronously via `sap.ui.require`. The use of `jQuery.sap.require` is synchronous and considered bad practice because the synchronous `XMLHttpRequest` has been deprecated by the Web Hypertext Application Technology Working Group \(WHATWG\).
 
     When dynamically requiring modules, the callback function will be called once all referenced modules \(and their dependencies\) are fully loaded:
 

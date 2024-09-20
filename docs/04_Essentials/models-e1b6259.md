@@ -17,7 +17,7 @@ SAPUI5 provides the following predefined models. For an overview of the binding 
     > 
     > -   OData V2
     > 
-    > -   OData V4 \(limited feature scope\)
+    > -   OData V4
 
 -   **JSON model**: Can be used to bind controls to JavaScript object data, which is usually serialized in the JSON format. The JSON model is a client-side model and, therefore, intended for small data sets, which are completely available on the client. The JSON model supports two-way \(default\), one-way and one-time binding modes.
 

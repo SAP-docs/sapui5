@@ -75,7 +75,7 @@ SAP Fiori Elements
 
 The following changes and new features are available for SAP Fiori elements for OData V4:
 
--   You can now set a request size limit for the export in a table using the `exportRequestSize` parameter defined in the manifest or the `Table` building block. For more information, see [Using the Export Feature](../06_SAP_Fiori_Elements/using-the-export-feature-4bab6f2.md).
+-   You can now set a request size limit for the export in a table using the `exportRequestSize` parameter defined in the manifest or the `Table` building block. For more information, see [Using the Export Button](../06_SAP_Fiori_Elements/using-the-export-button-4bab6f2.md).
 
 -   For the `Table` building block and the `Chart` building block, we now provide getter and setter methods for the `SelectionVariant`. For more information, see [The Table Building Block](../06_SAP_Fiori_Elements/the-table-building-block-3801656.md) and [The Chart Building Block](../06_SAP_Fiori_Elements/the-chart-building-block-52d065a.md).
 
@@ -590,6 +590,12 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.126](what-s-new-in-sapui5-1-126-1d98116.md "With this release SAPUI5 is upgraded from version 1.125 to 1.126.")
+
+[What's New in SAPUI5 1.125](what-s-new-in-sapui5-1-125-9d87044.md "With this release SAPUI5 is upgraded from version 1.124 to 1.125.")
+
+[What's New in SAPUI5 1.124](what-s-new-in-sapui5-1-124-7f77c3f.md "With this release SAPUI5 is upgraded from version 1.123 to 1.124.")
 
 [What's New in SAPUI5 1.122](what-s-new-in-sapui5-1-122-5d078da.md "With this release SAPUI5 is upgraded from version 1.121 to 1.122.")
 

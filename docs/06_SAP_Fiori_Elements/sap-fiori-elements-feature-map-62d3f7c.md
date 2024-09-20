@@ -168,7 +168,7 @@ Add column to a table
 
 showDataFieldsLabel
 
-Table
+Tables
 
 Columns
 
@@ -229,7 +229,13 @@ add cards
 
 add cards to insights
 
-insights
+insights cards
+
+My Home cards
+
+insight cards
+
+enableAddCardToInsights
 
 </td>
 </tr>
@@ -353,7 +359,7 @@ Analytical table
 </td>
 <td valign="top">
 
- 
+analytics
 
 </td>
 </tr>
@@ -408,6 +414,8 @@ micro-chart
 showMicroChartLabel
 
 microChartSize
+
+Area Microchart
 
 </td>
 </tr>
@@ -556,7 +564,13 @@ free style app
 
 free style application
 
-free-style
+free-style application
+
+freestyle application
+
+FMP
+
+Flexible Programming Model
 
 </td>
 </tr>
@@ -739,7 +753,7 @@ ParameterDefaultValue
 
 create
 
-operationAvailiable
+operationAvailable
 
 DataFieldForAction
 
@@ -750,6 +764,24 @@ MenuActions
 Placement
 
 anchor
+
+Action parameters
+
+annotation actions
+
+unbound action
+
+static action
+
+action bound to object
+
+action bound to collection
+
+singleton
+
+action dialog
+
+parameter dialog
 
 </td>
 </tr>
@@ -842,7 +874,7 @@ Chart building block
 </td>
 <td valign="top">
 
-[Building Blocks](building-blocks-24c1304.md)
+[Building Blocks](building-blocks-24c1304.md) 
 
 </td>
 <td valign="top">
@@ -867,7 +899,9 @@ free style application
 
 free style app
 
-free-style
+free-style application
+
+freestyle application
 
 </td>
 </tr>
@@ -959,6 +993,8 @@ multi-selection
 
 multi selection
 
+multiselection
+
 multiple selection
 
 selectionMode
@@ -1040,6 +1076,8 @@ charts
 
 defaultPath
 
+columns
+
 </td>
 </tr>
 <tr>
@@ -1106,6 +1144,8 @@ Combine buttons/actions in toolbar
 
 MenuAction
 
+menu action
+
 Menu button
 
 </td>
@@ -1157,6 +1197,8 @@ DDL
 
 Dropdown List
 
+pro-down
+
 </td>
 </tr>
 <tr>
@@ -1194,7 +1236,11 @@ Contact quick view
 </td>
 <td valign="top">
 
- 
+Contact card
+
+Communication.Contact
+
+communication contact
 
 </td>
 </tr>
@@ -1347,6 +1393,10 @@ Object page
 microsoft excel
 
 copy from
+
+range copy
+
+Paste to range
 
 </td>
 </tr>
@@ -1553,6 +1603,8 @@ Flexible Programming Model
 extensions
 
 breakout
+
+custom filters
 
 </td>
 </tr>
@@ -1776,7 +1828,7 @@ Object page
 </td>
 <td valign="top">
 
-![](images/Custom_Dynamic_Side_Content_c93c534.png)
+![]()
 
 </td>
 <td valign="top">
@@ -1830,6 +1882,18 @@ Date/time picker
 
 date-time selection
 
+selecting date
+
+picking date
+
+selecting time
+
+picking time
+
+date picker
+
+date selection
+
 </td>
 </tr>
 <tr>
@@ -1875,6 +1939,10 @@ Date picker
 
 date selection
 
+picking date
+
+selecting date
+
 </td>
 </tr>
 <tr>
@@ -1919,6 +1987,16 @@ date interval
 interval selection
 
 useSemanticDateRange
+
+default value for semantic date field
+
+parameterized default value
+
+exclude semantic date operator
+
+additional date range operators
+
+semantic dates
 
 </td>
 </tr>
@@ -1979,7 +2057,7 @@ Default values for action parameter dialog
 </td>
 <td valign="top">
 
-Section *Default Values for Action Parameters* in the topic [Actions](actions-cbf16c5.md)
+[Default Values for Action Parameters](actions-cbf16c5.md#loiocbf16c599f2d4b8796e3702f7d4aae6c__DefaultValuesActionParameters) section in [Actions](actions-cbf16c5.md)
 
 [Prefilling Fields Using the `DefaultValuesFunction`](prefilling-fields-using-the-defaultvaluesfunction-5ada91c.md)
 
@@ -2183,7 +2261,7 @@ Draft handling
 </td>
 <td valign="top">
 
- 
+Collaborative Draft
 
 </td>
 </tr>
@@ -2330,7 +2408,7 @@ Export to spreadsheet
 </td>
 <td valign="top">
 
-[Using the Export Feature](using-the-export-feature-4bab6f2.md)
+[Using the Export Button](using-the-export-button-4bab6f2.md)
 
 </td>
 <td valign="top">
@@ -2392,7 +2470,9 @@ free style application
 
 free style app
 
-free-style
+free-style application
+
+freestyle application
 
 </td>
 </tr>
@@ -2470,11 +2550,7 @@ customisation
 
 FilterRestrictions
 
-valuelist
-
-value help
-
-PresentationVariantQualifier
+SelectionVariant
 
 hideFilterBar
 
@@ -2482,9 +2558,19 @@ contextPath
 
 useSemanticDateRange
 
-navigationProperties
+parameters
 
-snap
+parameterized entity
+
+entity container
+
+parameter support
+
+FilterDefaultValue
+
+SelectionVariant
+
+visual filter
 
 </td>
 </tr>
@@ -2527,7 +2613,23 @@ macros
 
 free style application
 
-free-style
+free-style application
+
+freestyle application
+
+filter bar building block
+
+trigger filter search programatically
+
+trigger go button programatically
+
+selection variant
+
+SelectionVariant
+
+filter bar getter method
+
+filter bar setter method
 
 </td>
 </tr>
@@ -2602,7 +2704,21 @@ FlexibleColumnLayoutActions building block
 </td>
 <td valign="top">
 
- 
+building blocks
+
+buildable blocks
+
+macros
+
+free style application
+
+free-style application
+
+freestyle application
+
+FCL building block
+
+flexible column layout building block
 
 </td>
 </tr>
@@ -2763,6 +2879,8 @@ FormElement building block
 </td>
 <td valign="top">
 
+[The FormElement Building Block](the-formelement-building-block-b45f038.md)
+
 [Building Blocks](building-blocks-24c1304.md)
 
 </td>
@@ -2778,7 +2896,17 @@ FormElement building block
 </td>
 <td valign="top">
 
- 
+building blocks
+
+buildable blocks
+
+macros
+
+free style application
+
+free-style application
+
+freestyle application
 
 </td>
 </tr>
@@ -2951,7 +3079,11 @@ annotation actions
 
 annotation-based actions
 
+annotation based actions
+
 manifest-based actions
+
+manifest based actions
 
 manifest actions
 
@@ -3304,7 +3436,7 @@ Keep alive
 </td>
 <td valign="top">
 
--   [Configure refresh for specific case with keep alive](refresh-data-set-for-back-navigation-when-sap-keep-alive-is-set-to-true-f1c2704.md)
+-   [Refresh Data Set for Back Navigation When sap-keep-alive Is Set to True](refresh-data-set-for-back-navigation-when-sap-keep-alive-is-set-to-true-f1c2704.md)
 
 
 
@@ -3359,7 +3491,17 @@ Keyboard shortcuts
 </td>
 <td valign="top">
 
- 
+defining custom shortcuts
+
+custom keyboard shortcuts
+
+custom shortcuts
+
+keyboard shortcuts for application
+
+actions
+
+command
 
 </td>
 </tr>
@@ -3570,7 +3712,7 @@ Link
 </td>
 <td valign="top">
 
- 
+URL
 
 </td>
 </tr>
@@ -3919,6 +4061,10 @@ Message box
 
 [Adding Confirmation Popovers for Actions](adding-confirmation-popovers-for-actions-87130de.md)
 
+[Confirmation Popups](confirmation-popups-9a53662.md)
+
+[Using Messages](using-messages-239b192.md)
+
 </td>
 <td valign="top">
 
@@ -3939,6 +4085,20 @@ Message box
 critical actions
 
 confirmation actions
+
+keep draft
+
+discard draft
+
+popup on away navigation
+
+412 handling
+
+precondition failed
+
+strict handling
+
+Prefer:handling=strict
 
 </td>
 </tr>
@@ -3965,7 +4125,7 @@ Message page
 </td>
 <td valign="top">
 
-[Message Page](https://experience.sap.com/fiori-design-web/message-page/)
+[Messaging](https://experience.sap.com/fiori-design-web/illustrated-message/)
 
 </td>
 <td valign="top">
@@ -3974,7 +4134,7 @@ Message page
   
 **Message Page**
 
-![](images/Message_Page_1598cfe.jpg "Message Page")
+![](images/Message_Page_b363ddd.png "Message Page")
 
 </td>
 <td valign="top">
@@ -4018,7 +4178,25 @@ Message popover
 </td>
 <td valign="top">
 
- 
+message dialog
+
+error handling
+
+message handling
+
+backend messages
+
+validation messages
+
+412 messages
+
+precondition failed
+
+503 messages
+
+service unavailable
+
+message strip
 
 </td>
 </tr>
@@ -4059,7 +4237,7 @@ Message toast
 </td>
 <td valign="top">
 
- 
+success message
 
 </td>
 </tr>
@@ -4098,13 +4276,15 @@ building blocks
 
 buildable blocks
 
-macro
+macros
 
 free style application
 
-free style app
+freestyle application
 
-free-style
+free-style application
+
+micro-chart
 
 </td>
 </tr>
@@ -4231,7 +4411,17 @@ Multi-input field
 </td>
 <td valign="top">
 
-fields
+multiinput fields
+
+multi-input fields
+
+multi intput fields
+
+multivalue fields
+
+multi-value fields
+
+multi value fields
 
 </td>
 </tr>
@@ -4270,7 +4460,13 @@ Multiple selection of lines in tables
 </td>
 <td valign="top">
 
- 
+multiselect
+
+multi select
+
+singleselect
+
+single select
 
 </td>
 </tr>
@@ -4306,7 +4502,9 @@ List report
 </td>
 <td valign="top">
 
- 
+multiview
+
+multi view
 
 </td>
 </tr>
@@ -4352,6 +4550,10 @@ external navigation
 internal navigation
 
 changing navigation to object page
+
+link
+
+URL
 
 </td>
 </tr>
@@ -4481,6 +4683,18 @@ up/down arrow keys
 next/previous
 
 navigation keys
+
+building blocks
+
+buildable blocks
+
+macros
+
+free style application
+
+free-style application
+
+freestyle application
 
 </td>
 </tr>
@@ -4646,6 +4860,8 @@ Overview page \(OData V2\)
 
 Quick views
 
+quickview
+
 </td>
 </tr>
 <tr>
@@ -4684,6 +4900,8 @@ Quick views for smart link navigation
 <td valign="top">
 
 view
+
+quickview
 
 </td>
 </tr>
@@ -4729,9 +4947,9 @@ Radial micro chart
 </td>
 <td valign="top">
 
-microchart
+radial microchart
 
-micro-chart
+radial micro-chart
 
 </td>
 </tr>
@@ -4810,6 +5028,8 @@ Object page
 associated apps
 
 linked apps
+
+showRelatedApps
 
 </td>
 </tr>
@@ -5108,7 +5328,11 @@ Object page
 </td>
 <td valign="top">
 
- 
+  
+  
+**Share Menu**
+
+![](images/Share_Microsoft_Teams_-_All_Options_None_Selected_f6ca832.png "Share Menu")
 
 </td>
 <td valign="top">
@@ -5124,6 +5348,32 @@ appState
 app-state
 
 app state
+
+collaborate
+
+Share to MS Teams
+
+Share via MS Teams
+
+Share as card
+
+hiding share
+
+hide share
+
+hiding specific Share menu options
+
+hide specific Share menu options
+
+semantic bookmarking
+
+sharing draft
+
+share draft
+
+flex change
+
+key user changes
 
 </td>
 </tr>
@@ -5197,11 +5447,23 @@ building blocks
 
 buildable blocks
 
-macro
+macros
 
 free style application
 
-free-style
+free-style application
+
+freestyle application
+
+Email share
+
+share as email
+
+share via MS Teams
+
+share to MS teams
+
+save as tile
 
 </td>
 </tr>
@@ -5452,9 +5714,9 @@ Stacked bar micro chart
 </td>
 <td valign="top">
 
-micro-chart
+Stacked bar micro-chart
 
-microchart
+Stacked bar microchart
 
 </td>
 </tr>
@@ -5493,7 +5755,7 @@ Status colors and icons
 </td>
 <td valign="top">
 
-colour
+colours
 
 criticality
 
@@ -5582,6 +5844,18 @@ table macro
 
 tables
 
+building blocks
+
+buildable blocks
+
+macros
+
+free style application
+
+free-style application
+
+freestyle application
+
 </td>
 </tr>
 <tr>
@@ -5664,6 +5938,8 @@ Variant Management
 Filtering
 
 Sorting
+
+Grouping
 
 </td>
 </tr>
@@ -6005,7 +6281,7 @@ Tree table
 </td>
 <td valign="top">
 
- 
+hierarchy
 
 </td>
 </tr>
@@ -6083,9 +6359,11 @@ macro
 
 free style application
 
-free style app
+freestyle application
 
-free-style
+free-style application
+
+TreeTable
 
 </td>
 </tr>
@@ -6236,6 +6514,8 @@ Analytical list page
 </td>
 <td valign="top">
 
+[Configuring the Visual Filter Bar](configuring-the-visual-filter-bar-33f3d80.md)
+
 [Visual Filters](visual-filters-1714720.md)
 
 </td>
@@ -6255,7 +6535,13 @@ Analytical list page
 </td>
 <td valign="top">
 
- 
+VisualFilter
+
+measure based filter
+
+measure-based filter
+
+filter on measure
 
 </td>
 </tr>

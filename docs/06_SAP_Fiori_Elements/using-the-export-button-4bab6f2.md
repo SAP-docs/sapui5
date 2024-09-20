@@ -1,6 +1,6 @@
 <!-- loio4bab6f2043814257974b52d4dafe1dcd -->
 
-# Using the *Export* Feature
+# Using the *Export* Button
 
 You can export a table into a spreadsheet or to PDF.
 
@@ -13,7 +13,7 @@ You can export a table into a spreadsheet or to PDF.
 
 ## Export to Spreadsheet
 
-By default, the export feature is enabled in the list report and on the object page. When the feature is enabled, the *Export* button is displayed in the table toolbar. When selected, it exports the values in the table.
+By default, the `Export` button is enabled and displayed in the table toolbar of the list report and the object page. When selected, it exports the values in the table.
 
 ![](images/Object_Page_Export_to_Excel_2559ec3.png)
 
@@ -93,16 +93,20 @@ Clicking the drop-down arrow opens a menu with two additional options:
 ![](images/Object_Page_Options_for_Export_to_Excel_8bd12db.png)
 
 > ### Note:  
-> -   You can export the custom columns you have defined using manifest settings. To allow the export of your custom column, you must maintain the `"properties"` array in the definition of the custom column. For more information about defining custom columns, see the *Extension Points for Tables* section in [Extension Points for Tables](extension-points-for-tables-d525522.md). The properties will be exported into the spreadsheet as described for a `FieldGroup`.
+> -   You can export the custom columns you have defined using manifest settings. To allow the export of your custom column, you must maintain the `"properties"` array in the definition of the custom column. For more information about defining custom columns, see [Extension Points for Tables](extension-points-for-tables-d525522.md). The properties will be exported into the spreadsheet as described for a `FieldGroup`.
 > 
-> -   If your domain model contains sensitive data \(data annotated as `PersonalData.IsPotentiallySensitive`\), enabling the export to a spreadsheet could lead to exposing this data, as the end user cannot choose where the data will be stored. You can disable the export feature using the `enableExport` property in the manifest. This ensures that access control is enforced and stays within the application.
+> -   If your domain model contains sensitive data \(data annotated as `PersonalData.IsPotentiallySensitive`\), enabling the export to a spreadsheet could lead to exposing this data, as the end user cannot choose where the data will be stored. You can disable the `Export` button using the `enableExport` property in the manifest. This ensures that access control is enforced and stays within the application.
 
 > ### Restriction:  
-> -   The columns containing a multi-input field \(1:N\), `DataFieldForAnnotation` that points to `Charts` or a `DataFieldForAction`, are exported without any content.
+> -   The columns containing a `DataFieldForAnnotation` that points to `Charts` or a `DataFieldForAction`, are exported without any content.
+> 
+> -   The columns containing a multi-input field \(1:N\) are not exported.
 > 
 > -   Columns containing a property with a dynamic `UI.Hidden` expression are still exported.
 > 
 > -   The numbers exceeding 15 digits are rounded in the spreadsheet file \(this is a JavaScript restriction\).
+
+**Configuring Columns**
 
 You can influence how both regular and custom columns are exported. To do that, set the following properties in the `Columns` key of the `manifest.json`:
 
@@ -113,6 +117,8 @@ You can influence how both regular and custom columns are exported. To do that, 
 -   `template`: A formatting template that supports indexed placeholders within curly brackets.
 
 -   `width`: Width of the column in characters. There is no 1:1 correspondence between character widths in the exported spreadsheet and CSS units. The width of one character is approximately 0.5 em in CSS units, depending on the fonts that are used in the table and in the resulting spreadsheet. The default value is 10 characters.
+
+-   `wrap`: A Boolean property indicating if the content should be wrapped.
 
 
 > ### Restriction:  
@@ -187,9 +193,6 @@ To enable the export to PDF, you must configure the following annotations at ser
 
     For more information, see [https://github.com/SAP/odata-vocabularies/blob/main/vocabularies/PDF.md](https://github.com/SAP/odata-vocabularies/blob/main/vocabularies/PDF.md).
 
-
-> ### Restriction:  
-> Export to PDF is not supported for tables containing a column with a multi-input field \(1:N\). Attempting to export the table may lead to a back-end error.
 
 
 

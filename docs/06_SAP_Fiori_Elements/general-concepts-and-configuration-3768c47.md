@@ -9,7 +9,7 @@
 
 [Using Messages](using-messages-239b192.md "The system generates messages in response to what users do in the SAP system. A message presents information, an instruction, or a warning to users in a given situation.")
 
-[Enabling the Flexible Column Layout](enabling-the-flexible-column-layout-e762257.md "The flexible column layout allows users to see more details on a page, and to expand and collapse the screen areas, depending on their requirements.")
+[Enabling the Flexible Column Layout](enabling-the-flexible-column-layout-e762257.md "The flexible column layout is a feature that can show two or three columns on a single page.")
 
 [Adapting the Application Header](adapting-the-application-header-ac70343.md "If required, you can change the application header that is generated from the SAP Fiori launchpad.")
 

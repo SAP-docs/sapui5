@@ -2,7 +2,7 @@
 
 # Step 9: Formatting Values
 
-We also want to provide our users a way of contacting Harry Hawk. Therefore we will add a link that sends an e-mail to Harry. To achieve that we will convert our data in the model to match the `sap.m.URLHelper.normalizeEmail` API. As soon as the user changes the name, the e-mail will also change. We will need a custom formatter function for this.
+We'd also like to provide our users with a way of contacting Harry Hawk, so we're adding a link that sends an e-mail to Harry. To do this, we convert our data in the model to match the `sap.m.URLHelper.normalizeEmail` API. As soon as the user changes the name, the e-mail also changes. We need a custom formatter function for this.
 
 
 
@@ -10,9 +10,9 @@ We also want to provide our users a way of contacting Harry Hawk. Therefore we w
 
   
   
-**Address with e-mail link**
+**An e-mail link is added to the address panel**
 
-![](images/Tutorial_Data_Binding_Step_9_1161575.png "Address with e-mail link")
+![The graphic has an explanatory text](images/Tutorial_Data_Binding_Step_9_1161575.png "An e-mail link is added to the address panel")
 
 
 
@@ -20,7 +20,7 @@ We also want to provide our users a way of contacting Harry Hawk. Therefore we w
 
 You can view and download all files in the Demo Kit at [Data Binding - Step 9](https://ui5.sap.com/#/entity/sap.ui.core.tutorial.databinding/sample/sap.ui.core.tutorial.databinding.09).
 
-1.  Create a new folder `controller` within your `webapp` folder as a general location for all controller files for this app and create a new file `App.controller.js` with the following content:
+1.  Create a new folder named `controller` within your `webapp` folder as a general location for all controller files for this app. Next, create a new file named `App.controller.js` with the following content:
 
     **webapp/controller/App.controller.js \(New\)**
 
@@ -44,9 +44,9 @@ You can view and download all files in the Demo Kit at [Data Binding - Step 9](h
     });
     ```
 
-    In our custom formatter, we define the first and last name that are currently in the model as function parameters. When a user changes the data in the model by entering a different name in the input fields, our formatter will be invoked automatically by the framework. This makes sure that the UI is in sync with the data model.
+    In our custom formatter, we set the first and last name currently in the model as function parameters. When a user changes the data in the model by entering a different name in the input fields, our formatter will be invoked automatically by the framework. This ensures that the UI stays in sync with the data model.
 
-    In the `formatMail` function, we use the `sap.m.URLHelper.normalizeEmail` function that expects an e-mail address, a mail subject and a text body. When a user chooses the link, the default email client will open with these parameters.For more information, see [API Reference: `sap.m.URLHelper.normalizeEmail`](https://ui5.sap.com/#/api/sap.m.URLHelper/methods/normalizeEmail). The `mailSubject` resource bundle text will contain a placeholder for the first name of the recipient \(see below\). Therefore, we provide the name with `[sFirstName]`.
+    In the `formatMail` function, we use the `sap.m.URLHelper.normalizeEmail` function that expects an e-mail address, a mail subject, and a text body. When a user follows the link, their default email client will open with these parameters.For more information, see [API Reference: `sap.m.URLHelper.normalizeEmail`](https://ui5.sap.com/#/api/sap.m.URLHelper/methods/normalizeEmail). The `mailSubject` resource bundle text contains a placeholder for the recipient's first name \(see below\). Therefore, we provide the name with `[sFirstName]`.
 
     > ### Note:  
     > For a detailed description of the e-mail link format, see [https://developer.mozilla.org/de/docs/Web/Guide/HTML/Email\_links](https://developer.mozilla.org/de/docs/Web/Guide/HTML/Email_links).
@@ -56,10 +56,14 @@ You can view and download all files in the Demo Kit at [Data Binding - Step 9](h
     **webapp/view/App.view.xml**
 
     ```xml
-    <mvc:View 
-       controllerName="ui5.databinding.controller.App"
-    ...
-    <Panel headerText="{i18n>panel2HeaderText}" class="sapUiResponsiveMargin" width="auto">
+    <mvc:View
+    	controllerName="ui5.databinding.controller.App"
+    	xmlns="sap.m"
+    	xmlns:form="sap.ui.layout.form"
+    	xmlns:l="sap.ui.layout"
+    	xmlns:mvc="sap.ui.core.mvc">
+    	...
+    	<Panel headerText="{i18n>panel2HeaderText}" class="sapUiResponsiveMargin" width="auto">
     		<content>
     			<l:VerticalLayout>
     				<Label labelFor="address" text="{i18n>address}:"/>
@@ -80,19 +84,19 @@ You can view and download all files in the Demo Kit at [Data Binding - Step 9](h
     </mvc:View>
     ```
 
-    For more complex bindings we cannot use the simple binding syntax with the curly braces anymore. The `href` property of the `Link` element now contains an entire object inside the string value. In this case, the object has two properties:
+    For more complex bindings, we can't use the simple binding syntax with the curly braces anymore. The `href` property of the `Link` element now contains an entire object inside the string value. In this case, the object has two properties:
 
     -   `parts`
 
-        This is a JavaScript array in which each element is a string representing a `path` property. The number and order of the elements in this array corresponds directly to the number and order of parameters expected by the `formatMail` function.
+        This is a JavaScript array in which each element is a string representing a `path` property. The number and order of the elements in this array correspond directly to the number and order of parameters expected by the `formatMail` function.
 
     -   `formatter`
 
-        A reference to the function that receives the parameters listed in the `parts` array. Whatever value is returned by the formatter function becomes the value set for the `href` property. The dot \(<code><b></b>formatMail</code>\) at the beginning of the formatter tells SAPUI5 to look for a `formatMail` function on the controller instance of the view. If you do not use the dot, the function will be resolved by looking into the global namespace.
+        This is a reference to the function that receives the parameters listed in the `parts` array. Whatever value the formatter function returns becomes the value set for the `href` property. The dot \(<code><b></b>formatMail</code>\) at the beginning of the formatter tells SAPUI5 to look for a `formatMail` function on the controller instance of the view. If you don't use the dot, the function will be resolved by looking into the global namespace.
 
 
     > ### Note:  
-    > When using formatter functions, the binding is automatically switched to "one-way". So you can’t use a formatter function for "two-way" scenarios, but you can use data types \(which will be explained in the following steps\).
+    > When using formatter functions, the binding automatically switches to "one-way". Therefore, you can’t use a formatter function for "two-way" scenarios. However, you can use data types \(which we explain in the following steps\).
 
 3.  Add the `# E-mail` section to the `i18n.properties` and `i18n_de.properties` files as shown below.
 

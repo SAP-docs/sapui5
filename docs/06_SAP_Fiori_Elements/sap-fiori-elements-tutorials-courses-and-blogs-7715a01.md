@@ -25,6 +25,8 @@ The list is continually growing. Our learning resources are provided on the foll
 
 -   [Developing an SAP Fiori Elements App Based on a CAP OData V4 Service](https://learning.sap.com/learning-journey/developing-an-sap-fiori-elements-app-based-on-a-cap-odata-v4-service)
 
+-   [Getting Started with Creating an SAP Fiori Elements App Based on an OData V4 RAP Service](https://learning.sap.com/learning-journeys/getting-started-with-creating-an-sap-fiori-elements-app-based-on-an-odata-v4-rap-service)
+
 
 **Blogs**
 

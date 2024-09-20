@@ -2,7 +2,7 @@
 
 # Step 13: Element Binding
 
-Now we want to do something with that newly generated list. In most cases you will use a list to allow the selection of an item and then show the details of that item elsewhere. In order to achieve this, we use a form with relatively bound controls and bind it to the selected entity via element binding.
+Now, let's do something with that newly generated list. Typically, you use a list to allow selection of an item and then display the details of that item elsewhere. To accomplish this, we use a form with relatively bound controls and bind it to the selected entity via element binding.
 
 
 
@@ -10,9 +10,9 @@ Now we want to do something with that newly generated list. In most cases you wi
 
   
   
-**Element binding implemented, product details displayed per item**
+**A fourth panel with details for a selected product is displayed**
 
-![](images/Tutorial_Data_Binding_Step_13_872d2ed.png "Element binding implemented, product details displayed per item")
+![The graphic has an explanatory text](images/Tutorial_Data_Binding_Step_13_872d2ed.png "A fourth panel with details for a selected product is displayed")
 
 
 
@@ -20,7 +20,7 @@ Now we want to do something with that newly generated list. In most cases you wi
 
 You can view and download all files in the Demo Kit at [Data Binding - Step 13](https://ui5.sap.com/#/entity/sap.ui.core.tutorial.databinding/sample/sap.ui.core.tutorial.databinding.13).
 
-1.  In the `App.view.xml` file, add a `press` event handler to the items in the list. Below the panel with the list, add a new panel with an `sap.m.SimpleForm`. In order to fill the form with data, we will bind the whole panel to the path of the element which we clicked in the list.
+1.  In the `App.view.xml` file, add a `press` event handler to the items in the list. Below the panel with the list, add a new panel with an `sap.m.SimpleForm`. To populate the form with data, we bind the entire panel to the path of the element you clicked in the list.
 
     **webapp/view/App.view.xml**
 
@@ -82,7 +82,7 @@ You can view and download all files in the Demo Kit at [Data Binding - Step 13](
     </mvc:View>
     ```
 
-2.  In the controller, add a new function `onItemsSelected`, which binds the newly created panel to the correct item whenever it is pressed.
+2.  In the controller, add a new function `onItemsSelected`, which binds the newly created panel to the correct item whenever it's pressed.
 
     **webapp/controller/App.controller.js**
 
@@ -120,7 +120,7 @@ You can view and download all files in the Demo Kit at [Data Binding - Step 13](
     });
     ```
 
-3.  Finally, add the new texts to the `i18n.properties` and `i18n_de.properties` files.
+3.  Lastly, add the new texts to the `i18n.properties` and `i18n_de.properties` files.
 
     **webapp/i18n/i18n.properties**
 
@@ -165,7 +165,7 @@ You can view and download all files in the Demo Kit at [Data Binding - Step 13](
     ```
 
 
-We can now click on an element in the list and see its details in the panel below. We can even edit these details, and the changes are directly shown in the list because we use two-way binding.
+Now, you can click on an element in the list and view its details in the panel below. You can even edit these details, and the changes are directly reflected in the list because we use two-way binding.
 
 > ### Note:  
 > Element bindings can also be relative to their parent context.

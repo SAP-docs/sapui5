@@ -631,7 +631,7 @@ The following coding sample shows the annotations for a context-dependent action
 
 In SAP Fiori elements for OData V2, you can choose to pass the context when the `UI.DataFieldForAction` button is invoked.
 
-In SAP Fiori elements for OData V4, it depends on the configuration of the `IsBound` property. Context is only passed for actions with `IsBound=true`. For more information, see the section *Additional Features in SAP Fiori Elements for OData V4* in this topic.
+In SAP Fiori elements for OData V4, it depends on the configuration of the `IsBound` property. Context is only passed for actions with `IsBound=true`. For more information, see the section [Additional Features in SAP Fiori Elements for OData V4](actions-cbf16c5.md#loiocbf16c599f2d4b8796e3702f7d4aae6c__section_ntd_h2l_ylb) in this topic.
 
 **Grouping of Multiple Invocations of the Same Action Using Multiple Selections in the Table**
 
@@ -1644,6 +1644,8 @@ The following sample code shows different ways to hide an action parameter:
 >             );
 > 
 > ```
+
+If all the parameters of an action have been hidden by using the `UI.hidden` annotation and if all the parameters that have been annotated with `Common.FieldControlType/Mandatory` also have the `UI.ParameterDefaultValue` annotation, the action is performed without displaying a dialog. For more information about the `Common.FieldControlType/Mandatory` annotation, see the [Action Parameters](actions-cbf16c5.md#loiocbf16c599f2d4b8796e3702f7d4aae6c__action_parameters_subsection) subsection in this topic. For more information about the `UI.ParameterDefaultValue` annotation, see the [Default Values for Action Parameters](actions-cbf16c5.md#loiocbf16c599f2d4b8796e3702f7d4aae6c__DefaultValuesActionParameters) subsection in this topic.
 
 
 

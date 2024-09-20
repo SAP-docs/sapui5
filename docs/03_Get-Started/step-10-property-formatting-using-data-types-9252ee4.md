@@ -2,7 +2,7 @@
 
 # Step 10: Property Formatting Using Data Types
 
-SAPUI5 provides a set of simple data types such as `Boolean`, `Currency`, `Date` and `Float`. These data types can then be applied to controls in order to ensure that the value presented on the screen is formatted correctly, and, if the field is open for input, that the value entered by the user adheres to the requirements of that data type. We will now add a new field called *Sales Amount* of type `Currency`.
+SAPUI5 offers a set of simple data types, including `Boolean`, `Currency`, `Date` and `Float`. You can apply these data types to controls to ensure that the value displayed on the screen is formatted correctly. If the field is open for input, this also ensures that the user input meets the requirements of that data type. Let's add a new field called *Sales Amount* of type `Currency`.
 
 
 
@@ -10,9 +10,9 @@ SAPUI5 provides a set of simple data types such as `Boolean`, `Currency`, `Date`
 
   
   
-**New Sales Amount input field**
+**An input field for a currency amount is added to the second panel**
 
-![](images/Tutorial_Data_Binding_Step_10_d15f8bc.png "New Sales Amount input field ")
+![The graphic has an explanatory text](images/Tutorial_Data_Binding_Step_10_d15f8bc.png "An input field for a currency amount is added to the second panel")
 
 
 
@@ -20,7 +20,7 @@ SAPUI5 provides a set of simple data types such as `Boolean`, `Currency`, `Date`
 
 You can view and download all files in the Demo Kit at [Data Binding - Step 10](https://ui5.sap.com/#/entity/sap.ui.core.tutorial.databinding/sample/sap.ui.core.tutorial.databinding.10).
 
-1.  Add two new JSON model properties `salesAmount` and `currencyCode` to the `data.json` file.
+1.  Add two new JSON model properties, `salesAmount` and `currencyCode`, to the `data.json` file.
 
     **webapp/model/data.json**
 
@@ -91,9 +91,9 @@ You can view and download all files in the Demo Kit at [Data Binding - Step 10](
     </mvc:View>
     ```
 
-    A new pair of `Label` and `Input` elements have been created for the `salesAmount` model property. The description property of the `Input` element has been bound to the `currencyCode` model property. The value property of the `Input` element has been bound to the model properties `salesAmount` and `currencyCode`. The `{showMeasure: false}` parameter switches off the display of the currency symbol within the input field itself. This is not needed because it is being displayed using the `Input` element's description property.
+    We've created a new pair of `Label` and `Input` elements for the `salesAmount` model property. The description property of the `Input` element is bound to the `currencyCode` model property. The value property of the `Input` element is bound to the model properties `salesAmount` and `currencyCode`. The `{showMeasure: false}` parameter switches off the display of the currency symbol within the input field itself. This isn't necessary because the currency symbol is displayed using the `Input` element's description property.
 
-3.  Add the highlighted texts to the `properties` files. Please note that special characters \(non-Latin-1\) have to be entered by using Unicode escape characters.
+3.  Add the highlighted texts to the `properties` files. Remember, you need to enter special characters \(non-Latin-1\) using Unicode escape characters.
 
     **webapp/i18n/i18n.properties**
 

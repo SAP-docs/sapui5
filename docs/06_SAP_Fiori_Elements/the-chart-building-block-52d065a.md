@@ -10,7 +10,7 @@ The `Chart` building block provides an easy way to instantiate a chart based on 
 
 ## Usage
 
-Ensure that the entity set referred for the `Chart` building block supports aggregation. For more information, see the subsection *Enabling Aggregation in the Back End* in [Configuring Charts](configuring-charts-653ed0f.md).
+Ensure that the entity set referred for the `Chart` building block supports aggregation. For more information, see the [Enabling Aggregation in the Back End](configuring-charts-653ed0f.md#loio653ed0f4f0d743dbb33ace4f68886c4e__enabling_aggregation_subsection) subsection in [Configuring Charts](configuring-charts-653ed0f.md).
 
 > ### Sample Code:  
 > `Chart` Building Block

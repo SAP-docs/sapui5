@@ -97,7 +97,7 @@ Perform these steps to be able to use the extension:
         >         title: "My title";
         >         text: "My text"
         >     };
-        >     return this.extenionAPI.securedExecution(function() {
+        >     return this.extensionAPI.securedExecution(function() {
         >         return new Promise(function(resolve) {
         >             ...
         >             resolve(oMessageText);

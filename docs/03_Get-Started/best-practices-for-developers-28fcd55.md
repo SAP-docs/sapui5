@@ -2,7 +2,7 @@
 
 # Best Practices for Developers
 
-This page aims to be a good starting point for you to ensure your code bases, i.e. your SAPUI5 applications and libraries, do not become legacy but are ready for the future.
+This page is a good starting point for you to ensure your code bases, specifically your SAPUI5 applications and libraries, are ready for the future and won't become outdated.
 
 
 
@@ -10,9 +10,9 @@ This page aims to be a good starting point for you to ensure your code bases, i.
 
 ## Alignment for Future-Proof Code
 
-The SAPUI5 framework keeps evolving, for instance to benefit from newer features in web browsers \(such as ECMAScript support\) or to account for their end of maintenance \(such as the end of IE11 support\). There are many substantial steps of an ongoing journey towards future major framework versions and continuous improvements.
+The SAPUI5 framework is always evolving to benefit from newer features in web browsers \(like ECMAScript support\) or to account for their end of maintenance \(like the end of IE11 support\). This is a continuous journey towards future major framework versions and improvements.
 
-Therefore, it is crucial that you continue to apply best practices. To support your activities, the documentation is frequently being updated in many places. This page is to collect fundamental information and to offer practical guidance, and it will evolve over time.
+Therefore, it's important that you keep applying best practices. To help you, we frequently update the documentation in many places. This page collects fundamental information and offers practical guidance, and it will continue to evolve over time.
 
 
 
@@ -21,7 +21,7 @@ Therefore, it is crucial that you continue to apply best practices. To support y
 ## Best Practices for Legacy-Free Code
 
 > ### Note:  
-> The following information is a preliminary yet practical collection of best practices to ensure legacy-free SAPUI5 development. It is being improved continuously to reflect our latest recommendations. It will be further enhanced to both help transform existing code bases and provide guidance for creating new code.
+> The following information is a preliminary yet practical collection of best practices to ensure legacy-free SAPUI5 development. We're continuously improving it to reflect our latest recommendations. It will be further enhanced to both help transform existing code bases and provide guidance for creating new code.
 
 
 
@@ -31,36 +31,38 @@ The main objectives when migrating existing code or keeping it up to date with f
 
 -   **No sync loading of code**
 
-    for compliance with our Content Security Policy; for more information, see [Make Your App CSP Compliant](make-your-app-csp-compliant-1f81a09.md)
+    This is for compliance with our Content Security Policy. For more information, see [Make Your App CSP Compliant](make-your-app-csp-compliant-1f81a09.md).
 
 -   **No sync loading of data**
 
-    to avoid deprecation warnings of web browsers regarding sync XHR
+    This helps avoid deprecation warnings of web browsers regarding sync XHR.
 
 -   **No use of global names**
 
-    to avoid pollution of the global namespace and conflicts with other code on the page
+    This helps avoid pollution of the global namespace and conflicts with other code on the page.
 
 -   **No use of deprecated APIs**
 
-    to reduce the API surface for easier usage and maintenance
+    This reduces the API surface for easier usage and maintenance.
 
 
 
 
 ### Prerequisites
 
-Before attempting to migrate or upgrade to a higher SAPUI5 version, make sure that your development does **not** use any undocumented internal framework resources, and double check that all compatibility guidelines have been followed, such as those mentioned in [Upgrading](../02_Read-Me-First/upgrading-9638e4f.md).
+Before attempting to migrate or upgrade to a higher SAPUI5 version, make sure that your development does **not** use any undocumented internal framework resources. Also, double check that all compatibility guidelines have been followed, such as those mentioned in [Upgrading](../02_Read-Me-First/upgrading-9638e4f.md).
 
 
 
 ### Deprecated APIs
 
-In general, **you must not use deprecated APIs** anymore, such as `sap.ui.getCore()`. Deprecated APIs can be found in the [API Reference](https://ui5.sap.com/#/api/deprecated), in the [What's New Viewer](https://help.sap.com/whats-new/67f60363b57f4ac0b23efd17fa192d60?Type=Deleted%3BDeprecated), and in the reports by our [Support Assistant](../04_Essentials/support-assistant-57ccd7d.md) and [UI5 linter](https://github.com/SAP/ui5-linter). For new projects we recommend the use of TypeScript, because usage of deprecated APIs can then be detected easily.
+In general, **you must not use deprecated APIs** anymore, such as `sap.ui.getCore()`. You can find deprecated APIs in the [API Reference](https://ui5.sap.com/#/api/deprecated), in the [What's New Viewer](https://help.sap.com/whats-new/67f60363b57f4ac0b23efd17fa192d60?Type=Deleted%3BDeprecated), and in the reports by our [Support Assistant](../04_Essentials/support-assistant-57ccd7d.md) and [UI5 linter](https://github.com/SAP/ui5-linter). For new projects, we recommend the use of TypeScript, because usage of deprecated APIs can then be detected easily.
 
-Also, see the relevant warnings and errors logged to the browser's dev console during runtime. You might need to increase the `sap-ui-log-level`; for more information, see [Logging and Tracing](../04_Essentials/logging-and-tracing-9f4d62c.md).
+Also, see the relevant warnings and errors logged to the browser's dev console during runtime. You might need to increase the `sap-ui-log-level`. For more information, see [Logging and Tracing](../04_Essentials/logging-and-tracing-9f4d62c.md).
 
-Some APIs may be only partially deprecated, for instance passing a non-object `vName` to [`sap.ui.core.theming.Parameters.get`](https://ui5.sap.com/#/api/sap.ui.core.theming.Parameters%23methods/sap.ui.core.theming.Parameters.get) . Refer to the API Reference for individual APIs.
+Some APIs may be only partially deprecated, for instance passing a non-object `vName` to [`sap.ui.core.theming.Parameters.get`](https://ui5.sap.com/#/api/sap.ui.core.theming.Parameters%23methods/sap.ui.core.theming.Parameters.get). Refer to the API Reference for individual APIs.
+
+Using the native web API `XMLHttpRequest#open` with `false` as the third argument outside of workers is also deprecated, and browsers might end its support. Therefore, in addition to avoiding already deprecated SAPUI5 APIs, you must not call low-level APIs such as `jQuery.ajax` with a disabled `async` option either.
 
 **Additional Information:**
 
@@ -71,6 +73,7 @@ Some APIs may be only partially deprecated, for instance passing a non-object `v
 -   [Adapting to the Modularization of the Core](../04_Essentials/adapting-to-the-modularization-of-the-core-b8fdf0c.md)
 -   [Deprecated jQuery.sap API Replacement](../04_Essentials/deprecated-jquery-sap-api-replacement-a075ed8.md)
 -   [Deprecated Factories Replacement](../04_Essentials/deprecated-factories-replacement-491bd9c.md)
+-   [Synchronous `XMLHttpRequest`](https://xhr.spec.whatwg.org/#the-open()-method)
 
 
 
@@ -202,7 +205,7 @@ In the following we'll focus on crucial aspects of app development, specifically
 When creating instances of SAPUI5 controls programmatically \(i.e. not declaratively via XML View or Fragment\), then:
 
 -   Don't use the global name of a control. Require the corresponding module dependency instead.
--   Use `createId` to ensure there are no ID collisions, e.g. `View.createId` to prefix the control's ID with the view ID.
+-   Use `createId` to ensure there are no ID collisions, e.g. [`sap.ui.core.mvc.View#createId`](https://ui5.sap.com/#/api/sap.ui.core.mvc.View%23methods/createId) to prefix the control's ID with the view ID.
 
 **Additional Information:**
 
@@ -299,12 +302,16 @@ Prevent bundling modules \(`Component-preload.js`\) into strings.
 -   [View Cloning \(deprecated\)](../04_Essentials/view-cloning-deprecated-a575619.md)
 -   [Instantiation of Fragments](../04_Essentials/instantiation-of-fragments-04129b2.md)
 -   [Programmatically Instantiating XML Fragments](../04_Essentials/programmatically-instantiating-xml-fragments-d6af195.md)
+-   [Formatting, Parsing, and Validating Data](../04_Essentials/formatting-parsing-and-validating-data-07e4b92.md)
 
 
 
 ### Models
 
-Take care of destroying programatically created models to prevent memory leaks.
+-   Take care of destroying programatically created models to prevent memory leaks.
+
+-   Built-in framework models \(such as `ODataModel` or `JSONModel`\) and their related classes are considered *final*. They must not be modified or extended. For more information, see [Custom Model](../04_Essentials/custom-model-91f1c7e.md).
+
 
 **OData V4 Model**
 
@@ -315,14 +322,14 @@ Take care of destroying programatically created models to prevent memory leaks.
 
 **OData V2 Model**
 
--   [`v2.ODataModel#createEntry`](https://ui5.sap.com/#/api/sap.ui.model.odata.v2.ODataModel%23methods/createEntry) : Defining an array for the `mParameters.properties` is deprecated since SAPUI5 1.120. Pass the initial values as an object instead.
+-   [`v2.ODataModel#createEntry`](https://ui5.sap.com/#/api/sap.ui.model.odata.v2.ODataModel%23methods/createEntry): Defining an array for the `mParameters.properties` is deprecated since SAPUI5 1.120. Pass the initial values as an object instead.
 
--   [`v2.ODataModel#refreshSecurityToken`](https://ui5.sap.com/#/api/sap.ui.model.odata.v2.ODataModel%23methods/refreshSecurityToken) : Pass `true` for the `bAsync` parameter explicitly as its default value is `false`.
+-   [`v2.ODataModel#refreshSecurityToken`](https://ui5.sap.com/#/api/sap.ui.model.odata.v2.ODataModel%23methods/refreshSecurityToken): Pass `true` for the `bAsync` parameter explicitly as its default value is `false`.
 
 
 **JSON Model**
 
-[`JSONModel#loadData`](https://ui5.sap.com/#/api/sap.ui.model.json.JSONModel%23methods/loadData) : Do **not** pass `false` to the `bAsync` and `bCache` parameters, which are deprecated.
+[`JSONModel#loadData`](https://ui5.sap.com/#/api/sap.ui.model.json.JSONModel%23methods/loadData): Do **not** pass `false` to the `bAsync` and `bCache` parameters, which are deprecated.
 
 **Additional Information:**
 
@@ -356,17 +363,19 @@ Implement strict error handling to address critical issues.
 
 -   Ensure a dependency on the renderer or embed it within the control class.
 
--   Migrate to the rendering `apiVersion 2` or `apiVersion 4`.For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.core.RenderManager%23overview).
+-   Migrate to the rendering `apiVersion 2` or `apiVersion 4`. For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.core.RenderManager%23overview).
 
 -   When utilizing [`RenderManager#icon`](https://ui5.sap.com/#/api/sap.ui.core.RenderManager%23methods/icon) during rendering, include a dependency to `sap/ui/core/IconPool` in your code.
 
--   Don't use `Control#rerender` to rerender a control as it's deprecated. Use [`Control#invalidate`](https://ui5.sap.com/#/api/sap.ui.core.Control%23methods/invalidate) instead if required.
+-   Don't rely on [`rerender`](https://ui5.sap.com/#/api/sap.ui.core.Control%23methods/rerender) as it is deprecated.
 
+-   Avoid overriding `invalidate` for unintended purposes. Custom logic before or after rendering should be implemented in `onBeforeRendering` or `onAfterRendering`. The actual rendering should be implemented in the `render` function of the control's renderer.
+-   Let the framework handle the invalidation instead of calling `invalidate` directly. It takes care of properly invalidating all affected controls, for example, when a managed control state changes via generated mutators or data binding.
 
 **Additional Information:**
 
 -   [`RenderManager`](https://ui5.sap.com/#/api/sap.ui.core.RenderManager)
--   [`RenderManager#icon`](https://ui5.sap.com/#/api/sap.ui.core.RenderManager%23methods/icon)
+-   [SAPUI5 Control Development Guidelines](../09_Developing_Controls/sapui5-control-development-guidelines-4549da6.md)
 
 
 
@@ -382,7 +391,7 @@ Implement strict error handling to address critical issues.
 
 -   Don't use the global namespace of the library to add types. Use the return value of `Lib.init` instead to add them.
 
--   Migrate to the library `apiVersion 2`.For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.core.Lib%23methods/sap.ui.core.Lib.init).
+-   Migrate to the library `apiVersion 2`. For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.core.Lib%23methods/sap.ui.core.Lib.init).
 
 -   Use [`sap.ui.base.DataType.registerEnum`](https://ui5.sap.com/#/api/sap.ui.base.DataType%23methods/sap.ui.base.DataType.registerEnum) to register enums that shall be usable as a type of control properties.
 

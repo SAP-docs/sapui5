@@ -2,7 +2,7 @@
 
 # Smart Table
 
-The `sap.ui.comp.smarttable.SmartTable` control is used to create different types of tables based on OData V2 metadata. The control allows the user to define personalized table settings.
+The `sap.ui.comp.smarttable.SmartTable` control is used to create different types of tables based on OData V2 metadata. The control allows users to use a number of built-in features, such as personalized table settings with sorting and filtering options, the calculation of column widths, column header menus, and a document export.
 
 The frequently asked questions section aims at answering some basic questions that you might have when using this control.For more information, see the FAQ in the [API Reference](https://ui5.sap.com/#/api/sap.ui.comp.smarttable.SmartTable%23faq).
 
@@ -21,10 +21,39 @@ The `SmartTable` control is a wrapper control around any SAPUI5 table. The contr
 
 The control allows the consuming application to build list patterns based on OData services in an efficient and consistent way and thus makes it easy for the user to create tables without much effort. For example, the control enables the automatic creation of columns.
 
-The consuming application can overwrite the OData default information. The `SmartTable` control offers you additional built-in features, such as a row count and an export to a spreadsheet application.
+The consuming application can overwrite the OData default information. The `SmartTable` control offers you additional built-in features, such as a row count and a document export.
 
 > ### Note:  
-> Once the `SmartTable` control has been initialized, most of the property and aggregation changes \(for example, for `entitySet` or `persistencyKey`\) won't have any effect. Also, **any changes of the inner table are not recognized**, for example, by the personalization settings, and therefore **must not be made**.
+> Once the `SmartTable` control has been initialized, most of the property and aggregation changes \(for example, for `entitySet` or `persistencyKey`\) won't have any effect. Some of these static properties are the following:
+> 
+> -   `entitySet`
+> 
+> -   `ignoredFields`
+> 
+> -   `initiallyVisibleFields`
+> 
+> -   `ignoreFromPersonalisation`
+> 
+> -   `tableType`
+> 
+> -   `useTablePersonalisation`
+> 
+> -   `enableAutoBinding`
+> 
+> -   `persistencyKey`
+> 
+> -   `smartFilterId`
+> 
+> -   `showDetailsButton`
+> 
+> -   `enableAutoColumnWidth`
+> 
+> -   `customizeConfig`
+> 
+> -   `useColumnLabelsAsTooltips`
+> 
+> 
+> Also, **any changes of the inner table are not recognized**, for example, by the personalization settings, and therefore **must not be made**.
 
 
 

@@ -12,7 +12,7 @@ Internally, we prefer to pass an object to the test for retrieving the values - 
 
 ```js
 // "Bar" required from module "sap/m/Bar"
-// "nextUIUpdate" required from module "sap/ui/qunit/utils/nextUIUpdate"
+// "nextUIUpdate" required from module "sap/ui/test/utils/nextUIUpdate"
 function renderBarInPageTestCase(sTestName, oOptions) {
     QUnit.test(sTestName, async(assert) => { 
         // System under Test
@@ -65,7 +65,7 @@ Here is an example for when a user presses [Esc\] on the select:
 // "Item" required from module "sap/ui/core/Item"
 // "Select" required from module "sap/m/Select"
 // "KeyCodes" required from module "sap/ui/events/KeyCodes"
-// "nextUIUpdate" required from module "sap/ui/qunit/utils/nextUIUpdate"
+// "nextUIUpdate" required from module "sap/ui/test/utils/nextUIUpdate"
 // "QUnitUtils" required from module "sap/ui/qunit/QUnitUtils"
 QUnit.test("Should close the popup menu if it is open and you press escape", async(assert) => {
     // Arrange
@@ -116,14 +116,14 @@ In the rendering tests part, you have to place your control in the DOM. The best
 
 Make sure you destroy your control, since SAPUI5 will keep a reference to it and may also rerender it.
 
-It's crucial that you wait for the Promise of `sap/ui/qunit/utils/nextUIUpdate` after each time you've caused a rerendering.
+It's crucial that you wait for the Promise of `sap/ui/test/utils/nextUIUpdate` after each time you've caused a rerendering.
 
 Executing the module returns a Promise which resolves after rendering. If you don't wait for the Promise, the DOM won't be updated yet.
 
 You can use the following template to make sure that you remember to destroy your control:
 
 ```js
-// "nextUIUpdate" required from module "sap/ui/qunit/utils/nextUIUpdate"
+// "nextUIUpdate" required from module "sap/ui/test/utils/nextUIUpdate"
 QUnit.test("Should do Something", async(assert) => {
     // Arrange
     const oConstructor = {
@@ -183,7 +183,7 @@ To test this, we add an `eventDelegate` to see how often the rendering function 
 
 ```js
 // "Label" required from module "sap/m/Label"
-// "nextUIUpdate" required from module "sap/ui/qunit/utils/nextUIUpdate"
+// "nextUIUpdate" required from module "sap/ui/test/utils/nextUIUpdate"
 QUnit.test("Should suppress rerendering when tooltip is set", async(assert) => { 
     // Arrange
     const oConstructor = {
@@ -301,7 +301,7 @@ We use `clock.tick` to trigger the server response. If you didn't do this, the t
 
 ```js
 // "Label" required from module "sap/m/Label"
-// "nextUIUpdate" required from module "sap/ui/qunit/utils/nextUIUpdate"
+// "nextUIUpdate" required from module "sap/ui/test/utils/nextUIUpdate"
 
 //Your test:
 QUnit.test("Should do something with the model", async(assert) => {

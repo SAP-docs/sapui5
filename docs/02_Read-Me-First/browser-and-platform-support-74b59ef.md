@@ -9,7 +9,7 @@ Here you can find information on the browser and platform support for the SAPUI5
 > 
 > The following sections only contain additional information on restrictions and platform support information for specific SAPUI5 libraries in a summarized form.
 
-As SAPUI5 is based on CSS3, HTML5, and modern ECMAScript \("ES2022"\), only browsers with corresponding capabilities are supported. In general, only major versions that are also supported by the respective platform can be supported by the SAPUI5 framework.
+As SAPUI5 is based on CSS3, HTML5, and modern ECMAScript \("ES2023"\), only browsers with corresponding capabilities are supported. In general, only major versions that are also supported by the respective platform can be supported by the SAPUI5 framework.
 
 > ### Restriction:  
 > With SAPUI5 1.116, the framework leverages features of modern ECMAScript up to and including [ECMAScript 2022 Language Specification](https://262.ecma-international.org/13.0/). Certain restrictions do apply, however. For more information, see [ECMAScript Support](ecmascript-support-0cb44d7.md).

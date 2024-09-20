@@ -265,9 +265,9 @@ The analytical table renders data that can be grouped and aggregated.
 
     ![](images/ALP_Groupable_Properties_786a94f.png)
 
--   How to Define Aggregable Properties
+-   How to Define Aggregatable Properties
 
-    The properties can also be annotated as aggregable \(measures\). To do so, at the entity level you must also define the `Aggregation.CustomAggregate` annotation, which has the property name as the qualifier:
+    The properties can also be annotated as aggregatable \(measures\). To do so, at the entity level you must also define the `Aggregation.CustomAggregate` annotation, which has the property name as the qualifier:
 
     > ### Sample Code:  
     > XML Annotation
@@ -294,7 +294,7 @@ The analytical table renders data that can be grouped and aggregated.
     > ```
 
     > ### Caution:  
-    > The analytical table displays only properties that are annotated as groupable and/or aggregable. Otherwise, the property won't be requested and will have no value in the table.
+    > The analytical table displays only properties that are annotated as groupable and/or aggregatable. Otherwise, the property won't be requested and will have no value in the table.
 
 -   How to Enable and Disable the *Search* Field
 
@@ -342,7 +342,7 @@ The analytical table renders data that can be grouped and aggregated.
 > 
 > -   Analytical tables don’t support navigation properties, so if you include them through a `LineItem`, an empty column is displayed. You also cannot add navigation properties through the table personalization settings.
 > 
-> -   You can't use aggregable properties to filter the data on analytical tables.
+> -   You can't use aggregatable properties to filter the data on analytical tables.
 
 
 
@@ -419,6 +419,8 @@ You can activate the tree table in the `manifest.json`. To do so, set the table 
 For a description of the available table types, see [Tables](tables-c0f6592.md).
 
 For information about setting up tables in the list report through annotations, see [Settings for List Report Tables](settings-for-list-report-tables-4c2d17a.md).
+
+For information about setting up a standard list or object list in the list report, see [Enabling Standard List Items and Object List Items](enabling-standard-list-items-and-object-list-items-4ed47aa.md).
 
 For information about setting up tables in the object page, see [Settings for Object Page Tables](settings-for-object-page-tables-47425bb.md).
 

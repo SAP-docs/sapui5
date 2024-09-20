@@ -101,7 +101,7 @@ sap.ui.define([
         }
     })
     return TextList;
-}, /* bExport= */true);
+});
 ```
 
 In this case, the fragment definition XML file looks like this:

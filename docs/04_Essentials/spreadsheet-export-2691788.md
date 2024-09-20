@@ -15,7 +15,10 @@ The spreadsheet export allows you to export your data to an Office Open XML docu
 If you use the `SmartTable` control to export data, you can also use different types of exports, the client export or the SAP Gateway export.
 
 > ### Tip:  
-> The `SmartTable` control offers you all the preconfigured content you need for the export. You can either simply use it without having to define any configuration yourself, or you can adapt the content to make it fit your own specific requirements. For other entitities, you have to define the configuration manually as described below.
+> The `sap.ui.comp.smarttable.SmartTable` and `sap.ui.mdc.Table` controls offer you all the preconfigured content you need for the export. You can either simply use it without having to define any configuration yourself, or you can adapt the content to make it fit your own specific requirements. For other entitities, you have to define the configuration manually as described below.
+
+> ### Tip:  
+> If the export takes more than 5 minutes, we recommend to cancel the process and apply additional filter settings to reduce the amount of data that has to be exported.
 
 
 
@@ -23,7 +26,7 @@ If you use the `SmartTable` control to export data, you can also use different t
 
 ## Prerequisites
 
-If you want to export data manually, without `SmartTable`, you have to perform the following steps:
+If you want to export data manually, without `SmartTable` or `Table` \(`sap.ui.mdc`\), you have to perform the following steps:
 
 1.  Load the `sap.ui.export.Spreadsheet` library within your controller coding.
 
@@ -133,7 +136,7 @@ The following data types are supported:
 
 
 > ### Note:  
-> Currency values and numbers that cannot be represented in the standard format as defined by the *IEEE \(Institute of Electrical and Electronics Engineers\)* in the spreadsheet file because they are too large automatically use the `BigNumber` data type as a fallback option. The number is then stored as `string` and represented using the international format with a comma as a thousands separator and a period for the decimal point.
+> Currency values and numbers that cannot be represented in the standard format as defined by the *IEEE \(Institute of Electrical and Electronics Engineers\)* in the spreadsheet file because they are too large automatically use the `BigNumber` data type as a fallback option \(standard IEEE 754\). The number is then stored as `string` and represented using the international format with a comma as a thousands separator and a period for the decimal point.
 
 For more information, see [Data Types for Spreadsheet Export](data-types-for-spreadsheet-export-283217d.md).
 
@@ -141,7 +144,7 @@ For more information, see [Data Types for Spreadsheet Export](data-types-for-spr
 
 ### Additional Settings on Export User Interface
 
-In addition to the regular `Export` dialog, the user can use the `Export As` dialog in the `SmartTable` control, which can be selected from a dropdown list next to the *Export to Spreadsheet* button, to define additional settings for the export.
+In addition to the regular `Export` dialog, the user can use the `Export As` dialog in the `SmartTable` or `Table` \(`sap.ui.mdc`\) control, which can be selected from a dropdown list next to the *Export Table* button, to define additional settings for the export.
 
 The user can define the following for the exported file:
 
@@ -151,13 +154,13 @@ The user can define the following for the exported file:
 
     The file format has been predefined.
 
--   Whether to show cells with more than one value in separate columns
+-   Whether to show cells with more than one value in separate columns \(*Split cells with multiple values*\)
 
-    This option is used for columns based on text arrangements, currencies, and units of measure. For example, if both the name and the ID of a customer are displayed in one column, the exported file will show the customer data in two separate columns. This might result in duplicate columns if the file already contains columns with the same header name.
+    This option is used for columns that are based on text arrangements, currencies, and units of measure. For example, if both the name and the ID of a customer are displayed in one column, the exported file will show the customer data in two separate columns. This might result in duplicate columns if the file already contains columns with the same header name.
 
 -   Whether to show any available filter settings
 
-    If this option is selected, the exported file has an additional *Filter* sheet showing the filters that were set on the columns as well as in the `FilterBar` control. The filters shown in the exported file currently contain the technical property that has been extracted from the binding.
+    If this option is selected, the exported file has an additional *Filter* sheet showing the filters that were set on the columns as well as in the `FilterBar` control. The filters shown in the exported file are the column labels. They are shown by default. If there is no column label, the property name is shown.
 
 
 The `beforeExport` event also provides the additional export settings defined by the user \(`userExportSettings` parameter\). This parameter is always available and contains the settings currently valid for the export, so the application developers can decide which settings to use.
@@ -174,5 +177,5 @@ The `beforeExport` event also provides the additional export settings defined by
 
 [API Reference: `sap.ui.export.EdmType`](https://ui5.sap.com/#/api/sap.ui.export.EdmType)
 
-[Export Features](export-features-e7f52f4.md "The SmartTable control offers various types of exports. The SmartTable control supports features such as file compression, header row, localization, meta information, hierarchies, data types, and Read Access Logging (RAL) support.")
+[Spreadsheet Export Type Features](spreadsheet-export-type-features-e7f52f4.md "The SmartTable control offers different types of exports with various features.")
 

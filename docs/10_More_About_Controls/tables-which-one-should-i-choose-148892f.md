@@ -521,6 +521,33 @@ Requires manual modifications
 
 </td>
 </tr>
+<tr>
+<td valign="top">
+
+Cell selection
+
+</td>
+<td valign="top">
+
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
+
+</td>
+<td valign="top">
+
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
+
+</td>
+<td valign="top">
+
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
+
+</td>
+<td valign="top">
+
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
+
+</td>
+</tr>
 </table>
 
 **Legend**:

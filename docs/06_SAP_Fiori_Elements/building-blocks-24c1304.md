@@ -29,5 +29,8 @@ Result
 
 The building blocks provide a unified interface that creates an abstraction from the underlying implementation. As such, they also do not exist at runtime, except for a dedicated API object that allows you to manipulate the controls that were created through a restricted set of APIs. Building blocks are like templates: depending on the bound data and the specified attributes, they result in different controls for representing your data.
 
+> ### Remember:  
+> If you use building blocks within fragments that loads dynamically, ensure that the fragment loads using the `sap.fe.core.ExtensionAPI` method `loadFragment`.
+
 For more information about building blocks as part of the flexible programming model, see [Flexible Programming Model](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/overview/introduction).
 

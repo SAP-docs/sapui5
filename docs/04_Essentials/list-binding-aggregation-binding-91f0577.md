@@ -142,7 +142,7 @@ oComboBox.unbindAggregation("items", true);
 **Related Information**  
 
 
-[Tutorial Step 12: Aggregation Binding Using Templates](../03_Get-Started/step-12-aggregation-binding-using-templates-97830de.md "Aggregation binding (or &quot;list binding&quot;) allows a control to be bound to a list within the model data and allows relative binding to the list entries by its child controls.")
+[Tutorial Step 12: Aggregation Binding Using Templates](../03_Get-Started/step-12-aggregation-binding-using-templates-97830de.md "Aggregation binding, also known as &quot;list binding&quot;, lets a control bind to a list within the model data. This binding allows relative binding to the list entries by its child controls.")
 
 [Binding Syntax](binding-syntax-e2e6f41.md "You bind UI elements to data of a data source by defining a binding path to the model that represents the data source in the app.")
 

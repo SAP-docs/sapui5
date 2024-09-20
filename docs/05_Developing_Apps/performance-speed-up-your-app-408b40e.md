@@ -19,7 +19,6 @@ The first step of improving the performance of your application is the switch to
 -   Enable asynchronous loading via the [`sap.ui.core.IAsyncContentCreation`](https://ui5.sap.com/#/api/sap.ui.core.IAsyncContentCreation) interface
 -   [Enable async bootstrap, rootView and routing](../03_Get-Started/use-asynchronous-loading-676b636.md)
 -   Use asynchronous [view loading](../04_Essentials/instantiating-views-68d0e58.md)
--   Blog post [Best Practices for Asynchronous Loading in UI5](https://blogs.sap.com/2018/12/18/ui5ers-buzz-41-best-practices-for-async-loading-in-ui5/)
 
 
 
@@ -132,14 +131,6 @@ For more information, see:
 ## Use "manifest first" to Load the Component
 
 When creating a component manually, make sure the `manifest.json` descriptor file is loaded first, so that the dependencies are analyzed and preloaded when the component is loaded. For more information, see [Manifest First Function](../04_Essentials/descriptor-for-applications-components-and-libraries-manifest-json-be0cf40.md#loiobe0cf40f61184b358b5faedaec98b2da__manifirst).
-
-```js
-// "Component" required from module "sap/ui/core/Component"
-// load manifest.json from default location and evaluate it before creating an instance of the component 
-Component.create({
-  name: "my.component",
-});
-```
 
 
 
