@@ -133,7 +133,7 @@ Open a terminal and install UI5 Tooling globally on your machine by executing th
     		"uri": "/here/goes/your/serviceUrl/",
     		"type": "OData",
     		"settings": {
-    		  "odataVersion": "2.0"
+    		  "odataVersion": "2.0",
     		  "localUri": "localService/metadata.xml"
     		}
     	  }
@@ -145,7 +145,7 @@ Open a terminal and install UI5 Tooling globally on your machine by executing th
       "sap.ui5": {
     	"rootView": {
     		"viewName": "sap.ui.demo.smartControls.SmartField",
-    		"type": "XML"
+    		"type": "XML",
     		"async": true
     	},
     	"dependencies": {
