@@ -86,7 +86,7 @@ The following CAP CDS sample code shows the global side effect with target field
 >         TaxAmount,
 >         NetAmount,
 >         GrossAmount
->     ]
+>     ],
 >     TriggerAction : 'NAMESPACE.MyAction'
 > }
 > );
