@@ -82,7 +82,7 @@ export default class HelloPanelPage extends Opa5 {
 
 
 
-## webapp/test/integration/NavigationJourney.js \(New\)
+## webapp/test/integration/NavigationJourney.ts \(New\)
 
 We create a new `NavigationJourney.ts` file under `webapp/test/integration/`.
 
