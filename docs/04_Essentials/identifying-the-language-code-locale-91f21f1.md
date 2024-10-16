@@ -210,7 +210,7 @@ These SAPUI5 configuration options accept the following formats:
     </td>
     <td valign="top">
     
-    `` is also used as a technical SAP language code in support scenarios and displays a pseudo translation \("psd" in the private extensions name\).
+    `` is also used as a technical SAP language code in support scenarios and displays a pseudo translation \("psd" in the private extension's name\).
     
     </td>
     </tr>
@@ -227,7 +227,7 @@ These SAPUI5 configuration options accept the following formats:
     </td>
     <td valign="top">
     
-    `3Q` is also used as a technical SAP language code in support scenarios and displays a pseudo translation \("rigi" in the private extensions name\).
+    `3Q` is also used as a technical SAP language code in support scenarios and displays a pseudo translation \("rigi" in the private extension's name\).
     
     </td>
     </tr>
