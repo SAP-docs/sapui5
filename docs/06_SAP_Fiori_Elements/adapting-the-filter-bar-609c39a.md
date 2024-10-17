@@ -164,9 +164,6 @@ If the field groups don't contain all properties of the entity, the remaining pr
 
 ## Additional Features in SAP Fiori Elements for OData V2
 
-> ### Note:  
-> We've removed videos showing step-by-step procedures using SAP Web IDE, which SAP no longer actively supports. You can still access the video using an older version of this document.
-
 To set default filter value, refer [Configuring Default Filter Values](configuring-default-filter-values-f27ad7b.md).
 
 For more information about the smart filter bar, see [SmartFilterBar](https://ui5.sap.com/#/api/sap.ui.comp.smartfilterbar.SmartFilterBar).
@@ -309,7 +306,7 @@ SAP Fiori elements for OData V4 checks for the existence of the `tolower` filter
 </td>
 <td valign="top">
 
-false
+false \(backend is expected to convert all values, both the backend values and the text provided in the filter fields, to lowercase before comparing for filtering\)
 
 </td>
 </tr>
@@ -396,9 +393,9 @@ You can add further clearing functionality by implementing the controller extens
 
 
 
-### Hiding Filter Fields in the *Adapt Filters* Dialog
+### Moving Filter Fields to the *Adapt Filters* Dialog
 
-You can hide an explicitly included property in the *Adapt Filters* dialog using the `manifest.json` configuration mentioned here.
+You can move the explicitly included filter fields in the filter bar to the *Adapt Filters* dialog by configuring the `manifest.json` file as follows:
 
 > ### Sample Code:  
 > ```
@@ -420,14 +417,14 @@ You can hide an explicitly included property in the *Adapt Filters* dialog using
 > 
 > ```
 
-All properties are included in the *Adapt Filters* dialog, except the ones that have filter restrictions and those that are marked as `@UI.Hidden`.
+For more information about other possible values for the `availability` property, see the V4-specific section in [Adding Custom Fields to the Filter Bar](adding-custom-fields-to-the-filter-bar-5fb9f57.md).
 
 **Related Information**  
 
 
 [Smart Filter Bar](../10_More_About_Controls/smart-filter-bar-7bcdffc.md "The sap.ui.comp.smartfilterbar.SmartFilterBar control analyzes the $metadata document of an OData service and renders a FilterBar control that can be used to filter, for example, a table or a chart.")
 
-[Enabling the Search Function](enabling-the-search-function-3cdebee.md "You can enable the Search function in the list report, for example.")
+[Enabling the Search Function](enabling-the-search-function-3cdebee.md "You can enable the Search function in the list report.")
 
 [Enabling Semantic Operators in the Filter Bar](enabling-semantic-operators-in-the-filter-bar-fef65d0.md "You can use semantic date values, such as Today or Last Week, on the filter bar of list report and analytical list page applications.")
 

@@ -64,8 +64,8 @@ The preferred way of instantiating a typed view is via the factory function [`sa
 ```js
 const oView = await View.create({
     viewName: "module:myapp/views/MyView"
-  })
-    oView.placeAt("content");
+});
+oView.placeAt("content");
 ```
 
 

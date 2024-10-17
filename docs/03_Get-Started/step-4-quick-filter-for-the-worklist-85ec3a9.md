@@ -26,15 +26,19 @@ You can view and download all files in the Demo Kit at [Worklist App - Step 4](h
 
 ```xml
 <mvc:View
-	controllerName="myCompany.myApp.controller.Worklist"
+	controllerName="mycompany.myapp.MyWorklistApp.controller.Worklist"
 	xmlns:mvc="sap.ui.core.mvc"
-	xmlns:semantic="sap.m.semantic"
-	xmlns="sap.m">
-	<semantic:FullscreenPage
+	xmlns:semantic="sap.f.semantic">
+
+	<semantic:SemanticPage
 		id="page"
-		navButtonPress="onNavBack"
-		showNavButton="true"
-		title="{i18n>worklistViewTitle}">
+		headerPinnable="false"
+		toggleHeaderOnTitleClick="false">
+
+		<semantic:titleHeading>
+			<Title text="{i18n>worklistTitle}" />
+		</semantic:titleHeading>
+
 		<semantic:headerContent>
 			<IconTabBar
 				id="iconTabBar"
@@ -80,7 +84,7 @@ You can view and download all files in the Demo Kit at [Worklist App - Step 4](h
 				id="shareEmail"
 				press="onShareEmailPress"/>
 		</semantic:sendEmailAction>
-	</semantic:FullscreenPage>
+	</semantic:SemanticPage>
 </mvc:View>
 
 ```

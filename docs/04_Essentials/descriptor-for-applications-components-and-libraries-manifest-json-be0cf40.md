@@ -1142,6 +1142,23 @@ Version 66
 
 </td>
 </tr>
+<tr>
+<td valign="top">
+
+Version 67
+
+</td>
+<td valign="top">
+
+\>=1.129
+
+</td>
+<td valign="top">
+
+1.66.0
+
+</td>
+</tr>
 </table>
 
 For more information on the new fields introduced in each version, check out [Migration Information for Upgrading the Descriptor File](migration-information-for-upgrading-the-descriptor-file-a110f76.md)
@@ -2244,7 +2261,7 @@ Specifies provided commands with a unique key/alias. Contains:
 -   `shortcut`: String that describes a key combination. When the user presses the key combination, the command is triggered.
 
 
-The name of the command that contains the `shortcut` definition acts as a prerequisite for using the `command` property of the [sap/ui/core/CommandExecution](https://ui5.sap.com/#/api/sap.ui.core.CommandExecution) module.
+The name of the command that contains the `shortcut` definition acts as a prerequisite for using the `command` property of the `sap.ui.core.CommandExecution` module. For more information, see the [API Reference: `sap.ui.core.CommandExecution`](https://ui5.sap.com/#/api/sap.ui.core.CommandExecution). 
 
 </td>
 </tr>
@@ -2523,7 +2540,7 @@ Current version of the `manifest.json`
 ```
 
 {
-    "_version": "1.65.0",
+    "_version": "1.66.0",
  
     "start_url": "index.html",
  
@@ -2775,7 +2792,7 @@ Current version of the `manifest.json`
             }]
         },
         "dependencies": {
-            "minUI5Version": "1.126.0",
+            "minUI5Version": "1.129.0",
             "libs": {
                 "sap.m": {
                     "minVersion": "1.34.0"

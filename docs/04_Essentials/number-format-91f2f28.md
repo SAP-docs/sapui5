@@ -474,9 +474,11 @@ To control the start the starting point of numbers which should be displyed in c
 
 
 
-## Parsing
+<a name="loio91f2f2866f4d1014b6dd926db0e91070__section_NFP"/>
 
-A formatted number which contains a locale-dependent grouping separator, decimal point, or percentage sign can be parsed into a number object using `sap.ui.core.format.NumberFormat`. Those number string may not be correctly parsed by using `parseInt` or `parseFloat` in JavaScript.
+## Parsing and Validation of User Input
+
+You can parse a formatted number, which can contain locale-dependent grouping separators, a locale-dependent decimal separator or a percentage sign, into a number object using `sap.ui.core.format.NumberFormat`. Such a number string may not be correctly parsed by using `parseInt` or `parseFloat` in JavaScript.
 
 ```js
 // "NumberFormat" required from module "sap/ui/core/format/NumberFormat"
@@ -484,6 +486,122 @@ var oFloatFormat = NumberFormat.getFloatInstance();
 
 oFloatFormat.parse("1,234.567"); // returns 1234.567
 oFloatFormat.parse("12.34%"); // returns 0.1234
+```
+
+When users switch between multiple UIs, websites or editors, they may encounter different characters being used as decimal and grouping separators. This can lead to incorrect numerical input if the user assumes a locale different from the one actually used by the UI. For example, in English locales the grouping separator is a comma \(","\) and the decimal separator is a dot \("."\), whereas in German locales it is the other way around.
+
+To prevent an accidental mix-up of decimal and grouping separator in the user input, we have introduced a stricter parsing logic of `sap.ui.core.format.NumberFormat` by using **decimal separator validation** with an optional **strict grouping validation**. Instead of ignoring the grouping separators when parsing user input, several checks are now carried out on the grouping to identify potential input errors.
+
+
+
+### Decimal Separator Validation
+
+If not otherwise mentioned, the examples below are based on the US locale standard settings \(en-US\):
+
+```js
+// "NumberFormat" required from module "sap/ui/core/format/NumberFormat"
+var oOptions = {
+  groupingSeparator : ",",
+  decimalSeparator : ".",
+  groupingSize : 3
+};
+var oFloatFormat = NumberFormat.getFloatInstance(oOptions);
+```
+
+The following user input is now considered to be potentially wrong and therefore **invalid**:
+
+-   There is no decimal separator and only one grouping separator, which occurs at an unexpected position.
+
+    ```js
+    oFloatFormat.parse("1,2");            // NaN (before: 12)
+    oFloatFormat.parse("1,23");           // NaN (before: 123)
+    oFloatFormat.parse("1,2345");         // NaN (before: 12345)
+    ```
+
+    **Assumption:** As the position of the grouping separator does not match the locale-specific convention, the user might have intended to use a decimal separator but used a separator from a different locale by mistake.
+
+-   There is no decimal separator, only a single grouping separator is present, and at least one additional grouping separator is missing, **including the least significant \(lowest\) grouping separator**.
+
+    ```js
+    oFloatFormat.parse("1234,567891");    // NaN (before: 1234567891)
+    ```
+
+    **Assumption:** Any user aware of the right grouping separator would probably have added the missing grouping separator\(s\) as well. It is therefore likely that the grouping separator was confused with the decimal separator.
+
+
+> ### Note:  
+> Regarding the return value, a number with invalid grouping is treated in the same way as user input that cannot be parsed:
+> 
+> -   Unit and currency instances return `null`.
+> 
+> -   Float, percent, and integer instances return `NaN`.
+> 
+> 
+> ```js
+> oFloatFormat.parse("1,2");            // NaN
+>  
+> NumberFormat
+>  .getCurrencyInstance(oOptions)
+>    .parse("1,2 EUR");                 // null
+> ```
+
+The following user input is considered to be **valid**:
+
+-   There is no decimal separator, **only the least significant \(lowest\) grouping separator is present**, and at least one additional grouping separator is missing.
+
+    ```js
+    oFloatFormat.parse("1234,567");       // 1234567
+    ```
+
+    > ### Note:  
+    > While the presence of a single grouping separator in combination with the absence of additional grouping separator\(s\) hints at a potential confusion with the decimal separator, the input is nevertheless accepted in this case. The reason for this is that UI5 validation would otherwise contradict the UI behavior implemented in classic SAP GUI applications.
+
+    For an option to bring UI5 validation even closer to the behavior of the classic SAP GUI, see *Strict Grouping Validation* below.
+
+-   At least 2 grouping separators are present in the input.
+
+    ```js
+    oFloatFormat.parse("1234,567,892");   // 1234567892
+    ```
+
+    **Assumption:** As more than one grouping separator was used and as decimal separators must only occur once, a mix-up of the separators can be ruled out.
+
+-   One decimal separator and at least one grouping separator are present in correct sequential order.
+
+    ```js
+    oFloatFormat.parse("1234,567.89");    // 1234567.89
+    ```
+
+    **Assumption:** As both separators are used in the expected order, a wrong usage is not likely.
+
+-   There are no decimal or grouping separators \(trivial as no misinterpretation possible\).
+
+    ```js
+    oFloatFormat.parse("1234567891");   // 1234567891
+    ```
+
+
+
+
+### Strict Grouping Validation \(optional\)
+
+For an even stricter parsing of number strings, you have the option of additionally enforcing **strict grouping validation** by setting the `strictGroupingValidation` format option to `true`.For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.core.format.NumberFormat).
+
+While grouping separators are then still treated as optional and can be wholly or partially absent from the input, all grouping separators that are present must be at a correct position according to the user's locale. Numbers with wrongly placed grouping separators are refused in all cases. This brings UI5 validation closer to the UI behavior implemented in classic SAP GUI applications.
+
+**Example:**
+
+```js
+// "NumberFormat" required from module "sap/ui/core/format/NumberFormat"
+var oOptions = {
+  groupingSeparator : ",",
+  decimalSeparator : ".",
+  groupingSize : 3,
+  strictGroupingValidation: true
+};
+var oFloatFormat = NumberFormat.getFloatInstance(oOptions);
+
+oFloatFormat.parse("1,2,3");       // NaN (before: 123)
 ```
 
 **Related Information**  

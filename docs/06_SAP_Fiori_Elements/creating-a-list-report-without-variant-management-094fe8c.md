@@ -10,7 +10,7 @@ The applications generated using the SAP Fiori elements includes the variant man
 
 ## Context
 
-Without variant management, and with no custom title added, your app looks as follows:
+Without variant management, and with no custom title added, your app appears as follows:
 
   
   
@@ -18,7 +18,7 @@ Without variant management, and with no custom title added, your app looks as fo
 
 ![](images/Creating_Apps_without_Variant_Management_8b85684.jpg "App without Variant Management")
 
-Without variant management and with a custom title added, your app looks like this:
+Without variant management and with a custom title added, your app appears as follows:
 
   
   
@@ -34,7 +34,7 @@ For more information, see [Managing Variants](managing-variants-8ce658e.md).
 
 <!-- task\_orp\_fsc\_mmb -->
 
-## SAP Fiori Elements for OData V2
+## **SAP Fiori Elements for OData V2**
 
 
 
@@ -42,10 +42,10 @@ For more information, see [Managing Variants](managing-variants-8ce658e.md).
 
 ## Procedure
 
-1.  Include the `variantManagementHidden` flag in the settings of the list report component in the `manifest.json` of your app.
+1.  Include the `variantManagementHidden` flag in the settings of the list report component in the `manifest.json` file of your app.
 
-    -   If you set the flag to `true`, then standard variant management is not available in the app. The app name is displayed instead.
-    -   If you set the flag to `false`, or if the flag is not in the manifest of the app, the standard variant management is available and can be enabled or disabled.
+    -   If you set the flag to `true`, then the standard variant management isn't available in the app. The app name is displayed instead.
+    -   If you set the flag to `false`, or if the flag is not configured in the `manifest.json` file of the app, the standard variant management is available and can be enabled or disabled.
 
     > ### Sample Code:  
     > List Report without Variant Management
@@ -70,7 +70,7 @@ For more information, see [Managing Variants](managing-variants-8ce658e.md).
     > 
     > ```
 
-2.  If you want to use an app-specific title instead of the variant, include the `subTitleIfVariantMgmtHidden` property in the i18n file and enter a text value as shown here:
+2.  If you want to use an app-specific title instead of the variant, include the `subTitleIfVariantMgmtHidden` property in the `i18n` file and enter a text value as shown in the following sample code:
 
     > ### Sample Code:  
     > ```json
@@ -79,52 +79,37 @@ For more information, see [Managing Variants](managing-variants-8ce658e.md).
     > subTitleIfVariantMgmtHidden = List Report Custom Title
     > ```
 
-3.  Add a new property in the `manifest.json` of the application as shown here.
+3.  Add a new property in the `manifest.json` file of the app as shown in the following sample code:
 
-    ```json
-    
-    "sap.ui.generic.app": {
-    
-            "_version":"1.1.0",
-    
-            "pages": [
-    
-                {
-    
-                    "entitySet": "XXXXXX_Product",
-    
-                    "component": {
-    
-                        "name": "sap.suite.ui.generic.template.ListReport",
-    
-                        "list": true,
-    
-                        "settings" : {
-    
-                            "gridTable" : false,
-    
-                            "multiSelect": false,
-    
-                            "smartVariantManagement": true,
-    
-                            "variantManagementHidden": true,
-    
-                            "subTitleIfVariantMgmtHidden": "{{subTitleIfVariantMgmtHidden}}" // Adding Custom Title here
-    
-                        }
-    
-                    },
-    ```
+    > ### Sample Code:  
+    > ```
+    > "sap.ui.generic.app": {
+    >         "_version":"1.1.0",
+    >         "pages": [
+    >             {
+    >                 "entitySet": "XXXXXX_Product",
+    >                 "component": {
+    >                     "name": "sap.suite.ui.generic.template.ListReport",
+    >                     "list": true,
+    >                     "settings" : {
+    >                         "gridTable" : false,
+    >                         "smartVariantManagement": true,
+    >                         "variantManagementHidden": true,
+    >                         "subTitleIfVariantMgmtHidden": "{{subTitleIfVariantMgmtHidden}}" // Adding Custom Title here
+    >                     }
+    >                 },
+    > 
+    > ```
 
     > ### Note:  
-    > `variantManagementHidden` must be used in combination with `smartVariantManagement = true` in order to hide both the page variant and control variant. If used alone, it only hides the filter bar variant.
+    > The `variantManagementHidden` property must be used in combination with `smartVariantManagement = true` to hide both the page variant and control variant. If used alone, it hides only the filter bar variant.
 
 
 <a name="task_ozn_qsc_mmb"/>
 
 <!-- task\_ozn\_qsc\_mmb -->
 
-## SAP Fiori Elements for OData V4
+## **SAP Fiori Elements for OData V4**
 
 
 
@@ -132,10 +117,10 @@ For more information, see [Managing Variants](managing-variants-8ce658e.md).
 
 ## Procedure
 
-1.  Include the `variantManagement` configuration in the settings of the list report target in the `manifest.json` of your app.
+1.  Include the `variantManagement` property in the settings of the list report target in the `manifest.json` file of your app.
 
-    -   If you set the configuration to `None`, then standard variant management is not available on the list report. The app name is displayed instead.
-    -   If you set the configuration to `Page` or `Control`, or if the configuration is not in the manifest of the app, the standard variant management is available. For more information, see [Managing Variants](managing-variants-8ce658e.md).
+    -   If you set the configuration to `None`, then the standard variant management is not available on the list report. The app name is displayed instead.
+    -   If you set the configuration to `Page` or `Control`, or if the configuration is not in the `manifest.json` file of the app, the standard variant management is available. For more information, see [Managing Variants](managing-variants-8ce658e.md).
 
     > ### Sample Code:  
     > List Report without Variant Management
@@ -160,7 +145,7 @@ For more information, see [Managing Variants](managing-variants-8ce658e.md).
     > 
     > ```
 
-2.  If you want to use an app-specific title instead of the variant, include the `subTitle` property in the i18n file and enter a text value as shown here:
+2.  If you want to use an app-specific title instead of the variant, include the `subTitle` property in the `i18n` file and enter a text value as shown in the following sample code:
 
     > ### Sample Code:  
     > ```json
@@ -169,7 +154,7 @@ For more information, see [Managing Variants](managing-variants-8ce658e.md).
     > appSubTitle = List Report Custom Title
     > ```
 
-3.  Add a new property in the `manifest.json` of the application as shown here.
+3.  Add a new property in the `manifest.json` file of your app as shown in the following sample code:
 
     > ### Sample Code:  
     > ```json

@@ -4,7 +4,7 @@
 
 The flexible column layout is a feature that can show two or three columns on a single page.
 
-For example, a list of items is shown in the first column, and when you choose an item to see its details, the related object page is shown in the second or third column. You can expand the column you want to focus on, switch between different layouts, and view the column on the right-hand side in -screen mode.
+For example, a list of items is shown in the first column, and when you choose an item to see its details, the related object page is shown in the second or third column. You can expand the column you want to focus on, switch between different layouts, and view the column on the right-hand side in full-screen mode.
 
 Use the following attributes to create the column layout you want:
 
@@ -39,22 +39,23 @@ Users can expand and collapse the columns using the focus buttons. They can chan
 
 <a name="loioe762257125b34513b0859faa1610b09e__section_e2b_ptj_3cc"/>
 
-## Enabling the Flexible Column Layout using SAP Fiori Tools
+## Enabling the Flexible Column Layout Using SAP Fiori Tools
 
-> ### Restriction:  
+> ### Remember:  
 > The flexible column layout isn't available for the overview page floorplan.
 
-1.  Launch the *Page Map*. You can launch the *Page Map* in several ways, for example by right-clicking the project folder and selecting*Show Page Map*. For more information, see [Define Application Structure](https://help.sap.com/docs/SAP_FIORI_tools/17d50220bcd848aa854c9c182d65b699/bae38e6216754a76896b926a3d6ac3a9.html).
+1.  Launch the *Page Map*. You can launch the *Page Map* in several ways, for example by right-clicking the project folder and selecting *Show Page Map*. For more information, see [Define Application Structure](https://help.sap.com/docs/SAP_FIORI_tools/17d50220bcd848aa854c9c182d65b699/bae38e6216754a76896b926a3d6ac3a9.html).
 
-2.  To select the Flexible Column Layout configuration, go to the *Property Panel* and select *Flexible Column Layout*.
-3.  Select your desired layout. You can select a layout for two or three columns. You can also customize your layout settings further in the`manifest.json` file. For more information, see the following section:
+2.  To select the flexible column layout configuration, go to the *Property Panel* and select *Flexible Column Layout*.
 
-    > ### Tip:  
-    > The following screenshot shows the flexible column layout property on a V2 application:
-    > 
-    > ![](images/Fiori_Tools_-_Business_Application_Studio_-_Flexible_Column_Layout_Property_1bba2f4.png)
+3.  Select your desired layout. You can select a layout for two or three columns. You can also customize your layout settings further in the `manifest.json` file. For more information, see [Additional Features in SAP Fiori Elements for OData V2](enabling-the-flexible-column-layout-e762257.md#loioe762257125b34513b0859faa1610b09e__section_grc_dmp_gmb).
+
+    The following screenshot shows the flexible column layout property in an application based on SAP Fiori elements for OData V2:
+
+    ![](images/Fiori_Tools_-_Business_Application_Studio_-_Flexible_Column_Layout_Property_1bba2f4.png)
 
 4.  To preview your chosen flexible column layout, see [Previewing an Application](https://help.sap.com/docs/SAP_FIORI_tools/17d50220bcd848aa854c9c182d65b699/b962685bdf9246f6bced1d1cc1d9ba1c.html).
+
 
 The following screenshot shows the flexible column layout in a previewed application:
 
@@ -73,7 +74,7 @@ The following screen recording shows how to enable the flexible column layout an
 > ### Note:  
 > -   For the overview page, the flexible column layout is not relevant.
 > 
-> -   The analytical list page only supports the `TwoColumnsBeginExpanded` layout. For more information, see also [2409984](https://me.sap.com/notes/2409984).
+> -   The analytical list page only supports the `TwoColumnsBeginExpanded` layout. For more information, see [2409984](https://me.sap.com/notes/2409984).
 > 
 > -   The flexible column layout can be used in draft and non-draft scenarios.
 > 
@@ -144,9 +145,9 @@ Usually, this setting is made on the main object page. After navigating from the
 
 ## Additional Features in SAP Fiori Elements for OData V4
 
-To enable the flexible column layout, add the `"rootView"` object to the manifest and create an entry in `manifest.json` under the routing key to specify the `"routerClass"`. It has to be set to `"sap.f.routing.Router"`. You must ensure that `"sap.f"` is added as a lib dependency under the `"sap.ui5"` key.
+To enable the flexible column layout, add the `"rootView"` object and create an entry in the `manifest.json` file under the routing key to specify the `"routerClass"`. It must be set to `"sap.f.routing.Router"`. You must ensure that `"sap.f"` is added as a lib dependency under the `"sap.ui5"` key.
 
-In `"routing.config"`, the optional `"flexibleColumnLayout"` object allows you to specify the default expansion of the columns to two columns and three columns layout.
+In `"routing.config"`, the optional `"flexibleColumnLayout"` object allows you to specify either two columns or three columns as the default layout.
 
 ```
 "sap.ui5":{
@@ -175,18 +176,18 @@ In `"routing.config"`, the optional `"flexibleColumnLayout"` object allows you t
 
 ### Routes Configuration
 
-The route target leads to an array instead of a single element in the usual fullscreen application. The pattern key format describes the pattern to be matched from a navigation to identify the route, but it must end with an optional query parameter `:?query:`so as to add the pattern.
+The route target leads to an array instead of a single element in the usual full-screen application. The pattern key format describes the pattern to be matched from a navigation to identify the route, but it must end with an optional query parameter `:?query:` so as to add the pattern.
 
-The following keys should be set:
+You must set the following keys:
 
 -   `name`: Unique identifier of the current route
 
--   `target`: Array listing the targets that will be displayed
+-   `target`: Array listing the targetsto be displayed
 
 
 You can enable the flexible column layout and define the number of columns in the layout by configuring the `target` key in the `manifest.json` file.
 
-The following sample code shows a 3-column layout that starts from the list report:
+The following sample code shows a 3-column layout that starts with a list report:
 
 > ### Sample Code:  
 > ```
@@ -224,7 +225,7 @@ The following sample code shows a 3-column layout that starts from the list repo
 > 	]
 > ```
 
-The following sample code shows a 2-column layout that starts from the object page:
+The following sample code shows a 2-column layout that starts with an object page:
 
 > ### Sample Code:  
 > ```
@@ -257,17 +258,17 @@ The following sample code shows a 2-column layout that starts from the object pa
 
 ### Target Configuration
 
-For each target, the following keys should be set:
+You must set the following keys for each target::
 
 -   `type`: Component
 
 -   `id`: unique identifier for the current target
 
--   `name`: name of the template to be use by the view
+-   `name`: name of the template to be used by the view
 
-    -   `sap.fe.templates.ListReport` should be used for the first level \(landing view\)
+    -   `sap.fe.templates.ListReport` must be used for the first level \(landing view\)
 
-    -   `sap.fe.templates.ObjectPage` should be used for any sub-sequent level
+    -   `sap.fe.templates.ObjectPage` must be used for any subsequent level
 
 
 -   `controlAggregation`: specify where the view should be located
@@ -281,76 +282,71 @@ For each target, the following keys should be set:
 
 -   `contextPattern`: navigation path of the current target
 
--   All other keys remain unchanged compared the fullscreen applications
+-   All other keys remain unchanged compared the full-screen applications
 
 
 > ### Sample Code:  
 > ```
 > "targets": {
->      	"SalesOrderManageList": {
->         	"type": "Component",
+>         "SalesOrderManageList": {
+>             "type": "Component",
 >             "id": "SalesOrderManageList",
 >             "name": "sap.fe.templates.ListReport",
 >             "controlAggregation": "beginColumnPages",
 >             "contextPattern": "",
->              "options": {
-> 				...
-> 				// Same as fullscreen  //
-> 				...
->              }
->          },
->          "SalesOrderManageObjectPage": {
->           	"type": "Component",
+>             "options": {
+>                         ...
+>                      // Same as fullscreen  //
+>                         ...
+>             }
+>         },
+>         "SalesOrderManageObjectPage": {
+>             "type": "Component",
 >             "id":  "SalesOrderManageObjectPage",
 >             "name": "sap.fe.templates.ObjectPage",
 >             "controlAggregation": "midColumnPages",
 >             "contextPattern": "/SalesOrderManage({key})",
 >             "options": {
->                 ...
-> 				// Same as fullscreen  //
-> 				...
->              }
->          },
->          "SalesOrderItemObjectPage": {
->          	"type": "Component",
+>                         ...
+>                      // Same as fullscreen  //
+>                         ...
+>             }
+>         },
+>         "SalesOrderItemObjectPage": {
+>             "type": "Component",
 >             "id":  "SalesOrderItemObjectPage",
 >             "name": "sap.fe.templates.ObjectPage",
 >             "controlAggregation": "endColumnPages",
 >             "contextPattern": "/SalesOrderManage({key})/_Item({key2})",
 >             "options": {
->                 ...
-> 				// Same as fullscreen  //
-> 				...
+>                         ...
+>                      // Same as fullscreen  //
+>                         ...
 >             }
->          },
-> 		 "MaterialDetailsObjectPage": {
->          	"type": "Component",
+>         },
+>         "MaterialDetailsObjectPage": {
+>             "type": "Component",
 >             "id":  "MaterialDetailsObjectPage",
 >             "name": "sap.fe.templates.ObjectPage",
 >             "controlAggregation": "endColumnPages",
 >             "contextPattern": "/SalesOrderManage({key})/_Item({key2})/_MaterialDetails({key3})",
->              "options": {
->              	...
-> 				// Same as fullscreen  //
-> 				...
+>             "options": {
+>                          ...
+>                       // Same as fullscreen  //
+>                          ...
 >             }
->          },
-> 		 ...
-> 	}
+>         },
+>         ...
+>     }
+> 
 > ```
 
 > ### Restriction:  
-> -   In edit mode on an object page, when you add a column to a table or remove it, the subobject page closes automatically.
+> -   In edit mode on an object page, the subobject page closes automatically when you add or remove a column from a table.
 > 
 > -   If you have a list report or an object page with multiple tables that are based on the same entity, only the first table is synchronized with its associated subobject page.
 > 
 > -   When you update a multi-input field on an object page, you need to first refresh the parent page \(either an object page or a list report\) before the changes are visible.
-
-
-
-<a name="loioe762257125b34513b0859faa1610b09e__section_gwt_f4f_4cc"/>
-
-## Related Links
-
-For more information on the `loadFragment` method, see [EditFlow](https://ui5.sap.com/#/api/sap.fe.core.ExtensionAPI%23overview) in the Demo Kit.
+> 
+> -   In the flexible column layout, a tree table cannot be displayed on the list report with a draft-enabled service.
 

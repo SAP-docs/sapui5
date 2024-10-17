@@ -22,6 +22,12 @@ SAP Fiori elements for OData V4 supports displaying a tree table on the list rep
 -   Extension points are the same as for the object page.
 
 
+> ### Note:  
+> When switching between edit mode and display mode, the expansion state of a tree table in an object page is not kept.
+
+> ### Restriction:  
+> A tree table cannot be displayed on the list report with a draft-enabled service in the flexible column layout.
+
 
 
 <a name="loio7cf7a31fd1ee490ab816ecd941bd2f1f__section_kmb_mld_gbc"/>
@@ -156,9 +162,11 @@ The following screenshot shows an example of the outcome. Under an "Intermediary
 
 <a name="loio7cf7a31fd1ee490ab816ecd941bd2f1f__section_ak5_szn_tbc"/>
 
-## Create at a Position Calculated by the Back End
+## Create at a Position Calculated by the Back-End Server
 
-By default, a new node is always displayed as the first child below its parent. You can use the `createInPlace` option to place the new node in its correct position calculated by the back end. If the new node cannot be visualized due to the filter criteria applied to the table, a message toast is displayed to the end user.
+By default, a newly created node is always displayed as the first child below its parent even if a sort or a filter is applied to the table.
+
+You can use the `createInPlace` option to place the new node in its real position below its parent which depends on the sort applied to the table and the back-end server logic. If the new node cannot be visualized due to the filter criteria applied to the table, a message toast is displayed to the end user.
 
 > ### Note:  
 > In the flexible column layout, when using both the `NewPage` and `createInPlace` options of the `createMode` property, the new entry is shown \(for example, in a subobject page\), but no message toast is displayed if it cannot be shown on the object page due to the applied filter criteria.
@@ -196,6 +204,14 @@ By default, a new node is always displayed as the first child below its parent. 
 Drag and drop actions are supported by SAP Fiori elements for OData V4 as of SAPUI5 1.124.
 
 Drag and drop between siblings is supported if the `ChangeNextSiblingAction` term is defined in the `RecursiveHierarchyActions` annotation. When using the ABAP RESTful Application Programming Model \(RAP\), this annotation is not set for root entities. Hence, drag and drop between siblings is not supported in the list report.
+
+If a node is dropped onto the empty area on the right-hand side of a table, the node is promoted to a root node. In the following example, dropping the "Canada" node onto the highlighted area turns it into a root node, that is, a sibling to the "Europe North" and "America North" nodes.
+
+  
+  
+**Dropping a Node onto the Empty Right-Hand Side of a Table**
+
+![](images/Dropping_a_Node_onto_the_Empty_Right-Hand_Side_of_a_Table_d74fc6f.png "Dropping a Node onto the Empty Right-Hand Side of a Table")
 
 You can use two extensions to control the behavior of drag and drop:
 
@@ -360,6 +376,49 @@ You can disable drag and drop as well as cut and paste to restrict changes in th
 >   }
 >  
 >   annotate TreeTableSubEntityWithUpdateRestriction with @(Capabilities: {UpdateRestrictions: {NonUpdatableNavigationProperties: [Superordinate]}});
+> ```
+
+
+
+<a name="loio7cf7a31fd1ee490ab816ecd941bd2f1f__section_lyz_f3w_rcc"/>
+
+## Disabling the Reordering of Root Nodes
+
+You can prevent users from changing the order of root nodes by using the [`ChangeSiblingForRootsSupported`](https://github.com/SAP/odata-vocabularies/blob/main/vocabularies/Hierarchy.xml#L201) annotation.
+
+If `ChangeSiblingForRootsSupported` is set to `false`, users can't do the following actions:
+
+-   move a root node up or down
+
+-   drop a node as a root node between two other root nodes
+
+
+If no specific restrictions have been set for an action, the following actions are supported:
+
+-   cutting a root node
+
+-   pasting a node as a root node
+
+-   dragging a root node
+
+-   dropping a node as a root node at the beginning or end of the table or onto the right-hand side of the table
+
+
+If `ChangeSiblingForRootsSupported` is not defined, it is considered as set to `true`.
+
+> ### Sample Code:  
+> XML Annotation
+> 
+> ```xml
+> <Annotations Target="SAP__self.P_SADL_HIER_DRAFTType">
+> <Annotation Term="SAP__hierarchy.RecursiveHierarchyActions" Qualifier="NodesHierarchy">
+>       <Record>
+>            <PropertyValueProperty="ChangeNextSiblingAction"String="com.sap.gateway.srvd.zjb_sadl_rs_hier_dir_d_sd.v0001.changeNextSibling"/>
+>            <PropertyValueProperty="CopyAction"String="com.sap.gateway.srvd.zjb_sadl_rs_hier_dir_d_sd.v0001.copy"/>
+>            <PropertyValueProperty="ChangeSiblingForRootsSupported"Bool="false"/>
+>      </Record>
+> </Annotation>
+> </Annotations>
 > ```
 
 

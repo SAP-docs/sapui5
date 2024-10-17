@@ -7,15 +7,15 @@ If a user changes the content of a field or performs another activity, this chan
 Side effects are performed in the back end. However, you need to annotate the side effects implemented in the back end using side effect annotations to "inform" the front end which fields on the UI are influenced by a change, so that the front end can request new data for these fields. Otherwise, the UI may still display outdated data.
 
 > ### Note:  
-> Default side effects are relevant for most apps. You do not need to annotate these side effects. They are available by default, and cannot be switched off.
+> Default side effects are relevant for most apps. You do not need to annotate these side effects. They are available by default and cannot be switched off.
 
 
 
+<a name="loio18b17bdd49d1436fa9172cbb01e26544__section_zkt_rsg_2nb"/>
 
+## Default Side Effects
 
-### Default Side Effects
-
-The following side effects are available in SAP Fiori elements by default.
+The following side effects are available in SAP Fiori elements by default:
 
 
 <table>
@@ -34,7 +34,7 @@ Side Effect
 <tr>
 <td valign="top">
 
-Creating a new entity/draft version, either in the list report or on the object page
+Creating a new entity or draft version, either in the list report or on the object page
 
 </td>
 <td valign="top">
@@ -103,7 +103,7 @@ After executing an action successfully, the collection for which the action is d
 
 -   The action is a bound action.
 
--   The returned instance does not correspond to the bound instance. For example, copy actions.
+-   The returned instance does not correspond to the bound instance. This applies to copy actions, for example.
 
 > ### Note:  
 > You can annotate side effects on actions.
@@ -116,7 +116,9 @@ After executing an action successfully, the collection for which the action is d
 
 
 
-### Side Effect Annotation Format
+<a name="loio18b17bdd49d1436fa9172cbb01e26544__section_w2d_vff_vcc"/>
+
+## Side Effect Annotation Format
 
 A side effect annotation includes the following elements:
 
@@ -128,12 +130,13 @@ A side effect annotation includes the following elements:
 
     > ### Note:  
     > The `TriggerAction` replaces the `PreparationAction` property that is deprecated as of the SAPUI5 1.87 release.
+    > 
+    > The `EffectTypes` property is deprecated as of SAPUI5 1.84 release.
 
 
-> ### Note:  
-> Side effects types are deprecated as of SAPUI5 1.84 release.
 
-**Side Effect Annotation Properties** 
+
+### Side Effect Annotation Properties
 
 The following side effect annotations are supported:
 
@@ -147,10 +150,10 @@ The following side effect annotations are supported:
 
     -   When you modify the source property and move the focus away from the source, the side effect is triggered.
 
-    -   When you modify the virtual field group and move the focus away from the virtual field group, the side effect is triggered immediately, if there is no `TriggerAction` configured in the side effect annotation. However, if the focus is changed to a control within the same virtual field group, then the side effect is not triggered.
+    -   When you modify the virtual field group and move the focus away from the virtual field group, the side effect is triggered immediately if there is no `TriggerAction` configured in the side effect annotation. However, if the focus is changed to a control within the same virtual field group, then the side effect is not triggered.
 
 
-    > ### Note:  
+    > ### Restriction:  
     > You cannot use navigation properties as source properties.
 
 -   **Source entities**
@@ -161,8 +164,8 @@ The following side effect annotations are supported:
 
     In SAP Fiori elements for OData V4: Any kind of navigation property \(1:1 or 1:n\) can be specified as the source entity,
 
-    > ### Note:  
-    > You cannot specify a 1:1 association or an empty target, for example, `NavigationPropertyPath` to ensure that the whole entity is considered as the source.
+    > ### Caution:  
+    > You cannot specify a 1:1 association or an empty target, such as `NavigationPropertyPath`, to ensure that the whole entity is considered as the source.
 
     The side effect is triggered when structural changes are made \(adding or deleting an item\). The side effect is not triggered if a property of any entity is changed. This needs to be done in the entity type of the associated entity.
 
@@ -179,7 +182,11 @@ The following side effect annotations are supported:
     If a trigger action is defined but the `TargetProperties` or `TargetEntities` are not defined, then only the trigger action is called.
 
 
-**Scenarios Where Side Effects Cannot be Triggered** 
+
+
+<a name="loio18b17bdd49d1436fa9172cbb01e26544__section_yqw_b3g_vcc"/>
+
+## Scenarios Where Side Effects Cannot Be Triggered
 
 As a general rule, no data is sent to the back end until the UI validation errors are solved. This means that the side effect is not triggered when there are validation errors related to the source property or a set of properties.
 
@@ -239,7 +246,7 @@ You can define side effects either in the back end or in local annotation files.
 
 -   **Target Entities**
 
-    For 1:n, the request is not sent via the binding of the table. This means that no paging is considered. Therefore, 1:n should be used carefully.
+    For 1:n, the request is not sent by the binding of the table. This means that paging is not considered. Therefore, 1:n should be used carefully.
 
 -   **Side effect without a specific source**
 
@@ -265,7 +272,7 @@ You can define side effects either in the back end or in local annotation files.
 
 In SAP Fiori elements for OData V4, you can define side effects on unbound actions. As these actions are not bound to a context, the definition must use an absolute path.
 
-As shown in the following code sample, this allows you to influence all the entities of a list when completing an unbound action, refreshing the entire entity list.
+This allows you to influence all the entities of a list when completing an unbound action, refreshing the entire entity list, as shown in the following sample code:
 
 > ### Sample Code:  
 > XML Annotation
@@ -358,12 +365,10 @@ As shown in the following code sample, this allows you to influence all the enti
 
 The list is refreshed if a 1:n association is mentioned as a target entity.
 
-You can also specify absolute paths, that is paths starting with the entity container. They can be defined as `TargetEntities` to refresh complete entity sets in the list report.
+You can also specify absolute paths, that is, paths starting with the entity container. They can be defined as `TargetEntities` to refresh complete entity sets in the list report.
 
 > ### Example:  
 > `<NavigationPropertyPath>/namespace.to.EntityContainer/EntityType</NavigationPropertyPath>`
-
-For more information, see the section *Example: Side effect after executing an action* in the topic [Side Effect Annotations: Examples](side-effect-annotations-examples-61cf21d.md).
 
 
 
@@ -373,7 +378,7 @@ Value lists are cached during runtime for better performance. Define an absolute
 
 -   If you are using a value list referring to transactional data
 
--   If you expect the values list to change due to actions or changes made by users
+-   If you expect the value list to change due to actions or changes made by users
 
 
 You can find an example in the following sample code:
@@ -397,6 +402,49 @@ You can find an example in the following sample code:
 >      </Record>
 > </Annotation>
 > ```
+
+
+
+### Side Effects for Extension Fields in Forms
+
+SAP Fiori elements for OData V4 supports executing side effects when using custom extension fields in a form if the source properties of a side effect contain the property used in an extension field. To enable side effects for extension fields, specify the property used in the extension field in the `manifest.json` file with the `property` key.
+
+In the following example, the side effects with `NameProperty` as a source property are executed:
+
+> ### Sample Code:  
+> `manifest.json`
+> 
+> ```json
+> "targets": {
+>     "MyObjectPage": {
+>         "type": "Component",
+>         "id": "Default",
+>         "name": "sap.fe.templates.ObjectPage",
+>         "viewLevel": 1,
+>         "options": {
+>             "settings": {
+>                 "contextPath": "/RootEntity",
+>                 "editableHeaderContent": true,
+>                 "controlConfiguration": {
+>                     "@com.sap.vocabularies.UI.v1.Identification": {
+>                         "fields": {
+>                             "customFormElementIdentification1": {
+>                                 "template": "sap.fe.core.fpmExplorer.customFormElementContent.CustomFormElement1",
+>                                 "label": "Custom FormElement 1",
+>                                 "property": "NameProperty"
+>                             }
+>                         }
+>                     }
+>                 }
+>             }
+>         }
+>     }
+> }
+> ```
+
+Side effects are executed when the focus moves away from the extension field.
+
+Check out our live example in the flexible programming model explorer at [Extension Points - Custom Form Element](https://latest.testapp.sapfe.c.eu-de-2.cloud.sap/test-resources/sap/fe/core/fpmExplorer/index.html#/customElements/customFormElementContent).
 
 **Related Information**  
 

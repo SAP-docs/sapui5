@@ -10,50 +10,9 @@ You can set up various aspects of the list report table through annotations and 
 
 ## Displaying the Editing Status
 
-In draft-enabled applications, the **Draft**, **Unsaved Changes by Another User**, and **Locked by Another User** statuses are displayed in the list report. In the responsive table, the statuses are shown in the key column. In the grid table, the statuses are shown in a separate column next to the key column. You can add the semantic key as shown in the following sample code:
+In draft-enabled applications, the **Draft**, **Unsaved Changes by Another User**, and **Locked by Another User** statuses are displayed in the list report. In the responsive table, the statuses are displayed in the key column. In the grid table, the statuses are displayed in a separate column next to the key column.
 
-> ### Sample Code:  
-> XML Annotation
-> 
-> ```xml
-> <Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="STTA_PROD_MAN.STTA_C_MP_ProductType">
->     <Annotation Term="Common.SemanticKey">
->         <Collection>
->             <PropertyPath>ProductForEdit</PropertyPath>
->         </Collection>
->     </Annotation>
-> </Annotations>
-> 
-> ```
-
-> ### Sample Code:  
-> ABAP CDS Annotation
-> 
-> ```
-> 
-> @ObjectModel: {
->   semanticKey: [ 'ProductForEdit' ]
-> }
-> 
-> define view C_MP_PRODUCT {
-> 
-> }
-> ```
-
-> ### Sample Code:  
-> CAP CDS Annotation
-> 
-> ```
-> 
-> annotate STTA_PROD_MAN.STTA_C_MP_ProductType @(
->   Common.SemanticKey : [ ProductForEdit ]
-> );
-> ```
-
-> ### Note:  
-> This setting is only available for the default `DataField`.
-
-For more information, see [Editing Status](editing-status-668ea18.md).
+For more information, see [Editing Status](editing-status-668ea18.md) and [Handling Semantic Key Fields](handling-semantic-key-fields-aa2793c.md).
 
 
 
@@ -67,12 +26,4 @@ If you'ven't added a semantic key to the line items, the editing status is displ
 
 -   If no semantic key annotation is available, the system checks whether the `headerInfo/Title/Value/Path` is available under the `LineItem` annotation.
 
-
-
-
-<a name="loio4c2d17aec55b4162b19f1b573b5a4f99__section_un3_nzb_2nb"/>
-
-## More Information
-
-For more information, see [`SemanticKey`](https://ui5.sap.com/#/api/sap.ui.comp.smarttable.SmartTable/Annotations/SemanticKey).
 

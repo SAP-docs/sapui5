@@ -328,7 +328,7 @@ You can define side effects either in the \*`MPC_EXT` class or in the local anno
 
 Check out our live example in the flexible programming model explorer at [Side Effects](https://ui5.sap.com/test-https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/advancedFeatures/guidanceSideEffects).
 
-You can use the BO property`messages` as targets for side effects. All messages stored in `reported` are reloaded when the side effect is triggered.
+You can use the BO property `messages` as targets for side effects. All messages stored in `reported` are reloaded when the side effect is triggered.
 
 > ### Sample Code:  
 > ABAP CDS Annotation
@@ -357,6 +357,4 @@ The following sample code shows you an example with actions, multiple targets, a
 >     determine action updateTimes executed on entity _Child affects field TotalPieces;
 >   }
 > ```
-
-> ### Example:  
 

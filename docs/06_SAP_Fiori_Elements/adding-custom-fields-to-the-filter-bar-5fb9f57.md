@@ -171,7 +171,7 @@ You can configure the `FilterBar` in the controller extension locally using the 
 >                                         "MyCustomRatingThing": {
 >                                             "label": "{i18n>CustomRatingFilter}",
 >                                             "property": "Rating",
-> "availability": "Default",
+>                                             "availability": "Default",
 >                                             "template": "SalesOrder.ext.CustomRatingFilter",
 >                                             "required": true,
 >                                             "position": {
@@ -191,21 +191,20 @@ You can configure the `FilterBar` in the controller extension locally using the 
 You can use the `filterFields` setting to add custom filters. The pattern looks like this:
 
 > ### Sample Code:  
-> `manifest.json`
+> manifest.json
 > 
-> ```json
-> "": {
-> "label": , // static string or i18n binding, e.g. "MyText" or "{i18n>MyCustomLabel}"
-> "property": , // the full path to the property to be filtered, e.g. "Rating" or "_Partner/Rating"
-> "template": , // the path to the Xml Template containing the filter control, e.g. "SalesOrder.ext.CustomRatingFilter"
-> "required": (false) | true, // filter field is (not) mandatory, i.e. it requires a value
-> "availability": "Default" | "Hidden" | "Adoption", //Toggling visibility of the filter. Adoption = shown in Adapt filters dialog
-> "position": {
-> "placement": "Before"|"After",
-> "anchor": "<Key_of_filter_field>" // for annotation based filterfields, the property is the key, e.g. "SalesOrder", "_Patner::FullName" (slashes are replaced by ::)
+> ```
+> "<filterField>": {
+>    "label": , // static string or i18n binding, e.g. "MyText" or "{i18n>MyCustomLabel}"
+>    "property": , // the full path to the property to be filtered, e.g. "Rating" or "_Partner/Rating"
+>    "template": , // the path to the Xml Template containing the filter control, e.g. "SalesOrder.ext.CustomRatingFilter"
+>    "required": false | true, // determines if the filter field is mandatory or not, i.e. if it requires a value for filtering to be triggered; Default value = false.
+>    "availability": "Default" | "Hidden" | "Adaptation", //Toggling visibility of the filter field. Default = shown in filter bar; Adaptation = shown in Adapt Filters dialog; Hidden = Neither shown in filter bar nor within Adapt Filters dialog
+>    "position": {
+>       "placement": "Before"|"After",
+>       "anchor": "<Key_of_filter_field>" // for annotation based filter fields, the property is the key, e.g. "SalesOrder", "_Partner::FullName" (slashes are replaced by ::)
+>    }
 > }
-> }
-> 
 > ```
 
 

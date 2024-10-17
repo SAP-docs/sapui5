@@ -240,3 +240,39 @@ You can change the default *Select All* feature in both layouts by setting `sele
 > 
 > In responsive tables, if you choose the *Select All*, checkbox, only the loaded data is selected. A message toast showing the number of selected records is displayed.
 
+
+
+### Limiting the Number of Selected Rows in a Table
+
+You can configure the `selectionLimit` setting in the `manifest.json` file to limit the number of rows selected at once in the table.
+
+If `selectionLimit` isn't configured, then the default value is set as 200.
+
+This option is applicable only to grid tables, tree tables, and analytical tables.
+
+> ### Sample Code:  
+> manifest.json
+> 
+> ```
+> "SalesOrderManageObjectPage":{
+>       "type":"Component",
+>       "id":"SalesOrderManageObjectPage",
+>       "name":"sap.fe.templates.ObjectPage",
+>       "options":{
+>          "settings":{
+>             "contextPath":"/SalesOrderManage",
+>             "sectionLayout":"Tabs",
+>             "controlConfiguration":{
+>                "_Item/@com.sap.vocabularies.UI.v1.LineItem":{
+>                   "tableSettings":{
+>                      "type":"GridTable",
+>                      "selectionMode":"Multi",
+>                      "selectionLimit": "50"
+>                   }
+>                }
+>             }
+>          }
+>       }
+>    }
+> ```
+

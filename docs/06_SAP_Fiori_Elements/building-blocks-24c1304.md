@@ -34,3 +34,11 @@ The building blocks provide a unified interface that creates an abstraction from
 
 For more information about building blocks as part of the flexible programming model, see [Flexible Programming Model](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/overview/introduction).
 
+
+
+<a name="loio24c1304739dd4f19af0ce2482c4d9bbe__section_gwt_f4f_4cc"/>
+
+## Related Information
+
+For more information about the `loadFragment` method, see [EditFlow](https://ui5.sap.com/#/api/sap.fe.core.ExtensionAPI%23overview) in the Demo Kit.
+

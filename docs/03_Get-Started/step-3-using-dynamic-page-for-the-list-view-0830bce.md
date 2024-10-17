@@ -64,26 +64,10 @@ You can view and download all files at [Flexible Column Layout App - Step 3](htt
 
 First, we add the `sap.m` library as a dependency in the `manifest.json`.
 
+> ### Note:  
+> We also need to modify the `ui5.yaml` file located in the root folder by adding the `sap.m` and `sap.f` libraries as a dependency. For more information, see the section about UI5 tooling in [The UI5 Ecosystem](../02_Read-Me-First/the-ui5-ecosystem-b72ccb5.md#loiob72ccb50eda94ac9b9be454a03ca4213).
 
 
-<a name="loio0830bce271bf42d98c2740bed43d435d__section_ddz_pjj_l4b"/>
-
-## ui5.yaml \[MODIFY\]
-```yaml
-specVersion: "3.0"
-metadata:
-  name: tutorial.fiori2
-type: application
-framework:
-  name: OpenUI5
-  version: "1.125.0"
-  libraries:
-    - name: sap.ui.core
-    - name: sap.m    
-    - name: sap.f
-    - name: themelib_sap_horizon
-```
-we add the `sap.m` and `sap.f` library as a dependency in the `ui5.yaml`.
 
 <a name="loio0830bce271bf42d98c2740bed43d435d__section_ddz_pjj_l4b"/>
 

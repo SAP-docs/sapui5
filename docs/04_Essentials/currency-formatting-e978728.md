@@ -70,7 +70,9 @@ oCurrencyFormat.parse("EUR 12,345.678"); // output: [12345.678, "EUR"]
 
 ```
 
-For more information, see [parse](https://ui5.sap.com/#/api/sap.ui.core.format.NumberFormat/methods/parse)
+For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.core.format.NumberFormat/methods/parse).
+
+For information on the validation of parsed numerical input, see [Parsing](number-format-91f2f28.md#loio91f2f2866f4d1014b6dd926db0e91070__section_NFP).
 
 
 

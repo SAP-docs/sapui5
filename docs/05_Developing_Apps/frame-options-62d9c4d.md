@@ -2,9 +2,18 @@
 
 # Frame Options
 
-`frame-options` is used to prevent security vulnerabilities like clickjacking. With the `frame-options` configuration you define whether SAPUI5 is allowed to run embedded in a frame or only from trusted origins or not at all.
+The `frame-options` configuration of SAPUI5 is a client-side feature that is used to prevent security vulnerabilities like clickjacking, that is, situations where a user could be misled to use the targeted application unintentionally.
 
-SAPUI5 provides the following configuration options for `frame-options`:
+> ### Note:  
+> SAPUI5's `frame-options` configuration is **not** the same as the `X-Frame-Options` HTTP response header.
+> 
+> **SAPUI5's `frame-options`** is a front-end JavaScript feature that supports all browsers in the UI5 compatibility list. When set to `"deny"` or `"trusted"`, it places an invisible block layer over the page, preventing user interaction by disabling event propagation, e.g. for mouse and keyboard events. However, the page content remains visible.
+> 
+> In contrast, the **`X-Frame-Options` header** is a back-end feature sent via HTTP response headers. It prevents the page from loading at the browser level if framing is not allowed. Although it supports `DENY` and `SAMEORIGIN`, it lacks comprehensive support for `ALLOW-FROM`, which is now deprecated in most browsers. This header must be set by the back end and may not be fully supported by all browsers.
+> 
+> Additionally, the more recent **Content-Security-Policy \(CSP\) header**, also sent by the back end, includes the `frame-ancestors` directive, which provides better control over trusted sites and should be preferred over `X-Frame-Options` for embedding restrictions.
+
+SAPUI5 provides the following configuration options for `frame-options` to specify whether the target application is allowed to be used if it's embedded in a separate frame:
 
 
 <table>
@@ -28,7 +37,7 @@ Description
 <tr>
 <td valign="top">
 
-allow
+`"allow"` 
 
 </td>
 <td valign="top">
@@ -38,14 +47,14 @@ X
 </td>
 <td valign="top">
 
-Allows to be embedded from all origins
+Allows interaction with the application regardless of the origin of the parent frame.
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-deny
+`"deny"` 
 
 </td>
 <td valign="top">
@@ -55,14 +64,14 @@ deny
 </td>
 <td valign="top">
 
-Denies to be embedded from all origins
+Denies interaction with the application.
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-trusted
+`"trusted"` 
 
 </td>
 <td valign="top">
@@ -72,7 +81,7 @@ trusted
 </td>
 <td valign="top">
 
-Allows to be embedded from trusted origins according to the same-origin policy and to be embedded to origins allowed by the allowlist service
+Allows interaction only if the application is embedded from trusted origins according to the same-origin policy and from origins allowed by the allowlist service.
 
 </td>
 </tr>
@@ -122,7 +131,7 @@ Description
 </td>
 <td valign="top">
 
-Function that is called with the success state
+Function that is called with the success state.
 
 > ### Note:  
 > The function can be synchronously called from the SAPUI5 bootstrap script. The DOM \(`document.body`\) may not be accessible.
@@ -149,7 +158,7 @@ Function that is called with the success state
 </td>
 <td valign="top">
 
-After the delay, the page remains blocked and the provided callback is invoked \(milliseconds\)
+After the delay, the page remains blocked and the provided callback is invoked \(milliseconds\).
 
 </td>
 </tr>
@@ -171,7 +180,7 @@ After the delay, the page remains blocked and the provided callback is invoked \
 </td>
 <td valign="top">
 
-Defines whether keyboard, mouse and touch events are blocked
+Defines whether keyboard, mouse, and touch events are blocked.
 
 </td>
 </tr>
@@ -193,7 +202,7 @@ Defines whether keyboard, mouse and touch events are blocked
 </td>
 <td valign="top">
 
-Defines whether an invisible block layer is rendered to prevent interaction with the UI
+Defines whether an invisible block layer is rendered to prevent interaction with the UI.
 
 </td>
 </tr>
@@ -215,7 +224,7 @@ Defines whether an invisible block layer is rendered to prevent interaction with
 </td>
 <td valign="top">
 
-Defines whether same origin domains are allowed or not
+Defines whether same origin domains are allowed.
 
 </td>
 </tr>
@@ -248,20 +257,21 @@ Contains the domain allowlist, for example `[".example.com"]`, `["hana.ondemand.
 
 
 
-## Example: `deny`
+## Example: `"deny"`
 
-If the application is not intended to run in a frame, set `frame-options` to `deny`:
+If the application is not intended to run in a frame, set `frame-options` to `"deny"`:
 
 ```html
-<script id='sap-ui-bootstrap'
-    src='resources/sap-ui-core.js'
-    data-sap-ui-frame-options='deny'>
+<script id="sap-ui-bootstrap"
+    src="resources/sap-ui-core.js"
+    data-sap-ui-frame-options="deny"
+    data-sap-ui-...="...">
 </script>
 ```
 
 
 
-## Example: `trusted` with `callback` 
+## Example: `"trusted"` with `callback` 
 
 To restrict the embedding to same-origin domains, set `frame-options` to `trusted`. The `callback` in the following code sample is called with a boolean as success state and can be used to implement an application-specific behavior.
 
@@ -281,8 +291,9 @@ globalThis["sap-ui-config"] = {
     }
 };
 </script>
-<script id='sap-ui-bootstrap'
-    src='resources/sap-ui-core.js'>
+<script id="sap-ui-bootstrap"
+    src="resources/sap-ui-core.js"
+    data-...="...">
 </script>
 ```
 
@@ -308,8 +319,9 @@ globalThis["sap-ui-config"] = {
     }
 };
 </script>
-<script id='sap-ui-bootstrap'
-    src='resources/sap-ui-core.js'>
+<script id="sap-ui-bootstrap"
+    src="resources/sap-ui-core.js"
+    data-...="...">
 </script>
 ```
 
@@ -317,12 +329,13 @@ globalThis["sap-ui-config"] = {
 
 ## Example: Allowlist Service via `<meta>` Tag
 
-Alternatively, a `<meta>` tag can be used to configure the `sap-allowlist-service` and set the `sap-ui-frame-options` to `trusted`. This only applies if the `allowlist-service` or `frame-options` configuration is not set otherwise according to the [Configuration of the SAPUI5 Runtime](../04_Essentials/configuration-of-the-sapui5-runtime-91f08de.md).
+Alternatively, a `<meta>` tag can be used to configure the `sap-allowlist-service` and set the `sap-ui-frame-options` to `"trusted"`. This only applies if the `allowlist-service` or `frame-options` configuration is not set otherwise according to the [Configuration of the SAPUI5 Runtime](../04_Essentials/configuration-of-the-sapui5-runtime-91f08de.md).
 
 ```html
 <meta name="sap-allowlist-service" content="url/to/allowlist/service" />
-<script  id='sap-ui-bootstrap'
-    src='resources/sap-ui-core.js'>
+<script  id="sap-ui-bootstrap"
+    src="resources/sap-ui-core.js"
+    data-...="...">
 </script>
 ```
 

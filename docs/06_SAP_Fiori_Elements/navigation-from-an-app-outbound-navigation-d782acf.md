@@ -342,6 +342,76 @@ You can also hide the intent-based navigation button by using `UI.Hidden` agains
 
 
 
+### Navigation Using a Link
+
+If a semantic object is configured for a property, the value of this property is passed within the semantic object in the navigation context. For example, if the property is `SoldToParty` with the value `001` and the `SemanticObject` is `Customer`, then the navigation context will have `Customer` with the value `001`.
+
+To achieve this mapping of a property value to semantic object use the `SemanticObject` annotation.
+
+> ### Sample Code:  
+> XML Annotation
+> 
+> ```
+> <Annotations Target="com.c_salesordermanage_sd.defaultParamsForSalesOrderCreate/SoldToParty">
+>       <Annotation Term="Common.SemanticObject" String="Customer"/>
+> </Annotations>
+> ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> No ABAP CDS annotation sample is available. Please use the local XML annotation.
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> SoldToParty : String(10) @(Common : { 
+>     SemanticObject                : 'Customer'
+> });
+> ```
+
+To achieve a different property in the navigation context, use the `SemanticObjectMapping` annotation.
+
+> ### Sample Code:  
+> XML Annotation
+> 
+> ```
+> <Annotations Target="com.c_salesordermanage_sd.defaultParamsForSalesOrderCreate/SoldToParty">
+>      <Annotation Term="Common.SemanticObject" String="Customer"/>
+>      <Annotation Term="Common.SemanticObjectMapping">
+>           <Collection>
+>                <Record Type="Common.SemanticObjectMappingType">
+>                     <PropertyValue Property="LocalProperty" PropertyPath="SoldToPartyID"/>
+>                     <PropertyValue Property="SemanticObjectProperty" String="CustomerID"/>
+>                </Record>
+>           </Collection>
+>      </Annotation>
+> </Annotations>
+> ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> No ABAP CDS annotation sample is available. Please use the local XML annotation.
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> SoldToParty : String(10) @(Common : { 
+>     SemanticObject                : 'Customer',
+>     SemanticObjectMapping         : 'SoldToPartyID'[
+>         {
+>         LocalProperty           : SoldToPartyID,
+>         SemanticObjectProperty  : 'CustomerID'
+>         }
+>     ]
+> });
+> ```
+
+
+
 ## Additional Features in SAP Fiori Elements for OData V2
 
 
@@ -780,52 +850,6 @@ You can use `DataFieldWithURL` with absolute URL:
 >   Label : 'Company'
 > }
 > ```
-
-
-
-### Navigation Using a Link
-
-The value of the property, against which the semantic object is configured, is passed directly in the navigation context. For example, if the property is `SoldToParty` and has the value `001`, the navigation context is `SoldToParty=001`. To achieve a different property in the navigation context, use the `SemanticObjectMapping` annotation.
-
-> ### Sample Code:  
-> XML Annotation
-> 
-> ```xml
-> <Annotations Target="com.c_salesordermanage_sd.defaultParamsForSalesOrderCreate/SoldToParty">
->      <Annotation Term="Common.SemanticObject" String="SalesOrder"/>
->      <Annotation Term="Common.SemanticObjectMapping">
->           <Collection>
->                <Record Type="Common.SemanticObjectMappingType">
->                     <PropertyValue Property="LocalProperty" PropertyPath="SoldToParty"/>
->                     <PropertyValue Property="SemanticObjectProperty" String="SoldToParty"/>
->                </Record>
->           </Collection>
->      </Annotation>
-> </Annotations>
-> 
-> ```
-
-> ### Sample Code:  
-> ABAP CDS Annotation
-> 
-> No ABAP CDS annotation sample is available. Please use the local XML annotation.
-
-> ### Sample Code:  
-> CAP CDS Annotation
-> 
-> ```
-> SoldToParty : String(10) @(Common : { 
->     SemanticObject                : 'SalesOrder',
->     SemanticObjectMapping         : [
->         {
->         LocalProperty           : SoldToParty,
->         SemanticObjectProperty  : 'SoldToParty'
->         }
->     ]
-> });
-> ```
-
-Links are only editable if the field with the link representation has a value help associated with it.
 
 
 

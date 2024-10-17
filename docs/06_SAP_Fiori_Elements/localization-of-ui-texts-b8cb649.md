@@ -3689,12 +3689,34 @@ Example: `M_COMMON_TABLE_DELETE|_Items=MyCustomDeleteText`
 <tr>
 <td valign="top">
 
+`C_COMMON_DELETE` 
+
+</td>
+<td valign="top">
+
+Delete
+
+</td>
+<td valign="top">
+
+*Delete* button text in an object page.
+
+</td>
+<td valign="top">
+
+Applications can choose to overwrite the default text with a more specific one for an object page.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
 `M_ROW_LEVEL_NAVIGATION_DISABLED_MSG_REASON_EXTERNAL_NAVIGATION_CONFIGURED` 
 
 </td>
 <td valign="top">
 
-Direct navigation to the object details isn't possible from thisIinsights card.
+Direct navigation to the object details isn't possible from this insights card.
 
 </td>
 <td valign="top">

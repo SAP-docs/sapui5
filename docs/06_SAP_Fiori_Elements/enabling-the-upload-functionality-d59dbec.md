@@ -54,6 +54,8 @@ Here is an example of how to define the entity type with the required annotation
 > </Annotations>
 > ```
 
+In CAP CDS annotation, you can use the `Attachments` plug-in to define the entity type. For more information about the plug-in, see [Attachments](https://cap.cloud.sap/docs/plugins/#attachments).
+
 Check out our live example in the flexible programming model explorer at [Table - File Upload](https://sapui5untested.int.sap.eu2.hana.ondemand.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/table/tableUpload).
 
 

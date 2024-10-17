@@ -28,7 +28,7 @@ The `FilterField` building block allows you to add custom XML fragments as filte
 
 For more information about creating your own XML templates for custom filter fields \(for example `NameFilterXMLFileName.xml`\), see [Adding Custom Fields to the Filter Bar](adding-custom-fields-to-the-filter-bar-5fb9f57.md).
 
-You can explore and work with the coding yourself. Check out our live example in the flexible programming model explorer at [Filter Bar - Custom Filters](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/filterBar/filterBarCustoms).
+You can explore and work with the coding yourself. Check out our live example in the flexible programming model explorer at [Filter Bar - Custom Filters](https://ui5.sap.com/#/api/sap.fe.macros.filterBar.FilterField).
 
 
 
@@ -36,5 +36,5 @@ You can explore and work with the coding yourself. Check out our live example in
 
 ## API
 
-For information about the `FilterField` API, see the [API Reference](https://ui5.sap.com/#/api/sap.fe.macros.FilterField).
+For information about the `FilterField` API, see the [API Reference](https://ui5.sap.com/#/api/sap.fe.macros.filterBar.FilterField).
 

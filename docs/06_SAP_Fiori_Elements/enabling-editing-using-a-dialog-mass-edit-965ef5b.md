@@ -22,7 +22,7 @@ The values that are changed within the mass edit dialog are applied to all selec
 
 ## Additional Features in SAP Fiori Elements for OData V2
 
-In SAP Fiori elements for OData V2, using the mass edit dialog is currently only available in the list report.
+In SAP Fiori elements for OData V2, using the mass edit dialog is only available in the list report.
 
 For more information, see [Enabling Editing Using a Dialog \(Mass Edit\) in the List Report](enabling-editing-using-a-dialog-mass-edit-in-the-list-report-7cc4f04.md).
 
@@ -182,19 +182,13 @@ The *Mass Edit* button isn't enabled if the update restriction points to a path 
 > -   If *Mass Edit* is enabled for an object page and the service is ETag enabled, you must ensure that the ETag implementation is in `etag master`. This means the ETag value of the child entity doesn't depend on the ETag value of the parent \(that is, the root entity\).
 
 > ### Restriction:  
-> -   The following fields are currently not available in the *Mass Edit* dialog:
+> -   The following fields are not available in the *Mass Edit* dialog:
 > 
->     -   date fields
+>     -   image-based fields
 > 
->     -   date-time fields
+>     -   `DataFieldForAnnotation`-based fields such as:
 > 
->     -   image based fields
-> 
->     -   progress indicator fields
-> 
->     -   `DataFieldForAnnotation` based fields such as:
-> 
->         -   micro chart based fields
+>         -   micro-chart-based fields
 > 
 >         -   contact fields
 > 

@@ -39,6 +39,8 @@ sap.ui.require(["sap/ui/core/format/NumberFormat"], function(NumberFormat) {
 });
 ```
 
+For information on the validation of parsed numerical input, see [Parsing](number-format-91f2f28.md#loio91f2f2866f4d1014b6dd926db0e91070__section_NFP).
+
 
 
 ### Complex Sample

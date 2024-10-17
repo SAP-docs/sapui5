@@ -2,7 +2,7 @@
 
 # FAQs
 
-You can get answers to the commonly asked questions, know more about SAP Fiori elements features, and troubleshoot common issues.
+You can get answers to the most frequently asked questions we receive from our users, get to know more about SAP Fiori elements features, and troubleshoot common issues.
 
 
 
@@ -29,6 +29,15 @@ You can get answers to the commonly asked questions, know more about SAP Fiori e
 -   **What is the recommended IDE for developing SAP Fiori elements applications?**
 
     We recommend using SAP Fiori tools, which is a set of extensions for SAP Business Application Studio and Visual Studio Code. For more information, click on the **Tools** tile in [Developing Apps with SAP Fiori Elements](developing-apps-with-sap-fiori-elements-03265b0.md).
+
+-   **What are the required libraries when developing an app using SAP Fiori elements for OData V4 or when creating a custom app using the flexible programming model?**
+
+    -   If you use a floorplan such as the list report or the object page, you can simply include `sap.fe.templates` in the `libs` section of your `manifest.json`.
+
+    -   If you're creating a custom app you need at least `sap.fe.core`, and if you're leveraging the building blocks you also need to declare `sap.fe.macros`.
+
+
+    By doing so you ensure the most efficient loading of resources for your application as well as the best performance.
 
 -   **What is draft handling and can I disable it for apps built on SAP Fiori elements for OData V4?**
 
@@ -275,7 +284,7 @@ You can get answers to the commonly asked questions, know more about SAP Fiori e
 
     In OData V2, the UI has to pass only the required properties in the call and the back end ensures that an aggregation is performed on all the measure properties. In OData V4, the client has to explicitly pass the properties as dimensions or measures when the call is made, thus allowing greater flexibility while using the property. For more information, see the [Enabling Aggregation in the Back End](configuring-charts-653ed0f.md#loio653ed0f4f0d743dbb33ace4f68886c4e__enabling_aggregation_subsection) subsection in [Configuring Charts](configuring-charts-653ed0f.md).
 
--   **Can I use charts in the list report, especially in a draft-based lt report and an object page, or is the use of charts limited to the ALP flavor of the list report?**
+-   **Can I use charts in the list report, especially in a draft-based list report and an object page, or is the use of charts limited to the ALP flavor of the list report?**
 
     You can also use charts in the list report and object page floorplans, and also in draft-based apps. In a list report without the ALP flavor, you can only use charts within a multi-view setup.
 

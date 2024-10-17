@@ -881,7 +881,7 @@ You can use annotations to control the enablement of operations \(annotation-bas
     > ### Sample Code:  
     > ABAP CDS Annotation
     > 
-    > No ABAP CDS annotation is required, since the setting is made according to the modeling \(create, update, delete, etc.\) in RAP BDEF \(behavior definition\).
+    > No ABAP CDS annotation is required, since the setting is made according to the modelling \(such as create, update, or delete\) in RAP BDEF \(behavior definition\).
 
     > ### Sample Code:  
     > CAP CDS Annotation
@@ -911,7 +911,7 @@ You can use annotations to control the enablement of operations \(annotation-bas
     > ### Sample Code:  
     > ABAP CDS Annotation
     > 
-    > No ABAP CDS annotation is required, since the setting is made according to the modeling \(create, update, delete, etc.\) in RAP BDEF \(behavior definition\).
+    > No ABAP CDS annotation is required, since the setting is made according to the modelling \(such as create, update, or delete\) in RAP BDEF \(behavior definition\).
 
     > ### Sample Code:  
     > CAP CDS Annotation

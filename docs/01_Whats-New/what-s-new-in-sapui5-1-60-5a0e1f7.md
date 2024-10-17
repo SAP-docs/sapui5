@@ -184,7 +184,7 @@ UI5 evolutionThe hyphenation feature uses third-party and browser-native represe
 
 **Modular Core**
 
-Existing modules in the modulare core have been reworked to follow the AMD-like \(asynchronous module definition\) syntax of SAPUI5, which ensures that modules and their dependencies can be loaded and evaluated asynchronously. The Asynchronous Module Definition \(AMD\) specifies a mechanism for defining modules so that the module and its dependencies can be loaded asynchronously. It allows you to avoid accessing modules via global variables and enforces a strict dependency declaration. The documentation has been enhanced accordingly and also made more prominent.For more information, see [Modules and Dependencies](../04_Essentials/modules-and-dependencies-91f23a7.md).
+Existing modules in the modular core have been reworked to follow the AMD-like \(asynchronous module definition\) syntax of SAPUI5, which ensures that modules and their dependencies can be loaded and evaluated asynchronously. The Asynchronous Module Definition \(AMD\) specifies a mechanism for defining modules so that the module and its dependencies can be loaded asynchronously. It allows you to avoid accessing modules via global variables and enforces a strict dependency declaration. The documentation has been enhanced accordingly and also made more prominent.For more information, see [Modules and Dependencies](../04_Essentials/modules-and-dependencies-91f23a7.md).
 
 The core part of the framework has improved its modular structure by leveraging SAPUI5's AMD-like features such as [sap.ui.define](https://ui5.sap.com/#/api/sap.ui/methods/sap.ui.define) and [sap.ui.require](https://ui5.sap.com/#/api/sap.ui/methods/sap.ui.require). Already starting with 1.58, the former `jQuery.sap` modules were replaced by new, more granular modules. The new modules are separated either into a regular browser-dependent "UI" layer or into a "base" layer that is independent from the browser-native API and the DOM.For more information, see [Adapting to the Modularization of the Core](../04_Essentials/adapting-to-the-modularization-of-the-core-b8fdf0c.md).
 
@@ -280,7 +280,7 @@ Control
 
 **`sap.ui.layout.cssgrid.CSSGrid`**
 
-`sap.m.FlexBox` which is the one-dimensional alternative for layouting.A layout control, used to create full-page layouts or user interface elements. It is a two-dimensional layout based on the browser-native CSS display grid that handles both columns and rows. The control can be used together with
+`sap.m.FlexBox` which is the one-dimensional alternative for layouting. A layout control, used to create full-page layouts or user interface elements. It is a two-dimensional layout based on the browser-native CSS display grid that handles both columns and rows. The control can be used together with
 
 ![](images/sap_ui_layout_cssgrid_CSSGrid_New_Control_2bdf9f5.png)
 
@@ -1583,6 +1583,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.127](what-s-new-in-sapui5-1-127-e5e1317.md "With this release SAPUI5 is upgraded from version 1.126 to 1.127.")
 
 [What's New in SAPUI5 1.126](what-s-new-in-sapui5-1-126-1d98116.md "With this release SAPUI5 is upgraded from version 1.125 to 1.126.")
 

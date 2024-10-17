@@ -2,7 +2,7 @@
 
 # Enabling the Search Function
 
-You can enable the *Search* function in the list report, for example.
+You can enable the *Search* function in the list report.
 
 
 

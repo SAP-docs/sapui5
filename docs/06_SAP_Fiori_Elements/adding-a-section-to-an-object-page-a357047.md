@@ -1,8 +1,33 @@
 <!-- loioa357047be956436ebb1dfebf1aa29af2 -->
 
+<link rel="stylesheet" type="text/css" href="../css/sap-icons.css"/>
+
 # Adding a Section to an Object Page
 
 You can add custom sections to your object page, as described in this document.
+
+
+
+<a name="loioa357047be956436ebb1dfebf1aa29af2__section_nbx_fky_rcc"/>
+
+## Adding a Custom Section to an Object Page Using SAP Fiori Tools
+
+Find out how to add a section to an object page using SAP Fiori tools.
+
+1.  Launch the *Page Map*. You can launch the *Page Map* in several ways, for example by right-clicking the project folder and selecting *Show Page Map*. For more information, see [Define Application Structure](https://help.sap.com/docs/SAP_FIORI_tools/17d50220bcd848aa854c9c182d65b699/bae38e6216754a76896b926a3d6ac3a9.html).
+2.  Launch the *Page Editor* for your object page. Click the :pencil2: \(*Edit*\) icon next to *Object Page*.
+3.  Click the :heavy_plus_sign: \(*Add*\) icon next to *Sections*.
+4.  Click *Add Custom Section*.
+5.  Provide a unique *Title*.
+6.  Provide a unique *Fragment Name*.
+7.  Select an *Anchor Section*.
+8.  Click *Add*.
+9.  To preview your new section, see [Previewing an Application](https://help.sap.com/docs/SAP_FIORI_tools/17d50220bcd848aa854c9c182d65b699/b962685bdf9246f6bced1d1cc1d9ba1c.html).
+
+    The following screen recording shows how to add a new section:
+
+
+
 
 
 

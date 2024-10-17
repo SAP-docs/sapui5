@@ -1,49 +1,49 @@
 <!-- loio708002929ea548fd9433954a9275eb5f -->
 
-# Creating a QUnit Test Page
+# Creating a QUnit Test
+
+
 
 
 
 ## Prerequisites
 
-As a prerequisite for creating a test, you need to have created a SAPUI5 application \(such as `myapp`\). Once you have done this, continue with the steps described below.
+As a prerequisite for creating a test, you need to have created a SAPUI5 application project that contains a test suite. For more information on how to do this, see [Concept and Basic Setup](concept-and-basic-setup-22f50c0.md). After completing this, continue with the steps described in the subsequent sections.
 
 
 
-## Creating a Test Page
+## Creating a Test Module
 
-Create a QUnit test module `myqunittest.qunit.js` in the folder `test-resources/`.
+Create a file `MyTest.qunit.js` in the folder `webapp/test/unit`.
 
 > ### Note:  
-> The file name `XYZ.qunit.js` is a recommendation to clearly indicate that this is a QUnit test. Technically, the `.qunit` name extension is not required.
+> You can use the file template shown in the following example. This code snippet shows a basic QUnit test template.
 
-You can use the file template shown below. This code snippet shows a basic QUnit test template which is used for SAPUI5 control tests.
-
-Each test file represents a UI5 module.
+Each test file normally represents a SAPUI5 module, which is being tested.
 
 ```js
 /*global QUnit */
 sap.ui.define([], function() {
-	   "use strict";
+  "use strict";
 
-        QUnit.module("Module A"); 
+  QUnit.module("Module A"); 
 
-        QUnit.test("1. a basic test example", 2, function (assert) {
-                assert.ok(true, "this test is fine"); 
-                var value = "hello1"; 
-                assert.equal(value, "hello1", "We expect value to be 'hello1'"); 
-        });
+  QUnit.test("Basic test example", function(assert) {
+    assert.ok(true, "this test is fine"); 
+    var value = "hello1"; 
+    assert.equal(value, "hello1", "We expect value to be 'hello1'"); 
+  });
 
 });
 ```
 
-This QUnit test file does not include the SAPUI5 bootstrap \(`sap-ui-core.js`\). The test starter ensures that the QUnit tests are loaded within an HTML page.
+QUnit test files do not include the SAPUI5 bootstrap \(`sap-ui-core.js`\). Instead, the test starter ensures that the QUnit tests are loaded within an HTML page.
 
 
 
-## Writing Test Functions
+## Writing Tests
 
-Write your test code \(like in the following example\) into the template introduced in the previous section:
+Write your test code as shown in the following example into the template introduced in the previous section:
 
 ```js
 /*global QUnit */
@@ -138,5 +138,41 @@ sap.ui.define(["sap/m/Button", "sap/ui/qunit/QUnitUtils", "sap/ui/qunit/utils/cr
 		QUnitUtils.triggerKeydown("myButton", "ENTER");
 		assert.ok(true, "this test is not executed asynchronously");
 	});
+});
+
 ```
+
+
+
+<a name="loio708002929ea548fd9433954a9275eb5f__section_hp4_xhn_vcc"/>
+
+## Adding a QUnit Test Module to a Test Suite
+
+In order to run a QUnit test, the corresponding module needs to be added to a test suite.
+
+```
+
+sap.ui.define(function() {
+	"use strict";
+
+	return {
+
+		// ...
+
+		tests: {
+			"unit/MyTest": {
+				title: "Unit tests for <NAMESPACE>"
+			},
+		}
+	};
+});
+```
+
+
+
+<a name="loio708002929ea548fd9433954a9275eb5f__section_irf_23n_vcc"/>
+
+## Running a QUnit Test
+
+Open the test suite `html` file in your desired browser to run the newly created test module.
 

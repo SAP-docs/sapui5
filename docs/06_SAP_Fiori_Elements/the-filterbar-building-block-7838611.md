@@ -18,7 +18,7 @@ The `FilterBar` building block allows application developers to embed a filter b
 
 Default values using `UI.SelectionVariant` and `Common.FilterDefaultValue` as well as custom filters are supported. Check out our live example in the flexible programming model explorer at [Filter Bar - Overview](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/filterBar/filterBarDefault).
 
-For more information about custom filter fields, see [Adding Custom Fields to the Filter Bar](adding-custom-fields-to-the-filter-bar-5fb9f57.md).
+For more information about adding custom XML fragments as filter fields to the `FilterBar` building block, see [The FilterField Building Block](the-filterfield-building-block-2df7837.md).
 
 > ### Note:  
 > When using the `FilterBar` building block in a custom section or a custom subsection that deals with the navigation entity, make sure all the controls that need to be filtered by the filter bar are part of the same UI fragment as the `FilterBar` building block.

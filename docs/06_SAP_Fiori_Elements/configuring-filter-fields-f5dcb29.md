@@ -2,7 +2,7 @@
 
 # Configuring Filter Fields
 
-Application developers can configure filter fields to ensure they only accept either a single value, multiple values, or a range of values.
+You can configure filter fields to ensure they only accept either a single value, multiple values, or a range of values. You can achieve this by configuring the filter restriction annotation as described in the specific sections.
 
 
 
@@ -10,7 +10,7 @@ Application developers can configure filter fields to ensure they only accept ei
 
 ## Copying and Pasting Multiple Values in the Filter Bar
 
-As an end user, you can copy and paste multiple values in the filter bar in the following use cases:
+End users can copy and paste multiple values in the filter bar in the following use cases:
 
 -   From one filter field to another filter field that has the same data type.
 
@@ -38,7 +38,7 @@ For example, you can copy the values from the *Sales Order No.:* field and paste
 
 ### Filter Restrictions
 
-In SAP Fiori elements for OData V2, app developers can control the filter field configuration via the `sap:filter-restriction` annotation as shown in the following sample code:
+You can control the filter field configuration using the `sap:filter-restriction` annotation as shown in the following sample code:
 
 > ### Sample Code:  
 > `sap:filter-restriction`
@@ -64,7 +64,7 @@ In SAP Fiori elements for OData V2, app developers can control the filter field 
 
 ### Filter Restrictions
 
-App developers can control the filter field configuration via `FilterRestrictions` as shown in the following sample code:
+You can control the filter field configuration using the `FilterRestrictions` as shown in the following sample code:
 
 > ### Sample Code:  
 > XML Annotation
@@ -139,7 +139,7 @@ App developers can control the filter field configuration via `FilterRestriction
 > ### Remember:  
 > If no filter-restriction is provided, the filter field is treated as a multi-valued field.
 
-If app developers want to make a filter field required, proceed as shown in the following sample code:
+If you want to make a filter field required, proceed as shown in the following sample code:
 
 > ### Sample Code:  
 > CAP CDS Annotation
@@ -166,7 +166,7 @@ You can annotate the `FilterRestriction` for a filter field in a navigation enti
 
 -   Filter Restrictions at Association Entity
 
-    Application developers can annotate filter restrictions with the association entity as the target, as shown in the following sample code:
+    You can annotate filter restrictions with the association entity as the target, as shown in the following sample code:
 
     > ### Sample Code:  
     > XML Annotation \(non-containment scenario\): /SalesOrderManage/\_Material
@@ -266,7 +266,7 @@ You can annotate the `FilterRestriction` for a filter field in a navigation enti
 
 -   Navigation Restrictions at Parent Entity
 
-    Application developers can annotate filter restrictions with the navigation restrictions at the parent entity, as shown in the following sample code:
+    You can annotate filter restrictions with the navigation restrictions at the parent entity, as shown in the following sample code:
 
     > ### Sample Code:  
     > XML Annotation \(non-containment scenario\): /SalesOrderManage/\_Material
@@ -363,7 +363,7 @@ You can annotate the `FilterRestriction` for a filter field in a navigation enti
     > ### Sample Code:  
     > ABAP CDS Annotation
     > 
-    > The ABAP CDS sample code is available at the end of this subsection..
+    > The ABAP CDS sample code is available at the end of this subsection.
 
     > ### Sample Code:  
     > CAP CDS Annotation \(containment scenario\)
@@ -387,7 +387,7 @@ You can annotate the `FilterRestriction` for a filter field in a navigation enti
 
 -   Filter Restrictions at Parent Entity with `PropertyPath` Pointing to Child Entity
 
-    Application developers can annotate filter restrictions at the parent entity, but with the `PropertyPath` pointing to the field in the child entity, as shown in the following sample code:
+    You can annotate filter restrictions at the parent entity, but with the `PropertyPath` pointing to the field in the child entity, as shown in the following sample code:
 
     > ### Sample Code:  
     > XML Annotation \(non-containment scenario\): /SalesOrderManage/\_Material
@@ -434,7 +434,7 @@ You can annotate the `FilterRestriction` for a filter field in a navigation enti
 
 -   Filter Restrictions Directly at Child Entity
 
-    Application developers can annotate filter restrictions directly on the child entity, as shown in the following sample code:
+    You can annotate filter restrictions directly on the child entity, as shown in the following sample code:
 
     > ### Sample Code:  
     > XML Annotation \(non-containment scenario\): /SalesOrderManage/\_Material

@@ -84,6 +84,12 @@ Because of the use of а third-party component some additional restrictions appl
 
         Introduced with 1.71.65
 
+        Replaced by 6.8.4 in 1.71.71
+
+    -   6.8.4
+
+        Introduced with 1.71.71
+
 
 
     
@@ -110,6 +116,12 @@ Because of the use of а third-party component some additional restrictions appl
     -   6.8.2
 
         Introduced with 1.84.45
+
+        Replaced by 6.8.4 in 1.84.51
+
+    -   6.8.4
+
+        Introduced with 1.84.51.
 
 
 
@@ -173,6 +185,8 @@ Because of the use of а third-party component some additional restrictions appl
 
         Introduced with 1.108.27
 
+        **TinyMCE v5 deprecated as of 1.108.36**
+
     -   6.1.0
 
         Replaced by 6.3.1 in 1.108.10
@@ -192,6 +206,12 @@ Because of the use of а third-party component some additional restrictions appl
     -   6.8.2
 
         Introduced with 1.108.27
+
+        Replaced by 6.8.4 in 1.108.36
+
+    -   6.8.4
+
+        Introduced with 1.108.36
 
 
 
@@ -216,6 +236,8 @@ Because of the use of а third-party component some additional restrictions appl
 
         Introduced with 1.120.11
 
+        **TinyMCE v5 deprecated as of 1.120.21**
+
     -   6.5.1
 
         Replaced by 6.8.2 in 1.120.11
@@ -223,6 +245,12 @@ Because of the use of а third-party component some additional restrictions appl
     -   6.8.2
 
         Introduced with 1.120.11
+
+        Replaced by 6.8.4 in 1.120.21
+
+    -   6.8.4
+
+        Introduced with 1.120.21
 
 
 
@@ -232,13 +260,38 @@ Because of the use of а third-party component some additional restrictions appl
     <tr>
     <td valign="top">
     
-    1.122
+    1.124
     
     </td>
     <td valign="top">
     
     -   5.10.9
+
+        **TinyMCE v5 deprecated as of 1.124.0**
+
     -   6.8.2
+
+        Introduced with 1.124.0
+
+        Replaced by 6.8.4 in 1.124.8
+
+
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    Latest
+    
+    </td>
+    <td valign="top">
+    
+    -   5.10.9
+
+    -   6.8.4
+
 
 
     

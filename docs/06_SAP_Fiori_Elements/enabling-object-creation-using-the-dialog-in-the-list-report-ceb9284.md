@@ -64,55 +64,51 @@ The option to create objects using a dialog now appears in the list report appli
 > ```
 
 > ### Sample Code:  
-> Sample Manifest Setting for Enabling createWithParameterDialog in Multiview List Report/Worklist Page
+> Manifest Setting for Enabling `createWithParameterDialog` in Multiview List Report/Worklist Page
 > 
 > ```
 > "sap.ui.generic.app": {
->               "pages": [{
-> "entitySet": "C_STTA_SalesOrder_WD_20",
-> "component": {
->               "name": "sap.suite.ui.generic.template.ListReport",
->               "list": true,
->               "settings": {
->                              "quickVariantSelectionX": {
->                                            "showCounts": true,
->                                            "variants": {
->                                                           "0":
-> 
->                                                           {
->                                                                         "key": "_tab1",
->                                                                         "annotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#Expensive"
+>         "pages": [{
+>             "entitySet": "C_STTA_SalesOrder_WD_20",
+>             "component": {
+>                 "name": "sap.suite.ui.generic.template.ListReport",
+>                 "list": true,
+>                 "settings": {
+>                         "quickVariantSelectionX": {
+>                                 "showCounts": true,
+>                                 "variants": {
+>                                         "0":
+>                                                {
+>                                                     "key": "_tab1",
+>                                                     "annotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#Expensive"
 >                                                           },
->                                                           "1": {
->                                                                         "key": "_tab2",
->                                                                         "annotationPath": "com.sap.vocabularies.UI.v1.SelectionPresentationVariant#Cheap",
->                                                                         "tableSettings": {
->                                                                                       "createWithParameterDialog": {
->                                                                                                      "fields": {
->                                                                                                                    "bp_id":
-> 
->                                                                                                                    {
->                                                                                                                                  "path": "bp_id"
->                                                                                                                    },
->                                                                                                                    "currency_code":
-> 
->                                                                                                                    {
->                                                                                                                                  "path": "currency_code"
->                                                                                                                    },
->                                                                                                                    "op_id":
-> 
->                                                                                                                    {
->                                                                                                                                  "path": "op_id"
->                                                                                                                    }
->                                                                                                      }
->                                                                                       }
->                                                                         }
->                                                           }
->                                            }
->                              }
->               }
+>                                         "1": 
+>                                                {
+>                                                     "key": "_tab2",
+>                                                     "annotationPath": "com.sap.vocabularies.UI.v1.SelectionPresentationVariant#Cheap",
+>                                                     "tableSettings": {
+>                                                                 "createWithParameterDialog": {
+>                                                                         "fields": {
+>                                                                                 "bp_id":
+>                                                                                         {
+>                                                                                             "path": "bp_id"
+>                                                                                         },
+>                                                                                             "currency_code":
+>                                                                                         {
+>                                                                                             "path": "currency_code"
+>                                                                                         },
+>                                                                                         "op_id":
+>                                                                                         {
+>                                                                                         "path": "op_id"
+>                                                                                         }
+>                                                                                 }
+>                                                                     }
+>                                                         }
+>                                             }
+>                                 }
+>                     }
+>         }
 > },
-> 
 > ```
 
 If this feature is enabled, you cannot navigate to an object page in create mode. However, you can navigate to the object page in display mode to modify objects.
@@ -124,7 +120,7 @@ Draft state is not maintained when an object is created using the dialog.
 > 
 > -   Ensure that all the mandatory fields of the entities are part of the create dialog.
 > 
-> -   Object creation using the dialog is only supported in list report page with the single view or multiple views. For more information, see [Defining Multiple Views on a List Report Table - Single Table Mode](defining-multiple-views-on-a-list-report-table-single-table-mode-0d390fe.md) and [Defining Multiple Views on a List Report Table - Multiple Table Mode](defining-multiple-views-on-a-list-report-table-multiple-table-mode-37aeed7.md).
+> -   Only list report pages support object creation using the dialog. On list report pages, this feature is available in both single view or multiple views scenarios. For more information, see [Defining Multiple Views on a List Report Table - Single Table Mode](defining-multiple-views-on-a-list-report-table-single-table-mode-0d390fe.md) and [Defining Multiple Views on a List Report Table - Multiple Table Mode](defining-multiple-views-on-a-list-report-table-multiple-table-mode-37aeed7.md).
 > 
 > -   You can also create objects using a dialog by prefilling fields from the filter values that you entered. For more information, see [Prefilling Fields When Creating a New Entity Using an Extension Point](prefilling-fields-when-creating-a-new-entity-using-an-extension-point-189e2d8.md).
 > 

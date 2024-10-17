@@ -50,7 +50,7 @@ detailPageTitle=UI5 TypeScript Walkthrough - Details
 
 ## webapp/view/Detail.view.xml \(New\)
 
-Now we add the new `Detail.view.xml` file to our view folder. Besides the the root node of the XML structure and the required namespaces, it only contains a `Page` control that displays the title we just defined in our resource boundle and an `ObjectHeader` control with a static text *Invoice* assigned to the `title` attribute \(this we will change in the next step\).
+Now we add the new `Detail.view.xml` file to our view folder. Besides the root node of the XML structure and the required namespaces, it only contains a `Page` control that displays the title we just defined in our resource bundle and an `ObjectHeader` control with a static text *Invoice* assigned to the `title` attribute \(this we will change in the next step\).
 
 ```xml
 <mvc:View
@@ -124,7 +124,7 @@ We add a new “routing" section to the `sap.ui5` part of the descriptor. There 
 
 -   `config`
 
-    This section contains the global router configuration and default values that apply for all routes and targets. The property `routerClass` is special as it determines the router implementation. The default value is `sap.ui.core.routing.Router`. Here, we set it to `sap.m.routing.Router`, because our app is based on `sap.m`. All other properties in `config` are given to the router instance. For example, we define in `path` where our views are located in the app. As we want to specify view-to-view navigation and we only use XML views in our app, we preset also the paramters `type` and `viewType`. To load and display views automatically, we also specify the `controlId` of the control that will contain the views, and the aggregation \(`controlAggregation`\) of the control where the views will be added. Here, we specify that the views are loaded into the `pages` aggregation of the control with the ID we provided in the app view.
+    This section contains the global router configuration and default values that apply for all routes and targets. The property `routerClass` is special as it determines the router implementation. The default value is `sap.ui.core.routing.Router`. Here, we set it to `sap.m.routing.Router`, because our app is based on `sap.m`. All other properties in `config` are given to the router instance. For example, we define in `path` where our views are located in the app. As we want to specify view-to-view navigation and we only use XML views in our app, we preset also the parameters `type` and `viewType`. To load and display views automatically, we also specify the `controlId` of the control that will contain the views, and the aggregation \(`controlAggregation`\) of the control where the views will be added. Here, we specify that the views are loaded into the `pages` aggregation of the control with the ID we provided in the app view.
 
     > ### Note:  
     > The possible values for `routerClass` are `sap.ui.core.routing.Router`, `sap.m.routing.Router`, or any other subclass of `sap.ui.core.routing.Router`. Compared to `sap.ui.core.routing.Router`, the `sap.m.routing.Router` is optimized for mobile apps and adds the properties `level`, `transition` and `transitionParameters`, which can be specified for each route or target created by `sap.m.routing.Router`.

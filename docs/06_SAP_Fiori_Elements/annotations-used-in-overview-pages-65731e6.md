@@ -6,24 +6,24 @@ This topic provides a list of the annotations used in overview pages. They are a
 
 
 
--   com.sap.vocabularies.UI.v1.HeaderInfo
--   com.sap.vocabularies.UI.v1.DataField
--   com.sap.vocabularies.UI.v1.DataFieldForAnnotation
--   com.sap.vocabularies.UI.v1.DataFieldForAction
--   com.sap.vocabularies.UI.v1.DataFieldForIntentBasedNavigation
--   com.sap.vocabularies.UI.v1.DataFieldWithUrl
--   com.sap.vocabularies.UI.v1.DataPoint
--   com.sap.vocabularies.UI.v1.Identification
--   com.sap.vocabularies.UI.v1.LineItem
--   com.sap.vocabularies.UI.v1.Facets
--   com.sap.vocabularies.UI.v1.FieldGroup
--   com.sap.vocabularies.UI.v1.SelectionVariant
--   com.sap.vocabularies.UI.v1.PresentationVariant
--   com.sap.vocabularies.UI.v1.SelectionPresentationVariant
--   com.sap.vocabularies.UI.v1.Chart
--   com.sap.vocabularies.UI.v1.KPI
--   com.sap.vocabularies.Common.v1.Text
--   com.sap.vocabularies.PersonalData.v1
+-   `com.sap.vocabularies.UI.v1.HeaderInfo`
+-   `com.sap.vocabularies.UI.v1.DataField`
+-   `com.sap.vocabularies.UI.v1.DataFieldForAnnotation`
+-   `com.sap.vocabularies.UI.v1.DataFieldForAction`
+-   `com.sap.vocabularies.UI.v1.DataFieldForIntentBasedNavigation`
+-   `com.sap.vocabularies.UI.v1.DataFieldWithUrl`
+-   `com.sap.vocabularies.UI.v1.DataPoint`
+-   `com.sap.vocabularies.UI.v1.Identification`
+-   `com.sap.vocabularies.UI.v1.LineItem`
+-   `com.sap.vocabularies.UI.v1.Facets`
+-   `com.sap.vocabularies.UI.v1.FieldGroup`
+-   `com.sap.vocabularies.UI.v1.SelectionVariant`
+-   `com.sap.vocabularies.UI.v1.PresentationVariant`
+-   `com.sap.vocabularies.UI.v1.SelectionPresentationVariant`
+-   `com.sap.vocabularies.UI.v1.SelectionPresentationVariant`
+-   `com.sap.vocabularies.UI.v1.KPI`
+-   `com.sap.vocabularies.Common.v1.Text`
+-   `com.sap.vocabularies.PersonalData.v1`
 
 
 
@@ -38,7 +38,7 @@ The following properties are supported:
 -   `Description`
 
     > ### Note:  
-    > The value of `dynamicSubtitleAnnotationPath` is picked from the value of the `path`, if pointed to the descriptor file \( `manifest.json` \). For more information, see [Descriptor Configuration for the Overview Page](descriptor-configuration-for-the-overview-page-f194b41.md).
+    > The value of `dynamicSubtitleAnnotationPath` is picked from the value of the `path`, if pointed to the descriptor file \(`manifest.json`\). For more information, see [Descriptor Configuration for the Overview Page](descriptor-configuration-for-the-overview-page-f194b41.md).
 
 
 > ### Sample Code:  
@@ -113,7 +113,7 @@ The following properties are supported:
 
 ## `com.sap.vocabularies.UI.v1.DataField`
 
-`DataField` is used to display simple text fields. The following properties are supported:
+You can use `DataField` to display simple text fields. The following properties are supported:
 
 -   `Label`: the label of the field
 -   `Value`: the value of the field, usually pointing to a path in the metadata
@@ -153,7 +153,7 @@ The following properties are supported:
 
 ## `com.sap.vocabularies.UI.v1.DataFieldForAnnotation`
 
-`DataFieldForAnnotation` can be used to reference a different annotation term, using the `Target` property. The following properties are supported:
+You can use `DataFieldForAnnotation`to reference a different annotation term using the `Target` property. The following properties are supported:
 
 -   `Label`: the label of the field
 -   `Target`: reference to a different term in the annotation document
@@ -197,9 +197,9 @@ The following properties are supported:
 
 ## `com.sap.vocabularies.UI.v1.DataFieldForAction`
 
-`DataFieldForAction` is used for OData actions that can be preformed on an entity, and refer to a `FunctionImport` action definition in the OData metadata. The following properties are supported:
+`DataFieldForAction` is used for OData actions that can be performed on an entity and refer to a `FunctionImport` action definition in the OData metadata. The following properties are supported:
 
--   `Label`: the navigation label displayed in the footer of the quick view card.
+-   `Label`: the navigation label displayed in the footer of the quick view card
 -   `Action`: name of the `FunctionImport` action definition to use
 
 > ### Sample Code:  
@@ -245,7 +245,7 @@ The following properties are supported:
 
 The `DataFieldForIntentBasedNavigation` record type supports the following properties:
 
--   `SemanticObject`: intent semantic object
+-   `SemanticObject`: intent-based semantic object
 -   `Action`: action of the intent
 -   `Label`: the navigation label displayed in the footer of the quick view card
 
@@ -305,16 +305,16 @@ The `DataFieldForIntentBasedNavigation` record type supports the following prope
 
 <a name="loio65731e6b823240398e33133908efdaa1__section_iwl_hwq_n2b"/>
 
-## com.sap.vocabularies.UI.v1.DataFieldWithUrl
+## `com.sap.vocabularies.UI.v1.DataFieldWithUrl`
 
 The `com.sap.vocabularies.UI.v1.DataFieldWithUrl` record type supports the following properties:
 
 -   `Url`: Use this property to configure the URL details.
 
     > ### Note:  
-    > `Url`
+    > `Url` can also contain an intent-based navigation with a route \(static or dynamic with arguments\).
 
--   `Label`\>: Use this property to specify the navigation label. The label appears in the quick view card's action footer area for the stack card type.
+-   `Label`: Use this property to specify the navigation label. The label appears in the action footer area of the quick view card for the stack card type.
 
 
 > ### Sample Code:  
@@ -388,6 +388,18 @@ The `com.sap.vocabularies.UI.v1.DataFieldWithUrl` record type supports the follo
 > 
 > ```
 
+-   `com.sap.vocabularies.HTML5.v1.LinkTarget`: Use this property to specify in which window, tab, or frame the link target is opened. The following values are supported:
+
+    -   `com.sap.vocabularies.HTML5.v1.LinkTarget/_self`: The link is opened in the same tab or window \(default\).
+
+    -   `com.sap.vocabularies.HTML5.v1.LinkTarget/_blank`: The link is opened in a new tab or window.
+
+    -   `com.sap.vocabularies.HTML5.v1.LinkTarget/_parent`: The link is opened in the parent frame or window.
+
+    -   `com.sap.vocabularies.HTML5.v1.LinkTarget/_top`: The link is opened in the full browser window, overriding any nested frames.
+
+
+
 
 
 ## `com.sap.vocabularies.UI.v1.DataPoint`
@@ -412,24 +424,24 @@ The `DataPoint` term is used to display fields with special formatting. The foll
 
 -   `com.sap.vocabularies.UI.v1.CriticalityCalculation`: Used to color the value dynamically according to the value in the `com.sap.vocabularies.UI.v1.CriticalityCalculationType` record type. It supports the following values:
 
-    -   `ImprovementDirection`: Defines what is considered a positive value. Possible values are:
-        -   `Minimize`: If `Minimize` is the improvement direction, the `DeviationRangeHighValue` and `ToleranceRangeHighValue` properties are required. and
+    -   `ImprovementDirection`: Defines what is considered a positive value. The following values are supported:
+        -   `Minimize`: If `Minimize` is the improvement direction, the `DeviationRangeHighValue` and `ToleranceRangeHighValue` properties are required.
 
-            -   If the value is less than the `ToleranceRangeHighValue`, the value is considered positive and is displayed in green.
+            -   If the value is lower than the `ToleranceRangeHighValue`, the value is considered positive and is displayed in green.
             -   If the value is between the `ToleranceRangeHighValue` and the `DeviationRangeHighValue`, the value is considered critical and is displayed in orange.
-            -   If the value is greater than the `ToleranceRangeHighValue` the value is considered negative and is displayed in red.
+            -   If the value is greater than the `ToleranceRangeHighValue`, the value is considered negative and is displayed in red.
 
         -   `Target`: If `Target` is the improvement direction, the `DeviationRangeLowValue`, `DeviationRangeHighValue`, `ToleranceRangeLowValue`, and `ToleranceRangeHighValue` properties are required.
 
-            -   If the value is between the `ToleranceRangeHighValue` and `ToleranceRangeLowValue`, the value is considered positive and is displayed in green.
-            -   If the value is between `DeviationRangeLowValue` and `DeviationRangeLowValue`, or between `DeviationRangeHighValue` and `ToleranceRangeHighValue`, the value is considered critical and is displayed in orange.
-            -   If the value is lower than the `DeviationRangeLowValue` or higher than `DeviationRangeHighValue`, the value is considered negative and is displayed in red.
+            -   If the value is between the `ToleranceRangeHighValue` and the `ToleranceRangeLowValue`, the value is considered positive and is displayed in green.
+            -   If the value is between the `DeviationRangeLowValue` and the `DeviationRangeLowValue`, or between the `DeviationRangeHighValue` and the `ToleranceRangeHighValue`, the value is considered critical and is displayed in orange.
+            -   If the value is lower than the `DeviationRangeLowValue` or higher than the `DeviationRangeHighValue`, the value is considered negative and is displayed in red.
 
         -   `Maximize`: If `Maximize` is the improvement direction, the `DeviationRangeLowValue` and `ToleranceRangeLowValue` properties are required.
 
             -   If the value is greater than the `ToleranceRangeLowValue`, the value is considered positive and is displayed in green.
-            -   If the value is between `ToleranceRangeLowValue` and the `DeviationRangeLowValue`, the value is considered critical and is displayed in orange.
-            -   If the value is lower than `ToleranceRangeLowValue`, the value is considered negative and is displayed in red.
+            -   If the value is between the `ToleranceRangeLowValue` and the `DeviationRangeLowValue`, the value is considered critical and is displayed in orange.
+            -   If the value is lower than the `ToleranceRangeLowValue`, the value is considered negative and is displayed in red.
 
 
 
@@ -963,9 +975,9 @@ This term consists of a label and a collection of `com.sap.vocabularies.UI.v1.Da
 This term consists of a combination of parameters and filters that query the annotated entity set. You can use `SelectionVariant` separately, or together with the `SelectionPresentationVariant` annotation. The following properties are supported:
 
 -   `ID`: Can contain an identifier to reference this instance from external context
--   `Text`: Name of the selection variant
--   `Parameters`: Collection of `com.sap.vocabularies.UI.v1.ParameterAbstract` terms
--   `SelectOptions`: Collection of `com.sap.vocabularies.UI.v1.SelectOptionType` terms used to define filters on this entity set
+-   `Text`: The name of the selection variant
+-   `Parameters`: A collection of `com.sap.vocabularies.UI.v1.ParameterAbstract` terms
+-   `SelectOptions`: A collection of `com.sap.vocabularies.UI.v1.SelectOptionType` terms used to define filters on this entity set
 
 > ### Sample Code:  
 > XML Annotation
@@ -1022,15 +1034,15 @@ This term consists of a combination of parameters and filters that query the ann
 
 ## `com.sap.vocabularies.UI.v1.PresentationVariant`
 
-Defines the way in which the result of a queried collection of entities is displayed in the KPI header. You can use `PresentationVariant` separately, or together with `SelectionPresentationVariant` annotation. The following properties are supported:
+Defines the way in which the result of a queried collection of entities is displayed in the KPI header. You can use `PresentationVariant` separately or together with the `SelectionPresentationVariant` annotation. The following properties are supported:
 
 -   `ID`: Can contain an identifier to reference this instance from external context
--   `Text`: Name of the presentation variant
--   `SortOrder`: Collection of `com.sap.vocabularies.Common.v1.SortOrderType` records
--   `RequestAtLeast`: Collection of fileds that must be part of selection fields. The `requestAtLeast` lets you receive additional dimensions from backend. The additional dimensions are added to the result of a queried collection for further navigation.
+-   `Text`: The name of the presentation variant
+-   `SortOrder`: A collection of `com.sap.vocabularies.Common.v1.SortOrderType` records
+-   `RequestAtLeast`: A collection of fields that must be part of selection fields. The `requestAtLeast` property lets you receive additional dimensions from the back end. The additional dimensions are added to the result of a queried collection for further navigation.
 
     > ### Note:  
-    > In an aggregated service, additional dimensions may cause issues while rendering the chart..
+    > In an aggregated service, additional dimensions may cause issues while rendering the chart.
 
 -   `Visualizations`: Supports the `LineItem` or `Chart` annotation path
 
@@ -1124,8 +1136,8 @@ Defines the way in which the result of a queried collection of entities is displ
 
 Provides a combination of capabilities from `SelectionVariant` and `PresentationVariant`. The `SelectionPresentationVariant` supports the following properties:
 
--   `SelectionVariant`: specify the `SelectionVariant` annotation path.
--   `PresentationVariant`: specify the `PresentationVariant` annotation path.
+-   `SelectionVariant`: Specifies the `SelectionVariant` annotation path
+-   `PresentationVariant`: Specifies the `PresentationVariant` annotation path
 
 > ### Sample Code:  
 > XML Annotation
@@ -1318,10 +1330,10 @@ Defines the dimensions and measures used in charts. The following properties are
 -   `Title` 
 -   `Description` 
 -   `ChartType`
--   `Measures`: Collection of `PropertyPath` properties.
+-   `Measures`: A collection of `PropertyPath` properties
 -   `MeasureAttributes`: A collection of `com.sap.vocabularies.UI.v1.ChartMeasureAttributeType` records describing attributes for measures. All measures used in this collection must also be part of the `Measures` property.
--   `Dimensions`: Collection of `PropertyPath` properties
--   `DimensionAttributes`: Collection of `com.sap.vocabularies.UI.v1.ChartDimensionAttributeType` records describing attributes for dimensions. All dimensions used in this collection must also be part of the `Dimensions` property.
+-   `Dimensions`: A collection of `PropertyPath` properties.
+-   `DimensionAttributes`: A collection of `com.sap.vocabularies.UI.v1.ChartDimensionAttributeType` records describing attributes for dimensions. All dimensions used in this collection must also be part of the `Dimensions` property.
 
 > ### Sample Code:  
 > XML Annotation
@@ -1799,7 +1811,7 @@ The text arrangement annotation lets you format text.
 > };
 > ```
 
-In the preceding example, the text `Customer` is bound to the `ContactID` property and appears as shown in the table:
+In the preceding example, the text `Customer` is bound to the `ContactID` property and appears as shown in the following table:
 
 
 <table>

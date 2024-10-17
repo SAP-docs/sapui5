@@ -893,57 +893,6 @@ Make the following settings in the `manifest.json` to specify the `SelectionPres
 > ### Note:  
 > In this case, the `"defaultTemplateAnnotationPath"` must be a reference to the `SelectionPresentationVariant` and **not** to the `PresentationVariant` or `SelectionVariant`.
 
-
-
-### Requesting Additional Properties in Object Pages
-
-You can request additional properties for object pages or subobject pages even if these properties are not displayed using the `Org.OData.Core.V1.AlternateKeys` annotation.
-
-> ### Sample Code:  
-> XML Annotation
-> 
-> ```
-> <edmx:Reference Uri=https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Core.V1.xml>
->     <edmx:Include Alias="Core" Namespace="Org.OData.Core.V1"/>
-> </edmx:Reference>
-> 
-> <Annotations Target="com.c_salesordermanage_sd.EntityContainer/SalesOrderManage">
->     <Annotation Term="Core.AlternateKeys">
->             <Collection>
->                 <Record Type="Core.AlternateKey">
->                         <PropertyValue Property="Key">
->                             <Collection>
->                                 <Record Type="Core.PropertyRef">
->                                    <PropertyValue Property="Name" PropertyPath="someProperty1"/>
->                                 </Record>
->                                 <Record Type="Core.PropertyRef">
->                                    <PropertyValue Property="Name" PropertyPath="someProperty2"/>
->                                 </Record>
->                             </Collection>
->                         </PropertyValue>
->                 </Record>
->             </Collection>
->     </Annotation>
-> </Annotations>
-> ```
-
-> ### Sample Code:  
-> CAP CDS Annotation
-> 
-> ```
-> annotate c_salesordermanage_sd.SalesOrderManage with @(
->   Core.AlternateKeys: [{Key: [
->     {
->       Name : someProperty1
->     },
->     {
->       Name : someProperty2
->     }
->   ]}]
->  );
-> 
-> ```
-
 **Related Information**  
 
 

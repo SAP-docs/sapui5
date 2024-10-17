@@ -308,7 +308,7 @@ Prevent bundling modules \(`Component-preload.js`\) into strings.
 
 ### Models
 
--   Take care of destroying programatically created models to prevent memory leaks.
+-   Take care of destroying programmatically created models to prevent memory leaks.
 
 -   Built-in framework models \(such as `ODataModel` or `JSONModel`\) and their related classes are considered *final*. They must not be modified or extended. For more information, see [Custom Model](../04_Essentials/custom-model-91f1c7e.md).
 

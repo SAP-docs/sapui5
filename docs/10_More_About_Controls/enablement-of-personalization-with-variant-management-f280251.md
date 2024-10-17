@@ -300,7 +300,7 @@ Engine.getInstance().attachStateChange(function(){
 
 ## Programmatically Applying States
 
-The personalization engine also provides capabilities to programatically apply personalization. For example, if there are other personalization functions outside the control, such as a custom button for making a sort function available.
+The personalization engine also provides capabilities to programmatically apply personalization. For example, if there are other personalization functions outside the control, such as a custom button for making a sort function available.
 
 In this case, the `sap.m.p13n.Engine#retrieveState` and `sap.m.p13n.Engine#applyState` methods can be used to modify and persist personalization changes without a personalization UI.
 

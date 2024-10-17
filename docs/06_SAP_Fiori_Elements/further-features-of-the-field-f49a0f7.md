@@ -70,7 +70,7 @@ DEF
 </tr>
 </table>
 
-In this example, `PlantID` represents the unique ID of the object "Plant". But this is not easily readable for the end user and typically, the field `PlantID` would have a reference to the corresponding text.
+In this example, `PlantID` represents the unique ID of the object "Plant". But this is not easily readable for the end user, and typically, the field `PlantID` would have a reference to the corresponding text.
 
 You can define a text using the `Common.Text` annotation on a property.
 
@@ -820,7 +820,7 @@ Mandatory
 </td>
 <td valign="top">
 
-Property must have a non-null value whenever save or update is triggered. This validation must be done by the back end, since it's not done by SAP Fiori elements.
+Property must have a non-null value whenever a save or an update is triggered. This validation must be done by the back end, since it's not done by SAP Fiori elements.
 
 > ### Note:  
 > If a field has the `FieldControl` annotation set to `mandatory`, its column header will be marked as mandatory in edit mode.
@@ -907,7 +907,7 @@ If a property is annotated with `Core.Computed true`, it is always displayed in 
 > Not all field representations are editable in the object page header. Only the plain text facet and form facets are considered for editability. Semantic links are also displayed in edit mode, but only when the field is associated with a value help.
 
 > ### Example:  
-> 1. The property `CreatedAt` of the entity `ProductsType` is always read only
+> 1. The property `CreatedAt` of the entity `ProductsType` is always read only.
 > 
 > > ### Sample Code:  
 > > XML Annotation
@@ -936,7 +936,7 @@ If a property is annotated with `Core.Computed true`, it is always displayed in 
 > > 
 > > ```
 > 
-> 2. The property `SupplierName` is always read only in **this** application
+> 2. The property `SupplierName` is always read only in **this** application.
 > 
 > > ### Sample Code:  
 > > XML Annotation
@@ -968,7 +968,7 @@ If a property is annotated with `Core.Computed true`, it is always displayed in 
 > > ### Note:  
 > > ABAP CDS only supports `@ObjectModel.mandatory` but **not** `@ObjectModel.readOnly`.
 > 
-> 3. The property `AvailabilityCode` is always read only if the property `_FieldControl/AvailabilityCode_FC` has the value 1
+> 3. The property `AvailabilityCode` is always read only if the property `_FieldControl/AvailabilityCode_FC` has the value 1.
 > 
 > > ### Sample Code:  
 > > XML Annotation
@@ -1058,4 +1058,22 @@ The tooltip is determined by the OData annotation `Common.QuickInfo`.
 The following screenshot shows the result on the UI:
 
 ![](images/Tooltip_for_Data_Point_ec5aa42.png)
+
+
+
+<a name="loiof49a0f7eaafe444daf4cd62d48120ad0__section_gss_hxf_qcc"/>
+
+## Disabling Standard Validation of Decimal Places for Units of Measure
+
+You can use the `com.sap.vocabularies.UI.v1.DoNotCheckScaleOfMeasuredQuantity` annotation with a Boolean value to disable the standard validation of decimal places for units of measure.
+
+-   When you set this annotation to `false`, the validation is performed to ensure that the maximum number of decimal places for a unit of measure corresponds to what is determined in the code list customizing the currency codes and units.
+
+-   If you set the annotation to `true`, the validation is not performed. Skipping the validation of decimals allows the user to add more fractional digits than the number of digits defined for the corresponding unit of measure.
+
+
+> ### Note:  
+> The number of allowed decimals specified in the field definition itself is not affected by the `com.sap.vocabularies.UI.v1.DoNotCheckScaleOfMeasuredQuantity` annotation. The central check always takes place. For example, if a field has been defined as having no more than 3 decimal places, it will never allow the user to enter more than 3 decimal places even if you disable the validation of decimal places for units of measure in this field.
+
+For more information about specifying decimal places for units of measure, see [Currency and Unit Customizing in OData V4](../04_Essentials/currency-and-unit-customizing-in-odata-v4-4d1b9d4.md).
 
