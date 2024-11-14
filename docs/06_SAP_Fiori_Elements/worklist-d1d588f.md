@@ -44,7 +44,7 @@ From a technical perspective, a worklist is a simplified list report. The follow
 
 ### Worklist Types
 
-You can create a category worklist by defining multiplee views withing a table in your worklist, as described under [Defining Multiple Views on a List Report Table - Single Table Mode](defining-multiple-views-on-a-list-report-table-single-table-mode-0d390fe.md).
+You can create a category worklist by defining multiple views withing a table in your worklist, as described under [Defining Multiple Views on a List Report Table - Single Table Mode](defining-multiple-views-on-a-list-report-table-single-table-mode-0d390fe.md).
 
 
 
