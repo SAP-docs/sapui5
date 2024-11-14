@@ -584,7 +584,7 @@ SAP Fiori Elements
 
 The following changes and new features are available for SAP Fiori elements for OData V2:
 
--   Partial processing is now supported in the mass edit dialog. Also, apps can add custom fields to the mass edit dialog. For more information, see [Adding a Custom ViewExtension in the Mass Edit Dialog](../06_SAP_Fiori_Elements/adding-a-custom-viewextension-in-the-mass-edit-dialog-fd26fee.md).
+-   Partial processing is now supported in the mass edit dialog. Also, apps can add custom fields to the mass edit dialog. For more information, see [Adding a Custom ViewExtension to the Mass Edit Dialog](../06_SAP_Fiori_Elements/adding-a-custom-viewextension-to-the-mass-edit-dialog-fd26fee.md).
 
 -   You can now display addresses in the contact facet. For more information, see [Adding a Contact Facet](../06_SAP_Fiori_Elements/adding-a-contact-facet-a6a8c0c.md).
 
@@ -772,6 +772,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.128](what-s-new-in-sapui5-1-128-1f76220.md "With this release SAPUI5 is upgraded from version 1.127 to 1.128.")
 
 [What's New in SAPUI5 1.127](what-s-new-in-sapui5-1-127-e5e1317.md "With this release SAPUI5 is upgraded from version 1.126 to 1.127.")
 

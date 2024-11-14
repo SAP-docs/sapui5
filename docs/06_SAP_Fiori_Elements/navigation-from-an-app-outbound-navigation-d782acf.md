@@ -985,6 +985,49 @@ When there is a specific control-level selection context, the merged context has
 
 For example, if an object page header has "Location"="DE" and there is also the same "Location" property in the items table with the value "JP", then the merged context that is passed just has "Location"="JP". The header level "Location" is lost.
 
+Additionally, the secondary keys maintained using annotations can be linked to the navigation context. If the specified properties are missing in the page context, these secondary keys are fetched and passed with the navigation context.
+
+> ### Sample Code:  
+> XML Annotation
+> 
+> ```
+> <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/Common.xml">
+> 	<edmx:Include Alias="Common" Namespace="com.sap.vocabularies.Common.v1" />
+> </edmx:Reference>
+> ...
+> <EntityType Name="Product">
+>    <Key>
+>        <PropertyRef Name="ProductId"/>
+>    </Key>
+>    <Property Name="ProductId" Type="Edm.Int32" Nullable="false"/>
+>    <Property Name="ProductCode" Type="Edm.String" Nullable="false"/>
+>    <Property Name="ProductName" Type="Edm.String" Nullable="false"/>
+> 
+>    <!-- Secondary key annotation -->
+>    <Annotations>
+>        <Annotation Term="Common.SecondaryKey">
+>            <Collection>
+>                  <PropertyPath>ProductCode</PropertyPath>
+>            </Collection>
+>        </Annotation>
+>    </Annotations>
+> </EntityType>
+> ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> No ABAP CDS annotation sample is available. Please use the local XML annotation.
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> annotate c_salesordermanage_sd.Product with @(
+>   Common.SecondaryKey: ['ProductCode']
+> ){}
+> ```
+
 
 
 <a name="loiod782acf8bfd74107ad6a04f0361c5f62__section_acb_tbc_vlb"/>

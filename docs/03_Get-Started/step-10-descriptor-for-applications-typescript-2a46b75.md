@@ -100,7 +100,7 @@ The **`sap.ui5`** namespace adds SAPUI5-specific configuration parameters that a
 
 ```
 {
-    "_version": "1.60.0",
+    "_version": "1.65.0",
     "sap.app": {
         "id": "ui5.walkthrough",
         "type": "application",

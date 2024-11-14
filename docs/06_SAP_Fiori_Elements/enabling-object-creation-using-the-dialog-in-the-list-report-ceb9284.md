@@ -64,7 +64,7 @@ The option to create objects using a dialog now appears in the list report appli
 > ```
 
 > ### Sample Code:  
-> Manifest Setting for Enabling `createWithParameterDialog` in Multiview List Report/Worklist Page
+> Manifest Setting for Enabling `createWithParameterDialog` in List Report or Worklist in Multi-View Mode
 > 
 > ```
 > "sap.ui.generic.app": {
@@ -132,7 +132,7 @@ Draft state is not maintained when an object is created using the dialog.
 
 ### Customizing the Dialog Title and Buttons
 
-The default title of the dialog is *New Object* and the key in the i18n file is `CREATE_DIALOG_TITLE`. You can change this by redefining the key in the application or in the SAPUI5 Visual Editor. The default values of the buttons on the dialog are *Create* and *Cancel*, which you can also change in SAPUI5 Visual Editor.
+The default title of the dialog is *New Object*, and the key in the i18n file is `CREATE_DIALOG_TITLE`. You can change this by redefining the key in the application or in the SAPUI5 Visual Editor. The default values of the buttons on the dialog are *Create* and *Cancel*. You can also change them in the SAPUI5 Visual Editor.
 
 
 
@@ -140,5 +140,56 @@ The default title of the dialog is *New Object* and the key in the i18n file is 
 
 ## Additional Features in SAP Fiori Elements for OData V4
 
-The content for this feature for SAP Fiori elements for OData V4 is covered in the topic [Prefilling Fields When Creating a New Entity](prefilling-fields-when-creating-a-new-entity-11ff444.md).
+You can enable this feature for the list report by setting the `creationMode` property as follows:
+
+> ### Sample Code:  
+> `manifest.json`
+> 
+> ```json
+> "targets": {
+>     "ProductsList": {
+>         "type": "Component",
+>         "name": "sap.fe.templates.ListReport",
+>         "id": "ProductsList",
+>         "options": {
+>             "settings": {
+>                 "entitySet": "Products",
+>                 "controlConfiguration": {
+>                     "@com.sap.vocabularies.UI.v1.LineItem": {
+>                         "tableSettings": {
+>                             "creationMode": {
+>                                 "name": "CreationDialog",
+>                                 "creationFields": "com.sap.vocabularies.UI.v1.FieldGroup#CreationParameters"
+>                             }
+>                         }
+>                     }
+>                 },
+>                 ...
+>             }
+>         }
+>     },
+> ```
+
+The `CreationFields` parameter can point to a `FieldGroup` annotation or a comma-separated list of properties. Immutable properties are added to the `CreationFields` list automatically.
+
+For the list report in multi-view mode, provide the creation mode parameters in the `TableSettings` configuration for each line item configured in a view.
+
+If this feature is enabled, you cannot navigate to an object page in create mode. However, you can navigate to the object page in display mode to modify objects.
+
+> ### Note:  
+> -   Draft state is not maintained when an object is created using the dialog.
+> 
+> -   All properties must be related to entities.
+> 
+> -   Mandatory parameters are marked with a red asterisk in the dialog.
+> 
+> -   For information about enabling a custom create dialog on a tree table, see the [Create Mode and Custom Create Mode with a Menu Button](tree-tables-7cf7a31.md#loio7cf7a31fd1ee490ab816ecd941bd2f1f__section_osy_44d_gbc) section in [Tree Tables](tree-tables-7cf7a31.md).
+> 
+> -   If you have entered filter values to prefill fields with specific values, the user can also use a dialog to create objects. For more information, see [Prefilling Fields When Creating a New Entity](prefilling-fields-when-creating-a-new-entity-11ff444.md).
+
+
+
+### Customizing the Title of the Dialog
+
+The default title of the dialog is *New Object*. Use the `C_TRANSACTION_HELPER_SAPFE_ACTION_CREATE` key in the `i18n` file to modify it.
 

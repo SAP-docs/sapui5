@@ -25,7 +25,7 @@ From a technical perspective, a worklist is a simplified list report. The follow
 -   The worklist does not contain a smart filter bar. The search field is available in the table toolbar.
 
 -   Variant management:
-    -   By default, variant management is hidden. You can customize the worklist to provide variant management at table level. To do so, set the `variantManagementHidden` flag to `false` in the `manifest.json`. You can enable page level variant management by setting `smartVariantManagement` to `true` and the `variantManagementHidden` flag to `false` in the `manifest.json`. Variants can also be shared.
+    -   By default, variant management is hidden. You can customize the worklist to provide variant management at table level. To do so, set the `variantManagementHidden` flag to `false` in the `manifest.json` file. You can enable page level variant management by setting `smartVariantManagement` to `true` and the `variantManagementHidden` flag to `false` in the `manifest.json` file. Variants can also be shared.
 
     -   The *Execute on Select* action is not available.
 
@@ -36,7 +36,7 @@ From a technical perspective, a worklist is a simplified list report. The follow
 
     -   The *Export to Microsoft Excel* feature is not available.
 
-    -   The default table type is **responsive**. The table title contains the row count. A fixed layout and growing using the scrolling function is enabled.
+    -   The default table type is **responsive**. The table title contains the row count. A fixed layout and scroll-to-load are the default settings for the table content.
 
 
 
@@ -44,13 +44,13 @@ From a technical perspective, a worklist is a simplified list report. The follow
 
 ### Worklist Types
 
-You can create a category worklist by defining multiplee views withing a table in your worklist, as described under [Defining Multiple Views on a List Report Table - Single Table Mode](defining-multiple-views-on-a-list-report-table-single-table-mode-0d390fe.md).
+You can create a category worklist by defining multiple views within a table in your worklist. For more information, see [Defining Multiple Views on a List Report Table - Single Table Mode](defining-multiple-views-on-a-list-report-table-single-table-mode-0d390fe.md).
 
 
 
 ### Configuring the Worklist
 
-For more information on any worklist configuration options, see [List Report and Object Page](list-report-and-object-page-c0eec49.md). Apart from the features listed above, you can also use the options described for the list report, for example:
+For more information about any worklist configuration options, see [List Report and Object Page](list-report-and-object-page-c0eec49.md). In addition to the features mentioned, you can also use the options described for the list report, for example:
 
 -   [Configuring List Report Features](configuring-list-report-features-3af1d03.md)
 

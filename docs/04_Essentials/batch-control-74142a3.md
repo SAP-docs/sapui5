@@ -28,6 +28,9 @@ A group ID has one of the following [submit modes](https://ui5.sap.com/#/api/sap
 -   `sap.ui.model.odata.v4.SubmitMode.Direct` - Requests associated with the group ID are sent directly without batch. Note that some features of the OData V4 model rely on the correct order of request processing in the back end. This is only guaranteed for requests made in batch requests.
 
 
+> ### Note:  
+> We recommend using either`sap.ui.model.odata.v4.SubmitMode.API` or `sap.ui.model.odata.v4.SubmitMode.Auto` groups in productive applications as not all features of the OData V4 model work without batch requests.
+
 The following group IDs are possible:
 
 -   `"$auto"` and `"$auto.*"`: Predefined batch group ID which is the default if no group ID is specified. You can use different `$auto.*` group IDs to use different batch requests. The suffix can be any non-empty string consisting of alphanumeric characters from the basic Latin alphabet, including the underscore. They have the submit mode `sap.ui.model.odata.v4.SubmitMode.Auto`.
@@ -36,6 +39,7 @@ The following group IDs are possible:
 
 -   An application group ID is a non-empty string consisting of alphanumeric characters from the basic Latin alphabet, including the underscore. By default, an application group has the submit mode `sap.ui.model.odata.v4.SubmitMode.API`. It is possible to use a different submit mode; for details see section [Define submit mode for an application group ID](batch-control-74142a3.md#loio74142a38e3d4467c8d6a70b28764048f__section_e1x_pfg_1cb).
 
+-   With [`sap.ui.model.odata.v4.Context#delete`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.Context%23methods/delete), [`sap.ui.model.odata.v4.ODataModel#delete`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataModel%23methods/delete), and [`sap.ui.model.odata.v4.ODataContextBinding#invoke`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataContextBinding%23methods/invoke), you can also use the `$single` group ID. With this group ID, a single batch request is sent directly, similar to `sap.ui.model.odata.v4.SubmitMode.Direct` groups.
 
 To specify the group ID for implicit requests, use the parameters `$$groupId` \(group ID for read requests\) and `$$updateGroupId` \(group ID for update requests\) for the binding which initiates the request \(see the [ODataModel.bindList](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataModel/methods/bindList), [ODataModel.bindContext](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataModel/methods/bindContext) and [ODataModel.bindProperty](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataModel/methods/bindProperty) API documentation\).
 

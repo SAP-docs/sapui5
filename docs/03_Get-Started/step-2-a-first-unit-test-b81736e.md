@@ -39,7 +39,7 @@ As we use Test Driven Development \(TDD\) we define the test case first, before 
 
 ## Unit Test Setup
 
-All unit tests are located in the `webapp/test/unit` folder and can be started manually by calling the `unitTests.qunit.html` file in the same folder or the entry page. This HTML page is a QUnit runner that calls all unit tests of the app and displays the test results in a readable format.
+All unit tests are located in the `webapp/test/unit` folder and can be started by opening the `webapp/test/testsuite.qunit.html` in your browser and selecting `unit/unitTests`.
 
 > ### Note:  
 > Some testrunners like Karma do not require an HTML page to invoke the tests but work with configuration files instead. They can directly invoke the `AllTests.js` file and log the test results in their own format. Therefore we make sure that the `AllTests.js` file does not contain any UI output and just calls the various test cases of the app.
@@ -72,15 +72,14 @@ You can view and download all files in the *Samples* in the Demo Kit at [Testing
 ## webapp/model/formatter.js
 
 ```js
-sap.ui.define([
-	"sap/m/Text"
-], function (Text) {
-	"use strict";
-	return {
-		numberUnit: function (sValue) {
-			…
-		},
-		priceState: function () {
+
+sap.ui.define([], function () {
+		"use strict";
+	     return {
+		       numberUnit: function (sValue) {
+		  	// …
+		       },
+		       priceState: function () {
 		}
 
 	};
@@ -94,13 +93,14 @@ First we think about the feature that we want to implement. We want to introduce
 ## webapp/test/unit/model/formatter.js
 
 ```js
+/*global QUnit*/
 sap.ui.define([
-	"./model/formatter"
+	  "sap/ui/demo/bulletinboard/model/formatter"
 ], function (formatter) {
 	"use strict";
 
 	QUnit.module("Number unit");
-		…
+		// …
 	QUnit.module("Price State");
 
 	function priceStateTestCase(oOptions) {
@@ -180,14 +180,11 @@ We add a new QUnit module for our price state tests after the number unit conver
 
 The assert object – a special object injected by QUnit – is passed on as a reference to the function. QUnit is loaded once for the whole unit testing part of the app.
 
-> ### Note:  
-> The main page for calling the unit tests is `webapp/test/unit/unitTests.qunit.html`. In this file we load the QUnit runtime and an `AllTests.js` file that loads and directly executes all files with unit tests. The other content of this file is just HTML for displaying the QUnit test result page.
-
 And now for the actual test cases: Whenever we want to start a new test we call `QUnit.test` with a test description and a callback function containing the test logic as an argument. The callback is invoked with a special assert object that is maintained by QUnit. We can simply call assertions as we saw above.
 
 Inside each test we simply call our reuse function with different parameters for the price and the expected state that reflect our specification above. With five tests we can check the most important cases for our price state converter. There are four tests for the four different states and one edge case test with the value `50`, that makes sure that the correct state is chosen.
 
-That’s it, you just wrote your first unit test. When you call the `webapp/test/unit/unitTests.qunit.html` file in your browser, you can see that the first module for the number unit formatter is still green but our price state tests are red and failing. The error message tells us that the result of the empty formatter function is not as expected.
+That’s it, you just wrote your first unit test. When you run the test in your browser, you can see that the first module for the number unit formatter is still green but our price state tests are red and failing. The error message tells us that the result of the empty formatter function is not as expected.
 
 TDD methodology tells us to do the implementation as soon as the test fails and to come back to testing as soon as the tests are successful again. You run the unit tests after each code change, and you're done when the test does not fail anymore. We now switch to the implementation part and define the details of the formatter function in the next step.
 

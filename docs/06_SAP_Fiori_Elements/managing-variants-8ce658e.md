@@ -21,7 +21,9 @@ Use page-level variant management to capture filter selection, filter mode, view
 > ### Note:  
 > You can define variants for specific selections of data on the user interface, for example, based on filter settings. In the definition dialog, these variants are called views, however, the feature is called variant management. Therefore, for clarity, we use the term variant management in this section.
 
-Control-level variant management is not recommended for list report templates and analytical list page templates. Use it only for object page templates. For more information about how to the enable control-level variant in the object page, see [Enabling Variant Management on the Object Page](enabling-variant-management-on-the-object-page-f26d42b.md).
+You can use either control-level variant management or page variant management for your list report and analytical list page. Providing both options in parallel can be confusing for your users.
+
+For more information about how to the enable control-level variant in the object page, see [Enabling Variant Management on the Object Page](enabling-variant-management-on-the-object-page-f26d42b.md).
 
 <a name="topic_fdm_n4r_1qb"/>
 
@@ -63,7 +65,7 @@ For the list report object page and worklist, the `smartVariantManagement` varia
                         "smartVariantManagement": true
 ```
 
-You can also change the `smartVariantManagement` variable using the *Page Editor*.
+You can also change the `smartVariantManagement` variable using the *Page Editor*. For more information, see [Configure Page Elements](https://help.sap.com/docs/SAP_FIORI_tools/17d50220bcd848aa854c9c182d65b699/047507c86afa4e96bb3d284adb9f4726.html).
 
 If `smartVariantManagement` is set to `true`, the page variant is enabled. If it is set to `false`, control-level variant is enabled. If it is undefined, then the default setting is `true`.
 
@@ -103,5 +105,5 @@ In the `manifest.json` file, the `VariantManagement` variable is set to `Page` b
 
 ```
 
-You can also change the `VariantManagement` variable using the *Page Editor*.
+You can also change the `VariantManagement` variable using the *Page Editor*. For more information, see [Configure Page Elements](https://help.sap.com/docs/SAP_FIORI_tools/17d50220bcd848aa854c9c182d65b699/047507c86afa4e96bb3d284adb9f4726.html).
 

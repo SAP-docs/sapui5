@@ -15,11 +15,9 @@ It compares the measure value to one or more data point values to enrich its mea
 
 <a name="loiob91516684a8641b2964c2380c9ea94df__section_hs3_vfq_qmb"/>
 
-## UI.Chart Annotations
+## `UI.Chart` Annotations
 
-The `UI.Chart Title` property is used for the title.
-
-The `UI.Chart Description` property is used for the subtitle.
+The `UI.Chart Title` property is used for the title. The `UI.Chart Description` property is used for the subtitle.
 
 > ### Sample Code:  
 > XML Annotation
@@ -106,7 +104,7 @@ The `UI.Chart Description` property is used for the subtitle.
 
 <a name="loiob91516684a8641b2964c2380c9ea94df__section_mk3_vfq_qmb"/>
 
-## UI.DataPoint Annotation
+## `UI.DataPoint` Annotation
 
 > ### Sample Code:  
 > XML Annotation
@@ -159,15 +157,20 @@ The `UI.Chart Description` property is used for the subtitle.
 > 
 > ```
 
-For semantic coloring, both `Criticality` and `CriticalityCalculation` are supported \(`Criticality` overrides `CriticalityCalculation`\).
+For semantic coloring, both the `Criticality` and `CriticalityCalculation` annotations are supported. However, the `Criticality` annotation overrides the `CriticalityCalculation` annotation.
 
-Mandatory:
+The following annotations are mandatory and must be used in the bullet micro chart:
 
-1.  `UI.Chart` → `ChartType`: “`Bullet`”
-2.  `UI.Chart` → `Measures`
-3.  `UI.Chart` → `MeasureAttributes` → `DataPoint`
-4.  `UI.DataPoint` → `Value`
-5.  In case `CriticalityCalculation` is used for semantic coloring, then
+-   `UI.Chart` → `ChartType`: `"Bullet"`
+
+-   `UI.Chart` → `Measures`
+
+-   `UI.Chart` → `MeasureAttributes` → `DataPoint`
+
+-   `UI.DataPoint` → `Value`
+
+-   In case the `CriticalityCalculation` annotation is used for semantic coloring, then:
+
     -   `UI.DataPoint` → `CriticalityCalculation`
 
     -   `UI.DataPoint` → `CriticalityCalculation/ImprovementDirection`

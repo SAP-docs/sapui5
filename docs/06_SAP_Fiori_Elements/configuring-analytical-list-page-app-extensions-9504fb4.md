@@ -24,7 +24,7 @@ For extensions common to all floorplans of SAP Fiori elements, see [Extending SA
 
 [Chart Extensions](chart-extensions-ad65420.md "Define custom actions for a chart by configuring the descriptor and annotation files.")
 
-[Creating Custom Filter](creating-custom-filter-7251ea3.md "Define custom filters for compact filters and KPI tags.")
+[Creating Custom Filters](creating-custom-filters-7251ea3.md "You can define custom filters for compact filters and KPI tags.")
 
 [Defining Custom Actions](defining-custom-actions-c3de5c0.md "Define custom actions by using the extensions in the app descriptor file. You can also define these custom actions so that they appear on charts, tables, or header toolbars based on the filter property value (chart/table/global).")
 

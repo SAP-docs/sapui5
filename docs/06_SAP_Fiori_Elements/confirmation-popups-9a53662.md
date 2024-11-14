@@ -10,7 +10,7 @@ You can configure confirmation popups for various use cases in list reports and 
 
 ## Confirmation Popup for Critical Actions
 
-Applications can configure actions as critical and when such actions are triggered, a confirmation popup is displayed for end users before the action is executed. For more information, see [Adding Confirmation Popovers for Actions](adding-confirmation-popovers-for-actions-87130de.md).
+You can configure actions as critical, and when such actions are triggered, a confirmation popup is displayed for end users before the action is executed. For more information, see [Adding Confirmation Popovers for Actions](adding-confirmation-popovers-for-actions-87130de.md).
 
 
 
@@ -18,7 +18,7 @@ Applications can configure actions as critical and when such actions are trigger
 
 ## Confirmation Popup for Activating a Draft
 
-When you create or edit an object page in a draft-enabled application and decide to leave the page without saving, you get the following popup:
+When end users create or edit an object page in a draft-enabled application and choose to leave the page without saving, the following popup is displayed:
 
   
   
@@ -33,7 +33,7 @@ When you create or edit an object page in a draft-enabled application and decide
 ![](images/Confirmation_Popup_for_Discard_Draft_-_Edit_Mode_b43cd41.png "Edit Mode")
 
 > ### Tip:  
-> The popup is enabled by default in SAP Fiori elements for OData V2 and SAP Fiori elements for OData V4. You can disable it for external navigation using the manifest settings.
+> The popup is enabled by default. You can disable it for external navigation by configuring specific settings in the `manifest.json` file. For more information, see the version-specific sections in this topic.
 
 
 
@@ -41,7 +41,7 @@ When you create or edit an object page in a draft-enabled application and decide
 
 ## Confirmation Popup for Actions that Fail with 412 Warnings
 
-Applications can configure a confirmation popup for the following actions by sending an HTTP response 412 from the back end:
+You can configure a confirmation popup for the following actions by sending an HTTP 412 response from the back end:
 
 -   Standard SAP Fiori elements actions, such as *Save*, *Activate* and *Create*
 
@@ -50,32 +50,29 @@ Applications can configure a confirmation popup for the following actions by sen
 
 The flow is as follows:
 
--   When an action is triggered, the app sends the request with the header `Prefer:handling=strict`.
+-   When an action is triggered, the application sends the request with the header `Prefer:handling=strict`.
 
--   Depending on the settings of the back end, there are two options:
+-   Depending on the back-end settings, there are two options:
 
     -   If the preference is unknown, it's ignored and the action is executed as usual.
 
-    -   If the preference is known, application developers can configure the back end to send a 412 message \("Precondition Failed" message\).
+    -   If the preference is known, you can configure the back end to send a 412 message \("Precondition Failed" message\).
 
 
--   For SAP Fiori elements, the 412 message indicates that there are warnings that block the processing of the action, but users can still be trigger the action if they choose to ignore the warnings and continue.
+-   For SAP Fiori elements, the 412 message indicates that there are warnings that block the processing of the action, but end users can still be trigger the action if they choose to ignore the warnings and continue.
 
--   The app displays a confirmation popup containing the message from the back end.
+-   The application displays a confirmation popup containing the message from the back end.
 
--   If users choose *Confirm* to go ahead with the action, the app sends the request again, this time **without** `Prefer:handling=strict` in the header.
+-   If end users choose *Confirm* to go ahead with the action, the application sends the request again, this time **without** `Prefer:handling=strict` in the header.
 
 -   The back end executes the action and responds with either a success or a failure message.
 
--   If users choose *Cancel* the operation is terminated.
+-   If end users choose *Cancel*, the operation is terminated.
 
 
 The following image shows an example of such a popup:
 
 ![](images/Confirmation_Popup_412_Warning_03381d1.png)
-
-> ### Note:  
-> A 412 message that doesn't indicate a warning severity is considered as a regular message. This means, if this is the only message, then an automatic retry of the action isn't offered, for example.
 
 
 
@@ -87,9 +84,11 @@ The following image shows an example of such a popup:
 
 ### Turn Off *Draft Activation* Confirmation Popup for External Navigation
 
-Applications can turn off the confirmation popup for draft activation in the case of external navigation using the `draftDiscardConfirmationSettings` manifest setting as follows:
+You can turn off the confirmation popup for draft activation in the case of external navigation by configuring the `draftDiscardConfirmationSettings` setting in the `manifest.json` file as shown in the following sample code:
 
 > ### Sample Code:  
+> manifest.json
+> 
 > ```
 > "sap.ui.generic.app": {
 >               "_version": "1.3.0",
@@ -123,7 +122,7 @@ The following additional scenarios are supported:
 > ### Restriction:  
 > You can't configure 412 confirmation popups for a deletion triggered from a table in an object page.
 
-If a user wants to perform an action on multiple selected items, some of the selected items can result in a warning message. In such cases, the action processing fails and the user is asked to perform the action on individual objects.
+If an end user wants to perform an action on multiple selected items, some of the selected items can result in a warning message. In such cases, the action processing fails and the end user is asked to perform the action on individual objects.
 
 
 
@@ -132,11 +131,13 @@ If a user wants to perform an action on multiple selected items, some of the sel
 > ### Note:  
 > This is a legacy feature and it is recommended to use the 412 confirmation popup instead.
 
-In draft scenarios, applications can configure a UI confirmation popup before proceeding with activation, if there are any warnings available at the front end.
+In draft scenarios, you can configure a UI confirmation popup before proceeding with activation, if there are any warnings available at the front end.
 
-To enable this popup, in the `manifest.json` under the object page settings, set the `showConfirmationOnDraftActivate` indicator to `true`.
+To enable this popup, in the `manifest.json` file, under the object page settings, set the `showConfirmationOnDraftActivate` indicator to `true` as shown in the following sample code:
 
 > ### Sample Code:  
+> manifest.json
+> 
 > ```
 > "pages": {
 >               "ObjectPage|STTA_C_MP_Product": {
@@ -161,16 +162,14 @@ To enable this popup, in the `manifest.json` under the object page settings, set
 >                              }
 >               }
 > }
-> .
-> .
-> .
+> 
 > ```
 
 
 
 ### Customizing Title Text for the Confirmation Popups
 
-You can override the title text and provide application specific dialog title using the following keys in the i18n files:
+You can override the title text and provide application-specific dialog title using the following keys in the `i18n` files:
 
 -   For the title text of a dialog:
 
@@ -197,18 +196,18 @@ You can override the title text and provide application specific dialog title us
 
 ### Turn Off *Draft Activation* Confirmation Popup for External Navigation
 
-Applications can turn off the confirmation popup for draft activation in the case of external navigation using the `silentlyKeepDraftOnForwardNavigation` manifest setting as follows:
+You can turn off the confirmation popup for draft activation in the case of external navigation by configuring the `silentlyKeepDraftOnForwardNavigation` setting in the `manifest.json` file as shown in the following sample code:
 
 > ### Sample Code:  
+> manifest.json
+> 
 > ```
 > "sap.fe": {
 >      "app": {
 >           "silentlyKeepDraftOnForwardNavigation": true
 >      }
 > }
-> .
-> .
-> .
+> 
 > ```
 
 

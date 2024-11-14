@@ -75,7 +75,7 @@ If the entity is not annotated with `UI.IsImage`, then both the images and the m
 
 ![](images/Stream_Support_3_fc27c63.png)
 
-Label for the file uploader is picked from the `dataFiled` annotation.
+Label for the file uploader is picked from the `dataField` annotation.
 
 Based on the `MediaType`, the icon for the non-image media type is shown differently in the UI.
 
@@ -111,7 +111,7 @@ If no file is present, a placeholder is displayed:
 ![](images/Stream_Support_4_adaa7a8.png)
 
 > ### Note:  
-> An uploaded file cannot be viewed in the list report or the object page table. But that cannot be edited from the table. To upload a file you have to navigate to the corresponding object page. You cannot upload multiple files.
+> An uploaded file cannot be viewed in the list report or the object page table. But that cannot be edited from the table. To upload a file, you have to navigate to the corresponding object page. You cannot upload multiple files.
 > 
 > ![](images/Stream_Support_5_08edaaf.png)
 
@@ -125,16 +125,16 @@ App developers can define fields based on `Edm.Stream` properties and add them t
 
 Fields based on `Edm.Stream` have the following features:
 
--   In display mode the stream content is represented either as a preview \(image\) or as a link to download the file.
+-   In display mode, the stream content is represented either as a preview \(image\) or as a link to download the file.
 
-    If the field is represented as a download link, it also contains a media-type icon, and the display text for the link is the file name \(for example *1.gif*\), if available. Otherwise the display text is *Open File*.
+    If the field is represented as a download link, it also contains a media-type icon, and the display text for the link is the file name \(for example, *1.gif*\) if available. Otherwise, the display text is *Open File*.
 
--   In edit mode there are additional buttons to upload or delete the stream content.
+-   In edit mode, there are additional buttons to upload or delete the stream content.
 
 
 The following image shows an example of a list report from which end users can download a file:
 
-![]()![](images/Edm_Stream_List_Report_-_Download_File_5659cb3.png)
+![](images/Edm_Stream_List_Report_-_Download_File_5659cb3.png)
 
 The following image shows an example of an object page in display mode:
 
@@ -148,7 +148,7 @@ To get the file upload elements, proceed as follows:
 
 
 
-### Step 1: Provide a property of type `Edm.Stream`
+### Step 1: Provide a property of type `Edm.Stream`.
 
 > ### Sample Code:  
 > ```
@@ -156,7 +156,7 @@ To get the file upload elements, proceed as follows:
 >     ...
 >     <Property Name="myStreamProperty" Type="Edm.Stream" />
 >     <Property Name="myStreamPropertyType" Type="Edm.String" />
->     <Property Name="myRestrictedStreamProperty" Type="Edm.Stream" MaxLength=”100000”/>
+>     <Property Name="myRestrictedStreamProperty" Type="Edm.Stream" MaxLength="100000"/>
 >     ...
 > </EntityType>
 > <Annotations Target="sap.fe.stream.StreamsService.MainEntities/myStreamProperty">
@@ -167,24 +167,24 @@ To get the file upload elements, proceed as follows:
 > </Annotations>
 > <Annotations Target="sap.fe.stream.StreamsService.MainEntities/myRestrictedStreamProperty">
 >     <Annotation Term="Core.MediaType" String="text/plain"/>
-> <Annotation Term="Core.AcceptableMediaTypes" />
->     <Collection>
->         <String>text/plain</String>
->     </Collection>
-> </Annotation>
+>     <Annotation Term="Core.AcceptableMediaTypes">
+>         <Collection>
+>             <String>text/plain</String>
+>         </Collection>
+>     </Annotation>
 > </Annotations>
 > ```
 
 To restrict the file size, add the attribute `MaxLength` to the `Property`. `MaxLength` is the maximum file size in bytes. To define the allowed media types, use the annotation `Core.AcceptableMediaTypes`. Without these annotations, there is no restriction regarding file size and media types that can be uploaded. App developers must define these restrictions.
 
 > ### Note:  
-> The `odata.mediaEditLink` annotation is currently not supported.
+> The `odata.mediaEditLink` annotation is not supported.
 
 For more information, see [https://cap.cloud.sap/docs/guides/providing-services\#annotating-media-elements](https://cap.cloud.sap/docs/guides/providing-services#annotating-media-elements).
 
 
 
-### Step 2: Maintain and annotate the UI field as a `DataField`
+### Step 2: Maintain and annotate the UI field as a `DataField`.
 
 > ### Sample Code:  
 > ```
@@ -223,18 +223,18 @@ You can click on the document link to open the content of the stream property. S
 
     -   For the stream property, there’s a `Core.ContentDisposition/Filename` annotation pointing to a non-empty file name that is empty.
 
-    -   The stream property is not empty. This means the back end either returns an `odata.mediaContentType` annotation with a value that is not null, or does not return an `odata.mediaContentType` annotation.
+    -   The stream property is not empty. This means the back end either returns an `odata.mediaContentType` annotation with a value that is not `null`, or does not return an `odata.mediaContentType` annotation.
 
 
 -   The link text is "Open File". Two conditions must be fulfilled:
 
     -   For the stream property, there’s either no `Core.ContentDisposition/Filename` annotation, or a `Core.ContentDisposition/Filename` annotation pointing to an empty file name.
 
-    -   The stream property is not empty. This means the back end either returns an `odata.mediaContentType` annotation with a value that is not null, or does not return an `odata.mediaContentType` annotation.
+    -   The stream property is not empty. This means the back end either returns an `odata.mediaContentType` annotation with a value that is not `null`, or does not return an `odata.mediaContentType` annotation.
 
 -   There’s an empty indicator instead of a link. The following condition must be fulfilled:
 
-    -   The stream property is empty. This means the back end returns an `odata.mediaContentType` annotation with the value null.
+    -   The stream property is empty. This means the back end returns an `odata.mediaContentType` annotation with the value `null`.
 
 
 
@@ -270,12 +270,12 @@ You can click on the document link to open the content of the stream property. S
 
 An avatar is rendered instead of the icon and link representation when one of the following two conditions is fulfilled:
 
--   The `Edm.Stream` property is annotated with `UI.IsImage` which, in turn, is annotated with `Common.IsNaturalPerson`.
+-   The `Edm.Stream` property is annotated with `UI.IsImage` which is included in an `EntityType` that is annotated with `Common.IsNaturalPerson` or `UI.IsImageUrl`.
 
 -   The `Core.MediaType` annotation starts with 'image/', as in 'image/gif'
 
 
 – Edit Mode –
 
-In Edit mode, an upload and a delete button are available so that users can upload a different file or delete the file. If the back-end response provides a new value for `odata.mediaContentType` after uploading a new file, the icon and link change their representation according to the new value.
+In Edit mode, an upload button and a delete button are available so that users can upload a different file or delete the file. If the back-end response provides a new value for `odata.mediaContentType` after uploading a new file, the icon and link change their representation according to the new value.
 

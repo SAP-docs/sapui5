@@ -40,10 +40,14 @@ Creating a custom card consists of the following steps:
     >                         "type": "string",
     >                         "defaultValue": "test.testovp.ext.myCustomCard.MyCustomCard"
     >                     },
-    >                     "controllerName": {
-    >                         "type": "string",
-    >                         "defaultValue": "test.testovp.ext.myCustomCard.MyCustomCard"
-    >                     },
+    > 
+    >                     customizing: {
+    >                         "sap.ui.controllerExtensions": {
+    >                              "sap.ovp.cards.generic.Card": {
+    >                                   controllerName: "test.testovp.ext.myCustomCard.MyCustomCard"
+    >                    }
+    >                }
+    >            }
     >                     "annotationPath": {
     >                         "type": "string",
     >                         "defaultValue": "com.sap.vocabularies.UI.v1.LineItem"

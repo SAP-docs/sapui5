@@ -12,7 +12,7 @@ So far, we have a list of posts on the home page of the app. But typically, a po
   
 **We add an OPA test that selects an item from the table and navigates to the post page**
 
-![](images/Tutorial_Testing_Step_08_cf3e0a6.png "We add an OPA test that selects an item from the table and navigates to the
+![](images/Tutorial_Testing_Step_08_cf3e0a6.jpg "We add an OPA test that selects an item from the table and navigates to the
 					post page")
 
 
@@ -26,6 +26,7 @@ You can view and download all files in the Demo Kit at [Testing - Step 8](https:
 ## webapp/test/integration/PostJourney.js \(New\)
 
 ```js
+/*global QUnit*/
 sap.ui.define([
 	"sap/ui/test/opaQunit",
 	"./pages/Worklist",
@@ -86,18 +87,14 @@ Our new journey consists of three user interaction steps:
 ## webapp/test/integration/pages/Worklist.js – action object
 
 ```js
+
 sap.ui.define([
 		'sap/ui/test/Opa5',
 		'sap/ui/test/matchers/AggregationLengthEquals',
 		'sap/ui/test/matchers/I18NText',
 		'sap/ui/test/matchers/BindingPath',
 		'sap/ui/test/actions/Press'
-	],
-	function (Opa5,
-			  AggregationLengthEquals,
-			  I18NText,
-			  BindingPath,
-			  Press) {
+],   function (Opa5, AggregationLengthEquals, I18NText, BindingPath, Press) {
 		"use strict";
 
 		var sViewName = "Worklist",
@@ -230,7 +227,7 @@ We now implement an action that is triggered when the *Forward* button is chosen
 
 
 
-## **webapp/test/integration/AllJourneys.js**
+## **webapp/test/integration/opaTests.qunit.js**
 
 ```js
 sap.ui.define([
@@ -249,9 +246,9 @@ sap.ui.define([
 });
 ```
 
-To make navigation tests complete, we add the new journey to the `AllJourneys` file that is invoked by the OPA test page.
+To make navigation tests complete, we add the new journey to the `opaTests.qunit.js` file that is invoked by the test suite.
 
-If you execute the tests now, you can see in the logs of the developer tools that OPA is waiting for the object page to be displayed. Of course, this will not happen as it is not yet implemented. But we already have a pretty good idea on how we will implement the feature in the next step
+If you execute the tests now, you can see in the logs of the developer tools that OPA is waiting for the object page to be displayed. Of course, this will not happen as it is not yet implemented. But we already have a pretty good idea on how we will implement the feature in the next step.
 
 **Related Information**  
 

@@ -761,7 +761,7 @@ For example, if the mask symbol is `S^AP-AA-999`, the end user input value must 
 >           <Annotation Term="UI.InputMask"> 
 >               <Record> 
 >                    <PropertyValue Property="Mask" String="(***) *** ******"/> 
->                    <PropertyValue Property="Placeholder" String="_"/> 
+>                    <PropertyValue Property="PlaceholderSymbol" String="_"/> 
 >               </Record> 
 >           </Annotation> 
 >           <Annotation Term="UI.Placeholder" String="Enter twelve-digit number"/> 
@@ -771,7 +771,7 @@ For example, if the mask symbol is `S^AP-AA-999`, the end user input value must 
 >           <Annotation Term="UI.InputMask"> 
 >                 <Record> 
 >                    <PropertyValue Property="Mask" String="I____-__"/> 
->                    <PropertyValue Property="Placeholder" String="_"/> 
+>                    <PropertyValue Property="PlaceholderSymbol" String="_"/> 
 >                    <PropertyValue Property="Rules"> 
 >                         <Collection> 
 >                                   <Record> 
@@ -799,14 +799,14 @@ For example, if the mask symbol is `S^AP-AA-999`, the end user input value must 
 > MaskedInputPhone   : String          @( 
 >       UI.InputMask  : { 
 >          Mask       : '(***) *** ******', 
->          Placeholder: '_', 
+>          PlaceholderSymbol: '_', 
 >       }, 
 >       UI.Placeholder: 'Enter twelve-digit number' 
 >       ); 
 >      MaskedInputRegistration    : String          @( 
 >       UI.InputMask  : { 
 >         Mask       : 'I****-**', 
->         Placeholder: '_', 
+>         PlaceholderSymbol: '_', 
 >         Rules      : [{ 
 >          MaskSymbol: '*', 
 >          RegExp    : '[0-9]' 
@@ -837,6 +837,8 @@ For example, if the mask symbol is `S^AP-AA-999`, the end user input value must 
 > You must ensure that placeholder symbols do not match the mask symbols.
 > 
 > The mask characters normally correspond to an existing rule \(one rule per unique character\). Characters which don't, are considered immutable characters \(for example, the mask `2099`, where `9` corresponds to a rule for digits, has the characters `2` and `0` as immutable\). You can use the special escape character `^` called "Caret" directly before a rule character to make it immutable.
+
+Check out our live example in the flexible programming model explorer at [Field - Display Representations](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#buildingBlocks/field/fieldDisplayStyles).
 
 **Related Information**  
 

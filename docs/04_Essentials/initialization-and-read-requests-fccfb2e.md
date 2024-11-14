@@ -160,7 +160,7 @@ For details, see [`sap.ui.model.odata.v4.ODataModel#bindProperty`](https://ui5.s
 
 A property binding can have an object value if the target type specified in the corresponding control property's binding info is "any" and the binding is relative or points to metadata. The binding's mode has to be `OneTime`, see [sap.ui.model.BindingMode](https://ui5.sap.com/#/api/sap.ui.model.BindingMode), unless the binding is for an action advertisement.
 
-A `OneWay` binding mode is also supported \(**experimental** as of UI5 version 1.126.0\) for relative read-only data \(not metadata!\) bindings to complex types and collections thereof; for entity types, use a context binding instead.
+A `OneWay` binding mode is also supported for relative read-only data \(not metadata!\) bindings to complex types and collections thereof; for entity types, use a context binding instead.
 
 **Example: Using the controller method `'formatPhoneNumbersAsCSV'` to show a comma-separated list of phone numbers for business partner contacts**
 

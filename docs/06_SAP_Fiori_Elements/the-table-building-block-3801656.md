@@ -73,7 +73,7 @@ You can link the `Table` building block to a `FilterBar` that is defined in the 
 
 Check out our live example in the flexible programming model explorer at [Table - FilterBar](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/table/tableFilterBar) and [Custom View with BuildingBlock Table](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/customElements/customElementsOverview/customViewWithMacroTableContent).
 
-You can use the `getPresentationVariant()` and `setPresentationVariant()` methods to programmatically get and set the presentation variants corresponding to the `Table` building block. Similarly, the `getSelectionVariant()` and `setSelectionVariant()` methods allows to programmatically get and set the selection variants associated with the `Table` building block.
+You can use the `getPresentationVariant()` and `setPresentationVariant()` methods to programmatically get and set the presentation variants corresponding to the `Table` building block. Similarly, the `getSelectionVariant()` and `setSelectionVariant()` methods allows to programmatically get and set the selection variants associated with the `Table` building block. The `getSelectionVariant()` method considers the variants that are applied directly to the table and excludes the variants that are applied to a bound model.
 
 Check out our live example in the flexible programming model explorer at [Table - Interacting via APIs](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/table/tablePublicAPIs).
 
@@ -151,4 +151,34 @@ Then, implement the `beforeRebindTable` extension point in the controller extens
 > ```
 
 Check out our live example in the flexible programming model explorer at [Table - Custom Columns / Actions](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/table/tableCustoms).
+
+
+
+<a name="loio3801656db27b4b7a9099b6ed5fa1d769__section_qmg_vvy_bdc"/>
+
+## Triggering the Creation of a New Document Within a Table
+
+You can trigger the creation of a document within a table by calling the `createDocument` function with the table reference within the `editFlow` controller extension:
+
+> ### Sample Code:  
+> ```
+> //Get the table API
+> var table = this.getView().byId("fe::table::_Child::LineItem::Table");
+> 
+> //Create document 
+> this.base.editFlow
+>     .createDocument(table, {
+>         creationMode: coreLibrary.CreationMode.Inline,
+>         createAtEnd: true,
+>         data: {
+>             ChildTitleProperty: "Child Object Custom Title",
+>             ChildDescriptionProperty: "Child Custom Description"
+>         }
+>     })
+>     .then(function () {
+>         MessageToast.show("Custom create action successfully invoked");
+>     });
+> ```
+
+Check out our live example in the flexible programming model explorer at [Controller Extensions - Edit Flow](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/controllerExtensions/basicExtensibility).
 

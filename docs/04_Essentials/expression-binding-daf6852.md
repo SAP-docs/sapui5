@@ -19,30 +19,34 @@ An expression binding is specified in an XML view by one of the following two op
 
 The syntax of the `expression` is similar to JavaScript syntax, but you can only use a subset of the JavaScript expression syntax as defined in the table below. Additionally, you can embed values from the model layer into an expression as additional bindings by using one of the following syntaxes:
 
--   <code>${<b>binding</b>}</code>
-
 -   <code>%{<b>binding</b>}</code>
 
+-   <code>${<b>binding</b>}</code>
 
-`binding` can either be a simple path, or a complex binding. The embedded binding <code>${<b>binding</b>}</code> delivers a value formatted according to the target type of the control property the expression binding applies to, for example, “boolean” in case of `<Icon src="sap-icon://message-warning" visible="{= ${status} === 'critical' }">`. This can be undesirable or even lead to errors, for example, if OData V4 automatically adds the correct type for the “status” property which is string-like, not boolean. In such cases, use the syntax `%{binding}` instead. It is just a shortcut for `${path : 'binding', targetType : 'any'}`. In rare cases, you might also want to specify a different “targetType”, for example “string”, “boolean”, “int” or “float”. For more information how these values relate to OData types, see the [sap.ui.model.odata.type](https://ui5.sap.com/#/api/sap.ui.model.odata.type) API documentation or explore the [XML Templating: UI5 OData Types](https://ui5.sap.com/#/entity/sap.ui.core.mvc.XMLView/sample/sap.ui.core.sample.ViewTemplate.types) sample in the Demo Kit. For more information about `targetType`, see the [sap.ui.base.ManagedObject\#bindProperty](https://ui5.sap.com/#/api/sap.ui.base.ManagedObject/methods/bindProperty) API documentation in the Demo Kit.
+
+`binding` can either be a simple path or a complex binding. The embedded binding <code>${<b>binding</b>}</code> delivers a value formatted according to the target type of the control property the expression binding applies to, for example `boolean` in case of `<Icon src="sap-icon://message-warning" visible="{= ${status} === 'critical' }">`. This can be undesirable or even lead to errors, for example if OData V4 automatically adds the correct type for the `status` property, which is string-like, not boolean. For expression bindings, we therefore recommend to use the syntax `%{binding}` by default, which is just a shortcut for `${path : 'binding', targetType : 'any'}`. In rare cases, you might also want to specify a different `targetType`, for example `string`, `boolean`, `int` or `float`.
+
+For more information how these values relate to OData types, see the [`sap.ui.model.odata.type`](https://ui5.sap.com/#/api/sap.ui.model.odata.type) API documentation or explore the [XML Templating: UI5 OData Types](https://ui5.sap.com/#/entity/sap.ui.core.mvc.XMLView/sample/sap.ui.core.sample.ViewTemplate.types) sample in the Demo Kit.
+
+For more information about `targetType`, see the [sap.ui.base.ManagedObject\#bindProperty](https://ui5.sap.com/#/api/sap.ui.base.ManagedObject/methods/bindProperty) API documentation in the Demo Kit.
 
 > ### Note:  
 > Expression binding can also be used with JavaScript. For example:
 > 
 > ```js
-> new Text({"visible" : "{= ${status} === 'critical' && ${amount} > 10000 }"});
+> new Text({"visible" : "{= %{status} === 'critical' && %{amount} > 10000 }"});
 > ```
 > 
 > or
 > 
 > ```js
-> new Icon({color : "'{= encodeURIComponent(${/ID}) }'"});
+> new Icon({color : "'{= encodeURIComponent(%{/ID}) }'"});
 > ```
 
 > ### Note:  
 > An expression binding does **not** validate binding paths. As a result, an expression binding will **not** detect incorrect or misspelled binding paths. But if you use an OData V4 model and try to bind data that does **not** exist in the model, a warning is logged in the console.
 
-To embed a path containing a closing curly brace into an expression binding, use a complex binding syntax: `${path:'...'}`, for example `"{:= ${path:'target>extensions/[${name} === \'semantics\']/value'} === 'email'}"`. You can use this also to avoid variable replacement by build tools like Maven for special names like “Description” or “Name”.
+To embed a path containing a closing curly brace into an expression binding, use a complex binding syntax: `%{path:'...'}`, for example `"{:= %{path:'target>extensions/[${name} === \'semantics\']/value'} === 'email'}"`. You can use this also to avoid variable replacement by buildtools like Maven for special names like "Description" or "Name".
 
 
 <table>
@@ -209,7 +213,7 @@ Member access operator with the `.` operator
 > ### Note:  
 > With these, you can use members and member methods on standard types such as string, array, number, and so on.
 > 
-> Example: `${message>/}.length >0` or `${/firstName}.indexOf('S')`.
+> Example: `%{message>/}.length >0` or `%{/firstName}.indexOf('S')`.
 
 
 
@@ -227,7 +231,7 @@ Function call
 
 Example:
 
-<code>• text="{= <b>Math.max(${/value1}, ${/value2}, ${/value3})</b> }"</code>
+<code>• text="{= <b>Math.max(%{/value1}, %{/value2}, %{/value3})</b> }"</code>
 
 > ### Note:  
 > You can use functions that are available via global symbols, such as `Math.max(...)` or `isNaN(...)`.
@@ -339,7 +343,7 @@ When using expression binding, however, you only need the XML view without contr
 
 <mvc:View controllerName="sample.app" xmlns="sap.ui.core" xmlns:mvc="sap.ui.core.mvc">
 ...
-  <Icon src="sap-icon://message-warning" visible="{= ${status} === 'critical' }">
+  <Icon src="sap-icon://message-warning" visible="{= %{status} === 'critical' }">
 ...
 </mvc:View>
 
@@ -370,40 +374,40 @@ Examples for more complex expressions:
 
 <!-- Set to visible if the status is critical and the amount 
 is above the threshold (note escaping of &&). -->
-visible="{= ${status} === 'critical' &amp;&amp; ${amount} > 10000 }"
+visible="{= %{status} === 'critical' &amp;&amp; %{amount} > 10000 }"
 ```
 
 ```xml
 
 <!-- Text for amount level using language-dependent texts 
 from the resource model. -->
-text="{= ${/amount} > 10000 ? ${i18n>/high} : ${i18n>/normal} }"
+text="{= %{/amount} > 10000 ? %{i18n>/high} : %{i18n>/normal} }"
 ```
 
 ```xml
 
 <!-- Set to visible if the rating is VIP, ignoring case 
 or if the order amount is greater than 10,000. -->
-visible="{= ${/rating}.toUpperCase() === 'VIP' || ${/orderAmount} > 10000 }"
+visible="{= %{/rating}.toUpperCase() === 'VIP' || %{/orderAmount} > 10000 }"
 ```
 
 ```xml
 
 <!-- Set to visible if the rating contains VIP, ignoring
  the case. -->
-visible={= RegExp('vip', 'i').test(${/rating}) }
+visible={= RegExp('vip', 'i').test(%{/rating}) }
 ```
 
 ```xml
 
 <!-- Text is maximum of three values. -->
-text="{= Math.max(${/value1}, ${/value2}, ${/value3}) }"
+text="{= Math.max(%{/value1}, %{/value2}, %{/value3}) }"
 ```
 
 ```xml
 
 <!-- Control is enabled only if the order status is set. --> 
-enabled="{= ${/orderStatus} !== null }"
+enabled="{= %{/orderStatus} !== null }"
 ```
 
 ```xml
@@ -417,7 +421,7 @@ text="{= 'small@middle@long'.split('@')[1] }"
 
 <!-- Concatenate literal strings and expression bindings 
 or bindings. -->
-text="Hello {=${gender}==='male' ? 'Mr.' : 'Mrs.'} {lastName}"
+text="Hello {=%{gender}==='male' ? 'Mr.' : 'Mrs.'} {lastName}"
 ```
 
 ```xml
@@ -433,9 +437,9 @@ errorMsg=Message is too short
 <!-- View -->
 <mvc:View controllerName="sample.App" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc">
 ...
-   <Text text="{= ${/data/message}.length &lt; 20
-      ? ${i18n>errorMsg} 
-      : ${parts: [
+   <Text text="{= %{/data/message}.length &lt; 20
+      ? %{i18n>errorMsg} 
+      : %{parts: [
          {path: 'i18n>successMsg'},
          {path: '/data/today', type:'sap.ui.model.type.Date', constraints:{displayFormat:'Date'}},
          {path: '/data/tomorrow', type:'sap.ui.model.type.Date', constraints:{displayFormat:'Date'}}

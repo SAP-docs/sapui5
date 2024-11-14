@@ -16,7 +16,7 @@ The following table types are available:
 
 -   Tree table
 
-    This table type provides a comprehensive set of features to display hierarchical data.
+    This table type provides a comprehensive set of features to display hierarchical data. For more information, see [Tree Tables](tree-tables-7cf7a31.md).
 
 -   Analytical table
 
@@ -62,6 +62,11 @@ Applications can change the single-selection mode to multi-selection mode. For m
 ## Context Menu in Tables
 
 Tables in list report, object page, and analytical list page applications support a context menu. The context menu is available as a default option and appears only when end users perform a right-click on a row or a set of selected rows. This menu displays all context-dependent actions that appear on the table toolbar. Additionally, an option to open the selected row or rows in a new browser tab or window is available within the menu. Inline actions are not included as part of context menu actions.
+
+When implementing custom actions, you can use the `extensionAPI.getSelectedContexts` API to identify the rows associated with the context menu.
+
+> ### Note:  
+> You must use the `extensionAPI.getSelectedContexts` API only within synchronous code blocks. For more information, see [Defining Custom Actions](defining-custom-actions-c3de5c0.md).
 
 
 

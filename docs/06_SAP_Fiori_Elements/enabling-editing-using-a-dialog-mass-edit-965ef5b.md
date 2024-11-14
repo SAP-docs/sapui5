@@ -32,7 +32,7 @@ For more information, see [Enabling Editing Using a Dialog \(Mass Edit\) in the 
 
 ## Additional Features in SAP Fiori Elements for OData V4
 
-In SAP Fiori elements for OData V4, you can use the mass edit dialog in the object page in edit mode and in the list report. Use the `enableMassEdit` property in the manifest to enable the feature. You can use the following settings for the `enableMassEdit` property:
+In SAP Fiori elements for OData V4, you can use the mass edit dialog on the object page in edit mode and in the list report. Use the `enableMassEdit` property in the manifest to enable the feature. You can use the following settings for the `enableMassEdit` property:
 
 -   Undefined \(mass edit is disabled\)
 
@@ -46,9 +46,9 @@ In SAP Fiori elements for OData V4, you can use the mass edit dialog in the obje
 
 
 
-The `visibleFields` property lets you specify which fields are available in the mass edit dialog, even if these fields are not displayed in the table. The `ignoredFields` property lets you hide specific fields from the mass edit dialog, even if these fields are displayed in the table.
+The `visibleFields` property lets you specify which fields are available in the mass edit dialog, even if these fields are not displayed in the table. The `ignoredFields` property lets you hide specific fields from the mass edit dialog, even if these fields are displayed in the table. When the user chooses the *Mass Edit* button, the editability of each field is evaluated. Read-only fields are automatically excluded from the mass edit dialog, and changes are only applied to fields that are editable.
 
-You can use only either of these properties with an object. If the `visibleFields` property is set, then the `ignoredFields` property is ignored.
+You can only use one of these properties at a time. If the `visibleFields` property is set, then the `ignoredFields` property is ignored.
 
 Both properties can contain a `FieldGroup` annotation or a comma-separated list of properties. A combination of both is not supported.
 
@@ -151,7 +151,7 @@ The following prerequisites apply:
 > ### Note:  
 > You can enable the mass edit feature for backend services based on CAP Node.js by setting a feature flag. For more information, see [https://cap.cloud.sap/docs/releases/dec23\#sapui5-mass-edit](https://cap.cloud.sap/docs/releases/dec23#sapui5-mass-edit).
 
-Once a user clicks on the *Mass Edit* button, a dialog opens showing all the editable and visible fields from the table. The user is able to set a value for every editable field of the selected records, or even clear all values for the field from the selected records in one go.
+When a user clicks on the *Mass Edit* button, a dialog opens showing all the editable fields that are visible in the table or configured using the `visibleFields` property or the `ignoreFields` property. The user is able to set a value for every editable field of the selected records, or even clear all values for the field from the selected records in one go.
 
 The *Mass Edit* button isn't visible if the table entity has an update restriction set to static false. Visibility can also be controlled via a value for `UI.UpdateHidden` \(you can use a path-based value, but can only point to the parent path for a table on an object page or subobject page, and to a singleton in a list report table\).
 
@@ -164,13 +164,13 @@ The *Mass Edit* button isn't enabled if the update restriction points to a path 
 > 
 > -   If *Mass Edit* is enabled and if `selectionMode` isn't specified or set to `"Multi"`, then users can select multiple records – irrespective of other conditions \(for example, multiple selection is possible even if there are no table toolbar actions that require context\).
 > 
-> -   The suggestion list in the fields \(showing the values for this field from the selected records in the table\) within the *Mass Edit* dialog doesn't appear if the following applies:
+> -   The suggestion list in the fields \(showing the values for this field from the selected records in the table\) within the mass edit dialog doesn't appear if the following applies:
 > 
 >     -   the field is part of the `Common.ValueListParameterIn` mapping of another field and this other field is filled with a value
 > 
 >         Example:
 > 
->         `"Country"` has an IN mapping to `"City"`. If a user selects a value for the field `"Country"` within the *Mass Edit* dialog, no suggestion list is available for the field `"City"`.
+>         `"Country"` has an IN mapping to `"City"`. If a user selects a value for the field `"Country"` within the mass edit dialog, no suggestion list is available for the field `"City"`.
 > 
 >     -   the field has a `Common.ValueListParameterOut` mapping to another field
 > 
@@ -182,7 +182,7 @@ The *Mass Edit* button isn't enabled if the update restriction points to a path 
 > -   If *Mass Edit* is enabled for an object page and the service is ETag enabled, you must ensure that the ETag implementation is in `etag master`. This means the ETag value of the child entity doesn't depend on the ETag value of the parent \(that is, the root entity\).
 
 > ### Restriction:  
-> -   The following fields are not available in the *Mass Edit* dialog:
+> -   The following fields are not available in the mass edit dialog:
 > 
 >     -   image-based fields
 > 
@@ -208,7 +208,7 @@ The *Mass Edit* button isn't enabled if the update restriction points to a path 
 >     -   value help fields with a dropdown list that have fixed values \(`@Common.ValueListWithFixedValues: true`\)
 > 
 > 
-> -   Validation from the server for updates made in the *Mass Edit* dialog is currently not supported. There's no communication with the back end until users choose *Save* in the *Mass Edit* dialog.
+> -   Validation from the server for updates made in the mass edit dialog is currently not supported. There's no communication with the back end until users choose *Save* in the mass edit dialog.
 > 
 > -   You must not enable *Mass Edit* if the back end is configured to lock the entire object while you're making an update to a child object.
 

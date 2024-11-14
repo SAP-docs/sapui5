@@ -83,64 +83,65 @@ To show the filter value as shown in the filter bar, such as `Cost=Low`, you can
 > >   "use strict";
 > > 
 > >   return {
-> 		onInit: function () {
-> 			//...
-> 		},
-> 		/**
-> 		 * This extension method modifies the "Cost" filter in the exported file.
-> 		 * 
-> 		 * Removes the existing filter with label "OverallCost" and value "<=1000",
-> 		 * and adds a new filter with label "Cost" and value "Low"
-> 		 * 
-> 		 * @param oExportParams 
-> 		 * @returns 
-> 		 */
-> 		onBeforeExportTableExtension: function (oExportParams) {
-> 			if (!oExportParams.includeFilterSettings) {
-> 				return;
-> 			}
-> 			// Array of filters in the exported file
-> 			var aFilterSettings = oExportParams.filterSettings;
-> 			// Find the "Cost" combobox in smart filter bar
->             var COST_COMBOBOX_ID = "STTA_MP::sap.suite.ui.generic.template.ListReport.view.ListReport::STTA_C_MP_Product--CustomFilter-OverallCost-combobox";
-> 			var oCostCombobox = Element.getElementById(COST_COMBOBOX_ID);
-> 			
-> 			if (oCostCombobox && oCostCombobox.getValue()) {
-> 				var oRawValue, sNewCostValue;
+>           onInit: function () {
+>                 //...
+>            },
+>            /**
+>             * This extension method modifies the "Cost" filter in the exported file.
+>             * 
+>             * Removes the existing filter with label "OverallCost" and value "<=1000",
+>             * and adds a new filter with label "Cost" and value "Low"
+>            * 
+>            * @param oExportParams 
+>            * @returns 
+>            */
+>            onBeforeExportTableExtension: function (oExportParams) {
+>                if (!oExportParams.includeFilterSettings) {
+>                      return;
+>                  }
+>                // Array of filters in the exported file
+>                var aFilterSettings = oExportParams.filterSettings;
+>                 // Find the "Cost" combobox in smart filter bar
+>            var COST_COMBOBOX_ID = "STTA_MP::sap.suite.ui.generic.template.ListReport.view.ListReport::STTA_C_MP_Product--CustomFilter-OverallCost-combobox";
+>                var oCostCombobox = Element.getElementById(COST_COMBOBOX_ID);
+>                 
+>                if (oCostCombobox && oCostCombobox.getValue()) {
+>                     var oRawValue, sNewCostValue;
 > 
-> 				for (var i = 0; i < aFilterSettings.length; i++) {
-> 					var oCurrentFilter = aFilterSettings[i];
-> 					// Find the filter with property "OverallCost"
-> 					if (oCurrentFilter.getProperty() === "OverallCost") {
-> 						//Store the raw value
-> 						oRawValue = oCurrentFilter.rawValues[0];
-> 						//Remove the current filter from the filters array
-> 						aFilterSettings.splice(i, 1);
-> 						break;
-> 					}
-> 				}
-> 				// Derive Cost category (Low / High) from the raw value
-> 				if (oRawValue.operator === "<=" && oRawValue.value === "1000") {
-> 					sNewCostValue = "Low";
-> 				} else {
-> 					sNewCostValue = "High";
-> 				}
+>                     for (var i = 0; i < aFilterSettings.length; i++) {
+>                          var oCurrentFilter = aFilterSettings[i];
+>                          // Find the filter with property "OverallCost"
+>                          if (oCurrentFilter.getProperty() === "OverallCost") {
+>                               //Store the raw value
+>                               oRawValue = oCurrentFilter.rawValues[0];
+>                              //Remove the current filter from the filters array
+>                               aFilterSettings.splice(i, 1);
+>                               break;
+>                             }
+>                      }
+>                      // Derive Cost category (Low / High) from the raw value
+>                      if (oRawValue.operator === "<=" && oRawValue.value === "1000") {
+>                          sNewCostValue = "Low";
+>                      } else {
+>                         sNewCostValue = "High";
+>                      }
 > 
-> 				//Create a new export filter with the new label and value
-> 				var sProperty = "OverallCost",
-> 					sLabel = "Cost",
-> 					oNewRawValue = {operator: "==", value: sNewCostValue},
-> 					oCostFilter = new ExportFilter(sProperty, oNewRawValue, sLabel);
+>                      //Create a new export filter with the new label and value
+>                      var sProperty = "OverallCost",
+>                          sLabel = "Cost",
+>                          oNewRawValue = {operator: "==", value: sNewCostValue},
+>                          oCostFilter = new ExportFilter(sProperty, oNewRawValue, sLabel);
 > 
-> 				//Add the updated filter to the filter settings array
-> 				aFilterSettings.push(oCostFilter);
-> 			}
-> 		}
-> 	};
+>                     //Add the updated filter to the filter settings array
+>                     aFilterSettings.push(oCostFilter);
+>                 }
+>          }
+>      };
 > });
 >  in the controller extension.
 >                     This extension method is supported for exporting tables on analytical list
 >                     pages, list reports and object pages.
+> 
 > ```
 
 
@@ -149,7 +150,7 @@ To show the filter value as shown in the filter bar, such as `Cost=Low`, you can
 
 ## Additional Features in SAP Fiori Elements for OData V4
 
-You can configure the `FilterBar` in the controller extension locally using the section `@com.sap.vocabularies.UI.v1.SelectionFields` in the `controlConfiguration` of the `manifest.json` for the list report target:
+You can configure the `FilterBar` in the controller extension locally. To do so, use the `@com.sap.vocabularies.UI.v1.SelectionFields` section of the `controlConfiguration` in the `manifest.json` file for the list report target.
 
 > ### Sample Code:  
 > `manifest.json`
@@ -188,7 +189,7 @@ You can configure the `FilterBar` in the controller extension locally using the 
 > ...
 > ```
 
-You can use the `filterFields` setting to add custom filters. The pattern looks like this:
+You can use the `filterFields` setting to add custom filters as shown in the following sample code:
 
 > ### Sample Code:  
 > manifest.json
@@ -211,7 +212,7 @@ You can use the `filterFields` setting to add custom filters. The pattern looks 
 
 ### Custom Filter Field: Simple Example
 
-The following sample code shows how you can build an XML template for an app called `SalesOrder`:
+The following sample code shows how you can build an XML template for the `SalesOrder` app:
 
 > ### Sample Code:  
 > ```xml
@@ -318,7 +319,7 @@ In some cases, you may want to use a custom filter operator. For example, you ma
 > </core:FragmentDefinition>
 > ```
 
-In the following example, these custom filter operators are defined in the file `SalesOrder/ext/CustomRating.js` using the function `ratingLevels()` and returned as custom filter conditions containing the values that you want to define:
+In the following sample code, these custom filter operators are defined in the file `SalesOrder/ext/CustomRating.js` using the function `ratingLevels()` and returned as custom filter conditions containing the values that you want to define:
 
 > ### Sample Code:  
 > Implementation of the Custom Rating Operator
@@ -351,6 +352,24 @@ In this function, you define new filter objects for every value \("Low", "Medium
 
 > ### Tip:  
 > To use case insensitive filtering, you must also pass the property `caseSensitive = false` to the constructor `new Filter()`.
+
+> ### Note:  
+> You must ensure that the custom operator is added to the `customFilterOperators` property of the `sap.fe` entry in the `manifest.json` file. For instance, the custom operator in the following sample code is `SalesOrder.ext.CustomRating.ratingLevels`, and it must be added to the `manifest.json` file. This is essential to ensure that SAP Fiori elements can handle it correctly.
+> 
+> > ### Sample Code:  
+> > manifest.json
+> > 
+> > ```
+> > "sap.fe": {
+> >    "macros": {
+> >       "filter": {
+> >          "customFilterOperators": [{
+> >                     "name": "SalesOrder.ext.CustomRating.ratingLevels"
+> >                   }]
+> >         }
+> >    }
+> > }
+> > ```
 
 
 
@@ -399,9 +418,7 @@ You can explore and work with the coding yourself. Check out our live example in
 
 
 
-<a name="loio5fb9f57fcf12401bbe39a635e9a32a4e__section_oxl_zgf_tzb"/>
-
-## Custom Filter Fields With Metadata Binding
+### Custom Filter Fields With Metadata Binding
 
 You can define custom columns with metadata binding. You can also use metadata binding to define the label for custom filters and custom form elements.
 

@@ -107,7 +107,7 @@ The table containing additional custom columns can look like this:
     > 
     > ```
 
-    If you use `QuickVariantSelectionX`, you need to define the extensions per tab. In this case, the names of the extension points are`ResponsiveTableColumnExtension|<EntitySet>|<tabKey>` and `ResponsiveTableCellsExtensions|<EntitySet>|<tabKey>`, respectively. `<tabKey>` is the key provided when defining the `QuickVariantSelectionX`. See also [Defining Multiple Views on a List Report Table - Multiple Table Mode](defining-multiple-views-on-a-list-report-table-multiple-table-mode-37aeed7.md).
+    If you use `QuickVariantSelectionX`, you need to define the extensions per tab. In this case, the names of the extension points are `ResponsiveTableColumnExtension|<EntitySet>|<tabKey>` and `ResponsiveTableCellsExtensions|<EntitySet>|<tabKey>`, respectively. `<tabKey>` is the key provided when defining the `QuickVariantSelectionX`. See also [Defining Multiple Views on a List Report Table - Multiple Table Mode](defining-multiple-views-on-a-list-report-table-multiple-table-mode-37aeed7.md).
 
     > ### Note:  
     > If you do not use |<tab key\> as part of the extension point name, for compatibility reasons, the feature will also work. However, you cannot provide stable IDs for the columns and cells.

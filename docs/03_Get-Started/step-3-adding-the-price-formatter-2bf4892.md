@@ -14,7 +14,7 @@ If the tests are passed, we can be sure that the formatter is formally correct b
   
 **The price is now formatted with a semantic color**
 
-![](images/Tutorial_Testing_Step_03_436054f.png "The price is now formatted with a semantic color")
+![](images/Tutorial_Testing_Step_03_436054f.jpg "The price is now formatted with a semantic color")
 
 
 
@@ -27,32 +27,32 @@ You can view and download all files in the *Samples* in the Demo Kit at [Testing
 ## webapp/model/formatter.js
 
 ```js
-sap.ui.define([
-	"sap/m/Text"
-], function (Text) {
-	"use strict";
-	return {
-		numberUnit: function (sValue) {
-			…
-		},
-		/**
-		 * Defines a value state based on the price
-		 *
-		 * @public
-		 * @param {number} iPrice the price of a post
-		 * @returns {string} sValue the state for the price
-		 */
-		priceState: function (iPrice) {
-			if (iPrice < 50) {
-				return "Success";
-			} else if (iPrice >= 50 && iPrice < 250) {
-				return "None";
-			} else if (iPrice >= 250 && iPrice < 2000) {
-				return "Warning";
-			} else {
-				return "Error";
-			}
-		}
+
+sap.ui.define([], function () {
+	   "use strict";
+
+	   return {
+		     numberUnit: function (sValue) {
+			// …
+		     },
+		     /**
+		     * Defines a value state based on the price
+		     *
+		     * @public
+		     * @param {number} iPrice the price of a post
+		     * @returns {string} sValue the state for the price
+		     */
+		     priceState: function (iPrice) {
+			   if (iPrice < 50) {
+				  return "Success";
+			   } else if (iPrice >= 50 && iPrice < 250) {
+				  return "None";
+			   } else if (iPrice >= 250 && iPrice < 2000) {
+				  return "Warning";
+			   } else {
+				  return "Error";
+			   }
+		  }
 	};
 });
 ```
@@ -61,7 +61,7 @@ We change the empty formatter function that we have added in the last step and a
 
 The input for the formatter is the price value from the model and the result is the state as a `string` value. The actual implementation logic is quite simple and returns a semantic state value based on the price as we have seen already in the test. There are four cases that are reflected in the `if/else` statements inside the formatter.
 
-You can now run the file `webapp/test/unit/unitTests.qunit.html` and check if the unit tests run successfully. You should see your new test cases on the result page. If the overall result is successful then we have successfully implemented our first feature.
+You can now run the file `webapp/test/testsuite.qunit.html` in your browser and select `unit/unitTests` to check if the unit tests run successfully. You should see your new test cases on the result page. If the overall result is successful then we have successfully implemented our first feature.
 
 
 

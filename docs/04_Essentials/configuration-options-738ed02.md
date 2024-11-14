@@ -150,16 +150,6 @@ The following options are available on the `defaults` and the individual test co
 
 
 	/*
-	 * Whether the UI5 Core (sap/ui/core/Core.js) should be required and booted.
-	 *
-	 * When this option is true, the Core is not only loaded and started, but loading and execution
-	 * of the test module(s) is also delayed until the Promise resolves which is returned from Core.ready()
-	 * ("Core" required from module "sap/ui/core/Core").
-	 */
-	bootCore: true,
-
-
-	/*
 	 * Whether the test starter should call QUnit.start() after all prerequisites have been fulfilled
 	 * (e.g. QUnit, Sinon, a bridge, have been loaded, coverage tooling has been loaded and configured,
 	 * the Core has been booted, the test modules have been loaded and executed).

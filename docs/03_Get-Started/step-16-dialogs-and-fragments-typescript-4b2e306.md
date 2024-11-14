@@ -66,8 +66,8 @@ import MessageToast from "sap/m/MessageToast";
 import JSONModel from "sap/ui/model/json/JSONModel";
 import ResourceModel from "sap/ui/model/resource/ResourceModel";
 import ResourceBundle from "sap/base/i18n/ResourceBundle";
-
 import Dialog from "sap/m/Dialog";
+
 /**
  * @namespace ui5.walkthrough.controller
  */
@@ -78,9 +78,9 @@ export default class HelloPanel extends Controller {
         ...
     }
     async onOpenDialog(): Promise<void> {
-      this.dialog ??= await <Promise<Dialog>> this.loadFragment({
+      this.dialog ??= await this.loadFragment({
          name: "ui5.walkthrough.view.HelloDialog"
-      });
+      }) as Dialog;
       this.dialog.open();
     }   
 };

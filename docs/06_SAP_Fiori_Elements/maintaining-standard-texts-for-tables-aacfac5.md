@@ -15,13 +15,13 @@ The following UI texts are displayed by default:
 
 
 -   SAP Fiori elements for OData V4
-    -   When no filters are applied and no data is found, an illustrated message is displayed with *No data found* as the title and *To start, set the relevant filters and choose "Go".* as the description.
+    -   When no filters are applied and no data is found in the list report, an illustrated message is displayed with *No data found* as the title and *To start, set the relevant filters and choose "Go".* as the description.
 
     -   When filters are applied and the search shows no results, an illustrated message is displayed with *No data found* as the title and *Try adjusting the search or filter criteria.* as the description.
 
     -   When the table is used in multi-view mode and no data is found, an illustrated message is displayed with *No data found* as the title and *Try adjusting the selected filter criteria or view.* as the description.
 
-    -   When no filters are applied and no data is found, an illustrated message is displayed with *No items available* as the title and *When there are, you'll find them here.* as the description. You cannot override these texts.
+    -   When no search nor filters are applied and no data is found on the object page, an illustrated message is displayed with *No items available* as the title and *When there are, you'll find them here.* as the description. You cannot override these texts.
 
 
 

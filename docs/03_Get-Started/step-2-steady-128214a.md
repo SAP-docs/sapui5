@@ -109,7 +109,7 @@ Now reload your `index.html` file. You can see a title bar and a blue button tha
 **Related Information**  
 
 
-[XML View](../04_Essentials/xml-view-91f2928.md "The XML view type is defined in an XML file. The file name either ends with .view.xml or as an XML string. The file name and the folder structure together specify the name of the view that equals the SAPUI5 module name.")
+[XML View](../04_Essentials/xml-view-91f2928.md "The XML view type is defined in an XML file, with a file name ending in .view.xml. The file name and the folder structure together specify the name of the view that equals the SAPUI5 module name.")
 
 [Controller](../04_Essentials/controller-121b8e6.md "A controller contains methods that define how models and views interact.")
 
