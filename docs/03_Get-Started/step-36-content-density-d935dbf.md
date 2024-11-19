@@ -10,7 +10,7 @@ In this step of our Walkthrough tutorial, we adjust the content density based on
 
   
   
-**The default content density is compact on desktop devices and cozy on touch-enabled devices. However, a shell like Fiori Launchpad may override it, for example, when the application manifest does not support it or the user prefers another density.**
+**The default content density is cozy on touch devices (smartphones, tablets and computers with a touch screen) and compact on devices without a touch screen. Note that Fiori Launchpad sets cozy content density on phones and tablets as mandatory and may override it on other computers according to the application manifest and the user preference.**
 
 ![The graphic has an explanatory text.](images/UI5_Walkthrough_Step_36_f216b13.png "The content density is compact on desktop devices and cozy on touch-enabled
 					devices")
