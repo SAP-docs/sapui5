@@ -34,7 +34,7 @@ To enable upload functionality, ensure the following prerequisites are met:
 Here is an example of how to define the entity type with the required annotations:
 
 > ### Sample Code:  
-> Defining the Entity Type
+> XML Annotation
 > 
 > ```xml
 > <Annotations Target="Namespace.EntityType">
@@ -54,9 +54,17 @@ Here is an example of how to define the entity type with the required annotation
 > </Annotations>
 > ```
 
-In CAP CDS annotation, you can use the `Attachments` plug-in to define the entity type. For more information about the plug-in, see [Attachments](https://cap.cloud.sap/docs/plugins/#attachments).
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> No ABAP CDS annotation sample is available. Please use the local XML annotation.
 
-Check out our live example in the flexible programming model explorer at [Table - File Upload](https://sapui5untested.int.sap.eu2.hana.ondemand.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/table/tableUpload).
+> ### Sample Code:  
+> CAP CDS annotation
+> 
+> You can use the `Attachments` plug-in to define the entity type. For more information about the plug-in, see [Attachments](https://cap.cloud.sap/docs/plugins/#attachments).
+
+Check out our live example in the flexible programming model explorer at [Table - File Upload](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/table/tableUpload).
 
 
 

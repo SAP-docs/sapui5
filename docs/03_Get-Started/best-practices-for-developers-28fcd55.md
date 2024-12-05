@@ -60,7 +60,7 @@ In general, **you must not use deprecated APIs** anymore, such as `sap.ui.getCor
 
 Also, see the relevant warnings and errors logged to the browser's dev console during runtime. You might need to increase the `sap-ui-log-level`. For more information, see [Logging and Tracing](../04_Essentials/logging-and-tracing-9f4d62c.md).
 
-Some APIs may be only partially deprecated, for instance passing a non-object `vName` to [`sap.ui.core.theming.Parameters.get`](https://ui5.sap.com/#/api/sap.ui.core.theming.Parameters%23methods/sap.ui.core.theming.Parameters.get). Refer to the API Reference for individual APIs.
+Some APIs may be only partially deprecated, for instance passing a non-object `vName` to [`sap.ui.core.theming.Parameters.get`](https://ui5.sap.com/#/api/sap.ui.core.theming.Parameters%23methods/sap.ui.core.theming.Parameters.get). Refer to the API Reference for individual APIs. UI5 linter can also help detecting the deprecated usage of such APIs.
 
 Using the native web API `XMLHttpRequest#open` with `false` as the third argument outside of workers is also deprecated, and browsers might end its support. Therefore, in addition to avoiding already deprecated SAPUI5 APIs, you must not call low-level APIs such as `jQuery.ajax` with a disabled `async` option either.
 

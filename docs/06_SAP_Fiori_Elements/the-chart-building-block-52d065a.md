@@ -43,7 +43,7 @@ Applications can do the following with the `Chart` building block:
 
 -   Get and set the presentation variants associated with the `Chart` building block using the public APIs: `getPresentationVariant()` and `setPresentationVariant()`.
 
-    Get and set the selection variants associated with the `Chart` building block using the public APIs: `getSelectionVariant()` and `setSelectionVariant()`.
+    Get and set the selection variants associated with the `Chart` building block using the public APIs: `getSelectionVariant()` and `setSelectionVariant()`. The `getSelectionVariant()` method considers only the variants that are applied directly to the table and excludes the variants that are applied to a bound model.
 
     Check out our live example in the flexible programming model explorer at [Chart - Interacting via APIs](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/chart/chartPublicAPIs).
 

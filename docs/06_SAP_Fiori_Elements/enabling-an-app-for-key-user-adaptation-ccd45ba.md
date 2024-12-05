@@ -13,6 +13,8 @@ Key users can make the following adaptations on applications:
 
 -   Create different variants of the list report for users by adjusting filters, column sorting, and tab selection, for example
 
+-   Define the fields visible in the mass edit dialog
+
 -   Move, rename, and remove buttons and add previously removed buttons to the following places:
 
     -   A toolbar in the header and the table of the list report

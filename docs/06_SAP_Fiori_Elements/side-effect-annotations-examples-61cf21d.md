@@ -5,7 +5,7 @@
 This topic provides some examples for annotating side effects.
 
 > ### Example:  
-> Using `TriggerAction` to calculate the *GrossPrice* and *NetPriceIncludingTax* through the function import `CalculatePriceIncludingRegionalTax`, when the source property `UnitPrice` or `ProductQuantity` is modified. The side effect is triggered only when `UnitPrice` and `ProductQuantity` are successfully validated.
+> Using `TriggerAction` to calculate the `GrossPrice` and `NetPriceIncludingTax` through the function import `CalculatePriceIncludingRegionalTax`, when the source property `UnitPrice` or `ProductQuantity` is modified. The side effect is triggered only when `UnitPrice` and `ProductQuantity` are successfully validated.
 > 
 > > ### Sample Code:  
 > > XML Annotation
@@ -42,7 +42,7 @@ This topic provides some examples for annotating side effects.
 You can define side effects either in the \*`MPC_EXT` class or in the local annotation file.
 
 > ### Example:  
-> **Annotating side effects in the method `DEFINE` of the class `CL_MM_PUR_PO_AI_MAINT_MPC_EXT`**
+> **Annotating side effects in the `DEFINE` method of the `CL_MM_PUR_PO_AI_MAINT_MPC_EXT` class**
 > 
 > > ### Sample Code:  
 > > ```
@@ -81,7 +81,7 @@ You can define side effects either in the \*`MPC_EXT` class or in the local anno
 > > ```
 
 > ### Example:  
-> **User changes the source properties and the system refresh the**price
+> **User changes the source properties and the system refreshes the `Price`**
 > 
 > > ### Sample Code:  
 > > XML Annotation
@@ -94,7 +94,7 @@ You can define side effects either in the \*`MPC_EXT` class or in the local anno
 > >                 <Collection>
 > >                     <PropertyPath>Amount</PropertyPath>
 > >                     <PropertyPath>Discount</PropertyPath>
-> >                     <PropertyPath>ProductDetail/DeliveryLocations</PropertyPath>// Source property poinnting to multi input field
+> >                     <PropertyPath>ProductDetail/DeliveryLocations</PropertyPath>// Source property pointing to multi input field
 > >                 </Collection>
 > >             </PropertyValue>
 > >             <PropertyValue Property="TargetProperties">
@@ -108,7 +108,7 @@ You can define side effects either in the \*`MPC_EXT` class or in the local anno
 > > ```
 
 > ### Example:  
-> **User changes the supplier and the system refresh the 1:1 navigation `toSupplier`**
+> **User changes the supplier and the system refreshes the 1:1 navigation `toSupplier`**
 > 
 > > ### Sample Code:  
 > > XML Annotation
@@ -193,7 +193,7 @@ You can define side effects either in the \*`MPC_EXT` class or in the local anno
 > > XML Annotation
 > > 
 > > ```
-> > <!-- In the below example the function import action "Setcurrency"  is expected to refresh the "Currency_Code_Text"  which is coming from the associated entity  "to_Currency" -->
+> > <!-- In the below example, the function import action "Setcurrency" is expected to refresh the "Currency_Code_Text" which is coming from the associated entity "to_Currency" -->
 > >             <Annotations Target="STTA_SALES_ORDER_WD_20_SRV.STTA_SALES_ORDER_WD_20_SRV_Entities/Setcurrency">
 > >                     <Record>
 > >                         <PropertyValue Property="TargetProperties">
@@ -201,7 +201,7 @@ You can define side effects either in the \*`MPC_EXT` class or in the local anno
 > >                                 <PropertyPath>to_Currency/Currency_Code_Text</PropertyPath>
 > >                             </Collection>
 > >                         </PropertyValue>
-> >                         <!-- Side Effects for action annotation with an entity as a target. Here controls associated with “to_Item” will be refreshed-->
+> >                         <!-- Side Effects for action annotation with an entity as a target. Here, controls associated with “to_Item” will be refreshed-->
 > >                             <PropertyValue Property="TargetEntities">
 > >                             <Collection>
 > >                                 <NavigationPropertyPath>to_Item</NavigationPropertyPath>
@@ -215,7 +215,7 @@ You can define side effects either in the \*`MPC_EXT` class or in the local anno
 > ### Example:  
 > **Refresh the navigation target**
 > 
-> In this case, when the item tax amount is changed, the navigation property leading to the root entity \(`to_SalesOrder`\) is updated.
+> In the following example, when the item `TaxAmount` is changed, the navigation property leading to the root entity \(`to_SalesOrder`\) is updated.
 > 
 > > ### Sample Code:  
 > > XML Annotation
@@ -240,7 +240,7 @@ You can define side effects either in the \*`MPC_EXT` class or in the local anno
 > > 
 > > ```
 > 
-> In the following case, when the item tax amount is changed, the navigation property leading to the property of root entity \(`to_SalesOrder`\) is updated. If `*` is defined, then all properties of the root entity are updated.
+> In the following example, when the item `TaxAmount` is changed, the navigation property leading to the property of the root entity \(`to_SalesOrder`\) is updated. If `*` is defined, then all properties of the root entity are updated.
 > 
 > > ### Sample Code:  
 > > XML Annotation
@@ -268,7 +268,7 @@ You can define side effects either in the \*`MPC_EXT` class or in the local anno
 > ### Example:  
 > **Side effect on 1:1 associated entity set’s property**
 > 
-> You can add a side effect annotation on a property that is 1:1 associated with the main entity set. In this case, when you change the 1:1 associated smartfield \(that is rendered in a smartform\), side effect call gets triggered as per the target of the side effect annotation.
+> You can add a side effect annotation on a property that has a 1:1 association with the main entity set. In this case, when you change the associated smart field \(that is rendered in a smart form\), side effect call is triggered.
 > 
 > > ### Sample Code:  
 > > XML Annotation
@@ -293,9 +293,9 @@ You can define side effects either in the \*`MPC_EXT` class or in the local anno
 > > ```
 
 > ### Example:  
-> **Side Effect to Call `Triggeraction` without Refreshing Any Data\(No Target\)**
+> **Side Effect to Call `Triggeraction` without Refreshing Any Data \(No Target\)**
 > 
-> You can configure side effect to call the `TriggerAction` function import without refreshing any data, that is without any Targets \(`TargetProperties`/`TargetEntities`\).
+> You can configure a side effect to call the `TriggerAction` function import without refreshing any data, that is, without any targets \(`TargetProperties`/`TargetEntities`\).
 > 
 > > ### Sample Code:  
 > > XML Annotation
@@ -321,23 +321,9 @@ You can define side effects either in the \*`MPC_EXT` class or in the local anno
 
 ## Additional Features in SAP Fiori Elements for OData V4
 
-> ### Note:  
-> You must always enclose the `type` of `TargetProperties` within quotes. For more information, see [Side Effect Type](https://github.com/SAP/odata-vocabularies/blob/main/vocabularies/Common.md#SideEffectsType) 
-> 
-> Side effects is configured according to the modeling \(create, update, delete, etc.\) in RAP BDEF \(behavior definition\).You can see the ABAP CDS annotation examples in the RAP documentation. For more information, see [Side Effects](https://help.sap.com/docs/abap-cloud/abap-rap/side-effects).
+The **Guidance** section in our live example shows the various uses of side effects along with examples in XML and ABAP CDS annotation. Check out our live example in the flexible programming model explorer at [Side Effects](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/advancedFeatures/guidanceSideEffects).
 
-Check out our live example in the flexible programming model explorer at [Side Effects](https://ui5.sap.com/test-https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/advancedFeatures/guidanceSideEffects).
-
-You can use the BO property `messages` as targets for side effects. All messages stored in `reported` are reloaded when the side effect is triggered.
-
-> ### Sample Code:  
-> ABAP CDS Annotation
-> 
-> ```
->    side effects
->        { field BookingFee affects field TotalPrice;
->          determine action validateAgencyID executed on field AgencyID affects messages; }
-> ```
+Side effects are configured according to the modeling such as create, update, delete in RAP BDEF \(behavior definition\). You can see the ABAP CDS annotation examples in the RAP documentation. For more information, see [Side Effects](https://help.sap.com/docs/abap-cloud/abap-rap/side-effects).
 
 The following sample code shows you an example with actions, multiple targets, and messages:
 

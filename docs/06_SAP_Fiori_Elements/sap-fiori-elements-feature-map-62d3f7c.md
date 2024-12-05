@@ -200,7 +200,7 @@ Add card to insights
 </td>
 <td valign="top">
 
-[Creating Cards for the Insights Section of My Home in SAP S/4HANA Cloud](creating-cards-for-the-insights-section-of-my-home-in-sap-s-4hana-cloud-9b13559.md) 
+[Creating Cards for the Insights Cards Section of My Home in SAP S/4HANA](creating-cards-for-the-insights-cards-section-of-my-home-in-sap-s-4hana-9b13559.md) 
 
 </td>
 <td valign="top">
@@ -1828,7 +1828,7 @@ Object page
 </td>
 <td valign="top">
 
-![]()
+
 
 </td>
 <td valign="top">

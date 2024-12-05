@@ -15,7 +15,7 @@ In this step, we will take a look at the prototype and define the test strategy 
   
 **The prototype app**
 
-![](images/Tutorial_Testing_Step_01_7946d24.png "The prototype app")
+![](images/Tutorial_Testing_Step_01_7946d24.jpg "The prototype app")
 
 
 
@@ -43,7 +43,7 @@ With the downloaded code, you now have the bulletin board prototype, set up acco
 
 -   **Entry Page**
 
-    In this tutorial, we will often switch between testing application features manually, and running automated tests. The `webapp/test/test.html` file provides a list of entry points for the app so that you do not have to enter the URLs manually. From this page you can open the app with mock data, run the unit tests, run the integration tests, or run the app’s test suite \(this will be added later in the tutorial\). Note that in a productive scenario we would have an additional entry point that calls the app with a real service. At this stage we are working with mock data and don't have a real service for our prototype yet, so we have left this step out.
+    In this tutorial, we will often switch between testing application features manually, and running automated tests. The `webapp/test.html` file provides a list of entry points for the app so that you do not have to enter the URLs manually. From this page you can open the app with mock data or run the app test suite which contains the unit and integration tests. Note that in a productive scenario we would have an additional entry point that calls the app with a real service. At this stage we are working with mock data and don't have a real service for our prototype yet, so we have left this step out.
 
 -   **Home Page**
 
@@ -69,7 +69,7 @@ With the downloaded code, you now have the bulletin board prototype, set up acco
         A comment has an `Author`, a `Date`, and a `CommentText` property. The entity can be identified by the `CommentID` property and is linked to a `post` by the `ParentID`. The corresponding `EntitySet` is `Comments`.
 
 
-    The actual test data containing several mock posts is located in the `webapp/test/service/posts.json` file.
+    The actual test data containing several mock posts is located in the `webapp/localService/mockdata/Posts.json` file.
 
 -   **Testing Functionality**
 
@@ -83,11 +83,15 @@ With the downloaded code, you now have the bulletin board prototype, set up acco
 
     -   **Unit Tests**
 
-        All unit tests are located in the `webapp/test/unit` folder and can be started by calling the `unitTests.qunit.html` file in the same folder. Initially, there are only a few tests for model instantiation and formatters that cover basic functionality in the prototype. We will give you more details about the unit test setup later in the tutorial.
+        All unit tests are located in the `webapp/test/unit` folder. Initially, there are only a few tests for model instantiation and formatters that cover basic functionality in the prototype. We will give you more details about the unit test setup later in the tutorial.
 
     -   **Integration Tests**
 
-        Integration tests are written in OPA5 – a tool for integration testing that is included in SAPUI5 – and can be found in the `webapp/test/integration` folder. You can start all OPA5 tests by calling the `opaTests.qunit.html` file in the same folder. OPA5 tests are organized in test journeys, and we have included a worklist journey that checks if the table of posts is displayed properly. We will give you more details about the integration test setup later in the tutorial.
+        Integration tests are written in OPA5 – a tool for integration testing that is included in SAPUI5 – and can be found in the `webapp/test/integration` folder. OPA5 tests are organized in test journeys, and we have included a worklist journey that checks if the table of posts is displayed properly. We will give you more details about the integration test setup later in the tutorial.
+
+    -   **Test Suite**
+
+        Unit and integration tests are part of a test suite that is located at `webapp/test/testsuite.qunit.js`. The test suite lists all tests of a project and contains configuration for the test setup. The test suite can be started by opening the `testsuite.qunit.html` file in the same folder.
 
 
 -   **Other quality-related features of the app**
@@ -108,7 +112,9 @@ With the downloaded code, you now have the bulletin board prototype, set up acco
 
 
 
-Now that we have a running prototype, we can further extend it with additional tests and features. Make sure that the app is running by calling the test page, the unit tests, and the integration tests from the entry page `webapp/test/test.html`. The app should display a list of bulletin board posts as seen in the screenshot above and the tests should run without errors.
+Now that we have a running prototype, we can further extend it with additional tests and features. Make sure that the app is running by calling the test page and the test suite from the entry page `webapp/test.html`. The app should display a list of bulletin board posts as seen in the screenshot above and the tests should run without errors.
+
+![](images/Bulletin_Board_b5ea059.jpg)
 
 
 

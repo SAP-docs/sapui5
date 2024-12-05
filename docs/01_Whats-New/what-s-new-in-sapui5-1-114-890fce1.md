@@ -209,7 +209,7 @@ The following changes and new features are available for SAP Fiori elements for 
 
 -   In draft-enabled applications, drafts are now saved after 20 seconds, thereby reducing the number of merge calls. For more information, see [Draft Handling](../06_SAP_Fiori_Elements/draft-handling-ed9aa41.md).
 
--   You now have an option to create cards for the *Insights* section of *My Home* in SAP S/4HANA Cloud from the list report and analytical list page apps. For more information, see [Creating Cards for the Insights Section of My Home in SAP S/4HANA Cloud](../06_SAP_Fiori_Elements/creating-cards-for-the-insights-section-of-my-home-in-sap-s-4hana-cloud-9b13559.md).
+-   You now have an option to create cards for the *Insights* section of *My Home* in SAP S/4HANA Cloud from the list report and analytical list page apps. For more information, see [Creating Cards for the Insights Cards Section of My Home in SAP S/4HANA](../06_SAP_Fiori_Elements/creating-cards-for-the-insights-cards-section-of-my-home-in-sap-s-4hana-9b13559.md).
 
 -   We've added another option to the *Share* menu button. When a user clicks the *Share* button and then the *Share Menu: Microsoft Teams* option, they can now also choose *As Tab*.
 
@@ -265,9 +265,9 @@ The following changes and new features are available for SAP Fiori elements for 
 
 -   We now provide filtering by draft-related properties. For more information, see [Draft Handling](../06_SAP_Fiori_Elements/draft-handling-ed9aa41.md).
 
--   You can now disable the `AddCardToInsights` option in the manifest. For more information, see [Creating Cards for the Insights Section of My Home in SAP S/4HANA Cloud](../06_SAP_Fiori_Elements/creating-cards-for-the-insights-section-of-my-home-in-sap-s-4hana-cloud-9b13559.md).
+-   You can now disable the `AddCardToInsights` option in the manifest. For more information, see [Creating Cards for the Insights Cards Section of My Home in SAP S/4HANA](../06_SAP_Fiori_Elements/creating-cards-for-the-insights-cards-section-of-my-home-in-sap-s-4hana-9b13559.md).
 
--   You now have an option to create cards for the *Insights* section of *My Home* in SAP S/4HANA Cloud from the list report and analytical list page apps. For more information, see [Creating Cards for the Insights Section of My Home in SAP S/4HANA Cloud](../06_SAP_Fiori_Elements/creating-cards-for-the-insights-section-of-my-home-in-sap-s-4hana-cloud-9b13559.md).
+-   You now have an option to create cards for the *Insights* section of *My Home* in SAP S/4HANA Cloud from the list report and analytical list page apps. For more information, see [Creating Cards for the Insights Cards Section of My Home in SAP S/4HANA](../06_SAP_Fiori_Elements/creating-cards-for-the-insights-cards-section-of-my-home-in-sap-s-4hana-9b13559.md).
 
 -   We've added more keys that can be overridden by application developers using the custom i18n file approach. You can now override the following keys:
 
@@ -523,6 +523,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.128](what-s-new-in-sapui5-1-128-1f76220.md "With this release SAPUI5 is upgraded from version 1.127 to 1.128.")
 
 [What's New in SAPUI5 1.127](what-s-new-in-sapui5-1-127-e5e1317.md "With this release SAPUI5 is upgraded from version 1.126 to 1.127.")
 

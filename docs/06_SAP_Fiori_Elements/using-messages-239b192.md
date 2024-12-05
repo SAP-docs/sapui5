@@ -202,6 +202,24 @@ The message dialog consists of the following components:
 
 
 
+### Special Handling of 503 Messages \("Service Unavailable" Messages\)
+
+When the back end is not available, the gateway typically throws an error type of type 503: "Service Unavailable". Such errors are handled as follows:
+
+-   If the error is received at the application startup, an error page is shown.
+
+-   If a "retry-after" is provided in the response header, the "retry-after" value is considered:
+
+    -   If the value is less than 5 seconds, a busy indicator is displayed.
+
+    -   If the value is between 5 and 600 seconds, a dialog with the error details is displayed, and a retry is triggered automatically when the "retry-after" time expires.
+
+    -   If the value exceeds 600 seconds, an error page or a dialog with the error details is displayed.
+
+
+
+
+
 ### Using Status Messages on the Object Page
 
 Based on information received from the back end, we show a message strip on the object page with a status message for the object whenever it’s relevant to the entire object \(and not to a child entity or a specific field, for example\). The color of the message strip is derived from the criticality of the message. You can hide the message strip or display a specific message using the `ExtensionAPI`. For more information about the `ObjectPage.ExtensionAPI`, see the [API Reference](https://ui5.sap.com/#/api/sap.fe.templates.ObjectPage.ExtensionAPI/methods/showMessages).

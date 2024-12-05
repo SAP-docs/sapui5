@@ -8,7 +8,11 @@ Now we can navigate to our detail page and display an invoice, but we cannot go 
 
 ## Preview
 
-![The graphic has an explanatory text]()
+  
+  
+**A back button is now displayed on the detail page**
+
+![The graphic has an explanatory text](images/UI5_Walkthrough_Step_32_33a8341.png "A back button is now displayed on the detail page")
 
 
 
@@ -34,7 +38,7 @@ If no navigation has happened before, we get a reference to the router and use t
 
 ```js
 import Controller from "sap/ui/core/mvc/Controller";
-import Component from "../Component";
+import UIComponent from "sap/ui/core/ UIComponent";
 import { Route$PatternMatchedEvent } from "sap/ui/core/routing/Route";
 import History from "sap/ui/core/routing/History";
 
@@ -44,13 +48,13 @@ import History from "sap/ui/core/routing/History";
 export default class Detail extends Controller {
 
     onInit(): void {
-        const router = (<Component> this.getOwnerComponent()).getRouter();
+        const router = UIComponent.getRouterFor(this);
         router.getRoute("detail").attachPatternMatched(this.onObjectMatched, this);
     }
 
     onObjectMatched(event: Route$PatternMatchedEvent): void {
         this.getView().bindElement({
-            path: "/" + window.decodeURIComponent( (<any> event.getParameter("arguments")).invoicePath),
+            path: "/" + window.decodeURIComponent( (event.getParameter("arguments") as any).invoicePath),
             model: "invoice"
         });
     }
@@ -62,10 +66,10 @@ export default class Detail extends Controller {
         if (previousHash !== undefined) {
             window.history.go(-1);
         } else {
-            const router = (<Component> this.getOwnerComponent()).getRouter();
+            const router = UIComponent.getRouterFor(this);
             router.navTo("overview", {}, true);
         }
-    }    
+    }
 };
 ```
 

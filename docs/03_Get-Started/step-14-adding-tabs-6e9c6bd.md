@@ -12,7 +12,7 @@ We want to display statistics for posts, for example, how many times it was view
   
 **An icon tab bar with statistics**
 
-![](images/Tutorial_Testing_Step_12_1d8248a.png "An icon tab bar with statistics")
+![](images/Tutorial_Testing_Step_14_1d8248a.jpg "An icon tab bar with statistics")
 
 
 
@@ -22,7 +22,7 @@ You can view and download all files in the *Samples* in the Demo Kit at [Testing
 
 
 
-## view/Post.view.xml
+## webapp/view/Post.view.xml
 
 ```xml
 <mvc:View

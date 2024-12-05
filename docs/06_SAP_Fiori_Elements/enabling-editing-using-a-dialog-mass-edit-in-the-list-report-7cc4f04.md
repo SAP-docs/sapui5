@@ -130,5 +130,5 @@ Currently, the default title for the edit dialog is `Edit(X)`. You can override 
 
 [Enabling Editing Using a Dialog \(Mass Edit\)](enabling-editing-using-a-dialog-mass-edit-965ef5b.md "Mass editing allows users to simultaneously change multiple objects that share the same editable properties.")
 
-[Adding a Custom ViewExtension in the Mass Edit Dialog](adding-a-custom-viewextension-in-the-mass-edit-dialog-fd26fee.md "You can add a custom ViewExtension to the mass edit dialog by defining it in the manifest.")
+[Adding a Custom ViewExtension in the Mass Edit Dialog](adding-a-custom-viewextension-to-the-mass-edit-dialog-fd26fee.md "You can add a custom ViewExtension to the mass edit dialog by defining it in the manifest.")
 

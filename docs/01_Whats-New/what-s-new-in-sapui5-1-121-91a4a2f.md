@@ -641,7 +641,7 @@ The following changes and new features are available for SAP Fiori elements for 
 
 -   Table types are now displayed on mobile devices. This means that there's no need to automatically switch to responsive tables when the app is launched on mobile devices. For more information, see [Tables](../06_SAP_Fiori_Elements/tables-c0f6592.md).
 
--   List report applications now support the creation of insights cards from responsive tables in multiview scenarios. For more information, see [Creating Cards for the Insights Section of My Home in SAP S/4HANA Cloud](../06_SAP_Fiori_Elements/creating-cards-for-the-insights-section-of-my-home-in-sap-s-4hana-cloud-9b13559.md)
+-   List report applications now support the creation of insights cards from responsive tables in multiview scenarios. For more information, see [Creating Cards for the Insights Section of My Home in SAP S/4HANA Cloud](../06_SAP_Fiori_Elements/creating-cards-for-the-insights-cards-section-of-my-home-in-sap-s-4hana-9b13559.md)
 
 -   You can now hide the section title in a custom section, and sections with reuse components, using the `setAsTitleOwner` extension API . For more information, see [Placing Reuse Component Instances on the Object Page](../06_SAP_Fiori_Elements/placing-reuse-component-instances-on-the-object-page-1ba7f88.md), [Adding a Section to an Object Page](../06_SAP_Fiori_Elements/adding-a-section-to-an-object-page-a357047.md).
 
@@ -1936,6 +1936,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.128](what-s-new-in-sapui5-1-128-1f76220.md "With this release SAPUI5 is upgraded from version 1.127 to 1.128.")
 
 [What's New in SAPUI5 1.127](what-s-new-in-sapui5-1-127-e5e1317.md "With this release SAPUI5 is upgraded from version 1.126 to 1.127.")
 

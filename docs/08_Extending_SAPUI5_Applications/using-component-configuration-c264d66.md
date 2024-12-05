@@ -49,7 +49,7 @@ sap.ui.define([], function() {
         doSomeCustomAction: function() {
             alert("this is another customer action");
         }
-    });
+    };
 });
 ```
 

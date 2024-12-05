@@ -165,6 +165,54 @@ For more information, see [Type Determination](type-determination-53cdd55.md).
 
 </td>
 </tr>
+<tr>
+<td valign="top">
+
+There is no `AnalyticalBinding` and no `ODataTreeBinding` available. Data aggregation and recursive hierarchy support are available with the `sap.ui.model.odata.v4.ODataListBinding` using the `$$aggregate` binding parameter and the related [`sap.ui.model.odata.v4.ODataListBinding#setAggregation`](https://ui5.sap.com/#api/sap.ui.model.odata.v4.ODataListBinding/methods/setAggregation) method.
+
+</td>
+<td valign="top">
+
+Aggregated data as well as hierarchical data is displayed in a table or list. As a result, the interface of the table or list control and the list binding is reused and enhanced without providing new binding classes. This allows to reuse functionality of the `sap.ui.model.odata.v4.ODataListBinding`.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+There is no global cache of entities. Instead, data is kept with respect to bindings and different data for the same entity may be displayed. As a consequence, it is important to use relative bindings as described in [Data Reuse](data-reuse-648e360.md) if the same data should be displayed.
+
+</td>
+<td valign="top">
+
+It is now possible to show different states of the same entity, e.g. to allow comparison between the data states before and after a change.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+A selection is managed by the `ODataModel` and not by the table.
+
+</td>
+<td valign="top">
+
+The `ODataModel` is responsible for fetching data for the client and caching data on the client. It is important for the model to know which records are selected, so that the respective `sap.ui.model.odata.v4.Context` instances remain available. Also, possible future improvements require the handling of record selection in the `ODataModel`.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Data of selected contexts may not be available synchronously.
+
+</td>
+<td valign="top">
+
+In applications, a user may continue editing after selecting a record. This might cause side effects; see [`sap.ui.model.odata.v4.Context#requestSideEffects`](https://ui5.sap.com/#api/sap.ui.model.odata.v4.Context%23methods/requestSideEffects). The user may also refresh, change, sort, or filter. In all these cases, the expectation is that the client shows up-to-date data. For selected contexts, this means that, instead of keeping their data up to date all the time, their data needs to be accessed asynchronously when needed.
+
+</td>
+</tr>
 </table>
 
 **Related Information**  

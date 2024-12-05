@@ -4,11 +4,6 @@
 
 You can extend the SAP-delivered list report and object page apps that are developed on SAP Fiori elements.
 
-> ### Note:  
-> This topic is applicable only to SAP Fiori elements for OData V2.
-
-To know how you can extend the delivered apps manifest for SAP Fiori elements for OData V4, see the section **Adaptation by Application Developers** in the [Adapting the UI](adapting-the-ui-59bfd31.md) topic.
-
 The delivered apps can be extended by adding a new node in the object page or by modifying the manifest configurations settings through the adaptation project. By configuring the adaptation project manifest, you can enable the following features:
 
 -   Add a new subobject page for the newly extended node.
@@ -20,19 +15,21 @@ The delivered apps can be extended by adding a new node in the object page or by
 
 
 
-<a name="loioa2b24a69baef4b91af2293ccc6b5871f__section_bzq_d5f_krb"/>
+<a name="loioa2b24a69baef4b91af2293ccc6b5871f__section_w5x_1vf_zcc"/>
 
-## Prerequisites
+## Additional Features in SAP Fiori Elements for OData V2
 
-ABAP platform 2021 or a higher version is installed.
+
+
+### Prerequisites
+
+You're working on SAPUI5 1.108 or higher \(ABAP platform 2021 or higher\).
 
 In the manifest file of the app, the pages and subpages section must be specified in the object format and not in the array format, within `sap.ui.generic.app`.
 
 
 
-<a name="loioa2b24a69baef4b91af2293ccc6b5871f__section_iz2_wcl_4pb"/>
-
-## Adding a New Subobject Page for the Newly Extended Node
+### Adding a New Subobject Page for the Newly Extended Node
 
 As a prerequisite, the new node must be added in the back end, and the metadata properties for the new node must be available through service metadata. A detail page for the new node can be added using the following definition in the `manifest.appdescr_variant` file:
 
@@ -67,9 +64,7 @@ You must add the parameters in the `changeType`, `layer`, `parentPage`, and `chi
 
 
 
-<a name="loioa2b24a69baef4b91af2293ccc6b5871f__section_n1d_xdl_4pb"/>
-
-## Defining Configurations for a Node
+### Defining Configurations for a Node
 
 The following sample code is a definition to set the `createMode` and table type for a node in the object page. It must be added to the `manifest.appdescr_variant` file of the adaptation project.
 
@@ -118,9 +113,7 @@ For detailed steps explaining how to work in an adaptation project, see the *Pro
 
 
 
-<a name="loioa2b24a69baef4b91af2293ccc6b5871f__section_xss_2pr_hrb"/>
-
-## Additional Configurations That Can Be Modified for an Application
+### Additional Configurations That Can Be Modified for an Application
 
 You can perform additional configurations that can be modified for an application using the following settings:
 
@@ -409,9 +402,7 @@ You must add the parameters in the `changeType`, `parentPage`, and `entityProper
 
 
 
-
-
-### Configuring a Selection Presentation Variant and Providing Corresponding Definition
+**Configuring a Selection Presentation Variant and Providing Corresponding Definition**
 
 Define the following definition in the `manifest.appdescr_variant` file as part of the `content[]`:
 
@@ -489,30 +480,27 @@ Once the annotation file is added, you can continue as follows:
 > 		<edmx:Include Alias="STTA_PROD_MAN" Namespace="STTA_PROD_MAN"/
 > ```
 
-> ### Sample Code:  
-> ```
-> Including newly createdPropertyValue Property="Label" String="New Activate Button"/> <PropertyValue Property="Action" String="STTA_PROD_MAN.STTA_PROD_MAN_Entities/STTA_C_MP_ProductActivation"/> <PropertyValue Property="InvocationGrouping" EnumMember="UI.OperationGroupingType/ChangeSet"/> </Record> <Record Type="UI.DataField"> <PropertyValue Property="Value" Path="ProductPictureURL"/> <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/> </Record> <Record Type="UI.DataField"> <PropertyValue Property="Value" Path="Supplier"/> <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/> </Record> <Record Type="UI.DataField"> <PropertyValue Property="Label" String="Product-ID/-Text"/> <PropertyValue Property="Value" Path="ProductForEdit"/> <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/> </Record> <Record Type="UI.DataField"> <PropertyValue Property="Label" String="Width"/> <PropertyValue Property="Value" Path="Width"/> <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/> </Record> </Collection> </Annotation> <Annotation Term="UI.SelectionFields"> <Collection> <PropertyPath>Width</PropertyPath> </Collection> </Annotation> <Annotation Term="UI.SelectionVariant" Qualifier="FilterDefaults"> <Record> <PropertyValue Property="Parameters"> <Collection></Collection> </PropertyValue> <PropertyValue Property="SelectOptions"> <Collection> <Record Type="UI.SelectOptionType"> <PropertyValue Property="PropertyName" PropertyPath="Width"/> <PropertyValue Property="Ranges"> <Collection> <Record> <PropertyValue Property="Sign" EnumMember="com.sap.vocabularies.UI.v1.SelectionRangeSignType/I"/> <PropertyValue Property="Option" EnumMember="UI.SelectionRangeOptionType/BT"/> <PropertyValue Property="Low" String="1.0"/> <PropertyValue Property="High" String="20.00"/> </Record> </Collection> </PropertyValue> </Record> </Collection> </PropertyValue> </Record> </Annotation> </Annotations> </Schema> </edmx:DataServices> </edmx:Edmx> {
->             "changeType": "appdescr_app_addAnnotationsToOData",
->             "content": {
->                 "dataSourceId": "mainService",
->                 "annotations": ["customer.localAnnotationsNew"],
->                 "annotationsInsertPosition": "END",
->                 "dataSource": {
->                     "customer.localAnnotationsNew": {
->                         "uri": "changes/annotations/annotations.xml",
->                         "type": "ODataAnnotation"
->                     }
->                 }
->             }
->         }
-> 
-> ```
+```
+Including newly createdPropertyValue Property="Label" String="New Activate Button"/> <PropertyValue Property="Action" String="STTA_PROD_MAN.STTA_PROD_MAN_Entities/STTA_C_MP_ProductActivation"/> <PropertyValue Property="InvocationGrouping" EnumMember="UI.OperationGroupingType/ChangeSet"/> </Record> <Record Type="UI.DataField"> <PropertyValue Property="Value" Path="ProductPictureURL"/> <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/> </Record> <Record Type="UI.DataField"> <PropertyValue Property="Value" Path="Supplier"/> <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/> </Record> <Record Type="UI.DataField"> <PropertyValue Property="Label" String="Product-ID/-Text"/> <PropertyValue Property="Value" Path="ProductForEdit"/> <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/> </Record> <Record Type="UI.DataField"> <PropertyValue Property="Label" String="Width"/> <PropertyValue Property="Value" Path="Width"/> <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/> </Record> </Collection> </Annotation> <Annotation Term="UI.SelectionFields"> <Collection> <PropertyPath>Width</PropertyPath> </Collection> </Annotation> <Annotation Term="UI.SelectionVariant" Qualifier="FilterDefaults"> <Record> <PropertyValue Property="Parameters"> <Collection></Collection> </PropertyValue> <PropertyValue Property="SelectOptions"> <Collection> <Record Type="UI.SelectOptionType"> <PropertyValue Property="PropertyName" PropertyPath="Width"/> <PropertyValue Property="Ranges"> <Collection> <Record> <PropertyValue Property="Sign" EnumMember="com.sap.vocabularies.UI.v1.SelectionRangeSignType/I"/> <PropertyValue Property="Option" EnumMember="UI.SelectionRangeOptionType/BT"/> <PropertyValue Property="Low" String="1.0"/> <PropertyValue Property="High" String="20.00"/> </Record> </Collection> </PropertyValue> </Record> </Collection> </PropertyValue> </Record> </Annotation> </Annotations> </Schema> </edmx:DataServices> </edmx:Edmx> {
+            "changeType": "appdescr_app_addAnnotationsToOData",
+            "content": {
+                "dataSourceId": "mainService",
+                "annotations": ["customer.localAnnotationsNew"],
+                "annotationsInsertPosition": "END",
+                "dataSource": {
+                    "customer.localAnnotationsNew": {
+                        "uri": "changes/annotations/annotations.xml",
+                        "type": "ODataAnnotation"
+                    }
+                }
+            }
+        }
+
+```
 
 
 
-<a name="loioa2b24a69baef4b91af2293ccc6b5871f__section_evh_mpq_ltb"/>
-
-## Including a Reuse Component in an Adaption Project
+### Including a Reuse Component in an Adaption Project
 
 This section describes the change mergers that are used to include a reuse component in an adaptation project. The following example shows an `Annotations Target="STTA_PROD_MAN.STTA_C_MP_ProductType"`.
 
@@ -596,4 +584,12 @@ These changes are to be added to `manifest.appdescr_variant` file in the adaptat
 >     }
 > },
 > ```
+
+
+
+<a name="loioa2b24a69baef4b91af2293ccc6b5871f__section_qmw_cxf_zcc"/>
+
+## Additional Features in SAP Fiori Elements for OData V4
+
+For information about how to extend the delivered apps manifest for SAP Fiori elements for OData V4, see [Creating the Project](https://help.sap.com/docs/SAP_FIORI_tools/17d50220bcd848aa854c9c182d65b699/072f566ed1d845b6aa41cb01057700d5.html) in the User Guide for SAP Fiori tools.
 

@@ -237,7 +237,7 @@ User-defined default values are applied and combined with the values from the st
 **Related Information**  
 
 
-[Adapting the Filter Bar](adapting-the-filter-bar-609c39a.md "You can define application-specific selection fields by using com.sap.vocabularies.UI.v1.SelectionFields and field groups for the filter popup.")
+[Adapting the Filter Bar](adapting-the-filter-bar-609c39a.md "You can adapt the filter bar using additional annotations or configuring the manifest.json file.")
 
 [Configuring the Visual Filter Bar](configuring-the-visual-filter-bar-33f3d80.md "The visual filter bar enables end users to select filter values based on measure values in addition to the filters and filter values already selected in the regular filter bar.")
 

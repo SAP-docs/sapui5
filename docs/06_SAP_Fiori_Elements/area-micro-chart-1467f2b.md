@@ -9,19 +9,17 @@ It provides information for actual and target values for a specific time range.
 ![](images/Area_Micro_Chart_01fe21f.png)
 
 > ### Note:  
-> In the above chart, the values at the bottom \(10 and 70\) represent the dimension values. They are the IDs of the sales order items. The upper values \(10 and 50\) are the measure values. They are the values of the solid black line at the start and end.
+> In the chart, the values at the bottom \(10 and 70\) represent the dimension values, which are the IDs of the sales order items. The values at the top \(10 and 50\) are the measure values, corresponding to the points of the solid black line at the start and end of the chart.
 > 
-> A single measure value is shown along with the threshold values \(error, warning, acceptance and good range values\). So, semantic coloring via the `CriticalityCalculation` annotation is mandatory when an area micro chart is used. For more information, see [Samples](https://ui5.sap.com/#/entity/sap.suite.ui.microchart.AreaMicroChart).
+> A single measure value is shown along with the threshold values \(error, warning, acceptance and good range values\). So, semantic coloring using the `CriticalityCalculation` annotation is mandatory when using an area micro chart. For more information, see [Samples](https://ui5.sap.com/#/entity/sap.suite.ui.microchart.AreaMicroChart).
 
 
 
 <a name="loio1467f2bc79874281ac152c1e15f133f5__section_q2j_v2q_qmb"/>
 
-## UI.Chart Annotations
+## `UI.Chart` Annotations
 
-The `UI.Chart Title` property is used for the title.
-
-The `UI.Chart Description` property is used for the subtitle.
+The `UI.Chart Title` property is used for the title. The `UI.Chart Description` property is used for the subtitle.
 
 > ### Sample Code:  
 > XML Annotation
@@ -119,7 +117,7 @@ The `UI.Chart Description` property is used for the subtitle.
 
 <a name="loio1467f2bc79874281ac152c1e15f133f5__section_as3_v2q_qmb"/>
 
-## UI.DataPoint Annotation
+## `UI.DataPoint` Annotation
 
 > ### Sample Code:  
 > XML Annotation
@@ -185,19 +183,25 @@ The `UI.Chart Description` property is used for the subtitle.
 > ```
 
 > ### Note:  
-> -   The unit of measure is plotted using the first entry in the data that is to be plotted.
+> -   You must ensure that the unit of measure is consistent across all data points.
 > 
-> -   The first and last values of the measure are set as labels at the top left and top right corners of the micro chart, and the first and the last dimension values from the data at the bottom left and bottom right corners correspondingly.
+> -   The first and last values of the measure are set as labels at the top-left and top-right corners of the micro chart and, the first and the last dimension values from the data at the bottom-left and bottom-right corners respectively.
 > 
 > 
-> Mandatory:
+> The following annotations are mandatory and must be used in the area micro chart:
 > 
-> 1.  `UI.Chart` → `ChartType`: “`Area`”
-> 2.  `UI.Chart` → `Dimensions`
-> 3.  `UI.Chart` → `Measures`
-> 4.  `UI.Chart` → `MeasureAttributes` → `DataPoint`
-> 5.  `UI.DataPoint` → `Value`
-> 6.  `UI.CriticalityCalculation`
+> -   `UI.Chart` → `ChartType`: “`Area`”
+> 
+> -   `UI.Chart` → `Dimensions`
+> 
+> -   `UI.Chart` → `Measures`
+> 
+> -   `UI.Chart` → `MeasureAttributes` → `DataPoint`
+> 
+> -   `UI.DataPoint` → `Value`
+> 
+> -   `UI.CriticalityCalculation`
+> 
 >     -   `UI.DataPoint` → `CriticalityCalculation`
 > 
 >     -   `UI.DataPoint` → `CriticalityCalculation/ImprovementDirection`

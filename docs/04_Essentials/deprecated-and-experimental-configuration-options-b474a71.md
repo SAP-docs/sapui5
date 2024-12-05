@@ -166,37 +166,6 @@ This configuration parameter defines whether the simple or the complex binding s
 <tr>
 <td valign="top">
 
-`compat-version`
-
-\(deprecated\)
-
-</td>
-<td valign="top">
-
-Type: `string`
-
-Default value: `1.14`
-
-> ### Note:  
-> Applications must set this option to `edge`. **Other version definitions are deprecated.**
-
-For more information, see [Compatibility Version Information \(deprecated\)](compatibility-version-information-deprecated-9feb96d.md).
-
-</td>
-<td valign="top">
-
-![NO](images/Cancel_dfb38de.png)
-
-</td>
-<td valign="top">
-
-![NO](images/Cancel_dfb38de.png)
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
 `format-settings`
 
 \(deprecated\)

@@ -11,11 +11,9 @@
 
 <a name="loiode4f8bf44b9846ccace1d78f3915aa81__section_llx_jhq_qmb"/>
 
-## UI.Chart Annotation
+## `UI.Chart` Annotation
 
-The `UI.Chart Title` property is used for the title.
-
-The `UI.Chart Description` property is used for the subtitle.
+The `UI.Chart Title` property is used for the title. The `UI.Chart Description` property is used for the subtitle.
 
 > ### Sample Code:  
 > XML Annotation
@@ -98,7 +96,7 @@ The `UI.Chart Description` property is used for the subtitle.
 
 <a name="loiode4f8bf44b9846ccace1d78f3915aa81__section_bgx_jhq_qmb"/>
 
-## UI.DataPoint Annotation
+## `UI.DataPoint` Annotation
 
 > ### Sample Code:  
 > XML Annotation
@@ -138,13 +136,18 @@ The `UI.Chart Description` property is used for the subtitle.
 > }
 > ```
 
-For semanting coloring, only the `Criticality` property is supported.
+For semanting coloring, only the `Criticality` annotation is supported.
 
-Mandatory:
+The following annotations are mandatory and must be used in the harvey micro chart:
 
-1.  `UI.Chart` → `ChartType`: “`Pie`”
-2.  `UI.Chart` → `Measures`
-3.  `UI.Chart` → `MeasureAttributes` → `DataPoint`
-4.  `UI.DataPoint`→ `MaximumValue`
-5.  In case semantic coloring is required, use `UI.DataPoint` → `Criticality`
+-   `UI.Chart` → `ChartType`: `"Pie"`
+
+-   `UI.Chart` → `Measures`
+
+-   `UI.Chart` → `MeasureAttributes` → `DataPoint`
+
+-   `UI.DataPoint`→ `MaximumValue`
+
+-   In case semantic coloring is required, use `UI.DataPoint` → `Criticality`
+
 

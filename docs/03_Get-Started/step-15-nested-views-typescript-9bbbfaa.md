@@ -46,8 +46,8 @@ export default class HelloPanel extends Controller {
     onShowHello(): void {
         // read msg from i18n model
         // functions with generic return values require casting 
-        const resourceBundle = <ResourceBundle> (<ResourceModel> this.getView()?.getModel("i18n"))?.getResourceBundle();
-        const recipient = (<JSONModel> this.getView()?.getModel())?.getProperty("/recipient/name");
+        const resourceBundle = (this.getView()?.getModel("i18n") as ResourceModel)?.getResourceBundle() as ResourceBundle;
+        const recipient = (this.getView()?.getModel() as JSONModel)?.getProperty("/recipient/name");
         const msg = resourceBundle.getText("helloMsg", [recipient]) || "no text defined";
         // show message
         MessageToast.show(msg);

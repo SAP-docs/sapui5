@@ -12,7 +12,7 @@ Our formatter does its job, but it is not yet used. In this step we will use it.
   
 **Date formatter in action**
 
-![](images/Tutorial_Testing_Step_16_9aa15b0.png "Date formatter in action")
+![](images/Tutorial_Testing_Step_16_9aa15b0.jpg "Date formatter in action")
 
 
 
@@ -57,11 +57,11 @@ On the *Info* tab we bind the date field to a format method `.formatter.date` of
 
 ```js
 sap.ui.define([ "sap/ui/demo/bulletinboard/model/DateFormatter" ], function (DateFormatter) {
-	...
+	// ...
 	return {
-		...
+		// ...
 		numberUnit: function(sValue) {
-			...
+			// ...
 		},
 		date: function(date) {
 			return new DateFormatter({now: Date.now}).format(date);
@@ -71,7 +71,7 @@ sap.ui.define([ "sap/ui/demo/bulletinboard/model/DateFormatter" ], function (Dat
 });
 ```
 
-In the `formatter.js file`, create an instance of the previously implemented `DateFormatter` and provide the necessary dependencies.
+In the `formatter.js` file, create an instance of the previously implemented `DateFormatter` and provide the necessary dependencies.
 
 Now run the app again to see that the formatter is applied on the post date of the detail page.
 

@@ -9,17 +9,15 @@ One axis of the chart shows the categories being compared, the other axis repres
 ![](images/Column_Micro_Chart_f7b8bbc.png)
 
 > ### Note:  
-> In the above chart, the values at the bottom \(10 and 70\) represent the dimension values. They are the IDs of the sales order items. For more information about this chart type, see [Samples](https://ui5.sap.com/1.82.5/#/entity/sap.suite.ui.microchart.ColumnMicroChart).
+> In the chart, the values at the bottom \(10 and 70\) represent the dimension values. They are the IDs of the sales order items. For more information about this chart type, see [Samples](https://ui5.sap.com/1.82.5/#/entity/sap.suite.ui.microchart.ColumnMicroChart).
 
 
 
 <a name="loio1a4ecb81be1940959d2aaa4eb7547567__section_rt5_vhq_qmb"/>
 
-## UI.Chart Annotation
+## `UI.Chart` Annotation
 
-The `UI.Chart Title` property is used for the title.
-
-The `UI.Chart Description` property is used for the subtitle.
+The `UI.Chart Title` property is used for the title. The `UI.Chart Description` property is used for the subtitle.
 
 > ### Sample Code:  
 > XML Annotation
@@ -118,7 +116,7 @@ The `UI.Chart Description` property is used for the subtitle.
 
 <a name="loio1a4ecb81be1940959d2aaa4eb7547567__section_bq5_vhq_qmb"/>
 
-## UI.DataPoint Annotation
+## `UI.DataPoint` Annotation
 
 > ### Sample Code:  
 > XML Annotation
@@ -174,15 +172,20 @@ The `UI.Chart Description` property is used for the subtitle.
 > 
 > ```
 
-For semantic coloring, both `Criticality` and `CriticalityCalculation` are supported \(`Criticality` overrides `CriticalityCalculation`\).
+For semantic coloring, both the `Criticality` and `CriticalityCalculation` annotations are supported. However, the `Criticality` annotation overrides the `CriticalityCalculation` annotation.
 
-Mandatory:
+The following annotations are mandatory and must be used in the column micro chart:
 
-1.  `UI.Chart` → `ChartType`: “`Donut`”
-2.  `UI.Chart` → `Measures`
-3.  `UI.Chart` → `MeasureAttributes` → `DataPoint`
-4.  `UI.DataPoint` → `Value`
-5.  In case `CriticalityCalculation` is used for semantic coloring, then
+-   `UI.Chart` → `ChartType`: “`Donut`”
+
+-   `UI.Chart` → `Measures`
+
+-   `UI.Chart` → `MeasureAttributes` → `DataPoint`
+
+-   `UI.DataPoint` → `Value`
+
+-   In case the `CriticalityCalculation` annotation is used for semantic coloring, then:
+
     -   `UI.DataPoint` → `CriticalityCalculation`
 
     -   `UI.DataPoint` → `CriticalityCalculation/ImprovementDirection`

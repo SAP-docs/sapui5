@@ -3597,6 +3597,28 @@ Example: *The sales order contains messages.*
 <tr>
 <td valign="top">
 
+`T_COMMON_OBJECT_PAGE_OBJECT_INFO` 
+
+</td>
+<td valign="top">
+
+Object Information
+
+</td>
+<td valign="top">
+
+Header in the form where the page title and page description can be modified when in edit mode.
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
 `M_ILLUSTRATEDMESSAGE_TITLE` 
 
 </td>

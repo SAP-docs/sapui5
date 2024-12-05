@@ -67,7 +67,7 @@ export default class App extends Controller {
         }
         // filter binding
         const list = this.byId("invoiceList");
-        const binding = <ListBinding> list?.getBinding("items");
+        const binding = list?.getBinding("items") as ListBinding;
         binding?.filter(filter);
     }
 

@@ -2,7 +2,7 @@
 
 # Stacked Bar Micro Chart
 
-A stacked bar micro chart displays all the values from the backend for the configured measure as a percentage of the total measure value.
+A stacked bar micro chart displays all the values from the back end for the configured measure as a percentage of the total measure value.
 
 ![](images/Stacked_Bar_Micro_Chart_606716a.png)
 
@@ -13,11 +13,9 @@ A stacked bar micro chart displays all the values from the backend for the confi
 
 <a name="loio9c938378cf4245e9903e806cb4d41d97__section_mhj_wgq_qmb"/>
 
-## UI.Chart Annotation
+## `UI.Chart` Annotation
 
-The `UI.Chart Title` property is used for the title.
-
-The `UI.Chart Description` property is used for the subtitle.
+The `UI.Chart Title` property is used for the title. The `UI.Chart Description` property is used for the subtitle.
 
 > ### Sample Code:  
 > XML Annotation
@@ -102,7 +100,7 @@ The `UI.Chart Description` property is used for the subtitle.
 
 
 
-## UI.DataPoint Annotation
+## `UI.DataPoint` Annotation
 
 > ### Sample Code:  
 > XML Annotation

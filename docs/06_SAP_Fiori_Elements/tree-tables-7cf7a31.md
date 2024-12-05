@@ -58,12 +58,16 @@ To activate tree tables in the list report or object page, the following paramet
 
 ## Create Mode and Custom Create Mode with a Menu Button
 
-Two creation modes are supported with a tree table:
+The following creation modes are supported with a tree table:
 
 -   `Inline`
 
 -   `NewPage`
 
+-   `CreationDialog`
+
+
+In the list report, only the `NewPage` \(default\) creation mode and the `CreationDialog` creation mode are supported.
 
 SAP Fiori elements for OData V4 supports the default create mode as well as a custom create mode. To use the custom create mode, the `nodeType` section needs the following annotations to be added:
 
@@ -75,10 +79,12 @@ SAP Fiori elements for OData V4 supports the default create mode as well as a cu
 
     -   `label`: The menu item label that can be localized using an `i18n` key.
 
+    -   `creationFields`: The properties to be displayed when using the `CreationDialog` mode. The `creationFields` parameter can point to a `FieldGroup` annotation or a comma-separated list of properties.
+
 
 
 > ### Sample Code:  
-> `manifest.json`
+> Custom Create Mode Options in the Tree Table
 > 
 > ```json
 > "tableSettings": {
@@ -106,6 +112,42 @@ SAP Fiori elements for OData V4 supports the default create mode as well as a cu
 
 ![](images/Create_button_in_tree_table_46b2fb1.png "Custom Create Mode Options in the Tree
 					Table")
+
+
+
+### Custom Create Mode with a Create Dialog
+
+Set up a create dialog as shown in the following example:
+
+> ### Sample Code:  
+> ```json
+> "tableSettings": {
+>     "type": "TreeTable",
+>     "hierarchyQualifier": "NodesHierarchy",
+>     "personalization": true,
+>     "creationMode": {
+>         "name": "CreationDialog",
+>         "creationFields": "Title",
+>         "nodeType": {
+>             "propertyName": "nodeType",
+>             "values": {
+>                 "Zone": "Create a new Zone",
+>                 "Intermediary": {
+>                     "label": "Create a new Intermediary node",
+>                     "creationFields": "Category",},
+>                 "Line": "Create a new Line item"
+>             }
+>         },
+>         "isCreateEnabled": ".extension.hierarchy-edit.custom.OPExtend.enableCreate"
+>     }
+> }
+> ```
+
+In this example, the create dialog is displayed with the property `Title` for the node types `Zone` and `Line`, and the property `Category` for the node type `Intermediary`.
+
+
+
+### Enabling or Disabling the Create Button or the Create Menu Button
 
 For both the standard create mode and the custom create mode, you can define an extension point `isCreateEnabled` to control whether the *Create* button or *Create Menu* buttons are enabled or disabled. The extension point callback needs to be added to the page controller extension.
 
@@ -410,14 +452,18 @@ If `ChangeSiblingForRootsSupported` is not defined, it is considered as set to `
 > XML Annotation
 > 
 > ```xml
-> <Annotations Target="SAP__self.P_SADL_HIER_DRAFTType">
-> <Annotation Term="SAP__hierarchy.RecursiveHierarchyActions" Qualifier="NodesHierarchy">
->       <Record>
->            <PropertyValueProperty="ChangeNextSiblingAction"String="com.sap.gateway.srvd.zjb_sadl_rs_hier_dir_d_sd.v0001.changeNextSibling"/>
->            <PropertyValueProperty="CopyAction"String="com.sap.gateway.srvd.zjb_sadl_rs_hier_dir_d_sd.v0001.copy"/>
->            <PropertyValueProperty="ChangeSiblingForRootsSupported"Bool="false"/>
->      </Record>
-> </Annotation>
+> <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_HIERARCHY',Version='0001',SAP__Origin='LOCAL')/$value">
+>   <edmx:Include Namespace="com.sap.vocabularies.Hierarchy.v1" Alias="SAP__hierarchy"/>
+> </edmx:Reference>
+> 
+> <Annotations Target="SAP__self.HierarchyEntityType">
+>   <Annotation Term="SAP__hierarchy.RecursiveHierarchyActions" Qualifier="HierarchyNode">
+>     <Record>
+>       <PropertyValue Property="ChangeNextSiblingAction" String="SAP__self.changeNextSibling"/>
+>       <PropertyValue Property="CopyAction" String="SAP__self.copy"/>
+>       <PropertyValue Property="ChangeSiblingForRootsSupported" Bool="false"/>
+>     </Record>
+>   </Annotation>
 > </Annotations>
 > ```
 

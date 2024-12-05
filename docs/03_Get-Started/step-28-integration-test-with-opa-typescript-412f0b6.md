@@ -82,7 +82,7 @@ export default class HelloPanelPage extends Opa5 {
 
 
 
-## webapp/test/integration/NavigationJourney.js \(New\)
+## webapp/test/integration/NavigationJourney.ts \(New\)
 
 We create a new `NavigationJourney.ts` file under `webapp/test/integration/`.
 
@@ -141,17 +141,19 @@ As you can see, the test case reads like a user story; we actually do not need t
 
 ## webapp/test/integration/opaTests.qunit.ts \(New\)
 
-We create a new `opaTests.qunit.ts` file under `webapp/test/integration/`.
+We create a new `opaTests.qunit.ts` file under `webapp/test/integration/`. This script loads and executes our `NavigationJourney`.
 
-We instruct QUnit to wait longer, allowing us to load our test files asynchronously. Then, we load the `NavigationJourney` and execute the test functions inside immediately.
+Before the QUnit test execution can be started, we need to wait until the Core has booted. Therefore, you need to disable the autostart via `QUnit.config.autostart = false;`, require the `sap/ui/core/Core` module, and use `Core.ready()` to wait until the Core has booted. Only then can you start the QUnit tests with `QUnit.start()`.
 
 ```js
+/* @sapUiRequire */
 QUnit.config.autostart = false;
 
-// import all your OPA tests here
+// import all your integration tests here
 void Promise.all([
-	import("ui5/walkthrough/test/integration/NavigationJourney")
-]).then(() => {
+	import("sap/ui/core/Core"), // required to wait until Core has booted to start the QUnit tests
+	import("ui5/walkthrough/test/integration/NavigationJourney"),
+]).then(([{default: Core}]) => Core.ready()).then(() => {
 	QUnit.start();
 });
 ```
@@ -166,7 +168,7 @@ Finally, we create a new `opaTests.qunit.html` file under `webapp/test/integrati
 
 This HTML page contains our test suite for all OPA tests of the app. We use the same namespace as for our application.
 
-Then we load the basic QUnit functionality via script tags from SAPUI5 so that we can execute the test journey. In `data-sap-ui-on-init` we define that the module `opaTests.qunit` is loaded initially, which then again loads our `NavigationJourney`.
+Then we load the basic QUnit functionality via script tags from SAPUI5 so that we can execute the test journey. Finally, we load the `opaTests.qunit`, which then again loads our `NavigationJourney`.
 
 ```html
 <!DOCTYPE html>
@@ -184,13 +186,13 @@ Then we load the basic QUnit functionality via script tags from SAPUI5 so that w
 		}'
 		data-sap-ui-compat-version="edge"
 		data-sap-ui-async="true"
-		data-sap-ui-on-init="module:ui5/walkthrough/test/integration/opaTests.qunit">
 	</script>
 
 	<link rel="stylesheet" type="text/css" href="../../resources/sap/ui/thirdparty/qunit-2.css">
 
 	<script src="../../resources/sap/ui/thirdparty/qunit-2.js"></script>
 	<script src="../../resources/sap/ui/qunit/qunit-junit.js"></script>
+	<script src="./opaTests.qunit.js"></script>
 </head>
 <body>
 	<div id="qunit"></div>

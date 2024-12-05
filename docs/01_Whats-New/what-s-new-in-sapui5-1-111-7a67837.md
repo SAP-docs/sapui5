@@ -403,7 +403,7 @@ SAP Fiori Elements
 
 The following changes and new features are available for SAP Fiori elements for OData V2:
 
--   You can now create cards from the list report tables that can be added to the *Insights* section of *My Home* in SAP S/4HANA Cloud. For more information, see [Creating Cards for the Insights Section of My Home in SAP S/4HANA Cloud](../06_SAP_Fiori_Elements/creating-cards-for-the-insights-section-of-my-home-in-sap-s-4hana-cloud-9b13559.md) .
+-   You can now create cards from the list report tables that can be added to the *Insights* section of *My Home* in SAP S/4HANA Cloud. For more information, see [Creating Cards for the Insights Cards Section of My Home in SAP S/4HANA](../06_SAP_Fiori_Elements/creating-cards-for-the-insights-cards-section-of-my-home-in-sap-s-4hana-9b13559.md) .
 
 
 <sub>Changed•SAP Fiori Elements•Info Only•1.111</sub>
@@ -774,6 +774,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.128](what-s-new-in-sapui5-1-128-1f76220.md "With this release SAPUI5 is upgraded from version 1.127 to 1.128.")
 
 [What's New in SAPUI5 1.127](what-s-new-in-sapui5-1-127-e5e1317.md "With this release SAPUI5 is upgraded from version 1.126 to 1.127.")
 

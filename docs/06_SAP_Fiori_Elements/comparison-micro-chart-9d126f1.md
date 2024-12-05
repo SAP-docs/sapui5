@@ -5,27 +5,32 @@
 A single measure value is shown against a maximum value. Only the first three values as received from the back end are shown.
 
 > ### Note:  
-> This topic is currently only applicable to SAP Fiori elements for OData V4.
+> This topic is applicable only to SAP Fiori elements for OData V4.
 
 ![](images/Comparison_Micro_Chart_0df709f.png)
 
 > ### Note:  
-> The chart dimensions and measures cannot be of the same entity but must be from 1:n navigation entity. In the image above, the values on the left \(10, 40 and 70\) represent the dimension values. They are the IDs of the sales order items. For more information about this chart type, see [Samples](https://ui5.sap.com/1.82.5/#/entity/sap.suite.ui.microchart.ComparisonMicroChart).
+> The chart dimensions and measures cannot be of the same entity; they must be from a 1:n navigation entity. In the chart, the values on the left \(10, 40 and 70\) represent the dimension values, which are the IDs of the sales order items. For more information about this chart type, see [Samples](https://ui5.sap.com/1.82.5/#/entity/sap.suite.ui.microchart.ComparisonMicroChart).
 
-There are two variants to the display value. If the `Value` property of the `DataPoint` does not have a text associated with it in the `@com.sap.vocabularies.Common.v1.Text` annotation, then the value is displayed. If there is a text associated with the `DataPoint`, then the `TextValue` is displayed.
+There are two variants to the display value. If the `Value` property of the `DataPoint` doesn't have a text associated with it in the `@com.sap.vocabularies.Common.v1.Text` annotation, the value is displayed. If there is a text associated with the `DataPoint`, then the `TextValue` is displayed.
 
 > ### Note:  
-> The unit of measure is plotted using the first record \(first instance of the data point\) that is to be plotted.
+> You must ensure that the unit of measure is consistent across all data points.
 
-For semantic coloring, only the `Criticality` property is supported.
+For semantic coloring, only the `Criticality` annotation is supported.
 
-Mandatory:
+The following annotations are mandatory and must be used in the comparison micro chart:
 
-1.  `UI.Chart` → `ChartType`: “`Bar`”
-2.  `UI.Chart` → `Dimensions`
-3.  `UI.Chart` → `Measures`
-4.  `UI.Chart` → `MeasureAttributes` → `DataPoint`
-5.  `UI.DataPoint` → `Value`
+-   `UI.Chart` → `ChartType`: `"Bar"`
+
+-   `UI.Chart` → `Dimensions`
+
+-   `UI.Chart` → `Measures`
+
+-   `UI.Chart` → `MeasureAttributes` → `DataPoint`
+
+-   `UI.DataPoint` → `Value`
+
 
 
 
@@ -33,9 +38,7 @@ Mandatory:
 
 ## `UI.Chart` Annotations
 
-The `UI.Chart Title` property is used for the title.
-
-The `UI.Chart Description` property is used for the subtitle.
+The `UI.Chart Title` property is used for the title. The `UI.Chart Description` property is used for the subtitle.
 
 > ### Sample Code:  
 > XML Annotation

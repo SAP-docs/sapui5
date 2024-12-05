@@ -44,8 +44,6 @@ Note the following restrictions related to the content provided in the generic *
 
 > ### Restriction:  
 > -   Drilldown filters applied to the chart using the *View By* options aren't stored/restored.
-> 
-> -   Chart and table personalization changes done on an object page are stored/restored only for apps that use flexible column layout.
 
 
 

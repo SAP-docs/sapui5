@@ -12,7 +12,7 @@ A bulletin board may contain many posts. We expect to have a high data load once
   
 **The OPA test page is waiting for more items to be loaded**
 
-![](images/Tutorial_Testing_Step_06_c4aaadb.png "The OPA test page is waiting for more items to be loaded")
+![](images/Tutorial_Testing_Step_06_c4aaadb.jpg "The OPA test page is waiting for more items to be loaded")
 
 
 
@@ -24,7 +24,7 @@ You can view and download all files in the Demo Kit at [Testing - Step 6](https:
 
 ## Integration Test Setup
 
-All integration tests are located in the `webapp/test/integration` folder and can be started manually by calling the `opaTests.qunit.html` file in the same folder or the entry page. Similar to the unit tests, the HTML page is a QUnit runner that calls all integration tests of the app and displays the test results in a readable format. It also might be omitted by other testrunners. There are also two namespaces defined for the app and the integration test folder as you have seen in the unit test setup.
+All integration tests are located in the `webapp/test/integration` folder and can be started by opening `webapp/test/testsuite.qunit.html` in your browser and selecting `integration/opaTests`.
 
 We write integration tests with OPA5 – a tool that is integrated and delivered with SAPUI5. It is the short name for One-Page Acceptance tests for SAPUI5. "One-Page" here means that OPA5 is designed for single-page Web applications, i.e. applications that consist only of one HTML file. OPA5 runs in the same browser window as the application to be tested.
 
@@ -49,6 +49,7 @@ The journey uses another structuring element of OPA called “page object” tha
 ## webapp/test/integration/WorklistJourney.js
 
 ```js
+/*global QUnit*/
 sap.ui.define([
 	'sap/ui/test/opaQunit',
 	'sap/ui/test/Qunit',
@@ -80,7 +81,7 @@ sap.ui.define([
 });
 ```
 
-Let’s add our first new OPA test to the `WorklistJourney.js` file. We describe all test cases related to the worklist logic. We can see that there is already a test `Should see the table with all posts` defined that checks if the table contains the expected number of items. There is a function `opaTest` that initiates a test description and receives a test description as the first argument as well as a callback function as the second argument. This format is similar to the unit test function `QUnit.test` except for the three arguments of the callback function that are specific to OPA.
+Let’s add our first new OPA test to the `WorklistJourney.js` file. We describe all test cases related to the worklist logic. We can see that there is already a test `Should see the table with all posts` defined that checks if the table contains the expected number of items. There is a function `opaTest` that initiates a test and receives a test description as the first argument as well as a callback function as the second argument. This format is similar to the unit test function `QUnit.test` except for the three arguments of the callback function that are specific to OPA.
 
 The three objects `Given`, `When`, `Then` are filled by the OPA runtime when the test is executed and contain the `arrangements`, `actions`, and `assertions` for the test. The "Given-When-Then" pattern is a common style for writing tests in a readable format. To describe a test case, you basically write a user story. Test cases in this format are easy to understand, even by non-technical people.
 
@@ -186,21 +187,21 @@ sap.ui.define([
 
 As you can see, the OPA page object is constructed with the call `Opa5.createPageObjects` and a `configuration` object that contains the actions and assertions properties.
 
-For our test case we need to add an action `iPressOnMoreData` and an existing assertion `theTableShouldHaveAllEntries`. OPA tests are running asynchronously, so each action and assertion starts with a `waitFor` statement. The OPA run time will check and wait for the condition to be fulfilled every 400 ms by polling. If the condition is met, the `success` function of the configuration is called. If the condition is still not fulfilled after a certain amount of time \(by default it is 15 seconds but this can be configured\) the test will fail.
+For our test case we need to add an action `iPressOnMoreData` and an existing assertion `theTableShouldHaveAllEntries`. OPA tests are running asynchronously, so each action and assertion starts with a `waitFor` statement. The OPA runtime will check and wait for the condition to be fulfilled every 400 ms by polling. If the condition is met, the `success` function of the configuration is called. If the condition is still not fulfilled after a certain amount of time \(by default it is 15 seconds but this can be configured\) the test will fail.
 
 Let’s start with the action `iPressOnMoreData`. We define a `waitFor` statement with the current view and the table. Those IDs are stored as internal variables in the `require` statement above and are available in all tests. OPA will now try to find the table based on IDs. As soon as the table is available on the screen and it can be interacted with \(it is visible, not busy,...\), the `Press` action is invoked, if not, the error message is displayed and the test fails. When executed on a table, the `Press` action will simulate that a users chooses the *More Data* button.
 
 > ### Note:  
 > The `Press` action depends on the control that it is triggered on and has a default behavior for most UI controls. If you, for example, execute `Press` on a `sap.m.Page`, this will trigger the *Back* button's `Press` event. This behavior can be overridden by passing an ID as argument to the action. For more information, see the [API Reference: `sap.ui.test.actions.Press`](https://ui5.sap.com/#/api/sap.ui.test.actions.Press). 
 
-The assertion `theTableShouldHaveAllEntries` is structured similarly, but it does not trigger an action. Here, we use the `success` function of `waitFor` to assert if our application is in the expected state. This state is defined by the matchers \(in our case we expect that the list contains 23 items by using the `AggregationLengthEquals`. The `success` function does not execute the additional checks that are needed for triggering an action. the liste does not have to be `interactable` to verify that the state of the application is correct..
+The assertion `theTableShouldHaveAllEntries` is structured similarly, but it does not trigger an action. Here, we use the `success` function of `waitFor` to assert if our application is in the expected state. This state is defined by the matchers \(in our case we expect that the list contains 23 items by using the `AggregationLengthEquals`. The `success` function does not execute the additional checks that are needed for triggering an action. The list does not have to be `interactable` to verify that the state of the application is correct.
 
 With this helper object we can simply check the length of the table aggregation `items` to the expected number of items. We have 23 entries in our local mock data that we also use for this integration test. You can see that the number of items is actually hard-coded in the test. So only if the table has exactly 23 items, the matcher is evaluating to `true` and the assertion is passed successfully.
 
 > ### Note:  
 > The items in our app are served from the mock server with a slight delay so that we can see how a real service on a backend system would behave. Even if we would have a real backend, we would purposely use the mock server for manual testing and for using them in our test cases as the test data remains stable and unchanged. This creates a more reliable test environment and easier tests. So we can write a test that checks exactly for 23 items here.
 
-Now run the `webapp/test/integration/opaTests.qunit.html` file and make sure that the test is failing. When our new test is invoked, OPA will run into a timeout because the trigger area is not found yet. You can see more information, if you open the developer console of your browser and check the messages in the console.
+Now run the `webapp/test/testsuite.qunit.html` file in your browser and select `integration/opaTests` to observe that the test is failing. When our new test is invoked, OPA will run into a timeout because the trigger area is not found yet. You can see more information, if you open the developer console of your browser and check the messages in the console.
 
 
 

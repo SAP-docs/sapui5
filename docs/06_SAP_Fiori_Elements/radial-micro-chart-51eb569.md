@@ -15,11 +15,9 @@ The chart consists of a colored radial bar with a percentage value inside.
 
 <a name="loio51eb56989df94267a75ebeff24093a5e__section_cfx_s3q_qmb"/>
 
-## UI.Chart Annotation
+## `UI.Chart` Annotation
 
-The `UI.Chart Title` property is used for the title.
-
-The `UI.Chart Description` property is used for the subtitle.
+The `UI.Chart Title` property is used for the title. The `UI.Chart Description` property is used for the subtitle.
 
 > ### Sample Code:  
 > XML Annotation
@@ -107,7 +105,7 @@ The `UI.Chart Description` property is used for the subtitle.
 
 <a name="loio51eb56989df94267a75ebeff24093a5e__section_w1x_s3q_qmb"/>
 
-## UI.DataPoint Annotation
+## `UI.DataPoint` Annotation
 
 > ### Sample Code:  
 > XML Annotation
@@ -163,17 +161,22 @@ The `UI.Chart Description` property is used for the subtitle.
 > ```
 
 > ### Note:  
-> The Radial Micro Chart displays percentage values. This means that the unit of measure label is not valid and is not rendered.
+> The radial micro chart displays percentage values. This means that the unit of measure label is invalid and not rendered.
 
-For semantic coloring, both `Criticality` and `CriticalityCalculation` are supported \(`Criticality` overrides `CriticalityCalculation`\).
+For semantic coloring, both the `Criticality` and `CriticalityCalculation` annotations are supported. However, the `Criticality` annotation overrides the `CriticalityCalculation` annotation.
 
-Mandatory:
+The following annotations are mandatory and must be used in the radial micro chart:
 
-1.  `UI.Chart` → `ChartType`: “`Donut`”
-2.  `UI.Chart` → `Measures`
-3.  `UI.Chart` → `MeasureAttributes` → `DataPoint`
-4.  `UI.DataPoint` → `Value`
-5.  In case `CriticalityCalculation` is used for semantic coloring, then
+-   `UI.Chart` → `ChartType`: `"Donut"`
+
+-   `UI.Chart` → `Measures`
+
+-   `UI.Chart` → `MeasureAttributes` → `DataPoint`
+
+-   `UI.DataPoint` → `Value`
+
+-   In case the `CriticalityCalculation` annotation is used for semantic coloring, then:
+
     -   `UI.DataPoint` → `CriticalityCalculation`
 
     -   `UI.DataPoint` → `CriticalityCalculation/ImprovementDirection`

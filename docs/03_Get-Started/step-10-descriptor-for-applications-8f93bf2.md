@@ -24,7 +24,7 @@ You can view and download all files at [Walkthrough - Step 10](https://ui5.sap.c
 
 ```
 {
-  "_version": "1.58.0",
+  "_version": "1.65.0",
   "sap.app": {
 	"id": "ui5.walkthrough",
 	"i18n": "i18n/i18n.properties",

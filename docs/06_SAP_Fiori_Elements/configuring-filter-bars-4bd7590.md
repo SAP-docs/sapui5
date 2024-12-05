@@ -6,7 +6,7 @@
 
 You can configure filter bars in list report applications and in the analytical list page.
 
-Only the fields that are part of `UI.SelectionFields`, together with all mandatory filter fields, are shown by default, in the filter bar.
+Only the fields that are part of `UI.SelectionFields`, together with all mandatory filter fields, are shown by default, in the filter bar. The *Editing Status* filter is added automatically if you have a draft service.
 
 The filter bar is only available if the service configured for the application supports filtering using the following annotations:
 
@@ -237,14 +237,11 @@ Applications can configure the filter fields as mandatory using the `Capabilitie
 > };
 > ```
 
-> ### Note:  
-> Properties annotated with `UI.Hidden` or `UI.HiddenFilter` are not displayed in either the filter bar or the *Adapt Filters* dialog.
-
 
 
 ### Configuring Fields to Remain Hidden in the Filter Bar and the *Adapt Filters* Dialog
 
-Applications must ensure that a field within the entity to which the filter bar is bound remains hidden in both the filter bar and the *Adapt Filters* dialog. You can use the `Capabilities.NonFilterableProperties` annotation to achieve this behavior.
+Applications can ensure that a field within the entity to which the filter bar is bound remains hidden in both the filter bar and the *Adapt Filters* dialog. You can use the `Capabilities.NonFilterableProperties` annotation to achieve this behavior.
 
 > ### Sample Code:  
 > XML Annotation
@@ -284,6 +281,9 @@ Applications must ensure that a field within the entity to which the filter bar 
 >     },
 > };
 > ```
+
+> ### Note:  
+> Properties annotated with `UI.Hidden` or `UI.HiddenFilter` are not displayed in either the filter bar or the *Adapt Filters* dialog.
 
 
 
@@ -494,7 +494,7 @@ You can use one of the following two approaches:
 > 
 > -   Sort restrictions aren't supported for first-level navigation entity sets when used within parameterized scenarios \(meaning when a root node is a parameterized entity\).
 > 
-> -   We don't support filtering on properties defined as measures.
+> -   Filtering on properties defined as measures is not supported.
 
 
 
@@ -505,4 +505,6 @@ You can use one of the following two approaches:
 For more information about how to configure filter bars, see [Adapting the Filter Bar](adapting-the-filter-bar-609c39a.md).
 
 For information about the initial loading of data, see [Loading Behavior of Data on Initial Launch of the Application](loading-behavior-of-data-on-initial-launch-of-the-application-9f4e119.md).
+
+For more information about using extension APIs for custom filter fields, see [Adding Custom Fields to the Filter Bar](adding-custom-fields-to-the-filter-bar-5fb9f57.md).
 

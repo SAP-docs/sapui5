@@ -12,7 +12,7 @@ In this step, we will write a test that simulates a user search. We will enter t
   
 **Testing user input in a search field**
 
-![](images/Tutorial_Testing_Step_11_2d8ec1c.png "Testing user input in a search field")
+![](images/Tutorial_Testing_Step_11_2d8ec1c.jpg "Testing user input in a search field")
 
 
 
@@ -22,9 +22,11 @@ You can view and download all files in the Demo Kit at [Testing - Step 11](https
 
 
 
-## test/integration/WorklistJourney.js
+## webapp/test/integration/WorklistJourney.js
 
 ```js
+
+/*global QUnit*/
 sap.ui.define([
 	"sap/ui/test/opaQunit",
 	"./pages/Worklist"
@@ -41,6 +43,7 @@ sap.ui.define([
 		Then.onTheWorklistPage.theTableShouldHavePagination().
 			and.theTitleShouldDisplayTheTotalAmountOfItems();
 	});
+
 
 	opaTest("Should be able to load more items", function (Given, When, Then) {
 		//Actions
@@ -60,17 +63,16 @@ sap.ui.define([
 		Then.iTeardownMyApp();
 	});
 
-	}
-);
+});
 ```
 
-In this example, we extend the `WorklistJourney.js` file with a new test `"Should be able to enter text into the search field"`. The action within this test simulates a user entering text into a search field, so we pass a search string `"Bear"` to this action. It is important to move the `Teardown` step to the last test, otherwise our app would be destroyed and the test would not be able to find the *Statistics* tab.
+In this example, we extend the `WorklistJourney.js` file with a new test `"Should be able to search for items"`. The action within this test simulates a user entering text into a search field, so we pass a search string `"Bear"` to this action. It is important to move the `Teardown` step to the last test, otherwise our app would be destroyed and the test would not be able to find the *Statistics* tab.
 
 Delete `.and.iTeardownMyApp();` from the previous test in the file and add the new test case.
 
 
 
-## test/integration/pages/Worklist.js
+## webapp/test/integration/pages/Worklist.js
 
 ```js
 sap.ui.require([

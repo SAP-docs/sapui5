@@ -12,9 +12,7 @@ A chart facet is suitable to use if you wish to present data graphically for ana
 
 ## Configuring Charts in a List Report
 
-You can configure a chart to be part of a list report that has multiple views.
-
-For more information, see [Defining Multiple Views on a List Report Table - Multiple Table Mode](defining-multiple-views-on-a-list-report-table-multiple-table-mode-37aeed7.md) and [Defining Multiple Views on a List Report with Different Entity Sets and Table Settings](defining-multiple-views-on-a-list-report-with-different-entity-sets-and-table-settings-b6b59e4.md).
+You can configure a chart to be part of a list report that has multiple views. For more information, see [Defining Multiple Views on a List Report Table - Multiple Table Mode](defining-multiple-views-on-a-list-report-table-multiple-table-mode-37aeed7.md) and [Defining Multiple Views on a List Report with Different Entity Sets and Table Settings](defining-multiple-views-on-a-list-report-with-different-entity-sets-and-table-settings-b6b59e4.md).
 
 
 
@@ -32,7 +30,7 @@ The following code samples show how to create your annotations for the chart fac
 
 
 
-### UI.ReferenceFacet
+### `UI.ReferenceFacet`
 
 > ### Sample Code:  
 > XML Annotation
@@ -185,13 +183,13 @@ You can define a chart against a draft-enabled entity. In this case, only active
 
 ### Enabling the Chart Facet in a List Report
 
-You can configure a chart to be part of the content area using the `manifest.json`. For more information, see the [Enabling the ALP in SAP Fiori Elements for OData V4](descriptor-configuration-for-the-analytical-list-page-2a9df06.md#loio2a9df06673d34f72b238549d49da8bfb__section_b3f_qhf_1qb) section in [Descriptor Configuration for the Analytical List Page](descriptor-configuration-for-the-analytical-list-page-2a9df06.md).
+You can configure a chart to be part of the content area using the `manifest.json` file. For more information, see the [Enabling the ALP in SAP Fiori Elements for OData V4](descriptor-configuration-for-the-analytical-list-page-2a9df06.md#loio2a9df06673d34f72b238549d49da8bfb__section_b3f_qhf_1qb) section in [Descriptor Configuration for the Analytical List Page](descriptor-configuration-for-the-analytical-list-page-2a9df06.md).
 
 
 
 ### Support for Criticality Coloring
 
-SAP Fiori elements supports the criticality based on `UI.CriticalityType`. Wrap this annotation with the `UI.ValueCriticality`, as shown in the following sample code:
+SAP Fiori elements supports the criticality based on `UI.CriticalityType`. You can wrap this annotation with the `UI.ValueCriticality` annotation, as shown in the following sample code:
 
 > ### Sample Code:  
 > XML Annotation
@@ -307,7 +305,7 @@ Additionally, the time axis is enabled when the dimension is of type `String` an
 
 ### Enabling Aggregation in the Back End
 
-For charts to work, the entity set must support aggregation. SAP Fiori elements supports transformation aggregation \(both standard aggregation methods and custom aggregation methods are supported\).
+For charts to work, the entity set must support aggregation. SAP Fiori elements supports transformation aggregation. Both standard aggregation methods and custom aggregation methods are supported.
 
 -   Specifying Chart Dimensions and Measures
 
@@ -373,7 +371,7 @@ For charts to work, the entity set must support aggregation. SAP Fiori elements 
 
 -   Transformation Aggregation that Uses Standard Aggregation Methods
 
-    In the metadata, such entity sets have the `Aggregation.ApplySupported` set. The collection of `Analytics.AggregatedProperty` must then list all the aggregatable measures/aggregation methods that are used.
+    In the metadata, such entity sets have the `Aggregation.ApplySupported` set. The collection of `Analytics.AggregatedProperty` must then list all the aggregatable measures or aggregation methods that are used.
 
     > ### Sample Code:  
     > XML Annotation
@@ -426,13 +424,11 @@ For charts to work, the entity set must support aggregation. SAP Fiori elements 
     > });
     > ```
 
-    In the example above, `"NetPricing"` is the property in the entity on which the standard aggregation methods `"min"` and `"max"` are defined. The call to the back end asks for the min/max aggregation to be applied on `NetPricing` and to be returned as `"minPrice"`/`"maximumPrice"` for the client-side binding of the aggregated value.
+    In the preceding example, `"NetPricing"` is the property in the entity on which the standard aggregation methods `"min"` and `"max"` are defined. The call to the back end asks for the min or max aggregation to be applied on `NetPricing` and to be returned as `"minPrice"`/`"maximumPrice"` for the client-side binding of the aggregated value. For more information, see [Transformation Aggregation](http://docs.oasis-open.org/odata/odata-data-aggregation-ext/v4.0/cs01/odata-data-aggregation-ext-v4.0-cs01.html#_Toc378326290).
 
-    For more information, see [Transformation Aggregation](http://docs.oasis-open.org/odata/odata-data-aggregation-ext/v4.0/cs01/odata-data-aggregation-ext-v4.0-cs01.html#_Toc378326290).
+    **– Using Transformation Aggregate-Based Measures in the Definition of a Chart –**
 
-    – Using Transformation Aggregate-Based Measures in the Definition of a Chart –
-
-    If you need to define transformation aggregate-based measures as part of the chart annotation, define them as `DynamicMeasures` and not `Measures` \(`Measures` must only have those measure properties that are directly part of the entity set, that is, only custom aggregate-based measures\).
+    If you need to define transformation aggregate-based measures as part of the chart annotation, you must define them as `DynamicMeasures` and not `Measures` \(`Measures` must only have those measure properties that are directly part of the entity set, that is, only custom aggregate-based measures\).
 
     > ### Sample Code:  
     > XML Annotation for a Chart Using a `DynamicMeasure`
@@ -519,7 +515,7 @@ For charts to work, the entity set must support aggregation. SAP Fiori elements 
 
 -   Transformation Aggregate that Uses Custom Aggregation Methods
 
-    To use custom aggregation in the back end, application developers must ensure that the metadata has `Aggregation.ApplySupported` set and that the following annotations are enabled at entity set level:
+    To use custom aggregation in the back end, you must ensure that the metadata has `Aggregation.ApplySupported` set and that the following annotations are enabled at entity set level:
 
     > ### Sample Code:  
     > XML Annotation
@@ -560,9 +556,6 @@ For charts to work, the entity set must support aggregation. SAP Fiori elements 
 
     In this example, the properties `"RequestedQuantity"` and `"RequestedQuantityLocalUnit"` are measures and use custom aggregation, while the property `"Name"` is a dimension that is marked with `Groupable: true` and can be used to plot the chart.
 
-    > ### Note:  
-    > With a custom aggregation method \(unlike the standard aggregation method, which allows the use of a virtual property\), you can't mark the same property as both a dimension \(groupable\) and a measure \(aggregatable\). If a chart is configured with such a property, then the chart returns an error.
-
     For more information, see [Custom Aggregation](http://docs.oasis-open.org/odata/odata-data-aggregation-ext/v4.0/cs01/odata-data-aggregation-ext-v4.0-cs01.html#_Toc378326320).
 
 
@@ -584,11 +577,11 @@ For charts to work, the entity set must support aggregation. SAP Fiori elements 
 > ### Restriction:  
 > The following restrictions apply regarding the support of the chart control:
 > 
-> -   Properties such as measures, dimensions, and text associations that come from associated entity sets are currently not supported.
+> -   Properties such as measures, dimensions, and text associations that come from associated entity sets aren'tsupported.
 > 
-> -   Chart personalization settings or selections aren't part of the variant changes and aren't saved in the `iAppState`.
+> -   Chart personalization settings or selections aren't part of the variant changes and not saved in the `iAppState`.
 > 
 > -   Semantic coloring using the `UI.Criticality` and `UI.CriticalityCalculation` annotations isn't supported.
 > 
-> -   Aggregations on draft-enabled entities are currently **not** supported in ABAP CDS, since currently `$apply` with or without a filter on draft or transactional entities isn't supported by SADL.
+> -   Aggregations on draft-enabled entities are **not** supported in ABAP CDS, since currently `$apply` with or without a filter on draft or transactional entities isn't supported by SADL.
 

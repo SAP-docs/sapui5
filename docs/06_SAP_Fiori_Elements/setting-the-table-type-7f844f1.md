@@ -338,11 +338,27 @@ The analytical table renders data that can be grouped and aggregated.
 
 
 > ### Restriction:  
-> -   Analytical tables support draft-enabled services. But you must avoid editing them since tables always reflect the active state of entities.
-> 
-> -   Analytical tables don’t support navigation properties, so if you include them through a `LineItem`, an empty column is displayed. You also cannot add navigation properties through the table personalization settings.
-> 
-> -   You can't use aggregatable properties to filter the data on analytical tables.
+> Analytical tables don’t support navigation properties, so if you include them through a `LineItem`, an empty column is displayed. You also cannot add navigation properties through the table personalization settings.
+
+
+
+### Using an Analytical Table with a Draft-Enabled Service
+
+The list report can display an analytical table with a draft-enabled service with the following behavior:
+
+-   Only the active entities are displayed.
+
+-   The *Editing Status* field is not displayed in the filter bar.
+
+-   The draft indicator is shown if a draft exists for an active record.
+
+-   When creating a new object, the new object needs to be saved or discarded.
+
+-   The behavior of already saved objects remains unchanged: a draft can be saved, kept, or discarded. The navigation is also unchanged.
+
+
+> ### Restriction:  
+> An analytical table cannot be displayed on the list report with a draft-enabled service in the flexible column layout.
 
 
 
@@ -408,7 +424,9 @@ You can activate the tree table in the `manifest.json`. To do so, set the table 
 > ```
 
 > ### Restriction:  
-> -   The tree table is only supported when using the ABAP RESTful Application Programming Model \(RAP\).
+> The tree table is only supported when using the ABAP RESTful Application Programming Model \(RAP\).
+
+For more detailed information about using tree tables, see [Tree Tables](tree-tables-7cf7a31.md).
 
 
 
@@ -425,6 +443,4 @@ For information about setting up a standard list or object list in the list repo
 For information about setting up tables in the object page, see [Settings for Object Page Tables](settings-for-object-page-tables-47425bb.md).
 
 For information about table groupings, see [Table Groupings](table-groupings-d344c5a.md).
-
-For information about tree tables, see [Tree Tables](tree-tables-7cf7a31.md).
 

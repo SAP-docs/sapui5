@@ -234,38 +234,53 @@ Represents the command mapped to a keyboard shortcut defined under `sap.ui.comma
 
 Custom actions defined in the application’s custom controller:
 
-```
-
-sap.ui.define([], function() {
-    return {
-        onBeforeRebindTableExtension: function(oEvent){
-            console.log('onBeforeRebindTableExtension called!');
-        },
-        onBeforeRebindChartExtension: function(oEvent){
-            console.log('onBeforeRebindChartExtension called!');
-        },
-        onClickActionA() {
-            console.log('Global Action Shortcut Key triggers');
-            alert('Button A shows up only in table toolbar and is clicked toolbar!');
-        },
-        onClickActionB() {
-            var contexts = this.extensionAPI.getSelectedContexts();
-            alert('Button B which shows up in table toolbar only is clicked!');
-        },
-        onClickActionC() {
-            var contexts = this.extensionAPI.getSelectedContexts(oEvent.ID);
-            alert('Button C which shows up in chart toolbar only is clicked!');
-        },
-        onClickActionD() {
-            alert('Button D which shows up in table toolbar only is clicked!');
-        },
-        onClickActionE() {
-            alert('Button E which shows up in chart toolbar only is clicked!');
-        }
-    }
-})
-
-```
+> ### Sample Code:  
+> ```
+> sap.ui.define([], function () {
+>     return {
+>         onBeforeRebindTableExtension: function (oEvent) {
+>             console.log('onBeforeRebindTableExtension called!');
+>         },
+>         onBeforeRebindChartExtension: function (oEvent) {
+>             console.log('onBeforeRebindChartExtension called!');
+>         },
+>         onClickActionA() {
+>             console.log('Global Action Shortcut Key triggers');
+>             alert('Button A shows up only in table toolbar and is clicked toolbar!');
+>         },
+>         onClickActionB() {
+>             // The "getSelectedContexts" should be invoked from synchronous code block.
+>             //
+>             // The results of "getSelectedContexts" is cached on "aContexts" and 
+>             // passed as a parameter to the callback function "onActionConfirm".
+>             var aContexts = this.extensionAPI.getSelectedContexts();
+>             sap.m.MessageBox.confirm("Would you like to perform the action", {
+>                 title: "Confirm",
+>                 actions: [sap.m.MessageBox.Action.OK, sap.m.MessageBox.Action.CANCEL],
+>                 emphasizedAction: sap.m.MessageBox.Action.OK,
+>                 onClose: this.onActionConfirm.bind(this, aContexts)
+>             });
+>         },
+>         onActionConfirm(aContexts, sAction) {
+>             if (sAction === sap.m.MessageBox.Action.OK) {
+>                 this.extensionAPI.invokeActions("/ActionB", aContexts).then(function () {
+>                     ///
+>                 });
+>             }
+>         },
+>         onClickActionC() {
+>             var contexts = this.extensionAPI.getSelectedContexts(oEvent.ID);
+>             alert('Button C which shows up in chart toolbar only is clicked!');
+>         },
+>         onClickActionD() {
+>             alert('Button D which shows up in table toolbar only is clicked!');
+>         },
+>         onClickActionE() {
+>             alert('Button E which shows up in chart toolbar only is clicked!');
+>         }
+>     }
+> })
+> ```
 
 
 

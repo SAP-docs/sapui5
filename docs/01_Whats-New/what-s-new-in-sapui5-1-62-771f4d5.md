@@ -792,7 +792,7 @@ The analytical list page has these new features or enhancements:
     -   Influence the sorting order.
 
 
-    For more information, see [Creating Custom Filter](../06_SAP_Fiori_Elements/creating-custom-filter-7251ea3.md).
+    For more information, see [Creating Custom Filters](../06_SAP_Fiori_Elements/creating-custom-filters-7251ea3.md).
 
 -   The ALP ignores the `UI.Hidden` fields for the selection of visual filters and filterable KPIs. For more information, see [Visual Filters](../06_SAP_Fiori_Elements/visual-filters-1714720.md).
 
@@ -867,6 +867,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.128](what-s-new-in-sapui5-1-128-1f76220.md "With this release SAPUI5 is upgraded from version 1.127 to 1.128.")
 
 [What's New in SAPUI5 1.127](what-s-new-in-sapui5-1-127-e5e1317.md "With this release SAPUI5 is upgraded from version 1.126 to 1.127.")
 
