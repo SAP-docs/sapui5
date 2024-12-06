@@ -151,7 +151,7 @@ var btn = new Button({
 
 ## Using Density Classes in the SAP Fiori launchpad
 
-The SAP Fiori launchpad \(FLP\) optionally reads the supported content densities from the app descriptor \(`manifest.json`\) and - if available - sets the appropriate content density class on the `<body>` tag. On devices with mouse and touch support, the FLP also allows the desired content density to be configured by the user. To avoid situations where an application and the FLP write different content density classes, we recommend using the following logic within all applications that are intended to be used inside the FLP:
+The SAP Fiori launchpad \(FLP\) optionally reads the supported content densities from the app descriptor \(`manifest.json`\) and - if available - sets the appropriate content density class on the `<body>` tag. On desktop devices, the FLP also allows the desired content density to be configured by the user. To avoid situations where an application and the FLP write different content density classes, we recommend using the following logic within all applications that are intended to be used inside the FLP:
 
 ```js
 
