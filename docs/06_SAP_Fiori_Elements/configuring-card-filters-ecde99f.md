@@ -62,7 +62,7 @@ The following example shows filter configuration in the annotation document. The
 
 
 
-The preference for displaying the currency type is taken from the SAP Fiori Launchpad user settings in the `DisplayCurrency` field of an application. You can also set filters for SAP Fiori overview page by passing a filter paramter in the URL. Applicable when you launch SAP Fiori overview pages from SAP Fiori Launchpad or from any other application with a filter parameter.
+The preference for displaying the currency type is taken from the SAP Fiori Launchpad user settings in the `DisplayCurrency` field of an application. You can also set filters for SAP Fiori overview page by passing a filter parameter in the URL. Applicable when you launch SAP Fiori overview pages from SAP Fiori Launchpad or from any other application with a filter parameter.
 
 > ### Note:  
 > You can only pass strings or integers as filter parameters. The filter applies automatically if the filter property exists in the entityset.

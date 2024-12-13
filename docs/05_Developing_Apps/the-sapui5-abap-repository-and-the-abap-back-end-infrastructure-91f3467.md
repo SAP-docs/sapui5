@@ -17,7 +17,7 @@ The BSP runtime is not used at runtime and SAPUI5-specific request handlers are 
 The SAPUI5 text repository is part of the SAPUI5 ABAP repository. It's intended to be used as fallback mechanism if translation by properties files is not possible.
 
 > ### Note:  
-> SAPUI5 distribution layer artifacts, such as control libraries, are not stored in the SAPUI5 ABAP repository, but in a separate repository \(technically based on the MIME repository\). The runtime access is realized by SAPUI5-specific request handlers.
+> SAPUI5 distribution layer artifacts, such as control libraries, are not stored in the SAPUI5 ABAP repository, but in a separate repository. The runtime access is realized by SAPUI5-specific request handlers.
 
 The following design time tools use the SAPUI5 ABAP repository:
 

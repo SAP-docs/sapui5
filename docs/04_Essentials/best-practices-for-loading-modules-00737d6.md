@@ -52,7 +52,7 @@ For troubleshooting information with regard to addressing modules, see [What is 
 
 ### Migrating Access to Pseudo Modules
 
-Historically, types that are defined within a `library.js` could be required as if they were modules of their own \(i.e. as "pseudo modules"\). This behavior is deprecated, and the corresponding `library` module should be required instead. The example below showcases three scenarios how types might be used. You can find the corresponding module for each API, enum and control in the API Reference, e.g. [`sap.m.ButtonType`](https://ui5.sap.com/#/api/sap.m.ButtonType) and [`sap.ui.model.FilterType`](https://ui5.sap.com/#/api/sap.ui.model.FilterType).
+Historically, types that are defined within a `library.js` could be required as if they were modules of their own \(i.e. as "pseudo modules"\). This behavior is deprecated, and the corresponding `library` module should be required instead. The example below showcases three scenarios how types might be used. You can find the corresponding module for each API, enum, and control in the API Reference, e.g. [`sap.m.ButtonType`](https://ui5.sap.com/#/api/sap.m.ButtonType) and [`sap.ui.model.FilterType`](https://ui5.sap.com/#/api/sap.ui.model.FilterType).
 
 -   enum types included in a `library.js`
 
@@ -69,6 +69,8 @@ Historically, types that are defined within a `library.js` could be required as 
     > ### Note:  
     > Accessing the DataType instance via the library's module export is also deprecated.
 
+
+**Example:**
 
 ```js
 sap.ui.require([
@@ -87,6 +89,78 @@ sap.ui.require([
     oCSSSize.isValid("20px") // true
 });
 ```
+
+**Example for migrating several legacy aspects:**
+
+
+<table>
+<tr>
+<th valign="top" align="center">
+
+Legacy Code
+
+</th>
+<th valign="top" align="center">
+
+Best Practice
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+```js
+sap.ui.define([
+  "sap/m/SortOrder", // Outdated pseudo module
+  "sap/ui/model/FilterType", // standalone module
+  "sap/ui/layout" // target use: SimpleForm
+], (SortOrder, FilterType, sapUiLayoutLib) => {
+  "use strict"
+  var SimpleForm = sapUiLayoutLib.form.SimpleForm; // access to Control via globals
+
+    // ...
+
+      // access to Control via globals
+      sap.m.MessageBox.show(/*...*/);
+
+    // ...
+
+});
+```
+
+
+
+</td>
+<td valign="top">
+
+```js
+sap.ui.define([
+  "sap/m/library", // "SortOrder" is contained in the sap/m/library.js module
+  "sap/ui/model/FilterType", // remains the same
+  "sap/ui/layout/form/SimpleForm" // imported as a module, no access to globals needed
+], (sapMLib, FilterType, SimpleForm) => {
+  "use strict";
+  const { SortOrder } = sapMLib;
+
+    // ...
+
+      // lazily require the sap/m/MessageBox on demand
+      sap.ui.require([
+        "sap/m/MessageBox"
+      ], (MessageBox) => {
+        MessageBox.show(/*...*/);
+      });
+
+    // ...
+
+});
+```
+
+
+
+</td>
+</tr>
+</table>
 
 
 

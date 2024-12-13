@@ -798,17 +798,24 @@ In SAP Fiori elements for OData V4, you can use the `common.FieldControl` annota
 > ### Note:  
 > ABAP CDS only supports `@ObjectModel.mandatory` but **not** `@ObjectModel.readOnly`.
 
+****
+
 
 <table>
 <tr>
 <th valign="top">
 
-Value of the `FieldControl`
+Value of the `FieldControl` 
 
 </th>
 <th valign="top">
 
 Behavior
+
+</th>
+<th valign="top">
+
+`EnumMember` to Use for `FieldControl` Values
 
 </th>
 </tr>
@@ -828,6 +835,11 @@ Property must have a non-null value whenever a save or an update is triggered. T
 
 
 </td>
+<td valign="top">
+
+`SAP__common.FieldControlType/Mandatory` 
+
+</td>
 </tr>
 <tr>
 <td valign="top">
@@ -840,6 +852,11 @@ Optional
 Property can have a null value.
 
 </td>
+<td valign="top">
+
+`SAP__common.FieldControlType/Optional` 
+
+</td>
 </tr>
 <tr>
 <td valign="top">
@@ -849,7 +866,14 @@ ReadOnly
 </td>
 <td valign="top">
 
-Property value cannot be changed. In edit mode, this property will not show up as an editable field.
+Property value cannot be changed. In edit mode, this property will not show up as an editable field
+
+.
+
+</td>
+<td valign="top">
+
+`SAP__common.FieldControlType/ReadOnly` 
 
 </td>
 </tr>
@@ -869,8 +893,16 @@ Property has no meaning in the current entity state and will show up in disabled
 
 
 </td>
+<td valign="top">
+
+SAP\_\_common.FieldControlType/Inapplicable
+
+</td>
 </tr>
 </table>
+
+> ### Note:  
+> When using a path-based value for `FieldControl`, you must ensure that the path of `FieldControl` points to a property based on `Edm.Byte`.
 
 > ### Tip:  
 > Fields that are part of `InsertRestrictions`/`RequiredProperties` or `UpdateRestrictions`/`RequiredProperties` are marked as mandatory only in the `create`/`update` flow. For more information, see [Adding Actions to Tables](adding-actions-to-tables-b623e0b.md).

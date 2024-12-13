@@ -29,14 +29,7 @@ If you set this flag, make sure that you provide stable IDs and follow the rules
 Please note that the `_version` property must be at least `1.11.0`.
 
 ```json
-{
-    "_version": "1.11.0"
-    […]
-    "sap.ui5": {
-        "flexEnabled": true,
-    […]
-}
-
+{    "_version": "1.11.0"    […]    "sap.ui5": {        "flexEnabled": true,    […]}
 ```
 
 > ### Caution:  
@@ -51,12 +44,15 @@ Please note that the `_version` property must be at least `1.11.0`.
 
 ## Very important: Use stable IDs
 
-Stable IDs are used to identify the controls that can be changed via UI adaptation or personalization. For this reason, every control and view that you use must have a stable ID. For more information, see [Stable IDs: All You Need to Know](stable-ids-all-you-need-to-know-f51dbb7.md). Here, you also find information on how to check if all your IDs are stable.
+Stable IDs are used to identify the controls that can be changed via UI adaptation or personalization. For this reason, every control and view in your application must have a stable ID. For more information, see [Stable IDs: All You Need to Know](stable-ids-all-you-need-to-know-f51dbb7.md). Here, you also find information on how to check if all your IDs are stable.
 
 If your app is based on SAP Fiori elements, it automatically generates IDs for its controls. You only have to set stable IDs if you use extension points to modify it, for example to add an additional view.
 
 > ### Caution:  
 > Never change or delete the IDs when you're creating the next version of your app if the app was already delivered. Otherwise you'd risk inconsistencies and the loss of UI changes that a developer \(in an adaptation project\) or a key user might have done in the delivered version.
+
+> ### Note:  
+> Even if you don't want a control to be adaptable, it still should have a stable ID. To deactivate the adaptation of a certain control in your application, see the section *Restrict adaptation for certain controls* in [Enabling UI Adaptation: Other Things to Consider](enabling-ui-adaptation-other-things-to-consider-de9fd55.md).
 
 > ### Tip:  
 > With the <code>Stable control IDs are required for SAPUI5 flexibility services</code> rule in the Support Assistant, you can check whether all controls have stable IDs. For more information, see [Stable IDs: All You Need to Know](stable-ids-all-you-need-to-know-f51dbb7.md).
@@ -141,16 +137,7 @@ In addition, for SAPUI5 apps running standalone \(not in an SAP Fiori launchpad\
         > manifest.json
         > 
         > ```
-        >     "sap.ui5": {
-        >         "dependencies": {
-        >             …
-        >             "libs": {
-        >                 "sap.ui.fl": {},
-        >                 …
-        >             }
-        >         },
-        >         …
-        > 
+        >     "sap.ui5": {        "dependencies": {            …            "libs": {                "sap.ui.fl": {},                …            }        },        …
         > ```
 
 

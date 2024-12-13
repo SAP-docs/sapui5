@@ -15,7 +15,7 @@ You can use extension points to enhance tables in SAP Fiori elements apps.
 
 ## Additional Features in SAP Fiori Elements for OData V2
 
-You use the following extension points to add additional columns to tables:
+You can use the following extension points to add additional columns to tables:
 
 
 <table>
@@ -27,7 +27,7 @@ Table Type
 </th>
 <th valign="top">
 
-SAP Fiori Elements
+Floorplan
 
 </th>
 <th valign="top">
@@ -136,7 +136,7 @@ Object page
 </td>
 <td valign="top">
 
-``
+`GridTableColumnsExtension|<Name of the EntitySet>|<Facet ID/Annotation Path>` 
 
 </td>
 <td valign="top">
@@ -211,9 +211,9 @@ List report
 > ### Note:  
 > `<Name of the EntitySet>` is the EntitySet of the current page. `<Name of the table EntitySet>` is the EntitySet of the table the extension is meant for. Use the `<name of the table EntitySet>` for all table column extensions on the object page, as opposed to all other view extensions on the object page.
 
-You use extension point `ListReportExtension` to replace default navigation within a responsive table in a list report. For more information, see the following example: [Example: Replacing Standard Navigation in a Responsive Table in the List Report](example-replacing-standard-navigation-in-a-responsive-table-in-the-list-report-a12ad60.md).
+Use the `ListReportExtension` extension point to replace default navigation within a responsive table in a list report. For more information, see the following example: [Example: Replacing Standard Navigation in a Responsive Table in the List Report](example-replacing-standard-navigation-in-a-responsive-table-in-the-list-report-a12ad60.md).
 
-You use extension point `DetailsExtension` to replace default navigation within a responsive table on an object page. For more information, see the following example: [Example: Replacing Standard Navigation in a Responsive Table on the Object Page](example-replacing-standard-navigation-in-a-responsive-table-on-the-object-page-b20dc7a.md).
+Use the `DetailsExtension` extension point to replace default navigation within a responsive table on an object page. For more information, see the following example: [Example: Replacing Standard Navigation in a Responsive Table on the Object Page](example-replacing-standard-navigation-in-a-responsive-table-on-the-object-page-b20dc7a.md).
 
 
 
@@ -225,23 +225,23 @@ The table containing additional custom columns can look like this:
 
   
   
-**Custom Columns in a Table**
+**Custom Column in a Table**
 
-![](images/Custom_Columns_00819cd.png "Custom Columns in a Table")
+![](images/Custom_Columns_00819cd.png "Custom Column in a Table")
 
 > ### Note:  
 > When adding custom columns to tables, each column needs a column key as its unique identifier. Use only the following characters:
 > 
-> -   :
+> -   Colon \(:\)
 > 
-> -   \_
+> -   Underscore \(\_\)
 > 
-> -   \-
+> -   Dash \(-\)
 > 
-> -   alpha-numeric characters
+> -   Alpha-numeric characters
 > 
 > 
-> For `UI.DataField`, the column keys are created using the OData path. All columns start with ...`::C::` and follow this by the annotation type, for example `UI.DataField, ::` and then the corresponding property. Example: `<sap.m.Label id="SalesOrder::SalesOrderManageList--fe::table::SalesOrderManage::LineItem::C::FieldGroup::multipleActionFields-innerColumnHeader">`. For custom columns, the ID is concatenated with ...`C::CustomColumn::<key>`.
+> For `UI.DataField`, the column keys are created using the OData path. All columns start with ...`::C::` followed by the annotation type, for example, `UI.DataField`, `::`, and then the corresponding property. Example: `<sap.m.Label id="SalesOrder::SalesOrderManageList--fe::table::SalesOrderManage::LineItem::C::FieldGroup::multipleActionFields-innerColumnHeader">`. For custom columns, the ID is concatenated with ...`C::CustomColumn::<key>`.
 
 
 
@@ -249,7 +249,7 @@ The table containing additional custom columns can look like this:
 
 1.  Define a fragment for the view extension.
 
-    For a custom column in a table, you have to implement two extensions. First, implement the definition of the custom columns, then, implement the content of the custom columns.
+    For a custom column in a table, you have to implement two extensions. First, implement the definition of the custom columns, then implement the content of the custom columns.
 
     > ### Sample Code:  
     > `CustomColumnButton.fragment.xml`
@@ -314,7 +314,7 @@ The table containing additional custom columns can look like this:
     >                                         "CustomColumnOnObjectPage": {
     >                                             "header": "AnotherColumnLabel",
     >                                             "template": "SalesOrder.ext.CustomColumnButton",
-    >                                             "availability": "Adaption"
+    >                                             "availability": "Adaptation"
     >                                         }
     >                                     }
     >                                 }
@@ -346,7 +346,7 @@ The table containing additional custom columns can look like this:
     > ```
 
 
-The `manifest.json` sample code above enables you to add an additional column to an object page. By default, the column isn't visible on the UI. Once it has been added via *Add/Remove Columns*, this is the result:
+The `manifest.json` sample code above enables you to add an additional column to an object page. By default, the column isn't visible on the UI. When it has been added by using *Add/Remove Columns*, this is the result:
 
 ![](images/Custom_Button_bea7e9b.png)
 
@@ -374,7 +374,7 @@ Description
 <tr>
 <td valign="top">
 
-key
+`key`
 
 </td>
 <td valign="top">
@@ -384,19 +384,19 @@ aA-zZ, 0-9, :, \_, -
 </td>
 <td valign="top">
 
-The key of the custom column is needed as an identifier, which can be used as reference for other columns.
+The key of the custom column is needed as an identifier which can be used as reference for other columns.
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-header
+`header`
 
 </td>
 <td valign="top">
 
-any Unicode string, a string containing an `i18n` text, a string containing a metadata path
+Any Unicode string, a string containing an `i18n` text, a string containing a metadata path
 
 > ### Note:  
 > The `i18n` model is the recommended way to add the header text. The use of a metadata path in the header text is optional and not recommended.
@@ -406,24 +406,24 @@ any Unicode string, a string containing an `i18n` text, a string containing a me
 </td>
 <td valign="top">
 
-The header is shown on the table as well as in the add/remove dialog.of
+The header is shown on the table as well as in the add/remove dialog.
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-tooltip
+`tooltip`
 
 </td>
 <td valign="top">
 
-any Unicode string, a string containing an `i18n` text
+Any Unicode string, a string containing an `i18n` text
 
 </td>
 <td valign="top">
 
-The tooltip is shown on the header of the custom columns when the mouse is hovered.
+The tooltip is shown on the header of the custom columns when the user hovers over it.
 
 > ### Note:  
 > The column header text is displayed as the tooltip if the tooltip isn't defined.
@@ -435,54 +435,57 @@ The tooltip is shown on the header of the custom columns when the mouse is hover
 <tr>
 <td valign="top">
 
-width\*
+`width`\*
 
 </td>
 <td valign="top">
 
-**auto**|value|inherit;
+**`auto`** | `value` | `inherit`
 
 </td>
 <td valign="top">
 
-auto: The browser calculates the width.
+`auto`: The browser calculates the width.
 
-length: Defines the width in px, cm, etc.
+`length`: Defines the width in px, cm, and so on.
 
-%: Defines the width in percent of the containing block.
+`%`: Defines the width in percent of the containing block.
 
-inherit: Inherits this property from its parent element.
+`inherit`: Inherits this property from its parent element.
 
-Default values are set by SAP Fiori elements if nothing is set.
+I you don't provide a value, default values are set by SAP Fiori elements.
 
-Note: This setting can also be used for existing annotation columns.
+> ### Note:  
+> This setting can also be used for existing annotation columns.
+
+
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-importance
+`importance`
 
 </td>
 <td valign="top">
 
-"High" | "Medium" | "Low"
+`"High"` | `"Medium"` | `"Low"`
 
 </td>
 <td valign="top">
 
 The responsive table provides a feature where the table automatically moves the columns to the pop-in area in the following order based on their importance:
 
-1.  Columns with the setting "Low" importance are hidden first.
+1.  Columns with the `"Low"` importance setting are hidden first.
 
-2.  Columns with the setting "Medium" importance are hidden next.
+2.  Columns with the `"Medium"` importance setting are hidden next.
 
-3.  Columns with the setting "High" importance are always displayed.
+3.  Columns with the `"High"` importance setting are always displayed.
 
 
 > ### Tip:  
-> The concept for the *Show Details* button applies as described in the topic [Tables](tables-c0f6592.md).
+> The concept for the *Show Details* button applies as described in [Tables](tables-c0f6592.md).
 
 For more information, see [Configuring Responsive Behavior of a Table](../10_More_About_Controls/configuring-responsive-behavior-of-a-table-38855e0.md).
 
@@ -491,12 +494,12 @@ For more information, see [Configuring Responsive Behavior of a Table](../10_Mor
 <tr>
 <td valign="top">
 
-horizontalAlign\*
+`horizontalAlign`\*
 
 </td>
 <td valign="top">
 
-**"Begin"** | "Center" | "End"
+**`"Begin"`** | `"Center"` | `"End"`
 
 </td>
 <td valign="top">
@@ -508,106 +511,113 @@ Aligns the header as well as the content horizontally.
 <tr>
 <td valign="top">
 
-position
+`position`
 
 </td>
 <td valign="top">
 
- 
+The column ID of the anchor
 
 </td>
 <td valign="top">
 
 Defines the position of the column relative to other columns.
 
-</td>
-</tr>
-<tr>
-<td valign="top">
+For more information about finding the column ID of the anchor, see the
 
-position.placement
-
-</td>
-<td valign="top">
-
-**"After"** | "Before"
-
-</td>
-<td valign="top">
-
-Defines the placement, either before or after the anchor column.
+[How to Find Anchors for the Table Column](finding-the-right-key-for-the-anchor-6ffb084.md#loio6ffb084e6d8247d1863005c14e8d5894__section_kfj_bcc_5nb) section in [Finding the Right Key for the Anchor](finding-the-right-key-for-the-anchor-6ffb084.md).
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-position.anchor
+`position.placement`
 
 </td>
 <td valign="top">
 
-"<key\_of\_referenced\_column\>"
+**`"After"`** | `"Before"`
 
 </td>
 <td valign="top">
 
-The key of another column to be used as placement anchor. Columns defined via annotations can be referenced their `FieldId`.
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-template
-
-</td>
-<td valign="top">
-
- 
-
-</td>
-<td valign="top">
-
-Defining the target fragment follows the syntax of defining a fragment via Fragment.load
+Defines the placement either before or after the anchor column.
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-availability\*
+`position.anchor`
 
 </td>
 <td valign="top">
 
-**"Default"** | "Adaptation" | "Hidden"
+`"<key_of_referenced_column>"`
+
+</td>
+<td valign="top">
+
+The key of another column to be used as placement anchor. Columns defined with annotations can be referenced by using their `FieldId`.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`template`
+
+</td>
+<td valign="top">
+
+The relative path to the template file
+
+</td>
+<td valign="top">
+
+Defines the target fragment following the fragment defining syntax used in `Fragment.load`.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`availability`\*
+
+</td>
+<td valign="top">
+
+**`"Default"`** | `"Adaptation"` | `"Hidden"`
 
 </td>
 <td valign="top">
 
 Defines where the column is shown.
 
--   Default: it is shown in the table.
+-   `Default`: it is shown in the table.
 
--   Adaptation: it is initially not shown in the table but is available via end user adaptation
+-   `Adaptation`: it is initially not shown in the table but is available through key user adaptation
 
--   Hidden: the column is neither available in the table nor in adaptation
+-   `Hidden`: the column is not available in the table nor in key user adaptation.
 
 
-Note: This setting can also be used for existing annotation columns.
+> ### Note:  
+> This setting can also be used for existing annotation columns.
+
+
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-properties\*
+`properties`\*
 
 </td>
 <td valign="top">
 
-Array of string\(s\)
+A string or an array of strings
 
 </td>
 <td valign="top">
@@ -616,24 +626,24 @@ The properties can be any that already exist in the annotations and that can be 
 
 -   Sorting
 
-    If sorting is enabled for the table, it is possible to click the header of the custom column. This results in a property or a list of properties for which sorting is enabled. The list is displayed based on the labels of the properties, corresponding to their definition in the annotations. Upon clicking, the table is sorted by the property. The sorting indicator can be seen on all columns that point to the selected property.
+    If sorting is enabled for the table, it is possible to click the header of the custom column. This opens a list of properties for which sorting is enabled. The list is displayed based on the labels of the properties, corresponding to their definition in the annotations. Upon clicking, the table is sorted by the property. The sorting indicator can be seen on all columns that point to the selected property.
 
-    Properties added to any custom column can also be found in the sorting and filtering dialog. Selecting them there results in the same behavior known from other properties in the table.
+    Properties added to any custom column can also be found in the sorting and filtering dialog and behave the same way as the properties of other columns.
 
     > ### Note:  
-    > Sorting is not possible for navigation properties, as this is currently not supported by the back end.
+    > The back end doesn't support sorting navigation properties.
 
 -   Message handling
 
-    If an error occurs while editing a custom column, the properties list is used to link the message to the column.
+    If an error occurs while editing a custom column, the property list is used to link the message to the column.
 
 -   Export to spreadsheet and PDF
 
-    Every property listed here will be exported into the spreadsheet or PDF file. When you export to a spreadsheet, the basic export exports all properties in the same column, and the option *Split cells with multiple values* exports each property in a separate column. Custom columns without a properties list will not be exported. For more information, see [Using the Export Button](using-the-export-button-4bab6f2.md).
+    Every listed property is exported into the spreadsheet or PDF file. When exporting to a spreadsheet, the basic export exports all properties in the same column, and the option *Split cells with multiple values* exports each property in a separate column. Custom columns without a property list are not exported. For more information, see [Using the Export Button](using-the-export-button-4bab6f2.md).
 
 -   Copying row or range
 
-    Every property listed here will be copied to the clipboard when using the row or range copy.
+    Every listed property is copied to the clipboard when using the row or range copy.
 
 
 
@@ -643,7 +653,7 @@ The properties can be any that already exist in the annotations and that can be 
 <tr>
 <td valign="top">
 
-required
+`required`
 
 </td>
 <td valign="top">
@@ -653,10 +663,10 @@ required
 </td>
 <td valign="top">
 
-Indicates whether a custom column is required. If set to `true`, an asterisk will be displayed in the column header.
+Indicates whether a custom column is required. If set to `true`, an asterisk is displayed in the column header.
 
 > ### Note:  
-> This is only a visual indicator and no additional checks are performed by the framework.
+> This is only a visual indicator. No additional checks are performed by the framework.
 
 
 
@@ -664,24 +674,24 @@ Indicates whether a custom column is required. If set to `true`, an asterisk wil
 </tr>
 </table>
 
-\(\*\) = optional value
+\(\*\) = optional value.
 
-**bold** formatting: default/fallback behavior
+**Bold** formatting: default/fallback behavior.
 
-The UI model can be leveraged within the fragment, for example to react to changes of the `editMode`:
+The UI model can be leveraged within the fragment, for example, to react to changes of the `editMode`, for example. See the following code sample:
 
 > ### Sample Code:  
 > ```
 > enabled="{= ${ui>/editMode} === 'Editable'}"
 > ```
 
-For the correct positioning of your custom elements, you need to identify an anchor element. For more information, see [Finding the Right Key for the Anchor](finding-the-right-key-for-the-anchor-6ffb084.md).
+To correctly position your custom elements, you must identify an anchor element. For more information, see [Finding the Right Key for the Anchor](finding-the-right-key-for-the-anchor-6ffb084.md).
 
 
 
 ### Sorting and Filtering
 
-You can add the configuration to support sorting and filtering via "properties" to any custom column as an array of properties:
+You can add the configuration to support sorting and filtering by using `"properties"` for any custom column as an array of properties:
 
 > ### Sample Code:  
 > ```
@@ -703,7 +713,7 @@ If sorting is applied, the indicator is added to any column that points to the p
 
 ![](images/Sorted_By_Property_48480a8.png)
 
-Properties added to any custom column can also be found in the sorting and filtering dialog \(make sure sorting and filtering is available for your table\):
+Properties added to any custom column can also be found in the sorting and filtering dialog \(ensure that sorting and filtering is available for your table\):
 
 ![](images/Sorting_and_Filterin_Dialog_d8b8a6e.png)
 
@@ -711,5 +721,5 @@ Properties added to any custom column can also be found in the sorting and filte
 
 ### Live Example: Custom Column with `Field` Building Block
 
-You can explore and work with the coding yourself. Check out our live example in the flexible programming model explorer at [Custom Column](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/customElements/customElementsOverview/customColumnContent).
+Check out our live example in the flexible programming model explorer at [Custom Column](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/customElements/customElementsOverview/customColumnContent).
 

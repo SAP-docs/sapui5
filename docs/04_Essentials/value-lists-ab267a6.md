@@ -105,10 +105,49 @@ There are three options to place the `ValueList` annotation:
     ```
 
 
+
+
+<a name="loioab267a6b958e46a28f3437154b2a1b2f__section_x5d_lgq_kdc"/>
+
+## Other Annotations
+
+You can add or overwrite any annotation for the value list service \(not only `ValueList` as described in the previous section\) in the [\(local\) annotation files](additional-annotation-files-fd715d9.md) of the data service. All annotations with a target in the namespace of the value list's schemas are copied.
+
+**Example:** If the value list metadata looks like this:
+
+```
+[...]
+<Schema Namespace="com.sap.gateway.f4.d_pr_type-fv.v0001" Alias="SAP__self">
+    <EntityType Name="D_PR_TYPE_FV">
+        <Key>
+            <PropertyRef Name="FIELD_VALUE" />
+        </Key>
+        <Property Name="FIELD_VALUE" Type="Edm.String" Nullable="false" MaxLength="2" />
+        <Property Name="DESCRIPTION" Type="Edm.String" Nullable="false" />
+    </EntityType>
+    <EntityContainer Name="Container">
+        <EntitySet Name="D_PR_TYPE_FV_SET" EntityType="SAP__self.D_PR_TYPE_FV" />
+    </EntityContainer>
+    <Annotations Target="SAP__self.D_PR_TYPE_FV/DESCRIPTION">
+        <Annotation Term="com.sap.vocabularies.Common.v1.Label" String="Standard description"/>
+    </Annotations>
+</Schema>
+```
+
+then the following annotation in a \(local\) annotation file for the data service modifies the description's label of the type D\_PR\_TYPE\_FV:
+
+```
+<Schema Namespace="my.local.annotations">
+    <Annotations Target="com.sap.gateway.f4.d_pr_type-fv.v0001.D_PR_TYPE_FV/DESCRIPTION">
+        <Annotation Term="com.sap.vocabularies.Common.v1.Label" String="My fancy description"/>
+    </Annotations>
+</Schema>
+```
+
 **Related Information**  
 
 
-[Data Reuse](data-reuse-648e360.md "The OData V4 model keeps data with respect to bindings, which allows different views on the same data, but also means that data is not automatically shared between bindings. There are mechanisms for sharing data to avoid redundant requests and to keep the same data in different controls in sync.")
+[Data Reuse](data-reuse-648e360.md "The OData V4 model keeps data with respect to bindings. This allows different views on the same data but also means that data is not automatically shared between bindings. There are mechanisms for sharing data to avoid redundant requests and to keep the same data in different controls in sync.")
 
 [OData 4.0 Vocabularies - SAP Common \> ValueListType](https://github.com/SAP/odata-vocabularies/blob/main/vocabularies/Common.md#ValueListType)
 

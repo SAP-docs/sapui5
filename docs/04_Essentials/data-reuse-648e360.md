@@ -2,7 +2,7 @@
 
 # Data Reuse
 
-The OData V4 model keeps data with respect to bindings, which allows different views on the same data, but also means that data is not automatically shared between bindings. There are mechanisms for sharing data to avoid redundant requests and to keep the same data in different controls in sync.
+The OData V4 model keeps data with respect to bindings. This allows different views on the same data but also means that data is not automatically shared between bindings. There are mechanisms for sharing data to avoid redundant requests and to keep the same data in different controls in sync.
 
 
 
@@ -191,6 +191,8 @@ The optional callback function `fnOnBeforeDestroy` is called when the kept-alive
 -   due to a refresh, the entity is no longer accessible via its previous path.
 
 If you want to get [server messages](server-messages-in-the-odata-v4-model-fbe1cb5.md) for the kept-alive context, but not for the list, use the `bRequestMessages` parameter. The messages for this context are requested immediately and with each subsequent refresh. You can then get the latest messages as a side effect via [`v4.Context#requestSideEffects`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.Context/methods/requestSideEffects).
+
+A \(de-\)selected context may be kept alive in order to preserve its selection state. For more information, see [Selection](selection-ec55312.md)and [`v4.Context#setSelected`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.Context%23methods/setSelected).
 
 
 

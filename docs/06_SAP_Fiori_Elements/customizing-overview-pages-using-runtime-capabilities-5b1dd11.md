@@ -6,7 +6,18 @@ End users can customize their overview pages by rearranging cards and by hiding 
 
 End users can customize their overview pages in the following ways:
 
--   Drag and drop cards to rearrange them. You can do this using the mouse, or with the keyboard by pressing [Ctrl\] and the arrow buttons.
+-   Drag and drop cards to rearrange them. You can do this using the mouse, or with the keyboard by pressing [Ctrl\] and the arrow buttons. You can enable the ClickLock option to highlight or drag an item without holding down the mouse button. You can enable this option by using the following steps:
+
+    -   Open the *Settings* of your system.
+
+    -   Select *Bluetooth and Devices* and choose *Touchpad*.
+
+    -   Click *More touchpad settings*. The classic *Mouse Properties* dialog opens.
+
+    -   Check the *Turn on ClickLock* option.
+
+
+    To use ClickLock, perform a single-click on an item and move the mouse to enter the drag mode. The selected element starts dragging. A second click on the desired location commits the drag and drop operation.
 
     > ### Note:  
     > -   You can only personalize cards with same screen resolution and size.

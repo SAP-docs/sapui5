@@ -18,8 +18,7 @@ In this variant, you include the `resources/sap-ui-core-nojQuery.js` file in you
     <script 
             id="sap-ui-bootstrap"            
             src="resources/sap-ui-core-nojQuery.js" 
-            data-sap-ui-libs="sap.m"
-            data-sap-ui-theme="sap_horizon" >
+            data-sap-ui-libs="sap.m">
     </script> 
 ```
 

@@ -5,10 +5,10 @@
 By default, multi-selection for intent-based navigation is enabled.
 
 > ### Note:  
-> This topic is currently only applicable to SAP Fiori elements for OData V4.
+> This topic is only applicable to SAP Fiori elements for OData V4.
 
 > ### Note:  
-> The records which do not have a unique key field cannot be identified. For example, if the following contexts are to be passed during navigation:
+> The records that do not have a unique key field cannot be identified. For example, if the following contexts are to be passed during navigation:
 > 
 > 
 > <table>
@@ -82,7 +82,7 @@ By default, multi-selection for intent-based navigation is enabled.
 > </tr>
 > </table>
 > 
-> The navigation context that is passed has \(P1=A or B\) and \(P2=X or Y\) rather than \(P1=A and P2=X\) and \(P1=B and P2=Y\) and \(P1=A and P2=Y\). In the target app, individual properties are concatenated via AND, and multiple property values are concatenated via OR: \(P1=A OR P1=B\) AND \(P2=X OR P2=Y\). This might result in an additional record BX.
+> The navigation context that is passed has \(P1=A or B\) and \(P2=X or Y\) rather than \(P1=A and P2=X\) and \(P1=B and P2=Y\) and \(P1=A and P2=Y\). In the target app, individual properties are concatenated using AND, and multiple property values are concatenated using OR: \(P1=A OR P1=B\) AND \(P2=X OR P2=Y\). This might result in an additional record BX.
 
 The selection variant that is passed has the following format:
 

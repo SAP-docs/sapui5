@@ -77,13 +77,12 @@ Open a terminal and install UI5 Tooling globally on your machine by executing th
     
     	<script id="sap-ui-bootstrap"
     		src="resources/sap-ui-core.js"
-    		data-sap-ui-theme="sap_horizon"
     		data-sap-ui-resource-roots='{
     			"sap.ui.demo.smartControls": "./"
     		}'
     		data-sap-ui-on-init="module:sap/ui/demo/smartControls/initMockServer"
-    		data-sap-ui-compat-version="edge"
-    		data-sap-ui-async="true"
+    			data-sap-ui-compat-version="edge"
+    			data-sap-ui-async="true"
     		data-sap-ui-frame-options="trusted">
     	</script>
     </head>

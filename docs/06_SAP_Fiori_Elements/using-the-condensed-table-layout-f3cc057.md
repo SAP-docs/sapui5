@@ -4,9 +4,20 @@
 
 You can set the content density to `condensed` for `ui.table` on the list report and object page applications.
 
-To do so, in the `manifest.json` under the relevant section, set `"condensedTableLayout" : true`. Make this setting for the section in which you want the UI table to adapt the condensed style.
+To apply the condensed style to a table in a specific section, in the `manifest.json` file within the relevant section, set `"condensedTableLayout" : true` in the `manifest.json`. This setting ensures that the table in the specified section adapts to the condensed layout.
 
-SAP Fiori Elements for OData V2
+> ### Note:  
+> -   Condensed mode is applicable only to grid tables `(sap.ui.table)` and not to responsive tables `(sap.m.table)`.
+> 
+> -   The application must run in compact mode. If it runs in cozy mode, the class is not set, even if the manifest key is set to `true`.
+> 
+> -   On the object page, the `condensedTableLayout` class can be set only if there is just one section that contains a grid table \(`sap.ui.table`\) or if the icon tab bar is used for navigation between sections, and any section has only one table in it. Otherwise, the class is not applied for the grid table \(`sap.ui.table`\), even if the manifest key is set to `true`.
+
+
+
+<a name="loiof3cc057e405c4fd58ee2ed42c557797c__section_kbq_xy1_hdc"/>
+
+## Additional Features in SAP Fiori Elements for OData V2
 
 > ### Sample Code:  
 > Object Page Table
@@ -27,7 +38,11 @@ SAP Fiori Elements for OData V2
 > 
 > ```
 
-SAP Fiori Elements for OData V4
+
+
+<a name="loiof3cc057e405c4fd58ee2ed42c557797c__section_xq3_1z1_hdc"/>
+
+## Additional Features in SAP Fiori Elements for OData V4
 
 > ### Sample Code:  
 > Object Page Table
@@ -53,13 +68,6 @@ SAP Fiori Elements for OData V4
 > 		}
 > }
 > ```
-
-> ### Note:  
-> -   Condensed mode applies only to the Grid table \(`sap.ui.table`\), not to the Responsive table \(`sap.m.table`\).
-> 
-> -   The app needs to run in compact mode. If it runs in cozy mode, the class is not set, even if the manifest key is set to true.
-> 
-> -   On an object page, the `condensedTableLayout` class can be set only if there is just one section that contains a Grid table \(`sap.ui.table`\) or if the icon tab bar is used for navigation between sections, and any section has only one table in it. Otherwise, the class is not applied for the Grid table \(`sap.ui.table`\), even if the manifest key is set to true.
 
 **Related Information**  
 

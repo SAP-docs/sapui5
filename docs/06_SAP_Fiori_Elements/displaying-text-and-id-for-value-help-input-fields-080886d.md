@@ -4,32 +4,15 @@
 
 You can configure object pages to show both text and ID for value help input fields in *Edit* and *Display* modes.
 
-> ### Note:  
-> This topic has not yet been updated with information specific to SAP Fiori elements for OData V4.
-
 
 
 <a name="loio080886d8d4af4ac6a68a476beab17da3__section_q2k_ytx_jnb"/>
 
 ## Edit Mode
 
-By default, all fields in the form are configured with `TextInEditModeSource = ValueListNoValidation`, so that you can enter a new value that is not defined in the value help. If the `textArrangement` annotation is defined, then the value help entity fetches and displays both text and ID, as per the annotation.
+By default, you can enter a new value that is not defined in the value help. If the `textArrangement` annotation is defined, then the value help entity fetches and displays both text and ID, as per the annotation.
 
 ![](images/Value_Help_Object_Page_Text_amp_ID_4aa1f0d.png)
-
-> ### Note:  
-> This is only supported in object page forms, and not supported in tables.
-
-`sap.ui.comp.smartfield.TextInEditModeSource.ValueList` enumeration members are supported in the following cases only. If any of these conditions are not met, only the ID is displayed in the field.
-
--   The value property of the `SmartField` control instance is bound to an Entity Data Model \(EDM\) property type as `Edm.String` or `Edm.Guid`.
-
--   The `com.sap.vocabularies.UI.v1.TextArrangement` annotation for the bound EDM property or entity type is specified in the service metadata document or annotation file.
-
--   The binding mode for the value property of the `SmartField` control is set as two-way binding.
-
--   The field from which the description is fetched is filterable.
-
 
 `textArrangement` is defined at the entity level or at the individual field level. The individual field level takes precedence over the entity level.
 
@@ -128,20 +111,46 @@ You can use `ValueListForValidation` annotations under property level annotation
 > ```
 
 > ### Note:  
-> -   `ValueListForValidation` works only in cases where no qualifier is set, that is `String=""`.
+> -   `ValueListForValidation` works only in cases where no qualifier is set, that is, `String=""`.
 > 
-> -   User input that does not match the entries in the `ValueListForValidation` aren't stored in the back end \(not even for drafts\).
+> -   User input that does not match the entries in the `ValueListForValidation` isn't stored in the back end \(not even for drafts\).
 
 
 
-<a name="loio080886d8d4af4ac6a68a476beab17da3__section_opk_d5x_jnb"/>
+<a name="loio080886d8d4af4ac6a68a476beab17da3__section_dbd_xcp_fdc"/>
 
-## Display Mode
+## Additional Features in SAP Fiori Elements for OData V2
+
+
+
+### Edit Mode
+
+Entering a new value that is not defined in the value help is ensured with the `TextInEditModeSource = ValueListNoValidation` configuration by default.
+
+> ### Note:  
+> This is only supported in object page forms and is not supported in tables.
+
+`sap.ui.comp.smartfield.TextInEditModeSource.ValueList` enumeration members are supported in the following cases only:
+
+-   The value property of the `SmartField` control instance is bound to an Entity Data Model \(EDM\) property type as `Edm.String` or `Edm.Guid`.
+
+-   The `com.sap.vocabularies.UI.v1.TextArrangement` annotation for the bound EDM property or entity type is specified in the service metadata document or annotation file.
+
+-   The binding mode for the value property of the `SmartField` control is set as a two-way binding.
+
+-   The field from which the description is fetched is filterable.
+
+
+If any of these conditions are not met, only the ID is displayed in the field.
+
+
+
+### Display Mode
 
 You can display both the text and ID of a `SmartField` that has a value list. To do so, specify `sap:text` directed to the navigation property of the value help from which the application fetches the description.
 
 > ### Sample Code:  
-> Modeling `sap:text` via a Navigation Path
+> Modeling `sap:text` Using a Navigation Path
 > 
 > ```
 > 
@@ -154,7 +163,7 @@ You can display both the text and ID of a `SmartField` that has a value list. To
 > 
 > ```
 
-If this modeling is not done, text can also be fetched from value help entity by defining the text arrangement as follows:
+If this modeling is not done, text can also be fetched from the value help entity by defining the text arrangement as follows:
 
 > ### Sample Code:  
 > Modeling `sap:text` Using Value Help Entity
@@ -182,13 +191,34 @@ If this modeling is not done, text can also be fetched from value help entity by
 
 ![](images/Object_Page_Value_Help_Text_amp_ID_Display_c9ae198.png)
 
-For `DataField` record types that are bound to value help and rendered as a `SmartLink` \(using `SemanticObject` definition or using the quick view\), the value shows descriptive text and ID by default.
+For `DataField` record types that are bound to value help and rendered as a `SmartLink` using `SemanticObject` definition or the quick view, the value shows the descriptive text and the ID by default.
 
-Also, for `DataFieldWithNavigationPath` record types, for the value that is bound to the value help, the field shows descriptive text and ID by default.
+For `DataFieldWithNavigationPath` record types, when the value is bound to the value help, the field shows the descriptive text and the ID by default.
 
-This behavior is applicable for tables, object page headers, and object page form sections. You can change it according to your requirements using the `TextArrangement` configuration \(for example `TextFirst`, `TextLast`, `TextOnly`\).
+This behavior is applicable for tables, object page headers, and object page form sections. You can change it according to your requirements by using the `TextArrangement` configuration, such as `TextFirst`, `TextLast`, or `TextOnly`.
 
-The functionality is not supported for the following `recordtype`: `DataFieldWithIntentBasedNavigation` and `Communication.Contact`.
+The functionality is not supported for the following record types:
 
-If text arrangement is defined with `textSeperate`, only the ID is displayed.
+-   `DataFieldWithIntentBasedNavigation`
+
+-   `Communication.Contact`
+
+
+If text arrangement is defined with `textSeparate`, only the ID is displayed.
+
+
+
+<a name="loio080886d8d4af4ac6a68a476beab17da3__section_gsy_rfp_fdc"/>
+
+## Additional Features in SAP Fiori Elements for OData V4
+
+
+
+### Display Mode
+
+For `DataField` record types that are bound to value help and rendered as a link using `SemanticObject` definition or the quick view, the value shows the descriptive text and the ID by default.
+
+For `DataFieldWithNavigationPath` record types, when the value is bound to the value help, the field shows the descriptive text and the ID by default.
+
+This behavior is applicable for tables, object page headers, and object page form sections. You can change it according to your requirements by using the `TextArrangement` configuration, such as `TextFirst`, `TextLast`, or `TextOnly`. For more information, see [Further Features of the Field](further-features-of-the-field-f49a0f7.md).
 

@@ -174,7 +174,6 @@ sap.ui.define([
 
 	<script id="sap-ui-bootstrap"
 		src="../../../../../../../../../resources/sap-ui-core.js"
-		data-sap-ui-theme="sap_horizon"
 		data-sap-ui-flexibility-services='[{"connector": "LocalStorageConnector"}]'
 		data-sap-ui-resource-roots='{
 			"sap.ui.demo.smartControls": "./"

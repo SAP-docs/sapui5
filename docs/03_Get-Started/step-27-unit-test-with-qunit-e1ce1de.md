@@ -84,69 +84,123 @@ Finally, we perform our assertions. We check each branch of the formatter logic 
 
 
 
+<a name="loioe1ce1de315994a02bf162f4b3b5a9f09__section_jmd_45y_kdc"/>
+
+## webapp/test/unit/unitTests.qunit.js \(New\)
+
+We create a new `unitTests.qunit.js` file under `webapp/test/unit/`. This module will serve as the entry point for all our unit tests. It will be referenced in the test suite that we will set up later on.
+
+Inside the `unitTests.qunit.js` file we import the unit test for the custom formatter. This ensures that any tests related to the custom formatter functionality will be included when running our unit tests.
+
+```js
+
+sap.ui.define([
+	   "./model/formatter"
+]);
+```
+
+
+
 <a name="loioe1ce1de315994a02bf162f4b3b5a9f09__section_gnt_54c_yfb"/>
 
-## webapp/test/unit/unitTests.qunit.html \(New\)
+## webapp/test/Test.qunit.html \(New\)
+
+We also need a generic test page that will be used to run individual tests. It includes the `sap/ui/test/starter/runTest.js` script which is responsible for loading the test suite configuration and starting the test.
+
+Unlike with the UI5 bootstrap, this script only accepts the `data-sap-ui-resource-roots` configuration where we need to register our project-specific test namespace so that our modules can be loaded.
+
+The page will be referenced in the test suite that we will create next.
 
 ```html
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Unit tests for UI5 Walkthrough</title>
 	<meta charset="utf-8">
-
 	<script
-		id="sap-ui-bootstrap"
-		src="../../resources/sap-ui-core.js"
+		src="../resources/sap/ui/test/starter/runTest.js"
 		data-sap-ui-resource-roots='{
-			"ui5.walkthrough": "../../"
+			"test-resources.ui5.walkthrough": "./"
 		}'
-		data-sap-ui-async="true">
-	</script>
-
-	<link rel="stylesheet" type="text/css" href="../../resources/sap/ui/thirdparty/qunit-2.css">
-
-	<script src="../../resources/sap/ui/thirdparty/qunit-2.js"></script>
-	<script src="../../resources/sap/ui/qunit/qunit-junit.js"></script>
-
-	<script src="unitTests.qunit.js"></script>
+		></script>
 </head>
-<body>
-	<div id="qunit"/>
-	<div id="qunit-fixture"/>
+<body class="sapUiBody">
+	<div id="qunit"></div>
+	<div id="qunit-fixture"></div>
 </body>
 </html>
 ```
 
-The so-called QUnit test suite is an HTML page that triggers all QUnit tests for the application. Most of it is generating the layout of the result page that you can see in the preview and we won’t further explain these parts but focus on the application parts instead.
-
-Let’s start with the namespaces. Since we are now in the `webapp/test/unit` folder, we actually need to go up two levels to get the `webapp` folder again. This namespace can be used inside the tests to load and trigger application functionality.
-
-First, we load some basic QUnit functionality via script tags. Other QUnit tests can be added here as well. Then the HTML page loads another script called `unitTests.qunit.js`, which we will create next. This script will execute our formatter.
 
 
+<a name="loioe1ce1de315994a02bf162f4b3b5a9f09__section_edn_cwy_kdc"/>
 
-<a name="loioe1ce1de315994a02bf162f4b3b5a9f09__section_hnt_54c_yfb"/>
+## webapp/test/testsuite.qunit.js \(New\)
 
-## webapp/test/unit/unitTests.qunit.js \(New\)
+The `testsuite.qunit.js` file contains the configuration for our test suite. Although it comes with a set of defaults, we recommend specifying the used QUnit version to prevent potential future updates from breaking our tests.
+
+Additionally, the `sap_horizon` theme is configured in the `ui5` section, where you can provide the UI5 runtime configuration.
+
+The test suite serves as the entry point for all tests within our project such as the previously created `unit/unitTests` \(The `.qunit.js` extension is omitted and will be added automatically during runtime\). The previously created generic `Test.qunit.html` file is referenced as the test `page` and configured with query parameters so that individual tests can be run. The placeholders `{suite}` and `{name}` are replaced with the suite and test names respectively. For more information, see [Concept and Basic Setup](../04_Essentials/concept-and-basic-setup-22f50c0.md).
 
 ```js
-QUnit.config.autostart = false;
 
-sap.ui.require(["sap/ui/core/Core"], async(Core) => {
-	"use strict";
 
-	await Core.ready();
-
-	sap.ui.require([
-		"ui5/walkthrough/test/unit/model/formatter"
-	], () => {
-		QUnit.start();
-	});
+sap.ui.define(() => {
+	   "use strict";
+	   return {
+		     name: "QUnit test suite for UI5 Walkthrough",
+		     defaults: {
+			          page: "ui5://test-resources/ui5/walkthrough/Test.qunit.html?testsuite={suite}&test={name}",
+			          qunit: {
+				            version: 2
+			          },
+			          ui5: {
+				            theme: "sap_horizon"
+			          },
+			          loader: {
+				            paths: {
+					"ui5/walkthrough": "../"
+				            }
+			          }
+		   },
+		   tests: {
+			     "unit/unitTests": {
+				        title: "UI5 Walkthrough - Unit Tests"
+			     }
+		   }
+	};
 });
 ```
 
-This script loads and executes our formatter. If we now open the `webapp/test/unit/unitTests.qunit.html` file in the browser, we should see our test running and verifying the formatter logic.
+
+
+<a name="loioe1ce1de315994a02bf162f4b3b5a9f09__section_yjf_zwy_kdc"/>
+
+## webapp/test/testsuite.qunit.html \(New\)
+
+We also create a corresponding `testsuite.qunit.html` in the same folder. This is the page we will open in the browser to see a list of all our tests and run them by clicking on the test name.
+
+It registers a resource root mapping for the test resources of our project and references the `testsuite.qunit` module we created in the previous step.
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<script
+		src="../resources/sap/ui/test/starter/createSuite.js"
+		data-sap-ui-testsuite="test-resources/ui5/walkthrough/testsuite.qunit"
+		data-sap-ui-resource-roots='{
+			"test-resources.ui5.walkthrough": "./"
+		}'
+	></script>
+</head>
+<body>
+</body>
+</html>
+```
+
+If we now open the `webapp/test/testsuite.qunit.html` file in the browser and select `unit/unitTests`, we should see our test running and verifying the formatter logic.
 
 
 
@@ -154,9 +208,9 @@ This script loads and executes our formatter. If we now open the `webapp/test/un
 
 -   All unit tests are placed in the webapp/test/unit folder of the app.
 
--   Files in the test suite end with `*.qunit.html`.
+-   The default naming convention for the test suite is `testsuite.qunit.html` and `testsuite.qunit.js`. When adding additional test suites, the naming must follow the pattern`testsuite.<name>.qunit.html`/`testsuite.<name>.qunit.js`.
 
--   The `unitTests.qunit.html` file triggers all unit tests of the app.
+-   Test files referenced in the test suite end with `.qunit.js`.
 
 -   A unit test should be written for formatters, controller logic, and other individual functionality.
 
@@ -171,4 +225,6 @@ This script loads and executes our formatter. If we now open the `webapp/test/un
 [QUnit Home Page](https://qunitjs.com/)
 
 [Testing Tutorial](testing-tutorial-291c912.md "In this tutorial we will test application functionality with the testing tools that are delivered with SAPUI5. At different steps of this tutorial you will write tests using QUnit, OPA5, and the OData V2 mock server. Additionally, you will learn about testing strategies, Test Driven Development (TDD), and much more.")
+
+[Test Starter](../04_Essentials/test-starter-032be2c.md "The test starter is a concept intended to simplify the test setup for SAPUI5 applications and libraries by orchestrating your QUnit and OPA5 tests.")
 

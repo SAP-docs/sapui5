@@ -611,7 +611,7 @@ distribution layer
 </td>
 <td valign="top">
 
-Contains the control libraries and theme libraries; the SAPUI5 distribution layer is delivered to customers via the MIME repository.
+Contains the control libraries and theme libraries; also known as SAPUI5 distribution layer.
 
 </td>
 <td valign="top">

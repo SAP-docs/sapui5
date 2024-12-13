@@ -75,7 +75,7 @@ Delete `.and.iTeardownMyApp();` from the previous test in the file and add the n
 ## webapp/test/integration/pages/Worklist.js
 
 ```js
-sap.ui.require([
+sap.ui.define([
 		'sap/ui/test/Opa5',
 		'sap/ui/test/matchers/AggregationLengthEquals',
 		'sap/ui/test/matchers/I18NText',

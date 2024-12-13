@@ -13,7 +13,7 @@ If a customized application does not run properly, you can disable the customizi
 ```js
  
   window["sap-ui-config"] = window["sap-ui-config"] ||{};
-  window["sap-ui-config"]["xx-disableCustomizing"] = true;
+  window["sap-ui-config"]["xxDisableCustomizing"] = true;
 ```
 
 > ### Note:  

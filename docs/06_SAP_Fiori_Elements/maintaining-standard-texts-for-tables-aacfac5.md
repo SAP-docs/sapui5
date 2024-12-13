@@ -7,11 +7,11 @@ You can use the i18n file of your app to adapt the standard UI texts that are di
 The following UI texts are displayed by default:
 
 -   SAP Fiori elements for OData V2
-    -   When no filters are applied and no data is found, a *No items available* message is shown in the object page table, and the message *To start, set relevant filters* is shown in the list report table.
+    -   When no filters are applied and no data is found, a *No items available.* message is shown in the object page table, and the message *To start, set the relevant filters and choose "Go".* is shown in the list report table.
 
-    -   When filters are applied and the search shows no results, the message *No items available. Try adjusting the search or filter parameters* is shown in the object page table, and the message *No data found. Try adjusting the search or filter criteria* is shown in the list report table.
+    -   When filters are applied and the search shows no results, the message *No items available. Try adjusting the search or filter parameters.* is shown in the object page table, and the message *No data found. Try adjusting the search or filter criteria.* is shown in the list report table.
 
-    -   When the table is used in multi-view mode and there is no data found, the message *There are no items for the selected filter criteria and table view* is shown in the object page table, and the message *There is no data for the selected filter criteria and table view* is shown in the list report table.
+    -   When the table is used in multi-view mode and there is no data found, the message *There are no items for the selected filter criteria and table view.* is shown in the object page table, and the message *There is no data for the selected filter criteria and table view.* is shown in the list report table.
 
 
 -   SAP Fiori elements for OData V4

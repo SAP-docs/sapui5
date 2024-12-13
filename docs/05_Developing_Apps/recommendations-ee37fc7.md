@@ -10,20 +10,15 @@ When developing SAPUI5 applications, you need to pay attention to the correctnes
 
 
 
+### WCAG 2.2
+
+To ensure better accessibility experience and to adhere to the Web Content Accessibility Guidelines \(WCAG\) 2.2, it is important for developers and designers to follow specific guidelines. When working with SAPUI5 controls, refer to the SAP Fiori for Web design guidelines corresponding to the specific control you are using. The design guidelines provide detailed information on how each control should be implemented to meet accessibility requirements. For example for the `sap.m.Object` controls, see [Object Display Components Fiori Guidelines](https://experience.sap.com/fiori-design-web/object-display-elements/).
+
+
+
 ### Don't change the HTML
 
 Theming \(CSS selectors\), keyboard handling \(tab order\) and screen reader support are tightly coupled with the HTML structure of the generated pages. If you change the structure of the elements \(for example, from custom JavaScript, HTML or CSS\), this could break some or all of the accessibility aspects. In addition, it makes debugging the application more difficult.
-
-
-
-### Check the focus persistence
-
-When opening or closing a dialog or navigating between pages, the focus should stay on the same control as it was on before opening or navigating. If the control no longer exists, the focus should be put on its parent \(for example, if the control was inside an action sheet, set the focus on the button which opened the action sheet\).
-
-> ### Note:  
-> When the parent control cannot receive focus or is no longer available, the focus should go to a control nearby.
-
-For more information, see [sap.ui.core.Element/methods/focus](https://ui5.sap.com/#/api/sap.ui.core.Element/methods/focus) API documentation in the Demo Kit.
 
 
 

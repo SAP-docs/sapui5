@@ -8,7 +8,7 @@ For example, a list of items is shown in the first column, and when you choose a
 
 Use the following attributes to create the column layout you want:
 
--   `defaultTwoColumnLayoutType`: 2-column layout with these options:
+-   `defaultTwoColumnLayoutType`: A 2-column layout with the following options:
 
     -   `TwoColumnsBeginExpanded`
 
@@ -19,7 +19,7 @@ Use the following attributes to create the column layout you want:
         ![](images/Two_Columns_Mid_Expanded_392c14f.png)
 
 
--   `defaultThreeColumnLayoutType`: 3-column layout with these options:
+-   `defaultThreeColumnLayoutType`: A 3-column layout with the following options:
 
     -   `ThreeColumnsMidExpanded`
 
@@ -33,7 +33,7 @@ Use the following attributes to create the column layout you want:
 
 End users can expand and collapse the columns using the focus buttons. They can change to full-screen mode by choosing the full-screen button.
 
-![](images/FCL_Master_Detail_9ff7dd4.jpg)
+![](images/FCL_Master_Detail_9ff7dd4.png)
 
 
 
@@ -67,6 +67,14 @@ The following screen recording shows how to enable the flexible column layout an
 
 
 
+<a name="loioe762257125b34513b0859faa1610b09e__section_cyk_syr_kdc"/>
+
+## Saving Column Resize Information
+
+The flexible column layout allows end users to resize the columns in both 2-column display and 3-column display, with SAP Fiori elements saving this information in the personalization settings. This information is specific to each application and device type, such as desktop, tablet, and phone.
+
+
+
 <a name="loioe762257125b34513b0859faa1610b09e__section_grc_dmp_gmb"/>
 
 ## Additional Features in SAP Fiori Elements for OData V2
@@ -74,15 +82,15 @@ The following screen recording shows how to enable the flexible column layout an
 > ### Note:  
 > -   For the overview page, the flexible column layout is not relevant.
 > 
-> -   The analytical list page only supports the `TwoColumnsBeginExpanded` layout. For more information, see [2409984](https://me.sap.com/notes/2409984).
+> -   The analytical list page supports only the `TwoColumnsBeginExpanded` layout. For more information, see [2409984](https://me.sap.com/notes/2409984).
 > 
-> -   The flexible column layout can be used in draft and non-draft scenarios.
+> -   The flexible column layout can be used in both draft and non-draft scenarios.
 > 
-> -   Both draft and non-draft apps support 2-column and 3-column layouts.
+> -   Both draft and non-draft applications support 2-column and 3-column layouts.
 > 
->     In non-draft flexible column layout apps with create, read, update, and delete \(CRUD\) capabilities, only the last column shows the *Edit* and *Delete* buttons.
+>     In non-draft flexible column layout applications with create, read, update, and delete \(CRUD\) capabilities, only the last column shows the *Edit* and *Delete* buttons.
 
-To enable the flexible column layout in an app, create an entry in the `manifest.json` file, as follows:
+To enable the flexible column layout in an application, you must create an entry in the `manifest.json` file as shown in the following sample code:
 
 ```
 "sap.ui.generic.app": {
@@ -145,7 +153,7 @@ Usually, this setting is made on the main object page. After navigating from the
 
 ## Additional Features in SAP Fiori Elements for OData V4
 
-You must do the following configuration in the application's `manifest.json` file to enable the flexible column layout, compared to a full-screen mode:
+You must do the following configuration in the `manifest.json` file to enable the flexible column layout, compared to a full-screen mode:
 
 1.  Add the `rootView` object to specify the use of the flexible column layout.
 
@@ -559,10 +567,4 @@ You must set the following keys for each target:
 > -   When you update a multi-input field on an object page, you need to first refresh the parent page \(either an object page or a list report\) before the changes are visible.
 > 
 > -   In the flexible column layout, a tree table nor an analytical table cannot be displayed on the list report with a draft-enabled service.
-
-
-
-### Saving Column Resize Information
-
-The flexible column layout allows end users to resize the columns in both 2-column display and 3-column display, with SAP Fiori elements saving this information in the personalization settings. This information is specific to each application and device type, such as desktop, tablet, and phone.
 

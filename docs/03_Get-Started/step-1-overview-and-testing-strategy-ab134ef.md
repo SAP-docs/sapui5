@@ -25,7 +25,7 @@ In this step, we will take a look at the prototype and define the test strategy 
 
 2.  Extract the downloaded `.zip` file at the desired location on your local machine.
 3.  Open a shell in the extracted folder and execute `npm install`.
-4.  Execute `npm start` to start the web server and to open a new browser window hosting your newly created `test/mockServer.html`.
+4.  Execute `npm start` to start the web server.
 
 After downloading *Step 1*, you should have the following files:
 

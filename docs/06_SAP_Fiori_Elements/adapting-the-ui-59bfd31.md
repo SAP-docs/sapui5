@@ -577,7 +577,7 @@ Configure the *Add Card to Insights* feature for *My Home* in SAP S/4HANA.
 </td>
 <td valign="top">
 
-[Creating Cards for the Insights Cards Section of My Home in SAP S/4HANA](creating-cards-for-the-insights-cards-section-of-my-home-in-sap-s-4hana-9b13559.md)
+[Creating Cards for the Insights Cards Section of My Home in SAP S/4HANA Cloud and My Home in SAP S/4HANA](creating-cards-for-the-insights-cards-section-of-my-home-in-sap-s-4hana-cloud-and-my-home-9b13559.md)
 
 </td>
 <td valign="top">

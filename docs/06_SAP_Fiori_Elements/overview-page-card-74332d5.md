@@ -119,11 +119,11 @@ Card actions are available as of SAPUI5 1.110. You can access and perform the ca
 
 ## Cards in *Insights*
 
-You can add and use the analytical, list and table cards within the *Insights* section of *My Home* in SAP S/4HANA Cloud. The objective of displaying cards on the entry page is to visualize charts, KPI´s and counters in the form of interest cards.
+You can add and use the analytical, list and table cards within the *Insights* section of **My Home** in SAP S/4HANA Cloud. The objective of displaying cards on the entry page is to visualize charts, KPI´s and counters in the form of interest cards.
 
 To add a card to the *Insights* section, select the *More* option from the card and choose *Add Card to Insights*. In the subsequent dialog box, you can update the card's *Title* and the *Subtitle*. Click *Add* to display the card in the *Insights* section.
 
-Note that only eight cards at a time can be displayed in the *Insights* section. If the maximum number of cards is already displayed on the entry page, the selected card is added to the *Edit Insights* dialog box. You can choose to select or deselect cards by editing the *Insights* section. For more information, see [*My Home* in SAP S/4HANA Cloud](https://help.sap.com/docs/SAP_S4HANA_CLOUD/4fc8d03390c342da8a60f8ee387bca1a/8a60279e8d2041b5ad8d3455fab0f3ef.html).
+Note that only eight cards at a time can be displayed in the *Insights* section. If the maximum number of cards is already displayed on the entry page, the selected card is added to the *Edit Insights* dialog box. You can choose to select or deselect cards by editing the *Insights* section. For more information, see [**My Home** in SAP S/4HANA Cloud](https://help.sap.com/docs/SAP_S4HANA_CLOUD/4fc8d03390c342da8a60f8ee387bca1a/8a60279e8d2041b5ad8d3455fab0f3ef.html).
 
 
 
@@ -151,5 +151,5 @@ An application can also restrict the generation of individual analytical, list, 
 > ```
 
 > ### Note:  
-> If custom navigation is enabled for a card, navigation from the *Insights* section of *My Home* for that card leads to the parent overview page application instead of the target maintained in the overview page card.
+> If custom navigation is enabled for a card, navigation from the *Insights* section of **My Home** for that card leads to the parent overview page application instead of the target maintained in the overview page card.
 

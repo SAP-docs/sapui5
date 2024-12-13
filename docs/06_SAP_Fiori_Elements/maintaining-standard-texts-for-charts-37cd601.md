@@ -7,9 +7,9 @@ For charts in analytical list pages, list reports, and object pages, if the syst
 The following UI texts are displayed by default:
 
 -   SAP Fiori elements for OData V2
-    -   When no filters are applied and no data is found, a *No data found* message is displayed in the object page chart, and the message *To start, set relevant filters* is displayed in the list report chart.
+    -   When no filters are applied and no data is found, a *No data found.* message is displayed in the object page chart, and the message *To start, set the relevant filters and choose "Go".* is displayed in the list report chart.
 
-    -   When filters are applied and the search shows no results, the message *No data found. Try adjusting the search or filter parameters* is displayed in the object page chart, and the message *There is no data for the selected filter criteria and chart view* is displayed in the list report chart.
+    -   When filters are applied and the search shows no results, the message *No data found. Try adjusting the search or filter parameters.* is displayed in the object page chart, and the message *There is no data for the selected filter criteria and chart view.* is displayed in the list report chart.
 
 
 -   SAP Fiori elements for OData V4

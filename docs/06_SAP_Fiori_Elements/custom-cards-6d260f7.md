@@ -33,14 +33,13 @@ Creating a custom card consists of the following steps:
     >     function (CustomCardComponent) {
     >         "use strict";
     >          return CardComponent.extend("test.testovp.ext.myCustomCard.Component", {
-    >             // use inline declaration instead of component.json to save 1 round trip
+    > 
     >             metadata: {
     >                 properties: {
     >                     "contentFragment": {
     >                         "type": "string",
     >                         "defaultValue": "test.testovp.ext.myCustomCard.MyCustomCard"
     >                     },
-    > 
     >                     customizing: {
     >                         "sap.ui.controllerExtensions": {
     >                              "sap.ovp.cards.generic.Card": {
@@ -73,6 +72,7 @@ Creating a custom card consists of the following steps:
     >         });
     >     }
     > );
+    > 
     > ```
 
 4.  Define your view - In the `webapp/ext/myCustomCard` folder, create a new fragment file `MyCustomCard.fragment.xml`.

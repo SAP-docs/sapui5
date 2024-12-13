@@ -49,7 +49,7 @@ In the actions section of the page object we define a function to click the "Hel
 
 In the assertions section we define a `waitFor` statement that checks if a `sap.m.Dialog` control is existing in the DOM of the app. When the dialog has been found, the test is successful and we can immediately confirm by calling an `ok` statement with a meaningful message.
 
-```js
+```ts
 import Opa5 from "sap/ui/test/Opa5";
 import Press from "sap/ui/test/actions/Press";
 
@@ -105,7 +105,7 @@ The function `opaTest` is the main aspect for defining integration tests with OP
 
 In our journey, we create a very simple test that starts the `MainPage` and loads our app. Then, we carry out the actions we defined in our `MainPage` and expect that they will be executed successfully. Finally, we shut down the page again by calling the function `iTeardownMyApp` on the `MainPage`.
 
-```js
+```ts
 import opaTest from "sap/ui/test/opaQunit";
 import HelloPanelPage from "./pages/HelloPanelPage";
 
@@ -141,67 +141,36 @@ As you can see, the test case reads like a user story; we actually do not need t
 
 ## webapp/test/integration/opaTests.qunit.ts \(New\)
 
-We create a new `opaTests.qunit.ts` file under `webapp/test/integration/`. This script loads and executes our `NavigationJourney`.
+We create a new `opaTests.qunit.ts` file under `webapp/test/integration/`. This module imports our `NavigationJourney` and is the entrypoint for all integration tests in the project.
 
-Before the QUnit test execution can be started, we need to wait until the Core has booted. Therefore, you need to disable the autostart via `QUnit.config.autostart = false;`, require the `sap/ui/core/Core` module, and use `Core.ready()` to wait until the Core has booted. Only then can you start the QUnit tests with `QUnit.start()`.
-
-```js
-/* @sapUiRequire */
-QUnit.config.autostart = false;
-
-// import all your integration tests here
-void Promise.all([
-	import("sap/ui/core/Core"), // required to wait until Core has booted to start the QUnit tests
-	import("ui5/walkthrough/test/integration/NavigationJourney"),
-]).then(([{default: Core}]) => Core.ready()).then(() => {
-	QUnit.start();
-});
+```ts
+import "./NavigationJourney";
 ```
 
 
 
 <a name="loio412f0b6fa5af4ba191241435b92b3f2d__section_srf_xpc_yfb"/>
 
-## webapp/test/integration/opaTests.qunit.html \(New\)
+## webapp/test/testsuite.qunit.ts
 
-Finally, we create a new `opaTests.qunit.html` file under `webapp/test/integration/`.
+Finally we reference the new `integration/opaTests.qunit.ts` in the `testsuite.qunit.ts` file. The `.qunit.ts` extension is omitted and will be added automatically during runtime.
 
-This HTML page contains our test suite for all OPA tests of the app. We use the same namespace as for our application.
+```ts
 
-Then we load the basic QUnit functionality via script tags from SAPUI5 so that we can execute the test journey. Finally, we load the `opaTests.qunit`, which then again loads our `NavigationJourney`.
-
-```html
-<!DOCTYPE html>
-<html>
-<head>
-	<title>UI5 Walkthrough - Integration Tests</title>
-	<meta charset="utf-8">
-
-	<script
-		id="sap-ui-bootstrap"
-		src="../../resources/sap-ui-core.js"
-		data-sap-ui-theme="sap_horizon"
-		data-sap-ui-resource-roots='{
-			"ui5.walkthrough": "../../"
-		}'
-		data-sap-ui-compat-version="edge"
-		data-sap-ui-async="true"
-	</script>
-
-	<link rel="stylesheet" type="text/css" href="../../resources/sap/ui/thirdparty/qunit-2.css">
-
-	<script src="../../resources/sap/ui/thirdparty/qunit-2.js"></script>
-	<script src="../../resources/sap/ui/qunit/qunit-junit.js"></script>
-	<script src="./opaTests.qunit.js"></script>
-</head>
-<body>
-	<div id="qunit"></div>
-	<div id="qunit-fixture"></div>
-</body>
-</html>
+export default {
+  // ...
+	  tests: {
+		    "unit/unitTests": {
+			       title: "UI5 TypeScript Walkthrough - Unit Tests"
+		    },
+		    "integration/opaTests": {
+			       title: "UI5 TypeScript Walkthrough - Integration Tests"
+		    }
+	  }
+};
 ```
 
-When you call the `webapp/test/integration/opaTests.qunit.html` page of your project on the server, you should see the QUnit layout and a test “Should see the Hello dialog” is executed immediately. It will load the app component on the right side of the page. There you can see what operations the test is performing on the app; if everything works correctly, the button click is triggered, then a dialog is shown and the test case is green.
+If we now open the `webapp/test/testsuite.qunit.html` file in the browser and select `integration/opaTests`, the QUnit layout should appear and a test “Should see the Hello dialog” will run immediately. This action will load the app component on the right side of the page. There you can see the operations the test is performing on the app. If everything works correctly, a button click will be triggered, then a dialog will be displayed and the test case will be green.
 
 
 
