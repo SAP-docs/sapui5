@@ -43,7 +43,7 @@ You can view and download all files at [Walkthrough - Step 36](https://ui5.sap.c
 
 To prepare the content density feature we will also add a helper method `getContentDensityClass`. SAPUI5 controls can be displayed in multiple sizes, for example in a `compact` size that is optimized for desktop and non-touch devices, and in a `cozy` mode that is optimized for touch interaction. The controls look for a specific CSS class in the HTML structure of the application to adjust their size.
 
-This helper method checks if the content density is already set by the shell. If not, it queries the `Device` API directly for touch support of the client and returns the CSS class `sapUiSizeCompact` if touch interaction is not supported and `sapUiSizeCozy` for all other cases. We will use it throughout the application coding to set the proper content density CSS class.
+This helper method checks if the classes for the cozy or compact mode have been applied elsewhere already. If this is the case, the application will not apply it again. If not, it queries the `Device` API directly for touch support of the client and returns the CSS class `sapUiSizeCompact` if touch interaction is not supported and `sapUiSizeCozy` for all other cases. We will use it throughout the application coding to set the proper content density CSS class.
 
 
 
