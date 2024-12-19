@@ -156,16 +156,14 @@ The SAP Fiori launchpad \(FLP\) optionally reads the supported content densities
 ```js
 
 getContentDensityClass : function() {
-      if (this._sContentDensityClass === undefined) {
-             // check whether FLP has already set the content density class; do nothing in this case
-             if (jQuery(document.body).hasClass("sapUiSizeCozy") || jQuery(document.body).hasClass("sapUiSizeCompact")) {
-                   this._sContentDensityClass = "";
-             } else {
-                    // Store "sapUiSizeCompact" or "sapUiSizeCozy" in this._sContentDensityClass, depending on which modes are supported by the app.
-                    // E.g. the “cozy” class in case sap.ui.Device.support.touch is “true” and “compact” otherwise.
-             }
-      }
-      return this._sContentDensityClass;
+	// if the Fiori Launchpad has already set the content density class according to its logic, don't override it
+        const classList = document.body.classList;
+        if (classList.contains("sapUiSizeCozy") || classList.contains("sapUiSizeCompact")) {
+            return "";
+        }
+        // if the application runs standalone, use cozy on touch devices
+        return Device.support.touch ? "sapUiSizeCozy" : "sapUiSizeCompact";
+    }
 }
 ```
 
