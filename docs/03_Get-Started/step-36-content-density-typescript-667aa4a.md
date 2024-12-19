@@ -47,7 +47,7 @@ export default class Component extends UIComponent {
         ...
     };
     getContentDensityClass(): string {
-	// if the Fiori Launchpad has already set the content density class according to its logic, don't override it
+	// if the content density has already been set, don't override it
         const classList = document.body.classList;
         if (classList.contains("sapUiSizeCozy") || classList.contains("sapUiSizeCompact")) {
             return "";
