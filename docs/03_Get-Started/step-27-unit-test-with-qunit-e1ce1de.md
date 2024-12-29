@@ -117,7 +117,7 @@ The page will be referenced in the test suite that we will create next.
 <head>
 	<meta charset="utf-8">
 	<script
-		src="../resources/sap/ui/test/starter/runTest.js"
+		src="../../../../../../../../../resources/sap/ui/test/starter/runTest.js"
 		data-sap-ui-resource-roots='{
 			"test-resources.ui5.walkthrough": "./"
 		}'
