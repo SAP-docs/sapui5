@@ -16,16 +16,16 @@ If required, you can disable this filter for your app. To do so, you can add the
 > XML Annotation
 > 
 > ```xml
-> <AnnotationsTarget="TravelService.EntityContainer/Travel">
->    <AnnotationTerm="Capabilities.NavigationRestrictions">
->       <RecordType="Capabilities.NavigationRestrictionsType">
->          <PropertyValueProperty="RestrictedProperties">
+> <Annotations Target="TravelService.EntityContainer/Travel">
+>    <Annotation Term="Capabilities.NavigationRestrictions">
+>       <Record Type="Capabilities.NavigationRestrictionsType">
+>          <PropertyValue Property="RestrictedProperties">
 >             <Collection>
->                <RecordType="Capabilities.NavigationPropertyRestriction">
->                   <PropertyValueProperty="NavigationProperty" NavigationPropertyPath="DraftAdministrativeData"/>
->                   <PropertyValueProperty="FilterRestrictions">
->                      <RecordType="Capabilities.FilterRestrictionsType">
->                         <PropertyValueProperty="Filterable" Bool="false"/>
+>                <Record Type="Capabilities.NavigationPropertyRestriction">
+>                   <PropertyValue Property="NavigationProperty" NavigationPropertyPath="DraftAdministrativeData"/>
+>                   <PropertyValue Property="FilterRestrictions">
+>                      <Record Type="Capabilities.FilterRestrictionsType">
+>                         <PropertyValue Property="Filterable" Bool="false"/>
 >                      </Record>
 >                   </PropertyValue>
 >                </Record>
