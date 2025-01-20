@@ -115,6 +115,18 @@ The default layout is `Block`.
 
 </td>
 </tr>
+<tr>
+<td valign="top">
+
+Change the default value of the `scrollThreshold` parameter in grid tables, analytical tables, and tree tables on the list report page. The default value is 300.
+
+</td>
+<td valign="top">
+
+In the outline, select the table whose value needs to be changed, and set the new value for the `scrollThreshold` parameter.
+
+</td>
+</tr>
 </table>
 
 

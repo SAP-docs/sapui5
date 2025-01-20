@@ -34,7 +34,7 @@ SAP Fiori elements for OData V4 supports displaying a tree table on the list rep
 
 ## Enabling Tree Tables
 
-To activate tree tables in the list report or object page, the following parameters are needed in the `tableSettings` part of the `manifest.json`:
+To enable tree tables in the list report or object page, the following parameters are needed in the `tableSettings` part of the `manifest.json`:
 
 -   Set the `type` to `TreeTable`.
 
@@ -69,7 +69,7 @@ The following creation modes are supported with a tree table:
 
 In the list report, only the `NewPage` \(default\) creation mode and the `CreationDialog` creation mode are supported.
 
-SAP Fiori elements for OData V4 supports the default create mode as well as a custom create mode. To use the custom create mode, the `nodeType` section needs the following annotations to be added:
+SAP Fiori elements for OData V4 supports the default create mode as well as a custom create mode. To use the custom create mode, add the following annotations to the `nodeType` section:
 
 -   `propertyName`: Name of the property on the page entity set used to categorize the node type to be created within the hierarchy.
 
@@ -110,8 +110,7 @@ SAP Fiori elements for OData V4 supports the default create mode as well as a cu
   
 **Custom Create Mode Options in the Tree Table**
 
-![](images/Create_button_in_tree_table_46b2fb1.png "Custom Create Mode Options in the Tree
-					Table")
+![](images/Create_button_in_tree_table_46b2fb1.png "Custom Create Mode Options in the Tree Table")
 
 
 
@@ -149,7 +148,7 @@ In this example, the create dialog is displayed with the property `Title` for th
 
 ### Enabling or Disabling the Create Button or the Create Menu Button
 
-For both the standard create mode and the custom create mode, you can define an extension point `isCreateEnabled` to control whether the *Create* button or *Create Menu* buttons are enabled or disabled. The extension point callback needs to be added to the page controller extension.
+For both the standard create mode and the custom create mode, you can define an `isCreateEnabled` extension point to control whether the *Create* button or *Create Menu* buttons are enabled or disabled. The extension point callback needs to be added to the page controller extension.
 
 The following parameters are provided to the callback:
 
@@ -208,7 +207,7 @@ The following screenshot shows an example of the outcome. Under an "Intermediary
 
 By default, a newly created node is always displayed as the first child below its parent even if a sort or a filter is applied to the table.
 
-You can use the `createInPlace` option to place the new node in its real position below its parent which depends on the sort applied to the table and the back-end server logic. If the new node cannot be visualized due to the filter criteria applied to the table, a message toast is displayed to the end user.
+You can use the `createInPlace` option to place the new node in its real position below its parent, which depends on the sort criteria applied to the table and the back-end server logic. If the new node cannot be visualized due to the filter criteria applied to the table, a message toast is displayed to the end user.
 
 > ### Note:  
 > In the flexible column layout, when using both the `NewPage` and `createInPlace` options of the `createMode` property, the new entry is shown \(for example, in a subobject page\), but no message toast is displayed if it cannot be shown on the object page due to the applied filter criteria.
@@ -245,7 +244,7 @@ You can use the `createInPlace` option to place the new node in its real positio
 
 Drag and drop actions are supported by SAP Fiori elements for OData V4 as of SAPUI5 1.124.
 
-Drag and drop between siblings is supported if the `ChangeNextSiblingAction` term is defined in the `RecursiveHierarchyActions` annotation. When using the ABAP RESTful Application Programming Model \(RAP\), this annotation is not set for root entities. Hence, drag and drop between siblings is not supported in the list report.
+Drag and drop between siblings is supported if the `ChangeNextSiblingAction` term is defined in the `RecursiveHierarchyActions` annotation. When using the ABAP RESTful Application Programming Model \(RAP\), this annotation is not set for root entities. For this reason, drag and drop between siblings is not supported in the list report.
 
 If a node is dropped onto the empty area on the right-hand side of a table, the node is promoted to a root node. In the following example, dropping the "Canada" node onto the highlighted area turns it into a root node, that is, a sibling to the "Europe North" and "America North" nodes.
 
@@ -255,7 +254,7 @@ If a node is dropped onto the empty area on the right-hand side of a table, the 
 
 ![](images/Dropping_a_Node_onto_the_Empty_Right-Hand_Side_of_a_Table_d74fc6f.png "Dropping a Node onto the Empty Right-Hand Side of a Table")
 
-You can use two extensions to control the behavior of drag and drop:
+You can use the following extensions to control the behavior of drag and drop:
 
 -   `isMoveToPositionAllowed`: Define if a source node can be dropped on a specific parent node.
 
@@ -263,7 +262,7 @@ You can use two extensions to control the behavior of drag and drop:
 
     -   When dropping as a root node, the parent node is set to `null`.
 
--   `isNodeMovable`: Define if a node can be dragged
+-   `isNodeMovable`: Define if a node can be dragged.
 
     -   The associated callback receives the source context as a parameter.
 
@@ -346,10 +345,10 @@ The following screenshot shows another example of the outcome. Moving the "Dubli
 
 End users can move a node up or down between its siblings in a tree table. To place a node before its previous sibling or after its next sibling, select the node and choose *Move Up* or *Move Down* from the tree table toolbar.
 
-Moving a node up or down is supported if the `ChangeNextSiblingAction` term is defined in the `RecursiveHierarchyActions` annotation. When using the ABAP RESTful Application Programming Model \(RAP\), this annotation is not set for root entities. Hence, moving up or down a node is not supported in the list report.
+Moving a node up or down is supported if the `ChangeNextSiblingAction` term is defined in the `RecursiveHierarchyActions` annotation. When using the ABAP RESTful Application Programming Model \(RAP\), this annotation is not set for root entities. For this reason, moving up or down a node is not supported in the list report.
 
 > ### Restriction:  
-> A node that is created without the option `createInPlace` is displayed as the first child below its parent and is therefore considered "out of place". Move operations are disabled for such nodes. Similarly, moving a node up is disabled if its previous sibling is an "out of place" node.
+> A node that is created without the `createInPlace` option is displayed as the first child below its parent and is therefore considered "out of place". Move operations are disabled for such nodes. Similarly, moving a node up is disabled if its previous sibling is an "out of place" node.
 > 
 > Moving a node up and down is also disabled in the following situations:
 > 
@@ -367,20 +366,29 @@ Cut and paste actions are supported by SAP Fiori elements for OData V4 as of SAP
 
 Both actions can be enabled or disabled by using the same extension points as for drag and drop:
 
--   `isNodeMovable`: Define if a node can be cut.
+-   `isNodeMovable`: Defines if a node can be cut.
 
--   `isMoveToPositionAllowed`: Define if a node can be pasted under a specific parent node.
+-   `isMoveToPositionAllowed`: Defines if a node can be pasted under a specific parent node.
 
 
-In the following example: the USA node can't be cut or dragged:
+In the following example, the USA node can't be cut or dragged:
 
   
   
 **Example of a Node with Disabled Cut Action**
 
-![](images/Example_of_a_node_with_disabled_cut_action_6478e27.png "Example of a Node
-					with
-					Disabled Cut Action")
+![](images/Example_of_a_node_with_disabled_cut_action_6478e27.png "Example of a Node with Disabled Cut Action")
+
+
+
+<a name="loio7cf7a31fd1ee490ab816ecd941bd2f1f__section_zvl_zyn_jdc"/>
+
+## Context Menu
+
+You can open the context menu in the tree table by right-clicking on any node within the table. All the other nodes are greyed out. Only bound actions are included in this menu.
+
+> ### Note:  
+> Actions that are specific to tree tables, such as cut, paste, expand entire node, or collapse entire node, are not supported with multi-selection.
 
 
 
@@ -430,20 +438,20 @@ You can prevent users from changing the order of root nodes by using the [`Chang
 
 If `ChangeSiblingForRootsSupported` is set to `false`, users can't do the following actions:
 
--   move a root node up or down
+-   Move a root node up or down
 
--   drop a node as a root node between two other root nodes
+-   Drop a node as a root node between two other root nodes
 
 
 If no specific restrictions have been set for an action, the following actions are supported:
 
--   cutting a root node
+-   Cutting a root node
 
--   pasting a node as a root node
+-   Pasting a node as a root node
 
--   dragging a root node
+-   Dragging a root node
 
--   dropping a node as a root node at the beginning or end of the table or onto the right-hand side of the table
+-   Dropping a node as a root node at the beginning or end of the table or onto the right-hand side of the table
 
 
 If `ChangeSiblingForRootsSupported` is not defined, it is considered as set to `true`.

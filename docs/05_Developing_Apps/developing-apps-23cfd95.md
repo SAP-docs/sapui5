@@ -16,8 +16,6 @@ Create apps with rich user interfaces for modern web business applications, resp
 
 Before you start developing apps with SAPUI5, you start by setting up the development environment of your choice. You can find our recommendations under [Development Environment](development-environment-7bb04e0.md).
 
-After that, you define the project setup. If you work in a team, we recommend using a continuous integration setup as described under [Continuous Integration: Ensure Code Quality](continuous-integration-ensure-code-quality-fe7a158.md). If you work alone, you should at the very least set up an automated testing environment.
-
 
 
 <a name="loio23cfd955f58142389fa7c9097e11559c__section_znq_f5f_qbb"/>

@@ -25,6 +25,12 @@ Therefore, it's important that you keep applying best practices. To help you, we
 
 
 
+### Supporting Tool - UI5 Linter
+
+[UI5 linter](https://github.com/SAP/ui5-linter) is a command-line tool to identify legacy code in your SAPUI5 project. It checks JavaScript, TypeScript, XML, JSON, and other files in your project and reports findings if legacy code is used. UI5 linter is our state-of-the-art tool to get and keep your SAPUI5 project legacy-free.
+
+
+
 ### Goals
 
 The main objectives when migrating existing code or keeping it up to date with framework best practices are:
@@ -90,76 +96,6 @@ Using the native web API `XMLHttpRequest#open` with `false` as the third argumen
 -   Add only valid module IDs from the API Reference \(documented as Module: .../.../...\) to the dependency list.
 
 
-    <table>
-    <tr>
-    <th valign="top" align="center">
-
-    Not Optimized
-    
-    </th>
-    <th valign="top" align="center">
-
-    Improved
-    
-    </th>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-    ```js
-    sap.ui.define([
-      "sap/m/SortOrder", // Outdated pseudo module
-      "sap/ui/model/FilterType", // standalone module
-      "sap/ui/layout" // target use: SimpleForm
-    ], (SortOrder, FilterType, sapUiLayoutLib) => {
-      "use strict"
-      var SimpleForm = sapUiLayoutLib.form.SimpleForm; // access to Control via globals
-    
-        // ...
-    
-          // access to Control via globals
-          sap.m.MessageBox.show(/*...*/);
-    
-        // ...
-    
-    });
-    ```
-
-
-    
-    </td>
-    <td valign="top">
-    
-    ```js
-    sap.ui.define([
-      "sap/m/library", // "SortOrder" is contained in the sap/m/library.js module
-      "sap/ui/model/FilterType", // remains the same
-      "sap/ui/layout/form/SimpleForm" // imported as a module, no access to globals needed
-    ], (sapMLib, FilterType, SimpleForm) => {
-      "use strict";
-      const { SortOrder } = sapMLib;
-    
-        // ...
-    
-          // lazily require the sap/m/MessageBox on demand
-          sap.ui.require([
-            "sap/m/MessageBox"
-          ], (MessageBox) => {
-            MessageBox.show(/*...*/);
-          });
-    
-        // ...
-    
-    });
-    ```
-
-
-    
-    </td>
-    </tr>
-    </table>
-    
-
 For more information, see [Best Practices for Loading Modules](../04_Essentials/best-practices-for-loading-modules-00737d6.md).
 
 **Third-Party Libraries**
@@ -169,10 +105,6 @@ When requiring third-party libraries that export global names and support AMD at
 **Troubleshooting**
 
 Identify and resolve cyclic dependencies with the help of the SAPUI5 configuration parameter `sap-ui-xx-debug-module-loading=true`. Identified modules are logged in the browser console \([F12\]\) with the message '**cycle detected**'. Ensure that the console shows all levels of logs incl. "Verbose" ones to see this message.
-
-**Additional Information:**
-
--   [Deprecated and Experimental Configuration Options](../04_Essentials/deprecated-and-experimental-configuration-options-b474a71.md)
 
 
 
@@ -432,6 +364,7 @@ Prevent bundling modules \(`library-preload.js`\) into strings.
     -   If tests create implementations of such entities, they must be implemented in a way that a module lookup can find them: either as individual files or as embedded and named `sap.ui.define` statements.
     -   As modules can only be loaded and executed once, each test implementation must have a unique module name. The same name cannot be used multiple times as was the case with globals.
 
--   Transform existing QUnit tests that are based on the outdated QUnit 1 version to using QUnit 2, i.e. `qunit-2.js` and `qunit-2.css`. Make sure to load QUnit only once when initiating QUnit tests.
+-   Migrate an existing QUnit and OPA test setup to the [Test Starter](../04_Essentials/test-starter-032be2c.md) concept.
+-   Transform existing QUnit tests that are based on the outdated QUnit 1 version to using QUnit 2.
 -   Do not rely on the outdated Blanket.js \(`qunit-coverage.js`\) anymore. As of SAPUI5 1.113, code coverage measurement via IstanbulJS \(`qunit-coverage-istanbul.js`\) is the recommended option. For more information, see [Code Coverage Measurement](../04_Essentials/code-coverage-measurement-7ef3242.md).
 

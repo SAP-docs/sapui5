@@ -69,9 +69,7 @@ sap.ui.define([
 ], (Controller, JSONModel, Filter, FilterOperator) => {
 	"use strict";
 
-	return Controller.extend("ui5.walkthrough.controller.InvoiceList", {
-		formatter: formatter, 
-
+	return Controller.extend("ui5.walkthrough.controller.InvoiceList", { 
 		onInit() {
 			const oViewModel = new JSONModel({
 				currency: "EUR"

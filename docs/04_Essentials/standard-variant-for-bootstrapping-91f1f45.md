@@ -15,7 +15,6 @@ By setting the `async=true` configuration parameter, the module loader loads the
 <script
     id="sap-ui-bootstrap"
     src="resources/sap-ui-core.js"
-    data-sap-ui-theme="sap_horizon"
     data-sap-ui-async="true"
     data-sap-ui-on-init="module:my/app/main"
     data-sap-ui-resource-roots='{"my.app": "./"}'

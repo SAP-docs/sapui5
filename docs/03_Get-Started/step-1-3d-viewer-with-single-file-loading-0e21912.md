@@ -73,8 +73,10 @@ You can view and download all files at [3D Viewer - Step 1 - 3D Viewer With Sing
             <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/> 
         <script id="sap-ui-bootstrap"
             src="resources/sap-ui-core.js"
-            data-sap-ui-libs="sap.ui.vk, sap.m"
             data-sap-ui-theme="sap_horizon"
+            data-sap-ui-compat-version="edge"
+            data-sap-ui-async="true"
+            data-sap-ui-libs="sap.ui.vk, sap.m"
             data-sap-ui-resource-roots='{
                 "singleFile": "./"
              }' >
@@ -99,26 +101,10 @@ You can view and download all files at [3D Viewer - Step 1 - 3D Viewer With Sing
     **webapp/Component.js \(New\)**
 
     ```js
-    sap.ui.define([
-        "sap/ui/core/UIComponent"
-    ], function (UIComponent) {
-        "use strict";
-    
-        return UIComponent.extend("singleFile.Component", {
-    
-            metadata: {
-                manifest: "json"
-            },
-    
-            init: function () {
-                // call the init function of the parent
-                UIComponent.prototype.init.apply(this, arguments);
-            }
-        });
-    });
+
     ```
 
-6.  The `i18n.properties` file contains all the user interface labels for the application, which includes the labels for the toolbar, the page title, the buttons, the text input fields, and the error message that will be displayed when no URL is specified.
+6.  The `i18n.properties` file contains all the user interface labels for the application, which includes the labels for the toolbar, the page title, the buttons, the text input fields, and the error message that will be displayed when no URL is specified.sap.ui.define\(\[ "sap/ui/core/UIComponent" \], function \(UIComponent\) \{ "use strict"; return UIComponent.extend\("singleFile.Component", \{ metadata: \{ manifest: "json" \}, init: function \(\) \{ // call the init function of the parent UIComponent.prototype.init.apply\(this, arguments\); \} \}\); \}\);
 
     **webapp/i18n/i18n.properties \(New\)**
 
@@ -190,7 +176,7 @@ You can view and download all files at [3D Viewer - Step 1 - 3D Viewer With Sing
     }
     ```
 
-8.  The `App.view.xml` file specifies how the page in the application will be laid out. We have one form container containing two form elements \(`formElement`\). The first `formElement` element contains the fields for loading 2D or 3D resources located remotely. We have specifed one input text field, and two buttons: one button for loading 2D images, and the other button for loading 3D models.
+8.  The `App.view.xml`sap.ui.define\(\[ file specifies how the page in the application will be laid out. We have one form container containing two form elements \(`formElement`\). The first `formElement` element contains the fields for loading 2D or 3D resources located remotely. We have specifed one input text field, and two buttons: one button for loading 2D images, and the other button for loading 3D models.
 
     In the second `formElement`, we use the `FileUploader` control to generate an input text field and a button to load 2D or 3D resources stored locally. We have specified the following file types as valid file types for loading using this `formElement`.
 

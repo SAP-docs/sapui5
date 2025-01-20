@@ -102,10 +102,9 @@ Instance creation of controller and XML view:
 	
 	<title>JSFragment used in XmlView</title>
 	
-	<!-- Load UI5, select theme and the "sap.m", "sap.ui.layout" control library -->
+	<!-- Load UI5 and select the "sap.m", "sap.ui.layout" control libraries -->
 	<script id='sap-ui-bootstrap' type='text/javascript'
 			src='/sapui5/resources/sap-ui-core.js'
-			data-sap-ui-theme='sap_horizon'
 			data-sap-ui-libs='sap.m,sap.ui.layout'
 			data-sap-ui-resource-roots='{"my.own": "."}'
 	</script>

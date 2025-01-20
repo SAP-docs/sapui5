@@ -16,11 +16,11 @@ We have prefixed constant property names with `"$"` as this is a legal first cha
 
 We assume that schema **aliases** have been resolved. We add a trailing dot after a schema's namespace; thus, the qualified name "A.B" cannot clash with schema namespace "A.B.". This trailing dot is also present for `"$Include"`, `"$TermNamespace"`, and `"$TargetNamespace"` values.
 
-<code><b>$kind</b></code> has been added to each object with a \(qualified\) OData name and to almost each object which can be annotated via external targeting, but not to enum members! Actions and functions are arrays of overloads, and `$kind` has been added to each overload.
+<code><b>$kind</b></code> has been added to each object with a \(qualified\) OData name and to almost each object which can be annotated via external targeting, but not to enum members. Actions and functions are arrays of overloads, and `$kind` has been added to each overload.
 
 We assume each **enum member** to have a value via the fallback rule *"If no values are specified, the members are assigned consecutive integer values in the order of their appearance, starting with zero for the first member."*
 
-Facets like `MaxLength`, `Precision`, and `Scale` are represented as numbers, if possible \(`"$Scale" : "variable"` is the only exception\). `DefaultValue` is represented as a string for lack of type information in the general case.
+Facets like `MaxLength`, `Precision`, and `Scale` are represented as numbers if possible \(`"$Scale" : "variable"` is the only exception\). `DefaultValue` is represented as a string for lack of type information in the general case.
 
 > ### Note:  
 > `"$MaxLength" : "max"` is omitted and will be treated the same as an unspecified length on the client side.
@@ -42,7 +42,7 @@ We use the <code>"&lt;<b>key</b>&gt;@&lt;14.3.1 Annotation Term&gt;#&lt;14.3.2 A
 
 -   "7.3 Element OnDelete" with key `"$OnDelete"` 
 
--   "14.3 Annotation" with key `"@<14.3.1 Annotation Term>#<14.3.2 Annotation Qualifier>"` \(yes, this does lead to a double at-sign `"@...#...@...#..."`!\)
+-   "14.3 Annotation" with key `"@<14.3.1 Annotation Term>#<14.3.2 Annotation Qualifier>"` \(yes, this does lead to a double at-sign `"@...#...@...#..."`\)
 
 -   "14.5.14.2 Element PropertyValue" with key `"<14.5.14.2.1 PropertyValue Property>"`
 
@@ -66,7 +66,7 @@ We use the <code>"&lt;<b>key</b>&gt;@&lt;14.3.1 Annotation Term&gt;#&lt;14.3.2 A
 
 ## Metadata JSON Structure
 
-The following JSON file represents the metadata document which corresponds to `GET <serviceRoot>/$metadata`. We assume it to be sent over the wire this way in future. In the first step, the transformation from XML to JSON can happen on the client side. Note that, in this case, **a wire format for annotations, references and includes is not needed! They are sent as XML, and the API on the client side will offer inlined annotations and resolve references and filter includes, etc.**
+The following JSON file represents the metadata document which corresponds to `GET <serviceRoot>/$metadata`.
 
 ```json
 {

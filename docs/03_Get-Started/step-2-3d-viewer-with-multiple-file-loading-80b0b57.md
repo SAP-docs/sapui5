@@ -35,9 +35,11 @@ Update the `index.html` file to reference the `multipleFiles` namespace, which w
       <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" /> 
         <script  
           id="sap-ui-bootstrap" 
-          src="https://ui5.sap.com/resources/sap-ui-core.js"  
-          data-sap-ui-libs="sap.ui.vk, sap.m" 
-          data-sap-ui-theme="sap_horizon"  
+          src="https://ui5.sap.com/resources/sap-ui-core.js"
+        data-sap-ui-theme="sap_horizon"
+        data-sap-ui-compat-version="edge"
+        data-sap-ui-async="true"
+        data-sap-ui-libs="sap.ui.vk, sap.m"
           data-sap-ui-resource-roots='{ 
                   "multipleFiles": "./"  
             }'> 

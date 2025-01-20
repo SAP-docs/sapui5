@@ -140,70 +140,46 @@ In the assertions section we define a `waitFor` statement that checks if a `sap.
 
 <a name="loio9bf4dce43b7943d0909cd6c58a933589__section_srf_xpc_yfb"/>
 
-## webapp/test/integration/opaTests.qunit.html \(New\)
+## webapp/test/integration/opaTests.qunit.js \(New\)
 
-```html
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Integration tests for the UI5 Walkthrough</title>
-	<meta charset="utf-8">
+We create a new `opaTests.qunit.js` file under `webapp/test/integration/`.
 
-	<script
-		id="sap-ui-bootstrap"
-		src="../../resources/sap-ui-core.js"
-		data-sap-ui-theme="sap_horizon"
-		data-sap-ui-resource-roots='{
-			"ui5.walkthrough": "../../"
-		}'
-		data-sap-ui-compat-version="edge"
-		data-sap-ui-async="true">
-	</script>
+This module imports our `NavigationJourney` and is the entrypoint for all integration tests in the project.
 
-	<link rel="stylesheet" type="text/css" href="../../resources/sap/ui/thirdparty/qunit-2.css">
+```js
 
-	<script src="../../resources/sap/ui/thirdparty/qunit-2.js"></script>
-	<script src="../../resources/sap/ui/qunit/qunit-junit.js"></script>
-
-	<script src="opaTests.qunit.js"></script>
-</head>
-<body>
-	<div id="qunit"></div>
-	<div id="qunit-fixture"></div>
-</body>
-</html>
+sap.ui.define([
+	         "./NavigationJourney"
+]);
 ```
-
-This file contains our test suite for all OPA tests of the app. We use the same namespace as for our application.
-
-Then we load the basic QUnit functionality via script tags from SAPUI5 so that we can execute the test journey. The `NavigationJourney` we defined above will be loaded via a script called `opaTests.qunit.js`:
 
 
 
 <a name="loio9bf4dce43b7943d0909cd6c58a933589__section_trf_xpc_yfb"/>
 
-## webapp/test/integration/opaTests.qunit.js \(New\)
+## webapp/test/testsuite.qunit.js
+
+Finally we reference the new `integration/opaTests.qunit.js` in the `testsuite.qunit.js` file. The `.qunit.js` extension is omitted and will be added automatically during runtime.
 
 ```js
-QUnit.config.autostart = false;
 
-sap.ui.require(["sap/ui/core/Core"], async(Core) => {
-	"use strict";
-
-	await Core.ready();
-
-	sap.ui.require([
-		"ui5/walkthrough/localService/mockserver",
-		"ui5/walkthrough/test/integration/NavigationJourney"
-	], (mockserver) => {
-		// initialize the mock server
-		mockserver.init();
-		QUnit.start();
-	});
+sap.ui.define(() => {
+	    "use strict";
+	    return {
+		      // ...
+		      tests: {
+			        "unit/unitTests": {
+				           title: "UI5 Walkthrough - Unit Tests"
+			        },
+			        "integration/opaTests": {
+				           title: "UI5 Walkthrough - Integration Tests"
+			        }
+		     }
+	   };
 });
 ```
 
-This script loads the `NavigationJourney`, and the test functions inside are immediately executed. When you call the `webapp/test/integration/opaTests.qunit.html` page of your project on the server, you should see the QUnit layout and a test “Should see the Hello dialog” is executed immediately. It will load the app component on the right side of the page. There you can see what operations the test is performing on the app, if everything works correctly the button click is triggered, then a dialog is shown and the test case is green.
+If we now open the `webapp/test/testsuite.qunit.html` file in the browser and select `integration/opaTests`, the QUnit layout should appear and a test “Should see the Hello dialog” will run immediately. This action will load the app component on the right side of the page. There you can see the operations the test is performing on the app. If everything works correctly, a button click will be triggered, then a dialog will be displayed and the test case will be green.
 
 
 

@@ -292,7 +292,7 @@ You can start the interaction data collection in the following ways:
 
 -   Enable interaction steps recording:
 
-    -   To measure the initial loading of the app, add the query string parameter `sap-ui-xx-fesr=true` at the end of the application URL and reload.
+    -   To measure the initial loading of the app, add the query string parameter `sap-ui-fesr=true` at the end of the application URL and reload.
 
     -   To measure the interaction performance, choose *Start recording* from the *Interaction* panel and then switch back to the app to do the steps that you want to record. Each user activity, such as clicking buttons or list items or scrolling a list, triggers an interaction. The end of an interaction is when the UI is fully updated by the app. The collected data is displayed once you choose *Stop Recording*.
 

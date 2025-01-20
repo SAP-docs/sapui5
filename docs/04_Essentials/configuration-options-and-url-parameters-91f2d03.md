@@ -1309,7 +1309,7 @@ Default value: `undefined`
 
 Defines code that has to be executed after the initialization.
 
-In case a string is provided, this must be either the name of a module indicated by the prefix `module:` \(like [`module:sap/ui/core/ComponentSupport`](https://ui5.sap.com/#/api/module:sap/ui/core/ComponentSupport)\) or the name of a property within the `globalThis` object containing a function. Provided modules will be loaded and executed after initialization.
+In case a string is provided, this must be either the name of a module indicated by the prefix `module:` \(like [`module:sap/ui/core/ComponentSupport`](https://ui5.sap.com/#/api/module:sap/ui/core/ComponentSupport)\) or the name of a property within the `globalThis` object containing a function. The provided module will be loaded and executed after initialization.
 
 Within `globalThis["sap-ui-config"]["on-init"]` it is also possible to provide a function directly.
 
@@ -1371,7 +1371,7 @@ For more information, see the [API Reference: `sap.ui.loader.config`](https://ui
 The table below lists the possible types for configuration options and their corresponding valid values.
 
 > ### Note:  
-> Some of the configuration options listed on this page, as well as the ones listed under [Deprecated and Experimental Configuration Options](deprecated-and-experimental-configuration-options-b474a71.md), might have more restrictions on the allowed values. Please refer to the corresponding entry for more details.
+> Some of the configuration options listed on this page, as well as the ones listed under [Deprecated Configuration Options](deprecated-configuration-options-b474a71.md), might have more restrictions on the allowed values. Please refer to the corresponding entry for more details.
 
 
 <table>
@@ -1496,5 +1496,5 @@ Any value which is part of the respective enumeration for the corresponding conf
 
 ## Related Information
 
-For lists of deprecated and experimental configuration options, see [Deprecated and Experimental Configuration Options](deprecated-and-experimental-configuration-options-b474a71.md).
+For alist of deprecated configuration options, see [Deprecated Configuration Options](deprecated-configuration-options-b474a71.md).
 

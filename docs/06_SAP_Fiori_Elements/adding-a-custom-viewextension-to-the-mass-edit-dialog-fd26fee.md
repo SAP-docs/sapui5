@@ -11,13 +11,11 @@ You can add a custom `ViewExtension` to the mass edit dialog by defining it in t
 ## Additional Features in SAP Fiori Elements for OData V2
 
 > ### Note:  
-> -   Controls in custom extensions must be surrounded by `GroupElement`.
+> -   Controls in custom extensions must be surrounded by a `GroupElement`.
 > 
 > -   The application developer must provide stable IDs for the custom input fields. Handle input values using `beforeMultiEditSaveExtension`.
 
-In `ViewExtension`, you can add custom controls inside a `GroupElement` such as a Rating bar, Calendar, etc. You can add `MultiEditFieldsExtension` under the `manifest.json` file in the `sap.ui5` extended section. `ViewExtension` is supported in both the `annotationPath` and `visibleTable` column scenarios.
-
-Configured extension in manifest and file of extension must be present in `ext >` fragments.
+In `ViewExtension`, you can add custom controls inside a `GroupElement` such as a Rating bar, Calendar, and so on. You can add `MultiEditFieldsExtension` under the `manifest.json` file in the extended `sap.ui5`section. `ViewExtension` is supported in both the `annotationPath` and `visibleTable` column scenarios.
 
 > ### Sample Code:  
 > `manifest.json`
@@ -108,7 +106,7 @@ Configured extension in manifest and file of extension must be present in `ext >
 
 ## Additional Features in SAP Fiori Elements for OData V4
 
-You can add a custom fragment to the *Mass Edit* dialog by defining the `customFragment` property in the manifest.
+You can add a custom fragment to the *Mass Edit* dialog by defining the `customFragment` property in the `manifest.json` file.
 
 > ### Note:  
 > -   Controls in custom extensions must be surrounded by a `FormContainer`.
@@ -152,11 +150,9 @@ You can add a custom fragment to the *Mass Edit* dialog by defining the `customF
 > </core:FragmentDefinition>
 > ```
 
-You should then implement the `customMassEditSave` function within the list report or object page controller extension. For more information, see [Replacing the Standard Save Functionality in the Mass Edit Dialog](replacing-the-standard-save-functionality-in-the-mass-edit-dialog-492d8a9.md).
+Next, implement the `customMassEditSave` function within the list report or object page controller extension. For more information, see [Replacing the Standard Save Functionality in the Mass Edit Dialog](replacing-the-standard-save-functionality-in-the-mass-edit-dialog-492d8a9.md).
 
 > ### Sample Code:  
-> `manifest.json`
-> 
 > ```
 > sap.ui.define(
 >     [

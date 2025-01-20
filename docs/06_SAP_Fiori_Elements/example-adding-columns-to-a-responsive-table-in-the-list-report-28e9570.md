@@ -143,43 +143,37 @@ The table containing additional custom columns can look like this:
     > ```
 
     > ### Note:  
-    > In case the fragment needs to be re-used for multiple tabs, the `id` property must be set to make the ids unique.
+    > To reuse a fragment for multiple tabs, set the `id` property to ensure unique ids.
 
     > ### Sample Code:  
     > ```
-    > ... "extends":{
-    >    "extensions":{
+    > "extensions":{
     >       "sap.ui.viewExtensions":{
     >          "sap.suite.ui.generic.template.ListReport.view.ListReport":{
     >             "ResponsiveTableColumnsExtension|STTA_C_MP_Product|Expensive":{
     >                "className":"sap.ui.core.Fragment",
-    >                "fragmentName":"STTA_MP.ext.fragments.ListReportResponsiveTableColumnsExpensive",
+    >                "fragmentName":"STTA_MP.ext.fragments.ListReportResponsiveTableColumns",
     >                "type":"XML",
-    >                "id":"Expensive"
-    >             
+    >                "id":"Expensive"        
     > },
     >             "ResponsiveTableCellsExtension|STTA_C_MP_Product|Expensive":{
     >                "className":"sap.ui.core.Fragment",
-    >                "fragmentName":"STTA_MP.ext.fragments.ListReportResponsiveTableCellsExpensive",
+    >                "fragmentName":"STTA_MP.ext.fragments.ListReportResponsiveTableCells",
     >                "type":"XML",
-    >                "id":"Expensive"
-    >             
+    >                "id":"Expensive"          
     > },
     >             "ResponsiveTableColumnsExtension|STTA_C_MP_Product|Cheap":{
     >                "className":"sap.ui.core.Fragment",
-    >                "fragmentName":"STTA_MP.ext.fragments.ListReportResponsiveTableColumnsCheap",
+    >                "fragmentName":"STTA_MP.ext.fragments.ListReportResponsiveTableColumns",
     >                "type":"XML",
-    >                "id":"Cheap"
-    >             
+    >                "id":"Cheap"          
     > },
     >             "ResponsiveTableCellsExtension|STTA_C_MP_Product|Cheap":{
     >                "className":"sap.ui.core.Fragment",
-    >                "fragmentName":"STTA_MP.ext.fragments.ListReportResponsiveTableCellsCheap",
+    >                "fragmentName":"STTA_MP.ext.fragments.ListReportResponsiveTableCells",
     >                "type":"XML",
-    >                "id":"Cheap"
-    >             
+    >                "id":"Cheap"           
     > },…
-    > 
     > ```
 
 

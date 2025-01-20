@@ -144,7 +144,7 @@ In some cases it may happen that preloads are not enabled, or that modules of so
 
 -   A subset of libraries in the `sap.ui5/dependencies/libs` section of the `manifest.json` is declared with the `lazy` loading option, but these `lazy` libraries aren't preloaded manually before their modules are used. For more information, see [Descriptor Dependencies to Libraries and Components](../04_Essentials/descriptor-dependencies-to-libraries-and-components-8521ad1.md).
 
--   Neither `sap-ui-async` nor `sap-ui-preload` is enabled in the bootstrap configuration options.Note that if `sap-ui-async` is set to `true`, the value of the preload configuration is automatically set to `"async"`.
+-   Neither `sap-ui-async` nor `sap-ui-preload` is enabled in the bootstrap configuration options. Note that if `sap-ui-async` is set to `true`, the value of the preload configuration is automatically set to `"async"`.
 
 -   Debug sources are enabled in the bootstrap \(`data-sap-ui-debug=true`\) or via the URL \(`sap-ui-debug=true`\).
 

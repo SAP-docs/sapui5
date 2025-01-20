@@ -200,7 +200,7 @@ Add card to insights
 </td>
 <td valign="top">
 
-[Creating Cards for the Insights Cards Section of My Home in SAP S/4HANA](creating-cards-for-the-insights-cards-section-of-my-home-in-sap-s-4hana-9b13559.md) 
+[Creating Cards for the Insights Cards Section of My Home in SAP S/4HANA Cloud and My Home in SAP S/4HANA](creating-cards-for-the-insights-cards-section-of-my-home-in-sap-s-4hana-cloud-and-my-home-9b13559.md) 
 
 </td>
 <td valign="top">
@@ -511,6 +511,7 @@ Building blocks
 
 -   List report \(OData V4\)
 -   Object page \(OData V4\)
+-   Anaytical list page \(OData V4\)
 
 
 
@@ -868,13 +869,16 @@ Chart building block
 
 -   List report \(OData V4\)
 -   Object page \(OData V4\)
+-   Anaytical list page \(OData V4\)
 
 
 
 </td>
 <td valign="top">
 
-[Building Blocks](building-blocks-24c1304.md) 
+[Building Blocks](building-blocks-24c1304.md)
+
+[Flexible Programming Model](flexible-programming-model-549749b.md)
 
 </td>
 <td valign="top">
@@ -1828,7 +1832,7 @@ Object page
 </td>
 <td valign="top">
 
-
+ 
 
 </td>
 <td valign="top">
@@ -2408,7 +2412,7 @@ Export to spreadsheet
 </td>
 <td valign="top">
 
-[Using the Export Button](using-the-export-button-4bab6f2.md)
+[Using the Export Button](using-the-export-button-4bab6f2.md) 
 
 </td>
 <td valign="top">
@@ -2439,13 +2443,14 @@ Field building block
 
 -   List report \(OData V4\)
 -   Object page \(OData V4\)
+-   Anaytical list page \(OData V4\)
 
 
 
 </td>
 <td valign="top">
 
-[Building Blocks](building-blocks-24c1304.md)
+[Building Blocks](building-blocks-24c1304.md) 
 
 </td>
 <td valign="top">
@@ -2584,13 +2589,14 @@ FilterBar building block
 
 -   List report \(OData V4\)
 -   Object page \(OData V4\)
+-   Anaytical list page \(OData V4\)
 
 
 
 </td>
 <td valign="top">
 
-[Building Blocks](building-blocks-24c1304.md)
+[Building Blocks](building-blocks-24c1304.md) 
 
 </td>
 <td valign="top">
@@ -2683,13 +2689,14 @@ FlexibleColumnLayoutActions building block
 
 -   List report \(OData V4\)
 -   Object page \(OData V4\)
+-   Anaytical list page \(OData V4\)
 
 
 
 </td>
 <td valign="top">
 
-[Building Blocks](building-blocks-24c1304.md)
+[Building Blocks](building-blocks-24c1304.md) 
 
 </td>
 <td valign="top">
@@ -2719,6 +2726,54 @@ freestyle application
 FCL building block
 
 flexible column layout building block
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Flexible Programming Model
+
+</td>
+<td valign="top">
+
+-   List report \(OData V4\)
+-   Object page \(OData V4\)
+-   Analytical list page \(OData V4\)
+
+
+
+</td>
+<td valign="top">
+
+[Flexible Programming Model](flexible-programming-model-549749b.md)
+
+[Building Blocks](building-blocks-24c1304.md)
+
+[Extension Points for Sections on the Object Page](extension-points-for-sections-on-the-object-page-92ad996.md)
+
+[Extension Points for Pages](extension-points-for-pages-ecdf1d6.md)
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+  
+  
+**Flexible Programming Model Explorer**
+
+
+
+![](images/Flexible_Programming_Model_Explorer_4579202.png)
+
+</td>
+<td valign="top">
+
+FPM
 
 </td>
 </tr>
@@ -2761,7 +2816,9 @@ Footer toolbar
 </td>
 <td valign="top">
 
- 
+flexible programming model
+
+FPM
 
 </td>
 </tr>
@@ -2873,6 +2930,7 @@ FormElement building block
 
 -   List report \(OData V4\)
 -   Object page \(OData V4\)
+-   Anaytical list page \(OData V4\)
 
 
 
@@ -3436,9 +3494,7 @@ Keep alive
 </td>
 <td valign="top">
 
--   [Refresh Data Set for Back Navigation When sap-keep-alive Is Set to True](refresh-data-set-for-back-navigation-when-sap-keep-alive-is-set-to-true-f1c2704.md)
-
-
+[Refresh Data Set for Back Navigation When sap-keep-alive Is Set to True](refresh-data-set-for-back-navigation-when-sap-keep-alive-is-set-to-true-f1c2704.md) 
 
 </td>
 <td valign="top">
@@ -4251,6 +4307,7 @@ MicroChart building block
 
 -   List report \(OData V4\)
 -   Object page \(OData V4\)
+-   Anaytical list page \(OData V4\)
 
 
 
@@ -4526,7 +4583,11 @@ Navigation
 </td>
 <td valign="top">
 
-[Configuring Navigation](configuring-navigation-a424275.md) [Example: Enable Internal Navigation to Different Detail Page](example-enable-internal-navigation-to-different-detail-page-75002b3.md) [Handling of the preferredMode Parameter](handling-of-the-preferredmode-parameter-bfaf3cc.md)
+[Configuring Navigation](configuring-navigation-a424275.md)
+
+[Example: Enable Internal Navigation to Different Detail Page](example-enable-internal-navigation-to-different-detail-page-75002b3.md)
+
+[Handling of the preferredMode Parameter](handling-of-the-preferredmode-parameter-bfaf3cc.md)
 
 </td>
 <td valign="top">
@@ -4657,6 +4718,7 @@ Paginator building block
 
 -   List report \(OData V4\)
 -   Object page \(OData V4\)
+-   Anaytical list page \(OData V4\)
 
 
 
@@ -5422,6 +5484,7 @@ Share building block
 
 -   List report \(OData V4\)
 -   Object page \(OData V4\)
+-   Anaytical list page \(OData V4\)
 
 
 
@@ -5819,6 +5882,7 @@ Table building block
 
 -   List report \(OData V4\)
 -   Object page \(OData V4\)
+-   Anaytical list page \(OData V4\)
 
 
 
@@ -6330,6 +6394,7 @@ TreeTable building block
 
 -   List report \(OData V4\)
 -   Object page \(OData V4\)
+-   Anaytical list page \(OData V4\)
 
 
 

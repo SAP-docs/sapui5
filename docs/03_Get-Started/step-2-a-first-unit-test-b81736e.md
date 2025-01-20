@@ -41,23 +41,13 @@ As we use Test Driven Development \(TDD\) we define the test case first, before 
 
 All unit tests are located in the `webapp/test/unit` folder and can be started by opening the `webapp/test/testsuite.qunit.html` in your browser and selecting `unit/unitTests`.
 
-> ### Note:  
-> Some testrunners like Karma do not require an HTML page to invoke the tests but work with configuration files instead. They can directly invoke the `AllTests.js` file and log the test results in their own format. Therefore we make sure that the `AllTests.js` file does not contain any UI output and just calls the various test cases of the app.
-
   
   
-**Unit test infrastructure in the application**
+**Unit Test Infrastructure in the Application**
 
-![](images/Tutorial_Testing_Step_02_2_f25ffee.png "Unit test infrastructure in the application")
+![](images/Tutorial_Testing_Step_02_2_f25ffee.png "Unit Test Infrastructure in the Application")
 
-Let’s take a closer look at the `unitTests.qunit.html` file. The application root is stored in the `webapp` folder two levels above. In the `bootstrap` tag of the HTML page we define two namespaces to refer to the app and the unit tests. The namespace of the unit tests points to the current folder as all test artifacts are located below the current folder:
-
--   `sap.ui.demo.bulletinboard: "../../"`
-
--   `test.unit: "./"`
-
-
-The namespace abstraction allows us to refer to all application and testing parts without having to use the full path. Furthermore, all unit tests are put in a similar folder structure and get the same name as the artifact that is tested. For example, the tests for the file `webapp/model/formatter.js` are located in the `webapp/test/unit/model/formatters.js` folder. For more details on the unit test setup please have a look at the coding of the prototype.
+The `testsuite.qunit.html` file utlizes the configuration from `webapp/test/testsuite.qunit.js` which lists all tests within the project, including the `unitTests.qunit.js` module. This module is the entry point for all unit tests for functionality such as formatters or models.
 
 
 
@@ -65,7 +55,7 @@ The namespace abstraction allows us to refer to all application and testing part
 
 ## Coding
 
-You can view and download all files in the *Samples* in the Demo Kit at [Testing Apps - Step 2](https://ui5.sap.com/#/entity/sap.m.tutorial.testing/sample/sap.m.tutorial.testing.02).
+You can view and download all files in the *Samples* in the Demo Kit at [Testing - Step 2](https://ui5.sap.com/#/entity/sap.m.tutorial.testing/sample/sap.m.tutorial.testing.02).
 
 
 
@@ -74,13 +64,13 @@ You can view and download all files in the *Samples* in the Demo Kit at [Testing
 ```js
 
 sap.ui.define([], function () {
-		"use strict";
-	     return {
-		       numberUnit: function (sValue) {
-		  	// …
-		       },
-		       priceState: function () {
-		}
+	   "use strict";
+	   return {
+		      numberUnit: function (sValue) {
+		             // …
+		      },
+		      priceState: function () {
+	   }
 
 	};
 });

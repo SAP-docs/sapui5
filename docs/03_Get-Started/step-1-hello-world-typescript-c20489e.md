@@ -70,7 +70,7 @@ In our `webapp` folder, we create a new HTML file named `index.html` and enter t
 
 ## webapp/manifest.json \(New\)
 
-The manifest file, also known as the "descriptor" or "app descriptor," serves as a crucial configuration file for applications, components, and libraries. Stored in the `webapp` folder, this file is read by SAPUI5 to instantiate a component. Although we haven't created a component yet \(which is part of [Step 9: Component Configuration \(TypeScript\)](step-9-component-configuration-typescript-f9d0e2f.md)\), we need to create the app descriptor already now, because UI5 Tooling, which we intend to use for development, also requires an app descriptor.
+The manifest file, also known as the "descriptor" or "app descriptor," serves as a crucial configuration file for applications, components, and libraries. Stored in the `webapp` folder, this file is read by SAPUI5 to instantiate a component. Although we haven't created a component yet \(which is part of [Step 9: Component Configuration \(TypeScript\)](step-9-component-configuration-typescript-f9d0e2f.md)\), we need to create the app descriptor now because the UI5 Tooling we intend to use for development also requires it.
 
 Hence, we create a new file named `manifest.json` in the webapp folder and define its essential attributes:
 
