@@ -10,7 +10,7 @@ In this step of our Walkthrough tutorial, we adjust the content density based on
 
   
   
-**The default content density is cozy on touch devices (smartphones, tablets and computers with a touch screen) and compact on devices without a touch screen. Note that Fiori Launchpad sets cozy content density on phones and tablets as mandatory and may override it on other computers according to the application manifest and the user preference.**
+**The content density is compact on desktop devices and cozy on touch-enabled devices**
 
 ![The graphic has an explanatory text.](images/UI5_Walkthrough_Step_36_f216b13.png "The content density is compact on desktop devices and cozy on touch-enabled
 					devices")
@@ -29,13 +29,7 @@ You can view and download all files at [Walkthrough - Step 36](https://ui5.sap.c
 ...
 
 		getContentDensityClass() {
-			// if the content density has already been set, don't override it
-        		const classList = document.body.classList;
-        		if (classList.contains("sapUiSizeCozy") || classList.contains("sapUiSizeCompact")) {
-            			return "";
-        		}
-        		// if the application runs standalone, use cozy on touch devices
-        		return Device.support.touch ? "sapUiSizeCozy" : "sapUiSizeCompact";
+			return Device.support.touch ? "sapUiSizeCozy" : "sapUiSizeCompact";
 		}
 	});
 });
@@ -43,7 +37,7 @@ You can view and download all files at [Walkthrough - Step 36](https://ui5.sap.c
 
 To prepare the content density feature we will also add a helper method `getContentDensityClass`. SAPUI5 controls can be displayed in multiple sizes, for example in a `compact` size that is optimized for desktop and non-touch devices, and in a `cozy` mode that is optimized for touch interaction. The controls look for a specific CSS class in the HTML structure of the application to adjust their size.
 
-This helper method checks if the classes for the cozy or compact mode have been applied elsewhere already. If this is the case, the application will not apply it again. If not, it queries the `Device` API directly for touch support of the client and returns the CSS class `sapUiSizeCompact` if touch interaction is not supported and `sapUiSizeCozy` for all other cases. We will use it throughout the application coding to set the proper content density CSS class.
+This helper method queries the `Device` API directly for touch support of the client and returns the CSS class `sapUiSizeCompact` if touch interaction is not supported and `sapUiSizeCozy` for all other cases. We will use it throughout the application coding to set the proper content density CSS class.
 
 
 
