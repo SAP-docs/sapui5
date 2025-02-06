@@ -10,7 +10,7 @@ Changes to the content of the SAPUI5 ABAP repository require the index to be upd
 
 This scenario usually happens in development systems. The content is changed, for example, by uploads from development tools like SAP Business Application Studio, the available SAPUI5 repository upload and download reports, the implementation of an SAP Note, or manual changes using transaction `SE80` \(the latter is not supported and therefore not recommended at all\).
 
-The execution of the report to update the index is in most cases triggered automatically. Exceptions: implementation of SAP Notes, support package updates, release upgrades, changes to texts in the text repository with ABAP translation tools, and manual changes using transaction `SE80` \(not supported and therefore not recommended\). In these cases, you have to trigger an update for the applications in question manually or schedule a calculation of the index with a reasonable time interval. Here’s an overview:
+The execution of the report to update the index is in most cases triggered automatically. Exceptions: implementation of SAP Notes, support package updates, release upgrades, changes to texts in the text repository with ABAP translation tools, and manual changes using transaction `SE80` \(not supported and therefore not recommended\). In these cases, you have to trigger an update for the applications in question manually or schedule a calculation of the index with a reasonable time interval. Here's an overview:
 
 
 <table>
@@ -98,7 +98,7 @@ If you are unsure whether the BAdI is called, you can verify this in the import 
 
 You can access the job `/UI5/APP_IDX_UPD_AFTER_IMPORT` that is automatically scheduled by the BAdI in transaction `SM37`.
 
-Here’s how you can decide whether you need to schedule the report after transports:
+Here's how you can decide whether you need to schedule the report after transports:
 
 ![The graphic is explained in the accompanying text.](images/Decide_whether_you_need_to_schedule_the_report_35e150c.png)
 
@@ -112,7 +112,7 @@ If you have to schedule the report, there are three options for this:
 
 -   Starting after event `SAP_IMPORT_STO`
 
-    This triggers the report automatically after all transports of the import queue have been imported. However it doesn’t trigger the report in cases where you perform a special import of a single transport.
+    This triggers the report automatically after all transports of the import queue have been imported. However it doesn't trigger the report in cases where you perform a special import of a single transport.
 
 -   Schedule the report in both ways
 

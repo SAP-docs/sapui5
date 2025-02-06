@@ -23,7 +23,7 @@ Using the service, you have to specify the message to be announced by the screen
 -   `sap.ui.core.InvisibleMessageMode.Assertive` - Indicates that updates to the region have the highest priority and should be presented to the user immediately.
 
 
-The `sap.ui.core.InvisibleMessage` should be instantiated before the rest of the DOM tree \(controls\) get rendered, preferably in the `onBeforeRendering()` method of the control. Then, you should specify the text, that has to be announced by the screen reader, and the live region’s mode using the announce method. Keep in mind that according to the ARIA standard, the live regions should be presented on page load and should be empty. Thus, we recommend to instantiate `sap.ui.core.InvisibleMessage` via `sap.ui.core.InvisibleMessage.getInstance()` as early as possible in the application logic – with the Component initialization, with the main Controller initialization, after Core initialization, ect.
+The `sap.ui.core.InvisibleMessage` should be instantiated before the rest of the DOM tree \(controls\) get rendered, preferably in the `onBeforeRendering()` method of the control. Then, you should specify the text, that has to be announced by the screen reader, and the live region's mode using the announce method. Keep in mind that according to the ARIA standard, the live regions should be presented on page load and should be empty. Thus, we recommend to instantiate `sap.ui.core.InvisibleMessage` via `sap.ui.core.InvisibleMessage.getInstance()` as early as possible in the application logic – with the Component initialization, with the main Controller initialization, after Core initialization, ect.
 
 
 

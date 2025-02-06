@@ -154,7 +154,7 @@ SAPUI5 provides a couple of static functions that can be referred to via their g
 
 ## Don't use deprecated APIs
 
-Entities marked as “deprecated” in the API Reference documentation \(this includes properties, methods, events, and their parameters as well as entire controls and other APIs\) are no longer intended to be used. They will not get feature updates in the future. Alternatives, if available, are described in the API Reference documentation.
+Entities marked as "deprecated" in the API Reference documentation \(this includes properties, methods, events, and their parameters as well as entire controls and other APIs\) are no longer intended to be used. They will not get feature updates in the future. Alternatives, if available, are described in the API Reference documentation.
 
 One prominent example is the old `jQuery.sap.device` API that has been replaced with `sap.ui.Device`.
 

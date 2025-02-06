@@ -13,9 +13,9 @@ The behavior of the available modes is as follows:
 
     By default, a new entry is created and the system automatically navigates to the item's object page.
 
--   **Empty Row Mode** existing empty row, a new empty row is automatically added. In a responsive table, the empty row is added at the top. In a grid table, the empty row is added at the bottom. There is no corresponding entry in the draft table for the empty row. When you begin to add data to a field in an existing empty row, a new empty row is automatically added.
+-   **Empty Row Mode**: When an end user begins adding data to a field in an existing empty row, a new empty row is automatically created. In a responsive table, the empty row appears at the top, while in a grid table, it appears at the bottom. There is no corresponding entry in the draft table for the empty row.
 
-    The automatically added empty row is removed if the user doesn't add any data. It isn't required to manually remove the empty row.
+    The automatically added empty row is removed if the end user doesn't add any data. It isn't required to manually remove the empty row.
 
     The empty row mode has the following features:
 
@@ -131,68 +131,6 @@ The behavior of the available modes is as follows:
 
 
 
-
-
-### Restricting Fields in the Empty Row Mode
-
-Certain fields in the `inlineCreationRows` may become relevant only after the row has been created. They can be restricted from data entry in the empty row.
-
-To restrict a field, use the `Capabilities.InsertRestrictions.NonInsertableProperties` annotation.
-
-The list of `NonInsertableProperties` is first checked at the navigation property level. If it's not found there, it is checked at the entity set level.
-
-> ### Sample Code:  
-> XML Annotation
-> 
-> ```
-> <Annotations Target="com.c_salesordermanage_sd.SalesOrderManage/_Item">
->     ...
->     <Annotation Term="Capabilities.InsertRestrictions">
->         <Record Type="Capabilities.InsertRestrictionsType">
->             <PropertyValue Property="NonInsertableProperties">
->                 <Collection>
->                     <PropertyPath>RequestedQuantity</PropertyPath>
->                 </Collection>
->             </PropertyValue>
->         </Record>
->     </Annotation>
->     ...
-> </Annotations>
-> ```
-
-> ### Sample Code:  
-> CAP CDS Annotation
-> 
-> ```
-> entity SalesOrderItem
-> {
->     ...
->    RequestedQuantity : Decimal(15, 3);
->     ...
->     owner             : Association to one SalesOrderManage;
->     ...
-> }
->  
-> entity SalesOrderManage
-> {
->     ...
->     _Item : Composition of many SalesOrderItem
->             on _Item.owner = $self @(Capabilities: {InsertRestrictions: {NonInsertableProperties: [RequestedQuantity]}});
->     ...
-> }
->  
-> 
-> ```
-
-> ### Sample Code:  
-> ABAP CDS Annotation
-> 
-> ```
-> No ABAP CDS annotation is required, since the setting is made according to the modelling (create, update, delete, etc.) in RAP BDEF (behavior definition).
-> ```
-
-
-
 <a name="loiocfb04f0c58e7409992feb4c91aa9410b__section_app_g2l_hrb"/>
 
 ## Additional Features in SAP Fiori Elements for OData V2
@@ -201,12 +139,12 @@ The `newPage` mode is the default mode to create new rows. In this mode, when th
 
 You can configure the values for `createMode` using the `manifest.json` file. The possible values are `inline`, `creationRows`, `creationRowsHiddenInEditMode`, and `newPage`.
 
-Unlike in `creationRows` mode, tables configured with `creationRowsHiddenInEditMode` mode don't include an empty row by default in edit mode. An empty row is added to the table once the user clicks *Create*.
+Unlike in `creationRows` mode, tables configured with `creationRowsHiddenInEditMode` mode don't include an empty row by default in edit mode. An empty row is added to the table when the user clicks *Create*.
 
 > ### Note:  
-> In `creationRows` mode, if a field in a row is modified, then this empty row is converted to draft only after an interval of 20 seconds. This behaviour is similar to that of generic draft handling. For more information, see [Draft Handling](draft-handling-ed9aa41.md).
+> In `creationRows` mode, if a field in a row is modified, then this empty row is converted to draft only after an interval of 20 seconds. This behavior is similar to that of generic draft handling. For more information, see [Draft Handling](draft-handling-ed9aa41.md).
 > 
-> Once the data is entered to an empty row, it is immediately converted to a draft row only if a structural side effect is defined on the corresponding table or the end user explicitly presses [Enter\].
+> Once the data is entered in an empty row, it is immediately converted to a draft row only if a structural side effect is defined on the corresponding table or if the end user explicitly presses [Enter\].
 
 > ### Sample Code:  
 > manifest.json
@@ -254,7 +192,7 @@ Unlike in `creationRows` mode, tables configured with `creationRowsHiddenInEditM
 > }
 > ```
 
-In the sample code, the value of `createmode` for tables in all object pages is `creationRows`. However, the values of `createmode` for tables in the `C_STTA_SalesOrder_WD_20` and `C_STTA_SalesOrderItem_WD_20` object pages are `inline` and `newPage`, respectively.
+In the sample code, the value of `createmode` for tables in all object pages is `creationRows`. However, the values of `createmode` for tables in the `C_STTA_SalesOrder_WD_20` and `C_STTA_SalesOrderItem_WD_20` object pages are set to `inline` and `newPage`, respectively.
 
 A section ID defined in the annotation must match the section ID defined in the manifest configuration, where the `createMode` setting is defined. For example, `<PropertyValue Property="ID" String="to_ProductText::com.sap.vocabularies.UI.v1.LineItem"/>`.
 
@@ -304,11 +242,11 @@ The `disableDefaultInlineCreateSort` setting is evaluated only if the `"createMo
 
 An empty row is converted to a draft row only if all the fields annotated with `RequiredProperties` have a value.
 
-If the end user doesn't enter a value to any of the required fields, then an error message is displayed. If the required fields aren’t a part of the displayed table columns, then an error message is displayed asking the end user to add the required fields within the displayed table columns using the table settings.
+If the end user doesn't enter a value for any of the required fields, then an error message is displayed. If the required fields aren't a part of the displayed table columns, then an error message is displayed asking the end user to add the required fields within the displayed table columns using the table settings.
 
 **Defining Custom Error Messages for the Empty `Required` Field**
 
-When a required field is empty, the application displays the standard message ***Enter a value***. You can override the standard text in the application’s `i18n` file, under the respective `entitySet` using the key format as shown here:
+When a required field is empty, the application displays the standard message ***Enter a value***. You can override the standard text in the application's `i18n` file, under the respective `entitySet` using the key format as shown here:
 
 `REQUIRED_PROP_ERROR|<EntitySet>|<navigationProperty>| com.sap.vocabularies.UI.v1.LineItem|<Required Property Name>` 
 
@@ -317,7 +255,7 @@ An example using the key format is shown here:
 `REQUIRED_PROP_ERROR|C_STTA_SalesOrder_WD_20|to_Item|com.sap.vocabularies.UI.v1.LineItem|so_item_pos=Enter an item position` 
 
 > ### Note:  
-> As a general guideline for `RequiredProperties`, application developers must set `UI.Importance` to `High` in the responsive table settings so that the columns don’t overflow and get hidden on small-screen devices.
+> As a general guideline for `RequiredProperties`, application developers must set `UI.Importance` to `High` in the responsive table settings so that the columns don't overflow and get hidden on small-screen devices.
 
 
 
@@ -441,8 +379,8 @@ You can define the `InlineCreationRows` mode as the default creation mode that i
 
 If a field is marked with the `Capabilities.InsertRestrictions.RequiredProperties` annotation, an asterisk \(\*\) is displayed in the column header.
 
-If the end user doesn't enter a value to any of the required fields, an error message is shown. If the required fields aren’t a part of the displayed table columns, an error message is displayed asking the end user to add the required fields within the displayed table columns using the table settings.
+If the end user doesn't enter a value to any of the required fields, an error message is shown. If the required fields aren't a part of the displayed table columns, an error message is displayed asking the end user to add the required fields within the displayed table columns using the table settings.
 
 > ### Note:  
-> As a general guideline for `RequiredProperties`, the `UI.Importance` annotation is set as `High` in the responsive table settings by default so that the columns don’t overflow and get hidden on small-screen devices.
+> As a general guideline for `RequiredProperties`, the `UI.Importance` annotation is set as `High` in the responsive table settings by default so that the columns don't overflow and get hidden on small-screen devices.
 

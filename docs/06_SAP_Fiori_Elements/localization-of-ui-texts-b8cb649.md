@@ -4,7 +4,7 @@
 
 If necessary, you can replace standard UI texts for apps that you have created with SAP Fiori elements.
 
-Standard texts are available in the generic framework \(for example, the button texts for draft concepts\) and belong to the template components \(for example, list report and object page\). The following sections describe how you replace texts in your generated apps.
+Standard texts are available in the generic framework \(for example, the button texts for draft concepts\) and belong to the template components \(for example, list report and object page\). The following sections describe how you can replace the texts in your generated apps.
 
 Standard texts can be overwritten by application-specific texts.
 
@@ -26,7 +26,7 @@ Perform the following steps to replace the standard UI texts:
 
 ## Overriding Texts from Annotations
 
-You can override the texts that come from annotations. To do so, the annotation must refer to the i18n key that is used in the application’s i18n file:
+You can override the texts that come from annotations. To do so, the annotation must refer to the i18n key that is used in the application's i18n file:
 
 > ### Sample Code:  
 > XML Annotation
@@ -91,7 +91,7 @@ You can override the texts that come from annotations. To do so, the annotation 
 > ]
 > ```
 
-For the annotation example above, the application’s i18n properties file must have the key `CopyActionText=Copy Selected Item`. In addition, the model should have the `@i18n` model defined within the `manifest.json` file.
+For the annotation example above, the application's i18n properties file must have the key `CopyActionText=Copy Selected Item`. In addition, the model should have the `@i18n` model defined within the `manifest.json` file.
 
 > ### Sample Code:  
 > `manifest.json`
@@ -125,12 +125,17 @@ When you have created your specific application component, for example in SAP Fi
 
 Texts from the *Generic Application Component* can't be replaced.
 
-Applications can choose to override any key that are mentioned in the following table. You can do so by using the custom `i18n` file approach.
-
-**Keys You Can Override**
+You can use the custom `i18n` file approach to override any keys that are mentioned in the following tables:
 
 
 <table>
+<tr>
+<th valign="top" colspan="3">
+
+**List Report Specific Key from `..>>lib>i18n`**
+
+</th>
+</tr>
 <tr>
 <th valign="top">
 
@@ -147,124 +152,6 @@ Default Text in SAP Fiori Elements
 Used In
 
 </th>
-</tr>
-<tr>
-<td valign="top" colspan="3">
-
-**List Report Specific Key from `..>>ListReport>i18n`** 
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-`CREATE_OBJECT` 
-
-</td>
-<td valign="top">
-
-Create
-
-</td>
-<td valign="top">
-
-Label for creating buttons in the list report.
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-`CREATE_DIALOG_TITLE` 
-
-</td>
-<td valign="top">
-
-New Object
-
-</td>
-<td valign="top">
-
-Title for the *Create* dialog if `createWithParameterDialog` is configured. Users can change titles to, for example, “Create Order” or “Create Contract”.
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-`PARTIAL_UPDATE` 
-
-</td>
-<td valign="top">
-
-\{0\} of \{1\} objects updated ??
-
-</td>
-<td valign="top">
-
-Used in a message box that is displayed in the list report after a partial update, in case of mass edit.
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-`DIALOG_TITLE_NEW_ACTION_FOR_CREATE` 
-
-</td>
-<td valign="top">
-
-Create Object
-
-</td>
-<td valign="top">
-
-Title for the `NewAction` parameter dialog in the list report.
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-`DIALOG_ACTION_BUTTON_NEW_ACTION_FOR_CREATE` 
-
-</td>
-<td valign="top">
-
-Continue
-
-</td>
-<td valign="top">
-
-Label for a button within the `NewAction` parameter dialog in the list report.
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-`MULTI_EDIT_DIALOG_TITLE` 
-
-</td>
-<td valign="top">
-
-Edit \(\{0\}\)
-
-</td>
-<td valign="top">
-
-Title for mass edit dialog in the list report page.
-
-Users can change titles to for example "Edit Purchase Orders \(\{0\}\)".
-
-</td>
-</tr>
-<tr>
-<td valign="top" colspan="3">
-
-**List Report Specific Key from `..>>lib>i18n`** 
-
-</td>
 </tr>
 <tr>
 <td valign="top">
@@ -346,7 +233,7 @@ Text displayed within the delete confirmation dialog that comes up when a user s
 </td>
 <td valign="top">
 
-This object cannot be deleted. It is currently locked by \{1\}
+This object cannot be deleted. It is currently locked by \{1\}.
 
 </td>
 <td valign="top">
@@ -402,7 +289,7 @@ Message text used in the confirmation message box when a user select multiple ob
 </td>
 <td valign="top">
 
-Text displayed within the delete confirmation dialog when a user tries to delete the selected records, out of which some objects can’t be deleted.
+Text displayed within the delete confirmation dialog when a user tries to delete the selected records, out of which some objects can't be deleted.
 
 </td>
 </tr>
@@ -419,7 +306,7 @@ Text displayed within the delete confirmation dialog when a user tries to delete
 </td>
 <td valign="top">
 
-Text displayed within the delete confirmation dialog when some of the selected objects are locked by other users and can’t be deleted.
+Text displayed within the delete confirmation dialog when some of the selected objects are locked by other users and can't be deleted.
 
 </td>
 </tr>
@@ -525,16 +412,169 @@ The selected object cannot be deleted.
 </td>
 <td valign="top">
 
-Message toast text when an object can’t be deleted from back end.
+Message toast text when an object can't be deleted from back end.
+
+</td>
+</tr>
+</table>
+
+
+<table>
+<tr>
+<th valign="top" colspan="3">
+
+**List Report Specific Key from `..>>ListReport>i18n`**
+
+</th>
+</tr>
+<tr>
+<th valign="top">
+
+Key
+
+</th>
+<th valign="top">
+
+Default Text in SAP Fiori Elements
+
+</th>
+<th valign="top">
+
+Used In
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+`CREATE_OBJECT` 
+
+</td>
+<td valign="top">
+
+Create
+
+</td>
+<td valign="top">
+
+Label for creating buttons in the list report.
 
 </td>
 </tr>
 <tr>
-<td valign="top" colspan="3">
+<td valign="top">
 
-**Key from `..>>ObjectPage>i18n`** 
+`CREATE_DIALOG_TITLE` 
 
 </td>
+<td valign="top">
+
+New Object
+
+</td>
+<td valign="top">
+
+Title for the *Create* dialog if `createWithParameterDialog` is configured. Users can change titles to, for example, "Create Order" or "Create Contract".
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`PARTIAL_UPDATE` 
+
+</td>
+<td valign="top">
+
+\{0\} of \{1\} objects updated ??
+
+</td>
+<td valign="top">
+
+Used in a message box that is displayed in the list report after a partial update, in case of mass edit.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`DIALOG_TITLE_NEW_ACTION_FOR_CREATE` 
+
+</td>
+<td valign="top">
+
+Create Object
+
+</td>
+<td valign="top">
+
+Title for the `NewAction` parameter dialog in the list report.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`DIALOG_ACTION_BUTTON_NEW_ACTION_FOR_CREATE` 
+
+</td>
+<td valign="top">
+
+Continue
+
+</td>
+<td valign="top">
+
+Label for a button within the `NewAction` parameter dialog in the list report.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`MULTI_EDIT_DIALOG_TITLE` 
+
+</td>
+<td valign="top">
+
+Edit \(\{0\}\)
+
+</td>
+<td valign="top">
+
+Title for mass edit dialog in the list report page.
+
+Users can change titles to for example "Edit Purchase Orders \(\{0\}\)".
+
+</td>
+</tr>
+</table>
+
+
+<table>
+<tr>
+<th valign="top" colspan="3">
+
+**Key from `..>>ObjectPage>i18n`**
+
+</th>
+</tr>
+<tr>
+<th valign="top">
+
+Key
+
+</th>
+<th valign="top">
+
+Default Text in SAP Fiori Elements
+
+</th>
+<th valign="top">
+
+Used In
+
+</th>
 </tr>
 <tr>
 <td valign="top">
@@ -942,7 +982,7 @@ New Item
 </td>
 <td valign="top">
 
-Title text displayed for the create dialog if `createWithParameterDialog` is configured on an object page table of a non-draft application. Users can change titles to, for example, “Create Sales Order Item”.
+Title text displayed for the create dialog if `createWithParameterDialog` is configured on an object page table of a non-draft application. Users can change titles to, for example, "Create Sales Order Item".
 
 </td>
 </tr>
@@ -980,12 +1020,33 @@ Tooltip text that is displayed when the focus is on the next paginator button on
 
 </td>
 </tr>
+</table>
+
+
+<table>
 <tr>
-<td valign="top" colspan="3">
+<th valign="top" colspan="3">
 
-**Object Page and Sub Object Page Keys from`..>>lib>i18n`** 
+**Object Page and Subobject Page Key from `..>>lib>i18n`**
 
-</td>
+</th>
+</tr>
+<tr>
+<th valign="top">
+
+Key
+
+</th>
+<th valign="top">
+
+Default Text in SAP Fiori Elements
+
+</th>
+<th valign="top">
+
+Used In
+
+</th>
 </tr>
 <tr>
 <td valign="top">
@@ -1074,12 +1135,33 @@ Text displayed when the value for a required field is missing and so the draft c
 
 </td>
 </tr>
+</table>
+
+
+<table>
 <tr>
-<td valign="top" colspan="3">
+<th valign="top" colspan="3">
 
-**List Report, Object Page and Analytical List Page Keys from `..>>lib>i18n`** 
+**List Report, Object Page, and Analytical List Page Key from `..>>lib>i18n`**
 
-</td>
+</th>
+</tr>
+<tr>
+<th valign="top">
+
+Key
+
+</th>
+<th valign="top">
+
+Default Text in SAP Fiori Elements
+
+</th>
+<th valign="top">
+
+Used In
+
+</th>
 </tr>
 <tr>
 <td valign="top">
@@ -1537,34 +1619,49 @@ Text displayed within the discard confirmation dialog when a user navigates away
 </td>
 <td valign="top">
 
-Confirm this action ?
+Confirm this action?
 
 </td>
 <td valign="top">
 
 Text within the confirmation dialog that comes up when a user clicks on an action that requires confirmation.
 
-The key can also be interpreted as `ACTION_CONFIRM|<EntitySetName><ActionName>`.
-
-Add the key value pair and the message text to the i18n.properties file of your application, as follows:
-
-> ### Sample Code:  
-> ```
-> #XMSG: Messagebox text for confirming an action question
-> ACTION_CONFIRM|STTA_C_MP_ProductActivation = Confirm Activation?
+> ### Note:  
+> The `ACTION_CONFIRM` key can also be interpreted as `ACTION_CONFIRM|<EntitySetName><ActionName>`.
 > 
-> ```
+> Add the key-value pair and the message text to the`i18n.properties` file of your application. An example of a message box text for confirming an action question can be as follows:`ACTION_CONFIRM|STTA_C_MP_ProductActivation = Confirm activation?`
 
 
 
 </td>
 </tr>
+</table>
+
+
+<table>
 <tr>
-<td valign="top" colspan="3">
+<th valign="top" colspan="3">
 
-**Key from `..>>AnalyticalPage>i18n`** 
+**Key from `..>>AnalyticalPage>i18n`**
 
-</td>
+</th>
+</tr>
+<tr>
+<th valign="top">
+
+Key
+
+</th>
+<th valign="top">
+
+Default Text in SAP Fiori Elements
+
+</th>
+<th valign="top">
+
+Used In
+
+</th>
 </tr>
 <tr>
 <td valign="top">
@@ -1608,7 +1705,7 @@ Text displayed in the analytical list page smart table when no search is trigger
 </td>
 <td valign="top">
 
-Some of the filters aren’t relevant for the tab \\"\{1\}\\" \(\{0\}\). Settings these filters has no effect on the results.
+Some of the filters aren't relevant for the tab \\"\{1\}\\" \(\{0\}\). Settings these filters has no effect on the results.
 
 </td>
 <td valign="top">
@@ -3268,6 +3365,50 @@ Label of the filter field that is automatically added to the filter bar for draf
 <td valign="top">
 
 Label of the action name in the action parameter dialog.
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`ACTION_PARAMETER_DIALOG_ACTION_TITLE` 
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+Title of the action parameter dialog.
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`C_OPERATIONS_ACTION_CONFIRM_TITLE` 
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+Title of the action confirmation dialog.
 
 </td>
 <td valign="top">

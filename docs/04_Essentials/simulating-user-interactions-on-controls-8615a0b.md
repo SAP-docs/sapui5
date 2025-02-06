@@ -171,7 +171,7 @@ There are a couple of modifiers to the `EnterText` action:
 
 ## Table Interaction
 
-A Table consists of columns \(`sap.m.Column`\) and rows. The rows, defined as `sap.m.ColumnListItems`, consist of cells. In order to use a stable locator, which isn’t expected to change frequently, you can use a field/value combination to retrieve and interact with table items.
+A Table consists of columns \(`sap.m.Column`\) and rows. The rows, defined as `sap.m.ColumnListItems`, consist of cells. In order to use a stable locator, which isn't expected to change frequently, you can use a field/value combination to retrieve and interact with table items.
 
 The following example simulates a click on an item in a table. The name of the field can be found in the $metadata file of your OData service.
 
@@ -273,7 +273,7 @@ For more information, see [`sap.ui.core.delegate.ScrollEnablement`](https://ui5.
 
 ## Writing Your Own Action
 
-Since OPA5 uses JavaScript for its execution, you can’t use native browser events to simulate user events. Sometimes it's also hard to know the exact position where to click or enter your keystrokes since SAPUI5 controls don't have a common interface for that. If you find you're missing a certain built-in action, you can create your own actions easily. Just provide an inline function as shown here:
+Since OPA5 uses JavaScript for its execution, you can't use native browser events to simulate user events. Sometimes it's also hard to know the exact position where to click or enter your keystrokes since SAPUI5 controls don't have a common interface for that. If you find you're missing a certain built-in action, you can create your own actions easily. Just provide an inline function as shown here:
 
 ```js
 sap.ui.require(["sap/ui/test/opaQUnit", "sap/ui/test/matchers/Properties"], function (opaTest, Properties) {

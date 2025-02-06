@@ -4,7 +4,7 @@
 
 In this step, we use the `sap.f.FlexibleColumnLayoutSemanticHelper` class to implement the recommended UX patterns for layout changes in the app.
 
-`FlexibleColumnLayout` gives you the freedom to implement any app logic that involves changing the layout \(showing/hiding columns\) as a result of the user’s actions. However, there are certain UX patterns that are considered as optimal and are recommended for SAP Fiori apps. The `FlexibleColumnLayoutSemanticHelper` class helps you implement them by giving you tips about what layout to display when.
+`FlexibleColumnLayout` gives you the freedom to implement any app logic that involves changing the layout \(showing/hiding columns\) as a result of the user's actions. However, there are certain UX patterns that are considered as optimal and are recommended for SAP Fiori apps. The `FlexibleColumnLayoutSemanticHelper` class helps you implement them by giving you tips about what layout to display when.
 
 > ### Note:  
 > Using this class is NOT mandatory in order to build an app with the `FlexibleColumnLayout`, but makes it easier to achieve the optimal UX recommended in the SAP Fiori design guidelines.
@@ -21,8 +21,7 @@ For more information, see [Flexible Column Layout Semantic Helper](../10_More_Ab
   
 **List-detail-detail pattern using sap.f.FlexibleColumnLayoutSemanticHelper**
 
-![](images/With_Semantic_Helper_Fiori_2_0_Tutorial_fd98e0d.gif "List-detail-detail pattern using
-						sap.f.FlexibleColumnLayoutSemanticHelper")
+![](images/With_Semantic_Helper_Fiori_2_0_Tutorial_fd98e0d.gif "List-detail-detail pattern using sap.f.FlexibleColumnLayoutSemanticHelper")
 
 
 
@@ -30,7 +29,7 @@ For more information, see [Flexible Column Layout Semantic Helper](../10_More_Ab
 
 ## Coding
 
-You can view and download all files at [Flexible Column Layout App - Step 11](https://ui5.sap.com/#/sample/sap.f.tutorial.fiori2.11/preview).
+You can view and download all files at [Flexible Column Layout App - Step 11](https://ui5.sap.com/#/sample/sap.f.tutorial.fcl.11/preview).
 
 
 
@@ -47,7 +46,7 @@ sap.ui.define([
 ], function(UIComponent, JSONModel, FlexibleColumnLayoutSemanticHelper, fioriLibrary) {
 	'use strict';
 
-	return UIComponent.extend('sap.ui.demo.fiori2.Component', {
+	return UIComponent.extend('sap.ui.demo.fcl.Component', {
 
 		metadata: {
 			manifest: 'json'
@@ -64,7 +63,7 @@ sap.ui.define([
 			this.setModel(oModel);
 
 			// set products demo model on this sample
-			oProductsModel = new JSONModel(sap.ui.require.toUrl('sap/ui/demo/mock') + '/products.json');
+			oProductsModel = new JSONModel(sap.ui.require.toUrl('sap/ui/demo/mock/products.json'));
 			oProductsModel.setSizeLimit(1000);
 			this.setModel(oProductsModel, 'products');
 
@@ -130,7 +129,7 @@ First, we add a `getHelper` function in the `Component.js` file in order to pass
 				<snappedHeading>
 					<m:FlexBox wrap="Wrap" fitContainer="true" alignItems="Center">
 						<m:FlexBox wrap="NoWrap" fitContainer="true" alignItems="Center" class="sapUiTinyMarginEnd">
-							<f:Avatar
+							<m:Avatar
 								src="https://ui5.sap.com/{products>ProductPicUrl}"
 								displaySize="S"
 								displayShape="Square"
@@ -195,7 +194,7 @@ sap.ui.define([
 ], function (Controller) {
 	"use strict";
 
-	return Controller.extend("sap.ui.demo.fiori2.controller.Detail", {
+	return Controller.extend("sap.ui.demo.fcl.controller.Detail", {
 		onInit: function () {
 			this.oOwnerComponent = this.getOwnerComponent();
 
@@ -270,7 +269,7 @@ We create the handlers needed for the navigation actions.
 
 ```xml
 <mvc:View
-	controllerName="sap.ui.demo.fiori2.controller.DetailDetail"
+	controllerName="sap.ui.demo.fcl.controller.DetailDetail"
 	xmlns="sap.f"
 	xmlns:m="sap.m"
 	xmlns:mvc="sap.ui.core.mvc">
@@ -322,12 +321,11 @@ Again, we add navigation actions for entering and exiting fullscreen and closing
 
 ```js
 sap.ui.define([
-	"sap/ui/model/json/JSONModel",
 	"sap/ui/core/mvc/Controller"
-], function (JSONModel, Controller) {
+], function (Controller) {
 	"use strict";
 
-	return Controller.extend("sap.ui.demo.fiori2.controller.DetailDetail", {
+	return Controller.extend("sap.ui.demo.fcl.controller.DetailDetail", {
 		onInit: function () {
 			this.oOwnerComponent = this.getOwnerComponent();
 
@@ -391,12 +389,12 @@ sap.ui.define([
 	"sap/ui/core/mvc/Controller",
 	"sap/ui/model/Filter",
 	"sap/ui/model/FilterOperator",
-	'sap/ui/model/Sorter',
-	'sap/m/MessageBox'
-], function (JSONModel, Controller, Filter, FilterOperator, Sorter, MessageBox) {
+	"sap/ui/model/Sorter",
+	"sap/m/MessageBox"
+], function (Controller, Filter, FilterOperator, Sorter, MessageBox) {
 	"use strict";
 
-	return Controller.extend("sap.ui.demo.fiori2.controller.List", {
+	return Controller.extend("sap.ui.demo.fcl.controller.List", {
 		onInit: function () {
 			this.oView = this.getView();
 			this._bDescendingSort = false;
@@ -453,12 +451,11 @@ We get the next layout from the semantic helper rather than hard coding them our
 
 ```js
 sap.ui.define([
-	"sap/ui/model/json/JSONModel",
 	"sap/ui/core/mvc/Controller"
-], function (JSONModel, Controller) {
+], function (Controller) {
 	"use strict";
 
-	return Controller.extend("sap.ui.demo.fiori2.controller.App", {
+	return Controller.extend("sap.ui.demo.fcl.controller.App", {
 		onInit: function () {
 			this.oOwnerComponent = this.getOwnerComponent();
 			this.oRouter = this.oOwnerComponent.getRouter();

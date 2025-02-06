@@ -566,5 +566,5 @@ You must set the following keys for each target:
 > 
 > -   When you update a multi-input field on an object page, you need to first refresh the parent page \(either an object page or a list report\) before the changes are visible.
 > 
-> -   In the flexible column layout, a tree table nor an analytical table cannot be displayed on the list report with a draft-enabled service.
+> -   In the flexible column layout, you can neither display a tree table nor an analytical table in the list report with a draft-enabled service.
 

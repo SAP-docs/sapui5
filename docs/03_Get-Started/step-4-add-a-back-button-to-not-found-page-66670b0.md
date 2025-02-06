@@ -39,7 +39,7 @@ You can view and download all files in the *Samples* in the Demo Kit at [Routing
 </mvc:View>
 ```
 
-In the `NotFound` view, we set the property `showNavButton` of the `MessagePage` control to `true` to automatically display the *Back* button. We also add an event handler function `onNavBack` to the `navButtonPress` event of the control. The `onNavBack` function will handle the actual back navigation. We could directly add this function to the view’s controller. However, we are smart enough to anticipate that we might need the same handler function for different views. DRY \(“Don’t Repeat Yourself”\) is the right approach for us, so let’s create a `BaseController` from which all other controllers will inherit.
+In the `NotFound` view, we set the property `showNavButton` of the `MessagePage` control to `true` to automatically display the *Back* button. We also add an event handler function `onNavBack` to the `navButtonPress` event of the control. The `onNavBack` function will handle the actual back navigation. We could directly add this function to the view's controller. However, we are smart enough to anticipate that we might need the same handler function for different views. DRY \("Don't Repeat Yourself"\) is the right approach for us, so let's create a `BaseController` from which all other controllers will inherit.
 
 
 
@@ -78,11 +78,11 @@ sap.ui.define([
 
 ```
 
-Create a new `BaseController.js` file in the `webapp/controller` folder. The base controller implements a set of functions that are reused by its subclasses. The `onNavBack` handler is a great example of code that we don’t want to duplicate in our controllers for each page that has a back navigation.
+Create a new `BaseController.js` file in the `webapp/controller` folder. The base controller implements a set of functions that are reused by its subclasses. The `onNavBack` handler is a great example of code that we don't want to duplicate in our controllers for each page that has a back navigation.
 
-The function checks if there is a previous hash value in the app history. If so, it redirects to the previous hash via the browser’s native `History` API. In case there is no previous hash we simply use the router to navigate to the route `appHome` which is our home view.
+The function checks if there is a previous hash value in the app history. If so, it redirects to the previous hash via the browser's native `History` API. In case there is no previous hash we simply use the router to navigate to the route `appHome` which is our home view.
 
-The third parameter of `navTo("appHome", {}, true /*no history*/);` has the value `true` and makes sure that the hash is replaced. With the line `sap.ui.core.UIComponent.getRouterFor(this)` you can easily access your component’s router throughout the app. To make it even more comfortable, we also add a handy shortcut `getRouter` to the base controller. This function is now available in each subclass as well. It is also used in the `onNavBack` handler to get a reference to the router before calling `navTo`. We now have to implement the reuse in all other controllers.
+The third parameter of `navTo("appHome", {}, true /*no history*/);` has the value `true` and makes sure that the hash is replaced. With the line `sap.ui.core.UIComponent.getRouterFor(this)` you can easily access your component's router throughout the app. To make it even more comfortable, we also add a handy shortcut `getRouter` to the base controller. This function is now available in each subclass as well. It is also used in the `onNavBack` handler to get a reference to the router before calling `navTo`. We now have to implement the reuse in all other controllers.
 
 > ### Note:  
 > In SAPUI5 there are multiple options to reuse code. We recommend to use a base controller for such helper methods because this allows us to decoratively use the `onNavBack` handler directly in any XML view without adding additional code to the controller. Our base controller is an abstract controller that will not be instantiated in any view. Therefore, the naming convention `*.controller.js` does not apply, and we can just call the file `BaseController.js`. By not using the naming convention `*.controller.js` we can even prevent any usage in views.
@@ -106,7 +106,7 @@ sap.ui.define([
 
 In order to reuse the base controller implementation, we have to change the dependency from `sap/ui/core/mvc/Controller` to `sap/ui/demo/nav/controller/BaseController` and directly extend the base controller.
 
-At this point you can open `index.html#/thisIsInvalid` in your browser and press the *Back* button to see what happens. You will be redirected to the app’s home page that is matched by the route `appHome` as you opened the *Not Found* page with an invalid hash. If you change the hash to something invalid when you are on the home page of the app, you will also go to the *Not Found* page but with a history entry. When you press back, you will get to the home page again, but this time with a native history navigation.
+At this point you can open `index.html#/thisIsInvalid` in your browser and press the *Back* button to see what happens. You will be redirected to the app's home page that is matched by the route `appHome` as you opened the *Not Found* page with an invalid hash. If you change the hash to something invalid when you are on the home page of the app, you will also go to the *Not Found* page but with a history entry. When you press back, you will get to the home page again, but this time with a native history navigation.
 
 
 
@@ -145,7 +145,7 @@ sap.ui.define([
 The same applies to our home controller, we also extend it with the base controller now.
 
 > ### Note:  
-> In this step we have added the *Back* button. The user can always use the browser’s native *Back* button as well. Each app can freely configure the behavior of the *Back* button. However, there is no clean way to apply the same logic for the browser’s *Back* button in single-page applications. Tweaking the browser history or using other quirks for cancelling backward or forward navigation is not recommended due to the implementation details of the browsers. The browser’s *Back* button always uses the browser history while the *Back* button of the app can make use of the browser history **or** can implement its own navigation logic. Make sure to understand this difference and only control the *Back* button inside the app.
+> In this step we have added the *Back* button. The user can always use the browser's native *Back* button as well. Each app can freely configure the behavior of the *Back* button. However, there is no clean way to apply the same logic for the browser's *Back* button in single-page applications. Tweaking the browser history or using other quirks for cancelling backward or forward navigation is not recommended due to the implementation details of the browsers. The browser's *Back* button always uses the browser history while the *Back* button of the app can make use of the browser history **or** can implement its own navigation logic. Make sure to understand this difference and only control the *Back* button inside the app.
 
 
 

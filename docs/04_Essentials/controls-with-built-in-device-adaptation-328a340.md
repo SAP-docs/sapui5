@@ -23,7 +23,7 @@ For more information about the `SplitContainer`, see the [sap.m.SplitContainer](
 
 
 
-## sap.m.Table \(also called the “Responsive Table”\)
+## sap.m.Table \(also called the "Responsive Table"\)
 
 One control that is widely used across all kinds of different applications is `sap.m.Table`, which has several features you can use for device adaptation. On smaller devices, for example, you can set certain properties that will make particular columns pop in instead of being displayed as a normal column, or show and hide columns completely.
 

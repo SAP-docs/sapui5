@@ -17,7 +17,7 @@ For the object page, a static tile is created. Dynamic tiles fetch data from a w
 
 -   They can access a different service URL and thus retrieve a wrong value
 
--   They might fetch data that does not correctly represent the tile’s purpose
+-   They might fetch data that does not correctly represent the tile's purpose
 
 -   They might be inconsistent if the original tile is static
 

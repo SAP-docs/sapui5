@@ -4,7 +4,7 @@
 
 In this tutorial you will learn how to embed a rule builder control to manage business rules in your application.
 
-A business rule is a logic that defines some aspect of business and always resolves to either true or false. This logic can be maintained by non-technical users via a simplified rule language and user interface. Thus, business rules allow your application’s customers to add their own logic without needing technical customization or coding.
+A business rule is a logic that defines some aspect of business and always resolves to either true or false. This logic can be maintained by non-technical users via a simplified rule language and user interface. Thus, business rules allow your application's customers to add their own logic without needing technical customization or coding.
 
 The rule builder control enables business users to create and edit business rules in applications based on SAPUI5. The control defines SAP standard UX for creating business rules in an SAP Fiori application and should be the default UI component for SAP Fiori UI developers to add business rule capabilities.
 

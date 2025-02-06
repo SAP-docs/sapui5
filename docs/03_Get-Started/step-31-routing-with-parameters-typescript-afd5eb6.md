@@ -88,7 +88,7 @@ For that we have to pass the event object to our `onPress` method. This way we g
 
 In the `navTo` method we now add a configuration object to fill the navigation parameter `invoicePath` with the current information of the item. This will update the URL and navigate to the detail view at the same time. On the detail page, we can access this navigation parameter again and display the corresponding item.
 
-Typically we'd use the key of the item in the back-end system to identify the selected object, because it is short and precise. For our invoice items however, we do not have a simple key. Therefore, we directly use the binding path to keep the example short and simple. The path to the item is part of the binding context which is a helper object of SAPUI5 to manage the binding information for controls. The binding context can be accessed by calling the `getBindingContext` method with the model name on any bound SAPUI5 control. We need to remove the first `/` from the binding path by calling `.substr(1)` on the string because this is a special character in URLs and is not allowed; we need to add it again on the detail page. Also, the binding path might contain special characters which are not allowed in URLs, so we have to encode the path with `encodeURIComponent`.
+Typically we'd use the key of the item in the back-end system to identify the selected object, because it is short and precise. For our invoice items however, we do not have a simple key. Therefore, we directly use the binding path to keep the example short and simple. The path to the item is part of the binding context which is a helper object of SAPUI5 to manage the binding information for controls. The binding context can be accessed by calling the `getBindingContext` method with the model name on any bound SAPUI5 control. We need to remove the first `/` from the binding path by calling `.substring(1)` on the string because this is a special character in URLs and is not allowed; we need to add it again on the detail page. Also, the binding path might contain special characters which are not allowed in URLs, so we have to encode the path with `encodeURIComponent`.
 
 ```js
 import Controller from "sap/ui/core/mvc/Controller";
@@ -111,7 +111,7 @@ export default class App extends Controller {
 
         const router = UIComponent.getRouterFor(this);
         router.navTo("detail", {
-            invoicePath: window.encodeURIComponent(item.getBindingContext("invoice").getPath().substr(1))
+            invoicePath: window.encodeURIComponent(item.getBindingContext("invoice").getPath().substring(1))
         });
     }     
 };

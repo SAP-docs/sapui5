@@ -176,7 +176,7 @@ For semantic coloring, both the `Criticality` and `CriticalityCalculation` annot
 
 The following annotations are mandatory and must be used in the column micro chart:
 
--   `UI.Chart` → `ChartType`: “`Donut`”
+-   `UI.Chart` → `ChartType`: "`Donut`"
 
 -   `UI.Chart` → `Measures`
 

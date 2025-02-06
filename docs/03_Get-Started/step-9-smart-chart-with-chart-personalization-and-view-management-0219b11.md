@@ -116,7 +116,7 @@ You can view and download all files in the *Samples* in the Demo Kit at [Smart C
 
 ```
 
-We see that a new control has been added to the `view.xml`. In the `SmartChart` control, we refer to the entity type that we will see later in the `metadata.xml`. With `SemanticObjectController` that is added to the `semanticObjectController` aggregation of `SmartChart`, we can enable the display of linked data for a particular entity. We also set `enableAutoBinding=”true”`, which enables automatic execution of the query and thus shows the result as soon as the `SmartChart` control is loaded. We set `useVariantManagement=”true”` and `persistencyKey=”SmartChart_Explored”` to enable the view management. We also set `useChartPersonalisation=”true”`, which enables the chart personalization.
+We see that a new control has been added to the `view.xml`. In the `SmartChart` control, we refer to the entity type that we will see later in the `metadata.xml`. With `SemanticObjectController` that is added to the `semanticObjectController` aggregation of `SmartChart`, we can enable the display of linked data for a particular entity. We also set `enableAutoBinding="true"`, which enables automatic execution of the query and thus shows the result as soon as the `SmartChart` control is loaded. We set `useVariantManagement="true"` and `persistencyKey="SmartChart_Explored"` to enable the view management. We also set `useChartPersonalisation="true"`, which enables the chart personalization.
 
 
 
@@ -314,7 +314,7 @@ The most important point to keep in mind is that analytical annotations along wi
 
 -   `sap:semantics="aggregate"`
 
-    An analytical operation can be performed on the data. This has to be added to `EntityType` \(in our case “Product”\)
+    An analytical operation can be performed on the data. This has to be added to `EntityType` \(in our case "Product"\)
 
 -   `sap:aggregation-role="dimension"`
 

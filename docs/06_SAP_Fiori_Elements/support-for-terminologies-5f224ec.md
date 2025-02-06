@@ -16,7 +16,7 @@ To use the concept of terminologies provided by SAPUI5, the "model" definition i
 >         "type": "sap.ui.model.resource.ResourceModel",
 >         "settings": {
 >             "bundleUrl": "i18n/i18n.properties",
->             "supportedLocales": ["en", “de”],
+>             "supportedLocales": ["en", "de"],
 >             "fallbackLocale": "en",
 >             "terminologies": {
 >                 "travel": {

@@ -1,18 +1,18 @@
 <!-- loio675c514720f04b06a6fdf7be42901187 -->
 
-# Configuring Dynamic Link List Card
+# Configuring the Dynamic Link List Card
 
-Lets you display data \(links and images/icons\) in the form of list items.
-
-
-
-You can set the `listFlavor` property in the card settings to display information in standard link list type or as a carousel link list type.
-
-Additionally, dynamic link list card supports contact annotation as default annotation without qualifier to enable quick view information.
+Allows you to display data such as links, images, and icons in the form of list items.
 
 
 
-1.  Configure descriptor settings
+To display information in the link list card as either standard or carousal type, configure the `listFlavor` property in the card settings.
+
+The dynamic link list card also supports the contact annotation as the default annotation without a qualifier, enabling quick view information.
+
+
+
+1.  Configure the descriptor settings.
 
     ```
             "card017": {
@@ -36,15 +36,15 @@ Additionally, dynamic link list card supports contact annotation as default anno
     
     ```
 
-2.  Configure list information in the `UI.HeaderInfo` annotation.
+2.  Configure the list information in the `UI.HeaderInfo` annotation.
 
     -   List title: Set the `Title` property.
 
     -   List subtitle: Set the `Description` property.
 
-    -   List item picture: Set the `ImageUrl` property to display list image. Or, set the `typeImageUrl` property to display list icon.
+    -   List item picture: Set the `ImageUrl` property to display the list image, or set the `typeImageUrl` property to display the list icon.
 
-    -   Carousel picture: Configuration is similar to the list item picture. Additionally, the carousel picture reacts to a click event similar to the list title.
+    -   Carousel picture: The configuration is similar to the list item picture. The carousel picture responds to a click event in the same way as the list title.
 
 
     > ### Sample Code:  
@@ -118,19 +118,19 @@ Additionally, dynamic link list card supports contact annotation as default anno
     > },
     > ```
 
-3.  Configure contact annotation
+3.  Configure the contact annotation.
 
-    A contact card is displayed as a popover. The data shown on the contact card are taken from the communication contact annotation of the card. Currently the following elements of the contact annotation are evaluated:
+    A contact card is displayed as a popover. The data displayed on the contact card is taken from the communication contact annotation of the card. The following elements of the contact annotation are evaluated:
 
-    -   `fn` \(Full name - used as headline of the contact card header\)
+    -   `fn`: Full name - Used as the headline of the contact card header.
 
-        `photo` \(URL for a picture – used in the contact card header\)
+    -   `photo`: URL for a picture – Used in the contact card header.
 
-        `role` \(used as the description text in the contact card header\)
+    -   `role`: Used as the description text in the contact card header.
 
-        `tel` \(with property type “work” and “pref” the contact card shows it as “Phone”, with property type “cell” and “work” it is shown as “Mobile”
+    -   `tel`: When the property types are `work` and `pref`, the contact card displays it as *Phone*. When the property types are `cell` and `work`, it is displayed as *Mobile*.
 
-        `email` \(with property type “work” and “pref” the contact card shows it as “E-Mail”\)
+    -   `email`: When the property types are `work` and `pref`, the contact card displays it as *E-Mail*.
 
 
     > ### Sample Code:  
@@ -231,15 +231,15 @@ Additionally, dynamic link list card supports contact annotation as default anno
     > 
     > ```
 
-4.  Configure navigation type.
+4.  Configure the navigation type.
 
-    Link list card supports the following navigation types:
+    The link list card supports the following navigation types:
 
-    -   Intent based navigation: Define `SemanticObject` and `Action` properties in the `UI.Identification` annotation to set the navigation target.
+    -   Intent-based navigation: Define the `SemanticObject` and `Action` properties in the `UI.Identification` annotation to set the navigation target.
 
-    -   Function import \(`DataFieldForAction`\): Define `Action` property in the `LineItem` annotation to trigger a function import that performs an OData action for an entity.
+    -   Function import \(`DataFieldForAction`\): Define the `Action` property in the `LineItem` annotation to trigger a function import that performs an OData action for an entity.
 
-    -   External navigation: Define `UI.LineItem` of type `WITH_URL`. The URL for this navigation is taken from the entity type field that is named in the line item’s `url` property.
+    -   External navigation: Define the `UI.LineItem` of type `WITH_URL`. The URL for this navigation is taken from the entity type field that is named in the line item's `url` property.
 
 
     **Navigation Behavior**
@@ -261,34 +261,13 @@ Additionally, dynamic link list card supports contact annotation as default anno
     <tr>
     <td valign="top">
     
-    For any of these annotation configuration:
+    For any of these annotation configurations:
 
-    -   `UI.Identification` annotation with property `Action`
+    -   `UI.Identification` annotation with the `Action` property
 
-    -   `com.sap.vocabularies.UI.v1.LineItem` annotation with property `Action`
+    -   `com.sap.vocabularies.UI.v1.LineItem` annotation with the `Action` property
 
-    -   `com.sap.vocabularies.UI.v1.LineItem` annotation with property `Url`
-
-
-
-    
-    </td>
-    <td valign="top">
-    
-    Navigation is available from line item
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-    For any of these annotation configuration + default contact annotation:
-
-    -   `UI.Identification` annotation with property `Action`
-
-    -   `com.sap.vocabularies.UI.v1.LineItem` annotation with property `Action`
-
-    -   `com.sap.vocabularies.UI.v1.LineItem` annotation with property `Url`
+    -   `com.sap.vocabularies.UI.v1.LineItem` annotation with the `Url` property
 
 
 
@@ -296,31 +275,52 @@ Additionally, dynamic link list card supports contact annotation as default anno
     </td>
     <td valign="top">
     
-    Navigation is available from line item and you can see quick view information on click of the title.
+    Navigation is available from the line item.
     
     </td>
     </tr>
     <tr>
     <td valign="top">
     
-    For only default contact annotation configuration
+    For any of these annotation configurations and the default contact annotation:
+
+    -   `UI.Identification` annotation with the `Action` property
+
+    -   `com.sap.vocabularies.UI.v1.LineItem` annotation with the `Action` property
+
+    -   `com.sap.vocabularies.UI.v1.LineItem` annotation with the `Url` property
+
+
+
     
     </td>
     <td valign="top">
     
-    Quick view information is available on click of title
+    Navigation is available from the line item and you can see the quick view information when clicking the title.
     
     </td>
     </tr>
     <tr>
     <td valign="top">
     
-    If no navigation based annotation or contact annotation
+    Only for default contact annotation configuration
     
     </td>
     <td valign="top">
     
-    Only label is displayed
+    Quick view information is available when clicking the title.
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    If no navigation-based annotation or contact annotation exists
+    
+    </td>
+    <td valign="top">
+    
+    Only the label is displayed.
     
     </td>
     </tr>

@@ -191,7 +191,7 @@ This groups the fields in a form-like display, as shown in the following screens
 ![](images/Related_Fields_Using_a_Form_Implementation_b9b30bd.png)
 
 > ### Note:  
-> -   If there is no `Headerfacet` annotation and if the `Headerinfo` annotation doesn’t contain any images, then the expand or collapse button and the pin button are hidden from the object page header.
+> -   If there is no `Headerfacet` annotation and if the `Headerinfo` annotation doesn't contain any images, then the expand or collapse button and the pin button are hidden from the object page header.
 > 
 > -   If a subsection contains only one group, and the subsection title is same as group title, then the group title is hidden.
 
@@ -225,7 +225,7 @@ The following annotation types are currently supported:
 
 
 > ### Note:  
-> If you use multiple `DataFieldForAction` buttons, you must ensure that you do not show a column header. You achieve this by not specifying a “Label” for the `DataFieldForAnnotation` that is under the `LineItem` definition and holds the `FieldGroup`.
+> If you use multiple `DataFieldForAction` buttons, you must ensure that you do not show a column header. You achieve this by not specifying a "Label" for the `DataFieldForAnnotation` that is under the `LineItem` definition and holds the `FieldGroup`.
 
 
 
@@ -362,7 +362,7 @@ This displays a `DataField` and a dummy button, as shown in the following screen
 
 ## Semantically Connected Fields
 
-Semantically connected fields are displayed side by side to reflect their data relation. Fields can be displayed under a single display name but can be edited separately.
+Semantically connected fields are displayed side by side to reflect their data relation. Fields can be displayed under a single display name but can be edited separately. If both of the semantically connected fields are hidden, the display name is hidden as well.
 
 You use the `UI.ConnectedFields` annotation to display two fields side by side.
 
@@ -397,12 +397,12 @@ You use the `UI.ConnectedFields` annotation to display two fields side by side.
 >         <PropertyValue Property="Data">
 >             <Record >
 >                 <PropertyValue Property="SalesOrderDate">
->                     <Record Type="com.sap.vocabularies.UI.v1.DataField”>
+>                     <Record Type="com.sap.vocabularies.UI.v1.DataField">
 >                         <PropertyValue Property="Value" Path="SalesOrderDate"/>
 >                     </Record>
 >                 </PropertyValue>
 >                 <PropertyValue Property="SalesOrderTime">
->                     <Record Type="com.sap.vocabularies.UI.v1.DataField”>
+>                     <Record Type="com.sap.vocabularies.UI.v1.DataField">
 >                         <PropertyValue Property="Value" Path="TrialTOD"/>
 >                     </Record>
 >                 </PropertyValue>
@@ -418,12 +418,12 @@ You use the `UI.ConnectedFields` annotation to display two fields side by side.
 >         <PropertyValue Property="Data">
 >             <Record >
 >                 <PropertyValue Property="PurchaseOrderByCustomer">
->                     <Record Type="com.sap.vocabularies.UI.v1.DataField”>
+>                     <Record Type="com.sap.vocabularies.UI.v1.DataField">
 >                         <PropertyValue Property="Value" Path="PurchaseOrderByCustomer"/>
 >                     </Record>
 >                 </PropertyValue>
 >                 <PropertyValue Property="ShippingCondition">
->                     <Record Type="com.sap.vocabularies.UI.v1.DataField”>
+>                     <Record Type="com.sap.vocabularies.UI.v1.DataField">
 >                         <PropertyValue Property="Value" Path="ShippingCondition"/>
 >                     </Record>
 >                 </PropertyValue>

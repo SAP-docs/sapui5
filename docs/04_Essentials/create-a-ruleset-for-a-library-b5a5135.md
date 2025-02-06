@@ -32,7 +32,7 @@ A ruleset is a `library.support.js` file that defines an object `name` and `nice
     
     ```
 
-4.  Create a folder to hold the rules. For example, if the library name is `sap.m`, the folder structure, if there isn’t one already created, should be `src/sap/m/rules`.
+4.  Create a folder to hold the rules. For example, if the library name is `sap.m`, the folder structure, if there isn't one already created, should be `src/sap/m/rules`.
 
 
 Here is an example of folder structure depending on the location of your ruleset:

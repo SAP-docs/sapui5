@@ -4,7 +4,7 @@
 
 The top labels are always formatted by the `sap.ui.core.format.NumberFormat`.
 
-The bottom labels are formatted by the number or date formatter depending on the `dimensions` property’s type and its annotations:
+The bottom labels are formatted by the number or date formatter depending on the `dimensions` property's type and its annotations:
 
 **Formatted bottom labels in different annotation cases**
 
@@ -45,12 +45,12 @@ Any type
 </td>
 <td valign="top">
 
-`sap:text`=”DateLabel” \(or has annotation `Common.Text` whose Path=”DateLabel”\)
+`sap:text`="DateLabel" \(or has annotation `Common.Text` whose Path="DateLabel"\)
 
 </td>
 <td valign="top">
 
-“any text” \(raw value of `DateLabel` property\)
+"any text" \(raw value of `DateLabel` property\)
 
 </td>
 <td valign="top">
@@ -60,7 +60,7 @@ Depends on property type \(use index value if neither date nor number type\)
 </td>
 <td valign="top">
 
-‘any text’
+'any text'
 
 </td>
 </tr>
@@ -72,7 +72,7 @@ Edm.String
 </td>
 <td valign="top">
 
-`sap:semantics`=”year” \(or has annotation `IsCalendarYear`\)
+`sap:semantics`="year" \(or has annotation `IsCalendarYear`\)
 
 </td>
 <td valign="top">
@@ -99,7 +99,7 @@ Edm.String
 </td>
 <td valign="top">
 
-`sap:semantics`=”yearmonth” \(or has annotation `IsCalendarYearMonth`\)
+`sap:semantics`="yearmonth" \(or has annotation `IsCalendarYearMonth`\)
 
 </td>
 <td valign="top">
@@ -126,7 +126,7 @@ Edm.String
 </td>
 <td valign="top">
 
-`sap:semantics`=”yearmonthday” \(or has annotation `IsCalendarDate`\)
+`sap:semantics`="yearmonthday" \(or has annotation `IsCalendarDate`\)
 
 </td>
 <td valign="top">
@@ -228,8 +228,8 @@ Edm.Int32 or other number types
 </tr>
 </table>
 
--   If the `dimensions` property has a V2 annotation `sap:text` \(or V4 annotation `Common.Text`\) pointing to another property, that property’s value will be used to display the bottom label, no matter what the primary property’s data type is. The x-coordinate’s value depends on the primary property’s data type. If its type is `DateTime`, the date is converted to a timestamp; if it has a numeric type, the value is used directly. In other cases, each point’s index from within the data list is used, causing an evenly distribution of points on the x-axis.
+-   If the `dimensions` property has a V2 annotation `sap:text` \(or V4 annotation `Common.Text`\) pointing to another property, that property's value will be used to display the bottom label, no matter what the primary property's data type is. The x-coordinate's value depends on the primary property's data type. If its type is `DateTime`, the date is converted to a timestamp; if it has a numeric type, the value is used directly. In other cases, each point's index from within the data list is used, causing an evenly distribution of points on the x-axis.
 
--   If the type of the `dimensions` property is 'string' and it has a V2 annotation `sap:semantics` \(or the V4 annotation `IsCalendarYear`, or similar\), the raw value is formatted to a shortened date string based on the pattern provided by `sap:semantics` \(or a corresponding pattern of `IsCalendarYear`\) and the value of the x-coordinate is set to the formatted date’s timestamp. The bottom label displays the formatted short date.
--   If the type of the `dimensions` property is `DateTime` or another numeric type without any of the annotations mentioned above, the raw value is formatted by the number formatter or date formatter depending on the data type. Each point’s x-coordinate value is set to the date’s timestamp representation if its type is `DateTime`, and to a numeric value if its type is numeric.
+-   If the type of the `dimensions` property is 'string' and it has a V2 annotation `sap:semantics` \(or the V4 annotation `IsCalendarYear`, or similar\), the raw value is formatted to a shortened date string based on the pattern provided by `sap:semantics` \(or a corresponding pattern of `IsCalendarYear`\) and the value of the x-coordinate is set to the formatted date's timestamp. The bottom label displays the formatted short date.
+-   If the type of the `dimensions` property is `DateTime` or another numeric type without any of the annotations mentioned above, the raw value is formatted by the number formatter or date formatter depending on the data type. Each point's x-coordinate value is set to the date's timestamp representation if its type is `DateTime`, and to a numeric value if its type is numeric.
 

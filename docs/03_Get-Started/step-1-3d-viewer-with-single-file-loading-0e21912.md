@@ -32,7 +32,7 @@ Open a terminal and install UI5 Tooling globally on your machine by executing th
 
 You can view and download all files at [3D Viewer - Step 1 - 3D Viewer With Single File Loading](https://ui5.sap.com/#/entity/sap.ui.vk.tutorial.VIT/sample/sap.ui.vk.tutorial.VIT.01).
 
-1.  Create a folder on your local machine which will contain all the sources of the app we're going to build. We'll refer to this folder as the “app root folder”.
+1.  Create a folder on your local machine which will contain all the sources of the app we're going to build. We'll refer to this folder as the "app root folder".
 2.  Create a new file called `package.json` which will enable you to execute commands and consume packages from the[npm registry](https://www.npmjs.com/) via the npm command line interface. Enter the following content:
 
     **package.json \(New\)**
@@ -345,7 +345,7 @@ You can view and download all files at [3D Viewer - Step 1 - 3D Viewer With Sing
                     var fileName = localFile.name;
                     var index = fileName.lastIndexOf(".");
                     if (index >= 0 && index < fileName.length - 1) {
-                        var sourceType = fileName.substr(index + 1).toLowerCase();                     
+                        var sourceType = fileName.substring(index + 1).toLowerCase();                     
                     if (sourceType == "vds") { 
     
                         sourceType = "vds4"; // Use new loader 

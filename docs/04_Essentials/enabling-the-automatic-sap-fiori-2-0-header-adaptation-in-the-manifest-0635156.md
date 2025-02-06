@@ -1,8 +1,8 @@
 <!-- loio0635156f3950494885ca314a13e15e29 -->
 
-# Enabling the Automatic SAP Fiori 2.0 Header Adaptation in the Descriptor
+# Enabling the Automatic SAP Fiori 2.0 Header Adaptation in the Manifest
 
-Application developers can enable automatic adaptation of their existing applications from the manifest.json app descriptor. This helps to easily convert applications to the new look-and-feel of SAP Fiori 2.0.
+Application developers can enable automatic adaptation of their existing applications from the `manifest.json` file \(also known as descriptor for applications, components and libraries\). This helps to easily convert applications to the new look-and-feel of SAP Fiori 2.0.
 
 
 
@@ -10,7 +10,7 @@ Application developers can enable automatic adaptation of their existing applica
 
 SAP Fiori 2.0 is the next evolution step of the SAP Fiori UX. SAP Fiori 2.0 features new themes, a more unified user experience, and smoother, more intuitive application interactions.
 
-Application headers, written based on older SAP Fiori design guidelines, can now be easily adapted to the new SAP Fiori 2.0 look-and-feel by using the automatic adaptation mechanism in the app descriptor.
+Application headers, written based on older SAP Fiori design guidelines, can now be easily adapted to the new SAP Fiori 2.0 look-and-feel by using the automatic adaptation mechanism in the manifest.
 
 
 
@@ -53,9 +53,9 @@ You can see how the elements are moved and transformed from the old SAP Fiori ve
 
 
 
-## Enabling the Adaptation in the App Descriptor
+## Enabling the Adaptation in the Manifest
 
-You can override the adapter default behavior for a single application by adding an entry in the app descriptor in the `sap.ui5/config` section. Setting `sapFiori2Adaptation` to **true** enables the full functionality of the SAP Fiori 2.0 Adapter.
+You can override the adapter default behavior for a single application by adding an entry in the manifest in the `sap.ui5/config` section. Setting `sapFiori2Adaptation` to **true** enables the full functionality of the SAP Fiori 2.0 Adapter.
 
 ```
 "config": {
@@ -99,7 +99,7 @@ In the list below, you can see what each of the settings enables.
 > ### Note:  
 > In rare cases this automatic adaptation of the header area may not work, due to the application structure or other reasons. In this case the headers will still appear in the old design, but the apps will continue to be usable.
 
-Some old SAP Fiori applications do not have an app descriptor yet. If you consider the effort to provide proper app descriptors for all applications as too high, there is a second way to do this configuration. This alternative configuration is done in the `metadata` section of <code><b>Component.js</b></code> \(the app’s root component\), which also has a `config` section. The configuration options can be done there in the same manner.
+Some old SAP Fiori applications do not have a manifest yet. If you consider the effort to provide proper manifests for all applications as too high, there is a second way to do this configuration. This alternative configuration is done in the `metadata` section of <code><b>Component.js</b></code> \(the app's root component\), which also has a `config` section. The configuration options can be done there in the same manner.
 
 > ### Note:  
 > If both the metadata and manifest are configured, and contradict each other, the configuration in **manifest.json** is applied.

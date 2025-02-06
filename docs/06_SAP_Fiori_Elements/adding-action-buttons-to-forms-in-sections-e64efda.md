@@ -443,28 +443,28 @@ For a `DataFieldForIntentBasedNavigation` button, the page context is passed if 
 
 
 
-### Emphasizing the Most Important ‘Form’ Action
+### Emphasizing the Most Important 'Form' Action
 
-By default, all form action buttons are rendered with a transparent background. If you need to set a focus on the most important action, you can highlight it by using a ‘ghost’ styling.
+By default, all form action buttons are rendered with a transparent background. If you need to set a focus on the most important action, you can highlight it by using a 'ghost' styling.
 
 You can highlight form actions maintained via the `DataFieldForAction` and `DataFieldForIntentBasedNavigation` by adding `UI.Emphasized` to the action definition as shown in the examples below:
 
 > ### Sample Code:  
 > ```
-> <Record Type=“UI.DataFieldForAction”>
->     <PropertyValue Property=“Label” String=“Static Action” />
->     <PropertyValue Property=“Action” String=“com.c_salesordermanage_sd.DummyStaticAction” />
->     <Annotation Term=“UI.Emphasized” />
+> <Record Type="UI.DataFieldForAction">
+>     <PropertyValue Property="Label" String="Static Action" />
+>     <PropertyValue Property="Action" String="com.c_salesordermanage_sd.DummyStaticAction" />
+>     <Annotation Term="UI.Emphasized" />
 > </Record>
-> <Record Type=“UI.DataFieldForAction”>
->     <PropertyValue Property=“Label” String=“Static Action” />
->     <PropertyValue Property=“Action” String=“com.c_salesordermanage_sd.DummyStaticAction” />
->     <Annotation Term=“UI.Emphasized” Bool=“true” />
+> <Record Type="UI.DataFieldForAction">
+>     <PropertyValue Property="Label" String="Static Action" />
+>     <PropertyValue Property="Action" String="com.c_salesordermanage_sd.DummyStaticAction" />
+>     <Annotation Term="UI.Emphasized" Bool="true" />
 > </Record>
-> <Record Type=“UI.DataFieldForAction”>
->     <PropertyValue Property=“Label” String=“Static Action” />
->     <PropertyValue Property=“Action” String=“com.c_salesordermanage_sd.DummyStaticAction” />
->     <Annotation Term=“UI.Emphasized” Path=“…” />
+> <Record Type="UI.DataFieldForAction">
+>     <PropertyValue Property="Label" String="Static Action" />
+>     <PropertyValue Property="Action" String="com.c_salesordermanage_sd.DummyStaticAction" />
+>     <Annotation Term="UI.Emphasized" Path="…" />
 > </Record>
 > ```
 
@@ -508,7 +508,7 @@ You can highlight form actions maintained via the `DataFieldForAction` and `Data
 > {
 >     $Type               : 'UI.DataFieldForAction',
 >     Label               : 'Static Action',
->     Action              : ‘com.c_salesordermanage_sd.DummyStaticAction’, 
+>     Action              : 'com.c_salesordermanage_sd.DummyStaticAction', 
 >     ![@UI.Emphasized]   : <<Path>>
 > }
 > 

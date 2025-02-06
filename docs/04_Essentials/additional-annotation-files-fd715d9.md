@@ -30,7 +30,7 @@ Annotation files are specified in `manifest.json` as follows:
 
 Annotation files are usually defined as data sources in `manifest.json`. In the example above, the annotation file is located relative to the component. In the `dataSource` definition of the OData service, you can reference these annotation data sources in the `annotations` setting. The content of the annotation files are then merged into the service metadata in the given order \(the last one wins\). Every \(target, term, qualifier\)-tuple must appear at most once within `$metadata` documents, but can be overwritten by annotation files.
 
-Annotation terms are not merged, but replaced as a whole \(“PUT” semantics\). For example, if you have defined the sort restriction annotation `Org.OData.Capabilities.V1.SortRestrictions` at the `BusinessPartnerSet` as shown in the example below, you have to repeat the term in your annotation file if you want to add, for example, the additional property `AscendingOnlyProperties`.
+Annotation terms are not merged, but replaced as a whole \("PUT" semantics\). For example, if you have defined the sort restriction annotation `Org.OData.Capabilities.V1.SortRestrictions` at the `BusinessPartnerSet` as shown in the example below, you have to repeat the term in your annotation file if you want to add, for example, the additional property `AscendingOnlyProperties`.
 
 The annotation term is specified in the service metadata document:
 

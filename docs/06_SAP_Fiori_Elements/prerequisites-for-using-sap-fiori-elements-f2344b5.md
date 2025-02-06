@@ -51,7 +51,7 @@ For more information about building OData services, use the following links to a
 > ### Note:  
 > While CAP defaults to OData V4, the latest protocol version, some projects need to fallback to OData V2, for example, to keep using existing V2-based UIs.
 
-For SAP Fiori elements for OData V4, if you’re using CAP, you must ensure the security configurations in the back end are compatible with the design and configuration of your app. For more information, see [Security Configuration](security-configuration-ba0484b.md).
+For SAP Fiori elements for OData V4, if you're using CAP, you must ensure the security configurations in the back end are compatible with the design and configuration of your app. For more information, see [Security Configuration](security-configuration-ba0484b.md).
 
 
 

@@ -5,7 +5,7 @@
 The component class provides specific metadata for components by extending the `ManagedObject` class. The `UIComponent` class provides additional metadata for the configuration of user interfaces or the navigation between views.
 
 > ### Note:  
-> With the introduction of the descriptor for applications, components, and libraries, we recommend to migrate the component metadata to the descriptor. The descriptor is inspired by W3C’s Web Application Manifest and provides comprehensive information for applications, components and libraries. For more information, see [Descriptor for Applications, Components, and Libraries \(manifest.json\)](descriptor-for-applications-components-and-libraries-manifest-json-be0cf40.md). The metadata property `manifest` must be set to `json` to indicate that the `manifest.json` file should be loaded and used:
+> With the introduction of the descriptor for applications, components, and libraries, we recommend to migrate the component metadata to the descriptor. The descriptor is inspired by W3C's Web Application Manifest and provides comprehensive information for applications, components and libraries. For more information, see [Manifest \(Descriptor for Applications, Components, and Libraries\)](manifest-descriptor-for-applications-components-and-libraries-be0cf40.md). The metadata property `manifest` must be set to `json` to indicate that the `manifest.json` file should be loaded and used:
 > 
 > ```js
 > // "Component" required from module "sap/ui/core/Component"
@@ -35,7 +35,7 @@ The following properties are deprecated and no longer needed if you use the desc
 
 -   `includes`: Array of strings containing the paths to CSS and JavaScript resources for your component; will be added to the header of the HTML page and loaded by the browser. The resources will be resolved relative to the location of `Component.js`.
 
--   `dependencies`: Used to specify all external dependencies, such as libraries or components. Like the includes for resources that are added to the application’s HTML, the dependencies are loaded by SAPUI5 core before the component is initialized. Everything that is referenced here can be used in your component code right from the start. Specify here external dependences such as libraries or components, that will be loaded by SAPUI5 core in the initialization phase of your Component and can be used after it.
+-   `dependencies`: Used to specify all external dependencies, such as libraries or components. Like the includes for resources that are added to the application's HTML, the dependencies are loaded by SAPUI5 core before the component is initialized. Everything that is referenced here can be used in your component code right from the start. Specify here external dependences such as libraries or components, that will be loaded by SAPUI5 core in the initialization phase of your Component and can be used after it.
 
     -   `libs`: Path to the libraries that should be loaded by SAPUI5 core to be used in your component
 

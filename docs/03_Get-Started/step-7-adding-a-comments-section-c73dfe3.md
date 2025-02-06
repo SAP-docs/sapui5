@@ -137,9 +137,9 @@ First, we add three new dependencies to the controller. We need these dependenci
 
 Whenever the binding of the detail view changes, we want to make sure that the comments for the current product are displayed. Therefore, we change the private function `_onBindingChange` and update the filter of the list that displays the comments by getting a reference to the binding of the `items` aggregation of our list and calling the `filter()` API afterwards. The filter is passed on to the `filter()` API. We use the `productID` as filter criterion, because we only want comments for a specific product.
 
-Next, the event handler for the `post` event of the `FeedInput` is implemented. In the `onPost` handler, we create a new `entry` object that contains all data we want to store in our model. This data is the `productId`, the `type` of the post \(hard-coded in our example\), the current `date` in a medium date format, and the `comment` itself. The comment is retrieved from the event object. The `productId` is determined by calling `getObject()` on the view’s binding context.
+Next, the event handler for the `post` event of the `FeedInput` is implemented. In the `onPost` handler, we create a new `entry` object that contains all data we want to store in our model. This data is the `productId`, the `type` of the post \(hard-coded in our example\), the current `date` in a medium date format, and the `comment` itself. The comment is retrieved from the event object. The `productId` is determined by calling `getObject()` on the view's binding context.
 
-Finally, the new entry is added to the named model called `productFeedback`. This model does not exist yet, so let’s create it next.
+Finally, the new entry is added to the named model called `productFeedback`. This model does not exist yet, so let's create it next.
 
 
 
@@ -166,7 +166,7 @@ sap.ui.define([
 
 In both the object view \(detail page\) as well as in the corresponding controller we used a named model called `productFeedback`. In our example this model is a simple `JSONModel`. It is created in the function `createCommentsModel()` in the`model.js` file. As you can see above, the function simply returns a new instance of a `JSONModel` with a simple data object. The property `productComments` is an empty array and it will be updated every time someone posts a new comment.
 
-However, this model is not yet accessible throughout our app. Let’s fix this next.
+However, this model is not yet accessible throughout our app. Let's fix this next.
 
 
 
@@ -204,7 +204,7 @@ sap.ui.define([
 });
 ```
 
-Now it’s time to make the named model `productFeedback` available to our app. Therefore, just change the `init` function of our `Component.js` file by calling our `createCommentsModel()` method and setting the returned model on the component. After this, our model is accessible in our app.
+Now it's time to make the named model `productFeedback` available to our app. Therefore, just change the `init` function of our `Component.js` file by calling our `createCommentsModel()` method and setting the returned model on the component. After this, our model is accessible in our app.
 
 
 
@@ -223,7 +223,7 @@ ObjectCommentNoData=No Comments
 ...
 ```
 
-Now add the new texts to our `i18n.properties` file and you’re done.
+Now add the new texts to our `i18n.properties` file and you're done.
 
 You can test the new features by navigating to the details page of any given product. After that, just create a new comment for that product and post it.
 

@@ -150,7 +150,7 @@ The following code samples show how to create your annotations for the chart fac
 The chart definition contains measures on which the aggregations calculations are done, and dimensions, which categorize these measures.
 
 > ### Note:  
-> The use of navigation properties within the `UI.Chart` term isn’t supported.
+> The use of navigation properties within the `UI.Chart` term isn't supported.
 > 
 >   
 >   
@@ -250,7 +250,7 @@ SAP Fiori elements supports the criticality based on `UI.CriticalityType`. You c
 > SalesOrderType         @(
 >         UI.ValueCriticality   : [
 >         {
->             Value       : 'CCLN’,
+>             Value       : 'CCLN',
 >             Criticality : #Negative
 >         },
 >         {
@@ -556,6 +556,9 @@ For charts to work, the entity set must support aggregation. SAP Fiori elements 
 
     In this example, the properties `"RequestedQuantity"` and `"RequestedQuantityLocalUnit"` are measures and use custom aggregation, while the property `"Name"` is a dimension that is marked with `Groupable: true` and can be used to plot the chart.
 
+    > ### Note:  
+    > As an exception, a unit property of a measure can be annotated as a custom aggregate. However, this unit property does not appear in the list of measures available for the chart.
+
     For more information, see [Custom Aggregation](http://docs.oasis-open.org/odata/odata-data-aggregation-ext/v4.0/cs01/odata-data-aggregation-ext-v4.0-cs01.html#_Toc378326320).
 
 
@@ -577,7 +580,7 @@ For charts to work, the entity set must support aggregation. SAP Fiori elements 
 > ### Restriction:  
 > The following restrictions apply regarding the support of the chart control:
 > 
-> -   Properties such as measures, dimensions, and text associations that come from associated entity sets aren'tsupported.
+> -   Properties such as measures, dimensions, and text associations that come from associated entity sets aren't supported.
 > 
 > -   Chart personalization settings or selections aren't part of the variant changes and not saved in the `iAppState`.
 > 

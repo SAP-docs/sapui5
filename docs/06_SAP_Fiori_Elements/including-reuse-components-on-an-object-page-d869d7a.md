@@ -102,7 +102,7 @@ Set the default visibility to the value that is correct for most cases. You can 
 
 ### Placing Reuse Component Instances
 
-Each reuse component instance defined for an object page of a SAP Fiori elements-based app is realized by a section that contains a sub-section which in turn contains the content of the reuse component. By default, these sections are added to the end of the object page in the same order the reuse component instances are defined in the manifest. You can move these sections using the SAP Visual Editor. For more options, see [Placing Reuse Component Instances on the Object Page](placing-reuse-component-instances-on-the-object-page-1ba7f88.md).
+Each reuse component instance defined for an object page of a SAP Fiori elements-based app is realized by a section that contains a sub-section which in turn contains the content of the reuse component. By default, these sections are added to the end of the object page in the same order the reuse component instances are defined in the manifest. You can move these sections using the Adaptation Editor. For more options, see [Placing Reuse Component Instances on the Object Page](placing-reuse-component-instances-on-the-object-page-1ba7f88.md).
 
 
 

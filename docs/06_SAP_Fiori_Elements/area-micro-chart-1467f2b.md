@@ -190,7 +190,7 @@ The `UI.Chart Title` property is used for the title. The `UI.Chart Description` 
 > 
 > The following annotations are mandatory and must be used in the area micro chart:
 > 
-> -   `UI.Chart` → `ChartType`: “`Area`”
+> -   `UI.Chart` → `ChartType`: "`Area`"
 > 
 > -   `UI.Chart` → `Dimensions`
 > 

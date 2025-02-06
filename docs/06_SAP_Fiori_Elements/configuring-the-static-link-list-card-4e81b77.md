@@ -1,25 +1,25 @@
 <!-- loio4e81b77cbd1646f2912b693686a2ebee -->
 
-# Configuring Static Link List Card
+# Configuring the Static Link List Card
 
-Lets you display static data \(static links and images/icons\) in the form of list items.
-
-
-
-You can set the `listFlavor` property in the card settings to display information in standard link list type or as a carousel link list type.
+Allows you to display static data such as static links, images, and icons in the form of list items.
 
 
 
-1.  Configure card `title`, `subtitle`, and `listFlavor`.
+To display information in the link list card as either standard or carousal type, you must configure the `listFlavor` property in the card settings.
 
-2.  Configure staticContent properties such as `title`, `subtitle`, `imageUri`, `imageAltText`
 
-3.  Configure navigation properties
 
-    -   Url based navigation: Define `targetUri` and `openInNewWindow` properties
+1.  Configure the `title`, `subtitle`, and `listFlavor` of the card.
+
+2.  Configure the `staticContent` properties such as `title`, `subtitle`, `imageUri`, `imageAltText`.
+
+3.  Configure the following navigation properties:
+
+    -   URL-based navigation: Define the `targetUri` and `openInNewWindow` properties.
 
         > ### Sample Code:  
-        > Target Uri Based Navigation
+        > `targetUri`- Based Navigation
         > 
         > ```
         > "card010_QuickLinks": {
@@ -52,10 +52,10 @@ You can set the `listFlavor` property in the card settings to display informatio
         > 
         > ```
 
-    -   IntentBasedNavigation: Define `semanticObject` and `action` properties
+    -   Intent Based Navigation: Define the `semanticObject` and `action` properties.
 
         > ### Sample Code:  
-        > IntentBasedNavigation
+        > Intent Based Navigation
         > 
         > ```
         > "card010_QuickLinks": {

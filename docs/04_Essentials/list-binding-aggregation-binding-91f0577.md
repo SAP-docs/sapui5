@@ -4,7 +4,7 @@
 
 List binding \(or aggregation binding\) is used to automatically create child controls according to model data.
 
-Let’s say we would like to display the following JSON model data in a `sap.m.List`:
+Let's say we would like to display the following JSON model data in a `sap.m.List`:
 
 ```json
 {
@@ -42,7 +42,7 @@ Let’s say we would like to display the following JSON model data in a `sap.m.L
 	controllerName="sap.ui.sample.App"
 	xmlns="sap.m"
 	xmlns:mvc="sap.ui.core.mvc">
-	<List id=”companyList” items="{path: '/companies', templateShareable:false}">
+	<List id="companyList" items="{path: '/companies', templateShareable:false}">
 		<items>
 			<StandardListItem
 				title="{name}"
@@ -55,13 +55,13 @@ Let’s say we would like to display the following JSON model data in a `sap.m.L
 
 The `List` element has both an `items` attribute and a nested `items` element:
 
--   The attribute `items="{path: '/companies', templateShareable:false}"` binds the children of our json model’s `companies` array to the list. This by itself is not enough to display the companies, instead it sets the parent path for the binding of all contained list items and their descendants. In addition you need to declare a nested element.
+-   The attribute `items="{path: '/companies', templateShareable:false}"` binds the children of our json model's `companies` array to the list. This by itself is not enough to display the companies, instead it sets the parent path for the binding of all contained list items and their descendants. In addition you need to declare a nested element.
 
 -   The nested `items` element in our case contains a `StandardListItem`. This serves as a template for creating the individual list rows.
 
 
 > ### Note:  
-> The binding paths of `StandardListItem` for properties `title` and `description` are relative to `companies`. This means that instead of having to write the whole binding path `title={/companies/name}`, you can simply write `title={name}`. By omitting the slash ‘/’ at the beginning, `{name}` is marked as a relative binding path.
+> The binding paths of `StandardListItem` for properties `title` and `description` are relative to `companies`. This means that instead of having to write the whole binding path `title={/companies/name}`, you can simply write `title={name}`. By omitting the slash '/' at the beginning, `{name}` is marked as a relative binding path.
 
 Instead of using a `StandardListItem` as a list row template, you can also use any other `sap.m.` list item, such as:
 

@@ -26,7 +26,7 @@ Configure the `contentTitle` property in the descriptor configuration file to ad
 
 ### Dynamic Page Header
 
-The dynamic page header is pinnable when the app has a responsive table in desktops, hybrid, and ‘M' size devices such as tablets. A pin toggle button is available allowing the header content to remain expanded when scrolling the page.
+The dynamic page header is pinnable when the app has a responsive table in desktops, hybrid, and 'M' size devices such as tablets. A pin toggle button is available allowing the header content to remain expanded when scrolling the page.
 
 > ### Note:  
 > For all other table types, the pin button is not available in an analytical list page.

@@ -6,7 +6,7 @@
 
 ## Properties
 
-Property values for controls in XML views are specified as attributes of the XML element tag of the control. The name of the attribute corresponds to the name of the property in the API reference, for example, the property `text` of a the `sap.m.Text` control is specified as <code>text=”<i>value</i>”</code>.
+Property values for controls in XML views are specified as attributes of the XML element tag of the control. The name of the attribute corresponds to the name of the property in the API reference, for example, the property `text` of a the `sap.m.Text` control is specified as <code>text="<i>value</i>"</code>.
 
 > ### Note:  
 > The XML view offers special handling for context bindings and style classes. You can specify them via the `binding` and `class` attributes on a control's XML node.
@@ -16,7 +16,7 @@ Property values for controls in XML views are specified as attributes of the XML
 > ### Note:  
 > Escape characters that have a special meaning in XML \(like `<`, or `&`\) when they occur in a property value. Use XML entities instead \(like `&lt;` instead of a `<`, or `&amp;` instead of `&`\).
 
-Attributes in XML views use the same binding syntax as constructors of controls. For example, `“{customerName}”` is used to bind a property against the model property with name `“customerName”`.
+Attributes in XML views use the same binding syntax as constructors of controls. For example, `"{customerName}"` is used to bind a property against the model property with name `"customerName"`.
 
 **Example:** `sap.m.Text` with plain text:
 

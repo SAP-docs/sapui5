@@ -108,7 +108,7 @@ In the list report, you can set the variant management to `"Page"` level or to `
 
         ![](images/Sorting_Columns_in_Tables_e44ae82.png)
 
-        You can use the `@.OData.Capabilities.V1.SortRestrictions` annotation to exclude those columns you don’t want to be sortable. You can use the `@.OData.Capabilities.V1.NavigationRestrictions` annotation to exclude navigation properties.
+        You can use the `@.OData.Capabilities.V1.SortRestrictions` annotation to exclude those columns you don't want to be sortable. You can use the `@.OData.Capabilities.V1.NavigationRestrictions` annotation to exclude navigation properties.
 
         > ### Note:  
         > Defining sort restrictions is only possible for first-level navigation entities.
@@ -199,6 +199,12 @@ For a responsive table, the user can open the sorting, filtering, and grouping d
 
 > ### Note:  
 > When the end user selects the Filter menu, the default properties displayed for sorting, filtering, and grouping are the properties visible in the column. Any sorting and filtering restrictions are reflected in this dialog. The TextArrangement also has an impact as described in the [Personalization for Properties with Text Arrangement](enabling-table-personalization-3e2b4d2.md#loio3e2b4d212b66481a829ccef1dc0ca16b__personalization_text_arrangement) subsection in this topic.
+
+
+
+### Sorting Amount with Currency or Unit of Measure
+
+When sorting a column that contains an amount with a currency or a unit of measure, the sort will be applied on the currency or the unit of measure first and then to the amount field. This ensures a consistent display of amount when different currencies or units of measure are used.
 
 
 

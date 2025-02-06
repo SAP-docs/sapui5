@@ -37,7 +37,7 @@ SAPUI5 Tools for Eclipse used to provide wizards to support app creation by gene
 
 ### Current Status
 
-Because there are more powerful development environments out there that offer integration with SAPUI5 app development the SAPUI5 Tools for Eclipse were retired after SAPUI5 release 1.71 and don’t support Eclipse versions higher than 2019-12. for more information as well as constraints if you still want to use them, see [SAPUI5 Tools for Eclipse – Now is the Time to Look for Alternatives](https://blogs.sap.com/2019/11/26/sapui5-tools-for-eclipse-now-is-the-time-to-look-for-alternatives/)
+Because there are more powerful development environments out there that offer integration with SAPUI5 app development the SAPUI5 Tools for Eclipse were retired after SAPUI5 release 1.71 and don't support Eclipse versions higher than 2019-12. for more information as well as constraints if you still want to use them, see [SAPUI5 Tools for Eclipse – Now is the Time to Look for Alternatives](https://blogs.sap.com/2019/11/26/sapui5-tools-for-eclipse-now-is-the-time-to-look-for-alternatives/)
 
 SAPUI5 documentation version 1.71 is the last version of the SAPUI5 documentation that explains the SAPUI5 Tools for Eclipse: [App Development Using SAPUI5 Tools for Eclipse \(1.71\)](https://ui5.sap.com/1.71.0/#/topic/0404f90ff7394aa08c8420995bfdd9ed)
 

@@ -91,7 +91,7 @@ If you associate a semantic object annotation with any property, this establishe
 
 An intent is a mechanism that lets you perform actions on semantic objects \(such as navigating to a sales order or displaying a fact sheet\), without having to worry about the UI technology or technical implementation of the navigation target. Intent-based navigation is necessary in the following cases:
 
--   Depending on the user’s role, a different application or view of an application must be displayed.
+-   Depending on the user's role, a different application or view of an application must be displayed.
 
 -   You want to define an ambiguous navigation target. This means that, at runtime, a list of potential targets is suggested to the user.
 
@@ -172,7 +172,9 @@ To enable intent-based navigation, you must associate a semantic object. Navigat
     To only show the property as a link in a specific use case, for example within a form on an object page, you must use the `DataFieldWithIntentBasedNavigation` annotation. You can use this type of link in tables and forms, that is, a `DataFieldWithIntentBasedNavigation` can be added to a `LineItem` or `FieldGroup` annotation. The link text is set according to the `"Value"` property \(in the example below this is the value of `SomePath`\). Note that in SAP Fiori elements for OData V2`sap:unit` annotations currently aren't evaluated in this context.
 
     > ### Note:  
-    > Make sure you define a unique target by specifying both the semantic object and an action. Otherwise, clicking the link will not trigger direct navigation to the target.
+    > -   Make sure you define a unique target by specifying both the semantic object and an action. Otherwise, clicking the link will not trigger direct navigation to the target.
+    > 
+    > -   In applications where links are annotated with `DataFieldWithIntentBasedNavigation`, the context menu does not display the *Open in New Tab* and *Open in New Window* options when an end user right-clicks on them.
 
     > ### Sample Code:  
     > XML Annotation
@@ -269,7 +271,7 @@ You can replace standard internal navigation with external navigation by using i
 
 Add the following property: `<PropertyValue Property="RequiresContext" Bool="true"/>`
 
-If `RequiresContext` is true, then the button is disabled until a selection is made. If it’s false, then the button is always enabled. The default value for `RequiresContext` is false.
+If `RequiresContext` is true, then the button is disabled until a selection is made. If it's false, then the button is always enabled. The default value for `RequiresContext` is false.
 
 > ### Sample Code:  
 > XML Annotation
@@ -312,11 +314,11 @@ If `RequiresContext` is true, then the button is disabled until a selection is m
 
 -   **Enable or Disable Buttons Triggering External Navigation**
 
-    In a `DataFieldForIntentBasedNavigation`, you can specify `RequiresContext`. Setting it to `True` means that a line needs to be selected for the button to be enabled. Otherwise, it’s disabled.
+    In a `DataFieldForIntentBasedNavigation`, you can specify `RequiresContext`. Setting it to `True` means that a line needs to be selected for the button to be enabled. Otherwise, it's disabled.
 
 -   **Display or Hide Buttons Triggering External Navigation**
 
-    You can define that context-independent buttons \(`RequiresContext` is set to `False`\) triggering external navigation are displayed only if the navigation target is supported on the current device. In addition, if the `SemanticObject` or the action is invalid, and if the user doesn’t have the correct authorizations, the button isn't displayed. As a prerequisite, you need to have maintained the navigation target in the SAP Fiori launchpad, as shown in the following images:
+    You can define that context-independent buttons \(`RequiresContext` is set to `False`\) triggering external navigation are displayed only if the navigation target is supported on the current device. In addition, if the `SemanticObject` or the action is invalid, and if the user doesn't have the correct authorizations, the button isn't displayed. As a prerequisite, you need to have maintained the navigation target in the SAP Fiori launchpad, as shown in the following images:
 
       
       
@@ -475,7 +477,7 @@ In the extension controller of the source app, you can pass an additional parame
 > 
 > ```
 
-In the target app’s `manifest.json`, you must mark the parameter to be used to determine the object page using `useForTargetResolution`.
+In the target app's `manifest.json`, you must mark the parameter to be used to determine the object page using `useForTargetResolution`.
 
 > ### Sample Code:  
 > ```
@@ -492,7 +494,7 @@ In the target app’s `manifest.json`, you must mark the parameter to be used to
 > 
 > ```
 
-Once the key is identified, you can use the same key’s value in the page hierarchy to determine the object page.
+Once the key is identified, you can use the same key's value in the page hierarchy to determine the object page.
 
 > ### Example:  
 > > ### Sample Code:  
@@ -552,7 +554,7 @@ Once the key is identified, you can use the same key’s value in the page hiera
 In this example, if `<Key>-<Value1>` is passed as an additional parameter in the navigation context, then the `<EntitySet1>` object page is opened. Similarly, if `<Key>-<Value2>` is passed, then the `<EntitySet2>` object page is opened.
 
 > ### Note:  
-> -   `creationEntitySet` settings are prioritized in case of a conflict with the above-mentioned configuration defined in the target app’s `manifest.json`.
+> -   `creationEntitySet` settings are prioritized in case of a conflict with the above-mentioned configuration defined in the target app's `manifest.json`.
 > 
 > -   If the navigation context, passed from the source app, isn't enough to determine a record of the desired object page, then the list report is opened with the first tab as the selected tab.
 

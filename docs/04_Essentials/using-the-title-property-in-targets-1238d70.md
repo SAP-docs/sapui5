@@ -2,7 +2,7 @@
 
 # Using the `title` Property in Targets
 
-Routing in SAPUI5 allows you to define titles declaratively in the configuration. The title can be set with valid binding syntax which is then resolved under the scope of the target to which it belongs. This means that the title can be translated when it’s bound to the i18n model or resolved dynamically under the current binding context.
+Routing in SAPUI5 allows you to define titles declaratively in the configuration. The title can be set with valid binding syntax which is then resolved under the scope of the target to which it belongs. This means that the title can be translated when it's bound to the i18n model or resolved dynamically under the current binding context.
 
 When a new target that has the `title` property defined is displayed, or the title of the current target changes, the `titleChanged` event is fired. The event contains the current title and the history of previously displayed titles. You can use this event to update the title of your app.
 

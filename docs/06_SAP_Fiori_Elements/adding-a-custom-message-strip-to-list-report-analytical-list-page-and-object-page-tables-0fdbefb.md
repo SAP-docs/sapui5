@@ -30,11 +30,11 @@ When you have multiple tabs, you can choose to display the message only in a spe
 
 > ### Sample Code:  
 > ```
-> this.extensionAPI.setCustomMessage(oMessage, ”1”);         	        // Displays message only on 1st tab
+> this.extensionAPI.setCustomMessage(oMessage, "1");         	        // Displays message only on 1st tab
 > 
 > 			or
 > 
-> this.extensionAPI.setCustomMessage(oMessage, [“1”,”2”]);        // Displays message only on 1st and 2nd tab
+> this.extensionAPI.setCustomMessage(oMessage, ["1","2"]);        // Displays message only on 1st and 2nd tab
 > 
 > 			or
 > 

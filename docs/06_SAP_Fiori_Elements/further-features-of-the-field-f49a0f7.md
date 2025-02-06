@@ -196,14 +196,7 @@ The `TextArrangement` value at entity set level is considered as a fallback only
 > </Annotations>
 > ```
 
-> ### Note:  
-> Consider the following when using a text arrangement annotation in a value help:
-> 
-> -   The `TextArrangement` of the value help entity set is used to determine the display of the fields that show up in the columns of the value help dialog. The `TextArrangement` specified at property level within the value help entity set again takes precedence over the one defined at entity set level.
-> 
-> -   The `TextArrangement` annotation `#TextOnly` is supported in value help tables \(that is, in the value help dialog and for the type-ahead feature\). Other `TextArrangement` annotations like `#TextFirst`, `#TextLast`, or `#TextSeparate` are not considered. Combo boxes also support `#TextFirst` and `#TextLast`.
-> 
-> -   A separate text column is ignored if the text annotation is already used in another column using the `TextArrangement`.
+For more information about using a text arrangement annotation in a value help, see the [Using the Text and TextArrangement Annotation](field-help-a5608ea.md#loioa5608eabcc184aee99e1a7d88b28816c__text_textarrangement_valuehelp) subsection in [Field Help](field-help-a5608ea.md).
 
 
 
@@ -675,7 +668,7 @@ The property `ModifiedAt` is hidden in the `FieldGroup` with the qualifier `Admi
 > ### Note:  
 > ABAP CDS does not allow a `UI.hidden` annotation pointing to a path. Please use the local XML annotation.
 
-The property `ModifiedAt` is always hidden \(wherever the property appears\) if the property `HasDraftEntity` is set to `true` – in all other cases it’s visible.
+The property `ModifiedAt` is always hidden \(wherever the property appears\) if the property `HasDraftEntity` is set to `true` – in all other cases it's visible.
 
 > ### Sample Code:  
 > XML Annotation

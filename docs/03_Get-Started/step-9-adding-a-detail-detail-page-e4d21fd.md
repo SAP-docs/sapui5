@@ -22,7 +22,7 @@ In this step, we create a detail-detail page using `sap.f.DynamicPage`, which is
 
 ## Coding
 
-You can view and download all files at [Flexible Column Layout App - Step 9](https://ui5.sap.com/#/sample/sap.f.tutorial.fiori2.09/preview).
+You can view and download all files at [Flexible Column Layout App - Step 9](https://ui5.sap.com/#/sample/sap.f.tutorial.fcl.09/preview).
 
 
 
@@ -32,7 +32,7 @@ You can view and download all files at [Flexible Column Layout App - Step 9](htt
 
 ```xml
 <mvc:View
-	controllerName="sap.ui.demo.fiori2.controller.DetailDetail"
+	controllerName="sap.ui.demo.fcl.controller.DetailDetail"
 	xmlns="sap.f"
 	xmlns:m="sap.m"
 	xmlns:mvc="sap.ui.core.mvc">
@@ -60,12 +60,11 @@ We create a detail-detail page view using `sap.f.DynamicPage` with only a title.
 
 ```js
 sap.ui.define([
-	"sap/ui/model/json/JSONModel",
 	"sap/ui/core/mvc/Controller"
-], function (JSONModel, Controller) {
+], function (Controller) {
 	"use strict";
 
-	return Controller.extend("sap.ui.demo.fiori2.controller.DetailDetail", {
+	return Controller.extend("sap.ui.demo.fcl.controller.DetailDetail", {
 		onInit: function () {
 			var oOwnerComponent = this.getOwnerComponent();
 
@@ -90,6 +89,7 @@ sap.ui.define([
 		}
 	});
 });
+
 ```
 
 We create the detail-detail page controller.
@@ -199,7 +199,7 @@ sap.ui.define([
 ], function (Controller, fioriLibrary) {
 	"use strict";
 
-	return Controller.extend("sap.ui.demo.fiori2.controller.Detail", {
+	return Controller.extend("sap.ui.demo.fcl.controller.Detail", {
 		onInit: function () {
 			var oOwnerComponent = this.getOwnerComponent();
 

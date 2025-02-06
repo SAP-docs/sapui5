@@ -71,7 +71,7 @@ You can view and download all files at [Walkthrough - Step 30](https://ui5.sap.c
 }
 ```
 
-We add a new “routing" section to the `sap.ui5` part of the descriptor. There are three subsections that define the routing and navigation structure of the app:
+We add a new "routing" section to the `sap.ui5` part of the descriptor. There are three subsections that define the routing and navigation structure of the app:
 
 -   `config`
 
@@ -167,7 +167,7 @@ We move the content of the previous steps from the `App` view to a new `Overview
 </mvc:View>
 ```
 
-Our `App` view is now only containing the empty app tag. The router will automatically add the view that corresponds to the current URL into the app control. The router identifies the app control with the ID that corresponds to the property `controlId: “app”` in the `AppDescriptor`.
+Our `App` view is now only containing the empty app tag. The router will automatically add the view that corresponds to the current URL into the app control. The router identifies the app control with the ID that corresponds to the property `controlId: "app"` in the `AppDescriptor`.
 
 
 

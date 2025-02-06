@@ -2,7 +2,7 @@
 
 # Step 26: Mock Server Configuration \(TypeScript\)
 
-We just ran our app against a real service, but for developing and testing our app we do not want to rely on the availability of the “real” service or put additional load on the system where the data service is located.
+We just ran our app against a real service, but for developing and testing our app we do not want to rely on the availability of the "real" service or put additional load on the system where the data service is located.
 
 This system is the so-called back-end system that we will now simulate with an SAPUI5 feature called mock server. It serves local files, but it simulates a back-end system more realistically than just loading the local data. We will also change the model instantiation part so that the model is configured in the descriptor and instantiated automatically by SAPUI5. This way, we do not need to take care of the model instantiation in the code.
 
@@ -40,7 +40,7 @@ The new `localService` folder contains a `metadata.xml` service description file
 
 We create a new `localService` folder in the `webapp` folder and add a new `metadata.xml` file to it.
 
-The metadata file contains information about the service interface and does not need to be written manually. It can be accessed directly from the “real” service by calling the service URL and adding `$metadata` at the end \(e.g. in our case `http://services.odata.org/V2/Northwind/Northwind.svc/$metadata`\).
+The metadata file contains information about the service interface and does not need to be written manually. It can be accessed directly from the "real" service by calling the service URL and adding `$metadata` at the end \(e.g. in our case `http://services.odata.org/V2/Northwind/Northwind.svc/$metadata`\).
 
 For simplicity, we remove all content from the original Northwind OData metadata document that we do not need in our scenario. We also added the `status` field to the metadata, since it is not available in the real Northwind service.
 
@@ -237,7 +237,7 @@ If you switch from the `index.html` file to the `mockServer.html` file in the br
 
 This approach is perfect for local testing, even without any network connection. This way your development does not depend on the availability of a remote server, i.e. to run your tests.
 
-From this point on, you have two different entry pages: One for the real “connected” app \(`index.html`\) and one for local testing \(`mockServer.html`\). You can freely decide if you want to do the next steps on the real service data or on the local data within the app. Try calling the app with the `index.html` file and the `mockServer.html` file to see the difference. If the real service connection cannot be made, for example when there is no network connection, you can always fall back to the local test page.
+From this point on, you have two different entry pages: One for the real "connected" app \(`index.html`\) and one for local testing \(`mockServer.html`\). You can freely decide if you want to do the next steps on the real service data or on the local data within the app. Try calling the app with the `index.html` file and the `mockServer.html` file to see the difference. If the real service connection cannot be made, for example when there is no network connection, you can always fall back to the local test page.
 
 
 

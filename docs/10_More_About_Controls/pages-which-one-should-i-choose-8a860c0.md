@@ -30,7 +30,7 @@ Further alternatives are `sap.f.semantic.SemanticPage` and `sap.uxap.ObjectPageL
 
 ## Conclusion
 
-There is no one-size-fits-all recommendation on which page type to use for your app, so it’s important to be aware of the above considerations. For further guidance, refer to the [SAP Fiori for Web Design Guidelines regarding page layouts and floorplans](https://experience.sap.com/fiori-design-web/floorplan-overview/).
+There is no one-size-fits-all recommendation on which page type to use for your app, so it's important to be aware of the above considerations. For further guidance, refer to the [SAP Fiori for Web Design Guidelines regarding page layouts and floorplans](https://experience.sap.com/fiori-design-web/floorplan-overview/).
 
 **Related Information**  
 

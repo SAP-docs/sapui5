@@ -50,7 +50,7 @@ Display/Hide the *Export to Excel* button in the table toolbar
 </td>
 <td valign="top">
 
-Change the `enableExport` property to `True/False`.
+Change the `enableExport` property to either `True` or `False`.
 
 </td>
 </tr>
@@ -63,6 +63,11 @@ Change the column width.
 <td valign="top">
 
 Choose the column of a table in the outline of the Page Editor, and change the `Width` property as needed.
+
+> ### Note:  
+> Changing the width of custom columns using the Page Editor isn't supported; instead, the `Width` property can be defined directly in the fragment.
+
+
 
 </td>
 </tr>
@@ -77,6 +82,11 @@ Center-align status columns
 Choose the column of the table in the outline of Page Editor, and set the `hAlign` property to `Center`.
 
 For vertical alignment of the whole responsive table, see [Tables](tables-c0f6592.md).
+
+> ### Note:  
+> The `hAlign` property cannot be changed for custom columns through the Page Editor; instead, it can be defined directly in the fragment.
+
+
 
 </td>
 </tr>
@@ -124,6 +134,18 @@ Change the default value of the `scrollThreshold` parameter in grid tables, anal
 <td valign="top">
 
 In the outline, select the table whose value needs to be changed, and set the new value for the `scrollThreshold` parameter.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Enable or disable live mode in the filter bar.
+
+</td>
+<td valign="top">
+
+Change the `liveMode` property of the smart filter bar to either `True` or `False`. For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.comp.smartfilterbar.SmartFilterBar%23controlProperties).
 
 </td>
 </tr>
@@ -229,7 +251,7 @@ On the page layout node, set the `alwaysShowContentHeader` property to `true`.
 <tr>
 <td valign="top">
 
-Change the default `growingThreshold` value for the object page’s `sap.m.Table`. The default value is 10.
+Change the default `growingThreshold` value for the object page's `sap.m.Table`. The default value is 10.
 
 > ### Note:  
 > When there is a single section with a single subsection holding a table, the default `growingThreshold` value is 20 and it cannot be changed.

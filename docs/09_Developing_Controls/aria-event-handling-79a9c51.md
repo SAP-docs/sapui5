@@ -16,7 +16,7 @@ The affected regions of the UI should have the property `aria-live` set to `true
 
 ## Event Handling
 
-Accessible events are designed as a signaling mechanism for screen readers. An example for this is when parts of the UI update, either as a result of a direct user action \(such as performing a selection\) or by software \(such as “*incoming mail*” messages or popups\). Events like a dialog showing up or content updates of parts of the screen are handled by assigning specific roles and properties of the UI elements \(for example, an HTML `<input type=checkbox>` element, would need <code>role=“dialog”</code> or property `aria-live` set accordingly\). Screen readers then listen to accessible events raised by browsers for these UI parts and react accordingly.
+Accessible events are designed as a signaling mechanism for screen readers. An example for this is when parts of the UI update, either as a result of a direct user action \(such as performing a selection\) or by software \(such as "*incoming mail*" messages or popups\). Events like a dialog showing up or content updates of parts of the screen are handled by assigning specific roles and properties of the UI elements \(for example, an HTML `<input type=checkbox>` element, would need `role="dialog"` or property `aria-live` set accordingly\). Screen readers then listen to accessible events raised by browsers for these UI parts and react accordingly.
 
-When the app is loading or fetching information, the ARIA property <code>aria-busy=“true”</code> should be set for the corresponding region.
+When the app is loading or fetching information, the ARIA property `aria-busy="true"` should be set for the corresponding region.
 

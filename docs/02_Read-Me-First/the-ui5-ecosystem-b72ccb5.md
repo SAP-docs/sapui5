@@ -63,7 +63,7 @@ Easy-UI5 is an open-source Yeoman generator that should be used by everybody wor
 
 This generator has been created to simplify the creation of SAPUI5 prototypes. Now you can scaffold simple SAPUI5 projects from the shell/terminal of your choice. The current best practices \(such as async\) are already baked into our templates so you don't have to worry about the definition of the metadata files.
 
-The purpose of this generator is to guide you through your first steps with SAPUI5 and SAP BTP deployments. Once you’re familiar with those technologies, you might want to tweak the projects to adapt them for productive use cases \(such as continuous deployment pipelines and full i18n\).
+The purpose of this generator is to guide you through your first steps with SAPUI5 and SAP BTP deployments. Once you're familiar with those technologies, you might want to tweak the projects to adapt them for productive use cases \(such as continuous deployment pipelines and full i18n\).
 
 
 
@@ -81,7 +81,7 @@ The purpose of this generator is to guide you through your first steps with SAPU
 
 
 
-TypeScript is an extension of JavaScript that adds type information to the language. It helps developers catch errors early through type checking and by providing code assist in many supporting code editors \(for example, through code completion and inline documentation\). Browsers can’t execute TypeScript directly, it needs to be transpiled to JavaScript, which can then be executed as usual.
+TypeScript is an extension of JavaScript that adds type information to the language. It helps developers catch errors early through type checking and by providing code assist in many supporting code editors \(for example, through code completion and inline documentation\). Browsers can't execute TypeScript directly, it needs to be transpiled to JavaScript, which can then be executed as usual.
 
 For SAPUI5, we have published definition files that contain type definitions describing the SAPUI5 APIs and types. With the help of these definitions, you can write SAPUI5 apps in TypeScript and enjoy all the benefits that come with it.
 
@@ -112,7 +112,7 @@ npm packages \(check the individual packages for licensing information\):
 
 
 
-wdi5 is a Webdriver.IO service that uses SAPUI5’s test API. It is designed to run cross-platform end-to-end tests on a SAPUI5 application with selectors that are compatible to OPA5.
+wdi5 is a Webdriver.IO service that uses SAPUI5's test API. It is designed to run cross-platform end-to-end tests on a SAPUI5 application with selectors that are compatible to OPA5.
 
 
 

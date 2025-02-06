@@ -22,7 +22,7 @@ The following types of vocabulary-based annotations are available:
 -   Ex-place: These are composed of an Annotation Provider Class \(APC\) outside the metadata document. The APC is bound to the service using a registration in transaction `/IWBEP/REG_VOCAN`.
 
 
-These annotations are available using a query to the SAP Gateway catalog service, `/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/`. Entity Set: ‚Annotations‘.
+These annotations are available using a query to the SAP Gateway catalog service, `/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/`. Entity Set: 'Annotations'.
 
 
 

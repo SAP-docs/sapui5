@@ -4,7 +4,7 @@
 
 Now that we have a test folder in the app, we can start to increase our test coverage.
 
-Actually, every feature that we added to the app so far, would require a separate test case. We have totally neglected this so far, so let’s add a simple unit test for our custom formatter function from Step 22. We will test if the long text for our status is correct by comparing it with the texts from our resource bundle.
+Actually, every feature that we added to the app so far, would require a separate test case. We have totally neglected this so far, so let's add a simple unit test for our custom formatter function from Step 22. We will test if the long text for our status is correct by comparing it with the texts from our resource bundle.
 
 > ### Note:  
 > In this tutorial, we focus on a simple use case for the test implementation. If you want to learn more about QUnit tests, have a look at our [Testing Tutorial](testing-tutorial-291c912.md) tutorial, especially [Step 2: A First Unit Test](step-2-a-first-unit-test-b81736e.md).
@@ -111,8 +111,8 @@ The page will be referenced in the test suite that we will create next.
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<script
+     <meta charset="utf-8">
+     <script
 		  src="../resources/sap/ui/test/starter/runTest.js"
 		  data-sap-ui-resource-roots='{
 			      "test-resources.ui5.walkthrough": "./"
@@ -120,8 +120,8 @@ The page will be referenced in the test suite that we will create next.
 	></script>
 </head>
 <body class="sapUiBody">
-	   <div id="qunit"></div>
-	   <div id="qunit-fixture"></div>
+     <div id="qunit"></div>
+     <div id="qunit-fixture"></div>
 </body>
 </html>
 ```
@@ -148,8 +148,8 @@ For more information, see [Concept and Basic Setup](../04_Essentials/concept-and
 ```ts
 
 export default {
-	   name: "QUnit test suite for UI5 TypeScript Walkthrough",
-	   defaults: {
+        name: "QUnit test suite for UI5 TypeScript Walkthrough",
+        defaults: {
 		      page: "ui5://test-resources/ui5/walkthrough/Test.qunit.html?testsuite={suite}&test={name}",
 		      qunit: {
 			        version: 2
@@ -162,12 +162,12 @@ export default {
 				          "ui5/walkthrough": "../"
 			       }
 		      }
-	  },
-  	tests: {
-	  	  "unit/unitTests": {
-			       title: "UI5 TypeScript Walkthrough - Unit Tests"
-		    }
-	  }
+        },
+        tests: {
+               "unit/unitTests": {
+                       title: "UI5 TypeScript Walkthrough - Unit Tests"
+               }
+        }
 };
 ```
 

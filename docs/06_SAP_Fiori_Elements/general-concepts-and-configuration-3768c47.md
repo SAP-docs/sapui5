@@ -13,7 +13,7 @@
 
 [Adapting the Application Header](adapting-the-application-header-ac70343.md "If required, you can change the application header that is generated from the SAP Fiori launchpad.")
 
-[Managing Variants](managing-variants-8ce658e.md "Lets you manage variants with different structures in the filter and content areas.")
+[Managing Variants](managing-variants-8ce658e.md "Allows you manage variants with different structures in the filter and content areas.")
 
 [Responsiveness Options: Example](responsiveness-options-example-69efbe7.md "When using SAP Fiori elements, you can make use of specific responsiveness options. For example, in pages that have toolbars (such as list report tables, object page tables, and smart chart toolbars), the system evaluates the com.sap.vocabularies.UI.v1.Importance for each field:")
 

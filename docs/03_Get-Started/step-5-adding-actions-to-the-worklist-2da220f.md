@@ -218,7 +218,7 @@ sap.ui.define([
 });
 ```
 
-Let’s have a look at the implementation of the event handlers for the new actions. We first load the `sap.m.MessageToast` control as a new dependency to display a success message for the `unlist` and `reorder` actions.
+Let's have a look at the implementation of the event handlers for the new actions. We first load the `sap.m.MessageToast` control as a new dependency to display a success message for the `unlist` and `reorder` actions.
 
 Both actions are similar from an implementation perspective and the details are described below. They both loop over the selected items in the table and trigger a model update or deletion on the selected path. After that, a success message with the number of products processed is displayed. The table is updated automatically by the model change.
 
@@ -233,7 +233,7 @@ Both actions are similar from an implementation perspective and the details are 
 
 For each action we register both a `success` handler and an `error` handler. The `success` handler and `error` handler for each action is the same, but the function is called with different parameters. This allows us to use the same handler function for both the error and success case. Inside the corresponding handlers we simply display a success message once by comparing the current request number with the total number of requests. Furthermore, we assume that all of our requests always succeed.
 
-In a real scenario, you could have a counter for error responses, and one for success responses. Finally, you could implement you own business logic for error and success cases, like displaying the number of failed and succeeded requests together with the corresponding product identified by the product ID parameter of the handlers. We don’t do this to keep things simple.
+In a real scenario, you could have a counter for error responses, and one for success responses. Finally, you could implement you own business logic for error and success cases, like displaying the number of failed and succeeded requests together with the corresponding product identified by the product ID parameter of the handlers. We don't do this to keep things simple.
 
 > ### Note:  
 > In our example, the remove or order actions are only applied to items that are visible in the table, even if the *Select All* checkbox of the table is selected. Keep in mind that there may be more data on the back end that is currently not loaded, and therefore it is neither displayed and nor can it be selected by the user.

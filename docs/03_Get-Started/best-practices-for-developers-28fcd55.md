@@ -4,21 +4,23 @@
 
 This page is a good starting point for you to ensure your code bases, specifically your SAPUI5 applications and libraries, are ready for the future and won't become outdated.
 
+**On this page:**
+
+-   [Best Practices for Legacy-Free Code](best-practices-for-developers-28fcd55.md#loio28fcd55b04654977b63dacbee0552712__section_blfc)
+-   [App Development](best-practices-for-developers-28fcd55.md#loio28fcd55b04654977b63dacbee0552712__section_appdev)
+-   [Control Development](best-practices-for-developers-28fcd55.md#loio28fcd55b04654977b63dacbee0552712__section_ctrldev)
+-   [Library Development](best-practices-for-developers-28fcd55.md#loio28fcd55b04654977b63dacbee0552712__section_libdev)
+-   [Testing](best-practices-for-developers-28fcd55.md#loio28fcd55b04654977b63dacbee0552712__section_tst)
 
 
-<a name="loio28fcd55b04654977b63dacbee0552712__section_kg5_3nj_rzb"/>
 
-## Alignment for Future-Proof Code
+<a name="loio28fcd55b04654977b63dacbee0552712__section_blfc"/>
+
+## Best Practices for Legacy-Free Code
 
 The SAPUI5 framework is always evolving to benefit from newer features in web browsers \(like ECMAScript support\) or to account for their end of maintenance \(like the end of IE11 support\). This is a continuous journey towards future major framework versions and improvements.
 
-Therefore, it's important that you keep applying best practices. To help you, we frequently update the documentation in many places. This page collects fundamental information and offers practical guidance, and it will continue to evolve over time.
-
-
-
-<a name="loio28fcd55b04654977b63dacbee0552712__section_z2p_zqm_21c"/>
-
-## Best Practices for Legacy-Free Code
+It is therefore important that you keep applying best practices. To help you, we frequently update the documentation in many places. This page collects fundamental information and offers practical guidance, and it will continue to evolve over time.
 
 > ### Note:  
 > The following information is a preliminary yet practical collection of best practices to ensure legacy-free SAPUI5 development. We're continuously improving it to reflect our latest recommendations. It will be further enhanced to both help transform existing code bases and provide guidance for creating new code.
@@ -108,7 +110,7 @@ Identify and resolve cyclic dependencies with the help of the SAPUI5 configurati
 
 
 
-<a name="loio28fcd55b04654977b63dacbee0552712__section_tqd_z1n_21c"/>
+<a name="loio28fcd55b04654977b63dacbee0552712__section_appdev"/>
 
 ## App Development
 
@@ -285,7 +287,7 @@ Implement strict error handling to address critical issues.
 
 
 
-<a name="loio28fcd55b04654977b63dacbee0552712__section_km4_ms1_f1c"/>
+<a name="loio28fcd55b04654977b63dacbee0552712__section_ctrldev"/>
 
 ## Control Development
 
@@ -311,7 +313,7 @@ Implement strict error handling to address critical issues.
 
 
 
-<a name="loio28fcd55b04654977b63dacbee0552712__section_gjb_rs1_f1c"/>
+<a name="loio28fcd55b04654977b63dacbee0552712__section_libdev"/>
 
 ## Library Development
 
@@ -336,7 +338,7 @@ Implement strict error handling to address critical issues.
 
 -   [The library.js File](../09_Developing_Controls/the-library-js-file-bd039ed.md)
 -   [Defining Control Properties](../09_Developing_Controls/defining-control-properties-ac56d92.md)
--   [Descriptor for Applications, Components, and Libraries \(manifest.json\)](../04_Essentials/descriptor-for-applications-components-and-libraries-manifest-json-be0cf40.md)
+-   [Manifest \(Descriptor for Applications, Components, and Libraries\)](../04_Essentials/manifest-descriptor-for-applications-components-and-libraries-be0cf40.md)
 
 
 
@@ -353,7 +355,7 @@ Prevent bundling modules \(`library-preload.js`\) into strings.
 
 
 
-<a name="loio28fcd55b04654977b63dacbee0552712__section_dkp_ws1_f1c"/>
+<a name="loio28fcd55b04654977b63dacbee0552712__section_tst"/>
 
 ## Testing
 

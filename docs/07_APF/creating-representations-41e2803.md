@@ -65,7 +65,7 @@ Sorting
 </td>
 <td valign="top">
 
-You can define whether certain properties are applied to the data request and subsequently to the chart as sorting criteria. You can also specify the sorting direction \(ascending or descending\) for each property. If you don’t specify a sorting field, the data is displayed in the order provided by the OData service.
+You can define whether certain properties are applied to the data request and subsequently to the chart as sorting criteria. You can also specify the sorting direction \(ascending or descending\) for each property. If you don't specify a sorting field, the data is displayed in the order provided by the OData service.
 
 If sorting criteria have been defined in the Data Reduction section of the step configuration, they are copied to the representation and cannot be changed here.
 

@@ -1062,9 +1062,9 @@ Analysis Path Framework \(APF\)
 
 **Analysis Path Framework \(APF\)**
 
-**APF for SAP S/4HANA Cloud \(New\)**
+**APF for SAP S/4HANA Cloud Public Edition \(New\)**
 
-The APF Configuration Modeler app, as well as the generic APF runtime app, are now also available for SAP S/4HANA Cloud. This includes transporting APF content using the Adaptation Transport Organizer \(ATO\).
+The APF Configuration Modeler app, as well as the generic APF runtime app, are now also available for SAP S/4HANA Cloud Public Edition. This includes transporting APF content using the Adaptation Transport Organizer \(ATO\).
 
 **SAP Smart Business Design Time Integration in SAP S/4HANA \(New\)**
 
@@ -1135,6 +1135,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.130](what-s-new-in-sapui5-1-130-85609d4.md "With this release SAPUI5 is upgraded from version 1.129 to 1.130.")
 
 [What's New in SAPUI5 1.129](what-s-new-in-sapui5-1-129-d22b8af.md "With this release SAPUI5 is upgraded from version 1.128 to 1.129.")
 

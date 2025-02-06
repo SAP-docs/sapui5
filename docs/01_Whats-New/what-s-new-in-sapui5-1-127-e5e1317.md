@@ -222,7 +222,7 @@ The following changes and new features are available for SAP Fiori elements for 
 
 -   We now support annotations that allow masking of input fields. For more information, see [Different Representations of a Field](../06_SAP_Fiori_Elements/different-representations-of-a-field-c18ada4.md) .
 
--   You can now define a `sideEffectsEventsInteractionType` for each side effect event separately. For more information, see [Using Side Effect Events](../06_SAP_Fiori_Elements/using-side-effect-events-27c9c3b.md).
+-   You can now define a `sideEffectsEventsInteractionType` for each side effect event separately. For more information, see [Using Side Effect Events](../06_SAP_Fiori_Elements/event-driven-side-effects-27c9c3b.md).
 
 
 <sub>Changed•SAP Fiori Elements•Info Only•1.127</sub>
@@ -554,6 +554,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.130](what-s-new-in-sapui5-1-130-85609d4.md "With this release SAPUI5 is upgraded from version 1.129 to 1.130.")
 
 [What's New in SAPUI5 1.129](what-s-new-in-sapui5-1-129-d22b8af.md "With this release SAPUI5 is upgraded from version 1.128 to 1.129.")
 

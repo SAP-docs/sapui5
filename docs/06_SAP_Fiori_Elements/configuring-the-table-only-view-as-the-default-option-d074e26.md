@@ -83,5 +83,5 @@ For more information about options that can be provided for the annotation path,
 
 [Configuring the Content Area](configuring-the-content-area-fc7d73c.md "Visualize data from the main entity set and seamlessly navigate to an application. Define a valid UI.Chart or UI.LineItem annotation to render content for the chart area and table area. For more information, see Descriptor Configuration for the Analytical List Page.")
 
-[Setting the Table Type](setting-the-table-type-7f844f1.md "In the manifest.json file, and through annotations, you can control which table type is rendered in the list report and on the object page.")
+[Setting the Table Type](setting-the-table-type-7f844f1.md "You can control which table type is rendered in the list report and on the object page by configuring the manifest.json file and by using annotations.")
 

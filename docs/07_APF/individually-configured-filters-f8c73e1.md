@@ -15,7 +15,7 @@ For each filter, you can configure the following:
 
     You may have to configure a value help request to generate the list of values that the user can choose from to filter the data.
 
-    You can also maintain the values manually if you don’t have a service available that produces the desired values.
+    You can also maintain the values manually if you don't have a service available that produces the desired values.
 
 -   The values that are preselected in the value help.
 
@@ -245,7 +245,7 @@ Alias
 </td>
 <td valign="top">
 
-The property displayed in the filter. It is used if the field name of the filter’s property is different in the value help request. If the property and the alias are the same, the alias can be omitted.
+The property displayed in the filter. It is used if the field name of the filter's property is different in the value help request. If the property and the alias are the same, the alias can be omitted.
 
 </td>
 </tr>

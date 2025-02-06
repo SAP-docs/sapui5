@@ -37,7 +37,7 @@ When choosing the *Filters* link, you see a popup:
 
 You can now select *Currency* as an additional field in the filter bar of the first dialog.
 
-After selecting this additional field, we return to the table with the filter bar again and can use the value help for the newly added *Currency* field to restrict the results to those with *Currency = “EUR”*. Firing the query with this restriction, we see fewer results:
+After selecting this additional field, we return to the table with the filter bar again and can use the value help for the newly added *Currency* field to restrict the results to those with *Currency = "EUR"*. Firing the query with this restriction, we see fewer results:
 
   
   
@@ -90,7 +90,7 @@ You can view and download all files in the *Samples* in the Demo Kit at [Smart C
 
 We see that two new controls have been added to the `view.xml`. In the `SmartFilterBar` control we refer to an `entityType` which we will see later in `metadata.xml`. With the `ControlConfiguration` element that is added to the `controlConfiguration` aggregation of `SmartFilterBar`, we include the `Category` field in the filter bar. This is the area that can be hidden \(or shown\) using the toolbar *Hide Filter Bar*. We set the `preventInitialDataFetchInValueHelpDialog` property to `false` for an automatic execution of the query and thus showing of the results as soon as you open the value help. For `SmartTable` we define a few properties, some of which deserve special attention:
 
--   `smartFilterId="smartFilterBar”`
+-   `smartFilterId="smartFilterBar"`
 
     Ensures that the `SmartTable` can consume the `FilterBar` and the filter values defined there
 

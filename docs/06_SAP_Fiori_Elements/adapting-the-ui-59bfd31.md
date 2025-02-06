@@ -86,7 +86,7 @@ Key User
 </td>
 <td valign="top">
 
-For information about the features that application developers can adapt, see [Adapting the UI: List Report and Object Page](adapting-the-ui-list-report-and-object-page-0d2f1a9.md) and [Adapting the UI: Analytical List Page](adapting-the-ui-analytical-list-page-2c5fa29.md).
+For information about the features that application developers can adapt, see [Adapting the UI: List Report and Object Page](adapting-the-ui-list-report-and-object-page-0d2f1a9.md), [Adapting the UI: Analytical List Page](adapting-the-ui-analytical-list-page-2c5fa29.md), and [Extending the Delivered Apps Manifest Using an Adaptation Project](extending-the-delivered-apps-manifest-using-an-adaptation-project-a2b24a6.md).
 
 </td>
 <td valign="top">
@@ -96,7 +96,7 @@ For more information about what you have to consider when developing apps that s
 </td>
 <td valign="top">
 
-See the [Additional Features in SAP Fiori Elements for OData V2](adapting-the-ui-59bfd31.md#loio59bfd317ed5d4af3b490abbe7a9731d8__section_g15_g2n_gnb) section in this topic.
+See the [Additional Features in the SAP Fiori Elements for OData V2](adapting-the-ui-59bfd31.md#loio59bfd317ed5d4af3b490abbe7a9731d8__section_g15_g2n_gnb) section in this topic.
 
 </td>
 </tr>
@@ -110,7 +110,7 @@ See the [Additional Features in SAP Fiori Elements for OData V2](adapting-the-ui
 
 App developers adapt the UI manually or use SAP Fiori tools for the most common settings. For more information, see the following topics:
 
--   [Create the Adaptation Project](https://help.sap.com/docs/SAP_FIORI_tools/17d50220bcd848aa854c9c182d65b699/d6ab2614df5c4c5597055e4dd988ad16.html) \(for SAP S/4HANA Cloud\)
+-   [Create the Adaptation Project](https://help.sap.com/docs/SAP_FIORI_tools/17d50220bcd848aa854c9c182d65b699/d6ab2614df5c4c5597055e4dd988ad16.html) \(for SAP S/4HANA Cloud Public Edition\)
 
 -   [Creating a Project](https://help.sap.com/docs/SAP_FIORI_tools/17d50220bcd848aa854c9c182d65b699/072f566ed1d845b6aa41cb01057700d5.html) \(for an on-premise system\)
 
@@ -127,7 +127,7 @@ For more information about what you have to consider when developing apps that s
 </td>
 <td valign="top">
 
-See the [Additional Features in SAP Fiori Elements for OData V4](adapting-the-ui-59bfd31.md#loio59bfd317ed5d4af3b490abbe7a9731d8__section_qmw_cxf_zcc) section in this topic.
+See the [Additional Features in the SAP Fiori Elements for OData V4](adapting-the-ui-59bfd31.md#loio59bfd317ed5d4af3b490abbe7a9731d8__section_qmw_cxf_zcc) section in this topic.
 
 </td>
 </tr>
@@ -143,7 +143,7 @@ See the [Additional Features in SAP Fiori Elements for OData V4](adapting-the-ui
 
 ### Variant Management
 
-Key users can create public variants and deliver to all users or to users with specific roles. This is supported for page variants in list pages and table variants in list report and object pages.
+Key users can create public variants and deliver them to all users or to users with specific roles. This is supported for page variants in list pages and table variants in list report and object pages.
 
 Key users can also perform the following:
 
@@ -156,10 +156,10 @@ Key users can also perform the following:
 
 ![](images/Key_Users_Manage_Views1_9ff91e8.png)![](images/Key_Users_Manage_Views_2_f31343c.png)
 
-While switching to the key user adaptation mode from the normal mode, the app starts in a fresh state and the applied changes are not preserved in the internal app state. Also, when a user exits the key user adaptation mode, the app restores to the old state it was in before entering the key user adaptation mode.
+While switching to key user adaptation mode from normal mode, the app starts in a fresh state and the applied changes are not preserved in the internal app state. Also, when a user exits key user adaptation mode, the app restores to the old state it was in before entering key user adaptation mode.
 
 > ### Note:  
-> We do not recommend embedding iFrame in the SAP Fiori elements for OData V2 application using UI adaptation.
+> We do not recommend embedding iFrames in the SAP Fiori elements for OData V2 application using UI adaptation.
 
 
 
@@ -167,7 +167,7 @@ While switching to the key user adaptation mode from the normal mode, the app st
 
 ## Additional Features in SAP Fiori Elements for OData V4
 
-SAP Fiori elements for OData V4 provides configuration settings for the list report, the object page, as well as specifically for the filter bar and tables. These configuration settings are applied to the app's `manifest.json` file, so they are not immediately visible on the UI. When a key user activates a new version and exits the key user adaptation mode, the application automatically reloads with the new settings.
+SAP Fiori elements for OData V4 provides configuration settings for the list report, the object page, and for the filter bar and tables. These configuration settings are applied to the app's `manifest.json` file, so they are not immediately visible on the UI. When a key user activates a new version and exits key user adaptation mode, the application automatically reloads with the new settings.
 
 The following table provides an overview of the available configuration settings for key users:
 
@@ -240,7 +240,7 @@ Configure how variant management is used in the list report.
 <td valign="top">
 
 > ### Note:  
-> Please note that settings made by a key user can override those made by an end user. This means that end users may need to reapply their personalization settings.
+> Settings made by a key user can override those made by an end user. This means that end users may need to reapply their personalization settings.
 
 
 
@@ -352,7 +352,7 @@ Configure if variant management is used in tables on the object page.
 <td valign="top">
 
 > ### Note:  
-> Please note that settings made by a key user can override those made by an end user. This means that end users may need to reapply their personalization settings.
+> Settings made by a key user can override those made by an end user. This means that end users may need to reapply their personalization settings.
 
 
 
@@ -381,7 +381,7 @@ Configure if the *Export* button is displayed in the table.
 </td>
 <td valign="top">
 
-
+ 
 
 </td>
 </tr>
@@ -446,7 +446,7 @@ Configure if the table personalization settings are enabled. To configure the li
 <td valign="top">
 
 > ### Note:  
-> Please note that settings made by a key user can override those made by an end user. This means that end users may need to reapply their personalization settings.
+> Settings made by a key user can override those made by an end user. This means that end users may need to reapply their personalization settings.
 
 
 
@@ -550,7 +550,7 @@ Configure if the *Select All* option is displayed in the table.
 </td>
 <td valign="top">
 
-Configure the maximum limit to the number of rows that can be selected at once.
+Configure the maximum limit of the number of rows that can be selected at once.
 
 </td>
 <td valign="top">
@@ -577,7 +577,7 @@ Configure the *Add Card to Insights* feature for *My Home* in SAP S/4HANA.
 </td>
 <td valign="top">
 
-[Creating Cards for the Insights Cards Section of My Home in SAP S/4HANA Cloud and My Home in SAP S/4HANA](creating-cards-for-the-insights-cards-section-of-my-home-in-sap-s-4hana-cloud-and-my-home-9b13559.md)
+[Creating Cards for the Insights Cards Section of My Home in SAP S/4HANA Cloud Public Edition and My Home in SAP S/4HANA](creating-cards-for-the-insights-cards-section-of-my-home-in-sap-s-4hana-cloud-public-edit-9b13559.md)
 
 </td>
 <td valign="top">

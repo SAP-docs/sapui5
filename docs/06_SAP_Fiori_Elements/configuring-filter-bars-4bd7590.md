@@ -4,11 +4,11 @@
 
 # Configuring Filter Bars
 
-You can configure filter bars in list report applications and in the analytical list page.
+You can configure filter bars in both list report applications and analytical list pages.
 
-Only the fields that are part of `UI.SelectionFields`, together with all mandatory filter fields, are shown by default, in the filter bar. The *Editing Status* filter is added automatically if you have a draft service.
+By default, only the fields included in `UI.SelectionFields`, along with all mandatory filter fields, are displayed in the filter bar. The *Editing Status* filter is added automatically if you have a draft service.
 
-The filter bar is only available if the service configured for the application supports filtering using the following annotations:
+The filter bar is available only if the service configured for the application supports filtering using the following annotations:
 
 SAP Fiori elements for OData V2: `sap-filterable=true`
 
@@ -40,8 +40,6 @@ SAP Fiori elements for OData V4: `Capabilities.Filterable=true`
 > ABAP CDS Annotation
 > 
 > ```
-> 
-> 
 > @UI.SelectionField: [{ position: 10 }]
 > SALESORDER;
 > 
@@ -76,6 +74,35 @@ SAP Fiori elements for OData V4: `Capabilities.Filterable=true`
 
 
 
+<a name="loio4bd7590569c74c61a0124c6e370030f6__section_z2j_m4c_pdc"/>
+
+## Configuring Search Behavior in Filter Bars
+
+
+
+### *Go* Button Mode
+
+In Go button mode, the search isn't invoked and the content area does not refresh when an end user modifies the filter fields unless they explicitly click *Go*. By default, the *Go* button is displayed on the filter bar. You can modify the default content loading behavior during the initial load of the application by configuring the `manifest.json` file. For more information, see [Loading Behavior of Data on Initial Launch of the Application](loading-behavior-of-data-on-initial-launch-of-the-application-9f4e119.md).
+
+
+
+### Live Mode
+
+In live mode, any changes made by an end user to the filter fields automatically invokes a search and refreshes the content area. In this mode, if the variant management feature is enabled, the application does not display the *Apply Automatically* checkbox, as selecting a variant automatically invokes the filter search.
+
+This mode is ideal for applications with a small amount of data that have no performance issues from the underlying database layer, such as those requiring complex joins to execute actions.
+
+For more information about how to enable the live mode in OData V2, see the [Enabling Live Mode](configuring-filter-bars-4bd7590.md#loio4bd7590569c74c61a0124c6e370030f6__live_mode_v2) subsection in the **Additional Features in SAP Fiori elements for OData V2** section of this topic.
+
+For more information about how to enable the live mode in OData V4, see the [Enabling Live Mode](configuring-filter-bars-4bd7590.md#loio4bd7590569c74c61a0124c6e370030f6__live_mode_v4) subsection in the **Additional Features in SAP Fiori elements for OData V4** section of this topic.
+
+> ### Caution:  
+> Impact on performance
+> 
+> When live mode is enabled, the content area loads automatically during the initial load of the application, regardless of the initial load settings in the `manifest.json` file. Additionally, the content area refreshes each time a filter field value changes. This behavior can negatively impact the performance, especially when dealing with large datasets or complex database constraints, such as compiling complex join queries whenever there is a change in the filter field values. You must perform thorough testing to ensure acceptable end-to-end performance before enabling live mode.
+
+
+
 <a name="loio4bd7590569c74c61a0124c6e370030f6__section_jl2_54v_wsb"/>
 
 ## Additional Features in SAP Fiori Elements for OData V2
@@ -107,6 +134,12 @@ In this example, `P_Currency` and `P_Country` are mandatory and they must be fil
 
 > ### Note:  
 > Current support for optional parameters only includes the `Edm.String` type.
+
+
+
+### Enabling Live Mode
+
+You can enable live mode by setting `liveMode` to `true` using UI adaptation. For more information, see [Adapting the UI: List Report and Object Page](adapting-the-ui-list-report-and-object-page-0d2f1a9.md).
 
 
 
@@ -151,9 +184,9 @@ The following screen recording shows how to add a new filter field:
 
 ### Hiding the Filter Bar
 
-You can configure your app to disable the filter bar on a list report by making the corresponding settings in the `manifest.json`.
+You can configure your application to disable the filter bar on a list report by making the corresponding settings in the `manifest.json` file.
 
-You can choose to actively disable the filter bar, even if the entity set contains filterable fields. Your app then loads with the following behavior:
+You can choose to actively disable the filter bar, even if the entity set contains filterable fields. Your application then loads with the following behavior:
 
 -   The content area is always loaded, irrespective of the `initialLoad` setting in the `manifest.json`.
 
@@ -188,15 +221,39 @@ You can disable the filter bar by setting `hideFilterBar` to `true` in the `mani
 
 
 
-### *Go* Button Mode
+### Enabling Live Mode
 
-The *Go* button is always enabled in the filter bar and can't be switched off.
+You can enable live mode by setting the `liveMode` to `true` in the `manifest.json` file, as shown in the following sample code:
+
+> ### Sample Code:  
+> manifest.json
+> 
+> ```
+> "routing": {
+> 	"targets": {
+>                     "MyEntitiesList": {
+>                             "type": "Component",
+>                             "name": "sap.fe.templates.ListReport",
+>                             "id": "MyEntitiesList",
+>                             "options": {
+>                                             "settings": {
+>                                                             "liveMode": true,
+>                                                                  …..
+>                                                                 ….
+>                                                         }
+>                                         }
+>                                 }
+>                 }
+> }
+> ```
+
+Enabling live mode may have some impact on performance. For more information, see the Note in the [Live Mode](configuring-filter-bars-4bd7590.md#loio4bd7590569c74c61a0124c6e370030f6__live_mode) subsection of this topic.
 
 
 
 ### Configuring Mandatory Filter Fields
 
-Applications can configure the filter fields as mandatory using the `Capabilities.RequiredProperties` annotation. Such properties need a value before the filter fields can be triggered.
+You can configure the filter fields as mandatory using the `Capabilities.RequiredProperties` annotation. Such properties need a value before the filter fields can be triggered.
 
 > ### Sample Code:  
 > XML Annotation

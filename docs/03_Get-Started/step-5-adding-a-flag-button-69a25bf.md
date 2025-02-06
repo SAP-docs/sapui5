@@ -71,7 +71,7 @@ sap.ui.define([
 
 Lets start with the implementation code for the `FlaggedType`. We now add the documentation in JSDoc format and the implementation of the three functions of the data type to the previously empty stub:
 
--   The `formatValue` function takes care of the conversion from the model to the UI. As specified in the tests, a model value of `1` will be converted to `true`, everything else to `false`. In the implementation code, this equals to `”iFlagged === 1”`.
+-   The `formatValue` function takes care of the conversion from the model to the UI. As specified in the tests, a model value of `1` will be converted to `true`, everything else to `false`. In the implementation code, this equals to `"iFlagged === 1"`.
 
 -   Similarly, the `parseValue` function is called by SAPUI5 when the data is written back to the model. Here, we convert the Boolean value to an integer again.
 

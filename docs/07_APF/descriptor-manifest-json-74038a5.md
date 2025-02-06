@@ -12,7 +12,7 @@ As of SAPUI5 version 1.30, APF uses the `manifest.json` file as descriptor. It r
 > ### Note:  
 > Customer modifications may conflict with the SAP namespace and can be overwritten when updates are imported.
 
-For information about the structure and content of the `manifest.json` file, see [Descriptor for Applications, Components, and Libraries \(manifest.json\)](../04_Essentials/descriptor-for-applications-components-and-libraries-manifest-json-be0cf40.md).
+For information about the structure and content of the `manifest.json` file, see [Manifest \(Descriptor for Applications, Components, and Libraries\)](../04_Essentials/manifest-descriptor-for-applications-components-and-libraries-be0cf40.md).
 
 APF expects certain entries in the manifest of a component that extends `sap.apf.core.Component`. Entries for four different data sources have to be defined in the `sap.app` namespace:
 
@@ -102,7 +102,7 @@ APF expects certain entries in the manifest of a component that extends `sap.apf
     </table>
     
 
-The `sap.app` namespace also contains the title of the application. This “title” entry references the text key `AnalyticalConfigurationName`. When you export the text pool from APF Configuration Modeler, the up-to-date configuration title is written into the .properties file with the text key `AnalyticalConfigurationName`. Ensure you also keep the location of the .properties file up to date in the `manifest.json` file \(entry “i18n”\). At runtime, this title is displayed as the browser tab title.
+The `sap.app` namespace also contains the title of the application. This "title" entry references the text key `AnalyticalConfigurationName`. When you export the text pool from APF Configuration Modeler, the up-to-date configuration title is written into the .properties file with the text key `AnalyticalConfigurationName`. Ensure you also keep the location of the .properties file up to date in the `manifest.json` file \(entry "i18n"\). At runtime, this title is displayed as the browser tab title.
 
 
 

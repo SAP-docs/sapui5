@@ -97,10 +97,10 @@ To enable this feature, set the `UI.PartOfPreview` annotation of the relevant re
 > XML Annotation
 > 
 > ```xml
-> <Record Type=“UI.DataField”>
->     <PropertyValue Property=“Label” String=“{@i18n>@StreetName}” />
->     <PropertyValue Property=“Value” Path=“StreetName” />
->     <Annotation Term=“UI.PartOfPreview” Bool=“false” />
+> <Record Type="UI.DataField">
+>     <PropertyValue Property="Label" String="{@i18n>@StreetName}" />
+>     <PropertyValue Property="Value" Path="StreetName" />
+>     <Annotation Term="UI.PartOfPreview" Bool="false" />
 > </Record>
 > ```
 

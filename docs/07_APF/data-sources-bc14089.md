@@ -23,9 +23,9 @@ All required OData services must exist and must fulfill the following requiremen
     }
     ```
 
--   For each entity set you must specify the key words “aggregates always”.
+-   For each entity set you must specify the key words "aggregates always".
 
-    In addition, for each entity set that corresponds to an analytical query view, the statement “keys generate local” must be included.
+    In addition, for each entity set that corresponds to an analytical query view, the statement "keys generate local" must be included.
 
     Example:
 

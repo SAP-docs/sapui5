@@ -168,12 +168,12 @@ In the `manifest.json`, you define the "navigation" section for each "target". T
 >                   "navigation": {               // Navigation Section to SubOP detail page: Eliminate if no navigation is required.
 >                             "_Records": {       // NOTE: This should refer to navigation path and NOT navigation entity name                         
 >                                 "detail": {                                     
->                                     "route": "RecordSubObjectPage" // This triggers the regular internal navigation from OP “Records” table record to SubOP
+>                                     "route": "RecordSubObjectPage" // This triggers the regular internal navigation from OP "Records" table record to SubOP
 >                                 }                         
 >                             },
 >                             "_Publishers": {    // NOTE: This should refer to navigation path and NOT navigation entity name                            
 >                                 "detail": {                                     
->                                     "route": "PublisherSubObjectPage" // This triggers the regular internal navigation from OP “Publisher” table record to SubOP
+>                                     "route": "PublisherSubObjectPage" // This triggers the regular internal navigation from OP "Publisher" table record to SubOP
 >                                 }                         
 >                             }                         
 >                         }
@@ -243,7 +243,7 @@ The parameters in the routing pattern are resolved using the relative binding pa
 >                 "settings": {
 >                     "contextPath":    "/SalesOrderManage",
 >                     "navigation": {
->                         "to_SalesOrder": {  // ‘Target’ of UI.DataFieldWithNavigationPath annotation
+>                         "to_SalesOrder": {  // 'Target' of UI.DataFieldWithNavigationPath annotation
 >                             "detail": {
 >                                 "route": "SalesOrderManageObjectPage",
 >                                 "parameters": {
@@ -326,7 +326,7 @@ Application developers can disable the navigation using the setting `navigateToI
 > `navigateToInstance`
 > 
 > ```
-> “com.sap.vocabularies.UI.v1.LineItem": {
+> "com.sap.vocabularies.UI.v1.LineItem": {
 >     "tableSettings": {
 >         ...,
 >         ...
@@ -354,7 +354,7 @@ For inline actions, you must make the following configuration at columns level:
 > `navigateToInstance` for Inline Actions
 > 
 > ```
-> “com.sap.vocabularies.UI.v1.LineItem": {
+> "com.sap.vocabularies.UI.v1.LineItem": {
 >     "tableSettings": {
 >         ...,
 >         ...

@@ -2,7 +2,7 @@
 
 # Supported Locales and Fallback Chain
 
-You can configure a list of supported locales and a fallback locale in your app’s manifest to control the loading of resource bundles and avoid ‘404 Not Found’ network responses.
+You can configure a list of supported locales and a fallback locale in your app's manifest to control the loading of resource bundles and avoid '404 Not Found' network responses.
 
 > ### Note:  
 > 1.  [UI5 Tooling](https://sap.github.io/ui5-tooling/stable/) v4 and higher is capable of automatically adding supported locales to the manifest based on the available properties files. Detailed information and requirements can be found in [UI5 Builder - Generation of Supported Locales](https://sap.github.io/ui5-tooling/stable/pages/Builder/#generation-of-supported-locales).
@@ -23,10 +23,10 @@ You can configure a list of supported locales and a fallback locale in your app�
 
 When developing apps and working with resource bundles for internationalization \(i18n\), you might run into the following problems:
 
--   ‘404 Not Found’ responses in the network trace, for example for a request to `myapp/i18n_de_DE.properties` when the client’s locale is `"de_DE"`, because there is no translation file for this locale.
--   Resource bundle requests for language `"en"`, such as for e.g. `myapp/i18n_en.properties`, although the client’s locale is not set to English.
+-   '404 Not Found' responses in the network trace, for example for a request to `myapp/i18n_de_DE.properties` when the client's locale is `"de_DE"`, because there is no translation file for this locale.
+-   Resource bundle requests for language `"en"`, such as for e.g. `myapp/i18n_en.properties`, although the client's locale is not set to English.
 
-These issues occur most often when a text translated for the user's locale cannot be found in the resource bundle. The resource bundle then tries to load all potential locale-specific translation files using synchronous requests. This not only looks bad when checking the network trace but also comes at a price of poor performance and unwanted network traffic. Since SAPUI5 1.77 you can avoid this by providing the `supportedLocales` and `fallbackLocale` configuration in your app’s manifest. This enables the client to know in advance which language bundles to request.
+These issues occur most often when a text translated for the user's locale cannot be found in the resource bundle. The resource bundle then tries to load all potential locale-specific translation files using synchronous requests. This not only looks bad when checking the network trace but also comes at a price of poor performance and unwanted network traffic. Since SAPUI5 1.77 you can avoid this by providing the `supportedLocales` and `fallbackLocale` configuration in your app's manifest. This enables the client to know in advance which language bundles to request.
 
 
 

@@ -177,7 +177,7 @@ Next, we have to create the view `employees.Employee`; for better illustration t
 </mvc:View>
 ```
 
-Create the file `Employee.view.xml` inside the `webapp/view/employee` folder. This employee view displays master data for an employee in a panel with a `SimpleForm` control: first name, last name and so on. The data comes from a relative data binding that is set on the view level as we can see in the controller later. As we are focusing on the navigation aspects in this tutorial, we won’t go into detail on the controls of the view. Just copy the code.
+Create the file `Employee.view.xml` inside the `webapp/view/employee` folder. This employee view displays master data for an employee in a panel with a `SimpleForm` control: first name, last name and so on. The data comes from a relative data binding that is set on the view level as we can see in the controller later. As we are focusing on the navigation aspects in this tutorial, we won't go into detail on the controls of the view. Just copy the code.
 
 
 
@@ -231,7 +231,7 @@ sap.ui.define([
 });
 ```
 
-Now we create the file `Employee.controller.js` in the `webapp/controller/employee` folder. In this controller file, we want to detect which employee shall be displayed in order to show the employee’s data in the view. Therefore, we query the router for the route `employee` and attach a private event listener function `_onRouteMatched` to the matched event of this route.
+Now we create the file `Employee.controller.js` in the `webapp/controller/employee` folder. In this controller file, we want to detect which employee shall be displayed in order to show the employee's data in the view. Therefore, we query the router for the route `employee` and attach a private event listener function `_onRouteMatched` to the matched event of this route.
 
 In the event handler, we can access the `arguments` parameter from the `oEvent` parameter that contains all parameters of the pattern. Since this listener is only called when the route is matched, we can be sure that the mandatory parameter `employeeId` is always available as a key in `arguments`; otherwise the route would not have matched. The name of the mandatory parameter `employeeId` correlates to the `{employeeId}` from our pattern definition of the route `employee` and thus to the value in the URL.
 
@@ -240,7 +240,7 @@ In `_onRouteMatched` we call `bindElement()` on the view to make sure that the d
 We also add an event handler to the `change` event as a private function `_onBindingChange`. It checks if the data could be loaded by querying the binding context of the view. As seen in the previous steps, we will display the `notFound` target if the data could not be loaded.
 
 > ### Note:  
-> Instead of calling `attachMatched(…)` on a route we could also call `attachRouteMatched(…)` directly on the router. However, the event for the latter is fired for every matched event of any route in the whole app. We don’t use the latter because we would have to implement an additional check for making sure that current route is the route that has been matched. We want to avoid this extra overhead and register on the route instead.
+> Instead of calling `attachMatched(…)` on a route we could also call `attachRouteMatched(…)` directly on the router. However, the event for the latter is fired for every matched event of any route in the whole app. We don't use the latter because we would have to implement an additional check for making sure that current route is the route that has been matched. We want to avoid this extra overhead and register on the route instead.
 
 
 
@@ -273,7 +273,7 @@ We also add an event handler to the `change` event as a private function `_onBin
 </mvc:View>
 ```
 
-It’s time to change the `EmployeeList` view so that we can navigate to the new view. We set the attribute type of the `StandardListItem` template to `Navigation` to make the item clickable and indicate a navigation feature to the user. Additionally, we add an event handler for the `press` event that is called when the user clicks on an employee list item.
+It's time to change the `EmployeeList` view so that we can navigate to the new view. We set the attribute type of the `StandardListItem` template to `Navigation` to make the item clickable and indicate a navigation feature to the user. Additionally, we add an event handler for the `press` event that is called when the user clicks on an employee list item.
 
 
 
@@ -299,7 +299,7 @@ sap.ui.define([
 
 Finally, we add the handler `onListItemPressed` for the `press` event to the `EmployeeList` controller. In the handler, we determine the `EmployeeID` of the list item by querying the binding context and accessing the property `EmployeeID` from the data model.
 
-Then we navigate to the `employee` route and pass a configuration object on to the `navTo` method with the mandatory parameter `employeeId` filled with the correct `EmployeeID`. The router always makes sure that mandatory parameters as specified in the route’s pattern are set; otherwise an error is thrown.
+Then we navigate to the `employee` route and pass a configuration object on to the `navTo` method with the mandatory parameter `employeeId` filled with the correct `EmployeeID`. The router always makes sure that mandatory parameters as specified in the route's pattern are set; otherwise an error is thrown.
 
 
 
@@ -320,7 +320,7 @@ formCountry=Country
 
 Add the new texts to the `i18n.properties` file.
 
-That’s it. You can go to `webapp/index.html#/employees` and click on any list item to be redirected to corresponding employee’s details. Check also what happens when you directly navigate to the following files:
+That's it. You can go to `webapp/index.html#/employees` and click on any list item to be redirected to corresponding employee's details. Check also what happens when you directly navigate to the following files:
 
 -   `webapp/index.html#/employees/3`
 

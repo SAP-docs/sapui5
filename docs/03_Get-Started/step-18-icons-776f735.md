@@ -93,7 +93,7 @@ We add an icon to the button that opens the dialog. The `sap-icon://` protocol i
 </core:FragmentDefinition>
 ```
 
-In the dialog fragment, we add an icon control to the content aggregation of the dialog. Luckily, the icon font also comes with a “Hello World” icon that is perfect for us here. We also define the size of the icon and set a medium margin on it.
+In the dialog fragment, we add an icon control to the content aggregation of the dialog. Luckily, the icon font also comes with a "Hello World" icon that is perfect for us here. We also define the size of the icon and set a medium margin on it.
 
 
 

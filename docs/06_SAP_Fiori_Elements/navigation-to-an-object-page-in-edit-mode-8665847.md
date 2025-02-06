@@ -71,3 +71,6 @@ You can set `openInEditMode` to `true` in the `manifest.json` file to configure 
 > }
 > ```
 
+> ### Note:  
+> When `openInEditMode` is set to `true`, the *Open in New Tab* option is not proposed in the table's context menu.
+

@@ -1,6 +1,6 @@
 <!-- loioca00ee45fe344a73998f482cb2e669bb -->
 
-# Hiding Features Using the UI.Hidden Annotation
+# Hiding Features Using the `UI.Hidden` Annotation
 
 You can use the `UI.Hidden` annotation to hide or display specific features on the object page.
 
@@ -23,12 +23,24 @@ System Behavior
 <tr>
 <td valign="top">
 
-`Hiding Features Using<Annotation Term="UI.Hidden" Bool="false"/>`
+`<Annotation Term="UI.Hidden"/>`
 
 </td>
 <td valign="top">
 
-The feature is visible
+The default value is `true`, so the properties or facets annotated with this term are hidden.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`<Annotation Term="UI.Hidden" Bool="false"/>`
+
+</td>
+<td valign="top">
+
+Properties or facets annotated with this term are not hidden, as`UI.Hidden` is set to `false`.
 
 </td>
 </tr>
@@ -40,22 +52,22 @@ The feature is visible
 </td>
 <td valign="top">
 
-The feature is not visible
+Properties or facets annotated with this term are hidden, as `UI.Hidden` is set to `true`.
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-`<Annotation Term="UI.Hidden" Path="Edit_ac"/>`
+`<Annotation Term="UI.Hidden" Path="edit_mode"/>`
 
 </td>
 <td valign="top">
 
-The feature is visible if the path evaluates to `false` and is not visible if the path evaluates to `true`.
+Properties or facets annotated with this term are not hidden if the path \(`edit_mode`\) evaluates to `false`; however, they are hidden if the same path evaluates to `true`.
 
 > ### Note:  
-> The path must point to a Boolean property. Expression bindings, for instance, using a negation with !, are not supported behind the path. For more information, see [Expression Binding](../04_Essentials/expression-binding-daf6852.md).
+> The path associated with `UI.Hidden` must always point to a Boolean property. You can use `edmJSON` instead as SAPUI5 expression binding isn't supported.
 
 
 
@@ -64,12 +76,35 @@ The feature is visible if the path evaluates to `false` and is not visible if th
 <tr>
 <td valign="top">
 
-`<Annotation Term="UI.Hidden" />` 
+> ### Sample Code:  
+> ```
+> <Annotation Term="UI.Hidden"> 
+>     <If>
+>         <Or>
+>             <Eq>
+>                 <Path>displayCriteria</Path>
+>                 <String>value_A</String>
+>             </Eq>
+>             <Eq>
+>                 <Path>displayCriteria</Path>
+>                 <String>value_B</String>
+>             </Eq>
+>         </Or>
+>     </If>
+> </Annotation>
+> ```
+
+
 
 </td>
 <td valign="top">
 
-The default value is `true` so the feature will not be visible
+`edmJSON` can be used to apply `UI.Hidden` based on conditions. Properties or facets annotated with this term are hidden if the path \(`displayCriteria`\) evaluates to `value_A` or `value_B`; however, they are not hidden if the path evaluates to any other value.
+
+> ### Note:  
+> This is applicable only to SAP Fiori elements for OData V4.
+
+
 
 </td>
 </tr>
@@ -81,7 +116,7 @@ The default value is `true` so the feature will not be visible
 
 ## Header Facets on Object Page
 
-You can hide header facets on the object page.
+You can hide header facets on the object page, as shown in the following sample code:
 
 > ### Sample Code:  
 > XML Annotation
@@ -133,7 +168,7 @@ You can hide header facets on the object page.
 >     purpose: #HEADER
 >   },
 >   {
->     hidden: #(‘editActionIsEnabled’),
+>     hidden: #('editActionIsEnabled'),
 >     label: 'Credit Limit Consumption',
 >     id: 'CreditLimitChartHeader',
 >     targetQualifier: 'CreditLimitChart',
@@ -161,7 +196,7 @@ You can hide header facets on the object page.
 >         $Type             : 'UI.ReferenceFacet',
 >         Label             : Contact Info',
 >         ID                : 'ContactHeader',
->         Target            : ‘_SoldToParty/@Communication.Contact’,
+>         Target            : '_SoldToParty/@Communication.Contact',
 >         ![@UI.Hidden] : true 
 >     },
 >     {
@@ -174,13 +209,17 @@ You can hide header facets on the object page.
 >     ]
 > ```
 
+You cannot use the `UI.Hidden` annotation to hide the entire `UI.FieldGroup` and `UI.Identification`. To hide them, you must hide all the `DataField` records within them.
+
+In SAP Fiori elements for OData V4, you can use the `UI.Hidden` annotation to hide the wrapper around the `FieldGroup` which is normally the `ReferenceFacet` or the `DataFieldForAnnotation`.
+
 
 
 <a name="loioca00ee45fe344a73998f482cb2e669bb__section_ng3_mxz_dnb"/>
 
 ## Sections on Object Page
 
-You can hide an entire section. To hide one subsection, you can hide content within a section. See also the section about DataField Records in Header Facets in this topic.
+You can hide an entire section and a specific subsections within it. To hide a subsection, hide the content within the subsection. For more information, see the [DataField Records in Header Facets](hiding-features-using-the-ui-hidden-annotation-ca00ee4.md#loioca00ee45fe344a73998f482cb2e669bb__section_ivf_xxz_dnb) section in this topic.
 
   
   
@@ -272,7 +311,7 @@ You can hide an entire section. To hide one subsection, you can hide content wit
 
 ## Content in Quick Views
 
-You can hide content in quick views, such as field groups like this:
+You can hide content in quick views, such as field groups, as shown in the following image:
 
   
   
@@ -312,7 +351,7 @@ You can hide content in quick views, such as field groups like this:
 >     purpose: #QUICK_VIEW
 >   },
 >   {
->     hidden: #(‘edit_Ac’),
+>     hidden: #('edit_Ac'),
 >     label: 'Address',
 >     targetQualifier: 'SoldToQuickView',
 >     type: #FIELDGROUP_REFERENCE,
@@ -330,27 +369,27 @@ You can hide content in quick views, such as field groups like this:
 >    {
 >         $Type  : 'UI.ReferenceFacet',
 >         Label  : 'Material',
->         Target : ‘@Communication.Contact’,
+>         Target : '@Communication.Contact',
 >         ![@UI.Hidden]     : true
 >     },
 >     {
 >         $Type  : 'UI.ReferenceFacet',
 >         Label  : 'Address',
->         Target : ‘@UI.FieldGroup#SoldToQuickView’,
+>         Target : '@UI.FieldGroup#SoldToQuickView',
 >         ![@UI.Hidden]     : edit_Ac
 >    }
 > ]
 > ```
 
-You can also use this annotation to hide the content in quick views in the list report.
+You can also use the aforementioned annotation to hide content in quick views within the list report.
 
 
 
 <a name="loioca00ee45fe344a73998f482cb2e669bb__section_ivf_xxz_dnb"/>
 
-## DataField Records in Header Facets
+## `DataField` Records in Header Facets
 
-You can hide DataField records, for example, UI.DataField, UI.DataFieldForAnnotation in facets as shown below:
+You can hide `DataField` records, for example, `UI.DataField`, `UI.DataFieldForAnnotation` in facets as shown in the following image:
 
   
   
@@ -396,7 +435,7 @@ You can hide DataField records, for example, UI.DataField, UI.DataFieldForAnnota
 > 
 > @UI.fieldGroup: [
 >   {
->     hidden: #(‘Delivered’),
+>     hidden: #('Delivered'),
 >     value: 'DISTRIBUTIONCHANNEL',
 >     type: #STANDARD,
 >     qualifier: 'OrgData'
@@ -432,15 +471,17 @@ You can hide DataField records, for example, UI.DataField, UI.DataFieldForAnnota
 
 <a name="loioca00ee45fe344a73998f482cb2e669bb__section_odp_cyz_dnb"/>
 
-## DataField Records in Facets
+## `DataField` Records in Facets
 
-You can hide DataField records, for example, UI.DataField, UI.DataFieldForAnnotation in facets as shown below:
+You can hide `DataField` records, for example, `UI.DataField`, `UI.DataFieldForAnnotation` in facets as shown in the following image:
 
   
   
 **DataField Records in Facets**
 
 ![](images/DataField_Records_in_Facets_1_b6dea7a.png "DataField Records in Facets")
+
+You cannot use the `UI.Hidden` annotation to hide an entire `UI.FieldGroup` or `UI.Identification`. To hide them, you must hide all `DataField` records within them or use the `UI.Hidden` annotation to hide the wrapper around the `FieldGroup`, which is typically the `ReferenceFacet` or the `DataFieldForAnnotation`, as shown in the following sample code:
 
 > ### Sample Code:  
 > XML Annotation
@@ -482,7 +523,7 @@ You can hide DataField records, for example, UI.DataField, UI.DataFieldForAnnota
 > 
 > @UI.fieldGroup: [
 >   {
->     hidden: #(‘edit_Ac’),
+>     hidden: #('edit_Ac'),
 >     value: 'IMAGEURL',
 >     type: #STANDARD,
 >     qualifier: 'OrderData'
@@ -515,9 +556,9 @@ You can hide DataField records, for example, UI.DataField, UI.DataFieldForAnnota
 
 <a name="loioca00ee45fe344a73998f482cb2e669bb__section_f3c_sv2_vwb"/>
 
-## DataField Records in Tables
+## `DataField` Records in Tables
 
-If `UI.Hidden` is provided a static `true` value for any field, then the column isn't rendered at all.
+A table column isn't rendered if the static value of `UI.Hidden` is `true`.
 
 > ### Sample Code:  
 > XML Annotation
@@ -565,33 +606,5 @@ If `UI.Hidden` is provided a static `true` value for any field, then the column 
 > ```
 
 > ### Note:  
-> Even if you hide all determining actions in the footer, the footer is still displayed on the UI since it is required to show any bound messages coming from the back end.
-
-
-
-<a name="loioca00ee45fe344a73998f482cb2e669bb__section_bnn_hyz_dnb"/>
-
-## Additional Features in SAP Fiori Elements for OData V2
-
-**Header Facets on the Object Page**
-
-You cannot use the `UI.Hidden` annotation to hide the entire `UI.FieldGroup` and `UI.Identification`. If you want to hide these, you have to hide all `DataField` records in them.
-
-**DataField Records in Facets**
-
-You cannot use the `UI.Hidden` annotation to hide the entire `UI.FieldGroup` and `UI.Identification`. If you want to hide these, you have to hide all `DataField` records within them or use the `UI.Hidden` to hide the wrapper around the `FieldGroup` which is normally the `ReferenceFacet` or the `DataFieldForAnnotation` as shown in the examples in this page.
-
-
-
-<a name="loioca00ee45fe344a73998f482cb2e669bb__section_lvf_5yz_dnb"/>
-
-## Additional Features in SAP Fiori Elements for OData V4
-
-**Header Facets on the Object Page**
-
-You cannot use the `UI.Hidden` annotation to hide the entire `UI.FieldGroup` and `UI.Identification`. If you want to hide these, you have to hide all `DataField` records in them or use the `UI.Hidden` to hide the wrapper around the `FieldGroup` which is normally the `ReferenceFacet` or the `DataFieldForAnnotation` as shown in the examples in this page.
-
-**DataField Records in Facets**
-
-You cannot use the `UI.Hidden` annotation to hide the entire `UI.FieldGroup` and `UI.Identification`. If you want to hide these, you've to hide all `DataField` records within them or use the `UI.Hidden` to hide the wrapper around the `FieldGroup` which is normally the `ReferenceFacet` or the `DataFieldForAnnotation` as shown in the examples in this page.
+> Even if you hide all determining actions in the footer, the UI still displays the footer because it is required to show any bound messages from the back end.
 

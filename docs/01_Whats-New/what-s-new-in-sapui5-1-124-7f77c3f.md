@@ -417,7 +417,7 @@ SAP Fiori Elements
 
 The following changes and new features are available for SAP Fiori elements for OData V4:
 
--   The section title is now merged with the control title in custom sections if the custom section has only one control. For more information, see [Adding a Section to an Object Page](../06_SAP_Fiori_Elements/adding-a-section-to-an-object-page-a357047.md).
+-   The section title is now merged with the control title in custom sections if the custom section has only one control. For more information, see [Adding a Custom Section to an Object Page](../06_SAP_Fiori_Elements/adding-a-custom-section-to-an-object-page-a357047.md).
 
 -   We now support the mass edit feature for fields using a value help with a dropdown list or a rating indicator. For more information, see [Enabling Editing Using a Dialog \(Mass Edit\)](../06_SAP_Fiori_Elements/enabling-editing-using-a-dialog-mass-edit-965ef5b.md).
 
@@ -1026,6 +1026,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.130](what-s-new-in-sapui5-1-130-85609d4.md "With this release SAPUI5 is upgraded from version 1.129 to 1.130.")
 
 [What's New in SAPUI5 1.129](what-s-new-in-sapui5-1-129-d22b8af.md "With this release SAPUI5 is upgraded from version 1.128 to 1.129.")
 

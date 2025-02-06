@@ -418,7 +418,7 @@ Control
 
 -   Colors in the `StackedBar` microcharts in List cards no longer accept `sap.m.ValueCSSColor` values. Now the colors should have standard semantic values provided by the `sap.m.ValueColor` enum. For more information, see the [Card Microcharts](https://ui5.sap.com/test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/learn/features/microcharts) section in the Card Explorer.
 
--   We have allowed the usage of time series charts in the Analytical card. To enable this feature, we now pass the dimensions’ `dataType` parameter in the manifest. For more information, see the [Column with Time Axis](https://ui5.sap.com/test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/explore/analytical/timeAxis) sample in the Card Explorer.
+-   We have allowed the usage of time series charts in the Analytical card. To enable this feature, we now pass the dimensions' `dataType` parameter in the manifest. For more information, see the [Column with Time Axis](https://ui5.sap.com/test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/explore/analytical/timeAxis) sample in the Card Explorer.
 
 -   We have added documentation and a sample about intent-based navigation actions. Intent-based navigation is a mechanism, which has to be supported by the host environment, that allows you to launch applications or perform actions on semantic objects by using abstract intents. For more information, see the [Navigation](https://ui5.sap.com/test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/learn/actions/navigation) section and the [Sample](https://ui5.sap.com/test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/explore/cardActions/ibn) in the Card Explorer.
 
@@ -482,6 +482,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.130](what-s-new-in-sapui5-1-130-85609d4.md "With this release SAPUI5 is upgraded from version 1.129 to 1.130.")
 
 [What's New in SAPUI5 1.129](what-s-new-in-sapui5-1-129-d22b8af.md "With this release SAPUI5 is upgraded from version 1.128 to 1.129.")
 

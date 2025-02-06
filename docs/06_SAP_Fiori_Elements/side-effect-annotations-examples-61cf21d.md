@@ -201,7 +201,7 @@ You can define side effects either in the \*`MPC_EXT` class or in the local anno
 > >                                 <PropertyPath>to_Currency/Currency_Code_Text</PropertyPath>
 > >                             </Collection>
 > >                         </PropertyValue>
-> >                         <!-- Side Effects for action annotation with an entity as a target. Here, controls associated with “to_Item” will be refreshed-->
+> >                         <!-- Side Effects for action annotation with an entity as a target. Here, controls associated with "to_Item" will be refreshed-->
 > >                             <PropertyValue Property="TargetEntities">
 > >                             <Collection>
 > >                                 <NavigationPropertyPath>to_Item</NavigationPropertyPath>
@@ -266,7 +266,7 @@ You can define side effects either in the \*`MPC_EXT` class or in the local anno
 > > ```
 
 > ### Example:  
-> **Side effect on 1:1 associated entity set’s property**
+> **Side effect on 1:1 associated entity set's property**
 > 
 > You can add a side effect annotation on a property that has a 1:1 association with the main entity set. In this case, when you change the associated smart field \(that is rendered in a smart form\), side effect call is triggered.
 > 

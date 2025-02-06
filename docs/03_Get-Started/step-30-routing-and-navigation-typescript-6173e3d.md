@@ -120,7 +120,7 @@ In the app view, we now remove everything and between the control aggregation `p
 
 We thus have everything we need to define a routing from the start view to the details view we just defined. We'd like to start with the app view loading our new overview view by default and being replaced by the detail view when a specific route has been hit.
 
-We add a new “routing" section to the `sap.ui5` part of the descriptor. There are three subsections that define the routing and navigation structure of the app:
+We add a new "routing" section to the `sap.ui5` part of the descriptor. There are three subsections that define the routing and navigation structure of the app:
 
 -   `config`
 
@@ -179,7 +179,7 @@ We add a new “routing" section to the `sap.ui5` part of the descriptor. There 
 }
 ```
 
-The router will automatically add the view that corresponds to the current URL into the app control. The router identifies the app control with the ID that corresponds to the property `controlId: “app”` in the app descriptor\`.
+The router will automatically add the view that corresponds to the current URL into the app control. The router identifies the app control with the ID that corresponds to the property `controlId: "app"` in the app descriptor.
 
 The overview view is always shown when the hash is empty. The detail view is shown when the hash matches the pattern `detail`.
 
@@ -231,7 +231,7 @@ Initializing the router will evaluate the current URL and load the corresponding
 
 ## webapp/controller/InvoiceList.controller.ts
 
-What is still missing is the event handler that performs a navigation to the detail page by clicking an item in the invoice list: To access the router instance for our app we first need to cast `this.getOwnerComponent()` to our component, then we can call the helper method `getRouter()`. On the router we call the `navTo` method passing the pattern name we defined in our app descriptor for routing to the details page.
+What is still missing is the event handler that performs a navigation to the detail page by clicking an item in the invoice list: To access the router instance for our app, use the static method `getRouterFor()` on the `UIComponent` module. On the router, we call the `navTo` method passing the pattern name we defined in our app descriptor for routing to the details page.
 
 ```js
 import Controller from "sap/ui/core/mvc/Controller";

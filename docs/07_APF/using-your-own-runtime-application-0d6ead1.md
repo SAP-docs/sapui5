@@ -39,7 +39,7 @@ The following steps are required:
     <tr>
     <td valign="top">
     
-    `“sap.app.i18n”` 
+    `"sap.app.i18n"` 
     
     </td>
     <td valign="top">
@@ -53,19 +53,19 @@ The following steps are required:
     <tr>
     <td valign="top">
     
-    `“sap.app.title”` 
+    `"sap.app.title"` 
     
     </td>
     <td valign="top">
     
-    Enter “\{\{`AnalyticalConfigurationName`\}\}”. This refers to the text key included in the exported text properties file and defines the app name.
+    Enter "\{\{`AnalyticalConfigurationName`\}\}". This refers to the text key included in the exported text properties file and defines the app name.
     
     </td>
     </tr>
     <tr>
     <td valign="top">
     
-    `“sap.app.dataSources.AnalyticalConfigurationLocation“` 
+    `"sap.app.dataSources.AnalyticalConfigurationLocation"` 
     
     </td>
     <td valign="top">
@@ -77,7 +77,7 @@ The following steps are required:
     <tr>
     <td valign="top">
     
-    `“sap.app.dataSources.PathPersistenceServiceRoot“` 
+    `"sap.app.dataSources.PathPersistenceServiceRoot"` 
     
     </td>
     <td valign="top">
@@ -89,7 +89,7 @@ The following steps are required:
     <tr>
     <td valign="top">
     
-    `“sap.apf.activateFilterReduction”` 
+    `"sap.apf.activateFilterReduction"` 
     
     </td>
     <td valign="top">
@@ -101,7 +101,7 @@ The following steps are required:
     <tr>
     <td valign="top">
     
-    `“sap.apf.activateLrep”` 
+    `"sap.apf.activateLrep"` 
     
     </td>
     <td valign="top">
@@ -113,7 +113,7 @@ The following steps are required:
     <tr>
     <td valign="top">
     
-    `“sap.ui5.dependencies”` 
+    `"sap.ui5.dependencies"` 
     
     </td>
     <td valign="top">

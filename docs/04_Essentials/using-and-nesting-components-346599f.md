@@ -118,7 +118,7 @@ The reuse component is declared via its `componentUsage` ID as the key and the s
 
 The `lazy` flag is used to indicate whether the Component should be already preloaded or not. By default, the Components defined in the usage are lazy. A Component preloaded with the flag `lazy: false` has to be explicitly maintained in the `manifest.json`.
 
-For more information, see [Descriptor for Applications, Components, and Libraries \(manifest.json\)](descriptor-for-applications-components-and-libraries-manifest-json-be0cf40.md).
+For more information, see [Manifest \(Descriptor for Applications, Components, and Libraries\)](manifest-descriptor-for-applications-components-and-libraries-be0cf40.md).
 
 If you want to exchange the reuse component, for example, to extend an app, you simple exchange the reuse component in the `manifest.json` descriptor file.
 
@@ -285,5 +285,5 @@ createContent: function() {
 
 [API Reference: `sap.ui.core.ComponentContainer.setLifecycle`](https://ui5.sap.com/#/api/sap.ui.core.ComponentContainer/methods/setLifecycle)
 
-[Descriptor for Applications, Components, and Libraries \(manifest.json\)](descriptor-for-applications-components-and-libraries-manifest-json-be0cf40.md "The descriptor for applications, components, and libraries (in short: app descriptor) is inspired by the WebApplication Manifest concept introduced by the W3C. The descriptor provides a central, machine-readable, and easy-to-access location for storing metadata associated with an application, an application component, or a library.")
+[Manifest \(Descriptor for Applications, Components, and Libraries\)](manifest-descriptor-for-applications-components-and-libraries-be0cf40.md "The manifest (also known as descriptor for applications, components, and libraries, in short: app descriptor) is inspired by the WebApplication Manifest concept introduced by the W3C. The manifest provides a central, machine-readable, and easy-to-access location for storing metadata associated with an application, an application component, or a library.")
 

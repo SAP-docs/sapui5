@@ -30,7 +30,7 @@ Focus visualization is very important for user efficiency.​
 
 ### Layout Adaptation for Different Devices
 
-The user interface needs to be adapted to the user’s device.
+The user interface needs to be adapted to the user's device.
 
 
 

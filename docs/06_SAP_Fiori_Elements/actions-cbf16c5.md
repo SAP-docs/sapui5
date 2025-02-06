@@ -502,18 +502,18 @@ Global actions are placed at the top of the page and refer to the whole page \(f
 
 You can display actions in the toolbar to allow users to perform an action for one or more lines in the table.
 
-You can also configure inline actions. They’re displayed in a column \(specified in the annotation\) in the individual line item. When the user triggers the action, it affects only the individual line item.
+You can also configure inline actions. They're displayed in a column \(specified in the annotation\) in the individual line item. When the user triggers the action, it affects only the individual line item.
 
 
 
 ### Determining Actions
 
-Determining actions are placed in the footer of the app. These actions are also called finalizing actions and are meant for those actions that apply to the whole page. Don’t define actions that are specific to a control or parts of the page as finalizing actions.
+Determining actions are placed in the footer of the app. These actions are also called finalizing actions and are meant for those actions that apply to the whole page. Don't define actions that are specific to a control or parts of the page as finalizing actions.
 
 Example: *Save* or *Accept/Reject* in an object page.
 
 > ### Note:  
-> Determining actions aren’t appropriate for the list report, since the list report holds several records and the finalizing actions are applicable to the whole page, and not just some selected records of the list report table.
+> Determining actions aren't appropriate for the list report, since the list report holds several records and the finalizing actions are applicable to the whole page, and not just some selected records of the list report table.
 
 
 
@@ -521,7 +521,7 @@ Example: *Save* or *Accept/Reject* in an object page.
 
 ## Context-Dependent and Context-Independent Actions
 
-Both actions calling OData function imports \(`UI.DataFieldForAction`\) and actions for external navigation \(`UI.DataFieldForIntentBasedNavigation`\) can be either context-independent or context-dependent. For context-dependent actions, users have to select line items in a table. Only then are the buttons that visualize these actions enabled. However, they are always visible. For context-independent actions, users don’t have to select line items in a table. Buttons visualizing context-independent actions are always enabled.
+Both actions calling OData function imports \(`UI.DataFieldForAction`\) and actions for external navigation \(`UI.DataFieldForIntentBasedNavigation`\) can be either context-independent or context-dependent. For context-dependent actions, users have to select line items in a table. Only then are the buttons that visualize these actions enabled. However, they are always visible. For context-independent actions, users don't have to select line items in a table. Buttons visualizing context-independent actions are always enabled.
 
 
 
@@ -531,7 +531,7 @@ When you configure navigation buttons, you have two options:
 
 -   You can configure the button so that the end user must explicitly select a context \(`RequiresContext=true`\).
 
--   You can configure the button so that the end user doesn’t need to select a context \(`RequiresContext=false`\), meaning that the available context is passed.
+-   You can configure the button so that the end user doesn't need to select a context \(`RequiresContext=false`\), meaning that the available context is passed.
 
 
 
@@ -558,7 +558,7 @@ The following coding sample shows the annotations for a context-independent acti
 > ```
 > {
 >     label: 'Navigation Tester with RequiresContext',
->     semanticObject: ‘Object’,
+>     semanticObject: 'Object',
 >     semanticObjectAction: 'Action', 
 >     requiresContext: false,
 >     type: #FOR_INTENT_BASED_NAVIGATION
@@ -604,7 +604,7 @@ The following coding sample shows the annotations for a context-dependent action
 > ```
 > {
 >     label: 'Navigation Tester with RequiresContext',
->     semanticObject: ‘Object’,
+>     semanticObject: 'Object',
 >     semanticObjectAction: 'Action', 
 >     requiresContext: true,
 >     type: #FOR_INTENT_BASED_NAVIGATION
@@ -631,7 +631,7 @@ The following coding sample shows the annotations for a context-dependent action
 
 In SAP Fiori elements for OData V2, you can choose to pass the context when the `UI.DataFieldForAction` button is invoked.
 
-In SAP Fiori elements for OData V4, it depends on the configuration of the `IsBound` property. Context is only passed for actions with `IsBound=true`. For more information, see the section [Additional Features in SAP Fiori Elements for OData V4](actions-cbf16c5.md#loiocbf16c599f2d4b8796e3702f7d4aae6c__section_ntd_h2l_ylb) in this topic.
+In SAP Fiori elements for OData V4, it depends on the configuration of the `IsBound` property. Context is only passed for actions with `IsBound=true`. For more information, see the [Additional Features in SAP Fiori Elements for OData V4](actions-cbf16c5.md#loiocbf16c599f2d4b8796e3702f7d4aae6c__section_ntd_h2l_ylb) section in this topic.
 
 **Grouping of Multiple Invocations of the Same Action Using Multiple Selections in the Table**
 
@@ -809,7 +809,7 @@ Bound actions can have parameters that are defined by the backend. If the name o
 
 **Unbound Actions \(Context-Independent\)**
 
-Context-independent function imports don’t provide an `sap:action-for` annotation.
+Context-independent function imports don't provide an `sap:action-for` annotation.
 
 > ### Sample Code:  
 > ```
@@ -822,26 +822,10 @@ Context-independent actions calling OData function imports can be placed in the 
 
 **Action Parameters for Unbound Actions \(Context-Independent\)**
 
-Unbound actions can have parameters that are defined by the backend. All the function import properties are displayed in the action parameter dialog. The action dialog displays a parameter as mandatory if it is marked `‘Nullable:false’` in the function import definition.
+Unbound actions can have parameters that are defined by the backend. All the function import properties are displayed in the action parameter dialog. The action dialog displays a parameter as mandatory if it is marked `'Nullable:false'` in the function import definition.
 
 > ### Note:  
 > You can also call function imports with or without input parameters using multiselection in tables.
-
-
-
-### Context-Independent Actions for External Navigation
-
-For internal use only! Corresponding CDS annotation:
-
-`{position:30, importance: #HIGH, type: #FOR_INTENT_BASED_NAVIGATION, requiresContext: false, semanticObjectAction: 'showItemFinancialPlanningWD', label: 'Financial Planning' },` 
-
-
-
-### Context-Dependent Actions for External Navigation
-
-For internal use only! Corresponding CDS annotation:
-
-`{position:30, importance: #HIGH, type: #FOR_INTENT_BASED_NAVIGATION, requiresContext: true, semanticObjectAction: 'showItemFinancialPlanningWD', label: 'Financial Planning' },` 
 
 
 
@@ -973,7 +957,7 @@ You can use annotations to control the enablement of operations \(annotation-bas
 
 ### Bound and Unbound Actions
 
-Actions can either be classified as bound or unbound. Bound actions are those that need a context from the underlying control. Such actions can’t be invoked without passing a context \(usually selected by user actions, such as selecting a row from a table\). In the metadata, these actions are marked with the `IsBound` property.
+Actions can either be classified as bound or unbound. Bound actions are those that need a context from the underlying control. Such actions can't be invoked without passing a context \(usually selected by user actions, such as selecting a row from a table\). In the metadata, these actions are marked with the `IsBound` property.
 
 > ### Sample Code:  
 > XML Annotation
@@ -992,7 +976,7 @@ Actions can either be classified as bound or unbound. Bound actions are those th
 > ### Sample Code:  
 > ABAP CDS Annotation
 > 
-> Action definitions aren’t part of ABAP CDS annotations. They come from the action definition in the ABAP back end.
+> Action definitions aren't part of ABAP CDS annotations. They come from the action definition in the ABAP back end.
 
 > ### Sample Code:  
 > CAP CDS Annotation
@@ -1141,7 +1125,7 @@ The CAP CDS syntax to define such a reference uses the inline `edmJson` mechanis
 
 ### Static Actions
 
-Unlike bound actions, where a context must be passed, static actions don’t need a user-selected context to be passed. But, in contrast to unbound actions, some context is always passed to static actions, namely the header context of the collection for which the static action is defined.
+Unlike bound actions, where a context must be passed, static actions don't need a user-selected context to be passed. But, in contrast to unbound actions, some context is always passed to static actions, namely the header context of the collection for which the static action is defined.
 
 You define a static action using the `"Collection(...)"` in the `Type` property of the `"_it"` parameter, as shown in the following code sample:
 
@@ -1216,7 +1200,7 @@ You can see how to refer to the static action defined like this in the following
 
 ### Action Parameters
 
-Bound and unbound actions can have associated parameters. The back end that defines the action also defines the parameters associated with the action. Some of these actions might be marked as mandatory, which means that the action can’t be invoked without supplying a value for the parameter.
+Bound and unbound actions can have associated parameters. The back end that defines the action also defines the parameters associated with the action. Some of these actions might be marked as mandatory, which means that the action can't be invoked without supplying a value for the parameter.
 
 > ### Tip:  
 > Action parameters can have single values and collections.
@@ -1387,7 +1371,7 @@ The following default values are available:
 
         ![](images/FLP_User_settings_b73e037.png)
 
-    -   User defaults configured as `UserDefault.extended.<parameterName>` can result in multiple values. Since only single values are supported, a value added in the additional parameters dialog is considered only when the condition is set as ‘EQ’ \(equal to\). Note that only one such condition is allowed.
+    -   User defaults configured as `UserDefault.extended.<parameterName>` can result in multiple values. Since only single values are supported, a value added in the additional parameters dialog is considered only when the condition is set as 'EQ' \(equal to\). Note that only one such condition is allowed.
 
     -   If multiple conditions are found for the same property, then the values are ignored for the action parameter with the same technical name.
 
@@ -1651,11 +1635,11 @@ If all the parameters of an action have been hidden by using the `UI.hidden` ann
 
 ### Grouping Actions as Menu Buttons
 
-Actions that have a similar business purpose can be grouped together and rendered in the form of menu buttons. Listing actions \(custom actions from the manifest and actions from annotations\) in the form of menu buttons is currently possible for header actions, table toolbar actions, and form actions. The footer action doesn't support menu buttons.
+Actions that have a similar business purpose can be grouped together and rendered in the form of menu buttons. Listing actions \(custom actions from the manifest and actions from annotations\) in the form of menu buttons is possible for header actions, table toolbar actions, and form actions. The footer action doesn't support menu buttons.
 
 In the following screenshot, *My Menu Button* has grouped three actions:
 
--   *My First Action* and *My Second Action* are actions from the `manifest.json`.
+-   *My First Action* and *My Second Action* are actions from the `manifest.json` file.
 
 -   *Bound Action with params* is an action maintained using annotations.
 
@@ -1668,6 +1652,91 @@ If a `DataField` action is named `com.c_salesordermanage_sd.BoundActionWithParam
 > -   When all the menu items are disabled, the menu button as a whole is disabled.
 > 
 > -   When all the menu items are hidden, the menu button as a whole is hidden.
+
+You can create a menu in the following ways:
+
+-   By using annotations
+-   By using manifest settings
+
+**Annotation-Based Menus**
+
+You can create a menu by using the `DataFieldForActionGroup` annotation, as shown in the following sample code:
+
+> ### Sample Code:  
+> XML Annotation
+> 
+> ```xml
+> <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/UI.xml">
+>     <edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="UI"/>
+> </edmx:Reference>
+> 
+> <Record Type="UI.DataFieldForActionGroup">
+>               <PropertyValue Property="Label" String="Action Group" />
+>               <PropertyValue Property="ID" String="groupedActions" />
+>               <PropertyValue Property="Actions">
+>                 <Collection>
+>                   <Record Type="UI.DataFieldForAction">
+>                     <PropertyValue Property="Label" String="Action 1 inside Action Group" />
+>                     <PropertyValue
+>                       Property="Action"
+>                       String="com.c_salesordermanage_sd.SalesOrderManage.Action1" 
+>                     />
+>                   </Record>
+>                   <Record Type="UI.DataFieldForAction">
+>                     <PropertyValue Property="Label" String="Action 2 inside Action Group" />
+>                     <PropertyValue
+>                       Property="Action"
+>                       String="com.c_salesordermanage_sd.SalesOrderManage.Action2"
+>                     />
+>                   </Record>
+>                   <Record Type="UI.DataFieldForAction">
+>                     <PropertyValue Property="Label" String="Action 3 inside Action Group" />
+>                     <PropertyValue
+>                       Property="Action"
+>                       String="com.c_salesordermanage_sd.SalesOrderManage.Action3"
+>                     />
+>                   </Record>
+>                 </Collection>
+>               </PropertyValue>
+> </Record>
+> ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> No ABAP CDS annotation sample is available. Please use the local XML annotation.
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> {
+>        $Type  : 'UI.DataFieldForActionGroup',
+>        Label  : 'Action Group',
+>        ID     : 'groupedActions',
+>        Actions: [
+>            {
+>                $Type  : 'UI.DataFieldForAction',
+>                Label  : 'Action 1 inside Action Group',
+>                Action : 'com.c_salesordermanage_sd.SalesOrderManage.Action1'
+>            },
+>            {
+>                $Type  : 'UI.DataFieldForAction',
+>                Label  : 'Action 2 inside Action Group',
+>                Action : 'com.c_salesordermanage_sd.SalesOrderManage.Action2'
+>            },
+>             {
+>                $Type  : 'UI.DataFieldForAction',
+>                Label  : 'Action 3 inside Action Group',
+>                Action : 'com.c_salesordermanage_sd.SalesOrderManage.Action3'
+>            }
+>        ]
+>    }
+> ```
+
+For information about modifying the menu using the manifest, see the [Overriding Annotation-Based Action Groups Using the Manifest](actions-cbf16c5.md#loiocbf16c599f2d4b8796e3702f7d4aae6c__overriding_action_groups) subsection in this topic.
+
+**Manifest-Based Menus**
 
 Make the following settings in the manifest to group actions under a menu button for header actions:
 
@@ -1849,7 +1918,7 @@ For certain properties, you can overwrite the annotation-based values using the 
 You can override the enablement through the `enabled` property, and the visibility through the `visible` property. As shown in the sample code above, you can combine this with a handler function. For more information, see [Adding Custom Actions Using Extension Points](adding-custom-actions-using-extension-points-7619517.md).
 
 > ### Note:  
-> The functionality is currently only available as follows:
+> The functionality is only available as follows:
 > 
 > -   For header actions on the object page
 > 
@@ -1874,6 +1943,184 @@ Add this function to `CustomActions.js`:
 > ```
 
 To get the key, you need to select the action applicable in your specific scenario, see [Finding the Right Key for the Anchor](finding-the-right-key-for-the-anchor-6ffb084.md).
+
+
+
+### Overriding Annotation-Based Action Groups Using the Manifest
+
+To override a `DataFieldForActionGroup` in the manifest, you need to identify its key. The key is formed by combining the prefix `DataFieldForActionGroup::` with the `ID` specified as a parameter in the annotation. For instance, if the `ID` is `groupedActions`, the corresponding key is `DataFieldForActionGroup::groupedActions`. This key is used to address the action group to override.
+
+The keys for menu items within a `DataFieldForActionGroup` are formed as follows:
+
+-   The key for a `DataFieldForAction` item is created by combining the prefix `DataFieldForAction::` with the value of the action name.
+
+    **Example.** If the name of the action is `com.c_salesordermanage_sd.SalesOrderManage.ActionName`, its key is `DataFieldForAction::com.c_salesordermanage_sd.SalesOrderManage.ActionName`.
+
+-   The key for a `DataFieldForIntentBasedNavigation` item is created by combining the prefix`DataFieldForIntentBasedNavigation::` with the value of the `SemanticObject` property, then `::`, and, finally, the value of the action name.
+
+    **Example.** If the `SemanticObject` property is `SalesOrder` and the name of the action is `com.c_salesordermanage_sd.SalesOrderManage.Navigation`, its key is `DataFieldForIntentBasedNavigation::SalesOrder::com.c_salesordermanage_sd.SalesOrderManage.Navigation`.
+
+
+**Modifying the Menu**
+
+To modify the menu, define the desired set of actions in the menu property of the manifest override. This allows you to either add new actions or remove existing ones by explicitly specifying the actions you want, as follows:
+
+-   When adding new actions, list both the current actions and the new ones you want to include in the menu.
+
+-   To remove actions, only define the actions you want to retain in the menu.
+
+
+See the following code samples with action names for Action1, Action2, and Action3:
+
+> ### Sample Code:  
+> XML Annotation
+> 
+> ```xml
+> <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/UI.xml">
+>     <edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="UI"/>
+> </edmx:Reference>
+> 
+> <Record Type="UI.DataFieldForActionGroup">
+>     <PropertyValue Property="Label" String="Action Group" />
+>     <PropertyValue Property="ID" String="groupedActions" />
+>     <PropertyValue Property="Actions">
+>         <Collection>
+>             <Record Type="UI.DataFieldForAction">
+>                 <PropertyValue Property="Label" String="Action 1 inside Action Group" />
+>                 <PropertyValue
+>                     Property="Action" 
+> 					String="com.c_salesordermanage_sd.SalesOrderManage.Action1" 
+>                 />
+>             </Record>
+>             <Record Type="UI.DataFieldForAction">
+>                 <PropertyValue Property="Label" String="Action 2 inside Action Group" />
+>                 <PropertyValue
+>                     Property="Action"
+>                     String="com.c_salesordermanage_sd.SalesOrderManage.Action2"
+>                 />
+>             </Record>
+>             <Record Type="UI.DataFieldForAction">
+>                 <PropertyValue Property="Label" String="Action 3 inside Action Group" />
+>                 <PropertyValue
+>                     Property="Action"
+>                     String="com.c_salesordermanage_sd.SalesOrderManage.Action3"
+>                 />
+>             </Record>
+>         </Collection>
+>     </PropertyValue>
+> </Record>
+> <Record Type="UI.DataFieldForAction">
+>     <PropertyValue Property="Label" String="Annotation Action outside action group" />
+>     <PropertyValue
+>         Property="Action"
+>         String="com.c_salesordermanage_sd.SalesOrderManage.AnnotationAction"
+>     />
+> </Record>
+> ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> No ABAP CDS annotation sample is available. Please use the local XML annotation.
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> {
+>        $Type  : 'UI.DataFieldForActionGroup',
+>        Label  : 'Action Group',
+>        ID     : 'groupedActions',
+>        Actions: [
+>            {
+>                $Type  : 'UI.DataFieldForAction',
+>                Label  : 'Action 1 inside Action Group',
+>                Action : 'com.c_salesordermanage_sd.SalesOrderManage.Action1'
+>            },
+>            {
+>                $Type  : 'UI.DataFieldForAction',
+>                Label  : 'Action 2 inside Action Group',
+>                Action : 'com.c_salesordermanage_sd.SalesOrderManage.Action2'
+>            },
+>            {
+>                $Type  : 'UI.DataFieldForAction',
+>                Label  : 'Action 3 inside Action Group',
+>                Action : 'com.c_salesordermanage_sd.SalesOrderManage.Action3'
+>            }
+>        ]
+> },
+> {
+>        $Type  : 'UI.DataFieldForAction',
+>        Label  : 'Annotation Action outside action group',
+>        Action : 'com.c_salesordermanage_sd.SalesOrderManage.AnnotationAction'
+> }
+> ```
+
+These action names are used in the following examples that show how to add new actions to an action group, disable actions in an action group, or hide actions from an action group:
+
+-   > ### Sample Code:  
+    > `manifest.json`
+    > 
+    > ```
+    > "options": {
+    >   "settings": {
+    >    "contextPath": "/SalesOrderManage",
+    >    "controlConfiguration": {
+    >      "@com.sap.vocabularies.UI.v1.FieldGroup#OrderData": {
+    >        "actions": {
+    >          "myFirstAction": {
+    >            "press": "SalesOrder.ext.CustomActions.getCustomerName",
+    >            "visible": true,
+    >            "enabled": true,
+    >            "text": "My First Action"
+    >          },
+    >          "DataFieldForActionGroup::groupedActions": {
+    >            "menu": [
+    >              "DataFieldForAction::com.c_salesordermanage_sd.SalesOrderManage.Action1",
+    >              "DataFieldForAction::com.c_salesordermanage_sd.SalesOrderManage.Action2",
+    >              "DataFieldForAction::com.c_salesordermanage_sd.SalesOrderManage.Action3",
+    >              "myFirstAction",
+    >               "DataFieldForAction::com.c_salesordermanage_sd.SalesOrderManage.AnnotationAction"            
+    >             ]
+    >          }
+    >        }
+    >      }
+    >    }
+    >   }
+    > }
+    > ```
+
+    In this manifest override, a new action named `myFirstAction` and an annotation-based action named `com.c_salesordermanage_sd.SalesOrderManage.AnnotationAction` are added to the `groupedActions` action group.
+
+-   You can **override menu items** the same way you override any other annotation-based action. The settings provided in the manifest override the existing configuration for that menu item, as shown in the following sample code:
+
+    > ### Sample Code:  
+    > `manifest.json`
+    > 
+    > This sample code uses action names defined in the previous sample codes.
+    > 
+    > ```
+    > "options": {
+    >   "settings": {
+    >    "contextPath": "/SalesOrderManage",
+    >    "controlConfiguration": {
+    >      "@com.sap.vocabularies.UI.v1.FieldGroup#OrderData": {
+    >        "actions": {
+    >          "DataFieldForAction::com.c_salesordermanage_sd.SalesOrderManage.Action1": {
+    >            enabled: false
+    >          },
+    >          "DataFieldForAction::com.c_salesordermanage_sd.SalesOrderManage.Action2": {
+    >            visible: false
+    >          }
+    >        }
+    >      }
+    >    }
+    >   }
+    > }
+    > ```
+
+    In this manifest override, the two actions `Action1` and `Action2`, which are menu items of the action group `groupedAction`, are overridden. `Action1` is disabled in the menu, and `Action2` is not visible in the menu at all.
+
 
 **Related Information**  
 

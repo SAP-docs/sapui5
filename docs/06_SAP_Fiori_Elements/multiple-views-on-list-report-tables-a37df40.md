@@ -162,7 +162,7 @@ Check out our live example in the flexible programming model explorer at [Multi 
 
 [Defining Multiple Views on a List Report Table - Multiple Table Mode](defining-multiple-views-on-a-list-report-table-multiple-table-mode-37aeed7.md "You can define multiple views of a table and display them in multiple table mode. Users can switch between views using an icon tab bar.")
 
-[Defining Multiple Views on a List Report with Different Entity Sets and Table Settings](defining-multiple-views-on-a-list-report-with-different-entity-sets-and-table-settings-b6b59e4.md "You can configure your app to display data for different entity sets and table settings, for example, sales orders or suppliers.")
+[Defining Multiple Views on a List Report with Different Entity Sets and Table Settings](defining-multiple-views-on-a-list-report-with-different-entity-sets-and-table-settings-b6b59e4.md "You can configure your application to display data for different entity sets and table settings, for example, sales orders or suppliers.")
 
 [Extension Points for Views in the List Report](extension-points-for-views-in-the-list-report-eb37203.md "You can use extension points to enhance views in the list report in SAP Fiori elements apps.")
 

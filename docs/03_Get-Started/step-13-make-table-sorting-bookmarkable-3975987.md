@@ -76,7 +76,7 @@ sap.ui.define([
 });
 ```
 
-We enhance the `EmployeeOverviewContent` controller further to add support for bookmarking the table’s sorting options. We expect two query parameters `sortField` and `sortDescending` from the URL for configuring the sorting of the table. In the matched handler of the route `employeeOverview`, we store the query parameter in the `oQueryParameter` variable and add an additional call to `this._applySorter(oQueryParameter.sortField, oQueryParameter.sortDescending)` . This triggers the sorting action based on the two query parameters `sortField` and `sortDescending` from the URL.
+We enhance the `EmployeeOverviewContent` controller further to add support for bookmarking the table's sorting options. We expect two query parameters `sortField` and `sortDescending` from the URL for configuring the sorting of the table. In the matched handler of the route `employeeOverview`, we store the query parameter in the `oQueryParameter` variable and add an additional call to `this._applySorter(oQueryParameter.sortField, oQueryParameter.sortDescending)` . This triggers the sorting action based on the two query parameters `sortField` and `sortDescending` from the URL.
 
 Next we change the `confirm` event handlers of our `ViewSettingsDialog`. The `confirm` handler updates the current router arguments with the parameters from the event accordingly. Then we call `oRouter.navTo("employeeOverview", this._oRouterArgs, true)` with the updated router arguments to persist the new sorting parameters in the URL. Both the previous arguments \(i.e. `search`\) and the new arguments for the sorting will then be handled by the matched event handler for the `employeeOverview` route.
 
@@ -87,5 +87,5 @@ Congratulations! Even the sorting options of the table can now be bookmarked. Tr
 -   `webapp/index.html#/employees/overview?search=an&sortField=EmployeeID&sortDescending=true`
 
 
-When changing the table’s sorting options, you will see that the hash updates accordingly.
+When changing the table's sorting options, you will see that the hash updates accordingly.
 

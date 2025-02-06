@@ -49,7 +49,7 @@ For more information about the `VizFrame` control, see the [API Reference](https
 
         ![Custom Toolbar with the embedded buttons and the dimension selector](images/ChartContainer_ToolbarDimension_4b93f6b.png)
 
-    -   If a dimension selector is displayed in the chart container, it will always be displayed in the first position in the toolbar. When a dimension selector is not visible, the chart container’s title \(`title` property of `ChartContainer`\) will be displayed in the first position in the toolbar as shown below.
+    -   If a dimension selector is displayed in the chart container, it will always be displayed in the first position in the toolbar. When a dimension selector is not visible, the chart container's title \(`title` property of `ChartContainer`\) will be displayed in the first position in the toolbar as shown below.
 
         ![Custom Toolbar with the embedded buttons and a title](images/ChartContainer_ToolbarTitle_cb0a6b7.png)
 

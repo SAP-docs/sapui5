@@ -67,19 +67,19 @@ You must enhance the value list annotation corresponding to a filter field with 
 > CountryID @(
 >      Common         : {
 >      ValueList     #0020_Country                  : {
->           Label          : ‘Country’,
->           CollectionPath : ‘Z0022’,
+>           Label          : 'Country',
+>           CollectionPath : 'Z0022',
 >           SearchSupported: false,
 >           Parameters     : [
 >           {
 >                $Type             : 'Common. ValueListParameterOut,
 >                LocalDataProperty : CountryID,
->                ValueListProperty : ‘CountryIdentifier’
+>                ValueListProperty : 'CountryIdentifier'
 >           },
 >           {
 >                $Type             : 'Common.ValueListParameterIn',
 >                LocalDataProperty : RegionID,
->                ValueListProperty : ‘RegionIdentifier’
+>                ValueListProperty : 'RegionIdentifier'
 >           }
 >           ],
 >           PresentationVariantQualifier: ' Country_Chart '

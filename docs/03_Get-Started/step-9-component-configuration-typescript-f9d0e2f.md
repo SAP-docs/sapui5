@@ -122,16 +122,31 @@ export default class AppController extends Controller {
 
 ## webapp\\index.ts
 
-We now create a component container instead of the view in our `index.ts` that instantiates the view for us according to the component configuration.
+We'll replace the view with a UI component. To do this, we use a control called `ComponentContainer`. This control allows us to wrap a UI Component and place it in our HTML document. We configure this instance by providing the following options:
+
+-   We assign the `id` property to `"container"` so that we can refer to it later if needed.
+
+-   We set the `name` property to the namespace of the component. This tells the `ComponentContainer` control which UI component it should load and show.
+
+-   We pass `id: "walkthrough"` to our component through the `ComponentContainer` constructor's `settings` argument. This ID helps us identify our component among others that may be created during the application's runtime.
+
+-   To ensure the ID of our component is unique and avoid any mix-ups, we set the `autoPrefixId` property to `true`. This automatically adds a prefix to the ID of the Component, which is the ID of the ComponentContainer followed by a single dash \("`-`"\).
+
+-   For better loading performance, we set the `async` property to `true`. This allows the component and its dependencies to load in the background without blocking other parts of the application.
+
+
+Finally, we position our newly created `ComponentContainer` control within the HTML element with the id `content`.
 
 ```js
 import ComponentContainer from "sap/ui/core/ComponentContainer";
 
 new ComponentContainer({
+    id: "container",
     name: "ui5.walkthrough",
     settings: {
-        id: "walkthroughts"
+        id: "walkthrough"
     },
+    autoPrefixId: true,
     async: true
 }).placeAt("content");
 ```

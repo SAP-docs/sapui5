@@ -157,11 +157,11 @@ In this extension, you can also access the incoming navigation context of the ap
 > onBeforeRebindVisualFilterExtension: function(sEntityType, sDimension, sMeasure, oContext){     // oContext has filters, queryParameters, sorters, entityParameters applicable for this specific visual filter 
 >     'use strict';
 >     var oNavigationContext = this.extensionAPI.getNavigationContext();                          //getting incoming navigation context through extension API                     
->     if (sDimension === “CostCenter”) { 
->         oContext.queryParameters.Type = "Cost";                                                 //adding custom query parameter (It will be included in visual filter query as “?Type=”Cost”)   
+>     if (sDimension === "CostCenter") { 
+>         oContext.queryParameters.Type = "Cost";                                                 //adding custom query parameter (It will be included in visual filter query as "?Type="Cost")   
 >          
->         if (oContext.entityParameters.P_DisplayCurrency === “USD”) {                            //Influencing applied parameters / filters                                         
->             oContext.queryParameter.Country = “USA”;         
+>         if (oContext.entityParameters.P_DisplayCurrency === "USD") {                            //Influencing applied parameters / filters                                         
+>             oContext.queryParameter.Country = "USA";         
 >             oContext.filters.push(new sap.ui.model.Filter("Product", "EQ", "HT-1000"));
 >         }
 >     }

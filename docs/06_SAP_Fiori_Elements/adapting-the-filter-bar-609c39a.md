@@ -242,10 +242,10 @@ You can move the explicitly included filter fields in the filter bar to the *Ada
 >             "controlConfiguration": {
 >                 "@com.sap.vocabularies.UI.v1.SelectionFields": {
 >                     "filterFields": {
->     "postingDate": {
->         "availability": "Adaptation"
->     }
-> }
+>                         "postingDate": {
+>                             "availability": "Adaptation"
+>                         }
+>                     }
 >                 }
 >             }
 >         }

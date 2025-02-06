@@ -28,7 +28,8 @@ Key users can make the following adaptations on applications:
     > Actions with dynamic visibility cannot be added nor removed.
 
 
--   Move, rename, remove, and reveal sections and subsections of the object page
+-   Split and combine actions in tables on the object page and in the list report.
+-   Move, rename, remove, and reveal sections and subsections of the object page.
 
 -   Edit the facets of the object page header. For more information, see the [Enabling Key User Adaptation on the Object Page Header](enabling-an-app-for-key-user-adaptation-ccd45ba.md#loioccd45ba3f0b446a0901b2c9d42b8ad53__section_rhq_1nh_tcc) section in this topic.
 

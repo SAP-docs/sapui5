@@ -64,7 +64,7 @@ export default class HelloPanel extends Controller {
 
 ## webapp/i18n/i18n.properties
 
-We extend the text bundle by the new text for the dialog’s `Close` button.
+We extend the text bundle by the new text for the dialog's `Close` button.
 
 ```ini
 # App Descriptor
@@ -84,7 +84,7 @@ dialogCloseButtonText=Ok
 
 ## webapp/view/HelloDialog.fragment.xml
 
-In the fragment definition, we add a button to the `beginButton` aggregation of the dialog and refer the press handler to the event handler we just defined in the controller of the panel’s content view.
+In the fragment definition, we add a button to the `beginButton` aggregation of the dialog and refer the press handler to the event handler we just defined in the controller of the panel's content view.
 
 ```xml
 <core:FragmentDefinition
@@ -102,7 +102,7 @@ In the fragment definition, we add a button to the `beginButton` aggregation of 
 </core:FragmentDefinition>
 ```
 
-By using the `loadFragment` function to create the fragment content in the controller of the panel’s content view, the method will be invoked there when the button is pressed. The dialog has an aggregation named `beginButton` as well as `endButton`. Placing buttons in both of these aggregations makes sure that the `beginButton` is placed before the `endButton` on the UI. What `before` means, however, depends on the text direction of the current language. We therefore use the terms `begin` and `end` as a synonym to “left” and “right". In languages with left-to-right direction, the `beginButton` will be rendered left, the `endButton` on the right side of the dialog footer; in right-to-left mode for specific languages the order is switched.
+By using the `loadFragment` function to create the fragment content in the controller of the panel's content view, the method will be invoked there when the button is pressed. The dialog has an aggregation named `beginButton` as well as `endButton`. Placing buttons in both of these aggregations makes sure that the `beginButton` is placed before the `endButton` on the UI. What `before` means, however, depends on the text direction of the current language. We therefore use the terms `begin` and `end` as a synonym to "left" and "right". In languages with left-to-right direction, the `beginButton` will be rendered left, the `endButton` on the right side of the dialog footer; in right-to-left mode for specific languages the order is switched.
 
 **Related Information**  
 

@@ -12,7 +12,7 @@ Important points when creating blocks for the `sap.uxap.ObjectPageLayout`
 
 -   Single view block if `Collapsed`, `Expanded`, and `Compact` modes are similar and easy to develop with a single view.
 
--   Multiple view blocks if it’s easier to provide different views for the different modes.
+-   Multiple view blocks if it's easier to provide different views for the different modes.
 
 -   Free form if none of the above suit your needs.
 

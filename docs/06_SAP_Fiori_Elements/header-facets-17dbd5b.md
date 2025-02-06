@@ -74,7 +74,7 @@ On desktops, the dynamic or static header is used with the responsive layout.
 
 ![](images/Header_Facet_Desktop_Version_b1c531e.png)
 
-On mobile devices, a header container is used with the horizontal layout. It provides horizontal scrolling for header facets.
+On mobile devices, a header container is used with the horizontal layout, providing scrolling for header facets.
 
 ![](images/Header_Facets_Mobile_Version_8abec0d.png)
 
@@ -86,11 +86,15 @@ You can see the object page header facets within a horizontal scroll container.
 
 ## Additional Features in SAP Fiori Elements for OData V2
 
-On mobile devices, the horizontal scroll container is the default. On desktops, the Dynamic/Static header is the default. However, you can enable the carousel header on the desktop by defining `showHeaderAsCarouselOnDesktop:true` in the manifest settings.
+The horizontal scroll container is the default on mobile devices, while the dynamic or static header is the default on desktops.
 
-![](images/Desktop_Carousels_for_Header_Facet_6113e92.png)
+![](images/Desktop_Carousels_for_Header_Facet_6113e92.jpg)
+
+To enable the carousel header on desktops, set `"showHeaderAsCarouselOnDesktop": true` in the `manifest.json` file, as shown in the following sample code:
 
 > ### Sample Code:  
+> manifest.json
+> 
 > ```
 > "sap.ui.generic.app": {
 >        ………
@@ -127,7 +131,7 @@ On mobile devices, the horizontal scroll container is the default. On desktops, 
 > ```
 
 > ### Note:  
-> The manifest setting must be defined in each component level as shown in the sample code.
+> This setting must be specified at each component level in the `manifest.json` file.
 
 
 
@@ -139,7 +143,7 @@ On mobile devices, the horizontal scroll container is the default. On desktops, 
 
 ### Stashing
 
-If an application developer has defined header facets as stashed in the manifest, they are initially not visible on the UI. Such header facets are not loaded when the app is started. Key users can add these stashed header facets via key user adaptation at runtime and make them visible for end users on the object page header.
+If an application developer has defined header facets as `stashed` in the `manifest.json` file, they are initially not visible on the UI. Such header facets are not loaded when the application is started. Key users can add these stashed header facets using the key user adaptation at runtime and make them visible for end users on the object page header.
 
 For more information, see to [Adapting the UI](adapting-the-ui-59bfd31.md).
 

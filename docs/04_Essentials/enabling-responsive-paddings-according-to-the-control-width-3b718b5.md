@@ -19,7 +19,7 @@ Application developers can now apply responsive paddings over separate parts of 
 
 ### Applied Paddings
 
-Based on the container’s size, one of the following classes is added, and the corresponding padding-left and padding-right are applied:
+Based on the container's size, one of the following classes is added, and the corresponding padding-left and padding-right are applied:
 
 
 <table>

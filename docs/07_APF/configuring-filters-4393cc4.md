@@ -14,7 +14,7 @@ APF-based applications can use filters that narrow down the data of an entire an
 
     The advanced options of the smart filter bar include the following:
 
-    -   Rule-based filtering using operators such as “contains”, “between”, or “greater than”
+    -   Rule-based filtering using operators such as "contains", "between", or "greater than"
 
     -   Use of the `DatePicker` control
 

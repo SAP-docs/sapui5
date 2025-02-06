@@ -172,7 +172,7 @@ Try executing the test now. You should see something like this:
 
 Step 1 is green because a matching step definition was found in the steps file. In Gherkin, the test harness always checks for the existence of the step definition first before executing the step definition's function. After Gherkin finds a step definition, it executes the step definition's function, and thus executes any QUnit assertions inside the function.
 
-In step 2, notice how the text "This test will fail!" is copied from the steps file. You can use this functionality to make it easier to debug your test. We recommend that you start any QUnit assertion comment with the word “Verified” to make it easier to read your test executions.
+In step 2, notice how the text "This test will fail!" is copied from the steps file. You can use this functionality to make it easier to debug your test. We recommend that you start any QUnit assertion comment with the word "Verified" to make it easier to read your test executions.
 
 
 

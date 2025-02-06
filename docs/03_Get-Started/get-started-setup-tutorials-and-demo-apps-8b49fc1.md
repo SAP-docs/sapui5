@@ -14,7 +14,7 @@ Set up your development environment and go through our tutorials. They introduce
 
 -   Set up your [Development Environment](../05_Developing_Apps/development-environment-7bb04e0.md). We recommend UI5 Tooling , but you could also use other development environments.
 
--   Set up a folder where you would place the application content. We will refer to this folder as the “app root folder”.
+-   Set up a folder where you would place the application content. We will refer to this folder as the "app root folder".
 
 
 
@@ -52,7 +52,7 @@ To download the code from the Demo Kit, follow these steps:
 
 If you get stuck, check the [Troubleshooting](../04_Essentials/troubleshooting-615d9e4.md) section under *Essentials*, or refer to the [Troubleshooting tutorial](troubleshooting-tutorial-5661952.md).
 
-If you can't fix the problem, try downloading the solution of the previews or current step. This should get your project fixed again, just don’t forget to check the resource path and the project configuration files again.
+If you can't fix the problem, try downloading the solution of the previews or current step. This should get your project fixed again, just don't forget to check the resource path and the project configuration files again.
 
 
 

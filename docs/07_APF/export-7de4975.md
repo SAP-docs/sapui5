@@ -31,5 +31,5 @@ To use the export function, proceed as follows:
 
 [Translation](translation-4510c30.md "")
 
-[Transporting Configurations in SAP S/4HANA Cloud](transporting-configurations-in-sap-s-4hana-cloud-7d5e418.md "")
+[Transporting Configurations in SAP S/4HANA Cloud Public Edition](transporting-configurations-in-sap-s-4hana-cloud-public-edition-7d5e418.md "")
 

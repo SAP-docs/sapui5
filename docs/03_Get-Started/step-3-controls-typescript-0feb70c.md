@@ -2,7 +2,7 @@
 
 # Step 3: Controls \(TypeScript\)
 
-Now it is time to build our first little UI by replacing the “Hello World” text in the HTML body by the SAPUI5 control `sap/m/Text`. In the beginning, we will use the TypeScript control API to set up the UI, the control instance is then placed into the HTML body.
+Now it is time to build our first little UI by replacing the "Hello World" text in the HTML body by the SAPUI5 control `sap/m/Text`. In the beginning, we will use the TypeScript control API to set up the UI, the control instance is then placed into the HTML body.
 
 
 
@@ -41,7 +41,7 @@ This will install the type definitions for OpenUI5 and update the `package.json`
 
 ## webapp/index.ts
 
-We then make some changes to our `index.ts` file: We remove the `alert` method and instantiate an SAPUI5 `Text` control instead; its options are passed to the constructor with a TypeScript object. For our control we set the `text` property to the value “Hello World”.
+We then make some changes to our `index.ts` file: We remove the `alert` method and instantiate an SAPUI5 `Text` control instead; its options are passed to the constructor with a TypeScript object. For our control we set the `text` property to the value "Hello World".
 
 We chain the constructor call of the control to the standard `placeAt` method that is used to place SAPUI5 controls inside a node of the document object model \(DOM\) or any other SAPUI5 control instance. We pass the `content` ID as an argument.
 

@@ -25,7 +25,7 @@ Users can navigate within a page from a data point or micro chart in the header 
 >     "id": "SalesOrderManageObjectPage",
 >     "name": "sap.fe.templates.ObjectPage",
 >     "options":{
->         “settings":{
+>         "settings":{
 >             "controlConfiguration":{
 >                 "@com.sap.vocabularies.UI.v1.DataPoint#NetValue":{ // path to the header item
 >                     "navigation":{

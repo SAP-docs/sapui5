@@ -80,7 +80,7 @@ You add this information to the `manifest.json` file, as in these examples:
 > ### Note:  
 > You can specify either a view or a fragment contained in the additional section. Either way, you do not need to use the object page \(uxap\) tags `ObjectPageSection`, `subSections`, or `ObjectPageSubSection`. These definitions are already part of the template for the object page view. Additional sections are rendered if an extension exists.
 
-For an example with step-by-step instructions, see [Adding a Section to an Object Page](adding-a-section-to-an-object-page-a357047.md).
+For an example with step-by-step instructions, see [Adding a Custom Section to an Object Page](adding-a-custom-section-to-an-object-page-a357047.md).
 
 For more information, see [View Extension](../08_Extending_SAPUI5_Applications/view-extension-403c050.md).
 

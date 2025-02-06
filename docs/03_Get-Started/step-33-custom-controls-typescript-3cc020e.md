@@ -79,7 +79,7 @@ We could also do this with more HTML in the renderer, but this is the simplest w
 
 ## webapp/control/ProductRating.ts \(New\)
 
-Custom controls are small reuse components that can be created within the app very easily. Due to their nature, they are sometimes also referred to as "notepad” or “on the fly” controls. A custom control is a script object that has two special sections \(`metadata` and `renderer`\) and a number of methods that implement the functionality of the control.
+Custom controls are small reuse components that can be created within the app very easily. Due to their nature, they are sometimes also referred to as "notepad" or "on the fly" controls. A custom control is a script object that has two special sections \(`metadata` and `renderer`\) and a number of methods that implement the functionality of the control.
 
 We create a new folder `control` and a file `ProductRating.ts` that will hold our new control.
 
@@ -146,7 +146,7 @@ In the `metadata` section we therefore define several properties that we make us
 
 -   Aggregations
 
-    As described in the first paragraph, we need three internal controls to realize our rating functionality. We therefore create three “hidden aggregations” by setting the `visibility` attribute to `hidden`. This way, we can use the models that are set on the view also in the inner controls and SAPUI5 will take care of the lifecycle management and destroy the controls when they are not needed anymore. Aggregations can also be used to hold arrays of controls but we just want a single control in each of the aggregations so we need to adjust the cardinality by setting the attribute `multiple` to `false`.
+    As described in the first paragraph, we need three internal controls to realize our rating functionality. We therefore create three "hidden aggregations" by setting the `visibility` attribute to `hidden`. This way, we can use the models that are set on the view also in the inner controls and SAPUI5 will take care of the lifecycle management and destroy the controls when they are not needed anymore. Aggregations can also be used to hold arrays of controls but we just want a single control in each of the aggregations so we need to adjust the cardinality by setting the attribute `multiple` to `false`.
 
     -   `_rating`: A `sap.m.RatingIndicator` control for user input
 
@@ -166,13 +166,13 @@ In the `metadata` section we therefore define several properties that we make us
 
     -   Change
 
-        We specify a `change` event that the control will fire when the rating is submitted. It contains the current value as an event parameter. Applications can register to this event and process the result similar to “regular” SAPUI5 controls, which are in fact built similar to custom controls.
+        We specify a `change` event that the control will fire when the rating is submitted. It contains the current value as an event parameter. Applications can register to this event and process the result similar to "regular" SAPUI5 controls, which are in fact built similar to custom controls.
 
 
 
 In the `init` function that is called by SAPUI5 automatically whenever a new instance of the control is instantiated, we set up our internal controls. We instantiate the three controls and store them in the internal aggregation by calling the framework method `setAggregation` that has been inherited from `sap.ui.core.Control`. We pass on the name of the internal aggregations that we specified above and the new control instances. We specify some control properties to make our custom control look nicer and register a `liveChange` event to the rating and a press event to the button. The initial texts for the label and the button are referenced from our `i18n` model.
 
-Let’s ignore the other internal helper functions and event handlers for now and define our renderer. By using the APIs of the `RenderManager` and the control instance that are passed as references, we can describe the necessary HTML for our control. To open a new HTML tag we use the `openStart` method and pass `"div"` as the HTML element to be created. We also pass our control instance \(`ProductRating`\) to be associated with the HTML tag. The RenderManager will automatically generate the properties for the control and assign it to the `div` tag. After calling `openStart`, we can chain additional methods to set attributes or styles for the element. To set `myAppDemoWTProductRating` as our custom CSS class for the `div` element, we use the `class` method. If a `tooltip` exists, we call the `attr` method to set the `title` attribute with the value of the tooltip for the `div` element. Finally, we close the surrounding `div` tag by calling `openEnd`.
+Let's ignore the other internal helper functions and event handlers for now and define our renderer. By using the APIs of the `RenderManager` and the control instance that are passed as references, we can describe the necessary HTML for our control. To open a new HTML tag we use the `openStart` method and pass `"div"` as the HTML element to be created. We also pass our control instance \(`ProductRating`\) to be associated with the HTML tag. The RenderManager will automatically generate the properties for the control and assign it to the `div` tag. After calling `openStart`, we can chain additional methods to set attributes or styles for the element. To set `myAppDemoWTProductRating` as our custom CSS class for the `div` element, we use the `class` method. If a `tooltip` exists, we call the `attr` method to set the `title` attribute with the value of the tooltip for the `div` element. Finally, we close the surrounding `div` tag by calling `openEnd`.
 
 > ### Note:  
 > Since our custom control extends the `sap.ui.core.Control` class, it also inherits its properties and aggregations. In this case, the `tooltip` property is defined in the `sap.ui.core.Element` class, which is inherited by the `sap.ui.core.Control` class. Therefore, your custom control also inherits this aggregation. However, controls must explicitly support tooltips as they have to render them.

@@ -37,7 +37,7 @@ The search field on the smart filter bar lets you search for a value across all 
 
 The search functionality is applicable for entity types that have:
 
--   `sap:searchable=“true”` in the metadata file
+-   `sap:searchable="true"` in the metadata file
 
 -   `SearchRestrictions` annotation in the entity set
 

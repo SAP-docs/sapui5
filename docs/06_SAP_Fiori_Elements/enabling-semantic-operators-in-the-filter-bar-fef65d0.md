@@ -35,9 +35,9 @@ The property must have `sap:filter-restriction="interval"` in the metadata. For 
 > ```
 > 
 > "sap.ui.generic.app": {
->     “pages”: {
+>     "pages": {
 >         "ListReport|SEPMRA_C_PD_Product: {
->             “component”: {
+>             "component": {
 >                 "settings" : {
 >                     "filterSettings": {
 >                         "dateSettings":{
@@ -61,8 +61,8 @@ You can modify the default date range options by specifying the required options
 > ```
 > 
 > "sap.ui.generic.app": {
->    “pages”: {
->         “component”: {
+>    "pages": {
+>         "component": {
 >            "settings" : {
 >                 ...
 >                 "filterSettings": {
@@ -96,8 +96,8 @@ Date range options on the field level can be enabled by specifying options for i
 > ### Sample Code:  
 > ```
 > "sap.ui.generic.app": {
->    “pages”: {
->       “component”: {
+>    "pages": {
+>       "component": {
 >          "settings" : {
 >             ...
 >             "filterSettings": {
@@ -292,6 +292,10 @@ You can set the `FilterRestrictions` to `SingleRange` as shown in the following 
 > XML Annotation
 > 
 > ```
+> 
+> <edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Capabilities.V1.xml">
+>    <edmx:Include Namespace="Org.OData.Capabilities.V1" Alias="Capabilities" />
+> </edmx:Reference>
 > <Annotations Target="com.c_salesordermanage_sd.EntityContainer/SalesOrderManage">
 >     <Annotation Term="Capabilities.FilterRestrictions">
 >         <Record Type="Capabilities.FilterRestrictionsType">

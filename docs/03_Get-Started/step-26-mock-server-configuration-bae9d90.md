@@ -2,7 +2,7 @@
 
 # Step 26: Mock Server Configuration
 
-We just ran our app against a real service, but for developing and testing our app we do not want to rely on the availability of the “real” service or put additional load on the system where the data service is located.
+We just ran our app against a real service, but for developing and testing our app we do not want to rely on the availability of the "real" service or put additional load on the system where the data service is located.
 
 This system is the so-called back-end system that we will now simulate with an SAPUI5 feature called mock server. It serves local files, but it simulates a back-end system more realistically than just loading the local data. We will also change the model instantiation part so that the model is configured in the descriptor and instantiated automatically by SAPUI5. This way, we do not need to take care of the model instantiation in the code.
 
@@ -26,7 +26,7 @@ You can view and download all files at [Walkthrough - Step 26](https://ui5.sap.c
   
 **Folder Structure for this Step**
 
-![The graphic has an explanatory text.](images/SAPUI5_Walkthrough_Step_27_2_7a5e2b0.png "Folder Structure for this Step")
+![The graphic has an explanatory text.](images/SAPUI5_Walkthrough_Step_26_2_7a5e2b0.png "Folder Structure for this Step")
 
 The folder structure of our app project is clearly separating test and productive files after this step. The new `test` folder now contains a new HTML page `mockServer.html` which will launch our application in test mode without calling the real service.
 
@@ -63,7 +63,7 @@ The new `localService` folder contains a `metadata.xml` service description file
 
 We copy the `index.html` to a separate file in the `webapp/test` folder and name it `mockServer.html`. We will now use this file to run our app in test mode with mock data loaded from a JSON file. Test pages should not be placed in the application root folder but in a subfolder called `test` to clearly separate productive and test coding.
 
-From this point on, you have two different entry pages: One for the real “connected” app \(`index.html`\) and one for local testing \(`mockServer.html`\). You can freely decide if you want to do the next steps on the real service data or on the local data within the app.
+From this point on, you have two different entry pages: One for the real "connected" app \(`index.html`\) and one for local testing \(`mockServer.html`\). You can freely decide if you want to do the next steps on the real service data or on the local data within the app.
 
 We modify the `mockServer.html` file and change the page title to distinguish it from the productive start page. In the bootstrap, the `data-sap-ui-resource-roots` property is also changed. The namespace now points to the folder above \(`"../"`\), because the `mockServer.html` file is now in a subfolder of the `webapp` folder. Instead of loading the app component directly, we now call a script `initMockServer.js`.
 
@@ -181,7 +181,7 @@ Remove the old `Invoices.json` file from the `webapp` folder, it is no longer us
 
 ```
 
-The metadata file contains information about the service interface and does not need to be written manually. It can be accessed directly from the “real” service by calling the service URL and adding `$metadata` at the end \(e.g. in our case `http://services.odata.org/V2/Northwind/Northwind.svc/$metadata`\). The mock server will read this file to simulate the real OData service, and will return the results from our local source files in the proper format so that it can be consumed by the app \(either in XML or in JSON format\).
+The metadata file contains information about the service interface and does not need to be written manually. It can be accessed directly from the "real" service by calling the service URL and adding `$metadata` at the end \(e.g. in our case `http://services.odata.org/V2/Northwind/Northwind.svc/$metadata`\). The mock server will read this file to simulate the real OData service, and will return the results from our local source files in the proper format so that it can be consumed by the app \(either in XML or in JSON format\).
 
 For simplicity, we have removed all content from the original Northwind OData metadata document that we do not need in our scenario. We have also added the `status` field to the metadata since it is not available in the real Northwind service.
 

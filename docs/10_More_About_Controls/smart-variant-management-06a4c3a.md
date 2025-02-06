@@ -99,7 +99,7 @@ The `applyVariant` method is called by the `SmartVariantManagement` control ever
 sap.ui.comp.smartfilterbar.SmartFilterBar.prototype.fetchVariant = function() {
          var oVariant = {};
          
-         // Retrieve the variant’s content e.g. from input controls and add it to oVariant
+         // Retrieve the variant's content e.g. from input controls and add it to oVariant
 
          return oVariant;
 };

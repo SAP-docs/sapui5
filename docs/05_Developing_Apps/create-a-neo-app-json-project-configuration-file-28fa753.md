@@ -9,7 +9,7 @@ The `neo-app.json` file contains all project settings for SAP Web IDE and is cre
 
 
 
-You do this using the “routes” key and defining an array of resource objects. For running an SAPUI5 tutorial, you only need two entries - one that configures SAPUI5 to be available with the path `/resources`, and another one that configures the test resources needed for the SAP Fiori launchpad integration with the path `/test-resources`.
+You do this using the "routes" key and defining an array of resource objects. For running an SAPUI5 tutorial, you only need two entries - one that configures SAPUI5 to be available with the path `/resources`, and another one that configures the test resources needed for the SAP Fiori launchpad integration with the path `/test-resources`.
 
 Create two configuration objects that contain a `path`, a `target`, and a `description` attribute with more configuration settings. The `path` and the `entryPath` values will point to the location on the server where the SAPUI5 resources will be stored.
 

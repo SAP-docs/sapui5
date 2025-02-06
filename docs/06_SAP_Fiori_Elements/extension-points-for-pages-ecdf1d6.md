@@ -15,7 +15,7 @@ You can use extension points to enhance pages in SAP Fiori elements apps.
 
 Custom pages provide the following features:
 
--   simple configuration by adding a routing target of type ‘component’ to the manifest, using component `sap.fe.core.fpm` and referring to a custom XML view
+-   simple configuration by adding a routing target of type 'component' to the manifest, using component `sap.fe.core.fpm` and referring to a custom XML view
 
 -   availability of the binding context for the OData model in custom XML view and page controller
 

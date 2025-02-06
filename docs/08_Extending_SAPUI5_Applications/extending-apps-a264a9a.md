@@ -14,6 +14,8 @@ For more information on how to create layered controller extensions in SAP Web I
 
 By using key user adaptation, users with the key user authorization role can also make extensive UI changes for apps without having to change the code. For more information, see [SAPUI5 Flexibility: Enable Your App for UI Adaptation](../05_Developing_Apps/sapui5-flexibility-enable-your-app-for-ui-adaptation-f1430c0.md).
 
+The flexible programming model for SAP Fiori elements enables you to adapt your applications to meet specific requirements. It allows the introduction of custom logic or controls beyond standard SAP Fiori elements features. With this model, you can integrate SAPUI5 controls and custom code into extension points and make use of predefined building blocks and controller extensions to enhance and customize your applications. For more information, see [Flexible Programming Model](../06_SAP_Fiori_Elements/flexible-programming-model-549749b.md).
+
 **Related Information**  
 
 

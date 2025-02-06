@@ -185,5 +185,5 @@ The applications can override the default text by the mechanism described in [Lo
 
 
 > ### Note:  
-> Applications that override the delete message when a single entry is being deleted from the table should revisit the `UI.HeaderInfo` annotation’s configuration and adapt the texts accordingly.
+> Applications that override the delete message when a single entry is being deleted from the table should revisit the `UI.HeaderInfo` annotation's configuration and adapt the texts accordingly.
 

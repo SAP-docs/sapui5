@@ -36,7 +36,7 @@ The Support Assistant can be used in OPA tests to check if there are issues in t
 
 In addition, if you pass `sap-skip-rules-issues=true` as a URL parameter to your OPA test, the assertion results of `noRuleFailures` and `getFinalReport` assertions will be `true`, overriding the actual results.
 
-This special URL parameter could be used temporarily in cases when you extend an existing OPA test to run the Support Assistant rule checks initially but you don’t want the entire OPA journey to fail immediately. After you gain experience and clean up any check issues, you can set it to `false` or omit passing it and use once again the desired `onError` behavior.
+This special URL parameter could be used temporarily in cases when you extend an existing OPA test to run the Support Assistant rule checks initially but you don't want the entire OPA journey to fail immediately. After you gain experience and clean up any check issues, you can set it to `false` or omit passing it and use once again the desired `onError` behavior.
 
 > ### Note:  
 > When the `sap-skip-rules-issues` URL parameter is set, it affects all tests globally, unlike the `FailOnAnyIssues` parameters, which only affect a specific test level.

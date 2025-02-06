@@ -52,8 +52,8 @@ To enable the key user to make additional properties of an OData entity visible 
 
 -   Use data binding in the container where you want to enable this.
 -   Make sure that the related OData model is the default model of your app component. For more information, see [Assigning the Model to the UI](../04_Essentials/assigning-the-model-to-the-ui-91f0d1c.md).
--   If a property of an OData entity shouldn't come up in key user adaptation, for example, because it’s a technical field, you should set the annotation `sap:visible=false`. If the property is only relevant under certain circumstances, you can provide the `field-control` property and set the field to be hidden. For more information, see the [official annotations documentation](https://wiki.scn.sap.com/wiki/display/EmTech/SAP+Annotations+for+OData+Version+2.0#SAPAnnotationsforODataVersion2.0-Property_field_controlAttributesap:field-control).
--   If you don’t have OData models or if you want to give the key user the option to enable more complex UI parts, you can deliver hidden controls \(`visible="false"`\). These can then be made visible via key user adaptation.
+-   If a property of an OData entity shouldn't come up in key user adaptation, for example, because it's a technical field, you should set the annotation `sap:visible=false`. If the property is only relevant under certain circumstances, you can provide the `field-control` property and set the field to be hidden. For more information, see the [official annotations documentation](https://wiki.scn.sap.com/wiki/display/EmTech/SAP+Annotations+for+OData+Version+2.0#SAPAnnotationsforODataVersion2.0-Property_field_controlAttributesap:field-control).
+-   If you don't have OData models or if you want to give the key user the option to enable more complex UI parts, you can deliver hidden controls \(`visible="false"`\). These can then be made visible via key user adaptation.
 
 
 
@@ -143,6 +143,8 @@ new SomeControl({
 	})];
 });
 ```
+
+For more information, see [Deactivating Adaptation of Controls](../09_Developing_Controls/deactivating-adaptation-of-controls-6af4302.md).
 
 
 

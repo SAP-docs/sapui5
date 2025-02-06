@@ -1,14 +1,14 @@
 <!-- loio9b13559ef978405a99e8b624a87daf31 -->
 
-# Creating Cards for the Insights Cards Section of **My Home** in SAP S/4HANA Cloud and **My Home** in SAP S/4HANA
+# Creating Cards for the Insights Cards Section of **My Home** in SAP S/4HANA Cloud Public Edition and **My Home** in SAP S/4HANA
 
-An option for tables in the list report or charts in the analytical list page allows end users to create cards that can be added to the *Insights* section of **My Home** in SAP S/4HANA Cloud and **My Home** in SAP S/4HANA.
+An option for tables in the list report or charts in the analytical list page allows end users to create cards that can be added to the *Insights* section of **My Home** in SAP S/4HANA Cloud Public Edition and **My Home** in SAP S/4HANA.
 
 **Prerequisites**
 
-You must enable **My Home** in SAP S/4HANA Cloud and **My Home** in SAP S/4HANA to create and add cards.
+You must enable **My Home** in SAP S/4HANA Cloud Public Edition and **My Home** in SAP S/4HANA to create and add cards.
 
-Once you've enabled **My Home** in SAP S/4HANA Cloud and **My Home** in SAP S/4HANA, the *Add Card to Insights* option automatically appears in the overflow toolbar of the table in list report applications and the overflow toolbar of the chart in analytical list page applications.
+Once you've enabled **My Home** in SAP S/4HANA Cloud Public Edition and **My Home** in SAP S/4HANA, the *Add Card to Insights* option automatically appears in the overflow toolbar of the table in list report applications and the overflow toolbar of the chart in analytical list page applications.
 
   
   

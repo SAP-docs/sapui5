@@ -727,7 +727,7 @@ To add a micro chart to a table, add the `DataFieldForAnnotation`, which has a r
 > ```
 > {
 > label: 'Credit Limit Details',
-> type: #AS_CHART, valueQualifier: 'RadialCriticalityPathHidden', value: '_ CreditLimitDetails’
+> type: #AS_CHART, valueQualifier: 'RadialCriticalityPathHidden', value: '_ CreditLimitDetails'
 > }
 > 
 > ```

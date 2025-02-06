@@ -21,7 +21,8 @@ You can display information about the navigation target already on the source en
 > ### Note:  
 > `QuickViewFacets` can only be annotated for those `EntityTypes` that are in the same service. Only these are referenced with referential constraints in the metadata document.
 
-This video shows the step-by-step procedure for enabling quick views for link navigation: 
+> ### Note:  
+> We've removed videos showing step-by-step procedures using SAP Web IDE, which SAP no longer actively supports. You can still access the video using an older version of this document.
 
 To do so, perform the following steps:
 
@@ -265,7 +266,7 @@ To define a quick view for a source property with a `ReferentialConstraint` on a
 
     Check out our live example in the flexible programming model explorer at [Quick View](https://sapui5.hana.ondemand.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/field/fieldQuickView).
 
-2.  In the metadata document, you can find the reference to the association end type. In the `navigationProperties` of your entity, check for a `ReferentialConstraint` that includes the previously identified property \(`Supplier`\). This property must be in the property attributes of the `ReferentialConstraint`. In this example, it references the “`CustomerID`” property of the “`Customer`” entity \(the association end type\).
+2.  In the metadata document, you can find the reference to the association end type. In the `navigationProperties` of your entity, check for a `ReferentialConstraint` that includes the previously identified property \(`Supplier`\). This property must be in the property attributes of the `ReferentialConstraint`. In this example, it references the "`CustomerID`" property of the "`Customer`" entity \(the association end type\).
 
     ```xml
     <NavigationProperty Name="_ShipToPartyVH" Type="com.c_salesordermanage_sd.Customer">
@@ -547,7 +548,8 @@ A quick view for link navigation is generated and can look like this:
 
 ![](images/Quick_View_for_Smart_Link_Navigation_c61cade.png)
 
-This video shows the step-by-step procedure for enabling quick views for link navigation: 
+> ### Note:  
+> We've removed videos showing step-by-step procedures using SAP Web IDE, which SAP no longer actively supports. You can still access the video using an older version of this document.
 
 > ### Note:  
 > If the user can't navigate to the target application, no link is displayed.

@@ -161,8 +161,8 @@ A range expression is a filter that represents ranges and disjunctions of values
 ```
 {
     "SelectionVariantID" : "20141023134315",
-    "ParameterContextUrl" : “/(..)/AccountBalance/$metadata#AccountBalanceQueryParameters",
-    "FilterContextUrl" : “/(..)/AccountBalance/$metadata#AccountBalanceQueryResult",
+    "ParameterContextUrl" : "/(..)/AccountBalance/$metadata#AccountBalanceQueryParameters",
+    "FilterContextUrl" : "/(..)/AccountBalance/$metadata#AccountBalanceQueryResult",
     "Text" : "Temporary Selection Variant, Account Balance, 24.10.2014 13:43:15",
     "Parameters" : [
         {

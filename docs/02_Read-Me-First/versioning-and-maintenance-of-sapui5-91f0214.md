@@ -29,7 +29,7 @@ Every month, SAPUI5 releases a new version for productive usage:
 -   On AS ABAP, only two SAPUI5 versions per year are shipped as part of the SAP\_UI component.
 
 
-The release strategy follows the principle of “one innovation code line”: Subsequent versions ensure continuous innovation with an evolving code line.The default version of our libraries has the generic URL [https://ui5.sap.com/resources/sap-ui-core.js](https://ui5.sap.com/resources/sap-ui-core.js) \(SAPUI5\). Approximately 2 weeks after the release of a new SAPUI5 version, this version becomes the default version.
+The release strategy follows the principle of "one innovation code line": Subsequent versions ensure continuous innovation with an evolving code line.The default version of our libraries has the generic URL [https://ui5.sap.com/resources/sap-ui-core.js](https://ui5.sap.com/resources/sap-ui-core.js) \(SAPUI5\). Approximately 2 weeks after the release of a new SAPUI5 version, this version becomes the default version.
 
 Once a year, a version with long-term support is releasedand available on both SAP platforms. This SAPUI5 version is included in a release of the SAP\_UI component, usually as part of SP02 of the respective SAP\_UI release. All other versions do not have a maintenance period and no patches are provided. Required fixes are available with the next minor versions together with the new features. However, in exceptional cases, also the most recent version may be patched with correction code.
 

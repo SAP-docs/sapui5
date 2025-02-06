@@ -30,9 +30,9 @@ Enter the extension information in the `manifest.json` of your application in th
 
 Specify the extension facet in the form of the annotation information of the subsection where side content needs to be placed. In addition, specify the entity set name, as the same annotation may exist for various entity sets. You also need to define the `className`, `viewName`, `type`, and the optional parameter `equalSplit`.
 
-To enable the equal split mode \(50:50 percent for main content vs. side content\), add the `"equalSplit”: true` setting to the manifest.
+To enable the equal split mode \(50:50 percent for main content vs. side content\), add the `"equalSplit": true` setting to the manifest.
 
-If `“equalSplit”` is set to `false` or is not defined, the percentage of main content and side content depends on the device on which the app is running.
+If `"equalSplit"` is set to `false` or is not defined, the percentage of main content and side content depends on the device on which the app is running.
 
 > ### Sample Code:  
 > ```

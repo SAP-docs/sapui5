@@ -1,6 +1,6 @@
 <!-- loio27c9c3bad6eb4d99bc18a661fdb5e246 -->
 
-# Using Side Effect Events
+# Event-Driven Side Effects
 
 > ### Note:  
 > This topic is only applicable to SAP Fiori elements for OData V4.
@@ -33,6 +33,30 @@ See the following example of how to annotate a side effect event:
 > ```
 
 Whenever the  `MyEventName` event  is triggered on the server, the client is notified to refresh the  `Property1` and `Property2` properties of the  `MyEntityType` entity type.
+
+In the list report, a typical use case requires refreshing the entire table. To do that, use an absolute path for the `TargetEntities` property in the side effects definition.
+
+> ### Sample Code:  
+> XML Annotation
+> 
+> ```xml
+> <Annotations Target="MyService.MyEntityType">
+>     <Annotation Term="com.sap.vocabularies.UI.v1.SideEffects">
+>         <Record Type="Common.SideEffectsType">
+>             <PropertyValue Property="SourceEvents">
+>                 <Collection>
+>                         <String>MyEventName</String>
+>                 </Collection>
+>             </PropertyValue>
+>             <PropertyValue Property="TargetEntities">
+>                 <Collection>
+>                     <NavigationPropertyPath>/MyService.EntityContainer/MyEntity</NavigationPropertyPath>
+>                 </Collection>
+>             </PropertyValue>
+>         </Record>
+>     </Annotation>
+> </Annotations>
+> ```
 
 The application can provide the `WebSocket` connection through the `WebSocketBaseURL` and the `WebSocketChannel` annotations.
 

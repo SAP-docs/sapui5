@@ -14,8 +14,7 @@ In this step, we add an instance of the `sap.f.FlexibleColumnLayout` control in 
   
 **An empty instance of the sap.f.FlexibleColumnLayout control**
 
-![](images/Empty_FlexibleColumnLayout_Fiori_2_0_Tutorial_533d165.png "An empty instance of the sap.f.FlexibleColumnLayout
-					control")
+![](images/Empty_FlexibleColumnLayout_Fiori_2_0_Tutorial_533d165.png "An empty instance of the sap.f.FlexibleColumnLayout control")
 
 
 
@@ -23,7 +22,7 @@ In this step, we add an instance of the `sap.f.FlexibleColumnLayout` control in 
 
 ## Coding
 
-You can view and download all files at [Flexible Column Layout App - Step 2](https://ui5.sap.com/#/sample/sap.f.tutorial.fiori2.02/preview).
+You can view and download all files at [Flexible Column Layout App - Step 2](https://ui5.sap.com/#/sample/sap.f.tutorial.fcl.02/preview).
 
 
 
@@ -33,9 +32,9 @@ You can view and download all files at [Flexible Column Layout App - Step 2](htt
 
 ```json
 {
-	"_version": "1.12.0",
+	"_version": "1.38.0",
 	"sap.app": {
-		"id": "sap.ui.demo.fiori2",
+		"id": "sap.ui.demo.fcl",
 		"type": "application",
 		"applicationVersion": {
 			"version": "1.0.0"
@@ -43,16 +42,16 @@ You can view and download all files at [Flexible Column Layout App - Step 2](htt
 	},
 	"sap.ui5": {
 		"rootView": {
-			"viewName": "sap.ui.demo.fiori2.view.App",
+			"viewName": "sap.ui.demo.fcl.view.App",
 			"type": "XML",
 			"async": true,
 			"id": "fcl"
 		},
 		"dependencies": {
-			"minUI5Version": "1.60.0",
+			"minUI5Version": "1.98.0",
 			"libs": {
-				"sap.ui.core": {},
-				"sap.f": {}
+				"sap.f": {},
+				"sap.ui.core": {}
 				}
 		},
 		"config": {
@@ -90,9 +89,9 @@ We create a new **`App.view.xml`** that contains an instance of the `sap.f.Flexi
 
 ```json
 {
-	"_version": "1.12.0",
+	"_version": "1.38.0",
 	"sap.app": {
-		"id": "sap.ui.demo.fiori2",
+		"id": "sap.ui.demo.fcl",
 		"type": "application",
 		"applicationVersion": {
 			"version": "1.0.0"
@@ -100,16 +99,16 @@ We create a new **`App.view.xml`** that contains an instance of the `sap.f.Flexi
 	},
 	"sap.ui5": {
 		"rootView": {
-			"viewName": "sap.ui.demo.fiori2.view.App",
+			"viewName": "sap.ui.demo.fcl.view.App",
 			"type": "XML",
 			"async": false,
 			"id": "fcl"
 		},
 		"dependencies": {
-			"minUI5Version": "1.60.0",
+			"minUI5Version": "1.98.0",
 			"libs": {
-				"sap.ui.core": {},
-				"sap.f": {}
+				"sap.f": {},
+				"sap.ui.core": {}
 			}
 		},
 		"config": {

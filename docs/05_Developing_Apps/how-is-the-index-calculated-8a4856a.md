@@ -6,7 +6,7 @@ The index is calculated by the report *Calculation of SAPUI5 Application Index f
 
 The report `/UI5/APP_INDEX_CALCULATE` has to be executed in every system whenever the content of the SAPUI5 ABAP repository has changed. It's enough to run the report for one client per system. For more information whether the report is executed automatically or you have to run it manually, see [Calculation Report - Automatic Run vs. Manual Scheduling](calculation-report-automatic-run-vs-manual-scheduling-fbce0ba.md).
 
-The report allows you to specify the basis for the calculation of the index. Here’s what you can choose from:
+The report allows you to specify the basis for the calculation of the index. Here's what you can choose from:
 
 -   Full update of all SAPUI5 repositories and the distribution layer regardless of any expiration dates
 

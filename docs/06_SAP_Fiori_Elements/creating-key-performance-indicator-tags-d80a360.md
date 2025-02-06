@@ -727,5 +727,5 @@ If `CriticalityCalculation` is defined in the annotations, filterable KPIs are u
 
 [Configuring the Title Area](configuring-the-title-area-ebdb5da.md "The dynamic area of the analytical list page is the title area.")
 
-[Managing Variants](managing-variants-8ce658e.md "Lets you manage variants with different structures in the filter and content areas.")
+[Managing Variants](managing-variants-8ce658e.md "Allows you manage variants with different structures in the filter and content areas.")
 

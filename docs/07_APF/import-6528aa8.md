@@ -49,7 +49,7 @@ If you use SAP S/4HANA, you have the following options:
 
 You can use *Import Files* to import files that result from a configuration export. The procedure is the same as described above for SAP Business Suite powered by SAP HANA.
 
-If you want to import content that was delivered by SAP, you don’t have to copy the files from a BSP application. You can import them from the layered repository of SAPUI5 flexibility using the *Import Delivered Content* function.
+If you want to import content that was delivered by SAP, you don't have to copy the files from a BSP application. You can import them from the layered repository of SAPUI5 flexibility using the *Import Delivered Content* function.
 
 The configuration file of a shipped application and the text properties file in the development language reside in the `VENDOR` layer of the layered repository. When you import the content, it is copied to the `CUSTOMER` layer. Changes you make to the configuration or the texts are also written into the `CUSTOMER` layer, so the original files in the `VENDOR` layer remain unchanged.
 

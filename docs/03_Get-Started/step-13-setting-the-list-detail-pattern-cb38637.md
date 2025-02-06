@@ -24,7 +24,7 @@ Apps using the list-detail pattern operate with a layout divided into two separa
 
 ## Coding
 
-You can view and download all files at [Flexible Column Layout App - Step 13](https://ui5.sap.com/#/sample/sap.f.tutorial.fiori2.13/preview).
+You can view and download all files at [Flexible Column Layout App - Step 13](https://ui5.sap.com/#/sample/sap.f.tutorial.fcl.13/preview).
 
 
 

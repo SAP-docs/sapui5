@@ -2,9 +2,9 @@
 
 # Using Factory Functions
 
-The factory function is a more powerful approach for creating controls from model data. The factory function is called for each entry of a control’s aggregation, and the developer can decide whether each entry shall be represented by the same control with different properties or even by a completely different control for each entry.
+The factory function is a more powerful approach for creating controls from model data. The factory function is called for each entry of a control's aggregation, and the developer can decide whether each entry shall be represented by the same control with different properties or even by a completely different control for each entry.
 
-The factory function comes with the parameters `sId`, which should be used as an ID for the new control, and `oContext`, which is for accessing the model data of the entry. The returned object must be of type `sap.ui.core.Element`. Here’s how this scenario can be realized in an XML view and a controller using our JSON model data from [List Binding \(Aggregation Binding\)](list-binding-aggregation-binding-91f0577.md):
+The factory function comes with the parameters `sId`, which should be used as an ID for the new control, and `oContext`, which is for accessing the model data of the entry. The returned object must be of type `sap.ui.core.Element`. Here's how this scenario can be realized in an XML view and a controller using our JSON model data from [List Binding \(Aggregation Binding\)](list-binding-aggregation-binding-91f0577.md):
 
 ```xml
 <mvc:View

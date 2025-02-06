@@ -104,7 +104,7 @@ Make the following changes in the `OPExtend.controller.js` file:
 
 You can control the visibility of the share options displayed in the *Share* menu. You cannot hide the *Save as Tile* option, as it is always visible to end users. However, you can control the visibility of the *Send E-mail* and *Share: Microsoft Teams* options by configuring the `manifest.json` file.
 
-This configuration can be done at both application level and page level. If the application-level settings for the share options’ visibility is set to `true` \(or is undefined\), then its visibility is inherited from the page-level settings. If the application-level settings for the share options’ visibility is set to `false`, then the specific share option is hidden, and the page-level settings aren't considered.
+This configuration can be done at both application level and page level. If the application-level settings for the share options' visibility is set to `true` \(or is undefined\), then its visibility is inherited from the page-level settings. If the application-level settings for the share options' visibility is set to `false`, then the specific share option is hidden, and the page-level settings aren't considered.
 
 In the following sample code, the *Share: Microsoft Teams* option is hidden by setting `showMsTeamsOptions` to `false`, whereas the `showSendEmail` setting depends on the expression value, which can be either `true` or `false`.
 

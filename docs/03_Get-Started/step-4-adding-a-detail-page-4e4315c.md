@@ -22,7 +22,7 @@ In this step, we add an empty detail page.
 
 ## Coding
 
-You can view and download all files at [Flexible Column Layout App - Step 4](https://ui5.sap.com/#/sample/sap.f.tutorial.fiori2.04/preview).
+You can view and download all files at [Flexible Column Layout App - Step 4](https://ui5.sap.com/#/sample/sap.f.tutorial.fcl.04/preview).
 
 
 
@@ -52,10 +52,10 @@ First, we create a blank detail page.
 	xmlns:mvc="sap.ui.core.mvc">
 	<FlexibleColumnLayout id="flexibleColumnLayout" backgroundDesign="Solid">
 		<beginColumnPages>
-			<mvc:XMLView id="beginView" viewName="sap.ui.demo.fiori2.view.List"/>
+			<mvc:XMLView id="beginView" viewName="sap.ui.demo.fcl.view.List"/>
 		</beginColumnPages>
 		<midColumnPages>
-			<mvc:XMLView id="detailView" viewName="sap.ui.demo.fiori2.view.Detail"/>
+			<mvc:XMLView id="detailView" viewName="sap.ui.demo.fcl.view.Detail"/>
 		</midColumnPages>
 	</FlexibleColumnLayout>
 </mvc:View>
@@ -105,18 +105,37 @@ We add a `press` handler to each `ColumnListItem` in the `List.view.xml`.
 
 ```js
 sap.ui.define([
-	"sap/ui/model/json/JSONModel",
 	"sap/ui/core/mvc/Controller",
 	"sap/ui/model/Filter",
 	"sap/ui/model/FilterOperator",
-	'sap/ui/model/Sorter',
-	'sap/m/MessageBox',
-	'sap/f/library'
-], function (JSONModel, Controller, Filter, FilterOperator, Sorter, MessageBox, fioriLibrary) {
+	"sap/ui/model/Sorter",
+	"sap/m/MessageBox",
+	"sap/f/library"
+], function (Controller, Filter, FilterOperator, Sorter, MessageBox, fioriLibrary) {
 	"use strict";
-		...
 
-		...
+	return Controller.extend("sap.ui.demo.fcl.controller.List", {
+		onInit: function () {
+			this.oView = this.getView();
+			this._bDescendingSort = false;
+			this.oProductsTable = this.oView.byId("productsTable");
+		},
+
+		onSearch: function (oEvent) {
+			var oTableSearchState = [],
+				sQuery = oEvent.getParameter("query");
+
+			if (sQuery && sQuery.length > 0) {
+				oTableSearchState = [new Filter("Name", FilterOperator.Contains, sQuery)];
+			}
+
+			this.oProductsTable.getBinding("items").filter(oTableSearchState, "Application");
+		},
+
+		onAdd: function () {
+			MessageBox.information("This functionality is not ready yet.", {title: "Aw, Snap!"});
+		},
+
 		onSort: function () {
 			this._bDescendingSort = !this._bDescendingSort;
 			var oBinding = this.oProductsTable.getBinding("items"),
@@ -132,6 +151,7 @@ sap.ui.define([
 		}
 	});
 });
+
 ```
 
 In the `List.controller.js`, we attach a `onListItemPress` function to the `press` handler, which changes the `layout` to `TwoColumnsBeginExpanded`. This means that there are going to be two columns, where the first one is larger than the second. For more information on the available layout types, see [Types of Layout](../10_More_About_Controls/types-of-layout-3b9f760.md).

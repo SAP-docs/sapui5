@@ -35,35 +35,6 @@ Let's say that you are facing a performance issue in your app, so let's check so
 
 2.  If you spot any libraries that you originally defined, but you don't actually use, remove them from the `manifest.json` file in your development environment to prevent them from loading. In this case, you can see that the example app loads the `sap.ui.layout` library, even though the `layout` control is not used.
 
-3.  Scroll to the *Configuration \(bootstrap\)* section. You see that the `preload` method is set to synchronous processing.
-4.  To improve performance, set the bootstrap parameter `data-sap-ui-async` to `true` in the `index.html` file.
-
-    ```html
-    <!DOCTYPE HTML>
-    <html>
-    <head>
-    	<meta charset="utf-8">
-    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    	<title>Heap Of Shards</title>
-    
-    	<!-- set data-sap-ui-async="true" to enable the user to fix it in the
-    	troubleshooting tutorial step 4: Diagnostics Window -->
-    	<script id="sap-ui-bootstrap"
-    		src="https://sdk.openui5.org/resources/sap-ui-core.js"
-    		data-sap-ui-theme="sap_horizon"
-    		data-sap-ui-libs="sap.f"
-    		data-sap-ui-resource-roots='{
-    			"sap.ui.demo.HeapOfShards": "./",
-    			"sap.ui.demo.DoesNotExist": "./DoesNotExist"
-    		}'
-    		data-sap-ui-on-init="module:sap/ui/core/ComponentSupport"
-    		data-sap-ui-compat-version="edge"
-    		data-sap-ui-async="true">
-    	</script>
-    […]
-    ```
-
 
 
 

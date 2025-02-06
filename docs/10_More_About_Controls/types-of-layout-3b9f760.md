@@ -4,7 +4,7 @@
 
 Overview of the possible layouts for an `sap.f.FlexibleColumnLayout`, as defined in the `sap.f.LayoutType` enumeration.
 
-Although the `FlexibleColumnLayout` can display 2 or 3 pages at one time, they can never have equal width \(50%/50% or 33%/33%/33%\). One of the pages is always larger \(expanded\) or even takes up the full width of the control \(fullscreen\). This is intentional because users should have a clear indication of what to focus their attention on at any given moment, for example, a list of items, one particular item, one item’s details.
+Although the `FlexibleColumnLayout` can display 2 or 3 pages at one time, they can never have equal width \(50%/50% or 33%/33%/33%\). One of the pages is always larger \(expanded\) or even takes up the full width of the control \(fullscreen\). This is intentional because users should have a clear indication of what to focus their attention on at any given moment, for example, a list of items, one particular item, one item's details.
 
 Transitioning from a one-column layout to any two-column layout, and then to any three-column layout is seen by the user as new columns appearing/disappearing on desktop/tablet or the next column replacing the previous one - on phone \(small screen size\). The app does not need to provide separate logic for the different screen sizes, but only change the layout based on the user input and desired behavior. The `FlexibleColumnLayout` will internally manage column visibility and resizing. If at any time, the browser size changes, this will be reflected by the control automatically.
 
@@ -33,7 +33,7 @@ Desktop / Tablet / Phone
 
 This is the default layout type for a `FlexibleColumnLayout`. Only the `Begin` column is displayed, no matter the control size.
 
-Use to show the first logical information level \(master page\) only.
+Use to show the first logical information level \(list page\) only.
 
 </td>
 <td valign="top">
@@ -47,7 +47,7 @@ Use to show the first logical information level \(master page\) only.
 
 **`TwoColumnsBeginExpanded`**
 
-Use this layout type to display two logical levels of information \(master and detail pages, master being expanded\) on desktop/tablet, or the second logical level of information only \(detail page\) on phone. On desktop/tablet the transition from `OneColumn` to `TwoColumnsBeginExpanded` is seen by the user as the `Begin` column shrinking and `Mid` column opening, while on phone it's seen as the `Mid` column replacing the `Begin` column.
+Use this layout type to display two logical levels of information \(list and detail pages, list being expanded\) on desktop/tablet, or the second logical level of information only \(detail page\) on phone. On desktop/tablet the transition from `OneColumn` to `TwoColumnsBeginExpanded` is seen by the user as the `Begin` column shrinking and `Mid` column opening, while on phone it's seen as the `Mid` column replacing the `Begin` column.
 
 </td>
 <td valign="top">
@@ -94,7 +94,7 @@ Use this layout to display the second logical level of information \(detail page
 
 **`ThreeColumnsMidExpanded`**
 
-Use this layout to display up to three logical levels of information side by side \(master, detail, and detail-detail pages\), when the user should focus primarily on the content of the `Mid` column \(as it is wider than the other two\). On desktop, all three columns will be displayed, on tablet – the `Mid` and `End` columns only \(with a layout arrow to access the `Begin` column\), and on phone – the `End` column only.
+Use this layout to display up to three logical levels of information side by side \(list, detail, and detail-detail pages\), when the user should focus primarily on the content of the `Mid` column \(as it is wider than the other two\). On desktop, all three columns will be displayed, on tablet – the `Mid` and `End` columns only \(with a layout arrow to access the `Begin` column\), and on phone – the `End` column only.
 
 </td>
 <td valign="top">

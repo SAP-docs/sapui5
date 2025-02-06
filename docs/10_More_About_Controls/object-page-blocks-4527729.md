@@ -82,7 +82,7 @@ Blocks that are used in an `ObjectPageLayout` have to comply with the following 
 
 
 > ### Example:  
-> Let’s consider an *Employee Goals* block that displays an employee together with his or her goals.
+> Let's consider an *Employee Goals* block that displays an employee together with his or her goals.
 > 
 > One *Employee* model for the employee entity:
 > 

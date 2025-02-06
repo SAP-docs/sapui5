@@ -18,7 +18,7 @@ Since writing integration tests can be time-consuming, it's better to use unit t
 
 ## Gherkin
 
-Gherkin is written in JavaScript and is fully compatible with SAPUI5, OPA, and QUnit. It is based on the “cucumber” tool.
+Gherkin is written in JavaScript and is fully compatible with SAPUI5, OPA, and QUnit. It is based on the "cucumber" tool.
 
 The advantages of using Gherkin are:
 

@@ -58,11 +58,11 @@ The `Text` annotation defines the field description and where it is taken from. 
 
 The configuration takes place as follows:
 
--   For the local text annotation – it’s set at a property level. The description is derived from the local text or navigational property.
--   For the `ValueList` text annotation \(with applied `ValueList` annotation\) – it’s set at the `ValueList` `Collection` level. The text is derived from the `ValueList` `Collection` text configuration. If a local text annotation is applied, it will be taken into consideration at the start as initial text value. This prevents the initial call for description from taking place. If the value is changed, the description is taken accordingly from the `ValueList` `Collection` item.
+-   For the local text annotation – it's set at a property level. The description is derived from the local text or navigational property.
+-   For the `ValueList` text annotation \(with applied `ValueList` annotation\) – it's set at the `ValueList` `Collection` level. The text is derived from the `ValueList` `Collection` text configuration. If a local text annotation is applied, it will be taken into consideration at the start as initial text value. This prevents the initial call for description from taking place. If the value is changed, the description is taken accordingly from the `ValueList` `Collection` item.
 
 > ### Note:  
-> The local text annotation won’t be considered in scenarios with a dropdown list \(where the `SmartFilterBar` filter is configured with fixed values\).
+> The local text annotation won't be considered in scenarios with a dropdown list \(where the `SmartFilterBar` filter is configured with fixed values\).
 
 
 

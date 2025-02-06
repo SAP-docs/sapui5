@@ -311,7 +311,7 @@ Because of the use of а third-party component some additional restrictions appl
     -   If you are using the `tinymce.ui.Iframe` widget.
 
 
--   If you want to use the custom toolbar, you need to instantiate the `RichTextEditor` in the application’s controller. This way the controller can check and wait for the `sap.m` library to be loaded and then init the controls. RichTextEditor can be embedded in an XML view, but as the XML view adds an additional layer, this may lead to problems while loading the custom toolbar. The sap.m library cannot be required from TinyMCE. This means that `sap.m` may not be available in time for the rendering of the custom toolbar.
+-   If you want to use the custom toolbar, you need to instantiate the `RichTextEditor` in the application's controller. This way the controller can check and wait for the `sap.m` library to be loaded and then init the controls. RichTextEditor can be embedded in an XML view, but as the XML view adds an additional layer, this may lead to problems while loading the custom toolbar. The sap.m library cannot be required from TinyMCE. This means that `sap.m` may not be available in time for the rendering of the custom toolbar.
 
     See [Supported Library Combinations](../02_Read-Me-First/supported-library-combinations-363cd16.md).
 
@@ -339,7 +339,7 @@ To replace the native toolbar, set the following properties:
 
 -   `customToolbar=true`
 
--   If you want to use the custom toolbar, you need to instantiate the `RichTextEditor` in the application’s controller. It cannot be embedded in an XML view.
+-   If you want to use the custom toolbar, you need to instantiate the `RichTextEditor` in the application's controller. It cannot be embedded in an XML view.
 
 
 > ### Caution:  

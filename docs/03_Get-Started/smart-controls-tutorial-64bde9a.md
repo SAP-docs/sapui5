@@ -11,7 +11,7 @@ A primary example of such a feature is OData support: Typically, a smart control
 > ### Note:  
 > The controls in this library only support OData V2 and a default model \(named `undefined`\). 
 
-In this tutorial, you see examples that should make the term “smart” even more tangible.
+In this tutorial, you see examples that should make the term "smart" even more tangible.
 
 > ### Tip:  
 > You don't have to do all tutorial steps sequentially, you can also jump directly to any step you want. Just download the code from the previous step, copy it to your workspace and make sure that the application runs by calling the `webapp/index.html` file.

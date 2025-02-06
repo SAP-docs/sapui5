@@ -509,7 +509,7 @@ As a prerequisite, the reuse component must be present in the target backend sys
 > ### Note:  
 > You must follow corresponding reuse component configuration for the application to work. For example, attachment reuse component needs few parameters to be added in the `neo-app.json`. For more information, see [Attachments Development Guideline](https://wiki.wdf.sap.corp/wiki/display/PLMOH/Attachments+Development+Guideline).
 
-The following parameters must be included as `headerWhiteList` in the consuming application’s `neo-app.json` file.
+The following parameters must be included as `headerWhiteList` in the consuming application's `neo-app.json` file.
 
 > ### Sample Code:  
 > `headerWhiteList`

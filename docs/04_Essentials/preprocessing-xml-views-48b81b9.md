@@ -59,7 +59,7 @@ To use the preprocessor, you can choose one of the following options:
                        moreInfo: "…"
                  },
                  {
-                       preprocessor: “another.preprocessor”
+                       preprocessor: "another.preprocessor"
                  }]
            }
     }).then(function(oView) {

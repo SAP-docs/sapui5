@@ -96,7 +96,7 @@ You can view and download all files in the Demo Kit at [Data Binding - Step 9](h
 
 
     > ### Note:  
-    > When using formatter functions, the binding automatically switches to "one-way". Therefore, you can’t use a formatter function for "two-way" scenarios. However, you can use data types \(which we explain in the following steps\).
+    > When using formatter functions, the binding automatically switches to "one-way". Therefore, you can't use a formatter function for "two-way" scenarios. However, you can use data types \(which we explain in the following steps\).
 
 3.  Add the `# E-mail` section to the `i18n.properties` and `i18n_de.properties` files as shown below.
 

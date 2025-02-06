@@ -23,5 +23,5 @@ All images and icons must have a textual explanation that the screen reader can 
 -   The screen reader information must be available at the focus points \(axis values, dialog info, legend\)
 
 
-You should hide image controls or controls with background CSS images used for pure decoration purposes by using the <code>aria-hidden=“true”</code> property.
+You should hide image controls or controls with background CSS images used for pure decoration purposes by using the `aria-hidden="true"` property.
 

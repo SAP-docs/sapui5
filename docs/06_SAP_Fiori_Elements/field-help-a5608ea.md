@@ -72,7 +72,7 @@ Direct `ValueList` annotations under the property level annotations:
 >             CountryOfOrigin                   : String(40)           @(Common : {
 >            Label        : 'Country',
 >             ValueList    : {
->                 CollectionPath : 'I_AIVS_CountryCode’,
+>                 CollectionPath : 'I_AIVS_CountryCode',
 >                 Parameters     : [
 >                 {
 >                     $Type             : 'Common.ValueListParameterInOut',
@@ -160,9 +160,365 @@ The `"ParentService"` in the annotation sample is an alias defined for the main 
 
 
 
+### Using the `Text` and `TextArrangement` Annotation
+
+The field can show the value or its textual description, or it can show the value and the textual description together.
+
+You must annotate the `Common.Text` on the field to define the textual description.
+
+The value help itself already has a definition with a collection path, but you also need to add a `Text` annotation to the collection path.
+
+You must annotate the `Common.TextArrangement` to specify the display format. Otherwise, the default display format is `#TextFirst` and shows the description together with the value, as in *Euro \(EUR\)*. Other display formats are listed further in this subsection.
+
+> ### Example:  
+> If you use the value help for `Currencies` on the `currency_code` property with a `Text` and a `TextArrangement` definition, the `currency_code` field displays a value help that is sourced from the `Currencies` entity. The code is the key field. Note the following:
+> 
+> -   Using `Common.Text` associates the descriptive text \(name\) from the `Currencies` entity with the key \(`currency_code`\) in the `Products` entity. This ensures that whenever `currency_code` is displayed, it can be enriched with its corresponding name.
+> 
+> -   Using `Common.TextArrangement` specifies the display format for the key value and its description. The code samples below show the display format `#TextFirst`, which is the default.
+> 
+> -   Using `CollectionPath` in the value help definition lets you point to the `Currencies` entity. But you also need to add a `TextArrangement` annotation to the collection path.
+> 
+> 
+> The interplay of these annotations is shown in the following sample code:
+> 
+> > ### Sample Code:  
+> > XML Annotation
+> > 
+> > ```
+> > <!-- Value Help with Text and TextArrangement -->
+> > <Annotations Target="sap.capire.officesupplies.CatalogAdminService.Products/currency_code">
+> >      <Annotation Term="Common.Text" Path="currency/name">
+> >           <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextFirst"/>
+> >      </Annotation>
+> >      <Annotation Term="Common.ValueList">
+> >           <Record Type="Common.ValueListType">
+> >                <PropertyValue Property="CollectionPath" String="Currencies"/>
+> >                <PropertyValue Property="Label" String="Währung"/>
+> >                <PropertyValue Property="Parameters">
+> >                     <Collection>
+> >                          <Record Type="Common.ValueListParameterInOut">
+> >                               <PropertyValue Property="LocalDataProperty" PropertyPath="currency_code"/>
+> >                               <PropertyValue Property="ValueListProperty" String="code"/>
+> >                          </Record>
+> >                          <Record Type="Common.ValueListParameterDisplayOnly">
+> >                               <PropertyValue Property="ValueListProperty" String="name"/>
+> >                          </Record>
+> >                     </Collection>
+> >                </PropertyValue>
+> >           </Record>
+> >      </Annotation>
+> >      <Annotation Term="Common.Label" String="Währung"/>
+> >      <Annotation Term="Core.Description" String="Währungscode gemäß ISO 4217"/>
+> > </Annotations>
+> > <!-- Annotate Text and TextArrangement to key property of the enity which is defined as CollectionPath in the value help -->
+> > <Annotations Target="sap.capire.officesupplies.CatalogAdminService.Currencies/code">
+> >      <Annotation Term="Common.Text" Path="name">
+> >           <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextFirst"/>
+> >      </Annotation>
+> >      <Annotation Term="Common.Label" String="Währungscode"/>
+> > </Annotations>
+> > ```
+> 
+> > ### Sample Code:  
+> > ABAP CDS Annotation
+> > 
+> > ```
+> > <!-- ABAP CDS Annotation: value help for Currencies (on property currency_code) with Text and TextArrangement -->
+> > annotate view PRODUCTS with {
+> >      @Consumption.valueHelpDefinition:
+> >      [{
+> >           entity :{
+> >                name : 'Currencies',
+> >                element : 'code'
+> >           },
+> >           label : 'Currency'
+> >      }]
+> > 
+> >      @ObjectModel: {
+> >           text: {
+> >                element: [ 'name' ]
+> >           }
+> >      }
+> >      @UI.textArrangement: #TEXT_First
+> >      currency_code;
+> > }
+> > 
+> > <!-- Annotate Text and TextArrangement to key property of the enity which is defined as CollectionPath in the value help -->
+> > annotate view Currencies with {
+> >      @ObjectModel.representativeKey: 'code'
+> >      @UI.selectionField: true
+> >      @ObjectModel.text: {
+> >           element: 'name'
+> >      }
+> >      @UI.textArrangement: #TEXT_FIRST
+> >      code;
+> >      name;
+> > };
+> > ```
+> 
+> > ### Sample Code:  
+> > CAP CDS Annotation
+> > 
+> > ```
+> > <!-- Value Help with Text and TextArrangement -->
+> > annotate sap.fe.officesupplies.CatalogAdminService.Products with {
+> >      @Common.Label : 'Currency'
+> >      @Common : {
+> >           Text : currency.name,
+> >           TextArrangement : #TextOnly
+> >      }
+> >      @Common.ValueListWithFixedValues : true
+> >      @Common.ValueList : {
+> >           $Type : 'Common.ValueListType',
+> >           Label : 'Currency',
+> >           CollectionPath : 'Currencies',
+> >           Parameters : [
+> >                {
+> >                     $Type : 'Common.ValueListParameterInOut',
+> >                     LocalDataProperty : currency_code,
+> >                     ValueListProperty : 'code'
+> >                },
+> >                {
+> >                     $Type : 'Common.ValueListParameterDisplayOnly',
+> >                     ValueListProperty : 'name'
+> >                }
+> >           ]
+> >      }
+> >      @Core.Description : 'A currency code as specified in ISO 4217'
+> >      currency_code
+> > };
+> > <!-- Annotate Text and TextArrangement to key property of the enity which is defined as CollectionPath in the value help-->
+> > annotate Currencies with {
+> >      code @(Common: {
+> >           Text : name,
+> >           TextArrangement: #TextFirst
+> >      });
+> > }
+> > ```
+
+You can use the `Common.TextArrangement` annotation to configure the display format of a table column of the value help dialog and a value help with a dropdown list \(`ValueListWithFixedValues`\). The following options are available:
+
+**Value Help with a Dialog and a Dropdown List**
+
+
+<table>
+<tr>
+<th valign="top">
+
+`Text`
+
+</th>
+<th valign="top">
+
+`TextArrangement`
+
+</th>
+<th valign="top">
+
+Display Format in a Dialog
+
+</th>
+<th valign="top">
+
+Display Format in a Dropdown List
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+not annotated
+
+</td>
+<td valign="top">
+
+not annotated
+
+</td>
+<td valign="top">
+
+Value
+
+</td>
+<td valign="top">
+
+Value
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+annotated
+
+</td>
+<td valign="top">
+
+not annotated
+
+</td>
+<td valign="top">
+
+Value
+
+</td>
+<td valign="top">
+
+Description Value
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+annotated
+
+</td>
+<td valign="top">
+
+`TextFirst`
+
+</td>
+<td valign="top">
+
+Description Value
+
+</td>
+<td valign="top">
+
+Description Value
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+annotated
+
+</td>
+<td valign="top">
+
+`TextLast`
+
+</td>
+<td valign="top">
+
+Value Description
+
+</td>
+<td valign="top">
+
+Value Description
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+annotated
+
+</td>
+<td valign="top">
+
+`TextSeparate`
+
+</td>
+<td valign="top">
+
+Value
+
+</td>
+<td valign="top">
+
+Value
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+annotated
+
+</td>
+<td valign="top">
+
+`TextOnly`
+
+</td>
+<td valign="top">
+
+Description
+
+</td>
+<td valign="top">
+
+Description
+
+</td>
+</tr>
+</table>
+
+> ### Tip:  
+> The system automatically excludes a column with the `Description` if the `Description` is already displayed in another column that uses one of the following text arrangements:
+> 
+> -   `TextFirst`
+> 
+> -   `TestLast`
+> 
+> -   `TextOnly`
+
+> ### Note:  
+> Consider the following when using a text arrangement annotation in a value help:
+> 
+> -   The `TextArrangement` of the value help entity set is used to determine the display of the fields that show up in the columns of the value help dialog. The `TextArrangement` specified at property level within the value help entity set takes precedence over the one defined at entity set level.
+> 
+> -   The `TextArrangement` annotation `#TextOnly` is supported in value help tables \(that is, in the value help dialog and for the type-ahead feature\). Other `TextArrangement` annotations like `#TextFirst`, `#TextLast`, or `#TextSeparate` are not considered. Combo boxes also support `#TextFirst` and `#TextLast`.
+> 
+> -   A separate text column is ignored if the text annotation is already used in another column using the `TextArrangement`.
+
+**Best Practices for Value Help for `Edm.Guid`-Type Fields**
+
+For `Edm.Guid`-type fields, you must not define the `Common.Text` annotation with the description path and the `Common.TextArrangement` with the `TextOnly` display format. Instead, annotate the `Common.ExternalID` with the description path, as shown in the following example:
+
+> ### Sample Code:  
+> Using the `Common.ExternalID` Annotation
+> 
+> ```
+>     category @Common : {
+>         //Text : category.name,
+>         //TextArrangement : #TextOnly,
+>         ExternalID : category.name, //or readable identifier
+>         FieldControl : #Mandatory,
+>         ValueList : {
+>             $Type : 'Common.ValueListType',
+>             CollectionPath : 'Categories',
+>             Label : '{i18n>Categories}',
+>             Parameters : [
+>                 {
+>                     $Type : 'Common.ValueListParameterInOut',
+>                     LocalDataProperty : category_ID,
+>                     ValueListProperty : 'ID',
+>                 }
+>                 ,
+>                 {
+>                     $Type : 'Common.ValueListParameterDisplayOnly',
+>                     ValueListProperty : 'name',
+>                 },
+>             ],
+>         },
+>     };
+> ```
+
+You can explore and work with the coding yourself. Check out our live example in the flexible programming model explorer at [Field - Format Options](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/field/fieldFormatOptions).
+
+For more information, see [Further Features of the Field](further-features-of-the-field-f49a0f7.md).
+
+
+
 ### Title of the Value Help Dialog
 
-If the DataField annotation for the field has a label property, it is used as the title of the value help dialog. If it doesn't, the label annotation of the property is used instead.
+If the `DataField` annotation for the field has a label property, it is used as the title of the value help dialog. If it doesn't, the label annotation of the property is used instead.
 
 Context-dependent value help uses the label defined in the `ValueList`. If no label is defined, the property label is used instead.
 
@@ -197,9 +553,9 @@ Filter fields always get a value help icon ‒ irrespective of whether a value l
 
 The filter operators offered within the value help dialog \(under the *Define Conditions* tab\) can be restricted according to the [Filter Expression Restrictions](https://github.com/oasis-tcs/odata-vocabularies/blob/-/vocabularies/Org.OData.Capabilities.V1.md#FilterExpressionType).
 
-For each filter expression type, the operators shown in the value help dialog depend on the base type of the property \(String, Date, DateTime, Time, Boolean, Unit, Numeric\). For filter fields with no defined filter expression type, or if it is incompatible with the base type, the complete default set of operators for the respective base type are used.
+For each filter expression type, the operators shown in the value help dialog depend on the base type of the property \(`String`, `Date`, `DateTime`, `Time`, `Boolean`, `Unit`, `Numeric`\). For filter fields with no defined filter expression type, or if it is incompatible with the base type, the complete default set of operators for the respective base type is used.
 
-For `Date` and `DateTime` fields that have the filter expression type "Single Value", instead of the filter conditions dialog a `Date` or `DateTime` picker is shown directly in the filter field.
+For `Date` and `DateTime` fields that have the filter expression type "Single Value" instead of the filter conditions dialog, a `Date` or `DateTime` picker is shown directly in the filter field.
 
 > ### Note:  
 > For a `Date` or `DateTime` field. value help is only available for fields marked with the `MultipleValue` or `MultipleRange` filter restrictions. Value help is not available for a `Date` field that is marked with `SingleValue` or `SingleRange`.
@@ -222,7 +578,7 @@ Application developers can control the visibility of the search field within a v
 By default, the entity set of a value help is searchable.
 
 > ### Tip:  
-> If a field has a `SearchRestriction` annotation with `Searchable : false`, no type ahead is available for the field.
+> If a field has a `SearchRestriction` annotation with `Searchable : false`, no type-ahead is available for the field.
 
 
 
@@ -315,13 +671,138 @@ You can change the sorting of the table using the `UI.PresentationVariant`.
 > ```
 
 > ### Tip:  
-> SAP Fiori elements recommends using a `PresentationVariant`
+> SAP Fiori elements recommends using a `PresentationVariant`.
+
+
+
+### Hierarchical Display Within a Value Help Dialog
+
+You can display a hierarchy within a value help dialog.
+
+To do so, the hierarchy qualifier should be provided through the [`RecursiveHiearchyQualifier`](https://github.com/SAP/odata-vocabularies/blob/0b5633ecc0fb85498720a8da07a46ef24b99ca74/vocabularies/UI.xml#L1175) term within the `PresentationVariant` annotation. The initial expansion level of the hierarchy can be set additionally by using the `InitialExpansionLevel` term, as shown in the following sample code:
+
+> ### Sample Code:  
+> XML Annotation
+> 
+> ```xml
+> <Annotations Target="Self.ArtistsType/CountryOfOrigin">
+>     <Annotation Term="Common.ValueList">
+>         <Record>
+>             <PropertyValue Property="CollectionPath" String="I_AIVS_CountryCode"/>
+>             <PropertyValue Property="SearchSupported" Bool="true"/>
+>             <PropertyValue Property="Parameters">
+>                 <Collection>
+>                     <Record Type="Common.ValueListParameterInOut">
+>                         <PropertyValue Property="LocalDataProperty" PropertyPath="CountryOfOrigin"/>
+>                         <PropertyValue Property="ValueListProperty" String="CountryCode"/>
+>                     </Record>
+>                     <Record Type="Common.ValueListParameterDisplayOnly">
+>                         <PropertyValue Property="ValueListProperty" String="CountryCode_Text"/>
+>                     </Record>
+>                     <Record Type="Common.ValueListParameterDisplayOnly">
+>                         <PropertyValue Property="ValueListProperty" String="CountryIndicator"/>
+>                     </Record>
+>                 </Collection>
+>             </PropertyValue>
+>             <PropertyValueProperty="PresentationVariantQualifier"String="Country_Pres" />
+>         </Record>
+>     </Annotation>
+>     <Annotation Term="UI.PresentationVariant" Qualifier="Country_Pres">
+>         <Record>
+>             <PropertyValue Property="Visualizations">
+>                 <Collection>
+>                     <AnnotationPath>@UI.LineItem#DefaultLineItem</AnnotationPath>
+>                 </Collection>
+>             </PropertyValue>
+>             <PropertyValue Property="InitialExpansionLevel" Int="2"/>
+>             <PropertyValue Property="RecursiveHierarchyQualifier" String="CountryHierarchy"/>
+>         </Record>
+>     </Annotation>
+> </Annotations>
+> ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> ```
+> @Consumption.valueHelpDefinition: [
+>     {
+>           entity :{
+>             name    : ' I_AIVS_CountryCode', // ValueList CollectionPath (The collection path points to consumption VH entity and will have the ValueListParameterDisplayOnly fields within it)
+>             element : ' CountryCode' // ValueListProperty of ValueListParameterInOut           
+>           },
+>           label  : 'mylabel', // ValueList label
+>           qualifier: 'test'
+>           presentationVariantQualifier: 'Country_Pres'  // value list presentvariantqualifier
+>           }
+> ]
+> @UI.presentationVariant: [
+>     {
+>       visualizations: [
+>         {
+>           type: #AS_LINEITEM,
+>           qualifier: 'DefaultLineItem'
+>         }
+>       ],
+>       initialExpansionLevel: 2,
+>       recursiveHierarchyQualifier: 'CountryHierarchy',
+>       qualifier: 'Country_Pres'
+>     }
+> ]
+> CountryOfOrigin, // LocalDataProperty of ValueListParameterInOut
+> ```
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> entity Artist {
+>     CountryOfOrigin                   : String(40)           @(Common : {
+>    Label        : 'Country',
+>     ValueList    : {
+>         CollectionPath : 'I_AIVS_CountryCode',
+>         Parameters     : [
+>         {
+>             $Type             : 'Common.ValueListParameterInOut',
+>             LocalDataProperty : CountryOfOrigin,
+>             ValueListProperty : 'CountryCode'
+>         },
+>         {
+>             $Type             : 'Common.ValueListParameterDisplayOnly',
+>             ValueListProperty : 'CountryCode_Text'
+>         },
+>         {
+>             $Type             : 'Common.ValueListParameterDisplayOnly',
+>             ValueListProperty : 'CountryIndicator'
+>         }
+>         ],
+>         PresentationVariantQualifier: 'Country_Pres'
+>     }
+>     },
+>     UI : {
+>         PresentationVariant #Country_Pres : {
+>             Visualizations : [
+>                 '@UI.LineItem#DefaultLineItem',
+>             ],
+>             InitialExpansionLevel : 2,
+>             RecursiveHierarchyQualifier: 'CountryHierarchy'
+>         }
+>     }
+> );
+> 
+> ```
+
+Check out our live example in the flexible programming model explorer:
+
+-   Display of a hierarchy within a value help at [Field - Edit Mode](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/field/fieldEdit)
+-   Display of a hierarchy within a value help for a multi-input field at [Field - Multi Value Field](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/field/multiValueField)
+-   Property with a tree table within a value help at [Filter Bar - Overview](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/filterBar/filterBarDefault)
 
 
 
 ### Client Validation Against Value Help
 
-You can use the `ValueListForValidation` annotation to configure that the values of certain fields entered in the UI are checked at the client against the value help \(`ValueList` or `ValueListMapping`\) entity set associated to the field.
+You can use the `ValueListForValidation` annotation to configure that the values of certain fields entered on the UI are checked at the client against the value help \(`ValueList` or `ValueListMapping`\) entity set associated to the field.
 
 Use `ValueListForValidation` annotations under property level annotations:
 
@@ -414,7 +895,7 @@ You can use the annotation term `Common.ValueListRelevantQualifiers` to configur
 > ```
 
 > ### Note:  
-> `ValueList` definitions. All `ValueList` definitions must have the same In/Out parameters.
+> All `ValueList` definitions must have the same In/Out parameters.
 
 
 
@@ -423,7 +904,7 @@ You can use the annotation term `Common.ValueListRelevantQualifiers` to configur
 The annotation `InitialValueIsSignificant` allows you to identify an initial value, for example an empty string, as a valid and significant value for value help IN parameters.
 
 > ### Note:  
-> Please note that the annotation below is currently only supported for parameters of data type `Edm.String`.
+> Please note that the annotation below is only supported for parameters of data type `Edm.String`.
 
 > ### Sample Code:  
 > XML Annotation for `InitialValueIsSignificant`
@@ -510,328 +991,6 @@ Some scenarios require more than one value help.
 
 
 
-### Value Help with `TextArrangement`
-
-You can use the `UI.TextArrangement` annotation to configure the display format of a table column of the value help. The following options are available:
-
--   Value Help with a Dialog
-
-    The following text arrangements are supported:
-
-    -   `TextOnly`
-
-    -   `TextFirst`
-
-    -   `TextLast`
-
-    -   `TextSeparate`
-
-
-    **Value Help with Dialog**
-
-
-    <table>
-    <tr>
-    <th valign="top">
-
-    Text
-    
-    </th>
-    <th valign="top">
-
-    `TextArrangement`
-    
-    </th>
-    <th valign="top">
-
-    Display Format
-    
-    </th>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-    \-
-    
-    </td>
-    <td valign="top">
-    
-    \-
-    
-    </td>
-    <td valign="top">
-    
-    `Value`
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-    x
-    
-    </td>
-    <td valign="top">
-    
-    \- \*1\)
-    
-    </td>
-    <td valign="top">
-    
-    `Value`
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-    x
-    
-    </td>
-    <td valign="top">
-    
-    `TextFirst`
-    
-    </td>
-    <td valign="top">
-    
-    `DescriptionValue`
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-    x
-    
-    </td>
-    <td valign="top">
-    
-    `TextLast`
-    
-    </td>
-    <td valign="top">
-    
-    `ValueDescription`
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-    x
-    
-    </td>
-    <td valign="top">
-    
-    `TextSeparate`
-    
-    </td>
-    <td valign="top">
-    
-    `Value`
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-    x
-    
-    </td>
-    <td valign="top">
-    
-    `TextOnly`
-    
-    </td>
-    <td valign="top">
-    
-    `Description`
-    
-    </td>
-    </tr>
-    </table>
-    
-    \*1\): If you define the `Common.Text` annotation without the `UI.TextArrangement`, the display format is `Value`. To get the display format `DescriptionValue`, both `Common.Text` and `UI.TextArrangement` are required.
-
--   Value Help with a Dropdown List \(`ValueListWithFixedValues`\)
-
-    **Value Help with Dropdown List**
-
-
-    <table>
-    <tr>
-    <th valign="top">
-
-    Text
-    
-    </th>
-    <th valign="top">
-
-    `TextArrangement`
-    
-    </th>
-    <th valign="top">
-
-    Display Format
-    
-    </th>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-    \-
-    
-    </td>
-    <td valign="top">
-    
-    \-
-    
-    </td>
-    <td valign="top">
-    
-    `Value`
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-    x
-    
-    </td>
-    <td valign="top">
-    
-    \- \*2\)
-    
-    </td>
-    <td valign="top">
-    
-    `DescriptionValue`
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-    x
-    
-    </td>
-    <td valign="top">
-    
-    `TextFirst`
-    
-    </td>
-    <td valign="top">
-    
-    `DescriptionValue`
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-    x
-    
-    </td>
-    <td valign="top">
-    
-    `TextLast`
-    
-    </td>
-    <td valign="top">
-    
-    `ValueDescription`
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-    x
-    
-    </td>
-    <td valign="top">
-    
-    `TextSeparate`
-    
-    </td>
-    <td valign="top">
-    
-    `Value`
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-    x
-    
-    </td>
-    <td valign="top">
-    
-    `TextOnly`
-    
-    </td>
-    <td valign="top">
-    
-    `Description`
-    
-    </td>
-    </tr>
-    </table>
-    
-    \*2\): If you define the `Common.Text` annotation without the `UI.TextArrangement`, the display format is `DescriptionValue`.
-
--   Best Practices for Value Help for `Edm.Guid`Type Fields
-
-    For `Edm.Guid` type fields, you must not define the `Common.Text` annotation with the description path and the `Common.TextArrangement` with the `TextOnly` display format. Instead, annotate the `Common.ExternalID` with the description path, as shown in the following example:
-
-    > ### Sample Code:  
-    > Using Annotation `Common.ExternalID`
-    > 
-    > ```
-    >     category @Common : {
-    >         //Text : category.name,
-    >         //TextArrangement : #TextOnly,
-    >         ExternalID : category.name, //or readable identifier
-    >         FieldControl : #Mandatory,
-    >         ValueList : {
-    >             $Type : 'Common.ValueListType',
-    >             CollectionPath : 'Categories',
-    >             Label : '{i18n>Categories}',
-    >             Parameters : [
-    >                 {
-    >                     $Type : 'Common.ValueListParameterInOut',
-    >                     LocalDataProperty : category_ID,
-    >                     ValueListProperty : 'ID',
-    >                 }
-    >                 ,
-    >                 {
-    >                     $Type : 'Common.ValueListParameterDisplayOnly',
-    >                     ValueListProperty : 'name',
-    >                 },
-    >             ],
-    >         },
-    >     };
-    > ```
-
-    For more information about using `Common.ExternalID` annotation, see [Displaying Readable IDs Instead of Edm.Guid Values Using Common.ExternalID](further-features-of-the-field-f49a0f7.md#loiof49a0f7eaafe444daf4cd62d48120ad0__section_fy3_gpy_gbc).
-
-
-> ### Tip:  
-> The system automatically excludes a column with the `Description` if the `Description` is already displayed in another column that uses one of the following text arrangements:
-> 
-> -   `TextFirst`
-> 
-> -   `TestLast`
-> 
-> -   `TextOnly`
-
-For more information, see [Further Features of the Field](further-features-of-the-field-f49a0f7.md).
-
-
-
 <a name="loioa5608eabcc184aee99e1a7d88b28816c__section_h1j_xt3_5pb"/>
 
 ## Value Help for Draft-Enabled Entities
@@ -842,9 +1001,9 @@ Value help for draft-enabled entities only shows active documents.
 
 <a name="loioa5608eabcc184aee99e1a7d88b28816c__section_zmj_gw3_5pb"/>
 
-## Value Help Using `FetchValuesType`
+## Value Help Using the `FetchValuesType`
 
-By default, a value help requests the data immediately when the dialog is opened. Application developers can use the <code><a href="https://github.com/SAP/odata-vocabularies/blob/-/vocabularies/Common.md#FetchValuesType">FetchValuesType</a></code>Applications can bring up value help for fields, allowing end users to choose from to define that a value help doesn't load the data immediately, and that users can first maintain a filter and then request the data by choosing XML Annotation*Go*.
+By default, a value help requests the data immediately when the dialog is opened. Application developers can use the <code><a href="https://github.com/SAP/odata-vocabularies/blob/-/vocabularies/Common.md#FetchValuesType">FetchValuesType</a></code> to bring up value help for fields, allowing users to choose that a value help doesn't load the data immediately. Users can then first maintain a filter, and then request the data by clicking the *Go* button.
 
 You achieve this by setting the property "FetchValues = 2".
 
@@ -882,7 +1041,7 @@ You achieve this by setting the property "FetchValues = 2".
 
 ## Fixed Values
 
-For information about fixed values, please see the topic [Value Help as a Dropdown List](value-help-as-a-dropdown-list-2a0a630.md).
+For information about fixed values, see [Value Help as a Dropdown List](value-help-as-a-dropdown-list-2a0a630.md).
 
 
 
@@ -890,9 +1049,9 @@ For information about fixed values, please see the topic [Value Help as a Dropdo
 
 ## History of Recently Entered Values
 
-Filter bar fields can show the history of recently entered values. It's especially useful when the end users frequently select the same values from a large list.
+Filter bar fields can show the history of recently entered values, which is especially useful when end users frequently select the same values from a long list.
 
-When enabled, this feature saves the values a user has entered in the field. When the user sets the focus on the field, a list of recently entered values is displayed. When the user starts typing, the list is filtered according to their input. If the field has no previously entered values, the list will not be displayed even if this feature is enabled.
+When enabled, this feature saves the values a user has entered in the field. When the user sets the focus on the field, a list of recently entered values is displayed. When the user starts typing, the list is filtered according to their input. If the field has no previously entered values the list is not displayed, even if this feature is enabled.
 
 To enable the history of recently entered values, enable the `INPUTFIELD_HISTORY` parameter in SAP Fiori launchpad. For more information, see [Manage Launchpad Settings](https://help.sap.com/docs/SAP_S4HANA_CLOUD/4fc8d03390c342da8a60f8ee387bca1a/22d573aead754b80abca18ec71872fb7.html).
 
@@ -949,7 +1108,7 @@ You can specify a timezone for a field of type "`Edm.DateTimeOffset`". If the ti
     > ```
     > <EntityType Name="SalesOrderManage">
     >    <Property Name="timeDefault" Type="Edm.DateTimeOffset"/>
-    >    <Property Name="testTimeFixed" Type="Edm.DateTimeOffset”/>
+    >    <Property Name="testTimeFixed" Type="Edm.DateTimeOffset"/>
     >    <Property Name="testTime" Type="Edm.DateTimeOffset"/>
     >    <Property Name="testTimezone" Type="Edm.String"/>
     > </EntityType>

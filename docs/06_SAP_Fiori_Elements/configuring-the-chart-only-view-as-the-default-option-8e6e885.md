@@ -188,7 +188,7 @@ Use the app-descriptor `chartPresentationQualifier` setting to render a chart ba
 
 ```
 "settings": { 
-"chartPresentationQualifier": “qualifier”}
+"chartPresentationQualifier": "qualifier"}
 ```
 
 
@@ -352,8 +352,8 @@ If you select a data point or segment from a chart, the smart chart checks the a
 > XML Annotation
 > 
 > ```xml
-> <Annotations xmlns=http://docs.oasis-open.org/odata/ns/edm Target=”Emp_Line_Item.Item/Cost_Center”>
-> 	<Annotation Term=”com.sap.vocabularies.Common.v1.SemanticObject” String=”CostCenter”/>
+> <Annotations xmlns=http://docs.oasis-open.org/odata/ns/edm Target="Emp_Line_Item.Item/Cost_Center">
+> 	<Annotation Term="com.sap.vocabularies.Common.v1.SemanticObject" String="CostCenter"/>
 > </Annotations>
 > 
 > ```
@@ -444,7 +444,7 @@ You can configure the chart to map the dimension values to specific colors. In t
 >                    "legendIndex":2
 >                         }
 >                          },
->           “Customer”: {
+>           "Customer": {
 >                "C000013": {
 >                     "color": "red",
 >                     "legendIndex": 0

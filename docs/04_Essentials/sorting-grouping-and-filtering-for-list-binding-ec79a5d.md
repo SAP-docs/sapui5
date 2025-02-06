@@ -32,7 +32,7 @@ To provide initial **sorting and grouping** in an XML view, proceed as follows:
 
 The `this` context of a group header factory function is generally set to the control \(or managed object\) that owns the binding. However, in XML views, the reference to the group header factory is done in the view controller by putting a dot \(`.`\) in front of the name of the group header factory function \(`{ groupHeaderFactory:'.myGroupHeader' }`\). In this case, the group header factory's this context is bound to the controller.
 
-The list uses a sorter which sorts the list of companies in ascending order by the `county` column. It also groups its rows using the App.controller’s `getCounty` method to provide the captions and the `getGroupHeader` function to provide non-standard group header controls, as shown here:
+The list uses a sorter which sorts the list of companies in ascending order by the `county` column. It also groups its rows using the App.controller's `getCounty` method to provide the captions and the `getGroupHeader` function to provide non-standard group header controls, as shown here:
 
 ```js
 sap.ui.define([
@@ -84,7 +84,7 @@ The following XML snippet provides initial filtering:
 </mvc:View>
 ```
 
-The example shown here will only display companies whose city name begins with a ‘b’ and whose revenue is less than 150 million. As you can see, you can provide more than one filter, each of which may refer to different columns using different filter operators. For a complete list of permitted filter operators, see [sap.ui.model.FilterOperator](https://ui5.sap.com/#/api/sap.ui.model.FilterOperator) in the *API Reference* part of the Demo Kit.
+The example shown here will only display companies whose city name begins with a 'b' and whose revenue is less than 150 million. As you can see, you can provide more than one filter, each of which may refer to different columns using different filter operators. For a complete list of permitted filter operators, see [sap.ui.model.FilterOperator](https://ui5.sap.com/#/api/sap.ui.model.FilterOperator) in the *API Reference* part of the Demo Kit.
 
 As shown below, initial sorting, grouping and filtering can of course also be provided using JavaScript.
 

@@ -114,7 +114,7 @@ Default value: RTL derived from user locale
 
 If set to `true`, all controls are rendered in right-to-left \(RTL\) mode.
 
-Typically, the RTL mode is derived from the current language, which is usually picked automatically based on the locale configuration of the user’s browser or profile data. Particularly for testing purposes, it might be handy to set the mode explicitly.
+Typically, the RTL mode is derived from the current language, which is usually picked automatically based on the locale configuration of the user's browser or profile data. Particularly for testing purposes, it might be handy to set the mode explicitly.
 
 Modifiable at runtime with restrictions. For more information, see the [API Reference: `Localization.setLanguage`](https://ui5.sap.com/#/api/module:sap/base/i18n/Localization%23methods/sap/base/i18n/Localization.setLanguage) .
 

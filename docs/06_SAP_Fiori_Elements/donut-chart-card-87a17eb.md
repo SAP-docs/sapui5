@@ -19,7 +19,7 @@ Donut charts require exactly one measure. You can provide more than one dimensio
 > "ChartProperties" : {
 > 			"plotArea" : {
 > 				dataLabel: {
-> 					"type" : “percentage”
+> 					"type" : "percentage"
 > 					}
 > 				}
 > 			}

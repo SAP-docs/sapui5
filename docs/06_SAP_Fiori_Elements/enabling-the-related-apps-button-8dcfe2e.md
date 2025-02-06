@@ -157,7 +157,7 @@ You can configure the `relatedAppsSettings` parameter in the `manifiest.json` fi
 > }
 > ```
 
-With this setting, all related apps from the app’s URL and from the `manifest.json` file are displayed on the UI under the *Related Apps* button.
+With this setting, all related apps from the app's URL and from the `manifest.json` file are displayed on the UI under the *Related Apps* button.
 
 
 
@@ -320,10 +320,10 @@ Application developers can add additional links under the *Related Apps* button 
             "contextPath": "/SalesOrderManage",
             "showRelatedApps": true,
             "additionalSemanticObjects": {
-                “ProductCollection”: {
+                "ProductCollection": {
                     unavailableActions: ["displayFactSheet", "reorderProduct"],
                     mapping: {
-                        “SoldToParty”: “Client”,
+                        "SoldToParty": "Client",
                          .
                          .
                     }
@@ -360,12 +360,12 @@ You can also use the `allowedActions` key in the `manifest.json` file to define 
             "contextPath": "/SalesOrderManage",
             "showRelatedApps": true,
             "additionalSemanticObjects": {
-                “SalesOrder”: {
+                "SalesOrder": {
                     allowedActions: ["create", "managev2"],
-                “ProductCollection”: {
+                "ProductCollection": {
                     allowedActions: ["displayFactSheet"],
                     mapping: {
-                        “SoldToParty”: “Client”,
+                        "SoldToParty": "Client",
                          .
                          .
                     }

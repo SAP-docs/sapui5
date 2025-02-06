@@ -84,5 +84,5 @@ Here, `<propertyPath>` refers to the property path in the OData service.
 **Related Information**  
 
 
-[Configuring Filter Bars](configuring-filter-bars-4bd7590.md "You can configure filter bars in list report applications and in the analytical list page.")
+[Configuring Filter Bars](configuring-filter-bars-4bd7590.md "You can configure filter bars in both list report applications and analytical list pages.")
 

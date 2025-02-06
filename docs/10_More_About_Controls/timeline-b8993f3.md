@@ -70,7 +70,7 @@ These are only some of the ways you can position the timeline on a page.
 
 -   If your timeline provides filtering, it is important that you enable filtering directly on the binding level by setting the `enableModelFilter` property to `true`. This allows the filtering to be performed before any data is pulled into the timeline. If the `enableModelFilter` property is set to `false`, the timeline loads all data before performing the filtering, which may lead to performance issues.
 
-    If you use filtering over a large amount of data \(more than 100 timeline posts\), you may need to increase the data model's size limit. The default limit is 100, which means that filtering is performed over the first 100 items in the data set. To increase the data model's size limit, set the model’s `sizeLimit` property to a higher number. For details, see [`sap.ui.model.Model.html#setSizeLimit`](https://ui5.sap.com/#/api/sap.ui.model.Model/methods/setSizeLimit). 
+    If you use filtering over a large amount of data \(more than 100 timeline posts\), you may need to increase the data model's size limit. The default limit is 100, which means that filtering is performed over the first 100 items in the data set. To increase the data model's size limit, set the model's `sizeLimit` property to a higher number. For details, see [`sap.ui.model.Model.html#setSizeLimit`](https://ui5.sap.com/#/api/sap.ui.model.Model/methods/setSizeLimit). 
 
 
 **Initialization**
@@ -178,11 +178,11 @@ The way you initialize a timeline depends on whether you want to use JSON model 
 
     You can set the timeline axis to be displayed [vertically or horizontally](https://ui5.sap.com/#/api/sap.suite.ui.commons.Timeline/methods/setAxisOrientation), with the posts arranged on one or [both](https://ui5.sap.com/#/api/sap.suite.ui.commons.Timeline/methods/setEnableDoubleSided) sides of the axis. The posts can be displayed in chronological or reverse chronological [order](https://ui5.sap.com/#/api/sap.suite.ui.commons.Timeline/methods/setSortOldestFirst).
 
--   **Scroll bar** – It is not recommended that you use the timeline control inside a [scroll container](https://ui5.sap.com/#/api/sap.m.ScrollContainer). Please use the timeline’s `enableScroll` property instead. When the timeline’s `enableScroll` property is set to `true`, the timeline has its own scroll bar.
+-   **Scroll bar** – It is not recommended that you use the timeline control inside a [scroll container](https://ui5.sap.com/#/api/sap.m.ScrollContainer). Please use the timeline's `enableScroll` property instead. When the timeline's `enableScroll` property is set to `true`, the timeline has its own scroll bar.
 
     If you still want to use your timeline inside a [scroll container](https://ui5.sap.com/#/api/sap.m.ScrollContainer), make sure that your timeline meets the following requirements:
 
-    -   The timeline’s `growingThreshold` property is set to `0`.
+    -   The timeline's `growingThreshold` property is set to `0`.
 
     -   The `lazyLoading` property is set to `false`.
 
@@ -191,7 +191,7 @@ The way you initialize a timeline depends on whether you want to use JSON model 
 
 -   **Node icons** – Timeline posts can have optional node icons displayed on the timeline axis itself. To define the icons used for posts, use the `icon` property of the `TimelineItem` object. If you want the icons to use semantic colors that indicate the status conveyed by the post, use the `status` property of the `TimelineItem` object.
 
-    If you don’t want to display any icons on the timeline axis itself, set the timeline’s `showIcons` property to `false`.
+    If you don't want to display any icons on the timeline axis itself, set the timeline's `showIcons` property to `false`.
 
 
 **Responsiveness**

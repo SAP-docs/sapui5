@@ -22,7 +22,7 @@ In this step, we create the list view of the app using `sap.f.DynamicPage` contr
 
 ## Coding
 
-You can view and download all files at [Flexible Column Layout App - Step 3](https://ui5.sap.com/#/sample/sap.f.tutorial.fiori2.03/preview).
+You can view and download all files at [Flexible Column Layout App - Step 3](https://ui5.sap.com/#/sample/sap.f.tutorial.fcl.03/preview).
 
 
 
@@ -32,9 +32,9 @@ You can view and download all files at [Flexible Column Layout App - Step 3](htt
 
 ```json
 {
-	"_version": "1.12.0",
+	"_version": "1.38.0",
 	"sap.app": {
-		"id": "sap.ui.demo.fiori2",
+		"id": "sap.ui.demo.fcl",
 		"type": "application",
 		"applicationVersion": {
 			"version": "1.0.0"
@@ -42,17 +42,17 @@ You can view and download all files at [Flexible Column Layout App - Step 3](htt
 	},
 	"sap.ui5": {
 		"rootView": {
-			"viewName": "sap.ui.demo.fiori2.view.App",
+			"viewName": "sap.ui.demo.fcl.view.App",
 			"type": "XML",
 			"async": true,
 			"id": "fcl"
 		},
 		"dependencies": {
-			"minUI5Version": "1.60.0",
+			"minUI5Version": "1.98.0",
 			"libs": {
-				"sap.ui.core": {},
+				"sap.f": {},
 				"sap.m": {},
-				"sap.f": {}
+				"sap.ui.core": {}
 				}
 		},
 		"config": {
@@ -78,14 +78,14 @@ First, we add the `sap.m` library as a dependency in the `manifest.json`.
 	<script id="sap-ui-bootstrap"
 		src="resources/sap-ui-core.js"
 		data-sap-ui-theme="sap_horizon"
-		data-sap-ui-resource-roots='{
-			"sap.ui.demo.fiori2": "./",
+		data-sap-ui-resourceroots='{
+			"sap.ui.demo.fcl": "./",
 			"sap.ui.demo.mock": "test-resources/sap/ui/documentation/sdk/"
 		}'
-		data-sap-ui-on-init="module:sap/ui/core/ComponentSupport"
-		data-sap-ui-compat-version="edge"
+		data-sap-ui-oninit="module:sap/ui/core/ComponentSupport"
+		data-sap-ui-compatversion="edge"
 		data-sap-ui-async="true"
-		data-sap-ui-frame-options="trusted">
+		data-sap-ui-frameoptions="trusted">
 	</script>
 	...
 ```
@@ -105,7 +105,7 @@ sap.ui.define([
 ], function(UIComponent, JSONModel) {
 	'use strict';
 
-	return UIComponent.extend('sap.ui.demo.fiori2.Component', {
+	return UIComponent.extend('sap.ui.demo.fcl.Component', {
 
 		metadata: {
 			manifest: 'json'
@@ -117,7 +117,7 @@ sap.ui.define([
 			UIComponent.prototype.init.apply(this, arguments);
 
 			// set products demo model on this sample
-			oProductsModel = new JSONModel(sap.ui.require.toUrl('sap/ui/demo/mock') + '/products.json');
+			oProductsModel = new JSONModel(sap.ui.require.toUrl('sap/ui/demo/mock/products.json'));
 			oProductsModel.setSizeLimit(1000);
 			this.setModel(oProductsModel, 'products');
 		}
@@ -135,7 +135,7 @@ We create the `init` method in the `Component.js` to set the model.
 
 ```xml
 <mvc:View
-	controllerName="sap.ui.demo.fiori2.controller.List"
+	controllerName="sap.ui.demo.fcl.controller.List"
 	xmlns="sap.m"
 	xmlns:f="sap.f"
 	xmlns:mvc="sap.ui.core.mvc">
@@ -226,7 +226,7 @@ We create the list view using `sap.f.DynamicPage`. The page consists of a list w
 	xmlns:mvc="sap.ui.core.mvc">
 	<FlexibleColumnLayout id="flexibleColumnLayout" backgroundDesign="Solid">
 		<beginColumnPages>
-			<mvc:XMLView id="beginView" viewName="sap.ui.demo.fiori2.view.List"/>
+			<mvc:XMLView id="beginView" viewName="sap.ui.demo.fcl.view.List"/>
 		</beginColumnPages>
 	</FlexibleColumnLayout>
 </mvc:View>
@@ -242,16 +242,15 @@ We add the list view in `FlexibleColumnLayout's` `beginColumnPages` aggregation.
 
 ```js
 sap.ui.define([
-	"sap/ui/model/json/JSONModel",
 	"sap/ui/core/mvc/Controller",
 	"sap/ui/model/Filter",
 	"sap/ui/model/FilterOperator",
-	'sap/ui/model/Sorter',
-	'sap/m/MessageBox'
-], function (JSONModel, Controller, Filter, FilterOperator, Sorter, MessageBox) {
+	"sap/ui/model/Sorter",
+	"sap/m/MessageBox"
+], function (Controller, Filter, FilterOperator, Sorter, MessageBox) {
 	"use strict";
 
-	return Controller.extend("sap.ui.demo.fiori2.controller.List", {
+	return Controller.extend("sap.ui.demo.fcl.controller.List", {
 		onInit: function () {
 			this.oView = this.getView();
 			this._bDescendingSort = false;
@@ -282,6 +281,7 @@ sap.ui.define([
 		}
 	});
 });
+
 ```
 
 We create the list controller that provides a basic search and sort functionality for the products listed in the list page.

@@ -92,7 +92,7 @@ export default class AppController extends Controller {
 
 The bundle name \(`ui5.walkthrough.i18n.i18n`\) consists of the application namespace `ui5.walkthrough` \(the application root as defined in the `index.html`\), the resource folder name `i18n`, and finally the base file name `i18n` without extension. The SAPUI5 runtime calculates the correct path to the resource, to which `.properties` is then appended.
 
-During runtime, SAPUI5 tries to load the correct`i18n_*.properties` file based on your browser settings and your locale. In our case we have only created the base `i18n.properties` file to make it simple. However, you can see in the network traffic of your browser’s developer tools that SAPUI5 tries to load one or more `i18n_*.properties` files before falling back to the default `i18n.properties` file.
+During runtime, SAPUI5 tries to load the correct`i18n_*.properties` file based on your browser settings and your locale. In our case we have only created the base `i18n.properties` file to make it simple. However, you can see in the network traffic of your browser's developer tools that SAPUI5 tries to load one or more `i18n_*.properties` files before falling back to the default `i18n.properties` file.
 
 
 

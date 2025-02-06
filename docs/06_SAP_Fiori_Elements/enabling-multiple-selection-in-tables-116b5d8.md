@@ -83,7 +83,7 @@ You have two options:
     >         "to_ProductText::com.sap.vocabularies.UI.v1.LineItem": {
     >           "navigationProperty": "to_ProductText",
     >           "entitySet": "STTA_C_MP_ProductText",
-    >           "createMode": "inline”,
+    >           "createMode": "inline",
     >           "tableSettings": {
     >             "multiSelect": true
     >           }

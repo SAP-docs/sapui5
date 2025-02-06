@@ -83,7 +83,7 @@ sap.ui.define([
 });
 ```
 
-As you know already from the previous steps, we add the `press` event handler `onNavToEmployeeOverview`. It navigates to the route `employeeOverview` which does not exist yet, so let’s create it.
+As you know already from the previous steps, we add the `press` event handler `onNavToEmployeeOverview`. It navigates to the route `employeeOverview` which does not exist yet, so let's create it.
 
 
 
@@ -182,7 +182,7 @@ Both targets `employeeOverviewTop` and `employeeOverviewContent` reference the t
 
 Now we create both targets `employeeOverviewTop` and `employeeOverviewContent` as well as their parent target `employeeOverview`. On the parent target we set `level` to `2` to ensure a correct transition animation. In the targets, we also configure where the corresponding views of the children shall be displayed by setting the parameters `controlId` and `controlAggregation` to a control ID of a `sap.ui.layout.HorizontalLayout` that we are about to create in a new view. You should be familiar with this configuration from the last step.
 
-The router makes sure that the parent view is loaded in addition to the target view when a corresponding route has been matched and the targets are displayed. The referenced views are displayed automatically at the configured place in the parent’s view, in our case in the content aggregation of the page control. We have mentioned three different views that we still need to add to the app to make the configuration work:
+The router makes sure that the parent view is loaded in addition to the target view when a corresponding route has been matched and the targets are displayed. The referenced views are displayed automatically at the configured place in the parent's view, in our case in the content aggregation of the page control. We have mentioned three different views that we still need to add to the app to make the configuration work:
 
 -   `EmployeeOverview`
 
@@ -241,7 +241,7 @@ The controller does not contain any logic yet, but we will add back navigation f
 
 ```
 
-Create the file `EmployeeOverviewTop.view.xml` and place it in the `webapp/view/employee/overview` folder. This view displays a static text for illustration purposes. Change it according to your own requirements. We don’t need a controller for this view
+Create the file `EmployeeOverviewTop.view.xml` and place it in the `webapp/view/employee/overview` folder. This view displays a static text for illustration purposes. Change it according to your own requirements. We don't need a controller for this view
 
 
 

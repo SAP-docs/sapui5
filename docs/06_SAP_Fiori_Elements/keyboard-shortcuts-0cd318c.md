@@ -311,7 +311,7 @@ Object page
 </td>
 <td valign="top">
 
-In the SmartFilterBar, the search is triggered when the focus is in one of the filter bar’s input fields.
+In the SmartFilterBar, the search is triggered when the focus is in one of the filter bar's input fields.
 
 </td>
 </tr>

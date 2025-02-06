@@ -69,7 +69,7 @@ Content \(controls are used internally\)
 
 The classic header title is largely semantic, meaning that it has properties, such as `objectTitle`, `objectSubtitle` and `objectImageURI`. It has a very specific layout based on these properties.
 
-On the contrary, the dynamic header title is general-purpose. It doesn’t have any properties describing the represented object, but rather several aggregations, such as `heading` and `content`, which the app can use to display any information and build any layout. This requires more work by the app developer, but also more flexibility. The new header uses internally `sap.m.OverflowToolbar` for the implementation of the `actions` aggregation, which allows actions to have priority, grouping, and other `sap.m.OverflowToolbar` features.
+On the contrary, the dynamic header title is general-purpose. It doesn't have any properties describing the represented object, but rather several aggregations, such as `heading` and `content`, which the app can use to display any information and build any layout. This requires more work by the app developer, but also more flexibility. The new header uses internally `sap.m.OverflowToolbar` for the implementation of the `actions` aggregation, which allows actions to have priority, grouping, and other `sap.m.OverflowToolbar` features.
 
 The main difference between the classic and dynamic header content is that the dynamic header has the Pin functionality, allowing the user to prevent it from scrolling out of view.
 

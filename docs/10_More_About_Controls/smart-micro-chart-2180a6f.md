@@ -136,7 +136,7 @@ The "BulletChartQualifier" string is the qualifier and can be any kind of string
 		</SmartMicroChart>
 ```
 
-The custom data key is “chartQualifier”. There are three different options supported how custom data can be provided:
+The custom data key is "chartQualifier". There are three different options supported how custom data can be provided:
 
 -   as XML declaration
 -   by calling data function

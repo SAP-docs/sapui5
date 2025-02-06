@@ -30,5 +30,5 @@ Users who still have system access can delete their own saved analysis paths dir
 
 ## Personal Data in Analysis Paths
 
-In an APF-based application, personal data can also appear in an analysis path, for example, as a measure in an analysis step such as ‘revenue by consultant’. APF does not persist these measures, but only filter criteria that are relevant for selections made in a chart. When a user is deleted from the system, the personal data of this user is not displayed any longer in an analysis path. The filter criteria is also removed from the analysis path so that no personal data of the deleted user shows up.
+In an APF-based application, personal data can also appear in an analysis path, for example, as a measure in an analysis step such as 'revenue by consultant'. APF does not persist these measures, but only filter criteria that are relevant for selections made in a chart. When a user is deleted from the system, the personal data of this user is not displayed any longer in an analysis path. The filter criteria is also removed from the analysis path so that no personal data of the deleted user shows up.
 

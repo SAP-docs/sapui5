@@ -21,7 +21,7 @@ To define a custom action in quick view cards, proceed as follows:
     >     "use strict";
     >     return {
     >         /*
-    >         The following Hook function “onCustomActionPress” accepts only one argument name of the press handler as a string and return the press handler function defined in the custom controller.       
+    >         The following Hook function "onCustomActionPress" accepts only one argument name of the press handler as a string and return the press handler function defined in the custom controller.       
     >         */
     >         onCustomActionPress: function(sCustomAction) {
     >             if (sCustomAction === "press1") {

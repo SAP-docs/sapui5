@@ -2,7 +2,7 @@
 
 # Extending Delivered Apps Using Adaptation Extensions
 
-You can extend delivered apps based on SAP Fiori elements by using the SAPUI5 Visual Editor in SAP Business Application Studio. It allows you to create adaptation projects on top of delivered apps.
+You can extend delivered apps based on SAP Fiori elements by using the Adaptation Editor in SAP Business Application Studio. It allows you to create adaptation projects on top of delivered apps.
 
 
 
@@ -10,12 +10,12 @@ You can extend delivered apps based on SAP Fiori elements by using the SAPUI5 Vi
 
 ## Context
 
-You can implement extension functions as part of a UI adaptation project by using the SAPUI5 Visual Editor in SAP Business Application Studio. The adaptation project references the applications delivered by SAP as base or parent applications.
+You can implement extension functions as part of a UI adaptation project by using the Adaptation Editor in SAP Business Application Studio. The adaptation project references the applications delivered by SAP as base or parent applications.
 
 > ### Note:  
 > This procedure is relevant only for list reports, object pages, overview pages, and analytical list pages.
 > 
-> The flexible column layout is not supported by the SAPUI5 Visual Editor.
+> The flexible column layout is not supported by the Adaptation Editor.
 
 You can try the adaptation extensions by creating an adaptation project described in [Extending an SAP Fiori Application](https://help.sap.com/docs/bas/developing-sap-fiori-app-in-sap-business-application-studio/extending-sap-fiori-application).
 

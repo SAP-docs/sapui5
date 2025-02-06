@@ -391,7 +391,7 @@ To configure the navigation from a generic drill-down app to the APF-based app, 
 > 
 > -   application ID: in the app URL behind the parameter "app"
 > 
-> -   configuration ID: in the app URL behind the parameter “config” or in the configuration details in the APF Configuration Modeler app
+> -   configuration ID: in the app URL behind the parameter "config" or in the configuration details in the APF Configuration Modeler app
 
 
 
@@ -401,11 +401,11 @@ You can configure your KPI tile in a way that it launches an APF-based applicati
 
 -   Analysis step:
     -   Name: `sap-apf-step-id`
-    -   Value: step ID, for example, “Step-23”
+    -   Value: step ID, for example, "Step-23"
 
 -   Representation:
     -   Name: `sap-apf-representation-id`
-    -   Value: representation ID, for example, “ Step-23-Representation-1”
+    -   Value: representation ID, for example, "Step-23-Representation-1"
 
 
 You can look up the step ID and representation ID in the JSON file of the configuration. You may have to export your configuration first to get an up-to-date JSON file. You can also find the IDs in the URL of the APF Configuration Modeler while you are editing a step or representation. You can find the step ID behind the parameter "step" and the representation ID behind the parameter "repn".

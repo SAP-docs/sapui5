@@ -42,7 +42,7 @@ You provide the list of connectors as a string, because `flexibilityServices` is
 
 The connectors control the layers to which changes are written. Every connector has a default layering configuration, but you can limit this default by specifying certain layers. Example: As a result of the following string, only the SessionStorage connector is used for CUSTOMER layer content \(see [Layering Concept](layering-concept-9e63057.md)\):
 
-`flexibilityServices ='[{"connector": "SessionStorageConnector", layers: ["CUSTOMER"]}]’`
+`flexibilityServices ='[{"connector": "SessionStorageConnector", layers: ["CUSTOMER"]}]'`
 
 
 

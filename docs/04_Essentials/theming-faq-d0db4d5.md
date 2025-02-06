@@ -53,7 +53,7 @@ In other cases, when HTML elements that break the CSS inheritance chain are nest
 
 In general, we try to expose the obvious adaptation content in the API, for example, the button height. But the less obvious adaptations might have to be supported from inside the control to work properly, and as we cannot foresee and support everything you can do with a `style` property, we raise the bar a little bit by requiring you to write CSS \(potentially using `.addStyleClass(…)` for the respective control\). With CSS you can do what you cannot do with a `style` property: tweak the inner HTML components of a control.
 
-Applications \(at least the more traditional ones – currently this seems to be less of a rule, but I’m not sure it will stay like this forever\) need to conform to some visual design guideline and, in general, it is not even desired that applications change the `TextField` height or use font just the way they like. As you can use CSS, UI5 still supports that, but we shouldn’t make breaking the visual design a rule in our official API.
+Applications \(at least the more traditional ones – currently this seems to be less of a rule, but I'm not sure it will stay like this forever\) need to conform to some visual design guideline and, in general, it is not even desired that applications change the `TextField` height or use font just the way they like. As you can use CSS, UI5 still supports that, but we shouldn't make breaking the visual design a rule in our official API.
 
 
 

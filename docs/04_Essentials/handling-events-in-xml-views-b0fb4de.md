@@ -36,7 +36,7 @@ Depending on the syntax of its name, the event handler will be looked up by this
 
 
 > ### Note:  
-> When specified without parameters, the event handler will be called with one argument, the event object. This object can be used to retrieve the event parameters documented by the control’s respective event documentation.
+> When specified without parameters, the event handler will be called with one argument, the event object. This object can be used to retrieve the event parameters documented by the control's respective event documentation.
 
 
 

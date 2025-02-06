@@ -93,12 +93,12 @@ sap.ui.core.hyphenation.Hyphenation.getInstance()
 
 ## How It Works for Text Controls
 
-We’ve taken the following dynamic approach to hyphenation:
+We've taken the following dynamic approach to hyphenation:
 
 -   We use browser-native hyphenation when possible;
 -   If browser hyphenation is not possible – we use a third-party tool called Hyphenopoly through the `sap.ui.core.hyphenation.Hyphenation` API.
 
-Once you've set the control property to `WrappingType.Hyphenated`, the control instance checks dynamically whether the browser you’re using supports hyphenation. If yes, it enables the CSS hyphenation and lets the browser perform it. If it doesn’t, the process is redirected to a third-party tool and the hyphenation module is asynchronously loaded together with the specific resources per language. This is done through the `sap.ui.core.hyphenation.Hyphenation` API, which is responsible for loading all resources in an async mode and for the dynamic initialization of the third-party library with the language resources and some required configurations. It also caches the rules internally for future use.
+Once you've set the control property to `WrappingType.Hyphenated`, the control instance checks dynamically whether the browser you're using supports hyphenation. If yes, it enables the CSS hyphenation and lets the browser perform it. If it doesn't, the process is redirected to a third-party tool and the hyphenation module is asynchronously loaded together with the specific resources per language. This is done through the `sap.ui.core.hyphenation.Hyphenation` API, which is responsible for loading all resources in an async mode and for the dynamic initialization of the third-party library with the language resources and some required configurations. It also caches the rules internally for future use.
 
 When the framework makes the choice whether browser-native hyphenation or third-party hyphenation should be used, it logs a message in the console for more information about what was decided.
 

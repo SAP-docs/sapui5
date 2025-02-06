@@ -69,7 +69,7 @@ Edit Card
 </td>
 <td valign="top">
 
-Lets you modify title, subtitle, KPI header, value, and description, and type of chart. You can modify sorting and navigation properties. Also, you can disable adding individual cards to the *Insights* section. This option is available only if the generation of cards for the *Insights* section of *My Home* in SAP S/4HANA Cloud is enabled.
+Lets you modify title, subtitle, KPI header, value, and description, and type of chart. You can modify sorting and navigation properties. Also, you can disable adding individual cards to the *Insights* section. This option is available only if the generation of cards for the *Insights* section of *My Home* in SAP S/4HANA Cloud Public Edition is enabled.
 
 </td>
 </tr>

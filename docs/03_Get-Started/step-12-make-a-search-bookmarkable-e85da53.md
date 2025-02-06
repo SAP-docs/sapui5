@@ -150,9 +150,9 @@ sap.ui.define([
 
 Now we handle the optional query parameter from the `employeeOverview` route in our `EmployeeOverviewContent` controller. First we change the `onInit` function by adding an event listener for the matched event of the `employeeOverview` route. Then we buffer the current router arguments as received from the event. If a query is available, the result from `oEvent.getParameter("arguments")` will contain a `?query` property with an object of all URL parameters specified, otherwise it is undefined. If no query parameter is defined, we always initialize the query and save it to `this._oRouterArgs["?query"]`. If we have a search term query at the `search` key we continue and call `this._applySearchFilter(this._oRouterArgs["?query"].search)` to trigger a search based on the search query parameter from the URL.
 
-Storing the `arguments` objects internally in the controller is important, because we will use the current arguments when calling `navTo()` in the search event handler `onSearchEmployeesTable` and pass on the arguments with the updated search term. We keep the URL and the UI in sync by navigating to the current target again with the current value of the search field from the event’s source. The search value is stored in `this._oRouterArgs["?query"].search` together with the other query parameters and it is passed directly to the router again
+Storing the `arguments` objects internally in the controller is important, because we will use the current arguments when calling `navTo()` in the search event handler `onSearchEmployeesTable` and pass on the arguments with the updated search term. We keep the URL and the UI in sync by navigating to the current target again with the current value of the search field from the event's source. The search value is stored in `this._oRouterArgs["?query"].search` together with the other query parameters and it is passed directly to the router again
 
-That’s it, now our search is bookmarkable and reflected in the URL. Try to access the following pages in your browser:
+That's it, now our search is bookmarkable and reflected in the URL. Try to access the following pages in your browser:
 
 -   `webapp/index.html#/employees/overview`
 

@@ -42,9 +42,9 @@ In this example, the `check` function is omitted. In this case, OPA5 creates its
 
 <a name="loio21aeff6928f84d179a47470123afee59__section_zkc_qrc_wbb"/>
 
-## Retrieving a Control That Doesn’t Have an ID
+## Retrieving a Control That Doesn't Have an ID
 
-Sometimes you need to test for a control that has no explicit ID set and maybe you can’t or don’t want to provide one for your test. To get around this issue, use a custom check function to filter for this control. Let's assume we have a view called `Detail` and there are multiple `sap.m.ObjectHeaders` on this page. We want to wait until there’s an object header with the title `myTitle`.
+Sometimes you need to test for a control that has no explicit ID set and maybe you can't or don't want to provide one for your test. To get around this issue, use a custom check function to filter for this control. Let's assume we have a view called `Detail` and there are multiple `sap.m.ObjectHeaders` on this page. We want to wait until there's an object header with the title `myTitle`.
 
 To do this, use the following code:
 
@@ -222,7 +222,7 @@ return new Opa5().waitFor({
 });
 ```
 
-`sap.ui.test.matchers.LabelFor`: This matcher checks if a given control is associated with an `sap.m.Label` control. This means that there should be a label on the page with a `labelFor` association to the control. The label can be filtered by text value or by the `i18n` key of a given property value. Note that some controls, such as `sap.ui.comp.navpopover.SmartLink`, `sap.m.Link`, `sap.m.Label`, and `sap.m.Text` can’t be matched by `sap.ui.test.matchers.LabelFor` as they can’t have an associated label.
+`sap.ui.test.matchers.LabelFor`: This matcher checks if a given control is associated with an `sap.m.Label` control. This means that there should be a label on the page with a `labelFor` association to the control. The label can be filtered by text value or by the `i18n` key of a given property value. Note that some controls, such as `sap.ui.comp.navpopover.SmartLink`, `sap.m.Link`, `sap.m.Label`, and `sap.m.Text` can't be matched by `sap.ui.test.matchers.LabelFor` as they can't have an associated label.
 
 Using the `i18n` key:
 
@@ -434,7 +434,7 @@ There are two places you can add a matcher declaration in a `waitFor` object:
 
 -   On the top level
 
-    In this case, if you use an unknown matcher, an exception is thrown, stating that the parameter isn’t defined in OPA5 API.
+    In this case, if you use an unknown matcher, an exception is thrown, stating that the parameter isn't defined in OPA5 API.
 
     ```js
     this.waitFor({
@@ -448,7 +448,7 @@ There are two places you can add a matcher declaration in a `waitFor` object:
 
 -   In the `matchers` parameter
 
-    In this case, if you use an unknown matcher, an exception is thrown, stating that the matcher isn’t supported.
+    In this case, if you use an unknown matcher, an exception is thrown, stating that the matcher isn't supported.
 
     ```js
     this.waitFor({
@@ -463,13 +463,13 @@ There are two places you can add a matcher declaration in a `waitFor` object:
     ```
 
 
-If there are matchers declared in both places, they’re combined.
+If there are matchers declared in both places, they're combined.
 
 
 
 ### Matcher Properties
 
-A matcher is declared by its name and properties. The name is a key in the matchers object literal and has to start with a lower-case letter. For example, to declare an `sap.ui.test.matchers.Properties` matcher, use the name `properties`. Every matcher accepts a specific set of properties, which has to be declared as a value in the matchers object. This value has to be an object literal. Behind the scenes, every matcher declaration is transformed into a matcher instance. Every value in the declaration represents the properties that are fed to one matcher instance. There’s an example for every built-in matcher in the API documentation.
+A matcher is declared by its name and properties. The name is a key in the matchers object literal and has to start with a lower-case letter. For example, to declare an `sap.ui.test.matchers.Properties` matcher, use the name `properties`. Every matcher accepts a specific set of properties, which has to be declared as a value in the matchers object. This value has to be an object literal. Behind the scenes, every matcher declaration is transformed into a matcher instance. Every value in the declaration represents the properties that are fed to one matcher instance. There's an example for every built-in matcher in the API documentation.
 
 The following two `waitFor` statements produce the same set of matchers:
 
@@ -530,7 +530,7 @@ this.waitFor({
 
 ### Ancestors and Descendants
 
-When declaring an `sap.ui.test.matchers.Ancestor` or `sap.ui.test.matchers.Descendant`, you have to declare which control is ancestor or descendant. With matcher instances, you simply pass the control instance that you have already located in a previous `waitFor` statement. Keep in mind that with matcher declarations you can’t use object instances or functions as values. The solution is to use a nested declarative matcher for the ancestor or descendant. It’s assumed that it will match exactly one control and if it doesn't, any one of the matches is used. This is a special matcher, which supports a superset of matchers, such as, `controlType`, `ID`, and any other JSON-compatible properties available in a typical `waitFor` statement.
+When declaring an `sap.ui.test.matchers.Ancestor` or `sap.ui.test.matchers.Descendant`, you have to declare which control is ancestor or descendant. With matcher instances, you simply pass the control instance that you have already located in a previous `waitFor` statement. Keep in mind that with matcher declarations you can't use object instances or functions as values. The solution is to use a nested declarative matcher for the ancestor or descendant. It's assumed that it will match exactly one control and if it doesn't, any one of the matches is used. This is a special matcher, which supports a superset of matchers, such as, `controlType`, `ID`, and any other JSON-compatible properties available in a typical `waitFor` statement.
 
 The following two `waitFor` statements produce the same result:
 

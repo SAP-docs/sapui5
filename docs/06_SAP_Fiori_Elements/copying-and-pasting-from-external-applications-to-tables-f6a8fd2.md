@@ -35,7 +35,7 @@ The paste action is available for the following scenarios:
 > -   If new rows are created during the paste action, all these rows are included in a single `POST` batch call. The duration of the `POST` call increases with the number of rows pasted.
 > 
 > -   For new rows created during the paste action, the order of the data copied from a spreadsheet or external application might differ from the order in the table after the end user has inserted it. SAP Fiori elements cannot control this.
-> -   This feature is not supported for tables with custom columns or custom tables.
+> -   This feature is not supported in custom tables.
 > 
 > -   In the object page, the *Export to Spreadsheet* feature is available by default only if the copy/paste feature is available. For more information, see [Using the Export Button](using-the-export-button-4bab6f2.md).
 
@@ -72,13 +72,13 @@ To generate an example with the expected format for pasting your data, export th
 ![](images/Sample_Data_for_Pasting_in_Exccel_with_Inline_Action_b4c1a5d.png)
 
 > ### Note:  
-> -   The user has to maintain the placeholder for inline actions in the spreadsheet application. The column fields can also be empty.
+> -   The end user has to maintain the placeholder for inline actions in the spreadsheet application. The column fields can also be empty.
 > 
-> -   Properties annotated with a text arrangement set to text only cannot be pasted.
+> -   Properties annotated with `textArrangement` set to `TextOnly` cannot be pasted.
 > 
-> -   When a user pastes data into a table, SAP Fiori elements for OData V4 verifies that the pasted content aligns with the designated data field type. However, additional checks such as field editability and validation of values against fixed value lists are not performed by the front end. Therefore, you must ensure strict validation by the back end.
+> -   When an end user pastes data into a table, SAP Fiori elements for OData V4 verifies that the pasted content aligns with the designated data field type. However, additional checks such as field editability and validation of values against fixed value lists are not performed by the front end. Therefore, you must ensure strict validation by the back end.
 
-The paste option can be disabled with the `enablePaste` parameter.
+Application developers can disable the paste option by configuring the `enablePaste` parameter.
 
 > ### Sample Code:  
 > ```
@@ -107,7 +107,7 @@ The paste option can be disabled with the `enablePaste` parameter.
 > 
 > ```
 
-Users can also copy multiple rows as well as ranges of rows and columns to the clipboard. For more information, see the [Copying Multiple Rows and Range Selections](tables-c0f6592.md#loioc0f6592a592e47f9bb6d09900de47412__section_pth_3mb_dzb) section in [Tables](tables-c0f6592.md).
+End users can also copy multiple rows as well as ranges of rows and columns to the clipboard. For more information, see the [Copying Multiple Rows and Range Selections](tables-c0f6592.md#loioc0f6592a592e47f9bb6d09900de47412__section_pth_3mb_dzb) section in [Tables](tables-c0f6592.md).
 
 > ### Restriction:  
 > You can't paste content in a cell that contains a navigation property.

@@ -14,7 +14,7 @@ The list report supports a number of actions.
 
 ### Global Actions
 
-Applications can define custom global actions via enhancements to the `manifest.json` file.
+Applications can define custom global actions by enhancing the `manifest.json` file.
 
 For more information, see [Adding Custom Actions Using Extension Points](adding-custom-actions-using-extension-points-7619517.md).
 
@@ -22,9 +22,7 @@ For more information, see [Adding Custom Actions Using Extension Points](adding-
 
 ### Actions in the Table Toolbar
 
-The table toolbar in the list report contains buttons used to trigger actions for the entire list report or for selected items. These actions can include generic functions offered by SAP Fiori elements or app-specific actions.
-
-For more information, see [Adding Actions to Tables](adding-actions-to-tables-b623e0b.md).
+The table toolbar in the list report contains buttons used to trigger actions for the entire list report or for selected items. These actions can include generic functions offered by SAP Fiori elements or app-specific actions. For more information, see [Adding Actions to Tables](adding-actions-to-tables-b623e0b.md).
 
   
   
@@ -40,9 +38,9 @@ For more information, see [Adding Actions to Tables](adding-actions-to-tables-b6
 
 You can use the following generic actions in the table toolbar:
 
--   Create a new item if the entity set can be created
+-   Create a new item if the entity set can be created.
 
--   Delete of one or more items if the entity set can be deleted
+-   Delete of one or more items if the entity set can be deleted.
 
 
 **App-Specific Actions**
@@ -143,15 +141,12 @@ By default, a POST call is made when the *Create* button is clicked. However, in
 >     String="cds_zrc_ce_localized_srv.cds_zrc_ce_localized_srv_Entities/Create"/>
 > </Record>
 > </Annotation>
-> 
-> 
 > ```
 
-Make the following manifest setting to turn on draft creation with `newAction`:
+Configure the following setting in the `manifest.json` file to turn on draft creation with `newAction`:
 
 > ### Sample Code:  
 > ```
-> 
 > "ListReport|Localized": {
 > 	"entitySet": "Localized",
 > 	"component": {
@@ -165,11 +160,10 @@ Make the following manifest setting to turn on draft creation with `newAction`:
 
 For more information about actions, see [Adding Actions to Tables](adding-actions-to-tables-b623e0b.md).
 
-When a new function import has parameters, a popup appears upon clicking the *Create* button. You can define the title for the parameter dialog using the following annotation.
+When a new function import has parameters, a popup appears upon clicking *Create*. The following sample code shows how to define the title for the parameter dialog:
 
 > ### Sample Code:  
 > ```
-> 
 > <Annotations Target="SAP.FCLM_BAM_ACCOUNTWD_SRV_Entities/FunctionImportName">
 > <Annotation Term="Common.Label" String="Create"/>
 > </Annotations>
@@ -214,5 +208,5 @@ The `InsertRestrictions` on the table entity set is completely ignored when you 
 -   If `OperationAvailable=null` is ignored and the *Create* button is displayed, this is equivalent to `OperationAvailable` not being specified.
 
 
-For more information, see the **Enablement of Operations** section in [Adding Actions to Tables](adding-actions-to-tables-b623e0b.md).
+For more information, see the *Enablement of Operations* section in [Adding Actions to Tables](adding-actions-to-tables-b623e0b.md).
 

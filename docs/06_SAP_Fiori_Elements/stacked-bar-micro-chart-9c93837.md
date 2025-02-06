@@ -111,7 +111,7 @@ The `UI.Chart Title` property is used for the title. The `UI.Chart Description` 
 >     <Record>
 >         <PropertyValue Property="Value" Path="Width"/>
 >         <PropertyValue Path="Day1" Property="Title" />
->         <PropertyValue Property="Description" String=“Stacked Bar Micro Chart"/>
+>         <PropertyValue Property="Description" String="Stacked Bar Micro Chart"/>
 >         <PropertyValue Property="TargetValue" Path="Weight"/>
 >         <PropertyValue Property="ForecastValue" Path="Height"/>
 >         <PropertyValue Property="MinimumValue" Decimal="0"/>

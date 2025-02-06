@@ -27,7 +27,7 @@ You can view and download all files at [Walkthrough - Step 9](https://ui5.sap.co
   
 **Folder Structure for this Step**
 
-![The graphic has an explanatory text](images/SAPUI5_Walkthrough_Step_09_1e237a3.png "Folder Structure for this Step")
+![The graphic has an explanatory text](images/SAPUI5_Walkthrough_Step_09_Folder_Structure_1e237a3.png "Folder Structure for this Step")
 
 After this step your project structure will look like the figure above. We will create the `Component.js` file now and modify the related files in the app.
 

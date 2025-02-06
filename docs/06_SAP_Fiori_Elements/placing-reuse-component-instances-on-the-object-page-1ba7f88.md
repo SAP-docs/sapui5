@@ -12,7 +12,7 @@ Each reuse component instance defined for an object page belonging to an SAP Fio
 
 Each reuse component instance defined for an object page belonging to an SAP Fiori elements-based app is realized by a section that contains a subsection which in turn contains the content of the reuse component.
 
-By default, these sections are added to the end of the object page in the same order as the reuse component instances are defined in the manifest. You can use the SAPUI5 Visual Editor to move these sections.
+By default, these sections are added to the end of the object page in the same order as the reuse component instances are defined in the manifest. You can use the Adaptation Editor to move these sections.
 
 
 
@@ -64,7 +64,7 @@ Use the `"groupTitle"` property for the title of the grouped reuse components. I
 >                 }
 > ```
 
-Reuse components grouped into a subsection in a existing section can be moved within the section, using the SAP Visual Editor. You can move all reuse components grouped together as a single section within the section.
+Reuse components grouped into a subsection in a existing section can be moved within the section, using the Adaptation Editor. You can move all reuse components grouped together as a single section within the section.
 
 
 
@@ -387,7 +387,7 @@ In the example below, two reuse components are added to the same object page: on
 > 
 > ```
 
-For more information, see [Adding a Section to an Object Page](adding-a-section-to-an-object-page-a357047.md).
+For more information, see [Adding a Custom Section to an Object Page](adding-a-custom-section-to-an-object-page-a357047.md).
 
 
 

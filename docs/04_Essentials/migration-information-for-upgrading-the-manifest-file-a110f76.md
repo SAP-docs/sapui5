@@ -1,8 +1,8 @@
 <!-- loioa110f762148a4933a33d30751a37a743 -->
 
-# Migration Information for Upgrading the Descriptor File
+# Migration Information for Upgrading the Manifest File
 
-Information how to add new attributes of descriptor versions higher than V2 \(SAPUI5 1.30\) to the descriptor file.
+Information how to add new attributes of manifest \(also known as descriptor\) versions higher than V2 \(SAPUI5 1.30\) to the manifest file.
 
 
 <table>
@@ -53,7 +53,7 @@ V51 \(1.110\)
 </td>
 <td valign="top">
 
-Release status for the developer adaptation in SAP S/4HANA Cloud and SAP BTP, ABAP environment \(SAP-internal\).
+Release status for the developer adaptation in SAP S/4HANA Cloud Public Edition and SAP BTP, ABAP environment \(SAP-internal\).
 
 Supported types:
 
@@ -878,7 +878,7 @@ V3 \(1.32\)
 </td>
 <td valign="top">
 
-Needs to be updated in the `manifest.json` file when migrating to a new descriptor version:
+Needs to be updated in the `manifest.json` file when migrating to a new manifest version:
 
 -   `_version` for V3 is 1.2.0
 
@@ -900,5 +900,5 @@ Needs to be updated in the `manifest.json` file when migrating to a new descript
 </tr>
 </table>
 
-\* Available as of descriptor version \(SAPUI5 version\)
+\* Available as of manifest version \(SAPUI5 version\)
 

@@ -18,7 +18,7 @@ For more information about this control, see the [API Reference](https://ui5.sap
 
 -   **Layout**
 
-    The `FeedListItem` control consists of the user’s name and an optional picture of the user who wrote the note or the update \(optional\). The name can contain a link that triggers a quick overview of the user’s profile data. The actual text written by the user follows the name. The `FeedListItem` control includes the `sap.m.FormattedText` control that enables you to use HTML formatted text.
+    The `FeedListItem` control consists of the user's name and an optional picture of the user who wrote the note or the update \(optional\). The name can contain a link that triggers a quick overview of the user's profile data. The actual text written by the user follows the name. The `FeedListItem` control includes the `sap.m.FormattedText` control that enables you to use HTML formatted text.
 
     For more information about the `FormattedText` control, see the [API Reference](https://ui5.sap.com/#/api/sap.m.FormattedText) and the [Samples](https://ui5.sap.com/#/entity/sap.m.FormattedText) in the Demo Kit.
 

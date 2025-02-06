@@ -79,5 +79,5 @@ The logic for handling semantic key fields is applicable to object pages and sub
 **Related Information**  
 
 
-[Settings for List Report Tables](settings-for-list-report-tables-4c2d17a.md "You can set up various aspects of the list report table through annotations and in the manifest.json file.")
+[Settings for List Report Tables](settings-for-list-report-tables-4c2d17a.md "You can configure various aspects of the list report table through annotations and in the manifest.json file.")
 

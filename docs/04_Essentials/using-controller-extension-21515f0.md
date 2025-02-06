@@ -95,7 +95,7 @@ With `OverrideExecution.After`, the extensions are called in the order they are 
 
 ### Final Methods in Controller Extensions
 
-Adding `“final”: true` metadata to the public method makes it available for execution \(call\) but not for overriding in the next controller extension.
+Adding `"final": true` metadata to the public method makes it available for execution \(call\) but not for overriding in the next controller extension.
 
 ```js
 return ControllerExtension.extend("sap.my.ReuseExtension", {

@@ -17,7 +17,7 @@ The index contains the following:
 
 -   Certain properties or attributes \(for example, component ID, used library, or dependencies\) stored in the descriptor for apps, components, and libraries
 
-    For more information, see [Descriptor for Applications, Components, and Libraries \(manifest.json\)](../04_Essentials/descriptor-for-applications-components-and-libraries-manifest-json-be0cf40.md).
+    For more information, see [Manifest \(Descriptor for Applications, Components, and Libraries\)](../04_Essentials/manifest-descriptor-for-applications-components-and-libraries-be0cf40.md).
 
 
 **Also in this section:**

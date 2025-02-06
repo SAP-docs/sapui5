@@ -101,7 +101,7 @@ In the example below, the standard navigation from the list report to the object
 > 
 > -   The path and target you specify for external navigation must point to an existing `outbounds` entry.
 > 
->     For more information about the `crossNavigation` attribute in the `sap.app` namespace, see [Descriptor for Applications, Components, and Libraries \(manifest.json\)](../04_Essentials/descriptor-for-applications-components-and-libraries-manifest-json-be0cf40.md). In *Sample code 2: Attributes in the sap.app namespace*, go to the `crossNavigation` attribute and see the description for `outbounds`.
+>     For more information about the `crossNavigation` attribute in the `sap.app` namespace, see [Manifest \(Descriptor for Applications, Components, and Libraries\)](../04_Essentials/manifest-descriptor-for-applications-components-and-libraries-be0cf40.md). In *Sample code 2: Attributes in the sap.app namespace*, go to the `crossNavigation` attribute and see the description for `outbounds`.
 
 
 
@@ -198,7 +198,7 @@ You can also use a `display` section within the `navigation` section instead of 
 > "navigation": {                              
 >     "_Publication": {
 >         "display":{                                      
->             “path”:”sap.apps.crossNavigation.outbounds”,
+>             "path":"sap.apps.crossNavigation.outbounds",
 >             "target":"ProductDetails"
 >         }                              
 >     }

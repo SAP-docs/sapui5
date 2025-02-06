@@ -213,7 +213,7 @@ The *Delete* button allows users to delete the instance of the object page.
 >     > 
 >     > ```
 >     > <Annotations Target="com.c_salesordermanage_sd.EntityContainer/HeaderPartner"> 
->     >    <Annotation Term="UI.UpdateHidden" Bool=”true”/> 
+>     >    <Annotation Term="UI.UpdateHidden" Bool="true"/> 
 >     > </Annotations>
 >     > 
 >     > OR
@@ -232,7 +232,7 @@ The *Delete* button allows users to delete the instance of the object page.
 >     > 
 >     > OR
 >     > 
->     > @UI.updateHidden: #(‘isUpdateHidden’)
+>     > @UI.updateHidden: #('isUpdateHidden')
 >     > 
 >     > ```
 > 
@@ -256,7 +256,7 @@ The *Delete* button allows users to delete the instance of the object page.
 
 If the application defines an `EditAction`, as shown in the sample annotation above, the `UpdateRestrictions` are completely ignored. Instead, `OperationAvailable` determines the enablement of the button. For more information about `OperationAvailable`, see the [Enabling Custom Actions Defined Using Annotations](actions-cbf16c5.md#loiocbf16c599f2d4b8796e3702f7d4aae6c__subsection_xkx_gwq_nsb) section in [Actions](actions-cbf16c5.md).
 
--   If `OperationAvailable` = true \(static\) OR if `OperationAvailable` is not defined, the *Edit* button is visible \(provided that `updateHidden` doesn’t evaluate to false\) and enabled.
+-   If `OperationAvailable` = true \(static\) OR if `OperationAvailable` is not defined, the *Edit* button is visible \(provided that `updateHidden` doesn't evaluate to false\) and enabled.
 
 -   If `OperationAvailable` = false \(static\), the `Edit` button is not visible.
 

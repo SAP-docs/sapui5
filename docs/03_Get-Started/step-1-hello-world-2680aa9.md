@@ -2,7 +2,7 @@
 
 # Step 1: Hello World!
 
-As you know SAPUI5 is all about HTML5. Let’s get started with building a first “Hello World” with only HTML.
+As you know SAPUI5 is all about HTML5. Let's get started with building a first "Hello World" with only HTML.
 
 
 
@@ -26,7 +26,7 @@ Open a terminal and install UI5 Tooling globally on your machine by executing th
 
 You can view and download all files at [Walkthrough - Step 1](https://ui5.sap.com/#/entity/sap.m.tutorial.walkthrough/sample/sap.m.tutorial.walkthrough.01).
 
-1.  Create a folder on your local machine which will contain all the sources of the app we're going to build. We'll refer to this folder as the “app root folder”.
+1.  Create a folder on your local machine which will contain all the sources of the app we're going to build. We'll refer to this folder as the "app root folder".
 2.  Create a new file called `package.json` which will enable you to execute commands and consume packages from the[npm registry](https://www.npmjs.com/) via the npm command line interface. Enter the following content:
 
     **package.json \(New\)**
@@ -67,7 +67,7 @@ You can view and download all files at [Walkthrough - Step 1](https://ui5.sap.co
     > 
     > Using meta tags, we can influence the behavior of the browser. In this case, we tell the browser to use `UTF-8` as the document character set.
     > 
-    > We also give our app a title that will be displayed in the browser. Our hard-coded title can be overruled by the app, for example to show a title in the language of the user. The body part describes the layout of the page. In our case, we simply display “Hello World” by using a `div` tag.
+    > We also give our app a title that will be displayed in the browser. Our hard-coded title can be overruled by the app, for example to show a title in the language of the user. The body part describes the layout of the page. In our case, we simply display "Hello World" by using a `div` tag.
 
 5.  Create a new file named `manifest.json` in the webapp folder; it's also known as the "app descriptor". All application-specific configuration options which we'll introduce in this tutorial will be added to this file. Enter the following content:
 

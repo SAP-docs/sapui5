@@ -34,7 +34,7 @@ Screen readers offer lists that group certain types of elements. These lists eas
 
     -   The panel heading hierarchy must be logical \(for example, nested panels must have higher hierarchy levels\).
 
-    -   Headings must be referenced by the containers they belong to \(using <code>aria-labelledby = “HEADING_ID”</code>\).
+    -   Headings must be referenced by the containers they belong to \(using `aria-labelledby = "HEADING_ID"`\).
 
 
 -   **Links**
@@ -57,7 +57,7 @@ Screen readers offer lists that group certain types of elements. These lists eas
 
     -   Sometimes list items may need special roles \(for example `menuitem`\).
 
-    -   For lists with a specific number of items, speech output should always be “*Current item number of N total items*”. No matter how many items are visible, if the total number is not known, speech output should always be “*Current item number*”.
+    -   For lists with a specific number of items, speech output should always be "*Current item number of N total items*". No matter how many items are visible, if the total number is not known, speech output should always be "*Current item number*".
 
 
 -   **Tables**
@@ -66,7 +66,7 @@ Screen readers offer lists that group certain types of elements. These lists eas
 
     -   Tables must have titles.
 
-    -   Layout tables for presentational purposes must be coded as such \(using ARIA <code>role=“presentation”</code>\). Then they are not displayed in the table list.
+    -   Layout tables for presentational purposes must be coded as such \(using ARIA `role="presentation"`\). Then they are not displayed in the table list.
 
     -   Editable and active cells may require special interaction models. During navigation, all screen reader relevant information must be available at the focus location.
 
@@ -74,7 +74,7 @@ Screen readers offer lists that group certain types of elements. These lists eas
 
     -   In case there are no visible headers, but information is organized in a table-like layout with individual columns/cells, a respective row/column identifier has to be provided.
 
-    -   For tables with a specific number of rows, speech output should always be “*Current row of N total rows*”. No matter how many rows are visible, if the total number is not known, speech output should always be “*Current row*”.
+    -   For tables with a specific number of rows, speech output should always be "*Current row of N total rows*". No matter how many rows are visible, if the total number is not known, speech output should always be "*Current row*".
 
 
 

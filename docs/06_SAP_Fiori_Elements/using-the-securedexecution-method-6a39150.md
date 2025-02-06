@@ -30,7 +30,7 @@ Depending on the state of the user interaction, `fnFunction` may or may not be e
 
 -   If the user is in edit mode
 
--   If the user has entered data but hasn’t saved yet
+-   If the user has entered data but hasn't saved yet
 
 -   If the user has triggered an action that is implemented via `securedExecution`
 

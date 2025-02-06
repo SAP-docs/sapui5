@@ -2,12 +2,12 @@
 
 # Finding the Right Key for the Anchor
 
-For the correct positioning of your custom elements, you need to identify an anchor element using the browser's developer tools.
+You need to identify an anchor element using the browser's developer tools to correctly position the custom elements.
 
 > ### Note:  
-> This topic is currently only applicable to SAP Fiori elements for OData V4.
+> This topic is only applicable to SAP Fiori elements for OData V4.
 
-To open the browser's developer tools, choose CTRL+OPT+I on Windows, and CMD+OPT+I on macOS.
+To open the browser's developer tools, choose [CTRL\] + [ALT\] + [I\]  on Windows, and [CTRL\] + [OPT\] + [I\]  on macOS.
 
 
 
@@ -15,7 +15,7 @@ To open the browser's developer tools, choose CTRL+OPT+I on Windows, and CMD+OPT
 
 ## How to Find Anchors for the Header Facet
 
-In the browser's developer tools, open the DOM element inspector and search for either the string `fe::HeaderFacetContainer` or `fe::HeaderFacetCustomContainer`, depending on whether you want to place your custom header facet relative to a standard or a custom header facet. The name displayed directly after these strings are the facet keys that you have to use as the `position.anchor`. For example, the anchor name you would use to refer to a header facet with element ID `AppName::AppNameObjectPage--fe::HeaderFacetContainer::AnchorHeaderFacetName` would be `AnchorHeaderFacetName`.
+In the browser's developer tools, open the DOM element inspector and search for either `fe::HeaderFacetContainer` or `fe::HeaderFacetCustomContainer` string, depending on whether you want to place your custom header facet relative to a standard or a custom header facet. The name displayed directly after these strings are the facet keys that you must use as the `position.anchor`. For example, the anchor name to refer to a header facet with the element ID `AppName::AppNameObjectPage--fe::HeaderFacetContainer::AnchorHeaderFacetName` must be `AnchorHeaderFacetName`.
 
 
 
@@ -23,9 +23,9 @@ In the browser's developer tools, open the DOM element inspector and search for 
 
 ## How to Find Anchors for the Header Facet Field
 
-To place a custom header field inside a given header facet, search for the string `fe::HeaderFacet::Form` in the DOM element inspector. The fields of these forms have the key pattern `DataFieldAbstractType::PropertyName` that you have to specify as `position.anchor`. For example, if the field that you want to use as position anchor has the element ID `AppName:: AppName ObjectPage--fe::HeaderFacet::Form::HeaderFacetName::DataField::PropertyName::Field`, you should use the string `DataField::PropertyName` for `position.anchor`.
+To place a custom header field inside a given header facet, search for the `fe::HeaderFacet::Form` string in the DOM element inspector. The fields of these forms have the key pattern `DataFieldAbstractType::PropertyName` that you must specify as `position.anchor`. For example, if the field that you want to use as a position anchor has the `AppName:: AppName ObjectPage--fe::HeaderFacet::Form::HeaderFacetName::DataField::PropertyName::Field` element ID, you must use the `DataField::PropertyName` string as the `position.anchor`.
 
-The key is a combination of the type and the property name. For most scenarios the `DataField` would be common, the key would then be `DataField::PropertyName`.
+The key is a combination of the type and the property name. For most scenarios where the `DataField` is common, the key is `DataField::PropertyName`.
 
 
 
@@ -33,11 +33,11 @@ The key is a combination of the type and the property name. For most scenarios t
 
 ## How to Find Anchors for the Table Column
 
-To position a custom column in relation to the others, you need to specify the correct column key. In case of custom columns, this task requires two separate steps:
+To position a custom column relative to the other columns, you need to specify the correct column key. For custom columns, this task involves two separate steps:
 
-1.  Open the browser's developer tools and search for the string `fe::table::AppName::LineItem::C::` \(insert the name of your application for `AppName`\). The column IDs have an element ID with the search string as the prefix, followed by the column name, for example `fe::table::AppName::LineItem::C::PersonName` or `fe::table::AppName::LineItem::C::FieldGroup::multipleFields`.
+1.  Open the browser's developer tools and search for the string `fe::table::AppName::LineItem::C::` \(replace `AppName` with the name of your application\). The column IDs have an element ID with the search string as the prefix, followed by the column name. For example, `fe::table::AppName::LineItem::C::PersonName` or `fe::table::AppName::LineItem::C::FieldGroup::multipleFields`.
 
-2.  Find the column type. For this you open the browser's developer tools to investigate the metadata requests in the network log \(you can filter for `$metadata`\). Once you have identified the metadata request, open the response XML and search for the string `<Annotation Term="UI.LineItem">` to find the line item annotations of your table. The line-item annotation would look as follows:
+2.  To find the column type, open the browser's developer tools to investigate the metadata requests in the network log \(use `$metadata` to filter\). Once you have identified the metadata request, open the response XML and search for the string `<Annotation Term="UI.LineItem">` to find the line item annotations of your table. The line item annotation appears as shown in the following sample code:
 
     > ### Sample Code:  
     > ```
@@ -58,7 +58,7 @@ To position a custom column in relation to the others, you need to specify the c
     > ```
 
 
-The key that you have to insert in `position.anchor` is composed as `DataFieldAbstractType::ColumnName`, containing the record type given in the metadata and the property name you have retrieved from the DOM inspector before. Here are some examples:
+The key that you must insert in `position.anchor` is composed as `DataFieldAbstractType::ColumnName`, consisting of the record type specified in the metadata and the property name retrieved from the DOM inspector. Here are some examples:
 
 -   `DataField::PersonName`
 
@@ -67,5 +67,13 @@ The key that you have to insert in `position.anchor` is composed as `DataFieldAb
 -   `DataFieldForAnnotation::FieldGroup::multipleFields`
 
 
-If you want to use another custom column as a position anchor, you can directly use the custom column key that you have specified in the `columns` collection of your `manifest.json` file.
+To use another custom column as a position anchor, directly use the custom column key that you specified in the `columns` collection of the `manifest.json` file.
+
+
+
+<a name="loio6ffb084e6d8247d1863005c14e8d5894__section_gd3_tfp_4dc"/>
+
+## How to Find Anchors for the Section or Subsection
+
+In the browser's developer tools, open the DOM element inspector and search for either the `fe::FacetSection` or the `fe::FacetSubSection` string, depending on whether you want to place your custom view relative to a section or a subsection. The name displayed directly after these strings is the facet key that you must use as `position.anchor`. For example, the anchor name to refer to a section facet with the element ID `AppName::AppNameObjectPage--fe::FacetSection::AnchorSectionFacetName` is `AnchorSectionFacetName`.
 

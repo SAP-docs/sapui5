@@ -2,7 +2,7 @@
 
 # Adding Actions to Tables
 
-The table control offers a possibility to show both the generic actions, such as *Create* and *Delete*, as well as application-specific actions.
+The table control offers the possibility to show generic actions, such as *Create* and *Delete*, as well as application-specific actions.
 
 
 
@@ -10,7 +10,7 @@ The table control offers a possibility to show both the generic actions, such as
 
 ## Generic Actions
 
-SAP Fiori elements provides two generic actions \(*Create* and *Delete*\) that can be rendered in the toolbar based on metadata properties`sap:creatable=true` and `sap:deletable=true` of the entity set.
+SAP Fiori elements provides two generic actions \(*Create* and *Delete*\) that can be rendered in the toolbar based on metadata properties `sap:creatable=true` and `sap:deletable=true` of the entity set.
 
 You can control the `Insert` capability for the related entities, that is the enablement of the *Create* button, using the following options:
 
@@ -56,7 +56,7 @@ The system gives priority to the `Org.OData.Capabilities.V1.NavigationRestrictio
 > ### Sample Code:  
 > ABAP CDS Annotation
 > 
-> No ABAP CDS annotation is required, since the setting is made according to the modeling \(create, update, delete, etc.\) in RAP BDEF \(behavior definition\).
+> No ABAP CDS annotation is required, since the setting is made according to the modeling \(such as create, update, or delete\) in RAP BDEF \(behavior definition\).
 
 > ### Sample Code:  
 > ```
@@ -100,7 +100,7 @@ The system gives priority to the `Org.OData.Capabilities.V1.NavigationRestrictio
 > ### Sample Code:  
 > ABAP CDS Annotation
 > 
-> No ABAP CDS annotation is required, since the setting is made according to the modeling \(create, update, delete, etc.\) in RAP BDEF \(behavior definition\).
+> No ABAP CDS annotation is required, since the setting is made according to the modeling \(such as create, update, or delete\) in RAP BDEF \(behavior definition\).
 
 > ### Sample Code:  
 > CAP CDS Annotation
@@ -142,7 +142,7 @@ The *Delete* button is enabled by default if `DeleteRestrictions` isn't provided
 > ### Sample Code:  
 > ABAP CDS Annotation
 > 
-> No ABAP CDS annotation is required, since the setting is made according to the modeling \(create, update, delete, etc.\) in RAP BDEF \(behavior definition\).
+> No ABAP CDS annotation is required, since the setting is made according to the modeling \(such as create, update, or delete\) in RAP BDEF \(behavior definition\).
 
 > ### Sample Code:  
 > CAP CDS Annotation
@@ -161,13 +161,13 @@ The *Delete* button is enabled by default if `DeleteRestrictions` isn't provided
 
 
 
-### Enable or Disable *Delete* Button \(Using `deletable-path` Annotations\)
+### Enable or Disable the *Delete* Button \(Using `deletable-path` Annotations\)
 
-You can enable or disable the *Delete* button in the list report based on conditions specified in the back-end system. For example, you can disable deletion for a sales order that has already been paid. In this case, if a user selects an item that can't be deleted, the *Delete* button is disabled. In addition, if the user navigates from this item in the list report to the object page, the *Delete* button is hidden.
+You can enable or disable the *Delete* button in the list report based on conditions specified in the back-end system. For example, you can disable the deletion for a sales order that has already been paid. In this case, if a user selects an item that can't be deleted, the *Delete* button is disabled. In addition, if the user navigates from this item in the list report to the object page, the *Delete* button is hidden.
 
 In your annotation, set the `deletable-path` to point to a particular property of an object \(entity\) in the back-end system that is either `true` or `false`. If the value of this property is `true`, the *Delete* button is enabled; if it's `false`, it's disabled. If you want to use the `deletable-path` annotation to specify conditions for deletion, you have to ensure that the setting `sap:deletable` isn't present in your annotations.
 
-The following code sample shows you how to set up your annotation to enable or disable the *Delete* button, based on the value of the `Delete_mc` property in the back-end system.
+The following sample code shows you how to set up your annotation to enable or disable the *Delete* button, based on the value of the `Delete_mc` property in the back-end system.
 
 > ### Sample Code:  
 > XML Annotation
@@ -185,7 +185,7 @@ The following code sample shows you how to set up your annotation to enable or d
 > ### Sample Code:  
 > ABAP CDS Annotation
 > 
-> No ABAP CDS annotation is required, since the setting is made according to the modeling \(create, update, delete, etc.\) in RAP BDEF \(behavior definition\).
+> No ABAP CDS annotation is required, since the setting is made according to the modeling \(such as create, update, or delete\) in RAP BDEF \(behavior definition\).
 
 > ### Sample Code:  
 > CAP CDS Annotation
@@ -209,13 +209,13 @@ Tables can also show application-configured actions. These can either be custom 
 
 **Custom Actions \(`manifest.json`\)**
 
-Applications can define custom table toolbar actions via enhancements to the `manifest.json` file. For more information, refer to the corresponding sections in [Adding Custom Actions Using Extension Points](adding-custom-actions-using-extension-points-7619517.md).
+Applications can define custom table toolbar actions using enhancements to the `manifest.json` file. For more information, see the corresponding sections in [Adding Custom Actions Using Extension Points](adding-custom-actions-using-extension-points-7619517.md).
 
 **Annotation-Based Actions**
 
 The following types of actions are supported:
 
--   Actions that trigger a back-end call through the OData service, for example, *Approve* or *Unblock*, represented by the complex type `DataFieldForAction`.
+-   Actions that trigger a back-end call through the OData service, for example *Approve* or *Unblock*, represented by the complex type `DataFieldForAction`.
 
 -   Actions that trigger navigation, for example to a different app, represented by the complex type `DataFieldForIntentBasedNavigation`. For more information, see [Navigation from an App \(Outbound Navigation\)](navigation-from-an-app-outbound-navigation-d782acf.md).
 
@@ -229,13 +229,13 @@ Annotation-based actions can be inline actions. Inline actions are used to trigg
 
 
 
-### Specifying Text for App-Specific Actions
+### Specifying a Text for an App-Specific Action
 
-To specify a text for your action, use the `com.sap.vocabularies.UI.v1.DataFieldForAction` property and specify the text to display.
+To specify a text for your action, use the `com.sap.vocabularies.UI.v1.DataFieldForAction` property and specify the text to be displayed.
 
 For more information about adding a button triggering external navigation, see [Navigation from an App \(Outbound Navigation\)](navigation-from-an-app-outbound-navigation-d782acf.md).
 
-For information about context-dependent and context-independent actions, see [Actions](actions-cbf16c5.md).
+For more information about context-dependent and context-independent actions, see [Actions](actions-cbf16c5.md).
 
 The following code sample shows how to create your annotations for line item actions. Note that the `UI.LineItem` vocabulary term is used to define the columns for the table.
 
@@ -425,7 +425,7 @@ In the example above, the order in which the record types are presented in the a
 
 -   With the last but two record types, the `DataFieldForAction` and `DataFieldForIntentBasedNavigation` complex types are used and contain the `Inline` property, which is set to `true`. This means the action buttons appear in every row in the appropriate column within the table.
 
--   With the last record type, the `DataFieldWithIntentBasedNavigation` complex type is used to render the property value as a link allowing for navigation to the semantic object.
+-   With the last record type, the `DataFieldWithIntentBasedNavigation` complex type is used to render the property value as a link, allowing for navigation to the semantic object.
 
 
 
@@ -444,7 +444,7 @@ The *Delete* button is enabled by default if `DeleteRestrictions` is not provide
 
 ### Inline Deletion of Rows in Tables
 
-You can enable inline deletion in a table of list report and object page. This can be enabled by setting the `inlineDelete` property to `true` for `tableSettings` as shown below:
+You can enable inline deletion list report and object page tables. To do so, set the `inlineDelete` property to `true` for `tableSettings` as shown in the following sample code:
 
 > ### Sample Code:  
 > ```
@@ -499,9 +499,9 @@ After you enable this setting, a *Delete* button is displayed at the end of the 
 
 ### Showing or Hiding the *Create* Button
 
-You can control the visibility of the *Create* button depending on the `UI.CreateHidden` annotation. The annotation can be a Boolean value or can point to a path. In your annotation, set the path to point to a particular property \(either true or false\) of the parent object. If the value of the property is `true`, then the *Create* button is hidden; if it's `false`, it's visible.
+You can control the visibility of the *Create* button depending on the `UI.CreateHidden` annotation. The annotation can be a Boolean value or can point to a path. In your annotation, set the path to point to a particular property \(either `true` or `false`\) of the parent object. If the value of the property is `true`, then the *Create* button is hidden; if it's `false`, it's visible.
 
-The following code sample shows you how to hide or show the *Create* button, depending on the `isCreateHidden` property of the parent entity.
+The following sample code shows you how to hide or show the *Create* button, depending on the `isCreateHidden` property of the parent entity:
 
 > ### Sample Code:  
 > XML Annotation
@@ -530,9 +530,9 @@ The following code sample shows you how to hide or show the *Create* button, dep
 
 ### Showing or Hiding the *Delete* Button
 
-You can control the visibility of the *Delete* button depending on the `UI.DeleteHidden` annotation. The annotation can be a Boolean value or can point to a path. In your annotation, set the path to point to a particular property \(either true or false\) of the parent object. If the value of the property is `true`, then the *Delete* button is hidden; if it's `false`, it's visible.
+You can control the visibility of the *Delete* button depending on the `UI.DeleteHidden` annotation. The annotation can be a Boolean value or can point to a path. In your annotation, set the path to point to a particular property \(either `true` or `false`\) of the parent object. If the value of the property is `true`, then the *Delete* button is hidden; if it's `false`, it's visible.
 
-The following code sample shows you how to hide or show the *Delete* button, depending on the `isDeleteHidden` property of the parent entity.
+The following sample code shows you how to hide or show the *Delete* button, depending on the `isDeleteHidden` property of the parent entity.
 
 > ### Sample Code:  
 > XML Annotation
@@ -561,7 +561,7 @@ The following code sample shows you how to hide or show the *Delete* button, dep
 
 ### Defining the Order of Standard Actions
 
-You can define the order of standard actions in the table toolbar. The developer must define the properties, `anchor` and `position` for each action corresponding to the action key in the manifest. The following table shows the keys and the corresponding standard actions:
+You can define the order of standard actions in the table toolbar. To do so, define the properties `anchor` and `position` for each action corresponding to the action key in the `manifest.json`. The following table shows the keys and the corresponding standard actions:
 
 
 <table>
@@ -638,7 +638,6 @@ Standard Action
 >                         "controlConfiguration": { 
 >                             "@com.sap.vocabularies.UI.v1.LineItem": { 
 >                                 "actions": { "StandardAction::Delete": { 
->                                     "visible": false, 
 >                                     "position": { 
 >                                         "anchor": "StandardAction::Create", 
 >                                         "placement": "Before" 
@@ -727,7 +726,7 @@ The system gives priority to the `Org.OData.Capabilities.V1.NavigationRestrictio
 > CDS annotation for `deletable-path`
 > 
 > ```
-> annotate com.c_salesordermanage_sd.SalesOrderManagewith @Capabilities: {Insertable: false, Deletable:’isDeletable’, Updatable: true}
+> annotate com.c_salesordermanage_sd.SalesOrderManagewith @Capabilities: {Insertable: false, Deletable:'isDeletable', Updatable: true}
 > ```
 
 > ### Sample Code:  
@@ -739,7 +738,7 @@ The system gives priority to the `Org.OData.Capabilities.V1.NavigationRestrictio
 
 ### Enabling Single Selection for a Bound Action
 
-Applications can control the number of table records that need to be selected for the bound action to be enabled. For more information, see [Actions](actions-cbf16c5.md). By default, for a bound action, this is 1 or more applicable records \(that is, 1 or more records for which `OperationAvailable` evaluates to true\). However, applications can change this configuration so that the action is enabled only when a single applicable record is selected. If more records are selected, then the action is disabled again. They can do this by specifying the `enableOnSelect` property in the manifest:
+Applications can control the number of table records that need to be selected for the bound action to be enabled. For more information, see [Actions](actions-cbf16c5.md). By default, for a bound action, this is 1 or more applicable records \(that is, 1 or more records for which `OperationAvailable` evaluates to `true`\). However, applications can change this configuration so that the action is enabled only when a single applicable record is selected. If more records are selected, then the action is disabled again. Applications can do this by specifying the `enableOnSelect` property in the `manifest.json`:
 
 > ### Sample Code:  
 > Table Actions
@@ -748,7 +747,7 @@ Applications can control the number of table records that need to be selected fo
 > "@com.sap.vocabularies.UI.v1.LineItem": {
 >     "actions": {
 >         "DataFieldForAction::com.c_salesordermanage_sd.CreateWithSalesOrderType": {
->             "enableOnSelect": "single” // Possible values: "single", "multi" (default)
+>             "enableOnSelect": "single" // Possible values: "single", "multi" (default)
 >         }
 >     }
 > }
@@ -761,7 +760,7 @@ Applications can control the number of table records that need to be selected fo
 > "@com.sap.vocabularies.UI.v1.Chart": {
 >     "actions": {
 >         "DataFieldForAction::com.c_salesordermanage_sd.CreateWithSalesOrderType": {
->             "enableOnSelect": "single” // Possible values: "single", "multi" (default)
+>             "enableOnSelect": "single" // Possible values: "single", "multi" (default)
 >         }
 >     }
 > }
@@ -780,13 +779,13 @@ When you create new table records using the `POST` mechanism, that is, not using
 
 -   key fields that are based on `Edm.GUID`, annotated with `Core.ComputedDefaultValue`, and have a text association
 
--   fields that are marked as required for `create` via `InsertRestrictions`/`RequiredProperties`. Note that `InsertRestrictions`/`RequiredProperties`, if they are part of `NavgationRestrictions` of the parent entity, will take precedence over the same annotations directly at the level of the table entity set.
+-   fields that are marked as required for `create` using `InsertRestrictions`/`RequiredProperties`. Note that `InsertRestrictions`/`RequiredProperties`, if they are part of `NavgationRestrictions` of the parent entity, will take precedence over the same annotations directly at the level of the table entity set.
 
 -   other non-key immutable fields \(non-hidden and non-computed\) in the main entity set
 
 
 > ### Tip:  
-> The dialog does **not** come up when you use the inline creation mode.
+> The dialog does **not** come up when you use inline creation mode.
 
 > ### Sample Code:  
 > XML Annotation for `ComputedDefaultValue`
@@ -859,7 +858,7 @@ When you create new table records using the `POST` mechanism, that is, not using
 
 
 
-### Rendering Buttons with Icon Instead of Text
+### Rendering Buttons with an Icon Instead of Text
 
 The text for the inline `DataFieldForAction` and the `DataFieldForIntentBasedNavigation` buttons can be replaced with an icon, as specified in the `"IconUrl"` annotation property. The label of the button then appears as the tooltip of the button.
 
@@ -1024,4 +1023,7 @@ To pass the field value to an action parameter, use the annotation term `Paramet
 > ```
 
 You can also trigger an action that is connected to a field value on a form.
+
+> ### Note:  
+> In applications where links are annotated with `DataFieldWithAction`, the context menu does not show the *Open in New Tab* and *Open in New Window* options when an end user right-clicks on them.
 

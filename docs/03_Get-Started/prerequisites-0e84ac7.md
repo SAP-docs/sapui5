@@ -44,7 +44,7 @@ Open a terminal and install UI5 Tooling globally on your machine by executing th
 
 ## Coding
 
-1.  Create a folder on your local machine which will contain all the sources of the app we're going to build. We'll refer to this folder as the “app root folder”.
+1.  Create a folder on your local machine which will contain all the sources of the app we're going to build. We'll refer to this folder as the "app root folder".
 2.  Create a new file called `package.json` which will enable you to execute commands and consume packages from the[npm registry](https://www.npmjs.com/) via the npm command line interface. Enter the following content:
 
     **package.json \(New\)**

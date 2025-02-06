@@ -2,7 +2,7 @@
 
 # Step 4: XML Views \(TypeScript\)
 
-Putting all our UI into the `index.ts` file will very soon result in a messy setup, and there is quite a bit of work ahead of us. So let’s do a first modularization by putting the `sap/m/Text` control into a dedicated `view`.
+Putting all our UI into the `index.ts` file will very soon result in a messy setup, and there is quite a bit of work ahead of us. So let's do a first modularization by putting the `sap/m/Text` control into a dedicated `view`.
 
 When working with SAPUI5, we recommend the use of XML views, as this produces the most readable code and forces us to separate the view declaration from the controller logic. Yet the look of our UI will not change.
 

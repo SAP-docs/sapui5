@@ -4,7 +4,7 @@
 
 There are various scenarios in which you can use dates as filter fields in `SmartFilterBar`.
 
-`SmartFilterBar` is a metadata driven control. The generated filter fields depend on the properties defined in the metadata. To use dates as filters fields, you need to ensure that the corresponding property is of type `Edm.DateTime` and it is annotated with the `sap:display-format=”Date”` attribute.
+`SmartFilterBar` is a metadata driven control. The generated filter fields depend on the properties defined in the metadata. To use dates as filters fields, you need to ensure that the corresponding property is of type `Edm.DateTime` and it is annotated with the `sap:display-format="Date"` attribute.
 
 In this document you can find more information about using dates and semantic dates as filter fields and as `InOut` parameters of the `ValueList` annotation.
 
@@ -49,7 +49,7 @@ A property can be annotated with the [`sap:filter-restriction`](https://sap.gith
     OData V4 expression syntax
 
     ```
-    <Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target=“MyNamespace.MyEnitityContainer/MyEntitySet> 
+    <Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="MyNamespace.MyEnitityContainer/MyEntitySet> 
       <Annotation Term="Org.OData.Capabilities.V1.FilterRestrictions"> 
             <Record> 
               <PropertyValue Property="FilterExpressionRestrictions"> 
@@ -78,7 +78,7 @@ A property can be annotated with the [`sap:filter-restriction`](https://sap.gith
     OData V4 expression syntax
 
     ```
-    <Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target=“MyNamespace.MyEnitityContainer/MyEntitySet> 
+    <Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="MyNamespace.MyEnitityContainer/MyEntitySet> 
         <Annotation Term="Org.OData.Capabilities.V1.FilterRestrictions"> 
             <Record> 
               <PropertyValue Property="FilterExpressionRestrictions"> 
@@ -107,7 +107,7 @@ A property can be annotated with the [`sap:filter-restriction`](https://sap.gith
     OData V4 expression syntax
 
     ```
-    <Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target=“MyNamespace.MyEnitityContainer/MyEntitySet> 
+    <Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="MyNamespace.MyEnitityContainer/MyEntitySet> 
         <Annotation Term="Org.OData.Capabilities.V1.FilterRestrictions"> 
             <Record> 
               <PropertyValue Property="FilterExpressionRestrictions"> 
@@ -233,7 +233,7 @@ The second option to use semantic dates is to set the `DateRangeType` as `condit
 
 ```
 <smartFilterBar:controlConfiguration> 
-       <smartFilterBar:ControlConfiguration key=“DATE” visibleInAdvancedArea="true" conditionType="sap.ui.comp.config.condition.DateRangeType" /> 
+       <smartFilterBar:ControlConfiguration key="DATE" visibleInAdvancedArea="true" conditionType="sap.ui.comp.config.condition.DateRangeType" /> 
 </smartFilterBar:controlConfiguration> 
 ```
 
@@ -250,7 +250,7 @@ No matter the value for the `filter-restriction` attribute, a `sap.m.DynamicDate
 
 `InOut` parameters of the `ValueList` annotation support date filter fields, but there are some specific points described below.  
 
-Let’s call the `Edm.String` filter field with `ValueList` annotation a ‘source’ and the `Edm.DateTime` filter field a ‘target’. The target has a `LocalDataProperty` which is a property from the main entity set and a `ValueListProperty` which is a property from the `ValueHelp` entity set. 
+Let's call the `Edm.String` filter field with `ValueList` annotation a 'source' and the `Edm.DateTime` filter field a 'target'. The target has a `LocalDataProperty` which is a property from the main entity set and a `ValueListProperty` which is a property from the `ValueHelp` entity set. 
 
 > ### Remember:  
 > If `InOut` parameter is set, the `ValueListProperty` is filtered based on the value coming from the `LocalDataProperty`.  
@@ -275,7 +275,7 @@ Let’s call the `Edm.String` filter field with `ValueList` annotation a ‘sour
 
 
 
-### String filter field as ‘source’ and date filter field as ‘target’
+### String filter field as 'source' and date filter field as 'target'
 
 -   The target field has `single-value` filtering
 
@@ -424,7 +424,7 @@ all selected values
 
 
 
-### String filter field as ‘source’ and semantic date filter field as ‘target’
+### String filter field as 'source' and semantic date filter field as 'target'
 
 -   The target field has `single-value` filtering
 

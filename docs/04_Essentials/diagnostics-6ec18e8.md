@@ -23,7 +23,7 @@ In addition, you can see the following information:
 
 -   The jQuery version that is loaded from the server. If you want to use a specific jQuery feature, you should check whether the feature is supported in the loaded version.
 
--   The bootstrap configuration, where you can check, for example, the resource root, the theme, or the libraries. The libraries should be listed in the `libs` configuration parameter or in the descriptor file \(recommended\), see [Descriptor for Applications, Components, and Libraries \(manifest.json\)](descriptor-for-applications-components-and-libraries-manifest-json-be0cf40.md). To improve performance, remove unused libraries and add the libraries that you use and are not yet listed. These libraries are loaded as a preload file. We recommend to also add the `async` configuration option to the bootstrap. This configuration option enables asynchronous loading of modules and preload files and can, thus, further improve performance. For more information, see [Performance: Speed Up Your App](../05_Developing_Apps/performance-speed-up-your-app-408b40e.md).
+-   The bootstrap configuration, where you can check, for example, the resource root, the theme, or the libraries. The libraries should be listed in the `libs` configuration parameter or in the descriptor file \(recommended\), see [Manifest \(Descriptor for Applications, Components, and Libraries\)](manifest-descriptor-for-applications-components-and-libraries-be0cf40.md). To improve performance, remove unused libraries and add the libraries that you use and are not yet listed. These libraries are loaded as a preload file. We recommend to also add the `async` configuration option to the bootstrap. This configuration option enables asynchronous loading of modules and preload files and can, thus, further improve performance. For more information, see [Performance: Speed Up Your App](../05_Developing_Apps/performance-speed-up-your-app-408b40e.md).
 
 -   The computed configuration
 
@@ -356,7 +356,7 @@ This feature is only available, if the app uses the `sap.ui.fl` library.
 
 With this feature, you can check whether there are SAPUI5 flexibilty changes for the controls used in an app, and you can analyze these changes.
 
-For example, you can see the layer of the changes in the layered repository, their type, or whether they’re active. Active and erroneous changes are only evaluated for the controls currently in the DOM, in the current runtime.
+For example, you can see the layer of the changes in the layered repository, their type, or whether they're active. Active and erroneous changes are only evaluated for the controls currently in the DOM, in the current runtime.
 
 
 

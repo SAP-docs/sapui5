@@ -4,7 +4,7 @@
 
 The interval data types represent intervals between two date/time related properties.
 
-Three new types are used to format two date related properties from a model for displaying in the UI. Additionally they are used to parse and validate the values in UI controls before they are saved back to the model. All of the them are subtypes of `sap.ui.model.CompositeType` and are supposed to be set with a composite binding. The new interval types are:
+Three new types are used to format two date related properties from a model for displaying in the UI. Additionally they are used to parse and validate the values in UI controls before they are saved back to the model. All of them are subtypes of `sap.ui.model.CompositeType` and are supposed to be set with a composite binding. The new interval types are:
 
 -   `sap.ui.model.type.DateInterval` - represents a date interval \(without time\) which transforms the source values into a formatted date interval string and the other way around.
 
@@ -22,10 +22,10 @@ Three new types are used to format two date related properties from a model for 
 > ### Note:  
 > The new date interval types can be used together with different types of model. However, there are some differences in the usage when the new date interval types get used with a JSON, OData V2 or V4 model.
 
-The interval types need two JavaScript `Date` objects from the sub-bindings to format them as a date interval string. If the values which come from the sub-binding aren’t instances of JavaScript `Date` object, they need to be converted to JavaScript `Date` objects before they are forwarded to the date interval types. The conversion can be done by setting a corresponding type on the sub-binding and this type knows how the value which comes directly from the model can be converted to a JavaScript `Date` object. A date interval type works together with the types on the sub-bindings to get the original value from the model converted to a JavaScript `Date` object.
+The interval types need two JavaScript `Date` objects from the sub-bindings to format them as a date interval string. If the values which come from the sub-binding aren't instances of JavaScript `Date` object, they need to be converted to JavaScript `Date` objects before they are forwarded to the date interval types. The conversion can be done by setting a corresponding type on the sub-binding and this type knows how the value which comes directly from the model can be converted to a JavaScript `Date` object. A date interval type works together with the types on the sub-bindings to get the original value from the model converted to a JavaScript `Date` object.
 
 > ### Restriction:  
-> One exception is with the OData V2 Model. Although the date fields are saved as string in the model, they get converted to JavaScript `Date` objects by the open source library which is used in `v2.ODataModel`. Therefore it’s not needed to set an extra type on the sub-binding when the date interval types are used together with the OData V2 model.
+> One exception is with the OData V2 Model. Although the date fields are saved as string in the model, they get converted to JavaScript `Date` objects by the open source library which is used in `v2.ODataModel`. Therefore it's not needed to set an extra type on the sub-binding when the date interval types are used together with the OData V2 model.
 
 The following example shows how this should be setup with a `sap/m/Table` which is bound to an OData V4 model. The table consists of four different columns whereas the `StartsAt` and `EndsAt` represent date field as string with Edm type `Edm.DateTimeOffset`. The date interval formatting is done by combining these two date fields together.
 

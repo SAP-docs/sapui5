@@ -95,7 +95,7 @@ You can implement the `onChildOpenedExtension` function within the list report/o
 > 	//oSelectionInfo.keys – The array of keys (one on each hierarchy level) used for last opened child page.
 > 	//fnSetPath - pass the binding path of the corresponding list item to this function if it is not identical 	to oSelection.path.
 > 	var oModel = this.getView().getModel();
->           oModel.createBindingContext(oSelectionInfo.path + “NavigationProperty”, null, null, function(oContext) { 
+>           oModel.createBindingContext(oSelectionInfo.path + "NavigationProperty", null, null, function(oContext) { 
 >                 fnSetPath(oContext.getPath());
 > 	});
 > },  

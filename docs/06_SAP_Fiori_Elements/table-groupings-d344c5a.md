@@ -22,7 +22,7 @@ For analytical tables, take the following restrictions into account:
 
 -   Grouping takes place on the server. The header formatter has no effect on the grouping itself. This means that groups stay separate even if they have the same header after formatting.
 
--   The `TextArrangement` annotation is not supported. A property with a text property is displayed as follows: “m – Meter”. For more information, see the *API Reference* for [`TextArrangement`](https://ui5.sap.com/#/api/sap.ui.comp.smarttable.SmartTable/annotations/TextArrangement).
+-   The `TextArrangement` annotation is not supported. A property with a text property is displayed as follows: "m – Meter". For more information, see the *API Reference* for [`TextArrangement`](https://ui5.sap.com/#/api/sap.ui.comp.smarttable.SmartTable/annotations/TextArrangement).
 
 -   Displaying values with units of measure is not supported.
 

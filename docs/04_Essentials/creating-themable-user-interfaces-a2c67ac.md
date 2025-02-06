@@ -28,7 +28,7 @@ For example, if you hard-coded the font color to black, this color cannot be adj
 -   This set is available across all predefined themes and should be handled with care. You should test your implementations for all themes to ensure the results are as expected.
 
     > ### Note:  
-    > This approach can only cover the most common use cases. In addition, be aware that due to parameter value changes with future versions of SAPUI5 it might be necessary to rework your applications even when using the “stable” theme parameters described here.
+    > This approach can only cover the most common use cases. In addition, be aware that due to parameter value changes with future versions of SAPUI5 it might be necessary to rework your applications even when using the "stable" theme parameters described here.
 
 -   For charts, two individual sets are available, Chart Accent and Chart Semantic. Both sets are logically independent. Therefore only one of these sets is to be used consistently across individual charts.
 

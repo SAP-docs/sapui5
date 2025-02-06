@@ -185,7 +185,7 @@ In this section, you can reduce the number of data records that are sent to the 
 > -   If you choose a measure for which low values are positive, such as costs or reject rates, the lowest values are interpreted as top n.
 
 > ### Note:  
-> You can use the top n function if you want to restrict your data to up to 10,000 records. If you need more than 10,000 records, don’t use data reduction.
+> You can use the top n function if you want to restrict your data to up to 10,000 records. If you need more than 10,000 records, don't use data reduction.
 
 
 <table>

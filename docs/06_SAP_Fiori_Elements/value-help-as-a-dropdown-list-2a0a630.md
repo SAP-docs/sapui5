@@ -207,7 +207,7 @@ By default, the radio button group is rendered in a vertical layout. You can als
 > 
 > -   The `ValueListParameterInOut` or `ValueListParameterOut` annotation must refer to the field itself using the `LocalDataProperty` parameter.
 > 
-> -   The radio button labels are obtained from the `Common.Text` annotation. The labels can also be obtained from the `ValueListParameterInOut` or `ValueListParameterOut` annotation. The `TextArrangement` annotation isn’t supported.
+> -   The radio button labels are obtained from the `Common.Text` annotation. The labels can also be obtained from the `ValueListParameterInOut` or `ValueListParameterOut` annotation. The `TextArrangement` annotation isn't supported.
 > 
 > -   We allow the use of a radio button group only for fields that contain non-Boolean values as the value list.
 > 
@@ -217,7 +217,7 @@ By default, the radio button group is rendered in a vertical layout. You can als
 > We recommend the use of a radio button group for fields with a value list that has no more than 8 values. For more information, see [Radio Button](https://experience.sap.com/fiori-design-web/radio-button/#do-not-use-the-radio-button-if).
 
 > ### Restriction:  
-> -   Radio buttons don’t support multiple value lists and value lists within the `ValueListRelevantQualifiers` annotation.
+> -   Radio buttons don't support multiple value lists and value lists within the `ValueListRelevantQualifiers` annotation.
 > 
 > -   Radio buttons must not be used for value lists with dependencies as specified in the `ValueListParameterInOut` or `ValueListParameterIn` annotation.
 > 

@@ -4,7 +4,7 @@
 
 Security has always been an important element for the complete product life cycle of all SAP products, including product development, planning, and quality assurance. SAP takes care of some of the security focus areas, while others have to be handled by you.
 
-For SAP Fiori elements for OData V4, if you’re using CAP, you must ensure the security configurations in the back end are compatible with the design and configuration of your app.
+For SAP Fiori elements for OData V4, if you're using CAP, you must ensure the security configurations in the back end are compatible with the design and configuration of your app.
 
 > ### Example:  
 > You must ensure that the setting for the total number of requests of OData batches is high enough in case you want to use the `InvocationGrouping: Changeset`.

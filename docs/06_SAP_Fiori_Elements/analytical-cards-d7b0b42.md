@@ -17,7 +17,7 @@ In the header area, you can view the aggregated value of a key performance indic
 
 ### Chart Responsiveness
 
-To improve the responsiveness of charts, you can use `UI.PresentationVariant.MaxItems` to limit the number of records fetched from the backend that are rendered on the screen. For example:
+To improve the responsiveness of charts, you can use `UI.PresentationVariant.MaxItems`. It limits the number of records fetched from the back end that are rendered on the screen. See the following sample code:
 
 > ### Sample Code:  
 > XML Annotation
@@ -55,32 +55,32 @@ To improve the responsiveness of charts, you can use `UI.PresentationVariant.Max
 > ```
 
 > ### Tip:  
-> If there are too many data records displayed in the chart, it is difficult to select a data point. If you are only interested in checking the top records, then use `UI.PresentationVariant.SortOrder`. For more information, see [Configuring Card Properties](configuring-card-properties-53b0791.md).
+> If there are too many data records displayed in the chart, it is difficult to select a data point. If you are only interested in checking the top records, use `UI.PresentationVariant.SortOrder`. For more information, see [Configuring Card Properties](configuring-card-properties-53b0791.md).
 
 
 
 ### Chart Interactivity
 
-Users can choose specific data points to pass data in URL parameters to the target application. The target application can read these URL parameters and use them as required \(typically to filter the data set that they are displaying\).
+Business users can choose specific data points to pass data in URL parameters to the target application. The target application can read these URL parameters and use them as required \(typically, to filter the data set that it is displaying\).
 
-When a user select a particular data point, the system passes a technical ID \(`"RegionID"="001"`\) instead of the display name \(`"Region"="EMEA"`\).
+When a business user selects a particular data point, the system passes a technical ID \(`"RegionID"="001"`\) instead of the display name \(`"Region"="EMEA"`\).
 
 
 
 ### Axis Scaling
 
-Axis scaling lets you scale and display data for line, bubble, or scatter charts in the analytics card. You can choose any of the following axis scaling types:
+Axis scaling lets you scale and display data for line, bubble, or scatter charts in the analytical card. You can choose any of the following axis scaling types:
 
-1.  **Type 1: `ZeroAlwaysVisible`**
+-   `ZeroAlwaysVisible`
 
-    The default behavior displays data in the respective chart format including the zero value. The graph is adjusted according to the available data range.
+    The default behavior displays data in the respective chart format, including the zero value. The graph is adjusted according to the available data range.
 
     Set the following property in the `UI.Chart` annotation:
 
     > ### Sample Code:  
     > XML Annotation
     > 
-    > ```
+    > ```xml
     > <PropertyValue Property="AxisScaling">
     > >   <Record Type="UI.ChartAxisScalingType">
     > >       <PropertyValue Property="AutoScaleBehavior">
@@ -105,16 +105,16 @@ Axis scaling lets you scale and display data for line, bubble, or scatter charts
     > >  }
     > ```
 
-2.  **Type 2: `DataScope`**
+-   `DataScope`
 
-    The adjust scale property displays data in the respective chart format based on the available data range. It determines the automatic scaling. Minimum and maximum axes values are determined from the entire data set.
+    The scale adjusment property displays data in the respective chart format based on the available data range. It determines the automatic scaling. Minimum and maximum values for the axes are determined from the entire data set.
 
-    Set the following property in the \`UI.Chart\` annotation:
+    Set the following property in the `UI.Chart` annotation:
 
     > ### Sample Code:  
     > XML Annotation
     > 
-    > ```
+    > ```xml
     > <PropertyValue Property="AxisScaling">
     > >   <Record Type="UI.ChartAxisScalingType">
     > >       <PropertyValue Property="AutoScaleBehavior">
@@ -139,16 +139,16 @@ Axis scaling lets you scale and display data for line, bubble, or scatter charts
     > >  }
     > ```
 
-3.  **Type 3: `FixedScale`**
+-   `FixedScale`
 
-    Scale Behaviour set to `FixedScale` lets you define the minimum and maximum data range to display data in the respective chart format. Fixed minimum and maximum values are applied, that are derived from the `@UI.MeasureAttributes.DataPoint/MinimumValue and .../MaximumValue` annotation by default.
+    Scale behaviour set to `FixedScale` allows you to define the minimum and maximum data range to display in the respective chart format. It applies fixed minimum and maximum values that are derived from the `@UI.MeasureAttributes.DataPoint/MinimumValue` and `@UI.MeasureAttributes.DataPoint/MaximumValue` annotation by default.
 
     Set the following property in the `UI.Chart` annotation:
 
     > ### Sample Code:  
     > XML Annotation
     > 
-    > ```
+    > ```xml
     > <PropertyValue Property="AxisScaling">
     > >   <Record Type="UI.ChartAxisScalingType">
     > >       <PropertyValue Property="ScaleBehavior" EnumMember="UI.ChartAxisScaleBehaviorType/FixedScale"/>
@@ -157,7 +157,7 @@ Axis scaling lets you scale and display data for line, bubble, or scatter charts
     > ```
 
     > ### Sample Code:  
-    > CAP
+    > CAP CDS Annotation
     > 
     > ```
     > AxisScaling : { 
@@ -167,7 +167,7 @@ Axis scaling lets you scale and display data for line, bubble, or scatter charts
     > ```
 
 
-You must define the `DataPoint` annotation to set the minimum and maximum values.
+You must define the `DataPoint` annotation to set the minimum and maximum values, as shown in the following code sample:
 
 > ### Sample Code:  
 > XML Annotation
@@ -216,11 +216,11 @@ You must define the `DataPoint` annotation to set the minimum and maximum values
 
 
 
-### Descriptor Configuration Sample
+### Manifest Configuration Sample
+
+The following sample code is a snippet of a sample `manifest.json` file:
 
 > ### Sample Code:  
-> The following is a snippet of a sample descriptor file:
-> 
 > ```
 > "sap.app": {
 >    "_version": "1.1.0",

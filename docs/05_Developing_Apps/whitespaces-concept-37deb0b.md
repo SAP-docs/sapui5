@@ -37,12 +37,12 @@ HTML entities do not work in inputs. Also, they are usually escaped by sanitizer
 <tr>
 <td valign="top">
 
-Use the CSS’s `white-space` property to format texts where needed.
+Use the CSS's `white-space` property to format texts where needed.
 
 </td>
 <td valign="top">
 
-The CSS’s `white-space` property could have already been used for some special formatting, for example, for text truncation, and you might not be able to reuse it.
+The CSS's `white-space` property could have already been used for some special formatting, for example, for text truncation, and you might not be able to reuse it.
 
 </td>
 </tr>
@@ -60,11 +60,11 @@ Unicode characters are displayed well in texts and inputs, however, they are Uni
 </tr>
 </table>
 
-As you can see, there’s no single fit solution for all the scenarios, but you can use a mix to achieve the desired behavior.
+As you can see, there's no single fit solution for all the scenarios, but you can use a mix to achieve the desired behavior.
 
-For HTML inputs, you don’t have to do anything. The whitespaces are rendered properly there.
+For HTML inputs, you don't have to do anything. The whitespaces are rendered properly there.
 
 For text display controls, you could use either the `white-space` CSS property, or Unicode characters.
 
-In terms of SAPUI5, you would need to use formatters to display whitespaces in your applications. Here’s a sample page where you can see how it's used for different controls: For more information, see the [Sample for `sap.m.WhitespacePattern`](https://ui5.sap.com/#/entity/sap.m.WhitespacePattern). 
+In terms of SAPUI5, you would need to use formatters to display whitespaces in your applications. Here's a sample page where you can see how it's used for different controls: For more information, see the [Sample for `sap.m.WhitespacePattern`](https://ui5.sap.com/#/entity/sap.m.WhitespacePattern). 
 

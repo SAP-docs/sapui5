@@ -48,7 +48,7 @@ You can choose *More Links* to go back to the link list.
 
 You can view and download all files in the *Samples* in the Demo Kit at [Smart Controls - Step 3 - Smart Field with Smart Link](https://ui5.sap.com/#/entity/sap.ui.comp.tutorial.smartControls/sample/sap.ui.comp.tutorial.smartControls.03).
 
-To have a working example, we include the `UShellCrossApplicationNavigationMock.js` class. This class basically mocks the required services, which would normally be available in the SAP Fiori launchpad. These services provide the cross-application navigation targets along with the URL parsing, thus making it possible to determine which link qualifies as a “fact sheet” target. As these services will be provided for in a real-world scenario, we will not analyze the mock class in more detail and also not provide a code listing of the class. The class file can be found in the *Samples*.
+To have a working example, we include the `UShellCrossApplicationNavigationMock.js` class. This class basically mocks the required services, which would normally be available in the SAP Fiori launchpad. These services provide the cross-application navigation targets along with the URL parsing, thus making it possible to determine which link qualifies as a "fact sheet" target. As these services will be provided for in a real-world scenario, we will not analyze the mock class in more detail and also not provide a code listing of the class. The class file can be found in the *Samples*.
 
 
 

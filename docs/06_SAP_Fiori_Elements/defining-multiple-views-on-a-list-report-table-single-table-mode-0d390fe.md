@@ -651,5 +651,5 @@ To define multiple views using single table mode, perform the following steps:
 **Related Information**  
 
 
-[Adding Segmented Buttons to a Table Toolbar](adding-segmented-buttons-to-a-table-toolbar-5532c89.md "You can add segmented buttons to the toolbar, to enable switching between the table content using a selection variant annotation.")
+[Adding Segmented Buttons to a Table Toolbar](adding-segmented-buttons-to-a-table-toolbar-5532c89.md "You can add segmented buttons to the toolbar to enable switching between the table content using a selection variant annotation.")
 

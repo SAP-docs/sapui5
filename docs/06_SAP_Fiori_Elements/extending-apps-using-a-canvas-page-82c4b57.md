@@ -365,14 +365,14 @@ Following is the manifest settings for the canvas page:
 > 
 > ```
 
-In the following code sample, the navigation stays on the same canvas page, but exchanges the user’s choice \(for example, as a result of some user interaction\).
+In the following code sample, the navigation stays on the same canvas page, but exchanges the user's choice \(for example, as a result of some user interaction\).
 
 > ### Sample Code:  
 > ```
 > ...
 > var oApi = this.extensionAPI;   
 > var oNavigationController = oApi.getNavigationController();
-> var sUsersChoice = ... //do whatever is necessary to determine the user’s choice 
+> var sUsersChoice = ... //do whatever is necessary to determine the user's choice 
 > oNavigationController.navigateInternal(sUsersChoice, {
 > 	routeName: "theRouteName",
 > 	isAbsolute: true

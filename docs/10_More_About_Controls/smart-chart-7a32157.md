@@ -212,14 +212,14 @@ You can use `chartQualifier` for the `SmartChart` control:
 
 ```js
 
-<SmartChart customData:chartQualifier=”Customer360” …>
+<SmartChart customData:chartQualifier="Customer360" …>
 ```
 
 Or use the following:
 
 ```js
 
-<SmartChart customData:presentationVariantQualifier=”Customer360” …>
+<SmartChart customData:presentationVariantQualifier="Customer360" …>
 ```
 
 If **no qualifier** has been defined for the presentation variant, you can use the fallback option and check if there is a `Chart` annotation with or without a qualifier, as specified by the application developer.

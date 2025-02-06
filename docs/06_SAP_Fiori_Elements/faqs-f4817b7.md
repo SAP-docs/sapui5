@@ -12,7 +12,7 @@ You can get answers to the most frequently asked questions we receive from our u
 
 -   **I'm new to SAP Fiori elements development - where should I start? What is SAP Fiori elements anyway?** 
 
-    We’ve put together a list of useful links to get you started, which you can see at [Developing Apps with SAP Fiori Elements](developing-apps-with-sap-fiori-elements-03265b0.md).
+    We've put together a list of useful links to get you started, which you can see at [Developing Apps with SAP Fiori Elements](developing-apps-with-sap-fiori-elements-03265b0.md).
 
 -   **Is there a glossary where I can look up terms like annotations and extensions?**
 
@@ -41,11 +41,11 @@ You can get answers to the most frequently asked questions we receive from our u
 
 -   **What is draft handling and can I disable it for apps built on SAP Fiori elements for OData V4?**
 
-    SAP Fiori elements for OData V4 supports an edit-based scenario \(create/edit/delete\) only for a draft-enabled service. You can use non-draft services only for pure read-only applications where the user isn’t expected to perform any create/edit/delete operations. For more information about draft handling, see [Draft Handling](draft-handling-ed9aa41.md). Additionally, if you want to know the general information about tool support and the back end, see [Prerequisites for Using SAP Fiori Elements](prerequisites-for-using-sap-fiori-elements-f2344b5.md).
+    SAP Fiori elements for OData V4 supports an edit-based scenario \(create/edit/delete\) only for a draft-enabled service. You can use non-draft services only for pure read-only applications where the user isn't expected to perform any create/edit/delete operations. For more information about draft handling, see [Draft Handling](draft-handling-ed9aa41.md). Additionally, if you want to know the general information about tool support and the back end, see [Prerequisites for Using SAP Fiori Elements](prerequisites-for-using-sap-fiori-elements-f2344b5.md).
 
 -   **Where can I find the right annotations for some of the commonly used UI elements?**
 
-    To understand the most common annotations used when an app is loaded, see [Configuring Default Settings \(Visualizations, Sort Order, Filter Values\)](configuring-default-settings-visualizations-sort-order-filter-values-49a6ba5.md). If you’re interested to know about a specific annotation, check any of the following topics:
+    To understand the most common annotations used when an app is loaded, see [Configuring Default Settings \(Visualizations, Sort Order, Filter Values\)](configuring-default-settings-visualizations-sort-order-filter-values-49a6ba5.md). If you're interested to know about a specific annotation, check any of the following topics:
 
     -   To configure a table, see [Configuring Tables](configuring-tables-f4eb70f.md).
 
@@ -122,7 +122,7 @@ You can get answers to the most frequently asked questions we receive from our u
 
 -   **What are the different means by which we can allow a user to navigate away from an SAP Fiori elements application?**
 
-    We’ve put together an overview for you in the topic. Please check the different means outlined in [Navigation from an App \(Outbound Navigation\)](navigation-from-an-app-outbound-navigation-d782acf.md).
+    We've put together an overview for you in the topic. Please check the different means outlined in [Navigation from an App \(Outbound Navigation\)](navigation-from-an-app-outbound-navigation-d782acf.md).
 
 -   **How can I be sure that sensitive data isn't sent across when navigating between SAP Fiori elements applications? Can I explicitly keep certain information out of the navigation context?**
 
@@ -132,7 +132,7 @@ You can get answers to the most frequently asked questions we receive from our u
 
     You can use the mechanism described in the [Semantic Object Mapping](navigation-from-an-app-outbound-navigation-d782acf.md#loiod782acf8bfd74107ad6a04f0361c5f62__semantic_object_mapping_subsection) subsection in [Navigation from an App \(Outbound Navigation\)](navigation-from-an-app-outbound-navigation-d782acf.md).
 
--   **I don’t want users to see certain intents when using the navigation links. Can I exclude them?**
+-   **I don't want users to see certain intents when using the navigation links. Can I exclude them?**
 
     Yes, you can use the `Common.SemanticObjectUnavailableActions` annotation as described in the [Hiding Unwanted Actions from a Semantic Object](navigation-from-an-app-outbound-navigation-d782acf.md#loiod782acf8bfd74107ad6a04f0361c5f62__hiding_unwanted_actions_subsection) subsection in [Navigation from an App \(Outbound Navigation\)](navigation-from-an-app-outbound-navigation-d782acf.md).
 
@@ -229,7 +229,7 @@ You can get answers to the most frequently asked questions we receive from our u
 
 -   **The values entered in a field with a value help aren't validated. Why?**
 
-    The value help, by default, is only a “support” mechanism to provide possible values. You can also enter values that aren't part of the value help.
+    The value help, by default, is only a "support" mechanism to provide possible values. You can also enter values that aren't part of the value help.
 
     Validation happens in the following cases:
 
@@ -299,7 +299,7 @@ You can get answers to the most frequently asked questions we receive from our u
 
     There are multiple facets that can be added using annotations to the object page. For more information, see [Setting Up the Object Page Header](setting-up-the-object-page-header-cce93e6.md).
 
--   **I have too much content and don’t want to show everything when the section is loaded. Can I hide some of the sections and show them only when a user wishes to see it?**
+-   **I have too much content and don't want to show everything when the section is loaded. Can I hide some of the sections and show them only when a user wishes to see it?**
 
     Yes. You can configure this. For more information, see [Showing and Hiding Content in Object Page Facets](showing-and-hiding-content-in-object-page-facets-9fcea86.md).
 
@@ -307,7 +307,7 @@ You can get answers to the most frequently asked questions we receive from our u
 
     Yes, you can configure section-level actions. For more information, see [Adding Action Buttons to Forms in Sections](adding-action-buttons-to-forms-in-sections-e64efda.md).
 
--   **I have some sections that take a long time to load. I don’t want requests for these UI artifacts to go in the same call as the other requests so that the UI loads faster – what can I do here?**
+-   **I have some sections that take a long time to load. I don't want requests for these UI artifacts to go in the same call as the other requests so that the UI loads faster – what can I do here?**
 
     You can group the request for the element that takes a long time under the "LongRunners" group. For more information, see [Defining the Loading Behavior of Object Page Headers](defining-the-loading-behavior-of-object-page-headers-ac03570.md).
 

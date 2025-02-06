@@ -442,7 +442,7 @@ New in `.library`
 </td>
 <td valign="top">
 
-Determines whether the library contains an i18n resource. Value can be either a boolean, a string, or an object. For more information, see [Descriptor for Applications, Components, and Libraries \(manifest.json\)](descriptor-for-applications-components-and-libraries-manifest-json-be0cf40.md) and [Terminologies](terminologies-eba8d25.md).
+Determines whether the library contains an i18n resource. Value can be either a boolean, a string, or an object. For more information, see [Manifest \(Descriptor for Applications, Components, and Libraries\)](manifest-descriptor-for-applications-components-and-libraries-be0cf40.md) and [Terminologies](terminologies-eba8d25.md).
 
 </td>
 </tr>

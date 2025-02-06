@@ -25,7 +25,7 @@ If an error occurs during formatting or parsing, the following exception occurs:
 ## Formatters
 
 > ### Note:  
-> When using formatter functions, the binding is automatically switched to "one-way". So you can’t use a formatter function for "two-way" scenarios, but you can use [Data Types](formatting-parsing-and-validating-data-07e4b92.md#loio07e4b920f5734fd78fdaa236f26236d8__section_DataTypes).
+> When using formatter functions, the binding is automatically switched to "one-way". So you can't use a formatter function for "two-way" scenarios, but you can use [Data Types](formatting-parsing-and-validating-data-07e4b92.md#loio07e4b920f5734fd78fdaa236f26236d8__section_DataTypes).
 
 A simple formatter can be defined directly in the controller. However, we recommend using a separate `formatter.js` file to group all your formatter functions, making them accessible throughout your app.
 
@@ -58,7 +58,7 @@ You can load the formatter via the [`require`](require-modules-in-xml-view-and-f
 > You can also use predefined formatter functions for standard uses cases, like `formatMessage` from module `sap/base/strings/formatMessage`.
 
 > ### Caution:  
-> The automatic type determination for OData V4 interacts with `targetType` and can, thus, influence a formatter’s input values. For more information on type determination in OData V4, see [Type Determination](type-determination-53cdd55.md).
+> The automatic type determination for OData V4 interacts with `targetType` and can, thus, influence a formatter's input values. For more information on type determination in OData V4, see [Type Determination](type-determination-53cdd55.md).
 
 
 

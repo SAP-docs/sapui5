@@ -242,7 +242,7 @@ sap.ui.define([
 });
 ```
 
-Here our test expects that the date is displayed as time when the post is from today. If we rely on the browser language the test would be fragile. It will fail in some languages. To avoid this, we pass the locale settings to the formatter’s constructor. The test will use a fixed locale `en-US` in order to remain stable. This mechanism is called **Dependency Injection**.
+Here our test expects that the date is displayed as time when the post is from today. If we rely on the browser language the test would be fragile. It will fail in some languages. To avoid this, we pass the locale settings to the formatter's constructor. The test will use a fixed locale `en-US` in order to remain stable. This mechanism is called **Dependency Injection**.
 
 
 
@@ -318,7 +318,7 @@ sap.ui.define([
 });
 ```
 
-Our tests are running so we can start refactoring our code. Since we need the `DateFormatter` object in every test case we will move it to the QUnit module’s `beforeEach` function. As the name suggests, the function is invoked before each test so we may use it to save some code we need in every test.
+Our tests are running so we can start refactoring our code. Since we need the `DateFormatter` object in every test case we will move it to the QUnit module's `beforeEach` function. As the name suggests, the function is invoked before each test so we may use it to save some code we need in every test.
 
 
 

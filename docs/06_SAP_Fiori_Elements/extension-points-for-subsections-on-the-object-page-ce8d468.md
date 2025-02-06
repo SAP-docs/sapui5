@@ -29,7 +29,7 @@ You can add additional subsections in existing facets:
 -   `ReplaceSubSection`: The extension replaces an existing subsection in a facet.
 
 
-You must specify the subsection in the form of its annotation path. You also have to specify the entitySet name, as the same annotation path may exist for various entity sets. You add this information to the `manifest.json` file, as in the example. For more information, see [Extension Points for Sections on the Object Page](extension-points-for-sections-on-the-object-page-92ad996.md).
+You must specify the subsection in the form of its annotation path. You also have to specify the entitySet name, as the same annotation path may exist for various entity sets. You add this information to the `manifest.json` file, as shown in the following sample code: For more information, see [Extension Points for Sections on the Object Page](extension-points-for-sections-on-the-object-page-92ad996.md).
 
 > ### Sample Code:  
 > ```
@@ -66,9 +66,13 @@ You must specify the subsection in the form of its annotation path. You also hav
 > 
 > ```
 
-The result looks as shown below. The highlighted subsection has been added using the extension point.
+The result looks as shown in the following screenshot. The highlighted subsection has been added using the extension point.
 
 ![](images/Subsections_90b2aad.jpg)
+
+For more information about extension points for sections, see [Extension Points for Sections on the Object Page](extension-points-for-sections-on-the-object-page-92ad996.md).
+
+For more information about lazy loading for custom sections, see [Enabling Lazy Loading for Custom Sections](enabling-lazy-loading-for-custom-sections-de25ca7.md).
 
 > ### Note:  
 > You can specify either a view or a fragment contained in the additional subsection. Either way, you do not need to use the object page \(uxap\) tags `ObjectPageSection`, `subSections`, or `ObjectPageSubSection`. These definitions are already part of the template for the object page view. Additional sections are rendered if an extension exists.
@@ -85,23 +89,21 @@ The result looks as shown below. The highlighted subsection has been added using
 
 Custom subsections provide the following features:
 
--   adding arbitrary subsections via an `xmlfragment` definition
+-   adding arbitrary subsections using an `xmlfragment` definition.
 
--   positioning relative to subsections defined by facets or other custom facets
+-   positioning relative to subsections defined by facets or other custom facets.
 
--   using a localized subsection title
+-   using a localized subsection title.
 
 
-To define a subsection on UI level - you do this if you want to add a custom look and feel, or to use controls that are not supported by default - you can extend the settings of the corresponding object page in the `manifest.json` with a **content** block. You can enrich the body of the object page with additional subsections. To do so, you define header facets by using a custom key that you later reference by providing the following properties:
+To define a subsection on UI level - you do this if you want to add a custom look and feel, or to use controls that are not supported by default - you can extend the settings of the corresponding object page in the `manifest.json` file with a **content** block. You can enrich the body of the object page with additional subsections. To do so, you define header facets by using a custom key that you later reference by providing the following properties:
 
 -   a title
 
--   the name \(which must point to the corresponding fragment and the outer section, which can be just the name of an existing section or a custom section\) and
+-   the name \(which must point to the corresponding fragment and the outer section, which can be just the name of an existing section or a custom section\)
 
 -   the corresponding fragment
 
-
-For more information, see [Extension Points for Sections on the Object Page](extension-points-for-sections-on-the-object-page-92ad996.md).
 
 > ### Sample Code:  
 > ```json
@@ -140,9 +142,11 @@ For more information, see [Extension Points for Sections on the Object Page](ext
 > }
 > ```
 
-The result looks as shown below. The highlighted subsection has been added using the extension point.
+The result looks as shown in the following screenshot. The highlighted subsection has been added using the extension point.
 
 ![](images/Subsections_90b2aad.jpg)
+
+For more information, see [Extension Points for Sections on the Object Page](extension-points-for-sections-on-the-object-page-92ad996.md).
 
 > ### Note:  
 > You can specify either a view or a fragment contained in the additional subsection. Either way, you do not need to use the object page \(uxap\) tags `ObjectPageSection`, `subSections`, or `ObjectPageSubSection`. These definitions are already part of the template for the object page view. Additional sections are rendered if an extension exists.

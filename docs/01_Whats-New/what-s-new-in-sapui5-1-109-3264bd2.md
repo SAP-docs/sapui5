@@ -602,7 +602,7 @@ Control
 
 -   We have aligned the behavior of icons when the icon source is resolved to an empty object or an empty string. Now, in such cases, all Integration cards show a default icon.
 
--   We have changed the default value of the \(experimental\) `dataMode` property to `Auto`. In this mode, the card makes data requests only when it’s in the viewport. For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.integration.widgets.Card). 
+-   We have changed the default value of the \(experimental\) `dataMode` property to `Auto`. In this mode, the card makes data requests only when it's in the viewport. For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.integration.widgets.Card). 
 
 -   You can use the new \(experimental\) `design` property to set the card background and border to `Transparent`. The default value of the new property is `Solid`. For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.integration.widgets.Card).
 
@@ -668,6 +668,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.130](what-s-new-in-sapui5-1-130-85609d4.md "With this release SAPUI5 is upgraded from version 1.129 to 1.130.")
 
 [What's New in SAPUI5 1.129](what-s-new-in-sapui5-1-129-d22b8af.md "With this release SAPUI5 is upgraded from version 1.128 to 1.129.")
 

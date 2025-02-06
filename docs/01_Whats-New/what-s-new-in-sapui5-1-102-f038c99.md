@@ -452,7 +452,7 @@ Control
 
 We have applied the following visual changes, which improve the prioritization of the displayed information on small screen sizes:
 
--   The title of the `sap.m.NotificationListGroup` doesn’t truncate any more. Instead, it wraps to as many lines it needs.
+-   The title of the `sap.m.NotificationListGroup` doesn't truncate any more. Instead, it wraps to as many lines it needs.
 
 -   The avatar of the `sap.m.NotificationListItem` is hidden in small \(S\) control size.
 
@@ -1000,6 +1000,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.130](what-s-new-in-sapui5-1-130-85609d4.md "With this release SAPUI5 is upgraded from version 1.129 to 1.130.")
 
 [What's New in SAPUI5 1.129](what-s-new-in-sapui5-1-129-d22b8af.md "With this release SAPUI5 is upgraded from version 1.128 to 1.129.")
 

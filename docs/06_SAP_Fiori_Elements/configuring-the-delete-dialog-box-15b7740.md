@@ -1,8 +1,8 @@
 <!-- loio15b7740845b44b419a56eb63d34b8ab3 -->
 
-# Configuring the Delete Dialog Box
+# Configuring the *Delete* Dialog Box
 
-You can adapt the text in the Delete dialog box to match your requirements.
+You can adapt the text in the *Delete* dialog box to match your requirements.
 
 
 
@@ -14,9 +14,9 @@ When a user deletes a record from the list report, the text in the dialog box "D
 
 ![](images/Delete_a435e28.png)
 
-The corresponding i18n key for the text used by the SAP Fiori elements framework in the delete confirmation dialog is `ST_GENERIC_DELETE_SELECTED`. You can adapt it by maintaining a text for this key in the app’s i18n file.
+The corresponding i18n key for the text used by the SAP Fiori elements framework in the delete confirmation dialog is `ST_GENERIC_DELETE_SELECTED`. You can adapt it by maintaining a text for this key in the app's i18n file.
 
-The context displayed in the Delete dialog box is taken from the `Title` property of the `HeaderInfo` annotation. In the example below, the value mapped to the `"so_id"` property is shown in the dialog text.
+The context displayed in the *Delete* dialog box is taken from the `Title` property of the `HeaderInfo` annotation. In the following sample code, the value mapped to the `"so_id"` property is shown in the dialog text.
 
 > ### Sample Code:  
 > XML Annotation
@@ -61,7 +61,7 @@ The context displayed in the Delete dialog box is taken from the `Title` propert
 
 ## Additional Features in SAP Fiori Elements for OData V4
 
-Only the keys given below are allowed to be overridden in the custom i18n file for deleting lines in a table:
+Only the following keys are allowed to be overridden in the custom `i18n` file for deleting lines in a table:
 
 
 <table>
@@ -169,7 +169,7 @@ C\_TRANSACTION\_HELPER\_OBJECT\_PAGE\_DELETE\_TOAST\_PLURAL=Objects were deleted
 
 ### Manifest Changes
 
-Changes must be made in the manifest file of the application. Add `enhanceI18n` to the `settings`  of the corresponding section as shown below:
+Changes must be made in the manifest file of the application. Include `enhanceI18n` in the `settings`  of the corresponding section as shown below:
 
 > ### Sample Code:  
 > `manifest.json`

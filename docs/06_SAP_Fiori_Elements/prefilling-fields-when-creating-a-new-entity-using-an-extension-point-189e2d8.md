@@ -22,7 +22,7 @@ App developers can implement this feature in three different ways:
 
 ## Passing Values Entered by the End User into the Filter Bar
 
-In the list report, when an end user inputs a value into the filter bar, performs a search, and then creates a new object, this action suggests that this user intends to create an instance that wasn’t found in the previous search. To support this scenario, app developers can provide an additional option called *Create with Filters*, which passes the filter values entered by this user to the newly created instance.
+In the list report, when an end user inputs a value into the filter bar, performs a search, and then creates a new object, this action suggests that this user intends to create an instance that wasn't found in the previous search. To support this scenario, app developers can provide an additional option called *Create with Filters*, which passes the filter values entered by this user to the newly created instance.
 
 App developers can perform the following steps to enable this feature:
 

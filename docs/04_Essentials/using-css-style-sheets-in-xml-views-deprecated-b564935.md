@@ -18,7 +18,7 @@ Style sheets are included in XML views in the same way as plain HTML. To add fur
 
 ## Procedure
 
-Here’s how you would add a style definition and define a button that uses it in an XML view:
+Here's how you would add a style definition and define a button that uses it in an XML view:
 
 ```xml
 

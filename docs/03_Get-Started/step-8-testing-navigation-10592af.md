@@ -71,7 +71,7 @@ sap.ui.define([
 
 This new journey for the *Post* page introduces a test case that tests the navigation and also tests if the browser history is in the correct state, so that the user can navigate through our app with the back and forward button of the browser. This time, instead of adding a test we will add a new journey.
 
-A journey represents a user’s task in our app. Journeys start with the startup of our app and end with a teardown in the last test. We don’t write isolated tests here, since starting up the app takes a lot of time and doing it too often slows down our test execution and feedback time considerably. If the execution speed of the tests is no problem, you may also write isolated tests.
+A journey represents a user's task in our app. Journeys start with the startup of our app and end with a teardown in the last test. We don't write isolated tests here, since starting up the app takes a lot of time and doing it too often slows down our test execution and feedback time considerably. If the execution speed of the tests is no problem, you may also write isolated tests.
 
 Our new journey consists of three user interaction steps:
 
@@ -173,7 +173,7 @@ After navigating to the *Post* page, we need a new OPA5 `Page` object for the pa
 
 An OPA5 `Page` object is used to group and reuse actions and assertions that are related to a specific part of the screen. For more information, see [Cookbook for OPA5](../04_Essentials/cookbook-for-opa5-ce4b180.md).
 
-We implement a `press` event on the page’s `nav` button and we assert that we are on the correct page by checking the title in the object header. The `nav` button is retrieved via DOM reference, because the page does not offer us an API here. Since the DOM ID is the most stable attribute, we are using this to retrieve the button.
+We implement a `press` event on the page's `nav` button and we assert that we are on the correct page by checking the title in the object header. The `nav` button is retrieved via DOM reference, because the page does not offer us an API here. Since the DOM ID is the most stable attribute, we are using this to retrieve the button.
 
 
 
@@ -223,7 +223,7 @@ sap.ui.define([
 	}); 
 ```
 
-We now implement an action that is triggered when the *Forward* button is chosen. Since it is not part of the browser's UI and it could be used on any page of our application, we just declare our browser’s UI as an own OPA page object. To simulate the *Forward* button, we use the `history` API of the browser. We have to wrap our action in a `waitFor` statement. Otherwise the action would be executed before our app is started.
+We now implement an action that is triggered when the *Forward* button is chosen. Since it is not part of the browser's UI and it could be used on any page of our application, we just declare our browser's UI as an own OPA page object. To simulate the *Forward* button, we use the `history` API of the browser. We have to wrap our action in a `waitFor` statement. Otherwise the action would be executed before our app is started.
 
 
 

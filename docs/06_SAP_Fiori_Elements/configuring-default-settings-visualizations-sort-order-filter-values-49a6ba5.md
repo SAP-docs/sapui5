@@ -503,7 +503,7 @@ The `UI.Chart` annotation is applicable for the following:
 
 You can control the default visualization by using a setting in the `manifest.json` file. This setting allows you to define `UI.SelectionPresentationVariant` \(with a qualifier\). When `UI.SelectionPresentationVariant` is defined, you must use the associated annotations such as `UI.SelectionVariant` \(for filter bar defaults\) and `UI.PresentationVariant` \(for default visualization\).
 
-Defining the manifest setting is optional. If the setting isn’t defined, SAP Fiori elements uses the fallback mechanism in the following order:
+Defining the manifest setting is optional. If the setting isn't defined, SAP Fiori elements uses the fallback mechanism in the following order:
 
 -   SAP Fiori elements first checks for a default \(unqualified\) `UI.SelectionPresentationVariant` and, if found, uses the associated selection/presentation variants.
 
@@ -767,6 +767,9 @@ You can define whether the default sort order for tables and charts is ascending
 >   }
 > );
 > ```
+
+> ### Note:  
+> When sorting a column that contains an amount with a currency or a unit of measure, the sort will be applied on the currency or the unit of measure first and then to the amount field. This ensures a consistent display of amount when different currencies or units of measure are used.
 
 
 

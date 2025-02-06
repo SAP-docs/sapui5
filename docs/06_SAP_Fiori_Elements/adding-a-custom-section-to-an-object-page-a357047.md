@@ -2,7 +2,7 @@
 
 <link rel="stylesheet" type="text/css" href="../css/sap-icons.css"/>
 
-# Adding a Section to an Object Page
+# Adding a Custom Section to an Object Page
 
 You can add custom sections to your object page, as described in this document.
 
@@ -40,7 +40,7 @@ Find out how to add a section to an object page using SAP Fiori tools.
 > 
 > After you've created an app extension, its display \(for example, control placement and layout\) and system behavior \(for example, model and binding usage, busy handling\) lies within the application's responsibility. SAP Fiori elements provides support only for the official `extensionAPI` functions. Don't access or manipulate controls, properties, models, or other internal objects created by the SAP Fiori elements framework.
 
-For this example, you want to add a section called *Product Description* to the object page of the *Manage Products* app.
+The following steps show you how to add a custom section, namely *Product Description*, to the object page of the*Manage Products* application:
 
 > ### Note:  
 > We've removed videos showing step-by-step procedures using SAP Web IDE, which SAP no longer actively supports. You can still access the video using an older version of this document.
@@ -54,7 +54,7 @@ In the editor of your choice, open the folder structure of the project where you
 1.  In the `webapp` folder, create a new subfolder called `ext`.
 2.  In the folder `ext`, create a new subfolder called `view`.
 3.  In the `view` folder, create file `DescriptionBreakout.view.xml`.
-4.  Define the view with its elements, here a `TextArea` that consumes the section title for the product description text in the original language.
+4.  Define the view with its elements. The following sample code is for the `TextArea` element. The title for `TextArea` is translatable and is picked from the `i18n` file.
 
 > ### Sample Code:  
 > ```
@@ -88,11 +88,13 @@ To make the section title translatable, add the text to the `i18n` file as follo
 
 To add the extension definition to the `manifest.json` file, use a `viewExtension`.
 
-The extension appears within the `ObjectPage.view` using the `AfterFacet` option.
+In the following example, the custom section is placed after the `GeneralInformation` section:
 
 > ### Sample Code:  
-> ```
 > manifest.json
+> 
+> ```
+> 
 > 	"extends": {
 > 			"extensions": {
 > 				"sap.ui.viewExtensions": {
@@ -118,40 +120,46 @@ To add multiple sections, the extension name needs to contain a key after the an
 > ```
 > "extends": {
 >     "extensions": {
->      "BeforeFacet|SEPMRA_C_PD_Product|to_ProductText::com.sap.vocabularies.UI.v1.LineItem": {
->       "className": "sap.ui.core.Fragment",
->       "fragmentName": "nw.epm.refapps.st.prod.manage.ext.BeforeFacetTest",
->       "type": "XML",
->       "sap.ui.generic.app": {
->          "title": "Facet Breakout before Product Text LineItem"
->       }
->      },
->      "BeforeFacet|SEPMRA_C_PD_Product|to_ProductText::com.sap.vocabularies.UI.v1.LineItem|1": {
->       "className": "sap.ui.core.Fragment",
->       "fragmentName": "nw.epm.refapps.st.prod.manage.ext.BeforeFacetTestNew",
->       "type": "XML",
->       "sap.ui.generic.app": {
->          "title": "Facet Breakout before Product Text LineItem",
->           "key" : "1"
->       }
->      }
->      "AfterFacet|SEPMRA_C_PD_Product|to_Supplier::com.sap.vocabularies.UI.v1.Identification": {
->       "className": "sap.ui.core.Fragment",
->       "fragmentName": "nw.epm.refapps.st.prod.manage.ext.AfterFacetTest",
->       "type": "XML",
->       "sap.ui.generic.app": {
->          "title": "Facet Breakout after Supplier Identification"
->       }
->      },
->      "AfterFacet|SEPMRA_C_PD_Product|to_Supplier::com.sap.vocabularies.UI.v1.Identification|1": {
->       "className": "sap.ui.core.Fragment",
->       "fragmentName": "nw.epm.refapps.st.prod.manage.ext.AfterFacetTest",
->       "type": "XML",
->       "sap.ui.generic.app": {
->          "title": "Facet Breakout after Supplier Identification",
->          "key": 1
->       }
-> 
+>         "sap.ui.viewExtensions": {
+>           "sap.suite.ui.generic.template.ObjectPage.view.Details": {
+>             "BeforeFacet|SEPMRA_C_PD_Product|to_ProductText::com.sap.vocabularies.UI.v1.LineItem": {
+>                 "className": "sap.ui.core.mvc.View",
+>                 "viewName": "ManageProducts.ext.view.BeforeFacetTest",
+>                 "type": "XML",
+>                 "sap.ui.generic.app": {
+>                     "title": "Facet Breakout before Product Text LineItem"
+>                 }
+>             },
+>             "BeforeFacet|SEPMRA_C_PD_Product|to_ProductText::com.sap.vocabularies.UI.v1.LineItem|1": {
+>                 "className": "sap.ui.core.mvc.View",
+>                 "viewName": "ManageProducts.ext.view.BeforeFacetTestNew",
+>                 "type": "XML",
+>                 "sap.ui.generic.app": {
+>                     "title": "Facet Breakout before Product Text LineItem",
+>                     "key": "1"
+>                 }
+>             },
+>             "AfterFacet|SEPMRA_C_PD_Product|to_Supplier::com.sap.vocabularies.UI.v1.Identification": {
+>                 "className": "sap.ui.core.mvc.View",
+>                 "viewName": "ManageProducts.ext.view.AfterFacetTest",
+>                 "type": "XML",
+>                 "sap.ui.generic.app": {
+>                     "title": "Facet Breakout after Supplier Identification"
+>                 }
+>             },
+>             "AfterFacet|SEPMRA_C_PD_Product|to_Supplier::com.sap.vocabularies.UI.v1.Identification|1": {
+>                "className": "sap.ui.core.mvc.View",
+>                "viewName": "ManageProducts.ext.view.AfterFacetTest",
+>                "type": "XML",
+>                "sap.ui.generic.app": {
+>                     "title": "Facet Breakout after Supplier Identification",
+>                     "key": 1
+>                 }
+>             }
+>           }
+>         }
+>     }
+> }
 > ```
 
 

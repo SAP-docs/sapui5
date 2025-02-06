@@ -227,7 +227,7 @@ After that, here is what you need to do:
 
     ```js
     
-    sap.ui.comp.filterbar.FilterBar.extend(“my.ui5flex.FilterBar”) {..}
+    sap.ui.comp.filterbar.FilterBar.extend("my.ui5flex.FilterBar") {..}
     ```
 
 2.  Overwrite the internal `_initializeVariantManagement` function of the `FilterBar` control.

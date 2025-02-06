@@ -22,7 +22,7 @@ In this step, we create an additional page that is displayed in a separate fulls
 
 ## Coding
 
-You can view and download all files at [Flexible Column Layout App - Step 10](https://ui5.sap.com/#/sample/sap.f.tutorial.fiori2.10/preview).
+You can view and download all files at [Flexible Column Layout App - Step 10](https://ui5.sap.com/#/sample/sap.f.tutorial.fcl.10/preview).
 
 
 
@@ -124,7 +124,7 @@ Similar to the previous step, we add the additional page view to our existing ro
 
 ```xml
 <mvc:View
-	controllerName="sap.ui.demo.fiori2.controller.DetailDetail"
+	controllerName="sap.ui.demo.fcl.controller.DetailDetail"
 	xmlns="sap.f"
 	xmlns:m="sap.m"
 	xmlns:mvc="sap.ui.core.mvc">
@@ -155,13 +155,12 @@ We add a link in the detail-detail page with a `press` event handler.
 
 ```js
 sap.ui.define([
-	"sap/ui/model/json/JSONModel",
 	"sap/ui/core/mvc/Controller",
 	'sap/f/library'
-], function (JSONModel, Controller, fioriLibrary) {
+], function (Controller, fioriLibrary) {
 	"use strict";
 
-	return Controller.extend("sap.ui.demo.fiori2.controller.DetailDetail", {
+	return Controller.extend("sap.ui.demo.fcl.controller.DetailDetail", {
 		onInit: function () {
 			var oOwnerComponent = this.getOwnerComponent();
 

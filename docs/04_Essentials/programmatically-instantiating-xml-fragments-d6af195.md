@@ -28,7 +28,7 @@ this.loadFragment({
 > ### Note:  
 > Fragments of any type can be used within views of any type.
 
-If XML fragments are used within XML views, the fragment ID is prefixed by default with the view ID. This will allow you to call `this.byId(…)` in the view’s controller in order to retrieve controls inside the fragment. The following code inside the controller will instantiate the above fragment with the `Button`, and then retrieve the `Button` via its ID:
+If XML fragments are used within XML views, the fragment ID is prefixed by default with the view ID. This will allow you to call `this.byId(…)` in the view's controller in order to retrieve controls inside the fragment. The following code inside the controller will instantiate the above fragment with the `Button`, and then retrieve the `Button` via its ID:
 
 ```xml
 

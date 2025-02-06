@@ -200,7 +200,7 @@ Add card to insights
 </td>
 <td valign="top">
 
-[Creating Cards for the Insights Cards Section of My Home in SAP S/4HANA Cloud and My Home in SAP S/4HANA](creating-cards-for-the-insights-cards-section-of-my-home-in-sap-s-4hana-cloud-and-my-home-9b13559.md) 
+[Creating Cards for the Insights Cards Section of My Home in SAP S/4HANA Cloud Public Edition and My Home in SAP S/4HANA](creating-cards-for-the-insights-cards-section-of-my-home-in-sap-s-4hana-cloud-public-edit-9b13559.md) 
 
 </td>
 <td valign="top">
@@ -1235,7 +1235,7 @@ Contact quick view
   
 **Contact Quick View**
 
-![](images/Feature_map_Contact_Quick_View_57923ca.jpg "Contact Quick View")
+![](images/Feature_map_Contact_Quick_View_57923ca.png "Contact Quick View")
 
 </td>
 <td valign="top">
@@ -2077,7 +2077,7 @@ Default values for action parameter dialog
   
 **Default Values for Action Parameter**
 
-![](images/Default_Values_for_Action_Parameters_d77753a.png "Default Values for Action Parameter")
+![](images/feature_map_Default_Values_for_Action_Parameters_d77753a.png "Default Values for Action Parameter")
 
 </td>
 <td valign="top">
@@ -2164,7 +2164,7 @@ Dialog box
   
 **Dialog**
 
-![](images/Dialog_Dragging_2a8512f.jpg "Dialog ")
+![](images/Feature_map_Dialog_Dragging_2a8512f.png "Dialog ")
 
 </td>
 <td valign="top">
@@ -2343,7 +2343,7 @@ Editing status
   
 **Editing status**
 
-![](images/Feature_map_Editing_status_886d379.jpg "Editing status")
+![](images/Feature_map_Editing_status_886d379.png "Editing status")
 
 </td>
 <td valign="top">
@@ -2538,7 +2538,7 @@ Filter bar
   
 **Filter Bar**
 
-![](images/Expanded_Filter_Bar_c3f0792.jpg "Filter Bar")
+![](images/Expanded_Filter_Bar_c3f0792.png "Filter Bar")
 
 </td>
 <td valign="top">
@@ -2670,7 +2670,7 @@ Flexible column layout
   
 **Flexible Column Layout**
 
-![](images/Flexible_Column_Layout_03e717b.png "Flexible Column Layout")
+![](images/Feature_map_Flexible_Column_Layout_03e717b.png "Flexible Column Layout")
 
 </td>
 <td valign="top">
@@ -4512,7 +4512,7 @@ Multiple selection of lines in tables
   
 **Multiple selection of lines in tables**
 
-![](images/Feature_map_Multiple_selection_of_lines_in_tables_5d8fb93.jpg "Multiple selection of lines in tables ")
+![](images/Feature_map_Multiple_selection_of_lines_in_tables_5d8fb93.png "Multiple selection of lines in tables ")
 
 </td>
 <td valign="top">
@@ -5082,7 +5082,7 @@ Object page
   
 **Related Apps Button**
 
-![](images/Related_Apps_Button_b2ba0cd.png "Related Apps Button")
+![](images/Feature_map_Related_Apps_Button_b2ba0cd.png "Related Apps Button")
 
 </td>
 <td valign="top">

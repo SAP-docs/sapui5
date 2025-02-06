@@ -103,5 +103,5 @@ We are now done with this step. Try to access the following pages:
 -   `webapp/index.html#/employees/overview?search=an&sortField=EmployeeID&sortDescending=true&showDialog=1`
 
 
-As you can see, the dialog opens automatically if the parameter `showDialog=1` is added to the URL. That’s exactly what we wanted.
+As you can see, the dialog opens automatically if the parameter `showDialog=1` is added to the URL. That's exactly what we wanted.
 

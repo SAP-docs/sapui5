@@ -85,33 +85,33 @@ Currently, the following libraries have screen reader support based on the ARIA 
 
 ### Roles
 
-Roles are used to define a type of user interface \(UI\) element \(for example`role=“ROLE_NAME”`\). Once a role is set for an element, it does not change.
+Roles are used to define a type of user interface \(UI\) element \(for example`role="ROLE_NAME"`\). Once a role is set for an element, it does not change.
 
--   Document Structure Roles: Document structure roles aren’t normally interactive, but instead provide descriptions for sections within a page. Commonly used examples: `img`, `document`, `heading`, `list`, `listitem`, and `toolbar`
+-   Document Structure Roles: Document structure roles aren't normally interactive, but instead provide descriptions for sections within a page. Commonly used examples: `img`, `document`, `heading`, `list`, `listitem`, and `toolbar`
 
     > ### Example:  
-    > role=“toolbar”
+    > role="toolbar"
 
     You can see a full list on the [ARIA Document Structure](https://www.w3.org/TR/wai-aria/#document_structure_roles) page.
 
 -   Landmark Roles: Created for easier navigation, landmark roles identify each section of content within a page. Commonly used examples: `banner`, `contentinfo`, `form`, `main`, `navigation`, `search`
 
     > ### Example:  
-    > role=“search”
+    > role="search"
 
     You can see a full list on the [ARIA Landmark Roles](https://www.w3.org/TR/wai-aria/#landmark_roles) page.
 
--   Widget Roles: Used when HTML doesn’t define elements, widget roles add semantic meaning to elements and UIs. Widget Roles, standalone UI widgets are part of larger, composite widgets, while composite UI widgets act as containers that manage other contained widgets.
+-   Widget Roles: Used when HTML doesn't define elements, widget roles add semantic meaning to elements and UIs. Widget Roles, standalone UI widgets are part of larger, composite widgets, while composite UI widgets act as containers that manage other contained widgets.
 
     Commonly used examples of standalone UI widgets include `alert`, `checkbox`, `link`, `menuitem`, `tab`, and `tabpanel` 
 
     > ### Example:  
-    > role=“tabpanel”
+    > role="tabpanel"
 
     Commonly used examples of composite UI widgets include `combobox`, `grid`, `listbox`, `menu`, `radiogroup`, and `tablist` 
 
     > ### Example:  
-    > i.e. role=“tablist”
+    > i.e. role="tablist"
 
     You can see a full list on the [ARIA Widget Roles](https://www.w3.org/TR/wai-aria/#widget_roles) page.
 

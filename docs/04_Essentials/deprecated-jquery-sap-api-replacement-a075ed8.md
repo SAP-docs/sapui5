@@ -2391,7 +2391,7 @@ Complex Replacement
 
 **Apps Used Within the SAP Fiori launchpad**
 
-Register your local UI5 reuse components and UI5 libraries in the manifest.json under `sap.ui5/componentUsages` and `sap.ui5/dependencies/libs`, respectively. For more information, see [Descriptor for Applications, Components, and Libraries \(manifest.json\)](descriptor-for-applications-components-and-libraries-manifest-json-be0cf40.md) and [Descriptor Dependencies to Libraries and Components](descriptor-dependencies-to-libraries-and-components-8521ad1.md).
+Register your local UI5 reuse components and UI5 libraries in the manifest.json under `sap.ui5/componentUsages` and `sap.ui5/dependencies/libs`, respectively. For more information, see [Manifest \(Descriptor for Applications, Components, and Libraries\)](manifest-descriptor-for-applications-components-and-libraries-be0cf40.md) and [Descriptor Dependencies to Libraries and Components](descriptor-dependencies-to-libraries-and-components-8521ad1.md).
 
 **Standalone Apps**
 
@@ -2427,7 +2427,7 @@ Complex Replacement
 
 **Apps Used Within the SAP Fiori launchpad**
 
-Register your local UI5 reuse components and UI5 libraries in the manifest.json under `sap.ui5/componentUsages` and `sap.ui5/dependencies/libs`, respectively. For more information, see [Descriptor for Applications, Components, and Libraries \(manifest.json\)](descriptor-for-applications-components-and-libraries-manifest-json-be0cf40.md) and [Descriptor Dependencies to Libraries and Components](descriptor-dependencies-to-libraries-and-components-8521ad1.md).
+Register your local UI5 reuse components and UI5 libraries in the manifest.json under `sap.ui5/componentUsages` and `sap.ui5/dependencies/libs`, respectively. For more information, see [Manifest \(Descriptor for Applications, Components, and Libraries\)](manifest-descriptor-for-applications-components-and-libraries-be0cf40.md) and [Descriptor Dependencies to Libraries and Components](descriptor-dependencies-to-libraries-and-components-8521ad1.md).
 
 **Standalone Apps**
 

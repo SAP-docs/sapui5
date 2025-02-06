@@ -2,7 +2,7 @@
 
 # Step 1: Hello World! \(TypeScript\)
 
-As you know SAPUI5 is all about HTML5. Let’s get started with building a first “Hello World” with HTML. This tutorial version has been set up in a way that allows the use of UI5 Tooling in combination with it.
+As you know SAPUI5 is all about HTML5. Let's get started with building a first "Hello World" with HTML. This tutorial version has been set up in a way that allows the use of UI5 Tooling in combination with it.
 
 
 
@@ -32,7 +32,7 @@ Open a terminal and install UI5 Tooling globally on your machine by executing th
 
 You can view all files at [OpenUI5 TypeScript Walkthrough - Step 1: Hello World!](https://github.com/sap-samples/ui5-typescript-walkthrough/tree/main/steps/01) and [download the solution as a zip file](https://sap-samples.github.io/ui5-typescript-walkthrough/ui5-typescript-walkthrough-step-01.zip).
 
-Create a folder on your local machine which will contain all the sources of the app we're going to build. We refer to this folder as the “app root directory”.
+Create a folder on your local machine which will contain all the sources of the app we're going to build. We refer to this folder as the "app root directory".
 
 
 
@@ -62,7 +62,7 @@ In our `webapp` folder, we create a new HTML file named `index.html` and enter t
 > 
 > Using meta tags, we can influence the behavior of the browser. In this case, we tell the browser to use `UTF-8` as the document character set.
 > 
-> We also give our app a title that will be displayed in the browser. Our hard-coded title can be overruled by the app, for example to show a title in the language of the user. The body part describes the layout of the page. In our case, we simply display “Hello World” by using a `div` tag.
+> We also give our app a title that will be displayed in the browser. Our hard-coded title can be overruled by the app, for example to show a title in the language of the user. The body part describes the layout of the page. In our case, we simply display "Hello World" by using a `div` tag.
 
 
 
@@ -77,7 +77,7 @@ Hence, we create a new file named `manifest.json` in the webapp folder and defin
 -   The `_version` attribute is a mandatory field in the app descriptor that indicates the format version of the descriptor. This attribute is crucial for identifying application settings when the descriptor is read by various tools. As new features or changes are introduced in future versions of the descriptor, the version number helps to ensure compatibility and proper interpretation of the descriptor's contents. Consequently, with each new version of SAPUI5 a corresponding version of the app descriptor is released. For this tutorial, we have determined that our app requires a minimum SAPUI5 version of 1.128. Therefore, we specify the descriptor format version as 1.65.0, aligning it with the appropriate SAPUI5 version.
 
     > ### Note:  
-    > To find the appropriate `_version` for each SAPUI5 release, see [Descriptor for Applications, Components, and Libraries \(manifest.json\)](../04_Essentials/descriptor-for-applications-components-and-libraries-manifest-json-be0cf40.md).
+    > To find the appropriate `_version` for each SAPUI5 release, see [Manifest \(Descriptor for Applications, Components, and Libraries\)](../04_Essentials/manifest-descriptor-for-applications-components-and-libraries-be0cf40.md).
 
 -   The **`sap.app`** namespace is used to define properties that are specific to the application itself. It includes the following obligatory application-specific attributes:
 
@@ -160,7 +160,7 @@ This opens a new browser window hosting your newly created `index.html`.
 **Related Information**  
 
 
-[Descriptor for Applications, Components, and Libraries \(manifest.json\)](../04_Essentials/descriptor-for-applications-components-and-libraries-manifest-json-be0cf40.md "The descriptor for applications, components, and libraries (in short: app descriptor) is inspired by the WebApplication Manifest concept introduced by the W3C. The descriptor provides a central, machine-readable, and easy-to-access location for storing metadata associated with an application, an application component, or a library.")
+[Manifest \(Descriptor for Applications, Components, and Libraries\)](../04_Essentials/manifest-descriptor-for-applications-components-and-libraries-be0cf40.md "The manifest (also known as descriptor for applications, components, and libraries, in short: app descriptor) is inspired by the WebApplication Manifest concept introduced by the W3C. The manifest provides a central, machine-readable, and easy-to-access location for storing metadata associated with an application, an application component, or a library.")
 
 [Development Environment](../05_Developing_Apps/development-environment-7bb04e0.md "This part of the documentation introduces you to some common and recommended use cases for the installation, configuration, and setup of SAPUI5 development environments.")
 

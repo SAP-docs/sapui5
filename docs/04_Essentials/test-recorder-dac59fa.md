@@ -52,7 +52,7 @@ There are three general types of testing-relevant information that you can gathe
 > ### Note:  
 > -   If an ID is not stable \(because it was generated automatically\), it's not suitable for tests. Unstable IDs start with a double underscore.
 > 
-> -   Many controls can have the same property or binding values. Therefore, when you use them in a control locator, the test finds multiple controls. This is a valid scenario, but it’s always more reliable to locate only one control with a highly specific locator.
+> -   Many controls can have the same property or binding values. Therefore, when you use them in a control locator, the test finds multiple controls. This is a valid scenario, but it's always more reliable to locate only one control with a highly specific locator.
 
 
 

@@ -10,9 +10,9 @@ There are two different modes for configuring object pages. Both modes deal with
 
     Consider the following use cases:
 
-    -   The filter applied to one object doesn’t affect the next object.
+    -   The filter applied to one object doesn't affect the next object.
 
-    -   Tab selection doesn’t persist on all objects. When you open a new object, the application always selects the first tab on the page.
+    -   Tab selection doesn't persist on all objects. When you open a new object, the application always selects the first tab on the page.
 
 
 -   Persistence mode: This is the default mode for applications that use the flexible column layout. In this mode, changes made to the underlying controls affect the current object and an object at the same level when you navigate to another object using a paginator button, for example.

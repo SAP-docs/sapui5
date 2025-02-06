@@ -33,7 +33,7 @@ Check the following:
 
 <a name="loio35274280504f42cd87cc4fd3d403ca91__section_bmb_v5d_zz"/>
 
-## I’ve changed a UI element, but the change is not applied everywhere
+## I've changed a UI element, but the change is not applied everywhere
 
 UI elements that you change in one place might not be changed in all other places where they are used. Reason: Key user adaptation allows to change controls, not data or metadata. For example, if you rename a label defined in the OData metadata \(annotations\), the label is not changed everywhere in the app, and you must rename each occurrence individually.
 
@@ -53,7 +53,7 @@ If you create a control ID within fragments or controller code, the ID of the pa
 
 This error refers to the `applicationVersion` attribute in the app descriptor \(`manifest.json` file\). If this mandatory attribute is missing or invalid, the UI cannot be adapted.
 
-For more information about the app descriptor and its attributes, see [Descriptor for Applications, Components, and Libraries \(manifest.json\)](../04_Essentials/descriptor-for-applications-components-and-libraries-manifest-json-be0cf40.md)
+For more information about the app descriptor and its attributes, see [Manifest \(Descriptor for Applications, Components, and Libraries\)](../04_Essentials/manifest-descriptor-for-applications-components-and-libraries-be0cf40.md)
 
 
 
@@ -66,7 +66,7 @@ Reason: In the `sap.ui5` section of the `manifest.json`, the `flexEnabled` flag 
 
 
 > ### Tip:  
-> For more information about the FAQ for users of key user adaptation, search for `Something Isn’t Working like It Should?` in the documentation for your [SAP NetWeaver](https://help.sap.com/viewer/p/SAP_NETWEAVER) version on the SAP Help Portal.
+> For more information about the FAQ for users of key user adaptation, search for `Something Isn't Working like It Should?` in the documentation for your [SAP NetWeaver](https://help.sap.com/viewer/p/SAP_NETWEAVER) version on the SAP Help Portal.
 
 **Related Information**  
 

@@ -318,7 +318,7 @@ You can annotate the `FilterRestriction` for a filter field in a navigation enti
     >             NavigationProperty: _Material,
     >             FilterRestrictions: {
     >                FilterExpressionRestrictions: [{
-    >                   Property: 'Material’,
+    >                   Property: 'Material',
     >                   AllowedExpressions : 'SingleValue'
     >                }]
     >             }
@@ -332,7 +332,7 @@ You can annotate the `FilterRestriction` for a filter field in a navigation enti
     > XML Annotation \(containment scenario\): /Customer/Set/\_PartnerItems
     > 
     > ```xml
-    > <Annotations Target=”sap.fe.test.MyService.EntityContainer/Customer”>
+    > <Annotations Target="sap.fe.test.MyService.EntityContainer/Customer">
     >    <Annotation Term="Capabilities.NavigationRestrictions">
     >       <Record>
     >          <PropertyValue Property="RestrictedProperties">
@@ -545,7 +545,7 @@ You can annotate the `FilterRestriction` for a filter field in a navigation enti
 
 **Prioritization**
 
-If the annotation holds more than one of these approaches, the filter restrictions are merged from different approaches for each field. If there’s an annotation with a higher priority, it overrides the annotation with a lower priority for the same field. The prioritization is as follows:
+If the annotation holds more than one of these approaches, the filter restrictions are merged from different approaches for each field. If there's an annotation with a higher priority, it overrides the annotation with a lower priority for the same field. The prioritization is as follows:
 
 1.  Filter Restrictions at Association Entity
 
@@ -565,7 +565,7 @@ If the annotation holds more than one of these approaches, the filter restrictio
 > 
 > -   CityName - MultiValue field since higher priority annotation wins
 > 
-> -   PartnerAddress - MultiValue field. Since this wasn’t defined via a higher priority approach, the lower priority approach persists.
+> -   PartnerAddress - MultiValue field. Since this wasn't defined via a higher priority approach, the lower priority approach persists.
 
 
 

@@ -10,7 +10,7 @@ Back-end systems can generate either a state message or a transition message.
 
     A state message refers to the state of an instance, for example when a user tries to activate an object with field values that return an error like "Amount must not be negative". These messages are displayed on the UI until the state of the related instance has been corrected, for example by changing the amount attribute to a positive value. The messages are displayed to the user and also persisted in the back-end system.
 
-    State messages are not expected or supported in the list report and on the object page \(or subobject page\) in display mode. In edit mode of the object page \(or subobject page\), state messages are shown in the message popover. The popover only shows the message of the current object and its subtree, but not the messages from objects above. Client-side validation messages are also shown here.
+    State messages are not expected or supported in the list report and on the object page \(or subobject page\) in display mode. In edit mode of the object page \(or subobject page\), state messages are shown in the message popover. The popover only shows the message of the current object and its subtree, but not the messages from objects above that level. Client-side validation messages are also shown here.
 
 -   Transition message
 
@@ -23,18 +23,18 @@ Back-end systems can generate either a state message or a transition message.
 
 ## Back-End Validation Messages After a Field Change
 
-Use input validations moderately, as they can slow down the response and unnecessarily prevent the end user from providing incomplete entries in the draft status.
+Use input validations moderately, as they can slow down the response time and unnecessarily prevent the end user from providing incomplete entries in the draft status.
 
-Input must be validated before the draft object is activated, or when the end user uses the Enter button or Validation button on mobile devices. The validation process must return state messages for the fields that have invalid values. If there are invalid values in any fields, the draft is not activated and the end user returns to the draft version to correct the values. After the user corrects the value in a field, the back end must validate each changed field again and remove or display a state message corresponding to that field.
+Input must be validated before the draft object is activated, or when the end user uses the Enter button or *Validation* button on mobile devices. The validation process must return state messages for the fields that have invalid values. If there are invalid values in any fields, the draft is not activated and the end user returns to the draft version to correct the values. After the user corrects the value in a field, the back end must validate each changed field again and remove or display a state message corresponding to that field.
 
 > ### Note:  
-> You can configure multiple targets in a single message rather than configuring each target in multiple messages. This type of configuration must be used only during special scenarios. One scenario is while some fields are individually correct but erroneous when considered collectively. For example, the begin date value surpasses the end date value. Another scenario is while highlighting the unit of measure value of an associated erroneous field. In these scenarios, you must ensure that the fields corresponding to different targets are on the same page in the UI.
+> You can configure multiple targets in a single message rather than configuring each target in multiple messages. This type of configuration must be used only during special scenarios, for example, some fields might be correct individually but are erroneous when considered collectively, like when the start date value surpasses the end date value. Another scenario is while highlighting the unit of measure value of an associated erroneous field. In these scenarios, you must ensure that the fields corresponding to different targets are on the same page in the UI.
 
 
 
 <a name="loio239b1922758645e7b451e01ded7f56bc__section_hhy_fsm_vsb"/>
 
-## Handling of 412 Messages \("Precondition Failed" Messages\)
+## Handling of 412 Messages \("Precondition Failed" \)
 
 Messages of this type allow users to retry the action that triggered the message by ignoring the 412 warnings. For more information, see [Confirmation Popups](confirmation-popups-9a53662.md).
 
@@ -44,10 +44,10 @@ Messages of this type allow users to retry the action that triggered the message
 
 ## Additional Features in SAP Fiori Elements for OData V2
 
-Transition messages are always shown in message dialog - this is true also in edit mode of an object page. Draft operations are handled like actions, for example, activate, prepare, or validate operations.
+Transition messages are always shown in the message dialog - this is true also in edit mode of an object page. Draft operations are handled like actions, for example, activate, prepare, or validate operations.
 
 > ### Note:  
-> Avoid raising transition messages during prepare and validate operations. The user would see them in a dialog box and this UI behavior is not needed in edit mode.
+> Avoid raising transition messages during prepare and validate operations. The user sees them in a dialog box and this UI behavior is not needed in edit mode.
 
 
 
@@ -63,7 +63,7 @@ For more information about the different transport channels for the different ki
 
 State messages are always sent with the body in a complex type, meaning you can annotate the name of the message using `@com.sap.vocabularies.Common.v1.Messages`, but only if requested from the client. Once requested, the model removes the existing state messages for the current entity and fills the message model again with the returned ones from the back end.
 
-Applications must annotate side effects with the target to the message property for each property change that can result in new or removed messages. It's designed like this because not every update results in changed messages. If the update is just a dump patch without underlying business logic, there is no need to remove the messages on the client, read them in the back end and transfer them to the client again.
+Applications must annotate side effects with the target to the message property for each property change that can result in new or removed messages. It's designed like this because not every update results in changed messages. If the update is just a dump patch without underlying business logic, there is no need to remove the messages on the client, read them in the back end, and transfer them to the client again.
 
 The following is an example of a side effects annotation:
 
@@ -85,7 +85,7 @@ The following is an example of a side effects annotation:
 > </Annotation>
 > ```
 
-If an app needs to read the messages for all properties, you can add a side effect with the entity as source entity, as shown in the following example:
+If an app needs to read the messages for all properties, you can add a side effect with the entity as a source entity, as shown in the following example:
 
 > ### Sample Code:  
 > ```
@@ -105,7 +105,7 @@ If an app needs to read the messages for all properties, you can add a side effe
 > </Annotation>
 > ```
 
-Actions that return an entity with an annotated message property are likely to also change state messages. Therefore, if no side effect was annotated, we implicitly request for the message property. If a side effect is annotated, the application must add the message property to the `TargetProperties` of this side effect’s definition.
+Actions that return an entity with an annotated message property are likely to also change state messages. Therefore, if no side effect was annotated, we implicitly request the message property. If a side effect is annotated, the application must add the message property to the `TargetProperties` of this side effect's definition.
 
 
 
@@ -117,7 +117,7 @@ Unbound messages are always considered as transition messages.
 
 – Handling Bound Messages –
 
-Bound messages \(both state and transition\) are shown in a message popover in edit mode. The message popover allows to display a summarized list of different types of bound messages. In addition, it provides a handy and systemized way to navigate to messages and view the details. The messages for subitems are also shown. Messages are grouped based on the name of the message group the current item belongs to, or else categorized under ‘General’.
+Bound messages \(both state and transition\) are shown in a message popover in edit mode. The message popover allows the display of a summarized list of different types of bound messages. In addition, it provides a systemized way to navigate to messages and view the details. The messages for subitems are also shown. Messages are grouped based on the name of the message group the current item belongs to, or else categorized under 'General'.
 
 Bound transition messages are shown in the message dialog in the list report and on the object page \(or subobject page\) in display mode. State messages are not supported. If there is exactly one transition success message, the message is shown in a message toast.
 
@@ -145,9 +145,9 @@ Layout: Message Popover
 
 The message popover consists of the following components:
 
--   Filter: You use the filter function to filter messages based on their severity \(for example error, success, or warning messages\).
+-   Filter: Filter messages based on their severity \(for example error, success, or warning messages\).
 
--   Group Name: Name of the message group the current item belongs to \(otherwise categorized under 'General'\).
+-   Group Name: Name of the message group that the current item belongs to \(otherwise categorized under 'General'\).
 
     Messages from the back end are grouped by tables, indicating the section and table name. This allows users to easily see which table an error message is related to if the app contains many tables.
 
@@ -157,7 +157,7 @@ The message popover consists of the following components:
 
 -   Chevron navigation to the detailed description of the message \(if this is supplied by the back end\).
 
-    If the message model provides a long text from the back end, the user is able to navigate to the details section from the message popover. There, the user typically finds more detailed information.
+    If the message model provides a long text from the back end, the user can navigate to the details section from the message popover. There, the user typically finds more detailed information.
 
       
       
@@ -170,7 +170,7 @@ Navigation is also supported from the messages. This allows end users to navigat
 
 – Handling Unbound Messages –
 
-A message dialog is used to display a summarized list of different types of unbound messages \(messages that are not associated with any specific instance, for example a message like “No new sales order can be created since the system is under maintenance until the end of the week.”\). It provides a handy and systemized way to navigate and explore the technical details of every message. It automatically displays messages related to a user action connected to the back end, or to service failures or errors.
+A message dialog displays a summarized list of different types of unbound messages \(messages that are not associated with any specific instance, for example, a message like "No new sales order can be created since the system is under maintenance until the end of the week."\). It provides an organized way to navigate and explore the technical details of every message. It automatically displays messages related to a user action connected to the back end, or to service failures or errors.
 
 Usage
 
@@ -181,11 +181,11 @@ Layout: Message Dialog
 
 The message dialog consists of the following components:
 
--   Filter: You use the filter function to filter messages based on their severity \(for example error, success, or warning messages\).
+-   Filter: Filter messages based on their severity \(for example error, success, or warning messages\).
 
 -   Type: Indicates the type of the message.
 
--   Title/Subtitle: Use this feature to provide a title and subtitle for the message.
+-   Title/Subtitle: Provide a title and subtitle for the message.
 
 -   Description: Provides the long text of the message with detailed information.
 
@@ -202,11 +202,11 @@ The message dialog consists of the following components:
 
 
 
-### Special Handling of 503 Messages \("Service Unavailable" Messages\)
+### Special Handling of 503 Messages \("Service Unavailable" \)
 
-When the back end is not available, the gateway typically throws an error type of type 503: "Service Unavailable". Such errors are handled as follows:
+When the back end is not available, the gateway typically throws an error type 503: "Service Unavailable". Such errors are handled as follows:
 
--   If the error is received at the application startup, an error page is shown.
+-   If the error is received when the application starts up, an error page is shown.
 
 -   If a "retry-after" is provided in the response header, the "retry-after" value is considered:
 
@@ -222,5 +222,5 @@ When the back end is not available, the gateway typically throws an error type o
 
 ### Using Status Messages on the Object Page
 
-Based on information received from the back end, we show a message strip on the object page with a status message for the object whenever it’s relevant to the entire object \(and not to a child entity or a specific field, for example\). The color of the message strip is derived from the criticality of the message. You can hide the message strip or display a specific message using the `ExtensionAPI`. For more information about the `ObjectPage.ExtensionAPI`, see the [API Reference](https://ui5.sap.com/#/api/sap.fe.templates.ObjectPage.ExtensionAPI/methods/showMessages).
+Based on information received from the back end, we show a message strip on the object page with a status message for the object whenever it's relevant to the entire object \(and not to a child entity or a specific field, for example\). The color of the message strip is derived from the criticality of the message. You can hide the message strip or display a specific message using the `ExtensionAPI`. For more information about the `ObjectPage.ExtensionAPI`, see the [API Reference](https://ui5.sap.com/#/api/sap.fe.templates.ObjectPage.ExtensionAPI/methods/showMessages).
 

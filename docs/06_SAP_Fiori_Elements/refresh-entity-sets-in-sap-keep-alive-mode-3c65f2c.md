@@ -141,7 +141,7 @@ You can either **switch off** or override the default refresh behavior settings 
 
 **Other External Navigation Including Navigation Using Extension APIs**
 
-The following sample code shows you how to configure `manifest.json` to define refresh strategies for specific outbound navigation. You can also define the default refresh strategies for external navigation for cases wherein an outbound navigation doesn’t have specific refresh strategies.
+The following sample code shows you how to configure `manifest.json` to define refresh strategies for specific outbound navigation. You can also define the default refresh strategies for external navigation for cases wherein an outbound navigation doesn't have specific refresh strategies.
 
 > ### Sample Code:  
 > manifest.json
@@ -267,7 +267,7 @@ The following sample code shows you how to use extensions to navigate back to th
 > ```
 
 > ### Note:  
-> If the back-end service isn’t ETag enabled, and the table in List Report is configured to be refreshed in Flexible Column Layout mode, the refresh is triggered for all of the table’s entity set dependents. To avoid this, enable ETag for your back-end service.
+> If the back-end service isn't ETag enabled, and the table in List Report is configured to be refreshed in Flexible Column Layout mode, the refresh is triggered for all of the table's entity set dependents. To avoid this, enable ETag for your back-end service.
 
 **Refresh in Scenarios Involving Navigation from Reuse Component or Extension View**
 

@@ -33,14 +33,14 @@ Different people perceive and interpret colors in different ways, which is somet
 
         ```
         // "Theming" required from module "sap/ui/core/Theming"
-        Theming.setTheme(“sap_horizon_hcb”);
+        Theming.setTheme("sap_horizon_hcb");
         ```
 
         or
 
         ```
         // "Theming" required from module "sap/ui/core/Theming"
-        Theming.setTheme(“sap_horizon_hcw”);
+        Theming.setTheme("sap_horizon_hcw");
         ```
 
 

@@ -183,9 +183,9 @@ The *See more* button is only displayed for subsections that contain one of the 
 
 The following additional rules are internally applied to display the contents of the `ObjectPageLayout` correctly. Each rule is applied to the output of the preceding rule.
 
-1.  If the subsection content is empty \(contains no blocks\), it isn’t displayed \(no anchor is displayed for that subsection in the anchor bar and no title is displayed in the page body\).
+1.  If the subsection content is empty \(contains no blocks\), it isn't displayed \(no anchor is displayed for that subsection in the anchor bar and no title is displayed in the page body\).
 
-2.  If the section content is empty \(contains no subsections\), it isn’t displayed \(no anchor is displayed for that section in the anchor bar and no title is displayed in the page body\).
+2.  If the section content is empty \(contains no subsections\), it isn't displayed \(no anchor is displayed for that section in the anchor bar and no title is displayed in the page body\).
 
 3.  If a section without a title contains only one subsection with a title, the section gets the title of the subsection \(`SectionTitle`=`SubsectionTitle` and `SubsectionTitle`=`NULL`\).
 
@@ -208,7 +208,7 @@ Lazy loading is disabled by default. To enable it, set the `enableLazyLoading` p
 <ObjectPageLayout id="ObjectPageLayout" enableLazyLoading="true">
 ```
 
-Next, you have to complete the setup of the blocks. There are two ways to set up lazy loading on the subsection blocks. For the first one, all your subsection blocks must be based on `BlockBase`, otherwise they’re loaded as normal SAPUI5 components. The second one is stashed-based and the content of subsection blocks must we wrapped inside an `ObjectPageLazyLoader`.
+Next, you have to complete the setup of the blocks. There are two ways to set up lazy loading on the subsection blocks. For the first one, all your subsection blocks must be based on `BlockBase`, otherwise they're loaded as normal SAPUI5 components. The second one is stashed-based and the content of subsection blocks must we wrapped inside an `ObjectPageLazyLoader`.
 
 Setting up lazy loading with `BlockBase`:
 
@@ -255,7 +255,7 @@ Setting up stashed-based lazy loading:
 3.  The `stashed` property of `ObjectpageLazyLoader` must be set to `true`:
 
     ```js
-    <ObjectPageLazyLoader stashed=”true” id=”SectionStashed”>
+    <ObjectPageLazyLoader stashed="true" id="SectionStashed">
     ```
 
 
@@ -267,7 +267,7 @@ This unstashes the content automatically as the user scrolls.
 The `ObjectPageLayout` control ensures that only the visible blocks and those next to them have loaded their data, but not the entire page. As the user scrolls or navigates within the page, new data is requested as needed.
 
 > ### Note:  
-> Setting `enableLazyLoading` to `true` after the `ObjectPageLayout` has been instantiated doesn’t work, as all bindings are resolved by then.
+> Setting `enableLazyLoading` to `true` after the `ObjectPageLayout` has been instantiated doesn't work, as all bindings are resolved by then.
 
 **Related Information**  
 

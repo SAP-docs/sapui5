@@ -105,5 +105,5 @@ Application developers can pass the variant ID as the URL parameter by updating 
 **Related Information**  
 
 
-[Managing Variants](managing-variants-8ce658e.md "Lets you manage variants with different structures in the filter and content areas.")
+[Managing Variants](managing-variants-8ce658e.md "Allows you manage variants with different structures in the filter and content areas.")
 

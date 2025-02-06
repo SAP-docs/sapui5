@@ -207,7 +207,7 @@ Deprecated, replaced by `ui5-restricted`
 </table>
 
 1\) Unless the API is experimental.  
- 2\) There’s no compatibility promise for `ui5-restricted` APIs. However, before introducing incompatible changes the owner is expected to announce them to the listed stakeholders, so that all affected parties can cooperate to achieve a smooth migration.
+ 2\) There's no compatibility promise for `ui5-restricted` APIs. However, before introducing incompatible changes the owner is expected to announce them to the listed stakeholders, so that all affected parties can cooperate to achieve a smooth migration.
 
 > ### Note:  
 > The SAPUI5 documentation only includes APIs of categories `public` and `protected`.

@@ -213,7 +213,7 @@ The representation of the document icon and the link depend on the `odata.mediaC
 
 – Document Icon –
 
-If the back end returns an `odata.mediaContentType` annotation for the stream property, SAP Fiori elements renders a specific document icon based on the content type. If the back end doesn’t return an `odata.mediaContentType` annotation \(or if the content type can be mapped to a specific document icon\), SAP Fiori elements renders a generic document icon.
+If the back end returns an `odata.mediaContentType` annotation for the stream property, SAP Fiori elements renders a specific document icon based on the content type. If the back end doesn't return an `odata.mediaContentType` annotation \(or if the content type can be mapped to a specific document icon\), SAP Fiori elements renders a generic document icon.
 
 – Document Link –
 
@@ -221,18 +221,18 @@ You can click on the document link to open the content of the stream property. S
 
 -   The link text shows the file name. Two conditions must be fulfilled:
 
-    -   For the stream property, there’s a `Core.ContentDisposition/Filename` annotation pointing to a non-empty file name that is empty.
+    -   For the stream property, there's a `Core.ContentDisposition/Filename` annotation pointing to a non-empty file name that is empty.
 
     -   The stream property is not empty. This means the back end either returns an `odata.mediaContentType` annotation with a value that is not `null`, or does not return an `odata.mediaContentType` annotation.
 
 
 -   The link text is "Open File". Two conditions must be fulfilled:
 
-    -   For the stream property, there’s either no `Core.ContentDisposition/Filename` annotation, or a `Core.ContentDisposition/Filename` annotation pointing to an empty file name.
+    -   For the stream property, there's either no `Core.ContentDisposition/Filename` annotation, or a `Core.ContentDisposition/Filename` annotation pointing to an empty file name.
 
     -   The stream property is not empty. This means the back end either returns an `odata.mediaContentType` annotation with a value that is not `null`, or does not return an `odata.mediaContentType` annotation.
 
--   There’s an empty indicator instead of a link. The following condition must be fulfilled:
+-   There's an empty indicator instead of a link. The following condition must be fulfilled:
 
     -   The stream property is empty. This means the back end returns an `odata.mediaContentType` annotation with the value `null`.
 

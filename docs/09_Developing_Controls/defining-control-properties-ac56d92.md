@@ -63,7 +63,7 @@ Can either be `true` or `false`. Properties of that type should not be set to `u
 </td>
 <td valign="top">
 
-JavaScript primitive values of type `number` and that don’t have a fractional part. To keep the implementation efficient, the constraint is not enforced. Declaring a property as type `int` is rather for information reasons. The corresponding object expects any given value to be an integer value. The default value of the type is the number `0`.
+JavaScript primitive values of type `number` and that don't have a fractional part. To keep the implementation efficient, the constraint is not enforced. Declaring a property as type `int` is rather for information reasons. The corresponding object expects any given value to be an integer value. The default value of the type is the number `0`.
 
 </td>
 </tr>
@@ -101,7 +101,7 @@ JavaScript string literal \(`typeof value === "string"`\) or a `String` object \
 
 Plain JavaScript object \(an object whose constructor is `Object`\). Most of the time, other objects are accepted as well, but deserializers \(e.g. for XML views\) will try to convert the object from or to a JSON string. The default value is `null`.
 
-Don't mix this type up with the `any` type! \(Sorry, we maybe should have named it „`serializable`“ or „`JSON`“ or something like that, to make this more clear...\).
+Don't mix this type up with the `any` type! \(Sorry, we maybe should have named it „`serializable`" or „`JSON`" or something like that, to make this more clear...\).
 
 </td>
 </tr>
@@ -204,7 +204,7 @@ Restrictions:
 -   Renamings or aliases are not supported and only keys and values of type `string` are supported.
 
 
-This was an early design decision in SAPUI5 and framework code relies on it. That code might fail for enumerations that don’t obey these restrictions.
+This was an early design decision in SAPUI5 and framework code relies on it. That code might fail for enumerations that don't obey these restrictions.
 
 To reference an `enum` type in a property definition, its string name must be used \(like `sap.m.ValueColor` in the example below\).
 

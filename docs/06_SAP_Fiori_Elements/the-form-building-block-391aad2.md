@@ -21,7 +21,7 @@ You can also define additional inline form elements that will be added to your f
 > <macros:Form
 >      id="myForm"
 >      metaPath="@com.sap.vocabularies.UI.v1.FieldGroup#General"
->      title=”My Title”
+>      title="My Title"
 > ></macros:Form>
 > ```
 
@@ -29,7 +29,7 @@ You can also define additional inline form elements that will be added to your f
 <macros:Form
      id="myForm"
      metaPath="@com.sap.vocabularies.UI.v1.FieldGroup#General"
-     title=”My Title”
+     title="My Title"
 >
      <macros:FormElement
           metaPath="ID"

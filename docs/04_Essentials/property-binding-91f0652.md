@@ -6,14 +6,14 @@ With property binding, you can initialize properties of a control automatically 
 
 To define property binding on a control, you have the following options:
 
--   As part of the control’s declaration in an XML view
+-   As part of the control's declaration in an XML view
 
 -   Using JavaScript, in the `settings` object in the constructor of a control, or in special cases, using the `bindProperty` method of a control
 
 
 Once you have defined the property binding, the property is updated automatically every time the property value of the bound model is changed, and vice versa.
 
-Let’s say, we have the following JSON data:
+Let's say, we have the following JSON data:
 
 ```json
 {
@@ -204,7 +204,7 @@ oImage.bindProperty("src", "/company/trusted", function(bValue) {
 
 The data type system enables you to format and parse data, as well as to validate whether the entered data lies within any defined constraints. SAPUI5 comes with several predefined and ready-to-use types, referred to as simple types. For more information, see [Formatting, Parsing, and Validating Data](formatting-parsing-and-validating-data-07e4b92.md).
 
-Here’s how you can use these types in an XML view:
+Here's how you can use these types in an XML view:
 
 ```xml
 <mvc:View

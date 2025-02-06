@@ -2,11 +2,11 @@
 
 # Defining Multiple Views on a List Report with Different Entity Sets and Table Settings
 
-You can configure your app to display data for different entity sets and table settings, for example, sales orders or suppliers.
+You can configure your application to display data for different entity sets and table settings, for example, sales orders or suppliers.
 
-The configuration steps are the same as for [Defining Multiple Views on a List Report Table - Multiple Table Mode](defining-multiple-views-on-a-list-report-table-multiple-table-mode-37aeed7.md), but here each table or chart can be based on a different `entitySet`.
+The configuration steps are the same as in [Defining Multiple Views on a List Report Table - Multiple Table Mode](defining-multiple-views-on-a-list-report-table-multiple-table-mode-37aeed7.md). In addition, the manifest property `entitySet` must be added to the definition of tables and charts that are based on an entity set different from the main entity set of the list report. Note that, in this case, the corresponding property `annotationPath` must specify an annotation for that entity set.
 
-Application developers can configure a `SelectionPresentationVariant` that has a chart visualization to bring up a chart coming from a different entity set. For more information, see [Defining Multiple Views on a List Report Table - Multiple Table Mode](defining-multiple-views-on-a-list-report-table-multiple-table-mode-37aeed7.md).
+You can configure `SelectionPresentationVariant` that has a chart visualization to bring up a chart coming from a different entity set. For more information, see [Defining Multiple Views on a List Report Table - Multiple Table Mode](defining-multiple-views-on-a-list-report-table-multiple-table-mode-37aeed7.md).
 
 
 
@@ -14,19 +14,19 @@ Application developers can configure a `SelectionPresentationVariant` that has a
 
 By default, in case of multiple entity sets, counts are always displayed in the icon tab bar to visualize the change in results whenever a filter is added or removed in the list report.
 
-The filters available in the `filterBar` are those from the main `entitySet`. You cannot add filters that belong only to an additional `entitySet`.
+The filters available in the filter bar are those from the main entity set. You cannot add filters that belong only to an additional entity set.
 
 The filters are applied to every table if the corresponding properties exist in the entity type of the table. If not, they are ignored.
 
 The counts of each table are also influenced by the filters from the `filterBar` only if the filters are relevant.
 
-In the example below, the "Requested" field exists in each entity set. It influences the number of items displayed on each tab:
+In the following screenshot, the *Requested* field exists in each entity set. It influences the number of items displayed on each tab:
 
 ![](images/SystemBehaviorForFiltersAndCounts1_1e794e6.png)
 
-If you add a second filter value, which is found only in the entity type of the first table, only the count of the first tab changes. The counts of the second tab don't change, as this field is not relevant for the second entity set. The system displays a message to inform users about this.
+If you add a second filter value, which is found only in the entity type of the first table, only the count of the first tab changes. The counts of the second tab remain unchanged, as this field isn't relevant for the second entity set. The system displays a message to inform users about this.
 
-For example, if you add the filter "Property S3" to the first tab, which is not applicable to the entity set of the second tab, and switch to the second tab, the system displays a message about this. If you close this message and add another filter that is not applicable to the entity set of the *Purchase Orders* tab, the system displays an updated message informing that both filters are not relevant to this entity set.
+For example, if you add the filter *Property S3* to the first tab, which is not applicable to the entity set of the second tab, and then switch to the second tab, the application displays a message about this. If you close this message and add another filter that is also not applicable to the entity set of the *Purchase Orders* tab, the application displays an updated message informing that both filters are not relevant to this entity set.
 
 ![](images/System_Behavior_for_Filters_and_Counts_2_120cf40.png)
 
@@ -38,12 +38,12 @@ For example, if you add the filter "Property S3" to the first tab, which is not 
 
 **Prerequisite**: You have completed the procedure [Defining Multiple Views on a List Report Table - Multiple Table Mode](defining-multiple-views-on-a-list-report-table-multiple-table-mode-37aeed7.md).
 
-To specify table settings on tab pages, you need to add `tableSettings` to the corresponding tab in `manifest.json` of your application.
+To specify table settings on tab pages, you need to add `tableSettings` to the corresponding tab in the `manifest.json` file of your application.
 
 > ### Note:  
 > Implement this feature with caution, and, for example, take the following into account:
 > 
-> -   While this feature provides a combined view of different objects, it does not replace dedicated applications, each with their specific purpose.
+> -   Even though this feature provides a combined view of different objects, it does not replace dedicated applications, each with their specific purpose.
 > 
 > -   Use this feature only to search for and work on similar business objects that have a subset of common fields. Do not use it for random business objects. Changing common fields in the smart filter bar always has an effect on the tab that is currently open, as well as on all other tabs. While you can implement any entity set from a technical perspective, you should take the business and usability perspective into account. Moreover, as this feature affects performance, you should also check any changes in performance when adding entity sets. Note that if you don't follow these recommendations, the application will be responsible for usability and performance.
 > 
@@ -57,12 +57,11 @@ To specify table settings on tab pages, you need to add `tableSettings` to the c
 > 
 > -   Ensure that the service/entity configured for the chart is **not** draft enabled or a read-only service/entity.
 
-To include different entity sets and table settings in multiple views, specify an entity set for each tab in the`"quickVariantSelectionX"` section as shown in the following sample code:.
+To include different entity sets and table settings in multiple views, specify an entity set for each tab in the `quickVariantSelectionX"` section as shown in the following sample code:
 
 > ### Sample Code:  
 > ```
-> 
->   "sap.ui.generic.app": {
+> "sap.ui.generic.app": {
 >          "pages": [{
 >              "entitySet": "C_RequirementTrackingPurReq",
 >              "component": {
@@ -79,8 +78,7 @@ To include different entity sets and table settings in multiple views, specify a
 >                                 "annotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#VAR1",
 >                                 "tableSettings": { 
 >                                       "type": "GridTable",
-> 
->                          }
+>                         }
 >                             },
 >                             "2": {
 >                                 "key": "2",
@@ -88,8 +86,7 @@ To include different entity sets and table settings in multiple views, specify a
 >                                 "annotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#VAR5",
 >                                 "tableSettings": { 
 >                                       "type": "GridTable",
-> 
->                          }
+>                         }
 >                             },
 >                             "3": {
 >                                 "key": "3",
@@ -98,31 +95,25 @@ To include different entity sets and table settings in multiple views, specify a
 >                                 "showItemNavigationOnChart": true,
 >                                        "tableSettings": { 
 >                                             "type": "TreeTable",
-> 
 >                                 }
 >                             }
 >                         }
 >                     }
 >                 }
 >             }
->         }]    }
-> ```
-> 
-> ```
-> 
+>         }]    
+> 	}
 > ```
 
-> ### Sample Code:  
-
-Under `"sap.ui.generic.app"/"pages"`, specify the leading entity set. This is used for the smart filter bar and for the footer. Each table or chart has its own `entitySet` which you specify under `"quickVariantSelectionX"/"variants"`. If you do not specify an entity set under `"/"variants"`, the leading entity set is used as a default.
+Under `"sap.ui.generic.app"/"pages"`, specify the leading entity set. This is used for the smart filter bar andfooter. Each table or chart has its own `entitySet` which you can specify under `"quickVariantSelectionX"/"variants"`. If you do not specify an entity set under `"/"variants"`, then the leading entity set is used as default.
 
 
 
 ### System Behavior for Different Table Type Settings
 
-Table type settings can be set for each variant under `quickVariantSelectionX` in `manifest.json`. If table settings are not specified, the system picks the overall table setting and applies them for the variant. It is not possible to have a combination of responsive and non-responsive table types in same List Report. The tables in List Report can either be all responsive or a mix of non-responsive, such as grid, tree or analytical tables. This ensures a consistent scrolling behavior.
+Table type settings can be set for each variant under `quickVariantSelectionX` in the `manifest.json` file. If table settings are not specified, the application picks the overall table setting and applies them for the variant. It is not possible to have a combination of responsive and non-responsive table types in same list report. The tables in a list report can either be all responsive or a mix of non-responsive, such as grid, tree, or analytical tables. This ensures a consistent scrolling behavior.
 
-Different tabs on a List Report can render different table types. For example, first tab can be a tree table while the second tab can be a grid table.
+Different tabs in a list report can render different table types. For example, first tab can be a tree table while the second tab can be a grid table.
 
   
   
@@ -136,7 +127,7 @@ Different tabs on a List Report can render different table types. For example, f
 
 ## Additional Features in SAP Fiori Elements for OData V4
 
-You can configure list report views to display different `entitySets`.
+You can configure the list report views to display different entity sets.
 
 > ### Note:  
 > Implement this feature with caution, and, for example, take the following into account:
@@ -153,14 +144,14 @@ You can configure list report views to display different `entitySets`.
 
 
 
-### Rendering Several `entitySets` in a List Report
+### Rendering Several Entity Sets in a List Report
 
 Each table display the data of an `entitySet` and reads a `SelectionVariant` \(SV\) or `SelectionPresentationVariant` \(SPV\) which apply filters, sorters, and presentation settings.
 
-To define a `SelectionVariant` for `entityA` and a `SelectionPresentationVariant` for `entityB` that you want to display on each tab, for the entities that you want to show, proceed as shown in the sample code below:
+To define a `SelectionVariant` for `entityA` and a `SelectionPresentationVariant` for `entityB` that you want to display on each tab, for the entities that you want to show, proceed as shown in the following sample code:
 
 > ### Sample Code:  
-> XML Annotation for SV and SPV for two `entitySets`
+> XML Annotation
 > 
 > ```
 > <Annotations Target="myService.entityB">
@@ -226,7 +217,7 @@ To define a `SelectionVariant` for `entityA` and a `SelectionPresentationVariant
 > ```
 
 > ### Sample Code:  
-> CAP CDS Annotation for SV and SPV for two `entitySets`
+> CAP CDS Annotatio
 > 
 > ```
 > annotate entityB with @(
@@ -283,7 +274,7 @@ To define a `SelectionVariant` for `entityA` and a `SelectionPresentationVariant
 Once the SV and SPV are defined for the two `entitySets`, you must configure the manifest to read the annotation for the views. This is the same configuration in the `manifest.json` as for the multiple views feature. In addition, you need to specify the `entitySet` when it differs from the main `entitySet` as follows:
 
 > ### Sample Code:  
-> Manifest configuration
+> manifest.json
 > 
 > ```
 > "targets": {   
@@ -314,7 +305,7 @@ Once the SV and SPV are defined for the two `entitySets`, you must configure the
 > }
 > ```
 
-As a result, you can see the two tabs in the application:
+As a result, the application displays two tabs as shown in the following screenshot:
 
 ![](images/Multiple_Entity_Sets_in_Multiple_Table_Mode_dac86fa.png)
 
@@ -325,7 +316,7 @@ You can define different table configurations for each entity set. To do so, pre
 The following sample code shows different personalization settings per table \(with no personalization for `EntityA` and a column personalization and a filter personalization for `EntityB`\):
 
 > ### Sample Code:  
-> `manifest.json`
+> manifest.json
 > 
 > ```
 > "targets": {
@@ -377,7 +368,7 @@ The following sample code shows different personalization settings per table \(w
 
 ### System Behavior for Filters and Count
 
-The filters are applied to every table if the corresponding properties exist in the entity type of the table. If not, they are ignored. This is also valid for filters coming from a navigation property. If the navigation and target properties also exist for the non-main entity, the filter is applied.
+The filters are applied to every table if the corresponding properties exist in the entity type of the table. Otherwise, they are ignored. This behavior also applies for filters coming from a navigation property. If the navigation and target properties also exist for the non-main entity, the filter is applied.
 
 **Related Information**  
 

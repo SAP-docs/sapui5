@@ -79,7 +79,7 @@ To pass the filter context during navigation or during the initial launch of app
 >        if (oSelectionVariant) {
 >            oSelectionVariant.removeParameter("TaxAmount");
 >               oSelectionVariant.addParameter("Product", "EPM-2365436");
->         // use        oSelectionVariant.addSelectOption(“Price”, “I”, “BT”, “1000”,”5000” ?)  To specify a range value
+>         // use        oSelectionVariant.addSelectOption("Price", "I", "BT", "1000","5000" ?)  To specify a range value
 >              
 >        }
 > 

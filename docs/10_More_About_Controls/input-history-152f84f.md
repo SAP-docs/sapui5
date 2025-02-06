@@ -20,7 +20,7 @@ The feature only works in the context of SAP Fiori launchpad, so standalone apps
 > For more information about how to enable the feature in SAP Fiori launchpad, see *Manage Launchpad Settings* and *User Actions Menu* in the [SAP Fiori launchpad](https://help.sap.com/viewer/4fc8d03390c342da8a60f8ee387bca1a/latest/en-US) documentation.
 
 > ### Remember:  
-> Keep in mind that the feature is not supported by default for all fields, but only for those annotated with the `ValueList` annotation. If you have fields that contain personal sensitive data, you can use the `com.sap.vocabularies.PersonalData.v1.IsPotentiallySensitive` annotation to disable the storing of data. At the same time, the behavior of the *Recently Used* feature doesn't depend on annotations and it doesn’t take into consideration the application business logic that might apply to a field. For example, if a user's role has changed and a field contains data that shouldn't be visible to this user anymore, then do not enable history for this field at all. If enabled, this user will still see the stored values. There is a possible workaround on user level only. You can ask the user to delete history or enter 5 random values in order to remove the last 5 stored values.
+> Keep in mind that the feature is not supported by default for all fields, but only for those annotated with the `ValueList` annotation. If you have fields that contain personal sensitive data, you can use the `com.sap.vocabularies.PersonalData.v1.IsPotentiallySensitive` annotation to disable the storing of data. At the same time, the behavior of the *Recently Used* feature doesn't depend on annotations and it doesn't take into consideration the application business logic that might apply to a field. For example, if a user's role has changed and a field contains data that shouldn't be visible to this user anymore, then do not enable history for this field at all. If enabled, this user will still see the stored values. There is a possible workaround on user level only. You can ask the user to delete history or enter 5 random values in order to remove the last 5 stored values.
 
 
 
@@ -180,14 +180,14 @@ This configuration will switch off history only for the field with the `Bukrs` I
 
 ![](images/Recently_Used_Values_when_enabled_for_SmartFilterBar_1009ebe.png)
 
-If there have been previously entered values, a dropdown opens up when focusing on the input. On a mobile device, the dropdown opens as a full-screen dialog. If no previous history values are stored, the dropdown will not open. When you start typing, you’ll get filtered suggestions and recommendations, if available.
+If there have been previously entered values, a dropdown opens up when focusing on the input. On a mobile device, the dropdown opens as a full-screen dialog. If no previous history values are stored, the dropdown will not open. When you start typing, you'll get filtered suggestions and recommendations, if available.
 
 Suggested values can be part of several groups. If you have stored recently used values, they appear below the group header title *Recently Used*. *Others* shows the rest of the suggested values. If you have recommended values, as in a machine learning scenario, the *Recommended* values come on top, followed by *Recently Used* and *Others*.
 
 If a value is already in the *Recently Used* list, it will not also appear in the *Others* group. If a value in the *Recommended* group is part of *Recently Used* or *Others*, it is only shown in *Recommended* to avoid multiple instances of the same value.
 
 > ### Note:  
-> The recently used values feature is an input support tool for fast keyboard entry. As such, it’s not meant to be part of the `ValueHelpDialog` result list, but it can be used in the filter fields.
+> The recently used values feature is an input support tool for fast keyboard entry. As such, it's not meant to be part of the `ValueHelpDialog` result list, but it can be used in the filter fields.
 
 
 
@@ -201,6 +201,6 @@ As of version 1.85 of SAPUI5, the input value is stored together with the langua
 
 -   For `ValueList` annotations, if there are defined `In/Out` parameters, they are not taken into account for `ComboBox` and `MultiComboBox`.
 
--   The invoking filtering function on the internal input control is not supported. This is because we use an internal JSON model combining all data sources that need to be displayed in the dropdown. This data model can’t be accessed and manipulated from the outside.
+-   The invoking filtering function on the internal input control is not supported. This is because we use an internal JSON model combining all data sources that need to be displayed in the dropdown. This data model can't be accessed and manipulated from the outside.
 
 

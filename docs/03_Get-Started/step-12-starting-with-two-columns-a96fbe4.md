@@ -24,7 +24,7 @@ By default, the `FlexibleColumnLayout` starts off with one column. If your use c
 
 ## Coding
 
-You can view and download all files at [Flexible Column Layout App - Step 12](https://ui5.sap.com/#/sample/sap.f.tutorial.fiori2.12/preview).
+You can view and download all files at [Flexible Column Layout App - Step 12](https://ui5.sap.com/#/sample/sap.f.tutorial.fcl.12/preview).
 
 
 

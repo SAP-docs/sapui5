@@ -134,7 +134,7 @@ Displays all entities
 </td>
 <td valign="top">
 
-Displays a user’s own draft only
+Displays a user's own draft only
 
 </td>
 </tr>
@@ -190,5 +190,5 @@ If desired, the editing status filter can be disabled after you generate your ap
 
 [Handling Semantic Key Fields](handling-semantic-key-fields-aa2793c.md "Semantic key fields in tables are displayed with a special logic.")
 
-[Settings for List Report Tables](settings-for-list-report-tables-4c2d17a.md "You can set up various aspects of the list report table through annotations and in the manifest.json file.")
+[Settings for List Report Tables](settings-for-list-report-tables-4c2d17a.md "You can configure various aspects of the list report table through annotations and in the manifest.json file.")
 

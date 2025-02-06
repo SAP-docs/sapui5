@@ -4,7 +4,7 @@
 
 You can add a progress indicator to a header facet on the object page.
 
-The progress indicator allows you to visually represent the level of completion of a goal or target, such as a project's progress, sales progress for the current year’s goal, the development stage of a product, stock availability, and so on. The image below shows a progress indicator within the object page header.
+The progress indicator allows you to visually represent the level of completion of a goal or target, such as a project's progress, sales progress for the current year's goal, the development stage of a product, stock availability, and so on. The image below shows a progress indicator within the object page header.
 
   
   
@@ -219,7 +219,7 @@ Note that the unit of measure can be annotated with `Unit` or `ISOCurrency` as s
 > ```xml
 > <Annotations Target="STTA_PROD_MAN.STTA_C_MP_ ProgressType/Value">
 >    <Annotation Term="Measures.ISOCurrency" Path="UoM"/>
->    <Annotation Term="Common.Label" Path="Footer/”>
+>    <Annotation Term="Common.Label" Path="Footer/">
 > </Annotations>
 > ```
 

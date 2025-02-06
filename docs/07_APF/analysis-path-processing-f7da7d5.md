@@ -160,5 +160,5 @@ When request `R_i` returns successfully, it sends its response data to the selec
 
 The filter `F_i` is defined as a conjunctive accumulation of the previous filter `F_(i-1)` and the filter defined by the selected representation object `(RO_i_s)`. The filter `F_i` is used for processing step `S_(i+1)`.
 
-Filter F\_0 is defined by URL parameters passed to the application, such as SAPCLIENT, and by filters. In the figure above, F\_0 is represented as the “Filter/Context” object directly associated to the path object.
+Filter F\_0 is defined by URL parameters passed to the application, such as SAPCLIENT, and by filters. In the figure above, F\_0 is represented as the "Filter/Context" object directly associated to the path object.
 

@@ -599,19 +599,19 @@ Here's an example with more actions:
 
 <a name="loio326a77d194fe4243849cc89b15221ec9__section_kxw_nys_hyb"/>
 
-## Creating App Descriptor Changes Using Settings
+## Creating Manifest Changes Using Settings
 
-In addition to the usual SAPUI5 flexibility changes, the *Settings* action can also create changes that modify the app descriptor.
+In addition to the usual SAPUI5 flexibility changes, the *Settings* action can also create changes that modify the `manifest.json` file.
 
-App descriptor changes are used, for example, on an Overview Page \(OVP\), where adding a card modifies the app descriptor.
+Manifest changes are used, for example, on an Overview Page \(OVP\), where adding a card modifies the manifest.
 
-In most cases, the change must also be visible when the user creates it. For example, when users click on *Add Card*, they want to see the new card on the screen. For this reason, in the usual case, a flexibility change is created in parallel with the app descriptor change, as shown in this diagram:
+In most cases, the change must also be visible when the user creates it. For example, when users click on *Add Card*, they want to see the new card on the screen. For this reason, in the usual case, a flexibility change is created in parallel with the manifest change, as shown in this diagram:
 
-![The Handler calls the Settuings Plugin with an array of mChangeContent, which contains the change types and all data required for each change. The Settings Plugin then creates a Settings Command and an AppDescritor Command. The Settings Command creates and executes the Flex Change on the UI and applies the change. The actual action execution requires a change handler. The AppDescriptor Command creates and executes an AppDescriptor Change and persists it. The app descriptor change is saved in the layered repository (LREP) to include the new card when the app is loaded.](images/Creating_App_Descriptor_Changes_Using_Settings_b1c32cb.png)
+![The Handler calls the Settuings Plugin with an array of mChangeContent, which contains the change types and all data required for each change. The Settings Plugin then creates a Settings Command and an AppDescritor Command. The Settings Command creates and executes the Flex Change on the UI and applies the change. The actual action execution requires a change handler. The AppDescriptor Command creates and executes an AppDescriptor Change and persists it. The manifest (app descriptor) change is saved in the layered repository (LREP) to include the new card when the app is loaded.](images/Creating_App_Descriptor_Changes_Using_Settings_b1c32cb.png)
 
-If the flexibility change is only relevant during the execution of SAPUI5 flexibility \(because the "real" change is saved on the app descriptor\), it needs to have parameter `runtimeOnly: true`. If you set this parameter, the change is not persisted.
+If the flexibility change is only relevant during the execution of SAPUI5 flexibility \(because the "real" change is saved on the manifest\), it needs to have parameter `runtimeOnly: true`. If you set this parameter, the change is not persisted.
 
-On the other hand, a change that has the app descriptor as the target needs the `appDescriptorChangeType` parameter instead of `changeType`. Here's an example:
+On the other hand, a change that has the manifest as the target needs the `appDescriptorChangeType` parameter instead of `changeType`. Here's an example:
 
 > ### Sample Code:  
 > <control\>.designtime.js
@@ -638,7 +638,7 @@ On the other hand, a change that has the app descriptor as the target needs the 
 >                         changeSpecificData: {
 >                             runtimeOnly: true, // UI change would be used only at runtime to modify the app; it will not be persisted
 >                             changeType: "addCard",
->                             content: toUIChange(mChangeContent) // Allows for different parameters in runtime or descriptor change
+>                             content: toUIChange(mChangeContent) // Allows for different parameters in runtime or manifest change
 >                         }
 >                     }
 >                 ])
@@ -648,5 +648,5 @@ On the other hand, a change that has the app descriptor as the target needs the 
 > }
 > ```
 
-This example is for a single action created with *Settings*, but there are no restrictions that prevent implementing multiple actions in *Settings*, which can create app descriptor changes as well.
+This example is for a single action created with *Settings*, but there are no restrictions that prevent implementing multiple actions in *Settings*, which can create manifest changes as well.
 

@@ -33,10 +33,10 @@ Application developers must ensure that there's a manifest property for each vis
 >    "contextPath" : "/SalesOrderManage",
 >    "controlConfiguration" : {
 >       "@com.sap.vocabularies.UI.v1.SelectionFields" : {
->          "layout": "CompactVisual” , // Possible Values: “Compact” (if only compact filter is present) and “CompactVisual” if both compact and visual filters are present
->          "initialLayout": "Visual" , // Specifies the default filter mode on initial load. Possible values: “Visual” and “Compact”
+>          "layout": "CompactVisual" , // Possible Values: "Compact" (if only compact filter is present) and "CompactVisual" if both compact and visual filters are present
+>          "initialLayout": "Visual" , // Specifies the default filter mode on initial load. Possible values: "Visual" and "Compact"
 >          "filterFields": {
->             "ItemRating": { // Below this are all the settings for “ItemRating” filter field
+>             "ItemRating": { // Below this are all the settings for "ItemRating" filter field
 >                "availability": "Default", // see below for possible values
 >                "visualFilter": { // Only available if there is a visual filter configured for this filter field and holds all information specific to visual filter configuration
 >                   "valueList": "<pathToValueList>" // Should point to the valuelist annotation corresponding to the visual filter representation

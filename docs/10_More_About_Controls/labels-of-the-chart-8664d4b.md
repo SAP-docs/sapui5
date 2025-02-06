@@ -151,5 +151,5 @@ Measures
 
 The values of the x and y coordinates of the first chart point are retrieved from the first data entry in the bound model. The formatted x-value is displayed at the bottom left of the chart. It corresponds with the `dimensions` property of the UI.Chart annotation term. Depending on the data type of the property in the entity type, an appropriate formatter is chosen so that you can format the value as needed.
 
-The formatted y-coordinate value is displayed at the top left of the chart and is used to show the actual value. It is bound to the `measures` property of the UI.Chart annotation term. It is always formatted as a numeric value, that is, the value 20,000 is formatted to “20K”. The last data point is treated the same way: the top right label corresponds to the last data entry’s `measures` property and the bottom right label corresponds to its `dimensions` property.
+The formatted y-coordinate value is displayed at the top left of the chart and is used to show the actual value. It is bound to the `measures` property of the UI.Chart annotation term. It is always formatted as a numeric value, that is, the value 20,000 is formatted to "20K". The last data point is treated the same way: the top right label corresponds to the last data entry's `measures` property and the bottom right label corresponds to its `dimensions` property.
 

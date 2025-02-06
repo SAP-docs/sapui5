@@ -710,7 +710,7 @@ The IN/OUT parameter values take precedence over the `SelectionVariant` values f
 > ### Note:  
 > Handling date-based filter fields
 > 
-> If the `SelectionVariant` has date-based filter fields, you must specify the value in the format `"Z'. Ex:”2018-10-15T00:00:00Z"`, with the time part as zeroes and appended with 'Z'.
+> If the `SelectionVariant` has date-based filter fields, you must specify the value in the format `"Z'. Ex:"2018-10-15T00:00:00Z"`, with the time part as zeroes and appended with 'Z'.
 
 **In/out parameter taking precedence**
 
@@ -733,7 +733,7 @@ Description
 
 **Scenario 1**: Annotation configuration
 
-Chart dimension = “Status”, Select Option in SV = \[\(“Status”, Values = “In Progress”, “New”\), \(“Project”, Values=”List Report”\)\]
+Chart dimension = "Status", Select Option in SV = \[\("Status", Values = "In Progress", "New"\), \("Project", Values="List Report"\)\]
 
 </td>
 <td valign="top">
@@ -791,7 +791,7 @@ Description
 
 Scenario 1: Annotation configuration
 
-Parameter in SelectionVariant = \[\(“P\_DisplayCurrency”, Value=”USD”\)\]
+Parameter in SelectionVariant = \[\("P\_DisplayCurrency", Value="USD"\)\]
 
 </td>
 <td valign="top">
@@ -946,7 +946,7 @@ Visual filters support date-based, single selection fields in the Universal Time
 > Displaying the value in the visual filter and its tooltip is impacted. Value help or the dropdown for selecting the values remains the same if sap:semantics="yearmonth" is set.
 
 > ### Note:  
-> You can see the date selection button on the visual filter for fields annotated with `sap:filter-restriction=”single-value"`. For fields annotated with `sap:filter-restriction=”multiple"`, you see the value help selection button.
+> You can see the date selection button on the visual filter for fields annotated with `sap:filter-restriction="single-value"`. For fields annotated with `sap:filter-restriction="multiple"`, you see the value help selection button.
 
 > ### Sample Code:  
 > Sample Metadata
@@ -1058,7 +1058,7 @@ If a unit field such as a currency or unit of measure\(UOM\) contains a text ann
 The unit fields can contain the text annotation either in the main entity set or its value list entity sets.
 
 > ### Sample Code:  
-> Main entity set: `DisplayCurrency` doesn’t contain a text annotation
+> Main entity set: `DisplayCurrency` doesn't contain a text annotation
 > 
 > ```
 > <EntityType Name="ZEPM_C_SALESORDERITEMQUERYResult" sap:semantics="aggregate" sap:content-version="1">

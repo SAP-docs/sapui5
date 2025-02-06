@@ -2,7 +2,7 @@
 
 # Step 7: JSON Model
 
-Now that we have set up the view and controller, it’s about time to think about the M in MVC.
+Now that we have set up the view and controller, it's about time to think about the M in MVC.
 
 We will add an input field to our app, bind its value to the model, and bind the same value to the description of the input field. The description will be directly updated as the user types.
 
@@ -58,9 +58,9 @@ sap.ui.define([
 });
 ```
 
-We add an `onInit` function to the controller. This is one of SAPUI5’s lifecycle methods that is invoked by the framework when the controller is created, similar to the constructor of a control.
+We add an `onInit` function to the controller. This is one of SAPUI5's lifecycle methods that is invoked by the framework when the controller is created, similar to the constructor of a control.
 
-Inside the function we instantiate a JSON model. The data for the model only contains a single property for the “recipient”, and inside this it also contains one additional property for the name.
+Inside the function we instantiate a JSON model. The data for the model only contains a single property for the "recipient", and inside this it also contains one additional property for the name.
 
 To be able to use this model from within the XML view, we call the `setModel` function on the view and pass on our newly created model. The model is now set on the view.
 

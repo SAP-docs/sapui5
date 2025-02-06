@@ -10,7 +10,7 @@ This chart type represents a time-based dimension that is more responsive to a c
 
 -   The chart is configured with only one dimension for bubble, column, waterfall, and combination charts. However, you can use two dimensions for line charts. The second dimension can be the color dimension. The dimension with the `uid` color has to have the **Series** role assigned to it.
 
--   The data type of the dimension is either `edm.datetime` or `edm.string`. If the data type is `edm.string`, then it needs to have the additional annotation in the OData metadata annotation: `sap:semantics:”year (YYYY) or yearweek (YYYYWW) or yearmonth (YYYYMM) or yearquarter (YYYYQ)”`.
+-   The data type of the dimension is either `edm.datetime` or `edm.string`. If the data type is `edm.string`, then it needs to have the additional annotation in the OData metadata annotation: `sap:semantics:"year (YYYY) or yearweek (YYYYWW) or yearmonth (YYYYMM) or yearquarter (YYYYQ)"`.
 -   If it is a bubble chart, it needs to have two measures. If the chart is a combination chart, it needs to have at least two measures.
 
 -   Vertical bullet, stacked column, and scatter charts need at least one measure and one dimension. Extra color and shape dimensions are suppored only in scatter charts.

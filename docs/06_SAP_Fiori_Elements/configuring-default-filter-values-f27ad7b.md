@@ -12,7 +12,7 @@ For the *Standard Variant*, application developers can configure default filter 
 
 ## Using the `SelectionVariant` Annotation
 
-You can either provide the `UI.SelectionVariant` annotation directly, or as part of the `UI.SelectionPresentationVariant`. See [Configuring Default Settings \(Visualizations, Sort Order, Filter Values\)](configuring-default-settings-visualizations-sort-order-filter-values-49a6ba5.md) to know more on the manifest configuration to specify the `SelectionVariant` to be used. Here’s the sample `SelectionVariant` showing a default value for a parameter field \(`P_CompanyCode`\) and a filter field \(`Customer`\):
+You can either provide the `UI.SelectionVariant` annotation directly, or as part of the `UI.SelectionPresentationVariant`. See [Configuring Default Settings \(Visualizations, Sort Order, Filter Values\)](configuring-default-settings-visualizations-sort-order-filter-values-49a6ba5.md) to know more on the manifest configuration to specify the `SelectionVariant` to be used. Here's the sample `SelectionVariant` showing a default value for a parameter field \(`P_CompanyCode`\) and a filter field \(`Customer`\):
 
 > ### Sample Code:  
 > XML Annotation

@@ -218,7 +218,7 @@ You can turn off the confirmation popup for draft activation in the case of exte
 > You must configure 412 messages from the back end as `transition` messages, not as `state` messages.
 
 > ### Restriction:  
-> -   For back ends based on CAP, the handling of 412 "Precondition Failed" messages don’t work correctly if the action is executed by setting the `InvocationGrouping` annotation property to `UI.OperationGroupingType/Isolated`. Here, the action invoked for the selected contexts are triggered within the same changeset. So, either the action is executed successfully or not executed for any of the selected context.
+> -   For back ends based on CAP, the handling of 412 "Precondition Failed" messages don't work correctly if the action is executed by setting the `InvocationGrouping` annotation property to `UI.OperationGroupingType/Isolated`. Here, the action invoked for the selected contexts are triggered within the same changeset. So, either the action is executed successfully or not executed for any of the selected context.
 > 
 > -   The handling of 412 messages \("Precondition Failed" messages\) is not applied when a record is deleted.
 

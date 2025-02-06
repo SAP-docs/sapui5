@@ -2,7 +2,7 @@
 
 # Adding Segmented Buttons to a Table Toolbar
 
-You can add segmented buttons to the toolbar, to enable switching between the table content using a selection variant annotation.
+You can add segmented buttons to the toolbar to enable switching between the table content using a selection variant annotation.
 
 You can associate every button of the segmented buttons \(or every list item in the select box\) with a selection variant that filters the table according to the selection variant filters once a user has clicked it. This means that the user has multiple views in a single table of the object page. You can enable this feature for any table on the object page.
 
@@ -80,18 +80,19 @@ The annotations defined in the variants are:
 > ABAP CDS Annotation
 > 
 > ```
-> 
 > @UI.selectionVariant: [
 >   {
 >     text: 'Tax amount less than 10 USD',
->     qualifier: 'SimpleFilter'
+>     qualifier: 'SimpleFilter',
+>     filter: 'tax_amount LT 10'
 >   }
 > ]
 > 
 > @UI.selectionVariant: [
 >   {
 >     text: 'Net Amount between 10 and 40 And Gross Amount Less than 100 USD',
->     qualifier: 'ComplexFilter'
+>     qualifier: 'ComplexFilter',
+>     filter: 'net_amount GE 10 and net_amount LE 40 and gross_amount LT 100 '
 >   }
 > ]
 > ```
@@ -152,7 +153,7 @@ The annotations defined in the variants are:
 > ```
 
 > ### Note:  
-> If the `SelectionVariant` has multiple `<SelectionOptionType>`, filters that have the same target property are combined with an OR condition. Filters that have different target properties are combined with an AND condition.
+> If the `SelectionVariant` has multiple `<SelectionOptionType>`, filters that have the same target property are combined with an `OR` condition. Filters that have different target properties are combined with an `AND` condition.
 
 The table containing the segmented buttons looks like this:
 
@@ -169,7 +170,7 @@ The table containing the segmented buttons looks like this:
 ![](images/Segmented_button_2_selected_60bfbdb.png "Segmented button 2 selected")
 
 > ### Note:  
-> When the table is initially loaded, two calls are made to determine the number of the records in the table. These are shown in the button text.
+> When the table is initially loaded, two calls are made to determine the number of records in the table. These are shown in the button text.
 > 
 > In SAP Fiori elements for OData V2, setting `showCounts` to `false` will not show the number in the button text. This means that in this case no count calls are made.
 > 
@@ -192,7 +193,6 @@ The following manifest settings are required for adding segmented buttons:
 > "component": {
 >   "name": "sap.suite.ui.generic.template.ObjectPage",
 >   "settings": {
->  
 >     "sections": {
 >       "SalesOrderItemsID": {
 >         "navigationProperty": "to_Item",

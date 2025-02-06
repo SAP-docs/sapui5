@@ -168,7 +168,7 @@ The sample codes show a quick view facet containing field group, contact and Dat
 
 -   Images
 
-    -   If you don’t provide `HeaderInfo.ImageUrl` or `HeaderInfo.TypeImageUrl`, you can provide initials in the `HeaderInfo.Initials` annotation. The initials are displayed if no `HeaderInfo.ImageUrl` or `HeaderInfo.TypeImageUrl` is provided.
+    -   If you don't provide `HeaderInfo.ImageUrl` or `HeaderInfo.TypeImageUrl`, you can provide initials in the `HeaderInfo.Initials` annotation. The initials are displayed if no `HeaderInfo.ImageUrl` or `HeaderInfo.TypeImageUrl` is provided.
 
     -   If no `HeaderInfo.ImageUrl`, `HeaderInfo.TypeImageUrl`, or `HeaderInfo.Initials` is provided, no image is displayed.
 

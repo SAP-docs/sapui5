@@ -62,7 +62,7 @@ You can view and download all files in the *Samples* in the Demo Kit at [Smart C
 </mvc:View>
 ```
 
-For the view definition, we see that there is no difference to the previous example. This is an important fact since this exemplifies the underlying idea of what we mean by “smart”: Depending on the metadata, the control automatically adjusts its behavior.
+For the view definition, we see that there is no difference to the previous example. This is an important fact since this exemplifies the underlying idea of what we mean by "smart": Depending on the metadata, the control automatically adjusts its behavior.
 
 
 

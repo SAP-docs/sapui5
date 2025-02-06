@@ -4,7 +4,7 @@
 
 Context binding \(or element binding\) allows you to bind elements to a specific object in the model data, which will create a binding context and allow relative binding within the control and all of its children. This is especially helpful in list-detail scenarios.
 
-Let’s assume we have the following JSON data:
+Let's assume we have the following JSON data:
 
 ```json
 {
@@ -19,7 +19,7 @@ Let’s assume we have the following JSON data:
 }
 ```
 
-Here’s how you would use element binding in an XML view:
+Here's how you would use element binding in an XML view:
 
 ```xml
 <mvc:View
@@ -33,7 +33,7 @@ Here’s how you would use element binding in an XML view:
 </mvc:View>
 ```
 
-By setting `binding="{/company}"`, we can refer to `company` children without having to qualify the full binding path, when binding `Input` control’s properties such as the `value`. Using plain property binding, our XML view would look like this:
+By setting `binding="{/company}"`, we can refer to `company` children without having to qualify the full binding path, when binding `Input` control's properties such as the `value`. Using plain property binding, our XML view would look like this:
 
 ```xml
 <mvc:View
@@ -54,7 +54,7 @@ oInput.bindElement("/company");
 oInput.bindProperty("value", "name");
 ```
 
-Element binding is especially interesting for containers or layouts containing many controls that are all visualizing properties of the same model object. Here’s an XML view with a `VerticalLayout` using element binding:
+Element binding is especially interesting for containers or layouts containing many controls that are all visualizing properties of the same model object. Here's an XML view with a `VerticalLayout` using element binding:
 
 ```xml
 <mvc:View
@@ -132,7 +132,7 @@ Let's look at the following JSON model featuring a company list:
 }
 ```
 
-Let’s take this simple view, containing a single input control:
+Let's take this simple view, containing a single input control:
 
 ```xml
 <mvc:View
@@ -154,7 +154,7 @@ The XML view has bound the `value` of the input to the `name` property in the mo
 
 To remove the current binding context, call the `unbindElement` method on the input control. By doing this, all bindings now resolve relative to the parent context again.
 
-You can also use the `bindElement` method in conjunction with list binding. Let’s consider the following extension of our JSON data:
+You can also use the `bindElement` method in conjunction with list binding. Let's consider the following extension of our JSON data:
 
 ```json
 {
@@ -215,7 +215,7 @@ You can also use the `bindElement` method in conjunction with list binding. Let�
 }
 ```
 
-Say we want to display companies in a `sap.m.List` control. Here’s what the XML view will look like:
+Say we want to display companies in a `sap.m.List` control. Here's what the XML view will look like:
 
 ```xml
 <mvc:View

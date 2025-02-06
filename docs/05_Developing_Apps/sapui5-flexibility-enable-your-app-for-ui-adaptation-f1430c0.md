@@ -33,7 +33,7 @@ Please note that the `_version` property must be at least `1.11.0`.
 ```
 
 > ### Caution:  
-> If you set the flag to `false`, your application won’t work with any UI adaptation tool. In certain scenarios it can make sense to do this, for example, for a beta release when you still expect major changes for the app. However, do not change the `flexEnabled` flag to `false` **after** your application has been delivered. This would lead to incompatibilities and regressions if a key user has adapted the UI in the meantime.
+> If you set the flag to `false`, your application won't work with any UI adaptation tool. In certain scenarios it can make sense to do this, for example, for a beta release when you still expect major changes for the app. However, do not change the `flexEnabled` flag to `false` **after** your application has been delivered. This would lead to incompatibilities and regressions if a key user has adapted the UI in the meantime.
 
 > ### Tip:  
 > In case you want certain parts of your app to remain unchanged, you can restrict adaptation for the corresponding controls, see [Restrict Adaptation for Certain Controls](enabling-ui-adaptation-other-things-to-consider-de9fd55.md#loiode9fd55c69af4b46863f5d26b5d796c4__section_restrictadaptation).
@@ -96,7 +96,7 @@ However, with too many complexities or dynamics in the controller code, you can 
 Keep in mind that the positions of controls can change if the key user moves them on the UI. Controls might end up in different aggregations and at different index positions from what you specified. Therefore, you should only access controls by their ID.
 
 > ### Note:  
-> If you access `ObjectPageSections` and controls within `ObjectPageSections`, they might be stashed after the key user removes them. In this case, the stashed control \(i.e. the `ObjectPageSection`\) will remain as an empty placeholder, but any controls within the stashed control will be removed. This means that the control is not processed and therefore not instantiated. Your code shouldn’t break in this case.
+> If you access `ObjectPageSections` and controls within `ObjectPageSections`, they might be stashed after the key user removes them. In this case, the stashed control \(i.e. the `ObjectPageSection`\) will remain as an empty placeholder, but any controls within the stashed control will be removed. This means that the control is not processed and therefore not instantiated. Your code shouldn't break in this case.
 
 It's okay to create additional controls dynamically, for example, as a result of user interaction. If you dynamically add controls to the UI, make sure to set all properties before you add them to an aggregation of a parent control, ideally as part of the constructor. With this, you prevent that changes that key user made to the control are overridden.
 
@@ -111,9 +111,9 @@ It's okay to create additional controls dynamically, for example, as a result of
 
 In general, you can change your app without any problems, as long as you keep the following in mind:
 
--   Don’t change control IDs. If you change control IDs, the app will still start, but any existing changes related to this ID will not be applied anymore.
--   Don’t change view hierarchies, because the control IDs depend on the view IDs or fragment IDs.
--   Don’t remove controls that had a stable ID before.
+-   Don't change control IDs. If you change control IDs, the app will still start, but any existing changes related to this ID will not be applied anymore.
+-   Don't change view hierarchies, because the control IDs depend on the view IDs or fragment IDs.
+-   Don't remove controls that had a stable ID before.
 
 
 
@@ -146,7 +146,7 @@ In addition, for SAPUI5 apps running standalone \(not in an SAP Fiori launchpad\
 
 <a name="loiof1430c0337534d469da3a56307ff76af__section_jfn_ctd_ygb"/>
 
-## Something isn’t working like it should?
+## Something isn't working like it should?
 
 Please check the troubleshooting information.
 
@@ -166,7 +166,7 @@ For more information on SAPUI5 flexibility in SAP Fiori Elements, see [Adapting 
 
 [SAPUI5 Flexibility: Adapting UIs Made Easy](../04_Essentials/sapui5-flexibility-adapting-uis-made-easy-a8e55aa.md "Modification-free, cost-saving, easy to use, and performant: Discover the new flexibility when adapting SAP Fiori UIs using SAPUI5 flexibility.")
 
-[Descriptor for Applications, Components, and Libraries \(manifest.json\)](../04_Essentials/descriptor-for-applications-components-and-libraries-manifest-json-be0cf40.md "The descriptor for applications, components, and libraries (in short: app descriptor) is inspired by the WebApplication Manifest concept introduced by the W3C. The descriptor provides a central, machine-readable, and easy-to-access location for storing metadata associated with an application, an application component, or a library.")
+[Manifest \(Descriptor for Applications, Components, and Libraries\)](../04_Essentials/manifest-descriptor-for-applications-components-and-libraries-be0cf40.md "The manifest (also known as descriptor for applications, components, and libraries, in short: app descriptor) is inspired by the WebApplication Manifest concept introduced by the W3C. The manifest provides a central, machine-readable, and easy-to-access location for storing metadata associated with an application, an application component, or a library.")
 
 [Stable IDs: All You Need to Know](stable-ids-all-you-need-to-know-f51dbb7.md "Stable IDs are IDs for controls, elements, or components that you set yourself in the respective id property or attribute as opposed to IDs that are generated by SAPUI5. Stable means that the IDs are concatenated with the application component ID and do not have any auto-generated parts.")
 

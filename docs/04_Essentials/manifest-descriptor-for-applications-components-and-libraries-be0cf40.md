@@ -1,12 +1,12 @@
 <!-- loiobe0cf40f61184b358b5faedaec98b2da -->
 
-# Descriptor for Applications, Components, and Libraries \(manifest.json\)
+# Manifest \(Descriptor for Applications, Components, and Libraries\)
 
-The descriptor for applications, components, and libraries \(in short: app descriptor\) is inspired by the WebApplication Manifest concept introduced by the W3C. The descriptor provides a central, machine-readable, and easy-to-access location for storing metadata associated with an application, an application component, or a library.
+The manifest \(also known as descriptor for applications, components, and libraries, in short: app descriptor\) is inspired by the WebApplication Manifest concept introduced by the W3C. The manifest provides a central, machine-readable, and easy-to-access location for storing metadata associated with an application, an application component, or a library.
 
-In general, the app descriptor describes the behavior of an app through attributes. It doesn't directly influence that behavior itself for the most part. When a section in the app descriptor does affect the behavior of an app, this is described in the [API Reference](https://ui5.sap.com/#/api/). for the corresponding namespace.
+In general, the manifest describes the behavior of an app through attributes. It doesn't directly influence that behavior itself for the most part. When a section in the manifest does affect the behavior of an app, this is described in the [API Reference](https://ui5.sap.com/#/api/). for the corresponding namespace.
 
-The data of the app descriptor is stored in JSON format in the `manifest.json` file. The developer creates the file with attributes in different namespaces. It contains, for example, the app ID, the version, the data sources used, along with the required components and libraries. The existence of the `manifest.json` file must be declared in the component metadata, which is then delivered as part of the application archive. After delivery, the file is read-only.
+The data of the manifest is stored in JSON format in the `manifest.json` file. The developer creates the file with attributes in different namespaces. It contains, for example, the app ID, the version, the data sources used, along with the required components and libraries. The existence of the `manifest.json` file must be declared in the component metadata, which is then delivered as part of the application archive. After delivery, the file is read-only.
 
 
 
@@ -14,16 +14,16 @@ The data of the app descriptor is stored in JSON format in the `manifest.json` f
 
 ## General Information
 
-There is a new version of the app descriptor when the schema is changed. In the following table, you can see how the SAPUI5 version is related to the descriptor version and the value of `_version.`
+There is a new version of the manifest when the schema is changed. In the following table, you can see how the SAPUI5 version is related to the manifest version and the value of `_version.`
 
-**App Descriptor Release and SAPUI5 Version**
+**Manifest Release and SAPUI5 Version**
 
 
 <table>
 <tr>
 <th valign="top">
 
-App Descriptor Release
+Manifest Release
 
 </th>
 <th valign="top">
@@ -1195,7 +1195,7 @@ Version 69
 </tr>
 </table>
 
-For more information on the new fields introduced in each version, check out [Migration Information for Upgrading the Descriptor File](migration-information-for-upgrading-the-descriptor-file-a110f76.md)
+For more information on the new fields introduced in each version, check out [Migration Information for Upgrading the Manifest File](migration-information-for-upgrading-the-manifest-file-a110f76.md)
 
 
 
@@ -1205,7 +1205,7 @@ For more information on the new fields introduced in each version, check out [Mi
 
 The component factory function [`Component.create`](https://ui5.sap.com/#/api/sap.ui.core.Component%23methods/sap.ui.core.Component.create), as introduced with 1.58, loads the `manifest.json` by default before the component instance is created. With this, you can preload the dependencies \(libraries and components\) and, thus, improve the performance for loading the component. The preload is also available for models, which can be flagged for preload during component loading.
 
-The `manifest` option allows you to configure when and from where the descriptor is loaded:
+The `manifest` option allows you to configure when and from where the manifest is loaded:
 
 -   Default, equivalent to setting `manifest` to `true`.
 
@@ -1232,11 +1232,11 @@ The `manifest` option allows you to configure when and from where the descriptor
 
     1.  The component defines `manifest: "json"` in its [Component Metadata](component-metadata-0187ea5.md).
 
-        In this case, the descriptor is loaded and evaluated **after** the Component controller. All dependencies defined in the descriptor will then also be loaded. Afterwards, the Component is instantiated.
+        In this case, the manifest is loaded and evaluated **after** the Component controller. All dependencies defined in the manifest will then also be loaded. Afterwards, the Component is instantiated.
 
     2.  The component does not define `manifest: "json"` in its [Component Metadata](component-metadata-0187ea5.md).
 
-        This is typically the case for older legacy Components without a descriptor. In this case, only the Component's class metadata is evaluated. No additional descriptor file will be loaded.
+        This is typically the case for older legacy Components without a manifest. In this case, only the Component's class metadata is evaluated. No additional manifest file will be loaded.
 
 
     ```js
@@ -1252,7 +1252,7 @@ The `manifest` option allows you to configure when and from where the descriptor
 
 
 > ### Note:  
-> When you enable `manifest`, all legacy component metadata needs to be migrated into the descriptor for applications/components. Only those entries in the descriptor for components will be respected by the component and all other entries will be ignored.
+> When you enable `manifest`, all legacy component metadata needs to be migrated into the manifest for applications/components. Only those entries in the manifest for components will be respected by the component and all other entries will be ignored.
 
 
 
@@ -1260,7 +1260,7 @@ The `manifest` option allows you to configure when and from where the descriptor
 
 ## Special `ui5://` URLs
 
-Inside the app descriptor, you can use special URLs prefixed with `ui5://`. These URLs will be resolved automatically during component startup before any models are created.
+Inside the manifest, you can use special URLs prefixed with `ui5://`. These URLs will be resolved automatically during component startup before any models are created.
 
 The `ui5://` URLs have the following properties:
 
@@ -1285,7 +1285,7 @@ sap.ui.loader.config({
 })
 ```
 
-The following snippet shows a sample annotation file configuration in the `sap.app/dataSources` section of the app descriptor:
+The following snippet shows a sample annotation file configuration in the `sap.app/dataSources` section of the manifest:
 
 ```json
 {
@@ -1329,30 +1329,30 @@ http://localhost:8080/this/url/is/reachable/annotations.xml
 
 <a name="loiobe0cf40f61184b358b5faedaec98b2da__section_mhs_vdp_znb"/>
 
-## Descriptor Content
+## Manifest Content
 
 > ### Note:  
-> You can find an example `manifest.json` file with sample code for the descriptor content [here](descriptor-for-applications-components-and-libraries-manifest-json-be0cf40.md#loiobe0cf40f61184b358b5faedaec98b2da__section_example).
+> You can find an example `manifest.json` file with sample code for the manifest content [here](manifest-descriptor-for-applications-components-and-libraries-be0cf40.md#loiobe0cf40f61184b358b5faedaec98b2da__section_example).
 
-The content for the descriptor is contained in the following namespaces: `without`, `sap.app`, `sap.ui`, `sap.ui5`, `sap.platform.abap`, `sap.platform.hcp`, and `sap.fiori`. The following tables show the application-specific attributes provided by the respective namespaces:
+The content for the is contained in the following namespaces: `without`, `sap.app`, `sap.ui`, `sap.ui5`, `sap.platform.abap`, `sap.platform.hcp`, and `sap.fiori`. The following tables show the application-specific attributes provided by the respective namespaces:
 
-[No Namespace](descriptor-for-applications-components-and-libraries-manifest-json-be0cf40.md#loiobe0cf40f61184b358b5faedaec98b2da__section_nonamespace)
+[No Namespace](manifest-descriptor-for-applications-components-and-libraries-be0cf40.md#loiobe0cf40f61184b358b5faedaec98b2da__section_nonamespace)
 
-[`sap.app`](descriptor-for-applications-components-and-libraries-manifest-json-be0cf40.md#loiobe0cf40f61184b358b5faedaec98b2da__section_sap_app)
+[`sap.app`](manifest-descriptor-for-applications-components-and-libraries-be0cf40.md#loiobe0cf40f61184b358b5faedaec98b2da__section_sap_app)
 
-[`sap.ui`](descriptor-for-applications-components-and-libraries-manifest-json-be0cf40.md#loiobe0cf40f61184b358b5faedaec98b2da__section_sap_ui)
+[`sap.ui`](manifest-descriptor-for-applications-components-and-libraries-be0cf40.md#loiobe0cf40f61184b358b5faedaec98b2da__section_sap_ui)
 
-[`sap.ui5`](descriptor-for-applications-components-and-libraries-manifest-json-be0cf40.md#loiobe0cf40f61184b358b5faedaec98b2da__section_sap_ui5)
+[`sap.ui5`](manifest-descriptor-for-applications-components-and-libraries-be0cf40.md#loiobe0cf40f61184b358b5faedaec98b2da__section_sap_ui5)
 
-[`sap.platform.abap`](descriptor-for-applications-components-and-libraries-manifest-json-be0cf40.md#loiobe0cf40f61184b358b5faedaec98b2da__section_sap_platform_abap)
+[`sap.platform.abap`](manifest-descriptor-for-applications-components-and-libraries-be0cf40.md#loiobe0cf40f61184b358b5faedaec98b2da__section_sap_platform_abap)
 
-[`sap.platform.hcp`](descriptor-for-applications-components-and-libraries-manifest-json-be0cf40.md#loiobe0cf40f61184b358b5faedaec98b2da__section_sap_platform_hcp)
+[`sap.platform.hcp`](manifest-descriptor-for-applications-components-and-libraries-be0cf40.md#loiobe0cf40f61184b358b5faedaec98b2da__section_sap_platform_hcp)
 
-[`sap.fiori`](descriptor-for-applications-components-and-libraries-manifest-json-be0cf40.md#loiobe0cf40f61184b358b5faedaec98b2da__section_sap_fiori)
+[`sap.fiori`](manifest-descriptor-for-applications-components-and-libraries-be0cf40.md#loiobe0cf40f61184b358b5faedaec98b2da__section_sap_fiori)
 
-[`sap.card`](descriptor-for-applications-components-and-libraries-manifest-json-be0cf40.md#loiobe0cf40f61184b358b5faedaec98b2da__section_sap_card)
+[`sap.card`](manifest-descriptor-for-applications-components-and-libraries-be0cf40.md#loiobe0cf40f61184b358b5faedaec98b2da__section_sap_card)
 
-[`_version`](descriptor-for-applications-components-and-libraries-manifest-json-be0cf40.md#loiobe0cf40f61184b358b5faedaec98b2da__section_version)
+[`_version`](manifest-descriptor-for-applications-components-and-libraries-be0cf40.md#loiobe0cf40f61184b358b5faedaec98b2da__section_version)
 
 
 
@@ -1448,7 +1448,7 @@ If, for example, a module is instantiated there as follows:
 
 then its `id` would be `sap.ui.demo.walkthrough`
 
-It's used as a reference point for most operations involving the app descriptor. If the project is the app variant of an existing application, `sap.app/id` is the ID of this app variant. The ID of the underlying application is then provided in `sap.ui5/componentName`.
+It's used as a reference point for most operations involving the manifest. If the project is the app variant of an existing application, `sap.app/id` is the ID of this app variant. The ID of the underlying application is then provided in `sap.ui5/componentName`.
 
 > ### Note:  
 > The ID must not exceed 70 characters. It must be unique. This is checked in consistency checks, for example for the SAPUI5 application index, which return an error in case of duplicate IDs; see [SAPUI5 Application Index](../05_Developing_Apps/sapui5-application-index-c5e7098.md).
@@ -1467,7 +1467,7 @@ It's used as a reference point for most operations involving the app descriptor.
 </td>
 <td valign="top">
 
-Possible values:
+A mandatory attribute. The following values are possible:
 
 -   `application`: use if your `manifest.json` describes a **UI5 application**. For an example how to use a `manifest.json` for UI5 applications, see [Step 10: Descriptor for Applications](../03_Get-Started/step-10-descriptor-for-applications-8f93bf2.md)
 
@@ -1492,7 +1492,7 @@ Possible values:
 
 The i18n property is an **optional** attribute and contains one of the following:
 
--   A URL string to the properties file that contains the text symbols for the descriptor; the URL is interpreted relative to the `manifest`.
+-   A URL string to the properties file that contains the text symbols for the manifest; the URL is interpreted relative to the `manifest`.
 
     > ### Note:  
     > The path to the i18n file must not exceed 100 characters.
@@ -1500,7 +1500,7 @@ The i18n property is an **optional** attribute and contains one of the following
 -   An object that has been defined as described in [Supported Locales and Fallback Chain](supported-locales-and-fallback-chain-ec753bc.md) and [Terminologies](terminologies-eba8d25.md).
 
     > ### Note:  
-    > The `sap.app/i18n` section only supports terminologies for Components. Library descriptors **do not support** additional terminologies.
+    > The `sap.app/i18n` section only supports terminologies for Components. Library manifests **do not support** additional terminologies.
 
 
 If the manifest contains placeholders in `{{...}}` syntax, but no `i18n` attribute has been provided, the default value `i18n/i18n.properties` is used to request a ResourceBundle.
@@ -1907,7 +1907,7 @@ Description
 </td>
 <td valign="top">
 
-Specifies the UI technology; value is `UI5` 
+A mandatory attribute that specifies the UI technology; value is `UI5` 
 
 </td>
 </tr>
@@ -1979,7 +1979,7 @@ Indicates whether SAP Fiori launchpad shall render the target application utiliz
 
 ## `sap.ui5`
 
-The `sap.ui5` namespace is aligned with the former concept of component metadata and contributes the following SAPUI5-specific attributes for the application descriptor, see [Migrating from Component Metadata to Descriptor](migrating-from-component-metadata-to-descriptor-e282db2.md) for more details.
+The `sap.ui5` namespace is aligned with the former concept of component metadata and contributes the following SAPUI5-specific attributes for the manifest, see [Migrating from Component Metadata to Manifest](migrating-from-component-metadata-to-manifest-e282db2.md) for more details.
 
 **Attributes in the sap.ui5 namespace**
 
@@ -2076,7 +2076,7 @@ For more information, see: [Using and Nesting Components](using-and-nesting-comp
 <td valign="top">
 
 > ### Note:  
-> For component descriptors only. Libraries can not define models.
+> For component manifests only. Libraries can not define models.
 
 Defines models that should be created or destroyed along the component's lifecycle. The key represents the model name. Use an empty string \(""\) for the default model.
 
@@ -2131,7 +2131,7 @@ Specifies the root view that shall be opened; can be the view name as a string f
 </td>
 <td valign="top">
 
-true, false \(default\), Enables the auto prefixing for the UIComponent for IDs of ManagedObjects \(controls or elements\) which are created in the context of the `createContent` function, or any other invocation of the `Component.prototype.runAsOwner()` function \(for example a component’s router uses this method when creating new views\).
+true, false \(default\), Enables the auto prefixing for the UIComponent for IDs of ManagedObjects \(controls or elements\) which are created in the context of the `createContent` function, or any other invocation of the `Component.prototype.runAsOwner()` function \(for example a component's router uses this method when creating new views\).
 
 In former SAPUI5 releases this prefixing of the ID needed to be done with `oComponent.createId` by overwriting the method `getAutoPrefixId`. The same can now be achieved declaratively by setting `autoPrefixId` to true.
 
@@ -2253,7 +2253,7 @@ An optional attribute that only has to be provided if your project is a variant 
 <td valign="top">
 
 > ### Note:  
-> For library descriptors only.
+> For library manifests only.
 
 Determines whether the library contains an i18n resource. The value can be either a boolean, a string, or an object.
 
@@ -2535,7 +2535,7 @@ Describes the card type; possible values are `list` and `analytical`
 </td>
 <td valign="top">
 
-Specifies the card’s header area
+Specifies the card's header area
 
 </td>
 </tr>
@@ -2559,7 +2559,7 @@ Specifies the type-dependent card content
 
 ## `_version`
 
--   On root level \(no namespace\): Describes the descriptor format version \(mandatory\). Needs to be updated when migrating to a new descriptor format version, see [Migrating from Component Metadata to Descriptor](migrating-from-component-metadata-to-descriptor-e282db2.md)
+-   On root level \(no namespace\): Describes the manifest format version \(mandatory\). Needs to be updated when migrating to a new manifest format version, see [Migrating from Component Metadata to Manifest](migrating-from-component-metadata-to-manifest-e282db2.md)
 
 -   Inside namespace: Describes the namespace format version \(optional from version 1.38 on\)
 
@@ -2568,7 +2568,7 @@ Specifies the type-dependent card content
 
 <a name="loiobe0cf40f61184b358b5faedaec98b2da__section_descriptor_schema"/>
 
-## Descriptor Schema
+## Manifest Schema
 
 The newest flattened JSON schema is available on the SAP Open Source GitHub at [https://github.com/sap/ui5-manifest/](https://github.com/sap/ui5-manifest/) under Apache-2.0 License. The UI5 manifest is part of [JSON Schema Store](https://www.schemastore.org/json/) to enable schema validation, code completion, and documentation in [SAP Business Application Studio](https://help.sap.com/viewer/584e0bcbfd4a4aff91c815cefa0bce2d/Cloud/en-US/38691d191bdf436ca0d6313918f2b1e6.html) and [Visual Studio Code](https://code.visualstudio.com/docs/languages/json).
 
@@ -2581,7 +2581,7 @@ The newest flattened JSON schema is available on the SAP Open Source GitHub at [
 Current version of the `manifest.json`
 
 > ### Note:  
-> The following sample contains the **full scope of all available descriptor properties**. Some properties might not be applicable for all `manifest.json` variants. For example, the `sap.ui5/models` section is not supported for library descriptors. For more information, see the above listing of namespaces and properties.
+> The following sample contains the **full scope of all available manifest properties**. Some properties might not be applicable for all `manifest.json` variants. For example, the `sap.ui5/models` section is not supported for library manifests. For more information, see the above listing of namespaces and properties.
 
 ```
 
@@ -3036,7 +3036,7 @@ For the following namespaces, the indicated teams are responsible:
 
 ## Declaration in Component Metadata
 
-The component declares the existence of the application descriptor by specifying `manifest: "json"` in the component metadata. Setting this flag makes the component load the `manifest.json` file and read the relevant entries for SAPUI5. This metadata is used to define the dependencies that need to be loaded in order to start the component. The following code snippet shows how to add the manifest link:
+The component declares the existence of the manifest by specifying `manifest: "json"` in the component metadata. Setting this flag makes the component load the `manifest.json` file and read the relevant entries for SAPUI5. This metadata is used to define the dependencies that need to be loaded in order to start the component. The following code snippet shows how to add the manifest link:
 
 ```js
 sap.ui.define([

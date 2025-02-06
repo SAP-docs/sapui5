@@ -100,7 +100,7 @@ With the downloaded code, you now have the bulletin board prototype, set up acco
 
     -   **Separation of concerns \(MVC\)**
 
-        All artifacts are located in either the `model`, `view`, or `controller` folder of the app. The app’s component and its descriptor configure which of those MVC artifacts to load. This configuration controls the navigation flow of the app.
+        All artifacts are located in either the `model`, `view`, or `controller` folder of the app. The app's component and its descriptor configure which of those MVC artifacts to load. This configuration controls the navigation flow of the app.
 
     -   **Separation of productive and nonproductive code**
 
@@ -120,7 +120,7 @@ Now that we have a running prototype, we can further extend it with additional t
 
 ## Test Strategy
 
-Let’s first take a look at best practices for testing apps written in SAPUI5. JavaScript is a dynamic programming language and only some issues can be detected by static code check tools and manual testing. Automated tests that execute the code regularly are beneficial for good quality and development productivity – especially when you're developing in short development cycles.
+Let's first take a look at best practices for testing apps written in SAPUI5. JavaScript is a dynamic programming language and only some issues can be detected by static code check tools and manual testing. Automated tests that execute the code regularly are beneficial for good quality and development productivity – especially when you're developing in short development cycles.
 
 We expect our prototype to be released and shipped as a product soon, so we need a solid testing strategy. Fortunately the prototype team has already thought ahead and prepared an infrastructure for unit and integration testing that is included in the app. This is a really good starting point for further enhancements of the app.
 

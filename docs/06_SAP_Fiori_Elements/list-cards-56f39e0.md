@@ -149,7 +149,7 @@ Extended List Type - Bar Flavor
 
 ## Condensed List Card with Images or Icons
 
-To display images or icons in the condensed list card, set the property `”imageSupported": true,` in the descriptor settings and configure the `DataField` property in the `LineItem` annotation. For example:
+To display images or icons in the condensed list card, set the property `"imageSupported": true,` in the descriptor settings and configure the `DataField` property in the `LineItem` annotation. For example:
 
 > ### Sample Code:  
 > XML Annotation

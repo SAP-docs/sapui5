@@ -27,7 +27,7 @@ Always define the libraries you use in the manifest and remove all libraries tha
 ```
 
 -   Learn how: Walkthrough Tutorial [Step 10: Descriptor for Applications](step-10-descriptor-for-applications-8f93bf2.md)
--   Find out more: [Descriptor for Applications, Components, and Libraries \(manifest.json\)](../04_Essentials/descriptor-for-applications-components-and-libraries-manifest-json-be0cf40.md)
+-   Find out more: [Manifest \(Descriptor for Applications, Components, and Libraries\)](../04_Essentials/manifest-descriptor-for-applications-components-and-libraries-be0cf40.md)
 
 
 

@@ -30,7 +30,7 @@ Solution
 
 What does it mean when the following errors appear in the browser console?
 
-“Access to XMLHttpRequest at <URL\> from origin <ORIGIN\> has been blocked by the CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.”
+"Access to XMLHttpRequest at <URL\> from origin <ORIGIN\> has been blocked by the CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
 
 </td>
 <td valign="top">

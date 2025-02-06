@@ -2,7 +2,10 @@
 
 # Migrating an Existing Project from SAP Web IDE
 
-You can migrate your SAP Fiori projects, such as SAP Web IDE, to SAP Business Application Studio and Visual Studio Code.
+If you have created any SAP Fiori projects using SAP Web IDE, you can migrate them to SAP Business Application Studio or Visual Studio Code.
 
-For more information about migrating your projects from SAP Web IDE to SAP Fiori tools, see [Migration](https://help.sap.com/docs/SAP_FIORI_tools/17d50220bcd848aa854c9c182d65b699/70d41f3ee29d453a90efab3ce025d450.html).
+For more information, see [Migration](https://help.sap.com/docs/SAP_FIORI_tools/17d50220bcd848aa854c9c182d65b699/70d41f3ee29d453a90efab3ce025d450.html).
+
+> ### Caution:  
+> SAP Web IDE is no longer available via SAP Business Technology Platform trial accounts. Any references to SAP Web IDE in this documentation are only relevant for you if you have access to SAP Web IDE through a productive SAP BTP account. Please consider SAP Business Application Studio as an alternative. See [App Development Using SAP Business Application Studio](../05_Developing_Apps/app-development-using-sap-business-application-studio-6bbad66.md).
 

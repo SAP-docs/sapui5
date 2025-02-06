@@ -64,7 +64,7 @@ For your convenience, the Support Assistant is also equipped with ready-to-use s
 You can't delete system presets but you have the option to modify and export them as you do with your custom ones. Although the rules selected within one system preset are grouped according to their relevance to a certain scenario, they can belong to different categories.
 
 > ### Tip:  
-> If you modify the rule selection within a system preset, an asterisk appears next to its name as an indication of changes that haven’t been saved. You can undo these changes by selecting the refresh icon opposite the preset name ![](images/System_Rule_Presets_Reset_7765191.png).
+> If you modify the rule selection within a system preset, an asterisk appears next to its name as an indication of changes that haven't been saved. You can undo these changes by selecting the refresh icon opposite the preset name ![](images/System_Rule_Presets_Reset_7765191.png).
 
 > ### Tip:  
 > You can use the Deprecations \(experimental\) system preset to check your application for usages of deprecated controls, properties, aggregations, and others.

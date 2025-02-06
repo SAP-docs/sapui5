@@ -10,15 +10,13 @@ A micro chart facet contains a title, subtitle, `MicroChart` control, and a foot
 
 ![](images/Micro_Chart_Facet_7e0b23a.png)
 
-To add a micro chart facet, in the local annotations file, use a `UI.HeaderFacets` term and the complex type `UI.ReferenceFacet` and reference the `UI.Chart` as shown in the following sample code:
+To add a micro chart facet, in the local annotations file, you must add a `UI.HeaderFacets` term along with the complex type `UI.ReferenceFacet`, and reference the `UI.Chart` as shown in the following sample code:
 
 
 
 ### `UI.HeaderFacets` and `UI.ReferenceFacet`
 
 > ### Sample Code:  
-> XML Annotation
-> 
 > ```xml
 > <Annotations Target="STTA_PROD_MAN.STTA_C_MP_ProductType">
 >     <Annotation Term="UI.HeaderFacets">
@@ -77,17 +75,17 @@ The `UI.Chart Title` property is used for the title. The `UI.Chart Description` 
 
 ### `UI.DataPoint` Annotation
 
-The `DataPoint` property of the `MeasureAttributes` of the `Chart` annotation has to point to the `UI.DataPoint` annotation.
+The `DataPoint` property of `MeasureAttributes` in the `Chart` annotation must point to the `UI.DataPoint` annotation.
 
 The micro chart supports both the `Criticality` and `CriticalityCalculation` properties of a `UI.DataPoint`.
 
-For more information about how to use the `CriticalityCalculation`, see the annotation examples in [Area Micro Chart](area-micro-chart-1467f2b.md). For more information about how to use the `Criticality` property, see the annotation examples in [Bullet Micro Chart](bullet-micro-chart-b915166.md).
+For more information about how to use the `CriticalityCalculation` property, see the annotation examples in [Area Micro Chart](area-micro-chart-1467f2b.md). For more information about how to use the `Criticality` property, see the annotation examples in [Bullet Micro Chart](bullet-micro-chart-b915166.md).
 
 
 
 ### Unit of Measure Annotations
 
-The unit of measure is used for the footer of the micro chart. The following example shows you an annotation for the unit of measure:
+The unit of measure is displayed in the footer of the micro chart. The following sample code provides an annotation for specifying the unit of measure. The sample code uses the `Measures.ISOCurrency` term, which is applied to the entity type property that serves as the value property of `UI.DataPoint`.
 
 > ### Sample Code:  
 > XML Annotation
@@ -119,8 +117,6 @@ The unit of measure is used for the footer of the micro chart. The following exa
 > 
 > ```
 
-This example uses the `Measures.ISOCurrency` term and it's applied to the entity type property that is used as the value property of the `UI.DataPoint`.
-
 
 
 <a name="loioe219fd0c85b842c69ac3a514e712ece5__section_l5h_1qp_btb"/>
@@ -128,7 +124,7 @@ This example uses the `Measures.ISOCurrency` term and it's applied to the entity
 ## Additional Features in SAP Fiori Elements for OData V2
 
 > ### Note:  
-> The template doesn't support the use of navigation properties in the `UI.Chart` term for the micro chart as shown in the following example:
+> The template doesn't support the use of navigation properties in the `UI.Chart` term for the micro chart, as shown in the following sample code:
 > 
 >   
 >   
@@ -142,12 +138,12 @@ This example uses the `Measures.ISOCurrency` term and it's applied to the entity
 
 ## Additional Features in SAP Fiori Elements for OData V4
 
-You can enable in-page and external navigation from the micro chart title. For more information, see [Navigation from Header Facet Title](navigation-from-header-facet-title-fa0ca22.md).
+You can enable both in-page and external navigation from the micro chart title. For more information, see [Navigation from Header Facet Title](navigation-from-header-facet-title-fa0ca22.md).
 
-SAP Fiori elements for OData V4 also supports the comparison micro chart.
+We also support the comparison micro chart.
 
 > ### Note:  
-> The use of navigation properties, like the one highlighted in the following sample code, is not supported.
+> We don't support the use of navigation properties, such as the one highlighted in the following sample code:
 > 
 >   
 >   
@@ -160,11 +156,144 @@ SAP Fiori elements for OData V4 also supports the comparison micro chart.
 > 
 > For example, there is an entity that is linked with a micro chart that has multiple records with the values 'Purchase' and 'Sales'. In this case, the back end must aggregate the 'Sales' value and ensure that the entity has only one record for each 'Purchase' value. This behavior is unlike the behavior of regular charts or analytical tables, where SAP Fiori elements for OData V4 initiates an aggregation call to the back end for the aggregated 'Sales' value.
 
+You can annotate a micro chart and use it as a facet, as shown in the following sample code:
+
+> ### Sample Code:  
+> XML Annotation
+> 
+> ```
+> <Annotations Target="SAP__self.BookingType">
+>     <Annotation Term="SAP__UI.DataPoint" Qualifier="FlightPrice">
+>         <Record>
+>             <PropertyValue Property="Value" Path="FlightPrice"/>
+>         </Record>
+>     </Annotation>
+>     <Annotation Term="SAP__UI.Chart" Qualifier="FlightPrice">
+>         <Record Type="SAP__UI.ChartDefinitionType">
+>             <PropertyValue Property="ChartType" EnumMember="SAP__UI.ChartType/Column"/>
+>             <PropertyValue Property="Title" String="Flight Price"/>
+>             <PropertyValue Property="Measures">
+>                 <Collection>
+>                     <PropertyPath>FlightPrice</PropertyPath>
+>                 </Collection>
+>             </PropertyValue>
+>             <PropertyValue Property="MeasureAttributes">
+>                 <Collection>
+>                     <Record Type="SAP__UI.ChartMeasureAttributeType">
+>                         <PropertyValue Property="DataPoint" AnnotationPath="@SAP__UI.DataPoint#FlightPrice"/>
+>                         <PropertyValue Property="Role" EnumMember="SAP__UI.ChartMeasureRoleType/Axis1"/>
+>                         <PropertyValue Property="Measure" PropertyPath="FlightPrice"/>
+>                     </Record>
+>                 </Collection>
+>             </PropertyValue>
+>             <PropertyValue Property="Dimensions">
+>                 <Collection>
+>                     <PropertyPath>FlightDate</PropertyPath>
+>                 </Collection>
+>             </PropertyValue>
+>         </Record>
+>     </Annotation>
+> </Annotations>
+> 
+> <Annotations Target="SAP__self.TravelType">
+>     <Annotation Term="SAP__UI.HeaderFacets">
+>         <Collection>
+>             <Record Type="SAP__UI.ReferenceFacet">
+>                 <PropertyValue Property="ID" String="FlightPrice"/>
+>                 <PropertyValue Property="Target" AnnotationPath="_Booking/@SAP__UI.Chart#FlightPrice"/>
+>             </Record>
+>         </Collection>
+>     </Annotation>
+> </Annotations>
+> ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> ```
+> //@Scope: [VIEW] ("TRAVEL")
+> annotate view VIEWNAME with
+> {
+>   @UI.facet: [ {
+>     targetElement: '_Booking',
+>     targetQualifier: 'FlightPrice',
+>     type: #CHART_REFERENCE,
+>     purpose: #HEADER
+>   } ]
+>   ...
+> }
+> 
+> //@Scope: [ENTITY] ("BOOKING")
+> @UI: {
+>   chart: [ {
+>     title: 'Flight Price',
+>     qualifier: 'FlightPrice', 
+>     chartType: #COLUMN,
+>     measures: [
+>       'FlightPrice'
+>     ],
+>     measureAttributes: [
+>       {
+>         measure: 'FlightPrice',
+>         role: #AXIS_1,
+>         asDataPoint: true
+>       }
+>     ],
+>     dimensions: [
+>       'FlightDate'
+>     ]
+>   } ]
+> }
+> 
+> //@Scope: [VIEW] ("BOOKING")
+> annotate view VIEWNAME with
+> {
+>   ...
+>   @UI.dataPoint: {
+>     title: 'Flight Price'
+>   }   
+>   FlightPrice;
+>   ...
+> }
+> ```
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+>   annotate Booking with @(UI: {
+>     DataPoint #FlightPrice: {Value: FlightPrice},
+> 
+>     Chart #FlightPrice    : {
+>       $Type            : 'UI.ChartDefinitionType',
+>       Title            : 'Flight Price',
+>       ChartType        : #Column,
+>       Measures         : [FlightPrice],
+>       Dimensions       : [FlightDate],
+>       MeasureAttributes: [{
+>         $Type    : 'UI.ChartMeasureAttributeType',
+>         Measure  : FlightPrice,
+>         Role     : #Axis1,
+>         DataPoint: '@UI.DataPoint#FlightPrice'
+>       }]
+>     },
+> 
+> 
+>   });
+> 
+>   annotate Travel with @(UI: {HeaderFacets: [{
+>     $Type : 'UI.ReferenceFacet',
+>     ID    : 'FlightPrice',
+>     Target: '_Booking/@UI.Chart#FlightPrice'
+>   }]});
+> 
+> ```
+
 
 
 ### Applying Sort Order to Micro Charts
 
-You can apply a sort order to the micro chart data using the `UI.PresentationVariant`, choosing either ascending or descending order. The sorting option is applicable only for micro charts, line micro charts, column micro charts, comparison micro charts, and stacked micro charts.
+You can apply a sort order to the micro chart data using the `UI.PresentationVariant`, choosing either ascending or descending order. The sorting option is applicable only for area micro charts, line micro charts, column micro charts, comparison micro charts, and stacked bar micro charts.
 
 > ### Note:  
 > Micro charts consider only the `SortOrderType` property and ignore other properties in the `PresentationVariantType`.
@@ -173,53 +302,162 @@ You can apply a sort order to the micro chart data using the `UI.PresentationVar
 > XML Annotation
 > 
 > ```
-> <Annotation Term="UI.HeaderFacets">
->     <Collection>
->         <Record Type="UI.ReferenceFacet">
->             <PropertyValue Property="Label" String="Comparison MicroChart" />
->             <PropertyValue Property="Target" AnnotationPath="_Item/@UI.PresentationVariant" />
+> <Annotations Target="SAP__self.BookingType">
+>     <Annotation Term="SAP__UI.DataPoint" Qualifier="FlightPrice">
+>         <Record>
+>             <PropertyValue Property="Value" Path="FlightPrice"/>
 >         </Record>
->     </Collection>
-> </Annotation>
-> <Annotation Term="UI.PresentationVariant">
->     <Record Type="UI.PresentationVariantType">
->         <PropertyValue Property="SortOrder">
->             <Collection>
->                 <Record Type="Common.SortOrderType">
->                     <PropertyValue Property="Property" PropertyPath="SalesOrderItem" />
->                     <PropertyValue Property="Descending" Bool="true" />
->                 </Record>
->             </Collection>
->         </PropertyValue>
->         <PropertyValue Property="Visualizations">
->             <Collection>
->                  <AnnotationPath>@UI.Chart#ComparisonPath</AnnotationPath>
->             </Collection>
->         </PropertyValue>
->     </Record>
-> </Annotation>
+>     </Annotation>
+>     <Annotation Term="SAP__UI.Chart" Qualifier="FlightPrice">
+>         <Record Type="SAP__UI.ChartDefinitionType">
+>             <PropertyValue Property="ChartType" EnumMember="SAP__UI.ChartType/Column"/>
+>             <PropertyValue Property="Title" String="Flight Price"/>
+>             <PropertyValue Property="Measures">
+>                 <Collection>
+>                     <PropertyPath>FlightPrice</PropertyPath>
+>                 </Collection>
+>             </PropertyValue>
+>             <PropertyValue Property="MeasureAttributes">
+>                 <Collection>
+>                     <Record Type="SAP__UI.ChartMeasureAttributeType">
+>                         <PropertyValue Property="DataPoint" AnnotationPath="@SAP__UI.DataPoint#FlightPrice"/>
+>                         <PropertyValue Property="Role" EnumMember="SAP__UI.ChartMeasureRoleType/Axis1"/>
+>                         <PropertyValue Property="Measure" PropertyPath="FlightPrice"/>
+>                     </Record>
+>                 </Collection>
+>             </PropertyValue>
+>             <PropertyValue Property="Dimensions">
+>                 <Collection>
+>                     <PropertyPath>FlightDate</PropertyPath>
+>                 </Collection>
+>             </PropertyValue>
+>         </Record>
+>     </Annotation>
+>     <Annotation Term="SAP__UI.PresentationVariant">
+>         <Record Type="SAP__UI.PresentationVariantType">
+>             <PropertyValue Property="SortOrder">
+>                 <Collection>
+>                     <Record Type="SAP__Common.SortOrderType">
+>                         <PropertyValue Property="Property" PropertyPath="FlightPrice" />
+>                         <PropertyValue Property="Descending" Bool="false" />
+>                     </Record>
+>                 </Collection>
+>             </PropertyValue>
+>             <PropertyValue Property="Visualizations">
+>                 <Collection>
+>                     <AnnotationPath>@SAP__UI.Chart#FlightPrice</AnnotationPath>
+>                 </Collection>
+>             </PropertyValue>
+>         </Record>
+>     </Annotation>
+> </Annotations>
+> <Annotations Target="SAP__self.TravelType">
+>     <Annotation Term="SAP__UI.HeaderFacets">
+>         <Collection>
+>             <Record Type="SAP__UI.ReferenceFacet">
+>                 <PropertyValue Property="ID" String="FlightPrice"/>
+>                 <PropertyValue Property="Target" AnnotationPath="_Booking/@SAP__UI.PresentationVariant"/>
+>             </Record>
+>         </Collection>
+>     </Annotation>
+> </Annotations>
+> ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> ```
+> //@Scope: [VIEW] ("TRAVEL")
+> annotate view VIEWNAME with
+> {
+>   @UI.facet: [ {
+>     targetElement: '_Booking',
+>     type: #PRESENTATIONVARIANT_REFERENCE,
+>     purpose: #HEADER
+>   } ]
+>   ...
+> }
+> 
+> //@Scope: [ENTITY] ("BOOKING")
+> @UI: {
+>   presentationVariant: [ {
+>     sortOrder: [ {
+>       by: 'FlightPrice',
+>       direction: #ASC
+>     } ],
+>     visualizations: [ {
+>       type: #AS_CHART,
+>       qualifier: 'FlightPrice'
+>     } ]
+>   } ],
+>   chart: [ {
+>     title: 'Flight Price',
+>     qualifier: 'FlightPrice', 
+>     chartType: #COLUMN,
+>     measures: [
+>       'FlightPrice'
+>     ],
+>     measureAttributes: [
+>       {
+>         measure: 'FlightPrice',
+>         role: #AXIS_1,
+>         asDataPoint: true
+>       }
+>     ],
+>     dimensions: [
+>       'FlightDate'
+>     ]
+>   } ]
+> }
+> 
+> //@Scope: [VIEW] ("BOOKING")
+> annotate view VIEWNAME with
+> {
+>   ...
+>   @UI.dataPoint: {
+>     title: 'Flight Price'
+>   }   
+>   FlightPrice;
+>   ...
+> }
 > ```
 
 > ### Sample Code:  
 > CAP CDS Annotation
 > 
 > ```
-> HeaderFacets : [{
->     $Type        : 'UI.ReferenceFacet',
->     Label         : 'Comparison MicroChart',
->     ID               : 'ComparisonMicroChart',
->     Target        : '_Item/@UI.PresentationVariant#ComparisonPath',
->     ![@UI.Importance]: #High
->   }],
-> PresentationVariant #ComparisonPath   : {
->     Visualizations: ['@UI.Chart#ComparisonPath'],
->     SortOrder     : [
->       {
->         Property  : 'SalesOrderItemCategory',
+>   annotate Booking with @(UI: {
+>     DataPoint #FlightPrice: {Value: FlightPrice},
+> 
+>     Chart #FlightPrice    : {
+>       $Type            : 'UI.ChartDefinitionType',
+>       Title            : 'Flight Price',
+>       ChartType        : #Column,
+>       Measures         : [FlightPrice],
+>       Dimensions       : [FlightDate],
+>       MeasureAttributes: [{
+>         $Type    : 'UI.ChartMeasureAttributeType',
+>         Measure  : FlightPrice,
+>         Role     : #Axis1,
+>         DataPoint: '@UI.DataPoint#FlightPrice'
+>       }]
+>     },
+> 
+>     PresentationVariant   : {
+>       Visualizations: ['@UI.Chart#FlightPrice'],
+>       SortOrder     : [{
+>         Property  : FlightPrice,
 >         Descending: false
->       }
->     ]
->   }
+>       }],
+>     }
+>   });
+> 
+>   annotate Travel with @(UI: {HeaderFacets: [{
+>     $Type : 'UI.ReferenceFacet',
+>     ID    : 'FlightPrice',
+>     Target: '_Booking/@UI.PresentationVariant'
+>   }]});
+> 
 > ```
 
 **Related Information**  

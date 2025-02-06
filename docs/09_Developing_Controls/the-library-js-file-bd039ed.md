@@ -43,7 +43,7 @@ sap.ui.define([
 	//  An enum type must be registered by calling the "DataType.registerEnum()" method
 	DataType.registerEnum("my.lib.ValueColor", oThisLibrary.ValueColor);
 
-	// don’t forget to return the value
+	// don't forget to return the value
 	return oThisLibrary;
  
 });

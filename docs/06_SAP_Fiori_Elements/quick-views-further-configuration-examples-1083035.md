@@ -15,7 +15,7 @@ You have various options for configuring quick views. This documentation provide
 
 ![](images/Quick_View_in_Object_Page_Table_2f6910f.png)
 
-For the currency, no referential constraint is defined by the service. This is why you need to make the following entry:
+For the currency, no referential constraint is defined by the service. Hence, you need to make the following entry:
 
 ```
 
@@ -36,7 +36,7 @@ For the currency, no referential constraint is defined by the service. This is w
 
 
 
-### Quick view facets annotation
+### Quick View Facets Annotation
 
 > ### Sample Code:  
 > XML Annotation
@@ -178,10 +178,11 @@ For the currency, no referential constraint is defined by the service. This is w
 
 ## Additional Features in SAP Fiori Elements for OData V2
 
-> ### Example:  
-> `QuickViewFacets` annotation for Supplier
-> 
-> ![](images/Quick_View_Example_1_8633539.png)
+
+
+### Annotations for Quick View Facets
+
+![](images/Quick_View_Example_1_8633539.png)
 
 > ### Sample Code:  
 > XML Annotation
@@ -362,8 +363,11 @@ For the currency, no referential constraint is defined by the service. This is w
 
 ## Additional Features in SAP Fiori Elements for OData V4
 
-> ### Example:  
-> ![](images/Quick_View_for_Smart_Link_Navigation_Labels_2f019ad.png)
+
+
+### Annotations for Quick View Facets
+
+![](images/Quick_View_for_Smart_Link_Navigation_Labels_2f019ad.png)
 
 > ### Sample Code:  
 > XML Annotation

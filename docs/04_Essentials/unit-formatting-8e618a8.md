@@ -68,7 +68,7 @@ sap.ui.require(["sap/ui/core/Locale", "sap/ui/core/format/NumberFormat"], functi
 });
 ```
 
-The unit’s `displayname` can also be retrieved based on the data from the CLDR.
+The unit's `displayname` can also be retrieved based on the data from the CLDR.
 
 ```
 sap.ui.require(["sap/ui/core/Locale", "sap/ui/core/LocaleData"],
@@ -81,7 +81,7 @@ sap.ui.require(["sap/ui/core/Locale", "sap/ui/core/LocaleData"],
 
 ### Plural Forms and RTL
 
-Depending on the set locale/language, the output also correctly regards grammatical plural forms, as well as right-to-left orientation. In some Arabic languages, for example, there is a distinction between “many” and “one”, with “one” being a single string without a number in it:
+Depending on the set locale/language, the output also correctly regards grammatical plural forms, as well as right-to-left orientation. In some Arabic languages, for example, there is a distinction between "many" and "one", with "one" being a single string without a number in it:
 
 ```
 
@@ -93,7 +93,7 @@ sap.ui.require(["sap/ui/core/Locale", "sap/ui/core/format/NumberFormat"], functi
 });
 ```
 
-And here’s an example of right-to-left orientation in Hebrew:
+And here's an example of right-to-left orientation in Hebrew:
 
 ```
 
@@ -281,7 +281,7 @@ sap.ui.require(["sap/ui/model/type/Unit"], function(UnitType) {
        UnitType.extend("sap.ui.core.samples.MeterType", {
               constructor: function(oFormatOptions, oConstraints){
                      // define the dynamic format options as the third argument
-                     // ‘aDynamicFormatOptionNames’
+                     // 'aDynamicFormatOptionNames'
                      UnitType.apply(this, [oFormatOptions, oConstraints, ["decimals"]]);
               }
        });
@@ -292,7 +292,7 @@ In the example we defined a new `MeterType` to combine not only a number value a
 
 ```
 <-- XML View snippet -->
-<t:Table rows=’energyModel>/meters’>
+<t:Table rows='energyModel>/meters'>
    ... <!-- here is more Table definition stuff, we cut this for simplicity -->
  
  
@@ -304,7 +304,7 @@ In the example we defined a new `MeterType` to combine not only a number value a
 </t:Table>
 ```
 
-With the new bindable dynamic format options of Unit type, you can pass the relevant meter formatting information in a generalized way through the cell’s bindings.
+With the new bindable dynamic format options of Unit type, you can pass the relevant meter formatting information in a generalized way through the cell's bindings.
 
 The third argument of the base Unit type constructor is a list of dynamic format options. In our example, the binding context itself contains the information on how many-decimals should be used. Still, these dynamic format options can be bound to any value from any model.
 

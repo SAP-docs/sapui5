@@ -46,15 +46,15 @@ Complex controls like pages, panels, and tables need a title to summarize the co
 
 Make sure that all edit boxes, search fields, and column headers have labels. If not, use the `Label` control and add one. Labels have to be connected to each control, for example by using one of the following:
 
--   `labelFor=”…”`
+-   `labelFor="…"`
 
--   `aria-label=”…”`
+-   `aria-label="…"`
 
--   `aria-labelledby=”…”`
+-   `aria-labelledby="…"`
 
--   `placeholder=”…”`
+-   `placeholder="…"`
 
--   `title=”…”`
+-   `title="…"`
 
 
 
@@ -175,7 +175,7 @@ Start a screen reader, start the application, walk through the application using
 
 -   Is everything that you need to use the application read correctly?
 
-    -   Each element’s role, name, state, label, tooltip, further information \(attached errors, usage hints\)?
+    -   Each element's role, name, state, label, tooltip, further information \(attached errors, usage hints\)?
 
     -   Is this the case for interactive and semantic/non-semantic elements?
 
@@ -188,7 +188,7 @@ Start a screen reader, start the application, walk through the application using
 
     -   No strange pronunciation, like reading English with German words or vice versa?
 
-    -   No nonsense, wrong values, another element’s attributes?
+    -   No nonsense, wrong values, another element's attributes?
 
 
 -   Are screen updates like application messages, dialogs \(popups\), and similar dynamic content read correctly and at the right time?

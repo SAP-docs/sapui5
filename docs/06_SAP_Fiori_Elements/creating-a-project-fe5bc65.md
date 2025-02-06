@@ -2,7 +2,7 @@
 
 # Creating a Project
 
-You can use [SAP Fiori tools](https://help.sap.com/viewer/product/SAP_FIORI_tools/Latest/en-US), which is a set of extensions for SAP Business Application Studio and Visual Studio Code to build UI applications when using SAP Fiori elements.
+You can use [SAP Fiori tools](https://help.sap.com/docs/SAP_FIORI_tools), which is a set of extensions for SAP Business Application Studio and Visual Studio Code to build UI applications when using SAP Fiori elements.
 
 
 

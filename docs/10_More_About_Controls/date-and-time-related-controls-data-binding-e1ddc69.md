@@ -106,7 +106,7 @@ In this example, the binding type specifies that the backend data will be interp
 
     ```xml
     <DateRangeSelection
-            value="{path: 'EntryDateRange', valueFormat: 'MMM d, y’}"/>
+            value="{path: 'EntryDateRange', valueFormat: 'MMM d, y'}"/>
     
     ```
 

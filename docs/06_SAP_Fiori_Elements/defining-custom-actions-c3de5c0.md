@@ -232,7 +232,7 @@ Represents the command mapped to a keyboard shortcut defined under `sap.ui.comma
 
 ```
 
-Custom actions defined in the application’s custom controller:
+Custom actions defined in the application's custom controller:
 
 > ### Sample Code:  
 > ```

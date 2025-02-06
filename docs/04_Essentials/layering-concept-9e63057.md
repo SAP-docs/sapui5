@@ -114,7 +114,7 @@ Developers
 </td>
 <td valign="top">
 
-UI changes made using the SAPUI5 Visual Editor editor in SAP Web IDE 
+UI changes made using the Adaptation Editor in SAP Business Application Studio.
 
 </td>
 </tr>

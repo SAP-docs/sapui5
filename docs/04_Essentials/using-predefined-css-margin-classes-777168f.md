@@ -92,7 +92,7 @@ Here are the classes we provide for single-sided margins:
 
 ## Two-Sided Margins
 
-If you’d like to clear the space to the left and right or top and bottom of your control, we've provided several two-sided margin classes for you to use. Again, just choose the size and orientation that you need \(`BeginEnd`, `TopBottom`\). For example, if you need to clear a 32px space both to the left and right of a control, you would add the class `sapUiMediumMarginBeginEnd`. Here are the classes that are available:
+If you'd like to clear the space to the left and right or top and bottom of your control, we've provided several two-sided margin classes for you to use. Again, just choose the size and orientation that you need \(`BeginEnd`, `TopBottom`\). For example, if you need to clear a 32px space both to the left and right of a control, you would add the class `sapUiMediumMarginBeginEnd`. Here are the classes that are available:
 
 
 <table>
@@ -217,26 +217,26 @@ Larger than 1023px \(large desktops\): For these, `sapUiResponsiveMargin` provid
 The following exceptions to these rules exist:
 
 -   When your `sapUiResponsiveMargin` control is placed within an `sap.m.SplitApp` list view, it's always provided with a 16px bottom margin and nothing else. Here, the thresholds mentioned previously do not affect your control.
--   Within a `SplitApp`’s detail view, there's always a 16px margin all around your `sapUiResponsiveMargin` control, regardless of the available screen width. Usually, the `SplitApp` is responsive as well, though. If it hides its list view because the available screen width isn't sufficient, or if it’s running in ‘HideMode’, your control also ignores the fact that it's placed into a `SplitApp`’s detail view and it becomes responsive again.
+-   Within a `SplitApp`'s detail view, there's always a 16px margin all around your `sapUiResponsiveMargin` control, regardless of the available screen width. Usually, the `SplitApp` is responsive as well, though. If it hides its list view because the available screen width isn't sufficient, or if it's running in 'HideMode', your control also ignores the fact that it's placed into a `SplitApp`'s detail view and it becomes responsive again.
 
 
 
 ## Controls with 100% Width
 
-When applying classes with horizontal margins to a control, such as `sapUiSmallMargin` or `sapUiSmallMarginBegin`, for example, make sure that your control doesn’t have a 100% width. If your control has a `width` property \(which most controls have\), set the width value to `auto`, for example:
+When applying classes with horizontal margins to a control, such as `sapUiSmallMargin` or `sapUiSmallMarginBegin`, for example, make sure that your control doesn't have a 100% width. If your control has a `width` property \(which most controls have\), set the width value to `auto`, for example:
 
 ```
 <Panel width="auto" class="sapUiLargeMarginBegin
       sapUiLargeMarginBottom">
 ```
 
-If your control does **not** have a `width` property but still has a default width of 100%, you can add our CSS class `sapUiForceWidthAuto` to your control, which ensures that the control’s default width is overwritten with the value `auto`. An example for such a control is `sap.m.IconTabBar`.
+If your control does **not** have a `width` property but still has a default width of 100%, you can add our CSS class `sapUiForceWidthAuto` to your control, which ensures that the control's default width is overwritten with the value `auto`. An example for such a control is `sap.m.IconTabBar`.
 
 
 
 ## Adding Margin Classes to Your Code
 
-To apply the classes described here in your code, simply add a `class` attribute and the margin class to the respective control tag in your declarative xml views. If you need to add several classes at once \(which can be the case if you’re using single-sided margins\), separate them by a space. Here’s a sample snippet containing a panel and an `IconTabBar`:
+To apply the classes described here in your code, simply add a `class` attribute and the margin class to the respective control tag in your declarative xml views. If you need to add several classes at once \(which can be the case if you're using single-sided margins\), separate them by a space. Here's a sample snippet containing a panel and an `IconTabBar`:
 
 ```xml
 
@@ -267,13 +267,13 @@ To apply the classes described here in your code, simply add a `class` attribute
 </mvc:View>
 ```
 
-If you would like to add margins to javascript code, use the control’s `addStyleClass` method. For example: `myPanel.addStyleClass(‘sapUiLargeMargin’)`. Again, if you need to add several classes at once, you can do so by separating them by a space. Make sure that you set the panel’s width to `auto` as shown here: `myPanel.setWidth(‘auto’)`.
+If you would like to add margins to javascript code, use the control's `addStyleClass` method. For example: `myPanel.addStyleClass('sapUiLargeMargin')`. Again, if you need to add several classes at once, you can do so by separating them by a space. Make sure that you set the panel's width to `auto` as shown here: `myPanel.setWidth('auto')`.
 
 
 
 ## Removing Margins
 
-If a control comes with a margin that you don’t want for some particular reason, you can use one of our convenience classes to remove it. You can either use `sapUiNoMargin` to remove the margins all around your control, or you can choose one or more classes from the following list to remove a margin in one or more particular directions:
+If a control comes with a margin that you don't want for some particular reason, you can use one of our convenience classes to remove it. You can either use `sapUiNoMargin` to remove the margins all around your control, or you can choose one or more classes from the following list to remove a margin in one or more particular directions:
 
 -   `sapUiNoMarginTop`
 

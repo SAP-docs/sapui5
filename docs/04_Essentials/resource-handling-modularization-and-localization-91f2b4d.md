@@ -2,7 +2,7 @@
 
 # Resource Handling: Modularization and Localization
 
-The handling of resources in SAPUI5 is divided in a client-side and a server-side part. The two parts are complementary and don’t depend on each other.
+The handling of resources in SAPUI5 is divided in a client-side and a server-side part. The two parts are complementary and don't depend on each other.
 
 The server-side resource handling is an optional component to improve the client-server interaction by providing a server-side locale fallback instead of a client-side fallback with multiple requests. The server-side resource handling is mainly used in Eclipse to support the modularized development of SAPUI5 applications and libraries.
 
@@ -27,7 +27,7 @@ In both cases, SAPUI5 loads additional resources from a server. This server can 
 
 ## Server-Side Resource Handling
 
-For the Java server and the integration into Eclipse, SAPUI5 provides a resource handler to improve the interaction between client and server, for example by providing a server-side locale fallback for the language to avoid multiple requests to get the correct language. It’s also used to support modularized development of SAPUI5 applications and libraries. The Java resource handler is aligned with the concept of the JavaServer Faces. The following prerequisites apply:
+For the Java server and the integration into Eclipse, SAPUI5 provides a resource handler to improve the interaction between client and server, for example by providing a server-side locale fallback for the language to avoid multiple requests to get the correct language. It's also used to support modularized development of SAPUI5 applications and libraries. The Java resource handler is aligned with the concept of the JavaServer Faces. The following prerequisites apply:
 
 -   The default implementation must support packaging resources in the web application root under the path `resources/<resourceIdentifier>` relative to the web app root.
 
@@ -49,7 +49,7 @@ The resource handler in SAPUI5 provides the following additional features:
 
 -   Theme fallback:
 
-    If resources aren’t available for a theme, the resource handler automatically checks the base theme for such resources and returns them instead of a 404 error message.
+    If resources aren't available for a theme, the resource handler automatically checks the base theme for such resources and returns them instead of a 404 error message.
 
 -   Resource bundle fallback:
 
@@ -203,7 +203,7 @@ Specifies verbosity of the resource handler; default: `false`
 </td>
 <td valign="top">
 
-Specifies the location that is used to proxy requests to resources that aren’t available locally; default: empty
+Specifies the location that is used to proxy requests to resources that aren't available locally; default: empty
 
 </td>
 </tr>
@@ -286,7 +286,7 @@ In general, for the resources returned from the proxy the `ResourceServlet` is e
 
 **Verify that a Resource was Retrieved from Remote Location**
 
-When in development mode, it’s possible to verify that a resource was retrieved from the desired remote location by checking the response header of the respective request. In this case, the response header has an entry `x-sap-ResourceUrl = remote resource URL`, for example:
+When in development mode, it's possible to verify that a resource was retrieved from the desired remote location by checking the response header of the respective request. In this case, the response header has an entry `x-sap-ResourceUrl = remote resource URL`, for example:
 
 ```
 x-sap-ResourceUrl = http://%server%:%port%/sap/public/bc/ui5_ui5/resources/sap-ui-core.js

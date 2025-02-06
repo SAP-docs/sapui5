@@ -68,9 +68,9 @@ The `sap.m.routing.Targets` object itself can be retrieved by calling `getTarget
 > ### Note:  
 > In the example code we get a reference to the `sap.m.routing.Targets` object by calling `getTargets()` on `this.getRouter()` from the base controller. However, you could also get a reference to the `sap.m.routing.Targets` object by calling `this.getOwnerComponent().getRouter().getTargets()` or `this.getOwnerComponent().getTargets()`.
 
-If you now call the app and press the *Display Not Found* button you see that the `notFound` target is displayed without changing the URL. That was easy, but suddenly our app’s *Back* button does not work anymore. The bug we have just introduced illustrates an interesting navigation trap. The application hash is still empty since we just display the target and did not hit a route.
+If you now call the app and press the *Display Not Found* button you see that the `notFound` target is displayed without changing the URL. That was easy, but suddenly our app's *Back* button does not work anymore. The bug we have just introduced illustrates an interesting navigation trap. The application hash is still empty since we just display the target and did not hit a route.
 
-When pressing the app’s *Back* button, the `onNavBack` from the previous step is called. It detects that there is no previous hash and therefore tries to navigate to the `appHome` route again. The router is smart enough to detect that the current hash did not change and therefore skips the navigation to the route. Fortunately, there is an easy workaround for us. However, we need to touch the `Home` controller again.
+When pressing the app's *Back* button, the `onNavBack` from the previous step is called. It detects that there is no previous hash and therefore tries to navigate to the `appHome` route again. The router is smart enough to detect that the current hash did not change and therefore skips the navigation to the route. Fortunately, there is an easy workaround for us. However, we need to touch the `Home` controller again.
 
 
 
@@ -137,7 +137,7 @@ Next, we have to register an event listener to the `display` event of the `notFo
 
 From the router reference we can fetch a reference to the `notFound` target. Each target configuration will create a runtime object that can be accessed through the router.
 
-Similar to SAPUI5 controls, targets define API methods and events that can be attached. We attach a display event handler and save the data that was received as the event parameter `data` in an internal controller variable `_oData`. This data also includes the `fromTarget` information in case the caller passed it on. However, we now have to override the base controller’s `onNavBack` implementation to change the behavior a bit. We add a special case for our target back functionality in case the `fromTarget` property has been passed on. If specified, we simply display the target defined as `fromTarget` manually the same way we actually called the `notFound` target manually. Otherwise we just call the base controller’s `onNavBack` implementation.
+Similar to SAPUI5 controls, targets define API methods and events that can be attached. We attach a display event handler and save the data that was received as the event parameter `data` in an internal controller variable `_oData`. This data also includes the `fromTarget` information in case the caller passed it on. However, we now have to override the base controller's `onNavBack` implementation to change the behavior a bit. We add a special case for our target back functionality in case the `fromTarget` property has been passed on. If specified, we simply display the target defined as `fromTarget` manually the same way we actually called the `notFound` target manually. Otherwise we just call the base controller's `onNavBack` implementation.
 
 
 

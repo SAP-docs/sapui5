@@ -6,10 +6,10 @@ This section provides the configuration items relevant for all overview page car
 
 
 
-All cards inherit the generic capabilities that are shared across all cards, such as a card header, card footer, navigation support, and more. The following are the card properties mandatory for all cards:
+All cards inherit the generic capabilities that are shared across all cards, such as a card header, card footer, navigation support, and more. The following card properties are mandatory for all cards:
 
 -   `model`: Name of the model to provide to the card instance
 -   `template`: Card type \(card component package\) to instantiate
--   `settings`: Iternal card configuration passed to the card instance
+-   `settings`: Internal card configuration passed to the card instance
 -   `entitySet`: Entity set to use in the card
 
