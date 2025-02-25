@@ -1,0 +1,10 @@
+version = 1
+SPDX-PackageName = "sapui5"
+SPDX-PackageSupplier = "Oliver Mueller (oliver.mueller03@sap.com)"
+SPDX-PackageDownloadLocation = "https://github.com/sap-docs/sapui5"
+
+[[annotations]]
+path = "**"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2022-2023 SAP SE or an SAP affiliate company and sapui5 contributors"
+SPDX-License-Identifier = "CC-BY-4.0"
