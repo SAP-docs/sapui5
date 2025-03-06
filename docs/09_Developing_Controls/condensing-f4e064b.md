@@ -2,9 +2,9 @@
 
 # Condensing
 
-Condensing keeps change files clean.
+Condensing reduces overhead when creating changes.
 
-Each UI change made by a developer, key user or end user with SAPUI5 flexibility results in a change file being stored in the back end. Multiple changes to the same control can lead to superfluous changes that are not required for the target UI, for example, if a text has been renamed multiple times. Condensing minimizes the number of changes to be stored as much as possible. Certain changes, however, can't be condensed, for example, if they have been made on different layers or in different versions. Change handlers therefore have to classify the type of changes they create.
+Each UI change made by a developer, key user or end user with SAPUI5 flexibility results in a change file being stored in the back end. Multiple changes to the same control can lead to superfluous changes that are not required for the target UI, for example, a text being renamed multiple times. Condensing minimizes the number of changes to be stored as much as possible. Certain changes, however, can't be condensed - for example, if they have been made on different layers or in different versions. Change handlers therefore have to classify the type of changes they create.
 
 When the `getCondenserInfo` function is implemented, the change type is enabled to be condensed. Redundant changes are deleted while preserving the target UI. There are several classifications available, but no option to define a custom classification. Depending on the classification, different properties have to be returned by the function:
 
@@ -118,7 +118,7 @@ A control is moved inside a container.After any number of *move* changes, only o
 </td>
 <td valign="top">
 
-`sourceContainer, targetContainer, sourceIndex, sourceAggregation, targetAggregation, etTargetIndex, getTargetIndex`
+`sourceContainer, targetContainer, sourceIndex, sourceAggregation, targetAggregation, setTargetIndex, getTargetIndex`
 
 </td>
 </tr>

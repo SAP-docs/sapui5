@@ -6,8 +6,8 @@
 @font-face{font-family:'bwicons';src: url('./bwicons.ttf') format('truetype');font-weight: normal;font-style: normal;}
 @font-face{font-family:'FPA-icons';src: url('./FPA-icons.woff') format('woff');font-weight: normal;font-style: normal;}
 @font-face{font-family:'FPA-icons-V2';src: url('./FPA-icons-V2.woff') format('woff');font-weight: normal;font-style: normal;}
-@font-face{font-family:'FPA-icons-V3';src: url('./font/FPA-icons-V3.woff') format('woff');font-weight: normal;font-style: normal;}
-@font-face{font-family:'ITOA_FontIcon';src: url('./ITOA_FontIcon.eot');src: url('./ITOA_FontIcon.eot?#iefix') format('embedded-opentype'),url('./ITOA_FontIcon.ttf') format('truetype');font-weight: normal;font-style: normal;}
+@font-face{font-family:'FPA-icons-V3';src: url('./FPA-icons-V3.woff') format('woff');font-weight: normal;font-style: normal;}
+@font-face{font-family:'ITOA_FontIcon';src: url('./ITOA_FontIcon.ttf') format('truetype');font-weight: normal;font-style: normal;}
 @font-face{font-family:'NS-SAP-icons';src: url('./NS-SAP-icons.woff') format('woff');font-weight: normal;font-style: normal;}
 @font-face{font-family:'NS-SAP-icons-extended';src: url('./NS-SAP-icons-extended.woff') format('woff');font-weight: normal;font-style: normal;}
 @font-face{font-family:'sap-fiori-inapp-icons';src: url('./sap-fiori-inapp-icons.woff') format('woff');font-weight:normal;font-style:normal;}
@@ -27,6 +27,7 @@
 @font-face{font-family:'ve-icon-set';src: url('./ve-icon-set.woff') format('woff');font-weight:normal;font-style:normal;}
 @font-face{font-family:'FluentSystemIcons-Filled';src: url('./FluentSystemIcons-Filled.woff') format('woff');font-weight:normal;font-style:normal;}
 @font-face{font-family:'FluentSystemIcons-Regular';src: url('./FluentSystemIcons-Regular.woff') format('woff');font-weight:normal;font-style:normal;}
+@font-face {font-family:'EmarsysHorizon';src: url('./EmarsysHorizon.woff') format('woff');font-weight: normal;font-style: normal;}
 .Ariba-icons {font-family:Ariba_icon_library;}
 .Belize-icons {font-family:SAPGUI-Belize-Icons;}
 .BusinessSuiteInAppSymbols {font-family:BusinessSuiteInAppSymbols;}
@@ -56,3 +57,4 @@
 .ve-icon-set {font-family:ve-icon-set;}
 .FluentSystemIcons-Filled {font-family:FluentSystemIcons-Filled;}
 .FluentSystemIcons-Regular {font-family:FluentSystemIcons-Regular;}
+.EmarsysHorizon {font-family: EmarsysHorizon;}

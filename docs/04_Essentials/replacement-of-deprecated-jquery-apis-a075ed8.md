@@ -1,10 +1,13 @@
 <!-- loioa075ed88ef324261bca41813a6ac4a1c -->
 
-# Deprecated jQuery.sap API Replacement
+# Replacement of Deprecated jQuery APIs
 
 Overview of the mapping of legacy APIs to the new APIs for the migration
 
-The deprecation of the `jQuery.sap` API requires that it is replaced with the new API. The following list provides an overview of the required replacements.
+The deprecation of the `jQuery.sap` APIs and some native jQuery APIs requires that usages of them are replaced in favor of new APIs. The following lists provide an overview of the required replacements.
+
+> ### Note:  
+> For the deprecated native jQuery APIs, we only provide replacements for the most important and most frequently used ones. If you cannot find such a native jQuery API in any of the tables below, refer to the jQuery documentation.
 
 
 

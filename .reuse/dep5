@@ -1,0 +1,8 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: sapui5
+Upstream-Contact: Oliver Mueller (oliver.mueller03@sap.com)
+Source: https://github.com/sap-docs/sapui5
+
+Files: *
+Copyright:  2022-2023 SAP SE or an SAP affiliate company and sapui5 contributors
+License: CC-BY-4.0

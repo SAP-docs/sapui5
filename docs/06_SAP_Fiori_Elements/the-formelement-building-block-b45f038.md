@@ -6,10 +6,6 @@ The `FormElement` building block provides an easy way to add a label and visibil
 
 
 
-<a name="loiob45f038068ca4b68a2d8008c1de5f7fb__section_qd3_w4r_j5b"/>
-
-## Usage
-
 You can instantiate the building block by referencing the building block namespace within a fragment enabled for building block usage.
 
 > ### Note:  

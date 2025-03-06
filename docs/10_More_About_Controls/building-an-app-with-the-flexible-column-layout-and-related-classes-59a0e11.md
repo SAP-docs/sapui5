@@ -2,7 +2,7 @@
 
 # Building an App with the Flexible Column Layout and Related Classes
 
-The following sections provide you with best practices and details that help you develop SAP Fiori 2.0 apps with the `sap.f.FlexibleColumnLayout` control.
+The following sections provide you with best practices and details that help you develop SAP Fiori apps with the `sap.f.FlexibleColumnLayout` control.
 
 The simplest way to build an app with the `sap.f.FlexibleColumnLayout` is to create an instance of the control as a top-level container in the root view of your component and then use the `sap.f.routing.Router` to manipulate the control upon user interaction.
 

@@ -28,6 +28,8 @@ var oTimeFormat = sap.ui.core.format.DateFormat.getTimeInstance();
 
 
 
+<a name="loio91f2eba36f4d1014b6dd926db0e91070__section_params"/>
+
 ## Parameters
 
 There are several parameters which affect the final result of formatting and parsing a date. If no parameter is set, the default setting defined in the current locale is used to format and parse the date.
@@ -462,8 +464,146 @@ When using `DateFormat.getDateTimeWithTimezoneInstance`, the time zone can be sp
 ```js
 var oDateTimeWithTimezoneFormat = sap.ui.core.format.DateFormat.getDateTimeWithTimezoneInstance();
 
-oDateTimeWithTimezoneFormat.format(UI5Date.getInstance(), "America/New_York") // Returns "10.02.2022, 10:01:14 America/New_York"
+oDateTimeWithTimezoneFormat.format(UI5Date.getInstance(), "America/New_York") // Returns "10.02.2022, 10:01:14 America, New York"
 ```
+
+
+
+### Mapping of Deprecated Time Zones
+
+The [IANA](https://www.iana.org/time-zones) standard classifies certain time zone IDs as deprecated and defines substitutes for them. With [CLDR version 46](https://cldr.unicode.org/downloads/cldr-46#supplemental-data-changes), these time zones are removed, and locale-specific time zone name translations are no longer available for them. To remain backward-compatible, SAPUI5 maps deprecated IANA time zone IDs to the related preferred IANA time zone IDs when formatting or parsing time zones. For example, in an English-language locale the translated text `Americas, Nipigon` is now formatted to `Americas, Toronto`. In case of parsing, the translated texts cannot be parsed anymore as they are no longer available, e.g. in an English-language locale `Americas, Nipigon` could no longer be parsed. If a time zone ID is entered for parsing, the mapped equivalent would be parsed, e.g. if `America/Nipigon` is entered for parsing, it would now be parsed as `America/Toronto`.
+
+Below you can find a list of all deprecated time zone IDs and their substitutes.
+
+**Time Zone Mapping**
+
+
+<table>
+<tr>
+<th valign="top">
+
+Deprecated time zone
+
+</th>
+<th valign="top">
+
+Preferred time zone
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+`America/Nipigon`
+
+`America/Thunder_Bay`
+
+</td>
+<td valign="top">
+
+`America/Toronto` 
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`America/Pangnirtung` 
+
+</td>
+<td valign="top">
+
+`America/Iqaluit` 
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`America/Rainy_River` 
+
+</td>
+<td valign="top">
+
+`America/Winnipeg` 
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`America/Santa_Isabel` 
+
+</td>
+<td valign="top">
+
+`America/Tijuana` 
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`America/Yellowknife` 
+
+</td>
+<td valign="top">
+
+`America/Edmonton` 
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`Europe/Uzhgorod`
+
+`Europe/Zaporozhye`
+
+</td>
+<td valign="top">
+
+`Europe/Kiev` 
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`Asia/Choibalsan` 
+
+</td>
+<td valign="top">
+
+`Asia/Ulaanbaatar` 
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`Australia/Currie` 
+
+</td>
+<td valign="top">
+
+`Australia/Hobart` 
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`Pacific/Johnston` 
+
+</td>
+<td valign="top">
+
+`Pacific/Honolulu` 
+
+</td>
+</tr>
+</table>
 
 
 

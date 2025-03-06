@@ -1,5 +1,7 @@
 <!-- loioa37df408044e41ef84e67207c8658d4f -->
 
+<link rel="stylesheet" type="text/css" href="../css/sap-icons.css"/>
+
 # Multiple Views on List Report Tables
 
 By default, the list report displays only one table. You can define multiple views of a table, and add a chart, if required.
@@ -154,6 +156,32 @@ In addition, you can control the view and count refresh using the following dedi
 
 
 Check out our live example in the flexible programming model explorer at [Multi Mode Extensibility](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/controllerExtensions/multiModeExtensibility).
+
+
+
+### Adding Multiple Views to a List Report Page Using SAP Fiori Tools
+
+Find out how to add multiple views to a list report page using SAP Fiori tools.
+
+1.  Launch the *Page Map*. You can launch the *Page Map* in several ways, for example by right-clicking the project folder and selecting *Show Page Map*. For more information, see [Define Application Structure](https://help.sap.com/docs/SAP_FIORI_tools/17d50220bcd848aa854c9c182d65b699/bae38e6216754a76896b926a3d6ac3a9.html).
+2.  Launch the *Page Editor* for your list report page. Click the :pencil2: \(*Edit*\) icon next to *List Report*.
+3.  Click the :heavy_plus_sign: \(*Add*\) icon next to *Views*.
+4.  Click *Add Table View*.
+5.  Select an *Entity*.
+6.  Click *Add*.
+7.  Expand the new table view node.
+8.  Click the :heavy_plus_sign: \(*Add*\) icon next to *Columns*.
+9.  Click *Add Basic Columns*.
+10. Select the columns you wish to include.
+11. Click *Add*.
+12. Click the new view node.
+13. Provide a new value for the *View Label* to rename the new view.
+14. To preview your new view, see [Previewing an Application](https://help.sap.com/docs/SAP_FIORI_tools/17d50220bcd848aa854c9c182d65b699/b962685bdf9246f6bced1d1cc1d9ba1c.html).
+
+    The following screen recording shows how to add a new view:
+
+
+
 
 **Related Information**  
 

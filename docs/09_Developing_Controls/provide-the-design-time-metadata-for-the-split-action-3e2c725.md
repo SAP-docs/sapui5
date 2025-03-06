@@ -22,14 +22,14 @@ Property
 
 Property
 
-\(Level 1\)
+\(Level 2\)
 
 </th>
 <th valign="top">
 
 Property
 
-\(Level 1\)
+\(Level 3\)
 
 </th>
 <th valign="top">

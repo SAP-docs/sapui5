@@ -185,7 +185,7 @@ The `UI.Chart Title` property is used for the title. The `UI.Chart Description` 
 > ### Note:  
 > -   You must ensure that the unit of measure is consistent across all data points.
 > 
-> -   The first and last values of the measure are set as labels at the top-left and top-right corners of the micro chart and, the first and the last dimension values from the data at the bottom-left and bottom-right corners respectively.
+> -   The first and last values of the measure are set as labels at the top-left and top-right corners of the micro chart, and the first and the last dimension values from the data are set as labels at the bottom-left and bottom-right corners, respectively.
 > 
 > 
 > The following annotations are mandatory and must be used in the area micro chart:

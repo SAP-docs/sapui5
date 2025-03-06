@@ -501,7 +501,7 @@ Control
 
 **`sap.ui.richtexteditor.RichTextEditor`**
 
-We have updated the `sap.ui.richtexteditor.RichTextEditor` and respectively the TinyMCE library from version 4.7.13 to the latest currently available 4.9.10, in order to be in sync with the latest fixes and updates. For more information, see [sap.ui.richtexteditor](../10_More_About_Controls/sap-ui-richtexteditor-d4f3f15.md) and the [API Reference](https://ui5.sap.com/#/api/sap.ui.richtexteditor.RichTextEditor). 
+We have updated the `sap.ui.richtexteditor.RichTextEditor` and respectively the TinyMCE library from version 4.7.13 to the latest currently available 4.9.10, in order to be in sync with the latest fixes and updates. For more information, see [sap.ui.richtexteditor.RichTextEditor](../10_More_About_Controls/sap-ui-richtexteditor-richtexteditor-d4f3f15.md) and the [API Reference](https://ui5.sap.com/#/api/sap.ui.richtexteditor.RichTextEditor). 
 
 <sub>Changed•Control•Info Only•1.79</sub>
 
@@ -571,6 +571,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.131](what-s-new-in-sapui5-1-131-7d24d94.md "With this release SAPUI5 is upgraded from version 1.130 to 1.131.")
 
 [What's New in SAPUI5 1.130](what-s-new-in-sapui5-1-130-85609d4.md "With this release SAPUI5 is upgraded from version 1.129 to 1.130.")
 

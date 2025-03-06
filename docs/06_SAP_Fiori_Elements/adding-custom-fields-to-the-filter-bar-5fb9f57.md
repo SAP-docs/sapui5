@@ -104,10 +104,8 @@ To show the filter value as shown in the filter bar, such as `Cost=Low`, you can
 >                 // Find the "Cost" combobox in smart filter bar
 >            var COST_COMBOBOX_ID = "STTA_MP::sap.suite.ui.generic.template.ListReport.view.ListReport::STTA_C_MP_Product--CustomFilter-OverallCost-combobox";
 >                var oCostCombobox = Element.getElementById(COST_COMBOBOX_ID);
->                 
 >                if (oCostCombobox && oCostCombobox.getValue()) {
 >                     var oRawValue, sNewCostValue;
-> 
 >                     for (var i = 0; i < aFilterSettings.length; i++) {
 >                          var oCurrentFilter = aFilterSettings[i];
 >                          // Find the filter with property "OverallCost"
@@ -155,8 +153,8 @@ You can configure the `FilterBar` in the controller extension locally. To do so,
 > ### Sample Code:  
 > `manifest.json`
 > 
-> ```json
->     ...
+> ```
+>    ...
 > "targets": {
 >                 "SalesOrderManageList": {
 >                     "type": "Component",
@@ -164,7 +162,7 @@ You can configure the `FilterBar` in the controller extension locally. To do so,
 >                     "name": "sap.fe.templates.ListReport",
 >                     "options": {
 >                         "settings" : {
->                             "contextPath" : "/SalesOrderManage",                              
+>                             "contextPath" : "/SalesOrderManage",
 >                             "controlConfiguration" : {
 >                                  "@com.sap.vocabularies.UI.v1.SelectionFields" : {
 >                                     "navigationProperties": ["_Partner", "_DistributionChannel"],
@@ -189,7 +187,7 @@ You can configure the `FilterBar` in the controller extension locally. To do so,
 > ...
 > ```
 
-You can use the `filterFields` setting to add custom filters as shown in the following sample code:
+You can use the `filterFields` setting to add custom filters, as shown in the following sample code:
 
 > ### Sample Code:  
 > manifest.json
@@ -207,6 +205,12 @@ You can use the `filterFields` setting to add custom filters as shown in the fol
 >    }
 > }
 > ```
+
+The `property` specifies the field on which the filter is applied. SAP Fiori elements identifies this field within the entity related to the current view for applying the filter.
+
+For example, in a standard list report, the table data is derived from the main entity. SAP Fiori elements then searches for this filter field defined by `property` within this main entity to apply the filters.
+
+However, in a multi-view list report, where each tab is associated with a distinct entity, SAP Fiori elements searches for the field within the entity of the active tab. If the entity associated with the active tab does not include the field defined by `property`, the filter ignores this property and applies only to the remaining valid filter fields.
 
 
 

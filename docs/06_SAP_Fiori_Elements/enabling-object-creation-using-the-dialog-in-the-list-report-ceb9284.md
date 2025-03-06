@@ -181,7 +181,7 @@ If this feature is enabled, you cannot navigate to an object page in create mode
 > ### Note:  
 > -   The draft state is not maintained when an object is created using the dialog.
 > 
-> -   All properties must be related to entities.
+> -   Navigation properties are not supported for the create dialog.
 > 
 > -   Mandatory parameters are marked with a red asterisk in the dialog.
 > 

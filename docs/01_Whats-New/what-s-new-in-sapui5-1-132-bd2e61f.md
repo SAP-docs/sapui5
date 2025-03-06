@@ -1,16 +1,11 @@
 <!-- loiobd2e61ff57714ee28efdb5abb83af2e4 -->
 
-<link rel="stylesheet" type="text/css" href="../css/sap-icons.css"/>
-
 # What's New in SAPUI5 1.132
 
 With this release SAPUI5 is upgraded from version 1.131 to 1.132.
 
 > ### Tip:  
 > If you want to do a search across all versions of the What's New content, you can also find it in the [SAPUI5 What's New viewer](https://help.sap.com/whats-new/67f60363b57f4ac0b23efd17fa192d60).
-
-> ### Note:  
-> Content marked as <span style="color:#666666;"><span class="SAP-icons-V5"></span></span>**[Preview](https://help.sap.com/docs/whats-new-disclaimer)** is provided as a courtesy, without a warranty, and may be subject to change. For more information, see the [preview disclaimer](https://help.sap.com/docs/whats-new-disclaimer).
 
 ****
 
@@ -52,118 +47,6 @@ Action
 Available as of
 
 </th>
-</tr>
-<tr>
-<td valign="top">
-
-Upcoming 
-
-</td>
-<td valign="top">
-
-Deleted 
-
-</td>
-<td valign="top">
-
-Announcement 
-
-</td>
-<td valign="top">
-
-**End of Cloud Provisioning for SAPUI5 Versions \(Q1/2025\)** 
-
-</td>
-<td valign="top">
-
-**End of Cloud Provisioning for SAPUI5 Versions \(Q1/2025\)**
-
-The following SAPUI5 versions will be removed from the SAPUI5 Content Delivery Network \(CDN\) after the end of Q1/2025.
-
-**Minor Versions Reaching Their End of Cloud Provisioning**
-
-The following versions including all patches will be removed entirely:
-
--   1.114
--   1.117
--   1.121
-
-**Action**: Upgrade to a version that is still in maintenance.
-
-**Patch Versions Reaching Their End of Cloud Provisioning**
-
-The following patches will be removed:
-
--   Long-term maintenance versions:
-
-    -   1.71.61 to 1.71.62
-    -   1.84.41 to 1.84.43
-    -   1.96.27 to 1.96.29
-    -   1.108.26 to 1.108.29
-    -   1.120.3 to 1.120.10
-
-    **Action**: Upgrade to the latest available patch for the respective SAPUI5 version.
-
-
-For more information, see [Version Overview](https://ui5.sap.com/versionoverview.html).
-
-<sub><span style="color:#666666;"><span class="SAP-icons-V5"></span></span>**[Preview](https://help.sap.com/docs/whats-new-disclaimer)**•Deleted•Announcement•Info Only•Upcoming</sub>
-
-</td>
-<td valign="top">
-
-Info Only 
-
-</td>
-<td valign="top">
-
-9999-01-01
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Upcoming 
-
-</td>
-<td valign="top">
-
-UI Changed 
-
-</td>
-<td valign="top">
-
-Announcement 
-
-</td>
-<td valign="top">
-
-**Redesign of Column Menu** 
-
-</td>
-<td valign="top">
-
-**Redesign of Column Menu**
-
-> ### Note:  
-> The following information concerns important upcoming changes for end users. These changes may require end users to adjust and/or test cases to be adapted, but they won't stop or disrupt software or processes.
-
-We will improve the design and interaction of the column menu in tables. For example, we will adapt the menu to make it more accessible and provide a simpler design for the quick actions by using icons. Also, there will be a *Table Settings* button, which is similar to *View Settings* in the tables, that contains all the common settings.
-
-<sub><span style="color:#666666;"><span class="SAP-icons-V5"></span></span>**[Preview](https://help.sap.com/docs/whats-new-disclaimer)**•UI Changed•Announcement•Info Only•Upcoming</sub>
-
-</td>
-<td valign="top">
-
-Info Only 
-
-</td>
-<td valign="top">
-
-9999-01-01
-
-</td>
 </tr>
 <tr>
 <td valign="top">

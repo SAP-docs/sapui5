@@ -6,10 +6,6 @@ The `Chart` building block provides an easy way to instantiate a chart based on 
 
 
 
-<a name="loio52d065ab8bb740c58c834a0c985e3b9e__section_qdt_23s_j5b"/>
-
-## Usage
-
 Ensure that the entity set referred for the `Chart` building block supports aggregation. For more information, see the [Enabling Aggregation in the Back End](configuring-charts-653ed0f.md#loio653ed0f4f0d743dbb33ace4f68886c4e__enabling_aggregation_subsection) subsection in [Configuring Charts](configuring-charts-653ed0f.md).
 
 > ### Sample Code:  

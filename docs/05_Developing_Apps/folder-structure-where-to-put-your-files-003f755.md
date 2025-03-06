@@ -10,7 +10,7 @@ The details described here represent a best practice for structuring an applicat
 
 The 3 main folders in an application are the `root` folder, the `webapp` folder and the `test` folder. Regarding their structure, the `webapp` folder should be inside the `root` folder, and the `test` folder should be located inside the `webapp` folder, as shown below:
 
-![](images/Folder_Structure_1_088cd62.png)
+![](images/Screenshot_with_Frame_03b7b46.png)
 
 > ### Note:  
 > The image above shows a screenshot taken from SAP Web IDE, and is only meant to serve as an example. This applies to all images contained within this topic.

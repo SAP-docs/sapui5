@@ -135,7 +135,7 @@ To define multiple views using single table mode, perform the following steps:
     ```
 
     > ### Note:  
-    > The `PresenationVariant` part of the `SelectionPresentationVariant` \(as used in the above example\) is not considered. The `SelectionPresentationVariant` is only used to find the `SelectionVariant` and the filters defined within it.
+    > The `PresentationVariant` part of the `SelectionPresentationVariant` \(as used in the above example\) is not considered. The `SelectionPresentationVariant` is only used to find the `SelectionVariant` and the filters defined within it.
 
 
 <a name="concept_ecd_hgr_j4b"/>

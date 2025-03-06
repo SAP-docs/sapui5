@@ -101,13 +101,13 @@ The `MessageStrip` is useful when you want to display short notices, for example
 
 ### MessagePopover
 
-`MessagePopover` displays a summarized list of different types of messages \(errors, warnings, success and information\). It provides a handy and systemized way to navigate and explore details for every message. You can find more information on `MessagePopover` [here](message-popover-52824a6.md).
+`MessagePopover` shows a summarized list of different types of messages \(errors, warnings, success and information\). It provides a handy and systemized way to navigate and explore details for every message. You can find more information on `MessagePopover` [here](message-popover-52824a6.md).
 
 
 
 ### MessageView
 
-`MessageView` displays the same type of summarized messages list as the `MessagePopover`. The main difference between the controls is that the `MessageView` can be embedded in any suitable control \(for example a `Dialog`\). This allows displaying of the message summary in any part of the application. As of version 1.46, the `MessagePopover` has been refactored to automatically instantiate and use a `MessageView` for its content. All other controls need to instantiate it themselves. Here is a sample for a `MessageView` in a `Dialog:`
+`MessageView` shows the same type of summarized messages list as the `MessagePopover`. The main difference between the controls is that the `MessageView` can be embedded in any suitable control \(for example a `Dialog`\). This allows the message summary to be shown in any part of the application. As of version 1.46, `MessagePopover` has been refactored to automatically instantiate and use a `MessageView` for its content. All other controls need to instantiate it themselves. Here is a sample for a `MessageView` in a `Dialog:`
 
 ```
 ...
@@ -166,7 +166,7 @@ The `MessageStrip` is useful when you want to display short notices, for example
 
 ## Messages Related to Elements of a Page
 
-For showing messages to the user that are related to a specific element of a page there is no dedicated UI control available in `sap.m` in this version. We recommend to use the `sap.ui.core.HTML` control to show these error messages 'somewhere close to the input' or use some kind of overlay. Consider that the user will have the on screen keyboard open which might hide messages. Putting the message above an input field could help.
+There is no dedicated UI control available in `sap.m` designed to show messages related to a particular element on a page. We recommend to use the `sap.ui.core.HTML` control to show these error messages 'somewhere close to the input' or use some kind of overlay. Consider that the user will have the on screen keyboard open which might hide messages. Putting the message above an input field could help.
 
 You can set the `ValueState` of the `sap.m.Input` control to `Error` to indicate that the content is not correct.
 
@@ -181,5 +181,5 @@ SAPUI5 Mobile does **not** support multiple messages at the same time. Mobile De
 **Related Information**  
 
 
-[Message Popover](message-popover-52824a6.md "Message Popover is used to display a summarized list of different types of messages (errors, warnings, success and information). It provides a handy and systemized way to navigate and explore details for every message.")
+[Message Popover](message-popover-52824a6.md "Message Popover is used to show a summarized list of different types of messages (errors, warnings, success and information). It provides a handy and systemized way to navigate and explore details for every message.")
 

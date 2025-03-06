@@ -208,18 +208,19 @@ The *Network* tab shows the sequence and duration of files being loaded. It can 
 
     You see a list of the files that are currently loaded.
 
-    You can see that the `NavigationBar.js` file is loaded, but the view does not contain any `NavigationBar` elements so it is not used.
+    You can see that the `CheckBox.js` file is loaded, but the view does not contain any `CheckBox` elements, so it is not used anywhere.
 
 3.  You can't edit the code directly in this tab. You have to fix the source files in your development environment and then reload the app.
 
-    Remove the unnecessary reference to the `NavigationBar` in the `App.controller` file:
+    Remove the unnecessary reference to the `CheckBox` in the `App.controller` file:
 
     ```
     sap.ui.define([
-    	"sap/ui/core/mvc/Controller",
+    	'sap/ui/core/mvc/Controller',
     	'sap/m/MessageToast',
-    	'sap/ui/ux3/NavigationBar'
-    ], function(Controller, MessageToast, NavigationBar) {
+    	'sap/base/Log',
+    	'sap/m/CheckBox'
+    ], function(Controller, MessageToast, Log, CheckBox) {
     ...
     ```
 

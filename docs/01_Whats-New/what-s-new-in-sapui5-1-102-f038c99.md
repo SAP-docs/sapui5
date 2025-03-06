@@ -111,7 +111,7 @@ Control
 
 **`sap.ui.richtexteditor.RichTextEditor`**
 
-Application developers can now customize the custom toolbar and remove the buttons that are not needed in the `RichTextEditor`. You can redefine the button group configuration to show only a particular set of buttons in the custom toolbar. For more information, see [sap.ui.richtexteditor](../10_More_About_Controls/sap-ui-richtexteditor-d4f3f15.md) and the [Samples](https://ui5.sap.com/#/entity/sap.ui.richtexteditor.RichTextEditor). 
+Application developers can now customize the custom toolbar and remove the buttons that are not needed in the `RichTextEditor`. You can redefine the button group configuration to show only a particular set of buttons in the custom toolbar. For more information, see [sap.ui.richtexteditor.RichTextEditor](../10_More_About_Controls/sap-ui-richtexteditor-richtexteditor-d4f3f15.md) and the [Samples](https://ui5.sap.com/#/entity/sap.ui.richtexteditor.RichTextEditor). 
 
 <sub>Changed•Control•Info Only•1.102</sub>
 
@@ -597,7 +597,7 @@ Feature
 
 The new version of the SAPUI5 OData V4 model introduces the following features:
 
--   The creation of inactive rows introduced with SAPUI5 1.97 is no longer experimental. For more information, see [Creating an Entity](../04_Essentials/creating-an-entity-c9723f8.md)and the [API Reference](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataListBinding%23methods/create).
+-   The creation of inactive rows introduced with SAPUI5 1.97 is no longer experimental. For more information, see [Creating an Entity in a Collection](../04_Essentials/creating-an-entity-in-a-collection-c9723f8.md)and the [API Reference](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataListBinding%23methods/create).
 -   If metadata is already available, key predicates of message targets received from the back end are now normalized to match the key predicates calculated on the client.
 
 <sub>Changed•Feature•Info Only•1.102</sub>
@@ -1000,6 +1000,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.131](what-s-new-in-sapui5-1-131-7d24d94.md "With this release SAPUI5 is upgraded from version 1.130 to 1.131.")
 
 [What's New in SAPUI5 1.130](what-s-new-in-sapui5-1-130-85609d4.md "With this release SAPUI5 is upgraded from version 1.129 to 1.130.")
 

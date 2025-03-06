@@ -16,7 +16,7 @@ You can export the table entries for configurations and text pools. An export re
 
 
 > ### Note:  
-> In SAP S/4HANA Cloud, you must use the apps *Export Software Collection* and *Import Collection* to transport a configuration between different systems.
+> In SAP S/4HANA Cloud Public Edition, you must use the apps *Export Software Collection* and *Import Collection* to transport a configuration between different systems.
 
 To use the export function, proceed as follows:
 

@@ -2,7 +2,7 @@
 
 # Binding Collection Inline Count
 
-The OData V4 model allows for binding the inline count of the entity collection read by an `ODataListBinding` which has the parameter `$count` set to `true`. Inactive contexts do not contribute to this count; for more information see [Creating an Entity](creating-an-entity-c9723f8.md). In the example below, the table title is bound to `"$count"`, thus representing the number of sales order entities in the collection bound to the table.
+The OData V4 model allows for binding the inline count of the entity collection read by an `ODataListBinding` which has the parameter `$count` set to `true`. Inactive contexts do not contribute to this count; for more information see [Creating an Entity in a Collection](creating-an-entity-in-a-collection-c9723f8.md). In the example below, the table title is bound to `"$count"`, thus representing the number of sales order entities in the collection bound to the table.
 
 **Example: Table with title bound to `$count`**
 

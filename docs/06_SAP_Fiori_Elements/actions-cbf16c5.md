@@ -1307,6 +1307,129 @@ When an action with parameters is invoked, an action parameter dialog opens up s
 
 
 
+### Grouping Action Parameters in the Action Parameter Dialog
+
+The action parameters in the action parameter dialog can be grouped based on specific titles using the `UI.OperationalParameterFacets` annotation.
+
+The layout of the action parameter dialog is defined by `sap.ui.layout.form.SimpleForm` and is configured as `ColumnLayout` with two columns.
+
+The group titles displayed in the dialog are derived from the labels defined in `UI.OperationalParameterFacets`.
+
+The following sample code shows how the action parameters are grouped, with each group assigned a label and references `@UI.FieldGroup`, which contains specific data fields:
+
+![](images/Grouping_Action_Parameters_4f9c7c6.png)
+
+> ### Sample Code:  
+> XML Annotation
+> 
+> ```
+> <Annotations Target="com.c_salesordermanage_sd.CreateWithSalesOrderType(com.c_salesordermanage_sd.SalesOrderManage)">
+>     <Annotation Term="UI.OperationParameterFacets">
+>         <Collection>
+>             <Record Type="UI.ReferenceFacet">
+>                 <PropertyValue Property="Label" String="First Parameter Group"/>
+>                 <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#FirstGroup"/>
+>             </Record>
+>             <Record Type="UI.ReferenceFacet">
+>                 <PropertyValue Property="Label" String="Second Parameter Group"/>
+>                 <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#SecondGroup"/>
+>             </Record>
+>         </Collection>
+>     </Annotation>
+>     
+>     <Annotation Term="UI.FieldGroup" Qualifier="FirstGroup">
+>         <Record Type="UI.FieldGroupType">
+>             <PropertyValue Property="Data">
+>                 <Collection>
+>                     <Record Type="UI.DataField">
+>                         <PropertyValue Property="Value" Path="SalesOrderType"/>
+>                     </Record>
+>                     <Record Type="UI.DataField">
+>                         <PropertyValue Property="Value" Path="SalesOrganization"/>
+>                     </Record>
+>                 </Collection>
+>             </PropertyValue>
+>         </Record>
+>     </Annotation>
+>     
+>     <Annotation Term="UI.FieldGroup" Qualifier="SecondGroup">
+>         <Record Type="UI.FieldGroupType">
+>             <PropertyValue Property="Data">
+>                 <Collection>
+>                     <Record Type="UI.DataField">
+>                         <PropertyValue Property="Value" Path="OrganizationDivision"/>
+>                     </Record>
+>                     <Record Type="UI.DataField">
+>                         <PropertyValue Property="Value" Path="DistributionChannel"/>
+>                     </Record>
+>                 </Collection>
+>             </PropertyValue>
+>         </Record>
+>     </Annotation>
+> </Annotations>
+> 
+> ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> No ABAP CDS annotation sample is available. Please use the local XML annotation.
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> @UI 
+>  : {
+>         OperationParameterFacets: [
+>           {
+>             $Type : 'UI.ReferenceFacet',
+>             Label : 'First Parameter Group',
+>             Target: '@UI.FieldGroup#FirstGroup'
+>           },
+>           {
+>             $Type : 'UI.ReferenceFacet',
+>             Label : 'Second Parameter Group',
+>             Target: '@UI.FieldGroup#SecondGroup'
+>           }
+>         ],
+>         FieldGroup #FirstGroup  : {
+>           $Type: 'UI.FieldGroupType',
+>           Data : [
+>             {
+>               $Type: 'UI.DataField',
+>               Value: SalesOrderType
+>             },
+>             {
+>               $Type: 'UI.DataField',
+>               Value: SalesOrganization
+>             }
+>           ],
+>         },
+>         FieldGroup #SecondGroup : {
+>           $Type: 'UI.FieldGroupType',
+>           Data : [
+>             {
+>               $Type: 'UI.DataField',
+>               Value: OrganizationDivision
+>             },
+>             {
+>               $Type: 'UI.DataField',
+>               Value: DistributionChannel
+>             }
+>           ],
+>         }
+>       }
+> action CreateWithSalesOrderType(
+>      SalesOrderType : sd.param.SalesOrderType not null, 
+> 	SalesOrganization : sd.param.SalesOrganization not null, 
+> 	OrganizationDivision : sd.param.OrganizationDivision not null, 
+> 	DistributionChannel : sd.param.DistributionChannel not null
+> ) returns SalesOrderManage;
+> ```
+
+
+
 ### Default Values for Action Parameters
 
 Applications can ensure that the action parameter dialogs are filled with default values.
@@ -1871,7 +1994,7 @@ Make the following settings in the manifest to group actions under a menu button
 
 ### Defining a Default Action for a Menu Button
 
-When you define a default action for a menu button, clicking the button triggers the desired action directly. This is possible in list reports, object page headers, and forms.
+When you define a default action for a menu button, clicking the button triggers the action directly. This is possible in list reports, object page headers, and forms.
 
 To define a default action, make the following settings in the `manifest.json`:
 
@@ -1948,7 +2071,7 @@ To get the key, you need to select the action applicable in your specific scenar
 
 ### Overriding Annotation-Based Action Groups Using the Manifest
 
-To override a `DataFieldForActionGroup` in the manifest, you need to identify its key. The key is formed by combining the prefix `DataFieldForActionGroup::` with the `ID` specified as a parameter in the annotation. For instance, if the `ID` is `groupedActions`, the corresponding key is `DataFieldForActionGroup::groupedActions`. This key is used to address the action group to override.
+To override a `DataFieldForActionGroup` in the manifest, you need to identify its key. The key is formed by combining the prefix `DataFieldForActionGroup::` with the `ID` specified as a parameter in the annotation. For instance, if the `ID` is `groupedActions`, the corresponding key is `DataFieldForActionGroup::groupedActions`. This key is used to address the action group that needs to be overridden.
 
 The keys for menu items within a `DataFieldForActionGroup` are formed as follows:
 
@@ -1963,14 +2086,14 @@ The keys for menu items within a `DataFieldForActionGroup` are formed as follows
 
 **Modifying the Menu**
 
-To modify the menu, define the desired set of actions in the menu property of the manifest override. This allows you to either add new actions or remove existing ones by explicitly specifying the actions you want, as follows:
+To modify the menu, define the set of actions in the menu property of the manifest override. This allows you to either add new actions or remove existing ones by explicitly specifying the actions you want, as follows:
 
 -   When adding new actions, list both the current actions and the new ones you want to include in the menu.
 
 -   To remove actions, only define the actions you want to retain in the menu.
 
 
-See the following code samples with action names for Action1, Action2, and Action3:
+See the following code samples with action names for Action 1, Action 2, and Action 3:
 
 > ### Sample Code:  
 > XML Annotation
@@ -2058,7 +2181,9 @@ See the following code samples with action names for Action1, Action2, and Actio
 
 These action names are used in the following examples that show how to add new actions to an action group, disable actions in an action group, or hide actions from an action group:
 
--   > ### Sample Code:  
+-   The following example shows how to **add new actions** to a menu:
+
+    > ### Sample Code:  
     > `manifest.json`
     > 
     > ```

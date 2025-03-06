@@ -379,6 +379,9 @@ In the following example, the USA node can't be cut or dragged:
 
 ![](images/Example_of_a_node_with_disabled_cut_action_6478e27.png "Example of a Node with Disabled Cut Action")
 
+> ### Note:  
+> When pasting, the position of the pasted node under its parent is defined by the back-end logic, which should reflect the needs of your use case.
+
 
 
 <a name="loio7cf7a31fd1ee490ab816ecd941bd2f1f__section_zvl_zyn_jdc"/>

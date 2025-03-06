@@ -14,7 +14,7 @@ You can extend and customize specific features of the analytical list page.
 We recommend that you use [SAP Fiori tools](https://help.sap.com/viewer/product/SAP_FIORI_tools/Latest/en-US), which is a set of extensions for SAP Business Application Studio and Visual Studio Code, to adapt the analytical list page.
 
 > ### Note:  
-> Adapt the UI only for the use cases described here. Otherwise, control replacements might lead to changes that can no longer be applied.
+> Adapt the UI only for the use cases described in this topic. Otherwise, control replacements might lead to changes that can no longer be applied.
 
 > ### Note:  
 > In the Page Editor, a property is written with spaces in between for better readability. In SAP Fiori elements, whenever we provide a property, it is written in the actual code format.
@@ -749,6 +749,34 @@ C\_ContrItemMonitoringResults--table
 <td valign="top">
 
 Show Row Count
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Configuration of dynamically loaded additional records from the back-end system while scrolling within grid tables, tree tables, or analytical tables.
+
+</td>
+<td valign="top">
+
+In the outline, choose the table that requires a change to its `scrollThreshold` parameter, and update it with the new value.
+
+The default value is 300.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Row selection in responsive tables
+
+</td>
+<td valign="top">
+
+Determine whether row selection in a responsive table persists or resets after a refresh or data update.
+
+Configure the `rememberSelections` property to either `True` or `False`. The default value is `False`.
 
 </td>
 </tr>

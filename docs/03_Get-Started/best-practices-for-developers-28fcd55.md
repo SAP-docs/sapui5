@@ -79,7 +79,7 @@ Using the native web API `XMLHttpRequest#open` with `false` as the third argumen
 -   [Deprecated Configuration API](../04_Essentials/deprecated-configuration-api-2acafbf.md)
 -   [Use Only Public APIs](use-only-public-apis-b0d5fe2.md)
 -   [Adapting to the Modularization of the Core](../04_Essentials/adapting-to-the-modularization-of-the-core-b8fdf0c.md)
--   [Deprecated jQuery.sap API Replacement](../04_Essentials/deprecated-jquery-sap-api-replacement-a075ed8.md)
+-   [Replacement of Deprecated jQuery APIs](../04_Essentials/replacement-of-deprecated-jquery-apis-a075ed8.md)
 -   [Deprecated Factories Replacement](../04_Essentials/deprecated-factories-replacement-491bd9c.md)
 -   [Synchronous `XMLHttpRequest`](https://xhr.spec.whatwg.org/#the-open()-method)
 

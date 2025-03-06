@@ -22,7 +22,7 @@ A slider is a control that enables you to adjust values on a specified range. SA
 
 ![](images/RangeSlider_923cc5e.png "RangeSlider")
 
-Technically the RangeSlider extends `sap.m.Slider` and thus uses all its properties. It has two additional properties for the second slider value and the selected range.
+Technically, the RangeSlider extends `sap.m.Slider` and thus uses all its properties. It has two additional properties for the second slider value and the selected range.
 
 Both versions of the control support features for tickmarks, labels and advanced tooltips. If you only need a simple native browser tooltip, you can enable `handleTooltip` and show it on mouse hover. For more advanced cases, you can customize the labels and the tooltips for the slider handles.
 
@@ -56,7 +56,7 @@ You need to implement the following methods of the [IScale](https://ui5.sap.com/
 -   `getLabel` - Getter for the label
 
 
-This way you have full control over the labels, their placement, density, and text. As your custom labels may be longer , you will also need to show less tickmarks in order to prevent cluttering of the scale values.
+This way you have full control over the labels, their placement, density, and text. As your custom labels may be longer, you will also need to show less tickmarks in order to prevent cluttering of the scale values.
 
 This custom scale is then passed to the control.
 
@@ -104,5 +104,5 @@ renderTooltipContent: function (oRm, oControl) {
 
 ## Accessibility for Sliders
 
-Depending on the type of slider, you may need different values to be read out by the screen reader. In the case of a simple numeric slider, the screen reader will read the current float value. If you have a slider with a custom scale with tickmarks, the screen reader will read the value returned by `getLabel()` of the scale. If you have custom tooltips, then the return value from the tooltip formatter will be read. The priority for these id the following: Custom tooltips overrule custom scale and custom scale overrules the generic slider.
+Depending on the type of slider, you may need different values to be read out by the screen reader. In the case of a simple numeric slider, the screen reader will read the current float value. If you have a slider with a custom scale with tickmarks, the screen reader will read the value returned by `getLabel()` of the scale. If you have custom tooltips, then the return value from the tooltip formatter will be read. The priority for these is the following: Custom tooltips overrule custom scale and custom scale overrules the generic slider.
 

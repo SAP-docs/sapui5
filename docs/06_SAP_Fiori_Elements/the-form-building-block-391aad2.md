@@ -6,10 +6,6 @@ The `Form` building block provides an easy way to instantiate a form based on a 
 
 
 
-<a name="loio391aad28bfc64616abe2500a631391c1__section_ypv_nms_j5b"/>
-
-## Usage
-
 You can point directly to a `FieldGroup` annotation or to a `CollectionFacet` containing multiple `FieldGroups`.
 
 You can also define additional inline form elements that will be added to your form.

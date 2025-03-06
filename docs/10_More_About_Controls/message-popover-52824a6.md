@@ -2,13 +2,13 @@
 
 # Message Popover
 
-Message Popover is used to display a summarized list of different types of messages \(errors, warnings, success and information\). It provides a handy and systemized way to navigate and explore details for every message.
+Message Popover is used to show a summarized list of different types of messages \(errors, warnings, success and information\). It provides a handy and systemized way to navigate and explore details for every message.
 
 
 
-## Control overview
+## Control Overview
 
-The `MessagePopover` control displays a list of messages which can be further drilled down to reveal more details. Typically, it will be placed in the footer and can be expanded when clicking on its icon. As it inherits from the `Popover` control, it can also be placed relative to any other SAPUI5 control using the `placement` propery and its respective values:
+The `MessagePopover` control shows a list of messages which can be further drilled down to reveal more details. Typically, it will be placed in the footer and can be expanded when clicking on its icon. As it inherits from the `Popover` control, it can also be placed relative to any other SAPUI5 control using the `placement` property and its respective values:
 
 -   `sap.m.VerticalPlacementType.Top` - placed at the top of the reference control
 
@@ -19,21 +19,21 @@ The `MessagePopover` control displays a list of messages which can be further dr
 
   
   
-**Message Popover control**
+**Message Popover Control**
 
-![](images/Message_Popover_a5667d8.png "Message Popover control")
+![](images/Message_Popover_a5667d8.png "Message Popover Control")
 
-The `MessagePopover` also features the modes - collapsed \(showing only the type and number of messages\) and expanded \(showing the complete list\). An example of the collapsed mode is shown in the screenshot below.
+The `MessagePopover` also features two modes - collapsed \(showing only the type and number of messages\) and expanded \(showing the complete list\). An example of the collapsed mode is shown in the following screenshot.
 
   
   
-**Message Popover collapsed**
+**Message Popover Collapsed**
 
-![](images/Message_Popover_collapsed_bd94678.png "Message Popover collapsed")
+![](images/Message_Popover_collapsed_bd94678.png "Message Popover Collapsed")
 
 
 
-## Handling links in long-text messages
+## Handling Links in Long-Text Messages
 
 The `MessagePopover` control allows app developers to provide a long-text description for a message, which can include markup and formatting of the content. When this is the case, the control will automatically, and by default, invalidate links and will not allow clicking on them. This is due to security reasons and it is part of the app developer's responsibility to check the links for possible vulnerabilities, exploits and access policies. App developers are provided with an asynchronous function property that should be used for this matter - `asyncURLHandler`.
 

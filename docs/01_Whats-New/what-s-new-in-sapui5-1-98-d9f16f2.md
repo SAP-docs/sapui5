@@ -216,7 +216,7 @@ The new version of the SAPUI5 OData V4 model introduces the following features:
 
 -   An application can now create inactive contexts in a list binding using the `bInactive` parameter of `sap.ui.model.odata.v4.ODataListBinding#create`, provided the update group of the binding is an `Auto` group. There is no POST request for an inactive context. The context will become active as soon as any of its properties is changed. Once this happens, the `createActivate` event is raised, enabling the application to create a new inactive context.
 
-    Inactive contexts do not influence `sap.ui.model.odata.v4.ODataListBinding#getCount`. They are neither pending changes nor are they reset by `sap.ui.model.odata.v4.ODataListBinding#resetChanges` or `sap.ui.model.odata.v4.ODataModel#resetChanges`. For more information, see [Creating an Entity](../04_Essentials/creating-an-entity-c9723f8.md).
+    Inactive contexts do not influence `sap.ui.model.odata.v4.ODataListBinding#getCount`. They are neither pending changes nor are they reset by `sap.ui.model.odata.v4.ODataListBinding#resetChanges` or `sap.ui.model.odata.v4.ODataModel#resetChanges`. For more information, see [Creating an Entity in a Collection](../04_Essentials/creating-an-entity-in-a-collection-c9723f8.md).
 
 -   The `sap.ui.model.odata.v4.ODataListBinding#getAllCurrentContexts` method returns all current contexts without raising a request.
 
@@ -854,7 +854,7 @@ Control
 
 **`sap.ui.richtexteditor.RichTextEditor`**
 
-We have updated the TinyMCE version 5 used in `sap.ui.richtexteditor.RichTextEditor` to TinyMCE 5.10.2. We recommend switching to the newer version, as v4 is no longer supported by TinyMCE and will not receive updates. For more information, see [sap.ui.richtexteditor](../10_More_About_Controls/sap-ui-richtexteditor-d4f3f15.md) and the [Samples](https://ui5.sap.com/#/entity/sap.ui.richtexteditor.RichTextEditor).
+We have updated the TinyMCE version 5 used in `sap.ui.richtexteditor.RichTextEditor` to TinyMCE 5.10.2. We recommend switching to the newer version, as v4 is no longer supported by TinyMCE and will not receive updates. For more information, see [sap.ui.richtexteditor.RichTextEditor](../10_More_About_Controls/sap-ui-richtexteditor-richtexteditor-d4f3f15.md) and the [Samples](https://ui5.sap.com/#/entity/sap.ui.richtexteditor.RichTextEditor).
 
 <sub>Changed•Control•Info Only•1.98</sub>
 
@@ -1073,6 +1073,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.131](what-s-new-in-sapui5-1-131-7d24d94.md "With this release SAPUI5 is upgraded from version 1.130 to 1.131.")
 
 [What's New in SAPUI5 1.130](what-s-new-in-sapui5-1-130-85609d4.md "With this release SAPUI5 is upgraded from version 1.129 to 1.130.")
 

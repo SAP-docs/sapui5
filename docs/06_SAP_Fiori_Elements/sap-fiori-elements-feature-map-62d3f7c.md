@@ -2977,7 +2977,7 @@ Freeze the first column in a table
 <td valign="top">
 
 -   List report
--   Object report
+-   Object page
 -   Analytical list report
 
 
@@ -3003,6 +3003,51 @@ Freeze the first column in a table
 freeze table columns
 
 freezing columns
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Generative AI Features
+
+</td>
+<td valign="top">
+
+-   List report
+-   Object page
+
+
+
+</td>
+<td valign="top">
+
+[Generative AI Features](generative-ai-features-0ec03d4.md)
+
+</td>
+<td valign="top">
+
+[Designing for Generative AI](https://experience.sap.com/fiori-design-web/generative-ai-design/)
+
+</td>
+<td valign="top">
+
+  
+  
+**AI-Assisted Easy Filter**
+
+![](images/AI-Assisted_Easy_Filter_6254f19.png "AI-Assisted Easy Filter")
+
+  
+  
+**AI-Assisted Smart Summarization**
+
+![](images/AI-Assisted_Smart_Summarization_e3ea9c8.png "AI-Assisted Smart Summarization ")
+
+</td>
+<td valign="top">
+
+ 
 
 </td>
 </tr>

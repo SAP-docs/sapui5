@@ -2,7 +2,7 @@
 
 # Store/Restore the Application State
 
-SAP Fiori elements uses the `iAppState` mechanism for storing or restoring the application state. This mechanism enables a smooth user experience when navigating back and forth between SAP Fiori elements and other apps.
+SAP Fiori elements uses the `iAppState` mechanism for storing or restoring the application state. This mechanism enables a smooth user experience when navigating back and forth between apps developed using SAP Fiori elements and other apps.
 
 The state of the application is preserved when users refresh or navigate away from an application created using SAP Fiori elements \(either a list report or an object page\) and then navigate back to this page. The application state is also preserved when the URL of the application is shared with another user who then opens the link. For more information, see [The Share Functionality](the-share-functionality-022bf0d.md).
 
@@ -16,7 +16,7 @@ The state of the application is preserved when users refresh or navigate away fr
 
 -   Any change in a chosen variant.
 
-    In SAP Fiori elements for OData V2, the chosen variant is always restored, if it was stored in a 'clean' state. If the variant was marked as 'dirty', restoring leads to the loading of a *Standard* variant with a 'dirty' indicator.
+    In SAP Fiori elements for OData V2, the chosen variant is always restored if it was stored in a 'clean' state. If the variant was marked as 'dirty', restoring leads to the loading of a *Standard* variant with a 'dirty' indicator.
 
     In SAP Fiori elements for OData V4, the chosen variant is always restored and the fallback to the *Standard* variant only happens when the chosen variant isn't available at the time of the restore.
 
@@ -26,7 +26,7 @@ The state of the application is preserved when users refresh or navigate away fr
 
 
 > ### Note:  
-> -   If a potentially sensitive field \(a property that is annotated via the `PersonalData.v1.IsPotentiallySensitive` annotation\) is changed, SAP Fiori elements doesn't store/restore this information. Any changes added by users are therefore lost upon refresh. This is not applicable if the field is used in filter context.
+> -   If a potentially sensitive field \(a property that is annotated using the `PersonalData.v1.IsPotentiallySensitive` annotation\) is changed, SAP Fiori elements doesn't store/restore this information. Any changes added by users are therefore lost upon refresh. This is not applicable if the field is used in filter context.
 > 
 > -   In SAP Fiori elements for OData V2, changes to the visibility of filter fields in the filter bar aren't stored/restored. However, if any new filter fields containing values are added from the *Adapt Filters* dialog, then they're stored as a part of the `iAppState`. The order of the filter fields in the smart filter fields is not stored or restored from the `iAppState`.
 > 
@@ -40,7 +40,7 @@ The state of the application is preserved when users refresh or navigate away fr
 
 ## Additional Features in SAP Fiori Elements for OData V4
 
-Note the following restrictions related to the content provided in the generic *What is Stored/Restored* section in this topic:
+Note the following restrictions related to the content provided in the [What Is Stored/Restored](store-restore-the-application-state-46bf248.md#loio46bf248182ed47cb85a05610abe361f7__section_nkf_5ff_ymb) section in this topic:
 
 > ### Restriction:  
 > -   Drilldown filters applied to the chart using the *View By* options aren't stored/restored.
@@ -77,7 +77,10 @@ Changes coming in from other flex layers are not considered in the following sce
 > ### Note:  
 > -   Any filter field value coming from other layers is still overwritten by values for this field coming from SAP Fiori launchpad. For more information, see [Configuring Default Filter Values](configuring-default-filter-values-f27ad7b.md).
 > 
-> -   The logic that allows changes from other layers to be merged by the flex layer with the changes coming from an end user is only applied if the variant within the `iAppState` is available at the time when the restore takes place. If this is not the case, for example when the page was shared to another user and the target user doesn't have access to the variant shared in the `iAppState`, then the app loads using the *Standard* variant and the full state of the page when it is shared is applied on top, meaning without any other layer changes. When this happens, the following changes won't be retained: the filter fields or table columns that were removed and changes in the filter field or table column position.
+> -   The logic that allows changes from other layers to be merged by the flex layer with the changes coming from an end user is only applied if the variant within the `iAppState` is available at the time when the restore takes place. If this is not the case, for example, when the page was shared to another user and the target user doesn't have access to the variant shared in the `iAppState`, then the app loads using the *Standard* variant, and the full state of the page when it is shared is applied on top, meaning without any other layer changes. When this happens, the following changes won't be retained:
 > 
-> -   For a single-valued field, the merge logic always has priority over the other layer value \(the value of the key user, for example\) and the changes made by the end user for the same field are ignored.
+>     -   The filter fields or table columns that were removed
+>     -   Changes in the filter field or table column position
+> 
+> -   For a single-valued field, the merge logic always has priority over the other layer value \(the value of the key user, for example\), and the changes made by the end user for the same field are ignored.
 

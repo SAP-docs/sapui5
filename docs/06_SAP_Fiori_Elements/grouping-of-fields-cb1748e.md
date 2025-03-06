@@ -12,7 +12,7 @@ The grouping can be done in several ways, depending on the use case.
 
 ## Grouping Fields Using the `FieldGroup` Annotation
 
-Using a `FieldGroup` allows the grouped fields to be shown in a similar manner. The fields are typically arranged one beneath the other, but they can also spill over to the next column if, for example, a form is used.
+Using a `FieldGroup` allows the grouped fields to be shown in a similar manner. The fields are typically arranged one beneath the other, but they can also spill over to the next column if, for example, a form is used. If all of the grouped fields are hidden, their container is hidden as well.
 
 
 
@@ -193,7 +193,7 @@ This groups the fields in a form-like display, as shown in the following screens
 > ### Note:  
 > -   If there is no `Headerfacet` annotation and if the `Headerinfo` annotation doesn't contain any images, then the expand or collapse button and the pin button are hidden from the object page header.
 > 
-> -   If a subsection contains only one group, and the subsection title is same as group title, then the group title is hidden.
+> -   If a subsection contains only one group and the subsection title is the same as the group title, then the group title is hidden.
 
 
 
@@ -484,7 +484,8 @@ You can see what the result looks like in the following screenshot:
   
 **FieldGroup Column "Sold-To Party" with Field Labels**
 
-![](images/FieldGroup_Column_Sold-To_Party_with_Field_Labels_81e38b2.png "FieldGroup Column "Sold-To Party" with Field Labels")
+![](images/FieldGroup_Column_Sold-To_Party_with_Field_Labels_81e38b2.png "FieldGroup Column "Sold-To Party" with Field
+                        Labels")
 
 For more information about how to find the right key for a column, see [Finding the Right Key for the Anchor](finding-the-right-key-for-the-anchor-6ffb084.md).
 

@@ -95,9 +95,9 @@ You can use the `UI.Importance` annotation to set the importance for table colum
 For columns with `Low`, `None`, and `Medium` settings, the *Show More per Row* / *Show Less per Row* buttons appear in the table toolbar only if there's at least one hidden column. When the end user clicks the *Show More per Row* button, the hidden column information appears as a text in the pop-in area. To hide the pop-in area, click the *Show Less per Row* button.
 
 > ### Note:  
-> -   Columns that have no importance setting \(`None`\) but contain a semantic key are considered as `High` importance \(also when used in a `FieldGroup`\).
+> -   Columns that have no importance setting \(`None`\) but containing a semantic key are considered of `High` importance \(also when used in a `FieldGroup`\).
 > 
-> -   Columns with `Low` importance setting have priority over columns with `None` \(default\) and `Medium` setting when hiding columns on smaller screens.
+> -   Columns with a `Low` importance setting are hidden first on smaller screens, followed by columns with the settings `None` \(default\) and `Medium`.
 
 > ### Sample Code:  
 > XML annotation
@@ -315,8 +315,6 @@ For more information about configuration in OData V4, see the [Configuring the s
 <a name="loioc0f6592a592e47f9bb6d09900de47412__section_amq_ynw_xmb"/>
 
 ## Additional Features in SAP Fiori Elements for OData V2
-
-The tree table type is supported. It supports hierarchically structured data.
 
 
 

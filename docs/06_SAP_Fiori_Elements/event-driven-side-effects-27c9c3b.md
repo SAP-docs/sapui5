@@ -32,7 +32,7 @@ See the following example of how to annotate a side effect event:
 > </Annotations> 
 > ```
 
-Whenever the  `MyEventName` event  is triggered on the server, the client is notified to refresh the  `Property1` and `Property2` properties of the  `MyEntityType` entity type.
+Whenever the  `MyEventName` event  is triggered on the server, the client is notified to refresh `Property1` and `Property2` that belong to  `MyEntityType`.
 
 In the list report, a typical use case requires refreshing the entire table. To do that, use an absolute path for the `TargetEntities` property in the side effects definition.
 

@@ -7,7 +7,7 @@ You need to identify an anchor element using the browser's developer tools to co
 > ### Note:  
 > This topic is only applicable to SAP Fiori elements for OData V4.
 
-To open the browser's developer tools, choose [CTRL\] + [ALT\] + [I\]  on Windows, and [CTRL\] + [OPT\] + [I\]  on macOS.
+To open the browser's developer tools, choose [CTRL\] + [SHIFT\] + [I\]  on Windows, and [CMD\] + [OPT\] + [I\]  on macOS.
 
 
 
@@ -15,7 +15,7 @@ To open the browser's developer tools, choose [CTRL\] + [ALT\] + [I\]  on Window
 
 ## How to Find Anchors for the Header Facet
 
-In the browser's developer tools, open the DOM element inspector and search for either `fe::HeaderFacetContainer` or `fe::HeaderFacetCustomContainer` string, depending on whether you want to place your custom header facet relative to a standard or a custom header facet. The name displayed directly after these strings are the facet keys that you must use as the `position.anchor`. For example, the anchor name to refer to a header facet with the element ID `AppName::AppNameObjectPage--fe::HeaderFacetContainer::AnchorHeaderFacetName` must be `AnchorHeaderFacetName`.
+In the browser's developer tools, open the DOM \(Document Object Model\) element inspector and search for either `fe::HeaderFacetContainer` or `fe::HeaderFacetCustomContainer` string, depending on whether you want to place your custom header facet relative to a standard or a custom header facet. The name displayed directly after these strings are the facet keys that you must use as the `position.anchor`. For example, the anchor name to refer to a header facet with the element ID `AppName::AppNameObjectPage--fe::HeaderFacetContainer::AnchorHeaderFacetName` must be `AnchorHeaderFacetName`.
 
 
 

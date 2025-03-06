@@ -133,6 +133,8 @@ The *Create* action is enabled by default, because the entity set is creatable.
 By default, a POST call is made when the *Create* button is clicked. However, in draft-enabled application, you can configure applications to make a call to a function import specified in `newAction` by making the `useNewActionForCreate` manifest setting. This is possible if `newAction` is defined in the `draftRoot` annotation as follows:
 
 > ### Sample Code:  
+> XML Annotation
+> 
 > ```
 > 
 > <Annotation Term="Common.DraftRoot">
@@ -146,6 +148,8 @@ By default, a POST call is made when the *Create* button is clicked. However, in
 Configure the following setting in the `manifest.json` file to turn on draft creation with `newAction`:
 
 > ### Sample Code:  
+> manifest.json
+> 
 > ```
 > "ListReport|Localized": {
 > 	"entitySet": "Localized",
@@ -163,6 +167,8 @@ For more information about actions, see [Adding Actions to Tables](adding-action
 When a new function import has parameters, a popup appears upon clicking *Create*. The following sample code shows how to define the title for the parameter dialog:
 
 > ### Sample Code:  
+> XML Annotation
+> 
 > ```
 > <Annotations Target="SAP.FCLM_BAM_ACCOUNTWD_SRV_Entities/FunctionImportName">
 > <Annotation Term="Common.Label" String="Create"/>
@@ -187,6 +193,8 @@ The button within the dialog box says *Continue*. However, applications can over
 The *Create* button in a list report is enabled based on the presence of `NewAction` in the metadata. This is the default behavior for draft-based applications:
 
 > ### Sample Code:  
+> XML Annotation
+> 
 > ```
 > 
 > <Annotation Term="Common.DraftRoot">
@@ -208,5 +216,5 @@ The `InsertRestrictions` on the table entity set is completely ignored when you 
 -   If `OperationAvailable=null` is ignored and the *Create* button is displayed, this is equivalent to `OperationAvailable` not being specified.
 
 
-For more information, see the *Enablement of Operations* section in [Adding Actions to Tables](adding-actions-to-tables-b623e0b.md).
+For more information, see [Adding Actions to Tables](adding-actions-to-tables-b623e0b.md).
 

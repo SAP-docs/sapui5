@@ -201,7 +201,7 @@ You can use [UI5 Tooling](https://sap.github.io/ui5-tooling/) to bundle and mini
 
 Since UI5 version 1.58, the global `jquery.sap.*` modules are deprecated. Please use the modularised variant of the module. If you're still using the `jquery.sap.*` variants, a so-called "stubbing layer" may load the old module synchronously!
 
-You can find a list of modules in the [Deprecated jQuery.sap API Replacement](../04_Essentials/deprecated-jquery-sap-api-replacement-a075ed8.md) documentation.
+You can find a list of modules in the [Replacement of Deprecated jQuery APIs](../04_Essentials/replacement-of-deprecated-jquery-apis-a075ed8.md) documentation.
 
 The usages can either be replaced manually or by the [UI5 Migration Tool](https://github.com/SAP/ui5-migration).
 

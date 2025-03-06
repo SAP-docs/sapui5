@@ -34,7 +34,7 @@ These libraries can **only** be used in combination with the following libraries
 
 
 
-\*Combinations between `sap.m` and `sap.ui.richtexteditor` are allowed only for desktop apps. If your use case requires it and you have enabled the mobile theme, see the [sap.ui.richtexteditor](../10_More_About_Controls/sap-ui-richtexteditor-d4f3f15.md) documentation.
+\*Combinations between `sap.m` and `sap.ui.richtexteditor` are allowed only for desktop apps. If your use case requires it and you have enabled the mobile theme, see the [sap.ui.richtexteditor.RichTextEditor](../10_More_About_Controls/sap-ui-richtexteditor-richtexteditor-d4f3f15.md) documentation.
 
 **Related Information**  
 

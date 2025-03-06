@@ -575,7 +575,7 @@ The following cases can cause CSP-relevant issues for inline scripts when the Ri
 -   If you're using one of the following plugins: `linkchecker`, `preview`
 -   If you're using the `tinymce.ui.Iframe` widget
 
-See also [sap.ui.richtexteditor](../10_More_About_Controls/sap-ui-richtexteditor-d4f3f15.md).
+See also [sap.ui.richtexteditor.RichTextEditor](../10_More_About_Controls/sap-ui-richtexteditor-richtexteditor-d4f3f15.md).
 
 </td>
 </tr>

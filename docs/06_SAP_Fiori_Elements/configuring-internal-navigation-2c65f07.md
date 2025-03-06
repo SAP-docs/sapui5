@@ -10,7 +10,7 @@ SAP Fiori elements control the navigation within an app \(internal navigation\).
 
 ## Navigation After Executing an Action
 
-By default, when executing an action defined via the `UI.DataFieldForAction` annotation, navigation is automatically triggered after the action is executed. This happens if a single instance is returned by the action and if the returned instance is not the same as the instance used when the action was triggered. The navigation is only triggered if the action was executed successfully and if the manifest has navigation defined for the context that is returned. In addition, when a user selects multiple contexts for a table or chart toolbar action, the navigation is **not** triggered, even if the action returns the context.
+By default, when executing an action defined using the `UI.DataFieldForAction` annotation, navigation is automatically triggered after the action is executed. This happens if a single instance is returned by the action and if the returned instance is not the same as the instance used when the action was triggered. The navigation is only triggered if the action was executed successfully and if the manifest has navigation defined for the context that is returned. In addition, when a user selects multiple contexts for a table or chart toolbar action, the navigation is **not** triggered, even if the action returns the context.
 
 
 
@@ -98,14 +98,16 @@ Add the following configuration in the manifest to direct the *Create* action in
 > `manifest.json`
 > 
 > ```json
-> "component": {
-> "name": "sap.suite.ui.generic.template.ListReport",
-> "list": true,
-> "settings": {
-> // Create of parent entity: Provide the parent entity set name.
-> "creationEntitySet": "C_MPPurchasingSource"
-> }
-> },
+> 
+>   "component": {
+>     "name": "sap.suite.ui.generic.template.ListReport",
+>     "list": true,
+>     "settings": {
+>       // Create of parent entity: Provide the parent entity set name.
+>       "creationEntitySet": "C_MPPurchasingSource"
+>     }
+>   }
+> 
 > ```
 
 For more information, see [List Report Elements](list-report-elements-1cf5c7f.md).
@@ -391,7 +393,7 @@ For inline actions, you must make the following configuration at columns level:
 > 
 > -   For the chart toolbar.
 > 
-> -   For subobject pages and tables in the object page. In these cases the control associated with the action is refreshed, since navigation is currently not possible.
+> -   For subobject pages, the control associated with the action is refreshed, since navigation is currently not possible.
 > 
 > -   For standard actions in SAP Fiori elements, such as *Save*, *Edit*, or *Create*.
 > 

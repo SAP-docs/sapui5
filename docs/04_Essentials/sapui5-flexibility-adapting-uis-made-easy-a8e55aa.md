@@ -49,18 +49,11 @@ Flexibility is key! Enterprise software must adapt to rapidly changing environme
 
 
 
-### End users can personalize object pages directly on SAP Fiori launchpad
+### End users can personalize the UI directly in the app
 
-They just start the personalization mode and use intuitive WYSIWYG functions to adapt the UI to meet their unique, day-to-day needs.
+Learn more about how end users can personalize UIs here: [End User Personalization](https://help.sap.com/docs/UI5_FLEXIBILITY/11ee45373e254b7e9c959d8763d0af23/20b7fbd1d33644819c58c4c98670dcfb.html) 
 
-For the personalization feature to be available on SAP Fiori launchpad on ABAP or on SAP BTP Portal, the app needs to be assigned to one of the user's roles.
-
-> ### Note:  
-> For more information, open the documentation for *SAP Fiori Launchpad in SAP NetWeaver AS for ABAP 7.52 with SAP\_UI 752* on the [SAP Fiori Launchpad](https://help.sap.com/viewer/product/SAP_FIORI_LAUNCHPAD/EXTERNAL/en-US) overview page, and search for `Enabling Personalization of Object Pages (Experimental)`
-
-![Example of adding a section](images/UI5_Flex_-_Personalization_2ad8264.gif)
-
-For more information about personalizing object pages in SAP Fiori apps using SAPUI5 flexibility, open the [SAP Fiori Launchpad](https://help.sap.com/viewer/product/SAP_FIORI_LAUNCHPAD/EXTERNAL/en-US) product page. Open the documentation for your product version and search for `Personalizing Apps (Experimental)`.
+Control developers - learn how to enable your controls for personalization here: [How to Enable Personalization for SAPUI5 Controls](../09_Developing_Controls/how-to-enable-personalization-for-sapui5-controls-5f215c1.md) 
 
 
 

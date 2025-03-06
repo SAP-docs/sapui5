@@ -151,25 +151,22 @@ var btn = new Button({
 
 ## Using Density Classes in the SAP Fiori launchpad
 
-The SAP Fiori launchpad \(FLP\) optionally reads the supported content densities from the app descriptor \(`manifest.json`\) and - if available - sets the appropriate content density class on the `<body>` tag. On devices with mouse and touch support, the FLP also allows the desired content density to be configured by the user. To avoid situations where an application and the FLP write different content density classes, we recommend using the following logic within all applications that are intended to be used inside the FLP:
+The SAP Fiori launchpad \(FLP\) optionally reads the supported content densities from the app descriptor \(`manifest.json`\) and - if available - sets the appropriate content density class on the `<body>` tag. On desktop devices, the FLP also allows the desired content density to be configured by the user. To avoid situations where an application and the FLP write different content density classes, we recommend using the following logic within all applications that are intended to be used inside the FLP:
 
 ```js
 
 getContentDensityClass : function() {
-      if (this._sContentDensityClass === undefined) {
-             // check whether FLP has already set the content density class; do nothing in this case
-             if (jQuery(document.body).hasClass("sapUiSizeCozy") || jQuery(document.body).hasClass("sapUiSizeCompact")) {
-                   this._sContentDensityClass = "";
-             } else {
-                    // Store "sapUiSizeCompact" or "sapUiSizeCozy" in this._sContentDensityClass, depending on which modes are supported by the app.
-                    // E.g. the "cozy" class in case sap.ui.Device.support.touch is "true" and "compact" otherwise.
-             }
-      }
-      return this._sContentDensityClass;
+        // if the content density class is already set, don't override it
+        const classList = document.body.classList;
+        if (classList.contains("sapUiSizeCozy") || classList.contains("sapUiSizeCompact")) {
+            return "";
+        }
+        // if no content density class is set, use cozy on touch devices
+        return Device.support.touch ? "sapUiSizeCozy" : "sapUiSizeCompact";
 }
 ```
 
-This function returns an empty string if the FLP has already set a content density CSS class, or the proper CSS class to be set. The result of this function should then be set as a style class on the root view of the application and all dialogs and popups.
+This function checks if the content density is already set by the FLP. It returns an empty string if the content density is already set or the proper CSS class to be set. The result of this function should then be set as a style class on the root view of the application and all dialogs and popups.
 
 
 

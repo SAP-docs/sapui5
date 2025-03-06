@@ -142,15 +142,15 @@ The following side effect annotations are supported:
 
 -   **Source properties**
 
-    If you use a value help, combo box, checkbox, date picker, or date time picker the side effect is triggered as soon as the value is set. However, if you are typing the value, the side effect is triggered when the focus moves away from the field. If the aforementioned controls are used in combination with other input fields as a source for a side effect, then the side effect is triggered only when the focus moves away from the source field group.
+    If you use a value help, combo box, checkbox, date picker, or date-time picker, the side effect is triggered as soon as the value is set. However, if you are typing the value, the side effect is triggered when the focus moves away from the field. If the aforementioned controls are used in combination with other input fields as a source for a side effect, then the side effect is triggered only when the focus moves away from the source field group.
 
     **For SAP Fiori elements for OData V2:**
 
-    -   You can define a single property or a list of properties as a source, which forms a virtual field group.
+    -   You can define a single property or a list of properties as a source, forming a virtual field group.
 
     -   When you modify the source property and move the focus away from the source, the side effect is triggered.
 
-    -   When you modify the virtual field group and move the focus away from it, the side effect is triggered immediately, if no `TriggerAction` is configured in the side effect annotation. However, if the focus is changed to a control within the same virtual field group, then the side effect is not triggered.
+    -   When you modify the virtual field group and move the focus away from it, the side effect is triggered immediately if no `TriggerAction` is configured in the side effect annotation. However, if the focus is changed to a control within the same virtual field group, then the side effect is not triggered.
 
 
     > ### Restriction:  
@@ -162,7 +162,10 @@ The following side effect annotations are supported:
 
     In SAP Fiori elements for OData V2: Only a 1:n navigation property can be specified as the source entity.
 
-    In SAP Fiori elements for OData V4: Any kind of navigation property \(1:1 or 1:n\) can be specified as the source entity.
+    In SAP Fiori elements for OData V4: Any kind of navigation property \(1:1 or 1:n\) can be specified as the source entity. Side effects can be executed in the following contexts:
+
+    -   The context of the field that is being edited.
+    -   The context of its parent entity when a relative side effect \(1:1 or 1:n\) is used.
 
     > ### Caution:  
     > You cannot specify a 1:1 association or an empty target, such as `NavigationPropertyPath`, to ensure that the whole entity is considered as the source.

@@ -6,10 +6,6 @@ The `Table` building block provides an easy way to instantiate a table based on 
 
 
 
-<a name="loio3801656db27b4b7a9099b6ed5fa1d769__section_ksj_xtr_j5b"/>
-
-## Usage
-
 You can instantiate the building block by referencing the building block namespace within a fragment enabled for building block usage.
 
 > ### Sample Code:  
@@ -23,7 +19,7 @@ This instantiates the actual control tree that corresponds to this building bloc
 
 You can use the `Table` building block inside custom sections, custom subsections, and custom pages.
 
-You can use the `Table` building block to add bound and unbound actions, to group actions as menu buttons, and specify the create options for the table. You have the following options:
+You can use the `Table` building block to add bound and unbound actions, to group actions as menu buttons, to add custom columns, and to specify the create options for the table. For example, you have the following options:
 
 -   Define the placement of the action relative to an anchor.
 
@@ -62,6 +58,11 @@ You can use the `Table` building block to add bound and unbound actions, to grou
 > </macros:Table>
 > ```
 
+For a complete list of the available properties and aggregations, see the [API Reference](https://ui5.sap.com/#/api/sap.fe.macros.Table).
+
+> ### Note:  
+> The properties or aggregations defined at the manifest level aren't supported with the `Table` building block. They must be defined at the building-block level.
+
 You can link the `Table` building block to a `FilterBar` that is defined in the same view or to a different one by referencing the ID of the `FilterBar`. This ID can be a local or a global one.
 
 ```
@@ -73,12 +74,12 @@ You can link the `Table` building block to a `FilterBar` that is defined in the 
 
 Check out our live example in the flexible programming model explorer at [Table - FilterBar](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/table/tableFilterBar) and [Custom View with BuildingBlock Table](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/customElements/customElementsOverview/customViewWithMacroTableContent).
 
-You can use the `getPresentationVariant()` and `setPresentationVariant()` methods to programmatically get and set the presentation variants corresponding to the `Table` building block. Similarly, the `getSelectionVariant()` and `setSelectionVariant()` methods allows to programmatically get and set the selection variants associated with the `Table` building block. The `getSelectionVariant()` method considers the variants that are applied directly to the table and excludes the variants that are applied to a bound model.
+You can use the `getPresentationVariant()` and `setPresentationVariant()` methods to programmatically get and set the presentation variants corresponding to the `Table` building block. Similarly, the `getSelectionVariant()` and `setSelectionVariant()` methods allows you to programmatically get and set the selection variants associated with the `Table` building block. The `getSelectionVariant()` method considers the variants that are applied directly to the table and excludes the variants that are applied to a bound model.
 
 Check out our live example in the flexible programming model explorer at [Table - Interacting via APIs](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/table/tablePublicAPIs).
 
 > ### Note:  
-> The `getSelectionVariant()` and `setSelectionVariant()` methods only work if the table personalization is enabled. For more information, see [Enabling Table Personalization](enabling-table-personalization-3e2b4d2.md).
+> The `getSelectionVariant()` and `setSelectionVariant()` methods only work if table personalization is enabled. For more information, see [Enabling Table Personalization](enabling-table-personalization-3e2b4d2.md).
 
 You can use the `setCurrentVariantID` and `getCurrentVariantID` methods to programmatically set and get the current variant ID corresponding to the `Table` building block. Check out our live example in the flexible programming model explorer at [Table Extensibility](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/controllerExtensions/tableExtensibility).
 
@@ -100,7 +101,7 @@ For information about the `Table` API, see the [API Reference](https://ui5.sap.c
 
 ## Influencing the Table Request Dynamically
 
-Before a table rebind, you can retrieve the sorters and filters applied to the table as well as the complete binding information. You can also add sorters, filters, and additional properties using the methods on the [`CollectionBindingInfo`](https://ui5.sap.com/#/api/sap.fe.macros.CollectionBindingInfo%23overview) object.
+Before a table rebind, you can retrieve the sorting and filters applied to the table as well as the complete binding information. You can also add sorting, filters, and additional properties using the methods on the [`CollectionBindingInfo`](https://ui5.sap.com/#/api/sap.fe.macros.CollectionBindingInfo%23overview) object.
 
 To do so, first add the `beforeRebindTable` key to the table definition.
 

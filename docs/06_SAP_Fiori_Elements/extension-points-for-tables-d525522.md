@@ -687,6 +687,9 @@ The UI model can be leveraged within the fragment, for example, to react to chan
 
 To correctly position your custom elements, you must identify an anchor element. For more information, see [Finding the Right Key for the Anchor](finding-the-right-key-for-the-anchor-6ffb084.md).
 
+> ### Note:  
+> When using the `Table` building block, defining custom columns in the manifest isn't supported. For more information about the `Table` building block, see [The Table Building Block](the-table-building-block-3801656.md).
+
 
 
 ### Sorting and Filtering

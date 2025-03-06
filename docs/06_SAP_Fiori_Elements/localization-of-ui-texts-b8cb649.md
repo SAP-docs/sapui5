@@ -1,5 +1,7 @@
 <!-- loiob8cb649973534f08a6047692f8c6830d -->
 
+<link rel="stylesheet" type="text/css" href="../css/sap-icons.css"/>
+
 # Localization of UI Texts
 
 If necessary, you can replace standard UI texts for apps that you have created with SAP Fiori elements.
@@ -113,7 +115,7 @@ For the annotation example above, the application's i18n properties file must ha
 > ### Note:  
 > The annotation modification described above is done in a local annotations file if the back-end generated file does not have the corresponding annotation segment.
 > 
-> For example, if the back-end system is based on SAP NetWeaver 7.51 or lower \(SAP S/4HANA\) or on SAP NetWeaver 7.67 or lower \(SAP S/4HANA Cloud\), you can't add `UI.ReferenceFacet` via the back end. In such a case, a modification to the *Reference Facet* label is only possible by modifying the local annotation file as described above.
+> For example, if the back-end system is based on SAP NetWeaver 7.51 or lower \(SAP S/4HANA\) or on SAP NetWeaver 7.67 or lower \(SAP S/4HANA Cloud Public Edition\), you can't add `UI.ReferenceFacet` via the back end. In such a case, a modification to the *Reference Facet* label is only possible by modifying the local annotation file as described above.
 
 
 
@@ -2020,28 +2022,6 @@ Applications should overwrite the default text with the concrete object that is 
 <tr>
 <td valign="top">
 
-**deprecated key: `C_EDIT_FLOW_GENERIC_LOCKED_OBJECT_POPOVER_TEXT_ADDITIONAL_USER`** 
-
-</td>
-<td valign="top">
-
-This key has been deprecated. The scenario no longer occurs.
-
-</td>
-<td valign="top">
-
-Draft information text displayed to a user for an object that is already being edited by another user, provided that the information about the owner isn't available.
-
-</td>
-<td valign="top">
-
-Applications should overwrite the default text with the concrete object that is being edited.
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
 `M_FIELD_RUNTIME_DRAFT_POPOVER_UNSAVED_CHANGES_BY_KNOWN`
 
 \(deprecated key: `C_EDIT_FLOW_LAST_CHANGE_USER_TEXT_OWNER_INFO`\)
@@ -2086,76 +2066,6 @@ Information about the user who has made the unsaved changes or who is currently 
 <td valign="top">
 
 Applications should overwrite the default text with the concrete object that is being edited.
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-**deprecated key: `C_COMMON_APPLY_ERROR`** 
-
-</td>
-<td valign="top">
-
-This key has been deprecated. The regular message handling flow will be invoked in case of any errors.
-
-</td>
-<td valign="top">
-
-Error message while saving an object.
-
-</td>
-<td valign="top">
-
- 
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-**deprecated key: `C_TRANSACTION_HELPER_TRANSIENT_CONTEXT_MESSAGE`** 
-
-</td>
-<td valign="top">
-
-This key has been deprecated. The regular message handling flow will be invoked in case of any errors.
-
-</td>
-<td valign="top">
-
-Error message short text when a user enters a value in the field of an object page but the back-end update cannot be done due to availability or connection issues.
-
-This key has been deprecated.
-
-</td>
-<td valign="top">
-
- 
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-**deprecated key: `C_TRANSACTION_HELPER_TRANSIENT_CONTEXT_DESCRIPTION`** 
-
-</td>
-<td valign="top">
-
-This key has been deprecated. The regular message handling flow will be invoked in case of any errors.
-
-</td>
-<td valign="top">
-
-Error message description/detail text when a user enters a value in the field of an object page but the back-end update cannot be done due to availability or connection issues.
-
-This key has been deprecated.
-
-</td>
-<td valign="top">
-
- 
 
 </td>
 </tr>
@@ -3376,6 +3286,34 @@ Label of the action name in the action parameter dialog.
 <tr>
 <td valign="top">
 
+`ACTION_PARAMETER_DIALOG_MESSAGE_TEXT` 
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+Message strip for the action parameter dialog. Having a message strip there is optional. Once it is set, it shows the <span class="SAP-icons-V5"></span> \(*Information*\) icon with this specific text.
+
+</td>
+<td valign="top">
+
+Use the key in combination with the entity name and the action name as follows:
+
+`ACTION_PARAMETER_DIALOG_MESSAGE_TEXT`|<Entity name\>|<Action name\>
+
+Example:
+
+`ACTION_PARAMETER_DIALOG_MESSAGE_TEXT|SalesOrder|CreateWithSalesOrderType`
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
 `ACTION_PARAMETER_DIALOG_ACTION_TITLE` 
 
 </td>
@@ -3890,6 +3828,99 @@ Warning message text used in the preview dialog when creating a card.
 <td valign="top">
 
 Applications should overwrite the default text with the concrete object.
+
+</td>
+</tr>
+</table>
+
+The following keys have been deprecated:
+
+**Deprecated Keys**
+
+
+<table>
+<tr>
+<th valign="top">
+
+Key
+
+</th>
+<th valign="top">
+
+Message Handling
+
+</th>
+<th valign="top">
+
+Used In
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+`C_EDIT_FLOW_GENERIC_LOCKED_OBJECT_POPOVER_TEXT_ADDITIONAL_USER` 
+
+</td>
+<td valign="top">
+
+The scenario no longer occurs.
+
+</td>
+<td valign="top">
+
+Draft information text displayed to a user for an object that is already being edited by another user, provided that the information about the owner isn't available.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`C_COMMON_APPLY_ERROR` 
+
+</td>
+<td valign="top">
+
+The regular message handling flow is invoked in case of any errors.
+
+</td>
+<td valign="top">
+
+Error message while saving an object.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`C_TRANSACTION_HELPER_TRANSIENT_CONTEXT_MESSAGE` 
+
+</td>
+<td valign="top">
+
+The regular message handling flow is invoked in case of any errors.
+
+</td>
+<td valign="top">
+
+Error message short text when a user enters a value in the field of an object page but the back-end update cannot be done due to availability or connection issues.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`C_TRANSACTION_HELPER_TRANSIENT_CONTEXT_DESCRIPTION` 
+
+</td>
+<td valign="top">
+
+The regular message handling flow is invoked in case of any errors.
+
+</td>
+<td valign="top">
+
+Error message description/detail text when a user enters a value in the field of an object page but the back-end update cannot be done due to availability or connection issues.
 
 </td>
 </tr>

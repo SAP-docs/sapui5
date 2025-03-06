@@ -679,7 +679,7 @@ You can change the sorting of the table using the `UI.PresentationVariant`.
 
 You can display a hierarchy within a value help dialog.
 
-To do so, the hierarchy qualifier should be provided through the [`RecursiveHiearchyQualifier`](https://github.com/SAP/odata-vocabularies/blob/0b5633ecc0fb85498720a8da07a46ef24b99ca74/vocabularies/UI.xml#L1175) term within the `PresentationVariant` annotation. The initial expansion level of the hierarchy can be set additionally by using the `InitialExpansionLevel` term, as shown in the following sample code:
+To do so, the hierarchy qualifier must be provided through the [`RecursiveHiearchyQualifier`](https://github.com/SAP/odata-vocabularies/blob/0b5633ecc0fb85498720a8da07a46ef24b99ca74/vocabularies/UI.xml#L1175) term within the `PresentationVariant` annotation. The initial expansion level of the hierarchy can be set additionally by using the `InitialExpansionLevel` term, as shown in the following sample code:
 
 > ### Sample Code:  
 > XML Annotation
@@ -792,7 +792,7 @@ To do so, the hierarchy qualifier should be provided through the [`RecursiveHiea
 > 
 > ```
 
-Check out our live example in the flexible programming model explorer:
+Check out our live examples in the flexible programming model explorer:
 
 -   Display of a hierarchy within a value help at [Field - Edit Mode](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/field/fieldEdit)
 -   Display of a hierarchy within a value help for a multi-input field at [Field - Multi Value Field](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/field/multiValueField)

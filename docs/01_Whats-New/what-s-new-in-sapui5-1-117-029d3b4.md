@@ -692,7 +692,7 @@ The new version of the SAPUI5 OData V4 model introduces the following features:
 
 -   **Experimental:** You can now create a nested single entity behind a single-valued navigation property in the transient entity.
 
-    For more information, see *Nested Single Entity* in [Deep Create](../04_Essentials/creating-an-entity-c9723f8.md#loioc9723f8265f644af91c0ed941e114d46__section_DCR).
+    For more information, see *Nested Single Entity* in [Deep Create](../04_Essentials/creating-an-entity-in-a-collection-c9723f8.md#loioc9723f8265f644af91c0ed941e114d46__section_DCR).
 
 -   Support for read-only hierarchies is now available.
 
@@ -1054,6 +1054,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.131](what-s-new-in-sapui5-1-131-7d24d94.md "With this release SAPUI5 is upgraded from version 1.130 to 1.131.")
 
 [What's New in SAPUI5 1.130](what-s-new-in-sapui5-1-130-85609d4.md "With this release SAPUI5 is upgraded from version 1.129 to 1.130.")
 

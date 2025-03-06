@@ -45,7 +45,7 @@ Setting
 <tr>
 <td valign="top">
 
-Display/Hide the *Export to Excel* button in the table toolbar
+Display/Hide the *Export to Excel* button in the table toolbar.
 
 </td>
 <td valign="top">
@@ -62,7 +62,7 @@ Change the column width.
 </td>
 <td valign="top">
 
-Choose the column of a table in the outline of the Page Editor, and change the `Width` property as needed.
+Choose the column of a table in the outline of the Page Editor and change the `Width` property as needed.
 
 > ### Note:  
 > Changing the width of custom columns using the Page Editor isn't supported; instead, the `Width` property can be defined directly in the fragment.
@@ -74,12 +74,12 @@ Choose the column of a table in the outline of the Page Editor, and change the `
 <tr>
 <td valign="top">
 
-Center-align status columns
+Center-align status columns.
 
 </td>
 <td valign="top">
 
-Choose the column of the table in the outline of Page Editor, and set the `hAlign` property to `Center`.
+Choose the column of the table in the outline of Page Editor and set the `hAlign` property to `Center`.
 
 For vertical alignment of the whole responsive table, see [Tables](tables-c0f6592.md).
 
@@ -128,12 +128,14 @@ The default layout is `Block`.
 <tr>
 <td valign="top">
 
-Change the default value of the `scrollThreshold` parameter in grid tables, analytical tables, and tree tables on the list report page. The default value is 300.
+Change the default value of the `scrollThreshold` parameter in grid tables, analytical tables, and tree tables.
 
 </td>
 <td valign="top">
 
-In the outline, select the table whose value needs to be changed, and set the new value for the `scrollThreshold` parameter.
+In the outline, choose the table that requires a change to its `scrollThreshold` parameter, and update it with the new value.
+
+The default value is 300.
 
 </td>
 </tr>
@@ -146,6 +148,20 @@ Enable or disable live mode in the filter bar.
 <td valign="top">
 
 Change the `liveMode` property of the smart filter bar to either `True` or `False`. For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.comp.smartfilterbar.SmartFilterBar%23controlProperties).
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Determine whether row selection in a responsive table persists or resets after a refresh or data update.
+
+</td>
+<td valign="top">
+
+Set the `rememberSelections` property to either `True` or `False`.
+
+The default value is `False`.
 
 </td>
 </tr>
@@ -172,7 +188,7 @@ Setting
 <tr>
 <td valign="top">
 
-Change the avatar shape in the object page dynamic header from a square to a circle
+Change the avatar shape in the object page dynamic header from a square to a circle.
 
 </td>
 <td valign="top">
@@ -184,7 +200,7 @@ On the header of the object page, set the `displayShape` property to `Circle`.
 <tr>
 <td valign="top">
 
-Hide the anchor bar
+Hide the anchor bar.
 
 </td>
 <td valign="top">
@@ -196,7 +212,7 @@ On the page layout node, set the `showAnchorBar` property to `false`.
 <tr>
 <td valign="top">
 
-Switch to tabs
+Switch to tabs.
 
 </td>
 <td valign="top">
@@ -208,7 +224,7 @@ On the page layout node, set the property `useIconTabBar` to `true`.
 <tr>
 <td valign="top">
 
-Display the *Export to Excel* button in the table toolbar
+Display the *Export to Excel* button in the table toolbar.
 
 </td>
 <td valign="top">
@@ -220,7 +236,7 @@ In the table node, set the `enableExport` property to `true`.
 <tr>
 <td valign="top">
 
-Show header content in edit mode
+Show header content in edit mode.
 
 </td>
 <td valign="top">
@@ -234,7 +250,7 @@ Alternatively, you can make a binding change if you need to change the value acc
 <tr>
 <td valign="top">
 
-Don't collapse headers when scrolling down
+Don't collapse headers when scrolling down.
 
 </td>
 <td valign="top">
@@ -254,21 +270,21 @@ On the page layout node, set the `alwaysShowContentHeader` property to `true`.
 Change the default `growingThreshold` value for the object page's `sap.m.Table`. The default value is 10.
 
 > ### Note:  
-> When there is a single section with a single subsection holding a table, the default `growingThreshold` value is 20 and it cannot be changed.
+> When there is a single section with a single subsection holding a table, the default `growingThreshold` value is 20, and it cannot be changed.
 
 
 
 </td>
 <td valign="top">
 
-In the outline, select the table whose value needs to be changed, and set the new value for the `growingThreshold` property.
+In the outline, select the table whose value needs to be changed and set the new value for the `growingThreshold` property.
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-Set object page tables with non-editable content only, to not editable
+Set object page tables that only contain non-editable content to not editable.
 
 By default, object page tables are automatically set to `editable` if the object page is in edit mode. This means that users can only access editable table content when they navigate through the table using the [tab\] key.
 
@@ -279,7 +295,7 @@ However, in a table with only non-editable content, there is no tab stop.
 
 Set the `editable` property of the table to `false`. The inner table's `navigationMode` property is set to `Navigation`.
 
-Users can then navigate through the entire focusable table content, and not only through the editable fields.
+Users can then navigate through the entire focusable table content, not only through the editable fields.
 
 </td>
 </tr>
@@ -288,12 +304,12 @@ Users can then navigate through the entire focusable table content, and not only
 
 Enable *Include Item In Selection* for tables.
 
-By setting this property to true, the item selection is displayed even if a user navigates away from a table.
+By setting this property to `true`, the item selection is displayed even if a user navigates away from a table.
 
 </td>
 <td valign="top">
 
-On the table, set the `includeItemInSelection` property to `True`.
+In the table, set the `includeItemInSelection` property to `True`.
 
 </td>
 </tr>
@@ -305,7 +321,7 @@ Enable the *Save and Edit* button in non-draft applications. Users can choose th
 </td>
 <td valign="top">
 
-In outline view of the object page select the `Save and Edit` action from the `Actions` within `Footer` and change the visibility to `{ui>/editable}`.
+In the outline view of the object page, select the `Save and Edit` action from the `Actions` within `Footer` and change the visibility to `{ui>/editable}`.
 
 </td>
 </tr>
@@ -317,7 +333,7 @@ Change the layout of the object table for better readability for a high number o
 </td>
 <td valign="top">
 
-On the table, set the `popinLayout` property to one of the following values:
+In the table, set the `popinLayout` property to one of the following values:
 
 -   `Block`
 
@@ -327,6 +343,34 @@ On the table, set the `popinLayout` property to one of the following values:
 
 
 The default layout is `Block`.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Change the default value of the `scrollThreshold` parameter in grid tables, analytical tables, and tree tables.
+
+</td>
+<td valign="top">
+
+In the outline, choose the table that requires a change to its `scrollThreshold` parameter, and update it with the new value.
+
+The default value is 300.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Determine whether row selection in a responsive table persists or resets after a refresh or data update.
+
+</td>
+<td valign="top">
+
+Set the `rememberSelections` property to either `True` or `False`.
+
+The default value is `False`.
 
 </td>
 </tr>

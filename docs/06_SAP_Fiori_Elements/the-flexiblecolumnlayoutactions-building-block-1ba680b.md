@@ -6,10 +6,6 @@ The `FlexibleColumnLayoutActions` building block provides an easy way to instant
 
 
 
-<a name="loio1ba680b7ed6f4b1f8415c0a196264a6c__section_th4_xds_j5b"/>
-
-## Usage
-
 You can instantiate the building block by referencing the building block namespace within a fragment enabled for building block usage.
 
 > ### Sample Code:  

@@ -769,7 +769,7 @@ You can define whether the default sort order for tables and charts is ascending
 > ```
 
 > ### Note:  
-> When sorting a column that contains an amount with a currency or a unit of measure, the sort will be applied on the currency or the unit of measure first and then to the amount field. This ensures a consistent display of amount when different currencies or units of measure are used.
+> When sorting a column that contains an amount with a currency or a unit of measure, the sort is applied on the currency or the unit of measure first and then to the amount field. This sorting mechanism ensures a consistent display of the amount when different currencies or units of measure are used.
 
 
 

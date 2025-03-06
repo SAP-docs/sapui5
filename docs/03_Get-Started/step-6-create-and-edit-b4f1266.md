@@ -411,7 +411,7 @@ We add the new message texts.
 
 [OData Operations](../04_Essentials/odata-operations-b54f789.md "The OData V4 model supports OData operations (ActionImport, FunctionImport, bound Actions and bound Functions). Unbound parameters are limited to primitive values.")
 
-[Creating an Entity](../04_Essentials/creating-an-entity-c9723f8.md "The sap.ui.model.odata.v4.ODataListBinding#create method creates a new entity. Users can interact with a newly created entity even before it has been sent to the server.")
+[Creating an Entity in a Collection](../04_Essentials/creating-an-entity-in-a-collection-c9723f8.md "The sap.ui.model.odata.v4.ODataListBinding#create method creates a new entity inside a collection. Users can interact with a newly created entity even before it has been sent to the server.")
 
 [Message Model](../04_Essentials/message-model-8956f0a.md "The message model contains all messages and is used to bind to the messages to display them.")
 

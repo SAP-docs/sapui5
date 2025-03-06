@@ -92,9 +92,9 @@ In live mode, any changes made by an end user to the filter fields automatically
 
 This mode is ideal for applications with a small amount of data that have no performance issues from the underlying database layer, such as those requiring complex joins to execute actions.
 
-For more information about how to enable the live mode in OData V2, see the [Enabling Live Mode](configuring-filter-bars-4bd7590.md#loio4bd7590569c74c61a0124c6e370030f6__live_mode_v2) subsection in the **Additional Features in SAP Fiori elements for OData V2** section of this topic.
+For more information about enabling the live mode in OData V2, see the [Enabling Live Mode](configuring-filter-bars-4bd7590.md#loio4bd7590569c74c61a0124c6e370030f6__live_mode_v2) subsection in the V2-specific section of this topic.
 
-For more information about how to enable the live mode in OData V4, see the [Enabling Live Mode](configuring-filter-bars-4bd7590.md#loio4bd7590569c74c61a0124c6e370030f6__live_mode_v4) subsection in the **Additional Features in SAP Fiori elements for OData V4** section of this topic.
+For more information about enabling the live mode in OData V4, see the [Enabling Live Mode](configuring-filter-bars-4bd7590.md#loio4bd7590569c74c61a0124c6e370030f6__live_mode_v4) subsection in the V4-specific section of this topic.
 
 > ### Caution:  
 > Impact on performance
@@ -114,6 +114,8 @@ For more information about how to enable the live mode in OData V4, see the [Ena
 If the `entitySet` has any input parameters, then it is shown in the filter bar automatically without the `UI.SelectionFields` annotation.
 
 > ### Sample Code:  
+> XML Annotation
+> 
 > ```
 > 
 > <EntityType Name="SalesShareParametersType" sap:semantics="parameters">
@@ -184,16 +186,16 @@ The following screen recording shows how to add a new filter field:
 
 ### Hiding the Filter Bar
 
-You can configure your application to disable the filter bar on a list report by making the corresponding settings in the `manifest.json` file.
+You can configure your application to hide the filter bar on a list report by making the corresponding settings in the `manifest.json` file.
 
-You can choose to actively disable the filter bar, even if the entity set contains filterable fields. Your application then loads with the following behavior:
+You can choose to actively hide the filter bar, even if the entity set contains filterable fields. Your application then loads with the following behavior:
 
 -   The content area is always loaded, irrespective of the `initialLoad` setting in the `manifest.json`.
 
 -   The *Search* field is provided in the table toolbar.
 
 
-You can disable the filter bar by setting `hideFilterBar` to `true` in the `manifest.json` file, as shown in the following sample code:
+The following sample code shows how to hide the filter bar by setting `hideFilterBar` to `true` in the `manifest.json` file:
 
 > ### Sample Code:  
 > `manifest.json`
@@ -542,8 +544,6 @@ You can use one of the following two approaches:
 
 > ### Restriction:  
 > -   Parameter support is currently only available for read-only services. For editable services, parameter support is currently unavailable because of back-end restrictions.
-> 
-> -   Parameter values aren't passed when an external navigation is triggered.
 > 
 > -   Parameters aren't supported if multiple view mode is used – unless single-table mode is used, where the data from all views comes from the same table that is part of the main entity set.
 > 

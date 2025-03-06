@@ -10,9 +10,11 @@ The global filter is implemented using the `sap.ui.comp.smartfilterbar.SmartFilt
 
 You configure the global filter in the `"sap.ovp"` section using the following properties:
 
--   `globalFilterModel`: the OData model to use for the global filter
+-   `globalFilterModel`: The OData model to use for the global filter.
 
--   `globalFilterEntityType`: the entity type that contains the filterable properties
+-   `globalFilterEntityType`: The entity type that contains the filterable properties. This property is deprecated since SAPUI5 1.54.
+
+-   `globalFilterEntitySet`: The entity set that contains the filterable properties. Use this property from SAPUI5 1.54 onwards.
 
 
 > ### Sample Code:  
@@ -20,7 +22,8 @@ You configure the global filter in the `"sap.ovp"` section using the following p
 > "sap.ovp": {
 >     "_version": "1.1.0",
 >     "globalFilterModel": "ZCD204_EPM_DEMO_SRV",
->     "globalFilterEntityType": "SalesOrder",
+>     "globalFilterEntityType": "SalesOrder",//Deprecated since SAPUI5 1.54
+>     "globalFilterEntitySet": "SalesOrders", //Available from SAPUI5 1.54 onwards
 >     "cards": { 
 >         ...
 >     }
@@ -48,12 +51,12 @@ The search functionality is applicable for entity types that have:
 
 ## Enabling Semantic Date Range in Smart Filter Bar
 
-You can add semantic date ranges, such as lastYear or nextQuarter, on the Smart Filter Bar from the template.
+You can add semantic date ranges, such as `lastYear` or `nextQuarter`, on the Smart Filter Bar from the template.
 
-You can set this in the card's manifest settings. See the sample code below:
+The following sample code shows how to configure these settings in the `manifest.json` file:
 
 > ### Sample Code:  
-> useDateRange
+> `useDateRange`
 > 
 > ```
 > 

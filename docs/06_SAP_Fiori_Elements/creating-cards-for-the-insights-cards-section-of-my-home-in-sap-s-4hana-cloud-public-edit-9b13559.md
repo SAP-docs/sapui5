@@ -6,9 +6,9 @@ An option for tables in the list report or charts in the analytical list page al
 
 **Prerequisites**
 
-You must enable **My Home** in SAP S/4HANA Cloud Public Edition and **My Home** in SAP S/4HANA to create and add cards.
+The administrator must enable **My Home** in SAP S/4HANA Cloud Public Edition and **My Home** in SAP S/4HANA to create and add cards.
 
-Once you've enabled **My Home** in SAP S/4HANA Cloud Public Edition and **My Home** in SAP S/4HANA, the *Add Card to Insights* option automatically appears in the overflow toolbar of the table in list report applications and the overflow toolbar of the chart in analytical list page applications.
+Once **My Home** in SAP S/4HANA Cloud Public Edition and **My Home** in SAP S/4HANA is enabled, the *Add Card to Insights* option automatically appears in the overflow toolbar of the table in list report applications and the overflow toolbar of the chart in analytical list page applications.
 
   
   
@@ -41,7 +41,7 @@ Once you've enabled **My Home** in SAP S/4HANA Cloud Public Edition and **My Hom
 > 
 > -   Custom columns
 
-You can switch off the option to add cards to the *Insights Cards* section of **My Home** using the manifest setting.
+The application developers can switch off the option to add cards to the *Insights Cards* section of **My Home** using the `manifest.json` setting.
 
 
 
@@ -98,7 +98,7 @@ Similarly, using the `manifest.json`, analytical list page applications can choo
 > ### Note:  
 > The card creation feature only supports single view scenarios and single entity-multi view scenarios with responsive tables in list report applications.
 
-To disable the *Add Card to Insights* option in the table toolbar, add the following settings to the manifest:
+To disable the *Add Card to Insights* option in the table toolbar, add the following settings to the `manifest.json`:
 
 > ### Sample Code:  
 > ```
@@ -112,7 +112,7 @@ To disable the *Add Card to Insights* option in the table toolbar, add the follo
 > }
 > ```
 
-To disable the *Add Card to Insights* option in the chart toolbar, add the following manifest settings:
+To disable the *Add Card to Insights* option in the chart toolbar, add the following `manifest.json` settings:
 
 > ### Sample Code:  
 > ```
@@ -124,7 +124,7 @@ To disable the *Add Card to Insights* option in the chart toolbar, add the follo
 > ```
 
 > ### Restriction:  
-> -   When creating an integration card from the list report table, the following changes aren't retained when navigating back from the card
+> -   When creating an integration card from the list report table, the following changes aren't retained when navigating back from the card:
 > 
 >     -   The filter fields or table columns that were removed
 > 
@@ -132,4 +132,11 @@ To disable the *Add Card to Insights* option in the chart toolbar, add the follo
 > 
 > 
 > -   Cards don't have the same formatting for unit of measure fields as seen in the list report table.
+
+**Related Information**  
+
+
+[**My Home** in SAP S/4HANA Cloud Public Edition ](https://help.sap.com/docs/SAP_S4HANA_CLOUD/4fc8d03390c342da8a60f8ee387bca1a/8a60279e8d2041b5ad8d3455fab0f3ef.html)
+
+[**My Home** in SAP S/4HANA](https://help.sap.com/docs/ABAP_PLATFORM_NEW/a7b390faab1140c087b8926571e942b7/8a60279e8d2041b5ad8d3455fab0f3ef.html)
 

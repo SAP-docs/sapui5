@@ -310,3 +310,5 @@ At runtime, each type is represented as instance of the class `DataType` \(`sap/
 
 [API Reference: `sap.ui.base.DataType`](https://ui5.sap.com/#/api/sap.ui.base.DataType)
 
+[API Reference: `sap.ui.base.ManagedObject.MetadataOptions.Property`](https://ui5.sap.com/#/api/sap.ui.base.ManagedObject.MetadataOptions.Property)
+

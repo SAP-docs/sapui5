@@ -6,10 +6,6 @@ The `Field` building block provides an easy way to instantiate a property that w
 
 
 
-<a name="loio5260b9ca249f465ab33769b9edb442aa__section_pzn_nmr_j5b"/>
-
-## Usage
-
 You can instantiate the building block by referencing the building block namespace within a fragment enabled for building block usage:
 
 > ### Sample Code:  
@@ -19,7 +15,7 @@ You can instantiate the building block by referencing the building block namespa
 
 This instantiates the actual control tree that corresponds to this building block.
 
-You can use the `Field` building block either stand alone or inside the `fields` aggregation of a `FormElement` building block for automatically getting a label for the field corresponding to the metadata. You can use the `Field` building block inside custom header facets, custom sections, custom pages, and custom table columns.
+You can use the `Field` building block either as a standalone or inside the `fields` aggregation of a `FormElement` building block for automatically getting a label for the field corresponding to the metadata. You can use the `Field` building block inside custom header facets, custom sections, custom pages, and custom table columns.
 
 
 
@@ -37,7 +33,7 @@ For information about the `Field` API, see the [API Reference](https://ui5.sap.c
 
 1.  When you use a `Field` building block, the differences in the bound data elements result in different UI appearances, as shown in the following examples:
 
-    -   A data element of type `Time` will appear as an input field with a time picker value help in edit mode.
+    -   A data element of type `Time` appears as an input field with a time picker value help in edit mode.
 
         > ### Sample Code:  
         > Custom Section Fragment for Data Element `timeData` \(XML\)
@@ -55,13 +51,13 @@ For information about the `Field` API, see the [API Reference](https://ui5.sap.c
         > </core:FragmentDefinition>
         > ```
 
-        The image below shows how this will look on the UI:
+        The image below shows how it looks on the UI:
 
         ![](images/Building_Block_Time_Data_Field_f400a6e.png)
 
-    -   A numerical field with a currency using the `Currency` type from `sap/cds/common` will appear as 2 input fields.
+    -   A numerical field with a currency using the `Currency` type from `sap/cds/common` appears as 2 input fields.
 
-        While the XML in the custom section fragment looks the same as in the previous example, a data element with a currency will appear as 2 input fields: one for the numerical value and one for the selection of the currency in edit mode.
+        While the XML in the custom section fragment looks the same as in the previous example, a data element with a currency appears as 2 input fields: one for the numerical value and one for the selection of the currency in edit mode.
 
         > ### Sample Code:  
         > Custom Section Fragment for Data Element `numberWithCurrency` \(XML\)
@@ -79,14 +75,14 @@ For information about the `Field` API, see the [API Reference](https://ui5.sap.c
         > </core:FragmentDefinition>
         > ```
 
-        The image below shows how this will look on the UI:
+        The image below shows how it looks on the UI:
 
         ![](images/Building_Block_Currency_Data_Field_bbce28d.png)
 
 
 2.  In addition to the automatic generation of controls fitting best to the bound data when using the `Field` building block, you can also influence the appearance using the `Field` building block API.
 
-    -   The following example shows how to use the `formatOptions` and the parameter `measureDisplayMode` in order to influence the currency field input readiness or even hiding it completely.
+    -   The following example shows how to use the `formatOptions` and the parameter `measureDisplayMode` in order to influence input-readiness of the currency field or hide it completely.
 
         > ### Sample Code:  
         > Custom Section Fragment for Data Element `numberWithCurrency` with `formatOptions` and parameter `measureDisplayMode` \(XML\)
@@ -112,7 +108,7 @@ For information about the `Field` API, see the [API Reference](https://ui5.sap.c
         > </core:FragmentDefinition>
         > ```
 
-        The image below shows how this will look on the UI:
+        The image below shows how it looks on the UI:
 
         ![](images/Building_Block_Currency_Data_Field_with_Format_Options_and_Parameter_measureDisplayMode_e80fd3f.png)
 
@@ -140,7 +136,7 @@ For information about the `Field` API, see the [API Reference](https://ui5.sap.c
         > </core:FragmentDefinition>
         > ```
 
-        The image below shows how this will look on the UI:
+        The image below shows how it looks on the UI:
 
         ![](images/Building_Block_Currency_Field_Display_Mode_9e7718e.png)
 
@@ -166,8 +162,7 @@ For information about the `Field` API, see the [API Reference](https://ui5.sap.c
       
     **Radio Buttons in Horizontal Layout**
 
-    ![](images/Radio_button-horizontal_layout_a267511.png "Radio Buttons in Horizontal
-    							Layout")
+    ![](images/Radio_button-horizontal_layout_a267511.png "Radio Buttons in Horizontal Layout")
 
 4.  The `Field` building block can be used for displaying and editing data from a JSON model. It can be used also for presenting a hard-coded string using the `value` property.
 

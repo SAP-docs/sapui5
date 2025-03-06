@@ -28,7 +28,7 @@ To benefit from the improvements provided by the modules, perform the following 
 
 -   Always declare the full dependencies as described in [Loading a Module](loading-a-module-d12024e.md).
 
--   Migrate to the new module APIas described in [Deprecated jQuery.sap API Replacement](deprecated-jquery-sap-api-replacement-a075ed8.md). Do **not** use the global `jQuery.sap` API anymore.
+-   Migrate to the new module APIas described in [Replacement of Deprecated jQuery APIs](replacement-of-deprecated-jquery-apis-a075ed8.md). Do **not** use the global `jQuery.sap` API anymore.
 
 -   Do **not** use the global `sap.ui` factory functions. Instead, use their replacements; see [Deprecated Factories Replacement](deprecated-factories-replacement-491bd9c.md).
 

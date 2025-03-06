@@ -1193,6 +1193,40 @@ Version 69
 
 </td>
 </tr>
+<tr>
+<td valign="top">
+
+Version 70
+
+</td>
+<td valign="top">
+
+\>=1.132
+
+</td>
+<td valign="top">
+
+1.69.0
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Version 71
+
+</td>
+<td valign="top">
+
+\>=1.133
+
+</td>
+<td valign="top">
+
+1.70.0
+
+</td>
+</tr>
 </table>
 
 For more information on the new fields introduced in each version, check out [Migration Information for Upgrading the Manifest File](migration-information-for-upgrading-the-manifest-file-a110f76.md)
@@ -2475,7 +2509,7 @@ Mandatory archetype of the app, possible values `transactional`, `analytical`, `
 </td>
 <td valign="top">
 
-Indicates whether an app is an abstract \(generic\) app, which may not used directly, but needs to be specialized in the SAP Fiori launchpad content \(as of 1.87\)
+Indicates whether an app is an abstract \(generic\) app, which may not used directly, but needs to be specialized in the SAP Fiori launchpad content \(as of 1.87\). Please note: This attribute will not be inherited by app variants, for example, based on an adaptation project.
 
 </td>
 </tr>
@@ -2586,7 +2620,7 @@ Current version of the `manifest.json`
 ```
 
 {
-    "_version": "1.68.0",
+    "_version": "1.70.0",
  
     "start_url": "index.html",
  
@@ -2838,7 +2872,7 @@ Current version of the `manifest.json`
             }]
         },
         "dependencies": {
-            "minUI5Version": "1.131.0",
+            "minUI5Version": "1.133.0",
             "libs": {
                 "sap.m": {
                     "minVersion": "1.34.0"

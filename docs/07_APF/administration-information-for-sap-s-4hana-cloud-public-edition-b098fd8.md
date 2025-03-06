@@ -1,6 +1,6 @@
 <!-- loiob098fd8d11b344dbb43bcdbff6ff80b2 -->
 
-# Administration Information for SAP S/4HANA Cloud
+# Administration Information for SAP S/4HANA Cloud Public Edition
 
 When you, as an administrator, create business users, ensure that they have the business catalog `SAP_CA_BC_APF_MODELING_PC` assigned.
 

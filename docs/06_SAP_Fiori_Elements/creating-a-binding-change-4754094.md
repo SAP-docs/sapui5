@@ -2,14 +2,14 @@
 
 # Creating a Binding Change
 
-You can create property binding changes manually by using the Page Editor. Note that you can use only those properties whose data has already been retrieved by the model.
+You can create property binding changes manually by using the Page Editor. You can use a property only if its data has already been retrieved by the model.
 
 
 
 ## Context
 
 > ### Note:  
-> This topic is currently only applicable to SAP Fiori elements for OData V2.
+> This topic is only applicable to SAP Fiori elements for OData V2.
 
 > ### Note:  
 > This procedure is only relevant for the following use cases described in [Adapting the UI: List Report and Object Page](adapting-the-ui-list-report-and-object-page-0d2f1a9.md):
@@ -26,11 +26,11 @@ Perform the following steps to create a property binding change:
 
 ## Procedure
 
-1.  Open the Page Editor and for the application and page you want to add the binding change to.
+1.  Open the Page Editor for the application and page you want to add the binding change to.
 
-2.  Find the property you want to apply an expression \(e.g. the visibility of an object page section\), and change the value in the property panel. You can select a value from the drop-down or compose your own expression.
+2.  Find the property you want to apply an expression to \(such as the visibility of an object page section\). Change the value in the property panel. You can select a value from the drop-down or compose your own expression.
 
-3.  In case you already have a change file of type *propertyChange* like in the following example:
+3.  You may already have a change file of type *propertyChange* like in the following example:
 
     ```
     
@@ -64,11 +64,11 @@ Perform the following steps to create a property binding change:
     
     ```
 
-    You can make the following replacements in this change:
+    In that case, you can make the following replacements in this change:
 
-    -   Change the value of the `changeType` from `propertyChange` to `propertyBindingChange`.
+    -   Change the value of `changeType` from `propertyChange` to `propertyBindingChange`.
 
-    -   In the `content`, replace `newValue` with `newBinding`, and its value with your required binding, for example, `{myProperty}`. In this example, `myProperty` contains the values `true` or `false` to change the visibility.
+    -   In `content`, replace `newValue` with `newBinding`, and its value with your required binding, for example, `{myProperty}`. In this example, `myProperty` contains the values `true` or `false` to change the visibility.
 
         The result looks as follows:
 
@@ -107,7 +107,7 @@ Perform the following steps to create a property binding change:
 
 
     > ### Note:  
-    > You can also use an expression binding. For example, if you want to inverse your property you can use `newBinding: "{= !${myProperty}}"`.
+    > You can also use expression binding. For example, if you want to inverse your property, you can use `newBinding: "{= !${myProperty}}"`.
     > 
     > If the property of a control is bound to an OData property, the OData property must belong to the same node or the root node.
     > 

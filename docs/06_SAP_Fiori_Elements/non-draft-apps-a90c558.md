@@ -5,19 +5,21 @@
 By default, you need to create apps that use draft handling.
 
 > ### Note:  
-> This topic is currently only applicable to SAP Fiori elements for OData V2.
+> This topic is only applicable to SAP Fiori elements for OData V2.
 
-For general information about draft handling, see [https://experience.sap.com/fiori-design-web/draft-handling/](https://experience.sap.com/fiori-design-web/draft-handling/) and [Draft Handling](draft-handling-ed9aa41.md).
+For general information about draft handling, see [Draft Handling](draft-handling-ed9aa41.md) and SAP Fiori web design guidelines for [Draft Handling](https://experience.sap.com/fiori-design-web/draft-handling/).
 
 You can also create non-draft apps, however, you need to consider the specific features and restrictions listed below, as compared to those for draft apps. Create non-draft apps only for simple scenarios without complex flows.
 
 > ### Note:  
 > Example of a complex flow: Creating items and subitems in a single step, before saving.
 > 
-> Example of a simple flow: An app used occasionally to change specific fields.
+> Example of a simple flow: An application occasionally used to change specific fields.
 
 > ### Note:  
-> Do not combine draft and non-draft entity sets in one app. Exception: A draft-enabled entity set can contain a non-draft child for display purposes only. For example, a sales order might contain a non-draft contact sub-object. However, performing actions or external navigation from the non-draft child is not possible.
+> Do not combine draft and non-draft entity sets in one application.
+> 
+> Exception: A draft-enabled entity set can contain a non-draft child only for display purposes. For example, a sales order might contain a non-draft contact sub-object. However, performing actions or external navigation from the non-draft child is not possible.
 
 
 
@@ -25,26 +27,26 @@ You can also create non-draft apps, however, you need to consider the specific f
 
 ## Saving Data
 
-In non-draft scenarios, data is not automatically saved to the back-end system when a user changes data on the UI. Users always have to save the new or changed data when they leave a page, for example, in these cases:
+In non-draft scenarios, the application does not automatically save data to the back end when an end user changes it on the UI. End users must always save the new or modified data before leaving a page, for example, in the following cases:
 
--   Creating new subitems
+-   Creating new subitems.
 
--   Editing existing subitems
+-   Editing existing subitems.
 
--   Navigating away, for example, by using a chevron in a table
+-   Navigating away, for example, by using a chevron in a table.
 
--   Navigating back to the list report
+-   Navigating back to the list report.
 
 
-The *Save* button is also available on subobject pages. If a user wants to navigate away from the edit screen that contains unsaved data, a data-loss message is displayed.
+The *Save* button is also available on subobject pages. If an end user tries to navigate away from the edit screen with unsaved data, the application displays a data-loss message.
 
 The following features are also **not** available in non-draft apps:
 
--   Start working on an object, save it as incomplete, and continue later
+-   Start working on an object, save it as incomplete, and continue later.
 
--   Automatic saving and data-loss prevention: Keep working while data is saved automatically and asynchronously
+-   Automatic saving and data-loss prevention: Keep working while data is saved automatically and asynchronously.
 
--   Navigation within the app to different pages without having to keep saving in between
+-   Navigation within the application to different pages without having to save in between.
 
 
 > ### Note:  
@@ -56,7 +58,7 @@ The following features are also **not** available in non-draft apps:
 
 ## Locking
 
-This system doesn't lock objects when data is being edited. Data might be lost if two users work on the same object at the same time. The data of the last user to save is the data in the final version. Consequently, data is not read again from the back-end system when the user starts editing.
+Non-draft apps do not lock objects when data is being edited. If two end users work on the same object simultaneously, data may be lost, and the data from the last user to save becomes the final version. As a result, the system does not retrieve data again from the back-end when the end user begins editing.
 
 
 
@@ -64,19 +66,13 @@ This system doesn't lock objects when data is being edited. Data might be lost i
 
 ## Navigation
 
-The following navigation actions or events discard the entered data:
+The following navigation actions or events discard any entered data:
 
--   SAP Fiori actions: For example, Back or Home
+-   SAP Fiori actions such as Back or Home: These actions cause the display of data-loss message.
 
-    When performing these actions, the SAP Fiori data-loss message is displayed.
+-   SAP Fiori launchpad sign out: This action results is data loss without displaying a data-loss message.
 
--   Launchpad sign out
-
-    Data is lost, no data-loss message is displayed.
-
--   Browser actions: For example, back, forward, open bookmark, change URL, refresh, and closing the browser.
-
-    When performing these actions, the data is lost, and no data-loss message is displayed.
+-   Browser actions such as navigating either back or forward, opening a bookmark, changing the URL, refreshing, and closing the browser: These actions result is data loss without displaying a data-loss message.
 
 
 
@@ -85,7 +81,7 @@ The following navigation actions or events discard the entered data:
 
 ## Extension Points and Secured Execution
 
-Various checks can be executed. For example, check for the needed busy indicator or to see whether the data loss popup is needed. The following table contains the input parameters for the method used in the check, and the corresponding system behavior:
+Various checks can be executed. For example, check for the needed busy indicator or to see whether the data-loss message is needed. The following table contains the input parameters for the method used in the check, and the corresponding system behavior:
 
 **Example parameters**
 
@@ -111,7 +107,7 @@ System Behavior
 </td>
 <td valign="top">
 
-Triggers a busy indicator when a function is being executed. Can be set to false in case of immediate completion.
+Triggers a busy indicator when a function is being executed. It can be set to `false` in case of immediate completion.
 
 </td>
 </tr>
@@ -125,7 +121,7 @@ Triggers a busy indicator when a function is being executed. Can be set to false
 
 Checks whether the application is currently busy. The function is executed only if it's not busy.
 
-Has to be set to false if the function is not triggered by direct user interaction, but as a result of another function that set the application to busy.
+It must be set to `false` if the function is not triggered by direct user interaction, but as a result of another function that set the application to `busy`.
 
 </td>
 </tr>
@@ -137,7 +133,7 @@ Has to be set to false if the function is not triggered by direct user interacti
 </td>
 <td valign="top">
 
-Displays a data-loss message before execution of the function if needed \(that is, in non-draft cases when the model or registered methods contain pending changes\).
+Displays a data-loss message before executing the function if needed \(that is, in non-draft cases when the model or registered methods contain pending changes\).
 
 </td>
 </tr>
@@ -149,7 +145,7 @@ Displays a data-loss message before execution of the function if needed \(that i
 </td>
 <td valign="top">
 
-Indicates that execution of the function leads to navigation, that is, leaves the current page, which induces a slightly different text for the data-loss message.
+Indicates that the execution of the function leads to navigation, that is, leaves the current page, which induces a slightly different text for the data-loss message.
 
 </td>
 </tr>
@@ -159,24 +155,24 @@ Indicates that execution of the function leads to navigation, that is, leaves th
 
 <a name="loioa90c55840b144f2ebc2d836adbc1a54f__section_zbz_ygq_bz"/>
 
-## Further Draft Features that Are not Available in Non-Draft Apps
+## Further Draft Features That Are Not Available in Non-Draft Apps
 
-The following draft app features are **not available** in non-draft apps:
+The following draft features are **not available** in non-draft apps:
 
--   No data loss, connectivity disruption or session time-out
+-   No data loss, connectivity disruption or session time-out.
 
--   Device switch: Start on one device and continue on another
+-   Device switch: Start on one device and continue on another.
 
--   Action and field control adjustments during data entry
+-   Action and field control adjustments during data entry.
 
--   Checks during data entry
+-   Checks during data entry.
 
--   Actions on entered data \(without saving or triggering side effects\)
+-   Actions on entered data \(without saving or triggering side effects\).
 
--   Calculations and defaulting during data entry
+-   Calculations and defaulting during data entry.
 
--   Context-dependent value helps \(based on currently entered data\)
+-   Context-dependent value helps \(based on currently entered data\).
 
--   Sorting and filtering in editable tables for data entry
+-   Sorting and filtering in editable tables for data entry.
 
 
