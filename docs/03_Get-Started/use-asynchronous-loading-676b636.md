@@ -86,7 +86,7 @@ To configure the targets for asynchronous loading, please also check the [Routin
         "viewName": "my.app.view.App",
         "type": "XML",
         "id": "app",
-         "async": true
+        "async": true
     },
     "routing": {
         "config": {
