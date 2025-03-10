@@ -43,7 +43,7 @@ In **JavaScript**, you can include the binding path within curly brackets as a s
 
 ```js
 // "Input" required from module "sap/m/Input"
-var oInput = new sap.m.Input({
+const oInput = new sap.m.Input({
 	value: "{/company/name}"
 });
 ```
@@ -71,7 +71,7 @@ In **JavaScript** views or controllers, you use a JS object instead of a string 
 // "Input" required from module "sap/m/Input"
 // "BindingMode" required from module "sap/ui/model/BindingMode"
 
-var oInput = new Input ({
+const oInput = new Input ({
 	value: {
 		path: "/company/name",
 		mode: BindingMode.OneWay
@@ -79,12 +79,7 @@ var oInput = new Input ({
 });
 ```
 
-Depending on the use case, it may be useful to define the binding at a later time, using the `bindProperty` method:
-
-```js
-oInput.bindProperty("value", "/company/name");
-```
-
+Depending on the use case, it may be useful to define the binding at a later time, using the `bindProperty` method.
 This option also allows you to use the same object literal that you used in the constructor to define the binding:
 
 ```js
@@ -165,13 +160,16 @@ The `this` context of a formatter function is generally set to the control \(or 
 </mvc:View>
 ```
 
-If you use **JavaScript**, you can pass the formatter function as a third parameter to the `bindProperty` method, or you can add the binding info with the `formatter` key. The `formatter` has a single parameter `value`, which is the value that is to be formatted, and is executed as a member of the control, meaning it can access additional control properties or model data.
+If you use **JavaScript**, you can add the formatter function to the binding info with the `formatter` key. The `formatter` has a single parameter `value`, which is the value that is to be formatted, and is executed as a member of the control, meaning it can access additional control properties or model data.
 
 ```js
 //"Input" required from module sap/m/Input
 
-oTextField.bindProperty("value", "/company/title", function(sValue) {
-	return sValue && sValue.toUpperCase();
+oTextField.bindProperty("value", {
+	path: "/company/title",
+	formatter: (sValue) => {
+		return sValue && sValue.toUpperCase();
+	}
 });
 
 oControl = new Input({
@@ -190,8 +188,11 @@ oControl = new Input({
 Because it can contain any JavaScript, the formatter function can be used for formatting a value and also for performing type conversions or calculating results, for example, to show a special traffic light image depending on a Boolean value:
 
 ```js
-oImage.bindProperty("src", "/company/trusted", function(bValue) {
-	return bValue ? "green.png" : "red.png";
+oImage.bindProperty("src", {
+	path: "/company/trusted",
+	formatter: function(bValue) {
+		return bValue ? "green.png" : "red.png";
+	}
 }); 
 ```
 
@@ -239,14 +240,11 @@ You can also provide parameter values for some of the simple types in your XML v
 </mvc:View>
 ```
 
-Using JavaScript, you can define a type to be used for a property binding by passing it as a third parameter in `bindProperty` or by adding it to the binding information by using the key `type`, as shown here:
+Using JavaScript, you can define a type to be used for a property binding by adding it to the binding information by using the key `type`, as shown here:
 
 ```js
-// "TypeString" required from module "sap/ui/model/type/String"
 // "Input" required from module "sap/m/Input"
 // "TypeFloat" required from module "sap/ui/model/type/Float"
-
-oTextField.bindProperty("value", "/company/name", new sap.ui.model.type.String());
 
 oControl = new sap.m.Input({
 	value: {
@@ -274,7 +272,7 @@ You can define **custom types** by inheriting from `sap.ui.model.SimpleType` and
 // "SimpleType" required from module "sap/ui/model/SimpleType"
 // "ValidateException" required from module "sap/ui/model/ValidateException"
 
-var Zipcode = SimpleType.extend("sap.ui.sample.Zipcode", {
+const Zipcode = SimpleType.extend("sap.ui.sample.Zipcode", {
     formatValue: function(oValue) {
         return oValue;
     },
@@ -316,22 +314,22 @@ By default, all bindings of a model instance have the default binding mode of th
 // "JSONModel" required from module "sap/ui/model/json/JSONModel"
 // "Input" required from module "sap/m/Input"
 // "BindingMode" required from module "sap/ui/model/BindingMode"
-	var oModel = new JSONModel();
-	// default binding mode is two-way
-	oModel.setData(myData);
-	var oInputFirstName = new Input ();
-	oInputFirstName.setModel(oModel);
+const oModel = new JSONModel();
+// default binding mode is two-way
+oModel.setData(myData);
+const oInputFirstName = new Input ();
+oInputFirstName.setModel(oModel);
 
-	// bind value property one way only
-	// propertyname, formatter function, binding mode
-	oInputFirstName.bindValue("/firstName", null, BindingMode.OneWay);
-	oInputFirstName.placeAt("target1");
+// bind value property one way only
+// propertyname, formatter function, binding mode
+oInputFirstName.bindValue("/firstName", null, BindingMode.OneWay);
+oInputFirstName.placeAt("target1");
 
-	var oInputLastName = new Input();
-	oInputLastName.setModel(oModel);
-	// bind value property two way (default)
-	oInputLastName.bindValue("/lastName");
-	oInputLastName.placeAt("target2");
+const oInputLastName = new Input();
+oInputLastName.setModel(oModel);
+// bind value property two way (default)
+oInputLastName.bindValue("/lastName");
+oInputLastName.placeAt("target2");
 ```
 
 In the example above, two `Input` fields are created and their `value` property is bound to the same property in the model. The first `Input` binding has a one-way binding mode, whereas the second `Input` has the default binding mode of the model instance, which is two-way. For this reason, when text is entered in the first `Input`, the value will **not** be changed in the model. This only happens if text is entered in the second `Input`. Then, of course, the value of the first `Input` will be updated as it has a one-way binding, that is, from model to view.
