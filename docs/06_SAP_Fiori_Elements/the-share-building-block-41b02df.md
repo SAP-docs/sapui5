@@ -8,7 +8,7 @@ Freestyle SAPUI5 applications can also use the "`Share`" functionality that allo
 
 <a name="loio41b02dfe1ac44d72bb766f5fc3e3d244__section_qfd_qdn_j1c"/>
 
-## Configuring the Visibility of *Send Email* Option
+## Configuring the Visibility of the *Send Email* Option
 
 You can control the visibility of the *Send Email* option within the `Share` building block by configuring the `showSendEmail` key under the `shareOptions`. The property values can be either boolean or binding.
 

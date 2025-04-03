@@ -65,13 +65,16 @@ We introduce a typo in the binding of the number attribute to simulate a frequen
         </headerToolbar>
         <items>
             <ObjectListItem
+                core:require="{
+                    Currency: 'sap/ui/model/type/Currency'
+                }"
                 title="{invoice>Quantity} x {invoice>ProductName}"
                 number="{
                     parts: [
                         'invoice>ExTendedPrice',
                         'view>/currency'
                     ],
-                    type: 'sap.ui.model.type.Currency',
+                    type: 'Currency',
                     formatOptions: {
                         showMeasure: false
                     }

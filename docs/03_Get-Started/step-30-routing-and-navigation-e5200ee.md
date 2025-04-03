@@ -217,13 +217,16 @@ We add a new string to the resource bundle for the detail page title.
     ...
         <items>
             <ObjectListItem
+                core:require="{
+                    Currency: 'sap/ui/model/type/Currency'
+                }"
                 title="{invoice>Quantity} x {invoice>ProductName}"
                 number="{
                     parts: [
                         'invoice>ExtendedPrice',
                         'view>/currency'
                     ],
-                    type: 'sap.ui.model.type.Currency',
+                    type: 'Currency',
                     formatOptions: {
                         showMeasure: false
                     }

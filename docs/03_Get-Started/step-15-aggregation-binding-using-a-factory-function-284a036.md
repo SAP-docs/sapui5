@@ -48,7 +48,8 @@ You can view and download all files in the Demo Kit at [Data Binding - Step 15](
     ```xml
     <core:FragmentDefinition
     	xmlns="sap.m"
-    	xmlns:core="sap.ui.core">
+    	xmlns:core="sap.ui.core"
+    	core:require="{Currency: 'sap/ui/model/type/Currency'}">
     	<ObjectListItem
     		id="productExtended"
     		title="{products>ProductName} ({products>QuantityPerUnit})"
@@ -57,7 +58,7 @@ You can view and download all files in the Demo Kit at [Data Binding - Step 15](
     				{path: 'products>UnitPrice'},
     				{path: '/currencyCode'}
     			],
-    			type: 'sap.ui.model.type.Currency',
+    			type: 'Currency',
     			formatOptions : {
     				showMeasure : false
     			}
@@ -80,7 +81,8 @@ You can view and download all files in the Demo Kit at [Data Binding - Step 15](
     	xmlns:core="sap.ui.core"
     	xmlns:form="sap.ui.layout.form"
     	xmlns:l="sap.ui.layout"
-    	xmlns:mvc="sap.ui.core.mvc">
+    	xmlns:mvc="sap.ui.core.mvc"
+    	core:require="{Currency: 'sap/ui/model/type/Currency'}">
     ...
     	<Panel headerText="{i18n>panel3HeaderText}" class="sapUiResponsiveMargin" width="auto">
     		<List

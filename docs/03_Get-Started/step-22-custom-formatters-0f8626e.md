@@ -79,13 +79,16 @@ The `statusText` function gets the technical status from the data model as input
         items="{invoice>/Invoices}">
         <items>
             <ObjectListItem
+                core:require="{
+                    Currency: 'sap/ui/model/type/Currency'
+                }"
                 title="{invoice>Quantity} x {invoice>ProductName}"
                 number="{
                     parts: [
                         'invoice>ExtendedPrice',
                         'view>/currency'
                     ],
-                    type: 'sap.ui.model.type.Currency',
+                    type: 'Currency',
                     formatOptions: {
                         showMeasure: false
                     }

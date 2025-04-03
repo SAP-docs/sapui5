@@ -170,7 +170,7 @@ The following side effect annotations are supported:
     > ### Caution:  
     > You cannot specify a 1:1 association or an empty target, such as `NavigationPropertyPath`, to ensure that the whole entity is considered as the source.
 
-    The side effect is triggered when structural changes are made \(adding or deleting an item\). The side effect is not triggered if a property of any entity is changed. This needs to be done in the entity type of the associated entity.
+    The side effect is triggered when structural changes are made \(adding or deleting an item\). The side effect is not triggered if a property of any entity is changed. Ensure that changes are made within the entity type of the associated entity.
 
 -   **Target properties**
 
@@ -257,6 +257,129 @@ You can define side effects either in the back end or in the local annotation fi
 
     You can define a side effect without any source properties or source entities. This is called a global side effect. For more information, see [Using Global Side Effects](using-global-side-effects-955ae31.md).
 
+
+
+
+### Side Effects for Extension Fields in Forms
+
+To enable side effects for extension fields in forms, you must configure the `registerCustomFieldForSideEffect` extension API in the `onAfterRendering` hook. The extension API requires the following parameters:
+
+-   `Controls`: The extension field controls.
+
+-   `FieldName`: The name of the custom field.
+
+-   `EntitySet`: The associated entity set.
+
+
+The extension API returns a callback function, which must be invoked within the extension field event handler. The callback function requires the `FieldName` as input.
+
+Additionally, the side effect annotation must be configured to ensure correct behavior.
+
+> ### Note:  
+> Navigation properties are not supported.
+
+The following sample code shows how a custom field is configured as the source for the side effect:
+
+> ### Sample Code:  
+> ```
+> sap.ui.define("SOwoExt.ext.controller.ObjectPageExtension", ["sap/m/MessageBox"], function (MessageBox) {
+>     "use strict";
+>     var CustomFieldGroupChangeRegister;
+> 
+>     return {
+>         onCheckBoxEvent: function (oEvent) {
+>             var oView = this.getView();
+>             var model = oView.getModel();
+>             var context = oView.getBindingContext();
+>             var sFields = "SrcgProjNotesAreForbidden";
+>             var data = oEvent.getParameter("selected");
+> 
+>             model.setProperty(context.getPath() + "/" + sFields, data);
+>             CustomFieldGroupChangeRegister("SrcgProjNotesAreForbidden");
+>         },
+> 
+>         onAfterRendering: function (event) {
+>             var oView = this.getView();
+>             var sEntitySet = "C_STTA_SalesOrder_WD_20";
+>             var sProperty = "SrcgProjNotesAreForbidden";
+>             var oControl = sap.ui.getCore().getElementById(
+>                 "SOwoExt::sap.suite.ui.generic.template.ObjectPage.view.Details::C_STTA_SalesOrder_WD_20--srcgProjNotesAreForbiddenCheckBox"
+>             );
+> 
+>             CustomFieldGroupChangeRegister = this.extensionAPI.registerCustomFieldForSideEffect(oControl, sProperty, sEntitySet);
+>         }
+>     };
+> });
+> 
+> ```
+
+
+
+### Side Effects for Extension Columns in Tables
+
+To enable side effects for extension columns in tables, you must configure the `registerCustomColumnForSideEffect` extension API within the `onAfterRendering` hook of the table. The extension API requires the following parameters:
+
+-   `oTable`: The extension field controls.
+
+-   `FieldName`: The property name associated with the custom column.
+
+-   `EntitySet`: The entity set associated with the custom column.
+
+
+The extension API returns a callback function, which must be invoked within the extension column event handler. The callback function requires the `Field Name` as input.
+
+Additionally, the side effect annotation must be configured to ensure correct behavior.
+
+> ### Note:  
+> This behavior is only supported in responsive tables and grid tables.
+
+The following sample code shows how a custom table column with a check box is configured as the source for the side effect:
+
+> ### Sample Code:  
+> ```
+> sap.ui.define("SOwoExt.ext.controller.ObjectPageExtension", ["sap/m/MessageBox"], function (MessageBox) {
+>     "use strict";
+>     
+>     var CustomFieldGroupChangeRegister;
+> 
+>     return {
+>         onSubSectionEnteredExtension: function (subSection) {
+>             if (subSection.getId().indexOf("C_STTA_SalesOrder_WD_20--to_Item") !== -1) {
+>                 var sourcingProjectItemTreeTable = this.oView.byId(
+>                     "SOwoExt::sap.suite.ui.generic.template.ObjectPage.view.Details::C_STTA_SalesOrder_WD_20--to_Item::com.sap.vocabularies.UI.v1.LineItem::responsiveTable"
+>                 );
+> 
+>                 sourcingProjectItemTreeTable.addEventDelegate(
+>                     {
+>                         onAfterRendering: function (oEvent) {
+>                             var oControl = this.oView.byId(
+>                                 "SOwoExt::sap.suite.ui.generic.template.ObjectPage.view.Details::C_STTA_SalesOrder_WD_20--to_Item::com.sap.vocabularies.UI.v1.LineItem::responsiveTable"
+>                             );
+> 
+>                             CustomFieldGroupChangeRegister = this.extensionAPI.registerCustomColumnForSideEffect(
+>                                 oControl,
+>                                 "Raiseamount_ac",
+>                                 "C_STTA_SalesOrderItem_WD_20"
+>                             );
+>                         },
+>                     },
+>                     this
+>                 );
+>             }
+>         },
+> 
+>         onCheckBoxPressed: function (event) {
+>             var sProperty = "Raiseamount_ac";
+>             CustomFieldGroupChangeRegister(sProperty);
+>         },
+>     };
+> });
+> 
+> ```
+
+
+
+### 
 
 > ### Note:  
 > -   Side effects for non-draft apps are supported. The side effects with source properties are triggered once the user saves the entity and the *Save* action is successful. They are also supported when structural changes are made to the items table in the object page that is configured as a source.

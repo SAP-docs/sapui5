@@ -4,13 +4,13 @@
 
 You can add a micro chart to the column of a responsive table in both the list report and the object page.
 
-To add a micro chart to a table, use the annotation term `UI.LineItem` and the complex type `DataFieldForAnnotation`. The micro charts are then displayed within the table column as shown in the following screenshot:
+To add a micro chart to a table, use the `UI.LineItem` annotation and the complex type `DataFieldForAnnotation`. The micro charts are then displayed within the table column, as shown in the following screenshot:
 
   
   
-**Micro Chart in List Report**
+**Micro Chart in List Report Table**
 
-![](images/Micro_Chart_in_List_Report_b010c13.png "Micro Chart in List Report")
+![](images/Micro_Chart_in_List_Report_Table_b010c13.png "Micro Chart in List Report Table")
 
 > ### Note:  
 > You cannot sort and filter the measures and dimensions in a micro chart from the column header. These measures and dimensions are available in the *Settings* menu *Sorting and Filtering* menu if they are direct properties of the table entity.
@@ -23,7 +23,7 @@ To add a micro chart to a table, use the annotation term `UI.LineItem` and the c
 
 
 
-### UI.LineItem and UI.DataFieldForAnnotation
+### `UI.LineItem` and `UI.DataFieldForAnnotation`
 
 The `Label` property of the `UI.DataFieldForAnnotation` is used for the text of the table column header.
 
@@ -243,155 +243,143 @@ The `Label` property of the `UI.DataFieldForAnnotation` is used for the text of 
 
 ### 
 
--   Area Micro Chart
+**Area Micro Chart**
 
-    > ### Sample Code:  
-    > XML Annotation
-    > 
-    > ```xml
-    > 
-    > <Annotation Term="UI.Chart" Qualifier="AreaChartQualifier">
-    >     <Record Type="UI.ChartDefinitionType">
-    >         <PropertyValue Property="Title" String="Sales Price" />
-    >         <PropertyValue Property="Description" String="Area Micro Chart" />
-    >         <PropertyValue Property="ChartType" EnumMember="UI.ChartType/Area" />
-    >         <PropertyValue Property="Dimensions">
-    >             <Collection>
-    >                 <PropertyPath>PriceDay</PropertyPath>
-    >             </Collection>
-    >         </PropertyValue>
-    >         <PropertyValue Property="Measures">
-    >             <Collection>
-    >                 <PropertyPath>AreaChartPrice</PropertyPath>
-    >             </Collection>
-    >         </PropertyValue>
-    >         <PropertyValue Property="MeasureAttributes">
-    >             <Collection>
-    >                 <Record Type="UI.ChartMeasureAttributeType">
-    >                     <PropertyValue Property="Measure" PropertyPath="AreaChartPrice" />
-    >                     <PropertyValue Property="Role" EnumMember="UI.ChartMeasureRoleType/Axis1" />
-    >                     <PropertyValue Property="DataPoint" AnnotationPath="@UI.DataPoint#AreaChartPrice" />
-    >                 </Record>
-    >             </Collection>
-    >         </PropertyValue>
-    >     </Record>
-    > </Annotation>
-    > ```
-
-    > ### Sample Code:  
-    > UI.CABAP CDS Annotation
-    > 
-    > ```
-    > 
-    > @UI.Chart: [
-    >   {
-    >     title: 'Sales Price',
-    >     description: 'Area Micro Chart',
-    >     chartType: #AREA,
-    >     dimensions: [
-    >       'PRICEDAY'
-    >     ],
-    >     measures: [
-    >       'AREACHARTPRICE'
-    >     ],
-    >     measureAttributes: [
-    >       {
-    >         measure: 'AreaChartPrice',
-    >         role: #AXIS_1,
-    >         asDataPoint: true
-    >       }
-    >     ],
-    >     qualifier: 'AreaChartQualifier'
-    >   }
-    > ]
-    > annotate view ITEM with {
-    > 
-    > }
-    > 
-    > ```
-
--   Bullet Micro Chart
-
-    > ### Sample Code:  
-    > XML Annotation
-    > 
-    > ```xml
-    > 
-    > <Annotation Term="UI.Chart" Qualifier="BulletChartQualifier">
-    >     <Record Type="UI.ChartDefinitionType">
-    >         <PropertyValue Property="Title" String="Sales Revenue" />
-    >         <PropertyValue Property="Description" String="Bullet Micro Chart" />
-    >         <PropertyValue Property="ChartType" EnumMember="UI.ChartType/Bullet" />
-    >         <PropertyValue Property="Measures">
-    >             <Collection>
-    >                 <PropertyPath>BulletChartRevenue</PropertyPath>
-    >             </Collection>
-    >         </PropertyValue>
-    >         <PropertyValue Property="MeasureAttributes">
-    >             <Collection>
-    >                 <Record Type="UI.ChartMeasureAttributeType">
-    >                     <PropertyValue Property="Measure" PropertyPath="BulletChartRevenue" />
-    >                     <PropertyValue Property="Role" EnumMember="UI.ChartMeasureRoleType/Axis1" />
-    >                     <PropertyValue Property="DataPoint" AnnotationPath="@UI.DataPoint#BulletChartRevenue" />
-    >                 </Record>
-    >             </Collection>
-    >         </PropertyValue>
-    >     </Record>
-    > </Annotation>
-    > ```
-
-    > ### Sample Code:  
-    > ABAP CDS Annotation
-    > 
-    > ```
-    > 
-    > @UI.Chart: [
-    >   {
-    >     title: 'Sales Revenue',
-    >     description: 'Bullet Micro Chart',
-    >     chartType: #BULLET,
-    >     measures: [
-    >       'BULLETCHARTREVENUE'
-    >     ],
-    >     measureAttributes: [
-    >       {
-    >         measure: 'BulletChartRevenue',
-    >         role: #AXIS_1,
-    >         asDataPoint: true
-    >       }
-    >     ],
-    >     qualifier: 'BulletChartQualifier'
-    >   }
-    > ]
-    > annotate view ITEM with {
-    > 
-    > }
-    > 
-    > ```
-
-
-> ### Recommendation:  
-> Check out [Micro Chart Facet](micro-chart-facet-e219fd0.md) to see code samples for these micro charts:
+> ### Sample Code:  
+> XML Annotation
 > 
-> -   Radial micro chart
+> ```xml
 > 
-> -   Column micro chart
+> <Annotation Term="UI.Chart" Qualifier="AreaChartQualifier">
+>     <Record Type="UI.ChartDefinitionType">
+>         <PropertyValue Property="Title" String="Sales Price" />
+>         <PropertyValue Property="Description" String="Area Micro Chart" />
+>         <PropertyValue Property="ChartType" EnumMember="UI.ChartType/Area" />
+>         <PropertyValue Property="Dimensions">
+>             <Collection>
+>                 <PropertyPath>PriceDay</PropertyPath>
+>             </Collection>
+>         </PropertyValue>
+>         <PropertyValue Property="Measures">
+>             <Collection>
+>                 <PropertyPath>AreaChartPrice</PropertyPath>
+>             </Collection>
+>         </PropertyValue>
+>         <PropertyValue Property="MeasureAttributes">
+>             <Collection>
+>                 <Record Type="UI.ChartMeasureAttributeType">
+>                     <PropertyValue Property="Measure" PropertyPath="AreaChartPrice" />
+>                     <PropertyValue Property="Role" EnumMember="UI.ChartMeasureRoleType/Axis1" />
+>                     <PropertyValue Property="DataPoint" AnnotationPath="@UI.DataPoint#AreaChartPrice" />
+>                 </Record>
+>             </Collection>
+>         </PropertyValue>
+>     </Record>
+> </Annotation>
+> ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation
 > 
-> -   Line micro chart
+> ```
 > 
-> -   Harvey micro chart
+> @UI.Chart: [
+>   {
+>     title: 'Sales Price',
+>     description: 'Area Micro Chart',
+>     chartType: #AREA,
+>     dimensions: [
+>       'PRICEDAY'
+>     ],
+>     measures: [
+>       'AREACHARTPRICE'
+>     ],
+>     measureAttributes: [
+>       {
+>         measure: 'AreaChartPrice',
+>         role: #AXIS_1,
+>         asDataPoint: true
+>       }
+>     ],
+>     qualifier: 'AreaChartQualifier'
+>   }
+> ]
+> annotate view ITEM with {
 > 
-> -   Stacked bar micro chart
+> }
+> 
+> ```
 
-**Restriction**
+**Bullet Micro Chart**
 
-The template doesn't support the use of navigation properties within the `UI.Chart` term for the micro chart \(see the following example\).
+> ### Sample Code:  
+> XML Annotation
+> 
+> ```xml
+> 
+> <Annotation Term="UI.Chart" Qualifier="BulletChartQualifier">
+>     <Record Type="UI.ChartDefinitionType">
+>         <PropertyValue Property="Title" String="Sales Revenue" />
+>         <PropertyValue Property="Description" String="Bullet Micro Chart" />
+>         <PropertyValue Property="ChartType" EnumMember="UI.ChartType/Bullet" />
+>         <PropertyValue Property="Measures">
+>             <Collection>
+>                 <PropertyPath>BulletChartRevenue</PropertyPath>
+>             </Collection>
+>         </PropertyValue>
+>         <PropertyValue Property="MeasureAttributes">
+>             <Collection>
+>                 <Record Type="UI.ChartMeasureAttributeType">
+>                     <PropertyValue Property="Measure" PropertyPath="BulletChartRevenue" />
+>                     <PropertyValue Property="Role" EnumMember="UI.ChartMeasureRoleType/Axis1" />
+>                     <PropertyValue Property="DataPoint" AnnotationPath="@UI.DataPoint#BulletChartRevenue" />
+>                 </Record>
+>             </Collection>
+>         </PropertyValue>
+>     </Record>
+> </Annotation>
+> ```
 
-  
-  
-**Navigation Property**
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> ```
+> 
+> @UI.Chart: [
+>   {
+>     title: 'Sales Revenue',
+>     description: 'Bullet Micro Chart',
+>     chartType: #BULLET,
+>     measures: [
+>       'BULLETCHARTREVENUE'
+>     ],
+>     measureAttributes: [
+>       {
+>         measure: 'BulletChartRevenue',
+>         role: #AXIS_1,
+>         asDataPoint: true
+>       }
+>     ],
+>     qualifier: 'BulletChartQualifier'
+>   }
+> ]
+> annotate view ITEM with {
+> 
+> }
+> 
+> ```
 
-![](images/Chart_Limitation_02debb6.png "Navigation Property")
+> ### Tip:  
+> For more information about the code samples of other micro charts, see [Micro Chart Facet](micro-chart-facet-e219fd0.md).
+
+> ### Restriction:  
+> The template doesn't support the use of navigation properties in the `UI.Chart` term for the micro chart, as shown in the following sample code:
+> 
+>   
+>   
+> **Navigation Property**
+> 
+> ![](images/Chart_Limitation_02debb6.png "Navigation Property")
 
 
 
@@ -399,307 +387,311 @@ The template doesn't support the use of navigation properties within the `UI.Cha
 
 The `DataPoint` property of the `MeasureAttributes` of the `UI.Chart` annotation should point to the `UI.DataPoint` annotation.
 
-The `SmartMicroChart` control supports the `Criticality` and `CriticalityCalculation` properties of a `UI.DataPoint`. For an example of how to use the `CriticalityCalculation`, see the following area micro chart annotation example. For an example of how to use the `Criticality` property, see the following bullet micro chart annotation example.
+The `SmartMicroChart` control supports the `Criticality` and `CriticalityCalculation` properties of `UI.DataPoint`. For an example of how to use the `CriticalityCalculation`, see the following area micro chart annotation example. For an example of how to use the `Criticality` property, see the following bullet micro chart annotation example.
 
 > ### Note:  
-> The `Title` for the `UI.DataPoint` is required,but the micro chart does not use it.
+> The `Title` for `UI.DataPoint` is required, but the micro chart does not use it.
 
--   Area Micro Chart
+**Area Micro Chart**
 
-    > ### Sample Code:  
-    > XML Annotation
-    > 
-    > ```xml
-    > 
-    > <Annotation Term="UI.DataPoint" Qualifier="AreaChartPrice">
-    >     <Record>
-    >         <PropertyValue Property="Title" String="Sales Price" />
-    >         <PropertyValue Property="Value" Path="AreaChartPrice" />
-    >         <PropertyValue Property="TargetValue" Path="TargetPrice" />
-    >         <PropertyValue Property="CriticalityCalculation">
-    >             <Record>
-    >                 <PropertyValue Property="ImprovementDirection" EnumMember="UI.ImprovementDirectionType/Target" />
-    >                 <PropertyValue Property="DeviationRangeHighValue" Path="DeviationUpperBoundPrice" />
-    >                 <PropertyValue Property="DeviationRangeLowValue" Path="DeviationLowerBoundPrice" />
-    >                 <PropertyValue Property="ToleranceRangeHighValue" Path="ToleranceUpperBoundPrice" />
-    >                 <PropertyValue Property="ToleranceRangeLowValue" Path="ToleranceLowerBoundPrice" />
-    >             </Record>
-    >         </PropertyValue>
-    >     </Record>
-    > </Annotation>
-    > ```
+> ### Sample Code:  
+> XML Annotation
+> 
+> ```xml
+> 
+> <Annotation Term="UI.DataPoint" Qualifier="AreaChartPrice">
+>     <Record>
+>         <PropertyValue Property="Title" String="Sales Price" />
+>         <PropertyValue Property="Value" Path="AreaChartPrice" />
+>         <PropertyValue Property="TargetValue" Path="TargetPrice" />
+>         <PropertyValue Property="CriticalityCalculation">
+>             <Record>
+>                 <PropertyValue Property="ImprovementDirection" EnumMember="UI.ImprovementDirectionType/Target" />
+>                 <PropertyValue Property="DeviationRangeHighValue" Path="DeviationUpperBoundPrice" />
+>                 <PropertyValue Property="DeviationRangeLowValue" Path="DeviationLowerBoundPrice" />
+>                 <PropertyValue Property="ToleranceRangeHighValue" Path="ToleranceUpperBoundPrice" />
+>                 <PropertyValue Property="ToleranceRangeLowValue" Path="ToleranceLowerBoundPrice" />
+>             </Record>
+>         </PropertyValue>
+>     </Record>
+> </Annotation>
+> ```
 
-    > ### Sample Code:  
-    > ABAP CDS Annotation
-    > 
-    > ```
-    > 
-    > @UI.dataPoint: {
-    >   title: 'Sales Price',
-    >   targetValueElement: 'TargetPrice',
-    >   criticalityCalculation: {
-    >     improvementDirection: #TARGET,
-    >     deviationRangeHighValueElement: 'DeviationUpperBoundPrice',
-    >     deviationRangeLowValueElement: 'DeviationLowerBoundPrice',
-    >     toleranceRangeHighValueElement: 'ToleranceUpperBoundPrice',
-    >     toleranceRangeLowValueElement: 'ToleranceLowerBoundPrice'
-    >   }
-    > }
-    > AreaChartPrice;
-    > 
-    > ```
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> ```
+> 
+> @UI.dataPoint: {
+>   title: 'Sales Price',
+>   targetValueElement: 'TargetPrice',
+>   criticalityCalculation: {
+>     improvementDirection: #TARGET,
+>     deviationRangeHighValueElement: 'DeviationUpperBoundPrice',
+>     deviationRangeLowValueElement: 'DeviationLowerBoundPrice',
+>     toleranceRangeHighValueElement: 'ToleranceUpperBoundPrice',
+>     toleranceRangeLowValueElement: 'ToleranceLowerBoundPrice'
+>   }
+> }
+> AreaChartPrice;
+> 
+> ```
 
--   Bullet Micro Chart
+**Bullet Micro Chart**
 
-    > ### Sample Code:  
-    > XML Annotation
-    > 
-    > ```xml
-    > 
-    > <Annotation Term="UI.DataPoint" Qualifier="BulletChartRevenue">
-    >     <Record>
-    >         <PropertyValue Property="Title" String="Sales Revenue" />
-    >         <PropertyValue Property="Value" Path="BulletChartRevenue" />
-    >         <PropertyValue Property="TargetValue" Path="TargetRevenue" />
-    >         <PropertyValue Property="ForecastValue" Path="ForecastRevenue" />
-    >         <PropertyValue Property="MinimumValue" Decimal="100" />
-    >         <PropertyValue Property="MaximumValue" Decimal="300" />
-    >         <PropertyValue Property="Criticality" Path="Criticality" />
-    >     </Record>
-    > </Annotation>
-    > ```
+> ### Sample Code:  
+> XML Annotation
+> 
+> ```xml
+> 
+> <Annotation Term="UI.DataPoint" Qualifier="BulletChartRevenue">
+>     <Record>
+>         <PropertyValue Property="Title" String="Sales Revenue" />
+>         <PropertyValue Property="Value" Path="BulletChartRevenue" />
+>         <PropertyValue Property="TargetValue" Path="TargetRevenue" />
+>         <PropertyValue Property="ForecastValue" Path="ForecastRevenue" />
+>         <PropertyValue Property="MinimumValue" Decimal="100" />
+>         <PropertyValue Property="MaximumValue" Decimal="300" />
+>         <PropertyValue Property="Criticality" Path="Criticality" />
+>     </Record>
+> </Annotation>
+> ```
 
-    > ### Sample Code:  
-    > ABAP CDS Annotation
-    > 
-    > ```
-    > 
-    > @UI.dataPoint: {
-    >   title: 'Sales Revenue',
-    >   targetValueElement: 'TargetRevenue',
-    >   forecastValue: 'ForecastRevenue',
-    >   minimumValue: 100,
-    >   maximumValue: 300,
-    >   criticality: 'Criticality'
-    > }
-    > BulletChartRevenue;
-    > ```
-
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> ```
+> 
+> @UI.dataPoint: {
+>   title: 'Sales Revenue',
+>   targetValueElement: 'TargetRevenue',
+>   forecastValue: 'ForecastRevenue',
+>   minimumValue: 100,
+>   maximumValue: 300,
+>   criticality: 'Criticality'
+> }
+> BulletChartRevenue;
+> ```
 
 
 
 ### CDS Annotations
 
--   CDS Annotation Definition for UI.Chart
+> ### Sample Code:  
+> CDS Annotation Definition for `UI.Chart`
+> 
+> ```
+> 
+> chart : array of
+> {
+>     qualifier : String(120);
+>     @LanguageDependency.maxLength : 40
+>     title : String(60);
+>     @LanguageDependency.maxLength : 80
+>     description : String(120);
+>     chartType : String enum
+>     {
+>        COLUMN;
+>        COLUMN_STACKED;
+>        COLUMN_STACKED_100;
+>        COLUMN_DUAL;
+>        COLUMN_STACKED_DUAL;
+>        COLUMN_STACKED_DUAL_100;
+>        BAR;
+>        BAR_STACKED;
+>        BAR_STACKED_100;
+>        BAR_DUAL;
+>        BAR_STACKED_DUAL;
+>        BAR_STACKED_DUAL_100;
+>        AREA;
+>        AREA_STACKED;
+>        AREA_STACKED_100;
+>        HORIZONTAL_AREA;
+>        HORIZONTAL_AREA_STACKED;
+>        HORIZONTAL_AREA_STACKED_100;
+>        LINE;
+>        LINE_DUAL;
+>        COMBINATION;
+>        COMBINATION_STACKED;
+>        COMBINATION_STACKED_DUAL;
+>        HORIZONTAL_COMBINATION_STACKED;
+>        HORIZONTAL_COMBINATION_STACKED_DUAL;
+>        PIE;
+>        DONUT;
+>        SCATTER;
+>        BUBBLE;
+>        RADAR;
+>        HEAT_MAP;
+>        TREE_MAP;
+>        WATERFALL;
+>        BULLET;
+>        VERTICAL_BULLET;
+>     };
+>     dimensions : array of elementRef;
+>     measures : array of elementRef;
+>     dimensionAttributes : array of
+>     {
+>        dimension : elementRef;
+>        role : String(10) enum
+>        {
+>            CATEGORY;
+>            SERIES;
+>        };
+>     };
+>     measureAttributes : array of
+>     {
+>        measure : elementRef;
+>        role : String(10) enum
+>        {
+>            AXIS_1;
+>            AXIS_2;
+>            AXIS_3;
+>        };
+>        asDataPoint : Boolean default true;
+>     };
+> }
+> ```
 
-    ```xml
-    
-    chart : array of
-    {
-        qualifier : String(120);
-        @LanguageDependency.maxLength : 40
-        title : String(60);
-        @LanguageDependency.maxLength : 80
-        description : String(120);
-        chartType : String enum
-        {
-           COLUMN;
-           COLUMN_STACKED;
-           COLUMN_STACKED_100;
-           COLUMN_DUAL;
-           COLUMN_STACKED_DUAL;
-           COLUMN_STACKED_DUAL_100;
-           BAR;
-           BAR_STACKED;
-           BAR_STACKED_100;
-           BAR_DUAL;
-           BAR_STACKED_DUAL;
-           BAR_STACKED_DUAL_100;
-           AREA;
-           AREA_STACKED;
-           AREA_STACKED_100;
-           HORIZONTAL_AREA;
-           HORIZONTAL_AREA_STACKED;
-           HORIZONTAL_AREA_STACKED_100;
-           LINE;
-           LINE_DUAL;
-           COMBINATION;
-           COMBINATION_STACKED;
-           COMBINATION_STACKED_DUAL;
-           HORIZONTAL_COMBINATION_STACKED;
-           HORIZONTAL_COMBINATION_STACKED_DUAL;
-           PIE;
-           DONUT;
-           SCATTER;
-           BUBBLE;
-           RADAR;
-           HEAT_MAP;
-           TREE_MAP;
-           WATERFALL;
-           BULLET;
-           VERTICAL_BULLET;
-        };
-        dimensions : array of elementRef;
-        measures : array of elementRef;
-        dimensionAttributes : array of
-        {
-           dimension : elementRef;
-           role : String(10) enum
-           {
-               CATEGORY;
-               SERIES;
-           };
-        };
-        measureAttributes : array of
-        {
-           measure : elementRef;
-           role : String(10) enum
-           {
-               AXIS_1;
-               AXIS_2;
-               AXIS_3;
-           };
-           asDataPoint : Boolean default true;
-        };
-    }
-    ```
+> ### Sample Code:  
+> CDS Annotation for `UI.Chart`: Area Micro Chart
+> 
+> ```
+> 
+> @UI.chart:[{
+>   title: 'Sales Price',
+>   description: 'Area Micro Chart',
+>   chartType: #AREA,
+>   dimensions:['PriceDay'],
+>   measures:['AreaChartPrice'],
+>   measureAttributes: [
+>     { measure: 'AreaChartPrice', role: #AXIS_1, asDataPoint: true }
+>   ],
+>   qualifier: 'AreaChartQualifier'
+> }]
+> ```
 
--   CDS Annotation for UI.Chart: Area Micro Chart
+> ### Sample Code:  
+> CDS Annotation for `UI.Chart`: Bullet Micro Chart
+> 
+> ```
+> 
+> @UI.chart:[{
+>   title:'Sales Revenue',
+>   description: 'Bullet Micro Chart',
+>   chartType: #BULLET,
+>   measures:['BulletChartRevenue'],
+>   measureAttributes: [
+>     { measure: 'BulletChartRevenue', role: #AXIS_1, asDataPoint: true }
+>   ],
+>   qualifier: 'BulletChartQualifier'
+> }]
+> ```
 
-    ```xml
-    
-    @UI.chart:[{
-      title: 'Sales Price',
-      description: 'Area Micro Chart',
-      chartType: #AREA,
-      dimensions:['PriceDay'],
-      measures:['AreaChartPrice'],
-      measureAttributes: [
-        { measure: 'AreaChartPrice', role: #AXIS_1, asDataPoint: true }
-      ],
-      qualifier: 'AreaChartQualifier'
-    }]
-    ```
+> ### Sample Code:  
+> CDS Annotation Definition for `UI.DataPoint`
+> 
+> ```
+> 
+> dataPoint
+> {
+>     @LanguageDependency.maxLength : 40
+>     title : String(60);
+>     @LanguageDependency.maxLength : 80
+>     description : String(120);
+>     @LanguageDependency.maxLength : 190
+>     longDescription : String(250);
+>     targetValue : DecimalFloat;
+>     targetValueElement : elementRef;
+>     forecastValue : elementRef;
+>     minimumValue : DecimalFloat;
+>     maximumValue : DecimalFloat;
+>     visualization : String enum
+>     {
+>         NUMBER;
+>         BULLET_CHART;
+>         DONUT;
+>         PROGRESS;
+>         RATING;
+>     };
+>     valueFormat
+>     {
+>         scaleFactor : DecimalFloat;
+>         numberOfFractionalDigits : Integer;
+>     };
+>     referencePeriod
+>     {
+>         @LanguageDependency.maxLength : 80
+>         description : String(120);
+>         start : elementRef;
+>         end : elementRef;
+>     };
+>     criticality : elementRef;
+>     criticalityCalculation
+>     {
+>         improvementDirection : String enum { MINIMIZE; TARGET; MAXIMIZE; };
+>         toleranceRangeLowValue : DecimalFloat;
+>         toleranceRangeLowValueElement : elementRef;
+>         toleranceRangeHighValue : DecimalFloat;
+>         toleranceRangeHighValueElement : elementRef;
+>         deviationRangeLowValue : DecimalFloat;
+>         deviationRangeLowValueElement : elementRef;
+>         deviationRangeHighValue : DecimalFloat;
+>         deviationRangeHighValueElement : elementRef;
+>     };
+>     trend : elementRef;
+>     trendCalculation
+>     {
+>         referenceValue : elementRef;
+>         isRelativeDifference : Boolean default false;
+>         upDifference : DecimalFloat;
+>         upDifferenceElement : elementRef;
+>         strongUpDifference : DecimalFloat;
+>         strongUpDifferenceElement : elementRef;
+>         downDifference : DecimalFloat;
+>         downDifferenceElement : elementRef;
+>         strongDownDifference : DecimalFloat;
+>         strongDownDifferenceElement : elementRef;
+>     };
+>     responsible : elementRef;
+>     responsibleName : String(120);
+> };
+> ```
 
--   CDS Annotation for UI.Chart: Bullet Micro Chart
+> ### Sample Code:  
+> CDS Annotation for `UI.DataPoint`: Area Micro Chart
+> 
+> ```
+> 
+> @UI.dataPoint: {
+>    title: 'Sales Price',
+>    targetValueElement: 'TargetPrice',
+>    criticalityCalculation: {
+>       improvementDirection: #TARGET,
+>       toleranceRangeLowValueElement: 'ToleranceLowerBoundPrice',
+>       toleranceRangeHighValueElement: 'ToleranceUpperBoundPrice',
+>      deviationRangeLowValueElement: 'DeviationLowerBoundPrice',
+>      deviationRangeHighValueElement: 'DeviationUpperBoundPrice'
+>    }
+> }
+> ProductSalesPrice.Price as AreaChartPrice
+> ```
 
-    ```xml
-    
-    @UI.chart:[{
-      title:'Sales Revenue',
-      description: 'Bullet Micro Chart',
-      chartType: #BULLET,
-      measures:['BulletChartRevenue'],
-      measureAttributes: [
-        { measure: 'BulletChartRevenue', role: #AXIS_1, asDataPoint: true }
-      ],
-      qualifier: 'BulletChartQualifier'
-    }]
-    ```
-
--   CDS Annotation Definition for UI.DataPoint
-
-    ```xml
-    
-    dataPoint
-    {
-        @LanguageDependency.maxLength : 40
-        title : String(60);
-        @LanguageDependency.maxLength : 80
-        description : String(120);
-        @LanguageDependency.maxLength : 190
-        longDescription : String(250);
-        targetValue : DecimalFloat;
-        targetValueElement : elementRef;
-        forecastValue : elementRef;
-        minimumValue : DecimalFloat;
-        maximumValue : DecimalFloat;
-        visualization : String enum
-        {
-            NUMBER;
-            BULLET_CHART;
-            DONUT;
-            PROGRESS;
-            RATING;
-        };
-        valueFormat
-        {
-            scaleFactor : DecimalFloat;
-            numberOfFractionalDigits : Integer;
-        };
-        referencePeriod
-        {
-            @LanguageDependency.maxLength : 80
-            description : String(120);
-            start : elementRef;
-            end : elementRef;
-        };
-        criticality : elementRef;
-        criticalityCalculation
-        {
-            improvementDirection : String enum { MINIMIZE; TARGET; MAXIMIZE; };
-            toleranceRangeLowValue : DecimalFloat;
-            toleranceRangeLowValueElement : elementRef;
-            toleranceRangeHighValue : DecimalFloat;
-            toleranceRangeHighValueElement : elementRef;
-            deviationRangeLowValue : DecimalFloat;
-            deviationRangeLowValueElement : elementRef;
-            deviationRangeHighValue : DecimalFloat;
-            deviationRangeHighValueElement : elementRef;
-        };
-        trend : elementRef;
-        trendCalculation
-        {
-            referenceValue : elementRef;
-            isRelativeDifference : Boolean default false;
-            upDifference : DecimalFloat;
-            upDifferenceElement : elementRef;
-            strongUpDifference : DecimalFloat;
-            strongUpDifferenceElement : elementRef;
-            downDifference : DecimalFloat;
-            downDifferenceElement : elementRef;
-            strongDownDifference : DecimalFloat;
-            strongDownDifferenceElement : elementRef;
-        };
-        responsible : elementRef;
-        responsibleName : String(120);
-    };
-    ```
-
--   CDS Annotation for UI.DataPoint: Area Micro Chart
-
-    ```xml
-    
-    @UI.dataPoint: {
-       title: 'Sales Price',
-       targetValueElement: 'TargetPrice',
-       criticalityCalculation: {
-          improvementDirection: #TARGET,
-          toleranceRangeLowValueElement: 'ToleranceLowerBoundPrice',
-          toleranceRangeHighValueElement: 'ToleranceUpperBoundPrice',
-         deviationRangeLowValueElement: 'DeviationLowerBoundPrice',
-         deviationRangeHighValueElement: 'DeviationUpperBoundPrice'
-       }
-    }
-    ProductSalesPrice.Price as AreaChartPrice
-    ```
-
--   CDS Annotation for UI.DataPoint: Bullet Micro Chart
-
-    ```xml
-    
-    @UI.dataPoint: {
-       title:'Sales Revenue',
-       targetValueElement: 'TargetRevenue',
-       forecastValue: 'ForecastRevenue',
-       minimumValue: 100,
-       maximumValue: 300,
-       criticality: 'Criticality'   
-    }
-    ProductSalesRevenue.Revenue as BulletChartRevenue
-    
-    ```
-
+> ### Sample Code:  
+> CDS Annotation for `UI.DataPoint`: Bullet Micro Chart
+> 
+> ```
+> 
+> @UI.dataPoint: {
+>    title:'Sales Revenue',
+>    targetValueElement: 'TargetRevenue',
+>    forecastValue: 'ForecastRevenue',
+>    minimumValue: 100,
+>    maximumValue: 300,
+>    criticality: 'Criticality'   
+> }
+> ProductSalesRevenue.Revenue as BulletChartRevenue
+> 
+> ```
 
 
 
@@ -707,9 +699,9 @@ The `SmartMicroChart` control supports the `Criticality` and `CriticalityCalcula
 
 ## Additional Features in SAP Fiori Elements for OData V4
 
-The micro chart doesn't show any title, description, dimension, measure labels or footers showing the unit of measure. By default, the size for a micro chart is "XS".
+In tables, the micro chart is displayed in size `XS` without additional information such as title, description, dimension, measure labels, or footers indicating the unit of measure.
 
-To add a micro chart to a table, add the `DataFieldForAnnotation`, which has a reference to the micro chart, to the `LineItem` annotation as shown in the sample code:
+To add a micro chart to a table, include `DataFieldForAnnotation`, which references the micro chart, in the `LineItem` annotation, as shown in the sample code:
 
 > ### Sample Code:  
 > XML Annotation
@@ -746,12 +738,16 @@ To add a micro chart to a table, add the `DataFieldForAnnotation`, which has a r
 
 
 
-### Configuring a Micro Chart for a Responsive Table
+### Configuring a Micro Chart for Responsive Tables
 
-You can configure the size of a micro chart using the property `microChartSize` in the manifest. By default, the size for a micro chart is "XS". You can also specify whether the chart labels are displayed or not using the property `showMicroChartLabel` in the manifest as shown in the following code sample:
+You can specify the size of a micro chart in a responsive table. To do so, configure the `microChartSize` property in the `manifest.json` file. By default, the size of a micro chart is `XS`.
+
+Additionally, you can control the visibility of chart labels by setting the `showMicroChartLabel` property to either `true` or `false`, in the `manifest.json` file. By default, `showMicroChartLabel` is set to `false`.
+
+The following sample code shows how to define a microchart of size `M` with labels in a responsive table:
 
 > ### Sample Code:  
-> Configuration for a Responsive Table
+> manifest.json
 > 
 > ```json
 > "options":{
@@ -776,8 +772,97 @@ You can configure the size of a micro chart using the property `microChartSize` 
 > }
 > ```
 
-The default value is `false` which means the labels are not displayed.
+> ### Note:  
+> A micro chart within a table may not be rendered if an error occurs while retrieving the data or if no data is available in the back end.
+
+
+
+### Applying Sort Order to Micro Charts in Responsive Tables
+
+You can define a sort order for the micro chart data using the `UI.PresentationVariant`, choosing either ascending or descending order. This sorting option is available for area micro charts, line micro charts, column micro charts, comparison micro charts, and stacked bar micro charts.
 
 > ### Note:  
-> A micro chart used in a table may not be rendered if an error occurs when retrieving the data or if no data is available in the back end.
+> Micro charts consider only the `SortOrderType` property and ignore other properties in the `PresentationVariantType`.
+
+To enable sorting, add `UI.DataFieldForAnnotation` within `UI.LineItem`. Then, link `UI.PresentationVariant` to this`UI.DataFieldForAnnotation` instead of directly linking it to `UI.Chart`.
+
+> ### Sample Code:  
+> XML Annotation
+> 
+> ```
+> <Annotations Target="com.c_salesordermanage_sd.SalesOrderItem">
+> <Annotation Term="UI.LineItem">
+>    <Collection>
+>       ………
+>       ………
+>       <Record Type="UI.DataFieldForAnnotation">
+>          <PropertyValue Property="Target" AnnotationPath=”_Item/@com.sap.vocabularies.UI.v1.PresentationVariant#AreaMaxPath” />
+>          <PropertyValue Property="Label" String="Credit Limit Details"/>
+>          <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low"/>
+>       </Record>
+>    </Collection>
+> </Annotation>
+> 
+> <Annotation Term="UI.PresentationVariant" Qualifier="AreaMaxPath">
+>    <Record Type="UI.PresentationVariantType">
+>       <PropertyValue Property="Visualizations">
+>          <Collection>
+>             <AnnotationPath>@UI.Chart#AreaMaxPath</AnnotationPath>
+>          </Collection>
+>       </PropertyValue>
+>       <PropertyValue Property="SortOrder">
+>         <Collection>
+>             <Record Type="Common.SortOrderType">
+>                <PropertyValue Property="Property" PropertyPath="NetAmount"/>
+>                <PropertyValue Property="Descending" Bool="true"/>
+>             </Record>
+>          </Collection>
+>       </PropertyValue>
+>    </Record>
+> </Annotation>
+> 
+> <Annotation Term="UI.Chart" Qualifier="AreaMaxPath">
+>    ………
+>    ………
+> </Annotation>
+> </Annotations>
+> ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> No ABAP CDS annotation sample is available. Please use the local XML annotation.
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> LineItem: [
+>       ………
+>       ………
+>       {
+>         $Type            : 'UI.DataFieldForAnnotation',
+>         Target           :'_Item/@com.sap.vocabularies.UI.v1.PresentationVariant#AreaMaxPath',
+>         Label            : 'Credit Limit Details',
+>         ![@UI.Importance]: #Low
+>       }
+>     ]
+>   },
+> 
+> annotate c_salesordermanage_sd.SalesOrderItem with @(UI: {
+>   PresentationVariant #AreaMaxPath: {
+>      Visualizations: ['@UI.Chart#AreaMaxPath'],
+>      SortOrder     : [{
+>         Property  : 'NetAmount',
+>         Descending: true
+>      }]
+>   },
+>   Chart #AreaMaxPath: {
+>      ………
+>      ………
+>   },
+>   ………
+>   ………
+> });
+> ```
 

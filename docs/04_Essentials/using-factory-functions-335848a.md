@@ -8,14 +8,11 @@ The factory function comes with the parameters `sId`, which should be used as an
 
 ```xml
 <mvc:View
-	controllerName="sap.ui.sample.App"
-	xmlns="sap.m"
-	xmlns:l="sap.ui.layout"
-	xmlns:mvc="sap.ui.core.mvc">
-	<l:VerticalLayout
-		content="{ path: '/companies', factory: '.createContent'}"
-		class="sapUiContentPadding"
-		width="100%"/>
+    controllerName="sap.ui.sample.App"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+    xmlns:mvc="sap.ui.core.mvc">
+    <l:VerticalLayout content="{path: '/companies', factory: '.createContent'}" class="sapUiContentPadding" width="100%"/>
 </mvc:View>
 ```
 
@@ -23,80 +20,53 @@ Please note the `'.'` in `factory: '.createContent'`. The class `App.controller.
 
 ```js
 sap.ui.define([
-	"sap/ui/core/mvc/Controller",
-	"sap/ui/model/json/JSONModel",
-	"sap/ui/model/type/String",
-	"sap/ui/model/type/Float",
-	"sap/m/Input",
-	"sap/m/Text",
-	"sap/m/CheckBox"
-], function (Controller, JSONModel, StringType, Float, Input, Text, CheckBox ) {
-	"use strict";
-	return Controller.extend("sap.ui.sample.App", {
-		onInit : function () {
-		…
-		},
-		createContent: function (sId, oContext) {
-		var oRevenue = oContext.getProperty("revenue");
-			switch(typeof oRevenue) {
-				case "string":
-					return new Text(sId, {
-						text: {
-							path: "revenue",
-							type: new StringType()
-						}
-					});
-  
-				case "number":
-					return new Input(sId, {
-						value: {
-							path: "revenue",
-							type: new Float()
-						}
-					});
-				
-				case "boolean":
-					return new CheckBox(sId, {
-						checked: {
-							path: "revenue"
-						}
-					});
-			}
-		},
-	});
+    "sap/ui/core/mvc/Controller",
+    "sap/ui/model/json/JSONModel",
+    "sap/ui/model/type/String",
+    "sap/ui/model/type/Float",
+    "sap/m/Input",
+    "sap/m/Text",
+    "sap/m/CheckBox"
+], function (Controller, JSONModel, StringType, Float, Input, Text, CheckBox) {
+    "use strict";
+
+    return Controller.extend("sap.ui.sample.App", {
+        onInit() {
+            …
+        },
+        createContent(sId, oContext) {
+            const oRevenue = oContext.getProperty("revenue");
+            switch(typeof oRevenue) {
+                case "number":
+                    return new Input(sId, {value: {path: "revenue", type: Float}}); 
+                case "boolean":
+                    return new CheckBox(sId, {checked: {path: "revenue"}});
+                default: // For Strings and other cases
+                    return new Text(sId, {text: {path: "revenue", type: StringType}});
+            }
+        }
+    });
 });
 ```
 
 If you would like to avoid using the XML view, you would proceed as follows:
 
 ```js
-oVerticalLayout.bindAggregation("content", "/companies", function (sId, oContext) {
-	var oRevenue = oContext.getProperty("revenue");
-	switch(typeof oRevenue) {
-			case "string":
-				return new sap.m.Text(sId, {
-					text: {
-						path: "revenue",
-						type: new sap.ui.model.type.String()
-					}
-				});
-  
-			case "number":
-				return new sap.m.Input(sId, {
-					value: {
-						path: "revenue",
-						type: new sap.ui.model.type.Float()
-					}
-				});
-				
-			case "boolean":
-				return new sap.m.CheckBox(sId, {
-					checked: {
-						path: "revenue"
-					}
-				});
-			}
-		}
+// "Input" required from module "sap/m/Input"
+// "CheckBox" required from module "sap/m/CheckBox"
+// "StringType" required from module "sap/ui/model/type/String"
+// "Float" required from module "sap/ui/model/type/Float"
+
+oVerticalLayout.bindAggregation("content", "/companies", (sId, oContext) => {
+const oRevenue = oContext.getProperty("revenue");
+    switch(typeof oRevenue) {
+        case "number":
+            return new Input(sId, {value: {path: "revenue", type: Float}});
+        case "boolean":
+            return new CheckBox(sId, {checked: {path: "revenue"}});
+        default: // For Strings and other cases
+            return new Text(sId, {text: {path: "revenue", type: StringType}});
+    }
 });
 ```
 

@@ -76,5 +76,5 @@ You can implement the `customMassEditSave` function within the list report or ob
 **Related Information**  
 
 
-[Enabling Editing Using a Dialog \(Mass Edit\)](enabling-editing-using-a-dialog-mass-edit-965ef5b.md "Mass editing allows users to simultaneously change multiple objects that share the same editable properties.")
+[Enabling Editing Using a Dialog \(Mass Edit\)](enabling-editing-using-a-dialog-mass-edit-965ef5b.md "Mass editing allows end users to simultaneously change multiple objects that share the same editable properties.")
 

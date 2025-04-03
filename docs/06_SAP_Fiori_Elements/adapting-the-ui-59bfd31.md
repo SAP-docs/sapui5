@@ -154,12 +154,555 @@ Key users can also perform the following:
 -   Manage views by adding or removing favorites and modifying the visibility
 
 
-![](images/Key_Users_Manage_Views1_9ff91e8.png)![](images/Key_Users_Manage_Views_2_f31343c.png)
+![](images/Key_Users_Manage_Views1_9ff91e8.png)
+
+![](images/Key_Users_Manage_Views_2_f31343c.png)
 
 While switching to key user adaptation mode from normal mode, the app starts in a fresh state and the applied changes are not preserved in the internal app state. Also, when a user exits key user adaptation mode, the app restores to the old state it was in before entering key user adaptation mode.
 
 > ### Note:  
 > We do not recommend embedding iFrames in the SAP Fiori elements for OData V2 application using UI adaptation.
+
+The following table provides an overview of the available configuration settings for key users:
+
+**Configuration Settings for Key Users**
+
+
+<table>
+<tr>
+<th valign="top">
+
+Feature
+
+</th>
+<th valign="top">
+
+Setting
+
+</th>
+<th valign="top">
+
+Values
+
+</th>
+<th valign="top">
+
+Description
+
+</th>
+<th valign="top">
+
+Documentation
+
+</th>
+<th valign="top">
+
+Additional Information
+
+</th>
+</tr>
+<tr>
+<td valign="top" rowspan="4">
+
+List Report
+
+</td>
+<td valign="top">
+
+*Variant Management*
+
+</td>
+<td valign="top">
+
+*Page*
+
+*Control*
+
+</td>
+<td valign="top">
+
+Configure how variant management is used in the list report.
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+> ### Note:  
+> Settings made by a key user can override those made by an end user. This means that end users may need to reapply their personalization settings.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="2">
+
+*Hide Variant Management*
+
+</td>
+<td valign="top">
+
+Configure how variant management is disabled in the list report.
+
+</td>
+<td valign="top">
+
+[Creating a List Report without Variant Management](creating-a-list-report-without-variant-management-094fe8c.md)
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+*Initial Load*
+
+</td>
+<td valign="top">
+
+*Auto*
+
+*Enabled*
+
+*Disabled*
+
+</td>
+<td valign="top">
+
+Configure how data is loaded initially when the app is loaded.
+
+</td>
+<td valign="top">
+
+[Loading Behavior of Data on Initial Launch of the Application](loading-behavior-of-data-on-initial-launch-of-the-application-9f4e119.md)
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="2">
+
+*Open In Edit Mode*
+
+</td>
+<td valign="top">
+
+Configure to open the object directly in edit mode.
+
+</td>
+<td valign="top">
+
+[Navigation to an Object Page in Edit Mode](navigation-to-an-object-page-in-edit-mode-8665847.md)
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Analytical List Page
+
+</td>
+<td valign="top">
+
+*Default Display Mode*
+
+</td>
+<td valign="top">
+
+*Hybrid*
+
+*Chart*
+
+*Table*
+
+</td>
+<td valign="top">
+
+Configure the default display mode of data in analytical list page.
+
+</td>
+<td valign="top">
+
+[Hybrid View](hybrid-view-6615668.md)
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+<tr>
+<td valign="top" rowspan="3">
+
+Filter Bar
+
+</td>
+<td valign="top" colspan="2">
+
+*Display Go Button*
+
+</td>
+<td valign="top">
+
+Configure if the *Go* button is displayed in the visual filter bar.
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+Only applicable to the analytical list page.
+
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="2">
+
+*Enable Date Range*
+
+</td>
+<td valign="top">
+
+Configure if the semantic date range options in the `manifest.json` file are active.
+
+</td>
+<td valign="top">
+
+[Enabling Semantic Operators in the Filter Bar](enabling-semantic-operators-in-the-filter-bar-fef65d0.md)
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="2">
+
+*Navigation Properties*
+
+</td>
+<td valign="top">
+
+Configure the list of filterable properties from navigation entities to include them as filters.
+
+</td>
+<td valign="top">
+
+[Adapting the Filter Bar](adapting-the-filter-bar-609c39a.md)
+
+Section: Including Navigation Properties
+
+</td>
+<td valign="top">
+
+Only applicable to the list report.
+
+</td>
+</tr>
+<tr>
+<td valign="top" rowspan="4">
+
+Object Page
+
+</td>
+<td valign="top" colspan="2">
+
+*Editable Header Content*
+
+</td>
+<td valign="top">
+
+Configure if the header fields are editable.
+
+</td>
+<td valign="top">
+
+[Toggling the Editability of Header Fields](toggling-the-editability-of-header-fields-c8a9a40.md)
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="2">
+
+*Table Variant Management*
+
+</td>
+<td valign="top">
+
+Configure if variant management is used in tables on the object page.
+
+</td>
+<td valign="top">
+
+[Enabling Variant Management on the Object Page](enabling-variant-management-on-the-object-page-f26d42b.md)
+
+</td>
+<td valign="top">
+
+> ### Note:  
+> Settings made by a key user can override those made by an end user. This means that end users may need to reapply their personalization settings.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="2">
+
+*Chart Variant Management*
+
+</td>
+<td valign="top">
+
+Configure if variant management is used in charts on the object page.
+
+</td>
+<td valign="top">
+
+[Enabling Variant Management on the Object Page](enabling-variant-management-on-the-object-page-f26d42b.md)
+
+</td>
+<td valign="top">
+
+> ### Note:  
+> Settings made by a key user can override those made by an end user. This means that end users may need to reapply their personalization settings.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="2">
+
+*Show Related Apps*
+
+</td>
+<td valign="top">
+
+Configure if the *Related Apps* button is displayed in the object page.
+
+</td>
+<td valign="top">
+
+[Enabling the Related Apps Button](enabling-the-related-apps-button-8dcfe2e.md)
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+<tr>
+<td valign="top" rowspan="7">
+
+Table
+
+</td>
+<td valign="top">
+
+*Selection Mode*
+
+</td>
+<td valign="top">
+
+*Single*
+
+*Multi*
+
+</td>
+<td valign="top">
+
+Configure if end users can select a single row or multiple rows in a table.
+
+</td>
+<td valign="top">
+
+[Enabling Multiple Selection in Tables](enabling-multiple-selection-in-tables-116b5d8.md)
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+*Create Mode*
+
+</td>
+<td valign="top">
+
+*New Page*
+
+*Inline*
+
+*Inline Creation Rows*
+
+*Inline Creation Rows \(Hidden in edit page\)*
+
+</td>
+<td valign="top">
+
+Configure the mode for creating tables.
+
+</td>
+<td valign="top">
+
+[Enabling Inline Creation Mode or Empty Row Mode for Table Entries](enabling-inline-creation-mode-or-empty-row-mode-for-table-entries-cfb04f0.md)
+
+</td>
+<td valign="top">
+
+Only applicable to the object page.
+
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="2">
+
+*Condensed Table Layout*
+
+</td>
+<td valign="top">
+
+Configure if the table uses this layout.
+
+</td>
+<td valign="top">
+
+[Using the Condensed Table Layout](using-the-condensed-table-layout-f3cc057.md)
+
+</td>
+<td valign="top">
+
+Not applicable to responsive tables.
+
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="2">
+
+*Width Including Column Header*
+
+</td>
+<td valign="top">
+
+Configure if the *Column Header* label is considered when calculating the column width.
+
+</td>
+<td valign="top">
+
+[Setting the Default Column Width](setting-the-default-column-width-a765253.md)
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="2">
+
+*Enable Select All*
+
+</td>
+<td valign="top">
+
+Configure if the *Select All* option is displayed in the table.
+
+</td>
+<td valign="top">
+
+[Enabling Multiple Selection in Tables](enabling-multiple-selection-in-tables-116b5d8.md)
+
+Section: Select All and Clear All Options in the Table
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="2">
+
+*Selection Limit*
+
+</td>
+<td valign="top">
+
+Configure the maximum limit of the number of rows that can be selected at once.
+
+</td>
+<td valign="top">
+
+[Enabling Multiple Selection in Tables](enabling-multiple-selection-in-tables-116b5d8.md)
+
+Section: Limiting the Number of Selected Rows in a Table
+
+</td>
+<td valign="top">
+
+Not applicable to responsive tables.
+
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="2">
+
+*Hide "Add Card to Insights"*
+
+</td>
+<td valign="top">
+
+Configure if the *Add Card to Insights* feature for *My Home* in SAP S/4HANA is hidden.
+
+</td>
+<td valign="top">
+
+[Creating Cards for the Insights Cards Section of My Home in SAP S/4HANA Cloud Public Edition and My Home in SAP S/4HANA](creating-cards-for-the-insights-cards-section-of-my-home-in-sap-s-4hana-cloud-public-edit-9b13559.md)
+
+</td>
+<td valign="top">
+
+Only applicable to the list report.
+
+</td>
+</tr>
+</table>
 
 
 

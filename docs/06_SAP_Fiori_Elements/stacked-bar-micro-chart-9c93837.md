@@ -15,7 +15,7 @@ A stacked bar micro chart displays all the values from the back end for the conf
 
 ## `UI.Chart` Annotation
 
-The `UI.Chart Title` property is used for the title. The `UI.Chart Description` property is used for the subtitle.
+The `UI.Chart Title` property is used to define the title, while the `UI.Chart Description` property is used to specify the subtitle.
 
 > ### Sample Code:  
 > XML Annotation
@@ -110,7 +110,6 @@ The `UI.Chart Title` property is used for the title. The `UI.Chart Description` 
 > <Annotation Term="UI.DataPoint" Qualifier="Width">
 >     <Record>
 >         <PropertyValue Property="Value" Path="Width"/>
->         <PropertyValue Path="Day1" Property="Title" />
 >         <PropertyValue Property="Description" String="Stacked Bar Micro Chart"/>
 >         <PropertyValue Property="TargetValue" Path="Weight"/>
 >         <PropertyValue Property="ForecastValue" Path="Height"/>
@@ -144,7 +143,6 @@ The `UI.Chart Title` property is used for the title. The `UI.Chart Description` 
 > 
 > UI.DataPoint #Width : {
 >     Value : Width,
->     Title : Day1,
 >     Description : 'Stacked Bar Micro Chart',
 >     TargetValue : Weight,
 >     ForecastValue : Height,
@@ -158,7 +156,7 @@ The `UI.Chart Title` property is used for the title. The `UI.Chart Description` 
 
 
 > ### Note:  
-> The following must all point to the same property in the `entityType`:
+> The following properties must all point to the same property in the `entityType`:
 > 
 > -   `Measures` property of the `Chart` annotation
 > 

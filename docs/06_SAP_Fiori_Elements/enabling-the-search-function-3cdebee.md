@@ -4,13 +4,15 @@
 
 You can enable the *Search* function in the list report.
 
+The search is restricted to 1000 characters.
+
 
 
 <a name="loio3cdebeebb04b4205908140242c9d6817__section_rbx_2bh_psb"/>
 
 ## Additional Features in SAP Fiori Elements for OData V2
 
-To enable the search function, `sap:searchable` must be set to `true` for the root entity set.
+To enable the search function, you must set `sap:searchable` to `true` for the root entity set.
 
   
   
@@ -36,7 +38,41 @@ To enable the search function, `sap:searchable` must be set to `true` for the ro
 
 ## Additional Features in SAP Fiori Elements for OData V4
 
-In SAP Fiori elements for OData V4, the search is restricted to 1000 characters.
+The *Search* field is enabled by default.
+
+If the underlying entity doesn't support the search functionality, you can disable it by setting `Searchable` to `false` in the `SearchRestriction` annotation.
+
+The following sample code shows how to disable the search functionality for the `SalesOrder` entity:
+
+> ### Sample Code:  
+> XML Annotation
+> 
+> ```
+> <Annotations Target="SAP__self.Container/SalesOrder">
+>    <Annotation Term="SAP__capabilities.SearchRestrictions">
+>       <Record>
+>          <PropertyValue Property="Searchable" Bool="false" />
+>       </Record>
+>    </Annotation>
+> </Annotations>
+> 
+> ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> ```
+> @Search.searchable: false
+> annotate view ZC_SalesOrder with { };
+> 
+> ```
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> annotate SalesOrder with @Capabilities: {SearchRestrictions: {Searchable: false}};
+> ```
 
 For more information about how to enable and disable the *Search* field for analytical tables, see the corresponding section in [Setting the Table Type](setting-the-table-type-7f844f1.md).
 
@@ -46,5 +82,5 @@ For more information about how to enable and disable the *Search* field for anal
 
 ## More Information
 
-For more information on configuring filter bar in list report, see [Adapting the Filter Bar](adapting-the-filter-bar-609c39a.md).
+For more information about configuring the filter bar in a list report, see [Adapting the Filter Bar](adapting-the-filter-bar-609c39a.md).
 

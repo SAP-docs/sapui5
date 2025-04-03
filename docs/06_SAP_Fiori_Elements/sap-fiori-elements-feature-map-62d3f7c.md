@@ -520,29 +520,33 @@ Building blocks
 
 [Building Blocks](building-blocks-24c1304.md)
 
-[Field Building Block](the-field-building-block-5260b9c.md)
+[The Field Building Block](the-field-building-block-5260b9c.md)
 
-[Form Building Block](the-form-building-block-391aad2.md)
+[The Form Building Block](the-form-building-block-391aad2.md)
 
-[FormElement Building Block](the-formelement-building-block-b45f038.md)
+[The FormElement Building Block](the-formelement-building-block-b45f038.md)
 
-[Table Building Block](the-table-building-block-3801656.md)
+[The Table Building Block](the-table-building-block-3801656.md)
 
-[FilterBar Building Block](the-filterbar-building-block-7838611.md)
+[The FilterBar Building Block](the-filterbar-building-block-7838611.md)
 
-[FilterField Building Block](the-filterfield-building-block-2df7837.md)
+[The FilterField Building Block](the-filterfield-building-block-2df7837.md)
 
-[MicroChart Building Block](the-microchart-building-block-74554b4.md)
+[The MicroChart Building Block](the-microchart-building-block-74554b4.md)
 
-[Chart Building Block](the-chart-building-block-52d065a.md)
+[The Chart Building Block](the-chart-building-block-52d065a.md)
 
-[FlexibleColumnLayoutActions Building Blocks](the-flexiblecolumnlayoutactions-building-block-1ba680b.md)
+[The FlexibleColumnLayoutActions Building Blocks](the-flexiblecolumnlayoutactions-building-block-1ba680b.md)
 
-[Share Building Block](the-share-building-block-41b02df.md)
+[The Share Building Block](the-share-building-block-41b02df.md)
 
-[Paginator Building Block](the-paginator-building-block-997292b.md)
+[The Paginator Building Block](the-paginator-building-block-997292b.md)
 
-[TreeTable Building Block](the-treetable-building-block-667851f.md)
+[The TreeTable Building Block](the-treetable-building-block-667851f.md)
+
+[The VariantManagement Building Block](the-variantmanagement-building-block-33640ff.md)
+
+[The RichTextEditor Building Block](the-richtexteditor-building-block-7bd2767.md)
 
 </td>
 <td valign="top">
@@ -862,7 +866,7 @@ cards
 <tr>
 <td valign="top">
 
-Chart building block
+`Chart` building block
 
 </td>
 <td valign="top">
@@ -875,6 +879,8 @@ Chart building block
 
 </td>
 <td valign="top">
+
+[The Chart Building Block](the-chart-building-block-52d065a.md)
 
 [Building Blocks](building-blocks-24c1304.md)
 
@@ -2267,6 +2273,16 @@ Draft handling
 
 Collaborative Draft
 
+Hidden Draft
+
+Hidden Draft Features
+
+Hiding Draft Features
+
+Hiding Draft
+
+Simplified Draft
+
 </td>
 </tr>
 <tr>
@@ -2436,7 +2452,7 @@ excel
 <tr>
 <td valign="top">
 
-Field building block
+`Field` building block
 
 </td>
 <td valign="top">
@@ -2450,7 +2466,11 @@ Field building block
 </td>
 <td valign="top">
 
-[Building Blocks](building-blocks-24c1304.md) 
+[The Field Building Block](the-field-building-block-5260b9c.md)
+
+[Flexible Programming Model](flexible-programming-model-549749b.md)
+
+[Building Blocks](building-blocks-24c1304.md)
 
 </td>
 <td valign="top">
@@ -2582,7 +2602,7 @@ visual filter
 <tr>
 <td valign="top">
 
-FilterBar building block
+`FilterBar` building block
 
 </td>
 <td valign="top">
@@ -2596,7 +2616,11 @@ FilterBar building block
 </td>
 <td valign="top">
 
-[Building Blocks](building-blocks-24c1304.md) 
+[The FilterBar Building Block](the-filterbar-building-block-7838611.md)
+
+[Building Blocks](building-blocks-24c1304.md)
+
+[Flexible Programming Model](flexible-programming-model-549749b.md)
 
 </td>
 <td valign="top">
@@ -2682,7 +2706,7 @@ FCL
 <tr>
 <td valign="top">
 
-FlexibleColumnLayoutActions building block
+`FlexibleColumnLayoutActions` building block
 
 </td>
 <td valign="top">
@@ -2696,7 +2720,11 @@ FlexibleColumnLayoutActions building block
 </td>
 <td valign="top">
 
-[Building Blocks](building-blocks-24c1304.md) 
+[The FlexibleColumnLayoutActions Building Block](the-flexiblecolumnlayoutactions-building-block-1ba680b.md)
+
+[Building Blocks](building-blocks-24c1304.md)
+
+[Flexible Programming Model](flexible-programming-model-549749b.md)
 
 </td>
 <td valign="top">
@@ -2923,7 +2951,7 @@ Overview page
 <tr>
 <td valign="top">
 
-FormElement building block
+`FormElement` building block
 
 </td>
 <td valign="top">
@@ -2940,6 +2968,8 @@ FormElement building block
 [The FormElement Building Block](the-formelement-building-block-b45f038.md)
 
 [Building Blocks](building-blocks-24c1304.md)
+
+[Flexible Programming Model](flexible-programming-model-549749b.md)
 
 </td>
 <td valign="top">
@@ -4345,7 +4375,7 @@ success message
 <tr>
 <td valign="top">
 
-MicroChart building block
+`MicroChart` building block
 
 </td>
 <td valign="top">
@@ -4359,7 +4389,11 @@ MicroChart building block
 </td>
 <td valign="top">
 
+[The MicroChart Building Block](the-microchart-building-block-74554b4.md)
+
 [Building Blocks](building-blocks-24c1304.md)
+
+[Flexible Programming Model](flexible-programming-model-549749b.md)
 
 </td>
 <td valign="top">
@@ -4756,7 +4790,7 @@ personalisation
 <tr>
 <td valign="top">
 
-Paginator building block
+`Paginator` building block
 
 </td>
 <td valign="top">
@@ -4770,7 +4804,11 @@ Paginator building block
 </td>
 <td valign="top">
 
+[The Paginator Building Block](the-paginator-building-block-997292b.md)
+
 [Building Blocks](building-blocks-24c1304.md)
+
+[Flexible Programming Model](flexible-programming-model-549749b.md)
 
 </td>
 <td valign="top">
@@ -5291,6 +5329,108 @@ Object page
 <tr>
 <td valign="top">
 
+`RichTextEditor` building block
+
+</td>
+<td valign="top">
+
+-   Object page\(OData V4\)
+
+
+
+</td>
+<td valign="top">
+
+[The RichTextEditor Building Block](the-richtexteditor-building-block-7bd2767.md)
+
+[Building Blocks](building-blocks-24c1304.md)
+
+[Flexible Programming Model](flexible-programming-model-549749b.md)
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+building blocks
+
+buildable blocks
+
+macro
+
+free style application
+
+freestyle application
+
+free-style application
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`VariantManagement` building block
+
+</td>
+<td valign="top">
+
+-   List report\(OData V4\)
+-   Object page\(OData V4\)
+-   Anaytical list page\(OData V4\)
+
+
+
+</td>
+<td valign="top">
+
+[The VariantManagement Building Block](the-variantmanagement-building-block-33640ff.md)
+
+[Building Blocks](building-blocks-24c1304.md)
+
+[Flexible Programming Model](flexible-programming-model-549749b.md)
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+building blocks
+
+buildable blocks
+
+macro
+
+free style application
+
+freestyle application
+
+free-style application
+
+variantmanagement
+
+variant management
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
 Save
 
 </td>
@@ -5522,7 +5662,7 @@ Side effects
 <tr>
 <td valign="top">
 
-Share building block
+`Share` building block
 
 </td>
 <td valign="top">
@@ -5536,7 +5676,11 @@ Share building block
 </td>
 <td valign="top">
 
+[The Share Building Block](the-share-building-block-41b02df.md)
+
 [Building Blocks](building-blocks-24c1304.md)
+
+[Flexible Programming Model](flexible-programming-model-549749b.md)
 
 </td>
 <td valign="top">
@@ -5920,7 +6064,7 @@ Attachment
 <tr>
 <td valign="top">
 
-Table building block
+`Table` building block
 
 </td>
 <td valign="top">
@@ -5934,7 +6078,11 @@ Table building block
 </td>
 <td valign="top">
 
+[The Table Building Block](the-table-building-block-3801656.md)
+
 [Building Blocks](building-blocks-24c1304.md)
+
+[Flexible Programming Model](flexible-programming-model-549749b.md)
 
 </td>
 <td valign="top">
@@ -6432,7 +6580,7 @@ TreeTable
 <tr>
 <td valign="top">
 
-TreeTable building block
+`TreeTable` building block
 
 </td>
 <td valign="top">
@@ -6446,7 +6594,11 @@ TreeTable building block
 </td>
 <td valign="top">
 
+[The TreeTable Building Block](the-treetable-building-block-667851f.md)
+
 [Building Blocks](building-blocks-24c1304.md)
+
+[Flexible Programming Model](flexible-programming-model-549749b.md)
 
 </td>
 <td valign="top">

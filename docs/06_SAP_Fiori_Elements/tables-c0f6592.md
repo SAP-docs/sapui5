@@ -753,6 +753,8 @@ By default, the *Copy to Clipboard* button is displayed in the table toolbar if 
 > 
 > ```
 
+For more security-related information, see [Security Configuration](security-configuration-ba0484b.md).
+
 The `Table` building block also supports the copy to clipboard option. For more information, see [API Reference](https://ui5.sap.com/#/api/sap.fe.macros.Table%23overview).
 
 

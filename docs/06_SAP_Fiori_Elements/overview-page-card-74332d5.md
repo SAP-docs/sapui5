@@ -26,6 +26,8 @@ The `title` property is mandatory. The `subTitle` is only mandatory if the card 
 > The counter is only displayed on table and list cards. For more information, see [Table Cards](table-cards-167bf7c.md) and [List Cards](list-cards-56f39e0.md).
 
 > ### Sample Code:  
+> manifest.json
+> 
 > ```
 > "sap.ovp": {
 >     "_version": "1.1.0",
@@ -119,7 +121,7 @@ Card actions are available as of SAPUI5 1.110. You can access and perform the ca
 
 ## Cards in *Insights*
 
-You can add and use the analytical, list and table cards within the *Insights* section of **My Home** in SAP S/4HANA Cloud Public Edition. The objective of displaying cards on the entry page is to visualize charts, KPI´s and counters in the form of interest cards.
+You can add and use the analytical, list and table cards within the *Insights* section of **My Home** in SAP S/4HANA Cloud Public Edition. The objective of displaying cards on the entry page is to visualize charts, KPI´s and counters in the form of insights cards.
 
 To add a card to the *Insights* section, select the *More* option from the card and choose *Add Card to Insights*. In the subsequent dialog box, you can update the card's *Title* and the *Subtitle*. Click *Add* to display the card in the *Insights* section.
 

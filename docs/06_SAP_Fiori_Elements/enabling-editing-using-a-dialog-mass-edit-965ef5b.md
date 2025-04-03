@@ -2,7 +2,7 @@
 
 # Enabling Editing Using a Dialog \(Mass Edit\)
 
-Mass editing allows users to simultaneously change multiple objects that share the same editable properties.
+Mass editing allows end users to simultaneously change multiple objects that share the same editable properties.
 
 The values that are changed within the mass edit dialog are applied to all selected records that are editable.
 
@@ -14,7 +14,9 @@ The values that are changed within the mass edit dialog are applied to all selec
 >     -   individual records are only updated if all fields can be updated
 > 
 > 
-> -   In the list report, *Mass Edit* is available for active records that don't have unsaved drafts from any user.
+> -   In the list report, *Mass Edit* is available for active records that don't have unsaved drafts from any end user.
+> 
+> -   To enhance performance, application developers must explicitly specify the fields to be displayed in the mass edit dialog. For more information, see the version-specific sections in this topic.
 
 
 
@@ -22,9 +24,7 @@ The values that are changed within the mass edit dialog are applied to all selec
 
 ## Additional Features in SAP Fiori Elements for OData V2
 
-In SAP Fiori elements for OData V2, using the mass edit dialog is only available in the list report.
-
-For more information, see [Enabling Editing Using a Dialog \(Mass Edit\) in the List Report](enabling-editing-using-a-dialog-mass-edit-in-the-list-report-7cc4f04.md).
+Using the mass edit dialog is only available in the list report. For more information, see [Enabling Editing Using a Dialog \(Mass Edit\) in the List Report](enabling-editing-using-a-dialog-mass-edit-in-the-list-report-7cc4f04.md).
 
 
 
@@ -32,7 +32,7 @@ For more information, see [Enabling Editing Using a Dialog \(Mass Edit\) in the 
 
 ## Additional Features in SAP Fiori Elements for OData V4
 
-In SAP Fiori elements for OData V4, you can use the mass edit dialog on the object page in edit mode and in the list report. Use the `enableMassEdit` property in the manifest to enable the feature. You can use the following settings for the `enableMassEdit` property:
+You can use the mass edit dialog on the object page in edit mode and in the list report. Use the `enableMassEdit` property in the `manifest.json` file to enable the feature. You can use the following settings for the `enableMassEdit` property:
 
 -   Undefined \(mass edit is disabled\)
 
@@ -46,14 +46,16 @@ In SAP Fiori elements for OData V4, you can use the mass edit dialog on the obje
 
 
 
-The `visibleFields` property lets you specify which fields are available in the mass edit dialog, even if these fields are not displayed in the table. The `ignoredFields` property lets you hide specific fields from the mass edit dialog, even if these fields are displayed in the table. When the user chooses the *Mass Edit* button, the editability of each field is evaluated. Read-only fields are automatically excluded from the mass edit dialog, and changes are only applied to fields that are editable.
+The `visibleFields` property lets you specify which fields are available in the mass edit dialog, even if these fields are not displayed in the table. The `ignoredFields` property lets you hide specific fields from the mass edit dialog, even if these fields are displayed in the table. When the end user chooses the *Mass Edit* button, the editability of each field is evaluated. Read-only fields are automatically excluded from the mass edit dialog, and changes are only applied to fields that are editable.
+
+To enhance performance when loading the mass edit dialog, use the `visibleFields` property.
 
 You can only use one of these properties at a time. If the `visibleFields` property is set, then the `ignoredFields` property is ignored.
 
 Both properties can contain a `FieldGroup` annotation or a comma-separated list of properties. A combination of both is not supported.
 
 > ### Sample Code:  
-> The `manifest.json` setting to toggle the mass edit functionality
+> The setting in the `manifest.json` file to toggle the mass edit functionality
 > 
 > ```
 > "controlConfiguration": {
@@ -69,7 +71,7 @@ Both properties can contain a `FieldGroup` annotation or a comma-separated list 
 > ```
 
 > ### Sample Code:  
-> The `manifest.json` setting to toggle the mass edit functionality using the `visibleFields` property
+> The setting in the `manifest.json` file to toggle the mass edit functionality using the `visibleFields` property
 > 
 > ```
 > "controlConfiguration": {
@@ -78,7 +80,7 @@ Both properties can contain a `FieldGroup` annotation or a comma-separated list 
 >          ......
 >          ......
 >          "enableMassEdit": {
->              "visibleFields": "com.sap.vocabularies.UI.v1.FieldGroup#Include"
+>              "visibleFields": "@com.sap.vocabularies.UI.v1.FieldGroup#Include"
 >       },
 >       ......
 >       ......
@@ -86,7 +88,7 @@ Both properties can contain a `FieldGroup` annotation or a comma-separated list 
 > ```
 
 > ### Sample Code:  
-> The `manifest.json` setting to toggle the mass edit functionality using the `ignoredFields` property
+> The setting in the `manifest.json` file to toggle the mass edit functionality using the `ignoredFields` property
 > 
 > ```
 > "controlConfiguration": {
@@ -141,21 +143,21 @@ The default mode for mass editing is `ChangeSet` on the object page and `Isolate
 
 The following prerequisites apply:
 
--   Application developers have enabled the functionality in the manifest, as shown in the sample code above.
+-   Application developers must have enabled the functionality in the `manifest.json` file, as shown in the preceding sample codes.
 
--   Users must select at least 1 record.
+-   End users must select at least one record.
 
 -   On the object page, *Mass Edit* is only available in edit mode.
 
 
 > ### Note:  
-> You can enable the mass edit feature for backend services based on CAP Node.js by setting a feature flag. For more information, see [https://cap.cloud.sap/docs/releases/dec23\#sapui5-mass-edit](https://cap.cloud.sap/docs/releases/dec23#sapui5-mass-edit).
+> You can enable the mass edit feature for backend services based on CAP `Node.js` by setting a feature flag. For more information, see [https://cap.cloud.sap/docs/releases/dec23\#sapui5-mass-edit](https://cap.cloud.sap/docs/releases/dec23#sapui5-mass-edit).
 
-When a user clicks on the *Mass Edit* button, a dialog opens showing all the editable fields that are visible in the table or configured using the `visibleFields` property or the `ignoreFields` property. The user is able to set a value for every editable field of the selected records, or even clear all values for the field from the selected records in one go.
+When an end user clicks the *Mass Edit* button, a dialog opens showing all the editable fields that are visible in the table or configured using the `visibleFields` property or the `ignoreFields` property. The end user is able to set a value for every editable field of the selected records, or even clear all values for the field from the selected records in one go.
 
-The *Mass Edit* button isn't visible if the table entity has an update restriction set to static false. Visibility can also be controlled via a value for `UI.UpdateHidden` \(you can use a path-based value, but can only point to the parent path for a table on an object page or subobject page, and to a singleton in a list report table\).
+The *Mass Edit* button isn't visible if the table entity has an update restriction set to static false. Visibility can also be controlled using a value for `UI.UpdateHidden` \(you can use a path-based value, but it can only point to the parent path for a table on an object page or subobject page, and to a singleton in a list report table\).
 
-The *Mass Edit* button isn't enabled if the update restriction points to a path and the path evaluates to false.
+The *Mass Edit* button isn't enabled if the update restriction points to a path and the path evaluates to `false`.
 
 > ### Note:  
 > -   *Mass Edit* doesn't change the draft or active status of the object.
@@ -166,13 +168,13 @@ The *Mass Edit* button isn't enabled if the update restriction points to a path 
 > 
 > -   The suggestion list in the fields \(showing the values for this field from the selected records in the table\) within the mass edit dialog doesn't appear if the following applies:
 > 
->     -   the field is part of the `Common.ValueListParameterIn` mapping of another field and this other field is filled with a value
+>     -   The field is part of `Common.ValueListParameterIn` mapping of another field and this other field is filled with a value.
 > 
 >         Example:
 > 
->         `"Country"` has an IN mapping to `"City"`. If a user selects a value for the field `"Country"` within the mass edit dialog, no suggestion list is available for the field `"City"`.
+>         `"Country"` has an IN mapping to `"City"`. If an end user selects a value for the field `"Country"` within the mass edit dialog, no suggestion list is available for the field `"City"`.
 > 
->     -   the field has a `Common.ValueListParameterOut` mapping to another field
+>     -   The field has `Common.ValueListParameterOut` mapping to another field.
 > 
 >         Example:
 > 

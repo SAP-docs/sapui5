@@ -15,42 +15,41 @@ For code lists with currency or unit customizing, you need to define the followi
 
 ```xml
 <EntityType Name="Product">
-    ...
-   <Property Name="WeightMeasure" Type="Edm.Decimal" Nullable="false" Precision="13" Scale="variable" />
-   <Property Name="WeightUnit" Type="Edm.String" Nullable="false" MaxLength="3" />
-   <Property Name="CurrencyCode" Type="Edm.String" Nullable="false" MaxLength="5" />
-   <Property Name="Price" Type="Edm.Decimal" Nullable="false" Precision="15" Scale="variable" />
-    ...
+  ...
+  <Property Name="WeightMeasure" Type="Edm.Decimal" Nullable="false" Precision="13" Scale="variable" />
+  <Property Name="WeightUnit" Type="Edm.String" Nullable="false" MaxLength="3" />
+  <Property Name="CurrencyCode" Type="Edm.String" Nullable="false" MaxLength="5" />
+  <Property Name="Price" Type="Edm.Decimal" Nullable="false" Precision="15" Scale="variable" />
+  ...
 </EntityType>
 ...
 <Annotations Target="SAP__self.Container">
-   <Annotation Term="com.sap.vocabularies.CodeList.v1.CurrencyCodes">
-      <Record>
-         <PropertyValue Property="Url" String="../../../../default/iwbep/common/0001/$metadata" />
-         <PropertyValue Property="CollectionPath" String="Currencies" />
-      </Record>
-   </Annotation>
+  <Annotation Term="com.sap.vocabularies.CodeList.v1.CurrencyCodes">
+    <Record>
+      <PropertyValue Property="Url" String="../../../../default/iwbep/common/0001/$metadata" />
+      <PropertyValue Property="CollectionPath" String="Currencies" />
+    </Record>
+  </Annotation>
 </Annotations>
 <Annotations Target="SAP__self.Container">
-   <Annotation Term="com.sap.vocabularies.CodeList.v1.UnitsOfMeasure">
-      <Record>
-         <PropertyValue Property="Url" String="../../../../default/iwbep/common/0001/$metadata" />
-         <PropertyValue Property="CollectionPath" String="UnitsOfMeasure" />
-      </Record>
-   </Annotation>
+  <Annotation Term="com.sap.vocabularies.CodeList.v1.UnitsOfMeasure">
+    <Record>
+      <PropertyValue Property="Url" String="../../../../default/iwbep/common/0001/$metadata" />
+      <PropertyValue Property="CollectionPath" String="UnitsOfMeasure" />
+    </Record>
+  </Annotation>
 </Annotations>
- 
 ...
 <Annotations Target="SAP__self.Product/Price">
-    ...
-   <Annotation Term="Org.OData.Measures.V1.ISOCurrency" Path="CurrencyCode" />
-    ...
+  ...
+  <Annotation Term="Org.OData.Measures.V1.ISOCurrency" Path="CurrencyCode" />
+  ...
 </Annotations>
 ...
 <Annotations Target="SAP__self.Product/WeightMeasure">
-    ...
-   <Annotation Term="Org.OData.Measures.V1.Unit" Path="WeightUnit" />
-    ...
+  ...
+  <Annotation Term="Org.OData.Measures.V1.Unit" Path="WeightUnit" />
+  ...
 </Annotations>
 ```
 
@@ -86,56 +85,56 @@ The property annotated as `com.sap.vocabularies.CodeList.v1.StandardCode` is int
 
 ```xml
 ...
-  <EntityType Name="Currency">
-    <Key>
-      <PropertyRef Name="CurrencyCode" />
-    </Key>
-    <Property Name="CurrencyCode" Type="Edm.String" MaxLength="5" />
-    <Property Name="ISOCode" Type="Edm.String" MaxLength="3" />
-    <Property Name="Text" Type="Edm.String" MaxLength="15" />
-    <Property Name="DecimalPlaces" Type="Edm.SByte" />
-  </EntityType>
-  
-  <EntityType Name="UnitOfMeasure">
-    <Key>
-      <PropertyRef Name="UnitCode" />
-    </Key>
-    <Property Name="UnitCode" Type="Edm.String" MaxLength="3" />
-    <Property Name="ISOCode" Type="Edm.String" MaxLength="3" />
-    <Property Name="ExternalCode" Type="Edm.String" MaxLength="3" />
-    <Property Name="Text" Type="Edm.String" MaxLength="30" />
-    <Property Name="DecimalPlaces" Type="Edm.Int16" />
-  </EntityType>
-  
-  <Annotations Target="SAP__self.Currency/CurrencyCode">
-    <Annotation Term="Common.Text" Path="Text" />
-    <Annotation Term="Common.UnitSpecificScale" Path="DecimalPlaces" />
-    <Annotation Term="CodeList.StandardCode" Path="ISOCode" />
-  </Annotations>
-  
-  <Annotations Target="SAP__self.UnitOfMeasure">
-    <Annotation Term="Core.AlternateKeys">
-      <Collection>
-        <Record>
-          <PropertyValue Property="Key">
-            <Collection>
-              <Record>
-                <PropertyValue Property="Name" PropertyPath="ExternalCode" />
-                <PropertyValue Property="Alias" String="ExternalCode" />
-              <Record>
-            </Collection>
-          </PropertyValue>
-        <Record>
-      </Collection>
-    </Annotation>
-  </Annotations>
-  
-  <Annotations Target="SAP__self.UnitOfMeasure/UnitCode">
-    <Annotation Term="Common.Text" Path="Text" />
-    <Annotation Term="Common.UnitSpecificScale" Path="DecimalPlaces" />
-    <Annotation Term="CodeList.StandardCode" PropertyPath="ISOCode" />
-    <Annotation Term="CodeList.ExternalCode" PropertyPath="ExternalCode" />
-  </Annotations>
+<EntityType Name="Currency">
+  <Key>
+    <PropertyRef Name="CurrencyCode" />
+  </Key>
+  <Property Name="CurrencyCode" Type="Edm.String" MaxLength="5" />
+  <Property Name="ISOCode" Type="Edm.String" MaxLength="3" />
+  <Property Name="Text" Type="Edm.String" MaxLength="15" />
+  <Property Name="DecimalPlaces" Type="Edm.SByte" />
+</EntityType>
+
+<EntityType Name="UnitOfMeasure">
+  <Key>
+    <PropertyRef Name="UnitCode" />
+  </Key>
+  <Property Name="UnitCode" Type="Edm.String" MaxLength="3" />
+  <Property Name="ISOCode" Type="Edm.String" MaxLength="3" />
+  <Property Name="ExternalCode" Type="Edm.String" MaxLength="3" />
+  <Property Name="Text" Type="Edm.String" MaxLength="30" />
+  <Property Name="DecimalPlaces" Type="Edm.Int16" />
+</EntityType>
+
+<Annotations Target="SAP__self.Currency/CurrencyCode">
+  <Annotation Term="Common.Text" Path="Text" />
+  <Annotation Term="Common.UnitSpecificScale" Path="DecimalPlaces" />
+  <Annotation Term="CodeList.StandardCode" Path="ISOCode" />
+</Annotations>
+
+<Annotations Target="SAP__self.UnitOfMeasure">
+  <Annotation Term="Core.AlternateKeys">
+    <Collection>
+      <Record>
+        <PropertyValue Property="Key">
+          <Collection>
+            <Record>
+              <PropertyValue Property="Name" PropertyPath="ExternalCode" />
+              <PropertyValue Property="Alias" String="ExternalCode" />
+            </Record>
+          </Collection>
+        </PropertyValue>
+      </Record>
+    </Collection>
+  </Annotation>
+</Annotations>
+
+<Annotations Target="SAP__self.UnitOfMeasure/UnitCode">
+  <Annotation Term="Common.Text" Path="Text" />
+  <Annotation Term="Common.UnitSpecificScale" Path="DecimalPlaces" />
+  <Annotation Term="CodeList.StandardCode" PropertyPath="ISOCode" />
+  <Annotation Term="CodeList.ExternalCode" PropertyPath="ExternalCode" />
+</Annotations>
 ...
 ```
 
@@ -143,12 +142,20 @@ With the metadata above, you can use the data types `sap.ui.model.odata.type.Cur
 
 **Example how to use currency and unit types in a freestyle SAPUI5 application**
 
-```js
-...
-<Input value="{mode:'TwoWay', parts:['WeightMeasure', 'WeightUnit', {mode:'OneTime', path:'/##@@requestUnitsOfMeasure', targetType:'any'}], type:'sap.ui.model.odata.type.Unit'}"/>
-...
-<Input value="{mode:'TwoWay', parts:['Price', 'CurrencyCode', {mode:'OneTime', path:'/##@@requestCurrencyCodes', targetType:'any'}], type:'sap.ui.model.odata.type.Currency'}"/>
-...
+```
+<mvc:View
+    xmlns:core="sap.ui.core"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    core:require="{
+        Currency: 'sap/ui/model/odata/type/Currency',
+        Unit: 'sap/ui/model/odata/type/Unit'
+    }">
+    ...
+    <Input value="{mode: 'TwoWay', parts: ['WeightMeasure', 'WeightUnit', {mode: 'OneTime', path: '/##@@requestUnitsOfMeasure', targetType: 'any'}], type: 'Unit'}" />
+    ...
+    <Input value="{mode: 'TwoWay', parts: ['Price', 'CurrencyCode', {mode: 'OneTime', path: '/##@@requestCurrencyCodes', targetType: 'any'}], type: 'Currency'}" />
+    ...
 ```
 
 The code lists are automatically requested only once per browser session and code list URL.
@@ -162,20 +169,20 @@ If you use XML templating, you can use `sap.ui.model.odata.v4.AnnotationHelper.f
 ```xml
 <!-- used in view template -->
 <Annotations Target="SAP__self.Product">
-   <Annotation Term="com.sap.vocabularies.UI.v1.LineItem">
-      <Collection>
-         ...
-         <Record Type="com.sap.vocabularies.UI.v1.DataField">
-            <PropertyValue Property="Label" String="Weight" />
-            <PropertyValue Property="Value" Path="WeightMeasure" />
-         </Record>
-         <Record Type="com.sap.vocabularies.UI.v1.DataField">
-            <PropertyValue Property="Label" String="Price" />
-            <PropertyValue Property="Value" Path="Price" />
-         </Record>
-         ...
-      </Collection>
-   </Annotation>
+  <Annotation Term="com.sap.vocabularies.UI.v1.LineItem">
+    <Collection>
+      ...
+      <Record Type="com.sap.vocabularies.UI.v1.DataField">
+        <PropertyValue Property="Label" String="Weight" />
+        <PropertyValue Property="Value" Path="WeightMeasure" />
+      </Record>
+      <Record Type="com.sap.vocabularies.UI.v1.DataField">
+        <PropertyValue Property="Label" String="Price" />
+        <PropertyValue Property="Value" Path="Price" />
+      </Record>
+      ...
+    </Collection>
+  </Annotation>
 </Annotations>
 ```
 
@@ -192,13 +199,13 @@ The composite binding for the `sap.ui.model.odata.type.Currency` and `sap.ui.mod
          <columns>
             <template:repeat list="{lineItem>}" var="field">
                <Column>
-                  <Label text="{field>@@label}"/>
+                  <Label text="{field>@@label}" />
                </Column>
             </template:repeat>
          </columns>
          <ColumnListItem>
             <template:repeat list="{lineItem>}" var="field">
-               <Input value="{field>Value/@@format}"/>
+               <Input value="{field>Value/@@format}" />
             </template:repeat>
          </ColumnListItem>
       </Table>
@@ -211,25 +218,67 @@ The composite binding for the `sap.ui.model.odata.type.Currency` and `sap.ui.mod
 **Example: Templating output**
 
 ```xml
-<VBox>
-    <Table items="{/ProductList}">
-      <columns>
-          ...
-          <Column>
-            <Label text="Weight"/>
-          </Column>
-          <Column>
-            <Label text="Price"/>
-          </Column>
-          ...
-      </columns>
-      <ColumnListItem>
-              ...
-              <Input value="{mode:'TwoWay', parts:[{path:'WeightMeasure', type:'sap.ui.model.odata.type.Decimal', constraints:{'precision':13, 'scale':'variable', 'nullable':false}}, {path:'WeightUnit', type:'sap.ui.model.odata.type.String', constraints:{'maxLength':3, 'nullable':false}}, {mode:'OneTime', path:'/##@@requestUnitsOfMeasure', targetType:'any'}], type:'sap.ui.model.odata.type.Unit'}"/>
-              <Input value="{mode:'TwoWay', parts:[{path:'Price', type:'sap.ui.model.odata.type.Decimal', constraints:{'precision':15, 'scale':'variable', 'nullable':false}}, {path:'CurrencyCode', type:'sap.ui.model.odata.type.String', constraints:{'maxLength':5, 'nullable':false}}, {mode:'OneTime', path:'/##@@requestCurrencyCodes', targetType:'any'}], type:'sap.ui.model.odata.type.Currency'}"/>
-              ...
-      </ColumnListItem>
-    </Table>
-</VBox>
+<mvc:View
+    xmlns:core="sap.ui.core"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    core:require="{
+        Currency: 'sap/ui/model/odata/type/Currency',
+        Decimal: 'sap/ui/model/odata/type/Decimal',
+        StringType: 'sap/ui/model/odata/type/String',
+        Unit: 'sap/ui/model/odata/type/Unit'
+    }">
+    <VBox>
+        <Table items="{/ProductList}">
+            <columns>
+                ...
+                <Column>
+                    <Label text="Weight" />
+                </Column>
+                <Column>
+                    <Label text="Price" />
+                </Column>
+                ...
+            </columns>
+            <ColumnListItem
+                ...
+                <Input value="{
+                    mode: 'TwoWay', 
+                    parts: [{
+                       path: 'WeightMeasure', 
+                       type: 'Decimal', 
+                       constraints:{'precision': 13, 'scale': 'variable', 'nullable': false}
+                    }, {
+                       path: 'WeightUnit', 
+                       type: 'StringType', 
+                       constraints: {'maxLength': 3, 'nullable': false}
+                    }, {
+                       mode: 'OneTime',
+                       path: '/##@@requestUnitsOfMeasure',
+                       targetType: 'any'
+                    }], 
+                    type: 'Unit'
+                }" />
+                <Input value="{
+                    mode: 'TwoWay', 
+                    parts: [{
+                       path: 'Price', 
+                       type: 'Decimal', 
+                       constraints: {'precision': 15, 'scale': 'variable', 'nullable': false}
+                    }, {
+                       path: 'CurrencyCode', 
+                       type: 'StringType', 
+                       constraints: {'maxLength': 5, 'nullable': false}
+                    }, {
+                       mode: 'OneTime', 
+                       path: '/##@@requestCurrencyCodes', 
+                       targetType: 'any'
+                    }], 
+                    type: 'Currency'}" />
+                ...
+            </ColumnListItem>
+        </Table>
+    </VBox>
+    ...
 ```
 

@@ -26,7 +26,7 @@ The state of the application is preserved when users refresh or navigate away fr
 
 
 > ### Note:  
-> -   If a potentially sensitive field \(a property that is annotated using the `PersonalData.v1.IsPotentiallySensitive` annotation\) is changed, SAP Fiori elements doesn't store/restore this information. Any changes added by users are therefore lost upon refresh. This is not applicable if the field is used in filter context.
+> -   If a potentially sensitive field \(a property that is annotated using the `PersonalData.v1.IsPotentiallySensitive` annotation\) is changed, SAP Fiori elements doesn't store/restore this information. Any changes added by users are therefore lost upon refresh. This is not applicable if the field is used in filter context. For more security-related information, see [Security Configuration](security-configuration-ba0484b.md).
 > 
 > -   In SAP Fiori elements for OData V2, changes to the visibility of filter fields in the filter bar aren't stored/restored. However, if any new filter fields containing values are added from the *Adapt Filters* dialog, then they're stored as a part of the `iAppState`. The order of the filter fields in the smart filter fields is not stored or restored from the `iAppState`.
 > 

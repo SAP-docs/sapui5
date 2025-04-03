@@ -227,12 +227,20 @@ The following sample code shows how you can build an XML template for the `Sales
 > <!--     <RatingIndicator id="MyCustomRatingIndicatorId" value="{= ${filterValues>} ? ${filterValues>}.substring(1) : null }" change="handler.onValueChanged" />-->
 >  
 > <!--     // ...or bind it directly (and use a filter value type) (recommended) // -->
->         <RatingIndicator id="MyCustomRatingIndicatorId" value="{path: 'filterValues>', type: 'sap.fe.macros.filter.type.Value'}" />
+>          <RatingIndicator id="MyCustomRatingIndicatorId"
+>              core:require="{
+>                  Value: 'sap/fe/macros/filter/type/Value'
+>              }"
+>              value="{path: 'filterValues>', type: 'Value'}"
+>          />
 >  
 > <!--     // Example for adapting the used operator, using GT (greater than) instead of default EQ -->
 > <!--     <RatingIndicator-->
-> <!--         id="MyCustomRatingIndicatorId"-->
-> <!--         value="{path: 'filterValues>', type: 'sap.fe.macros.filter.type.Value', formatOptions: { operator: 'GT' }}"-->
+> <!--         id="MyCustomRatingIndicatorId"-->> 
+> <!--         core:require="{-->
+> <!--             Value: 'sap/fe/macros/filter/type/Value'-->
+> <!--         }"-->
+> <!--         value="{path: 'filterValues>', type: 'Value', formatOptions: { operator: 'GT' }}"-->
 > <!--     />-->
 >  
 >         <core:Icon src="sap-icon://reset" press="handler.onReset" class="sapUiSmallMarginBegin" />
@@ -311,9 +319,15 @@ In some cases, you may want to use a custom filter operator. For example, you ma
 >     
 >         <ComboBox
 >             id="MyCustomRatingComboBox"
->             core:require="{handler: 'SalesOrder/ext/CustomRating'}"
->             selectedKey="{path: 'filterValues>', type: 'sap.fe.macros.filter.type.Value', formatOptions: { operator: 'SalesOrder.ext.CustomRating.ratingLevels' }}"
->         >
+>             core:require="{
+>                 handler: 'SalesOrder/ext/CustomRating',
+>                 Value: 'sap/fe/macros/filter/type/Value'
+>             }"
+>             selectedKey="{
+>                 path: 'filterValues>',
+>                 type: 'Value',
+>                 formatOptions: { operator: 'SalesOrder.ext.CustomRating.ratingLevels' }
+>             }">
 >             <items>
 >                 <core:Item key="Low" text="Low Rating" />
 >                 <core:Item key="Medium" text="Medium Rating" />
@@ -385,8 +399,11 @@ You can also define your custom filter as required by setting it to `required = 
 > ```
 > <core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m">
 >     <Input
->         core:require="{handler: 'SalesOrder/ext/CustomRating'}"
->         value="{path: 'filterValues>', type: 'sap.fe.macros.filter.type.Value', formatOptions: { operator: 'Contains' }}"
+>         core:require="{
+>             handler: 'SalesOrder/ext/CustomRating',
+>             Value: 'sap/fe/macros/filter/type/Value'
+>         }"
+>         value="{path: 'filterValues>', type: 'Value', formatOptions: { operator: 'Contains' }}"
 >         valueState="{path: 'filterValues>', formatter: 'handler.onFilterInputFormatValue'}"
 >         placeholder="{i18n>customStringFilterPlaceholder}"
 >     />

@@ -95,7 +95,7 @@ Inside the `unitTests.qunit.js` file we import the unit test for the custom form
 ```js
 
 sap.ui.define([
-	   "./model/formatter"
+    "./model/formatter"
 ]);
 ```
 
@@ -144,29 +144,29 @@ The test suite serves as the entry point for all tests within our project such a
 
 ```js
 sap.ui.define(() => {
-        "use strict";
-        return {
-               name: "QUnit test suite for UI5 Walkthrough",
-               defaults: {
-                       page: "ui5://test-resources/ui5/walkthrough/Test.qunit.html?testsuite={suite}&test={name}",
-                       qunit: {
-                              version: 2
-                       },
-                       ui5: {
-                              theme: "sap_horizon"
-                       },
-                       loader: {
-                              paths: {
-                                     "ui5/walkthrough": "../"
-                              }
-                       }
-               },
-               tests: {
-                      "unit/unitTests": {
-                              title: "UI5 Walkthrough - Unit Tests"
-                      }
-               }
-        };
+    "use strict";
+    return {
+        name: "QUnit test suite for UI5 Walkthrough",
+        defaults: {
+            page: "ui5://test-resources/ui5/walkthrough/Test.qunit.html?testsuite={suite}&test={name}",
+            qunit: {
+                version: 2
+            },
+            ui5: {
+                theme: "sap_horizon"
+            },
+            loader: {
+                paths: {
+                    "ui5/walkthrough": "../"
+                }
+            }
+        },
+        tests: {
+            "unit/unitTests": {
+                title: "UI5 Walkthrough - Unit Tests"
+            }
+        }
+    };
 });
 ```
 

@@ -213,6 +213,20 @@ SAPUI5 flexibility is handled internally by the `SmartFilterBar` control. The ba
 
 
 
+## Further Communication Between FilterBar, SmartFilterBar, and the Consuming Control
+
+> ### Remember:  
+> The following is also valid for the `SmartFilterBar` control:
+
+Before a view is saved, the `FilterBar` control triggers the `beforeVariantSave` event. This allows the consuming control to prepare for the `fetchData` call, if required. Right after this event is raised, the `FilterBar` control calls the method provided by the `registerFetchData` method. If you select a view from the `VariantManagement` control or the `SmartVariantManagement` respectively after the `FilterBar` has called the method provided by the `registerApplyData` method, the `afterVariantLoad` event is raised.
+
+> ### Note:  
+> The `afterVariantLoad` event is also raised internally when you select *Cancel* or *Reset* in the *Filters* dialog of the filter bar.
+
+
+
+<a name="loio2ae520a67c44495ab5dbc69668c47a7f__section_vhg_hfq_k2c"/>
+
 ## FAQ
 
 
@@ -270,15 +284,6 @@ After that, here is what you need to do:
     
     ```
 
-
-
-
-## Further Communication between `FilterBar`, `SmartFilterBar`, and Consuming Control
-
-The following is also valid for the `SmartFilterBar` control: Before a view is saved, the `FilterBar` control triggers the `beforeVariantSave` event. This allows the consuming control to prepare for the `fetchData` call, if required. Right after this event is raised, the `FilterBar` control calls the method provided by the `registerFetchData` method. If you select a view from the `VariantManagement` control or the `SmartVariantManagement` respectively after the `FilterBar` has called the method provided by the `registerApplyData` method, the `afterVariantLoad` event is raised.
-
-> ### Note:  
-> The `afterVariantLoad` event is also raised internally when you select *Cancel* or *Reset* in the *Filters* dialog of the filter bar.
 
 
 

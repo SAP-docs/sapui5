@@ -39,6 +39,8 @@ End users can communicate better with their co-workers using Microsoft Teams by 
 
 > ### Caution:  
 > If your application contains sensitive and personal data, enabling the *Share: Microsoft Teams* › *As Card* option results in the transfer of this information outside the SAP S/4HANA environment. Application teams need to carefully consider whether such data should be excluded by providing the corresponding annotation. For sensitive personal data, you can use `com.sap.vocabularies.PersonalData.v1.IsPotentiallySensitive`, and for personal data you can use `com.sap.vocabularies.PersonalData.v1.IsPotentiallyPersonal`. If you enable this feature for your business users, use the applicable information channels to inform them accordingly.
+> 
+> For more security-related information, see [Security Configuration](security-configuration-ba0484b.md).
 
 
 

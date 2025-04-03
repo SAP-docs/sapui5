@@ -17,7 +17,7 @@ It compares the measure value to one or more data point values to enrich its mea
 
 ## `UI.Chart` Annotations
 
-The `UI.Chart Title` property is used for the title. The `UI.Chart Description` property is used for the subtitle.
+The `UI.Chart Title` property is used to define the title, while the `UI.Chart Description` property is used to specify the subtitle.
 
 > ### Sample Code:  
 > XML Annotation
@@ -113,7 +113,6 @@ The `UI.Chart Title` property is used for the title. The `UI.Chart Description` 
 > 
 > <Annotation Term="UI.DataPoint" Qualifier="BulletChartRevenue">
 >     <Record>
->         <PropertyValue Property="Title" String="Sales Revenue" />
 >         <PropertyValue Property="Value" Path="BulletChartRevenue" />
 >         <PropertyValue Property="TargetValue" Path="TargetRevenue" />
 >         <PropertyValue Property="ForecastValue" Path="ForecastRevenue" />
@@ -130,7 +129,6 @@ The `UI.Chart Title` property is used for the title. The `UI.Chart Description` 
 > ```
 > 
 > @UI.dataPoint: {
->   title: 'Sales Revenue',
 >   targetValueElement: 'TargetRevenue',
 >   forecastValue: 'ForecastRevenue',
 >   minimumValue: 100,
@@ -146,7 +144,6 @@ The `UI.Chart Title` property is used for the title. The `UI.Chart Description` 
 > ```
 > 
 > UI.DataPoint #BulletChartRevenue : {
->     Title : 'Sales Revenue',
 >     Value : BulletChartRevenue,
 >     TargetValue : TargetRevenue,
 >     ForecastValue : ForecastRevenue,

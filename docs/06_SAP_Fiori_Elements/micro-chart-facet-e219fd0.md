@@ -460,9 +460,6 @@ You can apply a sort order to the micro chart data using the `UI.PresentationVar
 > 
 > ```
 
-> ### Restriction:  
-> Sorting using `UI.PresentationVariant` is only supported for micro charts defined in the header and not for those within the table. For more information, see [Adding a Micro Chart to a Table](adding-a-micro-chart-to-a-table-b8312a4.md).
-
 **Related Information**  
 
 

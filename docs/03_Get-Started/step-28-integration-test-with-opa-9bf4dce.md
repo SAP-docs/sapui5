@@ -148,7 +148,7 @@ This module imports our `NavigationJourney` and is the entrypoint for all integr
 
 ```js
 sap.ui.define([
-       "./NavigationJourney"
+    "./NavigationJourney"
 ]);
 ```
 

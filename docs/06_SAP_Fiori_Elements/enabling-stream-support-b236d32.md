@@ -2,10 +2,10 @@
 
 # Enabling Stream Support
 
-End users of SAP Fiori elements can upload, download, and delete files.
+End users of SAP Fiori elements-based applications can upload, download, and delete files.
 
 > ### Note:  
-> Application developers must define `@Core.AcceptableMediaTypes`. This avoids security issues by enabling SAP Fiori elements to check for allowed file types. The back-end service framework must ensure a virus scan and other security measures, such as maximum file size limitations and MIME-type restrictions, are in place.
+> Application developers must define `@Core.AcceptableMediaTypes`. This avoids security issues by enabling SAP Fiori elements to check for allowed file types. The back-end service framework must ensure a virus scan and other security measures, such as maximum file size limitations and MIME-type restrictions, are in place. For more security-related information, see [Security Configuration](security-configuration-ba0484b.md).
 
 
 
@@ -19,11 +19,10 @@ You can upload or download different `MediaType` files from an object page using
 
 ### Prerequisites
 
-The `Edm.Stream` type is not supported in SAP Fiori elements for OData V2, so the service must have an entity that is stream enabled:
+The service must have an entity that is stream enabled because the `Edm.Stream` type is not supported in SAP Fiori elements for OData V2.
 
 > ### Sample Code:  
 > ```
-> 
 > <EntityType Name="MyStreamType" m:HasStream="true" sap:label="Stream Test" sap:content-version="1">
 >   <Key>
 >     <PropertyRef Name="Streamuuid" />
@@ -92,7 +91,7 @@ The following annotation must exist on the `entitylevel` to set the text for the
 > 
 > ```
 
-You can restrict the `MediaType` from being uploaded by using the following annotation:
+You can restrict a `MediaType` from being uploaded by using the following annotation:
 
 > ### Sample Code:  
 > ```
@@ -104,16 +103,20 @@ You can restrict the `MediaType` from being uploaded by using the following anno
 > 
 > ```
 
-In the draft apps, you can only upload or delete a stream when the UI is editable. However, in the non-draft apps, the upload and delete is supported only in display mode.
+In draft apps, you can only upload or delete a stream when the UI is editable. However, in non-draft apps, the upload and delete is supported only in display mode.
 
 If no file is present, a placeholder is displayed:
 
 ![](images/Stream_Support_4_adaa7a8.png)
 
 > ### Note:  
-> An uploaded file cannot be viewed in the list report or the object page table. But that cannot be edited from the table. To upload a file, you have to navigate to the corresponding object page. You cannot upload multiple files.
+> The uploaded file name is visible in the list report or the object page table but cannot be edited from the table.
 > 
-> ![](images/Stream_Support_5_08edaaf.png)
+> To upload a file, navigate to the corresponding object page.
+> 
+> Only one file can be uploaded for a record; uploading a second file can replace the exisiting one.
+> 
+> ![](images/Stream_Support_V2_08edaaf.png)
 
 
 
@@ -121,13 +124,13 @@ If no file is present, a placeholder is displayed:
 
 ## Additional Features in SAP Fiori Elements for OData V4
 
-App developers can define fields based on `Edm.Stream` properties and add them to forms or tables, for example.
+Application developers can define fields based on `Edm.Stream` properties and add them to forms or tables, for example.
 
 Fields based on `Edm.Stream` have the following features:
 
 -   In display mode, the stream content is represented either as a preview \(image\) or as a link to download the file.
 
-    If the field is represented as a download link, it also contains a media-type icon, and the display text for the link is the file name \(for example, *1.gif*\) if available. Otherwise, the display text is *Open File*.
+    If the field is represented as a download link, it also contains a media-type icon, and the display text for the link is the file name \(for example, *1.gif*\), if available. Otherwise, the display text is *Open File*.
 
 -   In edit mode, there are additional buttons to upload or delete the stream content.
 
@@ -144,7 +147,7 @@ The following image shows the object page containing file upload fields in edit 
 
 ![](images/Edm_stream_File_Upload_in_Edit_Mode_46c2706.png)
 
-To get the file upload elements, proceed as follows:
+To add the file upload elements, proceed as follows:
 
 
 
@@ -209,19 +212,19 @@ For more information, see [https://cap.cloud.sap/docs/guides/providing-services\
 
 ### UI Representation
 
-The representation of the document icon and the link depend on the `odata.mediaContentType` and `Core.ContentDisposition/Filename` annotations.
+The representation of the document icon and the link depends on the `odata.mediaContentType` and `Core.ContentDisposition/Filename` annotations.
 
-– Document Icon –
+**– Document Icon –**
 
-If the back end returns an `odata.mediaContentType` annotation for the stream property, SAP Fiori elements renders a specific document icon based on the content type. If the back end doesn't return an `odata.mediaContentType` annotation \(or if the content type can be mapped to a specific document icon\), SAP Fiori elements renders a generic document icon.
+If the back end returns an `odata.mediaContentType` annotation for the stream property, SAP Fiori elements renders a specific document icon based on the content type. If the back end doesn't return an `odata.mediaContentType` annotation or if the content type can't be mapped to a specific document icon, SAP Fiori elements renders a generic document icon.
 
-– Document Link –
+**– Document Link –**
 
 You can click on the document link to open the content of the stream property. SAP Fiori elements distinguishes the following three cases for rendering the document link:
 
 -   The link text shows the file name. Two conditions must be fulfilled:
 
-    -   For the stream property, there's a `Core.ContentDisposition/Filename` annotation pointing to a non-empty file name that is empty.
+    -   For the stream property, there's a `Core.ContentDisposition/Filename` annotation pointing to a non-empty file name.
 
     -   The stream property is not empty. This means the back end either returns an `odata.mediaContentType` annotation with a value that is not `null`, or does not return an `odata.mediaContentType` annotation.
 
@@ -266,14 +269,16 @@ You can click on the document link to open the content of the stream property. S
 >                                     streamWithFilename_name : StreamName;
 > ```
 
-– Avatar –
+**– Avatar –**
 
-An avatar is rendered instead of the icon and link representation when one of the following two conditions is fulfilled:
+An avatar is rendered instead of the icon and link representation when one of the following conditions is fulfilled:
 
--   The `Edm.Stream` property is annotated with `UI.IsImage` which is included in an `EntityType` that is annotated with `Common.IsNaturalPerson` or `UI.IsImageUrl`.
+-   The `Edm.Stream` property is annotated with `UI.IsImage`.
 
 -   The `Core.MediaType` annotation starts with 'image/', as in 'image/gif'
 
+
+To display the image or person avatar as a circle, specify the `Common.IsNaturalPerson` annotation at the entity type or for the `UI.IsImage` annotation of a stream property.
 
 – Edit Mode –
 

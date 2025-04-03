@@ -56,7 +56,7 @@ export default class App extends Controller {
 
 We add a reference to the invoice list controller to the view to get access to the view model we defined in the controller.
 
-We add a price and the currency to our invoices list in the view by adding the `number` attribute to the `ObjectListItem` control, then we apply the currency data type on the number by setting the `type` attribute of the binding syntax to `sap.ui.model.type.Currency`. The `Currency` type handles the formatting of the price for us based on the currency code. In our case, the price is displayed with 2 decimals.
+We add a price and the currency to our invoices list in the view by adding the `number` attribute to the `ObjectListItem` control. To apply the currency data type, we use the `require` attribute with the namespace URI `sap.ui.core`, for which the `core` prefix is already defined in our XML view. This allows us to write the attribute as `core:require`. We then add the currency data type module to the list of required modules and assign it the alias `Currency`, making it available for use within the view. Finally, we set the `type` attribute of the binding syntax to the alias `Currency`. The `Currency` type handles the formatting of the price for us, based on the currency code. In our case, the price is displayed with 2 decimals.
 
 Additionally, we set the formatting option `showMeasure` to `false`. This hides the currency code in the property `number`, because it is passed on to the `ObjectListItem` control as a separate property `numberUnit`.
 
@@ -64,6 +64,7 @@ Additionally, we set the formatting option `showMeasure` to `false`. This hides 
 <mvc:View
     controllerName="ui5.walkthrough.controller.InvoiceList"
     xmlns="sap.m"
+    xmlns:core="sap.ui.core"
     xmlns:mvc="sap.ui.core.mvc">
     <List
         headerText="{i18n>invoiceListTitle}"
@@ -72,13 +73,16 @@ Additionally, we set the formatting option `showMeasure` to `false`. This hides 
         items="{invoice>/Invoices}">
         <items>
             <ObjectListItem
+                core:require="{
+                    Currency: 'sap/ui/model/type/Currency'
+                }"
                 title="{invoice>Quantity} x {invoice>ProductName}"
                 number="{
                     parts: [
                         'invoice>ExtendedPrice',
                         'view>/currency'
                     ],
-                    type: 'sap.ui.model.type.Currency',
+                    type: 'Currency',
                     formatOptions: {
                         showMeasure: false
                     }

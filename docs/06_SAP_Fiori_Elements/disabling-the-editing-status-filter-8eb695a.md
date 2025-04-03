@@ -2,15 +2,17 @@
 
 # Disabling the Editing Status Filter
 
-The editing status filter is enabled by default in the list report page of draft enabled applications.
+Application developers have an option to disable the *Editing Status* filter.
+
+The *Editing Status* filter is enabled by default in the list report page of draft-enabled applications.
 
   
   
-**Editing status filter**
+**Editing Status filter**
 
-![](images/Editing_Status_Filter_d6891a2.png "Editing status filter")
+![](images/Editing_Status_Filter_d6891a2.png "Editing Status filter")
 
-If required, you can disable this filter for your app. To do so, you can add the following sample code to your annotation file:
+To disable this filter, you must add the following sample code to your annotation file:
 
 > ### Sample Code:  
 > XML Annotation
@@ -37,6 +39,11 @@ If required, you can disable this filter for your app. To do so, you can add the
 > ```
 
 > ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> No ABAP CDS annotation sample is available. Please use the local XML annotation.
+
+> ### Sample Code:  
 > CAP CDS Annotation
 > 
 > ```
@@ -58,10 +65,5 @@ If required, you can disable this filter for your app. To do so, you can add the
 > });
 > ```
 
-> ### Sample Code:  
-> ABAP CDS Annotation
-> 
-> ```
-> No ABAP CDS annotation sample is available. Please use the local XML annotation.
-> ```
+If you disable the *Editing Status* filter, end users can no longer filter their objects based on the editing status.
 

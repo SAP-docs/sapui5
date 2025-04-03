@@ -21,9 +21,9 @@ The list is continually growing. Our learning resources are provided on the foll
 
 **Courses and Learning Journeys**
 
--   [Developing and Extending SAP Fiori Elements Apps](https://open.sap.com/courses/fiori-ea1)
+-   [Developing and Extending SAP Fiori Elements Apps](https://learning.sap.com/courses/developing-and-extending-sap-fiori-elements-apps)
 
--   [Developing an SAP Fiori Elements App Based on a CAP OData V4 Service](https://learning.sap.com/learning-journey/developing-an-sap-fiori-elements-app-based-on-a-cap-odata-v4-service)
+-   [Developing an SAP Fiori Elements App Based on a CAP OData V4 Service](https://learning.sap.com/learning-journeys/developing-an-sap-fiori-elements-app-based-on-a-cap-odata-v4-service)
 
 -   [Getting Started with Creating an SAP Fiori Elements App Based on an OData V4 RAP Service](https://learning.sap.com/learning-journeys/getting-started-with-creating-an-sap-fiori-elements-app-based-on-an-odata-v4-rap-service)
 

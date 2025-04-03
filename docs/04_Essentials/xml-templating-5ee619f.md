@@ -168,58 +168,61 @@ See the [sap.ui.core.sample.ViewTemplate.tiny](https://ui5.sap.com/#/entity/sap.
 24          ViewType = library.mvc.ViewType; // shortcut for sap.ui.core.mvc.ViewType
 25   
 26      return UIComponent.extend("sap.ui.core.sample.ViewTemplate.tiny.Component", {
-27          metadata : "json",
-28   
-29          createContent : function () {
-30              var oModel = new ODataModel(
-31                      "/sap/opu/odata/IWBEP/GWSAMPLE_BASIC/", {
-32                      annotationURI : "/test-resources/sap/ui/core/demokit/sample/ViewTemplate/tiny"
-33                          + "/annotations.xml",
-34                      json : true,
-35                      loadMetadataAsync : true
-36                  }),
-37                  oMetaModel = oModel.getMetaModel(),
-38                  sPath = "/ProductSet('HT-1021')/ToSupplier",
-39                  oViewContainer = new VBox({
-40                      items : [
-41                          new Title({text : "This is meant to be a pure code sample. "
-42                              + "(To run it, you would need a proxy which is configured properly.)",
-43                              titleStyle : TitleLevel.H3})
-44                      ]
-45                  });
-46   
-47              oMetaModel.loaded().then(function () {
-48                  View.create({
-49                      async : true,
-50                      models : oModel,
-51                      preprocessors : {
-52                          xml : {
-53                              bindingContexts : {
-54                                  meta : oMetaModel.getMetaContext(sPath)
-55                              },
-56                              models : {
-57                                  meta : oMetaModel
-58                              }
-59                          }
-60                      },
-61                      type : ViewType.XML,
-62                      viewName : "sap.ui.core.sample.ViewTemplate.tiny.Template"
-63                  }).then(function (oTemplateView) {
-64                      oTemplateView.bindElement(sPath);
-65                      oViewContainer.destroyItems();
-66                      oViewContainer.addItem(oTemplateView);
-67                  }, function (oError) {
-68                      MessageBox.alert(oError.message, {
-69                          icon : MessageBox.Icon.ERROR,
-70                          title : "Missing Proxy?"});
-71                  });
-72              });
-73   
-74              // Note: synchronously return s.th. here and add content to it later on
-75              return oViewContainer;
-76          }
-77      });
-78  });
+27           metadata : {
+28              interfaces : ["sap.ui.core.IAsyncContentCreation"],
+29              manifest: "json"
+30           },
+31   
+32          createContent : function () {
+33              var oModel = new ODataModel(
+34                      "/sap/opu/odata/IWBEP/GWSAMPLE_BASIC/", {
+35                      annotationURI : "/test-resources/sap/ui/core/demokit/sample/ViewTemplate/tiny"
+36                          + "/annotations.xml",
+37                      json : true,
+38                      loadMetadataAsync : true
+39                  }),
+40                  oMetaModel = oModel.getMetaModel(),
+41                  sPath = "/ProductSet('HT-1021')/ToSupplier",
+42                  oViewContainer = new VBox({
+43                      items : [
+44                          new Title({text : "This is meant to be a pure code sample. "
+45                              + "(To run it, you would need a proxy which is configured properly.)",
+46                              titleStyle : TitleLevel.H3})
+47                      ]
+48                  });
+49   
+50              oMetaModel.loaded().then(function () {
+51                  View.create({
+52                      async : true,
+53                      models : oModel,
+54                      preprocessors : {
+55                          xml : {
+56                              bindingContexts : {
+57                                  meta : oMetaModel.getMetaContext(sPath)
+58                              },
+59                              models : {
+60                                  meta : oMetaModel
+61                              }
+62                          }
+63                      },
+64                      type : ViewType.XML,
+65                      viewName : "sap.ui.core.sample.ViewTemplate.tiny.Template"
+66                  }).then(function (oTemplateView) {
+67                      oTemplateView.bindElement(sPath);
+68                      oViewContainer.destroyItems();
+69                      oViewContainer.addItem(oTemplateView);
+70                  }, function (oError) {
+71                      MessageBox.alert(oError.message, {
+72                          icon : MessageBox.Icon.ERROR,
+73                          title : "Missing Proxy?"});
+74                  });
+75              });
+76   
+77              // Note: synchronously return s.th. here and add content to it later on
+78              return oViewContainer;
+79          }
+80      });
+81  });
 ```
 
 **Template.view.xml** 

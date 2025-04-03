@@ -41,7 +41,7 @@ Once **My Home** in SAP S/4HANA Cloud Public Edition and **My Home** in SAP S/4H
 > 
 > -   Custom columns
 
-The application developers can switch off the option to add cards to the *Insights Cards* section of **My Home** using the `manifest.json` setting.
+Application developers can hide the *Add Card to Insights* option from the overflow toolbar by configuring specific settings in the `manifest.json` file. For more information, see the version-specific sections of this topic.
 
 
 
@@ -98,7 +98,7 @@ Similarly, using the `manifest.json`, analytical list page applications can choo
 > ### Note:  
 > The card creation feature only supports single view scenarios and single entity-multi view scenarios with responsive tables in list report applications.
 
-To disable the *Add Card to Insights* option in the table toolbar, add the following settings to the `manifest.json`:
+To hide the *Add Card to Insights* option in the table toolbar, add the following settings into the `manifest.json` file:
 
 > ### Sample Code:  
 > ```
@@ -112,7 +112,7 @@ To disable the *Add Card to Insights* option in the table toolbar, add the follo
 > }
 > ```
 
-To disable the *Add Card to Insights* option in the chart toolbar, add the following `manifest.json` settings:
+To hide the *Add Card to Insights* option in the chart toolbar, add the following settings into the `manifest.json` file:
 
 > ### Sample Code:  
 > ```

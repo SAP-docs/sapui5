@@ -4,7 +4,7 @@
 
 You can enable the history of the most recently entered values for any field, when you move the cursor back to that field. It is enabled by default for some of the controls that are used as a filter, such as for multi-input fields. However, it may not be enabled for controls such as drop-down list.
 
-If you have fields that contain sensitive personal data, you can use the `com.sap.vocabularies.PersonalData.v1.IsPotentiallySensitive` annotation to disable the storing of data in the history.
+If you have fields that contain sensitive personal data, you can use the `com.sap.vocabularies.PersonalData.v1.IsPotentiallySensitive` annotation to disable the storing of data in the history. For more security-related information, see [Security Configuration](security-configuration-ba0484b.md).
 
 End users can delete the history of the recently entered values. For more information, see [Input History](../10_More_About_Controls/input-history-152f84f.md).
 

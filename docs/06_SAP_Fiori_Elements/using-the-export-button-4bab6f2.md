@@ -75,15 +75,15 @@ Clicking the drop-down arrow opens a menu with two additional options:
 
     -   Split cells with multiple values: when selecting this option, the exported spreadsheet has one column per value. If one column contains multiple values in a cell \(for example, amount and currency/unit\), this results in two separate columns in the spreadsheet. The following list provides all cases that result in multiple columns exported with this mode:
 
-        -   Amount and unit, or price and currency: One column will contain the value or price, the second will contain the unit or currency.
+        -   Amount and unit, or price and currency: One column contains the value or price, the second one contains the unit or currency.
 
-        -   Code and value \(properties annotated with `Text` or `TextArrangement`\): One column will contain the code, the second will contain the description. Note: the `TextArrangement` annotation is not read. The code and the description will always be exported as soon as there is a `Text` annotation.
+        -   Code and value \(properties annotated with `Text` or `TextArrangement`\): One column contains the code, the second one contains the description. Note: the `TextArrangement` annotation is not read. The code and the description are always exported when there is a `Text` annotation.
 
-        -   `dataFieldForAnnotation` pointing to a `DataPoint` with a target value \(rating, progress visualizations\): The value of the property and the target value will be exported into separate columns.
+        -   `dataFieldForAnnotation` pointing to a `DataPoint` with a target value \(rating, progress visualizations\): The value of the property and the target value are exported into separate columns.
 
-        -   `dataFieldForAnnotation` pointing to a `FieldGroup`: Every property of the `FieldGroup` will be exported into a separate column.
+        -   `dataFieldForAnnotation` pointing to a `FieldGroup`: Every property of the `FieldGroup` is exported into a separate column.
 
-        -   Custom columns with several properties defined: Every defined property of the custom column will be exported into a separate column. See the note below for details.
+        -   Custom columns with several properties defined: Every defined property of the custom column is exported into a separate column. See the note below for details.
 
 
     -   Include filter settings: the current filter is included on a second sheet in the exported file.
@@ -93,12 +93,14 @@ Clicking the drop-down arrow opens a menu with two additional options:
 ![](images/Object_Page_Options_for_Export_to_Excel_8bd12db.png)
 
 > ### Note:  
-> -   You can export the custom columns you have defined using manifest settings. To allow the export of your custom column, you must maintain the `"properties"` array in the definition of the custom column. For more information about defining custom columns, see [Extension Points for Tables](extension-points-for-tables-d525522.md). The properties will be exported into the spreadsheet as described for a `FieldGroup`.
+> -   You can export the custom columns you have defined using manifest settings. To allow the export of your custom column, you must maintain the `"properties"` array in the definition of the custom column. For more information about defining custom columns, see [Extension Points for Tables](extension-points-for-tables-d525522.md). The properties are exported into the spreadsheet as described for a `FieldGroup`.
 > 
-> -   If your domain model contains sensitive data \(data annotated as `PersonalData.IsPotentiallySensitive`\), enabling the export to a spreadsheet could lead to exposing this data, as the end user cannot choose where the data will be stored. You can disable the `Export` button using the `enableExport` property in the manifest. This ensures that access control is enforced and stays within the application.
+> -   If your domain model contains sensitive data \(data annotated as `PersonalData.IsPotentiallySensitive`\), enabling the export to a spreadsheet could lead to exposing this data, as the end user cannot choose where the data is stored. You can disable the `Export` button using the `enableExport` property in the manifest. This ensures that access control is enforced and stays within the application.
+> 
+>     For more security-related information, see [Security Configuration](security-configuration-ba0484b.md).
 
 > ### Restriction:  
-> -   The columns containing a `DataFieldForAnnotation` that points to `Charts` or a `DataFieldForAction`, are exported without any content.
+> -   The columns containing a `DataFieldForAnnotation` that points to `Charts` or a `DataFieldForAction` are exported without any content.
 > 
 > -   The columns containing a multi-input field \(1:N\) are not exported.
 > 

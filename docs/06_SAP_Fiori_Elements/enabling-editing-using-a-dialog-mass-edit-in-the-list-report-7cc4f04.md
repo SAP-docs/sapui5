@@ -14,32 +14,31 @@ When you select multiple objects and use the mass edit dialog, the values entere
 When `multiEdit` is enabled, by default the dialog displays editable fields corresponding to columns that are currently displayed in the table. You can change the columns with table personalization. To enable the editing of multiple objects, set the `multiEdit` property to `true` in the `manifest.json` file.
 
 > ### Sample Code:  
-> > ### Sample Code:  
-> > ```
-> > "sap.ui.generic.app": {
-> >         "_version": "1.1.0",
-> >         "pages": [
-> >             {
-> >                 "entitySet": "STTA_C_SO_SalesOrder_ND",
-> >                 "component": {
-> >                     "name": "sap.suite.ui.generic.template.ListReport",
-> >                     "list": true,
-> >                     "settings": {
-> >                            "tableSettings": {
-> >                                   "multiEdit": {
-> >                                          "enabled" : true
-> >                                    }
-> > 
-> >                     }
-> > ```
+> ```
+> "sap.ui.generic.app": {
+>         "_version": "1.1.0",
+>         "pages": [
+>             {
+>                 "entitySet": "STTA_C_SO_SalesOrder_ND",
+>                 "component": {
+>                     "name": "sap.suite.ui.generic.template.ListReport",
+>                     "list": true,
+>                     "settings": {
+>                            "tableSettings": {
+>                                   "multiEdit": {
+>                                          "enabled" : true
+>                                    }
+> 
+>                     }
+> ```
 
-When `MultiEdit` is enabled for an application, the option to edit appears in the table toolbar. You can select multiple records from the table and click *Edit* to launch the mass edit dialog, as shown in the following screenshot.
+When `MultiEdit` is enabled for an application, the option to edit appears in the table toolbar. You can select multiple records from the table and click *Edit* to launch the mass edit dialog, as shown in the following screenshot:
 
 ![](images/Enabling_Mass_Editing_Through_Dialog_LR_914eba7.png)
 
-You can also provide a `FieldGroup` annotation in the manifest with a particular qualifier to identify the `MultiEdit` fields. The `DataFields` in the `FieldGroup` annotation are displayed as the `MultiEdit` fields.
+You can also provide a `FieldGroup` annotation with a specific qualifier in the `manifest.json` file to identify the `MultiEdit` fields. The `DataFields` in the `FieldGroup` annotation are displayed as the `MultiEdit` fields. We recommend this approach to improve the performance of your app.
 
-To use a `fieldgroup`, add its annotation path in the `manifest.json` file:
+To use `FieldGroup`, add its annotation path in the `manifest.json` file:
 
 > ### Sample Code:  
 > ```
@@ -86,7 +85,7 @@ To use a `fieldgroup`, add its annotation path in the `manifest.json` file:
 > ### Note:  
 > -   This feature is only applicable to responsive tables and grid tables.
 > 
-> -   This feature isnot supported for smart multi-input fields, custom columns, and `DataFieldForAnnotations`.
+> -   This feature is not supported for smart multi-input fields, custom columns, and `DataFieldForAnnotations`.
 > 
 > -   Only the properties of the entity sets are supported for mass edit.
 > 
@@ -128,7 +127,9 @@ Currently, the default title for the edit dialog is `Edit(X)`. You can override 
 
 [Replacing the Standard Save Functionality in Mass Edit Dialog](replacing-the-standard-save-functionality-in-the-mass-edit-dialog-492d8a9.md "You can enable custom save functionality for the mass edit dialog.")
 
-[Enabling Editing Using a Dialog \(Mass Edit\)](enabling-editing-using-a-dialog-mass-edit-965ef5b.md "Mass editing allows users to simultaneously change multiple objects that share the same editable properties.")
+[Enabling Editing Using a Dialog \(Mass Edit\)](enabling-editing-using-a-dialog-mass-edit-965ef5b.md "Mass editing allows end users to simultaneously change multiple objects that share the same editable properties.")
 
 [Adding a Custom ViewExtension in the Mass Edit Dialog](adding-a-custom-viewextension-to-the-mass-edit-dialog-fd26fee.md "You can add a custom ViewExtension to the mass edit dialog by defining it in the manifest.")
+
+[Localization of UI Texts](localization-of-ui-texts-b8cb649.md "If necessary, you can replace standard UI texts for apps that you have created with SAP Fiori elements.")
 

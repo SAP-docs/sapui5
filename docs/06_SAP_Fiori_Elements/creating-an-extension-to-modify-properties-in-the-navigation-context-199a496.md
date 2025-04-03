@@ -15,6 +15,8 @@ Application developers can use this extension to modify \(add/remove/change\) th
 > 
 > After you've created an app extension, its display \(for example, control placement and layout\) and system behavior \(for example, model and binding usage, busy handling\) lies within the application's responsibility. SAP Fiori elements provides support only for the official `extensionAPI` functions. Don't access or manipulate controls, properties, models, or other internal objects created by the SAP Fiori elements framework.
 
+For more security-related information, see [Security Configuration](security-configuration-ba0484b.md).
+
 <a name="task_u52_ds1_34b"/>
 
 <!-- task\_u52\_ds1\_34b -->
@@ -89,7 +91,7 @@ Application developers can use this extension to modify \(add/remove/change\) th
 
 ## Context
 
-The modification \(add/remove/change\) is achieved via the `adaptNavigationContext` extension method, which is called if external outbound navigation is triggered \(for example for semantic links, related apps, or `DataFieldForIntentBasedNavigations`\).
+The modification \(add/remove/change\) is achieved by using the `adaptNavigationContext` extension method, which is called if external outbound navigation is triggered \(for example for semantic links, related apps, or `DataFieldForIntentBasedNavigations`\).
 
 `oSelectionVariant` consists of all the properties that have been passed to the target application ‒ this already excludes the sensitive information and considers any defined object mapping.
 

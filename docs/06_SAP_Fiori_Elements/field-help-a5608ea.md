@@ -566,7 +566,7 @@ For more information about filter restrictions, see [Configuring Filter Fields](
 
 ### Search Field Within a Value Help Dialog
 
-Application developers can control the visibility of the search field within a value help dialog by using the `Searchable` annotation set for the entity set of the value help.
+You can control the visibility of the search field within a value help dialog by using the `Searchable` annotation set for the entity set of the value help.
 
 > ### Sample Code:  
 > ```
@@ -1196,4 +1196,7 @@ The following screenshot shows an input field where a timezone has been specifie
 The following screenshot shows that the timezone is specified for the corresponding input field. The Date/Time Picker doesn't show any timezone in the dialog:
 
 ![](images/Input_Field_Without_a_Timezone_Dialog_b07bbe3.png)
+
+> ### Restriction:  
+> Parameterized value help service isn't supported.
 

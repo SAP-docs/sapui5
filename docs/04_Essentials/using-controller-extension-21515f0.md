@@ -235,17 +235,17 @@ Behind the scenes, the `ControllerExtension.use(...)` method call is removed by 
 
 > ### Example:  
 > ```js
-> import Routing from "sap/fe/core/controllerextensions/Routing";
+> import SomeControllerExtension from "my/some/SomeControllerExtension";
 > import ControllerExtension from "sap/ui/core/mvc/ControllerExtension";
 > 
 > /**
 >  * @namespace my.sample
 >  */
 > class MyController extends Controller {
->   routing = ControllerExtension.use(Routing); // use the "Routing" extension provided by sap.fe
+>   someControllerExtension = ControllerExtension.use(SomeControllerExtension); // use the "SomeControllerExtension" extension
 >   
 >   someMethod() {
->     this.routing.navigate(...);
+>     this.someControllerExtension.doSomething(...);
 >   }
 > }
 > 
@@ -268,19 +268,19 @@ Some controller extensions allow implementing hooks or overriding their behavior
 
 > ### Example:  
 > ```js
-> import Routing from "sap/fe/core/controllerextensions/Routing";
+> import SomeControllerExtension from "my/some/SomeControllerExtension";
 > import ControllerExtension from "sap/ui/core/mvc/ControllerExtension";
 > 
 > /**
 >  * @namespace my.sample
 >  */
 > class MyController extends Controller {
->   routing = ControllerExtension.use(Routing.override({
+>   someControllerExtension = ControllerExtension.use(SomeControllerExtension.override({
 >     someHook: function(...) { ... }
->   })); // adapt the "Routing" extension provided by sap.fe
+>   })); // adapt the "SomeControllerExtension" extension
 >   
 >   someMethod() {
->     this.routing.navigate(...);
+>     this.someControllerExtension.doSomething(...);
 >   }
 > }
 > 

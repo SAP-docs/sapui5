@@ -10,7 +10,7 @@ You can configure confirmation popups for various use cases in list reports and 
 
 ## Confirmation Popup for Critical Actions
 
-You can configure actions as critical, and when such actions are triggered, a confirmation popup is displayed for end users before the action is executed. For more information, see [Adding Confirmation Popovers for Actions](adding-confirmation-popovers-for-actions-87130de.md).
+You can configure actions as critical, and when these actions are triggered, a confirmation popup is displayed for end users before the action is executed. For more information, see [Adding Confirmation Popovers for Actions](adding-confirmation-popovers-for-actions-87130de.md).
 
 
 
@@ -43,14 +43,14 @@ When end users create or edit an object page in a draft-enabled application and 
 
 You can configure a confirmation popup for the following actions by sending an HTTP 412 response from the back end:
 
--   Standard SAP Fiori elements actions, such as *Save*, *Activate* and *Create*
+-   Standard SAP Fiori elements actions, such as *Save*, *Activate*, and *Create*.
 
--   Application-specific actions \(function import actions in SAP Fiori elements for OData V2\)
+-   Application-specific actions \(function import actions in SAP Fiori elements for OData V2\).
 
 
 The flow is as follows:
 
--   When an action is triggered, the application sends the request with the header `Prefer:handling=strict`.
+-   When an action is triggered, the application sends a request with the header `Prefer:handling=strict`.
 
 -   Depending on the back-end settings, there are two options:
 
@@ -63,7 +63,7 @@ The flow is as follows:
 
 -   The application displays a confirmation popup containing the message from the back end.
 
--   If end users choose *Confirm* to go ahead with the action, the application sends the request again, this time **without** `Prefer:handling=strict` in the header.
+-   If end users choose *Confirm*, the application sends the request again, this time **without** `Prefer:handling=strict` in the header.
 
 -   The back end executes the action and responds with either a success or a failure message.
 
@@ -84,7 +84,7 @@ The following image shows an example of such a popup:
 
 ### Turn Off *Draft Activation* Confirmation Popup for External Navigation
 
-You can turn off the confirmation popup for draft activation in the case of external navigation by configuring the `draftDiscardConfirmationSettings` setting in the `manifest.json` file as shown in the following sample code:
+You can turn off the confirmation popup for draft activation in the case of external navigation by configuring the `draftDiscardConfirmationSettings` setting in the `manifest.json` file, as shown in the following sample code:
 
 > ### Sample Code:  
 > manifest.json

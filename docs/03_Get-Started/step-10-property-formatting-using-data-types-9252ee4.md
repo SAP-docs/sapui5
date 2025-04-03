@@ -45,7 +45,14 @@ You can view and download all files in the Demo Kit at [Data Binding - Step 10](
     **webapp/view/App.view.xml**
 
     ```xml
-    ...
+    <mvc:View
+    	controllerName="ui5.databinding.controller.App"
+    	xmlns="sap.m"
+    	xmlns:core="sap.ui.core"
+    	xmlns:form="sap.ui.layout.form"
+    	xmlns:l="sap.ui.layout"
+    	xmlns:mvc="sap.ui.core.mvc"
+    	core:require="{Currency: 'sap/ui/model/type/Currency'}">
     	<Panel headerText="{i18n>panel1HeaderText}" class="sapUiResponsiveMargin" width="auto">
     		<form:SimpleForm editable="true" layout="ColumnLayout">
     			<Label text="{i18n>firstName}"/>
@@ -81,7 +88,7 @@ You can view and download all files in the Demo Kit at [Data Binding - Step 10](
     								{path: '/salesAmount'},
     								{path: '/currencyCode'}
     							],
-    							type: 'sap.ui.model.type.Currency',
+    							type: 'Currency',
     							formatOptions: {showMeasure: false}
     						}" width="200px"/>
     				</l:VerticalLayout>

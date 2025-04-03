@@ -5,7 +5,7 @@
 A single measure value is shown against a maximum value. Only the first three values as received from the back end are shown.
 
 > ### Note:  
-> This topic is applicable only to SAP Fiori elements for OData V4.
+> This topic is only applicable to SAP Fiori elements for OData V4.
 
 ![](images/Comparison_Micro_Chart_0df709f.png)
 
@@ -38,7 +38,7 @@ The following annotations are mandatory and must be used in the comparison micro
 
 ## `UI.Chart` Annotations
 
-The `UI.Chart Title` property is used for the title. The `UI.Chart Description` property is used for the subtitle.
+The `UI.Chart Title` property is used to define the title, while the `UI.Chart Description` property is used to specify the subtitle.
 
 > ### Sample Code:  
 > XML Annotation
@@ -141,7 +141,7 @@ The `UI.Chart Title` property is used for the title. The `UI.Chart Description` 
 
 ## `UI.DataPoint` Annotation
 
-The `UI.DataPoint` annotation can be used to add criticality as well as minimum and maximum values to the chart measures.
+The `UI.DataPoint` annotation can be used to define criticality, as well as minimum and maximum values for the chart measures.
 
 > ### Sample Code:  
 > XML Annotation
@@ -150,7 +150,6 @@ The `UI.DataPoint` annotation can be used to add criticality as well as minimum 
 > <Annotation Term="UI.DataPoint" Qualifier="NetAmount">
 >       <Record Type="UI.DataPointType">
 >             <PropertyValue Property="Value" Path="NetAmount"/>
->             <PropertyValue Property="Title" String="Net Amount"/>
 >             <PropertyValue Property="Criticality" Path="Criticality"/>
 >             <PropertyValue Property="MaximumValue" Decimal="100"/>
 >             <PropertyValue Property="MinimumValue" Decimal="0"/>
@@ -163,7 +162,6 @@ The `UI.DataPoint` annotation can be used to add criticality as well as minimum 
 > 
 > ```
 > @UI.dataPoint: {
->   title: 'Net Amount',
 >   criticality: 'Criticality'
 >   maximumValue: 100,
 >   minimumValue: 0
@@ -179,7 +177,6 @@ The `UI.DataPoint` annotation can be used to add criticality as well as minimum 
 > 
 > UI.DataPoint #NetAmount              : {
 >             Value       : NetAmount,
->             Title       : 'Net Amount',
 >             Criticality : Criticality,
 >             MaximumValue : 100,
 >             MinimumValue : 0,

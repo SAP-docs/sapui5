@@ -193,23 +193,29 @@ You can define side effects either in the \*`MPC_EXT` class or in the local anno
 > > XML Annotation
 > > 
 > > ```
-> > <!-- In the below example, the function import action "Setcurrency" is expected to refresh the "Currency_Code_Text" which is coming from the associated entity "to_Currency" -->
-> >             <Annotations Target="STTA_SALES_ORDER_WD_20_SRV.STTA_SALES_ORDER_WD_20_SRV_Entities/Setcurrency">
-> >                     <Record>
-> >                         <PropertyValue Property="TargetProperties">
-> >                             <Collection>
-> >                                 <PropertyPath>to_Currency/Currency_Code_Text</PropertyPath>
-> >                             </Collection>
-> >                         </PropertyValue>
-> >                         <!-- Side Effects for action annotation with an entity as a target. Here, controls associated with "to_Item" will be refreshed-->
-> >                             <PropertyValue Property="TargetEntities">
-> >                             <Collection>
-> >                                 <NavigationPropertyPath>to_Item</NavigationPropertyPath>
-> >                             </Collection>
-> >                         </PropertyValue>
-> >                     </Record>
-> >                 </Annotation>
-> >             </Annotations>
+> > <!-- In the below example, the function import action "Setcurrency" is expected to refresh 
+> >      the "Currency_Code_Text" which is coming from the associated entity "to_Currency" -->
+> > 
+> > <Annotations Target="STTA_SALES_ORDER_WD_20_SRV.STTA_SALES_ORDER_WD_20_SRV_Entities/Setcurrency">
+> >     <Annotation Term="com.sap.vocabularies.Common.v1.SideEffects">
+> >         <Record>
+> >             <PropertyValue Property="TargetProperties">
+> >                 <Collection>
+> >                     <PropertyPath>to_Currency/Currency_Code_Text</PropertyPath>
+> >                 </Collection>
+> >             </PropertyValue>
+> > 
+> >             <!-- Side Effects for action annotation with an entity as a target. 
+> >                  Here, controls associated with "to_Item" will be refreshed -->
+> >             <PropertyValue Property="TargetEntities">
+> >                 <Collection>
+> >                     <NavigationPropertyPath>to_Item</NavigationPropertyPath>
+> >                 </Collection>
+> >             </PropertyValue>
+> >         </Record>
+> >     </Annotation>
+> > </Annotations>
+> > 
 > > ```
 
 > ### Example:  

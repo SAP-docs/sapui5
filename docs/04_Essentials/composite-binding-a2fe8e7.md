@@ -23,29 +23,35 @@ Each binding is created by the specified parts and assigned information. A part 
 1.  Use binding objects to add additional parameters, for example the type:
 
     ```js
-    oTxt = new sap.m.Input({
+    // "Input" required from module "sap/m/Input"
+    // "StringType" required from module "sap/ui/model/type/String"
+    // "Float" required from module "sap/ui/model/type/Float"
+    
+    oTxt = new Input({
         value: {
             parts: [
-                    {path: "/firstName", type: new sap.ui.model.type.String()},
-                    {path: "/lastName"},
-                    {path: "myModel2>/amount", type: new sap.ui.model.type.Float()} // path to property in another model
-                   ]
-              }
+                {path: "/firstName", type: StringType},
+                {path: "/lastName"},
+                {path: "myModel2>/amount", type: Float} // path to property in another model
+            ]
+        }
     }); 
     ```
 
 2.  Use strings which only take the path:
 
     ```js
-    oTxt = new sap.m.Input({
+    // "Input" required from module "sap/m/Input"
+    
+    oTxt = new Input({
         value: {
             parts: [
-                    "/firstName",
-                    "/lastName",
-                    "myModel2>/fraud" // path to property in another model
-                   ]
-             }
-    }); 
+                "/firstName",
+                "/lastName",
+                "myModel2>/fraud" // path to property in another model
+            ]
+        }
+    });
     ```
 
 
@@ -58,11 +64,10 @@ Each binding is created by the specified parts and assigned information. A part 
 1.  Use binding objects to add additional parameters, for example the type:
 
     ```js
+    // "StringType" required from module "sap/ui/model/type/String"
+    
     oTxt.bindValue({
-        parts: [
-                {path: "/firstName", type: new sap.ui.model.type.String()},
-                {path: "/lastName"}
-               ]
+        parts: [{path: "/firstName", type: StringType}, {path: "/lastName"}]
     }); 
     ```
 
@@ -70,10 +75,7 @@ Each binding is created by the specified parts and assigned information. A part 
 
     ```js
     oTxt.bindValue({
-        parts: [
-                "/firstName",
-                "/lastName"
-               ]
+        parts: ["/firstName", "/lastName"]
     }); 
     ```
 
@@ -90,16 +92,8 @@ Complex \(or "extended"\) syntax can be used for calculated fields in declarativ
 
 -   You can mix text with calculated fields as follows:
 
-    ```js
-    
-    <Label text="Hello Mr. {
-                             path:'/singleEntry/firstName', 
-                             formatter: '.myFormatter'
-                            }, 
-                            {
-                             /singleEntry/lastName
-                            }
-     " />
+    ```
+    <Label text="Hello Mr. {path: '/singleEntry/firstName', formatter: '.myFormatter'}, {/singleEntry/lastName}"/>
     ```
 
     > ### Note:  
@@ -107,29 +101,26 @@ Complex \(or "extended"\) syntax can be used for calculated fields in declarativ
 
 -   Use a syntax with leading quotation marks \("..."\) if you use MVC and your formatter or type is located in the controller. In the following example, the existing type or formatter function in the controller is used:
 
-    ```js
-    
-    <Text text="{
-                       path:'gender', 
-                       formatter:'.myGenderFormatter'
-                      } 
-                      {firstName}, 
-                      {lastName}
-    "/>
+    ```
+    <Text text="{path: 'gender', formatter: '.myGenderFormatter'} {firstName}, {lastName}"/>
     ```
 
 -   If you have a global formatter function, use the following syntax:
 
-    ```js
-    
-    <Text text="{
-                  parts: [
-                          {path:'birthday/day'},
-                          {path:'birthday/month'},
-                          {path:'birthday/year'}
-                         ], 
-                  formatter:'my.globalFormatter'
-    }"/>
+    ```
+    <mvc:View
+        xmlns:core="sap.ui.core"
+        xmlns:mvc="sap.ui.core.mvc"
+        xmlns="sap.m"
+        core:require="{globalFormatter: 'my/globalFormatter'}">
+        <Text text="{
+            parts: [
+                {path: 'birthday/day'},
+                {path: 'birthday/month'},
+                {path: 'birthday/year'}
+            ], 
+            formatter: 'globalFormatter'
+        }"/>
     ```
 
     > ### Note:  
@@ -137,14 +128,13 @@ Complex \(or "extended"\) syntax can be used for calculated fields in declarativ
 
 -   For a global type that is created with the specified format options, see the following example:
 
-    ```js
-    
-    <Label text="A type test: {
-                               path:'/singleEntry/amount', 
-                               type:'sap.ui.model.type.Float', 
-                               formatOptions: { minFractionDigits: 1}
-                              } EUR
-    "/>
+    ```
+    <mvc:View
+        xmlns:core="sap.ui.core"
+        xmlns:mvc="sap.ui.core.mvc"
+        xmlns="sap.m"
+        core:require="{Float: 'sap/ui/model/type/Float'}">
+        <Label text="A type test: {path: '/singleEntry/amount', type: 'Float', formatOptions: {minFractionDigits: 1}} EUR"/>
     ```
 
 
@@ -164,15 +154,14 @@ It is useful in cases where you'd like to use a common formatter function or typ
 > ```xml
 > <!-- formatStatus returns a text or an icon source computed from the first two parts depending on the third part -->
 > <core:Icon decorative="false"
-> 	src="{
-> 		parts: ['deliveryStatus', 'paymentStatus', {value : 'icon'}],
-> 		formatter : 'formatter.formatStatus'
-> 	}"
-> 	tooltip="{
-> 		parts: ['deliveryStatus', 'paymentStatus', {value : 'tooltip'}],
-> 		formatter: 'formatter.formatStatus'
-> 	}"
-> />
+>     src="{
+>         parts: ['deliveryStatus', 'paymentStatus', {value: 'icon'}],
+>         formatter: 'formatter.formatStatus'
+>     }"
+>     tooltip="{
+>         parts: ['deliveryStatus', 'paymentStatus', {value: 'tooltip'}],
+>         formatter: 'formatter.formatStatus'
+>     }"/>
 > ```
 
 **Example 2: Constant part in type**
@@ -181,11 +170,16 @@ This example uses `sap.ui.model.odata.type.DateTimeWithTimezone` to display only
 
 > ### Example:  
 > ```xml
-> <!-- 'TimezoneID' refers to an Edm.String property holding the IANA time zone ID -->
-> <Text text="{
-> 	formatOptions: {showDate: false, showTime: false},
-> 	parts: [{value: null}, {path: 'TimezoneID'}],
-> 	type: 'sap.ui.model.odata.type.DateTimeWithTimezone'
-> }" />
+> <mvc:View
+>     xmlns:core="sap.ui.core"
+>     xmlns:mvc="sap.ui.core.mvc"
+>     xmlns="sap.m"
+>     core:require="{DateTimeWithTimezone: 'sap/ui/model/odata/type/DateTimeWithTimezone'}">
+>     <!-- 'TimezoneID' refers to an Edm.String property holding the IANA time zone ID -->
+>     <Text text="{
+>         formatOptions: {showDate: false, showTime: false},
+>         parts: [{value: null}, {path: 'TimezoneID'}],
+>         type: 'DateTimeWithTimezone'
+>     }"/>
 > ```
 

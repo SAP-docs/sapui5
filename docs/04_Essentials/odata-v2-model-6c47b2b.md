@@ -314,7 +314,8 @@ To do this, provide a map of headers to the OData model constructor or use the `
 -   Passing custom headers with the `mparameters` map
 
     ```js
-    var oModel = new sap.ui.model.odata.v2.ODataModel({
+    // "ODataModel" required from module "sap/ui/model/odata/v2/ODataModel"
+    var oModel = new ODataModel({
         headers: {
             "myHeader1" : "value1",
             "myHeader2" : "value2"
@@ -628,7 +629,7 @@ The OData model allows manual CRUD \(create, read, update, delete\) operations o
 
 
 
-The `create` and `update` methods also require a mandatory `oData` parameter for passing the created or changed data object. Each operation returns an object containing a function abort, which can be used to abort the request. If the request is aborted, the error handler is called. This ensures that the success or the error handler is executed for every request. It is also possible to pass additional header data, URL parameters, or an eTag in the cases of updating or deleting an entity.
+The `create` and `update` methods also require a mandatory `oData` parameter for passing the created or changed data object. Each operation returns an object containing a function abort, which can be used to abort the request. If the request is aborted, the error handler is called. This ensures that the success or the error handler is executed for every request. It is also possible to pass additional header data, URL parameters, or an eTag \(the latter in the cases of updating or deleting an entity\).
 
 -   Creating entities
 
@@ -1302,7 +1303,7 @@ Each element of the entity model \(except *association set end*\) can be annotat
 
 ODataMetaModel JSON Format:
 
-```js
+```
 
 "dataServices" : {
     "schema" : [{
@@ -3597,45 +3598,67 @@ With the metadata above, you can use the `sap.ui.model.odata.type.Currency` and 
 
 **Example how to use currency and unit types in a freestyle SAPUI5 application:**
 
-```js
-...
-<Input value="{
-  mode:'TwoWay',
-  parts:[{
-    path : 'WeightMeasure',
-    type : 'sap.ui.model.odata.type.Decimal',
-    constraints : {'precision' : 13, 'scale' : 3, 'nullable' : false}
-  }, {
-    path : 'WeightUnit',
-    type : 'sap.ui.model.odata.type.String',
-    constraints : {'maxLength' : 5, 'nullable' : false}, formatOptions : {'parseKeepsEmptyString' : true}
-  }, {
-    mode : 'OneTime',
-    path : '/##@@requestUnitsOfMeasure',
-    targetType : 'any'
- }],
- type : 'sap.ui.model.odata.type.Unit'}"/>
-...
-<Input value="{
-   mode : 'TwoWay',
-   parts : [{
-    path : 'Price',
-    type : 'sap.ui.model.odata.type.Decimal',
-    constraints : {'precision' : 16, 'scale' : 3, 'nullable' : false}
-  }, {
-    path : 'CurrencyCode',
-    type : 'sap.ui.model.odata.type.String',
-    constraints : {'maxLength' : 5, 'nullable' : false}, formatOptions : {'parseKeepsEmptyString' : true}
-  }, {
-    mode : 'OneTime',
-    path : '/##@@requestCurrencyCodes',
-    targetType : 'any'
-  }],
-  type : 'sap.ui.model.odata.type.Currency'}"/>
+```
+<mvc:View
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:core="sap.ui.core"
+    core:require="{
+      CurrencyType: 'sap/ui/model/odata/type/Currency',
+      DecimalType: 'sap/ui/model/odata/type/Decimal,
+      StringType: 'sap/ui/model/odata/type/String',
+      UnitType: 'sap/ui/model/odata/type/Unit'
+    }">
+    ...
+    <Input value="{
+      mode:'TwoWay',
+      parts:[{
+        path: 'WeightMeasure',
+        type: 'DecimalType',
+        constraints: {'precision': 13, 'scale': 3, 'nullable': false}
+      }, {
+        path: 'WeightUnit',
+        type: 'StringType',
+        constraints: {'maxLength': 5, 'nullable': false}, formatOptions: {'parseKeepsEmptyString': true}
+      }, {
+        mode: 'OneTime',
+        path: '/##@@requestUnitsOfMeasure',
+        targetType: 'any'
+     }],
+     type: 'UnitType'}"/>
+    ...
+    <Input value="{
+       mode: 'TwoWay',
+       parts: [{
+        path: 'Price',
+        type: 'DecimalType',
+        constraints: {'precision': 16, 'scale': 3, 'nullable': false}
+      }, {
+        path: 'CurrencyCode',
+        type: 'StringType',
+        constraints: {'maxLength': 5, 'nullable': false}, formatOptions: {'parseKeepsEmptyString': true}
+      }, {
+        mode: 'OneTime',
+        path: '/##@@requestCurrencyCodes',
+        targetType: 'any'
+      }],
+      type: 'CurrencyType'}"/>
 ...
 ```
 
 The code lists are automatically requested only once per browser session and code list URL.
 
 Note that the format options of the `Decimal` type for the `'WeightMeasure'` or `'Price'` part may additionally influence the number of displayed and allowed decimals.For more information, see [`sap.ui.model.odata.type.Currency#formatValue`](https://ui5.sap.com/#/api/sap.ui.model.odata.type.Currency%23methods/formatValue) and [`sap.ui.model.odata.type.Unit#formatValue`](https://ui5.sap.com/#/api/sap.ui.model.odata.type.Unit%23methods/formatValue).
+
+<a name="loio262f75165c3d43b1817f6469aaad453c"/>
+
+<!-- loio262f75165c3d43b1817f6469aaad453c -->
+
+## Handling of Temporarily Unavailable Back Ends
+
+An OData back end cannot process incoming requests while it is under maintenance. Instead, it can respond with an HTTP 503 status code \(Service Unavailable\) and a "Retry-After" header.
+
+For this scenario, SAPUI5 offers the [`v2.ODataModel#setRetryAfterHandler`](https://ui5.sap.com/#/api/sap.ui.model.odata.v2.ODataModel%23methods/setRetryAfterHandler) API, by which an application can set a handler to determine when requests should be repeated and how to behave in the meantime.
+
+This feature works the same way for both OData models \(V2 and V4\). For more information, see [Handling of Temporarily Unavailable Back Ends](handling-of-temporarily-unavailable-back-ends-b3422ec.md) in the OData V4 model documentation.
 

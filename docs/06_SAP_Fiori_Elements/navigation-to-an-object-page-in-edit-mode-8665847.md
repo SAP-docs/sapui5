@@ -10,7 +10,7 @@ You can configure the navigation to an object page so that it opens directly in 
 
 ## Additional Features in SAP Fiori Elements for OData V2
 
-Use the `editFlow` annotation in the `manifest.json` file to configure navigation, as shown in the following sample code:
+You can use the `editFlow` annotation in the `manifest.json` file to configure navigation, as shown in the following sample code:
 
 > ### Sample Code:  
 > ```

@@ -6,6 +6,8 @@ The object page lets you display, edit, and create objects, as well as save draf
 
 
 
+This image is interactive. Hover over each area for a description. Click highlighted areas for more information.
+
 ![](images/Image_Map_Object_Page_Elements_in_SAP_Fiori_Elements_V4_e14e87e.png)
 
 
@@ -22,7 +24,7 @@ The object page is made up of the following elements:
 
     -   Title and subtitle
 
-    -   Editing status icon \(if applicable\)
+    -   Editing status icon, if applicable
 
     -   Action buttons in the toolbar of the object page header, containing generic actions \(in *Display* mode\)
 
@@ -38,6 +40,7 @@ The object page is made up of the following elements:
         -   Buttons in the header toolbar for use case-specific actions, for example, *Edit* and *Delete*
 
         -   Header facets to showcase important information relating to the object. Header facets can contain:
+
             -   Label-field pairs, to show, for example, price or availability. We recommend not to use more than five label-field pairs.
 
             -   a chart detailing the credit limit, or a rating indicator
@@ -68,7 +71,7 @@ The object page is made up of the following elements:
 
     For more information, see [Adapting the UI: List Report and Object Page](adapting-the-ui-list-report-and-object-page-0d2f1a9.md).
 
--   Footer bar in which actions and the *Show Messages* button are available \(if applicable\).
+-   Footer bar in which actions and the *Show Messages* button are available, if applicable.
 
     In draft applications, the footer bar of subitem object pages can also include the *Apply* button in create and edit mode. This action concludes the current create or edit activity, saves the draft, and navigates one step up in the object hierarchy. A toast message is displayed when an operation is successful. For more information, see [Draft Handling](draft-handling-ed9aa41.md). In a draft application with flexible column layout, the subobject closes and returns to the main object if you click the *Apply* button.
 

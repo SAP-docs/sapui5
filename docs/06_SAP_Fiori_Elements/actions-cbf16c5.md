@@ -728,7 +728,7 @@ UI.OperationGroupingType/ChangeSet
 -   Even if only a single selected instance results in an error when an action is executed, none of the selected instances are executed. This means that the action is either executed successfully for all instances, or isn't executed for any of the selected instances.
 
 
-
+You must ensure that the setting for the total number of requests of OData batches is high enough. For more security-related information, see [Security Configuration](security-configuration-ba0484b.md).
 
 </td>
 </tr>
@@ -1315,9 +1315,9 @@ The layout of the action parameter dialog is defined by `sap.ui.layout.form.Simp
 
 The group titles displayed in the dialog are derived from the labels defined in `UI.OperationalParameterFacets`.
 
-The following sample code shows how the action parameters are grouped, with each group assigned a label and references `@UI.FieldGroup`, which contains specific data fields:
-
 ![](images/Grouping_Action_Parameters_4f9c7c6.png)
+
+The following sample code shows how the action parameters are grouped, where each group is assigned to a label and references `@UI.FieldGroup`, which contains specific data fields:
 
 > ### Sample Code:  
 > XML Annotation
