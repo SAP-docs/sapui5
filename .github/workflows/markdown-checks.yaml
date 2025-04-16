@@ -22,12 +22,12 @@ on:
 jobs:
   main:
     if: contains(github.repositoryUrl, 'github.com')
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     steps:
 
     - id: checkout_repo
       name: Check out the repository content
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
 
     - id: check_files_changed
       uses: dorny/paths-filter@v2

@@ -24,7 +24,7 @@ on:
 
 jobs:
   main:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     steps:
 
       - id: token_gen
@@ -36,7 +36,7 @@ jobs:
 
       - id: checkout
         name: Check out the repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           token: ${{ steps.token_gen.outputs.app_token }}
 
