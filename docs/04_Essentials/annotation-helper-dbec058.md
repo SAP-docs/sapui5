@@ -44,8 +44,13 @@ The formatter functions can be used in binding expressions and `<template:if>` i
     > ### Note:  
     > Unsupported values are turned into strings, and indicated as such. To ensure that the data binding syntax is not corrupted, proper escaping is used.
 
-    ```
-    <Text text="{path: 'meta>Value', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}"/>
+    ```xml
+    <mvc:View
+            xmlns="sap.m"
+            xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1"
+            template:require="{AH: 'sap/ui/model/odata/AnnotationHelper'}">
+            ...
+            <Text text="{path: 'meta>Value', formatter: 'AH.format'}"/>
     ```
 
 -   `getNavigationPath`: Special formatter that extracts a data binding expression for the navigation path from one of the following dynamic expressions: *14.5.2 Expression edm:AnnotationPath*, *"14.5.11 Expression edm:NavigationPropertyPath"*, *"14.5.12 Expression edm:Path"* and *"14.5.13 Expression edm:PropertyPath"*; example:
@@ -55,17 +60,25 @@ The formatter functions can be used in binding expressions and `<template:if>` i
     -   The input value `{}` returns `""`
 
     ```xml
-    
-    <template:if test="{path: 'facet>Target', formatter: 'sap.ui.model.odata.AnnotationHelper.getNavigationPath'}">
-        <form:SimpleForm binding="{path: 'facet>Target', formatter: 'sap.ui.model.odata.AnnotationHelper.getNavigationPath'}" />
-    </template:if>
+    <mvc:View
+            xmlns="sap.m"
+            xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1"
+            template:require="{AH: 'sap/ui/model/odata/AnnotationHelper'}">
+            ...
+            <template:if test="{path: 'facet>Target', formatter: 'AH.getNavigationPath'}">
+                <form:SimpleForm binding="{path: 'facet>Target', formatter: 'AH.getNavigationPath'}" />
+            </template:if>
     ```
 
 -   `isMultiple`: Special formatter that knows about the one of the following dynamic expressions: *14.5.2 Expression edm:AnnotationPath*, *"14.5.11 Expression edm:NavigationPropertyPath"*, *"14.5.12 Expression edm:Path"* and *"14.5.13 Expression edm:PropertyPath"*. The formatter returns the information whether the navigation path ends with an association end with multiple "\*". If the multiple "\*" are not the last characters, the formatter returns an error.
 
     ```xml
-    
-    <template:if test="{path: 'facet>Target', formatter: 'sap.ui.model.odata.AnnotationHelper.isMultiple'}">
+    <mvc:View
+            xmlns="sap.m"
+            xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1"
+            template:require="{AH: 'sap/ui/model/odata/AnnotationHelper'}">
+            ...
+            <template:if test="{path: 'facet>Target', formatter: 'AH.isMultiple'}">
     ```
 
 -   `simplePath`: Specialized method useful for design-time templating in connection with smart fields; it can only return simple binding expressions without type information. This has the advantage that the resulting XML view, which is shown at design-time, looks much simpler and nicer without `&quot;` escapes.
@@ -78,13 +91,14 @@ The formatter functions can be used in binding expressions and `<template:if>` i
       xmlns:mvc="sap.ui.core.mvc"
       xmlns:sfi="sap.ui.comp.smartfield"
       xmlns:sfo="sap.ui.comp.smartform"
-      xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1">
-      <sfo:SmartForm title="{path: 'meta>com.sap.vocabularies.UI.v1.HeaderInfo/TypeName', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}">
+      xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1"
+      template:require="{AH: 'sap/ui/model/odata/AnnotationHelper'}">
+      <sfo:SmartForm title="{path: 'meta>com.sap.vocabularies.UI.v1.HeaderInfo/TypeName', formatter: 'AH.format'}">
         <template:repeat list="{path:'meta>', filters: {path: 'RecordType', operator: 'EQ', value1: 'com.sap.vocabularies.UI.v1.FieldGroupType'}}">
-          <sfo:Group label="{path: 'meta>Label', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}">
+          <sfo:Group label="{path: 'meta>Label', formatter: 'AH.format'}">
             <template:repeat list="{meta>Data}">
-              <sfo:GroupElement label="{path: 'meta>Label', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}">
-                <sfi:SmartField value="{path: 'meta>Value', formatter: 'sap.ui.model.odata.AnnotationHelper.simplePath'}"/>
+              <sfo:GroupElement label="{path: 'meta>Label', formatter: 'AH.format'}">
+                <sfi:SmartField value="{path: 'meta>Value', formatter: 'AH.simplePath'}"/>
               </sfo:GroupElement>
             </template:repeat>
           </sfo:Group>

@@ -107,7 +107,7 @@ var oComponentInstance = sap.ui.component("my-comp-id");
 
 ```
 sap.ui.require(["sap/ui/core/Component"], (Component) => {
-    var oComponentInstance = Component.get("my-comp-id");
+    var oComponentInstance = Component.getComponentById("my-comp-id");
 });
 ```
 

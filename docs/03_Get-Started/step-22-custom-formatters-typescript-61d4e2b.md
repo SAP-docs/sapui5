@@ -102,13 +102,16 @@ We add a status using the `firstStatus` aggregation to our `ObjectListItem` that
         items="{invoice>/Invoices}">
         <items>
             <ObjectListItem
+                core:require="{
+                    Currency: 'sap/ui/model/type/Currency'
+                }"
                 title="{invoice>Quantity} x {invoice>ProductName}"
                 number="{
                     parts: [
                         'invoice>ExtendedPrice',
                         'view>/currency'
                     ],
-                    type: 'sap.ui.model.type.Currency',
+                    type: 'Currency',
                     formatOptions: {
                         showMeasure: false
                     }

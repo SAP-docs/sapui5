@@ -27,19 +27,31 @@ You can add other properties, such as formatters, data types, or events:
 -   Data type:
 
     ```xml
-    <Input value="{path: '/firstName', type: 'sap.ui.model.type.String'}"/>
+    <mvc:View
+        xmlns:core="sap.ui.core"
+        xmlns:mvc="sap.ui.core.mvc"
+        xmlns="sap.m"
+        core:require="{StringType: 'sap/ui/model/type/String'}">
+        
+        <Input value="{path: '/firstName', type: 'StringType'}"/>
     ```
 
 -   Formatter:
 
     ```xml
-    <Input value="{path: '/firstName', formatter: 'my.globalFormatter'}"/>
+    <mvc:View
+        xmlns:core="sap.ui.core"
+        xmlns:mvc="sap.ui.core.mvc"
+        xmlns="sap.m"
+        core:require="{globalFormatter: 'my/globalFormatter'}">
+        
+        <Input value="{path: '/firstName', formatter: 'globalFormatter'}"/>
     ```
 
 -   Event:
 
     ```xml
-    <Input value="{path: '/firstName', events: { dataRequested: '.onMyDataRequested'}"/>
+    <Input value="{path: '/firstName', events: {dataRequested: '.onMyDataRequested'}"/>
     ```
 
 
@@ -56,14 +68,16 @@ For more information about data types and formatters, see [Formatting, Parsing, 
 If a control requires data from multiple different model properties, you use a `parts` array of `path`s to define composite binding paths:
 
 ```xml
-<TextField value="{
-	parts: [
-		{path:'birthday/day'},
-		{path:'birthday/month'},
-		{path:'birthday/year'}
-	], 
-	formatter:'my.globalFormatter'
-}"/>
+<mvc:View
+    xmlns:core="sap.ui.core"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    core:require="{globalFormatter: 'my/globalFormatter'}">
+
+    <TextField value="{
+        parts: [{path: 'birthday/day'}, {path: 'birthday/month'}, {path: 'birthday/year'}], 
+        formatter: 'globalFormatter'
+    }"/>
 ```
 
 For more information, see [Composite Binding](composite-binding-a2fe8e7.md) and [Examples for Data Binding in Different View Types](examples-for-data-binding-in-different-view-types-25ab54b.md).
@@ -77,7 +91,7 @@ For more information, see [Composite Binding](composite-binding-a2fe8e7.md) and 
 Expression binding is a simple way to calculate values directly in the view. For example, if you want to change the color of the price depending on whether it is above or below some threshold. With expression binding you don't have to declare a separate formatter:
 
 ```xml
-<ObjectStatus state="{= ${products>UnitPrice}  > ${/priceThreshold} ? 'Error' : 'Success' }"/>
+<ObjectStatus state="{= ${products>UnitPrice} > ${/priceThreshold} ? 'Error': 'Success' }"/>
 ```
 
 For more information, see [Expression Binding](expression-binding-daf6852.md).

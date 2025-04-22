@@ -125,16 +125,10 @@ The `UI.Chart Title` property is used for the title. The `UI.Chart Description` 
 > <Annotation Term="UI.DataPoint" Qualifier="Width">
 >     <Record>
 >         <PropertyValue Property="Value" Path="Width"/>
->         <PropertyValue Path="Day1" Property="Title" />
 >         <PropertyValue Property="Description" String="Column Micro Chart"/>
->         <PropertyValue Property="TargetValue" Path="Weight"/>
->         <PropertyValue Property="ForecastValue" Path="Height"/>
->         <PropertyValue Property="MinimumValue" Decimal="0"/>
->         <PropertyValue Property="MaximumValue" Decimal="100"/>
 >         <PropertyValue Property="Criticality" Path="criticalityValue"/>
 >     </Record>
 > </Annotation>
-> 
 > ```
 
 > ### Sample Code:  
@@ -145,13 +139,9 @@ The `UI.Chart Title` property is used for the title. The `UI.Chart Description` 
 > @UI.dataPoint: {
 >   description: 'Column Micro Chart',
 >   targetValueElement: 'Weight',
->   forecastValue: 'Height',
->   minimumValue: 0,
->   maximumValue: 100,
 >   criticality: 'criticalityValue'
 > }
 > Width;
-> 
 > ```
 
 > ### Sample Code:  
@@ -161,14 +151,9 @@ The `UI.Chart Title` property is used for the title. The `UI.Chart Description` 
 > 
 > UI.DataPoint #Width : {
 >     Value : Width,
->     Title : Day1,
->     Description : 'Column Micro Chart',
->     TargetValue : Weight,
->     ForecastValue : Height,
->     MinimumValue : 0,
->     MaximumValue : 100,
->     Criticality : criticalityValue
+>     Description : 'Column Micro Chart',    Criticality : criticalityValue
 > }
+> 
 > 
 > ```
 
@@ -176,7 +161,7 @@ For semantic coloring, both the `Criticality` and `CriticalityCalculation` annot
 
 The following annotations are mandatory and must be used in the column micro chart:
 
--   `UI.Chart` → `ChartType`: "`Donut`"
+-   `UI.Chart` → `ChartType`: "`Column`"
 
 -   `UI.Chart` → `Measures`
 
@@ -184,7 +169,7 @@ The following annotations are mandatory and must be used in the column micro cha
 
 -   `UI.DataPoint` → `Value`
 
--   In case the `CriticalityCalculation` annotation is used for semantic coloring, then:
+-   In case the `CriticalityCalculation` annotation is used for semantic coloring, the following applies:
 
     -   `UI.DataPoint` → `CriticalityCalculation`
 

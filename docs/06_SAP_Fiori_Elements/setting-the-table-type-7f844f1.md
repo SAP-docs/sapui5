@@ -437,7 +437,7 @@ When a grid table is not the sole control within a section of an object page or 
 
     -   `Auto`: The number of rows is changed by the table automatically, adjusting to the space it is allowed to cover \(limited by the surrounding container\), but there are always at least as many rows as defined in the `rowCount` property.
 
-    -   `Interactive`: The user can change the number of displayed rows by dragging a resizer.
+    -   `Interactive`: The user can change the number of displayed rows by dragging a resize handle.
 
 
 

@@ -17,14 +17,14 @@ Let's say, we have the following JSON data:
 
 ```json
 {
-	"company" : {
-		"name"  : "Acme Inc.",
-		"street": "23 Franklin St.",
-		"city"  : "Claremont",
-		"state" : "New Hampshire",
-		"zip"   : "03301",
-		"revenue": "1833990"
-	}
+    "company": {
+        "name": "Acme Inc.",
+        "street": "23 Franklin St.",
+        "city": "Claremont",
+        "state": "New Hampshire",
+        "zip": "03301",
+        "revenue": "1833990"
+    }
 }
 ```
 
@@ -32,10 +32,10 @@ To define property binding in the control declaration in the **XML view**, just 
 
 ```xml
 <mvc:View 
-	controllerName="sap.ui.sample.App"
-	xmlns="sap.m"
-	xmlns:mvc="sap.ui.core.mvc">
-	<Input value="{/company/name}"/>
+    controllerName="sap.ui.sample.App"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc">
+    <Input value="{/company/name}"/>
 </mvc:View>
 ```
 
@@ -43,9 +43,7 @@ In **JavaScript**, you can include the binding path within curly brackets as a s
 
 ```js
 // "Input" required from module "sap/m/Input"
-var oInput = new sap.m.Input({
-	value: "{/company/name}"
-});
+const oInput = new Input({value: "{/company/name}"});
 ```
 
 You can also use a complex syntax for property bindings. This complex syntax allows you to define additional binding information to be contained in the `settings` object, such as a formatter function.
@@ -54,14 +52,10 @@ You can then set the `bindingMode` or other additional properties like this:
 
 ```xml
 <mvc:View
-	controllerName="sap.ui.sample.App"
-	xmlns="sap.m"
-	xmlns:mvc="sap.ui.core.mvc">
-	<Input
-		value="{
-			path:'/company/name', 
-			mode: 'OneWay' 
-		}"/>
+    controllerName="sap.ui.sample.App"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc">
+    <Input value="{path: '/company/name', mode: 'OneWay'}"/>
 </mvc:View>
 ```
 
@@ -71,11 +65,11 @@ In **JavaScript** views or controllers, you use a JS object instead of a string 
 // "Input" required from module "sap/m/Input"
 // "BindingMode" required from module "sap/ui/model/BindingMode"
 
-var oInput = new Input ({
-	value: {
-		path: "/company/name",
-		mode: BindingMode.OneWay
-	}
+const oInput = new Input ({
+    value: {
+        path: "/company/name",
+        mode: BindingMode.OneWay
+    }
 });
 ```
 
@@ -88,12 +82,9 @@ oInput.bindProperty("value", "/company/name");
 This option also allows you to use the same object literal that you used in the constructor to define the binding:
 
 ```js
-// "TypeInteger" required from module "sap/ui/model/type/Integer"
+// "Integer" required from module "sap/ui/model/type/Integer"
 
-oInput.bindProperty("value", {
-	path: "/company/name",
-	type: new TypeInteger()
-});
+oInput.bindProperty("value", {path: "/company/name", type: Integer});
 ```
 
 > ### Note:  
@@ -134,19 +125,19 @@ If you define the property binding in the **XML view**, you need to define a for
 
 ```js
 sap.ui.define([
-	"sap/ui/core/mvc/Controller",
-	"sap/ui/model/json/JSONModel"
+    "sap/ui/core/mvc/Controller",
+    "sap/ui/model/json/JSONModel"
 ], function (Controller, JSONModel) {
-	"use strict";
-	return Controller.extend("sap.ui.sample.App", {
-		……………
-		roundToMillion: function(fValue) {
-			if (fValue) {
-				return "> " + Math.floor(fValue/1000000) + "M";
-			}
-			return "0";
-		}
-	});
+    "use strict";
+
+    return Controller.extend("sap.ui.sample.App", {
+        roundToMillion(fValue) {
+            if (fValue) {
+                return `> ${Math.floor(fValue/1000000)} M`;
+            }
+            return "0";
+        }
+    });
 }); 
 ```
 
@@ -154,14 +145,10 @@ The `this` context of a formatter function is generally set to the control \(or 
 
 ```xml
 <mvc:View
-	controllerName="sap.ui.sample.App"
-	xmlns="sap.m"
-	xmlns:mvc="sap.ui.core.mvc">
-	<Input
-		value="{ 
-			path:'/company/revenue',
-			formatter: '.roundToMillion'
-		}"/>
+    controllerName="sap.ui.sample.App"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc">
+    <Input value="{path: '/company/revenue', formatter: '.roundToMillion'}"/>
 </mvc:View>
 ```
 
@@ -169,29 +156,28 @@ If you use **JavaScript**, you can pass the formatter function as a third parame
 
 ```js
 //"Input" required from module sap/m/Input
-
-oTextField.bindProperty("value", "/company/title", function(sValue) {
+oTextField.bindProperty("value", "/company/title", (sValue) => {
 	return sValue && sValue.toUpperCase();
 });
 
 oControl = new Input({
-	value: {
-		path:"/company/revenue",
-		formatter: function(fValue) {
-			if (fValue) {
-				return "> " + Math.floor(fValue/1000000) + "M";
-			}
-			return "0";
-		}
-	}
+    value: {
+        path: "/company/revenue",
+        formatter(fValue) {
+            if (fValue) {
+                return `> ${Math.floor(fValue/1000000)} M`;
+            }
+            return "0";
+        }
+    }
 })
 ```
 
 Because it can contain any JavaScript, the formatter function can be used for formatting a value and also for performing type conversions or calculating results, for example, to show a special traffic light image depending on a Boolean value:
 
 ```js
-oImage.bindProperty("src", "/company/trusted", function(bValue) {
-	return bValue ? "green.png" : "red.png";
+oImage.bindProperty("src", "/company/trusted", (bValue) => {
+    return bValue ? "green.png" : "red.png";
 }); 
 ```
 
@@ -208,14 +194,12 @@ Here's how you can use these types in an XML view:
 
 ```xml
 <mvc:View
-	controllerName="sap.ui.sample.App"
-	xmlns="sap.m"
-	xmlns:mvc="sap.ui.core.mvc">
-	<Input
-		value="{ 
-			path:'/company/revenue',
-			type: 'sap.ui.model.type.Integer'
-		}"/>
+    controllerName="sap.ui.sample.App"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:mvc="sap.ui.core.mvc"
+    core:require="{Integer: 'sap/ui/model/type/Integer'}">
+    <Input value="{path: '/company/revenue', type: 'Integer'}"/>
 </mvc:View>
 
 ```
@@ -224,39 +208,63 @@ You can also provide parameter values for some of the simple types in your XML v
 
 ```xml
 <mvc:View
-   controllerName="sap.ui.sample.App"
-   xmlns="sap.m"
-   xmlns:mvc="sap.ui.core.mvc">
-   <Input
-	value="{ 
-		path:'/company/revenue', 
-		type: 'sap.ui.model.type.Float',
-		formatOptions: {
-			minFractionDigits: 2,
-			maxFractionDigits: 2
-		}
-	}"/>
+    controllerName="sap.ui.sample.App"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+    core:require="{Float: 'sap/ui/model/type/Float'}">
+    <Input
+        value="{ 
+            path: '/company/revenue', 
+            type: 'Float',
+            formatOptions: {
+                minFractionDigits: 2,
+                maxFractionDigits: 2
+            }
+    }"/>
 </mvc:View>
 ```
 
-Using JavaScript, you can define a type to be used for a property binding by passing it as a third parameter in `bindProperty` or by adding it to the binding information by using the key `type`, as shown here:
+Using JavaScript, you can define a type to be used for a property binding by passing it as a third parameter in `bindProperty` or by adding it to the binding information by using the `type` key. The type can be set using either the class object of the type or an instance of the type. When using the class object, you can also provide `formatOptions` and `constraints` directly in the binding information.
+
+**Example:** Using the Type Class
 
 ```js
-// "TypeString" required from module "sap/ui/model/type/String"
+// "StringType" required from module "sap/ui/model/type/String"
 // "Input" required from module "sap/m/Input"
-// "TypeFloat" required from module "sap/ui/model/type/Float"
+// "Float" required from module "sap/ui/model/type/Float"
 
-oTextField.bindProperty("value", "/company/name", new sap.ui.model.type.String());
+oTextField.bindProperty("value", "/company/name", StringType);
 
-oControl = new sap.m.Input({
-	value: {
-		path:"/company/revenue",
-		type: new TypeFloat({
-			minFractionDigits: 2,
-			maxFractionDigits: 2
-		})
-	}
-})
+oControl = new Input({
+    value: {
+        path: "/company/revenue",
+        type: Float,
+        formatOptions: {
+            minFractionDigits: 2,
+            maxFractionDigits: 2
+        }
+    }
+});
+```
+
+**Example:** Using a Type Instance
+
+```js
+// "StringType" required from module "sap/ui/model/type/String"
+// "Input" required from module "sap/m/Input"
+// "Float" required from module "sap/ui/model/type/Float"
+
+oTextField.bindProperty("value", "/company/name", new StringType());
+
+oControl = new Input({
+    value: {
+        path: "/company/revenue",
+        type: new Float({
+            minFractionDigits: 2,
+            maxFractionDigits: 2
+        })
+    }
+});
 ```
 
 Predefined data types also offer visual feedback for erroneous user input. To turn this feature on, add the following line to your controller's `init` function:
@@ -274,17 +282,17 @@ You can define **custom types** by inheriting from `sap.ui.model.SimpleType` and
 // "SimpleType" required from module "sap/ui/model/SimpleType"
 // "ValidateException" required from module "sap/ui/model/ValidateException"
 
-var Zipcode = SimpleType.extend("sap.ui.sample.Zipcode", {
-    formatValue: function(oValue) {
+const Zipcode = SimpleType.extend("sap.ui.sample.Zipcode", {
+    formatValue(oValue) {
         return oValue;
     },
-    parseValue: function(oValue) {
+    parseValue(oValue) {
         return oValue;
     },
     validateValue: function(oValue) {
-       if (!/^(\d{5})?$/.test(oValue)) {
+        if (!/^(\d{5})?$/.test(oValue)) {
             throw new ValidateException("Zip code must have 5 digits!");
-       }
+        }
     }
 });
 ```
@@ -293,14 +301,12 @@ You can use your custom types in XML views or JavaScript in the same way as you 
 
 ```xml
 <mvc:View
-   controllerName="sap.ui.sample.App"
-   xmlns="sap.m"
-   xmlns:mvc="sap.ui.core.mvc">
-   <Input
-      value="{
-		path:'/company/zip',
-		type: 'sap.ui.sample.Zipcode'
-     }"/>
+    controllerName="sap.ui.sample.App"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:mvc="sap.ui.core.mvc"
+    core:require="{Zipcode: 'sap/ui/sample/Zipcode'}">
+    <Input value="{path: '/company/zip', type: 'Zipcode'}"/>
 </mvc:View>
 ```
 
@@ -316,22 +322,22 @@ By default, all bindings of a model instance have the default binding mode of th
 // "JSONModel" required from module "sap/ui/model/json/JSONModel"
 // "Input" required from module "sap/m/Input"
 // "BindingMode" required from module "sap/ui/model/BindingMode"
-	var oModel = new JSONModel();
-	// default binding mode is two-way
-	oModel.setData(myData);
-	var oInputFirstName = new Input ();
-	oInputFirstName.setModel(oModel);
+const oModel = new JSONModel();
+// default binding mode is two-way
+oModel.setData(myData);
+const oInputFirstName = new Input ();
+oInputFirstName.setModel(oModel);
 
-	// bind value property one way only
-	// propertyname, formatter function, binding mode
-	oInputFirstName.bindValue("/firstName", null, BindingMode.OneWay);
-	oInputFirstName.placeAt("target1");
+// bind value property one way only
+// propertyname, formatter function, binding mode
+oInputFirstName.bindValue("/firstName", null, BindingMode.OneWay);
+oInputFirstName.placeAt("target1");
 
-	var oInputLastName = new Input();
-	oInputLastName.setModel(oModel);
-	// bind value property two way (default)
-	oInputLastName.bindValue("/lastName");
-	oInputLastName.placeAt("target2");
+const oInputLastName = new Input();
+oInputLastName.setModel(oModel);
+// bind value property two way (default)
+oInputLastName.bindValue("/lastName");
+oInputLastName.placeAt("target2");
 ```
 
 In the example above, two `Input` fields are created and their `value` property is bound to the same property in the model. The first `Input` binding has a one-way binding mode, whereas the second `Input` has the default binding mode of the model instance, which is two-way. For this reason, when text is entered in the first `Input`, the value will **not** be changed in the model. This only happens if text is entered in the second `Input`. Then, of course, the value of the first `Input` will be updated as it has a one-way binding, that is, from model to view.

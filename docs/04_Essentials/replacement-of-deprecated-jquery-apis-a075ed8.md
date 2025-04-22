@@ -3804,7 +3804,7 @@ New Module
 <tr>
 <td valign="top">
 
-`jQuery.fn.addLabelledBy` 
+`jQuery.fn.addAriaLabelledBy` 
 
 </td>
 <td valign="top">
@@ -3821,7 +3821,7 @@ New Module
 <tr>
 <td valign="top">
 
-`jQuery.fn.removeLabelledBy` 
+`jQuery.fn.removeAriaLabelledBy` 
 
 </td>
 <td valign="top">
@@ -3838,7 +3838,7 @@ New Module
 <tr>
 <td valign="top">
 
-`jQuery.fn.addDescribedBy` 
+`jQuery.fn.addAriaDescribedBy` 
 
 </td>
 <td valign="top">
@@ -3855,7 +3855,7 @@ New Module
 <tr>
 <td valign="top">
 
-`jQuery.fn.removeDescribedBy` 
+`jQuery.fn.removeAriaDescribedBy` 
 
 </td>
 <td valign="top">

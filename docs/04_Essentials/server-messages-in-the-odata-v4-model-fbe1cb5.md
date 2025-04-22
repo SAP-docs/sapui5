@@ -575,6 +575,8 @@ Let `messageModel` be the named message model. A table row with messages can be 
 > Formatter to highlight a table row
 > 
 > ```js
+> // "MessageType" required from module "sap/ui/core/message/MessageType"
+> 
 > this.byId("row").bindProperty("highlight", {
 >     formatter: function () {
 >         var aMessages,
@@ -583,7 +585,7 @@ Let `messageModel` be the named message model. A table row with messages can be 
 >  
 >         if (oRowContext) { // formatter is called with oRowContext null initially
 >             aMessages = oRowContext.getMessages();
->             return aMessages.length ? aMessages[0].type : sap.ui.core.MessageType.None;
+>             return aMessages.length ? aMessages[0].type : MessageType.None;
 >         }
 >     },
 >     parts: [

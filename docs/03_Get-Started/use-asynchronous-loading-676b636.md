@@ -16,12 +16,12 @@ Add the bootstrapping tag `data-sap-ui-async="true"` to your `index.html` file. 
 
 ```html
 <script 
-	id="sap-ui-bootstrap"
-	src="/resources/sap-ui-core.js"
-	data-sap-ui-compat-version="edge"
-	data-sap-ui-async="true"
-	data-sap-ui-on-init="module:my/app/main"
-	data-sap-ui-resource-roots='{"my.app": "./"}'
+    id="sap-ui-bootstrap"
+    src="/resources/sap-ui-core.js"
+    data-sap-ui-compat-version="edge"
+    data-sap-ui-async="true"
+    data-sap-ui-on-init="module:my/app/main"
+    data-sap-ui-resource-roots='{"my.app": "./"}'
 >
 ```
 
@@ -82,7 +82,7 @@ To configure the targets for asynchronous loading, please also check the [Routin
 
 ```json
 "sap.ui5": {
-	"rootView": {
+    "rootView": {
         "viewName": "my.app.view.App",
         "type": "XML",
         "id": "app",
@@ -98,7 +98,8 @@ To configure the targets for asynchronous loading, please also check the [Routin
             "async": true
         }
     },
-...
+    ...
+}
 ```
 
 **Additional Information:**
@@ -120,12 +121,12 @@ The following code shows a sample UIComponent implementing the interface:
 
 ```js
 sap.ui.define(["sap/ui/core/UIComponent"], function(UIComponent) {
-	return UIComponent.extend("my.app.Component", {
-		metadata: {
-			interfaces: ["sap.ui.core.IAsyncContentCreation"],
-			manifest: "json"
-		}
-	});
+    return UIComponent.extend("my.app.Component", {
+        metadata: {
+            interfaces: ["sap.ui.core.IAsyncContentCreation"],
+            manifest: "json"
+        }
+    });
 });
 ```
 

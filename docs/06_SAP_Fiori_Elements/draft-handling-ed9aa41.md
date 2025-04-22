@@ -172,11 +172,11 @@ Avatars of all the users who are currently accessing this draft are displayed in
 
 When a user starts typing in a field or sets the focus in a specific field, it is locked for all the other users. An indicator appears next to the field to show who is modifying it.
 
-When a user changes a field or performs an action, such as creating a new subitem, deleting a subitem or calling an action, the new changes are immediately visible to the other users. When a user saves or discards the draft, the other users are notified.
+When a user changes a field or performs an action, such as creating a new subitem, deleting a subitem, or calling an action, the new changes are immediately visible to the other users. When a user saves or discards the draft, the other users are notified.
 
 Clicking the *Invite* button next to the user avatars shows a list of users who are currently editing the draft or have previously edited it. Users can also add other users to the list, asking them to join the collaborative draft. Note that adding a user to this list does not change their authorization. Only users with access to the business object can be invited.
 
-When a user is added to the list, the draft will appear in their *Own Draft* list.
+When a user is added to the list, the draft appears in their *Own Draft* list.
 
 > ### Caution:  
 > The collaborative draft uses WebSocket for the synchronization between the participants, which extends the browser session timeout until all users have either navigated away from the draft, closed the session, or closed the application.
@@ -187,6 +187,82 @@ When a user is added to the list, the draft will appear in their *Own Draft* lis
 > -   This feature is only supported when using the ABAP RESTful Application Programming Model \(RAP\).
 > 
 > -   The lock mechanism is only supported by app extensions built using the SAP Fiori elements for OData V4 building blocks.
+
+
+
+### Hiding Draft-Related Features
+
+In applications that have only a limited number of editable fields, draft handling adds unnecessary overhead for users. For such applications, all features related to draft handling can be hidden from the UI while the draft functionality remains active in the background. To achieve this, enable the `hideDraft` property in the `manifest.json` file, as shown in the following sample code:
+
+> ### Sample Code:  
+> manifest.json
+> 
+> ```
+> "sap.fe": {
+>   "app": {
+>     "hideDraft": {
+>       "enabled": true
+>     }
+>   }
+> }
+> 
+> ```
+
+These applications work as follows:
+
+-   List Report
+
+    The *Editing Status* filter field is hidden.
+
+-   Object Page
+
+    -   In create mode, when a user attempts to navigate away without saving the object, the application does not display the standard confirmation popup for activating the draft. Instead, it only displays the *Save* and *Cancel* actions.
+
+    -   In edit mode, after a user modifies a field in the object page, the *Draft updated* message doesn't appear in the footer.
+
+
+    The default navigation behavior retains a user on the same page after canceling or saving an object. You can modify this behavior to navigate back to the root object by configuring specific settings in the `manifest.json` file, as shown in the following sample code:
+
+    > ### Sample Code:  
+    > manifest.json
+    > 
+    > ```
+    > "sap.fe": {
+    >   "app": {
+    >     "hideDraft": {
+    >       "enabled": true,
+    >       "stayOnCurrentPageAfterSave": false,
+    >       "stayOnCurrentPageAfterCancel": false
+    >     }
+    >   }
+    > }
+    > 
+    > ```
+
+    > ### Tip:  
+    > To ensure a consistent experience, set `stayOnCurrentPageAfterSave` and `stayOnCurrentPageAfterCancel` to the same value.
+
+    The *Create Next* button allows a user to quickly create new objects. This button is visible by default. However, you can control its visibility by setting `hideCreateNext: true` in the `manifest.json` file, as shown in the following sample code:
+
+    > ### Sample Code:  
+    > manifest.json
+    > 
+    > ```
+    > "sap.fe": {
+    >   "app": {
+    >     "hideDraft": {
+    >       "enabled": true,
+    >       "hideCreateNext": true
+    >     }
+    >   }
+    > }
+    > 
+    > ```
+
+-   Subobject page
+
+    The *Apply* button is hidden.
+
 
 
 

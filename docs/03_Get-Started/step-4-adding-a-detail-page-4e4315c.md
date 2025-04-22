@@ -80,12 +80,15 @@ We add the detail page in `FlexibleColumnLayout's` `midColumnPages` aggregation 
 							<cells>
 								<ObjectIdentifier title="{products>Name}" text="{products>ProductId}"/>
 								<ObjectNumber
+									core:require="{
+										Currency: 'sap/ui/model/type/Currency'
+									}"
 									number="{
 										parts:[
 											{path:'products>Price'},
 											{path:'products>CurrencyCode'}
 										],
-										type: 'sap.ui.model.type.Currency',
+										type: 'Currency',
 										formatOptions: {showMeasure: false}
 									}"
 									unit="{products>CurrencyCode}"/>

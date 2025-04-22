@@ -37,8 +37,10 @@ According to the `OData Version 2.0` specification, the following date and time 
 
     ```xml
     <TimePicker displayFormat="short"
-                value="{ path: 'EntryTime', type: 'sap.ui.model.odata.type.Time'}"/>
-    
+        core:require="{
+            Time: 'sap/ui/model/odata/type/Time'
+        }"
+        value="{ path: 'EntryTime', type: 'Time' }"/>
     ```
 
     The sample shows how to bind time values at the backend \(for example PT11H33M55S for 11:33:55\). Note that there is a dedicated data binding type that recognizes the `Edm.Time` format and can handle time conversions in both directions - from and to the backend. When you are working with this data binding type and you choose a value using the `TimePicker` control, the same value will be sent to the backend, that is, no timezone conversions will be applied to the value.
@@ -59,13 +61,17 @@ According to the `OData Version 2.0` specification, the following date and time 
 ### Binding of date values to `DatePicker`
 
 ```xml
-<DatePicker value="{
-	path: 'EntryDate',
-	type: 'sap.ui.model.odata.type.DateTime',
-	constraints: {
-		displayFormat: 'Date'
-	}
-}" />
+<DatePicker
+    core:require="{
+        DateTime: 'sap/ui/model/odata/type/DateTime'
+    }"
+    value="{
+        path: 'EntryDate',
+        type: 'DateTime',
+        constraints: {
+            displayFormat: 'Date'
+        }
+    }"/>
 ```
 
 If you have date values at the backend, you should bind them as shown in the sample above. When exposing its database field \(`EntryDate`\) via `OData`, date values can be exposed both as `Edm.DateTime` and `Edm.DateTimeOffset`. The syntax for binding the `DatePicker` value property is the same in both cases.
@@ -78,8 +84,10 @@ Above you can see an example of the `displayFormat` constraint. It specifies if 
 
 ```xml
 <DateTimePicker
-        value="{ path: 'EntryDateTime', type: 'sap.ui.model.odata.type.DateTime' }"/>
-
+    core:require="{
+        DateTime: 'sap/ui/model/odata/type/DateTime'
+    }"
+    value="{ path: 'EntryDateTime', type: 'DateTime' }"/>
 ```
 
 In this example, the binding type specifies that the backend data will be interpreted as a date and time field.
@@ -94,8 +102,15 @@ In this example, the binding type specifies that the backend data will be interp
 1.  With a dedicated EDM type \(`Edm.DateTime`, `Edm.DateTimeOffset`\):
 
     ```xml
-    <DateRangeSelection value="{parts: [{path: 'EntryDate'}, {path: 'EntryDateTimeOffset'}], type: 'sap.ui.model.type.DateInterval',
-    formatOptions: { UTC: true, format: 'yMd' }}" />
+    <DateRangeSelection 
+        core:require="{
+            DateInterval: 'sap/ui/model/type/DateInterval'
+        }"
+        value="{
+            parts: [{path: 'EntryDate'}, {path: 'EntryDateTimeOffset'}],
+            type: 'DateInterval',
+            formatOptions: { UTC: true, format: 'yMd' }
+        }"/>
     ```
 
     If you have two dates in the backend represented as `Emd.DateTime` and/or `Edm.DateTimeOffset`, you can bind them to the `DateRangeSelection` control as shown above.
@@ -106,7 +121,7 @@ In this example, the binding type specifies that the backend data will be interp
 
     ```xml
     <DateRangeSelection
-            value="{path: 'EntryDateRange', valueFormat: 'MMM d, y'}"/>
+        value="{path: 'EntryDateRange', valueFormat: 'MMM d, y'}"/>
     
     ```
 

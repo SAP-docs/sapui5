@@ -205,7 +205,7 @@ Hide the anchor bar.
 </td>
 <td valign="top">
 
-On the page layout node, set the `showAnchorBar` property to `false`.
+In the page layout node, set the `showAnchorBar` property to `false`.
 
 </td>
 </tr>
@@ -217,7 +217,7 @@ Switch to tabs.
 </td>
 <td valign="top">
 
-On the page layout node, set the property `useIconTabBar` to `true`.
+In the page layout node, set the `useIconTabBar` property to `true`.
 
 </td>
 </tr>
@@ -241,7 +241,7 @@ Show header content in edit mode.
 </td>
 <td valign="top">
 
-On the page layout node, set the `showHeaderContent` property to `true` or `false`, to determine the header content visibility.
+In the page layout node, set the `showHeaderContent` property to either `true` or `false`, to determine the header content visibility.
 
 Alternatively, you can make a binding change if you need to change the value according to a property or an expression. For more information, see [Creating a Binding Change](creating-a-binding-change-4754094.md).
 
@@ -255,10 +255,10 @@ Don't collapse headers when scrolling down.
 </td>
 <td valign="top">
 
-On the page layout node, set the `alwaysShowContentHeader` property to `true`.
+In the page layout node, set the `alwaysShowContentHeader` property to `true`.
 
 > ### Note:  
-> On tablets and mobile phones, the header collapses automatically.
+> On small-screen devices such as tablets and mobile phones, the header collapses automatically.
 
 
 
@@ -267,7 +267,7 @@ On the page layout node, set the `alwaysShowContentHeader` property to `true`.
 <tr>
 <td valign="top">
 
-Change the default `growingThreshold` value for the object page's `sap.m.Table`. The default value is 10.
+Change the default `growingThreshold` value for `sap.m.Table` in the object page. The default value is 10.
 
 > ### Note:  
 > When there is a single section with a single subsection holding a table, the default `growingThreshold` value is 20, and it cannot be changed.
@@ -277,25 +277,25 @@ Change the default `growingThreshold` value for the object page's `sap.m.Table`.
 </td>
 <td valign="top">
 
-In the outline, select the table whose value needs to be changed and set the new value for the `growingThreshold` property.
+In the table node, set the new value for the `growingThreshold` property.
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-Set object page tables that only contain non-editable content to not editable.
+Set tables to not editable.
 
-By default, object page tables are automatically set to `editable` if the object page is in edit mode. This means that users can only access editable table content when they navigate through the table using the [tab\] key.
+By default, object page tables are automatically set to `editable` if the object page is in edit mode. This means that users can only access editable table content when they navigate through the table using the [Tab\] key.
 
-However, in a table with only non-editable content, there is no tab stop.
+However, the [Tab\] key cannot be used in a table with non-editable content.
 
 </td>
 <td valign="top">
 
 Set the `editable` property of the table to `false`. The inner table's `navigationMode` property is set to `Navigation`.
 
-Users can then navigate through the entire focusable table content, not only through the editable fields.
+Users can then navigate through the entire focusable table content.
 
 </td>
 </tr>
@@ -309,14 +309,14 @@ By setting this property to `true`, the item selection is displayed even if a us
 </td>
 <td valign="top">
 
-In the table, set the `includeItemInSelection` property to `True`.
+In the table node, set the `includeItemInSelection` property to `True`.
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-Enable the *Save and Edit* button in non-draft applications. Users can choose this button to save the current changes. The object page stays in edit mode so that they can continue editing.
+Enable the *Save and Edit* button in non-draft applications. Users can click this button to save the current changes. The object page stays in edit mode so that they can continue editing.
 
 </td>
 <td valign="top">
@@ -328,12 +328,12 @@ In the outline view of the object page, select the `Save and Edit` action from t
 <tr>
 <td valign="top">
 
-Change the layout of the object table for better readability for a high number of columns.
+Change the layout of the table to improve readability when viewing many columns.
 
 </td>
 <td valign="top">
 
-In the table, set the `popinLayout` property to one of the following values:
+In the table node, set the `popinLayout` property to one of the following values:
 
 -   `Block`
 
@@ -349,12 +349,12 @@ The default layout is `Block`.
 <tr>
 <td valign="top">
 
-Change the default value of the `scrollThreshold` parameter in grid tables, analytical tables, and tree tables.
+Change the default value of the `scrollThreshold` property in grid tables, analytical tables, and tree tables.
 
 </td>
 <td valign="top">
 
-In the outline, choose the table that requires a change to its `scrollThreshold` parameter, and update it with the new value.
+In the table node, set the new value for the `scrollThreshold` property.
 
 The default value is 300.
 

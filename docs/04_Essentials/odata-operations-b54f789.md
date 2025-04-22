@@ -10,8 +10,15 @@ The OData V4 model supports OData operations \(`ActionImport`, `FunctionImport`,
 
 You gain access to a `FunctionImport` by binding it to a view element. If there are no parameters and there is no need to control the point in time when the function is called, you can simply bind the OData path like this:
 
-```js
-<Text text="{path: '/GetNumberOfAvailableItems()', type: 'sap.ui.model.odata.type.Int16'}"/>
+```
+<Text 
+    core:require="{
+        Int16: 'sap/ui/model/odata/type/Int16'
+    }"
+    text="{
+        path: '/GetNumberOfAvailableItems()',
+        type: 'Int16'
+    }" />
 ```
 
 This binding path represents the function's return value. The model calls the function immediately when a control requests this value.

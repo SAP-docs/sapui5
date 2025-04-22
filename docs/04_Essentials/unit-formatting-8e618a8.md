@@ -274,11 +274,11 @@ Besides the NumberFormat instances, you now can also include the new Unit type i
 To demonstrate this, we can consider an example with electric meters. Typically they all measure the flow of energy in kilowatt hours \(kWh\). Yet some meters are more precise than others, some measure up to a few hundred wattseconds, others just cap it at full kilowatt hours. To simplify it for our example: the number of decimals might differ depending on the type of electric meter.
 
 ```
-
 // defining a new custom Type as a subclass of the sap.ui.model.type.Unit type
-sap.ui.require(["sap/ui/model/type/Unit"], function(UnitType) {
+sap.ui.define(["sap/ui/model/type/Unit"], function(UnitType) {
+       "use strict";
  
-       UnitType.extend("sap.ui.core.samples.MeterType", {
+       return UnitType.extend("sap.ui.core.samples.MeterType", {
               constructor: function(oFormatOptions, oConstraints){
                      // define the dynamic format options as the third argument
                      // 'aDynamicFormatOptionNames'
@@ -292,16 +292,22 @@ In the example we defined a new `MeterType` to combine not only a number value a
 
 ```
 <-- XML View snippet -->
-<t:Table rows='energyModel>/meters'>
-   ... <!-- here is more Table definition stuff, we cut this for simplicity -->
- 
- 
-   <!-- the third part of the binding is the number of decimals for this meter instance -->
-   <m:Label text="{parts:['energyModel>value', 'energyModel>unit', 'energyModel>decimals'],type: 'sap.ui.core.samples.MeterType'}"/>
- 
- 
+<mvc:View
+    xmlns:m="sap.m"
+    xmlns:t="sap.ui.table"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:core="sap.ui.core"
+    core:require="{MeterType: 'sap/ui/core/samples/MeterType'}">
    ...
-</t:Table>
+        <t:Table rows='energyModel>/meters'>
+        ... <!-- here is more Table definition stuff, we cut this for simplicity -->
+
+        <!-- the third part of the binding is the number of decimals for this meter instance -->
+        <m:Label text="{parts:['energyModel>value', 'energyModel>unit', 'energyModel>decimals'], type: 'MeterType'}"/>
+
+        ...
+        </t:Table>
+   ...
 ```
 
 With the new bindable dynamic format options of Unit type, you can pass the relevant meter formatting information in a generalized way through the cell's bindings.

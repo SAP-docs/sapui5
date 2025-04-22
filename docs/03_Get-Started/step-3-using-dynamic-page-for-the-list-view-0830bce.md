@@ -137,6 +137,7 @@ We create the `init` method in the `Component.js` to set the model.
 <mvc:View
 	controllerName="sap.ui.demo.fcl.controller.List"
 	xmlns="sap.m"
+	xmlns:core="sap.ui.core"
 	xmlns:f="sap.f"
 	xmlns:mvc="sap.ui.core.mvc">
 	<f:DynamicPage id="dynamicPageId" toggleHeaderOnTitleClick="false">
@@ -182,12 +183,15 @@ We create the `init` method in the `Component.js` to set the model.
 							<cells>
 								<ObjectIdentifier title="{products>Name}" text="{products>ProductId}"/>
 								<ObjectNumber
+									core:require="{
+										Currency: 'sap/ui/model/type/Currency'
+									}"
 									number="{
 										parts:[
 											{path:'products>Price'},
 											{path:'products>CurrencyCode'}
 										],
-										type: 'sap.ui.model.type.Currency',
+										type: 'Currency',
 										formatOptions: {showMeasure: false}
 									}"
 									unit="{products>CurrencyCode}"/>

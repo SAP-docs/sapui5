@@ -14,9 +14,14 @@ Examples how complex syntax can be used for calculated fields in XML, HTML, and 
 
 <mvc:View 
     controllerName="testdata.complexsyntax"
+    xmlns:core="sap.ui.core"
     xmlns:mvc="sap.ui.core.mvc"
-    xmlns="sap.m">
-    <Label text="Hello Mr. {/employees/0/lastName}, {path:'/employees/0/firstName', formatter:'.myFormatter'}"/>
+    xmlns="sap.m"
+    core:require="{
+        globalFormatter: 'my/globalFormatter',
+        Float: 'sap/ui/model/type/Float'
+    }">
+    <Label text="Hello Mr. {/employees/0/lastName}, {path: '/employees/0/firstName', formatter: '.myFormatter'}"/>
     <Table items="{/employees}">
         <columns>
             <Column>
@@ -27,15 +32,15 @@ Examples how complex syntax can be used for calculated fields in XML, HTML, and 
             </Column>
         </columns>
         <items>
-			<ColumnListItem>
-				<cells>
-                    <Text text="{path:'gender', formatter:'.myGenderFormatter'} {firstName}, {lastName}"/>
-                    <Text text="{parts:[{path:'birthday/day'},{path:'birthday/month'},{path:'birthday/year'}], formatter:'my.globalFormatter'}"/>
+            <ColumnListItem>
+                <cells>
+                    <Text text="{path: 'gender', formatter: '.myGenderFormatter'} {firstName}, {lastName}"/>
+                    <Text text="{parts: [{path: 'birthday/day'}, {path: 'birthday/month'}, {path: 'birthday/year'}], formatter: 'globalFormatter'}"/>
                 </cells>
-			</ColumnListItem>
+            </ColumnListItem>
         </items>
     </Table>
-        <Label text="{path:'/statistics/amount', type:'sap.ui.model.type.Float', formatOptions: { minFractionDigits: 1}}"/>
+    <Label text="{path: '/statistics/amount', type: 'Float', formatOptions: {minFractionDigits: 1}}"/>
 </mvc:View>
 
 ```
@@ -50,50 +55,39 @@ A typed view is not a declarative view. It is written in JavaScript and extends 
 
 ```js
 sap.ui.define([
+    "my/globalFormatter",
     "sap/ui/core/mvc/View",
+    "sap/ui/model/type/Float",
     "sap/m/Table",
     "sap/m/Column",
     "sap/m/ColumnListItem",
     "sap/m/Label",
     "sap/m/Text"
-    ], function(View, Table, Column, ColumnListItem, Label, Text) {
+    ], function(globalFormatter, View, Float, Table, Column, ColumnListItem, Label, Text) {
     return View.extend("testdata.complexsyntax", {
       
-        getControllerName: function() {
+        getControllerName() {
             return "testdata.complexsyntax";
         },
-        getAutoPrefixId: function() {
+        getAutoPrefixId() {
             return true;
         },
-        createContent: function(oController) {
-            var oLabelWelcome = new Label({ 
-                text: "Hello Mr. {/employees/0/lastName}, {path:'/employees/0/firstName', formatter:'.myFormatter'}"
+        createContent(oController) {
+            const oLabelWelcome = new Label({ 
+                text: "Hello Mr. {/employees/0/lastName}, {path: '/employees/0/firstName', formatter: '.myFormatter'}"
             }, oController);
-            var oLabelName = new Label({
-                text: "Name" 
-            });
-            var oLabelBirthday = new Label({
-                text: "Birthday" 
-            });
-            var oColumnName = new Column({
-                header: oLabelName
-            });
-            var oColumnBirthday = new Column({
-                 header: oLabelBirthday
-            });
-            var oTextName = new Text({
-                text: "{path:'gender', formatter:'.myGenderFormatter'} {firstName} {lastName}"
+            const oLabelName = new Label({text: "Name"});
+            const oLabelBirthday = new Label({text: "Birthday"});
+            const oColumnName = new Column({header: oLabelName});
+            const oColumnBirthday = new Column({header: oLabelBirthday});
+            const oTextName = new Text({
+                text: "{path: 'gender', formatter: '.myGenderFormatter'} {firstName} {lastName}"
             }, oController);
-            var oTextBirthday = new Text({
-                text: "{parts:[{ path:'birthday/day'}, {path:'birthday/month'}, {path:'birthday/year' }], formatter:'my.globalFormatter'}"
+            const oTextBirthday = new Text({
+                text: "{parts: [{ path: 'birthday/day'}, {path: 'birthday/month'}, {path: 'birthday/year' }], formatter: 'globalFormatter'}"
             }, oController);
-            var oColumnListItemTemplate = new ColumnListItem({
-                cells: [
-                    oTextName,
-                    oTextBirthday
-                ]
-            });
-            var oTable = new Table({ 
+            const oColumnListItemTemplate = new ColumnListItem({cells: [oTextName, oTextBirthday]});
+            const oTable = new Table({ 
                 columns: [
                     oColumnName,
                     oColumnBirthday
@@ -105,11 +99,9 @@ sap.ui.define([
                 }
             });
             
-            var oLabelAmount = new Label({
-                text: "{path:'/statistics/amount', type:'sap.ui.model.type.Float'}"
-            });
+            const oLabelAmount = new Label({text: {path: '/statistics/amount', type: 'Float'}});
             
-            return [ oLabelWelcome, oTable, oLabelAmount ];
+            return [oLabelWelcome, oTable, oLabelAmount];
         }
     });
 });

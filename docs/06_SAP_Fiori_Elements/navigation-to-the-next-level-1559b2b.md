@@ -10,7 +10,7 @@ Use the table chevron navigation to navigate from the table that lists the entri
 
 ## Additional Features in SAP Fiori Elements for OData V2
 
-For details on navigation from a list report to an object page, see [Configuring Internal Navigation](configuring-internal-navigation-2c65f07.md).
+For more information about navigating from a list report to an object page, see [Configuring Internal Navigation](configuring-internal-navigation-2c65f07.md).
 
 
 
@@ -18,9 +18,11 @@ For details on navigation from a list report to an object page, see [Configuring
 
 ## Additional Features in SAP Fiori Elements for OData V4
 
-The following manifest snippet shows how an object page and subobject page can be configured to enable the normal navigation from a list report to an object page, and from an object page to a subobject page.
+You can configure an object page and subobject page to enable normal navigation from a list report to an object page, and from an object page to a subobject page, as shown in the following sample code:
 
 > ### Sample Code:  
+> manifest.json
+> 
 > ```json
 > {
 >    "targets":{

@@ -2,9 +2,11 @@
 
 # List Report Elements
 
-The list report lets the user work with a large list of items. It combines powerful functions for filtering large lists with different ways of displaying the resulting item list.
+The list report lets the user to work with a large list of items. It combines powerful functions for filtering large lists with different ways of displaying the resulting item list.
 
 
+
+This image is interactive. Hover over each area for a description. Click highlighted areas for more information.
 
 ![](images/List_Report_Elements_1_15b5553.png)
 
@@ -27,6 +29,7 @@ The list report view includes the following main elements:
 -   Table
 
 -   Footer toolbar that can include optional actions
+
 
 For more information about the loading behavior of an app, see [Loading Behavior of Data on Initial Launch of the Application](loading-behavior-of-data-on-initial-launch-of-the-application-9f4e119.md).
 

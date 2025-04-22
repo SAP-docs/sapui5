@@ -152,26 +152,17 @@ The `UI.Chart Title` property is used for the title. The `UI.Chart Description` 
 > <Annotation Term="UI.DataPoint" Qualifier="Width">
 >     <Record>
 >         <PropertyValue Property="Value" Path="Width"/>
->         <PropertyValue Path="Day1" Property="Title" />
 >         <PropertyValue Property="Description" String="Line Micro Chart"/>
->         <PropertyValue Property="TargetValue" Path="Weight"/>
->         <PropertyValue Property="ForecastValue" Path="Height"/>
->         <PropertyValue Property="MinimumValue" Decimal="0"/>
->         <PropertyValue Property="MaximumValue" Decimal="100"/>
->         <PropertyValue Property="Criticality" Path="criticalityValue"/>
->     </Record>
-> </Annotation>
->  
-> <Annotation Term="UI.DataPoint" Qualifier="Depth">
->     <Record>
->         <PropertyValue Property="Value" Path="Depth"/>
->         <PropertyValue Path="Day2" Property="Title" />
->         <PropertyValue Property="MinimumValue" Decimal="0"/>
->         <PropertyValue Property="MaximumValue" Decimal="200"/>
 >         <PropertyValue Property="Criticality" Path="criticalityValue"/>
 >     </Record>
 > </Annotation>
 > 
+> <Annotation Term="UI.DataPoint" Qualifier="Depth">
+>     <Record>
+>         <PropertyValue Property="Value" Path="Depth"/>
+>         <PropertyValue Property="Criticality" Path="criticalityValue"/>
+>     </Record>
+> </Annotation>
 > ```
 
 > ### Sample Code:  
@@ -182,20 +173,14 @@ The `UI.Chart Title` property is used for the title. The `UI.Chart Description` 
 > @UI.dataPoint: {
 >   description: 'Line Micro Chart',
 >   targetValueElement: 'Weight',
->   forecastValue: 'Height',
->   minimumValue: 0,
->   maximumValue: 100,
 >   criticality: 'criticalityValue'
 > }
 > Width;
 > 
 > @UI.dataPoint: {
->   minimumValue: 0,
->   maximumValue: 200,
 >   criticality: 'criticalityValue'
 > }
 > Depth;
-> 
 > ```
 
 > ### Sample Code:  
@@ -205,23 +190,14 @@ The `UI.Chart Title` property is used for the title. The `UI.Chart Description` 
 > 
 > UI.DataPoint #Width : {
 >     Value : Width,
->     Title : Day1,
 >     Description : 'null',
->     TargetValue : Weight,
->     ForecastValue : Height,
->     MinimumValue : 0,
->     MaximumValue : 100,
 >     Criticality : criticalityValue
 > },
+> 
 > UI.DataPoint #Depth : {
 >     Value : Depth,
->     Title : Day2,
->     MinimumValue : 0,
->     MaximumValue : 200,
 >     Criticality : criticalityValue
 > }
-> 
-> 
 > ```
 
 > ### Note:  

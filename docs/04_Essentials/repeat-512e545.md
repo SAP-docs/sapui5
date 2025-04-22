@@ -26,13 +26,17 @@ The following example iterates all fields in the identification annotation from 
 ```xml
 
 <Label text="Product ID" />
-<Text text="{path:'ProductID',type:'sap.ui.model.odata.type.String',constraints:{"nullable":false,"maxLength":10}}" />
+<Text core:require="{StringType: 'sap/ui/model/odata/type/String'}" text="{
+    path: 'ProductID', type:'StringType', constraints: {"nullable": false, "maxLength": 10}}" />
 <Label text="Price" />
-<Text text="{path:'Price/Amount',type:'sap.ui.model.odata.type.Decimal',constraints:{"precision":13,"scale":3}}" />
+<Text core:require="{Decimal: 'sap/ui/model/odata/type/Decimal'}" text="{
+    path: 'Price/Amount', type: 'Decimal', constraints: {"precision":13, "scale":3}}" />
 <Label text="Category" />
-<Text text="{path:'Category',type:'sap.ui.model.odata.type.String',constraints:{"maxLength":40}}" />
+<Text core:require="{StringType: 'sap/ui/model/odata/type/String'}" text="{
+    path: 'Category', type: 'StringType', constraints: {"maxLength": 40}}" />
 <Label text="Supplier" />
-<Text text="{path:'SupplierName',type:'sap.ui.model.odata.type.String',constraints:{"maxLength":80}}" />
+<Text core:require="{StringType: 'sap/ui/model/odata/type/String'}" text="{
+    path: 'SupplierName', type: 'StringType', constraints: {"maxLength": 80}}" />
 ```
 
 **Example: Template for the "repeat" Instruction with `startIndex` and `length`**

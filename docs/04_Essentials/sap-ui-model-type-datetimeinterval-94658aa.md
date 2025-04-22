@@ -37,20 +37,22 @@ In order to let the date interval type correctly, get two JavaScript `Date` obje
 // "Text" required from module "sap/m/Text"
 // "Column" required from module "sap/m/Column"
 // "ColumnListItem" required from module "sap/m/ColumnListItem"
-var urlV4 = "/databinding/proxy/http/services.odata.org/TripPinRESTierService/(S(kqyippfvpypubsah2zi1enbi))/";
+// "DateTimeOffset" required from module "sap/ui/model/odata/type/DateTimeOffset"
+// "DateInterval" required from module "sap/ui/model/type/DateInterval"
+const urlV4 = "/databinding/proxy/http/services.odata.org/TripPinRESTierService/(S(kqyippfvpypubsah2zi1enbi))/";
 
 // Some OData V4 model configuration
-var oModelConfig = {
-    groupId : "$direct",
+const oModelConfig = {
+    groupId: "$direct",
     serviceUrl: urlV4,
     synchronizationMode: "None",
     operationMode: "Server"
 };
 
-var oModel = new ODataModel(oModelConfig);
-var oTable = new Table({
+const oModel = new ODataModel(oModelConfig);
+const oTable = new Table({
     growing: true,
-    columns : [
+    columns: [
         new Column({header: new Text({text: "Name"})}),
         new Column({header: new Text({text: "StartsAt"})}),
         new Column({header: new Text({text: "EndsAt"})}),
@@ -60,29 +62,25 @@ var oTable = new Table({
 
 oTable.setModel(oModel);
 oTable.bindItems({
-    path:"/People('russellwhyte')/Trips",
+    path: "/People('russellwhyte')/Trips",
     template: new ColumnListItem({
         cells: [
-           new Text({text:"{Name}"}),
-            new Text({text:"{StartsAt}"}),
-            new Text({text:"{EndsAt}"}),
-            new Text({text:{
-                parts:[
-                    {
-                        path:'StartsAt',
+            new Text({text: "{Name}"}),
+            new Text({text: "{StartsAt}"}),
+            new Text({text: "{EndsAt}"}),
+            new Text({text: {
+                parts: [{
+                        path: 'StartsAt',
                         // requires OData type to convert the date
                         // string into JavaScript Date object
-                        type: "sap.ui.model.odata.type.DateTimeOffset"
-
-                    },{
-                        path:'EndsAt',
+                        type: DateTimeOffset
+                 }, {
+                        path: 'EndsAt',
                         // requires OData type
-                        type: "sap.ui.model.odata.type.DateTimeOffset"
-                    }
-                ],
-                type: 'sap.ui.model.type.DateInterval',
+                        type: DateTimeOffset
+                    }],
+                type: DateInterval,
                 formatOptions: {format: "yMMMdd"}
-
             }})
         ]
     })

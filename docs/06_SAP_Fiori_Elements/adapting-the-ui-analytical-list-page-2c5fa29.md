@@ -7,7 +7,7 @@ You can extend and customize specific features of the analytical list page.
 
 
 > ### Note:  
-> This topic is currently only applicable to SAP Fiori elements for OData V2.
+> This topic is only applicable to SAP Fiori elements for OData V2.
 
 
 

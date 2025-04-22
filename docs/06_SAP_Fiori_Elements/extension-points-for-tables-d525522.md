@@ -2,7 +2,7 @@
 
 # Extension Points for Tables
 
-You can use extension points to enhance tables in SAP Fiori elements apps.
+You can use extension points to enhance tables in SAP Fiori elements-based apps.
 
 > ### Caution:  
 > Use app extensions with caution and only if you cannot produce the required behavior by other means, such as manifest settings or annotations. To correctly integrate your app extension coding with SAP Fiori elements, use only the `extensionAPI` of SAP Fiori elements. For more information, see [Using the extensionAPI](using-the-extensionapi-bd2994b.md).
@@ -209,11 +209,13 @@ List report
 </table>
 
 > ### Note:  
-> `<Name of the EntitySet>` is the EntitySet of the current page. `<Name of the table EntitySet>` is the EntitySet of the table the extension is meant for. Use the `<name of the table EntitySet>` for all table column extensions on the object page, as opposed to all other view extensions on the object page.
+> `<Name of the EntitySet>` is the entity set of the current page.
+> 
+> `<Name of the table EntitySet>` is the entity set of the table that the extension is intended for. Use this for all table column extensions on the object page, rather than for any other view extensions on the object page.
 
-Use the `ListReportExtension` extension point to replace default navigation within a responsive table in a list report. For more information, see the following example: [Example: Replacing Standard Navigation in a Responsive Table in the List Report](example-replacing-standard-navigation-in-a-responsive-table-in-the-list-report-a12ad60.md).
+To replace default navigation within a responsive table in a list report, use the `ListReportExtension` extension point . For more information, see [Example: Replacing Standard Navigation in a Responsive Table in the List Report](example-replacing-standard-navigation-in-a-responsive-table-in-the-list-report-a12ad60.md).
 
-Use the `DetailsExtension` extension point to replace default navigation within a responsive table on an object page. For more information, see the following example: [Example: Replacing Standard Navigation in a Responsive Table on the Object Page](example-replacing-standard-navigation-in-a-responsive-table-on-the-object-page-b20dc7a.md).
+To replace default navigation within a responsive table on an object page, use the `DetailsExtension` extension point. For more information, see [Example: Replacing Standard Navigation in a Responsive Table on the Object Page](example-replacing-standard-navigation-in-a-responsive-table-on-the-object-page-b20dc7a.md).
 
 
 
@@ -221,7 +223,7 @@ Use the `DetailsExtension` extension point to replace default navigation within 
 
 ## Additional Features in SAP Fiori Elements for OData V4
 
-The table containing additional custom columns can look like this:
+The following screenshot shows a table containing an additional custom column:
 
   
   
@@ -230,7 +232,7 @@ The table containing additional custom columns can look like this:
 ![](images/Custom_Columns_00819cd.png "Custom Column in a Table")
 
 > ### Note:  
-> When adding custom columns to tables, each column needs a column key as its unique identifier. Use only the following characters:
+> When adding custom columns to tables, each column needs a key as its unique identifier. The following characters can be used as the key:
 > 
 > -   Colon \(:\)
 > 
@@ -241,7 +243,11 @@ The table containing additional custom columns can look like this:
 > -   Alpha-numeric characters
 > 
 > 
-> For `UI.DataField`, the column keys are created using the OData path. All columns start with ...`::C::` followed by the annotation type, for example, `UI.DataField`, `::`, and then the corresponding property. Example: `<sap.m.Label id="SalesOrder::SalesOrderManageList--fe::table::SalesOrderManage::LineItem::C::FieldGroup::multipleActionFields-innerColumnHeader">`. For custom columns, the ID is concatenated with ...`C::CustomColumn::<key>`.
+> For `UI.DataField`, the column keys are created using the OData path. All columns start with ...`::C::` followed by the annotation type, for example, `UI.DataField`, `::`, and then the corresponding property.
+> 
+> Example: `<sap.m.Label id="SalesOrder::SalesOrderManageList--fe::table::SalesOrderManage::LineItem::C::FieldGroup::multipleActionFields-innerColumnHeader">`.
+> 
+> For custom columns, the ID is concatenated with ...`C::CustomColumn::<key>`.
 
 
 
@@ -249,25 +255,43 @@ The table containing additional custom columns can look like this:
 
 1.  Define a fragment for the view extension.
 
-    For a custom column in a table, you have to implement two extensions. First, implement the definition of the custom columns, then implement the content of the custom columns.
+    To add a custom column in a table, you must implement two extensions: first, define the custom columns, and then implement their content.
+
+    The following sample code defines a fragment with a vertical layout containing a custom button:
 
     > ### Sample Code:  
-    > `CustomColumnButton.fragment.xml`
+    > `CustomColumnLRButton.fragment.xml`
     > 
     > ```
     > <core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:l="sap.ui.layout">
-    > 	<l:VerticalLayout core:require="{handler: 'SalesOrder/ext/CustomColumn'}">
-    > 		<Button text="Custom Button" press="handler.buttonPressed" />
+    > 	<l:VerticalLayout id="myVL">
+    > 		<Button id="myButtonId" text="Custom Button" press="SalesOrder.ext.controller.LRExtend.buttonPressed" />
     > 	</l:VerticalLayout>
     > </core:FragmentDefinition>
     > ```
 
-2.  Register your view extensions in the `manifest.json` file of your application as follows:
+2.  Include your view extensions in the `manifest.json` file.
+
+    The following sample code extends the standard list report and object page controllers with custom logic and adds custom columns to the tables in both pages:
 
     > ### Sample Code:  
+    > manifest.json
+    > 
     > ```
     > {
     >     "sap.ui5": {
+    >          "extends": {
+    >                "extensions": {
+    >                       "sap.ui.controllerExtensions": {
+    >                             "sap.fe.templates.ListReport.ListReportController": {
+    >                                     "controllerName": "SalesOrder.ext.controller.LRExtend"
+    >                             },
+    >                        "sap.fe.templates.ListReport.ObjectPageController": {
+    >                                     "controllerName": "SalesOrder.ext.controller.OPExtend"
+    >                             }
+    >                       }
+    >                }
+    >         },
     >         "routing": {
     >             "targets": {
     >                 "SalesOrderManageList": {
@@ -285,7 +309,7 @@ The table containing additional custom columns can look like this:
     >                                                 "placement": "After",
     >                                                 "anchor": "DataFieldForAnnotation::FieldGroup::multipleActionFields"
     >                                             },
-    >                                             "template": "SalesOrder.ext.CustomColumnButton",
+    >                                             "template": "SalesOrder.ext.fragment.CustomColumnLRButton",
     >                                             "availability": "Default",
     >                                             "properties": [
     >                                                 "ID",
@@ -293,11 +317,6 @@ The table containing additional custom columns can look like this:
     >                                                 "_CustomerPaymentTerms/CustomerPaymentTerms",
     >                                                 "_ShipToParty/BusinessPartner"
     >                                             ]
-    >                                         },
-    >                                         "CustomColumnWithHeaderFromMetaData": {
-    >                                             "header": "{metaModel>/SalesOrderManage/SoldToParty@com.sap.vocabularies.Common.v1.Label}",
-    >                                             "template": "SalesOrder.ext.CustomColumnButton",
-    >                                             "availability": "Default"
     >                                         }
     >                                     }
     >                                 }
@@ -313,7 +332,7 @@ The table containing additional custom columns can look like this:
     >                                     "columns": {
     >                                         "CustomColumnOnObjectPage": {
     >                                             "header": "AnotherColumnLabel",
-    >                                             "template": "SalesOrder.ext.CustomColumnButton",
+    >                                             "template": "SalesOrder.ext.fragment.CustomColumnOPButton",
     >                                             "availability": "Adaptation"
     >                                         }
     >                                     }
@@ -328,25 +347,48 @@ The table containing additional custom columns can look like this:
     > }
     > ```
 
-    In this example, the `CustomColumnButton.fragment.xml` uses an event handler to be executed upon pressing \(for more information, see [Event Handler Methods](../09_Developing_Controls/event-handler-methods-bdf3e98.md)\):
+    The handlers for the custom fragments can be included in dedicated `.js` files. However, it is recommended to include them in the controller extensions files of specific pages, such as the list report or object page.
+
+    The following sample code defines a controller extension that adds a custom button action:
 
     > ### Sample Code:  
-    > `CustomColumn.js`
+    > `LRExtend.controller.js`
     > 
     > ```
-    > sap.ui.define(["sap/m/MessageBox"], function(MessageBox) {
-    >     "use strict";
-    >  
-    >     return {
-    >         buttonPressed: function() {
-    >             MessageBox.show("Button pressed!");
-    >         }
-    >     };
-    > });
+    > sap.ui.define(
+    > 	[
+    > 		"sap/ui/core/mvc/ControllerExtension",
+    > 		"sap/m/MessageBox"
+    > 	],
+    > 	function (ControllerExtension, MessageToast, Messaging, Message, MessageType, Log, MessageBox) {
+    > 		"use strict";
+    > 		return ControllerExtension.extend("SalesOrder.ext.controler.LRExtend", {
+    > 
+    > 			buttonPressed: function() {
+    > 				MessageBox.show("Button pressed!");
+    > 			},
+    > 
+    > 			// This section allows to extend lifecycle hooks or override public methods of the base controller
+    > 			override: {
+    > 				routing: {
+    > 					onBeforeNavigation: function (oContextInfo) {
+    > 						//Custom code
+    > 					}
+    > 				},
+    > 				editFlow: {
+    > 					onBeforeDelete: function (oParameters) {
+    > 						//Custom code
+    > 					}
+    > 				}
+    > 			}
+    > 		});
+    > 	}
+    > );
+    > 
     > ```
 
 
-The `manifest.json` sample code above enables you to add an additional column to an object page. By default, the column isn't visible on the UI. When it has been added by using *Add/Remove Columns*, this is the result:
+The preceding sample code in the `manifest.json` file shows how an additional column is added to the object page. By default, the column isn't visible on the UI because the `availability` property is set to `Adaptation`. However, it can be made visible using the *Add/Remove Columns* option, as shown in the following screenshot:
 
 ![](images/Custom_Button_bea7e9b.png)
 
@@ -676,7 +718,7 @@ Indicates whether a custom column is required. If set to `true`, an asterisk is 
 
 \(\*\) = optional value.
 
-**Bold** formatting: default/fallback behavior.
+The **Bold** formatting in the table indicates that the behavior is either the default or fall back behavior.
 
 The UI model can be leveraged within the fragment, for example, to react to changes of the `editMode`, for example. See the following code sample:
 
@@ -688,7 +730,9 @@ The UI model can be leveraged within the fragment, for example, to react to chan
 To correctly position your custom elements, you must identify an anchor element. For more information, see [Finding the Right Key for the Anchor](finding-the-right-key-for-the-anchor-6ffb084.md).
 
 > ### Note:  
-> When using the `Table` building block, defining custom columns in the manifest isn't supported. For more information about the `Table` building block, see [The Table Building Block](the-table-building-block-3801656.md).
+> When using the `Table` building block, defining custom columns in the `manifest.json` file isn't supported.
+> 
+> For more information about the `Table` building block, see [The Table Building Block](the-table-building-block-3801656.md).
 
 
 
@@ -704,7 +748,7 @@ You can add the configuration to support sorting and filtering by using `"proper
 > ]
 > ```
 
-The header of a custom column is clickable:
+The header of a custom column is clickable, as shown in the following screenshot:
 
 ![](images/Custom_Column_Sorting_2138690.png)
 

@@ -10,7 +10,7 @@ While you have the freedom to use any SAPUI5 coding or controls in extension poi
 
 You can even create a custom app that runs on the SAP Fiori elements framework, where all pages are treated like custom pages.
 
-For more information and live examples, see [Flexible Programming Model](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/overview/introduction).
+For more information and live examples, see [Flexible Programming Model Explorer](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/overview/introduction).
 
 **Related Information**  
 

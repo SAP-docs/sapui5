@@ -125,7 +125,6 @@ The `UI.Chart Title` property is used for the title. The `UI.Chart Description` 
 > ```xml
 > <Annotation Term="UI.DataPoint" Qualifier="AreaChartPrice">
 >     <Record>
->         <PropertyValue Property="Title" String="Sales Price" />
 >         <PropertyValue Property="Value" Path="AreaChartPrice" />
 >         <PropertyValue Property="TargetValue" Path="TargetPrice" />
 >         <PropertyValue Property="CriticalityCalculation">
@@ -148,7 +147,6 @@ The `UI.Chart Title` property is used for the title. The `UI.Chart Description` 
 > ```
 > 
 > @UI.dataPoint: {
->   title: 'Sales Price',
 >   targetValueElement: 'TargetPrice',
 >   criticalityCalculation: {
 >     improvementDirection: #TARGET,
@@ -168,7 +166,6 @@ The `UI.Chart Title` property is used for the title. The `UI.Chart Description` 
 > ```
 > 
 > UI.DataPoint #AreaChartPrice : {
->     Title : 'Sales Price',
 >     Value : AreaChartPrice,
 >     TargetValue : TargetPrice,
 >     CriticalityCalculation : {

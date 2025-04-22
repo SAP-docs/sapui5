@@ -59,7 +59,7 @@ You can view and download all files in the Demo Kit at [Data Binding - Step 14](
     							{path: 'products>UnitPrice'},
     							{path: '/currencyCode'}
     						],
-    						type: 'sap.ui.model.type.Currency',
+    						type: 'Currency',
     						formatOptions: { showMeasure: false }
     					}"
     					numberUnit="{/currencyCode}"

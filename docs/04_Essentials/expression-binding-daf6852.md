@@ -31,16 +31,14 @@ For more information how these values relate to OData types, see the [`sap.ui.mo
 For more information about `targetType`, see the [sap.ui.base.ManagedObject\#bindProperty](https://ui5.sap.com/#/api/sap.ui.base.ManagedObject/methods/bindProperty) API documentation in the Demo Kit.
 
 > ### Note:  
-> Expression binding can also be used with JavaScript. For example:
+> Expression binding can also be used with JavaScript:
 > 
 > ```js
-> new Text({"visible" : "{= %{status} === 'critical' && %{amount} > 10000 }"});
-> ```
+> // Example 1
+> new Text({"visible": "{=%{status} === 'critical' && %{amount} > 10000 }"});
 > 
-> or
-> 
-> ```js
-> new Icon({color : "'{= encodeURIComponent(%{/ID}) }'"});
+> // Example 2
+> new Icon({color: "'{=encodeURIComponent(%{/ID}) }'"});
 > ```
 
 > ### Note:  
@@ -315,38 +313,31 @@ The application version without expression binding consists of the XML view \(`s
 XML view \(`sample.App.view.xml`\)
 
 ```xml
-
 <mvc:View controllerName="sample.App" xmlns="sap.ui.core" xmlns:mvc="sap.ui.core.mvc">
-...
-  <Icon src="sap-icon://message-warning" visible="{path:'status', formatter:'.myFormatter'}">
-...
- 
+    ...
+    <Icon src="sap-icon://message-warning" visible="{path: 'status', formatter: '.myFormatter'}">
+    ...
 </mvc:View>
-
 ```
 
 Controller \(`sample.App.controller.js`\)
 
 ```xml
-
 ...
-myFormatter: function(sStatus) {
-  return sStatus === "critical";
+myFormatter(sStatus) {
+    return sStatus === "critical";
 }
 ...
-
 ```
 
 When using expression binding, however, you only need the XML view without controller logic \(`sample.App.view.xml`\):
 
 ```xml
-
 <mvc:View controllerName="sample.app" xmlns="sap.ui.core" xmlns:mvc="sap.ui.core.mvc">
-...
-  <Icon src="sap-icon://message-warning" visible="{= %{status} === 'critical' }">
-...
+    ...
+    <Icon src="sap-icon://message-warning" visible="{= %{status} === 'critical'}">
+    ...
 </mvc:View>
-
 ```
 
 > ### Note:  
@@ -371,92 +362,82 @@ With the expression syntax sketched above it is possible to create more complex 
 Examples for more complex expressions:
 
 ```xml
-
-<!-- Set to visible if the status is critical and the amount 
-is above the threshold (note escaping of &&). -->
-visible="{= %{status} === 'critical' &amp;&amp; %{amount} > 10000 }"
+<!-- Set to visible if the status is critical and the amount is above the threshold (note escaping of &&). -->
+visible="{=%{status} === 'critical' &amp;&amp; %{amount} > 10000}"
 ```
 
 ```xml
-
-<!-- Text for amount level using language-dependent texts 
-from the resource model. -->
-text="{= %{/amount} > 10000 ? %{i18n>/high} : %{i18n>/normal} }"
+<!-- Text for amount level using language-dependent texts from the resource model. -->
+text="{=%{/amount} > 10000 ? %{i18n>/high} : %{i18n>/normal}}"
 ```
 
 ```xml
-
-<!-- Set to visible if the rating is VIP, ignoring case 
-or if the order amount is greater than 10,000. -->
-visible="{= %{/rating}.toUpperCase() === 'VIP' || %{/orderAmount} > 10000 }"
+<!-- Set to visible if the rating is VIP, ignoring case or if the order amount is greater than 10,000. -->
+visible="{=%{/rating}.toUpperCase() === 'VIP' || %{/orderAmount} > 10000}"
 ```
 
 ```xml
-
-<!-- Set to visible if the rating contains VIP, ignoring
- the case. -->
-visible={= RegExp('vip', 'i').test(%{/rating}) }
+<!-- Set to visible if the rating contains VIP, ignoring the case. -->
+visible={=RegExp('vip', 'i').test(%{/rating})}
 ```
 
 ```xml
-
 <!-- Text is maximum of three values. -->
-text="{= Math.max(%{/value1}, %{/value2}, %{/value3}) }"
+text="{= Math.max(%{/value1}, %{/value2}, %{/value3})}"
 ```
 
 ```xml
-
 <!-- Control is enabled only if the order status is set. --> 
-enabled="{= %{/orderStatus} !== null }"
+enabled="{=%{/orderStatus} !== null}"
 ```
 
 ```xml
-
-<!-- Set text to the second string 'middle', access second 
-element in the array generated via 'split'. -->
-text="{= 'small@middle@long'.split('@')[1] }"
+<!-- Set text to the second string 'middle', access second element in the array generated via 'split'. -->
+text="{='small@middle@long'.split('@')[1]}"
 ```
 
 ```xml
-
-<!-- Concatenate literal strings and expression bindings 
-or bindings. -->
+<!-- Concatenate literal strings and expression bindings or bindings. -->
 text="Hello {=%{gender}==='male' ? 'Mr.' : 'Mrs.'} {lastName}"
 ```
 
 ```xml
-
-<!-- Set text by using a composite binding that combines
-several values in a formatter defined by a parameterized
-entry of an i18n language resource. -->
-
+<!-- Set text by using a composite binding that combines several values in a formatter defined by a parameterized entry of an i18n language resource. -->
 <!-- i18n language resource -->
 successMsg=Message is available from {0} until {1}
 errorMsg=Message is too short
 
 <!-- View -->
-<mvc:View controllerName="sample.App" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc">
-...
-   <Text text="{= %{/data/message}.length &lt; 20
-      ? %{i18n>errorMsg} 
-      : %{parts: [
-         {path: 'i18n>successMsg'},
-         {path: '/data/today', type:'sap.ui.model.type.Date', constraints:{displayFormat:'Date'}},
-         {path: '/data/tomorrow', type:'sap.ui.model.type.Date', constraints:{displayFormat:'Date'}}
-      ], formatter: '.formatMessage'}}" />
-...		
+<mvc:View
+    controllerName="sample.App"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:mvc="sap.ui.core.mvc"
+    core:require="{DateType: 'sap/ui/model/type/Date'}">
+    ...
+    <Text 
+        text="{=%{/data/message}.length &lt; 20
+         ? %{i18n>errorMsg} 
+         : %{parts: [
+             {path: 'i18n>successMsg'},
+             {path: '/data/today', type: 'DateType', constraints: {displayFormat: 'Date'}},
+             {path: '/data/tomorrow', type: 'DateType', constraints: {displayFormat: 'Date'}}
+         ], formatter: '.formatMessage'}}" />
+    ...		
 </mvc:View>
+```
 
-<!-- Controller -->
+```
+// Controller
 sap.ui.define([
     "sap/ui/core/mvc/Controller",
     "sap/base/strings/formatMessage"
 ], function(Controller, formatMessage) {
     return Controller.extend("sample.App", {
-        onInit: function() {
+        onInit() {
             ...
         },
-        formatMessage : formatMessage,
+        formatMessage: formatMessage,
         ...
     });
 });
