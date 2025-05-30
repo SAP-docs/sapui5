@@ -559,6 +559,14 @@ The following sample code shows you how to hide or show the *Delete* button, dep
 
 
 
+### Handling Delete Restrictions in the List Report
+
+In the list report, the delete restrictions set on a table entity are evaluated for the saved version of the entity and not for the draft. So, when the user selects a non-deletable entity with an existing draft, the *Delete* button is still enabled. The delete action affects only the draft, not the saved version.
+
+![](images/Delete_Restrictions_Message_1ad6f21.png)
+
+
+
 ### Defining the Order of Standard Actions
 
 You can define the order of standard actions in the table toolbar. To do so, define the properties `anchor` and `position` for each action corresponding to the action key in the `manifest.json`. The following table shows the keys and the corresponding standard actions:
@@ -769,7 +777,7 @@ Applications can control the number of table records that need to be selected fo
 > ### Note:  
 > -   The setting isn't applicable for inline actions \(where only the context of the row of the pressed button is passed\) and for static or unbound actions \(where no context is passed\).
 > 
-> -   The feature is currently supported for annotation-based actions only.
+> -   The feature is only supported for annotation-based actions.
 
 
 

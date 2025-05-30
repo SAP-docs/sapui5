@@ -10,12 +10,12 @@ The example uses different combinations. Make sure that the `sap-ui-core.js` scr
 
 <a name="loiofaaff35246414793b061f0244fb67338__section_gzk_nqs_mmb"/>
 
-## webapp/Fragment.fragment.js
+## webapp/MyFragment.js
 
 Definition of a simple JS fragment containing two buttons:
 
 ```js
-// fragment is located in a file named: my/own/Fragment.fragment.js,
+// The fragment is available under the resource name: my/own/MyFragment.js,
 sap.ui.define(["sap/m/Button"], function (Button) {
     return {
         createContent: function() {
@@ -41,14 +41,13 @@ Definition of a simple XML view:
 <mvc:View xmlns:core="sap.ui.core"
     xmlns:layout="sap.ui.layout"
     xmlns:mvc="sap.ui.core.mvc"
-    xmlns="sap.m"
-    controllerName="my.own.Controller">
+    xmlns="sap.m">
     <layout:VerticalLayout id="vl">
         <Button text="Find controls by ID" press="findControls"></Button>
         <Text text="Fragment referenced inline, no Fragment ID:" />
-        <core:Fragment fragmentName='my.own.Fragment' type='JS' />
+        <core:Fragment fragmentName='module:my/own/MyFragment' />
         <Text text="Fragment referenced inline, with Fragment ID 'myFrag':" />
-        <core:Fragment id="myFrag" fragmentName='my.own.Fragment' type='JS' />
+        <core:Fragment id="myFrag" fragmentName='module:my/own/MyFragment' />
     </layout:VerticalLayout>
 </mvc:View>
 ```
@@ -57,7 +56,7 @@ Definition of a simple XML view:
 
 <a name="loiofaaff35246414793b061f0244fb67338__section_br1_pqs_mmb"/>
 
-## webapp/Controller.controller.js
+## webapp/Controller.js
 
 Definition of a simple controller used with the XML view:
 
@@ -115,7 +114,7 @@ Instance creation of controller and XML view:
 			'sap/ui/core/mvc/XMLView'
 		], function (Controller, XMLView) {
 			Controller.create({
-				name: "my.own.Controller"
+				name: "module:my/own/Controller"
 			}).then(function (oController) {
 				/*** THIS IS THE "APPLICATION" CODE ***/
 

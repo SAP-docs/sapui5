@@ -2,7 +2,7 @@
 
 # sap.f
 
-This library contains controls that were built based on the SAP Fiori 2.0 design guidelines.
+This library contains controls specifically designed for SAP Fiori apps.
 
 > ### Note:  
 > The following sections only provide additional information for some of the controls. For a complete list of all controls and their documentation, see the [API Reference](https://ui5.sap.com/#/api) and the [Samples](https://ui5.sap.com/#/controls). 

@@ -43,20 +43,26 @@ The `title` property of a Popover/Dialog is used to display the title of the dia
 > Dialog with `ariaLabelledBy` 
 > 
 > ```
-> 	var oDialog = new sap.m.Dialog({
-> 				title: "Dialog Title",
-> 				ariaLabelledBy: "textId",
-> 				content: [
-> 					new sap.m.Text({id: "textId", text: "A sample text that will be annoucned by JAWS after the title, when the dialog is opened."})
-> 				]
-> 			});
-> 			
-> 			var btn = new sap.m.Button({
-> 				text:'Hello World',
-> 				press: function(){
-> 					oDialog.open();
-> 				}
-> 			});
-> 			btn.placeAt('content');
+> // Dialog required from "sap/m/Dialog"
+> // Button required from "sap/m/Button"
+> // Text required from "sap/m/Text"
+> 
+> var oDialog = new Dialog({
+>     title: "Dialog Title",
+>     ariaLabelledBy: "textId",
+>     content: [
+>         new Text({
+>             id: "textId",
+>             text: "A sample text that will be annoucned by JAWS after the title, when the dialog is opened."
+>         })
+>     ]
+> });
+> 
+> var btn = new Button({
+>     text:"Hello World",
+>     press: function() {
+>         oDialog.open();
+>     }
+> });
 > ```
 

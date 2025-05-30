@@ -16,57 +16,70 @@ In this example, only products from the selected category are displayed.
 
 ```js
 
-var oCategoriesModel = new sap.ui.model.odata.v2.ODataModel("/uilib-sample/proxy/http/services.odata.org/V3/Northwind/Northwind.svc");
+sap.ui.require([
+			"sap/m/library",
+			"sap/m/FacetFilter",
+			"sap/m/FacetFilterList",
+			"sap/m/FacetFilterItem",
+			"sap/ui/model/Filter",
+			"sap/ui/model/FilterType",
+			"sap/ui/model/FilterOperator",
+			"sap/ui/model/odata/v2/ODataModel"
+		], function (library, FacetFilter, FacetFilterList, FacetFilterItem, Filter, FilterType, FilterOperator, ODataModel) {
+	
+			const ListMode = library.ListMode;
+			const oCategoriesModel = new ODataModel("/uilib-sample/proxy/http/services.odata.org/V3/Northwind/Northwind.svc");
 
-var oCategoriesFFL = new sap.m.FacetFilterList({ // create the categories facet list
-    title : "Categories",
-    mode : sap.m.ListMode.SingleSelectMaster, // restrict to one selection for simplicity
-    key : "Categories",
-    items : {
-        path : "/Categories",
-        template : new sap.m.FacetFilterItem({
-            text : "{CategoryName}",
-            key : "{CategoryID}"
-        })
-    }
-});
-oCategoriesFFL.setModel(oCategoriesModel); // set the data model
+			const oCategoriesFFL = new FacetFilterList({ // create the categories facet list
+				title: "Categories",
+				mode: ListMode.SingleSelectMaster, // restrict to one selection for simplicity
+				key: "Categories",
+				items: {
+					path: "/Categories",
+					template: new FacetFilterItem({
+						text: "{CategoryName}",
+						key: "{CategoryID}"
+					})
+				}
+			});
+			oCategoriesFFL.setModel(oCategoriesModel); // set the data model
 
-// create the data model for the products facet list
-var oProductsModel = new sap.ui.model.odata.v2.ODataModel("/uilib-sample/proxy/http/services.odata.org/V3/Northwind/Northwind.svc");
+			// create the data model for the products facet list
+			const oProductsModel = new ODataModel("/uilib-sample/proxy/http/services.odata.org/V3/Northwind/Northwind.svc");
 
-var oProductsFFL = new sap.m.FacetFilterList({
-    title : "Products",
-    key : "Products",
-    items : {
-        path : "/Products_by_Categories",
-        template : new sap.m.FacetFilterItem({
-            text : "{ProductName}",
-            key : "{ProductID}"
-        })
-    },
-    listOpen : function(oEvent) {
+			const oProductsFFL = new FacetFilterList({
+				title: "Products",
+				key: "Products",
+				items: {
+					path: "/Products_by_Categories",
+					template: new FacetFilterItem({
+						text: "{ProductName}",
+						key: "{ProductID}"
+					})
+				},
+				listOpen: function (oEvent) {
 
-        // only display products from the selected category (if any)
-        var aSelectedKeys = Object.getOwnPropertyNames(oCategoriesFFL.getSelectedKeys());
-        if(aSelectedKeys.length > 0) {
-            
-            var oBinding = this.getBinding("items");
-            var oUserFilter = new sap.ui.model.Filter(
-            "CategoryName", 
-            sap.ui.model.FilterOperator.Contains,
-            oCategoriesFFL.getSelectedKeys()[aSelectedKeys[0]]);
-            var oFinalFilter = new sap.ui.model.Filter([ oUserFilter ], true);
-            oBinding.filter(oFinalFilter, sap.ui.model.FilterType.Application);
-        }
-    },
-});
-oProductsFFL.setModel(oProductsModel);
+					// only display products from the selected category (if any)
+					const aSelectedKeys = Object.getOwnPropertyNames(oCategoriesFFL.getSelectedKeys());
+					if (aSelectedKeys.length > 0) {
 
-// create the facet filter control
-var oFF = new sap.m.FacetFilter(genId(), { 
-    lists : [ oCategoriesFFL, oProductsFFL ],
-});
+						const oBinding = this.getBinding("items");
+						const oUserFilter = new Filter(
+							"CategoryName",
+							FilterOperator.Contains,
+							oCategoriesFFL.getSelectedKeys()[aSelectedKeys[0]]);
+						const oFinalFilter = new Filter([ oUserFilter ], true);
+						oBinding.filter(oFinalFilter, FilterType.Application);
+					}
+				},
+			});
+			oProductsFFL.setModel(oProductsModel);
+
+			// create the facet filter control
+			const oFF = new FacetFilter(genId(), {
+				lists: [ oCategoriesFFL, oProductsFFL ],
+			});
+		});
 
 ```
 

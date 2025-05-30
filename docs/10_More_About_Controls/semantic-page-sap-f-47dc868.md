@@ -2,7 +2,7 @@
 
 # Semantic Page \(sap.f\)
 
-The `sap.f.semantic.SemanticPage` is an enhanced `sap.f.DynamicPage` that implements the SAP Fiori 2.0 design guidelines.
+The `sap.f.semantic.SemanticPage` is an enhanced `sap.f.DynamicPage`.
 
 For more information about this control, see the [API Reference](https://ui5.sap.com/#/api/sap.f.semantic.SemanticPage) and the [Samples](https://ui5.sap.com/#/entity/sap.f.semantic.SemanticPage).
 
@@ -69,9 +69,9 @@ The following aggregations are available to control the semantic in the share me
 
 -   `sendEmailAction`
 
--   `discussInJamAction`
+-   `discussInSAPWorkZoneAction`
 
--   `shareInJamAction`
+-   `shareOnSAPWorkZoneAction`
 
 -   `sendMessageAction`
 
@@ -162,9 +162,9 @@ Adding semantic content:
 
 
      <!-- will automatically create a button with icon, styling and positioning in accord with the underlying semantics -->
-      <semantic:discussInJamAction press="onDiscussInJamPress">
-         <semantic:DiscussInJamAction />
-      </semantic:discussInJamAction>
+      <semantic:discussOnSAPWorkZoneAction press="onDiscussOnSAPWorkZonePress">
+         <semantic:DiscussOnSAPWorkZoneAction />
+      </semantic:discussOnSAPWorkZoneAction>
  
      ...
 

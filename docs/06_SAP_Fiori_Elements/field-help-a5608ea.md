@@ -15,6 +15,16 @@ Fields can have an associated value help, or a drop-down list for several fixed 
 
 ## Value Help
 
+Value help allow end users to either select a value from a value help entity associated with the field or specify a condition to look up a suitable value within that entity.
+
+
+
+### Title of the Value Help Dialog
+
+If the `DataField` annotation for the field includes a `label` property, it is used as the title of the value help dialog. Otherwise, the label annotation of the property is used.
+
+For context-dependent value help, the label defined in the `ValueList` is used. If it is not defined, the `label` property is used. If it is not found, the `label` property in the `UI.DataField` annotation is used.
+
 
 
 ### Using `ValueList` Annotations
@@ -26,7 +36,7 @@ Direct `ValueList` annotations under the property level annotations:
 > <Annotations Target="Self.ArtistsType/CountryOfOrigin">
 >     <Annotation Term="Common.ValueList">
 >         <Record>
->             <PropertyValue Property="CollectionPath" String="I_AIVS_CountryCode"/>
+>             <PropertyValue Property="CollectionPath" String="myEntityName"/>
 >             <PropertyValue Property="SearchSupported" Bool="true"/>
 >             <PropertyValue Property="Parameters">
 >                 <Collection>
@@ -54,7 +64,7 @@ Direct `ValueList` annotations under the property level annotations:
 > @Consumption.valueHelpDefinition:
 >         [{
 >           entity :{
->             name    : ' I_AIVS_CountryCode', // ValueList CollectionPath (The collection path points to consumption VH entity and will have the ValueListParameterDisplayOnly fields within it)
+>             name    : ' myEntityName', // ValueList CollectionPath (The collection path points to consumption VH entity and will have the ValueListParameterDisplayOnly fields within it)
 >             element : ' CountryCode' // ValueListProperty of ValueListParameterInOut           
 >           },
 >           label  : 'mylabel', // ValueList label
@@ -72,7 +82,7 @@ Direct `ValueList` annotations under the property level annotations:
 >             CountryOfOrigin                   : String(40)           @(Common : {
 >            Label        : 'Country',
 >             ValueList    : {
->                 CollectionPath : 'I_AIVS_CountryCode',
+>                 CollectionPath : 'myEntityName',
 >                 Parameters     : [
 >                 {
 >                     $Type             : 'Common.ValueListParameterInOut',
@@ -107,7 +117,7 @@ Direct `ValueList` annotations under the property level annotations:
 >     <Annotation Term="Common.ValueListReferences">
 >         <Collection>
 >             <String>
->                 ../../../../srvd_f4/sap/i_aivs_countrycode/0001;ps='srvd-sadl_gw_appmusicdr_definition-0001';va='com.sap.gateway.srvd.sadl_gw_appmusicdr_definition.v0001.et-c_mdbu_v4_artisttp.countryoforigin'/$metadata
+>                 ../../../../srvd_f4/sap/myentityname/0001;ps='srvd-sadl_gw_appmusicdr_definition-0001';va='com.sap.gateway.srvd.sadl_gw_appmusicdr_definition.v0001.et-c_mdbu_v4_artisttp.countryoforigin'/$metadata
 >             </String>
 >         </Collection>
 >     </Annotation>
@@ -131,7 +141,7 @@ The string here is the path relative to the main metadata file containing these 
 >     <Annotation Term="Common.ValueListMapping">
 >         <Record>
 >             <PropertyValue Property="Label" String="Country Code Value Help"/>
->             <PropertyValue Property="CollectionPath" String="I_AIVS_CountryCode"/>
+>             <PropertyValue Property="CollectionPath" String="myEntityName"/>
 >             <PropertyValue Property="Parameters">
 >                 <Collection>
 >                     <Record Type="Common.ValueListParameterInOut">
@@ -516,14 +526,6 @@ For more information, see [Further Features of the Field](further-features-of-th
 
 
 
-### Title of the Value Help Dialog
-
-If the `DataField` annotation for the field has a label property, it is used as the title of the value help dialog. If it doesn't, the label annotation of the property is used instead.
-
-Context-dependent value help uses the label defined in the `ValueList`. If no label is defined, the property label is used instead.
-
-
-
 ### Filter Fields Within the Value Help Dialog
 
 Use the `SelectionFields` annotation on the entity of the value help to define the filter fields that are to be displayed in the filter panel of the value help dialog. Application developers must ensure that all relevant fields are part of the `SelectionFields`.
@@ -688,7 +690,7 @@ To do so, the hierarchy qualifier must be provided through the [`RecursiveHiearc
 > <Annotations Target="Self.ArtistsType/CountryOfOrigin">
 >     <Annotation Term="Common.ValueList">
 >         <Record>
->             <PropertyValue Property="CollectionPath" String="I_AIVS_CountryCode"/>
+>             <PropertyValue Property="CollectionPath" String="myEntityName"/>
 >             <PropertyValue Property="SearchSupported" Bool="true"/>
 >             <PropertyValue Property="Parameters">
 >                 <Collection>
@@ -728,7 +730,7 @@ To do so, the hierarchy qualifier must be provided through the [`RecursiveHiearc
 > @Consumption.valueHelpDefinition: [
 >     {
 >           entity :{
->             name    : ' I_AIVS_CountryCode', // ValueList CollectionPath (The collection path points to consumption VH entity and will have the ValueListParameterDisplayOnly fields within it)
+>             name    : ' myEntityName', // ValueList CollectionPath (The collection path points to consumption VH entity and will have the ValueListParameterDisplayOnly fields within it)
 >             element : ' CountryCode' // ValueListProperty of ValueListParameterInOut           
 >           },
 >           label  : 'mylabel', // ValueList label
@@ -760,7 +762,7 @@ To do so, the hierarchy qualifier must be provided through the [`RecursiveHiearc
 >     CountryOfOrigin                   : String(40)           @(Common : {
 >    Label        : 'Country',
 >     ValueList    : {
->         CollectionPath : 'I_AIVS_CountryCode',
+>         CollectionPath : 'myEntityName',
 >         Parameters     : [
 >         {
 >             $Type             : 'Common.ValueListParameterInOut',
@@ -856,6 +858,8 @@ The following sample code shows an example for the usage of the annotation term 
 > -   For a conditional expression, ensure that the result contains only one qualifier that points to a valid `ValueList` or `ValueListMapping` at runtime.
 > 
 > -   The `ValueListForValidation` annotation with a conditional expression binding must have the If-Then-Else pattern.
+> 
+> -   When the field is used in a filter context, such as within a filter bar, and the `ValueListForValidation` is not defined, the default value list \(without the qualifier\) is used for validation. In such cases, if the default value list is not found, field help for the field is not displayed.
 
 
 

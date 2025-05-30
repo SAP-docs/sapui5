@@ -23,9 +23,9 @@ sap.ui.define([
 ], function(View, Panel) {
   "use strict";
   return View.extend("myapp.views.MyView", {
-    // define, which controller to use
-    getControllerName: function() {
-      return "myapp.controller.Main";
+    // define which controller to use
+    getControllerModuleName: function() {
+      return "myapp/controller/Main";
     },
     // create view content and return the root control
     createContent: async function(oController) {
@@ -43,7 +43,10 @@ sap.ui.define([
 });
 ```
 
-Besides the `createContent` method, a view can implement the `getControllerName` method, which defines the name of the view controller that should be instantiated and used for the view. The name must be in class name notation \(i.e. dot notation\) **without** the `.controller` suffix. The suffix will be added by the framework when loading the module containing the controller.
+In addition to the `createContent` method, a view can implement the `getControllerModuleName` method, which defines the module name of the view controller, or the `getControllerName` method, which specifies the name of the view controller to be instantiated and used for the view.
+
+-   `getControllerModuleName`: The name must follow the module name syntax \(i.e., slash-separated format\) **without** the `.js` suffix, e.g., `module:myapp/views/MyTypedView`.
+-   `getControllerName`: The name must be in class name notation \(i.e. dot notation\) **without** the `.controller` suffix. The suffix will be added by the framework when loading the module containing the controller.
 
 > ### Note:  
 > A Typed View must not specify a `type`, since the class inheriting from `sap/ui/core/mvc/View` is sufficient.

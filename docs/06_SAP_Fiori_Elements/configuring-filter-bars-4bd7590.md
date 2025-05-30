@@ -348,7 +348,7 @@ Applications can ensure that a field within the entity to which the filter bar i
 
 ### Supporting Parameterized Entities
 
-To access the data of parameterized services, the parameter fields need to be supplied with parameter values when making the data call. These parameter values are then used to load the data for the view \(including the data in the object page or subobject page\). Furthermore, the invocation of any action that needs context to be passed, is also passed using these parameter values.
+When linked to a parameterized entity, the filter bar automatically includes fields for all required parameters. To access the data of a parameterized service, the parameter fields need to be supplied with parameter values when making the data call. These parameter values are then used to load the data for the view \(including the data in the object page or subobject page\). Furthermore, the invocation of any action that needs context to be passed, is also passed using these parameter values.
 
 For example, the `"CustomerType"` in the following sample code represents the main entity set from which further data needs to be fetched. This has a `"Parameters"` navigation entity set defined as well:
 
@@ -396,9 +396,9 @@ In the `"CustomerParameters"` entity type, you can now find the parameters that 
 > ```
 > <EntityType Name="CustomerParameters">
 >     <Key>
->         <PropertyRef Name="P_CompanyCode"/>
+>         <PropertyRef Name="P_DisplayCurrency"/>
 >     </Key>
->     <Property Name="P_CompanyCode" Type="Edm.String" Nullable="false" MaxLength="4"/>
+>     <Property Name="P_DisplayCurrency" Type="Edm.String" Nullable="false" MaxLength="3"/>
 >     <NavigationProperty Name="Set" Type="Collection(com.sap.gateway.srvd.zrc_arcustomer_definition.v0001.CustomerType)" Partner="Parameters" ContainsTarget="true"/>
 > </EntityType>
 > ```
@@ -422,7 +422,9 @@ To access the data residing in the main entity set, that is, the entity set corr
 > </EntityContainer>
 > ```
 
-Here's an example of how the call to fetch results from the main entity set in the above sample would look: `http://<path>/Customer(P_CompanyCode='0001')/Set?$count=true`
+Here's an example of how the call to fetch results from the main entity set in the above sample would look:
+
+`http://<path>/Customer(P_DisplayCurrency='JPY')/Set?$count=true`
 
 The call has to go through the `"Customer"` entity set by passing the values of all parameters to it. Then we have to call the entity set that holds the results \(in this case the `"Set"` entity set\).
 
@@ -543,7 +545,7 @@ You can use one of the following two approaches:
 > If the filter restrictions are provided using `NavigationRestriction`, then this restriction is prioritized over other restrictions applied directly to the main entity.
 
 > ### Restriction:  
-> -   Parameter support is currently only available for read-only services. For editable services, parameter support is currently unavailable because of back-end restrictions.
+> -   Parameter support is only available for read-only services. For editable services, parameter support is unavailable because of back-end restrictions.
 > 
 > -   Parameters aren't supported if multiple view mode is used – unless single-table mode is used, where the data from all views comes from the same table that is part of the main entity set.
 > 

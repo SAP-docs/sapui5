@@ -22,28 +22,29 @@ This example explains how to use an extension point if you want to apply custom 
 
 ## Procedure
 
-1.  Register your extension point in the `manifest.json`.
+1.  Register your extension point in the `manifest.json` file.
 
     > ### Sample Code:  
     > ```
-    > "extends": {
-    >    "extensions": {
-    >       ... 
-    >       "sap.ui.controllerExtensions": { 
-    >          ...
-    >          "sap.suite.ui.generic.template.ObjectPage.view.Details": { 
-    >             ... 
-    >             "controllerName": "STTA_MP.ext.controller.DetailsExtension",
-    >             ...
-    >          }
-    >       } 
+    > "sap.ui5": {
     >       ...
-    > 
+    >       "extends": {
+    >               "extensions": {
+    >               ... 
+    >                     "sap.ui.controllerExtensions": { 
+    >                           ...
+    >                           "sap.suite.ui.generic.template.ObjectPage.view.Details": { 
+    >                   ... 
+    >                     "controllerName": "STTA_MP.ext.controller.DetailsExtension",
+    >                         ...
+    >                           }
+    >             } 
+    >       ...
     > ```
 
 2.  Implement your controller extension.
 
-    You have to implement a `onBeforeRebindTableExtension` function within the object page controller extension. Here, it is`DetailsExtension.controller.js`. If the object page has multiple tables, use the `tableId` to identify the specific table, as shown in the following example:
+    You have to implement a `onBeforeRebindTableExtension` function within the object page controller extension. Here, it is`DetailsExtension.controller.js`. If the object page has multiple tables, use the `tableId` to identify the specific table, as shown in the following sample code:
 
     > ### Sample Code:  
     > ```

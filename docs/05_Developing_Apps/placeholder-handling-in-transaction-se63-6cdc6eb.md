@@ -38,9 +38,9 @@ Example: `{0}`
 </td>
 <td valign="top">
 
-With an additional ampersand
+Number in curly brackets
 
-Example: `{&0}`
+Example: `{0}`
 
 </td>
 </tr>
@@ -59,18 +59,18 @@ Example: `'{0}'`
 </td>
 <td valign="top">
 
-Without apostrophes
+Placeholder enclosed in apostrophes
 
-Example: `{0}`
+Example: `'{0}'`
 
 </td>
 </tr>
 </table>
 
-When the texts are written back to the database, the placeholders and escaped placeholders are transformed back to the original state. If a text contains a placeholder, you need to double any apostrophe \('\) in the text. Otherwise the apostrophe doesn't appear on the user interface during runtime.
+To make the translator aware of an escaped placeholder in your string, make use of the comment option in the i18n.properties file. If a text contains a placeholder, you need to double any apostrophe \('\) in the text. Otherwise the apostrophe doesn't appear on the user interface during runtime.
 
 > ### Note:  
-> Translators don't need to take care of this, as transaction `SE63` automatically doubles apostrophes \('\) when writing the text to the database. Therefore, translators do not need to change placeholder characters or character sequences, such as `{&0}`, `{0}`, or `'{&0}'`. Double apostrophes \(''\) in the source text, however, are displayed only as one apostrophe \('\) in transaction `SE63`. Examples:
+> Translators don't need to take care of this, as transaction `SE63` automatically doubles apostrophes \('\) when writing the text to the database. Double apostrophes \(''\) in the source text, however, are displayed only as one apostrophe \('\) in transaction `SE63`. Examples:
 > 
 > 
 > <table>
@@ -94,7 +94,7 @@ When the texts are written back to the database, the placeholders and escaped pl
 > </td>
 > <td valign="top">
 > 
-> Mark's placeholder is used \{&0\} times.
+> Mark's placeholder is used \{0\} times.
 > 
 > </td>
 > </tr>
@@ -106,11 +106,11 @@ When the texts are written back to the database, the placeholders and escaped pl
 > </td>
 > <td valign="top">
 > 
-> Note that \{0\} is an escaped placeholder.
+> Note that '\{0\}' is an escaped placeholder.
 > 
 > </td>
 > </tr>
 > </table>
 
-As a developer, you must ensure that the source text is formally correct, for example by using the notation `{0}` for placeholders and enclosing placeholders in double apostrophes. Bear in mind that `&0` is not a valid placeholder.
+As a developer, you must ensure that the source text is formally correct, for example by using the notation `{0}` for placeholders and enclosing placeholders in double apostrophes.
 

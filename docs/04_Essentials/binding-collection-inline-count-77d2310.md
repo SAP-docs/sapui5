@@ -29,6 +29,9 @@ The OData V4 model allows for binding the inline count of the entity collection 
 
 The `ODataListBinding` provides a header context which holds header information like inline count for the list. Set the binding context for the relative property binding with path `"$count"` to the header context, see [ODataListBinding\#getHeaderContext](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataListBinding%23methods/getHeaderContext). With this, the property binding's value is the list's inline count.
 
+> ### Note:  
+> In the same way, the list's [selection count](selection-ec55312.md#loioec55312f796f45e8883810af3b68b46c__section_SCN) can be bound as well.
+
 **Example: Setting the header context for a property binding to $count**
 
 ```js

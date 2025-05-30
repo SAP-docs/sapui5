@@ -2,7 +2,7 @@
 
 # Accessibility Support History
 
-SAPUI5 is following the SAP ‘s design and development guidelines, as well as the testing procedures and accessibility reporting, that are based on WCAG 2.1 level A and AA.
+SAPUI5 is following the SAP 's design and development guidelines, as well as the testing procedures and accessibility reporting, that are based on WCAG 2.2.
 
 The following table shows the availability of the different accessibility features.
 
@@ -91,9 +91,33 @@ As of version
 <tr>
 <td valign="top">
 
+We have enhanced SAPUI5 accessibility support according to the latest WAI-ARIA 1.2 specification.
+
+</td>
+<td valign="top">
+
+1.136
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+SAPUI5 is following the SAP ‘s updated design and development guidelines, as well as the testing procedures and accessibility reporting, that are based on WCAG 2.2.
+
+</td>
+<td valign="top">
+
+1.136
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
 Update of the reference test environment.
 
-Latest update with UI5 1.102
+Latest update with UI5 1.136
 
 </td>
 <td valign="top">
@@ -141,7 +165,7 @@ we have prevented the automatic insertion of role `application` on the body of t
 <tr>
 <td valign="top">
 
-SAPUI5 is following the SAP ‘s updated design and development guidelines, as well as the testing procedures and accessibility reporting, that are based on WCAG 2.1 level A and AA.
+SAPUI5 is following the SAP 's updated design and development guidelines, as well as the testing procedures and accessibility reporting, that are based on WCAG 2.1 level A and AA.
 
 </td>
 <td valign="top">

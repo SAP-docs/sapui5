@@ -11,5 +11,5 @@ Applications using OData do not bind the `FacetFilterItem.selected` property sin
 **Related Information**  
 
 
-[Facet Filter Selection](facet-filter-selection-ef860fc.md "The FacetFilterList.getSelectedItems() method returns a copy of each selected facet filter item. You use the method to get the selected filter items when filtering the target data set.")
+[Facet Filter Selection](facet-filter-selection-ef860fc.md "The FacetFilterList.getSelectedItems() method returns a copy of each selected facet filter item. You use the method to get the selected filter items when filtering the target data set. Therefore, you should not attempt to modify any of the item's properties.")
 

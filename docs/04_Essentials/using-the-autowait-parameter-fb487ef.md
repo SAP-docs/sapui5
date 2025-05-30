@@ -10,7 +10,7 @@ Configuring OPA to use `autoWait` parameter for all statements improves test sta
 
 ## Overview
 
-OPA `autoWait` parameter is available as of version 1.48. It is a good practice to enable it in your tests. By default, it is not enabled in order to keep old tests running.
+The OPA `autoWait` parameter is available as of version 1.48. It is a good practice to enable it in your tests. By default, it is not enabled in order to keep old tests running.
 
 `autoWait` synchronizes test execution with the app. No interactions are attempted while the app is performing asynchronous work. This increases the probability that OPA statements succeed as they are only executed when the app is ready to respond.
 

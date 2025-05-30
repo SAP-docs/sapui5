@@ -192,7 +192,7 @@ A control that can be used to display individual line items from one or more acc
 
 For more information, see [T Account](../10_More_About_Controls/t-account-fe6792f.md), the [API Reference](https://ui5.sap.com/#/api/sap.suite.ui.commons.TAccount), and the [Samples](https://ui5.sap.com/#/entity/sap.suite.ui.commons.TAccount).
 
-![T Accounts](images/WhatsNew_158_T_Account_3894aeb.jpg)
+![T Accounts](images/Suite_T_Account_3894aeb.png)
 
 <sub>New•Control•Info Only•1.58</sub>
 
@@ -1761,6 +1761,10 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.134](what-s-new-in-sapui5-1-134-c512d71.md "With this release SAPUI5 is upgraded from version 1.133 to 1.134.")
+
+[What's New in SAPUI5 1.133](what-s-new-in-sapui5-1-133-86d7605.md "With this release SAPUI5 is upgraded from version 1.132 to 1.133.")
 
 [What's New in SAPUI5 1.132](what-s-new-in-sapui5-1-132-bd2e61f.md "With this release SAPUI5 is upgraded from version 1.131 to 1.132.")
 

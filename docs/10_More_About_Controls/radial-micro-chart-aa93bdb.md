@@ -10,7 +10,9 @@ Displays a ring chart that represents a percentage value.
 
 The `RadialMicroChart` control provides a ring chart that displays the percentage value in the center of the chart. To indicate the significance of the displayed percentage value, you can define the status as `Good`, `Neutral`, `Critical`, or `Error`.
 
-![Radial Micro Chart with percentage value](images/WhatsNew_136_Microchart_12befff.png)
+![Radial Micro Chart with percentage value](images/Suite_Radial_Micro_Chart_08659d4.png)
+
+For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.suite.ui.microchart.RadialMicroChart) and the [Sample](https://ui5.sap.com/#/entity/sap.suite.ui.microchart.RadialMicroChart).
 
 
 
@@ -34,14 +36,13 @@ The color of the circle is defined by setting the `valueColor` property to one o
 
 -   `sap.ui.core.CSSColor`: All CSS color values are allowed.
 
+-   `sap.suite.ui.microchart.MicroChartColorType`: The possible value color settings are listed and show the status `Good`, `Neutral`, `Critical`, `Error`, or `Sequence1-12`.
+
+
+> ### Note:  
+> From the SAPUI5 2.0 release, the `valueColor` property only supports `MicroChartColorType`.
 
 **Sizes**
 
 The `RadialMicroChart` control is rendered in a responsive way. Thus, the size of the control adapts automatically to the size of the surrounding container and does not have a defined width or height. Alternatively, you can use the `size` property with the control, so that the Radial Micro Chart can also be rendered in fixed sizes that are available in `sap.m.Size`. There, you can choose between the sizes `S`, `M`, `L`, `Auto` and `Responsive`.
-
-
-
-## API Reference/Samples
-
-For more information about the `RadialMicroChart` control, see the [API Reference](https://ui5.sap.com/#/api/sap.suite.ui.microchart.RadialMicroChart) in the Demo Kit and the [sample](https://ui5.sap.com/#/entity/sap.suite.ui.microchart.RadialMicroChart) in the Demo Kit.
 

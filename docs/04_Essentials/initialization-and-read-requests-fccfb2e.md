@@ -175,6 +175,27 @@ For details, see [`sap.ui.model.odata.v4.ODataModel#bindProperty`](https://ui5.s
 
 
 
+<a name="loiofccfb2eb41414f0792c165e69a878717__section_PBAE"/>
+
+## Property Binding To an Array Element
+
+A property binding can target an array element inside a collection of primitive type via a hard-coded index. For a use case, see [Geography And Geometry Types](type-determination-53cdd55.md#loio53cdd55a77ce4f33a14bd0767a293063__section_GGT). In general, such a binding needs to be read-only, for example, because it belongs to a text control, involves a formatter function, or is an expression binding. There is no need to explicitly set its binding mode to `OneTime` or `OneWay`\(see [`sap.ui.model.BindingMode`](https://ui5.sap.com/#/api/sap.ui.model.BindingMode)\). Both [auto-`$expand/$select`](automatic-determination-of-expand-and-select-10ca58b.md) as well as automatic [Type Determination](type-determination-53cdd55.md) are supported.
+
+You can also address the entire array, for example within an [Expression Binding](expression-binding-daf6852.md) like "\{= JSON.stringify\(%\{coordinates\}\) \}", but you need to take care to avoid automatic [Type Determination](type-determination-53cdd55.md) in this case.
+
+> ### Example:  
+> Binding to an array \(element\)
+> 
+> ```
+> <FlexBox binding="{/Person('42')/Address/GeoLocation}">
+>     <Text id="coordinates" text="{= JSON.stringify(%{coordinates}) }"/>
+>     <Text id="longitude" text="{coordinates/0}"/>
+>     <Text id="latitude" text="{coordinates/1}"/>
+> </FlexBox>
+> ```
+
+
+
 <a name="loiofccfb2eb41414f0792c165e69a878717__section_SE"/>
 
 ## Side Effects

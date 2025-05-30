@@ -5,11 +5,11 @@
 You can control the editability of the fields of a child entity.
 
 > ### Note:  
-> Please note that this topic is currently only applicable to SAP Fiori elements for OData V4.
+> This topic is only applicable to SAP Fiori elements for OData V4.
 
 
 
-Application developers can control the editability of all fields in one go using `UpdateRestrictions`.
+You can control the editability of all fields in one go using `UpdateRestrictions`.
 
 > ### Sample Code:  
 > XML Annotation
@@ -90,9 +90,9 @@ If `NavigationRestrictions` has `Updatable=false`, the child entity records cann
 > 
 > ```
 
-For more information on how to control the editability for the main entity set, see the *Enabling Custom Actions Defined Using Annotations* section in [Actions](actions-cbf16c5.md) .
+For more information about controlling the editability of the main entity set, see the [Enabling Custom Actions Defined Using Annotations](actions-cbf16c5.md#loiocbf16c599f2d4b8796e3702f7d4aae6c__subsection_xkx_gwq_nsb) subsection in [Actions](actions-cbf16c5.md).
 
-Both Boolean and path values of `UpdateRestrictions.Updatable` are supported.
+We support both Boolean and path values of `UpdateRestrictions.Updatable`.
 
 The following sample code shows an example of a path-based update restriction:
 
@@ -127,14 +127,16 @@ The following sample code shows an example of a path-based update restriction:
 > 
 > ```
 
+In the following screenshot, the field *Warranty Expiration* comes from an entity set for which `UpdateRestrictions.Updatable` evaluates to `false`. Therefore, it is in display mode even when the object page is in edit mode and the other fields \(from other entity sets\) are editable. This is also true when you navigate to the subobject page:
+
 ![](images/UpdateRestrictions1_9616035.png)
 
-In the screenshot above, the field *Warranty Expiration* comes from an entity set for which `UpdateRestrictions.Updatable` evaluates to `false`. Therefore, it is in display mode even when the object page is in edit mode and the other fields \(from other entity sets\) are editable. This is also true when you navigate to the subobject page:
+The following screenshot shows that none of the fields from the *Material Reviews* entity set are editable. This is because `UpdateRestrictions.Updatable` of the *Material Reviews* entity set evaluates to `false`. Note that the field *Material Category* comes from a different entity set.
 
 ![](images/UpdateRestrictions2_b3a0021.png)
 
-The screenshot shows that none of the fields from the *Material Reviews* entity set are editable. This is because `UpdateRestrictions.Updatable` of the *Material Reviews* entity set evaluates to `false`. Note that the field *Material Category* comes from a different entity set.
-
 > ### Note:  
-> Application developers must be aware of the following behavior when setting a static `false` value for `UpdateRestrictions.Updatable`: Since these restrictions are applicable for both draft as well as active records, doing so prevents an update even on the draft copy \(which was not yet activated\). To avoid this, please use a path-based value for `UpdateRestrictions.Updatable`, so that the editability is enabled for records for the subobject page that were just created \(but not yet activated\), while `UpdateRestrictions.Updatable` evaluates to `true` only for activated records. This ensures that users can create and edit the draft records, but can no longer edit after activation.
+> You must be aware of the following behavior when setting a static `false` value for `UpdateRestrictions.Updatable`:
+> 
+> Since these restrictions are applicable for both draft as well as active records, doing so prevents an update even on the draft copy \(which was not yet activated\). To avoid this, please use a path-based value for `UpdateRestrictions.Updatable`, so that the editability is enabled for records for the subobject page that were just created \(but not yet activated\), while `UpdateRestrictions.Updatable` evaluates to `true` only for activated records. This ensures that users can create and edit the draft records, but can no longer edit after activation.
 

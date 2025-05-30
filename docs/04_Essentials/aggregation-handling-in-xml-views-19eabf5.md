@@ -20,7 +20,7 @@ You fill aggregations as shown in the following example. The namespace of the pa
 
 ```xml
 
-<mvc:View controllerName="sap.hcm.Address" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc">
+<mvc:View controllerName="module:sap/hcm/Address" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc">
    <Panel>
       <content>  <!-- this is the general way of adding children: use the aggregation name -->
          <Image src="http://www.sap.com/global/ui/images/global/sap-logo.png"/>

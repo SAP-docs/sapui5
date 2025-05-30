@@ -104,6 +104,29 @@ npm packages \(check the individual packages for licensing information\):
 -   [Babel preset UI5 transformer on npm](https://www.npmjs.com/package/babel-preset-transform-ui5) to transform ES modules and classes to classic UI5 code
 -   [TypeScript interface generator for control development on npm](https://www.npmjs.com/package/@ui5/ts-interface-generator) to support UI5 control development in TypeScript
 
+<a name="loio6978a6087e8540c4a268fccafd8474da"/>
+
+<!-- loio6978a6087e8540c4a268fccafd8474da -->
+
+## UI5 Web Components
+
+
+
+**Web Components** \(`https://www.webcomponents.org/introduction`\) are custom HTML tags based on standard web APIs like Custom Elements and Shadow DOM, supported by all modern browsers and compatible with most HTML-based UI frameworks.
+
+[**UI5 Web Components**](https://sap.github.io/ui5-webcomponents/) is an open-source library developed by the UI5 team according to the SAP Fiori design, offering lightweight, framework-agnostic components with theming, accessibility, and internationalization support. Built on native Web Components, they integrate easily into any UI framework.
+
+SAPUI5 supports embedding UI5 Web Components, translating their metadata into SAPUI5 controls. This enables seamless integration, including properties, events, and methods, within SAPUI5 applications. For more information, see [Using Web Components](../04_Essentials/using-web-components-1c80793.md).
+
+
+
+### Further Information
+
+-   [GitHub repository](https://github.com/SAP/ui5-webcomponents)
+
+-   [Official site](https://sap.github.io/ui5-webcomponents/)
+
+
 <a name="loiof92b537272ba43abbfc157ba4ec8f010"/>
 
 <!-- loiof92b537272ba43abbfc157ba4ec8f010 -->

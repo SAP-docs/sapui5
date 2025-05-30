@@ -4,29 +4,29 @@
 
 The `sap.ui.comp.smartmicrochart.SmartMicroChart` control is used to create different micro charts based on OData metadata.
 
-For more information about this control, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.comp.smartmicrochart.SmartMicroChart) and the [Samples](https://ui5.sap.com/#/entity/sap.ui.comp.smartmicrochart.SmartMicroChart) in the Demo Kit.
-
 
 
 <a name="loio2180a6faa3ba4269aab16a77b905ee23__section_y4b_djc_wz"/>
 
 ## Overview
 
-The `SmartMicroChart` control analyzes the metadata document of an OData service and renders a `MicroChart` control for a specified entitySet. If no annotations or metadata are provided, the chart will not be rendered.
+The `SmartMicroChart` control analyzes the metadata document of an OData service and renders a `MicroChart` control for a specified `entitySet`. If no annotations or metadata is provided, the chart is not rendered.
 
-According to the defined value in the `chartType` property of the *UI.Chart* annotation the corresponding `MicroChart` control is rendered. Currently, the following chart types are supported:
+According to the defined value in the `chartType` property of the *UI.Chart* annotation, the corresponding `MicroChart` control is rendered. Following are the supported chart types:
 
--   *Area* \(`sap.ui.comp.smartmicrochart.SmartAreaMicroChart` will be created\) based on the `UI.ChartType` *Area* and *Line*.
+-   *Area* \(`sap.ui.comp.smartmicrochart.SmartAreaMicroChart` is created\) based on the `UI.ChartType` *Area* and *Line*.
 
--   *Bullet* \(`sap.ui.comp.smartmicrochart.SmartBulletMicroChart` will be created\) based on `UI.ChartType` *Bullet*.
+-   *Bullet* \(`sap.ui.comp.smartmicrochart.SmartBulletMicroChart` is created\) based on `UI.ChartType` *Bullet*.
 
--   *Radial* \(`sap.ui.comp.smartmicrochart.SmartRadialMicroChart` will be created\) based on the `UI.ChartType` *Donut*.
+-   *Radial* \(`sap.ui.comp.smartmicrochart.SmartRadialMicroChart` is created\) based on the `UI.ChartType` *Donut*.
 
+
+For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.comp.smartmicrochart.SmartMicroChart) and the [Samples](https://ui5.sap.com/#/entity/sap.ui.comp.smartmicrochart.SmartMicroChart).
 
 > ### Note:  
-> In case of a different *UI.ChartType* is provided than the mentioned above, the control does not render anything. The developer gets informed with a log statement.
+> In case a different *UI.ChartType* is provided, the control does not render anything. The developer gets informed with a log statement.
 
-The metadata should be annotated with the *UI.Chart* and the *UI.DataPoint* terms. Both terms need to annotate one and the same entityType \(see also the `entitySet` property of the `SmartMicroChart` control in the [API Reference](https://ui5.sap.com/#/api/sap.ui.comp.smartmicrochart.SmartMicroChart)\).
+The metadata must be annotated with the *UI.Chart* and the *UI.DataPoint* terms. Both terms must annotate the same `entityType` \(see also the `entitySet` property of the `SmartMicroChart` control in the [API Reference](https://ui5.sap.com/#/api/sap.ui.comp.smartmicrochart.SmartMicroChart)\).
 
 
 
@@ -38,9 +38,9 @@ The metadata should be annotated with the *UI.Chart* and the *UI.DataPoint* term
 
 ### Property handling
 
-All supported chart types of SmartMicroCharts need to handle the properties as follows:
+All supported chart types of `SmartMicroCharts` handles the properties as follows:
 
--   *DataPoint* property of the *Chart* annotation should point to the *DataPoint* annotation. Example:
+-   *DataPoint* property of the *Chart* annotation must point to the *DataPoint* annotation.
 
     ```xml
     <Property="DataPoint" AnnotationPath="@UI.DataPoint#BulletChartDataPoint">
@@ -50,7 +50,7 @@ All supported chart types of SmartMicroCharts need to handle the properties as f
 
 -   *Measures* and *Measure* properties
 
-    *Measures* property of the *Chart* annotation and *Measure* property of the *MeasureAttributes* property of the *Chart* annotation should point at the same property in the `entityType` \(Revenue in the sample below\). Example:
+    *Measures* and *Measure* property within the *MeasureAttributes* property of the *Chart* annotation must point at the same property in the `entityType`.
 
     ```xml
     <EntityType Name="ProductType" sap:label="Product Sales Data" sap:content-version="1">
@@ -110,22 +110,22 @@ All supported chart types of SmartMicroCharts need to handle the properties as f
     ```
 
     > ### Note:  
-    > The same `entityType` property should be used as a path for the `Value` property of the *DataPoint* annotation.
+    > The same `entityType` property is used as a path for the `Value` property of the *DataPoint* annotation.
 
 
 
 
 ### Qualifiers
 
-With the qualifier for the *UI.Chart* annotation term, the SmartMicroChart control can support multiple *UI.Chart* annotations for an OData service. Depending on the qualifiers, you can separate these multiple annotations and handle the different OData Annotations in this control.
+With the qualifier for the *UI.Chart* annotation term, the `SmartMicroChart` control supports multiple *UI.Chart* annotations for an OData service. Depending on the qualifiers, you can separate these multiple annotations and handle the different OData annotations in this control.
 
-You can provide the qualifier name through the `CustomData`aggregation of the corresponding SmartMicroChart control. A qualifier for *UI.Chart* annotation with Qualifier can look like this:
+You can provide the qualifier name through the `CustomData`aggregation of the corresponding `SmartMicroChart` control. A qualifier for *UI.Chart* annotation is as following:
 
 ```xml
 <Annotation Term="UI.Chart" Qualifier="BulletChartQualifier">
 ```
 
-The "BulletChartQualifier" string is the qualifier and can be any kind of string. The SmartMicroChart control needs this string to find the corresponding annotation. This is handled by providing the qualifier string as a custom data on the control instance.
+The `BulletChartQualifier` string is the qualifier and can be any kind of string. The `SmartMicroChart` control needs this string to find the corresponding annotation. This is handled by providing the qualifier string as a custom data on the control instance.
 
 ```xml
 
@@ -136,9 +136,9 @@ The "BulletChartQualifier" string is the qualifier and can be any kind of string
 		</SmartMicroChart>
 ```
 
-The custom data key is "chartQualifier". There are three different options supported how custom data can be provided:
+The custom data key is `chartQualifier`. There are three different options of providing custom data:
 
 -   as XML declaration
 -   by calling data function
--   by calling addCustomData function
+-   by calling `addCustomData` function
 

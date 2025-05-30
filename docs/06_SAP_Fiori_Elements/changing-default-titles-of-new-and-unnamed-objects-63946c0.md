@@ -2,7 +2,7 @@
 
 # Changing Default Titles of New and Unnamed Objects
 
-When a user creates new items for a list report or object page table, a default title is displayed. When a user removes the title and activates the object, SAP Fiori elements also provides a default title.
+When an end user creates new items in a list report or object page table, SAP Fiori elements provides a default title. Application developers are recommended to replace it with an application-specific title.
 
 
 
@@ -10,31 +10,27 @@ When a user creates new items for a list report or object page table, a default 
 
 ## Additional Features in SAP Fiori Elements for OData V2
 
-In the i18n files of the list report and the object page, change the value of the NEW\_OBJECT property to the title you want to be displayed for new entities for the list report or the object page like this:
+You can override the default titles provided by SAP Fiori elements using the `NEW_OBJECT` and `UNNAMED_OBJECT` keys in the `i18n.properties` file. For more information, see [Localization of UI Texts](localization-of-ui-texts-b8cb649.md).
 
-List report:
+**List Report** and **Object Page**
 
-`#XTIT, Default title for unnamed objects`
+`XTIT: Title for new unsaved objects`
 
-`NEW_OBJECT=My custom Title`
+`NEW_OBJECT= My Custom Title for New Objects`
 
-  
-  
-**Default title in list report**
+`XTIT: Default Title for objects that have a saved version`
 
-![](images/Default_Title_List_Report_61d6781.png "Default title in list report")
+`UNNAMED_OBJECT= My Custom Title for Unnamed Object`
 
-Object page:
+-   `NEW_OBJECT`: Defines the custom title shown for newly created draft objects in draft-enabled apps and unsaved objects in non-draft apps.
 
-`#XTIT, Default title for unnamed objects`
+-   `UNNAMED_OBJECT`: Defines a custom default title displayed in both display and edit modes for saved objects.
 
-`NEW_OBJECT=My custom Title`
 
-  
-  
-**Default title on object page**
-
-![](images/Object_Page_Default_Title_5301737.png "Default title on object page")
+> ### Note:  
+> -   For non-draft applications, the `NEW_OBJECT` and `UNNAMED_OBJECT` keys are not supported in the `i18n.properties` file for list reports.
+> 
+> -   In object pages, to display a custom default title for saved objects, the `UNNAMED_OBJECT` key must be overridden. SAP Fiori elements does not support specifying default titles for saved objects.
 
 
 
@@ -42,18 +38,17 @@ Object page:
 
 ## Additional Features in SAP Fiori Elements for OData V4
 
-When adding new items to a list report or object page table, the default title shown depends on the presence of the `UI.HeaderInfo.TypeName` annotation.
+In list reports and object pages, the default title for a newly created object in a table is 'New Object'. If an end user saves the object without modifying this title, it is automatically updated to 'Unnamed Object'. If the title is editable, end users can modify this new title as needed. If the end user clears the title, it reverts to the default title 'Unnamed Object'.
 
--   If `UI.HeaderInfo.TypeName` is present, SAP Fiori elements uses "*New: <HeaderInfo.TypeName\>*". The "*New*" comes from the i18n key `T_ANNOTATION_HELPER_DEFAULT_OBJECT_PAGE_HEADER_TITLE`.
+To modify the default title, application developers can use the following i18n keys:
 
--   If `UI.HeaderInfo.TypeName` is not present, SAP Fiori elements uses the "*New Object*" from the i18n key `T_NEW_OBJECT`. Applications can override this text.
+-   `T_NEW_OBJECT`: Override the default title 'New Object' for the newly created objects.
 
--   If the title is configured to a path pointing to an editable property in the entity set of the object page, and if the user edits the title to leave it blank, SAP Fiori elements uses "*Unnamed Object*" from the i18n key `T_ANNOTATION_HELPER_DEFAULT_OBJECT_PAGE_HEADER_TITLE_NO_HEADER_INFO`. Applications can override this text.
-
-    ![](images/Unnamed_Object_in_List_Report_Table_06b6206.png)
-
-    ![](images/Unnamed_Object_in_Object_Page_Header_3a3fbd6.png)
+-   `T_ANNOTATION_HELPER_DEFAULT_HEADER_TITLE_NO_HEADER_INFO`: Override the default title 'Unnamed Object' for saved objects without a title.
 
 
-For more information about i18n keys and how applications can override it, see [Localization of UI Texts](localization-of-ui-texts-b8cb649.md).
+> ### Note:  
+> If `UI.HeaderInfo.Typename` is undefined, the title is set to an empty string \(""\) when the end user clears the title or saves the newly created item without modifying the default title 'New Object'.
+
+For more information about i18n keys and how application developers can override them, see [Localization of UI Texts](localization-of-ui-texts-b8cb649.md).
 

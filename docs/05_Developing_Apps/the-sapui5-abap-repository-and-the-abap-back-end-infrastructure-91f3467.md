@@ -14,7 +14,7 @@ The SAPUI5 ABAP repository is part of the SAPUI5 ABAP back-end infrastructure an
 
 The BSP runtime is not used at runtime and SAPUI5-specific request handlers are used instead. Therefore, the flow logic ABAP parts cannot be used as they are not executed at runtime.
 
-The SAPUI5 text repository is part of the SAPUI5 ABAP repository. It's intended to be used as fallback mechanism if translation by properties files is not possible.
+The SAPUI5 ABAP text repository is part of the SAPUI5 ABAP repository. It's intended to be used as fallback mechanism if translation by properties files is not possible.
 
 > ### Note:  
 > SAPUI5 distribution layer artifacts, such as control libraries, are not stored in the SAPUI5 ABAP repository, but in a separate repository. The runtime access is realized by SAPUI5-specific request handlers.
@@ -103,7 +103,7 @@ SAPUI5 repository upload and download reports \(alternative for the team reposit
 
 SAP Business Suite system from version 7.00
 
-For more information, see [Using the SAPUI5 ABAP Repository Upload and Download Reports to Synchronize](using-the-sapui5-abap-repository-upload-and-download-reports-to-synchronize-a560bd6.md).
+For more information, see [Deploying SAPUI5 Applications to the SAPUI5 ABAP Repository](deploying-sapui5-applications-to-the-sapui5-abap-repository-a560bd6.md).
 
 </td>
 </tr>

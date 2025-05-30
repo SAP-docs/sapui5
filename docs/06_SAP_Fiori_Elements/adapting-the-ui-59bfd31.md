@@ -335,7 +335,7 @@ Analytical List Page
 </td>
 <td valign="top">
 
-Configure the default display mode of data in analytical list page.
+Configure the default display mode of data in the analytical list page.
 
 </td>
 <td valign="top">
@@ -507,7 +507,7 @@ Configure if variant management is used in charts on the object page.
 </td>
 <td valign="top">
 
-Configure if the *Related Apps* button is displayed in the object page.
+Configure if the *Related Apps* button is displayed on the object page.
 
 </td>
 <td valign="top">
@@ -522,7 +522,7 @@ Configure if the *Related Apps* button is displayed in the object page.
 </td>
 </tr>
 <tr>
-<td valign="top" rowspan="7">
+<td valign="top" rowspan="9">
 
 Table
 
@@ -683,12 +683,56 @@ Not applicable to responsive tables.
 <tr>
 <td valign="top" colspan="2">
 
+*Scroll Threshold*
+
+</td>
+<td valign="top">
+
+Configures the number of additional records that must be dynamically loaded when scrolling the application.
+
+</td>
+<td valign="top">
+
+[Tables](tables-c0f6592.md)
+
+</td>
+<td valign="top">
+
+Not applicable to responsive tables.
+
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="2">
+
+*Threshold*
+
+</td>
+<td valign="top">
+
+Configures the number of records that must be loaded during the initial load of the application.
+
+</td>
+<td valign="top">
+
+[Tables](tables-c0f6592.md)
+
+</td>
+<td valign="top">
+
+Not applicable to responsive tables.
+
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="2">
+
 *Hide "Add Card to Insights"*
 
 </td>
 <td valign="top">
 
-Configure if the *Add Card to Insights* feature for *My Home* in SAP S/4HANA is hidden.
+Configure if the *Add Card to Insights* feature for *My Home* in SAP S/4HANA and SAP S/4HANA Cloud Public Edition is hidden.
 
 </td>
 <td valign="top">
@@ -1115,7 +1159,7 @@ Not applicable to responsive tables.
 </td>
 <td valign="top">
 
-Configure the *Add Card to Insights* feature for *My Home* in SAP S/4HANA.
+Configure the *Add Card to Insights* feature for *My Home* in SAP S/4HANA and SAP S/4HANA Cloud Public Edition.
 
 </td>
 <td valign="top">

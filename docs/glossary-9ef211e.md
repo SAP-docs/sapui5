@@ -1588,7 +1588,7 @@ SAP Fiori elements
 <tr>
 <td valign="top">
 
-SAPUI5 text repository
+SAPUI5 ABAP text repository
 
 </td>
 <td valign="top">

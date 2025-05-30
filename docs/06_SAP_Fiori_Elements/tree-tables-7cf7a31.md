@@ -384,6 +384,31 @@ In the following example, the USA node can't be cut or dragged:
 
 
 
+<a name="loio7cf7a31fd1ee490ab816ecd941bd2f1f__section_gms_4s5_2fc"/>
+
+## Copy and Paste
+
+Copying a node is supported by SAP Fiori elements for OData V4 as of SAPUI5 1.136. It can be enabled or disabled by using the following extension points:
+
+-   `isNodeCopyable`: Defines if a node can be copied. The associated callback receives the source context as a parameter.
+-   `isCopyToPositionAllowed`: Defines if a source node can be pasted under a specific parent node. The associated callback receives the source and target contexts as parameters.
+
+> ### Sample Code:  
+> `manifest.json`
+> 
+> ```json
+> "tableSettings": {
+>     "type": "TreeTable",
+>     "hierarchyQualifier": "NodesHierarchy",
+>     "personalization": true,
+>     "creationMode": {...},
+>     "isNodeCopyable": ".extension.hierarchy-edit.custom.OPExtend.enableCopy",
+> 	"isCopyToPositionAllowed": ".extension.hierarchy-edit.custom.OPExtend.enablePasteFromCopy"
+> }
+> ```
+
+
+
 <a name="loio7cf7a31fd1ee490ab816ecd941bd2f1f__section_zvl_zyn_jdc"/>
 
 ## Context Menu

@@ -2,11 +2,11 @@
 
 # Labels of the Chart
 
-You can display a maximum of four labels.
+You can display a maximum of four labels on a chart.
 
-The relationships between these four labels and their annotations are as follows:
+The relationships between the four labels and their annotations are as follows:
 
-**Relationship of labels and their annotations**
+**Relationship of Labels and Their Annotations**
 
 
 <table>
@@ -147,7 +147,7 @@ Measures
 </tr>
 </table>
 
-![Smart Area Micro Chart with labels](images/SmartAreaMC_with_Labels_1afd16d.jpg)
+![Smart Area Micro Chart with labels](images/SmartAreaMC_with_Labels_1afd16d.png)
 
 The values of the x and y coordinates of the first chart point are retrieved from the first data entry in the bound model. The formatted x-value is displayed at the bottom left of the chart. It corresponds with the `dimensions` property of the UI.Chart annotation term. Depending on the data type of the property in the entity type, an appropriate formatter is chosen so that you can format the value as needed.
 

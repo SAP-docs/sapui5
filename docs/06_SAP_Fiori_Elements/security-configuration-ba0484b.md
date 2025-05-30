@@ -18,9 +18,9 @@ Consider the following security aspects:
 
 -   If you're using ABAP, see [Implementing Search in an Unmanaged Query](https://help.sap.com/docs/abap-cloud/abap-rap/implementing-search-in-unmanaged-query) and [Implementing Filtering in an Unmanaged Query](https://help.sap.com/docs/abap-cloud/abap-rap/implementing-filtering-in-unmanaged-query) for more information about security-related configurations.
 
--   To use the upload feature, application developers must define `@Core.AcceptableMediaTypes`. This avoids security issues by enabling SAP Fiori elements to check for allowed file types. The back-end service framework must ensure a virus scan and other security measures, such as maximum file size limitations and MIME-type restrictions, are in place.
+-   To use the upload feature, application developers must define `@Core.AcceptableMediaTypes`. This avoids security issues by enabling SAP Fiori elements to check for allowed file types. The back-end service framework must ensure a virus scan and other security measures, such as maximum file size limitations and MIME-type restrictions, are in place. This also includes protecting entities from being created or processed using malicious content.
 
-    For more information, see [Enabling Stream Support](enabling-stream-support-b236d32.md).
+    For more information, see [Enabling Stream Support](enabling-stream-support-b236d32.md) and [Enabling the Upload Functionality](enabling-the-upload-functionality-d59dbec.md).
 
 
 
@@ -49,6 +49,12 @@ To protect potentially sensitive data, annotate properties as potentially sensit
 
     For more information, see [Enabling the History of Recently Entered Values](enabling-the-history-of-recently-entered-values-37dbf1f.md).
 
+-   **Caching the Last Executed Request**
+
+    Caching the last executed request is disabled if the request contains a filter on properties that are annotated with `PersonalData.IsPotentiallySensitive`.
+
+    For more information, see [Caching the Last Executed Request](caching-the-last-executed-request-4215eca.md).
+
 -   **Store/Restore the Application State**
 
     If a field annotated as potentially sensitive is changed, SAP Fiori elements doesn't store/restore this information. Any changes added by users are therefore lost when refreshing. This limitation doesn't apply to fields used in filter context.
@@ -74,5 +80,11 @@ To protect potentially sensitive data, annotate properties as potentially sensit
     If your application contains sensitive and personal data, enabling the *Share: Microsoft Teams* › *As Card* option results in the transfer of this information outside the SAP S/4HANA environment. Application teams need to carefully consider whether such data should be excluded by providing the corresponding annotation.
 
     For more information, see [The Share: Microsoft Teams Functionality](the-share-microsoft-teams-functionality-ff89e4b.md).
+
+-   **Masking Input Fields**
+
+    Input fields can be masked using the `Common.Masked` annotation. This feature only hides the text on the UI and doesn't mask the data before it is sent to the back end.
+
+    For more information, see [Different Representations of a Field](different-representations-of-a-field-c18ada4.md).
 
 

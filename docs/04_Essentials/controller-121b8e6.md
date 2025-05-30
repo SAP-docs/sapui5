@@ -4,6 +4,12 @@
 
 A controller contains methods that define how models and views interact.
 
+
+
+<a name="loio121b8e6337d147af9819129e428f1f75__section_cxl_h2d_y2c"/>
+
+## Defining and Referencing Controllers
+
 You define a simple controller as follows:
 
 ```js
@@ -17,10 +23,41 @@ sap.ui.define([
 });
 ```
 
-The string in quotes specifies the controller name. The controller file's name should be named as the string in the quotes, `Address.controller.js`.
+The string in quotes specifies the controller name. The controller file should be named as the string in the quotes, for example, `Address.controller.js`.
 
 > ### Note:  
-> The suffix `.controller.js` is mandatory for controllers.
+> When you reference a controller in your XML view using dot notation \(e.g., `sap.hcm.Adress`\), the name of your controller file must contain the mandatory `.controller.js` suffix.
+> 
+> ```
+> <mvc:View controllerName="sap.hcm.Address" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc"></mvc:View>
+> ```
+> 
+> You could also use the module name syntax \(e.g., `module:sap/hcm/Address`\) to reference the controller. This would allow you to name your controller file without a `.controller` suffix, e.g., `Address.js`:
+> 
+> ```
+> // If filename is Address.js (without .controller suffix) 
+> <mvc:View controllerName="module:sap/hcm/Address" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc"></mvc:View>
+> 
+> // If filename is Address.controller.js (with .controller suffix)
+> <mvc:View controllerName="module:sap/hcm/Address.controller" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc"></mvc:View>
+> ```
+
+> ### Tip:  
+> If you create your controller via factory API, use the module name syntax to avoid the need for the strict `.controller.js` filename suffix:
+> 
+> > ### Example:  
+> > Controller filename `Main.js`
+> > 
+> > ```js
+> > sap.ui.require([
+> > "sap/ui/core/mvc/Controller"
+> > ], function(Controller) {
+> >     Controller.create({
+> >         name: "module:my/app/controller/Main" // No need for '.controller.js' suffix in the file name
+> >     })
+> > });
+> > 
+> > ```
 
 
 
@@ -33,6 +70,11 @@ SAPUI5 provides predefined lifecycle hooks for implementation. You can add event
 SAPUI5 provides the following lifecycle hooks:
 
 -   `onInit()`: Called when a view is instantiated and its controls \(if available\) have already been created; used to modify the view before it is displayed to bind event handlers and do other one-time initialization
+
+    > ### Note:  
+    > In component-based apps, you should use `this.getOwnerComponent().getModel()` instead of `this.getView().getModel()` inside `onInit()` to get a model that is assigned to the component. The latter call might return `undefined` because the view might not have been attached to a parent yet \(i.e., the component\) and thus can't inherit a model from that parent. **It then doesn't know about models or bindings yet.**
+    > 
+    > You could also attach to the `modelContextChange` event, which is fired whenever a control's model or context change.
 
 -   `onExit()`: Called when the view is destroyed; used to free resources and finalize activities
 

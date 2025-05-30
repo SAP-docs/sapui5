@@ -25,7 +25,7 @@ Ensure that the entity set referred for the `Chart` building block supports aggr
 > ### Note:  
 > The `contextPath` is optional if `metaPath` is provided with an absolute path. If `metaPath` is relative and there is no `contextPath` given, then we consider the parent binding path as the value of `contextPath`.
 
-Applications can do the following with the `Chart` building block:
+You can do the following with the `Chart` building block:
 
 -   Link `Chart` building block with the `FilterBar` building block.
 
@@ -50,6 +50,9 @@ Applications can do the following with the `Chart` building block:
 
 
 Check out our live example in the flexible programming model explorer at [Chart Title](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/chart/chartDefault).
+
+> ### Note:  
+> Chart properties such as `headerVisible`, `header`, and `selectionMode` can be defined in both the `Chart` building block and `manifest.json` file. In such cases, the values in the `manifest.json` file take precedence over those in the `Chart` building block.
 
 
 

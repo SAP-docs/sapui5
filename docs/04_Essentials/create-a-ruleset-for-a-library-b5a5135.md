@@ -12,7 +12,7 @@ The Support Assistant allows you to create your own ruleset.
 
 A ruleset is a `library.support.js` file that defines an object `name` and `niceName` and returns a set of rules. Before you create a rule, you need to create a ruleset at a specific location. You can follow these steps as an example:
 
-1.  Open the respective library project. Let's say that your library is part of OpenUI5, open the project in `openui5([openui5.git]/src/sap.ui.support/src/sap/m)`.
+1.  Open the respective library project. Let's say that your library is part of OpenUI5, open the project in `openui5([openui5.git]/src/sap.m/src/sap/m)`.
 
 2.  Create a JavaScript file with name `library.support.js` in the root folder where `library.js` is placed.
 
@@ -178,7 +178,7 @@ sap.ui.define(["sap/ui/support/library"],
 
     var labelRule1 = {…};
 
-    Var labelRule2 = {…};
+    var labelRule2 = {…};
 
     return {
       name: "sap.ui.core",

@@ -36,3 +36,18 @@ A context's selection state can also be accessed via data binding to the `"@$ui5
 
 Note that list-based controls may use the OData V4 model's selection state implicitly; check the corresponding control documentation for more information. For advanced features, you can access the OData V4 model's APIs directly as outlined above.
 
+
+
+<a name="loioec55312f796f45e8883810af3b68b46c__section_SCN"/>
+
+## Selection Count
+
+The number of selected rows is available via [`v4.ODataListBinding#getSelectionCount`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataListBinding%23methods/getSelectionCount) . Every time it changes, a [`selectionChanged`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataListBinding%23events/selectionChanged) event is fired. The selection count is currently unknown in the case of a "select all". It is also available via a one-way \(read-only\) property binding to the header context's `$selectionCount`, just like the [inline collection count](binding-collection-inline-count-77d2310.md) is:
+
+> ### Example:  
+> Binding `$selectionCount` via the header context
+> 
+> ```
+> <Title text="{headerContext>$count} Sales Orders ({headerContext>$selectionCount} selected)"/>
+> ```
+

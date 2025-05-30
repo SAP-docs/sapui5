@@ -309,7 +309,7 @@ You can get answers to the most frequently asked questions we receive from our u
 
 -   **I have some sections that take a long time to load. I don't want requests for these UI artifacts to go in the same call as the other requests so that the UI loads faster – what can I do here?**
 
-    You can group the request for the element that takes a long time under the "LongRunners" group. For more information, see [Defining the Loading Behavior of Object Page Headers](defining-the-loading-behavior-of-object-page-headers-ac03570.md).
+    You can group the request for the element that takes a long time under the "LongRunners" group. For more information, see [Defining the Loading Behavior of Object Page](defining-the-loading-behavior-of-object-page-ac03570.md).
 
 -   **Can I dynamically hide sections or parts of sections?** 
 

@@ -478,7 +478,7 @@ Breadcrumb
 </td>
 <td valign="top">
 
-[Object Page Classic Header](../10_More_About_Controls/object-page-classic-header-0fecbce.md)
+[Object Page Header](../10_More_About_Controls/object-page-header-6e340c1.md)
 
 </td>
 <td valign="top">
@@ -547,6 +547,10 @@ Building blocks
 [The VariantManagement Building Block](the-variantmanagement-building-block-33640ff.md)
 
 [The RichTextEditor Building Block](the-richtexteditor-building-block-7bd2767.md)
+
+[The Page Building Block](the-page-building-block-0258650.md)
+
+[The MessageButton Building Block](the-messagebutton-building-block-b365f2a.md)
 
 </td>
 <td valign="top">
@@ -1671,22 +1675,47 @@ Custom header facet
 </td>
 <td valign="top">
 
-Object page
+-   List report
+-   Object page
+
+
 
 </td>
 <td valign="top">
 
-[Extension Points for Object Page Header Facets](extension-points-for-object-page-header-facets-61cf0ee.md)
+-   [Extension Point for List Report Header](extension-point-for-list-report-header-1ab83e6.md)
+-   [Extension Points for Object Page Header Facets](extension-points-for-object-page-header-facets-61cf0ee.md)
+
+
 
 </td>
 <td valign="top">
 
-[Object Page Floorplan](https://experience.sap.com/fiori-design-web/object-page/)
+-   [List Report Floorplan](https://experience.sap.com/fiori-design-web/list-report-floorplan-sap-fiori-element/)
+-   [Object Page Floorplan](https://experience.sap.com/fiori-design-web/object-page/)
+
+
 
 </td>
 <td valign="top">
 
-![](images/Custom_Header_Facet_8dc8996.png)
+  
+  
+**Custom Content in a List Report Header in Expanded Mode**
+
+![](images/Custom_Content_in_List_Report_Header_in_Expand_Mode_51fe3b2.png "Custom Content in a List Report Header in Expanded Mode")
+
+  
+  
+**Custom Content in a List Report Header in Collapsed Mode**
+
+![](images/Custom_Content_in_List_Report_Header_in_Collapsed_Mode_bd1a51e.png "Custom Content in a List Report Header in Collapsed Mode")
+
+  
+  
+**Custom Content in an Object Page Header**
+
+![](images/Custom_Header_Facet_8dc8996.png "Custom Content in an Object Page Header")
 
 </td>
 <td valign="top">
@@ -5431,6 +5460,118 @@ variant management
 <tr>
 <td valign="top">
 
+`Page` building block
+
+</td>
+<td valign="top">
+
+-   List report\(OData V4\)
+-   Object page\(OData V4\)
+-   Anaytical list page\(OData V4\)
+
+
+
+</td>
+<td valign="top">
+
+[The Page Building Block](the-page-building-block-0258650.md)
+
+[Building Blocks](building-blocks-24c1304.md)
+
+[Flexible Programming Model](flexible-programming-model-549749b.md)
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+page building block
+
+layout building block
+
+building blocks
+
+buildable blocks
+
+macro
+
+free style application
+
+freestyle application
+
+free-style application
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`MessageButton` building block
+
+</td>
+<td valign="top">
+
+-   List report\(OData V4\)
+-   Object page\(OData V4\)
+-   Anaytical list page\(OData V4\)
+
+
+
+</td>
+<td valign="top">
+
+[The MessageButton Building Block](the-messagebutton-building-block-b365f2a.md)
+
+[Building Blocks](building-blocks-24c1304.md)
+
+[Flexible Programming Model](flexible-programming-model-549749b.md)
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+message button building block
+
+message button
+
+messagebutton building block
+
+layout building block
+
+building blocks
+
+buildable blocks
+
+macro
+
+free style application
+
+freestyle application
+
+free-style application
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
 Save
 
 </td>
@@ -6410,7 +6551,7 @@ Title
 
 [Adding Titles to Object Page Tables](adding-titles-to-object-page-tables-d9a4539.md)
 
-[Adapting the Object Page Header Title and Description](adapting-the-object-page-header-title-and-description-333f850.md)
+[Configuring the Object Page Header Title and Description](configuring-the-object-page-header-title-and-description-333f850.md)
 
 [Changing Default Titles of New and Unnamed Objects](changing-default-titles-of-new-and-unnamed-objects-63946c0.md)
 

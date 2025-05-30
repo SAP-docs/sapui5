@@ -17,7 +17,7 @@ You can then use the `ResourceBundle.create` function to load the resource bundl
 ```js
 // "ResourceBundle" required from module "sap/base/i18n/ResourceBundle"
 ResourceBundle.create({
-    url : sUrl, 
+    url: sUrl,
     locale: sLocale,
     async: true,
     supportedLocales: aSupportedLocales,
@@ -79,8 +79,9 @@ The coding of the test page looks as follows:
 // "TextView" required from module "sap/ui/commons/TextView"
 // "Localization" required from module "sap/base/i18n/Localization"
 ResourceBundle.create({
-	url : "res/i18n.properties", 
+	url: "res/i18n.properties",
 	locale: Localization.getLanguage(),
+	async: true,
 	supportedLocales: ["", "de"],
 	fallbackLocale: ""
 }).then(function(oBundle) {

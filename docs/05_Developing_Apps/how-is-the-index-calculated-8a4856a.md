@@ -26,8 +26,6 @@ The report allows you to specify the basis for the calculation of the index. Her
 
 -   A single repository
 
--   The SAPUI5 distribution layer only
-
 
 > ### Note:  
 > The report `/UI5/APP_INDEX_CALCULATE` replaces the report `/UI5/UPDATE_CACHEBUSTER` used in the user interface add-on 1.0 for SAP NetWeaver.

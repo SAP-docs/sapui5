@@ -13,8 +13,8 @@ Similar to `DocumentFragments` in HTML, the fragment itself has no HTML represen
 SAPUI5 provides different types of fragments:
 
 -   XML fragments
--   HTML fragments
 -   JS fragments
+-   HTML fragments \(deprecated\)
 
 More fragment types can be implemented and plugged in.
 

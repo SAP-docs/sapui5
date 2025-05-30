@@ -207,7 +207,7 @@ Enables you to perform arithmetic calculations on constants and variables, using
 
 For more information, see [Calculation Builder](../10_More_About_Controls/calculation-builder-1db5047.md), the [API Reference](https://ui5.sap.com/#/api/sap.suite.ui.commons.CalculationBuilder) and the [Samples](https://ui5.sap.com/#/entity/sap.suite.ui.commons.CalculationBuilder).
 
-![Calculation Builder with Autocomplete Suggestions](images/WhatsNew_156_Calculation_Builder_0eb83de.png)
+![Calculation Builder with Autocomplete Suggestions](images/Suite_Calculation_Builder_0eb83de.png)
 
 <sub>New•Control•Info Only•1.56</sub>
 
@@ -252,7 +252,7 @@ Acts as a wrapper control for `sap.ui.comp.smartfield.SmartField` and supports t
 
 For more information, see [Smart Multi Input](../10_More_About_Controls/smart-multi-input-5644169.md), the [API Reference](https://ui5.sap.com/#/api/sap.ui.comp.smartmultiinput.SmartMultiInput) and the [Samples](https://ui5.sap.com/#/entity/sap.ui.comp.smartmultiinput.SmartMultiInput).
 
-![Smart Multi Input Fields](images/WhatsNew_156_Smart_Multi_Input_ece2f96.jpg)
+![Smart Multi Input Fields](images/Suite_Smart_Multi_Input_ece2f96.png)
 
 <sub>New•Control•Info Only•1.56</sub>
 
@@ -1679,6 +1679,10 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.134](what-s-new-in-sapui5-1-134-c512d71.md "With this release SAPUI5 is upgraded from version 1.133 to 1.134.")
+
+[What's New in SAPUI5 1.133](what-s-new-in-sapui5-1-133-86d7605.md "With this release SAPUI5 is upgraded from version 1.132 to 1.133.")
 
 [What's New in SAPUI5 1.132](what-s-new-in-sapui5-1-132-bd2e61f.md "With this release SAPUI5 is upgraded from version 1.131 to 1.132.")
 

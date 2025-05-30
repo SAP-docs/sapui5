@@ -42,11 +42,11 @@ In **XML views**, you can also use the `templateShareable` property by adding it
 </Table>
 ```
 
--   `templateShareable = "false"` \(preferred setting\)
+-   `templateShareable: false` \(preferred setting\)
 
     If you set the parameter to `false` the lifecycle is controlled by the framework. It will destroy the template when the binding is removed \(`unbindAggregation`, `unbindItems`\)
 
--   `templateShareable = "true"`
+-   `templateShareable: true`
 
     If you set the parameter to `true` the template is **not** destroyed when \(the binding of\) the aggregated object is destroyed. Use this option in the following cases only:
 

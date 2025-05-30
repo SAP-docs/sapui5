@@ -15,5 +15,5 @@ Please, follow the steps described in [Test Automation](../04_Essentials/test-au
 
 [*Karma* Home Page](https://www.npmjs.com/package/karma)
 
-[Test Automation](../04_Essentials/test-automation-ae44824.md#loioae448243822448d8ba04b4784f4b09a0 "To make sure that the code is always tested thoroughly before it is included in a productive app, you should use a test runner that automates tests. The test runner can be included in your project setup so that it is called whenever code changes are submitted.")
+[Test Automation](../04_Essentials/test-automation-ae44824.md#loioae448243822448d8ba04b4784f4b09a0 "To make sure your code is always tested thoroughly before its inclusion in a productive project, you should use a test runner that automates tests. The test runner can be included in your project setup so that it is called whenever code changes are submitted.")
 

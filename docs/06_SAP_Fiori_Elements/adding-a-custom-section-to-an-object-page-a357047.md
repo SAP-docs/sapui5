@@ -325,7 +325,7 @@ The object page of the app shows the new section.
 
 For custom sections configured with **Page** layout mode, if there's only one control within the section, the section title is merged with the control title, hiding the section title. The merging of titles occurs automatically for custom sections that utilize standard building blocks without any layout.
 
-For sections that use standard building blocks within a layout, you can define a `onSectionLoaded` property in the `manifest.json` file. The value of the `onSectionLoaded` property must be the name of the method defined in the custom controller. This method must invoke the `setAsSectionTitleOwner` extension API within `sap.fe.templates/src/sap/fe/templates/ObjectPage/ExtensionAPI.ts`. You must ensure that the correct control is passed while invoking the extension API, as the section title is merged with the title of this control.
+For sections that use standard building blocks within a layout, you can define a `onSectionLoaded` property in the `manifest.json` file. This method is called for all sections when the object page is loaded for the first time or when the page is refreshed. The value of the `onSectionLoaded` property must be the name of the method defined in the custom controller. This method must invoke the `setAsSectionTitleOwner` extension API within `sap.fe.templates/src/sap/fe/templates/ObjectPage/ExtensionAPI.ts`. You must ensure that the correct control is passed while invoking the extension API, as the section title is merged with the title of this control.
 
 > ### Sample Code:  
 > Manifest setting for merging title within custom sections
@@ -357,7 +357,7 @@ For sections that use standard building blocks within a layout, you can define a
 > ```
 
 > ### Sample Code:  
-> Custom controller method that sets the right control
+> Custom Controller Method That Sets the Right Control
 > 
 > ```
 > callShowSectionTitle(section){

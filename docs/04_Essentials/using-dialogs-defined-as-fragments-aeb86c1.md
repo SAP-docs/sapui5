@@ -12,9 +12,12 @@ In the following example, the dialog is opened immediately:
 
 ```js
 // "this" has to be the controller instance of a controller extending module "sap/ui/core/mvc/Controller"
-this.loadFragment({type: "XML", name: "testdata.fragments.XMLFragmentDialog"}).then(function(oDialog) {
-	oDialog.open();
-});
+async openDialog() {
+	this.oDialog ??= await this.loadFragment({
+		name: "testdata.fragments.XMLFragmentDialog"
+	});
+	this.oDialog.open();
+}
 ```
 
 > ### Note:  

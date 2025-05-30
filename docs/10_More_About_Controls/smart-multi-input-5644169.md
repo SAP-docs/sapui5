@@ -4,8 +4,6 @@
 
 The `SmartMultiInput` control can be used to create a multi-input field or a multi-input combobox.
 
-For more information about this control, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.comp.smartmultiinput.SmartMultiInput) and the [Samples](https://ui5.sap.com/#/entity/sap.ui.comp.smartmultiinput.SmartMultiInput) in the Demo Kit.
-
 
 
 <a name="loio5644169deb76438f800f269b0cb715fc__section_mxc_sbd_5db"/>
@@ -14,7 +12,9 @@ For more information about this control, see the [API Reference](https://ui5.sap
 
 The `SmartMultiInput` control acts as a wrapper control for the `sap.ui.comp.smartfield.SmartField` control and supports the same settings and annotations. It interprets OData metadata to create a multi-input field or a multi-input combobox, similar to `sap.m.MultiInput` and `sap.m.MultiComboBox` but with added annotation capabilities. Thanks to the annotations support, smart multi input fields and comboboxes can be embedded into other smart controls, such as `sap.ui.comp.smartform.SmartForm`.
 
-![Smart Multi Input Fields in a Smart Form](../01_Whats-New/images/WhatsNew_156_Smart_Multi_Input_ece2f96.jpg)
+![Smart Multi Input Fields in a Smart Form](../01_Whats-New/images/Suite_Smart_Multi_Input_ece2f96.png)
+
+For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.comp.smartmultiinput.SmartMultiInput) and the [Sample](https://ui5.sap.com/#/entity/sap.ui.comp.smartmultiinput.SmartMultiInput).
 
 
 

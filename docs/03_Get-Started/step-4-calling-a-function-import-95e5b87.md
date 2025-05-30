@@ -2,7 +2,9 @@
 
 # Step 4: Calling a Function Import
 
-We only want to display the upcoming meetings and hide the meetings happened in the past in our app. By using a function import that calculates these items on the back end we do not need to do the calculation on the client. The OData V2 mock server will be instructed to do the calculation locally for testing purposes.
+In this step, we change the binding of the list to a function import call that returns only upcoming meetups instead of the entire collection.
+
+We only want to display the upcoming meetings and hide the meetings that happened in the past in our app. By using a function import that calculates these items on the back end, we do not need to do the calculation on the client. The OData V2 mock server will be instructed to do the calculation locally for testing purposes.
 
 
 
@@ -10,9 +12,9 @@ We only want to display the upcoming meetings and hide the meetings happened in 
 
   
   
-**Only the upcoming meet-ups are shown**
+**Only the upcoming meetups are shown**
 
-![](images/Tutorial_Mock_Server_Step_4_8f2176b.png "Only the upcoming meet-ups are shown")
+![The graphic has an explanatory text.](images/Tutorial_Mock_Server_Step_4_8f2176b.png "Only the upcoming meetups are shown")
 
 
 
@@ -25,10 +27,10 @@ You can view and download all files in the Demo Kit at [Mock Server - Step 4](ht
 ## webapp/localService/metadata.xml
 
 ```xml
-... 
-      <EntityContainer Name="NerdMeetups" m:IsDefaultEntityContainer="true">
-        <EntitySet Name="Meetups" EntityType="NerdMeetup.Models.Meetup" />
-        <FunctionImport Name="FindUpcomingMeetups" EntitySet="Meetups" ReturnType="Collection(NerdMeetup.Models.Meetup)" m:HttpMethod="GET" />
+… 
+      <EntityContainer Name="Meetups" m:IsDefaultEntityContainer="true">
+        <EntitySet Name="Meetups" EntityType="Meetup.Models.Meetup" />
+        <FunctionImport Name="FindUpcomingMeetups" EntitySet="Meetups" ReturnType="Collection(Meetup.Models.Meetup)" m:HttpMethod="GET" />
       </EntityContainer>
     </Schema>
   </edmx:DataServices>
@@ -42,13 +44,13 @@ The function import we are going to use is declared in the `metadata.xml` file.
 ## webapp/view/App.view.xml
 
 ```xml
-...
-  //Delete items="{/Meetups}"
-	<List id="list" items="{/FindUpcomingMeetups}" noDataText="{i18n>noDataText}"> 
-...
+… 
+    <!-- Replace 'items="{/Meetups}"' -->
+    <List id="list" items="{/FindUpcomingMeetups}" noDataText="{i18n>noDataText}"> 
+… 
 ```
 
-We change the binding of the list to a function import call that returns only upcoming meet-ups, instead of the call to the entire meet-ups collection.
+We change the binding of the list to a function import call `/FindUpcomingMeetups` that returns only upcoming meetups, replacing the previous `/Meetups` call to the entire meetup collection.
 
 After saving and running the app again, we should get the following result:
 
@@ -56,7 +58,7 @@ After saving and running the app again, we should get the following result:
   
 **No data visible**
 
-![](images/Tutorial_Mock_Server_Step_4_02_4992f37.png "No data visible")
+![The graphic has an explanatory text.](images/Tutorial_Mock_Server_Step_4_02_4992f37.png "No data visible")
 
 Since the function import call is not simulated automatically by the mock server, we do not see any data in list, and a failed network call is issued in the developer tools of the browser.
 
@@ -71,65 +73,66 @@ In order to simulate the function import call, we write our own \(mocked\) imple
 
 ```js
 sap.ui.define([
-	"sap/ui/thirdparty/jquery",
-	"sap/ui/core/date/UI5Date",
-	"sap/ui/core/util/MockServer",
-	"sap/base/Log"
-], function(jQuery, UI5Date, MockServer, Log) {
-	"use strict";
-	return {
-		/**
-		 * Initializes the mock server.
-		 * You can configure the delay with the URL parameter "serverDelay".
-		 * The local mock data in this folder is returned instead of the real data for testing.
-		 * @public
-		 */
-		init: function() {
-			// create
-			var oMockServer = new MockServer({
-				rootUri: "/"
-			});
-			oMockServer.simulate("../localService/metadata.xml", {
-				sMockdataBaseUrl: "../localService/mockdata",
-				bGenerateMissingMockData: true
-			});
+    "sap/ui/thirdparty/jquery",
+    "sap/ui/core/date/UI5Date",
+    "sap/ui/core/util/MockServer",
+    "sap/base/Log"
+], (jQuery, UI5Date, MockServer, Log) => {
+    "use strict";
+    return {
+        /**
+         * Initializes the mock server.
+         * You can configure the delay with the URL parameter "serverDelay".
+         * The local mock data in this folder is returned instead of the real data for testing.
+         * @public
+         */
+        init() {
+            // create
+            const oMockServer = new MockServer({rootUri: "/"});
 
-			// handling mocking a function import call step
-			var aRequests = oMockServer.getRequests();
-			aRequests.push({
-				method: "GET",
-				path: new RegExp("FindUpcomingMeetups(.*)"),
-				response: function(oXhr) {
-					Log.debug("Incoming request for FindUpcomingMeetups");
-					var today = UI5Date.getInstance();
-					today.setHours(0); // or today.toUTCString(0) due to timezone differences
-					today.setMinutes(0);
-					today.setSeconds(0);
-					jQuery.ajax({
-						url: "/Meetups?$filter=EventDate ge " + "/Date(" + today.getTime() + ")/",
-						dataType : 'json',
-						async: false,
-						success : function(oData) {
-							oXhr.respondJSON(200, {}, JSON.stringify(oData));
-						}
-					});
-					return true;
-				}
-			});
-			oMockServer.setRequests(aRequests);
-			// handling custom URL parameter step
-			var fnCustom = function(oEvent) {
-				var oXhr = oEvent.getParameter("oXhr");
-				if (oXhr && oXhr.url.indexOf("first") > -1) {
-					oEvent.getParameter("oFilteredData").results.splice(3, 100);
-				}
-			};
-			oMockServer.attachAfter("GET", fnCustom, "Meetups");
-			// start
-			oMockServer.start();
-			Log.info("Running the app with mock data");
-		}
-	};
+            oMockServer.simulate("../localService/metadata.xml", {
+                sMockdataBaseUrl: "../localService/mockdata",
+                bGenerateMissingMockData: true
+            });
+
+            // handling mocking a function import call step
+            const aRequests = oMockServer.getRequests();
+            aRequests.push({
+                method: "GET",
+                path: new RegExp("FindUpcomingMeetups(.*)"),
+                response: (oXhr) => {
+                    Log.debug("Incoming request for FindUpcomingMeetups");
+                    const oToday = UI5Date.getInstance();
+                    oToday.setHours(0); // or oToday.toUTCString(0) due to timezone differences
+                    oToday.setMinutes(0);
+                    oToday.setSeconds(0);
+                    // the mock server only works with sap.jQuery.ajax and async: false. But the request does not
+                    // actually go to a server, so this does not block the main thread.
+                    jQuery.ajax({
+                        url: `/Meetups?$filter=EventDate ge datetime'${oToday.toISOString()}'`,
+                        dataType : 'json',
+                        async: false,
+                        success : (oData) => {
+                            oXhr.respondJSON(200, {}, JSON.stringify(oData));
+                        }
+                    });
+                    return true;
+                }
+            });
+            oMockServer.setRequests(aRequests);
+            // handling custom URL parameter step
+            const fnCustom = (oEvent) => {
+                const oXhr = oEvent.getParameter("oXhr");
+                if (oXhr?.url.includes("first")) {
+                    oEvent.getParameter("oFilteredData").results.splice(3, 100);
+                }
+            };
+            oMockServer.attachAfter("GET", fnCustom, "Meetups");
+            // start
+            oMockServer.start();
+            Log.info("Running the app with mock data");
+        }
+    };
 });
 ```
 
@@ -154,41 +157,9 @@ The request handler has the following structure:
 
 The `response` function executes a request to the `Meetups` entity set with an OData `$filter` query that actually returns all meet-ups with `EventDate` that is greater than or equals today. We compose a date for the filter and send it to the `server` manually as a synchronous request.
 
-It is o.k. to use `jQuery.sap.sjax` here, because the call will not actually leave the client. It triggers a new request that again is intercepted and processed by the mock server.
+It's ok to use `jQuery.sap.ajax` here, because the call will not actually leave the client. It triggers a new request that again is intercepted and processed by the mock server.
 
 We finally respond on the XHR object by calling the `respondJSON` API. It will add the proper content type header for the JSON format and send the result. We provide the HTTP status code `200` \(success\) and the 'stringified' response data as the arguments. Returning `true` at the end of the function indicates that we have completed the processing of the request in this handler \(no additional request handlers should be checked for that request\).
 
-When you now start the app again you will see a list of upcoming meet-ups.
-
-
-
-## Creating and Editing Mock Data in SAP Web IDE \(Optional\)
-
-
-
-### webapp/localService/mockserver.js
-
-```js
-...
-oMockServer.simulate("localService/metadata.xml", {
-	sMockdataBaseUrl : "localService/mockdata",
-	bGenerateMissingMockData : true
-});
-...
-```
-
-The path we gave in the simulate function for mock data is where we want to store the .json file\(s\).
-
--   Save it \(in JSON format\) from a real service
-
--   Create it manually
-
--   Generate it in SAP Web IDE by choosing *Edit Mock Data* in the context menu of the `medatdata.xml` file. For more information about SAP Web IDE, see the documentation for SAP Web IDE on the SAP Help Portal at [https://help.sap.com/viewer/p/SAP\_Web\_IDE](https://help.sap.com/viewer/p/SAP_Web_IDE).
-
-      
-      
-    **Editing mock data in SAP Web IDE**
-
-    ![](images/Tutorial_Mock_Server_Step_4_03_1117f6c.png "Editing mock data in SAP Web IDE")
-
+When you now start the app again you will see a list of upcoming meetups.
 

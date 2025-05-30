@@ -31,24 +31,42 @@ You can view and download all files at [OData V4 - Step 6](https://ui5.sap.com/#
 ## webapp/controller/App.controller.js
 
 ```js
-...
-		onInit : function () {
-			var oMessageManager = sap.ui.getCore().getMessageManager(),
-				oMessageModel = oMessageManager.getMessageModel(),
-				oMessageModelBinding = oMessageModel.bindList("/", undefined, [],
-					new Filter("technical", FilterOperator.EQ, true)),
-				oViewModel = new JSONModel({
-					busy : false,
-					hasUIChanges : false,
-					usernameEmpty : true,
-					order : 0
-				});
-			this.getView().setModel(oViewModel, "appView");
-			this.getView().setModel(oMessageModel, "message");
+sap.ui.define([
+    "sap/ui/core/Messaging",
+    "sap/ui/core/mvc/Controller",
+    "sap/m/MessageToast",
+    "sap/m/MessageBox",
+    "sap/ui/model/Sorter",
+    "sap/ui/model/Filter",
+    "sap/ui/model/FilterOperator",
+    "sap/ui/model/FilterType",
+    "sap/ui/model/json/JSONModel"
+], function (Messaging, Controller, MessageToast, MessageBox, Sorter, Filter, FilterOperator,
+    FilterType, JSONModel) {
+    "use strict";
 
-			oMessageModelBinding.attachChange(this.onMessageBindingChange, this);
-			this._bTechnicalErrors = false;
-},
+    return Controller.extend("sap.ui.core.tutorial.odatav4.controller.App", {
+
+        /**
+         *  Hook for initializing the controller
+         */
+        onInit : function () {
+            var oMessageModel = Messaging.getMessageModel(),
+                oMessageModelBinding = oMessageModel.bindList("/", undefined, [],
+                    new Filter("technical", FilterOperator.EQ, true)),
+                oViewModel = new JSONModel({
+                    busy : false,
+                    hasUIChanges : false,
+                    usernameEmpty : true,
+                    order : 0
+                });
+
+            this.getView().setModel(oViewModel, "appView");
+            this.getView().setModel(oMessageModel, "message");
+
+            oMessageModelBinding.attachChange(this.onMessageBindingChange, this);
+            this._bTechnicalErrors = false;
+        },
 ...
 ```
 
@@ -56,24 +74,24 @@ We change the `onInit` method: The `appView` model receives two additional prope
 
 ```js
 ...
-		onSort : function () {
-			...
-		},
-		_getText : function (sTextId, aArgs) {
-			...
-		},
+        onSort : function () {
+            ...
+        },
+        _getText : function (sTextId, aArgs) {
+            ...
+        },
 
-		_setUIChanges : function (bHasUIChanges) {
-			if (this._bTechnicalErrors) {
-				// If there is currently a technical error, then force 'true'.
-				bHasUIChanges = true;
-			} else if (bHasUIChanges === undefined) {
-				bHasUIChanges = this.getView().getModel().hasPendingChanges();
-			}
-			var oModel = this.getView().getModel("appView");
-			oModel.setProperty("/hasUIChanges", bHasUIChanges);
-		}
-	});
+        _setUIChanges : function (bHasUIChanges) {
+            if (this._bTechnicalErrors) {
+                // If there is currently a technical error, then force 'true'.
+                bHasUIChanges = true;
+            } else if (bHasUIChanges === undefined) {
+                bHasUIChanges = this.getView().getModel().hasPendingChanges();
+            }
+            var oModel = this.getView().getModel("appView");
+            oModel.setProperty("/hasUIChanges", bHasUIChanges);
+        }
+    });
 });
 ```
 
@@ -81,31 +99,31 @@ We add the `_setUIChanges` private method that lets us set the property `hasUICh
 
 ```js
 ...
-		onInit: function () {
-			...
-		},
-		onCreate : function () {
-			var oList = this.byId("peopleList"),
-				oBinding = oList.getBinding("items"),
-				oContext = oBinding.create({
-					"UserName" : "",
-					"FirstName" : "",
-					"LastName" : "",
-					"Age" : "18"
-				});
+        onInit: function () {
+            ...
+        },
+        onCreate : function () {
+            var oList = this.byId("peopleList"),
+                oBinding = oList.getBinding("items"),
+                oContext = oBinding.create({
+                    "UserName" : "",
+                    "FirstName" : "",
+                    "LastName" : "",
+                    "Age" : "18"
+                });
 
-			this._setUIChanges();
-			this.getView().getModel("appView").setProperty("/usernameEmpty", true);
+            this._setUIChanges();
+            this.getView().getModel("appView").setProperty("/usernameEmpty", true);
 
-			oList.getItems().some(function (oItem) {
-				if (oItem.getBindingContext() === oContext) {
-					oItem.focus();
-					oItem.setSelected(true);
-					return true;
-				}
-			});
-		},
-		onRefresh
+            oList.getItems().some(function (oItem) {
+                if (oItem.getBindingContext() === oContext) {
+                    oItem.focus();
+                    oItem.setSelected(true);
+                    return true;
+                }
+            });
+        },
+        onRefresh
 ...
 ```
 
@@ -115,38 +133,38 @@ We also use the binding context returned by the `create` method to focus and sel
 
 ```js
 ...
-		onRefresh: function () {
-			...
-		},
-		onSave : function () {
-			var fnSuccess = function () {
-				this._setBusy(false);
-				MessageToast.show(this._getText("changesSentMessage"));
-				this._setUIChanges(false);
-			}.bind(this);
+        onRefresh: function () {
+            ...
+        },
+        onSave : function () {
+            var fnSuccess = function () {
+                this._setBusy(false);
+                MessageToast.show(this._getText("changesSentMessage"));
+                this._setUIChanges(false);
+            }.bind(this);
 
-			var fnError = function (oError) {
-				this._setBusy(false);
-				this._setUIChanges(false);
-				MessageBox.error(oError.message);
-			}.bind(this);
+            var fnError = function (oError) {
+                this._setBusy(false);
+                this._setUIChanges(false);
+                MessageBox.error(oError.message);
+            }.bind(this);
 
-			this._setBusy(true); // Lock UI until submitBatch is resolved.
-			this.getView().getModel().submitBatch("peopleGroup").then(fnSuccess, fnError);
-			this._bTechnicalErrors = false; // If there were technical errors, a new save resets them.
-		},
-		onSearch: function () {
-			...
-		},
-		...
-		_setUIChanges : function (bHasUIChanges) {
-			...
-		},
-		_setBusy : function (bIsBusy) {
-			var oModel = this.getView().getModel("appView");
-			oModel.setProperty("/busy", bIsBusy);
-		}
-	});
+            this._setBusy(true); // Lock UI until submitBatch is resolved.
+            this.getView().getModel().submitBatch("peopleGroup").then(fnSuccess, fnError);
+            this._bTechnicalErrors = false; // If there were technical errors, a new save resets them.
+        },
+        onSearch: function () {
+            ...
+        },
+        ...
+        _setUIChanges : function (bHasUIChanges) {
+            ...
+        },
+        _setBusy : function (bIsBusy) {
+            var oModel = this.getView().getModel("appView");
+            oModel.setProperty("/busy", bIsBusy);
+        }
+    });
 });
 ```
 
@@ -158,36 +176,36 @@ We also define a `_setBusy` private function to lock the whole UI while the data
 
 ```js
 ...
-		onSort : function () {
-			...
-		},
+        onSort : function () {
+            ...
+        },
 
-		onMessageBindingChange : function (oEvent) {
-			var aContexts = oEvent.getSource().getContexts(),
-				aMessages,
-				bMessageOpen = false;
+        onMessageBindingChange : function (oEvent) {
+            var aContexts = oEvent.getSource().getContexts(),
+                aMessages,
+                bMessageOpen = false;
 
-			if (bMessageOpen || !aContexts.length) {
-				return;
-			}
+            if (bMessageOpen || !aContexts.length) {
+                return;
+            }
 
-			// Extract and remove the technical messages
-			aMessages = aContexts.map(function (oContext) {
-				return oContext.getObject();
-			});
-			sap.ui.getCore().getMessageManager().removeMessages(aMessages);
+            // Extract and remove the technical messages
+            aMessages = aContexts.map(function (oContext) {
+                return oContext.getObject();
+            });
+            sap.ui.getCore().getMessageManager().removeMessages(aMessages);
 
-			this._setUIChanges(true);
-			this._bTechnicalErrors = true;
-			MessageBox.error(aMessages[0].message, {
-				id : "serviceErrorMessageBox",
-				onClose : function () {
-					bMessageOpen = false;
-				}
-			});
+            this._setUIChanges(true);
+            this._bTechnicalErrors = true;
+            MessageBox.error(aMessages[0].message, {
+                id : "serviceErrorMessageBox",
+                onClose : function () {
+                    bMessageOpen = false;
+                }
+            });
 
-			bMessageOpen = true;
-		},
+            bMessageOpen = true;
+        },
 ...
 ```
 
@@ -195,17 +213,17 @@ We implement the event handler for the `change` event of the `ListBinding` to th
 
 ```js
 ...
-		onRefresh: function () {
-			...
-		},
-		onResetChanges : function () {
-			this.byId("peopleList").getBinding("items").resetChanges();
-			this._bTechnicalErrors = false; 
-			this._setUIChanges();
-		},
-		onSearch: function () {
-			...
-		},
+        onRefresh: function () {
+            ...
+        },
+        onResetChanges : function () {
+            this.byId("peopleList").getBinding("items").resetChanges();
+            this._bTechnicalErrors = false; 
+            this._setUIChanges();
+        },
+        onSearch: function () {
+            ...
+        },
 ...
 ```
 
@@ -213,22 +231,22 @@ The `onResetChanges` method handles discarding pending changes. It uses the `res
 
 ```js
 ...
-		onCreate: function () {
-			...
-		},
-		onInputChange : function (oEvt) {
-			if (oEvt.getParameter("escPressed")) {
-				this._setUIChanges();
-			} else {
-				this._setUIChanges(true);
-				if (oEvt.getSource().getParent().getBindingContext().getProperty("UserName")) {
-					this.getView().getModel("appView").setProperty("/usernameEmpty", false);
-				}
-			}
-		},
-		onRefresh : function () {
-			...
-		},
+        onCreate: function () {
+            ...
+        },
+        onInputChange : function (oEvt) {
+            if (oEvt.getParameter("escPressed")) {
+                this._setUIChanges();
+            } else {
+                this._setUIChanges(true);
+                if (oEvt.getSource().getParent().getBindingContext().getProperty("UserName")) {
+                    this.getView().getModel("appView").setProperty("/usernameEmpty", false);
+                }
+            }
+        },
+        onRefresh : function () {
+            ...
+        },
 ...
 ```
 
@@ -242,124 +260,124 @@ The `onInputChange` event handler manages entries in any of the `Input` fields a
 
 ```xml
 <mvc:View
-	controllerName="sap.ui.core.tutorial.odatav4.controller.App"
-	displayBlock="true"
-	xmlns="sap.m"
-	xmlns:mvc="sap.ui.core.mvc">
-	<Shell>
-		<App busy="{appView>/busy}" class="sapUiSizeCompact">
-			<pages>
-				<Page title="{i18n>peoplePageTitle}">
-					<content>
-						<Table
-							id="peopleList"
-							growing="true"
-							growingThreshold="10"
-							items="{
-								path: '/People',
-								parameters: {
-								$count: true,
-									$$updateGroupId : 'peopleGroup'
-								}
-							}">
-							<headerToolbar>
-								<OverflowToolbar>
-									<content>
-										<ToolbarSpacer/>
-										<SearchField
-											id="searchField"
-											width="20%"
-											placeholder="{i18n>searchFieldPlaceholder}"
-											enabled="{= !${appView>/hasUIChanges}}"
-											search=".onSearch"/>
-										<Button
-											id="addUserButton"
-											icon="sap-icon://add"
-											tooltip="{i18n>createButtonText}"
-											press=".onCreate">
-											<layoutData>
-												<OverflowToolbarLayoutData priority="NeverOverflow"/>
-											</layoutData>
-										</Button>
+    controllerName="sap.ui.core.tutorial.odatav4.controller.App"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc">
+    <Shell>
+        <App busy="{appView>/busy}" class="sapUiSizeCompact">
+            <pages>
+                <Page title="{i18n>peoplePageTitle}">
+                    <content>
+                        <Table
+                            id="peopleList"
+                            growing="true"
+                            growingThreshold="10"
+                            items="{
+                                path: '/People',
+                                parameters: {
+                                $count: true,
+                                    $$updateGroupId : 'peopleGroup'
+                                }
+                            }">
+                            <headerToolbar>
+                                <OverflowToolbar>
+                                    <content>
+                                        <ToolbarSpacer/>
+                                        <SearchField
+                                            id="searchField"
+                                            width="20%"
+                                            placeholder="{i18n>searchFieldPlaceholder}"
+                                            enabled="{= !${appView>/hasUIChanges}}"
+                                            search=".onSearch"/>
+                                        <Button
+                                            id="addUserButton"
+                                            icon="sap-icon://add"
+                                            tooltip="{i18n>createButtonText}"
+                                            press=".onCreate">
+                                            <layoutData>
+                                                <OverflowToolbarLayoutData priority="NeverOverflow"/>
+                                            </layoutData>
+                                        </Button>
 
-										<Button
-											id="refreshUsersButton"
-											icon="sap-icon://refresh"
-											enabled="{= !${appView>/hasUIChanges}}"
-											tooltip="{i18n>refreshButtonText}"
-											press=".onRefresh"/>
-										<Button
-											id="sortUsersButton"
-											icon="sap-icon://sort"
-											enabled="{= !${appView>/hasUIChanges}}"
-											tooltip="{i18n>sortButtonText}"
-											press=".onSort"/>
-									</content>
-								</OverflowToolbar>
-							</headerToolbar>
-							<columns>
-								<Column id="userNameColumn">
-									<Text text="{i18n>userNameLabelText}"/>
-								</Column>
-								<Column id="firstNameColumn">
-									<Text text="{i18n>firstNameLabelText}"/>
-								</Column>
-								<Column id="lastNameColumn">
-									<Text text="{i18n>lastNameLabelText}"/>
-								</Column>
-								<Column id="ageColumn">
-									<Text text="{i18n>ageLabelText}"/>
-								</Column>
-							</columns>
-							<items>
-								<ColumnListItem>
-									<cells>
-										<Input
-											value="{UserName}"
-											valueLiveUpdate="true"
-											liveChange=".onInputChange"/>
+                                        <Button
+                                            id="refreshUsersButton"
+                                            icon="sap-icon://refresh"
+                                            enabled="{= !${appView>/hasUIChanges}}"
+                                            tooltip="{i18n>refreshButtonText}"
+                                            press=".onRefresh"/>
+                                        <Button
+                                            id="sortUsersButton"
+                                            icon="sap-icon://sort"
+                                            enabled="{= !${appView>/hasUIChanges}}"
+                                            tooltip="{i18n>sortButtonText}"
+                                            press=".onSort"/>
+                                    </content>
+                                </OverflowToolbar>
+                            </headerToolbar>
+                            <columns>
+                                <Column id="userNameColumn">
+                                    <Text text="{i18n>userNameLabelText}"/>
+                                </Column>
+                                <Column id="firstNameColumn">
+                                    <Text text="{i18n>firstNameLabelText}"/>
+                                </Column>
+                                <Column id="lastNameColumn">
+                                    <Text text="{i18n>lastNameLabelText}"/>
+                                </Column>
+                                <Column id="ageColumn">
+                                    <Text text="{i18n>ageLabelText}"/>
+                                </Column>
+                            </columns>
+                            <items>
+                                <ColumnListItem>
+                                    <cells>
+                                        <Input
+                                            value="{UserName}"
+                                            valueLiveUpdate="true"
+                                            liveChange=".onInputChange"/>
 
-									</cells>
-									<cells>
-										<Input
-											value="{FirstName}"
-											liveChange=".onInputChange"/>
-									</cells>
-									<cells>
-										<Input
-											value="{LastName}"
-											liveChange=".onInputChange"/>
-									</cells>
-									<cells>
-										<Input
-											value="{Age}"
-											valueLiveUpdate="true"
-											liveChange=".onInputChange"/>
-									</cells>
-								</ColumnListItem>
-							</items>
-						</Table>
-					</content>
-					<footer>
-						<Toolbar visible="{appView>/hasUIChanges}">
-							<ToolbarSpacer/>
-							<Button
-								id="saveButton"
-								type="Emphasized"
-								text="{i18n>saveButtonText}"
-								enabled="{= ${message>/}.length === 0 &amp;&amp; ${appView>/usernameEmpty} === false }"
-								press=".onSave"/>
-							<Button
-								id="doneButton"
-								text="{i18n>cancelButtonText}"
-								press=".onResetChanges"/>
-						</Toolbar>
-					</footer>
+                                    </cells>
+                                    <cells>
+                                        <Input
+                                            value="{FirstName}"
+                                            liveChange=".onInputChange"/>
+                                    </cells>
+                                    <cells>
+                                        <Input
+                                            value="{LastName}"
+                                            liveChange=".onInputChange"/>
+                                    </cells>
+                                    <cells>
+                                        <Input
+                                            value="{Age}"
+                                            valueLiveUpdate="true"
+                                            liveChange=".onInputChange"/>
+                                    </cells>
+                                </ColumnListItem>
+                            </items>
+                        </Table>
+                    </content>
+                    <footer>
+                        <Toolbar visible="{appView>/hasUIChanges}">
+                            <ToolbarSpacer/>
+                            <Button
+                                id="saveButton"
+                                type="Emphasized"
+                                text="{i18n>saveButtonText}"
+                                enabled="{= ${message>/}.length === 0 &amp;&amp; ${appView>/usernameEmpty} === false }"
+                                press=".onSave"/>
+                            <Button
+                                id="doneButton"
+                                text="{i18n>cancelButtonText}"
+                                press=".onResetChanges"/>
+                        </Toolbar>
+                    </footer>
 
-				</Page>
-			</pages>
-		</App>
-	</Shell>
+                </Page>
+            </pages>
+        </App>
+    </Shell>
 </mvc:View>
 
 ```

@@ -34,9 +34,8 @@ Here is an example of how to log a warning with additional support information:
 
 ```
 // "Log" required from module "sap/base/Log"
-//enable to log additional support information, this is automatically turned on if the url parameter: sap-ui-support is set to true
-Log.logSupportInfo(true)
 
+// Pass additional support information for automatic use by support tooling when sap-ui-support=true is set
 Log.warning("Log this text", function() {
   //return additional object for further processing in support tooling
   return {

@@ -5,7 +5,7 @@
 When application developers enable the full-screen mode for tables, a button on the table toolbar is displayed that allows users to open the table in full-screen mode. This provides more space for displaying and working with table entries.
 
 > ### Note:  
-> This topic is currently only applicable to SAP Fiori elements for OData V4.
+> This topic is only applicable to SAP Fiori elements for OData V4.
 
 Make the settings in the `manifest.json` as follows:
 
@@ -27,7 +27,7 @@ Make the settings in the `manifest.json` as follows:
 > ```
 
 > ### Note:  
-> -   This setting is currently not available for the list report. If it is configured for a list report, the setting will be ignored during templating.
+> -   This setting is not available for the list report. If it is configured for a list report, the setting will be ignored during templating.
 > 
 > -   On mobile phones, full-screen mode is enabled by default.
 

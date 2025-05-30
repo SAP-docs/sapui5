@@ -2,7 +2,12 @@
 
 # Enabling the Upload Functionality
 
-The SAP Fiori elements Table building block provides a built-in upload functionality that allows users to upload files to the server. The user can to the following:
+The SAP Fiori elements Table building block provides a built-in upload functionality that allows users to upload files to the server.
+
+> ### Note:  
+> This topic is only applicable to SAP Fiori elements for OData V4.
+
+When the upload functionality is enabled, the user can do the following:
 
 -   Upload files either by dragging and dropping them onto the table, or by clicking the *Upload* button
 
@@ -14,7 +19,16 @@ The SAP Fiori elements Table building block provides a built-in upload functiona
 Uploading and deleting is only available in edit mode.
 
 > ### Note:  
-> To avoid security issues, you must enable SAP Fiori elements to check for allowed file types. To do that, define `@Core.AcceptableMediaTypes`. The back-end service framework must ensure a virus scan and other security measures, such as maximum file size limitations and MIME-type restrictions, are in place.
+> To prevent security issues and protect data from being created or processed with malicious content, you must ensure the following security measures are in place:
+> 
+> -   Define `@Core.AcceptableMediaTypes` to specify allowed file types.
+> 
+> -   The back-end service framework must ensure a virus scan and other security measures, such as maximum file size limitations and MIME-type restrictions, are in place.
+> 
+> -   You must also implement file validation and data sanitization in the back end.
+> 
+> 
+> For more security-related information, see [Security Configuration](security-configuration-ba0484b.md).
 
 
 
@@ -76,7 +90,7 @@ Check out our live example in the flexible programming model explorer at [Table 
 
 ### Add Additional Columns and Actions to the Table
 
-You can add additional columns and actions to the table by either defining further `UI.LineItem` annotations or by adding custom columns and actions into the `manifest.json`, as described in [Defining Line Items](defining-line-items-f0e1e17.md).
+You can add additional columns and actions to the table by either defining further `UI.LineItem` annotations or by adding custom columns and actions into the `manifest.json` file, as described in [Defining Line Items](defining-line-items-f0e1e17.md).
 
 
 

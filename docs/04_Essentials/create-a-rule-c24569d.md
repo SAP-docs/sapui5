@@ -178,13 +178,13 @@ The check function has three main and one optional parameters. The main ones are
 
 -   `oCoreFacade` - gives you access to the different elements provided by the SAPUI5 core framework:
 
-    -   <code><a href="https://ui5.sap.com/#/api/sap.ui.base.Object/methods/getMetadata">getMetadata()</a></code>
+    -   <code><a href="https://ui5.sap.com/#/api/sap.ui.support.CoreFacade%23methods/getMetadata">getMetadata()</a></code>
 
-    -   <code><a href="https://ui5.sap.com/#/api/sap.ui.core.Core/methods/getUIArea">getUIAreas()</a></code>
+    -   <code><a href="https://ui5.sap.com/#/api/sap.ui.support.CoreFacade%23methods/getUIAreas">getUIAreas()</a></code>
 
-    -   <code><a href="https://ui5.sap.com/#/api/sap.ui.core.Core/methods/getComponent">getComponents()</a></code>
+    -   <code><a href="https://ui5.sap.com/#/api/sap.ui.support.CoreFacade%23methods/getComponents">getComponents()</a></code>
 
-    -   <code><a href="https://ui5.sap.com/#/api/sap.ui.core.Core/methods/getModel">getModels()</a></code>
+    -   <code><a href="https://ui5.sap.com/#/api/sap.ui.support.CoreFacade%23methods/getModels">getModels()</a></code>
 
 
 -   `oScope` - retrieves elements in the scope with the following methods:
@@ -223,24 +223,25 @@ The check function has three main and one optional parameters. The main ones are
     ```js
     
     function(issueManager, oCoreFacade, oScope) {
-      var mElements = oScope.getElements({
-        type: "sap.m.Input",
-        public: true,
-        cloned: false
-      });
-      for (var n in mElements) {
-        var oElement = mElements[n];
-        if (!oElement.getParent()) {
-          issueManager.addIssue({
-            severity: sap.ui.support.Severity.Medium,
-            details: "The element " + oElement.getId() + " has no parent.",
-            context: {
-              id: oElement.getId()
-            }
-          });
+        var mElements = oScope.getElements({
+            type: "sap.m.Input",
+            public: true,
+            cloned: false
+        });
     
+        for (var n in mElements) {
+            var oElement = mElements[n];
+    
+            if (!oElement.getParent()) {
+                issueManager.addIssue({
+                    severity: Severity.Medium, // Severity enum is taken from "sap/ui/support/library" import
+                    details: "The element " + oElement.getId() + " has no parent.",
+                    context: {
+                        id: oElement.getId()
+                    }
+                });
+            }
         }
-      }
     }
     
     ```

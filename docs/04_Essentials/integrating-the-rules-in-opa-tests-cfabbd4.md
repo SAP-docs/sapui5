@@ -58,17 +58,18 @@ This special URL parameter could be used temporarily in cases when you extend an
 
     ```
     sap.ui.define([
-    ...
-    ], function(Opa5, Arrangement) {
-    ...
-    extensions: ["sap/ui/core/support/RuleEngineOpaExtension"],
+        "sap/ui/test/Opa5",
+        ...
+    ], function(Opa5, ...) {
+        ...
     
-    appParams: {
-      "sap-ui-support": "true,silent"
-    }
-    
-    ...
-    });
+        Opa5.extendConfig({
+            ...
+            extensions: ["sap/ui/core/support/RuleEngineOpaExtension"],
+            appParams: {
+                "sap-ui-support": "true,silent"
+            }
+        });
     });
     
     ```

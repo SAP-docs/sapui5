@@ -8,14 +8,14 @@ Let's assume we have the following JSON data:
 
 ```json
 {
-	"company" : {
-		"name": "Acme Inc.",
-		"street": "23 Franklin St.",
-		"city": "Claremont",
-		"state": "New Hampshire",
-		"zip": "03301",
-		"revenue": "1833990"
-	}
+    "company" : {
+        "name": "Acme Inc.",
+        "street": "23 Franklin St.",
+        "city": "Claremont",
+        "state": "New Hampshire",
+        "zip": "03301",
+        "revenue": "1833990"
+    }
 }
 ```
 
@@ -23,33 +23,22 @@ Here's how you would use element binding in an XML view:
 
 ```xml
 <mvc:View
-	controllerName="sap.ui.sample.App"
-	xmlns:mvc="sap.ui.core.mvc"
-	xmlns="sap.m">
-	<Input id="companyInput"
-		binding="{/company}"
-		value="{name}"
-		tooltip="The name of the company is '{name}'"/>
+    controllerName="sap.ui.sample.App"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Input id="companyInput"
+        binding="{/company}"
+        value="{name}"
+        tooltip="The name of the company is '{name}'"/>
 </mvc:View>
 ```
 
-By setting `binding="{/company}"`, we can refer to `company` children without having to qualify the full binding path, when binding `Input` control's properties such as the `value`. Using plain property binding, our XML view would look like this:
-
-```xml
-<mvc:View
-	controllerName="sap.ui.sample.App"
-	xmlns:mvc="sap.ui.core.mvc"
-	xmlns="sap.m">
-	<Input id="companyInput"
-		value="{/company/name}"
-		tooltip="The name of the company is '{/company/name}'}"/>
-</mvc:View>
-```
+By setting `binding="{/company}"`, we can refer to `company` children without having to qualify the full binding path when binding the `Input` control's properties such as the `value`.
 
 To define an element binding in JavaScript, for example in a controller, use the `bindElement` method on a control:
 
 ```js
-var oInput = this.byId("companyInput");
+const oInput = this.byId("companyInput");
 oInput.bindElement("/company");
 oInput.bindProperty("value", "name");
 ```
@@ -58,24 +47,24 @@ Element binding is especially interesting for containers or layouts containing m
 
 ```xml
 <mvc:View
-	controllerName="sap.ui.sample.App"
-	xmlns:mvc="sap.ui.core.mvc"
-	xmlns:layout="sap.ui.layout"
-	xmlns="sap.m">
-	<layout:VerticalLayout id="vLayout"
-		binding="{/company}"
-		width="100%">
-			<Text text="{name}" />
-			<Text text="{city}" />
-			<Text text="{county}" />
-	</layout:VerticalLayout> 
+    controllerName="sap.ui.sample.App"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:layout="sap.ui.layout"
+    xmlns="sap.m">
+    <layout:VerticalLayout id="vLayout"
+        binding="{/company}"
+        width="100%">
+            <Text text="{name}" />
+            <Text text="{city}" />
+            <Text text="{county}" />
+    </layout:VerticalLayout> 
 </mvc:View>
 ```
 
 To realize this in JavaScript, proceed as follows in your controller:
 
 ```js
-var oVerticalLayout = this.byId("vLayout");
+const oVerticalLayout = this.byId("vLayout");
 oVerticalLayout.bindElement("/company");
 oVerticalLayout.addContent(new Text({ text: "{name}" }));
 oVerticalLayout.addContent(new Text({ text: "{city}" }));
@@ -86,11 +75,11 @@ Given your XML view contains a `VerticalLayout`, it will look like this:
 
 ```xml
 <mvc:View
-	controllerName="sap.ui.sample.App"
-	xmlns:mvc="sap.ui.core.mvc"
-	xmlns:layout="sap.ui.layout"
-	xmlns="sap.m">
-	<layout:VerticalLayout id="vLayout" width="100%"/> 			 
+    controllerName="sap.ui.sample.App"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:layout="sap.ui.layout"
+    xmlns="sap.m">
+    <layout:VerticalLayout id="vLayout" width="100%"/>
 </mvc:View>
 ```
 
@@ -106,29 +95,25 @@ Let's look at the following JSON model featuring a company list:
 
 ```json
 {
-	"companies" : [
-		{
-			"name": "Acme Inc.",
-			"city": "Belmont",
-			"state": "NH",
-			"county": "Belknap",
-			"revenue": 123214125.34
-		},
-		{
-			"name": "Beam Hdg.",
-			"city": "Hancock",
-			"state": "NH",
-			"county": "Belknap"
-			"revenue": 3235235235.23
-		},
-		{
-			"name": "Carot Ltd.",
-			"city": "Cheshire",
-			"state": "NH",
-			"county": "Sullivan",
-			"revenue": "Not Disclosed"
-		}
-	]
+    "companies" : [{
+        "name": "Acme Inc.",
+        "city": "Belmont",
+        "state": "NH",
+        "county": "Belknap",
+        "revenue": 123214125.34
+    }, {
+        "name": "Beam Hdg.",
+        "city": "Hancock",
+        "state": "NH",
+        "county": "Belknap",
+        "revenue": 3235235235.23
+    }, {
+        "name": "Carot Ltd.",
+        "city": "Cheshire",
+        "state": "NH",
+        "county": "Sullivan",
+        "revenue": "Not Disclosed"
+    }]
 }
 ```
 
@@ -136,17 +121,17 @@ Let's take this simple view, containing a single input control:
 
 ```xml
 <mvc:View
-	controllerName="sap.ui.sample.App"
-	xmlns:mvc="sap.ui.core.mvc"
-	xmlns="sap.m">
-	<Input id="companyInput" value="{name}"/>	
+    controllerName="sap.ui.sample.App"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Input id="companyInput" value="{name}"/>
 </mvc:View>
 ```
 
 In your controller, you can now bind the input control as follows:
 
 ```js
-var oInput = this.byId("companyInput");
+const oInput = this.byId("companyInput");
 oInput.bindElement("/companies/0");
 ```
 
@@ -158,87 +143,80 @@ You can also use the `bindElement` method in conjunction with list binding. Let'
 
 ```json
 {
-	"regions": [
-		{
-			"name": "Americas",
-			"companies" : [
-			{
-				"name": "Acme Inc.",
-				"zip": "03301",
-				"city": "Belmont",
-				"county": "Belknap",
-				"state": "NH",
-				"revenue": 123214125.34, 
-				"publ": true
-			},
-			{
-				"name": "Beam Hdg.",
-				"zip": "03451",
-				"city": "Hancock",
-				"county": "Sullivan",
-				"state": "NH",
-				"revenue": 3235235235.23,
-				"publ": true
-			},
-			{
-				"name": "Carot Ltd.",
-				"zip": "03251",
-				"city": "Cheshire",
-				"county": "Sullivan",
-				"state": "NH",
-				"revenue": "Not Disclosed",
-				"publ": false 
-			}]
-		},{
-			"name": "DACH",
-			"companies" : [
-			{
-				"name": "Taubtrueb",
-				"zip": "89234",
-				"city": "Ginst",
-				"county": "Musenhain",
-				"state": "NRW",
-				"revenue": 2525, 
-				"publ": true
-			},
-			{
-				"name": "Krawehl",
-				"zip": "45362",
-				"city": "Schlonz",
-				"county": "Humpf",
-				"state": "BW",
-				"revenue": 2342525, 
-				"publ": true
-			}]
-		}
-	]
+    "regions": [{
+        "name": "Americas",
+        "companies" : [{
+            "name": "Acme Inc.",
+            "zip": "03301",
+            "city": "Belmont",
+            "county": "Belknap",
+            "state": "NH",
+            "revenue": 123214125.34, 
+            "publ": true
+        }, {
+            "name": "Beam Hdg.",
+            "zip": "03451",
+            "city": "Hancock",
+            "county": "Sullivan",
+            "state": "NH",
+            "revenue": 3235235235.23,
+            "publ": true
+        }, {
+            "name": "Carot Ltd.",
+            "zip": "03251",
+            "city": "Cheshire",
+            "county": "Sullivan",
+            "state": "NH",
+            "revenue": "Not Disclosed",
+            "publ": false 
+        }]
+    },{
+        "name": "DACH",
+        "companies" : [{
+            "name": "Taubtrueb",
+            "zip": "89234",
+            "city": "Ginst",
+            "county": "Musenhain",
+            "state": "NRW",
+            "revenue": 2525, 
+            "publ": true
+        }, {
+            "name": "Krawehl",
+            "zip": "45362",
+            "city": "Schlonz",
+            "county": "Humpf",
+            "state": "BW",
+            "revenue": 2342525, 
+            "publ": true
+        }]
+    }]
 }
 ```
 
-Say we want to display companies in a `sap.m.List` control. Here's what the XML view will look like:
+Say we want to display companies in an `sap.m.List` control. Here's what the XML view will look like:
 
 ```xml
 <mvc:View
-	controllerName="sap.ui.sample.App"
-	xmlns:mvc="sap.ui.core.mvc"
-	xmlns="sap.m">
-	  <List id="companyList" items="{companies}">
-			<StandardListItem title="{name}" description="{city}" />
-	  </List>
+    controllerName="sap.ui.sample.App"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+      <List id="companyList" items="{companies}">
+            <StandardListItem title="{name}" description="{city}" />
+      </List>
 </mvc:View>
 ```
 
 Please note that `items="{companies}"` cannot be resolved initially, since it is a relative path. In your controller, you can now provide an element binding for the list control:
 
 ```js
-var oList = this.byId("companyList");
+const oList = this.byId("companyList");
 oList.bindElement("/regions/0");
 ```
 
 This will display the companies for region **Americas**, while the code below displays all companies in the **DACH** region \(Germany, Austria, Switzerland\):
 
 ```js
-var oList = this.byId("companyList");
+const oList = this.byId("companyList");
 oList.bindElement("/regions/1");
 ```
 

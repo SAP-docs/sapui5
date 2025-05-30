@@ -213,7 +213,7 @@ To enable this feature, do the following:
 2.  Ensure that the `DataFieldForAnnotation` record refers to a `UI.FieldGroup` annotation, where you can define multiple fields.
 
 
-The following annotation types are currently supported:
+The following annotation types are supported:
 
 -   `DataField`
 
@@ -662,10 +662,12 @@ For more information about how to configure navigation using fields, see [Naviga
 
 ### Merging the `TextArea` Label with the Section or Subsection Title
 
-By default, the `TextArea` label is always displayed. However, if `UI.FieldGroup` has only one `UI.MultiLineText`-based property and no other controls, the label of the corresponding `TextArea` control can be hidden. To do this, in the `manifest.json` file, configure `useSingleTextAreaFieldAsNotes` to `true`.
+By default, the `TextArea` label is always displayed. However, if `UI.FieldGroup` has only one `UI.MultiLineText`-based property and no other controls, the label of the corresponding `TextArea` control can be hidden. To do this, in the `manifest.json` file, set `useSingleTextAreaFieldAsNotes` to `true`.
+
+When this setting is enabled, only the section or subsection title is displayed. However, you must ensure that a meaningful label is assigned to the text area control as it is accessed by screen reader programs.
 
 > ### Note:  
-> The setting is at section-level and applies for all TextArea controls within the section.
+> The setting is at section-level and applies for all text area controls within the section. However, if a text area is marked as mandatory, the label is always visible in edit mode, regardless of the configuration.
 
 > ### Sample Code:  
 > manifest.json
@@ -693,8 +695,6 @@ By default, the `TextArea` label is always displayed. However, if `UI.FieldGroup
 >         }
 >     }
 > ```
-
-When this setting is set to `true`, only the section or subsection title is displayed. However, you must ensure that a meaningful label is assigned to the `TextArea` control as it is accessed by screen reader programs.
 
 
 

@@ -1244,9 +1244,89 @@ Version 72
 
 </td>
 </tr>
+<tr>
+<td valign="top">
+
+Version 73
+
+</td>
+<td valign="top">
+
+\>=1.135
+
+</td>
+<td valign="top">
+
+1.72.3
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Version 74
+
+</td>
+<td valign="top">
+
+\>=1.136
+
+</td>
+<td valign="top">
+
+1.73.1
+
+*or*
+
+2.0.0
+
+</td>
+</tr>
 </table>
 
 For more information on the new fields introduced in each version, check out [Migration Information for Upgrading the Manifest File](migration-information-for-upgrading-the-manifest-file-a110f76.md)
+
+
+
+<a name="loiobe0cf40f61184b358b5faedaec98b2da__section_vwt_5nl_gfc"/>
+
+## Manifest 2.0
+
+As of SAPUI5 1.136, we support a new manifest version 2.0.0. Using this version has the following implications for a Component:
+
+
+
+### Root View and Routing Configuration
+
+The synchronous root view creation and routing configuration are not supported anymore.
+
+The `async` flag for both the `rootView` and the `routing` configuration is now implicitly `true` and must no longer be specified.
+
+
+
+### Deprecated Manifest Entries
+
+Deprecated manifest entries managed by the SAPUI5 framework cannot be used anymore and will cause errors. This has the following consequences:
+
+-   Arbitrary JavaScript resources cannot be loaded via `sap.ui5/resources/js` anymore. Please use dedicated modules as eager dependencies instead, e.g. within your `Component.js`.
+-   The routing properties `viewId`, `viewName`, `viewPath`, and `viewLevel` cannot be used anymore. Please use the documented alternatives instead, i.e. replace them with the properties `id`, `name`, `path`, and `level`, respectively, alongside adding the `type: "View"`. For more information, see [Routing Configuration](routing-configuration-9023130.md).
+-   Supported themes cannot be specified via the `sap.ui/supportedThemes` section.
+
+
+
+### Error Validation
+
+Manifest version 2.0.0 also enables a stricter error handling for views and fragments. Syntactical errors \(e.g. broken binding strings\) will now lead to errors being thrown. Programmatically created views will reject the factory promise accordingly.
+
+
+
+### `IAsyncContentCreation`
+
+While the Manifest 2.0.0 behavior regarding root view and routing configuration is similar to the behavior of the [`sap.ui.core.IAsyncContentCreation`](https://ui5.sap.com/#/api/sap.ui.core.IAsyncContentCreation) interface, they are not interchangeable. For compatibility reasons, the manifest version 2.0.0 does **not** enforce the implementation of this interface. In order to use an asynchronous `sap/ui/core/UIComponent#createContent` implementation in your subclasses, the `sap.ui.core.IAsyncContentCreation` interface must be implemented explicitly.
+
+Please also be aware that the implementation of the `sap.ui.core.IAsyncContentCreation` interface changes the aggregation behavior of the root view. When the root view is loaded asynchronously and the Component implements `sap.ui.core.IAsyncContentCreation`, the root view controller's [`onInit`](https://ui5.sap.com/#/api/sap.ui.core.mvc.Controller%23methods/onInit) hook no longer has access to Component models through the view instance. To retrieve model instances, we recommend using the [`sap/ui/core/mvc/Controller#getOwnerComponent`](https://ui5.sap.com/#/api/sap.ui.core.mvc.Controller%23methods/getOwnerComponent) API on the controller instance.
+
+We recommend any Component or UIComponent to implement the `sap.ui.core.IAsyncContentCreation` interface whenever possible.
 
 
 
@@ -2637,7 +2717,7 @@ Current version of the `manifest.json`
 ```
 
 {
-    "_version": "1.70.0",
+    "_version": "1.73.1",
  
     "start_url": "index.html",
  
@@ -2889,7 +2969,7 @@ Current version of the `manifest.json`
             }]
         },
         "dependencies": {
-            "minUI5Version": "1.133.0",
+            "minUI5Version": "1.136.0",
             "libs": {
                 "sap.m": {
                     "minVersion": "1.34.0"

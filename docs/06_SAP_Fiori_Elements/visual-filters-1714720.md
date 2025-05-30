@@ -6,21 +6,22 @@ An intuitive way of choosing filter values from an associated measure value.
 
 
 
-You configure visual filters by enhancing the `ValueList` annotation associated with the filter field. For more information, see [Enhancing ValueList Annotations for Visual Filters](enhancing-valuelist-annotations-for-visual-filters-16d43eb.md). This setup supports line and bar charts.
+You can configure visual filters by enhancing the `ValueList` annotation associated with the filter field. For more information, see [Enhancing ValueList Annotations for Visual Filters](enhancing-valuelist-annotations-for-visual-filters-16d43eb.md). This setup supports line and bar charts.
 
-Application developers must ensure that the records available via the value help entity set associated with the visual filter are the same as the records available via the value help entity set associated with the regular filter field. This is required for a smooth sync of the selected values across the different filter modes.
+You must ensure that the records available through the value help entity set associated with the visual filter are the same as the records available through the value help entity set associated with the regular filter field. This is required for a smooth sync of the selected values across the different filter modes.
 
-The visual filter includes only the first measure and dimension from the first chart annotation within the specified `PresentationVariantQualifier`. Make sure that the dimension you specify in the chart and the `ValueListProperty` of the `OUT` parameter is the same. You can also define a `SortOrder` property in the `PresentationVariant` annotation to control the sort order.
+The visual filter includes only the first measure and dimension from the first chart annotation within the specified `PresentationVariantQualifier`. Ensure that the dimension specified in the chart matches the `ValueListProperty` of the `OUT` parameter. To control the sort order, define a `SortOrder` property in the `PresentationVariant` annotation.
 
 > ### Note:  
-> Sorting in visual filters is based on this logic:
+> Sorting in visual filters is based on the following logic:
 > 
-> -   For the bar chart \(and in SAP Fiori elements for OData V2 also for the donut chart type\), sorting is always based on the measure displayed \(the default is descending order\). To change the sort order, define the `SortOrder` property in the `PresentationVariant` annotation.
+> -   For bar charts and donut charts in SAP Fiori elements for OData V2, sorting is always based on the displayed measure, with descending order as the default sort order. To modify the sort order, define the `SortOrder` property in the `PresentationVariant` annotation.
+> 
 > -   For line charts with time-based dimensions, sorting is always based on the dimension displayed in ascending order, however, only the last six time periods are displayed.
 > 
->     The sorting by the annotation is ignored for time-based dimensions for line-charts in the visual filter.
+>     Sorting by the annotation is ignored for line charts with time-based dimensions in the visual filter.
 > 
-> -   For line charts with non time-based dimensions, sorting is always based on the dimension \(the default is ascending order\). To change the sort order, define the `SortOrder` property in the `PresentationVariant` annotation.
+> -   For line charts with non time-based dimensions, sorting is always based on the dimension, with ascending order as the default sort order. To modify the sort order, define the `SortOrder` property in the `PresentationVariant` annotation.
 
 ![](images/VF_FC_77f4724.png)
 
@@ -104,7 +105,7 @@ This is an example of a code snippet for a value list annotation. You use it to 
 
 ### `PresentationVariant` Qualifier
 
-The `PresentationVariant` qualifier provides chart definitions for visual filters. The visual filter picks up the first chart annotation in the `PresentationVariant` annotation to render the chart. If the chart type isn't supported, the ALP renders a bar chart \(default chart type\).
+The `PresentationVariant` qualifier provides chart definitions for visual filters. The visual filter picks up the first chart annotation in the `PresentationVariant` annotation to render the chart. If the chart type isn't supported, the analytical list page renders a bar chart as the default chart type.
 
 > ### Sample Code:  
 > XML Annotation
@@ -505,7 +506,7 @@ First or last six data points
 
 Donut
 
-\(only supported in SAP Fiori elements for OData V2\)
+\(Only supported in SAP Fiori elements for OData V2\)
 
 </td>
 <td valign="top">
@@ -516,7 +517,7 @@ Top or bottom two records
 </tr>
 </table>
 
-In SAP Fiori elements for OData V2, you can enable the visual filter \(donut chart type\) to display an overlay message if there are measures with negative values. Set the `Analytics.AccumulativeMeasure` annotation to `false` as shown in the example. By default, the value of the `Analytics.AccumulativeMeasure` annotation is `true`.
+In SAP Fiori elements for OData V2, you can enable the visual filter \(donut chart type\) to display an overlay message if there are measures with negative values. To do so, set the `Analytics.AccumulativeMeasure` annotation to `false`, as shown in the following sample code. By default, the value of the `Analytics.AccumulativeMeasure` annotation is `true`.
 
 ```
 <Annotations Target="SEPMRA_ALP_SO_ANA_SRV.Z_SEPMRA_C_ALP_QUARTERVHType/DifferenceAmount">
@@ -530,11 +531,13 @@ In SAP Fiori elements for OData V2, you can enable the visual filter \(donut cha
 
 ### Chart Title
 
-ALP displays chart titles in the following order: <Measure Name\> by <Dimension Name\> in <Scale factor\> <UoM\>
+Analytical list page displays chart titles in the following order:
 
--   <Measure Name\> indicates the measure associated with the chart. Use `sap:label()` 
--   <Dimension Name\> indicates the dimension associated with the chart. Use `sap:label()`
--   <Scale Factor\> indicates the scale as specified using the `ScaleFactor` property of the `DataPoint` annotation associated with the measure displayed in the chart.
+<Measure Name\> by <Dimension Name\> in <Scale factor\> <UoM\>
+
+-   <Measure Name\>: The measure associated with the chart. Use `sap:label()` 
+-   <Dimension Name\>: The dimension associated with the chart. Use `sap:label()`
+-   <Scale Factor\>: The scale specified using the `ScaleFactor` property of the `DataPoint` annotation associated with the measure displayed in the chart.
 
     > ### Sample Code:  
     > Scale factor annotation
@@ -554,7 +557,7 @@ ALP displays chart titles in the following order: <Measure Name\> by <Dimension 
     > </Annotation>
     > ```
 
-    If not specified, SAP Fiori elements uses a built-in logic to determine the best scale factor to be used for the values displayed in the chart.
+    If not specified, SAP Fiori elements uses a built-in logic to determine the optimal scale factor for the values displayed in the chart.
 
 
 > ### Note:  
@@ -568,7 +571,7 @@ ALP displays chart titles in the following order: <Measure Name\> by <Dimension 
 
 ## Text Arrangement
 
-You can change the formatting of the text that appears on the vual filter chart axis labels, chart tooltips, and within the selected link \(if a chart context is selected\). The default view of the visual filter bar is based on the filter fields defined in the `TextArrangement` annotation and its type in the main entity set to change the text behavior like this:
+You can modify the formatting of the text that appears on the visual filter chart axis labels, chart tooltips, and within the selected link \(if a chart context is selected\). The default view of the visual filter bar is based on the filter fields defined in the `TextArrangement` annotation and its type in the main entity set.
 
 ****
 
@@ -672,9 +675,9 @@ Shows only the ID, for example, "002"
 
 ## Lazy Loading of Visual Filters
 
-In SAP Fiori elements for OData V2, you enable lazy loading of visual filters by configuring the `lazyLoadVisualFilter` setting in the descriptor file. It's disabled by default.
+In SAP Fiori elements for OData V2, you can enable lazy loading of visual filters by configuring the `lazyLoadVisualFilter` setting in the descriptor file. It is disabled by default.
 
-If you enable lazy loading, then the batch call for loading of visual filters is deferred until the user switches to the visual filter bar.
+If lazy loading is enabled, then the batch call for loading of visual filters is deferred until the user switches to the visual filter bar.
 
 > ### Sample Code:  
 > Descriptor setting
@@ -687,7 +690,6 @@ If you enable lazy loading, then the batch call for loading of visual filters is
 >               "showGoButtonOnFilterBar": true,
 >               "multiSelect": true,
 >               "lazyLoadVisualFilter":true,
-> 
 >               "tableType": "AnalyticalTable",
 >               ....
 > }
@@ -705,14 +707,14 @@ If you enable lazy loading, then the batch call for loading of visual filters is
 
 To display default records on the visual filter chart, configure the `SelectionVariant` annotation with filter values \(`SelectOptions` property\) and link it with the `ValueList` annotation.
 
-The IN/OUT parameter values take precedence over the `SelectionVariant` values for the fields that have values coming from both options.
+The `IN/OUT` parameter values take precedence over the `SelectionVariant` values for the fields that have values coming from both options.
 
 > ### Note:  
-> Handling date-based filter fields
+> **Handling date-based filter fields**
 > 
 > If the `SelectionVariant` has date-based filter fields, you must specify the value in the format `"Z'. Ex:"2018-10-15T00:00:00Z"`, with the time part as zeroes and appended with 'Z'.
 
-**In/out parameter taking precedence**
+**In/Out Parameter Taking Precedence**
 
 
 <table>
@@ -810,7 +812,7 @@ Change USD to EUR on the filter bar
 </td>
 <td valign="top">
 
-If you specify EUR as a value for `P_DisplayCurrency` in the filter bar, the chart re-renders with records that have the currency unit EUR
+If you specify EUR as a value for `P_DisplayCurrency` in the filter bar, the chart re-renders with records that have the currency unit EUR.
 
 </td>
 </tr>
@@ -822,7 +824,7 @@ If you specify EUR as a value for `P_DisplayCurrency` in the filter bar, the cha
 
 ## Date Selection
 
-Visual filters support date-based, single/multi-select based filter fields in the Universal Time Coordinated \(UTC\) format. Semantic dates and date ranges are not supported.
+Visual filters support date-based, single-select, multi-select based filter fields in the Universal Time Coordinated \(UTC\) format. Semantic dates and date ranges are not supported.
 
 
 
@@ -830,7 +832,7 @@ Visual filters support date-based, single/multi-select based filter fields in th
 
 Visual filter charts do not show up if the back end returns data with multiple units of measure \(UoM\). To achieve a single UoM, set the required UoM in the filter bar or change all the UoMs into one UoM in the back end.
 
-For currency-based visual filter values, the currency value could come from another filter field in the main entity set \(mapped to the value help currency field based entity set through the standard IN mapping\).
+For currency-based visual filter values, the currency value could come from another filter field in the main entity set \(mapped to the value help currency field based entity set through the standard `IN` mapping\).
 
 
 
@@ -838,7 +840,7 @@ For currency-based visual filter values, the currency value could come from anot
 
 ## Semantic Coloring for Visual Filters Based on Dimension Values
 
-Semantic coloring is based on the defined criticality in the `ValueCriticality` annotations for dimensions. The value returned from the path determines the color.
+Semantic coloring is based on the criticality defined in the `ValueCriticality` annotations for dimensions. The value returned from the path determines the color.
 
 > ### Note:  
 > -   No color is applied to the chart dimension when a neutral value is returned.
@@ -857,9 +859,9 @@ Show the filter dimension with one measure in the visual filter not with multipl
 
 Filter dimensions in the regular filters \(filter bar\) have exactly one representation in the visual filter bar.
 
-Do not show the same filter dimension with two or more different measures at the same time in the visual filter bar. The example shows the filter `Dimension Year` with two different measures *Revenue* and *Quantity*. Showing the filter *dimensionYear* twice is not in sync with the regular filter, where it is shown only once. Furthermore, matching between the two filter types won't work.
+Do not show the same filter dimension with two or more different measures at the same time in the visual filter bar. The following example shows the `Dimension Year` filter with two different measures *Revenue* and *Quantity*. Showing the filter *dimensionYear* twice is not in sync with the regular filter, where it is shown only once. Furthermore, matching between the two filter types won't work.
 
-If the use case requires you to show a dimension with different measures, consider using an overview page instead.
+If the use case requires visualizing a dimension with different measures, consider using an overview page instead.
 
 ****
 
@@ -909,13 +911,13 @@ Don't
 
 ## Additional Features in SAP Fiori Elements for OData V2
 
-SAP Fiori elements for OData V2 also supports the visual filter setup for donut charts, and you can define visual filters for parameters.
+We also support the visual filter setup for donut charts, and you can define visual filters for parameters.
 
 
 
 ### Display of Empty Values
 
-The empty dimension value is displayed as *Not Assigned* in the visual filter chart. Note that this impacts the display only of visual filters but not of the value help, drop down, or compact filters. For the value help, drop down, or compact filter, it is displayed as *<empty\>*.
+In visual filter charts, the empty dimension value is displayed as *Not Assigned*. Note that this behavior is specific to the display of visual filters. For the value help, drop down, or compact filter, it is displayed as *<empty\>*.
 
 ![](images/Not_Assigned_Screenshot_841d97d.png)
 
@@ -925,25 +927,25 @@ The empty dimension value is displayed as *Not Assigned* in the visual filter ch
 
 Visual filters support date-based, single selection fields in the Universal Time Coordinated \(UTC\) format. Visual filters also support string-based fields that denote a time period via the following annotations:
 
--   Edm.DateTime and sap:display-format="Date"
+-   `Edm.DateTime` and `sap:display-format="Date"`
 
--   Edm.String and sap:semantics="yearmonthday"
+-   `Edm.String` and `sap:semantics="yearmonthday"`
 
--   Edm.String and sap:semantics="yearmonth"
+-   `Edm.String` and `sap:semantics="yearmonth"`
 
--   Edm.String and sap:semantics="year"
+-   `Edm.String` and `sap:semantics="year"`
 
--   Edm.String and sap:semantics="yearquarter"
+-   `Edm.String` and `sap:semantics="yearquarter"`
 
--   Edm.String and sap:semantics="yearweek"
+-   `Edm.String` and `sap:semantics="yearweek"`
 
--   Edm.String and sap:semantics="fiscalyear"
+-   `Edm.String` and `sap:semantics="fiscalyear"`
 
--   Edm.String and sap:semantics="fiscalyearperiod"
+-   `Edm.String` and `sap:semantics="fiscalyearperiod"`
 
 
 > ### Note:  
-> Displaying the value in the visual filter and its tooltip is impacted. Value help or the dropdown for selecting the values remains the same if sap:semantics="yearmonth" is set.
+> Displaying the value in the visual filter and its tooltip is impacted. Value help or the dropdown for selecting the values remains the same if `sap:semantics="yearmonth"` is set.
 
 > ### Note:  
 > You can see the date selection button on the visual filter for fields annotated with `sap:filter-restriction="single-value"`. For fields annotated with `sap:filter-restriction="multiple"`, you see the value help selection button.
@@ -964,14 +966,14 @@ Visual filters support date-based, single selection fields in the Universal Time
 
 ### Number Formatting
 
-`NumberOfFractionalDigits` information can be provided in [com.sap.vocabularies.UI.v1.DataPoint](annotations-used-in-overview-pages-65731e6.md) term, using the ValueFormat property. The `NumberOfFractionalDigits` property is used to determine the number of fraction digits. These are the rules:
+The `NumberOfFractionalDigits` property is used to determine the number of fraction digits. `NumberOfFractionalDigits` information can be provided in [com.sap.vocabularies.UI.v1.DataPoint](annotations-used-in-overview-pages-65731e6.md) term, using the `ValueFormat` property. These are the rules:
 
 -   Decimals are not shown by default.
 
--   You can specify 1 or 2 decimal places using the `NumberOfFractionalDigits` property in Annotations. If a value of more than 2 is provided, it is also included.
+-   You can specify 1 or 2 decimal places using the `NumberOfFractionalDigits` property in annotations. If a value of more than 2 is provided, it is also included.
 
 
-In the following example, the price property number of fractional digits provided in the OData metadata, 3 is overridden by the value 1 as provided in the [com.sap.vocabularies.UI.v1.DataPoint](annotations-used-in-overview-pages-65731e6.md) ValueFormat property:
+In the following sample code, the price property number of fractional digits provided in the OData metadata, 3 is overridden by the value 1 as provided in the [com.sap.vocabularies.UI.v1.DataPoint](annotations-used-in-overview-pages-65731e6.md) `ValueFormat` property:
 
 > ### Sample Code:  
 > XML Annotation
@@ -1009,23 +1011,23 @@ Semantic coloring is based on the defined:
 
 -   Criticality in `DataPoint` annotations. The specified value, or the value returned from a path, determines the color
 
--   `CriticalityCalculation` in DataPoint annotations, along with the improvement direction and various threshold values. This applies only when the criticality is not defined.
+-   `CriticalityCalculation` in `DataPoint` annotations, along with the improvement direction and various threshold values. This applies only when the criticality is not defined.
 
 
-![](images/Semantic_Coloring_a477ee8.png)
+![](images/Semantic_Coloring_-_Visual_Filters_a477ee8.png)
 
 > ### Note:  
-> No color is applied to the chart measure when
+> No color is applied to the chart measure when:
 > 
-> -   A neutral value is returned
+> -   A neutral value is returned.
 > 
-> -   Not enough threshold values are defined or when the improvement direction is missing
+> -   Not enough threshold values are defined or when the improvement direction is missing.
 
 
 
 ### Grouping Visual Filter Calls \(Optional\)
 
-Add a `groupId` for a set of visual filters to consolidate all group calls into one batch call. This helps you group fast-loading visual filters in one batch and group all the other slow loading visual filters into a separate batch call. This improves rendering of the fast-loading visual filters over the slow-loading visual filters.
+You can add `groupId` for a set of visual filters to consolidate all group calls into one batch call. This allows you to group fast-loading visual filters in one batch and group all the other slow loading visual filters into a separate batch call. This improves rendering of the fast-loading visual filters over the slow-loading visual filters.
 
 Define the `onBeforeRebindVisualFilterExtension` extension controller method in the controller file. Ensure that the `groupId` is one of the keys in the `oContext` object which is passed to the extension as a parameter. Provide a valid string value as shown here:
 
@@ -1045,7 +1047,7 @@ Define the `onBeforeRebindVisualFilterExtension` extension controller method in 
 > ```
 
 > ### Note:  
-> -   The visual filter calls without a groupId are all combined in one batch.
+> -   The visual filter calls without a `groupId` are all combined in one batch.
 > 
 > -   Visual filter calls assigned to a `groupId` reach the back end in one batch.
 
@@ -1053,12 +1055,12 @@ Define the `onBeforeRebindVisualFilterExtension` extension controller method in 
 
 ### Text for Unit of Measure
 
-If a unit field such as a currency or unit of measure\(UOM\) contains a text annotation\(sap:text\) this property is retrieved and displayed along with the unit field.
+If a unit field such as a currency or unit of measure\(UOM\) contains a text annotation \(`sap:text`\) this property is retrieved and displayed along with the unit field.
 
 The unit fields can contain the text annotation either in the main entity set or its value list entity sets.
 
 > ### Sample Code:  
-> Main entity set: `DisplayCurrency` doesn't contain a text annotation
+> Main Entity Set: `DisplayCurrency` doesn't contain a text annotation
 > 
 > ```
 > <EntityType Name="ZEPM_C_SALESORDERITEMQUERYResult" sap:semantics="aggregate" sap:content-version="1">
@@ -1098,13 +1100,13 @@ If the main entity set contains the text annotation for a unit, then that is dis
 
 ## Additional Features in SAP Fiori Elements for OData V4
 
-Application developers must ensure there is a manifest property for each visual filter that is to be rendered. For more information, see the [Additional Features in SAP Fiori Elements for OData V4](configuring-the-visual-filter-bar-33f3d80.md#loio33f3d807c10b47d9a8141692d2619dc2__section_my4_mgz_jqb) section in [Configuring the Visual Filter Bar](configuring-the-visual-filter-bar-33f3d80.md).
+You must ensure there is a manifest property for each visual filter that is to be rendered. For more information, see the [Additional Features in SAP Fiori Elements for OData V4](configuring-the-visual-filter-bar-33f3d80.md#loio33f3d807c10b47d9a8141692d2619dc2__section_my4_mgz_jqb) section in [Configuring the Visual Filter Bar](configuring-the-visual-filter-bar-33f3d80.md).
 
 
 
 ### Line Chart
 
-Line charts are only rendered if the dimension is time based, that is if you use `Edm.Date`, `Edm.Time`, or `Edm.DateTimeOffset`.
+Line charts are only rendered if the dimension is time-based, that is, if you use `Edm.Date`, `Edm.Time`, or `Edm.DateTimeOffset`.
 
 
 
@@ -1116,16 +1118,16 @@ While date/time is converted to the local timezone, the values coming from the b
 
 ### Number Formatting
 
-`NumberOfFractionalDigits` information can be provided in [com.sap.vocabularies.UI.v1.DataPoint](annotations-used-in-overview-pages-65731e6.md) term, using the `ValueFormat` property. The `NumberOfFractionalDigits` property is used to determine the number of fraction digits. These are the rules:
+The `NumberOfFractionalDigits` property is used to determine the number of fraction digits. `NumberOfFractionalDigits` information can be provided in [com.sap.vocabularies.UI.v1.DataPoint](annotations-used-in-overview-pages-65731e6.md) term, using the `ValueFormat` property. These are the rules:
 
 -   Decimals are not shown by default.
 
--   You can specify 1 or 2 decimal places using the `NumberOfFractionalDigits` property in Annotations. If a value of more than 2 is provided, it remains at 2.
+-   You can specify 1 or 2 decimal places using the `NumberOfFractionalDigits` property in annotations. If a value of more than 2 is provided, it remains at 2.
 
     For a currency-based measure, the number of decimal places as specified in the annotation is only considered if the measure value is also being displayed with a scale factor. Otherwise, the number of decimal places is based on the displayed currency.
 
 
-In the following example, the weight property number of fractional digits provided in the OData metadata, is set to the value 1 as provided in the [com.sap.vocabularies.UI.v1.DataPoint](annotations-used-in-overview-pages-65731e6.md) `ValueFormat` property
+In the following sample code, the weight property number of fractional digits provided in the OData metadata, is set to the value 1 as provided in the [com.sap.vocabularies.UI.v1.DataPoint](annotations-used-in-overview-pages-65731e6.md) `ValueFormat` property:
 
 > ### Sample Code:  
 > XML Annotation
@@ -1174,14 +1176,14 @@ In the following example, the weight property number of fractional digits provid
 
 ### Semantic Coloring for Visual Filters Based on Measure Values
 
-Currently only hard-coded values are supported. Ensure that a data point has been defined for the measure of the chart and that the criticality has been configured for the data point.
+We support only hard-coded values. Ensure that a data point has been defined for the measure of the chart and that the criticality has been configured for the data point.
 
-![](images/Semantic_Coloring_a477ee8.png)
+![](images/Semantic_Coloring_-_Visual_Filters_a477ee8.png)
 
 > ### Note:  
 > No color is applied to the chart measure when a neutral value is returned.
 > 
-> Chart coloring via semantic coloring specified on dimensions is overridden by the semantic coloring specified for the measures.
+> Chart coloring specified on dimensions using semantic coloring is overridden by the semantic coloring specified for the measures.
 
 > ### Sample Code:  
 > XML Annotation

@@ -432,6 +432,9 @@ These custom actions are displayed as buttons on the UI. When the user selects t
         
         ```
 
+        > ### Tip:  
+        > Please note that this feature is deprecated. SAP Fiori elements supports this feature only for compatibility reasons. We recommend that you avoid using determining buttons.
+
     -   Footer bar action in the object page:
 
         ```xml

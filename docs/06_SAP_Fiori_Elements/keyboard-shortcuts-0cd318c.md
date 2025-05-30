@@ -606,7 +606,7 @@ The prerequisite for the shortcut remains unchanged.
 
 The object page follows the same concept as the list report. You must add the `logicalAction` property to the manifest.
 
-Currently, redirection of the following shortcuts is supported:
+Redirection of the following shortcuts is supported:
 
 -   For List Report:
 
@@ -639,9 +639,56 @@ Currently, redirection of the following shortcuts is supported:
 
 
 
-### Defining New Keyboard Shortcuts for Custom Action
+### Defining New Keyboard Shortcuts for Custom Actions
 
-Applications can define their own keyboard shortcuts for custom actions. For more information, see [Adding Custom Actions Using Extension Points](adding-custom-actions-using-extension-points-7619517.md).
+You can define keyboard shortcuts for custom actions. The custom shortcuts are also displayed in the keyboard shortcuts popup window.
+
+The following sample code shows an example where the shortcut [Ctrl\] + [G\]  is defined for a custom action `ChangePriceCommand` in the list report:
+
+> ### Sample Code:  
+> `manifest.json`
+> 
+> ```
+> "extends": {
+>     "extensions": {
+>         "sap.ui.commands": {
+>             "sap.suite.ui.generic.template.ListReport#sap.suite.ui.generic.template.ListReport::STTA_C_MP_Product": {
+>                 "ChangePriceCommand": {
+>                     "shortcut": "Ctrl+G",
+>                     "description": "Change Price"
+>                 }
+>             },
+>         },
+>         "sap.ui.controllerExtensions": {
+>             "sap.suite.ui.generic.template.ListReport.view.ListReport": {
+>                 "controllerName": "STTA_MP.ext.controller.ListReportExtension",
+>                 "sap.ui.generic.app": {
+>                     "STTA_C_MP_Product": {
+>                         "EntitySet": "STTA_C_MP_Product",
+>                         "Actions": {
+>                             "ChangePrice": {
+>                                 "id": "ChangePrice",
+>                                 "text": "Change price",
+>                                 "press": "onChangePrice",
+>                                 "command": "ChangePriceCommand"
+>                             },
+>                         }
+>                     }
+>                 }
+>             }
+>         }
+>     }
+> }
+> 
+> ```
+
+In this example, `description` is used to define the label *Change Price*. This label is displayed in the keyboard shortcuts popup window. If a label isn't defined, the shortcut is displayed with the value of `id` instead, in this case – *ChangePrice*.
+
+You can define keyboard shortcuts for custom actions on the object page and on the analytical list page the same way.
+
+For more information about custom actions, see [Adding Custom Actions Using Extension Points](adding-custom-actions-using-extension-points-7619517.md).
+
+For more information about the keyboard shortcuts popup window, see [Keyboard Handling for SAPUI5 UI Elements](https://help.sap.com/docs/SAPUI5/bc5a64aac808463baa95b4230f221716/144d377d68784689a9b21565dfa14065.html?version=1.136).
 
 
 
@@ -761,7 +808,7 @@ You can define custom keyboard shortcut for `DataFieldForIntentBasedNavigation` 
 > ### Note:  
 > To understand how you can determine `"<Component Name>#<Component ID without app ID prefix>"`, see [Adding Custom Actions Using Extension Points](adding-custom-actions-using-extension-points-7619517.md).
 > 
-> Custom keyboard shortcut for inline `DataFieldForAction` or `DataFieldForIntentBasedNavigation` actions are not supported.
+> Custom keyboard shortcuts for inline `DataFieldForAction` or `DataFieldForIntentBasedNavigation` actions are not supported.
 
 
 

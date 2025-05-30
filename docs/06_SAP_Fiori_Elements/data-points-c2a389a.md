@@ -14,8 +14,9 @@ The image below shows the data points *Price* and *Availability* in the object p
 
 ![](images/Object_Page_DataPoints_6eac05c.png "Object Page: DataPoints")
 
-> ### Note:  
-> We've removed videos showing step-by-step procedures using SAP Web IDE, which SAP no longer actively supports. You can still access the video using an older version of this document.
+This video shows the step-by-step procedure for adding a data point header to an object page:
+
+
 
 
 

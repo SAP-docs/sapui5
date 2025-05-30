@@ -2,7 +2,7 @@
 
 # Semantic Page \(sap.m\)
 
-The `sap.m.semantic.SemanticPage` is an enhanced `sap.m.Page` that implements the SAP Fiori 1.0 design guidelines.
+The `sap.m.semantic.SemanticPage` is an enhanced `sap.m.Page`.
 
 For more information about this control, see the [API Reference](https://ui5.sap.com/#/api/sap.m.semantic.SemanticPage) and the [samples](https://ui5.sap.com/#/entity/sap.m.semantic.SemanticPage).
 
@@ -183,9 +183,9 @@ The `DetailPage` usually displays extended information for the item that was sel
                 <semantic:ForwardAction press="onForwardPress"/>
             </semantic:forwardAction>
 
-   <semantic:shareInJamAction>
-      <semantic:ShareInJamAction press="onShareInJamPress"/>
-   </semantic:shareInJamAction>
+   <semantic:shareInSAPWorkZoneAction>
+      <semantic:ShareInSAPWorkZoneAction press="onShareInSAPWorkZonePress"/>
+   </semantic:shareInSAPWorkZoneAction>
 
    <semantic:messagesIndicator>
       <semantic:MessagesIndicator press="onMessagesIndicatorPress"/>

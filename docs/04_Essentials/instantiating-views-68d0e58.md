@@ -12,7 +12,7 @@ To pass the required information for the instantiation, use an object with the f
 
 -   `definition`: Only relevant for XML views, HTML views and JSON views. Defines the XML, HTML or JSON string representation of the view definition. If `viewName` and `definition` are given, the `viewName` property is used to load the view definition.
 
--   `Controller`: Any controller instance; the given controller instance overrides the controller defined in the view definition
+-   `controller`: Any controller instance; the given controller instance overrides the controller defined in the view definition
 
 -   `viewData`: Only used for JS views; this property contains user-specific data that is available during the whole lifecycle of the view and the controller
 
@@ -33,10 +33,10 @@ With the asynchronous loading of views, the instance is not fully available at t
 ```js
 // "View" required from "sap/ui/core/mvc/View"
 // "coreLibrary" required from "sap/ui/core/library"
-// "my.own.controller" was defined earlier
+// "oMainController" was defined earlier
 View.create({
     viewName: "my.own.view",
-    controller: "my.own.controller",
+    controller: oMainController,
     type: coreLibrary.mvc.ViewType.XML
 }).then(function(oView) {
     // the instance is available in the callback function
@@ -67,7 +67,7 @@ The following code snippet shows how to do a lazy loading for XML views:
 ```
 
 ```js
-// File: controller/MainController.controller.js
+// Runtime resource name: "samples/controller/MainController.js"
 sap.ui.require(["sap/ui/core/mvc/XMLView", "sap/ui/core/mvc/Controller"], function(XMLView, Controller) {
 	return Controller.extend("samples.controller.MainController", {
 		// ...

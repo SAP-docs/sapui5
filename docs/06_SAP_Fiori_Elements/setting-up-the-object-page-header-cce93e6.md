@@ -4,7 +4,7 @@
 
 You have various options for defining the object page header.
 
-The object page supports the standard header and the dynamic header. See also [Object Page Headers](../10_More_About_Controls/object-page-headers-d2ef009.md).
+The object page supports the dynamic header. See also [Object Page Header](../10_More_About_Controls/object-page-header-6e340c1.md).
 
 The object page header display is determined by the following vocabularies:
 
@@ -98,6 +98,8 @@ Product title in SAP back-end systems
 ![](images/Object_Page_Header_Main_Elements_698018b.png "Object Page Header")
 
 
+
+<a name="loiocce93e6f067a4133a8430c4f5d7b8fc7__sample_code"/>
 
 ## Sample Code
 

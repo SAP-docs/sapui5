@@ -67,9 +67,6 @@ More than 60 controls, such as forms, pages, tool bars, and input elements, supp
 
 If you want to know whether a control is enabled for key user adaptation, go to the [Samples](https://ui5.sap.com/#/controls). Pick a control, open the sample, and choose :wrench: \(*Adapt UI*\) at the top right. If UI elements in the sample are highlighted when you hover over or select them, it's an indicator that the control is enabled for UI adaptation. You can also try out the UI adaptation features directly in the sample.
 
-> ### Note:  
-> Table, filter bar and chart controls from the `sap.ui.comp` library can't be adapted. However, you use a `sap.ui.comp.VariantManagement` control, key users can create variants for these controls \(called "views"\) and make them available for certain or all end users. End users themselves can personalize such controls on the UI and save views for themselves. End users can also share personalized views with other end users. For more information see [Smart Variant Management](../10_More_About_Controls/smart-variant-management-06a4c3a.md).
-
 
 
 <a name="loiof1430c0337534d469da3a56307ff76af__section_async"/>
@@ -129,7 +126,7 @@ In addition, for SAPUI5 apps running standalone \(not in an SAP Fiori launchpad\
 
 -   Make sure that the `sap.ui.fl` library is loaded. You can do this in either of the following ways:
 
-    -   Configure the KeyUserConnector in the SAPUI5 bootstrap. For more information, see [Bootstrapping SAPUI5 Flexibility](../04_Essentials/bootstrapping-sapui5-flexibility-642dab2.md).
+    -   Configure the BtpServiceConnector in the SAPUI5 bootstrap. For more information, see [Bootstrapping SAPUI5 Flexibility](../04_Essentials/bootstrapping-sapui5-flexibility-642dab2.md).
 
     -   Declare a dependency to the `sap.ui.fl` library in the `manifest.json` file, under `sap.ui5/dependencies/libs`.
 
@@ -151,13 +148,12 @@ In addition, for SAPUI5 apps running standalone \(not in an SAP Fiori launchpad\
 Please check the troubleshooting information.
 
 > ### Caution:  
-> UI changes, similar to any UI coding, cannot replace back-end validations and authorizations. For example, when an action is hidden via a change, the change processing could be blocked or the action could be reached by the browser console, so that the action could still be triggered.
 
 For more information, see [Troubleshooting](troubleshooting-3527428.md).
 
 You can also check out our [Enabling UI Adaptation: Other Things to Consider](enabling-ui-adaptation-other-things-to-consider-de9fd55.md) page for additional tips and tricks..
 
-For more information about how key user adaptation works for key users and how it gets enabled in the SAP Fiori launchpad, search for `Adapting SAP Fiori UIs at Runtime` and `Enabling UI Adaptation at Runtime` in the documentation for your [SAP NetWeaver](https://help.sap.com/viewer/p/SAP_NETWEAVER) version on the SAP Help Portal.
+For more information about how key user adaptation works for key users and how it gets enabled in the SAP Fiori launchpad, search for `Adapting SAP Fiori UIs at Runtime` and `Enabling UI Adaptation at Runtime` in the documentation for your [SAP NetWeaver or ABAP Platform](https://help.sap.com/docs/SAP_NETWEAVER) version on the SAP Help Portal.
 
 For more information on SAPUI5 flexibility in SAP Fiori Elements, see [Adapting the UI](../06_SAP_Fiori_Elements/adapting-the-ui-59bfd31.md) and [Enabling an App for Key User Adaptation](../06_SAP_Fiori_Elements/enabling-an-app-for-key-user-adaptation-ccd45ba.md).
 

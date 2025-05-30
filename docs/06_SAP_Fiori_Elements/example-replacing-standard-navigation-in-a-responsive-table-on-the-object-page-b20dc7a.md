@@ -27,11 +27,13 @@ You can replace the standard navigation from the object page with your own navig
 
 ## Procedure
 
-1.  Add a navigation target to the manifest.js file.
+1.  Add a navigation target to the `manifest.json` file.
 
-    In the example below, external navigation \(outbound\) via the SAP Fiori Launchpad has been added.
+    The following sample code shows how an external navigation or outbound navigation is added using the SAP Fiori launchpad.
 
     > ### Sample Code:  
+    > manifest.json
+    > 
     > ```
     > 
     > sap.app": {
@@ -56,9 +58,11 @@ You can replace the standard navigation from the object page with your own navig
     > 
     > ```
 
-2.  Register your extension in the manifest.js file.
+2.  Register your extension in the `manifest.json` file.
 
     > ### Sample Code:  
+    > manifest.json
+    > 
     > ```
     > "extends": {
     >    "extensions": {
@@ -111,7 +115,7 @@ You can replace the standard navigation from the object page with your own navig
 
 ## Context
 
-Application developers can selectively change the target when chevron navigation is triggered from a table.
+You can selectively change the target when chevron navigation is triggered from a table.
 
 
 
@@ -122,6 +126,8 @@ Application developers can selectively change the target when chevron navigation
 1.  Add an outbound navigation configuration pointing to the target app in the `manifest.json` file.
 
     > ### Sample Code:  
+    > manifest.json
+    > 
     > ```
     > sap.app": {
     >     ...
@@ -148,6 +154,8 @@ Application developers can selectively change the target when chevron navigation
 2.  Configure the extension with the controller for the object page in the `manifest.json` file.
 
     > ### Sample Code:  
+    > manifest.json
+    > 
     > ```
     > "sap.ui5": {
     >     "extends": {
@@ -166,6 +174,8 @@ Application developers can selectively change the target when chevron navigation
     > ```
 
 3.  Implement the `onBeforeNavigation` extension method within your controller extension.
+
+    In the following sample code, the navigation to an external application is configured and the values for the `Customer` parameters are passed when an end user clicks the line item for sales order `6437`.
 
     > ### Sample Code:  
     > ```
@@ -188,8 +198,8 @@ Application developers can selectively change the target when chevron navigation
     > }
     > ```
 
-    In the example above, the navigation to an external application is configured and the values for the `Customer` parameters are passed when a user clicks the line item for sales order 6437.
-
     `oContextInfo` includes the regular context that is passed to a target application upon navigation, that is the merged context `lineItem` + `ObjectPage`.
+
+    The `onBeforeNavigation` extension method is also invoked when an end user clicks *Apply* to save the changes or *Close* to exit a draft object.
 
 

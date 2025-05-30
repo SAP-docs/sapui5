@@ -6,7 +6,7 @@
 
 ## Is the mock server a real server?
 
-No. The mock server runs on the client and only uses the server terminology of 'start' and 'stop'. It does **not** require a network connection since there is no actual server involved.
+No. The mock server runs on the client and only uses the server terminology of "start" and "stop". It does **not** require a network connection since there is no actual server involved.
 
 
 
@@ -15,12 +15,12 @@ No. The mock server runs on the client and only uses the server terminology of '
 The mock server is contained in module `sap/ui/core/util/MockServer`. The module can either be added to the list of dependencies in a `sap.ui.define` call or it can be required with a call to `sap.ui.require`:
 
 ```js
-sap.ui.define([…, 'sap/ui/core/util/MockServer', ...], function(…, MockServer, …) { 
-    var oMyMockServer = new MockServer(...);
+sap.ui.define([…, "sap/ui/core/util/MockServer", …], function(…, MockServer, …) { 
+    const oMyMockServer = new MockServer(…);
 });
 
-sap.ui.require(['sap/ui/core/util/MockServer'], function(MockServer) {
-    var oMyMockServer = new MockServer(…);
+sap.ui.require(["sap/ui/core/util/MockServer"], function(MockServer) {
+    const oMyMockServer = new MockServer(…);
 });
 ```
 
@@ -44,41 +44,41 @@ You can let the mock server generate random mock data automatically based on ser
 
 ```js
 // url to the service metadata document 
-        var sMetadataUrl = "testdata/rmtsampleflight/metadata.xml"; 
-        oMockServer.simulate(sMetadataUrl);
+const sMetadataUrl = "testdata/rmtsampleflight/metadata.xml"; 
+oMockServer.simulate(sMetadataUrl);
 ```
 
 You can provide your own mock data in .json files, which can either be created manually or saved from an OData service response. Mock data in JSON format can be generated from an OData service by adding the `$format=json` parameter to the URL. Save the browser response which is called `<entity set name>.json`, for example `FlightCollection.json` and put it into the model folder. Add the path to the simulate function:
 
 ```js
 // url to the service metadata document 
-        var sMetadataUrl = "testdata/rmtsampleflight/metadata.xml";
-        // base url which contains the mockdata
-        var sMockdataBaseUrl = "testdata/rmtsampleflight/";
-        oMockServer.simulate(sMetadataUrl, sMockdataBaseUrl);
+const sMetadataUrl = "testdata/rmtsampleflight/metadata.xml";
+// base url which contains the mockdata
+const sMockdataBaseUrl = "testdata/rmtsampleflight/";
+oMockServer.simulate(sMetadataUrl, sMockdataBaseUrl);
 ```
 
 You can specify a path to .json mock data and let the mock server generate data for the rest of the service entities:
 
 ```js
-var sMetadataUrl = "testdata/rmtsampleflight/metadata.xml"// url to the service metadata document
-        var sMockdataBaseUrl = "testdata/rmtsampleflight/"// base url which contains the mockdata
-            oMockServer.simulate(sMetadataUrl, {
-                'sMockdataBaseUrl' : sMockdataBaseUrl,
-                'bGenerateMissingMockData' : true
-            });
+const sMetadataUrl = "testdata/rmtsampleflight/metadata.xml"; // url to the service metadata document
+const sMockdataBaseUrl = "testdata/rmtsampleflight/"; // base url which contains the mockdata
+oMockServer.simulate(sMetadataUrl, {
+    sMockdataBaseUrl: sMockdataBaseUrl,
+    bGenerateMissingMockData: true
+});
 ```
 
 You can specify the names of the entity sets that are needed, and the mock server will load data only for the specified service entities:
 
 ```js
-var sMetadataUrl = "testdata/rmtsampleflight/metadata.xml"// url to the service metadata document
-        var sMockdataBaseUrl = "testdata/rmtsampleflight/"// base url which contains the mockdata
-            oMockServer.simulate(sMetadataUrl, {
-                'sMockdataBaseUrl' : sMockdataBaseUrl,
-                'bGenerateMissingMockData' : true,
-                'aEntitySetsNames' : ["EntitySetName1", " EntitySetName2"]
-            });
+const sMetadataUrl = "testdata/rmtsampleflight/metadata.xml"; // url to the service metadata document
+const sMockdataBaseUrl = "testdata/rmtsampleflight/"; // base url which contains the mockdata
+oMockServer.simulate(sMetadataUrl, {
+    sMockdataBaseUrl: sMockdataBaseUrl,
+    bGenerateMissingMockData: true,
+    aEntitySetsNames: ["EntitySetName1", " EntitySetName2"]
+});
 ```
 
 
@@ -88,31 +88,28 @@ var sMetadataUrl = "testdata/rmtsampleflight/metadata.xml"// url to the service 
 The OData model uses JSON to fetch the data:
 
 ```js
-var oModel = new sap.ui.model.odata.v2.ODataModel(sUri, true);
+// "ODataModel" required from module "sap/ui/model/odata/v2/ODataModel"
+const oModel = new ODataModel(sUri, true);
 ```
 
 
 
 ## What do I put in the `rootUri`?
 
-Verify that you use the exact same URI prefix in the request as in the `rootUri` you define for the mock server. If a root URI is set, all request path URIs are prefixed with this root URI. The root URI has to be relative and requires a trailing '/'. It also needs to match the URI set in OData/JSON models or simple XHR calls in order for the mock server to intercept them.
+Verify that you use the exact same URI prefix in the request as in the `rootUri` you define for the mock server. If a root URI is set, all request path URIs are prefixed with this root URI. The root URI has to be relative and requires a trailing "/". It also needs to match the URI set in OData/JSON models or simple XHR calls in order for the mock server to intercept them.
 
 The code snippet shows an example:
 
 ```js
 sap.ui.define([…, 
-    'sap/ui/core/util/MockServer',
-    'sap/ui/model/odata/v2/ODataModel',
-     ...
+    "sap/ui/core/util/MockServer",
+    "sap/ui/model/odata/v2/ODataModel",
+    …
 ], function(…, MockServer, ODataModel, …) {
-
-    var sUri = "/mock/";
-    var oMockServer = new MockServer({
-        rootUri : sUri
-    });
-    var oModel = new ODataModel(sUri, true);
-    ...
-
+    const sUri = "/mock/";
+    const oMockServer = new MockServer({rootUri: sUri});
+    const oModel = new ODataModel(sUri, true);
+    …
 });
 ```
 
@@ -135,20 +132,19 @@ The mock server supports navigation via association also if no referential const
 You can set up the mock server in the setup function. For example:
 
 ```js
-sap.ui.require(['sap/ui/core/util/MockServer'], function(MockServer) {
-	...
+sap.ui.define(["sap/ui/core/util/MockServer"], function(MockServer) {
+    …
         QUnit.module("OData data provider", {
-            beforeEach : function() {
+            beforeEach() {
                 this._oMockServer = new MockServer({ rootUri: "/model/"});
                 this._oMockServer.simulate("../../../../qunit/service/metadata.xml");
                 this._oMockServer.start();
             },
-            afterEach : function() {
+            afterEach() {
                 this._oMockServer.stop();
             }
         });
-
-	...
+    …
 });
 ```
 
@@ -177,7 +173,7 @@ oMockServer.detachAfter(sap.ui.core.util.MockServer.HTTPMETHOD.GET, fnCbPost);
 If you add additional request handlers and want to use this hooks mechanism inside your response function, just call:
 
 ```js
-this.fireEvent(sap.ui.core.util.MockServer.HTTPMETHOD.GET + 'sEntityset' + ':before' , {oXhr: oXhr, sUrlParameters: sUrlParameters});
+this.fireEvent(sap.ui.core.util.MockServer.HTTPMETHOD.GET + "sEntityset" + ":before" , {oXhr: oXhr, sUrlParameters: sUrlParameters});
 ```
 
 

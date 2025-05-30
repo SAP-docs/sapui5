@@ -53,7 +53,7 @@ According to the `OData Version 2.0` specification, the following date and time 
 
     In the above example, the apps give the `TimePicker` information about the exact format with which the time values are stored in the backend. The whole coding is string-based \(the data field is a string, and the EDM type is an `Edm.String`\) and no conversion is done.
 
-    With the introduction of the property `support2400` in version 1.54, this option may be used also if the apps need to differentiate between the beginning of a day \(00:00:00\) and the end of a day \(24:00:00\). For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.TimePicker) and the [Samples](https://ui5.sap.com/#/sample/sap.m.sample.TimePicker/preview). 
+    With the introduction of the property `support2400` **in version 1.54**, this option may be used also if the apps need to differentiate between the beginning of a day \(00:00:00\) and the end of a day \(24:00:00\). For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.TimePicker) and the [Samples](https://ui5.sap.com/#/sample/sap.m.sample.TimePicker/preview). 
 
 
 

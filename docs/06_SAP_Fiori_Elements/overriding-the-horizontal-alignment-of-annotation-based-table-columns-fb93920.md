@@ -2,12 +2,12 @@
 
 # Overriding the Horizontal Alignment of Annotation-Based Table Columns
 
-Application developers can override the horizontal alignment of table columns via the manifest.
+You can override the horizontal alignment of table columns by using manifest settings.
 
 > ### Note:  
-> This topic is currently only applicable to SAP Fiori elements for OData V4.
+> This topic is only applicable to SAP Fiori elements for OData V4.
 
-Make the settings in the `manifest.json` as follows:
+Make the settings in the `manifest.json` file as follows:
 
 > ### Sample Code:  
 > ```
@@ -32,5 +32,9 @@ The result is as follows:
 
 ![](images/Overriding_the_Horizontal_Alignment_of_Annotation-Based_Table_Columns_fc4e1b4.png)
 
-The supported values for the property `horizontalAlign` are "Begin" | "Center" | "End".
+The following values are supported for the `horizontalAlign` property:
+
+-   "Begin"
+-   "Center"
+-   "End"
 

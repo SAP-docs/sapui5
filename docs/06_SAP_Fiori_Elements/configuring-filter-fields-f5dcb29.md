@@ -12,14 +12,14 @@ You can configure filter fields to ensure they only accept either a single value
 
 End users can copy and paste multiple values in the filter bar in the following use cases:
 
--   From one filter field to another filter field that has the same data type.
+-   From one filter field to another filter field of the same data type.
 
--   From one filter field to the value help dialog of another field that has the same data type.
+-   From one filter field to the value help dialog of another field of the same data type.
 
--   From a spreadsheet to a filter field that has the same data type.
+-   From a spreadsheet to a filter field of the same data type.
 
 
-For example, you can copy the values from the *Sales Order No.:* field and paste them either to another filter field or a value help that has the same data type. In the value help dialog, paste to the *equal to* field.
+For example, you can copy the values from the *Sales Order No.:* field and paste them either to another filter field or a value help of the same data type. In the value help dialog, paste them into the *equal to* field.
 
 ![](images/copy-paste-filter-bar_e343435.png)
 
@@ -565,7 +565,7 @@ If the annotation holds more than one of these approaches, the filter restrictio
 > 
 > -   CityName - MultiValue field since higher priority annotation wins
 > 
-> -   PartnerAddress - MultiValue field. Since this wasn't defined via a higher priority approach, the lower priority approach persists.
+> -   PartnerAddress - MultiValue field. Since this wasn't defined as a higher priority approach, the lower priority approach persists.
 
 
 

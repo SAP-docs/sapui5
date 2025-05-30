@@ -2,9 +2,7 @@
 
 # PDF Viewer
 
-PDF viewer can be used to display PDF documents within your app, which enables your users to preview PDF documents before printing or downloading them.
-
-For more information about this control, see the [API Reference](https://ui5.sap.com/#/api/sap.m.PDFViewer) and the [Samples](https://ui5.sap.com/#/entity/sap.m.PDFViewer) in the Demo Kit.
+PDF viewer is used to display PDF documents within your app, that enables your users to preview PDF documents before printing or downloading them.
 
 
 
@@ -14,11 +12,9 @@ For more information about this control, see the [API Reference](https://ui5.sap
 
 The `PDFViewer` control displays PDF documents right inside your app. It can be embedded into your page layout, or you can set it to open in a popup dialog. In addition, this control allows you to download the PDF documents it displays.
 
-  
-  
-**PDF Viewer Example**
+![PDF Viewer Example](images/Suite_PDF_Viewer_c4692b3.png)
 
-![PDF Viewer Example](images/PDF_Viewer_c4692b3.png "PDF Viewer Example")
+For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.PDFViewer) and the [Sample](https://ui5.sap.com/#/entity/sap.m.PDFViewer).
 
 
 
@@ -28,15 +24,13 @@ The `PDFViewer` control displays PDF documents right inside your app. It can be 
 
 **PDF File Source**
 
--   You can specify the source of the PDF document that you want to display using the `source` property that points to a PDF file path. This property can be set to a relative or an absolute path.
+You can specify the source of the PDF document that you want to display using the `source` property that points to a PDF file path. This property can be set to a relative or an absolute path.
 
-    Optionally, you can set the `source` property to a data URI or a blob URL in all major web browsers except Internet Explorer and Microsoft Edge. If you want to use a data URI or a blob URL, you need to make sure that this data URI or blob URL has been validated in advance.For more information, see [URL List Validation](../05_Developing_Apps/url-list-validation-91f3768.md).
-
+Optionally, you can set the `source` property to a data URI or a blob URL in all major web browsers except Internet Explorer and Microsoft Edge. If you want to use a data URI or a blob URL, you need to make sure that this data URI or blob URL has been validated in advance.For more information, see [URL List Validation](../05_Developing_Apps/url-list-validation-91f3768.md).
 
 **Content Caching**
 
--   PDF documents displayed in the PDF viewer may or may not be cached, depending on the app that uses the PDF viewer control. It's up to you to decide how often the content should be refreshed and whether to use caching or not.
-
+PDF documents displayed in the PDF viewer may or may not be cached, depending on the app that uses the PDF viewer control. It's up to you to decide how often the content should be refreshed and whether to use caching or not.
 
 
 
@@ -62,13 +56,11 @@ The `PDFViewer` control displays PDF documents right inside your app. It can be 
 
 -   Mozilla Firefox
 
-    -   The sourceValidationFailed event is not fired for PDF documents loaded in the Mozilla Firefox browser.
-
+    The sourceValidationFailed event is not fired for PDF documents loaded in the Mozilla Firefox browser.
 
 -   Safari
 
-    -   Data URI paths and blob URLs used as the PDF source are not supported in Safari.
-
+    Data URI paths and blob URLs used as the PDF source are not supported in Safari.
 
 
 **Embedding the PDF Viewer into a Tab**
@@ -85,13 +77,11 @@ The `PDFViewer` control displays PDF documents right inside your app. It can be 
 
 **Accessibility**
 
--   Accessibility features available to the user may vary, depending on the version of the Adobe Acrobat Reader installed.
-
+Accessibility features available to the user may vary, depending on the version of the Adobe Acrobat Reader installed.
 
 **Fillable PDF Forms**
 
--   Support for fillable PDF forms depends on the browser and device restrictions.
-
+Support for fillable PDF forms depends on the browser and device restrictions.
 
 **Related Information**  
 

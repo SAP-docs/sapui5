@@ -16,7 +16,7 @@ You use the message model like any other model to bind an aggregation to a root 
 // "Messaging" required from "sap/ui/core/Messaging"
 // "Button" required from "sap/m/Button"
 // "MessagePopover" required from "sap/m/MessagePopover"
-// "MessagePopoverItem" required from "sap/m/MessagePopoverItem"
+// "MessageItem" required from "sap/m/MessageItem"
 
 const oMessagePopoverButton = new Button({
     text: "Show MessagePopover",
@@ -29,7 +29,7 @@ const oMessagePopoverButton = new Button({
 const oMP = new MessagePopover({
     items: {
         path:"message>/",
-        template: new MessagePopoverItem({ 
+        template: new MessageItem({ 
             description: "{message>description}", 
             type: "{message>type}", 
             title: "{message>message}"
@@ -38,7 +38,7 @@ const oMP = new MessagePopover({
 });
 
 const oMessageModel = Messaging.getMessageModel();
-oMP.setModel(oMessageModel(),"message");
+oMP.setModel(oMessageModel,"message");
 
 oMessagePopoverButton.placeAt("content");
 ```
@@ -51,7 +51,7 @@ oMessagePopoverButton.placeAt("content");
 
 [API Reference: `sap.ui.model.message.MessageModel`](https://ui5.sap.com/#/api/sap.ui.model.message.MessageModel)
 
-[API Reference: `sap.ui.core.message.MessageManager`](https://ui5.sap.com/#/api/sap.ui.core.message.MessageManager)
+[sap/ui/core/Messaging](https://ui5.sap.com/#/api/module:sap/ui/core/Messaging)
 
-[API Reference: `sap.ui.core.message.MessagePopover`](https://ui5.sap.com/#/api/sap.ui.core.message.MessagePopover)
+[API Reference: `sap.m.MessagePopover`](https://ui5.sap.com/#/api/sap.m.MessagePopover)
 

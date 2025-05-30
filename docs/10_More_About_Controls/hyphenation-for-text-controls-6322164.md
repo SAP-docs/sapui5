@@ -39,10 +39,13 @@ All three controls have a `wrapping` property that determines text wrapping. By 
 Example:
 
 ```js
-new sap.m.Label({
-  text: "Liquiditätspositionshierarchie Datenänderungsbelege",
-  wrapping: true,
-  wrappingType: sap.m.WrappingType.Hyphenated
+// Label required from "sap/m/Label"
+// WrappingType required from "sap/m/library"
+
+new Label({
+    text: "Liquiditätspositionshierarchie Datenänderungsbelege",
+    wrapping: true,
+    wrappingType: WrappingType.Hyphenated
 });
 
 ```
@@ -60,13 +63,13 @@ As the `sap.ui.core.hyphenation.Hyphenation` class is a singleton, an instance s
 Example:
 
 ```js
-var oHyphenationApi = sap.ui.core.hyphenation.Hyphenation.getInstance();
+// Hyphenation required from "sap/ui/core/hyphenation/Hyphenation"
+var oHyphenationApi = Hyphenation.getInstance();
+
 if (!oHyphenationApi.canUseNativeHyphenation("en")) {
-  oHyphenationApi.initialize("en").then(function() {
-    console.log(
-      oHyphenationApi.hyphenate("An example text to hyphenate.", "en")
-    );
-  });
+    oHyphenationApi.initialize("en").then(function() {
+        console.log(oHyphenationApi.hyphenate("An example text to hyphenate.", "en"));
+    });
 }
 ```
 
@@ -79,11 +82,11 @@ By default, the text controls load any required third-party resources at a later
 Example:
 
 ```js
-sap.ui.core.hyphenation.Hyphenation.getInstance()
-  .initialize()
-  .then(function() {
-    // continue with application initialization/rendering
-  });
+Hyphenation.getInstance()
+    .initialize()
+    .then(function() {
+        // continue with application initialization/rendering
+    });
 
 ```
 
@@ -119,7 +122,7 @@ When the framework makes the choice whether browser-native hyphenation or third-
 
 SAPUI5 provides hyphenation through the `hyphens` CSS property or the third-party tool Hyphenopoly.
 
-The following table provides a list of languages supported by the third-party tool Hyphenopoly \(version 2.4.0\). Texts in all other languages are hyphenated only if the used browser supports the `hyphens` CSS property for the specified language.
+The following table provides a list of languages supported by the third-party tool Hyphenopoly \(version 3.4.0\). Texts in all other languages are hyphenated only if the used browser supports the `hyphens` CSS property for the specified language.
 
 
 <table>

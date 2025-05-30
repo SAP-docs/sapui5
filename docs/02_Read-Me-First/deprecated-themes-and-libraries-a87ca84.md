@@ -49,7 +49,7 @@ Recommendation\(\*\)
 </td>
 <td valign="top">
 
- 
+1.136
 
 </td>
 <td valign="top">
@@ -71,7 +71,7 @@ Switch to `sap_horizon`.
 </td>
 <td valign="top">
 
- 
+1.136
 
 </td>
 <td valign="top">
@@ -93,7 +93,7 @@ Switch to `sap_horizon_hcb`.
 </td>
 <td valign="top">
 
- 
+1.136
 
 </td>
 <td valign="top">

@@ -245,7 +245,7 @@ The state of a context can be checked via the following API functions:
 
 [sap.ui.model.odata.v4.Context](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.Context)
 
-[sap.ui.core.message.MessageManager](https://ui5.sap.com/#/api/sap.ui.core.message.MessageManager)
+[sap/ui/core/Messaging](https://ui5.sap.com/#/api/module:sap/ui/core/Messaging)
 
 [See also our Deep Create demo app](https://ui5.sap.com/#/entity/sap.ui.model.odata.v4.ODataModel/sample/sap.ui.core.sample.odata.v4.DeepCreate)
 

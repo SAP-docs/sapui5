@@ -4,7 +4,7 @@
 
 You use the Criticality Calculation feature to control the color of the labels at the top.
 
-You cannot set the label color directly. The color of the labels at the bottom is unchangeable and will always be displayed with `ValueColor.Neutral`. The color of the labels at the top is calculated using the thresholds that are common for every Criticality Calculation across the Smart Micro Charts. For example:
+You cannot set the label color directly. The color of the labels at the bottom is unchangeable and is always be displayed with `ValueColor.Neutral`. The color of the labels at the top is calculated using the thresholds that are common for every Criticality Calculation across the Smart Micro Charts. For example:
 
 **Thresholds**
 

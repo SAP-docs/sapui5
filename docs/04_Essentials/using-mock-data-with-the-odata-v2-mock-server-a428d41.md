@@ -15,7 +15,7 @@ sap.ui.define([], function() {
 });
 ```
 
-To run your app with mock data, you can use the mock server. The mock server intercepts HTTP calls to the server and produces a faked output to the client. This is transparent to your data binding and the use of OData model and feels like a real server. You start the mock server when you intialize your app as follows:
+To run your app with mock data, you can use the mock server. The mock server intercepts HTTP calls to the server and produces a faked output to the client. This is transparent to your data binding and the OData model you use, and feels like a real server. You start the mock server when you initialize your app as follows:
 
 ```
 sap.ui.define([
@@ -27,7 +27,7 @@ sap.ui.define([
             ...
             // start mock server
             if (ModelConfig.isMock) {
-                var oMockServer = new MockServer({
+                const oMockServer = new MockServer({
                     rootUri: ModelConfig.getServiceUrl();
                 });
                 oMockServer.simulate("model/metadata.xml", "model/");

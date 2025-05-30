@@ -1,5 +1,7 @@
 <!-- loio473201b547734e0eb66612df5bae8553 -->
 
+<link rel="stylesheet" type="text/css" href="../css/sap-icons.css"/>
+
 # Running the Support Assistant on an Older SAPUI5 Version
 
 In some cases you may want to run the Support Assistant against a different version of SAPUI5. You can do so by following a few steps.
@@ -20,7 +22,7 @@ The minimum SAPUI5 version in which the Support Assistant is available is 1.44.1
 
 1.  Open the *Technical Information Dialog* using the [shortcut](../02_Read-Me-First/keyboard-shortcuts-for-sapui5-tools-154844c.md) [Ctrl\] + [Shift\] + [Alt\] /[Option\] + [P\] .
 
-2.  Choose the settings button for the Support Assistant \(![](images/SA_Settings_Button_TechInfo_4c9d605.png)\).
+2.  Choose the Settings button <span style="color:#ffffff;"><span style="background-color:#009de0;"><span class="SAP-icons-V5"></span></span></span> next to the *Activate Support Assistant* button.
 
 3.  Select a predefined version from the dropdown, or select *Custom Location* to paste a custom URL in the input field.
 

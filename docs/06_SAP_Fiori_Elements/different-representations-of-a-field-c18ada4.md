@@ -2,7 +2,7 @@
 
 # Different Representations of a `Field`
 
-Applications can control how the field is represented by using annotations or metadata.
+Application developers can control how the field is represented by using annotations or metadata.
 
 > ### Note:  
 > This topic is only applicable to SAP Fiori elements for OData V4.
@@ -747,6 +747,10 @@ For more information, see the [Date Picker and Date/Time Picker](field-help-a560
 
 ## Representation as a Masked Input Field
 
+
+
+### Using the `UI.InputMask` Annotation
+
 A field can be rendered as a masked input field, allowing end users to enter values only in the specified format. No other formats are accepted by these fields. Examples of such fields include a postal code, a product activation key, or a phone number with an area code.
 
 ![](images/Masked_Input_Field_6a86d90.png)
@@ -793,7 +797,7 @@ For example, if the mask symbol is `S^AP-AA-999`, the end user input value must 
 > No ABAP CDS annotation sample is available. Please use the local XML annotation.
 
 > ### Sample Code:  
-> CDS Annotation
+> CAP CDS Annotation
 > 
 > ```
 > MaskedInputPhone   : String          @( 
@@ -839,6 +843,45 @@ For example, if the mask symbol is `S^AP-AA-999`, the end user input value must 
 > The mask characters normally correspond to an existing rule \(one rule per unique character\). Characters which don't, are considered immutable characters \(for example, the mask `2099`, where `9` corresponds to a rule for digits, has the characters `2` and `0` as immutable\). You can use the special escape character `^` called "Caret" directly before a rule character to make it immutable.
 
 Check out our live example in the flexible programming model explorer at [Field - Display Representations](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#buildingBlocks/field/fieldDisplayStyles).
+
+
+
+### Using the `Common.Masked` Annotation
+
+Certain input fields must be hidden from the UI to protect sensitive data. To achieve this, you can use the `Common.Masked` annotation to prevent data from being displayed in plain text.
+
+![](images/Masked_Password_Field_4cc5334.png)
+
+In edit mode, the input field masks each character with a dot \(•\), so end users do not see the text they enter as plain text. In display mode, the input field replaces each character with an asterisk \(\*\).
+
+> ### Sample Code:  
+> XML Annotation
+> 
+> ```
+> <Annotations Target="sap.fe.core.FieldDisplayStyles.RootEntity/MaskedField"> 
+>         <Annotation Term="Common. Masked" Bool="true"/> 
+> </Annotations>
+> ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> No ABAP CDS annotation sample is available. Please use the local XML annotation.
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> MaskedField  : String  @Common : {Masked: true};
+> ```
+
+Check out our live example in the flexible programming model explorer at [Field - Edit Mode](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/field/fieldEdit) and [Field - Display Representations](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/field/fieldDisplayStyles).
+
+This feature only provides casual visual protection against shoulder surfing and doesn't influence how data is transferred to the back end. The data is transferred to the client like any other property in plain text without masking.
+
+Therefore, sensitive or high-security data must never be delivered from the back end in an unmasked or unencrypted state. In addition to using the `Common.Masked` annotation, we strongly recommend masking sensitive values in the back end before sending them to the client.
+
+For more security-related information, see [Security Configuration](security-configuration-ba0484b.md).
 
 **Related Information**  
 

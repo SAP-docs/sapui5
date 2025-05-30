@@ -17,12 +17,12 @@ Additionally, we will demonstrate how to mock an additional request that is not 
 
 ## Preview
 
-![](images/Tutorial_Mock_Server_Step_2_55edd9f.png)
+![Preview of the UI5 application that is going to be built in this tutorial. Displays a list of upcoming meetups generated from mock data.](images/Tutorial_Mock_Server_Step_4_8f2176b.png)
 
 > ### Tip:  
 > You don't have to do all tutorial steps sequentially, you can also jump directly to any step you want. Just download the code from the previous step, and start there.
 > 
-> You can view and download the files for all steps in the Demo Kit at [Mock Server](https://ui5.sap.com/#/entity/sap.ui.core.tutorial.mockserver). Copy the code to your workspace and make sure that the application runs by calling the `webapp/index.html` file. Depending on your development environment you might have to adjust resource paths and configuration entries.
+> You can view and download the files for all steps in the Demo Kit at [Mock Server](https://ui5.sap.com/#/entity/sap.ui.core.tutorial.mockserver). Depending on your development environment you might have to adjust resource paths and configuration entries.
 > 
 > For more information check the [Downloading Code for a Tutorial Step](get-started-setup-tutorials-and-demo-apps-8b49fc1.md#loio8b49fc198bf04b2d9800fc37fecbb218__tutorials_download) section of the tutorials overview page [Get Started: Setup, Tutorials, and Demo Apps](get-started-setup-tutorials-and-demo-apps-8b49fc1.md).
 
@@ -30,9 +30,7 @@ Additionally, we will demonstrate how to mock an additional request that is not 
 
 ## Prerequisites
 
-This tutorial assumes you have access to the SAP Business Application Studio. For more information, see [App Development Using SAP Business Application Studio](../05_Developing_Apps/app-development-using-sap-business-application-studio-6bbad66.md).
-
-You should also be familiar with the concepts explained in the [Walkthrough Tutorial \(JavaScript\)](walkthrough-tutorial-javascript-3da5f4b.md) tutorial and with the OData specification.
+You should be familiar with the concepts explained in the [Walkthrough Tutorial \(JavaScript\)](walkthrough-tutorial-javascript-3da5f4b.md) tutorial and with the OData specification.
 
 **Related Information**  
 

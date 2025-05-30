@@ -242,7 +242,7 @@ Behavior
 </td>
 <td valign="top">
 
-Selects the cell that the focus is set on. If used inside a selection, removes the selection.
+Selec ts the cell that the focus is set on. If used inside a selection, removes the selection.
 
 </td>
 </tr>
@@ -302,13 +302,17 @@ For more information about pasting data to tables and the expected format, see [
 
 <a name="loioc0f6592a592e47f9bb6d09900de47412__section_ygl_t1s_kdc"/>
 
-## Optimizing Data Loading Using the `scrollThreshold` Parameter
+## Optimizing Data Loading Using the `scrollThreshold` Property
 
-As end users scroll within grid tables, tree tables, or analytical tables, the application dynamically loads additional records from the back-end system. By default, it loads 300 additional records when scrolling. This default value can be modified by configuring the `scrollThreshold` parameter.
+As end users scroll within grid tables, tree tables, or analytical tables, the application dynamically loads additional records from the back-end system. By default, it loads 300 additional records while scrolling.
 
-For more information about configuration in OData V2, see the [Configuring the scrollThreshold Parameter to Optimize Data Loading](tables-c0f6592.md#loioc0f6592a592e47f9bb6d09900de47412__Configuring_the_scrollThreshold_Paramter_v2) subsection in the **Additional Features in SAP Fiori elements for OData V2** section of this topic.
+Application developers can modify this value by configuring the `scrollThreshold` property.
 
-For more information about configuration in OData V4, see the [Configuring the scrollThreshold Parameter to Optimize Data Loading](tables-c0f6592.md#loioc0f6592a592e47f9bb6d09900de47412__Configuring_the_scrollThreshold_Parameter_v4) subsection in the **Additional Features in SAP Fiori elements for OData V4** section of this topic.
+For analytical tables and tree tables, `scrollThreshold` must be higher than `threshold` to take effect.
+
+For more information about configuration in OData V2, see the [Configuring the scrollThreshold Property for Dynamic Data Loading](tables-c0f6592.md#loioc0f6592a592e47f9bb6d09900de47412__Configuring_the_scrollThreshold_Property_v2) subsection in the **Additional Features in SAP Fiori elements for OData V2** section of this topic.
+
+For more information about configuration in OData V4, see the [Configuring the scrollThreshold Property for Dynamic Data Loading](tables-c0f6592.md#loioc0f6592a592e47f9bb6d09900de47412__Configuring_the_scrollThreshold_Property_v4) subsection in the **Additional Features in SAP Fiori elements for OData V4** section of this topic.
 
 
 
@@ -486,9 +490,138 @@ You can exclude the custom actions from the context menu by using `excludeFromCo
 
 
 
-### Configuring the `scrollThreshold` Parameter to Optimize Data Loading
+### Configuring the `threshold` Property to Preload Additional Rows
 
-To configure the `scrollThreshold` parameter, you can use the UI adaptation option. For more information, see [Adapting the UI: List Report and Object Page](adapting-the-ui-list-report-and-object-page-0d2f1a9.md).
+Application developers can configure the `threshold` property in the `manifest.json` file to specify the number of additional rows that can be preloaded from the back-end system. The specified value is added to the number of visible rows. For example, if `threshold` is set to 100 and there are 10 visible rows, the table loads a total of 110 records. This property applies to actions such as initial loading, sorting, and filtering.
+
+> ### Note:  
+> If `threshold` is set to 0, no additional records are preloaded, and `scrollThreshold` is used instead.
+
+The following sample code shows how to configure the `threshold` property in list reports, object pages, and analytical list pages:
+
+> ### Sample Code:  
+> List Report
+> 
+> ```
+> "component": {
+>     "name": "sap.suite.ui.generic.template.ListReport",
+>     "list": true,
+>     "settings": {
+>         "gridTable": true,
+>         "tableSettings": {
+>             "threshold": 400
+>         }
+>     }
+> }
+> 
+> ```
+
+> ### Sample Code:  
+> Object Page
+> 
+> ```
+> "component": {
+>     "name": "sap.suite.ui.generic.template.ObjectPage",
+>     "settings": {
+>         "showRelatedApps": true,
+>         "gridTable": true,
+>         "editableHeaderContent": true,
+>         "showConfirmationOnDraftActivate": true,
+>         "tableSettings": {
+>             "threshold": 400
+>         }
+>     }
+> }
+> 
+> ```
+
+> ### Sample Code:  
+> Analytical List Page
+> 
+> ```
+> "component": {
+>     "name": "sap.suite.ui.generic.template.AnalyticalListPage",
+>     "list": true,
+>     "settings": {
+>         "tableSettings": {
+>             "type": "AnalyticalTable",
+>             "multiSelect": true,
+>             "selectAll": false,
+>             "selectionLimit": 10,
+>             "threshold": 400
+>         }
+>     }
+> }
+> 
+> ```
+
+Key users can configure the `threshold` property using the UI adaptation option. For more information, see [Adapting the UI](adapting-the-ui-59bfd31.md).
+
+
+
+### Configuring the `scrollThreshold` Property for Dynamic Data Loading
+
+Application developers can configure the `scrollThreshold` property in the `manifest.json` file.
+
+The following sample code shows how to configure it in list reports, object pages, and analytical list pages:
+
+> ### Sample Code:  
+> List Report
+> 
+> ```
+> "component": {
+>     "name": "sap.suite.ui.generic.template.ListReport",
+>     "list": true,
+>     "settings": {
+>         "gridTable": true,
+>         "tableSettings": {
+>             "scrollThreshold": 600
+>         }
+>     }
+> }
+> 
+> ```
+
+> ### Sample Code:  
+> Object Page
+> 
+> ```
+> "component": {
+>     "name": "sap.suite.ui.generic.template.ObjectPage",
+>     "settings": {
+>         "showRelatedApps": true,
+>         "gridTable": true,
+>         "editableHeaderContent": true,
+>         "showConfirmationOnDraftActivate": true,
+>         "tableSettings": {
+>             "scrollThreshold": 600
+>         }
+>     }
+> }
+> 
+> ```
+
+> ### Sample Code:  
+> Analytical List Page
+> 
+> ```
+> "component": {
+>     "name": "sap.suite.ui.generic.template.AnalyticalListPage",
+>     "list": true,
+>     "settings": {
+>         "tableSettings": {
+>             "type": "AnalyticalTable",
+>             "multiSelect": true,
+>             "selectAll": false,
+>             "selectionLimit": 10,
+>             "scrollThreshold": 600
+>         }
+>     }
+> }
+> 
+> ```
+
+Key users can configure the `scrollThreshold` parameter using the UI adaptation option. For more information, see [Adapting the UI](adapting-the-ui-59bfd31.md).
 
 
 
@@ -759,9 +892,9 @@ The `Table` building block also supports the copy to clipboard option. For more 
 
 
 
-### Configuring the `scrollThreshold` Parameter to Optimize Data Loading
+### Configuring the `scrollThreshold` Property for Dynamic Data Loading
 
-You can configure the `scrollThreshold` parameter in the `manifest.json` file as shown in the following sample code:
+You can configure the `scrollThreshold` property in the `manifest.json` file as shown in the following sample code:
 
 > ### Sample Code:  
 > manifest.json

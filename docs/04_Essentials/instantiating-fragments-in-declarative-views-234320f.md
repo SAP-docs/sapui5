@@ -14,12 +14,13 @@ The following code example shows an XML view that includes both types of fragmen
 
 ```xml
 <mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" controllerName="testdata.fragments.XMLViewController" >
-    
+    <!-- Runtime resource name of the fragment: my/useful/SimpleUiPart.fragment.xml -->
     <core:Fragment               fragmentName="my.useful.SimpleUiPart" type="XML" />
     <core:Fragment id="xmlInXml" fragmentName="my.useful.SimpleUiPart" type="XML" />
-    
-    <core:Fragment              fragmentName="my.useful.UiPartX" type="JS" />
-    <core:Fragment id="jsInXml" fragmentName="my.useful.UiPartX" type="JS" />
+
+    <!-- Runtime resource name of the fragment: my/useful/UiPartX.js -->
+    <core:Fragment              fragmentName="module:my/useful/UiPartX" />
+    <core:Fragment id="jsInXml" fragmentName="module:my/useful/UiPartX" />
 
 </mvc:View>
 ```

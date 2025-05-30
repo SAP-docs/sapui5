@@ -26,7 +26,7 @@ The SAPUI5 ABAP repository supports typical code pages for transferring of text 
 
 -   [SAP Business Application Studio](https://help.sap.com/viewer/product/SAP%2520Business%2520Application%2520Studio/Cloud/en-US)
 
--   [Using the SAPUI5 ABAP Repository Upload and Download Reports to Synchronize](using-the-sapui5-abap-repository-upload-and-download-reports-to-synchronize-a560bd6.md)
+-   [Deploying SAPUI5 Applications to the SAPUI5 ABAP Repository](deploying-sapui5-applications-to-the-sapui5-abap-repository-a560bd6.md)
 
 -   [Using an OData Service to Load Data to the SAPUI5 ABAP Repository](using-an-odata-service-to-load-data-to-the-sapui5-abap-repository-a883327.md)
 

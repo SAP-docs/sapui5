@@ -4,8 +4,6 @@
 
 `SmartMultiEdit` enables you to perform mass editing operations on objects that have the same structure.
 
-For more information about this control, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.comp.smartmultiedit) and the [Samples](https://ui5.sap.com/#/entity/sap.ui.comp.smartmultiedit.Container) in the Demo Kit.
-
 
 
 <a name="loio0907251507064f40b8f8a126aebd8740__section_cqd_cfr_rcb"/>
@@ -21,7 +19,9 @@ With `SmartMultiEdit`, you can edit multiple homogeneous objects simultaneously.
 -   [`SmartMultiEdit.Container`](https://ui5.sap.com/#/api/sap.ui.comp.smartmultiedit.Container) – A container that provides the layout and context bindings for the `SmartMultiEdit` fields it includes.
 
 
-![Smart Multi Edit Fields in a Smart Form Dialog](../01_Whats-New/images/WhatsNew_154_SmartMultiEdit_d474f0c.jpg)
+![Smart Multi Edit Fields in a Smart Form Dialog](../01_Whats-New/images/Suite_SmartMultiEdit_d474f0c.png)
+
+For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.comp.smartmultiedit) and the [Sample](https://ui5.sap.com/#/entity/sap.ui.comp.smartmultiedit.Container).
 
 
 

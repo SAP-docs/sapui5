@@ -35,7 +35,7 @@ The aliases can then be used to access the modules' static functions. The alias 
 You can use the XML `require` to reference static functions of a module which can serve as event handlers. This works with static strings as well as with any model data. For a description how this is done, see [Handling Events in XML Views](handling-events-in-xml-views-b0fb4de.md). As the `Box` module is defined on the root element, it can be used in the whole view.
 
 ```xml
-<mvc:View controllerName="some.Controller" xmlns="sap.m"
+<mvc:View controllerName="module:some/Controller" xmlns="sap.m"
       xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
       core:require="{Box:'sap/m/MessageBox'}">
    <Panel>
@@ -57,7 +57,7 @@ You can use the XML `require` to reference static functions of a module which ca
 You can also use the `require` module with data binding. Formatters and factory functions can be defined with the `require` modules, as well as expression bindings. The following code extract also shows, that the `Factory` module, which is defined on the List element, can only be used there, and not in sibling or parent controls:
 
 ```xml
-<mvc:View controllerName="some.Controller" xmlns="sap.m"
+<mvc:View controllerName="module:some/Controller" xmlns="sap.m"
       xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
       core:require="{Util:'some/Util'}">
   <Panel>
@@ -84,7 +84,7 @@ You can also use the `require` module with data binding. Formatters and factory 
 -   A fragment is defined inline within a View.
 
     ```xml
-    <mvc:View controllerName="some.Controller" xmlns="sap.m"
+    <mvc:View controllerName="module:some/Controller" xmlns="sap.m"
           xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc">
       <FragmentDefinition>
           <!-- core:require can't be defined on the above FragmentDefinition -->

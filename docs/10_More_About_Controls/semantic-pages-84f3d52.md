@@ -10,7 +10,7 @@ The main functionality of the semantic pages is to predefine the placement, beha
 
 There are two separate and non-dependent `semantic` namespaces in the main SAPUI5 libraries:
 
--   `sap.f.semantic` \(implements SAP Fiori 2.0\)
+-   `sap.f.semantic`
 
 -   `sap.m.semantic`
 

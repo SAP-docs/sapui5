@@ -11,7 +11,7 @@ For each fragment type, SAPUI5 provides a method that can be used to programmati
 To give an example of a programmatic instantiation of a JS fragment, you first have to define one. The following code presents an example definition:
 
 ```js
-// fragment is located in a file named: "my/useful/UiPartX.fragment.js"
+// The fragment is available under the resource name "my/useful/UiPartX.js"
 sap.ui.define(["sap/m/Button"], function(Button) {
 	return {
 		createContent: function(oController) {
@@ -30,8 +30,7 @@ This fragment can be instantiated from a controller as follows:
 ```js
 
 const oMyButton = await this.loadFragment({
-	name: "my.useful.UiPartX",
-	type: "JS"
+	name: "module:my/useful/UiPartX"
 });
 // oMyButton is now usable
 ```
@@ -46,9 +45,8 @@ For fragments that are used several times, an ID for the fragment can be given o
 ```js
 
 const oMyButton = await this.loadFragment({
-	name: "my.useful.UiPartX",
-	id: "someId",
-	type: "JS"
+	name: "module:my/useful/UiPartX",
+	id: "someId"
 });
 // oMyButton is now usable
 ```
@@ -56,10 +54,10 @@ const oMyButton = await this.loadFragment({
 JS Fragments are capable of asynchronously creating their content. To do so, the `createContent()` function must return a Promise instead of just regular controls. This Promise then must resolve with the actual content controls.
 
 ```js
-// fragment is located in a file named: "reuse/SampleFragment.fragment.js"
+// fragment is located in a file named "reuse/SampleFragment.js"
 sap.ui.define(["sap/ui/core/Fragment", "sap/m/Button", "heavy/work/SomeModule"], function(Fragment, Button, SomeModule) {
 	return {
-		createContent: async() => {
+		async createContent() {
 			return await SomeModule.doStuffAsync();
 		}
 	};

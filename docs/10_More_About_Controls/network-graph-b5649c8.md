@@ -4,8 +4,6 @@
 
 The `NetworkGraph` control displays objects as a network of nodes connected to one another by lines.
 
-For more information about this control, see the [API Reference](https://ui5.sap.com/#/api/sap.suite.ui.commons.networkgraph) and the [Samples](https://ui5.sap.com/#/entity/sap.suite.ui.commons.networkgraph.Graph) in the Demo Kit.
-
 
 
 <a name="loiob5649c8de7f74739b66747dcc9356d0b__section_odd_lzj_3bb"/>
@@ -16,11 +14,9 @@ The `NetworkGraph` control can be used to illustrate how different objects are r
 
 This control supports both directed and undirected graphs, as well as graphs that contain cycles. It also provides broad customization options, enabling you to separate the graph layout from its rendering and to position individual graph elements freely, for example, when displaying geospatial data on top of a map.
 
-  
-  
-**Network Graph Example**
+![Network Graph Example](images/Network_Graph_screenshot_671dd30.png)
 
-![Network Graph Example](images/Network_Graph_screenshot_671dd30.png "Network Graph Example")
+For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.suite.ui.commons.networkgraph) and the [Sample](https://ui5.sap.com/#/entity/sap.suite.ui.commons.networkgraph.Graph).
 
 
 
@@ -30,64 +26,71 @@ This control supports both directed and undirected graphs, as well as graphs tha
 
 **Layout**
 
--   There are three layout options available:
+There are three layout options available:
 
-    -   Layered layout – The `LayeredLayout` algorithm arranges the nodes into a layered graph.
+-   Layered layout – The `LayeredLayout` algorithm arranges the nodes into a layered graph.
 
-    -   Force-based layout – The `ForceBasedLayout` algorithm arranges the nodes into a force-based \(or force-directed\) graph.
+-   Force-based layout – The `ForceBasedLayout` algorithm arranges the nodes into a force-based \(or force-directed\) graph.
 
-    -   Free-form layout \(`NoopLayout`\) – No layout algorithm is applied, so the nodes can be placed anywhere within the graph.
+-   Free-form layout \(`NoopLayout`\) – No layout algorithm is applied, so the nodes can be placed anywhere within the graph.
 
-    -   Custom layout – You can define your own algorithm that will be used to lay out your graph.
-
-
-    For details, see [`sap.suite.ui.commons.networkgraph.layout`](https://ui5.sap.com/#/api/sap.suite.ui.commons.networkgraph.layout).
-
--   The process of drawing the graph consists of two phases:
-
-    -   Computing the layout based on the specified layout algorithm
-
-    -   Visual rendering of the graph
+-   Custom layout – You can define your own algorithm that will be used to lay out your graph.
 
 
-    The first phase is marked by the `beforeLayouting` event that is fired just before the layout computation begins. The second phase starts with the `afterLayouting` event that is fired when the layout algorithm has finished arranging the graph and the visual rendering begins.
+For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.suite.ui.commons.networkgraph.layout).
 
-    Any change to nodes or other graph elements that happens after the layout has been computed may cause invalidation of the whole graph, making it impossible to render. It may lead to an infinite loop with graph invalidation triggering layout algorithms that trigger the event that caused the original invalidation of the graph, and so on.
+**Layout and Rendering**
 
-    To prevent unwanted invalidation, you can call the `preventInvalidation` method on the graph:
+The process of drawing the graph consists of two phases:
 
-    ```
-    this._graph.attachEvent("beforeLayouting", function (oEvent) {
-    	this._graph.preventInvalidation(true);
-    
-    	// Perform actions on the nodes that would normally trigger invalidation.
-     
-    	// Check out the Org Chart sample for more inspiration.
-    
-    	this._graph.preventInvalidation(false);
-    }.bind(this));
-    
-    ```
+-   Computing the layout based on the specified layout algorithm
 
-    For more information, see [`sap.suite.ui.commons.networkgraph.Graph#preventInvalidation`](https://ui5.sap.com/#/api/sap.suite.ui.commons.networkgraph.Graph/methods/preventInvalidation).
+-   Visual rendering of the graph
 
+
+The first phase is marked by the `beforeLayouting` event that is fired just before the layout computation begins. The second phase starts with the `afterLayouting` event that is fired when the layout algorithm has finished arranging the graph and the visual rendering begins.
+
+Any change to nodes or other graph elements that happens after the layout has been computed may cause invalidation of the whole graph, making it impossible to render. It may lead to an infinite loop with graph invalidation triggering layout algorithms that trigger the event that caused the original invalidation of the graph, and so on.
+
+To prevent unwanted invalidation, you can call the `preventInvalidation` method on the graph:
+
+```
+this._graph.attachEvent("beforeLayouting", function (oEvent) {
+	this._graph.preventInvalidation(true);
+
+	// Perform actions on the nodes that would normally trigger invalidation.
+ 
+	// Check out the Org Chart sample for more inspiration.
+
+	this._graph.preventInvalidation(false);
+}.bind(this));
+
+```
+
+For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.suite.ui.commons.networkgraph.Graph/methods/preventInvalidation).
 
 **Appearance**
 
--   **Grouping** – You can join nodes into a group, so they are displayed closer to one another. A group can be collapsed to hide the nodes that are included in it. Please note that grouping is available only for graphs that use layered layout.
+-   **Grouping**
 
-    For details, see [`sap.suite.ui.commons.networkgraph.Group`](https://ui5.sap.com/#/api/sap.suite.ui.commons.networkgraph.Group).
+    You can join nodes into a group, so they are displayed closer to one another. A group can be collapsed to hide the nodes that are included in it. Please note that grouping is available only for graphs that use layered layout.
 
--   **Node Shape** – You can choose between two node shapes: circular or rectangular. Depending on the node shape, the `width` and `height` properties of the node are treated differently:
+    For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.suite.ui.commons.networkgraph.Group).
+
+-   **Node Customization**
+
+    You can choose between two node shapes: circular or rectangular. Depending on the node shape, the `width` and `height` properties of the node are treated differently:
 
     -   For rectangular nodes, only the `width` property is considered, while the `height` property is ignored.
 
     -   For circular nodes, the `height` property determines the diameter of the circle, while the `width` property is used as the width of the node's title and description.
 
 
-    For details, see [`sap.suite.ui.commons.networkgraph.Node`](https://ui5.sap.com/#/api/sap.suite.ui.commons.networkgraph.Node).
+    For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.suite.ui.commons.networkgraph.Node).
 
-    **Other Properties** – In addition to shape, you can define some other properties:
+-   **Other Properties**
+
+    In addition to shape, you can define some other properties:
 
     -   [`icon`](https://ui5.sap.com/#/api/sap.suite.ui.commons.networkgraph.Node/methods/setIcon) – The icon to be displayed inside the node shape.
 
@@ -98,18 +101,24 @@ This control supports both directed and undirected graphs, as well as graphs tha
     -   [Element attributes](https://ui5.sap.com/#/api/sap.suite.ui.commons.networkgraph.ElementAttribute) – Additional attributes of the node.
 
 
--   **Line Customization** – You can choose among several connector line styles: dashed, dotted, or solid, as well as define where the arrow should be positioned and where it should point to.
+-   **Line Customization**
 
-    For details, see [`sap.suite.ui.commons.networkgraph.LineType`](https://ui5.sap.com/#/api/sap.suite.ui.commons.networkgraph.LineType).
+    You can choose among several connector line styles: dashed, dotted, or solid, as well as define where the arrow should be positioned and where it should point to.
 
--   **Semantic Colors** – Nodes, groups of nodes, and connector lines may use semantic colors, based on their status. You can use any of the custom statuses defined by the `statuses` aggregation in the [`sap.suite.ui.commons.networkgraph.Graph`](https://ui5.sap.com/#/api/sap.suite.ui.commons.networkgraph.Graph) control or use the default statuses provided by [`sap.suite.ui.commons.networkgraph.ElementStatus`](https://ui5.sap.com/#/api/sap.suite.ui.commons.networkgraph.ElementStatus).
+    For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.suite.ui.commons.networkgraph.LineType).
 
-    For details, see [`sap.suite.ui.commons.networkgraph.ElementStatus`](https://ui5.sap.com/#/api/sap.suite.ui.commons.networkgraph.ElementStatus) and [`sap.suite.ui.commons.networkgraph.Status`](https://ui5.sap.com/#/api/sap.suite.ui.commons.networkgraph.Status).
+-   **Semantic Colors**
+
+    Nodes, groups of nodes, and connector lines may use semantic colors, based on their status. You can use any of the custom statuses defined by the `statuses` aggregation in the [`sap.suite.ui.commons.networkgraph.Graph`](https://ui5.sap.com/#/api/sap.suite.ui.commons.networkgraph.Graph) control or use the default statuses provided by [`sap.suite.ui.commons.networkgraph.ElementStatus`](https://ui5.sap.com/#/api/sap.suite.ui.commons.networkgraph.ElementStatus).
+
+    For more information, see [`sap.suite.ui.commons.networkgraph.ElementStatus`](https://ui5.sap.com/#/api/sap.suite.ui.commons.networkgraph.ElementStatus) and [`sap.suite.ui.commons.networkgraph.Status`](https://ui5.sap.com/#/api/sap.suite.ui.commons.networkgraph.Status).
 
 
 **Customizing the Graph**
 
--   **Arbitrary Node Positions** – To be able to position the nodes freely, switch the layout algorithm to `NoopLayout`.
+-   **Arbitrary Node Positions**
+
+    To be able to position the nodes freely, switch the layout algorithm to `NoopLayout`.
 
     ```
     <Graph>
@@ -121,7 +130,7 @@ This control supports both directed and undirected graphs, as well as graphs tha
     
     ```
 
-    For details, see [`sap.suite.ui.commons.networkgraph.layout`](https://ui5.sap.com/#/api/sap.suite.ui.commons.networkgraph.layout).
+    For more information, see [`sap.suite.ui.commons.networkgraph.layout`](https://ui5.sap.com/#/api/sap.suite.ui.commons.networkgraph.layout).
 
     After that you can define the positions for each of your nodes using their `x` and `y` attributes that define the coordinates of the upper left corner of the node \(or upper right corner in languages that have right-to-left writings systems\).
 
@@ -136,9 +145,11 @@ This control supports both directed and undirected graphs, as well as graphs tha
 
     These methods do not trigger invalidation.
 
-    For details, see [`sap.suite.ui.commons.networkgraph.Line`](https://ui5.sap.com/#/api/sap.suite.ui.commons.networkgraph.Line).
+    For more information, see [`sap.suite.ui.commons.networkgraph.Line`](https://ui5.sap.com/#/api/sap.suite.ui.commons.networkgraph.Line).
 
--   **Using Events for Graph Customization** – You can adjust the graph behavior through a variety of event calls. Such event calls may suppress the default behavior of certain events. For example, if you define the following function for a node, action buttons will no longer be displayed when the user clicks the node:
+-   **Using Events for Graph Customization**
+
+    You can adjust the graph behavior through a variety of event calls. Such event calls may suppress the default behavior of certain events. For example, if you define the following function for a node, action buttons will no longer be displayed when the user clicks the node:
 
     ```
     <Node press="nodePress">

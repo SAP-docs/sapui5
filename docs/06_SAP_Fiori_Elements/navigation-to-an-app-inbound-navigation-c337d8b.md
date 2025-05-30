@@ -26,12 +26,21 @@ When dealing with incoming navigation, in addition to the navigation context pas
 
 ![](images/Handling_Default_Values_from_FLP_9c2ee88.png "Handling Default Values from FLP")
 
--   When you navigate into a list report app via intent-based navigation: Only those values that are added by the FLP via the standard target mapping mechanism are considered.
+-   When you navigate to a list report application using intent-based navigation:
 
--   When you navigate into a list report app via a static FLP tile \(with no navigation context\): If there is no user default variant available, then the FLP default values as passed via the target mapping mechanism are considered.
+    Only the values added by the FLP through the standard target mapping mechanism are considered.
 
--   When you navigate into a list report app via a dynamic tile \(for example an *SAP Smart Business* tile, where the navigation context is passed\): In this case, there is a special handling for `DisplayCurrency`. For all other fields, the FLP default values are ignored \(except those that are added by the FLP via the standard target mapping mechanism\).
+-   When you navigate to a list report application using a static FLP tile \(with no navigation context\)
 
+    If no user default variant is available, the FLP default values passed using the target mapping mechanism are used.
+
+-   When you navigate to a list report application using a dynamic tile, such as an *SAP Smart Business* tile where the navigation context is passed:
+
+    In this case, a special handling applies for `DisplayCurrency`. If a mandatory filter field or a parameter with the technical name `DisplayCurrency` or `P_DisplayCurrency` respectively, doesn't receive a value from the incoming navigation context, it is set using the default `DisplayCurrency` setting configured in the end user's SAP Fiori launchpad. For all other fields, the FLP default values are ignored, except those provided by the FLP through the standard target mapping mechanism.
+
+
+> ### Note:  
+> The user default values from SAP Fiori launchpad marks the standard variant as dirty.
 
 
 
@@ -39,20 +48,20 @@ When dealing with incoming navigation, in addition to the navigation context pas
 
 ## Deep Linking
 
-Navigation to the app uses deep linking. For more information, see [Navigation](https://experience.sap.com/fiori-design/concept/navigation/) in the SAP Fiori Design Guidelines and go to the *Deep Links* section.
+Navigation to the application uses deep linking. For more information, see [Navigation](https://experience.sap.com/fiori-design/concept/navigation/) in the SAP Fiori design guidelines and go to the *Deep Links* section.
 
 > ### Note:  
-> You need the SAP Fiori launchpad for this type of navigation. For a stand-alone app, you need to change the links in the annotations as required.
+> You need the SAP Fiori launchpad for this type of navigation. For a stand-alone application, you need to change the links in the annotations as required.
 
 For the SAP Fiori launchpad, the configuration steps for [Intent-Based Navigation](http://help.sap.com/saphelp_nw75/helpdata/en/bd/8ae3d327ab4541bcce8e7353c046fc/content.htm) are also relevant since it's the same mechanism.
 
-If the source app provides all the key fields in the URL to uniquely identify an object page \(or subobject page\) record, then this will be directly opened instead of the list report or analytical list page. Otherwise, the list report or analytical list page will be opened.
+If the source application provides all the key fields in the URL to uniquely identify an object page \(or subobject page\) record, then this will be directly opened instead of the list report or analytical list page. Otherwise, the list report or analytical list page will be opened.
 
 
 
 ### Deep Linking to Object Pages
 
-Applications can trigger deep linking to object pages by providing all technical keys corresponding to the list report entity set. Depending on the value of the `IsActiveEntity` technical key, the result is:
+You can trigger deep linking to object pages by providing all technical keys corresponding to the list report entity set. Depending on the value of the `IsActiveEntity` technical key, the result is:
 
 -   either the active or draft page is loaded
 
@@ -80,7 +89,7 @@ Technical keys are part of the metadata and are configured in the back end.
 
 ### Deep Linking to Subobject Pages
 
-Applications can also trigger deep linking directly to the n-th level of a subobject page. Applications must provide the manifest setting to indicate that deep linking is allowed for the subobject level. For more information, see the version-specific sections in this topic below.
+You can also trigger deep linking directly to the n-th level of a subobject page. Youmust provide the manifest setting to indicate that deep linking is allowed for the subobject level. For more information, see the version-specific sections in this topic.
 
 > ### Note:  
 > -   To directly load the n-th level subobject page, `allowDeepLinking` has to be true for all the n levels of the subobject page.
@@ -109,13 +118,13 @@ Applications can also trigger deep linking directly to the n-th level of a subob
 
 ### Inbound Navigation to Subobject Pages Using Deep Linking
 
-You can configure inbound navigation to any subobject page belonging to an app by using deep linking.
+You can configure inbound navigation to any subobject page belonging to an application by using deep linking. To do so, make the following settings:
 
-To do so, make the following settings:
-
-1.  In the target application's manifest, for the corresponding subobject page, set `allowDeepLinking: true`. The following example shows the subobject page section of the `manifest.json`:
+1.  In the target application's `manifest.json` file, for the corresponding subobject page, set `allowDeepLinking: true`, as shown in the following sample code:
 
     > ### Sample Code:  
+    > manifest.json
+    > 
     > ```
     > "pages": {
     >      "navigationProperty": "to_ProductText",
@@ -132,7 +141,7 @@ To do so, make the following settings:
 
     If multiple pages on the same level have this property set to `true`, the entry that comes first in the manifest is used.
 
-    Navigation to any level is possible by setting `allowDeepLinking: true` for each level. Note that each level needs to have the setting `allowDeepLinking: true`. In the following example, the navigation goes to subobject level 3:
+    Navigation to any level is possible by setting `allowDeepLinking: true` for each level. Note that each level needs to have the setting `allowDeepLinking: true`. In the following sample code, the navigation goes to subobject level 3:
 
     > ### Sample Code:  
     > ```
@@ -203,19 +212,6 @@ During inbound navigation to flexible column layout application, if the navigati
 <a name="loioc337d8bde8c544598969c8e4edaab262__section_ibr_yvk_mmb"/>
 
 ## Additional Features in SAP Fiori Elements for OData V4
-
-
-
-### Special Handling of `DisplayCurrency`
-
-The incoming navigation context will only have the source application context and the target Fiori elements application first checks for a filter bar which has a filter field containing the technical name `DisplayCurrency`. If there is such a filter field, SAP Fiori elements checks for the following conditions:
-
--   The `DisplayCurrency` filter field is marked as a mandatory filter field.
-
--   There is no incoming value for this from the source application context.
-
-
-If both these conditions are fulfilled, the FLP user default values are checked to see if there is a field called `DisplayCurrency`. If so, this value is used for the filter field.
 
 
 

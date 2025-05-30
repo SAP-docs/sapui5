@@ -9,6 +9,9 @@ The key performance indicator \(KPI\) tag is an abbreviated and clickable title 
 > ### Note:  
 > This topic is only applicable to analytical services. For KPIs in non-analytical services in SAP Fiori elements for OData V4, see [Creating Key Performance Indicators](creating-key-performance-indicators-8874399.md).
 
+> ### Restriction:  
+> KPIs in analytical services with a parametrized entity set are not supported in SAP Fiori elements for OData V4.
+
 Each KPI can have its own OData source, entity set, and annotation file. The KPI value changes if an action is executed on the transactional content. For example, releasing sales orders affects a related KPI and posting an accounting document affects certain financial KPIs.
 
 ![](images/KPI_Tags_Annotation_flowchart_fc0488b.png)

@@ -10,20 +10,26 @@ Option 1
 
 ```js
 
-var oMyFlexbox = new sap.m.FlexBox();
-oMyFlexbox.addItem( new sap.m.Button({text: "Button 1"}) );
-oMyFlexbox.addItem( new sap.m.Button({text: "Button 2"}) ); 
+// FlexBox required from "sap/m/FlexBox"
+// Button required from "sap/m/Button"
+
+var oMyFlexbox = new FlexBox();
+oMyFlexbox.addItem(new Button({text: "Button 1"}));
+oMyFlexbox.addItem(new Button({text: "Button 2"}));
 ```
 
 Option 2
 
 ```js
 
-var oMyFlexbox = new sap.m.FlexBox({
-  items: [
-    new sap.m.Button({text: "Button 1"}),
-    new sap.m.Button({text: "Button 2"})
-  ]
+// FlexBox required from "sap/m/FlexBox"
+// Button required from "sap/m/Button"
+
+var oMyFlexbox = new FlexBox({
+    items: [
+        new Button({text: "Button 1"}),
+        new Button({text: "Button 2"})
+    ]
 });
 ```
 
@@ -41,12 +47,15 @@ Some properties that affect the layout need to be set in the `FlexBox` control. 
 
 ```js
 
-var oMyFlexbox = new sap.m.FlexBox({
-  items: [
-    new sap.m.Button({text: "Button 1"}),
-    new sap.m.Button({text: "Button 2"})
-  ],
-  direction: "Column"
+// FlexBox required from "sap/m/FlexBox"
+// Button required from "sap/m/Button"
+
+var oMyFlexbox = new FlexBox({
+    items: [
+        new Button({text: "Button 1"}),
+        new Button({text: "Button 2"})
+    ],
+    direction: "Column"
 });
 ```
 
@@ -56,21 +65,25 @@ The order is attached to the button inside a `FlexItemData` object as follows:
 
 ```js
 
-var oMyFlexbox = new sap.m.FlexBox({
-  items: [
-    new sap.m.Button({
-      text: "Button 1",
-      layoutData: new FlexItemData({order: 2})
-    }),
-    new sap.m.Button({text: "Button 2"})
-  ]
+// FlexBox required from "sap/m/FlexBox"
+// Button required from "sap/m/Button"
+// FlexItemData required from "sap/m/FlexItemData"
+
+var oMyFlexbox = new FlexBox({
+    items: [
+        new Button({
+            text: "Button 1",
+            layoutData: new FlexItemData({order: 2})
+        }),
+        new Button({text: "Button 2"})
+    ]
 });
 ```
 
 ![SAPUI5 Mobile FlexBox Buttons Ordered](images/SAPUI5_Mobile_FlexBox_Buttons_Ordered_01f7519.png)
 
 > ### Note:  
-> The `FlexBox` control is a wrapper for the flexible box layout properties in CSS. The control renderer sets the CSS properties \(including prefixed versions where necessary\) on the appropriate HTML elements. The actual layouting is done by the browser.
+> The `FlexBox` control is a wrapper for the flexible box layout properties in CSS. The control renderer sets the CSS properties on the appropriate HTML elements. The actual layouting is done by the browser.
 
 The controls that you place in the `FlexBox` control are each wrapped in a `DIV` or `LI` element, depending on the `renderType` property. All elements are placed inside another `DIV` or `UL` container, again depending on the `renderType`. If you use `Bare` as `renderType`, elements will be rendered without a wrapping HTML tag. The outermost element represents the so-called *flex container* while its child elements are *flex items*. The HTML structure resulting from all of the examples above looks as follows:
 
@@ -93,7 +106,7 @@ The controls that you place in the `FlexBox` control are each wrapped in a `DIV`
 ```
 
 > ### Note:  
-> The `layoutData` properties that you can attach to a control are applied to its wrapper element with *sapMFlexItem* class. This is because browsers currently only support these properties on some elements, for example `DIV`.
+> The `layoutData` properties that you can attach to a control are applied to its wrapper element with *sapMFlexItem* class.
 
 The two additional controls `HBox` and `VBox` are `FlexBoxes` that are fixed to horizontally or vertically layout their children.
 

@@ -10,12 +10,12 @@ Freestyle SAPUI5 applications can also use the "`Share`" functionality that allo
 
 ## Configuring the Visibility of the *Send Email* Option
 
-You can control the visibility of the *Send Email* option within the `Share` building block by configuring the `showSendEmail` key under the `shareOptions`. The property values can be either boolean or binding.
+You can control the visibility of the *Send Email* and *Share: Collaboration Manager* options within the `Share` building block by configuring `showSendEmail` and `showCollaborationManager` under the `shareOptions`. By default, both options are set to `false`.
 
 > ### Sample Code:  
 > ```
 > <macros:Share id="shareWithStaticProperties">
->     <macros:shareOptions showSendEmail="false" />
+>       <macros:shareOptions showSendEmail="false" showCollaborationManager="true" />"
 > </macros:Share>
 > ```
 

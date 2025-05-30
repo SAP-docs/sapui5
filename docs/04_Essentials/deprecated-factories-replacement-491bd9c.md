@@ -137,7 +137,7 @@ jQuery.sap.resources({
 <td valign="top">
 
 ```
-// sap/ui/Resources -> sap/base/i18n/ResourceBundle
+// jquery.sap.resources -> sap/base/i18n/ResourceBundle
 
 sap.ui.require(["sap/base/i18n/ResourceBundle"], (Resource) => {
     ResourceBundle.create({

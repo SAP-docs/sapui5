@@ -194,3 +194,18 @@ Start a screen reader, start the application, walk through the application using
 -   Are screen updates like application messages, dialogs \(popups\), and similar dynamic content read correctly and at the right time?
 
 
+
+
+<a name="loio33fae3482358438e93daea5232527093__section_tnc_dcl_w2c"/>
+
+## Language Support
+
+The `lang` attribute for the current language is set at page level for the entire page. If a page contains text that is not in the current language \(for example, French elements on an English page\), this text cannot be labeled with a different language tag. SAPUI5 doesn't offer dedicated support to mark application parts, sections, etc. that are in a different language.
+
+Depending on the use case, application developers can alternatively use techniques like directly defining the HTML with the `sap.ui.core.HTML` control and set the `lang` attribute accordingly. Another alternative could be iFrame isolation.
+
+For more information, see:
+
+-   [Declaring Language in HTML](https://www.w3.org/International/questions/qa-html-language-declarations.en)
+-   [The lang and xml:lang attributes](https://html.spec.whatwg.org/multipage/dom.html#the-lang-and-xml:lang-attributes)
+

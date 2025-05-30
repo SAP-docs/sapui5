@@ -172,8 +172,7 @@ You can hide and display sections based on properties.
 
 ## Adding a Field Group to a Section
 
-> ### Note:  
-> We've removed videos showing step-by-step procedures using SAP Web IDE, which SAP no longer actively supports. You can still access the video using an older version of this document.
+This video shows the step-by-step procedure for adding a field group to a section on the object page: 
 
 For more information, see [Grouping of Fields](grouping-of-fields-cb1748e.md).
 

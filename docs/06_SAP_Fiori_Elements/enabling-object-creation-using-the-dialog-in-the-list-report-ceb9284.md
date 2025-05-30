@@ -70,47 +70,41 @@ The option to create objects using a dialog now appears in the list report appli
 > 
 > ```
 > "sap.ui.generic.app": {
->         "pages": [{
+>     "pages": {
+>         "ListReport|STTA_C_SO_SalesOrder_ND": {
 >             "entitySet": "C_STTA_SalesOrder_WD_20",
 >             "component": {
 >                 "name": "sap.suite.ui.generic.template.ListReport",
 >                 "list": true,
 >                 "settings": {
->                         "quickVariantSelectionX": {
->                                 "showCounts": true,
->                                 "variants": {
->                                         "0":
->                                                {
->                                                     "key": "_tab1",
->                                                     "annotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#Expensive"
->                                                           },
->                                         "1": 
->                                                {
->                                                     "key": "_tab2",
->                                                     "annotationPath": "com.sap.vocabularies.UI.v1.SelectionPresentationVariant#Cheap",
->                                                     "tableSettings": {
->                                                                 "createWithParameterDialog": {
->                                                                         "fields": {
->                                                                                 "bp_id":
->                                                                                         {
->                                                                                             "path": "bp_id"
->                                                                                         },
->                                                                                             "currency_code":
->                                                                                         {
->                                                                                             "path": "currency_code"
->                                                                                         },
->                                                                                         "op_id":
->                                                                                         {
->                                                                                         "path": "op_id"
->                                                                                         }
->                                                                                 }
->                                                                     }
->                                                         }
->                                             }
+>                     "quickVariantSelectionX": {
+>                         "showCounts": true,
+>                         "variants": {
+>                             "0": {
+>                                 "key": "_tab1",
+>                                 "annotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#Expensive"
+>                             },
+>                             "1": {
+>                                 "key": "_tab2",
+>                                 "annotationPath": "com.sap.vocabularies.UI.v1.SelectionPresentationVariant#Cheap",
+>                                 "tableSettings": {
+>                                     "createWithParameterDialog": {
+>                                         "fields": {
+>                                             "bp_id": { "path": "bp_id" },
+>                                             "currency_code": { "path": "currency_code" },
+>                                             "op_id": { "path": "op_id" }
+>                                         }
+>                                     }
 >                                 }
+>                             }
+>                         }
 >                     }
+>                 }
+>             },
+>             ...
 >         }
-> },
+>     }
+> }
 > ```
 
 If this feature is enabled, you cannot navigate to an object page in create mode. However, you can navigate to the object page in display mode to modify objects.
@@ -118,9 +112,9 @@ If this feature is enabled, you cannot navigate to an object page in create mode
 The draft state is not maintained when an object is created using the dialog.
 
 > ### Note:  
-> -   Make sure that the properties are related to the entities.
+> -   Ensure that the properties are related to the entities.
 > 
-> -   Make sure that all the mandatory fields of the entities are part of the create dialog.
+> -   Ensure that all the mandatory fields of the entities are part of the create dialog.
 > 
 > -   Only list report pages support object creation using the dialog. On list report pages, this feature is available in both single view and multiple views scenarios. For more information, see [Defining Multiple Views on a List Report Table - Single Table Mode](defining-multiple-views-on-a-list-report-table-single-table-mode-0d390fe.md) and [Defining Multiple Views on a List Report Table - Multiple Table Mode](defining-multiple-views-on-a-list-report-table-multiple-table-mode-37aeed7.md).
 > 

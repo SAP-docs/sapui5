@@ -180,7 +180,7 @@ Congratulations! You've completed the Data Binding tutorial.
 
 [List Binding \(Aggregation Binding\)](../04_Essentials/list-binding-aggregation-binding-91f0577.md "List binding (or aggregation binding) is used to automatically create child controls according to model data.")
 
-[XML Fragments](../04_Essentials/xml-fragments-2c677b5.md "XML fragments are similar to XML view, but have no <View> tag as root element. Instead, there is an SAPUI5 control.")
+[XML Fragments](../04_Essentials/xml-fragments-2c677b5.md "XML fragments are similar to XML views but have no <View> tag as root element. Instead, there is an SAPUI5 control.")
 
 [Using Factory Functions](../04_Essentials/using-factory-functions-335848a.md "")
 

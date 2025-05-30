@@ -582,7 +582,7 @@ See also [sap.ui.richtexteditor.RichTextEditor](../10_More_About_Controls/sap-ui
 <tr>
 <td valign="top" align="center" colspan="3">
 
-<code><b>script-src 'wasm-eval'</b></code>
+<code><b>script-src 'wasm-unsafe-eval'</b></code>
 
 </td>
 </tr>
@@ -599,7 +599,7 @@ Hyphenation
 </td>
 <td valign="top">
 
-`script-src` requires `wasm-eval`
+`script-src` requires `wasm-unsafe-eval`
 
 When native hyphenation is not available, a third-party library \(Hyphenopoly\) is used. This library uses WASM, which leads to CSP issues due to browser limitations. There is a fallback to `asm.js`, if WASM can't be used.
 

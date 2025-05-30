@@ -83,7 +83,7 @@ Sorting
 
 Formatting
 
-[Behavior-driven Development with Gherkin](../04_Essentials/behavior-driven-development-with-gherkin-45ac9f1.md)
+[Behavior-Driven Development with Gherkin](../04_Essentials/behavior-driven-development-with-gherkin-45ac9f1.md)
 
 [Mock Server](../04_Essentials/mock-server-69d3cbd.md) \(OData V2\)
 
@@ -318,17 +318,17 @@ Component Container
 <tr>
 <td valign="top">
 
-*APF Configuration Modeler*
+*APF Configuration Modeler* 
 
 </td>
 <td valign="top">
 
-[XML View](../04_Essentials/xml-view-91f2928.md)
+[XML View](../04_Essentials/xml-view-91f2928.md) 
 
 </td>
 <td valign="top">
 
-`sap.ushell.ui.shell.ShellHeader`
+`sap.ushell.ui.shell.ShellHeader` 
 
 </td>
 <td valign="top">

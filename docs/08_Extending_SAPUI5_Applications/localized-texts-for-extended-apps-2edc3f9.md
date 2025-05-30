@@ -35,7 +35,7 @@ oModel.enhance({bundleUrl:"./other18n.properties"});
 If an SAPUI5 application is extended or copied, the GUID in the SAPUI5 translation key in the copied properties file must be exchanged with a new one. Each properties file must contain a unique GUID. You can then upload the application with the new translation key in the text properties file to the ABAP back end by means of the team provider or the `/UI5/UI5_REPOSITORY_LOAD` upload report. To localize the custom texts in the copied application you can use transaction `se63`.
 
 > ### Caution:  
-> Although it is generally possible to copy SAPUI5 applications, copying and editing of applications in the SAPUI5 text repository must be avoided and we strongly recommend to only use the extension concepts.
+> Although it is generally possible to copy SAPUI5 applications, copying and editing of applications in the SAPUI5 ABAP text repository must be avoided and we strongly recommend to only use the extension concepts.
 > 
-> If an application is copied, the texts stored in the SAPUI5 text repository of the original application are **not** copied and are, thus, not available in the copied SAPUI5 application. This also applies to applications using the extension concepts of SAPUI5.
+> If an application is copied, the texts stored in the SAPUI5 ABAP text repository of the original application are **not** copied and are, thus, not available in the copied SAPUI5 application. This also applies to applications using the extension concepts of SAPUI5.
 

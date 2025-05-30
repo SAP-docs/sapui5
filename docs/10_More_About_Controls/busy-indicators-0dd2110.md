@@ -22,13 +22,15 @@ You can choose between the following busy indicators, depending on your use case
 You can use the `sap.ui.core.BusyIndicator` busy indicator to block the whole UI. You can set the delay in ms by specifying the number:
 
 ```js
-sap.ui.core.BusyIndicator.show(<number>);
+// BusyIndicator required from module "sap/ui/core/BusyIndicator"
+
+BusyIndicator.show(<number>);
 ```
 
 To release the UI again, the busy indication must be hidden again. This function call hides the busy indication immediately:
 
 ```js
-sap.ui.core.BusyIndicator.hide();
+BusyIndicator.hide();
 ```
 
 [API Reference: `sap.ui.core.BusyIndicator`](https://ui5.sap.com/#/api/sap.ui.core.BusyIndicator)
@@ -54,22 +56,23 @@ If a control is set to busy, the complete control will be covered with a block l
 Here's how to do it:
 
 ```js
-	var oInput = new sap.m.Input({
-		value:'Hello World'
-	});
+	
+// Input required from module "sap/m/Input"
+var oInput = new Input({
+    value: 'Hello World'
+});
 ...
-	oInput.setBusy(true);
-
+oInput.setBusy(true);
 ```
 
 The following code shows how you define the default state of a control as `busy` so that it will be displayed as busy when it has been rendered:
 
 ```js
-	var oInput = new sap.m.Input({
-		value:'Hello World',
-		busy: true
-
-	});
+	
+var oInput = new Input({
+    value: 'Hello World',
+    busy: true
+});   
 
 ```
 

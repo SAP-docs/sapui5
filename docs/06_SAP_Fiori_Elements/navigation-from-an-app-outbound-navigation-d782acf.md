@@ -273,6 +273,9 @@ Add the following property: `<PropertyValue Property="RequiresContext" Bool="tru
 
 If `RequiresContext` is `true`, then the button is disabled until a selection is made. If it's `false`, then the button is always enabled. The default value for `RequiresContext` is `false`.
 
+> ### Note:  
+> `RequiresContext` only determines whether the button is enabled based on the end user's selected context. Regardless of its value, any available context is always passed along, following the standard navigation process.
+
 > ### Sample Code:  
 > XML Annotation
 > 
@@ -312,10 +315,6 @@ If `RequiresContext` is `true`, then the button is disabled until a selection is
 > }
 > ```
 
--   **Enable or Disable Buttons Triggering External Navigation**
-
-    In a `DataFieldForIntentBasedNavigation`, you can specify `RequiresContext`. Setting it to `true` means that a line needs to be selected for the button to be enabled. Otherwise, it's disabled.
-
 -   **Display or Hide Buttons Triggering External Navigation**
 
     You can define that context-independent buttons \(`RequiresContext` is set to `false`\) triggering external navigation are displayed only if the navigation target is supported on the current device. In addition, if the `SemanticObject` or the action is invalid and if the user doesn't have the correct authorizations, the button isn't displayed. As a prerequisite, you must have maintained the navigation target in the SAP Fiori launchpad as shown in the following images:
@@ -324,16 +323,14 @@ If `RequiresContext` is `true`, then the button is disabled until a selection is
       
     **SAP Fiori launchpad: Maintain the Supported Devices for the Combination of Semantic Object and Action**
 
-    ![](images/SupportedDevice_41cc89e.png "SAP Fiori launchpad: Maintain the
-    								Supported Devices for the Combination of Semantic Object and
+    ![](images/SupportedDevice_41cc89e.png "SAP Fiori launchpad: Maintain the Supported Devices for the Combination of Semantic Object and
     								Action")
 
       
       
     **SAP Fiori launchpad: Maintain the Mandatory Parameters for Semantic Object and Action**
 
-    ![](images/mandatoryparameters_45f06a4.png "SAP Fiori launchpad: Maintain the
-    								Mandatory Parameters for Semantic Object and Action")
+    ![](images/mandatoryparameters_45f06a4.png "SAP Fiori launchpad: Maintain the Mandatory Parameters for Semantic Object and Action")
 
     > ### Note:  
     > -   As already shown, you maintain mandatory parameters for navigation in SAP Fiori launchpad, such as a sales order ID. If you have specified `RequiresContext: False` for the combination of semantic object and action, and if for this combination you maintain a mandatory parameter in SAP Fiori launchpad, these settings contradict each other and the button isn't displayed.
@@ -412,6 +409,9 @@ To achieve a different property in the navigation context, use the `SemanticObje
 >     ]
 > });
 > ```
+
+> ### Note:  
+> Navigation properties cannot be used within the annotation as mapping properties.
 
 
 
@@ -797,7 +797,19 @@ To do this when navigating using the `DataFieldForIntentBasedNavigation` button,
 > ### Sample Code:  
 > ABAP CDS Annotation
 > 
-> No ABAP CDS annotation sample is available. Please use the local XML annotation.
+> ```
+> {
+>       type: #FOR_INTENT_BASED_NAVIGATION,
+>       semanticObject: 'nameOfSemanticObject',
+>       semanticObjectAction: 'nameOfSemanticObjectAction',
+>       semanticObjectBinding: [ 
+>        {
+>         localElement: 'nameOfSourceProperty',
+>         element: 'nameOfTargetProperty',
+>       } 
+>    ]
+> }
+> ```
 
 > ### Sample Code:  
 > CAP CDS Annotation

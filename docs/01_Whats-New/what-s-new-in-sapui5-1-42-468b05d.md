@@ -1112,7 +1112,7 @@ Feature
 
 **Behavior-Driven Development with Gherkin**
 
-SAPUI5 now supports behavior-driven development \(BDD\) with Gherkin. Gherkin allows you to write feature files that get translated into executable regression tests. So you can keep your documentation and specification in sync with the actual implementation in your application. It integrates seamlessly with OPA5 and you can completely reuse your OPA and page objects. You only need to translate an OPA journey to a feature file. For more information, see [Behavior-driven Development with Gherkin](../04_Essentials/behavior-driven-development-with-gherkin-45ac9f1.md), the [API Reference](https://ui5.sap.com/#/api/sap.ui.test.gherkin), and the [Samples](https://ui5.sap.com/#/entity/sap.ui.test.gherkin). 
+SAPUI5 now supports behavior-driven development \(BDD\) with Gherkin. Gherkin allows you to write feature files that get translated into executable regression tests. So you can keep your documentation and specification in sync with the actual implementation in your application. It integrates seamlessly with OPA5 and you can completely reuse your OPA and page objects. You only need to translate an OPA journey to a feature file. For more information, see [Behavior-Driven Development with Gherkin](../04_Essentials/behavior-driven-development-with-gherkin-45ac9f1.md), the [API Reference](https://ui5.sap.com/#/api/sap.ui.test.gherkin), and the [Samples](https://ui5.sap.com/#/entity/sap.ui.test.gherkin). 
 
 <sub>Changed•Control•Info Only•1.42</sub>
 
@@ -1601,6 +1601,10 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.134](what-s-new-in-sapui5-1-134-c512d71.md "With this release SAPUI5 is upgraded from version 1.133 to 1.134.")
+
+[What's New in SAPUI5 1.133](what-s-new-in-sapui5-1-133-86d7605.md "With this release SAPUI5 is upgraded from version 1.132 to 1.133.")
 
 [What's New in SAPUI5 1.132](what-s-new-in-sapui5-1-132-bd2e61f.md "With this release SAPUI5 is upgraded from version 1.131 to 1.132.")
 

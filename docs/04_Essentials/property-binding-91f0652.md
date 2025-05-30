@@ -132,10 +132,7 @@ sap.ui.define([
 
     return Controller.extend("sap.ui.sample.App", {
         roundToMillion(fValue) {
-            if (fValue) {
-                return `> ${Math.floor(fValue/1000000)} M`;
-            }
-            return "0";
+            return `> ${fValue ? Math.floor(fValue / 1000000) : 0} M`;
         }
     });
 }); 
@@ -152,32 +149,24 @@ The `this` context of a formatter function is generally set to the control \(or 
 </mvc:View>
 ```
 
-If you use **JavaScript**, you can pass the formatter function as a third parameter to the `bindProperty` method, or you can add the binding info with the `formatter` key. The `formatter` has a single parameter `value`, which is the value that is to be formatted, and is executed as a member of the control, meaning it can access additional control properties or model data.
+If you use **JavaScript**, you can add a formatter function to the binding info with the `formatter` key. The `formatter` has a single parameter `value`, which is the value that is to be formatted. In the sample below, it is executed as a member of the control, meaning it can access additional control properties or model data.
+
+> ### Note:  
+> The `this` context may not be the control. For more information, see *`this` Context for Formatter Functions* in [Formatters](formatting-parsing-and-validating-data-07e4b92.md#loio07e4b920f5734fd78fdaa236f26236d8__section_rgn_hc5_xcb).
 
 ```js
-//"Input" required from module sap/m/Input
-oTextField.bindProperty("value", "/company/title", (sValue) => {
-	return sValue && sValue.toUpperCase();
+oTextField.bindProperty("value", {
+    path: "/company/title",
+    formatter: (sValue) => sValue?.toUpperCase()
 });
-
-oControl = new Input({
-    value: {
-        path: "/company/revenue",
-        formatter(fValue) {
-            if (fValue) {
-                return `> ${Math.floor(fValue/1000000)} M`;
-            }
-            return "0";
-        }
-    }
-})
 ```
 
 Because it can contain any JavaScript, the formatter function can be used for formatting a value and also for performing type conversions or calculating results, for example, to show a special traffic light image depending on a Boolean value:
 
 ```js
-oImage.bindProperty("src", "/company/trusted", (bValue) => {
-    return bValue ? "green.png" : "red.png";
+oImage.bindProperty("src", {
+    path: "/company/trusted",
+    formatter: (bValue) => bValue ? "green.png" : "red.png"
 }); 
 ```
 
@@ -224,7 +213,7 @@ You can also provide parameter values for some of the simple types in your XML v
 </mvc:View>
 ```
 
-Using JavaScript, you can define a type to be used for a property binding by passing it as a third parameter in `bindProperty` or by adding it to the binding information by using the `type` key. The type can be set using either the class object of the type or an instance of the type. When using the class object, you can also provide `formatOptions` and `constraints` directly in the binding information.
+Using JavaScript, you can define a type to be used for a property binding by adding it to the binding information by using the `type` key. The type can be set using either the class object of the type or an instance of the type. When using the class object, you can also provide `formatOptions` and `constraints` directly in the binding information.
 
 **Example:** Using the Type Class
 
@@ -325,7 +314,7 @@ By default, all bindings of a model instance have the default binding mode of th
 const oModel = new JSONModel();
 // default binding mode is two-way
 oModel.setData(myData);
-const oInputFirstName = new Input ();
+const oInputFirstName = new Input();
 oInputFirstName.setModel(oModel);
 
 // bind value property one way only

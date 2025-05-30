@@ -5,7 +5,16 @@
 End users of SAP Fiori elements-based applications can upload, download, and delete files.
 
 > ### Note:  
-> Application developers must define `@Core.AcceptableMediaTypes`. This avoids security issues by enabling SAP Fiori elements to check for allowed file types. The back-end service framework must ensure a virus scan and other security measures, such as maximum file size limitations and MIME-type restrictions, are in place. For more security-related information, see [Security Configuration](security-configuration-ba0484b.md).
+> To prevent security issues and protect data from being created or processed with malicious content, you must ensure the following security measures are in place:
+> 
+> -   Define `@Core.AcceptableMediaTypes` to specify allowed file types.
+> 
+> -   The back-end service framework must ensure a virus scan and other security measures, such as maximum file size limitations and MIME-type restrictions, are in place.
+> 
+> -   You must also implement file validation and data sanitization in the back end.
+> 
+> 
+> For more security-related information, see [Security Configuration](security-configuration-ba0484b.md).
 
 
 
@@ -283,4 +292,120 @@ To display the image or person avatar as a circle, specify the `Common.IsNatural
 – Edit Mode –
 
 In Edit mode, an upload button and a delete button are available so that users can upload a different file or delete the file. If the back-end response provides a new value for `odata.mediaContentType` after uploading a new file, the icon and link change their representation according to the new value.
+
+
+
+### File Upload as an Action Parameter
+
+You can configure bound or unbound actions that require uploading files as action parameters. This setup lets users upload files in the action parameter dialog.
+
+![](images/File_Upload_as_Action_Parameter_35b7e6b.png)
+
+To enable file upload as an action parameter, use a `ComplexType` as a parameter of an action. The `ComplexType` parameter must consist of the following:
+
+-   A property of type `Edm.Stream`
+-   A property for the MIME type
+-   A property for the file name
+
+To maintain the relationship between the properties for the file content, MIME type, and file name, use the annotations `Core.ContentDisposition`, `Core.MediaType`, and `Core.IsMediaType`.
+
+To restrict the file size and define the allowed media types, use the `MaxLength` and `Core.AcceptableMediaTypes` annotations as described in this topic.
+
+> ### Sample Code:  
+> XML Annotation
+> 
+> ```xml
+> <Action Name="ActionParameterTypeName" IsBound="true">
+>   <Parameter Name="_it" Type="service.namespace.EntityTypeName" Nullable="false"/>
+>   <Parameter Name="_StreamProperties" Type="service.namespace.FileStreamTypeName" Nullable="false"/>
+> </Action>
+> 
+> <ComplexType Name="FileStreamTypeName">
+>   <Property Name="StreamProperty" Type="Edm.Stream" Nullable="false" MaxLength="128" />
+>   <Property Name="MimeType" Type="Edm.String" Nullable="false" />
+>   <Property Name="FileName" Type="Edm.String" Nullable="false" />
+> </ComplexType>
+> 
+> <Annotations Target="service.namespace.FileStreamTypeName/StreamProperty">
+>   <Annotation Term="Common.Label" String="Label for File Upload" />
+>   <Annotation Term="Core.ContentDisposition">
+>     <Record>
+>       <PropertyValue Property="Filename" Path="FileName" />
+>     </Record>
+>   </Annotation>
+>   <Annotation Term="Core.MediaType" Path="MimeType" />
+>   <Annotation Term="Core.AcceptableMediaTypes">
+>     <Collection>
+>       <String>image/png</String>
+>     </Collection>
+>   </Annotation>
+> </Annotations>
+> <Annotations Target="service.namespace.FileStreamTypeName/MimeType">
+>   <Annotation Term="Core.IsMediaType" />
+> </Annotations>
+> 
+> ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> ```
+> // ==== FILE_STREAM_TYPE_NAME ==== //
+> 
+> // == CDS View for FILE_STREAM_TYPE_NAME
+> define root abstract entity FILE_STREAM_TYPE_NAME
+> {
+>   @Semantics.largeObject.mimeType: 'mimetype'
+>   @Semantics.largeObject.fileName: 'filename'
+>   @Semantics.largeObject.contentDispositionPreference: #INLINE
+>   streamproperty : abap.rawstring(0);
+>   
+>   @UI.hidden: true
+>   mimetype : abap.char(128);
+>   
+>   @UI.hidden: true
+>   filename : abap.char(128);
+> }
+> 
+> // == Behavior Definitions for FILE_STREAM_TYPE_NAME
+> abstract;
+> strict;
+> with hierarchy;
+> define behavior for FILE_STREAM_TYPE_NAME {}
+> 
+> 
+> // ==== ACTION_PARAMETER_TYPE_NAME ==== //
+> 
+> // == CDS View for ACTION_PARAMETER_TYPE_NAME
+> define root abstract entity ACTION_PARAMETER_TYPE_NAME
+> {
+>   _StreamProperties : association [1] to FILE_STREAM_TYPE_NAME on 1 = 1;
+> }
+> 
+> // == Behavior Definitions for ACTION_PARAMETER_TYPE_NAME
+> abstract;
+> strict;
+> with hierarchy;
+> define behavior for ACTION_PARAMETER_TYPE_NAME
+> {
+>   association _StreamProperties with hierarchy;
+> }
+> ```
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> action ActionParameterTypeName(
+>   _StreamProperties : service.namespace.FileStreamTypeName not null
+> ) returns EntityTypeName;
+> 
+> type FileStreamTypeName {
+>   StreamProperty       : LargeBinary @Core.MediaType: MimeType @Core.ContentDisposition.Filename: FileName;
+>   MimeType             : String @Core.IsMediaType;
+>   FileName             : String;
+> };
+> ```
+
+For more information about action parameters, see [Actions](actions-cbf16c5.md).
 

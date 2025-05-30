@@ -12,9 +12,9 @@ We know that the OData V2 provider of this service implements a URL parameter th
 
   
   
-**Only the next three meet-ups are shown**
+**After clicking "Get First Three Meet-Ups", only the first three meetups are shown**
 
-![](images/Tutorial_Mock_Server_Step_3_e65ccb2.png "Only the next three meet-ups are shown")
+![The graphic has an explanatory text.](images/Tutorial_Mock_Server_Step_3_e65ccb2.png "After clicking "Get First Three Meet-Ups", only the first three meetups are shown")
 
 
 
@@ -28,47 +28,43 @@ You can view and download all files in the Demo Kit at [Mock Server - Step 3](ht
 
 ```js
 sap.ui.define([
-	"sap/ui/core/util/MockServer",
-	"sap/base/Log"
-], function(MockServer, Log) {
-	"use strict";
+    "sap/ui/core/util/MockServer",
+    "sap/base/Log"
+], (MockServer, Log) => {
+    "use strict";
 
-	return {
-		/**
-		 * Initializes the mock server.
-		 * You can configure the delay with the URL parameter "serverDelay".
-		 * The local mock data in this folder is returned instead of the real data for testing.
-		 * @public
-		 */
-		init: function() {
-			// create
-			var oMockServer = new MockServer({
-				rootUri: "/"
-			});
+    return {
+        /**
+         * Initializes the mock server.
+         * You can configure the delay with the URL parameter "serverDelay".
+         * The local mock data in this folder is returned instead of the real data for testing.
+         * @public
+         */
+        init() {
+            // create
+            const oMockServer = new MockServer({rootUri: "/"});
 
-			oMockServer.simulate("../localService/metadata.xml", {
-				sMockdataBaseUrl: "../localService/mockdata",
-				bGenerateMissingMockData: true
-			});
+            oMockServer.simulate("../localService/metadata.xml", {
+                sMockdataBaseUrl: "../localService/mockdata",
+                bGenerateMissingMockData: true
+            });
 
-			// handling custom URL parameter step
-			var fnCustom = function(oEvent) {
-				var oXhr = oEvent.getParameter("oXhr");
-				if (oXhr && oXhr.url.indexOf("first") > -1) {
-					oEvent.getParameter("oFilteredData").results.splice(3, 100);
-				}
-			};
-			oMockServer.attachAfter("GET", fnCustom, "Meetups");
+            // handling custom URL parameter step
+            const fnCustom = (oEvent) => {
+                const oXhr = oEvent.getParameter("oXhr");
+                if (oXhr?.url.includes("first")) {
+                    oEvent.getParameter("oFilteredData").results.splice(3, 100);
+                }
+            };
+            oMockServer.attachAfter("GET", fnCustom, "Meetups");
 
 
-			// start
-			oMockServer.start();
+            // start
+            oMockServer.start();
 
-			Log.info("Running the app with mock data");
-		}
-
-	};
-
+            Log.info("Running the app with mock data");
+        }
+    };
 });
 
 ```
@@ -84,4 +80,6 @@ We now enable the functionality when running in mock mode. As its functionality 
 First, we create a callback function that we later attach to every `GET` request made to the `Meetups` entity set of the service. Note that we choose the `attachAfter` event that is fired after the built-in request processing of the mock server. The event contains the actual `XHR` object and the mock data to be returned to the application. Inside the callback function we remove all results starting from third entry: The `oFilteredData` parameter comes with the event `attachAfter` and contains the mock data entries that are about to be returned in the response.
 
 Second, we attach the callback to every `GET` request to the specific `Meetups` entity set.
+
+With these changes in place, the mock server will now properly handle the custom "first" parameter. When the button in the application is pressed, only 3 rows will be displayed, mirroring the expected behavior of an actual server.
 

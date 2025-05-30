@@ -11,7 +11,7 @@
 
 [Enabling the Flexible Column Layout](enabling-the-flexible-column-layout-e762257.md "The flexible column layout is a feature that can show two or three columns on a single page.")
 
-[Adapting the Application Header](adapting-the-application-header-ac70343.md "If required, you can change the application header that is generated from the SAP Fiori launchpad.")
+[Configuring the Application Title](configuring-the-application-title-ac70343.md "If required, you can configure the application title that is generated from the SAP Fiori launchpad.")
 
 [Managing Variants](managing-variants-8ce658e.md "Allows you manage variants with different structures in the filter and content areas.")
 

@@ -11,7 +11,7 @@ The XML view type is defined in an XML file, with a file name ending in `.view.x
 > 
 > ```xml
 > 
-> <mvc:View controllerName="sap.hcm.Address" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc">
+> <mvc:View controllerName="module:sap/hcm/Address" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc">
 >    <Panel>
 >       <Image src="http://www.sap.com/global/ui/images/global/sap-logo.png"/>
 >       <Button text="Press Me!"/>

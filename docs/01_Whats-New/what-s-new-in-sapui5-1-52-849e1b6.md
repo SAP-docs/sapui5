@@ -1474,8 +1474,6 @@ With the new dynamic header the following features are available:
 -   `sap.m.OverflowToolbar` is used internally to implement the `actions` aggregation, enabling its features, such as the priority and grouping of the actions.
 
 
-For more information, see [Object Page Headers](../10_More_About_Controls/object-page-headers-d2ef009.md), the [API Reference](https://ui5.sap.com/#/api/sap.uxap.ObjectPageDynamicHeaderTitle), and the [sample](https://ui5.sap.com/#/sample/sap.uxap.sample.ObjectPageWithDynamicHeader/preview).
-
 <sub>Changed•Control•Info Only•1.52</sub>
 
 </td>
@@ -1939,6 +1937,10 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.134](what-s-new-in-sapui5-1-134-c512d71.md "With this release SAPUI5 is upgraded from version 1.133 to 1.134.")
+
+[What's New in SAPUI5 1.133](what-s-new-in-sapui5-1-133-86d7605.md "With this release SAPUI5 is upgraded from version 1.132 to 1.133.")
 
 [What's New in SAPUI5 1.132](what-s-new-in-sapui5-1-132-bd2e61f.md "With this release SAPUI5 is upgraded from version 1.131 to 1.132.")
 

@@ -1,6 +1,6 @@
 <!-- loio45ac9f19d9414b30b121c6e00f57433c -->
 
-# Behavior-driven Development with Gherkin
+# Behavior-Driven Development with Gherkin
 
 A software development process driven by app behavior.
 
@@ -68,7 +68,7 @@ The Gherkin library contains the following parts:
 **Related Information**  
 
 
-[cucumber Home Page](https://cucumber.io/)
+[Cucumber Home Page](https://cucumber.io/)
 
 [Gherkin documentation on GitHub](https://github.com/cucumber/cucumber/wiki/Gherkin)
 

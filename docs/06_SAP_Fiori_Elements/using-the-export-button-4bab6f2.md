@@ -229,5 +229,5 @@ You can configure the limit for the count of records that can be obtained within
 > }
 > ```
 
-The Table building block also supports the `exportRequestSize` parameter. For more information about the Table API, see [API Reference](https://ui5.sap.com/#/api/sap.fe.macros.Table%23controlProperties).
+The `Table` building block also supports the `exportRequestSize` parameter. For more information about the Table API, see [API Reference](https://ui5.sap.com/#/api/sap.fe.macros.Table%23controlProperties).
 

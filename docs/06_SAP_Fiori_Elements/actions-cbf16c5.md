@@ -746,24 +746,39 @@ You can calculate default values for action parameters through a back-end functi
 To achieve this, application developers must annotate the action with `Common.DefaultValuesFunction`.
 
 > ### Sample Code:  
-> `DefaultValuesFunction` for function import actions
+> `DefaultValuesFunction` for Function Import Actions
 > 
 > ```
-> <FunctionImport Name="GetDefaultsForSetText" ReturnType="cds_zrc_dv_defaultvalues.ZRC_DV_A_SetText" m:HttpMethod="GET" sap:action-for="cds_zrc_dv_defaultvalues.RootType">
-> <Parameter Name="UUID" Type="Edm.Guid" Mode="In"/>
+> <FunctionImport 
+>     Name="GetDefaultsForSetText" 
+>     ReturnType="cds_zrc_dv_defaultvalues.ZRC_DV_A_SetText" 
+>     m:HttpMethod="GET" 
+>     sap:action-for="cds_zrc_dv_defaultvalues.RootType">
+>     <Parameter 
+>         Name="UUID" 
+>         Type="Edm.Guid" 
+>         Mode="In"/>
 > </FunctionImport>
->  
-> <Annotations xmlns=http://docs.oasis-open.org/odata/ns/edm Target="cds_zrc_dv_defaultvalues.cds_zrc_dv_defaultvalues_Entities/SetText">
-> <Annotation Term="com.sap.vocabularies.Common.v1.SideEffects" Qualifier="Action">
-> <Record>
-> <PropertyValue Property="TargetProperties">
-> <Collection>
-> <PropertyPath>Text</PropertyPath>
-> </Collection>
-> </PropertyValue>
-> </Record>
-> </Annotation>
-> <Annotation Term="com.sap.vocabularies.Common.v1.DefaultValuesFunction" String="GetDefaultsForSetText"/>
+> 
+> <Annotations 
+>     xmlns="http://docs.oasis-open.org/odata/ns/edm" 
+>     Target="cds_zrc_dv_defaultvalues.cds_zrc_dv_defaultvalues_Entities/SetText">
+>     
+>     <Annotation 
+>         Term="com.sap.vocabularies.Common.v1.SideEffects" 
+>         Qualifier="Action">
+>         <Record>
+>             <PropertyValue Property="TargetProperties">
+>                 <Collection>
+>                     <PropertyPath>Text</PropertyPath>
+>                 </Collection>
+>             </PropertyValue>
+>         </Record>
+>     </Annotation>
+>     
+>     <Annotation 
+>         Term="com.sap.vocabularies.Common.v1.DefaultValuesFunction" 
+>         String="GetDefaultsForSetText"/>
 > </Annotations>
 > 
 > ```
@@ -804,8 +819,6 @@ Context-dependent function imports provide an `sap:action-for` annotation defini
 **Action Parameters for Bound Actions \(Context-Dependent\)**
 
 Bound actions can have parameters that are defined by the backend. If the name of the parameter matches with any property of the bound entity, then the value of that property is used from the selected row. In case of multi select, the action parameters are not filled with the selected context values.
-
-> ### Note:  
 
 **Unbound Actions \(Context-Independent\)**
 
@@ -983,11 +996,13 @@ Actions can either be classified as bound or unbound. Bound actions are those th
 > 
 > ```
 > entity entityName as projection on db.baseEntity {
-> *
-> } actions {
-> @cds.odata.bindingparameter.name : '_it'
-> action REUNION() returns Artists;
-> };
+>    actions {
+>       action REUNION(
+>          _it: $self
+>       ) returns Artists;
+>    }
+> }
+> 
 > action UnboundAction() returns Artists;
 > 
 > ```
@@ -1086,7 +1101,7 @@ The visibility of the action is controlled using the `UI.Hidden` annotation and 
 You can use the `UI.CreateHidden`, `UI.DeleteHidden`, and `UI.UpdateHidden` annotations to point to a singleton property path. The following sample code shows how to do this:
 
 > ### Sample Code:  
-> Hide the Create, Delete, and Update \(Edit\) functionality based on singleton properties
+> Hide the Create, Delete, and Update \(Edit\) Functionality Based on Singleton Properties
 > 
 > ```
 > <EntityContainer Name="EntityContainer">
@@ -1145,17 +1160,14 @@ You define a static action using the `"Collection(...)"` in the `Type` property 
 > Action definitions aren't part of ABAP CDS annotations. They come from the action definition in the ABAP back end.
 
 > ### Sample Code:  
-> CAP Annotation
+> CAP CDS Annotation
 > 
 > ```
-> entity entityName as projection on db.baseEntity {
-> *
-> } actions {
-> @cds.odata.bindingparameter.collection
-> @cds.odata.bindingparameter.name : '_it'
-> action createActiveTravel () returns Travel;
-> };
-> 
+> entity Travel as projection on db.Travel actions {
+>   action createActiveTravel (
+>     _it: many $self
+>   ) returns Travel;
+> }
 > ```
 
 You can see how to refer to the static action defined like this in the following sample code:
@@ -1191,9 +1203,8 @@ You can see how to refer to the static action defined like this in the following
 > {
 >         $Type  : 'UI.DataFieldForAction',
 >         Label  : 'Static Action',
->         Action : 'com.c_salesordermanage_sd.myCreateAction(com.c_salesordermanage_sd.SalesOrderManage)'
+>         Action : 'TravelService.createActiveTravel(TravelService.Travel)'
 > }
-> 
 > ```
 
 
@@ -1230,16 +1241,15 @@ Annotations showing single values:
 > CAP CDS Annotation
 > 
 > ```
-> entity entityName as projection on db.baseEntity {
-> *
-> } actions {
-> @cds.odata.bindingparameter.name : '_it'
-> action CreateWithSalesOrderType(
->      SalesOrderType : sd.param.SalesOrderType not null, 
->      SalesOrganization : sd.param.SalesOrganization not null, 
->      OrganizationDivision : sd.param.OrganizationDivision not null, 
->      DistributionChannel : sd.param.DistributionChannel not null
-> ) returns SalesOrderManage;
+> entity SalesOrderManage as projection on db.baseEntity actions {
+>   action CreateWithSalesOrderType(
+>     _it: $self,
+>     SalesOrderType        : sd.param.SalesOrderType        not null,
+>     SalesOrganization     : sd.param.SalesOrganization     not null,
+>     OrganizationDivision  : sd.param.OrganizationDivision  not null,
+>     DistributionChannel   : sd.param.DistributionChannel   not null
+>   ) returns SalesOrderManage;
+> }
 > 
 > ```
 
@@ -1266,19 +1276,15 @@ Annotations showing a collection:
 > CAP CDS Annotation
 > 
 > ```
-> type SalesOrderId : String(10)@(
->      title : 'Sales Order',
->      Label : 'Sales Order ID'
-> );
-> type SalesOrderItemId : many Integer@(
->      title : 'Sales Order Item',
->      Label : 'Sales Order Item'
-> );
+> 
+> type SalesOrderId       : String(10)      @title : 'Sales Order';
+> type SalesOrderItemId   : many Integer    @title : 'Sales Order Item';
 > 
 > action CreateFromSalesOrder(
->      SalesOrderId : sd.param.SalesOrderId not null, 
->      SalesOrderItemId : sd.param.SalesOrderItemId
+>     SalesOrderId       : sd.param.SalesOrderId       not null,
+>     SalesOrderItemId   : sd.param.SalesOrderItemId
 > ) returns SalesOrderManage;
+> 
 > ```
 
 > ### Note:  
@@ -1598,32 +1604,32 @@ The following default values are available:
 
 -   Default Values Defined at the Front End
 
-    The values of parameters in the action dialog can be prefilled by an extension function. To do so, app developers define an extension function by setting the `defaultValuesFunction` property to the `fullName` of the action \(`<path>.<functionName>`\). This extension function needs to return an object containing the parameter names and values to be set as default values. The parameters returned by this function overwrite default values coming from annotations \(for example `UI.ParameterDefaultValue` or `Common.DefaultValuesFunction`\). You can use the `defaultValuesFunction` setting in the manifest for table, header, and footer actions:
+    The values of parameters in the action dialog can be prefilled by an extension function. To do so, app developers define an extension function by setting the `defaultValuesFunction` property to the `fullName` of the action \(`<path>.<functionName>`\). This extension function needs to return an object containing the parameter names and values to be set as default values. The parameters returned by this function overwrite default values coming from annotations \(for example `UI.ParameterDefaultValue` or `Common.DefaultValuesFunction`\). You can use the `defaultValuesFunction` setting in the `manifest.json` file for table, header, and footer actions:
 
     > ### Sample Code:  
-    > Manifest Settings
+    > `manifest.json` 
     > 
     > ```
     > "sap.ui5": {
-    >         "routing": {
-    >             "targets": {
-    >                 "SalesOrderManageList": {
-    >                     "options": {
-    >                         "settings": {
-    >                             "controlConfiguration": {
-    >                                 "@com.sap.vocabularies.UI.v1.LineItem": {
-    >                                     "actions": {
-    >                                         "DataFieldForAction::com.c_salesordermanage_sd.CreateWithSalesOrderType": {
-    >                                             "defaultValuesFunction": "SalesOrder.ext.CustomActions.getDefaultValues"
-    >                                         }
+    >     "routing": {
+    >         "targets": {
+    >             "SalesOrderManageList": {
+    >                 "options": {
+    >                     "settings": {
+    >                         "controlConfiguration": {
+    >                             "@com.sap.vocabularies.UI.v1.LineItem": {
+    >                                 "actions": {
+    >                                     "DataFieldForAction::com.c_salesordermanage_sd.CreateWithSalesOrderType": {
+    >                                         "defaultValuesFunction": "SalesOrder.ext.CustomActions.getDefaultValues"
     >                                     }
     >                                 }
     >                             }
     >                         }
     >                     }
     >                 }
-    > }
-    > }
+    >             }
+    >         }
+    >     }
     > }
     > 
     > ```
@@ -1668,6 +1674,12 @@ The following default values are available:
     2.  If there's no `ParameterDefaultValue` annotation for parameter X, the FLP user default settings are checked. If there's a corresponding value for parameter X there, then this value is used as a default and displayed in the action parameter dialog.
 
 
+
+
+
+### File Upload as an Action Parameter
+
+You can configure bound or unbound actions that require uploading files as action parameters. This setup lets users upload files in the action parameter dialog. For more information, see the [File Upload as an Action Parameter](enabling-stream-support-b236d32.md#loiob236d32d48b74304887b3dd5163548c1__subsection_upload_attribute) subsection in [Enabling Stream Support](enabling-stream-support-b236d32.md).
 
 
 
@@ -1996,9 +2008,11 @@ Make the following settings in the manifest to group actions under a menu button
 
 When you define a default action for a menu button, clicking the button triggers the action directly. This is possible in list reports, object page headers, and forms.
 
-To define a default action, make the following settings in the `manifest.json`:
+To define a default action, make the following settings in the `manifest.json` file:
 
 > ### Sample Code:  
+> `manifest.json`
+> 
 > ```
 > "MenuActionsCreateFromTemplate": {
 >      "text": "Usage Example of a defaultAction",

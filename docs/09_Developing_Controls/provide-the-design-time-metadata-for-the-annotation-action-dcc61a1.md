@@ -48,7 +48,7 @@ Description
 </th>
 </tr>
 <tr>
-<td valign="top" rowspan="6">
+<td valign="top" rowspan="12">
 
 `actions: <object>` \(mandatory\)
 
@@ -75,7 +75,7 @@ Describes the actions that can be applied to the element.
 </td>
 </tr>
 <tr>
-<td valign="top" rowspan="5">
+<td valign="top" rowspan="11">
 
 `"annotation": <object> | <function>`
 
@@ -97,7 +97,7 @@ Provides or computes the design-time metadata specific to the *annotation* actio
 </td>
 </tr>
 <tr>
-<td valign="top" rowspan="4">
+<td valign="top" rowspan="10">
 
 `<key> | <object>` 
 
@@ -116,7 +116,7 @@ Key to differentiate multiple annotation actions. This key is currently not eval
 <tr>
 <td valign="top">
 
-`changeType: <string>`\(mandatory\)
+`changeType: <string>` \(mandatory\)
 
 </td>
 <td valign="top">
@@ -128,7 +128,7 @@ Provides the value of `changeType`from the previous step.
 <tr>
 <td valign="top">
 
-`title: <funtion> | <string>`\(mandatory\)
+`title: <function> | <string>` \(mandatory\)
 
 </td>
 <td valign="top">
@@ -140,7 +140,7 @@ The title that should be shown in the context menu entry.
 <tr>
 <td valign="top">
 
-`type: string`\(mandatory\)
+`type: <string>` \(mandatory\)
 
 </td>
 <td valign="top">
@@ -151,12 +151,84 @@ The type of annotation. The UI is adjusted according to the type. Supported type
 
 </td>
 </tr>
+<tr>
+<td valign="top">
+
+`description: <string>` \(optional\)
+
+</td>
+<td valign="top">
+
+Text that is shown in the dialog above the search field.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`icon: <string>` \(optional\)
+
+</td>
+<td valign="top">
+
+Icon for the context menu entry. The default value for the StringType is "sap-icon://edit", for the rest it's "sap-icon://request"
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`annotation: <string>` \(optional\)
+
+</td>
+<td valign="top">
+
+Name of the annotation. This value will be passed to the delegate as property.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`singleRename: <boolean>` \(optional\)
+
+</td>
+<td valign="top">
+
+Indicates the scenario of changing a label annotation for a specific control. This will bring up a reduced dialog, where only this single annotation can be changed.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`controlBasedRenameChangeType: <string>` \(optional\)
+
+</td>
+<td valign="top">
+
+Must be provided together with the "singleRename" property. All changes of that change type for the given control will be deleted, so that the new annotation based label change will not be overwritten by those control-specific rename changes after a reload.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`delegate: <object>` \(mandatory\)
+
+</td>
+<td valign="top">
+
+The delegate is responsible to fetch the available properties, the service url, the preselected properties, and the possible values. For this the function getAnnotationsChangeInfo needs to be implemented. The return value is defined here: For more information, see the [API Reference: `Annotationchangeinfo`](https://ui5.sap.com/#/api/sap.ui.rta.plugin.annotations.AnnotationChangeInfo). 
+
+</td>
+</tr>
 </table>
 
 Here is an example:
 
 > ### Sample Code:  
-> GroupElement.designtime.js
+> `GroupElement.designer.js`
 > 
 > ```
 > sap.ui.define(["sap/ui/rta/plugin/annotations/AnnotationTypes"], function(AnnotationTypes) {
@@ -168,14 +240,18 @@ Here is an example:
 >                 serviceUrl: "testServiceUrl",
 >                 properties: [
 >                     {
->                         propertyName: "My Test Label",
+>                         propertyName: "MyTechnicalName",
 >                         annotationPath: "path/to/test/label",
->                         currentValue: oTextArrangementTypes.TextOnly
+>                         currentValue: TextOnly,
+>                         label: "My Test Label",
+>                         tooltip: "MyTestTooltip"
 >                     },
 >                     {
->                         propertyName: "My Other Test Label",
+>                         propertyName: "MyOtherTechnicalName",
 >                         annotationPath: "path/to/second/test/label",
->                         currentValue: oTextArrangementTypes.IDFirst
+>                         currentValue: IDFirst,
+>                         label: "My Other Test Label",
+>                         tooltip: "My Other Test Tooltip"
 >                     }
 >                 ],
 >                 possibleValues: [

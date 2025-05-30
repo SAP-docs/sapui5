@@ -6,7 +6,7 @@ The *Share* functionality allows end users to share the current application stat
 
 The following options are available as part of the *Share* functionality:
 
-![](images/Share_Microsoft_Teams_-_All_Options_None_Selected_f6ca832.png)
+![](images/Share_options_9e889d2.png)
 
 -   *Send Email*
 
@@ -23,6 +23,13 @@ The following options are available as part of the *Share* functionality:
 -   *Share: Microsoft Teams*
 
     End users can collaborate with their co-workers using the *Share: Microsoft Teams* functionality. For more information, see [The Share: Microsoft Teams Functionality](the-share-microsoft-teams-functionality-ff89e4b.md).
+
+-   *Share: Collaboration Manager*
+
+    When an end user chooses this option, the *SAP Collaboration Manager* dialog opens with the application URL, which includes the page title and the current `iAppState`.
+
+    > ### Note:  
+    > System administrators for SAP S/4HANA Cloud Public Edition can find the required information at [Setting Up, Integrating, and Configuring SAP Collaboration Manager](https://help.sap.com/docs/SAP%20Collaboration%20Manager/cb0f914082ac49ddac2aecc728117530/8ec4cf31f6a94a1da039f7d5922cc0f3.html).
 
 
 > ### Note:  
@@ -102,7 +109,61 @@ Make the following changes in the `OPExtend.controller.js` file:
 
 ### Hiding Specific *Share* Menu Options
 
-You can control the visibility of the share options displayed in the *Share* menu. You cannot hide the *Save as Tile* option, as it is always visible to end users. However, you can control the visibility of the *Send E-mail* and *Share: Microsoft Teams* options by configuring the `manifest.json` file.
+You can control the visibility of the share options displayed in the *Share* menu. You cannot hide the *Save as Tile* option, as it is always visible to end users. However, you can control the visibility of other options by configuring the corresponding settings in the `manifest.json` file.
+
+****
+
+
+<table>
+<tr>
+<th valign="top">
+
+Share Options
+
+</th>
+<th valign="top">
+
+Properties
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+*Send E-Mail*
+
+</td>
+<td valign="top">
+
+`showSendEmail`
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+*Microsoft Teams*
+
+</td>
+<td valign="top">
+
+`showMsTeamsOptions`
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+*Collaboration Manager*
+
+</td>
+<td valign="top">
+
+`showCollaborationManager`
+
+</td>
+</tr>
+</table>
 
 This configuration can be done at both application level and page level. If the application-level settings for the share options' visibility is set to `true` \(or is undefined\), then its visibility is inherited from the page-level settings. If the application-level settings for the share options' visibility is set to `false`, then the specific share option is hidden, and the page-level settings aren't considered.
 

@@ -10,9 +10,9 @@ Tips and tricks if OPA isn't behaving or reacting the way you expect it to.
 
 OPA checks many conditions before it passes a control to your matchers/actions/success functions. If your control doesn't match these conditions, you're not able to set a breakpoint. For such instances, OPA logs lots of information into the browser's console if you turn on the SAPUI5 debug mode. You can either use the `sap-ui-debug=true` URL parameter or the SAPUI5 [Diagnostics](diagnostics-6ec18e8.md#loio6ec18e80b0ce47f290bc2645b0cc86e6). The diagnostics can also be helpful to see the state of your UI.
 
-After turning on the debug mode, you can have a look at the log and also filter it by looking for `opa` or `matchers`.
+After selecting *verbose*, you can have a look at the log and also filter it by looking for `opa` or `matchers`.
 
-![](images/OPA_Pitfalls_Image_340d18e.jpg)
+![](images/OPA_Pitfalls_Image_340d18e.png)
 
 A frequent cause of error is typos in the view name or control IDs. These are easily found by looking through the logs.
 

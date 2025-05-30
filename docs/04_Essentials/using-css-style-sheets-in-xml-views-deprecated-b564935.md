@@ -22,7 +22,7 @@ Here's how you would add a style definition and define a button that uses it in 
 
 ```xml
 
-<mvc:View controllerName="sap.hcm.Address" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc"
+<mvc:View controllerName="module:sap/hcm/Address" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc"
            xmlns:html="http://www.w3.org/1999/xhtml">
    <html:style>
       .mySuperRedButton {

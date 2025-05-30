@@ -158,29 +158,45 @@ The following example shows how you use the controls. To build the face filter i
 
 ```js
     
-var oFacetFilter = new sap.m.FacetFilter({ // define FacetFilter Control
-        lists : [ new sap.m.FacetFilterList({ // city facet
-            title : "City",
-            items : [ new sap.m.FacetFilterItem({
-                text : "Waldorf",
-                key : "WDF"
-            }), new sap.m.FacetFilterItem({
-                selected : true, // filter is selected (from ListItemBase)
-                text : "Atlanta",
-                key : "ATL"
-            }) ]
-        }), new sap.m.FacetFilterList({ // restaurant facet
-            title : "Restaurants",
-            items : [ new sap.m.FacetFilterItem({
-                text : "Caribbean",
-                key : "CRB"
-            }), new sap.m.FacetFilterItem({
-                selected : true, // filter is selected (from ListItemBase)
-                text : "Italian",
-                key : "ITL"
-            }) ]
-        }) ]
-    });
+sap.ui.require([
+			"sap/m/FacetFilter",
+			"sap/m/FacetFilterList",
+			"sap/m/FacetFilterItem"
+		], function (FacetFilter, FacetFilterList, FacetFilterItem) {
+
+			const oFacetFilter = new FacetFilter({ // define FacetFilter Control
+			lists : [ 
+					new FacetFilterList({ // city facet
+						title : "City",
+						items : [
+							new FacetFilterItem({
+								text : "Waldorf",
+								key : "WDF"
+							}),
+							new FacetFilterItem({
+								selected : true, // filter is selected (from ListItemBase)
+								text : "Atlanta",
+								key : "ATL"
+							})
+						]
+					}),
+					new FacetFilterList({ // restaurant facet
+						title : "Restaurants",
+						items : [
+							new FacetFilterItem({
+								text : "Caribbean",
+								key : "CRB"
+							}),
+							new FacetFilterItem({
+								selected : true, // filter is selected (from ListItemBase)
+								text : "Italian",
+								key : "ITL"
+							})
+						]
+					})
+				]
+			});
+		});
 
 ```
 

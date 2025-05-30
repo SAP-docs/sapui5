@@ -509,13 +509,9 @@ Defining the manifest setting is optional. If the setting isn't defined, SAP Fio
 
 -   If a default `UI.SelectionPresentationVariant` \(or its associated selection or presentation variant\) is **not** found, SAP Fiori elements checks for a default \(unqualified\) `UI.SelectionVariant` and default \(unqualified\) `UI.PresentationVariant`.
 
--   If `UI.SelectionVariant` is **not** found, SAP Fiori elements displays a filter bar with a search field only. For draft-enabled applications, a draft editing status is also displayed along with the filter bar and a search field.
-
-    The end users can use the personalization of the control to display additional filter fields.
-
 -   If `UI.PresentationVariant` **not** is found, SAP Fiori elements checks for a default `UI.LineItem` or `UI.Chart` for the visualization.
 
--   Finally, if none of the above annotations are found, the SAP Fiori elements renders an empty table or empty chart, and the end users can still use the personalization of the control to render the required table or chart.
+-   Finally, if neither `UI.PresentationVariant` nor the default `UI.LineItem` or `UI.Chart` is found, the SAP Fiori elements renders an empty table or chart. However, the end users can still use the personalization of the control to render the required table or chart.
 
 
 > ### Note:  

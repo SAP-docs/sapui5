@@ -1209,12 +1209,29 @@ When an object has unsaved change from another user, it is indicated by an icon 
 </td>
 <td valign="top">
 
+New Object
+
+</td>
+<td valign="top">
+
+The header title for newly created draft objects in draft-enabled apps and for unsaved objects in non-draft apps.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`UNNAMED_OBJECT` 
+
+</td>
+<td valign="top">
+
 Unnamed Object
 
 </td>
 <td valign="top">
 
-This is the header title for a newly created object.
+The header title for draft objects in edit mode.
 
 </td>
 </tr>
@@ -2828,7 +2845,7 @@ Unnamed Object
 </td>
 <td valign="top">
 
-The object page title can be linked to an editable field. When a user edits the object page and clears the value of this field, then the page title is set from the text that corresponds to this key.
+The object page title can be linked to an editable field. If the user clears the value of this field while editing the object page, and `UI.HeaderInfo.TypeName` is defined, then the page title is set from the text associated to this key.
 
 </td>
 <td valign="top">
@@ -2882,28 +2899,6 @@ Text that is shown to indicate that the object is currently locked and cannot be
 <td valign="top">
 
 Applications should overwrite the default text with the concrete object.
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-`T_ANNOTATION_HELPER_DEFAULT_OBJECT_PAGE_HEADER_TITLE` 
-
-</td>
-<td valign="top">
-
-New
-
-</td>
-<td valign="top">
-
-The default text "New" is appended with `UI.HeaderInfo.TypeName` to form the default title displayed in the object page header.
-
-</td>
-<td valign="top">
-
- 
 
 </td>
 </tr>
@@ -2986,7 +2981,7 @@ New Object
 </td>
 <td valign="top">
 
-Text that is shown when applications create a new object and `UI.HeaderInfo.TypeName` is not found. This text is also shown in list report tables for such objects.
+Text that is shown when applications create a new object and `UI.HeaderInfo.TypeName` is defined. This text is also shown in list report tables for such objects. If `UI.HeaderInfo.Typename` is undefined, the title is set to an empty string \(""\).
 
 </td>
 <td valign="top">
@@ -3296,7 +3291,7 @@ Label of the action name in the action parameter dialog.
 </td>
 <td valign="top">
 
-Message strip for the action parameter dialog. Having a message strip there is optional. Once it is set, it shows the <span class="SAP-icons-V5"></span> \(*Information*\) icon with this specific text.
+Message strip for the action parameter dialog. Using a message strip in the action parameter dialog is optional. Once it is set, it shows the <span class="SAP-icons-V5"></span> \(*Information*\) icon with the text you specified.
 
 </td>
 <td valign="top">

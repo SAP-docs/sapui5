@@ -256,7 +256,7 @@ Feature
 
 The setup for Karma-based test automation has been improved significantly: The corresponding plugin has been completely reworked and renamed to `karma-ui5`.
 
-For more information, see [Installing Karma for Automated Testing](../04_Essentials/test-automation-ae44824.md#loioa182676ed3714bd5b4f011eb29076f6c) and [karma-ui5 on Github](https://github.com/SAP/karma-ui5).
+For more information, see [Test Automation](../04_Essentials/test-automation-ae44824.md#loioae448243822448d8ba04b4784f4b09a0) and [karma-ui5 on Github](https://github.com/SAP/karma-ui5).
 
 <sub>Changed•Feature•Info Only•1.65</sub>
 
@@ -856,6 +856,10 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.134](what-s-new-in-sapui5-1-134-c512d71.md "With this release SAPUI5 is upgraded from version 1.133 to 1.134.")
+
+[What's New in SAPUI5 1.133](what-s-new-in-sapui5-1-133-86d7605.md "With this release SAPUI5 is upgraded from version 1.132 to 1.133.")
 
 [What's New in SAPUI5 1.132](what-s-new-in-sapui5-1-132-bd2e61f.md "With this release SAPUI5 is upgraded from version 1.131 to 1.132.")
 

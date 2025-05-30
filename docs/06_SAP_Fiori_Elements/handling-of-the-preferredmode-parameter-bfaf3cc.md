@@ -77,7 +77,7 @@ create
 
 In draft-enabled applications, a new draft is created by using the `POST` call, by default. Users can override this behavior and configure applications to call a function import annotated with `newAction`.
 
-You can use URL parameters to prefill specific values. This is currently not supported for draft creation via `newAction`. For example, to set the value 01 for the *DefectCategory* field, enter the URL `…#Defect-displayWorklist?preferredMode=create&DefectCategory=01`.
+You can use URL parameters to prefill specific values. This is not supported for draft creation with `newAction`. For example, to set the value 01 for the *DefectCategory* field, enter the URL `…#Defect-displayWorklist?preferredMode=create&DefectCategory=01`.
 
 > ### Note:  
 > The target application must specify in its `manifest.json` file which parameters are to be used from the incoming URL. In the following example, only the `DefectCategory` parameter is used.

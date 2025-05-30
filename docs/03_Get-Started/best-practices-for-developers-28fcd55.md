@@ -27,12 +27,6 @@ It is therefore important that you keep applying best practices. To help you, we
 
 
 
-### Supporting Tool - UI5 Linter
-
-[UI5 linter](https://github.com/SAP/ui5-linter) is a command-line tool to identify legacy code in your SAPUI5 project. It checks JavaScript, TypeScript, XML, JSON, and other files in your project and reports findings if legacy code is used. UI5 linter is our state-of-the-art tool to get and keep your SAPUI5 project legacy-free.
-
-
-
 ### Goals
 
 The main objectives when migrating existing code or keeping it up to date with framework best practices are:
@@ -59,6 +53,14 @@ The main objectives when migrating existing code or keeping it up to date with f
 ### Prerequisites
 
 Before attempting to migrate or upgrade to a higher SAPUI5 version, make sure that your development does **not** use any undocumented internal framework resources. Also, double check that all compatibility guidelines have been followed, such as those mentioned in [Upgrading](../02_Read-Me-First/upgrading-9638e4f.md).
+
+To build and serve your project in accordance with best practices, we recommend using the latest version of [UI5 Tooling](https://sap.github.io/ui5-tooling/).
+
+
+
+### Supporting Tool - UI5 Linter
+
+[UI5 linter](https://github.com/SAP/ui5-linter) is a command-line tool to identify legacy code in your SAPUI5 project. It checks JavaScript, TypeScript, XML, JSON, and other files in your project and reports findings if legacy code is used. UI5 linter is our state-of-the-art tool to get and keep your SAPUI5 project legacy-free.
 
 
 
@@ -114,13 +116,13 @@ Identify and resolve cyclic dependencies with the help of the SAPUI5 configurati
 
 ## App Development
 
-In the following we'll focus on crucial aspects of app development, specifically on asynchronous loading and best practices around Components, Controllers, Views, Fragments, and Models.
+In the following we'll focus on crucial aspects of app development, specifically on asynchronous loading and best practices around Components, Controllers, Views, Fragments, Models, and ResourceBundles.
 
 
 
 ### Asynchronous Loading
 
--   Use asynchronous loading for views, fragments, and components to enhance performance; see, for example, [Deprecated Factories Replacement](../04_Essentials/deprecated-factories-replacement-491bd9c.md).
+-   Use asynchronous loading for views, fragments, components, and resource bundles to enhance performance; see, for example, [Deprecated Factories Replacement](../04_Essentials/deprecated-factories-replacement-491bd9c.md).
 -   Implement the `sap.ui.core.IAsyncContentCreation` marker interface in your [Component.js file](../04_Essentials/component-controller-27ce0e4.md) to allow the content to be created fully asynchronously and for a stricter handling of certain types of errors during its view processing.
 -   Make sure that dependent libraries and components are preloaded before modules from the respective preload are accessed. For example, if the `sap.f.FlexibleColumnLayout` control is part of the root view, `"sap.f": {}` should be included in the `sap.ui5/dependencies/libs` section of the `manifest.json`. Avoid setting `{ "lazy": true }` if the application does not intend to preload the bundle manually. For more information, see [Ensure that Library Preloads are Enabled](../05_Developing_Apps/performance-speed-up-your-app-408b40e.md#loio408b40efed3c416681e1bd8cdd8910d4__section_LibraryPreloads).
 
@@ -205,7 +207,7 @@ Before using the Component's `EventBus` instance via `Component#getEventBus`, de
 
 Prevent bundling modules \(`Component-preload.js`\) into strings.
 
--   Avoid generating the application bundle with an outdated standard Grunt task. Leverage UI5 Tooling to build the bundle.
+-   Leverage [UI5 Tooling](https://sap.github.io/ui5-tooling/) to build the bundle. Avoid generating the application bundle with legacy build tooling, such as grunt-openui5.
 
 -   Avoid declaring `var`, `let`, or `const` in the global scope above `sap.ui.define`. If absolutely required, replace e.g. `var myGlobal` with `globalThis.myGlobal` and/or wrap the module definition in an *Immediately Invoked Function Expression* \(IIFE\) if applicable.
 
@@ -227,6 +229,8 @@ Prevent bundling modules \(`Component-preload.js`\) into strings.
 -   Use the `loadFragment` method of the `sap.ui.core.mvc.Controller` to load fragments asynchronously.
 
 -   Don't use global names in your XML. Ensure that the target function or object is defined as a module and require the defined module via [`core:require` in the XML](../04_Essentials/require-modules-in-xml-view-and-fragment-b11d853.md). Use `template:require` if the XML content needs preprocessing.
+
+-   Use the module name syntax \(e.g., `module:myapp/views/MyView`\) when creating a Typed View, Controller, or JS Fragment via factory API. This syntax provides greater flexibility by allowing you to name entities without requiring the `.view.js`, `.controller.js`, or `.fragment.js` suffixes.
 
 
 **Additional Information:**
@@ -346,7 +350,7 @@ Implement strict error handling to address critical issues.
 
 Prevent bundling modules \(`library-preload.js`\) into strings.
 
--   Avoid generating the library bundle with an outdated standard Grunt task. Leverage UI5 Tooling to build the bundle.
+-   Leverage [UI5 Tooling](https://sap.github.io/ui5-tooling/) to build the bundle. Avoid generating the library bundle with legacy build tooling, such as grunt-openui5.
 
 -   Avoid declaring `var`, `let`, or `const` in the global scope above `sap.ui.define`.
 

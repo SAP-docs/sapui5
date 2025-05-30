@@ -2,13 +2,17 @@
 
 # Generic Tile
 
-The `GenericTile` control is the basic concept that displays any kind of content within a tile comprising for example news, feeds, images, micro charts, or numeric content.
+The `GenericTile` control is the basic concept that displays any kind of content within a tile comprising, for example, news, feeds, images, micro charts, or, numeric content.
 
 
 
 ## Overview
 
-`GenericTile` controls are responsive and adapt their size to the size of the devices they are used on: the control is available in small and large size and depending on the media screen size, the appropriate size is chosen automatically. Therefore, the `size` property is deprecated and should not be used anymore.
+`GenericTile` controls are responsive and adapt their size to the size of the devices they are used on. The control is available in small and large size. Depending on the size of the screen, the appropriate size of the control is chosen automatically. Therefore, the `size` property is deprecated and should not be used anymore.
+
+![Generic Tile Example](images/Suite_Generic_Tile_2624e61.png)
+
+For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.GenericTile) and the [Sample](https://ui5.sap.com/#/entity/sap.m.GenericTile).
 
 **Layout**
 
@@ -77,11 +81,4 @@ The following controls have not been transferred to the `sap.m` library and are 
 
 
 If you have already included one of these controls before SAPUI5 1.34, a wrapper ensures that the embedding still works for each control. To benefit from all enhancements and new features for one of these controls as of SAPUI5 1.34, you need to switch to the controls in the `sap.m` library. With SAPUI5 1.34, all these controls in the `sap.suite.ui.commons` library are marked as **deprecated**.
-
-**Related Information**  
-
-
-[API Reference: `sap.m.GenericTile`](https://ui5.sap.com/#/api/sap.m.GenericTile)
-
-[Samples: `sap.m.GenericTile`](https://ui5.sap.com/#/entity/sap.m.GenericTile)
 

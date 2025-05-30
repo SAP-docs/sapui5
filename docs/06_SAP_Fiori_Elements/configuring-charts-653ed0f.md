@@ -562,10 +562,76 @@ For charts to work, the entity set must support aggregation. SAP Fiori elements 
     For more information, see [Custom Aggregation](http://docs.oasis-open.org/odata/odata-data-aggregation-ext/v4.0/cs01/odata-data-aggregation-ext-v4.0-cs01.html#_Toc378326320).
 
 
+
+
+### Configuring the Header Text and Its Visibility Using Manifest Settings
+
+You can use the chart settings in the `manifest.json` file to configure the header text and its visibility:
+
+> ### Sample Code:  
+> manifest.json
+> 
+> ```
+> "BusinessPartnersList": {
+>    "type": "Component",
+>    "id": "BusinessPartnersList",
+>    "name": "sap.fe.templates.ListReport",
+>    "options": {
+>       "settings": {
+>          "controlConfiguration": {
+>             "@com.sap.vocabularies.UI.v1.Chart": {
+>                "chartSettings": {
+>                   "headerVisible": false,  // Can be true (default value) or false to alter the chart header visibility
+>                   "header": "My Custom chart title",
+>                }
+>             }
+>         }
+>       ......
+>       .....
+>     }
+>   }
+>  ....
+>  ....
+> }
+> ```
+
+> ### Note:  
+> These settings aren't applicable on charts in an object page because the title of the chart is determined by the section title or subsection title. For more information, see the Tip provided in [Defining and Adapting Sections](defining-and-adapting-sections-facfea0.md).
+
+
+
+### Configuring the Selection of Data Points Using Manifest Settings
+
+You can use the `manifest.json` file to configure chart settings that allow end users to perform single, multiple, or no selection of chart data points.
+
+> ### Sample Code:  
+> manifest.json
+> 
+> ```
+> "BusinessPartnersList": {
+>    "type": "Component",
+>    "id": "BusinessPartnersList",
+>    "name": "sap.fe.templates.ListReport",
+>    "options": {
+>       "settings": {
+>          "controlConfiguration": {
+>             "@com.sap.vocabularies.UI.v1.Chart": {
+>                "chartSettings": {
+>                   "selectionMode": "None" // None/Single/Multiple (default) are the possible values
+>                }
+>             }
+>         }
+>       ......
+>       .....
+>     }
+>   }
+>  ....
+>  ....
+> }
+> ```
+
 > ### Note:  
 > For the chart facet, the following applies:
-> 
-> -   Applications can't control whether the chart selection can be configured to allow no selection or single selection. SAP Fiori elements always enables multi-selection for the chart control.
 > 
 > -   If a table refresh occurs \(because a user changes the table personalization, for example\), the chart is also refreshed to keep the chart and table data synchronized. Chart selections are **not** maintained, however, since they aren't stored in the `iAppState`.
 > 
@@ -582,9 +648,9 @@ For charts to work, the entity set must support aggregation. SAP Fiori elements 
 > 
 > -   Properties such as measures, dimensions, and text associations that come from associated entity sets aren't supported.
 > 
-> -   Chart personalization settings or selections aren't part of the variant changes and not saved in the `iAppState`.
+> -   Chart personalization settings or selections aren't part of the variant changes and are not saved in the `iAppState`.
 > 
-> -   Semantic coloring using the `UI.Criticality` and `UI.CriticalityCalculation` annotations isn't supported.
+> -   Semantic coloring using the `UI.Criticality` and `UI.CriticalityCalculation` annotations aren't supported.
 > 
-> -   Aggregations on draft-enabled entities are **not** supported in ABAP CDS, since currently `$apply` with or without a filter on draft or transactional entities isn't supported by SADL.
+> -   Aggregations on draft-enabled entities are **not** supported in ABAP CDS, since `$apply` with or without a filter on draft or transactional entities isn't currently supported by SADL.
 

@@ -331,6 +331,46 @@ The analytical table renders data that can be grouped and aggregated.
     > }
     > ```
 
+-   Aggregation Based on Visible Properties
+
+    By default, an analytical table requests all key properties for the displayed entity even if these properties are not displayed within the table. To display aggregation based solely on visible columns, configure the `aggregationOnLeafLevel` flag in the `manifest.json` file as shown in the following sample code:
+
+    > ### Sample Code:  
+    > `manifest.json`
+    > 
+    > ```
+    > "controlConfiguration":
+    > {
+    >     "@com.sap.vocabularies.UI.v1.LineItem": 
+    >     {
+    >         "tableSettings":
+    >         {
+    >             "type": "AnalyticalTable",
+    >             "analyticalConfiguration":
+    >             {
+    >                 "aggregationOnLeafLevel": true
+    >             },
+    >             "personalization": true
+    >         }
+    >     }
+    > }
+    > ```
+
+    When `aggregationOnLeafLevel` is set to `true`, any navigation or bound actions are disabled if any key properties of the entity are not displayed in the table. If the missing key properties are added through the table settings, both the navigation and the bound actions are enabled.
+
+    > ### Note:  
+    > If the `rowPress` event is overridden at the table level, the navigation indicator is still displayed even when `aggregationOnLeafLevel` is set to `true`.
+
+    See the following screenshots, where *Identifier* is a key property:
+
+    ![](images/Identifier_Not_Displayed_1f0b08b.png)
+
+    In the example above, the *Identifier* column is not displayed in the table, so navigation and bound actions are disabled.
+
+    ![](images/Identifier_Displayed_2e56095.png)
+
+    In the example above, the *Identifier* column is displayed in the table, so navigation and bound actions are enabled.
+
 
 > ### Restriction:  
 > Analytical tables don't support navigation properties, so if you include them through a `LineItem`, an empty column is displayed. You also can't add navigation properties through the table personalization settings.

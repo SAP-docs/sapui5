@@ -5,7 +5,7 @@
 Applications can configure header facets so that end users can perform both in-page navigation and the navigation to an external application.
 
 > ### Note:  
-> This topic is currently only applicable to SAP Fiori elements for OData V4.
+> This topic is only applicable to SAP Fiori elements for OData V4.
 
 
 

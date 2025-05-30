@@ -8,10 +8,13 @@ Applications based on SAP Fiori elements can generate integration cards and adap
 
 You can use cards to provide a preview of the data of the object page. Cards can be shared using SAP Collaboration Manager, Microsoft Teams, or any other platform where the integration card or the adaptive card can be hosted.
 
-> ### Note:  
+> ### Restriction:  
 > -   Application preview cards can only be generated for object pages.
 > 
-> -   The integration card is displayed by default on the UI, but the adaptive card is always generated at the same time, and you can choose to display it instead.
+> -   The application preview generator is only available for ABAP-based projects.
+
+> ### Note:  
+> The integration card is displayed by default on the UI, but the adaptive card is always generated at the same time, and you can choose to display it instead.
 
 
 
@@ -19,7 +22,7 @@ You can use cards to provide a preview of the data of the object page. Cards can
 
 ## Prerequisites
 
-To use the application preview generator, the following requrements must be met:
+To use the application preview generator, the following requirements must be met:
 
 -   You must have cloned your project in SAP Business Application Studio.
 
@@ -85,7 +88,7 @@ Next, open a new terminal at a desired project location and run one of the follo
 
 ## Generating Cards
 
-After enabling the application preview generator as described previously, launch the project by using the `npm run start-cards-generator` command.
+After enabling the application preview generator as described, launch the project by using the `npm run start-cards-generator` command.
 
 If the landing page of the application is a list report, use the necessary filters or search to navigate to the object page for which the card will be created. After the object page is launched, open the user menu and choose *Generate Card*.
 
@@ -95,7 +98,7 @@ The following dialog appears:
 
 ![](images/Card_Generator_Dialog_500278e.png)
 
-Enter the data for the relevant fields in the dialog. For more information about the supported features, see the [Supported features](using-the-application-preview-generator-599428a.md#loio599428aa0b244626a029d5202c1bfaac__section_ysh_2dw_hdc) section in this topic.
+Enter the data for the relevant fields in the dialog. For more information about the supported features, see the [Supported Features](using-the-application-preview-generator-599428a.md#loio599428aa0b244626a029d5202c1bfaac__section_ysh_2dw_hdc) section in this topic.
 
 A live preview of the integration card and its corresponding adaptive card is displayed on the right side, as shown in the following screenshots:
 
@@ -144,7 +147,7 @@ After adding the cards, you must update the project repository. To do that, merg
 
 <a name="loio599428aa0b244626a029d5202c1bfaac__section_ysh_2dw_hdc"/>
 
-## Supported features
+## Features of the Card Generator Dialog
 
 You can use the following features of the card generator dialog:
 
@@ -240,7 +243,7 @@ You can add import-based actions as footer actions of the adaptive card. The rec
 </td>
 <td valign="top">
 
-You can apply criticality assignments, unit of measure, and text arrangement to properties. The options configured in this panel apply to the specified properties wherever they are used in the card.
+You can apply criticality assignments, units of measure, and text arrangements to properties. The options configured in this panel apply to the specified properties wherever they are used in the card.
 
 </td>
 <td valign="top">
@@ -263,20 +266,20 @@ You can apply criticality assignments, unit of measure, and text arrangement to 
 
 You can apply additional options to any property that has this control displayed next to it. The following additional options are available:
 
--   *Apply Units of Measure*. This option can be applied to properties of string type or number type.
+-   *Apply Units of Measure*: This option can be applied to properties of string type or number type.
 
 -   *Apply Formatter*:
 
-    -   *Date Type*. This option lets you choose how the date and time are formatted. You can format just the date or the date and time together. You can enable or disable UTC formatting for either of those options. If you format the date and time together, you can also apply relative formatting options as described in [Date Format](https://sapui5.hana.ondemand.com/#/topic/91f2eba36f4d1014b6dd926db0e91070).
+    -   *Date Type*: This option lets you choose how the date and time are formatted. You can format the date and time together or just the date. You can enable or disable UTC formatting for either of those options. If you format the date and time together, you can also apply relative formatting options as described in [Date Format](https://sapui5.hana.ondemand.com/#/topic/91f2eba36f4d1014b6dd926db0e91070).
 
-    -   *Number Type*. Numbers can be formatted as *Float*, *Currency*, *Percent*, or *Integer*.
+    -   *Number Type*: Numbers can be formatted as *Float*, *Currency*, *Percent*, or *Integer*.
 
 
--   *Apply Criticality*.
+-   *Apply Criticality*
 
--   *Apply Trend*. This option can be applied to properties of string type or number type.
+-   *Apply Trend*: This option can be applied to properties of string type or number type.
 
--   *Apply Indicators*. This option can be applied to properties of string type or number type.
+-   *Apply Indicators*: This option can be applied to properties of string type or number type.
 
 
 

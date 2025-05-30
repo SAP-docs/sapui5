@@ -7,7 +7,7 @@ You can edit a single object or multiple objects using a dialog in the list repo
 > ### Note:  
 > For general information about enabling **Mass Edit**, see [Enabling Editing Using a Dialog \(Mass Edit\)](enabling-editing-using-a-dialog-mass-edit-965ef5b.md).
 > 
-> In SAP Fiori elements for OData V2, using the mass edit dialog is currently only available in the list report.
+> In SAP Fiori elements for OData V2, using the mass edit dialog is only available in the list report.
 
 When you select multiple objects and use the mass edit dialog, the values entered are applied to all objects.
 

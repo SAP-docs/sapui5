@@ -157,7 +157,7 @@ The `UI.Chart Title` property is used for the title. The `UI.Chart Description` 
 > 
 > ```
 
-For semantic coloring, both the `Criticality` and `CriticalityCalculation` annotations are supported. However, the `Criticality` annotation overrides the `CriticalityCalculation` annotation.
+For semantic coloring, both the `Criticality` and `CriticalityCalculation` properties are supported. However, the `Criticality` property overrides the `CriticalityCalculation` property.
 
 The following annotations are mandatory and must be used in the column micro chart:
 

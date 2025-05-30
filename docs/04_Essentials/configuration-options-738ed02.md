@@ -151,7 +151,7 @@ The following options are available on the `defaults` and the individual test co
 	ui5: {
 		noConflict: true,
 		libs: [],
-		theme: "sap_horizon"
+		theme: "default"
 	},
 
 	/*

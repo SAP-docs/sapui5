@@ -381,7 +381,7 @@ To define multiple views using multiple table mode, perform the following steps:
     > ```
 
     > ### Note:  
-    > Stable IDs: As there are separate table instances for each tab, table-specific IDs \(such as IDs for tables, toolbar actions, draft indicators in table columns\) get a suffix "-<key\>", where <key\> is the variant key you have specified in the manifest \(line 13\). This avoids duplicate ID errors and allows you to adapt specific tables via runtime adaptation \(for example, hiding a toolbar action for a specific table\).
+    > Stable IDs: As there are separate table instances for each tab, table-specific IDs \(such as IDs for tables, toolbar actions, draft indicators in table columns\) get a suffix "-<key\>", where <key\> is the variant key you have specified in the manifest \(line 13\). This avoids duplicate ID errors and allows you to adapt specific tables by using key user adaptation \(for example, hiding a toolbar action for a specific table\).
     > 
     > We recommend using keys that are a combination of alphanumeric characters, digits, and underscores \(\_\). You must ensure that they don't begin with a digit.
 
@@ -1275,5 +1275,7 @@ To define multiple views using multiple table mode, perform the following steps:
 ![](images/Multiple_Table_Mode_7249fb3.png)
 
 > ### Note:  
-> Refreshing the count available on a tab using a global side effect is only possible for a view that has been opened.
+> -   Refreshing the count available on a tab using a global side effect is only possible for a view that has been opened.
+> 
+> -   If the table title matches the view name, the table title is omitted to avoid duplicating information.
 

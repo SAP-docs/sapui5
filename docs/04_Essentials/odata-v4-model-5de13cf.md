@@ -5,7 +5,7 @@
 The `sap.ui.model.odata.v4.ODataModel` is the model implementation for consuming an OData V4 service.
 
 > ### Note:  
-> Instead of smart controls \(`sap.ui.comp` library\) or `sap.ui.table.AnalyticalTable` \(or analytical table scenarios\) the SAP Fiori elements building blocks \(`sap.fe.macros`\) have to be used with the SAPUI5 OData V4 model. The `TreeTable` is not supported together with the SAPUI5 OData V4 model.
+> Instead of smart controls \(`sap.ui.comp` library\) or `sap.ui.table.AnalyticalTable` \(or analytical table scenarios\) the SAP Fiori elements building blocks \(`sap.fe.macros`\) have to be used with the SAPUI5 OData V4 model.
 > 
 > The interface for applications has been changed for an easier and more efficient use of the model. For a summary of these changes, see [Changes Compared to OData V2 Model](changes-compared-to-odata-v2-model-abd4d7c.md).
 

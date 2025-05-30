@@ -259,7 +259,7 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.t
 
 ## Searching for Controls Inside a Dialog
 
-Use the option `searchOpenDialogs` to restrict control search to open dialogs only. You can combine `searchOpenDialogs` with `controlType` or any predefined or custom matcher. As of version 1.62, the ID option is also effective in combination with `searchOpenDialogs`. If the dialog is inside a view, the `viewName` option ensures that the given ID is relative to the view. Otherwise, the search is done by global ID.
+Use the option `searchOpenDialogs` to restrict control search to open dialogs only. You can combine `searchOpenDialogs` with `controlType` or any predefined or custom matcher.As of version 1.62, the ID option is also effective in combination with `searchOpenDialogs`. If the dialog is inside a view, the `viewName` option ensures that the given ID is relative to the view. Otherwise, the search is done by global ID.
 
 This is an example of matching a control with ID `mainView--testButton` located inside a dialog. The dialog itself is part of a view with name `main.view` and ID `mainView`:
 
@@ -306,7 +306,7 @@ iPressOrderNow : function () {
 
 ## Searching for Controls Inside a Fragment
 
-As of version 1.63, you can limit control search to a fragment with the option `fragmentId`.
+As of version 1.63, you can limit the control search to a fragment with the option `fragmentId`.
 
 `fragmentId` is effective only when searching by control ID inside a view. Whether a control belongs to a fragment is only relevant when the fragment has a user-assigned ID, which is different from the ID of its parent view. In this case, the fragment ID takes part in the formation of control ID and you have to use the `fragmentId` option to simplify test maintenance.
 
@@ -330,7 +330,7 @@ this.waitFor({
 
 In OPA5, you can look for controls that are invisible, disabled, or noninteractable by using the respective `waitFor` boolean properties: `visible`, `enabled`, and `interactable`.
 
-You need a more creative approach to verify that no controls on the page match a certain criteria. One idea is to verify that a parent doesn't have a given child. Locate the parent using OPA5 standard matchers and then use a custom `check` function to iterate over the children of the parent. The result of `check` should be truthy if no children match a given condition.
+You need a more creative approach to verify that no controls on the page match a certain criteria. One idea is to verify that a parent doesn't have a given child. Locate the parent using OPA5 standard matchers and then use a custom `check` function to iterate over the children of the parent. The result of the `check` should be truthy if no children match a given condition.
 
 The following example shows a custom `check` function that returns `true` if a popover doesn't contain a button with a certain text.
 

@@ -203,7 +203,7 @@ Enables you to embed process flow indicators into other controls, such as header
 
 For more information, see [Micro Process Flow](../10_More_About_Controls/micro-process-flow-28977b2.md), the [API Reference](https://ui5.sap.com/#/api/sap.suite.ui.commons.MicroProcessFlow) and the [Samples](https://ui5.sap.com/#/entity/sap.suite.ui.commons.MicroProcessFlow).
 
-![Micro Process Flow with a Popup Dialog](images/WhatsNew_154_MicroProcessFlow_e40ca58.jpg)
+![Micro Process Flow with a Popup Dialog](images/Suite_MicroProcessFlow_e40ca58.png)
 
 <sub>New•Control•Info Only•1.54</sub>
 
@@ -303,7 +303,7 @@ Control
 
 Enables the users to perform mass changes on multiple homogeneous objects. When you pass a set of such objects to the `SmartMultiEdit` control, it provides a customizable list of object attributes. Each attribute value can be changed, cleared, or kept as it is. The control provides value helpers, formatting, and validation, based on the data types of individual object attributes. For more information, see [Smart Multi Edit](../10_More_About_Controls/smart-multi-edit-0907251.md), the [API Reference](https://ui5.sap.com/#/api/sap.ui.comp.smartmultiedit.Field) and the [Samples](https://ui5.sap.com/#/entity/sap.ui.comp.smartmultiedit.Container).
 
-![Smart Multi Edit Fields in a Smart Form Dialog](images/WhatsNew_154_SmartMultiEdit_d474f0c.jpg)
+![Smart Multi Edit Fields in a Smart Form Dialog](images/Suite_SmartMultiEdit_d474f0c.png)
 
 <sub>New•Control•Info Only•1.54</sub>
 
@@ -2150,6 +2150,10 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.134](what-s-new-in-sapui5-1-134-c512d71.md "With this release SAPUI5 is upgraded from version 1.133 to 1.134.")
+
+[What's New in SAPUI5 1.133](what-s-new-in-sapui5-1-133-86d7605.md "With this release SAPUI5 is upgraded from version 1.132 to 1.133.")
 
 [What's New in SAPUI5 1.132](what-s-new-in-sapui5-1-132-bd2e61f.md "With this release SAPUI5 is upgraded from version 1.131 to 1.132.")
 

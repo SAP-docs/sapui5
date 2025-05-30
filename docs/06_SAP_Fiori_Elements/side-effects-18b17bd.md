@@ -170,7 +170,7 @@ The following side effect annotations are supported:
     > ### Caution:  
     > You cannot specify a 1:1 association or an empty target, such as `NavigationPropertyPath`, to ensure that the whole entity is considered as the source.
 
-    The side effect is triggered when structural changes are made \(adding or deleting an item\). The side effect is not triggered if a property of any entity is changed. Ensure that changes are made within the entity type of the associated entity.
+    The side effect is triggered by structural changes such as adding or deleting an item. With SAP Fiori elements for OData V4, it is also triggered when any property of an entity changes, whereas with SAP Fiori elements for OData V2, it is not. Instead, the side effect must be defined in the entity type of the associated entity.
 
 -   **Target properties**
 

@@ -29,9 +29,9 @@ The following table provides an overview of the two main types of card controls 
 **Feature Supported** 
 
 </th>
-<th valign="top" colspan="2">
+<th valign="top" colspan="4">
 
-\(Integration Card\)
+**\(Integration Card\)**
 
 **<code><a href="cards-5b46b03.md#loio5b46b03f024542ba802d99d67bc1a3f4__section_integration_card">sap.ui.integration.widgets.Card</a></code>**
 
@@ -47,90 +47,31 @@ The following table provides an overview of the two main types of card controls 
 <tr>
 <th valign="top">
 
-Adaptive, Analytical, List, Object, Table, and Timeline cards
+**Declarative Card Types**
+
+\(List Card, Analytical Card, Table Card, Object Card, Timeline Card, Calendar Card\)
 
 </th>
 <th valign="top">
 
-Component card
+**Adaptive Card**<sup>1</sup> 
+
+</th>
+<th valign="top">
+
+**Component Card** 
+
+</th>
+<th valign="top">
+
+**WebPage Card** 
 
 </th>
 </tr>
 <tr>
 <td valign="top">
 
-**Fiori 3 card UX** 
-
-</td>
-<td valign="top">
-
-![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
-
-</td>
-<td valign="top">
-
-![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)<sup>1</sup> 
-
-</td>
-<td valign="top">
-
-![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-**Cross product integration** 
-
-</td>
-<td valign="top">
-
-![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
-
-</td>
-<td valign="top">
-
-![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
-
-</td>
-<td valign="top">
-
-![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-**Cross HTML product integration** 
-
-</td>
-<td valign="top">
-
-![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
-
-</td>
-<td valign="top">
-
-![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
-
-</td>
-<td valign="top">
-
-![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-**FLP / cFLP integration** 
-
-</td>
-<td valign="top">
-
-![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
+**Fiori 3, Horizon UX** 
 
 </td>
 <td valign="top">
@@ -143,13 +84,6 @@ Component card
 ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)<sup>2</sup> 
 
 </td>
-</tr>
-<tr>
-<td valign="top">
-
-**Independent of SAPUI5 runtime** 
-
-</td>
 <td valign="top">
 
 ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
@@ -157,19 +91,125 @@ Component card
 </td>
 <td valign="top">
 
-![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)<sup>3</sup> 
 
 </td>
 <td valign="top">
 
-![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-**Can implement application logic** 
+**Cross-product Integration** 
+
+</td>
+<td valign="top">
+
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
+
+</td>
+<td valign="top">
+
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
+
+</td>
+<td valign="top">
+
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
+
+</td>
+<td valign="top">
+
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
+
+</td>
+<td valign="top">
+
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+**Consumption with HTML Custom Element** 
+
+</td>
+<td valign="top">
+
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
+
+</td>
+<td valign="top">
+
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
+
+</td>
+<td valign="top">
+
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
+
+</td>
+<td valign="top">
+
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
+
+</td>
+<td valign="top">
+
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+**SAP Build Work Zone Integration** 
+
+</td>
+<td valign="top">
+
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
+
+</td>
+<td valign="top">
+
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
+
+</td>
+<td valign="top">
+
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
+
+</td>
+<td valign="top">
+
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
+
+</td>
+<td valign="top">
+
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+**Joule** 
+
+</td>
+<td valign="top">
+
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
+
+</td>
+<td valign="top">
+
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)<sup>4</sup> 
 
 </td>
 <td valign="top">
@@ -179,19 +219,124 @@ Component card
 </td>
 <td valign="top">
 
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+
+</td>
+<td valign="top">
+
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+**SAP Mobile Start / Mobile SDK** 
+
+</td>
+<td valign="top">
+
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
+
+</td>
+<td valign="top">
+
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+
+</td>
+<td valign="top">
+
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+
+</td>
+<td valign="top">
+
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+
+</td>
+<td valign="top">
+
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+**Can implement Application Logic** 
+
+</td>
+<td valign="top">
+
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)<sup>5</sup> 
+
+</td>
+<td valign="top">
+
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)<sup>5</sup> 
+
+</td>
+<td valign="top">
+
 ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
 
 </td>
 <td valign="top">
 
 ![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
+
+</td>
+<td valign="top">
+
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+**Low-code / No-code Configuration Editor** 
+
+</td>
+<td valign="top">
+
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
+
+</td>
+<td valign="top">
+
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)
+
+</td>
+<td valign="top">
+
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)<sup>6</sup> 
+
+</td>
+<td valign="top">
+
+![Yes](../02_Read-Me-First/images/Green_Led_3cb17ee.gif)<sup>6</sup> 
+
+</td>
+<td valign="top">
+
+![No](../02_Read-Me-First/images/Red_Led_5befb5a.gif)
 
 </td>
 </tr>
 </table>
 
-1\) Depending on the implementation.  
- 2\) With `CustomElement`.
+1\) We recommend using the other declarative card types.
+
+2\) Depends on the content of the Adaptive Card.
+
+3\) Depends on the WebPage content.
+
+4\) The other declarative card types are highly recommended, as the Adaptive Card is currently incompatible with Joule on mobile devices.
+
+5\) Can be implemented in JavaScript extensions.
+
+6\) Highly depends on the Component / WebPage implementation.
 
 
 
@@ -247,7 +392,7 @@ Description
 <tr>
 <td valign="top">
 
-Adaptive card
+Adaptive Card
 
 </td>
 <td valign="top">
@@ -259,7 +404,7 @@ Used to visualize and reuse cards that are created using the Microsoft Adaptive 
 <tr>
 <td valign="top">
 
-Analytical card<sup>1</sup>
+Analytical Card<sup>1</sup>
 
 </td>
 <td valign="top">
@@ -271,7 +416,19 @@ Used for data visualization. Typically, it is defined by a numeric header and an
 <tr>
 <td valign="top">
 
-Component card \(Experimental\)
+Calendar Card
+
+</td>
+<td valign="top">
+
+Used to display a schedule of a single entity \(such as person, resource\) for the selected time interval.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Component Card \(Experimental\)
 
 </td>
 <td valign="top">
@@ -288,7 +445,7 @@ Displays multiple controls and is used as a custom approach for use cases which 
 <tr>
 <td valign="top">
 
-List card
+List Card
 
 </td>
 <td valign="top">
@@ -300,7 +457,7 @@ Displays multiple list items of all kind. Aggregated information can also be vis
 <tr>
 <td valign="top">
 
-Object card
+Object Card
 
 </td>
 <td valign="top">
@@ -312,19 +469,19 @@ Displays the basic details for an object, for example, a person or a sales order
 <tr>
 <td valign="top">
 
-Table card
+Table Card
 
 </td>
 <td valign="top">
 
-Displays a set of items in table format. For more information on the table card, see the [SAP Fiori Design Guidelines](https://experience.sap.com/fiori-design-web/overview-page-table-card/).
+Displays a set of items in table format.
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-Timeline card<sup>2</sup>
+Timeline Card<sup>2</sup>
 
 </td>
 <td valign="top">
@@ -333,12 +490,24 @@ Displays time-related content.
 
 </td>
 </tr>
+<tr>
+<td valign="top">
+
+WebPage Card
+
+</td>
+<td valign="top">
+
+Allows to embed HTML page in the content area, which will be isolated in iframe.
+
+</td>
+</tr>
 </table>
 
 > ### Restriction:  
-> -   The analytical card is using `sap.viz.ui5.controls.VizFrame` charts which are part of SAPUI5 and are not available in OpenUI5.
+> -   1\) The Analytical Card is using `sap.viz.ui5.controls.VizFrame` charts which are part of SAPUI5 and are not available in OpenUI5.
 > 
-> -   The timeline card is using the `sap.suite.ui.commons.Timeline` control which is part of SAPUI5 and is not available in OpenUI5.
+> -   2\) The Timeline Card is using the `sap.suite.ui.commons.Timeline` control which is part of SAPUI5 and is not available in OpenUI5.
 
 
 

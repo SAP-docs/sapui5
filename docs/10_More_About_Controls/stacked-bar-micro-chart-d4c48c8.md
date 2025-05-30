@@ -4,13 +4,15 @@
 
 The control shows a progress chart that displays the overall progress and a summary of the items.
 
-Various bars can have different value colors, for example for different statuses such as accepted, rejected, and open items. There is no limit to the number of bars that the `StackedBarMicroChart` control can contain.
-
 The `sap.suite.ui.microchart.StackedBarMicroChart` control is designed to display key figures or numbers inside a set of bars defined by different lengths and colors. It can be displayed standalone or in a table.
 
-![Stacked Bar Micro Chart with percentage values](images/StackedBar_MC_Standalone_fa042ce.jpg)
+![Stacked Bar Micro Chart in a table with absolute values](images/Suite_Stacked_Bar_Micro_Chart_2_2dfb429.png)
 
-![Stacked Bar Micro Chart in a table with absolute values](images/StackedBar_MC_in_Table_fd785e3.jpg)
+Various bars can have different value colors, for example for different statuses such as accepted, rejected, and open items. There is no limit to the number of bars that the `StackedBarMicroChart` control can contain.
+
+![Stacked Bar Micro Chart with percentage values](images/Suite_Stacked_Bar_Micro_Chart_ccab8f5.png)
+
+For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.suite.ui.microchart.StackedBarMicroChart) and the [Sample](https://ui5.sap.com/#/entity/sap.suite.ui.microchart.StackedBarMicroChart).
 
 
 
@@ -24,7 +26,10 @@ The number of decimal places for percentage values is, by default, 1. This can b
 
 **Bar colors**
 
-By default, the given value is displayed as a label inside the bar, but you can overwrite it in your application using the `displayValue` property. You can also overwrite the default color of the bar \(`valueColor` property\) using predefined `less` parameters for colors, predefined semantic parameters \(for example, `Error`, `Critical`, `Good`, `Neutral`\) or even hex values, such as `#fafafa`. If there is no color, the micro chart automatically chooses one of the chart colors \(`sapUiChart1-11`\).
+By default, the given value is displayed as a label inside the bar, but you can overwrite it in your application using the `displayValue` property. You can also overwrite the default color of the bar \(`valueColor` property\) using predefined `less` parameters for colors, predefined semantic parameters \(for example, `Error`, `Critical`, `Good`, `Neutral`, or `Sequence1-12`\). If there is no color, the micro chart automatically chooses one of the chart colors \(`sapUiChart1-11`\).
+
+> ### Note:  
+> From the SAPUI5 2.0 release, the `valueColor` property only supports `MicroChartColorType`.
 
 **Text and background colors**
 
@@ -42,11 +47,5 @@ The `sap.suite.ui.microchart.StackedBarMicroChart` control is a chart control an
 
 The chart can have a tooltip with predefined `displayValue` property values or calculated percent values and it can be set on bar level and on chart level. Each value of the chart is displayed in the tooltip in a separate line. When the bar has a semantic color, the text \(for example Good, Critical\) will be added behind the displayed value. In some cases the text in the tooltip has another name than the semantic color. The tooltip can be suppressed by setting its value to an empty string.
 
-![Example of a tooltip with semantic colors](images/StackeBar_MC_Tooltip_f181e4e.png)
-
-
-
-## API Reference/Sample
-
-For more information about the `StackedBarMicroChart` control, see the [API Reference](https://ui5.sap.com/#/api/sap.suite.ui.microchart.StackedBarMicroChart) and the samples in the Demo Kit.
+![Example of a tooltip with semantic colors](images/Suite_Stacked_Bar_Micro_Chart_3_3a4e165.png)
 

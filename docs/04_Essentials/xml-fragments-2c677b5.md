@@ -2,7 +2,7 @@
 
 # XML Fragments
 
-XML fragments are similar to XML view, but have no <View\> tag as root element. Instead, there is an SAPUI5 control.
+XML fragments are similar to XML views but have no <View\> tag as root element. Instead, there is an SAPUI5 control.
 
 You define a simple XML fragment as shown in the following code snippet:
 

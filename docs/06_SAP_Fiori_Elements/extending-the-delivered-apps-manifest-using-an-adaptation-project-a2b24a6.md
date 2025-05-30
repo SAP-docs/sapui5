@@ -25,7 +25,7 @@ The delivered apps can be extended by adding a new node in the object page or by
 
 You're working on SAPUI5 1.108 or higher \(ABAP platform 2021 or higher\).
 
-In the `manifest.json` file of the application, the pages and subpages section must be specified in the object format within `sap.ui.generic.app`. Starting from SAPUI5 1.133, the array format is also supported.
+In the `manifest.json` file of the application, the pages and subpages section must be specified in the object format within `sap.ui.generic.app`. As of SAPUI5 1.133, we also support the array format.
 
 
 

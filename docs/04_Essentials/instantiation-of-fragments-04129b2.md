@@ -2,11 +2,11 @@
 
 # Instantiation of Fragments
 
-SAPUI5 provides two options to instantiate a fragment: If it is instantiated inside a controller extending `sap.ui.core.mvc.Controller`, the`loadFragment()` function is the way to go. However, if it is instantiated in a non-controller artefact, the generic function `sap.ui.core.Fragment.load()` can be used.
+SAPUI5 provides two options to instantiate a fragment: If it is instantiated inside a controller extending `sap.ui.core.mvc.Controller`, the `loadFragment()` function is the way to go. However, if it is instantiated in a non-controller artefact, the generic function `sap.ui.core.Fragment.load()` can be used.
 
-Comparing fragments to views, there is one important difference: Fragments are no controls. While views are control instances which have their own HTML and their own set of properties and may contain other controls, fragments just consist of their content. Views contain their content controls, while fragments consist of their content controls.
+When comparing fragments to views, a key difference is that fragments are no controls. Views are control instances with their own HTML, properties, and the ability to contain other controls. In contrast, fragments consist solely of their content.
 
-For example, when a fragment containing a button is instantiated, the result is just this button.
+For example, if a fragment containing a button is instantiated, the result is simply the button itself.
 
 
 
@@ -25,11 +25,35 @@ Since 1.93, the `loadFragment()` function is available on every controller insta
 -   Addition to the `dependents` aggregation: By default, the fragment content is added to the `dependents` aggregation of the view. This offers two major advantages: First, all models and element bindings which are available on the view instance are also available automatically on the fragment content. Second, if the view is destroyed, the fragment content is destroyed also. This option can be disabled by passing `false` to the `addToDependents` parameter. In this case, the application developer has to ensure that the fragment content is destroyed when the view is destroyed. If not, duplicate ID issues might occur.
 
 
+
+
+### Loading XML Fragments
+
+To load an XML fragment, use the following syntax:
+
 ```js
 this.loadFragment({
-    name: "myapp.fragments.MyFragment"
+    name: "myapp.fragments.MyXMLFragment"
 });
 ```
+
+> ### Note:  
+> The `loadFragment()` API uses "XML" as the default fragment type. In this example, the XML fragment is identified by a resource name that maps to the resource path `myapp/fragments/MyXMLFragment.fragment.xml`. This should not be confused with its actual file location, which is typically `webapp/fragments/MyXMLFragment.fragment.xml`.
+
+
+
+### Loading JS Fragments
+
+For JS fragments, use the module name syntax:
+
+```js
+this.loadFragment({
+    name: "module:myapp/fragments/MyJSFragment"
+});
+```
+
+> ### Note:  
+> In this example, the JS fragment is identified by the resource name `myapp/fragments/MyJSFragment.js`. This should not be confused with its actual file location, which is typically `webapp/fragments/MyJSFragment.js`.
 
 
 
@@ -39,11 +63,11 @@ this.loadFragment({
 
 The generic function `sap.ui.core.Fragment.load()` can be called with either the name, the type, and optionally a controller, or with a configuration object and an optional controller; for more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.core.Fragment/methods/sap.ui.core.Fragment.load). 
 
-It either returns the root control contained in the fragment or an array of root controls, depending on the type of the fragment. SAPUI5 offers three types: `XML`, `HTML`, and `JS`.
+It returns a Promise resolving with either the root control contained in the fragment or an array of root controls.
 
 The different methods used for the instantiation of a fragment have the following commonalities:
 
--   A fragment name must be given. This name must be resolvable to the fragment file URL by the SAPUI5 module loading mechanism. In case of JS fragments the name may also be defined inline.
+-   A fragment name must be given. This name must be resolvable to the fragment file URL by the SAPUI5 module loading mechanism. For JS fragments the name can also be defined inline.
 -   A controller can be optionally given. Some fragments may require a controller and certain methods to be present in this controller.
 -   An ID can be optionally given.
 
@@ -54,6 +78,7 @@ The different methods used for the instantiation of a fragment have the followin
 > When using the generic function `sap.ui.core.Fragment.load()` the application developer has to take care to add fragment content only to non-destroyed content:
 > 
 > ```js
+> // Sample for loading an XML Fragment
 > Fragment.load({
 >     name: "myapp.fragments.MyFragment"
 >  }).then(function(oContent){

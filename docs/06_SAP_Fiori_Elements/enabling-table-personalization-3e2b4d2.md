@@ -99,21 +99,21 @@ In the list report, you can set the variant management to `"Page"` level or to `
 
         End users can filter table data choosing one or multiple property values \(unless filtering is disabled\). You can use the `@com.sap.vocabularies.UI.v1.HiddenFilter` annotation to exclude those columns you don't want to be filterable.
 
-        ![](images/Filtering_Columns_3868aad.png)
+        ![](images/Excluding_Columns_from_Filtering_3ee5c40.png)
 
         > ### Note:  
         > Filtering of navigation properties is only available for properties used in the `LineItem`.
 
     -   Sorting
 
-        ![](images/Sorting_Columns_in_Tables_e44ae82.png)
+        ![](images/Table_Personalization_Sorting_f63c073.png)
 
         You can use the `@.OData.Capabilities.V1.SortRestrictions` annotation to exclude those columns you don't want to be sortable. You can use the `@.OData.Capabilities.V1.NavigationRestrictions` annotation to exclude navigation properties.
 
         > ### Note:  
         > Defining sort restrictions is only possible for first-level navigation entities.
 
-        You can use `SortRestrictions` to define your desired `RestrictedProperty` in the `NavigationRestrictions`. Use `SortRestrictions` to either restrict all properties of an entity by setting `Sortable` to `false`, or to disable sorting of individual properties using `NonSortableProperties`. To add sort retrictions for navigation properties, the list of `NonSortableProperties` must be prefixed with the `NavigationPropertyPath`.
+        You can use `SortRestrictions` to define your desired `RestrictedProperty` in the `NavigationRestrictions`. Use `SortRestrictions` to either restrict all properties of an entity by setting `Sortable` to `false`, or to disable sorting of individual properties using `NonSortableProperties`. To add sort restrictions for navigation properties, the list of `NonSortableProperties` must be prefixed with the `NavigationPropertyPath`.
 
         > ### Sample Code:  
         > XML Annotation for `SortRestrictions` in `NavigationRestrictions`
@@ -181,9 +181,18 @@ In the list report, you can set the variant management to `"Page"` level or to `
 
     -   Adding or removing columns
 
-        End users can add or remove all properties of the root entity of a given table. Selected properties are shown at the top of the list. Users can sort tables by choosing individual columns or multiple columns \(unless sorting is disabled\). Users can sort each column in ascending or descending order.
+        End users can add, remove, or reorder all properties of the entity shown for a given table.
 
-        ![](images/Adding_or_Removing_Columns_caf79df.png)
+        ![](images/Add_Remove_or_Reorder_Properties_45d596d.png)
+
+        From this view, the end user can also use the filter toggle buttons to do the following:
+
+        -   To show or hide the properties which are used as text description of other properties \(properties with text arrangement\)
+
+        -   To show only the columns already shown in the table
+
+
+        ![](images/Hide_Descriptions_Show_Selected_16e4a63.png)
 
     -   Grouping \(available for analytical and responsive tables\)
 
@@ -200,11 +209,14 @@ For a responsive table, the user can open the sorting, filtering, and grouping d
 > ### Note:  
 > When the end user selects the Filter menu, the default properties displayed for sorting, filtering, and grouping are the properties visible in the column. Any sorting and filtering restrictions are reflected in this dialog. The TextArrangement also has an impact as described in the [Personalization for Properties with Text Arrangement](enabling-table-personalization-3e2b4d2.md#loio3e2b4d212b66481a829ccef1dc0ca16b__personalization_text_arrangement) subsection in this topic.
 
+> ### Restriction:  
+> You can't perform sorting and grouping of 1:n \(multi-input\) fields.
+
 
 
 ### Sorting Amount with Currency or Unit of Measure
 
-When sorting a column that contains an amount with a currency or a unit of measure, the sort is applied on the currency or the unit of measure first and then to the amount field. This sorting mechanism ensures a consistent display of the amount when different currencies or units of measure are used.
+When sorting a column that contains an amount with a currency or a unit of measure, an ascending sort is applied on the currency or the unit of measure first, and then the defined sort is applied on the amount field. This sorting mechanism ensures a consistent display of the amount when different currencies or units of measure are used.
 
 
 

@@ -16,13 +16,13 @@ The different values can be visualized in the charts by a semantically-colored r
 > ### Note:  
 > You can include a `MicroChart` control into a `GenericTile` control in the responsive mode only. However, if you define a width, a height, and size properties, this data is overwritten and the responsive mode is used.
 
-![Different microcharts](images/MicroChart_Library_Image_fc12e08.png)
+![Different Microcharts](images/Suite_sap_suite_ui_microchart_b6695cd.png)
 
 
 
 ## Prerequisites
 
-With the new `sap.suite.ui.microchart` library, the available MicroChart controls of the `sap.suite.ui.commons` library have been moved to their own library with SAPUI5 version 1.34.
+With the new `sap.suite.ui.microchart` library, the available `MicroChart` controls of the `sap.suite.ui.commons` library have been moved to their own library with SAPUI5 version 1.34.
 
 -   If you have already included a `MicroChart` control before SAPUI5 version 1.34, a wrapper ensures that the embedding still works for each control. To benefit from all enhancements or new features for the `MicroChart` controls as of SAPUI5 1.34, you need to switch to the controls to the new library. With SAPUI5 1.34, all `MicroChart` controls in the `sap.suite.ui.commons` library are marked as deprecated. The respective controls are as follows:
 

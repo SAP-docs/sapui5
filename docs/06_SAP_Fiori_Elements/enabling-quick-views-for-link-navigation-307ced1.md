@@ -21,8 +21,7 @@ You can display information about the navigation target already on the source en
 > ### Note:  
 > `QuickViewFacets` can only be annotated for those `EntityTypes` that are in the same service. Only these are referenced with referential constraints in the metadata document.
 
-> ### Note:  
-> We've removed videos showing step-by-step procedures using SAP Web IDE, which SAP no longer actively supports. You can still access the video using an older version of this document.
+This video shows the step-by-step procedure for enabling quick views for link navigation:
 
 To do so, perform the following steps:
 

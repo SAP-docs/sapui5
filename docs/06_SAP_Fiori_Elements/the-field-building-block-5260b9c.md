@@ -17,6 +17,104 @@ This instantiates the actual control tree that corresponds to this building bloc
 
 You can use the `Field` building block either as a standalone or inside the `fields` aggregation of a `FormElement` building block for automatically getting a label for the field corresponding to the metadata. You can use the `Field` building block inside custom header facets, custom sections, custom pages, and custom table columns.
 
+You can also use the `Field` building block to dynamically create fields at runtime. You can use this building block within controllers for more flexibility and a wider variety of use cases.
+
+The following sample code shows an example of a field used inside a dialog:
+
+> ### Sample Code:  
+> ```
+> createField: function () {
+>     const maxLength = new FormatOptions({ textMaxLength: 10 });
+>     const field = new Field({ metaPath: "/Entities/singleLine", formatOptions: maxLength });
+> 
+>     const newDialog = new Dialog({
+>         title: "Dialog",
+>         content: [
+>             new Label({
+>                 text: "My field",
+>                 labelFor: field
+>             }),
+>             field,
+>         ],
+>         beginButton: new Button({
+>             text: "OK",
+>             press: function () {
+>                 newDialog.close();
+>             }
+>         }),
+>         endButton: new Button({
+>             text: "Cancel",
+>             press: function () {
+>                 newDialog.close();
+>             }
+>         })
+>     });
+>     newDialog.addStyleClass("sapUiContentPadding");
+>     newDialog.bindElement("/Entities(1)");
+>     this.getExtensionAPI().addDependent(newDialog);
+>     newDialog.open();
+> }
+> ```
+
+
+
+<a name="loio5260b9ca249f465ab33769b9edb442aa__section_v3v_mjx_dfc"/>
+
+## Configuration Using Manifest Settings
+
+You can use manifest settings to configure the `Field` building block.
+
+The following settings are available:
+
+-   `readOnly`
+-   `semanticObject`
+-   The following `formatOptions` parameters:
+
+    -   `textLinesEdit`
+    -   `textMaxLines`
+    -   `textMaxCharactersDisplay`
+    -   `textExpandBehaviorDisplay`
+    -   `textMaxLength`
+
+    For more information about using the `formatOptions` settings, see the [Manifest-Based Definition](different-representations-of-a-field-c18ada4.md#loioc18ada4bc56e427a9a2df2d1898f28a5__ManifestBasedDefinition) subsection in [Different Representations of a Field](different-representations-of-a-field-c18ada4.md).
+
+
+> ### Restriction:  
+> You can only use the `readOnly` and `semanticObject` settings if you use the `Field` building block as follows:
+> 
+> -   If you use the `Field` building block in a standard UI, you must use the field within a field group.
+> 
+> -   If you use the `Field` building block in a custom section or a custom page, you must use the field within a `Form` building block with an assigned field group.
+
+See the following sample code of using the `readOnly` setting:
+
+> ### Sample Code:  
+> `manifest.json`
+> 
+> ```
+> "sap.ui5": {
+>     "routing": {
+>         "targets": {
+>             "SalesOrderManageObjectPage": {
+>                 "options": {
+>                     "settings": {
+>                         "controlConfiguration": {
+>                             "@com.sap.vocabularies.UI.v1.FieldGroup#myQualifier": {
+>                                 "fields": {
+>                                     "DataField::myFormTextField": {
+>                                         "readOnly": true
+>                                     }
+>                                 }
+>                             }
+>                         }
+>                     }
+>                 }
+>             }
+>         }
+>     }
+> }
+> ```
+
 
 
 <a name="loio5260b9ca249f465ab33769b9edb442aa__section_idk_qmr_j5b"/>

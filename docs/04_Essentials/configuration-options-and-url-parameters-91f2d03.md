@@ -434,6 +434,34 @@ by URL parameter
 <tr>
 <td valign="top">
 
+`favicon`
+
+</td>
+<td valign="top">
+
+[Type](configuration-options-and-url-parameters-91f2d03.md#loio91f2d03b6f4d1014b6dd926db0e91070__section_TVT): `boolean | string`
+
+Default value: undefined
+
+Defines whether a favicon is used. If set to `true`, a favicon, defined as part of a custom theme, is used. If no custom favicon has been defined or if the theme is an SAP standard theme, the SAP logo is used as favicon. You can also provide a relative path to a favicon as a string, e.g. to specify a favicon for a dedicated application. Absolute URLs are not allowed as origin for a favicon.
+
+</td>
+<td valign="top">
+
+![NO](images/Cancel_dfb38de.png)
+
+</td>
+<td valign="top">
+
+![YES](../02_Read-Me-First/images/Checked_Okay_3929e46.png)
+
+[`Theming.setFavicon`](https://ui5.sap.com/#/api/module:sap/ui/core/Theming%23methods/sap/ui/core/Theming.setFavicon)
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
 `theme`
 
 </td>
@@ -500,41 +528,6 @@ Defines the location of themes.
 Default value: `{}`
 
 Specifies a list of UI libraries using the same syntax as the `libs` property, for which the SAPUI5 core does not include the `library.css` stylesheet in the head of the page. If the list starts with an exclamation mark \(!\), no stylesheet is loaded at all for the specified libs. In this case, it is assumed that the application takes care of loading CSS, for example, a manually merged, single CSS file. Otherwise, the framework instructs the back end to create a merged CSS for the specified libs. In both cases, if the first libraries name is an asterisk \(\*\), it will be expanded to the list of already configured libraries.
-
-</td>
-<td valign="top">
-
-![YES](../02_Read-Me-First/images/Checked_Okay_3929e46.png)
-
-</td>
-<td valign="top">
-
-![NO](images/Cancel_dfb38de.png)
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-`versioned-lib-css`
-
-</td>
-<td valign="top">
-
-[Type](configuration-options-and-url-parameters-91f2d03.md#loio91f2d03b6f4d1014b6dd926db0e91070__section_TVT): `boolean`
-
-Default value: `false`
-
-If set to `true`, the version parameters are included in requests to the library theme resource \(for example, the parameter `library.css?version=1.0.1&sap-ui-dist-version=1.0.2` is added. `version` contains the library version and `sap-ui-dist-version` the version of the SAPUI5 distribution .
-
-This applies to the following resources:
-
--   `library(-RTL).css` \(or any other variation\)
-
--   `library-parameters.json` 
-
-
-URLs within the CSS or parameters are not modified.
 
 </td>
 <td valign="top">

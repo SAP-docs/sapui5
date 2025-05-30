@@ -166,7 +166,7 @@ Filtering draft-related data is enabled by default in SAP Fiori elements for ODa
 
 ### Using the Collaborative Draft
 
-If the service supports the collaborative draft using a `ShareAction` annotation, all drafts are automatically shared with all users who have access to the business object. Users can edit the entity as long as the draft exists.
+If the service supports the collaborative draft using a `ShareAction` annotation, all drafts are automatically shared with all users who have access to draft data of the business object. In this case, users can edit the entity as long as the draft exists. If the user isn't authorized to modify draft data of the business object, a warning is displayed, and the draft is opened in display mode.
 
 Avatars of all the users who are currently accessing this draft are displayed in the object page header.
 
@@ -272,7 +272,7 @@ These applications work as follows:
 
 -   [Draft Handling in SAP Fiori Design Guidelines](https://experience.sap.com/fiori-design-web/draft-handling/)
 
--   [Developing New Transactional Apps with Draft Capabilities](https://help.sap.com/viewer/cc0c305d2fab47bd808adcad3ca7ee9d/7.52.2/en-US/d36820f082c84085b6634be4576e351a.html) 
+-   [Developing New Transactional Apps with Draft Capabilities](https://help.sap.com/docs/SAP_NETWEAVER_AS_ABAP_752/cc0c305d2fab47bd808adcad3ca7ee9d/d36820f082c84085b6634be4576e351a.html) 
 
 -   [Confirmation Popups](confirmation-popups-9a53662.md)
 

@@ -16,5 +16,5 @@ The following image shows an overview of the main tools, repositories, APIs, and
 
 -   The SAPUI5 application index contains information related to the supported cache busting mechanisms and the content of the descriptor for SAPUI5 apps, components, and libraries. The content of the SAPUI5 application index can be **consumed by an API**, for example, by SAP Fiori launchpad. Cache busting-related information of the SAPUI5 application index can also be used by the request handlers \(at runtime, for SAPUI5 apps that are using this mechanism\).
 -   At runtime, the application resources needed by SAPUI5 apps are accessed through a specific **runtime API** from the SAPUI5 ABAP repository, whereas the SAPUI5 distribution layer artifacts \(such as controls\) are retrieved from a separate repository. The application resources and the SAPUI5 distribution layer artifacts are served through SAPUI5-specific request handlers assigned to the respective ICF nodes.
--   Another part of the SAPUI5 ABAP repository is the SAPUI5 text repository.
+-   Another part of the SAPUI5 ABAP repository is the SAPUI5 ABAP text repository.
 
