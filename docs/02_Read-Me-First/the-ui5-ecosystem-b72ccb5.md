@@ -49,7 +49,7 @@ UI5 linter scans your SAPUI5 project and detects issues that can prevent the pro
 
 ### Further Information
 
--   [UI5 linter on GitHub](https://github.com/SAP/ui5-linter)
+-   [UI5 linter on GitHub](https://github.com/UI5/linter)
 
 <a name="loio702f08a7481e46688c5603385b5bdc68"/>
 

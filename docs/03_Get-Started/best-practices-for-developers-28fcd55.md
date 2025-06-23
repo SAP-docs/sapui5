@@ -60,13 +60,13 @@ To build and serve your project in accordance with best practices, we recommend 
 
 ### Supporting Tool - UI5 Linter
 
-[UI5 linter](https://github.com/SAP/ui5-linter) is a command-line tool to identify legacy code in your SAPUI5 project. It checks JavaScript, TypeScript, XML, JSON, and other files in your project and reports findings if legacy code is used. UI5 linter is our state-of-the-art tool to get and keep your SAPUI5 project legacy-free.
+[UI5 linter](https://github.com/UI5/linter) is a command-line tool to identify legacy code in your SAPUI5 project. It checks JavaScript, TypeScript, XML, JSON, and other files in your project and reports findings if legacy code is used. UI5 linter is our state-of-the-art tool to get and keep your SAPUI5 project legacy-free.
 
 
 
 ### Deprecated APIs
 
-In general, **you must not use deprecated APIs** anymore, such as `sap.ui.getCore()`. You can find deprecated APIs in the [API Reference](https://ui5.sap.com/#/api/deprecated), in the [What's New Viewer](https://help.sap.com/whats-new/67f60363b57f4ac0b23efd17fa192d60?Type=Deleted%3BDeprecated), and in the reports by our [Support Assistant](../04_Essentials/support-assistant-57ccd7d.md) and [UI5 linter](https://github.com/SAP/ui5-linter). For new projects, we recommend the use of TypeScript, because usage of deprecated APIs can then be detected easily.
+In general, **you must not use deprecated APIs** anymore, such as `sap.ui.getCore()`. You can find deprecated APIs in the [API Reference](https://ui5.sap.com/#/api/deprecated), in the [What's New Viewer](https://help.sap.com/whats-new/67f60363b57f4ac0b23efd17fa192d60?Type=Deleted%3BDeprecated), and in the reports by our [Support Assistant](../04_Essentials/support-assistant-57ccd7d.md) and [UI5 linter](https://github.com/UI5/linter). For new projects, we recommend the use of TypeScript, because usage of deprecated APIs can then be detected easily.
 
 Also, see the relevant warnings and errors logged to the browser's dev console during runtime. You might need to increase the `sap-ui-log-level`. For more information, see [Logging and Tracing](../04_Essentials/logging-and-tracing-9f4d62c.md).
 
