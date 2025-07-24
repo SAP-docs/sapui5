@@ -31,7 +31,7 @@ If the extension does not return a result, the save operation starts without wai
 > 			this.oDialog = new sap.m.Dialog({
 > 				title: "BeforeSaveExtension",
 > 				content: new sap.m.Text({
-> 					text: "This is an example to check the beforeSaveExtension"
+> 					text: "This is an exmpale to check the beforeSaveExtension"
 > 				}),
 > 				beginButton: new sap.m.Button({
 > 					text: "Continue to Save",
