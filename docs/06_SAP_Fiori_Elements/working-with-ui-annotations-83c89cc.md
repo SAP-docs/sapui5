@@ -1,76 +1,197 @@
 <!-- loio83c89ccef12f48ab98f6c3811bd025b3 -->
 
+
 # Working With UI Annotations
 
-Vocabularies and annotations allow you to extend OData services by adding information about how to interpret the OData service and its data.
+## Overview
 
-> ### Note:  
-> Please note that this topic has not yet been updated with information specific to OData V4.
+UI annotations are metadata elements used to define how data is presented in SAP Fiori applications. They are typically applied to CDS views and exposed via OData services. This document outlines how to work with UI annotations across different programming models:
 
-For a general introduction to vocabularies and annotations, see the following links:
+-   **OData V2 with BOPF or RAP**
+-   **OData V4 with RAP**
+-   **CAP (Cloud Application Programming Model)**
 
--   [Vocabulary Based Annotations](http://scn.sap.com/community/gateway/blog/2013/10/07/vocabulary-based-annotations)
+---
 
--   [Vocabularies](http://www.odata.org/vocabularies/)
+## ⚠️ Version Scope
 
-On the SAP Gateway front-end server, you can find SAP-specific vocabularies in the SAP Gateway Service Builder \(transaction `SEGW`\) under *Extras* \> *Vocabulary Repository*.
+> This documentation includes guidance for **OData V2**, **OData V4**, and **CAP**. Please ensure you are referencing the correct section based on your project’s architecture.
 
-The following types of vocabulary-based annotations are available:
+---
 
--   In-place: These are part of the service's metadata document.
+## Annotation Types
 
--   Ex-place: These are composed of an Annotation Provider Class \(APC\) outside the metadata document. The APC is bound to the service using a registration in transaction `/IWBEP/REG_VOCAN`.
+| Type                 | Description                                                        | Applicable Models |
+| -------------------- | ------------------------------------------------------------------ | ----------------- |
+| In-place annotations | Defined directly in CDS views using `@UI.*`                        | V2, V4, CAP       |
+| Ex-place annotations | Defined in metadata extension files                                | V2 only           |
+| Vocabulary-based     | Uses standardized vocabularies like `UI`, `Common`, `Capabilities` | V2, V4, CAP       |
 
+---
 
-These annotations are available using a query to the SAP Gateway catalog service, `/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/`. Entity Set: 'Annotations'.
+⚠️ While it is technically possible to expose BOPF-based business objects via OData V4, this approach is not recommended. For new developments, SAP recommends using the RESTful ABAP Programming Model (RAP), which provides native support for OData V2 and V4, draft handling, and UI annotations.
 
+---
 
+## OData V2 with BOPF or RAP
 
-## Reusability
+OData V2 services can be built using either the **classic ABAP programming model with BOPF** or the **modern RAP framework**.
 
-If the OData service is editable instead of read-only, add annotation elements as needed to activate or control the draft infrastructure. Existing read-only OData services that are annotated, such as fact sheets, can be reused for the list report and object page templates under these circumstances:
+### With BOPF
 
--   The annotations have to be stored in the back-end system. They also need to have the life cycle of the data model in the back-end system. Note that facet texts need to be defined in a front-end file after generation.
+-   UI annotations can be defined in-place or ex-place.
+-   Draft handling and actions are managed via BOPF configuration and classes.
+-   Technically, BOPF can be exposed via OData V4, but this is **not recommended** due to limited support and complexity.
 
--   The OData service models \(entity sets and entity types\) are derived from CDS views. The CDS entities are the primary artifacts for the data model. The transactional runtime model \(based on the BOPF\) is generated based on annotations.
+### With RAP
 
--   The UI annotations are attached to CDS views using the tags as defined in the SAP - ABAP Programming Model for SAP Fiori guide in the documentation for your SAP NetWeaver version on SAP Help Portal at [https://help.sap.com/viewer/p/SAP\_NETWEAVER](https://help.sap.com/viewer/p/SAP_NETWEAVER).
--   In the front end, CDS UI annotations are exposed generically and dynamically through SAP Gateway APIs \(APC\) as OData Version 4.0 annotation documents that can be addressed separately.
+-   RAP supports OData V2 bindings.
+-   Behavior definitions and CDS views are used to define business logic and annotations.
+-   Draft handling and deep entity operations are supported.
 
--   Although you can use any annotation source, we recommend using CDS annotations in metadata extensions and exposing them using SAP Gateway and SADL. The exposure generates OData annotations \(XML format\) from the CDS annotations. The following sections explain which OData annotation controls each UI element.
+### Example: RAP OData V2 Deep Entity
 
-    For more information, search for *SAP-ABAP Programming Model for SAP Fiori* and for *CDS Annotations* in the documentation for your SAP NetWeaver version on SAP Help Portal at [https://help.sap.com/viewer/p/SAP\_NETWEAVER](https://help.sap.com/viewer/p/SAP_NETWEAVER).
+```abap
+define root custom entity ZCE_R_Header {
+  key hdr_Key    : land1;
+      hdr_field1 : landx;
+      hdr_field2 : natio;
+      _item      : composition [1..*] of ZCE_I_Items;
+}
+```
 
+Service bindings can be configured for OData V2 or V4 depending on the use case.
 
+---
 
+## OData V4 with RAP
 
-## Actions
+The **RESTful ABAP Programming Model (RAP)** is optimized for OData V4 but also supports V2. It simplifies development by integrating annotations, behavior definitions, and draft handling.
 
-General actions are available for draft-enabled documents \(edit, save, cancel/discard\). You can also define additional actions using annotations.
+### CDS UI Annotations
 
-The draft-handling actions are handled by the Business Object Processing Framework \(BOPF\). However, you must back up the application-specific actions using an implementation in the OData service. For general information about actions and how to set them up, see [Actions](actions-cbf16c5.md).
+```abap
+@UI.lineItem: [
+  { position: 10, value: 'ProductID' },
+  { position: 20, value: 'ProductName' }
+]
+@UI.selectionField: [ 'ProductID', 'ProductName' ]
+@UI.identification: [
+  { position: 10, value: 'ProductName' }
+]
+```
 
-Each action corresponds to an OData function import.
+### Draft Handling
 
+```abap
+@ObjectModel.draftEnabled: true
+```
 
+Behavior definitions manage actions, validations, and lifecycle events.
 
-## Field Control
+---
 
-> ### Note:  
-> This is relevant only for list report and object pages, worklists, and analytical list pages.
-> 
-> Field controls are omitted from the list report page since it is a read-only page. In a list report page, field controls are considered only if there are custom actions that reference field controls.
+## CAP (Cloud Application Programming Model)
 
-You can use field controls to display a UI field as mandatory or read-only, and to hide the field. Field control information is partly static information and valid for all business document instances. However, most use cases are dynamic and reflect the state of the UI application, business document, or user context and must be controlled by the business logic.
+CAP supports UI annotations for SAP Fiori elements and exposes services via OData V4. Annotations are defined in CDS or CSN format.
 
-As business logic is implemented in the OData service, the OData service also has to provide the relevant field control information. The controls interpret and apply field control information automatically provided by the OData service. This is valid for the static information the service metadata contains, as well as for dynamic information that is part of the entity data. There is a specification for an SAP extension of the OData protocol based on annotations for OData Version 2.0 that also covers field control. For more information, see [SAP Annotations for OData Version 2.0](https://sap.github.io/odata-vocabularies/docs/v2-annotations.html).
+### Example: CAP CDS with UI Annotations
 
+```cds
+entity Products {
+  key ID          : UUID;
+      name        : String;
+      category    : String;
 
+  @UI.lineItem: [
+    { value: ID },
+    { value: name },
+    { value: category }
+  ]
+  @UI.selectionField: [ name, category ]
+}
+```
 
-<a name="loio83c89ccef12f48ab98f6c3811bd025b3__section_eds_2ny_qlb"/>
+---
 
-## More Information
+## 📌 Recommendation: Backend vs Frontend Annotations (OData V2 & V4)
 
--   For more information about the BOPF model, see *SAP - BOPF Developer Guide* in the documentation for your SAP NetWeaver version on SAP Help Portal at [https://help.sap.com/viewer/p/SAP\_NETWEAVER](https://help.sap.com/viewer/p/SAP_NETWEAVER).
+When building SAP Fiori applications using OData V2 or V4 (outside of CAP), developers can define UI annotations either:
+
+-   **In the backend** (CDS views using `@UI.*` annotations)
+-   **In the frontend** (XML annotation files or manifest extensions)
+
+### ✅ Backend (CDS) Annotations – Recommended
+
+**Advantages:**
+-   Centralized logic and UI metadata
+-   Easier reuse across multiple applications
+-   Automatically interpreted by SAP Fiori elements
+-   Supports both OData V2 and V4
+-   Aligns with SAP’s strategic direction (RAP, Fiori elements)
+
+**Use When:**
+-   You control the backend CDS views
+-   You want to leverage Fiori elements for auto-generated UIs
+-   You need consistent UI behavior across apps
+
+### ⚠️ Frontend (XML) Annotations – Use with Caution
+
+**Advantages:**
+-   Flexibility for customizing UI without changing backend
+-   Useful when backend annotations are missing or inaccessible
+
+**Limitations:**
+-   Harder to maintain and scale
+-   UI logic is decoupled from data model
+-   Requires manual updates if backend changes
+-   Not recommended for RAP-based services
+
+**Use When:**
+-   You cannot modify the backend CDS views
+-   You need temporary overrides or quick UI fixes
+
+> 🧭 SAP recommends defining UI annotations **in the backend CDS views** whenever possible. This ensures consistency, maintainability, and full compatibility with SAP Fiori elements and the RAP model. Frontend annotations should be used only as a fallback or for minor UI adjustments.
+
+---
+
+## 🛠️ SAP Fiori Tools Support
+
+SAP Fiori tools provide a powerful set of extensions for **Visual Studio Code** and **SAP Business Application Studio** that assist developers in:
+
+-   Creating SAP Fiori elements apps
+-   Managing and previewing annotations (both backend and frontend)
+-   Generating UI from OData metadata
+-   Debugging and testing Fiori applications
+
+These tools are especially helpful when working with CAP based Fiori elements applications and frontend XML annotations in OData V2 and V4.
+
+> 📦 Download the SAP Fiori tools extension pack from the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=SAPSE.sap-ux-fiori-tools-extension-pack).
+
+> 📘 For official documentation and tutorials, visit the [SAP Fiori Tools Help Portal](https://help.sap.com/docs/r/product/SAP_FIORI_tools/Latest/en-US).
+
+---
+
+## Migration Guidance
+
+| From                | To                   | Migration Notes                                                                  |
+| ------------------- | -------------------- | -------------------------------------------------------------------------------- |
+| BOPF (OData V2)     | RAP (OData V2 or V4) | Replace metadata extensions with in-place annotations; use behavior definitions  |
+| CDS with ex-place   | CDS with in-place    | Consolidate annotations into CDS views                                           |
+| BOPF actions        | RAP actions          | Use behavior definitions and ABAP classes                                        |
+| Classic UI5         | Fiori elements       | Leverage annotations for auto-generated UI                                      |
+
+---
+
+## Further Reading
+
+-   [SAP Help Portal – RAP Guide](https://help.sap.com/docs/abap-cloud/abap-rap/abap-restful-application-programming-model)
+-   [OData V2 in RAP](https://help.sap.com/docs/abap-cloud/abap-rap/odata-v2)
+-   [SAP Fiori Elements V4](https://sapui5.hana.ondemand.com/sdk/)
+-   [CAP Annotation Documentation](https://cap.cloud.sap/docs/advanced/fiori#fiori-annotations)
+-   [SAP Fiori Tools Help Portal](https://help.sap.com/docs/r/product/SAP_FIORI_tools/Latest/en-US)
+
+---
+
 
 
