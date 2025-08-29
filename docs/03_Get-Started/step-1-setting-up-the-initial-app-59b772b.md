@@ -25,7 +25,15 @@ The structure in this step will be used throughout the rest of this tutorial. Th
 ## Setup
 
 > [!WARNING]
-> Flexible column layout is a "Layout Control". The control tag must be enclosed in `<App><pages> "FLexible Layout Goes Here" </pages></App>`. The browser will show an empty page other wise.
+> Flexible Column Layout is a "Layout Control". The control tag must be enclosed in
+> ```
+> <App>
+> <pages>
+>    "FLexible Layout Goes Here"
+> </pages>
+> </App>
+> ```
+> The browser will show an empty page other wise.
 
 1.  To set up your project for this tutorial, download the files at [Flexible Column Layout App - Step 1](https://ui5.sap.com/#/entity/sap.f.tutorial.fcl/sample/sap.f.tutorial.fcl.01).
 
