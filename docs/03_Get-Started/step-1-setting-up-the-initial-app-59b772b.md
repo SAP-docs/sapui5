@@ -25,12 +25,12 @@ The structure in this step will be used throughout the rest of this tutorial. Th
 ## Setup
 
 > [!WARNING]
-> Flexible Column Layout is a "Layout Control". The control tag must be enclosed in
+> Flexible Column Layout is a "Layout Control". The control tag must be enclosed in a container as shown below:
 > ```
 > <App>
-> <pages>
->    "FLexible Layout Goes Here"
-> </pages>
+>   <pages>
+>     -- "FLexible Layout Tag Goes Here"--
+>   </pages>
 > </App>
 > ```
 > The browser will show an empty page other wise.
