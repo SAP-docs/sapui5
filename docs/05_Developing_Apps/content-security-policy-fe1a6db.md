@@ -606,6 +606,23 @@ When native hyphenation is not available, a third-party library \(Hyphenopoly\) 
 </td>
 </tr>
 <tr>
+<td valign="top">
+
+`sap.ndc.BarcodeScanner`
+
+</td>
+<td valign="top">
+
+BarcodeScanner
+
+</td>
+<td valign="top">
+
+`script-src` requires `wasm-unsafe-eval`
+
+</td>
+</tr>
+<tr>
 <td valign="top" align="center" colspan="3">
 
 <code><b>style-src 'unsafe-inline'</b></code>
