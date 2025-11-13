@@ -535,7 +535,7 @@ You can see the grouping applied on the *Country* property, and the totals for t
 
 ![](images/ALP_Groupings_and_Totals_ae1b171.png)
 
-End users can always change groups and totals via the column header and the aggregation icon of the analytical table:
+End users can always change groups and totals using the column header and the aggregation icon of the analytical table:
 
 ![](images/ALP_Changing_Groupings_and_Totals_d94d57a.png)
 

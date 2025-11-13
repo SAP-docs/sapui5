@@ -165,7 +165,7 @@ SAP Business Application Studio, SAP Fiori tools
 </table>
 
 > ### Note:  
-> In addition to assigning these authorization objects, you also have to activate certain ICF services . For more information, see [Configuring the ABAP Back-end for ABAP Development Tools](https://help.sap.com/doc/2e65ad9a26c84878b1413009f8ac07c3/latest/en-US/config_guide_system_backend_abap_development_tools.pdf)
+> In addition to assigning these authorization objects, you also have to activate certain ICF services. For more information, see [Configuring the ABAP Back-end for ABAP Development Tools](https://help.sap.com/doc/2e65ad9a26c84878b1413009f8ac07c3/latest/en-US/config_guide_system_backend_abap_development_tools.pdf)
 
 **Delivered Virus Scan Profiles** 
 
@@ -183,7 +183,7 @@ Using an ICF handler, you can execute SAPUI5 applications by retrieving their re
 
 **Delivered ICF Nodes** 
 
-For the execution of SAPUI5 applications from the SAPUI5 ABAP repository, SAP delivers ICF node `/sap/bc/ui5_ui5/`. This node contains sub nodes for each application.
+To execute SAPUI5 applications from the SAPUI5 ABAP repository, SAP delivers ICF node `/sap/bc/ui5_ui5/`. This node might contain sub-nodes for certain applications, such as applications requiring their own HTTP handler.
 
 > ### Note:  
 > Since all services delivered by SAP are inactive initially, please activate all required services.
@@ -217,7 +217,7 @@ The SAPUI5 application index REST API can be executed from ABAP systems with an 
 
 **Delivered ICF Nodes**
 
-For the execution of the SAPUI5 application index REST API, SAP delivers ICF node `/sap/bc/ui2/app_index`.
+For the execution of the SAPUI5 index REST API, SAP delivers ICF node `/sap/bc/ui2/app_index`.
 
 > ### Note:  
 > Since all services delivered by SAP are inactive initially, please activate all required services.

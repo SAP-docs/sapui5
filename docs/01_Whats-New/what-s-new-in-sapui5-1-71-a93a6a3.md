@@ -1015,7 +1015,7 @@ You can now use `typeImageURL` as a fallback option for the header image. For mo
 
 The list report has these new features:
 
--   The default text in the Delete dialog box has been enhanced to provide object information. For more information, see [Configuring the Delete Dialog Box](../06_SAP_Fiori_Elements/configuring-the-delete-dialog-box-15b7740.md).
+-   The default text in the Delete dialog box has been enhanced to provide object information. For more information, see [Configuring the Delete Dialog in List Reports](../06_SAP_Fiori_Elements/configuring-the-delete-dialog-in-list-reports-15b7740.md).
 
 -   You can use the SAPUI5 Visual Editor to improve the usability of the list report's table layout if a high number of columns is displayed by choosing different popin layout options. For more information, see [Adapting the UI: List Report and Object Page](../06_SAP_Fiori_Elements/adapting-the-ui-list-report-and-object-page-0d2f1a9.md).
 
@@ -1041,6 +1041,18 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.141](what-s-new-in-sapui5-1-141-a7ed66d.md "With this release SAPUI5 is upgraded from version 1.140 to 1.141.")
+
+[What's New in SAPUI5 1.140](what-s-new-in-sapui5-1-140-26a106c.md "With this release SAPUI5 is upgraded from version 1.139 to 1.140.")
+
+[What's New in SAPUI5 1.139](what-s-new-in-sapui5-1-139-e10db71.md "With this release SAPUI5 is upgraded from version 1.138 to 1.139.")
+
+[What's New in SAPUI5 1.138](what-s-new-in-sapui5-1-138-8f6a92b.md "With this release SAPUI5 is upgraded from version 1.136 to 1.138.")
+
+[What's New in SAPUI5 1.136](what-s-new-in-sapui5-1-136-a82754d.md "With this release SAPUI5 is upgraded from version 1.135 to 1.136.")
+
+[What's New in SAPUI5 1.135](what-s-new-in-sapui5-1-135-93d7630.md "With this release SAPUI5 is upgraded from version 1.134 to 1.135.")
 
 [What's New in SAPUI5 1.134](what-s-new-in-sapui5-1-134-c512d71.md "With this release SAPUI5 is upgraded from version 1.133 to 1.134.")
 

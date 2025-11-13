@@ -41,7 +41,7 @@ A reuse component may expose properties that can be used to communicate with the
 
 ### Overriding the Setters
 
-To consume the properties, the reuse component can override the setters. If the reuse component is to react via coding to changes of its properties, override the setter method of the corresponding property within the reuse component.
+To consume the properties, the reuse component can override the setters. If the reuse component is to react through coding to changes of its properties, override the setter method of the corresponding property within the reuse component.
 
 
 
@@ -69,7 +69,7 @@ A reuse component that can be used within a SAP Fiori elements-based application
 
 **Stable IDs**
 
-For some purposes it is helpful if the IDs of the controls used within a reuse component instance are stable. As a prerequisite, the ID of the view hosting the content of the reuse component is stable. You should define this view declaratively. Specify the view within the `manifest.json` of the reuse component.
+For some purposes it is helpful if the IDs of the controls used within a reuse component instance are stable. As a prerequisite, the ID of the view hosting the content of the reuse component is stable. You should define this view declaratively. Specify the view within the `manifest.json` file of the reuse component.
 
 
 
@@ -455,7 +455,7 @@ The name of the navigation property \(in this case, `myNavigationProperty`\) mus
 ## Additional Features in SAP Fiori Elements for OData V4
 
 > ### Note:  
-> -   SAP Fiori elements for OData V4 currently does not provide an eventing API for reuse components to support draft handling \(creating or saving a draft entity\).
+> -   SAP Fiori elements for OData V4 does not provide an eventing API for reuse components to support draft handling \(creating or saving a draft entity\).
 > 
 > -   You can implement reuse components using your own internal OData model, which is independent of the embedding application. With SAP Fiori elements for OData V4, applications can embed reuse components that are based on an own SAP Fiori elements for OData V2 model. Provide a name for the internal model to avoid conflicts with the propagated unnamed OData model used by the application. For more information, see the section *Model Propagation* in this topic.
 

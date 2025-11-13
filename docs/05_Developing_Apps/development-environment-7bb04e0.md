@@ -13,17 +13,17 @@ Depending on your use case, the following environments might be interesting for 
 
 <a name="loio7bb04e05f9484e1b95b38a2e48ecef4f__section_ud3_1ds_ymb"/>
 
-## UI5 Tooling
+## UI5 CLI
 
-[UI5 Tooling](https://sap.github.io/ui5-tooling/) is an open and modular toolchain to develop state-of-the-art SAPUI5 applications. As a modern build and development environment it comes with a [command line interface \(CLI\)](https://sap.github.io/ui5-tooling/pages/CLI/), leverages Node.js and npm, and is being further advanced as an open-source project.
+[UI5 CLI](https://ui5.github.io/cli/) is an open and modular toolchain to develop state-of-the-art SAPUI5 applications. As a modern build and development environment it comes with a [command line interface \(CLI\)](https://ui5.github.io/cli/pages/CLI/), leverages Node.js and npm, and is being further advanced as an open-source project.
 
-Follow these steps to start your UI5 journey with UI5 Tooling:
+Follow these steps to start your UI5 journey with UI5 CLI:
 
 1.  Install the latest LTS version of [Node.js](https://nodejs.org/)
 
 2.  Open a new terminal and execute `npm i -g @ui5/cli`
 
-You're all set! Start your journey by checking out the [UI5 sample app](https://github.com/SAP/openui5-sample-app) or our [Walkthrough Tutorial \(JavaScript\)](../03_Get-Started/walkthrough-tutorial-javascript-3da5f4b.md).
+You're all set! Start your journey by checking out the [UI5 sample app](https://github.com/UI5/sample-app)or our [Walkthrough Tutorial \(JavaScript\)](../03_Get-Started/walkthrough-tutorial-javascript-3da5f4b.md).
 
 
 

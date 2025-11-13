@@ -27,9 +27,9 @@ You can replace the standard navigation from the list report to the object page 
 
 ## Procedure
 
-1.  Add a navigation target to the manifest.js file.
+1.  Add a navigation target to the `manifest.json` file.
 
-    In the example below, external navigation \(outbound\) via the SAP Fiori Launchpad has been added.
+    In the following example, external navigation \(outbound\) using the SAP Fiori launchpad has been added.
 
     > ### Sample Code:  
     > ```
@@ -60,7 +60,7 @@ You can replace the standard navigation from the list report to the object page 
     > 
     > ```
 
-2.  Register your extension in the manifest.js file.
+2.  Register your extension in the `manifest.json` file.
 
     > ### Sample Code:  
     > ```
@@ -102,7 +102,7 @@ You can replace the standard navigation from the list report to the object page 
     > 
     > ```
 
-4.  To ensure that this navigation can be triggered by the user, you must have defined an object page. If you do not want the user to be able to navigate to this object page, follow the procedure described under [Changing Navigation to Object Page](changing-navigation-to-object-page-8bd546e.md), *Enable External Navigation*.
+4.  To ensure that this navigation can be triggered by the user, you must have defined an object page. If you do not want the user to be able to navigate to this object page, follow the procedure described in the [Enable External Navigation](changing-navigation-to-object-page-8bd546e.md#loio8bd546e27a5f41cea6e251ba04534d70__EnableExternalNavigation) section in the [Changing Navigation to Object Page](changing-navigation-to-object-page-8bd546e.md)in the topic .
 
 
 <a name="task_l13_4yz_h4b"/>
@@ -117,7 +117,7 @@ You can replace the standard navigation from the list report to the object page 
 
 ## Context
 
-Application developers can selectively change the target when chevron navigation is triggered from a table.
+You can selectively change the target when chevron navigation is triggered from a table.
 
 
 
@@ -178,7 +178,7 @@ Application developers can selectively change the target when chevron navigation
     > override: {
     >     routing: {
     >         onBeforeNavigation: function(oContextInfo) {
-    >             var oLineContext = oContextInfo.sourceBindingContext,
+    >             var oLineContext = oContextInfo.bindingContext,
     >             oNav = this.base.getExtensionAPI().intentBasedNavigation;
     >             // for salesOrder 6437 navigate to FreeStyle App
     >             if (oLineContext.SalesOrder === "6437") {

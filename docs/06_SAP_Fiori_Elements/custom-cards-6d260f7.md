@@ -111,7 +111,7 @@ Creating a custom card consists of the following steps:
     > 
     > ```
 
-6.  Configure the descriptor file to point to the newly created component for the custom card.
+6.  Configure the `manifest.json` file to point to the newly created component for the custom card.
 
     > ### Sample Code:  
     > ```
@@ -130,9 +130,7 @@ Creating a custom card consists of the following steps:
 
 ### Using an Extension API to Refresh Custom Card Data
 
-End users can refresh the data on the custom cards. Refreshing the card data is available as an action on the card. To do so, you must configure the `onRefresh` extension as shown in the following sample code.
-
-For more information on card actions, see [Overview Page Card](overview-page-card-74332d5.md).
+End users can refresh the data on the custom cards. Refreshing the card data is available as an action on the card. To do so, you must configure the `onRefresh` extension, as shown in the following sample code.
 
 > ### Sample Code:  
 > ```
@@ -156,6 +154,8 @@ For more information on card actions, see [Overview Page Card](overview-page-car
 >      })();
 > ```
 
+For more information on card actions, see [Overview Page Card](overview-page-card-74332d5.md).
+
 > ### Note:  
 > Card templates that begin with `sap.ovp.cards` are designated for standard cards of overview page applications.
 
@@ -169,7 +169,7 @@ For more information on card actions, see [Overview Page Card](overview-page-car
 
 ### Using an Extension API to Apply Filters on Custom Cards
 
-You can use an extension API to apply the filters for a custom card based on the entities that are relevant to the card. To do so, add the `setRelevantFilters` extension API in your custom card controller as shown in the following sample code:
+You can use an extension API to apply the filters for a custom card based on the entities that are relevant to the card. To do so, add the `setRelevantFilters` extension API in your custom card controller, as shown in the following sample code:
 
 > ### Sample Code:  
 > ```

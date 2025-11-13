@@ -2,7 +2,7 @@
 
 # Defining Multiple Views on a List Report with Different Entity Sets and Table Settings
 
-You can configure your application to display data for different entity sets and table settings, for example, sales orders or suppliers.
+You can configure your application to display data for different entity sets and table settings.
 
 The configuration steps are the same as in [Defining Multiple Views on a List Report Table - Multiple Table Mode](defining-multiple-views-on-a-list-report-table-multiple-table-mode-37aeed7.md). In addition, the manifest property `entitySet` must be added to the definition of tables and charts that are based on an entity set different from the main entity set of the list report. Note that, in this case, the corresponding property `annotationPath` must specify an annotation for that entity set.
 
@@ -105,7 +105,7 @@ To include different entity sets and table settings in multiple views, specify a
 > 	}
 > ```
 
-Under `"sap.ui.generic.app"/"pages"`, specify the leading entity set. This is used for the smart filter bar andfooter. Each table or chart has its own `entitySet` which you can specify under `"quickVariantSelectionX"/"variants"`. If you do not specify an entity set under `"/"variants"`, then the leading entity set is used as default.
+Under `"sap.ui.generic.app"/"pages"`, specify the leading entity set. This is used for the smart filter bar and footer. Each table or chart has its own `entitySet` which you can specify under `"quickVariantSelectionX"/"variants"`. If you do not specify an entity set under `"/"variants"`, then the leading entity set is used as default.
 
 
 
@@ -119,7 +119,7 @@ Different tabs in a list report can render different table types. For example, f
   
 **Example of a List Report page with two tabs of different table types**
 
-![](images/list_report_entity_set_with_diff_table_types_1_bc2ec30.jpg " Example of a List Report page with two tabs of different table types ")
+![](images/list_report_entity_set_with_diff_table_types_1_bc2ec30.jpg "Example of a List Report page with two tabs of different table types ")
 
 ![](images/list_report_entity_set_with_diff_table_types_2_d34682a.jpg)
 
@@ -217,7 +217,7 @@ To define a `SelectionVariant` for `entityA` and a `SelectionPresentationVariant
 > ```
 
 > ### Sample Code:  
-> CAP CDS Annotatio
+> CAP CDS Annotation
 > 
 > ```
 > annotate entityB with @(
@@ -271,10 +271,10 @@ To define a `SelectionVariant` for `entityA` and a `SelectionPresentationVariant
 > },
 > ```
 
-Once the SV and SPV are defined for the two `entitySets`, you must configure the manifest to read the annotation for the views. This is the same configuration in the `manifest.json` as for the multiple views feature. In addition, you need to specify the `entitySet` when it differs from the main `entitySet` as follows:
+Once the SV and SPV are defined for the two `entitySets`, you must configure the manifest to read the annotation for the views. This is the same configuration in the `manifest.json` file as for the multiple views feature. In addition, you need to specify the `entitySet` when it differs from the main `entitySet` as follows:
 
 > ### Sample Code:  
-> manifest.json
+> `manifest.json`
 > 
 > ```
 > "targets": {   
@@ -316,7 +316,7 @@ You can define different table configurations for each entity set. To do so, pre
 The following sample code shows different personalization settings per table \(with no personalization for `EntityA` and a column personalization and a filter personalization for `EntityB`\):
 
 > ### Sample Code:  
-> manifest.json
+> `manifest.json`
 > 
 > ```
 > "targets": {

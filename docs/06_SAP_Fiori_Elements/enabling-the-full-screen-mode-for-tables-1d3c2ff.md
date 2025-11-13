@@ -7,7 +7,7 @@ When application developers enable the full-screen mode for tables, a button on 
 > ### Note:  
 > This topic is only applicable to SAP Fiori elements for OData V4.
 
-Make the settings in the `manifest.json` as follows:
+Make the settings in the `manifest.json` file as follows:
 
 > ### Sample Code:  
 > ```

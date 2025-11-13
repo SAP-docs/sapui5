@@ -80,7 +80,7 @@ Array of control IDs to be combined.
 </tr>
 </table>
 
-Find an example on GitHub at [https://github.com/SAP/openui5/blob/master/src/sap.m/src/sap/m/changeHandler/CombineButtons.js](https://github.com/SAP/openui5/blob/master/src/sap.m/src/sap/m/changeHandler/CombineButtons.js).
+Find an example on GitHub at [https://github.com/UI5/openui5/blob/master/src/sap.m/src/sap/m/changeHandler/CombineButtons.js](https://github.com/UI5/openui5/blob/master/src/sap.m/src/sap/m/changeHandler/CombineButtons.js).
 
 > ### Note:  
 > When creating new controls inside `applyChange()`, make sure to move the original controls into the dependents aggregation of a **container**. In our example, the original buttons are to be moved to the `dependents` aggregation of `sap.m.Bar`, not to the `dependents` aggregation of `sap.m.MenuItem`.

@@ -23,6 +23,8 @@ For information about specific restrictions and the required manifest changes fo
 
 
 
+<a name="loiobfaf3ccf3d6d4735990cc793b21f5529__V2_section"/>
+
 ## Additional Features in SAP Fiori Elements for OData V2
 
 You can specify the mode in which the object page can be opened by entering the `preferredMode` parameter, as shown in the following table:
@@ -154,7 +156,7 @@ Moreover, the source app can also pass values for any inbound parameter of the s
 > #NewActionTest-NewActionTest?preferredMode=callUnboundAction&myActionName=myCreate1&ResultIsActiveEntity=true&Name=myName
 > ```
 
-
+For information about create mode as an external app in SAP Fiori Elements for OData V4, see [Create Mode as an External App](create-mode-as-an-external-app-5c2bc2e.md).
 
 </td>
 </tr>

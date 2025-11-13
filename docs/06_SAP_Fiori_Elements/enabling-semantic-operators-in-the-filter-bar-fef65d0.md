@@ -8,11 +8,6 @@ You can use semantic date values, such as *Today* or *Last Week*, on the filter 
 
 ## Additional Features in SAP Fiori Elements for OData V2
 
-> ### Tip:  
-> -   Navigation to an external application always passes the actual date value that corresponds to the semantic date value that is used.
-> 
-> -   The date range configuration that is defined in the manifest file is not applied to custom filters of type date range. For more information on custom filters, see [Adding Custom Fields to the Filter Bar](adding-custom-fields-to-the-filter-bar-5fb9f57.md).
-
 The semantic date control can be enabled for the fields in the filter bar by setting the `useDateRange` flag to `true` in the manifest. By default, the value is `false` and date picker control is rendered by the filter bar.
 
 The property must have `sap:filter-restriction="interval"` in the metadata. For example:
@@ -147,6 +142,11 @@ The following types of settings exist, either at the property level or at the de
 -   The `SelectedValues` property is a set of standard date range values that you want to include or exclude. The `exclude` property is set to `true` by default. This means that all values given as `selectedValues` from the list of date range filters are excluded. If the `exclude` property is set to `false`, the application shows only selected values in the list of date range filters.
 
     For example, in the code sample above, the `DateTimeProperty1` filter for all the options that contain `MONTH`, such as `THISMONTH`, `LASTMONTH`, in the date range are excluded.
+
+    > ### Tip:  
+    > -   Navigation to an external application always passes the actual date value that corresponds to the semantic date value that is used.
+    > 
+    > -   The date range configuration that is defined in the manifest file is not applied to custom filters of type date range. For more information on custom filters, see [Adding Custom Fields to the Filter Bar](adding-custom-fields-to-the-filter-bar-5fb9f57.md).
 
     > ### Note:  
     > -   The `customDateRangeImplementation` property takes precedence over the `selectedValues` and `exclude` properties.
@@ -439,6 +439,8 @@ Here's a list of fully supported operators:
     -   `"YEARTODATE"`
 
     -   `"DATETOYEAR"`
+
+    -   `"Empty"`
 
 
 
@@ -882,6 +884,8 @@ You can use the `operatorConfiguration` settings to include and exclude specific
     -   `"YEARTODATE"`
 
     -   `"DATETOYEAR"`
+
+    -   `"Empty"`
 
 
     > ### Note:  

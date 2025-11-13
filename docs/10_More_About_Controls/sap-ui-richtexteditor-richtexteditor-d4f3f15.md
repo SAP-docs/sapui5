@@ -96,6 +96,10 @@ Due to the use of a third-party component, some additional restrictions apply to
 
         Introduced with 1.71.73
 
+    -   7.7.2
+
+        Introduced with 1.71.77
+
 
 
     
@@ -134,6 +138,10 @@ Due to the use of a third-party component, some additional restrictions apply to
     -   6.8.5
 
         Introduced with 1.84.52
+
+    -   7.7.2
+
+        Introduced with 1.84.55
 
 
 
@@ -183,6 +191,10 @@ Due to the use of a third-party component, some additional restrictions apply to
     -   6.8.5
 
         Introduced with 1.96.39
+
+    -   7.7.2
+
+        Introduced with 1.96.44
 
 
 
@@ -243,6 +255,10 @@ Due to the use of a third-party component, some additional restrictions apply to
 
         Introduced with 1.108.40
 
+    -   7.7.2
+
+        Introduced with 1.108.46
+
 
 
     
@@ -288,6 +304,10 @@ Due to the use of a third-party component, some additional restrictions apply to
 
         Introduced with 1.120.25
 
+    -   7.7.2
+
+        Introduced with 1.120.36
+
 
 
     
@@ -317,6 +337,23 @@ Due to the use of a third-party component, some additional restrictions apply to
     <tr>
     <td valign="top">
     
+    1.136
+    
+    </td>
+    <td valign="top">
+    
+    -   7.7.2
+
+        Introduced with 1.136.8
+
+
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
     Latest
     
     </td>
@@ -325,6 +362,8 @@ Due to the use of a third-party component, some additional restrictions apply to
     -   5.10.9
 
     -   6.8.5
+
+    -   7.7.2
 
 
 
@@ -422,7 +461,6 @@ Here are examples of how to remove some of the buttons in a group:
 > > ### Sample Code:  
 > > ```
 > > var oRichTextEditor = new RTE("myRTE", {
-> > editorType: sap.ui.richtexteditor.EditorType.TinyMCE5,
 > > customToolbar: true,
 > > buttonGroups: [
 > > {
@@ -454,7 +492,6 @@ Here are examples of how to remove some of the buttons in a group:
 > > ### Sample Code:  
 > > ```
 > > var oRichTextEditor = new RTE("myRTE", {
-> > editorType: sap.ui.richtexteditor.EditorType.TinyMCE5,
 > > width: "100%",
 > > height: "300px",
 > > customToolbar: true

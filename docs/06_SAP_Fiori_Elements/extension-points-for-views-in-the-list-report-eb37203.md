@@ -5,7 +5,7 @@
 You can use extension points to enhance views in the list report in SAP Fiori elements apps.
 
 > ### Note:  
-> This topic is currently only applicable to SAP Fiori elements for OData V4.
+> This topic is only applicable to SAP Fiori elements for OData V4.
 
 
 
@@ -20,9 +20,9 @@ App developers can display custom content in a dedicated tab together with regul
 
 Custom views provide the following features:
 
--   simple configuration by declaring custom tabs in the manifest as views \(similar to views corresponding to the `PresentationVariant` or `SelectionPresentationVariant` defined via annotations\)
+-   simple configuration by declaring custom tabs in the manifest as views \(similar to views corresponding to the `PresentationVariant` or `SelectionPresentationVariant` defined through annotations\)
 
--   adding a custom XML view \(via an `xmlfragment` definition\) along with a custom handler called from the manifest, if neessary
+-   adding a custom XML view \(through an `xmlfragment` definition\) along with a custom handler called from the manifest, if necessary.
 
 -   defining a controller extension for the list report
 
@@ -64,7 +64,7 @@ To define a custom view, the path configuration for the custom view in the manif
 > }
 > ```
 
-Each view can contain any control users want to display on the tab. App developers manage the content of a custom tab. The previous example configuration defines 2 custom tabs.
+Each view can contain any control users want to display on the tab. You can manage the content of a custom tab. The previous example configuration defines 2 custom tabs.
 
 
 
@@ -103,7 +103,7 @@ key
 </td>
 <td valign="top">
 
-"<unique\_tab\_id\>"
+`"<unique_tab_id>"`
 
 </td>
 <td valign="top">
@@ -120,7 +120,7 @@ label
 </td>
 <td valign="top">
 
-"<tab\_title\>"
+`"<tab_title>"`
 
 </td>
 <td valign="top">
@@ -137,7 +137,7 @@ template
 </td>
 <td valign="top">
 
-"<name\_of\_custom\_xml\_view\>"
+`"<name_of_custom_xml_view>"`
 
 </td>
 <td valign="top">
@@ -262,7 +262,7 @@ If a custom handler is required for the custom tab, you must define it in the fr
 
 ## Using Filter Conditions in the Controller Extension for the List Report
 
-For app developers who want a standard filtering behavior along with other annotation tabs in the list report based on the `filterConditions` from the filter bar, SAP Fiori elements provides 2 methods that you can overwrite. The controller extension for the list report must be registered in the manifest. To register the controller extension in the manifest, proceed as follows:
+For app developers who want a standard filtering behavior along with other annotation tabs in the list report based on the `filterConditions` from the filter bar, SAP Fiori elements provides 2 methods that you can overwrite. The controller extension for the list report must be registered in the manifest. To register the controller extension in the `manifest.json` file, proceed as follows:
 
 > ### Sample Code:  
 > ```
@@ -279,7 +279,7 @@ For app developers who want a standard filtering behavior along with other annot
 > }
 > ```
 
-The methods app developers can use are:
+The methods you can use are:
 
 -   `onViewNeedsRefresh`: To be used to refresh the content of a custom tab in a list report view with multiple tabs. This happens either when there is a change on the filter bar and the search is triggered, or when a tab with custom content is selected. App developers can use the additional parameters added to this method to identify the refresh cause \(`"tabChanged"` or `"search"`\) and apply the filter conditions on a specific tab based on the ID of the tab.
 

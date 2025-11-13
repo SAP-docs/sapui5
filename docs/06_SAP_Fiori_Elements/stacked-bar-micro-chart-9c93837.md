@@ -7,7 +7,9 @@ A stacked bar micro chart displays all the values from the back end for the conf
 ![](images/Stacked_Bar_Micro_Chart_606716a.png)
 
 > ### Note:  
-> For more information about this chart type, see [Samples](https://ui5.sap.com/1.82.5/#/entity/sap.suite.ui.microchart.StackedBarMicroChart).
+> The chart dimensions and measures cannot be of the same entity; they must be from a 1:n navigation entity.
+
+For more information about this chart type, see [Samples](https://ui5.sap.com/1.82.5/#/entity/sap.suite.ui.microchart.StackedBarMicroChart).
 
 
 
@@ -110,11 +112,6 @@ The `UI.Chart Title` property is used to define the title, while the `UI.Chart D
 > <Annotation Term="UI.DataPoint" Qualifier="Width">
 >     <Record>
 >         <PropertyValue Property="Value" Path="Width"/>
->         <PropertyValue Property="Description" String="Stacked Bar Micro Chart"/>
->         <PropertyValue Property="TargetValue" Path="Weight"/>
->         <PropertyValue Property="ForecastValue" Path="Height"/>
->         <PropertyValue Property="MinimumValue" Decimal="0"/>
->         <PropertyValue Property="MaximumValue" Decimal="100"/>
 >         <PropertyValue Property="Criticality" Path="criticalityValue"/>
 >     </Record>
 > </Annotation>
@@ -126,11 +123,6 @@ The `UI.Chart Title` property is used to define the title, while the `UI.Chart D
 > ```
 > 
 > @UI.dataPoint: {
->   description: 'Stacked Bar Micro Chart',
->   targetValueElement: 'Weight',
->   forecastValue: 'Height',
->   minimumValue: 0,
->   maximumValue: 100,
 >   criticality: 'criticalityValue'
 > }
 > Width;
@@ -143,11 +135,6 @@ The `UI.Chart Title` property is used to define the title, while the `UI.Chart D
 > 
 > UI.DataPoint #Width : {
 >     Value : Width,
->     Description : 'Stacked Bar Micro Chart',
->     TargetValue : Weight,
->     ForecastValue : Height,
->     MinimumValue : 0,
->     MaximumValue : 100,
 >     Criticality : criticalityValue
 > }
 > 
@@ -158,8 +145,9 @@ The `UI.Chart Title` property is used to define the title, while the `UI.Chart D
 > ### Note:  
 > The following properties must all point to the same property in the `entityType`:
 > 
-> -   `Measures` property of the `Chart` annotation
+> -   `Measures` property of the `Chart` annotation.
 > 
-> -   `Measure` property of the `MeasureAttributes` property of the `Chart` annotation
-> -   `Value` property of the `DataPoint` annotation
+> -   `Measure` property of the `MeasureAttributes` property of the `Chart` annotation.
+> 
+> -   `Value` property of the `DataPoint` annotation.
 

@@ -397,7 +397,7 @@ For more information on addressing OData entries, see the URI conventions docume
 
 The data requested from an OData service is cached in the OData model.
 
-It can be accessed by the `getProperty()` method, which returns the entity object or value. This method does not request data from the back end, so you can only access already requested and cached entities:
+It can be accessed by the `getProperty` method, which returns the entity object or value. This method does not request data from the back end, so you can only access already requested and cached entities:
 
 ```js
 oModel.getProperty("/Customer('ALFKI')/Address");
@@ -405,8 +405,20 @@ oModel.getProperty("/Customer('ALFKI')/Address");
 
 You can only access single entities and properties with this method. To access entity sets, you can get the binding contexts of all read entities via a list binding. The values returned by this method are copies of the data in the model, not references as in the JSONModel.
 
+To modify data, we recommend using [Two-Way Binding](odata-v2-model-6c47b2b.md#loio42b3ca19a47d49a3b4ba5f34ca0d1f7e). Only if this is not possible should you modify data via the `setProperty` method.
+
+The model then iterates all its data bindings to check if the data update in the model affects the binding. If this is the case, listeners to change events for this data binding—typically the bound control—are informed. When you update multiple properties by multiple calls of the `setProperty` API, **each** of these calls iterates the data bindings as described. This may lead to performance issues in large applications with many data bindings and many consecutive calls of the `setProperty` method.
+
+To avoid performance issues in this scenario, prefer [Two-Way Binding](odata-v2-model-6c47b2b.md#loio42b3ca19a47d49a3b4ba5f34ca0d1f7e) over `setProperty` calls. If this is not possible, set the `bAsyncUpdate` parameter in the calls of the `setProperty` method to `true`. The model then iterates the data bindings **asynchronously**: With this, the iteration is only done once for all `setProperty` calls, thus improving the performance.
+
+```
+
+oModel.setProperty("/Customer('ALFKI')/Address", "Hauptstr. 42", /*oContext*/ null, /*bAsyncUpdate*/ true);
+		
+```
+
 > ### Caution:  
-> Do **not** modify objects or values inside the model manually; always use the provided API to change data in the model, or use two-way binding \(see *Two-way Binding* section below\).
+> Do **not** modify objects or values inside the model manually; always use the provided API to change data in the model, or use [Two-Way Binding](odata-v2-model-6c47b2b.md#loio42b3ca19a47d49a3b4ba5f34ca0d1f7e).
 
 > ### Note:  
 > The ODataModel uses the `$skip` and `$top` URL parameters for paging. It is possible that data is modified between two paging requests, for example entities could be added or removed, and this may lead to data inconsistencies.

@@ -14,9 +14,9 @@ Gherkin calculates code coverage for any JavaScript file that is loaded after th
 
 ## Istanbul
 
-Code coverage with `Istanbul` relies on a [UI5 server](https://sap.github.io/ui5-tooling/stable/pages/Server/) and [UI5 Middleware Code Coverage](https://github.com/SAP/ui5-tooling-extensions/tree/main/packages/middleware-code-coverage).
+Code coverage with `Istanbul` relies on a [UI5 server](https://ui5.github.io/cli/stable/pages/Server/) and [UI5 Middleware Code Coverage](https://github.com/UI5/cli-extensions/tree/main/packages/middleware-code-coverage).
 
-If you use UI5 Tooling's `ui5 serve`, you would need to enable it in `ui5.yaml` and `package.json` of your project.
+If you use UI5 CLI's `ui5 serve`, you would need to enable it in `ui5.yaml` and `package.json` of your project.
 
 ```html
 <script
@@ -26,7 +26,7 @@ If you use UI5 Tooling's `ui5 serve`, you would need to enable it in `ui5.yaml` 
 </script>
 ```
 
-For more information, see the [documentation](https://github.com/SAP/ui5-tooling-extensions/tree/main/packages/middleware-code-coverage).
+For more information, see the [documentation](https://github.com/UI5/cli-extensions/tree/main/packages/middleware-code-coverage).
 
 
 
@@ -51,7 +51,7 @@ For more information, see the documentation for `Blanket.js` on GitHub. Keep in 
 
 [`Blanket.js` Documentation on GitHub](https://github.com/alex-seville/blanket/blob/-/docs/intermediate_browser.md)
 
-[`UI5 Middleware Code Coverage` repo on GitHub](https://github.com/SAP/ui5-tooling-extensions/blob/-/packages/middleware-code-coverage)
+[`UI5 Middleware Code Coverage` repo on GitHub](https://github.com/UI5/cli-extensions/blob/-/packages/middleware-code-coverage)
 
 [Code Coverage Measurement](code-coverage-measurement-7ef3242.md "You can measure the code coverage either via HTML or JavaScript code using a code coverage tool like Istanbul (default) or Blanket.js (legacy).")
 

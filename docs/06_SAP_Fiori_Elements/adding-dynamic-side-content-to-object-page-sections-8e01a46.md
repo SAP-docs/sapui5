@@ -26,7 +26,7 @@ You can use extension points to add additional content to sections in the follow
 
 Main content refers to the information that comes from the annotations.
 
-Enter the extension information in the `manifest.json` of your application in the following format: `<Different_Scenario>|<EntitySet_Name>|<Annotation_Information_of_Subsection>`
+Enter the extension information in the `manifest.json` file of your application in the following format: `<Different_Scenario>|<EntitySet_Name>|<Annotation_Information_of_Subsection>`
 
 Specify the extension facet in the form of the annotation information of the subsection where side content needs to be placed. In addition, specify the entity set name, as the same annotation may exist for various entity sets. You also need to define the `className`, `viewName`, `type`, and the optional parameter `equalSplit`.
 
@@ -105,7 +105,7 @@ After you have added side content, the system displays a button in the subsectio
 
 You can add additional content in a flexible manner. When the side content is triggered, the main content is narrowed. The side content always comes from the right side of the app and provides the following features:
 
--   adding arbitrary sections via an `xmlfragment` definition
+-   adding arbitrary sections with an `xmlfragment` definition
 
 -   adding side content to sections as defined in the manifest for custom sections or facet-based sections
 
@@ -202,7 +202,7 @@ template
 </td>
 <td valign="top">
 
-Defining the target fragment follows the syntax of defining a fragment via `Fragment.load`
+Defining the target fragment follows the syntax of defining a fragment through `Fragment.load`
 
 </td>
 </tr>
@@ -231,7 +231,7 @@ Bold formatting: default/fallback behavior
 
 
 
-### Toggling Side Content via the `showSideContent` API
+### Toggling Side Content Through the `showSideContent` API
 
 By default, the side content is not shown. SAP Fiori elements provides an API for the side content that enables you to toggle the side content display `(show/hide): this.showSideContent("<SideContent-Key>")`.
 
@@ -245,7 +245,7 @@ The `showSideContent` API accepts two parameters:
 If no value for the parameter is provided, the API toggles the display.
 
 > ### Sample Code:  
-> manifest.json
+> `manifest.json`
 > 
 > ```
 > {

@@ -2,26 +2,27 @@
 
 # Custom Messages
 
-You can customize messages for success, success with no data, and error scenarios. Also, you can add an icon for success scenarios.For error scenarios, default icon is displayed.
+You can customize messages for success, success with no data, and error scenarios. Additionally, you can add an icon for success scenarios. For error scenarios, a default icon is displayed.
 
 
 
 To configure custom messages, define `getCustomMessage` in your extension controller file.
 
-```
-getCustomMessage: function (oResponse, sCardId) {
- if (sCardId == "card001") {
-  if (oResponse && oResponse.getParameters() && oResponse.getParameters().success) {
-    return {
-       sMessage: "My Custom Message for No Data", //message in case of success and no data
-       sIcon: "sap-icon://message-information"    //icon in case of success and no data
-     }
-  } else {
-    return {
-       sMessage: "My Custom Message for Error" //message in case of error
-           }
-         }
-  }
-},
-```
+> ### Sample Code:  
+> ```
+> getCustomMessage: function (oResponse, sCardId) {
+>  if (sCardId == "card001") {
+>   if (oResponse && oResponse.getParameters() && oResponse.getParameters().success) {
+>     return {
+>        sMessage: "My Custom Message for No Data", //message in case of success and no data
+>        sIcon: "sap-icon://message-information"    //icon in case of success and no data
+>      }
+>   } else {
+>     return {
+>        sMessage: "My Custom Message for Error" //message in case of error
+>            }
+>          }
+>   }
+> },
+> ```
 

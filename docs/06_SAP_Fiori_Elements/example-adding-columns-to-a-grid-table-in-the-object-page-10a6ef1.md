@@ -11,7 +11,7 @@ To add custom columns to a grid table in the list report, follow the steps descr
 ## Context
 
 > ### Note:  
-> This topic is currently only applicable to SAP Fiori elements for OData V2.
+> This topic is only applicable to SAP Fiori elements for OData V2.
 
 > ### Caution:  
 > Use app extensions with caution and only if you cannot produce the required behavior by other means, such as manifest settings or annotations. To correctly integrate your app extension coding with SAP Fiori elements, use only the `extensionAPI` of SAP Fiori elements. For more information, see [Using the extensionAPI](using-the-extensionapi-bd2994b.md).
@@ -24,50 +24,63 @@ To add custom columns to a grid table in the list report, follow the steps descr
 
 1.  Define a fragment for the view extension.
 
-    For a custom column in a responsive table, you have to implement two extensions. First, implement the definition of the custom columns and then implement the content of the custom columns.
+    To add custom columns in a grid table, you must implement two extensions. First, implement the definition of the custom columns and then implement the content of the custom columns.
 
     In the example project webapp/ext/fragments/ProductTextGridTableColumns.fragment.xml, two columns are added, one containing text, the other containing an action button:
 
     > ### Sample Code:  
     > ```
-    > <core:FragmentDefinition xmlns:core="sap.ui.core" xmlns:table="sap.ui.table" xmlns="sap.m" xmlns:sfi="sap.ui.comp.smartfield">
-    >    <table:Column width="150px" >
-    >       <Label text="{i18n|sap.suite.ui.generic.template.ObjectPage|STTA_C_MP_Product>xfld.BreakoutColumn}" />
-    >       <table:template>
-    >          <Text text="{i18n|sap.suite.ui.generic.template.ObjectPage|STTA_C_MP_Product>xfld.BreakoutColumnContent}"></Text>
-    >       </table:template>
-    >    </table:Column>
-    >    <table:Column width="160px">
-    >       <Label text="{i18n|sap.suite.ui.generic.template.ObjectPage|STTA_C_MP_Product>xfld.BreakoutColumn}" />
-    >       <table:template>
-    >          <Button text="GridTab.Button"
-    >                  press = "onGridTableBreakoutButtonPress"></Button>
-    >       </table:template>
-    >    </table:Column>
+    > <core:FragmentDefinition 
+    >     xmlns:core="sap.ui.core" 
+    >     xmlns:table="sap.ui.table" 
+    >     xmlns="sap.m" 
+    >     xmlns:sfi="sap.ui.comp.smartfield">
+    > 
+    >     <table:Column width="150px">
+    >         <Label text="{i18n|sap.suite.ui.generic.template.ObjectPage|STTA_C_MP_Product>xfld.BreakoutColumn}" />
+    >         <table:template>
+    >             <Text text="{i18n|sap.suite.ui.generic.template.ObjectPage|STTA_C_MP_Product>xfld.BreakoutColumnContent}" />
+    >         </table:template>
+    >     </table:Column>
+    > 
+    >     <table:Column width="160px">
+    >         <Label text="{i18n|sap.suite.ui.generic.template.ObjectPage|STTA_C_MP_Product>xfld.BreakoutColumn}" />
+    >         <table:template>
+    >             <Button text="GridTab.Button" press="onGridTableBreakoutButtonPress" />
+    >         </table:template>
+    >     </table:Column>
+    > 
     > </core:FragmentDefinition>
+    > 
     > 
     > ```
 
 2.  Register your view extensions in your application's `manifest.json` file as follows:
 
     > ### Sample Code:  
+    > `manifest.json`
+    > 
     > ```
     > "extends": {
-    >      "extensions": {
-    >          "sap.ui.controllerExtensions": {
-    >              ....
-    >          }
-    >         "sap.ui.viewExtensions": {
-    >               .... 
-    >               "sap.suite.ui.generic.template.ObjectPage.view.Details": {
-    >                      ....
-    >                      "GridTableColumnsExtension|STTA_C_MP_ProductText|to_ProductTextNavigation::com.sap.vocabularies.UI.v1.LineItem": {
-    >                                "className": "sap.ui.core.Fragment",
-    >                                "fragmentName": "STTA_MP.ext.fragments.ProductTextGridTableColumns",
-    >                                "type": "XML"
-    >                       },
+    >     "extensions": {
+    >         "sap.ui.controllerExtensions": {
     >             ...
-    >  
+    >         },
+    >         "sap.ui.viewExtensions": {
+    >             ...
+    >             "sap.suite.ui.generic.template.ObjectPage.view.Details": {
+    >                 ...
+    >                 "GridTableColumnsExtension|STTA_C_MP_ProductText|to_ProductTextNavigation::com.sap.vocabularies.UI.v1.LineItem": {
+    >                     "className": "sap.ui.core.Fragment",
+    >                     "fragmentName": "STTA_MP.ext.fragments.ProductTextGridTableColumns",
+    >                     "type": "XML"
+    >                 }
+    >                 ...
+    >             }
+    >         }
+    >     }
+    > }
+    > 
     > 
     > ```
 

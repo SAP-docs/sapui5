@@ -140,7 +140,7 @@ If only single values need to be applied for the filter fields, application deve
 > 
 > -   The default values coming from the annotation don't affect the visibility of the filter field values.
 > 
-> -   The filter values applied via the above logic are always cleared completely and overwritten by the incoming navigation context.
+> -   The filter values applied using the above logic are always cleared completely and overwritten by the incoming navigation context.
 > 
 > -   When adding a date value, be sure to use the YYYY-MM-DD format.
 > 
@@ -154,7 +154,7 @@ If only single values need to be applied for the filter fields, application deve
 
 ## Combining Various Sources of Values for the Filter Field
 
-Apart from the default values via annotation as described above, a filter field could also have values coming via the variant or navigation context or SAP Fiori launchpad. All these are considered based on the following priority:
+Apart from the default values using annotation as described above, a filter field could also have values coming through the variant or navigation context or SAP Fiori launchpad. All these are considered based on the following priority:
 
 
 <table>

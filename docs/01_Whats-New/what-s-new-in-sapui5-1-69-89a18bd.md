@@ -815,7 +815,7 @@ The overview page has these new features or enhancements:
 
 -   You can now use the `NumberOfFractionalDigits` property to determine the number of fraction digits in the Visual filter and Key Performance Indicators tag. For more information, see [Visual Filters](../06_SAP_Fiori_Elements/visual-filters-1714720.md) and [Creating Key Performance Indicator Tags](../06_SAP_Fiori_Elements/creating-key-performance-indicator-tags-d80a360.md).
 
--   You can now enable the multi-select feature that limits the number of lines in grid tables and analytical tables using the new manifest settings. For more information, see [Descriptor Configuration for the Analytical List Page](../06_SAP_Fiori_Elements/descriptor-configuration-for-the-analytical-list-page-2a9df06.md).
+-   You can now enable the multi-select feature that limits the number of lines in grid tables and analytical tables using the new manifest settings. For more information, see [Configuring the Manifest for the Analytical List Page](../06_SAP_Fiori_Elements/configuring-the-manifest-for-the-analytical-list-page-2a9df06.md).
 
 
 <sub>Changed•SAP Fiori Elements•Info Only•1.69</sub>
@@ -836,6 +836,18 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.141](what-s-new-in-sapui5-1-141-a7ed66d.md "With this release SAPUI5 is upgraded from version 1.140 to 1.141.")
+
+[What's New in SAPUI5 1.140](what-s-new-in-sapui5-1-140-26a106c.md "With this release SAPUI5 is upgraded from version 1.139 to 1.140.")
+
+[What's New in SAPUI5 1.139](what-s-new-in-sapui5-1-139-e10db71.md "With this release SAPUI5 is upgraded from version 1.138 to 1.139.")
+
+[What's New in SAPUI5 1.138](what-s-new-in-sapui5-1-138-8f6a92b.md "With this release SAPUI5 is upgraded from version 1.136 to 1.138.")
+
+[What's New in SAPUI5 1.136](what-s-new-in-sapui5-1-136-a82754d.md "With this release SAPUI5 is upgraded from version 1.135 to 1.136.")
+
+[What's New in SAPUI5 1.135](what-s-new-in-sapui5-1-135-93d7630.md "With this release SAPUI5 is upgraded from version 1.134 to 1.135.")
 
 [What's New in SAPUI5 1.134](what-s-new-in-sapui5-1-134-c512d71.md "With this release SAPUI5 is upgraded from version 1.133 to 1.134.")
 

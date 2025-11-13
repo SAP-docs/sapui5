@@ -113,5 +113,5 @@ You've completed the walkthrough, good job! You should now be familiar with all 
 **Related Information**  
 
 
-[UI5 Tooling documentation](https://sap.github.io/ui5-tooling/stable/)
+[UI5 CLI documentation](https://ui5.github.io/cli/stable/)
 

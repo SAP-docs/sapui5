@@ -64,6 +64,11 @@ In the following example, the `Price` property is annotated in the annotation do
 > ```
 
 > ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> No ABAP CDS annotation sample is available. Please use the local XML annotation.
+
+> ### Sample Code:  
 > CAP CDS Annotation
 > 
 > ```

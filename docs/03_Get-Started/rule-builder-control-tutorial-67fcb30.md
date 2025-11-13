@@ -114,7 +114,7 @@ Expression language 2.0
 
 You can change the expression language from Expression Language 1.0 to Expression Language 2.0. You can only change the expression language from 1.0 to 2.0 and not the vice versa.
 
-To migrate to Expression Language 2.0, set the expression language object to `AstExpressionLanguage` in the your code as shown:
+To migrate to Expression Language 2.0, set the expression language object to `AstExpressionLanguage` in your code as shown:
 
 ```
 oExpressionLanguage = new sap.rules.ui.services.AstExpressionLanguage();

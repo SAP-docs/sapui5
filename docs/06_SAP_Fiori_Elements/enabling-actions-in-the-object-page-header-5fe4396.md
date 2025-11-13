@@ -345,9 +345,9 @@ The following sample shows examples of global actions:
 
 You control the visibility of the custom global actions by using the `UI.Hidden` annotation. If static true or path-based evaluate to true, the action button is hidden.
 
-You also control the enablement of the `DataFieldForAction` buttons via the `OperationAvailable` mechanism in the same way as described in the [Enabling Custom Actions Defined Using Annotations](actions-cbf16c5.md#loiocbf16c599f2d4b8796e3702f7d4aae6c__subsection_xkx_gwq_nsb) section in [Actions](actions-cbf16c5.md).
+You also control the enablement of the `DataFieldForAction` buttons through the `OperationAvailable` mechanism in the same way as described in the [Enabling Custom Actions Defined Using Annotations](actions-cbf16c5.md#loiocbf16c599f2d4b8796e3702f7d4aae6c__subsection_xkx_gwq_nsb) section in [Actions](actions-cbf16c5.md).
 
-The enablement of intent-based navigation \(IBN\) buttons can be controlled via the `"NavigationAvailable"` property, as described in the [Navigation Using a Button](navigation-from-an-app-outbound-navigation-d782acf.md#loiod782acf8bfd74107ad6a04f0361c5f62__NavigationButton) section in [Navigation from an App \(Outbound Navigation\)](navigation-from-an-app-outbound-navigation-d782acf.md).
+The enablement of intent-based navigation \(IBN\) buttons can be controlled using the `"NavigationAvailable"` property, as described in the [Navigation Using a Button](navigation-from-an-app-outbound-navigation-d782acf.md#loiod782acf8bfd74107ad6a04f0361c5f62__NavigationButton) section in [Navigation from an App \(Outbound Navigation\)](navigation-from-an-app-outbound-navigation-d782acf.md).
 
 The `UI.DataFieldForAction` can be bound or unbound actions. For more information, see the [Bound and Unbound Actions](actions-cbf16c5.md#loiocbf16c599f2d4b8796e3702f7d4aae6c__BoundUnbound) section in [Actions](actions-cbf16c5.md).
 

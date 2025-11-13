@@ -2,9 +2,9 @@
 
 # Step 5: Navigating from the Start Page to Other Pages
 
-In this step, we will show how to set up navigation using the standard routing pattern.
+In this step, we show how to set up navigation using the standard routing pattern.
 
-First, please create three empty views and the corresponding controllers:
+First, create three empty views and the corresponding controllers:
 
 -   `ProcessFlow.view.xml`
 
@@ -17,15 +17,18 @@ First, please create three empty views and the corresponding controllers:
 
 
 
-### Startpage.view.xml
+### `Startpage.view.xml`
 
-You can view and download this step in the Demo Kit at [Ice Cream Machine - Step 5 - Navigating from the Start Page to Other Pages](https://ui5.sap.com/#/entity/sap.suite.ui.commons.tutorial.icecream/sample/sap.suite.ui.commons.tutorial.icecream.05).
+You can view and download this step in the Demo Kit from the [Ice Cream Machine - Step 5 - Navigating from the Start Page to Other Pages](https://ui5.sap.com/#/entity/sap.suite.ui.commons.tutorial.icecream/sample/sap.suite.ui.commons.tutorial.icecream.05).
 
 ```xml
-
 <mvc:View
-    ...
-    <Page title="{i18n>title}">
+    controllerName="sap.suite.ui.commons.demokit.tutorial.icecream.12.controller.Startpage"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:layout="sap.ui.layout"
+    xmlns:microchart="sap.suite.ui.microchart">
+    <Page title="{i18n>title}" titleAlignment="Center">
         <layout:VerticalLayout class="sapUiResponsiveMargin">
             ...
             <layout:HorizontalLayout allowWrapping="true">
@@ -33,12 +36,12 @@ You can view and download this step in the Demo Kit at [Ice Cream Machine - Step
                     class="sapUiTinyMarginBegin sapUiTinyMarginTop"
                     header="{i18n>startpagePFTileTitle}"
                     subheader="{i18n>startpagePFTileSubTitle}"
-                    press=".onNavToProcessFlow">                    
+                    press=".onNavToProcessFlow">
                     <tileContent>
                         ...
                     </tileContent>
                 </GenericTile>
-                    ...
+                ...
                 <GenericTile
                     class="sapUiTinyMarginBegin sapUiTinyMarginTop"
                     header="{i18n>startpageUserReviewsTileTitle}"
@@ -51,7 +54,7 @@ You can view and download this step in the Demo Kit at [Ice Cream Machine - Step
                     class="sapUiTinyMarginBegin sapUiTinyMarginTop"
                     header="{i18n>startpageTestResultsTileTitle}"
                     subheader="{i18n>startpageTestResultsTileSubTitle}"
-                    press=".onNavToChartContainer">                   
+                    press=".onNavToChartContainer">
                     <tileContent>
                         ...
                     </tileContent>
@@ -62,50 +65,54 @@ You can view and download this step in the Demo Kit at [Ice Cream Machine - Step
         </layout:VerticalLayout>
     </Page>
 </mvc:View>
+
 ```
 
-We will add the *press* event to the `GenericTiles` with the *Production Process*, *User Reviews*, and *Quality Control* titles. This is to trigger navigation with a function. The press event function will be implemented in the controller file.
+Add the <code><i>press</i></code> event to the `GenericTiles` with the *Production Process*, *User Reviews*, and *Quality Control* titles. This is to trigger navigation with a function. The press event function is implemented in the controller file.
 
 
 
 
 
-### Startpage.controller.js
+### `Startpage.controller.js`
 
 ```js
-
 sap.ui.define([
     "sap/ui/core/mvc/Controller",
     "sap/ui/model/json/JSONModel",
     "sap/ui/core/format/NumberFormat",
     "sap/base/strings/formatMessage"
-], function(Controller, JSONModel, NumberFormat) {
+], function (Controller, JSONModel, NumberFormat, formatMessage) {
     "use strict";
 
     return Controller.extend("sap.suite.ui.commons.demokit.tutorial.icecream.05.controller.Startpage", {
         ...
-        onNavToProcessFlow: function() {
+        onNavToProcessFlow: function () {
             this.getRouter().navTo("processFlow");
         },
 
-        onNavToChartContainer: function() {
+        onNavToChartContainer: function () {
             this.getRouter().navTo("chartContainer");
         },
-        onNavToReviews: function() {    
+
+        onNavToReviews: function () {
             this.getRouter().navTo("reviews");
         },
-    
-        getRouter: function() {
+
+        getRouter: function () {
             return this.getOwnerComponent().getRouter();
         }
+    });
 });
+
 ```
 
-`getRouter` returns the router instance of the component.
+-   `getRouter`: Returns the router instance of the component.
 
-`onNavToProcessFlow` is called when the user clicks on the first tile. It triggers the navigation to the view with the `ProcessFlow`.
+-   `onNavToProcessFlow`: Called when the user clicks on the first tile. It triggers the navigation to the view with the `ProcessFlow`.
 
-`onNavToChartContainer` is called when the user clicks on the fourth tile. It triggers the navigation to the view with the `ChartContainer`.
+-   `onNavToChartContainer`: Called when the user clicks on the fourth tile. It triggers the navigation to the view with the `ChartContainer`.
 
-`onNavToReviews` is called when the user clicks the third tile. It triggers the navigation to the view with the `Timeline`.
+-   `onNavToReviews`: Called when the user clicks the third tile. It triggers the navigation to the view with the `Timeline`.
+
 

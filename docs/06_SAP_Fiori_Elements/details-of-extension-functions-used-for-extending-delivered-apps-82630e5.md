@@ -5,7 +5,7 @@
 In this document, you can find the details of all the extension functions that can be used for extending delivered apps using adaptation extensions.
 
 > ### Note:  
-> This topic is currently only applicable to SAP Fiori elements for OData V2.
+> This topic is only applicable to SAP Fiori elements for OData V2.
 
 **Extension functions of list report, object page and overview page**
 

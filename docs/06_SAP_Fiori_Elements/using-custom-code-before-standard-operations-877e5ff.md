@@ -5,7 +5,7 @@
 You can add custom coding before calling standard methods provided by SAP Fiori elements.
 
 > ### Note:  
-> This topic is currently only applicable to SAP Fiori elements for OData V4.
+> This topic is only applicable to SAP Fiori elements for OData V4.
 
 You can use the `onBefore` extension methods to add custom coding. The following extension methods are supported:
 
@@ -43,7 +43,7 @@ For more information about using the extension methods, see the *Related Links* 
 
 ## Related Links
 
--   You can explore and work with the coding yourself. Check out our live example in the flexible programming model explorer at [Custom Hooks](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/controllerExtensions/controllerExtensionsOverview/basicExtensibility).
+-   For more information and live examples, see the SAP Fiori development portal at [Standard Floorplans - Extensions - Overview](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/controllerExtensions/guidanceControllerExtensions).
 
 -   For more information, see [EditFlow](https://ui5.sap.com/#/api/sap.fe.core.controllerextensions.EditFlow) in the Demo Kit.
 

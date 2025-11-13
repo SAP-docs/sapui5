@@ -19,7 +19,7 @@ The change handler gets the following change-specific information from SAPUI5 fl
 > }
 > ```
 
-Find a full example on GitHub at [https://github.com/SAP/openui5/blob/master/src/sap.m/src/sap/m/changeHandler/SplitMenuButton.js](https://github.com/SAP/openui5/blob/master/src/sap.m/src/sap/m/changeHandler/SplitMenuButton.js).
+Find a full example on GitHub at [https://github.com/UI5/openui5/blob/master/src/sap.m/src/sap/m/changeHandler/SplitMenuButton.js](https://github.com/UI5/openui5/blob/master/src/sap.m/src/sap/m/changeHandler/SplitMenuButton.js).
 
 You can then register it in the `library.js` file of the control's library, where you map the change type to the corresponding change handler and the control type. For more information, see [Registering Change Handlers for UI Changes](registering-change-handlers-for-ui-changes-d5f4de8.md).
 

@@ -33,7 +33,7 @@ To protect potentially sensitive data, annotate properties as potentially sensit
 
 -   **Using the Export Button**
 
-    Export functionality can be disabled on sensitive data.
+    The export button can be disabled at the table level or specific columns that contain sensitive data can be excluded from the export.
 
     For more information, see [Using the Export Button](using-the-export-button-4bab6f2.md).
 

@@ -47,5 +47,5 @@ You can specify separate fragments in the `manifest.json` file for the expanded 
 
 ![](images/Custom_Content_in_List_Report_Header_in_Collapsed_Mode_bd1a51e.png "Custom Content in the List Report Header in Collapsed Mode")
 
-You can explore and work with the coding yourself. Check out our live example in the flexible programming model explorer at [Custom List Report Header](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/customElements/customListReportHeaderContent).
+You can explore and work with the coding yourself. For more information and live examples, see the SAP Fiori development portal at [Standard Floorplans - Extensions - Extensions for List-Based Pages - Custom Header](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/topic/floorplanListReport/customHeaderListReport).
 

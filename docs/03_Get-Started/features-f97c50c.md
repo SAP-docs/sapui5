@@ -47,5 +47,5 @@ The access modes provided to the value in the decision table settings should be 
 
 A label is a translatable name that can be provided to the project and its entities along with the name and description for globalization. If a label is maintained for each entity of the project, the label name is displayed in the header of all the entities, breadcrumb navigation, and the autosuggest list.
 
-If the condition expression in a decision table is long, the complete expression will not be visible in the header of the decision table. You can provide a label as an identifier for the condition expression. You can also hover the mouse pointer over the label to view the complete expression.
+If the condition expression in a decision table is long, the complete expression is not displayed in the header of the decision table. You can provide a label as an identifier for the condition expression. You can also hover the mouse pointer over the label to view the complete expression.
 

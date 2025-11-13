@@ -2,7 +2,7 @@
 
 # Defining Custom Actions
 
-Define custom actions by using the extensions in the app descriptor file. You can also define these custom actions so that they appear on charts, tables, or header toolbars based on the filter property value \(chart/table/global\).
+Define custom actions by using the extensions in the `manifest.json` file. You can also define these custom actions so that they appear on charts, tables, or header toolbars based on the filter property value \(chart/table/global\).
 
 
 
@@ -157,7 +157,7 @@ Indicates whether the action should be displayed in the footer of the page. The 
 Represents the command mapped to a keyboard shortcut defined under `sap.ui.commands`.
 
 > ### Note:  
-> If you are adding the command settings to an existing custom action, the `oEvent` parameter that is passed to the event handler of that custom action is changed. It requires code adaptation if the code in the event handler depends on the `oEvent` parameter. For example, [Ctrl\] + [B\]  
+> If you are adding the command settings to an existing custom action, the `oEvent` parameter that is passed to the event handler of that custom action is changed. It requires code adaptation if the code in the event handler depends on the `oEvent` parameter. For example, [Ctrl\] + [B\] .
 
 
 
@@ -166,23 +166,22 @@ Represents the command mapped to a keyboard shortcut defined under `sap.ui.comma
 </table>
 
 ```
-
 "sap.ui5": {
     "_version": "1.1.0",
-    "extends": {
+        "extends": {
         "extensions": {
-		"sap.ui.commands": {
-			"sap.suite.generic.template.AnalyticalListPage#sap.suite.generic.template.AnalyticalListPage::ZCostCenterCostQuery0020": {
-		"GlobalActionCommand": {
-			"shortcut": "Ctrl+B"
-		}
-	}		
-		},
+            "sap.ui.commands": {
+                "sap.suite.generic.template.AnalyticalListPage#sap.suite.generic.template.AnalyticalListPage::ZCostCenterCostQuery0020": {
+                    "GlobalActionCommand": {
+                        "shortcut": "Ctrl+B"
+                    }
+                }		
+            },
             "sap.ui.controllerExtensions": {
                 "sap.suite.ui.generic.template.AnalyticalListPage.view.AnalyticalListPage": {
                     "controllerName": "my_app.ext.controller.AnalyticalListPageExt",
-                        "sap.ui.generic.app": {
-                            "ZCostCenterCostQuery0020": {
+                    "sap.ui.generic.app": {
+                        "ZCostCenterCostQuery0020": {
                             "EntitySet": "ZCostCenterCostQuery0020",
                             "Actions": {
                                 "Action A": {
@@ -190,8 +189,7 @@ Represents the command mapped to a keyboard shortcut defined under `sap.ui.comma
                                     "text": "{{Action A}}",
                                     "press": "onClickActionA",
                                     "global": true,
- 					   "command": "GlobalActionCommand ",
-
+                                    "command": "GlobalActionCommand"
                                 },
                                 "Action B": {
                                     "id": "ActionB_requiresSelection",
@@ -200,7 +198,7 @@ Represents the command mapped to a keyboard shortcut defined under `sap.ui.comma
                                     "filter": "table",
                                     "requiresSelection":true
                                 }
-                                "Action C: {
+                                "Action C": {
                                     "id": "ActionC_requiresSelection",
                                     "text": "{{Action C}}",
                                     "press": "onClickActionC",
@@ -213,7 +211,7 @@ Represents the command mapped to a keyboard shortcut defined under `sap.ui.comma
                                     "press": "onClickActionD",
                                     "filter": "table"
                                 }
-                                "Action E: {
+                                "Action E": {
                                     "id": "ActionE",
                                     "text": "{{Action E}}",
                                     "press": "onClickActionE",
@@ -226,8 +224,7 @@ Represents the command mapped to a keyboard shortcut defined under `sap.ui.comma
             } // End of controllerExternsions
         }
     },
-        ....,
-        ....
+    ...
 }
 
 ```
@@ -306,5 +303,5 @@ onClickActionSTTA_C_SO_SalesOrder_ND1: function(oEvent) {
 
 [Configuring Analytical List Page App Extensions](configuring-analytical-list-page-app-extensions-9504fb4.md "This section provides some of the advance configurations and extensions for your application.")
 
-[Smart Table Extensions](smart-table-extensions-4117ef9.md "Define custom actions for tables by configuring the descriptor and annotation files.")
+[Smart Table Extensions](smart-table-extensions-4117ef9.md "Define custom actions for tables by configuring the annotation and manifest.json files.")
 

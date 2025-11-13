@@ -5,7 +5,7 @@
 SAP Fiori elements provide an option to show or hide fields based on their importance in small screen devices.
 
 > ### Note:  
-> This topic is currently only applicable to SAP Fiori elements for OData V2.
+> This topic is only applicable to SAP Fiori elements for OData V2.
 
 Using the `UI.Importance` annotation, you can set the importance of a field. Based on the value set for this annotation, namely `High`, `Medium`, or `Low`, the fields are shown or hidden as depending on the screen size.
 

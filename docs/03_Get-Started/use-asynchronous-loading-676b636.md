@@ -130,7 +130,7 @@ sap.ui.define(["sap/ui/core/UIComponent"], function(UIComponent) {
 });
 ```
 
-For more information on how `sap.ui.core.IAsyncContentCreation` affects the component's content creation, see [Methods Controlling the Initial Instantiation](../04_Essentials/methods-controlling-the-initial-instantiation-b430345.md).
+For more information on how `sap.ui.core.IAsyncContentCreation` affects the component's content creation, see [Content Creation in Components](../04_Essentials/content-creation-in-components-b430345.md).
 
 **Additional Information:**
 

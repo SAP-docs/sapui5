@@ -65,7 +65,7 @@ The flow is as follows:
 
 -   If end users choose *Confirm*, the application sends the request again, this time **without** `Prefer:handling=strict` in the header.
 
--   The back end executes the action and responds with either a success or a failure message.
+-   The back end executes the action and responds with either a success or a failure message. If it sends the same message again, it is suppressed and not shown on the UI. For more information, see the version-specific sections.
 
 -   If end users choose *Cancel*, the operation is terminated.
 
@@ -80,6 +80,19 @@ The following image shows an example of such a popup:
 
 ## Additional Features in SAP Fiori Elements for OData V2
 
+Once the 412 warnings are confirmed, any repeated messages from the back end are suppressed and not displayed in the UI. This suppression is applied only if the subsequent messages match the original in all of the following message attributes:
+
+-   `code`
+
+-   `message`
+
+-   `severity`
+
+-   `target`: The targets are considered equal if they resolve to the same model element.
+
+-   `transition` flag : If this flag is absent, it is considered as `true`.
+
+
 
 
 ### Turn Off *Draft Activation* Confirmation Popup for External Navigation
@@ -87,7 +100,7 @@ The following image shows an example of such a popup:
 You can turn off the confirmation popup for draft activation in the case of external navigation by configuring the `draftDiscardConfirmationSettings` setting in the `manifest.json` file, as shown in the following sample code:
 
 > ### Sample Code:  
-> manifest.json
+> `manifest.json`
 > 
 > ```
 > "sap.ui.generic.app": {
@@ -136,7 +149,7 @@ In draft scenarios, you can configure a UI confirmation popup before proceeding 
 To enable this popup, in the `manifest.json` file, under the object page settings, set the `showConfirmationOnDraftActivate` indicator to `true` as shown in the following sample code:
 
 > ### Sample Code:  
-> manifest.json
+> `manifest.json`
 > 
 > ```
 > "pages": {
@@ -192,6 +205,21 @@ You can override the title text and provide application-specific dialog title us
 
 ## Additional Features in SAP Fiori Elements for OData V4
 
+Once the 412 warnings are confirmed, any repeated messages from the back end are suppressed and not displayed in the UI. This suppression is applied only if the subsequent messages match the original in all of the following message attributes:
+
+-   `code`
+
+-   `message`
+
+-   `numericSeverity`
+
+-   `longtextUrl`: The messages are considered equal if both are `null` or absent. Note that this URL can contain variables that not present in the message string.
+
+-   `target` and `additionalTargets`: The targets are considered equal if they resolve to the same model element.
+
+-   `transition` flag : If this flag is absent, it is considered as `true`.
+
+
 
 
 ### Turn Off *Draft Activation* Confirmation Popup for External Navigation
@@ -199,7 +227,7 @@ You can override the title text and provide application-specific dialog title us
 You can turn off the confirmation popup for draft activation in the case of external navigation by configuring the `silentlyKeepDraftOnForwardNavigation` setting in the `manifest.json` file as shown in the following sample code:
 
 > ### Sample Code:  
-> manifest.json
+> `manifest.json`
 > 
 > ```
 > "sap.fe": {
@@ -208,6 +236,70 @@ You can turn off the confirmation popup for draft activation in the case of exte
 >      }
 > }
 > 
+> ```
+
+
+
+### Turn Off 412 Confirmation Popups
+
+To turn off 412 confirmation popups, you need to disable strict handling. You can disable strict handling for a specific action or the entire application by specifying the `disableStrictHandling` setting in the `manifest.json` file.
+
+To disable strict handling at the application level, set the `disableStrictHandling` setting to `true` under the `sap.fe` section of the `manifest.json` file, as shown in the following sample code:
+
+> ### Sample Code:  
+> `manifest.json`
+> 
+> ```
+> "sap.fe": {
+>     "app": {
+>        "disableStrictHandling": true
+>     }
+> }
+> ```
+
+To disable strict handling at the action level, set the `disableStrictHandling` setting to `true` under the specific action in the `manifest.json` file. You can disable strict handling for a specific action in a table, as shown in the following sample code:
+
+> ### Sample Code:  
+> `manifest.json`
+> 
+> ```
+> "@com.sap.vocabularies.UI.v1.LineItem": {
+>      "actions": {
+>         "DataFieldForAction::YourActionWith412Handling": {
+>            "disableStrictHandling": true
+>         }
+>      }
+> }
+> ```
+
+You can disable strict handling for a specific header action on an object page, as shown in the following sample code:
+
+> ### Sample Code:  
+> `manifest.json`
+> 
+> ```
+> "content": {
+>     "header": {
+>         "actions": {
+>             "DataFieldForAction::YourActionWith412Handling": {
+>                 "disableStrictHandling": true,
+>             }
+>         }
+>     }
+> }
+> ```
+
+You can also disable strict handling at the action level using the `invokeAction` API, as shown in the following sample code:
+
+> ### Sample Code:  
+> JavaScript
+> 
+> ```
+> this.base.editFlow.invokeAction("com.c_salesordermanage_sd.EntityContainer/message412", {
+>      contexts: context,
+>      model: this.base.getView().getModel(),
+>      disableStrictHandling: true
+> });
 > ```
 
 

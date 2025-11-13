@@ -35,5 +35,5 @@ We recommend to add the [`sap.ui.core.IAsyncContentCreation`](https://ui5.sap.co
 **Related Information**  
 
 
-[Using and Nesting Components](using-and-nesting-components-346599f.md "You can use a ComponentContainer to wrap a UIComponent and reuse it anywhere within the SAPUI5 control tree. With the ComponentContainer you can nest components inside other components.")
+[Component Instantiation Guide](component-instantiation-guide-346599f.md "Components serve as the core building blocks of SAPUI5 applications. This guide explains the various ways to instantiate components, when to use each approach, and how to migrate from older mechanisms to modern alternatives.")
 

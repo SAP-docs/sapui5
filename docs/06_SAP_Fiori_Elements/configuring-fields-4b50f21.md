@@ -33,7 +33,7 @@ Input fields, such as `sap.m.Input` or `sap.m.ComboBox`, have a property placeho
 
 ## Formatting `Date`, `Time`, and `DateTime` Fields
 
-You can use the `DateTimeStyle` annotation with the following values to specify how date and time is displayed in the input field and the text field in display mode:
+You can use the `DateTimeStyle` annotation with the following values to specify how the date and time are displayed in the input field and the text field in display mode:
 
 **Values for the DateTimeStyle Annotation**
 
@@ -155,11 +155,9 @@ In the following example, the `DateTimeStyle` annotation is set to `short`:
 > DateTimePropertyWithStyle.     : DateTime      @UI: {DateTimeStyle: 'short'};
 > ```
 
-If date and time must be displayed in a different format, you can use the `pattern` property. It specifies the display format for both the input fields and text fields in display mode. This property is defined in the `manifest.json` file and follows the guidelines of the Unicode Locale Data Markup Language \(LDML\).
+If the date and time must be displayed in a different format, you can use the `pattern` property. It specifies the display format for both the input fields and text fields in display mode. This property is defined in the `manifest.json` file and follows the guidelines of the Unicode Locale Data Markup Language \(LDML\).
 
 The LDML pattern allows for custom date and time formatting using specific symbols for year, month, day, hour, minute, and so on. For example, `yyyy-MM-dd` displays a date as *2023-09-24*. The different pattern letters are listed at [Date Format](https://sapui5.hana.ondemand.com/sdk/#/topic/91f2eba36f4d1014b6dd926db0e91070.html).
-
-Check out our live example in the flexible programming model explorer at [Field - Format Options](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/field/fieldFormatOptions).
 
 
 

@@ -337,7 +337,7 @@ SAP Fiori Elements
 
 The following changes and new features are available for SAP Fiori elements for OData V2 and SAP Fiori elements for OData V4:
 
--   List report applications with responsive tables now display the *Select All* option instead of the *Clear All* option by default. For more information, see [Enabling Multiple Selection in Tables](../06_SAP_Fiori_Elements/enabling-multiple-selection-in-tables-116b5d8.md).
+-   List report applications with responsive tables now display the *Select All* option instead of the *Clear All* option by default. For more information, see [Configuring the Selection Mode for Tables](../06_SAP_Fiori_Elements/configuring-the-selection-mode-for-tables-116b5d8.md).
 
 
 <sub>Changed•SAP Fiori Elements•Info Only•1.119</sub>
@@ -381,7 +381,7 @@ SAP Fiori Elements
 
 The following changes and new features are available for SAP Fiori elements for OData V2:
 
--   You can now enable lazy loading of cards on the overview page by setting `enableLazyRendering` to `true` in the `manifest.json`. For more information, see [Descriptor Configuration for the Overview Page](../06_SAP_Fiori_Elements/descriptor-configuration-for-the-overview-page-f194b41.md).
+-   You can now enable lazy loading of cards on the overview page by setting `enableLazyRendering` to `true` in the `manifest.json`. For more information, see [Configuring the Manifest for the Overview Page](../06_SAP_Fiori_Elements/configuring-the-manifest-for-the-overview-page-f194b41.md).
 
 -   The empty row mode now indicates if the required fields in the tables of the object page don't have a value. For more information, see [Enabling Inline Creation Mode or Empty Row Mode for Table Entries](../06_SAP_Fiori_Elements/enabling-inline-creation-mode-or-empty-row-mode-for-table-entries-cfb04f0.md).
 
@@ -885,6 +885,18 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.141](what-s-new-in-sapui5-1-141-a7ed66d.md "With this release SAPUI5 is upgraded from version 1.140 to 1.141.")
+
+[What's New in SAPUI5 1.140](what-s-new-in-sapui5-1-140-26a106c.md "With this release SAPUI5 is upgraded from version 1.139 to 1.140.")
+
+[What's New in SAPUI5 1.139](what-s-new-in-sapui5-1-139-e10db71.md "With this release SAPUI5 is upgraded from version 1.138 to 1.139.")
+
+[What's New in SAPUI5 1.138](what-s-new-in-sapui5-1-138-8f6a92b.md "With this release SAPUI5 is upgraded from version 1.136 to 1.138.")
+
+[What's New in SAPUI5 1.136](what-s-new-in-sapui5-1-136-a82754d.md "With this release SAPUI5 is upgraded from version 1.135 to 1.136.")
+
+[What's New in SAPUI5 1.135](what-s-new-in-sapui5-1-135-93d7630.md "With this release SAPUI5 is upgraded from version 1.134 to 1.135.")
 
 [What's New in SAPUI5 1.134](what-s-new-in-sapui5-1-134-c512d71.md "With this release SAPUI5 is upgraded from version 1.133 to 1.134.")
 

@@ -5,7 +5,7 @@
 Once the generation is complete and the node modules have been installed, the application is ready to run.
 
 > ### Note:  
-> This topic is currently only applicable to SAP Fiori elements for OData V2.
+> This topic is only applicable to SAP Fiori elements for OData V2.
 
 The new app or component reuses the views and controllers from `sap.suite.ui.generic.template`. The resource links and route definitions for navigation are in the app descriptor file \(`manifest.json`\). You can find the destination configuration for preview in the `ui5*.yaml` files.
 

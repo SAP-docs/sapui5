@@ -13,7 +13,7 @@ A proper relative name must be used. This proper name must not contain or consis
 ## "alias" Template
 
 ```xml
-<template:alias name="AH" value="sap.ui.model.odata.AnnotationHelper">
+<template:alias name="AH" value="AnnotationHelper">
   <template:with path="meta>com.sap.vocabularies.UI.v1.Badge" var="badge">
     <form:SimpleForm>
       <form:title>

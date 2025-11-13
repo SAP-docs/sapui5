@@ -27,7 +27,7 @@ This can happen for one of the following reasons:
 
 ## Resolution
 
-First, you should check if your control was rendered properly by using the developer tool of your browser to check the DOM element. For information about how to use your browser tools, see the documentation of you browser or check our [Troubleshooting Tutorial Step 1: Browser Developer Tools](../03_Get-Started/step-1-browser-developer-tools-eadd60a.md).
+First, you should check if your control was rendered properly by using the developer tool of your browser to check the DOM element.For information about how to use your browser tools, see the documentation of you browser or check our [Troubleshooting Tutorial Step 1: Browser Developer Tools](../03_Get-Started/step-1-browser-developer-tools-eadd60a.md).
 
 
 

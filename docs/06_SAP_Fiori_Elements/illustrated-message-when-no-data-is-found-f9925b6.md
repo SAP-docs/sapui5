@@ -2,20 +2,41 @@
 
 # Illustrated Message When No Data Is Found
 
-SAP Fiori elements for OData V4 displays an illustrated message when no data is found for a table.
+SAP Fiori elements displays an illustrated message when no data is found for a table.
 
-> ### Note:  
-> This topic is only applicable to SAP Fiori elements for OData V4.
+The illustration, the title of the message and its description depend on the situation in which they are displayed: no items created within the table, applied filters, or search query.
 
-The illustration, the title of the message and its description depend on the situation in which they are displayed: no items created within the table, applied filters, or search query. You can adapt the description to suit the use case of your application as described in [Maintaining Standard Texts for Tables](maintaining-standard-texts-for-tables-aacfac5.md).
+On the list report page, the size of the illustrated message adapts to the available space for the table, as shown in the following screenshot:
 
-In the list report, the size of the illustrated message adapts to the available space for the table, as shown in the following screenshot:
+![](images/Illustrated_Message_1_35b4d9b.png)
 
-![](images/ListReport_IllustratedMessage_b67eaca.png)
+On the object page in anchor bar mode, the size of the illustrated message is reduced to keep optimal information density, as shown in the following screenshot:
 
-On the object page, the size of the illustrated message is reduced to keep optimal information density, as shown in the following screenshot:
+![](images/Illustrated_Message_2_8f228c8.png)
 
-![](images/ObjectPage_IllustratedMessage_6b9d295.png)
+In icon tab bar mode, if the section contains only a table, the size of the illustrated message adapts to the available space for the table similarly to the list report.
+
+The following illustrated message texts are displayed by default:
+
+-   When opening a list report without autoload, an illustrated message is displayed with *Let’s get some results* as the title and *Start by providing your search or filter criteria.* as the description.
+-   When no filters are applied and no data is found on the list report page, an illustrated message is displayed with *No results found* as the title and *Start by providing your search or filter criteria.* as the description.
+
+-   When filters are applied and the search shows no results, an illustrated message is displayed with *No results found* as the title and *Try changing your filter criteria.* as the description.
+
+-   When the table is used in multi-view mode and no data is found, an illustrated message is displayed with *No no results found* as the title and *Try changing the view or filter criteria.* as the description.
+
+-   When no search nor filters are applied and no data is found on the object page, an illustrated message is displayed with *No items available* as the title and *When there are, you'll find them here.* as the description.
+
+
+You can override standard illustrated message texts by adding specific keys to the i18n file of the list report page and object page. For a list of the keys, see [Localization of UI Texts](localization-of-ui-texts-b8cb649.md).
+
+
+
+<a name="loiof9925b63da5443afb7d3b50abb932cf2__section_rqr_4qm_vcc"/>
+
+## Additional Features in SAP Fiori Elements for OData V4
+
+You can adapt the description to suit the use case of your application as described in [Maintaining Standard Texts for Tables](maintaining-standard-texts-for-tables-aacfac5.md).
 
 You can use the manifest setting `useTextForNoDataMessages` to display a text instead of an illustrated message on the object page, as shown in the following code sample:
 
@@ -23,6 +44,7 @@ You can use the manifest setting `useTextForNoDataMessages` to display a text in
 > `manifest.json`
 > 
 > ```
+> 
 > "SalesOrderManageObjectPage": {
 >     "type": "Component",
 >     "id": "SalesOrderManageObjectPage",
@@ -40,18 +62,17 @@ You can use the manifest setting `useTextForNoDataMessages` to display a text in
 >             }
 >         }
 >     }
-> },
+> }
+> 
 > ```
 
 This option is applied to all tables within the page.
 
-When using this option, the default texts must be overridden by the application as described in [Maintaining Standard Texts for Tables](maintaining-standard-texts-for-tables-aacfac5.md).
+When using this option, the default texts must be overridden by the application using keys listed in [Localization of UI Texts](localization-of-ui-texts-b8cb649.md).
 
 
 
-<a name="loiof9925b63da5443afb7d3b50abb932cf2__section_rqr_4qm_vcc"/>
-
-## Adding Actions to an Illustrated Message
+### Adding Actions to an Illustrated Message
 
 You can add additional actions to illustrated messages to guide the end user when no data is displayed within a table. To do so, use the `beforeRebindTable` extension point.
 
@@ -64,7 +85,7 @@ You can add additional actions to illustrated messages to guide the end user whe
 >         "type": "Component",
 >         "id": "Default",
 >         "name": "sap.fe.templates.ObjectPage",
->         "viewLevel": 1,
+>         "level": 1,
 >         "options": {
 >             "settings": {
 >                 "contextPath": "/RootEntity",
@@ -150,5 +171,5 @@ Within the callback function, you can define the illustrated message to include 
 > );
 > ```
 
-Check out our live example in the flexible programming model explorer at [Building Blocks - Table - Table No Data](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/table/tableNoData).
+For more information and live examples, see the SAP Fiori development portal at [Building Blocks - Table - Extensions - Table APIs](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/table/tableNoData).
 

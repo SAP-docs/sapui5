@@ -42,7 +42,7 @@ For more information, see [Defining and Adapting Sections](defining-and-adapting
 
 Custom fields, that is, form elements, provide the following features:
 
--   adding arbitrary fields via an `xmlfragment` definition
+-   adding arbitrary fields through an `xmlfragment` definition
 
 -   positioning relative to other fields defined as `FieldGroups` or `Identification`
 
@@ -78,7 +78,7 @@ The form containing additional custom fields can look like this:
 2.  Register your view extensions in the `manifest.json` file of your application as follows:
 
     > ### Sample Code:  
-    > manifest.json
+    > `manifest.json`
     > 
     > ```
     > "sap.ui5": {
@@ -264,9 +264,9 @@ You can use the UI model within the fragment to react to changes of the `editMod
 
 
 
-### Live Example: Custom Form Element with `Field` Building Block
+### Live Example: Custom Form Element
 
-You can explore and work with the coding yourself. Check out our live example in the flexible programming model explorer at [Custom Form Element](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/customElements/customElementsOverview/customFormElementContent).
+You can explore and work with the coding yourself. For more information and live examples, see the SAP Fiori development portal at [Building Blocks - Form - Form Extensions](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/form/formCustom).
 
 
 
@@ -275,7 +275,7 @@ You can explore and work with the coding yourself. Check out our live example in
 You can use metadata binding as an alternative to `i18n` approach to define the label for custom fields or custom form elements.
 
 > ### Sample Code:  
-> manifest.json
+> `manifest.json`
 > 
 > ```
 > "customFormElementAnchor3": {

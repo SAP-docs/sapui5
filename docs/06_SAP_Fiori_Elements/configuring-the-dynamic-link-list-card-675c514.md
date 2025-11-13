@@ -12,29 +12,31 @@ The dynamic link list card also supports the contact annotation as the default a
 
 
 
-1.  Configure the descriptor settings.
+1.  Configure the manifest settings.
 
-    ```
-            "card017": {
-              "model": "salesOrder",
-              "template": "sap.ovp.cards.linklist",
-              "settings": {
-                "title": "Standard Dynamic Linklist Card",
-                "targetUri": "https://en.abc.org/wiki/xyz _2",
-                "subTitle": "Smartlink Feature Test",
-                "listFlavor": "standard",
-                "entitySet": "ProductSet",
-                "sortBy": "Name",
-                "sortOrder": "ascending",
-                "headerAnnotationPath": "com.sap.vocabularies.UI.v1.HeaderInfo#header1",
-                "defaultSpan": {
-                  "rows": 20,
-                  "cols": 2
-                }
-              }
-            },
-    
-    ```
+    > ### Sample Code:  
+    > `manifest.json`
+    > 
+    > ```
+    > "card017": {
+    >           "model": "salesOrder",
+    >           "template": "sap.ovp.cards.linklist",
+    >           "settings": {
+    >             "title": "Standard Dynamic Linklist Card",
+    >             "targetUri": "https://en.abc.org/wiki/xyz _2",
+    >             "subTitle": "Smartlink Feature Test",
+    >             "listFlavor": "standard",
+    >             "entitySet": "ProductSet",
+    >             "sortBy": "Name",
+    >             "sortOrder": "ascending",
+    >             "headerAnnotationPath": "com.sap.vocabularies.UI.v1.HeaderInfo#header1",
+    >             "defaultSpan": {
+    >               "rows": 20,
+    >               "cols": 2
+    >             }
+    >           }
+    >         },
+    > ```
 
 2.  Configure the list information in the `UI.HeaderInfo` annotation.
 

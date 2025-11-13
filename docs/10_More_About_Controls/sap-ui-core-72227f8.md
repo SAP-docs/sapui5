@@ -2,7 +2,7 @@
 
 # sap.ui.core
 
-This library contains the jQuery plugins \(`jQuery.sap.*`\), the core and all its components, base classes for controls, components and the Model-View-Controller \(MVC\) classes.
+This library contains the core of the SAPUI5 runtime, including modules for Model-View-Controller \(MVC\), components, event handling, routing, XML templating, base classes for control development, and i18n.
 
 > ### Note:  
 > The following sections only provide additional information for some of the controls. For a complete list of all controls and their documentation, see the [API Reference](https://ui5.sap.com/#/api) and the [Samples](https://ui5.sap.com/#/controls). 

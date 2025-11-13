@@ -10,7 +10,7 @@ The following advanced concepts for components exist.
 
     A `UIComponent` can implement the `sap.ui.core.IAsyncContentCreation` interface. This interface allows you to provide a Promise as the return value for the [`sap.ui.core.UIComponent#createContent`](https://ui5.sap.com/#/api/sap.ui.core.UIComponent/methods/createContent) function.
 
-    For more information, see [Methods Controlling the Initial Instantiation](methods-controlling-the-initial-instantiation-b430345.md).
+    For more information, see [Content Creation in Components](content-creation-in-components-b430345.md).
 
 -   Routing and navigation
 
@@ -22,11 +22,25 @@ The following advanced concepts for components exist.
 
     For more information, see [Extending Apps](../08_Extending_SAPUI5_Applications/extending-apps-a264a9a.md)
 
+-   Owner Component concept
+
+    Closely related to extensibility and customizing is the concept of the *Owner Component*. The owner component is the `sap.ui.core.(UI)Component` instance that created and therefore "owns" any `sap.ui.base.ManagedObject` instance, including SAPUI5 controls, views, fragments, and other components. The framework uses the owner component to identify extension points, view modifications, and controller extensions defined in the owner component's `manifest.json`, enabling views, fragments, and controllers to be extended through their owner component's configuration.
+
+    For more information, see [The Owner Component](the-owner-component-a7a3138.md).
+
 -   Component data
 
-    The JSON object `ComponentData` contains any initial values of parameters that can be used in the `createComponent()` method. Component data are already available for use in the `createComponent()` method, but not the parameters. The parameters are available in the `onBefore`, the `onAfterRendering` and the setter methods of the parameters.
+    Component data is an optional object that contains application-specific initial data passed to a component during instantiation. This data is provided from outside the component and made available during the component's initialization phase. The component data can be accessed throughout the component lifecycle using the `Component#getComponentData()` method. The content of the component data itself is not part of the SAPUI5 framework's offering; however, other layers of the SAP UI technology stack may provide content via the component data, for example the SAP Fiori launchpad's [`startupParameters`](https://help.sap.com/docs/SAP_NETWEAVER_AS_ABAP_752/a7b390faab1140c087b8926571e942b7/079561b716bb4f2f8ae4e47bacbdb86d.html).
 
-    Component data is provided from outside and can be configured as desired. Configuration data is static and defined in the component. To change or extend the configuration, the component needs to be extended and a new configuration has to be created and merged with the configuration in the parent component.
+    Component data is typically used to pass configuration values, startup parameters, or contextual information that the component needs to function properly. It differs from a static configuration in that it can vary between different instantiations of the same component.
+
+    For more information, see the [API Reference for `sap.ui.core.Component#getComponentData`](https://ui5.sap.com/#/api/sap.ui.core.Component/methods/getComponentData).
+
+-   Component creation mechanisms
+
+    SAPUI5 provides several mechanisms for component instantiation, each suited for different scenarios. The main approaches include `ComponentSupport` for declarative creation, `Component.create()` for programmatic instantiation, routing-based creation for nested components, and `ComponentContainer` for rendering components in the control tree. Each mechanism offers specific advantages for different use cases, such as initial application startup, nested component creation, or dynamic component loading.
+
+    For more information, see our [Component Instantiation Guide](component-instantiation-guide-346599f.md).
 
 -   Event bus of the component
 

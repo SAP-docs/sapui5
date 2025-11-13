@@ -10,7 +10,7 @@ You can use personalization to modify the settings of a chart.
 
 ## Filter Option
 
-The filter option is available via chart personalization settings, if personalization is enabled.
+The filter option is available in the chart personalization settings, if personalization is enabled.
 
 The default state of the filter option is as follows:
 

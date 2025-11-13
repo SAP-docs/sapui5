@@ -46,7 +46,7 @@ End users can expand and collapse the columns using the focus buttons. They can 
 
 1.  Launch the *Page Map*. You can launch the *Page Map* in several ways, for example by right-clicking the project folder and selecting *Show Page Map*. For more information, see [Define Application Structure](https://help.sap.com/docs/SAP_FIORI_tools/17d50220bcd848aa854c9c182d65b699/bae38e6216754a76896b926a3d6ac3a9.html).
 
-2.  To select the flexible column layout configuration, go to the *Property Panel* and select *Flexible Column Layout*.
+2.  To select the flexible column layout configuration, go to the *Property Panel* and switch on *Flexible Column Layout*.
 
 3.  Select your desired layout. You can select a layout for two or three columns. You can also customize your layout settings further in the `manifest.json` file. For more information, see [Additional Features in SAP Fiori Elements for OData V2](enabling-the-flexible-column-layout-e762257.md#loioe762257125b34513b0859faa1610b09e__section_grc_dmp_gmb) or [Additional Features in SAP Fiori Elements for OData V4](enabling-the-flexible-column-layout-e762257.md#loioe762257125b34513b0859faa1610b09e__section_enh_np2_ymb).
 

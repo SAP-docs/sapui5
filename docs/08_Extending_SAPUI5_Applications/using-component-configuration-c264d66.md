@@ -4,12 +4,12 @@
 
 SAPUI5 supports the extension of a base controller by merging the delivered standard controller with a custom controller on JavaScript object level.
 
-SAPUI5 supports two different extension variants. The latest and recommended variant is called [Controller Extension](../04_Essentials/using-controller-extension-21515f0.md). The old variant called **Component Configuration** is described on the following pages.
+SAPUI5 supports two different extension variants. The latest and recommended variant is called [Controller Extension](../04_Essentials/controller-extensions-21515f0.md). The old variant called **Component Configuration** is described on the following pages.
 
 The SAPUI5 Component Configuration concept does not support hierarchical inheritance of methods within a chain of controllers. Instead, methods of the custom controller override any methods of the standard controller with the same name. The following controller lifecycle methods are, however, an exception to this rule: `onInit`, `onExit`, `onBeforeRendering`, `onAfterRendering`. For these methods, the controller methods of your custom application are called either after \(for `onInit` and `onAfterRendering`\), or before \(for `onExit` and `onBeforeRendering`\) the standard lifecycle methods.
 
 > ### Restriction:  
-> When using the SAPUI5 Component Configuration concept, only the standard controller can be extended, but a custom controller can **not** be extended again. Only one level of controller extension is allowed; nested controller extension is not supported. We recommend using the more recent [Controller Extension](../04_Essentials/using-controller-extension-21515f0.md) approach for such a use case.
+> When using the SAPUI5 Component Configuration concept, only the standard controller can be extended, but a custom controller can **not** be extended again. Only one level of controller extension is allowed; nested controller extension is not supported. We recommend using the more recent [Controller Extension](../04_Essentials/controller-extensions-21515f0.md) approach for such a use case.
 
 The following examples show how the Component Configuration concept in SAPUI5 works. The following code snippet shows the standard controller `Main.controller.js` of the delivered standard application:
 

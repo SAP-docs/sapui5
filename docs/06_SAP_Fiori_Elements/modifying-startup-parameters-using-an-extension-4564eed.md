@@ -5,7 +5,7 @@
 You can modify startup parameters using an extension method.
 
 > ### Note:  
-> This topic is currently only applicable to SAP Fiori elements for OData V2
+> This topic is only applicable to SAP Fiori elements for OData V2
 
 You can use the extension method `modifyStartupExtension` to do the following:
 
@@ -31,11 +31,11 @@ You can use the extension method `modifyStartupExtension` to do the following:
 
 
         > ### Note:  
-        > The analytical list page ensures that the `SelectionVariant` passed to the application via the extension is filled with the filter context that would otherwise be set to the filter bar. This filter context can have different values based on the scenario:
+        > The analytical list page ensures that the `SelectionVariant` passed to the application through the extension is filled with the filter context that would otherwise be set to the filter bar. This filter context can have different values based on the scenario:
         > 
         > -   External navigation to the analytical list page: The `SelectionVariant` will have the navigation context passed by the source application. It could have the `DisplayCurrency` value set in the SAP Fiori launchpad user default settings.
         > 
-        > -   Navigation to the analytical list page via SAP Fiori launchpad tile: If a default variant is maintained, the `SelectionVariant` has values from the default variant. If not, it has the values from the SAP Fiori launchpad user default values. If these values are also missing, the `SelectionVariant` has the CDS defaults that come from the `Common.FilterDefaultValue`.
+        > -   Navigation to the analytical list page through a SAP Fiori launchpad tile: If a default variant is maintained, the `SelectionVariant` has values from the default variant. If not, it has the values from the SAP Fiori launchpad user default values. If these values are also missing, the `SelectionVariant` has the CDS defaults that come from the `Common.FilterDefaultValue`.
 
 
 -   Dynamically choose a particular tab when starting a list report with multiple views and multiple tables

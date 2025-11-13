@@ -72,7 +72,7 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.suit
     </mvc:View>
     ```
 
-    For more information, see [Status Indicator](status-indicator-8d5664a.md) and [Step 4: XML Views](../03_Get-Started/step-4-xml-views-1409791.md).
+    For more information, see [Status Indicator](status-indicator-8d5664a.md)and [Step 4: XML Views](../03_Get-Started/step-4-xml-views-1409791.md).
 
     For more ideas and examples, see the [Samples](https://ui5.sap.com/#/entity/sap.suite.ui.commons.MicroProcessFlow) in the Demo Kit.
 
@@ -81,7 +81,7 @@ For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.suit
 
 You can specify click events for each of the nodes in the micro process flow using the `press` event.
 
-For example, to display a [popover](https://ui5.sap.com/#/api/sap.m.Popover) element when the user clicks the node, consider adding the following \(or similar\) code to your [view](../03_Get-Started/step-4-xml-views-1409791.md) and its [controller](../03_Get-Started/step-5-controllers-50579dd.md).
+For example, to display a [popover](https://ui5.sap.com/#/api/sap.m.Popover) element when the user clicks the node, consider adding the following \(or similar\) code to your view and its controller.
 
 **View**
 

@@ -68,7 +68,7 @@ Reuse components grouped into a subsection in a existing section can be moved wi
 
 
 
-### Hiding Reuse Components via API
+### Hiding Reuse Components Through API
 
 You can use the extension API `SetSectionHidden` to hide reuse components. Use this API to hide only reuse components, not to hide other sections.
 
@@ -94,7 +94,7 @@ Reuse components expose a `stRefresh` function which is called by the SAP Fiori 
 
 For example, if the reuse component is to react to the value change of more than one property, such as a price change, then annotate a side effect and add the target property`PriceTrigger`, as shown in the sample below.
 
-This can also be achieved via a function import, by annotating a side effect against a function import.
+This can also be achieved through a function import, by annotating a side effect against a function import.
 
 > ### Sample Code:  
 > Trigger refresh when changing the value of a property

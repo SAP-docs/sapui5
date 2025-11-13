@@ -183,7 +183,7 @@ You can define a chart against a draft-enabled entity. In this case, only active
 
 ### Enabling the Chart Facet in a List Report
 
-You can configure a chart to be part of the content area using the `manifest.json` file. For more information, see the [Enabling the ALP in SAP Fiori Elements for OData V4](descriptor-configuration-for-the-analytical-list-page-2a9df06.md#loio2a9df06673d34f72b238549d49da8bfb__section_b3f_qhf_1qb) section in [Descriptor Configuration for the Analytical List Page](descriptor-configuration-for-the-analytical-list-page-2a9df06.md).
+You can configure a chart to be part of the content area using the `manifest.json` file. For more information, see the [Enabling the ALP in SAP Fiori Elements for OData V4](configuring-the-manifest-for-the-analytical-list-page-2a9df06.md#loio2a9df06673d34f72b238549d49da8bfb__section_b3f_qhf_1qb) section in [Configuring the Manifest for the Analytical List Page](configuring-the-manifest-for-the-analytical-list-page-2a9df06.md).
 
 
 

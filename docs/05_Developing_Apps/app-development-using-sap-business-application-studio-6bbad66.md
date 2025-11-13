@@ -2,7 +2,7 @@
 
 # App Development Using SAP Business Application Studio
 
-Learn how you can use SAP Business Application Studio together with UI5 Tooling to develop state-of-the-art UI5 apps.
+Learn how you can use SAP Business Application Studio together with UI5 CLI to develop state-of-the-art UI5 apps.
 
 
 

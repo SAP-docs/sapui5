@@ -134,6 +134,8 @@ When you use the new `methods` section in the controller metadata, only function
 
 Only public methods and methods that are not flagged as final could be overridden by a controller extension.
 
+For more information on how to use a controller's metadata definition for controller extensions, see [Controller Extensions](controller-extensions-21515f0.md).
+
 > ### Note:  
 > If you don't use the new `methods` definition for controllers, you could override the `onInit`, `onExit`, `onAfterRendering` and `onBeforeRendering` methods of the controller even if they are private by default.
 
@@ -203,7 +205,7 @@ All public methods need to stay compatible:
 
 
 
-For more information on how to use controller extensions, see [Using Controller Extension](using-controller-extension-21515f0.md).
+For more information on how to use controller extensions, see [Controller Extensions](controller-extensions-21515f0.md).
 
 
 

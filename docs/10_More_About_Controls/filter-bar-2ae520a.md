@@ -126,7 +126,7 @@ For views, the following is available:
 -   Shell service for personalization
 -   SAPUI5 flexibility
 
-They can be accessed using the `SmartVariantManagement` or `SmartVariantManagementUI2` control.
+They can be accessed using the `SmartVariantManagement` control.
 
 For more information about the shell services, see the [API Reference](https://ui5.sap.com/#/api/sap.ushell.services.Personalization) in the Demo Kit. For more information about SAPUI5 flexibility, see [SAPUI5 Flexibility: Adapting UIs Made Easy](../04_Essentials/sapui5-flexibility-adapting-uis-made-easy-a8e55aa.md).
 
@@ -163,7 +163,7 @@ Uses
 </td>
 <td valign="top">
 
-`SmartVariantManagementUI2` 
+`SmartVariantManagement`\* 
 
 </td>
 </tr>
@@ -180,6 +180,8 @@ Uses
 </td>
 </tr>
 </table>
+
+\*Before version 1.139, the `FilterBar` control used `SmartVariantManagementUI2` for view management integration. However, starting from version 1.139, `SmartVariantManagementUI2` has been deprecated and should not be used in applications.
 
 
 

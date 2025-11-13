@@ -19,7 +19,7 @@ You can enrich the popovers for link navigation with additional information to d
 You can display information about the navigation target already on the source entity. This information - the quick view - is stored in the association end type. To enable the quick views, you must annotate `com.sap.vocabularies.UI.v1.QuickViewFacets` and `QuickViewFacets` for the popover. A new title area and additional information, such as a field group, is displayed according to the association end type of the property that has been annotated as a semantic object.
 
 > ### Note:  
-> `QuickViewFacets` can only be annotated for those `EntityTypes` that are in the same service. Only these are referenced with referential constraints in the metadata document.
+> `QuickViewFacets` can only be annotated for those entity types that are in the same service. Only these are referenced with referential constraints in the metadata document.
 
 This video shows the step-by-step procedure for enabling quick views for link navigation:
 
@@ -195,7 +195,7 @@ Quick views are supported as follows:
 
 To define a quick view for a source property with a `ReferentialConstraint` on a target entity, perform the following steps:
 
-1.  Identify the property that has been annotated as a semantic object.
+1.  Define a semantic object annotation for the source property.
 
     -   The `SemanticObject` annotation as a string
 
@@ -205,7 +205,7 @@ To define a quick view for a source property with a `ReferentialConstraint` on a
         > ```xml
         > 
         > <Annotations Target="com.c_salesordermanage_sd.ProductSupplier/Supplier">
-        >    <Annotation Term="Common.SemanticObject" String="EPMProduct"/>
+        >    <Annotation Term="Common.SemanticObject" String="EPMSupplier"/>
         > </Annotations>
         > 
         > ```
@@ -215,8 +215,8 @@ To define a quick view for a source property with a `ReferentialConstraint` on a
         > 
         > ```
         > annotate view ProductSupplier with {
-        >   @Consumption.semanticObject: 'EPMProduct'
-        >   supplier;
+        >   @Consumption.semanticObject: 'EPMSupplier'
+        >   Supplier;
         > }
         > ```
 
@@ -225,7 +225,7 @@ To define a quick view for a source property with a `ReferentialConstraint` on a
         > 
         > ```
         > annotate ProductSupplier with {
-        > Supplier @Common.SemanticObject: 'EPMProduct';
+        > Supplier @Common.SemanticObject: 'EPMSupplier';
         > }
         > ```
 
@@ -236,7 +236,7 @@ To define a quick view for a source property with a `ReferentialConstraint` on a
         > 
         > ```
         > <Annotations Target="com.c_salesordermanage_sd.ProductSupplier/Supplier">
-        >              <Annotation Term="Common.SemanticObject" Path="supplierSemanticObject"/>
+        >              <Annotation Term="Common.SemanticObject" Path="SupplierSemanticObject"/>
         > </Annotations>
         > ```
 
@@ -246,15 +246,15 @@ To define a quick view for a source property with a `ReferentialConstraint` on a
         > XML Annotation
         > 
         > ```
-        > <Annotations Target="com.c_salesordermanage_sd.ProductSupplier/Supplier ">
+        > <Annotations Target="com.c_salesordermanage_sd.ProductSupplier/Supplier">
         >            <Annotation Term="Common.SemanticObject">
         >                <If>
         >                   <Eq>
         >                       <Path>SupplierType</Path>
         >                       <Int>2</Int>
         >                   </Eq>
-        >                   <String>EPMProduct</String>
-        >                   <String>NoTarget</String>
+        >                   <String>EPMSupplier</String>
+        >                   <String>ERPSupplier</String>
         >                </If>        
         >             </Annotation>
         > </Annotations>
@@ -263,41 +263,74 @@ To define a quick view for a source property with a `ReferentialConstraint` on a
 
     Additionally, when using the `Field` building block, you can use a formatter or a binding expression to provide either a single semantic object or an array of semantic objects. For more information, see [Macros API](https://ui5.sap.com/#/api/sap.fe.macros.Field).
 
-    Check out our live example in the flexible programming model explorer at [Quick View](https://sapui5.hana.ondemand.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/field/fieldQuickView).
+    For more information and live examples, see the SAP Fiori development portal at [Building Blocks - Field - Links - Link with Quick View](https://sapui5.hana.ondemand.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/field/fieldLinkWithQuickView).
 
-2.  In the metadata document, you can find the reference to the association end type. In the `navigationProperties` of your entity, check for a `ReferentialConstraint` that includes the previously identified property \(`Supplier`\). This property must be in the property attributes of the `ReferentialConstraint`. In this example, it references the "`CustomerID`" property of the "`Customer`" entity \(the association end type\).
-
-    ```xml
-    <NavigationProperty Name="_ShipToPartyVH" Type="com.c_salesordermanage_sd.Customer">
-          <ReferentialConstraint Property="Supplier" ReferencedProperty="CustomerID" />
-    </NavigationProperty>
-    
-    ```
+2.  Define an association to the target entity and a foreign-key association between the source property and the target entity.
 
     > ### Sample Code:  
-    > CDS Annotation
+    > ABAP CDS Annotation
     > 
     > ```
-    > _ShipToPartyVH  : Association to Customer
-    >                     on _ShipToPartyVH.CustomerID = Supplier;
+    > association [1..1] to I_Supplier as _Supplier on  $projection.Supplier = _Supplier.Supplier
+    > ...
+    > @ObjectModel.foreignKey.association: '_Supplier'
+    > Supplier,
+    > 
     > ```
 
-3.  Annotate `UI.QuickViewFacets` under the association end type of the `referentialConstraint` property as follows:
+    In the metadata document, you can then find the reference to the association end type in two ways:
+
+    -   For your entity type, locate a `NavigationProperty` with a `ReferentialConstraint` which includes your source property:
+
+        > ### Sample Code:  
+        > XML Annotation
+        > 
+        > ```
+        > 
+        > <NavigationProperty Name="_Supplier" Type="com.c_salesordermanage_sd.I_Supplier">
+        >     <ReferentialConstraint Property="Supplier" ReferencedProperty="Supplier"/>
+        > </NavigationProperty>
+        > 
+        > ```
+
+    -   Alternatively, locate a `Common.ReferentialConstraint` annotation for your navigation property:
+
+        > ### Sample Code:  
+        > XML Annotation
+        > 
+        > ```
+        > 
+        > <Annotations Target=" com.c_salesordermanage_sd.ProductSupplier/_Supplier">
+        >     <Annotation Term="Common.ReferentialConstraint">
+        >         <Collection>
+        >             <Record>
+        >                 <PropertyValue Property="Property" PropertyPath="Supplier"/>
+        >                 <PropertyValue Property="ReferencedProperty" PropertyPath="_Supplier/Supplier"/>
+        >             </Record>
+        >         </Collection>
+        >     </Annotation>
+        > </Annotations>
+        > 
+        > ```
+
+
+3.  4.  Annotate `UI.QuickViewFacets` under the association end type of the `ReferentialConstraint` property as follows:
 
     > ### Sample Code:  
     > XML Annotation
     > 
     > ```xml
-    > <Annotations Target="com.c_salesordermanage_sd.Customer">
+    > 
+    > <Annotations Target="com.c_salesordermanage_sd.I_Supplier">
     > <Annotation Term="UI.QuickViewFacets">
     >    <Collection>
     >     <Record Type="UI.ReferenceFacet">
     >       <PropertyValue Property="Label" String="Address"/>
-    >       <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#SoldToQuickView"/>
+    >       <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#SupplierQuickView"/>
     >     </Record>
     >    </Collection>
     > </Annotation>
-    > <Annotation Term="UI.FieldGroup" Qualifier="SoldToQuickView">
+    > <Annotation Term="UI.FieldGroup" Qualifier="SSupplierQuickView">
     >    <Record Type="UI.FieldGroupType">
     >      <PropertyValue Property="Data">
     >       <Collection>
@@ -315,6 +348,7 @@ To define a quick view for a source property with a `ReferentialConstraint` on a
     >    </Record>
     > </Annotation>
     > </Annotations>
+    > 
     > ```
 
     > ### Sample Code:  
@@ -322,42 +356,42 @@ To define a quick view for a source property with a `ReferentialConstraint` on a
     > 
     > ```
     > 
-    > annotate view CUSTOMER with {
+    > annotate view I_Supplier with {
     > @UI.Facet: [
     >   {
     >     label: 'Address',
-    >     targetQualifier: 'SoldToQuickView',
+    >     targetQualifier: 'SupplierQuickView',
     >     type: #FIELDGROUP_REFERENCE,
     >     purpose: #QUICK_VIEW
     >   }
     > ]
     > @UI.fieldGroup: [
     >   {
-    >     value: 'POSTALCODE',
+    >     value: 'PostalCode',
     >     type: #STANDARD,
     >     position: 1 ,
-    >     qualifier: 'SoldToQuickView'
+    >     qualifier: 'SupplierQuickView'
     >   }
     > ]
-    > postalcode;
+    > PostalCode;
     > @UI.fieldGroup: [
     >   {
-    >     value: 'CITYNAME',
+    >     value: 'CityName',
     >     type: #STANDARD,
     >     position: 2 ,
-    >     qualifier: 'SoldToQuickView'
+    >     qualifier: 'SupplierQuickView'
     >   }
     > ]
-    > cityname;
+    > CityName;
     > @UI.fieldGroup: [
     >   {
-    >     value: 'COUNTRY',
+    >     value: 'Country',
     >     type: #STANDARD,
     >     position: 3 ,
-    >     qualifier: 'SoldToQuickView'
+    >     qualifier: 'SupplierQuickView'
     >   }
     > ]
-    > country;
+    > Country;
     > }
     > 
     > ```
@@ -367,15 +401,15 @@ To define a quick view for a source property with a `ReferentialConstraint` on a
     > 
     > ```
     > 
-    > annotate schema.Customer with @(UI : {
+    > annotate schema.I_Supplier with @(UI : {
     > QuickViewFacets             : [
     >     {
     >         $Type  : 'UI.ReferenceFacet',
     >         Label  : 'Address',
-    >         Target : '@UI.FieldGroup#SoldToQuickView'
+    >         Target : '@UI.FieldGroup#SupplierQuickView'
     >     }
     > ],
-    > FieldGroup #SoldToQuickView : {Data : [
+    > FieldGroup #SupplierQuickView:{Data : [
     >     {
     >         $Type : 'UI.DataField',
     >         Value : PostalCode
@@ -395,7 +429,7 @@ To define a quick view for a source property with a `ReferentialConstraint` on a
 
 To define a quick view for a source property where the target property is a semantic key or an entity key, perform the following steps:
 
-1.  On the source entity define an association to the target entity:
+1.  On the source entity define an association to the target entity and a semantic object annotation for the navigation property:
 
     > ### Sample Code:  
     > CAP CDS Annotation:
@@ -519,7 +553,7 @@ To define a quick view for a source property where the target property is a sema
     >         Target : '@UI.FieldGroup#SoldToQuickView'
     >     }
     > ],
-    > FieldGroup #SoldToQuickView : {Data : [
+    > FieldGroup #SoldToQuickView: {Data : [
     >     {
     >         $Type : 'UI.DataField',
     >         Value : PostalCode
@@ -534,6 +568,18 @@ To define a quick view for a source property where the target property is a sema
     >     }
     > ]}
     > })
+    > 
+    > ```
+
+4.  On your `UI.LineItem`, `UI.FieldGroup` or `UI.Identification` annotation, define a `DataField` annotation pointing to the property of the target entity:
+
+    > ### Sample Code:  
+    > ```
+    > 
+    > <Record Type="UI.DataField">
+    >     <PropertyValue Property="Value" Path="_NavigationProperty/Customer" />
+    > </Record>
+    > 
     > ```
 
 
@@ -543,12 +589,9 @@ To define a quick view for a source property where the target property is a sema
 
 ## Results
 
-A quick view for link navigation is generated and can look like this:
+The generated quick view looks like this:
 
 ![](images/Quick_View_for_Smart_Link_Navigation_c61cade.png)
-
-> ### Note:  
-> We've removed videos showing step-by-step procedures using SAP Web IDE, which SAP no longer actively supports. You can still access the video using an older version of this document.
 
 > ### Note:  
 > If the user can't navigate to the target application, no link is displayed.

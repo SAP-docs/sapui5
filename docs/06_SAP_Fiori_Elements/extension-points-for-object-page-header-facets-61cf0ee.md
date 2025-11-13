@@ -152,7 +152,7 @@ You can find further details in the sections below.
 
 Custom header facets provide the following features:
 
--   adding free-style headers via an `xmlfragment` definition
+-   adding free-style headers through an `xmlfragment` definition
 
 -   positioning relative to existing header elements defined by header facets or other custom headers
 
@@ -458,7 +458,7 @@ Facet Key
 </td>
 <td valign="top">
 
-The key of another header facet to be used as the placement anchor. Header facets defined via the `Facet` annotation can be referenced by its `FacetKey`.
+The key of another header facet to be used as the placement anchor. Header facets defined through the `Facet` annotation can be referenced by its `FacetKey`.
 
 </td>
 </tr>
@@ -537,7 +537,7 @@ Defines which settings are available for key user adaptation at design time. For
 
 ![](images/Custom_Header_Facet_Harvey_Ball_Micro_Chart_2517ecf.png)
 
-The values are retrieved via value binding and the title is defined in the `manifest.json`.
+The values are retrieved through value binding and the title is defined in the `manifest.json` file.
 
 > ### Sample Code:  
 > Custom Header Using a Harvey Ball Micro Chart
@@ -562,7 +562,7 @@ The values are retrieved via value binding and the title is defined in the `mani
 
 ![](images/Using_a_Custom_Editable_Header_Facet_to_Edit_the_Values_Used_in_a_Custom_Header_Facet_d39631d.png)
 
-In edit mode, header facets are displayed in a form. For the editable custom header facet, you need to structure the content by using `sap.ui.layout.FormElement`. The `FormElements` will then be displayed inside a `FormContainer` with the title defined in the manifest.
+In edit mode, header facets are displayed in a form. For the editable custom header facet, you need to structure the content by using `sap.ui.layout.FormElement`. The `FormElements` will then be displayed inside a `FormContainer` with the title defined in the `manifest.json` file.
 
 > ### Sample Code:  
 > Editable version of a header facet using `FormElement` and `macro:Field`
@@ -588,7 +588,7 @@ In edit mode, header facets are displayed in a form. For the editable custom hea
 
 Custom header fields provide the following features:
 
--   adding free-style headers via an `xmlfragment` definition
+-   adding free-style headers through an `xmlfragment` definition
 
 -   positioning relative to existing fields on a field group or other custom fields
 
@@ -596,7 +596,7 @@ Custom header fields provide the following features:
 
 
 > ### Note:  
-> Custom fields are currently supported only as read-only. To have editable fields for the information provided through custom fields, you need to extend the "Edit Header Section".
+> Custom fields are supported only as read-only. To have editable fields for the information provided through custom fields, you need to extend the "Edit Header Section".
 > 
 > For more information, refer to [Adapting the UI: List Report and Object Page](adapting-the-ui-list-report-and-object-page-0d2f1a9.md).
 
@@ -785,7 +785,7 @@ Facet Key
 </td>
 <td valign="top">
 
-The key of another header field to be used as the placement anchor. Header fields defined via the field group, including a property annotation, can be referenced by the corresponding property name.
+The key of another header field to be used as the placement anchor. Header fields defined through the field group, including a property annotation, can be referenced by the corresponding property name.
 
 </td>
 </tr>
@@ -801,5 +801,5 @@ For the correct positioning of your custom elements, you need to identify an anc
 
 ### Live Example: Custom Header Facet with `MicroChart` and `FormElement` Building Blocks
 
-You can explore and work with the coding yourself. Check out our live example in the flexible programming model explorer at [Custom Header Facet](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/customElements/customElementsOverview/customHeaderFacetContent).
+You can explore and work with the coding yourself. For more information and live examples, see the SAP Fiori development portal at [Standard Floorplans - Extensions - Extensions for Object Pages - Custom Header Facet](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/topic/floorplanObjectPage/customHeaderFacet).
 

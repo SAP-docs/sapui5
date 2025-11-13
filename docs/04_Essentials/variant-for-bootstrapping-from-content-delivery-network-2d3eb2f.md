@@ -15,8 +15,10 @@ SAPUI5 can either be loaded locally with a relative path from an SAP Web server 
 
 SAPUI5 application hosted on SAP BTP as well as applications loaded via the SAP Launchpad service into the launchpad on SAP BTP are allowed to leverage the SAPUI5 CDN to retrieve the SAPUI5 distribution layer artifacts.
 
-> ### Note:  
-> To ensure outdated versions no longer pose a potential security risk, SAP removes SAPUI5 versions from the SAPUI5 CDN one year after their end of maintenance. Also patches of versions in maintenance which are older than one year will be removed. For more information, see SAP Note [3001696](https://me.sap.com/notes/3001696). The end dates for the cloud provisioning of SAPUI5 versions and patches can be found at [https://ui5.sap.com/versionoverview.html](https://ui5.sap.com/versionoverview.html)
+> ### Caution:  
+> To ensure outdated versions don't pose a potential security risk, SAP removes SAPUI5 versions from the SAPUI5 CDN one year after their end of maintenance. Also, patches of versions in maintenance which are older than one year will be removed. For more information, see SAP Note [3001696](https://me.sap.com/notes/3001696). The end dates for the cloud provisioning of SAPUI5 versions and patches can be found at [https://ui5.sap.com/versionoverview.html](https://ui5.sap.com/versionoverview.html)
+> 
+> To avoid disruptions, you must keep your SAPUI5 version up to date. We recommend using the [UI5 Renovate Preset Config](https://github.com/UI5/renovate-config/) tool, which allows you to become aware of version changes and upgrade SAPUI5 in a controlled manner.
 
 
 
@@ -26,7 +28,7 @@ The specific version allows you to select a particular fixed version for bootstr
 
 ```html
 <script id="sap-ui-bootstrap"
-    src="https://ui5.sap.com/1.136.0/resources/sap-ui-core.js"
+    src="https://ui5.sap.com/1.143.0/resources/sap-ui-core.js"
     data-sap-ui-async="true"
     data-...="...">
 </script>
@@ -46,7 +48,7 @@ The evergreen version allows you to automatically select the latest available pa
 <head>
     <!-- ... -->
     <script id="sap-ui-bootstrap"
-        src="https://ui5.sap.com/1.120/resources/sap-ui-core.js"
+        src="https://ui5.sap.com/1.136/resources/sap-ui-core.js"
         data-sap-ui-async="true"
         data-sap-ui-on-init="module:sap/ui/core/ComponentSupport"
         data-sap-ui-resource-roots='{ "my.app": "./" }'
@@ -80,13 +82,25 @@ When using the patch-level independent bootstrap you must use `data-sap-ui-async
 The default version of our libraries has the generic URL `https://ui5.sap.com/resources/sap-ui-core.js` \(SAPUI5\). Approximately 2 weeks after the release of a new SAPUI5 version, this version becomes the default version.
 
 > ### Caution:  
-> The default version is constantly being upgraded and this might have an impact on the stability of your application. Use this version for testing purposes only.
+> The default version is constantly being upgraded and this might have an impact on the stability of your application. The caching behavior of the default version URL is often not stable either. **Do not** use this version in any real productive or testing environment.
+> 
+> If you've been bootstrapping with the default version to keep your SAPUI5 version current, we strongly recommend switching to the [UI5 Renovate Preset Config](https://github.com/UI5/renovate-config/) instead. This allows you to become aware of version changes and upgrade SAPUI5 in a controlled manner. In this way, upgrading becomes the informed and active decision of the developer, whereas bootstrapping with the default version might leave you unaware of version changes and the SAPUI5 version used by your app. This could hamper the speedy resolution of issues arising from such automatic version changes.
 
 
 
 ### Cache Control
 
 The cache control is different for dynamic and static resources. If you refer to the latest maintenance version \(dynamic\), you have a maximum cache age of one week, if you refer to a specific \(static\) version, you have a maximum cache age of 10 years. In both cases, cross-origin resource sharing \(CORS\) headers are set, so that you can consume resources from the central location without any proxy in between.
+
+You can use a cache buster mechanism for SAPUI5, which enables the browser to refresh SAPUI5 resources that have been changed instead of fetching them from the browser cache. For more information, see [Cache Buster for SAPUI5](cache-buster-for-sapui5-91f0809.md).
+
+```html
+<script id="sap-ui-bootstrap"
+    src="https://ui5.sap.com/resources/sap-ui-cachebuster/sap-ui-core.js"
+    data-sap-ui-async="true"
+    data-...="...">
+</script>
+```
 
 > ### Note:  
 > The Cache Buster is only needed if you consume SAPUI5 without a concrete version in the URL. When you consume SAPUI5 with the concrete version in the URL, this is not needed, as the content served by that unique URLs will never change and can be cached forever.
@@ -107,4 +121,6 @@ To use your custom CDN with the SAPUI5 ABAP repository, you need to configure th
 [Set Up a CDN for SAPUI5 on Your On-Premise SAP ABAP Server](https://blogs.sap.com/2021/08/17/set-up-a-cdn-for-sapui5-on-your-on-premise-sap-abap-server/)
 
 [Versioning and Maintenance of SAPUI5](../02_Read-Me-First/versioning-and-maintenance-of-sapui5-91f0214.md "Versioning and maintenance strategy for SAPUI5.")
+
+[Stay Up to Date with the UI5 Renovate Preset Config](https://community.sap.com/t5/technology-blog-posts-by-sap/stay-up-to-date-with-the-ui5-renovate-preset-config/ba-p/14070649)
 

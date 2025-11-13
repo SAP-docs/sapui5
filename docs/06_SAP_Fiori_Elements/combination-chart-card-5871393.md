@@ -6,6 +6,12 @@ A combination chart lets you combine and view two or more chart types in a singl
 
 
 
+  
+  
+**Example of a Combination Chart Card**
+
+![](../01_Whats-New/images/Whats_New_140_OVP_Combination_Chart_55139a9.png "Example of a Combination Chart Card")
+
 For example, combining a column and line chart in the same visualization lets you compare values of different categories. This provides a clear view and helps you compare categories.
 
 For combination charts:
@@ -119,10 +125,4 @@ For combination charts:
 > }
 > 
 > ```
-
-  
-  
-**Example of a Combination Chart Card**
-
-![](../01_Whats-New/images/Whats_New_140_OVP_Combination_Chart_55139a9.png "Example of a Combination Chart Card")
 

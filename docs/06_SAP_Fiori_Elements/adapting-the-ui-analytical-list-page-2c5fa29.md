@@ -922,7 +922,7 @@ Displays the total sum of a column
 
 ## Adapting the UI: Visual Filters Dialog
 
-Each button of the *Adapt Filters* dialog in Visual Filter mode can be tweaked via UI adaptation. The buttons and micro charts expose several properties for this purpose. Some of the button properties are listed here:
+Each button of the *Adapt Filters* dialog in Visual Filter mode can be tweaked in UI adaptation. The buttons and micro charts expose several properties for this purpose. Some of the button properties are listed here:
 
 ****
 

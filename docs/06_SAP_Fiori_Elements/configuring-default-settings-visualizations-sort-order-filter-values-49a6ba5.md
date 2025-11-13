@@ -480,7 +480,7 @@ For more information, see the V2 and V4 specific sections.
 
 The `UI.Chart` annotation is applicable for the following:
 
--   The main chart in the analytical list page \(ALP\). For more information about the descriptor configuration in SAP Fiori elements for OData V4, see [Descriptor Configuration for the Analytical List Page](descriptor-configuration-for-the-analytical-list-page-2a9df06.md).
+-   The main chart in the analytical list page \(ALP\). For more information about the descriptor configuration in SAP Fiori elements for OData V4, see [Configuring the Manifest for the Analytical List Page](configuring-the-manifest-for-the-analytical-list-page-2a9df06.md).
 
 -   Usage within multiple views for the list report tables. For more information, see [Defining Multiple Views on a List Report Table - Multiple Table Mode](defining-multiple-views-on-a-list-report-table-multiple-table-mode-37aeed7.md) and [Defining Multiple Views on a List Report with Different Entity Sets and Table Settings](defining-multiple-views-on-a-list-report-with-different-entity-sets-and-table-settings-b6b59e4.md).
 
@@ -491,13 +491,13 @@ The `UI.Chart` annotation is applicable for the following:
 ## Configuring the Default Visualization
 
 > ### Note:  
-> -   The information provided in the section isn't applicable to the object page.
+> -   The information provided in the section isn't applicable to object pages in SAP Fiori elements for OData V2.
 > 
 > -   When defining a `PresentationVariant`, the `Visualizations` annotation should be provided and point to a valid visualization.
 > 
 > -   In a multiple view scenario, the following logic is used to fetch the `UI.PresentationVariant` annotation only if it is undefined. For more information about the multiple view configuration, see [Defining Multiple Views on a List Report Table - Multiple Table Mode](defining-multiple-views-on-a-list-report-table-multiple-table-mode-37aeed7.md) and [Defining Multiple Views on a List Report with Different Entity Sets and Table Settings](defining-multiple-views-on-a-list-report-with-different-entity-sets-and-table-settings-b6b59e4.md).
 > 
-> -   In SAP Fiori elements for OData V4, the information provided in the section isn't applicable to the analytical list page \(ALP\) flavor. For more information about the configuration in ALP, see [Descriptor Configuration for the Analytical List Page](descriptor-configuration-for-the-analytical-list-page-2a9df06.md).
+> -   In SAP Fiori elements for OData V4, the information provided in the section isn't applicable to the analytical list page \(ALP\) flavor. For more information about the configuration in ALP, see [Configuring the Manifest for the Analytical List Page](configuring-the-manifest-for-the-analytical-list-page-2a9df06.md).
 > 
 >     However, SAP Fiori elements for OData V4 supports rendering of tables using the `PresentationVariant` or `SelectionPresentationVariant` annotation in an object page facet. For more information, see [Defining and Adapting Sections](defining-and-adapting-sections-facfea0.md).
 
@@ -679,6 +679,9 @@ You can request additional properties for tables and charts even if these proper
 >   }
 > );
 > ```
+
+> ### Note:  
+> The `RequestAtLeast` property is also supported for tables on the object page in SAP Fiori elements for OData V2.
 
 
 

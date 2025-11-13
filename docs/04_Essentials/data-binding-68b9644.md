@@ -19,7 +19,7 @@ There are also internal data sources that are defined in the app for specific pu
 
 -   **View models** can be, for example, JSON models that communicate with a corresponding JSON object. JSON data can also be edited in the app, but they are not stored - as soon as you refresh the browser or restart the app, the changes are reset.
 
--   A JSON model can be used together with the `sap/ui/Device` module to create a **device model** that contains device-specific settings. For an example, see our Walkthrough tutorial, [Step 35: Device Adaptation](../03_Get-Started/step-35-device-adaptation-d63a15e.md).
+-   A JSON model can be used together with the `sap/ui/Device` module to create a **device model** that contains device-specific settings.For an example, see our Walkthrough tutorial, [Step 35: Device Adaptation](../03_Get-Started/step-35-device-adaptation-d63a15e.md).
 
 
 Most of the models are client-side models. This means that all data is initially loaded to the model when the app is started. All actions performed on the data are only executed on the client, and are only sent back to the data source when this is triggered by the app. Client-side models are therefore only recommended for small data sets.

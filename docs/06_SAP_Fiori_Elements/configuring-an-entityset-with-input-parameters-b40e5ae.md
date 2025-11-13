@@ -6,11 +6,16 @@ Some entity sets require input parameters. You can configure these parameters us
 
 
 
+> ### Note:  
+> This topic is only applicable to SAP Fiori elements for OData V2.
+
+
+
 In the following examples there are two entity sets - `SalesShare` and `SalesShareParameters` - with associations defined between them. The `SalesShare` entity set contains the OData information and the `SalesShareParameters` defines the input parameters to retrieve from the `SalesShare` entity set with the data that will be displayed in cards. The `com.sap.vocabularies.UI.v1.SelectionVariant` annotation term contains the input parameters to be applied, to trigger the query and display the actual data at runtime.
 
 
 
-### OData metadata definition
+### OData Metadata Definition
 
 > ### Sample Code:  
 > ```

@@ -449,7 +449,7 @@ In the example, the `UI.DataFieldForAnnotation` points to a contact annotation o
 
 
 
-## More Information
+## Related Links
 
 For more information about the `Communication.Contact` annotation, see [Adding a Contact Facet](adding-a-contact-facet-a6a8c0c.md).
 

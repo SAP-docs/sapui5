@@ -5,7 +5,7 @@
 You can enable creation of sub-objects having a maximum of 8 data fields through a dialog on an object page of a non-draft aplication.
 
 > ### Note:  
-> This topic is currently only applicable to SAP Fiori elements for OData V2.
+> This topic is only applicable to SAP Fiori elements for OData V2.
 
 ![](images/Enabling_Non-draft_Sub-object_Creation_Through_Dialog_dbe00fd.png)
 
@@ -16,8 +16,8 @@ You can enable this feature in the manifest setting by adding the property `crea
 > 
 > "createWithParameterDialog" : {
 >        "fields" : {
->          "<fieldName>" : {"path":"<fieldname>"},
->          "<fieldName>" : {"path":"<fieldname>"}
+>          "<fieldname1>" : {"path":"<fieldname1>"},
+>          "<fieldname2>" : {"path":"<fieldname2>"}
 >         }
 > 
 > ```

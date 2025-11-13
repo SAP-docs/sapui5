@@ -2,16 +2,14 @@
 
 # `In`/`Out` Mappings in the `ValueList` Annotation
 
-You can use the `In`/`Out` mappings as part of the `ValueList` annotation for linking purposes.
+This topic provides information how the `IN`/`OUT` parameters can be used within the value help definition to establish a link between the fields in the main entity and the fields in the value help entity.
 
 > ### Note:  
 > In SAP Fiori elements for OData V2, `In`/`Out` mappings are supported only for analytical list page.
 
-This topic provides information about the structure of the `ValueList` annotation and how the `In`/`Out` mappings there allow linking between fields of the main entity and fields of the value help entity.
 
 
-
-**`Common.ValueList`**
+**Annotation Terms**
 
 
 <table>
@@ -30,62 +28,60 @@ Details
 <tr>
 <td valign="top">
 
-Label \(Optional, String\)
+`Common.ValueListParameterIn` 
 
 </td>
 <td valign="top">
 
-Enter label information
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-`CollectionPath` \(Required, String\)
-
-</td>
-<td valign="top">
-
-Entity set for retrieving value help
+Determines the property of a main entity set that is taken over into the filter query of the value help entity set.
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-`SearchSupported` \(Required, Bool\)
+`Common.ValueListParameterOut` 
 
 </td>
 <td valign="top">
 
-True or False
+Determines the property from the value help entity set that sets the property value in the main entity set.
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-Parameters
+`Common.ValueListParameterInOut` 
 
 </td>
 <td valign="top">
 
-Parameters to map a main entity set to a value help entity set.
+Combines both the `IN` and `OUT` parameters.
 
--   Record type `Common.ValueListParameterIn`: determines the property of a main entity set that is taken over into the filter query of the value help entity set
+</td>
+</tr>
+<tr>
+<td valign="top">
 
--   Record type `Common.ValueListParameterOut`: determines the property from the value help entity set that sets the property value in the main entity set
+`LocalDataProperty` 
 
--   Record type `Common.ValueListParameterInOut`: combines both the `In` and `Out` parameters
+</td>
+<td valign="top">
 
+This refers to the property in the main entity, which corresponds to the entity where the field is defined.
 
-Parameter properties:
+</td>
+</tr>
+<tr>
+<td valign="top">
 
--   `LocalDataProperty`
--   `ValueListProperty`
+`ValueListProperty` 
 
+</td>
+<td valign="top">
 
+This refers to the corresponding field within the value help entity.
 
 </td>
 </tr>
@@ -100,7 +96,7 @@ Parameter properties:
 
 ## Example
 
-Look at entity set `"Z0020"` \(main entity set\) with the 3 filters: region, country, and plant. The `SelectionFields` annotation has the following dimensions:
+Consider the entity set `"Z0020"` \(main entity set\) with the 3 filters: region, country, and plant. The `SelectionFields` annotation has the following fields:
 
 > ### Sample Code:  
 > XML Annotation
@@ -157,9 +153,9 @@ Look at entity set `"Z0020"` \(main entity set\) with the 3 filters: region, cou
 > ]
 > ```
 
-The value help for these dimensions display values present in the main entity set only. However, with the `ValueList` annotation you can retrieve records from a selection list.
+The value help for these fields display values present in the main entity set only. However, with the `ValueList` annotation you can retrieve records from a selection list.
 
-Consider the following table in which all of the entity sets refer to the same business object using different dimension names.
+Consider the following table in which all of the entity sets refer to the same business object using different field names.
 
 ****
 
@@ -200,22 +196,22 @@ Region
 </td>
 <td valign="top">
 
-RegionID
+`RegionID` 
 
 </td>
 <td valign="top">
 
-RegionCode
+`RegionCode` 
 
 </td>
 <td valign="top">
 
-RegionIdentifier
+`RegionIdentifier` 
 
 </td>
 <td valign="top">
 
-RegionNumber
+`RegionNumber` 
 
 </td>
 </tr>
@@ -227,22 +223,22 @@ Country
 </td>
 <td valign="top">
 
-CountryID
+`CountryID` 
 
 </td>
 <td valign="top">
 
-CountryCode
+`CountryCode` 
 
 </td>
 <td valign="top">
 
-CountryIdentifier
+`CountryIdentifier` 
 
 </td>
 <td valign="top">
 
-CountryNumber
+`CountryNumber` 
 
 </td>
 </tr>
@@ -254,22 +250,22 @@ Plant
 </td>
 <td valign="top">
 
-PlantID
+`PlantID` 
 
 </td>
 <td valign="top">
 
-PlantCode
+`PlantCode` 
 
 </td>
 <td valign="top">
 
-PlantIdentifier
+`PlantIdentifier` 
 
 </td>
 <td valign="top">
 
-PlantNumber
+`PlantNumber` 
 
 </td>
 </tr>
@@ -281,6 +277,8 @@ PlantNumber
 
 ## Understanding the `ValueList` Annotation
 
+The following sample code specifies the `ValueList` annotation for the `"CountryID"` field in entity set `Z0020`, which is the main entity set:
+
 > ### Sample Code:  
 > ```
 > <Annotations Target="Z0020_CDS.Z0020Type/CountryID">  
@@ -288,7 +286,7 @@ PlantNumber
 > <Annotation Term="Common.ValueList" Qualifier="0020_Country">
 > ```
 
-This specifies the `ValueList` annotation is for the `"CountryID"` dimension in entity set `Z0020`, which is the main entity set.
+The following sample code specifies that the entity set for fetching the value help is `Z0022`:
 
 > ### Sample Code:  
 > ```
@@ -298,14 +296,20 @@ This specifies the `ValueList` annotation is for the `"CountryID"` dimension in 
 >         <PropertyValue Property="CollectionPath" String="Z0022"/>
 > ```
 
-This specifies that the entity set for fetching the value help is `Z0022`.
-
 > ### Sample Code:  
 > ```
 > <PropertyValue Property="Parameters">
 > ```
 
-This lists all the `In` and `Out` parameters to map the main entity set property with the value help entity set property. This is required because the same business object can have different names in the two entity sets.
+The following sample codes list all the `In` and `Out` parameters to map properties between the main entity set and the value help entity set. This mapping is necessary because the same business object can have different property names in the two entity sets.
+
+`OUT` parameters determine which properties in the main entity and the value help entity are affected when a user selects a value from the value help dialog or dropdown list.
+
+The `LocalDataProperty` points to the property in the main entity that receives the value selected by the user from the value help dialog or dropdown list.
+
+The `ValueListProperty` refers to the property within the value help entity set that provides the `Value` for the field in the main entity.
+
+In the following sample code, the value help lists all the `"CountryIdentifier"` values from the value help entity set. When a user selects a specific record, for example, `001`, the value `001` is added to the field specified by the `LocalDataProperty`, not the `ValueListProperty`. If the field is used in a filter context, the filter query appears as `$filter=CountryID="001"` rather than `$filter=CountryIdentifier="001"`.
 
 > ### Sample Code:  
 > ```
@@ -315,13 +319,13 @@ This lists all the `In` and `Out` parameters to map the main entity set property
 > </Record> 
 > ```
 
-`Out` parameters determine properties of the main entity set that make it to the filter query and also determine the properties from the value help entity set that influences their value.
+`In` parameters help in filtering the dataset of the value help entity set.
 
-`LocalDataProperty` points to the property in the main entity set – this is the property name with which it needs to be added to the filter query if it is to influence the contents.
+The `LocalDataProperty` specifies the property from the main entity set which, if present already in the filter query, influences the data fetched from the value help entity set and displayed in the value help dialog.
 
-`ValueListProperty` refers to the property within the value help entity set that provides the `"Value"` for the entity of the main entity set which makes up the filter query and is referred via the `LocalDataProperty`.
+The `ValueListProperty` specifies the property from the value help entity set that is filtered based on the value coming from the `LocalDataProperty`.
 
-So the value help as configured above lists all the `"CountryIdentifier"` values from the value help entity set. Once a user chooses a particular record with `CountryIdentifier`, say `"001"`, the value `"001"` is added to the filter query but with the `LocalDataProperty` name instead of the `ValueListProperty` name. Therefore, the filter query reads `$filter=CountryID="001"` and **not** `$filter=CountryIdentifier="001"`, which is not understandable by the content area that deals only with main entity set.
+If the user has already entered a value for the `Region` main entity—for example, `RegionID = "ABC"`, and `RegionID` is defined as an `IN` parameter for the *Country* value help, then the value help dialog for `CountryID` filters the records by applying `RegionIdentifier = "ABC"` on the value help entity. As a result, end users can select only those countries that belong to the specified region \(ABC\).
 
 > ### Sample Code:  
 > ```
@@ -331,15 +335,7 @@ So the value help as configured above lists all the `"CountryIdentifier"` values
 > </Record>  
 > ```
 
-`In` parameters help in filtering the data set of the value help entity set.
-
-The `LocalDataProperty` specifies the property from the main entity set which, if present already in the filter query, influences the data fetched from the value help entity set and displayed in the value help dialog.
-
-The `ValueListProperty` specifies the property from the value help entity set that is filtered based on the value coming from the `LocalDataProperty`.
-
-So in the example above, if the user has already filtered on `"Region"` resulting in `$filter= RegionID="ABC"` \(maybe via a `Region` filter field\), then, because `RegionID` is an `In` parameter for the `Country` value help, the value help dialog of `CountryID` only lists the records with `"RegionIdentifier"="ABC"`. So end users can only select the `Country` belonging to the chosen `Region` \(ABC\)
-
-The complete `ValueList` annotation for the `CountryID` filter field is as follows:
+The `ValueList` annotation for the `CountryID` filter field is as follows:
 
 > ### Sample Code:  
 > XML Annotation
@@ -350,7 +346,7 @@ The complete `ValueList` annotation for the `CountryID` filter field is as follo
 >         <Record>
 >             <PropertyValue Property="Label" String="Country"/>
 >             <PropertyValue Property="CollectionPath" String="Z0022"/>
->             <PropertyValue Bool="false" Property="SearchSupported"/>
+>             <PropertyValue Property="SearchSupported" Bool="false"/>
 >             <PropertyValue Property="Parameters">
 >                 <Collection>
 >                     <Record Type="Common.ValueListParameterOut">
@@ -432,7 +428,7 @@ Similarly, we can have a `ValueList` annotation for the `Plant` field so that it
 >         <Record>
 >             <PropertyValue Property="Label" String="Plant"/>
 >             <PropertyValue Property="CollectionPath" String="Z0023"/>
->             <PropertyValue Bool="false" Property="SearchSupported"/>
+>             <PropertyValue Property="SearchSupported" Bool="false"/>
 >             <PropertyValue Property="Parameters">
 >                 <Collection>
 >                     <Record Type="Common.ValueListParameterOut">

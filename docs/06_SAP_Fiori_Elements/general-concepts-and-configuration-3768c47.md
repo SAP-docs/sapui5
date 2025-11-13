@@ -11,9 +11,9 @@
 
 [Enabling the Flexible Column Layout](enabling-the-flexible-column-layout-e762257.md "The flexible column layout is a feature that can show two or three columns on a single page.")
 
-[Configuring the Application Title](configuring-the-application-title-ac70343.md "If required, you can configure the application title that is generated from the SAP Fiori launchpad.")
+[Configuring the Application Title](configuring-the-application-title-ac70343.md "You can configure the application title that is generated from SAP Fiori launchpad, if required.")
 
-[Managing Variants](managing-variants-8ce658e.md "Allows you manage variants with different structures in the filter and content areas.")
+[Managing Variants](managing-variants-8ce658e.md "Allows you to manage variants with different structures in the filter and content areas.")
 
 [Responsiveness Options: Example](responsiveness-options-example-69efbe7.md "When using SAP Fiori elements, you can make use of specific responsiveness options. For example, in pages that have toolbars (such as list report tables, object page tables, and smart chart toolbars), the system evaluates the com.sap.vocabularies.UI.v1.Importance for each field:")
 

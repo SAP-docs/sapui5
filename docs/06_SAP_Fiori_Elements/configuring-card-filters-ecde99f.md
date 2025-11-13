@@ -6,7 +6,7 @@ You can add filters to all card types, by using the `com.sap.vocabularies.UI.v1.
 
 
 
-The following example shows filter configuration in the annotation document. The record set is filtered by the `TotalSum` property and returns values between 0 and 8000. You can provide multiple filters in the `SelectOptions` collection.
+The following example shows a filter configuration in the `com.sap.vocabularies.UI.v1.SelectionVariant` annotation. The record set is filtered by the `TotalSum` property and returns values between 0 and 8000. You can provide multiple filters in the `SelectOptions` collection.
 
 > ### Sample Code:  
 > XML Annotation
@@ -38,31 +38,35 @@ The following example shows filter configuration in the annotation document. The
 > ```
 
 > ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> No ABAP CDS annotation sample is available. Please use the local XML annotation.
+
+> ### Sample Code:  
 > CAP CDS Annotation
 > 
 > ```
 > 
-> UI.SelectionVariant #bubble : {
->     SelectOptions : [
+> UI.SelectionVariant #bubble: {
+>     SelectOptions: [
 >         {
->             PropertyName : TotalSum,
->             Ranges : [
+>             PropertyName: TotalSum,
+>             Ranges: [
 >                 {
->                     Sign : #I,
->                     Option : #BT,
->                     Low : '0',
->                     High : '8000'
+>                     Sign: #I,
+>                     Option: #BT,
+>                     Low: '0',
+>                     High: '8000'
 >                 }
 >             ]
 >         }
 >     ]
 > }
-> 
 > ```
 
 
 
-The preference for displaying the currency type is taken from the SAP Fiori Launchpad user settings in the `DisplayCurrency` field of an application. You can also set filters for SAP Fiori overview page by passing a filter parameter in the URL. Applicable when you launch SAP Fiori overview pages from SAP Fiori Launchpad or from any other application with a filter parameter.
+The preference for displaying the currency type is taken from the SAP Fiori Launchpad user settings in the `DisplayCurrency` field of an application. You can also set filters for SAP Fiori overview page by passing a filter parameter in the URL. Applicable when you launch SAP Fiori overview pages from SAP Fiori launchpad or from any other application with a filter parameter.
 
 > ### Note:  
 > You can only pass strings or integers as filter parameters. The filter applies automatically if the filter property exists in the entityset.

@@ -16,7 +16,7 @@ Adaptation Type
 </th>
 <th valign="top" rowspan="2">
 
-Adaptation Project
+Developer Adaptation \(Adaptation Project\)
 
 </th>
 <th valign="top" colspan="2">
@@ -50,7 +50,7 @@ App developers can adapt the UI at design time.
 </td>
 <td valign="top" colspan="2">
 
-Key users can adapt the application at runtime by changing the UI from the initial state of the app to a personalized view for end users. In the *User Actions Menu*, key users can then choose *Adapt UI* and change the user interface of SAP Fiori apps directly.
+Key users can adapt the application at runtime by changing the UI from the initial state of the app to a personalized view for end users. In the *User Menu*, key users can then choose *Adapt UI* and change the user interface of SAP Fiori apps directly.
 
 For more information about key user adaptation, see [SAPUI5 Flexibility: Adapting UIs Made Easy](../04_Essentials/sapui5-flexibility-adapting-uis-made-easy-a8e55aa.md).
 
@@ -546,7 +546,7 @@ Configure if end users can select a single row or multiple rows in a table.
 </td>
 <td valign="top">
 
-[Enabling Multiple Selection in Tables](enabling-multiple-selection-in-tables-116b5d8.md)
+[Configuring the Selection Mode for Tables](configuring-the-selection-mode-for-tables-116b5d8.md)
 
 </td>
 <td valign="top">
@@ -645,7 +645,7 @@ Configure if the *Select All* option is displayed in the table.
 </td>
 <td valign="top">
 
-[Enabling Multiple Selection in Tables](enabling-multiple-selection-in-tables-116b5d8.md)
+[Configuring the Selection Mode for Tables](configuring-the-selection-mode-for-tables-116b5d8.md)
 
 Section: Select All and Clear All Options in the Table
 
@@ -669,7 +669,7 @@ Configure the maximum limit of the number of rows that can be selected at once.
 </td>
 <td valign="top">
 
-[Enabling Multiple Selection in Tables](enabling-multiple-selection-in-tables-116b5d8.md)
+[Configuring the Selection Mode for Tables](configuring-the-selection-mode-for-tables-116b5d8.md)
 
 Section: Limiting the Number of Selected Rows in a Table
 
@@ -693,7 +693,7 @@ Configures the number of additional records that must be dynamically loaded when
 </td>
 <td valign="top">
 
-[Tables](tables-c0f6592.md)
+[Optimizing Data Loading Using the `ScrollThreshold` Property](tables-c0f6592.md#loioc0f6592a592e47f9bb6d09900de47412__section_ygl_t1s_kdc)
 
 </td>
 <td valign="top">
@@ -715,12 +715,12 @@ Configures the number of records that must be loaded during the initial load of 
 </td>
 <td valign="top">
 
-[Tables](tables-c0f6592.md)
+[Initial Data Loading Using the `Threshold` Property](tables-c0f6592.md#loioc0f6592a592e47f9bb6d09900de47412__section_xkq_dhx_rfc)
 
 </td>
 <td valign="top">
 
-Not applicable to responsive tables.
+ 
 
 </td>
 </tr>
@@ -946,7 +946,7 @@ Configure if variant management is used in tables on the object page.
 </td>
 </tr>
 <tr>
-<td valign="top" rowspan="9">
+<td valign="top" rowspan="11">
 
 Table
 
@@ -1120,7 +1120,7 @@ Configure if the *Select All* option is displayed in the table.
 </td>
 <td valign="top">
 
-[Enabling Multiple Selection in Tables](enabling-multiple-selection-in-tables-116b5d8.md)
+[Configuring the Selection Mode for Tables](configuring-the-selection-mode-for-tables-116b5d8.md)
 
 </td>
 <td valign="top">
@@ -1142,12 +1142,56 @@ Configure the maximum limit of the number of rows that can be selected at once.
 </td>
 <td valign="top">
 
-[Enabling Multiple Selection in Tables](enabling-multiple-selection-in-tables-116b5d8.md)
+[Configuring the Selection Mode for Tables](configuring-the-selection-mode-for-tables-116b5d8.md)
 
 </td>
 <td valign="top">
 
 Not applicable to responsive tables.
+
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="2">
+
+*Scroll Threshold*
+
+</td>
+<td valign="top">
+
+Configures the number of additional records that must be dynamically loaded when scrolling the application
+
+</td>
+<td valign="top">
+
+[Optimizing Data Loading Using the `ScrollThreshold` Property](tables-c0f6592.md#loioc0f6592a592e47f9bb6d09900de47412__section_ygl_t1s_kdc)
+
+</td>
+<td valign="top">
+
+Not applicable to responsive tables.
+
+</td>
+</tr>
+<tr>
+<td valign="top" colspan="2">
+
+*Threshold*
+
+</td>
+<td valign="top">
+
+Configures the number of records that must be loaded during the initial load of the application.
+
+</td>
+<td valign="top">
+
+[Initial Data Loading Using the `Threshold` Property](tables-c0f6592.md#loioc0f6592a592e47f9bb6d09900de47412__section_xkq_dhx_rfc)
+
+</td>
+<td valign="top">
+
+ 
 
 </td>
 </tr>
@@ -1169,7 +1213,7 @@ Configure the *Add Card to Insights* feature for *My Home* in SAP S/4HANA and SA
 </td>
 <td valign="top">
 
- 
+Only applicable to the list report.
 
 </td>
 </tr>

@@ -164,7 +164,7 @@ The following options are available on the `defaults` and the individual test co
 
 	/*
 	 * Whether the test starter should call QUnit.start() after all prerequisites have been fulfilled
-	 * (e.g. QUnit, Sinon, a bridge, have been loaded, coverage tooling has been loaded and configured,
+	 * (e.g. QUnit, Sinon, a bridge, have been loaded, UI5 Middleware Code Coverage is running and configured,
 	 * the Core has been booted, the test modules have been loaded and executed).
 	 */
 	autostart: true,

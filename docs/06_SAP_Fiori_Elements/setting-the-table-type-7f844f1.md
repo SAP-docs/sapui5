@@ -54,47 +54,58 @@ Example for the list report:
 
 ```js
 "sap.ui.generic.app": {
-			"pages": [{
-				"entitySet": "Zfarvd_Bs_Hd_Bo",
-				"component": {
-					"name": "sap.suite.ui.generic.template.ListReport",
-					"list": true,
-					"settings": {
-						"tableSettings": {
-							"type": "GridTable"
-							}
-					}
-				},	
+    "pages": [
+        {
+            "entitySet": "Zfarvd_Bs_Hd_Bo",
+            "component": {
+                "name": "sap.suite.ui.generic.template.ListReport",
+                "list": true,
+                "settings": {
+                    "tableSettings": {
+                        "type": "GridTable"
+                    }
+                }
+            }
+        }
+    ]
+}
+	
 ```
 
 Examples for the object page:
 
 ```js
 "sap.ui.generic.app": {
-        "pages": [
-            {
-                "entitySet": "STTA_C_MP_Product",
-                "component": {
-                    "name": "sap.suite.ui.generic.template.ListReport",
-                    "list": true
-                },
-                "pages": [
-                    {
-                        "entitySet": "STTA_C_MP_Product",
-                        "component": {
-                            "name": "sap.suite.ui.generic.template.ObjectPage"
-                            "settings": {
-                                "sections": {
-                                    "to_ProductText::com.sap.vocabularies.UI.v1.LineItem": {
-                                        "navigationProperty": "to_ProductText",
-                                        "entitySet": "STTA_C_MP_ProductText",
-                                        "tableSettings": {
-								      "type": "TreeTable"
-								 }
+    "pages": [
+        {
+            "entitySet": "STTA_C_MP_Product",
+            "component": {
+                "name": "sap.suite.ui.generic.template.ListReport",
+                "list": true
+            },
+            "pages": [
+                {
+                    "entitySet": "STTA_C_MP_Product",
+                    "component": {
+                        "name": "sap.suite.ui.generic.template.ObjectPage",
+                        "settings": {
+                            "sections": {
+                                "to_ProductText::com.sap.vocabularies.UI.v1.LineItem": {
+                                    "navigationProperty": "to_ProductText",
+                                    "entitySet": "STTA_C_MP_ProductText",
+                                    "tableSettings": {
+                                        "type": "TreeTable"
                                     }
                                 }
                             }
-                        },
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}
+
 ```
 
 Defining `tableTypes` under the settings is supported for backward compatibility. However, using `tableSettings` is recommended for defining table types.
@@ -103,25 +114,29 @@ Defining `tableTypes` under the settings is supported for backward compatibility
 > If you maintain the `type` property within `tableSettings` in `sections`, it has a higher priority than the `type` property of `tableSettings` in an object page.
 
 ```js
-"pages": [{
-                "entitySet": "STTA_C_MP_Product",
-                "component": {
-                    "name": "sap.suite.ui.generic.template.ObjectPage",
-                    "settings": {
-                        "showRelatedApps": true,
+"pages": [
+    {
+        "entitySet": "STTA_C_MP_Product",
+        "component": {
+            "name": "sap.suite.ui.generic.template.ObjectPage",
+            "settings": {
+                "showRelatedApps": true,
+                "tableSettings": {
+                    "type": "ResponsiveTable"
+                },
+                "sections": {
+                    "to_ProductText::com.sap.vocabularies.UI.v1.LineItem": {
+                        "navigationProperty": "to_ProductText",
+                        "entitySet": "STTA_C_MP_ProductText",
                         "tableSettings": {
-                            "type":"ResponsiveTable"
-                        },
-                        "sections": {
-                            "to_ProductText::com.sap.vocabularies.UI.v1.LineItem": {
-                                "navigationProperty": "to_ProductText",
-                                "entitySet": "STTA_C_MP_ProductText",
-                                "tableSettings": {
-                                    "type":"GridTable"
-                                }
-                            }
+                            "type": "GridTable"
                         }
                     }
+                }
+            }
+        }
+    }
+]
 
 ```
 
@@ -143,6 +158,9 @@ The following logic is used to determine the table type in the analytical list p
 
 In the `manifest.json` file, you can control which table type is rendered in the list report and on the object page.
 
+> ### Note:  
+> Grid tables, tree tables, and analytical tables do not support columns with multi-line content, such as those using the `FieldGroup` annotation or multi-line text fields.
+
 
 
 ### Examples
@@ -154,24 +172,25 @@ Example for the list report:
 > ### Sample Code:  
 > ```
 > "targets": {
->      "SalesOrderManageList": {
->           "type": "Component",
->           "id": "SalesOrderManageList",
->           "name": "sap.fe.templates.ListReport",
->           "options": {
->                "settings" : {
->                     "controlConfiguration" : {
->                          "@com.sap.vocabularies.UI.v1.LineItem" : {
->                               "tableSettings": {
->                                    "type": "ResponsiveTable"
->                                }
->                          }
+>     "SalesOrderManageList": {
+>         "type": "Component",
+>         "id": "SalesOrderManageList",
+>         "name": "sap.fe.templates.ListReport",
+>         "options": {
+>             "settings": {
+>                 "controlConfiguration": {
+>                     "@com.sap.vocabularies.UI.v1.LineItem": {
+>                         "tableSettings": {
+>                             "type": "ResponsiveTable"
+>                         }
 >                     }
->                     ...
->                }
->           }
->      }
+>                 }
+>                 ...
+>             }
+>         }
+>     }
 > }
+> 
 > ```
 
 Example for the object page:
@@ -179,23 +198,73 @@ Example for the object page:
 > ### Sample Code:  
 > ```
 > "targets": {
->      "SalesOrderManageObjectPage": { 
->           "type": "Component", 
->           "id": "SalesOrderManageObjectPage", 
->           "name": "sap.fe.templates.ObjectPage", 
->           "options": { 
->                "settings": { 
->                     "controlConfiguration": { 
->                          "_Item/@com.sap.vocabularies.UI.v1.LineItem": { 
->                               "tableSettings": { 
->                                    "type": "GridTable" 
->                               } 
->                          } 
->                     } 
->                } 
->           }
->      }
-> } 
+>     "SalesOrderManageObjectPage": {
+>         "type": "Component",
+>         "id": "SalesOrderManageObjectPage",
+>         "name": "sap.fe.templates.ObjectPage",
+>         "options": {
+>             "settings": {
+>                 "controlConfiguration": {
+>                     "_Item/@com.sap.vocabularies.UI.v1.LineItem": {
+>                         "tableSettings": {
+>                             "type": "GridTable"
+>                         }
+>                     }
+>                 }
+>             }
+>         }
+>     }
+> }
+> 
+> ```
+
+
+
+### Configuring the Popin Layout for Responsive Tables
+
+When using a responsive table and there is not enough space to show all the columns, columns can be shown within popins using the *Show More per Row* option in the table toolbar.
+
+![Popins using the Block layout in a responsive table](images/Popin_Layout_for_Responsive_Tables_d403210.png)
+
+The following popin layouts are supported:
+
+-   `Block` \(default\): Sets a block layout for rendering the table popins. The columns inside the popin container are rendered one below the other.
+-   `GridLarge`: Sets a grid layout for rendering the table popins. The width of the grid for each table popin is larger than `GridSmall`, so this layout renders less content in a single popin row.
+-   `GridSmall`: Sets a grid layout for rendering the table popins. The width of the grid for each table popin is small, so this layout allows more content to be rendered in a single popin row.
+
+For more information about the size of the popin layouts, see the [Fiori Design Guidelines](https://www.sap.com/design-system/fiori-design-web/ui-elements/responsive-table/#responsiveness).
+
+You can configure the popin layout for each responsive table using the `popinLayout` parameter in the `tableSettings` section. In the example below, the popin layout is set to `GridSmall`.
+
+> ### Sample Code:  
+> `manifest.json`
+> 
+> ```
+> "controlConfiguration": {
+>     "@com.sap.vocabularies.UI.v1.LineItem": {
+>         "tableSettings": {
+>             "type": "ResponsiveTable",
+>             "popinLayout": "GridSmall"
+>         }
+>     },
+>     ...
+> }
+> ```
+
+You can also define a default popin layout at the application level. A popin layout defined at the table level takes precedence over a popin layout defined at the application level. In the example below, the default popin layout is `GridLarge`.
+
+> ### Sample Code:  
+> `manifest.json`
+> 
+> ```
+> "sap.fe": {
+>     "macros": {
+>         "table":{
+>             "defaultPopinLayout": "GridLarge"
+>         }
+>     }
+> }
+> 
 > ```
 
 
@@ -209,9 +278,10 @@ To set the analytical capabilities of your service or entity, use the `Aggregati
 > 
 > ```xml
 > <Annotations Target="sap.fe.managepartners.ManagePartnersService.Customers">
->    <Annotation Term="Aggregation.ApplySupported">
->    </Annotation>
+>     <Annotation Term="Aggregation.ApplySupported">
+>     </Annotation>
 > </Annotations>
+> 
 > ```
 
 > ### Sample Code:  
@@ -236,15 +306,16 @@ The analytical table renders data that can be grouped and aggregated.
     > 
     > ```xml
     > <Annotations Target="sap.fe.managepartners.ManagePartnersService.Customers">
-    >    <Annotation Term="Aggregation.ApplySupported">
-    >    <PropertyValue Property="GroupableProperties">
-    >         <Collection>
-    >             <PropertyPath>Segment</PropertyPath>
-    >             <PropertyPath>Country</PropertyPath>
-    >         </Collection>
-    >    </PropertyValue>
-    >    </Annotation>
+    >     <Annotation Term="Aggregation.ApplySupported">
+    >         <PropertyValue Property="GroupableProperties">
+    >             <Collection>
+    >                 <PropertyPath>Segment</PropertyPath>
+    >                 <PropertyPath>Country</PropertyPath>
+    >             </Collection>
+    >         </PropertyValue>
+    >     </Annotation>
     > </Annotations>
+    > 
     > ```
 
     > ### Sample Code:  
@@ -271,8 +342,8 @@ The analytical table renders data that can be grouped and aggregated.
     > <Annotations Target="sap.fe.managepartners.ManagePartnersService.BusinessPartners/SalesAmount">
     >     <Annotation Term="Aggregation.default" EnumMember="Aggregation.defaultType/SUM"/>
     >     <Annotation Term="Analytics.Measure" Bool="true"/>
-    > </Annotations>
-    >  
+    > </Annotations> 
+    > 
     > // At the entity level you must also define the Aggregation.CustomAggregate annotation which has the property name as the qualifier: 
     > <Annotations Target="sap.fe.managepartners.ManagePartnersService.EntityContainer">
     >     <Annotation Term="Aggregation.CustomAggregate" Qualifier="SalesAmount" String="Edm.Decimal"/>
@@ -308,12 +379,11 @@ The analytical table renders data that can be grouped and aggregated.
     >                          <String>topcount</String>
     >                          <String>bottomcount</String>
     >                          <String>identity</String>
-    >                          ...
+    >                          ...                    
     >                     </Collection>
     >                </PropertyValue>
     >           </Record>
-    >       </Annotation>
-    > </Annotations>
+    >       </Annotation></Annotations>
     > ```
 
     > ### Sample Code:  
@@ -326,7 +396,7 @@ The analytical table renders data that can be grouped and aggregated.
     >       'topcount',
     >       'bottomcount',
     >       'identity',
-    >       ...
+    >       ...   
     >    ],
     > }
     > ```
@@ -341,9 +411,8 @@ The analytical table renders data that can be grouped and aggregated.
     > ```
     > "controlConfiguration":
     > {
-    >     "@com.sap.vocabularies.UI.v1.LineItem": 
-    >     {
-    >         "tableSettings":
+    >     "@com.sap.vocabularies.UI.v1.LineItem":
+    >      {        "tableSettings":
     >         {
     >             "type": "AnalyticalTable",
     >             "analyticalConfiguration":
@@ -356,12 +425,12 @@ The analytical table renders data that can be grouped and aggregated.
     > }
     > ```
 
-    When `aggregationOnLeafLevel` is set to `true`, any navigation or bound actions are disabled if any key properties of the entity are not displayed in the table. If the missing key properties are added through the table settings, both the navigation and the bound actions are enabled.
+    When `aggregationOnLeafLevel` is set to `true`, any navigation or bound actions are enabled only if all key properties of the entity are displayed in the table. If the missing key properties are added through the table settings, both the navigation and the bound actions are enabled.
 
     > ### Note:  
     > If the `rowPress` event is overridden at the table level, the navigation indicator is still displayed even when `aggregationOnLeafLevel` is set to `true`.
 
-    See the following screenshots, where *Identifier* is a key property:
+    In the following screenshots, *Identifier* is a key property:
 
     ![](images/Identifier_Not_Displayed_1f0b08b.png)
 
@@ -391,6 +460,8 @@ The list report can display an analytical table with a draft-enabled service wit
 
 -   The behavior of already saved objects remains unchanged: a draft can be saved, kept, or discarded. The navigation is also unchanged.
 
+
+When used in an object page or in a custom page, the analytical table is displayed in read-only mode, and delete and create operations aren't available.
 
 > ### Restriction:  
 > An analytical table cannot be displayed on the list report with a draft-enabled service in the flexible column layout.
@@ -436,7 +507,6 @@ SAP Fiori elements for OData V4 assumes that the back end supports transformatio
 >     >       ...
 >     >    ],
 >     > }
->     > 
 >     > ```
 
 
@@ -485,12 +555,12 @@ When a grid table is not the sole control within a section of an object page or 
 > ```
 > "controlConfiguration": {
 >     "@com.sap.vocabularies.UI.v1.LineItem": {
->         "tableSettings": {	
->             "type": "GridTable",
->             "rowCount": 10,
->             "rowCountMode": "Fixed"
->             "personalization": true,
->             ...
+>         "tableSettings": {
+> 	            "type": "GridTable",
+>                     "rowCount": 10,
+>                     "rowCountMode": "Fixed"
+>                     "personalization": true,
+>                      ...
 >         }
 >     },
 >     ...
@@ -498,7 +568,7 @@ When a grid table is not the sole control within a section of an object page or 
 > ```
 
 > ### Note:  
-> If the `sectionLayout` is set to `Page` and the table is the sole control within the section, the `rowCountMode` is set to `Auto`.
+> If the `sectionLayout` is set to `Tabs` and the table is the sole control within the section, the `rowCountMode` is set to `Auto`.
 
 
 

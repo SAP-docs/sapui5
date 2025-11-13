@@ -49,23 +49,22 @@ In the following example, the stack card displays information about business par
 >     "cards": {
 >         "card00": {
 >             "model": "salesOrder",
-> 				"template": "sap.ovp.cards.stack",
-> 				"settings": {
-> 					"title": "Stack Card Title",
-> 					"subTitle": "Stack Card",
-> 					"requireAppAuthorization": "#Action-toappnavsample",
-> 					"itemText": "items awaiting approval",
-> 					"entitySet": "SalesOrderSet",
-> 					"identificationAnnotationPath": "com.sap.vocabularies.UI.v1.Identification,com.sap.vocabularies.UI.v1.Identification#item2",
-> 					"objectStreamCardsSettings": {
-> 						"showFirstActionInFooter": false
-> 					}
-> 				}
+>             "template": "sap.ovp.cards.stack",
+>             "settings": {
+>                 "title": "Stack Card Title",
+>                 "subTitle": "Stack Card",
+>                 "requireAppAuthorization": "#Action-toappnavsample",
+>                 "itemText": "items awaiting approval",
+>                 "entitySet": "SalesOrderSet",
+>                 "identificationAnnotationPath": "com.sap.vocabularies.UI.v1.Identification,com.sap.vocabularies.UI.v1.Identification#item2",
+>                 "objectStreamCardsSettings": {
+>                     "showFirstActionInFooter": false
+>                 }
+>             }
 >         },
 >         ...
 >     }
 > }
-> 
 > ```
 
 Continuing the example above, the following metadata demonstrates the relationship between the `BusinessPartner` and `SalesOrder` entity sets. The `BusinessPartner` entity type contains the configured navigation `ToSalesOrders` property to the `SalesOrder` using the `Assoc_BusinessPartner_SalesOrders` association and the `Assoc_BusinessPartner_SalesOrders_AssocS` association set.

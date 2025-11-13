@@ -45,6 +45,8 @@ In the example, `sPath = "/ProductSet('HT-1021')/ToSupplier"` and the correspond
 
 
 
+<a name="loio5ee619fc1370463ea674ee04b65ed83b__section_preproc"/>
+
 ## Calling the XML Preprocessor
 
 ```js
@@ -79,15 +81,17 @@ The XML preprocessor traverses the view's XML DOM in a depth-first, parent-befor
 
 
 
+<a name="loio5ee619fc1370463ea674ee04b65ed83b__section_example"/>
+
 ## Example
 
 See the [sap.ui.core.sample.ViewTemplate.tiny](https://ui5.sap.com/#/entity/sap.ui.core.mvc.XMLView/sample/sap.ui.core.sample.ViewTemplate.tiny) XML Templating sample. This sample is based on OData Version 4.0 annotations. It contains the following files worth noting:
 
 -   An annotations file containing label texts and binding paths.
 
--   A component controller that creates an OData model \(Line 30\), waits for the meta model to be loaded \(Line 47\) and then creates a template view \(Line 48\) as its content. A preprocessor for XML is requested \(Line 52\) and settings are passed to it, namely the meta model and the binding context that identifies the starting point within that model. The resulting view is bound to the actual data \(model and path\).
+-   A component controller that creates an OData model \(Line 33\), waits for the meta model to be loaded \(Line 50\) and then creates a template view \(Line 51\) as its content. A preprocessor for XML is requested \(Line 54\) and settings are passed to it, namely the meta model and the binding context that identifies the starting point within that model. The resulting view is bound to the actual data \(model and path\).
 
--   A template view that includes a fragment twice \(Line 21 and 26\) to demonstrate how to reuse code.
+-   A template view that includes a fragment twice \(Line 20 and 25\) to demonstrate how to reuse code.
 
 -   An XML fragment that demonstrates a simple test \(Line 10\), using expression binding.
 
@@ -102,41 +106,19 @@ See the [sap.ui.core.sample.ViewTemplate.tiny](https://ui5.sap.com/#/entity/sap.
 > 
 > For more information, see the Help topic, [Sample Service - Basic](http://help.sap.com/saphelp_nw74/helpdata/en/59/283fc4528f486b83b1a58a4f1063c0/frameset.htm).
 
-**To run the sample in SAP Business Application Studio:** 
+**To run the sample with UI5 CLI \(recommended\):** 
 
-1.  [Get a free tier account on SAP BTP](https://developers.sap.com/tutorials/hcp-create-trial-account.html), [set up SAP Business Application Studio for development](https://developers.sap.com/tutorials/appstudio-onboarding.html), and [create a dev space for SAP Fiori Apps](https://developers.sap.com/tutorials/appstudio-devspace-fiori-create.html), as described in [App Development Using SAP Business Application Studio](../05_Developing_Apps/app-development-using-sap-business-application-studio-6bbad66.md).
+1.  [Create an account on the SAP Gateway Demo System \(ES5\)](https://developers.sap.com/tutorials/gateway-demo-signup.html).
 
-2.  [Create an account on the SAP Gateway Demo System \(ES5\)](https://developers.sap.com/tutorials/gateway-demo-signup.html).
+2.  Download [sap.ui.core.sample.ViewTemplate.tiny](https://ui5.sap.com/#/entity/sap.ui.core.mvc.XMLView/sample/sap.ui.core.sample.ViewTemplate.tiny/code) as a zip file to your local machine \(find the *Download* button on the top right\).
 
-3.  [Connect SAP BTP to your SAP Gateway Demo System account \(ES5\)](https://developers.sap.com/tutorials/cp-portal-cloud-foundry-gateway-connection.html).
+3.  Extract the project folder to a desired location on your local machine.
 
-4.  [Create an empty SAPUI5 project](https://developers.sap.com/tutorials/sapui5-101-create-project.html). You need to modify the procedure given in the tutorial as follows:
+4.  At your chosen location, open a new shell in your app root folder and execute `npm install`.
 
-    1.  in Step 3.4, for the `OData service URL`, enter `https://sapes5.sapdevcenter.com/sap/opu/odata/IWBEP/GWSAMPLE_BASIC/`
+5.  After all dependencies have been installed, enter `npm start` to start the development server.
 
-    2.  in Step 3.6, for `Module name`, enter `tiny`, and for `Application namespace`, enter `sap.ui.core.sample.ViewTemplate`
-
-    3.  in Step 3.7, for `Destination name`, select `ES5`
-
-    4.  in Step 4.1, before creating a Run Configuration, open a terminal and run `npm install`
-
-
-5.  Download [sap.ui.core.sample.ViewTemplate.tiny](https://ui5.sap.com/#/entity/sap.ui.core.mvc.XMLView/sample/sap.ui.core.sample.ViewTemplate.tiny/code) and upload it to the `webapp` folder of your project. You need to make the following modifications to `Component.js`:
-
-    1.  change the `annotationURI` as follows:
-
-        ```js
-        annotationURI: "annotations.xml",
-        ```
-
-    2.  ensure that the given product exists in the `ProductSet` of the ES5 Gateway Demo System; otherwise, change it to a product contained in the `ProductSet` from the service, for example:
-
-        ```js
-        sPath = "/ProductSet('DE-PPM-102')/ToSupplier",
-        ```
-
-
-6.  Run the sample in your browser \(see Step 4 of [Create an empty SAPUI5 project](https://developers.sap.com/tutorials/sapui5-101-create-project.html)\).
+6.  Open `index.html` in your browser. You will need to enter the username and password for your ES5 account from Step 1.
 
 
 **Component.js** 
@@ -144,7 +126,7 @@ See the [sap.ui.core.sample.ViewTemplate.tiny](https://ui5.sap.com/#/entity/sap.
 ```js
 1   /*!
 2    * OpenUI5
-3    * (c) Copyright 2009-2021 SAP SE or an SAP affiliate company.
+3    * (c) Copyright 2025 SAP SE or an SAP affiliate company.
 4    * Licensed under the Apache License, Version 2.0 - see LICENSE.txt.
 5    */
 6    
@@ -214,15 +196,16 @@ See the [sap.ui.core.sample.ViewTemplate.tiny](https://ui5.sap.com/#/entity/sap.
 70                  }, function (oError) {
 71                      MessageBox.alert(oError.message, {
 72                          icon : MessageBox.Icon.ERROR,
-73                          title : "Missing Proxy?"});
-74                  });
-75              });
-76   
-77              // Note: synchronously return s.th. here and add content to it later on
-78              return oViewContainer;
-79          }
-80      });
-81  });
+73                          title : "Missing Proxy?"
+74                      });
+75                  });
+76              });
+77   
+78              // Note: synchronously return s.th. here and add content to it later on
+79              return oViewContainer;
+80          }
+81      });
+82  });
 ```
 
 **Template.view.xml** 
@@ -234,31 +217,29 @@ See the [sap.ui.core.sample.ViewTemplate.tiny](https://ui5.sap.com/#/entity/sap.
 4       xmlns:form="sap.ui.layout.form"
 5       xmlns:mvc="sap.ui.core.mvc"
 6       xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1">
-7    
+7       template:require="{AH: 'sap/ui/model/odata/AnnotationHelper'}">
 8       <!-- "meta" model's binding context MUST point to an entity type -->
-9       <template:alias name=".AH" value="sap.ui.model.odata.AnnotationHelper">
-10          <template:with path="meta>com.sap.vocabularies.UI.v1.Badge" var="badge">
-11              <form:SimpleForm layout="ResponsiveGridLayout">
-12                  <form:title>
-13                      <core:Title text="{path: 'badge>HeadLine', formatter: '.AH.format'}"/>
-14                  </form:title>
-15   
-16                  <Label text="{path: 'badge>Title/Label', formatter: '.AH.format'}"/>
-17                  <Text text="{path: 'badge>Title/Value', formatter: '.AH.format'}"/>
-18   
-19                  <Label text="{path: 'badge>MainInfo/Label', formatter: '.AH.format'}"/>
-20                  <template:with path="badge>MainInfo" var="field">
-21                      <core:Fragment fragmentName="sap.ui.core.sample.ViewTemplate.tiny.Field" type="XML"/>
-22                  </template:with>
-23   
-24                  <Label text="{path: 'badge>SecondaryInfo/Label', formatter: '.AH.format'}"/>
-25                  <template:with path="badge>SecondaryInfo" var="field">
-26                      <core:Fragment fragmentName="sap.ui.core.sample.ViewTemplate.tiny.Field" type="XML"/>
-27                  </template:with>
-28              </form:SimpleForm>
-29          </template:with>
-30      </template:alias>
-31  </mvc:View>
+9          <template:with path="meta>com.sap.vocabularies.UI.v1.Badge" var="badge">
+10              <form:SimpleForm layout="ResponsiveGridLayout">
+11                  <form:title>
+12                      <core:Title text="{path: 'badge>HeadLine', formatter: '.AH.format'}"/>
+13                  </form:title>
+14   
+15                  <Label text="{path: 'badge>Title/Label', formatter: '.AH.format'}"/>
+16                  <Text text="{path: 'badge>Title/Value', formatter: '.AH.format'}"/>
+17   
+18                  <Label text="{path: 'badge>MainInfo/Label', formatter: '.AH.format'}"/>
+19                  <template:with path="badge>MainInfo" var="field">
+20                      <core:Fragment fragmentName="sap.ui.core.sample.ViewTemplate.tiny.Field" type="XML"/>
+21                  </template:with>
+22   
+23                  <Label text="{path: 'badge>SecondaryInfo/Label', formatter: '.AH.format'}"/>
+24                  <template:with path="badge>SecondaryInfo" var="field">
+25                      <core:Fragment fragmentName="sap.ui.core.sample.ViewTemplate.tiny.Field" type="XML"/>
+26                  </template:with>
+27              </form:SimpleForm>
+28          </template:with>
+29  </mvc:View>
 ```
 
 **Field.fragment.xml** 
@@ -271,13 +252,13 @@ See the [sap.ui.core.sample.ViewTemplate.tiny](https://ui5.sap.com/#/entity/sap.
 5    
 6       <!-- "field" MUST point to a com.sap.vocabularies.Communication.v1.DataField -->
 7       <HBox>
-8           <template:with path="field>Value" helper="sap.ui.model.odata.AnnotationHelper.resolvePath" var="target">
+8           <template:with path="field>Value" helper="AH.resolvePath" var="target">
 9               <!-- go to entity type's property and check SAP Annotations for OData Version 2.0 -->
 10              <template:if test="{= ${target>sap:semantics} === 'tel'}" >
 11                  <core:Icon src="sap-icon://phone" width="2em"/>
 12              </template:if>
 13          </template:with>
-14          <Text text="{path: 'field>Value', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}"/>
+14          <Text text="{path: 'field>Value', formatter: 'AH.format'}"/>
 15      </HBox>
 16  </core:FragmentDefinition>
 ```

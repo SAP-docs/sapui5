@@ -4,6 +4,12 @@
 
 A donut chart displays data as the differently colored sections of a donut.
 
+  
+  
+**Example of a Donut Chart Card**
+
+![](images/Donut_Chart_0750575.png "Example of a Donut Chart Card")
+
 The value of the measure determines the size of each section. Donut charts help the viewer to quickly determine the key area that needs attention. For example, you can view numbers and percentages. You can also disable navigation in the graph \(optional\).
 
 
@@ -50,12 +56,4 @@ You can now assign specific colors to the sections in the donut chart. Each colo
 ## Others Sector
 
 You can pass filter conditions to target applications other than the dimensions shown on the donut chart. For example, in a donut chart with the sections A, B, C, and Others, navigation from Others section leads to a filter condition that excludes A, B, and C.
-
-
-
-  
-  
-**Example of a Donut Chart Card**
-
-![](images/Donut_Chart_0750575.png "Example of a Donut Chart Card")
 

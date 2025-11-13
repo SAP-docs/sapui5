@@ -71,7 +71,7 @@ The following code sample shows how to enable an action based on a row selection
 
 **Object Page \(Action in Header or Table Within a Section\)**
 
-The following code sample shows examples of how to set up your `manifest.json` for application-specific actions in the object page header and table toolbar button in a section. The enable/disable behavior of the button is determined by the applicable path and row selection.
+The following code sample shows examples of how to set up your `manifest.json` file for application-specific actions in the object page header and table toolbar button in a section. The enable/disable behavior of the button is determined by the applicable path and row selection.
 
 ```xml
 
@@ -141,9 +141,9 @@ In case of draft-enabled applications, if the draft information of the object pa
 
 ## Additional Features in SAP Fiori Elements for OData V4
 
-To enable actions based on a selection, set the property `enabled` of the custom action in the `manifest.json`.
+To enable actions based on a selection, set the property `enabled` of the custom action in the `manifest.json`file.
 
-To enable an action in the list report only upon selection of one row in the table, set the property `enabled` of the action in the `manifest.json`, as follows:
+To enable an action in the list report only upon selection of one row in the table, set the property `enabled` of the action in the `manifest.json` file, as follows:
 
 > ### Sample Code:  
 > ```
@@ -231,7 +231,7 @@ The following code sample shows an example of how to set up your `manifest.json`
 
 To enable a custom action button on the object page only in edit mode, you can use a binding expression on the `ui` model.
 
-To do so, set the property `enabled` of the action in the `manifest.json` as follows:
+To do so, set the property `enabled` of the action in the `manifest.json` file as follows:
 
 > ### Sample Code:  
 > ```
@@ -274,7 +274,7 @@ To do so, set the property `enabled` of the action in the `manifest.json` as fol
 
 ### Displaying Custom Action Buttons Depending on Custom Logic
 
-You can also control the visibility of actions via a custom handler \(this is similar to the 'enablement' use case\).
+You can also control the visibility of actions through a custom handler \(this is similar to the 'enablement' use case\).
 
 > ### Sample Code:  
 > `manifest.json`: Configuration for Adjusting an Annotation-Based Action

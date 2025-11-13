@@ -102,7 +102,7 @@ To define the line items of a table, use `com.sap.vocabularies.UI.v1.LineItem` a
 
 
 
-## More Information
+## Related Links
 
 For information about adding actions for line items, see [Adding Actions to Tables](adding-actions-to-tables-b623e0b.md).
 

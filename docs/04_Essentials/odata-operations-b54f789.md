@@ -246,6 +246,8 @@ oModel.bindContext("name.space.DestroyOutdated(...)", oHeaderContext).invoke();
 > -   The parent binding of a deferred operation must not be a deferred operation itself.
 > 
 > -   When invoking a bound action, you can use the `bIgnoreETag` argument of [`ODataContextBinding#invoke`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataContextBinding/methods/invoke) to actively ignore the ETag match that normally happens \(technically, the header *"If-Match : \*"* will be used\). This is useful if a second bound action for the same entity is to be invoked within the same batch \(especially if it is in a different change set\). An example would be "prepare" and "activate" for draft handling. Without this, the second bound action would be rejected, because the client sent the initial ETag via the *"If-Match"* header, but the first bound action changes that ETag on the server before the second one is invoked.
+> 
+> -   The bound operation is part of a schema that can be found in the OData metadata. This schema is identified by a namespace. The bound operation is identified by this namespace and the name of the bound operation. Note that using an alias for the namespace is not supported.
 
 
 
@@ -360,7 +362,7 @@ See also the example in the Demo Kit: [Controller Code for `sap.ui.core.sample.o
 
 ## Advertised Operations
 
-According to the [OData 4.0 specification \("11.5.2 Advertising Available Operations within a Payload"\)](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752309) services may return available actions and functions bound to a particular entity as part of the entity representation within the payload. Data for an advertised operation within an entity is sent as property starting with `#<namespace>.<action>` of that entity. If the entity does not advertise the operation, it does not contain this property. To access the advertised operation in a binding, the same format has to be used. See the following example:
+According to the [OData Version 4.01. Part 1: Protocol, 11.5.3 Advertising Available Operations within a Payload](https://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#_Toc31359008) services may return available actions and functions bound to a particular entity as part of the entity representation within the payload. Data for an advertised operation within an entity is sent as property starting with `#<namespace>.<action>` of that entity. If the entity does not advertise the operation, it does not contain this property. To access the advertised operation in a binding, the same format has to be used. See the following example:
 
 > ### Example:  
 > Enable a button to initiate an action `AcSetIsOccupied` available on entity type of entity set `EMPLOYEES` depending on advertisement of this action on the entity `EMPLOYEES('1')`
@@ -460,7 +462,7 @@ onEdit : function () {
 **Related Information**  
 
 
-[OData Version 4.0 Part 1, 11.5 Operations](http://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part1-protocol.html)
+[OData Version 4.01. Part 1: Protocol, 11.5 Operations](https://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#_Toc31359005)
 
 [ODataContextBinding](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataContextBinding)
 

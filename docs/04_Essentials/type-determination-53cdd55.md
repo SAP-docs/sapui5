@@ -4,7 +4,7 @@
 
 The property binding automatically determines the appropriate type depending on the property's metadata, unless a type is specified explicitly. For example, the binding `"{DeliveryDate}"` will determine the type `sap.ui.model.odata.type.DateTimeOffset` \(assuming the metadata specifies "Edm.DateTimeOffset" for this property\), but `"{path : 'DeliveryDate', type : 'sap.ui.model.odata.type.String'}"` uses the hardcoded type `sap.ui.model.odata.type.String` instead \(and does not require metadata\). You cannot specify format options or constraints unless you also hardcode the type.
 
-Automatic type determination will take constraints from metadata into account, namely the [OData property facets](http://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part3-csdl.html) "MaxLength", "Nullable", "Precision" and "Scale". In addition to the OData property facets, the following OData V4 annotations are considered to set type constraints on automatic type determination:
+Automatic type determination will take constraints from metadata into account, namely the [7.2 Type Facets](https://docs.oasis-open.org/odata/odata-csdl-xml/v4.01/odata-csdl-xml-v4.01.html#_Toc38530357) "MaxLength", "Nullable", "Precision" and "Scale". In addition to the OData property facets, the following OData V4 annotations are considered to set type constraints on automatic type determination:
 
 -   `Org.OData.Validation.V1.Validation.Minimum`, `Org.OData.Validation.V1.Validation.Maximum` and `Org.OData.Validation.V1.Validation.Exclusive` are used to set the constraints `minimum`, `maximum`, `minimumExclusive` and `maximumExlusive` for `sap.ui.model.odata.type.Decimal`.
 

@@ -10,7 +10,7 @@ The grouping can be done in several ways, depending on the use case.
 
 <a name="copy7d7a0c467e944ac8bcac751f8ab1e342__section_lhq_n1g_k4b"/>
 
-## Grouping Fields Using the `FieldGroup` Annotation
+## Grouping Fields Using the `UI.FieldGroup` Annotation
 
 Using a `FieldGroup` allows the grouped fields to be shown in a similar manner. The fields are typically arranged one beneath the other, but they can also spill over to the next column if, for example, a form is used. If all of the grouped fields are hidden, their container is hidden as well.
 
@@ -24,7 +24,7 @@ Use an OData form and pass the `UI.ReferenceFacet` to it. This, in turn, has a `
 
 
 
-### `UI.FieldGroup Definition` in Object Page
+### `UI.FieldGroup` Definition in Object Page
 
 > ### Sample Code:  
 > XML Annotation
@@ -201,9 +201,6 @@ This groups the fields in a form-like display, as shown in the following screens
 
 ## Table Implementation
 
-> ### Tip:  
-> Don't use a grid table because the row height truncates the UI elements.
-
 The fields are displayed beneath each other within the table cell. Application developers can add multiple field types within the cell. The annotation-driven design that is used here uses `UI.FieldGroup` inside a `UI.LineItem`.
 
 To enable this feature, do the following:
@@ -225,11 +222,11 @@ The following annotation types are supported:
 
 
 > ### Note:  
-> If you use multiple `DataFieldForAction` buttons, you must ensure that you do not show a column header. You achieve this by not specifying a "Label" for the `DataFieldForAnnotation` that is under the `LineItem` definition and holds the `FieldGroup`.
+> If you use multiple `DataFieldForAction` buttons, you must ensure that you do not show a column header. You achieve this by not specifying a "Label" for the `DataFieldForAnnotation` that is under the `LineItem` definition and holds the `UI.FieldGroup`.
 
 
 
-### Linking a `FieldGroup` in the `LineItem` Annotations
+### Linking a `UI.FieldGroup` in the `LineItem` Annotations
 
 > ### Sample Code:  
 > XML Annotation
@@ -279,7 +276,7 @@ The following annotation types are supported:
 
 
 
-### `FieldGroup` Annotation
+### `UI.FieldGroup` Annotation
 
 > ### Sample Code:  
 > XML Annotation
@@ -352,7 +349,7 @@ This displays a `DataField` and a dummy button, as shown in the following screen
 ![](images/DataField_with_Dummy_Button_8c91e4e.png)
 
 > ### Note:  
-> -   The `FieldGroup` is not supported in grid tables.
+> -   The `UI.FieldGroup` is not supported in grid tables, tree tables, and analytical tables.
 > 
 > -   If you use a table personalization, users can only filter, sort, and group the semantically connected columns based on the individual properties \(of the same entity type as the `UI.LineItem`\) given in the `UI.FieldGroup` collection.
 
@@ -362,14 +359,19 @@ This displays a `DataField` and a dummy button, as shown in the following screen
 
 ## Semantically Connected Fields
 
-Semantically connected fields are displayed side by side to reflect their data relation. Fields can be displayed under a single display name but can be edited separately. If both of the semantically connected fields are hidden, the display name is hidden as well.
+Semantically connected fields are displayed side by side to reflect their data relation. Fields can be displayed under a single display name but can be edited separately. If all the semantically connected fields are hidden, the display name is hidden as well. You can use the `UI.ConnectedFields` annotation to display two or more fields side by side.
 
-You use the `UI.ConnectedFields` annotation to display two fields side by side.
+For more information about semantically connected fields in OData V2, see the [Semantically Connected Fields](grouping-of-fields-cb1748e.md#loiocb1748ea9b984251addc03718d98df35__semanticfieldsv2) subsection in this topic.
+
+For more information about semantically connected fields in OData V4, see the [Semantically Connected Fields](grouping-of-fields-cb1748e.md#loiocb1748ea9b984251addc03718d98df35__semanticfieldsv4) subsection in this topic.
 
 > ### Example:  
 > You can maintain date and time as two properties in the back end and show this information in a single form. You can use a delimiter to separate the two values.
 
 ![](images/Semantically_Connected_Fields_eb0b024.png)
+
+> ### Note:  
+> The `UI.FieldGroup` annotation is not supported in grid tables, tree tables, and analytical tables.
 
 
 
@@ -463,7 +465,7 @@ You use the `UI.ConnectedFields` annotation to display two fields side by side.
 
 ### Showing Field Labels in a Field Group inside a Table
 
-You can show the labels of fields inside the table columns when you show a `FieldGroup`. To enable the display of a field label, you can use the `showDataFieldsLabel` setting in the manifest as shown in the following sample code:
+You can show the labels of fields inside the table columns when you show a `UI.FieldGroup`. To enable the display of a field label, you can use the `showDataFieldsLabel` setting in the manifest as shown in the following sample code:
 
 > ### Sample Code:  
 > ```
@@ -496,152 +498,112 @@ For more information about how to find the right key for a column, see [Finding 
 > ### Sample Code:  
 > XML Annotation
 > 
-> ```xml
-> <Annotation Term="UI.ConnectedFields" Qualifier="ConnectedDateTime">
->     <Record Type="UI.ConnectedFieldsType">
->         <PropertyValue Property="Data">
->             <Record Type="Core.Dictionary">
->                 <PropertyValue Property="SalesOrderDate">
->                     <Record Type="UI.DataField">
->                         <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
->                         <PropertyValue Property="Value" Path="SalesOrderDate"/>
->                     </Record>
->                 </PropertyValue>
->                 <PropertyValue Property="SalesOrderTime">
->                     <Record Type="UI.DataField">
->                         <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
->                         <PropertyValue Property="Value" Path="TrialTOD"/>
->                     </Record>
->                 </PropertyValue>
->             </Record>
->         </PropertyValue>
->         <PropertyValue Property="Label" String="Connected DateTime"/>
->         <PropertyValue Property="Template" String="{SalesOrderDate} / {SalesOrderTime}"/>
->     </Record>
-> </Annotation>
->  
-> <Annotation Term="UI.ConnectedFields" Qualifier="ConnectedData">
->     <Record Type="UI.ConnectedFieldsType">
->         <PropertyValue Property="Data">
->             <Record Type="Core.Dictionary">
->                 <PropertyValue Property="PurchaseOrderByCustomerr">
->                     <Record Type="UI.DataField">
->                         <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
->                         <PropertyValue Property="Value" Path="PurchaseOrderByCustomer"/>
->                     </Record>
->                 </PropertyValue>
->                 <PropertyValue Property="ShippingCondition">
->                     <Record Type="UI.DataField">
->                         <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
->                         <PropertyValue Property="Value" Path="ShippingCondition"/>
->                     </Record>
->                 </PropertyValue>
->             </Record>
->         </PropertyValue>
->         <PropertyValue Property="Label" String="Connected Data"/>
->         <PropertyValue Property="Template" String="{ShippingCondition} - {PurchaseOrderByCustomerr}"/>
->     </Record>
-> </Annotation>
->  
-> .....
+> ```
+> ...
 > <Annotation Term="UI.FieldGroup" Qualifier="OrderData">
 >     <Record Type="UI.FieldGroupType">
 >         <PropertyValue Property="Data">
 >             <Collection>
 >                 <Record Type="UI.DataFieldForAnnotation">
->                     <PropertyValue Property="Target" AnnotationPath="@UI.ConnectedFields#ConnectedDateTime"/>
->                 </Record>
->                 <Record Type="UI.DataFieldForAnnotation">
->                     <PropertyValue Property="Target" AnnotationPath="@UI.ConnectedFields#ConnectedData"/>
+>                     <PropertyValue Property="Target" AnnotationPath="@UI.ConnectedFields#ConnectedOrderDates"/>
 >                 </Record>
 >             </Collection>
 >         </PropertyValue>
 >     </Record>
 > </Annotation>
+> ...
+> <Annotation Term="SAP__UI.ConnectedFields" Qualifier="ConnectedOrderDates">
+> <Record>
+>     <PropertyValue Property="Label" String="Order / Delivery"/>
+>     <PropertyValue Property="Template" String="{OrderDate}/{DeliveryDate}"/>
+>     <PropertyValue Property="Data">
+>         <Record Type="Core.Dictionary">
+>             <PropertyValue Property="OrderDate">
+>                 <Record Type="SAP__UI.DataField">
+>                     <PropertyValue Property="Value" Path="OrderDate"/>
+>                 </Record>
+>             </PropertyValue>
+>             <PropertyValue Property="DeliveryDate">
+>                 <Record Type="SAP__UI.DataField">
+>                     <PropertyValue Property="Value" Path="DeliveryDate"/>
+>                 </Record>
+>             </PropertyValue>
+>         </Record>
+>     </PropertyValue>
+> </Record>
+> </Annotation>
+> ...
 > ```
 
 > ### Sample Code:  
 > ABAP CDS Annotation
 > 
 > ```
-> @UI.connectedFields: [
->   {
->     importance: #HIGH,
->     name: 'SalesOrderDate',
->     qualifier: 'ConnectedDateTime',
->     template: '{SalesOrderDate} / {SalesOrderTime}',
->     groupLabel: 'Connected DateTime'
+> annotate view SALESORDER with {
+>   ...
+>   @UI.facet: [
+>     {
+>       id: 'idIdentification',
+>       type: #IDENTIFICATION_REFERENCE,
+>     },
+>     ...
+>   ]
+>   ...
+>   @UI: {
+>     identification: [
+>       { type: #AS_CONNECTED_FIELDS, valueQualifier: 'ConnectedOrderDates' }
+>     ],
+>     connectedFields: [
+>       {
+>         name: 'OrderDate',
+>         qualifier: 'ConnectedOrderDates',
+>         template: '{OrderDate}/{DeliveryDate}',
+>         groupLabel: 'Order / Delivery'
+>       }
+>     ]
 >   }
-> ]
-> SALESORDERDATE;
+>   OrderDate;
 > 
-> @UI.connectedFields: [
->   {
->     importance: #HIGH,
->     name: 'SalesOrderTime',
->     qualifier: 'ConnectedDateTime'
+>   @UI: {
+>     connectedFields: [
+>       { name: 'DeliveryDate', qualifier: 'ConnectedOrderDates' }
+>     ]
 >   }
-> ]
-> TRIALTOD;
+>   DeliveryDate;
 > 
+>   ...
+> }
 > ```
 
 > ### Sample Code:  
 > CAP CDS Annotation
 > 
 > ```
-> ConnectedFields #ConnectedData   : {
->         Label : 'Connected Data',
->         Template: '{ShippingCondition} - {PurchaseOrderByCustomerr}',
->         Data: {
->          ShippingCondition:   {
->                 $Type             : 'UI.DataField',
->                 Value             : ShippingCondition,
->                 ![@UI.Importance] : #High
->             },
->         PurchaseOrderByCustomerr: {
->                 $Type             : 'UI.DataField',
->                 Value             : PurchaseOrderByCustomer,
->                 ![@UI.Importance] : #High
->             }
->         }
->     },
->     ConnectedFields #ConnectedDateTime   : {
->         Label : 'Connected DateTime',
->         Template: '{SalesOrderDate} / {SalesOrderTime}',
->         Data: {
->          SalesOrderDate:   {
->                 $Type             : 'UI.DataField',
->                 Value             : SalesOrderDate,
->                 ![@UI.Importance] : #High
->             },
->         SalesOrderTime: {
->                 $Type             : 'UI.DataField',
->                 Value             : TrialTOD,
->                 ![@UI.Importance] : #High
->             }
->         }
->     },
+> annotate SalesOrderService.SalesOrder with @UI : {
 > 
-> FieldGroup #OrderData                           : {Data : [
-> ….
-> {
->         $Type           : 'UI.DataFieldForAnnotation',
->         Target          : '@UI.ConnectedFields#ConnectedDateTime'
->     },
-> {
->         $Type           : 'UI.DataFieldForAnnotation',
->         Target          : '@UI.ConnectedFields#ConnectedData'
->     } 
-> ….
-> ]}
+>   FieldGroup #OrderData : {
+>     Data : [
+>       { $Type : 'UI.DataFieldForAnnotation', Target: '@UI.ConnectedFields#ConnectedOrderDates' }
+>     ]
+>   },
+>   ...
 > 
+>   ConnectedFields #ConnectedOrderDates: {
+>     $Type   : 'UI.ConnectedFieldsType',
+>     Label   : 'Order / Delivery',
+>     Template: '{OrderDate}/{DeliveryDate}',
+>     Data    : {
+>       $Type        : 'Core.Dictionary',
+>       OrderDate    : { $Type : 'UI.DataField', Value : OrderDate },
+>       DeliveryDate : { $Type : 'UI.DataField', Value : DeliveryDate }
+>     }
+>   },
+>   ...
+> }
 > ```
 
 > ### Restriction:  
-> -   Connected fields can only be configured in sections that belong to a form, so connected fields cannot be configured in a header section.
-> 
-> -   Connected fields cannot be rendered in a table.
+> Connected fields can only be configured in sections that belong to a form, so connected fields cannot be configured in a header section.
 
 
 
@@ -670,7 +632,7 @@ When this setting is enabled, only the section or subsection title is displayed.
 > The setting is at section-level and applies for all text area controls within the section. However, if a text area is marked as mandatory, the label is always visible in edit mode, regardless of the configuration.
 
 > ### Sample Code:  
-> manifest.json
+> `manifest.json`
 > 
 > ```
 > "sap.ui5": {
@@ -698,9 +660,200 @@ When this setting is enabled, only the section or subsection title is displayed.
 
 
 
+### Grouping Checkboxes
+
+You can group one or more checkboxes together under a shared label in the `UI.FieldGroup` section of the object page.
+
+See the following screenshots for the appearance of checkbox groups in display and edit modes in vertical layout:
+
+![](images/Display_Mode_b991a5e.png)
+
+![](images/Edit_Mode_459aa56.png)
+
+You can define a checkbox group in an object page section with a `UI.FieldGroup`. To group checkbox fields, configure an additional `UI.FieldGroup` within the `UI.FieldGroup`. The `UI.FieldGroup` label is shown as the label for the entire checkbox group. Each individual checkbox within the group is a Boolean field with its own label.
+
+> ### Restriction:  
+> The following restrictions apply:
+> 
+> -   Adding checkbox groups to header forms, filter bars, or tables is not supported.
+> 
+> -   Only Boolean properties are allowed in a checkbox group.
+> 
+> -   Dynamic instantiation of checkbox groups is not supported.
+
+> ### Sample Code:  
+> XML Annotation
+> 
+> ```
+> 
+> <Annotation Term="UI.FieldGroup" Qualifier="GeneralInformation">
+>     <Record Type="UI.FieldGroupType">
+>         <PropertyValue Property="Label" String="Line item data"/>
+>         <PropertyValue Property="Data">
+>             <Collection>
+>                 <Record Type="UI.DataFieldForAnnotation">
+>                     <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#CheckBoxGroup"/>
+>                 </Record>
+>             </Collection>
+>         </PropertyValue>
+>     </Record>
+> </Annotation>
+> <Annotation Term="UI.FieldGroup" Qualifier="CheckBoxGroup">
+>     <Record Type="UI.FieldGroupType">
+>         <PropertyValue Property="Label" String="Standard CheckBoxGroup"/>
+>         <PropertyValue Property="Data">
+>             <Collection>
+>                 <Record Type="UI.DataField">
+>                     <PropertyValue Property="Value" Path="Boolean1"/>
+>                     <PropertyValue Property="Label" String="Checkbox One"/>
+>                 </Record>
+>                 <Record Type="UI.DataField">
+>                     <PropertyValue Property="Value" Path="Boolean2"/>
+>                     <PropertyValue Property="Label" String="Checkbox Two"/>
+>                 </Record>
+>                 <Record Type="UI.DataField">
+>                     <PropertyValue Property="Value" Path="Boolean3"/>
+>                     <PropertyValue Property="Label" String="Checkbox Three"/>
+>                 </Record>
+>             </Collection>
+>         </PropertyValue>
+>     </Record>
+> </Annotation>
+> 
+> <Annotations Target="sap.fe.core.FieldGroup.Products/Boolean1">
+>     <Annotation Term="Common.FieldControl" Int="7"/>
+> </Annotations>
+> <Annotations Target="sap.fe.core.FieldGroup.Products/Boolean3">
+>     <Annotation Term="Common.FieldControl">
+>         <If>
+>                 <Path>Boolean2</Path>
+>                 <Int>0</Int>
+>                 <Int>3</Int>
+>         </If>
+>     </Annotation>
+> </Annotations>
+> 
+> ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> ```
+> Define the following in the metadata extension of the data definition containing the Boolean fields:
+> ...
+> @UI: {
+>     fieldGroup: [
+>         { qualifier: 'GeneralInformation', type: #AS_FIELDGROUP, valueQualifier: 'CheckBoxGroup', position: 10, label: 'CheckBox Group Label' },
+>         { qualifier: 'CheckBoxGroup', position: 10, label: 'Checkbox One' }
+>     ]
+> }
+> Boolean1;
+>     @UI: {
+>         fieldGroup: [
+>             { qualifier: 'CheckBoxGroup', position: 20, label: 'Checkbox Two'  }
+>         ]
+>     }
+> Boolean2;
+>     @UI: {
+>         fieldGroup: [
+>             { qualifier: 'CheckBoxGroup', position: 30, label: 'Checkbox Three'  }
+>         ]
+>     }
+> Boolean3;
+> ...
+> 
+> ```
+
+You must define the dynamic-field control of the Boolean fields in the behavior definition. For more information, see [Developing Feature Control](https://help.sap.com/docs/abap-cloud/abap-rap/developing-feature-control).
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> 
+> ...
+> Boolean1            : Boolean @Common.FieldControl: #Mandatory;
+> Boolean2            : Boolean;
+> Boolean3            : Boolean @Common.FieldControl: (Boolean2 ? 0 : 3);
+> // FieldControl can also be set as path based reference to property or expression binding
+> ...
+> FieldGroup #CheckBoxGroup: {
+>     $Type: 'UI.FieldGroupType',
+>     Label: 'CheckBox Group Label',
+>     Data : [
+>         {
+>             $Type: 'UI.DataField',
+>             Value: Boolean1,
+>             Label: 'Checkbox One'
+>         },
+>         {
+>             $Type: 'UI.DataField',
+>             Value: Boolean2,
+>             Label: 'Checkbox Two'
+>         },
+>         {
+>             $Type: 'UI.DataField',
+>             Value: Boolean3, 
+>             Label: 'Checkbox Three'
+>         }
+>     ]
+> },
+> ...
+> FieldGroup #GeneralInformation: {
+>     Label: 'Line item data',
+> 	Data : [
+>     {
+>         $Type : 'UI.DataFieldForAnnotation',
+>         Target: '@UI.FieldGroup#CheckBoxGroup'
+>     }
+>     ]
+> }
+> 
+> ```
+
+You can align the boxes horizontally by adding the horizontal layout setting to the `manifest.json` file.
+
+  
+  
+**Checkbox Group in Display Mode \(Horizontal Layout\)**
+
+![](images/Horizontal_Layout_a9399bb.png "Checkbox Group in Display Mode (Horizontal Layout)")
+
+> ### Sample Code:  
+> `manifest.json`
+> 
+> ```
+> 
+> "options": {
+>     "settings": {
+>          "entitySet": "Products",
+>          "content": {
+>              "body": {
+>                 "sections": {
+>                      "@com.sap.vocabularies.UI.v1.FieldGroup#CheckBoxGroups": {
+>                          "subSections": {
+>                             "@com.sap.vocabularies.UI.v1.FieldGroup#CheckBoxGroupH1": {
+>                                 "horizontalLayout": true
+>                  }
+>                }
+>              }
+>            }
+>          }
+>       }
+>     }
+>   }
+> }
+> 
+> ```
+
+> ### Note:  
+> Configuring a mandatory checkbox group that requires users to select at least one checkbox is not supported. Use the `MultiComboBox` property instead. For more information, see [Value Help as a Dropdown List](https://sapui5untested.int.sap.eu2.hana.ondemand.com/#/topic/2a0a630e50c7472b803fb94dab922d18).
+
+
+
 <a name="copy7d7a0c467e944ac8bcac751f8ab1e342__section_yr3_gt2_m4b"/>
 
-## More Information
+## Related Links
 
 For more information, see the section about [forms and form groups](https://experience.sap.com/fiori-design-web/form/), and about [forms in the object page](https://experience.sap.com/fiori-design-web/object-page/#forms) in the SAP Fiori design guidelines.
 

@@ -344,7 +344,7 @@ To define multiple views using multiple table mode, perform the following steps:
     > 
     > For the `PresentationVariant`, `SortOrders` and visualizations are supported.
 
-2.  Extend the `manifest.json` to switch on the multiple view feature and link to the variants you've added to your annotations. You do this in the list report settings section under `sap.ui.generic.app`. Use `quickVariantSelectionX` for multiple table mode or multiple table mode with charts.
+2.  Extend the `manifest.json` file to switch on the multiple view feature and link to the variants you've added to your annotations. You do this in the list report settings section under `sap.ui.generic.app`. Use `quickVariantSelectionX` for multiple table mode or multiple table mode with charts.
 
     -   The `variants` section \(lines 11–20\) contains a set of entries that point to the variants defined in the annotations.
 
@@ -1100,7 +1100,7 @@ To define multiple views using multiple table mode, perform the following steps:
     > 
     > For the `PresentationVariant`, `SortOrders` and visualizations are supported.
 
-2.  Extend the `manifest.json` to switch on the multiple view feature and link to the variants you have added to your annotations. You do this in the list report settings section under the section *routing* \> *targets*. In the settings of your list report page, use the views configuration for multiple table mode.
+2.  Extend the `manifest.json` file to switch on the multiple view feature and link to the variants you have added to your annotations. You do this in the list report settings section under the section *routing* \> *targets*. In the settings of your list report page, use the views configuration for multiple table mode.
 
     -   The `paths` section \(lines 9–22\) contains a set of entries that point to the variants defined in the annotations.
 
@@ -1191,7 +1191,7 @@ To define multiple views using multiple table mode, perform the following steps:
     </td>
     <td valign="top">
     
-    Stable IDs: As there are separate table instances for each tab, table-specific IDs \(such as IDs for tables, toolbar actions, draft indicators in table columns\) get a suffix "-<key\>", where <key\> is the variant key you've specified in the manifest. This avoids duplicate ID errors and allows you to adapt specific tables via runtime adaptation \(for example, hiding a toolbar action for a specific table\).
+    Stable IDs: As there are separate table instances for each tab, table-specific IDs \(such as IDs for tables, toolbar actions, draft indicators in table columns\) get a suffix "-<key\>", where <key\> is the variant key you've specified in the manifest. This avoids duplicate ID errors and allows you to adapt specific tables in key user adaptation \(for example, hiding a toolbar action for a specific table\).
     
     </td>
     <td valign="top">
@@ -1265,7 +1265,7 @@ To define multiple views using multiple table mode, perform the following steps:
     </table>
     
     > ### Note:  
-    > You can combine multiple views with quick filters \(single table mode\). You can configure each table in the`manifest.json` in the `controlConfiguration` and define the `quickvariantSelection` for a table.
+    > You can combine multiple views with quick filters \(single table mode\). You can configure each table in the`manifest.json` file in the `controlConfiguration` and define the `quickvariantSelection` for a table.
 
 
 

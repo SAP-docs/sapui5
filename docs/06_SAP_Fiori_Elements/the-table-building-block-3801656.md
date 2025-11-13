@@ -23,7 +23,7 @@ You can use the `Table` building block to add bound and unbound actions, to grou
 
 -   Define the placement of the action relative to an anchor.
 
-    You can explore and work with the coding yourself. Check out our live example in the flexible programming model explorer at [Table Customization](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/table/tableCustoms).
+    You can explore and work with the coding yourself. For more information and live examples, see the SAP Fiori development portal at [Building Blocks - Table - Extensions - Custom Column](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/table/customColumn) and [Building Blocks - Table - Extensions - Custom Action](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/table/customTableAction).
 
 -   Specify a bound action by using the `requiresSelection` property.
 
@@ -32,8 +32,6 @@ You can use the `Table` building block to add bound and unbound actions, to grou
 -   Define menu actions and contained actions using the `ActionGroup` building block.
 
 -   Specify the create options and the related parameters for the table using the `creationMode` parameter. For more information about `TableCreationOptions`, see the [API Reference](https://ui5.sap.com//#/api/sap.fe.macros.table.TableCreationOptions).
-
-    Check out our live example in the flexible programming model explorer at [Table - Edit Mode](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/table/tableEdit).
 
 
 > ### Sample Code:  
@@ -72,20 +70,63 @@ You can link the `Table` building block to a `FilterBar` that is defined in the 
 </Panel>
 ```
 
-Check out our live example in the flexible programming model explorer at [Table - FilterBar](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/table/tableFilterBar) and [Custom View with BuildingBlock Table](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/customElements/customElementsOverview/customViewWithMacroTableContent).
+For more information and live examples, see the SAP Fiori development portal at [Building Blocks - Table - Usage with Filter Bar](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/table/tableFilterBar).
 
 You can use the `getPresentationVariant()` and `setPresentationVariant()` methods to programmatically get and set the presentation variants corresponding to the `Table` building block. Similarly, the `getSelectionVariant()` and `setSelectionVariant()` methods allows you to programmatically get and set the selection variants associated with the `Table` building block. The `getSelectionVariant()` method considers the variants that are applied directly to the table and excludes the variants that are applied to a bound model.
 
-Check out our live example in the flexible programming model explorer at [Table - Interacting via APIs](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/table/tablePublicAPIs).
+For more information and live examples, see the SAP Fiori development portal at [Building Blocks - Table - Extensions - Table APIs](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/table/tablePublicAPIs).
 
 > ### Note:  
 > The `getSelectionVariant()` and `setSelectionVariant()` methods only work if table personalization is enabled. For more information, see [Enabling Table Personalization](enabling-table-personalization-3e2b4d2.md).
 
-You can use the `setCurrentVariantID` and `getCurrentVariantID` methods to programmatically set and get the current variant ID corresponding to the `Table` building block. Check out our live example in the flexible programming model explorer at [Table Extensibility](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/controllerExtensions/tableExtensibility).
+You can use the `setCurrentVariantID` and `getCurrentVariantID` methods to programmatically set and get the current variant ID corresponding to the `Table` building block.
 
-You can send and remove messages related to the table by using the `sendMessage` and `removeMessage` methods. Check out our live example in the flexible programming model explorer at [Table Messages](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/table/tableMessages).
+You can send and remove messages related to the table by using the `sendMessage` and `removeMessage` methods.
 
-If the entity linked to the table is searchable, the *Search* field is displayed in the toolbar of the table. You can disable the *Search* field using the `isSearchable` parameter. Check out our live example in the flexible programming model explorer at [Table - Settings](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/table/tableCustoms).
+For more information and live examples, see the SAP Fiori development portal at [Building Blocks - Table - Extensions - Table APIs](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/table/tablePublicAPIs).
+
+If the entity linked to the table is searchable, the *Search* field is displayed in the toolbar of the table. You can disable the *Search* field using the `isSearchable` parameter.
+
+With the `Table` building block, you can define quick filters which are applied to the table content.
+
+> ### Sample Code:  
+> ```
+> <macros:Table
+>     metaPath="@com.sap.vocabularies.UI.v1.LineItem"
+>     id="LineItemTableQuickFilters"
+> >
+>     <macros:quickVariantSelection>
+>         <macrosTable:QuickVariantSelection
+>             paths="com.sap.vocabularies.UI.v1.SelectionPresentationVariant#All,com.sap.vocabularies.UI.v1.SelectionPresentationVariant#Success"
+>             showCounts="true"
+>         />
+>     </macros:quickVariantSelection>
+> </macros:Table>
+> ```
+
+With the `Table` building block, you can also define mass-edit configuration using the `massEdit` aggregation. The logic is identical to [Enabling Editing Using a Dialog \(Mass Edit\)](enabling-editing-using-a-dialog-mass-edit-965ef5b.md).
+
+> ### Sample Code:  
+> ```
+> <macros:Table
+>     metaPath="@com.sap.vocabularies.UI.v1.LineItem"
+>     id="LineItemTablePageMassEdit"
+> >
+>     <massEdit>
+>         <macrosTable:MassEdit visibleFields="BooleanProperty,TagStatus">
+>             <f:FormContainer>
+>                 <f:formElements>
+>                     <f:FormElement label="Custom Element">
+>                         <Text text="This is a custom fragment displayed in the Mass-edit dialog" />
+>                     </f:FormElement>
+>                 </f:formElements>
+>             </f:FormContainer>
+>         </macrosTable:MassEdit>
+>     </massEdit>
+> </macros:Table>
+> ```
+
+For more information and live examples, see the SAP Fiori development portal at [Building Blocks - Table - Mass Edit](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/table/tableMassEdit).
 
 
 
@@ -93,7 +134,11 @@ If the entity linked to the table is searchable, the *Search* field is displayed
 
 ## API
 
-For information about the `Table` API, see the [API Reference](https://ui5.sap.com/#/api/sap.fe.macros.Table).
+You can interact and influence a `Table` building block using a set of properties and methods in the `Table` API. For example, you can use the `Table` API to select or deselect line items in a table.
+
+For more information about the `Table` API, see the [API Reference](https://ui5.sap.com/#/api/sap.fe.macros.Table). For more information, see the *API Reference* for `sap.fe.macros.Table` in the Demo Kit.
+
+For more information and live examples, see the SAP Fiori development portal at [Building Blocks - Table](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/table/tableDefault).
 
 
 
@@ -151,7 +196,7 @@ Then, implement the `beforeRebindTable` extension point in the controller extens
 > 
 > ```
 
-Check out our live example in the flexible programming model explorer at [Table - Custom Columns / Actions](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/table/tableCustoms).
+For more information and live examples, see the SAP Fiori development portal at [Building Blocks - Table - Extensions - Custom Actions](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/table/customTableAction).
 
 
 
@@ -181,5 +226,5 @@ You can trigger the creation of a document within a table by calling the `create
 >     });
 > ```
 
-Check out our live example in the flexible programming model explorer at [Controller Extensions - Edit Flow](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/controllerExtensions/basicExtensibility).
+For more information and live examples, see the SAP Fiori development portal at [Global Patterns - Draft Handling](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/controllerExtensions/editFlow).
 

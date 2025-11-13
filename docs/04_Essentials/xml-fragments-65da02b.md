@@ -19,7 +19,7 @@ The fragment name can also result from a binding, including an expression bindin
 
 ```xml
 
-<core:Fragment fragmentName="{= ${path: 'facet>Target', formatter: 'sap.ui.model.odata.AnnotationHelper.isMultiple'} === 'true'
+<core:Fragment fragmentName="{= ${path: 'facet>Target', formatter: 'AnnotationHelper.isMultiple'} === 'true'
     ? 'sap.ui.core.sample.ViewTemplate.scenario.TableFacet'
     : 'sap.ui.core.sample.ViewTemplate.scenario.FormFacet' }" type="XML"/>
 ```

@@ -664,7 +664,7 @@ The following changes and new features are available for SAP Fiori elements for 
 
 -   SAP Fiori elements now provides an option to pass the variant IDs of a page, the filter bar, or a table as URL parameters to the app. For more information, see [Passing Variant IDs as URL Parameters](../06_SAP_Fiori_Elements/passing-variant-ids-as-url-parameters-4132ffa.md).
 
--   SAP Fiori elements now provides two new extension methods for applications that run in `sap-keep-alive` mode. Application developers can then add custom code when the application is suspended or restored during an external navigation. For more information, see [Refresh Entity Sets in sap-keep-alive Mode](../06_SAP_Fiori_Elements/refresh-entity-sets-in-sap-keep-alive-mode-3c65f2c.md) and [Refresh Data Set for Back Navigation When sap-keep-alive Is Set to True](../06_SAP_Fiori_Elements/refresh-data-set-for-back-navigation-when-sap-keep-alive-is-set-to-true-f1c2704.md).
+-   SAP Fiori elements now provides two new extension methods for applications that run in `sap-keep-alive` mode. Application developers can then add custom code when the application is suspended or restored during an external navigation. For more information, see [Refresh Entity Sets in sap-keep-alive Mode](../06_SAP_Fiori_Elements/refresh-entity-sets-in-sap-keep-alive-mode-3c65f2c.md) and [Refresh Dataset for Back Navigation When sap-keep-alive Is Set to True](../06_SAP_Fiori_Elements/refresh-dataset-for-back-navigation-when-sap-keep-alive-is-set-to-true-f1c2704.md).
 
 -   You can now use `MultiValueFields` within an action parameter dialog. For more information, see [Actions](../06_SAP_Fiori_Elements/actions-cbf16c5.md).
 
@@ -740,6 +740,18 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.141](what-s-new-in-sapui5-1-141-a7ed66d.md "With this release SAPUI5 is upgraded from version 1.140 to 1.141.")
+
+[What's New in SAPUI5 1.140](what-s-new-in-sapui5-1-140-26a106c.md "With this release SAPUI5 is upgraded from version 1.139 to 1.140.")
+
+[What's New in SAPUI5 1.139](what-s-new-in-sapui5-1-139-e10db71.md "With this release SAPUI5 is upgraded from version 1.138 to 1.139.")
+
+[What's New in SAPUI5 1.138](what-s-new-in-sapui5-1-138-8f6a92b.md "With this release SAPUI5 is upgraded from version 1.136 to 1.138.")
+
+[What's New in SAPUI5 1.136](what-s-new-in-sapui5-1-136-a82754d.md "With this release SAPUI5 is upgraded from version 1.135 to 1.136.")
+
+[What's New in SAPUI5 1.135](what-s-new-in-sapui5-1-135-93d7630.md "With this release SAPUI5 is upgraded from version 1.134 to 1.135.")
 
 [What's New in SAPUI5 1.134](what-s-new-in-sapui5-1-134-c512d71.md "With this release SAPUI5 is upgraded from version 1.133 to 1.134.")
 

@@ -22,7 +22,7 @@ SAPUI5 provides the following two types of components:
 
 The `sap.ui.core.Component` class is the base class and provides the metadata for both types of components. To extend the functionality, components can inherit from their base class or from another component.
 
-Components are loaded and created via the component factory function `sap.ui.component`. You can either pass the name of the component or the URL of the descriptor file \(`manifest.json`\) to load it via the descriptor, see [Manifest First Function](manifest-descriptor-for-applications-components-and-libraries-be0cf40.md#loiobe0cf40f61184b358b5faedaec98b2da__manifirst). We recommend loading the component using the descriptor \(if available\) - it improves performance during the initial load since the loading process can be parallelized and optimized.
+Components can be loaded and instantiated in a number of ways, each with its specific use case described in the [Component Instantiation Guide](component-instantiation-guide-346599f.md). For information on the component's manifest, see [Manifest First Function](manifest-descriptor-for-applications-components-and-libraries-be0cf40.md#loiobe0cf40f61184b358b5faedaec98b2da__manifirst). We recommend loading the component using the descriptor \(if available\) - it improves performance during the initial load since the loading process can be parallelized and optimized.
 
 After loading the descriptor, the component factory can load the dependencies \(SAPUI5 libraries and other dependent components\) in parallel next to the component preload, and also models can be preloaded.
 

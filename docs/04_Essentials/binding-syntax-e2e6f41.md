@@ -32,7 +32,7 @@ You can add other properties, such as formatters, data types, or events:
         xmlns:mvc="sap.ui.core.mvc"
         xmlns="sap.m"
         core:require="{StringType: 'sap/ui/model/type/String'}">
-        
+    
         <Input value="{path: '/firstName', type: 'StringType'}"/>
     ```
 
@@ -44,7 +44,7 @@ You can add other properties, such as formatters, data types, or events:
         xmlns:mvc="sap.ui.core.mvc"
         xmlns="sap.m"
         core:require="{globalFormatter: 'my/globalFormatter'}">
-        
+    
         <Input value="{path: '/firstName', formatter: 'globalFormatter'}"/>
     ```
 
@@ -74,8 +74,8 @@ If a control requires data from multiple different model properties, you use a `
     xmlns="sap.m"
     core:require="{globalFormatter: 'my/globalFormatter'}">
 
-    <TextField value="{
-        parts: [{path: 'birthday/day'}, {path: 'birthday/month'}, {path: 'birthday/year'}], 
+    <TextArea binding="{birthday}" value="{
+        parts: ['day', 'month'], 
         formatter: 'globalFormatter'
     }"/>
 ```
@@ -109,6 +109,33 @@ With metadata binding, you can bind properties of a control to the corresponding
 ```
 
 For more information, see [Property Metadata Binding](property-metadata-binding-f5aa4bb.md).
+
+
+
+<a name="loioe2e6f4127fe4450ab3cf1339c42ee832__section_EBS"/>
+
+## Escaping Binding Syntax
+
+To prevent string values from being misinterpreted as binding expressions in `ManagedObject`'s `constructor` settings or `applySettings`, use the static helper function [`sap/ui/base/ManagedObject.escapeSettingsValue`](https://ui5.sap.com/#/api/sap.ui.base.managedObject%23methods/sap.ui.base.ManagedObject.escapeSettingsValue), which escapes special characters, such as curly braces \(`{}`\):
+
+```js
+// ManagedObject required from "sap/ui/base/ManagedObject"
+// Calling the constructor with the settings object
+new MyTextControl({ // or in applySettings({ ...
+    text: ManagedObject.escapeSettingsValue(textFromBob) // no binding intended
+});
+```
+
+Especially if the given value is not under your control, e.g. a value from users or data services, omitting `escapeSettingsValue` in the above scenario can lead to a `SyntaxError` reporting "no closing braces found", or `getProperty` returning `undefined` due to the framework interpreting unintended binding expressions.
+
+In contrast, `ManagedObject`'s `setProperty` does not check for bindings and can be used without `escapeSettingsValue`:
+
+```js
+new MyTextControl().setText(textFromBob);
+```
+
+> ### Note:  
+> To use composite binding, expression binding, and the `escapeSettingsValue` function, the SAPUI5 bootstrap configuration parameter `sap-ui-compatVersion` must be set to `edge`.
 
 **Related Information**  
 

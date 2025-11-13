@@ -6,11 +6,13 @@ All cards support sorting using the `com.sap.vocabularies.UI.v1.PresentationVari
 
 
 
-List, table, and stack cards support sorting by using the `sortBy` and `sortOrder` properties in the application manifest file.
+List, table, and stack cards support sorting by using the `sortBy` and `sortOrder` properties in the `manifest.json` file. The following sample code shows the sort configuration, where the records are sorted using the `Price` property in descending order.
 
-The following example shows sort configuration in the application manifest file. The records are sorted by the `Price` property in descending order.
+``
 
 > ### Sample Code:  
+> `manifest.json`
+> 
 > ```
 > "sap.ovp": {
 >     ...
@@ -34,7 +36,7 @@ The following example shows sort configuration in the application manifest file.
 > }
 > ```
 
-The following example shows sort configuration in the annotation file. The records are sorted by the `Sales` property in descending order. You can configure multiple sorts by defining multiple properties in the `SortOrder` collection.
+The following sample code shows a sort configuration in the annotation file. In this sample code, the records are sorted by the `Sales` property in descending order. You can define multiple sorts by specifying multiple properties in the `SortOrder` collection.
 
 > ### Sample Code:  
 > XML Annotation

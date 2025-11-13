@@ -5,13 +5,13 @@
 You can configure a list of supported locales and a fallback locale in your app's manifest to control the loading of resource bundles and avoid '404 Not Found' network responses.
 
 > ### Note:  
-> 1.  [UI5 Tooling](https://sap.github.io/ui5-tooling/stable/) v4 and higher is capable of automatically adding supported locales to the manifest based on the available properties files. Detailed information and requirements can be found in [UI5 Builder - Generation of Supported Locales](https://sap.github.io/ui5-tooling/stable/pages/Builder/#generation-of-supported-locales).
+> 1.  [UI5 CLI](https://ui5.github.io/cli/stable/) v4 and higher is capable of automatically adding supported locales to the manifest based on the available properties files. Detailed information and requirements can be found in [UI5 Builder - Generation of Supported Locales](https://ui5.github.io/cli/stable/pages/Builder/#generation-of-supported-locales).
 > 
 > 2.  Available properties files for a resource bundle and the locales you specify in `supportedLocales` need to be in sync. Missing properties files result in 404 responses by the server.
 > 
 > 3.  More severely, a missing entry in `supportedLocales` leads to a language fallback, even if the texts for the corresponding language are available.
 > 
-> 4.  Only use the `supportedLocales` feature if you are in control of maintaining the properties files for resource bundles within the same project or know the full list of supported locales. If the complete list of supported locales is not known, make sure to set the `supportedLocales` entry in the manifest to an empty list \(`[]`\) to indicate that all locales are supported. This prevents UI5 Tooling from adding a list of supported locales based on the available properties files. For more information, see [UI5 Builder - Generation of Supported Locales](https://sap.github.io/ui5-tooling/stable/pages/Builder/#generation-of-supported-locales).
+> 4.  Only use the `supportedLocales` feature if you are in control of maintaining the properties files for resource bundles within the same project or know the full list of supported locales. If the complete list of supported locales is not known, make sure to set the `supportedLocales` entry in the manifest to an empty list \(`[]`\) to indicate that all locales are supported. This prevents UI5 CLI from adding a list of supported locales based on the available properties files. For more information, see [UI5 Builder - Generation of Supported Locales](https://ui5.github.io/cli/stable/pages/Builder/#generation-of-supported-locales).
 > 
 > 5.  The language tags can use modern or legacy ISO639 language codes. Whatever language code is used in the list of `supportedLocales` will also be used when requesting a file from the server. If the locale contains a legacy language code like "iw" and the `supportedLocales` contains \[...,"he",...\], "he" will be used in the URL. This mapping works in both directions.
 

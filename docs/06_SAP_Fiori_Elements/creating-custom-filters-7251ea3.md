@@ -18,7 +18,7 @@ You can define custom filter view fragments, use view extensions, and define ext
 > ### Sample Code:  
 > ```
 > 
-> "sap.ui5": {
+>                         "sap.ui5": {
 >     "_version": "1.1.0",
 >     "extends": {
 >         "extensions": {

@@ -30,7 +30,7 @@ Whenever you use methods like [`sap.ui.model.odata.v4.ODataListBinding#requestCo
 
 When an application has areas that are not visible initially, or if only one of multiple options is visible at a time, **do not** create all UI controls and set most of them to non-visible! If you do, SAPUI5 will instantiate and initialize all of those controls, which consumes unnecessary time and memory, even when they are not rendered. On top of this, the data binding will also be initialized, which may trigger back-end requests that are not needed at this stage. The impact is particularly big when the parts of the UI that are not visible initially are complex or numerous.
 
-Please note that lazy loading of views can be achieved with routing. For more information, see [Routing and Navigation](../04_Essentials/routing-and-navigation-3d18f20.md) and [Step 10: Implement "Lazy Loading"](../03_Get-Started/step-10-implement-lazy-loading-cdab0a1.md) of the Navigation and Routing tutorial.
+Please note that lazy loading of views can be achieved with routing.For more information, see [Routing and Navigation](../04_Essentials/routing-and-navigation-3d18f20.md) and [Step 10: Implement "Lazy Loading"](../03_Get-Started/step-10-implement-lazy-loading-cdab0a1.md) of the Navigation and Routing tutorial.
 
 > ### Example:  
 > An application needs to display a `Panel` containing a `Table` in **display mode**, but the user can switch to **edit mode** to modify data, in which case a different `Panel` needs to be shown. Especially when using XML views, it is tempting for application developers to specify two panels in the view XML and set the `Panel` with the editable table to `visible="false"`. The *Edit* button could then just toggle visibility of both panels.

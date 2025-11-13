@@ -83,6 +83,9 @@ Example 2: `DataFieldWithURL` with absolute URL:
 
 A link control is rendered for the property on the list report or object page.
 
+> ### Restriction:  
+> In SAP Fiori Elements for OData V2, a link control is rendered on the list report or object page only if it's in display mode.
+
 
 
 ## Navigation to a Semantic Object \(Intent-Based Navigation\)
@@ -106,9 +109,9 @@ To enable intent-based navigation, you must associate a semantic object. Navigat
 
 -   Global association
 
-    To use a specific property that is always shown as a link in your application, you must annotate the property with a semantic object. Wherever the property is used as a `DataField`, it is always rendered as a link.
+    To use a specific property that is always shown as a link in your application, you must annotate the property with a semantic object. Wherever the property is used as a `DataField`, it is always rendered as a link, also known as semantic link.
 
-    When a user chooses the link and only one navigation target is found, direct navigation to the target is triggered. If more than one target is found, the system displays a popover containing some text and links to the targets for the user to choose from. The user can hide unwanted semantic object actions from the popover using the `SemanticObjectUnavailableActions` annotation. The user can also annotate a property using multiple semantic objects. For more information, see [Smart Link](../10_More_About_Controls/smart-link-f638884.md) .
+    When a user chooses the semantic link and only one navigation target is found, direct navigation to the target is triggered. If more than one target is found, the system displays a popover containing some text and links to the targets for the user to choose from. You can hide unwanted semantic object actions from the popover using the `SemanticObjectUnavailableActions` annotation. You can also annotate a property with multiple semantic objects by using different qualifiers for the `SemanticObject` annotation.
 
     You can enhance the content of this popover and display a quick view containing more information about the navigation target. For more information, see [Enabling Quick Views for Link Navigation](enabling-quick-views-for-link-navigation-307ced1.md).
 
@@ -169,7 +172,7 @@ To enable intent-based navigation, you must associate a semantic object. Navigat
 
 -   Local association
 
-    To only show the property as a link in a specific use case \(for example, within a form on an object page\), you must use the `DataFieldWithIntentBasedNavigation` annotation. You can use this type of link in tables and forms, that is, a `DataFieldWithIntentBasedNavigation` can be added to a `LineItem` or `FieldGroup` annotation. The link text is set according to the `"Value"` property \(in the example below, this is the value of `SomePath`\). Note that in SAP Fiori elements for OData V2`sap:unit` annotations aren't evaluated in this context.
+    To only show the property as a link in a specific use case \(for example, within a form on an object page\), you must use the `DataFieldWithIntentBasedNavigation` annotation. You can use this type of link in tables and forms, that is, a `DataFieldWithIntentBasedNavigation` can be added to a `LineItem` or `FieldGroup` annotation. The link text is set according to the `"Value"` property \(in the example below, this is the value of `SomePath`\). Note that in SAP Fiori elements for OData V2 `sap:unit` annotations aren't evaluated in this context.
 
     > ### Note:  
     > -   Make sure you define a unique target by specifying both the semantic object and an action. Otherwise, clicking the link will not trigger direct navigation to the target.
@@ -218,8 +221,10 @@ To enable intent-based navigation, you must associate a semantic object. Navigat
     >     },
     > ```
 
-    For examples of how to use the `DataFieldWithIntentBasedNavigation` annotation, see [Form Facet](form-facet-ff0ae0b.md) and [Adding Actions to Tables](adding-actions-to-tables-b623e0b.md).
+    For examples of how to use the `DataFieldWithIntentBasedNavigation` annotation, see the [App-Specific Actions](adding-actions-to-tables-b623e0b.md#loiob623e0bbbb2b4147b2d0516c463921a0__section_ifk_jqb_2nb) section in [Adding Actions to Tables](adding-actions-to-tables-b623e0b.md).
 
+
+If a semantic object is configured for a property, the value of this property is passed within the semantic object in the navigation context. For example, if the property is `SoldToParty` with the value `001` and the `SemanticObject` is `Customer`, then the navigation context will have `Customer` with the value `001`.
 
 **Using a Button**
 
@@ -323,14 +328,15 @@ If `RequiresContext` is `true`, then the button is disabled until a selection is
       
     **SAP Fiori launchpad: Maintain the Supported Devices for the Combination of Semantic Object and Action**
 
-    ![](images/SupportedDevice_41cc89e.png "SAP Fiori launchpad: Maintain the Supported Devices for the Combination of Semantic Object and
-    								Action")
+    ![](images/SupportedDevice_41cc89e.png "SAP Fiori launchpad: Maintain the Supported Devices for the Combination of Semantic
+    								Object and Action")
 
       
       
     **SAP Fiori launchpad: Maintain the Mandatory Parameters for Semantic Object and Action**
 
-    ![](images/mandatoryparameters_45f06a4.png "SAP Fiori launchpad: Maintain the Mandatory Parameters for Semantic Object and Action")
+    ![](images/mandatoryparameters_45f06a4.png "SAP Fiori launchpad: Maintain the Mandatory Parameters for Semantic Object and
+    								Action")
 
     > ### Note:  
     > -   As already shown, you maintain mandatory parameters for navigation in SAP Fiori launchpad, such as a sales order ID. If you have specified `RequiresContext: False` for the combination of semantic object and action, and if for this combination you maintain a mandatory parameter in SAP Fiori launchpad, these settings contradict each other and the button isn't displayed.
@@ -342,36 +348,16 @@ You can also hide the intent-based navigation button by using `UI.Hidden` agains
 
 
 
-### Navigation Using a Link
+### Semantic Object Mapping
 
-If a semantic object is configured for a property, the value of this property is passed within the semantic object in the navigation context. For example, if the property is `SoldToParty` with the value `001` and the `SemanticObject` is `Customer`, then the navigation context will have `Customer` with the value `001`.
+You can change the name of properties that are passed in the navigation context when using the intent-based navigation mechanism.
 
-To achieve this mapping of a property value to semantic object, use the `SemanticObject` annotation.
+> ### Tip:  
+> We recommend using the common field names from the global field catalog in both the source and target applications. If the source field name is not from the global field catalog, don't pass the source field name, but rather pass the global field catalog name to the target.
 
-> ### Sample Code:  
-> XML Annotation
-> 
-> ```xml
-> <Annotations Target="com.c_salesordermanage_sd.defaultParamsForSalesOrderCreate/SoldToParty">
->       <Annotation Term="Common.SemanticObject" String="Customer"/>
-> </Annotations>
-> ```
+If the target field name isn't from the global field catalog, you can use the target-mapping mechanism to convert the incoming global field catalog name to the target-specific field.
 
-> ### Sample Code:  
-> ABAP CDS Annotation
-> 
-> No ABAP CDS annotation sample is available. Please use the local XML annotation.
-
-> ### Sample Code:  
-> CAP CDS Annotation
-> 
-> ```
-> SoldToParty : String(10) @(Common : { 
->     SemanticObject                : 'Customer'
-> });
-> ```
-
-To achieve a different property in the navigation context, use the `SemanticObjectMapping` annotation.
+To do this when using the semantic link-based navigation, use the `SemanticObjectMapping` annotation as shown in the following sample code:
 
 > ### Sample Code:  
 > XML Annotation
@@ -448,11 +434,11 @@ The properties marked with the `PersonalData.IsPotentiallySensitive` annotation 
 
 
 
-### Navigation to Any Desired Object Page in a Multi-Entity Set with Tabs
+### Navigation to Object Pages in a Multi-Entity Set with Tabs
 
-You can navigate to any desired object page of the target app that has a multi-entity set with tabs if the navigation context is enough to uniquely identify a record in the target app. Configure the source and the target app as follows.
+You can navigate to any object page in a target app that has a multi-entity set with tabs if the navigation context uniquely identifies a record in the target app. Configure both the source and target apps as follows:
 
-In the extension controller of the source app, you can pass an additional parameter to the target app using the `adaptNavigationParameterExtension` extension. The additional parameter, that is, a **Key-Value** pair is used in the `manifest.json` file of the target app to uniquely identify the desired object page to be opened.
+In the extension controller of the source app, pass an additional parameter to the target app using the `adaptNavigationParameterExtension` extension. This additional parameter, a key-value pair, is used in the `manifest.json` file of the target app to uniquely identify the object page to be opened.
 
 > ### Sample Code:  
 > `ListReportExtension.controller.js`
@@ -478,7 +464,7 @@ In the extension controller of the source app, you can pass an additional parame
 > 
 > ```
 
-In the target app's `manifest.json` file, you must mark the parameter to be used to determine the object page using `useForTargetResolution`.
+In the target app's `manifest.json` file, mark the parameter used to determine the object page with `useForTargetResolution`.
 
 > ### Sample Code:  
 > `manifest.json`
@@ -497,7 +483,7 @@ In the target app's `manifest.json` file, you must mark the parameter to be used
 > 
 > ```
 
-Once the key is identified, you can use the same key's value in the page hierarchy to determine the object page.
+After you identify the key, use its value in the page hierarchy to determine the object page.
 
 > ### Example:  
 > > ### Sample Code:  
@@ -554,12 +540,12 @@ Once the key is identified, you can use the same key's value in the page hierarc
 > > 
 > > ```
 
-In this example, if `<Key>-<Value1>` is passed as an additional parameter in the navigation context, then the `<EntitySet1>` object page is opened. Similarly, if `<Key>-<Value2>` is passed, then the `<EntitySet2>` object page is opened.
+In this example, when `<Key>-<Value1>` is passed as an additional parameter in the navigation context, the `<EntitySet1>` object page is opened. Similarly, when `<Key>-<Value2>` is passed, the `<EntitySet2>` object page is opened.
 
 > ### Note:  
-> -   `creationEntitySet` settings are prioritized in case of a conflict with the above-mentioned configuration defined in the target app's `manifest.json` file.
+> -   In case of a conflict, the `creationEntitySet` settings take priority over the configuration defined in the target app's `manifest.json` file.
 > 
-> -   If the navigation context passed from the source app isn't enough to determine a record of the desired object page, then the list report is opened with the first tab as the selected tab.
+> -   If the navigation context from the source app doesn't provide enough information to identify a record on the desired object page, then the list report is opened with the first tab selected.
 
 
 
@@ -704,7 +690,7 @@ When an outbound navigation is triggered, the information that comes from the na
 > 
 >     -   "Price" is passed with the value "20 EUR" \(value from a more specific context, such as from a selected row context\). We also pass "SO.Price" and "SO.\_Item.Price" due to a conflict with this property.
 > 
->     -   Information coming from the navigation entity set \("\_ReferenceS"\) is ignored by the page context and the selected row context.
+>     -   Information coming from the navigation entity set \("\_ReferenceSO"\) is ignored by the page context and the selected row context.
 > 
 > -   Scenario 3 \(object page\)
 > 
@@ -759,14 +745,7 @@ Irrespective of how an outbound external navigation is triggered, the parameters
 
 ### Semantic Object Mapping
 
-You can change the name of properties that are passed in the navigation context when using the intent-based navigation mechanism.
-
-> ### Tip:  
-> We recommend using the common field names from the global field catalog in both the source and target applications. If the source field name is not from the global field catalog, don't pass the source field name, but rather pass the global field catalog name to the target.
-
-If the target field name isn't from the global field catalog, you can use the target-mapping mechanism to convert the incoming global field catalog name to the target-specific field.
-
-To do this when navigating using the `DataFieldForIntentBasedNavigation` button, use the `Mapping` property in the `DataFieldForIntentBasedNavigation` annotation.
+For semantic object mapping when navigating using the `DataFieldForIntentBasedNavigation` button, use the `Mapping` property in the `DataFieldForIntentBasedNavigation` annotation.
 
   
   
@@ -869,6 +848,53 @@ You can use `DataFieldWithURL` with an absolute URL:
 >   Label : 'Company'
 > }
 > ```
+
+You can use the `LinkTarget` property to specify in which window, tab, or frame the link target is opened. The following values are supported:
+
+-   `_self`: The link is opened in the same tab or window \(default\).
+
+-   `_blank`: The link is opened in a new tab or window.
+
+-   `_parent`: The link is opened in the parent frame or window.
+
+-   `_top`: The link is opened in the full browser window, overriding any nested frames.
+
+
+> ### Sample Code:  
+> XML Annotation
+> 
+> ```xml
+> <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/HTML5.xml">
+>       <edmx:Include Namespace="com.sap.vocabularies.HTML5.v1" Alias="SAP__HTML5"/>
+> </edmx:Reference>
+> 
+> <Record Type="UI.DataFieldWithUrl">
+>   <PropertyValue Property="Label" String="FLP version 6"/>
+>   <PropertyValue Property="Url" String="http://www.example.com"/>
+>   <PropertyValue Property="Value" String="Link Target"/>
+>   <Annotation Term="HTML5.LinkTarget" String="_blank"/>
+> </Record>
+> ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> No ABAP CDS annotation sample is available. Please use the local XML annotation.
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> {
+>   $Type               : 'UI.DataFieldWithUrl',
+>   Label               : 'FLP version 6',
+>   Url                 : 'http://www.example.com',
+>   Value               : 'Link Target',
+>   ![@HTML5.LinkTarget]: '_blank',
+> }
+> ```
+
+For more information and live examples, see the SAP Fiori development portal at [Building Blocks - Field](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/field/fieldDefault)
 
 
 
@@ -1000,7 +1026,7 @@ The technical keys are always passed, since it is clear what the technical keys 
 > 
 > ```
 
-When there is a specific control-level selection context, the merged context has both the parent-level context \(Sales Order ID page context\) and the control-level context \(Sales Order Item selection\). If there is the same property at both parent level and the entity set of the control, then the control-level value persists.
+When there is a specific control-level selection context, the merged context has both the parent-level context \(Sales Order ID page context\) and the control-level context \(Sales Order Item selection\). If there is the same property at both parent level and the entity set of the control, then the control-level value is persisted.
 
 For example, if an object page header has "Location"="DE" and there is also the same "Location" property in the items table with the value "JP", then the merged context that is passed just has "Location"="JP". The header level "Location" is lost.
 
@@ -1049,22 +1075,85 @@ Additionally, the secondary keys maintained using annotations can be linked to t
 
 
 
-<a name="loiod782acf8bfd74107ad6a04f0361c5f62__section_acb_tbc_vlb"/>
+### Navigation to Object Pages in a Multi-Entity Set with Tabs
 
-## Restrictions
+You can navigate to any object page in a target app that has a multi-entity set with tabs if the navigation context uniquely identifies a record in the target app. Configure both the source and target apps as follows:
 
+In the extension controller of the source app, pass an additional parameter to the target app using the `adaptNavigationContext` extension. This additional parameter, a key-value pair, is used in the `manifest.json` file of the target app to uniquely identify the object page to be opened.
 
+> ### Sample Code:  
+> `ListReportExtension.controller.js`
+> 
+> ```
+> adaptNavigationContext: function (selectionVariant, targetInfo) {
+>     if (targetInfo.semanticObject === "SalesOrder" && targetInfo.action === "manage") {
+>         selectionVariant.addParameter("<Key>", "<Value1>");
+>     }
+> }
+> 
+> ```
 
-### SAP Fiori elements for OData V2
+> ### Sample Code:  
+> `ObjectPageExtension.controller.js`
+> 
+> ```
+> adaptNavigationContext: function (selectionVariant, targetInfo) {
+>     if (targetInfo.semanticObject === "SalesOrder" && targetInfo.action === "manage") {
+>         selectionVariant.addParameter("<Key>", "<Value2>");
+>     }
+> }
+> 
+> ```
 
-When you specify a URL for external navigation or intent-based navigation, a `link` control is rendered for the property on the list report or object page only if it's in *Display* mode.
+In the target app's `manifest.json` file, mark the parameter used to determine the object page with `inboundParameterForTargetResolution`.
 
+> ### Sample Code:  
+> `manifest.json`
+> 
+> ```json
+> 
+> "sap.fe": {
+>     "app": {
+>         "inboundParameterForTargetResolution": "<Key>"
+>     }
+> }
+> 
+> ```
 
+After you identify the key, use its value in the page hierarchy to determine the object page.
 
-### SAP Fiori elements for OData V4
+> ### Example:  
+> > ### Sample Code:  
+> > `manifest.json`
+> > 
+> > ```
+> > "sap.ui5": {
+> >     "routing": {
+> >         "targets": {
+> >             "ObjectPage|<EntitySet1>": {
+> >                 "type": "Component",
+> >                 "id": "ObjectPage1",
+> >                 "name": "sap.fe.templates.ObjectPage",
+> >                 "options": {
+> >                     "settings": {
+> >                         "targetResolutionValue": "<Value1>",
+> >                         "entitySet": "<EntitySet1>"
+> >                     }
+> >                 }
+> >             },
+> >             "ObjectPage|<EntitySet2>": {
+> >                 "type": "Component",
+> >                 "id": "ObjectPage2",
+> >                 "name": "sap.fe.templates.ObjectPage",
+> >                 "options": {
+> >                     "settings": {
+> >                         "targetResolutionValue": "<Value2>",
+> >                         "entitySet": "<EntitySet2>"
+> >                     }
+> >                 }
+> >             }
+> > 
+> > ```
 
--   For outbound navigation, if there is a filter bar and a filter field has values with the operators `Not Equal To` or `Not Empty`, then these fields are not transported to the target application.
-
--   Parameters are not supported.
-
+In this example, when `<Key>-<Value1>` is passed as an additional parameter in the navigation context, the `<EntitySet1>` object page is opened. Similarly, when `<Key>-<Value2>` is passed, the `<EntitySet2>` object page is opened.
 

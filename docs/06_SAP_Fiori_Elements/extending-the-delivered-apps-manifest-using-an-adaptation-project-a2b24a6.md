@@ -13,6 +13,11 @@ The delivered apps can be extended by adding a new node in the object page or by
 -   Perform additional configurations that can be modified for an application.
 
 
+> ### Tip:  
+> While SAP Fiori elements supports table type modifications through adaptation projects, we cannot guarantee compatibility across all applications and scenarios. Table type modifications may behave differently depending on factors such as the specific application, OData version, and existing configurations.
+> 
+> We recommend that you thoroughly test any table type modifications before productive usage to ensure all functionalities work as expected.
+
 
 
 <a name="loioa2b24a69baef4b91af2293ccc6b5871f__section_w5x_1vf_zcc"/>
@@ -38,18 +43,18 @@ As a prerequisite, the new node must be added in the back end, and the metadata 
 > {
 >     "changeType": "appdescr_ui_generic_app_addNewObjectPage",
 >     "content": {
->             "parentPage": {
->                     "component": "sap.suite.ui.generic.template.ObjectPage",
->                     "entitySet": "C_STTA_SalesOrder_WD_20"
->                 },
->             "childPage": {
->                     "id": "customer.ObjectPage|to_extendedNode",
->                     "definition": {
->                             "navigationProperty": "to_extendedNode",
->                             "entitySet": "C_STTA_ExtendedNode"
->                     }
+>         "parentPage": {
+>         "component": "sap.suite.ui.generic.template.ObjectPage",
+>             "entitySet": "C_STTA_SalesOrder_WD_20"
+>         },            
+>         "childPage": {
+>             "id": "customer.ObjectPage|to_extendedNode",
+>             "definition": {
+>                 "navigationProperty": "to_extendedNode",
+>                 "entitySet": "C_STTA_ExtendedNode"
 >             }
->       }
+>         }
+>     }
 > }
 > ```
 
@@ -57,7 +62,7 @@ You must add the parameters in the `changeType`, `layer`, `parentPage`, and `chi
 
 -   `changeType` defines the merger to be invoked.
 
--   `parentPage` and `entitySet` are used to identify the location in the manifest file where the child page has to be added.
+-   `parentPage` and `entitySet` are used to identify the location in the `manifest.json` file where the child page has to be added.
 
 -   `childPage` defines the extended node to be added to the manifest, where the `id` is the unique page key and the `definition` object holds the `navigationProperty` and `entitySet` of the extended node. The `childPage.id` name should have a prefix using the target layer name. If the target layer name is `customer` or `customer_base`, add the `customer.` prefix. However, if the target layer name is `vendor`, a prefix is not required.
 
@@ -73,21 +78,21 @@ The following sample code is a definition to set the `createMode` and table type
 > {
 >     "changeType": "appdescr_ui_generic_app_changePageConfiguration",
 >     "content": {
->             "parentPage": {
->                     "component": "sap.suite.ui.generic.template.ObjectPage",
->                     "entitySet": "C_STTA_SalesOrder_WD_20"
->                     },
->             "entityPropertyChange": {
->                     "propertyPath": "component/settings/sections/extendedFacetId",
->                     "operation": "UPSERT",
->                     "propertyValue": {
->                             "createMode": "inline",
->                             "tableSettings": {
->                                     "tableType": "GridTable"
->                                 }
->                         }
+>         "parentPage": {
+>             "component": "sap.suite.ui.generic.template.ObjectPage",
+>             "entitySet": "C_STTA_SalesOrder_WD_20"
+>         },            
+>         "entityPropertyChange": {
+>             "propertyPath": "component/settings/sections/extendedFacetId",
+>             "operation": "UPSERT",
+>             "propertyValue": {
+>                 "createMode": "inline",
+>                 "tableSettings": {
+>                     "tableType": "GridTable"
 >                 }
+>             }
 >         }
+>     }
 > }
 > ```
 
@@ -97,7 +102,7 @@ You must add the parameters in the `changeType`, `parentPage`, and `entityProper
 
 -   `layer` defines the target layer.
 
--   `parentPage` and `entitySet` are used to identify the location in the manifest where the setting has to be changed.
+-   `parentPage` and `entitySet` are used to identify the location in the `manifest.json` file where the setting has to be changed.
 
 -   `entityPropertyChange` contains the following:
 
@@ -105,7 +110,7 @@ You must add the parameters in the `changeType`, `parentPage`, and `entityProper
 
     -   `operation` should be set as `UPSERT`.
 
-    -   `propertyValue` defines the new properties to be included in the manifest.
+    -   `propertyValue` defines the new properties to be included in the `manifest.json` file.
 
 
 
@@ -117,7 +122,7 @@ For detailed steps explaining how to work in an adaptation project, see the *Pro
 
 You can perform additional configurations that can be modified for an application using the following settings:
 
--   Application-level settings
+-   Application-level settings:
 
     -   `createMode`
 
@@ -128,7 +133,7 @@ You can perform additional configurations that can be modified for an applicatio
     -   `externalNavigationSettings`
 
 
--   List report page
+-   List report page:
 
     -   `filterSettings`
 
@@ -141,7 +146,7 @@ You can perform additional configurations that can be modified for an applicatio
     -   `tableSettings`
 
 
--   Object page
+-   Object page:
 
     -   `editableHeaderContent`
 
@@ -160,24 +165,24 @@ Define the following definition in the `manifest.appdescr_variant` file as part 
 > {
 >     "changeType": "appdescr_ui_generic_app_changePageConfiguration",
 >     "content": {
->        "parentPage": {
->          "component": "sap.suite.ui.generic.template"
->        },
->        "entityPropertyChange": {
->          "propertyPath": "settings",
->          "operation": "UPSERT",
->          "propertyValue": {
->             "tableSettings": {
->                 "createMode": "creationRows"
->          },
->        "flexibleColumnLayout": {
->            "defaultTwoColumnLayoutType": "TwoColumnsMidExpanded",
->            "defaultThreeColumnLayoutType": "ThreeColumnsEndExpanded"
->          }
->        }
->      }
->    }
->  }
+>         "parentPage": {
+>             "component": "sap.suite.ui.generic.template"
+>         },
+>         "entityPropertyChange": {
+>             "propertyPath": "settings",
+>             "operation": "UPSERT",
+>             "propertyValue": {
+>                 "tableSettings": {
+>                     "createMode": "creationRows"
+>                 },
+>                 "flexibleColumnLayout": {
+>                     "defaultTwoColumnLayoutType": "TwoColumnsMidExpanded",
+>                     "defaultThreeColumnLayoutType": "ThreeColumnsEndExpanded"
+>                 }
+>             }
+>         }
+>     }
+> }
 > ```
 
 > ### Sample Code:  
@@ -185,33 +190,33 @@ Define the following definition in the `manifest.appdescr_variant` file as part 
 > 
 > ```
 > {
->    "changeType": "appdescr_ui_generic_app_changePageConfiguration",
->    "content": {
->      "parentPage": {
->        "component": "sap.suite.ui.generic.template"
->      },
->      "entityPropertyChange": {
->        "propertyPath": "settings",
->        "operation": "UPSERT",
->        "propertyValue": {
->          "externalNavigationSettings": {
->            "defaultOutboundSettings": {
->              "refreshStrategyOnAppRestore": {
->                "entitySets": {
->                  "STTA_C_MP_Product": "self"
->                }
->              }
->            }
->          },
->          "inboundParameters": {
->            "Supplier": {
->              "useForCreate": true
->            }
->          }
->        }
->      }
->    }
->  }
+>     "changeType": "appdescr_ui_generic_app_changePageConfiguration",
+>     "content": {
+>         "parentPage": {
+>             "component": "sap.suite.ui.generic.template"
+>         },
+>         "entityPropertyChange": {
+>             "propertyPath": "settings",
+>             "operation": "UPSERT",
+>             "propertyValue": {
+>                 "externalNavigationSettings": {
+>                     "defaultOutboundSettings": {
+>                         "refreshStrategyOnAppRestore": {
+>                             "entitySets": {
+>                                 "STTA_C_MP_Product": "self"
+>                             }
+>                         }
+>                     }
+>                 },
+>                 "inboundParameters": {
+>                     "Supplier": {
+>                         "useForCreate": true
+>                     }
+>                 }
+>             }
+>         }
+>     } 
+> }
 > ```
 
 > ### Sample Code:  
@@ -219,40 +224,40 @@ Define the following definition in the `manifest.appdescr_variant` file as part 
 > 
 > ```
 > {
->      "changeType": "appdescr_ui_generic_app_changePageConfiguration",
->      "content": {
->          "parentPage": {
->              "component": "sap.suite.ui.generic.template.ListReport",
->              "entitySet": "STTA_C_MP_Product"
->          },
->          "entityPropertyChange": {
->              "propertyPath": "component/settings",
->              "operation": "UPSERT",
->              "propertyValue": {
->                  "filterSettings": {
->                      "historySettings": {
->                          "historyEnabled": "enabled"
->                      },
->                      "dateSettings": {
->                          "useDateRange": false,
->                          "selectedValues": "DAYS,WEEK,MONTH,DATERANGE",
->                          "fields": {
->                              "SemanticDate1": {
->                                  "selectedValues": "TOMORROW",
->                                  "exclude": true
->                              },
->                              "SemanticDate2": {
->                                  "defaultValue": {
->                                      "operation": "LASTYEAR"
->                                  }
->                              }
->                          }
->                      }
->                  }
->              }
->          }
->      }
->  }
+>     "changeType": "appdescr_ui_generic_app_changePageConfiguration",
+>     "content": {
+>         "parentPage": {
+>             "component": "sap.suite.ui.generic.template.ListReport",
+>             "entitySet": "STTA_C_MP_Product"
+>         },
+>         "entityPropertyChange": {
+>             "propertyPath": "component/settings",
+>             "operation": "UPSERT",
+>             "propertyValue": {
+>                 "filterSettings": {
+>                     "historySettings": {
+>                         "historyEnabled": "enabled"
+>                     },
+>                     "dateSettings": {
+>                         "useDateRange": false,
+>                         "selectedValues": "DAYS,WEEK,MONTH,DATERANGE",
+>                         "fields": {
+>                             "SemanticDate1": {
+>                                 "selectedValues": "TOMORROW",
+>                                 "exclude": true
+>                             },
+>                             "SemanticDate2": {
+>                                 "defaultValue": {
+>                                     "operation": "LASTYEAR"
+>                                 }
+>                             }
+>                         }
+>                     }
+>                 }
+>             }
+>         }
+>     }
+> }
 > ```
 
 > ### Sample Code:  
@@ -260,48 +265,47 @@ Define the following definition in the `manifest.appdescr_variant` file as part 
 > 
 > ```
 > {
->         "changeType": "appdescr_ui_generic_app_changePageConfiguration",
->         "content": {
->                 "parentPage": {
->                      "component": "sap.suite.ui.generic.template.ListReport",
->                      "entitySet": "STTA_C_MP_Product"
->                  },
->                 "entityPropertyChange": {
->                      "propertyPath": "component/settings",
->                      "operation": "UPSERT",
->                      "propertyValue": {
->                          "enableTableFilterInPageVariant":true,
->                          "dataLoadSettings": {
->                              "loadDataOnAppLaunch": "never"
->                          },
->                          "condensedTableLayout":true
+>     "changeType": "appdescr_ui_generic_app_changePageConfiguration",
+>     "content": {
+>         "parentPage": {
+>             "component": "sap.suite.ui.generic.template.ListReport",
+>             "entitySet": "STTA_C_MP_Product"
+>         },
+>         "entityPropertyChange": {
+>             "propertyPath": "component/settings",
+>             "operation": "UPSERT",
+>             "propertyValue": {
+>                 "enableTableFilterInPageVariant":true,
+>                 "dataLoadSettings": {
+>                     "loadDataOnAppLaunch": "never"
+>                 },
+>                 "condensedTableLayout":true
 >             }
 >         }
 >     }
 > }
-> 
 > ```
 
 > ### Sample Code:  
-> Adding or modifying `tableSettings` such as `type`, `multiselect`, `selectAll`, and `multiEdit`
+> Adding or Modifying `tableSettings` such as `type`, `multiSelect`, `selectAll`, and `multiEdit`
 > 
 > ```
 > {
->              "changeType": "appdescr_ui_generic_app_changePageConfiguration",
->              "content": {
->                  "parentPage": {
->                      "component": "sap.suite.ui.generic.template.ListReport",
->                      "entitySet": "STTA_C_MP_Product"
->                  },
->                  "entityPropertyChange": {
->                      "propertyPath": "component/settings/tableSettings",
->                      "operation": "UPSERT",
->                      "propertyValue": {
->                          "type": "GridTable",
->                          "multiSelect": true,
->                          "selectAll": false,
->                          "multiEdit": {
->                              "enabled": true
+>     "changeType": "appdescr_ui_generic_app_changePageConfiguration",
+>     "content": {
+>         "parentPage": {
+>             "component": "sap.suite.ui.generic.template.ListReport",
+>             "entitySet": "STTA_C_MP_Product"
+>         },
+>         "entityPropertyChange": {
+>             "propertyPath": "component/settings/tableSettings",
+>             "operation": "UPSERT",
+>             "propertyValue": {
+>                 "type": "GridTable",
+>                 "multiSelect": true,
+>                 "selectAll": false,
+>                 "multiEdit": {
+>                     "enabled": true
 >                 }
 >             }
 >         }
@@ -310,26 +314,28 @@ Define the following definition in the `manifest.appdescr_variant` file as part 
 > ```
 
 > ### Sample Code:  
-> Adding fields to the `createWithDialogParameter` dialog
+> Adding Fields to the `createWithDialogParameter` Dialog
 > 
 > ```
 > {
->                  "changeType": "appdescr_ui_generic_app_changePageConfiguration",
->                  "content": {
->                      "parentPage": {
->                          "component": "sap.suite.ui.generic.template.ListReport",
->                          "entitySet": "STTA_C_SO_SalesOrder_ND"
->                      },
->                      "entityPropertyChange": {
->                          "propertyPath": "component/settings/tableSettings/createWithParameterDialog/fields",
->                          "operation": "UPSERT",
->                          "propertyValue": {
->                              "CurrencyCode":{"path":"CurrencyCode"}
->                              
->                          }
->                      }
->                  }
->              }
+>     "changeType": "appdescr_ui_generic_app_changePageConfiguration",
+>     "content": {
+>         "parentPage": {
+>             "component": "sap.suite.ui.generic.template.ListReport",
+>             "entitySet": "STTA_C_SO_SalesOrder_ND"
+>         },
+>         "entityPropertyChange": {
+>             "propertyPath":
+>             "component/settings/tableSettings/createWithParameterDialog/fields",
+>             "operation": "UPSERT",
+>             "propertyValue": {
+>                 "CurrencyCode":{
+>                     "path":"CurrencyCode"
+>                 }
+>             }
+>         }
+>     }
+> }
 > ```
 
 > ### Sample Code:  
@@ -337,37 +343,35 @@ Define the following definition in the `manifest.appdescr_variant` file as part 
 > 
 > ```
 > {
->             "changeType": "appdescr_ui_generic_app_changePageConfiguration",
->             "content": {
->                 "parentPage" : {
->                     "component": "sap.suite.ui.generic.template.ObjectPage",
->                     "entitySet": "STTA_C_MP_Product"
->                 },
->                 "entityPropertyChange": {
->                     "propertyPath": "component/settings",
->                     "operation": "UPSERT",
->                     "propertyValue": {
->                         "editableHeaderContent":false,
->                         "showRelatedApps":false
->                     }
->                 }
->                 
+>     "changeType": "appdescr_ui_generic_app_changePageConfiguration",
+>     "content": {
+>         "parentPage" : {
+>             "component": "sap.suite.ui.generic.template.ObjectPage",
+>             "entitySet": "STTA_C_MP_Product"
+>         },
+>         "entityPropertyChange": {
+>             "propertyPath": "component/settings",
+>             "operation": "UPSERT",
+>             "propertyValue": {
+>                 "editableHeaderContent":false,
+>                 "showRelatedApps":false
 >             }
+>         }
 >     }
-> 
+> }
 > ```
 
 > ### Sample Code:  
-> Adding `createMode` for an object page
+> Adding `createMode` for an Object Page
 > 
 > ```
 > {
->  "changeType": "appdescr_ui_generic_app_changePageConfiguration",
->  "content": {
+>     "changeType": "appdescr_ui_generic_app_changePageConfiguration",
+>     "content": {
 >         "parentPage": {
 >             "component": "sap.suite.ui.generic.template.ObjectPage",
 >             "entitySet": "STTA_C_SO_SalesOrder_ND"
->             },
+>         },
 >         "entityPropertyChange": {
 >             "propertyPath": "component/settings/tableSettings",
 >             "operation": "UPSERT",
@@ -382,7 +386,7 @@ Define the following definition in the `manifest.appdescr_variant` file as part 
 > ```
 
 > ### Note:  
-> As part of `filterSettings`, adding or modifying `filter[]` configurations per field and `customDateRangeImplementation`, is not supported.
+> As part of `filterSettings`, adding or modifying `filter[]` configurations per field and `customDateRangeImplementation` is not supported.
 
 You must add the parameters in the `changeType`, `parentPage`, and `entityPropertyChange` for the mergers to be executed.
 
@@ -390,15 +394,15 @@ You must add the parameters in the `changeType`, `parentPage`, and `entityProper
 
     `changeType`: `appdescr_sap_ui_generic_app_changePageConfiguration.`
 
--   `parentPage` and `entitySet` are used to identify the location in the manifest where the setting has to be changed.
+-   `parentPage` and `entitySet` are used to identify the location in the `manifest.json` file where the setting has to be changed.
 
 -   `entityPropertyChange` contains the following:
 
-    -   `propertyPath` the path in the manifest where the changes have to be added. For example, `component/settings/`.
+    -   `propertyPath` the path in the `manifest.json` file where the changes have to be added. For example, `component/settings/`.
 
     -   `operation` should be set as `UPSERT`.
 
-    -   `propertyValue` defines the new properties to be included in the manifest.
+    -   `propertyValue` defines the new properties to be included in the `manifest.json` file.
 
 
 
@@ -407,26 +411,25 @@ You must add the parameters in the `changeType`, `parentPage`, and `entityProper
 Define the following definition in the `manifest.appdescr_variant` file as part of the `content[]`:
 
 > ### Sample Code:  
-> Adding `annotationPath` to include a selection presentation variant in the list report page
+> Adding `annotationPath` to Include a Selection Presentation Variant in the List Report Page
 > 
 > ```
 > {
->             "changeType": "appdescr_ui_generic_app_changePageConfiguration",
->             "content": {
->                 "parentPage" : {
->                     "component": "sap.suite.ui.generic.template.ListReport",
->                     "entitySet": "STTA_C_MP_Product"
->                 },
->                 "entityPropertyChange": {
->                     "propertyPath": "component/settings",
->                     "operation": "UPSERT",
->                     "propertyValue": {
->                        "annotationPath": "com.sap.vocabularies.UI.v1.SelectionPresentationVariant#DefaultSPV"
->                     }
->                 }
+>     "changeType": "appdescr_ui_generic_app_changePageConfiguration",
+>     "content": {
+>         "parentPage" : {
+>             "component": "sap.suite.ui.generic.template.ListReport",
+>             "entitySet": "STTA_C_MP_Product"
+>         },
+>         "entityPropertyChange": {
+>             "propertyPath": "component/settings",
+>             "operation": "UPSERT",
+>             "propertyValue": {
+>                 "annotationPath": "com.sap.vocabularies.UI.v1.SelectionPresentationVariant#DefaultSPV"
 >             }
+>         }
 >     }
-> 
+> }
 > ```
 
 You must add the parameters in the `changeType`, `parentPage`, and `entityPropertyChange` for the mergers to be executed.
@@ -439,64 +442,158 @@ You must add the parameters in the `changeType`, `parentPage`, and `entityProper
 
 -   `entityPropertyChange` contains the following:
 
-    -   `propertyPath` the path in the manifest where the changes have to be added. For example, `component/settings/`
+    -   `propertyPath` the path in the manifest where the changes have to be added. For example, `component/settings/`.
 
-    -   `operation` should be set as `UPSERT`
+    -   `operation` should be set as `UPSERT`.
 
-    -   `propertyValue` defines the new properties to be included in the manifest
+    -   `propertyValue` defines the new properties to be included in the `manifest.json` file.
 
 
 
 The definition of a selection presentation variant must be maintained by creating a local annotation file in the adaptation project. You can do so by following the procedure described in [Adding Annotation Files](https://help.sap.com/viewer/584e0bcbfd4a4aff91c815cefa0bce2d/Cloud/en-US/ef009e3d533940f6b93b6996af486389.html).
 
-Once the annotation file is added, you can continue as follows:
+Once the annotation file is added, you can continue as shown in the following sample code:
 
 > ### Sample Code:  
 > ```
-> <. Also, while running the app you should first use my
-> 				workspace in the configuration. <edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
-> 	<edmx:Reference
-> 		Uri="https://fiorielementsqh3815snapshot-xdf25c17a.dispatcher.neo.ondemand.com/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='LOCAL')/$value">
-> 		<edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/>
-> 	</edmx:Reference>edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
-> 	<edmx:Reference
-> 		Uri="https://fiorielementsqh3815snapshot-xdf25c17a.dispatcher.neo.ondemand.com/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='LOCAL')/$value">
-> 		<edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/>
-> 	</edmx:Reference>
-> 	<edmx:Reference Uri="/sap/bc/ui5_ui5/ui2/ushell/resources/sap/ushell/components/factsheet/vocabularies/UI.xml">
-> 		<edmx:Include Alias="UI" Namespace="com.sap.vocabularies.UI.v1"/>
-> 	</edmx:Reference>
-> 	<edmx:Reference Uri="http://docs.oasis-open.org/odata/odata/v4.0/cs01/vocabularies/Org.OData.Capabilities.V1.xml">
-> 		<edmx:Include Alias="Capabilities" Namespace="Org.OData.Capabilities.V1"/>
-> 	</edmx:Reference>
-> 	<edmx:Reference
-> 		Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMUNICATION',Version='0001',SAP__Origin='LOCAL')/$value">
-> 		<edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="Communication"/>
-> 	</edmx:Reference>
-> 	<edmx:Reference Uri="http://docs.oasis-open.org/odata/odata/v4.0/cs01/vocabularies/Org.OData.Measures.V1.xml">
-> 		<edmx:Include Alias="Measures" Namespace="Org.OData.Measures.V1"/>
-> 	</edmx:Reference>
-> 	<edmx:Reference Uri="/sap/opu/odata/sap/STTA_PROD_MAN/$metadata">
-> 		<edmx:Include Alias="STTA_PROD_MAN" Namespace="STTA_PROD_MAN"/
+> <edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
+>     <edmx:Reference Uri="https://fiorielementsqh3815snapshot-xdf25c17a.dispatcher.neo.ondemand.com/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='LOCAL')/$value">
+>         <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/>
+>     </edmx:Reference>
+>     <edmx:Reference Uri="/sap/bc/ui5_ui5/ui2/ushell/resources/sap/ushell/components/factsheet/vocabularies/UI.xml">
+>         <edmx:Include Alias="UI" Namespace="com.sap.vocabularies.UI.v1"/>
+>     </edmx:Reference>
+>     <edmx:Reference Uri="http://docs.oasis-open.org/odata/odata/v4.0/cs01/vocabularies/Org.OData.Capabilities.V1.xml">
+>         <edmx:Include Alias="Capabilities" Namespace="Org.OData.Capabilities.V1"/>
+>     </edmx:Reference>
+>     <edmx:Reference	Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMUNICATION',Version='0001',SAP__Origin='LOCAL')/$value">
+>         <edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="Communication"/>
+>     </edmx:Reference>
+>     <edmx:Reference Uri="http://docs.oasis-open.org/odata/odata/v4.0/cs01/vocabularies/Org.OData.Measures.V1.xml">
+>         <edmx:Include Alias="Measures" Namespace="Org.OData.Measures.V1"/>
+>     </edmx:Reference>
+>     <edmx:Reference Uri="/sap/opu/odata/sap/STTA_PROD_MAN/$metadata">
+>         <edmx:Include Alias="STTA_PROD_MAN" Namespace="STTA_PROD_MAN"/>
+>     </edmx:Reference>
+>     <edmx:Reference Uri="http://docs.oasis-open.org/odata/odata-data-aggregation-ext/v4.0/cs02/vocabularies/Org.OData.Aggregation.V1.xml">
+>         <edmx:Include Alias="Aggregation" Namespace="Org.OData.Aggregation.V1"/>
+>     </edmx:Reference>
+>     <edmx:Reference Uri="http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/vocabularies/Org.OData.Core.V1.xml">
+>         <edmx:Include Alias="Core" Namespace="Org.OData.Core.V1"/>
+>     </edmx:Reference>
+>     <edmx:DataServices>
+>         <Schema xmlns="http://docs.oasis-open.org/odata/ns/edm">
+>             <Annotations Target="STTA_PROD_MAN.STTA_C_MP_ProductType">
+>                 <Annotation Term="com.sap.vocabularies.UI.v1.SelectionPresentationVariant" Qualifier="DefaultSPV">
+>                     <Record>
+>                         <PropertyValue Property="ID" String=""/>
+>                         <PropertyValue Property="Text" String="Default SPV"/>
+>                         <PropertyValue Property="SelectionVariant" Path="@UI.SelectionVariant#FilterDefaults"/>
+>                         <PropertyValue Property="PresentationVariant" Path="@UI.PresentationVariant#ManageProducts"/>
+>                     </Record>
+>                 </Annotation>
+>                 <Annotation Term="com.sap.vocabularies.UI.v1.PresentationVariant" Qualifier="ManageProducts">
+>                     <Record>
+>                         <PropertyValue Property="SortOrder">
+>                             <Collection>
+>                                 <Record Type="com.sap.vocabularies.Common.v1.SortOrderType">
+>                                     <PropertyValue Property="Property" PropertyPath="Price"/>
+>                                     <PropertyValue Property="Descending" Bool="false"/>
+>                                 </Record>
+>                             </Collection>
+>                         </PropertyValue>
+>                         <PropertyValue Property="Visualizations">
+>                             <Collection>
+>                                 <AnnotationPath>@com.sap.vocabularies.UI.v1.LineItem#ManageProducts</AnnotationPath>
+>                             </Collection>
+>                         </PropertyValue>
+>                     </Record>
+>                 </Annotation>
+>                 <Annotation Term="UI.LineItem" Qualifier="ManageProducts">
+>                     <Collection>
+>                         <Record Type="UI.DataField">
+>                             <PropertyValue Property="Value" Path="Price"/>
+>                             <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+>                         </Record>
+>                         <Record Type="UI.DataFieldForAction">
+>                             <PropertyValue Property="Label" String="New Activate Button"/> 
+>                             <PropertyValue Property="Action" String="STTA_PROD_MAN.STTA_PROD_MAN_Entities/STTA_C_MP_ProductActivation"/> 
+>                             <PropertyValue Property="InvocationGrouping" EnumMember="UI.OperationGroupingType/ChangeSet"/> 
+>                         </Record> 
+>                         <Record Type="UI.DataField"> 
+>                             <PropertyValue Property="Value" Path="ProductPictureURL"/> 
+>                             <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/> 
+>                         </Record> 
+>                         <Record Type="UI.DataField"> 
+>                             <PropertyValue Property="Value" Path="Supplier"/> 
+>                             <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/> 
+>                         </Record> 
+>                         <Record Type="UI.DataField"> 
+>                             <PropertyValue Property="Label" String="Product-ID/-Text"/> 
+>                             <PropertyValue Property="Value" Path="ProductForEdit"/> 
+>                             <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/> 
+>                         </Record> 
+>                         <Record Type="UI.DataField">
+>                             <PropertyValue Property="Label" String="Width"/> 
+>                             <PropertyValue Property="Value" Path="Width"/> 
+>                             <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/> 
+>                         </Record> 
+>                     </Collection> 
+>                 </Annotation> 
+>                 <Annotation Term="UI.SelectionFields"> 
+>                     <Collection> 
+>                         <PropertyPath>Width</PropertyPath> 
+>                     </Collection> 
+>                 </Annotation> 
+>                 <Annotation Term="UI.SelectionVariant" Qualifier="FilterDefaults"> 
+>                     <Record> 
+>                         <PropertyValue Property="Parameters"> 
+>                             <Collection>
+>                             </Collection> 
+>                         </PropertyValue> 
+>                         <PropertyValue Property="SelectOptions"> 
+>                             <Collection> 
+>                                 <Record Type="UI.SelectOptionType"> 
+>                                     <PropertyValue Property="PropertyName" PropertyPath="Width"/> 
+>                                     <PropertyValue Property="Ranges"> 
+>                                         <Collection> 
+>                                             <Record> 
+>                                                 <PropertyValue Property="Sign" EnumMember="com.sap.vocabularies.UI.v1.SelectionRangeSignType/I"/> 
+>                                                 <PropertyValue Property="Option" EnumMember="UI.SelectionRangeOptionType/BT"/> 
+>                                                 <PropertyValue Property="Low" String="1.0"/> 
+>                                                 <PropertyValue Property="High" String="20.00"/> 
+>                                             </Record> 
+>                                         </Collection> 
+>                                     </PropertyValue> 
+>                                 </Record> 
+>                             </Collection>
+>                         </PropertyValue>
+>                     </Record> 
+>                 </Annotation> 
+>             </Annotations> 
+>         </Schema> 
+>     </edmx:DataServices> 
+> </edmx:Edmx> 
 > ```
 
-```
-Including newly createdPropertyValue Property="Label" String="New Activate Button"/> <PropertyValue Property="Action" String="STTA_PROD_MAN.STTA_PROD_MAN_Entities/STTA_C_MP_ProductActivation"/> <PropertyValue Property="InvocationGrouping" EnumMember="UI.OperationGroupingType/ChangeSet"/> </Record> <Record Type="UI.DataField"> <PropertyValue Property="Value" Path="ProductPictureURL"/> <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/> </Record> <Record Type="UI.DataField"> <PropertyValue Property="Value" Path="Supplier"/> <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/> </Record> <Record Type="UI.DataField"> <PropertyValue Property="Label" String="Product-ID/-Text"/> <PropertyValue Property="Value" Path="ProductForEdit"/> <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/> </Record> <Record Type="UI.DataField"> <PropertyValue Property="Label" String="Width"/> <PropertyValue Property="Value" Path="Width"/> <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/> </Record> </Collection> </Annotation> <Annotation Term="UI.SelectionFields"> <Collection> <PropertyPath>Width</PropertyPath> </Collection> </Annotation> <Annotation Term="UI.SelectionVariant" Qualifier="FilterDefaults"> <Record> <PropertyValue Property="Parameters"> <Collection></Collection> </PropertyValue> <PropertyValue Property="SelectOptions"> <Collection> <Record Type="UI.SelectOptionType"> <PropertyValue Property="PropertyName" PropertyPath="Width"/> <PropertyValue Property="Ranges"> <Collection> <Record> <PropertyValue Property="Sign" EnumMember="com.sap.vocabularies.UI.v1.SelectionRangeSignType/I"/> <PropertyValue Property="Option" EnumMember="UI.SelectionRangeOptionType/BT"/> <PropertyValue Property="Low" String="1.0"/> <PropertyValue Property="High" String="20.00"/> </Record> </Collection> </PropertyValue> </Record> </Collection> </PropertyValue> </Record> </Annotation> </Annotations> </Schema> </edmx:DataServices> </edmx:Edmx> {
-            "changeType": "appdescr_app_addAnnotationsToOData",
-            "content": {
-                "dataSourceId": "mainService",
-                "annotations": ["customer.localAnnotationsNew"],
-                "annotationsInsertPosition": "END",
-                "dataSource": {
-                    "customer.localAnnotationsNew": {
-                        "uri": "changes/annotations/annotations.xml",
-                        "type": "ODataAnnotation"
-                    }
-                }
-            }
-        }
-
-```
+> ### Sample Code:  
+> Including Newly Created Annotation
+> 
+> ```
+> { 
+> "changeType": "appdescr_app_addAnnotationsToOData", 
+>     "content": { 
+>         "dataSourceId": "mainService", 
+>         "annotations": ["customer.localAnnotationsNew"], 
+>         "annotationsInsertPosition": "END", 
+>         "dataSource": { 
+>             "customer.localAnnotationsNew": {
+>                 "uri": "changes/annotations/annotations.xml", "type": "ODataAnnotation" 
+>             } 
+>         } 
+>     } 
+> }
+> ```
 
 
 
@@ -504,7 +601,7 @@ Including newly createdPropertyValue Property="Label" String="New Activate Butto
 
 This section describes the change mergers that are used to include a reuse component in an adaptation project. The following example shows an `Annotations Target="STTA_PROD_MAN.STTA_C_MP_ProductType"`.
 
-As a prerequisite, the reuse component must be present in the target backend system. Reuse component is to be cloned to the workspace and its library reference must be added in `</edmx:Reference> <edmx:Reference Uri="http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/vocabularies/Org.OData.Core.V1.xml"> <edmx:Include Alias="Core" Namespace="Org.OData.Core.V1"/> </edmx:Reference> <edmx:DataServices> <Schema xmlns="http://docs.oasis-open.org/odata/ns/edm"neo-app.json`.
+As a prerequisite, the reuse component must be present in the target back-end system. Reuse component must be cloned to the workspace, and its library reference must be added in `</edmx:Reference> <edmx:Reference Uri="http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/vocabularies/Org.OData.Core.V1.xml"> <edmx:Include Alias="Core" Namespace="Org.OData.Core.V1"/> </edmx:Reference> <edmx:DataServices> <Schema xmlns="http://docs.oasis-open.org/odata/ns/edm"neo-app.json`.
 
 > ### Note:  
 > You must follow corresponding reuse component configuration for the application to work. For example, attachment reuse component needs few parameters to be added in the `neo-app.json`. For more information, see [Attachments Development Guideline](https://wiki.wdf.sap.corp/wiki/display/PLMOH/Attachments+Development+Guideline).
@@ -516,23 +613,44 @@ The following parameters must be included as `headerWhiteList` in the consuming 
 > 
 > ```
 > "headerWhiteList": [
->        "objecttype",
->        "objectkey",
->        "slug",
->        "MarkForDeletion",
->        "documentType",
->        "documentNumber",
->        "documentVersion",
->        "documentPart",
->        "semanticobjecttype"
+>     "objecttype",
+>     "objectkey",
+>     "slug",
+>     "MarkForDeletion",
+>     "documentType",
+>     "documentNumber",
+>     "documentVersion",
+>     "documentPart",
+>     "semanticobjecttype"
 > ]
-> 
 > ```
 
-These changes are to be added to `manifest.appdescr_variant` file in the adaptation project.
+These changes are to be added to the `content` array in the `manifest.appdescr_variant` file in the adaptation project.
 
 > ### Sample Code:  
 > ```
+> {
+>     "changeType": "appdescr_ui5_addComponentUsages",
+>     "content": {
+>         "componentUsages": {
+>             "attachmentReuseComponent": {
+>                 "name": "sap.se.mi.plm.lib.attachmentservice.attachment.components.stcomponent",
+>                 "settings": {}
+>             }
+>         }
+>     }
+> },
+> {
+>     "changeType": "appdescr_ui5_addLibraries",
+>     "content": {
+>         "libraries": {
+>             "sap.se.mi.plm.lib.attachmentservice": {
+>                 "minVersion": "Active",
+>                 "lazy": true
+>             }
+>         }
+>     }
+> },
 > {
 >     "changeType": "appdescr_ui_generic_app_changePageConfiguration",
 >     "content": {
@@ -559,30 +677,6 @@ These changes are to be added to `manifest.appdescr_variant` file in the adaptat
 >         }
 >     }
 > },
-> 
-> // Specifies the Component usage reference
-> {
->     "changeType": "appdescr_ui5_addComponentUsages",
->     "content": {
->         "componentUsages": {
->             "attachmentReuseComponent": {
->                 "name": "sap.se.mi.plm.lib.attachmentservice.attachment.components.stcomponent",
->                 "settings": {}
->             }
->         }
->     }
-> },
-> {
->     "changeType": "appdescr_ui5_addLibraries",
->     "content": {
->         "libraries": {
->             "sap.se.mi.plm.lib.attachmentservice": {
->                 "minVersion": "Active",
->                 "lazy": true
->             }
->         }
->     }
-> },
 > ```
 
 
@@ -591,5 +685,5 @@ These changes are to be added to `manifest.appdescr_variant` file in the adaptat
 
 ## Additional Features in SAP Fiori Elements for OData V4
 
-For information about how to extend the delivered apps manifest for SAP Fiori elements for OData V4, see [Creating the Project](https://help.sap.com/docs/SAP_FIORI_tools/17d50220bcd848aa854c9c182d65b699/072f566ed1d845b6aa41cb01057700d5.html) in the User Guide for SAP Fiori tools.
+For information about extending the delivered apps manifest for SAP Fiori elements for OData V4, see [Creating the Project](https://help.sap.com/docs/SAP_FIORI_tools/17d50220bcd848aa854c9c182d65b699/072f566ed1d845b6aa41cb01057700d5.html) in the User Guide for SAP Fiori tools.
 

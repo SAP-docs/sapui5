@@ -14,7 +14,7 @@ Creating an app with SAP Fiori elements generally consists of the following step
 
     You use annotations to enable or modify certain default features and functionality.
 
-    For more information, see [Working With UI Annotations](working-with-ui-annotations-83c89cc.md).
+    For more information, see [Working With OData Annotations](working-with-odata-annotations-83c89cc.md).
 
 -   Build UI applications
 

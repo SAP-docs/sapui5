@@ -37,7 +37,7 @@ Description
 </th>
 </tr>
 <tr>
-<td valign="top" rowspan="8">
+<td valign="top" rowspan="9">
 
 `actions: <object>` \(mandatory\)
 
@@ -59,7 +59,7 @@ Describes the actions that can be applied to the element.
 </td>
 </tr>
 <tr>
-<td valign="top" rowspan="7">
+<td valign="top" rowspan="8">
 
 `"resize": <object> | <function>`
 
@@ -84,6 +84,18 @@ Provides or computes the design-time metadata specific to the *resize* action fo
 <td valign="top">
 
 Provides the value of `changeType` from the previous step.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`additionalInfoKey: <string>` \(optional\)
+
+</td>
+<td valign="top">
+
+Provides additional information to be displayed as a tooltip in the context menu.
 
 </td>
 </tr>

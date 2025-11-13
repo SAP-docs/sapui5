@@ -8,7 +8,7 @@ The OData V4 model offers the features described below which influence performan
 
 ## `odata.metadata=minimal`
 
-The OData V4 model uses an `odata.metadata=minimal` header in its requests to reduce the amount of data that is sent from server to client. For more information, see section "3.1.1 odata.metadata=minimal" in the [OData JSON Format Version 4.0](http://docs.oasis-open.org/odata/odata-json-format/v4.0/os/odata-json-format-v4.0-os.html) specification.
+The OData V4 model uses an `odata.metadata=minimal` header in its requests to reduce the amount of data that is sent from server to client. For more information, see section "3.1.1 odata.metadata=minimal" in the [OData JSON Format Version 4.01, 3.1.1 metadata=minimal](https://docs.oasis-open.org/odata/odata-json-format/v4.01/odata-json-format-v4.01.html#_Toc38457726) specification.
 
 
 
@@ -46,10 +46,18 @@ If you construct the model with an `earlyRequests` parameter, the requests are s
 > ### Remember:  
 > The default value for `earlyRequests` is `false` in SAPUI5 1.54. This may, however, change in later releases. If you wish to ensure that requests are not sent early, do not rely on the default and explicitly set `earlyRequests` to `false`.
 
+
+
+<a name="loio5a0d286c5606424b8e0d663c87445733__section_jrw_ppl_nfc"/>
+
+## Expensive Navigation Properties in Lists
+
+The separate loading of expensive navigation properties in list requests can improve the loading / paging performance of tables, and potentially allows an earlier table interaction. For more information, see [Expensive Navigation Properties in Lists](initialization-and-read-requests-fccfb2e.md#loiofccfb2eb41414f0792c165e69a878717__section_ENPL).
+
 **Related Information**  
 
 
-[OData JSON Format Version 4.0](http://docs.oasis-open.org/odata/odata-json-format/v4.0/os/odata-json-format-v4.0-os.html)
+[OData JSON Format Version 4.01, 3.1.1 metadata=minimal](https://docs.oasis-open.org/odata/odata-json-format/v4.01/odata-json-format-v4.01.html#_Toc38457726)
 
 [Bindings](bindings-54e0ddf.md "Bindings connect SAPUI5 view elements to model data, allowing changes in the model to be reflected in the view element and vice versa.")
 

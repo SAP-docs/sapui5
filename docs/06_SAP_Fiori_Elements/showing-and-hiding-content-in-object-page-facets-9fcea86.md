@@ -126,7 +126,7 @@ To enable this feature, set the `UI.PartOfPreview` annotation of the relevant re
 > ### Note:  
 > This feature is available for tables and data fields that are included in a visible reference facet. You can't use this feature for tables and data fields that are part of a reference facet that is initially hidden. This means that nesting of the `UI.PartOfPreview` annotation isn't possible.
 
-You can explore and work with the coding yourself. Check out our live example in the flexible programming model explorer at [Show/Hide Content](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/advancedFeatures/showMore).
+You can explore and work with the coding yourself. For more information and live examples, see the SAP Fiori development portal at [Global Patterns - Show/Hide Content](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/topic/floorplanObjectPage/showHideContent).
 
 
 

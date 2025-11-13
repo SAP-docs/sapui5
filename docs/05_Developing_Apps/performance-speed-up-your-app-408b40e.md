@@ -157,7 +157,7 @@ In some cases it may happen that preloads are not enabled, or that modules of so
 Application modules \(e.g. components, controllers, views or resource bundles\) should be loaded asynchronously via the component preload file. Check \(e.g. via the Network tab in the Google Chrome developer tools\) if a component preload \(`Component-preload.js`\) is missing. If the application isn't configured to load modules asynchronously, required application files may be loaded synchronously.
 
 > ### Note:  
-> If a component preload doesn't exist yet, the bundle needs to be created. For example, you can use the [UI5 Tooling](https://sap.github.io/ui5-tooling/).
+> If a component preload doesn't exist yet, the bundle needs to be created. For example, you can use [UI5 CLI](https://ui5.github.io/cli/).
 
 
 
@@ -177,7 +177,7 @@ In this case, use the `data-sap-ui-async="true"` setting in the bootstrap.
 
 ### Too many requests
 
-You can use [UI5 Tooling](https://sap.github.io/ui5-tooling/) to bundle and minimize all relevant component files by creating a component-preload file.
+You can use [UI5 CLI](https://ui5.github.io/cli/) to bundle and minimize all relevant component files by creating a component-preload file.
 
 
 

@@ -270,7 +270,7 @@ There are three different channels for transporting messages to the client:
 
 ### Messages in error responses
 
-Only transition messages are transported in the error response. The messages may be bound or unbound. Error messages are always reported in the error response in JSON format, as described in the OData JSON Format Version 4.0 in Section *19 Error Response*, with the following additions:
+Only transition messages are transported in the error response. The messages may be bound or unbound. Error messages are always reported in the error response in JSON format, as described in the [OData JSON Format Version 4.01, 21.1 Error Response](https://docs.oasis-open.org/odata/odata-json-format/v4.01/odata-json-format-v4.01.html#sec_ErrorResponse), with the following additions:
 
 -   If more than one message should be returned, the outer message needs to be any of the error messages. All other messages are provided as detail messages. All messages, both the outer and the detail messages, are reported to the message model.
 

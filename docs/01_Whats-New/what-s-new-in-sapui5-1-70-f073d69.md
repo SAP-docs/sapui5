@@ -585,7 +585,7 @@ SAP Fiori Elements
 
 General features:
 
--   You can now use the `MultiSelectionPlugin` in tables. For more information, see [Enabling Multiple Selection in Tables](../06_SAP_Fiori_Elements/enabling-multiple-selection-in-tables-116b5d8.md).
+-   You can now use the `MultiSelectionPlugin` in tables. For more information, see [Configuring the Selection Mode for Tables](../06_SAP_Fiori_Elements/configuring-the-selection-mode-for-tables-116b5d8.md).
 
     > ### Note:  
     > This feature results in new table selection behavior for multi-select enabled tables \(`GridTable`, `AnalyticalTable`, `TreeTable`\). Choosing the *Select All* checkbox for these tables resulted in performance issues. A real select all to the backend system was executed that, depending on the service, number of entries, hardware of the client device, and more aspects, took very long and sometimes resulted in a timeout. Therefore, the *Select All* checkbox is replaced by the *Deselect All* arrow with SAPUI5 1.69 for tables on list pages from the list report and analytical list page and with SAPUI5 1.70 for tables on any kind of SAP Fiori elements object page. The `selectAll` parameter was introduced to get the *Select All* checkbox back on the UI.
@@ -650,6 +650,18 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.141](what-s-new-in-sapui5-1-141-a7ed66d.md "With this release SAPUI5 is upgraded from version 1.140 to 1.141.")
+
+[What's New in SAPUI5 1.140](what-s-new-in-sapui5-1-140-26a106c.md "With this release SAPUI5 is upgraded from version 1.139 to 1.140.")
+
+[What's New in SAPUI5 1.139](what-s-new-in-sapui5-1-139-e10db71.md "With this release SAPUI5 is upgraded from version 1.138 to 1.139.")
+
+[What's New in SAPUI5 1.138](what-s-new-in-sapui5-1-138-8f6a92b.md "With this release SAPUI5 is upgraded from version 1.136 to 1.138.")
+
+[What's New in SAPUI5 1.136](what-s-new-in-sapui5-1-136-a82754d.md "With this release SAPUI5 is upgraded from version 1.135 to 1.136.")
+
+[What's New in SAPUI5 1.135](what-s-new-in-sapui5-1-135-93d7630.md "With this release SAPUI5 is upgraded from version 1.134 to 1.135.")
 
 [What's New in SAPUI5 1.134](what-s-new-in-sapui5-1-134-c512d71.md "With this release SAPUI5 is upgraded from version 1.133 to 1.134.")
 

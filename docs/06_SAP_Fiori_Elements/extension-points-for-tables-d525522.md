@@ -317,6 +317,15 @@ The following screenshot shows a table containing an additional custom column:
     >                                                 "_CustomerPaymentTerms/CustomerPaymentTerms",
     >                                                 "_ShipToParty/BusinessPartner"
     >                                             ]
+    >                                         },
+    >                                         "CustomColumnWithHeaderFromMetaData": {
+    >                                             "header": "{metaModel>/SalesOrderManage/SoldToParty@com.sap.vocabularies.Common.v1.Label}",  //Header of custom columns with metadata binding
+    >                                             "template": "SalesOrder.custom.CustomColumnButton",
+    >                                             "availability": "Default",
+    >                                             "position": {
+    >                                                 "placement": "After",
+    >                                                 "anchor": "DataFieldForAnnotation::FieldGroup::multipleActionFields"
+    >                                             }
     >                                         }
     >                                     }
     >                                 }
@@ -766,7 +775,7 @@ Properties added to any custom column can also be found in the sorting and filte
 
 
 
-### Live Example: Custom Column with `Field` Building Block
+### Live Example: Custom Column
 
-Check out our live example in the flexible programming model explorer at [Custom Column](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/customElements/customElementsOverview/customColumnContent).
+For more information and live examples, see the SAP Fiori development portal at [Building Blocks - Table - Extensions - Custom Column](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/table/customColumn).
 

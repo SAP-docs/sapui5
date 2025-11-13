@@ -22,7 +22,7 @@ Let's get you ready for your journey! We bootstrap SAPUI5 in an HTML page and im
 
 ## Setup
 
-Open a terminal and install UI5 Tooling globally on your machine by executing the following command:
+Open a terminal and install UI5 CLI globally on your machine by executing the following command:
 
 `npm install --global @ui5/cli`
 
@@ -80,7 +80,7 @@ You can view and download all files at [Quick Start - Step 1](https://ui5.sap.co
 
     With the `script` tag, we load and initialize SAPUI5 with typical bootstrap parameters. We define, for example, a theme, control libraries, as well as performance and compatibility flags.
 
-    First, we need a source to load SAPUI5 from. In this tutorial, we will use UI5 Tooling to host the OpenUI5 resources.
+    First, we need a source to load SAPUI5 from. In this tutorial, we will use UI5 CLI to host the OpenUI5 resources.
 
     The bootstrap property `resourceroots` defines the namespace for all resources of the app. This way, we can easily reference additional files that we are about to create in this step.
 
@@ -124,7 +124,7 @@ You can view and download all files at [Quick Start - Step 1](https://ui5.sap.co
     }
     ```
 
-7.  Open a terminal in the app root folder and execute `npm i -D @ui5/cli` to install UI5 Tooling.
+7.  Open a terminal in the app root folder and execute `npm i -D @ui5/cli` to install UI5 CLI.
 
 8.  Execute `ui5 init` in the app root folder.
 

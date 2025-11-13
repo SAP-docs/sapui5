@@ -34,7 +34,7 @@ In some steps, additional files are needed. They will be explained in those step
 
 ## Setup
 
-Open a terminal and install UI5 Tooling globally on your machine by executing the following command:
+Open a terminal and install UI5 CLI globally on your machine by executing the following command:
 
 `npm install --global @ui5/cli`
 
@@ -224,7 +224,7 @@ Open a terminal and install UI5 Tooling globally on your machine by executing th
     });
     ```
 
-9.  Open a terminal in the app root folder and execute `npm i -D @ui5/cli` to install UI5 Tooling.
+9.  Open a terminal in the app root folder and execute `npm i -D @ui5/cli` to install UI5 CLI.
 
 10. Execute `ui5 init` in the app root folder.
 

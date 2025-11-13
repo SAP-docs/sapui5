@@ -135,7 +135,7 @@ The behavior of the available modes is as follows:
 
 ## Additional Features in SAP Fiori Elements for OData V2
 
-The `newPage` mode is the default mode to create new rows. In this mode, when the end user clicks *Create*, the application opens a new page where they can input their values.
+The create page is the default mode to create new objects. In this mode, when the end user clicks *Create*, the application opens a new page where they can input their values.
 
 You can configure the values for `createMode` using the `manifest.json` file. The possible values are `inline`, `creationRows`, `creationRowsHiddenInEditMode`, and `newPage`.
 
@@ -147,7 +147,7 @@ Unlike in `creationRows` mode, tables configured with `creationRowsHiddenInEditM
 > Once the data is entered in an empty row, it is immediately converted to a draft row only if a structural side effect is defined on the corresponding table or if the end user explicitly presses [Enter\].
 
 > ### Sample Code:  
-> manifest.json
+> `manifest.json`
 > 
 > ```
 > {
@@ -382,5 +382,34 @@ If a field is marked with the `Capabilities.InsertRestrictions.RequiredPropertie
 If the end user doesn't enter a value to any of the required fields, an error message is shown. If the required fields aren't a part of the displayed table columns, an error message is displayed asking the end user to add the required fields within the displayed table columns using the table settings.
 
 > ### Note:  
-> As a general guideline for `RequiredProperties`, the `UI.Importance` annotation is set as `High` in the responsive table settings by default so that the columns don't overflow and get hidden on small-screen devices.
+> As a general guideline for `RequiredProperties`, we recommend that you set the `UI.Importance` to `High` for required properties in a `LineItem` annotation. If you don't set it, the framework still evaluates the `UI.Importance` as `High` so that the columns don't overflow and are hidden on small-screen devices.
+
+
+
+### Display of the Newly Created Objects
+
+By default, new objects created using the `Inline` or `InlineCreationRows` mode are shown at the top of the table. Sorting and filtering criteria aren't applied, ensuring that the newly created objects are in the visible area of the table.
+
+When using the grid table, you can display newly created objects at the bottom of the table by setting the `createAtEnd` parameter to `true` as shown in the following sample code:
+
+> ### Sample Code:  
+> `manifest.json`
+> 
+> ```
+> "controlConfiguration": {
+>     "@com.sap.vocabularies.UI.v1.LineItem": {
+>         "tableSettings": {
+>             "type": "GridTable",
+>             "personalization": {
+>                 "column": true,
+>                 "sort": false
+>             },
+>             "creationMode": {
+>                 "name": "Inline",
+>                 "createAtEnd": true
+>             }
+>         }
+>     }
+> }
+> ```
 

@@ -5,7 +5,7 @@
 When creating, editing, and saving draft or non-draft records, the user stays on the object page by default.
 
 > ### Note:  
-> This topic is currently only applicable to SAP Fiori elements for OData V2.
+> This topic is only applicable to SAP Fiori elements for OData V2.
 
 
 
@@ -15,7 +15,7 @@ When creating, editing, and saving draft or non-draft records, the user stays on
 
 You can add save and close logic to the *Save* button on the object page to enable users to navigate directly back to the list report. If the user clicks the button, the draft record is saved and the user automatically navigates to the list report page.
 
-To enable this feature, set the `navToListOnSave` flag to `true` in the `manifest.json`.
+To enable this feature, set the `navToListOnSave` flag to `true` in the `manifest.json` file.
 
 ```
 "pages": {

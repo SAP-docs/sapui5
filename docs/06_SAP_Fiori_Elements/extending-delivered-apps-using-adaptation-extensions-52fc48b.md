@@ -67,12 +67,13 @@ You can use adaptation extensions for the following extension points:
     > 
     > ```
     > override: {	
-    >                   // 	override public method of the ListReport controller 
-    >                   templateBaseExtension: {	
-    > 				          addFilters: function(fnAddFilter, sControlId){							
-    >                               // custom logic
-    >                 				}
-    > 		}
+    >     // override public method of the ListReport controller 
+    >     templateBaseExtension: {	
+    >         addFilters: function(fnAddFilter, sControlId){							
+    >             // custom logic
+    >         }
+    >     }
+    > }
     > 
     > ```
 
@@ -161,7 +162,7 @@ For more information, see [Details of Extension Functions Used for Extending Del
 
 ## Context
 
-You can use the `controllerextensions` API to override the existing behavior of the SAP Fiori elements framework, and to implement hooks to implement your custom logic. For information about the `controllerextensions` API, see the [API Reference](https://ui5.sap.com/#/api/sap.fe.core.controllerextensions). You can also explore and work with the coding yourself in the flexible programming model explorer at [Overview of Controller Extensions](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/controllerExtensions/controllerExtensionsOverview).
+You can use the `controllerextensions` API to override the existing behavior of the SAP Fiori elements framework, and to implement hooks to implement your custom logic. For information about the `controllerextensions` API, see the [API Reference](https://ui5.sap.com/#/api/sap.fe.core.controllerextensions). For more information and live examples, see the SAP Fiori development portal at [Standard Floorplans - Extensions - Overview](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/controllerExtensions/guidanceControllerExtensions).
 
 As a developer you can adapt your UI in Safe Mode. For more information, see [SAPUI5 Flexibility: Adapting UIs Made Easy](../04_Essentials/sapui5-flexibility-adapting-uis-made-easy-a8e55aa.md).
 

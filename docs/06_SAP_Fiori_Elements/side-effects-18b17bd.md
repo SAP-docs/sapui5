@@ -333,7 +333,7 @@ Additionally, the side effect annotation must be configured to ensure correct be
 > ### Note:  
 > This behavior is only supported in responsive tables and grid tables.
 
-The following sample code shows how a custom table column with a check box is configured as the source for the side effect:
+The following sample code shows how a custom table column with a checkbox is configured as the source for the side effect:
 
 > ### Sample Code:  
 > ```
@@ -553,7 +553,7 @@ In the following example, the side effects with `NameProperty` as the source pro
 >         "type": "Component",
 >         "id": "Default",
 >         "name": "sap.fe.templates.ObjectPage",
->         "viewLevel": 1,
+>         "level": 1,
 >         "options": {
 >             "settings": {
 >                 "contextPath": "/RootEntity",
@@ -577,7 +577,7 @@ In the following example, the side effects with `NameProperty` as the source pro
 
 Side effects are executed when the focus moves away from the extension field.
 
-Check out our live example in the flexible programming model explorer at [Extension Points - Custom Form Element](https://latest.testapp.sapfe.c.eu-de-2.cloud.sap/test-resources/sap/fe/core/fpmExplorer/index.html#/customElements/customFormElementContent).
+You can explore and work with the coding yourself. For more information about side effects and live examples, see the SAP Fiori development portal at [Global Patterns - Side Effects](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/advancedFeatures/guidance/guidanceSideEffects).
 
 **Related Information**  
 

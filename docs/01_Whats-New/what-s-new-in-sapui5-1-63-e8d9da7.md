@@ -119,7 +119,7 @@ UI5 Web Components are not built on top of SAPUI5 and are not its successor. The
 
 
 
-For more information, see the [UI5 Web Components](https://sap.github.io/ui5-webcomponents/) home page, the [GitHub Project](https://github.com/SAP/ui5-webcomponents), and the [blog post](https://blogs.sap.com/2019/02/11/ui5-web-components-the-beta-is-there/).
+For more information, see the [UI5 Web Components](https://ui5.github.io/webcomponents/) home page, the [GitHub Project](https://github.com/UI5/webcomponents), and the [blog post](https://blogs.sap.com/2019/02/11/ui5-web-components-the-beta-is-there/).
 
 <sub>New•Feature•Info Only•1.63</sub>
 
@@ -739,7 +739,7 @@ The object page has these new features:
 The overview page has these new features or enhancements:
 
 -   Use [CTRL\][Click\] to open target apps in a new tab.
--   Extend view switch to react based on filter conditions or custom configuration. For more information, see [Custom View Switch](../06_SAP_Fiori_Elements/custom-view-switch-ecd9f10.md).
+-   Extend view switch to react based on filter conditions or custom configuration. For more information, see [Extending Custom View Switch](../06_SAP_Fiori_Elements/extending-custom-view-switch-ecd9f10.md).
 
 **Analytical List Page**
 
@@ -809,6 +809,18 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.141](what-s-new-in-sapui5-1-141-a7ed66d.md "With this release SAPUI5 is upgraded from version 1.140 to 1.141.")
+
+[What's New in SAPUI5 1.140](what-s-new-in-sapui5-1-140-26a106c.md "With this release SAPUI5 is upgraded from version 1.139 to 1.140.")
+
+[What's New in SAPUI5 1.139](what-s-new-in-sapui5-1-139-e10db71.md "With this release SAPUI5 is upgraded from version 1.138 to 1.139.")
+
+[What's New in SAPUI5 1.138](what-s-new-in-sapui5-1-138-8f6a92b.md "With this release SAPUI5 is upgraded from version 1.136 to 1.138.")
+
+[What's New in SAPUI5 1.136](what-s-new-in-sapui5-1-136-a82754d.md "With this release SAPUI5 is upgraded from version 1.135 to 1.136.")
+
+[What's New in SAPUI5 1.135](what-s-new-in-sapui5-1-135-93d7630.md "With this release SAPUI5 is upgraded from version 1.134 to 1.135.")
 
 [What's New in SAPUI5 1.134](what-s-new-in-sapui5-1-134-c512d71.md "With this release SAPUI5 is upgraded from version 1.133 to 1.134.")
 

@@ -4,6 +4,12 @@
 
 Line charts display information as a series of data points connected by straight-line segments.
 
+  
+  
+**Example of a Line Chart Card**
+
+![](images/Line_Chart_aacfae2.png "Example of a Line Chart Card")
+
 Line charts are often used to visualize a trend in data over time. Line charts need at least one measure and one dimension.
 
 -   Dimensions for which the role is set to `category` make up the x-axis \(category axis\). If no dimension is specified with this role, the first dimension is used as the x-axis. We recommend using only time-based dimensions \(for example, day, date, quarter, or year\) for the category axis of a line chart.
@@ -11,10 +17,4 @@ Line charts are often used to visualize a trend in data over time. Line charts n
 -   Measures make up the y-axis \(value axis\). If there are multiple measures, then each measure is represented by a different colored line in the chart area.
 
 The line chart supports a color palette for semantic coloring.
-
-  
-  
-**Example of a Line Chart Card**
-
-![](images/Line_Chart_aacfae2.png "Example of a Line Chart Card")
 

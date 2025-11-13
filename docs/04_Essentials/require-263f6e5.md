@@ -27,7 +27,7 @@ The `template:require` attribute can be used at the root element of an XML templ
 
 For compatibility reasons, especially if the view is loaded synchronously, the `template:require` attribute may contain a space-separated list of module names for `jQuery.sap.require`. These modules will then be required before processing. You have to access them via their global names.
 
-`sap.ui.model.odata.AnnotationHelper` is automatically available.
+You need to require`sap/ui/model/odata/AnnotationHelper` before use.
 
 
 

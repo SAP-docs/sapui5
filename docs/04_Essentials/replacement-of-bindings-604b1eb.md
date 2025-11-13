@@ -12,8 +12,8 @@ The following example shows a template with binding:
 
 ```xml
 
-<Label text="{path: 'badge>MainInfo/Label', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}"/>
-<Text text="{path: 'field>Value', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}" />
+<Label text="{path: 'badge>MainInfo/Label', formatter: 'AnnotationHelper.format'}"/>
+<Text text="{path: 'field>Value', formatter: 'AnnotationHelper.format'}" />
 ```
 
 At the time the binding is resolved, `field>Value` refers to `meta>/dataServices/schema/0/entityType/0/com.sap.vocabularies.UI.v1.Badge/MainInfo/Value`. In the resulting `XML DOM`, the references to the meta model are gone and the type information including the constraints is inserted in the binding. This is shown in the following example:
@@ -84,7 +84,7 @@ The following code snippet shows an example formatter function.
 24       * @returns {string}
 25       */
 26      function formatLabelValue(oInterface, vRawValue) {
-27        var sResult = sap.ui.model.odata.AnnotationHelper.format(oInterface, vRawValue);
+27        var sResult = AnnotationHelper.format(oInterface, vRawValue);
 28        return sMyString.endsWith(oInterface.getPath(), "/Label")
 29             ? "["+ sResult + "]"
 30             : sResult;
@@ -166,8 +166,8 @@ Using the annotation helper:
 
 ```
 {= '{= $' + ${path : 'meta>value, formatter :
-'sap.ui.model.odata.AnnotationHelper.format'} + ' > ' + ${path : 'meta>threshold',
-formatter : 'sap.ui.model.odata.AnnotationHelper.format'} + ' }' }
+'AnnotationHelper.format'} + ' > ' + ${path : 'meta>threshold',
+formatter : 'AnnotationHelper.format'} + ' }' }
 // --> {= ${path : 'path/to/property/value', type : 'sap.ui.model.odata.type.Int16'} > 42 }
 ```
 

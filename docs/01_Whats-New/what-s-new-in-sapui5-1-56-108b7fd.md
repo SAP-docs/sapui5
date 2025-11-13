@@ -1469,11 +1469,11 @@ List report and object page have the following new and enhanced features:
 
 -   You can use extension points to adapt the text of the *Delete* dialog box that is displayed when you delete list report items, the entire object page content, or an item from a table on an object page. For more information, see
 
-    -   [Adapting Texts in the Delete Dialog Box Using Extensions \(List Report\)](../06_SAP_Fiori_Elements/adapting-texts-in-the-delete-dialog-box-using-extensions-list-report-25885b6.md)
+    -   [Adapting Texts in the Delete Dialog Using Extensions \(List Report\)](../06_SAP_Fiori_Elements/adapting-texts-in-the-delete-dialog-using-extensions-list-report-25885b6.md)
 
-    -   [Adapting Texts in the Delete Dialog Box \(Object Page Header\)](../06_SAP_Fiori_Elements/adapting-texts-in-the-delete-dialog-box-object-page-header-1fd8e52.md)
+    -   [Adapting Texts in the Delete Dialog \(Object Page Header\)](../06_SAP_Fiori_Elements/adapting-texts-in-the-delete-dialog-object-page-header-1fd8e52.md)
 
-    -   [Adapting Texts in the Delete Dialog Box \(Object Page with Nested Smart Table\)](../06_SAP_Fiori_Elements/adapting-texts-in-the-delete-dialog-box-object-page-with-nested-smart-table-b95adf3.md)
+    -   [Adapting Texts in the Delete Dialog \(Object Page with Nested Smart Table\)](../06_SAP_Fiori_Elements/adapting-texts-in-the-delete-dialog-object-page-with-nested-smart-table-b95adf3.md)
 
 
 **List Report View**
@@ -1508,7 +1508,7 @@ Analytical list page supports:
 
 Global filter now lets you configure:
 
--   Custom actions. For more information, see [Custom Actions](../06_SAP_Fiori_Elements/custom-actions-02fb273.md).
+-   Custom actions. For more information, see [Defining Custom Actions](../06_SAP_Fiori_Elements/defining-custom-actions-02fb273.md).
 
 -   Search function. For more information, see [Configuring the Global Filter](../06_SAP_Fiori_Elements/configuring-the-global-filter-73d9693.md).
 
@@ -1679,6 +1679,18 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.141](what-s-new-in-sapui5-1-141-a7ed66d.md "With this release SAPUI5 is upgraded from version 1.140 to 1.141.")
+
+[What's New in SAPUI5 1.140](what-s-new-in-sapui5-1-140-26a106c.md "With this release SAPUI5 is upgraded from version 1.139 to 1.140.")
+
+[What's New in SAPUI5 1.139](what-s-new-in-sapui5-1-139-e10db71.md "With this release SAPUI5 is upgraded from version 1.138 to 1.139.")
+
+[What's New in SAPUI5 1.138](what-s-new-in-sapui5-1-138-8f6a92b.md "With this release SAPUI5 is upgraded from version 1.136 to 1.138.")
+
+[What's New in SAPUI5 1.136](what-s-new-in-sapui5-1-136-a82754d.md "With this release SAPUI5 is upgraded from version 1.135 to 1.136.")
+
+[What's New in SAPUI5 1.135](what-s-new-in-sapui5-1-135-93d7630.md "With this release SAPUI5 is upgraded from version 1.134 to 1.135.")
 
 [What's New in SAPUI5 1.134](what-s-new-in-sapui5-1-134-c512d71.md "With this release SAPUI5 is upgraded from version 1.133 to 1.134.")
 

@@ -194,6 +194,8 @@ In the list report, you can set the variant management to `"Page"` level or to `
 
         ![](images/Hide_Descriptions_Show_Selected_16e4a63.png)
 
+        The count on the *Columns* tab doesn’t change when the *Hide Descriptions* toggle is enabled.
+
     -   Grouping \(available for analytical and responsive tables\)
 
 
@@ -272,12 +274,10 @@ Note the following when enabling personalization for properties that have a text
 
 -   Sorting and filtering is available for the properties visible in a column. For example, for properties with text arrangement set as `#TextFirst`, the property itself or its text can be sorted or grouped. For properties with text arrangement set as `#TextOnly`, sorting and grouping is only available for their text. However, filtering for properties with text arrangement \#TextOnly applies directly on the property itself and not on its text. Filtering on its text may also be available if no filter restriction is defined for the text property. When selecting the Filter menu from the column header, the default property will be the property and not its text.
 
--   If a label is defined for a column within the `LineItem`, then this label is used in the *Sort* and *Group* menus if the column displays a single property. In the *Filter* menu, the property name is displayed instead.
-
 -   For properties with text arrangement set as `#TextOnly`, if its text is annotated as `UI.Hidden = true`, then the annotation is ignored. This text property can still be sorted and grouped.
 
 -   If a `sortOrder` is set using a presentation variant on a property with text arrangement set as `#TextOnly`, the sorting is applied on the property and not the text. The sort indicator will not appear in the header column containing the property, as the property is not visible on the table. This also applies for the sort and group tabs on the table personalization dialog.
 
--   If a column contains a property with a `TextArrangement` annotation and the target property of the `TextArrangement` is not part of the `lineItems`, this target property is not available in the personalization dialog under the *Columns* tab.
+-   If a column contains a property with a `TextArrangement` annotation and the target property of the `TextArrangement` is a navigation property, this target property is not available in the personalization dialog under the *Columns* tab. The target property of the `TextArrangement` is displayed under the *Columns* tab if it is explicitly defined in the `lineItem` or in a custom column.
 
 

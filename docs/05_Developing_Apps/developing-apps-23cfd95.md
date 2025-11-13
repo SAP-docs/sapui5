@@ -30,7 +30,7 @@ If you're skilled at coding and want the freedom and flexibility, you can build 
 
 Be sure to check out information about things that you really should avoid doing while coding: [Coding Issues to Avoid](coding-issues-to-avoid-3877872.md).
 
-You can also use SAP Fiori elements or the reuse components of Analysis Path Framework. For more information, see [Developing Apps with SAP Fiori Elements](../06_SAP_Fiori_Elements/developing-apps-with-sap-fiori-elements-03265b0.md) and [Developing Apps with Analysis Path Framework \(APF\)](../07_APF/developing-apps-with-analysis-path-framework-apf-1c457c5.md).
+You can also use SAP Fiori elements or the reuse components of Analysis Path Framework. For more information, see [Developing Apps with SAP Fiori Elements](../06_SAP_Fiori_Elements/developing-apps-with-sap-fiori-elements-03265b0.md) and [Developing Apps with Analysis Path Framework \(APF\) \(deprecated\)](../07_APF/developing-apps-with-analysis-path-framework-apf-deprecated-1c457c5.md).
 
 
 

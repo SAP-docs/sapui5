@@ -5,7 +5,7 @@
 During object creation, before a request is sent to back end, the fields annotated with `RequiredProperties` under `InsertRestrictions` are validated to ensure that they are not empty. If these fields are empty, an error message is displayed in the message popover of the corresponding page with a link that navigates to the error field.
 
 > ### Note:  
-> This topic is currently only applicable to SAP Fiori elements for OData V2.
+> This topic is only applicable to SAP Fiori elements for OData V2.
 
 The following annotation needs to be configured individually for each entity set.
 

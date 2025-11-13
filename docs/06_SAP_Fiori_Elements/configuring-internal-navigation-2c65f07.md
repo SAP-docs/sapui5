@@ -79,14 +79,40 @@ The same holds true for the navigation to a second object page. This is possible
 
 In addition to an entity set which identifies a subpage, we recommend you to also specify the navigation property which defines the connection between the object page and the subpage.
 
-
-
 A chevron indicates the navigation options. The user can navigate by clicking on the line.
 
 > ### Note:  
 > In a non-draft app, if the user is in edit mode on an object page and has made changes before the navigation has been executed, the system displays a message indicating that the changes will be lost if the user navigates without saving first.
 
 The chevron navigation from a list report can also be modified using [onListNavigationExtension](https://ui5.sap.com/#/api/sap.suite.ui.generic.template.ListReport.controllerFrameworkExtensions) to navigate to deeper-hierarchy child pages of the same app. However, it is not recommended to do so. For more information about configuring navigation restrictions, refer to [Adding Actions to Tables](adding-actions-to-tables-b623e0b.md).
+
+**Avoiding Navigation After Executing an Action** 
+
+> ### Note:  
+> This setting is supported only for `DataFieldForAction` annotations in object page tables.
+
+You can disable the navigation to a subobject page using the setting `navigateToInstance` in the `manifest.json` file:
+
+> ### Sample Code:  
+> `manifest.json`
+> 
+> ```
+> 
+> "to_Item::com.sap.vocabularies.UI.v1.LineItem": {
+>     "tableSettings": {
+>         ...,
+>         ...
+>     },
+>     "annotatedActions": {
+>         "C_STTA_SalesOrderItem_WD_20Setopportunityid": {
+>             "afterExecution": {
+>                 "navigateToInstance": false
+>             }
+>         }
+>     }
+> }
+> 
+> ```
 
 **Showing Item List in a List Report and Parent on an Object Page** 
 
@@ -116,7 +142,7 @@ For more information, see [List Report Elements](list-report-elements-1cf5c7f.md
 
 ### SAP Fiori Elements for OData V4
 
-In the `manifest.json`, you define the "navigation" section for each "target". This controls if the navigation is enabled or not. If navigation is enabled, a chevron comes for the record in the table indicating a further navigation to the detail page \(object page or subobject page\).The pages structure of the app should always be a tree, with the root as either a list report or an analytical list page. All the other nodes would be object pages or canvas pages, that are uniquely identified by their entity sets. This means that no two object pages can share the same entity set.
+In the `manifest.json` file, you define the "navigation" section for each "target". This controls if the navigation is enabled or not. If navigation is enabled, a chevron comes for the record in the table indicating a further navigation to the detail page \(object page or subobject page\).The pages structure of the app should always be a tree, with the root as either a list report or an analytical list page. All the other nodes would be object pages or canvas pages, that are uniquely identified by their entity sets. This means that no two object pages can share the same entity set.
 
 > ### Sample Code:  
 > `manifest.json`
@@ -201,6 +227,40 @@ The same holds true for the navigation to any level of subobject pages.
 > While defining navigation targets for object pages and subobject pages, application developers must ensure that they specify the navigation property path instead of the navigation entity set name.
 > 
 > In the preceding sample code, under `navigation`, the `_Records` is the navigation path to the navigation entity linked to `ArtistObjectPage`. You must not use `Records` as the navigation target because it is the navigation entity set name.
+
+You can disable the navigation from a table with the `availability` property. You can use the `availability` property in the `manifest.json` file for a specified route either as a simple binding expression, or using a formatter, as shown in the following sample codes:
+
+> ### Sample Code:  
+> `manifest.json`
+> 
+> ```
+> 
+> "Travel": {
+>     "detail": {
+>         "route": "objectPage",
+> 	    "availability": "{= ${TravelStatus_code} === 'O'}"
+>     }
+> }
+> 
+> ```
+
+> ### Sample Code:  
+> `manifest.json`
+> 
+> ```
+> 
+> "Travel": {
+> 	"detail": {
+> 		"route": "objectPage",
+> 		"availability": "{path: 'TravelStatus_code', formatter: '.extension.sap.fe.core.fpmExplorer.customHeaderListReport.LRExtend.isNavigable'}"
+> 	}
+> }
+> ...
+> isNavigable: function(travelStatus, context) {
+> 	return travelStatus !== "O"
+> }
+> 
+> ```
 
 
 
@@ -386,14 +446,14 @@ For inline actions, you must make the following configuration at columns level:
 > 
 > -   For annotation-based custom actions.
 > 
-> -   For navigation to the next level, as defined via routing.
+> -   For navigation to the next level, as defined through routing.
 > 
 > 
-> Navigation after executing an action currently doesn't work in the following cases:
+> Navigation after executing an action doesn't work in the following cases:
 > 
 > -   For the chart toolbar.
 > 
-> -   For subobject pages, the control associated with the action is refreshed, since navigation is currently not possible.
+> -   For subobject pages, the control associated with the action is refreshed, since navigation isn't possible.
 > 
 > -   For standard actions in SAP Fiori elements, such as *Save*, *Edit*, or *Create*.
 > 

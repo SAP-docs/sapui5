@@ -8,10 +8,12 @@ It provides information for actual and target values for a specific time range.
 
 ![](images/Area_Micro_Chart_01fe21f.png)
 
+In the chart, the values at the bottom \(10 and 70\) represent the dimension values, which are the IDs of the sales order items. The values at the top \(10 and 50\) are the measure values, corresponding to the points of the solid black line at the start and end of the chart.
+
+A single measure value is shown along with the threshold values \(error, warning, acceptance and good range values\). So, semantic coloring using the `CriticalityCalculation` annotation is mandatory when using an area micro chart. For more information, see [Samples](https://ui5.sap.com/#/entity/sap.suite.ui.microchart.AreaMicroChart).
+
 > ### Note:  
-> In the chart, the values at the bottom \(10 and 70\) represent the dimension values, which are the IDs of the sales order items. The values at the top \(10 and 50\) are the measure values, corresponding to the points of the solid black line at the start and end of the chart.
-> 
-> A single measure value is shown along with the threshold values \(error, warning, acceptance and good range values\). So, semantic coloring using the `CriticalityCalculation` annotation is mandatory when using an area micro chart. For more information, see [Samples](https://ui5.sap.com/#/entity/sap.suite.ui.microchart.AreaMicroChart).
+> The chart dimensions and measures cannot be of the same entity; they must be from a 1:n navigation entity.
 
 
 

@@ -327,7 +327,7 @@ You can define side effects either in the \*`MPC_EXT` class or in the local anno
 
 ## Additional Features in SAP Fiori Elements for OData V4
 
-The **Guidance** section in our live example shows the various uses of side effects along with examples in XML and ABAP CDS annotation. Check out our live example in the flexible programming model explorer at [Side Effects](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/advancedFeatures/guidanceSideEffects).
+The **Guidance** section in our live example shows the various uses of side effects along with examples in XML and ABAP CDS annotation. For more information and live examples, see the SAP Fiori development portal at [Global Patterns - Side Effects](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/advancedFeatures/guidance/guidanceSideEffects).
 
 Side effects are configured according to the modeling such as create, update, delete in RAP BDEF \(behavior definition\). You can see the ABAP CDS annotation examples in the RAP documentation. For more information, see [Side Effects](https://help.sap.com/docs/abap-cloud/abap-rap/side-effects).
 

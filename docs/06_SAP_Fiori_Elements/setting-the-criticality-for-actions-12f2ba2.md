@@ -2,7 +2,7 @@
 
 # Setting the Criticality for Actions
 
-You can add criticality to an action button via annotations.
+You can add criticality to an action button by using annotations.
 
 When you set the criticality to an action, the corresponding action button renders a semantic action button \(positive semantic and negative semantic\).
 
@@ -99,11 +99,11 @@ Negative/Red status \(Attention/Overload/Alert\)
 </table>
 
 > ### Note:  
-> -   `Criticality` is currently supported only for `DataFieldForAction`.
+> -   `Criticality` is supported only for `DataFieldForAction`.
 > 
 > -   When an action is marked as critical, the previously emphasized buttons \(SAVE, EDIT or APPLY\) no longer appear emphasized.
 > 
 > -   Emphasized buttons and semantic buttons \(critical actions\) cannot occur together on one page, as there can only be a single primary action \(so either the emphasized or the semantic button\).
 > 
-> -   In SAP Fiori elements for OData V4, the object page header currently only allows you to place a critical action as the left-most action.
+> -   In SAP Fiori elements for OData V4, the object page header only allows you to place a critical action as the left-most action.
 

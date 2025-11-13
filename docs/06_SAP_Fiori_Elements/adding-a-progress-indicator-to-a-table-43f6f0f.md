@@ -14,13 +14,9 @@ It can be used to express completion values either as a percentage or as absolut
 
 ![](images/ProgressIndicator_Tables_c6d1e04.png "Progress Indicator")
 
+You can implement a progress indicator using annotations, as shown in the following code samples:
 
-
-<a name="loio43f6f0faa1b64c5aa92bcde379be9054__section_ipd_h4l_hmb"/>
-
-## Code Samples
-
-The following code sample shows how to implement a progress indicator using annotations. `AnnotationPath="@UI.DataPoint#Progress` references the `Qualifier="Progress"`. `EnumMember="UI.VisualizationType/Progress"` defines the actual visualization as a progress indicator.
+In the following XML annotation, `AnnotationPath="@UI.DataPoint#Progress` references the `Qualifier="Progress"` and `EnumMember="UI.VisualizationType/Progress"` defines the actual visualization as a progress indicator.
 
 > ### Sample Code:  
 > XML Annotation

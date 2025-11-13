@@ -569,6 +569,14 @@ If the annotation holds more than one of these approaches, the filter restrictio
 
 
 
+<a name="loiof5dcb29da3bf4e0091eba3e7ccef4580__section_ocr_wbt_zgc"/>
+
+## Support for Visual Filters
+
+In addition to filter bar, you can also configure the visual filter bar to select filter values based on measure values. For more information, see [Configuring the Visual Filter Bar](configuring-the-visual-filter-bar-33f3d80.md).
+
+
+
 <a name="loiof5dcb29da3bf4e0091eba3e7ccef4580__section_bwq_hg4_kqb"/>
 
 ## More Information

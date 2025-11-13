@@ -43,7 +43,7 @@ If the `TriggerAction` is annotated with a global side effect, then on pressing 
 
 To optimize performance, make the annotations for the desired side effects as specific as possible.
 
-It is recommended to specify the target properties or target entities for global side effects. For exceptional cases, apps can configure to refresh the whole entity with the help of the `forceGlobalRefresh` parameter in the `manifest.json`.
+It is recommended to specify the target properties or target entities for global side effects. For exceptional cases, apps can configure to refresh the whole entity with the help of the `forceGlobalRefresh` parameter in the `manifest.json` file.
 
 > ### Sample Code:  
 > `manifest.json`

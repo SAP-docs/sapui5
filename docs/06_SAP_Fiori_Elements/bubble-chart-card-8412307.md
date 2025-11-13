@@ -6,6 +6,12 @@ Bubble charts display up to three measures and two dimensions of data.
 
 
 
+  
+  
+**Example of a Bubble Chart Card**
+
+![](images/Bubble_Chart_e131bed.png "Example of a Bubble Chart Card")
+
 The three measures are reflected in the x- and y-axes, and in the size of the bubbles. The dimensions can be expressed in the colors and/or shapes of the bubbles. Bubble charts need to have three measures and one or two dimensions.
 
 -   The first measure for which the role is set to an axis is assigned to the `valueAxis` feed. The UID makes up the x-axis.
@@ -19,14 +25,14 @@ The three measures are reflected in the x- and y-axes, and in the size of the bu
     > The role is set to `axis2` of the first measure. If there's no `axis2`, the role is set to `axis1` of the second measure. If there's no axis1 for the second measure, the role is set to `axis3` of the first measure.
 
 -   The remaining measure is assigned to the `bubbleWidth` feed'sUID. This determines the size of the bubble.
--   The dimensions for which the role is set to `series` are assigned to the feed's UID **color**. Different values for this dimension in the data set result in different colored data points in the chart. If multiple dimensions are set with the category role, only the first dimension is considered. If the role **series** is assigned to both dimensions, then each combination of the dimension member gets a unique color.
+-   The dimensions for which the role is set to `series` are assigned to the feed's UID **color**. Different values for this dimension in the dataset result in different colored data points in the chart. If multiple dimensions are set with the category role, only the first dimension is considered. If the role **series** is assigned to both dimensions, then each combination of the dimension member gets a unique color.
 
     For example, if role **series** is assigned to the dimensions "Year" and "Country" then "India/2015", "India/2016", "Germany/2015", "Germany/2016" are represented as different colored bubbles. If no role is assigned to a dimension, then the dimension members gets the same color. In the above example, if no color has been assigned to a year, then the bubbles only have two colors - one for all records for India and one for all records for Germany, irrespective of the year.
 
     > ### Note:  
     > Assigning the role of a dimension as a category leads to differently shaped data points for different values of the dimension. However, we do not recommend this for a bubble chart card.
 
--   The dimensions for which the role is set to a **category** are assigned to the **shape** feed's UID. Different values for this dimension in the data set result in differently shaped data points in the chart. If multiples dimensions are set with the category role, only the first dimension is considered.
+-   The dimensions for which the role is set to a **category** are assigned to the **shape** feed's UID. Different values for this dimension in the dataset result in differently shaped data points in the chart. If multiples dimensions are set with the category role, only the first dimension is considered.
 
 The code snippet shown below demonstrates how you define a bubble chart card. Note that there are three measures \(under the `MeasureAttributes` property\) and one dimension \(under the `DimensionAttributes` property\).
 
@@ -145,10 +151,4 @@ The code snippet shown below demonstrates how you define a bubble chart card. No
 > ```
 
 The bubble chart supports a color palette for semantic coloring.
-
-  
-  
-**Example of a Bubble Chart Card**
-
-![](images/Bubble_Chart_e131bed.png "Example of a Bubble Chart Card")
 

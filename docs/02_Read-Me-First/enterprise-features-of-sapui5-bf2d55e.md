@@ -31,5 +31,5 @@ The individual capabilities of SAPUI5 help you to easily build enterprise apps. 
 
 Hover over the shapes to find out more about some key benefits of SAPUI5. Please note: The shapes do not link to other pages.
 
-![Key concepts of UI5 are: Async Loading, Modular Core, Performance, Innovation, UI5 Tooling, and Open Standards](images/Image_Map_Best_Practices_Overview_ba827f7.png)
+![Key concepts of UI5 are: Async Loading, Modular Core, Performance, Innovation, UI5 CLI, and Open Standards](images/Image_Map_Best_Practices_Overview_ba827f7.png)
 

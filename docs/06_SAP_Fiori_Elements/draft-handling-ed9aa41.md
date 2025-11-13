@@ -47,8 +47,6 @@ When a user edits an object, the system behavior of the *Apply* button is as fol
 
 Users can switch between the draft and saved version using a dropdown in applications that have the dynamic header.
 
-
-
   
   
 **Dynamic Header**
@@ -89,12 +87,13 @@ You can turn off the feature to delay draft merges in `manifest.json` in excepti
 > 
 > ```
 > "sap.ui.generic.app": {
->      "settings": {
->           "draftSettings": {
->                "dataSaveFrequency": "immediate"
->           }
->      }
+>     "settings": {
+>         "draftSettings": {
+>             "dataSaveFrequency": "immediate"
+>         }
+>     }
 > }
+> 
 > ```
 
 You can use keyboard shortcuts for common tasks.
@@ -151,7 +150,7 @@ On a draft version of a document, if you press [Enter\] on input fields, one of 
 -   If a `PreparationAction` is defined in the `DraftRoot` entity and the message is annotated, that `PreparationAction` is triggered and the messages are requested.
 
 
-For more information, see [Using Global Side Effects](using-global-side-effects-955ae31.md) and our live example in the flexible programming model explorer at [Guidance - Draft Validation](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/advancedFeatures/guidance/draftValidation).
+For more information, see [Using Global Side Effects](using-global-side-effects-955ae31.md) and our live example in the SAP Fiori development portal at [Global Patterns - Draft Validation](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/advancedFeatures/guidance/draftValidation).
 
 
 
@@ -187,6 +186,8 @@ When a user is added to the list, the draft appears in their *Own Draft* list.
 > -   This feature is only supported when using the ABAP RESTful Application Programming Model \(RAP\).
 > 
 > -   The lock mechanism is only supported by app extensions built using the SAP Fiori elements for OData V4 building blocks.
+> 
+> -   The mass edit feature is not supported on object pages when collaborative draft is enabled.
 
 
 
@@ -195,7 +196,7 @@ When a user is added to the list, the draft appears in their *Own Draft* list.
 In applications that have only a limited number of editable fields, draft handling adds unnecessary overhead for users. For such applications, all features related to draft handling can be hidden from the UI while the draft functionality remains active in the background. To achieve this, enable the `hideDraft` property in the `manifest.json` file, as shown in the following sample code:
 
 > ### Sample Code:  
-> manifest.json
+> `manifest.json`
 > 
 > ```
 > "sap.fe": {
@@ -221,18 +222,18 @@ These applications work as follows:
     -   In edit mode, after a user modifies a field in the object page, the *Draft updated* message doesn't appear in the footer.
 
 
-    The default navigation behavior retains a user on the same page after canceling or saving an object. You can modify this behavior to navigate back to the root object by configuring specific settings in the `manifest.json` file, as shown in the following sample code:
+    The default navigation behavior navigates the user to the root object page after canceling or saving an object. You can modify the behavior to retain the user on the same page by configuring specific settings in the `manifest.json` file, as shown in the following sample code:
 
     > ### Sample Code:  
-    > manifest.json
+    > `manifest.json`
     > 
     > ```
     > "sap.fe": {
     >   "app": {
     >     "hideDraft": {
     >       "enabled": true,
-    >       "stayOnCurrentPageAfterSave": false,
-    >       "stayOnCurrentPageAfterCancel": false
+    >       "stayOnCurrentPageAfterSave": true,
+    >       "stayOnCurrentPageAfterCancel": true
     >     }
     >   }
     > }
@@ -245,7 +246,7 @@ These applications work as follows:
     The *Create Next* button allows a user to quickly create new objects. This button is visible by default. However, you can control its visibility by setting `hideCreateNext: true` in the `manifest.json` file, as shown in the following sample code:
 
     > ### Sample Code:  
-    > manifest.json
+    > `manifest.json`
     > 
     > ```
     > "sap.fe": {
@@ -266,18 +267,31 @@ These applications work as follows:
 
 
 
-<a name="loioed9aa41c563a44b18701529c8327db4d__section_ivw_gkc_d2b"/>
+### Draft Handling with `editFlow`
 
-## Related Links
+The `editFlow` API is the main controller extension for draft handling in SAP Fiori elements for OData V4. You can use it to do the following:
 
--   [Draft Handling in SAP Fiori Design Guidelines](https://experience.sap.com/fiori-design-web/draft-handling/)
+-   Add custom logic in standard draft actions \(create, delete, edit, save, and discard\).
 
--   [Developing New Transactional Apps with Draft Capabilities](https://help.sap.com/docs/SAP_NETWEAVER_AS_ABAP_752/cc0c305d2fab47bd808adcad3ca7ee9d/d36820f082c84085b6634be4576e351a.html) 
+    For more information and live examples, see the SAP Fiori development portal at [Global Patterns - Draft Handling](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/controllerExtensions/editFlow).
 
--   [Confirmation Popups](confirmation-popups-9a53662.md)
+-   Implement draft handling on custom pages.
 
--   [Using Global Side Effects](using-global-side-effects-955ae31.md)
+    For more information and live examples, see the SAP Fiori development portal at [Custom Page - Draft Handling](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/controllerExtensions/customEditFlow).
 
--   [Toggling Between Draft and Saved Values](toggling-between-draft-and-saved-values-fd3950a.md)
 
+For information about the `editFlow` API, see the [API Reference](https://ui5.sap.com/#/api/sap.fe.core.controllerextensions.EditFlow). 
+
+**Related Information**  
+
+
+[https://experience.sap.com/fiori-design-web/draft-handling/](https://experience.sap.com/fiori-design-web/draft-handling/)
+
+[https://help.sap.com/docs/SAP\_NETWEAVER\_AS\_ABAP\_752/cc0c305d2fab47bd808adcad3ca7ee9d/d36820f082c84085b6634be4576e351a.html](https://help.sap.com/docs/SAP_NETWEAVER_AS_ABAP_752/cc0c305d2fab47bd808adcad3ca7ee9d/d36820f082c84085b6634be4576e351a.html)
+
+[Confirmation Popups](confirmation-popups-9a53662.md "You can configure confirmation popups for various use cases in list reports and object pages.")
+
+[Using Global Side Effects](using-global-side-effects-955ae31.md "Global side effects are those side effects that are defined without any source properties or source entities.")
+
+[Toggling Between Draft and Saved Values](toggling-between-draft-and-saved-values-fd3950a.md "You can toggle between draft and saved values.")
 

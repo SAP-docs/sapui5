@@ -279,7 +279,7 @@ Let's say you want to embed a component with the package name `my.embedded`. You
 />
 ```
 
-For more information on embedded components, see [Using and Nesting Components](../04_Essentials/using-and-nesting-components-346599f.md) and [Enabling Routing in Nested Components](../04_Essentials/enabling-routing-in-nested-components-fb19f50.md).
+For more information on embedded components, see [Component Instantiation Guide](../04_Essentials/component-instantiation-guide-346599f.md) and [Enabling Routing in Nested Components](../04_Essentials/enabling-routing-in-nested-components-fb19f50.md).
 
 Alternatively, you could use the [`sap/ui/core/Component.create`](https://ui5.sap.com/#/api/sap.ui.core.Component/methods/sap.ui.core.Component.create) API and specify the `id` in the arguments.
 

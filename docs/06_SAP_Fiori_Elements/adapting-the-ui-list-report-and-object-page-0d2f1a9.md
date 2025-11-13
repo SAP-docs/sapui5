@@ -349,6 +349,20 @@ The default layout is `Block`.
 <tr>
 <td valign="top">
 
+Change the default value of the threshold property in grid, tree, responsive, and analytical tables.
+
+</td>
+<td valign="top">
+
+In the table node, set the new value for the `threshold` property.
+
+For default values for different table types, see [Configuring the ***threshold*** Property for Initial Data Loading](tables-c0f6592.md#loioc0f6592a592e47f9bb6d09900de47412__subsection_lvm_cjx_rfc).
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
 Change the default value of the `scrollThreshold` property in grid tables, analytical tables, and tree tables.
 
 </td>
@@ -378,7 +392,7 @@ The default value is `False`.
 
 
 
-### More Information
+## Related Links
 
 For more information, see [Creating a Binding Change](creating-a-binding-change-4754094.md).
 

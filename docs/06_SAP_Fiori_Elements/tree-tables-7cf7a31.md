@@ -60,14 +60,14 @@ To enable tree tables in the list report or object page, the following parameter
 
 The following creation modes are supported with a tree table:
 
--   `Inline`
+-   `Inline`: inline creation mode
 
--   `NewPage`
+-   `NewPage`: create page
 
--   `CreationDialog`
+-   `CreationDialog`: create dialog
 
 
-In the list report, only the `NewPage` \(default\) creation mode and the `CreationDialog` creation mode are supported.
+In the list report, only the create page \(default\) and the create dialog are supported.
 
 SAP Fiori elements for OData V4 supports the default create mode as well as a custom create mode. To use the custom create mode, add the following annotations to the `nodeType` section:
 
@@ -513,6 +513,6 @@ You can use a dedicated `TreeTable` building block in SAP Fiori elements for ODa
 
 -   For more information about this building block, see the [API reference](https://ui5.sap.com/#/api/sap.fe.macros.TreeTable).
 
--   You can also check out our live example in the flexible programming model explorer at [Table - Tree Table](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/table/treeTable).
+-   For more information and live examples, see the SAP Fiori development portal at [Building Blocks - Table - Tree Table](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/table/treeTable).
 
 

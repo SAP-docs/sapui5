@@ -36,9 +36,9 @@ You can view and download all files at [Walkthrough - Step 25](https://ui5.sap.c
 
 ## Install Proxy Server
 
-In this step, we want to use the publicly available Northwind OData service located at `https://services.odata.org/V2/Northwind/Northwind.svc/`. Therefore, our URI points to the official Northwind OData service. In order to avoid cross-origin resource sharing, the typical procedure is to use a proxy in UI5 Tooling and maintain only a path in the `URI` property of the data source of our app.
+In this step, we want to use the publicly available Northwind OData service located at `https://services.odata.org/V2/Northwind/Northwind.svc/`. Therefore, our URI points to the official Northwind OData service. In order to avoid cross-origin resource sharing, the typical procedure is to use a proxy in UI5 CLI and maintain only a path in the `URI` property of the data source of our app.
 
-A bunch of proxy solutions are available from the UI5 community as [UI5 Tooling custom middleware extensions](https://bestofui5.org/#/packages?tokens=proxy:tag). In this tutorial we'll use [ui5-middleware-simpleproxy](https://bestofui5.org/#/packages/ui5-middleware-simpleproxy). Open a new terminal window in your app root folder and execute `npm i -D ui5-middleware-simpleproxy` to install this package as a new development dependency in your `package.json`.
+A bunch of proxy solutions are available from the UI5 community as [UI5 CLI custom middleware extensions](https://bestofui5.org/#/packages?tokens=proxy:tag). In this tutorial we'll use [ui5-middleware-simpleproxy](https://bestofui5.org/#/packages/ui5-middleware-simpleproxy). Open a new terminal window in your app root folder and execute `npm i -D ui5-middleware-simpleproxy` to install this package as a new development dependency in your `package.json`.
 
 
 
@@ -53,7 +53,7 @@ metadata:
 type: application
 framework:
   name: OpenUI5
-  version: "1.136.0"
+  version: "1.143.0"
   libraries:
     - name: sap.m
     - name: sap.ui.core

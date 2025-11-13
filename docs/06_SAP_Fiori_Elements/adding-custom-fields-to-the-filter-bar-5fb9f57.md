@@ -15,7 +15,7 @@ You can extend the filter bar by using a custom filter field.
 
 ## Additional Features in SAP Fiori Elements for OData V2
 
-To enable this, you need to add a view extension and a corresponding controller extension, as in the following example:
+To enable this, add a view extension along with the corresponding controller extension, as shown in the following example:
 
 > ### Sample Code:  
 > ```
@@ -39,16 +39,16 @@ To enable this, you need to add a view extension and a corresponding controller 
 
 You can add additional controls to the smart filter bar. The following methods are mandatory:
 
--   Use `onBeforeRebindTable` to evaluate the settings in the custom fields and to add the corresponding filters to the `bindingParameters` of the table.
+-   `onBeforeRebindTable`: To evaluate the settings in the custom fields and add the corresponding filters to the `bindingParameters` of the table.
 
--   Use `getCustomAppStateData` to read the state of all custom fields and store that state in the object provided to enable the templates to use it for navigation.
+-   `getCustomAppStateData`: To read the state of all custom fields and store that state in the object provided, so that the template can use it during navigation.
 
--   Use `restoreCustomAppStateData` to get the custom app state object you provided in `getCustomAppStateData` and set the corresponding values for your custom controls. For example, you call this method after returning from a navigation.
+-   `restoreCustomAppStateData`: To retrieve the custom app state object stored in `getCustomAppStateData` and apply the corresponding values for your custom controls. For example, you call this method after returning from a navigation.
 
 
-The `onInitSmartFilterBarExtension` method can be used to set the default filter values or to bind a custom control on initialization of filter bar.
+The `onInitSmartFilterBarExtension` method can be used to set the default filter values or to bind a custom control during the initialization of the filter bar.
 
-The enhanced controller methods each call a corresponding extension method:
+Each enhanced controller methods call its corresponding extension method:
 
 -   `onBeforeRebindTableExtension`
 
@@ -60,19 +60,17 @@ The enhanced controller methods each call a corresponding extension method:
 
 
 > ### Note:  
-> The filterable fields are defined by metadata annotations. Use the extension option if the filter attribute can only be calculated by the client.
+> Filterable fields are defined using metadata annotations. Use the extension option when the filter attribute can only be determined by the client.
 
-For an example with step-by-step instructions, see [Adding Filterable Field to the Smart Filter Bar](adding-filterable-field-to-the-smart-filter-bar-3a51582.md).
+For an example with detailed instructions, see [Adding Filterable Field to the Smart Filter Bar](adding-filterable-field-to-the-smart-filter-bar-3a51582.md).
 
 
 
 ### Adding Custom Filter Fields to Exported File
 
-When exporting table content which includes filter fields, they are included by default. The custom filters, however, show the values as they are passed to the query.
+When a table is exported, including the filter fields, the filter values are included by default. The exported values match those shown in the filter bar.
 
-For example, if user-entered value in the filter bar is `Cost=Low`, the filter value passed to the query is `OverallCost<1000`.
-
-To show the filter value as shown in the filter bar, such as `Cost=Low`, you can use the extension method `onBeforeExportTableExtension`
+For custom filters, the exported spreadsheet shows the filter property and condition as passed to the query. For example, if the user selects *Cost = Low* in the filter bar dropdown, the filter passed to the query can be `OverallCost < 1000`. This value appears in the exported file. To show the filter as displayed on the filter bar, you can use the `onBeforeExportTableExtension` extension method to modify the export content. This method supports table export on analytical list pages, list reports, and object pages.
 
 > ### Sample Code:  
 > ```
@@ -148,13 +146,206 @@ To show the filter value as shown in the filter bar, such as `Cost=Low`, you can
 
 ## Additional Features in SAP Fiori Elements for OData V4
 
-You can configure the `FilterBar` in the controller extension locally. To do so, use the `@com.sap.vocabularies.UI.v1.SelectionFields` section of the `controlConfiguration` in the `manifest.json` file for the list report target.
+You can configure custom filters to use either predefined operators or custom-defined operators. The following properties are available for configuring custom filters using the `manifest.json` file:
+
+> ### Sample Code:  
+> ```
+> "<Key_of_filter_field>": {
+>   // Must be the exact technical name of the underlying filter field if the custom filter uses predefined operators.
+>   // For a custom filter using custom operators, this can be any unique key in the manifest.json file.
+>  
+>   "label": "<Static text or i18n binding>",
+>   // Label displayed in the UI. Can be a static string (e.g., "MyText") or an i18n binding (e.g., "{i18n>MyCustomLabel}").
+>  
+>   "property": "<Path to filter property>",
+>   // Only required for custom filters using custom operators.
+>   // Specifies the full path to the property to be filtered.
+>   // Example: "Rating"
+>  
+>   "template": "<Path to XML template>",
+>   // Path to the XML fragment that contains the filter control.
+>   // Example: "SalesOrder.ext.CustomRatingFilter".
+>  
+>   "required": true | false,
+>   // Defines whether the filter field is mandatory.
+>   // Default: false.
+>  
+>   "availability": "Default" | "Hidden" | "Adaptation",
+>   // Determines the visibility of the filter field:
+>   // - Default: shown in filter bar.
+>   // - Adaptation: available only via the Adapt Filters dialog.
+>   // - Hidden: not visible anywhere.
+>  
+>   "position": {
+>     "placement": "Before" | "After",
+>     "anchor": "<Key_of_filter_field>"
+>     // Defines the position of the custom filter field relative to another field.
+>     // For annotation-based filters, use the annotation key, e.g. "SalesOrder"
+>   }
+> }
+> 
+> ```
+
+
+
+### The `filterValues` Model
+
+For custom filters, SAP Fiori elements provides an internal model called `filterValues`. This model is bound to each custom filter field and stores the entered values.
+
+> ### Note:  
+> To support variant management handling and app state handling, bind the value-providing property of the filter control to the relative path `{filterValues>}`.
+
+
+
+### Custom Filters with Predefined Operators
+
+Using predefined operators with custom filters is suitable when you require a custom visualization of the filter, but the filter logic remains similar to that of standard filter fields and operates on a single property from the entity.
+
+> ### Note:  
+> The `key` property of the custom filter must match the name of the metadata property for which the filter is defined. In such cases, the `property` field must not be specified.
+
+**Custom Filter Field: Simple Example**
+
+The following code sample shows how to define a custom filter field for the metadata property `Rating`:
 
 > ### Sample Code:  
 > `manifest.json`
 > 
 > ```
->    ...
+> ...
+> "targets": {
+>     "SalesOrderManageList": {
+>         "type": "Component",
+>         "id": "SalesOrderManageList",
+>         "name": "sap.fe.templates.ListReport",
+>         "options": {
+>             "settings": {
+>                 "contextPath": "/SalesOrderManage",
+>                 "controlConfiguration": {
+>                     "@com.sap.vocabularies.UI.v1.SelectionFields": {
+>                         "navigationProperties": ["_Partner", "_DistributionChannel"],
+>                         "filterFields": {
+>                             "Rating": {
+>                                 "label": "{i18n>CustomRatingFilter}",
+>                                 "availability": "Default",
+>                                 "template": "<ProjectFolder>.ext.CustomRatingFilter",
+>                                 "required": true,
+>                                 "position": {
+>                                     "placement": "After",
+>                                     "anchor": "SalesOrder"
+>                                 }
+>                             }
+>                         }
+>                     }
+>                 }
+>             }
+>         }
+>     }
+> },
+> ...
+> 
+> ```
+
+The `template` property points to the custom fragment definition located at `<ProjectFolder>.ext.CustomRatingFilter`. The custom fragment can be defined as shown in the following sample code:
+
+> ### Sample Code:  
+> XML Annotation
+> 
+> ```
+> <core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:l="sap.ui.layout">
+>     <HBox alignItems="Center" width="100%">
+> 
+> <!--     // ...bind it directly (and use a filter value type) (recommended) // -->
+>          <RatingIndicator id="MyCustomRatingIndicatorId"
+>              core:require="{
+>                  Value: 'sap/fe/macros/filter/type/Value'
+>              }"
+>              value="{path: 'filterValues>', type: 'Value'}"
+>          />
+> 
+> <!--     // Example for adapting the used operator, using GT (greater than) instead of default EQ -->
+> <!--     <RatingIndicator-->
+> <!--         id="MyCustomRatingIndicatorId"--> 
+> <!--         core:require="{-->
+> <!--             Value: 'sap/fe/macros/filter/type/Value'-->
+> <!--         }"-->
+> <!--         value="{path: 'filterValues>', type: 'Value', formatOptions: { operator: 'GT' }}"-->
+> <!--     />-->
+> 
+>     </HBox>
+> </core:FragmentDefinition>
+> 
+> ```
+
+To track filter values, the value-holding property of the filter control must be bound to the `filterValues` model.
+
+In the above example, no operator is explicitly specified, so the default operator `EQ` \(equals\) is used. However, you can configure a different operator, for example, the code in the comments includes the use of the `GT` \(greater than\) operator. In this case, the filters used are generated by SAP Fiori elements and invoked as part of the call.
+
+**Custom Filter Field: Handling Filters on Value Change**
+
+In addition to binding values directly, you can apply filters dynamically when the value of the custom filter field changes. To do so, use the `setFilterValues` extension API. For information about `setFilterValues`, see the [API Reference](https://ui5.sap.com/#/api/sap.fe.templates.ListReport.ExtensionAPI%23methods/setFilterValues).
+
+For example, consider a custom filter field with a rating indicator control, as defined in the `manifest.json` file \(see the **Custom Filter Field: Simple Example** sample code above\). The `template` property must point to a custom fragment that contains a control whose change event is used for filtering. This change event is typically invoked when the user changes the value in the custom control.
+
+The following XML sample code shows how to handle filtering using the change event for the rating indicator control:
+
+> ### Sample Code:  
+> XML Annotation
+> 
+> ```
+> <core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:l="sap.ui.layout">
+>     <HBox alignItems="Center" core:require="{handler: <ProjectFolder>/ext/CustomRating'}" width="100%">
+>  
+>         <RatingIndicator id="MyCustomRatingIndicatorId" 
+>             value="{= ${filterValues>} ? ${filterValues>}.substring(1) : null }" 
+>             change="handler.onValueChanged" /> 
+> 
+>         <core:Icon src="sap-icon://reset" 
+>             press="handler.onReset" 
+>             class="sapUiSmallMarginBegin" />
+>             
+>     </HBox>
+> </core:FragmentDefinition>
+> 
+> ```
+
+The following sample code defines the event handlers for the custom filter field:
+
+> ### Sample Code:  
+> ```
+> sap.ui.define(["sap/ui/model/Filter", "sap/ui/model/FilterOperator"], function(Filter, FilterOperator) {
+>   "use strict";
+>   return {
+>     onValueChanged: function(oEvent) {
+>         this.setFilterValues("Rating", oEvent.getParameter("value"));
+>     },
+>     onReset: function(oEvent) {
+>         this.setFilterValues("Rating");
+>     }
+>   };
+> });
+> 
+> ```
+
+
+
+### Custom Filters with Custom Operators
+
+Custom operators are recommended when the filter logic involves complex operations or spans multiple fields. For example:
+
+-   A complex condition: `Product startsWith "IN_"` and `Product contains "plug"`.
+
+-   A multi-field condition: `{Product = "abc" or (Product = "def" and Plant = "456")}`.
+
+
+> ### Note:  
+> When using a custom filter with custom operators, the `key` must be a unique string. Since the custom operator is implemented by application developers, the `property` must be specified so that SAP Fiori elements can identify which properties are involved. This information is used in various use cases within SAP Fiori elements.
+
+The following sample code defines a custom filter using a custom operator:
+
+> ### Sample Code:  
+> ```
+>     ...
 > "targets": {
 >                 "SalesOrderManageList": {
 >                     "type": "Component",
@@ -167,11 +358,11 @@ You can configure the `FilterBar` in the controller extension locally. To do so,
 >                                  "@com.sap.vocabularies.UI.v1.SelectionFields" : {
 >                                     "navigationProperties": ["_Partner", "_DistributionChannel"],
 >                                     "filterFields": {
->                                         "MyCustomRatingThing": {
+>                                         "Rating": {
 >                                             "label": "{i18n>CustomRatingFilter}",
->                                             "property": "Rating",
 >                                             "availability": "Default",
->                                             "template": "SalesOrder.ext.CustomRatingFilter",
+>                                             "template": "<ProjectFolder>.ext.CustomRatingFilter",
+>                                             "property": "Rating",
 >                                             "required": true,
 >                                             "position": {
 >                                                 "placement": "After",
@@ -185,100 +376,69 @@ You can configure the `FilterBar` in the controller extension locally. To do so,
 >                     }
 >                 },
 > ...
-> ```
-
-You can use the `filterFields` setting to add custom filters, as shown in the following sample code:
-
-> ### Sample Code:  
-> manifest.json
 > 
 > ```
-> "<filterField>": {
->    "label": , // static string or i18n binding, e.g. "MyText" or "{i18n>MyCustomLabel}"
->    "property": , // the full path to the property to be filtered, e.g. "Rating" or "_Partner/Rating"
->    "template": , // the path to the Xml Template containing the filter control, e.g. "SalesOrder.ext.CustomRatingFilter"
->    "required": false | true, // determines if the filter field is mandatory or not, i.e. if it requires a value for filtering to be triggered; Default value = false.
->    "availability": "Default" | "Hidden" | "Adaptation", //Toggling visibility of the filter field. Default = shown in filter bar; Adaptation = shown in Adapt Filters dialog; Hidden = Neither shown in filter bar nor within Adapt Filters dialog
->    "position": {
->       "placement": "Before"|"After",
->       "anchor": "<Key_of_filter_field>" // for annotation based filter fields, the property is the key, e.g. "SalesOrder", "_Partner::FullName" (slashes are replaced by ::)
+
+> ### Note:  
+> The `property` property must be specified in the `manifest.json` file. It must point to the metadata property for which the custom operator is implemented.
+
+> ### Restriction:  
+> If the custom operator contains multiple properties, you can specify only one property in the `manifest.json` file. This limitation can result in unexpected behavior when `property` is used to identify the relevant field. For example, in a multi-view list report where each tab is bound to a different entity.
+
+The `template` property points to the custom fragment definition, located at `<ProjectFolder>.ext.CustomRatingFilter`. The custom fragment is defined as shown in the following sample code:
+
+> ### Sample Code:  
+> XML Annotation
+> 
+> ```
+> <core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m">
+>   <MultiComboBox
+>     width="100%"
+>     selectedKeys="{path: 'filterValues>', type: 'sap.fe.macros.filter.type.MultiValue', formatOptions: { operator: 'SalesOrder.ext.onMultiValueRatingLevels' }}"
+>   >
+>     <layoutData>
+>       <FlexItemData growFactor="1" />
+>     </layoutData>
+>     <items>
+>       <core:Item key="low" text="low" />
+>       <core:Item key="medium" text="medium" />
+>       <core:Item key="high" text="high" />
+>     </items>
+>   </MultiComboBox>
+> </core:FragmentDefinition>
+> 
+> 
+> ```
+
+The `onMultiValueRatingLevels` operator is implemented as a callback function. This function provides a single parameter, including an array of input values provided by the end user.
+
+For any custom operators, application developers must ensure they are added to the `customFilterOperators` property under the `sap.fe` section of the `manifest.json` file. This step is essential to ensure that SAP Fiori elements can recognize and handle the custom operator correctly.
+
+In the following sample code, the custom operator `'SalesOrder.ext.CustomRating.onMultiValueRatingLevels'`is added to the `customFilterOperators` array under the `sap.fe` section:
+
+> ### Sample Code:  
+> `manifest.json`
+> 
+> ```
+> "sap.fe": {
+>     "macros": 
+>         "filter": {          
+>             "customFilterOperators": [{                     
+>                 "name": "SalesOrder.ext.CustomRating.onMultiValueRatingLevels"
+>               }]
+>         }
 >    }
 > }
+> 
 > ```
 
-The `property` specifies the field on which the filter is applied. SAP Fiori elements identifies this field within the entity related to the current view for applying the filter.
-
-For example, in a standard list report, the table data is derived from the main entity. SAP Fiori elements then searches for this filter field defined by `property` within this main entity to apply the filters.
-
-However, in a multi-view list report, where each tab is associated with a distinct entity, SAP Fiori elements searches for the field within the entity of the active tab. If the entity associated with the active tab does not include the field defined by `property`, the filter ignores this property and applies only to the remaining valid filter fields.
-
-
-
-### Custom Filter Field: Simple Example
-
-The following sample code shows how you can build an XML template for the `SalesOrder` app:
+The following sample code shows using the custom operator `onMultiValueRatingLevels`:
 
 > ### Sample Code:  
-> ```xml
-> <core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:l="sap.ui.layout">
->     <HBox alignItems="Center" core:require="{handler: 'SalesOrder/ext/CustomRating'}" width="100%">
->  
-> <!--     // either handle value change in the handler... // -->
-> <!--     <RatingIndicator id="MyCustomRatingIndicatorId" value="{= ${filterValues>} ? ${filterValues>}.substring(1) : null }" change="handler.onValueChanged" />-->
->  
-> <!--     // ...or bind it directly (and use a filter value type) (recommended) // -->
->          <RatingIndicator id="MyCustomRatingIndicatorId"
->              core:require="{
->                  Value: 'sap/fe/macros/filter/type/Value'
->              }"
->              value="{path: 'filterValues>', type: 'Value'}"
->          />
->  
-> <!--     // Example for adapting the used operator, using GT (greater than) instead of default EQ -->
-> <!--     <RatingIndicator-->
-> <!--         id="MyCustomRatingIndicatorId"-->> 
-> <!--         core:require="{-->
-> <!--             Value: 'sap/fe/macros/filter/type/Value'-->
-> <!--         }"-->
-> <!--         value="{path: 'filterValues>', type: 'Value', formatOptions: { operator: 'GT' }}"-->
-> <!--     />-->
->  
->         <core:Icon src="sap-icon://reset" press="handler.onReset" class="sapUiSmallMarginBegin" />
->     </HBox>
-> </core:FragmentDefinition>
 > ```
-
-You can build these custom filter fields for different properties of the `SalesOrder`. To facilitate this, ensure that the key specified in the `manifest.json` is a unique string. The previous sample code shows the usage of custom handlers, that is, handling value changes or handling a button click that resets the filters. Following the naming of this example, these handlers are defined in file `SalesOrder/ext/CustomRating.js`.
-
-> ### Sample Code:  
-> ```js
-> sap.ui.define(["sap/ui/model/Filter", "sap/ui/model/FilterOperator"], function(Filter, FilterOperator) {
->   "use strict";
->   return {
->     onValueChanged: function(oEvent) {
->         this.setFilterValues("Rating", oEvent.getParameter("value").);
->     },
->     onReset: function(oEvent) {
->         this.setFilterValues("Rating");
->     }
->  };
-> });
-> ```
-
-The used function `setFilterValues` is part of the list report's `ControllerExtensionAPI`.
-
-For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.fe.templates.ListReport.ExtensionAPI/methods/setFilterValues) in the Demo Kit. 
-
-
-
-### Custom Filter Field: MultiValue Example
-
-When using controls that allow several values to be selected, you need to use a multi-valued field. In this case, each of the possible values provided by the configured control is handled using an operator function. This operator functon is used as a callback that only provides one parameter, including an array of input valus provided by the end user.
-
-> ### Sample Code:  
-> ```js
 > onMultiValueRatingLevels: function (values) {
 >     const filters = [];
+> 
 >     values.forEach((value) => {
 >         switch (value) {
 >             case "low":
@@ -294,100 +454,19 @@ When using controls that allow several values to be selected, you need to use a 
 >                 break;
 >             default:
 >                 return null;
->                 }
->             });
->  
->         return new Filter({
->             filters: filters
+>         }
+>     });
+> 
+>     return new Filter({
+>         filters: filters
 >     });
 > }
-> ```
-
-Check out our live example in the flexible programming model explorer at [Custom Filters](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/filterBar/filterBarCustoms).
-
-
-
-### Custom Filter Field with Custom Filter Operators
-
-In some cases, you may want to use a custom filter operator. For example, you may want to avoid your users having to enter the exact values of a `SalesOrder` property. Instead, you can define your own value set to be used for input selection.
-
-> ### Sample Code:  
-> Custom Rating Filter Operator
 > 
 > ```
-> <core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m">
->     
->         <ComboBox
->             id="MyCustomRatingComboBox"
->             core:require="{
->                 handler: 'SalesOrder/ext/CustomRating',
->                 Value: 'sap/fe/macros/filter/type/Value'
->             }"
->             selectedKey="{
->                 path: 'filterValues>',
->                 type: 'Value',
->                 formatOptions: { operator: 'SalesOrder.ext.CustomRating.ratingLevels' }
->             }">
->             <items>
->                 <core:Item key="Low" text="Low Rating" />
->                 <core:Item key="Medium" text="Medium Rating" />
->                 <core:Item key="High" text="High Rating" />
->             </items>
->         </ComboBox>
-> </core:FragmentDefinition>
-> ```
 
-In the following sample code, these custom filter operators are defined in the file `SalesOrder/ext/CustomRating.js` using the function `ratingLevels()` and returned as custom filter conditions containing the values that you want to define:
+This custom operator combines multiple filters using a logical `OR`, when the user selects the `medium` value, for example. Such behavior isn't possible with a predefined operator. Similarly, this approach allows you to create filters involving any number of properties, as long as the properties are valid metadata fields. These filters can be defined using model filters. For more information, see `sap.ui.model.Filter` API, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.model.Filter%23overview).
 
-> ### Sample Code:  
-> Implementation of the Custom Rating Operator
-> 
-> ```js
-> sap.ui.define(["sap/ui/model/Filter", "sap/ui/model/FilterOperator"], function(Filter, FilterOperator) {
->   "use strict";
->   return {
->     ratingLevels: function(sValue) {
->         switch (sValue) {
->             case "Low":
->                 return new Filter({ path: "Rating", operator: FilterOperator.LT, value1: 2 });
->             case "Medium":
->                 return new Filter({
->                     filters: [
->                         new Filter({ path: "Rating", operator: FilterOperator.GT, value1: 1 }),
->                         new Filter({ path: "Rating", operator: FilterOperator.LT, value1: 5 })
->                     ],
->                     and: true
->                 });           
->             case "High":
->                 return new Filter({ path: "Rating", operator: FilterOperator.EQ, value1: 5 });       
->         }
->     }
->  };
-> });
-> ```
-
-In this function, you define new filter objects for every value \("Low", "Medium", and "High"\). Every value represents a specific key of the combo box used for user selection. The filter operators that you use can include all the filter operators defined in `sap/ui/model/FilterOperator`. For more information, see the [API Reference: `sap.ui.model.FilterOperator`](https://ui5.sap.com/#/api/sap.ui.model.FilterOperator). 
-
-> ### Tip:  
-> To use case insensitive filtering, you must also pass the property `caseSensitive = false` to the constructor `new Filter()`.
-
-> ### Note:  
-> You must ensure that the custom operator is added to the `customFilterOperators` property of the `sap.fe` entry in the `manifest.json` file. For instance, the custom operator in the following sample code is `SalesOrder.ext.CustomRating.ratingLevels`, and it must be added to the `manifest.json` file. This is essential to ensure that SAP Fiori elements can handle it correctly.
-> 
-> > ### Sample Code:  
-> > manifest.json
-> > 
-> > ```
-> > "sap.fe": {
-> >    "macros": {
-> >       "filter": {
-> >          "customFilterOperators": [{
-> >                     "name": "SalesOrder.ext.CustomRating.ratingLevels"
-> >                   }]
-> >         }
-> >    }
-> > }
-> > ```
+For more information and live examples, see the SAP Fiori development portal at [Building Blocks - Filter Bar - Extensions - Custom Filters](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/filterBar/filterBarCustom).
 
 
 
@@ -410,10 +489,10 @@ You can also define your custom filter as required by setting it to `required = 
 > </core:FragmentDefinition>
 > ```
 
-The red frame is switched on or off using the formatter `onFilterInputFormatValue()` in the file `SalesOrder/ext/CustomFilter.js` that updates the value state of the input field:
+The red frame is switched on or off using the `onFilterInputFormatValue()` formatter in the `SalesOrder/ext/CustomFilter.js` file that updates the value state of the input field:
 
 > ### Sample Code:  
-> ```js
+> ```
 > sap.ui.define(["sap/ui/core/ValueState"], function (ValueState) {
 >     "use strict";
 > 
@@ -430,18 +509,13 @@ The red frame is switched on or off using the formatter `onFilterInputFormatValu
 > });
 > ```
 
-You can explore and work with the coding yourself. Check out our live example in the flexible programming model explorer at [Custom Filter](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/customElements/customElementsOverview/customFilterContent).
-
-> ### Note:  
-> For custom filters, SAP Fiori elements provides an internal model called `filterValues`, which is bound to each custom filter field and contains the filtered values specific to the filter field.
-> 
-> To support variant management handling and app state handling, the value-providing property of the filter control that is used should be bound against the relative path `{filterValues>}`.
+You can explore and work with the coding yourself. For more information and live examples, see the SAP Fiori development portal at [Building Blocks - Filter Bar - Extensions - Custom Filters](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/filterBar/filterBarCustom).
 
 
 
 ### Custom Filter Fields With Metadata Binding
 
-You can define custom columns with metadata binding. You can also use metadata binding to define the label for custom filters and custom form elements.
+You can define custom columns with metadata binding, as well as the labels for custom filters and custom form elements.
 
 > ### Sample Code:  
 > ```

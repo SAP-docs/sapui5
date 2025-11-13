@@ -125,7 +125,7 @@ SAP Fiori elements
 </td>
 <td valign="top">
 
-[Working With UI Annotations](06_SAP_Fiori_Elements/working-with-ui-annotations-83c89cc.md) 
+[Working With UI Annotations](06_SAP_Fiori_Elements/working-with-odata-annotations-83c89cc.md) 
 
 </td>
 </tr>

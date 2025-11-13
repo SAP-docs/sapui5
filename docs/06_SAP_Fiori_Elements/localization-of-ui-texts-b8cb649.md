@@ -115,7 +115,7 @@ For the annotation example above, the application's i18n properties file must ha
 > ### Note:  
 > The annotation modification described above is done in a local annotations file if the back-end generated file does not have the corresponding annotation segment.
 > 
-> For example, if the back-end system is based on SAP NetWeaver 7.51 or lower \(SAP S/4HANA\) or on SAP NetWeaver 7.67 or lower \(SAP S/4HANA Cloud Public Edition\), you can't add `UI.ReferenceFacet` via the back end. In such a case, a modification to the *Reference Facet* label is only possible by modifying the local annotation file as described above.
+> For example, if the back-end system is based on SAP NetWeaver 7.51 or lower \(SAP S/4HANA\) or on SAP NetWeaver 7.67 or lower \(SAP S/4HANA Cloud Public Edition\), you can't add `UI.ReferenceFacet` in the back end. In such a case, a modification to the *Reference Facet* label is only possible by modifying the local annotation file as described above.
 
 
 
@@ -146,7 +146,7 @@ Key
 </th>
 <th valign="top">
 
-Default Text in SAP Fiori Elements
+Default Text in SAP Fiori elements 
 
 </th>
 <th valign="top">
@@ -168,7 +168,7 @@ Also delete objects with unsaved changes.
 </td>
 <td valign="top">
 
-This message is displayed in a delete confirmation dialog when a user select multiple objects, out of which few have unsaved changes from other users. This confirmation dialog offers a check box to include or exclude the objects with unsaved changes from other users.
+Text displayed in the delete dialog when a user selects multiple objects, some of which have unsaved changes from other users. This dialog provides a checkbox that allows users to include or exclude these objects with unsaved changes.
 
 </td>
 </tr>
@@ -185,7 +185,7 @@ Delete the selected objects?
 </td>
 <td valign="top">
 
-Text displayed within the delete confirmation dialog that comes up when a user selects all active or own draft objects from the list report.
+Text displayed in the delete dialog when a user selects all active objects or their own draft objects from the list report.
 
 </td>
 </tr>
@@ -204,7 +204,7 @@ Delete anyway?
 </td>
 <td valign="top">
 
-Text displayed within the delete confirmation dialog that comes up when a user selects an object that include unsaved changes made by another user. The user can still delete the object.
+Text displayed in the delete dialog when a user selects an object that include unsaved changes made by another user. The user can still delete the object.
 
 </td>
 </tr>
@@ -223,7 +223,7 @@ Delete them anyway?
 </td>
 <td valign="top">
 
-Text displayed within the delete confirmation dialog that comes up when a user selects more than one object that includes unsaved changes made by another user. The user can still delete the object.
+Text displayed in the delete dialog when a user selects more than one object that includes unsaved changes made by another user. The user can still delete the object.
 
 </td>
 </tr>
@@ -240,7 +240,7 @@ This object cannot be deleted. It is currently locked by \{1\}.
 </td>
 <td valign="top">
 
-Message text used in the confirmation message box when a user selects an object that is locked by another user.
+Text displayed in the confirmation message box when a user selects an object that is locked by another user.
 
 </td>
 </tr>
@@ -257,7 +257,7 @@ This object cannot be deleted.
 </td>
 <td valign="top">
 
-Message text used in the confirmation message box when a user tries to delete an object that is non-deletable.
+Text displayed in the confirmation message box when a user tries to delete an object that is non-deletable.
 
 </td>
 </tr>
@@ -274,7 +274,7 @@ The selected objects are currently locked by other users and cannot be deleted.
 </td>
 <td valign="top">
 
-Message text used in the confirmation message box when a user select multiple objects that are all locked by another user and tries to delete them.
+Text displayed in the confirmation message box when a user selects multiple objects that are locked by another user and tries to delete them.
 
 </td>
 </tr>
@@ -291,7 +291,7 @@ Message text used in the confirmation message box when a user select multiple ob
 </td>
 <td valign="top">
 
-Text displayed within the delete confirmation dialog when a user tries to delete the selected records, out of which some objects can't be deleted.
+Text displayed in the delete dialog when a user tries to delete the selected records, but some of the objects can't be deleted.
 
 </td>
 </tr>
@@ -308,7 +308,7 @@ Text displayed within the delete confirmation dialog when a user tries to delete
 </td>
 <td valign="top">
 
-Text displayed within the delete confirmation dialog when some of the selected objects are locked by other users and can't be deleted.
+Text displayed in the delete dialog when some of the selected objects are locked by other users and can't be deleted.
 
 </td>
 </tr>
@@ -325,7 +325,7 @@ Do you still want to delete the remaining object?
 </td>
 <td valign="top">
 
-Text displayed within the confirmation dialog when a user select some objects that are either locked or cannot be deleted. However, one of the selections can be deleted.
+Text displayed in the confirmation dialog when a user selects some objects that are either locked or cannot be deleted. However, one of the selections can be deleted.
 
 </td>
 </tr>
@@ -342,7 +342,7 @@ Do you still want to delete the remaining \{0\} objects?
 </td>
 <td valign="top">
 
-Text displayed within the confirmation dialog when a user select some objects that are either locked or cannot be deleted. However, some of the selections can be deleted.
+Text displayed in the confirmation dialog when a user selects some objects that are either locked or cannot be deleted. However, some of the selections can be deleted.
 
 </td>
 </tr>
@@ -361,7 +361,7 @@ Do you still want to delete it?
 </td>
 <td valign="top">
 
-Text displayed within the confirmation dialog when a user select some objects that are either locked or cannot be deleted. However, one of these selections can be deleted but it includes unsaved changes made by another user.
+Text displayed in the confirmation dialog when a user select some objects that are either locked or cannot be deleted. Some of the selected objects can be deleted, but it contains unsaved changes made by another user.
 
 </td>
 </tr>
@@ -380,7 +380,7 @@ Do you still want to delete them?
 </td>
 <td valign="top">
 
-Text displayed within the confirmation dialog when a user select some objects that are either locked or cannot be deleted. However, some of these selections can be deleted but it includes unsaved changes made by another user.
+Text displayed in the confirmation dialog when a user selects some objects that are either locked or cannot be deleted. Some of the selected objects can be deleted, but it contains unsaved changes made by another user.
 
 </td>
 </tr>
@@ -397,7 +397,7 @@ Objects were deleted.
 </td>
 <td valign="top">
 
-Message toast text when deletion of multiple objects is successful.
+Text displayed in the message toast when multiple objects are successfully deleted.
 
 </td>
 </tr>
@@ -414,7 +414,7 @@ The selected object cannot be deleted.
 </td>
 <td valign="top">
 
-Message toast text when an object can't be deleted from back end.
+Text displayed in the message toast when an object can't be deleted from the back end.
 
 </td>
 </tr>
@@ -437,7 +437,7 @@ Key
 </th>
 <th valign="top">
 
-Default Text in SAP Fiori Elements
+Default Text in SAP Fiori elements 
 
 </th>
 <th valign="top">
@@ -476,7 +476,9 @@ New Object
 </td>
 <td valign="top">
 
-Title for the *Create* dialog if `createWithParameterDialog` is configured. Users can change titles to, for example, "Create Order" or "Create Contract".
+Title for the *Create* dialog if `createWithParameterDialog` is configured.
+
+Application developers can set the title to "Create Order" or "Create Contract", for example.
 
 </td>
 </tr>
@@ -546,7 +548,7 @@ Edit \(\{0\}\)
 
 Title for mass edit dialog in the list report page.
 
-Users can change titles to for example "Edit Purchase Orders \(\{0\}\)".
+Application developers can set the title to "Edit Purchase Orders \(\{0\}\)", for example.
 
 </td>
 </tr>
@@ -569,7 +571,7 @@ Key
 </th>
 <th valign="top">
 
-Default Text in SAP Fiori Elements
+Default Text in SAP Fiori elements 
 
 </th>
 <th valign="top">
@@ -593,7 +595,7 @@ If you take over, any changes will be lost.
 </td>
 <td valign="top">
 
-Text displayed within the confirmation dialog when a user clicks *Edit* on the object page that was locked and the lock expired.
+Text displayed in the confirmation dialog when a user clicks *Edit* on the object page that was locked and the lock expired.
 
 </td>
 </tr>
@@ -610,7 +612,7 @@ Your changes have been saved
 </td>
 <td valign="top">
 
-Message toast text when a user chooses to save and the object gets saved successfully.
+Text displayed in a message toast when a user chooses to save and the object is saved successfully.
 
 </td>
 </tr>
@@ -627,7 +629,7 @@ Item created
 </td>
 <td valign="top">
 
-Message toast text when a user successfully creates a sub object or an item.
+Text displayed in a message toast when a user successfully creates a subobject or an item.
 
 </td>
 </tr>
@@ -656,12 +658,12 @@ Appears in the smart table within the object page when data is loading.
 </td>
 <td valign="top">
 
-You haven't made any changes
+You haven't made any changes.
 
 </td>
 <td valign="top">
 
-Message toast text when a user clicks on *Save* and the object has no unsaved changes.
+Text displayed in a message toast when a user clicks *Save* and the object has no unsaved changes.
 
 </td>
 </tr>
@@ -678,7 +680,7 @@ Object was created.
 </td>
 <td valign="top">
 
-Message toast text when an object is successfully created.
+Text displayed in a message box when an object is successfully created.
 
 </td>
 </tr>
@@ -695,7 +697,7 @@ Delete this object \(\{1\} \{2\}\)?
 </td>
 <td valign="top">
 
-Text displayed within the delete confirmation dialog with both the title and description is available for the object and the app is open in the flexible column layout mode.
+Text displayed in the delete dialog when both the title and description are available for the object, and the application is open in flexible column layout mode.
 
 </td>
 </tr>
@@ -712,7 +714,7 @@ Delete Object \{0\}?
 </td>
 <td valign="top">
 
-Text displayed within the delete confirmation dialog when the app is open in the full screen mode and a title is available for the object.
+Text displayed in the delete dialog when a title is available for the object, and the application is open in full screen mode.
 
 </td>
 </tr>
@@ -763,7 +765,7 @@ Delete Item?
 </td>
 <td valign="top">
 
-Text displayed within the delete confirmation dialog when a user select items \(that don't have a title and description defined in the sub object page\) from smart table in the object page, and press delete on the smart table toolbar.
+Text displayed in the delete dialog when a user selects an item from the smart table in the subobject page and clicks *Delete* on the smart table toolbar. This applies to items without a title or description.
 
 </td>
 </tr>
@@ -780,7 +782,7 @@ Delete Item \{1\} \(\{2\}\)?
 </td>
 <td valign="top">
 
-Text displayed within the delete confirmation dialog when the title and description is available and the sub object page is open in the flexible column layout mode.
+Text displayed in the delete dialog when the title and description is available, and the subobject page is open in flexible column layout mode.
 
 </td>
 </tr>
@@ -797,7 +799,7 @@ Delete Item \{0\}?
 </td>
 <td valign="top">
 
-Text displayed within the delete confirmation dialog when a user select items in the object page smart table in the full screen mode, and the title is defined.
+Text displayed in the delete dialog when a user selects an item from the smart table on the object page in full screen mode. This applies to items with a defined title.
 
 </td>
 </tr>
@@ -814,7 +816,7 @@ Delete the selected items?
 </td>
 <td valign="top">
 
-Text displayed within the delete confirmation dialog when a user select items in the object page smart table and choose to delete it.
+Text displayed in the delete dialog when a user selects items from the smart table in the object page and chooses to delete them.
 
 </td>
 </tr>
@@ -831,7 +833,7 @@ Text displayed within the delete confirmation dialog when a user select items in
 </td>
 <td valign="top">
 
-Message toast text when a user successfully deletes multiple items from the object page smart table.
+Text displayed in the message toast when a user successfully deletes multiple items from the smart table in the object page.
 
 </td>
 </tr>
@@ -848,7 +850,7 @@ Message toast text when a user successfully deletes multiple items from the obje
 </td>
 <td valign="top">
 
-Message toast text when a user successfully deletes a single item from the object page smart table.
+Text displayed in the message toast when a user successfully deletes a single item from the smart table on the object page.
 
 </td>
 </tr>
@@ -918,6 +920,8 @@ Item deleted
 
 Message toast text when an item is successfully deleted from the object page table.
 
+Text displayed in the message toast when an item is successfully deleted from the table on the object page.
+
 </td>
 </tr>
 <tr>
@@ -967,7 +971,7 @@ Enter a value for field: \{0\}
 </td>
 <td valign="top">
 
-Text displayed in a message popover when a user has configured the `InsertRestriction` annotation to make certain fields mandatory. This is applicable only in case of non-draft scenarios.
+Text displayed in a message popover when the application developer configures the `InsertRestriction` annotation to make certain fields mandatory. This is applicable only in non-draft scenarios.
 
 </td>
 </tr>
@@ -984,7 +988,7 @@ New Item
 </td>
 <td valign="top">
 
-Title text displayed for the create dialog if `createWithParameterDialog` is configured on an object page table of a non-draft application. Users can change titles to, for example, "Create Sales Order Item".
+Title text displayed in the create dialog when `createWithParameterDialog` is configured on an object page table of a non-draft application. Application developers can change titles to, for example, "Create Sales Order Item".
 
 </td>
 </tr>
@@ -1041,7 +1045,7 @@ Key
 </th>
 <th valign="top">
 
-Default Text in SAP Fiori Elements
+Default Text in SAP Fiori elements 
 
 </th>
 <th valign="top">
@@ -1063,7 +1067,7 @@ Delete this object?
 </td>
 <td valign="top">
 
-Text displayed within the delete confirmation dialog when a user deletes an object \(without an object title\) by clicking *Delete* on the object page header.
+Text displayed in the delete dialog when a user deletes an object by clicking *Delete* on the object page header. This applies to objects without a title.
 
 </td>
 </tr>
@@ -1082,7 +1086,7 @@ If you take over, any changes will be lost.
 </td>
 <td valign="top">
 
-Text displayed within the confirmation dialog when a user selects an object to edit that is locked by another user.
+Text displayed in the confirmation dialog when a user selects an object to edit that is locked by another user.
 
 </td>
 </tr>
@@ -1099,7 +1103,7 @@ Delete Object \{0\}?
 </td>
 <td valign="top">
 
-Text displayed within the delete confirmation dialog when a user deletes an object that has a defined object title.
+Text displayed in the delete dialog when a user deletes an object with a title.
 
 </td>
 </tr>
@@ -1156,7 +1160,7 @@ Key
 </th>
 <th valign="top">
 
-Default Text in SAP Fiori Elements
+Default Text in SAP Fiori elements 
 
 </th>
 <th valign="top">
@@ -1197,7 +1201,7 @@ This object has unsaved changes by \{0\}.
 </td>
 <td valign="top">
 
-When an object has unsaved change from another user, it is indicated by an icon shown in the key field column of the list report, and next to the title in the object page. When the user clicks on the icon, a pop up appears that is shown in this text.
+When an object has unsaved changes from another user, an icon is displayed in the key field column of the list report, and next to the title on the object page. When the user clicks the icon, a popup appears with this message.
 
 </td>
 </tr>
@@ -1232,57 +1236,6 @@ Unnamed Object
 <td valign="top">
 
 The header title for draft objects in edit mode.
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-`NOITEMS_SMARTTABLE` 
-
-</td>
-<td valign="top">
-
-No items available.
-
-</td>
-<td valign="top">
-
-No data text is displayed when there is no data available in the smart table of the object page.
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-`NOITEMS_SMARTTABLE_WITH_FILTER` 
-
-</td>
-<td valign="top">
-
-No items available. Try adjusting the search or filter parameters.
-
-</td>
-<td valign="top">
-
-Text displayed when there is no data available in the smart table of the object page after applying filter.
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-`NOITEMS_SMARTTABLE_WITH_FILTER_FOR_SEGMENTEDBUTTON` 
-
-</td>
-<td valign="top">
-
-There are no items for the selected filter criteria and table view.
-
-</td>
-<td valign="top">
-
-Text displayed when there is no data available in the smart table of the object page with segmented button.
 
 </td>
 </tr>
@@ -1340,6 +1293,210 @@ Text displayed in charts on the analytical list page and object page when no dat
 <tr>
 <td valign="top">
 
+`NOITEMS_LR_SMARTTABLE_ILLUSTRATION_TITLE` 
+
+</td>
+<td valign="top">
+
+There are no entries yet
+
+</td>
+<td valign="top">
+
+Title of the illustrated message in the list report table when the table is empty after clicking "Go" without setting any filters.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`NOITEMS_LR_SMARTTABLE_ILLUSTRATION_DESCRIPTION` 
+
+</td>
+<td valign="top">
+
+When there are, you'll see them here
+
+</td>
+<td valign="top">
+
+Description of the illustrated message in the list report table when the table is empty after clicking "Go" without setting any filters.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`NOITEMS_LR_SMARTTABLE_WITH_FILTER_ILLUSTRATION_TITLE` 
+
+</td>
+<td valign="top">
+
+No results found
+
+</td>
+<td valign="top">
+
+Title of the illustrated message displayed in the list report table when no data is found after applying filters.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`NOITEMS_LR_SMARTTABLE_WITH_FILTE_ILLUSTRATION_DESCRIPTION` 
+
+</td>
+<td valign="top">
+
+Try changing your filter criteria.
+
+</td>
+<td valign="top">
+
+Description of the illustrated message displayed in the list report table when no data is found after applying filters.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`NOITEMS_MULTIVIEW_LR_SMARTTABLE_WITH_FILTER_ILLUSTRATION_TITLE` 
+
+</td>
+<td valign="top">
+
+No results found
+
+</td>
+<td valign="top">
+
+Title of the illustrated message in the list report table when no data is found for a view in case of multi-view application.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`NOITEMS_MULTIVIEW_LR_SMARTTABLE_WITH_FILTER_ILLUSTRATION_DESCRIPTION` 
+
+</td>
+<td valign="top">
+
+Try changing the view or filter criteria
+
+</td>
+<td valign="top">
+
+Description of the illustrated message in the list report table when no data is found for a view in case of multi-view application.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`NOITEMS_SMARTTABLE_ILLUSTRATION_TITLE` 
+
+</td>
+<td valign="top">
+
+There are no entries yet
+
+</td>
+<td valign="top">
+
+Title of the illustrated message in the object page table when there is no data available.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`NOITEMS_SMARTTABLE_ILLUSTRATION_DESCRIPTION` 
+
+</td>
+<td valign="top">
+
+When there are, you'll see them here.
+
+</td>
+<td valign="top">
+
+Description of the illustrated message in the object page table when there is no data available.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`NOITEMS_SMARTTABLE_WITH_FILTER_ILLUSTRATION_TITLE` 
+
+</td>
+<td valign="top">
+
+No results found
+
+</td>
+<td valign="top">
+
+Title of the illustrated message in the object page table when there is no data available after applying the filters.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`NOITEMS_SMARTTABLE_WITH_FILTER_ILLUSTRATION_DESCRIPTION` 
+
+</td>
+<td valign="top">
+
+Try changing your filter criteria.
+
+</td>
+<td valign="top">
+
+Description of the illustrated message in the object page table when there is no data available after applying the filters.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`NOITEMS_SMARTTABLE_WITH_FILTER_FOR_SEGMENTEDBUTTON_ILLUSTRATION_TITLE` 
+
+</td>
+<td valign="top">
+
+No results found
+
+</td>
+<td valign="top">
+
+Title of the illustrated message shown when the object page table with segmented buttons has no data in the selected view.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`NOITEMS_SMARTTABLE_WITH_FILTER_FOR_SEGMENTEDBUTTON_ILLUSTRATION_DESCRIPTION` 
+
+</td>
+<td valign="top">
+
+Try changing the view or filter criteria.
+
+</td>
+<td valign="top">
+
+Description of the illustrated message shown when the object page table with segmented buttons has no data in the selected view.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
 `SMARTCHART_INITIAL_NODATA` 
 
 </td>
@@ -1351,23 +1508,6 @@ To start, set the relevant filters and choose "Go".
 <td valign="top">
 
 Text displayed in the list report chart when no search is triggered.
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-`NOITEMS_LR_SMARTTABLE` 
-
-</td>
-<td valign="top">
-
-No data found.
-
-</td>
-<td valign="top">
-
-Text displayed in the list report table, when the table is empty after clicking "Go" without setting any filters.
 
 </td>
 </tr>
@@ -1391,40 +1531,6 @@ Text displayed in the list report table, when no search is triggered.
 <tr>
 <td valign="top">
 
-`NOITEMS_LR_SMARTTABLE_WITH_FILTER` 
-
-</td>
-<td valign="top">
-
-No data found. Try adjusting the search or filter criteria.
-
-</td>
-<td valign="top">
-
-Text displayed in the list report table when no data is found after applying filters.
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-`NOITEMS_MULTIVIEW_LR_SMARTTABLE_WITH_FILTER` 
-
-</td>
-<td valign="top">
-
-There is no data for the selected filter criteria and table view.
-
-</td>
-<td valign="top">
-
-Text displayed in the list report table when no data is found for a view in case of multi view application.
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
 `ST_GENERIC_DELETE_WITH_WARNING_SUGGESTION_PLURAL` 
 
 </td>
@@ -1435,7 +1541,7 @@ Hint: To ignore warnings, delete the objects individually.
 </td>
 <td valign="top">
 
-Warning message text on the delete popover when a user tries to delete some of the selected objects in case of multi select delete.
+Warning message text displayed on the delete popover when a user tries to delete multiple items at once, but the deletion cannot proceed because a 412 confirmation is required for some of the selected items.
 
 </td>
 </tr>
@@ -1452,7 +1558,9 @@ Warning message text on the delete popover when a user tries to delete some of t
 </td>
 <td valign="top">
 
-Warning message text on the delete popover informing the user that some of the objects are not deletable as the deletion has failed at backend in case of multi select delete.
+Warning message text on the delete popover informing the user that some of the objects are not deletable as the deletion has failed in the backend in case of multi-select delete.
+
+Warning message text on the delete popover when a user tries to delete multiple objects at once, but the deletion cannot proceed because some objects cannot be deleted as the deletion failed in the backend.
 
 </td>
 </tr>
@@ -1469,7 +1577,7 @@ Some of the objects you selected can't be deleted. Try deleting the objects indi
 </td>
 <td valign="top">
 
-Warning message text on the delete popover in case of multi select delete, informing the user that the deletion has failed at backend for some of the objects and the complete batch is failed as a result of a generic error.
+Warning message text on the delete popover when a user tries to delete multiple objects at once, indicating the deletion has failed in the backend for some objects, and as a result of a genetic error, the entire batch has failed.
 
 </td>
 </tr>
@@ -1486,7 +1594,7 @@ Warning message text on the delete popover in case of multi select delete, infor
 </td>
 <td valign="top">
 
-Message text displayed in case of multi select function import actions, if the action fails at backend.
+Message text displayed for multi-select function import actions, when the action fails in the backend
 
 </td>
 </tr>
@@ -1503,7 +1611,7 @@ The selected objects can't be processed.
 </td>
 <td valign="top">
 
-Message text displayed in case of multi select function import actions, if the action fails at backend for some of the selected objects and as a result, the complete batch has failed.
+Message text displayed for multi-select function import actions. In this case, the action fails in the backend for some of the selected objects, and as a result, the entire batch fails.
 
 </td>
 </tr>
@@ -1520,7 +1628,7 @@ Hint: To ignore warnings, process the objects individually.
 </td>
 <td valign="top">
 
-Message text displayed in case of multi select function import actions, if the action shows a warning for some of the selected objects and as a result, the complete batch has failed.
+Message text displayed for multi-select function import actions. In this case, the action shows a warning for some of the selected objects, and as a result, the entire batch fails.
 
 </td>
 </tr>
@@ -1537,7 +1645,9 @@ The filter \\"\{0\}\\" isn't relevant for the tab \\"\{1\}\\". Setting this filt
 </td>
 <td valign="top">
 
-Text displayed in the message strip above the smart table in the list report when a user set filters that are not relevant for the selected tab in a multi view application, on a desktop or a large screen device.
+Text displayed in the message strip above the smart table in the list report when a user sets filters that aren't relevant for the selected tab in a multi-view application, on a desktop, or a large screen device.
+
+Text displayed in a message strip above the smart table in the list report when a user applies filters that aren't relevant for the selected tab in a multi-view application, on a desktop, or a large-screen device.
 
 </td>
 </tr>
@@ -1554,7 +1664,7 @@ You can't filter by \\"\{0\}\\" on the \\"\{1\}\\" tab.
 </td>
 <td valign="top">
 
-Text displayed in the message strip above the smart table in the list report when a user set filters that are not relevant for the selected tab in a multi view application, on a mobile or a small screen device.
+Text displayed in the message strip above the smart table in the list report when a user selects a filter that isn't relevant for the selected tab in a multi-view application, on a mobile, or a small-screen device.
 
 </td>
 </tr>
@@ -1566,12 +1676,12 @@ Text displayed in the message strip above the smart table in the list report whe
 </td>
 <td valign="top">
 
-Some of the filters aren't relevant for the tab \\"\{1\}\\" \(\{0\}\). Settings these filters has no effect on the results.
+Some of the filters aren't relevant for the tab \\"\{1\}\\" \(\{0\}\). Setting these filters has no effect on the results.
 
 </td>
 <td valign="top">
 
-Text displayed in the message strip above the smart table in the list report when a user select a filter that is not relevant for the selected tab in a multi view application, on a desktop or a large screen device.
+Text displayed in the message strip above the smart table in the list report when a user selects a filter that isn't relevant for the selected tab in a multi-view application, on a desktop, or a large-screen device.
 
 </td>
 </tr>
@@ -1588,7 +1698,7 @@ You can't use the following filters on the \\"\{1\}\\" tab\\: \\"\{0\}\\"
 </td>
 <td valign="top">
 
-Text displayed in the message strip above the smart table in the list report when a user select a filter that is not relevant for the selected tab in a multi view application, on a mobile or a small screen device.
+Text displayed in the message strip above the smart table in the list report when a user selects a filter that isn't relevant for the selected tab in a multi-view application, on a mobile, or a small-screen device.
 
 </td>
 </tr>
@@ -1607,7 +1717,7 @@ What would you like to do?
 </td>
 <td valign="top">
 
-Text displayed within the discard confirmation dialog when a user navigates away from edit draft that has unsaved changes.
+Text displayed within the discard confirmation dialog when a user navigates away while editing a draft with unsaved changes.
 
 </td>
 </tr>
@@ -1673,7 +1783,7 @@ Key
 </th>
 <th valign="top">
 
-Default Text in SAP Fiori Elements
+Default Text in SAP Fiori elements 
 
 </th>
 <th valign="top">
@@ -1729,7 +1839,7 @@ Some of the filters aren't relevant for the tab \\"\{1\}\\" \(\{0\}\). Settings 
 </td>
 <td valign="top">
 
-Text displayed in the message strip when a user select filters and a few of them are not relevant for the selected tab in a multi view application, on a desktop or a large screen device.
+Text displayed in a message strip when a user applies filters, but some of the filters aren't applicable for the selected tab in a multi-view application, on a mobile, or a small-screen device.
 
 </td>
 </tr>
@@ -1746,11 +1856,117 @@ You can't use the following filters on the \\"\{1\}\\" tab\\: \\"\{0\}\\"
 </td>
 <td valign="top">
 
-Text displayed in the message strip when a user select filters and a few of them are not relevant for the selected tab in a multi view application, on a mobile or a small screen device.
+Text displayed in a message strip when a user applies filters, but some of them aren't relevant for the selected tab in a multi-view application, on a mobile, or a small-screen device.
 
 </td>
 </tr>
 </table>
+
+Starting with SAPUI5 version 1.142, illustrated messages replace no data texts. Each of the following no-data keys is replaced by two new illustrated message keys, one for message title and message description:
+
+**Deprecated Keys**
+
+
+<table>
+<tr>
+<th valign="top">
+
+Deprecated Key
+
+</th>
+<th valign="top">
+
+New Keys
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+`NOITEMS_LR_SMARTTABLE` 
+
+</td>
+<td valign="top">
+
+`NOITEMS_LR_SMARTTABLE_ILLUSTRATION_TITLE`
+
+`NOITEMS_LR_SMARTTABLE_ILLUSTRATION_DESCRIPTION`
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`NOITEMS_LR_SMARTTABLE_WITH_FILTER` 
+
+</td>
+<td valign="top">
+
+`NOITEMS_LR_SMARTTABLE_WITH_FILTER_ILLUSTRATION_TITLE`
+
+`NOITEMS_LR_SMARTTABLE_WITH_FILTE_ILLUSTRATION_DESCRIPTION`
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`NOITEMS_MULTIVIEW_LR_SMARTTABLE_WITH_FILTER` 
+
+</td>
+<td valign="top">
+
+`NOITEMS_MULTIVIEW_LR_SMARTTABLE_WITH_FILTER_ILLUSTRATION_TITLE`
+
+`NOITEMS_MULTIVIEW_LR_SMARTTABLE_WITH_FILTER_ILLUSTRATION_DESCRIPTION`
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`NOITEMS_SMARTTABLE` 
+
+</td>
+<td valign="top">
+
+`NOITEMS_SMARTTABLE_ILLUSTRATION_TITLE`
+
+`NOITEMS_SMARTTABLE_ILLUSTRATION_DESCRIPTION`
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`NOITEMS_SMARTTABLE_WITH_FILTER` 
+
+</td>
+<td valign="top">
+
+`NOITEMS_SMARTTABLE_WITH_FILTER_ILLUSTRATION_TITLE`
+
+`NOITEMS_SMARTTABLE_WITH_FILTER_ILLUSTRATION_DESCRIPTION`
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`NOITEMS_SMARTTABLE_WITH_FILTER_FOR_SEGMENTEDBUTTON` 
+
+</td>
+<td valign="top">
+
+`NOITEMS_SMARTTABLE_WITH_FILTER_FOR_SEGMENTEDBUTTON_ILLUSTRATION_TITLE`
+
+`NOITEMS_SMARTTABLE_WITH_FILTER_FOR_SEGMENTEDBUTTON_ILLUSTRATION_DESCRIPTION`
+
+</td>
+</tr>
+</table>
+
+For more in
 
 
 
@@ -1824,7 +2040,7 @@ When you have created your specific application component, standard UI texts are
 
 ### What You Can Override
 
-Applications can currently choose to override any key from the list below. Check the last column in the following table for a recommendation about which default texts to override. Only the keys given in the table are allowed to be overridden by application developers using the custom i18n file approach:
+Applications can choose to override any key from the list below. Check the last column in the following table for a recommendation about which default texts to override. Only the keys given in the table are allowed to be overridden by application developers using the custom i18n file approach:
 
 **Keys You Can Override**
 
@@ -1838,7 +2054,7 @@ Key
 </th>
 <th valign="top">
 
-Default Text in SAP Fiori Elements
+Default Text in SAP Fiori elements
 
 </th>
 <th valign="top">
@@ -2497,7 +2713,7 @@ Also delete objects with unsaved changes by \{0\}?
 </td>
 <td valign="top">
 
-Text used for the checkbox in the delete confirmation dialog to confirm if a user also wants to delete the single object from the selected objects that has changes from other users.
+Text used for the checkbox in the delete dialog to confirm if a user also wants to delete the single object from the selected objects that has changes from other users.
 
 Parameters: \{0\} = user who has unsaved changes on the object.
 
@@ -2523,7 +2739,7 @@ Also delete objects with unsaved changes by other users?
 </td>
 <td valign="top">
 
-Text used for the checkbox in the delete confirmation dialog to confirm if a user also wants to delete those objects from the selected objects that have changes from other users.
+Text used for the checkbox in the delete dialog to confirm if a user also wants to delete those objects from the selected objects that have changes from other users.
 
 </td>
 <td valign="top">
@@ -2577,6 +2793,28 @@ Message toast text when multiple objects have been deleted successfully.
 <td valign="top">
 
 Applications should overwrite the default text with the concrete object.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`C_TRANSACTION_HELPER_SAPFE_ACTION_CREATE` 
+
+</td>
+<td valign="top">
+
+New Object
+
+</td>
+<td valign="top">
+
+Title of the dialog containing the immutable properties of the new object \(if applicable\).
+
+</td>
+<td valign="top">
+
+Applications can override the default title of the dialog.
 
 </td>
 </tr>
@@ -2715,6 +2953,72 @@ Discard Draft
 <tr>
 <td valign="top">
 
+`T_ILLUSTRATED_MESSAGE_TITLE_BEFORESEARCH` 
+
+</td>
+<td valign="top">
+
+Let's get some results
+
+</td>
+<td valign="top">
+
+Title of the illustrated message before search has been triggered.
+
+</td>
+<td valign="top">
+
+Applications can overwrite the default text with a more suitable text for their specific use case.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`T_ILLUSTRATED_MESSAGE_TITLE_NOSEARCHRESULTS` 
+
+</td>
+<td valign="top">
+
+No results found
+
+</td>
+<td valign="top">
+
+Title of the illustrated message when search returns no results.
+
+</td>
+<td valign="top">
+
+Applications can overwrite the default text with a more suitable text for their specific use case.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`T_ILLUSTRATED_MESSAGE_TITLE_NODATA` 
+
+</td>
+<td valign="top">
+
+There are no entries yet
+
+</td>
+<td valign="top">
+
+Title of the illustrated message when no data is found.
+
+</td>
+<td valign="top">
+
+Applications can overwrite the default text with a more suitable text for their specific use case.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
 `T_TABLE_AND_CHART_NO_DATA_TEXT`
 
 \(deprecated key: `T_OP_TABLE_AND_CHART_NO_DATA_TEXT`\)
@@ -2722,17 +3026,17 @@ Discard Draft
 </td>
 <td valign="top">
 
-To start, set the relevant filters and choose "Go".
+Start by providing your search or filter criteria.
 
 </td>
 <td valign="top">
 
-Text that is shown on a table and chart when they are loaded but no search has been triggered yet.
+Description of the illustrated message that is shown on a table and chart when they are loaded but no search has been triggered yet.
 
 </td>
 <td valign="top">
 
- 
+Applications can overwrite the default text with a more suitable text for their specific use case.
 
 </td>
 </tr>
@@ -2746,17 +3050,17 @@ Text that is shown on a table and chart when they are loaded but no search has b
 </td>
 <td valign="top">
 
-No data found. Try adjusting the search or filter parameters.
+Try changing your filter criteria.
 
 </td>
 <td valign="top">
 
-Text that is shown on a table and chart when a search is triggered but no data could be found with the current filter settings.
+Description of the illustrated message that is shown on a table and chart when a search is triggered but no data could be found with the current filter settings.
 
 </td>
 <td valign="top">
 
- 
+Applications can overwrite the default text with a more suitable text for their specific use case.
 
 </td>
 </tr>
@@ -2770,12 +3074,12 @@ Text that is shown on a table and chart when a search is triggered but no data c
 </td>
 <td valign="top">
 
-There are no items for the selected filter criteria and view.
+Try changing the view or filter criteria.
 
 </td>
 <td valign="top">
 
-Text that is shown in case of multi-view scenarios when no data is found for the current view.
+Description of the illustrated message that is shown in case of multi-view scenarios when no data is found for the current view.
 
 </td>
 <td valign="top">
@@ -2794,7 +3098,7 @@ Applications can overwrite the default text with a more suitable text for their 
 </td>
 <td valign="top">
 
-No items available.
+When there are, you'll see them here.
 
 </td>
 <td valign="top">
@@ -2845,7 +3149,7 @@ Unnamed Object
 </td>
 <td valign="top">
 
-The object page title can be linked to an editable field. If the user clears the value of this field while editing the object page, and `UI.HeaderInfo.TypeName` is defined, then the page title is set from the text associated to this key.
+The object page title can be bound to an editable field. If the user clears the value of this field while editing the object page, and `UI.HeaderInfo.TypeName` is defined, the page title is set from the text associated to this key. However, if `UI.HeaderInfo.TypeName` is undefined, the title is set to an empty string.
 
 </td>
 <td valign="top">
@@ -3377,6 +3681,28 @@ Text that is shown within the warning message box when some of the selected reco
 <tr>
 <td valign="top">
 
+`C_MASS_EDIT_DIALOG_TITLE` 
+
+</td>
+<td valign="top">
+
+Edit \(\{0\}\)
+
+</td>
+<td valign="top">
+
+Title of the mass edit dialog.
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
 `C_MASS_EDIT_CONFIRM_MESSAGE_DETAIL_REASON` 
 
 </td>
@@ -3761,6 +4087,28 @@ Example: `M_COMMON_TABLE_CREATE|_Items=MyCustomCreateText`
 <tr>
 <td valign="top">
 
+`M_COMMON_TABLE_MASSEDIT` 
+
+</td>
+<td valign="top">
+
+Edit
+
+</td>
+<td valign="top">
+
+*Mass Edit* button text in the table toolbar.
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
 `M_COMMON_TABLE_DELETE` 
 
 </td>
@@ -3826,7 +4174,40 @@ Applications should overwrite the default text with the concrete object.
 
 </td>
 </tr>
+<tr>
+<td valign="top">
+
+`C_COMMON_SUCCESS_MESSAGE`
+
+</td>
+<td valign="top">
+
+\{0\} objects were processed
+
+</td>
+<td valign="top">
+
+When an action is executed on multiple rows in isolated mode and all executions return the same success message, the message is consolidated and shown only once.
+
+This applies only if there are no warnings or errors.
+
+</td>
+<td valign="top">
+
+Applications can use the key in combination with the entity name and the action name as follows:
+
+`C_COMMON_SUCCESS_MESSAGE|<Entity name>|<Action name>`
+
+Example:
+
+`C_COMMON_SUCCESS_MESSAGE|SalesOrder|CreateWithSalesOrderType`
+
+</td>
+</tr>
 </table>
+
+> ### Remember:  
+> When using curly braces together with single quotes, make sure to use an additional set of single quotes to render the message text properly. For more information about message formatting, see the [API Reference](https://ui5.sap.com/#/api/module:sap/base/strings/formatMessage).
 
 The following keys have been deprecated:
 
@@ -3965,7 +4346,7 @@ Changes must be made in the `manifest.json` file of the application. Add `enhanc
 >         "options": {
 >             "settings": {
 >                 "contextPath": "/SalesOrderManage",
->                 "enhanceI18n": "i18n/customSalesOrderLR.properties", // This is the line to be added - it provides Fiori Elements with the name of the custom resource bundle
+>                 "enhanceI18n": "i18n/customSalesOrderLR.properties", // This is the line to be added - it provides Fiori elements with the name of the custom resource bundle
 >                 ...
 >                 ...
 >                 ...

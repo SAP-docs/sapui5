@@ -2,20 +2,22 @@
 
 # Configuring Card Navigation
 
-All cards support navigation, both to a different SAP Fiori application using intent based navigation, and to external applications and websites via a direct URL which opens in a new browser tab. To trigger the navigation, users click or tap on a card header and in some cases, on an item within the card.
+All cards support navigation, both to a different SAP Fiori application using intent based navigation, and to external applications and websites through a direct URL which opens in a new browser tab. To trigger the navigation, users click or tap on a card header and in some cases, on an item within the card.
 
 
 
-Navigation information is taken from the `com.sap.vocabularies.UI.v1.Identification` and
+Navigation information is taken from the `com.sap.vocabularies.UI.v1.Identification`
 
--   `com.sap.vocabularies.UI.v1.DataFieldForIntentBasedNavigation` should be used to define intent based navigation to SAP Fiori application.
+-   `com.sap.vocabularies.UI.v1.DataFieldForIntentBasedNavigation` should be used to define intent-based navigation to SAP Fiori application.
+
 -   `com.sap.vocabularies.UI.v1.DataFieldWithUrl term` should be used to configure navigation to external apps and websites.
+
 
 The recommended way to configure intent-based navigation is to use `DataFieldForIntentBasedNavigation`. However, for navigation to a specific application route that is not configured as target mapping, you can also use `DataFieldWithUrl` to construct the specific application route. The overview page will identify that this is an intent-based navigation and open the application in the relevant context, in the same tab.
 
 Note that information about the single record selected can only be passed on to the navigation destination from list or table cards. To support this option, provide navigation configuration in the `com.sap.vocabularies.UI.v1.LineItem` term used by that specific card.
 
-If more than one navigation record is provided in the `com.sap.vocabularies.UI.v1.Identification` or `com.sap.vocabularies.UI.v1.LineItem` terms, the first one will be used for each term. The navigation records would be sorted according to importance, set in the`com.sap.vocabularies.UI.v1.ImportanceType` annotation, and their order of entry. The `com.sap.vocabularies.UI.v1.Identification` term can be configured in the application manifest file by setting the `identificationAnnotationPath` property with a qualifier, as shown in the example below. If the `identificationAnnotationPath` property is not configured, the `com.sap.vocabularies.UI.v1.Identification` term, without a qualifier, is used.
+If more than one navigation record is provided in the `com.sap.vocabularies.UI.v1.Identification` or `com.sap.vocabularies.UI.v1.LineItem` terms, the first one will be used for each term. The navigation records would be sorted according to importance, set in the`com.sap.vocabularies.UI.v1.ImportanceType` annotation, and their order of entry. The `com.sap.vocabularies.UI.v1.Identification` term can be configured in the application manifest file by setting the `identificationAnnotationPath` property with a qualifier, as shown in the following sample code:
 
 > ### Sample Code:  
 > ```
@@ -41,6 +43,8 @@ If more than one navigation record is provided in the `com.sap.vocabularies.UI.v
 > }
 > ```
 
+If the `identificationAnnotationPath` property is not configured, the `com.sap.vocabularies.UI.v1.Identification` term, without a qualifier, is used.
+
 
 
 <a name="loio530f9e6f66104d5888ade79b5cf417e0__section_h2m_v12_ldb"/>
@@ -51,7 +55,7 @@ Overview pages support navigation breakouts \(extension points\) that let you co
 
 To use navigation breakouts:
 
-1.  Configure your app descriptor for controller extension.
+1.  Configure your `manifest.json` file for controller extension.
 
     > ### Sample Code:  
     > ```
@@ -69,11 +73,11 @@ To use navigation breakouts:
     > ```
 
 2.  In the custom controller, define the `doCustomNavigation` function with following input parameters:
-    -   `Card ID`: Enter a string as defined in the app descriptor
+    -   `Card ID`: Enter a string as defined in the `manifest.json` file.
 
-    -   `Context`: Enter the object that defines the context on click of a card
+    -   `Context`: Enter the object that defines the context on click of a card.
 
-    -   `Navigation Entry`: Enter the object that has standard navigation defined by annotations
+    -   `Navigation Entry`: Enter the object that has standard navigation defined by annotations.
 
 
 3.  Ensure that the `doCustomNavigation` method returns an object that is similar to input `Navigation Entry` and can contain following attributes \(all of type String\):
@@ -115,9 +119,11 @@ To use navigation breakouts:
 
 ## Adding Static Parameters
 
-Static parameters are objects containing key value pairs. They provide navigation parameters during `IntentBasedNavigation` from overview page to an application. To add navigation parameters, define the card settings `staticParameters` in the descriptor file.
+Static parameters are objects containing key value pairs. They provide navigation parameters during `IntentBasedNavigation` from overview page to an application. To add navigation parameters, define the card settings `staticParameters` in the `manifest.json` file.
 
 > ### Sample Code:  
+> `manifest.json`
+> 
 > ```
 > "staticParameters": {
 >               "parameter1": "parameterValue1",

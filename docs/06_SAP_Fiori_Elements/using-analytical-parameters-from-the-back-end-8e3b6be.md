@@ -44,7 +44,7 @@ Analytical parameters are controlled by the `considerAnalyticalParameters` prope
 
 <a name="loio8e3b6be7128344e9bdcfceb3219f0de7__section_v24_gjw_5sb"/>
 
-## More Information
+## Related Links
 
 For more information about SAP Fiori elements for OData V4, see the [Supporting Parameterized Entities](configuring-filter-bars-4bd7590.md#loio4bd7590569c74c61a0124c6e370030f6__suppprting_parameterized_entities_subsection) section in [Configuring Filter Bars](configuring-filter-bars-4bd7590.md).
 

@@ -88,7 +88,7 @@ These samples also work with a relative binding path, when you use them as a tem
 
 ## Complex Syntax for Calculated Fields
 
-Complex \(or "extended"\) syntax can be used for calculated fields in declarative views, such as HTML and XML views. The following examples show how to use the feature:
+Complex \(or "extended"\) syntax can be used for calculated fields in declarative views, such as XML views. The following examples show how to use the feature:
 
 -   You can mix text with calculated fields as follows:
 
@@ -109,17 +109,13 @@ Complex \(or "extended"\) syntax can be used for calculated fields in declarativ
 
     ```
     <mvc:View
-        xmlns:core="sap.ui.core"
         xmlns:mvc="sap.ui.core.mvc"
         xmlns="sap.m"
-        core:require="{globalFormatter: 'my/globalFormatter'}">
-        <Text text="{
-            parts: [
-                {path: 'birthday/day'},
-                {path: 'birthday/month'},
-                {path: 'birthday/year'}
-            ], 
-            formatter: 'globalFormatter'
+        xmlns:core="sap.ui.core"
+        core:require="{sharedFormatter: 'my/sharedFormatter'}">
+        <Text binding="{birthday}" text="{
+            parts: ['day', 'month'], 
+            formatter: 'sharedFormatter'
         }"/>
     ```
 
@@ -130,9 +126,9 @@ Complex \(or "extended"\) syntax can be used for calculated fields in declarativ
 
     ```
     <mvc:View
-        xmlns:core="sap.ui.core"
         xmlns:mvc="sap.ui.core.mvc"
         xmlns="sap.m"
+        xmlns:core="sap.ui.core"
         core:require="{Float: 'sap/ui/model/type/Float'}">
         <Label text="A type test: {path: '/singleEntry/amount', type: 'Float', formatOptions: {minFractionDigits: 1}} EUR"/>
     ```
@@ -171,15 +167,20 @@ This example uses `sap.ui.model.odata.type.DateTimeWithTimezone` to display only
 > ### Example:  
 > ```xml
 > <mvc:View
->     xmlns:core="sap.ui.core"
 >     xmlns:mvc="sap.ui.core.mvc"
 >     xmlns="sap.m"
+>     xmlns:core="sap.ui.core"
 >     core:require="{DateTimeWithTimezone: 'sap/ui/model/odata/type/DateTimeWithTimezone'}">
 >     <!-- 'TimezoneID' refers to an Edm.String property holding the IANA time zone ID -->
 >     <Text text="{
->         formatOptions: {showDate: false, showTime: false},
 >         parts: [{value: null}, {path: 'TimezoneID'}],
->         type: 'DateTimeWithTimezone'
+>         type: 'DateTimeWithTimezone',
+>         formatOptions: {showDate: false, showTime: false}
 >     }"/>
 > ```
+
+**Related Information**  
+
+
+[Binding Syntax](binding-syntax-e2e6f41.md "You bind UI elements to data of a data source by defining a binding path to the model that represents the data source in the app.")
 

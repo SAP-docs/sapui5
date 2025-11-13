@@ -74,7 +74,7 @@ Object Page
 
 Overview Page
 
-[Custom Actions](custom-actions-02fb273.md)
+[Defining Custom Actions](defining-custom-actions-02fb273.md)
 
 </td>
 </tr>
@@ -197,7 +197,7 @@ Analytical List Page
 <tr>
 <td valign="top">
 
-More Information about Actions in the Object Page
+
 
 </td>
 <td valign="top">
@@ -451,28 +451,19 @@ Object Page
 
 ### Generic Actions
 
-In the list report and on the object page, the standard actions *Create* \(+\), *Delete*, and *Edit*, as well as actions that trigger external navigation to related apps, are provided by SAP Fiori elements. You can enable or disable these actions.
+In list reports and object pages, standard actions such as *Create* \(+\), *Delete*, and *Edit*, as well as actions that trigger external navigation to related apps, are provided by SAP Fiori elements. You can enable or disable these actions.
 
-For more information, see:
-
--   [Adding Actions to Tables](adding-actions-to-tables-b623e0b.md)
-
--   [Actions in the List Report](actions-in-the-list-report-993e99e.md)
-
--   [Enabling the Related Apps Button](enabling-the-related-apps-button-8dcfe2e.md)
-
+For more information, see [Adding Actions to Tables](adding-actions-to-tables-b623e0b.md), [Actions in the List Report](actions-in-the-list-report-993e99e.md), [Enabling the Related Apps Button](enabling-the-related-apps-button-8dcfe2e.md)
 
 
 
 ### App-Specific Actions
 
-As an application developer, there are different ways to configure custom actions.
+There are different ways to configure custom actions.
 
 -   Annotation-based actions
 
-    -   Actions that require user confirmation, for example, those for critical actions that can have severe consequences. The system opens a dialog in which the user has to confirm the action.
-
-        For more information, see [Adding Confirmation Popovers for Actions](adding-confirmation-popovers-for-actions-87130de.md).
+    -   Actions that require user confirmation, for example, those for critical actions that can have severe consequences. The system opens a dialog in which the user has to confirm the action. For more information, see[Adding Confirmation Popovers for Actions](adding-confirmation-popovers-for-actions-87130de.md).
 
     -   Actions that require additional user input, for example, an approval comment. The system opens a dialog with one or more entry elements in which the user enters the required data. The system can prefill data, if applicable.
 
@@ -481,7 +472,7 @@ As an application developer, there are different ways to configure custom action
 
 -   Custom actions \(using manifest extension\)
 
-    Application developers can also configure custom actions by changing the `manifest.json` file. For more information, see [Adding Custom Actions Using Extension Points](adding-custom-actions-using-extension-points-7619517.md).
+    You can also configure custom actions by changing the `manifest.json` file. For more information, see [Adding Custom Actions Using Extension Points](adding-custom-actions-using-extension-points-7619517.md).
 
 
 
@@ -529,9 +520,9 @@ Both actions calling OData function imports \(`UI.DataFieldForAction`\) and acti
 
 When you configure navigation buttons, you have two options:
 
--   You can configure the button so that the end user must explicitly select a context \(`RequiresContext=true`\).
+-   Configure the button so that the end user must explicitly select a context \(`RequiresContext=true`\).
 
--   You can configure the button so that the end user doesn't need to select a context \(`RequiresContext=false`\), meaning that the available context is passed.
+-   Configure the button so that the end user doesn't need to select a context \(`RequiresContext=false`\), meaning that the available context is passed.
 
 
 
@@ -584,7 +575,7 @@ The following coding sample shows the annotations for a context-independent acti
 
 ### Context-Dependent Actions for External Navigation
 
-The following coding sample shows the annotations for a context-dependent action for external navigation \(`UI.DataFieldForIntentBasedNavigation`\).
+The following coding sample shows the annotations for a context-dependent action for external navigation \(`UI.DataFieldForIntentBasedNavigation`\):
 
 > ### Sample Code:  
 > XML Annotation
@@ -635,9 +626,7 @@ In SAP Fiori elements for OData V4, it depends on the configuration of the `IsBo
 
 **Grouping of Multiple Invocations of the Same Action Using Multiple Selections in the Table**
 
-Application developers can control the grouping of the multiple invocations of the action for each instance when an action is executed.
-
-To do so, use the `UI.DataFieldForAction` annotation.
+You can control the grouping of the multiple invocations of the action for each instance when an action is executed. To do so, use the `UI.DataFieldForAction` annotation.
 
 > ### Sample Code:  
 > XML Annotation
@@ -702,16 +691,9 @@ UI.OperationGroupingType/Isolated
 </td>
 <td valign="top">
 
--   In SAP Fiori elements for OData V2:
+The request for each selected instance is sent in a separate changeset within a single batch.
 
-    The request for each selected instance is sent in a separate changeset within a single batch.
-
--   In SAP Fiori elements for OData V4:
-
-    The request for each selected instance is sent in a different batch and is processed sequentially.
-
-
-Even if an error occurs for one or more selected instances when an action is executed, the other selected instances are still executed.
+Even if an error occurs for a selected instance, the requests for the other selected instances are still executed.
 
 </td>
 </tr>
@@ -741,9 +723,9 @@ You must ensure that the setting for the total number of requests of OData batch
 
 ### Prefilling Action Parameters with Calculated Default Values
 
-You can calculate default values for action parameters through a back-end function. As a result on the UI, when the user opens the action parameter dialog, the parameter fields are prefilled with the returned values of the back-end function.
+You can calculate default values for action parameters through a back-end function. As a result, when an end user opens the action parameter dialog on the UI, the parameter fields are prefilled with the returned values of the back-end function.
 
-To achieve this, application developers must annotate the action with `Common.DefaultValuesFunction`.
+To achieve this, you must annotate the action with `Common.DefaultValuesFunction`.
 
 > ### Sample Code:  
 > `DefaultValuesFunction` for Function Import Actions
@@ -790,7 +772,7 @@ To achieve this, application developers must annotate the action with `Common.De
 ## Additional Features in SAP Fiori Elements for OData V2
 
 > ### Note:  
-> The overview page only supports micro actions, for example, actions in the quick view cards that open when you click the right-hand side of the stack card. For more information, see [Quick View Cards](quick-view-cards-c4bd35e.md) and [Custom Actions](custom-actions-02fb273.md).
+> The overview page only supports micro actions, for example, actions in the quick view cards that open when you click the right-hand side of the stack card. For more information, see [Quick View Cards](quick-view-cards-c4bd35e.md) and [Defining Custom Actions](defining-custom-actions-02fb273.md).
 
 
 
@@ -818,7 +800,7 @@ Context-dependent function imports provide an `sap:action-for` annotation defini
 
 **Action Parameters for Bound Actions \(Context-Dependent\)**
 
-Bound actions can have parameters that are defined by the backend. If the name of the parameter matches with any property of the bound entity, then the value of that property is used from the selected row. In case of multi select, the action parameters are not filled with the selected context values.
+Bound actions can have parameters that are defined by the back end. If the name of the parameter matches with any property of the bound entity, then the value of that property is used from the selected row. In case of multi select, the action parameters are not filled with the selected context values.
 
 **Unbound Actions \(Context-Independent\)**
 
@@ -835,7 +817,7 @@ Context-independent actions calling OData function imports can be placed in the 
 
 **Action Parameters for Unbound Actions \(Context-Independent\)**
 
-Unbound actions can have parameters that are defined by the backend. All the function import properties are displayed in the action parameter dialog. The action dialog displays a parameter as mandatory if it is marked `'Nullable:false'` in the function import definition.
+Unbound actions can have parameters that are defined by the back end. All the function import properties are displayed in the action parameter dialog. The action dialog displays a parameter as mandatory if it is marked `'Nullable:false'` in the function import definition.
 
 > ### Note:  
 > You can also call function imports with or without input parameters using multiselection in tables.
@@ -855,6 +837,12 @@ For more information, see [Prefilling Fields Using the DefaultValuesFunction](pr
 <a name="loiocbf16c599f2d4b8796e3702f7d4aae6c__section_ntd_h2l_ylb"/>
 
 ## Additional Features in SAP Fiori Elements for OData V4
+
+Even though SAP Fiori elements doesn't apply any special logic based on whether you use a function or an action definition in the back end, you must choose the appropriate option based on your backend capabilities. For example, functions do not support side effects or state messages.
+
+For more information about actions and functions in RAP-based applications, see [Actions](https://help.sap.com/docs/abap-cloud/abap-rap/actions) and [Functions](https://help.sap.com/docs/abap-cloud/abap-rap/functions).
+
+For more information about actions and functions in CAP-based applications, see [**Calling Actions / Functions**](https://cap.cloud.sap/docs/guides/providing-services#calling-actions-functions).
 
 
 
@@ -1772,7 +1760,7 @@ If all the parameters of an action have been hidden by using the `UI.hidden` ann
 
 Actions that have a similar business purpose can be grouped together and rendered in the form of menu buttons. Listing actions \(custom actions from the manifest and actions from annotations\) in the form of menu buttons is possible for header actions, table toolbar actions, and form actions. The footer action doesn't support menu buttons.
 
-In the following screenshot, *My Menu Button* has grouped three actions:
+The following screenshot shows *My Menu Button*, which groups three actions:
 
 -   *My First Action* and *My Second Action* are actions from the `manifest.json` file.
 
@@ -1784,14 +1772,13 @@ In the following screenshot, *My Menu Button* has grouped three actions:
 If a `DataField` action is named `com.c_salesordermanage_sd.BoundActionWithParams`, its corresponding key is `DataFieldForAction::com.c_salesordermanage_sd.BoundActionWithParams`. If the action name contains parentheses, as in `DataFieldForAction::com.c_salesordermanage_sd.BoundActionWithParams(com.c_salesordermanage_sd.SalesOrderManage)`, the corresponding key is `DataFieldForAction::com.c_salesordermanage_sd.BoundActionWithParams::com.c_salesordermanage_sd.SalesOrderManage`.
 
 > ### Note:  
-> -   When all the menu items are disabled, the menu button as a whole is disabled.
+> -   When all menu items are disabled, the menu button is also disabled.
 > 
-> -   When all the menu items are hidden, the menu button as a whole is hidden.
+> -   When all menu items are hidden, the menu button is also hidden.
+> 
+> -   You cannot group standard actions such as *Create*, *Edit*, and *Delete* as menu buttons.
 
-You can create a menu in the following ways:
-
--   By using annotations
--   By using manifest settings
+You can create a menu using annotations and manifest settings.
 
 **Annotation-Based Menus**
 
@@ -1869,11 +1856,11 @@ You can create a menu by using the `DataFieldForActionGroup` annotation, as show
 >    }
 > ```
 
-For information about modifying the menu using the manifest, see the [Overriding Annotation-Based Action Groups Using the Manifest](actions-cbf16c5.md#loiocbf16c599f2d4b8796e3702f7d4aae6c__overriding_action_groups) subsection in this topic.
+For information about modifying the menu using the `manifest.json` file, see the [Overriding Annotation-Based Action Groups Using the Manifest](actions-cbf16c5.md#loiocbf16c599f2d4b8796e3702f7d4aae6c__overriding_action_groups) subsection in this topic.
 
 **Manifest-Based Menus**
 
-Make the following settings in the manifest to group actions under a menu button for header actions:
+To group actions under a menu button for header actions, configure the following settings in the `manifest.json` file
 
 > ### Sample Code:  
 > Grouping Header Actions
@@ -1912,7 +1899,7 @@ Make the following settings in the manifest to group actions under a menu button
 > }
 > ```
 
-Make the following settings in the manifest to group actions under a menu button for form actions:
+To group actions under a menu button for form actions, configure the following settings in the `manifest.json` file
 
 > ### Sample Code:  
 > Grouping Form Actions
@@ -1949,7 +1936,7 @@ Make the following settings in the manifest to group actions under a menu button
 > }
 > ```
 
-Make the following settings in the manifest to group actions under a menu button for table toolbar actions:
+To group actions under a menu button for table toolbar actions, configure the following settings in the `manifest.json` file
 
 > ### Sample Code:  
 > Grouping Table Actions
@@ -1987,10 +1974,10 @@ Make the following settings in the manifest to group actions under a menu button
 > ```
 
 > ### Tip:  
-> If you want to push `DataFieldForIntentBasedNavigation` buttons into the menu, use both the semantic object name and the action name within the manifest entry. This is shown in the following sample code:
+> To push `DataFieldForIntentBasedNavigation` buttons into the menu, use both the semantic object name and the action name within the manifest entry, as shown in the following sample code:
 > 
 > > ### Sample Code:  
-> > Pushing `DataFieldForIntentBasedNavigation` buttons into the menu
+> > Pushing `DataFieldForIntentBasedNavigation` Buttons Into the Menu
 > > 
 > > ```
 > > "MenuActions": {
@@ -2008,7 +1995,7 @@ Make the following settings in the manifest to group actions under a menu button
 
 When you define a default action for a menu button, clicking the button triggers the action directly. This is possible in list reports, object page headers, and forms.
 
-To define a default action, make the following settings in the `manifest.json` file:
+To define a default action, configure the following settings in the `manifest.json` file:
 
 > ### Sample Code:  
 > `manifest.json`
@@ -2029,12 +2016,239 @@ You can either use an already existing entry from the `"menu"` definition, or us
 
 
 
+### Setting a Priority for Actions
+
+You can set a priority for action buttons. It determines the visual importance and overflow behavior of actions in toolbars and headers. The `priority` property is supported for all standard actions and all application-defined actions: header, footer, and form actions, as well as actions in the chart and table toolbars.
+
+> ### Note:  
+> Ensure that emphasized buttons and buttons of primary actions aren't moved into overflow.
+
+The `priority` property can have the following values:
+
+-   `Low`: These actions are the first to be moved into overflow when there is not enough space to show all the actions.
+
+-   `High`: Actions are moved into overflow only when all actions with a `Low` priority have already been moved into overflow.
+
+-   `AlwaysOverflow`: Actions are always only shown in the overflow, even when there is enough space in the toolbar.
+
+-   `NeverOverflow`: Actions are never moved into overflow, and their labels are truncated if there is not enough space.
+
+
+To add priority to an action, set the value of the `priority` property. The following sample code shows how to add priority to custom actions:
+
+> ### Sample Code:  
+> `manifest.json`
+> 
+> ```
+> "PurchaseOrder": {
+>     "type": "Component",
+>     "name": "sap.fe.templates.ObjectPage",
+>     ...,
+>     "options": {
+>         "settings": {
+>             "content": {
+>                 "header": {
+>                     "actions": {
+>                         "MyCustomAction": {
+>                             "text": "CustomActionText",
+>                             "press": ...
+>                             ...
+>                             "priority": "AlwaysOverflow"
+>                         }
+>                     }
+>                 }
+>                 ...
+>             },
+>             "controlConfiguration": {
+>                 "@com.sap.vocabularies.UI.v1.FieldGroup#GeneralInformation": {
+>                     "actions": {
+>                         "MyFormAction": {
+>                             ...
+>                             "priority": "Low"
+>                         }
+>                     }    
+>                 },
+>                 "_Elements/@com.sap.vocabularies.UI.v1.LineItem": {
+>                     "actions": {
+>                         "DataFieldForAction::sap.fe.core.ActionAllAreas.CopyAction::sap.fe.core.ActionAllAreas.SubElement": {
+>                             "priority": "{priorityValue}" // dynamic value from the "priorityValue" property
+>                         },
+>                         "TableCustomAction": {
+>                             ...
+>                             "priority": "NeverOverflow"
+>                         }
+>                     }
+>                 }
+>             }
+>         }
+>     }
+> }
+> ```
+
+You can also set the priority for standard actions. The following code sample shows how to set it for standard actions in an object page header and table:
+
+> ### Sample Code:  
+> `manifest.json`
+> 
+> ```
+> "OrdersList": {
+>     "type": "Component",
+>     ...
+>     "options": {
+>         "settings": {
+>             "content": {
+>                 "header": {
+>                     "actions": {
+>                         "EditAction": {
+>                             "priority": "{Priority}"
+>                         },
+>                         "DeleteAction": {
+>                             "priority": "AlwaysOverflow"
+>                         }
+>                     }
+>                 }
+>             },
+>             "controlConfiguration": {
+>                 "_Elements/@com.sap.vocabularies.UI.v1.LineItem": {
+>                     "actions": {
+>                         "StandardAction::Create": {
+>                            "priority": "AlwaysOverflow"
+>                         },
+>                         "StandardAction::Delete": {
+>                            "priority": "AlwaysOverflow"
+>                         }
+>                     }
+>                 }
+>             }
+>         }
+>     }
+> }
+> ```
+
+> ### Restriction:  
+> The priority of the standard *Share* action can't be overridden.
+
+You can also set the priority for action menus in the same way as described for actions. If you do that, the priority of each action within the menu is ignored, and the entire action menu is moved into overflow at the same time.
+
+
+
+### Grouping Actions for the Overflow
+
+You can group actions to define how they're displayed in the toolbar and overflow. When there's not enough space in the toolbar to display all grouped actions, they are moved together into overflow. When there's enough space, they are displayed together in the toolbar.
+
+> ### Note:  
+> Ensure that emphasized buttons and buttons of primary actions aren't moved into overflow.
+
+All actions in a group must have the same `priority`. Grouping isn't applicable to actions that have their `priority` set to `AlwaysOverflow` or `NeverOverflow`, because they are never moved between the toolbar and overflow.
+
+The `overflowGroup` property is supported for all standard actions and all application-defined actions: header, footer, and form actions, as well as actions in the chart and table toolbars.
+
+To group actions together, ensure that all the actions belonging to the same group have the same value for the `overflowGroup` property in the `manifest.json` file.
+
+> ### Sample Code:  
+> `manifest.json`
+> 
+> ```
+> "PurchaseOrder": {
+>     "type": "Component",
+>     "name": "sap.fe.templates.ObjectPage",
+>     ...,
+>     "options": {
+>         "settings": {
+>             "content": {
+>                 "header": {
+>                     "actions": {
+>                         "MyCustomAction1": {
+>                             ...
+>                             "priority": "High",
+>                             "overflowGroup": "1"
+>                         },
+>                         "MyCustomAction2": {
+>                             ...
+>                             "overflowGroup": "1"
+>                         }
+>                     }
+>                 }
+>                 ...
+>             },
+>             ...
+> ```
+
+> ### Note:  
+> -   When you group actions using the `overflowGroup` property, they aren't visually separated in the toolbar and overflow.
+> 
+> -   You can also add action menus to groups. If you do that, the value of the `overflowGroup` property set for actions within the menu is ignored.
+
+
+
+### Enabling Separators for Grouped Actions
+
+You can show a separator before groups of actions in a table toolbar by combining action groups \(`overflowGroup`\) with the `overflowGroups` manifest setting.
+
+Actions are grouped when they share the same `overflowGroup`. You can group actions to define how they're displayed in the toolbar and overflow. When there's not enough space in the toolbar to display all grouped actions, they are moved together into overflow. When there's enough space, they are displayed together in the toolbar.
+
+> ### Note:  
+> `overflowGroup` must be an integer.
+
+To add a separator before a group, add an entry in `overflowGroups` where the key is the string form of the `overflowGroup` value and set `showSeparator` to `true` as shown in the following sample code:
+
+> ### Sample Code:  
+> `manifest.json`
+> 
+> ```
+> "actions": {
+>     "MyCustomAction1": {
+>         "text": "Approve",
+>         "priority": "Medium",
+>         "overflowGroup": 1
+>     },
+>     "MyCustomAction2": {
+>         "text": "Reject",
+>         "overflowGroup": 1
+>     },
+>     "MyCustomAction3": {
+>         "text": "Export",
+>         "overflowGroup": 2
+>     }
+> },
+> "overflowGroups": {
+>     "1": {
+>         "showSeparator": true 
+>     },
+>     "2": {
+>         "showSeparator": true
+>     }
+> }
+> ```
+
+The separator appears before the first visible action of the group, as shown in the following screenshot:
+
+  
+  
+**Separators for Grouped Actions**
+
+![](images/Toolbar_Separators_for_Grouped_Actions_cf70841.png "Separators for Grouped Actions")
+
+The separator isn't shown if the group is the first set of actions in the toolbar, because there are no preceding actions to separate.
+
+> ### Tip:  
+> We recommend that you don't use separators if the actions have `priority` settings. If any group has a higher `priority` setting than the actions before it, the separator can appear as the first item in the toolbar when the actions with a lower `priority` setting are moved into overflow.
+
+
+
 ### Overriding Annotation-Based Actions Using the Manifest
 
-For certain properties, you can overwrite the annotation-based values using the manifest.
+For the following properties, you can override the annotation-based values using the manifest:
+
+-   Use the `enabled` property to override enablement that was set using `Core.OperationAvailable`. For more information, see [Core Vocabulary](https://github.com/oasis-tcs/odata-vocabularies/blob/main/vocabularies/Org.OData.Core.V1.md).
+
+-   Use the `visible` property to override visibility that was set using `UI.Hidden`. For more information, see [UI Vocabulary](https://github.com/SAP/odata-vocabularies/blob/main/vocabularies/UI.md).
+
+-   Use the `menu` property to override an annotation-based menu that was set using `UI.DataFieldWithActionGroup`. For more information, see [UI Vocabulary](https://github.com/SAP/odata-vocabularies/blob/main/vocabularies/UI.md).
+
 
 > ### Caution:  
-> By doing so, the annotation-based logic is ignored for the specified action and doesn't consider any default behavior \(like a bound action only being enabled when an item in a table is selected\).
+> If you override these properties, the annotation-based logic of these actions is ignored, and the default behavior \(like a bound action only being enabled when an item in a table is selected\) isn't considered.
 
 > ### Sample Code:  
 > `manifest.json` Configuration for Adjusting an Annotation-Based Action

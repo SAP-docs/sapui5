@@ -17,67 +17,67 @@ A link list card supports the following:
 
 
 
-### Descriptor Settings: Title
+### Manifest Settings: Title
 
 Property: `title`
 
 Description: Configuring this property places the card title on top of the link list card.
 
-**Configuration Sample:**
+> ### Sample Code:  
+> `manifest.json`
+> 
+> ```
+> "sap.ovp": {
+>     "globalFilterModel": "salesOrder",
+>     "globalFilterEntityType": "GlobalFilters", // Deprecated since SAPUI5 1.54.
+>     "globalFilterEntitySet": "GlobalFilters",  // Available from SAPUI5 1.54.
+>     ...
+>     "cards": {
+>         "card005_RecentContacts": {
+>             "model": "purchaseOrder",
+>             "template": "sap.ovp.cards.linklist",
+>             "settings": {
+>                 "title": "Recent Contacts",
+>                 "entitySet": "SalesShare",
+>                 ...
+>             }
+>         }
+>     }
+> }
+> ```
 
-```
-	"sap.ovp": {
-		"globalFilterModel": "salesOrder",
-		"globalFilterEntityType": "GlobalFilters",
-              ...
-              ...
-          "card005_RecentContacts": {
-            "model": "purchaseOrder",
-            "template": "sap.ovp.cards.linklist",
-            "settings": {
-              "title": "Recent Contacts",
-              "entitySet": "SalesShare",
-              ...
-              ...
-              ...
-                }
-              ]
-            }
-          },
-```
 
 
-
-### Descriptor Settings: Subtitle
+### Manifest Settings: Subtitle
 
 Property: `subTitle`
 
 Description: Configuring this property places the card subtitle below the title of the link list card.
 
-**Configuration Sample:**
-
-```
-	"sap.ovp": {
-		"globalFilterModel": "salesOrder",
-		"globalFilterEntityType": "GlobalFilters",
-              ...
-              ...
-		"cards": {
-          "card005_RecentContacts": {
-            "model": "purchaseOrder",
-            "template": "sap.ovp.cards.linklist",
-            "settings": {
-              "title": "Recent Contacts",
-              "targetUri": "https://en.abc.org/wiki/abc_2", \\Link list card header link URI
-              "subTitle": "by Importance of Interaction",
-              "entitySet": "SalesShare",
-              ...
-              ...
-                }
-              ]
-            }
-          },
-```
+> ### Sample Code:  
+> `manifest.json`
+> 
+> ```
+> "sap.ovp": {
+>     "globalFilterModel": "salesOrder",
+>     "globalFilterEntityType": "GlobalFilters", // Deprecated since SAPUI5 1.54
+>     "globalFilterEntitySet": "GlobalFilters", // Available from SAPUI5 1.54
+>     ...
+>     "cards": {
+>         "card005_RecentContacts": {
+>             "model": "purchaseOrder",
+>             "template": "sap.ovp.cards.linklist",
+>             "settings": {
+>                 "title": "Recent Contacts",
+>                 "targetUri": "https://en.abc.org/wiki/abc_2", // Link list card header link URI
+>                 "subTitle": "by Importance of Interaction",
+>                 "entitySet": "SalesShare",
+>                 ...
+>             }
+>         }
+>     }
+> }
+> ```
 
 
 
@@ -85,82 +85,85 @@ Description: Configuring this property places the card subtitle below the title 
 
 Property: `staticContent`
 
-```
-	"sap.ovp": {
-		"globalFilterModel": "salesOrder",
-		"globalFilterEntityType": "GlobalFilters",
-              ...
-              ...
-		"cards": {
-          "card005_RecentContacts": {
-            "model": "purchaseOrder",
-            "template": "sap.ovp.cards.linklist",
-            "settings": {
-              "title": "Recent Contacts",
-              "targetUri": "https://en.wikipedia.org/wiki/Mangalyaan_2",
-              "subTitle": "by Importance of Interaction",
-              "listFlavor": "standard",
-              "sortBy": "Employee",
-              "entitySet": "Zme_Overdue",
-              "sortOrder": "ascending",
-              "defaultSpan": {
-                "rows": 24,
-                "cols": 2,
-                "showOnlyHeader":true
-              },
-              "staticContent": [
-                {
-                  "title": "Jim Smith",
-                  "subTitle": "Sales",
-                  "imageUri": "img/JD.png",
-                  "imageAltText": "Jim Smith",
-                  "targetUri": "https://google.com",
-                  "openInNewWindow": true
-                },
-                {
-                  "title": "Alice Wilson",
-                  "subTitle": "Sales",
-                  "imageUri": "img/AW.png",
-                  "imageAltText": "Jim Smith",
-                  "targetUri": "https://google.com",
-                  "openInNewWindow": true
-                },
-                {
-                  "title": "Daniel Quote",
-                  "subTitle": "Production",
-                  "imageUri": "img/DQ.png",
-                  "imageAltText": "Jim Smith",
-                  "targetUri": "https://google.com",
-                  "openInNewWindow": true
-                },
-                {
-                  "title": "Kate Holly",
-                  "subTitle": "Sales",
-                  "imageUri": "img/Kate.png",
-                  "imageAltText": "Jim Smith",
-                  "targetUri": "https://google.com",
-                  "openInNewWindow": true
-                },
-                {
-                  "title": "Aurora Smith",
-                  "subTitle": "HR",
-                  "imageUri": "img/KJ.png",
-                  "imageAltText": "Jim Smith",
-                  "targetUri": "https://google.com",
-                  "openInNewWindow": true
-                },
-                {
-                  "title": "Wong Lee",
-                  "subTitle": "Management",
-                  "imageUri": "img/YM.png",
-                  "imageAltText": "Jim Smith",
-                  "targetUri": "https://google.com",
-                  "openInNewWindow": true
-                }
-              ]
-            }
-          },
-```
+> ### Sample Code:  
+> ```
+> "sap.ovp": {
+>     "globalFilterModel": "salesOrder",
+>     "globalFilterEntityType": "GlobalFilters", //Deprecated since SAPUI5 1.54
+>     "globalFilterEntitySet": "GlobalFilters",  //Available from SAPUI5 1.54
+>     ...
+>     "cards": {
+>         "card005_RecentContacts": {
+>             "model": "purchaseOrder",
+>             "template": "sap.ovp.cards.linklist",
+>             "settings": {
+>                 "title": "Recent Contacts",
+>                 "targetUri": "https://en.wikipedia.org/wiki/Mangalyaan_2",
+>                 "subTitle": "by Importance of Interaction",
+>                 "listFlavor": "standard",
+>                 "sortBy": "Employee",
+>                 "entitySet": "Zme_Overdue",
+>                 "sortOrder": "ascending",
+>                 "defaultSpan": {
+>                     "rows": 24,
+>                     "cols": 2,
+>                     "showOnlyHeader": true
+>                 },
+>                 "staticContent": [
+>                     {
+>                         "title": "Jim Smith",
+>                         "subTitle": "Sales",
+>                         "imageUri": "img/JD.png",
+>                         "imageAltText": "Jim Smith",
+>                         "targetUri": "https://google.com",
+>                         "openInNewWindow": true
+>                     },
+>                     {
+>                         "title": "Alice Wilson",
+>                         "subTitle": "Sales",
+>                         "imageUri": "img/AW.png",
+>                         "imageAltText": "Alice Wilson",
+>                         "targetUri": "https://google.com",
+>                         "openInNewWindow": true
+>                     },
+>                     {
+>                         "title": "Daniel Quote",
+>                         "subTitle": "Production",
+>                         "imageUri": "img/DQ.png",
+>                         "imageAltText": "Daniel Quote",
+>                         "targetUri": "https://google.com",
+>                         "openInNewWindow": true
+>                     },
+>                     {
+>                         "title": "Kate Holly",
+>                         "subTitle": "Sales",
+>                         "imageUri": "img/Kate.png",
+>                         "imageAltText": "Kate Holly",
+>                         "targetUri": "https://google.com",
+>                         "openInNewWindow": true
+>                     },
+>                     {
+>                         "title": "Aurora Smith",
+>                         "subTitle": "HR",
+>                         "imageUri": "img/KJ.png",
+>                         "imageAltText": "Aurora Smith",
+>                         "targetUri": "https://google.com",
+>                         "openInNewWindow": true
+>                     },
+>                     {
+>                         "title": "Wong Lee",
+>                         "subTitle": "Management",
+>                         "imageUri": "img/YM.png",
+>                         "imageAltText": "Wong Lee",
+>                         "targetUri": "https://google.com",
+>                         "openInNewWindow": true
+>                     }
+>                 ]
+>             }
+>         }
+>     }
+> }
+> ```
 
 
 

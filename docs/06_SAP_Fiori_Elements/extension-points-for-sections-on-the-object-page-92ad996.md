@@ -10,9 +10,9 @@ You define application-specific sections in the form of annotations. However, in
 > After you've created an app extension, its display \(for example, control placement and layout\) and system behavior \(for example, model and binding usage, busy handling\) lies within the application's responsibility. SAP Fiori elements provides support only for the official `extensionAPI` functions. Don't access or manipulate controls, properties, models, or other internal objects created by the SAP Fiori elements framework.
 
 > ### Tip:  
-> In SAP Fiori elements for OData V2, you use the term `facet` to add a section to the object page in the `manifest.json`.
+> In SAP Fiori elements for OData V2, you use the term `facet` to add a section to the object page in the `manifest.json` file.
 > 
-> In SAP Fiori elements for OData V4, you use the term `section` to add a section to the object page in the `manifest.json`.
+> In SAP Fiori elements for OData V4, you use the term `section` to add a section to the object page in the `manifest.json` file.
 
 
 
@@ -31,7 +31,7 @@ On the object page, you can use extension points to add additional sections in t
 
 You need to specify the section in the form of its annotation path. In addition, you must specify the `entitySet` name, as the same annotation path may exist for various entity sets.
 
-You add this information to the `manifest.json` file, as in these examples:
+You add this information to the `manifest.json` file, as shown in the following sample code:
 
 ```
 
@@ -96,14 +96,14 @@ For more information, see [View Extension](../08_Extending_SAPUI5_Applications/v
 
 Custom sections provide the following features:
 
--   adding arbitrary sections via an `xmlfragment` definition
+-   adding arbitrary sections through an `xmlfragment` definition
 
 -   positioning relative to sections defined by facets or other custom facets
 
 -   using a localized section title
 
 
-To define a section on UI level - you do this if you want to add a custom look and feel, or to use controls that are not supported by default - you can extend the settings of the corresponding object page in the `manifest.json` with a **content** block. You can enrich the body of the object page with additional sections. To do so, you define header facets by using a custom key that you later reference by providing the following properties:
+To define a section on UI level - you do this if you want to add a custom look and feel, or to use controls that are not supported by default - you can extend the settings of the corresponding object page in the `manifest.json` file with a **content** block. You can enrich the body of the object page with additional sections. To do so, you define header facets by using a custom key that you later reference by providing the following properties:
 
 -   a title
 
@@ -205,7 +205,7 @@ template
 </td>
 <td valign="top">
 
-Defining the target fragment follows the syntax of defining a fragment via Fragment.load
+Defining the target fragment follows the syntax of defining a fragment through Fragment.load
 
 </td>
 </tr>
@@ -273,7 +273,7 @@ position.anchor\*
 </td>
 <td valign="top">
 
-The key of another section to be used as the placement anchor. Sections defined via the `Facet` annotation can be referenced by its `FacetId`.
+The key of another section to be used as the placement anchor. Sections defined through the `Facet` annotation can be referenced by its `FacetId`.
 
 </td>
 </tr>
@@ -334,9 +334,9 @@ You can use the UI model within the fragment to react to changes of the `editMod
 
 
 
-### Live Example: Custom Section with `FormElement` and `Table` Building Blocks
+### Live Example
 
-You can explore and work with the coding yourself. Check out our live example in the flexible programming model explorer at [Custom Section](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/customElements/customElementsOverview/customSectionContent).
+You can explore and work with the coding yourself. For more information and live examples, see the SAP Fiori development portal at [Standard Floorplans - Extensions - Extensions for Object Pages - Custom Section](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/topic/floorplanObjectPage/customSection).
 
 > ### Note:  
 > -   Ensure that you have a defined `LineItem` service available \(`service.cds` in the linked example\).

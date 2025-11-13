@@ -28,7 +28,7 @@ You can use the `TreeTable` building block to avoid exposing parameters that are
 > 
 > ```
 
-Check out our live example in the flexible programming model explorer at [Table - Tree Table](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/table/treeTable).
+For more information and live examples, see the SAP Fiori development portal at [Building Blocks - Table - Tree Table](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/table/treeTable).
 
 For more information about tree tables, see [Tree Tables](tree-tables-7cf7a31.md).
 

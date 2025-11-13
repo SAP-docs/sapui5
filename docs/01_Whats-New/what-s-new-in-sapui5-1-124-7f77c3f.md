@@ -427,7 +427,7 @@ The following changes and new features are available for SAP Fiori elements for 
 
 -   We now support dynamic expressions in semantic object annotations. For more information, see [Enabling Quick Views for Link Navigation](../06_SAP_Fiori_Elements/enabling-quick-views-for-link-navigation-307ced1.md).
 
--   You can now refresh the count and the view content in a list report while using it in multi-view mode. For more information, see [Multiple Views on List Report Tables](../06_SAP_Fiori_Elements/multiple-views-on-list-report-tables-a37df40.md).
+-   You can now refresh the count and the view content in a list report while using it in multi-view mode. For more information, see [Multiple Views in the List Report](../06_SAP_Fiori_Elements/multiple-views-in-the-list-report-a37df40.md).
 
 -   You can now perform edit operations such as cut and paste, drag and drop, and create on tree tables within a list report or an object page. For more information, see [Tree Tables](../06_SAP_Fiori_Elements/tree-tables-7cf7a31.md).
 
@@ -822,7 +822,7 @@ Feature
 
 You can now use the*dts-generator* tool to generate TypeScript type definitions for any custom SAPUI5 library written in JavaScript. This is the same tool that is used for generating the productive type definitions for SAPUI5 and all its libraries.
 
-For more information, see the [GitHub repo](https://github.com/SAP/ui5-typescript/tree/main/packages/dts-generator) and the [npm package](https://www.npmjs.com/package/@ui5/dts-generator).
+For more information, see the [GitHub repo](https://github.com/UI5/typescript/tree/main/packages/dts-generator) and the [npm package](https://www.npmjs.com/package/@ui5/dts-generator).
 
 <sub>Changed•Feature•Info Only•1.124</sub>
 
@@ -1026,6 +1026,18 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.141](what-s-new-in-sapui5-1-141-a7ed66d.md "With this release SAPUI5 is upgraded from version 1.140 to 1.141.")
+
+[What's New in SAPUI5 1.140](what-s-new-in-sapui5-1-140-26a106c.md "With this release SAPUI5 is upgraded from version 1.139 to 1.140.")
+
+[What's New in SAPUI5 1.139](what-s-new-in-sapui5-1-139-e10db71.md "With this release SAPUI5 is upgraded from version 1.138 to 1.139.")
+
+[What's New in SAPUI5 1.138](what-s-new-in-sapui5-1-138-8f6a92b.md "With this release SAPUI5 is upgraded from version 1.136 to 1.138.")
+
+[What's New in SAPUI5 1.136](what-s-new-in-sapui5-1-136-a82754d.md "With this release SAPUI5 is upgraded from version 1.135 to 1.136.")
+
+[What's New in SAPUI5 1.135](what-s-new-in-sapui5-1-135-93d7630.md "With this release SAPUI5 is upgraded from version 1.134 to 1.135.")
 
 [What's New in SAPUI5 1.134](what-s-new-in-sapui5-1-134-c512d71.md "With this release SAPUI5 is upgraded from version 1.133 to 1.134.")
 

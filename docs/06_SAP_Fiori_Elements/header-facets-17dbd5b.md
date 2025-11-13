@@ -9,7 +9,8 @@ You can use the annotation term `UI.HeaderFacets` to define which information is
 > ### Sample Code:  
 > XML Annotation
 > 
-> ```xml
+> ```
+> 
 > <Annotation Term="UI.HeaderFacets">
 >     <Collection>
 >         ...
@@ -30,20 +31,20 @@ You can use the annotation term `UI.HeaderFacets` to define which information is
 > ABAP CDS Annotation
 > 
 > ```
+> 
 > @UI.Facet: [
->   {
->     targetQualifier: 'Price',
->     type: #DATAPOINT_REFERENCE,
->     purpose: #HEADER
->   },
->   {
->     targetQualifier: 'StockAvailability',
->     targetElement: 'TO_STOCKAVAILABILITY',
->     type: #DATAPOINT_REFERENCE,
->     purpose: #HEADER
->   }
-> ]
-> Test;
+>     {
+>         targetQualifier: 'Price',
+>         type: #DATAPOINT_REFERENCE,
+>         purpose: #HEADER
+>     },
+>     {
+>         targetQualifier: 'StockAvailability',
+>         targetElement: 'TO_STOCKAVAILABILITY',
+>         type: #DATAPOINT_REFERENCE,
+>         purpose: #HEADER
+>     }
+> ]Test;
 > 
 > ```
 
@@ -51,22 +52,24 @@ You can use the annotation term `UI.HeaderFacets` to define which information is
 > CAP CDS Annotation
 > 
 > ```
-> annotate c_salesordermanage_sd.SalesOrderManage with @(UI : {
->             HeaderFacets                                    : [
->                             {
->                                            $Type             : 'UI.ReferenceFacet',
->                                            Label             : 'Price',
->                                            ID                : 'Price',
->                                            Target            : '@UI.DataPoint#Price'
->                             },
->                             {
->                                            $Type             : 'UI.ReferenceFacet',
->                                            Label             : 'Stock Availability',
->                                            ID                : 'StockAvailability',
->                                            Target            : 'to_StockAvailability@UI.DataPoint#StockAvailability'
->                             }
->             ]
-> })
+> Annotate c_salesordermanage_sd.SalesOrderManage with @(
+>     UI : {
+>         HeaderFacets : [
+>             {
+>                 $Type  : 'UI.ReferenceFacet',
+>                 Label  : 'Price',
+>                 ID     : 'Price',
+>                 Target : '@UI.DataPoint#Price'
+>             },
+>             {
+>                 $Type  : 'UI.ReferenceFacet',
+>                 Label  : 'Stock Availability',
+>                 ID     : 'StockAvailability',
+>                 Target : 'to_StockAvailability@UI.DataPoint#StockAvailability'
+>             }
+>         ]
+>     }
+> )
 > 
 > ```
 
@@ -93,39 +96,37 @@ The horizontal scroll container is the default on mobile devices, while the dyna
 To enable the carousel header on desktops, set `"showHeaderAsCarouselOnDesktop": true` in the `manifest.json` file, as shown in the following sample code:
 
 > ### Sample Code:  
-> manifest.json
+> `manifest.json`
 > 
 > ```
+> 
 > "sap.ui.generic.app": {
->        ………
->                 "pages": [
->                     {
->                         "entitySet": "STTA_C_MP_Product",
->                         "component": {
->                             "name": "sap.suite.ui.generic.template.ObjectPage",
->                             "settings": {
->                                 "showHeaderAsCarouselOnDesktop": true,
->                                …….
->                             }
->                         },
->                         "pages": [
->                             {
->                                 "navigationProperty": "to_ProductText",
->                                 "entitySet": "STTA_C_MP_ProductText",
->                                 "component": {
->                                     "name": "sap.suite.ui.generic.template.ObjectPage",
->                                     "settings": {
->                                         "showHeaderAsCarouselOnDesktop": true,
-> 		    ……………
->                                     }
->                                 }
->                             }
->                         ]
+>     ...
+>     "pages": [
+>         {
+>             "entitySet": "STTA_C_MP_Product",
+>             "component": {
+>                 "name": "sap.suite.ui.generic.template.ObjectPage",
+>                 "settings": {
+>                     "showHeaderAsCarouselOnDesktop": true,
+>                     ...
+>                 }
+>             },
+>             "pages": [
+>                 {
+>                     "navigationProperty": "to_ProductText",
+>                     "entitySet": "STTA_C_MP_ProductText",
+>                     "component": {
+>                         "name": "sap.suite.ui.generic.template.ObjectPage",
+>                         "settings": {
+>                             "showHeaderAsCarouselOnDesktop": true,
+>                             ...
+>                         }
 >                     }
->                 ]
->             }
->         ]
->     }
+>                 }
+>             ]
+>         }
+>     ]
 > }
 > 
 > ```

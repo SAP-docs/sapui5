@@ -33,19 +33,5 @@ With SAP Fiori elements, the following navigation options are available and can 
     For more information, see [Configuring External Navigation](configuring-external-navigation-1d4a0f9.md).
 
 
-
-
-<a name="loioa42427550b72436a8bdf53045b06effb__section_u4h_cyf_mtb"/>
-
-## Additional Features in SAP Fiori Elements for OData V2
-
 For information about navigation options for the overview page, see [Configuring Card Navigation](configuring-card-navigation-530f9e6.md).
-
-With SAP Fiori elements, the following navigation options are available and can be configured:
-
--   Internal navigation
-
-    -   Navigation after executing a function
-
-
 

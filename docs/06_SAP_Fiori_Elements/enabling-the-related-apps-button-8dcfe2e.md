@@ -10,7 +10,7 @@ By default, the *Related Apps* button is disabled on object pages created with t
 
 ![](images/Related_Apps_Button_35f231c.png "Related Apps Button")
 
-The *Related Apps* button is displayed on the object page if you set the `showRelatedApps` parameter to `true` in the `manifest.json`.
+The *Related Apps* button is displayed on the object page if you set the `showRelatedApps` parameter to `true` in the `manifest.json` file.
 
 If a user chooses this button, the navigation targets of the given semantic object are displayed. The semantic object is taken from the app that's currently open \(see the hash in the app's URL\). Apps with the same semantic object but different actions are shown in the popover.
 
@@ -64,7 +64,7 @@ For example, you can hide the `displayFactSheet` action associated with related 
 Application developers can add additional links under the "Related Apps" button of the object page header. The links originate from the additional semantic objects defined in the `manifest.json` file.
 
 > ### Note:  
-> Links from additional semantic object are only considered if you have set the `showRelatedApps` parameter to `true` in the `manifest.json`.
+> Links from additional semantic object are only considered if you have set the `showRelatedApps` parameter to `true` in the `manifest.json` file.
 
 
 
@@ -72,40 +72,42 @@ Application developers can add additional links under the "Related Apps" button 
 
 ## Additional Features in SAP Fiori Elements for OData V2
 
-The *Related Apps* button is displayed on the object page if you set the `showRelatedApps` parameter to `true` in the `manifest.json` as shown here:
+The *Related Apps* button is displayed on the object page if you set the `showRelatedApps` parameter to `true` in the `manifest.json` file, as shown in the following sample code:
 
 ```js
-"sap.ui.generic.app": {
-		"pages": [
-			{
-				"entitySet": "SEPMRA_C_PD_Product",
-				"component": {
-					"name": "sap.suite.ui.generic.template.ListReport",
-					"list": true
-				},
-				"pages": [
-					{
-						"entitySet": "SEPMRA_C_PD_Product",
-						"component": {
-							"name": "sap.suite.ui.generic.template.ObjectPage",
-							"settings": {
-								"showRelatedApps": true
-							}
-						},
-						"pages": [
-							{
-								"navigationProperty": "to_ProductText",
-								"entitySet": "SEPMRA_C_PD_ProductText",
-								"component": {
-									"name": "sap.suite.ui.generic.template.ObjectPage"
-								}
-							}
-						]
-					}
-				]
-			}
-		]
-	},	
+{
+  "sap.ui.generic.app": {
+    "pages": [
+      {
+        "entitySet": "SEPMRA_C_PD_Product",
+        "component": {
+          "name": "sap.suite.ui.generic.template.ListReport",
+          "list": true
+        },
+        "pages": [
+          {
+            "entitySet": "SEPMRA_C_PD_Product",
+            "component": {
+              "name": "sap.suite.ui.generic.template.ObjectPage",
+              "settings": {
+                "showRelatedApps": true
+              }
+            },
+            "pages": [
+              {
+                "navigationProperty": "to_ProductText",
+                "entitySet": "SEPMRA_C_PD_ProductText",
+                "component": {
+                  "name": "sap.suite.ui.generic.template.ObjectPage"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
 ```
 
 
@@ -119,41 +121,43 @@ You can configure the `relatedAppsSettings` parameter in the `manifiest.json` fi
 > ### Sample Code:  
 > ```
 > 
-> "sap.ui.generic.app": {
-> 	"pages": [
-> 		{
-> 			"entitySet": "SEPMRA_C_PD_Product",
-> 			"component": {
-> 				"name": "sap.suite.ui.generic.template.ListReport",
-> 				"list": true
-> 			},
-> 			"pages": [
-> 				{
-> 					"entitySet": "SEPMRA_C_PD_Product",
-> 					"component": {
-> 						"name": "sap.suite.ui.generic.template.ObjectPage",
-> 						"settings": {
-> 							"showRelatedApps": true,
-> 							"relatedAppsSettings": {
-> 								"0": {
-> 									"semanticObject": "EPMProduct"
-> 								}
-> 							}
-> 						}
-> 					},
-> 					"pages": [
-> 						{
-> 							"navigationProperty": "to_ProductText",
-> 							"entitySet": "SEPMRA_C_PD_ProductText",
-> 							"component": {
-> 								"name": "sap.suite.ui.generic.template.ObjectPage"
-> 							}
-> 						}
-> 					]
-> 				}
-> 			]
-> 		}
-> 	]
+> {
+>   "sap.ui.generic.app": {
+>     "pages": [
+>       {
+>         "entitySet": "SEPMRA_C_PD_Product",
+>         "component": {
+>           "name": "sap.suite.ui.generic.template.ListReport",
+>           "list": true
+>         },
+>         "pages": [
+>           {
+>             "entitySet": "SEPMRA_C_PD_Product",
+>             "component": {
+>               "name": "sap.suite.ui.generic.template.ObjectPage",
+>               "settings": {
+>                 "showRelatedApps": true,
+>                 "relatedAppsSettings": {
+>                   "0": {
+>                     "semanticObject": "EPMProduct"
+>                   }
+>                 }
+>               }
+>             },
+>             "pages": [
+>               {
+>                 "navigationProperty": "to_ProductText",
+>                 "entitySet": "SEPMRA_C_PD_ProductText",
+>                 "component": {
+>                   "name": "sap.suite.ui.generic.template.ObjectPage"
+>                 }
+>               }
+>             ]
+>           }
+>         ]
+>       }
+>     ]
+>   }
 > }
 > ```
 
@@ -166,47 +170,46 @@ With this setting, all related apps from the app's URL and from the `manifest.js
 You can display multiple semantic objects under the *Related Apps* button in the `manifest.json` file.
 
 > ### Sample Code:  
+> `manifest.json`
+> 
 > ```
-> "sap.ui.generic.app": {
+> 
+> {
+>   "sap.ui.generic.app": {
 >     "pages": [
->         {
+>       {
+>         "entitySet": "SEPMRA_C_PD_Product",
+>         "component": {
+>           "name": "sap.suite.ui.generic.template.ListReport"
+>         },
+>         "pages": [
+>           {
 >             "entitySet": "SEPMRA_C_PD_Product",
 >             "component": {
->                 "name": "sap.suite.ui.generic.template.ListReport",
->             },
->             "pages": [
->                 {
->                     "entitySet": "SEPMRA_C_PD_Product",
->                     "component": {
->                         "name": "sap.suite.ui.generic.template.ObjectPage",
->                         "relatedAppsSettings": {
->                             "": {
->                                 "semanticObject": "",
->                                 "semanticObjectAction": {}
-> 						   }
->                             },
->                             "EPMProduct": {
->                                 "semanticObject": "EPMProduct"
->                             },
->                             "STTA_WD20": {
->                                 "semanticObject": "STTA_WD20",
->                                 "semanticObjectAction": {
->                                     "0": {
->                                         "action": "Multi_View"
->                                     },
->                                     "1": {
->                                         "action": "Tree_Table"
->                                     }
->                                 }
->                             }
->                         }
+>               "name": "sap.suite.ui.generic.template.ObjectPage",
+>               "relatedAppsSettings": {                
+>                 "EPMProduct": {
+>                   "semanticObject": "EPMProduct"
+>                 },
+>                 "STTA_WD20": {
+>                   "semanticObject": "STTA_WD20",
+>                   "semanticObjectAction": {
+>                     "0": {
+>                       "action": "Multi_View"
+>                     },
+>                     "1": {
+>                       "action": "Tree_Table"
 >                     }
+>                   }
 >                 }
->             ]
->         }
+>               }
+>             }
+>           }
+>         ]
+>       }
 >     ]
+>   }
 > }
-> 
 > ```
 
 You must ensure that you define the same semantic object list object-key and there corresponding `semanticObject` value.
@@ -216,6 +219,39 @@ In the code sample for `"semanticObject" : "EPMProduct"`, `semanticObjectAction`
 If `semanticObjectAction` list is defined in the manifest as shown for `"semanticObject": "STTA_WD20"`, then only the ones defined in the list are shown in the related apps. In this case, `SemanticObjectUnavailableActions` annotation is not considered.
 
 If the `semanticObjectAction` list is defined in the manifest as an empty object such as `"semanticObjectAction":{}` provided in the sample code, then no action from the semantic object of the current application is considered.
+
+
+
+### Overriding Related App Settings With Extension API
+
+If the same project is deployed under multiple semantic objects or actions, and the application needs to display related apps based on the deployed semantics environment, you can override the related app settings using `modifyRelatedAppsSettings` extension API in the `manifest.json` file.
+
+See the following sample code about modifying related app settings based on the deployed semantic environment:
+
+> ### Sample Code:  
+> `manifest.json`
+> 
+> ```
+> 
+> modifyRelatedAppsSettings: function (oRelatedAppSetting, sCurrentSemanticObject, sEntityTypeName) {
+>     if (sCurrentSemanticObject === "EPMProduct") {
+>         oRelatedAppSetting = {
+>             ...oRelatedAppSetting,
+>             // adding additional semantic object and action to the existing related app settings.
+>             "EPMSalesOrder": {
+>                 semanticObject: "EPMSalesOrder",
+>                 semanticObjectAction: {
+>                     0: {
+>                         action: "display"
+>                     }
+>                 }
+> 			}
+>         }
+>     }
+>     return oRelatedAppSetting;
+> }
+> 
+> ```
 
 
 
@@ -243,7 +279,7 @@ You can enable this feature through the following settings in the `manifest.json
 ```
 
 > ### Note:  
-> When making a call to the SAP Fiori launchpad to determine the related apps via the `GetLinks` API, SAP Fiori elements passes all the semantic keys - provided they are available. If not all semantic keys are available, then SAP Fiori elements passes all the technical keys.
+> When making a call to the SAP Fiori launchpad to determine the related apps through the `GetLinks` API, SAP Fiori elements passes all the semantic keys - provided they are available. If not all semantic keys are available, then SAP Fiori elements passes all the technical keys.
 
 
 
@@ -287,15 +323,17 @@ To create this mapping, you can use `Common.SemanticObject` and `Common.Semantic
 > CAP CDS Annotation
 > 
 > ```xml
-> entity SalesOrderManage                                                       @(
->     Common       : {
->         SemanticObject                   : 'SalesOrder',
->         SemanticObjectMapping            : [{
->             LocalProperty          : SoldToParty,
->             SemanticObjectProperty : 'Customer'
->         }
->         ]
->     }
+> entity SalesOrderManage
+> @(
+>   Common: {
+>     SemanticObject: 'SalesOrder',
+>     SemanticObjectMapping: [
+>       {
+>         LocalProperty: SoldToParty,
+>         SemanticObjectProperty: 'Customer'
+>       }
+>     ]
+>   }
 > )
 > ```
 

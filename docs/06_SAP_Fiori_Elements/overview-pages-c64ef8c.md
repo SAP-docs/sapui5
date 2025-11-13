@@ -16,21 +16,23 @@ The overview page application contains the following main components:
 
 -   Smart filter: Provides application-level filters for changing the level of data displayed in the cards. For example, you could use the filter to display only transactions larger than $10,000, only items lighter than 50kg, and so on. .
 
--   Cards: A card is a smart component that uses UI annotation to render its content. Each card is bound to a single entity set in a data source. A card may display a donut or bar chart, or a table. Stack cards contain a set of quick view cards, which can be viewed in an object stream. Cards are displayed on the overview page in up to five responsive columns and can be rearranged by dragging and dropping.
+-   Cards: A card is a smart component that uses UI annotations to render its content. Each card is bound to a single entity set in a data source. It may display a donut or bar chart, or a table. Stack cards contain a set of quick view cards, which can be viewed in an object stream. Cards are displayed on the overview page in up to five responsive columns and can be rearranged by dragging and dropping.
 
 
 
 
-Overview page application instances consist of a UI component that extends the overview page application component and a manifest file that contains the application configuration.
+Overview page application instances consist of a UI component that extends the overview page application component and a `manifest.json` file that contains the application configuration.
 
 ![](images/AnnotationOVP_faeb0bd.png)
 
 > ### Note:  
-> When you are using more than one overview page application with the `sap-keep-alive` mode, it is recommended to upgrade the UI5 version to 1.96 or above.
+> When you are using more than one overview page application with the `sap-keep-alive` mode, it is recommended to upgrade the SAPUI5 version to 1.96 or above.
 
 
 
-## More Information
+<a name="loioc64ef8c6c65d4effbfd512e9c9aa5044__section_qkz_q3z_ygc"/>
 
-For more information about the overview page plugin, see [Building an App](building-an-app-9834a0a.md). 
+## Related Links
+
+For more information about the overview page plugin, see [Building an App](building-an-app-9834a0a.md).
 

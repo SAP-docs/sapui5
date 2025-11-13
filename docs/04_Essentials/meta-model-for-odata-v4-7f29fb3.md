@@ -14,7 +14,7 @@ Access to metadata is basically asynchronous \(e.g. `requestObject`\) to allow f
 
 ## Path Syntax
 
-The `requestObject` API documentation in the Demo Kit explains how metadata is accessed and the supported path syntax in great detail. The basic idea is that every path described in the specification [OData Version 4.0 Part 3: Common Schema Definition Language, 14.2.1 Attribute Target](http://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part3-csdl.html) is a valid absolute path within the metadata model if a leading slash is added; for example `"/"` + `"MySchema.MyEntityContainer/MyEntitySet/MyComplexProperty/MyNavigationProperty"`. For more information, see the [requestObject](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataMetaModel/methods/requestObject) API documentation in the Demo Kit.
+The `requestObject` API documentation in the Demo Kit explains how metadata is accessed and the supported path syntax in great detail. The basic idea is that every path described in the specification [OData Common Schema Definition Language \(CSDL\) XML Representation Version 4.01, 14.2.2 Attribute Target](https://docs.oasis-open.org/odata/odata-csdl-xml/v4.01/odata-csdl-xml-v4.01.html#_Toc38530407) is a valid absolute path within the metadata model if a leading slash is added; for example `"/"` + `"MySchema.MyEntityContainer/MyEntitySet/MyComplexProperty/MyNavigationProperty"`. For more information, see the [requestObject](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataMetaModel/methods/requestObject) API documentation in the Demo Kit.
 
 
 
@@ -22,7 +22,7 @@ The `requestObject` API documentation in the Demo Kit explains how metadata is a
 
 The main API for both programmatic access from JavaScript and declarative access from XML templating is `sap.ui.model.odata.v4.ODataMetaModel#getObject`. It works together with `sap.ui.model.odata.v4.ODataMetaModel#resolve` \(for `<template:with>`\) and `sap.ui.model.odata.v4.ODataMetaModel#bindList` \(for `<template:repeat>`\) in order to provide convenient access to annotations, inline as well as external targeting.
 
-The OData meta model knows how to follow "14.2.1 Attribute Target" described in specification "[OData Version 4.0 Part 3: Common Schema Definition Language](http://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part3-csdl.html)" as well as "14.5.2 Expression edm:AnnotationPath", "14.5.11 Expression edm:NavigationPropertyPath", "14.5.12 Expression edm:Path", and "14.5.13 Expression edm:PropertyPath".
+The OData meta model knows how to follow "14.2.2 Attribute Target" described in specification "[OData Common Schema Definition Language \(CSDL\) XML Representation Version 4.01](https://docs.oasis-open.org/odata/odata-csdl-xml/v4.01/odata-csdl-xml-v4.01.html)" as well as "14.4.1.3 Expression edm:AnnotationPath", "14.4.1.5 Expression edm:NavigationPropertyPath", "14.4.1.7 Expression edm:Path", and "14.4.1.6 Expression edm:PropertyPath".
 
 [XML Templating](xml-templating-5ee619f.md) still works the same as for V2, with some slight changes as outlined below:
 
@@ -140,7 +140,7 @@ The module `sap/ui/model/odata/v4/AnnotationHelper` delivers the following compu
 
 -   [`format`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.AnnotationHelper/methods/sap.ui.model.odata.v4.AnnotationHelper.format) helps to convert annotations into corresponding expression bindings, or similar. Compared to `value`, `format` adds type and constraints information to the resulting binding. This is useful, for example, if the XML of the view is cached.
 
-    If you use `format` with a path containing a single "$AnnotationPath" or "$Path" segment, the value corresponding to that segment is considered as a data binding path prefix whenever a dynamic "14.5.12 Expression edm:Path" or "14.5.13 Expression edm:PropertyPath" is turned into a data binding.
+    If you use `format` with a path containing a single "$AnnotationPath" or "$Path" segment, the value corresponding to that segment is considered as a data binding path prefix whenever a dynamic "14.4.1.7 Expression edm:Path" or "14.4.1.6 Expression edm:PropertyPath" is turned into a data binding.
 
     For examples, see [`format`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.AnnotationHelper/methods/sap.ui.model.odata.v4.AnnotationHelper.format).
 
@@ -162,7 +162,7 @@ The module `sap/ui/model/odata/v4/AnnotationHelper` delivers the following compu
     ```
 
 
-Alternatively it can be called on an annotation holding an <code><a href="http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part3-csdl/odata-v4.0-errata03-os-part3-csdl-complete.html#_Toc453752658">edm:Path</a></code> to a property when it is called in the context of an entity type. This is typically the case when iterating over a `com.sap.vocabularies.UI.v1.LineItem` annotation of an entity type and asking for value help on the data fields. See the example regarding `LineItem` of `BusinessPartnerList` \(the relevant parts are repeated here\):
+Alternatively it can be called on an annotation holding an <code><a href="https://docs.oasis-open.org/odata/odata-csdl-xml/v4.01/odata-csdl-xml-v4.01.html#_Toc38530429">edm:Path</a></code> to a property when it is called in the context of an entity type. This is typically the case when iterating over a `com.sap.vocabularies.UI.v1.LineItem` annotation of an entity type and asking for value help on the data fields. See the example regarding `LineItem` of `BusinessPartnerList` \(the relevant parts are repeated here\):
 
 ```xml
 

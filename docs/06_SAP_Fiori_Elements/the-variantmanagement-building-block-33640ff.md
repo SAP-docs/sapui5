@@ -52,7 +52,7 @@ The `for` association enables linking of other flex-enabled controls to the `Var
 
 In the sample code, the table and filter bar controls are linked to the `VariantManagement` building block. Any personalization changes made by the end user to these controls are saved within a user-created variant when the changes are saved to a variant.
 
-Check out our live example in the flexible programming model explorer at [Filter Bar - Table With Variant Management](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/filterBar/filterBarVMWithTable).
+For more information and live examples, see the SAP Fiori development portal at [Building Blocks - Filter Bar - With Variant Management and Chart](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/filterBar/filterBarVMWithChart).
 
 
 

@@ -5,7 +5,7 @@
 You can set the number of expanded levels for tables in List Reports and Analytical List Pages using the `initialExpansionLevel` property of the `PresentationVariant` annotation.
 
 > ### Note:  
-> This topic is currently only applicable to SAP Fiori elements for OData V2.
+> This topic is only applicable to SAP Fiori elements for OData V2.
 
 
 

@@ -54,18 +54,18 @@ Using the `manifest.json`, list report applications can choose to hide this feat
 > ### Sample Code:  
 > ```
 > "sap.ui.generic.app": {
->     "pages": [{
->         "entitySet": "Zfarvd_Bs_Hd_Bo",
->         "component": {
->             "name": "sap.suite.ui.generic.template.ListReport",
->             "list": true,
->             "settings": {
->                 "tableSettings": { 
->                     "addCardtoInsightsHidden": "true" //default value false
->                 }
->             }
->         }
->     }]
+>     "pages": [{
+>         "entitySet": "Zfarvd_Bs_Hd_Bo",
+>         "component": {
+>             "name": "sap.suite.ui.generic.template.ListReport",
+>             "list": true,
+>             "settings": {
+>                 "tableSettings": { 
+>                     "addCardtoInsightsHidden": "true" //default value false
+>                 }
+>             }
+>         }
+>     }]
 > }
 > ```
 
@@ -74,18 +74,18 @@ Similarly, using the `manifest.json`, analytical list page applications can choo
 > ### Sample Code:  
 > ```
 > "sap.ui.generic.app": {
->     "pages": [{
->         "entitySet": "Zfarvd_Bs_Hd_Bo",
->         "component": {
->             "name": "sap.suite.ui.generic.template.AnalyticalListPage",
->             "list": true,
->             "settings": {
->                 "chartSettings": { 
->                     "addCardtoInsightsHidden": "true" //default value false
->                 }
->             }
->         }
->     }]
+>     "pages": [{
+>         "entitySet": "Zfarvd_Bs_Hd_Bo",
+>         "component": {
+>             "name": "sap.suite.ui.generic.template.AnalyticalListPage",
+>             "list": true,
+>             "settings": {
+>                "chartSettings": { 
+>                     "addCardtoInsightsHidden": "true" //default value false
+>                }
+>             }
+>         }
+>     }]
 > }
 > ```
 

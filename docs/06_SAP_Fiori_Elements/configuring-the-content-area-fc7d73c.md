@@ -2,15 +2,18 @@
 
 # Configuring the Content Area
 
-Visualize data from the main entity set and seamlessly navigate to an application. Define a valid `UI.Chart` or `UI.LineItem` annotation to render content for the chart area and table area. For more information, see [Descriptor Configuration for the Analytical List Page](descriptor-configuration-for-the-analytical-list-page-2a9df06.md).
+Visualize data from the main entity set and seamlessly navigate to an application. Define a valid `UI.Chart` or `UI.LineItem` annotation to render content for the chart area and table area. For more information, see [Configuring the Manifest for the Analytical List Page](configuring-the-manifest-for-the-analytical-list-page-2a9df06.md).
 
 
 
 You can choose to view the main entity set data in the following view modes:
 
 -   Table only
+
 -   Chart only
+
 -   Hybrid \(chart and table\)
+
 
 
 
@@ -18,9 +21,9 @@ You can choose to view the main entity set data in the following view modes:
 
 ## Additional Features in SAP Fiori Elements for OData V2
 
-If you've configured the content tile in the descriptor file, the `FilterableKPI` view appears along with the segmented buttons \(Hybrid/Chart/Table\) and the content area tile.
+If you've configured the content tile in the `manifest.json` file, the `FilterableKPI` view appears along with the segmented buttons \(Hybrid/Chart/Table\) and the content area tile.
 
-Configure the `contentTitle` property in the descriptor configuration file to add a title for the content area.
+Configure the `contentTitle` property in the `manifest.json` file to add a title for the content area.
 
 
 

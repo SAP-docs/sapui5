@@ -60,19 +60,48 @@ This file defines the home page of the app. It contains the bootstrap script and
 
 ### `webapp/manifest.json`
 
-The `manifest.json` descriptor file contains the app configuration. In the `sap.app` section, the OData V4 service is configured as the default service:
+The `manifest.json` descriptor file contains the app configuration:
+
+-   In the `sap.app` section, the OData V4 service is configured as the default service.
+-   In the `sap.ui5` section, the OData V4.0 model provided by the default service is configured with the following settings:
+    -   `"preload"`: Whether to enable a preload model, thus improving the startup performance. For more information, see [Manifest Model Preload](../04_Essentials/manifest-model-preload-26ba6a5.md).
+    -   `"autoExpandSelect"`: Whether to automatically generate `$select` and `$expand` system query options for service requests from the binding hierarchy of the OData model. Only data needed for the UI are then selected, leading to a minimal response size and improved performance. For more information, see [Automatic determination of $expand and $select](../04_Essentials/automatic-determination-of-expand-and-select-10ca58b.md).
+    -   `"earlyRequests"`: Whether the root `$metadata` document, the annotation files, and the security token are requested at the earliest convenience to speed up the start of your app or component.For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataModel%23constructor).
+    -   `"operationMode"`: The operation mode for filtering and sorting; only `Server` is supported by the OData V4 model.For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataModel%23constructor).
+
 
 ```json
-"dataSources": {
-	"default": {
-		"uri": "https://services.odata.org/TripPinRESTierService/(S(id))/",
-		"type": "OData",
-		"settings": {
-			"odataVersion": "4.0"
-		}
-	}
+{
+    ...
+    "sap.app": {
+        ...
+        "dataSources": {
+            "default": {
+                "uri": "https://services.odata.org/TripPinRESTierService/(S(id))/",
+                "type": "OData",
+                "settings": {
+                    "odataVersion": "4.0"
+                }
+            }
+        }
+    },
+    ...
+    "sap.ui5": {
+        ...
+        "models": {
+            ...
+            "": {
+                "dataSource": "default",
+                "preload": true,
+                "settings": {
+                    "autoExpandSelect": true,
+                    "earlyRequests": true,
+                    "operationMode": "Server"
+                }
+            }
+        }
+    }
 }
-
 ```
 
 

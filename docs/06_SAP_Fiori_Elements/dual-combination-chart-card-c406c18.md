@@ -4,6 +4,12 @@
 
 A dual combination chart type lets you view individual data points for a particular dimension.
 
+  
+  
+**Example of a Dual Combination Chart Card**
+
+![](images/Dual_Combination_Chart_Card_6fbcb2e.png "Example of a Dual Combination Chart Card")
+
 The chart contains two axis values with a line chart representing the multiple measures.
 
 Chart area configuration:
@@ -64,10 +70,4 @@ Chart area configuration:
 >                     </Record>
 >                 </Annotation>
 > ```
-
-  
-  
-**Example of a Dual Combination Chart Card**
-
-![](images/Dual_Combination_Chart_Card_6fbcb2e.png "Example of a Dual Combination Chart Card")
 

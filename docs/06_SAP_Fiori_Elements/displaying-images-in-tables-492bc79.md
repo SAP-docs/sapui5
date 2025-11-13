@@ -112,7 +112,7 @@ A property containing media data of type **stream**, such as an image, is also s
 > };
 > ```
 
-**Stream** properties are just supported for read-only cases, which means **stream** property data is only read via URL and isn't editable via URL. For more information, see [Stream Properties on OData v4](http://docs.oasis-open.org/odata/odata-json-format/v4.0/os/odata-json-format-v4.0-os.html#_Toc372793075).
+**Stream** properties are just supported for read-only cases, which means **stream** property data is only read from the URL and isn't editable in the URL. For more information, see [Stream Properties on OData v4](http://docs.oasis-open.org/odata/odata-json-format/v4.0/os/odata-json-format-v4.0-os.html#_Toc372793075).
 
 You can also use media data of type **binary** instead of **stream**. The local annotation file only needs to include the property containing the Media Content Type set to `image/<File_Format>`, as shown in the example below:
 

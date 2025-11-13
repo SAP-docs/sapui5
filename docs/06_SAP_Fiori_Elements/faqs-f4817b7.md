@@ -32,7 +32,7 @@ You can get answers to the most frequently asked questions we receive from our u
 
 -   **What are the required libraries when developing an app using SAP Fiori elements for OData V4 or when creating a custom app using the flexible programming model?**
 
-    -   If you use a floorplan such as the list report or the object page, you can simply include `sap.fe.templates` in the `libs` section of your `manifest.json`.
+    -   If you use a floorplan such as the list report page or the object page, you can simply include `sap.fe.templates` in the `libs` section of your `manifest.json`.
 
     -   If you're creating a custom app you need at least `sap.fe.core`, and if you're leveraging the building blocks you also need to declare `sap.fe.macros`.
 
@@ -64,7 +64,7 @@ You can get answers to the most frequently asked questions we receive from our u
     -   To know about navigation links or buttons, see [Navigation from an App \(Outbound Navigation\)](navigation-from-an-app-outbound-navigation-d782acf.md).
 
 
--   **How can I better control the visibility and enablement of controls?** 
+-   **How can I control the visibility and enablement of controls?** 
 
     You can control the visibility and enablement of control using the `UI.Hidden` annotation. For more information, see [Hiding Features Using the UI.Hidden Annotation](hiding-features-using-the-ui-hidden-annotation-ca00ee4.md).
 
@@ -101,7 +101,7 @@ You can get answers to the most frequently asked questions we receive from our u
 
 -   **Why are some messages seen in the footer in a message popover while some are seen in a message dialog?**
 
-    It actually depends on several factors like the message type \(state/transient\), the template used to create the app \(list report/object page, for example\), and even on the page state \(display/edit mode\). For more information, see [Using Messages](using-messages-239b192.md).
+    It actually depends on several factors like the message type \(state/transient\), the template used to create the app \(list report page/object page, for example\), and even on the page state \(display/edit mode\). For more information, see [Using Messages](using-messages-239b192.md).
 
 -   **I need to show a warning message when a user triggers an action to ensure the user confirms that the action really should be executed. Can this be achieved?**
 
@@ -136,7 +136,7 @@ You can get answers to the most frequently asked questions we receive from our u
 
     Yes, you can use the `Common.SemanticObjectUnavailableActions` annotation as described in the [Hiding Unwanted Actions from a Semantic Object](navigation-from-an-app-outbound-navigation-d782acf.md#loiod782acf8bfd74107ad6a04f0361c5f62__hiding_unwanted_actions_subsection) subsection in [Navigation from an App \(Outbound Navigation\)](navigation-from-an-app-outbound-navigation-d782acf.md).
 
--   **Is it possible to directly navigate to an object page or subobject page without loading the list report app?**
+-   **Is it possible to directly navigate to an object page or subobject page without loading the list report page app?**
 
     Yes. Please use the Deep Linking mechanism as described in [Navigation to an App \(Inbound Navigation\)](navigation-to-an-app-inbound-navigation-c337d8b.md).
 
@@ -163,9 +163,9 @@ You can get answers to the most frequently asked questions we receive from our u
 
     Yes, you can group actions under a menu button. For more information, see the [Grouping Actions as Menu Button](actions-cbf16c5.md#loiocbf16c599f2d4b8796e3702f7d4aae6c__grouping_actions_subsection) subsection in [Actions](actions-cbf16c5.md).
 
--   **How do I control the visibility/enablement of the standard *Create* button in a list report table?**
+-   **How do I control the visibility/enablement of the standard *Create* button in a list report page table?**
 
-    You can control the visibility or enablement of the standard *Create* button in a list report table by using the `OperationAvailable` annotation. For more information, see the [Standard Action: Create](actions-in-the-list-report-993e99e.md#loio993e99eae4414b73bc7afef9518c79bf__standard_action_create_subsection) subsection in [Actions in the List Report](actions-in-the-list-report-993e99e.md).
+    You can control the visibility or enablement of the standard *Create* button in a list report page table by using the `OperationAvailable` annotation. For more information, see the [Standard Action: Create](actions-in-the-list-report-993e99e.md#loio993e99eae4414b73bc7afef9518c79bf__standard_action_create_subsection) subsection in [Actions in the List Report](actions-in-the-list-report-993e99e.md).
 
 -   **Can I define app-level critical actions that are shown emphasized rather than the default emphasized buttons such as *Edit* and *Save* of SAP Fiori elements?** 
 
@@ -213,18 +213,14 @@ You can get answers to the most frequently asked questions we receive from our u
     > Wrong Sample Code
     > 
     > ```
-    > <Annotations Target="TestService.CategoryType/CatergoryId">
-    > <Annotation Term="Common.Text" Path="CategoryId"/>
-    > </Annotations>
+    > <Annotations Target="TestService.CategoryType/CatergoryId"><Annotation Term="Common.Text" Path="CategoryId"/></Annotations>
     > ```
 
     > ### Sample Code:  
     > Correct Sample Code
     > 
     > ```
-    > <Annotations Target="TestService.CategoryType/CatergoryId">
-    > <Annotation Term="Common.Text" Path="CategoryDescription"/>
-    > </Annotations>
+    > <Annotations Target="TestService.CategoryType/CatergoryId"><Annotation Term="Common.Text" Path="CategoryDescription"/></Annotations>
     > ```
 
 -   **The values entered in a field with a value help aren't validated. Why?**
@@ -253,23 +249,25 @@ You can get answers to the most frequently asked questions we receive from our u
 
 -   **Why does the table not use the entire available width?**
 
-    With the release of SAPUI5 1.87, SAP Fiori elements automatically calculates the default column width and provides an option to resize the column width in responsive tables, by default. For tables with fewer columns, there's a considerable amount of free space on the right side of the table. However, you can define a specific column width using annotations in the `manifest.json` file to adapt your needs. For more information, see [Setting the Default Column Width](setting-the-default-column-width-a765253.md).
+    With the release of SAPUI5 1.87, SAP Fiori elements automatically calculates the default column width and provides an option to resize the column width in responsive tables, by default.
 
-    SAP Fiori elements also supports several table types. You can show or hide columns of list report and object page tables depending on the screen width. For example, if the browser window is small or the app is running on a device with a small screen, or if you're using the flexible column layout.
+    For tables with fewer columns, there's a considerable amount of free space on the right side of the table. However, you can define a specific column width using annotations in the `manifest.json` file to adapt your needs. For more information, see [Setting the Default Column Width](setting-the-default-column-width-a765253.md).
+
+    SAP Fiori elements also supports several table types. You can show or hide columns of list report page and object page tables depending on the screen width. For example, if the browser window is small or the app is running on a device with a small screen, or if you're using the flexible column layout.
 
     The value of the `UI.Importance` annotation for the field determines which columns are hidden or moved when the screen size is reduced. For more information, see the [Showing or Hiding Columns Based on Importance and Available Screen Size in Responsive Tables](tables-c0f6592.md#loioc0f6592a592e47f9bb6d09900de47412__section_kgk_phh_wpb) section in [Tables](tables-c0f6592.md).
 
 -   **Can I allow users to edit multiple records in one go \(mass edit or bulk edit\)?**
 
-    Yes, you can edit multiple records at a time. For more information, see [Multiple Views on List Report Tables](multiple-views-on-list-report-tables-a37df40.md).
+    Yes, you can edit multiple records at a time. For more information, see [Multiple Views in the List Report](multiple-views-in-the-list-report-a37df40.md).
 
 -   **Can a table be configured to show multiple views?**
 
-    By default, the list report displays only one table. You can configure your list report to display one or more tables next to the main list report table in separate views. The users of your application can switch between the views using an icon tab bar. The tables in the views can be based on any entity in your service. The charts can be based on any entity, as long as it contains aggregatable and groupable properties. For more information, see [Multiple Views on List Report Tables](multiple-views-on-list-report-tables-a37df40.md)
+    By default, the list report page displays only one table. You can configure your list report page to display one or more tables next to the main list report page table in separate views. The users of your application can switch between the views using an icon tab bar. The tables in the views can be based on any entity in your service. The charts can be based on any entity, as long as it contains aggregatable and groupable properties. For more information, see [Multiple Views in the List Report](multiple-views-in-the-list-report-a37df40.md)
 
     On the object page, you can use a segmented button to display different views of the same table. For more information, see [Adding Segmented Buttons to a Table Toolbar](adding-segmented-buttons-to-a-table-toolbar-5532c89.md).
 
--   **In SAP Fiori elements for OData V4, the analytical list report \(ALP\) isn't a separate floorplan, but rather a 'flavor' of the list report. Can I still use a multi-view table?**
+-   **In SAP Fiori elements for OData V4, the analytical list page \(ALP\) isn't a separate floorplan, but rather a 'flavor' of the list report page. Can I still use a multi-view table?**
 
     In the ALP flavor, we allow only multiple views of the same table \(that is, the same table has different filters in each view\). For more information, see [Defining Multiple Views of a Table in an Analytical List Page](defining-multiple-views-of-a-table-in-an-analytical-list-page-664a79a.md).
 
@@ -284,9 +282,9 @@ You can get answers to the most frequently asked questions we receive from our u
 
     In OData V2, the UI has to pass only the required properties in the call and the back end ensures that an aggregation is performed on all the measure properties. In OData V4, the client has to explicitly pass the properties as dimensions or measures when the call is made, thus allowing greater flexibility while using the property. For more information, see the [Enabling Aggregation in the Back End](configuring-charts-653ed0f.md#loio653ed0f4f0d743dbb33ace4f68886c4e__enabling_aggregation_subsection) subsection in [Configuring Charts](configuring-charts-653ed0f.md).
 
--   **Can I use charts in the list report, especially in a draft-based list report and an object page, or is the use of charts limited to the ALP flavor of the list report?**
+-   **Can I use charts on the list report page, especially on a draft-based list report page and object page, or is the use of charts limited to the ALP flavor of the list report page?**
 
-    You can also use charts in the list report and object page floorplans, and also in draft-based apps. In a list report without the ALP flavor, you can only use charts within a multi-view setup.
+    You can also use charts in the list report page and object page floorplans, and also in draft-based apps. On a list report page without the ALP flavor, you can only use charts within a multi-view setup.
 
 
 
@@ -330,7 +328,7 @@ You can get answers to the most frequently asked questions we receive from our u
 
 -   **Where can I see some samples of extensions and building blocks?**
 
-    You can find the examples in the [Flexible Programming Model Explorer](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/overview/introduction).
+    You can find the examples in the [SAP Fiori development portal](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/topic/introduction).
 
 -   **How do I allow a key user to adapt my application?**
 

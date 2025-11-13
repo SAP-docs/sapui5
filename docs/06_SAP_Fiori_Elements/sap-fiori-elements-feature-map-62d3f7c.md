@@ -31,11 +31,11 @@ You can use extension points to extend your generated app during the creation pr
 
 **Filter Usage for *Supported Floorplans* Column in Table** 
 
--   Features available for both OData versions are given without parentheses, as in *List report* and *Object page*.
+-   Features available for both OData versions are given without parentheses, as in *List report page* and *Object page*.
 
--   To search for features available only in SAP Fiori elements for OData V2, choose *List report \(OData V2\)*.
+-   To search for features available only in SAP Fiori elements for OData V2, choose *List report page \(OData V2\)*.
 
--   To search for features available only in SAP Fiori elements for OData V4, choose *List report \(OData V4\)*.
+-   To search for features available only in SAP Fiori elements for OData V4, choose *List report page \(OData V4\)*.
 
 
 
@@ -134,7 +134,7 @@ Add column to a table
 <td valign="top">
 
 -   Analytical list page
--   List report
+-   List report page
 -   Object page
 -   Overview page
 
@@ -178,7 +178,7 @@ width
 
 column
 
-Fieldgroups
+Field groups
 
 UI.FieldGroup
 
@@ -192,7 +192,7 @@ Add card to insights
 </td>
 <td valign="top">
 
--   List report
+-   List report page
 -   Analytical list page
 
 
@@ -214,13 +214,15 @@ Add card to insights
   
 **Add Card to Insights Option in List Report Table Toolbar**
 
-![](images/Add_Cards_to_Insights_New_fe526c6.png "Add Card to Insights Option in List Report Table Toolbar")
+![](images/Add_Cards_to_Insights_New_fe526c6.png "Add Card to Insights Option in List Report Table
+										Toolbar")
 
   
   
 **Add Card to Insights Option in Analytical List Page Chart Toolbar**
 
-![](images/Add_Cards_to_Insights_ALP_401e0b0.png "Add Card to Insights Option in Analytical List Page Chart Toolbar")
+![](images/Add_Cards_to_Insights_ALP_401e0b0.png "Add Card to Insights Option in Analytical List Page Chart
+										Toolbar")
 
 </td>
 <td valign="top">
@@ -247,7 +249,7 @@ Add custom column
 </td>
 <td valign="top">
 
--   List report
+-   List report page
 -   Object page
 
 
@@ -294,7 +296,7 @@ Adaptation
 </td>
 <td valign="top">
 
--   List report
+-   List report page
 -   Object page
 
 
@@ -332,7 +334,7 @@ Analytical table
 <td valign="top">
 
 -   Analytical list page \(OData V2\)
--   List report
+-   List report page
 -   Object page
 
 
@@ -372,7 +374,7 @@ Area micro chart
 <td valign="top">
 
 -   Analytical list page
--   List report
+-   List report page
 -   Object page
 
 
@@ -427,7 +429,7 @@ Avatar
 </td>
 <td valign="top">
 
--   List report
+-   List report page
 -   Object page
 
 
@@ -492,7 +494,8 @@ Breadcrumb
   
 **Navigation Bar, Breadcrumbs and Actions in Header Title of Object Page**
 
-![](images/Breadcrumb_5d56a97.jpg "Navigation Bar, Breadcrumbs and Actions in Header Title of Object Page")
+![](images/Breadcrumb_5d56a97.jpg "Navigation Bar, Breadcrumbs and Actions in Header Title
+										of Object Page")
 
 </td>
 <td valign="top">
@@ -509,9 +512,9 @@ Building blocks
 </td>
 <td valign="top">
 
--   List report \(OData V4\)
+-   List report page \(OData V4\)
 -   Object page \(OData V4\)
--   Anaytical list page \(OData V4\)
+-   Analytical list page \(OData V4\)
 
 
 
@@ -551,6 +554,8 @@ Building blocks
 [The Page Building Block](the-page-building-block-0258650.md)
 
 [The MessageButton Building Block](the-messagebutton-building-block-b365f2a.md)
+
+[The KPITag Building Block](the-kpitag-building-block-a256bff.md)
 
 </td>
 <td valign="top">
@@ -631,7 +636,7 @@ Bullet micro chart
 <td valign="top">
 
 -   Analytical list page
--   List report
+-   List report page
 -   Object page
 
 
@@ -685,7 +690,7 @@ Busy indicator
 <td valign="top">
 
 -   Analytical list page
--   List report
+-   List report page
 -   Object page
 -   Overview page
 
@@ -726,7 +731,7 @@ Button/Action
 <td valign="top">
 
 -   Analytical list page
--   List report
+-   List report page
 -   Object page
 -   Overview page
 
@@ -802,7 +807,7 @@ Canvas page
 </td>
 <td valign="top">
 
--   List report \(OData V2\)
+-   List report page \(OData V2\)
 -   Object page \(OData V2\)
 
 
@@ -875,9 +880,9 @@ cards
 </td>
 <td valign="top">
 
--   List report \(OData V4\)
+-   List report page \(OData V4\)
 -   Object page \(OData V4\)
--   Anaytical list page \(OData V4\)
+-   Analytical list page \(OData V4\)
 
 
 
@@ -928,7 +933,7 @@ Chart/Smart chart
 <td valign="top">
 
 -   Analytical list page
--   List report
+-   List report page
 -   Object page
 -   Overview page
 
@@ -975,7 +980,7 @@ Checkbox
 <td valign="top">
 
 -   Analytical list page
--   List report
+-   List report page
 -   Object page
 -   Overview page
 
@@ -984,7 +989,7 @@ Checkbox
 </td>
 <td valign="top">
 
-[Enabling Multiple Selection in Tables](enabling-multiple-selection-in-tables-116b5d8.md) 
+[Configuring the Selection Mode for Tables](configuring-the-selection-mode-for-tables-116b5d8.md) 
 
 </td>
 <td valign="top">
@@ -1012,6 +1017,42 @@ multiselection
 multiple selection
 
 selectionMode
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Checkbox group
+
+</td>
+<td valign="top">
+
+Object page \(OData V4\)
+
+</td>
+<td valign="top">
+
+[Grouping of Fields](grouping-of-fields-cb1748e.md)
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+  
+  
+**Checkbox Group**
+
+![](images/Checkbox_Group_Vertical_Layout_4e607b1.png "Checkbox Group")
+
+</td>
+<td valign="top">
+
+ 
 
 </td>
 </tr>
@@ -1129,12 +1170,12 @@ Object page
 <tr>
 <td valign="top">
 
-Combine buttons/actions in toolbar
+Combine buttons/actions in the toolbar
 
 </td>
 <td valign="top">
 
--   List report
+-   List report page
 
 
 
@@ -1173,7 +1214,7 @@ Combo box
 <td valign="top">
 
 -   Analytical list page
--   List report
+-   List report page
 -   Object page
 -   Overview page
 
@@ -1223,7 +1264,7 @@ Contact quick view
 </td>
 <td valign="top">
 
--   List report
+-   List report page
 -   Object page
 
 
@@ -1267,8 +1308,8 @@ Context-dependent value help
 <td valign="top">
 
 -   Object page
--   List report
--   Analytical list report
+-   List report page
+-   Analytical list page
 
 
 
@@ -1290,7 +1331,7 @@ Context-dependent value help
 </td>
 <td valign="top">
 
-context dependent fields
+context-dependent fields
 
 context-dependent values
 
@@ -1305,8 +1346,8 @@ Context-dependent actions
 <td valign="top">
 
 -   Object page
--   List report
--   Analytical list report
+-   List report page
+-   Analytical list page
 
 
 
@@ -1341,8 +1382,8 @@ Context Menu
 <td valign="top">
 
 -   Object page
--   List report
--   Analytical list report
+-   List report page
+-   Analytical list page
 
 
 
@@ -1464,7 +1505,7 @@ Currency
 <td valign="top">
 
 -   Analytical list page
--   List report
+-   List report page
 -   Object page
 -   Overview page
 
@@ -1588,7 +1629,7 @@ Custom filter field
 </td>
 <td valign="top">
 
-List report
+List report page
 
 </td>
 <td valign="top">
@@ -1630,7 +1671,7 @@ Custom action
 </td>
 <td valign="top">
 
--   List report
+-   List report page
 -   Object page
 
 
@@ -1675,7 +1716,7 @@ Custom header facet
 </td>
 <td valign="top">
 
--   List report
+-   List report page
 -   Object page
 
 
@@ -1703,13 +1744,15 @@ Custom header facet
   
 **Custom Content in a List Report Header in Expanded Mode**
 
-![](images/Custom_Content_in_List_Report_Header_in_Expand_Mode_51fe3b2.png "Custom Content in a List Report Header in Expanded Mode")
+![](images/Custom_Content_in_List_Report_Header_in_Expand_Mode_51fe3b2.png "Custom Content in a List Report Header in Expanded
+										Mode")
 
   
   
 **Custom Content in a List Report Header in Collapsed Mode**
 
-![](images/Custom_Content_in_List_Report_Header_in_Collapsed_Mode_bd1a51e.png "Custom Content in a List Report Header in Collapsed Mode")
+![](images/Custom_Content_in_List_Report_Header_in_Collapsed_Mode_bd1a51e.png "Custom Content in a List Report Header in Collapsed
+										Mode")
 
   
   
@@ -1891,7 +1934,7 @@ Date/time picker
 <td valign="top">
 
 -   Analytical list page
--   List report
+-   List report page
 -   Object page
 -   Overview page
 
@@ -1944,7 +1987,7 @@ Date picker
 <td valign="top">
 
 -   Analytical list page
--   List report
+-   List report page
 -   Object page
 -   Overview page
 
@@ -1993,7 +2036,7 @@ Date range selection
 <td valign="top">
 
 -   Analytical list page
--   List report
+-   List report page
 -   Object page
 -   Overview page
 
@@ -2047,7 +2090,7 @@ Default sort order in a table
 </td>
 <td valign="top">
 
--   List report
+-   List report page
 -   Object page
 
 
@@ -2088,7 +2131,7 @@ Default values for action parameter dialog
 </td>
 <td valign="top">
 
--   List report
+-   List report page
 -   Object page
 
 
@@ -2131,7 +2174,7 @@ Defining the order of standard actions
 </td>
 <td valign="top">
 
--   List report
+-   List report page
 -   Object page
 
 
@@ -2167,7 +2210,7 @@ Dialog box
 <td valign="top">
 
 -   Analytical list page
--   List report
+-   List report page
 -   Object page
 
 
@@ -2175,11 +2218,11 @@ Dialog box
 </td>
 <td valign="top">
 
-[Adapting Texts in the Delete Dialog Box Using Extensions \(List Report\)](adapting-texts-in-the-delete-dialog-box-using-extensions-list-report-25885b6.md)
+[Adapting Texts in the Delete Dialog Using Extensions \(List Report\)](adapting-texts-in-the-delete-dialog-using-extensions-list-report-25885b6.md)
 
-[Adapting Texts in the Delete Dialog Box \(Object Page Header\)](adapting-texts-in-the-delete-dialog-box-object-page-header-1fd8e52.md)
+[Adapting Texts in the Delete Dialog \(Object Page Header\)](adapting-texts-in-the-delete-dialog-object-page-header-1fd8e52.md)
 
-[Adapting Texts in the Delete Dialog Box \(Object Page with Nested Smart Table\)](adapting-texts-in-the-delete-dialog-box-object-page-with-nested-smart-table-b95adf3.md)
+[Adapting Texts in the Delete Dialog \(Object Page with Nested Smart Table\)](adapting-texts-in-the-delete-dialog-object-page-with-nested-smart-table-b95adf3.md)
 
 [Adapting Texts for Confirmation Dialog Box When Deleting Lines in a Table](adapting-texts-for-confirmation-dialog-box-when-deleting-lines-in-a-table-0d1fbf4.md)
 
@@ -2230,7 +2273,7 @@ Direct edit
 </td>
 <td valign="top">
 
--   List report \(OData V2\)
+-   List report page \(OData V2\)
 -   Object page \(OData V2\)
 
 
@@ -2273,7 +2316,7 @@ Draft handling
 </td>
 <td valign="top">
 
--   List report
+-   List report page
 -   Object page
 
 
@@ -2323,7 +2366,7 @@ Dynamic page layout
 <td valign="top">
 
 -   Analytical list page \(OData V2\)
--   List report
+-   List report page
 -   Overview page
 
 
@@ -2331,7 +2374,7 @@ Dynamic page layout
 </td>
 <td valign="top">
 
-[Descriptor Configuration for the Overview Page](descriptor-configuration-for-the-overview-page-f194b41.md)
+[Configuring the Manifest for the Overview Page](configuring-the-manifest-for-the-overview-page-f194b41.md)
 
 </td>
 <td valign="top">
@@ -2362,7 +2405,7 @@ Editing status
 </td>
 <td valign="top">
 
--   List report
+-   List report page
 -   Object page
 
 
@@ -2449,7 +2492,7 @@ Export to spreadsheet
 </td>
 <td valign="top">
 
--   List report
+-   List report page
 -   Object page
 
 
@@ -2486,9 +2529,9 @@ excel
 </td>
 <td valign="top">
 
--   List report \(OData V4\)
+-   List report page \(OData V4\)
 -   Object page \(OData V4\)
--   Anaytical list page \(OData V4\)
+-   Analytical list page \(OData V4\)
 
 
 
@@ -2539,7 +2582,7 @@ Filter bar
 <td valign="top">
 
 -   Analytical list page
--   List report
+-   List report page
 -   Overview page
 
 
@@ -2557,7 +2600,7 @@ Filter bar
 
 [Configuring the Global Filter](configuring-the-global-filter-73d9693.md)
 
-[Custom Filters](custom-filters-4739893.md)
+[Adding Custom Filters](adding-custom-filters-4739893.md)
 
 [Configuring Filter Bars](configuring-filter-bars-4bd7590.md)
 
@@ -2636,9 +2679,9 @@ visual filter
 </td>
 <td valign="top">
 
--   List report \(OData V4\)
+-   List report page \(OData V4\)
 -   Object page \(OData V4\)
--   Anaytical list page \(OData V4\)
+-   Analytical list page \(OData V4\)
 
 
 
@@ -2701,7 +2744,7 @@ Flexible column layout
 <td valign="top">
 
 -   Analytical list page \(OData V2\)
--   List report
+-   List report page
 -   Object page
 
 
@@ -2740,9 +2783,9 @@ FCL
 </td>
 <td valign="top">
 
--   List report \(OData V4\)
+-   List report page \(OData V4\)
 -   Object page \(OData V4\)
--   Anaytical list page \(OData V4\)
+-   Analytical list page \(OData V4\)
 
 
 
@@ -2789,12 +2832,12 @@ flexible column layout building block
 <tr>
 <td valign="top">
 
-Flexible Programming Model
+SAP Fiori development portal
 
 </td>
 <td valign="top">
 
--   List report \(OData V4\)
+-   List report page \(OData V4\)
 -   Object page \(OData V4\)
 -   Analytical list page \(OData V4\)
 
@@ -2821,14 +2864,17 @@ Flexible Programming Model
 
   
   
-**Flexible Programming Model Explorer**
+**SAP Fiori Development Portal**
 
-
-
-![](images/Flexible_Programming_Model_Explorer_4579202.png)
+![](images/SAP_Fiori_Development_Portal_f3047c7.png "SAP Fiori
+										Development Portal")
 
 </td>
 <td valign="top">
+
+FDP
+
+flexible programming model explorer
 
 FPM
 
@@ -2843,7 +2889,7 @@ Footer toolbar
 <td valign="top">
 
 -   Analytical list page \(OData V2\)
--   List report \(OData V2\)
+-   List report page \(OData V2\)
 -   Object page
 -   Overview page \(OData V2\)
 
@@ -2887,7 +2933,7 @@ Form
 </td>
 <td valign="top">
 
--   List report
+-   List report page
 -   Object page
 
 
@@ -2985,9 +3031,9 @@ Overview page
 </td>
 <td valign="top">
 
--   List report \(OData V4\)
+-   List report page \(OData V4\)
 -   Object page \(OData V4\)
--   Anaytical list page \(OData V4\)
+-   Analytical list page \(OData V4\)
 
 
 
@@ -3035,9 +3081,9 @@ Freeze the first column in a table
 </td>
 <td valign="top">
 
--   List report
+-   List report page
 -   Object page
--   Analytical list report
+-   Analytical list page
 
 
 
@@ -3073,7 +3119,7 @@ Generative AI Features
 </td>
 <td valign="top">
 
--   List report
+-   List report page
 -   Object page
 
 
@@ -3157,7 +3203,7 @@ Grid table
 <td valign="top">
 
 -   Analytical list page \(OData V2\)
--   List report
+-   List report page
 -   Object page
 
 
@@ -3197,7 +3243,7 @@ Header toolbar
 <td valign="top">
 
 -   Analytical list page
--   List report
+-   List report page
 -   Object page
 -   Overview page
 
@@ -3212,7 +3258,7 @@ Header toolbar
 
 [Adding Custom Actions Using Extension Points](adding-custom-actions-using-extension-points-7619517.md)
 
-[Custom Actions](custom-actions-02fb273.md)
+[Defining Custom Actions](defining-custom-actions-02fb273.md)
 
 [Defining Custom Actions](defining-custom-actions-c3de5c0.md)
 
@@ -3259,7 +3305,7 @@ Highlighting line items based on criticality
 </td>
 <td valign="top">
 
--   List report
+-   List report page
 -   Object page
 
 
@@ -3298,7 +3344,7 @@ History of recently entered values
 </td>
 <td valign="top">
 
--   List report
+-   List report page
 -   Object page
 
 
@@ -3330,13 +3376,55 @@ history of recent values
 <tr>
 <td valign="top">
 
+Icon for AI buttons
+
+</td>
+<td valign="top">
+
+-   List report page \(OData V4\)
+-   Object page \(OData V4\)
+-   Analytical list page \(OData V4\)
+-   Overview page \(OData V4\)
+-   Worklist \(OData V4\)
+
+
+
+</td>
+<td valign="top">
+
+[Adding the AI Icon to Action Buttons](adding-the-ai-icon-to-action-buttons-3ad0452.md)
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+  
+  
+**A Button with the AI Icon**
+
+![](images/AI_Icon_on_a_Button_c711e99.png "A Button with the AI Icon")
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
 Icon tab bar
 
 </td>
 <td valign="top">
 
 -   Analytical list page \(OData V2\)
--   List report
+-   List report page
 -   Object page
 
 
@@ -3346,7 +3434,7 @@ Icon tab bar
 
 [Defining and Adapting Sections](defining-and-adapting-sections-facfea0.md)
 
-[Multiple Views on List Report Tables](multiple-views-on-list-report-tables-a37df40.md)
+[Multiple Views in the List Report](multiple-views-in-the-list-report-a37df40.md)
 
 [Grouping of Fields](grouping-of-fields-cb1748e.md)
 
@@ -3374,57 +3462,39 @@ Icon tab bar
 <tr>
 <td valign="top">
 
-Image
+Inline Edit
 
 </td>
 <td valign="top">
 
--   Analytical list page
--   List report
--   Object page
--   Overview page
+-   List report page \(OData V4\)
+-   Object page \(OData V4\)
 
 
 
 </td>
 <td valign="top">
 
-[Displaying Images in Tables](displaying-images-in-tables-492bc79.md)
-
-[Setting Up the Object Page Header](setting-up-the-object-page-header-cce93e6.md)
-
-[List Cards](list-cards-56f39e0.md)
-
-[Link List Cards](link-list-cards-0326f91.md)
-
-[Using Images, Initials, and Icons](using-images-initials-and-icons-5760b63.md)
+[Inline Edit](inline-edit-bb56175.md) 
 
 </td>
 <td valign="top">
 
-[Image](https://experience.sap.com/fiori-design-web/image/)
+ 
 
 </td>
 <td valign="top">
 
   
   
-**Image Used in a Dialog**
+**Inline Edit**
 
-![](images/Image_in_a_Dialog_1f7a3b3.png "Image Used in a Dialog")
-
-CDO:/content/authoring/mor1590823160236.image
+![](images/Inline_Edit_Feature_Map_843b8d5.png "Inline Edit")
 
 </td>
 <td valign="top">
 
-IsImageUrl
-
-ImageUrl
-
-Stream
-
-HeaderInfo
+ 
 
 </td>
 </tr>
@@ -3467,13 +3537,49 @@ Object page
 <tr>
 <td valign="top">
 
+Input assistance
+
+</td>
+<td valign="top">
+
+Object page
+
+</td>
+<td valign="top">
+
+[Input Assistance](input-assistance-1a6324d.md)
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+  
+  
+**Input Assistance**
+
+![](images/Input_Assistance_4835fbb.png "Input Assistance")
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
 Input field
 
 </td>
 <td valign="top">
 
 -   Analytical list page \(OData V2\)
--   List report
+-   List report page
 -   Object page
 -   Overview page \(OData V2\)
 
@@ -3555,7 +3661,7 @@ Internal navigation
 </td>
 <td valign="top">
 
--   List report
+-   List report page
 -   Object page
 
 
@@ -3590,7 +3696,7 @@ Keep alive
 </td>
 <td valign="top">
 
--   List report
+-   List report page
 -   Object page
 
 
@@ -3598,7 +3704,7 @@ Keep alive
 </td>
 <td valign="top">
 
-[Refresh Data Set for Back Navigation When sap-keep-alive Is Set to True](refresh-data-set-for-back-navigation-when-sap-keep-alive-is-set-to-true-f1c2704.md) 
+[Refresh Dataset for Back Navigation When sap-keep-alive Is Set to True](refresh-dataset-for-back-navigation-when-sap-keep-alive-is-set-to-true-f1c2704.md) 
 
 </td>
 <td valign="top">
@@ -3627,7 +3733,7 @@ Keyboard shortcuts
 </td>
 <td valign="top">
 
--   List report
+-   List report page
 -   Object page
 -   Analytical list page
 
@@ -3673,7 +3779,7 @@ Label
 </td>
 <td valign="top">
 
--   List report
+-   List report page
 -   Object page
 -   Overview page \(OData V2\)
 
@@ -3792,7 +3898,7 @@ Line micro chart
 <td valign="top">
 
 -   Analytical list page
--   List report
+-   List report page
 -   Object page
 
 
@@ -3842,7 +3948,7 @@ Link
 <td valign="top">
 
 -   Analytical list page \(OData V2\)
--   List report
+-   List report page
 -   Object page
 -   Overview page
 
@@ -3889,7 +3995,7 @@ Overview page
 </td>
 <td valign="top">
 
-[Link List Cards](link-list-cards-0326f91.md)
+[Link List Cards](link-list-cards-0326f91.md) 
 
 </td>
 <td valign="top">
@@ -3921,7 +4027,7 @@ Add multiple fields to one column
 <td valign="top">
 
 -   Analytical list page
--   List report
+-   List report page
 -   Object page
 -   Overview page
 
@@ -4002,7 +4108,7 @@ Semantic date range on filter bar
 <td valign="top">
 
 -   Analytical list page
--   List report
+-   List report page
 -   Object page
 -   Overview page
 
@@ -4085,7 +4191,7 @@ Overview page
 </td>
 <td valign="top">
 
-[Customizing Overview Pages Using Runtime Capabilities](customizing-overview-pages-using-runtime-capabilities-5b1dd11.md)
+[Configuring Overview Pages Using Runtime Capabilities](configuring-overview-pages-using-runtime-capabilities-5b1dd11.md)
 
 </td>
 <td valign="top">
@@ -4116,7 +4222,7 @@ Mass edit
 </td>
 <td valign="top">
 
--   List report
+-   List report page
 
 
 
@@ -4170,7 +4276,7 @@ Menu button
 </td>
 <td valign="top">
 
--   List report \(OData V2\)
+-   List report page \(OData V2\)
 -   Object page \(OData V2\)
 
 
@@ -4210,7 +4316,7 @@ Message box
 <td valign="top">
 
 -   Analytical list page
--   List report
+-   List report page
 -   Object page
 -   Overview page
 
@@ -4271,7 +4377,7 @@ Message page
 <td valign="top">
 
 -   Analytical list page
--   List report
+-   List report page
 -   Object page
 -   Overview page
 
@@ -4311,7 +4417,7 @@ Message popover
 </td>
 <td valign="top">
 
--   List report
+-   List report page
 -   Object page
 
 
@@ -4369,7 +4475,7 @@ Message toast
 <td valign="top">
 
 -   Analytical list page
--   List report
+-   List report page
 -   Object page
 -   Overview page
 
@@ -4409,7 +4515,7 @@ success message
 </td>
 <td valign="top">
 
--   List report \(OData V4\)
+-   List report page \(OData V4\)
 -   Object page \(OData V4\)
 -   Anaytical list page \(OData V4\)
 
@@ -4462,7 +4568,7 @@ Micro chart/Smart micro chart
 <td valign="top">
 
 -   Analytical list page
--   List report
+-   List report page
 -   Object page
 
 
@@ -4508,7 +4614,7 @@ Multi-combo box
 <td valign="top">
 
 -   Analytical list page \(OData V2\)
--   List report
+-   List report page
 -   Object page
 
 
@@ -4548,7 +4654,7 @@ Multi-input field
 <td valign="top">
 
 -   Analytical list page \(OData V2\)
--   List report \(OData V2\)
+-   List report page \(OData V2\)
 -   Object page \(OData V2\)
 -   Overview page
 
@@ -4598,7 +4704,7 @@ Multiple selection of lines in tables
 </td>
 <td valign="top">
 
--   List report
+-   List report page
 -   Object page
 
 
@@ -4606,7 +4712,7 @@ Multiple selection of lines in tables
 </td>
 <td valign="top">
 
-[Enabling Multiple Selection in Tables](enabling-multiple-selection-in-tables-116b5d8.md) 
+[Configuring the Selection Mode for Tables](configuring-the-selection-mode-for-tables-116b5d8.md) 
 
 </td>
 <td valign="top">
@@ -4638,17 +4744,17 @@ single select
 <tr>
 <td valign="top">
 
-Multiple views on list report tables
+Multiple views of list report page tables
 
 </td>
 <td valign="top">
 
-List report
+List report page
 
 </td>
 <td valign="top">
 
-[Multiple Views on List Report Tables](multiple-views-on-list-report-tables-a37df40.md)
+[Multiple Views in the List Report](multiple-views-in-the-list-report-a37df40.md)
 
 </td>
 <td valign="top">
@@ -4660,9 +4766,9 @@ List report
 
   
   
-**Multiple views on list report tables**
+**Multiple views of list report page tables**
 
-![](images/Feature_map_Multiple_views_on_list_report_tables_891cf38.jpg "Multiple views on list report tables ")
+![](images/Feature_map_Multiple_views_on_list_report_tables_891cf38.jpg "Multiple views of list report page tables ")
 
 </td>
 <td valign="top">
@@ -4682,7 +4788,7 @@ Navigation
 <td valign="top">
 
 -   Analytical list page
--   List report
+-   List report page
 -   Object page
 -   Overview page
 
@@ -4734,7 +4840,7 @@ Navigation extension
 </td>
 <td valign="top">
 
--   List report
+-   List report page
 -   Object page
 -   Analytical list page
 
@@ -4783,7 +4889,7 @@ P13n dialog
 <td valign="top">
 
 -   Analytical list page
--   List report
+-   List report page
 -   Object page
 
 
@@ -4805,7 +4911,7 @@ P13n dialog
   
 **P13n Dialog**
 
-![](images/P13n_Dialog_39cd18d.jpg " P13n Dialog")
+![](images/P13n_Dialog_39cd18d.jpg "P13n Dialog")
 
 </td>
 <td valign="top">
@@ -4824,7 +4930,7 @@ personalisation
 </td>
 <td valign="top">
 
--   List report \(OData V4\)
+-   List report page \(OData V4\)
 -   Object page \(OData V4\)
 -   Anaytical list page \(OData V4\)
 
@@ -4881,7 +4987,7 @@ Popover
 <td valign="top">
 
 -   Analytical list page
--   List report
+-   List report page
 -   Object page
 -   Overview page
 
@@ -4927,7 +5033,7 @@ Prefilling fields when creating a new entity
 </td>
 <td valign="top">
 
--   List report
+-   List report page
 -   Object page
 
 
@@ -4967,7 +5073,7 @@ Progress indicator
 <td valign="top">
 
 -   Analytical list page
--   List report
+-   List report page
 -   Object page
 
 
@@ -5046,7 +5152,7 @@ Quick views for smart link navigation
 </td>
 <td valign="top">
 
--   List report
+-   List report page
 -   Object page
 
 
@@ -5088,7 +5194,7 @@ Radial micro chart
 <td valign="top">
 
 -   Analytical list page
--   List report
+-   List report page
 -   Object page
 
 
@@ -5136,7 +5242,7 @@ Rating indicator
 <td valign="top">
 
 -   Analytical list page
--   List report
+-   List report page
 -   Object page
 
 
@@ -5220,7 +5326,7 @@ Overview page
 </td>
 <td valign="top">
 
-[Customizing Overview Pages Using Runtime Capabilities](customizing-overview-pages-using-runtime-capabilities-5b1dd11.md)
+[Configuring Overview Pages Using Runtime Capabilities](configuring-overview-pages-using-runtime-capabilities-5b1dd11.md)
 
 </td>
 <td valign="top">
@@ -5248,7 +5354,7 @@ Responsive table
 <td valign="top">
 
 -   Analytical list page \(OData V2\)
--   List report
+-   List report page
 -   Object page
 -   Overview page
 
@@ -5287,13 +5393,62 @@ Responsive table
 <tr>
 <td valign="top">
 
+Retrieve row count of a table
+
+</td>
+<td valign="top">
+
+-   List report page \(OData V4\)
+-   Object page \(OData V4\)
+-   Analytical list page \(OData V4\)
+-   Overview page \(OData V4\)
+-   Worklist \(OData V4\)
+
+
+
+</td>
+<td valign="top">
+
+[Influencing the Request Dynamically](influencing-the-request-dynamically-2cc6c03.md)
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+  
+  
+**Row Count Displayed in a Custom Tile in the Header of the List Report**
+
+![](images/Row_Count_Displayed_in_a_Custom_Tile_in_the_Header_of_the_List_Report_64280b7.png "Row Count Displayed in a Custom Tile in the Header of the
+										List Report")
+
+</td>
+<td valign="top">
+
+rowcount
+
+getCount
+
+row-count
+
+number of rows
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
 sap-keep-alive mode
 
 </td>
 <td valign="top">
 
 -   Object page
--   List report
+-   List report page
 
 
 
@@ -5310,7 +5465,7 @@ sap-keep-alive mode
 </td>
 <td valign="top">
 
-
+ 
 
 </td>
 <td valign="top">
@@ -5411,7 +5566,7 @@ free-style application
 </td>
 <td valign="top">
 
--   List report\(OData V4\)
+-   List report page\(OData V4\)
 -   Object page\(OData V4\)
 -   Anaytical list page\(OData V4\)
 
@@ -5465,7 +5620,7 @@ variant management
 </td>
 <td valign="top">
 
--   List report\(OData V4\)
+-   List report page\(OData V4\)
 -   Object page\(OData V4\)
 -   Anaytical list page\(OData V4\)
 
@@ -5519,7 +5674,7 @@ free-style application
 </td>
 <td valign="top">
 
--   List report\(OData V4\)
+-   List report page\(OData V4\)
 -   Object page\(OData V4\)
 -   Anaytical list page\(OData V4\)
 
@@ -5620,7 +5775,7 @@ Search
 <td valign="top">
 
 -   Analytical list page \(OData V2\)
--   List report \(OData V2\)
+-   List report page \(OData V2\)
 -   Object page \(OData V2\)
 -   Overview page
 
@@ -5696,7 +5851,7 @@ Object page
 </td>
 <td valign="top">
 
--   List report
+-   List report page
 -   Object page
 
 
@@ -5773,7 +5928,7 @@ Side effects
 </td>
 <td valign="top">
 
--   List report
+-   List report page
 -   Object page
 
 
@@ -5808,7 +5963,7 @@ Side effects
 </td>
 <td valign="top">
 
--   List report \(OData V4\)
+-   List report page \(OData V4\)
 -   Object page \(OData V4\)
 -   Anaytical list page \(OData V4\)
 
@@ -5868,7 +6023,7 @@ Share to Microsoft Teams
 </td>
 <td valign="top">
 
--   List report
+-   List report page
 -   Object page
 
 
@@ -5910,7 +6065,7 @@ Smart link
 <td valign="top">
 
 -   Analytical list page
--   List report
+-   List report page
 -   Object page
 -   Overview page
 
@@ -5961,7 +6116,7 @@ Smart table
 <td valign="top">
 
 -   Analytical list page \(OData V2\)
--   List report
+-   List report page
 -   Object page
 -   Overview page
 
@@ -6074,7 +6229,7 @@ Stacked bar micro chart
 <td valign="top">
 
 -   Analytical list page
--   List report
+-   List report page
 -   Object page
 
 
@@ -6121,7 +6276,7 @@ Status colors and icons
 </td>
 <td valign="top">
 
--   List report
+-   List report page
 -   Object page
 
 
@@ -6210,7 +6365,7 @@ Attachment
 </td>
 <td valign="top">
 
--   List report \(OData V4\)
+-   List report page \(OData V4\)
 -   Object page \(OData V4\)
 -   Anaytical list page \(OData V4\)
 
@@ -6301,7 +6456,7 @@ Table personalization
 <td valign="top">
 
 -   Analytical list page
--   List report
+-   List report page
 -   Object page
 -   Overview page
 
@@ -6350,7 +6505,7 @@ Tables
 <td valign="top">
 
 -   Analytical list page \(OData V2\)
--   List report
+-   List report page
 -   Object page
 -   Overview page
 
@@ -6403,7 +6558,7 @@ Table toolbar
 <td valign="top">
 
 -   Analytical list page \(OData V2\)
--   List report
+-   List report page
 -   Object page
 
 
@@ -6449,7 +6604,7 @@ Text
 <td valign="top">
 
 -   Analytical list page
--   List report
+-   List report page
 -   Object page
 -   Overview page
 
@@ -6493,7 +6648,7 @@ Text area
 <td valign="top">
 
 -   Analytical list page
--   List report
+-   List report page
 -   Object page
 -   Overview page
 
@@ -6540,7 +6695,7 @@ Title
 <td valign="top">
 
 -   Analytical list page
--   List report
+-   List report page
 -   Object page
 -   Overview page
 
@@ -6607,7 +6762,7 @@ Token
 <td valign="top">
 
 -   Analytical list page \(OData V2\)
--   List report
+-   List report page
 -   Object page
 -   Overview page \(OData V2\)
 
@@ -6650,7 +6805,7 @@ Tree table
 <td valign="top">
 
 -   Analytical list page \(OData V2\)
--   List report
+-   List report page
 -   Object page
 
 
@@ -6691,7 +6846,7 @@ Tree table hierarchy
 </td>
 <td valign="top">
 
--   List report \(OData V4\)
+-   List report page \(OData V4\)
 -   Object page \(OData V4\)
 
 
@@ -6726,7 +6881,7 @@ TreeTable
 </td>
 <td valign="top">
 
--   List report \(OData V4\)
+-   List report page \(OData V4\)
 -   Object page \(OData V4\)
 -   Anaytical list page \(OData V4\)
 
@@ -6811,7 +6966,7 @@ Value help
 <td valign="top">
 
 -   Analytical list page
--   List report
+-   List report page
 -   Object page
 -   Overview page
 
@@ -6862,7 +7017,7 @@ Variant management
 <td valign="top">
 
 -   Analytical list page
--   List report
+-   List report page
 -   Object page
 -   Overview page
 
@@ -6873,11 +7028,11 @@ Variant management
 
 [Managing Variants](managing-variants-8ce658e.md)
 
-[Descriptor Configuration for the Analytical List Page](descriptor-configuration-for-the-analytical-list-page-2a9df06.md)
+[Configuring the Manifest for the Analytical List Page](configuring-the-manifest-for-the-analytical-list-page-2a9df06.md)
 
 [Creating a List Report without Variant Management](creating-a-list-report-without-variant-management-094fe8c.md)
 
-[Descriptor Configuration for the Overview Page](descriptor-configuration-for-the-overview-page-f194b41.md)
+[Configuring the Manifest for the Overview Page](configuring-the-manifest-for-the-overview-page-f194b41.md)
 
 </td>
 <td valign="top">

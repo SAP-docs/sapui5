@@ -675,12 +675,12 @@ Shows only the ID, for example, "002"
 
 ## Lazy Loading of Visual Filters
 
-In SAP Fiori elements for OData V2, you can enable lazy loading of visual filters by configuring the `lazyLoadVisualFilter` setting in the descriptor file. It is disabled by default.
+In SAP Fiori elements for OData V2, you can enable lazy loading of visual filters by configuring the `lazyLoadVisualFilter` setting in the `manifest.json` file. It is disabled by default.
 
 If lazy loading is enabled, then the batch call for loading of visual filters is deferred until the user switches to the visual filter bar.
 
 > ### Sample Code:  
-> Descriptor setting
+> `manifest.json`
 > 
 > ```
 > "settings": {
@@ -925,7 +925,7 @@ In visual filter charts, the empty dimension value is displayed as *Not Assigned
 
 ### Date Selection
 
-Visual filters support date-based, single selection fields in the Universal Time Coordinated \(UTC\) format. Visual filters also support string-based fields that denote a time period via the following annotations:
+Visual filters support date-based, single selection fields in the Universal Time Coordinated \(UTC\) format. Visual filters also support string-based fields that denote a time period through the following annotations:
 
 -   `Edm.DateTime` and `sap:display-format="Date"`
 

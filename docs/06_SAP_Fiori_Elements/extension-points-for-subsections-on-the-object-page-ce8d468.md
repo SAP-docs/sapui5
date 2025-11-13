@@ -10,9 +10,9 @@ On the object page, you can use extension points to add additional subsections.
 > After you've created an app extension, its display \(for example, control placement and layout\) and system behavior \(for example, model and binding usage, busy handling\) lies within the application's responsibility. SAP Fiori elements provides support only for the official `extensionAPI` functions. Don't access or manipulate controls, properties, models, or other internal objects created by the SAP Fiori elements framework.
 
 > ### Tip:  
-> In SAP Fiori elements for OData V2, you use the term `facet` to add a subsection to the object page in the `manifest.json`.
+> In SAP Fiori elements for OData V2, you use the term `facet` to add a subsection to the object page in the `manifest.json` file.
 > 
-> In SAP Fiori elements for OData V4, you use the term `section` to add a subsection to the object page in the `manifest.json`.
+> In SAP Fiori elements for OData V4, you use the term `section` to add a subsection to the object page in the `manifest.json` file.
 
 
 
@@ -153,9 +153,9 @@ For more information, see [Extension Points for Sections on the Object Page](ext
 
 
 
-### Live Example: Custom Subsection with `Table` Building Block
+### Live Example: Custom Subsection
 
-You can explore and work with the coding yourself. Check out our live example in the flexible programming model explorer at [Custom Subsection](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/customElements/customElementsOverview/customSubSectionContent).
+You can explore and work with the coding yourself. For more information and live examples, see the SAP Fiori development portal at [Standard Floorplans - Extensions - Extensions for Object Pages - Custom Subsection](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/topic/floorplanObjectPage/customSubSection).
 
 > ### Note:  
 > Ensure that you have a defined `LineItem` service available \(`service.cds` in the linked example\).

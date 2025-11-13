@@ -1282,17 +1282,104 @@ Version 74
 
 </td>
 </tr>
+<tr>
+<td valign="top">
+
+Version 76
+
+</td>
+<td valign="top">
+
+\>=1.137
+
+</td>
+<td valign="top">
+
+1.75.1
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Version 77
+
+</td>
+<td valign="top">
+
+\>=1.138
+
+</td>
+<td valign="top">
+
+1.76.0
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Version 78
+
+</td>
+<td valign="top">
+
+\>=1.139
+
+</td>
+<td valign="top">
+
+1.77.0
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Version 79
+
+</td>
+<td valign="top">
+
+\>=1.140
+
+</td>
+<td valign="top">
+
+1.78.0
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Version 80
+
+</td>
+<td valign="top">
+
+\>=1.141
+
+</td>
+<td valign="top">
+
+1.79.0
+
+</td>
+</tr>
 </table>
 
-For more information on the new fields introduced in each version, check out [Migration Information for Upgrading the Manifest File](migration-information-for-upgrading-the-manifest-file-a110f76.md)
+For more information on the new fields introduced in each version, check out [Migration Information for Upgrading the Manifest File](migration-information-for-upgrading-the-manifest-file-a110f76.md).
+
+For more information about Manifest releases, versions, and the supported and deprecated manifest sections, refer to the documentation [Manifest Changelog](https://github.com/SAP/ui5-manifest/blob/HEAD/CHANGELOG.md).
 
 
 
-<a name="loiobe0cf40f61184b358b5faedaec98b2da__section_vwt_5nl_gfc"/>
+<a name="loiobe0cf40f61184b358b5faedaec98b2da__section_manifest2"/>
 
-## Manifest 2.0
+## Manifest Version 2
 
-As of SAPUI5 1.136, we support a new manifest version 2.0.0. Using this version has the following implications for a Component:
+As of SAPUI5 1.136, we support the new Manifest Version 2. Using this version has the following implications for a Component:
 
 
 
@@ -1316,13 +1403,13 @@ Deprecated manifest entries managed by the SAPUI5 framework cannot be used anymo
 
 ### Error Validation
 
-Manifest version 2.0.0 also enables a stricter error handling for views and fragments. Syntactical errors \(e.g. broken binding strings\) will now lead to errors being thrown. Programmatically created views will reject the factory promise accordingly.
+Manifest Version 2 also enables a stricter error handling for views and fragments. Syntactical errors \(e.g. broken binding strings\) will now lead to errors being thrown. Programmatically created views will reject the factory promise accordingly.
 
 
 
 ### `IAsyncContentCreation`
 
-While the Manifest 2.0.0 behavior regarding root view and routing configuration is similar to the behavior of the [`sap.ui.core.IAsyncContentCreation`](https://ui5.sap.com/#/api/sap.ui.core.IAsyncContentCreation) interface, they are not interchangeable. For compatibility reasons, the manifest version 2.0.0 does **not** enforce the implementation of this interface. In order to use an asynchronous `sap/ui/core/UIComponent#createContent` implementation in your subclasses, the `sap.ui.core.IAsyncContentCreation` interface must be implemented explicitly.
+While the Manifest Version 2 behavior regarding root view and routing configuration is similar to the behavior of the [`sap.ui.core.IAsyncContentCreation`](https://ui5.sap.com/#/api/sap.ui.core.IAsyncContentCreation) interface, they are not interchangeable. For compatibility reasons, the Manifest Version 2 does **not** enforce the implementation of this interface. In order to use an asynchronous `sap/ui/core/UIComponent#createContent` implementation in your subclasses, the `sap.ui.core.IAsyncContentCreation` interface must be implemented explicitly.
 
 Please also be aware that the implementation of the `sap.ui.core.IAsyncContentCreation` interface changes the aggregation behavior of the root view. When the root view is loaded asynchronously and the Component implements `sap.ui.core.IAsyncContentCreation`, the root view controller's [`onInit`](https://ui5.sap.com/#/api/sap.ui.core.mvc.Controller%23methods/onInit) hook no longer has access to Component models through the view instance. To retrieve model instances, we recommend using the [`sap/ui/core/mvc/Controller#getOwnerComponent`](https://ui5.sap.com/#/api/sap.ui.core.mvc.Controller%23methods/getOwnerComponent) API on the controller instance.
 
@@ -1334,7 +1421,7 @@ We recommend any Component or UIComponent to implement the `sap.ui.core.IAsyncCo
 
 ## Manifest First Function
 
-The component factory function [`Component.create`](https://ui5.sap.com/#/api/sap.ui.core.Component%23methods/sap.ui.core.Component.create), as introduced with 1.58, loads the `manifest.json` by default before the component instance is created. With this, you can preload the dependencies \(libraries and components\) and, thus, improve the performance for loading the component. The preload is also available for models, which can be flagged for preload during component loading.
+By default, all [modern component instantiation methods](component-instantiation-guide-346599f.md) load the `manifest.json` file before creating the component instance. This approach enables preloading of dependencies \(libraries and components\), thereby improving component loading performance. Additionally, OData models can be configured with `preload: true` to ensure the early loading of metadata and annotations during component initialization.
 
 The `manifest` option allows you to configure when and from where the manifest is loaded:
 
@@ -1600,11 +1687,11 @@ It's used as a reference point for most operations involving the manifest. If th
 
 A mandatory attribute. The following values are possible:
 
--   `application`: use if your `manifest.json` describes a **UI5 application**. For an example how to use a `manifest.json` for UI5 applications, see [Step 10: Descriptor for Applications](../03_Get-Started/step-10-descriptor-for-applications-8f93bf2.md)
+-   `application`: use if your `manifest.json` describes a **UI5 application**.For an example how to use a `manifest.json` for UI5 applications, see [Step 10: Descriptor for Applications](../03_Get-Started/step-10-descriptor-for-applications-8f93bf2.md) in the Walkthrough Tutorial.
 
--   `component`: use if your `manifest.json` describes a **reuse component** that is used in several apps. For further reuse component-specific configuration options, see [Descriptor for Components \(Inside Libraries\)](descriptor-for-components-inside-libraries-7701636.md).
+-   `component`: use if your `manifest.json` describes a **reuse component** that is used in several apps. For further reuse component-specific configuration options, see [Manifest for Components \(Inside Libraries\)](manifest-for-components-inside-libraries-7701636.md).
 
--   `library`: use if your `manifest.json` describes a **UI5 library**. For further library-specific configuration options, see [Descriptor for Libraries](descriptor-for-libraries-b229914.md).
+-   `library`: use if your `manifest.json` describes a **UI5 library**. For further library-specific configuration options, see [Manifest for Libraries](manifest-for-libraries-b229914.md).
 
 -   `card`: use if your `manifest.json` describes a **UI5 card**.For further card-specific configuration options, see [Integration Cards](https://ui5.sap.com/test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/overview/introduction).
 
@@ -2194,7 +2281,7 @@ Specifies the used components with the a unique key/alias. Contains the followin
 -   `lazy`: Indicates whether the component usage should be lazily loaded. Default value: `true`
 
 
-For more information, see: [Using and Nesting Components](using-and-nesting-components-346599f.md).
+For more information, see: [Component Instantiation Guide](component-instantiation-guide-346599f.md).
 
 </td>
 </tr>
@@ -2717,7 +2804,7 @@ Current version of the `manifest.json`
 ```
 
 {
-    "_version": "1.73.1",
+"_version": "1.79.0",
  
     "start_url": "index.html",
  
@@ -2772,7 +2859,7 @@ Current version of the `manifest.json`
                         },
                         "liabilities": {
                             "objectName": "SAPFinLiabilities",
-                            "objectType": "cdsprojectionview"  
+                            "objectType": "cdsprojectionview"
                         }
                     }
                 }
@@ -2969,7 +3056,7 @@ Current version of the `manifest.json`
             }]
         },
         "dependencies": {
-            "minUI5Version": "1.136.0",
+            "minUI5Version": "1.141.0",
             "libs": {
                 "sap.m": {
                     "minVersion": "1.34.0"
@@ -3175,7 +3262,7 @@ sap.ui.define([
 ], (UIComponent) => {
 	"use strict";
 	return UIComponent.extend("my.sample.Component", {
-		metadata  : { 
+		metadata: {
 			manifest: "json",
 			interfaces: [
 				"sap.ui.core.IAsyncContentCreation"

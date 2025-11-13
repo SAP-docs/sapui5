@@ -143,7 +143,7 @@ The `setCustomMessage` function can have the following optional parameters:
 > }
 > ```
 
-To add a custom message to the object page, you can use the `addMessage` function on the Table building block. Check out our live example in the flexible programming model explorer at [Table - Messages](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/table/tableMessages).
+To add a custom message to the object page, you can use the `addMessage` function on the Table building block. For more information and live examples, see the SAP Fiori development portal at [Building Blocks - Table - Extensions - Table APIs](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/table/tablePublicAPIs).
 
 **Related Information**  
 

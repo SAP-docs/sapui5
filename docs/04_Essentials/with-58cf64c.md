@@ -50,7 +50,7 @@ It returns a path inside the meta model which refers to the corresponding proper
 
 ```xml
 
-<template:with path="meta>Value" helper="sap.ui.model.odata.AnnotationHelper.resolvePath" var="target">
+<template:with path="meta>Value" helper="AnnotationHelper.resolvePath" var="target">
   <template:if test="{= {target>sap:semantics} === 'email'}" >
     <core:Icon src="sap-icon://email" />
   </template:if>

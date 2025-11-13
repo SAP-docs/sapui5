@@ -4,7 +4,7 @@
 
 # Inline Edit
 
-Inline editing allows users to edit specific fields or field groups without switching the entire object to draft.
+Users can use inline edit to edit specific fields or field groups without switching the entire object to draft.
 
 SAP Fiori elements for OData V4 supports inline edit in the list report and on the object page as of SAPUI5 1.136. With this feature, users can directly edit a field or a group of fields in the active version without switching the entire object to draft. Inline edit supports the same features as the regular edit mode.
 
@@ -26,7 +26,7 @@ Inline edit is supported on pages based on the `sap.fe.templates.ListReport` or 
 
 <a name="loiobb56175f37aa4530a59214025a005466__section_p1m_22y_ffc"/>
 
-## Inline Editing a Field
+## Inline Editing of a Field
 
 When hovering, fields that can be edited inline are underlined, and an *Edit* button is shown. The inline edit indicators are shown if the field is editable and the inline edit functionality is available for it. For more information about configuring inline editable fields, see the [Configuring Inline Edit](inline-edit-bb56175.md#loiobb56175f37aa4530a59214025a005466__configuring_inline_edit) section in this topic.
 
@@ -36,7 +36,7 @@ When hovering, fields that can be edited inline are underlined, and an *Edit* bu
 
 ![](images/Inline_Edit_Indicators_5dec6b1.png "Inline Edit Indicators")
 
-To edit a field, the user must click the :pencil2: \(*Edit*\) icon or double-click the field. The user can also press [Enter\] if the field is focused.
+To edit a field, the user must click the :pencil2: \(*Edit*\) icon or double-click the field. The user can also press [Enter\] after setting focus on the field.
 
 > ### Note:  
 > -   Double-click is not supported for responsive tables.
@@ -47,11 +47,11 @@ Depending on the type of field, the inline edit provides the same features that 
 
   
   
-**Inline Editing a Field**
+**Inline Editing of a Field**
 
-![](images/Inline_Editing_a_Field_24c44a4.png "Inline Editing a Field")
+![](images/Inline_Editing_a_Field_24c44a4.png "Inline Editing of a Field")
 
-If the field belongs to a group of connected fields, all fields within the group are switched to edit.
+If the field belongs to a group of connected fields, all fields within the group are enabled for editing.
 
   
   
@@ -90,15 +90,7 @@ If the error references a field not displayed on the page, the issue can't be fi
 
 ## Action Execution and Navigation
 
-If a user triggers an action when inline editing, a prompt is shown to save or discard the ongoing change. After choosing an option, the user must re-execute the action.
-
-  
-  
-**Prompt to Save or Discard Changes \(Action\)**
-
-![](images/Prompt_to_Save_or_Discard_Changes_b8b7a68.png "Prompt to Save or Discard Changes (Action)")
-
-If the user triggers navigation from a table when inline editing, a prompt is also shown to save or discard the change. After choosing an option, the navigation occurs.
+If the user triggers an action or navigation from a table when using inline edit, a prompt is shown to save or discard the ongoing change. After the user chooses an option, the action is executed or the navigation occurs.
 
   
   
@@ -106,7 +98,7 @@ If the user triggers navigation from a table when inline editing, a prompt is al
 
 ![](images/Prompt_to_Save_or_Discard_Changes_Navigation_a6b0edd.png "Prompt to Save or Discard Changes (Navigation)")
 
-> ### Note:  
+> ### Caution:  
 > When navigation is triggered from the browser's navigation icons, the FLP header, or through an intent-based navigation, the navigation occurs and the current change is lost.
 
 
@@ -115,7 +107,7 @@ If the user triggers navigation from a table when inline editing, a prompt is al
 
 ## Configuring Inline Edit
 
-You must enable inline edit at the page level using a manifest setting. To specify the list of fields enabled for inline edit, use the `enableFields` parameter with either a property name or a `FieldGroup` annotation. To disable inline editing for certain fields, use the `disableFields` parameter with either a property name or a `FieldGroup` annotation. If `disableFields` is empty, inline editing is enabled for all fields.
+You must enable inline edit at the page level using a manifest setting. To specify the list of fields enabled for inline edit, use the `enabledFields` parameter with either a property name or a `FieldGroup` annotation. To disable inline edit for certain fields, use the `disabledFields` parameter with either a property name or a `FieldGroup` annotation. If `disabledFields` is empty, inline edit is enabled for all fields.
 
 You can also specify groups of connected fields which should be edited together. To do that, use the `connectedFields` parameter with either arrays of property names or `FieldGroup` annotations.
 

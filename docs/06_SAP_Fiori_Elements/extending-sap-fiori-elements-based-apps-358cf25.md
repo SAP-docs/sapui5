@@ -82,7 +82,7 @@ Here, `STTASOWD20` represents the application name , `sap.suite.ui.generic.templ
 >       "type": "application"
 >    },
 >    "sap.ui5": {
->         "routing": {
+>    "routing": {
 >           "config": {
 >             "async": true
 >           },

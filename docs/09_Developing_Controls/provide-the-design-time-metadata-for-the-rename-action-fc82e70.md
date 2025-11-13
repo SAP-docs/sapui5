@@ -37,7 +37,7 @@ Description
 </th>
 </tr>
 <tr>
-<td valign="top" rowspan="9">
+<td valign="top" rowspan="10">
 
 `actions: <object>`\(mandatory\)
 
@@ -59,7 +59,7 @@ Describes the actions that can be applied to the element.
 </td>
 </tr>
 <tr>
-<td valign="top" rowspan="8">
+<td valign="top" rowspan="9">
 
 `"rename": <object> | <function>`
 
@@ -90,6 +90,18 @@ Provides the value of `changeType` from the previous step.
 <tr>
 <td valign="top">
 
+`additionalInfoKey: <string` \(optional\)
+
+</td>
+<td valign="top">
+
+Provides additional information to be displayed as a tooltip in the context menu.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
 `domRef: <function> |<string>` \(mandatory\)
 
 </td>
@@ -104,16 +116,12 @@ The DOM reference is used to calculate the dimension of the part of your control
 <tr>
 <td valign="top">
 
-`getTextMutators: <function>` \(optional\)
+`getLabel: <function>` \(optional\)
 
 </td>
 <td valign="top">
 
-Used to provide a customized setter and getter for manipulating the text in the DOM tree during the *rename* action.
-
-The returned function is called with the control reference and returns a map with a `getText` and a `setText` function \(the latter being called with the new text\). If not implemented, text values are changed via `jQuery.text` using the `domRef` HTML element.
-
-The functions must not impact the control property of the text, only the visual representation.
+Used to provide a customized getter for the control label. The default implementation tries to get the following properties in that order: `text`, `labelText`, `label`, `title`, `heading`, `dataSourceLabel`.
 
 </td>
 </tr>
@@ -188,15 +196,8 @@ Here's an example:
 >                 domRef: function(oControl) { // mandatory
 >                     return oControl.$().find(".sapMBtnContent")[0];
 >                 },
->                 getTextMutators: function(oControl) { // optional
->                     return {
->                         getText: function() {
->                             return oControl.getDomRef().textContent;
->                         },
->                         setText: function(sNewText) {
->                             oControl.getDomRef().textContent = sNewText;
->                         }
->                     };
+>                 getLabel: function(oControl) { // optional
+>                     return oControl.getDomRef().querySelector(".some-nested-control").textContent;
 >                 }
 >             }
 >         }

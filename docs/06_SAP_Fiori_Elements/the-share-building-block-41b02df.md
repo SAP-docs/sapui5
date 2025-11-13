@@ -21,7 +21,7 @@ You can control the visibility of the *Send Email* and *Share: Collaboration Man
 
 
 
-Check out our live example in the flexible programming model explorer at [Share Building Block Usage](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/features/shareDefault) and [Share Controller Extension Usage](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/controllerExtensions/controllerExtensionsOverview/shareExtensibility).
+For more information and live examples, see the SAP Fiori development portal at [Building Blocks - Share - Overview](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/share) and [Building Blocks - Share - Share Extensions](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/controllerExtensions/shareExtensibility).
 
 
 
@@ -29,5 +29,7 @@ Check out our live example in the flexible programming model explorer at [Share 
 
 ## API
 
-For information about the `Share` API, see the [API Reference](https://ui5.sap.com/#/api/sap.fe.macros.Share).
+For information about the Share API, see the [API Reference](https://ui5.sap.com/#/api/sap.fe.macros.Share).
+
+For information about the Share Controller Extensions API, see the [API Reference](https://ui5.sap.com/#/api/sap.fe.core.controllerextensions.Share).
 
