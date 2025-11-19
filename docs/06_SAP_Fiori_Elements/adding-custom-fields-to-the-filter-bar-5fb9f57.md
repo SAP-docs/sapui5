@@ -421,7 +421,7 @@ In the following sample code, the custom operator `'SalesOrder.ext.CustomRating.
 > 
 > ```
 > "sap.fe": {
->     "macros": 
+>     "macros": {
 >         "filter": {          
 >             "customFilterOperators": [{                     
 >                 "name": "SalesOrder.ext.CustomRating.onMultiValueRatingLevels"
