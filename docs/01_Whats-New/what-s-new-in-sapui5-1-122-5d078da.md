@@ -336,7 +336,7 @@ The following changes and new features are available for SAP Fiori elements for 
 
 -   We now support the `UI.Hidden` annotation for tables in the list report, object page, and analytical list page. For more information, see [Tables](../06_SAP_Fiori_Elements/tables-c0f6592.md).
 
--   You can now use the `setRelevantFilters` extension API to ensure that the filters are correctly applied on custom cards. For more information, see [Custom Cards](../06_SAP_Fiori_Elements/custom-cards-6d260f7.md).
+-   You can now use the `setRelevantFilters` extension API to ensure that the filters are correctly applied on custom cards. For more information, see [Creating Custom Cards](../06_SAP_Fiori_Elements/creating-custom-cards-6d260f7.md).
 
 
 <sub>Changed•SAP Fiori Elements•Info Only•1.122</sub>

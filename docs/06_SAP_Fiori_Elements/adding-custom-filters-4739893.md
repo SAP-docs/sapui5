@@ -191,7 +191,7 @@ To add custom filters, proceed as follows:
     > ### Note:  
     > You must ensure that the same entity type is used in both the `viewExtensions` and `globalFilterEntityType` settings.
     > 
-    > As of SAPUI5 version 1.54, the `globalFilterEntityType` setting has been deprecated. We recommend using `globalFilterEntitySet` instead.
+    > As of SAPUI5 1.54, the `globalFilterEntityType` setting has been deprecated. We recommend using `globalFilterEntitySet` instead.
 
     > ### Sample Code:  
     > `manifest.json`

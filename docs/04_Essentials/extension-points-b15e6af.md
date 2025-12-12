@@ -25,5 +25,5 @@ The extension point has a default content which is used unless the extension poi
 **Related Information**  
 
 
-[View Extension](../08_Extending_SAPUI5_Applications/view-extension-403c050.md "SAPUI5 uses extension points for extending standard views with custom content. The assignment of a custom view to an extension point is done in component customizing.")
+[Extension Points](../08_Extending_SAPUI5_Applications/extension-points-403c050.md "Extension points are locations in application views where you can insert custom content. These points are pre-defined by the application.")
 

@@ -1259,6 +1259,66 @@ pro-down
 <tr>
 <td valign="top">
 
+`ConditionalSwitch` building block
+
+</td>
+<td valign="top">
+
+-   List report page \(OData V4\)
+-   Object page \(OData V4\)
+-   Analytical list page \(OData V4\)
+
+
+
+</td>
+<td valign="top">
+
+[The ConditionalSwitch Building Block](the-conditionalswitch-building-block-ba06542.md)
+
+[Flexible Programming Model](flexible-programming-model-549749b.md)
+
+[Building Blocks](building-blocks-24c1304.md)
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+condition
+
+conditional
+
+switch
+
+factory
+
+building blocks
+
+buildable blocks
+
+macro
+
+free style application
+
+free style app
+
+free-style application
+
+freestyle application
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
 Contact quick view
 
 </td>
@@ -1376,7 +1436,7 @@ contect dependent actions
 <tr>
 <td valign="top">
 
-Context Menu
+Context menu
 
 </td>
 <td valign="top">
@@ -1416,7 +1476,7 @@ context menu
 <tr>
 <td valign="top">
 
-Copying and Pasting from Spreadsheet Applications to Tables
+Copying and pasting from spreadsheet applications to tables
 
 </td>
 <td valign="top">
@@ -1556,7 +1616,7 @@ Overview page
 </td>
 <td valign="top">
 
-[Custom Cards](custom-cards-6d260f7.md)
+[Creating Custom Cards](creating-custom-cards-6d260f7.md)
 
 </td>
 <td valign="top">
@@ -2273,8 +2333,8 @@ Direct edit
 </td>
 <td valign="top">
 
--   List report page \(OData V2\)
--   Object page \(OData V2\)
+-   List report page
+-   Object page
 
 
 
@@ -2840,6 +2900,8 @@ SAP Fiori development portal
 -   List report page \(OData V4\)
 -   Object page \(OData V4\)
 -   Analytical list page \(OData V4\)
+-   Overview page \(OData V4\)
+-   Worklist page \(OData V4\)
 
 
 
@@ -4067,7 +4129,7 @@ Display text and ID for value help
 </td>
 <td valign="top">
 
--   Object page \(OData V2\)
+-   Object page
 
 
 
@@ -4517,7 +4579,7 @@ success message
 
 -   List report page \(OData V4\)
 -   Object page \(OData V4\)
--   Anaytical list page \(OData V4\)
+-   Analytical list page \(OData V4\)
 
 
 
@@ -4932,7 +4994,7 @@ personalisation
 
 -   List report page \(OData V4\)
 -   Object page \(OData V4\)
--   Anaytical list page \(OData V4\)
+-   Analytical list page \(OData V4\)
 
 
 
@@ -5518,7 +5580,7 @@ Object page
 </td>
 <td valign="top">
 
--   Object page\(OData V4\)
+-   Object page \(OData V4\)
 
 
 
@@ -5566,9 +5628,9 @@ free-style application
 </td>
 <td valign="top">
 
--   List report page\(OData V4\)
--   Object page\(OData V4\)
--   Anaytical list page\(OData V4\)
+-   List report page \(OData V4\)
+-   Object page \(OData V4\)
+-   Analytical list page \(OData V4\)
 
 
 
@@ -5620,9 +5682,9 @@ variant management
 </td>
 <td valign="top">
 
--   List report page\(OData V4\)
--   Object page\(OData V4\)
--   Anaytical list page\(OData V4\)
+-   List report page \(OData V4\)
+-   Object page \(OData V4\)
+-   Analytical list page \(OData V4\)
 
 
 
@@ -5674,9 +5736,9 @@ free-style application
 </td>
 <td valign="top">
 
--   List report page\(OData V4\)
--   Object page\(OData V4\)
--   Anaytical list page\(OData V4\)
+-   List report page \(OData V4\)
+-   Object page \(OData V4\)
+-   Analytical list page \(OData V4\)
 
 
 
@@ -5774,10 +5836,11 @@ Search
 </td>
 <td valign="top">
 
--   Analytical list page \(OData V2\)
--   List report page \(OData V2\)
--   Object page \(OData V2\)
+-   Analytical list page
+-   List report page
+-   Object page
 -   Overview page
+-   Worklist
 
 
 
@@ -5965,7 +6028,7 @@ Side effects
 
 -   List report page \(OData V4\)
 -   Object page \(OData V4\)
--   Anaytical list page \(OData V4\)
+-   Analytical list page \(OData V4\)
 
 
 
@@ -6271,6 +6334,62 @@ Stacked bar microchart
 <tr>
 <td valign="top">
 
+`Status` building block
+
+</td>
+<td valign="top">
+
+-   List report page \(OData V4\)
+-   Object page \(OData V4\)
+-   Analytical list page \(OData V4\)
+
+
+
+</td>
+<td valign="top">
+
+[The Status Building Block](the-status-building-block-8d8d810.md)
+
+[Building Blocks](building-blocks-24c1304.md)
+
+[Flexible Programming Model](flexible-programming-model-549749b.md)
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+status
+
+object status
+
+object
+
+building blocks
+
+buildable blocks
+
+macros
+
+free style application
+
+free-style application
+
+freestyle application
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
 Status colors and icons
 
 </td>
@@ -6367,7 +6486,7 @@ Attachment
 
 -   List report page \(OData V4\)
 -   Object page \(OData V4\)
--   Anaytical list page \(OData V4\)
+-   Analytical list page \(OData V4\)
 
 
 
@@ -6883,7 +7002,7 @@ TreeTable
 
 -   List report page \(OData V4\)
 -   Object page \(OData V4\)
--   Anaytical list page \(OData V4\)
+-   Analytical list page \(OData V4\)
 
 
 

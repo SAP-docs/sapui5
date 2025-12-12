@@ -642,7 +642,7 @@ Control
 
 **`sap.f.semantic.SemanticPage`**
 
-To align with the latest SAP Fiori design guidelines, the following changes were implemented:
+To align with the latest SAP Design System guidelines, the following changes were implemented:
 
 -   The position of the draft indicator is changed to be the first one before the finalizing actions in the footer toolbar of the page.
 

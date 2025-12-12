@@ -541,7 +541,7 @@ Control
 
 **`sap.ui.comp.smarttable.SmartTable`**
 
-We have improved the usability of the [Show Details\]/[Hide Details\] buttons and adapted the buttons and tooltips based on the SAP Fiori design guidelines. For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.comp.smarttable.SmartTable%23methods/getShowDetailsButton) and the [Sample](https://ui5.sap.com/#/entity/sap.ui.comp.smarttable.SmartTable/sample/sap.ui.comp.sample.smarttable.mtableShowDetails).
+We have improved the usability of the [Show Details\]/[Hide Details\] buttons and adapted the buttons and tooltips based on the SAP Design System guidelines. For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.comp.smarttable.SmartTable%23methods/getShowDetailsButton) and the [Sample](https://ui5.sap.com/#/entity/sap.ui.comp.smarttable.SmartTable/sample/sap.ui.comp.sample.smarttable.mtableShowDetails).
 
 <sub>Changed•Control•Info Only•1.101</sub>
 

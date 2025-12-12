@@ -151,7 +151,7 @@ For more information, see [Providing Design-Time Metadata](providing-design-time
 
 Provide or compute a name for the controls inside the aggregation, which is understandable for the key user. This is needed for the *addIFrame* action to show the container title in the context menu \(*Embed Content to: <singular\>*\) . Currently only singular is required, but adding a value for the plural makes the implementation future-proof.
 
-Name your control based on the general UI concept and follow the [SAP Fiori Design Guidelines](https://experience.sap.com/fiori-design/). Example: Key users don't care about the difference between a smart, mobile, or responsive version of a form - they just call it "form".
+Name your control based on the general UI concept and follow the [SAP Design System guidelines](https://experience.sap.com/fiori-design/). Example: Key users don't care about the difference between a smart, mobile, or responsive version of a form - they just call it "form".
 
 </td>
 </tr>

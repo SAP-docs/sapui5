@@ -25,37 +25,42 @@ Use the `Common.ValueList` annotation when the value help entity is defined with
 > XML Annotation
 > 
 > ```
+> 
 > <Annotations Target="MyService.Travel/AgencyId">
->   <Annotation Term="Common.ValueList">
->     <Record>
->       <PropertyValue Property="CollectionPath" String="TravelAgency" />
->       <PropertyValue Property="Label" String="Travel Agency" />
->       <PropertyValue Property="SearchSupported" Bool="true" />
->       <PropertyValue Property="FetchValues" Int="2" />
->       <PropertyValue Property="Parameters">
->         <Collection>
->           <Record Type="Common.ValueListParameterInOut">
->             <PropertyValue Property="LocalDataProperty" PropertyPath="AgencyId" />
->             <PropertyValue Property="ValueListProperty" String="Agency_Id" />
->             <PropertyValue Property="Importance" EnumMember="Common.ImportanceType/High" />
->           </Record>
->           <Record Type="Common.ValueListParameterInOut">
->             <PropertyValue Property="LocalDataProperty" PropertyPath="_TourOperator/RegionId" />
->             <PropertyValue Property="ValueListProperty" String="Region_Id" />
->             <PropertyValue Property="InitialValueIsSignificant" Bool="true" />
->           </Record>
->           <Record Type="Common.ValueListParameterDisplayOnly">
->             <PropertyValue Property="ValueListProperty" String="AgencyName" />
->             <PropertyValue Property="Importance" EnumMember="Common.ImportanceType/High" />
->           </Record>
->           <Record Type="Common.ValueListParameterOut">
->             <PropertyValue Property="LocalDataProperty" PropertyPath="CountryIndicator" />
->             <PropertyValue Property="ValueListProperty" String="Country_Flag" />
->           </Record>
->         </Collection>
->       </PropertyValue>
->     </Record>
->   </Annotation>
+>     <Annotation Term="Common.ValueList">
+>         <Record>
+>             <PropertyValue Property="CollectionPath" String="TravelAgency" />
+>             <PropertyValue Property="Label" String="Travel Agency" />
+>             <PropertyValue Property="SearchSupported" Bool="true" />
+>             <PropertyValue Property="FetchValues" Int="2" />
+>             <PropertyValue Property="Parameters">
+>                 <Collection>
+>                     <Record Type="Common.ValueListParameterInOut">
+>                         <PropertyValue Property="LocalDataProperty" PropertyPath="AgencyId" />
+>                         <PropertyValue Property="ValueListProperty" String="Agency_Id" />
+>                         <PropertyValue Property="Importance" EnumMember="Common.ImportanceType/High" />
+>                     </Record>
+>                     <Record Type="Common.ValueListParameterInOut">
+>                         <PropertyValue Property="LocalDataProperty" PropertyPath="_TourOperator/RegionId" />
+>                         <PropertyValue Property="ValueListProperty" String="Region_Id" />
+>                         <PropertyValue Property="InitialValueIsSignificant" Bool="true" />
+>                     </Record>
+>                     <Record Type="Common.ValueListParameterDisplayOnly">
+>                         <PropertyValue Property="ValueListProperty" String="AgencyName" />
+>                         <PropertyValue Property="Importance" EnumMember="Common.ImportanceType/High" />
+>                     </Record>
+>                     <Record Type="Common.ValueListParameterOut">
+>                         <PropertyValue Property="LocalDataProperty" PropertyPath="CountryIndicator" />
+>                         <PropertyValue Property="ValueListProperty" String="Country_Flag" />
+>                     </Record>
+>                     <Record Type="Common.ValueListParameterConstant">
+>                         <PropertyValue Property="Constant" String="001" />
+>                         <PropertyValue Property="ValueListProperty" String="PredefinedField" />
+>                     </Record>
+>                 </Collection>
+>             </PropertyValue>
+>         </Record>
+>     </Annotation>
 > </Annotations>
 > 
 > ```
@@ -64,37 +69,43 @@ Use the `Common.ValueList` annotation when the value help entity is defined with
 > CAP CDS Annotation
 > 
 > ```
-> annotate MyService.Travel with {
->   AgencyId @Common.ValueList: {
->     CollectionPath : 'TravelAgency',
->     Label          : 'Travel Agency',
->     SearchSupported,
->     FetchValues    : 2,
->     Parameters     : [
->       {
->         $Type             : 'Common.ValueListParameterInOut',
->         LocalDataProperty : AgencyId,
->         ValueListProperty : 'Agency_Id',
->         ![@UI.Importance] : #High,
->       },
->       {
->         $Type                    : 'Common.ValueListParameterInOut',
->         LocalDataProperty        : to_TourOperator.RegionId,
->         ValueListProperty        : 'Region_Id',
->         InitialValueIsSignificant
->       },
->       {
->         $Type             : 'Common.ValueListParameterDisplayOnly',
->         ValueListProperty : 'AgencyName',
->         ![@UI.Importance] : #High,
->       },
->       {
->         $Type             : 'Common.ValueListParameterOut',
->         LocalDataProperty : CountryIndicator,
->         ValueListProperty : 'Country_Flag'
->       }
->     ]
->   };
+> annotate MyService.Travel with 
+> {
+>     AgencyId @Common.ValueList: {
+>         CollectionPath : 'TravelAgency',
+>         Label          : 'Travel Agency',
+>         SearchSupported,
+>         FetchValues    : 2,
+>         Parameters     : [
+>             {
+>                 $Type             : 'Common.ValueListParameterInOut',
+>                 LocalDataProperty : AgencyId,
+>                 ValueListProperty : 'Agency_Id',
+>                 ![@UI.Importance] : #High,
+>             },
+>             {
+>                 $Type                    : 'Common.ValueListParameterInOut',
+>                 LocalDataProperty        : to_TourOperator.RegionId,
+>                 ValueListProperty        : 'Region_Id',
+>                 InitialValueIsSignificant
+>             },
+>             {
+>                 $Type             : 'Common.ValueListParameterDisplayOnly',
+>                 ValueListProperty : 'AgencyName',
+>                 ![@UI.Importance] : #High,
+>             },
+>             {
+>                 $Type             : 'Common.ValueListParameterOut',
+>                 LocalDataProperty : CountryIndicator,
+>                 ValueListProperty : 'Country_Flag'
+>             }
+>             {
+>                 $Type            : 'Common.ValueListParameterConstant',
+>                 Constant: '001',
+>                 ValueListProperty: 'PredefinedField'
+>             }
+>         ]
+>     };
 > };
 > 
 > ```
@@ -109,37 +120,42 @@ Use the `Common.ValueListMapping` annotation when the value help entity’s meta
 > XML Annotation
 > 
 > ```
+> 
 > <Annotations Target="MyService.Travel/AgencyId">
->   <Annotation Term="Common.ValueListMapping">
->     <Record>
->       <PropertyValue Property="CollectionPath" String="TravelAgency" />
->       <PropertyValue Property="Label" String="Travel Agency" />
->       <PropertyValue Property="SearchSupported" Bool="true" />
->       <PropertyValue Property="FetchValues" Int="2" />
->       <PropertyValue Property="Parameters">
->         <Collection>
->           <Record Type="Common.ValueListParameterInOut">
->             <PropertyValue Property="LocalDataProperty" PropertyPath="AgencyId" />
->             <PropertyValue Property="ValueListProperty" String="Agency_Id" />
->             <PropertyValue Property="Importance" EnumMember="Common.ImportanceType/High" />
->           </Record>
->           <Record Type="Common.ValueListParameterInOut">
->             <PropertyValue Property="LocalDataProperty" PropertyPath="_TourOperator/RegionId" />
->             <PropertyValue Property="ValueListProperty" String="Region_Id" />
->             <PropertyValue Property="InitialValueIsSignificant" Bool="true" />
->           </Record>
->           <Record Type="Common.ValueListParameterDisplayOnly">
->             <PropertyValue Property="ValueListProperty" String="AgencyName" />
->             <PropertyValue Property="Importance" EnumMember="Common.ImportanceType/High" />
->           </Record>
->           <Record Type="Common.ValueListParameterOut">
->             <PropertyValue Property="LocalDataProperty" PropertyPath="CountryIndicator" />
->             <PropertyValue Property="ValueListProperty" String="Country_Flag" />
->           </Record>
->         </Collection>
->       </PropertyValue>
->     </Record>
->   </Annotation>
+>     <Annotation Term="Common.ValueListMapping">
+>         <Record>
+>             <PropertyValue Property="CollectionPath" String="TravelAgency" />
+>             <PropertyValue Property="Label" String="Travel Agency" />
+>             <PropertyValue Property="SearchSupported" Bool="true" />
+>             <PropertyValue Property="FetchValues" Int="2" />
+>             <PropertyValue Property="Parameters">
+>                 <Collection>
+>                     <Record Type="Common.ValueListParameterInOut">
+>                         <PropertyValue Property="LocalDataProperty" PropertyPath="AgencyId" />
+>                         <PropertyValue Property="ValueListProperty" String="Agency_Id" />
+>                         <PropertyValue Property="Importance" EnumMember="Common.ImportanceType/High" />
+>                     </Record>
+>                     <Record Type="Common.ValueListParameterInOut">
+>                         <PropertyValue Property="LocalDataProperty" PropertyPath="_TourOperator/RegionId" />
+>                         <PropertyValue Property="ValueListProperty" String="Region_Id" />
+>                         <PropertyValue Property="InitialValueIsSignificant" Bool="true" />
+>                     </Record>
+>                     <Record Type="Common.ValueListParameterDisplayOnly">
+>                         <PropertyValue Property="ValueListProperty" String="AgencyName" />
+>                         <PropertyValue Property="Importance" EnumMember="Common.ImportanceType/High" />
+>                     </Record>
+>                     <Record Type="Common.ValueListParameterOut">
+>                         <PropertyValue Property="LocalDataProperty" PropertyPath="CountryIndicator" />
+>                         <PropertyValue Property="ValueListProperty" String="Country_Flag" />
+>                     </Record>
+>                     <Record Type="Common.ValueListParameterConstant">
+>                         <PropertyValue Property="Constant" String="001" />
+>                         <PropertyValue Property="ValueListProperty" String="PredefinedField" />
+>                     </Record>
+>                 </Collection>
+>             </PropertyValue>
+>         </Record>
+>     </Annotation>
 > </Annotations>
 > 
 > ```
@@ -171,11 +187,11 @@ The string in this XML annotation represents the path relative to the main metad
 
 Both `ValueList` and `ValueListMapping` annotations are used in similar contexts and support the following properties:
 
--   `Label`: Determines the title of the value help dialog. For more information, see [Title](value-help-dialog-3faed83.md#loio3faed838512648b099e14dfec458d847__Title) subsection in [Value Help Dialog](value-help-dialog-3faed83.md).
+-   `Label`: Determines the title of the value help dialog. For more information, see the [Title](value-help-dialog-3faed83.md#loio3faed838512648b099e14dfec458d847__Title) subsection in [Value Help Dialog](value-help-dialog-3faed83.md).
 
 -   `CollectionPath`: Refers to the value help entity that provides the data shown in the value help dialog, allowing end users to select a value.
 
--   `SearchSupported`: Determines whether the search bar is displayed in the value help dialog. For more information, see [Search Field](value-help-dialog-3faed83.md#loio3faed838512648b099e14dfec458d847__searchfield) subsection in [Value Help Dialog](value-help-dialog-3faed83.md).
+-   `SearchSupported`: Determines whether the search bar is displayed in the value help dialog. For more information, see the [Search Field](value-help-dialog-3faed83.md#loio3faed838512648b099e14dfec458d847__searchfield) subsection in [Value Help Dialog](value-help-dialog-3faed83.md).
 
 -   `Parameters`: Determines how the selection in the value help dialog affects the fields outside the value help dialog \(`OUT` mapping\), how external fields influence the contents of the value help dialog \(`IN` mapping\), or both \(`IN/OUT` mapping\). For more information, see [In/Out Mappings in the ValueList Annotation](in-out-mappings-in-the-valuelist-annotation-4de40b3.md).
 
@@ -186,43 +202,11 @@ Both `ValueList` and `ValueListMapping` annotations are used in similar contexts
     -   `2` : Data is loaded only after the end user applies the filters.
 
 
--   `Importance`: Indicates whether the field value must appear in the type-ahead suggestion. For more information, see [Type-Ahead Support](field-help-a5608ea.md#loioa5608eabcc184aee99e1a7d88b28816c__Type-AheadSupport) section in [Field Help](field-help-a5608ea.md).
+-   `Importance`: Indicates whether the field value must appear in the type-ahead suggestion. For more information, see the [Type-Ahead Support](field-help-a5608ea.md#loioa5608eabcc184aee99e1a7d88b28816c__Type-AheadSupport) section in [Field Help](field-help-a5608ea.md).
 
 
 > ### Note:  
 > The value help appears in filter fields, even if the `Common.ValueList`  or  `Common.ValueListMapping`  annotation isn't defined. In such cases, only the *Define Conditions* tab is shown in the value help dialog.
-
-
-
-### `ValueListParameterConstant` Annotation
-
-Use the `ValueListParameterConstant` annotation as a constant value to filter the value list with `eq` comparison, using the same representation as property default values.
-
-> ### Sample Code:  
-> XML Annotation
-> 
-> ```
-> 
-> <Annotation Term="Common.ValueList">
->     <Record Type="Common.ValueListType">
->         <PropertyValue Property="CollectionPath" String="Customer" />
->         <PropertyValue Property="Label" String="Sold-to Party" />
->         <PropertyValue Property="Parameters">
->             <Collection>
->                 <Record Type="Common.ValueListParameterConstant">
->                     <PropertyValue Property="Constant" String="001" />
->                     <PropertyValue Property="ValueListProperty" String="PredefinedField" />
->                 </Record>
->                 <Record Type="Common.ValueListParameterInOut">
->                     <PropertyValue Property="LocalDataProperty" PropertyPath="SoldToParty" />
->                     <PropertyValue Property="ValueListProperty" String="Customer" />
->                 </Record>
->             </Collection>
->         </PropertyValue>
->     </Record>
-> </Annotation>
-> 
-> ```
 
 
 
@@ -246,7 +230,6 @@ You can validate user input against the default value list \(unqualified\) by se
 > 
 > ```
 > <Annotations Target="serviceNamespace.BookingType/FlightDate">
->     …….
 >     …….
 >     <Annotation Term="Common.ValueListForValidation" String=""/>
 >     <Annotation Term="Common.ValueList">

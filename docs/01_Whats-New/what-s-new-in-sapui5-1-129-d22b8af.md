@@ -776,7 +776,7 @@ The following changes and new features are available for SAP Fiori elements for 
 
 -   We now display an illustrated message when no data is available in a chart. For more information, see [Maintaining Standard Texts for Charts](../06_SAP_Fiori_Elements/maintaining-standard-texts-for-charts-37cd601.md).
 
--   We now display an illustrated message if no data is found in a table. For more information, see [Maintaining Standard Texts for Tables](../06_SAP_Fiori_Elements/maintaining-standard-texts-for-tables-aacfac5.md) and [Illustrated Message When No Data Is Found](../06_SAP_Fiori_Elements/illustrated-message-when-no-data-is-found-f9925b6.md).
+-   We now display an illustrated message if no data is found in a table. For more information, see [Maintaining Standard Texts for Tables](../06_SAP_Fiori_Elements/maintaining-standard-texts-for-tables-aacfac5.md) and [Illustrated Message When No Data Is Found](../06_SAP_Fiori_Elements/displaying-an-illustrated-message-when-no-data-is-found-f9925b6.md).
 
 -   Application developers can now override the key for the *Delete* button on an object page using the custom i18n file approach. For more information, see [Localization of UI Texts](../06_SAP_Fiori_Elements/localization-of-ui-texts-b8cb649.md).
 

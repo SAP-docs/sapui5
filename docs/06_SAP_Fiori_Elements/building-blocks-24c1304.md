@@ -9,6 +9,8 @@ SAP Fiori elements provides you with building blocks that allow you to create a 
 
 While extension points provide you with containers where you can then implement your own UI, SAP Fiori elements exposes a set of building blocks that are used to build the templates. These building blocks are not SAPUI5 controls, but rather a set of templating instructions that result in the creation of a specific control tree, depending on the bound data structures.
 
+The configuration of a building block is based on annotations, building block-specific entries in the XML file, and the manifest configuration. In case of a conflict, the manifest configuration overrides both XML configuration and annotation definitions.
+
 Invoking the `Field` building block for a string property and a date property, for example, applies the following different transformations:
 
 Usage of the `Field` building block in a custom section

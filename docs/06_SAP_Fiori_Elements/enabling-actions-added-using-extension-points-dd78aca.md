@@ -324,5 +324,5 @@ You can also control the visibility of actions through a custom handler \(this i
 > ```
 
 > ### Remember:  
-> Proceed carefuly if you want to display and hide actions based on dynamic behavior that can be influenced by end users. We strongly recommend to consult the SAP Fiori Design Guidelines at [https://experience.sap.com/fiori-design-web/ui-element-states/](https://experience.sap.com/fiori-design-web/ui-element-states/).
+> Proceed carefuly if you want to display and hide actions based on dynamic behavior that can be influenced by end users. We strongly recommend to consult the SAP Design System guidelines at [https://experience.sap.com/fiori-design-web/ui-element-states/](https://experience.sap.com/fiori-design-web/ui-element-states/).
 

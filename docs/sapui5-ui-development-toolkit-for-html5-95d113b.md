@@ -45,7 +45,7 @@ Check the [SAPUI5 playlist](https://www.youtube.com/playlist?list=PLWV533hWWvDmx
 </tr>
 </table>
 
-SAP Fiori apps are built with SAPUI5 and follow the SAP Fiori design guidelines to ensure consistent design and a high level of design quality. See [SAP Fiori Design Guidelines](https://experience.sap.com/fiori-design-web/).
+SAP Fiori apps are built with SAPUI5 and follow the SAP Design System guidelines to ensure consistent design and a high level of design quality. See [SAP Fiori Design Guidelines](https://experience.sap.com/fiori-design-web/).
 
 For more information about SAP Fiori, see [http://www.sap.com/fiori](http://www.sap.com/fiori) 
 

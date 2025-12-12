@@ -8,11 +8,18 @@ The following table types are available:
 
 -   Responsive tables
 
-    Responsiveness is optimized for mobile use. Line items can be viewed with no scrolling or with only vertical scrolling, regardless of the display width.
+    Responsive tables are optimized for mobile use. Line items can be viewed without scrolling or with vertical scrolling only, regardless of the display width.
+
+    Responsive tables are intended for work on the line level instead of cell level, and for work with a small number of items.
+
+    > ### Restriction:  
+    > Only use the responsive table if the total number of items in the table doesn't exceed 200.
 
 -   Grid table
 
-    This is a desktop-centric table type that allows scrolling in both directions. It can handle a large number of items and columns.
+    The grid table is designed to contain a larger number of items \(several thousand or more\), with convenient comparison of items in different rows or columns.
+
+    The grid table is suitable to most use cases on the list report pages.
 
 -   Tree table
 
@@ -20,16 +27,14 @@ The following table types are available:
 
 -   Analytical table
 
-    This table type contains data structured in rows and columns. It provides several powerful options for working with data, including advanced grouping and aggregations.
-
-    In contrast to other tables, the analytical data binding used by the analytical table automatically displays an aggregated number in a cell.
+    The analytical table offers a comprehensive set of features for working with analytical data, such as advanced grouping options and data aggregation.
 
 
-The table representation that suits the service is chosen by default during the app creation. The responsive table is set as the default table type, but the analytical table is selected as the default table type for analytical services.
+The table representation that suits the service is chosen by default during the app creation.
 
 You can change the default table type to suit your needs.
 
-For more information about the table types, see [Tables: Which One Should I Choose?](../10_More_About_Controls/tables-which-one-should-i-choose-148892f.md). For more information about defining the `UI.LineItem` annotation that describes the table, see [Defining Line Items](defining-line-items-f0e1e17.md).
+For more information about defining the `UI.LineItem` annotation that describes the table, see [Defining Line Items](defining-line-items-f0e1e17.md).
 
 The table control uses page mechanisms while loading data. It contains the following:
 
@@ -168,7 +173,6 @@ You can hide the table columns or specific fields within the table column in an 
 >     type: #AS_FIELDGROUP,
 >     valueQualifier: 'multipleActionFields',
 >     label: 'Sold-To Party',
->     hidden: true,
 >     hidden: #( 'Delivered' )
 > }]
 > TEST;
@@ -198,7 +202,7 @@ You can hide the table columns or specific fields within the table column in an 
 
 ## Searching for Rows in a Table on an Object Page
 
-In responsive, grid, and analytical tables, if the table is searchable \(that is, if an entity set is used for which `sap:searchable` is set as `true`\), a search field is displayed. You can search for particular rows in the table.
+A search field is displayed in the table toolbar if the used entity set is searchable. You can use the search bar to search for particular rows in the table.
 
 
 
@@ -216,7 +220,7 @@ To customize the width of a column defined in a line item, use the UI annotation
 
 ## Copying Multiple Rows and Range Selections
 
-End users can copy multiple rows as well as ranges of rows and columns to the clipboard. The selected content \(rows or ranges\) can then be pasted to another application such as Microsoft Excel, Microsoft Word, or to another SAP Fiori elements table. Note that the copying from a table functionality doesn't split the content for fields that contain an amount together with a unit of measure or currency, as well as for fields that contain a value and its description. After copying, end users need to adapt such content before pasting it to an SAP Fiori elements table.
+End users can copy multiple rows as well as ranges of rows and columns to the clipboard. The selected content \(rows or ranges\) can then be pasted to another application such as Microsoft Excel, Microsoft Word, or to another SAP Fiori elements table.
 
 > ### Note:  
 > When using custom columns in SAP Fiori elements for OData V4, the cell content is the properties listed in the `property` array of the custom column definition. For more information, see [Extension Points for Tables](extension-points-for-tables-d525522.md).
@@ -780,10 +784,7 @@ You can exclude specific fields from the table personalization dialog in the lis
 
 ### Handling of Search Restrictions
 
-> ### Note:  
-> The analytical table works differently compared to grid tables and responsive tables. For more information about the configuration of different table types, see [Setting the Table Type](setting-the-table-type-7f844f1.md).
-
-The search restriction for a table is first looked up in the parent entity \(using `NavigationRestrictions` at the parent entity, with the `NavigationProperty` pointing to the association of the table entity\).
+The search field is displayed in the toolbar of a responsive table or grid table if the entity is searchable. This is defined with the annotation `Capabilities.SearchRestrictions`. The search restriction for a table is first looked up in the parent entity \(using `NavigationRestrictions` at the parent entity, with the `NavigationProperty` pointing to the association of the table entity\).
 
 -   Navigation Restrictions at Parent Entity
 
@@ -951,6 +952,26 @@ The search restriction for a table is first looked up in the parent entity \(usi
     > 
     > ```
 
+
+The search field is displayed in the toolbar of an analytical table or tree table if the entity is searchable. This is defined with the search transformation in the `Transformations` of the `ApplySupported` annotation. If no `Transformations` are available, then the search field is enabled as well.
+
+> ### Sample Code:  
+> ```
+> 
+> <Annotation Term="SAP__aggregation.ApplySupported">
+>     <Record>
+>         <PropertyValue Property="Transformations">
+>             <Collection>
+>                 <String>filter</String>
+>                 <String>orderby</String>
+>                 <String>search</String>
+>                 <String>descendants</String>
+>             </Collection>
+>         </PropertyValue>
+>     </Record>
+> </Annotation>
+> 
+> ```
 
 
 
@@ -1213,14 +1234,14 @@ You can configure the `scrollThreshold` property in the `manifest.json` file as 
 > 
 > ```
 
-Key users can configure the `ScrollThreshold` property using the UI adaptation mode. For more information, see [Adapting the UI](adapting-the-ui-59bfd31.md).
+Key users can configure the `scrollThreshold` property using the UI adaptation mode. For more information, see [Adapting the UI](adapting-the-ui-59bfd31.md).
 
 **Related Information**  
 
 
 [Configuring Tables](configuring-tables-f4eb70f.md "You can use the annotations and entries in the manifest.json to control various aspects of tables.")
 
-[Setting the Table Type](setting-the-table-type-7f844f1.md "You can control which table type is rendered in the list report and on the object page by configuring the manifest.json file and by using annotations.")
+[Setting the Table Type](setting-the-table-type-7f844f1.md "You can control which table type is rendered on the list report page and on the object page by configuring the manifest.json file and by using annotations.")
 
 [Tables: Which One Should I Choose?](../10_More_About_Controls/tables-which-one-should-i-choose-148892f.md "The libraries provided by SAPUI5 contain various different table controls that are suitable for different use cases. The table below outlines which table controls are available, and what features are supported by each one.")
 

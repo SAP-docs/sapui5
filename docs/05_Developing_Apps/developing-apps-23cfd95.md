@@ -24,7 +24,7 @@ Before you start developing apps with SAPUI5, you start by setting up the develo
 
 When faced with developing an app, you have several ways to get started ranging from app templates or a make-em-completely-from-scratch approach. But which approach is right for your situation? In most cases, it's your level of expertise or need for flexibility and freedom that will decide.
 
-An easy start to app development are app templates offered by SAP Fiori Tools. Think of app templates as a kind of best practice for app development. They incorporate current recommendations and can be used as a starting point for developing apps according to the SAP Fiori design guidelines. They include generic application functionality and tests that can be easily extended with custom functionality if needed. The templates are introduced under [Developing Apps with SAP Fiori Tools](developing-apps-with-sap-fiori-tools-a460a73.md).
+An easy start to app development are app templates offered by SAP Fiori Tools. Think of app templates as a kind of best practice for app development. They incorporate current recommendations and can be used as a starting point for developing apps according to the SAP Design System guidelines. They include generic application functionality and tests that can be easily extended with custom functionality if needed. The templates are introduced under [Developing Apps with SAP Fiori Tools](developing-apps-with-sap-fiori-tools-a460a73.md).
 
 If you're skilled at coding and want the freedom and flexibility, you can build an app completely from scratch. In the chapters in this section, you will find some guidance on how to deal with crucial concepts such as accessibility, security, device adaptation.
 

@@ -314,7 +314,7 @@ To define a quick view for a source property with a `ReferentialConstraint` on a
         > ```
 
 
-3.  4.  Annotate `UI.QuickViewFacets` under the association end type of the `ReferentialConstraint` property as follows:
+3.  Annotate `UI.QuickViewFacets` under the association end type of the `ReferentialConstraint` property as follows:
 
     > ### Sample Code:  
     > XML Annotation
@@ -426,7 +426,7 @@ To define a quick view for a source property with a `ReferentialConstraint` on a
     > })
     > ```
 
-
+4.  
 To define a quick view for a source property where the target property is a semantic key or an entity key, perform the following steps:
 
 1.  On the source entity define an association to the target entity and a semantic object annotation for the navigation property:

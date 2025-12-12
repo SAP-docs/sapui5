@@ -66,19 +66,26 @@ It defines static information about the application such as its name and the loc
 > ### Note:  
 > To improve the performance of overview page applications, you can enable lazy loading of cards by setting the URL parameter `sap-fe-xx-lazyloadingtest=true`. This parameter mimics the behavior of setting `"enableLazyRendering": true` in the manifest configuration.
 
-The `containerLayout` parameter can be set to either `fixed` or `resizable`, depending on the required card layout.
 
-In the fixed card layout, the cards have a fixed width. You can configure them to load with specific size requirements by defining a default size within each card definition. The grid supports up to four columns, determining how many cards can be displayed side by side.
 
-> ### Note:  
-> Fixed card layout has been deprecated as of SAPUI5 1.142.
+### Configuring the Overview Page Layout
 
-In contrast, in a resizable card layout, end users can adjust the size of cards by expanding or contracting them both horizontally and vertically within the grid-based layout. Application developers can enable this flexibility by setting `"containerLayout": "resizable"`.
+The following card layouts are available for overview pages:
+
+-   Fixed card layout - Set the `containerLayout` parameter to `fixed` to enable this layout. In this card layout, the cards have a fixed width. You can configure them to load with specific size requirements by defining a default size within each card definition. The grid supports up to four columns, determining how many cards can be displayed side by side.
+
+    > ### Note:  
+    > The fixed card layout has been deprecated as of SAPUI5 1.142.
+
+-   Resizable card layout - Set the `containerLayout` parameter to `resizable` to enable this layout. End users can adjust the size of cards by expanding or contracting them both horizontally and vertically within the grid-based layout.
+
 
 When switching from fixed card layout to resizable card layout in an app, the following changes made in the fixed card layout are not retained:
 
--   Cards arrangements modified by end users using drag and drop.
+-   Card arrangements modified by end users using drag and drop.
 
--   Cards order changes made by key users using cut and paste.
+-   Card order changes made by key users using cut and paste.
+
+
 
 

@@ -16,7 +16,7 @@ The value help dialog consists of several components, such as a filter bar, a ta
 
 ### Title
 
-If the field is annotated with `DataField` and includes a `label` property, it is used as the title of the value help dialog. If the`label` property isn't defined in `DataField`, the `Common.Label` annotation of the property is used. If neither is defined, the `label` property defined in the `Common.ValueList` or `Common.ValueListMapping` annotation is used as a fallback.
+If the field is annotated with `DataField` and includes a `label` property, it is used as the title of the value help dialog. If the `label` property isn't defined in `DataField`, the `Common.Label` annotation of the property is used. If neither is defined, the `label` property defined in the `Common.ValueList` or `Common.ValueListMapping` annotation is used as a fallback.
 
 When context-dependent value help is defined with `Common.ValueListRelevantQualifiers`, the label defined in the `Common.ValueList` or `Common.ValueListMapping` annotation is used as the title. If label isn't defined in either of these annotation, `Common.Label` annotation of the property is considered. If `label` is also not defined, the label from the `DataField` annotation is used as a fallback.
 
@@ -43,8 +43,14 @@ The filter bar is collapsed by default. However, you can modify this behavior so
 -   Data is not loaded by default. This occurs when the `FetchValues` property in the `ValueList` annotation is set to `2`.
 
 
-> ### Note:  
-> Assigning default values to the filter fields is only possible through `IN` mappings using the `Common.ValueListParameterIn` property. For more information about this property, see [In/Out Mappings in the ValueList Annotation](in-out-mappings-in-the-valuelist-annotation-4de40b3.md).
+Use the `ValueListParameterConstant` annotation to provide a constant value that can be used as a default filter value when querying the value help entity.
+
+The `ValueListParameterConstant` annotation supports the following properties:
+
+-   `ValueListProperty`: String representing the property in the value list.
+
+-   `Constant`: A string representing the constant value used to filter the value list with an `eq` comparison, using the same representation as property default values.
+
 
 
 
@@ -54,7 +60,7 @@ You can control the visibility of the search field in a value help dialog at bot
 
 -   At the entity level, set the `Capabilities.SearchRestrictions.Searchable` annotation to `false` to hide the search field. By default, the entity set of a value help is searchable. For more information about the `Searchable` annotation, see [Enabling the Search Function](enabling-the-search-function-3cdebee.md).
 
--   In the value list definition, set `SearchSupported : false` in either the `Common.ValueList` or `Common.ValueListMapping` annotation to hide the search field. This setting overrides the `Capabilities.SearchRestrictions.Searchable: true` setting of the value help entity, and the search field is not be displayed in the dialog. For more information about the `SearchSupported` property, see [Annotations](value-help-fccb255.md#loiofccb255723d3489cae955648756411f6__Annotations).
+-   In the value list definition, set `SearchSupported : false` in either the `Common.ValueList` or `Common.ValueListMapping` annotation to hide the search field. This setting overrides the `Capabilities.SearchRestrictions.Searchable: true` setting of the value help entity, and the search field is not be displayed in the dialog. For more information about the `SearchSupported` property, see the [Annotations](value-help-fccb255.md#loiofccb255723d3489cae955648756411f6__Annotations) section in [Value Help](value-help-fccb255.md).
 
 
 > ### Tip:  
@@ -82,7 +88,7 @@ For more information about these properties, see [In/Out Mappings in the ValueLi
 
 **Defining the Behavior of Data Load in the Table**
 
-By default, value help dialog loads the data immediately upon opening. To delay data loading until after user input, use  `FetchValues` annotation. This allows end users to load data only after clicking *Go*. For more information about `FetchValues`, see [Annotations](value-help-fccb255.md#loiofccb255723d3489cae955648756411f6__Annotations).
+By default, value help dialog loads the data immediately upon opening. To delay data loading until after user input, use  `FetchValues` annotation. This allows end users to load data only after clicking *Go*. For more information about `FetchValues`, see the [Annotations](value-help-fccb255.md#loiofccb255723d3489cae955648756411f6__Annotations) section in [Value Help](value-help-fccb255.md).
 
 **Text Handling**
 
@@ -92,13 +98,15 @@ The text handling for fields displayed in the table is determined by the text as
 
 -   If `Common.Text` is defined for the ID field, the associated text is also shown based on the following priority:
 
-    -   `Common.TextArrangement` defined on the on the specific property of the value help entity.
+    -   `Common.TextArrangement` defined for the specific property of the value help entity.
 
     -   If not defined at the property level, the `Common.TextArrangement` defined at the entity level is used.
 
     -   If neither is defined, the default text arrangement `TextFirst` is used.
 
 
+
+The text associated with the `ValueListParameterOut` parameters of the value help entity is carried forward to the corresponding property of the main entity, even if the main entity's property is annotated to have a different text.
 
 For more information about the `Common.Text` or `Common.TextArrangement` annotations, see [Further Features of the Field](further-features-of-the-field-f49a0f7.md).
 
@@ -339,7 +347,7 @@ When the value help dialog is initially opened, the table data is loaded and cac
 > Caching of value help data is not supported in dropdown-based fields.
 
 > ### Restriction:  
-> The value help cache can be invalidated and refreshed only when the value help entity is defined within the same metadata as the main entity, as in CAP-based applications. This mechanism isn't supported in RESTful ABAP Programming \(RAP\)-based applications, where the value help entity is defined in a seperate metadata file.
+> The value help cache can be invalidated and refreshed only when the value help entity is defined within the same metadata as the main entity, as in CAP-based applications. This mechanism isn't supported in RESTful ABAP Programming \(RAP\)-based applications, where the value help entity is defined in a separate metadata file.
 
 
 
@@ -458,7 +466,7 @@ All conditions
 > ### Note:  
 > For both `SingleValue` and `MultiValue` expressions, the *Define Condition* tab is hidden.
 
-The tab also includes a corresponding negation condition called *Exclude*, with the options such as *not less than* or *does not end with*. Additionally, an empty operator is available, displaying a <empty\> placeholder for the field. For nullable fields, it corresponds to *equal to ""* or *equal to null*, and for non-nullable fields, it corresponds to *equal to ""*.
+The tab also includes a corresponding negation condition called *Exclude*, with the options such as *not less than* or *does not end with*. Additionally, an empty operator is available, displaying an <empty\> placeholder for the field. For nullable fields, it corresponds to *equal to ""* or *equal to null*, and for non-nullable fields, it corresponds to *equal to ""*.
 
 > ### Note:  
 > The `Edm.Date` fields with `AllowedExpressions` set to `SingleValue` or `SingleRange`, and `Edm.DateTimeOffset` fields with `AllowedExpressions` set to `SingleRange`, are displayed with semantic date options when used in a filter context. For more information, see [Enabling Semantic Operators in the Filter Bar](enabling-semantic-operators-in-the-filter-bar-fef65d0.md).

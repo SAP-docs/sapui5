@@ -15,7 +15,7 @@ The app provides the following features:
 -   View product details and add comments
 
 
-We will use the worklist template as a starting point for this tutorial and add additional features to the app as we go through the steps. The template implements a typical "Worklist" floorplan, one of the patterns that are specified by the SAP Fiori design guidelines, but you can also use it as a starting point for easily creating any kind of list-based apps. For more information about worklist floorplans, see the *Related Information* section at the bottom of this topic.
+We will use the worklist template as a starting point for this tutorial and add additional features to the app as we go through the steps. The template implements a typical "Worklist" floorplan, one of the patterns that are specified by the SAP Design System guidelines, but you can also use it as a starting point for easily creating any kind of list-based apps. For more information about worklist floorplans, see the *Related Information* section at the bottom of this topic.
 
 
 
@@ -45,7 +45,7 @@ We will use the worklist template as a starting point for this tutorial and add 
 **Related Information**  
 
 
-[SAP Fiori design guidelines: Worklist Floorplans](https://experience.sap.com/fiori-design/floorplans/work-list/)
+[SAP Design System guidelines: Worklist Floorplans](https://experience.sap.com/fiori-design/floorplans/work-list/)
 
 [Developing Apps with SAP Fiori Tools](../05_Developing_Apps/developing-apps-with-sap-fiori-tools-a460a73.md "SAP Fiori tools is a set of extensions for SAP Business Application Studio and Visual Studio Code that makes it faster and easier to develop basic SAP Fiori apps.")
 

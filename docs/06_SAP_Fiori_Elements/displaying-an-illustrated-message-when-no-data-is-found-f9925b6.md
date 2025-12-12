@@ -1,10 +1,10 @@
 <!-- loiof9925b63da5443afb7d3b50abb932cf2 -->
 
-# Illustrated Message When No Data Is Found
+# Displaying An Illustrated Message When No Data Is Found
 
 SAP Fiori elements displays an illustrated message when no data is found for a table.
 
-The illustration, the title of the message and its description depend on the situation in which they are displayed: no items created within the table, applied filters, or search query.
+The illustration, the title of the message, and the message description depend on the situation in which they are displayed: no items created within the table, applied filters, or search query.
 
 On the list report page, the size of the illustrated message adapts to the available space for the table, as shown in the following screenshot:
 

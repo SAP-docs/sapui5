@@ -197,27 +197,26 @@ You can annotate the `FilterRestriction` for a filter field in a navigation enti
     > 
     > ```
     > entity SalesOrderManage    @( // add annotations
-    > ...
-    >     SemanticKey : [ID],
     >     ...
+    >     SemanticKey : [ID],
     >     ...
     > ) {
     >     SalesOrder :      SalesOrderId not null; // Add properties
     >     ...
-    >     ...
     >     // Add restrictions where navigation property is defined
-    >     _Material  :    Association to Material on _Material.Material = Material;
-    >                      @(Capabilities: { 
-    >                                        FilterRestrictions: {
-    >                                                              FilterExpressionRestrictions: [
-    >                                                               {
-    >                                                                Property   : 'Material',
-    >                                                                AllowedExpressions: 'SingleRange'
-    >                                                               }
-    >                                                              ]
-    >                                        }
-    >                      });
+    >     _Material  :      Association to Material on _Material.Material = Material;
+    >                       @(Capabilities: { 
+    >                           FilterRestrictions: {
+    >                               FilterExpressionRestrictions: [
+    >                                   {
+    >                                       Property   : 'Material',
+    >                                       AllowedExpressions: 'SingleRange'
+    >                                   }
+    >                               ]
+    >                           }
+    >                       });
     > }
+    > 
     > ```
 
     > ### Sample Code:  
@@ -566,6 +565,25 @@ If the annotation holds more than one of these approaches, the filter restrictio
 > -   CityName - MultiValue field since higher priority annotation wins
 > 
 > -   PartnerAddress - MultiValue field. Since this wasn't defined as a higher priority approach, the lower priority approach persists.
+
+
+
+### Strict Filtering of Unit of Measure Fields
+
+Strict filtering requires users to enter a single value in the unit of measure fields when filtering for measure field values, such as *Amount* or *Quantity*. Strict filtering is enabled by default. You can use the `disableStrictUomFiltering` annotation to disable strict filtering as shown in the following sample code:
+
+> ### Sample Code:  
+> `manifest.json`
+> 
+> ```
+> 
+> "sap.fe": {
+>     "app": {
+>         "disableStrictUomFiltering": true
+>     }
+> }
+> 
+> ```
 
 
 

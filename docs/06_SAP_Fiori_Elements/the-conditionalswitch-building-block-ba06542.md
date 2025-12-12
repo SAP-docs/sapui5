@@ -2,12 +2,9 @@
 
 # The `ConditionalSwitch` Building Block
 
-> ### Remember:  
-> The `ConditionalSwitch` building block is an experimental feature and subject to revisions. It's not intended for productive usage.
+You can use the `ConditionalSwitch` building block in tables or forms to display different controls based on the data of the current row or on the context determined at runtime.
 
-You can use the `ConditionalSwitch` building block when you need to decide at runtime which type of control to display based on complex conditions.
-
-The building block requires a list of properties to bind to and watch. It also requires a factory function that returns the control to be displayed based on the current values of the properties. You can use this building block in tables or forms where you want to display different controls in a cell based on the data of the current row or on the context that can only be determined at runtime.
+The building block requires a list of properties to bind to and watch.
 
 > ### Sample Code:  
 > The `ConditionalSwitch` Building Block
@@ -27,6 +24,8 @@ The building block requires a list of properties to bind to and watch. It also r
 > 
 > ```
 
+The building block also requires a factory function that returns the control to be displayed based on the current values of the properties.
+
 > ### Sample Code:  
 > Factory function
 > 
@@ -45,7 +44,7 @@ The building block requires a list of properties to bind to and watch. It also r
 > 
 > ```
 
-The factory function can also return the `oldControl` parameter, which is the control that you previously created by the factory. Returning `oldControl` avoids the unnecessary recreation of controls. In table scenarios, the `context` parameter contains the binding context of the current row, which you can use to access additional data if needed.
+The factory function can also return the `oldControl` parameter, which is the control that you previously created in the factory. Returning `oldControl` avoids the unnecessary recreation of controls. In table scenarios, the `context` parameter contains the binding context of the current row, which you can use to access additional data if needed.
 
 For grid, tree, or analytical tables, this factory function executes in real time every time you scroll through the table. To avoid performance issues, ensure your factory function is lightweight.
 

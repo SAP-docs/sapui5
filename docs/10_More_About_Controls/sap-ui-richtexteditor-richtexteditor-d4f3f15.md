@@ -623,6 +623,19 @@ As of version 1.54, you can customize the position of the button groups in the c
 
 
 
+### `RichTextEditor` Content Theming Support
+
+As of version 1.143, the **`RichTextEditor`** adapts its content styling to the application’s SAPUI5 theme \(Morning / Evening Horizon; Horizon HCB / HCW; Quartz Light / Dark / HCB / HCW\). The theming affects editor content background and text colors, links, and certain native elements.
+
+What it does not affect is:
+
+-   Native TinyMCE and third‑party plugin popups — these keep their original appearance.
+-   User-applied text and background colors — they are retained across themes and are preserved when content is copied to systems that support such styling \(for example, Microsoft Word\).
+
+![](images/SAPUI5_Themes_Applied_to_RTE_e73f6b9.png)
+
+
+
 ### Native TinyMCE Mobile Support
 
 Since version 4.7 onward TinyMCE provides native mobile support. You can enable it in your app, after version 1.76 of SAPUI5. Keep in mind that we do not recommend using it, as it comes with some restrictions explained in the Preamble section of this chapter.

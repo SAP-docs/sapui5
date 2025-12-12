@@ -1,6 +1,6 @@
 <!-- loio72861c2eefd64ef392ae5b192a804d6b -->
 
-# Using SAPUI5 Flexibility
+# SAPUI5 Flexibility
 
 You can use SAPUI5 flexibility to extend your SAP Fiori apps.
 
@@ -36,5 +36,5 @@ SAPUI5 flexibility allows you to extend freestyle SAPUI5 or SAP Fiori elements a
 
 [XML Fragments](../04_Essentials/xml-fragments-2c677b5.md "XML fragments are similar to XML views but have no <View> tag as root element. Instead, there is an SAPUI5 control.")
 
-[Controller Extensions](../04_Essentials/controller-extensions-21515f0.md "Controller extensions allow you to add functionality to existing applications. They can be used for extensibility purposes, for example by a customer wishing to extend SAP-delivered applications, or as a reusable part that is added to the original application.")
+[Controller Extensions](controller-extensions-21515f0.md "Controller extensions enable you to enhance existing controller functionality without modifying the original application code, making them one of the most versatile and commonly used extension mechanisms in SAPUI5. This approach allows you to add custom business logic, override existing methods, and integrate seamlessly with the standard controller lifecycle.")
 

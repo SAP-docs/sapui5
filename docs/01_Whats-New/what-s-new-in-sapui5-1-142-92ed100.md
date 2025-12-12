@@ -205,7 +205,7 @@ The following changes and new features are available for SAP Fiori elements for 
 
 -   You can now avoid default navigation to prevent unintended navigation after executing an action on an object page table. For more information, see [Configuring Internal Navigation](../06_SAP_Fiori_Elements/configuring-internal-navigation-2c65f07.md).
 
--   We now show an illustrated message if there is no data in a table. For more information, see [Illustrated Message When No Data Is Found](../06_SAP_Fiori_Elements/illustrated-message-when-no-data-is-found-f9925b6.md).
+-   We now show an illustrated message if there is no data in a table. For more information, see [Displaying An Illustrated Message When No Data Is Found](../06_SAP_Fiori_Elements/displaying-an-illustrated-message-when-no-data-is-found-f9925b6.md).
 
 -   We've added more keys that can be overridden by application developers using the custom i18n file approach. You can now override the following keys:
 
@@ -415,7 +415,7 @@ Control
 
 **`sap.ui.table.AnalyticalTable`, `sap.ui.table.Table`, `sap.ui.table.TreeTable`**
 
-We have enhanced the `RowAction` functionality in `sap.ui.table` to display up to three actions, with the `Navigation` action always displayed on the far right. If more than three actions have been defined, an overflow menu is shown. For more information, see the [API Reference](https://ui5.sap.com/#/api/ap.ui.table.RowAction) and the [Sample](https://ui5.sap.com/#/entity/sap.ui.table.Table/sample/sap.ui.table.sample.RowAction).
+We have enhanced the `RowAction` functionality in `sap.ui.table` to display up to three actions, with the `Navigation` action always displayed on the far right. If more than three actions have been defined, an overflow menu is shown. For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.table.RowAction) and the [Sample](https://ui5.sap.com/#/entity/sap.ui.table.Table/sample/sap.ui.table.sample.RowAction).
 
 <sub>Changed•Control•Info Only•1.142</sub>
 

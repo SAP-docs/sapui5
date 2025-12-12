@@ -75,6 +75,17 @@ The *Search* field is enabled by default. If the underlying entity doesn't suppo
 
 For more information about how to enable and disable the *Search* field for analytical tables, see the corresponding section in [Setting the Table Type](setting-the-table-type-7f844f1.md).
 
+> ### Restriction:  
+> The following special characters are ignored as they cause an error in both RESTful Application Programming Model \(RAP\) and SAP Cloud Application Programming Model \(CAP\) back ends:
+> 
+> -   `"`
+> 
+> -   `(`
+> 
+> -   `)`
+> 
+> -   `;`
+
 
 
 <a name="loio3cdebeebb04b4205908140242c9d6817__section_q5w_tgf_nmb"/>

@@ -1814,7 +1814,7 @@ Overview pages have been enhanced with the following features:
 
 -   Support of an extension for cards that lets you develop custom card types
 
-    For more information, see [Custom Cards](../06_SAP_Fiori_Elements/custom-cards-6d260f7.md).
+    For more information, see [Creating Custom Cards](../06_SAP_Fiori_Elements/creating-custom-cards-6d260f7.md).
 
 -   Spline interpolation in Line Charts to view the line smoothly
 

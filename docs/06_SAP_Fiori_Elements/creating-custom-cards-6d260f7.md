@@ -1,6 +1,6 @@
 <!-- loio6d260f7708ca4c4a9ff45e846402aebb -->
 
-# Custom Cards
+# Creating Custom Cards
 
 In overview pages, you can create custom cards and integrate them into the overview page application.
 
@@ -10,7 +10,7 @@ In overview pages, you can create custom cards and integrate them into the overv
 
 ## Procedure
 
-Creating a custom card consists of the following steps:
+To create a custom card, proceed as follows:
 
 1.  Create a new folder under `webapp/ext`. For example: `webapp/ext/myCustomCard`.
 
@@ -22,10 +22,10 @@ Creating a custom card consists of the following steps:
 
     -   `MyCustomCard.fragment.xml` file
 
-    -   `MyCustomCardHeader.fragment.xml` file. The header fragment file is an optional file. It is required only if you want to customize the header of your card. For example, you can choose a folder name instead of the name `myCustomCard`.
+    -   `MyCustomCardHeader.fragment.xml` file. The header fragment file is an optional file. It is required only if you want to configure the header of your card. For example, you can choose a folder name instead of the name `myCustomCard`.
 
 
-3.  Extend the custom card component on the overview page - In the `webapp/ext/myCustomCard`, create a new `component.js` file.
+3.  Extend the custom card component on the overview page: In the `webapp/ext/myCustomCard`, create a new `component.js` file.
 
     > ### Sample Code:  
     > ```
@@ -75,7 +75,7 @@ Creating a custom card consists of the following steps:
     > 
     > ```
 
-4.  Define your view - In the `webapp/ext/myCustomCard` folder, create a new fragment file `MyCustomCard.fragment.xml`.
+4.  Define your view: In the `webapp/ext/myCustomCard` folder, create a new fragment file `MyCustomCard.fragment.xml`.
 
     > ### Sample Code:  
     > ```
@@ -88,7 +88,7 @@ Creating a custom card consists of the following steps:
     > </core:FragmentDefinition>
     > ```
 
-5.  Define the controller - In the `webapp/ext/myCustomCard` folder, create a new controller file `MyCustomCard.controller.js` and then define the controller.
+5.  Define the controller: In the `webapp/ext/myCustomCard` folder, create a new controller file `MyCustomCard.controller.js` and then configure the controller.
 
     > ### Sample Code:  
     > ```
@@ -111,9 +111,11 @@ Creating a custom card consists of the following steps:
     > 
     > ```
 
-6.  Configure the `manifest.json` file to point to the newly created component for the custom card.
+6.  Link to the newly created component for the custom card: To do this, configure the `manifest.json` file, as shown in the following sample code:
 
     > ### Sample Code:  
+    > `manifest.json`
+    > 
     > ```
     > "card008_HereIsMyCustomCard": {
     >    "model": "myModel",
@@ -130,7 +132,9 @@ Creating a custom card consists of the following steps:
 
 ### Using an Extension API to Refresh Custom Card Data
 
-End users can refresh the data on the custom cards. Refreshing the card data is available as an action on the card. To do so, you must configure the `onRefresh` extension, as shown in the following sample code.
+End users can refresh the data on the custom cards. Refreshing the card data is available as an action on the card.
+
+To enable the refresh action on custom cards, application developers must configure the `onRefresh` extension, as shown in the following sample code:
 
 > ### Sample Code:  
 > ```
@@ -157,7 +161,7 @@ End users can refresh the data on the custom cards. Refreshing the card data is 
 For more information on card actions, see [Overview Page Card](overview-page-card-74332d5.md).
 
 > ### Note:  
-> Card templates that begin with `sap.ovp.cards` are designated for standard cards of overview page applications.
+> Card templates that begin with `sap.ovp.cards` are designated for standard cards on overview page applications.
 
 
 

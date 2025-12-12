@@ -4,9 +4,6 @@
 
 You can use the `Status` building block to display a status and criticality.
 
-> ### Remember:  
-> This building block is an experimental feature and subject to revisions. It is not intended for productive usage.
-
 The `Status` building block is based on the `ObjectStatus` used in SAPUI5, allowing you to define an annotation-based object status.
 
 This building block also enables you to add a custom press event handler.

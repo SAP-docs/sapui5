@@ -82,7 +82,7 @@ You add this information to the `manifest.json` file, as shown in the following 
 
 For an example with step-by-step instructions, see [Adding a Custom Section to an Object Page](adding-a-custom-section-to-an-object-page-a357047.md).
 
-For more information, see [View Extension](../08_Extending_SAPUI5_Applications/view-extension-403c050.md).
+For more information, see [Extension Points](../08_Extending_SAPUI5_Applications/extension-points-403c050.md).
 
 
 

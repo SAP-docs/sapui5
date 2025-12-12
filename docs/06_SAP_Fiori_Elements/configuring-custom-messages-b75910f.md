@@ -1,8 +1,8 @@
 <!-- loiob75910f6d7eb48a58d83267be2c71385 -->
 
-# Custom Messages
+# Configuring Custom Messages
 
-You can customize messages for success, success with no data, and error scenarios. Additionally, you can add an icon for success scenarios. For error scenarios, a default icon is displayed.
+You can configure messages for success, success with no data, and error scenarios. Additionally, you can add an icon for success scenarios. For error scenarios, a default icon is displayed.
 
 
 

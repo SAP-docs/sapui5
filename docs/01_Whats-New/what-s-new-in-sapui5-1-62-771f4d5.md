@@ -774,7 +774,7 @@ The overview page has these new features or enhancements:
 
 -   Configuring the `requestAtLeast` property of the `PresentationVariant` annotation lets you receive additional dimensions from the back end. For more information, see [Annotations Used in Overview Pages](../06_SAP_Fiori_Elements/annotations-used-in-overview-pages-65731e6.md).
 
--   Defining the `getCustomMessage` function in the controller file lets you customize success messages \(for no data\) and error scenarios. You can also add an icon for the success scenario. For more information, see [Custom Messages](../06_SAP_Fiori_Elements/custom-messages-b75910f.md).
+-   Defining the `getCustomMessage` function in the controller file lets you customize success messages \(for no data\) and error scenarios. You can also add an icon for the success scenario. For more information, see [Configuring Custom Messages](../06_SAP_Fiori_Elements/configuring-custom-messages-b75910f.md).
 
 -   The time series now supports the vertical bullet, stacked column, and scatter charts. For more information, see [Chart Cards Used in Overview Pages](../06_SAP_Fiori_Elements/chart-cards-used-in-overview-pages-68e62ad.md).
 

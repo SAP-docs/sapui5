@@ -375,7 +375,7 @@ Control
 
 **`sap.ui.comp.smartfield.SmartField`**
 
-We've updated the object status icons of the `SmartField` according to the latest [SAP Fiori design guidelines](https://experience.sap.com/fiori-design-web/object-display-elements/).
+We've updated the object status icons of the `SmartField` according to the latest [SAP Design System guidelines](https://experience.sap.com/fiori-design-web/object-display-elements/).
 
 <sub>Changed•Control•Info Only•1.85</sub>
 

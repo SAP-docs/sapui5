@@ -185,7 +185,7 @@ When a user is added to the list, the draft appears in their *Own Draft* list.
 > ### Restriction:  
 > -   This feature is only supported when using the ABAP RESTful Application Programming Model \(RAP\).
 > 
-> -   The lock mechanism is only supported by app extensions built using the SAP Fiori elements for OData V4 building blocks.
+> -   The lock mechanism is automatically built by native app extensions using the SAP Fiori elements for OData V4 building blocks. For freestyle app extensions, use the `CollaborativeDraftHandler` API. For information about the `CollaborativeDraftHandler` API, see the [API Reference](https://ui5.sap.com/#/api/sap.fe.macros.CollaborativeDraftHandler%23overview).
 > 
 > -   The mass edit feature is not supported on object pages when collaborative draft is enabled.
 

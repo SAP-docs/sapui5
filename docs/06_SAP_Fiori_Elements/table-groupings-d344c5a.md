@@ -529,7 +529,7 @@ The default SPV or PV is read as follows:
 > ### Caution:  
 > You must provide a `PresentationVariant.Visualizations` entry. Otherwise, the presentation variant won't be considered.
 > 
-> The chart visualization is only rendered in the analytical list page template. In the list report, only the line item is rendered.
+> The chart visualization is only rendered in the analytical list page template. On the list report page, only the line item is rendered.
 
 You can see the grouping applied on the *Country* property, and the totals for the *Sales Amount* in the following screenshot:
 
@@ -542,13 +542,11 @@ End users can always change groups and totals using the column header and the ag
 > ### Note:  
 > If no `PresentationVariant` is defined for the analytical table, a total is provided by default for all the columns with an aggregatable property.
 > 
-> If a PresentationVariant is defined, a total is provided for the columns with aggregatable properties listed in the `Total` attribute of the `PresentationVariant`.
+> If a `PresentationVariant` is defined, a total is provided for the columns with aggregatable properties listed in the `Total` attribute of the `PresentationVariant`.
 > 
 > If the `Total` attribute is defined but empty, no total is provided. If the `Total` attribute is missing, a total is provided by default for all the columns with an aggregatable property.
 
 > ### Restriction:  
-> -   Filtering on aggregatable properties is not supported and is also removed from the filter bar and from the filter dialog of the table.
-> 
 > -   If a group has multiple units or currencies in its data, the total cannot be computed directly. In this case, the table displays a *Show Details* link which opens a popup. The total or subtotal amounts per unit or per currency are shown in the popup.
 > 
 > -   Only one level of grouping is supported in a responsive table. If you have specified multiple levels through a `PresentationVariant`, for example, only the first level is applied.

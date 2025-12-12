@@ -12,15 +12,12 @@ You can control the table personalization options that end users see.
 
 ## Filter Option
 
-The default settings for filtering are as follows:
+The default settings for filtering in the list report page table are as follows:
 
 -   Disabled in the page-level variant
 
 -   Enabled in the control-level variant
 
-
-> ### Note:  
-> The filter option is available in the table personalization settings for responsive tables. For other table types, the filter option, when enabled, is also available after selecting the column header in addition to the personalization settings.
 
 
 
@@ -67,170 +64,130 @@ In harmonized variant management, by default, end users cannot set a filter in t
 
 ### Enabling and Disabling Table Personalization
 
-The `"variantManagement"` setting in the `manifest.json` file allows you to enable or disable the table personalization settings for end users.
+The table personalization is provided by default for all tables. Options for adding or removing columns, filtering, sorting, and grouping are available.
 
-> ### Sample Code:  
-> Enable or disable table personalization
-> 
-> ```
-> "BusinessPartnersList": {
->    "type": "Component",
->    "id": "BusinessPartnersList",
->    "name": "sap.fe.templates.ListReport",
->    "options": {
->       "settings": {
->          "contextPath": "/BusinessPartners",
->          "variantManagement": "Control"
->       }
->    }
-> },
-> 
-> ```
+-   -   Filtering
 
-In the list report, you can set the variant management to `"Page"` level or to `"Control"` level. On an object page, you can set the variant management to `"Control"` level or to `"None"`.
+    End users can filter table data by choosing one or multiple property values \(unless filtering is disabled\). You can use the `@com.sap.vocabularies.UI.v1.HiddenFilter` annotation to exclude those columns you don't want to be filterable.
 
--   `"Page"` level \(list report\): With this setting, filtering using the table personalization settings is disabled and users can filter the table from the `filterBar`. The filters applied in the `filterBar` can be saved as a page variant.
+    ![](images/Excluding_Columns_from_Filtering_3ee5c40.png)
 
--   `"None"` \(object page\): With this setting, variant management is disabled.
+    > ### Note:  
+    > Filtering of navigation properties is only available for properties used in the `LineItem`.
+    > 
+    > Filtering for list report page tables is not available by default when using the variant management on page level. However, it can be enabled by explicitly setting `"filter": true` in a personalization object in the `manifest.json` file. For more information, see the Choosing Personalization Settings subsection below.
 
--   `"Control"` level: With this setting, table personalization is enabled. The following settings are available:
+-   Sorting
 
-    -   Filtering
+    ![](images/Table_Personalization_Sorting_f63c073.png)
 
-        End users can filter table data choosing one or multiple property values \(unless filtering is disabled\). You can use the `@com.sap.vocabularies.UI.v1.HiddenFilter` annotation to exclude those columns you don't want to be filterable.
+    You can use the `@.OData.Capabilities.V1.SortRestrictions` annotation to exclude those columns you don't want to be sortable. You can use the `@.OData.Capabilities.V1.NavigationRestrictions` annotation to exclude navigation properties.
 
-        ![](images/Excluding_Columns_from_Filtering_3ee5c40.png)
+    > ### Note:  
+    > Defining sort restrictions is only possible for first-level navigation entities.
 
-        > ### Note:  
-        > Filtering of navigation properties is only available for properties used in the `LineItem`.
+    End users can sort table data by choosing one or multiple sort properties \(unless sorting is disabled\). You can use `SortRestrictions` to define your desired `RestrictedProperty` in the `NavigationRestrictions`. Use `SortRestrictions` to either restrict all properties of an entity by setting `Sortable` to `false`, or to disable sorting of individual properties using `NonSortableProperties`. To add sort restrictions for navigation properties, the list of `NonSortableProperties` must be prefixed with the `NavigationPropertyPath`.
 
-    -   Sorting
+    > ### Sample Code:  
+    > XML Annotation for `SortRestrictions` in `NavigationRestrictions`
+    > 
+    > ```xml
+    > <Annotation Term="Capabilities.NavigationRestrictions">
+    >     <Record Type="Capabilities.NavigationRestrictionsType">
+    >         <PropertyValue Property="RestrictedProperties">
+    >             <Collection>
+    >                 <Record Type="Capabilities.NavigationPropertyRestriction">
+    >                     <PropertyValue Property="NavigationProperty" NavigationPropertyPath="_OverallSDProcessStatus"/>
+    >                     <PropertyValue Property="SortRestrictions">
+    >                         <Record Type="Capabilities.SortRestrictionsType">
+    >                             <PropertyValue Property="NonSortableProperties">
+    >                                 <Collection>
+    >                                     <PropertyPath>_OverallSDProcessStatus/OverallSDProcessStatus_Text</PropertyPath>
+    >                                 </Collection>
+    >                             </PropertyValue>
+    >                         </Record>
+    >                     </PropertyValue>
+    >                 </Record>
+    >                 <Record Type="Capabilities.NavigationPropertyRestriction">
+    >                     <PropertyValue Property="NavigationProperty" NavigationPropertyPath="_SalesOrderType"/>
+    >                     <PropertyValue Property="SortRestrictions">
+    >                         <Record Type="Capabilities.SortRestrictionsType">
+    >                             <PropertyValue Property="NonSortableProperties">
+    >                                 <PropertyValue Property="Sortable" Bool="false"/>
+    >                             </PropertyValue>
+    >                         </Record>
+    >                     </PropertyValue>
+    >                 </Record>
+    >             </Collection>
+    >         </PropertyValue>
+    >     </Record>
+    > </Annotation>
+    > ```
 
-        ![](images/Table_Personalization_Sorting_f63c073.png)
+    > ### Sample Code:  
+    > ABAP CDS Annotation for `SortRestrictions` 
+    > 
+    > ```
+    > @ObjectModel.sort.enabled: false
+    > ```
 
-        You can use the `@.OData.Capabilities.V1.SortRestrictions` annotation to exclude those columns you don't want to be sortable. You can use the `@.OData.Capabilities.V1.NavigationRestrictions` annotation to exclude navigation properties.
+    > ### Sample Code:  
+    > CAP CDS Annotation for `SortRestrictions` in `NavigationRestrictions`
+    > 
+    > ```
+    > NavigationRestrictions : {
+    >     RestrictedProperties : [
+    >         {
+    >             NavigationProperty: _OverallSDProcessStatus,
+    >             SortRestrictions: {NonSortableProperties: [_OverallSDProcessStatus.OverallSDProcessStatus_Text]}
+    >         },
+    >         {
+    >             NavigationProperty: _SalesOrderType,
+    >             SortRestrictions: {Sortable: false}
+    >         }
+    >     ]
+    > }
+    > ```
 
-        > ### Note:  
-        > Defining sort restrictions is only possible for first-level navigation entities.
+    > ### Note:  
+    > When sorting a column that contains an amount with a currency or a unit of measure, an ascending sort is applied on the currency or the unit of measure first, and then the defined sort is applied to the amount field. This sorting mechanism ensures a consistent display of the amount when different currencies or units of measure are used.
 
-        You can use `SortRestrictions` to define your desired `RestrictedProperty` in the `NavigationRestrictions`. Use `SortRestrictions` to either restrict all properties of an entity by setting `Sortable` to `false`, or to disable sorting of individual properties using `NonSortableProperties`. To add sort restrictions for navigation properties, the list of `NonSortableProperties` must be prefixed with the `NavigationPropertyPath`.
+    > ### Caution:  
+    > Sorting on navigation properties can lead to issues in CAP NodeJS when using an SQLite DB.
 
-        > ### Sample Code:  
-        > XML Annotation for `SortRestrictions` in `NavigationRestrictions`
-        > 
-        > ```xml
-        > <Annotation Term="Capabilities.NavigationRestrictions">
-        >     <Record Type="Capabilities.NavigationRestrictionsType">
-        >         <PropertyValue Property="RestrictedProperties">
-        >             <Collection>
-        >                 <Record Type="Capabilities.NavigationPropertyRestriction">
-        >                     <PropertyValue Property="NavigationProperty" NavigationPropertyPath="_OverallSDProcessStatus"/>
-        >                     <PropertyValue Property="SortRestrictions">
-        >                         <Record Type="Capabilities.SortRestrictionsType">
-        >                             <PropertyValue Property="NonSortableProperties">
-        >                                 <Collection>
-        >                                     <PropertyPath>_OverallSDProcessStatus/OverallSDProcessStatus_Text</PropertyPath>
-        >                                 </Collection>
-        >                             </PropertyValue>
-        >                         </Record>
-        >                     </PropertyValue>
-        >                 </Record>
-        >                 <Record Type="Capabilities.NavigationPropertyRestriction">
-        >                     <PropertyValue Property="NavigationProperty" NavigationPropertyPath="_SalesOrderType"/>
-        >                     <PropertyValue Property="SortRestrictions">
-        >                         <Record Type="Capabilities.SortRestrictionsType">
-        >                             <PropertyValue Property="NonSortableProperties">
-        >                                 <PropertyValue Property="Sortable" Bool="false"/>
-        >                             </PropertyValue>
-        >                         </Record>
-        >                     </PropertyValue>
-        >                 </Record>
-        >             </Collection>
-        >         </PropertyValue>
-        >     </Record>
-        > </Annotation>
-        > ```
+-   Adding or removing columns
 
-        > ### Sample Code:  
-        > ABAP CDS Annotation for `SortRestrictions` 
-        > 
-        > ```
-        > @ObjectModel.sort.enabled: false
-        > ```
+    End users can add, remove, or reorder all properties of the entity shown for a given table.
 
-        > ### Sample Code:  
-        > CAP CDS Annotation for `SortRestrictions` in `NavigationRestrictions`
-        > 
-        > ```
-        > NavigationRestrictions : {
-        >     RestrictedProperties : [
-        >         {
-        >             NavigationProperty: _OverallSDProcessStatus,
-        >             SortRestrictions: {NonSortableProperties: [_OverallSDProcessStatus.OverallSDProcessStatus_Text]}
-        >         },
-        >         {
-        >             NavigationProperty: _SalesOrderType,
-        >             SortRestrictions: {Sortable: false}
-        >         }
-        >     ]
-        > }
-        > ```
+    End users can also use the filter icon buttons to do the following:
 
-        > ### Note:  
-        > Sorting on navigation properties can lead to issues in CAP NodeJS when using an SQLite DB.
+    -   To show or hide the properties which are used as text description of other properties \(properties with text arrangement\)
 
-    -   Adding or removing columns
-
-        End users can add, remove, or reorder all properties of the entity shown for a given table.
-
-        ![](images/Add_Remove_or_Reorder_Properties_45d596d.png)
-
-        From this view, the end user can also use the filter toggle buttons to do the following:
-
-        -   To show or hide the properties which are used as text description of other properties \(properties with text arrangement\)
-
-        -   To show only the columns already shown in the table
+    -   To show only the columns already shown in the table
 
 
-        ![](images/Hide_Descriptions_Show_Selected_16e4a63.png)
+    ![](images/View_Settings_Enabling_Table_Personalization_69cdb2c.png)
 
-        The count on the *Columns* tab doesn’t change when the *Hide Descriptions* toggle is enabled.
+    The count on the *Columns* tab doesn’t change when the *Hide Descriptions* toggle is enabled.
 
-    -   Grouping \(available for analytical and responsive tables\)
-
-
-    By default, the control variant management enables all settings, but you can enable or disable each of these separately using the `"personalization"` setting in the manifest.
-
-    For more information, see [Managing Variants](managing-variants-8ce658e.md) and [Enabling Variant Management on the Object Page](enabling-variant-management-on-the-object-page-f26d42b.md).
+-   Grouping \(available for analytical and responsive tables\)
 
 
-For a responsive table, the user can open the sorting, filtering, and grouping dialog by clicking on the column header.
-
-![](images/Sorting_Filtering_and_Grouping_Dialog_f1dd67d.png)
-
-> ### Note:  
-> When the end user selects the Filter menu, the default properties displayed for sorting, filtering, and grouping are the properties visible in the column. Any sorting and filtering restrictions are reflected in this dialog. The TextArrangement also has an impact as described in the [Personalization for Properties with Text Arrangement](enabling-table-personalization-3e2b4d2.md#loio3e2b4d212b66481a829ccef1dc0ca16b__personalization_text_arrangement) subsection in this topic.
 
 > ### Restriction:  
 > You can't perform sorting and grouping of 1:n \(multi-input\) fields.
 
 
 
-### Sorting Amount with Currency or Unit of Measure
-
-When sorting a column that contains an amount with a currency or a unit of measure, an ascending sort is applied on the currency or the unit of measure first, and then the defined sort is applied on the amount field. This sorting mechanism ensures a consistent display of the amount when different currencies or units of measure are used.
-
-
-
 ### Choosing Personalization Settings
 
-Variant management on control level enables filtering, sorting, or removing columns, and grouping by default. Use the `"personalization"` setting in the manifest to change the default behavior.
+By default, the table personalization provides options for adding or removing columns, filtering, sorting, and grouping. Use the `"personalization"` setting in the`manifest.json` file to change the default behavior.
 
 > ### Sample Code:  
 > `manifest.json`
 > 
 > ```
-> Users can sort tables by choosing individual columns or"BusinessPartnersList": {
+> "BusinessPartnersList": {
 >     "type": "Component",
 >     "id": "BusinessPartnersList",
 >     "name": "sap.fe.templates.ListReport",
@@ -259,7 +216,7 @@ Variant management on control level enables filtering, sorting, or removing colu
 
 You can use the following values for the `"personalization"` setting:
 
--   `true` \(default\): Every table setting is enabled. If you add a new feature, like grouping, this is enabled as well.
+-   `true` \(default\): Every table setting is enabled.
 
 -   `false`: Every table setting is disabled.
 
@@ -278,6 +235,6 @@ Note the following when enabling personalization for properties that have a text
 
 -   If a `sortOrder` is set using a presentation variant on a property with text arrangement set as `#TextOnly`, the sorting is applied on the property and not the text. The sort indicator will not appear in the header column containing the property, as the property is not visible on the table. This also applies for the sort and group tabs on the table personalization dialog.
 
--   If a column contains a property with a `TextArrangement` annotation and the target property of the `TextArrangement` is a navigation property, this target property is not available in the personalization dialog under the *Columns* tab. The target property of the `TextArrangement` is displayed under the *Columns* tab if it is explicitly defined in the `lineItem` or in a custom column.
+-   If a column contains a property with a `TextArrangement` annotation and the target property of the `TextArrangement` is a navigation property, this target property is not available in the personalization dialog under the *Columns* tab. The target property of the `TextArrangement` is displayed under the *Columns* tab if it is explicitly defined in the `LineItem` annotation or in a custom column.
 
 

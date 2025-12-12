@@ -21,7 +21,7 @@ Take the following into account:
 
 ## Using the Standard SAPUI5 API
 
-In extension coding, you can use the standard SAPUI5 programming API. However, you should do so with care. For more information, see [View Extension](../08_Extending_SAPUI5_Applications/view-extension-403c050.md).
+In extension coding, you can use the standard SAPUI5 programming API. However, you should do so with care. For more information, see [Extension Points](../08_Extending_SAPUI5_Applications/extension-points-403c050.md).
 
 After you have defined a view extension, you can access and modify the properties of all UI elements defined within these extensions \(such as changing the visibility\). You can access the elements you have created by their ID. However, you must not access any UI elements that are not defined within your view extensions.
 
