@@ -24,6 +24,17 @@ The structure in this step will be used throughout the rest of this tutorial. Th
 
 ## Setup
 
+> [!WARNING]
+> Flexible Column Layout is a "Layout Control". The control tag must be enclosed in a container as shown below:
+> ```
+> <App>
+>   <pages>
+>     -- "FLexible Layout Tag Goes Here"--
+>   </pages>
+> </App>
+> ```
+> The browser will show an empty page other wise.
+
 1.  To set up your project for this tutorial, download the files at [Flexible Column Layout App - Step 1](https://ui5.sap.com/#/entity/sap.f.tutorial.fcl/sample/sap.f.tutorial.fcl.01).
 
 2.  Extract the downloaded `.zip` file at the desired location on your local machine.
@@ -31,6 +42,7 @@ The structure in this step will be used throughout the rest of this tutorial. Th
 4.  Execute `npm start` to start the web server and to open a new browser window hosting `index.html`.
 
 You should have the same files as displayed in the following figure:
+
 
   
   
