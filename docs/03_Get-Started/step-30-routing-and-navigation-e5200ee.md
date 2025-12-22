@@ -38,9 +38,8 @@ You can view and download all files at [Walkthrough - Step 30](https://ui5.sap.c
     "routing": {
       "config": {
         "routerClass": "sap.m.routing.Router",
-        "type": "View",
         "viewType": "XML",
-        "path": "ui5.walkthrough.view",
+        "viewPath": "ui5.walkthrough.view",
         "controlId": "app",
         "controlAggregation": "pages"
       },
@@ -58,12 +57,12 @@ You can view and download all files at [Walkthrough - Step 30](https://ui5.sap.c
       ],
       "targets": {
         "overview": {
-          "id": "overview",
-          "name": "Overview"
+          "viewId": "overview",
+          "viewName": "Overview"
         },
         "detail": {
-          "id": "detail",
-          "name": "Detail"
+          "viewId": "detail",
+          "viewName": "Detail"
         }
       }
     }
