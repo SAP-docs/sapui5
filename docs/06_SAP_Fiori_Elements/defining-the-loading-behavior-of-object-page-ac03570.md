@@ -5,7 +5,7 @@
 Object pages can make use of request groups and lazy loading.
 
 > ### Note:  
-> This topic is currently only applicable to SAP Fiori elements for OData V4.
+> This topic is only applicable to SAP Fiori elements for OData V4.
 
 
 
@@ -101,7 +101,7 @@ You can use the above-mentioned group names to group their `DataPoint` and `Micr
 >     Example: An application adds a `DataPoint` request from the object page header to the request group 'Workers'. The `DataPoint` request is fired before the table request, even though they are both part of the same batch group.
 
 > ### Recommendation:  
-> Push all KPIs from the 'LongRunners' request group to the right-most end of their header, so that the information that is visible first in the left part of the header is always loaded via the faster standard request groups supported by SAP Fiori elements.
+> Push all KPIs from the 'LongRunners' request group to the right-most end of their header, so that the information that is visible first in the left part of the header is always loaded with the faster standard request groups supported by SAP Fiori elements.
 
 The following sample code is for an object page with configured header elements:
 
@@ -134,7 +134,7 @@ The following sample code is for an object page with configured header elements:
 
 Data calls for object page sections that are not yet in the visible area are delayed. This behavior is referred to as lazy loading.
 
-The data calls are made only when a user scrolls through the page and brings the sections into the viewable area. Lazy loading is enabled by default in the object page for SAP Fiori elements for OData V4 and applications currently cannot disable it.
+The data calls are made only when a user scrolls through the page and brings the sections into the viewable area. Lazy loading is enabled by default in the object page for SAP Fiori elements for OData V4 and applications cannot disable it.
 
 The behavior is as follows:
 

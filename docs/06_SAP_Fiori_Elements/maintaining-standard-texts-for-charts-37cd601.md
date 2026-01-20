@@ -13,15 +13,18 @@ The following UI texts are displayed by default:
 
 
 -   SAP Fiori elements for OData V4
-    -   When no filters are applied and no data is found in the list report, an illustrated message is displayed with *No data found* as the title and *To start, set the relevant filters and choose "Go".* as the description.
+    -   When opening a list report without autoload, an illustrated message is displayed with *Let’s get some results* as the title and *Start by providing your search or filter criteria.* as the description.
+    -   When no filters are applied and no data is found on the list report page, an illustrated message is displayed with *No results found* as the title and *Start by providing your search or filter criteria.* as the description.
 
-    -   When filters are applied and the search shows no results, an illustrated message is displayed with *No data found* as the title and *Try adjusting the search or filter criteria.* as the description.
+    -   When filters are applied and the search shows no results, an illustrated message is displayed with *No results found* as the title and *Try changing your filter criteria.* as the description.
 
-    -   When no search nor filters are applied and no data is found on the object page, the message an illustrated message is displayed with *No item available* as the title and *When there are, you'll find them here.* as the description. You cannot override these texts.
+    -   When the chart is used in multi-view mode and no data is found, an illustrated message is displayed with *No no results found* as the title and *Try changing the view or filter criteria.* as the description.
+
+    -   When no search nor filters are applied and no data is found on the object page, an illustrated message is displayed with *No items available* as the title and *When there are, you'll find them here.* as the description.
 
 
 
-![](images/NoDataText_SmartChart_fea3841.png)
+![](images/Illustrated_Message_Chart_f603758.png)
 
 
 
@@ -46,84 +49,7 @@ You can override the standard texts using the following keys in the `i18n` file:
 
 ### SAP Fiori Elements for OData V4
 
-You can override the standard texts using the following keys in the `i18n` file:
-
-
-<table>
-<tr>
-<th valign="top">
-
-Keys
-
-</th>
-<th valign="top">
-
-Default Text in SAP Fiori Elements
-
-</th>
-<th valign="top">
-
-Used In
-
-</th>
-</tr>
-<tr>
-<td valign="top">
-
-`T_TABLE_AND_CHART_NO_DATA_TEXT`
-
-</td>
-<td valign="top">
-
-To start, set the relevant filters and choose "Go".
-
-</td>
-<td valign="top">
-
-To add a text when no filters are applied and no data is found.
-
-This is applicable only to the list report.
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-`T_TABLE_AND_CHART_NO_DATA_TEXT_WITH_FILTER`
-
-</td>
-<td valign="top">
-
-Try adjusting the search or filter criteria.
-
-</td>
-<td valign="top">
-
-To add a text when filters are applied and no data is found.
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-`M_TABLE_AND_CHART_NO_DATA_TEXT_MULTI_VIEW`
-
-</td>
-<td valign="top">
-
-Try adjusting the selected filter criteria or view.
-
-</td>
-<td valign="top">
-
-To add a text when using a list report with multiple views, filters are applied, and no data is found.
-
-</td>
-</tr>
-</table>
-
-> ### Note:  
-> You cannot override the title of an illustrated message.
+You can override standard illustrated message texts by adding specific keys to the i18n file of the list report page and object page. For a list of the keys, see [Localization of UI Texts](localization-of-ui-texts-b8cb649.md).
 
 
 

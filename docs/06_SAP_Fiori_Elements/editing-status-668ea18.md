@@ -10,73 +10,15 @@ The editing status reflects the state of the object or entry in terms of the pro
 
 ## Editing Status for Table Items
 
-End users can view the editing status of the objects displayed on the list report. In a list report with responsive tables, the editing status is shown in the key column. In a list report with grid tables, the editing status is shown in a separate column. The editing status is calculated from the draft administrative data that is added in the back end.
+Users can view the editing status of the objects displayed on the list report. In a list report with a responsive table, the editing status is shown in the key column \(the first column displayed with a semantic key\). In a list report with a grid table, a tree table, or an analytical table, the editing status is shown in a separate column which is placed in the second position and doesn't have a label. The editing status is calculated from the draft administrative data that is provided by the back end.
 
-**Draft Administrative Data: Visualization in List Report Page with Responsive Table**
+**Editing Status Visualization in a List Report Page with a Responsive Table**
 
+![](images/Draft_Administrative_Data_Visualization_in_List_Report_Page_with_Responsive_Table_f66fced.png)
 
-<table>
-<tr>
-<th valign="top">
+**Editing Status Visualization in a List Report Page with a Grid Table**
 
-Editing Status
-
-</th>
-<th valign="top">
-
-Description
-
-</th>
-</tr>
-<tr>
-<td valign="top">
-
-![](images/ListReport_Edit_Draft_4e387a1.png)
-
-</td>
-<td valign="top">
-
-Draft: my own draft
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-![](images/ListReport_Edit_Active_3bbd126.png)
-
-</td>
-<td valign="top">
-
-Active version
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-![](images/ListReport_Edit_Unsaved_8916c63.jpg)
-
-</td>
-<td valign="top">
-
-Active version with draft created by another user; no longer locked
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-![](images/ListReport_Edit_Locked_bfd9208.jpg)
-
-</td>
-<td valign="top">
-
-Active version with draft created by another user; locked
-
-</td>
-</tr>
-</table>
+![](images/Draft_Administrative_Data_Visualization_in_List_Report_Page_with_Grid_Table_4b053c1.png)
 
 
 

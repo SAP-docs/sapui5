@@ -2,9 +2,9 @@
 
 # The `Page` Building Block
 
-You can use the `Page` building block to create a new flexible programming model page with a layout similar to the object page.
+You can use the `Page` building block to create a custom page with a predefined layout. The generated page is preconfigured with the appropriate margins and padding.
 
-You can configure the content of the building block as per your requirements. For example, in the following sample code, two panels containing a text element have been configured.
+You can configure the content of the building block based on your needs. For example, in the following sample code, two panels containing a text element have been configured:
 
 > ### Sample Code:  
 > ```
@@ -19,7 +19,7 @@ You can configure the content of the building block as per your requirements. Fo
 > 
 > ```
 
-Check out our live example in the flexible programming model explorer at [Page](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/page/pageDefault).
+For more information and live examples, see the SAP Fiori development portal at [Building Blocks - Page - Overview](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/page/pageDefault).
 
 
 

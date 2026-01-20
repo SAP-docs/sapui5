@@ -6,7 +6,7 @@ Overview pages may contain transactional cards, such as table, list, stack, quic
 
 
 
-The following is a list of cards that are available in SAP Fiori elements for OData V2 and SAP Fiori elements for OData V4:
+The following is a list of cards that are available:
 
 
 <table>
@@ -30,7 +30,7 @@ Table
 </td>
 <td valign="top">
 
-Table cards display a list of records according to the configuration in the `com.sap.vocabularies.UI.v1.LineItem` term. Table cards displays data in a 3-column table layout.
+Displays a list of records according to the configuration in the `com.sap.vocabularies.UI.v1.LineItem` term. Table cards displays data in a 3-column table layout.
 
 </td>
 </tr>
@@ -42,7 +42,7 @@ List
 </td>
 <td valign="top">
 
-List cards display lists of records according to the configuration in the `com.sap.vocabularies.UI.v1.LineItem` term. List cards display up to six fields of data in each list item.
+Displays a list of records according to the configuration in the `com.sap.vocabularies.UI.v1.LineItem` term. List cards display up to six fields of data in each list item.
 
 </td>
 </tr>
@@ -54,7 +54,7 @@ Analytical Chart
 </td>
 <td valign="top">
 
-Analytical chart cards show data in a variety of chart formats. They can be line, bubble, donut, column, stacked column, vertical column, combination, or scatter chart cards. The value of the template property points to the generic card component `sap.ovp.cards.charts.analytical`.
+Shows data in a variety of chart formats. They can be line, bubble, donut, column, stacked column, vertical column, combination, or scatter chart cards. The value of the template property points to the generic card component `sap.ovp.cards.charts.analytical`.
 
 </td>
 </tr>
@@ -66,24 +66,30 @@ Link List
 </td>
 <td valign="top">
 
-Link list cards display a list of links with an image or icon and a \(optional\) subtitle for each of the links.
+Displays a list of links with an image or icon and a \(optional\) subtitle for each of the links.
 
 </td>
 </tr>
 </table>
 
-You can set all cards to refresh automatically for a given interval. The minimum and default refresh time is one minute. To enable auto refresh, configure the `refreshIntervalInMinutes` property in the descriptor configuration file.
+You can set all cards to refresh automatically for a given interval. The minimum and default refresh time is one minute. To enable auto refresh, configure the `refreshIntervalInMinutes` property in the `manifest.json` file.
 
-```
-"sap.ovp": {
-        "globalFilterModel": "salesOrder",
-        "globalFilterEntityType": "GlobalFilters",
-        ...
-        ...
-        "refreshIntervalInMinutes": 12,
-        "disableTableCardFlexibility": false,
-               "cards": {
-```
+> ### Sample Code:  
+> `manifest.json`
+> 
+> ```
+> "sap.ovp": {
+>     "globalFilterModel": "salesOrder",
+>     "globalFilterEntityType": "GlobalFilters", // Deprecated since SAPUI5 1.54.
+>     "globalFilterEntitySet": "GlobalFilters", // Available from SAPUI5 1.54.
+>     ...
+>     "refreshIntervalInMinutes": 12,
+>     "disableTableCardFlexibility": false,
+>     "cards": {
+>         ...
+>     }
+> }
+> ```
 
 
 
@@ -91,7 +97,7 @@ You can set all cards to refresh automatically for a given interval. The minimum
 
 ## Additional Features in SAP Fiori Elements for OData V2
 
-The following additional card types are available only in SAP Fiori elements for OData V2:
+The following additional card types are available:
 
 
 <table>
@@ -115,7 +121,7 @@ Stack
 </td>
 <td valign="top">
 
-Stack cards aggregate a set of cards of the same type, which are based on a common topic or action. When clicked, stack cards can display up to 20 cards in an object stream.
+Aggregates a set of cards of the same type, which are based on a common topic or action. When clicked, stack cards can display up to 20 cards in an object stream.
 
 </td>
 </tr>
@@ -127,7 +133,7 @@ Quick View
 </td>
 <td valign="top">
 
-Quick view cards display detailed information about a single record, in greater depth than would be displayed in a table or list.
+Displays detailed information about a single record, in greater depth than would be displayed in a table or list.
 
 </td>
 </tr>

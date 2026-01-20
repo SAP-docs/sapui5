@@ -5,7 +5,7 @@
 You can use extension points to enhance pages in SAP Fiori elements apps.
 
 > ### Note:  
-> This topic is currently only applicable to SAP Fiori elements for OData V4.
+> This topic is only applicable to SAP Fiori elements for OData V4.
 
 
 
@@ -19,7 +19,7 @@ Custom pages provide the following features:
 
 -   availability of the binding context for the OData model in custom XML view and page controller
 
--   context-based navigation from a custom page to an SAP Fiori elements-based list report or object page via the controller extension `sap.fe.core.controllerextensions.Routing`
+-   context-based navigation from a custom page to an SAP Fiori elements-based list report or object page through the controller extension `sap.fe.core.controllerextensions.Routing`
 
 -   support for building blocks as part of the flexible programming model
 
@@ -263,7 +263,7 @@ By default, the binding context is available in the XML view of the custom page 
 
 ## Context-Based Navigation
 
-As shown in the previous example, you can define a press handler on the `sap.m.GenericTile`. In the corresponding custom controller implementation shown in the following example, the binding context of the press event is used to navigate to an object page via the routing controller extension:
+As shown in the previous example, you can define a press handler on the `sap.m.GenericTile`. In the corresponding custom controller implementation shown in the following example, the binding context of the press event is used to navigate to an object page through the routing controller extension:
 
 > ### Sample Code:  
 > Custom View Controller
@@ -319,5 +319,5 @@ When you use the table building block in a custom page the standard routing mech
 
 ### Live Example: Custom Page with `Table` Building Block Including Navigation
 
-You can explore and work with the coding yourself. Check out the live example in the flexible programming model explorer at [Custom Page](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/customElements/customElementsOverview/customPageContent).
+You can explore and work with the coding yourself. For more information and live examples, see the SAP Fiori development portal at [Custom Page](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/topic/customPage).
 

@@ -4,7 +4,7 @@
 
 You can configure the mode in which the state of the object page is stored/restored using `iAppState`.
 
-There are two different modes for configuring object pages. Both modes deal with the response by the object page to the personalization changes made by the user. Examples of such personalization changes are applying filters on a chart or table, displaying hidden columns, or selecting a specific tab.
+There are two different modes that you can use for configuring object pages. Both modes deal with the response by the object page to the personalization changes made by the user. Examples of such personalization changes are applying filters on a chart or table, displaying hidden columns, or selecting a specific tab.
 
 -   Discovery mode: This is the default mode for applications that don't use the flexible column layout. In this mode, the changes made to the underlying controls affect only the current object. They don't affect the objects at the same level when you navigate to another object using a paginator button, for example. Instead, the default settings of the control, either from an annotation or the manifest, apply to the object.
 

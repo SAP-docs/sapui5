@@ -130,12 +130,12 @@ The full list of options for the `createComponent` factory method can be found i
 
 As of Version 1.56 it is sufficient to declare the `sap.ui5/componentUsages` and indicate whether the component should be loaded lazily or not. The declaration of the component as a separate dependency is not recommended and should be avoided in this case.
 
-For more information, see: [Using and Nesting Components](using-and-nesting-components-346599f.md) and [Enabling Routing in Nested Components](enabling-routing-in-nested-components-fb19f50.md). These section include information how to migrate your component declarations from the old `sap.ui5/dependencies/components` section to the modern `sap.ui5/componentUsages` section of your `manifest.json` and enable routing in nested components.
+For more information, see: [Component Instantiation Guide](component-instantiation-guide-346599f.md) and [Enabling Routing in Nested Components](enabling-routing-in-nested-components-fb19f50.md). These section include information how to migrate your component declarations from the old `sap.ui5/dependencies/components` section to the modern `sap.ui5/componentUsages` section of your `manifest.json` and enable routing in nested components.
 
 **Related Information**  
 
 
-[Using and Nesting Components](using-and-nesting-components-346599f.md "You can use a ComponentContainer to wrap a UIComponent and reuse it anywhere within the SAPUI5 control tree. With the ComponentContainer you can nest components inside other components.")
+[Component Instantiation Guide](component-instantiation-guide-346599f.md "Components serve as the core building blocks of SAPUI5 applications. This guide explains the various ways to instantiate components, when to use each approach, and how to migrate from older mechanisms to modern alternatives.")
 
 [API Reference: `sap/ui/core/Lib.load`](https://ui5.sap.com/#/api/sap.ui.core.Lib%23methods/sap.ui.core.Lib.load)
 

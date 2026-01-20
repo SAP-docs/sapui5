@@ -8,13 +8,13 @@ This page contains some of the complementary offerings from the UI5 ecosystem - 
 
 <!-- loiod8ab43d845cd42ceb0aa4e47b44a8fcc -->
 
-## UI5 Tooling
+## UI5 CLI
 
 
 
-UI5 Tooling is a state-of-the-art way to develop SAPUI5 projects by consuming SAPUI5 via npm. It's an open-source, modular, configurable, and extensible CLI for efficient development of applications, libraries, and reuse components with the SAPUI5 framework. Here's what you get with this build and development tooling:
+UI5 CLI is a state-of-the-art way to develop SAPUI5 projects by consuming SAPUI5 via npm. It's an open-source, modular, configurable, and extensible CLI for efficient development of applications, libraries, and reuse components with the SAPUI5 framework. Here's what you get with this CLI:
 
--   Reuse of open source tooling
+-   Open source
 -   Flexibility and extensibility
 -   Easy integration
 -   Enablement of modern language features
@@ -24,7 +24,7 @@ UI5 Tooling is a state-of-the-art way to develop SAPUI5 projects by consuming SA
 
 ### Further Information
 
--   [UI5 Tooling on GitHub](https://sap.github.io/ui5-tooling/)
+-   [UI5 CLI on GitHub](https://ui5.github.io/cli/)
 
 <a name="loiof9c9470583b2455c94bed2bf934e0f1f"/>
 
@@ -49,7 +49,7 @@ UI5 linter scans your SAPUI5 project and detects issues that can prevent the pro
 
 ### Further Information
 
--   [UI5 linter on GitHub](https://github.com/SAP/ui5-linter)
+-   [UI5 linter on GitHub](https://github.com/UI5/linter)
 
 <a name="loio702f08a7481e46688c5603385b5bdc68"/>
 
@@ -69,7 +69,7 @@ The purpose of this generator is to guide you through your first steps with SAPU
 
 ### Further Information
 
--   [Easy-UI5 on GitHub](https://github.com/SAP/generator-easy-ui5)
+-   [Easy-UI5 on GitHub](https://github.com/ui5-community/generator-easy-ui5)
 -   [Easy-UI5 on NPMJS](https://www.npmjs.com/package/generator-easy-ui5)
 -   Blog post: [Easy-UI5 3.0 – From Community Contributions to Community Plugins](https://blogs.sap.com/2021/04/09/easy-ui5-3.0-from-community-contributions-to-community-plugins/)
 
@@ -95,7 +95,7 @@ For SAPUI5, we have published definition files that contain type definitions des
 
 External resources:
 
--   Documentation and resources: [UI5 & TypeScript](https://sap.github.io/ui5-typescript/)
+-   Documentation and resources: [UI5 & TypeScript](https://ui5.github.io/typescript/)
 -   Tutorial: [Learn App Development in UI5 and TypeScript](https://github.com/SAP-samples/ui5-typescript-tutorial)
 
 npm packages \(check the individual packages for licensing information\):
@@ -112,9 +112,9 @@ npm packages \(check the individual packages for licensing information\):
 
 
 
-**Web Components** \(`https://www.webcomponents.org/introduction`\) are custom HTML tags based on standard web APIs like Custom Elements and Shadow DOM, supported by all modern browsers and compatible with most HTML-based UI frameworks.
+**[Web Components](https://www.webcomponents.org/introduction)** are custom HTML tags based on standard web APIs like Custom Elements and Shadow DOM, supported by all modern browsers and compatible with most HTML-based UI frameworks.
 
-[**UI5 Web Components**](https://sap.github.io/ui5-webcomponents/) is an open-source library developed by the UI5 team according to the SAP Fiori design, offering lightweight, framework-agnostic components with theming, accessibility, and internationalization support. Built on native Web Components, they integrate easily into any UI framework.
+[**UI5 Web Components**](https://ui5.github.io/webcomponents/) is an open-source library developed by the UI5 team according to the SAP Fiori design, offering lightweight, framework-agnostic components with theming, accessibility, and internationalization support. Built on native Web Components, they integrate easily into any UI framework.
 
 SAPUI5 supports embedding UI5 Web Components, translating their metadata into SAPUI5 controls. This enables seamless integration, including properties, events, and methods, within SAPUI5 applications. For more information, see [Using Web Components](../04_Essentials/using-web-components-1c80793.md).
 
@@ -122,9 +122,9 @@ SAPUI5 supports embedding UI5 Web Components, translating their metadata into SA
 
 ### Further Information
 
--   [GitHub repository](https://github.com/SAP/ui5-webcomponents)
+-   [GitHub repository](https://github.com/UI5/webcomponents)
 
--   [Official site](https://sap.github.io/ui5-webcomponents/)
+-   [Official site](https://ui5.github.io/webcomponents/)
 
 
 <a name="loiof92b537272ba43abbfc157ba4ec8f010"/>
@@ -152,9 +152,9 @@ wdi5 is a Webdriver.IO service that uses SAPUI5's test API. It is designed to ru
 
 ## Best of UI5
 
-The Best of UI5 page lists a number projects related to the UI5 ecosystem. It includes UI5 tooling extensions \(tasks and middlewares\), Easy-UI5 subgenerators, custom UI5 libraries, as well as custom UI5 controls \(as standalone NPM packages\). It's the central place to find reusable projects around UI5.
+The Best of UI5 page lists a number projects related to the UI5 ecosystem. It includes UI5 CLI extensions \(tasks and middlewares\), Easy-UI5 subgenerators, custom UI5 libraries, as well as custom UI5 controls \(as standalone NPM packages\). It's the central place to find reusable projects around UI5.
 
-It's entirely comminuty-based, so any new additions are welcome!
+It's entirely community-based, so any new additions are welcome!
 
 
 

@@ -124,7 +124,7 @@ The *Delete* button can be seen as an action on the table and it's disabled unti
 
 `DeleteRestrictions` also supports path-based values.
 
-The *Delete* button is enabled by default if `DeleteRestrictions` isn't provided.
+The *Delete* button is shown by default if `DeleteRestrictions` isn't provided.
 
 > ### Sample Code:  
 > XML Annotation
@@ -158,6 +158,37 @@ The *Delete* button is enabled by default if `DeleteRestrictions` isn't provided
 
 > ### Note:  
 > The *Delete* action can't be performed for any of the selected records if the deletion of one of the selected records fails in the back end. So the *Delete* action either works for all records or for none.
+
+The system gives priority to the `Org.OData.Capabilities.V1.NavigationRestrictions` of the parent entity set. Depending on the value of the `Deletable` property of `DeleteRestrictions`, the related *Delete* button is shown or not.
+
+-   If `NavigationRestrictions` has the setting `Deletable=false`, the *Delete* button for the child entity table is never visible.
+
+-   If `NavigationRestrictions` has the setting `Deletable=true` or a path, the visibility of the *Delete* button for the child entity table depends on the value of `UI.DeleteHidden` of the child entity \(that is, the table entity\).
+
+
+> ### Sample Code:  
+> ```
+> 
+> <Annotations Target="STTA_PROD_MAN.STTA_PROD_MAN_Entities/STTA_C_MP_Product">
+>   <Annotation Term="Capabilities.NavigationRestrictions">
+>     <Record>
+>         <PropertyValue Property="RestrictedProperties">
+>           <Collection>
+>             <Record>
+>                <PropertyValue Property="NavigationProperty" NavigationPropertyPath="to_ProductText"/>
+>                <PropertyValue Property="DeleteRestrictions">
+>                   <Record>
+>                      <PropertyValue Property="Deletable" Bool="false"/>
+>                   </Record>
+>                </PropertyValue>
+>            </Record>
+>         </Collection>
+>         </PropertyValue>
+>     </Record>
+>   </Annotation>
+> </Annotation>
+> 
+> ```
 
 
 
@@ -438,7 +469,7 @@ In the example above, the order in which the record types are presented in the a
 
 ### Delete Action
 
-The *Delete* button is enabled by default if `DeleteRestrictions` is not provided. Note that if you want to specify conditions for deletion \(using the `deletable-path` annotation\), you must ensure that the setting `sap:deletable` has not been made.
+The *Delete* button is shown by default if `DeleteRestrictions` is not provided. Note that if you want to specify conditions for deletion \(using the `deletable-path` annotation\), you must ensure that the setting `sap:deletable` has not been made.
 
 
 
@@ -698,35 +729,6 @@ You can control the `Delete` functionality of tables by using `DeleteRestriction
         </Record>
     </Annotation>
 </Annotations>
-
-```
-
-The system gives priority to the `Org.OData.Capabilities.V1.NavigationRestrictions` of the parent entity set. Depending on the value of the `Deletable` property of `DeleteRestrictions`, the related *Delete* button is shown or not.
-
--   If `NavigationRestrictions` has the setting `Deletable=false`, the *Delete* button for the child entity table is never visible.
-
--   If `NavigationRestrictions` has the setting `Deletable=true` or a path, the visibility of the *Delete* button for the child entity table depends on the value of `UI.DeleteHidden` of the child entity \(that is, the table entity\).
-
-
-```xml
-<Annotations Target="STTA_PROD_MAN.STTA_PROD_MAN_Entities/STTA_C_MP_Product">
-  <Annotation Term="Capabilities.NavigationRestrictions">
-    <Record>
-        <PropertyValue Property="RestrictedProperties">
-          <Collection>
-            <Record>
-               <PropertyValue Property="NavigationProperty" NavigationPropertyPath="to_ProductText"/>
-               <PropertyValue Property="DeleteRestrictions">
-                  <Record>
-                     <PropertyValue Property="Deletable" Bool="false"/>
-                  </Record>
-               </PropertyValue>
-           </Record>
-        </Collection>
-        </PropertyValue>
-    </Record>
-  </Annotation>
-</Annotation>
 
 ```
 

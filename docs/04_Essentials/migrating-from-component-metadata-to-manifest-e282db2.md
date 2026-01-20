@@ -4,7 +4,7 @@
 
 Overview, how the component metadata are mapped to the manifest \(descriptor for applications, components and libraries\).
 
-For compatibility reasons, the mapping to the `manifest.json` file is done automatically. If a metadata property has been defined, it can also be consumed via the corresponding property of the `manifest.json` file. For a detailed step-by-step guide, see [Creating a Descriptor File for Existing Apps](creating-a-descriptor-file-for-existing-apps-3a9baba.md).
+For compatibility reasons, the mapping to the `manifest.json` file is done automatically. If a metadata property has been defined, it can also be consumed via the corresponding property of the `manifest.json` file. For a detailed step-by-step guide, see [Creating a Manifest File for Existing Apps](creating-a-manifest-file-for-existing-apps-3a9baba.md).
 
 > ### Note:  
 > To benefit from the performance improvements that can be achieved by using "manifest first", we recommend to migrate the component metadata to the `manifest.json` file. For more information about manifest first, see the *Manifest First Function* section in [Manifest \(Descriptor for Applications, Components, and Libraries\)](manifest-descriptor-for-applications-components-and-libraries-be0cf40.md).
@@ -240,7 +240,6 @@ Includes are renamed to resources and are objects and not an array.
 > Since 1.94 the usage of `js` resources is deprecated. Please use regular `dependencies` instead.
 
 ```js
-
 "resources": {
     "js": [ //deprecated since 1.94
         {

@@ -120,7 +120,7 @@ For key user adaptation, you can choose to hide certain fields from being displa
 
 ## Changing the Default Title
 
-Currently, the default title for the edit dialog is `Edit(X)`. You can override the default title of the `MultiEdit` dialog by adding the `MULTI_EDIT_DIALOG_TITLE` key in the i18n file of the list report.
+The default title for the edit dialog is `Edit(X)`. You can override the default title of the `MultiEdit` dialog by adding the `MULTI_EDIT_DIALOG_TITLE` key in the i18n file of the list report.
 
 **Related Information**  
 
@@ -129,7 +129,7 @@ Currently, the default title for the edit dialog is `Edit(X)`. You can override 
 
 [Enabling Editing Using a Dialog \(Mass Edit\)](enabling-editing-using-a-dialog-mass-edit-965ef5b.md "Mass editing allows end users to simultaneously change multiple objects that share the same editable properties.")
 
-[Adding a Custom ViewExtension in the Mass Edit Dialog](adding-a-custom-viewextension-to-the-mass-edit-dialog-fd26fee.md "You can add a custom ViewExtension to the mass edit dialog by defining it in the manifest.")
+[Adding a Custom ViewExtension in the Mass Edit Dialog](adding-custom-input-fields-to-the-mass-edit-dialog-fd26fee.md "You can add custom input fields to the mass edit dialog by defining them in the manifest.")
 
 [Localization of UI Texts](localization-of-ui-texts-b8cb649.md "If necessary, you can replace standard UI texts for apps that you have created with SAP Fiori elements.")
 

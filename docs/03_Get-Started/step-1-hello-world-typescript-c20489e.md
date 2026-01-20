@@ -2,7 +2,7 @@
 
 # Step 1: Hello World! \(TypeScript\)
 
-As you know SAPUI5 is all about HTML5. Let's get started with building a first "Hello World" with HTML. This tutorial version has been set up in a way that allows the use of UI5 Tooling in combination with it.
+As you know, SAPUI5 is all about HTML5. Let's get started with building a first "Hello World" with HTML. This tutorial version has been set up in a way that allows the use of UI5 CLI in combination with it.
 
 
 
@@ -20,7 +20,7 @@ As you know SAPUI5 is all about HTML5. Let's get started with building a first "
 
 ## Setup
 
-Open a terminal and install UI5 Tooling globally on your machine by executing the following command:
+Open a terminal and install UI5 CLI globally on your machine by executing the following command:
 
 `npm install --global @ui5/cli`
 
@@ -70,7 +70,7 @@ In our `webapp` folder, we create a new HTML file named `index.html` and enter t
 
 ## webapp/manifest.json \(New\)
 
-The manifest file, also known as the "descriptor" or "app descriptor," serves as a crucial configuration file for applications, components, and libraries. Stored in the `webapp` folder, this file is read by SAPUI5 to instantiate a component. Although we haven't created a component yet \(which is part of [Step 9: Component Configuration \(TypeScript\)](step-9-component-configuration-typescript-f9d0e2f.md)\), we need to create the app descriptor now because the UI5 Tooling we intend to use for development also requires it.
+The manifest file, also known as the "descriptor" or "app descriptor," serves as a crucial configuration file for applications, components, and libraries. Stored in the `webapp` folder, this file is read by SAPUI5 to instantiate a component. Although we haven't created a component yet \(which is part of [Step 9: Component Configuration \(TypeScript\)](step-9-component-configuration-typescript-f9d0e2f.md)\), we need to create the app descriptor now because UI5 CLI we intend to use for development also requires it.
 
 Hence, we create a new file named `manifest.json` in the webapp folder and define its essential attributes:
 
@@ -115,9 +115,9 @@ Hence, we create a new file named `manifest.json` in the webapp folder and defin
 
 <a name="loioc20489e2a59d46e99c83f0510392cb6c__section_e2v_fmx_kzb"/>
 
-## UI5 Tooling
+## UI5 CLI
 
-The following steps are tailored for using this project with [UI5 Tooling](../05_Developing_Apps/development-environment-7bb04e0.md).
+The following steps are tailored for using this project with [UI5 CLI](../02_Read-Me-First/the-ui5-ecosystem-b72ccb5.md#loiod8ab43d845cd42ceb0aa4e47b44a8fcc).
 
 
 
@@ -141,15 +141,15 @@ Enter the following content:
 
 ```
 
-Next, we install the UI5 CLI and add it as development dependency to our project. For this, we open a terminal in the app root folder and execute the following command:
+Next, we install UI5 CLI and add it as development dependency to our project. For this, we open a terminal in the app root folder and execute the following command:
 
 `npm install --save-dev @ui5/cli`
 
-Finally, we initialize the UI5 Tooling configuration for our project by executing the following command on the app root folder:
+Finally, we initialize the UI5 CLI configuration for our project by executing the following command on the app root folder:
 
 `ui5 init`
 
-This generates a `ui5.yaml` file in our app root directory, which is essential for using UI5 Tooling with our project.
+This generates a `ui5.yaml` file in our app root directory, which is essential for using UI5 CLI with our project.
 
 To start the web server, execute the following command:
 
@@ -166,5 +166,5 @@ This opens a new browser window hosting your newly created `index.html`.
 
 [App Development](../05_Developing_Apps/app-development-b1fbe1a.md "There are several ways to develop OpenUI5 or SAPUI5 applications. Select the one that meets the requirements of your projects and your expectations best.")
 
-[UI5 Tooling: Getting Started](https://sap.github.io/ui5-tooling/stable/pages/GettingStarted/)
+[UI5 CLI: Getting Started](https://ui5.github.io/cli/stable/pages/GettingStarted/)
 

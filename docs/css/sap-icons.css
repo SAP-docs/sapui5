@@ -27,7 +27,8 @@
 @font-face{font-family:'ve-icon-set';src: url('./ve-icon-set.woff') format('woff');font-weight:normal;font-style:normal;}
 @font-face{font-family:'FluentSystemIcons-Filled';src: url('./FluentSystemIcons-Filled.woff') format('woff');font-weight:normal;font-style:normal;}
 @font-face{font-family:'FluentSystemIcons-Regular';src: url('./FluentSystemIcons-Regular.woff') format('woff');font-weight:normal;font-style:normal;}
-@font-face {font-family:'EmarsysHorizon';src: url('./EmarsysHorizon.woff') format('woff');font-weight: normal;font-style: normal;}
+@font-face{font-family:'EmarsysHorizon';src: url('./EmarsysHorizon.woff') format('woff');font-weight: normal;font-style: normal;}
+@font-face{font-family:'SAP-Signavio-icons';src: url('./SAP-Signavio-icons.woff') format('woff');font-weight:normal;font-style:normal;}
 .Ariba-icons {font-family:Ariba_icon_library;}
 .Belize-icons {font-family:SAPGUI-Belize-Icons;}
 .BusinessSuiteInAppSymbols {font-family:BusinessSuiteInAppSymbols;}
@@ -58,3 +59,4 @@
 .FluentSystemIcons-Filled {font-family:FluentSystemIcons-Filled;}
 .FluentSystemIcons-Regular {font-family:FluentSystemIcons-Regular;}
 .EmarsysHorizon {font-family: EmarsysHorizon;}
+.SAP-Signavio-icons {font-family:SAP-Signavio-icons;}

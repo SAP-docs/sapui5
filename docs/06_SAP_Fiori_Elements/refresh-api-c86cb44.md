@@ -7,7 +7,7 @@ Use the `refreshBinding` function \(in `Component.js`\) to refresh the header, f
 
 
 > ### Note:  
-> This topic is currently only applicable to SAP Fiori elements for OData V2.
+> This topic is only applicable to SAP Fiori elements for OData V2.
 
 
 

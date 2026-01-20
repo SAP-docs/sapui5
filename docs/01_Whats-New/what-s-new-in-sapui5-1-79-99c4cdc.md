@@ -546,7 +546,7 @@ SAP Fiori Elements
 
 -   The SAP Fiori elements object page now provides an option to customize the data loading behavior of subsections. For more information, see [Defining the Loading Behavior of Object Page Subsections](../06_SAP_Fiori_Elements/defining-the-loading-behavior-of-object-page-subsections-6b84249.md).
 
--   The default texts for the confirmation of object and item deletion have been enhanced. For more information, see [Configuring the Delete Confirmation Dialog Box](../06_SAP_Fiori_Elements/configuring-the-delete-confirmation-dialog-box-84e4f89.md).
+-   The default texts for the confirmation of object and item deletion have been enhanced. For more information, see [Configuring the Delete Dialog](../06_SAP_Fiori_Elements/configuring-the-delete-dialog-84e4f89.md).
 
 -   The SAP Fiori elements list report and object page now support a flexible column layout with 3-column layout for create, read, update, and delete \(CRUD\) operations in non-draft apps. For more information, see [Enabling the Flexible Column Layout](../06_SAP_Fiori_Elements/enabling-the-flexible-column-layout-e762257.md).
 
@@ -571,6 +571,18 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.141](what-s-new-in-sapui5-1-141-a7ed66d.md "With this release SAPUI5 is upgraded from version 1.140 to 1.141.")
+
+[What's New in SAPUI5 1.140](what-s-new-in-sapui5-1-140-26a106c.md "With this release SAPUI5 is upgraded from version 1.139 to 1.140.")
+
+[What's New in SAPUI5 1.139](what-s-new-in-sapui5-1-139-e10db71.md "With this release SAPUI5 is upgraded from version 1.138 to 1.139.")
+
+[What's New in SAPUI5 1.138](what-s-new-in-sapui5-1-138-8f6a92b.md "With this release SAPUI5 is upgraded from version 1.136 to 1.138.")
+
+[What's New in SAPUI5 1.136](what-s-new-in-sapui5-1-136-a82754d.md "With this release SAPUI5 is upgraded from version 1.135 to 1.136.")
+
+[What's New in SAPUI5 1.135](what-s-new-in-sapui5-1-135-93d7630.md "With this release SAPUI5 is upgraded from version 1.134 to 1.135.")
 
 [What's New in SAPUI5 1.134](what-s-new-in-sapui5-1-134-c512d71.md "With this release SAPUI5 is upgraded from version 1.133 to 1.134.")
 

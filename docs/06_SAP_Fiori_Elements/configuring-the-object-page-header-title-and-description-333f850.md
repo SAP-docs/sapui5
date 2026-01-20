@@ -79,5 +79,5 @@ To define or change the object page header title and description, adapt the ODat
 **Related Information**  
 
 
-[Changing Default Titles of New and Unnamed Objects](changing-default-titles-of-new-and-unnamed-objects-63946c0.md "When an end user creates new items in a list report or object page table, SAP Fiori elements provides a default title. Application developers are recommended to replace it with an application-specific title.")
+[Changing Default Titles of New and Unnamed Objects](changing-default-titles-of-new-and-unnamed-objects-63946c0.md "When an end user creates new items in a list report or object page table, SAP Fiori elements provides a default title. We recommend application developers to replace it with an application-specific title.")
 

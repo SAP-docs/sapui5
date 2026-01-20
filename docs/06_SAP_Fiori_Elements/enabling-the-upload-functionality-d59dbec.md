@@ -78,7 +78,7 @@ Here is an example of how to define the entity type with the required annotation
 > 
 > You can use the `Attachments` plug-in to define the entity type. For more information about the plug-in, see [Attachments](https://cap.cloud.sap/docs/plugins/#attachments).
 
-Check out our live example in the flexible programming model explorer at [Table - File Upload](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/table/tableUpload).
+For more information and live examples, see the SAP Fiori development portal at [Building Blocks - Table - Upload Table](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/table/tableUpload).
 
 
 

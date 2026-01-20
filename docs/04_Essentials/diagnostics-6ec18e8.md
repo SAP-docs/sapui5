@@ -352,11 +352,9 @@ The parameters are displayed in a tree structure. You can filter the tree by cli
 
 ## Flexibility
 
-This feature is only available, if the app uses the `sap.ui.fl` library.
+This feature lets you download data relevant to flexibility, which you can use for support and troubleshooting.
 
-With this feature, you can check whether there are SAPUI5 flexibilty changes for the controls used in an app, and you can analyze these changes.
-
-For example, you can see the layer of the changes in the layered repository, their type, or whether they're active. Active and erroneous changes are only evaluated for the controls currently in the DOM, in the current runtime.
+For example, support teams can use the data to identify which change is causing an issue with your application.
 
 
 
@@ -364,85 +362,23 @@ For example, you can see the layer of the changes in the layered repository, the
 
 ## Prerequisites
 
--   This tab only displays apps that use the `sap.ui.fl` library.
-
--   SAPUI5 needs to be in debug mode.
+-   This feature is available only if the app uses the `sap.ui.fl` library.
 
 
 
 <a name="loioc4ce41599ed143ecaf750f701695b88f__section_uf3_ptn_42b"/>
 
-## List of Applications
+## Anonymize User IDs
 
-The *Flexibility* panel displays a list of applications that have been handled by the `sap.ui.fl` library in this session. In case your application is an app variant, additional information about the base application will be displayed.
-
-For each app, you can download a JSON file containing the data that has been applied to an application as well as relevant runtime information.
-
-The JSON file contains changes on all layers. Personalization changes that have been saved to the USER layer are only collected for the current user.
-
-You can send this JSON file to SAP support for further investigation, or you can open the *UI Flexibility Diagnostics* application to investigate yourself.
+You can select the checkbox to anonymize user IDs in the data, such as those of users who have made changes to the application: ![](images/Anonymize_User_IDs_8163102.png)
 
 
 
 <a name="loioc4ce41599ed143ecaf750f701695b88f__section_zfw_ptn_42b"/>
 
-## UI Flexibility Diagnostics Application
+## Download Flexibility Data
 
-In the *UI Flexibility Diagnostics* application, upload a JSON file that you downloaded from the *Flexibility* panel in the *Diagnostics* window.
-
-The *UI Flexibility Diagnostics* application displays all changes that have been loaded for the application. The arrows visualize dependencies between these changes. You can quickly spot which changes have been applied by checking their color:
-
-
-<table>
-<tr>
-<th valign="top">
-
-Color
-
-</th>
-<th valign="top">
-
-Description
-
-</th>
-</tr>
-<tr>
-<td valign="top">
-
-Green
-
-</td>
-<td valign="top">
-
-This change has been applied to the control in the current system.
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Red
-
-</td>
-<td valign="top">
-
-The change could not be applied, and an error was raised.
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-White
-
-</td>
-<td valign="top">
-
-There was no attempt to apply the change either because required controls were not present, or because preconditions were not fulfilled.
-
-</td>
-</tr>
-</table>
+When you press this button, a JSON file downloads to your machine. It contains the flexibility data from the current application. You can examine this data or send it to support for troubleshooting. Make sure to review the file contents for any personal or confidential data before sharing..
 
 
 

@@ -68,7 +68,7 @@ The lifecycle object has the following potential properties. Each of them has Bo
     -   The session ends when the user closes the browser.
 
 
-    In particular, the lifetime is sufficient to ensure that the state can be restored after navigating to another SAP Fiori application \(via cross-app navigation\) and returning by back navigation.
+    In particular, the lifetime is sufficient to ensure that the state can be restored after navigating to another SAP Fiori application \(through cross-app navigation\) and returning by back navigation.
 
     Note that a hash of this information is stored in the URL.
 
@@ -154,7 +154,7 @@ For applying an app state, the following steps are executed:
 
 When a controller makes use of this controller extension, you usually only need to override the `adaptStateControls` method to add the state-relevant controls. If a view contains other views that should benefit from the app state, you can also add those views to the list of collected controls, and the call is propagated to its controller's `ViewState` controller extension.
 
-If required, control-independent view states can be handled via `retrieveAdditionalStates` and `applyAdditionalStates`. The key of a control's state is its local control ID, while keys for additional states can be freely chosen. Therefore, additional states are stored in a deeper level and have a special key \(transparent to the developer\) to prevent key clash with control IDs.
+If required, control-independent view states can be handled with `retrieveAdditionalStates` and `applyAdditionalStates`. The key of a control's state is its local control ID, while keys for additional states can be freely chosen. Therefore, additional states are stored in a deeper level and have a special key \(transparent to the developer\) to prevent key clash with control IDs.
 
 To prevent unwanted side effects during the phase when a new state is applied, you can use the `onBeforeStateApplied` and `onAfterStateApplied` functions, for example to suspend events. Both functions get a list of promises, meant to be extended for asynchronous handling. The controller extension resolves all promises in this list first before proceeding.
 

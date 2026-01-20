@@ -16,7 +16,7 @@ As you know SAPUI5 is all about HTML5. Let's get started with building a first "
 
 ## Setup
 
-Open a terminal and install UI5 Tooling globally on your machine by executing the following command:
+Open a terminal and install UI5 CLI globally on your machine by executing the following command:
 
 `npm install --global @ui5/cli`
 
@@ -85,7 +85,7 @@ You can view and download all files at [Walkthrough - Step 1](https://ui5.sap.co
     > ### Note:  
     > In this tutorial step, we only enter the most basic settings and parameters of the app descriptor file. In some development environments, you may get validation errors because some settings are missing; you can ignore them in this context. [Step 10: Descriptor for Applications](step-10-descriptor-for-applications-8f93bf2.md) explains the purpose of the file in general and describes some configuration options.
 
-6.  Open a terminal in the app root folder and execute `npm i -D @ui5/cli` to install UI5 Tooling.
+6.  Open a terminal in the app root folder and execute `npm i -D @ui5/cli` to install UI5 CLI.
 
 7.  Execute `ui5 init` in the app root folder.
 

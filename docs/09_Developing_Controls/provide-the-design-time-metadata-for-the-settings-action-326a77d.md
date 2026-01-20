@@ -50,7 +50,7 @@ Description
 </th>
 </tr>
 <tr>
-<td valign="top" rowspan="11">
+<td valign="top" rowspan="12">
 
 `actions: <object>` \(mandatory\)
 
@@ -77,7 +77,7 @@ Describes the actions that can be applied to the element.
 </td>
 </tr>
 <tr>
-<td valign="top" rowspan="10">
+<td valign="top" rowspan="11">
 
 `"settings": <object> | <function>`
 
@@ -95,6 +95,23 @@ Describes the actions that can be applied to the element.
 <td valign="top">
 
 Provides or calculates the design-time metadata specific to the *settings* action for an element as an object with the following properties.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`additionalInfoKey: <string>` \(optional\)
+
+</td>
+<td valign="top">
+
+\-\>
+
+</td>
+<td valign="top">
+
+Provides additional information to be displayed as a tooltip in the context menu.
 
 </td>
 </tr>

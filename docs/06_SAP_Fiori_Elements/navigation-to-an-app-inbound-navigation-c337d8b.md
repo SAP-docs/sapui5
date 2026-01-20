@@ -48,7 +48,7 @@ When dealing with incoming navigation, in addition to the navigation context pas
 
 ## Deep Linking
 
-Navigation to the application uses deep linking. For more information, see [Navigation](https://experience.sap.com/fiori-design/concept/navigation/) in the SAP Fiori design guidelines and go to the *Deep Links* section.
+Navigation to the application uses deep linking. For more information, see [Navigation](https://experience.sap.com/fiori-design/concept/navigation/) in the SAP Design System guidelines and go to the *Deep Links* section.
 
 > ### Note:  
 > You need the SAP Fiori launchpad for this type of navigation. For a stand-alone application, you need to change the links in the annotations as required.

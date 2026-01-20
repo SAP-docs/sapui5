@@ -2,5 +2,5 @@
 
 # JSDoc Guidelines
 
-General UI5 JSDoc guidelines are available at [OpenUI5 JSDoc Guidelines](https://github.com/SAP/openui5/blob/-/docs/guidelines/jsdoc.md).
+General UI5 JSDoc guidelines are available at [OpenUI5 JSDoc Guidelines](https://github.com/UI5/openui5/blob/-/docs/guidelines/jsdoc.md).
 

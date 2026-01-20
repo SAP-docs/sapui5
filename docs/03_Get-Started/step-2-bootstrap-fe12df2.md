@@ -20,9 +20,9 @@ You can view and download all files at [Walkthrough - Step 2](https://ui5.sap.co
 
 <a name="loiofe12df2e338e43598977d09f3d191b7b__section_mkm_zwb_syb"/>
 
-## UI5 Tooling
+## UI5 CLI
 
-First, let's enhance your UI5 Tooling setup:
+First, let's enhance your UI5 CLI setup:
 
 1.  Open a terminal from the app root folder.
 
@@ -59,7 +59,7 @@ First, let's enhance your UI5 Tooling setup:
 </html>
 ```
 
-In this step, we load the SAPUI5 framework from the webserver provided by UI5 Tooling and initialize the core modules with the following configuration options:
+In this step, we load the SAPUI5 framework from the webserver provided by UI5 CLI and initialize the core modules with the following configuration options:
 
 -   The `id` attribute of the `<script>` tag has to be exactly `"sap-ui-bootstrap"` to ensure proper booting of the SAPUI5 runtime.
 -   The `src` attribute of the `<script>` tag tells the browser where to find the SAPUI5 core library – it initializes the SAPUI5 runtime and loads additional resources, such as the libraries specified in the `data-sap-ui-libs` attribute.

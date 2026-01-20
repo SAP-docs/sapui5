@@ -61,7 +61,7 @@ To improve the responsiveness of charts, you can use `UI.PresentationVariant.Max
 
 ### Chart Interactivity
 
-Business users can choose specific data points to pass data in URL parameters to the target application. The target application can read these URL parameters and use them as required \(typically, to filter the data set that it is displaying\).
+Business users can choose specific data points to pass data in URL parameters to the target application. The target application can read these URL parameters and use them as required \(typically, to filter the dataset that it is displaying\).
 
 When a business user selects a particular data point, the system passes a technical ID \(`"RegionID"="001"`\) instead of the display name \(`"Region"="EMEA"`\).
 
@@ -82,14 +82,14 @@ Axis scaling lets you scale and display data for line, bubble, or scatter charts
     > 
     > ```xml
     > <PropertyValue Property="AxisScaling">
-    > >   <Record Type="UI.ChartAxisScalingType">
-    > >       <PropertyValue Property="AutoScaleBehavior">
-    > >           <Record Type="UI.ChartAxisAutoScaleBehaviorType">
-    > >               <PropertyValue Property="ZeroAlwaysVisible" Bool="true"/>
-    > >           </Record>
-    > >       </PropertyValue>
-    > >   </Record>
-    > > </PropertyValue>
+    >    <Record Type="UI.ChartAxisScalingType">
+    >        <PropertyValue Property="AutoScaleBehavior">
+    >            <Record Type="UI.ChartAxisAutoScaleBehaviorType">
+    >                <PropertyValue Property="ZeroAlwaysVisible" Bool="true"/>
+    >            </Record>
+    >        </PropertyValue>
+    >    </Record>
+    >  </PropertyValue>
     > ```
 
     > ### Sample Code:  
@@ -97,17 +97,17 @@ Axis scaling lets you scale and display data for line, bubble, or scatter charts
     > 
     > ```
     > AxisScaling : { 
-    > >     $Type : 'UI.ChartAxisScalingType',
-    > >     AutoScaleBehavior: { 
-    > >        $Type: 'UI.ChartAxisAutoScaleBehaviorType',
-    > >        ZeroAlwaysVisible: true
-    > >        }
-    > >  }
+    >      $Type : 'UI.ChartAxisScalingType',
+    >      AutoScaleBehavior: { 
+    >         $Type: 'UI.ChartAxisAutoScaleBehaviorType',
+    >         ZeroAlwaysVisible: true
+    >         }
+    >   }
     > ```
 
 -   `DataScope`
 
-    The scale adjusment property displays data in the respective chart format based on the available data range. It determines the automatic scaling. Minimum and maximum values for the axes are determined from the entire data set.
+    The scale adjusment property displays data in the respective chart format based on the available data range. It determines the automatic scaling. Minimum and maximum values for the axes are determined from the entire dataset.
 
     Set the following property in the `UI.Chart` annotation:
 
@@ -116,14 +116,14 @@ Axis scaling lets you scale and display data for line, bubble, or scatter charts
     > 
     > ```xml
     > <PropertyValue Property="AxisScaling">
-    > >   <Record Type="UI.ChartAxisScalingType">
-    > >       <PropertyValue Property="AutoScaleBehavior">
-    > >           <Record Type="UI.ChartAxisAutoScaleBehaviorType">
-    > >               <PropertyValue Property="DataScope" EnumMember="DataSet"/>
-    > >           </Record>
-    > >       </PropertyValue>
-    > >   </Record>
-    > > </PropertyValue>>
+    >    <Record Type="UI.ChartAxisScalingType">
+    >        <PropertyValue Property="AutoScaleBehavior">
+    >            <Record Type="UI.ChartAxisAutoScaleBehaviorType">
+    >                <PropertyValue Property="DataScope" EnumMember="DataSet"/>
+    >            </Record>
+    >        </PropertyValue>
+    >    </Record>
+    >  </PropertyValue>>
     > ```
 
     > ### Sample Code:  
@@ -131,12 +131,12 @@ Axis scaling lets you scale and display data for line, bubble, or scatter charts
     > 
     > ```
     >  AxisScaling : { 
-    > >     $Type : 'UI.ChartAxisScalingType',
-    > >     AutoScaleBehavior: { 
-    > >        $Type: 'UI.ChartAxisAutoScaleBehaviorType',
-    > >        DataScope: 'DataSet'
-    > >        }
-    > >  }
+    >      $Type : 'UI.ChartAxisScalingType',
+    >      AutoScaleBehavior: { 
+    >         $Type: 'UI.ChartAxisAutoScaleBehaviorType',
+    >         DataScope: 'DataSet'
+    >         }
+    >   }
     > ```
 
 -   `FixedScale`
@@ -150,10 +150,10 @@ Axis scaling lets you scale and display data for line, bubble, or scatter charts
     > 
     > ```xml
     > <PropertyValue Property="AxisScaling">
-    > >   <Record Type="UI.ChartAxisScalingType">
-    > >       <PropertyValue Property="ScaleBehavior" EnumMember="UI.ChartAxisScaleBehaviorType/FixedScale"/>
-    > >   </Record>
-    > > </PropertyValue>
+    >    <Record Type="UI.ChartAxisScalingType">
+    >        <PropertyValue Property="ScaleBehavior" EnumMember="UI.ChartAxisScaleBehaviorType/FixedScale"/>
+    >    </Record>
+    >  </PropertyValue>
     > ```
 
     > ### Sample Code:  
@@ -161,9 +161,9 @@ Axis scaling lets you scale and display data for line, bubble, or scatter charts
     > 
     > ```
     > AxisScaling : { 
-    > >     $Type : 'UI.ChartAxisScalingType',
-    > >     ScaleBehavior: #FixedScale
-    > >  }
+    >      $Type : 'UI.ChartAxisScalingType',
+    >      ScaleBehavior: #FixedScale
+    >   }
     > ```
 
 
@@ -221,79 +221,82 @@ You must define the `DataPoint` annotation to set the minimum and maximum values
 The following sample code is a snippet of a sample `manifest.json` file:
 
 > ### Sample Code:  
-> ```
-> "sap.app": {
->    "_version": "1.1.0",
->    "id": "sap.ovp.demo",
->    "type": "application",
->    "i18n": "i18n/i18n.properties",
->    "applicationVersion": {
->                            "version": "1.2.2"
->                          },
->    "title": "{{app_title}}",
->    "description": "{{app_description}}",
->    "dataSources": {
->       "salesShare": {
->                        "uri": "https://abc.com/SalesShare.xsodata",
->                        "type": "OData",
->                        "settings": {
->                                      "odataVersion": "2.0",
->                                      "annotations": [
-> 		                             "salesShareAnno"
-> 	                                 ]
->                                     }
->                       },
->        "salesShareAnno": {
->                        "uri": "data/salesshare/annotations.xml",
->                        "type": "ODataAnnotation",
->                        "settings": {
->                                    }
->                           }
->                    }
->                 }
+> `manifest.json`
 > 
-> "sap.ovp": {
+> ```
+> {
+>   "sap.app": {
+>     "_version": "1.1.0",
+>     "id": "sap.ovp.demo",
+>     "type": "application",
+>     "i18n": "i18n/i18n.properties",
+>     "applicationVersion": {
+>       "version": "1.2.2"
+>     },
+>     "title": "{{app_title}}",
+>     "description": "{{app_description}}",
+>     "dataSources": {
+>       "salesShare": {
+>         "uri": "https://abc.com/SalesShare.xsodata",
+>         "type": "OData",
+>         "settings": {
+>           "odataVersion": "2.0",
+>           "annotations": [
+>             "salesShareAnno"
+>           ]
+>         }
+>       },
+>       "salesShareAnno": {
+>         "uri": "data/salesshare/annotations.xml",
+>         "type": "ODataAnnotation",
+>         "settings": {}
+>       }
+>     }
+>   },
+>   "sap.ovp": {
 >     "globalFilterModel": "salesShare",
->     "globalFilterEntityType": "GlobalFilters",
+>     "globalFilterEntityType": "GlobalFilters", //Deprecated since SAPUI5 1.54.
+>     "globalFilterEntitySet": "GlobalFilters",  //Available from SAPUI5 1.54.                  
 >     "cards": {
->                "cardBubble": {
->                                "model": "salesShare",
->                                "template": "sap.ovp.cards.charts.analytical",
->                                "settings": {
->                                              "entitySet": "SalesShare",
->                                              "selectionAnnotationPath" : "com.sap.vocabularies.UI.v1.SelectionVariant#Eval_by_CtryCurr",
->                                              "chartAnnotationPath" : "com.sap.vocabularies.UI.v1.Chart#Eval_by_CtryCurr",
->                                              "presentationAnnotationPath" : "com.sap.vocabularies.UI.v1.PresentationVariant#Eval_by_CtryCurr",
->                                              "dataPointAnnotationPath" : "com.sap.vocabularies.UI.v1.DataPoint#Eval_by_CtryCurr",
->                                              "identificationAnnotationPath" : "com.sap.vocabularies.UI.v1.Identification#Eval_by_CtryCurr"
->                                             }
->                                },
->                 "cardchartsline": {
->                                     "model": "salesShare",
->                                     "template": "sap.ovp.cards.charts.analytical",
->                                     "settings": {
->                                                   "entitySet": "SalesShare",
->                                                   "selectionAnnotationPath" : "com.sap.vocabularies.UI.v1.SelectionVariant#Eval_by_Country",
->                                                   "chartAnnotationPath" : "com.sap.vocabularies.UI.v1.Chart#Eval_by_Country",
->                                                   "presentationAnnotationPath" : "com.sap.vocabularies.UI.v1.PresentationVariant#Eval_by_Country",
->                                                   "dataPointAnnotationPath" : "com.sap.vocabularies.UI.v1.DataPoint#Eval_by_Country",
->                                                   "idenfiticationAnnotationPath" : "com.sap.vocabularies.UI.v1.Identification#Eval_by_Country"
->                                                  }
->                                           },
->                  "cardchartsdonut": {
->                                      "model": "salesShare",
->                                      "template": "sap.ovp.cards.charts.analytical",
->                                      "settings": {
->                                                    "entitySet": "SalesShare",
->                                                    "selectionAnnotationPath" : "com.sap.vocabularies.UI.v1.SelectionVariant#Eval_by_Currency",
->                                                    "chartAnnotationPath" : "com.sap.vocabularies.UI.v1.Chart#Eval_by_Currency",
->                                                    "presentationAnnotationPath" : "com.sap.vocabularies.UI.v1.PresentationVariant#Eval_by_Currency",
->                                                    "dataPointAnnotationPath" : "com.sap.vocabularies.UI.v1.DataPoint#Eval_by_Currency",
->                                                    "idenfiticationAnnotationPath" : "com.sap.vocabularies.UI.v1.Identification#Eval_by_Currency"
->                                                   }
->                                     }
->                                 }
->                 }
+>       "cardBubble": {
+>         "model": "salesShare",
+>         "template": "sap.ovp.cards.charts.analytical",
+>         "settings": {
+>           "entitySet": "SalesShare",
+>           "selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#Eval_by_CtryCurr",
+>           "chartAnnotationPath": "com.sap.vocabularies.UI.v1.Chart#Eval_by_CtryCurr",
+>           "presentationAnnotationPath": "com.sap.vocabularies.UI.v1.PresentationVariant#Eval_by_CtryCurr",
+>           "dataPointAnnotationPath": "com.sap.vocabularies.UI.v1.DataPoint#Eval_by_CtryCurr",
+>           "identificationAnnotationPath": "com.sap.vocabularies.UI.v1.Identification#Eval_by_CtryCurr"
+>         }
+>       },
+>       "cardchartsline": {
+>         "model": "salesShare",
+>         "template": "sap.ovp.cards.charts.analytical",
+>         "settings": {
+>           "entitySet": "SalesShare",
+>           "selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#Eval_by_Country",
+>           "chartAnnotationPath": "com.sap.vocabularies.UI.v1.Chart#Eval_by_Country",
+>           "presentationAnnotationPath": "com.sap.vocabularies.UI.v1.PresentationVariant#Eval_by_Country",
+>           "dataPointAnnotationPath": "com.sap.vocabularies.UI.v1.DataPoint#Eval_by_Country",
+>           "identificationAnnotationPath": "com.sap.vocabularies.UI.v1.Identification#Eval_by_Country"
+>         }
+>       },
+>       "cardchartsdonut": {
+>         "model": "salesShare",
+>         "template": "sap.ovp.cards.charts.analytical",
+>         "settings": {
+>           "entitySet": "SalesShare",
+>           "selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#Eval_by_Currency",
+>           "chartAnnotationPath": "com.sap.vocabularies.UI.v1.Chart#Eval_by_Currency",
+>           "presentationAnnotationPath": "com.sap.vocabularies.UI.v1.PresentationVariant#Eval_by_Currency",
+>           "dataPointAnnotationPath": "com.sap.vocabularies.UI.v1.DataPoint#Eval_by_Currency",
+>           "identificationAnnotationPath": "com.sap.vocabularies.UI.v1.Identification#Eval_by_Currency"
+>         }
+>       }
+>     }
+>   }
+> }
 > ```
 
 > ### Note:  

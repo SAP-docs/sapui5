@@ -4,7 +4,7 @@
 
 A collection of methods which help to consume OData Version 4.0 annotations in XML template views.
 
-The `AnnotationHelper` connects all the pieces related to XML templating: It knows the OData meta model and its structure as well as the OData v4 annotations. The `AnnotationHelper` offers formatter functions and helper functions. You can call these methods directly from the JavaScript code without XML runtime templating. You do not need to require `sap.ui.model.odata.AnnotationHelper` before use.
+The `AnnotationHelper` connects all the pieces related to XML templating: It knows the OData meta model and its structure as well as the OData v4 annotations. The `AnnotationHelper` offers formatter functions and helper functions. You can call these methods directly from the JavaScript code without XML runtime templating. You need to require `sap/ui/model/odata/AnnotationHelper` before use. Make sure to require the `sap/ui/model/odata/ODataExpressionAddons` module in advance or, if you need to minimize the loading of modules \(for example, for performance reasons\), you can also require the corresponding modules individually as indicated below.
 
 > ### Tip:  
 > You can see more information on the expressions, constants and functions used by the `AnnotationHelper`, in the respective chapters of the specification [OData Version 4.0 Specification: Part 3: Common Schema Definition Language](http://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part3-csdl.html) .
@@ -23,15 +23,15 @@ The formatter functions can be used in binding expressions and `<template:if>` i
 
     -   Constant *"14.4.11 Expression edm:String"*: This constant is either turned into fixed text, for example *"Width"*, or into a data binding expression, for example `"{/##/dataServices/schema/0/entityType/1/com.sap.vocabularies.UI.v1.FieldGroup#Dimensions/Data/0/Label/String}"`. If XML template processing has been started with the setting `bindTexts : true`, data binding expressions are used. The constant is used to reference translatable texts from OData v4 annotations, especially for XML template processing at design time. The string constants that contain a simple binding `"{@i18n>...}"` to the hard-coded model name `"@i18n"` with an arbitrary path are not turned into a fixed text, but kept as a data binding expression. This enables local annotation files to refer to a resource bundle for internationalization. If you want to avoid this behaviour, add a space at the end of the string constant and it will be turned into a fixed text again.
 
-    -   Dynamic *"14.5.1 Comparison and Logical Operators"*: Turned into an expression binding to perform the operations at runtime. It's strongly recommended to require the `sap.ui.model.odata.v4.ODataUtils` module in advance to avoid synchronous loading of this module.
+    -   Dynamic *"14.5.1 Comparison and Logical Operators"*: Turned into an expression binding to perform the operations at runtime. Require the `sap/ui/model/odata/v4/ODataUtils` module in advance.
 
     -   Dynamic *"14.5.3 Expression edm:Apply"*:
 
         -   *"14.5.3.1.1 Function odata.concat"*: Turned into a data binding expression relative to an entity
 
-        -   *"14.5.3.1.2 Function odata.fillUriTemplate"*: Turned into an expression binding to fill the template at runtime. It's strongly recommended to require the `sap.ui.thirdparty.URITemplate` module in advance to avoid synchronous loading of this module.
+        -   *"14.5.3.1.2 Function odata.fillUriTemplate"*: Turned into an expression binding to fill the template at runtime. Require the `sap/ui/thirdparty/URITemplate` module in advance.
 
-        -   *"14.5.3.1.3 Function odata.uriEncode"*: Turned into an expression binding to encode the parameter at runtime. It's strongly recommended to require the `sap.ui.model.odata.ODataUtils` module in advance to avoid synchronous loading of this module.
+        -   *"14.5.3.1.3 Function odata.uriEncode"*: Turned into an expression binding to encode the parameter at runtime. Require the `sap/ui/model/odata/ODataUtils` module in advance.
 
 
         The *apply* functions can be nested arbitrarily.
@@ -129,9 +129,7 @@ The formatter functions can also be called directly from JavaScript. The followi
 var oModel = this.getModel(),
     sPath = "##com.sap.vocabularies.UI.v1.HeaderInfo/Description/Label",
     oContext = oModel.getContext(oModel.resolve(sPath, this.getBindingContext())),
-    oLabel = new sap.m.Label({
-        text : sap.ui.model.odata.AnnotationHelper.format(oContext)
-    }));
+    oLabel = new sap.m.Label({text: AnnotationHelper.format(oContext)}));
 ...
 ```
 
@@ -149,8 +147,8 @@ The following helper functions can be used with `<template:with>`:
 
     ```xml
     
-    <template:with path="facet>Target" helper="sap.ui.model.odata.AnnotationHelper.gotoEntitySet" var="entitySet" />
-    <template:with path="associationSetEnd>entitySet" helper="sap.ui.model.odata.AnnotationHelper.gotoEntitySet" var="entitySet"/>
+    <template:with path="facet>Target" helper="AnnotationHelper.gotoEntitySet" var="entitySet" />
+    <template:with path="associationSetEnd>entitySet" helper="AnnotationHelper.gotoEntitySet" var="entitySet"/>
     ```
 
     The binding context passed to the helper function, as determined by the `template:with` instruction's `path` property, must point to a simple string or to an annotation \(or annotation property\) of type `Edm.AnnotationPath`, embedded within an entity set or type; the context's model must be an `sap.ui.model.odata.ODataMetaModel`.
@@ -161,21 +159,21 @@ The following helper functions can be used with `<template:with>`:
 
     ```xml
     
-    <template:with path="entitySet>entityType" helper="sap.ui.model.odata.AnnotationHelper.gotoEntityType" var="entityType">
+    <template:with path="entitySet>entityType" helper="AnnotationHelper.gotoEntityType" var="entityType">
     ```
 
 -   `resolvePath` is a helper function for a `template:with` instruction that resolves one of the following dynamic expressions: *14.5.2 Expression edm:AnnotationPath*, *"14.5.11 Expression edm:NavigationPropertyPath"*, *"14.5.12 Expression edm:Path"* and *"14.5.13 Expression edm:PropertyPath"*. The function supports navigation properties and term casts. The binding context passed to the helper function, as determined by the `template:with` instruction's path property, must point to an annotation or annotation property of type `Edm.AnnotationPath`, embedded within an entity type, The context's model must be `sap.ui.model.odata.ODataMetaModel`.
 
     ```xml
     
-    <template:with path="meta>Value" helper="sap.ui.model.odata.AnnotationHelper.resolvePath" var="target">
+    <template:with path="meta>Value" helper="AnnotationHelper.resolvePath" var="target">
     ```
 
 -   `gotoFunctionImport`: Helper function for a `template:with` instruction that goes to the function import with the name which `oContext` points at. Example: Assume that `dataField` refers to a `DataFieldForAction` within an OData meta model; the helper function is then called on the `Action` property of that data field \(which holds an object with the qualified name of the function import in the String property\) and in turn the path of that function import is assigned to the variable `function`.
 
     ```xml
     
-    <template:with path="dataField>Action" helper="sap.ui.model.odata.AnnotationHelper.gotoEntityType" var="function">
+    <template:with path="dataField>Action" helper="AnnotationHelper.gotoEntityType" var="function">
     ```
 
 

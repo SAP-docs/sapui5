@@ -12,11 +12,11 @@ You can measure the code coverage either via HTML or JavaScript code using a cod
 
 `Istanbul` offers code coverage and instrumentation for JavaScript files. It also supports branching and correctly identifies visited scopes in conditional clauses.
 
-[UI5 Middleware Code Coverage](https://github.com/SAP/ui5-tooling-extensions/tree/main/packages/middleware-code-coverage) is a [UI5 server](https://sap.github.io/ui5-tooling/stable/pages/Server/) middleware that enables [`Istanbul`](https://istanbul.js.org/) in UI5 Tooling.
+[UI5 Middleware Code Coverage](https://github.com/UI5/cli-extensions/tree/main/packages/middleware-code-coverage) is a [UI5 server](https://ui5.github.io/cli/stable/pages/Server/) middleware that enables [`Istanbul`](https://istanbul.js.org/) in UI5 CLI.
 
-If you use UI5 Tooling's `ui5 serve`, you would need to enable it in `ui5.yaml` and `package.json` of your project.
+If you use UI5 CLI's `ui5 serve`, you would need to enable it in `ui5.yaml` and `package.json` of your project.
 
-For more information, see the [documentation](https://github.com/SAP/ui5-tooling-extensions/tree/main/packages/middleware-code-coverage).
+For more information, see the [documentation](https://github.com/UI5/cli-extensions/tree/main/packages/middleware-code-coverage).
 
 
 
@@ -259,7 +259,7 @@ In this example the coverage is limited to one specific file - the only one that
 **Related Information**  
 
 
-[`UI5 Middleware Code Coverage`](https://github.com/SAP/ui5-tooling-extensions/blob/-/packages/middleware-code-coverage)
+[`UI5 Middleware Code Coverage`](https://github.com/UI5/cli-extensions/blob/-/packages/middleware-code-coverage)
 
 [More information about `Blanket.js`](https://github.com/alex-seville/blanket/blob/-/docs/intermediate_browser.md)
 

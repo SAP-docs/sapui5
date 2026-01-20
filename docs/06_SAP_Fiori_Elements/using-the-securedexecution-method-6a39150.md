@@ -1,6 +1,6 @@
 <!-- loio6a39150ad3e548a8b5304d32d560790a -->
 
-# Using the SecuredExecution Method
+# Using the `SecuredExecution` Method
 
 The API for developers of extensions for SAP Fiori elements provides the `securedExecution` method that can be used for various purposes.
 
@@ -32,7 +32,7 @@ Depending on the state of the user interaction, `fnFunction` may or may not be e
 
 -   If the user has entered data but hasn't saved yet
 
--   If the user has triggered an action that is implemented via `securedExecution`
+-   If the user has triggered an action that is implemented through `securedExecution`
 
 -   If the user has clicked *Cancel* in the dataloss conformation dialog
 

@@ -2,6 +2,14 @@
 
 # Binding Collection Inline Count
 
+The OData V4 model allows for binding the count of an entity collection displayed in a table **as a whole** \(for example, the number of teams displayed\). For more information, see [Binding An Entity Set's Count](binding-collection-inline-count-77d2310.md#loio77d2310b637b490495d78b393ed6aa64__section_BESC). It also allows for binding the count of entity collections displayed inside **individual table rows** \(for example, the number of employees per team\). For more information, see [Binding A Navigation Property's Count](binding-collection-inline-count-77d2310.md#loio77d2310b637b490495d78b393ed6aa64__section_BNPC).
+
+
+
+<a name="loio77d2310b637b490495d78b393ed6aa64__section_BESC"/>
+
+## Binding An Entity Set's Count
+
 The OData V4 model allows for binding the inline count of the entity collection read by an `ODataListBinding` which has the parameter `$count` set to `true`. Inactive contexts do not contribute to this count; for more information see [Creating an Entity in a Collection](creating-an-entity-in-a-collection-c9723f8.md). In the example below, the table title is bound to `"$count"`, thus representing the number of sales order entities in the collection bound to the table.
 
 **Example: Table with title bound to `$count`**
@@ -79,4 +87,19 @@ setHeaderContext : function () {
 > 		parameters: {$filter: 'LifecycleStatus eq \'N\''}
 > 		  } New Sales Orders"/>
 > ```
+
+
+
+<a name="loio77d2310b637b490495d78b393ed6aa64__section_BNPC"/>
+
+## Binding A Navigation Property's Count
+
+You can display the count of elements in a collection-valued navigation property individually per table row without reading the actual data for that navigation property. For example, you can display a list of teams and show the number of employees per team without reading any employee data at all. To do so, simply add a property binding to the `$count` of the corresponding navigation property \(see Line 3\):
+
+```xml
+<Table items="{/TEAMS}">
+    <Text text="{Team_Id}"/>
+    <Text text="{TEAM_2_EMPLOYEES/$count}"/>
+</Table>
+```
 

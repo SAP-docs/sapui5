@@ -34,7 +34,7 @@ For a page to be considered a form entry object page, you must make the followin
 > }  
 > ```
 
-In addition, if you want your application to start automatically in creation mode you've to specify the following in your main application `Component.js`:
+In addition, if you want your application to start automatically in creation mode, you must specify the following in your main application `Component.js` file:
 
 > ### Sample Code:  
 > ```
@@ -68,9 +68,11 @@ In addition, if you want your application to start automatically in creation mod
 
 ## Enabling the `singleDraftForCreate` Setting
 
-Application developers can enable the `singleDraftForCreate` setting in the `manifest.json`.
+You can enable the `singleDraftForCreate` setting in the `manifest.json` file, as shown in the following code:
 
 > ### Sample Code:  
+> `manifest.json`
+> 
 > ```
 > "sap.fe": {
 >     "app": {
@@ -89,5 +91,5 @@ If there are no unsaved entities, the end user can create a new entity.
 
 ## Enabling the `singleDraftForCreate` Setting Using Extensions
 
-Application developers can enable the `singleDraftForCreate` setting using the `EditFlow` controller extension. If the `editFlow.createDocument(ListBinding, {singleDraftForCreate: true})` setting is enabled, it allows end users to create a new entity. The application launches the newly created entity in edit mode only if no unsaved drafts exist. If any unsaved draft exists, the application opens the latest unsaved draft in edit mode instead.
+You can enable the `singleDraftForCreate` setting using the `EditFlow` controller extension. If the `editFlow.createDocument(ListBinding, {singleDraftForCreate: true})` setting is enabled, it allows end users to create a new entity. The application launches the newly created entity in edit mode only if no unsaved drafts exist. If any unsaved draft exists, the application opens the latest unsaved draft in edit mode instead.
 

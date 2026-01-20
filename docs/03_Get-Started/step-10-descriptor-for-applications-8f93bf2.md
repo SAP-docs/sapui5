@@ -227,7 +227,7 @@ In the component's `metadata` section, we now replace the `rootView` property wi
 
 [Manifest \(Descriptor for Applications, Components, and Libraries\)](../04_Essentials/manifest-descriptor-for-applications-components-and-libraries-be0cf40.md "The manifest (also known as descriptor for applications, components, and libraries, in short: app descriptor) is inspired by the WebApplication Manifest concept introduced by the W3C. The manifest provides a central, machine-readable, and easy-to-access location for storing metadata associated with an application, an application component, or a library.")
 
-[Methods Controlling the Initial Instantiation](../04_Essentials/methods-controlling-the-initial-instantiation-b430345.md "SAPUI5 provides two methods for the initial instantiation of the component.")
+[Content Creation in Components](../04_Essentials/content-creation-in-components-b430345.md "SAPUI5 provides two methods for creating the content controls of a component.")
 
 [Advanced Concepts for SAPUI5 Components](../04_Essentials/advanced-concepts-for-sapui5-components-ecbc417.md "Advanced concepts for components include routing and navigation and component data as well as the event bus.")
 

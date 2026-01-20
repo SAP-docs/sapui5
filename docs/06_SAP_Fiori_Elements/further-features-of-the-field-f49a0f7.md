@@ -13,7 +13,7 @@ Application developers can control important features of the field.
 
 ## Text Annotation and Text Arrangement Annotation
 
-The value displayed within the field can show either only the textual description of the value, or show it together with the ID representation of the value. Consider the following example data set:
+The value displayed within the field can show either only the textual description of the value, or show it together with the ID representation of the value. Consider the following example dataset:
 
 
 <table>
@@ -196,7 +196,7 @@ The `TextArrangement` value at entity set level is considered as a fallback only
 > </Annotations>
 > ```
 
-For more information about using a text arrangement annotation in a value help, see the [Using the Text and TextArrangement Annotation](field-help-a5608ea.md#loioa5608eabcc184aee99e1a7d88b28816c__text_textarrangement_valuehelp) subsection in [Field Help](field-help-a5608ea.md).
+For more information about using a text arrangement annotation in a value help, see **Text Handling** in the [Tables](value-help-dialog-3faed83.md#loio3faed838512648b099e14dfec458d847__table) subsection of [Value Help Dialog](value-help-dialog-3faed83.md).
 
 
 
@@ -495,8 +495,6 @@ For example, `IsFiscalYearPeriod` indicates that the annotated `Edm.String` prop
 
 For more information about ABAP and CDS semantics annotations, see [Semantics Annotations](https://help.sap.com/docs/abap-cloud/abap-rap/semantics-annotations).
 
-Check out our live example in the flexible programming model explorer at [Field - Fiscal types](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/fieldFiscals).
-
 
 
 <a name="loiof49a0f7eaafe444daf4cd62d48120ad0__section_v5m_xzf_k4b"/>
@@ -790,8 +788,6 @@ In SAP Fiori elements for OData V4, you can use the `common.FieldControl` annota
 
 > ### Note:  
 > ABAP CDS only supports `@ObjectModel.mandatory` but **not** `@ObjectModel.readOnly`.
-
-****
 
 
 <table>

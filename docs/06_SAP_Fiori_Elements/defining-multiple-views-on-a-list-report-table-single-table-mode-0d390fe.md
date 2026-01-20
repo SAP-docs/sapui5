@@ -26,7 +26,7 @@ To define multiple views using single table mode, perform the following steps:
 
 1.  Add `SelectionVariants` to your annotations file.
 
-    Example for a `SelectionVariant` that filters for items that cost a certain amount \(for example, at least 5,000 euros\):
+    The following sample code shows how a `SelectionVariant` filters for items that cost a certain amount \(for example, at least 5,000 euros\):
 
     > ### Sample Code:  
     > XML Annotation
@@ -99,7 +99,7 @@ To define multiple views using single table mode, perform the following steps:
     > 
     > For the `PresentationVariant`, `SortOrders` is supported.
 
-2.  Extend the `manifest.json` to switch on the multiple view feature and link to the variants you have added to your annotations. You do this in the list report settings section under `sap.ui.generic.app`. Use `quickVariantSelection` for single table mode.
+2.  Extend the `manifest.json` file to switch on the multiple view feature and link to the variants you have added to your annotations. You do this in the list report settings section under `sap.ui.generic.app`. Use `quickVariantSelection` for single table mode.
 
     -   The `variants` section \(lines 11-20\) contains a set of entries that point to the variants defined in the annotations.
 
@@ -176,7 +176,7 @@ To define multiple views using single table mode, perform the following steps:
 > ```
 
 > ### Sample Code:  
-> Manifest Settings
+> `manifest.json`
 > 
 > ```
 > "settings": {
@@ -202,7 +202,7 @@ To define multiple views using single table mode, perform the following steps:
 **`SelectionVariant` without a Qualifier**
 
 > ### Sample Code:  
-> Annotation
+> XML Annotation
 > 
 > ```
 > <Annotation Term="UI.SelectionVariant" >
@@ -231,7 +231,7 @@ To define multiple views using single table mode, perform the following steps:
 > ```
 
 > ### Sample Code:  
-> Manifest Settings
+> `manifest.json`
 > 
 > ```
 > "settings": {
@@ -257,7 +257,7 @@ To define multiple views using single table mode, perform the following steps:
 **`SelectionPresentationVariant` with a Qualifier**
 
 > ### Sample Code:  
-> Annotation
+> XML Annotation
 > 
 > ```xml
 > <Annotation Term="UI.SelectionPresentationVariant"Qualifier="Cheap">
@@ -311,7 +311,7 @@ To define multiple views using single table mode, perform the following steps:
 > ```
 
 > ### Sample Code:  
-> Manifest Settings
+> `manifest.json`
 > 
 > ```
 > "settings": {
@@ -337,7 +337,7 @@ To define multiple views using single table mode, perform the following steps:
 **`SelectionPresentationVariant` without a Qualifier**
 
 > ### Sample Code:  
-> Annotation
+> XML Annotation
 > 
 > ```
 > <Annotation Term="UI.SelectionPresentationVariant">
@@ -391,7 +391,7 @@ To define multiple views using single table mode, perform the following steps:
 > ```
 
 > ### Sample Code:  
-> Manifest Settings
+> `manifest.json`
 > 
 > ```
 > "settings": {
@@ -585,7 +585,7 @@ To define multiple views using single table mode, perform the following steps:
     > 
     > For the `PresentationVariant`, `SortOrders` is supported.
 
-2.  Extend the `manifest.json` to switch on the multiple view feature and link to the variants you have added to your annotations. You do this in the list report settings section under *routing* \> *targets*. In the `LineItem` control configuration, use `quickVariantSelection` for single table mode.
+2.  Extend the `manifest.json` file to switch on the multiple view feature and link to the variants you have added to your annotations. You do this in the list report settings section under *routing* \> *targets*. In the `LineItem` control configuration, use `quickVariantSelection` for single table mode.
 
     -   The `paths` array contains a set of entries that point to the variants defined in the annotations.
 
@@ -637,9 +637,9 @@ To define multiple views using single table mode, perform the following steps:
     > ```
 
     > ### Note:  
-    > If `showCounts` is set to `true`, the segmented buttons show the count next to the button label and no count is shown next to the title of the table.
+    > If `showCounts` is set to `true`, the segmented buttons show the count next to the button label and no count is shown next to the table title.
     > 
-    > If `showCounts` is set to `false`, no count is shown next to the button label, nor next to the title of the table.
+    > If `showCounts` is set to `false`, the count isn't displayed next to the button label and the table title.
 
       
       

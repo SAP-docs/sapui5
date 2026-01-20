@@ -4,8 +4,6 @@
 
 If your value help contains a fixed number of values, a dropdown list is rendered.
 
-For more information on how value help annotations are set in CDS, search for *UI Annotations* in the documentation of your SAP NetWeaver version on the SAP Help Portal at [https://help.sap.com/viewer/p/SAP\_NETWEAVER](https://help.sap.com/viewer/p/SAP_NETWEAVER).
-
 
 
 <a name="loio2a0a630e50c7472b803fb94dab922d18__section_nfd_b3f_ymb"/>
@@ -14,24 +12,47 @@ For more information on how value help annotations are set in CDS, search for *U
 
 If the entity set of a value help has a fairly stable number of instances, you can render an input field with a value help and dropdown list box \(`sap.m.ComboBox` and in cases of multi selection a `sap.m.MultiComboBox`\) using the metadata extension `sap:semantics='fixed-values'` on the entity set level and the `sap:value-list='fixed-values'` on the property level.
 
-In the following example the product category is implemented as a dropdown list box:
+In the following sample code, the product category is implemented as a dropdown list box:
 
 > ### Sample Code:  
 > $metadata
 > 
 > ```
+> 
 > <EntityType Name="SMART_C_ProductType" sap:label="Product" sap:content-version="1">
-> 	<Key>...</Key>
-> 	... 
-> 	<Property Name="ProductCategory" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Category" sap:value-list="fixed-values" />
-> 	...
-> 	<EntityContainer Name="SMART_PROD_MAN_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
-> 	...
-> 	<EntitySet Name="SEPMRA_I_ProductCategory" EntityType="SMART_PROD_MAN.SEPMRA_I_ProductCategoryType" 
-> 							sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:content-version="1" sap:semantics="fixed-values" />
+>     <Key>
+>         ...
+>     </Key>
+>     ...
+>     <Property 
+>         Name="ProductCategory" 
+>         Type="Edm.String" 
+>         Nullable="false" 
+>         MaxLength="40" 
+>         sap:label="Category" 
+>         sap:value-list="fixed-values" />
+>     ...
+> </EntityType>
+> 
+> <EntityContainer 
+>     Name="SMART_PROD_MAN_Entities" 
+>     m:IsDefaultEntityContainer="true" 
+>     sap:supported-formats="atom json xlsx">
+>     ...
+>     <EntitySet 
+>         Name="SEPMRA_I_ProductCategory" 
+>         EntityType="SMART_PROD_MAN.SEPMRA_I_ProductCategoryType"
+>         sap:creatable="false" 
+>         sap:updatable="false" 
+>         sap:deletable="false" 
+>         sap:searchable="true" 
+>         sap:content-version="1" 
+>         sap:semantics="fixed-values" />
+> </EntityContainer>
+> 
 > ```
 
-This is the rendering result:
+The following screenshot shows the *Category* field displayed as a dropdown list box:
 
   
   
@@ -47,7 +68,7 @@ This is the rendering result:
 
 If the entity set of a value help has a fairly stable number of instances, you can render an input field with a value help and dropdown list box \(`sap.m.ComboBox` and in cases of multi selection a `sap.m.MultiComboBox`\) using the annotation `Common.ValueListWithFixedValues`.
 
-In the following example, the currency code is implemented as a dropdown list box:
+In the following sample code, the currency code is implemented as a dropdown list box:
 
 > ### Sample Code:  
 > XML Annotation
@@ -138,7 +159,7 @@ In the following example, the currency code is implemented as a dropdown list bo
 > 
 > ```
 
-This is the rendering result:
+The following screenshot shows how the dropdown list box is rendered for the currency code field:
 
   
   
@@ -192,15 +213,19 @@ You can use `FilterRestrictions` annotations and set the `AllowedExpressions` pr
 > }
 > ```
 
+Text handling and sorting in dropdown-based fields follows the same logic as in the value help dialog. For more information, see [Value Help Dialog](value-help-dialog-3faed83.md).
+
+Value help based on fixed values doesn't show recently entered values. For more information, see [History of Recently Entered Values](field-help-a5608ea.md#loioa5608eabcc184aee99e1a7d88b28816c__HistoryofRecentlyEnteredValues) section in [Field Help](field-help-a5608ea.md).
 
 
-### Using a Radio Button Group to Display a Fixed Value List
+
+<a name="loio2a0a630e50c7472b803fb94dab922d18__section_n55_vxx_dgc"/>
+
+## Using a Radio Button Group to Display a Fixed Value List
 
 If the value help has a fixed set of values, you can render the value help as a radio button group instead of a dropdown list. To do this, you can use the `Common.ValueListShowValuesImmediately` annotation or configure the format option in the `manifest.json` file as `fieldEditStyle="RadioButtons"`.
 
 By default, the radio button group is rendered in a vertical layout. You can also configure the radio button group to render in a horizontal layout by setting `radioButtonsHorizontalLayout` as `true` in the `manifest.json` file.
-
-
 
 > ### Note:  
 > -   Radio buttons support only those fields with `ValueListWithFixedValues :true` and `ValueList` annotation.

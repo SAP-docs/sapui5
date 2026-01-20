@@ -148,7 +148,7 @@ External navigation from the micro chart can be achieved by specifying the chart
 > }
 > ```
 
-Navigation is done via the x-app state, and the page context is merged with the chart context and passed to the external navigation.
+Navigation is done through the x-app state, and the page context is merged with the chart context and passed to the external navigation.
 
 > ### Note:  
 > -   For a 1:n based micro chart, more than 1 record can be displayed in the chart \(a stacked bar micro chart, for example\) and each record has its own technical ID. So the chart context has multiple values for the technical IDs and all of these are passed to the target app using the OR operator.

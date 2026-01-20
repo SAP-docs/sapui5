@@ -6,7 +6,7 @@ SAP Fiori tools is a set of extensions for SAP Business Application Studio and V
 
 
 
-If you're creating apps in one of those development environments, SAP Fiori tools provides functionality that simplifies the process of writing or modifying SAP Fiori apps throughout the entire development process.They follow the latest SAP Fiori design guidelines and best practices and can be used, for example, as a starting point for developing apps.
+If you're creating apps in one of those development environments, SAP Fiori tools provides functionality that simplifies the process of writing or modifying SAP Fiori apps throughout the entire development process.They follow the latest SAP Design System guidelines and best practices and can be used, for example, as a starting point for developing apps.
 
 
 

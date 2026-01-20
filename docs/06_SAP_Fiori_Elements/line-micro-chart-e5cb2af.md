@@ -8,12 +8,14 @@ It displays information as a series of data points connected by a line.
 
 ![](images/Line_Micro_Chart_f99a0bc.png)
 
+In the chart, the values at the bottom \(10 and 70\) represent the dimension values, which are the numerical IDs of the sales order items. The values at the top are the measure values - the value on the left is the lowest and the value on the right is the highest of the two measure values.
+
 > ### Note:  
-> -   In the chart, the values at the bottom \(10 and 70\) represent the dimension values, which are the numerical IDs of the sales order items. The values at the top are the measure values - the value on the left is the lowest and the value on the right is the highest of the two measure values.
+> -   The chart dimensions and measures cannot be of the same entity; they must be from a 1:n navigation entity.
 > 
 > -   Ensure that the dimension values linked to the chart either have a float-based field or the current values can be cast to float values.
-> 
-> -   The dimension values can also have string-based fields if they are annotated to denote calendar values. For more information about the sample code, see the [Additional Features in SAP Fiori Elements for OData V4](line-micro-chart-e5cb2af.md#loioe5cb2afe0e484e4b803b0c82190895de__section_wv2_2sg_rwb) section in this topic.
+
+The dimension values can also have string-based fields if they are annotated to denote calendar values. For more information about the sample code, see the [Additional Features in SAP Fiori Elements for OData V4](line-micro-chart-e5cb2af.md#loioe5cb2afe0e484e4b803b0c82190895de__section_wv2_2sg_rwb) section in this topic.
 
 For more information about this chart type, see [Samples](https://ui5.sap.com/1.82.5/#/entity/sap.suite.ui.microchart.LineMicroChart).
 
@@ -152,7 +154,6 @@ The `UI.Chart Title` property is used for the title. The `UI.Chart Description` 
 > <Annotation Term="UI.DataPoint" Qualifier="Width">
 >     <Record>
 >         <PropertyValue Property="Value" Path="Width"/>
->         <PropertyValue Property="Description" String="Line Micro Chart"/>
 >         <PropertyValue Property="Criticality" Path="criticalityValue"/>
 >     </Record>
 > </Annotation>
@@ -171,7 +172,6 @@ The `UI.Chart Title` property is used for the title. The `UI.Chart Description` 
 > ```
 > 
 > @UI.dataPoint: {
->   description: 'Line Micro Chart',
 >   targetValueElement: 'Weight',
 >   criticality: 'criticalityValue'
 > }
@@ -190,7 +190,6 @@ The `UI.Chart Title` property is used for the title. The `UI.Chart Description` 
 > 
 > UI.DataPoint #Width : {
 >     Value : Width,
->     Description : 'null',
 >     Criticality : criticalityValue
 > },
 > 

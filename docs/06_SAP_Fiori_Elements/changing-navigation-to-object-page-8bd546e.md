@@ -46,7 +46,7 @@ You can use the `manifest.json` file to remove the navigation option to an objec
 
 
 
-<a name="loio8bd546e27a5f41cea6e251ba04534d70__section_xtw_fjj_vlb"/>
+<a name="loio8bd546e27a5f41cea6e251ba04534d70__EnableExternalNavigation"/>
 
 ## Enable External Navigation
 

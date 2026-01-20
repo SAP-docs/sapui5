@@ -6,12 +6,12 @@ The `sap-keep-alive` feature in SAP Fiori launchpad ensures that a view is not d
 
 This feature enhances performance by preserving the view state, allowing the same view to reload upon returning to the source application.
 
-When end users navigate to the target application, make changes, and then return to the source application, the card data updates to reflect those changes when the view is restored. Application developers can configure which entity sets to refresh by defining specific settings in the `manifest.json` file.
+When users navigate to the target application, make changes, and then return to the source application, the card data updates to reflect those changes when the view is restored. Application developers can configure which entity sets to refresh by defining specific settings in the `manifest.json` file.
 
-In the following sample code, the entity set `self` is automatically refreshed when end users return to the source application:
+In the following sample code, the entity set `self` is automatically refreshed when users return to the source application:
 
 > ### Sample Code:  
-> `EntitySetName`: `self`
+> `manifest.json`
 > 
 > ```
 > "sap.ovp": {

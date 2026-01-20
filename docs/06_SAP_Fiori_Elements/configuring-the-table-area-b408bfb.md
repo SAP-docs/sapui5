@@ -2,7 +2,7 @@
 
 # Configuring the Table Area
 
-The `LineItem` annotation lets you configure the table header title \(label property\) and the corresponding values \(value property\) for the column items.
+The `LineItem` annotation lets you configure the table header title \(`label` property\) and the corresponding values \(`value` property\) for the column items.
 
 
 
@@ -111,7 +111,7 @@ The `LineItem` annotation lets you configure the table header title \(label prop
     > 
     > ```
 
-2.  \(Optional\) Define `DataFieldforAnnotation` property using these annotations:
+2.  \(Optional\) Define `DataFieldforAnnotation` property using the following annotations:
 
     -   `DataPoint`: To view numeric values in the table. For example:
 
@@ -152,7 +152,7 @@ The `LineItem` annotation lets you configure the table header title \(label prop
         > 
         > ```
 
-    -   `Contact`: To view quick view information in the table. For example, you can configure the table card to display contact information as shown here:
+    -   `Contact`: To display quick view information in the table. For example, you can configure the table card to display contact information, as shown in the following code sample:
 
         > ### Sample Code:  
         > XML Annotation
@@ -215,12 +215,12 @@ The `LineItem` annotation lets you configure the table header title \(label prop
 
     For configuring navigation information:
 
-    -   Use com.sap.vocabularies.UI.v1.DataFieldForIntentBasedNavigation to define intent based navigation to SAP Fiori application.
+    -   Use `com.sap.vocabularies.UI.v1.DataFieldForIntentBasedNavigation` to define intent-based navigation to SAP Fiori applications.
 
-    -   Use com.sap.vocabularies.UI.v1.DataFieldWithUrl term to configure navigation to external apps and websites.
+    -   Use `com.sap.vocabularies.UI.v1.DataFieldWithUrl` to configure navigation to external apps and websites.
 
 
 
 > ### Note:  
-> The recommended way to configure intent-based navigation using `DataFieldForIntentBasedNavigation` property. However, you can also use `DataFieldWithUrl` for navigation to a specific application route that is not configured as target map. The overview page identify this as an intent-based navigation and opens the application in the same tab with relevant context.
+> The recommended way to configure intent-based navigation is by using the `DataFieldForIntentBasedNavigation` property. However, you can also use `DataFieldWithUrl` for navigating to a specific application route that is not configured as target map. The overview page identify this as an intent-based navigation and opens the application in the same tab with relevant context.
 

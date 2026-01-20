@@ -100,31 +100,165 @@ Clicking the drop-down arrow opens a menu with two additional options:
 >     For more security-related information, see [Security Configuration](security-configuration-ba0484b.md).
 
 > ### Restriction:  
-> -   The columns containing a `DataFieldForAnnotation` that points to `Charts` or a `DataFieldForAction` are exported without any content.
+> -   Columns containing a `DataFieldForAnnotation` that points to `Charts` or a `DataFieldForAction` are exported without any content.
 > 
-> -   The columns containing a multi-input field \(1:N\) are not exported.
+> -   The following types of columns are not exported:
+> 
+>     -   Columns containing a multi-input field \(1:n\)
+>     -   Columns containing stream media data
+>     -   Columns containing binary media data
 > 
 > -   Columns containing a property with a dynamic `UI.Hidden` expression are still exported.
 > 
-> -   The numbers exceeding 15 digits are rounded in the spreadsheet file \(this is a JavaScript restriction\).
+> -   Numbers exceeding 15 digits are rounded in the spreadsheet file \(this is a JavaScript restriction\).
 
 **Configuring Columns**
 
-You can influence how both regular and custom columns are exported. To do that, set the following properties in the `Columns` key of the `manifest.json`:
-
--   `type`: Data type of the field. If this property is omitted, the property is processed as a string field. For the list of supported types, see [`sap.ui.export.EdmType`](https://ui5.sap.com/#/api/sap.ui.export.EdmType).
-
--   `properties`: A field name or an array of field names in the data source feed.
-
--   `template`: A formatting template that supports indexed placeholders within curly brackets.
-
--   `width`: Width of the column in characters. There is no 1:1 correspondence between character widths in the exported spreadsheet and CSS units. The width of one character is approximately 0.5 em in CSS units, depending on the fonts that are used in the table and in the resulting spreadsheet. The default value is 10 characters.
-
--   `wrap`: A Boolean property indicating if the content should be wrapped.
+You can influence how both regular and custom columns are exported by using the following properties:
 
 
-> ### Restriction:  
-> This export to spreadsheet configuration is not supported when using the `Table` building block.
+<table>
+<tr>
+<th valign="top">
+
+Property
+
+</th>
+<th valign="top">
+
+Description
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+`type`
+
+</td>
+<td valign="top">
+
+The data type of the field. If this property is omitted, the property is processed as a string field. For the list of supported types, see [`sap.ui.export.EdmType`](https://ui5.sap.com/#/api/sap.ui.export.EdmType).
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`property`
+
+</td>
+<td valign="top">
+
+A field name or an array of field names in the data source feed.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`template`
+
+</td>
+<td valign="top">
+
+A formatting template that supports indexed placeholders within curly brackets.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`width`
+
+</td>
+<td valign="top">
+
+The width of the column in characters. There is no 1:1 correspondence between character widths in the exported spreadsheet and CSS units. The width of one character is approximately 0.5 em in CSS units, depending on the fonts that are used in the table and in the resulting spreadsheet. The default value is 10 characters.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`wrap`
+
+</td>
+<td valign="top">
+
+A Boolean property indicating if the content is wrapped.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`label`
+
+</td>
+<td valign="top">
+
+The text of the column header.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`textAlign`
+
+</td>
+<td valign="top">
+
+The horizontal alignment of the column cells. The values are: `Left`, `Right`, `Center`, `Begin`, and `End`. If no value is specified, the columns are aligned based on the type.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`trueValue`
+
+</td>
+<td valign="top">
+
+The textual representation associated with a Boolean type that is set to `true`.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`falseValue`
+
+</td>
+<td valign="top">
+
+The textual representation associated with a Boolean type that is set to `false`.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`valueMap`
+
+</td>
+<td valign="top">
+
+The mapping object which contains the values associated with a specific key. When `ValueMap` is set, the `type` must be set to `Enumeration`.
+
+</td>
+</tr>
+</table>
+
+To exclude a column from being exported, set the `disableExport` property within the `columns` key of the `manifest.json` file.
+
+To configure the file name of the exported table. set the `exportFileName` property within the `tableSettings` key. The file name has a maximum of 31 characters. If it's longer, it is truncated.
+
+To configure the sheet name of the exported table, set the `exportSheetName` property within the `tableSettings` key. The sheet name has a maximum of 31 characters. If it's longer, it is truncated.
+
+To use these properties, include them in the `exportSettings` object within the `Columns` key of the `manifest.json` file as shown in the following sample code:
 
 > ### Sample Code:  
 > `manifest.json`
@@ -133,20 +267,42 @@ You can influence how both regular and custom columns are exported. To do that, 
 > "controlConfiguration": {
 >     "@com.sap.vocabularies.UI.v1.LineItem": {
 >         "tableSettings": {
->             "personalization": true
+>             "personalization": true,
+>             "exportFileName": "Name of the file to be exported",
+>             "exportSheetName": "Name of the sheet to be exported"
 >         },
 >         "columns": {
->             "DataField::OverallSDProcessStatus": {
->                 "horizontalAlign": "Center",
+>             "DataField::Shipping": {
 >                 "exportSettings":
 >                 {
 >                     "template": "{0}",
->                     "width": "5"
+>                     "width": "5",
+>                     "type": "Enumeration",
+>                     "label": "New Column header for export",
+>                     "textAlign": "Center",
+>                     "valueMap": {
+>                         "A":"Standard Shipping",
+>                         "B":"Premium Shipping",
+>                         "C":"Express Shipping"
+>                     }
 >                 }
+>             },
+>             "DataField::Delivered": {
+>                 "exportSettings":
+>                 {
+>                     "template": "{0}",
+>                     "width": "5",
+>                     "type": "Boolean",
+>                     "textAlign": "Right",
+>                    	"trueValue": "Yes",
+>                    	"falseValue": "No"
+>                 }
+>             },
+>             "DataField::Delivered": {
+>                 "disableExport": true
 >             },
 >             "CustomColumnSorting":{
 >                 "header": " {i18n > LRCustomColumnSorting}",
->                 "availability": "Default",
 >                 "template": "SalesOrder.custom.CustomColumn.CustomColumnSorting",
 >                 "properties": [
 >                     "ID",
@@ -159,7 +315,8 @@ You can influence how both regular and custom columns are exported. To do that, 
 >                     "property": ["ID", "TotalNetAmount"],
 >                     "template": " {0} {1}",
 >                     "type": "String",
->                     "width": "100"
+>                     "width": "50",
+>                     "wrap": true
 >                 }
 >             }
 >         }
@@ -202,7 +359,7 @@ To enable the export to PDF, you must configure the following annotations at ser
 
 ## Set the Limit for Request Size
 
-You can configure the limit for the count of records that can be obtained within a single request from the service. To do this, you must configure the `exportRequestSize` parameter in the table settings. The default value of the records that can be obtained within a single request is 1000.
+You can configure the limit for the count of records that can be obtained within a single request from the service. To do this, you must configure the `exportRequestSize` parameter in the table settings. The default value of the records that can be obtained within a single request is 1000 for responsive and grid tables. Analytical and tree tables don't have a default value.
 
 > ### Sample Code:  
 > ```
@@ -230,4 +387,7 @@ You can configure the limit for the count of records that can be obtained within
 > ```
 
 The `Table` building block also supports the `exportRequestSize` parameter. For more information about the Table API, see [API Reference](https://ui5.sap.com/#/api/sap.fe.macros.Table%23controlProperties).
+
+> ### Note:  
+> When analytical or hierarchical data is exported from a table, the processing time does not increase linearly with the number of items queried. For example, exporting 200 items takes about two seconds, while exporting 1,000 items takes approximately 2.2 seconds. To optimize performance, adjust the value of the `exportRequestSize` parameter based on the structure and volume of data.
 

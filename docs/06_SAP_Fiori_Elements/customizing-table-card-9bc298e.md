@@ -152,5 +152,5 @@ You can add filters to table card by using the `com.sap.vocabularies.UI.v1.Selec
 
 ## Sorting or Grouping
 
-You can sort information in the table card by using `sortBy` and `sortOrder` properties in the application descriptor file. For more information, see [Configuring Sort Properties](configuring-sort-properties-41af842.md)
+You can sort information in the table card by using `sortBy` and `sortOrder` properties in the `manifest.json` file. For more information, see [Configuring Sort Properties](configuring-sort-properties-41af842.md)
 

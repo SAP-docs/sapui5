@@ -5,7 +5,7 @@
 If you add a `UI.ReferenceFacet` that points to an address annotation, an address facet is displayed in the object page sections or in a quick view.
 
 > ### Note:  
-> This topic is currently only applicable to SAP Fiori elements for OData V2.
+> This topic is only applicable to SAP Fiori elements for OData V2.
 
 It shows the label of the `UI.ReferenceFacet` and, below, only the label property of the address annotation. Therefore, the label property should contain the whole formatted address, with \\n for new lines.
 

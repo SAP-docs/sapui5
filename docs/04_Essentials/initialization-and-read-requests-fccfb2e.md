@@ -25,6 +25,9 @@ A relative list or context binding creates a data service request once it has a 
 
 In all other cases, a relative binding reads data from its parent binding that created the context. In case of an own data service request, the read URL path is the model's service URL concatenated with the path of the binding's context and the binding's path. Set the binding-specific parameter `$$canonicalPath` to `true` to use the canonical path computed from the context's path instead of the context's path in the read URL.
 
+> ### Caution:  
+> A relative list binding cannot share data that another list binding has created on the client. Only data that has been read via a data service request can be shared.
+
 The point in time that is used to actually send the request is determined as explained in the section [Batch Control](batch-control-74142a3.md). Bindings which create own data service requests cache data from data service responses. They do not send a data service request if data can be served from this cache.
 
 > ### Note:  
@@ -58,15 +61,13 @@ You can refresh a **single** entity by calling [`sap.ui.model.odata.v4.Context#r
 > ```
 
 > ### Note:  
-> -   Contexts of an [`sap.ui.model.odata.v4.ODataListBinding`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataListBinding/overview) and the bound context of an [`sap.ui.model.odata.v4.ODataContextBinding`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataContextBinding/overview) can only be refreshed if the binding is not relative to an [`sap.ui.model.odata.v4.Context`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.Contex/overview).
+> Refresh is only allowed if there are no pending changes for the context and all its dependent bindings. If you have a relative binding with changes and this binding loses its context, the former parent binding does not report pending changes: the changes are kept, but the relation between these bindings is lost. You can do the following:
 > 
-> -   Refresh is only allowed if there are no pending changes for the context and all its dependent bindings. If you have a relative binding with changes and this binding loses its context, the former parent binding does not report pending changes: the changes are kept, but the relation between these bindings is lost. You can do the following:
+> -   To find out if there are pending changes, use `sap.ui.model.odata.v4.ODataModel#hasPendingChanges`.
 > 
->     -   To find out if there are pending changes, use `sap.ui.model.odata.v4.ODataModel#hasPendingChanges`.
+> -   To save the changes, use `sap.ui.model.odata.v4.ODataModel#submitBatch`; to reset the changes, use `sap.ui.model.odata.v4.ODataModel#resetChanges`, `sap.ui.model.odata.v4.ODataListBinding#resetChanges`, `sap.ui.model.odata.v4.ODataContextBinding#resetChanges`, or `sap.ui.model.odata.v4.Context#resetChanges`. To get rid of a transient entity you can use `sap.ui.model.odata.v4.Context#delete`.
 > 
->     -   To save the changes, use `sap.ui.model.odata.v4.ODataModel#submitBatch`; to reset the changes, use `sap.ui.model.odata.v4.ODataModel#resetChanges`, `sap.ui.model.odata.v4.ODataListBinding#resetChanges`, `sap.ui.model.odata.v4.ODataContextBinding#resetChanges`, or `sap.ui.model.odata.v4.Context#resetChanges`. To get rid of a transient entity you can use `sap.ui.model.odata.v4.Context#delete`.
-> 
->     -   If you set a context at the relative binding, the new parent binding will report the pending changes again.
+> -   If you set a context at the relative binding, the new parent binding will report the pending changes again.
 
 
 
@@ -249,4 +250,57 @@ The OData V4 model automatically determines the system query options `$top` and 
 ```
 
 An additional paging mechanism is Server-Driven Paging, for which the server returns only a part of the requested data in order to limit the response size. This mechanism is supported by the OData V4 model since SAPUI5 1.72. The model will provide the data retrieved with the response to the control or application. A follow-up request is not initiated automatically but only once the control or application request additional data from the model.
+
+
+
+<a name="loiofccfb2eb41414f0792c165e69a878717__section_ENPL"/>
+
+## Expensive Navigation Properties in Lists
+
+When working with collections, expanding certain navigation properties can significantly impact performance. This is especially true if these properties require the loading of large or complex datasets. To improve performance, the `ODataListBinding` provides the [`$$separate`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataModel%23methods/bindList) binding parameter. This parameter lets you specify expensive navigation property names that are omitted from the main list request. These properties are loaded in parallel via separate batch requests. As a result, the main list loads more quickly, making the table interactive sooner. The expensive navigation properties are fetched in the background and merged as soon as their data becomes available.
+
+The following oversimplified XML view shows a table. Its list binding specifies two expensive navigation properties within `$$separate`. For the initial loading and subsequent paging requests, three parallel batch requests are sent: one for the main list and one for each specified navigation property. As soon as the main list is received, data is displayed in the table. The columns for the expensive navigation properties remain empty until their respective requests complete. Optionally, to indicate that certain cells are still loading, the `busy` property of a control \(e.g. `Text` control\) can be bound to the relevant path of the expensive navigation property. For example, `busy="{= %{EMPLOYEE_2_MANAGER === undefined} }"` shows a busy indicator for cells that are still loading, because `undefined` means that the data is not yet loaded.
+
+```xml
+<Table items="{
+        path: '/EMPLOYEES',
+        parameters: {
+            $$separate: ['EMPLOYEE_2_MANAGER', 'EMPLOYEE_2_TEAM']
+        }
+    }">
+    <columns>
+        <Column><Label text="ID"/></Column>
+        <Column><Label text="Employee"/></Column>
+        <Column><Label text="Manager"/></Column>
+        <Column><Label text="Team Budget"/></Column>
+    </columns>
+    <ColumnListItem>
+        <Text text="{ID}"/>
+        <Text text="{Name}"/>
+        <Text text="{EMPLOYEE_2_MANAGER/Name}"/>
+        <Text text="{EMPLOYEE_2_TEAM/Budget}"/>
+    </ColumnListItem>
+</Table>
+```
+
+In addition to the simple data binding, the completion of a separate request can be handled by implementing the [`separateReceived`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataListBinding%23events/separateReceived) event. This event provides parameters to help retrieve the loaded data or handle a failed request.
+
+```js
+
+oListBinding.attachEvent("separateReceived", async (oEvent) => {
+    const {property, start, length, messagesOnError} = oEvent.getParameters();
+ 
+    if (messagesOnError) {
+        const aMessages = messagesOnError.map((oMessage) => oMessage.getMessage());
+        MessageBox.error(aMessages.join("\n"));
+        oEvent.preventDefault();
+        return;
+    }
+ 
+    const aContexts = await oListBinding.requestContexts(start, length);
+    const aResults = aContexts.map((oContext) => oContext.getObject(property));
+});
+```
+
+If an expensive request is successful, the `property`, `start`, and `length` parameters can be used in combination with [`ODataListBinding#requestContexts`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataListBinding%23methods/requestContexts) to retrieve the loaded data of the corresponding expensive request. The `start` and `length` correspond to the request’s `$skip` and `$top` system query options. If an expensive request fails, the additional `messagesOnError` parameter provides the messages of the failed batch request as UI5 messages. By calling `oEvent.preventDefault()`, you can suppress the automatic reporting of these messages to the message model, allowing for custom error handling.
 

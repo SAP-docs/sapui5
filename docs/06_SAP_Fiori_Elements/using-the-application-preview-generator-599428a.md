@@ -26,9 +26,9 @@ To use the application preview generator, the following requirements must be met
 
 -   You must have cloned your project in SAP Business Application Studio.
 
--   After cloning the project, you must ensure that it is compatible with UI5 Tooling v3. If it is not, you must migrate it so that it can work within SAP Business Application Studio.
+-   After cloning the project, you must ensure that it is compatible with UI5 CLI v3. If it is not, you must migrate it so that it can work within SAP Business Application Studio.
 
-    -   For more information about UI5 Tooling v3, see [Migrate to v3](https://sap.github.io/ui5-tooling/v3/updates/migrate-v3/).
+    -   For more information about UI5 CLI v3, see [Migrate to v3](https://ui5.github.io/cli/v3/updates/migrate-v3/).
 
     -   For more information about migrating your project, see [Migrate SAP Fiori projects from SAP Web IDE to SAP Business Application Studio](https://community.sap.com/t5/technology-blogs-by-sap/migrate-sap-fiori-projects-from-sap-web-ide-to-sap-business-application/ba-p/13544987).
 

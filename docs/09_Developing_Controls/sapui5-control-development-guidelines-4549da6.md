@@ -54,7 +54,7 @@ For behavior-related development, the following guidelines apply:
 
 -   Do **not** use hardcoded IDs. When creating internal subcontrols, their ID should be prefixed with `this.getId() + "-"`.
 
--   Make sure not to break data binding.
+-   Make sure not to break data binding. At the same time, ensure also that given data containing curly braces are not accidentally interpreted as binding expressions, which can be achieved with [`sap/ui/base/ManagedObject.escapeSettingsValue`](https://ui5.sap.com/#/api/sap.ui.base.managedObject%23methods/sap.ui.base.ManagedObject.escapeSettingsValue). For more information, see [Escaping Binding Syntax](../04_Essentials/binding-syntax-e2e6f41.md#loioe2e6f4127fe4450ab3cf1339c42ee832__section_EBS).
 
 -   Do **not** make assumptions about how your control is used.
 

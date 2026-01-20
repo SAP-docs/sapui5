@@ -4,6 +4,12 @@
 
 A time series chart contains a time axis instead of a categorical axis.
 
+  
+  
+**Example of a Time Series Chart Card**
+
+![](images/Time_Series_Chart_Card_2ae1caf.png "Example of a Time Series Chart Card")
+
 This chart type represents a time-based dimension that is more responsive to a change in card size. Analytical cards use the time axis automatically if these conditions apply:
 
 -   The chart type must be either vertical bullet, stacked column, scatter, line, bubble, column, waterfall, combination, or dual combination.
@@ -127,9 +133,67 @@ This chart type represents a time-based dimension that is more responsive to a c
 > 
 > ```
 
-  
-  
-**Example of a Time Series Chart Card**
+You can also configure the granularity of time displayed on the chart using the `chartProperties.timeAxis.levels` property. This property can be defined at the chart-level settings. You can also define it at the tab-level to customize the time-based drill down for individual tabs.
 
-![](images/Time_Series_Chart_Card_2ae1caf.png "Example of a Time Series Chart Card")
+The following sample code shows the `chartProperties.timeAxis.levels` property added at the chart-level settings:
+
+> ### Sample Code:  
+> `manifest.json`
+> 
+> ```
+> {
+>       "sap.ovp": {
+>             "cards": {
+>                   "cardchartsline": {
+>                         "model": "sales",
+>                         "template": "sap.ovp.cards.charts.analytical",
+>                         "settings": {
+>                               "entitySet": “salesSet",
+>                               "chartProperties": {
+>                                     "timeAxis": {
+>                                           "levels": ["year", "month", "day", "hour", "minute"]
+>                                     }
+>                               }
+>                         }
+>                   }
+>             }
+>       }
+> },
+> 
+> ```
+
+The following sample code shows the `chartProperties.timeAxis.levels` property added at the tab-level setting:
+
+> ### Sample Code:  
+> `manifest.json`
+> 
+> ```
+> "card_11_v4": {
+>       "model": "sales",
+>       "template": "sap.ovp.cards.v4.charts.analytical",
+>       "settings": {
+>             "title": "{{TIME_SERIES_ANALYTICAL_CARD}}",
+>             "subTitle": "{{COMMON_ANALYTICAL_CARD_SUBTITLE_V4}}",
+>             "entitySet": "salesSet",
+>             "tabs": [
+>             {
+>                   "chartAnnotationPath": "com.sap.vocabularies.UI.v1.Chart#year",
+>                   "value": "With CalenderYear"
+>             },
+>             {
+>                   "chartAnnotationPath": "com.sap.vocabularies.UI.v1.Chart#year",
+>                   "value": "With TimeAxis",
+>                   "chartProperties": {
+>                         "timeAxis": {
+>                               "levels": ["year", "month", "day", "hour"]
+>                         }
+>                   }
+>             }
+>         ]
+>     }
+> }
+> 
+> ```
+
+The levels can include any combination of the time units, such as `year`, `month`, `day`, `hour`, or `minute`, depending on the required granularity of your dataset. To display the data correctly on the chart, it is recommended to increase the granularity of the dataset until there are no repeating values.
 

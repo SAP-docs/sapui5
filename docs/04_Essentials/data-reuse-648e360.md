@@ -2,7 +2,10 @@
 
 # Data Reuse
 
-The OData V4 model keeps data with respect to bindings. This allows different views on the same data but also means that data is not automatically shared between bindings. There are mechanisms for sharing data to avoid redundant requests and to keep the same data in different controls in sync.
+The OData V4 model keeps data with respect to bindings. This allows different views on the same back-end data but also means that data is not automatically shared between bindings. There are mechanisms for sharing data to avoid redundant requests and to keep the same data in different controls in sync.
+
+> ### Caution:  
+> A relative list binding cannot share data that another list binding has created on the client. Only data that has been read via a data service request can be shared.
 
 
 

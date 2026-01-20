@@ -20,30 +20,90 @@ The process for this is as follows:
 
 By receiving the data object `oSomeData` from the server, the application enables you to access and modify the data object. The extension function name is `onDataReceived` and gets a reference to the data object as argument.
 
-Code of the standard controller:
+**`StandardController.js`** \(JavaScript\):
 
 ```js
+sap.ui.define(["sap/ui/core/mvc/Controller"], function(Controller) {
+   "use strict";
+   return Controller.extend("samples.components.sap.StandardController", {
 
-// ...data object oSomeData has been received, possibly from an Ajax response...
-   if (this.onDataReceived) {         // check whether any extension has implemented the hook...
-      this.onDataReceived(oSomeData); // ...and call it
-   }
-   // ...continue working with the (now possibly modified) data...
+      processData: function() {
+         // ...
+         this.onDataReceived?.(oSomeData);
+         // ...
+      }
+});
+```
+
+**`StandardController.ts`** \(TypeScript equivalent\):
+
+> ### Note:  
+> Unlike JavaScript, where you can simply check for the existence of a function at runtime, TypeScript requires you to explicitly declare hook methods in your controller's interface to ensure type safety and proper IntelliSense support.
+
+```js
+import Controller from "sap/ui/core/mvc/Controller";
+
+interface DataObject {
+    status?: string;
+    message?: string;
+    // Add other properties as needed
+}
+
+/**
+ * @namespace samples.components.sap
+ */
+export default class StandardController extends Controller {
+
+    // Hook method declaration (optional, for better TypeScript support)
+    onDataReceived?: (oData: DataObject) => void;
+
+    private processData(): void {
+          // ...
+         this.onDataReceived?.(oSomeData);
+          // ...
+    }
+}
 ```
 
 Code of the custom controller:
+
+**`Sub2ControllerExtension.js`** \(JavaScript\):
 
 ```js
 sap.ui.define("customer.xy.Sub2ControllerExtension", [], function () {
    "use strict";
    return {
       onDataReceived: function(oData){ // oSomeData will be passed in
-         if (oData && oData.status === "important") {
+         if (oData?.status === "important") {
             oData.message = oData.message + "!!!"; // modify some part of the data object, adding exclamation marks to a message text
          }
       } // no need to return anything as in this example the original object is modified
    };
 });
+```
+
+**`Sub2ControllerExtension.ts`** \(TypeScript equivalent\):
+
+```js
+interface DataObject {
+    status?: string;
+    message?: string;
+    // Add other properties as needed
+}
+
+/**
+ * Controller extension for handling data received hooks
+ * @namespace customer.xy
+ */
+const Sub2ControllerExtension = {
+    onDataReceived(data: DataObject): void { // oSomeData will be passed in
+        if (data?.status === "important") {
+            data.message = (data.message || "") + "!!!"; // modify some part of the data object, adding exclamation marks to a message text
+        }
+    } // no need to return anything as in this example the original object is modified
+};
+
+export default Sub2ControllerExtension;
 ```
 
 > ### Note:  

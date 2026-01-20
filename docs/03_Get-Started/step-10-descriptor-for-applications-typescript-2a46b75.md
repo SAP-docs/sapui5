@@ -46,7 +46,7 @@ helloMsg=Hello {0}
 
 ## webapp/manifest.json
 
-As mentioned in Step 1 the manifest file is used by SAPUI5 to instantiate the component. We have already configured the essential attributes of the file so that it can be used with UI5 Tooling. Now, we'll add further attributes that are important for creating a proper UI component in SAPUI5.
+As mentioned in Step 1 the manifest file is used by SAPUI5 to instantiate the component. We have already configured the essential attributes of the file so that it can be used with UI5 CLI. Now, we'll add further attributes that are important for creating a proper UI component in SAPUI5.
 
 We enhance the `sap.app` namespace by adding configuration for the following application-specific attributes:
 

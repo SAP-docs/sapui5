@@ -39,7 +39,7 @@ Description
 </th>
 </tr>
 <tr>
-<td valign="top" rowspan="5">
+<td valign="top" rowspan="6">
 
 `actions: <object>` \(mandatory\)
 
@@ -61,7 +61,7 @@ Describes the actions that can be applied to the element.
 </td>
 </tr>
 <tr>
-<td valign="top" rowspan="4">
+<td valign="top" rowspan="5">
 
 `"combine": <object>|<function>`
 
@@ -86,6 +86,18 @@ Provides or computes the design-time metadata specific to the *combine* action f
 <td valign="top">
 
 Provides the value of `changeType` from the previous step.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`additionalInfoKey: <string>` \(optional\)
+
+</td>
+<td valign="top">
+
+Provides additional information to be displayed as a tooltip in the context menu.
 
 </td>
 </tr>

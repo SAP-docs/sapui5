@@ -51,7 +51,7 @@ You can also use the SAP Fiori generator to create a subpage \(detail page\) for
 When first and second level entities are selected during app creation, navigation from the object page to the subpage is automatic based on the configuration. You can remove this configuration from the manifest to delete the subpage and its corresponding link from the object page.
 
 > ### Caution:  
-> SAP Web IDE is no longer available via SAP Business Technology Platform trial accounts. Any references to SAP Web IDE in this documentation are only relevant for you if you have access to SAP Web IDE through a productive SAP BTP account. Please consider SAP Business Application Studio as an alternative. See [App Development Using SAP Business Application Studio](../05_Developing_Apps/app-development-using-sap-business-application-studio-6bbad66.md).
+> SAP Web IDE is no longer available from SAP Business Technology Platform trial accounts. Any references to SAP Web IDE in this documentation are only relevant for you if you have access to SAP Web IDE through a productive SAP BTP account. Please consider SAP Business Application Studio as an alternative. See [App Development Using SAP Business Application Studio](../05_Developing_Apps/app-development-using-sap-business-application-studio-6bbad66.md).
 
 
 
@@ -101,7 +101,7 @@ To remove the `Subpage`, the route and the target must be removed.
 
 <a name="loio5d49e31cd38048bc9557179cdc453e86__section_tcd_xsm_bmb"/>
 
-## More Information
+## Related Links
 
-For information about defining an external navigation target using intent-based navigation, see [Changing Navigation to Object Page](changing-navigation-to-object-page-8bd546e.md). .
+For information about defining an external navigation target using intent-based navigation, see [Changing Navigation to Object Page](changing-navigation-to-object-page-8bd546e.md).
 

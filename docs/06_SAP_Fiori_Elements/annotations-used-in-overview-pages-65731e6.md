@@ -38,7 +38,7 @@ The following properties are supported:
 -   `Description`
 
     > ### Note:  
-    > The value of `dynamicSubtitleAnnotationPath` is picked from the value of the `path`, if pointed to the descriptor file \(`manifest.json`\). For more information, see [Descriptor Configuration for the Overview Page](descriptor-configuration-for-the-overview-page-f194b41.md).
+    > The value of `dynamicSubtitleAnnotationPath` is derived from the value of the `path`, if pointed to the `manifest.json` file. For more information, see [Configuring the Manifest for the Overview Page](configuring-the-manifest-for-the-overview-page-f194b41.md).
 
 
 > ### Sample Code:  
@@ -388,18 +388,6 @@ The `com.sap.vocabularies.UI.v1.DataFieldWithUrl` record type supports the follo
 > 
 > ```
 
--   `com.sap.vocabularies.HTML5.v1.LinkTarget`: Use this property to specify in which window, tab, or frame the link target is opened. The following values are supported:
-
-    -   `com.sap.vocabularies.HTML5.v1.LinkTarget/_self`: The link is opened in the same tab or window \(default\).
-
-    -   `com.sap.vocabularies.HTML5.v1.LinkTarget/_blank`: The link is opened in a new tab or window.
-
-    -   `com.sap.vocabularies.HTML5.v1.LinkTarget/_parent`: The link is opened in the parent frame or window.
-
-    -   `com.sap.vocabularies.HTML5.v1.LinkTarget/_top`: The link is opened in the full browser window, overriding any nested frames.
-
-
-
 
 
 ## `com.sap.vocabularies.UI.v1.DataPoint`
@@ -411,8 +399,8 @@ The `DataPoint` term is used to display fields with special formatting. The foll
 -   `ValueFormat`: Used with the `NumberFormat` annotation to format a decimal value
     -   `com.sap.vocabularies.UI.v1.NumberFormat`:
 
-        -   `ScaleFactor`: Scale factor for large numbers.
-        -   `NumberOfFractionalDigits`: Number of decimal points to display.
+        -   `ScaleFactor`: Scale factor for large numbers
+        -   `NumberOfFractionalDigits`: Number of decimal points to display
 
 
 -   `com.sap.vocabularies.UI.v1.Criticality`: An enumeration value that can be used to highlight the value with a certain color. The following values are supported:
@@ -1332,7 +1320,7 @@ Defines the dimensions and measures used in charts. The following properties are
 -   `ChartType`
 -   `Measures`: A collection of `PropertyPath` properties
 -   `MeasureAttributes`: A collection of `com.sap.vocabularies.UI.v1.ChartMeasureAttributeType` records describing attributes for measures. All measures used in this collection must also be part of the `Measures` property.
--   `Dimensions`: A collection of `PropertyPath` properties.
+-   `Dimensions`: A collection of `PropertyPath` properties
 -   `DimensionAttributes`: A collection of `com.sap.vocabularies.UI.v1.ChartDimensionAttributeType` records describing attributes for dimensions. All dimensions used in this collection must also be part of the `Dimensions` property.
 
 > ### Sample Code:  
@@ -1420,7 +1408,7 @@ Defines the dimensions and measures used in charts. The following properties are
 
 ## KPI Annotation
 
-Use this annotation to create KPI tags for your overview page cards. The KPI information appears on the header area of the card and reacts to the filter conditions you set. This annotation provides the capabilities of `SelectionVariant`, `PresentationVarint`, and `DataPoint` annotations. Additionally, the KPI annotation has the semantic object property and action to configure the navigation parameters.
+Use this annotation to create KPI tags for your overview page cards. The KPI information appears on the header area of the card and reacts to the filter conditions you set. This annotation provides the capabilities of `SelectionVariant`, `PresentationVarint`, and `DataPoint` annotations. Additionally, the KPI annotation has the semantic object property and action property to configure the navigation parameters.
 
 > ### Sample Code:  
 > XML Annotation
@@ -1871,7 +1859,7 @@ Customer
 
 ## Potentially Sensitive Personal Data
 
-To define a property as sensitive data, configure the target property and set it as personally sensitive.
+To define a property as sensitive data, configure the target property and set it as potentially sensitive.
 
 > ### Sample Code:  
 > XML Annotation

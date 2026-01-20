@@ -148,7 +148,7 @@ By default, a POST call is made when the *Create* button is clicked. However, in
 Configure the following setting in the `manifest.json` file to turn on draft creation with `newAction`:
 
 > ### Sample Code:  
-> manifest.json
+> `manifest.json`
 > 
 > ```
 > "ListReport|Localized": {
@@ -207,7 +207,7 @@ The *Create* button in a list report is enabled based on the presence of `NewAct
 > </Annotation>
 > ```
 
-The `InsertRestrictions` on the table entity set is completely ignored when you enable *Create* in a list report due to the presence of `NewAction`. The button is always enabled, if visible, and the visibility can be controlled via the `OperationAvailable` property through the following logic:
+The `InsertRestrictions` on the table entity set is completely ignored when you enable *Create* in a list report due to the presence of `NewAction`. The button is always enabled, if visible, and the visibility can be controlled with the `OperationAvailable` property through the following logic:
 
 -   If `OperationAvailable=false`, then the *Create* button will not be displayed in the list report table.
 
@@ -217,4 +217,17 @@ The `InsertRestrictions` on the table entity set is completely ignored when you 
 
 
 For more information, see [Adding Actions to Tables](adding-actions-to-tables-b623e0b.md).
+
+
+
+### Create Mode
+
+Create mode is available as follows:
+
+-   **Create page** \(default\): The application navigates to an object page where the user can enter values and create a new object. When using **Create page**, the application navigates to an object page and displays a dialog containing the immutable properties of the new object \(if applicable\). For more information about overriding the title of the dialog, see [Localization of UI Texts](localization-of-ui-texts-b8cb649.md).
+
+-   **Create dialog**: A dialog opens where the user can enter values and trigger object creation. For more information, see [Enabling Object Creation Using the Dialog in the List Report](enabling-object-creation-using-the-dialog-in-the-list-report-ceb9284.md).
+
+-   **`External`**: Clicking the *Create* button triggers navigation to an external SAP Fiori launchpad-based application which manages object creation. For more information, see [Create Mode as an External App](create-mode-as-an-external-app-5c2bc2e.md).
+
 

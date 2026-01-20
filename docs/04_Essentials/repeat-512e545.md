@@ -16,8 +16,8 @@ The following example iterates all fields in the identification annotation from 
 ```xml
 
 <template:repeat list="{meta>com.sap.vocabularies.UI.v1.Identification}" var="field">
-  <Label text="{path: 'field>Label', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}" />
-  <Text text="{path: 'field>Value', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}" />
+  <Label text="{path: 'field>Label', formatter: 'AnnotationHelper.format'}" />
+  <Text text="{path: 'field>Value', formatter: 'AnnotationHelper.format'}" />
 </template:repeat>
 ```
 
@@ -62,10 +62,10 @@ As the OData meta model supports filtering by name, you can repeat all `FieldGro
 <template:repeat list="{path:'entityType>', filters: {path: '@sapui.name', operator: 'StartsWith', value1: 'com.sap.vocabularies.UI.v1.FieldGroup'}}" var="fieldGroup">
   <form:SimpleForm>
     <form:title>
-      <core:Title text="{path: 'fieldGroup>Label', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}"/>
+      <core:Title text="{path: 'fieldGroup>Label', formatter: 'AnnotationHelper.format'}"/>
     </form:title>
     <template:repeat list="{fieldGroup>Data}" var="field">
-      <Label text="{path: 'field>Label', formatter: 'sap.ui.model.odata.AnnotationHelper.format'}"/>
+      <Label text="{path: 'field>Label', formatter: 'AnnotationHelper.format'}"/>
       <core:Fragment fragmentName="sap.ui.core.sample.ViewTemplate.scenario.Field" type="XML"/>
     </template:repeat>
   </form:SimpleForm>

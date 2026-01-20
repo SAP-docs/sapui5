@@ -933,5 +933,5 @@ These custom actions are displayed as buttons on the UI. When the user selects t
 
 ### Example
 
-You can explore and work with the coding yourself. Check out our live example in the flexible programming model explorer at [Custom Action](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/customElements/customElementsOverview/customActionContent).
+You can explore and work with the coding yourself. For more information and live examples, see the SAP Fiori development portal at [Standard Floorplans - Extensions - Extensions for Object Pages - Custom Action](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/topic/floorplanObjectPage/customAction).
 

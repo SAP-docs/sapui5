@@ -377,7 +377,7 @@ Applications can choose to switch off the default refresh behavior that happens 
 >         "v4Freestyle-Inbound": {
 >             "SalesOrderItem": "includingDependents" // Due to this override, only SalesOrderItem and dependents are refreshed for V4FreeStyle-Inbound So-Action external navigation
 >         },
->         "v4Freestyle": {} // Due to this override, for all other intents from V4FreeStyle SO other than Inbound, no refresh is done (including when going to such a target via chevron navigation which normally triggers a default refresh of the table)
+>         "v4Freestyle": {} // Due to this override, for all other intents from V4FreeStyle SO other than Inbound, no refresh is done (including when going to such a target through chevron navigation which normally triggers a default refresh of the table)
 >     }  
 > }
 > ```
@@ -385,16 +385,16 @@ Applications can choose to switch off the default refresh behavior that happens 
 This does **not** affect the default refresh behavior of the table entity set when external navigation is triggered for a Create case.
 
 > ### Remember:  
-> -   The refresh mechanism explained earlier is **only** for refreshing the data seen on that page after navigating back from an external target. After the user navigates back from the external target, if the user then navigates forward via the standard internal navigation provided by SAP Fiori elements \(for example, to a detail page\), a data request is always sent to the back end – irrespective of the configuration given above. For back navigation within the app \(internal navigation\), the refresh is based on the refresh strategy for the page from where the external navigation was triggered.
+> -   The refresh mechanism explained earlier is **only** for refreshing the data seen on that page after navigating back from an external target. After the user navigates back from the external target, if the user then navigates forward through the standard internal navigation provided by SAP Fiori elements \(for example, to a detail page\), a data request is always sent to the back end – irrespective of the configuration given above. For back navigation within the app \(internal navigation\), the refresh is based on the refresh strategy for the page from where the external navigation was triggered.
 > 
 > -   When specifying an entity set, application developers must note the following:
 > 
->     -   Begin with a forward slash \("/"\) if the entity is a containment-based entity \(a parameterized entity\) and if you need to specify the full path of the resulting entity \("/Customer/Set"\) in the same manner as specified via the `"contextPath"` manifest property. For more information, see the section [Supporting Parameterized Entities](configuring-filter-bars-4bd7590.md#loio4bd7590569c74c61a0124c6e370030f6__suppprting_parameterized_entities_subsection) in [Configuring Filter Bars](configuring-filter-bars-4bd7590.md).
+>     -   Begin with a forward slash \("/"\) if the entity is a containment-based entity \(a parameterized entity\) and if you need to specify the full path of the resulting entity \("/Customer/Set"\) in the same manner as specified with the `"contextPath"` manifest property. For more information, see the section [Supporting Parameterized Entities](configuring-filter-bars-4bd7590.md#loio4bd7590569c74c61a0124c6e370030f6__suppprting_parameterized_entities_subsection) in [Configuring Filter Bars](configuring-filter-bars-4bd7590.md).
 > 
 >     -   If it is not a containment scenario/parameterized entity but a regular entity set, then the slash is not required at the beginning \(`"SalesOrderItem"`\).
 
 **Related Information**  
 
 
-[Refresh Data Set for Back Navigation when `sap-keep-alive` is Set to True](refresh-data-set-for-back-navigation-when-sap-keep-alive-is-set-to-true-f1c2704.md "When sap-keep-alive is set to true, and the user navigates from one application to another, modifies some common data and navigates back to the source app, the data isn't refreshed automatically. You can add a custom code to perform a refresh of specific data.")
+[Refresh Dataset for Back Navigation when `sap-keep-alive` is Set to True](refresh-dataset-for-back-navigation-when-sap-keep-alive-is-set-to-true-f1c2704.md "When sap-keep-alive is set to true, and the user navigates from one application to another, modifies some common data and navigates back to the source app, the data isn't refreshed automatically. You can add a custom code to perform a refresh of specific data.")
 

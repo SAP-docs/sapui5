@@ -4,7 +4,10 @@
 
 Use the `RichTextEditor` building block to add a control that allows users to view a formatted text in display mode and edit it directly in edit mode.
 
-The building block is based on the rich text editor used in SAPUI5, allowing you to define the button groups and plugins the same way as you would in that control. See the following sample code:
+> ### Note:  
+> The `RichTextEditor` building block uses a SAPUI5 `sap.m.FormattedText` control in display mode. Some formatting, such as images, is not supported in display mode. For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.FormattedText%23controlProperties).
+
+The building block is based on the rich text editor used in SAPUI5, which allows you to define the button groups and plugins in the same way as you would in the control. See the following sample code:
 
 > ### Sample Code:  
 > `RichTextEditor` Building Block
@@ -34,7 +37,7 @@ The building block is based on the rich text editor used in SAPUI5, allowing you
 > </macros:RichTextEditor>
 > ```
 
-Check out our live example in the flexible programming model explorer at [RichTextEditor](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/rte).
+For more information and live examples, see the SAP Fiori development portal at [Building Blocks - Rich Text Editor - Overview](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/rte/rteDefault).
 
 
 

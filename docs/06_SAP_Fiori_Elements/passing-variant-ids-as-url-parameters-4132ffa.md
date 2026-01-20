@@ -2,7 +2,7 @@
 
 # Passing Variant IDs as URL Parameters
 
-You can pass the variant ID as part of the navigation context \(or as a URL parameter\) while navigating from an application to the analytical list page or to the list report, or vice versa.
+You can pass the variant ID as part of the navigation context \(or as a URL parameter\) while navigating from an application to the analytical list page or to the list report, or the other way around.
 
 The URL parameter value should be an ID of the variant that exists in the target app. Ensure that the variant name is not passed as the URL parameter.
 
@@ -105,5 +105,5 @@ Application developers can pass the variant ID as the URL parameter by updating 
 **Related Information**  
 
 
-[Managing Variants](managing-variants-8ce658e.md "Allows you manage variants with different structures in the filter and content areas.")
+[Managing Variants](managing-variants-8ce658e.md "Allows you to manage variants with different structures in the filter and content areas.")
 

@@ -385,7 +385,7 @@ The following changes and new features are available for SAP Fiori elements for 
 
 -   List report now supports default sort order and visualizations that are coming from the presentation variant.
 
--   A new extension API is now available that can hook into the live cycle method of the `sap-keep-alive` feature. For more information, see [Refresh Data Set for Back Navigation When sap-keep-alive Is Set to True](../06_SAP_Fiori_Elements/refresh-data-set-for-back-navigation-when-sap-keep-alive-is-set-to-true-f1c2704.md).
+-   A new extension API is now available that can hook into the live cycle method of the `sap-keep-alive` feature. For more information, see [Refresh Dataset for Back Navigation When sap-keep-alive Is Set to True](../06_SAP_Fiori_Elements/refresh-dataset-for-back-navigation-when-sap-keep-alive-is-set-to-true-f1c2704.md).
 
 -   Responsive tables in an object page can now be configured to load more than the default value of 10. For more information, see [Adapting the UI: List Report and Object Page](../06_SAP_Fiori_Elements/adapting-the-ui-list-report-and-object-page-0d2f1a9.md).
 
@@ -449,7 +449,7 @@ The following changes and new features are available for SAP Fiori elements for 
 
 -   Application developers can now also add charts when using the list report in multi-view mode. For more information, see the following topics:
 
-    -   [Multiple Views on List Report Tables](../06_SAP_Fiori_Elements/multiple-views-on-list-report-tables-a37df40.md)
+    -   [Multiple Views in the List Report](../06_SAP_Fiori_Elements/multiple-views-in-the-list-report-a37df40.md)
 
     -   [Defining Multiple Views on a List Report Table - Multiple Table Mode](../06_SAP_Fiori_Elements/defining-multiple-views-on-a-list-report-table-multiple-table-mode-37aeed7.md)
 
@@ -479,6 +479,18 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.141](what-s-new-in-sapui5-1-141-a7ed66d.md "With this release SAPUI5 is upgraded from version 1.140 to 1.141.")
+
+[What's New in SAPUI5 1.140](what-s-new-in-sapui5-1-140-26a106c.md "With this release SAPUI5 is upgraded from version 1.139 to 1.140.")
+
+[What's New in SAPUI5 1.139](what-s-new-in-sapui5-1-139-e10db71.md "With this release SAPUI5 is upgraded from version 1.138 to 1.139.")
+
+[What's New in SAPUI5 1.138](what-s-new-in-sapui5-1-138-8f6a92b.md "With this release SAPUI5 is upgraded from version 1.136 to 1.138.")
+
+[What's New in SAPUI5 1.136](what-s-new-in-sapui5-1-136-a82754d.md "With this release SAPUI5 is upgraded from version 1.135 to 1.136.")
+
+[What's New in SAPUI5 1.135](what-s-new-in-sapui5-1-135-93d7630.md "With this release SAPUI5 is upgraded from version 1.134 to 1.135.")
 
 [What's New in SAPUI5 1.134](what-s-new-in-sapui5-1-134-c512d71.md "With this release SAPUI5 is upgraded from version 1.133 to 1.134.")
 

@@ -7,7 +7,7 @@ Configuring this property lets you define a drop-down list to filter/view data a
 
 
 > ### Note:  
-> You can extend this feature to react based on filter conditions or custom configuration. For more information, see Custom View Switch[Custom View Switch](custom-view-switch-ecd9f10.md).
+> You can extend this feature to react based on filter conditions or custom configuration. For more information, see [Extending Custom View Switch](extending-custom-view-switch-ecd9f10.md).
 
 You can define view switch with a single entity set or with multiple entity sets.
 

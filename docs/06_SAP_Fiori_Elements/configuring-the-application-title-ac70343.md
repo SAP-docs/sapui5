@@ -2,15 +2,20 @@
 
 # Configuring the Application Title
 
-If required, you can configure the application title that is generated from the SAP Fiori launchpad.
+You can configure the application title that is generated from SAP Fiori launchpad, if required.
 
-The following screenshots show the application title displayed in the shell bar of a list report and an object page:
+The following screenshots show the application title displayed in the shell bar of a list report page and an object page:
 
   
   
-**Application Title in a List Report**
+**Application Title on a List Report Page**
 
-![](images/Application_Header_Title_d6eb0e9.png "Application Title in a List Report")
+![](images/Application_Header_Title_d6eb0e9.png "Application Title
+				on
+				a
+				List
+				Report
+				Page")
 
   
   
@@ -28,7 +33,7 @@ For more information, see the [Sample Code](setting-up-the-object-page-header-cc
 
 ## Additional Features in SAP Fiori Elements for OData V2
 
-Additionally, you can also configure the application title of the overview page and the analytical list report.
+Additionally, you can also configure the application title of the overview page and the analytical list page.
 
 
 
@@ -36,7 +41,7 @@ Additionally, you can also configure the application title of the overview page 
 
 ## Related Links
 
--   For information about adapting the table header in a list report, see [Setting the Table Header](setting-the-table-header-f996207.md).
+-   For information about adapting the table header on a list report page, see [Setting the Table Header](setting-the-table-header-f996207.md).
 
 -   For information about adapting object page titles and subtitles, see [Configuring the Object Page Header Title and Description](configuring-the-object-page-header-title-and-description-333f850.md).
 

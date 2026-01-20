@@ -287,9 +287,9 @@ Global symbol
 > ### Note:  
 > When using any of the global symbols `odata.compare`, `odata.fillUriTemplate`, or `odata.uriEncode`, make sure to require the `sap/ui/model/odata/ODataExpressionAddons` module in advance to avoid synchronous loading of modules on demand. If you need to minimize the loading of modules, e.g. for performance reasons, you can also import the corresponding modules individually:
 > 
-> -   `sap.ui.model.odata.v4.ODataUtils` if `odata.compare` is used
-> -   `sap.ui.thirdparty.URITemplate` if `odata.fillUriTemplate` is used
-> -   `sap.ui.model.odata.ODataUtils` if `odata.uriEncode` is used
+> -   `sap/ui/model/odata/v4/ODataUtils` if `odata.compare` is used
+> -   `sap/ui/thirdparty/URITemplate` if `odata.fillUriTemplate` is used
+> -   `sap/ui/model/odata/ODataUtils` if `odata.uriEncode` is used
 
 
 

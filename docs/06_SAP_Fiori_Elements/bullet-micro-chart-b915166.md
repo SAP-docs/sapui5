@@ -8,8 +8,7 @@ It compares the measure value to one or more data point values to enrich its mea
 
 ![](images/Bullet_Micro_Chart_9d24d23.png)
 
-> ### Note:  
-> For more information about this chart type, see [Samples](https://ui5.sap.com/1.82.5/#/entity/sap.suite.ui.microchart.BulletMicroChart).
+For more information about this chart type, see [Samples](https://ui5.sap.com/1.82.5/#/entity/sap.suite.ui.microchart.BulletMicroChart).
 
 
 

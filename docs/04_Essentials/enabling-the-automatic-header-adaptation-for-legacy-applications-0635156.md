@@ -8,9 +8,9 @@ Application developers can enable automatic adaptation of legacy applications fr
 
 ## The Automatic Header Adapter
 
-The SAP Fiori design guidelines provide recommendations with regards to the headers of applications and the SAP Fiori launchpad. If your application has a header, it needs to be merged into the standardized SAP Fiori header.
+The SAP Design System guidelines provide recommendations with regards to the headers of applications and the SAP Fiori launchpad. If your application has a header, it needs to be merged into the standardized SAP Fiori header.
 
-Legacy applications using the `sap.m.Page`, including the back button, can use the header adapter to align their header layout with SAP Fiori design guidelines. The header adapter specifically prevents duplicate headers and back buttons when displaying these legacy applications in the SAP Fiori launchpad.
+Legacy applications using the `sap.m.Page`, including the back button, can use the header adapter to align their header layout with SAP Design System guidelines. The header adapter specifically prevents duplicate headers and back buttons when displaying these legacy applications in the SAP Fiori launchpad.
 
 > ### Note:  
 > The screenshots in this topic are mockups and are used to visually outline the adaptations.
@@ -21,7 +21,7 @@ Legacy applications using the `sap.m.Page`, including the back button, can use t
 
 ![](images/FIori_2_0_Header_d78b4f4.png "Header of a fullscreen application")
 
-The complete adaptation of a fullscreen app to SAP Fiori design guidelines consists of five main steps:
+The complete adaptation of a fullscreen app to SAP Design System guidelines consists of five main steps:
 
 1.  Remove the app-specific header bar. The header is made transparent and collapsed if there is no content in it after the adaptation.
 

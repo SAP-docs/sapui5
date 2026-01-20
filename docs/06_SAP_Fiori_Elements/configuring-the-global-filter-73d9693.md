@@ -18,16 +18,19 @@ You configure the global filter in the `"sap.ovp"` section using the following p
 
 
 > ### Sample Code:  
+> `manifest.json` 
+> 
 > ```
 > "sap.ovp": {
 >     "_version": "1.1.0",
 >     "globalFilterModel": "ZCD204_EPM_DEMO_SRV",
->     "globalFilterEntityType": "SalesOrder",//Deprecated since SAPUI5 1.54
+>     "globalFilterEntityType": "SalesOrder", //Deprecated since SAPUI5 1.54
 >     "globalFilterEntitySet": "SalesOrders", //Available from SAPUI5 1.54 onwards
->     "cards": { 
+>     "cards": {
 >         ...
 >     }
 > }
+> 
 > ```
 
 
@@ -36,7 +39,7 @@ You configure the global filter in the `"sap.ovp"` section using the following p
 
 ## Enabling Basic Search
 
-The search field on the smart filter bar lets you search for a value across all searchable entity sets. To enable the search field, set the `"showBasicSearch":"true"` property in the descriptor file.
+The search field on the smart filter bar lets you search for a value across all searchable entity sets. To enable the search field, set the `"showBasicSearch":"true"` property in the `manifest.json` file.
 
 The search functionality is applicable for entity types that have:
 
@@ -51,37 +54,35 @@ The search functionality is applicable for entity types that have:
 
 ## Enabling Semantic Date Range in Smart Filter Bar
 
-You can add semantic date ranges, such as `lastYear` or `nextQuarter`, on the Smart Filter Bar from the template.
+You can add semantic date ranges, such as `lastYear` or `nextQuarter`, on the smart filter bar from the template.
 
-The following sample code shows how to configure these settings in the `manifest.json` file:
+The following sample code shows how to configure `useDateRange` in the `manifest.json` file:
 
 > ### Sample Code:  
-> `useDateRange`
+> `manifest.json`
 > 
 > ```
-> 
 > sap.ovp: {
-> . . . .
-> 		"filterSettings": {
->                 "dateSettings":{
->                     "selectedValues": "DAYS,WEEK,MONTH,DATERANGE,QUARTER,YEAR",
->                     "fields": {
->                         "DatePropert1": {
->                             "selectedValues": "TOMORROW,NEXT,LASTYEAR,LAST2WEEKS,LAST3WEEKS,LAST4WEEKS,LAST5WEEKS,YEARTODATE,QUARTER1,QUARTER2,QUARTER3,QUARTER4",
->                             "exclude": true
->                         },
->                         "DateProperty2": {
->                             "customDateRangeImplementation": "SOMULTIENTITY.ext.controller.customDateRangeType",
->                             "selectedValues": "FROM,TO,DAYS,WEEK,MONTH,DATERANGE,TODAY,TOMORROW,YEAR,YESTERDAY",
->                             "exclude": true
->                         },
->                         "DateProperty3": { 
->                             "selectedValues": "YESTERDAY",
->                             "exclude": false 
+>     "filterSettings": {
+>         "dateSettings": {
+>             "selectedValues": "DAYS,WEEK,MONTH,DATERANGE,QUARTER,YEAR",
+>             "fields": {
+>                 "DateProperty1": {
+>                     "selectedValues": "TOMORROW,NEXT,LASTYEAR,LAST2WEEKS,LAST3WEEKS,LAST4WEEKS,LAST5WEEKS,YEARTODATE,QUARTER1,QUARTER2,QUARTER3,QUARTER4",
+>                     "exclude": true
+>                 },
+>                 "DateProperty2": {
+>                     "customDateRangeImplementation": "SOMULTIENTITY.ext.controller.customDateRangeType",
+>                     "selectedValues": "FROM,TO,DAYS,WEEK,MONTH,DATERANGE,TODAY,TOMORROW,YEAR,YESTERDAY",
+>                     "exclude": true
+>                 },
+>                 "DateProperty3": {
+>                     "selectedValues": "YESTERDAY",
+>                     "exclude": false
+>                 }
+>             }
 >         }
 >     }
-> }
-> . . . .
 > }
 > ```
 

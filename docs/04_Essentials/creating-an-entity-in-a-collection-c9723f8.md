@@ -101,6 +101,9 @@ It is also possible to create nested entities in a navigation property with a si
 
 Bind the list for the nested collection relative to the transient context of the created main entity. A [`create`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataListBinding/methods/create) in the nested table then creates a row which contributes to the POST request of the main entity. A deep create is not restricted to one level; it is also possible that a nested entity has a nested collection itself.
 
+> ### Caution:  
+> Only a single such list must be bound to the nested collection. You cannot share this nested collection among multiple list bindings.
+
 "Deep create" supports a simple collection-valued navigation property \(no path like "detail/items"\). It requires that the `autoExpandSelect` [model](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataModel/constructor) parameter is `true`. There must be no context binding in the binding hierarchy between the top-level and nested list binding.
 
 **Example: Creating a sales order with line items**
@@ -222,7 +225,7 @@ You can create such an inline creation row by calling [`sap.ui.model.odata.v4.OD
 -   `transient`: A POST is waiting in the batch queue.
 -   `createPending`: The POST has been sent to the server; the entity is waiting for the response.
 -   `parked`: A POST via an auto group that failed is parked until a property update takes place.
--   `createdPersisted`: The POST succeeded, and the entity now exists on the server. If the binding is refreshed, the context's reaction depends on its `isKeepAlive` state. If it's set to `false`, the context is dropped and created anew when it's read from the server. If it's set to `true`, it is refreshed with a special request and remains in the `createdPersisted` state.
+-   `createdPersisted`: The POST succeeded, and the entity now exists on the server. If the binding is refreshed, the context's reaction depends on its `isKeepAlive` state. If it's set to `false`, the context is dropped and created anew when it's read from the server. If it's set to `true`, it is refreshed with a special request and remains in the `createdPersisted` state. If the context itself is refreshed, the `createdPersisted` state does not change.
 
   
   

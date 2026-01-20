@@ -294,22 +294,22 @@ Formatting
 <tr>
 <td valign="top">
 
-*APF Demo Application*
+*APF Demo Application* 
 
 </td>
 <td valign="top">
 
-[XML View](../04_Essentials/xml-view-91f2928.md)
+[XML View](../04_Essentials/xml-view-91f2928.md) 
 
 </td>
 <td valign="top">
 
-`sap.ui.layout.VerticalLayout`
+`sap.ui.layout.VerticalLayout` 
 
 </td>
 <td valign="top">
 
-[Developing Apps with Analysis Path Framework \(APF\)](../07_APF/developing-apps-with-analysis-path-framework-apf-1c457c5.md)
+[Developing Apps with Analysis Path Framework \(APF\) \(deprecated\)](../07_APF/developing-apps-with-analysis-path-framework-apf-deprecated-1c457c5.md)
 
 Component Container
 
@@ -644,7 +644,7 @@ Micro charts of `sap.ui.comp.smartmicrochart`
 <tr>
 <td valign="top">
 
-*APF Demo Application*
+*APF Demo Application* 
 
 </td>
 <td valign="top">
@@ -702,7 +702,7 @@ Micro charts of `sap.ui.comp.smartmicrochart`
 <tr>
 <td valign="top">
 
-*APF Configuration Modeler*
+*APF Configuration Modeler* 
 
 </td>
 <td valign="top">

@@ -4,9 +4,9 @@
 
 When you can enter more than one value, the multi-input field is rendered on the object page.
 
-If the system identifies a 1:N association of a `DataField`, the multi-input field is activated automatically.
+If the system identifies a 1:n association of a `DataField`, the multi-input field is activated automatically.
 
-You must define a 1:N association in the data model.
+You must define a 1:n association in the data model.
 
 In the following example, `"_supportedMaterial"` is a one-to-many `navigationProperty` pointing to the `"SupportedMaterial"` entity:
 
@@ -71,7 +71,7 @@ The following image shows the result on the UI:
 > ### Tip:  
 > Define the value help on the target property to add and remove existing values from the multi-input field.
 
-You can bind the values entered into a multi-input field to a JSON model. Check out our live example in the flexible programming model explorer at [Field - Multi Value Field](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/field/multiValueField).
+You can bind the values entered into a multi-input field to a JSON model. For more information and live examples, see the SAP Fiori development portal at [Building Blocks - Field - Input Fields - Multi-Input Field](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/field/fieldMultiValueField).
 
 > ### Note:  
 > Multi-input fields are only supported in draft-enabled applications.
@@ -84,15 +84,70 @@ The multi-input field is also available for tables.
 
 ![](images/Smart_MultiInput_Control_on_the_Object_Page_Table_dcb027c.png "Multi-Input Control on the Object Page Table")
 
-> ### Note:  
-> In SAP Fiori elements for OData V4, you can use the `Capabilities.InsertRestrictions` annotation to specify whether the field can be edited and the `Capabilities.DeleteRestrictions` annotation to specify whether it can be deleted.
+
+
+<a name="loio04ff5b1a81344a8e8169ea99630ff4e5__section_x43_wmz_c1c"/>
+
+## Additional Features in SAP Fiori Elements for OData V4
+
+You can use the following annotations for multi-input fields:
+
+-   `Capabilities.InsertRestrictions`: Specify whether the field can be edited.
+
+-   `Capabilities.DeleteRestrictions`: Specify whether the field can be deleted.
+
+
+You can also configure the availability and requirement of the multi-input field by setting the `Common.fieldControl` annotation to `ReadOnly` or `Mandatory` as shown in the following sample code:
+
+> ### Sample Code:  
+> XML Annotation
+> 
+> ```xml
+> <Annotation Term="UI.FieldGroup" Qualifier="AdditionalInformation">
+>     <Record Type="UI.FieldGroupType">
+>         <PropertyValue Property="Data">
+>             <Collection>
+>                 <Record Type="UI.DataField">
+>                     <PropertyValue Property="Value" Path="ToItemAvailableColors/ColorName" />
+>                     <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Mandatory" />
+>                 </Record>
+>             </Collection>
+>         </PropertyValue>
+>     </Record>
+> </Annotation>
+> 
+> ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> No ABAP CDS annotation sample is available. Please use the local XML annotation.
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> 
+> annotate RootElement with @UI: {
+>   FieldGroup #GeneralInformation: {
+>     Label: 'General Information',
+>     Data : [
+>       {Value: ID},
+>       {
+>         $Type : 'UI.DataField',
+>         Value: PropWithUnit,
+>         ![@Common.FieldControl]: #Mandatory
+>       }
+>     ]
+>   }
+> };
+> 
+> ```
+
+When you set the `Common.fieldControl` annotation to `Mandatory`, a red asterisk is displayed next to the label of the field or in the column header if the field is in a table. However, the UI doesn't perform any additional checks, so they must be implemented in the back end.
 
 > ### Restriction:  
-> Note the following for SAP Fiori elements for OData V4:
-> 
-> -   You cannot mark the multi-input field as mandatory using the `Common.fieldControl` annotation.
-> 
-> -   You cannot use the multi-input field if you need to display more than 100 selected values, since this isn't supported. In this case we recommend that you use a table instead.
+> You can't use the multi-input field if you need to display more than 100 selected values. In this case, we recommend that you use a table instead.
 
 **Related Information**  
 

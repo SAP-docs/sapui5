@@ -241,7 +241,7 @@ SAP Fiori Elements
 
 The following changes and new features are available for SAP Fiori elements for OData V2:
 
--   Selection of the *Select All* checkbox within responsive tables of the list report and object pages now shows a message toast with a count of the selected items. For more information, see [Enabling Multiple Selection in Tables](../06_SAP_Fiori_Elements/enabling-multiple-selection-in-tables-116b5d8.md).
+-   Selection of the *Select All* checkbox within responsive tables of the list report and object pages now shows a message toast with a count of the selected items. For more information, see [Configuring the Selection Mode for Tables](../06_SAP_Fiori_Elements/configuring-the-selection-mode-for-tables-116b5d8.md).
 
 
 <sub>Changed•SAP Fiori Elements•Info Only•1.112</sub>
@@ -492,6 +492,18 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.141](what-s-new-in-sapui5-1-141-a7ed66d.md "With this release SAPUI5 is upgraded from version 1.140 to 1.141.")
+
+[What's New in SAPUI5 1.140](what-s-new-in-sapui5-1-140-26a106c.md "With this release SAPUI5 is upgraded from version 1.139 to 1.140.")
+
+[What's New in SAPUI5 1.139](what-s-new-in-sapui5-1-139-e10db71.md "With this release SAPUI5 is upgraded from version 1.138 to 1.139.")
+
+[What's New in SAPUI5 1.138](what-s-new-in-sapui5-1-138-8f6a92b.md "With this release SAPUI5 is upgraded from version 1.136 to 1.138.")
+
+[What's New in SAPUI5 1.136](what-s-new-in-sapui5-1-136-a82754d.md "With this release SAPUI5 is upgraded from version 1.135 to 1.136.")
+
+[What's New in SAPUI5 1.135](what-s-new-in-sapui5-1-135-93d7630.md "With this release SAPUI5 is upgraded from version 1.134 to 1.135.")
 
 [What's New in SAPUI5 1.134](what-s-new-in-sapui5-1-134-c512d71.md "With this release SAPUI5 is upgraded from version 1.133 to 1.134.")
 

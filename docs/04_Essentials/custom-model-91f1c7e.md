@@ -18,5 +18,5 @@ To instantiate a custom model, proceed as follows:
 4.  To enable the sorting functionality, use the `Sorter` class in your binding implementation.
 
 
-You can find all necessary classes in the `sap.ui.model` namespace. As a starting point, take a look at the `JSONModel` implementation in `sap.ui.model.json.JSONModel`, which is available on the SAP Open Source GitHub at [https://github.com/SAP/openui5/blob/-/src/sap.ui.core/src/sap/ui/model/json/JSONModel.js](https://github.com/SAP/openui5/blob/-/src/sap.ui.core/src/sap/ui/model/json/JSONModel.js).
+You can find all necessary classes in the `sap.ui.model` namespace. As a starting point, take a look at the `JSONModel` implementation in `sap.ui.model.json.JSONModel`, which is available on the UI5 Open Source GitHub at [https://github.com/UI5/openui5/blob/-/src/sap.ui.core/src/sap/ui/model/json/JSONModel.js](https://github.com/UI5/openui5/blob/-/src/sap.ui.core/src/sap/ui/model/json/JSONModel.js).
 

@@ -4,6 +4,12 @@
 
 You use waterfall charts to analyze a cumulative value.
 
+  
+  
+**Example of a Waterfall Chart Card**
+
+![](images/Waterfall_Chart_Card_0e381e6.png "Example of a Waterfall Chart Card")
+
 Waterfall charts allow you to see the change in cumulative values from the initial state to the final state by representing the accumulation of successive values. These are the available waterfall charts:
 
 -   Waterfall charts without a time dimension
@@ -131,10 +137,4 @@ Waterfall charts allow you to see the change in cumulative values from the initi
 > }
 > 
 > ```
-
-  
-  
-**Example of a Waterfall Chart Card**
-
-![](images/Waterfall_Chart_Card_0e381e6.png "Example of a Waterfall Chart Card")
 

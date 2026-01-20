@@ -2,12 +2,12 @@
 
 # Chart Extensions
 
-Define custom actions for a chart by configuring the descriptor and annotation files.
+Define custom actions for a chart by configuring the annotation and `manifest.json` files.
 
 
 
 > ### Note:  
-> This topic is currently only applicable to SAP Fiori elements for OData V2.
+> This topic is only applicable to SAP Fiori elements for OData V2.
 
 
 
@@ -15,7 +15,7 @@ Define custom actions for a chart by configuring the descriptor and annotation f
 
 Use the `onBeforeRebindChartExtension` chart support controller extension to define application-specific actions. This allows you to bind additional parameters, such as custom filters or chart queries.
 
-In the app-descriptor file, define the `sap.ui.controllerExtensions` and extend the ALP controller `sap.suite.ui.generic.template.AnalyticalListPage.view.AnalyticalListPage` as shown here:
+In the `manifest.json` file, define the `sap.ui.controllerExtensions` and extend the ALP controller `sap.suite.ui.generic.template.AnalyticalListPage.view.AnalyticalListPage` as shown in the following sample code:
 
 ```
 "sap.ui5": {

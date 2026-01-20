@@ -52,7 +52,7 @@ Below is an example of a `FilterFacets` annotation on the target entity type:
 > 
 > ```
 
-Only the filter fields defined as part of the `UI.SelectionFields` annotation and the mandatory filters appear by default in the filter bar. The other filter fields appear only in the *Adapt Filters* dialog and are grouped via the following logic:
+Only the filter fields defined as part of the `UI.SelectionFields` annotation and the mandatory filters appear by default in the filter bar. The other filter fields appear only in the *Adapt Filters* dialog and are grouped using the following logic:
 
 
 

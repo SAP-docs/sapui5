@@ -39,7 +39,7 @@ Description
 </th>
 </tr>
 <tr>
-<td valign="top" rowspan="5">
+<td valign="top" rowspan="6">
 
 `actions: <object>` \(mandatory\)
 
@@ -61,7 +61,7 @@ Describes the actions that can be applied to the element.
 </td>
 </tr>
 <tr>
-<td valign="top" rowspan="4">
+<td valign="top" rowspan="5">
 
 `"reveal": <object> | <function>`
 
@@ -92,12 +92,24 @@ Provides the value of `changeType` from the previous step.
 <tr>
 <td valign="top">
 
+`additionalInfoKey: <string>` \(optional\)
+
+</td>
+<td valign="top">
+
+Provides additional information to be displayed as a tooltip in the context menu.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
 `getLabel: <function>` \(optional\)
 
 </td>
 <td valign="top">
 
-Allows you to return the label texts of the control. The default implementation tries `getText()`, and then `getLabelText()`. If it's not available, it tries `getLabel().getText()`, then `getTitle()`, and then `getId()`.
+Used to provide a customized getter for the control label. The default implementation tries to get the following properties in that order: `text`, `labelText`, `label`, `title`, `heading`, `dataSourceLabel.`
 
 ```
 function(oControl) {

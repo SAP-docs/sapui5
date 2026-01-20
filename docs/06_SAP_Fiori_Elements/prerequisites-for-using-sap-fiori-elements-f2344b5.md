@@ -20,7 +20,7 @@ To create an app using SAP Fiori elements, some prerequisites apply.
 >     -   `$top`
 > 
 > 
-> -   This requirement also applies to a value help service that is used via the `ValueListReference` annotation.
+> -   This requirement also applies to a value help service that is used through the `ValueListReference` annotation.
 
 
 

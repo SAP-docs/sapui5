@@ -2,9 +2,9 @@
 
 # Filtering
 
-The OData V4 Model supports server side filtering on lists.
+The OData V4 Model supports server-side filtering on lists.
 
-To use server side filtering, set the operation mode to [`sap.ui.model.odata.OperationMode.Server`](https://ui5.sap.com/#/api/sap.ui.model.odata.OperationMode/properties). This can be done as follows:
+To use server-side filtering, set the operation mode to [`sap.ui.model.odata.OperationMode.Server`](https://ui5.sap.com/#/api/sap.ui.model.odata.OperationMode/properties). This can be done as follows:
 
 -   For a single `ODataListBinding` instance, set the binding parameter `$$operationMode`
 
@@ -13,7 +13,7 @@ To use server side filtering, set the operation mode to [`sap.ui.model.odata.Ope
 
 **Example: Operation mode set in `manifest.json` for the model** 
 
-```js
+```json
 
 "models" : {
     "" : {
@@ -28,7 +28,7 @@ To use server side filtering, set the operation mode to [`sap.ui.model.odata.Ope
 
 **Example: Operation mode set as binding parameter for a specific list binding**
 
-```js
+```xml
 
 <Table growing="true" growingThreshold="5" id="Equipments"
     items="{
@@ -52,7 +52,7 @@ The `ODataListBinding` combines the dynamic filter and static filter with a logi
 
 **Examle: Dynamic and static filters**
 
-```js
+```xml
 
 <Table growing="true" growingThreshold="5" id="Equipments"
     items="{
@@ -74,85 +74,139 @@ The example above filters the `Equipments` entity set by `Category` \(static fil
 
 
 
-<a name="loio5338bd1f9afb45fb8b2af957c3530e8f__section_mqn_jkk_b1b"/>
+<a name="loio5338bd1f9afb45fb8b2af957c3530e8f__section_FAANN"/>
 
-## Filtering with Any and All
+## Filtering with Any, All, NotAny, and NotAll
 
-The OData V4 model also supports the Lambda Operators `any` and `all` as defined in section 5.1.1.10 of the [OData Version 4.0. Part 2: URL Conventions](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part2-url-conventions/odata-v4.0-errata03-os-part2-url-conventions-complete.html#_Toc453752358) specification. They are represented by [sap.ui.model.Filter](https://ui5.sap.com/#/api/sap.ui.model.Filter) objects with filter operators [sap.ui.model.FilterOperator.Any](https://ui5.sap.com/#/api/sap.ui.model.FilterOperator/properties) and [sap.ui.model.FilterOperator.All](https://ui5.sap.com/#/api/sap.ui.model.FilterOperator/properties).
+The OData V4 model supports the Lambda Operators `any` and `all` as defined in Section 5.1.1.13 of the [OData Version 4.01. Part 2: URL Conventions](https://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part2-url-conventions.html#_Toc31361024) specification. These operators and their negated forms are represented using [`sap.ui.model.Filter`](https://ui5.sap.com/#/api/sap.ui.model.Filter) objects with [filter operators](https://ui5.sap.com/#/api/sap.ui.model.FilterOperator/properties) `sap.ui.model.Filter.Any`, `sap.ui.model.Filter.All`, `sap.ui.model.Filter.NotAny`, and `sap.ui.model.Filter.NotAll`.
 
 Example:
 
 ```
-sap.ui.model.Filter({
-        // the path of the collection for which the condition needs to be evaluated
-        path : "TEAM_2_EMPLOYEES",
-        // either sap.ui.model.FilterOperator.Any or sap.ui.model.FilterOperator.All
-        operator : sap.ui.model.FilterOperator.Any,    
-        // any OData identifier which is a variable for the current element of the collection referenced by path
-        variable : "employee",
-        // the filter condition; the path of the nested filter contains the variable as prefix to reference current element of the collection
-        condition : new sap.ui.model.Filter("employee/AGE", sap.ui.model.FilterOperator.GT, 42)  
-    })
+// "Filter" and "FilterOperator" required from modules "sap/ui/model/Filter" and "sap/ui/model/FilterOperator"
+new Filter({
+    // the path of the collection for which the condition needs to be evaluated
+    path: "Trips",
+    // one of the filter operators listed above
+    operator: FilterOperator.Any,
+    // any OData identifier which is a variable for the current element of the collection referenced by the path
+    variable: "trip",
+    // the filter condition; the path of the nested filter contains the variable as prefix to reference the current element of the collection
+    condition: new Filter("trip/Budget", FilterOperator.GT, 1000)
+});
 ```
 
-The path of the filter object is the path of the collection for which the boolean condition needs to be evaluated. The variable can be any OData identifier and it needs to be part of the path of a nested filter condition.
+The path of the filter object is the path of the collection for which the boolean condition needs to be evaluated. The variable can be any OData identifier, and it needs to be part of the path of a nested filter condition.
 
 
 
-### Filter Operator any
+### Filter Operator Any
 
-The filter operator Any applies the `boolean` filter condition to each member of the collection referenced by `path`. If the condition is true for **at least one** member of the collection, the any-filter matches. The filter with the Any operator without a filter condition matches only if the collection referenced by path is not empty.
+The filter operator Any applies the `boolean` filter condition to each member of the collection referenced by `path`. If the condition is true for **at least one** member of the collection, the Any filter matches. The filter with the Any operator without a filter condition matches only if the collection referenced by `path` is not empty.
 
-Example 1: Get all teams that have at least one employee who is older than 42
+Example 1: Retrieve all individuals who have at least one trip
 
 ```
-
-oTeamsBinding.filter(
-    new sap.ui.model.Filter({
-        path : "TEAM_2_EMPLOYEES",
-        operator : sap.ui.model.FilterOperator.Any,
-        variable : "employee",
-        condition : new sap.ui.model.Filter("employee/AGE", sap.ui.model.FilterOperator.GT, 42)
+oListBinding.filter(
+    new Filter({
+        path: "Trips",
+        operator: FilterOperator.Any
     })
 );
 ```
 
-The resulting request would be: **`http://host/service/TEAMS?$filter=TEAM_2_EMPLOYEES/any(employee:employee/AGE gt 42)`**
+The resulting request is: **`https://host/service/People?$filter=Trips/any()`**
 
-Example 2: Get all teams that have at least one employee assigned
+Example 2: Retrieve all individuals who have at least one trip with a budget exceeding 1000
 
 ```
-oTeamsBinding.filter(
-    new sap.ui.model.Filter({
-        path : "TEAM_2_EMPLOYEES",
-        operator : sap.ui.model.FilterOperator.Any
+oListBinding.filter(
+    new Filter({
+        path: "Trips",
+        operator: FilterOperator.Any,
+        variable: "trip",
+        condition: new Filter("trip/Budget", FilterOperator.GT, 1000)
     })
 );
 ```
 
-The resulting request would be: **`http://host/service/TEAMS?$filter=TEAM_2_EMPLOYEES/any()`**
+The resulting request is: **`https://host/service/People?$filter=Trips/any(trip:trip/Budget gt 1000)`**
 
 
 
-### Filter Operator all
+### Filter Operator NotAny
 
-The filter operator All applies the `boolean` filter condition to each member of the collection referenced by `path`. If the condition is true for **all** members of the collection, the all-filter matches.
+The filter operator NotAny applies the `boolean` filter condition to each member of the collection referenced by `path`. If the condition is true for **none** of the members of the collection, or if the collection is empty, the NotAny filter matches.
 
-Example: Get all teams for which all employees are older than 42.
+Example 1: Retrieve all individuals who have no trips at all
 
 ```
-
-oOrdersListBinding.filter(
-    new sap.ui.model.Filter({
-        path : "TEAM_2_EMPLOYEES",
-        operator : sap.ui.model.FilterOperator.All,
-        variable : "employee",
-        condition : new sap.ui.model.Filter("employee/AGE", sap.ui.model.FilterOperator.GT, 42)
+oListBinding.filter(
+    new Filter({
+        path: "Trips",
+        operator: FilterOperator.NotAny
     })
 );
 ```
 
-The resulting request would be: **`http://host/service/TEAMS?$filter=TEAM_2_EMPLOYEES/all(employee:employee/AGE gt 42)`**
+The resulting request is: **`https://host/service/People?$filter=not Trips/any()`**
+
+Example 2: Retrieve all individuals who have no trips with the status "Rejected"
+
+```
+oListBinding.filter(
+    new Filter({
+        path: "Trips",
+        operator: FilterOperator.NotAny,
+        variable: "trip",
+        condition: new Filter("trip/Status", FilterOperator.EQ, "Rejected")
+    })
+);
+```
+
+The resulting request is: **`https://host/service/People?$filter=not Trips/any(trip:trip/Status eq 'Rejected')`**
+
+
+
+### Filter Operator All
+
+The filter operator All applies the `boolean` filter condition to each member of the collection referenced by `path`. If the condition is true for **all** members of the collection, the All filter matches.
+
+Example: Retrieve all individuals whose trips are all named "Walldorf"
+
+```
+oListBinding.filter(
+    new Filter({
+        path: "Trips",
+        operator: FilterOperator.All,
+        variable: "trip",
+        condition: new Filter("trip/Name", FilterOperator.EQ, "Walldorf")
+    })
+);
+```
+
+The resulting request is: **`https://host/service/People?$filter=Trips/all(trip:trip/Name eq 'Walldorf')`**
+
+
+
+### Filter Operator NotAll
+
+The filter operator NotAll applies the `boolean` filter condition to each member of the collection referenced by `path`. If the condition is not true for **any** member \(that is, at least one member\) of the collection, the NotAll filter matches.
+
+Example: Retrieve all individuals whose trips do not all have the name "Walldorf" \(i.e. for whom at least one trip has a different name\)
+
+```
+oListBinding.filter(
+    new Filter({
+        path: "Trips",
+        operator: FilterOperator.NotAll,
+        variable: "trip",
+        condition: new Filter("trip/Name", FilterOperator.EQ, "Walldorf")
+    })
+);
+```
+
+The resulting request is: **`https://host/service/People?$filter=not Trips/all(trip:trip/Name eq 'Walldorf')`**
 
 **Related Information**  
 

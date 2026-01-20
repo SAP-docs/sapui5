@@ -79,12 +79,12 @@ Usage
 <tr>
 <td valign="top">
 
-UI5 Tooling
+UI5 CLI
 
 </td>
 <td valign="top">
 
-You can access the libraries hosted by UI5 Tooling under `resources/sap-ui-core.js`<sup>1</sup>.
+You can access the libraries hosted by UI5 CLI under `resources/sap-ui-core.js`<sup>1</sup>.
 
 </td>
 <td valign="top">

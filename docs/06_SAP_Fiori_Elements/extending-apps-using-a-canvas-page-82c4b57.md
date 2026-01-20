@@ -5,7 +5,7 @@
 You can embed content into a canvas page within an app.
 
 > ### Note:  
-> This topic is currently only applicable to SAP Fiori elements for OData V2.
+> This topic is only applicable to SAP Fiori elements for OData V2.
 
 A canvas page is an empty custom page in a SAP Fiori elements-based app. The content needs to be provided by an embedded implementing component.
 
@@ -79,7 +79,7 @@ For example, the following snippet allows the implementing component to use the 
 > 
 > ```
 
-If the canvas page is to include flexible column action buttons \(via [`getFlexibleColumnLayoutActionButtons`](https://ui5.sap.com/#/api/sap.suite.ui.generic.template.Canvas.extensionAPI.ExtensionAPI/methods/getFlexibleColumnLayoutActionButtons)\), replace the `footerBar` setting by `flexibleColumnLayoutActions` in the snippet mentioned here. You can also use both controls.
+If the canvas page is to include flexible column action buttons \(through [`getFlexibleColumnLayoutActionButtons`](https://ui5.sap.com/#/api/sap.suite.ui.generic.template.Canvas.extensionAPI.ExtensionAPI/methods/getFlexibleColumnLayoutActionButtons)\), replace the `footerBar` setting by `flexibleColumnLayoutActions` in the snippet mentioned here. You can also use both controls.
 
 
 

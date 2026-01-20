@@ -45,7 +45,7 @@ The table containing additional custom columns can look like this:
 
     For a custom column in a responsive table, you have to implement two extensions. First, implement the definition of the custom columns, then, implement the content of the custom columns.
 
-    You can change the sequence of the columns via the `customData` property `columnIndex`, as shown in the sample code below.
+    You can change the sequence of the columns using the `customData` property `columnIndex`, as shown in the sample code below.
 
     > ### Note:  
     > If the content of your custom column refers to a property \(such as`{Price}`\), you need to include a corresponding `"leadingProperty"` entry in the `CustomData` of the column definition.

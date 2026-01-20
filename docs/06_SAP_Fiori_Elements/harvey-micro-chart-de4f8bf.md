@@ -4,8 +4,7 @@
 
 ![](images/Harvey_Micro_Chart_5026048.png)
 
-> ### Note:  
-> A single measure value is shown against a maximum value. For more information about this chart type, see [Samples](https://ui5.sap.com/1.82.5/#/entity/sap.suite.ui.microchart.HarveyBallMicroChart).
+A single measure value is shown against a maximum value. For more information about this chart type, see [Samples](https://ui5.sap.com/1.82.5/#/entity/sap.suite.ui.microchart.HarveyBallMicroChart).
 
 
 

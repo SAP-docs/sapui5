@@ -515,32 +515,6 @@ Defines the location of themes.
 
 </td>
 </tr>
-<tr>
-<td valign="top">
-
-`preload-lib-css`
-
-</td>
-<td valign="top">
-
-[Type](configuration-options-and-url-parameters-91f2d03.md#loio91f2d03b6f4d1014b6dd926db0e91070__section_TVT): `string[]`
-
-Default value: `{}`
-
-Specifies a list of UI libraries using the same syntax as the `libs` property, for which the SAPUI5 core does not include the `library.css` stylesheet in the head of the page. If the list starts with an exclamation mark \(!\), no stylesheet is loaded at all for the specified libs. In this case, it is assumed that the application takes care of loading CSS, for example, a manually merged, single CSS file. Otherwise, the framework instructs the back end to create a merged CSS for the specified libs. In both cases, if the first libraries name is an asterisk \(\*\), it will be expanded to the list of already configured libraries.
-
-</td>
-<td valign="top">
-
-![YES](../02_Read-Me-First/images/Checked_Okay_3929e46.png)
-
-</td>
-<td valign="top">
-
-![NO](images/Cancel_dfb38de.png)
-
-</td>
-</tr>
 </table>
 
 

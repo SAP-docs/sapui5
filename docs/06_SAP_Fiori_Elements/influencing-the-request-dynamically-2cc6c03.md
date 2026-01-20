@@ -79,13 +79,62 @@ Finally, implement the `beforeRebindTable` extension in your controller extensio
 > 
 > ```
 
-Check out our live examples in the flexible programming model explorer:
-
--   [Table Extensibility](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/controllerExtensions/tableExtensibility)
-
--   [Table - Custom Columns / Actions](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/table/tableCustoms)
-
+For more information and live examples, see the SAP Fiori development portal at [Building Blocks - Table - Extensions - Custom Column](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/table/customColumn) and [Building Blocks - Table - Extensions - Custom Action](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/table/customTableAction).
 
 > ### Note:  
-> The same extension point is also available when using the `Table` building block. For more information, see [The Table Building Block](the-table-building-block-3801656.md).
+> The `beforeRebindTable` extension is also available when using the `Table` building block. For more information, see [The Table Building Block](the-table-building-block-3801656.md).
+
+
+
+<a name="loio2cc6c03336954133beea3bd3dcac60db__section_ynr_vff_sfc"/>
+
+## Retrieving the Row Count of Tables
+
+You can use the `getCount()` method to retrieve the number of rows loaded in a table and display the number in a tile or a data field. To do that, configure the `beforeRebindTable` section of the `manifest.json` file as shown in the following sample code:
+
+> ### Sample Code:  
+> `manifest.json`
+> 
+> ```
+> "controlConfiguration": {
+>     "@com.sap.vocabularies.UI.v1.LineItem": {
+>         "tableSettings": {
+>             "beforeRebindTable": ".extension.sap.fe.core.fpmExplorer.customListReportHeaderContent.LRExtend.beforeRebindTableLR"
+>         }
+>     }
+> },
+> 
+> ```
+
+Next, add a function to the controller extension as shown in the following sample code:
+
+> ### Sample Code:  
+> `manifest.json`
+> 
+> ```
+> beforeRebindTableLR: function (event) {
+>     let collectionBindingInfoAPI = event.getParameter("collectionBindingInfo");
+>     collectionBindingInfoAPI.attachEvent(
+>         "dataReceived",
+>         () => {
+>             let tableCount = this.getView()
+>                 .byId("sap.fe.core.fpmExplorer.customListReportHeaderContent::Default--fe::table::RootEntity::LineItem::Table")
+>                 .getCount();
+>             this.getView().byId("sap.fe.core.fpmExplorer.customListReportHeaderContent::Default--numericId").setValue(tableCount);
+>         },
+>         this
+>     );
+>     collectionBindingInfoAPI.attachEvent(
+>         "refresh",
+>         () => {
+>             let tableCount = this.getView()
+>                 .byId("sap.fe.core.fpmExplorer.customListReportHeaderContent::Default--fe::table::RootEntity::LineItem::Table")
+>                 .getCount();
+>             this.getView().byId("sap.fe.core.fpmExplorer.customListReportHeaderContent::Default--numericId").setValue(tableCount);
+>         },
+>         this
+>     );
+> }
+> 
+> ```
 

@@ -249,7 +249,7 @@ To render a table in a section, follow these steps:
     >     ]
     > ```
 
-    Check out our live example in the flexible programming model explorer at [Table Extensibility](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/controllerExtensions/tableExtensibility).
+    For more information and live examples, see the SAP Fiori development portal at [Standard Floorplans - Extensions - Extensions for Object Pages - Custom Section](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/topic/floorplanObjectPage/customSection).
 
 2.  To render a *Create* button, set `Org.OData.Capabilities.V1.InsertRestrictions/Insertable/Bool` to `true` for the entity set. For more information, see the [Generic Actions](adding-actions-to-tables-b623e0b.md#loiob623e0bbbb2b4147b2d0516c463921a0__section_nx4_qpb_2nb)section in [Adding Actions to Tables](adding-actions-to-tables-b623e0b.md).
 
@@ -352,7 +352,7 @@ Further reference facets refer to identification sections, the field group, cont
 
 When increasing the section and table height to use available free space on the object page, you can also optimize the table visualization by using the condensed mode. For more information, see [Using the Condensed Table Layout](using-the-condensed-table-layout-f3cc057.md).
 
-If your table has many entries, see the information regarding the `MultiSelectionPlugin` at [Enabling Multiple Selection in Tables](enabling-multiple-selection-in-tables-116b5d8.md).
+If your table has many entries, see the information regarding the `MultiSelectionPlugin` at [Configuring the Selection Mode for Tables](configuring-the-selection-mode-for-tables-116b5d8.md).
 
 For more information about the icon tab bar, see *Adapting the UI: Object Page* \> *Switch to tabs* in [Adapting the UI: List Report and Object Page](adapting-the-ui-list-report-and-object-page-0d2f1a9.md).
 

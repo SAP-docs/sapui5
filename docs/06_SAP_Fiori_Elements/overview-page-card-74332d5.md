@@ -26,34 +26,35 @@ The `title` property is mandatory. The `subTitle` is only mandatory if the card 
 > The counter is only displayed on table and list cards. For more information, see [Table Cards](table-cards-167bf7c.md) and [List Cards](list-cards-56f39e0.md).
 
 > ### Sample Code:  
-> manifest.json
+> `manifest.json`
 > 
 > ```
 > "sap.ovp": {
 >     "_version": "1.1.0",
 >     "globalFilterModel": "ZCD204_EPM_DEMO_SRV",
->     "globalFilterEntityType": "SalesOrder",
+>     "globalFilterEntityType": "SalesOrder", // Deprecated since SAPUI5 1.54.
+>     "globalFilterEntitySet": "SalesOrder", // Available from SAPUI5 1.54 onwards.
 >     "cards": {
 >         "card00": {
 >             "model": "ZCD204_EPM_DEMO_SRV",
 >             "template": "sap.ovp.cards.stack",
 >             "settings": {
->                 ...
+>                 // Additional settings can be placed here
 >                 "category": "{{card00_category}}",
 >                 "title": "{{card00_title}}",
->                 "subTitle ": "{{card00_subTitle}}",
->                 ...
+>                 "subTitle": "{{card00_subTitle}}"
+>                 // More settings can be added here
 >             }
 >         },
 >         "card01": {
 >             "model": "ZCD204_EPM_DEMO_SRV",
 >             "template": "sap.ovp.cards.table",
 >             "settings": {
->                 "title": "{{card01_category}}",
->                 ...
+>                 "title": "{{card01_category}}"
+>                 // Additional settings can be placed here
 >             }
->         },
->         ...
+>         }
+>         // Additional cards can be added here
 >     }
 > }
 > ```
@@ -62,22 +63,26 @@ The `title` property is mandatory. The `subTitle` is only mandatory if the card 
 
 ### **KPI Headers**
 
-The generic card provides a dynamic section that can display a key performance indicator \(KPI\) and related information in the header. The KPI is an aggregated value, as defined in the annotation file. To display a KPI header in a card, make sure that your OData service supports aggregation of values and the data is coming from the backend only. The KPI header can contain a KPI value, including its unit of measure, its trend, percentage of change, and KPI header description.
+The generic card provides a dynamic section that can display a key performance indicator \(KPI\) and related information in the header. The KPI is an aggregated value, as defined in the annotation file. To display a KPI header in a card, make sure that your OData service supports aggregation of values and the data is coming from the back end only. The KPI header can contain a KPI value, including its unit of measure, its trend, percentage of change, and KPI header description.
 
 The KPI extension uses the following annotation terms:
 
 -   `com.sap.vocabularies.UI.v1.DataPoint`: Used to retrieve information about the title and the value of the KPI.
+
 -   `com.sap.vocabularies.UI.v1.PresentationVariant`: Used to retrieve information about the fields which are used for grouping and sorting information.
+
 -   `com.sap.vocabularies.UI.v1.SelectionVariant`: Used to retrieve information about the filters.
+
 
 > ### Note:  
 > For more information about these annotations, see [Annotations Used in Overview Pages](annotations-used-in-overview-pages-65731e6.md).
 
-These annotation terms can be configured in the application manifest file, as shown in the following example:
+These annotation terms can be configured in the `manifest.json` file, as shown in the following sample code:
 
 > ### Sample Code:  
-> ```
+> `manifest.json`
 > 
+> ```
 > "sap.ovp": {
 >     ...
 >     "cards": {
@@ -97,7 +102,6 @@ These annotation terms can be configured in the application manifest file, as sh
 >         ...
 >     }
 > }
-> 
 > ```
 
 
@@ -108,11 +112,11 @@ These annotation terms can be configured in the application manifest file, as sh
 
 Card actions are available as of SAPUI5 1.110. You can access and perform the card actions from the card header. The following card actions are available:
 
--   *Refresh*: this action retrieves the entity bound to the card and reloads the card, displaying the latest data.
+-   *Refresh*: This action retrieves the entity bound to the card and reloads the card, displaying the latest data.
 
--   *Add Card to Insights*: this action shows a preview of the card so that it can be added to the *Insights* section directly from the overview. Note that this action is only available if the *Insights* service is enabled.
+-   *Add Card to Insights*: This action shows a preview of the card so that it can be added to the *Insights* section directly from the overview. Note that this action is only available if the *Insights* service is enabled.
 
--   *Manage Cards*: this action opens the *Manage Cards* dialog where you can hide or show the available cards.
+-   *Manage Cards*: This action opens the *Manage Cards* dialog where you can hide or show the available cards.
 
 
 
@@ -131,25 +135,27 @@ Note that only eight cards at a time can be displayed in the *Insights* section.
 
 ### Disabling Card Generation
 
-An application can also restrict the generation of individual analytical, list, and table cards. To do this, you can configure the card manifest setting by turning `enableAddToInsights` to `false`. This removes the option to add cards to the *Insights* section.
+You can also restrict the generation of individual analytical, list, and table cards. To enable this, configure the card manifest setting by turning `enableAddToInsights` to `false`. This removes the option to add cards to the *Insights* section.
 
 > ### Sample Code:  
+> `manifest.json`
+> 
 > ```
 > "card01": {
->         "model": "MODEL",
->         "template": "sap.ovp.cards.charts.analytical",
->         "settings": {
->           "title": "{{card01_title}}",
->           "subTitle": "{{card01_subTitle}}",
->           "entitySet": "C_EntitySet",
->           "enableAddToInsights": false,
->           "selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#SV",
->           "chartAnnotationPath": "com.sap.vocabularies.UI.v1.Chart#Chart",
->           "presentationAnnotationPath": "com.sap.vocabularies.UI.v1.PresentationVariant#PV",
->           "dataPointAnnotationPath": "com.sap.vocabularies.UI.v1.DataPoint#DP",
->           "identificationAnnotationPath": "com.sap.vocabularies.UI.v1.Identification"
->         }
->       },
+>     "model": "MODEL",
+>     "template": "sap.ovp.cards.charts.analytical",
+>     "settings": {
+>         "title": "{{card01_title}}",
+>         "subTitle": "{{card01_subTitle}}",
+>         "entitySet": "C_EntitySet",
+>         "enableAddToInsights": false,
+>         "selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#SV",
+>         "chartAnnotationPath": "com.sap.vocabularies.UI.v1.Chart#Chart",
+>         "presentationAnnotationPath": "com.sap.vocabularies.UI.v1.PresentationVariant#PV",
+>         "dataPointAnnotationPath": "com.sap.vocabularies.UI.v1.DataPoint#DP",
+>         "identificationAnnotationPath": "com.sap.vocabularies.UI.v1.Identification"
+>     }
+> }
 > ```
 
 > ### Note:  

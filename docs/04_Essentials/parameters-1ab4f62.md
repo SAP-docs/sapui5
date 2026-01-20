@@ -4,7 +4,7 @@
 
 When creating a binding, you can provide a parameter map which can contain the following:
 
--   OData query options; the values determine parameters for data service requests initiated by the binding. For more information about these options, see [OData Version 4.0 Part 2: URL Conventions, 5 Query Options](http://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part2-url-conventions.html).
+-   OData query options; the values determine parameters for data service requests initiated by the binding. For more information about these options, see [OData Version 4.01 Part 2: URL Conventions, 5 Query Options](https://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part2-url-conventions.html#_Toc31360954).
 
 -   Binding-specific parameters start with `"$$"` and influence the behavior of the binding as follows:
 
@@ -26,7 +26,7 @@ When creating a binding, you can provide a parameter map which can contain the f
 
 The binding's OData query options are combined with the query options passed to the OData V4 model; the binding's query options overwrite model query options with the same name. The resulting query options are appended to each data service request by this binding. The following query options are supported; all others are not allowed and lead to an error:
 
--   OData custom query options except those with the name prefix `"sap-"` \(unless starting with `"sap-valid-"`, which can be used for [Temporal Data](https://www.oasis-open.org/committees/document.php?document_id=66196&wg_abbrev=odata)\). For more information about these, see [OData Version 4.0 Part 2: URL Conventions, 5.2 Custom Query Options](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part2-url-conventions/odata-v4.0-errata03-os-part2-url-conventions-complete.html).
+-   OData custom query options except those with the name prefix `"sap-"` \(unless starting with `"sap-valid-"`, which can be used for [Temporal Data](https://www.oasis-open.org/committees/document.php?document_id=66196&wg_abbrev=odata)\). For more information about these, see [OData Version 4.01 Part 2: URL Conventions, 5.2 Custom Query Options](https://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part2-url-conventions.html#_Toc31361050).
 
 -   The list and context binding support the OData system query options `$apply`, `$count`, `$expand`, `$filter`, `$orderby`, `$search` and `$select`.
 

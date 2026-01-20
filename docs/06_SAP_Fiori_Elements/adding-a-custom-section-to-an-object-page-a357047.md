@@ -42,9 +42,6 @@ Find out how to add a section to an object page using SAP Fiori tools.
 
 The following steps show you how to add a custom section, namely *Product Description*, to the object page of the*Manage Products* application:
 
-> ### Note:  
-> We've removed videos showing step-by-step procedures using SAP Web IDE, which SAP no longer actively supports. You can still access the video using an older version of this document.
-
 
 
 ### Step 1: Create Fragment for the New Facet
@@ -59,13 +56,16 @@ In the editor of your choice, open the folder structure of the project where you
 > ### Sample Code:  
 > ```
 > <mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
-> 	<VBox>
-> 		<TextArea id="DescriptionTextArea" 
-> 				value="{to_ProductTextInOriginalLang/Description}"
-> 				width="30%" 
-> 				editable="false"/>
-> 	</VBox>
-> </mvc:View>		
+>   <VBox>
+>     <TextArea
+>       id="DescriptionTextArea"
+>       value="{to_ProductTextInOriginalLang/Description}"
+>       width="30%"
+>       editable="false"
+>     />
+>   </VBox>
+> </mvc:View>
+> 	
 > ```
 
 
@@ -84,34 +84,34 @@ To make the section title translatable, add the text to the `i18n` file as follo
 
 
 
-### Step 3: Add Extension Definition to the `manifest.json` File
+### Step 3: Add Extension Definition to the `manifest.json` file
 
 To add the extension definition to the `manifest.json` file, use a `viewExtension`.
 
 In the following example, the custom section is placed after the `GeneralInformation` section:
 
 > ### Sample Code:  
-> manifest.json
+> `manifest.json`
 > 
 > ```
 > 
-> 	"extends": {
-> 			"extensions": {
-> 				"sap.ui.viewExtensions": {
-> 					"sap.suite.ui.generic.template.ObjectPage.view.Details": {
-> 						"AfterFacet|SEPMRA_C_PD_Product|GeneralInformation": {
-> 							"className": "sap.ui.core.mvc.View",
-> 							"viewName": "ManageProducts.ext.view.DescriptionBreakout",
-> 							"type": "XML",
-> 							"sap.ui.generic.app": {
-> 								"title": "{{ProductDescription}}"
-> 							}
-> 						}
-> 					}
-> 				}
-> 			}
-> 		},
-> 			
+> "extends": {
+>   "extensions": {
+>     "sap.ui.viewExtensions": {
+>       "sap.suite.ui.generic.template.ObjectPage.view.Details": {
+>         "AfterFacet|SEPMRA_C_PD_Product|GeneralInformation": {
+>           "className": "sap.ui.core.mvc.View",
+>           "viewName": "ManageProducts.ext.view.DescriptionBreakout",
+>           "type": "XML",
+>           "sap.ui.generic.app": {
+>             "title": "{{ProductDescription}}"
+>           }
+>         }
+>       }
+>     }
+>   }
+> }
+> 	
 > ```
 
 To add multiple sections, the extension name needs to contain a key after the annotation name in the extension entry, for example,`"BeforeFacet|SEPMRA_C_PD_Product|to_ProductText::com.sap.vocabularies.UI.v1.LineItem|1"`, as well as a `key` object in `sap.ui.generic.app`.
@@ -119,47 +119,48 @@ To add multiple sections, the extension name needs to contain a key after the an
 > ### Sample Code:  
 > ```
 > "extends": {
->     "extensions": {
->         "sap.ui.viewExtensions": {
->           "sap.suite.ui.generic.template.ObjectPage.view.Details": {
->             "BeforeFacet|SEPMRA_C_PD_Product|to_ProductText::com.sap.vocabularies.UI.v1.LineItem": {
->                 "className": "sap.ui.core.mvc.View",
->                 "viewName": "ManageProducts.ext.view.BeforeFacetTest",
->                 "type": "XML",
->                 "sap.ui.generic.app": {
->                     "title": "Facet Breakout before Product Text LineItem"
->                 }
->             },
->             "BeforeFacet|SEPMRA_C_PD_Product|to_ProductText::com.sap.vocabularies.UI.v1.LineItem|1": {
->                 "className": "sap.ui.core.mvc.View",
->                 "viewName": "ManageProducts.ext.view.BeforeFacetTestNew",
->                 "type": "XML",
->                 "sap.ui.generic.app": {
->                     "title": "Facet Breakout before Product Text LineItem",
->                     "key": "1"
->                 }
->             },
->             "AfterFacet|SEPMRA_C_PD_Product|to_Supplier::com.sap.vocabularies.UI.v1.Identification": {
->                 "className": "sap.ui.core.mvc.View",
->                 "viewName": "ManageProducts.ext.view.AfterFacetTest",
->                 "type": "XML",
->                 "sap.ui.generic.app": {
->                     "title": "Facet Breakout after Supplier Identification"
->                 }
->             },
->             "AfterFacet|SEPMRA_C_PD_Product|to_Supplier::com.sap.vocabularies.UI.v1.Identification|1": {
->                "className": "sap.ui.core.mvc.View",
->                "viewName": "ManageProducts.ext.view.AfterFacetTest",
->                "type": "XML",
->                "sap.ui.generic.app": {
->                     "title": "Facet Breakout after Supplier Identification",
->                     "key": 1
->                 }
->             }
+>   "extensions": {
+>     "sap.ui.viewExtensions": {
+>       "sap.suite.ui.generic.template.ObjectPage.view.Details": {
+>         "BeforeFacet|SEPMRA_C_PD_Product|to_ProductText::com.sap.vocabularies.UI.v1.LineItem": {
+>           "className": "sap.ui.core.mvc.View",
+>           "viewName": "ManageProducts.ext.view.BeforeFacetTest",
+>           "type": "XML",
+>           "sap.ui.generic.app": {
+>             "title": "Facet Breakout before Product Text LineItem"
+>           }
+>         },
+>         "BeforeFacet|SEPMRA_C_PD_Product|to_ProductText::com.sap.vocabularies.UI.v1.LineItem|1": {
+>           "className": "sap.ui.core.mvc.View",
+>           "viewName": "ManageProducts.ext.view.BeforeFacetTestNew",
+>           "type": "XML",
+>           "sap.ui.generic.app": {
+>             "title": "Facet Breakout before Product Text LineItem",
+>             "key": "1"
+>           }
+>         },
+>         "AfterFacet|SEPMRA_C_PD_Product|to_Supplier::com.sap.vocabularies.UI.v1.Identification": {
+>           "className": "sap.ui.core.mvc.View",
+>           "viewName": "ManageProducts.ext.view.AfterFacetTest",
+>           "type": "XML",
+>           "sap.ui.generic.app": {
+>             "title": "Facet Breakout after Supplier Identification"
+>           }
+>         },
+>         "AfterFacet|SEPMRA_C_PD_Product|to_Supplier::com.sap.vocabularies.UI.v1.Identification|1": {
+>           "className": "sap.ui.core.mvc.View",
+>           "viewName": "ManageProducts.ext.view.AfterFacetTest",
+>           "type": "XML",
+>           "sap.ui.generic.app": {
+>             "title": "Facet Breakout after Supplier Identification",
+>             "key": 1
 >           }
 >         }
+>       }
 >     }
+>   }
 > }
+> 
 > ```
 
 
@@ -214,26 +215,33 @@ In the editor of your choice, open the folder structure of the project where you
 
     > ### Sample Code:  
     > ```xml
-    > <core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:l="sap.ui.layout">
-    > 	<l:VerticalLayout core:require="{handler: 'SalesOrder/ext/CustomColumn'}">
-    > 		<Button text="Custom Button" press="handler.buttonPressed" />
-    > 	</l:VerticalLayout>
+    > <core:FragmentDefinition
+    >   xmlns:core="sap.ui.core"
+    >   xmlns="sap.m"
+    >   xmlns:l="sap.ui.layout">
+    > 
+    >   <l:VerticalLayout core:require="{handler: 'SalesOrder/ext/CustomColumn'}">
+    >     <Button text="Custom Button" press="handler.buttonPressed" />
+    >   </l:VerticalLayout>
+    > 
     > </core:FragmentDefinition>
+    > 
     > ```
 
 4.  If a custom handler is required, you must define it in the XML fragment using `core:require` \(see the example of `VerticalLayout` in the sample code above\).
 
     > ### Sample Code:  
     > ```
-    > sap.ui.define(["sap/m/MessageBox"], function(MessageBox) {
-    >     "use strict";
+    > sap.ui.define(["sap/m/MessageBox"], function (MessageBox) {
+    >   "use strict";
     > 
-    >     return {
-    >         buttonPressed: function() {
-    >             MessageBox.show("Button pressed!");
-    >         }
-    >     };
+    >   return {
+    >     buttonPressed: function () {
+    >       MessageBox.show("Button pressed!");
+    >     }
+    >   };
     > });
+    > 
     > 
     > ```
 
@@ -261,44 +269,55 @@ To add the extension definition to the `manifest.json` file, use a `template`.
 The extension appears within the object page before or after the defined section. By default, it is the last section.
 
 > ### Sample Code:  
-> ```json
+> ```
 > {
-> 	"sap.ui5": {
-> 		"routing": {
-> 			"targets": {
-> 				"SalesOrderManageObjectPage": {
-> 					"options": {
-> 						"settings": {
-> 							"content": {
-> 								"body": {
-> 									"sections": {
-> 										"customSection": {
-> 											"type": "XMLFragment",
-> 											"template": "SalesOrder.ext.CustomSection",
-> 											"title": "{i18n>customSection}",
-> 											"position": {
-> 												"placement": "Before",
-> 												"anchor": "SalesOrderItems"
-> 											}
-> 										},
-> 										"anotherCustomSection": {
-> 											"type": "XMLFragment",
-> 											"template": "SalesOrder.ext.CustomFieldForm",
-> 											"title": "Field Form",
-> 											"position": {
-> 												"placement": "After",
-> 												"anchor": "customSection"
-> 											}
-> 										}
-> 									}
-> 								}
-> 							}
-> 						}
-> 					}
-> 				}
-> 			}
-> 		}
-> 	}
+>    "sap.ui5": {
+>       "routing": {
+>          "targets": {
+>             "SalesOrderManageObjectPage": {
+>                "options": {
+>                   "settings": {
+>                      "content": {
+>                         "body": {
+>                            "sections": {
+>                               "customSection": {
+>                                  "template": "SalesOrder.custom.CustomSection",
+>                                  "title": "{i18n>customSection}",
+>                                  "position": {
+>                                     "placement": "Before",
+>                                     "anchor": "SalesOrderItems"
+>                                  }
+>                               },
+>                               "anotherCustomSection": {
+>                                  "title": "Multiple Subsections",
+>                                  "subSections": {
+>                                      "firstSubSectionKey": {
+>                                          "title": "First Subsection",
+>                                          "template": "SalesOrder.custom.CustomFieldForm"
+>                                      },
+>                                      "secondSubSectionKey": {
+>                                          "title": "Second Subsection",
+>                                          "template": "SalesOrder.custom.CustomFieldForm2",
+>                                          "position": {
+>                                              "placement": "After",
+>                                              "anchor": "firstSubSectionKey"
+>                                          }
+>                                      }
+>                                  }
+>                                  "position": {
+>                                     "placement": "After",
+>                                     "anchor": "customSection"
+>                                  }
+>                               }
+>                            }
+>                         }
+>                      }
+>                   }
+>                }
+>             }
+>          }
+>       }
+>    }
 > }
 > ```
 
@@ -331,29 +350,29 @@ For sections that use standard building blocks within a layout, you can define a
 > Manifest setting for merging title within custom sections
 > 
 > ```
-> "routing":{
->    "targets":{
->       "SalesOrderManageObjectPage":{
->          "options":{
->             "settings":{
->                "sectionLayout": "Page",
->                "content":{
->                   "body":{
->                      "sections":{
->                         "customSectionTableHBox":{
->                            "type": "XMLFragment",
->                            "template": "SalesOrder.custom.CustomSectionBuildingBlockTableHBox",
->                            "title": "HBox Table",
->                            "onSectionLoaded": "SalesOrder.custom.CustomSection.callShowSectionTitle"
->                         }
->                      }
->                   }
->                }
+> "routing": {
+>   "targets": {
+>     "SalesOrderManageObjectPage": {
+>       "options": {
+>         "settings": {
+>           "sectionLayout": "Page",
+>           "content": {
+>             "body": {
+>               "sections": {
+>                 "customSectionTableHBox": {
+>                   "template": "SalesOrder.custom.CustomSectionBuildingBlockTableHBox",
+>                   "title": "HBox Table",
+>                   "onSectionLoaded": "SalesOrder.custom.CustomSection.callShowSectionTitle"
+>                 }
+>               }
 >             }
->          }
+>           }
+>         }
 >       }
->    }
+>     }
+>   }
 > }
+> 
 > ```
 
 > ### Sample Code:  

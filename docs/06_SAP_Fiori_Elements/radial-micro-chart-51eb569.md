@@ -8,8 +8,7 @@ The chart consists of a colored radial bar with a percentage value inside.
 
 ![](images/Radial_Micro_Chart_551f7f3.png)
 
-> ### Note:  
-> For more information about this chart type, see [Samples](https://ui5.sap.com/1.82.5/#/entity/sap.suite.ui.microchart.RadialMicroChart).
+For more information about this chart type, see [Samples](https://ui5.sap.com/1.82.5/#/entity/sap.suite.ui.microchart.RadialMicroChart).
 
 
 

@@ -51,7 +51,7 @@ Description
 </th>
 </tr>
 <tr>
-<td valign="top" rowspan="7">
+<td valign="top" rowspan="8">
 
 `aggregations: <object>`
 
@@ -83,7 +83,7 @@ Describes the aggregations of the element.
 </td>
 </tr>
 <tr>
-<td valign="top" rowspan="6">
+<td valign="top" rowspan="7">
 
 `<aggregationName> : <object>`
 
@@ -156,7 +156,7 @@ For more information, see [Aggregation domRef Property](aggregation-domref-prope
 </td>
 </tr>
 <tr>
-<td valign="top" rowspan="3">
+<td valign="top" rowspan="4">
 
 `actions: <object>`
 
@@ -178,7 +178,7 @@ Describes the actions that can be applied to the element.
 </td>
 </tr>
 <tr>
-<td valign="top" rowspan="2">
+<td valign="top" rowspan="3">
 
 `move: <object | function | string>`
 
@@ -203,6 +203,18 @@ Provides or computes the change type.
 <td valign="top">
 
 Change type for the *move* action.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`additionalInfoKey: <string>` \(optional\)
+
+</td>
+<td valign="top">
+
+Provides additional information to be displayed as a tooltip in the context menu.
 
 </td>
 </tr>

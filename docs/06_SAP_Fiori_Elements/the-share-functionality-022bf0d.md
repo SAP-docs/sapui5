@@ -59,6 +59,139 @@ During tile creation, you can change the tile type from dynamic to static using 
 
 ## Additional Features in SAP Fiori Elements for OData V4
 
+The following additional options are part of the *Share* functionality:
+
+-   *Print*
+
+    When an end user chooses this option, the custom handler function is executed to print the application page.
+
+-   *Export to Spreadsheet*
+
+    When an end user chooses this option, the custom handler function is executed to export the application page to a spreadsheet.
+
+-   *Export to CSV*
+
+    When an end user chooses this option, the custom handler function is executed to export the application page to a `CSV` file.
+
+-   *Export to PDF*
+
+    When an end user chooses this option, the custom handler function is executed to export the application page to a `PDF` file.
+
+
+
+<table>
+<tr>
+<th valign="top">
+
+Share Options
+
+</th>
+<th valign="top">
+
+Properties
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+*Print*
+
+</td>
+<td valign="top">
+
+`print`
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+*Export to Spreadsheet*
+
+</td>
+<td valign="top">
+
+`exportToSpreadsheet`
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+*Export to CSV*
+
+</td>
+<td valign="top">
+
+`exportToCSV`
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+*Export to PDF*
+
+</td>
+<td valign="top">
+
+`exportToPDF`
+
+</td>
+</tr>
+</table>
+
+To display these options, the `press` setting must be defined. You can do this at the application or page level.
+
+The following sample code shows how the *Print* option is displayed by defining the `press` setting at the application level:
+
+> ### Sample Code:  
+> Application-level settings in the `manifest.json` file
+> 
+> ```
+> "sap.fe": {
+>     "app": {
+>         "share": {
+>             "print": {
+>                 "press": SalesOrder.ext.CustomHandler.print
+>             }
+>         },
+>         ...
+>     }
+> }
+> ```
+
+The following sample code shows how the *Export to Spreadsheet* option is only displayed in the list report by defining the `press` setting at the page level:
+
+> ### Sample Code:  
+> Page-level settings in the `manifest.json` file
+> 
+> ```
+> "sap.ui5": {
+>     "routing": {
+>         "targets": {
+>             "SalesOrderManageList": {
+>                 "type": "Component",
+>                 "id": "SalesOrderManageList",
+>                 "name": "sap.fe.templates.ListReport",
+>                 "options": {
+>                     "settings": {
+>                         "share": {
+>                             "exportToSpreadsheet": {
+>                                 "press": "SalesOrder.ext.CustomHandler.export"
+>                             }
+>                             …
+>                         }
+>                     }
+>                 },
+>                 …
+>             },
+>     }
+> }
+> 
+> ```
+
 
 
 ### Send Email
@@ -70,32 +203,38 @@ For more information about the `controllerextensions.Share` API, see the [API Re
 Make the following changes in the `manifest.json` file:
 
 > ### Sample Code:  
+> `manifest.json`
+> 
 > ```
 > "sap.ui5": {
->         "extends": { 
->             "extensions": {
->                 "sap.ui.controllerExtensions": {
->                     "sap.fe.templates.ObjectPage.ObjectPageController": {
->                         "controllerName": "SalesOrder.ext.OPExtend"
->                     }
+>     "extends": { 
+>         "extensions": {
+>             "sap.ui.controllerExtensions": {
+>                 "sap.fe.templates.ObjectPage.ObjectPageController": {
+>                     "controllerName": "SalesOrder.ext.OPExtend"
 >                 }
 >             }
->         },
+>         }
+>     },
+> }
 > ```
 
 Make the following changes in the `OPExtend.controller.js` file:
 
 > ### Sample Code:  
+> `OPExtend.controller.js`
+> 
 > ```
-> sap.ui.define(["sap/ui/core/mvc/ControllerExtension"], function(ControllerExtension) {
+> sap.ui.define(["sap/ui/core/mvc/ControllerExtension"], 
+>     function(ControllerExtension) {
 >         "use strict";
 >         return ControllerExtension.extend("SalesOrder.ext.OPExtend", {
 >             // this section allows to extend lifecycle hooks or override public methods of the base controller
 >             override: {
->                onInit: function() {},
->                share: {
+>                 onInit: function() {},
+>                 share: {
 >                     adaptShareMetadata: function(oShareMetadata) {
->                         oShareMetadata.email.title = "test email subject"; // customise or change email subject
+>                         oShareMetadata.email.title = "test email subject"; // customize or change email subject
 >                         return oShareMetadata;
 >                     }
 >                 }
@@ -110,8 +249,6 @@ Make the following changes in the `OPExtend.controller.js` file:
 ### Hiding Specific *Share* Menu Options
 
 You can control the visibility of the share options displayed in the *Share* menu. You cannot hide the *Save as Tile* option, as it is always visible to end users. However, you can control the visibility of other options by configuring the corresponding settings in the `manifest.json` file.
-
-****
 
 
 <table>
@@ -170,20 +307,20 @@ This configuration can be done at both application level and page level. If the 
 In the following sample code, the *Share: Microsoft Teams* option is hidden by setting `showMsTeamsOptions` to `false`, whereas the `showSendEmail` setting depends on the expression value, which can be either `true` or `false`.
 
 > ### Sample Code:  
-> Application-level settings
+> Application-level settings in the `manifest.json` file
 > 
 > ```
 > "sap.fe": {
->         "app": {
->             "share": {
->                 "showSendEmail": "{= !${isVerified} }",
->                 "teams": {
->                     "showMsTeamsOptions": false
->                 }
->             },
->             ...
->         }
+>     "app": {
+>         "share": {
+>             "showSendEmail": "{= !${isVerified} }",
+>             "teams": {
+>                 "showMsTeamsOptions": false
+>             }
+>         },
+>         ...
 >     }
+> }
 > ```
 
 The following sample code shows you how the share options' visibility setting is configured at page level:
@@ -191,50 +328,49 @@ The following sample code shows you how the share options' visibility setting is
 The *Send E-mail* option is only hidden in the list report. The *Share: Microsoft Teams* option is displayed on the object page but is conditionally shown in the list report.
 
 > ### Sample Code:  
-> Page-level settings
+> Page-level settings in the `manifest.json` file
 > 
 > ```
 > "sap.ui5": {
->         "routing": {
->             "targets": {
->                 "SalesOrderManageList": {
->                     "type": "Component",
->                     "id": "SalesOrderManageList",
->                     "name": "sap.fe.templates.ListReport",
->                     "options": {
->                         "settings": {
->                             "share": {
->                              "showSendEmail": false,
->                                 "teams": {
->                                     "showMsTeamsOptions": "{= ${Delivered} }"
->                                 },
->                                 …
->                             }
->                         }
->                     },
->                     …
->                 },
->                 "SalesOrderManageObjectPage": {
->                     "type": "Component",
->                     "id": "SalesOrderManageObjectPage",
->                     "name": "sap.fe.templates.ObjectPage",
->                     "options": {
->                         "settings": {
->                             "share": {
->                                 "teams": {
->                                     "showMsTeamsOptions": true
->                                 },
+>     "routing": {
+>         "targets": {
+>             "SalesOrderManageList": {
+>                 "type": "Component",
+>                 "id": "SalesOrderManageList",
+>                 "name": "sap.fe.templates.ListReport",
+>                 "options": {
+>                     "settings": {
+>                         "share": {
+>                             "showSendEmail": false,
+>                             "teams": {
+>                                 "showMsTeamsOptions": "{= ${Delivered} }"
 >                             },
 >                             …
 >                         }
->                     },
->                     …
+>                     }
 >                 },
 >                 …
->             }
+>             },
+>             "SalesOrderManageObjectPage": {
+>                 "type": "Component",
+>                 "id": "SalesOrderManageObjectPage",
+>                 "name": "sap.fe.templates.ObjectPage",
+>                 "options": {
+>                     "settings": {
+>                         "share": {
+>                             "teams": {
+>                                 "showMsTeamsOptions": true
+>                             },
+>                         },
+>                         …
+>                     }
+>                 },
+>                 …
+>             },
+>             …
 >         }
 >     }
-> 
+> }
 > 
 > ```
 
@@ -291,7 +427,7 @@ If the application developer does not define the annotations for the semantic ke
 If, however, the application developer has defined semantic keys, the URL only contains semantic keys. In this case, end user B will be able to open the shared URL, irrespective of whether end user A shares the active copy \(display mode\) or the draft copy \(edit mode\). If end user A shares the draft copy, then end user B sees the corresponding active copy of the object.
 
 > ### Note:  
-> Semantic bookmarking is currently not supported in the following cases:
+> Semantic bookmarking isn't supported in the following cases:
 > 
 > -   for subobject pages
 > 

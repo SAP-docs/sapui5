@@ -48,7 +48,7 @@ Description
 </th>
 </tr>
 <tr>
-<td valign="top" rowspan="12">
+<td valign="top" rowspan="13">
 
 `actions: <object>` \(mandatory\)
 
@@ -75,7 +75,7 @@ Describes the actions that can be applied to the element.
 </td>
 </tr>
 <tr>
-<td valign="top" rowspan="11">
+<td valign="top" rowspan="12">
 
 `"annotation": <object> | <function>`
 
@@ -97,7 +97,7 @@ Provides or computes the design-time metadata specific to the *annotation* actio
 </td>
 </tr>
 <tr>
-<td valign="top" rowspan="10">
+<td valign="top" rowspan="11">
 
 `<key> | <object>` 
 
@@ -133,7 +133,19 @@ Provides the value of `changeType`from the previous step.
 </td>
 <td valign="top">
 
-The title that should be shown in the context menu entry.
+The i18n key for the title that should be shown in the context menu entry, or a function that returns the key. The text is retrieved from the library message bundle.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`additionalInfoKey: <string>` \(optional\)
+
+</td>
+<td valign="top">
+
+The i18n key identifies the text that provides additional information for display as a tooltip in the context menu. The library message bundle retrieves this text.
 
 </td>
 </tr>
@@ -273,7 +285,7 @@ Here is an example:
 >             annotation: {
 >                 annotation1: {
 >                     changeType: "textArrangement_Test",
->                     title: () => "Change Text Arrangement",
+>                     title: () => "CHANGE_TEXT_ARRANGEMENT",
 >                     type: AnnotationTypes.ValueListType,
 >                     delegate: oTestDelegate
 >                 },

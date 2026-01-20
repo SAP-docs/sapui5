@@ -2,25 +2,37 @@
 
 # View Modification
 
-For modifying views, control properties of standard views can be changed.
+View modification lets you change specific properties of controls in standard views without altering the structure of the view itself.
 
-The view modification is currently restricted to the `visible` property of controls, meaning that controls can be hidden in the custom application. The controls must have the `visible` property and the control's ID must be defined in the view. The view name together with the control ID uniquely determines the control in the standard application.
+Currently, view modification is restricted to the `visible` property of controls, meaning that you can hide controls in your custom application.
 
-View modification is available for XML views, JS views and HTML views. Below is an example that explains how a view modification works. The first code snippet describes the `Sub3.view.xml` view in the delivered standard application.
+To modify a control, it must meet the following requirements:
 
-```js
-<mvc:View xmlns="sap." xmlns:mvc="sap.ui.core.mvc">
-    <TextView text="SAP View 'Sub3' - the text after this one is hidden by customizing: "></TextView>
-    <TextView id="someCustomizableTextControl" text="This text is made invisible by customization"></TextView>  
+-   The control must have a `visible` property.
+-   The control must have a stable ID defined in the view.
+-   The combination of view name and control ID must uniquely identifiy the control.
+
+View modification works across different view types, including XML views and typed views.
+
+
+
+## Example
+
+Here's an example for a view named `SampleView.view.xml` in the standard application:
+
+```
+<mvc:View xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc">
+    <Text text="SAP View 'SampleView' - the text after this one is hidden by customizing: "></Text>
+    <Text id="someCustomizableTextControl" text="This text is made invisible by customization"></Text>  
 </mvc:View>
 ```
 
-The following code snippet describes the extensions for the control `someCustomizableTextControl` with the `visible` property set to `false`.
+To hide the second `Text` control with the `someCustomizableTextControl` ID, you would configure the view modification in your component's `manifest.json` like this:
 
-```js
+```
 extensions: {  
     "sap.ui.viewModifications": {
-        "samples.components.ext.sap.Sub3": {
+        "samples.components.ext.sap.SampleView": {
             "someCustomizableTextControl": {
                 "visible": false
             }
@@ -28,4 +40,17 @@ extensions: {
     }
 }
 ```
+
+The view modification configuration follows this structure:
+
+-   **`sap.ui.viewModifications`**: This subsection of `sap.ui5/extensions` identifies this as a view modification.
+
+-   **`samples.components.ext.sap.SampleView`**: The fully qualified name of the view you want to modify.
+
+-   **`someCustomizableTextControl`**: The ID of the specific control you want to modify.
+
+-   **`"visible": false`**: The property modification. In this case, it hides the control.
+
+
+When the application loads, SAPUI5 automatically applies these modifications, making the specified control invisible without requiring any changes to the original view definition.
 

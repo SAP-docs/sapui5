@@ -37,7 +37,7 @@ Always define the libraries you use in the manifest and remove all libraries tha
 
 In the JavaScript files of your app, define all dependencies to SAPUI5 framework classes and app resources via `sap.ui.define`. If you have unused dependencies, you should remove them right away.
 
-The UI5 Tooling can then create a "cleaned-up" version of your app that only contains the resources you really need. The so-called application preload will greatly speed up the initial load time of your app.
+UI5 CLI can then create a "cleaned-up" version of your app that only contains the resources you really need. The so-called application preload will greatly speed up the initial load time of your app.
 
 ```json
 sap.ui.define([
@@ -52,7 +52,7 @@ sap.ui.define([
 -   Find out more:
     -   [Modules and Dependencies](../04_Essentials/modules-and-dependencies-91f23a7.md)
     -   [https://help.sap.com/viewer/825270ffffe74d9f988a0f0066ad59f0/Cloud/en-US/dfb26ef028624cf486a8bbb0bfd459ff.html](https://help.sap.com/viewer/825270ffffe74d9f988a0f0066ad59f0/Cloud/en-US/dfb26ef028624cf486a8bbb0bfd459ff.html)
-    -   [UI5 Tooling](https://sap.github.io/ui5-tooling/)
+    -   [UI5 CLI](https://ui5.github.io/cli/)
 
 
 

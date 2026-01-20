@@ -32,7 +32,7 @@ You can replace the standard navigation from the object page with your own navig
     The following sample code shows how an external navigation or outbound navigation is added using the SAP Fiori launchpad.
 
     > ### Sample Code:  
-    > manifest.json
+    > `manifest.json`
     > 
     > ```
     > 
@@ -61,7 +61,7 @@ You can replace the standard navigation from the object page with your own navig
 2.  Register your extension in the `manifest.json` file.
 
     > ### Sample Code:  
-    > manifest.json
+    > `manifest.json`
     > 
     > ```
     > "extends": {
@@ -126,7 +126,7 @@ You can selectively change the target when chevron navigation is triggered from 
 1.  Add an outbound navigation configuration pointing to the target app in the `manifest.json` file.
 
     > ### Sample Code:  
-    > manifest.json
+    > `manifest.json`
     > 
     > ```
     > sap.app": {
@@ -154,7 +154,7 @@ You can selectively change the target when chevron navigation is triggered from 
 2.  Configure the extension with the controller for the object page in the `manifest.json` file.
 
     > ### Sample Code:  
-    > manifest.json
+    > `manifest.json`
     > 
     > ```
     > "sap.ui5": {
@@ -202,4 +202,13 @@ You can selectively change the target when chevron navigation is triggered from 
 
     The `onBeforeNavigation` extension method is also invoked when an end user clicks *Apply* to save the changes or *Close* to exit a draft object.
 
+
+<a name="concept_cmq_pks_5fc"/>
+
+<!-- concept\_cmq\_pks\_5fc -->
+
+### 
+
+> ### Note:  
+> When replacing the standard navigation for any record by configuring it to navigate to an external application or suppressing the navigation option, you must implement the `determineContextNavigationType()` method. This ensures that SAP Fiori elements for OData V4 recognizes this special navigation flow configured for such contexts and enables the correct behavior while using paginator buttons in the detailed view. Contexts that return `ContextNavigationType.None` or `ContextNavigationType.External` are skipped when using paginators. For information about the `determineContextNavigationType` method, see the [API Reference](https://ui5.sap.com/#/api/sap.fe.core.controllerextensions.Paginator%23methods/determineContextNavigationType).
 

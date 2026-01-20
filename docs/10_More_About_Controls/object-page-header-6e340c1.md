@@ -60,7 +60,9 @@ To populate the header content area, provide an array of desired controls to the
 
 ## Header Features
 
-**Overview of the header features \(all being ObjectPageLayout properties\):**
+The following table represents an overview of the header features all of which are `ObjectPageLayout` properties.
+
+**Overview of the Header Features**
 
 
 <table>
@@ -131,7 +133,7 @@ When the feature is enabled, arrow buttons below the Header Content appear, the 
 **Related Information**  
 
 
-[is intended for experimentation only is intended for experimentation onlyAPI Reference: `sap.uxap.ObjectPageDynamicHeaderTitle`](https://ui5.sap.com/#/api/sap.uxap.ObjectPageDynamicHeaderTitle)
+[API Reference: `sap.uxap.ObjectPageDynamicHeaderTitle`](https://ui5.sap.com/#/api/sap.uxap.ObjectPageDynamicHeaderTitle)
 
 [API Reference: `sap.uxap.ObjectPageLayout`](https://ui5.sap.com/#/api/sap.uxap.ObjectPageLayout)
 

@@ -4,8 +4,6 @@
 
 One OData V4 model instance can only cover one OData service. This section describes the creation of a model instance in more detail.
 
-The OData V4 model is primarily designed for OData V4 services. Nevertheless, OData V2 services may be used through an adapter as well. For more information see: [Consuming OData V2 Services with the OData V4 Model](consuming-odata-v2-services-with-the-odata-v4-model-365bdbd.md)
-
 When creating an OData V4 model instance, the only parameter you actually need is a map. This map must contain at least the `serviceUrl` property. For more information, see the [sap.ui.model.odata.v4.ODataModel constructor](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataModel/constructor) API documentation in the Demo Kit.
 
 **OData V4 model instantiation:**
@@ -23,7 +21,7 @@ sap.ui.define(["sap/ui/model/odata/v4/ODataModel"], function (ODataModel) {
 
 ## OData Custom Query Options
 
-An OData service accepts query options placed in the service URL query part, as explained on the URL conventions page [OData Version 4.0 Part 2: URL Conventions](http://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part2-url-conventions.html) in chapter 2 *URL Components*. The OData V4 model accepts OData custom query options only as explained in section 5.2 *Custom Query Options* of the URL conventions page; you must not provide OData system query options \(starting with "$"\) or OData parameter aliases \(starting with "@"\) at model level, see sections 5.1 *System Query Options* and 5.3 *Parameter Aliases* in the URL conventions page.
+An OData service accepts query options placed in the service URL query part, as explained on the URL conventions page [OData Version 4.01 Part 2: URL Conventions, 2 URL Components](https://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part2-url-conventions.html#_Toc31360924) in chapter 2 *URL Components*. The OData V4 model accepts OData custom query options only as explained in section 5.2 *Custom Query Options* of the URL conventions page; you must not provide OData system query options \(starting with "$"\) or OData parameter aliases \(starting with "@"\) at model level, see sections 5.1 *System Query Options* and 5.3 *Parameter Aliases* in the URL conventions page.
 
 > ### Note:  
 > Note that it's possible to specify certain system query options for OData V4 model bindings. For more information, see [Bindings](bindings-54e0ddf.md).
@@ -179,7 +177,11 @@ Some services do not support an "X-CSRF-Token" request header value "Fetch", for
 
 The OData model processes some of the response headers, namely:
 
--   `DataServiceVersion` \(only when consuming an OData V2 service\),
+-   `DataServiceVersion` \(only when consuming an OData V2 service; **deprecated**\),
+
+    > ### Caution:  
+    > The OData V2 service consumption with the OData V4 model is deprecated. We recommend migrating your service to OData V4.
+
 -   `Date`,
 -   `ETag`,
 -   `OData-Version`,
@@ -195,7 +197,7 @@ Some SAP applications will also require the processing of `SAP-ContextId`, `SAP-
 
 [Constructor: sap.ui.model.odata.v4.ODataModel](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataModel%23constructor)
 
-[OData Version 4.0 Part 2: URL Conventions](http://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part2-url-conventions.html)
+[OData Version 4.01 Part 2: URL Conventions](https://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part2-url-conventions.html)
 
 [Bindings](bindings-54e0ddf.md "Bindings connect SAPUI5 view elements to model data, allowing changes in the model to be reflected in the view element and vice versa.")
 

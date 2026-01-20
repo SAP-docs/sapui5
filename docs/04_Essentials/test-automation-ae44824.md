@@ -11,5 +11,5 @@ SAPUI5 does not provide features for any specific test runner but rather aims fo
 
 [ui5-test-runner](https://github.com/ArnaudBuchholz/ui5-test-runner)
 
-[wdio-qunit-service](https://github.com/github.com/mauriciolauffer/wdio-qunit-service)
+[wdio-qunit-service](https://github.com/mauriciolauffer/wdio-qunit-service)
 

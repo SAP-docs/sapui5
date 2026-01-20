@@ -14,28 +14,29 @@ In SAP Fiori elements for OData V4, you can also create KPI tags that do not req
 > `manifest.json`
 > 
 > ```
-> "targets": {
->         "mainPage": {
->                 "type": "Component",
->                 "id": "Default",
->                 "name": "sap.fe.templates.ListReport",
->                         "options": {
->                                 "settings": {
->                                         "contextPath": "/RootEntity",
->                                         "variantManagement": "None",
->                                         "initialLoad": true,
->                                         "keyPerformanceIndicators": {
->                                                 "myKPITag": {
->                                                     "template": "sap.fe.core.fpmExplorer.customKPIContent.CustomKPITag"
->                                                 },
->                                                 "myKPIWithPress": {
->                                                     "template": "sap.fe.core.fpmExplorer.customKPIContent.CustomKPITagWithPress"
->                                                 }
->                                         }
->                                 }
->                         }
->                 }
+> {
+>   "targets": {
+>     "mainPage": {
+>       "type": "Component",
+>       "id": "Default",
+>       "name": "sap.fe.templates.ListReport",
+>       "options": {
+>         "settings": {
+>           "contextPath": "/RootEntity",
+>           "variantManagement": "None",
+>           "initialLoad": true,
+>           "keyPerformanceIndicators": {
+>             "myKPITag": {
+>               "template": "sap.fe.core.fpmExplorer.customKPIContent.CustomKPITag"
+>             },
+>             "myKPIWithPress": {
+>               "template": "sap.fe.core.fpmExplorer.customKPIContent.CustomKPITagWithPress"
+>             }
+>           }
 >         }
+>       }
+>     }
+>   }
 > }
 > 
 > ```
@@ -46,16 +47,21 @@ You can use any fragment, but we recommend using the KPI building block to use t
 > Building block
 > 
 > ```
-> <core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:macros="sap.fe.macros">
->         <macros:KPITag
->                 number="0"
->                 unit="Days"
->                 status="Error"
->                 showIcon="true"
->                 press=".extension.sap.fe.core.fpmExplorer.customKPIContent.LRExtend.onKPIPressed"
->         />
+> <core:FragmentDefinition 
+>   xmlns="sap.m" 
+>   xmlns:core="sap.ui.core" 
+>   xmlns:macros="sap.fe.macros">
+>   
+>   <macros:KPITag
+>     number="0"
+>     unit="Days"
+>     status="Error"
+>     showIcon="true"
+>     press=".extension.sap.fe.core.fpmExplorer.customKPIContent.LRExtend.onKPIPressed"
+>   />
+>   
 > </core:FragmentDefinition>
 > ```
 
-Check out our live example in the flexible programming model explorer at [Custom KPI Tags in List Report - Overview](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/customElements/CustomKPITags/customKPIContent).
+For more information and live examples, see the SAP Fiori development portal at [Standard Floorplans - Extensions - Extensions for List-Based Pages - Custom KPI Tag](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/topic/floorplanListReport/customKPI).
 

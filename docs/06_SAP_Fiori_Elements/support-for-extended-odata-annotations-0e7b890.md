@@ -5,7 +5,7 @@
 SAP Fiori elements for OData V4 supports OData IF-Expressions for specific annotations.
 
 > ### Note:  
-> This topic is currently only applicable to SAP Fiori elements for OData V4.
+> This topic is only applicable to SAP Fiori elements for OData V4.
 
 The following annotations are supported:
 

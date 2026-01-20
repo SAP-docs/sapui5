@@ -28,7 +28,7 @@ You can view and download all files at [Walkthrough - Step 38](https://ui5.sap.c
 
 ## package.json
 
-We introduce a new npm script called "build", which executes a UI5 Tooling build. As command-line arguments, we add `-all` to also build the framework dependencies \(e.g. `sap.ui.core`, etc.\) and `--clean-dest` to clear any output of a previous build from the `dist` folder before creating the new build result.
+We introduce a new npm script called "build", which executes a UI5 CLI build. As command-line arguments, we add `-all` to also build the framework dependencies \(e.g. `sap.ui.core`, etc.\) and `--clean-dest` to clear any output of a previous build from the `dist` folder before creating the new build result.
 
 ```
 {
@@ -99,5 +99,5 @@ You've completed the walkthrough, good job! You should now be familiar with all 
 **Related Information**  
 
 
-[UI5 Tooling documentation](https://sap.github.io/ui5-tooling/stable/)
+[UI5 CLI documentation](https://ui5.github.io/cli/stable/)
 

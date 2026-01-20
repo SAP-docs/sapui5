@@ -15,7 +15,7 @@ Using components as targets in routing presents another challenge: When multiple
 
 ## Configure a Component as Routing Target
 
-A target in SAPUI5 routing can load either a view, or a component. To load a component, you need to define the component in the `componentUsages` section of the owner component's `manifest.json`, see [Using and Nesting Components](using-and-nesting-components-346599f.md).
+A target in SAPUI5 routing can load either a view, or a component. To load a component, you need to define the component in the `componentUsages` section of the owner component's `manifest.json`, see [Component Instantiation Guide](component-instantiation-guide-346599f.md).
 
 > ### Note:  
 > If the configuration for a target can only be added at runtime, SAPUI5 provides APIs to add a target dynamically at runtime. For more information, see [Navigate with Dynamic Targets](navigate-with-dynamic-targets-856d6c6.md).

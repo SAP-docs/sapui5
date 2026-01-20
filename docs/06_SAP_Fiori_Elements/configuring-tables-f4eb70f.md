@@ -97,7 +97,7 @@ You use the `UI.LineItem` annotation to configure a table. It can also be packag
 **Related Information**  
 
 
-[Maintaining Standard Texts for Tables](maintaining-standard-texts-for-tables-aacfac5.md "You can use the i18n file of your app to adapt the standard UI texts that are displayed in a table for the use cases explained in this topic.")
+[Maintaining Standard Texts for Tables](maintaining-standard-texts-for-tables-aacfac5.md)
 
 [Maintaining Standard Texts for Charts](maintaining-standard-texts-for-charts-37cd601.md "For charts in analytical list pages, list reports, and object pages, if the system does not find any entries when using the filters, standard UI texts are displayed, which you can adapt in the i18n file of your app.")
 

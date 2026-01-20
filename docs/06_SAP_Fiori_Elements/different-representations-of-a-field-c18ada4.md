@@ -2,7 +2,7 @@
 
 # Different Representations of a `Field`
 
-Application developers can control how the field is represented by using annotations or metadata.
+You can control how the field is represented by using annotations or metadata.
 
 > ### Note:  
 > This topic is only applicable to SAP Fiori elements for OData V4.
@@ -65,6 +65,24 @@ To be represented in this manner, you must initialize the OData field with an an
 
 > ### Tip:  
 > If the "Path" has a `sap:label()` associated to it, then first the label is displayed, followed by the value pointed to by the path \(separated by a colon\).
+
+
+
+<a name="loioc18ada4bc56e427a9a2df2d1898f28a5__section_mfy_msc_pgc"/>
+
+## Representation as an Amount with a Currency or a Unit of Measure
+
+A field can be displayed as an amount \(a numerical value\) with a currency or a unit of measure:
+
+  
+  
+**Fields with a Currency and a Unit of Measure**
+
+![](images/Fields_used_with_Currency_and_Unit_of_Measure_812e7b0.png "Fields with a Currency and a Unit of Measure")
+
+To display a currency or a unit of measure, use the `Measures.ISOCurrency` and `Measures.Unit` annotations. For more information and live examples, see the SAP Fiori development portal at [Building Blocks - Field - Number with Currency or Unit of Measure](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/field/fieldNumberWithUnitOrCurrencyAligned).
+
+For more information about displaying fields with a currency or a unit of measure in a table, see [Displaying Amount with Currency or Unit of Measure](displaying-amount-with-currency-or-unit-of-measure-f6cf715.md).
 
 
 
@@ -171,7 +189,7 @@ This could render 3 KPIs, as shown in the image below:
 ![](images/Representation_as_Three_KPIs_423321f.png)
 
 > ### Tip:  
-> If you add a semantic object annotation to the value field of the `DataPoint`, the value is shown as a link but does not show any criticality information. For more information about adding the semantic object annotation, see the [subsection](navigation-from-an-app-outbound-navigation-d782acf.md#loiod782acf8bfd74107ad6a04f0361c5f62__optionsIBN) in [Navigation from an App \(Outbound Navigation\)](navigation-from-an-app-outbound-navigation-d782acf.md).
+> If you add a semantic object annotation to the value field of the `DataPoint`, the value is shown as a link but does not show any criticality information. For more information about adding the semantic object annotation, see the [Options for Intent-Based Navigation](navigation-from-an-app-outbound-navigation-d782acf.md#loiod782acf8bfd74107ad6a04f0361c5f62__optionsIBN) subsection in [Navigation from an App \(Outbound Navigation\)](navigation-from-an-app-outbound-navigation-d782acf.md).
 
 
 
@@ -597,6 +615,9 @@ If you need to define your own custom length in a `FieldGroup` or a `LineItem`, 
 >  }
 > ```
 
+> ### Note:  
+> Fields annotated with `UI.MultiLineText` are not supported in grid tables, tree tables, and analytical tables.
+
 The following table provides an overview of the parameters that are allowed in `formatOptions`:
 
 
@@ -705,7 +726,7 @@ An integer value or a string containing an integer value that defines the maximu
 </tr>
 </table>
 
-You can explore and work with the coding yourself. Check out the live example in the flexible programming model explorer at [Format Options](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/field/fieldFormatOptions).
+You can explore and work with the coding yourself. For more information and live examples, see the SAP Fiori development portal at [Building Blocks - Field - Multi-Line Text](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/field/fieldMultiLineText).
 
 
 
@@ -726,6 +747,52 @@ For more information, see [Micro Chart Facet](micro-chart-facet-e219fd0.md) and 
 ## Representation as File Upload/Download \(`Edm.Stream`\)
 
 SAP Fiori elements allows you to enable stream support so that users can upload and download files. You can add `Edm.Stream` fields \(file upload\) to a form on the object page. For more information, see [Enabling Stream Support](enabling-stream-support-b236d32.md).
+
+
+
+<a name="loioc18ada4bc56e427a9a2df2d1898f28a5__section_ob2_zfp_tgc"/>
+
+## Representation of Boolean Properties
+
+SAP Fiori elements allows you to render a Boolean property as a checkbox.
+
+For more information and live examples, see the SAP Fiori development portal at [Building Blocks - Field - Checkbox](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/field/fieldCheckbox).
+
+Instead of a checkbox, you can render a Boolean property as a radio button group with two options \(*Yes* / *No*\). Use this approach when users need to trigger an immediate change, such as when choosing an option that updates the data on the screen immediately without needing to press *Submit*.
+
+To render a Boolean property as a group of radio buttons, use the field `formatOptions` either in your XML view or in the `manifest.json` file:
+
+> ### Sample Code:  
+> XML View
+> 
+> ```
+> 
+> <macros:Field metaPath="BooleanProperty" >
+>     <macros:formatOptions>
+>         <macrosF:FieldFormatOptions useRadioButtonsForBoolean="true"/>
+>     </macros:formatOptions>
+> </macros:Field>
+> 
+> ```
+
+> ### Sample Code:  
+> `manifest.json`
+> 
+> ```
+> 
+> "controlConfiguration": {
+>     "@com.sap.vocabularies.UI.v1.FieldGroup#GeneralInformation": {
+>         "fields": {
+>             "DataField::booleanField": {
+>                 "formatOptions": {
+>                     "useRadioButtonsForBoolean": true
+>                 }
+>             }
+>         }
+>     }
+> }
+> 
+> ```
 
 
 
@@ -842,7 +909,7 @@ For example, if the mask symbol is `S^AP-AA-999`, the end user input value must 
 > 
 > The mask characters normally correspond to an existing rule \(one rule per unique character\). Characters which don't, are considered immutable characters \(for example, the mask `2099`, where `9` corresponds to a rule for digits, has the characters `2` and `0` as immutable\). You can use the special escape character `^` called "Caret" directly before a rule character to make it immutable.
 
-Check out our live example in the flexible programming model explorer at [Field - Display Representations](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#buildingBlocks/field/fieldDisplayStyles).
+For more information and live examples, see the SAP Fiori development portal at [Building Blocks - Field - Input Fields - Input Mask](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/field/fieldInputMask).
 
 
 
@@ -875,7 +942,7 @@ In edit mode, the input field masks each character with a dot \(•\), so end us
 > MaskedField  : String  @Common : {Masked: true};
 > ```
 
-Check out our live example in the flexible programming model explorer at [Field - Edit Mode](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/field/fieldEdit) and [Field - Display Representations](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/field/fieldDisplayStyles).
+For more information and live examples, see the SAP Fiori development portal at [Building Blocks - Field - Masked Field](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/field/fieldEdit).
 
 This feature only provides casual visual protection against shoulder surfing and doesn't influence how data is transferred to the back end. The data is transferred to the client like any other property in plain text without masking.
 

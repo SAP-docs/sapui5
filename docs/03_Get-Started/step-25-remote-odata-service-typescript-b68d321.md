@@ -36,9 +36,9 @@ You can view all files at [OpenUI5 TypeScript Walkthrough - Step 25: Remote ODat
 
 ## package.json
 
-In this step, we want to use the publicly available Northwind OData service located at `https://services.odata.org/V2/Northwind/Northwind.svc/`. Therefore, our URI points to the official Northwind OData service. In order to avoid cross-origin resource sharing, the typical procedure is to use a proxy in UI5 Tooling and maintain only a path in the `URI` property of the data source of our app.
+In this step, we want to use the publicly available Northwind OData service located at `https://services.odata.org/V2/Northwind/Northwind.svc/`. Therefore, our URI points to the official Northwind OData service. In order to avoid cross-origin resource sharing, the typical procedure is to use a proxy in UI5 CLI and maintain only a path in the `URI` property of the data source of our app.
 
-A bunch of proxy solutions are available from the UI5 community as [UI5 Tooling custom middleware extensions](https://bestofui5.org/#/packages?tokens=proxy:tag). In this tutorial we'll use [ui5-middleware-simpleproxy](https://bestofui5.org/#/packages/ui5-middleware-simpleproxy).
+A bunch of proxy solutions are available from the UI5 community as [UI5 CLI custom middleware extensions](https://bestofui5.org/#/packages?tokens=proxy:tag). In this tutorial we'll use [ui5-middleware-simpleproxy](https://bestofui5.org/#/packages/ui5-middleware-simpleproxy).
 
 Open a new terminal window in your app root folder and execute the following command:
 
@@ -52,7 +52,7 @@ This will install this package as a new development dependency in your `package.
 
 ## ui5.yaml
 
-We now configure the `ui5-middleware-simpleproxy` in the `ui5.yaml` file, so UI5 Tooling is used with this proxy when serving the app.
+We now configure the `ui5-middleware-simpleproxy` in the `ui5.yaml` file, so UI5 CLI is used with this proxy when serving the app.
 
 We schedule the simpleproxy middleware after the `compression` middleware, right after the livereload middleware. The `mountPath` property configures which URLs will be caught by the proxy. The `configuration/baseUri` property stores the real server address.
 

@@ -33,7 +33,7 @@ Here's an example of how you can rename a control using the `BaseRename` class. 
 >     return {
 >         "rename": BaseRename.createRenameChangeHandler({ // It should be always the rename change type
 >             propertyName : "text", // Property of the control that should be renamed
->             translationTextType : "XBUT" // See https://github.com/SAP/openui5/blob/master/docs/guidelines/translationfiles.md
+>             translationTextType : "XBUT" // See https://github.com/UI5/openui5/blob/master/docs/guidelines/translationfiles.md
 >         })
 >     };
 > })

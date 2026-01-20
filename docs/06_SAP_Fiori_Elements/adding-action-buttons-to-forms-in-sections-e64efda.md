@@ -195,7 +195,7 @@ You can change the form action button styles through UI adaptations.
 
 ### Adding Form Actions
 
-In addition to the `UI.FieldGroup` definition given above, form actions can also be added via `UI.Identification` or `UI.StatusInfo`.
+In addition to the `UI.FieldGroup` definition given above, form actions can also be added with `UI.Identification` or `UI.StatusInfo`.
 
 > ### Sample Code:  
 > XML Annotation
@@ -239,7 +239,7 @@ In addition to the `UI.FieldGroup` definition given above, form actions can also
 > 
 > ```
 
-Here are some examples of the various possibilities via which a `UI.DataFieldForAction` can be embedded:
+Here are some examples of the various possibilities through which a `UI.DataFieldForAction` can be embedded:
 
 -   `UI.Identification` with a qualifier
 
@@ -447,7 +447,7 @@ For a `DataFieldForIntentBasedNavigation` button, the page context is passed if 
 
 By default, all form action buttons are rendered with a transparent background. If you need to set a focus on the most important action, you can highlight it by using a 'ghost' styling.
 
-You can highlight form actions maintained via the `DataFieldForAction` and `DataFieldForIntentBasedNavigation` by adding `UI.Emphasized` to the action definition as shown in the examples below:
+You can highlight form actions maintained with the `DataFieldForAction` and `DataFieldForIntentBasedNavigation` by adding `UI.Emphasized` to the action definition as shown in the examples below:
 
 > ### Sample Code:  
 > ```

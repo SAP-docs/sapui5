@@ -2,7 +2,10 @@
 
 # Lifecycle of Binding Templates
 
-The lifecycle of the binding templates differs from the lifecycle of controls that are contained in an aggregation. Whenever a control object is destroyed, any aggregating object is destroyed as well. For list binding templates, you specify the behavior by using the additional property `templateShareable` in the parameter of the `bindAggregation` method of class `sap.ui.base.ManagedObject`.
+The lifecycle of the binding templates differs from the lifecycle of controls that are contained in an aggregation. Whenever a control object is destroyed, any aggregating object is destroyed as well. For list binding templates, you specify the behavior by using the additional property [`templateShareable`](https://ui5.sap.com/#/api/sap.ui.base.ManagedObject.AggregationBindingInfo) in the parameter of the `bindAggregation` method of class `sap.ui.base.ManagedObject`.
+
+> ### Caution:  
+> Leaving the `templateShareable` parameter `undefined` is **highly error-prone**! We recommend always setting this parameter explicitly to `true` or `false`.
 
 In **XML views**, you can also use the `templateShareable` property by adding it to the binding info as follows:
 
@@ -44,11 +47,11 @@ In **XML views**, you can also use the `templateShareable` property by adding it
 
 -   `templateShareable: false` \(preferred setting\)
 
-    If you set the parameter to `false` the lifecycle is controlled by the framework. It will destroy the template when the binding is removed \(`unbindAggregation`, `unbindItems`\)
+    If you set the parameter to `false`, the lifecycle is controlled by the framework. It will destroy the template when the binding is removed \(`unbindAggregation`, `unbindItems`\)
 
 -   `templateShareable: true`
 
-    If you set the parameter to `true` the template is **not** destroyed when \(the binding of\) the aggregated object is destroyed. Use this option in the following cases only:
+    If you set the parameter to `true`, the template is **not** destroyed when \(the binding of\) the aggregated object is destroyed. Use this option in the following cases only:
 
     -   The template is reused in your app to define an additional list binding.
 
@@ -56,12 +59,12 @@ In **XML views**, you can also use the `templateShareable` property by adding it
 
     -   The parent control that contains the list binding with the template is cloned. The binding info is used in the clone as well.
 
-        This means, when `templateShareable` is set to `true`, the template will not be cloned, when it is set to `false` it will be cloned when the parent is cloned.
+        This means, if `templateShareable` is `true`, the template won't be cloned when its parent is. If it's `false`, it will be.
 
 
     In these cases, the app has to make sure that the templates are properly cleaned up at some point in time - at the latest when the corresponding controller or component is destroyed.
 
--   If the parameter is undefined, \(neither `true` nor `false`\), the framework checks at several points in time whether all list bindings are removed. If there are no bindings, the templates is marked as `candidate for destroy()`, but it is not immediately destroyed. The candidate is destroyed in the following cases:
+-   If the parameter is undefined, \(neither `true` nor `false`\), the framework checks at several points in time whether all list bindings are removed. If there are no bindings, the template is marked as "candidate for destroy", but it's not immediately destroyed. The candidate is destroyed in the following cases:
 
     -   A **new object with the same ID** is created.
 
@@ -73,11 +76,8 @@ In **XML views**, you can also use the `templateShareable` property by adding it
     > ### Note:  
     > The error messages are:
     > 
-    > -   *A binding template that is marked as 'candidate for destroy' is reused in a binding.*
+    > -   *A binding template that is marked as "candidate for destroy" is reused in a binding.*
     > 
     > -   *During a clone operation, a template was found that neither was marked with 'templateShareable:true' nor 'templateShareable:false'.* 
-
-    > ### Caution:  
-    > To leave the parameter undefined is**very error-prone**, therefore we don't recommend this! Always set the parameter explicitly to `true` or `false`.
 
 

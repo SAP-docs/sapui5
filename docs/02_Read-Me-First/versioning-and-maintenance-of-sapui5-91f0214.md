@@ -26,7 +26,9 @@ To get an overview of the new features of each version, see [What's New in SAPUI
 
 ## Maintenance Strategy
 
-The general maintenance strategy for SAPUI5 when used on SAP Business Technology Platform \(SAP BTP\) is outlined in [this document](https://dam.sap.com/mac/app/p/pdf/asset/preview/oXKnvZV?ltr=a&rc=10&doi=SAP1203848). It represents the standard approach for managing SAPUI5 on SAP BTP and serves as the primary guideline for customers utilizing this deployment method.
+SAP Business Technology Platform \(SAP BTP\) is the primary channel for the consumption of SAPUI5. It provides multiple SAPUI5 versions via the Akamai content delivery network.
+
+The general maintenance strategy for SAPUI5 when used on SAP BTP is outlined in [this document](https://dam.sap.com/mac/app/p/pdf/asset/preview/oXKnvZV?ltr=a&rc=10&doi=SAP1203848). It represents the standard approach for managing SAPUI5 on SAP BTP and serves as the primary guideline for customers utilizing this deployment method.
 
 > ### Note:  
 > SAPUI5 is also included in various other SAP products \(such as SAP S/4HANA Cloud Private Edition and ABAP platform\). Customers who utilize SAPUI5 as part of these products may encounter maintenance strategies that differ from the one described for SAP BTP. For information on the applicable maintenance approach, see the specific documentation and guidelines provided within the respective SAP product.
@@ -38,6 +40,9 @@ The general maintenance strategy for SAPUI5 when used on SAP Business Technology
 SAPUI5 resources are available on the Akamai content delivery network. There, you can also find multiple SAPUI5 versions, and you can use them in your code as described in [Variant for Bootstrapping from Content Delivery Network](../04_Essentials/variant-for-bootstrapping-from-content-delivery-network-2d3eb2f.md).
 
 Check the available versions with respective maintenance status at [https://ui5.sap.com/versionoverview.html](https://ui5.sap.com/versionoverview.html).
+
+> ### Caution:  
+> Keep in mind that SAPUI5 versions are removed from the Akamai content delivery network at the latest one year after their release. Therefore, make sure to keep your SAPUI5 version up to date! We recommend using the [UI5 Renovate Preset Config](https://github.com/UI5/renovate-config/) tool, which allows you to become aware of version changes and upgrade SAPUI5 in a controlled manner.
 
 
 
@@ -66,5 +71,12 @@ The patch version number of the OpenUI5 version \(contained in the SAPUI5 distri
 To access specifically the OpenUI5 version within an SAPUI5 application at runtime, simply use the `sap/ui/VersionInfo.load` API as in the sample above, but with "`sap.ui.core`" as a `library` argument.
 
 > ### Note:  
-> Standalone apps, e.g. apps using the `self-contained` build of [UI5 Tooling](https://sap.github.io/ui5-tooling), will report the version of the app itself. Only if the framework resources are provided by a content delivery network \(CDN\) or a similar shared installation will the main version of the framework be retrieved as shown above.
+> Standalone apps, e.g. apps using the `self-contained` build of [UI5 CLI](https://ui5.github.io/cli), will report the version of the app itself. Only if the framework resources are provided by a content delivery network \(CDN\) or a similar shared installation will the main version of the framework be retrieved as shown above.
+
+**Related Information**  
+
+
+[Stay Up to Date with the UI5 Renovate Preset Config](https://community.sap.com/t5/technology-blog-posts-by-sap/stay-up-to-date-with-the-ui5-renovate-preset-config/ba-p/14070649)
+
+[UI5 Renovate Preset Config](https://github.com/UI5/renovate-config/)
 

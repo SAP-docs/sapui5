@@ -39,9 +39,9 @@ The additional libraries in SAPUI5 include more controls on top, like charts, an
 
 ## Contributing to OpenUI5
 
-OpenUI5 is Open Source, and is available on [GitHub](https://github.com/SAP/openui5/).
+OpenUI5 is Open Source, and is available on [GitHub](https://github.com/UI5/openui5/).
 
-If you find a bug or have an idea for a new feature - just go ahead and propose a GitHub issue or a change. But before you do so, please just read our guidelines first: [Contributing to OpenUI5](https://github.com/SAP/openui5/blob/-/CONTRIBUTING.md).
+If you find a bug or have an idea for a new feature - just go ahead and propose a GitHub issue or a change. But before you do so, please just read our guidelines first: [Contributing to OpenUI5](https://github.com/UI5/openui5/blob/-/CONTRIBUTING.md).
 
 
 

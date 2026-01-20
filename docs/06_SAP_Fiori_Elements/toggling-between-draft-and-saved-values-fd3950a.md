@@ -73,12 +73,8 @@ In the following screenshot, the object page displays the *Saved Version*:
 > ### Note:  
 > In SAP Fiori elements for OData V2 apps with the classic header, the header toolbar shows the *Display Saved Version*/*Return to Draft* button instead of the menu button next to the title.
 
+**Related Information**  
 
 
-<a name="loiofd3950a0b251439ab8cd4153d64844b6__section_mxn_wxs_hyb"/>
-
-## Related Links
-
--   [Draft Handling](draft-handling-ed9aa41.md)
-
+[Draft Handling](draft-handling-ed9aa41.md "A draft is an interim version of a business entity that has not yet been explicitly saved as an active version. SAP Fiori elements supports the creation of apps using draft handling.")
 

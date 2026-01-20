@@ -8,7 +8,7 @@ SAPUI5 flexibility offers a set of actions that users can perform on UI elements
 
 This guide is aimed at control developers looking to enable their controls for SAPUI5 flexibility and application developers who want to influence control behavior in their applications \(usually to exclude certain controls from adaptation, or to restrict certain actions\).
 
-Among others, SAPUI5 Flexibility includes the following::
+Among others, SAPUI5 Flexibility includes the following:
 
 -   Key user adaptation
 -   Personalization

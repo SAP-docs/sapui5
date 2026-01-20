@@ -8,19 +8,19 @@ Controls consist of:
 
 -   Control name
 
-    The control name is a string that consists of the library name and the control name, separated by a dot. The library name can be omitted if there is no need to assign the control to a library. It is possible, for example, to use `Square` as control name. For controls that are reused by others, we recommend to use a unique library name, for example `sap.byd.Square`.
+    The control name is a string that consists of the library name and the control name, separated by a dot. The library name can be omitted if there is no need to assign the control to a library. It is possible, for example, to use `Square` as control name. For controls that are reused by others, we recommend to use a unique library name, for example `myorg.mylib.Square`.
 
 -   Control metadata
 
     The metadata defines the properties, events, aggregations and associations of a control.
 
-    Control properties, such as text or width, are used to modify the appearance or to relate to data that is displayed by the control. The controls are defined by the control metadata, which is the public API of the control. The API can be used by applications at runtime and also contains information on runtime features such as data binding and type validation checks.
+    Control properties, such as `text` or `width`, are used to modify the appearance or to relate to data that is displayed by the control. The controls are defined by the control metadata, which is the public API of the control. The API can be used by applications at runtime and also contains information on runtime features such as data binding and type validation checks.
 
-    Controls can aggregate other controls. These controls with aggregations serve as a container or layout control to which the application can add child controls. They can also serve as composite controls if the control itself adds child controls and reuses available components. In an aggregation, child controls are owned by the parent control and are destroyed together with the parent control. A control can only have one aggregation parent. Adding the control to another aggregation removes it from the previous parent control.
+    Controls can aggregate other controls. These controls with aggregations serve as a container or layout control, to which the application can add child controls. They can also serve as composite controls if the control itself adds child controls and reuses available components. In an aggregation, child controls are owned by the parent control and are destroyed together with the parent control. A control can only have one aggregation parent. Adding the control to another aggregation removes it from the previous parent control.
 
     Associated controls are not part or children of an aggregation control. They are connected by ID instead of reference. Destroying a control in an association does not affect the other control. It is possible that an associated control does not yet or no longer exist.
 
-    Controls fire events. Events typically relate to the control's purpose and functionality on a semantically higher level than browser events such as `click`. Examples for control events are `triggerSearch` for a search field or `collapse` in a panel.
+    Controls fire events. Events typically relate to the control's purpose and functionality on a semantically higher level than browser events such as `click`. Examples for SAPUI5 control events are `search` for `sap.m.SearchField` or `expand` in `sap.m.Panel`.
 
 -   Elements
 
@@ -43,22 +43,27 @@ A constructor is a special type of function that is called to create an object. 
 
 In SAPUI5, control constructors accept the following arguments in the specified order:
 
-1.  An optional unique identifier of type `string` which must either be the first argument, or omitted altogether. If you omit the ID, the SAPUI5 framework automatically computes an ID. Specifying your own identifier allows your application to easily find the control and, for example, retrieve the current user input from it. Alternatively, you can keep a reference to the control in a variable.
+1.  An optional unique identifier of type `string` which must either be the first argument, or omitted altogether. If you omit the ID, the SAPUI5 framework automatically computes an ID. Specifying your own identifier allows your application to easily find the control and, for example, retrieve the current user input from it. Alternatively, you can keep a reference to the control in a variable. For more information, see [Stable IDs: All You Need to Know](../05_Developing_Apps/stable-ids-all-you-need-to-know-f51dbb7.md).
 2.  A simple object as `mSettings` parameter that defines values for any property, aggregation, association, or event.
 
 The following code snippet shows an example of a constructor that is called to create a new text control saying "Hello World" with the specified tooltip and width:
 
 ```js
-// required from sap/m/Text
-var oText = new Text("testText",
-{text : "Hello World", tooltip: "This is an example tooltip", width: "100px"});
+// Text required from "sap/m/Text"
+var oText = new Text(this.createId("myTextID"), { 
+    text: "Hello World",
+    tooltip: "This is an example tooltip",
+    width: "100px"
+});
 ```
+
+> ### Note:  
+> In constructor settings, string values containing curly braces are interpreted as binding expressions. To avoid unintentionally interpreting them thus, escape them using [`ManagedObject.escapeSettingsValue`](https://ui5.sap.com/#/api/sap.ui.base.managedObject%23methods/sap.ui.base.ManagedObject.escapeSettingsValue). For more information, see [Escaping Binding Syntax](binding-syntax-e2e6f41.md#loioe2e6f4127fe4450ab3cf1339c42ee832__section_EBS).
 
 The above example is an abbreviated version of the following code snippet with a detailed list of statements, which is alternatively supported:
 
 ```js
-// required from sap/m/Text
-var oText = new Text("testText"); 
+var oText = new Text(this.createId("myTextID"); 
 oText.setText("Hello World");
 oText.setTooltip("This is an example tooltip");
 oText.setWidth("100px");

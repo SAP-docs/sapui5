@@ -2,10 +2,18 @@
 
 # ECMAScript Support
 
-Since SAPUI5 1.125, the framework leverages features of modern ECMAScript, up to and including ES2023. You have to consider certain restrictions when using modern ECMAScript with your SAPUI5 project.
+Consider certain restrictions when using modern ECMAScript with your SAPUI5 project.
+
+Which of the features of modern ECMAScript a particular SAPUI5 framework version might use depends on the feature set provided by the browsers supported by that framework version. For more information, see [Browser and Platform Support](browser-and-platform-support-74b59ef.md).
+
+Whether you can use a particular feature of modern ECMAScript in SAPUI5 application development depends on the following:
+
+-   Is the feature provided by all the browsers intended to run your code?
+-   Does the SAPUI5 runtime permit the usage of the feature? For details, see the sections below.
+-   Is the feature supported by your tooling?
 
 > ### Caution:  
-> The restrictions described here apply to the usage of modern ECMAScript features in projects that are written in native JavaScript. If your project is written in TypeScript, you only have to make sure that the listed constraints are met by the transpiled code.
+> The restrictions described here apply to the usage of modern ECMAScript features in projects written in native JavaScript. If your project is written in TypeScript, make sure that the listed constraints are met by the transpiled code.
 
 
 
@@ -13,7 +21,7 @@ Since SAPUI5 1.125, the framework leverages features of modern ECMAScript, up to
 
 ## Overview of Restrictions
 
-The following restrictions apply when you use modern ECMAScript:
+Generally, the SAPUI5 framework supports the usage of modern ECMAScript features up to and including ECMAScript 2023, with the following restrictions:
 
 1.  Do not use ECMAScript modules, but use `sap.ui.define` / `sap.ui.require` for module loading.
 

@@ -22,7 +22,7 @@ By the end of this step, you will have created a Viewer application that allows 
 
 ## Setup
 
-Open a terminal and install UI5 Tooling globally on your machine by executing the following command:
+Open a terminal and install UI5 CLI globally on your machine by executing the following command:
 
 `npm install --global @ui5/cli`
 
@@ -368,7 +368,7 @@ To test that the application works, we will load a local 3D resource into the Vi
 
 1.  Download the `cooper.vds` file from the *Samples*.
 
-2.  Open a terminal in the app root folder and execute `npm i -D @ui5/cli` to install UI5 Tooling.
+2.  Open a terminal in the app root folder and execute `npm i -D @ui5/cli` to install UI5 CLI.
 
 3.  Execute `ui5 init` in the app root folder.
 

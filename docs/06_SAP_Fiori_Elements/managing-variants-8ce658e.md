@@ -2,7 +2,7 @@
 
 # Managing Variants
 
-Allows you manage variants with different structures in the filter and content areas.
+Allows you to manage variants with different structures in the filter and content areas.
 
 
 
@@ -23,7 +23,7 @@ Use page-level variant management to capture filter selection, filter mode, view
 
 You can use either control-level variant management or page-level variant management for your list report and analytical list page. Providing both options simultaneously can confuse end users.
 
-For more information about how to the enable control-level variant in the object page, see [Enabling Variant Management on the Object Page](enabling-variant-management-on-the-object-page-f26d42b.md).
+For more information about how to the enable the control-level variant in the object page, see [Enabling Variant Management on the Object Page](enabling-variant-management-on-the-object-page-f26d42b.md).
 
 <a name="topic_fdm_n4r_1qb"/>
 
@@ -35,7 +35,7 @@ For table and chart control variants, SAP Fiori elements always loads the varian
 
 For the filter control variant or the page variant, the following behavior applies:
 
--   When the SAP Fiori elements application is launched through external navigation with a navigation context \(either by using URL parameters or in `xAppState`\), the incoming navigation context is applied, and the filter values of the end user's default variant are overridden. As a result, the variant displayed in the filterbar is *Standard\** where "\*" indicates that the variant is not in its clean state. However, the personalization settings for tables or charts from the end user's default variant are retained.
+-   When the SAP Fiori elements application is launched through external navigation with a navigation context \(either by using URL parameters or in `xAppState`\), the incoming navigation context is applied, and the filter values of the end user's default variant are overridden. As a result, the variant name is displayed as *Standard\** in the filter bar where "\*" indicates that the variant isn't in a clean state. However, the personalization settings for tables or charts from the end user's default variant are retained.
 
 -   SAP Fiori elements loads the end user's default variant \(if configured\) when navigation to the list report template is triggered with **no** navigation context. If no end user default variant is found, the standard variant is used as the fallback option. Only in this case does SAP Fiori elements apply the end user default values of FLP.
 
@@ -67,7 +67,7 @@ For the list report, object page, and worklist, the `smartVariantManagement` var
 
 You can also change the `smartVariantManagement` variable using the *Page Editor*. For more information, see [Configure Page Elements](https://help.sap.com/docs/SAP_FIORI_tools/17d50220bcd848aa854c9c182d65b699/047507c86afa4e96bb3d284adb9f4726.html).
 
-If `smartVariantManagement` is set to `true`, the page-level variant is enabled. If it is set to `false`, control-level variant is enabled. If it is undefined, then the default setting is `true`.
+If `smartVariantManagement` is set to `true`, the page-level variant is enabled. If it is set to `false`, control-level variant is enabled. If it is undefined, then the default setting is `false`.
 
 For more information see, [Develop an Application](https://help.sap.com/docs/SAP_FIORI_tools/17d50220bcd848aa854c9c182d65b699/a9c004397af5461fbf765419fc1d606a.html).
 

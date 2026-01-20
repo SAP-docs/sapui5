@@ -50,7 +50,7 @@ Here's a solution: The `sap.ui.fl` library provides a special object called `sap
 > ```
 
 > ### Tip:  
-> Find a full example on GitHub at [https://github.com/SAP/openui5/blob/master/src/sap.m/src/sap/m/changeHandler/CombineButtons.js](https://github.com/SAP/openui5/blob/master/src/sap.m/src/sap/m/changeHandler/CombineButtons.js).
+> Find a full example on GitHub at [https://github.com/UI5/openui5/blob/master/src/sap.m/src/sap/m/changeHandler/CombineButtons.js](https://github.com/UI5/openui5/blob/master/src/sap.m/src/sap/m/changeHandler/CombineButtons.js).
 
 Thanks to the abstraction of `sap.ui.fl.util.ManagedObjectModel`, we don't have to worry if the original control has bindings or not. This complexity is hidden inside `ManagedObjectModel` itself. `ManagedObjectModel` lets us simply watch properties changes on some control without having to think about implementation details.
 

@@ -16,7 +16,7 @@ In a table in display mode, amounts with a currency or a unit of measure are ali
 
 ![](images/Alignment_of_Values_with_Currency_f477f12.png "Alignment of Amount with Currency")
 
-To ensure a correct alignment of the amount, a default decimal padding of 3 is used. You can change this decimal padding for your app. To do so, use the dedicated manifest keys `currency` and `unitOfMeasure` as shown in the following sample code:
+To ensure a correct alignment of the amount, a default decimal padding of 5 is used for currencies and 3 for units of measure. You can change this decimal padding for your app. To do so, use the dedicated manifest keys `currency` and `unitOfMeasure` as shown in the following sample code:
 
 > ### Sample Code:  
 > `manifest.json`
@@ -34,5 +34,35 @@ To ensure a correct alignment of the amount, a default decimal padding of 3 is u
 >         }
 >     }
 > }
+> ```
+
+You can preserve the exact decimal places returned from the back end for currency values with `peserveDecimalsForCurrency`, as shown in the following sample code:
+
+> ### Sample Code:  
+> `manifest.json`
+> 
+> ```
+> 
+> "sap.fe": {
+>     "app": {
+>         "preserveDecimalsForCurrency": true
+>     }
+> }
+> 
+> ```
+
+You can limit the number of decimals to the number of decimals defined for the unit with `showOnlyUnitDecimals`, as shown in the following sample code:
+
+> ### Sample Code:  
+> `manifest.json`
+> 
+> ```
+> 
+> "sap.fe": {
+>     "app": {
+>        "showOnlyUnitDecimals": true
+>     }
+> }
+> 
 > ```
 

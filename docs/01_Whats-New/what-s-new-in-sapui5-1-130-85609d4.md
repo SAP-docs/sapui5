@@ -159,7 +159,7 @@ The following changes and new features are available for SAP Fiori elements for 
 
 -   We now support key user adaptation on the mass edit dialog. For more information, see [Enabling an App for Key User Adaptation](../06_SAP_Fiori_Elements/enabling-an-app-for-key-user-adaptation-ccd45ba.md).
 
--   You can now add a custom fragment to the mass edit dialog. For more information, see [Adding a Custom ViewExtension to the Mass Edit Dialog](../06_SAP_Fiori_Elements/adding-a-custom-viewextension-to-the-mass-edit-dialog-fd26fee.md).
+-   You can now add a custom fragment to the mass edit dialog. For more information, see [Adding a Custom ViewExtension to the Mass Edit Dialog](../06_SAP_Fiori_Elements/adding-custom-input-fields-to-the-mass-edit-dialog-fd26fee.md).
 
 -   You can now define a custom save functionality for the mass edit dialog. For more information, see [Replacing the Standard Save Functionality in the Mass Edit Dialog](../06_SAP_Fiori_Elements/replacing-the-standard-save-functionality-in-the-mass-edit-dialog-492d8a9.md).
 
@@ -932,6 +932,18 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.141](what-s-new-in-sapui5-1-141-a7ed66d.md "With this release SAPUI5 is upgraded from version 1.140 to 1.141.")
+
+[What's New in SAPUI5 1.140](what-s-new-in-sapui5-1-140-26a106c.md "With this release SAPUI5 is upgraded from version 1.139 to 1.140.")
+
+[What's New in SAPUI5 1.139](what-s-new-in-sapui5-1-139-e10db71.md "With this release SAPUI5 is upgraded from version 1.138 to 1.139.")
+
+[What's New in SAPUI5 1.138](what-s-new-in-sapui5-1-138-8f6a92b.md "With this release SAPUI5 is upgraded from version 1.136 to 1.138.")
+
+[What's New in SAPUI5 1.136](what-s-new-in-sapui5-1-136-a82754d.md "With this release SAPUI5 is upgraded from version 1.135 to 1.136.")
+
+[What's New in SAPUI5 1.135](what-s-new-in-sapui5-1-135-93d7630.md "With this release SAPUI5 is upgraded from version 1.134 to 1.135.")
 
 [What's New in SAPUI5 1.134](what-s-new-in-sapui5-1-134-c512d71.md "With this release SAPUI5 is upgraded from version 1.133 to 1.134.")
 

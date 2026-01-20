@@ -2,7 +2,7 @@
 
 # Setting the Table Type
 
-You can control which table type is rendered in the list report and on the object page by configuring the `manifest.json` file and by using annotations.
+You can control which table type is rendered on the list report page and on the object page by configuring the `manifest.json` file and by using annotations.
 
 The following `type` properties are available within `tableSettings`:
 
@@ -17,7 +17,7 @@ The following `type` properties are available within `tableSettings`:
 
 ## Additional Features in SAP Fiori Elements for OData V2
 
-The following logic is used to determine the table type of an analytical list page \(ALP\) and a list report:
+The following logic is used to determine the table type of an analytical list page \(ALP\) and a list report page:
 
 -   If the table type is specified in the `manifest.json` file and set to analytical, but the `entitySet` doesn't have analytical capabilities, a grid table is used as the fallback option. Otherwise, the table is created with the specified table type.
 
@@ -37,10 +37,10 @@ The following logic is used to determine the table type of an analytical list pa
 > ### Tip:  
 > For more information about the guidelines and restrictions that apply to grid tables, see [SAP Fiori Design Guidelines](https://experience.sap.com/fiori-design-web/grid-table/).
 
-In addition to using the `manifest.json` file, you can also use annotations to control which table type is rendered in the list report and on the object page.
+In addition to using the `manifest.json` file, you can also use annotations to control which table type is rendered on the list report page and on the object page.
 
 > ### Note:  
-> -   List report only: If the `type` property within `tableSettings` is `AnalyticalTable`, set the `sap:semantics` annotation to `aggregate` for the specified entity type. Note that `sap:semantics` is a back-end entity type definition and can't be changed in the SAP Web IDE.
+> -   List report page only: If the `type` property within `tableSettings` is `AnalyticalTable`, set the `sap:semantics` annotation to `aggregate` for the specified entity type. Note that `sap:semantics` is a back-end entity type definition and can't be changed in the SAP Web IDE.
 > 
 > -   If you don't maintain the `type` property within `tableSettings` and if `sap:semantics` has been set to `aggregate` in the back end, an analytical table is rendered.
 
@@ -50,51 +50,62 @@ In addition to using the `manifest.json` file, you can also use annotations to c
 
 Set the `type` property within `tableSettings` to the required value in the `sap.ui.generic.app` section of the `manifest.json` file:
 
-Example for the list report:
+Example for the list report page:
 
 ```js
 "sap.ui.generic.app": {
-			"pages": [{
-				"entitySet": "Zfarvd_Bs_Hd_Bo",
-				"component": {
-					"name": "sap.suite.ui.generic.template.ListReport",
-					"list": true,
-					"settings": {
-						"tableSettings": {
-							"type": "GridTable"
-							}
-					}
-				},	
+    "pages": [
+        {
+            "entitySet": "Zfarvd_Bs_Hd_Bo",
+            "component": {
+                "name": "sap.suite.ui.generic.template.ListReport",
+                "list": true,
+                "settings": {
+                    "tableSettings": {
+                        "type": "GridTable"
+                    }
+                }
+            }
+        }
+    ]
+}
+	
 ```
 
 Examples for the object page:
 
 ```js
 "sap.ui.generic.app": {
-        "pages": [
-            {
-                "entitySet": "STTA_C_MP_Product",
-                "component": {
-                    "name": "sap.suite.ui.generic.template.ListReport",
-                    "list": true
-                },
-                "pages": [
-                    {
-                        "entitySet": "STTA_C_MP_Product",
-                        "component": {
-                            "name": "sap.suite.ui.generic.template.ObjectPage"
-                            "settings": {
-                                "sections": {
-                                    "to_ProductText::com.sap.vocabularies.UI.v1.LineItem": {
-                                        "navigationProperty": "to_ProductText",
-                                        "entitySet": "STTA_C_MP_ProductText",
-                                        "tableSettings": {
-								      "type": "TreeTable"
-								 }
+    "pages": [
+        {
+            "entitySet": "STTA_C_MP_Product",
+            "component": {
+                "name": "sap.suite.ui.generic.template.ListReport",
+                "list": true
+            },
+            "pages": [
+                {
+                    "entitySet": "STTA_C_MP_Product",
+                    "component": {
+                        "name": "sap.suite.ui.generic.template.ObjectPage",
+                        "settings": {
+                            "sections": {
+                                "to_ProductText::com.sap.vocabularies.UI.v1.LineItem": {
+                                    "navigationProperty": "to_ProductText",
+                                    "entitySet": "STTA_C_MP_ProductText",
+                                    "tableSettings": {
+                                        "type": "TreeTable"
                                     }
                                 }
                             }
-                        },
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}
+
 ```
 
 Defining `tableTypes` under the settings is supported for backward compatibility. However, using `tableSettings` is recommended for defining table types.
@@ -103,25 +114,29 @@ Defining `tableTypes` under the settings is supported for backward compatibility
 > If you maintain the `type` property within `tableSettings` in `sections`, it has a higher priority than the `type` property of `tableSettings` in an object page.
 
 ```js
-"pages": [{
-                "entitySet": "STTA_C_MP_Product",
-                "component": {
-                    "name": "sap.suite.ui.generic.template.ObjectPage",
-                    "settings": {
-                        "showRelatedApps": true,
+"pages": [
+    {
+        "entitySet": "STTA_C_MP_Product",
+        "component": {
+            "name": "sap.suite.ui.generic.template.ObjectPage",
+            "settings": {
+                "showRelatedApps": true,
+                "tableSettings": {
+                    "type": "ResponsiveTable"
+                },
+                "sections": {
+                    "to_ProductText::com.sap.vocabularies.UI.v1.LineItem": {
+                        "navigationProperty": "to_ProductText",
+                        "entitySet": "STTA_C_MP_ProductText",
                         "tableSettings": {
-                            "type":"ResponsiveTable"
-                        },
-                        "sections": {
-                            "to_ProductText::com.sap.vocabularies.UI.v1.LineItem": {
-                                "navigationProperty": "to_ProductText",
-                                "entitySet": "STTA_C_MP_ProductText",
-                                "tableSettings": {
-                                    "type":"GridTable"
-                                }
-                            }
+                            "type": "GridTable"
                         }
                     }
+                }
+            }
+        }
+    }
+]
 
 ```
 
@@ -131,17 +146,85 @@ Defining `tableTypes` under the settings is supported for backward compatibility
 
 ## Additional Features in SAP Fiori Elements for OData V4
 
-The following logic is used to determine the table type in the analytical list page \(ALP\) and the list report:
+The following logic is used to determine the table type in the analytical list page \(ALP\) and the list report page:
 
 -   If the table type is specified in the `manifest.json` file and set to `analytical`, but the `entitySet` doesn't have analytical capabilities, an empty table is displayed. Otherwise, the table is created with the specified table type.
 
--   If the table type is **not** specified in the `manifest.json` file, a responsive table is used by default.
+-   If the table type is **not** specified in the `manifest.json` file, the table type is selected automatically as follows:
 
+    **Default Table Type**
+
+
+    <table>
+    <tr>
+    <th valign="top">
+
+    Environment
+    
+    </th>
+    <th valign="top">
+
+    Table Type
+    
+    </th>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    Analytical services containing the `@Aggregation.ApplySupported` annotation with all of the following transformation functions:
+
+    -   `filter`
+    -   `identity`
+    -   `orderby`
+    -   `skip`
+    -   `top`
+    -   `groupby`
+    -   `concat`
+    -   `aggregate`
+
+
+    
+    </td>
+    <td valign="top">
+    
+    Analytical table
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    Hierarchical services containing the `@Aggregation.RecursiveHierarchy` and the `@Hierarchy.RecursiveHierarchy` annotations with a shared `RecursiveHierarchy` qualifier
+    
+    </td>
+    <td valign="top">
+    
+    Tree table
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    All other
+    
+    </td>
+    <td valign="top">
+    
+    Responsive table
+    
+    </td>
+    </tr>
+    </table>
+    
 
 > ### Tip:  
 > For more information about the guidelines and restrictions that apply to grid tables, see [SAP Fiori Design Guidelines](https://experience.sap.com/fiori-design-web/grid-table/).
 
-In the `manifest.json` file, you can control which table type is rendered in the list report and on the object page.
+In the `manifest.json` file, you can control which table type is rendered on the list report page and on the object page.
+
+> ### Note:  
+> Grid tables, tree tables, and analytical tables do not support columns with multi-line content, such as those using the `FieldGroup` annotation or multi-line text fields.
 
 
 
@@ -149,29 +232,30 @@ In the `manifest.json` file, you can control which table type is rendered in the
 
 Set the `type` property within `tableSettings` to the required values in *sap.ui5:* \> *routing:* \> *targets* of the `manifest.json` file.
 
-Example for the list report:
+Example for the list report page:
 
 > ### Sample Code:  
 > ```
 > "targets": {
->      "SalesOrderManageList": {
->           "type": "Component",
->           "id": "SalesOrderManageList",
->           "name": "sap.fe.templates.ListReport",
->           "options": {
->                "settings" : {
->                     "controlConfiguration" : {
->                          "@com.sap.vocabularies.UI.v1.LineItem" : {
->                               "tableSettings": {
->                                    "type": "ResponsiveTable"
->                                }
->                          }
+>     "SalesOrderManageList": {
+>         "type": "Component",
+>         "id": "SalesOrderManageList",
+>         "name": "sap.fe.templates.ListReport",
+>         "options": {
+>             "settings": {
+>                 "controlConfiguration": {
+>                     "@com.sap.vocabularies.UI.v1.LineItem": {
+>                         "tableSettings": {
+>                             "type": "ResponsiveTable"
+>                         }
 >                     }
->                     ...
->                }
->           }
->      }
+>                 }
+>                 ...
+>             }
+>         }
+>     }
 > }
+> 
 > ```
 
 Example for the object page:
@@ -179,39 +263,121 @@ Example for the object page:
 > ### Sample Code:  
 > ```
 > "targets": {
->      "SalesOrderManageObjectPage": { 
->           "type": "Component", 
->           "id": "SalesOrderManageObjectPage", 
->           "name": "sap.fe.templates.ObjectPage", 
->           "options": { 
->                "settings": { 
->                     "controlConfiguration": { 
->                          "_Item/@com.sap.vocabularies.UI.v1.LineItem": { 
->                               "tableSettings": { 
->                                    "type": "GridTable" 
->                               } 
->                          } 
->                     } 
->                } 
->           }
->      }
-> } 
+>     "SalesOrderManageObjectPage": {
+>         "type": "Component",
+>         "id": "SalesOrderManageObjectPage",
+>         "name": "sap.fe.templates.ObjectPage",
+>         "options": {
+>             "settings": {
+>                 "controlConfiguration": {
+>                     "_Item/@com.sap.vocabularies.UI.v1.LineItem": {
+>                         "tableSettings": {
+>                             "type": "GridTable"
+>                         }
+>                     }
+>                 }
+>             }
+>         }
+>     }
+> }
+> 
+> ```
+
+
+
+### Configuring the Popin Layout for Responsive Tables
+
+When using a responsive table and there is not enough space to show all the columns, columns can be shown within popins using the *Show More per Row* option in the table toolbar.
+
+![Popins using the Block layout in a responsive table](images/Popin_Layout_for_Responsive_Tables_d403210.png)
+
+The following popin layouts are supported:
+
+-   `Block` \(default\): Sets a block layout for rendering the table popins. The columns inside the popin container are rendered one below the other.
+-   `GridLarge`: Sets a grid layout for rendering the table popins. The width of the grid for each table popin is larger than `GridSmall`, so this layout renders less content in a single popin row.
+-   `GridSmall`: Sets a grid layout for rendering the table popins. The width of the grid for each table popin is small, so this layout allows more content to be rendered in a single popin row.
+
+For more information about the size of the popin layouts, see the [Fiori Design Guidelines](https://www.sap.com/design-system/fiori-design-web/ui-elements/responsive-table/#responsiveness).
+
+You can configure the popin layout for each responsive table using the `popinLayout` parameter in the `tableSettings` section. In the example below, the popin layout is set to `GridSmall`.
+
+> ### Sample Code:  
+> `manifest.json`
+> 
+> ```
+> "controlConfiguration": {
+>     "@com.sap.vocabularies.UI.v1.LineItem": {
+>         "tableSettings": {
+>             "type": "ResponsiveTable",
+>             "popinLayout": "GridSmall"
+>         }
+>     },
+>     ...
+> }
+> ```
+
+You can also define a default popin layout at the application level. A popin layout defined at the table level takes precedence over a popin layout defined at the application level. In the example below, the default popin layout is `GridLarge`.
+
+> ### Sample Code:  
+> `manifest.json`
+> 
+> ```
+> "sap.fe": {
+>     "macros": {
+>         "table":{
+>             "defaultPopinLayout": "GridLarge"
+>         }
+>     }
+> }
+> 
 > ```
 
 
 
 ### Annotating a Service as an Analytical Service
 
-To set the analytical capabilities of your service or entity, use the `Aggregation.ApplySupported` annotation at the entity set level.
+Analytical services must support the `@Aggregation.ApplySupported` annotation. ABAP-based services must support the `@Aggregation.ApplySupported` annotation along with all of the following transformation functions:
+
+-   `filter`
+-   `identity`
+-   `orderby`
+-   `skip`
+-   `top`
+-   `groupby`
+-   `concat`
+-   `aggregate`
 
 > ### Sample Code:  
 > XML Annotation
 > 
 > ```xml
-> <Annotations Target="sap.fe.managepartners.ManagePartnersService.Customers">
->    <Annotation Term="Aggregation.ApplySupported">
->    </Annotation>
-> </Annotations>
+> 
+> 
+> <Annotation Term="Aggregation.ApplySupported">
+>     <Record>
+>         <PropertyValue Property="Transformations">
+>             <Collection>
+>                 <String>filter</String>
+>                 <String>identity</String>
+>                 <String>orderby</String>
+>                 <String>search</String>
+>                 <String>skip</String>
+>                 <String>top</String>
+>                 <String>groupby</String>
+>                 <String>aggregate</String>
+>                 <String>concat</String>
+>             </Collection>
+>         </PropertyValue>
+>     </Record>
+> </Annotation>
+> 
+> ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> ```
+> @OData.applySupportedForAggregation: #FULL
 > ```
 
 > ### Sample Code:  
@@ -229,22 +395,28 @@ The analytical table renders data that can be grouped and aggregated.
 
     The analytical table offers the possibility to group rows based on groupable properties. You must define which properties are groupable so that the table allows grouping the relevant properties.
 
-    To annotate a set of properties as groupable, add it to the `GroupableProperties` annotation:
-
     > ### Sample Code:  
     > XML Annotation
     > 
     > ```xml
     > <Annotations Target="sap.fe.managepartners.ManagePartnersService.Customers">
-    >    <Annotation Term="Aggregation.ApplySupported">
-    >    <PropertyValue Property="GroupableProperties">
-    >         <Collection>
-    >             <PropertyPath>Segment</PropertyPath>
-    >             <PropertyPath>Country</PropertyPath>
-    >         </Collection>
-    >    </PropertyValue>
-    >    </Annotation>
+    >     <Annotation Term="Aggregation.ApplySupported">
+    >         <PropertyValue Property="GroupableProperties">
+    >             <Collection>
+    >                 <PropertyPath>Segment</PropertyPath>
+    >                 <PropertyPath>Country</PropertyPath>
+    >             </Collection>
+    >         </PropertyValue>
+    >     </Annotation>
     > </Annotations>
+    > 
+    > ```
+
+    > ### Sample Code:  
+    > ABAP CDS Annotation
+    > 
+    > ```
+    > No ABAP CDS annotation is required. When a property lacks the @Aggregation.default annotation (meaning it cannot be aggregated), it automatically becomes a groupable property within an analytical service that has the @OData.applySupportedForAggregation: #FULL annotation.
     > ```
 
     > ### Sample Code:  
@@ -262,7 +434,7 @@ The analytical table renders data that can be grouped and aggregated.
 
 -   Defining Aggregatable Properties
 
-    The properties can also be annotated as aggregatable \(measures\). To do so, at the entity level, you must also define the `Aggregation.CustomAggregate` annotation, which has the property name as the qualifier:
+    Aggregatable properties \(measures\) are defined in the metadata using the `@Aggregation.CustomAggregate` annotation, which has the property name as the qualifier.
 
     > ### Sample Code:  
     > XML Annotation
@@ -271,12 +443,19 @@ The analytical table renders data that can be grouped and aggregated.
     > <Annotations Target="sap.fe.managepartners.ManagePartnersService.BusinessPartners/SalesAmount">
     >     <Annotation Term="Aggregation.default" EnumMember="Aggregation.defaultType/SUM"/>
     >     <Annotation Term="Analytics.Measure" Bool="true"/>
-    > </Annotations>
-    >  
-    > // At the entity level you must also define the Aggregation.CustomAggregate annotation which has the property name as the qualifier: 
+    > </Annotations> ... 
     > <Annotations Target="sap.fe.managepartners.ManagePartnersService.EntityContainer">
     >     <Annotation Term="Aggregation.CustomAggregate" Qualifier="SalesAmount" String="Edm.Decimal"/>
     > </Annotations>
+    > ```
+
+    > ### Sample Code:  
+    > ABAP CDS Annotation
+    > 
+    > ```
+    > @Aggregation.default: #SUM
+    > 
+    > SalesAmount
     > ```
 
     > ### Sample Code:  
@@ -293,7 +472,7 @@ The analytical table renders data that can be grouped and aggregated.
 
 -   Enabling and Disabling the *Search* Field
 
-    You can use the `Transformation` annotation to enable and disable the *Search* field in an analytical table, as well as in a chart. You enable the *Search* field by listing it in the corresponding annotation. If you don't specify any transformation, the *Search* field is enabled by default. This is shown in the following sample code:
+    The *Search* field is enabled by default if no `Transformations` annotation is available. If the `Transformations` annotation is available as part of the `ApplySupported` annotation, it needs to include the `search` transformation for the *Search* field to be enabled.
 
     > ### Sample Code:  
     > XML Annotation
@@ -312,8 +491,7 @@ The analytical table renders data that can be grouped and aggregated.
     >                     </Collection>
     >                </PropertyValue>
     >           </Record>
-    >       </Annotation>
-    > </Annotations>
+    >       </Annotation></Annotations>
     > ```
 
     > ### Sample Code:  
@@ -341,9 +519,8 @@ The analytical table renders data that can be grouped and aggregated.
     > ```
     > "controlConfiguration":
     > {
-    >     "@com.sap.vocabularies.UI.v1.LineItem": 
-    >     {
-    >         "tableSettings":
+    >     "@com.sap.vocabularies.UI.v1.LineItem":
+    >      {        "tableSettings":
     >         {
     >             "type": "AnalyticalTable",
     >             "analyticalConfiguration":
@@ -356,12 +533,12 @@ The analytical table renders data that can be grouped and aggregated.
     > }
     > ```
 
-    When `aggregationOnLeafLevel` is set to `true`, any navigation or bound actions are disabled if any key properties of the entity are not displayed in the table. If the missing key properties are added through the table settings, both the navigation and the bound actions are enabled.
+    When `aggregationOnLeafLevel` is set to `true`, any navigation or bound actions are enabled only if all key properties of the entity are displayed in the table. If the missing key properties are added through the table settings, both the navigation and the bound actions are enabled.
 
     > ### Note:  
     > If the `rowPress` event is overridden at the table level, the navigation indicator is still displayed even when `aggregationOnLeafLevel` is set to `true`.
 
-    See the following screenshots, where *Identifier* is a key property:
+    In the following screenshots, *Identifier* is a key property:
 
     ![](images/Identifier_Not_Displayed_1f0b08b.png)
 
@@ -377,9 +554,9 @@ The analytical table renders data that can be grouped and aggregated.
 
 
 
-### Using an Analytical Table with a Draft-Enabled Service
+### Using an Analytical Table or Tree Table with a Draft-Enabled Service
 
-The list report can display an analytical table with a draft-enabled service with the following behavior:
+The list report page can display an analytical table or tree table with a draft-enabled service with the following behavior:
 
 -   Only the active entities are displayed.
 
@@ -392,8 +569,10 @@ The list report can display an analytical table with a draft-enabled service wit
 -   The behavior of already saved objects remains unchanged: a draft can be saved, kept, or discarded. The navigation is also unchanged.
 
 
+When used on an object page or on a custom page, the analytical table is displayed in read-only mode, and delete and create operations aren't available. This behavior doesn't apply to the tree table.
+
 > ### Restriction:  
-> An analytical table cannot be displayed on the list report with a draft-enabled service in the flexible column layout.
+> An analytical table or tree table cannot be displayed on the list report page with a draft-enabled service in the flexible column layout.
 
 
 
@@ -436,7 +615,6 @@ SAP Fiori elements for OData V4 assumes that the back end supports transformatio
 >     >       ...
 >     >    ],
 >     > }
->     > 
 >     > ```
 
 
@@ -457,9 +635,6 @@ You can activate the tree table in the `manifest.json` file. To do so, set the t
 >                 }
 >               }
 > ```
-
-> ### Restriction:  
-> The tree table is only supported when using the ABAP RESTful Application Programming Model \(RAP\).
 
 For more detailed information about using tree tables, see [Tree Tables](tree-tables-7cf7a31.md).
 
@@ -485,12 +660,12 @@ When a grid table is not the sole control within a section of an object page or 
 > ```
 > "controlConfiguration": {
 >     "@com.sap.vocabularies.UI.v1.LineItem": {
->         "tableSettings": {	
->             "type": "GridTable",
->             "rowCount": 10,
->             "rowCountMode": "Fixed"
->             "personalization": true,
->             ...
+>         "tableSettings": {
+> 	            "type": "GridTable",
+>                     "rowCount": 10,
+>                     "rowCountMode": "Fixed"
+>                     "personalization": true,
+>                      ...
 >         }
 >     },
 >     ...
@@ -498,7 +673,7 @@ When a grid table is not the sole control within a section of an object page or 
 > ```
 
 > ### Note:  
-> If the `sectionLayout` is set to `Page` and the table is the sole control within the section, the `rowCountMode` is set to `Auto`.
+> If the `sectionLayout` is set to `Tabs` and the table is the sole control within the section, the `rowCountMode` is set to `Auto`.
 
 
 
@@ -508,9 +683,9 @@ When a grid table is not the sole control within a section of an object page or 
 
 For a description of the available table types, see [Tables](tables-c0f6592.md).
 
-For information about setting up tables in the list report through annotations, see [Settings for List Report Tables](settings-for-list-report-tables-4c2d17a.md).
+For information about setting up tables on the list report page through annotations, see [Settings for List Report Tables](settings-for-list-report-tables-4c2d17a.md).
 
-For information about setting up a standard list or object list in the list report, see [Enabling Standard List Items and Object List Items](enabling-standard-list-items-and-object-list-items-4ed47aa.md).
+For information about setting up a standard list or object list on the list report page, see [Enabling Standard List Items and Object List Items](enabling-standard-list-items-and-object-list-items-4ed47aa.md).
 
 For information about setting up tables in the object page, see [Settings for Object Page Tables](settings-for-object-page-tables-47425bb.md).
 

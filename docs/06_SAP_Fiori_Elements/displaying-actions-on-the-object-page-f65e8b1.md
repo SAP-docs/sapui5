@@ -46,7 +46,7 @@ The display of actions depends on which mode the user is in:
 
 ![](images/Object_Page_Footer_Bar_Edit_Mode_2c8767f.png "Object Page: Action Triggered from Footer Bar (Edit Mode)")
 
-You can add criticality to an action button via annotations. For more information, see [Setting the Criticality for Actions](setting-the-criticality-for-actions-12f2ba2.md).
+You can add criticality to an action button through annotations. For more information, see [Setting the Criticality for Actions](setting-the-criticality-for-actions-12f2ba2.md).
 
 
 
@@ -71,7 +71,7 @@ You can change the order of action buttons for both manifest-based actions and a
 
 [Defining Determining Actions](defining-determining-actions-1743323.md "You can add a determining action button to the footer of the object page, but you must add such a button only in edit mode.")
 
-[Setting the Criticality for Actions](setting-the-criticality-for-actions-12f2ba2.md "You can add criticality to an action button via annotations.")
+[Setting the Criticality for Actions](setting-the-criticality-for-actions-12f2ba2.md "You can add criticality to an action button by using annotations.")
 
 [Generic Action Buttons in Tables on the Object Page: Additional Considerations](generic-action-buttons-in-tables-on-the-object-page-additional-considerations-d27ae99.md "You can use annotations to enable generic actions in tables on the object page.")
 

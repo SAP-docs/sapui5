@@ -136,7 +136,7 @@ The API is not meant to be used outside its own class, module, package, or libra
 </td>
 <td valign="top">
 
-[`Icon.prototype._getOutputTitle`](https://github.com/SAP/openui5/blob/c67c74d5de985904b50fb250b0d335c08b275025/src/sap.ui.core/src/sap/ui/core/Icon.js#L477) 
+[`Icon.prototype._getOutputTitle`](https://github.com/UI5/openui5/blob/c67c74d5de985904b50fb250b0d335c08b275025/src/sap.ui.core/src/sap/ui/core/Icon.js#L477) 
 
 </td>
 </tr>
@@ -168,7 +168,7 @@ Any potential new usage should be discussed with the owner first, then the stake
 </td>
 <td valign="top">
 
-[`Control.prototype.setBlocked`](https://github.com/SAP/openui5/blob/c67c74d5de985904b50fb250b0d335c08b275025/src/sap.ui.core/src/sap/ui/core/Control.js#L944) 
+[`Control.prototype.setBlocked`](https://github.com/UI5/openui5/blob/c67c74d5de985904b50fb250b0d335c08b275025/src/sap.ui.core/src/sap/ui/core/Control.js#L944) 
 
 </td>
 </tr>

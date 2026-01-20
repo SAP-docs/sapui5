@@ -80,7 +80,7 @@ Both properties can contain a `FieldGroup` annotation or a comma-separated list 
 >          ......
 >          ......
 >          "enableMassEdit": {
->              
+>             "visibleFields": "@com.sap.vocabularies.UI.v1.FieldGroup#FieldsForMassEdit" 
 >       },
 >       ......
 >       ......
@@ -217,4 +217,6 @@ The *Edit* button isn't enabled if the update restriction points to a path and t
 > -   Validation from the server for updates made in the mass edit dialog isn't supported. There's no communication with the back end until users choose *Save* in the mass edit dialog.
 > 
 > -   You must not enable the mass edit functionality if the back end is configured to lock the entire object while you're making an update to a child object.
+> 
+> -   The mass edit feature is not supported on object pages when collaborative draft is enabled.
 

@@ -14,13 +14,13 @@ Select the chart context to navigate to other applications. A chart provides:
 
 The chart-only view provides a way to analyze data from different perspectives. It uses a step-by-step method to investigate a root cause, without direct access to transactional content. The chart control is used to provide the chart visualization.
 
-You use this features to deal with analytical data that can be visually represented using charts, without needing to link them to the transactional data set.
+You use this features to deal with analytical data that can be visually represented using charts, without needing to link them to the transactional dataset.
 
-![](images/ChartView_fc234b4.png)
+![](images/Configuring_the_Chart-Only_View_as_the_Default_Option_2cf8f0e.png)
 
 
 
-### Descriptor Settings: Table-only view
+### Manifest Settings: Table-only view
 
 **Configuration Sample for SAP Fiori elements for OData V2:**
 
@@ -184,12 +184,13 @@ You use this features to deal with analytical data that can be visually represen
 > }
 > ```
 
-Use the app-descriptor `chartPresentationQualifier` setting to render a chart based on a specific `PresentationVariant` annotation configuration.
+Use the `chartPresentationQualifier` setting in the `manifest.json` file to render a chart based on a specific `PresentationVariant` annotation configuration.
 
-```
-"settings": { 
-"chartPresentationQualifier": "qualifier"}
-```
+> ### Sample Code:  
+> ```
+> "settings": { 
+> "chartPresentationQualifier": "qualifier"}
+> ```
 
 
 
@@ -515,7 +516,7 @@ Make the following entries in the manifest:
 
 Setting the `"defaultPath"` to `"primary"` ensures that the default view that is loaded is the chart-only view.
 
-For more information about options that can be provided for the annotation path, see [Descriptor Configuration for the Analytical List Page](descriptor-configuration-for-the-analytical-list-page-2a9df06.md).
+For more information about options that can be provided for the annotation path, see [Configuring the Manifest for the Analytical List Page](configuring-the-manifest-for-the-analytical-list-page-2a9df06.md).
 
 
 
@@ -526,7 +527,7 @@ For more information about additional chart features, see the [Additional Featur
 **Related Information**  
 
 
-[Configuring the Content Area](configuring-the-content-area-fc7d73c.md "Visualize data from the main entity set and seamlessly navigate to an application. Define a valid UI.Chart or UI.LineItem annotation to render content for the chart area and table area. For more information, see Descriptor Configuration for the Analytical List Page.")
+[Configuring the Content Area](configuring-the-content-area-fc7d73c.md "Visualize data from the main entity set and seamlessly navigate to an application. Define a valid UI.Chart or UI.LineItem annotation to render content for the chart area and table area. For more information, see Configuring the Manifest for the Analytical List Page.")
 
 [Defining Actions in the Chart Toolbar](defining-actions-in-the-chart-toolbar-7d1fa83.md "You can add action buttons to the chart toolbar by defining the Actions property in the annotation term UI.Chart.")
 

@@ -15,74 +15,69 @@ To create a table card, you need these annotations:
 
 
 
-### Descriptor Settings: Title
+### Manifest Settings: Title
 
 Property: `title`
 
 Description: Configuring this property displays the card title at the top of the table card.
 
-**Configuration Sample:**
-
-```
-	"sap.ovp": {
-		"globalFilterModel": "salesOrder",
-		"globalFilterEntityType": "GlobalFilters",
-              ...
-              ...
-		"cards": {
-          "card014": {
-            "model": "salesOrder",
-            "template": "sap.ovp.cards.table",
-            "settings": {
-              "title": "Purchase Forecast",
-              "entitySet": "SalesShare",
-              ...
-              ...
-              ...
-                }
-              ]
-            }
-          },
-```
+> ### Sample Code:  
+> ```
+> "sap.ovp": {
+>     "globalFilterModel": "salesOrder",
+>     "globalFilterEntityType": "GlobalFilters", // Deprecated since SAPUI5 1.54.
+>     "globalFilterEntitySet": "GlobalFilters",  // Available from SAPUI5 1.54.
+>     ...
+>     "cards": {
+>         "card014": {
+>             "model": "salesOrder",
+>             "template": "sap.ovp.cards.table",
+>             "settings": {
+>                 "title": "Purchase Forecast",
+>                 "entitySet": "SalesShare",
+>                 ...
+>             }
+>         }
+>     }
+> }
+> ```
 
 
 
-### Descriptor Settings: Subtitle
+### Manifest Settings: Subtitle
 
 Property: `subTitle`
 
 Description: Configuring this property displays the card subtitle below the title of the table card.
 
-**Configuration Sample:**
-
-```
-	"sap.ovp": {
-		"globalFilterModel": "salesOrder",
-		"globalFilterEntityType": "GlobalFilters",
-              ...
-              ...
-		"cards": {
-          "card014": {
-            "model": "salesOrder",
-            "template": "sap.ovp.cards.table",
-            "settings": {
-              "title": "Sales Forecast",
-              "subTitle": "per Supplier",
-              "entitySet": "SalesShare",
-              ...
-              ...
-                }
-              ]
-            }
-          },
-```
+> ### Sample Code:  
+> ```
+> "sap.ovp": {
+>     "globalFilterModel": "salesOrder",
+>     "globalFilterEntityType": "GlobalFilters", // Deprecated since SAPUI5 1.54.
+>     "globalFilterEntitySet": "GlobalFilters",  // Available from SAPUI5 1.54.
+>     ...
+>     "cards": {
+>         "card014": {
+>             "model": "salesOrder",
+>             "template": "sap.ovp.cards.table",
+>             "settings": {
+>                 "title": "Sales Forecast",
+>                 "subTitle": "per Supplier",
+>                 "entitySet": "SalesShare",
+>                 ...
+>             }
+>         }
+>     }
+> }
+> ```
 
 You can display the unit of measure next to numeric values by providing the `sap:unit` attribute in the OData metadata file or by annotating the unit in the annotation document. For example, if you have the following data, and want to display 850 kg after the subtitle text
 
 ```
 {
-   CurrencyCode:"KG"
-   GrossAmount:850
+    "CurrencyCode": "KG",
+    "GrossAmount": 850
 }
 ```
 
@@ -91,15 +86,31 @@ Use one of the following options:
 Option 1: Define `sap:unit` in the metadata
 
 ```
-<Property Name="CurrencyCode" Type="Edm.String" MaxLength="5" sap:label="Currency" sap:updatable="false" sap:semantics="currency-code"/>
-<Property Name="GrossAmount" Type="Edm.Decimal" Precision="16" Scale="3" sap:unit="CurrencyCode" sap:label="Gross Amt." sap:creatable="false" sap:updatable="false"/>
+<Property 
+    Name="CurrencyCode" 
+    Type="Edm.String" 
+    MaxLength="5" 
+    sap:label="Currency" 
+    sap:updatable="false" 
+    sap:semantics="currency-code" 
+/>
+<Property 
+    Name="GrossAmount" 
+    Type="Edm.Decimal" 
+    Precision="16" 
+    Scale="3" 
+    sap:unit="CurrencyCode" 
+    sap:label="Gross Amt." 
+    sap:creatable="false" 
+    sap:updatable="false" 
+/>
 ```
 
 Option 2: Define `Org.OData.Measures.V1.ISOCurrency` in annotations
 
 ```
 <Annotations Target="GWSAMPLE_BASIC.SalesOrder/GrossAmount">
-<Annotation Term="Org.OData.Measures.V1.ISOCurrency" Path="CurrencyCode"/>
+    <Annotation Term="Org.OData.Measures.V1.ISOCurrency" Path="CurrencyCode"/>
 </Annotations> 
 ```
 
@@ -107,21 +118,18 @@ Option 2: Define `Org.OData.Measures.V1.ISOCurrency` in annotations
 
 ### KPI annotation
 
-Descriptor Settings
+Manifest Settings
 
 ```
-"sap.ovp": {//section for ovp-specific app descriptor settings
-	...
-
-	"kpiAnnotationPath":"com.sap.vocabularies.UI.v1.KPI#AllActualCosts", // Represents the KPI annotation path
-	
-     ...
+"sap.ovp": {
+    // section for ovp-specific manifest settings
+    ...
+    "kpiAnnotationPath": "com.sap.vocabularies.UI.v1.KPI#AllActualCosts", // Represents the KPI annotation path
+    ...
 }
-}
-
 ```
 
-**Annotation Sample**
+**Annotation Samples**
 
 > ### Sample Code:  
 > XML Annotation
@@ -129,27 +137,28 @@ Descriptor Settings
 > ```xml
 > <Annotation Term="UI.KPI" Qualifier="Eval_by_Country-Generic">
 >     <Record>
->         <PropertyValue Property="DataPoint" Path="@UI.DataPoint#Eval_by_Country-Generic" />
+>         <PropertyValue Property="DataPoint" Path="@UI.DataPoint#Eval_by_Country-Generic"/>
 >         <PropertyValue Property="Detail">
 >             <Record Type="UI.KPIDetailType">
->                 <PropertyValue Property="DefaultPresentationVariant" Path="@UI.PresentationVariant#Eval_by_Currency1" />
+>                 <PropertyValue Property="DefaultPresentationVariant" Path="@UI.PresentationVariant#Eval_by_Currency1"/>
 >                 <PropertyValue Property="AlternativePresentationVariants">
 >                     <Collection>
 >                         <Path>@UI.PresentationVariant#Eval_by_Currency_Column</Path>
 >                     </Collection>
 >                 </PropertyValue>
->                 <PropertyValue String="Action" Property="SemanticObject" />
->                 <PropertyValue String="toappnavsample" Property="Action" />
+>                 <PropertyValue String="Action" Property="SemanticObject"/>
+>                 <PropertyValue String="toappnavsample" Property="Action"/>
 >             </Record>
 >         </PropertyValue>
->         <PropertyValue String="String for KPI Annotation" Property="ID" />
->         <PropertyValue Property="SelectionVariantQualifier" Path="@UI.SelectionVariant#Eval_by_Currency_1" />
+>         <PropertyValue String="String for KPI Annotation" Property="ID"/>
+>         <PropertyValue Property="SelectionVariantQualifier" Path="@UI.SelectionVariant#Eval_by_Currency_1"/>
 >     </Record>
 > </Annotation>
+> 
 > <Annotation Term="UI.DataPoint" Qualifier="Eval_by_Country_Generic">
 >     <Record>
->         <PropertyValue Property="Value" Path="Currency" />
->         <PropertyValue String="test" Property="Title" />
+>         <PropertyValue Property="Value" Path="Currency"/>
+>         <PropertyValue String="test" Property="Title"/>
 >     </Record>
 > </Annotation>
 > ```
@@ -159,20 +168,22 @@ Descriptor Settings
 > 
 > ```
 > @UI.KPI: [
->   {
->     detail: {
->       defaultPresentationVariantQualifier: 'Eval_by_Currency1',
->       alternativePresentationVariantQualifiers: [
->         'Eval_by_Currency_Column'
->       ],
->       semanticObject: 'Action',
->       semanticObjectAction: 'toappnavsample'
->     },
->     selectionVariantQualifier: 'Eval_by_Currency_1',
->     id: 'String for KPI Annotation',
->     qualifier: 'Eval_by_Country-Generic',
->     dataPoint.title: 'test'
->   }
+>     {
+>         detail: {
+>             defaultPresentationVariantQualifier: 'Eval_by_Currency1',
+>             alternativePresentationVariantQualifiers: [
+>                 'Eval_by_Currency_Column'
+>             ],
+>             semanticObject: 'Action',
+>             semanticObjectAction: 'toappnavsample'
+>         },
+>         selectionVariantQualifier: 'Eval_by_Currency_1',
+>         id: 'String for KPI Annotation',
+>         qualifier: 'Eval_by_Country-Generic',
+>         dataPoint: {
+>             title: 'test'
+>         }
+>     }
 > ]
 > ```
 
@@ -180,21 +191,21 @@ Descriptor Settings
 > CAP CDS Annotation
 > 
 > ```
-> UI.KPI #AllActualCosts : {
->     $Type : 'UI.KPIType',
->     Detail : {
->         $Type : 'UI.KPIDetailType',
->         DefaultPresentationVariant : ![@UI.PresentationVariant#Eval_by_Currency1],
->         AlternativePresentationVariants : [
+> UI.KPI #AllActualCosts: {
+>     $Type: 'UI.KPIType',
+>     Detail: {
+>         $Type: 'UI.KPIDetailType',
+>         DefaultPresentationVariant: ![@UI.PresentationVariant#Eval_by_Currency1],
+>         AlternativePresentationVariants: [
 >             ![@UI.PresentationVariant#Eval_by_Currency_Column]
 >         ],
->         SemanticObject : 'Action',
->         Action : 'toappnavsample'
+>         SemanticObject: 'Action',
+>         Action: 'toappnavsample'
 >     },
->     SelectionVariant : ![@UI.SelectionVariant#Eval_by_Currency_1],
->     DataPoint : ![@UI.DataPoint#Eval_by_Country-Generic],
->     ID : 'String for KPI Annotation'
-> },
+>     SelectionVariant: ![@UI.SelectionVariant#Eval_by_Currency_1],
+>     DataPoint: ![@UI.DataPoint#Eval_by_Country-Generic],
+>     ID: 'String for KPI Annotation'
+> }
 > ```
 
 **`PresentationVariant` annotation**
@@ -204,28 +215,28 @@ Descriptor Settings
 > 
 > ```xml
 > <Annotation Term="UI.PresentationVariant" Qualifier="Eval_by_Currency1">
->    <Record>
->       <PropertyValue Property="MaxItems" Int="5" />
->       <PropertyValue Property="GroupBy">
->          <Collection>
->             <PropertyPath>Country</PropertyPath>
->             <PropertyPath>Currency</PropertyPath>
->          </Collection>
->       </PropertyValue>
->       <PropertyValue Property="SortOrder">
->          <Collection>
->             <Record>
->                <PropertyValue Property="Property" PropertyPath="TotalSales" />
->                <PropertyValue Property="Descending" Bool="true" />
->             </Record>
->          </Collection>
->       </PropertyValue>
->       <PropertyValue Property="Visualizations">
->          <Collection>
->             <AnnotationPath>@UI.Chart#Eval_by_Currency_Donut</AnnotationPath>
->          </Collection>
->       </PropertyValue>
->    </Record>
+>     <Record>
+>         <PropertyValue Property="MaxItems" Int="5"/>
+>         <PropertyValue Property="GroupBy">
+>             <Collection>
+>                 <PropertyPath>Country</PropertyPath>
+>                 <PropertyPath>Currency</PropertyPath>
+>             </Collection>
+>         </PropertyValue>
+>         <PropertyValue Property="SortOrder">
+>             <Collection>
+>                 <Record>
+>                     <PropertyValue Property="Property" PropertyPath="TotalSales"/>
+>                     <PropertyValue Property="Descending" Bool="true"/>
+>                 </Record>
+>             </Collection>
+>         </PropertyValue>
+>         <PropertyValue Property="Visualizations">
+>             <Collection>
+>                 <AnnotationPath>@UI.Chart#Eval_by_Currency_Donut</AnnotationPath>
+>             </Collection>
+>         </PropertyValue>
+>     </Record>
 > </Annotation>
 > ```
 
@@ -233,53 +244,52 @@ Descriptor Settings
 > ABAP CDS Annotation
 > 
 > ```
-> 
 > @UI.PresentationVariant: [
->   {
->     maxItems: 5,
->     groupBy: [
->       'COUNTRY',
->       'CURRENCY'
->     ],
->     sortOrder: [
->       {
->         by: 'TOTALSALES'
->       }
->     ],
->     visualizations: [
->       {
->         type: #AS_CHART,
->         qualifier: 'Eval_by_Currency_Donut'
->       }
->     ],
->     qualifier: 'Eval_by_Currency1'
->   }
+>     {
+>         maxItems: 5,
+>         groupBy: [
+>             'COUNTRY',
+>             'CURRENCY'
+>         ],
+>         sortOrder: [
+>             {
+>                 by: 'TOTALSALES'
+>             }
+>         ],
+>         visualizations: [
+>             {
+>                 type: '#AS_CHART',
+>                 qualifier: 'Eval_by_Currency_Donut'
+>             }
+>         ],
+>         qualifier: 'Eval_by_Currency1'
+>     }
 > ]
-> annotate view VIEWNAME with {
 > 
-> }
+> // Annotation for VIEWNAME
+> annotate view VIEWNAME with {}
 > ```
 
 > ### Sample Code:  
 > CAP CDS Annotation
 > 
 > ```
-> UI.PresentationVariant #Eval_by_Currency1 : {
->     MaxItems : 5,
->     GroupBy : [
->         Country,
->         Currency
+> UI.PresentationVariant #Eval_by_Currency1: {
+>     MaxItems: 5,
+>     GroupBy: [
+>         "Country",
+>         "Currency"
 >     ],
->     SortOrder : [
+>     SortOrder: [
 >         {
->             Property : TotalSales,
->             Descending : true
->         },
+>             Property: "TotalSales",
+>             Descending: true
+>         }
 >     ],
->     Visualizations : [
->         '@UI.Chart#Eval_by_Currency_Donut'
->     ],
-> },
+>     Visualizations: [
+>         "@UI.Chart#Eval_by_Currency_Donut"
+>     ]
+> }
 > ```
 
 **`SelectionVariant` annotation**
@@ -289,36 +299,36 @@ Descriptor Settings
 > 
 > ```xml
 > <Annotation Term="UI.SelectionVariant" Qualifier="Eval_by_Currency_1">
->    <Record>
->       <PropertyValue Property="SelectOptions">
->          <Collection>
->             <Record>
->                <PropertyValue Property="PropertyName" PropertyPath="Country" />
->                <PropertyValue Property="Ranges">
->                   <Collection>
->                      <Record>
->                         <PropertyValue Property="Sign" EnumMember="UI.SelectionRangeSignType/I" />
->                         <PropertyValue Property="Option" EnumMember="UI.SelectionRangeOptionType/EQ" />
->                         <PropertyValue Property="Low" String="IN" />
->                      </Record>
->                   </Collection>
->                </PropertyValue>
->             </Record>
->          </Collection>
->       </PropertyValue>
->       <PropertyValue Property="Parameters">
->          <Collection>
->             <Record Type="UI.Parameter">
->                <PropertyValue Property="PropertyName" PropertyPath="Currency_Target" />
->                <PropertyValue Property="PropertyValue" String="EUR" />
->             </Record>
->             <Record Type="UI.Parameter">
->                <PropertyValue Property="PropertyName" PropertyPath="UoM_Target" />
->                <PropertyValue Property="PropertyValue" String="KGM" />
->             </Record>
->          </Collection>
->       </PropertyValue>
->    </Record>
+>     <Record>
+>         <PropertyValue Property="SelectOptions">
+>             <Collection>
+>                 <Record>
+>                     <PropertyValue Property="PropertyName" PropertyPath="Country"/>
+>                     <PropertyValue Property="Ranges">
+>                         <Collection>
+>                             <Record>
+>                                 <PropertyValue Property="Sign" EnumMember="UI.SelectionRangeSignType/I"/>
+>                                 <PropertyValue Property="Option" EnumMember="UI.SelectionRangeOptionType/EQ"/>
+>                                 <PropertyValue Property="Low" String="IN"/>
+>                             </Record>
+>                         </Collection>
+>                     </PropertyValue>
+>                 </Record>
+>             </Collection>
+>         </PropertyValue>
+>         <PropertyValue Property="Parameters">
+>             <Collection>
+>                 <Record Type="UI.Parameter">
+>                     <PropertyValue Property="PropertyName" PropertyPath="Currency_Target"/>
+>                     <PropertyValue Property="PropertyValue" String="EUR"/>
+>                 </Record>
+>                 <Record Type="UI.Parameter">
+>                     <PropertyValue Property="PropertyName" PropertyPath="UoM_Target"/>
+>                     <PropertyValue Property="PropertyValue" String="KGM"/>
+>                 </Record>
+>             </Collection>
+>         </PropertyValue>
+>     </Record>
 > </Annotation>
 > ```
 
@@ -326,34 +336,32 @@ Descriptor Settings
 > CAP CDS Annotation
 > 
 > ```
-> UI.SelectionVariant #Eval_by_Currency_1 : {
->     SelectOptions : [
+> UI.SelectionVariant #Eval_by_Currency_1: {
+>     SelectOptions: [
 >         {
->             PropertyName : Country,
->             Ranges : [
+>             PropertyName: "Country",
+>             Ranges: [
 >                 {
->                     Sign : #I,
->                     Option : #EQ,
->                     Low : 'IN'
+>                     Sign: "#I",
+>                     Option: "#EQ",
+>                     Low: "IN"
 >                 }
 >             ]
 >         }
 >     ],
->     Parameters : [
+>     Parameters: [
 >         {
->             $Type : 'UI.Parameter',
->             PropertyName : Currency_Target,
->             PropertyValue : 'EUR'
+>             $Type: "UI.Parameter",
+>             PropertyName: "Currency_Target",
+>             PropertyValue: "EUR"
 >         },
 >         {
->             $Type : 'UI.Parameter',
->             PropertyName : UoM_Target,
->             PropertyValue : 'KGM'
+>             $Type: "UI.Parameter",
+>             PropertyName: "UoM_Target",
+>             PropertyValue: "KGM"
 >         }
 >     ]
 > }
-> 
-> 
 > ```
 
 **`DataPoint` annotation**
@@ -363,30 +371,30 @@ Descriptor Settings
 > 
 > ```xml
 > <Annotation Term="UI.DataPoint" Qualifier="Eval_by_Country_Generic">
-> 	<Record Type="UI.DataPointType">
-> 		<PropertyValue Property="Title" String="Sales India - Generic Card" />
-> 		<PropertyValue Property="Value" Path="Sales" />
-> 		<PropertyValue Property="ValueFormat">
-> 			<Record>
-> 				<PropertyValue Property="ScaleFactor" Decimal="2" />
-> 				<PropertyValue Property="NumberOfFractionalDigits" Int="1" />
-> 			</Record>
-> 		</PropertyValue>
-> 		<PropertyValue Property="CriticalityCalculation">
-> 			<Record>
-> 				<PropertyValue Property="ImprovementDirection" EnumMember="UI.ImprovementDirectionType/Minimize" />
-> 				<PropertyValue Property="DeviationRangeHighValue" String="7300" />
-> 				<PropertyValue Property="ToleranceRangeHighValue" String="7200" />
-> 			</Record>
-> 		</PropertyValue>
-> 		<PropertyValue Property="TargetValue" String="2.000 " />
-> 		<PropertyValue Property="TrendCalculation">
-> 			<Record>
-> 				<PropertyValue Property="ReferenceValue" String="5201680" />
-> 				<PropertyValue Property="DownDifference" Decimal="10000000.0" />
-> 			</Record>
-> 		</PropertyValue>
-> 	</Record>
+>     <Record Type="UI.DataPointType">
+>         <PropertyValue Property="Title" String="Sales India - Generic Card" />
+>         <PropertyValue Property="Value" Path="Sales" />
+>         <PropertyValue Property="ValueFormat">
+>             <Record>
+>                 <PropertyValue Property="ScaleFactor" Decimal="2" />
+>                 <PropertyValue Property="NumberOfFractionalDigits" Int="1" />
+>             </Record>
+>         </PropertyValue>
+>         <PropertyValue Property="CriticalityCalculation">
+>             <Record>
+>                 <PropertyValue Property="ImprovementDirection" EnumMember="UI.ImprovementDirectionType/Minimize" />
+>                 <PropertyValue Property="DeviationRangeHighValue" String="7300" />
+>                 <PropertyValue Property="ToleranceRangeHighValue" String="7200" />
+>             </Record>
+>         </PropertyValue>
+>         <PropertyValue Property="TargetValue" String="2.000" />
+>         <PropertyValue Property="TrendCalculation">
+>             <Record>
+>                 <PropertyValue Property="ReferenceValue" String="5201680" />
+>                 <PropertyValue Property="DownDifference" Decimal="10000000.0" />
+>             </Record>
+>         </PropertyValue>
+>     </Record>
 > </Annotation>
 > ```
 
@@ -394,41 +402,46 @@ Descriptor Settings
 > ABAP CDS Annotation
 > 
 > ```
-> @UI.dataPoint: { 
-> 	 title: 'Sales India - Generic Card',
-> 	 valueFormat: { scaleFactor: 2, numberOfFractionalDigits: 1 },
-> 	 criticalityCalculation: { 
-> 	   improvementDirection: #MINIMIZE,
-> 	   deviationRangeHighValue: 7300,
-> 	   toleranceRangeHighValue: 7200
-> 	 },
-> 	 targetValue: 2.000,
-> 	 trendCalculation: { referenceValue: 'refValElement', downDifference: 10000000.0 }
-> }
-> Sales;
+> @UI.dataPoint: {
+>     title: "Sales India - Generic Card",
+>     valueFormat: {
+>         scaleFactor: 2,
+>         numberOfFractionalDigits: 1
+>     },
+>     criticalityCalculation: {
+>         improvementDirection: "#MINIMIZE",
+>         deviationRangeHighValue: 7300,
+>         toleranceRangeHighValue: 7200
+>     },
+>     targetValue: 2.000,
+>     trendCalculation: {
+>         referenceValue: "refValElement",
+>         downDifference: 10000000.0
+>     }
+> } Sales;
 > ```
 
 > ### Sample Code:  
 > CAP CDS Annotation
 > 
 > ```
-> UI.DataPoint #Eval_by_Country-Generic : {
->     $Type : 'UI.DataPointType',
->     Title : 'Sales India - Generic Card',
->     Value : Sales,
->     ValueFormat : {
->         ScaleFactor : 2,
->         NumberOfFractionalDigits : 1
+> UI.DataPoint #Eval_by_Country-Generic: {
+>     $Type: "UI.DataPointType",
+>     Title: "Sales India - Generic Card",
+>     Value: "Sales",
+>     ValueFormat: {
+>         ScaleFactor: 2,
+>         NumberOfFractionalDigits: 1
 >     },
->     CriticalityCalculation : {
->         ImprovementDirection : #Minimizing,
->         DeviationRangeHighValue : '7300',
->         ToleranceRangeHighValue : '7200'
+>     CriticalityCalculation: {
+>         ImprovementDirection: "#Minimizing",
+>         DeviationRangeHighValue: "7300",
+>         ToleranceRangeHighValue: "7200"
 >     },
->     TargetValue : '2.000 ',
->     TrendCalculation : {
->         ReferenceValue : '5201680',
->         DownDifference : 10000000.0
+>     TargetValue: "2.000",
+>     TrendCalculation: {
+>         ReferenceValue: "5201680",
+>         DownDifference: 10000000.0
 >     }
 > }
 > ```
@@ -441,46 +454,50 @@ Property: `valueSelectionInfo`
 
 Description: Configuring this property allows you to define a dropdown list to filter/view data at the card level.
 
-Descriptor Settings
-
-```
-	"sap.ovp": {
-		"globalFilterModel": "salesOrder",
-		"globalFilterEntityType": "GlobalFilters",
-		"showDateInRelativeFormat": false,
-		"disableTableCardFlexibility": false,
-		"considerAnalyticalParameters": true,
-		"useDateRangeType": false,
-		"cards": {
-          "card014": {
-            "model": "salesOrder",
-            "template": "sap.ovp.cards.table",
-            "settings": {
-              "title": "Sales Forecast",
-              "subTitle": "per Supplier",
-              "valueSelectionInfo": "Value Selection Info",
-              "entitySet": "SalesShare",
-              "tabs": [
-                {
-                  "dynamicSubtitleAnnotationPath": "com.sap.vocabularies.UI.v1.HeaderInfo#dynamicSubtitle",
-                  "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#View1",
-                  "selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#line1",
-                  "presentationAnnotationPath": "com.sap.vocabularies.UI.v1.PresentationVariant#line",
-                  "identificationAnnotationPath": "com.sap.vocabularies.UI.v1.Identification",
-                  "dataPointAnnotationPath": "com.sap.vocabularies.UI.v1.DataPoint#line",
-                  "value": "{{dropdown_value2}}"
-                },
-                {
-                  "dynamicSubtitleAnnotationPath": "com.sap.vocabularies.UI.v1.HeaderInfo#dynamicSubtitle",
-                  "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#View4",
-                  "identificationAnnotationPath": "com.sap.vocabularies.UI.v1.Identification#item2",
-                  "dataPointAnnotationPath": "com.sap.vocabularies.UI.v1.DataPoint#line",
-                  "value": "{{dropdown_value4}}"
-                }
-              ]
-            }
-          },
-```
+> ### Sample Code:  
+> Manifest Settings
+> 
+> ```
+> "sap.ovp": {
+>     "globalFilterModel": "salesOrder",
+>     "globalFilterEntityType": "GlobalFilters", //Deprecated since SAPUI5 1.54.
+>     "globalFilterEntitySet": "GlobalFilters", //Available from SAPUI5 1.54.
+>     "showDateInRelativeFormat": false,
+>     "disableTableCardFlexibility": false,
+>     "considerAnalyticalParameters": true,
+>     "useDateRangeType": false,
+>     "cards": {
+>         "card014": {
+>             "model": "salesOrder",
+>             "template": "sap.ovp.cards.table",
+>             "settings": {
+>                 "title": "Sales Forecast",
+>                 "subTitle": "per Supplier",
+>                 "valueSelectionInfo": "Value Selection Info",
+>                 "entitySet": "SalesShare",
+>                 "tabs": [
+>                     {
+>                         "dynamicSubtitleAnnotationPath": "com.sap.vocabularies.UI.v1.HeaderInfo#dynamicSubtitle",
+>                         "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#View1",
+>                         "selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#line1",
+>                         "presentationAnnotationPath": "com.sap.vocabularies.UI.v1.PresentationVariant#line",
+>                         "identificationAnnotationPath": "com.sap.vocabularies.UI.v1.Identification",
+>                         "dataPointAnnotationPath": "com.sap.vocabularies.UI.v1.DataPoint#line",
+>                         "value": "{{dropdown_value2}}"
+>                     },
+>                     {
+>                         "dynamicSubtitleAnnotationPath": "com.sap.vocabularies.UI.v1.HeaderInfo#dynamicSubtitle",
+>                         "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#View4",
+>                         "identificationAnnotationPath": "com.sap.vocabularies.UI.v1.Identification#item2",
+>                         "dataPointAnnotationPath": "com.sap.vocabularies.UI.v1.DataPoint#line",
+>                         "value": "{{dropdown_value4}}"
+>                     }
+>                 ]
+>             }
+>         }
+>     }
+> }
+> ```
 
 
 
@@ -490,46 +507,50 @@ Annotation: `LineItem`
 
 Description: Configuring this annotation displays the table header title \(`Label` property\) and the corresponding values \(`Value` property\) for the row items.
 
-**Descriptor Settings**
-
-```
-	"sap.ovp": {
-		"globalFilterModel": "salesOrder",
-		"globalFilterEntityType": "GlobalFilters",
-		"showDateInRelativeFormat": false,
-		"disableTableCardFlexibility": false,
-		"considerAnalyticalParameters": true,
-		"useDateRangeType": false,
-		"cards": {
-          "card014": {
-            "model": "salesOrder",
-            "template": "sap.ovp.cards.table",
-            "settings": {
-              "title": "Sales Forecast",
-              "subTitle": "per Supplier",
-              "valueSelectionInfo": "Value Selection Info",
-              "entitySet": "SalesShare",
-              "tabs": [
-                {
-                  "dynamicSubtitleAnnotationPath": "com.sap.vocabularies.UI.v1.HeaderInfo#dynamicSubtitle",
-                  "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#View1",
-                  "selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#line1",
-                  "presentationAnnotationPath": "com.sap.vocabularies.UI.v1.PresentationVariant#line",
-                  "identificationAnnotationPath": "com.sap.vocabularies.UI.v1.Identification",
-                  "dataPointAnnotationPath": "com.sap.vocabularies.UI.v1.DataPoint#line",
-                  "value": "{{dropdown_value2}}"
-                },
-                {
-                  "dynamicSubtitleAnnotationPath": "com.sap.vocabularies.UI.v1.HeaderInfo#dynamicSubtitle",
-                  "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#View4",
-                  "identificationAnnotationPath": "com.sap.vocabularies.UI.v1.Identification#item2",
-                  "dataPointAnnotationPath": "com.sap.vocabularies.UI.v1.DataPoint#line",
-                  "value": "{{dropdown_value4}}"
-                }
-              ]
-            }
-          },
-```
+> ### Sample Code:  
+> Manifest Settings
+> 
+> ```
+> "sap.ovp": {
+>     "globalFilterModel": "salesOrder",
+>     "globalFilterEntityType": "GlobalFilters", //Deprecated since SAPUI5 1.54.
+>     "globalFilterEntitySet": "GlobalFilters", //Available from SAPUI5 1.54.
+>     "showDateInRelativeFormat": false,
+>     "disableTableCardFlexibility": false,
+>     "considerAnalyticalParameters": true,
+>     "useDateRangeType": false,
+>     "cards": {
+>         "card014": {
+>             "model": "salesOrder",
+>             "template": "sap.ovp.cards.table",
+>             "settings": {
+>                 "title": "Sales Forecast",
+>                 "subTitle": "per Supplier",
+>                 "valueSelectionInfo": "Value Selection Info",
+>                 "entitySet": "SalesShare",
+>                 "tabs": [
+>                     {
+>                         "dynamicSubtitleAnnotationPath": "com.sap.vocabularies.UI.v1.HeaderInfo#dynamicSubtitle",
+>                         "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#View1",
+>                         "selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#line1",
+>                         "presentationAnnotationPath": "com.sap.vocabularies.UI.v1.PresentationVariant#line",
+>                         "identificationAnnotationPath": "com.sap.vocabularies.UI.v1.Identification",
+>                         "dataPointAnnotationPath": "com.sap.vocabularies.UI.v1.DataPoint#line",
+>                         "value": "{{dropdown_value2}}"
+>                     },
+>                     {
+>                         "dynamicSubtitleAnnotationPath": "com.sap.vocabularies.UI.v1.HeaderInfo#dynamicSubtitle",
+>                         "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#View4",
+>                         "identificationAnnotationPath": "com.sap.vocabularies.UI.v1.Identification#item2",
+>                         "dataPointAnnotationPath": "com.sap.vocabularies.UI.v1.DataPoint#line",
+>                         "value": "{{dropdown_value4}}"
+>                     }
+>                 ]
+>             }
+>         }
+>     }
+> }
+> ```
 
 **Annotation Sample for `LineItem#View4`**
 
@@ -564,83 +585,67 @@ Description: Configuring this annotation displays the table header title \(`Labe
 > 
 > ```
 > @UI.lineItem: [
->   {
->     label: 'Order ID',
->     position: 10,
->     qualifier: 'View4'
->   }
-> ]
-> SALESORDERID;
+>     {
+>         label: "Order ID",
+>         position: 10,
+>         qualifier: "View4"
+>     }
+> ] SALESORDERID;
 > 
 > @UI.lineItem: [
->   {
->     label: 'Customer',
->     value: '_BUSINESSPARTNER.EMAILADDRESS',
->     position: 20,
->     qualifier: 'View4'
->   }
-> ]
-> _BUSINESSPARTNER;
+>     {
+>         label: "Customer",
+>         value: "_BUSINESSPARTNER.EMAILADDRESS",
+>         position: 20,
+>         qualifier: "View4"
+>     }
+> ] _BUSINESSPARTNER;
 > 
 > @UI.lineItem: [
->   {
->     label: 'Customer',
->     position: 30,
->     qualifier: 'View4'
->   }
-> XML Annotation
-> 
-> <Annotations Target="GWSAMPLE_BASIC.GWSAMPLE_BASIC_Entities/RegenerateAllData">
->         <Annotation Term="com.sap.vocabularies.Common.v1.IsActionCritical" Bool="true"/>
-> </Annotations>
-> CAP CDS Annotation
-> 
-> annotate GWSAMPLE_BASIC.RegenerateAllData with @(
->     Common.IsActionCritical : true
-> );
-> ]
-> CUSTOMERNAME;
+>     {
+>         label: "Customer",
+>         position: 30,
+>         qualifier: "View4"
+>     }
+> ] CUSTOMERNAME;
 > 
 > @UI.lineItem: [
->   {
->     label: 'TaxAmount',
->     valueQualifier: 'TaxAmount',
->     type: #AS_DATAPOINT,
->     position: 40,
->     qualifier: 'View4'
->   }
-> ]
-> PROPERTY_NAME;
-> 
+>     {
+>         label: "TaxAmount",
+>         valueQualifier: "TaxAmount",
+>         type: "#AS_DATAPOINT",
+>         position: 40,
+>         qualifier: "View4"
+>     }
+> ] PROPERTY_NAME;
 > ```
 
 > ### Sample Code:  
 > CAP CDS Annotation
 > 
 > ```
-> UI.LineItem #View4 : [
+> UI.LineItem #View4: [
 >     {
->         $Type : 'UI.DataField',
->         Label : 'Order ID',
->         Value : SalesOrderID
+>         $Type: "UI.DataField",
+>         Label: "Order ID",
+>         Value: "SalesOrderID"
 >     },
 >     {
->         $Type : 'UI.DataField',
->         Label : 'Customer',
->         Value : ToBusinessPartner.EmailAddress
+>         $Type: "UI.DataField",
+>         Label: "Customer",
+>         Value: "ToBusinessPartner.EmailAddress"
 >     },
 >     {
->         $Type : 'UI.DataField',
->         Label : 'Customer',
->         Value : CustomerName
+>         $Type: "UI.DataField",
+>         Label: "Customer",
+>         Value: "CustomerName"
 >     },
 >     {
->         $Type : 'UI.DataFieldForAnnotation',
->         Label : 'TaxAmount',
->         Target : '@UI.DataPoint#TaxAmount'
+>         $Type: "UI.DataFieldForAnnotation",
+>         Label: "TaxAmount",
+>         Target: "@UI.DataPoint#TaxAmount"
 >     }
 > ]
-> 
 > ```
 
 **Annotation Sample for `DataPoint#TaxAmount`**
@@ -661,21 +666,19 @@ Description: Configuring this annotation displays the table header title \(`Labe
 > ABAP CDS Annotation
 > 
 > ```
-> 
 > @UI.dataPoint: {
->   title: 'TaxAmount'
-> }
-> TaxAmount;
+>     title: "TaxAmount"
+> } TaxAmount;
 > ```
 
 > ### Sample Code:  
 > CAP CDS Annotation
 > 
 > ```
-> UI.DataPoint #TaxAmount : {
->     $Type : 'UI.DataPointType',
->     Title : 'TaxAmount',
->     Value : TaxAmount
+> UI.DataPoint #TaxAmount: {
+>     $Type: "UI.DataPointType",
+>     Title: "TaxAmount",
+>     Value: "TaxAmount"
 > }
 > ```
 
@@ -690,22 +693,21 @@ The `com.sap.vocabularies.UI.v1.LineItem` term can be configured in the applicat
 >     "disableTableCardFlexibility": false,
 >     ...
 >     "card02": {
-> 	"model": "salesOrder",
-> 	"template": "sap.ovp.cards.table",
-> 	"settings": {
-> 		"title": "Sales Orders With Analytical Header",
-> 		"subTitle": "Sales Orders With Analytical Header",
-> 		"listFlavor": "bar",
-> 		"listType": "extended",
-> 		"entitySet": "SalesOrderSet",
-> 		"dataPointAnnotationPath": "com.sap.vocabularies.UI.v1.DataPoint#line_without_trend",
-> 		"selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#line1",
->           "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#View1",
-> 		"presentationAnnotationPath": "com.sap.vocabularies.UI.v1.PresentationVariant#line"
-> 	  }
+>         "model": "salesOrder",
+>         "template": "sap.ovp.cards.table",
+>         "settings": {
+>             "title": "Sales Orders With Analytical Header",
+>             "subTitle": "Sales Orders With Analytical Header",
+>             "listFlavor": "bar",
+>             "listType": "extended",
+>             "entitySet": "SalesOrderSet",
+>             "dataPointAnnotationPath": "com.sap.vocabularies.UI.v1.DataPoint#line_without_trend",
+>             "selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#line1",
+>             "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#View1",
+>             "presentationAnnotationPath": "com.sap.vocabularies.UI.v1.PresentationVariant#line"
+>         }
 >     },
->       ...
->   }
+>     ...
 > }
 > ```
 
@@ -783,126 +785,120 @@ In this example, the first column in the table displays **Product Name**, the se
 > ABAP CDS Annotation
 > 
 > ```
-> 
-> @UI.dataPoint: { 
->  title: 'Weight',
->  description: 'Name',
->  valueFormat: { scaleFactor: 2, numberOfFractionalDigits: 1 },
->  criticalityCalculation: { 
->    improvementDirection: #MAXIMIZE,
->    deviationRangeHighValue: 4.3,
->    toleranceRangeHighValue: 2.5
-> }
-> WeightMeasure;
-> 
-> @UI.lineItem: [
->   {
->     label: 'Product ID',
->     position: 10 
->   }
-> ]
-> PRODUCTID;
+> @UI.dataPoint: {
+>     title: "Weight",
+>     description: "Name",
+>     valueFormat: {
+>         scaleFactor: 2,
+>         numberOfFractionalDigits: 1
+>     },
+>     criticalityCalculation: {
+>         improvementDirection: "#MAXIMIZE",
+>         deviationRangeHighValue: 4.3,
+>         toleranceRangeHighValue: 2.5
+>     }
+> } WeightMeasure;
 > 
 > @UI.lineItem: [
->   {
->     label: 'Category',
->     position: 20
->   }
-> ]
-> CATEGORY;
+>     {
+>         label: "Product ID",
+>         position: 10
+>     }
+> ] PRODUCTID;
 > 
 > @UI.lineItem: [
->   {
->     importance: #HIGH,
->     label: 'Product Name',
->     position: 30
->   }
-> ]
-> NAME;
+>     {
+>         label: "Category",
+>         position: 20
+>     }
+> ] CATEGORY;
 > 
 > @UI.lineItem: [
->   {
->     importance: #HIGH,
->     label: 'Supplier',
->     position: 40 
->   }
-> ]
-> SUPPLIERNAME;
+>     {
+>         importance: "#HIGH",
+>         label: "Product Name",
+>         position: 30
+>     }
+> ] NAME;
 > 
 > @UI.lineItem: [
->   {
->     importance: #HIGH,
->     label: 'Unit Price',
->     position: 50
->   }
-> ]
-> PRICE;
+>     {
+>         importance: "#HIGH",
+>         label: "Supplier",
+>         position: 40
+>     }
+> ] SUPPLIERNAME;
 > 
 > @UI.lineItem: [
->   {
->     label: 'Weight Measure',
->     valueQualifier: 'WeightMeasure',
->     type: #AS_DATAPOINT,
->     position: 60 
->   }
-> ]
-> PROPERTY_NAME;
+>     {
+>         importance: "#HIGH",
+>         label: "Unit Price",
+>         position: 50
+>     }
+> ] PRICE;
 > 
+> @UI.lineItem: [
+>     {
+>         label: "Weight Measure",
+>         valueQualifier: "WeightMeasure",
+>         type: "#AS_DATAPOINT",
+>         position: 60
+>     }
+> ] PROPERTY_NAME;
 > ```
 
 > ### Sample Code:  
 > CAP CDS Annotation
 > 
 > ```
-> 
-> UI.DataPoint #WeightMeasure : {
->     $Type : 'UI.DataPointType',
->     Title : 'Weight',
->     Description : Name,
->     Value : WeightMeasure,
->     CriticalityCalculation : {
->         $Type : 'UI.CriticalityCalculationType',
->         ImprovementDirection : #Maximize,
->         ToleranceRangeLowValue : 2.5,
->         DeviationRangeLowValue : 4.3
+> UI.DataPoint #WeightMeasure: {
+>     $Type: "UI.DataPointType",
+>     Title: "Weight",
+>     Description: "Name",
+>     Value: "WeightMeasure",
+>     CriticalityCalculation: {
+>         $Type: "UI.CriticalityCalculationType",
+>         ImprovementDirection: "#Maximize",
+>         ToleranceRangeLowValue: 2.5,
+>         DeviationRangeLowValue: 4.3
 >     }
 > },
-> UI.LineItem : [
+> 
+> UI.LineItem: [
 >     {
->         $Type : 'UI.DataField',
->         Label : 'Product ID',
->         Value : ProductID
+>         $Type: "UI.DataField",
+>         Label: "Product ID",
+>         Value: "ProductID"
 >     },
 >     {
->         $Type : 'UI.DataField',
->         Label : 'Category',
->         Value : Category
+>         $Type: "UI.DataField",
+>         Label: "Category",
+>         Value: "Category"
 >     },
 >     {
->         $Type : 'UI.DataField',
->         Label : 'Product Name',
->         Value : Name,
->         ![@UI.Importance] : #High
+>         $Type: "UI.DataField",
+>         Label: "Product Name",
+>         Value: "Name",
+>         "![@UI.Importance]": "#High"
 >     },
 >     {
->         $Type : 'UI.DataField',
->         Label : 'Supplier',
->         Value : SupplierName,
->         ![@UI.Importance] : #High
+>         $Type: "UI.DataField",
+>         Label: "Supplier",
+>         Value: "SupplierName",
+>         "![@UI.Importance]": "#High"
 >     },
 >     {
->         $Type : 'UI.DataField',
->         Label : 'Unit Price',
->         Value : Price,
->         ![@UI.Importance] : #High
+>         $Type: "UI.DataField",
+>         Label: "Unit Price",
+>         Value: "Price",
+>         "![@UI.Importance]": "#High"
 >     },
 >     {
->         $Type : 'UI.DataFieldForAnnotation',
->         Label : 'Weight Measure',
->         Target : '@UI.DataPoint#WeightMeasure'
+>         $Type: "UI.DataFieldForAnnotation",
+>         Label: "Weight Measure",
+>         Target: "@UI.DataPoint#WeightMeasure"
 >     }
 > ]
-> 
 > ```
 
 
@@ -918,7 +914,7 @@ Define a semantic object for the entity set and its property using the annotatio
 > 
 > ```xml
 > <Annotations Target="GWSAMPLE_BASIC.SalesOrder/SalesOrderID">
->     <Annotation Term="com.sap.vocabularies.Common.v1.SemanticObject" String="OVP" />
+>     <Annotation Term="com.sap.vocabularies.Common.v1.SemanticObject" String="OVP"/>
 > </Annotations>
 > ```
 
@@ -926,10 +922,9 @@ Define a semantic object for the entity set and its property using the annotatio
 > ABAP CDS Annotation
 > 
 > ```
-> 
 > annotate view SALESORDER with {
->   @Consumption.semanticObject: 'OVP'
->   salesorderid;
+>     @Consumption.semanticObject: 'OVP'
+>     salesorderid;
 > }
 > ```
 
@@ -937,11 +932,10 @@ Define a semantic object for the entity set and its property using the annotatio
 > CAP CDS Annotation
 > 
 > ```
-> 
 > annotate GWSAMPLE_BASIC.SalesOrder with {
->   @Common.SemanticObject : 'OVP'
->   SalesOrderID
-> };
+>     @Common.SemanticObject: 'OVP'
+>     SalesOrderID;
+> }
 > ```
 
 Table cards also let you view contact information if you have defined the `com.sap.vocabularies.Communication.v1.Contact` annotation.
@@ -968,47 +962,41 @@ Table cards also let you view contact information if you have defined the `com.s
 > ABAP CDS Annotation
 > 
 > ```
+> @UI.lineItem: [
+>     {
+>         label: "Order ID (Company)",
+>         position: 10,
+>         qualifier: "NewSalesOrders"
+>     }
+> ] SALESORDERID;
 > 
 > @UI.lineItem: [
->   {
->     label: 'Order ID (Company)',
->     position: 10,
->     qualifier: 'NewSalesOrders'
->   }
-> ]
-> SALESORDERID;
-> 
-> @UI.lineItem: [
->   {
->     label: 'Created by (Role)',
->     value: '_BUSINESSPARTNER',
->     type: #AS_CONTACT,
->     position: 20 ,
->     qualifier: 'NewSalesOrders'
->   }
-> ]
-> PROPERT_NAME;
-> 
+>     {
+>         label: "Created by (Role)",
+>         value: "_BUSINESSPARTNER",
+>         type: "#AS_CONTACT",
+>         position: 20,
+>         qualifier: "NewSalesOrders"
+>     }
+> ] PROPERT_NAME;
 > ```
 
 > ### Sample Code:  
 > CAP CDS Annotation
 > 
 > ```
-> 
-> UI.LineItem #NewSalesOrders : [
+> UI.LineItem #NewSalesOrders: [
 >     {
->         $Type : 'UI.DataField',
->         Label : 'Order ID (Company)',
->         Value : SalesOrderID
+>         $Type: "UI.DataField",
+>         Label: "Order ID (Company)",
+>         Value: "SalesOrderID"
 >     },
 >     {
->         $Type : 'UI.DataFieldForAnnotation',
->         Label : 'Created by (Role)',
->         Target : 'ToBusinessPartner/@Communication.Contact'
+>         $Type: "UI.DataFieldForAnnotation",
+>         Label: "Created by (Role)",
+>         Target: "ToBusinessPartner/@Communication.Contact"
 >     }
 > ]
-> 
 > ```
 
 > ### Sample Code:  
@@ -1016,28 +1004,28 @@ Table cards also let you view contact information if you have defined the `com.s
 > 
 > ```xml
 > <Annotation Term="com.sap.vocabularies.Communication.v1.Contact">
->    <Record>
->       <PropertyValue Property="tel">
->          <Collection>
->             <Record>
->                <PropertyValue Property="type" EnumMember="com.sap.vocabularies.Communication.v1.PhoneType/fax" />
->                <PropertyValue Property="uri" Path="FaxNumber" />
->             </Record>
->             <Record>
->                <PropertyValue Property="type" EnumMember="com.sap.vocabularies.Communication.v1.PhoneType/work com.sap.vocabularies.Communication.v1.PhoneType/preferred" />
->                <PropertyValue Property="uri" Path="PhoneNumber" />
->             </Record>
->          </Collection>
->       </PropertyValue>
->       <PropertyValue Property="email">
->          <Collection>
->             <Record>
->                <PropertyValue Property="type" EnumMember="com.sap.vocabularies.Communication.v1.ContactInformationType/preferred com.sap.vocabularies.Communication.v1.ContactInformationType/work" />
->                <PropertyValue Property="address" Path="EmailAddress" />
->             </Record>
->          </Collection>
->       </PropertyValue>
->    </Record>
+>     <Record>
+>         <PropertyValue Property="tel">
+>             <Collection>
+>                 <Record>
+>                     <PropertyValue Property="type" EnumMember="com.sap.vocabularies.Communication.v1.PhoneType/fax"/>
+>                     <PropertyValue Property="uri" Path="FaxNumber"/>
+>                 </Record>
+>                 <Record>
+>                     <PropertyValue Property="type" EnumMember="com.sap.vocabularies.Communication.v1.PhoneType/work com.sap.vocabularies.Communication.v1.PhoneType/preferred"/>
+>                     <PropertyValue Property="uri" Path="PhoneNumber"/>
+>                 </Record>
+>             </Collection>
+>         </PropertyValue>
+>         <PropertyValue Property="email">
+>             <Collection>
+>                 <Record>
+>                     <PropertyValue Property="type" EnumMember="com.sap.vocabularies.Communication.v1.ContactInformationType/preferred com.sap.vocabularies.Communication.v1.ContactInformationType/work"/>
+>                     <PropertyValue Property="address" Path="EmailAddress"/>
+>                 </Record>
+>             </Collection>
+>         </PropertyValue>
+>     </Record>
 > </Annotation>
 > ```
 
@@ -1045,45 +1033,41 @@ Table cards also let you view contact information if you have defined the `com.s
 > ABAP CDS Annotation
 > 
 > ```
+> define view VIEWNAME {
+>     @Semantics.name.fullName: true 
+>     CompanyName,
 > 
-> define view VIEWNAME
-> {
->   @Semantics.name.fullName: true
->   CompanyName,
+>     @Semantics.eMail.address: true 
+>     @Semantics.eMail.type: [#WORK] 
+>     EmailAddress,
 > 
->   @Semantics.eMail.address: true
->   @Semantics.eMail.type:  [#WORK]
->   EmailAddress,
->    
->   @Semantics.telephone.type:  [ #FAX ] 
->   FaxNumber,
->   
->   @Semantics.telephone.type:  [ #WORK]
->   PhoneNumber
+>     @Semantics.telephone.type: [#FAX] 
+>     FaxNumber,
+> 
+>     @Semantics.telephone.type: [#WORK] 
+>     PhoneNumber
 > }
-> 
 > ```
 
 > ### Sample Code:  
 > CAP CDS Annotation
 > 
 > ```
-> 
-> Communication.Contact : {
->     tel : [
+> Communication.Contact: {
+>     tel: [
 >         {
->             type : #fax,
->             uri : FaxNumber
+>             type: "#fax",
+>             uri: "FaxNumber"
 >         },
 >         {
->             type : [ #work, #pref ],
->             uri : PhoneNumber
->         },
+>             type: ["#work", "#pref"],
+>             uri: "PhoneNumber"
+>         }
 >     ],
->     email : [
+>     email: [
 >         {
->             type : [ #pref, #work ],
->             address : EmailAddress
+>             type: ["#pref", "#work"],
+>             address: "EmailAddress"
 >         }
 >     ]
 > }
@@ -1095,7 +1079,7 @@ Table cards also let you view contact information if you have defined the `com.s
 
 ## Text Arrangement
 
-The text arrangement annotation lets you to format of text.
+The text arrangement annotation lets you to define the format of texts.
 
 > ### Sample Code:  
 > XML Annotation
@@ -1103,7 +1087,7 @@ The text arrangement annotation lets you to format of text.
 > ```xml
 > <Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="GWSAMPLE_BASIC.SalesOrder/CustomerID">
 >     <Annotation Term="com.sap.vocabularies.Common.v1.Text" Path="Supplier_Name">
->         <Annotation Term="com.sap.vocabularies.UI.v1.TextArrangement" EnumMember="com.sap.vocabularies.UI.v1.TextArrangementType/TextLast" />
+>         <Annotation Term="com.sap.vocabularies.UI.v1.TextArrangement" EnumMember="com.sap.vocabularies.UI.v1.TextArrangementType/TextLast"/>
 >     </Annotation>
 > </Annotations>
 > ```
@@ -1112,10 +1096,9 @@ The text arrangement annotation lets you to format of text.
 > ABAP CDS Annotation
 > 
 > ```
-> 
 > annotate view SALESORDER with {
->  @UI.TextArrangement: #TEXT_LAST
->  customerid;
+>     @UI.TextArrangement: #TEXT_LAST
+>     customerid;
 > }
 > ```
 
@@ -1123,16 +1106,14 @@ The text arrangement annotation lets you to format of text.
 > CAP CDS Annotation
 > 
 > ```
-> 
 > annotate GWSAMPLE_BASIC.SalesOrder with {
->   @Common.Text : Supplier_Name
->   @UI.TextArrangement : #TextLast
->   CustomerID
-> };
-> 
+>     @Common.Text: Supplier_Name
+>     @UI.TextArrangement: #TextLast
+>     CustomerID;
+> }
 > ```
 
-In the preceding example, the text `Customer` is bound to the `ContactID` property and appears as shown in the table:
+In the preceding example, the text `Customer` is bound to the `ContactID` property and appears as shown in the following table:
 
 
 <table>
@@ -1192,7 +1173,7 @@ Customer
 
 ## Text Alignment
 
-The DataPoint or DataField is aligned as shown in the table below:
+The `DataPoint` or `DataField` is aligned as shown in the following table:
 
 
 <table>
@@ -1211,7 +1192,7 @@ Table Alignment
 <tr>
 <td valign="top">
 
-DataField, Contact annotation
+`DataField`, Contact annotation
 
 </td>
 <td valign="top">
@@ -1223,7 +1204,7 @@ Left Aligned
 <tr>
 <td valign="top">
 
-DataPoint with or without Criticality/CriticalityCalculation OR property \(either DataField or DataPoint\) of type Edm.DateTime or Edm.DateTimeOffset
+`DataPoint` with or without `Criticality` or `CriticalityCalculation` OR property \(either `DataField` or `DataPoint`\) of type `Edm.DateTime` or `Edm.DateTimeOffset` 
 
 </td>
 <td valign="top">
@@ -1235,7 +1216,7 @@ Right Aligned
 <tr>
 <td valign="top">
 
-DataPoint with Criticality and property of type Edm.String
+`DataPoint` with `Criticality` and property of type `Edm.String` 
 
 </td>
 <td valign="top">

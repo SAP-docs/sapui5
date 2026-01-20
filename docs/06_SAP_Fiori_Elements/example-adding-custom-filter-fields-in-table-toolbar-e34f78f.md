@@ -9,12 +9,20 @@ To add custom filter fields in a table toolbar, follow the steps described below
 ## Context
 
 > ### Note:  
-> This topic is currently only applicable to SAP Fiori elements for OData V2.
+> This topic is only applicable to SAP Fiori elements for OData V2.
 
 Using an extension in the object page table, you can define filter fields such as select, combo box, date picker, and text field. You can prevent the overflow of the control from the table toolbar by setting the value of the `OverflowToolbarLayoutData` property to `NeverOverflow`.
 
 > ### Note:  
-> Setting `OverflowToolbarLayoutData` property to `NeverOverflow` is specific to the overflow toolbar. This will not work for all controls.
+> Setting `OverflowToolbarLayoutData` property to `NeverOverflow` is specific to the overflow toolbar. This isn't applicable for all controls.
+
+The following screenshot shows a table with custom filter fields in its toolbar:
+
+  
+  
+**Table Toolbar with Custom Filter Fields**
+
+![](images/Adding_Custom_Filter_Fields_in_Table_Toolbar_c52a702.png "Table Toolbar with Custom Filter Fields")
 
 
 
@@ -23,13 +31,24 @@ Using an extension in the object page table, you can define filter fields such a
 1.  Make the following manifest changes under object page view extensions. The manifest key should be in the format `TableToolBarExtension|entitySet|facetId`.
 
     > ### Sample Code:  
+    > `manifest.json`
+    > 
     > ```
     > 
-    > "TableToolBarExtension|STTA_C_MP_Product|to_ProductText::com.sap.vocabularies.UI.v1.LineItem": {
-    > 	"className": "sap.ui.core.Fragment",
-    > 	"fragmentName": "STTA_MP.ext.fragments.OPCustomFilter",
-    > 	type": "XML"
+    > "extends": {
+    >   "extensions": {
+    >     "sap.ui.viewExtensions": {
+    >       "sap.suite.ui.generic.template.ObjectPage.view.Details": {
+    >         "TableToolBarExtension|STTA_C_MP_Product|to_ProductText::com.sap.vocabularies.UI.v1.LineItem": {
+    >           "className": "sap.ui.core.Fragment",
+    >           "fragmentName": "STTA_MP.ext.fragments.OPCustomFilter",
+    >           "type": "XML"
+    >         }
+    >       }
+    >     }
+    >   }
     > }
+    > 
     > 
     > ```
 
@@ -37,29 +56,33 @@ Using an extension in the object page table, you can define filter fields such a
 
     > ### Sample Code:  
     > ```
-    > 
     > <core:FragmentDefinition
-    >         xmlns="sap.m"
-    >         xmlns:smartfilterbar="sap.ui.comp.smartfilterbar"
-    >         xmlns:core="sap.ui.core">
-    > 		
-    >     <Label text="{i18n|sap.suite.ui.generic.template.ListReport|STTA_C_MP_Product>ST_GENERIC_LANGUAGE_FILTER}" labelFor="filterId">
-    >    	<layoutData>
-    > 			<OverflowToolbarLayoutData priority="NeverOverflow"/>
-    > 		</layoutData>
-    > 	 </Label>
-    >     <Select id="filterId" change="onCustomFilterChange">
-    >     	<items>
-    > 	        <core:Item key="0" text="{i18n|sap.suite.ui.generic.template.ListReport|STTA_C_MP_Product>ST_GENERIC_ENGLISH_LANGUAGE_FILTER}"/>
-    > 	        <core:Item key="1" text="{i18n|sap.suite.ui.generic.template.ListReport|STTA_C_MP_Product>ST_GENERIC_MANDARIN_LANGUAGE_FILTER}"/>
-    >         </items>
-    >          <layoutData>
-    > 			<OverflowToolbarLayoutData priority="NeverOverflow"/>
-    > 		</layoutData>
-    >     </Select>
-    >      
-    > </core:FragmentDefinition>
+    >     xmlns="sap.m"
+    >     xmlns:core="sap.ui.core">
     > 
+    >     <Label 
+    >         text="{i18n|sap.suite.ui.generic.template.ListReport|STTA_C_MP_Product>ST_GENERIC_LANGUAGE_FILTER}" 
+    >         labelFor="filterId">
+    >         <layoutData>
+    >             <OverflowToolbarLayoutData priority="NeverOverflow"/>
+    >         </layoutData>
+    >     </Label>
+    > 
+    >     <Select id="filterId" change="onCustomFilterChange">
+    >         <items>
+    >             <core:Item 
+    >                 key="0" 
+    >                 text="{i18n|sap.suite.ui.generic.template.ListReport|STTA_C_MP_Product>ST_GENERIC_ENGLISH_LANGUAGE_FILTER}"/>
+    >             <core:Item 
+    >                 key="1" 
+    >                 text="{i18n|sap.suite.ui.generic.template.ListReport|STTA_C_MP_Product>ST_GENERIC_MANDARIN_LANGUAGE_FILTER}"/>
+    >         </items>
+    >         <layoutData>
+    >             <OverflowToolbarLayoutData priority="NeverOverflow"/>
+    >         </layoutData>
+    >     </Select>
+    > 
+    > </core:FragmentDefinition>
     > 
     > ```
 
@@ -67,29 +90,39 @@ Using an extension in the object page table, you can define filter fields such a
 
     > ### Sample Code:  
     > ```
-    > > // "Element" required from module "sap/ui/core/Element"
-    > onCustomFilterChange: function(oEvent) {
-    >   var smartTable = Element.getElementById("STTA_MP::sap.suite.ui.generic.template.ObjectPage.view.Details::STTA_C_MP_Product--to_ProductText::com.sap.vocabularies.UI.v1.LineItem::Table");
-    >   smartTable.rebindTable();
+    > // "Element" required from module "sap/ui/core/Element"
+    > onCustomFilterChange: function (oEvent) {
+    >     var smartTable = Element.getElementById(
+    >         "STTA_MP::sap.suite.ui.generic.template.ObjectPage.view.Details::STTA_C_MP_Product--to_ProductText::com.sap.vocabularies.UI.v1.LineItem::Table"
+    >     );
+    >     smartTable.rebindTable();
     > },
     > 
     > onBeforeRebindTableExtension: function (oEvent) {
-    > 	var oBindingParams = oEvent.getParameter("bindingParams");
-    > 	oBindingParams.parameters = oBindingParams.parameters || {};
-    > 	var customFilter = Element.getElementById("STTA_MP::sap.suite.ui.generic.template.ObjectPage.view.Details::STTA_C_MP_Product--filterId");
-    > 	var key = customFilter.getSelectedKey();
-    > 	switch (key) {
-    > 		case "0" :
-    > 		oBindingParams.filters.push(new sap.ui.model.Filter("Language", "EQ", "EN"));
-    > 		break;
-    > 					 
-    > 		case "1" :
-    > 		oBindingParams.filters.push(new sap.ui.model.Filter("Language", "EQ", "ZH"));
-    > 		break;
-    > 					 
-    > 		default:
-    > 		return;
-    >  }
+    >     var oBindingParams = oEvent.getParameter("bindingParams");
+    >     oBindingParams.parameters = oBindingParams.parameters || {};
+    > 
+    >     var customFilter = Element.getElementById(
+    >         "STTA_MP::sap.suite.ui.generic.template.ObjectPage.view.Details::STTA_C_MP_Product--filterId"
+    >     );
+    >     var key = customFilter.getSelectedKey();
+    > 
+    >     switch (key) {
+    >         case "0":
+    >             oBindingParams.filters.push(
+    >                 new sap.ui.model.Filter("Language", "EQ", "EN")
+    >             );
+    >             break;
+    > 
+    >         case "1":
+    >             oBindingParams.filters.push(
+    >                 new sap.ui.model.Filter("Language", "EQ", "ZH")
+    >             );
+    >             break;
+    > 
+    >         default:
+    >             return;
+    >     }
     > },
     > 
     > ```

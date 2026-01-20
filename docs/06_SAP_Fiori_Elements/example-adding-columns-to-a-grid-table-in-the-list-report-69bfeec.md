@@ -9,7 +9,7 @@ To add custom columns to a grid table in the list report, follow the steps descr
 ## Context
 
 > ### Note:  
-> This topic is currently only applicable to SAP Fiori elements for OData V2.
+> This topic is only applicable to SAP Fiori elements for OData V2.
 
 > ### Caution:  
 > Use app extensions with caution and only if you cannot produce the required behavior by other means, such as manifest settings or annotations. To correctly integrate your app extension coding with SAP Fiori elements, use only the `extensionAPI` of SAP Fiori elements. For more information, see [Using the extensionAPI](using-the-extensionapi-bd2994b.md).
@@ -32,7 +32,7 @@ The table containing additional columns can look like this:
 
     In the sample project, this is webapp/ext/fragments/ListReportGridTableColumns.fragment.xml.
 
-    You add the extension column to the first position of the grid table. You can change this sequence via the `customData` property `columnIndex`, as shown in the sample code below.
+    You add the extension column to the first position of the grid table. You can change this sequence using the `customData` property `columnIndex`, as shown in the sample code below.
 
     > ### Note:  
     > If the content of your custom column refers to a property \(such as`{Price}`\), you need to include a corresponding `"leadingProperty"` entry in the `CustomData` of the column definition.

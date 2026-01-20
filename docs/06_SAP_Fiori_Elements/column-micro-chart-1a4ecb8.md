@@ -8,8 +8,10 @@ One axis of the chart shows the categories being compared, the other axis repres
 
 ![](images/Column_Micro_Chart_f7b8bbc.png)
 
+In the chart, the values at the bottom \(10 and 70\) represent the dimension values. They are the IDs of the sales order items. For more information about this chart type, see [Samples](https://ui5.sap.com/1.82.5/#/entity/sap.suite.ui.microchart.ColumnMicroChart).
+
 > ### Note:  
-> In the chart, the values at the bottom \(10 and 70\) represent the dimension values. They are the IDs of the sales order items. For more information about this chart type, see [Samples](https://ui5.sap.com/1.82.5/#/entity/sap.suite.ui.microchart.ColumnMicroChart).
+> The chart dimensions and measures cannot be of the same entity; they must be from a 1:n navigation entity.
 
 
 
@@ -125,7 +127,6 @@ The `UI.Chart Title` property is used for the title. The `UI.Chart Description` 
 > <Annotation Term="UI.DataPoint" Qualifier="Width">
 >     <Record>
 >         <PropertyValue Property="Value" Path="Width"/>
->         <PropertyValue Property="Description" String="Column Micro Chart"/>
 >         <PropertyValue Property="Criticality" Path="criticalityValue"/>
 >     </Record>
 > </Annotation>
@@ -137,7 +138,6 @@ The `UI.Chart Title` property is used for the title. The `UI.Chart Description` 
 > ```
 > 
 > @UI.dataPoint: {
->   description: 'Column Micro Chart',
 >   targetValueElement: 'Weight',
 >   criticality: 'criticalityValue'
 > }
@@ -150,8 +150,7 @@ The `UI.Chart Title` property is used for the title. The `UI.Chart Description` 
 > ```
 > 
 > UI.DataPoint #Width : {
->     Value : Width,
->     Description : 'Column Micro Chart',    Criticality : criticalityValue
+>     Value : Width,    Criticality : criticalityValue
 > }
 > 
 > 

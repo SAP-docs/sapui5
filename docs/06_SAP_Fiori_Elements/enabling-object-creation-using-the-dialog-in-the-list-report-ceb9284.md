@@ -15,7 +15,7 @@ You can enable the creation of objects that have a maximum of 8 data fields usin
 You can enable this feature in the list report or worklist applications. To do this, configure the `manifest.json` file by adding the property `createWithParameterDialog` and passing the properties of the related entity set, as shown in the following sample code:
 
 > ### Sample Code:  
-> manifest.json
+> `manifest.json`
 > 
 > ```
 > 
@@ -149,7 +149,7 @@ You can enable this feature for the list report by configuring the `creationMode
 >         "id": "ProductsList",
 >         "options": {
 >             "settings": {
->                 "entitySet": "Products",
+>                 "contextPath": "/Products",
 >                 "controlConfiguration": {
 >                     "@com.sap.vocabularies.UI.v1.LineItem": {
 >                         "tableSettings": {
@@ -187,5 +187,5 @@ If this feature is enabled, you cannot navigate to an object page in create mode
 
 ### Customizing the Title of the Dialog
 
-The default title of the dialog is *New Object*. Use the `C_TRANSACTION_HELPER_SAPFE_ACTION_CREATE` key in the `i18n` file to modify it.
+The default title of the dialog is *New Object*. Use the `C_TRANSACTION_HELPER_SAPFE_ACTION_CREATE` key in the `i18n` file of the page to modify it.
 

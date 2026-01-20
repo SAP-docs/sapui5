@@ -16,7 +16,7 @@ The `FilterBar` building block allows application developers to embed a filter b
 > />
 > ```
 
-Default values using `UI.SelectionVariant` and `Common.FilterDefaultValue` as well as custom filters are supported. Check out our live example in the flexible programming model explorer at [Filter Bar - Overview](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/filterBar/filterBarDefault).
+Default values using `UI.SelectionVariant` and `Common.FilterDefaultValue` as well as custom filters are supported. For more information and live examples, see the SAP Fiori development portal at [Building Blocks - Filter Bar - Overview](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/filterBar/filterBarDefault).
 
 For more information about adding custom filter fields to the `FilterBar` building block, see [The FilterField Building Block](the-filterfield-building-block-2df7837.md).
 
@@ -34,7 +34,7 @@ For more information about adding custom filter fields to the `FilterBar` buildi
 
 Applications can programmatically trigger the filter search on initial load using the `triggerSearch()` method. When called, it first validates that all the mandatory filter fields are filled out. The 'Go' action of the filter bar is triggered only if all the mandatory filter fields have valid values. If any of these fields aren't filled out, the focus is set to the first mandatory filter field that isn't filled. In this case, the field isn't highlighted, and no error messages are sent to the user.
 
-Check out our live example in the flexible programming model explorer at [Filter Bar - Default Values \(FilterDefaultValue\)](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/filterBar/filterBarAnnotationDefaults).
+For more information and live examples, see the SAP Fiori development portal at [Building Blocks - Filter Bar - Filter Bar Default Values](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/filterBar/filterBarDefaultValue).
 
 
 
@@ -49,7 +49,7 @@ The following methods are available for interacting with the `FilterBar` buildin
 -   `async setSelectionVariant (selectionVariant : SelectionVariant)`
 
 
-Check out our live example in the flexible programming model explorer at [Filter Bar - Interacting via APIs](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/filterBar/filterBarPublicAPIs).
+For more information and live examples, see the SAP Fiori development portal at [Building Blocks - Filter Bar - Extensions - Filter Bar APIs](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/filterBar/filterBarPublicAPIs).
 
 > ### Restriction:  
 > Custom filters are not part of the `getSelectionVariant` and `setSelectionVariant` APIs.

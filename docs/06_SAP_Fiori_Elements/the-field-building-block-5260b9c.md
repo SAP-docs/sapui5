@@ -13,9 +13,9 @@ You can instantiate the building block by referencing the building block namespa
 > <macros:Field xmlns:macro="sap.fe.macros" metaPath="MyProperty"/>
 > ```
 
-This instantiates the actual control tree that corresponds to this building block.
+This instantiates the actual control tree that corresponds to the `Field` building block.
 
-You can use the `Field` building block either as a standalone or inside the `fields` aggregation of a `FormElement` building block for automatically getting a label for the field corresponding to the metadata. You can use the `Field` building block inside custom header facets, custom sections, custom pages, and custom table columns.
+You can use the `Field` building block either standalone or inside the `fields` aggregation of a `FormElement` building block for automatically getting a label for the field corresponding to the metadata. You can use the `Field` building block inside custom header facets, custom sections, custom pages, and custom table columns.
 
 You can also use the `Field` building block to dynamically create fields at runtime. You can use this building block within controllers for more flexibility and a wider variety of use cases.
 

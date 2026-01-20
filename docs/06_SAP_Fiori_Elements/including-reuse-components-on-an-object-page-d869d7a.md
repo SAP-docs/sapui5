@@ -8,7 +8,7 @@ A reuse component is an encapsulated UI area that can be included \(embedded\) i
 
 Not every piece of reusable code should be encapsulated into a reuse component. Reuse components are always rectangular UI areas.
 
-Reuse components that are used on an object page are often used on several pages. If this is not the case, consider whether they can be realized via view or fragment extensions.
+Reuse components that are used on an object page are often used on several pages. If this is not the case, consider whether they can be realized through view or fragment extensions.
 
 To include a reuse component on an object page, adapt the `manifest.json` of your app, in the pages section of the object page which is to contain the reuse component.
 

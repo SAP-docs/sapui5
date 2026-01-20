@@ -28,15 +28,15 @@ The OData V4 model supports the following types of binding:
 
 [Batch Control](batch-control-74142a3.md "OData V4 allows you to group multiple operations into a single HTTP request payload, as described in the official OData V4 specification Part 1, Batch Requests (see the link under Related Information for more details).")
 
-[Filtering](filtering-5338bd1.md "The OData V4 Model supports server side filtering on lists.")
+[Filtering](filtering-5338bd1.md "The OData V4 Model supports server-side filtering on lists.")
 
-[Sorting](sorting-d2ce3f5.md "The OData V4 model supports server side sorting on lists.")
+[Sorting](sorting-d2ce3f5.md "The OData V4 model supports server-side sorting on lists.")
 
-[OData Version 4.0 Part 2: URL Conventions, 4 Resource Path](http://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part2-url-conventions.html)
+[OData Version 4.01 Part 2: URL Conventions, 4 Resource Path](https://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part2-url-conventions.html#_Toc31360928)
 
-[OData Version 4.0 Part 2: URL Conventions, 5 Query Options](http://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part2-url-conventions.html)
+[OData Version 4.01 Part 2: URL Conventions, 5 Query Options](https://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part2-url-conventions.html#_Toc31360954)
 
-[OData Version 4.0 Part 2: URL Conventions, 5.2 Custom Query Options](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part2-url-conventions/odata-v4.0-errata03-os-part2-url-conventions-complete.html)
+[OData Version 4.01 Part 2: URL Conventions, 5.2 Custom Query Options](https://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part2-url-conventions.html#_Toc31361050)
 
-[OData Version 4.0 SimpleIdentifier](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part3-csdl/odata-v4.0-errata03-os-part3-csdl-complete.html#_SimpleIdentifier)
+[OData Common Schema Definition Language \(CSDL\) XML Representation Version 4.01, 15.2 Simple Identifier](https://docs.oasis-open.org/odata/odata-csdl-xml/v4.01/odata-csdl-xml-v4.01.html#_Toc38530448)
 

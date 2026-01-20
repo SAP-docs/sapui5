@@ -89,6 +89,8 @@ The `navigationProperties` setting is an array of \(navigation\) property paths 
 
 -   The single property `FullName` of the `Partner` association is added to the filter adaptation \(unless it is marked as `Hidden` or `HiddenFilter`\)
 
+-   When applying a filter on a field from a 1:n navigation entity, all main records that have at least one matching related record are fetched. However, once a main record is selected, the object page will display all related records from the 1:n association, not just those that matched the original filter.
+
 
 > ### Note:  
 > You can only define navigation properties with one level. Nested navigation properties aren't supported.

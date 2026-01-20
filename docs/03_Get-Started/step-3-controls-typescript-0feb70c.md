@@ -99,9 +99,9 @@ In the example above, the callback of the `init` event is where we now instantia
 
 <a name="loio0feb70c39c5e4074893c294667b3f36b__section_anl_htd_lzb"/>
 
-## UI5 Tooling
+## UI5 CLI
 
-As we now use the `sap.m` library with our app, we need to update our UI5 Tooling setup with a dependency to this library.
+As we now use the `sap.m` library with our app, we need to update our UI5 CLI setup with a dependency to this library.
 
 Open a terminal in the app root folder and execute the following command:
 

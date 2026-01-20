@@ -58,7 +58,7 @@ Description
 </th>
 </tr>
 <tr>
-<td valign="top" rowspan="12">
+<td valign="top" rowspan="13">
 
 `aggregations: <object>`
 
@@ -95,7 +95,7 @@ Describes the aggregations of the element.
 </td>
 </tr>
 <tr>
-<td valign="top" rowspan="11">
+<td valign="top" rowspan="12">
 
 `<aggregationName>: <object>`
 
@@ -227,7 +227,7 @@ Name your control based on the general UI concept and follow the [SAP Fiori Desi
 </td>
 </tr>
 <tr>
-<td valign="top" rowspan="6">
+<td valign="top" rowspan="7">
 
 `actions: <object>`
 
@@ -254,7 +254,7 @@ Describes the actions that can be applied to the element.
 </td>
 </tr>
 <tr>
-<td valign="top" rowspan="5">
+<td valign="top" rowspan="6">
 
 `"add":<object>`
 
@@ -276,7 +276,7 @@ Provides `add` actions for an element.
 </td>
 </tr>
 <tr>
-<td valign="top" rowspan="4">
+<td valign="top" rowspan="5">
 
 `"delegate": <object> | <function>`
 
@@ -301,6 +301,18 @@ Provides or computes the design-time metadata specific to the `addViaDelegate` a
 <td valign="top">
 
 Provides the value of `changeType` from the previous step.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`additionalInfoKey: <string>` \(Optional\)
+
+</td>
+<td valign="top">
+
+Provides additional information to be displayed as a tooltip in the context menu.
 
 </td>
 </tr>

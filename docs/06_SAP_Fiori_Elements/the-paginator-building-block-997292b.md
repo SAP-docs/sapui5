@@ -11,7 +11,7 @@ You can use the `Paginator` building block to bring up paginator buttons in scen
 > <macros:Paginator id="paginator" />
 > ```
 
-You can then use controller coding to initialize the `Paginator` building block with the right list binding and the right initial context. Check out our live example in the flexible programming model explorer at [Paginator](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/features/paginatorDefault).
+You can then use controller coding to initialize the `Paginator` building block with the right list binding and the right initial context. For more information and live examples, see the SAP Fiori development portal at [Building Blocks - Paginator - Overview](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/features/paginatorDefault).
 
 
 

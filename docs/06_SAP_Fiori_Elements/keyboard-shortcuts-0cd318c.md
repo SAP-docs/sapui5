@@ -682,9 +682,9 @@ The following sample code shows an example where the shortcut [Ctrl\] + [G\]  is
 > 
 > ```
 
-In this example, `description` is used to define the label *Change Price*. This label is displayed in the keyboard shortcuts popup window. If a label isn't defined, the shortcut is displayed with the value of `id` instead, in this case – *ChangePrice*.
+In this example, `description` is used to define the label *Change Price*. This label is displayed in the keyboard shortcuts popup window. If no label is defined, the shortcut is displayed with the value of `id` instead, in this case – *ChangePrice*.
 
-You can define keyboard shortcuts for custom actions on the object page and on the analytical list page the same way.
+You can define keyboard shortcuts for custom actions on the object page and on the analytical list page in the same way.
 
 For more information about custom actions, see [Adding Custom Actions Using Extension Points](adding-custom-actions-using-extension-points-7619517.md).
 

@@ -5,7 +5,7 @@
 You can add two tables adjacent to each other in a subsection of an object page.
 
 > ### Note:  
-> This topic is currently only applicable to SAP Fiori elements for OData V2.
+> This topic is only applicable to SAP Fiori elements for OData V2.
 
 To achieve this, add the annotations as shown below:
 

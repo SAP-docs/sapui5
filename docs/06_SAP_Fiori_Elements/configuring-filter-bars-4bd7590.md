@@ -201,6 +201,7 @@ The following sample code shows how to hide the filter bar by setting `hideFilte
 > `manifest.json`
 > 
 > ```
+> 
 > {
 >      "sap.ui5": {
 >           "routing": {
@@ -231,21 +232,21 @@ You can enable live mode by setting the `liveMode` to `true` in the `manifest.js
 > manifest.json
 > 
 > ```
+> 
 > "routing": {
 > 	"targets": {
->                     "MyEntitiesList": {
->                             "type": "Component",
->                             "name": "sap.fe.templates.ListReport",
->                             "id": "MyEntitiesList",
->                             "options": {
->                                             "settings": {
->                                                             "liveMode": true,
->                                                                  …..
->                                                                 ….
->                                                         }
->                                         }
->                                 }
+> 	    "MyEntitiesList": {
+>             "type": "Component",
+>             "name": "sap.fe.templates.ListReport",
+>             "id": "MyEntitiesList",
+>             "options": {
+>                 "settings": {
+>                 "liveMode": true,
+>                 ...
 >                 }
+>             }
+>         }
+>     }
 > }
 > ```
 
@@ -298,6 +299,40 @@ You can configure the filter fields as mandatory using the `Capabilities.Require
 
 
 
+### Adding Tooltips to Filter Fields
+
+To add a tooltip to a filter field, use the `@Common.QuickInfo` annotation as shown in the following sample code:
+
+> ### Sample Code:  
+> XML Annotation
+> 
+> ```
+> <Annotations Target="SAP__self.Container/SalesOrder/OrderNumber>
+>    <Annotation Term="Common.QuickInfo" String="Unique identifier for the sales order"/>
+> </Annotations>
+> ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> ```
+> @Common.QuickInfo: 'Unique identifier for the sales order'
+> OrderNumber;
+> ```
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> entity SalesOrder {
+>    key ID : UUID;
+>    OrderNumber : String(20) @Common.QuickInfo: 'Unique identifier for the sales order';
+>    ... 
+> }
+> ```
+
+
+
 ### Configuring Fields to Remain Hidden in the Filter Bar and the *Adapt Filters* Dialog
 
 Applications can ensure that a field within the entity to which the filter bar is bound remains hidden in both the filter bar and the *Adapt Filters* dialog. You can use the `Capabilities.NonFilterableProperties` annotation to achieve this behavior.
@@ -306,6 +341,7 @@ Applications can ensure that a field within the entity to which the filter bar i
 > XML Annotation
 > 
 > ```
+> 
 > <Annotations Target="SAP__self.Container/SalesOrder">
 >    <Annotation Term="SAP__capabilities.FilterRestrictions">
 >       <Record>
@@ -331,6 +367,7 @@ Applications can ensure that a field within the entity to which the filter bar i
 > CAP CDS Annotation
 > 
 > ```
+> 
 > annotate service.SalesOrder with @Capabilities : {
 >     FilterRestrictions : {
 >         $Type : 'Capabilities.FilterRestrictionsType',
@@ -356,22 +393,19 @@ For example, the `"CustomerType"` in the following sample code represents the ma
 > Metadata of parameterized main entity type
 > 
 > ```
+> 
 > <EntityType Name="CustomerType">
 >     <Key>
 >         <PropertyRef Name="Customer"/>
 >         <PropertyRef Name="CompanyCode"/>
->         ……
->         ……
+>         ...
 >     </Key>
 >     <Property Name="Customer" Type="Edm.String" Nullable="false" MaxLength="10"/>
 >     <Property Name="CompanyCode" Type="Edm.String" Nullable="false" MaxLength="4"/>
 >     <Property Name="SalesOrganization" Type="Edm.String" Nullable="false" MaxLength="4"/>
->     ……
->     ……
->     ……
+>     ...
 >     <NavigationProperty Name="Parameters" Type="com.sap.gateway.srvd.zrc_arcustomer_definition.v0001.CustomerParameters" Nullable="false"/>
->     ......
->     ......
+>     ...
 > </EntityType>
 > ```
 
@@ -383,8 +417,7 @@ Furthermore, the `"CustomerParameters"` entity type is annotated with the `"Resu
 > ```
 > <Annotations Target="SAP__self.CustomerParameters">
 >     <Annotation Term="SAP__common.ResultContext"/>
->     ......
->     ......
+>     ...
 > </Annotations>
 > ```
 
@@ -405,20 +438,40 @@ In the `"CustomerParameters"` entity type, you can now find the parameters that 
 
 Note that the `"Partner"` term points to `"Parameters"` here, which was also the navigation entity set pointing to this `"CustomerParameter"` in the main entity type.
 
+Ensure that you add the `/Set` suffix to the `contextPath` in the `manifest.json` file as shown in the following sample code:
+
+> ### Sample Code:  
+> `manifest.json`
+> 
+> ```
+> 
+> "targets": {
+>     "CustomerList": {
+>         "type": "Component",
+>         "id": "CustomerList",
+>         "name": "sap.fe.templates.ListReport",
+>         "options": {
+>             "settings": {
+>                 "contextPath": "/Customer/Set",
+>             }
+>         }
+>     }
+> },
+> ```
+
 To access the data residing in the main entity set, that is, the entity set corresponding to the `"CustomerType"` entity type, we need to access it through the entity set corresponding to the navigation entity set, which is marked with the `"ResultContext"` annotation – so in this case through the entity set corresponding to the `"CustomerParameters"` entity type. `"Customer"` is the entity set that corresponds to the `"CustomerParameters"` entity type:
 
 > ### Sample Code:  
 > Entity set corresponding to `CustomerParameters`
 > 
 > ```
+> 
 > <EntityContainer Name="Container">
 >     <EntitySet Name="Customer" EntityType="com.sap.gateway.srvd.zrc_arcustomer_definition.v0001.CustomerParameters">
 >         <NavigationPropertyBinding Path="Set/Parameters" Target="Customer"/>
->         .......
->         .......
+>         ...
 >     </EntitySet>
->     ......
->     ......
+>     ...
 > </EntityContainer>
 > ```
 
@@ -428,6 +481,17 @@ Here's an example of how the call to fetch results from the main entity set in t
 
 The call has to go through the `"Customer"` entity set by passing the values of all parameters to it. Then we have to call the entity set that holds the results \(in this case the `"Set"` entity set\).
 
+Ensure you have added the `@Common.ResultContext#$parameters` annotation to the parameterized entity:
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> 
+> @Common.ResultContext #$parameters
+>   entity RootElement(P_CurrencyUnit : String not null @(---));
+> ```
+
 
 
 ### Specifying Filter Restrictions for the Main Entity Set \(Parameterized Entities Only\)
@@ -436,24 +500,25 @@ You can use one of the following two approaches:
 
 -   Filter Restrictions at Main Entity with `PropertyPath` Pointing to the Filter Field of the Main Entity
 
-    The restrictions can be defined at the main entity set with the property path pointing to the filter field or the main entity type \(containment\) \(for example, `SalesOrganization` from a previous example\) via the containment navigation \(`Set` in a previous example\)
+    The restrictions can be defined at the main entity set with the property path pointing to the filter field or the main entity type \(containment\) \(for example, `SalesOrganization` from a previous example\) through the containment navigation \(`Set` in a previous example\)
 
     > ### Sample Code:  
     > XML Annotation: Filter restrictions with `PropertyPath` pointing to the filter field of the main entity set
     > 
     > ```xml
-    > <Annotations Target="SAP__self.Container/Customer">
-    >    <Record Type="SAP__capabilities.FilterRestrictionsType">
-    >       <PropertyValue Property="FilterExpressionRestrictions">
-    >          <Collection>
-    >             <Record Type="Capabilities.FilterExpressionRestrictionType">
-    >                <PropertyValue Property="Property" PropertyPath="Set/SalesOrganization" />
-    >                <PropertyValue Property="AllowedExpressions" String="MultiValue" />
-    >             </Record>
-    >          </Collection>
-    >       </PropertyValue>
-    >    </Record>
-    > </Annotations>
+    > 
+    > <Annotation Term="SAP__capabilities.FilterRestrictions">
+    >     <Record>
+    >         <PropertyValue Property="FilterExpressionRestrictions">
+    >             <Collection>
+    >                 <Record>
+    >                     <PropertyValue Property="Property" PropertyPath="Set/SalesOrganization" />
+    >                     <PropertyValue Property="AllowedExpressions" String="MultiValue" />
+    >                 </Record>
+    >             </Collection>
+    >         </PropertyValue>
+    >     </Record>
+    > </Annotation>
     > ```
 
     > ### Sample Code:  
@@ -465,6 +530,7 @@ You can use one of the following two approaches:
     > CAP CDS Annotation
     > 
     > ```
+    > 
     > entity Customer   @(
     >     Capabilities : {
     >         FilterRestrictions:{
@@ -479,12 +545,13 @@ You can use one of the following two approaches:
 
 -   Navigation Restrictions at Main Entity
 
-    The filter restrictions can be defined in the parameterized entity set \(in the previous example, via the ***"Customer"*** entity set\) through navigation restrictions with a path pointing to the target entity type, which is the containment navigation \(in our case ***"Set"***, which points to ***"CustomerType"***\).
+    The filter restrictions can be defined in the parameterized entity set \(in the previous example, using the ***"Customer"*** entity set\) through navigation restrictions with a path pointing to the target entity type, which is the containment navigation \(in our case ***"Set"***, which points to ***"CustomerType"***\).
 
     > ### Sample Code:  
     > XML Annotation: Filter Restrictions Using Navigation Restrictions
     > 
     > ```xml
+    > 
     > <Annotations Target="SAP__self.Container/Customer">
     >    <Annotation Term="SAP__capabilities.NavigationRestrictions">
     >       <Record>
@@ -524,6 +591,7 @@ You can use one of the following two approaches:
     > CAP CDS Annotation
     > 
     > ```
+    > 
     > service MyService {
     >     @Capabilities.NavigationRestrictions.RestrictedProperties : [{
     >         $Type              : 'Capabilities.NavigationPropertyRestriction',

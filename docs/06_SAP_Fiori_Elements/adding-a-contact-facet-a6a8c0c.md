@@ -10,7 +10,7 @@ To render a contact list and contact facet, you add a `UI.ReferenceFacet` that p
 
 ![](images/ObjectPage_Contacts_076fb4d.png "Object Page: Contacts")
 
-Currently, the contact card reads the following annotation properties and displays them:
+The contact card reads the following annotation properties and displays them:
 
 -   `fn`: the full name of the contact. It is displayed as the title of the card using a bigger font.
 

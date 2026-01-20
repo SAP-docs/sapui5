@@ -494,7 +494,7 @@ V12 \(1.56\)
 
 Indicates whether the component usage should be lazily loaded. Default value: `true`
 
-For more information see:[Using and Nesting Components](using-and-nesting-components-346599f.md)
+For more information, see: [Component Instantiation Guide](component-instantiation-guide-346599f.md).
 
 ```
 {
@@ -573,7 +573,7 @@ Specifies the used components with the a unique key/alias. Contains the followin
 -   `componentData`: Component data of the component
 
 
-For more information see:[Using and Nesting Components](using-and-nesting-components-346599f.md)
+For more information see:[Component Instantiation Guide](component-instantiation-guide-346599f.md)
 
 ```
 {

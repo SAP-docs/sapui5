@@ -16,7 +16,7 @@ Regarding their structure, the `webapp` folder should be inside the root folder,
 
 **The Root Folder**
 
-In addition to the `webapp` folder, the root folder should contain files that are not part of your application coding. Examples are build configuration files, such as a `package.json` for npm or a `ui5.yaml` for UI5 Tooling, and documentation files like `README.md` or `LICENSE.txt`. These files may also be grouped in folders if needed. For example, you could group all your documentation files into a `docs` folder.
+In addition to the `webapp` folder, the root folder should contain files that are not part of your application coding. Examples are build configuration files, such as a `package.json` for npm or a `ui5.yaml` for UI5 CLI, and documentation files like `README.md` or `LICENSE.txt`. These files may also be grouped in folders if needed. For example, you could group all your documentation files into a `docs` folder.
 
 **The `webapp` Folder**
 

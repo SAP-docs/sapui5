@@ -147,7 +147,7 @@ then the following annotation in a \(local\) annotation file for the data servic
 **Related Information**  
 
 
-[Data Reuse](data-reuse-648e360.md "The OData V4 model keeps data with respect to bindings. This allows different views on the same data but also means that data is not automatically shared between bindings. There are mechanisms for sharing data to avoid redundant requests and to keep the same data in different controls in sync.")
+[Data Reuse](data-reuse-648e360.md "The OData V4 model keeps data with respect to bindings. This allows different views on the same back-end data but also means that data is not automatically shared between bindings. There are mechanisms for sharing data to avoid redundant requests and to keep the same data in different controls in sync.")
 
 [OData 4.0 Vocabularies - SAP Common \> ValueListType](https://github.com/SAP/odata-vocabularies/blob/main/vocabularies/Common.md#ValueListType)
 

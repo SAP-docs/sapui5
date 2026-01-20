@@ -8,102 +8,212 @@ Routing configuration consists of `routes`, `targets`, `config`, and `owner`.
 
 ## Routes
 
-Preferably, an **array** of routes is added to the router. Each route defines a name, a pattern, and optionally one or more targets to which to navigate when the route has been matched. In the `routes` section, you define which patterns are available for navigation. Routes need to be defined in an array instead of an object, because their order in the array determines the sequence when matching against the browser hash.
+A route defines a navigable path in your application. Routes are added to the router as an array. Each route entry must include a unique `name`, a `pattern` that matches the hash, and optionally one or more `targets` that define what to display when the route is matched.
 
--   The `name` of the route \(unique within one router instance\)
+> ### Remember:  
+> Routes must be defined in an array, not in an object. The order of routes in the array determines their matching priority - routes are evaluated sequentially, and the first matching route is used. If a route matches, subsequent routes are ignored, unless the `greedy` parameter is set to `true` for that route.
 
--   The `pattern` as hash part of the URL that matches the route
+> ### Tip:  
+> Each of the following properties can also be defined in the `config` section of the router configuration. This allows you to set defaults that apply to **all** routes, reducing duplication. You can then override these defaults in individual routes as needed.
 
--   The navigation `target` as defined in the `targets` section
+-   `name`
 
-    If you want to load multiple views/components at the same time, you can assign multiple targets \(see [Working with Multiple Targets](working-with-multiple-targets-2c5c84d.md)\).
+    A unique identifier for the route within the router instance.
 
--   If a target is configured for loading a component, you can enable the routing in the loaded component, see [Enabling Routing in Nested Components](enabling-routing-in-nested-components-fb19f50.md).
+-   `pattern`
 
--   The `titleTarget` to specify from which target the title is taken when multiple targets are displayed. If no `titleTarget` is defined, the first target that has a `title` is chosen \(see [Using the title Property in Targets](using-the-title-property-in-targets-1238d70.md)\).
+    Defines the hash pattern that the route matches. Patterns can include various types of parameters:
+
+    -   **Hard-coded pattern**:
+
+        The pattern matches the hash exactly. For example, when a pattern is defined as `product/settings`, this pattern matches only if the hash is `product/settings` and no data is passed on to the events of the route.
+
+        For more information, see the tutorial [Step 6: Navigate to Routes with Hard-Coded Patterns](../03_Get-Started/step-6-navigate-to-routes-with-hard-coded-patterns-782aac0.md).
+
+    -   **Mandatory parameter**:
+
+        You can define mandatory parameters for the pattern by placing the parameter in curly brackets \(<code>{<i>parameter ID</i>}</code>\).
+
+        For example, if you define the pattern `product/{id}`, the hashes `product/5` and `product/3` \(where 3 and 5 are product IDs\) match the pattern. The matched event handler gets `5` or `3` passed on with the key `id` in its arguments. But hash `product/` does not match the pattern because the mandatory parameter is missing.
+
+        For more information, see the tutorial [Step 7: Navigate to Routes with Mandatory Parameters](../03_Get-Started/step-7-navigate-to-routes-with-mandatory-parameters-f96d252.md).
+
+    -   **Optional parameter**:
+
+        You can define optional parameters for the pattern by placing the parameter between colons \(<code>:<i>parameter ID</i>:</code>\).
+
+        For example, if you define a pattern `product/{id}/detail/:detailId:`, the `detailId` parameter is optional, whereas `id` is mandatory. Both hashes `product/5/detail` and `product/3/detail/2` match the pattern.
+
+    -   **Query parameter**:
+
+        The query parameter allows you to pass on queries with any parameter. A query parameter starts with `?`, and you can either define it as mandatory \(`product/{?query}`\) or optional \(`product/:?query:`\).
+
+        The matched value is converted into an object saved with the parameter name as the key when passed to the event handler.
+
+        For more information, see the tutorial [Step 9: Allow Bookmarkable Tabs with Optional Query Parameters](../03_Get-Started/step-9-allow-bookmarkable-tabs-with-optional-query-parameters-b8561ff.md).
+
+    -   **"Rest as String" parameter**:
+
+        A parameter that ends with an asterisk \(`*`\) is called a "rest as string" parameter. Such a parameter matches as much as possible. It can be combined with the syntax of mandatory or optional parameters.
+
+        For example, a pattern `product/{id}/:detail*:` defines a mandatory parameter with the name `id` and an optional "rest as string" parameter with the name `detail`. It matches `product/5/3` and `product/5/detail/3/foo`. The event handler gets `3` or `detail/3/foo` passed on with the key `detail` in its arguments.
 
 
-The sequence of the routes in the `routes` definition is important. As soon as a pattern is matched, the following patterns are ignored. To prevent this for a specific route, you use the `greedy` parameter. If set to `true`, the route is always taken into account.
+-   `target`
 
-For more information, see [API Reference: `sap.m.routing.Router`](https://ui5.sap.com/#/api/sap.m.routing.Router).
+    Specifies the name\(s\) of the target\(s\) to load and display when this route is matched. Multiple targets can be assigned if multiple views or components should be shown simultaneously. For more information, see [Working with Multiple Targets](working-with-multiple-targets-2c5c84d.md).
+
+    If a target is configured for loading a component, you can enable the routing in the loaded component, see [Enabling Routing in Nested Components](enabling-routing-in-nested-components-fb19f50.md).
+
+-   `titleTarget`
+
+    When multiple targets are loaded and displayed, this defines which target provides the page title. If not set, the first target with a `title` property is used \(see [Using the title Property in Targets](using-the-title-property-in-targets-1238d70.md)\).
+
+
+The subclass `sap.f.routing.Router` provides one additional property that can be used in the route configuration:
+
+-   `layout`
+
+    Defines the layout of the target control that is used to display the target. This property is only available for `sap.f.routing.Router` and can be set to any of the values given in the `sap.f.LayoutType` enum.
+
+
+For more information, see [API Reference: `sap.ui.core.routing.Router`](https://ui5.sap.com/#/api/sap.ui.core.routing.Router), [API Reference: `sap.m.routing.Router`](https://ui5.sap.com/#/api/sap.m.routing.Router), and [API Reference: `sap.f.routing.Router`](https://ui5.sap.com/#/api/sap.f.routing.Router).
+
+> ### Tip:  
+> For a better understanding about how patterns work and what matched parameters look like, see the following page in the *Samples* in the Demo Kit: [sap.ui.core.sample.PatternMatching/preview](https://ui5.sap.com/#/entity/sap.ui.core.routing.Route/sample/sap.ui.core.sample.PatternMatching).
+
+> ### Note:  
+> SAPUI5 uses Crossroads.js for parsing the hash and the Hasher framework for manipulating the hash.
 
 
 
 ## Targets
 
-A target defines the view or component that is displayed. It is associated with one or more routes or it can be displayed manually from within the app. Whenever a target is displayed, the corresponding view or component is loaded and added to the aggregation configured with the `controlAggregation` option of the control. The target definition can contain the following parameters:
+A target defines the view or component that is displayed when a route is matched or explicitly invoked in code. Targets allow you to decouple route configuration from view/component instantiation and placement.
 
--   The target key
+Each target is responsible for loading and inserting a view or component into a specific aggregation of a container control — typically defined via `controlId` and `controlAggregation`.
 
--   The `type` to specify whether the target is a view or a component
+The target can be:
 
--   The `name` to specify the name of the view or component
+-   Automatically displayed as part of route matching
+-   Manually displayed using router APIs \(e.g., `Router.prototype.navTo`, `Targets.prototype.display`\)
 
--   Additional optional parameters
+When a target is displayed:
 
-    If you don't specify a parameter, the default value is taken from the `config` section.
+-   The specified view or component is loaded and instantiated
+-   It is then inserted into the defined aggregation specified by `controlAggregation`, of the control identified by `controlId`
 
-    -   `viewType` \(e.g. `XML`\) which is valid only when the `type` is set to "View"
 
-    -   `id` of the view or component instance
+The targets section of the router configuration is an object in which each key defines the name of a target, and the corresponding value is a configuration object for that specific target. A target configuration object contains the following properties:
 
-        A view or component instance is cached in SAPUI5 routing under the combination of its `name` and `id`. If there already is one instance created for a specific view or component with an `id`, this instance is reused if another target with the same `name` and `id` is displayed. If a new instance needs to be created instead of reusing the existing ones, assign the target a different `id`.
+> ### Tip:  
+> Each of the following properties can also be defined in the `config` section of the router configuration. This allows you to set defaults that apply to **all** targets, reducing duplication. You can then override these defaults in individual targets as needed.
 
-    -   `level` 
+-   `type`
 
-        You can use different levels to define the navigation direction, for example the navigation from a lower view level to a higher view level leads to forward navigation. This is, for example, important for `flip` and `slide` transitions, where the slide animation should go from left to right or vice versa.
+    Defines whether the target represents a view or a component.
 
-    -   `controlId` of the control that is used as the parent to insert the view or component \(e.g. `app`\)
+-   `name`
 
-    -   `controlAggregation` target aggregation of the control with `controlId` to which the view or component is added
+    Name of the view or component to load.
 
-        The `NavContainer` control, for example, has an aggregation called `Pages` and the shell container has `Content`.
+-   `id`
 
-    -   `parent`: the key of another target which a view is created and added before the target view or component is added
+    Optional ID used to identify the target instance. Instances are cached per `name` + `id`. If not set, an auto-generated ID is used.
 
-    -   `path`: the namespace of the view or component
+-   `path`
 
-    -   `targetParent` where the control with the `controlId` is located \(see [Working with Multiple Targets](working-with-multiple-targets-2c5c84d.md)\); this option is set automatically for the root view of a component if the router instance is instantiated by the component.
+    Optional namespace prefix for resolving the `name`.
 
-    -   `clearAggregation` specifies whether the aggregation should be cleared before adding the new view instance.
+-   `viewType`
 
-        When you use the `sap.m.routing.Router` the default is `false`, for `sap.ui.core.routing.Router` it is `true`.
+    Type of the view \(e.g., "XML"\); only relevant if `type` is "View".
 
-        When using `sap.ui.ux3.Shell` this value should be set to `true`, for `sap.m.NavContainer` to `false` to ensure that the correct content is shown.
+-   `controlId`
 
-    -   `transition` defines how the transition happens; you can choose between `slide` \(default\), `flip`, `fade`, and `show`.
+    ID of the control into which the view/component is placed.
 
-    -   `title` contains either a static text or a valid binding syntax, e.g. to an i18n model, which is resolved under the binding context of the view \(see [Using the title Property in Targets](using-the-title-property-in-targets-1238d70.md)\)
+-   `controlAggregation`
 
+    Aggregation name of the `controlId` into which the content is inserted.
+
+-   `parent`
+
+    Key of another target that is loaded and placed before this one. Useful when building up a nested UI hierarchy.
+
+-   `clearAggregation`
+
+    Whether to clear the aggregation before adding new content. The defaults are:
+
+    `true` for `sap/ui/core/routing/Router`
+
+    `false` for `sap/m/routing/Router`
+
+    `false` for `sap/f/routing/Router`
+
+-   `title`
+
+    Static title or data-binding expression, used for dynamic titles in shells or browser tabs. The binding syntax is resolved under the binding context of the view \(see [Using the title Property in Targets](using-the-title-property-in-targets-1238d70.md)\).
+
+
+When a target is defined with `type: "Component"`, the following additional properties can be used to control how the component is instantiated and embedded into the app:
+
+-   `usage`
+
+    Refers to the component usage alias as defined in the `sap.ui5/componentUsages` section of the `manifest.json`. This allows the target to reuse an existing component configuration without having to define its `name` and `path` again.
+
+-   `options`
+
+    An object that contains additional options for the component. This can include properties like `async`, `settings`, and `componentData`. These options are passed to the component when it is instantiated.
+
+-   `containerOptions`
+
+    An object that contains additional options for the `sap.ui.core.ComponentContainer` control that will host the component. These options are passed to the constructor when the `sap.ui.core.ComponentContainer` is created. This can include properties like `propagateModel`, `lifecycle`, `height`, and `width`.
+
+
+The **subclasses** of `sap/ui/core/routing/Router` provide additional properties that can be used in the target configuration. `sap/m/routing/Router` and `sap/f/routing/Router` add the following properties:
+
+-   `level` 
+
+    Defines the navigation direction, which is important for transitions like `flip` and `slide`.
+
+-   `transition`
+
+    Defines the transition effect when navigating to this target. Possible values are `slide`, `flip`, `fade`, and `show`. The default value is `slide`.
+
+-   `transitionParameters`
+
+    An object that contains additional parameters for the transition effect. This can be used to customize the transition behavior, such as duration or easing.
 
 
 > ### Note:  
-> You can also use targets without routes to call a view directly . For more information, see the tutorial [Step 5: Display a Target Without Changing the Hash](../03_Get-Started/step-5-display-a-target-without-changing-the-hash-d9efab3.md) and [Step 10: Implement "Lazy Loading"](../03_Get-Started/step-10-implement-lazy-loading-cdab0a1.md), and the sample [Targets Without a Router](https://ui5.sap.com/#/entity/sap.ui.core.routing.Targets) in the *Samples* in the Demo Kit.
+> You can also use targets without routes to call a view directly.For more information, see the tutorial [Step 5: Display a Target Without Changing the Hash](../03_Get-Started/step-5-display-a-target-without-changing-the-hash-d9efab3.md) and [Step 10: Implement "Lazy Loading"](../03_Get-Started/step-10-implement-lazy-loading-cdab0a1.md), and the sample [Targets Without a Router](https://ui5.sap.com/#/entity/sap.ui.core.routing.Targets) in the *Samples* in the Demo Kit.
 
-For more information, see [API Reference: `sap.m.routing.Router`](https://ui5.sap.com/#/api/sap.m.routing.Router).
+For more information, see [API Reference: `sap.ui.core.routing.Targets`](https://ui5.sap.com/#/api/sap.ui.core.routing.Targets).
 
 
 
 ## Config
 
-The `config` section contains the global router configuration and default values that apply for all routes and targets. The `config` section contains the following settings.
+The `config` section defines global router settings and default values that apply to all routes and targets in your app. This helps reduce duplication by centralizing common configuration.
 
--   `routerClass` defines which router is used.
+Every property that can be used in a route or a target can also be defined in the `config` section. These values will then act as defaults. If a route or target defines the same property explicitly in its own configuration, that local value overrides the global default from `config`.
 
-    You can either use class `sap.ui.core.routing.Router` \(default\) or `sap.m.routing.Router`. If you use a `sap.m` control \(such as `NavContainer` or `SplitApp`\) in your app, you can benefit more from using `sap.m.routing.Router` because it not only loads the targets and places them in the corresponding container, but also triggers the animation for navigating to the right target.
+In addition to the defaults for the routes and targets of your app, the `config` section can contain the following properties:
 
-    > ### Note:  
-    > The possible values for `routerClass` are `sap.ui.core.routing.Router`, `sap.m.routing.Router`, or any other subclasses of `sap.ui.core.routing.Router`.
-    > 
-    > Compared to `sap.ui.core.routing.Router`, the `sap.m.routing.Router` is optimized for mobile apps and adds the `level`, `transition`, and `transitionParameters` properties, which can be specified for each route or target created by `sap.m.routing.Router`. The `transitionParameters` can also be used for custom transitions. See the *API Reference* for more information.
+-   `routerClass`
 
--   The `homeRoute` defines the route whose target title is inserted as the first entry in the title history in the `titleChanged` event or in the return value of `sap.ui.core.routing.Router.prototype.getTitleHistory`. For more information, see section *Initial title of the home page* of [Using the title Property in Targets](using-the-title-property-in-targets-1238d70.md).
+    Specifies the class to be used as the router instance. By default, this is `sap.ui.core.routing.Router`.
 
-    The property contains the `name` of one of the routes that are defined in the `routes` section as value.
+    You can also use a specialized subclass router from a specific library to take advantage of additional features tailored for the containers within that library. For example, if your application uses `sap.m` containers like `sap.m.App` or `sap.m.SplitApp`, you can use `sap.m.routing.Router`. This router automatically handles the placement of targets in the correct container and provides additional features such as transition animations and support for parameters like `transition`, `transitionParameters`, and `level`. The same applies to `sap.f.routing.Router` for containers in the `sap.f` library, like `sap.f.FlexibleColumnLayout`.
 
--   You can also define default values for all target parameters
+-   `homeRoute`
 
--   `async` defines whether targets are loaded asynchronously; the default value is `false`. We recommend setting this parameter to `true` to improve performance.
+    Defines the name of the route whose target title is inserted as the first entry in the title history returned by `sap.ui.core.routing.Router.prototype.getTitleHistory` or the `titleChanged` event. For more information, see section *Initial title of the home page* of [Using the title Property in Targets](using-the-title-property-in-targets-1238d70.md).
+
+-   `async`
+
+    Determines whether views and components are loaded asynchronously; the default value is `false`. We recommend setting this parameter to `true` to improve performance.
 
     > ### Note:  
     > A target with `type` "Component" is only displayed with asynchronous loading.
@@ -114,7 +224,9 @@ The `config` section contains the global router configuration and default values
     > ### Note:  
     > If the `Component.js` implements the `sap.ui.core.IAsyncContentCreation` interface, the default value for `async` is set to `true`, so no `async` config needs to be set in the `manifest.json`.
 
--   Using the `bypassed` parameter, you specify the navigation target that is used whenever no navigation pattern is matched. If you use this setting, you also have to define a corresponding target in the `targets` section.
+-   `bypassed`
+
+    Defines the fallback target to be displayed when no defined route matches the current URL/hash. This parameter expects a target name. A corresponding target must be defined in the targets section.
 
 
 For more information, see [API Reference: `sap.m.routing.Router`](https://ui5.sap.com/#/api/sap.m.routing.Router).
@@ -197,6 +309,8 @@ In this example, the `Home` view is always shown when the hash is empty. The `Ca
 [API Reference: `sap.ui.core.routing`](https://ui5.sap.com/#/api/sap.ui.core.routing)
 
 [API Reference: `sap.m.routing.Router`](https://ui5.sap.com/#/api/sap.m.routing.Router)
+
+[API Reference: `sap.f.routing.Router`](https://ui5.sap.com/#/api/sap.f.routing.Router)
 
 [Sample: Targets Without a Router](https://ui5.sap.com/#/entity/sap.ui.core.routing.Targets)
 

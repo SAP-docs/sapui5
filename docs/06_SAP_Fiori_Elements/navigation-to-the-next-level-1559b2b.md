@@ -21,7 +21,7 @@ For more information about navigating from a list report to an object page, see 
 You can configure an object page and subobject page to enable normal navigation from a list report to an object page, and from an object page to a subobject page, as shown in the following sample code:
 
 > ### Sample Code:  
-> manifest.json
+> `manifest.json`
 > 
 > ```json
 > {

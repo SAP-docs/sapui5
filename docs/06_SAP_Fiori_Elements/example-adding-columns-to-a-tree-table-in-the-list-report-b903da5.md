@@ -9,14 +9,14 @@ To add custom columns to a tree table in the list report, follow the steps descr
 ## Context
 
 > ### Note:  
-> This topic is currently only applicable to SAP Fiori elements for OData V2.
+> This topic is only applicable to SAP Fiori elements for OData V2.
 
 > ### Caution:  
 > Use app extensions with caution and only if you cannot produce the required behavior by other means, such as manifest settings or annotations. To correctly integrate your app extension coding with SAP Fiori elements, use only the `extensionAPI` of SAP Fiori elements. For more information, see [Using the extensionAPI](using-the-extensionapi-bd2994b.md).
 > 
 > After you've created an app extension, its display \(for example, control placement and layout\) and system behavior \(for example, model and binding usage, busy handling\) lies within the application's responsibility. SAP Fiori elements provides support only for the official `extensionAPI` functions. Don't access or manipulate controls, properties, models, or other internal objects created by the SAP Fiori elements framework.
 
-The table containing additional columns can look like this:
+The following screenshot shows a table containing additional columns:
 
   
   
@@ -30,7 +30,7 @@ The table containing additional columns can look like this:
 
 1.  Define a fragment for the view extension
 
-    In the example project webapp/ext/fragments/ListReportTreeTableColumns.fragment.xml, the custom column is added to the first position of the tree table. You can change the sequence via the `customData` property `columnIndex` as shown below.
+    In the example project webapp/ext/fragments/ListReportTreeTableColumns.fragment.xml, the custom column is added to the first position of the tree table. You can change the sequence using the `customData` property `columnIndex` as shown below.
 
     > ### Note:  
     > If the content of your custom column refers to a property \(such as`{Price}`\), you need to include a corresponding `"leadingProperty"` entry in the `CustomData` of the column definition.
@@ -66,6 +66,8 @@ The table containing additional columns can look like this:
 2.  Register your view extension in the `manifest.json` file of your application.
 
     > ### Sample Code:  
+    > `manifest.json`
+    > 
     > ```
     > ...
     >  "extends": {
