@@ -168,7 +168,7 @@ You can hide header facets on the object page, as shown in the following sample 
 >     purpose: #HEADER
 >   },
 >   {
->     hidden: #('editActionIsEnabled'),
+>     hidden: #(editActionIsEnabled),
 >     label: 'Credit Limit Consumption',
 >     id: 'CreditLimitChartHeader',
 >     targetQualifier: 'CreditLimitChart',
@@ -351,7 +351,7 @@ You can hide content in quick views, such as field groups, as shown in the follo
 >     purpose: #QUICK_VIEW
 >   },
 >   {
->     hidden: #('edit_Ac'),
+>     hidden: #(edit_Ac),
 >     label: 'Address',
 >     targetQualifier: 'SoldToQuickView',
 >     type: #FIELDGROUP_REFERENCE,
@@ -435,7 +435,7 @@ You can hide `DataField` records, for example, `UI.DataField`, `UI.DataFieldForA
 > 
 > @UI.fieldGroup: [
 >   {
->     hidden: #('Delivered'),
+>     hidden: #(Delivered),
 >     value: 'DISTRIBUTIONCHANNEL',
 >     type: #STANDARD,
 >     qualifier: 'OrgData'
@@ -523,7 +523,7 @@ You cannot use the `UI.Hidden` annotation to hide an entire `UI.FieldGroup` or `
 > 
 > @UI.fieldGroup: [
 >   {
->     hidden: #('edit_Ac'),
+>     hidden: #(edit_Ac),
 >     value: 'IMAGEURL',
 >     type: #STANDARD,
 >     qualifier: 'OrderData'
