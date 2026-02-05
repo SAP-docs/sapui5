@@ -31,3 +31,8 @@ The `select` parameter is not added automatically to the OData request in list c
 > }
 > ```
 
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Adding the OData Select Parameter](adding-the-odata-select-parameter-f4b7e1d.md).
+

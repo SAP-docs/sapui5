@@ -39,3 +39,8 @@ Also, `isIntentSupported` is standard functionality in the Cross Application Nav
 > }
 > ```
 
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Setting Authorizations for Cards](setting-authorizations-for-cards-f34ecef.md).
+

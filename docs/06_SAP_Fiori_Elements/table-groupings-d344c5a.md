@@ -551,3 +551,8 @@ End users can always change groups and totals using the column header and the ag
 > 
 > -   Only one level of grouping is supported in a responsive table. If you have specified multiple levels through a `PresentationVariant`, for example, only the first level is applied.
 
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Table Groupings](table-groupings-87d810a.md).
+

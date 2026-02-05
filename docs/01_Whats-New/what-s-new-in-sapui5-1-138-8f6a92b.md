@@ -649,7 +649,7 @@ The following changes and new features are available for SAP Fiori elements for 
 
 -   Unfilled currency fields in list report and object page now correctly show as empty.
 
--   You can now configure the threshold for the number of rows initially loaded in a table. For more information, see [Adapting the UI](../06_SAP_Fiori_Elements/adapting-the-ui-59bfd31.md).
+-   You can now configure the threshold for the number of rows initially loaded in a table. For more information, see [Adapting the UI](../06_SAP_Fiori_Elements/extending-delivered-apps-with-key-user-adaptation-59bfd31.md).
 
 -   You can now freeze columns in the *Column Settings* dialog and disable column freezing by using the `disableColumnFreeze` parameter. For more information, see [Tables](../06_SAP_Fiori_Elements/tables-c0f6592.md).
 
@@ -760,6 +760,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.142](what-s-new-in-sapui5-1-142-92ed100.md "With this release SAPUI5 is upgraded from version 1.141 to 1.142.")
 
 [What's New in SAPUI5 1.141](what-s-new-in-sapui5-1-141-a7ed66d.md "With this release SAPUI5 is upgraded from version 1.140 to 1.141.")
 

@@ -4,9 +4,6 @@
 
 You can configure standard list items and object list items in list reports.
 
-> ### Note:  
-> This topic is only applicable to SAP Fiori elements for OData V2.
-
 Both list items can display standard, numeric, and date fields.
 
 Note the following:
@@ -19,7 +16,7 @@ Note the following:
 
 -   The standard and object list items support the `UI.Criticality` property so that all data points have semantic coloring enabled.
 
--   `onListNavigationExtension` is enabled for internal navigation. For more information, see [Example: Enable Internal Navigation to Different Detail Page](example-enable-internal-navigation-to-different-detail-page-75002b3.md).
+-   `onListNavigationExtension` is enabled for internal navigation. For more information, see [Example: Enable Internal Navigation to Different Detail Page](example-enable-internal-navigation-to-different-detail-page-a66f6a1.md).
 
 
 

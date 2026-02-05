@@ -144,25 +144,12 @@ The following side effect annotations are supported:
 
     If you use a value help, combo box, checkbox, date picker, or date-time picker, the side effect is triggered as soon as the value is set. However, if you are typing the value, the side effect is triggered when the focus moves away from the field. If the aforementioned controls are used in combination with other input fields as a source for a side effect, then the side effect is triggered only when the focus moves away from the source field group.
 
-    **For SAP Fiori elements for OData V2:**
-
-    -   You can define a single property or a list of properties as a source, forming a virtual field group.
-
-    -   When you modify the source property and move the focus away from the source, the side effect is triggered.
-
-    -   When you modify the virtual field group and move the focus away from it, the side effect is triggered immediately if no `TriggerAction` is configured in the side effect annotation. However, if the focus is changed to a control within the same virtual field group, then the side effect is not triggered.
-
-
     > ### Restriction:  
     > You cannot use navigation properties as source properties.
 
 -   **Source entities**
 
-    You can specify a navigation property:
-
-    In SAP Fiori elements for OData V2: Only a 1:n navigation property can be specified as the source entity.
-
-    In SAP Fiori elements for OData V4: Any kind of navigation property \(1:1 or 1:n\) can be specified as the source entity. Side effects can be executed in the following contexts:
+    Any kind of navigation property \(1:1 or 1:n\) can be specified as the source entity. Side effects can be executed in the following contexts:
 
     -   The context of the field that is being edited.
     -   The context of its parent entity when a relative side effect \(1:1 or 1:n\) is used.
@@ -170,7 +157,7 @@ The following side effect annotations are supported:
     > ### Caution:  
     > You cannot specify a 1:1 association or an empty target, such as `NavigationPropertyPath`, to ensure that the whole entity is considered as the source.
 
-    The side effect is triggered by structural changes such as adding or deleting an item. With SAP Fiori elements for OData V4, it is also triggered when any property of an entity changes, whereas with SAP Fiori elements for OData V2, it is not. Instead, the side effect must be defined in the entity type of the associated entity.
+    The side effect is triggered by structural changes such as adding or deleting an item. It is also triggered when any property of an entity changes.
 
 -   **Target properties**
 
@@ -180,225 +167,56 @@ The following side effect annotations are supported:
 
 -   **Target entities**
 
-    You can specify 1:1 and 1:n navigation properties.
+    You can specify 1:1 and 1:n navigation properties. The list is refreshed if a 1:n association is provided as a target entity.
 
     If you specify an empty target, the whole entity is updated.
 
     If a trigger action is defined but the `TargetProperties` or `TargetEntities` are not defined, then only the trigger action is called.
 
+    You can also specify absolute paths, that is, paths starting with the entity container. They can be defined as `TargetEntities` to refresh complete entity sets in the list report.
+
+    > ### Example:  
+    > `<NavigationPropertyPath>/namespace.to.EntityContainer/EntityType</NavigationPropertyPath>`
 
 
 
-<a name="loio18b17bdd49d1436fa9172cbb01e26544__section_yqw_b3g_vcc"/>
 
-## Scenarios Where Side Effects Cannot Be Triggered
+## Value List Refresh
 
-As a general rule, no data is sent to the back end until the UI validation errors are solved. This means that the side effect isn't triggered when there are validation errors related to the source property or a set of properties.
+Value lists are cached during runtime for better performance. You can define an absolute side effect with the value list collection as the target in the following cases:
 
-For example, if a data field referencing the `ProductCategory` or `MainProductCategory` property has a field value entered with greater than `MaxLength="40"`, no side effect is triggered. Both properties are successfully validated to trigger the side effect.
+-   If you are using a value list referring to transactional data.
 
-> ### Sample Code:  
-> ```
-> <EntityType Name="SEPMRA_I_ProductCategoryType" sap:label="Category" sap:content-version="1">
->     <Key>
->         <PropertyRef Name="ProductCategory"/>
->     </Key>
->     <Property Name="ProductCategory" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Category"/>
->     <Property Name="MainProductCategory" Type="Edm.String" MaxLength="40" sap:label="Main Category" sap:value-list="fixed-values"/>
->     <NavigationProperty Name="to_MainCategory" Relationship="STTA_PROD_MAN.assoc_BBDC3EA034F824A7382F8EEF561C1160" FromRole="FromRol
->      e_assoc_BBDC3EA034F824A7382F8EEF561C1160" ToRole="ToRole_assoc_BBDC3EA034F824A7382F8EEF561C1160"/>
-> </EntityType>
-> 
-> ```
+-   If you expect the value list to change due to actions or changes made by users.
+
+
+The following sample code shows you an example:
 
 > ### Sample Code:  
-> ```
+> ValueListCollection
 > 
-> <Annotations Target="NAMESPACE.ENTITYTYPE">
->     <Annotation Term="com.sap.vocabularies.Common.v1.SideEffects" Qualifier="ProductChanged">
->         <Record>
->             <PropertyValue Property="SourceProperties">
->                 <Collection>
->                     <PropertyPath>ProductCategory</PropertyPath>
->                     <PropertyPath>MainProductCategory</PropertyPath>
->                 </Collection>
->             </PropertyValue>
->             <PropertyValue Property="TargetEntities">
->                 <Collection>
->                     <NavigationPropertyPath></NavigationPropertyPath>
->                 </Collection>
->             </PropertyValue>
->         </Record>
->     </Annotation>
-> </Annotations>
+> ```
+> <Annotation Term="com.sap.vocabularies.Common.v1.SideEffects" Qualifier="ChangeOfProperty">
+>      <Record>
+>           <PropertyValue Property="SourceProperties">
+>                <Collection>
+>                     <PropertyPath>PropertyName</PropertyPath>
+>                </Collection>
+>           </PropertyValue>
+>           <PropertyValue Property="TargetEntities">
+>                <Collection>
+>                     <NavigationPropertyPath>/Namespace.EntityContainer/ValueListCollection</NavigationPropertyPath>
+>                </Collection>
+>           </PropertyValue>
+>      </Record>
+> </Annotation>
 > ```
 
 
 
-<a name="loio18b17bdd49d1436fa9172cbb01e26544__section_qcm_s54_drb"/>
+## Defining Side Effects on Unbound Actions
 
-## Additional Features in SAP Fiori Elements for OData V2
-
-
-
-### Side Effect Annotation Format
-
-You can define side effects either in the back end or in the local annotation files.
-
-
-
-### Side Effect Annotation Properties
-
--   **Target Entities**
-
-    For 1:n, the request isn't sent by the binding of the table. This means that paging isn't considered. Therefore, 1:n must be used carefully.
-
--   **Side effect without a specific source**
-
-    You can define a side effect without any source properties or source entities. This is called a global side effect. For more information, see [Using Global Side Effects](using-global-side-effects-955ae31.md).
-
-
-
-
-### Side Effects for Extension Fields in Forms
-
-To enable side effects for extension fields in forms, you must configure the `registerCustomFieldForSideEffect` extension API in the `onAfterRendering` hook. The extension API requires the following parameters:
-
--   `Controls`: The extension field controls.
-
--   `FieldName`: The name of the custom field.
-
--   `EntitySet`: The associated entity set.
-
-
-The extension API returns a callback function, which must be invoked within the extension field event handler. The callback function requires the `FieldName` as input.
-
-Additionally, the side effect annotation must be configured to ensure correct behavior.
-
-> ### Note:  
-> Navigation properties are not supported.
-
-The following sample code shows how a custom field is configured as the source for the side effect:
-
-> ### Sample Code:  
-> ```
-> sap.ui.define("SOwoExt.ext.controller.ObjectPageExtension", ["sap/m/MessageBox"], function (MessageBox) {
->     "use strict";
->     var CustomFieldGroupChangeRegister;
-> 
->     return {
->         onCheckBoxEvent: function (oEvent) {
->             var oView = this.getView();
->             var model = oView.getModel();
->             var context = oView.getBindingContext();
->             var sFields = "SrcgProjNotesAreForbidden";
->             var data = oEvent.getParameter("selected");
-> 
->             model.setProperty(context.getPath() + "/" + sFields, data);
->             CustomFieldGroupChangeRegister("SrcgProjNotesAreForbidden");
->         },
-> 
->         onAfterRendering: function (event) {
->             var oView = this.getView();
->             var sEntitySet = "C_STTA_SalesOrder_WD_20";
->             var sProperty = "SrcgProjNotesAreForbidden";
->             var oControl = sap.ui.getCore().getElementById(
->                 "SOwoExt::sap.suite.ui.generic.template.ObjectPage.view.Details::C_STTA_SalesOrder_WD_20--srcgProjNotesAreForbiddenCheckBox"
->             );
-> 
->             CustomFieldGroupChangeRegister = this.extensionAPI.registerCustomFieldForSideEffect(oControl, sProperty, sEntitySet);
->         }
->     };
-> });
-> 
-> ```
-
-
-
-### Side Effects for Extension Columns in Tables
-
-To enable side effects for extension columns in tables, you must configure the `registerCustomColumnForSideEffect` extension API within the `onAfterRendering` hook of the table. The extension API requires the following parameters:
-
--   `oTable`: The extension field controls.
-
--   `FieldName`: The property name associated with the custom column.
-
--   `EntitySet`: The entity set associated with the custom column.
-
-
-The extension API returns a callback function, which must be invoked within the extension column event handler. The callback function requires the `Field Name` as input.
-
-Additionally, the side effect annotation must be configured to ensure correct behavior.
-
-> ### Note:  
-> This behavior is only supported in responsive tables and grid tables.
-
-The following sample code shows how a custom table column with a checkbox is configured as the source for the side effect:
-
-> ### Sample Code:  
-> ```
-> sap.ui.define("SOwoExt.ext.controller.ObjectPageExtension", ["sap/m/MessageBox"], function (MessageBox) {
->     "use strict";
->     
->     var CustomFieldGroupChangeRegister;
-> 
->     return {
->         onSubSectionEnteredExtension: function (subSection) {
->             if (subSection.getId().indexOf("C_STTA_SalesOrder_WD_20--to_Item") !== -1) {
->                 var sourcingProjectItemTreeTable = this.oView.byId(
->                     "SOwoExt::sap.suite.ui.generic.template.ObjectPage.view.Details::C_STTA_SalesOrder_WD_20--to_Item::com.sap.vocabularies.UI.v1.LineItem::responsiveTable"
->                 );
-> 
->                 sourcingProjectItemTreeTable.addEventDelegate(
->                     {
->                         onAfterRendering: function (oEvent) {
->                             var oControl = this.oView.byId(
->                                 "SOwoExt::sap.suite.ui.generic.template.ObjectPage.view.Details::C_STTA_SalesOrder_WD_20--to_Item::com.sap.vocabularies.UI.v1.LineItem::responsiveTable"
->                             );
-> 
->                             CustomFieldGroupChangeRegister = this.extensionAPI.registerCustomColumnForSideEffect(
->                                 oControl,
->                                 "Raiseamount_ac",
->                                 "C_STTA_SalesOrderItem_WD_20"
->                             );
->                         },
->                     },
->                     this
->                 );
->             }
->         },
-> 
->         onCheckBoxPressed: function (event) {
->             var sProperty = "Raiseamount_ac";
->             CustomFieldGroupChangeRegister(sProperty);
->         },
->     };
-> });
-> 
-> ```
-
-
-
-### 
-
-> ### Note:  
-> -   Side effects for non-draft apps are supported. The side effects with source properties are triggered once the user saves the entity and the *Save* action is successful. They are also supported when structural changes are made to the items table in the object page that is configured as a source.
-> 
-> -   If a text arrangement annotation is used, especially in combination with a value list annotation, you also need to provide a side-effect annotation to indicate that the text must be updated when the user sets a different key.
-> 
-> -   Side effects for non-draft apps are also supported for action buttons. See *Example: Side effect after executing an action* in [Side Effect Annotations: Examples](side-effect-annotations-examples-61cf21d.md).
-
-
-
-<a name="loio18b17bdd49d1436fa9172cbb01e26544__section_t4t_nv4_drb"/>
-
-## Additional Features in SAP Fiori Elements for OData V4
-
-
-
-### Defining Side Effects on Unbound Actions
-
-In SAP Fiori elements for OData V4, you can define side effects on unbound actions. As these actions are not bound to a context, the definition must use an absolute path.
+You can define side effects on unbound actions. As these actions are not bound to a context, the definition must use an absolute path.
 
 This allows you to influence all the entities of a list when completing an unbound action, refreshing the entire entity list, as shown in the following sample code:
 
@@ -489,51 +307,9 @@ This allows you to influence all the entities of a list when completing an unbou
 
 
 
-### Target Entities
+<a name="loio18b17bdd49d1436fa9172cbb01e26544__section_t4t_nv4_drb"/>
 
-The list is refreshed if a 1:n association is provided as a target entity.
-
-You can also specify absolute paths, that is, paths starting with the entity container. They can be defined as `TargetEntities` to refresh complete entity sets in the list report.
-
-> ### Example:  
-> `<NavigationPropertyPath>/namespace.to.EntityContainer/EntityType</NavigationPropertyPath>`
-
-
-
-### Value List Refresh
-
-Value lists are cached during runtime for better performance. You can define an absolute side effect with the value list collection as the target in the following cases:
-
--   If you are using a value list referring to transactional data.
-
--   If you expect the value list to change due to actions or changes made by users.
-
-
-The following sample code shows you an example:
-
-> ### Sample Code:  
-> ValueListCollection
-> 
-> ```
-> <Annotation Term="com.sap.vocabularies.Common.v1.SideEffects" Qualifier="ChangeOfProperty">
->      <Record>
->           <PropertyValue Property="SourceProperties">
->                <Collection>
->                     <PropertyPath>PropertyName</PropertyPath>
->                </Collection>
->           </PropertyValue>
->           <PropertyValue Property="TargetEntities">
->                <Collection>
->                     <NavigationPropertyPath>/Namespace.EntityContainer/ValueListCollection</NavigationPropertyPath>
->                </Collection>
->           </PropertyValue>
->      </Record>
-> </Annotation>
-> ```
-
-
-
-### Side Effects for Extension Fields in Forms
+## Side Effects for Extension Fields in Forms
 
 SAP Fiori elements for OData V4 supports executing side effects when using custom extension fields in a form if the following conditions are met:
 
@@ -577,7 +353,60 @@ In the following example, the side effects with `NameProperty` as the source pro
 
 Side effects are executed when the focus moves away from the extension field.
 
+
+
+<a name="loio18b17bdd49d1436fa9172cbb01e26544__section_yqw_b3g_vcc"/>
+
+## Scenarios Where Side Effects Cannot Be Triggered
+
+As a general rule, no data is sent to the back end until the UI validation errors are solved. This means that the side effect isn't triggered when there are validation errors related to the source property or a set of properties.
+
+For example, if a data field referencing the `ProductCategory` or `MainProductCategory` property has a field value entered with greater than `MaxLength="40"`, no side effect is triggered. Both properties are successfully validated to trigger the side effect.
+
+> ### Sample Code:  
+> ```
+> <EntityType Name="SEPMRA_I_ProductCategoryType" sap:label="Category" sap:content-version="1">
+>     <Key>
+>         <PropertyRef Name="ProductCategory"/>
+>     </Key>
+>     <Property Name="ProductCategory" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Category"/>
+>     <Property Name="MainProductCategory" Type="Edm.String" MaxLength="40" sap:label="Main Category" sap:value-list="fixed-values"/>
+>     <NavigationProperty Name="to_MainCategory" Relationship="STTA_PROD_MAN.assoc_BBDC3EA034F824A7382F8EEF561C1160" FromRole="FromRol
+>      e_assoc_BBDC3EA034F824A7382F8EEF561C1160" ToRole="ToRole_assoc_BBDC3EA034F824A7382F8EEF561C1160"/>
+> </EntityType>
+> 
+> ```
+
+> ### Sample Code:  
+> ```
+> 
+> <Annotations Target="NAMESPACE.ENTITYTYPE">
+>     <Annotation Term="com.sap.vocabularies.Common.v1.SideEffects" Qualifier="ProductChanged">
+>         <Record>
+>             <PropertyValue Property="SourceProperties">
+>                 <Collection>
+>                     <PropertyPath>ProductCategory</PropertyPath>
+>                     <PropertyPath>MainProductCategory</PropertyPath>
+>                 </Collection>
+>             </PropertyValue>
+>             <PropertyValue Property="TargetEntities">
+>                 <Collection>
+>                     <NavigationPropertyPath></NavigationPropertyPath>
+>                 </Collection>
+>             </PropertyValue>
+>         </Record>
+>     </Annotation>
+> </Annotations>
+> ```
+
+
+
 You can explore and work with the coding yourself. For more information about side effects and live examples, see the SAP Fiori development portal at [Global Patterns - Side Effects](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/advancedFeatures/guidance/guidanceSideEffects).
+
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Side Effects](side-effects-e55b185.md).
 
 **Related Information**  
 

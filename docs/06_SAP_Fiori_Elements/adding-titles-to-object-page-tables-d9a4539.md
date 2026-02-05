@@ -103,3 +103,8 @@ The results look like this:
 > 
 > For more information about setting section title to the control within custom section, see [Adding a Custom Section to an Object Page](adding-a-custom-section-to-an-object-page-a357047.md).
 
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Adding Titles to Object Page Tables](adding-titles-to-object-page-tables-f0d679d.md).
+

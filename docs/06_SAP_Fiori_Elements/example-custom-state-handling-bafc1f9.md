@@ -4,9 +4,6 @@
 
 This example shows how to implement inner app state handling for custom UI elements.
 
-> ### Note:  
-> This topic is only applicable to SAP Fiori elements for OData V2.
-
 The custom UI shows a map containing two state information items:
 
 -   The `zoomFactor` is a number between 1 and 100. The `zoomFactor` should be passed to other instances on pagination. The `zoomFactor` should also remain valid for the whole session.

@@ -2,7 +2,7 @@
 
 # The `VariantManagement` Building Block
 
-You can use the `VariantManagement` building block to enable variant management for any flex-enabled control in flexible programming model-based SAPUI5 applications.
+You can use the `VariantManagement` building block to enable variant management for any flex-enabled control.
 
 This building block can be applied at two levels:
 

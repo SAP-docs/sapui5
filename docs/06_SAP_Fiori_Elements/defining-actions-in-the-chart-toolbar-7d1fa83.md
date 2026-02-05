@@ -11,7 +11,7 @@ The `Actions` property must be a collection of the types `UI.DataFieldForAction`
 > ### Note:  
 > -   To make the button visible in the chart toolbar, the properties `Determining` and `Inline` for `UI.DataFieldForAction` and `UI.DataFieldForIntentBasedNavigation` must be set to `false` or must not be defined.
 > 
-> -   Chart actions coming from `UI.DataFieldForAction` do not support the passing of context.
+> -   Chart actions coming from `UI.DataFieldForAction` don't support the passing of context, so you can't use bound actions in charts.
 
 The action buttons are displayed as shown below in the chart toolbar:
 
@@ -163,4 +163,9 @@ Actions can be selectively enabled or disabled based on the context that is sele
 
 > ### Note:  
 > If you are using the path-based `OperationAvailable` setting to control the visibility of actions in the chart toolbar, the property specified must be based on the property from the parent entity set. The property cannot be from the chart entity set.
+
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Defining Actions in the Chart Toolbar](defining-actions-in-the-chart-toolbar-b13196e.md).
 

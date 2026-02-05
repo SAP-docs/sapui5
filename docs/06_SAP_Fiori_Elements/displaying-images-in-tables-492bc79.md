@@ -139,3 +139,8 @@ You can also use media data of type **binary** instead of **stream**. The local 
 > };
 > ```
 
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Displaying Images in Tables](displaying-images-in-tables-2f6aeb8.md).
+

@@ -4,9 +4,6 @@
 
 You can enable creation of sub-objects having a maximum of 8 data fields through a dialog on an object page of a non-draft aplication.
 
-> ### Note:  
-> This topic is only applicable to SAP Fiori elements for OData V2.
-
 ![](images/Enabling_Non-draft_Sub-object_Creation_Through_Dialog_dbe00fd.png)
 
 You can enable this feature in the manifest setting by adding the property `createWithParameterDialog` and passing the properties of related entity set as follows:
@@ -72,5 +69,5 @@ The default title of the dialog is *New Item* and the key in i18n file is `CREAT
 **Related Information**  
 
 
-[Enabling Object Creation Using the Dialog in the List Report](enabling-object-creation-using-the-dialog-in-the-list-report-ceb9284.md "You can enable the creation of objects that have a maximum of 8 data fields using a dialog in the list report page.")
+[Enabling Object Creation Using the Dialog on the List Report Page](enabling-object-creation-using-the-dialog-on-the-list-report-page-2d04f60.md "You can enable the creation of objects that have a maximum of 8 data fields using a dialog in the list report page.")
 

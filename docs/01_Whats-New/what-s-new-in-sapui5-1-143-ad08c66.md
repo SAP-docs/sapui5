@@ -1,16 +1,11 @@
 <!-- loioad08c664c9d44b3daf4b6957b99638b4 -->
 
-<link rel="stylesheet" type="text/css" href="../css/sap-icons.css"/>
-
 # What's New in SAPUI5 1.143
 
 With this release SAPUI5 is upgraded from version 1.142 to 1.143.
 
 > ### Tip:  
 > If you want to do a search across all versions of the What's New content, you can also find it in the [SAPUI5 What's New viewer](https://help.sap.com/whats-new/67f60363b57f4ac0b23efd17fa192d60).
-
-> ### Note:  
-> Content marked as <span style="color:#666666;"><span class="SAP-icons-V5"></span></span>**[Preview](https://help.sap.com/docs/whats-new-disclaimer)** is provided as a courtesy, without a warranty, and may be subject to change. For more information, see the [preview disclaimer](https://help.sap.com/docs/whats-new-disclaimer).
 
 ****
 
@@ -52,128 +47,6 @@ Action
 Available as of
 
 </th>
-</tr>
-<tr>
-<td valign="top">
-
-Upcoming 
-
-</td>
-<td valign="top">
-
-Deleted 
-
-</td>
-<td valign="top">
-
-Announcement 
-
-</td>
-<td valign="top">
-
-**End of Cloud Provisioning for SAPUI5 Versions \(Q4/2025\)** 
-
-</td>
-<td valign="top">
-
-**End of Cloud Provisioning for SAPUI5 Versions \(Q4/2025\)**
-
-The following SAPUI5 versions will be removed from the SAPUI5 Content Delivery Network \(CDN\) after the end of Q4/2025.
-
-**Minor Versions Reaching Their End of Cloud Provisioning**
-
-The following versions including all patches will be removed entirely:
-
--   1.122
--   1.124
--   1.127
--   1.128
--   1.129
--   1.130
--   1.131
-
-**Action**: Upgrade to a version that is still in maintenance.
-
-**Patch Versions Reaching Their End of Cloud Provisioning**
-
-The following patches will be removed:
-
--   1.38.62
--   1.71.70
--   1.84.50
--   1.96.37 to 1.96.39
--   1.108.36 to 1.108.38
--   1.120.21 to 1.120.23
--   1.122.2
--   1.124.7 to 1.124.10
--   1.127.3 to 1.127.6
--   1.128.1
--   1.128.1
--   1.129.0 to 1.129.2
--   1.130.0 to 1.130.3
--   1.131.0
-
-**Action**: Upgrade to the latest available patch for the respective SAPUI5 version.
-
-For more information, see [Version Overview](https://ui5.sap.com/versionoverview.html).
-
-<sub><span style="color:#666666;"><span class="SAP-icons-V5"></span></span>**[Preview](https://help.sap.com/docs/whats-new-disclaimer)**•Deleted•Announcement•Info Only•Upcoming</sub>
-
-</td>
-<td valign="top">
-
-Info Only 
-
-</td>
-<td valign="top">
-
-9999-01-01
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Upcoming 
-
-</td>
-<td valign="top">
-
-UI Changed 
-
-</td>
-<td valign="top">
-
-Announcement 
-
-</td>
-<td valign="top">
-
-**Accessible Personalization for Table Filters** 
-
-</td>
-<td valign="top">
-
-**Accessible Personalization for Filters**
-
-> ### Note:  
-> The following information concerns important upcoming changes for end users. These changes may require end users to adjust and/or test cases to be adapted, but they won't stop or disrupt software or processes.
-
-We will revamp the personalization in the *Adapt Filters* dialog to allow users to personalize filter bars even more easily while ensuring accessibility compliance, enhancing user efficiency and satisfaction. For example, we will provide additional screenreader announcements, improve the usability of the screen content, and the display of certain UI elements.
-
-<sub><span style="color:#666666;"><span class="SAP-icons-V5"></span></span>**[Preview](https://help.sap.com/docs/whats-new-disclaimer)**•UI Changed•Announcement•Info Only•Upcoming</sub>
-
-</td>
-<td valign="top">
-
-Info Only 
-
-</td>
-<td valign="top">
-
-9999-01-01
-
-</td>
 </tr>
 <tr>
 <td valign="top">

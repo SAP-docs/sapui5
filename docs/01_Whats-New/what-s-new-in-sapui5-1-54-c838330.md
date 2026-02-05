@@ -1943,13 +1943,13 @@ Worklist variants can now be shared, and control-level variants can be enabled i
 
 Analytical list page has the following new and enhanced features:
 
--   Applications can configure filterable Key Performance Indicator \(KPI\) tags to react to filter bar changes. For more information, see [Creating Key Performance Indicator Tags](../06_SAP_Fiori_Elements/creating-key-performance-indicator-tags-d80a360.md).
+-   Applications can configure filterable Key Performance Indicator \(KPI\) tags to react to filter bar changes. For more information, see [Creating Key Performance Indicator Tags in Analytical Services](../06_SAP_Fiori_Elements/creating-key-performance-indicator-tags-in-analytical-services-d80a360.md).
 
--   The global and filterable KPIs can now display KPI tag values with a unit of measure. For more information, see [Creating Key Performance Indicator Tags](../06_SAP_Fiori_Elements/creating-key-performance-indicator-tags-d80a360.md).
+-   The global and filterable KPIs can now display KPI tag values with a unit of measure. For more information, see [Creating Key Performance Indicator Tags in Analytical Services](../06_SAP_Fiori_Elements/creating-key-performance-indicator-tags-in-analytical-services-d80a360.md).
 
 -   In the `SmartTable` control you can now add semantic row level coloring of records. For more information, see [Configuring the Table-Only View as the Default Option](../06_SAP_Fiori_Elements/configuring-the-table-only-view-as-the-default-option-d074e26.md).
 
--   The SAP Web IDE template extension wizard lets you add custom filters and actions. For more information, see [Further Post-Generation Steps](../06_SAP_Fiori_Elements/further-post-generation-steps-3fad794.md).
+-   The SAP Web IDE template extension wizard lets you add custom filters and actions.
 
 -   Applications can now implement `onListNavigationExtension` to configure different targets for each row in the table. For more information, see [Smart Table Extensions](../06_SAP_Fiori_Elements/smart-table-extensions-4117ef9.md).
 
@@ -2150,6 +2150,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.142](what-s-new-in-sapui5-1-142-92ed100.md "With this release SAPUI5 is upgraded from version 1.141 to 1.142.")
 
 [What's New in SAPUI5 1.141](what-s-new-in-sapui5-1-141-a7ed66d.md "With this release SAPUI5 is upgraded from version 1.140 to 1.141.")
 

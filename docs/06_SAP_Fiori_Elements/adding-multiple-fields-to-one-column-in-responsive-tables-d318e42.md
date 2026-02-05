@@ -150,9 +150,11 @@ The result looks like this:
 
   
   
-**Multiple IDs, Descriptions, and Action Buttons in a Table Column**
+**Multiple Fields in a Table Column**
 
-![](images/Multiple_IDs_93da960.png "Multiple IDs, Descriptions, and Action Buttons in a Table Column")
+![](images/Multiple_Fields_in_a_Table_Column_82093f4.jpg "Multiple
+                    Fields
+                    in a Table Column")
 
 
 
@@ -162,9 +164,7 @@ The result looks like this:
 
 Take the following restrictions into account when implementing this feature:
 
--   In SAP Fiori elements for OData V2, when using the export to Microsoft Excel feature, only the first field of the semantically connected column is exported, that is, the first visible field in the table column.
-
--   In SAP Fiori elements for OData V4, when using the export to Microsoft Excel feature, none of the fields of the semantically connected fields are exported.
+-   When using the export to Microsoft Excel feature, none of the fields of the semantically connected fields are exported.
 -   When using table personalization, users can only filter, sort, and group the semantically connected column based on the individual properties \(of the same entity type as the `UI.LineItem`\) mentioned in the `UI.FieldGroup` collection.
 
     Example: Height and weight are two properties which are semantically connected. The name of the column header is *Combined*. In this case, in the personalization, you cannot filter, sort, and group on *Combined*. You can only filter, sort, and group on individual properties like height and weight.
@@ -172,20 +172,6 @@ Take the following restrictions into account when implementing this feature:
 
 
 
-<a name="loiod318e423c7c14c98957fe0642b6fcf49__section_exs_1xb_2nb"/>
-
-## Additional Features in SAP Fiori Elements for OData V2
-
-You can use the following annotations in `UI.FieldGroup`:
-
--   `UI.DataFieldWithNavigationPath`
-
--   `UI.DataFieldForAnnotation`
-
-    -   `UI.Chart`
-
-
-
 > ### Note:  
-> For the fields contained in the `FieldGroup` shown above: If a property and its corresponding `sap:text` property are shown in the same column, the `TextArrangement` annotation is not applicable for this field. In this case, the default is `idOnly`. In all other cases, the `textArrangement` annotation can be defined to show the ID and the description in the table column.
+> For information about SAP Fiori elements for OData V2, see [Adding Multiple Fields to One Column in Responsive Tables](adding-multiple-fields-to-one-column-in-responsive-tables-22fcd07.md).
 

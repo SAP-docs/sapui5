@@ -13,3 +13,8 @@ All cards inherit the generic capabilities that are shared across all cards, suc
 -   `settings`: Internal card configuration passed to the card instance
 -   `entitySet`: Entity set to use in the card
 
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Configuring Card Properties](configuring-card-properties-ab78a77.md).
+

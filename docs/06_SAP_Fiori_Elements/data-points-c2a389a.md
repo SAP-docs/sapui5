@@ -369,3 +369,13 @@ You can define the property `NumberOfFractionalDigits` of annotation `NumberForm
 > }
 > ```
 
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Data Points](data-points-cc0b48a.md).
+
+**Related Information**  
+
+
+[Header Facets](header-facets-17dbd5b.md "You can include various types of header facets in your object page header, for example to display contact data or a rating indicator.")
+

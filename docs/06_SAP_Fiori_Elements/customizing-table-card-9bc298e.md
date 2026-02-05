@@ -154,3 +154,8 @@ You can add filters to table card by using the `com.sap.vocabularies.UI.v1.Selec
 
 You can sort information in the table card by using `sortBy` and `sortOrder` properties in the `manifest.json` file. For more information, see [Configuring Sort Properties](configuring-sort-properties-41af842.md)
 
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Customizing Table Card](customizing-table-card-eff5bdb.md).
+

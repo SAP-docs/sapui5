@@ -15,15 +15,7 @@ To define visual filters, application developers must define value list annotati
 > 
 > -   Semantic dates are not supported.
 
-In SAP Fiori elements for OData V4, you must also enhance the manifest file as described in the section below.
-
-
-
-<a name="loio33f3d807c10b47d9a8141692d2619dc2__section_my4_mgz_jqb"/>
-
-## Additional Features in SAP Fiori Elements for OData V4
-
-Application developers must ensure that there's a manifest property for each visual filter that is to be rendered:
+You must ensure that there's a manifest property for each visual filter that is to be rendered:
 
 > ### Sample Code:  
 > `manifest.json` setting for visual filters
@@ -48,13 +40,17 @@ Application developers must ensure that there's a manifest property for each vis
 > }
 > ```
 
-Possible Values for `"availability"`
 
--   Default: This is the default value if no value is specified for the `"availability"` property. The filter field is shown by default in the filter bar \(both the regular filter fields as well as the corresponding visual filter fields, if defined\).
 
--   Adaptation: The filter field is initially not shown in the filter bar, but only available under *Adapt Filters*.
+### Possible Values for `"availability"`
 
--   Hidden: The filter field is not visible in the filter bar or within the *Adapt Filters* dialog.
+The following values are possible for the `"availability"` property:
+
+-   `"Default"`: This is the default value if no value is specified for the `"availability"` property. The filter field is shown by default in the filter bar \(both the regular filter fields as well as the corresponding visual filter fields, if defined\).
+
+-   `"Adaptation"`: The filter field is initially not shown in the filter bar, but only available under *Adapt Filters*.
+
+-   `"Hidden"`: The filter field is not visible in the filter bar or within the *Adapt Filters* dialog.
 
     You must ensure that the entity corresponding to the visual filter \(which comes from the `valueList` property that is set in the manifest\) is enabled for aggregation. For more information, see the [Enabling Aggregation in the Back End](configuring-charts-653ed0f.md#loio653ed0f4f0d743dbb33ace4f68886c4e__enabling_aggregation_subsection) section in [Configuring Charts](configuring-charts-653ed0f.md).
 
@@ -68,7 +64,7 @@ Possible Values for `"availability"`
 
 
 
-### Enabling Visual Filters from a Draft-Enabled Entity
+## Enabling Visual Filters from a Draft-Enabled Entity
 
 You can also define charts against a draft-enabled entity. In this case only active data is used for the chart display.
 
@@ -76,6 +72,8 @@ You can also define charts against a draft-enabled entity. In this case only act
 > -   When you use draft-enabled entities or charts, sorting on virtual properties and measures causes issues if you use CAP NodeJs. This is because of a CAP limitation that is fixed as of @sap/cds 6.0.0.
 > 
 > -   Aggregations on draft-enabled entities are not supported in ABAP CDS, since `$apply` with or without a filter on draft or transactional entities isn't supported by SADL.
+
+
 
 > ### Restriction:  
 > -   Donut charts are not supported.
@@ -93,6 +91,11 @@ You can also define charts against a draft-enabled entity. In this case only act
 > -   Path-based values for the `UI.Criticality` annotation and semantic coloring based on the `CriticalityCalculation` annotation are not supported.
 > 
 > -   You can't configure visual filters for a filter field for which a custom filter has already been defined.
+
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Configuring the Visual Filter Bar](configuring-the-visual-filter-bar-b44fe77.md).
 
 **Related Information**  
 

@@ -30,7 +30,7 @@ The `com.sap.vocabularies.UI.v1.LineItem` term can be configured in the applicat
 >         ...
 >         "card04": {
 >             "model": "ZCD204_EPM_DEMO_SRV",
->             "template": "sap.ovp.cards.list",
+>             "template": "sap.ovp.cards.v4.list",
 >             "settings": {
 >                 "sortBy": "Price",
 >                 "sortOrder": "descending",
@@ -188,4 +188,9 @@ To display images or icons in the condensed list card, set the property `"imageS
 
 > ### Note:  
 > In list card, an image control is used instead of avatar. For more information, see [Using Images, Initials, and Icons](using-images-initials-and-icons-5760b63.md).
+
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [List Cards](list-cards-1a3c28c.md).
 

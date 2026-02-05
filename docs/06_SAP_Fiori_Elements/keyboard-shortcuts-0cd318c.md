@@ -914,3 +914,8 @@ Add the shortcut definition in the `manifest.json` as follows:
     For a command on an object page, for example, you can append the `"ID"` of the object page with an `#`. This ensures that the command is mapped to the correct shortcut based on the object page instance where the shortcut is invoked. You can see this in the previous sample code for the `SalesOrderManageObjectPage` use case.
 
 
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Keyboard Shortcuts](keyboard-shortcuts-875e8af.md).
+

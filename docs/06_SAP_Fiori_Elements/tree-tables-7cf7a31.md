@@ -26,7 +26,7 @@ SAP Fiori elements for OData V4 supports displaying a tree table on the list rep
 > When switching between edit mode and display mode, the expansion state of a tree table in an object page is not kept.
 
 > ### Restriction:  
-> A tree table cannot be displayed on the list report with a draft-enabled service in the flexible column layout.
+> A tree table cannot be displayed with a draft-enabled service in the flexible column layout.
 
 
 

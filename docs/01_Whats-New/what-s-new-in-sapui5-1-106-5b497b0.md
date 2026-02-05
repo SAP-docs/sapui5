@@ -266,7 +266,7 @@ SAP Fiori Elements
 
 The following changes and new features are available for both SAP Fiori elements for OData V2 and SAP Fiori elements for OData V4:
 
--   We've now improved the content density so that the object page shows form data spread across six columns instead of four columns when opened on extra large screens. For more information, see [Defining and Adapting Sections](../06_SAP_Fiori_Elements/defining-and-adapting-sections-facfea0.md).
+-   We've now improved the content density so that the object page shows form data spread across six columns instead of four columns when opened on extra large screens. For more information, see [Defining and Configuring Sections](../06_SAP_Fiori_Elements/defining-and-configuring-sections-facfea0.md).
 
 -   For the value help fields, a side effect is now triggered when the focus moves away from the source field group. For more information, see [Side Effects](../06_SAP_Fiori_Elements/side-effects-18b17bd.md) .
 
@@ -656,6 +656,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.142](what-s-new-in-sapui5-1-142-92ed100.md "With this release SAPUI5 is upgraded from version 1.141 to 1.142.")
 
 [What's New in SAPUI5 1.141](what-s-new-in-sapui5-1-141-a7ed66d.md "With this release SAPUI5 is upgraded from version 1.140 to 1.141.")
 

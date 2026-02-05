@@ -224,3 +224,8 @@ The `LineItem` annotation lets you configure the table header title \(`label` pr
 > ### Note:  
 > The recommended way to configure intent-based navigation is by using the `DataFieldForIntentBasedNavigation` property. However, you can also use `DataFieldWithUrl` for navigating to a specific application route that is not configured as target map. The overview page identify this as an intent-based navigation and opens the application in the same tab with relevant context.
 
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Configuring the Table Area](configuring-the-table-area-011158b.md).
+

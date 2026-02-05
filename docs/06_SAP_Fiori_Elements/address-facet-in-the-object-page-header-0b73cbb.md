@@ -54,3 +54,13 @@ Example value for the label property: "Mail Drop: TNE QB\\n123 Main Street\\nAny
 > }
 > ```
 
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Address Facet in the Object Page Header](address-facet-in-the-object-page-header-34f7175.md).
+
+**Related Information**  
+
+
+[Header Facets](header-facets-17dbd5b.md "You can include various types of header facets in your object page header, for example to display contact data or a rating indicator.")
+

@@ -251,7 +251,7 @@ For information about the `Field` API, see the [API Reference](https://ui5.sap.c
     > ```
     > <Text text="Field with fixed value list as radio buttons: " />
     > <macros:Field metaPath="FieldWithFixedValueList " id="FieldWithFixedValueListRadioButtonsHorizontal">
-    > 		<formatOptions useRadioButtons="true" 
+    > 		<formatOptions fieldEditStyle="RadioButtons" 
     > 		radioButtonsHorizontalLayout="true" />
     > </macros:Field>
     > ```

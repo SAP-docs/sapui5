@@ -752,7 +752,7 @@ SAP Fiori elements
 
 [Setting Up the Object Page Header](06_SAP_Fiori_Elements/setting-up-the-object-page-header-cce93e6.md)
 
-[Defining and Adapting Sections](06_SAP_Fiori_Elements/defining-and-adapting-sections-facfea0.md)
+[Defining and Adapting Sections](06_SAP_Fiori_Elements/defining-and-configuring-sections-facfea0.md)
 
 </td>
 </tr>
@@ -1397,7 +1397,7 @@ SAP Fiori elements
 </td>
 <td valign="top">
 
-[Defining and Adapting Sections](06_SAP_Fiori_Elements/defining-and-adapting-sections-facfea0.md) 
+[Defining and Adapting Sections](06_SAP_Fiori_Elements/defining-and-configuring-sections-facfea0.md) 
 
 </td>
 </tr>

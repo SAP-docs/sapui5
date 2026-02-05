@@ -116,6 +116,11 @@ The sample code shows that a message is created as a transition message by setti
 > ### Note:  
 > Both a code and a target are mandatory. If a target doesn't exist, you must provide an empty string.
 
+
+
+> ### Note:  
+> For information about SAP Fiori Elements for OData V2, see [Adding Custom Messages](adding-custom-messages-51d8589.md).
+
 **Related Information**  
 
 

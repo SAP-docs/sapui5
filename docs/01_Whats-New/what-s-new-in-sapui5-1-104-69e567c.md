@@ -211,7 +211,7 @@ The following changes and new features are available for SAP Fiori elements for 
 
 -   You now have an option to define your own keyboard shortcuts for application-specific actions and navigation buttons. For more information, see [Keyboard Shortcuts](../06_SAP_Fiori_Elements/keyboard-shortcuts-0cd318c.md).
 
--   Applications can now show a custom message strip above the object page tables. For more information, see [Adding a Custom Message Strip to List Report, Analytical List Page and Object Page Tables](../06_SAP_Fiori_Elements/adding-a-custom-message-strip-to-list-report-analytical-list-page-and-object-page-tables-0fdbefb.md).
+-   Applications can now show a custom message strip above the object page tables. For more information, see [Adding a Custom Message Strip to List Report Page, Analytical List Page and Object Page](../06_SAP_Fiori_Elements/adding-a-custom-message-strip-to-list-report-page-analytical-list-page-and-object-page-0fdbefb.md).
 
 -   In the object page tables, you can now prepopulate the default empty rows with a value using `DefaultValuesFunction`. For more information, see [Enabling Inline Creation Mode or Empty Row Mode for Table Entries](../06_SAP_Fiori_Elements/enabling-inline-creation-mode-or-empty-row-mode-for-table-entries-cfb04f0.md) and [Prefilling Fields Using the DefaultValuesFunction](../06_SAP_Fiori_Elements/prefilling-fields-using-the-defaultvaluesfunction-5ada91c.md).
 
@@ -325,6 +325,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.142](what-s-new-in-sapui5-1-142-92ed100.md "With this release SAPUI5 is upgraded from version 1.141 to 1.142.")
 
 [What's New in SAPUI5 1.141](what-s-new-in-sapui5-1-141-a7ed66d.md "With this release SAPUI5 is upgraded from version 1.140 to 1.141.")
 

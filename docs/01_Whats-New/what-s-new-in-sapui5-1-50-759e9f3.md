@@ -1447,7 +1447,7 @@ SAP Fiori Elements
 
 -   Object Page View
 
-    -   You can hide and display sections based on properties. For more information, see [Defining and Adapting Sections](../06_SAP_Fiori_Elements/defining-and-adapting-sections-facfea0.md).
+    -   You can hide and display sections based on properties. For more information, see [Defining and Configuring Sections](../06_SAP_Fiori_Elements/defining-and-configuring-sections-facfea0.md).
 
     -   During inline creation of a table entry, new linesYou can now use tree tables on the object page, in are highlighted in blue. read-only mode.
 
@@ -1580,6 +1580,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.142](what-s-new-in-sapui5-1-142-92ed100.md "With this release SAPUI5 is upgraded from version 1.141 to 1.142.")
 
 [What's New in SAPUI5 1.141](what-s-new-in-sapui5-1-141-a7ed66d.md "With this release SAPUI5 is upgraded from version 1.140 to 1.141.")
 

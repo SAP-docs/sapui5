@@ -25,11 +25,11 @@ The content area, consisting of a title and additional information, for example,
 
 -   Title
 
-    -   Enter the title according to the `TextArrangement` annotation. See the figure below: `TextArrangementType/TextLast`. Note that *Computer Systems* is declared as `TextLast` here.
+    -   Enter the title according to the `TextArrangement` annotation. See the following figure: `TextArrangementType/TextLast`. Note that *Computer Systems* is declared as `TextLast` here.
 
         ![](images/Title_in_Quick_View_adc6a09.png)
 
-    -   If a main navigation has been defined, the title is displayed as a link. In the example below, see the <code><i>Asia High tech</i></code> link:
+    -   If a main navigation has been defined, the title is displayed as a link. In the following example, see the <code><i>Asia High tech</i></code> link:
 
         ![](images/Title_-_Link_8d1888b.png)
 
@@ -53,7 +53,7 @@ The content area can contain field groups, contacts, and Datapoints.
 
 ### Field Groups
 
--   You can include any number of field groups or none at all. The example below shows a quick view with no reference facet, however, a header image included:
+-   You can include any number of field groups or none at all. The following example shows a quick view with no reference facet, however, a header image included:
 
     ![](images/Field_Group_cf98382.png)
 
@@ -75,7 +75,7 @@ The content area can contain field groups, contacts, and Datapoints.
 
 ### Contacts
 
-You can display any number of contacts or none at all. See the example below:
+You can display any number of contacts or none at all. See the following example:
 
 ![](images/Contacts_7fbc5f9.png)
 
@@ -147,7 +147,7 @@ The sample codes show a quick view facet containing field group, contact and Dat
 
     -   If a main navigation has been defined using the `sap-tag` parameter `primaryAction`, the title is displayed as a link. For more information about how to define a primary action, see [Primary actions](https://help.sap.com/docs/ABAP_PLATFORM_NEW/a7b390faab1140c087b8926571e942b7/ea131c68c5de4978a936d2286025ed0f.html?version=202310.001#primary-actions).
 
-        In the example below, see the <code><i>Asia High tech</i></code> link:
+        In the following example, see the <code><i>Asia High tech</i></code> link:
 
         ![](images/Title_-_Link_8d1888b.png)
 
@@ -158,7 +158,7 @@ The sample codes show a quick view facet containing field group, contact and Dat
 -   Description
     -   The description is taken from the `HeaderInfo.Description` annotation of the target entity.
 
-    -   If the `HeaderInfo.Description` is not maintained in the annotation, the subtitle displays the label of the source property.
+    -   If `HeaderInfo.Description` is not maintained in the annotation, the subtitle displays the label of the source property instead.
 
         ![](images/Description_9b4acac.png)
 
@@ -172,7 +172,7 @@ The content area can contain field groups, contacts, and `DataPoints`.
 
 **Field Groups**
 
--   You can include any number of field groups or none at all. The example below shows a quick view without a reference facet, but with a header image:
+-   You can include any number of field groups or none at all. The following example shows a quick view without a reference facet, but with a header image:
 
     ![](images/Field_Groups_7910b76.png)
 
@@ -185,7 +185,7 @@ The content area can contain field groups, contacts, and `DataPoints`.
 
 **Contacts** 
 
-You can display any number of contact facets or none at all. See the example below:
+You can display any number of contact facets or none at all. See the following example:
 
 ![](images/Contacts_64e1252.png)
 
@@ -193,23 +193,23 @@ The following applies:
 
 -   You can place contact facets anywhere. The position is specified by the position of the reference facet in the collection of the `UI.QuickViewFacets` annotation.
 
--   The reference facet for each contact facet must point to a`com.sap.vocabularies.Communication.v1.Contact` annotation.
+-   The reference facet for each contact facet must point to a `com.sap.vocabularies.Communication.v1.Contact` annotation.
 
 -   If the picture, title, and description belonging to a contact \(contact title area\) correspond with the content of the title area, the contact title area is not displayed.
 
 
 **Data Points** 
 
--   You can place the `DataPoint` facets anywhere. The position is specified by the position of the reference facet in the collection of the `UI.QuickViewFacets` annotation.
+-   You can place `DataPoint` facets anywhere. The position is specified by the position of the reference facet in the collection of the `UI.QuickViewFacets` annotation.
 
 -   The reference facet for each `DataPoint` must point to a `UI.DataPoint` annotation.
 
--   Each `DataPoint` can have a label. It's taken from the `Record Type="UI.ReferenceFacet"`.
+-   Each `DataPoint` can have a label. It's taken from the `"UI.ReferenceFacet"`.
 
 
 ![](images/DataPoint_in_QuickView_5da4f79.png)
 
-The sample codes show a quick view facet containing field group, contact and `DataPoint`:
+See the following sample codes for a quick view facet containing a field group, a contact and a `DataPoint`:
 
 > ### Sample Code:  
 > XML Annotation
@@ -296,7 +296,7 @@ The sample codes show a quick view facet containing field group, contact and `Da
 
 ### Footer Section
 
-To enable navigation from a quick view facet, define a `SemanticObject` for the source property \(if a `ReferentialConstraints` exists\) or for the navigation property \(if the target property is defined using an association\).
+To enable navigation from a quick view facet, define a `SemanticObject` for the source property, if a `ReferentialConstraint` exists, or for the navigation property, if the target property is defined using an association.
 
 The following image shows a quick view popover displaying the most important links in the footer:
 
@@ -322,4 +322,9 @@ The following image shows a *More Links* popover. Users can select actions to be
 > When no `QuickView` annotations are defined and no target is resolved at runtime \(for example, the user does not have access to the target applications\), the field still appears as a link and a message is displayed when pressed.
 > 
 > ![](images/QuickView_Error_Message_ca67391.png)
+
+
+
+> ### Note:  
+> For information about SAP Fiori Elements for OData V2, see [Configuring the Content of Quick Views](configuring-the-content-of-quick-views-e598e59.md).
 

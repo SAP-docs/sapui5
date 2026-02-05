@@ -9,220 +9,6 @@ You can use extension points to enhance tables in SAP Fiori elements-based apps.
 > 
 > After you've created an app extension, its display \(for example, control placement and layout\) and system behavior \(for example, model and binding usage, busy handling\) lies within the application's responsibility. SAP Fiori elements provides support only for the official `extensionAPI` functions. Don't access or manipulate controls, properties, models, or other internal objects created by the SAP Fiori elements framework.
 
-
-
-<a name="loiod525522c1bf54672ae4e02d66b38e60c__section_abc_txf_tnb"/>
-
-## Additional Features in SAP Fiori Elements for OData V2
-
-You can use the following extension points to add additional columns to tables:
-
-
-<table>
-<tr>
-<th valign="top">
-
-Table Type
-
-</th>
-<th valign="top">
-
-Floorplan
-
-</th>
-<th valign="top">
-
-Extension Point
-
-</th>
-<th valign="top">
-
-Example
-
-</th>
-</tr>
-<tr>
-<td valign="top">
-
-All
-
-</td>
-<td valign="top">
-
-Object page
-
-</td>
-<td valign="top">
-
-`onBeforeRebindTableExtension` 
-
-</td>
-<td valign="top">
-
-[Example: Applying Custom Logic When a Table is Loaded or Refreshed](example-applying-custom-logic-when-a-table-is-loaded-or-refreshed-382a6c3.md) 
-
-</td>
-</tr>
-<tr>
-<td valign="top" rowspan="2">
-
-Responsive table
-
-</td>
-<td valign="top">
-
-List report
-
-</td>
-<td valign="top">
-
-`ResponsiveTableColumnsExtension|<Name of the EntitySet>`
-
-`ResponsiveTableCellsExtension|<Name of the EntitySet>`
-
-</td>
-<td valign="top">
-
-[Example: Adding Columns to a Responsive Table in the List Report](example-adding-columns-to-a-responsive-table-in-the-list-report-28e9570.md) 
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Object page
-
-</td>
-<td valign="top">
-
-`ResponsiveTableColumnsExtension|<Name of the table EntitySet>|<Facet ID/Annotation Path>`
-
-`ResponsiveTableCellsExtension|<Name of the table EntitySet>|<Facet ID/Annotation Path>`
-
-</td>
-<td valign="top">
-
-[Example: Adding Columns to a Responsive Table on the Object Page](example-adding-columns-to-a-responsive-table-on-the-object-page-c174923.md) 
-
-</td>
-</tr>
-<tr>
-<td valign="top" rowspan="2">
-
-Grid table
-
-</td>
-<td valign="top">
-
-List report
-
-</td>
-<td valign="top">
-
-`GridTableColumnsExtension|<Name of the EntitySet>` 
-
-</td>
-<td valign="top">
-
-[Example: Adding Columns to a Grid Table in the List Report](example-adding-columns-to-a-grid-table-in-the-list-report-69bfeec.md) 
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Object page
-
-</td>
-<td valign="top">
-
-`GridTableColumnsExtension|<Name of the EntitySet>|<Facet ID/Annotation Path>` 
-
-</td>
-<td valign="top">
-
-[Example: Adding Columns to a Grid Table in the Object Page](example-adding-columns-to-a-grid-table-in-the-object-page-10a6ef1.md) 
-
-</td>
-</tr>
-<tr>
-<td valign="top" rowspan="2">
-
-Analytical table
-
-</td>
-<td valign="top">
-
-List report
-
-</td>
-<td valign="top">
-
-`AnalyticalTableColumnsExtension|<Name of the EntitySet>GridTableColumnsExtension|<Name of the table EntitySet>|<Facet ID/Annotation Path>` 
-
-</td>
-<td valign="top">
-
- 
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Object page
-
-</td>
-<td valign="top">
-
-`GridTableColumnsExtension|AnalyticalTableColumnsExtension|<Name of the table EntitySet>|<Facet ID/Annotation Path>` 
-
-</td>
-<td valign="top">
-
-[Example: Adding Columns to an Analytical Table on the Object Page](example-adding-columns-to-an-analytical-table-on-the-object-page-3b78e69.md) 
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Tree table
-
-</td>
-<td valign="top">
-
-List report
-
-</td>
-<td valign="top">
-
-`TreeTableColumnsExtension|<Name of the EntitySet>` 
-
-</td>
-<td valign="top">
-
-[Example: Adding Columns to a Tree Table in the List Report](example-adding-columns-to-a-tree-table-in-the-list-report-b903da5.md) 
-
-</td>
-</tr>
-</table>
-
-> ### Note:  
-> `<Name of the EntitySet>` is the entity set of the current page.
-> 
-> `<Name of the table EntitySet>` is the entity set of the table that the extension is intended for. Use this for all table column extensions on the object page, rather than for any other view extensions on the object page.
-
-To replace default navigation within a responsive table in a list report, use the `ListReportExtension` extension point . For more information, see [Example: Replacing Standard Navigation in a Responsive Table in the List Report](example-replacing-standard-navigation-in-a-responsive-table-in-the-list-report-a12ad60.md).
-
-To replace default navigation within a responsive table on an object page, use the `DetailsExtension` extension point. For more information, see [Example: Replacing Standard Navigation in a Responsive Table on the Object Page](example-replacing-standard-navigation-in-a-responsive-table-on-the-object-page-b20dc7a.md).
-
-
-
-<a name="loiod525522c1bf54672ae4e02d66b38e60c__section_lkv_1b5_tnb"/>
-
-## Additional Features in SAP Fiori Elements for OData V4
-
 The following screenshot shows a table containing an additional custom column:
 
   
@@ -251,7 +37,7 @@ The following screenshot shows a table containing an additional custom column:
 
 
 
-### Procedure
+## Procedure
 
 1.  Define a fragment for the view extension.
 
@@ -275,7 +61,7 @@ The following screenshot shows a table containing an additional custom column:
     The following sample code extends the standard list report and object page controllers with custom logic and adds custom columns to the tables in both pages:
 
     > ### Sample Code:  
-    > manifest.json
+    > `manifest.json`
     > 
     > ```
     > {
@@ -425,7 +211,7 @@ Description
 <tr>
 <td valign="top">
 
-`key`
+`key`\*
 
 </td>
 <td valign="top">
@@ -442,7 +228,7 @@ The key of the custom column is needed as an identifier which can be used as ref
 <tr>
 <td valign="top">
 
-`header`
+`header`\*
 
 </td>
 <td valign="top">
@@ -458,6 +244,23 @@ Any Unicode string, a string containing an `i18n` text, a string containing a me
 <td valign="top">
 
 The header is shown on the table as well as in the add/remove dialog.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`template`\*
+
+</td>
+<td valign="top">
+
+The relative path to the template file
+
+</td>
+<td valign="top">
+
+Defines the target fragment following the fragment defining syntax used in `Fragment.load`.
 
 </td>
 </tr>
@@ -486,7 +289,7 @@ The tooltip is shown on the header of the custom columns when the user hovers ov
 <tr>
 <td valign="top">
 
-`width`\*
+`width`
 
 </td>
 <td valign="top">
@@ -545,7 +348,7 @@ For more information, see [Configuring Responsive Behavior of a Table](../10_Mor
 <tr>
 <td valign="top">
 
-`horizontalAlign`\*
+`horizontalAlign`
 
 </td>
 <td valign="top">
@@ -617,24 +420,7 @@ The key of another column to be used as placement anchor. Columns defined with a
 <tr>
 <td valign="top">
 
-`template`
-
-</td>
-<td valign="top">
-
-The relative path to the template file
-
-</td>
-<td valign="top">
-
-Defines the target fragment following the fragment defining syntax used in `Fragment.load`.
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-`availability`\*
+`availability`
 
 </td>
 <td valign="top">
@@ -663,7 +449,7 @@ Defines where the column is shown.
 <tr>
 <td valign="top">
 
-`properties`\*
+`properties`
 
 </td>
 <td valign="top">
@@ -725,7 +511,7 @@ Indicates whether a custom column is required. If set to `true`, an asterisk is 
 </tr>
 </table>
 
-\(\*\) = optional value.
+Properties marked with an asterisk \(\*\) are mandatory.
 
 The **Bold** formatting in the table indicates that the behavior is either the default or fall back behavior.
 
@@ -745,7 +531,7 @@ To correctly position your custom elements, you must identify an anchor element.
 
 
 
-### Sorting and Filtering
+## Sorting and Filtering
 
 You can add the configuration to support sorting and filtering by using `"properties"` for any custom column as an array of properties:
 
@@ -775,7 +561,12 @@ Properties added to any custom column can also be found in the sorting and filte
 
 
 
-### Live Example: Custom Column
+## Live Example: Custom Column
 
 For more information and live examples, see the SAP Fiori development portal at [Building Blocks - Table - Extensions - Custom Column](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/table/customColumn).
+
+
+
+> ### Note:  
+> For information about SAP Fiori Elements for OData V2, see [Extension Points for Tables](extension-points-for-tables-df2cee0.md).
 

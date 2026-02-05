@@ -62,10 +62,15 @@ If an application has set the criticality for an action, that is, if app develop
 
 You can change the order of action buttons for both manifest-based actions and annotation-based actions. To do so, use `"position"` to define the placement of your action. For more information, see the *Additional Features in SAP Fiori elements for OData V4* section in [Adding Custom Actions Using Extension Points](adding-custom-actions-using-extension-points-7619517.md).
 
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Displaying Actions on the Object Page](displaying-actions-on-the-object-page-91f81fa.md).
+
 **Related Information**  
 
 
-[Enabling Actions in the Object Page Header](enabling-actions-in-the-object-page-header-5fe4396.md "You can enable generic actions in your object header.")
+[Enabling Actions in the Object Page Header](enabling-actions-in-the-object-page-header-5fe4396.md "You can enable generic actions in the object page header.")
 
 [Adding Action Buttons to Forms in Sections](adding-action-buttons-to-forms-in-sections-e64efda.md "You can add action buttons to the forms contained in sections. These forms are indicated by com.sap.vocabularies.UI.v1.FieldGroup. A form action button is then displayed in the toolbar of the object page section that contains the form.")
 

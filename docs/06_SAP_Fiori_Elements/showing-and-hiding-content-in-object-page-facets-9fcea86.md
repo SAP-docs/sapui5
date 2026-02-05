@@ -72,11 +72,14 @@ To enable this feature, set the `UI.PartOfPreview` annotation of the relevant re
 > ### Note:  
 > This feature is available for reference facets that are implemented under a collection facet.
 
+> ### Restriction:  
+> This feature is applicable only to reference facets that have a `FieldGroup` as their target, for instance, a form representation. This feature isn't applicable to other target types, for instance, reference facets that point to a table or a chart.
+
 
 
 <a name="loio9fcea86d8ffd48459dd053eb5255a046__section_d3n_xzs_qrb"/>
 
-## Additional Features in SAP Fiori Elements for OData V4
+## Showing and Hiding Fields and Tables Using *Show Details* and *Hide Details* Buttons
 
 You can show or hide fields and tables inside reference facets on the UI using the *Show Details* and *Hide Details* buttons.
 
@@ -89,9 +92,6 @@ The *Hide Details* button appears in the facet toolbar if the user has clicked t
 ![](images/Hiding_Fields_Inside_Reference_Facets_Hide_Details_Link_985838c.png)
 
 To enable this feature, set the `UI.PartOfPreview` annotation of the relevant reference facet to `false`, as shown in the following sample code:
-
-> ### Tip:  
-> If you don't set this annotation explicitly, the system uses the default setting, where `UI.PartOfPreview` equals `true`.
 
 > ### Sample Code:  
 > XML Annotation
@@ -123,6 +123,9 @@ To enable this feature, set the `UI.PartOfPreview` annotation of the relevant re
 > }
 > ```
 
+> ### Tip:  
+> If you don't set this annotation explicitly, the system uses the default setting, where `UI.PartOfPreview` equals `true`.
+
 > ### Note:  
 > This feature is available for tables and data fields that are included in a visible reference facet. You can't use this feature for tables and data fields that are part of a reference facet that is initially hidden. This means that nesting of the `UI.PartOfPreview` annotation isn't possible.
 
@@ -130,8 +133,6 @@ You can explore and work with the coding yourself. For more information and live
 
 
 
-### Using *Show More* and *Show Less* Buttons
-
-> ### Restriction:  
-> This feature is applicable only to reference facets that have a `FieldGroup` as their target, for instance, a form representation. This feature isn't applicable to other target types, for instance, reference facets that point to a table or a chart.
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Showing and Hiding Content in Object Page Facets](showing-and-hiding-content-in-object-page-facets-daef89a.md).
 

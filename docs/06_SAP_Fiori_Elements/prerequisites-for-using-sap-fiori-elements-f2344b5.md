@@ -73,3 +73,8 @@ For SAP Fiori elements for OData V4, if you're using CAP, you must ensure the se
 -   [https://developers.sap.com/group.fiori-tools-odata-v4-travel.html](https://developers.sap.com/group.fiori-tools-odata-v4-travel.html)
 -   [https://developers.sap.com/group.fiori-tools-odata-v4-incident.html](https://developers.sap.com/group.fiori-tools-odata-v4-incident.html)
 
+
+
+> ### Note:  
+> For information about SAP Fiori Elements for OData V2, see [Prerequisites for Using SAP Fiori Elements](prerequisites-for-using-sap-fiori-elements-a84c137.md).
+

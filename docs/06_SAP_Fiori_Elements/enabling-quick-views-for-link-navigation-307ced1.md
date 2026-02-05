@@ -19,7 +19,7 @@ You can enrich the popovers for link navigation with additional information to d
 You can display information about the navigation target already on the source entity. This information - the quick view - is stored in the association end type. To enable the quick views, you must annotate `com.sap.vocabularies.UI.v1.QuickViewFacets` and `QuickViewFacets` for the popover. A new title area and additional information, such as a field group, is displayed according to the association end type of the property that has been annotated as a semantic object.
 
 > ### Note:  
-> `QuickViewFacets` can only be annotated for those entity types that are in the same service. Only these are referenced with referential constraints in the metadata document.
+> `QuickViewFacets` can only be annotated for those entity types that are in the same service. Only these are referenced with referential constraints in the metadata file.
 
 This video shows the step-by-step procedure for enabling quick views for link navigation:
 
@@ -53,7 +53,7 @@ To do so, perform the following steps:
     >                             Annotation
     > ```
 
-2.  In the metadata document, you can find the reference to the association end type. Check for a referential constraint that includes the identified property as `Dependent`. For the `Supplier` property in the entity type STTA\_C\_MP\_ProductType, that has a set of navigation properties, only `to_Supplier` includes the `Supplier` property as `Dependent`.
+2.  In the metadata file, you can find the reference to the association end type. Check for a referential constraint that includes the identified property as `Dependent`. For the `Supplier` property in the entity type STTA\_C\_MP\_ProductType, that has a set of navigation properties, only `to_Supplier` includes the `Supplier` property as `Dependent`.
 
     ```
     ABAP CDS
@@ -265,7 +265,7 @@ To define a quick view for a source property with a `ReferentialConstraint` on a
 
     For more information and live examples, see the SAP Fiori development portal at [Building Blocks - Field - Links - Link with Quick View](https://sapui5.hana.ondemand.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/field/fieldLinkWithQuickView).
 
-2.  Define an association to the target entity and a foreign-key association between the source property and the target entity.
+2.  Define an association to the target entity and a foreign key association between the source property and the target entity.
 
     > ### Sample Code:  
     > ABAP CDS Annotation
@@ -278,7 +278,7 @@ To define a quick view for a source property with a `ReferentialConstraint` on a
     > 
     > ```
 
-    In the metadata document, you can then find the reference to the association end type in two ways:
+    In the metadata file, you can find the reference to the association end type in the following ways:
 
     -   For your entity type, locate a `NavigationProperty` with a `ReferentialConstraint` which includes your source property:
 
@@ -322,31 +322,31 @@ To define a quick view for a source property with a `ReferentialConstraint` on a
     > ```xml
     > 
     > <Annotations Target="com.c_salesordermanage_sd.I_Supplier">
-    > <Annotation Term="UI.QuickViewFacets">
-    >    <Collection>
-    >     <Record Type="UI.ReferenceFacet">
-    >       <PropertyValue Property="Label" String="Address"/>
-    >       <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#SupplierQuickView"/>
-    >     </Record>
-    >    </Collection>
-    > </Annotation>
-    > <Annotation Term="UI.FieldGroup" Qualifier="SSupplierQuickView">
-    >    <Record Type="UI.FieldGroupType">
-    >      <PropertyValue Property="Data">
-    >       <Collection>
-    >        <Record Type="UI.DataField">
-    >         <PropertyValue Property="Value" Path="PostalCode"/>
-    >        </Record>
-    >        <Record Type="UI.DataField">
-    >         <PropertyValue Property="Value" Path="CityName"/>
-    >        </Record>
-    >        <Record Type="UI.DataField">
-    >         <PropertyValue Property="Value" Path="Country"/>
-    >        </Record>
-    >       </Collection>
-    >      </PropertyValue>
-    >    </Record>
-    > </Annotation>
+    >     <Annotation Term="UI.QuickViewFacets">
+    >         <Collection>
+    >             <Record Type="UI.ReferenceFacet">
+    >                 <PropertyValue Property="Label" String="Address"/>
+    >                 <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#SupplierQuickView"/>
+    >             </Record>
+    >         </Collection>
+    >     </Annotation>
+    >     <Annotation Term="UI.FieldGroup" Qualifier="SupplierQuickView">
+    >         <Record Type="UI.FieldGroupType">
+    >             <PropertyValue Property="Data">
+    >                 <Collection>
+    >                     <Record Type="UI.DataField">
+    >                         <PropertyValue Property="Value" Path="PostalCode"/>
+    >                     </Record>
+    >                     <Record Type="UI.DataField">
+    >                         <PropertyValue Property="Value" Path="CityName"/>
+    >                     </Record>
+    >                     <Record Type="UI.DataField">
+    >                         <PropertyValue Property="Value" Path="Country"/>
+    >                     </Record>
+    >                 </Collection>
+    >             </PropertyValue>
+    >         </Record>
+    >     </Annotation>
     > </Annotations>
     > 
     > ```
@@ -358,38 +358,38 @@ To define a quick view for a source property with a `ReferentialConstraint` on a
     > 
     > annotate view I_Supplier with {
     > @UI.Facet: [
-    >   {
-    >     label: 'Address',
-    >     targetQualifier: 'SupplierQuickView',
-    >     type: #FIELDGROUP_REFERENCE,
-    >     purpose: #QUICK_VIEW
-    >   }
+    >     {
+    >         label: 'Address',
+    >         targetQualifier: 'SupplierQuickView',
+    >         type: #FIELDGROUP_REFERENCE,
+    >         purpose: #QUICK_VIEW
+    >     }
     > ]
     > @UI.fieldGroup: [
-    >   {
-    >     value: 'PostalCode',
-    >     type: #STANDARD,
-    >     position: 1 ,
-    >     qualifier: 'SupplierQuickView'
-    >   }
+    >     {
+    >         value: 'PostalCode',
+    >         type: #STANDARD,
+    >         position: 1 ,
+    >         qualifier: 'SupplierQuickView'
+    >     }
     > ]
     > PostalCode;
     > @UI.fieldGroup: [
-    >   {
-    >     value: 'CityName',
-    >     type: #STANDARD,
-    >     position: 2 ,
-    >     qualifier: 'SupplierQuickView'
-    >   }
+    >     {
+    >         value: 'CityName',
+    >         type: #STANDARD,
+    >         position: 2 ,
+    >         qualifier: 'SupplierQuickView'
+    >     }
     > ]
     > CityName;
     > @UI.fieldGroup: [
-    >   {
-    >     value: 'Country',
-    >     type: #STANDARD,
-    >     position: 3 ,
-    >     qualifier: 'SupplierQuickView'
-    >   }
+    >     {
+    >         value: 'Country',
+    >         type: #STANDARD,
+    >         position: 3 ,
+    >         qualifier: 'SupplierQuickView'
+    >     }
     > ]
     > Country;
     > }
@@ -426,10 +426,10 @@ To define a quick view for a source property with a `ReferentialConstraint` on a
     > })
     > ```
 
-4.  
-To define a quick view for a source property where the target property is a semantic key or an entity key, perform the following steps:
+4.  To define a quick view for a source property where the target property is a semantic key or an entity key, perform the following steps:
 
-1.  On the source entity define an association to the target entity and a semantic object annotation for the navigation property:
+
+1.  On the source entity, define an association to the target entity and a semantic object annotation for the navigation property:
 
     > ### Sample Code:  
     > CAP CDS Annotation:
@@ -444,7 +444,7 @@ To define a quick view for a source property where the target property is a sema
     > }
     > ```
 
-2.  The property on the target entity must be defined as a semantic key or an entity key:
+2.  Define the property on the target entity as a semantic key or an entity key:
 
     > ### Sample Code:  
     > CAP CDS Annotation:
@@ -460,7 +460,7 @@ To define a quick view for a source property where the target property is a sema
     > }
     > ```
 
-3.  Annotate `UI.QuickViewFacets` on the target entity of the navigation property as follows:
+3.  Annotate `UI.QuickViewFacets` on the target entity of the navigation property:
 
     > ### Sample Code:  
     > XML Annotation
@@ -571,7 +571,7 @@ To define a quick view for a source property where the target property is a sema
     > 
     > ```
 
-4.  On your `UI.LineItem`, `UI.FieldGroup` or `UI.Identification` annotation, define a `DataField` annotation pointing to the property of the target entity:
+4.  In your `UI.LineItem`, `UI.FieldGroup`, or `UI.Identification` annotation, define a `DataField` annotation pointing to the property of the target entity:
 
     > ### Sample Code:  
     > ```
@@ -597,4 +597,13 @@ The generated quick view looks like this:
 > If the user can't navigate to the target application, no link is displayed.
 
 For more information about the system behavior and configuration options, see [Configuring the Content of Quick Views](configuring-the-content-of-quick-views-c245ad7.md).
+
+<a name="concept_ptg_5mf_b3c"/>
+
+<!-- concept\_ptg\_5mf\_b3c -->
+
+### 
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Enabling Quick Views for Link Navigation](enabling-quick-views-for-link-navigation-e5b509c.md).
 

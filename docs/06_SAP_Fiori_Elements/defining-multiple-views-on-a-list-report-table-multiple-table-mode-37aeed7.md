@@ -1279,3 +1279,12 @@ To define multiple views using multiple table mode, perform the following steps:
 > 
 > -   If the table title matches the view name, the table title is omitted to avoid duplicating information.
 
+<a name="concept_sqw_43b_c3c"/>
+
+<!-- concept\_sqw\_43b\_c3c -->
+
+## 
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Defining Multiple Views on a List Report Table - Multiple Table Mode](defining-multiple-views-on-a-list-report-table-multiple-table-mode-97dfeea.md).
+

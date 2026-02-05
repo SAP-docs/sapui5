@@ -1,0 +1,573 @@
+<!-- loio97dfeea4a8c346368cea6bf7a3e85478 -->
+
+# Defining Multiple Views on a List Report Table - Multiple Table Mode
+
+You can define multiple views of a table and display them in multiple table mode. Users can switch between views using an icon tab bar.
+
+
+
+<a name="loio97dfeea4a8c346368cea6bf7a3e85478__section_ysy_5qk_fhc"/>
+
+## Using Tables in Multiple Table Mode
+
+To define multiple views using multiple table mode, perform the following steps:
+
+1.  Add `SelectionVariants` or `SelectionPresentationVariants` to your annotations file. The annotation target of `SelectionPresentationVariants` must be the `EntityType`.
+
+    > ### Note:  
+    > You can reference different `UI.LineItem` annotations for different tabs. To do so, reference the annotation under `PresentationVariant/Visualizations`. If there is no `PresentationVariant/Visualizations` for a tab, a default `UI.LineItem` \(without a qualifier\) is taken into account.
+
+    `SelectionVariant` that filters for items that cost a certain amount, \(for example, at least 5,000 euros\).
+
+    > ### Sample Code:  
+    > XML Annotation
+    > 
+    > ```xml
+    > 
+    > <Annotations Target="STTA_SALES_ORDER_ITEM_AGGR_SRV.STTA_C_SO_ItemAggrType">
+    > <Annotation Term="UI.SelectionVariant" Qualifier="Expensive">
+    >     <Record>
+    >         <PropertyValue Property="Text" String="Expensive">
+    >         </PropertyValue>
+    >         <PropertyValue Property="SelectOptions">
+    >             <Collection>
+    >                 <Record Type="UI.SelectOptionType">
+    >                     <PropertyValue Property="PropertyName" PropertyPath="GrossAmount" />
+    >                     <PropertyValue Property="Ranges">
+    >                         <Collection>
+    >                             <Record Type="UI.SelectionRangeType"> 
+    >                                  <PropertyValue Property="Sign" EnumMember="UI.SelectionRangeSignType/E"/>
+    >                                  <PropertyValue Property="Option" EnumMember="UI.SelectionRangeOptionType/LT"/> 
+    >                                  <PropertyValue Property="Low" String="5000"/>
+    >                             </Record>
+    >                         </Collection>
+    >                     </PropertyValue>
+    >                 </Record>
+    >             </Collection>
+    >         </PropertyValue>
+    >     </Record>
+    > </Annotation>
+    > ```
+
+    > ### Sample Code:  
+    > ABAP CDS Annotation
+    > 
+    > ```
+    > 
+    > @UI.SelectionVariant: [
+    >   {
+    >     text: 'Expensive',
+    >     qualifier: 'Expensive'
+    >   }
+    > ]
+    > annotate view SALESORDERMANAGE with {
+    > 
+    > }
+    > 
+    > ```
+
+    `SelectionPresentationVariant` containing a `SelectionVariant` and a`PresentationVariant`. The `SelectionVariant` filters for items with a price less than a certain amount \(for example, 5,000 euros\), the `PresentationVariant` defines the ascending sort order:
+
+    > ### Sample Code:  
+    > XML Annotation
+    > 
+    > ```xml
+    > <Annotations Target="STTA_SALES_ORDER_ITEM_AGGR_SRV.STTA_C_SO_ItemAggrType">
+    > <Annotation Term="UI.SelectionPresentationVariant" Qualifier="Cheap">
+    >     <Record>
+    >         <PropertyValue Property="Text" String="Cheap">
+    >         </PropertyValue>
+    >         <PropertyValue Property="SelectionVariant">
+    >             <Record>
+    >                 <PropertyValue Property="Text" String="Cheap">
+    >                 </PropertyValue>
+    >                 <PropertyValue Property="SelectOptions">
+    >                     <Collection>
+    >                         <Record Type="UI.SelectOptionType">
+    >                             <PropertyValue Property="PropertyName"
+    >                                 PropertyPath="GrossAmount" />
+    >                             <PropertyValue Property="Ranges">
+    >                                 <Collection>
+    >                                     <Record Type="UI.SelectionRangeType">
+    >                                         <PropertyValue Property="Option"
+    >                                             EnumMember="UI.SelectionRangeOptionType/LT" />
+    >                                         <PropertyValue Property="Low" String="5000" />
+    >                                     </Record>
+    >                                 </Collection>
+    >                             </PropertyValue>
+    >                         </Record>
+    >                     </Collection>
+    >                 </PropertyValue>
+    >             </Record>
+    >         </PropertyValue>
+    >         <PropertyValue Property="PresentationVariant">
+    >             <Record>
+    >                 <PropertyValue Property="SortOrder">
+    >                     <Collection>
+    >                         <Record>
+    >                             <PropertyValue Property="Property"
+    >                                 PropertyPath="GrossAmount" />
+    >                             <PropertyValue Property="Descending" Bool="false" />
+    >                         </Record>
+    >                     </Collection>
+    >                 </PropertyValue>
+    >             </Record>
+    >         </PropertyValue>
+    >     </Record>
+    > </Annotation>
+    > </Annotations>
+    > ```
+
+    > ### Sample Code:  
+    > ABAP CDS Annotation
+    > 
+    > ```
+    > 
+    > @UI.selectionPresentationVariant: [{
+    >   id: '',
+    >   text: 'Cheap',
+    >   selectionVariantQualifier: 'Default',
+    >   presentationVariantQualifier: 'Default',
+    >   qualifier: 'Cheap'
+    > }]
+    > 
+    > @UI.selectionVariant: [
+    >   {
+    >     text: 'Cheap',
+    >     qualifier: 'Default'
+    >   }
+    > ]
+    > 
+    > @UI.presentationVariant: [
+    >   {
+    >     qualifier: 'Default',
+    >     sortOrder: [{by: 'GrossAmount', direction: #ASC }]
+    >   }
+    > ]
+    > annotate view SALESORDERMANAGE with {
+    > 
+    > }
+    > 
+    > ```
+
+    > ### Note:  
+    > For the `SelectionVariant`, the following applies:
+    > 
+    > -   The `FilterExpression` of the `SelectionVariantType` isn't supported.
+    > 
+    > -   The following `SelectionRangeOptionTypes` are supported without any wildcards, for example, \*, ?, …:
+    > 
+    >     -   EQ: Equal to
+    > 
+    >     -   BT: Between
+    > 
+    >     -   LE: Less than or equal to
+    > 
+    >     -   GE: Greater than or equal to
+    > 
+    >     -   NE: Not equal to
+    > 
+    >     -   GT: Greater than
+    > 
+    >     -   LT: Less than
+    > 
+    > 
+    > 
+    > For the `PresentationVariant`, `SortOrders` and visualizations are supported.
+
+2.  Extend the `manifest.json` file to switch on the multiple view feature and link to the variants you've added to your annotations. You do this in the list report settings section under `sap.ui.generic.app`. Use `quickVariantSelectionX` for multiple table mode or multiple table mode with charts.
+
+    -   The `variants` section \(lines 11–20\) contains a set of entries that point to the variants defined in the annotations.
+
+    -   For each entry under `variants` \(for example, lines 12–15\), define an `annotationPath` \(line 14\) of a specific variant.
+
+    -   Provide a key entry \(line 13\) that is used for initializing the corresponding `IconTabBar` item. This entry is mandatory.
+
+
+    > ### Sample Code:  
+    > ```
+    > 
+    > 1 ...
+    > 2 "sap.ui.generic.app": {
+    > 3     "pages": [
+    > 4         {
+    > 5             "entitySet": "C_STTA_SalesOrder_WD_20",
+    > 6             "component": {
+    > 7                 "name": "sap.suite.ui.generic.template.ListReport",
+    > 8                 "list": true,
+    > 9                 "settings": {
+    > 10                    "quickVariantSelectionX": {
+    > 11                        "variants": {
+    > 12                            "Expensive": {
+    > 13                                "key": "Expensive",
+    > 14                                "annotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#Expensive"
+    > 15                            },
+    > 16                            "Cheap": {
+    > 17                                "key": "Cheap",
+    > 18                                "annotationPath": "com.sap.vocabularies.UI.v1.SelectionPresentationVariant#Cheap"
+    > 19                            }
+    > 20                        }
+    > 21                    }
+    > 22                    ...
+    > ```
+
+    > ### Note:  
+    > Stable IDs: As there are separate table instances for each tab, table-specific IDs \(such as IDs for tables, toolbar actions, draft indicators in table columns\) get a suffix "-<key\>", where <key\> is the variant key you have specified in the manifest \(line 13\). This avoids duplicate ID errors and allows you to adapt specific tables by using key user adaptation \(for example, hiding a toolbar action for a specific table\).
+    > 
+    > We recommend using keys that are a combination of alphanumeric characters, digits, and underscores \(\_\). You must ensure that they don't begin with a digit.
+
+
+
+
+<a name="loio97dfeea4a8c346368cea6bf7a3e85478__section_yt5_2x3_fhc"/>
+
+## Using Charts in Multiple Table Mode
+
+You can also use charts in multiple table mode. To do so, you must have defined a `UI.Chart` annotation, including a qualifier, as shown in the following sample codes:
+
+> ### Sample Code:  
+> XML Annotation
+> 
+> ```xml
+> <Annotation Term="UI.Chart" Qualifier="Chart1">
+>     <Record Type="UI.ChartDefinitionType">
+>         <PropertyValue Property="Title" String="Revenue by Customer"/>
+>         <PropertyValue Property="Description" String="Net Revenue by Customer"/>
+>         <PropertyValue Property="ChartType" EnumMember="UI.ChartType/Column"/>
+>         <PropertyValue Property="Dimensions">
+>             <Collection>
+>                 <PropertyPath>ProductCategory</PropertyPath>             
+>             </Collection>
+>         </PropertyValue>
+>         <PropertyValue Property="Measures">
+>             <Collection>
+>                 <PropertyPath>NetAmount</PropertyPath>
+>             </Collection>
+>         </PropertyValue>
+>     </Record>
+> </Annotation>
+> 
+> ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> ```
+> 
+> @UI.Chart: [
+>   {
+>     title: 'Revenue by Customer',
+>     description: 'Net Revenue by Customer',
+>     chartType: #COLUMN,
+>     dimensions: [
+>       'PRODUCTCATEGORY'
+>     ],
+>     measures: [
+>       'NETAMOUNT'
+>     ],
+>     qualifier: 'Chart1'
+>   }
+> ]
+> annotate view SALESORDERMANAGE with {
+> 
+> }
+> ```
+
+Reference the `UI.Chart` annotation in your `SelectionPresentationVariant` or `PresentationVariant` for your view in the same manner as when adding a table to the view described in this topic below, as shown in the following sample codes:
+
+> ### Sample Code:  
+> XML Annotation
+> 
+> ```xml
+> 
+> <Annotation Term="UI.SelectionPresentationVariant" Qualifier="Chart1">
+>     <Record>
+>         <PropertyValue Property="Text" String="Chart1"/>
+>             <PropertyValue Property="SelectionVariant">
+>                 <Record>
+>                     ....
+>                 </Record>
+>             </PropertyValue>
+>         <PropertyValue Property="PresentationVariant">
+>             <Record>
+>                 <PropertyValue Property="Visualizations">
+>                     <Collection>
+>                         <AnnotationPath>@UI.Chart#Chart1</AnnotationPath>
+>                     </Collection>
+>                 </PropertyValue>
+>             </Record>
+>         </PropertyValue>
+>     </Record>
+> </Annotation>
+> 
+> ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> ```
+> 
+> @UI.selectionPresentationVariant: [{
+>   text: 'Chart1',
+>   selectionVariantQualifier: '',
+>   presentationVariantQualifier: 'Default',
+>   qualifier: 'Chart1'
+> }]
+> 
+> @UI.presentationVariant: [
+>   {
+>     qualifier: 'Default',
+>     sortOrder: [{by: 'GrossAmount', direction: #ASC }],
+>     visualizations: [{type: #AS_CHART, qualifier: 'Chart1'}]
+>   }
+> ]
+> annotate view SALESORDERMANAGE with {
+> 
+> }
+> ```
+
+If you use charts in multiple table mode, you can implement the following features:
+
+-   Actions in toolbars for charts
+
+    For charts in multiple table mode, actions from the annotations \(UI.Chart/Actions only\) and custom actions that were added using extension points are supported. If custom action buttons are relevant to selection, they're disabled if no chart bar is selected. If not, they're enabled.
+
+    > ### Sample Code:  
+    > XML Annotation
+    > 
+    > ```xml
+    > 
+    > <Annotation Term="UI.Chart" Qualifier="Chart4">
+    >     <Record Type="UI.ChartDefinitionType">
+    >         <PropertyValue Property="ChartType" EnumMember="UI.ChartType/Column"/>
+    >         <PropertyValue Property="Dimensions">
+    >             <Collection>
+    >                 <PropertyPath>CompanyCode</PropertyPath>
+    >                 <PropertyPath>Customer</PropertyPath>
+    >             </Collection>
+    >         </PropertyValue>
+    >         <PropertyValue Property="Measures">
+    >             <Collection>
+    >                 <PropertyPath>AmountInTransactionCurrency</PropertyPath>
+    >             </Collection>
+    >         </PropertyValue>
+    >         <PropertyValue Property="Actions">
+    >             <Collection>
+    >                 <Record Type="UI.DataFieldForAction">
+    >                     <PropertyValue Property="Action" String="ZFAR_CUSTOMER_LINE_ITEMS2_SRV.ZFAR_CUSTOMER_LINE_ITEMS2_SRV_Entities/Create"/>
+    >                     <PropertyValue Property="Label" String="Action 1"/>
+    >                 </Record>
+    >                 <Record Type="UI.DataFieldForIntentBasedNavigation">
+    >                     <PropertyValue Property="SemanticObject" String="Customer"/>
+    >                     <PropertyValue Property="Action" String="postPayment2"/>
+    >                     <PropertyValue Property="Label" String="SO Navigation (M)"/>
+    >                     <Annotation Term="com.sap.vocabularies.UI.v1.Importance" EnumMember="com.sap.vocabularies.UI.v1.ImportanceType/Medium"/>
+    >                 </Record>
+    >             </Collection>
+    >         </PropertyValue>
+    >     </Record>
+    > </Annotation>
+    > 
+    > ```
+
+    > ### Sample Code:  
+    > ABAP CDS Annotation
+    > 
+    > ```
+    > 
+    > @UI.Chart: [
+    >   {
+    >     chartType: #COLUMN,
+    >     dimensions: [
+    >       'COMPANYCODE',
+    >       'CUSTOMER'
+    >     ],
+    >     measures: [
+    >       'AMOUNTINTRANSACTIONCURRENCY'
+    >     ],
+    >     actions: [
+    >       {
+    >         dataAction: 'PUSHDOWN:Create',
+    >         label: 'Action 1',
+    >         type: #FOR_ACTION
+    >       },
+    >       {
+    >         semanticObjectAction: 'postPayment2',
+    >         label: 'SO Navigation (M)',
+    >         type: #FOR_INTENT_BASED_NAVIGATION
+    >       }
+    >     ],
+    >     qualifier: 'Chart4'
+    >   }
+    > ]
+    > annotate view SALESORDERMANAGE with {
+    > 
+    > }
+    > ```
+
+-   Navigation for charts
+
+    To enable navigation for charts, you have to set the property "`showItemNavigationOnChart`" in the manifest to "true" and maintain an internal navigation target in the manifest.
+
+    ```
+    
+    "quickVariantSelectionX": {
+        "variants": {
+           "SalesOrderTable": {
+                "key": "SalesOrderTable",
+                "annotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#VAR1"
+                },
+            "Amount_CustomerChart": {
+                "key": "Amount_CustomerChart",
+                "annotationPath": "com.sap.vocabularies.UI.v1.SelectionPresentationVariant#VAR4",
+                "showItemNavigationOnChart": true
+                 }               
+        }
+    }
+    
+    ```
+
+    For information about how to maintain an internal navigation target, see [Configuring Internal Navigation](configuring-internal-navigation-666b503.md).
+
+    If navigation is enabled, the *Show details* button is displayed in the popup after you select a chart bar and choose the *Details* button.
+
+    > ### Remember:  
+    > Ensure that the service/entity configured for the chart is **not** draft enabled or a read-only service/entity. For more information, see [Configuring Charts](configuring-charts-8f64eb1.md).
+
+    On each tab, you can also display data for different entity sets with different table types and other settings, for example, a sales order or a supplier. To do so, add the entity set and/or table settings to the corresponding tab in the manifest. For more information, see [Defining Multiple Views on a List Report Page with Different Entity Sets and Table Settings](defining-multiple-views-on-a-list-report-page-with-different-entity-sets-and-table-settin-6698b80.md).
+
+
+
+
+<a name="loio97dfeea4a8c346368cea6bf7a3e85478__section_dvt_zrk_fhc"/>
+
+## Additional Examples
+
+
+
+### `SelectionVariant` without a Qualifier
+
+> ### Sample Code:  
+> Annotation
+> 
+> ```xml
+> <Annotation Term="UI.SelectionVariant">
+>      <Record>
+>           <PropertyValue Property="Text" String="Expensive">
+>           </PropertyValue>
+>           <PropertyValue Property="SelectOptions">
+>                <Collection>
+>                     <Record Type="UI.SelectOptionType">
+>                          <PropertyValue Property="PropertyName"
+>                                         PropertyPath="GrossAmount" />
+>                          <PropertyValue Property="Ranges">
+>                               <Collection>
+>                                    <Record Type="UI.SelectionRangeType">
+>                                         <PropertyValue Property="Option"
+>                                                        EnumMember="UI.SelectionRangeOptionType/GE" />
+>                                         <PropertyValue Property="Low" String="5000" />
+>                                    </Record>
+>                               </Collection>
+>                          </PropertyValue>
+>                     </Record>
+>                </Collection>
+>           </PropertyValue>
+>      </Record>
+> </Annotation>
+> 
+> ```
+
+> ### Sample Code:  
+> Manifest setting
+> 
+> ```
+> "settings": {
+>      "quickVariantSelectionX": {
+>           "variants": {
+>                "ExpensiveOrdersTable": {
+>                     "key": "ExpensiveOrdersTable",
+>                     "annotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant"
+>                }
+>           }
+>      }
+> },
+> 
+> ```
+
+
+
+### `SelectionPresentationVariant` without a Qualifier
+
+> ### Sample Code:  
+> Annotation
+> 
+> ```xml
+> <Annotation Term="UI.SelectionPresentationVariant">
+>      <Record>
+>           <PropertyValue Property="Text" String="Cheap">
+>           </PropertyValue>
+>           <PropertyValue Property="SelectionVariant">
+>                <Record>
+>                     <PropertyValue Property="Text" String="Cheap">
+>                     </PropertyValue>
+>                     <PropertyValue Property="SelectOptions">
+>                          <Collection>
+>                               <Record Type="UI.SelectOptionType">
+>                                    <PropertyValue Property="PropertyName"
+>                                                   PropertyPath="GrossAmount" />
+>                                    <PropertyValue Property="Ranges">
+>                                         <Collection>
+>                                              <Record Type="UI.SelectionRangeType">
+>                                                   <PropertyValue Property="Option"
+>                                                                  EnumMember="UI.SelectionRangeOptionType/LT" />
+>                                                   <PropertyValue Property="Low" String="5000" />
+>                                              </Record>
+>                                         </Collection>
+>                                    </PropertyValue>
+>                               </Record>
+>                          </Collection>
+>                     </PropertyValue>
+>                </Record>
+>           </PropertyValue>
+>           <PropertyValue Property="PresentationVariant">
+>                <Record>
+>                     <PropertyValue Property="Visualizations">
+>                          <Collection>
+>                               <AnnotationPath>@UI.LineItem#Reduced</AnnotationPath>
+>                          </Collection>
+>                     </PropertyValue>
+>                     <PropertyValue Property="SortOrder">
+>                          <Collection>
+>                               <Record>
+>                                    <PropertyValue Property="Property"
+>                                                   PropertyPath="GrossAmount" />
+>                                    <PropertyValue Property="Descending" Bool="false" />
+>                               </Record>
+>                          </Collection>
+>                     </PropertyValue>
+>                </Record>
+>           </PropertyValue>
+>      </Record>
+> </Annotation>
+> 
+> ```
+
+> ### Sample Code:  
+> Manifest setting
+> 
+> ```
+> "quickVariantSelectionX": {
+>      "variants": {
+>           "ExpensiveOrdersTable": {
+>                "key": "ExpensiveOrdersTable",
+>                "annotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant"
+>           },
+>           "CheapOrdersTable": {
+>                "key": "CheapOrdersTable",
+>                "annotationPath": "com.sap.vocabularies.UI.v1.SelectionPresentationVariant"
+>           }
+>      }
+> }
+> 
+> ```
+

@@ -90,12 +90,10 @@ The multi-input field is also available for tables.
 
 ## Additional Features in SAP Fiori Elements for OData V4
 
-You can use the following annotations for multi-input fields:
+The multi-input field is only shown in edit mode if its target collection is both insertable and deletable. You can define this by using the following annotations for multi-input fields:
 
--   `Capabilities.InsertRestrictions`: Specify whether the field can be edited.
-
--   `Capabilities.DeleteRestrictions`: Specify whether the field can be deleted.
-
+-   The `Capabilities.InsertRestrictions` and `Capabilities.DeleteRestrictions` annotations on the target entity
+-   The `Capabilities.NavigationRestrictions` annotation on the navigation property
 
 You can also configure the availability and requirement of the multi-input field by setting the `Common.fieldControl` annotation to `ReadOnly` or `Mandatory` as shown in the following sample code:
 
@@ -148,6 +146,11 @@ When you set the `Common.fieldControl` annotation to `Mandatory`, a red asterisk
 
 > ### Restriction:  
 > You can't use the multi-input field if you need to display more than 100 selected values. In this case, we recommend that you use a table instead.
+
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Using the Multi-Input Field on the Object Page](using-the-multi-input-field-on-the-object-page-4e69fd3.md).
 
 **Related Information**  
 

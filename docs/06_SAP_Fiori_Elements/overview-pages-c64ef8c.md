@@ -36,3 +36,8 @@ Overview page application instances consist of a UI component that extends the o
 
 For more information about the overview page plugin, see [Building an App](building-an-app-9834a0a.md).
 
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Overview Pages](overview-pages-8a069ff.md).
+

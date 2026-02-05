@@ -25,97 +25,6 @@ If the reuse component exposes properties other than the predefined ones, the em
 
 The reuse component instance cannot only receive information about the object that is on the embedding object page by transferring dedicated properties. The binding context that has been set for the OData model for the embedding page is also valid for the reuse component.
 
-
-
-<a name="loiod869d7ab3caa48b2a20dc20dfa248380__section_bmg_ypt_kmb"/>
-
-## Additional Features in SAP Fiori Elements for OData V2
-
-> ### Note:  
-> A reuse component that can be used within an SAP Fiori elements-based application cannot be used in a freestyle SAPUI5 application. If reuse component owners want to provide the functionality for both types of applications, they need to provide two components, one for each use case.
-> 
-> We recommend factoring out as much coding as possible into artifacts that are shared by both components.
-
-The following example embeds two reuse components:
-
-> ### Sample Code:  
-> `manifest.json`
-> 
-> ```
-> ...   
->  "sap.ui.generic.app": { 
->     ...  
->     "pages": {
->         "ListReport|myRootEntity": {    
-> 
->             "entitySet": "myRootEntity",    
->             "component": {      
->                 "name": "sap.suite.ui.generic.template.ListReport",      
->                 "list": true,      
->                 ...
->             },
->             "pages": {      
->                 "ObjectPage|myRootEntity": {       
->                     "entitySet": "myRootEntity",       
->                     "component": {        
->                         "name": "sap.suite.ui.generic.template.ObjectPage",
->                         ...
->                     },        
->                     "embeddedComponents": {        
->                         "myFirstComponentEmbedding": {         
->                             "id": "myFirstComponentEmbedding",         
->                             "componentUsage": "myUsage",         
->                             "title": "{{I18N_KEY_FOR_FIRST_REUSE_COMPONENT_TITLE}}",
->                             "settings": {
->                                 "documentNumber": "{documentNumber}"
->                             }                 
->                         },        
->                         "mySecondComponentEmbedding": {         
->                             "id": "mySecondComponentEmbedding",         
->                             "componentName": "theOtherReuseComponentQualifiedName",         
->                             "title": "{{I18N_KEY_FOR_SECOND_REUSE_COMPONENT_TITLE}}",
->                             "binding": "myNavProperty",     
->                         }       
->                     },
->                     "pages": {
->                         // add list of sub-pages of the root object page here
->                     }
->                 }
->             }
->         }
->     }
-> ```
-
-The logical names of the embedded components \(`myFirstComponentEmbedding` and `mySecondComponentEmbedding`\) each appear twice within the codeblock. This is because the name of the property \(within `embeddedComponents`\) which defines the reuse component instance and the value of the property ID in this definition must be identical.
-
-Within the definition of the embedding, the binding context might be modified using the `binding` property. See the second embedding definition for this. The path that is in the value for this property defines a path relative to the current binding context for the whole object page. Thus, the binding context that is valid for the second reuse component instance is determined by applying this relative path to the binding context that is valid for the whole page.
-
-
-
-### Defining the Default Visibility
-
-Most reuse components are always visible on the object page they have been placed on. However, you can define that a reuse component is only visible for specific instances of the corresponding entity. In your reuse component implementation, use the `setSectionHidden` method of the extensionAPI to show or hide the reuse component on the object page. For more information, see [Developing Reuse Components](developing-reuse-components-6314fcd.md).
-
-Set the default visibility to the value that is correct for most cases. You can use the `hiddenByDefault` property for this purpose, on the same level as ID, title, settings, and so on. If this property is set to `true`, the section is hidden by default when the object page is opened with a new instance. It is only visible when the reuse component unhides itself using the `setSectionHidden` method.
-
-
-
-### Placing Reuse Component Instances
-
-Each reuse component instance defined for an object page of a SAP Fiori elements-based app is realized by a section that contains a sub-section which in turn contains the content of the reuse component. By default, these sections are added to the end of the object page in the same order the reuse component instances are defined in the manifest. You can move these sections using the Adaptation Editor. For more options, see [Placing Reuse Component Instances on the Object Page](placing-reuse-component-instances-on-the-object-page-1ba7f88.md).
-
-
-
-### Dependencies
-
-If the reuse component uses its own OData service, make sure you declare it as a dependency both under `"sap.ui5"/"dependencies"/"libs"` and under`"sap.ui5"/"dependencies"/"component"`.
-
-
-
-<a name="loiod869d7ab3caa48b2a20dc20dfa248380__section_ky1_nqt_kmb"/>
-
-## Additional Features in SAP Fiori Elements for OData V4
-
 > ### Note:  
 > SAP Fiori elements for OData V4 is compatible with freestyle SAPUI5 reuse components, but incompatible with SAP Fiori elements for OData V2 reuse components.
 
@@ -230,7 +139,14 @@ We recommend using the above example. If you prefer, however, you can also add a
 
 
 
-### Defining the Default Visibility
+<a name="loiod869d7ab3caa48b2a20dc20dfa248380__section_ky1_nqt_kmb"/>
+
+## Defining the Default Visibility
 
 SAP Fiori elements for OData V4 uses the standard SAPUI5 reuse component visibility. If there is a value set for a sales order, for example, and you want the reuse component to be visible, use the following setting: `visible="{= !!${SalesOrder}"`.
+
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Including Reuse Components on an Object Page](including-reuse-components-on-an-object-page-344cd94.md).
 

@@ -56,27 +56,27 @@ import Press from "sap/ui/test/actions/Press";
 const viewName = "ui5.walkthrough.view.HelloPanel";
 
 export default class HelloPanelPage extends Opa5 {
-	// Actions
-	iPressTheSayHelloWithDialogButton() {
-		return this.waitFor({
-			id: "helloDialogButton",
-			viewName,
-			actions: new Press(),
-			errorMessage: "Did not find the 'Say Hello With Dialog' button on the HelloPanel view"
-		});
-	}
-	
-	// Assertions
-	iShouldSeeTheHelloDialog() {
-		return this.waitFor({
-			controlType: "sap.m.Dialog",
-			success: function () {
-				// we set the view busy, so we need to query the parent of the app
-				Opa5.assert.ok(true, "The dialog is open");
-			},
-			errorMessage: "Did not find the dialog control"
-		});
-	}
+    // Actions
+    iPressTheSayHelloWithDialogButton() {
+        return this.waitFor({
+            id: "helloDialogButton",
+            viewName,
+            actions: new Press(),
+            errorMessage: "Did not find the 'Say Hello With Dialog' button on the HelloPanel view"
+        });
+    }
+
+    // Assertions
+    iShouldSeeTheHelloDialog() {
+        return this.waitFor({
+            controlType: "sap.m.Dialog",
+            success: function () {
+                // we set the view busy, so we need to query the parent of the app
+                Opa5.assert.ok(true, "The dialog is open");
+            },
+            errorMessage: "Did not find the dialog control"
+        });
+    }
 };
 ```
 
@@ -115,21 +115,21 @@ QUnit.module("Navigation");
 
 opaTest("Should open the Hello dialog", function () {
 
-	// Arrangements
-	onTheHelloPanelPage.iStartMyUIComponent({
-		componentConfig: {
-			name: "ui5.walkthrough"
-		}
-	});
-	
-	// Actions
-	onTheHelloPanelPage.iPressTheSayHelloWithDialogButton();
-	
-	// Assertions
-	onTheHelloPanelPage.iShouldSeeTheHelloDialog();
-	
-	// Cleanup
-	onTheHelloPanelPage.iTeardownMyApp();
+    // Arrangements
+    onTheHelloPanelPage.iStartMyUIComponent({
+        componentConfig: {
+            name: "ui5.walkthrough"
+        }
+    });
+
+    // Actions
+    onTheHelloPanelPage.iPressTheSayHelloWithDialogButton();
+
+    // Assertions
+    onTheHelloPanelPage.iShouldSeeTheHelloDialog();
+
+    // Cleanup
+    onTheHelloPanelPage.iTeardownMyApp();
 });
 ```
 
@@ -156,17 +156,18 @@ import "./NavigationJourney";
 Finally we reference the new `integration/opaTests.qunit.ts` in the `testsuite.qunit.ts` file. The `.qunit.ts` extension is omitted and will be added automatically during runtime.
 
 ```ts
+import type {SuiteConfiguration} from "sap/ui/test/starter/config";
 export default {
-	  // ...
-	  tests: {
-		    "unit/unitTests": {
-			       title: "UI5 TypeScript Walkthrough - Unit Tests"
-		    },
-		    "integration/opaTests": {
-			       title: "UI5 TypeScript Walkthrough - Integration Tests"
-		    }
-	  }
-};
+    // ...
+    tests: {
+        "unit/unitTests": {
+            title: "UI5 TypeScript Walkthrough - Unit Tests"
+        },
+        "integration/opaTests": {
+            title: "UI5 TypeScript Walkthrough - Integration Tests"
+        }
+    }
+} satisfies SuiteConfiguration;
 ```
 
 If we now open the `webapp/test/testsuite.qunit.html` file in the browser and select `integration/opaTests`, the QUnit layout should appear and a test "Should see the Hello dialog" will run immediately. This action will load the app component on the right side of the page. There you can see the operations the test is performing on the app. If everything works correctly, a button click will be triggered, then a dialog will be displayed and the test case will be green.

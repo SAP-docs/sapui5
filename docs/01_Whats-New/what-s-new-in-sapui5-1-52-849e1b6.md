@@ -1787,7 +1787,7 @@ List report and object page have the following new and enhanced features:
 
 **List Report View**
 
--   When defining multiple views for a table and displaying them in multiple table mode, you can now also display charts in addition to tables. For more information, see [Multiple Views in the List Report](../06_SAP_Fiori_Elements/multiple-views-in-the-list-report-a37df40.md).
+-   When defining multiple views for a table and displaying them in multiple table mode, you can now also display charts in addition to tables. For more information, see [Multiple Views on the List Report Page](../06_SAP_Fiori_Elements/multiple-views-on-the-list-report-page-a37df40.md).
 
 -   When displaying images in tables, you can use the `Common.Text` annotation to provide textual information about the image, for example, for accessibility purposes. This text is not visible on the UI but can be read by screen readers. For more information, see [Displaying Images in Tables](../06_SAP_Fiori_Elements/displaying-images-in-tables-492bc79.md).
 
@@ -1937,6 +1937,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.142](what-s-new-in-sapui5-1-142-92ed100.md "With this release SAPUI5 is upgraded from version 1.141 to 1.142.")
 
 [What's New in SAPUI5 1.141](what-s-new-in-sapui5-1-141-a7ed66d.md "With this release SAPUI5 is upgraded from version 1.140 to 1.141.")
 

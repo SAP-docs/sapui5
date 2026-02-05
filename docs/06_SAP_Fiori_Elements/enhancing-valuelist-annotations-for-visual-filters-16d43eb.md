@@ -89,7 +89,7 @@ You must enhance the value list annotation corresponding to a filter field with 
 > ```
 
 > ### Note:  
-> In SAP Fiori elements for OData V4, the `"CollectionPath"` of the corresponding value list annotation must point to the result entity set in the same manner as described in the [Supporting Parameterized Entities](configuring-filter-bars-4bd7590.md#loio4bd7590569c74c61a0124c6e370030f6__suppprting_parameterized_entities_subsection) section in [Configuring Filter Bars](configuring-filter-bars-4bd7590.md).
+> The `"CollectionPath"` of the corresponding value list annotation must point to the result entity set in the same manner as described in the [Supporting Parameterized Entities](configuring-filter-bars-4bd7590.md#loio4bd7590569c74c61a0124c6e370030f6__suppprting_parameterized_entities_subsection) section in [Configuring Filter Bars](configuring-filter-bars-4bd7590.md).
 
 In continuation with the value list annotations given in the example in [In/Out Mappings in the ValueList Annotation](in-out-mappings-in-the-valuelist-annotation-4de40b3.md), assume that the following visual filters have been defined:
 
@@ -126,10 +126,17 @@ After selecting the region chart, if you select a bar in the country chart then 
 > ### Note:  
 > The ALP ignores the `UI.Hidden` fields when you select filters if the IN mapping points to a field marked with `UI.Hidden` in the value list entity set. For example, the `Status_ID` from the main entity set points to `StatusCode` in the value help entity set \(of the visual filter\). If the `StatusCode` is marked as `UI.Hidden`, then the incoming value is ignored.
 
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Enhancing ValueList Annotations for Visual Filters](enhancing-valuelist-annotations-for-visual-filters-bcfc085.md).
+
 **Related Information**  
 
 
 [Configuring the Visual Filter Bar](configuring-the-visual-filter-bar-33f3d80.md "The visual filter bar enables end users to select filter values based on measure values in addition to the filters and filter values already selected in the regular filter bar.")
 
-[Choosing Filter Modes](choosing-filter-modes-00c19e1.md "ALP offers compact and visual filter modes. You can choose to set filters from both modes.")
+[Choosing Filter Modes on the Analytical List Page](choosing-filter-modes-on-the-analytical-list-page-00c19e1.md "ALP offers compact and visual filter modes. You can choose to set filters from both modes.")
+
+[Value Help](value-help-fccb255.md "Value help allows end users to either select a value from a value help entity associated with the field or define a condition to retrieve a suitable value for the field from the main entity.")
 

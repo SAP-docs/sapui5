@@ -64,3 +64,8 @@ You can define the table header text and control the visibility of the header te
 > }
 > ```
 
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Setting the Table Header](setting-the-table-header-b224570.md).
+

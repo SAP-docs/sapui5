@@ -416,7 +416,7 @@ SAP Fiori Elements
 
 The following changes and new features are available for SAP Fiori elements for OData V2:
 
--   Key users can now configure the initial loading threshold and scroll threshold in applications that use the `sap.ui.table.*` controls. For more information, see [Adapting the UI](../06_SAP_Fiori_Elements/adapting-the-ui-59bfd31.md).
+-   Key users can now configure the initial loading threshold and scroll threshold in applications that use the `sap.ui.table.*` controls. For more information, see [Adapting the UI](../06_SAP_Fiori_Elements/extending-delivered-apps-with-key-user-adaptation-59bfd31.md).
 
 -   The default title for new, unsaved objects has been changed from 'Unnamed Object' to 'New Object'. For more information, see [Changing Default Titles of New and Unnamed Objects](../06_SAP_Fiori_Elements/changing-default-titles-of-new-and-unnamed-objects-63946c0.md) and [Localization of UI Texts](../06_SAP_Fiori_Elements/localization-of-ui-texts-b8cb649.md).
 
@@ -845,6 +845,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.142](what-s-new-in-sapui5-1-142-92ed100.md "With this release SAPUI5 is upgraded from version 1.141 to 1.142.")
 
 [What's New in SAPUI5 1.141](what-s-new-in-sapui5-1-141-a7ed66d.md "With this release SAPUI5 is upgraded from version 1.140 to 1.141.")
 

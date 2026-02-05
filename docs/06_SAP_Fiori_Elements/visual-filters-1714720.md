@@ -10,18 +10,20 @@ You can configure visual filters by enhancing the `ValueList` annotation associa
 
 You must ensure that the records available through the value help entity set associated with the visual filter are the same as the records available through the value help entity set associated with the regular filter field. This is required for a smooth sync of the selected values across the different filter modes.
 
+You must ensure there is a manifest property for each visual filter that is to be rendered. For more information, see the [Additional Features in SAP Fiori Elements for OData V4](configuring-the-visual-filter-bar-33f3d80.md#loio33f3d807c10b47d9a8141692d2619dc2__section_my4_mgz_jqb) section in [Configuring the Visual Filter Bar](configuring-the-visual-filter-bar-33f3d80.md).
+
 The visual filter includes only the first measure and dimension from the first chart annotation within the specified `PresentationVariantQualifier`. Ensure that the dimension specified in the chart matches the `ValueListProperty` of the `OUT` parameter. To control the sort order, define a `SortOrder` property in the `PresentationVariant` annotation.
 
 > ### Note:  
-> Sorting in visual filters is based on the following logic:
+> -   Sorting in visual filters is based on the following logic:
 > 
-> -   For bar charts and donut charts in SAP Fiori elements for OData V2, sorting is always based on the displayed measure, with descending order as the default sort order. To modify the sort order, define the `SortOrder` property in the `PresentationVariant` annotation.
+>     -   For line charts with time-based dimensions, sorting is always based on the dimension displayed in ascending order, however, only the last six time periods are displayed.
 > 
-> -   For line charts with time-based dimensions, sorting is always based on the dimension displayed in ascending order, however, only the last six time periods are displayed.
+>         Sorting by the annotation is ignored for line charts with time-based dimensions in the visual filter.
 > 
->     Sorting by the annotation is ignored for line charts with time-based dimensions in the visual filter.
+>     -   For line charts with non time-based dimensions, sorting is always based on the dimension, with ascending order as the default sort order. To modify the sort order, define the `SortOrder` property in the `PresentationVariant` annotation.
 > 
-> -   For line charts with non time-based dimensions, sorting is always based on the dimension, with ascending order as the default sort order. To modify the sort order, define the `SortOrder` property in the `PresentationVariant` annotation.
+> -   Lazy loading is enabled by default and can't be switched off.
 
 ![](images/VF_FC_77f4724.png)
 
@@ -473,7 +475,7 @@ The Chart Type…
 </th>
 <th valign="top">
 
-Displays…
+Description
 
 </th>
 </tr>
@@ -485,7 +487,7 @@ Bar
 </td>
 <td valign="top">
 
-Top or bottom three records
+Displays the top or bottom three records.
 
 </td>
 </tr>
@@ -497,35 +499,13 @@ Line
 </td>
 <td valign="top">
 
-First or last six data points
+Displays the first or last six data points.
 
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Donut
-
-\(Only supported in SAP Fiori elements for OData V2\)
-
-</td>
-<td valign="top">
-
-Top or bottom two records
+Line charts are only rendered if the dimension is time-based, that is, if you use `Edm.Date`, `Edm.Time`, or `Edm.DateTimeOffset`.
 
 </td>
 </tr>
 </table>
-
-In SAP Fiori elements for OData V2, you can enable the visual filter \(donut chart type\) to display an overlay message if there are measures with negative values. To do so, set the `Analytics.AccumulativeMeasure` annotation to `false`, as shown in the following sample code. By default, the value of the `Analytics.AccumulativeMeasure` annotation is `true`.
-
-```
-<Annotations Target="SEPMRA_ALP_SO_ANA_SRV.Z_SEPMRA_C_ALP_QUARTERVHType/DifferenceAmount">
-    <Annotation Term="Analytics.Measure" Bool="true" />
-    <Annotation Term="Analytics.AccumulativeMeasure" Bool="false" />
-</Annotations>
-
-```
 
 
 
@@ -561,7 +541,7 @@ Analytical list page displays chart titles in the following order:
 
 
 > ### Note:  
-> SAP Fiori elements recommends that you do **not** specify a hard-coded scale factor that doesn't work well with changing measure values. Use it only if you can ensure that the range of possible values for the measure is fixed and there'sis a preferred scale factor to be used.
+> SAP Fiori elements recommends that you do **not** specify a hard-coded scale factor that doesn't work well with changing measure values. Use it only if you can ensure that the range of possible values for the measure is fixed and there's a preferred scale factor to be used.
 > 
 > The scale factor in the chart and chart title are of the same scale.
 
@@ -671,33 +651,61 @@ Shows only the ID, for example, "002"
 
 
 
-<a name="loio1714720cae984ad8b9d9111937e7cd38__section_ms2_qdl_j2b"/>
+## Number Formatting
 
-## Lazy Loading of Visual Filters
+The `NumberOfFractionalDigits` property is used to determine the number of fraction digits. `NumberOfFractionalDigits` information can be provided in [com.sap.vocabularies.UI.v1.DataPoint](annotations-used-in-overview-pages-65731e6.md) term, using the `ValueFormat` property. These are the rules:
 
-In SAP Fiori elements for OData V2, you can enable lazy loading of visual filters by configuring the `lazyLoadVisualFilter` setting in the `manifest.json` file. It is disabled by default.
+-   Decimals are not shown by default.
 
-If lazy loading is enabled, then the batch call for loading of visual filters is deferred until the user switches to the visual filter bar.
+-   You can specify 1 or 2 decimal places using the `NumberOfFractionalDigits` property in annotations. If a value of more than 2 is provided, it remains at 2.
+
+    For a currency-based measure, the number of decimal places as specified in the annotation is only considered if the measure value is also being displayed with a scale factor. Otherwise, the number of decimal places is based on the displayed currency.
+
+
+In the following sample code, the weight property number of fractional digits provided in the OData metadata, is set to the value 1 as provided in the [com.sap.vocabularies.UI.v1.DataPoint](annotations-used-in-overview-pages-65731e6.md) `ValueFormat` property:
 
 > ### Sample Code:  
-> `manifest.json`
+> XML Annotation
 > 
-> ```
-> "settings": {
->               "qualifier": "MainContent",
->               "defaultContentView": "charttable",
->               "smartVariantManagement": true,
->               "showGoButtonOnFilterBar": true,
->               "multiSelect": true,
->               "lazyLoadVisualFilter":true,
->               "tableType": "AnalyticalTable",
->               ....
-> }
+> ```xml
+> <Annotation Term="com.sap.vocabularies.UI.v1.DataPoint" Qualifier="Weight">
+>     <Record Type="com.sap.vocabularies.UI.v1.DataPointType">
+>         <PropertyValue Property="Value" Path="Weight"/>
+>         <PropertyValue Property="ValueFormat">
+>             <Record Type="com.sap.vocabularies.UI.v1.NumberFormat">
+>                 <PropertyValue Property="NumberOfFractionalDigits" Int="1"/>
+>             </Record>
+>         </PropertyValue>
+>     </Record>
+> </Annotation>
 > 
 > ```
 
-> ### Note:  
-> In SAP Fiori elements for OData V4, lazy loading is enabled by default and can't be switched off.
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> ```
+> 
+> @UI.dataPoint: { 
+>    valueFormat.numberOfFractionalDigits: 1  
+> }
+> price;
+> ```
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> 
+> UI.DataPoint #Price : {
+>     $Type : 'UI.DataPointType',
+>     Value : Price,
+>     ValueFormat : {
+>         $Type : 'UI.NumberFormat',
+>         NumberOfFractionalDigits : 1
+>     }
+> }
+> ```
 
 
 
@@ -770,54 +778,6 @@ Specifying `Analytical List Page` as a value for the project in the filter bar, 
 </tr>
 </table>
 
-In SAP Fiori elements for OData V2, you can render the visual filter with a parametrized entity set as the collection path. To do so, you need to provide parameters in the `SelectionVariant` annotation. Any values added in the smart filter bar take priority over the `SelectionVariant` annotation values.
-
-****
-
-
-<table>
-<tr>
-<th valign="top">
-
-Scenario
-
-</th>
-<th valign="top">
-
-Description
-
-</th>
-</tr>
-<tr>
-<td valign="top">
-
-Scenario 1: Annotation configuration
-
-Parameter in SelectionVariant = \[\("P\_DisplayCurrency", Value="USD"\)\]
-
-</td>
-<td valign="top">
-
-The chart renders records with the currency unit USD.
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Scenario 2: Overriding annotation configurations on the filter bar
-
-Change USD to EUR on the filter bar
-
-</td>
-<td valign="top">
-
-If you specify EUR as a value for `P_DisplayCurrency` in the filter bar, the chart re-renders with records that have the currency unit EUR.
-
-</td>
-</tr>
-</table>
-
 
 
 <a name="loio1714720cae984ad8b9d9111937e7cd38__section_e11_qrb_lqb"/>
@@ -825,6 +785,8 @@ If you specify EUR as a value for `P_DisplayCurrency` in the filter bar, the cha
 ## Date Selection
 
 Visual filters support date-based, single-select, multi-select based filter fields in the Universal Time Coordinated \(UTC\) format. Semantic dates and date ranges are not supported.
+
+While date/time is converted to the local timezone, the values coming from the back end are used for all other formats. SAP Fiori elements for OData V4 uses `Edm.Date`, which is shown with no conversion to the local timezone.
 
 
 
@@ -836,345 +798,7 @@ For currency-based visual filter values, the currency value could come from anot
 
 
 
-<a name="loio1714720cae984ad8b9d9111937e7cd38__section_gxg_tq2_mqb"/>
-
-## Semantic Coloring for Visual Filters Based on Dimension Values
-
-Semantic coloring is based on the criticality defined in the `ValueCriticality` annotations for dimensions. The value returned from the path determines the color.
-
-> ### Note:  
-> -   No color is applied to the chart dimension when a neutral value is returned.
-> 
-> -   Chart measure semantic coloring takes precendence over dimension semantic coloring.
-
-For a sample annotation applicable to both SAP Fiori elements for OData V2 and SAP Fiori elements for OData V4, please see the [Support for Criticality Coloring](configuring-charts-653ed0f.md#loio653ed0f4f0d743dbb33ace4f68886c4e__criticality_coloring_subsection) section in [Configuring Charts](configuring-charts-653ed0f.md).
-
-
-
-<a name="loio1714720cae984ad8b9d9111937e7cd38__section_nxf_3yy_ghb"/>
-
-## Guidelines
-
-Show the filter dimension with one measure in the visual filter not with multiple measures.
-
-Filter dimensions in the regular filters \(filter bar\) have exactly one representation in the visual filter bar.
-
-Do not show the same filter dimension with two or more different measures at the same time in the visual filter bar. The following example shows the `Dimension Year` filter with two different measures *Revenue* and *Quantity*. Showing the filter *dimensionYear* twice is not in sync with the regular filter, where it is shown only once. Furthermore, matching between the two filter types won't work.
-
-If the use case requires visualizing a dimension with different measures, consider using an overview page instead.
-
-****
-
-
-<table>
-<tr>
-<th valign="top">
-
-Do
-
-</th>
-<th valign="top">
-
-Don't
-
-</th>
-</tr>
-<tr>
-<td valign="top">
-
-![](images/ALP_VFB_LineChartDO_ace802e.jpg)
-
-</td>
-<td valign="top">
-
-![](images/ALP_VFB_LineChartDONT_f95c7de.jpg)
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-**For each dimension, display exactly one representation in the visual filter bar.**
-
-</td>
-<td valign="top">
-
-**Do not use the same filter dimension with different measures.**
-
-</td>
-</tr>
-</table>
-
-
-
-<a name="loio1714720cae984ad8b9d9111937e7cd38__section_oqj_tq1_bqb"/>
-
-## Additional Features in SAP Fiori Elements for OData V2
-
-We also support the visual filter setup for donut charts, and you can define visual filters for parameters.
-
-
-
-### Display of Empty Values
-
-In visual filter charts, the empty dimension value is displayed as *Not Assigned*. Note that this behavior is specific to the display of visual filters. For the value help, drop down, or compact filter, it is displayed as *<empty\>*.
-
-![](images/Not_Assigned_Screenshot_841d97d.png)
-
-
-
-### Date Selection
-
-Visual filters support date-based, single selection fields in the Universal Time Coordinated \(UTC\) format. Visual filters also support string-based fields that denote a time period through the following annotations:
-
--   `Edm.DateTime` and `sap:display-format="Date"`
-
--   `Edm.String` and `sap:semantics="yearmonthday"`
-
--   `Edm.String` and `sap:semantics="yearmonth"`
-
--   `Edm.String` and `sap:semantics="year"`
-
--   `Edm.String` and `sap:semantics="yearquarter"`
-
--   `Edm.String` and `sap:semantics="yearweek"`
-
--   `Edm.String` and `sap:semantics="fiscalyear"`
-
--   `Edm.String` and `sap:semantics="fiscalyearperiod"`
-
-
-> ### Note:  
-> Displaying the value in the visual filter and its tooltip is impacted. Value help or the dropdown for selecting the values remains the same if `sap:semantics="yearmonth"` is set.
-
-> ### Note:  
-> You can see the date selection button on the visual filter for fields annotated with `sap:filter-restriction="single-value"`. For fields annotated with `sap:filter-restriction="multiple"`, you see the value help selection button.
-
-> ### Sample Code:  
-> Sample Metadata
-> 
-> ```
-> <Property Name="StartDate" Type="Edm.DateTime" sap:display-format="Date" 
-> sap:aggregation-role="dimension" sap:label="Date" sap:filter-restriction="single-value"/>
-> 
-> <Property Name="StartDate" Type="Edm.String" sap:semantics="yearmonthday" 
-> sap:aggregation-role="dimension" sap:label="Date" sap:filter-restriction="single-value"/>
-> 
-> ```
-
-
-
-### Number Formatting
-
-The `NumberOfFractionalDigits` property is used to determine the number of fraction digits. `NumberOfFractionalDigits` information can be provided in [com.sap.vocabularies.UI.v1.DataPoint](annotations-used-in-overview-pages-65731e6.md) term, using the `ValueFormat` property. These are the rules:
-
--   Decimals are not shown by default.
-
--   You can specify 1 or 2 decimal places using the `NumberOfFractionalDigits` property in annotations. If a value of more than 2 is provided, it is also included.
-
-
-In the following sample code, the price property number of fractional digits provided in the OData metadata, 3 is overridden by the value 1 as provided in the [com.sap.vocabularies.UI.v1.DataPoint](annotations-used-in-overview-pages-65731e6.md) `ValueFormat` property:
-
-> ### Sample Code:  
-> XML Annotation
-> 
-> ```xml
-> <Annotation Term="com.sap.vocabularies.UI.v1.DataPoint" Qualifier="Price">
->     <Record Type="com.sap.vocabularies.UI.v1.DataPointType">
->         <PropertyValue Property="Value" Path="Price"/>
->         <PropertyValue Property="ValueFormat">
->             <Record Type="com.sap.vocabularies.UI.v1.NumberFormat">
->                 <PropertyValue Property="NumberOfFractionalDigits" Int="1"/>
->             </Record>
->         </PropertyValue>
->     </Record>
-> </Annotation>
-> 
-> ```
-
-> ### Sample Code:  
-> ABAP CDS Annotation
-> 
-> ```
-> 
-> @UI.dataPoint: { 
->    valueFormat.numberOfFractionalDigits: 1  
-> }
-> price;
-> ```
-
-
-
-### Semantic Coloring for Visual Filters Based on Measure Values
-
-Semantic coloring is based on the defined:
-
--   Criticality in `DataPoint` annotations. The specified value, or the value returned from a path, determines the color
-
--   `CriticalityCalculation` in `DataPoint` annotations, along with the improvement direction and various threshold values. This applies only when the criticality is not defined.
-
-
-![](images/Semantic_Coloring_-_Visual_Filters_a477ee8.png)
-
-> ### Note:  
-> No color is applied to the chart measure when:
-> 
-> -   A neutral value is returned.
-> 
-> -   Not enough threshold values are defined or when the improvement direction is missing.
-
-
-
-### Grouping Visual Filter Calls \(Optional\)
-
-You can add `groupId` for a set of visual filters to consolidate all group calls into one batch call. This allows you to group fast-loading visual filters in one batch and group all the other slow loading visual filters into a separate batch call. This improves rendering of the fast-loading visual filters over the slow-loading visual filters.
-
-Define the `onBeforeRebindVisualFilterExtension` extension controller method in the controller file. Ensure that the `groupId` is one of the keys in the `oContext` object which is passed to the extension as a parameter. Provide a valid string value as shown here:
-
-> ### Sample Code:  
-> ```
-> onBeforeRebindVisualFilterExtension: function(sEntityType, sDimension, sMeasure, oContext){
->     'use strict';
->     var Log = sap.ui.require("sap/base/Log");
->     if (sDimension === "Product") {
->         oContext.groupId = "Group1";
->     }
->     if (sDimension === "DeliveryCalendarMonth" || sDimension === "DeliveryCalendarQuarter") {
->         oContext.groupId = "Group2";
->     }
->     Log.info("onBeforeRebindVisualFilterExtension called!");
-> }
-> ```
-
-> ### Note:  
-> -   The visual filter calls without a `groupId` are all combined in one batch.
-> 
-> -   Visual filter calls assigned to a `groupId` reach the back end in one batch.
-
-
-
-### Text for Unit of Measure
-
-If a unit field such as a currency or unit of measure\(UOM\) contains a text annotation \(`sap:text`\) this property is retrieved and displayed along with the unit field.
-
-The unit fields can contain the text annotation either in the main entity set or its value list entity sets.
-
-> ### Sample Code:  
-> Main Entity Set: `DisplayCurrency` doesn't contain a text annotation
-> 
-> ```
-> <EntityType Name="ZEPM_C_SALESORDERITEMQUERYResult" sap:semantics="aggregate" sap:content-version="1">
->                 <Key>
->                     <PropertyRef Name="ID"/>
->                 </Key> 
->               <Property Name="DisplayCurrency" Type="Edm.String" MaxLength="5" sap:aggregation-role="dimension" sap:creatable="false" sap:label="Display Currency" sap:updatable="false" sap:semantics="currency-code"/>  
-> </EntityType > 
-> 
-> ```
-
-> ### Sample Code:  
-> Value List Entity Set : `DisplayCurrency` contains a text annotation to another text property
-> 
-> ```
-> <EntityType Name="ZEPM_C_SALESORDERITEMQUERYValueHelpResult" sap:semantics="aggregate" sap:content-version="1">
->                 <Key>
->                     <PropertyRef Name="ID"/>
->                 </Key> 
->                 <Property Name="DisplayCurrency" Type="Edm.String" MaxLength="5" sap:aggregation-role="dimension" sap:creatable="false" sap:label="Display Currency" sap:updatable="false" sap:semantics="currency-code" sap:text="DisplayCurrencyText"/>
->                 <Property Name="DisplayCurrencyText" Type="Edm.String" MaxLength="60" sap:filterable="false"/>
-> </EntityType > 
-> 
-> ```
-
-The text is fetched to be displayed along with the unit field and is displayed in brackets.
-
-If the main entity set doesn't contain the text annotation, and if the unit field has a value list associated, and the text annotation is present in the value list entity set, then this is retrieved and displayed along with the unit field.
-
-If the main entity set contains the text annotation for a unit, then that is displayed and the value list entity set is not checked for the annotation.
-
-![](images/Visual_Filters_Image_01_3469fc3.png)
-
-
-
-<a name="loio1714720cae984ad8b9d9111937e7cd38__section_qsw_sts_cqb"/>
-
-## Additional Features in SAP Fiori Elements for OData V4
-
-You must ensure there is a manifest property for each visual filter that is to be rendered. For more information, see the [Additional Features in SAP Fiori Elements for OData V4](configuring-the-visual-filter-bar-33f3d80.md#loio33f3d807c10b47d9a8141692d2619dc2__section_my4_mgz_jqb) section in [Configuring the Visual Filter Bar](configuring-the-visual-filter-bar-33f3d80.md).
-
-
-
-### Line Chart
-
-Line charts are only rendered if the dimension is time-based, that is, if you use `Edm.Date`, `Edm.Time`, or `Edm.DateTimeOffset`.
-
-
-
-### Date Selection
-
-While date/time is converted to the local timezone, the values coming from the back end are used for all other formats. SAP Fiori elements for OData V4 `Edm.Date`, which is shown with no conversion to the local timezone.
-
-
-
-### Number Formatting
-
-The `NumberOfFractionalDigits` property is used to determine the number of fraction digits. `NumberOfFractionalDigits` information can be provided in [com.sap.vocabularies.UI.v1.DataPoint](annotations-used-in-overview-pages-65731e6.md) term, using the `ValueFormat` property. These are the rules:
-
--   Decimals are not shown by default.
-
--   You can specify 1 or 2 decimal places using the `NumberOfFractionalDigits` property in annotations. If a value of more than 2 is provided, it remains at 2.
-
-    For a currency-based measure, the number of decimal places as specified in the annotation is only considered if the measure value is also being displayed with a scale factor. Otherwise, the number of decimal places is based on the displayed currency.
-
-
-In the following sample code, the weight property number of fractional digits provided in the OData metadata, is set to the value 1 as provided in the [com.sap.vocabularies.UI.v1.DataPoint](annotations-used-in-overview-pages-65731e6.md) `ValueFormat` property:
-
-> ### Sample Code:  
-> XML Annotation
-> 
-> ```xml
-> <Annotation Term="com.sap.vocabularies.UI.v1.DataPoint" Qualifier="Weight">
->     <Record Type="com.sap.vocabularies.UI.v1.DataPointType">
->         <PropertyValue Property="Value" Path="Weight"/>
->         <PropertyValue Property="ValueFormat">
->             <Record Type="com.sap.vocabularies.UI.v1.NumberFormat">
->                 <PropertyValue Property="NumberOfFractionalDigits" Int="1"/>
->             </Record>
->         </PropertyValue>
->     </Record>
-> </Annotation>
-> 
-> ```
-
-> ### Sample Code:  
-> ABAP CDS Annotation
-> 
-> ```
-> 
-> @UI.dataPoint: { 
->    valueFormat.numberOfFractionalDigits: 1  
-> }
-> price;
-> ```
-
-> ### Sample Code:  
-> CAP CDS Annotation
-> 
-> ```
-> 
-> UI.DataPoint #Price : {
->     $Type : 'UI.DataPointType',
->     Value : Price,
->     ValueFormat : {
->         $Type : 'UI.NumberFormat',
->         NumberOfFractionalDigits : 1
->     }
-> }
-> ```
-
-
-
-### Semantic Coloring for Visual Filters Based on Measure Values
+## Semantic Coloring for Visual Filters Based on Measure Values
 
 We support only hard-coded values. Ensure that a data point has been defined for the measure of the chart and that the criticality has been configured for the data point.
 
@@ -1284,6 +908,88 @@ We support only hard-coded values. Ensure that a data point has been defined for
 >             }
 > 
 > ```
+
+
+
+<a name="loio1714720cae984ad8b9d9111937e7cd38__section_gxg_tq2_mqb"/>
+
+## Semantic Coloring for Visual Filters Based on Dimension Values
+
+Semantic coloring is based on the criticality defined in the `ValueCriticality` annotations for dimensions. The value returned from the path determines the color.
+
+> ### Note:  
+> -   No color is applied to the chart dimension when a neutral value is returned.
+> 
+> -   Chart measure semantic coloring takes precedence over dimension semantic coloring.
+
+For a sample annotation, see the [Support for Criticality Coloring](configuring-charts-653ed0f.md#loio653ed0f4f0d743dbb33ace4f68886c4e__criticality_coloring_subsection) section in [Configuring Charts](configuring-charts-653ed0f.md).
+
+
+
+<a name="loio1714720cae984ad8b9d9111937e7cd38__section_nxf_3yy_ghb"/>
+
+## Guidelines
+
+Show the filter dimension with one measure in the visual filter not with multiple measures.
+
+Filter dimensions in the regular filters \(filter bar\) have exactly one representation in the visual filter bar.
+
+Do not show the same filter dimension with two or more different measures at the same time in the visual filter bar. The following example shows the `Dimension Year` filter with two different measures *Revenue* and *Quantity*. Showing the filter *dimensionYear* twice is not in sync with the regular filter, where it is shown only once. Furthermore, matching between the two filter types won't work.
+
+If the use case requires visualizing a dimension with different measures, consider using an overview page instead.
+
+****
+
+
+<table>
+<tr>
+<th valign="top">
+
+Do
+
+</th>
+<th valign="top">
+
+Don't
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+![](images/ALP_VFB_LineChartDO_ace802e.jpg)
+
+</td>
+<td valign="top">
+
+![](images/ALP_VFB_LineChartDONT_f95c7de.jpg)
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+**For each dimension, display exactly one representation in the visual filter bar.**
+
+</td>
+<td valign="top">
+
+**Do not use the same filter dimension with different measures.**
+
+</td>
+</tr>
+</table>
+
+
+
+<a name="loio1714720cae984ad8b9d9111937e7cd38__section_qsw_sts_cqb"/>
+
+## Additional Features in SAP Fiori Elements for OData V4
+
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Visual Filters](visual-filters-5ea9bb1.md).
 
 **Related Information**  
 

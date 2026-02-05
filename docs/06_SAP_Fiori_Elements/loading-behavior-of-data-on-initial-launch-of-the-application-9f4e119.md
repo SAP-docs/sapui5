@@ -111,3 +111,13 @@ The loading behavior of data based on these settings is as follows:
 -   `Enabled`: An initial load of data occurs for the standard variant. End users can override this by deselecting the *Apply Automatically* checkbox in the *Manage Views* dialog.
 
 
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Loading Behavior of Data on Initial Launch of the Application](loading-behavior-of-data-on-initial-launch-of-the-application-b736ab6.md).
+
+**Related Information**  
+
+
+[The VariantManagement Building Block](the-variantmanagement-building-block-33640ff.md "You can use the VariantManagement building block to enable variant management for any flex-enabled control.")
+

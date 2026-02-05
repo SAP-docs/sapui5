@@ -2,7 +2,7 @@
 
 # Composite Binding
 
-Calculated fields enable the binding of multiple properties in different models to a single property of a control.
+Composite bindings let you bind multiple model properties to one control property. These properties can come from the same model or from different models.
 
 The value property of a text field, for example, may be bound to a property `firstName` and a property `lastName` in a model. The application can access these values in a formatter function and can decide how they should be processed or combined together. If no formatter function is specified, the values are joined together by default. You can use the `useRawValues` property to specify if the parameter values in the formatter function are formatted according to the type of the property or not.
 
@@ -86,11 +86,11 @@ These samples also work with a relative binding path, when you use them as a tem
 
 <a name="loioa2fe8e763014477e87990ff50657a0d0__section_tlp_5np_rcb"/>
 
-## Complex Syntax for Calculated Fields
+## Composite Binding with Complex Syntax
 
-Complex \(or "extended"\) syntax can be used for calculated fields in declarative views, such as XML views. The following examples show how to use the feature:
+Complex \(or "extended"\) syntax containing path, formatting, or type information can be used in declarative views, such as XML views. The following examples show how to use the feature:
 
--   You can mix text with calculated fields as follows:
+-   You can mix text with properties from bindings as follows:
 
     ```
     <Label text="Hello Mr. {path: '/singleEntry/firstName', formatter: '.myFormatter'}, {/singleEntry/lastName}"/>
@@ -99,7 +99,7 @@ Complex \(or "extended"\) syntax can be used for calculated fields in declarativ
     > ### Note:  
     > Use translatable text in your application.
 
--   Use a syntax with leading quotation marks \("..."\) if you use MVC and your formatter or type is located in the controller. In the following example, the existing type or formatter function in the controller is used:
+-   Use a syntax with a leading dot \("."\) if you use MVC and your formatter or type is located in the controller. In the following example, the existing type or formatter function in the controller is used:
 
     ```
     <Text text="{path: 'gender', formatter: '.myGenderFormatter'} {firstName}, {lastName}"/>

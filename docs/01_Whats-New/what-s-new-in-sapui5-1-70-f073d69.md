@@ -618,7 +618,7 @@ The object page has these new features:
     -   Smart stacked bar micro chart
 
 
-    For more information, see [Micro Chart Facet](../06_SAP_Fiori_Elements/micro-chart-facet-e219fd0.md).
+    For more information, see [Micro Chart Facet in the Object Page Header](../06_SAP_Fiori_Elements/micro-chart-facet-in-the-object-page-header-e219fd0.md).
 
 -   A *Paste* button is available in the table toolbar if copying and pasting from Microsoft Excel is supported. For more information, see [Copying and Pasting from External Applications to Tables](../06_SAP_Fiori_Elements/copying-and-pasting-from-external-applications-to-tables-f6a8fd2.md).
 
@@ -650,6 +650,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.142](what-s-new-in-sapui5-1-142-92ed100.md "With this release SAPUI5 is upgraded from version 1.141 to 1.142.")
 
 [What's New in SAPUI5 1.141](what-s-new-in-sapui5-1-141-a7ed66d.md "With this release SAPUI5 is upgraded from version 1.140 to 1.141.")
 

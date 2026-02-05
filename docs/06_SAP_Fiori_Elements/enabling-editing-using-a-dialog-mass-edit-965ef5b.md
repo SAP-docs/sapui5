@@ -24,7 +24,7 @@ The values that are changed within the mass edit dialog are applied to all selec
 
 ## Additional Features in SAP Fiori Elements for OData V2
 
-Using the mass edit dialog is only available in the list report. For more information, see [Enabling Editing Using a Dialog \(Mass Edit\) in the List Report](enabling-editing-using-a-dialog-mass-edit-in-the-list-report-7cc4f04.md).
+Using the mass edit dialog is only available in the list report. For more information, see [Enabling Editing Using a Dialog \(Mass Edit\) on the List Report Page](enabling-editing-using-a-dialog-mass-edit-on-the-list-report-page-7cc4f04.md).
 
 
 

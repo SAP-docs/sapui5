@@ -121,3 +121,8 @@ The following sample code shows a sort configuration in the annotation file. In 
 > ### Note:  
 > Overview pages allow you to share sort parameters defined in the presentation variant to any target SAP Fiori Elements application. The target applications can use these parameters to sort data accordingly. For more information, see [Configuring External Navigation](configuring-external-navigation-1d4a0f9.md).
 
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Configuring Sort Properties](configuring-sort-properties-ad8aa01.md).
+

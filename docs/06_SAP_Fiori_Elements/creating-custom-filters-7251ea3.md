@@ -6,11 +6,6 @@ You can define custom filters for compact filters and KPI tags.
 
 
 
-> ### Note:  
-> This topic is applicable only to SAP Fiori elements for OData V2.
-
-
-
 ## Compact Filters
 
 You can define custom filter view fragments, use view extensions, and define extended fragments and controllers in the application namespace as shown in the following sample code:

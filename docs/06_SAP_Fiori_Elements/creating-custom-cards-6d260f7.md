@@ -165,41 +165,6 @@ For more information on card actions, see [Overview Page Card](overview-page-car
 
 
 
-<a name="loio6d260f7708ca4c4a9ff45e846402aebb__section_yrj_pcj_p1c"/>
-
-## Additional Features in SAP Fiori Elements for OData V2
-
-
-
-### Using an Extension API to Apply Filters on Custom Cards
-
-You can use an extension API to apply the filters for a custom card based on the entities that are relevant to the card. To do so, add the `setRelevantFilters` extension API in your custom card controller, as shown in the following sample code:
-
-> ### Sample Code:  
-> ```
-> (function () {
->     "use strict";
->     /*global sap, jQuery */
->     sap.ui.define([], function () {
->         return {
->             onInit: function () { },
->             onAfterRendering: function () {},
->             /**
->              * Extension function to receive card relevant filters
->              * @param {sap.ui.model.Filter} oFilters - Relevant filters
->              * @returns {void}
->              */
->             setRelevantFilters: function (oFilters) {
->                 var oView = this.getView().byId("cardView");
->                 if (oFilters[0] && oFilters[0].aFilters && oFilters[0].aFilters.length > 0) {
->                     // Apply filters to the card
->                     oView.getBinding("items").filter(oFilters);
->                 } else {
->                     oView.getBinding("items").filter([]);
->                 }
->             }
->         });
-> })();
-> 
-> ```
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Creating Custom Cards](creating-custom-cards-95e80e2.md).
 

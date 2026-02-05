@@ -6,11 +6,6 @@ Define custom actions for a chart by configuring the annotation and `manifest.js
 
 
 
-> ### Note:  
-> This topic is only applicable to SAP Fiori elements for OData V2.
-
-
-
 ## onBeforeRebindChartExtension
 
 Use the `onBeforeRebindChartExtension` chart support controller extension to define application-specific actions. This allows you to bind additional parameters, such as custom filters or chart queries.

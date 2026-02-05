@@ -64,3 +64,8 @@ You can modify the default mode by using the `statePreservationMode` manifest pr
 > ### Restriction:  
 > Discovery mode isn't applicable to SAP Fiori elements for OData V4.
 
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Enabling Discovery/Persistence Mode](enabling-discovery-persistence-mode-69503c2.md).
+

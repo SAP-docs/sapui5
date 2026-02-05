@@ -9,7 +9,7 @@ These are made by developers during the creation of an SAP Fiori elements-based 
 Application developers can optionally also target a specific instance they want to extend in an object page:
 
 > ### Sample Code:  
-> Samplecode for SAP Fiori elements for OData V2
+> Sample code for SAP Fiori elements for OData V2
 > 
 > ```
 > "sap.suite.ui.generic.template.ObjectPage.view.Details": {
@@ -24,7 +24,7 @@ Application developers can optionally also target a specific instance they want 
 The most specific one wins. In the sample code above, this means for the `SalesOrder_WD` page the `SalesOrderExtension` is loaded, and for all others the `DetailsExtension` is loaded. Behind the hash is the ID of the view.
 
 > ### Sample Code:  
-> Samplecode for SAP Fiori elements for OData V4
+> Sample code for SAP Fiori elements for OData V4
 > 
 > ```
 > "sap.fe.templates.ObjectPage.ObjectPageController": {
@@ -40,7 +40,7 @@ The most specific one wins. In the sample code above, this means for the `SalesO
 The following sample code shows the logic used:
 
 > ### Sample Code:  
-> Samplecode for SAP Fiori elements for OData V2
+> Sample code for SAP Fiori elements for OData V2
 > 
 > ```
 > "sap.suite.ui.generic.template.ObjectPage.view.Details": {
@@ -73,7 +73,7 @@ The following sample code shows the logic used:
 Here, `STTASOWD20` represents the application name , `sap.suite.ui.generic.template.ObjectPage.view.Detail` represents the view ID and `C_STTA_SalesOrderItem_WD_20` represents the entity set of the relevant object page.
 
 > ### Sample Code:  
-> Samplecode for SAP Fiori elements for OData V4
+> Sample code for SAP Fiori elements for OData V4
 > 
 > ```
 > {
@@ -112,6 +112,8 @@ Here, `STTASOWD20` represents the application name , `sap.suite.ui.generic.templ
 
 Here, `MyApplicationID::MainEntityObjectPage` represents the page ID.
 
+In addition, key users and developers can extend and configure SAP Fiori applications by adapting the UI. For more information, see [Extending Delivered Apps Using Adaptation Extensions](extending-delivered-apps-using-adaptation-extensions-52fc48b.md).
+
 
 
 <a name="loio358cf2598d71462b8ac2bd8c944efbfd__section_b5m_cr3_znb"/>
@@ -122,4 +124,9 @@ App extensions allow customers and partners to introduce their own functionality
 
 > ### Note:  
 > This option is possible only for list report, object page, overview page and analytical list page.
+
+
+
+> ### Note:  
+> For information about SAP Fiori Elements for OData V2, see [Extending SAP Fiori Elements-Based Apps](extending-sap-fiori-elements-based-apps-03b3b87.md).
 

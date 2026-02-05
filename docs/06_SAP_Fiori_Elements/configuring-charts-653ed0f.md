@@ -20,7 +20,7 @@ You can configure a chart to be part of a list report that has multiple views. F
 
 ## Configuring Charts in an Object Page
 
-For more information, see [Adding a Chart Facet](adding-a-chart-facet-6495eab.md).
+For more information, see [Adding a Chart Facet to an Object Page](adding-a-chart-facet-to-an-object-page-6495eab.md).
 
 
 
@@ -596,7 +596,7 @@ You can use the chart settings in the `manifest.json` file to configure the head
 > ```
 
 > ### Note:  
-> These settings aren't applicable on charts in an object page because the title of the chart is determined by the section title or subsection title. For more information, see the Tip provided in [Defining and Adapting Sections](defining-and-adapting-sections-facfea0.md).
+> These settings aren't applicable on charts in an object page because the title of the chart is determined by the section title or subsection title. For more information, see the Tip provided in [Defining and Configuring Sections](defining-and-configuring-sections-facfea0.md).
 
 
 
@@ -653,4 +653,9 @@ You can use the `manifest.json` file to configure chart settings that allow end 
 > -   Semantic coloring using the `UI.Criticality` and `UI.CriticalityCalculation` annotations aren't supported.
 > 
 > -   Aggregations on draft-enabled entities are **not** supported in ABAP CDS, since `$apply` with or without a filter on draft or transactional entities isn't currently supported by SADL.
+
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Configuring Charts](configuring-charts-05eda5a.md).
 

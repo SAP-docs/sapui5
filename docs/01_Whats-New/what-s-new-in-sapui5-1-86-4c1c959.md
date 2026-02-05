@@ -840,7 +840,7 @@ The following changes and new features are available for SAP Fiori elements for 
 
     -   Application developers can use the new extension method `adaptNavigationContext` to modify \(add/remove/change\) the information available in the navigation context just before the external outbound navigation is triggered. For more information, see [Creating an Extension to Modify Properties in the Navigation Context](../06_SAP_Fiori_Elements/creating-an-extension-to-modify-properties-in-the-navigation-context-199a496.md).
 
-    -   Application developers can use the new extension method `onBeforeNavigation` to selectively change the target when chevron navigation is triggered from a table in list reports and object pages. For more information, see [Example: Replacing Standard Navigation in a Responsive Table in the List Report](../06_SAP_Fiori_Elements/example-replacing-standard-navigation-in-a-responsive-table-in-the-list-report-a12ad60.md).
+    -   Application developers can use the new extension method `onBeforeNavigation` to selectively change the target when chevron navigation is triggered from a table in list reports and object pages. For more information, see [Example: Replacing Standard Navigation in a Responsive Table on the List Report Page](../06_SAP_Fiori_Elements/example-replacing-standard-navigation-in-a-responsive-table-on-the-list-report-page-a12ad60.md).
 
 
 -   The share functionality has been updated: A static tile is now created if the filter bar contains a semantic date. For more information, see [The Share Functionality](../06_SAP_Fiori_Elements/the-share-functionality-022bf0d.md).
@@ -923,6 +923,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.142](what-s-new-in-sapui5-1-142-92ed100.md "With this release SAPUI5 is upgraded from version 1.141 to 1.142.")
 
 [What's New in SAPUI5 1.141](what-s-new-in-sapui5-1-141-a7ed66d.md "With this release SAPUI5 is upgraded from version 1.140 to 1.141.")
 

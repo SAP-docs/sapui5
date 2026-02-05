@@ -131,11 +131,16 @@ Annotations used to set up various elements of object pages
 </td>
 <td valign="top">
 
-[Configuring Object Page Features](configuring-object-page-features-d26d3dd.md)
+[Configuring Features of the Object Page](configuring-features-of-the-object-page-d26d3dd.md)
 
 [Configuring Further Common Features](configuring-further-common-features-a4d3c46.md)
 
 </td>
 </tr>
 </table>
+
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Elements of the Object Page](elements-of-the-object-page-642c36c.md).
 

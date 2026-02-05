@@ -26,17 +26,15 @@ When dealing with incoming navigation, in addition to the navigation context pas
 
 ![](images/Handling_Default_Values_from_FLP_9c2ee88.png "Handling Default Values from FLP")
 
--   When you navigate to a list report application using intent-based navigation:
+-   When you navigate to a list report application using intent-based navigation with a navigation context:
 
     Only the values added by the FLP through the standard target mapping mechanism are considered.
 
--   When you navigate to a list report application using a static FLP tile \(with no navigation context\)
+    Additionally, special handling applies for `DisplayCurrency`. If a mandatory filter field or a parameter with the technical name `DisplayCurrency` or `P_DisplayCurrency` doesn't receive a value from the incoming navigation context, it's set using the default `DisplayCurrency` setting configured in the user's SAP Fiori launchpad. For all other fields, the FLP default values are ignored, except those provided by the FLP through the standard target-mapping mechanism.
+
+-   When you navigate to a list report page application using a static FLP tile with no navigation context.
 
     If no user default variant is available, the FLP default values passed using the target mapping mechanism are used.
-
--   When you navigate to a list report application using a dynamic tile, such as an *SAP Smart Business* tile where the navigation context is passed:
-
-    In this case, a special handling applies for `DisplayCurrency`. If a mandatory filter field or a parameter with the technical name `DisplayCurrency` or `P_DisplayCurrency` respectively, doesn't receive a value from the incoming navigation context, it is set using the default `DisplayCurrency` setting configured in the end user's SAP Fiori launchpad. For all other fields, the FLP default values are ignored, except those provided by the FLP through the standard target mapping mechanism.
 
 
 > ### Note:  
@@ -321,8 +319,6 @@ To enable deep linking for a subobject page, you need to enable it in the `manif
 > }
 > ```
 
-Applications can trigger deep linking to a subobject page by providing all the semantic or technical keys for the entity sets of the object page and semantic keys of the subobject page.
-
 To directly load the n-th level subobject page, you need to provide the semantic or technical keys of the object page as well as all the semantic keys of the subobject pages until the n-th level in the URL.
 
 > ### Example:  
@@ -347,4 +343,9 @@ This is also true for incoming filter values coming for navigation entity sets. 
 > 
 > 
 > As with main entity set filter fields, an incoming value is also checked against a field that matches the name but additionally has the prefix `"P_"` added \(or removed, in cases where the incoming context has a field with the prefix `"P_"`, but the target field does not have this prefix\).
+
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Navigation to an App \(Inbound Navigation\)](navigation-to-an-app-inbound-navigation-496b2a5.md).
 

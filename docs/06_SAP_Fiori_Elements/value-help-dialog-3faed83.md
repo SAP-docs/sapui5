@@ -471,3 +471,8 @@ The tab also includes a corresponding negation condition called *Exclude*, with 
 > ### Note:  
 > The `Edm.Date` fields with `AllowedExpressions` set to `SingleValue` or `SingleRange`, and `Edm.DateTimeOffset` fields with `AllowedExpressions` set to `SingleRange`, are displayed with semantic date options when used in a filter context. For more information, see [Enabling Semantic Operators in the Filter Bar](enabling-semantic-operators-in-the-filter-bar-fef65d0.md).
 
+
+
+> ### Note:  
+> For information aboutSAP Fiori elements for OData V2, see [Value Help Dialog](value-help-dialog-2b70be2.md).
+

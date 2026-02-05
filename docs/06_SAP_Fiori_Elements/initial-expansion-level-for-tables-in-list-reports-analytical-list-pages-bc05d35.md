@@ -4,9 +4,6 @@
 
 You can set the number of expanded levels for tables in List Reports and Analytical List Pages using the `initialExpansionLevel` property of the `PresentationVariant` annotation.
 
-> ### Note:  
-> This topic is only applicable to SAP Fiori elements for OData V2.
-
 
 
 <a name="loiobc05d353d2c44854b1ea228b99e922a2__section_gpy_d5f_lkb"/>
@@ -75,7 +72,7 @@ The `initialExpansionLevel` should never exceed the number of grouped columns.
 
 <a name="loiobc05d353d2c44854b1ea228b99e922a2__section_h1l_x5f_lkb"/>
 
-## Defining Initial Expansion Level in PresentationVariant
+## Defining Initial Expansion Level in `PresentationVariant` 
 
 For `initialExpansionLevel` to be supported, `PresentationVariant` annotations must exist for the content area in Analytical List Pages/ List Reports and multiple tabs in a List Reports.
 
@@ -88,7 +85,7 @@ For `initialExpansionLevel` to be supported, `PresentationVariant` annotations m
 > 
 > -   The qualifier is not defined in the manifest: There is no default `SelectionPresentationVariant` but there is a default `PresentationVariant`.
 
-The tabs in a List Reports can be associated directly with the `PresentationVariant` when the annotation path of the tab defined in the manifest points to a `PresentationVariant` annotation. In this case, the required `PresentationVariant` has to be defined as shown in the sample code below:
+The tabs in list report pages can be associated directly with the `PresentationVariant` when the annotation path of the tab defined in the manifest points to a `PresentationVariant` annotation. In this case, the required `PresentationVariant` has to be defined as shown in the sample code below:
 
 > ### Sample Code:  
 > XML Annotation
@@ -228,9 +225,9 @@ If the content area in the Analytical List Pages and tabs in the List Reports ar
 **Related Information**  
 
 
-[Configuring Tables](configuring-tables-f4eb70f.md "You can use the annotations and entries in the manifest.json to control various aspects of tables.")
+[Configuring Tables](configuring-tables-3695931.md "You can use the annotations and entries in manifest.json to control various aspects of tables.")
 
 [Configuring the Table-Only View as the Default Option](configuring-the-table-only-view-as-the-default-option-d074e26.md "In this mode, the data is displayed in the table format.")
 
-[Configuring Default Settings \(Visualizations, Sort Order, Filter Values\)](configuring-default-settings-visualizations-sort-order-filter-values-49a6ba5.md "SAP Fiori elements allows you to specify a UI.SelectionPresentationVariant.")
+[Configuring Default Settings \(Visualizations, Sort Order, Filter Values\)](configuring-default-settings-visualizations-sort-order-filter-values-22e32b7.md "SAP Fiori elements allows you to specify a UI.SelectionPresentationVariant.")
 

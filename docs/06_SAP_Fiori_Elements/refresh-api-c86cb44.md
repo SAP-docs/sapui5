@@ -6,11 +6,6 @@ Use the `refreshBinding` function \(in `Component.js`\) to refresh the header, f
 
 
 
-> ### Note:  
-> This topic is only applicable to SAP Fiori elements for OData V2.
-
-
-
 This helps you to reload the data for all components configured in ALP without triggering the browser refresh. The selections in the filter bar \(compact or visual filter\) and the personalization settings \(sorting, grouping, and so on\) are retained even after the refresh.
 
 > ### Note:  

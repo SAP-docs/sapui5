@@ -9,12 +9,12 @@ Information how to add new attributes of manifest \(also known as descriptor\) v
 <tr>
 <th valign="top">
 
-Attribute
+Version \(UI5 Version\)
 
 </th>
 <th valign="top">
 
-Version\*
+Attribute
 
 </th>
 <th valign="top">
@@ -26,29 +26,109 @@ Description
 <tr>
 <td valign="top">
 
-`sap.ui5/dependencies/minUI5Version`
+2.0.0 \(1.136\)
 
 </td>
 <td valign="top">
 
-V64 \(1.124\)
+Root View and Routing Configuration
 
 </td>
 <td valign="top">
 
-The attribute `minUI5Version` can now be an array of versions where each major version can only be included once. If you specify an array that contains more than one version, and if version 1 is included, it must be at least 1.120.x.
+Synchronous root view creation and routing configuration are no longer supported.
+
+The `async` flag for both the `rootview` and the `routing` configuration is now implicitly set to`true` and no longer needs to be specified.
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-`sap.fiori/cloudDevAdaptationStatus` 
+2.0.0 \(1.136\)
 
 </td>
 <td valign="top">
 
-V51 \(1.110\)
+Deprecated Manifest Entries
+
+</td>
+<td valign="top">
+
+Deprecated manifest entries managed by the SAPUI5 framework cannot be used anymore and will cause errors. This has the following consequences:
+
+-   Arbitrary JavaScript resources can no longer be loaded via `sap.ui5/resources/js`. Please use dedicated modules as eager dependencies instead, such as within your `Component.js`
+-   The routing properties `ViewId`, `viewName`, `viewPath` and `viewLevel` can no longer be used. Please use the documented alternatives by replacing them with the properties `id`, `name`, `path` and `level`, respectively along with adding the `type: "view"`. For more information, See [Routing Configuration](https://github.wdf.sap.corp/uics-innersource/ui5-docs/blob/manifestmigr/docs/04_Essentials/routing-configuration-9023130.md).
+-   Supported themes can no longer be specified via the `sap.ui/supportedThemes` section.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+2.0.0 \(1.136\)
+
+</td>
+<td valign="top">
+
+Error Validation
+
+</td>
+<td valign="top">
+
+Manifest Version 2 also enables a stricter error handling for views and fragments. Syntactical errors \(e.g. broken binding strings\) will now lead to errors being thrown. Programmatically created views will reject the factory promise accordingly.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+2.0.0 \(1.136\)
+
+</td>
+<td valign="top">
+
+`IAsyncContentCreation`
+
+</td>
+<td valign="top">
+
+While the Manifest Version 2 behavior regarding root view and routing configuration is similar to the behavior of the [`sap.ui.core.IAsyncContentCreation`](https://ui5.sap.com/#/api/sap.ui.core.IAsyncContentCreation) interface, they are not interchangeable. For compatibility reasons, the Manifest Version 2 does **not** enforce the implementation of this interface. In order to use an asynchronous `sap/ui/core/UIComponent#createContent` implementation in your subclasses, the `sap.ui.core.IAsyncContentCreation` interface must be implemented explicitly.
+
+Please also be aware that the implementation of the `sap.ui.core.IAsyncContentCreation` interface changes the aggregation behavior of the root view. When the root view is loaded asynchronously and the Component implements `sap.ui.core.IAsyncContentCreation`, the root view controller's [`onInit`](https://ui5.sap.com/#/api/sap.ui.core.mvc.Controller%23methods/onInit) hook no longer has access to Component models through the view instance. To retrieve model instances, we recommend using the [`sap/ui/core/mvc/Controller#getOwnerComponent`](https://ui5.sap.com/#/api/sap.ui.core.mvc.Controller%23methods/getOwnerComponent) API on the controller instance.
+
+We recommend any Component or UIComponent to implement the `sap.ui.core.IAsyncContentCreation` interface whenever possible.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+1.63.0 \(1.124\)
+
+</td>
+<td valign="top">
+
+`sap.ui5/dependencies/minUI5Version`
+
+</td>
+<td valign="top">
+
+The attribute `minUI5Version` can now be an array of versions where each major version can only be included once. If you specify an array that contains more than one version, and if version 1 is included, it must be at least 1.136.x.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+1.50.0 \(1.110\)
+
+</td>
+<td valign="top">
+
+`sap.fiori/cloudDevAdaptationStatus` 
 
 </td>
 <td valign="top">
@@ -69,14 +149,14 @@ For more information, see [Releasing an SAP Fiori Application to Be Extensible i
 <tr>
 <td valign="top">
 
-`sap.ui5/resources/js`
-
-\(deprecated\)
+1.136.0 \(1.94\)
 
 </td>
 <td valign="top">
 
-V37 \(1.94\)
+`sap.ui5/resources/js`
+
+\(deprecated\)
 
 </td>
 <td valign="top">
@@ -88,12 +168,12 @@ Since 1.94 the usage of `js` resources is deprecated. Please use regular depende
 <tr>
 <td valign="top">
 
-`sap.app/dataSources/<sourceName>/settings/objects` 
+1.34.0 \(1.92\)
 
 </td>
 <td valign="top">
 
-V35 \(1.92\)
+`sap.app/dataSources/<sourceName>/settings/objects` 
 
 </td>
 <td valign="top">
@@ -140,12 +220,12 @@ Dictionary of \(catalog\) objects offered by an INA datasource, consisting of:
 <tr>
 <td valign="top">
 
-`sap.fiori/abstract` 
+1.31.0 \(1.87\)
 
 </td>
 <td valign="top">
 
-V32 \(1.87\)
+`sap.fiori/abstract` 
 
 </td>
 <td valign="top">
@@ -173,16 +253,16 @@ Indicates whether an app is an abstract \(generic\) app, which may not used dire
 <tr>
 <td valign="top">
 
+1.21.0 \(1.77\)
+
+</td>
+<td valign="top">
+
 `sap.ui5/models/<modelName>/settings/supportedLocales`
 
 `sap.ui5/models/<modelName>/settings/fallbackLocale`
 
 `sap.ui5/models/<modelName>/settings/terminologies`
-
-</td>
-<td valign="top">
-
-V22 \(1.77\)
 
 </td>
 <td valign="top">
@@ -232,12 +312,12 @@ Additional resource bundles can be made available by defining `terminologies`.
 <tr>
 <td valign="top">
 
-`sap.ui5/routing/propagateTitle` 
+1.19.0 \(1.75\)
 
 </td>
 <td valign="top">
 
-V20 \(1.75\)
+`sap.ui5/routing/propagateTitle` 
 
 </td>
 <td valign="top">
@@ -288,12 +368,12 @@ The `propagateTitle` property can be set to forward title information from a nes
 <tr>
 <td valign="top">
 
-`sap.ui5/commands` 
+1.16.0 \(1.70\)
 
 </td>
 <td valign="top">
 
-V17 \(1.70\)
+`sap.ui5/commands` 
 
 </td>
 <td valign="top">
@@ -319,12 +399,12 @@ Specifies provided commands with a unique key/alias.
 <tr>
 <td valign="top">
 
-<code>sap.ui5/routing/routes/targets/<i class="varname">&lt;targetName&gt;</i>/usage</code> 
+1.15.0 \(1.66\)
 
 </td>
 <td valign="top">
 
-V16 \(1.66\)
+<code>sap.ui5/routing/routes/targets/<i class="varname">&lt;targetName&gt;</i>/usage</code> 
 
 </td>
 <td valign="top">
@@ -386,6 +466,11 @@ A component can be configured as a routing target by defining it in the `compone
 <tr>
 <td valign="top">
 
+1.14.0 \(1.62\)
+
+</td>
+<td valign="top">
+
 <code>sap.ui5/routing/routes/targets/<i class="varname">&lt;targetName&gt;</i>/type</code>
 
 <code>sap.ui5/routing/routes/targets/<i class="varname">&lt;targetName&gt;</i>/path</code>
@@ -393,11 +478,6 @@ A component can be configured as a routing target by defining it in the `compone
 <code>sap.ui5/routing/routes/targets/<i class="varname">&lt;targetName&gt;</i>/name</code>
 
 <code>sap.ui5/routing/routes/targets/<i class="varname">&lt;targetName&gt;</i>/id</code>
-
-</td>
-<td valign="top">
-
-V15 \(1.62\)
 
 </td>
 <td valign="top">
@@ -441,12 +521,12 @@ With the `type` option set to "Component", the `Component.js` which is available
 <tr>
 <td valign="top">
 
-`sap.ui5/models/<modelName>/settings/enhanceWith` 
+1.11.0 \(1.56\)
 
 </td>
 <td valign="top">
 
-V12 \(1.56\)
+`sap.ui5/models/<modelName>/settings/enhanceWith` 
 
 </td>
 <td valign="top">
@@ -482,12 +562,12 @@ Additional attributes can be found in [Terminologies](terminologies-eba8d25.md).
 <tr>
 <td valign="top">
 
-`sap.ui5/componentUsages/lazy` 
+1.11.0 \(1.56\)
 
 </td>
 <td valign="top">
 
-V12 \(1.56\)
+`sap.ui5/componentUsages/lazy` 
 
 </td>
 <td valign="top">
@@ -518,12 +598,12 @@ For more information, see: [Component Instantiation Guide](component-instantiati
 <tr>
 <td valign="top">
 
-`sap.ui5/library/i18n` 
+1.9.0 \(1.52\)
 
 </td>
 <td valign="top">
 
-V10 \(1.52\)
+`sap.ui5/library/i18n` 
 
 </td>
 <td valign="top">
@@ -554,12 +634,12 @@ An object can contain additional resource bundle configuration, e.g. terminologi
 <tr>
 <td valign="top">
 
-`sap.ui5/componentUsages` 
+1.7.0 \(1.48\)
 
 </td>
 <td valign="top">
 
-V8 \(1.48\)
+`sap.ui5/componentUsages` 
 
 </td>
 <td valign="top">
@@ -596,12 +676,12 @@ For more information see:[Component Instantiation Guide](component-instantiation
 <tr>
 <td valign="top">
 
-`sap.ui5/routing/routes/target` 
+1.5.0 \(1.42\)
 
 </td>
 <td valign="top">
 
-V6 \(1.42\)
+`sap.ui5/routing/routes/target` 
 
 </td>
 <td valign="top">
@@ -643,12 +723,12 @@ Allows to define titles declaratively in the configuration \(`title` under `targ
 <tr>
 <td valign="top">
 
-`sap.ui5/models/preload` 
+1.4.0 \(1.38\)
 
 </td>
 <td valign="top">
 
-V5 \(1.38\)
+`sap.ui5/models/preload` 
 
 </td>
 <td valign="top">
@@ -671,12 +751,12 @@ Defines whether or not the model is initialized \(preloaded\) before the compone
 <tr>
 <td valign="top">
 
-`sap.ui5/routing/config/async` 
+1.3.0 \(1.34\)
 
 </td>
 <td valign="top">
 
-V4 \(1.34\)
+`sap.ui5/routing/config/async` 
 
 </td>
 <td valign="top">
@@ -705,12 +785,12 @@ For performance reasons, we recommend to always use the `async` setting. This re
 <tr>
 <td valign="top">
 
-`sap.ui5/dependencies/components/<componentname>/lazy` and `dependencies/libs/<libname>/lazy` 
+1.3.0 \(1.34\)
 
 </td>
 <td valign="top">
 
-V4 \(1.34\)
+`sap.ui5/dependencies/components/<componentname>/lazy` and `dependencies/libs/<libname>/lazy` 
 
 </td>
 <td valign="top">
@@ -750,12 +830,12 @@ Example for `manifest.json` for the SAP Fiori app:
 <tr>
 <td valign="top">
 
-`sap.ui/fullWidth` 
+1.3.0 \(1.34\)
 
 </td>
 <td valign="top">
 
-V4 \(1.34\)
+`sap.ui/fullWidth` 
 
 </td>
 <td valign="top">
@@ -777,12 +857,12 @@ Indicates whether an app shall run in full screen mode \(`true`\)
 <tr>
 <td valign="top">
 
-`sap.app/crossNavigation/inbounds/<inboundname>/subTitle` 
+1.3.0 \(1.34\)
 
 </td>
 <td valign="top">
 
-V4 \(1.34\)
+`sap.app/crossNavigation/inbounds/<inboundname>/subTitle` 
 
 </td>
 <td valign="top">
@@ -814,12 +894,12 @@ Used to overwrite the `subTitle` attribute per inbound; use the `{{...}}` syntax
 <tr>
 <td valign="top">
 
-`sap.app/subTitle` 
+1.3.0 \(1.34\)
 
 </td>
 <td valign="top">
 
-V4 \(1.34\)
+`sap.app/subTitle` 
 
 </td>
 <td valign="top">
@@ -844,12 +924,12 @@ Added to the `manifest.json` file by using the `{{...}}` syntax
 <tr>
 <td valign="top">
 
-`sap.app/crossNavigation` 
+1.2.0 \(1.32\)
 
 </td>
 <td valign="top">
 
-V3 \(1.32\)
+`sap.app/crossNavigation` 
 
 </td>
 <td valign="top">
@@ -868,12 +948,12 @@ Contains navigation information and is a mandatory attribute in the `manifest.js
 <tr>
 <td valign="top">
 
-`_version` 
+1.2.0 \(1.32\)
 
 </td>
 <td valign="top">
 
-V3 \(1.32\)
+`_version` 
 
 </td>
 <td valign="top">

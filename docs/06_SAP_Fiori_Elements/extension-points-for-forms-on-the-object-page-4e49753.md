@@ -9,37 +9,6 @@ On the object page, you can use extension points to extend forms in sections.
 > 
 > After you've created an app extension, its display \(for example, control placement and layout\) and system behavior \(for example, model and binding usage, busy handling\) lies within the application's responsibility. SAP Fiori elements provides support only for the official `extensionAPI` functions. Don't access or manipulate controls, properties, models, or other internal objects created by the SAP Fiori elements framework.
 
-
-
-<a name="loio4e49753530ad4a73a44a5f8efac238d6__section_mq3_y5v_p4b"/>
-
-## Additional Features in SAP Fiori Elements for OData V2
-
-Use the `"SmartFormExtension|<entity name>|<fieldgroup annotation>"` key in the manifest entry to add new fields to an existing field group. In the example below, an extension is added to the *General Information* field group.
-
-> ### Sample Code:  
-> ```
-> 
-> "sap.suite.ui.generic.template.ObjectPage.view.Details": {
->     "SmartFormExtension|STTA_C_MP_Product|com.sap.vocabularies.UI.v1.FieldGroup::GeneralInformation": {
->         "className": "sap.ui.core.Fragment",
->         "fragmentName": "STTA_MP.ext.fragments.SmartFormGroupElement",
->         "type": "XML"
->     }
-> }
-> ```
-
-> ### Note:  
-> `SmartForm Extension` supports only `sap.ui.core.Fragment` for the `className`.
-
-For more information, see [Defining and Adapting Sections](defining-and-adapting-sections-facfea0.md).
-
-
-
-<a name="loio4e49753530ad4a73a44a5f8efac238d6__section_zwf_cvv_p4b"/>
-
-## Additional Features in SAP Fiori Elements for OData V4
-
 Custom fields, that is, form elements, provide the following features:
 
 -   adding arbitrary fields through an `xmlfragment` definition
@@ -51,7 +20,7 @@ Custom fields, that is, form elements, provide the following features:
 
 
 
-### Using Custom Fields
+## Using Custom Fields
 
 The form containing additional custom fields can look like this:
 
@@ -120,7 +89,7 @@ The form containing additional custom fields can look like this:
 
 
 
-### Settings for Custom Fields in Forms
+## Settings for Custom Fields in Forms
 
 You can define your custom fields by implementing an `xmlfragment` and using the following properties:
 
@@ -253,7 +222,7 @@ Defining the target fragment follows the syntax of defining a fragment via `Frag
 
 
 
-### Using the UI Model
+## Using the UI Model
 
 You can use the UI model within the fragment to react to changes of the `editMode`:
 
@@ -264,13 +233,13 @@ You can use the UI model within the fragment to react to changes of the `editMod
 
 
 
-### Live Example: Custom Form Element
+## Live Example: Custom Form Element
 
 You can explore and work with the coding yourself. For more information and live examples, see the SAP Fiori development portal at [Building Blocks - Form - Form Extensions](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/form/formCustom).
 
 
 
-### Custom Fields With Metadata Binding
+## Custom Fields With Metadata Binding
 
 You can use metadata binding as an alternative to `i18n` approach to define the label for custom fields or custom form elements.
 
@@ -287,4 +256,9 @@ You can use metadata binding as an alternative to `i18n` approach to define the 
 >   }
 > }
 > ```
+
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Extension Points for Forms on the Object Page](extension-points-for-forms-on-the-object-page-06d5dd3.md).
 

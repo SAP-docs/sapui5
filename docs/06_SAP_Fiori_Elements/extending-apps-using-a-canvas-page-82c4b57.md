@@ -4,9 +4,6 @@
 
 You can embed content into a canvas page within an app.
 
-> ### Note:  
-> This topic is only applicable to SAP Fiori elements for OData V2.
-
 A canvas page is an empty custom page in a SAP Fiori elements-based app. The content needs to be provided by an embedded implementing component.
 
 The corresponding section in the manifest looks like this:
@@ -44,7 +41,7 @@ There are two settings sections:
 
 -   The settings section placed in the `component` section contains properties that are specific to the canvas component.
 
--   The settings section placed in the `implementingComponent` section can be used to define a data binding between public properties of the embedding component and context information. This corresponds to embedding a reuse component on an object page. See [Including Reuse Components on an Object Page](including-reuse-components-on-an-object-page-d869d7a.md).
+-   The settings section placed in the `implementingComponent` section can be used to define a data binding between public properties of the embedding component and context information. This corresponds to embedding a reuse component on an object page. See [Including Reuse Components on an Object Page](including-reuse-components-on-an-object-page-344cd94.md).
 
 
 For example, the following snippet allows the implementing component to use the [`addFooterBarToPage`](https://ui5.sap.com/#/api/sap.suite.ui.generic.template.Canvas.extensionAPI.ExtensionAPI/methods/addFooterBarToPage) method to add the standard footer bar to the canvas page:
@@ -384,5 +381,5 @@ In the following code sample, the navigation stays on the same canvas page, but 
 **Related Information**  
 
 
-[Developing Reuse Components](developing-reuse-components-6314fcd.md "Follow these guidelines when developing reuse components that are to be included as sections in object pages.")
+[Developing Reuse Components](developing-reuse-components-ba619bc.md "Follow these guidelines when developing reuse components that are to be included as sections in object pages.")
 

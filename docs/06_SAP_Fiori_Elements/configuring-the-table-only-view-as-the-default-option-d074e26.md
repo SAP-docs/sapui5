@@ -6,13 +6,7 @@ In this mode, the data is displayed in the table format.
 
 
 
-Please see the sections [Additional Features in SAP Fiori Elements for OData V2](configuring-the-table-only-view-as-the-default-option-d074e26.md#loiod074e26b013647c7a93b8a9db9b51d2d__section_hyv_2r2_kqb) and [Additional Features in SAP Fiori Elements for OData V4](configuring-the-table-only-view-as-the-default-option-d074e26.md#loiod074e26b013647c7a93b8a9db9b51d2d__section_hjk_k2x_gqb) in this topic for the manifest configurations required to load the table-only view by default. For more information about configuring tables, see [Configuring Tables](configuring-tables-f4eb70f.md).
-
-
-
-<a name="loiod074e26b013647c7a93b8a9db9b51d2d__section_hyv_2r2_kqb"/>
-
-## Additional Features in SAP Fiori Elements for OData V2
+For more information about configuring tables, see [Configuring Tables](configuring-tables-3695931.md).
 
 You can adjust the width of columns by modifying the `MaxLength` metadata for texts strings and `Precision` metadata for decimals.
 
@@ -45,48 +39,19 @@ You can adjust the width of columns by modifying the `MaxLength` metadata for te
 
 
 
-### Defining Determining Actions
+<a name="loiod074e26b013647c7a93b8a9db9b51d2d__section_hyv_2r2_kqb"/>
+
+## Defining Determining Actions
 
 For more information, see [Defining Determining Actions in List Reports](defining-determining-actions-in-list-reports-d719982.md).
 
 > ### Recommendation:  
 > Please note that this feature is deprecated. SAP Fiori elements supports this feature only for compatibility reasons. We recommend that you avoid using determining buttons.
 
-
-
-<a name="loiod074e26b013647c7a93b8a9db9b51d2d__section_hjk_k2x_gqb"/>
-
-## Additional Features in SAP Fiori Elements for OData V4
-
-
-
-### ALP Configuration
-
-Make the following entries in the manifest:
-
-> ### Sample Code:  
-> Manifest entry for ALP configuration
-> 
-> ```
-> {
->   "views": {
->     "paths": [
->       {
->         "defaultPath": "secondary"
->       }
->     ]
->   }
-> }
-> ```
-
-Setting the `"defaultPath"` to `"secondary"` ensures that the default view that is loaded is the table-only view.
-
-For more information about options that can be provided for the annotation path, see [Configuring the Manifest for the Analytical List Page](configuring-the-manifest-for-the-analytical-list-page-2a9df06.md).
-
 **Related Information**  
 
 
 [Configuring the Content Area](configuring-the-content-area-fc7d73c.md "Visualize data from the main entity set and seamlessly navigate to an application. Define a valid UI.Chart or UI.LineItem annotation to render content for the chart area and table area. For more information, see Configuring the Manifest for the Analytical List Page.")
 
-[Setting the Table Type](setting-the-table-type-7f844f1.md "You can control which table type is rendered on the list report page and on the object page by configuring the manifest.json file and by using annotations.")
+[Setting the Table Type](setting-the-table-type-5d27054.md "You can control which table type is rendered in the list report and on the object page by configuring the manifest.json file and by using annotations.")
 

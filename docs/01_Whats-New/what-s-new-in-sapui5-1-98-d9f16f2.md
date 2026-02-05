@@ -992,7 +992,7 @@ The following changes and new features are available for SAP Fiori elements for 
 
 -   An additional filter option, *All \(Hiding Drafts\)*, is now available for the *Editing Status* filter field, for all draft applications. It replaces the draft toggle button in the list report table toolbar. Also, with this change, the draft toggle feature is available by default in draft-enabled applications. For more information, see [Toggling Between Draft and Saved Values](../06_SAP_Fiori_Elements/toggling-between-draft-and-saved-values-fd3950a.md).
 
--   It’s now possible to mass edit records in the list report page using the Edit dialog. For more information, see [Enabling Editing Using a Dialog \(Mass Edit\) in the List Report](../06_SAP_Fiori_Elements/enabling-editing-using-a-dialog-mass-edit-in-the-list-report-7cc4f04.md).
+-   It’s now possible to mass edit records in the list report page using the Edit dialog. For more information, see [Enabling Editing Using a Dialog \(Mass Edit\) on the List Report Page](../06_SAP_Fiori_Elements/enabling-editing-using-a-dialog-mass-edit-on-the-list-report-page-7cc4f04.md).
 
 -   You now have an option to navigate from the list report to an object page directly in edit mode. For more information, see [Navigation to an Object Page in Edit Mode](../06_SAP_Fiori_Elements/navigation-to-an-object-page-in-edit-mode-8665847.md).
 
@@ -1048,7 +1048,7 @@ The following changes and new features are available for SAP Fiori elements for 
 
 -   SAP Fiori elements now enables you to navigate to a different internal target. For more information, see [Example: Enable Internal Navigation to Different Detail Page](../06_SAP_Fiori_Elements/example-enable-internal-navigation-to-different-detail-page-75002b3.md).
 
--   Users can now navigate to an app by clicking on the header of a KPI card. For more information, see [Creating Key Performance Indicator Tags](../06_SAP_Fiori_Elements/creating-key-performance-indicator-tags-d80a360.md).
+-   Users can now navigate to an app by clicking on the header of a KPI card. For more information, see [Creating Key Performance Indicator Tags in Analytical Services](../06_SAP_Fiori_Elements/creating-key-performance-indicator-tags-in-analytical-services-d80a360.md).
 
 -   Optimizations for the automatic column width calculation in tables are available for the `FieldGroup` and `Date`, both in display and edit mode. For more information, see [Setting the Default Column Width](../06_SAP_Fiori_Elements/setting-the-default-column-width-a765253.md).
 
@@ -1073,6 +1073,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.142](what-s-new-in-sapui5-1-142-92ed100.md "With this release SAPUI5 is upgraded from version 1.141 to 1.142.")
 
 [What's New in SAPUI5 1.141](what-s-new-in-sapui5-1-141-a7ed66d.md "With this release SAPUI5 is upgraded from version 1.140 to 1.141.")
 

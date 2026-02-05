@@ -74,7 +74,7 @@ Object Page
 
 Overview Page
 
-[Defining Custom Actions](defining-custom-actions-02fb273.md)
+[Defining Custom Actions on the Overview Page](defining-custom-actions-on-the-overview-page-02fb273.md)
 
 </td>
 </tr>
@@ -463,7 +463,7 @@ There are different ways to configure custom actions.
 
 -   Annotation-based actions
 
-    -   Actions that require user confirmation, for example, those for critical actions that can have severe consequences. The system opens a dialog in which the user has to confirm the action. For more information, see[Adding Confirmation Popovers for Actions](adding-confirmation-popovers-for-actions-87130de.md).
+    -   Actions that require user confirmation, for example, those for critical actions that can have severe consequences. The system opens a dialog in which the user has to confirm the action. For more information, see [Adding Confirmation Popovers for Actions](adding-confirmation-popovers-for-actions-87130de.md).
 
     -   Actions that require additional user input, for example, an approval comment. The system opens a dialog with one or more entry elements in which the user enters the required data. The system can prefill data, if applicable.
 
@@ -772,7 +772,7 @@ To achieve this, you must annotate the action with `Common.DefaultValuesFunction
 ## Additional Features in SAP Fiori Elements for OData V2
 
 > ### Note:  
-> The overview page only supports micro actions, for example, actions in the quick view cards that open when you click the right-hand side of the stack card. For more information, see [Quick View Cards](quick-view-cards-c4bd35e.md) and [Defining Custom Actions](defining-custom-actions-02fb273.md).
+> The overview page only supports micro actions, for example, actions in the quick view cards that open when you click the right-hand side of the stack card. For more information, see [Quick View Cards](quick-view-cards-c4bd35e.md) and [Defining Custom Actions on the Overview Page](defining-custom-actions-on-the-overview-page-02fb273.md).
 
 
 
@@ -838,7 +838,7 @@ For more information, see [Prefilling Fields Using the DefaultValuesFunction](pr
 
 ## Additional Features in SAP Fiori Elements for OData V4
 
-Even though SAP Fiori elements doesn't apply any special logic based on whether you use a function or an action definition in the back end, you must choose the appropriate option based on your backend capabilities. For example, functions do not support side effects or state messages.
+Even though SAP Fiori elements doesn't apply any special logic based on whether you use a function or an action definition in the back end, you must choose the appropriate option based on your back-end capabilities. For example, functions do not support side effects or state messages.
 
 For more information about actions and functions in RAP-based applications, see [Actions](https://help.sap.com/docs/abap-cloud/abap-rap/actions) and [Functions](https://help.sap.com/docs/abap-cloud/abap-rap/functions).
 
@@ -1993,7 +1993,7 @@ To group actions under a menu button for table toolbar actions, configure the fo
 
 ### Defining a Default Action for a Menu Button
 
-When you define a default action for a menu button, clicking the button triggers the action directly. This is possible in list reports, object page headers, and forms.
+When you define a default action for a menu button, clicking the button triggers the action directly.
 
 To define a default action, configure the following settings in the `manifest.json` file:
 
@@ -2027,7 +2027,7 @@ The `priority` property can have the following values:
 
 -   `Low`: These actions are the first to be moved into overflow when there is not enough space to show all the actions.
 
--   `High`: Actions are moved into overflow only when all actions with a `Low` priority have already been moved into overflow.
+-   `High` \(default\): Actions are moved into overflow only when all actions with a `Low` priority have already been moved into overflow.
 
 -   `AlwaysOverflow`: Actions are always only shown in the overflow, even when there is enough space in the toolbar.
 
@@ -2161,11 +2161,11 @@ To group actions together, ensure that all the actions belonging to the same gro
 >                         "MyCustomAction1": {
 >                             ...
 >                             "priority": "High",
->                             "overflowGroup": "1"
+>                             "overflowGroup": 1
 >                         },
 >                         "MyCustomAction2": {
 >                             ...
->                             "overflowGroup": "1"
+>                             "overflowGroup": 1
 >                         }
 >                     }
 >                 }
@@ -2232,7 +2232,142 @@ The separator appears before the first visible action of the group, as shown in 
 The separator isn't shown if the group is the first set of actions in the toolbar, because there are no preceding actions to separate.
 
 > ### Tip:  
-> We recommend that you don't use separators if the actions have `priority` settings. If any group has a higher `priority` setting than the actions before it, the separator can appear as the first item in the toolbar when the actions with a lower `priority` setting are moved into overflow.
+> We recommend that you don't use separators if the actions have `priority` settings. If any group has a higher `priority` setting than the actions before it, the separator can appear as the first item in the toolbar when the actions with a lower `priority` setting are moved into overflow. Also, using separators can cause actions with a higher `priority` to move into overflow before actions with a lower `priority`.
+
+
+
+### Enabling Separators for Actions in a Subsection
+
+Actions in the subsection toolbar can be collected from multiple `UI.FieldGroups`. To configure separators for subsections on an object page, the corresponding `UI.Facet` ID must be used in the `manifest.json` file, as shown in the following sample code:
+
+> ### Sample Code:  
+> `manifest.json`
+> 
+> ```
+> "PurchaseOrder": {
+>     "type": "Component",
+>     "name": "sap.fe.templates.ObjectPage",
+>     ...,
+>     "options": {
+>       "settings": {
+>         "content": {
+>           "body": {
+>             "sections": {
+>               "GeneralInformation": {
+>                 "overflowGroups": {
+>                   "1": {
+>                     "showSeparator": true
+>                   },
+>                   "2": {
+>                     "showSeparator": true
+>                   }
+>                 }
+>               }
+>             }
+>           },
+>           ...,
+> ```
+
+> ### Sample Code:  
+> `manifest.json`
+> 
+> ```
+> "controlConfiguration": {
+>   "@com.sap.vocabularies.UI.v1.FieldGroup#GeneralInformation": {
+>     "overflowGroups": {
+>       "3": {
+>         "showSeparator": true
+>       },
+>       "4": {
+>         "showSeparator": true
+>       }
+>     },
+>     "actions": {
+>       "CustomAction1": {
+>         "text": "Group 1",
+>         "group": 1
+>       },
+>       "CustomAction2": {
+>         "text": "Group 2",
+>         "group": 2
+>       },
+>       "CustomAction3": {
+>         "text": "Group 2",
+>         "group": 2
+>       },
+>       "CustomAction1Inline": {
+>         "text": "Group 1",
+>         "inline": true,
+>         "group": "3"
+>       },
+>       "CustomAction2Inline": {
+>         "text": "Group 1",
+>         "inline": true,
+>         "group": "3"
+>       },
+>       "CustomAction3Inline": {
+>         "text": "Group 2",
+>         "inline": true,
+>         "group": "4"
+>       }
+>     }
+>   },
+> ```
+
+> ### Sample Code:  
+> XML Annotation
+> 
+> ```xml
+> <Annotation Term="UI.Facets">
+>   <Collection>
+>     <Record Type="UI.CollectionFacet">
+>         <PropertyValue Property="Label" String="Main Info" />
+>         <PropertyValue Property="ID" String="MainInfo" />
+>         <PropertyValue Property="Facets">
+>             <Collection>
+>               <Record Type="UI.CollectionFacet">
+>                 <PropertyValue Property="Label" String="General Information" />
+>                 <PropertyValue Property="ID" String="GeneralInformation" />
+>                 <PropertyValue Property="Facets">
+>                     <Collection>
+>                         <Record Type="UI.ReferenceFacet">
+>                             <PropertyValue Property="Label" String="General Information" />
+>                             <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#GeneralInformation" />
+>                         </Record>
+>                     </Collection>
+>                 </PropertyValue>
+>               </Record>
+>             </Collection>
+>         </PropertyValue>
+>     </Record>
+> ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> No ABAP CDS annotation sample is available. Please use the local XML annotation.
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> Facets                        : [{
+>   $Type : 'UI.CollectionFacet',
+>   ID    : 'MainInfo',
+>   Label : 'Main Info',
+>   Facets: [
+>     {
+>       $Type : 'UI.CollectionFacet',
+>       ID    : 'GeneralInformation',
+>       Label : 'General Information',
+>       Facets: [{
+>         $Type : 'UI.ReferenceFacet',
+>         Label : 'General Information',
+>         Target: '@UI.FieldGroup#GeneralInformation'
+>       }]
+>     },
+>     ...,
+> ```
 
 
 
@@ -2474,6 +2609,11 @@ These action names are used in the following examples that show how to add new a
 
     In this manifest override, the two actions `Action1` and `Action2`, which are menu items of the action group `groupedAction`, are overridden. `Action1` is disabled in the menu, and `Action2` is not visible in the menu at all.
 
+
+
+
+> ### Note:  
+> For information aboutSAP Fiori elements for OData V2, see [Actions](actions-14418d7.md).
 
 **Related Information**  
 

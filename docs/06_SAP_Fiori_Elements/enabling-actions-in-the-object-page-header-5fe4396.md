@@ -2,7 +2,7 @@
 
 # Enabling Actions in the Object Page Header
 
-You can enable generic actions in your object header.
+You can enable generic actions in the object page header.
 
 *Edit*, *Delete* and *Copy* are the generic actions.
 
@@ -196,7 +196,7 @@ The *Edit* button allows users to edit the instance of the object page.
 The *Delete* button allows users to delete the instance of the object page.
 
 > ### Note:  
-> 1.  When using `updateRestrictions`, a new property is completely ignored. Draft applications always have an `EditAction`, as shown in the following sample code:
+> 1.  When determining the enablement of the *Edit* button on the object page, `updateRestrictions` are ignored because draft applications always have an `EditAction`, as shown in the following sample code:
 > 
 >     ```xml
 >     <Annotation Term="com.sap.vocabularies.Common.v1.DraftRoot">
@@ -205,6 +205,8 @@ The *Delete* button allows users to delete the instance of the object page.
 >         </Record>
 >     </Annotation>
 >     ```
+> 
+>     For more information, see the [Edit Enablement](enabling-actions-in-the-object-page-header-5fe4396.md#loio5fe439613f9c4e259015951594c423dc__edit_enablement) subsection in this topic.
 > 
 > 2.  The visibility of the *Edit* button can be controlled by the `updateHidden` annotation under the entity set \(it can be path-based if the apps need to hide the *Edit* button, for example for specific instances only\).
 > 
@@ -254,7 +256,7 @@ The *Delete* button allows users to delete the instance of the object page.
 
 ### Edit Enablement
 
-If the application defines an `EditAction`, as shown in the sample annotation above, the `UpdateRestrictions` are completely ignored. Instead, `OperationAvailable` determines the enablement of the button. For more information about `OperationAvailable`, see the [Enabling Custom Actions Defined Using Annotations](actions-cbf16c5.md#loiocbf16c599f2d4b8796e3702f7d4aae6c__subsection_xkx_gwq_nsb) section in [Actions](actions-cbf16c5.md).
+As shown in the sample annotation above, the `UpdateRestrictions` are completely ignored. Instead, `OperationAvailable` determines the enablement of the button. For more information about `OperationAvailable`, see the [Enabling Custom Actions Defined Using Annotations](actions-cbf16c5.md#loiocbf16c599f2d4b8796e3702f7d4aae6c__subsection_xkx_gwq_nsb) section in [Actions](actions-cbf16c5.md).
 
 -   If `OperationAvailable` = true \(static\) OR if `OperationAvailable` is not defined, the *Edit* button is visible \(provided that `updateHidden` doesn't evaluate to false\) and enabled.
 
@@ -350,6 +352,11 @@ You also control the enablement of the `DataFieldForAction` buttons through the 
 The enablement of intent-based navigation \(IBN\) buttons can be controlled using the `"NavigationAvailable"` property, as described in the [Navigation Using a Button](navigation-from-an-app-outbound-navigation-d782acf.md#loiod782acf8bfd74107ad6a04f0361c5f62__NavigationButton) section in [Navigation from an App \(Outbound Navigation\)](navigation-from-an-app-outbound-navigation-d782acf.md).
 
 The `UI.DataFieldForAction` can be bound or unbound actions. For more information, see the [Bound and Unbound Actions](actions-cbf16c5.md#loiocbf16c599f2d4b8796e3702f7d4aae6c__BoundUnbound) section in [Actions](actions-cbf16c5.md).
+
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Enabling Actions in the Object Page Header](enabling-actions-in-the-object-page-header-87566a3.md).
 
 **Related Information**  
 

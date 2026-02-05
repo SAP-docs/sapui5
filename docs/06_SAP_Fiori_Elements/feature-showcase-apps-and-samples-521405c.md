@@ -22,3 +22,8 @@ We've created the following sample apps:
 
 For more information and live examples, see the SAP Fiori development portal at [Introduction - Using the SAP Fiori Development Portal](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/topic/introduction/portal).
 
+
+
+> ### Note:  
+> For information aboutSAP Fiori elements for OData V2, see [Feature Showcase Apps and Samples](feature-showcase-apps-and-samples-ebe44ec.md).
+

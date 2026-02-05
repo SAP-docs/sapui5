@@ -216,3 +216,8 @@ The identification annotation lets you configure navigation \(from header and ta
 > ### Note:  
 > In case of table area navigation, the navigation settings configured using the `LineItem` annotation takes precedence over the navigation settings configured using the identification annotation.
 
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Configuring the Table Card Header Area \(Optional\)](configuring-the-table-card-header-area-optional-132c9ad.md).
+

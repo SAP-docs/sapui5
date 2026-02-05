@@ -100,3 +100,8 @@ In the following example, the `Price` property is annotated in the annotation do
 > 
 > ```
 
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Setting Units of Measure](setting-units-of-measure-df8c65f.md).
+

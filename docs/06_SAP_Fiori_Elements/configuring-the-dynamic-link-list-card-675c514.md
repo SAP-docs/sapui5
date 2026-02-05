@@ -329,3 +329,8 @@ The dynamic link list card also supports the contact annotation as the default a
     </table>
     
 
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Configuring the Dynamic Link List Card](configuring-the-dynamic-link-list-card-d7be5c6.md).
+

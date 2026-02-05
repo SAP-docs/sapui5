@@ -4,9 +4,6 @@
 
 You can add custom coding before calling standard methods provided by SAP Fiori elements.
 
-> ### Note:  
-> This topic is only applicable to SAP Fiori elements for OData V4.
-
 You can use the `onBefore` extension methods to add custom coding. The following extension methods are supported:
 
 -   `onBeforeCreate`

@@ -4,9 +4,6 @@
 
 You can enable lazy loading for the sections you've added using an extension point.
 
-> ### Note:  
-> This topic is applicable only to SAP Fiori elements for OData V2.
-
 By default, lazy loading is enabled for the standard sections on the object page. For sections added using extension points, you need to enable lazy loading by setting the `enableLazyLoading` parameter to `true` in the `manifest.json` file of your application. To do so, proceed as shown in the following sample code:
 
 ```

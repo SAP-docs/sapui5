@@ -4,10 +4,7 @@
 
 By default, you need to create apps that use draft handling.
 
-> ### Note:  
-> This topic is only applicable to SAP Fiori elements for OData V2.
-
-For general information about draft handling, see [Draft Handling](draft-handling-ed9aa41.md) and SAP Fiori web design guidelines for [Draft Handling](https://experience.sap.com/fiori-design-web/draft-handling/).
+For general information about draft handling, see [Draft Handling](draft-handling-b0eb3cc.md) and SAP Fiori web design guidelines for [Draft Handling](https://experience.sap.com/fiori-design-web/draft-handling/).
 
 You can also create non-draft apps, however, you need to consider the specific features and restrictions listed below, as compared to those for draft apps. Create non-draft apps only for simple scenarios without complex flows.
 

@@ -9,143 +9,6 @@ You can extend the filter bar by using a custom filter field.
 > 
 > After you've created an app extension, its display \(for example, control placement and layout\) and system behavior \(for example, model and binding usage, busy handling\) lies within the application's responsibility. SAP Fiori elements provides support only for the official `extensionAPI` functions. Don't access or manipulate controls, properties, models, or other internal objects created by the SAP Fiori elements framework.
 
-
-
-<a name="loio5fb9f57fcf12401bbe39a635e9a32a4e__section_r3m_ynr_jnb"/>
-
-## Additional Features in SAP Fiori Elements for OData V2
-
-To enable this, add a view extension along with the corresponding controller extension, as shown in the following example:
-
-> ### Sample Code:  
-> ```
-> 
-> "extends": {
->                         "extensions": {
->                         "sap.ui.controllerExtensions": {
->                           "sap.suite.ui.generic.template.ListReport.view.ListReport": {
->                             "controllerName": "my_app.ext.controller.ListReportExtension"
->                           }
->                         },
->                 "sap.ui.viewExtensions": { 
->                                         "sap.suite.ui.generic.template.ListReport.view.ListReport": {
->                                     "SmartFilterBarControlConfigurationExtension|<myEntityset>": {
->                                               "className": "sap.ui.core.Fragment",
->                                               "fragmentName": "<myNamespace>.ext.fragment.CustomFilter",
->                                               "type": "XML"
->                                           },
-> 
-> ```
-
-You can add additional controls to the smart filter bar. The following methods are mandatory:
-
--   `onBeforeRebindTable`: To evaluate the settings in the custom fields and add the corresponding filters to the `bindingParameters` of the table.
-
--   `getCustomAppStateData`: To read the state of all custom fields and store that state in the object provided, so that the template can use it during navigation.
-
--   `restoreCustomAppStateData`: To retrieve the custom app state object stored in `getCustomAppStateData` and apply the corresponding values for your custom controls. For example, you call this method after returning from a navigation.
-
-
-The `onInitSmartFilterBarExtension` method can be used to set the default filter values or to bind a custom control during the initialization of the filter bar.
-
-Each enhanced controller methods call its corresponding extension method:
-
--   `onBeforeRebindTableExtension`
-
--   `getCustomAppStateDataExtension`
-
--   `restoreCustomAppStateDataExtension`
-
--   `onInitSmartFilterBarExtension` 
-
-
-> ### Note:  
-> Filterable fields are defined using metadata annotations. Use the extension option when the filter attribute can only be determined by the client.
-
-For an example with detailed instructions, see [Adding Filterable Field to the Smart Filter Bar](adding-filterable-field-to-the-smart-filter-bar-3a51582.md).
-
-
-
-### Adding Custom Filter Fields to Exported File
-
-When a table is exported, including the filter fields, the filter values are included by default. The exported values match those shown in the filter bar.
-
-For custom filters, the exported spreadsheet shows the filter property and condition as passed to the query. For example, if the user selects *Cost = Low* in the filter bar dropdown, the filter passed to the query can be `OverallCost < 1000`. This value appears in the exported file. To show the filter as displayed on the filter bar, you can use the `onBeforeExportTableExtension` extension method to modify the export content. This method supports table export on analytical list pages, list reports, and object pages.
-
-> ### Sample Code:  
-> ```
-> sap.ui.define([
->     "sap/ui/core/Element",
-> >   "sap/ui/export/util/Filter"
-> > ], function (Element, ExportFilter) {
-> >   "use strict";
-> > 
-> >   return {
->           onInit: function () {
->                 //...
->            },
->            /**
->             * This extension method modifies the "Cost" filter in the exported file.
->             * 
->             * Removes the existing filter with label "OverallCost" and value "<=1000",
->             * and adds a new filter with label "Cost" and value "Low"
->            * 
->            * @param oExportParams 
->            * @returns 
->            */
->            onBeforeExportTableExtension: function (oExportParams) {
->                if (!oExportParams.includeFilterSettings) {
->                      return;
->                  }
->                // Array of filters in the exported file
->                var aFilterSettings = oExportParams.filterSettings;
->                 // Find the "Cost" combobox in smart filter bar
->            var COST_COMBOBOX_ID = "STTA_MP::sap.suite.ui.generic.template.ListReport.view.ListReport::STTA_C_MP_Product--CustomFilter-OverallCost-combobox";
->                var oCostCombobox = Element.getElementById(COST_COMBOBOX_ID);
->                if (oCostCombobox && oCostCombobox.getValue()) {
->                     var oRawValue, sNewCostValue;
->                     for (var i = 0; i < aFilterSettings.length; i++) {
->                          var oCurrentFilter = aFilterSettings[i];
->                          // Find the filter with property "OverallCost"
->                          if (oCurrentFilter.getProperty() === "OverallCost") {
->                               //Store the raw value
->                               oRawValue = oCurrentFilter.rawValues[0];
->                              //Remove the current filter from the filters array
->                               aFilterSettings.splice(i, 1);
->                               break;
->                             }
->                      }
->                      // Derive Cost category (Low / High) from the raw value
->                      if (oRawValue.operator === "<=" && oRawValue.value === "1000") {
->                          sNewCostValue = "Low";
->                      } else {
->                         sNewCostValue = "High";
->                      }
-> 
->                      //Create a new export filter with the new label and value
->                      var sProperty = "OverallCost",
->                          sLabel = "Cost",
->                          oNewRawValue = {operator: "==", value: sNewCostValue},
->                          oCostFilter = new ExportFilter(sProperty, oNewRawValue, sLabel);
-> 
->                     //Add the updated filter to the filter settings array
->                     aFilterSettings.push(oCostFilter);
->                 }
->          }
->      };
-> });
->  in the controller extension.
->                     This extension method is supported for exporting tables on analytical list
->                     pages, list reports and object pages.
-> 
-> ```
-
-
-
-<a name="loio5fb9f57fcf12401bbe39a635e9a32a4e__section_sjl_14r_jnb"/>
-
-## Additional Features in SAP Fiori Elements for OData V4
-
 You can configure custom filters to use either predefined operators or custom-defined operators. The following properties are available for configuring custom filters using the `manifest.json` file:
 
 > ### Sample Code:  
@@ -188,7 +51,9 @@ You can configure custom filters to use either predefined operators or custom-de
 
 
 
-### The `filterValues` Model
+<a name="loio5fb9f57fcf12401bbe39a635e9a32a4e__section_sjl_14r_jnb"/>
+
+## The `filterValues` Model
 
 For custom filters, SAP Fiori elements provides an internal model called `filterValues`. This model is bound to each custom filter field and stores the entered values.
 
@@ -197,14 +62,16 @@ For custom filters, SAP Fiori elements provides an internal model called `filter
 
 
 
-### Custom Filters with Predefined Operators
+## Custom Filters with Predefined Operators
 
 Using predefined operators with custom filters is suitable when you require a custom visualization of the filter, but the filter logic remains similar to that of standard filter fields and operates on a single property from the entity.
 
 > ### Note:  
 > The `key` property of the custom filter must match the name of the metadata property for which the filter is defined. In such cases, the `property` field must not be specified.
 
-**Custom Filter Field: Simple Example**
+
+
+### Custom Filter Field: Simple Example
 
 The following code sample shows how to define a custom filter field for the metadata property `Rating`:
 
@@ -281,7 +148,9 @@ To track filter values, the value-holding property of the filter control must be
 
 In the above example, no operator is explicitly specified, so the default operator `EQ` \(equals\) is used. However, you can configure a different operator, for example, the code in the comments includes the use of the `GT` \(greater than\) operator. In this case, the filters used are generated by SAP Fiori elements and invoked as part of the call.
 
-**Custom Filter Field: Handling Filters on Value Change**
+
+
+### Custom Filter Field: Handling Filters on Value Change
 
 In addition to binding values directly, you can apply filters dynamically when the value of the custom filter field changes. To do so, use the `setFilterValues` extension API. For information about `setFilterValues`, see the [API Reference](https://ui5.sap.com/#/api/sap.fe.templates.ListReport.ExtensionAPI%23methods/setFilterValues).
 
@@ -329,7 +198,7 @@ The following sample code defines the event handlers for the custom filter field
 
 
 
-### Custom Filters with Custom Operators
+## Custom Filters with Custom Operators
 
 Custom operators are recommended when the filter logic involves complex operations or spans multiple fields. For example:
 
@@ -421,7 +290,7 @@ In the following sample code, the custom operator `'SalesOrder.ext.CustomRating.
 > 
 > ```
 > "sap.fe": {
->     "macros": 
+>     "macros": {
 >         "filter": {          
 >             "customFilterOperators": [{                     
 >                 "name": "SalesOrder.ext.CustomRating.onMultiValueRatingLevels"
@@ -470,7 +339,7 @@ For more information and live examples, see the SAP Fiori development portal at 
 
 
 
-### Custom Filter Fields Marked as Required
+## Custom Filter Fields Marked as Required
 
 You can also define your custom filter as required by setting it to `required = true` in the `manifest.json`. As a result, the field is automatically marked with an asterisk. If you additionally want a dynamic indicator, such as a red frame around a field, you must implement this in your custom template yourself. The following sample code is an example of a handler that visualizes a red frame around a required input field that is missing a string value:
 
@@ -513,7 +382,7 @@ You can explore and work with the coding yourself. For more information and live
 
 
 
-### Custom Filter Fields With Metadata Binding
+## Custom Filter Fields With Metadata Binding
 
 You can define custom columns with metadata binding, as well as the labels for custom filters and custom form elements.
 
@@ -531,4 +400,9 @@ You can define custom columns with metadata binding, as well as the labels for c
 > }
 > 
 > ```
+
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Adding Custom Fields to the Filter Bar](adding-custom-fields-to-the-filter-bar-b56bc11.md).
 

@@ -18,19 +18,20 @@ The list report view includes the following main elements:
 
 -   Application header
 
--   Variant Management
+-   Variant management
 
--   Header Toolbar with a generic *Share* menu that includes the following actions:
+-   Header toolbar with a generic *Share* menu that includes the following actions:
 
-    -   *Send Email*
+    -   *Send E-Mail*
 
-    -   *Share in SAP Jam*
+    -   *Microsoft Teams*
 
-    -   *Save as Tile*
+        -   *As Chat*
 
-    -   *Share: Microsoft Teams*
+        -   *As Tab*
 
-    -   *Share: Collaboration Manager*
+
+    -       -       -   *Save as Tile*
 
 
 -   Content area that includes a table, a chart, or both
@@ -42,7 +43,12 @@ The list report view includes the following main elements:
 
 ## Related Information
 
-For more information about the various functions in a list report, see [Configuring List Report Features](configuring-list-report-features-3af1d03.md) and [Configuring Further Common Features](configuring-further-common-features-a4d3c46.md).
+For more information about the various functions in a list report, see [Configuring Features of the List Report Page](configuring-features-of-the-list-report-page-3af1d03.md) and [Configuring Further Common Features](configuring-further-common-features-a4d3c46.md).
 
 For more information about the loading behavior of an app, see [Loading Behavior of Data on Initial Launch of the Application](loading-behavior-of-data-on-initial-launch-of-the-application-9f4e119.md).
+
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Elements of the List Report Page](elements-of-the-list-report-page-0418ac4.md).
 

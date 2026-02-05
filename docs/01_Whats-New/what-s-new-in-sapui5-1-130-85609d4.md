@@ -163,15 +163,15 @@ The following changes and new features are available for SAP Fiori elements for 
 
 -   You can now define a custom save functionality for the mass edit dialog. For more information, see [Replacing the Standard Save Functionality in the Mass Edit Dialog](../06_SAP_Fiori_Elements/replacing-the-standard-save-functionality-in-the-mass-edit-dialog-492d8a9.md).
 
--   We now provide a dialog that enables users to directly create a new object in the list report or on the object page. For more information, see [Enabling Object Creation Using the Dialog in the List Report](../06_SAP_Fiori_Elements/enabling-object-creation-using-the-dialog-in-the-list-report-ceb9284.md) and [Tree Tables](../06_SAP_Fiori_Elements/tree-tables-7cf7a31.md).
+-   We now provide a dialog that enables users to directly create a new object in the list report or on the object page. For more information, see [Enabling Object Creation Using the Dialog in the List Report](../06_SAP_Fiori_Elements/enabling-object-creation-using-the-dialog-on-the-list-report-ceb9284.md) and [Tree Tables](../06_SAP_Fiori_Elements/tree-tables-7cf7a31.md).
 
 -   We now support `pattern` as a format option for date-and-time-based controls. For more information, see [Configuring Fields](../06_SAP_Fiori_Elements/configuring-fields-4b50f21.md).
 
--   Key users can now make changes to the `manifest.json` file. For more information, see [Adapting the UI](../06_SAP_Fiori_Elements/adapting-the-ui-59bfd31.md).
+-   Key users can now make changes to the `manifest.json` file. For more information, see [Adapting the UI](../06_SAP_Fiori_Elements/extending-delivered-apps-with-key-user-adaptation-59bfd31.md).
 
 -   You can now use aggregatable properties to filter the data on analytical tables. For more information, see [Setting the Table Type](../06_SAP_Fiori_Elements/setting-the-table-type-7f844f1.md).
 
--   We now support sorting of data in micro charts. For more information, see [Micro Chart Facet](../06_SAP_Fiori_Elements/micro-chart-facet-e219fd0.md).
+-   We now support sorting of data in micro charts. For more information, see [Micro Chart Facet](../06_SAP_Fiori_Elements/micro-chart-facet-in-the-object-page-header-e219fd0.md).
 
 -   We now save the information about the resized columns in the flexible column layout in the personalization settings. For more information, see [Enabling the Flexible Column Layout](../06_SAP_Fiori_Elements/enabling-the-flexible-column-layout-e762257.md).
 
@@ -932,6 +932,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.142](what-s-new-in-sapui5-1-142-92ed100.md "With this release SAPUI5 is upgraded from version 1.141 to 1.142.")
 
 [What's New in SAPUI5 1.141](what-s-new-in-sapui5-1-141-a7ed66d.md "With this release SAPUI5 is upgraded from version 1.140 to 1.141.")
 

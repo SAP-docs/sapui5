@@ -234,6 +234,11 @@ User-defined default values are applied and combined with the values from the st
 > ### Restriction:  
 > You cannot define the default values for filter fields using `SelectionVariant` in analytical list page-based applications.
 
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Configuring Default Filter Values](configuring-default-filter-values-b221ce0.md).
+
 **Related Information**  
 
 

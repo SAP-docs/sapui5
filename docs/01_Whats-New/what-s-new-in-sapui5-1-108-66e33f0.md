@@ -204,7 +204,7 @@ The following changes and new features are available for SAP Fiori elements for 
 
 -   The analytical list page now supports the dynamic date range in `SmartFilterBar`. For more information, see [Enabling Semantic Operators in the Filter Bar](../06_SAP_Fiori_Elements/enabling-semantic-operators-in-the-filter-bar-fef65d0.md).
 
--   The section title is now hidden in cases where the section contains only a table or a chart, and their title is a duplicate of the section title. For more information, see [Defining and Adapting Sections](../06_SAP_Fiori_Elements/defining-and-adapting-sections-facfea0.md).
+-   The section title is now hidden in cases where the section contains only a table or a chart, and their title is a duplicate of the section title. For more information, see [Defining and Configuring Sections](../06_SAP_Fiori_Elements/defining-and-configuring-sections-facfea0.md).
 
 
 <sub>Changed•SAP Fiori Elements•Info Only•1.108</sub>
@@ -252,7 +252,7 @@ The following changes and new features are available for SAP Fiori elements for 
 
 -   You can now execute the `PrepareAction` or global side effects by pressing *Enter* in draft mode. For more information, see [Draft Handling](../06_SAP_Fiori_Elements/draft-handling-ed9aa41.md).
 
--   You can now add a custom message in the message bar above a table in the list report. For more information, see [Adding a Custom Message Strip to List Report, Analytical List Page and Object Page Tables](../06_SAP_Fiori_Elements/adding-a-custom-message-strip-to-list-report-analytical-list-page-and-object-page-tables-0fdbefb.md).
+-   You can now add a custom message in the message bar above a table in the list report. For more information, see [Adding a Custom Message Strip to List Report Page, Analytical List Page and Object Page](../06_SAP_Fiori_Elements/adding-a-custom-message-strip-to-list-report-page-analytical-list-page-and-object-page-0fdbefb.md).
 
 -   You can now render semantically connected fields as a link to enable navigation using these fields. For more information, see [Grouping of Fields](../06_SAP_Fiori_Elements/grouping-of-fields-cb1748e.md).
 
@@ -732,6 +732,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.142](what-s-new-in-sapui5-1-142-92ed100.md "With this release SAPUI5 is upgraded from version 1.141 to 1.142.")
 
 [What's New in SAPUI5 1.141](what-s-new-in-sapui5-1-141-a7ed66d.md "With this release SAPUI5 is upgraded from version 1.140 to 1.141.")
 

@@ -14,19 +14,7 @@ On the object page in anchor bar mode, the size of the illustrated message is re
 
 ![](images/Illustrated_Message_2_8f228c8.png)
 
-In icon tab bar mode, if the section contains only a table, the size of the illustrated message adapts to the available space for the table similarly to the list report.
-
-The following illustrated message texts are displayed by default:
-
--   When opening a list report without autoload, an illustrated message is displayed with *Let’s get some results* as the title and *Start by providing your search or filter criteria.* as the description.
--   When no filters are applied and no data is found on the list report page, an illustrated message is displayed with *No results found* as the title and *Start by providing your search or filter criteria.* as the description.
-
--   When filters are applied and the search shows no results, an illustrated message is displayed with *No results found* as the title and *Try changing your filter criteria.* as the description.
-
--   When the table is used in multi-view mode and no data is found, an illustrated message is displayed with *No no results found* as the title and *Try changing the view or filter criteria.* as the description.
-
--   When no search nor filters are applied and no data is found on the object page, an illustrated message is displayed with *No items available* as the title and *When there are, you'll find them here.* as the description.
-
+In icon tab bar mode, if the section contains only a table, the size of the illustrated message adapts to the available space for the table similarly to the list report page.
 
 You can override standard illustrated message texts by adding specific keys to the i18n file of the list report page and object page. For a list of the keys, see [Localization of UI Texts](localization-of-ui-texts-b8cb649.md).
 
@@ -172,4 +160,9 @@ Within the callback function, you can define the illustrated message to include 
 > ```
 
 For more information and live examples, see the SAP Fiori development portal at [Building Blocks - Table - Extensions - Table APIs](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/table/tableNoData).
+
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Displaying an Illustrated Message When No Data Is Found](displaying-an-illustrated-message-when-no-data-is-found-dee77bd.md).
 
