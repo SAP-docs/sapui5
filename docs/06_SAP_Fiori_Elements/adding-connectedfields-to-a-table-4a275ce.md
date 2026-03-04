@@ -54,7 +54,7 @@ You can add semantically connected fields as shown in the following sample code:
 > 
 > ```
 > annotate view Travel with {
->     @UI.connectedField : [
+>     @UI.connectedFields : [
 >         {
 >            name: 'Dates',
 >            qualifier: 'TripDates',
