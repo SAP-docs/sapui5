@@ -91,3 +91,8 @@ You can define view switch with a single entity set or with multiple entity sets
 > }
 > ```
 
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Configuring View Switch](configuring-view-switch-9e1d1fc.md).
+

@@ -276,6 +276,11 @@ If `showCounts` is set to `false`, no count is shown next to the button label, n
 
 To hide the title of the table and show only the segmented buttons or the `selectionBox`, set the `hideTableTitle` to `true`. You should use this option only if the title of your `SelectionVariant` is self-explanatory and can replace the table title.
 
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Adding Segmented Buttons to a Table Toolbar](adding-segmented-buttons-to-a-table-toolbar-b0fb117.md).
+
 **Related Information**  
 
 

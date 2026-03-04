@@ -2,7 +2,7 @@
 
 # Refresh Entity Sets in `sap-keep-alive` Mode
 
-`sap-keep-alive` is an SAP Fiori launchpad feature that ensures that a view is not destroyed in the view cache when navigating away from the application.
+`sap-keep-alive` is an SAP Fiori launchpad feature that ensures that the application stays loaded in a suspended state when navigating away from the application.
 
 The feature ensures improved performance when you reload the same view again once you navigate back to the application. For more information, see [Keeping SAPUI5 Apps Alive](https://help.sap.com/viewer/a7b390faab1140c087b8926571e942b7/202009.002/en-US/921e7e2e45494f9a87ae70624155fd7c.html).
 
@@ -23,7 +23,7 @@ The following configurations are supported for entity sets:
 <tr>
 <td valign="top">
 
-EntitySet1: self
+EntitySet1: `self` 
 
 </td>
 <td valign="top">
@@ -392,6 +392,11 @@ This does **not** affect the default refresh behavior of the table entity set wh
 >     -   Begin with a forward slash \("/"\) if the entity is a containment-based entity \(a parameterized entity\) and if you need to specify the full path of the resulting entity \("/Customer/Set"\) in the same manner as specified with the `"contextPath"` manifest property. For more information, see the section [Supporting Parameterized Entities](configuring-filter-bars-4bd7590.md#loio4bd7590569c74c61a0124c6e370030f6__suppprting_parameterized_entities_subsection) in [Configuring Filter Bars](configuring-filter-bars-4bd7590.md).
 > 
 >     -   If it is not a containment scenario/parameterized entity but a regular entity set, then the slash is not required at the beginning \(`"SalesOrderItem"`\).
+
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Refresh Entity Sets in sap-keep-alive Mode](refresh-entity-sets-in-sap-keep-alive-mode-c79c381.md).
 
 **Related Information**  
 

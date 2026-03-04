@@ -1,0 +1,309 @@
+<!-- loio030cb5f86b954bff9cf1af7fbeeaac22 -->
+
+# Analytical Cards
+
+Analytical cards let you view data in a variety of chart formats. The card is divided into two areas \(header and chart\).
+
+
+
+In the header area, you can view the aggregated value of a key performance indicator \(KPI\), the trend, and percentage of change. In the chart area, you can view a graphical representation of the data.
+
+> ### Note:  
+> If you configure the chart title, chart descriptions \(x- and y-axis\) are not displayed in the card \(except for bubble charts\). For example, the chart title *Net Sales by Days Payable*, already conveys that the y-axis is *Net Sales* and the x-axis represents *Days Payable*.
+
+
+
+
+
+### Chart Responsiveness
+
+To improve the responsiveness of charts, you can use `UI.PresentationVariant.MaxItems`. It limits the number of records fetched from the back end that are rendered on the screen. See the following sample code:
+
+> ### Sample Code:  
+> XML Annotation
+> 
+> ```xml
+> 
+> <Annotation Term="UI.PresentationVariant" Qualifier="Column_Eval_by_Country_123">
+>     <Record>      
+>           <PropertyValue Property="MaxItems" Int="5" />
+>     </Record>
+> </Annotation>
+> 
+> ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> ```
+> @UI.PresentationVariant: [
+>   {
+>     maxItems: 5,
+>     qualifier: 'Column_Eval_by_Country_123'
+>   }
+> ]
+> annotate view VIEWNAME with { }
+> ```
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> UI.PresentationVariant #Column_Eval_by_Country_123 : {
+>     MaxItems : 5
+> }
+> ```
+
+> ### Tip:  
+> If there are too many data records displayed in the chart, it is difficult to select a data point. If you are only interested in checking the top records, use `UI.PresentationVariant.SortOrder`. For more information, see [Configuring Card Properties](configuring-card-properties-ab78a77.md).
+
+
+
+### Chart Interactivity
+
+Business users can choose specific data points to pass data in URL parameters to the target application. The target application can read these URL parameters and use them as required \(typically, to filter the dataset that it is displaying\).
+
+When a business user selects a particular data point, the system passes a technical ID \(`"RegionID"="001"`\) instead of the display name \(`"Region"="EMEA"`\).
+
+
+
+### Axis Scaling
+
+Axis scaling lets you scale and display data for line, bubble, or scatter charts in the analytical card. You can choose any of the following axis scaling types:
+
+-   `ZeroAlwaysVisible`
+
+    The default behavior displays data in the respective chart format, including the zero value. The graph is adjusted according to the available data range.
+
+    Set the following property in the `UI.Chart` annotation:
+
+    > ### Sample Code:  
+    > XML Annotation
+    > 
+    > ```xml
+    > <PropertyValue Property="AxisScaling">
+    >    <Record Type="UI.ChartAxisScalingType">
+    >        <PropertyValue Property="AutoScaleBehavior">
+    >            <Record Type="UI.ChartAxisAutoScaleBehaviorType">
+    >                <PropertyValue Property="ZeroAlwaysVisible" Bool="true"/>
+    >            </Record>
+    >        </PropertyValue>
+    >    </Record>
+    >  </PropertyValue>
+    > ```
+
+    > ### Sample Code:  
+    > CAP CDS Annotation
+    > 
+    > ```
+    > AxisScaling : { 
+    >      $Type : 'UI.ChartAxisScalingType',
+    >      AutoScaleBehavior: { 
+    >         $Type: 'UI.ChartAxisAutoScaleBehaviorType',
+    >         ZeroAlwaysVisible: true
+    >         }
+    >   }
+    > ```
+
+-   `DataScope`
+
+    The scale adjusment property displays data in the respective chart format based on the available data range. It determines the automatic scaling. Minimum and maximum values for the axes are determined from the entire dataset.
+
+    Set the following property in the `UI.Chart` annotation:
+
+    > ### Sample Code:  
+    > XML Annotation
+    > 
+    > ```xml
+    > <PropertyValue Property="AxisScaling">
+    >    <Record Type="UI.ChartAxisScalingType">
+    >        <PropertyValue Property="AutoScaleBehavior">
+    >            <Record Type="UI.ChartAxisAutoScaleBehaviorType">
+    >                <PropertyValue Property="DataScope" EnumMember="DataSet"/>
+    >            </Record>
+    >        </PropertyValue>
+    >    </Record>
+    >  </PropertyValue>>
+    > ```
+
+    > ### Sample Code:  
+    > CAP CDS Annotation
+    > 
+    > ```
+    >  AxisScaling : { 
+    >      $Type : 'UI.ChartAxisScalingType',
+    >      AutoScaleBehavior: { 
+    >         $Type: 'UI.ChartAxisAutoScaleBehaviorType',
+    >         DataScope: 'DataSet'
+    >         }
+    >   }
+    > ```
+
+-   `FixedScale`
+
+    Scale behaviour set to `FixedScale` allows you to define the minimum and maximum data range to display in the respective chart format. It applies fixed minimum and maximum values that are derived from the `@UI.MeasureAttributes.DataPoint/MinimumValue` and `@UI.MeasureAttributes.DataPoint/MaximumValue` annotation by default.
+
+    Set the following property in the `UI.Chart` annotation:
+
+    > ### Sample Code:  
+    > XML Annotation
+    > 
+    > ```xml
+    > <PropertyValue Property="AxisScaling">
+    >    <Record Type="UI.ChartAxisScalingType">
+    >        <PropertyValue Property="ScaleBehavior" EnumMember="UI.ChartAxisScaleBehaviorType/FixedScale"/>
+    >    </Record>
+    >  </PropertyValue>
+    > ```
+
+    > ### Sample Code:  
+    > CAP CDS Annotation
+    > 
+    > ```
+    > AxisScaling : { 
+    >      $Type : 'UI.ChartAxisScalingType',
+    >      ScaleBehavior: #FixedScale
+    >   }
+    > ```
+
+
+You must define the `DataPoint` annotation to set the minimum and maximum values, as shown in the following code sample:
+
+> ### Sample Code:  
+> XML Annotation
+> 
+> ```xml
+> <Annotation Term="UI.DataPoint" Qualifier="DataPoint_Qualifier">
+>   <Record Type="UI.DataPointType">
+>     <PropertyValue Property="MinimumValue" Decimal="1" />
+>     <PropertyValue Property="MaximumValue" Decimal="5" />
+>     <PropertyValue Property="ValueFormat">
+>       <Record>
+>         .......
+>       </Record>
+>     </PropertyValue>
+>   </Record>
+> </Annotation>
+> ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> ```
+> @UI.dataPoint: { 
+>     minimumValue: 1,
+>     maximumValue: 2,
+> 	valueFormat: { }
+> }
+> property_name;
+> 
+> ```
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> UI.DataPoint #DataPointQualifier : {
+>     $Type : 'UI.DataPointType',
+>     MinimumValue : 1,
+>     MaximumValue : 5,
+>     NumberFormat : { }
+> },
+> 
+> ```
+
+
+
+
+
+### Manifest Configuration Sample
+
+The following sample code is a snippet of a sample `manifest.json` file:
+
+> ### Sample Code:  
+> `manifest.json`
+> 
+> ```
+> {
+>   "sap.app": {
+>     "_version": "1.1.0",
+>     "id": "sap.ovp.demo",
+>     "type": "application",
+>     "i18n": "i18n/i18n.properties",
+>     "applicationVersion": {
+>       "version": "1.2.2"
+>     },
+>     "title": "{{app_title}}",
+>     "description": "{{app_description}}",
+>     "dataSources": {
+>       "salesShare": {
+>         "uri": "https://abc.com/SalesShare.xsodata",
+>         "type": "OData",
+>         "settings": {
+>           "odataVersion": "2.0",
+>           "annotations": [
+>             "salesShareAnno"
+>           ]
+>         }
+>       },
+>       "salesShareAnno": {
+>         "uri": "data/salesshare/annotations.xml",
+>         "type": "ODataAnnotation",
+>         "settings": {}
+>       }
+>     }
+>   },
+>   "sap.ovp": {
+>     "globalFilterModel": "salesShare",
+>     "globalFilterEntityType": "GlobalFilters", //Deprecated since SAPUI5 1.54.
+>     "globalFilterEntitySet": "GlobalFilters",  //Available from SAPUI5 1.54.                  
+>     "cards": {
+>       "cardBubble": {
+>         "model": "salesShare",
+>         "template": "sap.ovp.cards.charts.analytical",
+>         "settings": {
+>           "entitySet": "SalesShare",
+>           "selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#Eval_by_CtryCurr",
+>           "chartAnnotationPath": "com.sap.vocabularies.UI.v1.Chart#Eval_by_CtryCurr",
+>           "presentationAnnotationPath": "com.sap.vocabularies.UI.v1.PresentationVariant#Eval_by_CtryCurr",
+>           "dataPointAnnotationPath": "com.sap.vocabularies.UI.v1.DataPoint#Eval_by_CtryCurr",
+>           "identificationAnnotationPath": "com.sap.vocabularies.UI.v1.Identification#Eval_by_CtryCurr"
+>         }
+>       },
+>       "cardchartsline": {
+>         "model": "salesShare",
+>         "template": "sap.ovp.cards.charts.analytical",
+>         "settings": {
+>           "entitySet": "SalesShare",
+>           "selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#Eval_by_Country",
+>           "chartAnnotationPath": "com.sap.vocabularies.UI.v1.Chart#Eval_by_Country",
+>           "presentationAnnotationPath": "com.sap.vocabularies.UI.v1.PresentationVariant#Eval_by_Country",
+>           "dataPointAnnotationPath": "com.sap.vocabularies.UI.v1.DataPoint#Eval_by_Country",
+>           "identificationAnnotationPath": "com.sap.vocabularies.UI.v1.Identification#Eval_by_Country"
+>         }
+>       },
+>       "cardchartsdonut": {
+>         "model": "salesShare",
+>         "template": "sap.ovp.cards.charts.analytical",
+>         "settings": {
+>           "entitySet": "SalesShare",
+>           "selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#Eval_by_Currency",
+>           "chartAnnotationPath": "com.sap.vocabularies.UI.v1.Chart#Eval_by_Currency",
+>           "presentationAnnotationPath": "com.sap.vocabularies.UI.v1.PresentationVariant#Eval_by_Currency",
+>           "dataPointAnnotationPath": "com.sap.vocabularies.UI.v1.DataPoint#Eval_by_Currency",
+>           "identificationAnnotationPath": "com.sap.vocabularies.UI.v1.Identification#Eval_by_Currency"
+>         }
+>       }
+>     }
+>   }
+> }
+> ```
+
+
+
+<a name="loio030cb5f86b954bff9cf1af7fbeeaac22__section_vtm_cfr_fhc"/>
+
+## Related Information
+
+For more information about configuring charts, see [Configuring Charts](configuring-charts-05eda5a.md).
+

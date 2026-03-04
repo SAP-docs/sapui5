@@ -102,6 +102,11 @@ Application developers can pass the variant ID as the URL parameter by updating 
 > }
 > ```
 
+
+
+> ### Note:  
+> For information about SAP Fiori Elements for OData V2, see [Passing Variant IDs as URL Parameters](passing-variant-ids-as-url-parameters-2a01415.md).
+
 **Related Information**  
 
 

@@ -278,3 +278,8 @@ Line micro charts can have string-based dimension fields annotated with any of t
 > 
 > ```
 
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Line Micro Chart](line-micro-chart-3af8420.md).
+

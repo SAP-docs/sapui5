@@ -4,9 +4,6 @@
 
 By defining terminologies together with additional resource bundles, an application can easily be switched from one scenario or industry to another.
 
-> ### Note:  
-> This topic is only applicable to SAP Fiori elements for OData V4.
-
 To use the concept of terminologies provided by SAPUI5, the "model" definition in the app descriptor must first be enhanced with the terminologies:
 
 > ### Sample Code:  

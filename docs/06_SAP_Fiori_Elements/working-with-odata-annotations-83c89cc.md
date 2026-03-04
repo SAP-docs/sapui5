@@ -151,7 +151,7 @@ The disadvantages of front-end annotations include a discrepancy between the dat
 
 <a name="loio83c89ccef12f48ab98f6c3811bd025b3__section_ujg_4tx_chc"/>
 
-## **SAP Fiori Tools Support**
+## SAP Fiori Tools Support
 
 SAP Fiori tools provides a powerful set of extensions for Visual Studio Code and SAP Business Application Studio. SAP Fiori tools simplifies the creation of SAP Fiori apps, which includes the maintenance of local annotations for SAP Fiori elements. They offer features such as the Page Map and Guided Development. These features help developers to generate and manage the UI and related annotations through visual editing.
 
@@ -160,6 +160,11 @@ They also offer editors for both CAP CDS and XML annotation files, making it eas
 Once an app is enabled for adaptation projects, developers can add new annotations to existing apps.
 
 For more information, see the [SAP Fiori Tools Documentation](https://help.sap.com/docs/SAP_FIORI_tools/17d50220bcd848aa854c9c182d65b699/55bfb91591d84f658e6c9474a3c657c4.html?locale=en-US).
+
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Working With OData Annotations](working-with-odata-annotations-8b55ead.md).
 
 **Related Information**  
 

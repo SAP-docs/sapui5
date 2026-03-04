@@ -219,3 +219,8 @@ To define custom parameters for intent-based navigation, proceed as follows:
     > ```
 
 
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Custom Navigation Parameters](custom-navigation-parameters-ee9ac2c.md).
+

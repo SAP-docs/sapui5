@@ -30,7 +30,7 @@ You can get answers to the most frequently asked questions we receive from our u
 
     We recommend using SAP Fiori tools, which is a set of extensions for SAP Business Application Studio and Visual Studio Code. For more information, click on the **Tools** tile in [Developing Apps with SAP Fiori Elements](developing-apps-with-sap-fiori-elements-03265b0.md).
 
--   **What are the required libraries when developing an app using SAP Fiori elements for OData V4 or when creating a custom app using the flexible programming model?**
+-   **What are the required libraries when developing an app using SAP Fiori elements for OData V4 or when creating a custom app?**
 
     -   If you use a floorplan such as the list report page or the object page, you can simply include `sap.fe.templates` in the `libs` section of your `manifest.json`.
 
@@ -55,7 +55,7 @@ You can get answers to the most frequently asked questions we receive from our u
 
     -   To configure object page headers, see [Setting Up the Object Page Header](setting-up-the-object-page-header-cce93e6.md).
 
-    -   To configure the object page sections, see [Defining and Adapting Sections](defining-and-adapting-sections-facfea0.md).
+    -   To configure the object page sections, see [Defining and Configuring Sections](defining-and-configuring-sections-facfea0.md).
 
     -   To now about the generic actions, see [Actions](actions-cbf16c5.md).
 
@@ -86,7 +86,7 @@ You can get answers to the most frequently asked questions we receive from our u
 
 -   **Can I override the standard texts or labels used in SAP Fiori elements?**
 
-    Yes, you can. SAP Fiori elements provide the list of all the keys that you can use to overwrite the default texts. For more information, see [Localization of UI Texts](localization-of-ui-texts-b8cb649.md).
+    Yes, you can. SAP Fiori elements provides the list of all the keys that you can use to overwrite the default texts. For more information, see [Localization of UI Texts](localization-of-ui-texts-b8cb649.md).
 
 -   **How can I create automated integration tests \(OPA\) for SAP Fiori elements for OData V4 applications?**
 
@@ -136,7 +136,7 @@ You can get answers to the most frequently asked questions we receive from our u
 
     Yes, you can use the `Common.SemanticObjectUnavailableActions` annotation as described in the [Hiding Unwanted Actions from a Semantic Object](navigation-from-an-app-outbound-navigation-d782acf.md#loiod782acf8bfd74107ad6a04f0361c5f62__hiding_unwanted_actions_subsection) subsection in [Navigation from an App \(Outbound Navigation\)](navigation-from-an-app-outbound-navigation-d782acf.md).
 
--   **Is it possible to directly navigate to an object page or subobject page without loading the list report page app?**
+-   **Is it possible to directly navigate to an object page or subobject page without loading the app with the list report page?**
 
     Yes. Please use the Deep Linking mechanism as described in [Navigation to an App \(Inbound Navigation\)](navigation-to-an-app-inbound-navigation-c337d8b.md).
 
@@ -161,11 +161,11 @@ You can get answers to the most frequently asked questions we receive from our u
 
 -   **Is it possible to group my actions under a menu button?**
 
-    Yes, you can group actions under a menu button. For more information, see the [Grouping Actions as Menu Button](actions-cbf16c5.md#loiocbf16c599f2d4b8796e3702f7d4aae6c__grouping_actions_subsection) subsection in [Actions](actions-cbf16c5.md).
+    Yes, you can group actions under a menu button. For more information, see the [Grouping Actions as Menu Buttons](actions-cbf16c5.md#loiocbf16c599f2d4b8796e3702f7d4aae6c__grouping_actions_subsection) subsection in [Actions](actions-cbf16c5.md).
 
--   **How do I control the visibility/enablement of the standard *Create* button in a list report page table?**
+-   **How do I control the visibility/enablement of the standard *Create* button in the table on the list report page?**
 
-    You can control the visibility or enablement of the standard *Create* button in a list report page table by using the `OperationAvailable` annotation. For more information, see the [Standard Action: Create](actions-in-the-list-report-993e99e.md#loio993e99eae4414b73bc7afef9518c79bf__standard_action_create_subsection) subsection in [Actions in the List Report](actions-in-the-list-report-993e99e.md).
+    You can control the visibility or enablement of the standard *Create* button in the table on the list report page by using the `OperationAvailable` annotation. For more information, see the [Standard Action: Create](actions-in-the-list-report-993e99e.md#loio993e99eae4414b73bc7afef9518c79bf__standard_action_create_subsection) subsection in [Actions in the List Report](actions-in-the-list-report-993e99e.md).
 
 -   **Can I define app-level critical actions that are shown emphasized rather than the default emphasized buttons such as *Edit* and *Save* of SAP Fiori elements?** 
 
@@ -253,17 +253,17 @@ You can get answers to the most frequently asked questions we receive from our u
 
     For tables with fewer columns, there's a considerable amount of free space on the right side of the table. However, you can define a specific column width using annotations in the `manifest.json` file to adapt your needs. For more information, see [Setting the Default Column Width](setting-the-default-column-width-a765253.md).
 
-    SAP Fiori elements also supports several table types. You can show or hide columns of list report page and object page tables depending on the screen width. For example, if the browser window is small or the app is running on a device with a small screen, or if you're using the flexible column layout.
+    SAP Fiori elements also supports several table types. You can show or hide columns of tables on the list report page and object page depending on the screen width. For example, if the browser window is small or the app is running on a device with a small screen, or if you're using the flexible column layout.
 
     The value of the `UI.Importance` annotation for the field determines which columns are hidden or moved when the screen size is reduced. For more information, see the [Showing or Hiding Columns Based on Importance and Available Screen Size in Responsive Tables](tables-c0f6592.md#loioc0f6592a592e47f9bb6d09900de47412__section_kgk_phh_wpb) section in [Tables](tables-c0f6592.md).
 
 -   **Can I allow users to edit multiple records in one go \(mass edit or bulk edit\)?**
 
-    Yes, you can edit multiple records at a time. For more information, see [Multiple Views in the List Report](multiple-views-in-the-list-report-a37df40.md).
+    Yes, you can edit multiple records at a time. For more information, see [Multiple Views on the List Report Page](multiple-views-on-the-list-report-page-a37df40.md).
 
 -   **Can a table be configured to show multiple views?**
 
-    By default, the list report page displays only one table. You can configure your list report page to display one or more tables next to the main list report page table in separate views. The users of your application can switch between the views using an icon tab bar. The tables in the views can be based on any entity in your service. The charts can be based on any entity, as long as it contains aggregatable and groupable properties. For more information, see [Multiple Views in the List Report](multiple-views-in-the-list-report-a37df40.md)
+    By default, the list report page displays only one table. You can configure your list report page to display one or more tables next to the main table of the list report page in separate views. The users of your application can switch between the views using an icon tab bar. The tables in the views can be based on any entity in your service. The charts can be based on any entity, as long as it contains aggregatable and groupable properties. For more information, see [Multiple Views on the List Report Page](multiple-views-on-the-list-report-page-a37df40.md)
 
     On the object page, you can use a segmented button to display different views of the same table. For more information, see [Adding Segmented Buttons to a Table Toolbar](adding-segmented-buttons-to-a-table-toolbar-5532c89.md).
 
@@ -307,7 +307,7 @@ You can get answers to the most frequently asked questions we receive from our u
 
 -   **I have some sections that take a long time to load. I don't want requests for these UI artifacts to go in the same call as the other requests so that the UI loads faster – what can I do here?**
 
-    You can group the request for the element that takes a long time under the "LongRunners" group. For more information, see [Defining the Loading Behavior of Object Page](defining-the-loading-behavior-of-object-page-ac03570.md).
+    You can group the request for the element that takes a long time under the "LongRunners" group. For more information, see [Defining the Loading Behavior of Object Pages](defining-the-loading-behavior-of-object-pages-ac03570.md).
 
 -   **Can I dynamically hide sections or parts of sections?** 
 
@@ -334,4 +334,9 @@ You can get answers to the most frequently asked questions we receive from our u
 
     There are multiple ways you can use to adapt your application for key users. For more information, see [Enabling an App for Key User Adaptation](enabling-an-app-for-key-user-adaptation-ccd45ba.md).
 
+
+
+
+> ### Note:  
+> For information about SAP Fiori Elements for OData V2, see [FAQs](faqs-b94bab9.md).
 

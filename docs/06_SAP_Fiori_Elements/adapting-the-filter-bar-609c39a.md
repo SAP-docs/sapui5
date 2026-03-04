@@ -262,6 +262,11 @@ You can move the explicitly included filter fields in the filter bar to the *Ada
 
 For more information about other possible values for the `availability` property, see the V4-specific section in [Adding Custom Fields to the Filter Bar](adding-custom-fields-to-the-filter-bar-5fb9f57.md).
 
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Adapting the Filter Bar](adapting-the-filter-bar-c7a7ac4.md).
+
 **Related Information**  
 
 

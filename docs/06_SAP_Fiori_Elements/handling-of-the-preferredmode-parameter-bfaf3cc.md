@@ -4,17 +4,27 @@
 
 Applications can configure the mode in which the object page is initially launched using the `preferredMode` parameter.
 
-The `preferredMode` parameter supports multiple values that allows you to specify the mode in which the object page is launched. For more information, see the separate sections in this topic.
+The `preferredMode` parameter supports multiple values that allow you to specify the mode in which the object page is launched. For more information, see the separate sections in this topic.
+
+> ### Note:  
+> If no object page is defined in the `manifest.json` file of the target app, or if the \(usually internal\) navigation to the object page is overridden by external navigation, the list report is shown.
+> 
+> In this case, the information described in this topic does not apply.
 
 
 
 <a name="loiobfaf3ccf3d6d4735990cc793b21f5529__section_rr2_sz2_qbc"/>
 
-## Using the `preferredMode=create` parameter
+## Using the `preferredMode=create` Parameter
 
-You can configure the list report and object page apps in the SAP Fiori launchpad with a start-up parameter `preferredMode=create`. When the app is launched from the tile, the object page loads directly in create mode.
+You can configure the list report and object page applications in the SAP Fiori launchpad with a start-up parameter `preferredMode=create`. When you launch the application from the tile, the list report and object page load directly in create mode.
 
-To achieve this behavior during external navigation, you can add `preferredMode=create` to the navigation URL during external navigation:\(…`#SalesOrder-manage?preferredMode=create`\). You can also add URL parameters after `preferredMode=create` to pass specific values to be used in the creation process.
+To achieve this behavior during external navigation, you can add `preferredMode=create` to the navigation URL during external navigation.
+
+> ### Example:  
+> `...#SalesOrder-manage?preferredMode=create`
+
+You can also append URL parameters after`preferredMode=create` to pass specific values to be used in the creation process.
 
 > ### Example:  
 > To set the value 01 for the `DefectCategory` field, enter the URL `…#Defect-displayWorklist?preferredMode=create&DefectCategory=01`.
@@ -85,19 +95,19 @@ You can use URL parameters to prefill specific values. This is not supported for
 > The target application must specify in its `manifest.json` file which parameters are to be used from the incoming URL. In the following example, only the `DefectCategory` parameter is used.
 > 
 > ```
+> 
 > "sap.ui.generic.app": { 
->    "_version": "1.2.0",
->    "settings": {
->       ... 
->   "inboundParameters": {
->          "DefectCategory": {
->             "useForCreate": true
->          }
->       }
->    },
->    "pages": [
->       {
->          ...
+>     "_version": "1.2.0",
+>     "settings": {
+>         ... 
+>         "inboundParameters": {
+>             "DefectCategory": {
+>                 "useForCreate": true
+>             }
+>         }
+>     },
+>     "pages": [{
+>         ...
 > ```
 
 
@@ -112,23 +122,25 @@ You can use URL parameters to prefill specific values. This is not supported for
 </td>
 <td valign="top">
 
-You can use this value to automatically trigger an unbound action when an app is started with this startup parameter during an external navigation scenario. The startup parameters must contain the mandatory specification of the unbound action and values for the inbound parameters of that action.
+You can use this value to automatically trigger an unbound action when an app is started with this startup parameter during an external navigation scenario. The startup parameters must contain the mandatory parameters of the unbound action and values for the inbound parameters of that action.
 
 The target app must make the unbound action available. To do this, you can specify the changes in the `manifest.json` file, as shown in the following sample code:
 
 > ### Sample Code:  
 > ```
+> 
 > "sap.ui.generic.app": { 
->    "_version": "1.2.0",
->    "settings": {
->       ... 
->   "inboundParameters": {
->          "myActionName": {
->             "useForActionResolution": {
-> 		   "myCreateWithNameAndStreet": "myCreate1",
-> 		   "myCreateWithoutNameAndStreet": "myCreate3",	
->          }
->       }
+>     "_version": "1.2.0",
+>     "settings": {
+>         ... 
+>         "inboundParameters": {
+>             "myActionName": {
+>                 "useForActionResolution": {
+>                 "myCreateWithNameAndStreet": "myCreate1",
+>                 "myCreateWithoutNameAndStreet": "myCreate3",	
+>                 }
+>             }
+> 
 > 
 > ```
 
@@ -136,6 +148,7 @@ The sample code shows two unbound actions, `myCreate1` and `myCreate3`, that are
 
 > ### Sample Code:  
 > ```
+> 
 > <FunctionImport Name="myCreate1" ReturnType="cds_zvd_drafts_customer_sd.CustomerType" EntitySet="Customer" m:HttpMethod="POST">
 > <Parameter Name="ResultIsActiveEntity" Type="Edm.Boolean" Mode="In" Nullable="true" sap:label="Result is active"/>
 > <Parameter Name="Name" Type="Edm.String" Mode="In" MaxLength="40" Nullable="true" sap:label="Customer Name"/>
@@ -149,7 +162,9 @@ The sample code shows two unbound actions, `myCreate1` and `myCreate3`, that are
 
 The source app passes the startup parameter `mode/preferredMode` as `callUnboundAction`. `myActionName` is used to specify the unbound action that is called. The actions must be addressed by their logical names and not by their technical names.
 
-Moreover, the source app can also pass values for any inbound parameter of the specified action. In the following sample code, `myCreate1` function import is called with the inbound parameters `ResultIsActiveEntity` and `Name`.
+The target app must contain a top-level object page defined for the same entity set the unbound action is defined for \(in this case `Customer`\). Also, the instance returned by the action must be an instance of this entity set.
+
+The source app can also pass values for any inbound parameter of the specified action. In the following sample code, `myCreate1` function import is called with the inbound parameters `ResultIsActiveEntity` and `Name`.
 
 > ### Sample Code:  
 > ```
@@ -162,9 +177,6 @@ For information about create mode as an external app in SAP Fiori Elements for O
 </tr>
 </table>
 
-> ### Note:  
-> There is no double navigation. If no object page is defined in the `manifest.json` file of the target app or the \(usually internal\) navigation to the object page is overridden by external navigation, the list report is shown.
-
 
 
 <a name="loiobfaf3ccf3d6d4735990cc793b21f5529__section_evr_bcd_hmb"/>
@@ -173,11 +185,7 @@ For information about create mode as an external app in SAP Fiori Elements for O
 
 The `preferredMode` parameter works as follows:
 
--   If the application has defined a create action \(property `NewAction` of the annotation `StickySupported` or `DraftRoot`\) and if this action is dependent on the mandatory parameters, then on launching the app the action parameter dialog requests the user to enter the parameters. After entering the parameter values, the object page opens in create mode.
-
--   If the application has not defined a create action or if this action is not dependent on the mandatory parameters, then on launching the app, the object page doesn't open in create mode.
-
--   Applications can also define `createWith:`, followed by the desired action as the `preferredMode` value. In this case, this action is called when the app is opened in create mode.
+-   Applications can define `createWith:`, followed by the desired action as the `preferredMode` value. In this case, this action is called when the app is opened in create mode.
 
     If the specified action has parameters, then an action parameter dialog appears after navigation to the target application. If values are already available from the navigation context for some of the fields, these values are taken over into the dialog. This is shown in the following sample code:
 
@@ -209,17 +217,29 @@ The `preferredMode` parameter works as follows:
     > ```
 
 
-> ### Note:  
-> If an application has its own view instead of the default object page template and is configured with a start-up parameter `preferredMode=create` \(or has the URL parameter `preferredMode=create`\), this does not result in the behavior described above. In this case, the list report application is launched instead.
-
-> ### Note:  
-> There is no double navigation. If no object page is defined in the `manifest.json` file of the target app, the list report is shown.
-
 
 
 ### Passing Parameters when Using `preferredMode=create`
 
 When `preferredMode=create` is used with URL parameter values, there's a difference in the handling of the parameters based on creation mode:
+
+-   If the application has defined a create action \(property `NewAction` of the annotation `StickySupported` or `DraftRoot`\) and if this action is dependent on the mandatory parameters, then on launching the app the action parameter dialog requests the user to enter the parameters. After entering the parameter values, the object page opens in create mode.
+
+-   If the application has not defined a create action or if this action is not dependent on the mandatory parameters, then on launching the app, the object page doesn't open in create mode.
+
+-   Applications can also define `createWith:`, followed by the desired action as the `preferredMode` value. In this case, this action is called when the app is opened in create mode.
+
+    If the specified action has parameters, then an action parameter dialog appears after navigation to the target application. If values are already available from the navigation context for some of the fields, these values are taken over into the dialog. This is shown in the following sample code:
+
+    > ### Sample Code:  
+    > ```
+    > "preferredMode": {
+    >      "defaultValue": {
+    >           "value": "createWith:com.c_salesordermanage_sd.CreateWithSalesOrderType",
+    >           "format": "value"
+    >      }
+    > },
+    > ```
 
 -   For POST-based create, the values are only considered if they are also specified using the `useForCreate` property in the `manifest.json` file of the target application. URL parameters that are not defined using the `useForCreate` property in the `manifest.json` file, are not passed to the back end during the creation process.
 
@@ -240,12 +260,9 @@ When `preferredMode=create` is used with URL parameter values, there's a differe
     > }
     > ```
 
-    If the "options": \{ "settings": \{ "contextPath": "/SalesOrderManage", // Object Page ... "inboundParameters": \{ "SalesOrderType": \{ "useForCreate": true \} \} \} \}`manifest.json` file of the object page in the target applicationis configured as shown in the sample code, an incoming URL like …`#SalesOrder-manage?preferredMode=create&SalesOrderType=OR&Supplier=ABC` results in only the part `SalesOrderType=OR` being passed to the back end in the create call. The "`Supplier`" value is ignored because it is not specified in the `useForCreate` property.
+    If the `manifest.json` file of the object page in the target application is configured as shown in the sample code, an incoming URL like …`#SalesOrder-manage?preferredMode=create&SalesOrderType=OR&Supplier=ABC` results in only the part `SalesOrderType=OR` being passed to the back end in the create call. The `Supplier` value is ignored because it is not specified in the `useForCreate` property.
 
 -   For `NewAction()`-based create, the incoming value of the navigation context is always applied to the matching fields \(exact technical name match\) in the action parameter dialog. If no matching field is configured, the parameters from the navigation context are not passed. In this case the manifest setting "`useForCreate`" is not considered at all.
-
-    > ### Note:  
-    > "options": \{The parameter values in the navigation context are also passed for matching fields that are hidden, that is, the matching field is configured for the action parameter dialog in `NewAction()`, but not seen because of the `UI.Hidden` annotation.
 
 
 
@@ -260,6 +277,7 @@ If an application is configured with the startup parameter `preferredMode=edit` 
 
     > ### Sample Code:  
     > ```
+    > 
     > sap.ui.define(["sap/fe/core/AppComponent"], function(AppComponent) 
     >     "use strict";                                                  
     > 
@@ -286,6 +304,11 @@ If an application is configured with the startup parameter `preferredMode=edit` 
     > #Manage-items?preferredMode=edit&ID=1
     > ```
 
+
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Handling of the preferredMode Parameter](handling-of-the-preferredmode-parameter-2e40363.md).
 
 **Related Information**  
 

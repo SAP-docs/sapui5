@@ -9,38 +9,7 @@ You can enable key users to make adaptations in the list report and on the objec
 
 To enable an app for key user adaptation, you must set `flexEnabled` to 'true' in the `manifest.json` file. For more information, see [SAPUI5 Flexibility: Enable Your App for UI Adaptation](../05_Developing_Apps/sapui5-flexibility-enable-your-app-for-ui-adaptation-f1430c0.md).
 
-Key users can make the following adaptations on applications:
-
--   Create different variants of the list report for users by adjusting filters, column sorting, and tab selection, for example.
-
--   Define the fields visible in the mass edit dialog. In the key user adaptation mode, all fields except static read-only fields are available.
-
--   Move, rename, and remove buttons and add previously removed buttons to the following places:
-
-    -   A toolbar in the header and the table of the list report
-
-    -   The header, section, subsection, table, and footer of the object page
-
-
-    > ### Restriction:  
-    > Some standard actions, such as edit, save, and delete, are excluded from key user adaptation.
-    > 
-    > Actions with dynamic visibility cannot be added nor removed.
-
-
--   Split and combine actions in tables on the object page and in the list report.
--   Move, rename, remove, and reveal sections and subsections of the object page.
-
--   Edit the facets of the object page header. For more information, see the [Enabling Key User Adaptation on the Object Page Header](enabling-an-app-for-key-user-adaptation-ccd45ba.md#loioccd45ba3f0b446a0901b2c9d42b8ad53__section_rhq_1nh_tcc) section in this topic.
-
--   Move, rename, add, and remove parts of forms. For more information, see the [Enabling Key User Adaptation in Forms](enabling-an-app-for-key-user-adaptation-ccd45ba.md#loioccd45ba3f0b446a0901b2c9d42b8ad53__section_shq_1nh_tcc) section in this topic.
-
--   Embed, update, move and remove iFrame content \(that is, embedded content\) on object page headers and sections. For more information, see [Embedding Content](https://help.sap.com/docs/ui5-flexibility-for-key-users/ui5-flexibility-for-key-users/embedding-content).
-
-    > ### Caution:  
-    > You cannot embed another SAP Fiori elements app into an existing SAP Fiori elements app by using an iFrame.
-
-
+-   
 
 
 <a name="loioccd45ba3f0b446a0901b2c9d42b8ad53__section_rhq_1nh_tcc"/>

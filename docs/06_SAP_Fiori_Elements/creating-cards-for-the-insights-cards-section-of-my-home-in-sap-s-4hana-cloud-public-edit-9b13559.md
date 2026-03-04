@@ -23,23 +23,25 @@ Once **My Home** in SAP S/4HANA Cloud Public Edition and **My Home** in SAP S/4H
 ![](images/Add_Cards_to_Insights_ALP_401e0b0.png "Add Card to Insights Option in the Chart Toolbar of Analytical List Page")
 
 > ### Note:  
-> The card creation dialog shows only those columns that are supported for a card. The card supports single-valued `DataField` based columns. It also supports columns with field values displayed as links such as `DataFieldWithUrl`, semantic links, and `DataField` with `QuickViewFacets`. In addition, SAP Fiori elements for OData V4 also supports `DataFieldWithIntentBasedNavigation` and `DataFieldWithNavigationPath` columns.
+> -   Cards cannot be created when a semantic date filter is applied.
 > 
-> The columns that are not supported by the card creation dialog include:
+> -   The card creation dialog shows only those columns that are supported for a card. The card supports single-valued `DataField` based columns. It also supports columns with field values displayed as links such as `DataFieldWithUrl`, semantic links, and `DataField` with `QuickViewFacets`. In addition, SAP Fiori elements for OData V4 also supports `DataFieldWithIntentBasedNavigation` and `DataFieldWithNavigationPath` columns.
 > 
-> -   Image
+>     The columns that are not supported by the card creation dialog include:
 > 
-> -   Multi-valued based columns
+>     -   Image
 > 
-> -   `FieldGroup` based columns
+>     -   Multi-valued based columns
 > 
-> -   Columns with inline action
+>     -   `FieldGroup` based columns
 > 
-> -   Columns with navigation button
+>     -   Columns with inline action
 > 
-> -   `DataFieldForAnnotation` based columns \(for contact or address fields\)
+>     -   Columns with navigation button
 > 
-> -   Custom columns
+>     -   `DataFieldForAnnotation` based columns \(for contact or address fields\)
+> 
+>     -   Custom columns
 
 Application developers can hide the *Add Card to Insights* option from the overflow toolbar by configuring specific settings in the `manifest.json` file. For more information, see the version-specific sections of this topic.
 
@@ -132,6 +134,11 @@ To hide the *Add Card to Insights* option in the chart toolbar, add the followin
 > 
 > 
 > -   Cards don't have the same formatting for unit of measure fields as seen in the list report table.
+
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Creating Cards for the Insights Cards Section of My Home in SAP S/4HANA Cloud Public Edition and My Home in SAP S/4HANA](creating-cards-for-the-insights-cards-section-of-my-home-in-sap-s-4hana-cloud-public-edit-fac8e9e.md).
 
 **Related Information**  
 

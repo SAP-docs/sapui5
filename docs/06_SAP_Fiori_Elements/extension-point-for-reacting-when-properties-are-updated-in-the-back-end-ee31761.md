@@ -4,9 +4,6 @@
 
 You can add custom coding to react when properties are updated in the back end.
 
-> ### Note:  
-> This topic is only applicable to SAP Fiori elements for OData V4.
-
 You can use the `watchProperty` method of the `extensionAPI` to define a callback when selected properties are changed.
 
 1:n navigation properties are not supported.

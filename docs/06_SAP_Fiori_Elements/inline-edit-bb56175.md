@@ -21,6 +21,8 @@ Inline edit is supported on pages based on the `sap.fe.templates.ListReport` or 
 > -   The application uses the flexible column layout.
 > 
 > -   The field is a stream property field or a multi-input field.
+> 
+> -   Multiple views with different entity sets are defined on a list report page.
 
 
 

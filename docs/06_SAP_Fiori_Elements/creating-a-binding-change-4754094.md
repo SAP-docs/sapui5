@@ -9,9 +9,6 @@ You can create property binding changes manually by using the Page Editor. You c
 ## Context
 
 > ### Note:  
-> This topic is only applicable to SAP Fiori elements for OData V2.
-
-> ### Note:  
 > This procedure is only relevant for the following use cases described in [Adapting the UI: List Report and Object Page](adapting-the-ui-list-report-and-object-page-0d2f1a9.md):
 > 
 > -   Object page: Show header content in edit mode

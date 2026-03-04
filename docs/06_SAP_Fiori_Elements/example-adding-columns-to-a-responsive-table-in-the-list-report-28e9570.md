@@ -11,19 +11,9 @@ You have to implement two extension points to add a custom column to a table.
 ## Context
 
 > ### Caution:  
-> Use app extensions with caution and only if you cannot produce the required behavior by other means, such as manifest settings or annotations. To correctly integrate your app extension coding with SAP Fiori elements, use only the `extensionAPI` of SAP Fiori elements. For more information, see [Using the extensionAPI](using-the-extensionapi-bd2994b.md).
+> Use app extensions with caution and only if you cannot produce the required behavior by other means, such as manifest settings or annotations. To correctly integrate your app extension coding with SAP Fiori elements, use only the `extensionAPI` of SAP Fiori elements. For more information, see [Using the extensionAPI](using-the-extensionapi-a5a4ec6.md).
 > 
 > After you've created an app extension, its display \(for example, control placement and layout\) and system behavior \(for example, model and binding usage, busy handling\) lies within the application's responsibility. SAP Fiori elements provides support only for the official `extensionAPI` functions. Don't access or manipulate controls, properties, models, or other internal objects created by the SAP Fiori elements framework.
-
-<a name="task_r4q_j3g_d4b"/>
-
-<!-- task\_r4q\_j3g\_d4b -->
-
-## Additional Features in SAP Fiori Elements for OData V2
-
-
-
-## Context
 
 For information about the configuration options and examples for defining custom columns in smart tables, see [Smart Table](../10_More_About_Controls/smart-table-bed8274.md).
 
@@ -36,8 +26,6 @@ The table containing additional custom columns can look like this:
 ![](images/Add_columns_to_responsive_table_in_list_report_4efc171.png "Custom columns in responsive table")
 
 
-
-<a name="task_r4q_j3g_d4b__steps_g4h_lj1_5nb"/>
 
 ## Procedure
 
@@ -143,6 +131,9 @@ The table containing additional custom columns can look like this:
     > ```
 
     > ### Note:  
+    > In case the fragment needs to be re-used for multiple tabs, the `id` property must be set to make the ids unique.
+
+    > ### Note:  
     > To reuse a fragment for multiple tabs, set the `id` property to ensure unique ids.
 
     > ### Sample Code:  
@@ -176,16 +167,41 @@ The table containing additional custom columns can look like this:
     > },…
     > ```
 
+    > ### Sample Code:  
+    > ```
+    > ... "extends":{
+    >    "extensions":{
+    >       "sap.ui.viewExtensions":{
+    >          "sap.suite.ui.generic.template.ListReport.view.ListReport":{
+    >             "ResponsiveTableColumnsExtension|STTA_C_MP_Product|Expensive":{
+    >                "className":"sap.ui.core.Fragment",
+    >                "fragmentName":"STTA_MP.ext.fragments.ListReportResponsiveTableColumnsExpensive",
+    >                "type":"XML",
+    >                "id":"Expensive"
+    >             
+    > },
+    >             "ResponsiveTableCellsExtension|STTA_C_MP_Product|Expensive":{
+    >                "className":"sap.ui.core.Fragment",
+    >                "fragmentName":"STTA_MP.ext.fragments.ListReportResponsiveTableCellsExpensive",
+    >                "type":"XML",
+    >                "id":"Expensive"
+    >             
+    > },
+    >             "ResponsiveTableColumnsExtension|STTA_C_MP_Product|Cheap":{
+    >                "className":"sap.ui.core.Fragment",
+    >                "fragmentName":"STTA_MP.ext.fragments.ListReportResponsiveTableColumnsCheap",
+    >                "type":"XML",
+    >                "id":"Cheap"
+    >             
+    > },
+    >             "ResponsiveTableCellsExtension|STTA_C_MP_Product|Cheap":{
+    >                "className":"sap.ui.core.Fragment",
+    >                "fragmentName":"STTA_MP.ext.fragments.ListReportResponsiveTableCellsCheap",
+    >                "type":"XML",
+    >                "id":"Cheap"
+    >             
+    > },…
+    > 
+    > ```
 
-<a name="task_k4t_zkg_d4b"/>
-
-<!-- task\_k4t\_zkg\_d4b -->
-
-## Additional Features in SAP Fiori Elements for OData V4
-
-
-
-## Context
-
-You can find a detailed description of how to add custom columns to a table in the topic [Extension Points for Tables](extension-points-for-tables-d525522.md).
 

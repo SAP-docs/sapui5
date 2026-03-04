@@ -2,7 +2,7 @@
 
 # Extending Delivered Apps Using Adaptation Extensions
 
-You can extend delivered apps based on SAP Fiori elements by using the Adaptation Editor in SAP Business Application Studio. It allows you to create adaptation projects on top of delivered apps.
+Key users and developers can extend and configure SAP Fiori applications by adapting the UI.
 
 
 
@@ -10,7 +10,9 @@ You can extend delivered apps based on SAP Fiori elements by using the Adaptatio
 
 ## Context
 
-You can implement extension functions as part of a UI adaptation project by using the Adaptation Editor in SAP Business Application Studio. The adaptation project references the applications delivered by SAP as base or parent applications.
+Key users can adapt applications at runtime by changing the UI from the initial state of the app to a personalized view for end users. In the *User Menu*, key users can choose *Adapt UI* and change the user interface of SAP Fiori apps.
+
+Developers can extend applications based on SAP Fiori elements by using the Adaptation Editor in SAP Business Application Studio. It allows you to create adaptation projects on top of delivered apps.
 
 > ### Note:  
 > This procedure is relevant only for list reports, object pages, overview pages, and analytical list pages.
@@ -150,22 +152,6 @@ You can use adaptation extensions for the following extension points:
 
 For more information, see [Details of Extension Functions Used for Extending Delivered Apps](details-of-extension-functions-used-for-extending-delivered-apps-82630e5.md).
 
-<a name="task_yb4_1s1_34b"/>
-
-<!-- task\_yb4\_1s1\_34b -->
-
-## Additional Features in SAP Fiori Elements for OData V4
-
-
-
-<a name="task_yb4_1s1_34b__context_p3h_bs1_34b"/>
-
-## Context
-
-You can use the `controllerextensions` API to override the existing behavior of the SAP Fiori elements framework, and to implement hooks to implement your custom logic. For information about the `controllerextensions` API, see the [API Reference](https://ui5.sap.com/#/api/sap.fe.core.controllerextensions). For more information and live examples, see the SAP Fiori development portal at [Standard Floorplans - Extensions - Overview](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/controllerExtensions/guidanceControllerExtensions).
-
-As a developer you can adapt your UI in Safe Mode. For more information, see [SAPUI5 Flexibility: Adapting UIs Made Easy](../04_Essentials/sapui5-flexibility-adapting-uis-made-easy-a8e55aa.md).
-
 <a name="topic_gds_rdg_vzb"/>
 
 <!-- topic\_gds\_rdg\_vzb -->
@@ -176,7 +162,7 @@ As a developer you can adapt your UI in Safe Mode. For more information, see [SA
 
 -   [SAPUI5 Flexibility: Adapting UIs Made Easy](../04_Essentials/sapui5-flexibility-adapting-uis-made-easy-a8e55aa.md)
 
--   [Adapting the UI](adapting-the-ui-59bfd31.md)
+-   [Extending Delivered Apps With Key User Adaptation](extending-delivered-apps-with-key-user-adaptation-59bfd31.md)
 
 -   [Extending SAP Fiori Applications](https://help.sap.com/docs/bas/developing-sap-fiori-app-in-sap-business-application-studio/extending-sap-fiori-application?locale=en-US)
 

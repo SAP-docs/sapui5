@@ -1,0 +1,136 @@
+<!-- loio66050ea65a544a83843d5d09f6984154 -->
+
+# Editing Status
+
+The editing status reflects the state of the object or entry in terms of the processing cycle. For example, it can give the user information about whether the item can be accessed, or about its level of completion.
+
+
+
+<a name="loio66050ea65a544a83843d5d09f6984154__section_z1y_vrp_llb"/>
+
+## Editing Status for Table Items
+
+Users can view the editing status of the objects displayed on the list report. In a list report with a responsive table, the editing status is shown in the key column \(the first column displayed with a semantic key\). In a list report with a grid table, a tree table, or an analytical table, the editing status is shown in a separate column which is placed in the second position and doesn't have a label. The editing status is calculated from the draft administrative data that is provided by the back end.
+
+**Editing Status Visualization in a List Report Page with a Responsive Table**
+
+![](images/Draft_Administrative_Data_Visualization_in_List_Report_Page_with_Responsive_Table_f66fced.png)
+
+**Editing Status Visualization in a List Report Page with a Grid Table**
+
+![](images/Draft_Administrative_Data_Visualization_in_List_Report_Page_with_Grid_Table_4b053c1.png)
+
+
+
+<a name="loio66050ea65a544a83843d5d09f6984154__section_gzh_lht_ymb"/>
+
+## Access to Administrative Data
+
+For the statuses *Unsaved Changes by Another User* and *Locked by Another User*, the name of the user who last changed the object is visible directly in the line item in the list report. Note that if the user's full name isn't available in the master data in the back-end system, only the technical user name is displayed. If the technical name is also not available, the message then indicates that the unsaved changes or the lock on the object belongs to "another user".
+
+In addition, for the statuses *Own Draft*, *Unsaved Changes by Another User*, and *Locked by Another User*, a link accesses a popover to allow you to view the user who last changed the object and the time of the change. Note that if the user's full name isn't available in the master data in the back-end system, only the technical user name is displayed.
+
+
+
+<a name="loio66050ea65a544a83843d5d09f6984154__section_tgf_4ht_ymb"/>
+
+## Editing Status Filter
+
+A static filter attribute is available for all applications, which is added to the filter bar of the list report for all draft-enabled applications by default. This filter allows users to search for objects or entries in a specific state.
+
+The drop-down values are as follows:
+
+**Dropdown Values**
+
+
+<table>
+<tr>
+<th valign="top">
+
+Dropdown Value
+
+</th>
+<th valign="top">
+
+Description
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+*All* 
+
+</td>
+<td valign="top">
+
+Displays all entities
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+*Own Draft* 
+
+</td>
+<td valign="top">
+
+Displays a user's own draft only
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+*Locked by Another User* 
+
+</td>
+<td valign="top">
+
+Displays all entities that are currently in progress by someone
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+*Unsaved Changes by Another User* 
+
+</td>
+<td valign="top">
+
+Displays all entities with unsaved changes \(lock expired, draft of someone is still available\)
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+*Unchanged* 
+
+</td>
+<td valign="top">
+
+Displays all entities that have no draft
+
+</td>
+</tr>
+</table>
+
+> ### Note:  
+> The default search filter is *All*, even if the user clears the filter value.
+
+
+
+### Disabling the Editing Status Filter
+
+If desired, the editing status filter can be disabled after you generate your app. For more information, see [Disabling the Editing Status Filter](disabling-the-editing-status-filter-cd319e9.md).
+
+**Related Information**  
+
+
+[Handling Semantic Key Fields](handling-semantic-key-fields-94c1856.md "Semantic key fields in tables are displayed with a special logic.")
+
+[Settings for List Report Tables](settings-for-list-report-tables-8f51fcd.md "You can configure various aspects of the list report table through annotations and in the manifest.json file.")
+

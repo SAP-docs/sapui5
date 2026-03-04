@@ -2,13 +2,39 @@
 
 # Developing Apps with SAP Fiori Elements
 
-Develop apps using SAP Fiori elements and benefit from a template- and metadata-driven approach.
+Develop apps using SAP Fiori elements and benefit from a metadata-driven approach.
 
-SAP Fiori elements provides designs for UI patterns and predefined floorplans for common application use cases. App developers can use SAP Fiori elements to create SAP Fiori applications based on OData services and annotations that don't need JavaScript UI coding. The resulting app uses predefined views and controllers that are provided centrally. This means no application-specific view instances are required. SAPUI5 interprets metadata and annotations of the underlying OData service and uses the corresponding views for the SAP Fiori app at startup.
+The metadata-driven SAP Fiori elements framework provides the optimal combination of productivity and functionality with a sufficient level of flexibility for most enterprise applications. It empowers you to effectively develop scalable, efficient, and modern applications that align with the [SAP Design System](https://www.sap.com/design-system/) guidelines and a user-centric approach.
+
+The following overview highlights the key benefits of developing your SAP Fiori apps with SAP Fiori elements:
+
+-   **Developer Productivity**
+
+    -   Focus on **business logic** and back-end services.
+
+    -   Write **less UI code**.
+
+    -   **Reduce** development and maintenance **costs**.
+
+
+-   **Harmonized User Experience**
+
+    -   Deliver **built-in best practices** for user experience.
+
+    -   Benefit from the **latest [SAP Design System](https://www.sap.com/design-system/)** guidelines.
+
+    -   Include **recurring patterns** for layout, navigation, search, filtering, and more.
+
+
+-   **Enterprise Readiness**
+
+    -   Deliver **high-quality** SAPUI5 applications to end users.
+
+    -   Ensure **stable, optimized** UI code out of the box.
+
+    -   Include **standard enterprise features** \(accessibility, mobile, translation support, and more\).
 
 
 
-The following image contains links to product documentation as well as to other websites.
-
-![](images/ImageMapEntryPage_dc8d2b1.png)
+Use [SAP Fiori tools](https://help.sap.com/viewer/product/SAP_FIORI_tools/Latest/en-US) to further accelerate SAP Fiori elements app development. SAP Fiori tools provides extensions for your SAP Business Application Studio and Visual Studio Code development environment, helping you to create applications, visualize navigation, automatically generate code, and more.
 

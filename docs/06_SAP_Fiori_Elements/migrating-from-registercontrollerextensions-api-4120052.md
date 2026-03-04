@@ -4,9 +4,6 @@
 
 As of SAPUI5 1.120 release, the [`registerControllerExtensions`](https://ui5.sap.com/#/api/sap.suite.ui.generic.template.extensionAPI.extensionAPI%23methods/sap.suite.ui.generic.template.extensionAPI.extensionAPI.registerControllerExtensions)API is getting deprecated. It is planned to be removed from the SAPUI5 version 2.0.
 
-> ### Note:  
-> This topic is only applicable to SAP Fiori elements for OData V2.
-
 Following are the requirements that describe why the API is getting deprecated:
 
 -   Now, SAPUI5 provides capabilities to register multiple controller extensions for a single floorplan \(one controller extension per view\) directly through the manifest. In this case, the `registerControllerExtensions` API is not required anymore.

@@ -900,7 +900,7 @@ SAP Fiori Elements
 The following changes and new features are available for SAP Fiori elements for OData V2:
 
 -   Application developers can now add two tables in a subsection of an object page. The tables in the subsection adjust their respective widths depending on the available screen size. For more information, see [Adding Two Tables in a Subsection](../06_SAP_Fiori_Elements/adding-two-tables-in-a-subsection-17564c2.md).
--   Overview pages now support horizontal bar charts. For more information, see [Bar Chart Card](../06_SAP_Fiori_Elements/bar-chart-card-95f6aeb.md).
+-   Overview pages now support horizontal bar charts. For more information, see [Bar Chart](../06_SAP_Fiori_Elements/bar-chart-95f6aeb.md).
 -   Analytical list pages now provide visual indication of the item that is shown on the object page.
 
 <sub>Changed•SAP Fiori Elements•Info Only•1.88</sub>
@@ -969,6 +969,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.142](what-s-new-in-sapui5-1-142-92ed100.md "With this release SAPUI5 is upgraded from version 1.141 to 1.142.")
 
 [What's New in SAPUI5 1.141](what-s-new-in-sapui5-1-141-a7ed66d.md "With this release SAPUI5 is upgraded from version 1.140 to 1.141.")
 

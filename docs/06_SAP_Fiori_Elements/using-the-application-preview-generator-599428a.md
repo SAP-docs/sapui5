@@ -98,7 +98,7 @@ The following dialog appears:
 
 ![](images/Card_Generator_Dialog_500278e.png)
 
-Enter the data for the relevant fields in the dialog. For more information about the supported features, see the [Supported Features](using-the-application-preview-generator-599428a.md#loio599428aa0b244626a029d5202c1bfaac__section_ysh_2dw_hdc) section in this topic.
+Enter the data for the relevant fields in the dialog. For more information about the supported features, see the [Features of the Card Generator Dialog](using-the-application-preview-generator-599428a.md#loio599428aa0b244626a029d5202c1bfaac__section_ysh_2dw_hdc) section in this topic.
 
 A live preview of the integration card and its corresponding adaptive card is displayed on the right side, as shown in the following screenshots:
 
@@ -332,4 +332,9 @@ You can apply additional options to any property that has this control displayed
 </td>
 </tr>
 </table>
+
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Using the Application Preview Generator](using-the-application-preview-generator-aabdb35.md).
 

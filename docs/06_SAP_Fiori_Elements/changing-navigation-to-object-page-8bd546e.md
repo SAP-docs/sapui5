@@ -2,7 +2,7 @@
 
 # Changing Navigation to Object Page
 
-Navigation from the list report view to the object page in the same app is enabled by default. If required, you can disable this navigation or replace it with navigation to another app \(external navigation\).
+Navigation from the list report view to the object page in the same app is enabled by when a target page exists and the navigation is configured. If required, you can disable this navigation or replace it with navigation to another app \(external navigation\).
 
 
 
@@ -207,4 +207,9 @@ You can also use a `display` section within the `navigation` section instead of 
 
 > ### Note:  
 > If both `display` and `detail` are given in the manifest, then `display` has priority for the outbound navigation.
+
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Changing Navigation to Object Page](changing-navigation-to-object-page-1154c02.md).
 

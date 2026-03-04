@@ -10,10 +10,7 @@ In this example, you add a button to the table toolbar in the list report and ex
 
 ## Prerequisites
 
-> ### Note:  
-> This topic is only applicable to SAP Fiori elements for OData V2.
-
-You have performed the steps described in [Extending Delivered Apps Using Adaptation Extensions](extending-delivered-apps-using-adaptation-extensions-52fc48b.md).
+You have performed the steps described in [Extending Delivered Apps Using Adaptation Extensions](extending-delivered-apps-using-adaptation-extensions-4221538.md).
 
 
 

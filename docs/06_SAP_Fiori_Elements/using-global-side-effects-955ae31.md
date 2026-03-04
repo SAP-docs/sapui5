@@ -33,46 +33,6 @@ The following sample code shows the global side effect with target fields and th
 > 
 > ```
 
-
-
-<a name="loio955ae316856a4dcdbe07a1dbf584fa98__section_b5t_bn1_twb"/>
-
-## Additional Features in SAP Fiori Elements for OData V2
-
-If the `TriggerAction` is annotated with a global side effect, then on pressing [Enter\] the `TriggerAction` replaces the `PreparationAction` call. For more information, see [Draft Handling](draft-handling-ed9aa41.md).
-
-To optimize performance, make the annotations for the desired side effects as specific as possible.
-
-It is recommended to specify the target properties or target entities for global side effects. For exceptional cases, apps can configure to refresh the whole entity with the help of the `forceGlobalRefresh` parameter in the `manifest.json` file.
-
-> ### Sample Code:  
-> `manifest.json`
-> 
-> ```
-> "sap.ui.generic.app": {
->         "_version": "1.3.0",
->         "settings": {
->             "forceGlobalRefresh": true,
->             .....
->                 }
->             },
-> ```
-
--   If the `forceGlobalRefresh` parameter is set to `true`, a refresh of the entire model is triggered when you press [Enter\].
-
--   If the parameter is set to `false`, then only the annotated targets are refreshed, and/or the annotated `TriggerAction` is called.
-
--   As of SAPUI5 1.106, if the parameter is not set, the \(runtime\) default is `false`.
-
-
-For newly generated apps, the \(design time\) default is `false`, that is, the project generation wizard generates `"forceGlobalRefresh": false`.
-
-
-
-<a name="loio955ae316856a4dcdbe07a1dbf584fa98__section_hkm_hzq_5wb"/>
-
-## Additional Features in SAP Fiori Elements for OData V4
-
 The following CAP CDS sample code shows the global side effect with target fields and the `TriggerAction`:
 
 > ### Sample Code:  
@@ -91,6 +51,11 @@ The following CAP CDS sample code shows the global side effect with target field
 > }
 > );
 > ```
+
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Using Global Side Effects](using-global-side-effects-1c90f8d.md).
 
 **Related Information**  
 

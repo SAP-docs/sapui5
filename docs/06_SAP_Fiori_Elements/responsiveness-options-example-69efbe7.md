@@ -11,3 +11,8 @@ When using SAP Fiori elements, you can make use of specific responsiveness optio
 -   Fields of high, medium, or low importance are shown on the desktop.
 
 
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Responsiveness Options: Example](responsiveness-options-example-c095d2c.md).
+

@@ -802,7 +802,7 @@ SAP Fiori Elements
 The object page has these new features:
 
 -   The `condensedTableLayout` for `sap.ui.table` is now also available for object page tables with multiple sections in tab mode. For more information, see [Using the Condensed Table Layout](../06_SAP_Fiori_Elements/using-the-condensed-table-layout-f3cc057.md).
--   In sections that just contain a table, the available space is now used completely. For more information, see [Defining and Adapting Sections](../06_SAP_Fiori_Elements/defining-and-adapting-sections-facfea0.md).
+-   In sections that just contain a table, the available space is now used completely. For more information, see [Defining and Configuring Sections](../06_SAP_Fiori_Elements/defining-and-configuring-sections-facfea0.md).
 
 
 **Overview Page**
@@ -813,7 +813,7 @@ The overview page has these new features or enhancements:
 
 **Analytical List Page**
 
--   You can now use the `NumberOfFractionalDigits` property to determine the number of fraction digits in the Visual filter and Key Performance Indicators tag. For more information, see [Visual Filters](../06_SAP_Fiori_Elements/visual-filters-1714720.md) and [Creating Key Performance Indicator Tags](../06_SAP_Fiori_Elements/creating-key-performance-indicator-tags-d80a360.md).
+-   You can now use the `NumberOfFractionalDigits` property to determine the number of fraction digits in the Visual filter and Key Performance Indicators tag. For more information, see [Visual Filters](../06_SAP_Fiori_Elements/visual-filters-1714720.md) and [Creating Key Performance Indicator Tags in Analytical Services](../06_SAP_Fiori_Elements/creating-key-performance-indicator-tags-in-analytical-services-d80a360.md).
 
 -   You can now enable the multi-select feature that limits the number of lines in grid tables and analytical tables using the new manifest settings. For more information, see [Configuring the Manifest for the Analytical List Page](../06_SAP_Fiori_Elements/configuring-the-manifest-for-the-analytical-list-page-2a9df06.md).
 
@@ -836,6 +836,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.142](what-s-new-in-sapui5-1-142-92ed100.md "With this release SAPUI5 is upgraded from version 1.141 to 1.142.")
 
 [What's New in SAPUI5 1.141](what-s-new-in-sapui5-1-141-a7ed66d.md "With this release SAPUI5 is upgraded from version 1.140 to 1.141.")
 

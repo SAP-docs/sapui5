@@ -161,3 +161,8 @@ You can also restrict the generation of individual analytical, list, and table c
 > ### Note:  
 > If custom navigation is enabled for a card, navigation from the *Insights* section of **My Home** for that card leads to the parent overview page application instead of the target maintained in the overview page card.
 
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Overview Page Card](overview-page-card-07d1ca2.md).
+

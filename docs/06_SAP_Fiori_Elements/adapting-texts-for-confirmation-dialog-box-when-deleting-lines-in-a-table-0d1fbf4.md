@@ -290,3 +290,8 @@ If the action name is the same but the entity differs, then the second part of t
 
 If you don't provide any custom texts, the system uses the default texts listed above.
 
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Adapting Texts for Confirmation Dialog Box When Deleting Lines in a Table](adapting-texts-for-confirmation-dialog-box-when-deleting-lines-in-a-table-5b6538c.md).
+

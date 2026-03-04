@@ -73,3 +73,8 @@ The preference for displaying the currency type is taken from the SAP Fiori Laun
 
 For example: http://abc\#Equipment-overviewPage?EquipmentNumber=123456
 
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Configuring Card Filters](configuring-card-filters-005970c.md).
+

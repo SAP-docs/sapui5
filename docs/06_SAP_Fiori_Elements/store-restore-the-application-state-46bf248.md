@@ -84,3 +84,8 @@ Changes coming in from other flex layers are not considered in the following sce
 > 
 > -   For a single-valued field, the merge logic always has priority over the other layer value \(the value of the key user, for example\), and the changes made by the end user for the same field are ignored.
 
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Store/Restore the Application State](store-restore-the-application-state-2029941.md).
+

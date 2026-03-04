@@ -20,8 +20,12 @@ Due to the use of a third-party component, some additional restrictions apply to
 
 -   If you use API calls to the native API of TinyMCE, we **cannot** guarantee backwards compatibility after an upgrade of the TinyMCE library.
 
--   The default value of the `editorType` property is set to always point to the version of TinyMCE recommended by SAPUI5, therefore it will be subject to change in the future.
+-   To ensure stability and access to the latest features, use the most current TinyMCE version supported by your SAPUI5 version.
 
+    > ### Caution:  
+    > Once a TinyMCE version is deprecated, we may remove it from SAPUI5 without warning if we find any critical issues. Therefore, you must migrate to a newer version within 12 months of deprecation.
+
+-   By default, the `editorType` property is set to `TinyMCE`. This automatically uses the latest recommended TinyMCE version, which SAPUI5 updates over time. To ensure your application always uses the most current version, set `editorType` to `TinyMCE`.
 -   The following table shows the supported TinyMCE versions in the respective SAPUI5 versions:
 
 
@@ -95,6 +99,8 @@ Due to the use of a third-party component, some additional restrictions apply to
     -   6.8.5
 
         Introduced with 1.71.73
+
+        **TinyMCE v6 deprecated as of 1.71.79**
 
     -   7.7.2
 
@@ -170,6 +176,8 @@ Due to the use of a third-party component, some additional restrictions apply to
 
         **TinyMCE v5 deprecated as of 1.96.31**
 
+        **TinyMCE v5 removed as of 1.96.46**
+
     -   6.5.1
 
         Introduced with 1.96.28
@@ -191,6 +199,8 @@ Due to the use of a third-party component, some additional restrictions apply to
     -   6.8.5
 
         Introduced with 1.96.39
+
+        **TinyMCE v6 deprecated as of 1.96.46**
 
     -   7.7.2
 
@@ -222,6 +232,8 @@ Due to the use of a third-party component, some additional restrictions apply to
         Introduced with 1.108.27
 
         **TinyMCE v5 deprecated as of 1.108.36**
+
+        **TinyMCE v5 removed as of 1.108.49**
 
     -   6.1.0
 
@@ -255,6 +267,8 @@ Due to the use of a third-party component, some additional restrictions apply to
 
         Introduced with 1.108.40
 
+        **TinyMCE v6 deprecated as of 1.108.50**
+
     -   7.7.2
 
         Introduced with 1.108.46
@@ -284,6 +298,8 @@ Due to the use of a third-party component, some additional restrictions apply to
 
         **TinyMCE v5 deprecated as of 1.120.21**
 
+        **TinyMCE v5 removed as of 1.120.41**
+
     -   6.5.1
 
         Replaced by 6.8.2 in 1.120.11
@@ -303,6 +319,8 @@ Due to the use of a third-party component, some additional restrictions apply to
     -   6.8.5
 
         Introduced with 1.120.25
+
+        **TinyMCE v6 deprecated as of 1.120.41**
 
     -   7.7.2
 
@@ -342,6 +360,14 @@ Due to the use of a third-party component, some additional restrictions apply to
     </td>
     <td valign="top">
     
+    -   5.10.9
+
+        **TinyMCE v5 removed as of 1.136.13**
+
+    -   6.8.5
+
+        **TinyMCE v6 deprecated as of 1.136.13**
+
     -   7.7.2
 
         Introduced with 1.136.8
@@ -361,7 +387,11 @@ Due to the use of a third-party component, some additional restrictions apply to
     
     -   5.10.9
 
+        **TinyMCE v5 removed as of 1.142.2**
+
     -   6.8.5
+
+        **TinyMCE v6 deprecated as of 1.141.0**
 
     -   7.7.2
 

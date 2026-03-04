@@ -4396,3 +4396,8 @@ If the action name is the same but the entity differs, then the second part of t
 > ### Example:  
 > `C_OPERATIONS_ACTION_CONFIRM_MESSAGE|_Items|ReturnInProcess=Confirm the returns for the selected items?` 
 
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Localization of UI Texts](localization-of-ui-texts-91b525b.md).
+

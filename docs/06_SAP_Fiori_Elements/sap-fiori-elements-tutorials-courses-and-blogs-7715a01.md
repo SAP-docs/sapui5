@@ -46,3 +46,6 @@ Here are some articles you may find useful:
 -   [The SAP Fiori Elements feature showcase with RAP and ABAP CDS annotations](https://blogs.sap.com/2022/12/19/the-sap-fiori-elements-feature-showcase-with-rap-and-abap-cds-annotations/)
 
 
+> ### Note:  
+> For information aboutSAP Fiori elements for OData V2, see [SAP Fiori Elements Tutorials, Courses, and Blogs](sap-fiori-elements-tutorials-courses-and-blogs-eb8fc41.md).
+

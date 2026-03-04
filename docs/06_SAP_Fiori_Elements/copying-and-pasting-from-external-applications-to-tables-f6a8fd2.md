@@ -112,3 +112,8 @@ End users can also copy multiple rows as well as ranges of rows and columns to t
 > ### Restriction:  
 > You can't paste content in a cell that contains a navigation property.
 
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Copying and Pasting from External Applications to Tables](copying-and-pasting-from-external-applications-to-tables-181c4e6.md).
+

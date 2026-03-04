@@ -423,11 +423,11 @@ The following changes and new features are available for SAP Fiori elements for 
 
 -   We now support the `value` property on the field building block for JSON model binding. For more information, see [The Field Building Block](../06_SAP_Fiori_Elements/the-field-building-block-5260b9c.md).
 
--   You can allow end users to choose to hide the label of the `TextArea` control if it is the only control within a section or a subsection. For more information, see [Grouping of Fields](../06_SAP_Fiori_Elements/grouping-of-fields-7d7a0c4.md).
+-   You can allow end users to choose to hide the label of the `TextArea` control if it is the only control within a section or a subsection. For more information, see [Grouping of Fields](../06_SAP_Fiori_Elements/grouping-of-fields-cb1748e.md).
 
 -   We now support dynamic expressions in semantic object annotations. For more information, see [Enabling Quick Views for Link Navigation](../06_SAP_Fiori_Elements/enabling-quick-views-for-link-navigation-307ced1.md).
 
--   You can now refresh the count and the view content in a list report while using it in multi-view mode. For more information, see [Multiple Views in the List Report](../06_SAP_Fiori_Elements/multiple-views-in-the-list-report-a37df40.md).
+-   You can now refresh the count and the view content in a list report while using it in multi-view mode. For more information, see [Multiple Views on the List Report Page](../06_SAP_Fiori_Elements/multiple-views-on-the-list-report-page-a37df40.md).
 
 -   You can now perform edit operations such as cut and paste, drag and drop, and create on tree tables within a list report or an object page. For more information, see [Tree Tables](../06_SAP_Fiori_Elements/tree-tables-7cf7a31.md).
 
@@ -1026,6 +1026,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.142](what-s-new-in-sapui5-1-142-92ed100.md "With this release SAPUI5 is upgraded from version 1.141 to 1.142.")
 
 [What's New in SAPUI5 1.141](what-s-new-in-sapui5-1-141-a7ed66d.md "With this release SAPUI5 is upgraded from version 1.140 to 1.141.")
 

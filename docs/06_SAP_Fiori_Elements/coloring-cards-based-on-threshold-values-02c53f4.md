@@ -273,3 +273,8 @@ Negative
 </tr>
 </table>
 
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Coloring Cards Based on Threshold Values](coloring-cards-based-on-threshold-values-4069609.md).
+

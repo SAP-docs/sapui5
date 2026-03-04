@@ -23,3 +23,8 @@ The system also behaves like this when using the *Apply* button in the subobject
 
 Before users can save the data, the system displays a message prompting the users to solve these errors. After all errors have been solved, the object can be saved.
 
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Handling Inconsistent Input](handling-inconsistent-input-1a3fc16.md).
+

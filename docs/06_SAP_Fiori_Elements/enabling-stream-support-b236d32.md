@@ -16,123 +16,6 @@ End users of SAP Fiori elements-based applications can upload, download, and del
 > 
 > For more security-related information, see [Security Configuration](security-configuration-ba0484b.md).
 
-
-
-<a name="loiob236d32d48b74304887b3dd5163548c1__section_kqw_x3n_psb"/>
-
-## Additional Features in SAP Fiori Elements for OData V2
-
-You can upload or download different `MediaType` files from an object page using stream support.
-
-
-
-### Prerequisites
-
-The service must have an entity that is stream enabled because the `Edm.Stream` type is not supported in SAP Fiori elements for OData V2.
-
-> ### Sample Code:  
-> ```
-> <EntityType Name="MyStreamType" m:HasStream="true" sap:label="Stream Test" sap:content-version="1">
->   <Key>
->     <PropertyRef Name="Streamuuid" />
->     <PropertyRef Name="IsActiveEntity" />
->   </Key>
-> <Property Name="Edit_ac" Type="Edm.Boolean" sap:label="Dyn. Action Control" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
-> 
-> ```
-
-
-
-### Enabling Stream Support
-
-To make stream support available on the object page, annotate the following in the `UI.FieldGroup` or `UI.Identification` annotation:
-
-> ### Sample Code:  
-> ```
-> 
-> <Record Type="UI.DataField">
->      <PropertyValue Property="Value" Path="$value"/>
-> </Record>
-> 
-> ```
-
-> ### Note:  
-> `$value` is a reserved text, and it is used only to support stream.
-
-The following `MediaType` annotation represents the stream type that displays each record. This annotation is mandatory and exists on the entity level.
-
-> ### Sample Code:  
-> ```
-> <Annotation Term="Org.OData.Core.V1.MediaType" Path="ThisMimeType"></Annotation>
-> ```
-
-The following annotation must be set on the `entitylevel` if the stream is displayed as image.
-
-> ### Sample Code:  
-> ```
-> <Annotation Term="UI.IsImage"/>
-> ```
-
-If the entity is annotated with `UI.IsImage`, then both the images and the media files are displayed on the UI as thumbnails.
-
-![](images/Stream_Support_1_6239c98.png)
-
-If the entity is not annotated with `UI.IsImage`, then both the images and the media files are displayed on the UI with icon and hyperlink.
-
-![](images/Stream_Support_2_24af17e.png)
-
-![](images/Stream_Support_3_fc27c63.png)
-
-Label for the file uploader is picked from the `dataField` annotation.
-
-Based on the `MediaType`, the icon for the non-image media type is shown differently in the UI.
-
-The following annotation must exist on the `entitylevel` to set the text for the file name. If the annotations are not included, the hyperlink displays the text *Open File*.
-
-> ### Sample Code:  
-> ```
-> 
-> <Annotation Term="SAP__core.ContentDisposition">
->     <Record>
->         <PropertyValue Property="Filename" Path="ThisFileName" />
->     </Record>
-> </Annotation>
-> 
-> ```
-
-You can restrict a `MediaType` from being uploaded by using the following annotation:
-
-> ### Sample Code:  
-> ```
-> <Annotation Term="Core.AcceptableMediaTypes">
->     <Collection>
->         <String>text/plain</String>
->     </Collection>
-> </Annotation>
-> 
-> ```
-
-In draft apps, you can only upload or delete a stream when the UI is editable. However, in non-draft apps, the upload and delete is supported only in display mode.
-
-If no file is present, a placeholder is displayed:
-
-![](images/Stream_Support_4_adaa7a8.png)
-
-> ### Note:  
-> The uploaded file name is visible in the list report or the object page table but cannot be edited from the table.
-> 
-> To upload a file, navigate to the corresponding object page.
-> 
-> Only one file can be uploaded for a record; uploading a second file can replace the exisiting one.
-> 
-> ![](images/Stream_Support_V2_08edaaf.png)
-
-
-
-<a name="loiob236d32d48b74304887b3dd5163548c1__section_dn4_zkn_psb"/>
-
-## Additional Features in SAP Fiori Elements for OData V4
-
 Application developers can define fields based on `Edm.Stream` properties and add them to forms or tables, for example.
 
 Fields based on `Edm.Stream` have the following features:
@@ -158,76 +41,79 @@ The following image shows the object page containing file upload fields in edit 
 
 To add the file upload elements, proceed as follows:
 
+1.  Provide a property of type `Edm.Stream`.
 
+    > ### Sample Code:  
+    > ```
+    > <EntityType Name="MainEntities">
+    >     ...
+    >     <Property Name="myStreamProperty" Type="Edm.Stream" />
+    >     <Property Name="myStreamPropertyType" Type="Edm.String" />
+    >     <Property Name="myRestrictedStreamProperty" Type="Edm.Stream" MaxLength="100000"/>
+    >     ...
+    > </EntityType>
+    > <Annotations Target="sap.fe.stream.StreamsService.MainEntities/myStreamProperty">
+    >     <Annotation Term="Core.MediaType" Path="myStreamPropertyType" />
+    > </Annotations>
+    > <Annotations Target="sap.fe.stream.StreamsService.MainEntities/myStreamPropertyType">
+    >     <Annotation Term="Core.IsMediaType" Bool="true" />
+    > </Annotations>
+    > <Annotations Target="sap.fe.stream.StreamsService.MainEntities/myRestrictedStreamProperty">
+    >     <Annotation Term="Core.MediaType" String="text/plain"/>
+    >     <Annotation Term="Core.AcceptableMediaTypes">
+    >         <Collection>
+    >             <String>text/plain</String>
+    >         </Collection>
+    >     </Annotation>
+    > </Annotations>
+    > ```
 
-### Step 1: Provide a property of type `Edm.Stream`.
+    To restrict the file size, add the attribute `MaxLength` to the `Property`. `MaxLength` is the maximum file size in bytes. To define the allowed media types, use the annotation `Core.AcceptableMediaTypes`. Without these annotations, there is no restriction regarding file size and media types that can be uploaded. App developers must define these restrictions.
 
-> ### Sample Code:  
-> ```
-> <EntityType Name="MainEntities">
->     ...
->     <Property Name="myStreamProperty" Type="Edm.Stream" />
->     <Property Name="myStreamPropertyType" Type="Edm.String" />
->     <Property Name="myRestrictedStreamProperty" Type="Edm.Stream" MaxLength="100000"/>
->     ...
-> </EntityType>
-> <Annotations Target="sap.fe.stream.StreamsService.MainEntities/myStreamProperty">
->     <Annotation Term="Core.MediaType" Path="myStreamPropertyType" />
-> </Annotations>
-> <Annotations Target="sap.fe.stream.StreamsService.MainEntities/myStreamPropertyType">
->     <Annotation Term="Core.IsMediaType" Bool="true" />
-> </Annotations>
-> <Annotations Target="sap.fe.stream.StreamsService.MainEntities/myRestrictedStreamProperty">
->     <Annotation Term="Core.MediaType" String="text/plain"/>
->     <Annotation Term="Core.AcceptableMediaTypes">
->         <Collection>
->             <String>text/plain</String>
->         </Collection>
->     </Annotation>
-> </Annotations>
-> ```
+    > ### Note:  
+    > The `odata.mediaEditLink` annotation is not supported.
 
-To restrict the file size, add the attribute `MaxLength` to the `Property`. `MaxLength` is the maximum file size in bytes. To define the allowed media types, use the annotation `Core.AcceptableMediaTypes`. Without these annotations, there is no restriction regarding file size and media types that can be uploaded. App developers must define these restrictions.
+    For more information, see [https://cap.cloud.sap/docs/guides/providing-services\#annotating-media-elements](https://cap.cloud.sap/docs/guides/providing-services#annotating-media-elements).
 
-> ### Note:  
-> The `odata.mediaEditLink` annotation is not supported.
+2.  Maintain and annotate the UI field as a `DataField`.
 
-For more information, see [https://cap.cloud.sap/docs/guides/providing-services\#annotating-media-elements](https://cap.cloud.sap/docs/guides/providing-services#annotating-media-elements).
-
-
-
-### Step 2: Maintain and annotate the UI field as a `DataField`.
-
-> ### Sample Code:  
-> ```
-> <Annotations Target="sap.fe.stream.StreamsService.MainEntities">
->     <Annotation Term="UI.FieldGroup" Qualifier="streams">
->         <Record Type="UI.FieldGroupType">
->             <PropertyValue Property="Label" String="Streams" />
->             <PropertyValue Property="Data">
->                 <Collection>
->                     <Record Type="UI.DataField">
->                         <PropertyValue Property="Label" String="Stream" />
->                         <PropertyValue Property="Value" Path="myStreamProperty" />
->                     </Record>
->                 </Collection>
->             </PropertyValue>
->         </Record>
->     </Annotation>
-> </Annotations>
-> ```
+    > ### Sample Code:  
+    > ```
+    > <Annotations Target="sap.fe.stream.StreamsService.MainEntities">
+    >     <Annotation Term="UI.FieldGroup" Qualifier="streams">
+    >         <Record Type="UI.FieldGroupType">
+    >             <PropertyValue Property="Label" String="Streams" />
+    >             <PropertyValue Property="Data">
+    >                 <Collection>
+    >                     <Record Type="UI.DataField">
+    >                         <PropertyValue Property="Label" String="Stream" />
+    >                         <PropertyValue Property="Value" Path="myStreamProperty" />
+    >                     </Record>
+    >                 </Collection>
+    >             </PropertyValue>
+    >         </Record>
+    >     </Annotation>
+    > </Annotations>
+    > ```
 
 
 
-### UI Representation
+
+<a name="loiob236d32d48b74304887b3dd5163548c1__section_dn4_zkn_psb"/>
+
+## UI Representation
 
 The representation of the document icon and the link depends on the `odata.mediaContentType` and `Core.ContentDisposition/Filename` annotations.
 
-**– Document Icon –**
+
+
+### Document Icon
 
 If the back end returns an `odata.mediaContentType` annotation for the stream property, SAP Fiori elements renders a specific document icon based on the content type. If the back end doesn't return an `odata.mediaContentType` annotation or if the content type can't be mapped to a specific document icon, SAP Fiori elements renders a generic document icon.
 
-**– Document Link –**
+
+
+### Document Link
 
 You can click on the document link to open the content of the stream property. SAP Fiori elements distinguishes the following three cases for rendering the document link:
 
@@ -278,7 +164,9 @@ You can click on the document link to open the content of the stream property. S
 >                                     streamWithFilename_name : StreamName;
 > ```
 
-**– Avatar –**
+
+
+### Avatar
 
 An avatar is rendered instead of the icon and link representation when one of the following conditions is fulfilled:
 
@@ -289,13 +177,17 @@ An avatar is rendered instead of the icon and link representation when one of th
 
 To display the image or person avatar as a circle, specify the `Common.IsNaturalPerson` annotation at the entity type or for the `UI.IsImage` annotation of a stream property.
 
-– Edit Mode –
-
-In Edit mode, an upload button and a delete button are available so that users can upload a different file or delete the file. If the back-end response provides a new value for `odata.mediaContentType` after uploading a new file, the icon and link change their representation according to the new value.
+You also can set the `imageFitType` of the avatar determine how an image fits in the avatar's container. For more information, see the [Representation as an Avatar](different-representations-of-a-field-c18ada4.md#loioc18ada4bc56e427a9a2df2d1898f28a5__represent_avatar) section in [Different Representations of a Field](different-representations-of-a-field-c18ada4.md).
 
 
 
-### File Upload as an Action Parameter
+### Edit Mode
+
+In edit mode, an upload button and a delete button are available so that users can upload a different file or delete the file. If the back-end response provides a new value for `odata.mediaContentType` after uploading a new file, the icon and link change their representation according to the new value.
+
+
+
+## File Upload as an Action Parameter
 
 You can configure bound or unbound actions that require uploading files as action parameters. This setup lets users upload files in the action parameter dialog.
 
@@ -408,4 +300,9 @@ To restrict the file size and define the allowed media types, use the `MaxLength
 > ```
 
 For more information about action parameters, see [Actions](actions-cbf16c5.md).
+
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Enabling Stream Support](enabling-stream-support-7e28569.md).
 

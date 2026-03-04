@@ -134,3 +134,8 @@ Static parameters are objects containing key value pairs. They provide navigatio
 > 
 > ```
 
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Configuring Card Navigation](configuring-card-navigation-11b7540.md).
+

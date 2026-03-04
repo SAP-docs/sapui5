@@ -277,3 +277,8 @@ This option is applicable only to grid tables, tree tables, and analytical table
 >    }
 > ```
 
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Configuring the Selection Mode for Tables](configuring-the-selection-mode-for-tables-402fac7.md).
+

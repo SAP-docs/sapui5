@@ -62,11 +62,15 @@ Example 2: `DataFieldWithURL` with absolute URL:
 > ABAP CDS Annotation
 > 
 > ```
+> @UI.<lineItem/fieldGroup>: [
 > {
 >     label: 'Company',
 >     type: #WITH_URL,
 >     url: 'Your URL' //For example: https://sap.com
 > }
+> ]
+> URL;
+> 
 > ```
 
 > ### Sample Code:  
@@ -92,7 +96,7 @@ A link control is rendered for the property on the list report or object page.
 
 If you associate a semantic object annotation with any property, this establishes [Intent-Based Navigation](http://help.sap.com/saphelp_nw75/helpdata/en/bd/8ae3d327ab4541bcce8e7353c046fc/content.htm).
 
-An intent is a mechanism that lets you perform actions on semantic objects \(such as navigating to a sales order or displaying a fact sheet\) without having to worry about the UI technology or technical implementation of the navigation target. Intent-based navigation is necessary in the following cases:
+An intent is a mechanism that lets you perform actions on semantic objects \(such as navigating to a sales order or displaying a fact sheet\) without having to worry about the UI technology or technical implementation of the navigation target. Intent-based navigation is the standard navigation mechanism in FLP and can also be used for the following purposes:
 
 -   Depending on the user's role, a different application or view of an application must be displayed.
 
@@ -115,6 +119,8 @@ To enable intent-based navigation, you must associate a semantic object. Navigat
 
     You can enhance the content of this popover and display a quick view containing more information about the navigation target. For more information, see [Enabling Quick Views for Link Navigation](enabling-quick-views-for-link-navigation-307ced1.md).
 
+    If a quick view is defined for the semantic link popover, SAP Fiori elements displays the popover every time users choose the semantic link. The popover is also displayed if only one navigation target is found or even if no navigation target is found.
+
     > ### Sample Code:  
     > XML Annotation
     > 
@@ -131,7 +137,7 @@ To enable intent-based navigation, you must associate a semantic object. Navigat
     > ```
     > annotate view ITEM with {
     >     @Consumption.semanticObject: 'CostCenter'
-    >     costcenter;
+    >     CostCenter;
     > }
     > ```
 
@@ -559,7 +565,7 @@ In this example, when `<Key>-<Value1>` is passed as an additional parameter in t
 
 During external outbound navigation, the following data is removed from the navigation context because the data is sensitive or non-applicable:
 
--   Measures: Properties defined as `com.sap.vocabularies.Analytics.v1.Measures` in the metadata
+-   Measures in analytical services: Properties defined as `com.sap.vocabularies.Analytics.v1.CustomAggregate` in the metadata
 
 -   Properties annotated with `com.sap.vocabularies.PersonalData.v1.IsPotentiallySensitive`
 
@@ -804,8 +810,6 @@ For semantic object mapping when navigating using the `DataFieldForIntentBasedNa
 >      ],
 > },
 > ```
-
-The value for the field is passed as the value for `ABC` rather than as the value for `SoldToParty`.
 
 Empty values aren't passed to the target application, unless explicitly set using *Define Conditions* in the filter bar.
 
@@ -1156,4 +1160,9 @@ After you identify the key, use its value in the page hierarchy to determine the
 > > ```
 
 In this example, when `<Key>-<Value1>` is passed as an additional parameter in the navigation context, the `<EntitySet1>` object page is opened. Similarly, when `<Key>-<Value2>` is passed, the `<EntitySet2>` object page is opened.
+
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Navigation from an App \(Outbound Navigation\)](navigation-from-an-app-outbound-navigation-c35fa60.md).
 

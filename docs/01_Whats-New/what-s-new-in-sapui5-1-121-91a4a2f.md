@@ -589,7 +589,7 @@ SAP Fiori Elements
 
 The following changes and new features are available for SAP Fiori elements for OData V2 and SAP Fiori elements for OData V4:
 
--   The section or subsection title is now merged with the table or chart title if the section or subsection only has one table or chart control. For more information, see [Defining and Adapting Sections](../06_SAP_Fiori_Elements/defining-and-adapting-sections-facfea0.md).
+-   The section or subsection title is now merged with the table or chart title if the section or subsection only has one table or chart control. For more information, see [Defining and Configuring Sections](../06_SAP_Fiori_Elements/defining-and-configuring-sections-facfea0.md).
 
 -   We've added another option to the *Share* menu button that administrators can enable. When a user clicks the *Share* button and then the *Share Menu: Microsoft Teams* option, they can now also choose *As Card*.
 
@@ -720,7 +720,7 @@ The following changes and new features are available for SAP Fiori elements for 
 
 -   You can now define a tooltip for custom columns in the manifest settings. For more information, see [Extension Points for Tables](../06_SAP_Fiori_Elements/extension-points-for-tables-d525522.md).
 
--   You can now use the `SelectionPresentationVariant` annotation in an object page table. For more information, see [Defining and Adapting Sections](../06_SAP_Fiori_Elements/defining-and-adapting-sections-facfea0.md).
+-   You can now use the `SelectionPresentationVariant` annotation in an object page table. For more information, see [Defining and Configuring Sections](../06_SAP_Fiori_Elements/defining-and-configuring-sections-facfea0.md).
 
 -   Value help fields can now display the history of recently entered values. For more information, see [Enabling the History of Recently Entered Values](../06_SAP_Fiori_Elements/enabling-the-history-of-recently-entered-values-37dbf1f.md) .
 
@@ -1936,6 +1936,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.142](what-s-new-in-sapui5-1-142-92ed100.md "With this release SAPUI5 is upgraded from version 1.141 to 1.142.")
 
 [What's New in SAPUI5 1.141](what-s-new-in-sapui5-1-141-a7ed66d.md "With this release SAPUI5 is upgraded from version 1.140 to 1.141.")
 

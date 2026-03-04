@@ -1,0 +1,15 @@
+<!-- loio8fca3b2d8c844b61a7645db2ba461761 -->
+
+# Defining Multiple Chart Configurations
+
+You can define multiple chart configurations for the same dataset.
+
+This feature enables you to display different charts for different use cases, based on the same dataset. Use the chart configurations to do the following:
+
+-   Display different charts in different views of the list report.
+
+-   Display different charts in different sections of the object page.
+
+
+To define multiple chart configurations on the same entity, define a `UI.Chart` annotation with a specific qualifier.
+

@@ -1591,7 +1591,7 @@ Object Page View:
 
 -   Contact information
 
-    Quickviews with contact details can now also be displayed in forms and tables. For more information, see [Form Facet](../06_SAP_Fiori_Elements/form-facet-ff0ae0b.md).
+    Quickviews with contact details can now also be displayed in forms and tables. For more information, see [Form Facet in the Object Page Header](../06_SAP_Fiori_Elements/form-facet-in-the-object-page-header-ff0ae0b.md).
 
 -   Create and edit mode usability
 
@@ -1611,7 +1611,7 @@ Overview pages have been enhanced with the following features:
 
 -   **Custom Breakout Filters**
 
-    You can now use custom breakout filters to add custom filters of your choice. You can also define custom controls for implementing custom filters. For more information, see [Configuring the Global Filter](../06_SAP_Fiori_Elements/configuring-the-global-filter-73d9693.md).
+    You can now use custom breakout filters to add custom filters of your choice. You can also define custom controls for implementing custom filters. For more information, see [Configuring the Global Filter on the Overview Page](../06_SAP_Fiori_Elements/configuring-the-global-filter-on-the-overview-page-73d9693.md).
 
 -   **Passing Sorting Parameters from OVP to an SAP Fiori Elements App**
 
@@ -1714,6 +1714,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.142](what-s-new-in-sapui5-1-142-92ed100.md "With this release SAPUI5 is upgraded from version 1.141 to 1.142.")
 
 [What's New in SAPUI5 1.141](what-s-new-in-sapui5-1-141-a7ed66d.md "With this release SAPUI5 is upgraded from version 1.140 to 1.141.")
 

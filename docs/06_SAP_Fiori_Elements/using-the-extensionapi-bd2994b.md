@@ -292,3 +292,8 @@ Object Page
 
 For information about the `ExtensionAPI`, see [API Reference](https://ui5.sap.com/#/api/sap.fe.core.ExtensionAPI).
 
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Using the extensionAPI](using-the-extensionapi-a5a4ec6.md).
+

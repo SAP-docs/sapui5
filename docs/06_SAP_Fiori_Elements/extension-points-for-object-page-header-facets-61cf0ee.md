@@ -2,139 +2,13 @@
 
 # Extension Points for Object Page Header Facets
 
-You define application-specific header facets using annotations, but in some cases it might be necessary to integrate components in the front end that are not available with annotations.
-
-
-
-<a name="loio61cf0ee828824903907464c80dd0d88c__section_xs5_kq5_rnb"/>
-
-## Additional Features in SAP Fiori Elements for OData V2
-
-> ### Caution:  
-> Use app extensions with caution and only if you cannot produce the required behavior by other means, such as manifest settings or annotations. To correctly integrate your app extension coding with SAP Fiori elements, use only the `extensionAPI` of SAP Fiori elements. For more information, see [Using the extensionAPI](using-the-extensionapi-bd2994b.md).
-> 
-> After you've created an app extension, its display \(for example, control placement and layout\) and system behavior \(for example, model and binding usage, busy handling\) lies within the application's responsibility. SAP Fiori elements provides support only for the official `extensionAPI` functions. Don't access or manipulate controls, properties, models, or other internal objects created by the SAP Fiori elements framework.
-
-On the object page, you can use extension points to add additional header facets in the following places:
-
--   Before header facet: The extension is inserted before a given facet.
-
--   Replace header facet: The extension is rendered instead of an existing facet.
-
--   After header facet: The extension is inserted after a given facet.
-
-
-You must use a view inside the extension to create a header facet extension. Enter the extension information in the following format in the `manifest.json` of your application:
-
-`<Different_Scenario>|<EntitySet_Name>|headerEditable::<Annotation_Information>`
-
-Specify the extension facet in the form of its annotation path. In addition, you must specify the entity set name, as the same annotation may exist for various entity sets. You also need to define the className, viewName, type and the optional parameter `bVisibleOnEdit`.
-
-> ### Note:  
-> You only set this optional parameter to "false" if the entire header extension is to be hidden when the object page is edited.
-
-> ### Sample Code:  
-> ```
-> "extends": {
->    "extensions": {
->          "sap.ui.viewExtensions": {
->                  "sap.suite.ui.generic.template.ObjectPage.view.Details": {
->                            "BeforeHeaderFacet|STTA_C_MP_Product|headerEditable::com.sap.vocabularies.UI.v1.Chart::SpecificationWidthBulletChart": {
->                                      "className": "sap.ui.core.mvc.View",
->                                      "viewName": "STTA_MP.ext.fragments.HeaderExtensionFacet",
->                                      "type": "XML",
->                                      "bVisibleOnEdit": true
->    }
->                         }
->            }
->      }
-> }
-> 
-> ```
-
-The following extension options are available:
-
--   Standard object header facet: Before replace, and after scenario:
-
-    -   `"BeforeHeaderFacet|<EntitySet Name>|headerEditable::<Annotation information "`
-
-    -   `"ReplaceHeaderFacet|<EntitySet Name>|headerEditable::<Annotation information>"`
-
-    -   `"AfterHeaderFacet|<EntitySet Name>|headerEditable::<Annotation information>"`
-
-
--   Simple object header facet: Before replace, and after scenario:
-
-    `"BeforeSimpleHeaderFacet|<EntitySet Name>|headerEditable::<Annotation information>"` 
-
-    `"ReplaceSimpleHeaderFacet|<EntitySet Name>|headerEditable::<Annotation information>"`
-
-    `"AfterSimpleHeaderFacet|<EntitySet Name>|headerEditable::<Annotation information>"`
-
--   Replace the complete object page header with an extension. This means that the `UI.HeaderFacet` annotation is not there. If it is there, remove it from the annotations. The manifest entry should look like this:
-
-    `"ReplaceHeaderExtensionFacet|<EntitySet Name>"`
-
--   Standard object header: If there is no image in the object page header, you can include an extension instead of an image. The manifest entry should look like this:
-
-    `"NoImageExtensionFacet|<EntitySet Name>"`
-
-    > ### Note:  
-    > You can only use this scenario if there is no value for the `ImageUrl` or `TypeImageUrl` property of the `UI.HeaderInfo` annotation.
-
-    If there is an image in the object page header, you can enter an extension after the image. The manifest entry should look like this:
-
-    `" AfterImageExtensionFacet|<EntitySet Name>"`
-
--   Object page header containing only a `DataPoint` annotation: Before replace, and after scenario:
-
-    -   `"BeforeHeaderDataPoint|<EntitySet Name> | <Annotation Information>"`
-
-    -   `"ReplaceHeaderDataPoint|<EntitySet Name> | <Annotation Information>"`
-
-    -   `"AfterHeaderDataPoint|<EntitySet Name> | <Annotation Information>"`
-
-
-
-
-
-### Showing Custom Status Message of the Object on the Object Page Header
-
-You can display a custom status message of an object as a message strip on the object page header using the `setCustomMessage` extension API. By using the `setCustomMessage` extension in the `extensionAPI` class, you can define the custom message in `messagetext` and `messagetype`. The following example shows how to define a custom status message:
-
-> ### Sample Code:  
-> ```
-> sap.ui.define([
-> ], function () {
->     return {
->         onInit: function () {
->             this.extensionAPI.attachPageDataLoaded(this.onPageDataLoaded.bind(this));
->         },
->         onPageDataLoaded: function(oEvent) {
->             var quantity = oEvent.context.getObject().quantity;
->             var oMsg = {
->                 message: quantity == 0 ? "Product Not Available!" : "Product Available!",
->                 type: quantity == 0 ? sap.ui.core.MessageType.Error : sap.ui.core.MessageType.Success
->             }
->             this.extensionAPI.setCustomMessage(oMsg);
->         }
->         ....
->     }
-> });
-> 
-> ```
-
-For more information, see [Setting Up the Object Page Header](setting-up-the-object-page-header-cce93e6.md).
+You can define application-specific header facets using annotations, but in some cases it might be necessary to integrate components in the front end that are not available with annotations.
 
 
 
 <a name="loio61cf0ee828824903907464c80dd0d88c__section_svv_3r5_rnb"/>
 
-## Additional Features in SAP Fiori Elements for OData V4
-
-
-
-### Adding Custom Header Facets
+## Adding Custom Header Facets
 
 You have 2 options for including custom elements into the header area of an object page:
 
@@ -148,7 +22,9 @@ You can find further details in the sections below.
 > ### Note:  
 > You can only place 'Custom Header Facets' in the root collection of the header facet definition. You cannot place it in further-nested collection facet definitions.
 
-**Using Custom Header Facets**
+
+
+### Using Custom Header Facets
 
 Custom header facets provide the following features:
 
@@ -173,8 +49,6 @@ To define a header facet on UI level – you do this if you want to add a custom
 
 
 > ### Note:  
-> Priority Rules
-> 
 > Settings in the content-based configuration block have a higher priority and therefore overwrite settings in the annotation-based configuration block for identical keys.
 
 > ### Sample Code:  
@@ -284,7 +158,9 @@ To define a header facet on UI level – you do this if you want to add a custom
 
 In this example, the second header facet with the key `CustomHeaderFacet2` occurs twice: once in the content-based configuration and a second time in the annotation-based configuration. Since the 1st configuration has a higher priority, the second entry will be skipped at runtime and you won't see the fragment `SalesOrder.ext.CustomHeaderFacetOverwritten` as a header facet.
 
-**Settings for Custom Header Facets**
+
+
+### Settings for Custom Header Facets
 
 You can define your custom header facet by implementing an `xmlfragment` and using the following properties:
 
@@ -481,7 +357,7 @@ requestGroupId
 </td>
 <td valign="top">
 
-Enables the grouping of back-end requests retrieving the header facet data in different $batch groups according to their loading time. You should separate long runners from fast runners to optimize the overall user experience. For more information, refer to [Defining the Loading Behavior of Object Page](defining-the-loading-behavior-of-object-page-ac03570.md).
+Enables the grouping of back-end requests retrieving the header facet data in different $batch groups according to their loading time. You should separate long runners from fast runners to optimize the overall user experience. For more information, refer to [Defining the Loading Behavior of Object Pages](defining-the-loading-behavior-of-object-pages-ac03570.md).
 
 </td>
 </tr>
@@ -533,7 +409,7 @@ Defines which settings are available for key user adaptation at design time. For
 
 \* = optional
 
-– Using a Custom Header Facet to Display a Harvey Ball Micro Chart –
+**Using a Custom Header Facet to Display a Harvey Ball Micro Chart**
 
 ![](images/Custom_Header_Facet_Harvey_Ball_Micro_Chart_2517ecf.png)
 
@@ -558,7 +434,7 @@ The values are retrieved through value binding and the title is defined in the `
 > </core:FragmentDefinition>
 > ```
 
-– Using a Custom Editable Header Facet to Edit the Values Used in a Custom Header Facet –
+**Using a Custom Editable Header Facet to Edit the Values Used in a Custom Header Facet**
 
 ![](images/Using_a_Custom_Editable_Header_Facet_to_Edit_the_Values_Used_in_a_Custom_Header_Facet_d39631d.png)
 
@@ -584,7 +460,7 @@ In edit mode, header facets are displayed in a form. For the editable custom hea
 
 
 
-### Adding Custom Header Fields
+## Adding Custom Header Fields
 
 Custom header fields provide the following features:
 
@@ -602,7 +478,9 @@ Custom header fields provide the following features:
 
 ![](images/Custom_Header_Field_8c26693.png)
 
-**Using Custom Header Fields**
+
+
+### Using Custom Header Fields
 
 To define a field in a header field – you do this if you want to add a custom look and feel, or to use controls that are not supported by default – you can extend the manifest of the corresponding object page with an annotation-based configuration. You define custom header fields by using a custom key that you later reference by providing the following properties:
 
@@ -662,7 +540,9 @@ You reference the `fieldGroup` through the annotation path with the correspondin
 > </Schema>
 > ```
 
-**Settings for Custom Header Fields**
+
+
+### Settings for Custom Header Fields
 
 You can define your custom header fields by implementing an `xmlfragment` and using the following properties:
 
@@ -793,13 +673,20 @@ The key of another header field to be used as the placement anchor. Header field
 
 \* = optional
 
-**Finding the Right Key for the Anchor**
+
+
+### Finding the Right Key for the Anchor
 
 For the correct positioning of your custom elements, you need to identify an anchor element. For more information, see [Finding the Right Key for the Anchor](finding-the-right-key-for-the-anchor-6ffb084.md).
 
 
 
-### Live Example: Custom Header Facet with `MicroChart` and `FormElement` Building Blocks
+## Live Example: Custom Header Facet with `MicroChart` and `FormElement` Building Blocks
 
 You can explore and work with the coding yourself. For more information and live examples, see the SAP Fiori development portal at [Standard Floorplans - Extensions - Extensions for Object Pages - Custom Header Facet](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/topic/floorplanObjectPage/customHeaderFacet).
+
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Extension Points for Object Page Header Facets](extension-points-for-object-page-header-facets-51d8373.md).
 

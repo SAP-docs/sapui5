@@ -446,9 +446,9 @@ sap.ui.define([
 **Related Information**  
 
 
-[Composite Binding](composite-binding-a2fe8e7.md "Calculated fields enable the binding of multiple properties in different models to a single property of a control.")
+[Composite Binding](composite-binding-a2fe8e7.md "Composite bindings let you bind multiple model properties to one control property. These properties can come from the same model or from different models.")
 
-[Examples for Data Binding in Different View Types](examples-for-data-binding-in-different-view-types-25ab54b.md "Examples how complex syntax can be used for calculated fields in XML, HTML, and JS views.")
+[Examples for Data Binding in Different View Types](examples-for-data-binding-in-different-view-types-25ab54b.md "Examples how complex syntax can be used for data binding in XML and Typed views.")
 
 [XML Templating](xml-templating-5ee619f.md "The XML templating concept enables you to use an XML view as a template. This template is transformed by an XML preprocessor on the source level, the XML DOM, at runtime just before an SAPUI5 control tree is created from the XML source.")
 

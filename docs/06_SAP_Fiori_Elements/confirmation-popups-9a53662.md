@@ -59,7 +59,7 @@ The flow is as follows:
     -   If the preference is known, you can configure the back end to send a 412 message \("Precondition Failed" message\).
 
 
--   For SAP Fiori elements, the 412 message indicates that there are warnings that block the processing of the action, but end users can still be trigger the action if they choose to ignore the warnings and continue.
+-   For SAP Fiori elements, the 412 message indicates that there are warnings that block the processing of the action, but end users can still trigger the action if they choose to ignore the warnings and continue.
 
 -   The application displays a confirmation popup containing the message from the back end.
 
@@ -313,4 +313,9 @@ You can also disable strict handling at the action level using the `invokeAction
 > -   For back ends based on CAP, the handling of 412 "Precondition Failed" messages don't work correctly if the action is executed by setting the `InvocationGrouping` annotation property to `UI.OperationGroupingType/Isolated`. Here, the action invoked for the selected contexts are triggered within the same changeset. So, either the action is executed successfully or not executed for any of the selected context.
 > 
 > -   The handling of 412 messages \("Precondition Failed" messages\) is not applied when a record is deleted.
+
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Confirmation Popups](confirmation-popups-062078f.md).
 

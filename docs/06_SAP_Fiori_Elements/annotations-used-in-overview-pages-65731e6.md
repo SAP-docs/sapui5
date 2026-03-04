@@ -1890,3 +1890,8 @@ To define a property as sensitive data, configure the target property and set it
 > };
 > ```
 
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Annotations Used in Overview Pages](annotations-used-in-overview-pages-2204fcb.md).
+

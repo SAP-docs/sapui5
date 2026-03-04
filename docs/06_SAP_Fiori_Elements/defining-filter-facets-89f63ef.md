@@ -40,7 +40,7 @@ Below is an example of a `FilterFacets` annotation on the target entity type:
 > ```
 
 > ### Sample Code:  
-> CAPCDS Annotation
+> CAP CDS Annotation
 > 
 > ```
 > @UI.FilterFacets                                    : [
@@ -73,7 +73,7 @@ Filter fields listed under a `FieldGroup` annotation, as shown above, but are no
 
 **Entity Type Name Group**
 
-Filter fields that are not part of the `UI.SelectionField` or the `FieldGroup` annotation are grouped together in a group with the name `<EntityTypeName>`.. If there are multiple `entityTypes`, multiple `entityTypeName` groups are created.
+Filter fields that are not part of the `UI.SelectionField` or the `FieldGroup` annotation are grouped together in a group with the name `<EntityTypeName>`. If there are multiple `entityTypes`, multiple `entityTypeName` groups are created.
 
 > ### Sample Code:  
 > XML Annotation
@@ -102,7 +102,7 @@ Filter fields that are not part of the `UI.SelectionField` or the `FieldGroup` a
 > ```
 
 > ### Sample Code:  
-> CAPCDS Annotation
+> CAP CDS Annotation
 > 
 > ```
 > UI.FieldGroup #GroupName : {
@@ -115,4 +115,9 @@ Filter fields that are not part of the `UI.SelectionField` or the `FieldGroup` a
 >     Label : 'Group Name'
 > }
 > ```
+
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Defining Filter Facets](defining-filter-facets-9e7310b.md).
 

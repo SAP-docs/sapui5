@@ -16,16 +16,6 @@ For more information, see [Editing Status](editing-status-668ea18.md) and [Handl
 
 
 
-<a name="loio4c2d17aec55b4162b19f1b573b5a4f99__section_lqs_jzb_2nb"/>
-
-## Additional Features in SAP Fiori Elements for OData V2
-
-
-
-If a semantic key is not added to the line items, the editing status is displayed in either the *Title* or *Description* column, based on the available information:
-
--   If a semantic key is available for `entityType` and is part of the table, the draft information is shown in the column where the first semantic key is displayed.
-
--   If no semantic key annotation is available, the system checks whether `headerInfo/Title/Value/Path` is available under the `LineItem` annotation.
-
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Settings for List Report Tables](settings-for-list-report-tables-8f51fcd.md).
 

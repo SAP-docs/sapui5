@@ -847,7 +847,7 @@ SAP Fiori Elements
 
 **SAP Fiori Elements**
 
--   Objects with less than 8 required fields can now be created quickly using a dialog on the list report page, without navigating to the object page. For more information, see [Enabling Object Creation Using the Dialog in the List Report](../06_SAP_Fiori_Elements/enabling-object-creation-using-the-dialog-in-the-list-report-ceb9284.md).
+-   Objects with less than 8 required fields can now be created quickly using a dialog on the list report page, without navigating to the object page. For more information, see [Enabling Object Creation Using the Dialog on the List Report](../06_SAP_Fiori_Elements/enabling-object-creation-using-the-dialog-on-the-list-report-ceb9284.md).
 
 -   You can enable an inline deletion option in tables of list report and object pages.
 
@@ -892,6 +892,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.142](what-s-new-in-sapui5-1-142-92ed100.md "With this release SAPUI5 is upgraded from version 1.141 to 1.142.")
 
 [What's New in SAPUI5 1.141](what-s-new-in-sapui5-1-141-a7ed66d.md "With this release SAPUI5 is upgraded from version 1.140 to 1.141.")
 

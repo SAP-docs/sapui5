@@ -11,12 +11,6 @@ Users can interact with both the chart and the table. The initial view of the ch
 > ### Note:  
 > Hybrid mode is not available for tablets or smartphones.
 
-
-
-<a name="loio6615668828a7431c9ae38abe04d63feb__section_bcb_5q2_hqb"/>
-
-## Additional Features in SAP Fiori Elements for OData V2
-
 Make the following setting:
 
 > ### Sample Code:  
@@ -34,26 +28,6 @@ Make the following setting:
 > Note that the hybrid view is available in laptops with a screen height that is larger than 900px.
 > 
 > The hybrid view is disabled for analytical and grid table types in cozy mode and with a resolution that is less than 900px. However, this restriction doesn't apply to responsive tables.
-
-
-
-<a name="loio6615668828a7431c9ae38abe04d63feb__section_dmq_dqj_sqb"/>
-
-## Additional Features in SAP Fiori Elements for OData V4
-
-Make the following entries in the manifest:
-
-> ### Sample Code:  
-> ```
-> "views": {
->     "paths": [{
-> ...
->         "defaultPath": "both"
->     }]
-> },
-> ```
-
-Setting the `"defaultPath"` to `"both"` ensures that the default view that is loaded shows the chart at the top and the table at the bottom..
 
 **Related Information**  
 

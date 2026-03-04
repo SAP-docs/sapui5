@@ -6,8 +6,6 @@ You have various options for configuring quick views. This documentation provide
 
 
 
-<a name="loio1083035f266547159b292c4a0f567ac7__section_mkj_phy_xmb"/>
-
 ## Example 1: Quick View in Object Page Table
 
 > ### Note:  
@@ -174,9 +172,7 @@ For the currency, no referential constraint is defined by the service. Hence, yo
 
 
 
-<a name="loio1083035f266547159b292c4a0f567ac7__section_u3p_vhy_xmb"/>
-
-## Additional Features in SAP Fiori Elements for OData V2
+## Example 2: Supplier Information
 
 
 

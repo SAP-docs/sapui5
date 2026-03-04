@@ -370,7 +370,7 @@ The `Label` property of the `UI.DataFieldForAnnotation` is used for the text of 
 > ```
 
 > ### Tip:  
-> For more information about the code samples of other micro charts, see [Micro Chart Facet](micro-chart-facet-e219fd0.md).
+> For more information about the code samples of other micro charts, see [Micro Chart Facet in the Object Page Header](micro-chart-facet-in-the-object-page-header-e219fd0.md).
 
 > ### Restriction:  
 > The template doesn't support the use of navigation properties in the `UI.Chart` term for the micro chart, as shown in the following sample code:
@@ -747,7 +747,7 @@ Additionally, you can control the visibility of chart labels by setting the `sho
 The following sample code shows how to define a microchart of size `M` with labels in a responsive table:
 
 > ### Sample Code:  
-> manifest.json
+> `manifest.json`
 > 
 > ```json
 > "options":{
@@ -865,4 +865,9 @@ To enable sorting, add `UI.DataFieldForAnnotation` within `UI.LineItem`. Then, l
 >   ………
 > });
 > ```
+
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Adding a Micro Chart to a Table](adding-a-micro-chart-to-a-table-6a52793.md).
 

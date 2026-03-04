@@ -147,3 +147,8 @@ Product.Rating,
 
 ```
 
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Adding a Rating Indicator to a Table](adding-a-rating-indicator-to-a-table-0835321.md).
+

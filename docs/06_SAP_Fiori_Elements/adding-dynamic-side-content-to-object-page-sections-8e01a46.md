@@ -11,98 +11,6 @@ You can use extension points to add additional content to sections.
 > 
 > After you've created an app extension, its display \(for example, control placement and layout\) and system behavior \(for example, model and binding usage, busy handling\) lies within the application's responsibility. SAP Fiori elements provides support only for the official `extensionAPI` functions. Don't access or manipulate controls, properties, models, or other internal objects created by the SAP Fiori elements framework.
 
-
-
-<a name="loio8e01a463d3984bfa8b23c2270d40e38c__section_sxm_pcn_p4b"/>
-
-## Additional Features in SAP Fiori Elements for OData V2
-
-You can use extension points to add additional content to sections in the following places:
-
--   `BeforeMainContent`: The extension is added before a sections' main content.
-
--   `AfterMainContent`: The extension is added after the section's main content.
-
-
-Main content refers to the information that comes from the annotations.
-
-Enter the extension information in the `manifest.json` file of your application in the following format: `<Different_Scenario>|<EntitySet_Name>|<Annotation_Information_of_Subsection>`
-
-Specify the extension facet in the form of the annotation information of the subsection where side content needs to be placed. In addition, specify the entity set name, as the same annotation may exist for various entity sets. You also need to define the `className`, `viewName`, `type`, and the optional parameter `equalSplit`.
-
-To enable the equal split mode \(50:50 percent for main content vs. side content\), add the `"equalSplit": true` setting to the manifest.
-
-If `"equalSplit"` is set to `false` or is not defined, the percentage of main content and side content depends on the device on which the app is running.
-
-> ### Sample Code:  
-> ```
-> "extends": {
->    "extensions": {
->          "sap.ui.viewExtensions": {
->                  "sap.suite.ui.generic.template.ObjectPage.view.Details": {
->                            "AfterMainContent|STTA_C_MP_Product|GeneralInformationForm":{
->                "className": "sap.ui.core.Fragment",
->                "fragmentName": "STTA_MP.ext.fragments.SideContentExtension",
->                "type": "XML",
-> 		"equalSplit": true
->                },
-> "BeforeMainContent|STTA_C_MP_Product|to_ProductSalesData::com.sap.vocabularies.UI.v1.Chart":{
->               "className": "sap.ui.core.Fragment",
->               "fragmentName": "STTA_MP.ext.fragments.SideContentExtension",
->               "type": "XML"
->                }
->                         }
->            }
->      }
-> }
-> 
-> ```
-
-You can specify either a view or a fragment contained in the section. You do not need to use the object page \(uxap\) tags, `ObjectPageSection`, `subSections`, or `ObjectPageSubSection`. These definitions are already part of the template for the object page view.
-
-After you have added side content, the system displays a button in the subsection toolbar to show or hide the side content. The default texts for this button are *Show Details* or *Hide Details*. If you want to provide a custom text, specify it by adding the key value pair of the custom label to the i18n.properties file of the specific entity set of the object page. The key uniquely defines the subsection for whose side content button you provide the custom text. The structure of the key is as follows:
-
-> ### Note:  
-> In the annotation information of the subsection, replace all separators \(-- , :: etc.\) with a | \(vertical bar\) while forming the key.
-
--   Show the side content button
-
-    `ShowSideContent|<EntitySet>|<Annotation Info of the Subsection>`
-
-    Example: `ShowSideContent|STTA_C_MP_Product|to_ProductSalesData|com.sap.vocabularies.UI.v1.Chart`
-
-    `ShowSideContent|STTA_C_MP_Product|GeneralInformationForm`
-
--   Hide the side content button
-
-    `HideSideContent|<EntitySet>|<Annotation Info of the Subsection>`
-
-    Example: `HideSideContent|STTA_C_MP_Product|to_ProductSalesData|com.sap.vocabularies.UI.v1.Chart`
-
-    `HideSideContent|STTA_C_MP_Product|GeneralInformationForm`
-
-
-  
-  
-**Side Content Added to the Object Page**
-
-![](images/Dynamic_Side_Content_9cb9e88.jpg "Side Content Added to the Object Page")
-
-> ### Note:  
-> -   Use dynamic side content for small previews. Do not consider it as an extension of the main panel's content.
-> 
-> -   Do not use tables in the side content panel.
-> 
-> -   Avoid any content that may introduce a horizontal scroll bar.
-> 
-> -   For better content visualization of the dynamic side content, use the 50% screen display of the dynamic side content.
-
-
-
-<a name="loio8e01a463d3984bfa8b23c2270d40e38c__section_h42_k2n_p4b"/>
-
-## Additional Features in SAP Fiori Elements for OData V4
-
 You can add additional content in a flexible manner. When the side content is triggered, the main content is narrowed. The side content always comes from the right side of the app and provides the following features:
 
 -   adding arbitrary sections with an `xmlfragment` definition
@@ -114,7 +22,9 @@ You can add additional content in a flexible manner. When the side content is tr
 
 
 
-### Using the Side Content
+<a name="loio8e01a463d3984bfa8b23c2270d40e38c__section_h42_k2n_p4b"/>
+
+## Using the Side Content
 
 You define the side content in the manifest as follows:
 
@@ -164,7 +74,7 @@ You define the side content in the manifest as follows:
 
 
 
-### Settings for Side Content
+## Settings for Side Content
 
 You can define your side content by implementing an `xmlfragment` and using the following properties:
 
@@ -231,7 +141,7 @@ Bold formatting: default/fallback behavior
 
 
 
-### Toggling Side Content Through the `showSideContent` API
+## Toggling Side Content Through the `showSideContent` API
 
 By default, the side content is not shown. SAP Fiori elements provides an API for the side content that enables you to toggle the side content display `(show/hide): this.showSideContent("<SideContent-Key>")`.
 
@@ -302,7 +212,7 @@ For information about the regular `Extension` API, see the [API Reference](https
 
 
 
-### Finding the Right Key for Sections, Subsections, and Side Content
+## Finding the Right Key for Sections, Subsections, and Side Content
 
 The following table provides an overview of all possible combinations of facet nesting and how to find the right key in each scenario:
 
@@ -1303,11 +1213,16 @@ CF @ Level 1 Key
 
 
 
-### The Equal Split Functionality
+## The Equal Split Functionality
 
 The `equalSplit` property changes the visualization of the side content. It changes the aspect ratio of the section content in comparison to the side content. The following images show the UI without equal split mode and with equal split mode turned on:
 
 ![](images/Side_Content_Without_Equal_Split_Mode_d3c0b39.png)
 
 ![](images/Side_Content_with_Equal_Split_Mode_ba5134f.png)
+
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Adding Dynamic Side Content to Object Page Sections](adding-dynamic-side-content-to-object-page-sections-78f547f.md).
 

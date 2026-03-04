@@ -153,5 +153,10 @@ You can add filters to list card by using the `com.sap.vocabularies.UI.v1.Select
 
 ## Sorting or Grouping
 
-You can sort information in the list card by using `sortBy` and `sortOrder` properties in the application descriptor file. For more information, see [Configuring Sort Properties](configuring-sort-properties-41af842.md)
+You can sort information in the list card by using `sortBy` and `sortOrder` properties in the `manifest.json` file. For more information, see [Configuring Sort Properties](configuring-sort-properties-41af842.md)
+
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Customizing List Card](customizing-list-card-c179ca9.md).
 

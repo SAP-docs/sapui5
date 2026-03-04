@@ -70,3 +70,8 @@ You can configure an object page and subobject page to enable normal navigation 
 > }
 > ```
 
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Navigation to the Next Level](navigation-to-the-next-level-5e71be8.md).
+

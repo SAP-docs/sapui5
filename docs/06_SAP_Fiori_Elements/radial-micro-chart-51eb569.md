@@ -170,3 +170,8 @@ The following annotations are mandatory and must be used in the radial micro cha
 
 
 
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Radial Micro Chart](radial-micro-chart-1d7cebc.md).
+

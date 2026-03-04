@@ -9,3 +9,6 @@ This section describes the configuration options for navigating from an app \(ou
 -   [Navigation to an App \(Inbound Navigation\)](navigation-to-an-app-inbound-navigation-c337d8b.md)
 
 
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Configuring External Navigation](configuring-external-navigation-df91695.md).
+

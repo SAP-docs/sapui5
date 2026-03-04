@@ -2,9 +2,7 @@
 
 # Configuring the Content Area
 
-Visualize data from the main entity set and seamlessly navigate to an application. Define a valid `UI.Chart` or `UI.LineItem` annotation to render content for the chart area and table area. For more information, see [Configuring the Manifest for the Analytical List Page](configuring-the-manifest-for-the-analytical-list-page-2a9df06.md).
-
-
+Visualize data from the main entity set and seamlessly navigate to an application. Define a valid `UI.Chart` or `UI.LineItem` annotation to render content for the chart area and table area. For more information, see [Configuring the Manifest for the Analytical List Page](configuring-the-manifest-for-the-analytical-list-page-c4ebbae.md).
 
 You can choose to view the main entity set data in the following view modes:
 
@@ -15,19 +13,15 @@ You can choose to view the main entity set data in the following view modes:
 -   Hybrid \(chart and table\)
 
 
-
-
-<a name="loiofc7d73c3044649e8839925558afc2079__section_k5n_c3x_1lb"/>
-
-## Additional Features in SAP Fiori Elements for OData V2
-
 If you've configured the content tile in the `manifest.json` file, the `FilterableKPI` view appears along with the segmented buttons \(Hybrid/Chart/Table\) and the content area tile.
 
 Configure the `contentTitle` property in the `manifest.json` file to add a title for the content area.
 
 
 
-### Dynamic Page Header
+<a name="loiofc7d73c3044649e8839925558afc2079__section_utl_3gv_ghc"/>
+
+## Dynamic Page Header
 
 The dynamic page header is pinnable when the app has a responsive table in desktops, hybrid, and 'M' size devices such as tablets. A pin toggle button is available allowing the header content to remain expanded when scrolling the page.
 
@@ -39,7 +33,7 @@ The dynamic page header is pinnable when the app has a responsive table in deskt
 **Related Information**  
 
 
-[Analytical List Page](analytical-list-page-3d33684.md "The analytical list page (ALP) offers a unique way to analyze data step by step from different perspectives, to investigate a root cause through drilldown, and to act on transactional content.")
+[Analytical List Page](analytical-list-page-ff056b4.md "The analytical list page (ALP) offers a unique way to analyze data step by step from different perspectives, to investigate a root cause through drilldown, and to act on transactional content.")
 
 [Configuring the Table-Only View as the Default Option](configuring-the-table-only-view-as-the-default-option-d074e26.md "In this mode, the data is displayed in the table format.")
 
@@ -47,5 +41,5 @@ The dynamic page header is pinnable when the app has a responsive table in deskt
 
 [Hybrid View](hybrid-view-6615668.md "The hybrid view is the default data display mode in the ALP content area. It lets you view both analytical data (chart format) and transactional data (table format).")
 
-[Configuring Default Settings \(Visualizations, Sort Order, Filter Values\)](configuring-default-settings-visualizations-sort-order-filter-values-49a6ba5.md "SAP Fiori elements allows you to specify a UI.SelectionPresentationVariant.")
+[Configuring Default Settings \(Visualizations, Sort Order, Filter Values\)](configuring-default-settings-visualizations-sort-order-filter-values-22e32b7.md "SAP Fiori elements allows you to specify a UI.SelectionPresentationVariant.")
 

@@ -4,16 +4,13 @@
 
 You can modify startup parameters using an extension method.
 
-> ### Note:  
-> This topic is only applicable to SAP Fiori elements for OData V2
-
 You can use the extension method `modifyStartupExtension` to do the following:
 
 -   Modify selection variants: You can modify the filter context while navigating from the SAP Fiori launchpad or from another application to the list report, the overview page, or the analytical list page.
 
     -   List report
 
-        A source app may provide parameters which need to be modified so that they can be applied to the SmartFilterBar in the target app. For example, the source app provides the parameters `FiscalYear` and `FiscalPeriod`, but the target app only understands the `FiscalYearPeriod` parameter. This means that the two source app parameters need to be combined into one parameter, `FiscalYearPeriod`, in the target app before the paramaters can be applied to the SmartFilterBar.
+        A source app may provide parameters which need to be modified so that they can be applied to the SmartFilterBar in the target app. For example, the source app provides the parameters `FiscalYear` and `FiscalPeriod`, but the target app only understands the `FiscalYearPeriod` parameter. This means that the two source app parameters need to be combined into one parameter, `FiscalYearPeriod`, in the target app before the parameters can be applied to the SmartFilterBar.
 
         In some cases, parameters need to be added, deleted, or renamed.
 
@@ -40,7 +37,7 @@ You can use the extension method `modifyStartupExtension` to do the following:
 
 -   Dynamically choose a particular tab when starting a list report with multiple views and multiple tables
 
-    This can be relevant, for example, when launching an app from the SAP Fiori launchpad or during external navigation to a list report with multiple views and multible tables. For example, when navigating from an overview page, depending on the card clicked, a particular tab should be selected in the list report.
+    This can be relevant, for example, when launching an app from the SAP Fiori launchpad or during external navigation to a list report with multiple views and multiple tables. For example, when navigating from an overview page, depending on the card clicked, a particular tab should be selected in the list report.
 
 
 The object `oStartupObject` passed in this method has the following properties:

@@ -38,3 +38,8 @@ To display a confirmation popover, add the `IsActionCritical` annotation to your
 
 Apps can add action-specific messages to confirmation dialog boxes. For more information, see [Localization of UI Texts](localization-of-ui-texts-b8cb649.md).
 
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Adding Confirmation Popovers for Actions](adding-confirmation-popovers-for-actions-2315b07.md).
+

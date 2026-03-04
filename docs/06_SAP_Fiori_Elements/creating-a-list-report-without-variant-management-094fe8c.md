@@ -171,3 +171,12 @@ For more information, see [Managing Variants](managing-variants-8ce658e.md).
 
 [Enabling Variant Management on the Object Page](enabling-variant-management-on-the-object-page-f26d42b.md "You can enable and disable variant management on the object page.")
 
+<a name="concept_xqz_shb_c3c"/>
+
+<!-- concept\_xqz\_shb\_c3c -->
+
+## 
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Creating a List Report Page Without Variant Management](creating-a-list-report-page-without-variant-management-e3b12f4.md).
+

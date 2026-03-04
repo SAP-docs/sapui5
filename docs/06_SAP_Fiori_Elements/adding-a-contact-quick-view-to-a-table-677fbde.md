@@ -441,3 +441,8 @@ The `Communication.Contact` annotation term is defined under the `SupplierType` 
 > 
 > ```
 
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Adding a Contact Quick View to a Table](adding-a-contact-quick-view-to-a-table-31020b7.md).
+

@@ -173,3 +173,8 @@ The following annotations are mandatory and must be used in the bullet micro cha
 
 
 
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Bullet Micro Chart](bullet-micro-chart-4a7e1b8.md).
+

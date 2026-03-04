@@ -367,7 +367,7 @@ The following changes and new features are available for SAP Fiori elements for 
 
 -   Side effects can now be triggered by custom fields in forms or custom table columns. For more information, see [Side Effects](../06_SAP_Fiori_Elements/side-effects-18b17bd.md).
 
--   Key users can now configure features that require modifications in the`manifest.json` file. This option is also available for legacy applications that use an array structure in the `manifest.json` file. For more information, see [Adapting the UI](../06_SAP_Fiori_Elements/adapting-the-ui-59bfd31.md).
+-   Key users can now configure features that require modifications in the`manifest.json` file. This option is also available for legacy applications that use an array structure in the `manifest.json` file. For more information, see [Adapting the UI](../06_SAP_Fiori_Elements/extending-delivered-apps-with-key-user-adaptation-59bfd31.md).
 
 -   We’ve added the *Share to SAP Collaboration Manager* option to the context menu of tables.
 
@@ -771,6 +771,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.142](what-s-new-in-sapui5-1-142-92ed100.md "With this release SAPUI5 is upgraded from version 1.141 to 1.142.")
 
 [What's New in SAPUI5 1.141](what-s-new-in-sapui5-1-141-a7ed66d.md "With this release SAPUI5 is upgraded from version 1.140 to 1.141.")
 

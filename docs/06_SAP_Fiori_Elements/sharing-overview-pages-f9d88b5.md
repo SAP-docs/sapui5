@@ -22,3 +22,8 @@ You can also share the current state of a overview page by email, which contains
 
 To send an email link, on the filter bar, click *Share* \> *Send Email*.
 
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Sharing Overview Pages](sharing-overview-pages-a2dec2b.md).
+

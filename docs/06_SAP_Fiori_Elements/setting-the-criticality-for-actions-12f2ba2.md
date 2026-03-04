@@ -105,5 +105,10 @@ Negative/Red status \(Attention/Overload/Alert\)
 > 
 > -   Emphasized buttons and semantic buttons \(critical actions\) cannot occur together on one page, as there can only be a single primary action \(so either the emphasized or the semantic button\).
 > 
-> -   In SAP Fiori elements for OData V4, the object page header only allows you to place a critical action as the left-most action.
+> -   The object page header only allows you to place a critical action as the left-most action.
+
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Setting the Criticality for Actions](setting-the-criticality-for-actions-475e4d8.md).
 

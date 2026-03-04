@@ -4,9 +4,6 @@
 
 Application developers can control important features of the field.
 
-> ### Note:  
-> This topic is only applicable to SAP Fiori elements for OData V4.
-
 
 
 <a name="loiof49a0f7eaafe444daf4cd62d48120ad0__section_kfc_wzf_k4b"/>

@@ -4,9 +4,6 @@
 
 You can use extension points to enhance views in the list report in SAP Fiori elements apps.
 
-> ### Note:  
-> This topic is only applicable to SAP Fiori elements for OData V4.
-
 
 
 <a name="loioeb37203f2b884b5097c3c858107cae1f__section_nb5_455_3qb"/>

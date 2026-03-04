@@ -8,3 +8,8 @@ If the standard root views `NavContainer` or `FlexibleColumnLayout` don't fit yo
 
 For more information and live examples, see the SAP Fiori Development Portal at [Custom Page - Custom Root View](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/guidance/guidanceOwnRootView).
 
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Using a Custom Root View](using-a-custom-root-view-744992b.md).
+

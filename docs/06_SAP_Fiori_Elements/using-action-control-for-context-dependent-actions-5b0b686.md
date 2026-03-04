@@ -4,12 +4,6 @@
 
 Action control refers to the ability of applications to be able to configure app-specific actions so that they are only enabled for certain instances of the object, but not others.
 
-
-
-<a name="loio5b0b686a3b7a491a9ec654b4f1536fa8__section_dhs_mjc_2nb"/>
-
-## Additional Features in SAP Fiori Elements for OData V2
-
 You can use action control to display actions by adding the `sap:action-for` and `sap:applicable-path` terms to your action or function import.
 
 Actions that you've defined using these annotations are context-dependent. This means that users have to select an item or a line in a list. Only then are the actions enabled.
@@ -23,7 +17,7 @@ If the condition, as defined by the applicable-path variable, is not fulfilled, 
 -   The action is disabled for header buttons in a table
 
     > ### Note:  
-    > In addition to `sap:applicable-path`, it is not recommended to use `UI.Hidden` for `DataFieldForAction` within page header. If `UI.Hidden` is defined, it takes the precedence and may result in a deviation from the UX recommended behaviour for button visibility.
+    > In addition to `sap:applicable-path`, it is not recommended to use `UI.Hidden` for `DataFieldForAction` within page header. If `UI.Hidden` is defined, it takes the precedence and may result in a deviation from the UX recommended behavior for button visibility.
 
 
 > ### Sample Code:  
@@ -40,20 +34,7 @@ If the condition, as defined by the applicable-path variable, is not fulfilled, 
 > ```
 
 > ### Note:  
-> If the function import action parameters are dynamic, and if for a selected instance no parameter is required, then the parameter dialog is not displayed. This behavior is applicable only for single-context select actions.
-
-
-
-<a name="loio5b0b686a3b7a491a9ec654b4f1536fa8__section_hhv_qjc_2nb"/>
-
-## Additional Features in SAP Fiori Elements for OData V4
-
-You can use action control to enable or disable actions by adding the `OperationAvailable` term.
-
-For more information, see the [Enabling Custom Actions Defined Using Annotations](actions-cbf16c5.md#loiocbf16c599f2d4b8796e3702f7d4aae6c__subsection_xkx_gwq_nsb) section in [Actions](actions-cbf16c5.md).
-
-
-
-> ### Note:  
-> If multi-select is available in a table, the action is allowed when at least one of the marked entries fulfills the condition.
+> -   If the function import action parameters are dynamic, and if for a selected instance no parameter is required, then the parameter dialog is not displayed. This behavior is applicable only for single-context select actions.
+> 
+> -   If multi-select is available in a table, the action is allowed when at least one of the marked entries fulfills the condition.
 

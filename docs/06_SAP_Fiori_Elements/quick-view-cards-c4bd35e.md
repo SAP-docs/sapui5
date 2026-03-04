@@ -89,3 +89,8 @@ Interaction buttons in the footer area are part of `sap.m.OverflowToolbar` so th
 > }
 > ```
 
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Quick View Cards](quick-view-cards-f65817a.md).
+

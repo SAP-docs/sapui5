@@ -608,3 +608,8 @@ A table column isn't rendered if the static value of `UI.Hidden` is `true`.
 > ### Note:  
 > Even if you hide all determining actions in the footer, the UI still displays the footer because it is required to show any bound messages from the back end.
 
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Hiding Features Using the UI.Hidden Annotation](hiding-features-using-the-ui-hidden-annotation-5f12ebd.md).
+

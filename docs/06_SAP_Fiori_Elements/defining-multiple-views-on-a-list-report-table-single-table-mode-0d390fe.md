@@ -653,3 +653,12 @@ To define multiple views using single table mode, perform the following steps:
 
 [Adding Segmented Buttons to a Table Toolbar](adding-segmented-buttons-to-a-table-toolbar-5532c89.md "You can add segmented buttons to the toolbar to enable switching between the table content using a selection variant annotation.")
 
+<a name="concept_my4_l3b_c3c"/>
+
+<!-- concept\_my4\_l3b\_c3c -->
+
+## 
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Defining Multiple Views on a List Report Table - Single Table Mode](defining-multiple-views-on-a-list-report-table-single-table-mode-0f6901e.md).
+

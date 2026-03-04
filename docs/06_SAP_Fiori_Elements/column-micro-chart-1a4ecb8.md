@@ -2,7 +2,7 @@
 
 # Column Micro Chart
 
-A column chart uses vertical bars to compare multiple values over time or across categories.
+A column chart uses vertical bars to compare multiple values across categories.
 
 One axis of the chart shows the categories being compared, the other axis represents a value.
 
@@ -153,7 +153,6 @@ The `UI.Chart Title` property is used for the title. The `UI.Chart Description` 
 >     Value : Width,    Criticality : criticalityValue
 > }
 > 
-> 
 > ```
 
 For semantic coloring, both the `Criticality` and `CriticalityCalculation` properties are supported. However, the `Criticality` property overrides the `CriticalityCalculation` property.
@@ -175,4 +174,9 @@ The following annotations are mandatory and must be used in the column micro cha
     -   `UI.DataPoint` → `CriticalityCalculation/ImprovementDirection`
 
 
+
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Line Micro Chart](line-micro-chart-3af8420.md).
 

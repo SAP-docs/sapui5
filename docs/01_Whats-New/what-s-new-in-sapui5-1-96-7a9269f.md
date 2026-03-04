@@ -603,7 +603,7 @@ The following changes and new features are available for SAP Fiori elements for 
 
 -   List Report and Object Page tables now have a full screen mode option, enabled by default, when launched on mobile phones. For more information, see [Tables](../06_SAP_Fiori_Elements/tables-c0f6592.md).
 
--   Enhanced support is now available for the manifest settings such as `filterSettings`, `editableHeaderContent`, `showRelatedApps`, `tableSettings`, `dataLoadSettings`, etc. using the adaptation project for application extensibility. For more information, see [Extending the Delivered Apps Manifest Using an Adaptation Project](../06_SAP_Fiori_Elements/extending-the-delivered-apps-manifest-using-an-adaptation-project-a2b24a6.md).
+-   Enhanced support is now available for the manifest settings such as `filterSettings`, `editableHeaderContent`, `showRelatedApps`, `tableSettings`, `dataLoadSettings`, etc. using the adaptation project for application extensibility. For more information, see [Extending Delivered Apps Using Adaptation Projects](../06_SAP_Fiori_Elements/extending-delivered-apps-using-adaptation-projects-a2b24a6.md).
 
 -   Input fields can now get the default values from `DefaultValuesFunction` in the create page and function import dialog of the non-draft applications. For more information, see [Actions](../06_SAP_Fiori_Elements/actions-cbf16c5.md).
 
@@ -740,6 +740,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.142](what-s-new-in-sapui5-1-142-92ed100.md "With this release SAPUI5 is upgraded from version 1.141 to 1.142.")
 
 [What's New in SAPUI5 1.141](what-s-new-in-sapui5-1-141-a7ed66d.md "With this release SAPUI5 is upgraded from version 1.140 to 1.141.")
 

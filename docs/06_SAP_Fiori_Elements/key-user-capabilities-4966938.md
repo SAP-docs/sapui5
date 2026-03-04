@@ -233,3 +233,8 @@ description
 </tr>
 </table>
 
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Key User Capabilities](key-user-capabilities-37b16cc.md).
+

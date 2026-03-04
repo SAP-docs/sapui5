@@ -94,3 +94,8 @@ For more information about how to enable and disable the *Search* field for anal
 
 For more information about configuring the filter bar in a list report, see [Adapting the Filter Bar](adapting-the-filter-bar-609c39a.md).
 
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Enabling the Search Function](enabling-the-search-function-fffde60.md).
+

@@ -4,9 +4,6 @@
 
 This topic provides information how the `IN`/`OUT` parameters can be used within the value help definition to establish a link between the fields in the main entity and the fields in the value help entity.
 
-> ### Note:  
-> In SAP Fiori elements for OData V2, `In`/`Out` mappings are supported only for analytical list page.
-
 
 
 **Annotation Terms**
@@ -463,4 +460,9 @@ Since both `CountryID` and `RegionID` are marked as `In` parameters in the `Valu
 
 -   Only plants \(`"PlantNumber"`s\) belonging to both the selected `Region` filter means that the \(`"RegionID"`\) as well as the selected `Country` \(`"CountryID"`\) is shown within the `PlantID` value help dialog.
 
+
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [In/Out Mappings in the ValueList Annotation](in-out-mappings-in-the-valuelist-annotation-32bfc09.md).
 

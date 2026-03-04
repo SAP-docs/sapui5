@@ -146,5 +146,31 @@ To enable the carousel header on desktops, set `"showHeaderAsCarouselOnDesktop":
 
 If an application developer has defined header facets as `stashed` in the `manifest.json` file, they are initially not visible on the UI. Such header facets are not loaded when the application is started. Key users can add these stashed header facets using the key user adaptation at runtime and make them visible for end users on the object page header.
 
-For more information, see to [Adapting the UI](adapting-the-ui-59bfd31.md).
+For more information, see to [Extending Delivered Apps With Key User Adaptation](extending-delivered-apps-with-key-user-adaptation-59bfd31.md).
+
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Header Facets](header-facets-a4e5efd.md).
+
+**Related Information**  
+
+
+[Plain Text Facet in the Object Page Header](plain-text-facet-in-the-object-page-header-1da0926.md)
+
+[Contact Facet in the Object Page Header](contact-facet-in-the-object-page-header-214dc25.md)
+
+[Micro Chart Facet in the Object Page Header](micro-chart-facet-in-the-object-page-header-e219fd0.md "You can add a MicroChart control to a facet within the header area of the object page.")
+
+[Form Facet in the Object Page Header](form-facet-in-the-object-page-header-ff0ae0b.md)
+
+[Data Points](data-points-c2a389a.md)
+
+[Rating Indicator Facet in the Object Page Header](rating-indicator-facet-in-the-object-page-header-bcc12cb.md "You can add a read-only rating indicator to the object page header.")
+
+[Progress Indicator Facet in the Object Page Header](progress-indicator-facet-in-the-object-page-header-3b5e01c.md "You can add a progress indicator to a header facet on the object page.")
+
+[Key Value Facet in the Object Page Header](key-value-facet-in-the-object-page-header-c312735.md "")
+
+[Address Facet in the Object Page Header](address-facet-in-the-object-page-header-0b73cbb.md "If you add a UI.ReferenceFacet that points to an address annotation, an address facet is displayed in the object page header.")
 

@@ -67,3 +67,8 @@ To disable this filter, you must add the following sample code to your annotatio
 
 If you disable the *Editing Status* filter, end users can no longer filter their objects based on the editing status.
 
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Disabling the Editing Status Filter](disabling-the-editing-status-filter-cd319e9.md).
+

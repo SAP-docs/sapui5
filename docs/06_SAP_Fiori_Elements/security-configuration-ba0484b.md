@@ -4,9 +4,6 @@
 
 Security has always been an important element for the complete product life cycle of all SAP products, including product development, planning, and quality assurance. SAP takes care of some of the security focus areas, while others have to be handled by you.
 
-> ### Note:  
-> This topic is only applicable to SAP Fiori elements for OData V4.
-
 Consider the following security aspects:
 
 -   If you're using CAP, you must ensure the security configurations in the back end are compatible with the design and configuration of your app.

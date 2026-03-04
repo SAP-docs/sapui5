@@ -601,3 +601,8 @@ In addition to filter bar, you can also configure the visual filter bar to selec
 
 For information about configuring field help for the filter fields, see [Field Help](field-help-a5608ea.md).
 
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Configuring Filter Fields](configuring-filter-fields-1388d9c.md).
+

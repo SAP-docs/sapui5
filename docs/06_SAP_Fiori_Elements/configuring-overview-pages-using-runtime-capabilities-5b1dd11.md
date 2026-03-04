@@ -63,3 +63,8 @@ End users can configure their overview pages in the following ways:
 -   Filter the information displayed in cards by defining the values or range of values to be displayed for a specific field. For example, display only orders for which the supply date has passed.
 
 
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Customizing Overview Pages Using Runtime Capabilities](customizing-overview-pages-using-runtime-capabilities-f70023c.md).
+

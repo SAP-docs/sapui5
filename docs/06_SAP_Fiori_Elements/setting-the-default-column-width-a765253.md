@@ -203,3 +203,8 @@ For more information about how to find the right key for a column, see [Finding 
 
 For information about custom columns in list reports and object pages, see [Extension Points for Tables](extension-points-for-tables-d525522.md).
 
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Setting the Default Column Width](setting-the-default-column-width-cd262f2.md).
+

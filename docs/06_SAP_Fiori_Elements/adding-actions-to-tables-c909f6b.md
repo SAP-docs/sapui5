@@ -1,0 +1,489 @@
+<!-- loioc909f6b493724764a30e5ff7db07e5d2 -->
+
+# Adding Actions to Tables
+
+The table control offers the possibility to show generic actions, such as *Create* and *Delete*, as well as application-specific actions.
+
+
+
+<a name="loioc909f6b493724764a30e5ff7db07e5d2__section_nx4_qpb_2nb"/>
+
+## Generic Actions
+
+SAP Fiori elements provides two generic actions \(*Create* and *Delete*\) that can be rendered in the toolbar based on metadata properties `sap:creatable=true` and `sap:deletable=true` of the entity set.
+
+You can control the `Insert` capability for the related entities, that is the enablement of the *Create* button, using the following options:
+
+
+
+### Option 1: Using `NavigationRestrictions`
+
+The system gives priority to the `Org.OData.Capabilities.V1.NavigationRestrictions` of the parent entity set if it is defined, and the `InsertRestrictions` provided directly at the table entity set level \(Option 2 below\) is ignored. Depending on the value of the `Insertable` property of `InsertRestrictions`, the related \(table\) entity set is made insertable or not insertable.
+
+-   If `Insertable` is set as `true`, the related entity set is insertable.
+
+-   If `Insertable` is set as `false`, the related entity set isn't insertable.
+
+
+> ### Sample Code:  
+> XML Annotation
+> 
+> ```xml
+> <Annotations Target="STTA_PROD_MAN.STTA_PROD_MAN_Entities/STTA_C_MP_Product">
+>   <Annotation Term="Capabilities.NavigationRestrictions">
+>     <Record>
+>         <PropertyValue Property="RestrictedProperties">
+>           <Collection>
+>             <Record>
+>                <PropertyValue Property="NavigationProperty" NavigationPropertyPath="to_ProductText"/>
+>                <PropertyValue Property="InsertRestrictions">
+>                   <Record>
+>                      <PropertyValue Property="Insertable" Bool="true"/>
+>                      <!--Example with Boolean value for InsertRestriction-->
+>                      <!-- <PropertyValue Property="Insertable" Path="Insertable"/>-->
+>                      <!--Example with path for InsertRestriction-->
+>                   </Record>
+>                </PropertyValue>
+>            </Record>
+>         </Collection>
+>         </PropertyValue>
+>     </Record>
+>   </Annotation>
+> </Annotation>
+> 
+> ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> No ABAP CDS annotation is required, since the setting is made according to the modeling \(such as create, update, or delete\) in RAP BDEF \(behavior definition\).
+
+> ### Sample Code:  
+> ```
+> 
+> define behavior for STTA_C_MP_Product
+> {
+>   create;
+>   delete;
+>   update;
+>  
+>   association _ProductText
+>   { create;  }
+> };
+> ```
+
+
+
+### Option 2: Using `InsertRestrictions`
+
+-   If `Insertable` is set as `true`, the related entity set is insertable.
+
+-   If `Insertable` is set as `false`, the related entity set isn't insertable.
+
+
+> ### Sample Code:  
+> XML Annotation
+> 
+> ```xml
+> 
+> <Annotations Target="STTA_PROD_MAN.STTA_PROD_MAN_Entities/STTA_C_MP_ProductText">
+>   <Annotation Term="Capabilities.InsertRestrictions">
+>     <Record>
+>        <PropertyValue Property="Insertable" Bool="true" />
+>                     <!--Example with Boolean value for InsertRestriction-->
+> 
+>     </Record>
+>   </Annotation>
+> </Annotations>
+> ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> No ABAP CDS annotation is required, since the setting is made according to the modeling \(such as create, update, or delete\) in RAP BDEF \(behavior definition\).
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> 
+> annotate STTA_PROD_MAN.STTA_C_MP_ProductText with @(
+>   Capabilities.InsertRestrictions : {
+>     Insertable : true,
+>   }
+> );
+> ```
+
+For more information, see [Enabling Inline Creation Mode or Empty Row Mode for Table Entries](enabling-inline-creation-mode-or-empty-row-mode-for-table-entries-276cbe5.md).
+
+
+
+### Delete Action
+
+The *Delete* button can be seen as an action on the table and it's disabled until a selection is made.
+
+`DeleteRestrictions` also supports path-based values.
+
+The *Delete* button is enabled by default if `DeleteRestrictions` isn't provided.
+
+> ### Sample Code:  
+> XML Annotation
+> 
+> ```xml
+> <Annotations Target="SAP__self.Container/SalesOrderManage">
+>    <Annotation Term="SAP__capabilities.DeleteRestrictions">
+>       <Record>
+>          <PropertyValue Property="Deletable" Bool="false"/>
+>       </Record>
+>    </Annotation>
+> </Annotations>
+> ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> No ABAP CDS annotation is required, since the setting is made according to the modeling \(such as create, update, or delete\) in RAP BDEF \(behavior definition\).
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> 
+> annotate SAP__self.SalesOrderManage with {
+>   SAP__capabilities.DeleteRestrictions : {
+>     Deletable : false
+>   }
+> };
+> ```
+
+> ### Note:  
+> -   The *Delete* action can't be performed for any of the selected records if the deletion of one of the selected records fails in the back end. So the *Delete* action either works for all records or for none.
+> 
+> -   If you want to specify conditions for deletion \(using the `deletable-path` annotation\), you must ensure that the setting `sap:deletable` has not been made.
+
+The system gives priority to the `Org.OData.Capabilities.V1.NavigationRestrictions` of the parent entity set. The *Delete* button is shown depending on the value of the `Deletable` property of `DeleteRestrictions`.
+
+-   If `NavigationRestrictions` has the setting `Deletable=false`, the *Delete* button for the child entity table is always hidden.
+
+-   If `NavigationRestrictions` has the setting `Deletable=true` or a path, the visibility of the *Delete* button for the child entity table depends on the value of `UI.DeleteHidden` of the child entity \(that is, the table entity\).
+
+
+> ### Sample Code:  
+> ```
+> 
+> <Annotations Target="STTA_PROD_MAN.STTA_PROD_MAN_Entities/STTA_C_MP_Product">
+>   <Annotation Term="Capabilities.NavigationRestrictions">
+>     <Record>
+>         <PropertyValue Property="RestrictedProperties">
+>           <Collection>
+>             <Record>
+>                <PropertyValue Property="NavigationProperty" NavigationPropertyPath="to_ProductText"/>
+>                <PropertyValue Property="DeleteRestrictions">
+>                   <Record>
+>                      <PropertyValue Property="Deletable" Bool="false"/>
+>                   </Record>
+>                </PropertyValue>
+>            </Record>
+>         </Collection>
+>         </PropertyValue>
+>     </Record>
+>   </Annotation>
+> </Annotation>
+> 
+> ```
+
+
+
+### Enable or Disable the *Delete* Button \(Using `deletable-path` Annotations\)
+
+You can enable or disable the *Delete* button in the list report based on conditions specified in the back-end system. For example, you can disable the deletion for a sales order that has already been paid. In this case, if a user selects an item that can't be deleted, the *Delete* button is disabled. In addition, if the user navigates from this item in the list report to the object page, the *Delete* button is hidden.
+
+In your annotation, set the `deletable-path` to point to a particular property of an object \(entity\) in the back-end system that is either `true` or `false`. If the value of this property is `true`, the *Delete* button is enabled; if it's `false`, it's disabled. If you want to use the `deletable-path` annotation to specify conditions for deletion, you have to ensure that the setting `sap:deletable` isn't present in your annotations.
+
+The following sample code shows you how to set up your annotation to enable or disable the *Delete* button, based on the value of the `Delete_mc` property in the back-end system.
+
+> ### Sample Code:  
+> XML Annotation
+> 
+> ```xml
+> <Annotations Target="STTA_PROD_MAN.STTA_PROD_MAN_Entities/STTA_C_MP_Product">
+>     <Annotation Term="Org.OData.Capabilities.V1.DeleteRestrictions">
+>         <Record>
+>             <PropertyValue Property="Deletable" Path="Delete_mc"/>
+>         </Record>
+>     </Annotation>
+> </Annotations>
+> ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> No ABAP CDS annotation is required, since the setting is made according to the modeling \(such as create, update, or delete\) in RAP BDEF \(behavior definition\).
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> 
+> annotate STTA_C_MP_Product with @(
+>     Capabilities.DeleteRestrictions : {
+>         Deletable : Delete_mc
+>     }
+> );
+> ```
+
+
+
+<a name="loioc909f6b493724764a30e5ff7db07e5d2__section_ifk_jqb_2nb"/>
+
+## App-Specific Actions
+
+Tables can also show application-configured actions. These can either be custom actions configured in the `manifest.json`, or can come from annotations.
+
+**Custom Actions \(`manifest.json`\)**
+
+Applications can define custom table toolbar actions using enhancements to the `manifest.json` file. For more information, see the corresponding sections in [Adding Custom Actions Using Extension Points](adding-custom-actions-using-extension-points-3530e6b.md).
+
+**Annotation-Based Actions**
+
+The following types of actions are supported:
+
+-   Actions that trigger a back-end call through the OData service, for example *Approve* or *Unblock*, represented by the complex type `DataFieldForAction`.
+
+-   Actions that trigger navigation, for example to a different app, represented by the complex type `DataFieldForIntentBasedNavigation`. For more information, see [Navigation from an App \(Outbound Navigation\)](navigation-from-an-app-outbound-navigation-c35fa60.md).
+
+Annotation-based actions can be inline actions. Inline actions are used to trigger actions directly for a single table row. Such an action shows up within the table control as a separate column. To set an action as an inline action, set the `Inline` property to `true`. The line item actions are then displayed as shown in the following screenshot:
+
+  
+  
+**Example: Actions in the Table Toolbar**
+
+![](images/Actions_in_the_Table_Toolbar_856c5a4.png "Example: Actions in the Table Toolbar")
+
+
+
+### Specifying a Text for an App-Specific Action
+
+To specify a text for your action, use the `com.sap.vocabularies.UI.v1.DataFieldForAction` property and specify the text to be displayed.
+
+For more information about adding a button triggering external navigation, see [Navigation from an App \(Outbound Navigation\)](navigation-from-an-app-outbound-navigation-c35fa60.md).
+
+For more information about context-dependent and context-independent actions, see [Actions](actions-14418d7.md).
+
+The following code sample shows how to create your annotations for line item actions. Note that the `UI.LineItem` vocabulary term is used to define the columns for the table.
+
+
+
+### `UI.LineItem`
+
+> ### Sample Code:  
+> XML Annotation
+> 
+> ```xml
+> <Annotation Term="UI.LineItem">
+>    <Collection>
+>       <Record Type="UI.DataFieldForAction">
+>          <PropertyValue Property="Label" String="Copy with new Supplier"/>
+>          <PropertyValue Property="Action"
+>             String="STTA_PROD_MAN.STTA_PROD_MAN_Entities/STTA_C_MP_ProductCopywithparams"/>
+>          <PropertyValue Property="InvocationGrouping"   
+>             EnumMember="UI.OperationGroupingType/Isolated"/>
+>       </Record>
+>       <Record Type="UI.DataFieldForAction">
+>          <PropertyValue Property="Label" String="Activate"/>
+>          <PropertyValue Property="Action"
+>             String="STTA_PROD_MAN.STTA_PROD_MAN_Entities/STTA_C_MP_ProductActivation"/>
+>          <PropertyValue Property="InvocationGrouping" 
+>             EnumMember="UI.OperationGroupingType/ChangeSet"/>
+>       </Record>
+>       <Record Type="UI.DataField">
+>          <PropertyValue Property="Value" Path="Product"/>
+>          <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+>       </Record>
+>       <Record Type="UI.DataField">
+>          <PropertyValue Property="Value" Path="ProductCategory"/>
+>          <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+>       </Record>
+>       <Record Type="UI.DataField">
+>          <PropertyValue Property="Value" Path="to_Supplier/CompanyName"/>
+>          <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+>       </Record>
+>       <Record Type="UI.DataField">
+>          <PropertyValue Property="Criticality" Path="to_StockAvailability/StockAvailability"/>
+>          <PropertyValue Property="Value" Path="to_StockAvailability/StockAvailability"/>
+>          <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+>       </Record>
+>       <Record Type="UI.DataField">
+>          <PropertyValue Property="Value" Path="Price"/>
+>          <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+>       </Record>
+>       <Record Type="UI.DataFieldForAction">
+>          <PropertyValue Property="Label" String="Copy"/>
+>          <PropertyValue Property="Action"
+>             String="STTA_PROD_MAN.STTA_PROD_MAN_Entities/STTA_C_MP_ProductCopy"/>
+>          <PropertyValue Property="Inline" Bool="true"/>
+>          <PropertyValue Property="InvocationGrouping"   
+>             EnumMember="UI.OperationGroupingType/Isolated"/>
+>       </Record>
+>       <Record Type="UI.DataFieldForIntentBasedNavigation">
+>          <PropertyValue Property="Label" String="Manage Products (ST)"/>
+>          <PropertyValue Property="SemanticObject" String="EPMProduct"/>
+>          <PropertyValue Property="Action" String="manage_st"/>
+>          <PropertyValue Property="Inline" Bool="true"/>
+>       </Record>
+>       
+>       <Record Type="UI.DataFieldWithIntentBasedNavigation">
+>          < PropertyValue Property ="Label" String ="Weight (with IBN)" />
+>          < PropertyValue Property ="Action" String ="manage_st_test" />
+>          <PropertyValue Property="Value" Path="Weight"/>
+>          <PropertyValue Property="SemanticObject" String="EPMProduct" />
+>           <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+>       </Record>
+>     </Collection>
+> </Annotation>
+> 
+> ```
+
+> ### Sample Code:  
+> ABAP CDS Annotation
+> 
+> ```
+> @UI.lineItem: [
+>   {
+>     label: 'Copy with new Supplier',
+>     dataAction: 'PUSHDOWN:STTA_C_MP_ProductCopywithparams',
+>     invocationGrouping: #ISOLATED,
+>     type: #FOR_ACTION,
+>     position: 1
+>   },
+>   {
+>     label: 'Activate',
+>     dataAction: 'PUSHDOWN:STTA_C_MP_ProductActivation',
+>     invocationGrouping: #CHANGE_SET,
+>     type: #FOR_ACTION,
+>     position: 2
+>   },
+>   {
+>     label: 'Product',   
+>     importance: #HIGH,
+>     value: 'PRODUCT',
+>     type: #STANDARD,
+>     position: 3
+>   },
+>   {
+>     label: 'Copy',   
+>     dataAction: 'PUSHDOWN:STTA_C_MP_ProductCopy',
+>     invocationGrouping: #ISOLATED,
+>     type: #FOR_ACTION,
+>     position: 8
+>   }
+> ]
+> 
+> ```
+
+> ### Sample Code:  
+> CAP CDS Annotation
+> 
+> ```
+> 
+> UI.LineItem : [
+>     {
+>         $Type : 'UI.DataFieldForAction',
+>         Label : 'Copy with new Supplier',
+>         Action : 'STTA_PROD_MAN.STTA_PROD_MAN_Entities/STTA_C_MP_ProductCopywithparams',
+>         InvocationGrouping : #Isolated
+>     },
+>     {
+>         $Type : 'UI.DataFieldForAction',
+>         Label : 'Activate',
+>         Action : 'STTA_PROD_MAN.STTA_PROD_MAN_Entities/STTA_C_MP_ProductActivation',
+>         InvocationGrouping : #ChangeSet
+>     },
+>     {
+>         $Type : 'UI.DataField',
+>         Value : Product,
+>         ![@UI.Importance] : #High
+>     },
+>     {
+>         $Type : 'UI.DataField',
+>         Value : ProductCategory,
+>         ![@UI.Importance] : #High
+>     },
+>     {
+>         $Type : 'UI.DataField',
+>         Value : to_Supplier.CompanyName,
+>         ![@UI.Importance] : #High
+>     },
+>     {
+>         $Type : 'UI.DataField',
+>         Criticality : to_StockAvailability.StockAvailability,
+>         Value : to_StockAvailability.StockAvailability,
+>         ![@UI.Importance] : #High
+>     },
+>     {
+>         $Type : 'UI.DataField',
+>         Value : Price,
+>         ![@UI.Importance] : #High
+>     },
+>     {
+>         $Type : 'UI.DataFieldForAction',
+>         Label : 'Copy',
+>         Action : 'STTA_PROD_MAN.STTA_PROD_MAN_Entities/STTA_C_MP_ProductCopy',
+>         Inline : true,
+>         InvocationGrouping : #Isolated
+>     },
+>     {
+>         $Type : 'UI.DataFieldForIntentBasedNavigation',
+>         Label : 'Manage Products (ST)',
+>         SemanticObject : 'EPMProduct',
+>         Action : 'manage_st',
+>         Inline : true
+>     },
+>     {
+>         $Type : 'UI.DataFieldWithIntentBasedNavigation',
+>         Label : 'Weight (with IBN)',
+>         Value : Weight,
+>         SemanticObject : 'EPMProduct',
+>         Action : 'manage_st'
+>     }
+> ]
+> 
+> ```
+
+In the example above, the order in which the record types are presented in the annotation determines the order in which they appear in the table columns:
+
+-   For the first two record types, the `DataFieldForAction` complex type doesn't contain the `Inline` property, which means that the action button appears in the table toolbar. If the `Inline` property is there and set to `false`, the action button is also displayed in the table toolbar.
+
+-   With the next five record types, the `DataField` complex type is used to define the data for a column within the table.
+
+-   With the last but two record types, the `DataFieldForAction` and `DataFieldForIntentBasedNavigation` complex types are used and contain the `Inline` property, which is set to `true`. This means the action buttons appear in every row in the appropriate column within the table.
+
+-   With the last record type, the `DataFieldWithIntentBasedNavigation` complex type is used to render the property value as a link, allowing for navigation to the semantic object.
+
+
+
+
+### Inline Deletion of Rows in Tables
+
+You can enable inline deletion list report and object page tables. To do so, set the `inlineDelete` property to `true` for `tableSettings` as shown in the following sample code:
+
+> ### Sample Code:  
+> ```
+> 
+> "tableSettings": {
+>      "inlineDelete": true
+> }
+> 
+> ```
+
+After you enable this setting, a *Delete* button is displayed at the end of the row in the table.
+
+![](images/Inline_Deletion_3eaeca8.png)
+
+> ### Note:  
+> -   The inline deletion is only possible for responsive table types.
+> 
+> -   The `inlineDelete` and `multiselect` cannot be enabled simultaneously. If both are enabled, the application fails to load.
+> 
+> -   If you have set delete restrictions and the restriction path property is set to false for the item, the item cannot be deleted.
+

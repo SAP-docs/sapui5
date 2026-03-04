@@ -107,3 +107,12 @@ In the `manifest.json` file, the `VariantManagement` variable is set to `Page` b
 
 You can also change the `VariantManagement` variable using the *Page Editor*. For more information, see [Configure Page Elements](https://help.sap.com/docs/SAP_FIORI_tools/17d50220bcd848aa854c9c182d65b699/047507c86afa4e96bb3d284adb9f4726.html).
 
+<a name="concept_k3v_541_c3c"/>
+
+<!-- concept\_k3v\_541\_c3c -->
+
+## 
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Managing Variants](managing-variants-b82d987.md).
+
