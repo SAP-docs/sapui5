@@ -6,6 +6,9 @@ Analytical cards let you view data in a variety of chart formats. The card is di
 
 
 
+> ### Note:  
+> Analytical cards don't have a fixed height. The height is adjusted automatically to accommodate the data points and legends. Legends are created automatically based on the defined measures and dimensions.
+
 In the header area, you can view the aggregated value of a key performance indicator \(KPI\), the trend, and percentage of change. In the chart area, you can view a graphical representation of the data.
 
 > ### Note:  
@@ -260,7 +263,7 @@ The following sample code is a snippet of a sample `manifest.json` file:
 >     "cards": {
 >       "cardBubble": {
 >         "model": "salesShare",
->         "template": "sap.ovp.cards.charts.analytical",
+>         "template": "sap.ovp.cards.v4.charts.analytical",
 >         "settings": {
 >           "entitySet": "SalesShare",
 >           "selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#Eval_by_CtryCurr",
@@ -272,7 +275,7 @@ The following sample code is a snippet of a sample `manifest.json` file:
 >       },
 >       "cardchartsline": {
 >         "model": "salesShare",
->         "template": "sap.ovp.cards.charts.analytical",
+>         "template": "sap.ovp.cards.v4.charts.analytical",
 >         "settings": {
 >           "entitySet": "SalesShare",
 >           "selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#Eval_by_Country",
@@ -284,7 +287,7 @@ The following sample code is a snippet of a sample `manifest.json` file:
 >       },
 >       "cardchartsdonut": {
 >         "model": "salesShare",
->         "template": "sap.ovp.cards.charts.analytical",
+>         "template": "sap.ovp.cards.v4.charts.analytical",
 >         "settings": {
 >           "entitySet": "SalesShare",
 >           "selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#Eval_by_Currency",
@@ -299,12 +302,14 @@ The following sample code is a snippet of a sample `manifest.json` file:
 > }
 > ```
 
-> ### Note:  
-> In SAP Fiori elements for OData V4, add `sap.ovp.cards.v4.charts.analytical` as the `template`. All other manifest settings are the same as in SAP Fiori elements for OData V2.
-
 
 
 ## Related Information
 
-For more information about configuring charts, see [Configuring Charts](configuring-charts-c7c5a82.md).
+For more information about configuring charts, see [Configuring Charts on the Overview Page](configuring-charts-on-the-overview-page-c7c5a82.md).
+
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Analytical Cards](analytical-cards-030cb5f.md).
 

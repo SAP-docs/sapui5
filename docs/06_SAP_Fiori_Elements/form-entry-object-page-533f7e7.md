@@ -4,9 +4,6 @@
 
 The form entry object page is a variation of the standard object page layout in which the header and navigation bar aren't displayed.
 
-> ### Note:  
-> This topic is only applicable to SAP Fiori elements for OData V4.
-
 You can use the form entry object page as an alternative to a list report object page pattern when you only want to provide a page for data entry.
 
 The form entry object page supports the same content and considers the same annotations as a standard object page template.

@@ -4,9 +4,6 @@
 
 Once the generation is complete and the node modules have been installed, the application is ready to run.
 
-> ### Note:  
-> This topic is only applicable to SAP Fiori elements for OData V2.
-
 The new app or component reuses the views and controllers from `sap.suite.ui.generic.template`. The resource links and route definitions for navigation are in the app descriptor file \(`manifest.json`\). You can find the destination configuration for preview in the `ui5*.yaml` files.
 
 You can use the run configurations \(palette command `Fiori: Open Run Configurations`\) to adapt the destinations for preview.
@@ -23,7 +20,7 @@ For more information about generated files, see the **Projects** section of [Gen
 
 
 
-## Component.js
+## `Component.js`
 
 After you generate the application, the SAPUI5 component `Component.js` that represents the application, can be executed. This component links to the manifest where further information can be found at runtime. This information includes the OData resource links or the reference to the template.
 
@@ -32,7 +29,7 @@ After you generate the application, the SAPUI5 component `Component.js` that rep
 
 
 
-## manifest.json
+## `manifest.json`
 
 You can find the service and annotation resource links that you've entered in the configuration wizard in the app descriptor \(`manifest.json` file\).
 
@@ -42,7 +39,7 @@ The local resources `localService/metadata.xml` and `localService/SEPMRA_PROD_MA
 
 If the local `annotations.xml` is defined, it takes the precedence over the annotations from back-end.
 
-We recommend that you use i18n properties, for example, to maintain the texts in the related `i18n` resource file. For more information, see [Localization of UI Texts](localization-of-ui-texts-b8cb649.md).
+We recommend that you use i18n properties, for example, to maintain the texts in the related `i18n` resource file. For more information, see [Localization of UI Texts](localization-of-ui-texts-91b525b.md).
 
 > ### Note:  
 > You can define the subtitle and the application icon to display on the shell bar navigation menu in the `manifest.json` file. For more information, see [Manifest \(Descriptor for Applications, Components, and Libraries\)](../04_Essentials/manifest-descriptor-for-applications-components-and-libraries-be0cf40.md).

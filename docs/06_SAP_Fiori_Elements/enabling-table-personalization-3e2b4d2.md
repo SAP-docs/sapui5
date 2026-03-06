@@ -4,7 +4,7 @@
 
 You can use table personalization to modify the settings of a table.
 
-You can control the table personalization options that end users see.
+You can control the table personalization options that users see.
 
 
 
@@ -29,7 +29,7 @@ The default settings for filtering in the list report page table are as follows:
 
 ### Enabling Table Filters
 
-In harmonized variant management, by default, end users cannot set a filter in the table personalization settings. To enable filtering for end users, set the `enableTableFilterInPageVariant` property in the manifest. If `smartVariantManagement` is set to `false`, then table filter is enabled by default.
+In harmonized variant management, by default, users cannot set a filter in the table personalization settings. To enable filtering for users, set the `enableTableFilterInPageVariant` property in the manifest. If `smartVariantManagement` is set to `false`, then table filter is enabled by default.
 
 > ### Sample Code:  
 > `manifest.json`
@@ -64,18 +64,18 @@ In harmonized variant management, by default, end users cannot set a filter in t
 
 ### Enabling and Disabling Table Personalization
 
-The table personalization is provided by default for all tables. Options for adding or removing columns, filtering, sorting, and grouping are available.
+Table personalization is provided by default for all tables. Options for adding or removing columns, filtering, sorting, and grouping are available.
 
 -   -   Filtering
 
-    End users can filter table data by choosing one or multiple property values \(unless filtering is disabled\). You can use the `@com.sap.vocabularies.UI.v1.HiddenFilter` annotation to exclude those columns you don't want to be filterable.
+    Users can filter table data by choosing one or multiple property values \(unless filtering is disabled\). You can use the `@com.sap.vocabularies.UI.v1.HiddenFilter` annotation to exclude those columns you don't want to be filterable.
 
     ![](images/Excluding_Columns_from_Filtering_3ee5c40.png)
 
     > ### Note:  
     > Filtering of navigation properties is only available for properties used in the `LineItem`.
     > 
-    > Filtering for list report page tables is not available by default when using the variant management on page level. However, it can be enabled by explicitly setting `"filter": true` in a personalization object in the `manifest.json` file. For more information, see the Choosing Personalization Settings subsection below.
+    > Filtering in tables on list report pages is not available by default when using variant management on a page level. However, it can be enabled by setting `"filter": true` in a personalization object in the `manifest.json` file. For more information, see the subsection [Choosing Personalization Settings](enabling-table-personalization-3e2b4d2.md#loio3e2b4d212b66481a829ccef1dc0ca16b__choosingPersSettings) in this topic.
 
 -   Sorting
 
@@ -86,7 +86,7 @@ The table personalization is provided by default for all tables. Options for add
     > ### Note:  
     > Defining sort restrictions is only possible for first-level navigation entities.
 
-    End users can sort table data by choosing one or multiple sort properties \(unless sorting is disabled\). You can use `SortRestrictions` to define your desired `RestrictedProperty` in the `NavigationRestrictions`. Use `SortRestrictions` to either restrict all properties of an entity by setting `Sortable` to `false`, or to disable sorting of individual properties using `NonSortableProperties`. To add sort restrictions for navigation properties, the list of `NonSortableProperties` must be prefixed with the `NavigationPropertyPath`.
+    Users can sort table data by choosing at least one sort property \(unless sorting is disabled\). You can use `SortRestrictions` to define your desired `RestrictedProperty` in the `NavigationRestrictions`. Use `SortRestrictions` to either restrict all properties of an entity by setting `Sortable` to `false`, or to disable sorting of individual properties using `NonSortableProperties`. To add sort restrictions for navigation properties, the list of `NonSortableProperties` must be prefixed with the `NavigationPropertyPath`.
 
     > ### Sample Code:  
     > XML Annotation for `SortRestrictions` in `NavigationRestrictions`
@@ -150,16 +150,16 @@ The table personalization is provided by default for all tables. Options for add
     > ```
 
     > ### Note:  
-    > When sorting a column that contains an amount with a currency or a unit of measure, an ascending sort is applied on the currency or the unit of measure first, and then the defined sort is applied to the amount field. This sorting mechanism ensures a consistent display of the amount when different currencies or units of measure are used.
+    > When sorting a column that contains an amount with a currency or a unit of measure, the currency or the unit of measure are sorted in ascending order first, and then the defined sort is applied to the measure field. This sorting mechanism ensures a consistent display of the amount when different currencies or units of measure are used.
 
     > ### Caution:  
     > Sorting on navigation properties can lead to issues in CAP NodeJS when using an SQLite DB.
 
 -   Adding or removing columns
 
-    End users can add, remove, or reorder all properties of the entity shown for a given table.
+    Users can add, remove, or reorder all properties of the entity shown for a given table.
 
-    End users can also use the filter icon buttons to do the following:
+    Users can also use the filter icon buttons to do the following:
 
     -   To show or hide the properties which are used as text description of other properties \(properties with text arrangement\)
 
@@ -181,7 +181,7 @@ The table personalization is provided by default for all tables. Options for add
 
 ### Choosing Personalization Settings
 
-By default, the table personalization provides options for adding or removing columns, filtering, sorting, and grouping. Use the `"personalization"` setting in the`manifest.json` file to change the default behavior.
+By default, table personalization provides options for adding or removing columns, filtering, sorting, and grouping. Use the `personalization` setting in the`manifest.json` file to change the default behavior.
 
 > ### Sample Code:  
 > `manifest.json`
@@ -237,4 +237,9 @@ Note the following when enabling personalization for properties that have a text
 
 -   If a column contains a property with a `TextArrangement` annotation and the target property of the `TextArrangement` is a navigation property, this target property is not available in the personalization dialog under the *Columns* tab. The target property of the `TextArrangement` is displayed under the *Columns* tab if it is explicitly defined in the `LineItem` annotation or in a custom column.
 
+
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Enabling Table Personalization](enabling-table-personalization-6769ec3.md).
 

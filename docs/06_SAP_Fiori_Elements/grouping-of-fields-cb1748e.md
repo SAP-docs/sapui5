@@ -826,28 +826,32 @@ You can align the boxes horizontally by adding the horizontal layout setting to 
 > 
 > "options": {
 >     "settings": {
->          "entitySet": "Products",
->          "content": {
->              "body": {
+>         "entitySet": "Products",
+>         "content": {
+>             "body": {
 >                 "sections": {
->                      "@com.sap.vocabularies.UI.v1.FieldGroup#CheckBoxGroups": {
->                          "subSections": {
+>                     "@com.sap.vocabularies.UI.v1.FieldGroup#CheckBoxGroups": {
+>                         "subSections": {
 >                             "@com.sap.vocabularies.UI.v1.FieldGroup#CheckBoxGroupH1": {
 >                                 "horizontalLayout": true
->                  }
->                }
->              }
->            }
->          }
->       }
+>                             }
+>                         }
+>                     }
+>                 }
+>             }
+>         }
 >     }
->   }
 > }
 > 
 > ```
 
 > ### Note:  
 > Configuring a mandatory checkbox group that requires users to select at least one checkbox is not supported. Use the `MultiComboBox` property instead. For more information, see [Value Help as a Dropdown List](https://sapui5untested.int.sap.eu2.hana.ondemand.com/#/topic/2a0a630e50c7472b803fb94dab922d18).
+
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Grouping of Fields](grouping-of-fields-2f84455.md).
 
 
 

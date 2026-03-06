@@ -146,7 +146,7 @@ Defining `tableTypes` under the settings is supported for backward compatibility
 
 ## Additional Features in SAP Fiori Elements for OData V4
 
-The following logic is used to determine the table type in the analytical list page \(ALP\) and the list report page:
+The following logic is used to determine the table type on the list report page, and the object page:
 
 -   If the table type is specified in the `manifest.json` file and set to `analytical`, but the `entitySet` doesn't have analytical capabilities, an empty table is displayed. Otherwise, the table is created with the specified table type.
 
@@ -206,7 +206,7 @@ The following logic is used to determine the table type in the analytical list p
     <tr>
     <td valign="top">
     
-    All other
+    All other services
     
     </td>
     <td valign="top">
@@ -416,7 +416,7 @@ The analytical table renders data that can be grouped and aggregated.
     > ABAP CDS Annotation
     > 
     > ```
-    > No ABAP CDS annotation is required. When a property lacks the @Aggregation.default annotation (meaning it cannot be aggregated), it automatically becomes a groupable property within an analytical service that has the @OData.applySupportedForAggregation: #FULL annotation.
+    > No ABAP CDS annotation is required. When a property lacks the @Aggregation.default annotation (meaning it can't be aggregated), it automatically becomes a groupable property within an analytical service that has the @OData.applySupportedForAggregation: #FULL annotation.
     > ```
 
     > ### Sample Code:  
@@ -434,7 +434,7 @@ The analytical table renders data that can be grouped and aggregated.
 
 -   Defining Aggregatable Properties
 
-    Aggregatable properties \(measures\) are defined in the metadata using the `@Aggregation.CustomAggregate` annotation, which has the property name as the qualifier.
+    Aggregatable properties are defined in the metadata using the `@Aggregation.CustomAggregate` annotation, which has the property name as the qualifier.
 
     > ### Sample Code:  
     > XML Annotation
@@ -674,6 +674,11 @@ When a grid table is not the sole control within a section of an object page or 
 
 > ### Note:  
 > If the `sectionLayout` is set to `Tabs` and the table is the sole control within the section, the `rowCountMode` is set to `Auto`.
+
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Setting the Table Type](setting-the-table-type-5d27054.md).
 
 
 

@@ -34,7 +34,7 @@ Depending on the state of the user interaction, `fnFunction` may or may not be e
 
 -   If the user has triggered an action that is implemented through `securedExecution`
 
--   If the user has clicked *Cancel* in the dataloss conformation dialog
+-   If the user has clicked *Cancel* in the data loss confirmation dialog
 
 
 Note that the `securedExecution` method also returns a `Promise`. This `Promise` is rejected if `fnFunction` is not executed for any reason. If `fnFunction` is executed, the `Promise` returned by `securedExecution` behaves like the `Promise` returned by `fnFunction`.
@@ -42,4 +42,9 @@ Note that the `securedExecution` method also returns a `Promise`. This `Promise`
 For more information for SAP Fiori elements for OData V2, see the *API Reference* for [`securedExecution`](https://ui5.sap.com/#/api/sap.suite.ui.generic.template.ListReport.extensionAPI.ExtensionAPI/methods/securedExecution).
 
 For more information for SAP Fiori elements for OData V4, see the [API Reference](https://ui5.sap.com/#/api/sap.fe.core.controllerextensions.EditFlow/methods/securedExecution) in the Demo Kit. 
+
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Using the SecuredExecution Method](using-the-securedexecution-method-5239ecd.md).
 

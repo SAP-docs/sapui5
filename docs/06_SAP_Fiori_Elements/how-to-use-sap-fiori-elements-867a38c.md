@@ -1,0 +1,29 @@
+<!-- loio867a38c295994142b72e088acf11d1e5 -->
+
+# How To Use SAP Fiori Elements
+
+Creating an app with SAP Fiori elements generally consists of the following steps:
+
+-   Prerequisites for using SAP Fiori elements
+
+    You access the required back-end system information in your app using OData services.
+
+    For more information, see [Prerequisites for Using SAP Fiori Elements](prerequisites-for-using-sap-fiori-elements-a84c137.md).
+
+-   Prepare UI annotations
+
+    You use annotations to enable or modify certain default features and functionality.
+
+    For more information, see [Working With OData Annotations](working-with-odata-annotations-8b55ead.md).
+
+-   Build UI applications
+
+    You can build your apps using [SAP Fiori tools](https://help.sap.com/viewer/product/SAP_FIORI_tools/Latest/en-US), which is a set of extensions for SAP Business Application Studio and Visual Studio Code. For more information about SAP Business Application Studio, see the documentation on the SAP Help Portal at [SAP Business Application Studio](https://help.sap.com/viewer/product/SAP%20Business%20Application%20Studio/Cloud/en-US).
+
+-   Extend SAP Fiori elements-based apps
+
+    As an optional step, you can extend your app if needed, that is, in cases in which the manifest settings or annotations do not allow you to achieve the desired app behavior.
+
+    For more information, see [Extending SAP Fiori Elements-Based Apps](extending-sap-fiori-elements-based-apps-03b3b87.md).
+
+

@@ -127,6 +127,11 @@ Displays all entities that have no draft
 
 If desired, the editing status filter can be disabled after you generate your app. For more information, see [Disabling the Editing Status Filter](disabling-the-editing-status-filter-8eb695a.md).
 
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Editing Status](editing-status-66050ea.md).
+
 **Related Information**  
 
 

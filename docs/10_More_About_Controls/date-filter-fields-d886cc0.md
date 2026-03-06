@@ -134,7 +134,7 @@ A property can be annotated with the [`sap:filter-restriction`](https://sap.gith
 
 ## Semantic Dates as Filters
 
-If you need to use semantic dates such as today, yesterday and others, you need to enable the semantic operators in the `SmartFilterBar`. For more information on how to do it for SAP Fiori elements applications, see [Enabling Semantic Operators in the Filter Bar](../06_SAP_Fiori_Elements/enabling-semantic-operators-in-the-filter-bar-fef65d0.md).
+If you need to use semantic dates such as today, yesterday and others, you need to enable the semantic operators in the `SmartFilterBar`. For more information on how to do it for SAP Fiori elements applications, see [Enabling Semantic Operators in the Filter Bar](../06_SAP_Fiori_Elements/enabling-semantic-operators-in-the-filter-bar-c2b916c.md).
 
 
 

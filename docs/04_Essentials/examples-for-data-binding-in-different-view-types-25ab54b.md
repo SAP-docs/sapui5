@@ -2,7 +2,7 @@
 
 # Examples for Data Binding in Different View Types
 
-Examples how complex syntax can be used for calculated fields in XML, HTML, and JS views.
+Examples how complex syntax can be used for data binding in XML and Typed views.
 
 
 

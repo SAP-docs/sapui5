@@ -5,14 +5,10 @@
 When creating a new entity or when prefilling action parameters, you can provide default values using a `DefaultValuesFunction`.
 
 > ### Note:  
-> This topic is only applicable to the following cases:
-> 
-> -   SAP Fiori elements for OData V2 non-draft applications.
-> 
-> -   SAP Fiori elements for OData V2 and SAP Fiori elements for OData V4 draft applications in the empty row mode. For more information, see [Enabling Inline Creation Mode or Empty Row Mode for Table Entries](enabling-inline-creation-mode-or-empty-row-mode-for-table-entries-cfb04f0.md).
+> This topic is only applicable to draft applications in the empty row mode. For more information, see [Enabling Inline Creation Mode or Empty Row Mode for Table Entries](enabling-inline-creation-mode-or-empty-row-mode-for-table-entries-cfb04f0.md).
 
 > ### Note:  
-> In case of multiselect only the `DefaultValuesFunction` without any input parameters is called.
+> In case of multiselect, only the `DefaultValuesFunction` without any input parameters is called.
 
 If you want to set default values for the newly created entity, use a `DefaultValuesFunction`.
 
@@ -43,6 +39,11 @@ For more information, see [Prefilling Fields When Creating a New Entity](prefill
 > </Annotations>
 > 
 > ```
+
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Prefilling Fields Using the DefaultValuesFunction](prefilling-fields-using-the-defaultvaluesfunction-6613e42.md).
 
 **Related Information**  
 

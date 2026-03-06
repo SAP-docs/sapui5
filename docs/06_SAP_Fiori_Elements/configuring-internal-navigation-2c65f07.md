@@ -6,14 +6,6 @@ SAP Fiori elements control the navigation within an app \(internal navigation\).
 
 
 
-<a name="loio2c65f07f44094012a511d6bd83f50f2d__section_x13_lz5_pnb"/>
-
-## Navigation After Executing an Action
-
-By default, when executing an action defined using the `UI.DataFieldForAction` annotation, navigation is automatically triggered after the action is executed. This happens if a single instance is returned by the action and if the returned instance is not the same as the instance used when the action was triggered. The navigation is only triggered if the action was executed successfully and if the manifest has navigation defined for the context that is returned. In addition, when a user selects multiple contexts for a table or chart toolbar action, the navigation is **not** triggered, even if the action returns the context.
-
-
-
 <a name="loio2c65f07f44094012a511d6bd83f50f2d__section_lzb_ncj_vlb"/>
 
 ## Standard Navigation Within an App
@@ -72,7 +64,6 @@ You can control whether it is possible to navigate to a detail page. It simply d
 >   }
 > }
 > 
-> 
 > ```
 
 The same holds true for the navigation to a second object page. This is possible only when the definition is kept in the manifest. If you want to have multiple subpages on the same level, you need to have multiple definitions.
@@ -100,8 +91,7 @@ You can disable the navigation to a subobject page using the setting `navigateTo
 > 
 > "to_Item::com.sap.vocabularies.UI.v1.LineItem": {
 >     "tableSettings": {
->         ...,
->         ...
+>     ...
 >     },
 >     "annotatedActions": {
 >         "C_STTA_SalesOrderItem_WD_20Setopportunityid": {
@@ -138,6 +128,17 @@ Add the following configuration in the manifest to direct the *Create* action in
 
 For more information, see [List Report Elements](list-report-elements-1cf5c7f.md).
 
+**Navigation After Executing an Action** 
+
+When executing an action defined using the `UI.DataFieldForAction` annotation, the navigation is automatically triggered in the following cases:
+
+-   If a single instance is returned by the action and the returned instance is not the same as the instance used when the action was triggered.
+
+-   If the action was executed successfully and the manifest has navigation defined for the context that is returned.
+
+
+When the user selects multiple contexts for a table or a chart-toolbar action, the navigation is **not** triggered, even if the action returns the context.
+
 
 
 ### SAP Fiori Elements for OData V4
@@ -148,16 +149,12 @@ In the `manifest.json` file, you define the "navigation" section for each "targe
 > `manifest.json`
 > 
 > ```json
-> The pages structure of the app should always be a tree, with the root as either a list report or an analytical list page. All the{
-> …
-> …
+> 
+> ...
 > "sap.ui5": {
->     ....
->     ....
->     ....
+>     ...
 >     "routing": {
-> …
-> …
+>     ...
 >         "routes": [{
 >             "pattern": ":?query:",
 >             "name": "ArtistList",
@@ -189,11 +186,10 @@ In the `manifest.json` file, you define the "navigation" section for each "targe
 >                 "type": "Component",
 >                 "id":  "ArtistDetail",                 
 >                 "name": "sap.fe.templates.ObjectPage",
->                "options": {
->                  "setting": {
->                   …..
->                   …..
->                   "navigation": {               // Navigation Section to SubOP detail page: Eliminate if no navigation is required.
+>                 "options": {
+>                     "setting": {
+>                         ...
+>                         "navigation": {               // Navigation Section to SubOP detail page: Eliminate if no navigation is required.
 >                             "_Records": {       // NOTE: This should refer to navigation path and NOT navigation entity name                         
 >                                 "detail": {                                     
 >                                     "route": "RecordSubObjectPage" // This triggers the regular internal navigation from OP "Records" table record to SubOP
@@ -206,19 +202,14 @@ In the `manifest.json` file, you define the "navigation" section for each "targe
 >                             }                         
 >                         }
 >                     }
->                   }
->                  ...
->                  ...
+>                 }
+>                 ...
 >             } // End of ArtistObjectPage
 >         } // End of Targets
->      }, // End of routing
->     .....
->     .....
->     .....
->   } // End of sap.ui
-> …
-> …
+>     }, // End of routing
+>     ...
 > }
+> 
 > ```
 
 The same holds true for the navigation to any level of subobject pages.
@@ -268,7 +259,7 @@ You can disable the navigation from a table with the `availability` property. Yo
 
 ## Navigation Between Entities of an App
 
-You can link entities within an app. This allows users to navigate between the entities within the application. You can use this app-internal linking in the object header, in sections, and in tables. For example, within a sales order app, you can link from a sales order to another sales order, from a sales order item to the sales order header, or from a sales order schedule line to a schedule line of another sales order.
+You can link entities within an app by defining an appropriate `UI.DataFieldWithNavigationPath` annotation . Linking entities within an app allows users to navigate between the entities within the application. You can use this app-internal linking in the object header, in sections, and in tables. For example, within a sales order app, you can link from a sales order to another sales order, from a sales order item to the sales order header, or from a sales order schedule line to a schedule line of another sales order.
 
 > ### Note:  
 > This feature is available only on the object page.
@@ -277,11 +268,13 @@ You can link entities within an app. This allows users to navigate between the e
 
 ### Determining the Navigation Target
 
-As shown in the manifest example, the `"navigation"` section of the routing target points to the UI5 route you want to navigate to.
+The following code samples show a possible use case of the `UI.DataFieldWithNavigationPath` annotation. In this use case, an object page displays the details of a sales order. One of the fields in a form facet is the reference sales order. The requirement is to display the reference sales order as a link. Clicking the link would then navigate to the object page, where the reference sales order is displayed as a sales order.
 
-The appropriate navigation target is identified by the `'Target'` property of the `UI.DataFieldWithNavigationPath` annotation.
+As shown in the manifest example below, the `"navigation"` section of the routing target points to the UI5 route you want to navigate to.
 
-The parameters in the routing pattern are resolved using the relative binding paths defined in the navigation target.
+The appropriate ID in the navigation section of the `manifest.json` file must be identical to the `'Target'` property of the `UI.DataFieldWithNavigationPath` annotation.
+
+The parameters in the routing pattern of the manifest must be provided as well and are resolved using the relative binding paths defined in the navigation target.
 
 > ### Sample Code:  
 > `manifest.json`
@@ -466,4 +459,9 @@ For inline actions, you must make the following configuration at columns level:
 ### In-Page Navigation
 
 Header facets supports in-page navigation. For more information, see [Navigation from Header Facet Title](navigation-from-header-facet-title-fa0ca22.md)
+
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Configuring Internal Navigation](configuring-internal-navigation-666b503.md).
 

@@ -24,3 +24,8 @@ Overview page application instances are dependent on the `sap.ovp` SAPUI5 librar
 > }
 > ```
 
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Configuring Dependencies to SAPUI5 Libraries](configuring-dependencies-to-sapui5-libraries-8e9edbd.md).
+

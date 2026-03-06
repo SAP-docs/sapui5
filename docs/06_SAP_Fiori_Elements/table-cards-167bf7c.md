@@ -31,7 +31,7 @@ Description: Configuring this property displays the card title at the top of the
 >     "cards": {
 >         "card014": {
 >             "model": "salesOrder",
->             "template": "sap.ovp.cards.table",
+>             "template": "sap.ovp.cards.v4.table",
 >             "settings": {
 >                 "title": "Purchase Forecast",
 >                 "entitySet": "SalesShare",
@@ -60,7 +60,7 @@ Description: Configuring this property displays the card subtitle below the titl
 >     "cards": {
 >         "card014": {
 >             "model": "salesOrder",
->             "template": "sap.ovp.cards.table",
+>             "template": "sap.ovp.cards.v4.table",
 >             "settings": {
 >                 "title": "Sales Forecast",
 >                 "subTitle": "per Supplier",
@@ -469,7 +469,7 @@ Description: Configuring this property allows you to define a dropdown list to f
 >     "cards": {
 >         "card014": {
 >             "model": "salesOrder",
->             "template": "sap.ovp.cards.table",
+>             "template": "sap.ovp.cards.v4.table",
 >             "settings": {
 >                 "title": "Sales Forecast",
 >                 "subTitle": "per Supplier",
@@ -522,7 +522,7 @@ Description: Configuring this annotation displays the table header title \(`Labe
 >     "cards": {
 >         "card014": {
 >             "model": "salesOrder",
->             "template": "sap.ovp.cards.table",
+>             "template": "sap.ovp.cards.v4.table",
 >             "settings": {
 >                 "title": "Sales Forecast",
 >                 "subTitle": "per Supplier",
@@ -694,7 +694,7 @@ The `com.sap.vocabularies.UI.v1.LineItem` term can be configured in the applicat
 >     ...
 >     "card02": {
 >         "model": "salesOrder",
->         "template": "sap.ovp.cards.table",
+>         "template": "sap.ovp.cards.v4.table",
 >         "settings": {
 >             "title": "Sales Orders With Analytical Header",
 >             "subTitle": "Sales Orders With Analytical Header",
@@ -710,9 +710,6 @@ The `com.sap.vocabularies.UI.v1.LineItem` term can be configured in the applicat
 >     ...
 > }
 > ```
-
-> ### Note:  
-> In SAP Fiori elements for OData V4, add `sap.ovp.cards.v4.table` as the `template`. All other manifest settings are the same as in SAP Fiori elements for OData V2.
 
 You can use different `com.sap.vocabularies.UI.v1.LineItem` annotations for different card instances of the same entity type by using different qualifiers and setting the `annotationPath` property with the qualifier in the card configuration. For example `com.sap.vocabularies.UI.v1.LineItem#Qualifier1`.
 
@@ -1226,4 +1223,9 @@ Center Aligned
 </td>
 </tr>
 </table>
+
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Table Cards](table-cards-4f36240.md).
 

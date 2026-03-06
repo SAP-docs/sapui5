@@ -635,3 +635,8 @@ For information about the initial loading of data, see [Loading Behavior of Data
 
 For more information about using extension APIs for custom filter fields, see [Adding Custom Fields to the Filter Bar](adding-custom-fields-to-the-filter-bar-5fb9f57.md).
 
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Configuring Filter Bars](configuring-filter-bars-76066e5.md).
+

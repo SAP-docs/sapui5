@@ -99,3 +99,8 @@ To display information in the link list card as either standard or carousal type
 
 
 
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Configuring the Static Link List Card](configuring-the-static-link-list-card-93b249a.md).
+

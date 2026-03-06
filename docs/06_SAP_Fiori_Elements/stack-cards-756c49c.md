@@ -140,3 +140,8 @@ Continuing the example above, the following metadata demonstrates the relationsh
 > 
 > ```
 
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Stack Cards](stack-cards-5922ffb.md).
+

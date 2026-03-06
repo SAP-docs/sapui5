@@ -34,3 +34,8 @@ In the following sample code, the entity set `self` is automatically refreshed w
 > }
 > ```
 
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Refresh Entity Sets in sap-keep-alive Mode in the Overview Pages](refresh-entity-sets-in-sap-keep-alive-mode-in-the-overview-pages-0617a77.md).
+

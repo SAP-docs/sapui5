@@ -151,3 +151,8 @@ The `UI.Chart Title` property is used to define the title, while the `UI.Chart D
 > 
 > -   `Value` property of the `DataPoint` annotation.
 
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Stacked Bar Micro Chart](stacked-bar-micro-chart-7328c4f.md).
+

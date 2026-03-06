@@ -756,7 +756,7 @@ The following changes and new features are available for SAP Fiori elements for 
 
 -   A new text is now provided in the variant management dialog for standard variants. For more information, see [List Report Elements](../06_SAP_Fiori_Elements/list-report-elements-1cf5c7f.md).
 
--   Application developers can now extend the delivered SAP Fiori elements applications to add new nodes \(entity sets\), perform create and update operations on the newly defined node, or change the existing manifest page configurations. For more information, see [Extending the Delivered Apps Manifest Using an Adaptation Project](../06_SAP_Fiori_Elements/extending-the-delivered-apps-manifest-using-an-adaptation-project-a2b24a6.md).
+-   Application developers can now extend the delivered SAP Fiori elements applications to add new nodes \(entity sets\), perform create and update operations on the newly defined node, or change the existing manifest page configurations. For more information, see [Extending Delivered Apps Using Adaptation Projects](../06_SAP_Fiori_Elements/extending-delivered-apps-using-adaptation-projects-a2b24a6.md).
 
 -   SAP Fiori elements has improved performance by reducing the transition time while navigating from a list report to an object page.
 
@@ -839,6 +839,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.142](what-s-new-in-sapui5-1-142-92ed100.md "With this release SAPUI5 is upgraded from version 1.141 to 1.142.")
 
 [What's New in SAPUI5 1.141](what-s-new-in-sapui5-1-141-a7ed66d.md "With this release SAPUI5 is upgraded from version 1.140 to 1.141.")
 

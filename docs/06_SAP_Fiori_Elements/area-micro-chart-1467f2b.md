@@ -205,3 +205,8 @@ The `UI.Chart Title` property is used for the title. The `UI.Chart Description` 
 > 
 >     -   `UI.DataPoint` → `CriticalityCalculation/ImprovementDirection`
 
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Area Micro Chart](area-micro-chart-92a40b6.md).
+

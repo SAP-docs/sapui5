@@ -173,6 +173,9 @@ The following properties are required from a ["com.sap.vocabularies.Hierarchy.v1
 -   `LimitedDescendantCount`
 -   `LimitedRank`
 
+> ### Note:  
+> These hierarchical properties are used internally by the list binding. They are not intended for use by applications for property bindings.
+
 Actions and functions can be invoked as usual. Side effects are supported both for single rows and the entire list \("side-effects refresh"; see [`v4.Context#requestSideEffects`](https://ui5.sap.com/#api/sap.ui.model.odata.v4.Context/methods/requestSideEffects) for details\), even if they affect the hierarchy \(node IDs, parent/child relations, or sibling order\) itself. The current tree state with respect to [`expanded`](https://ui5.sap.com/#api/sap.ui.model.odata.v4.Context/methods/expand) and [collapsed](https://ui5.sap.com/#api/sap.ui.model.odata.v4.Context/methods/collapse) nodes \(see [`v4.Context#isExpanded`](https://ui5.sap.com/#api/sap.ui.model.odata.v4.Context/methods/isExpanded)\) is kept even in case of such a side-effects refresh.
 
 The `@$ui5.node.level` and `@$ui5.node.isExpanded` client-side instance annotations can be used as described above to access a node level or expansion state. A context's index refers to its position in the list binding's "flat" collection. You can use [`v4.Context#getParent`](https://ui5.sap.com/#api/sap.ui.model.odata.v4.Context/methods/getParent) to access a node's parent. If the parent is not yet known, [`v4.Context#requestParent`](https://ui5.sap.com/#api/sap.ui.model.odata.v4.Context/methods/requestParent) can be used to request it from the server. The [`v4.Context#isAncestorOf`](https://ui5.sap.com/#api/sap.ui.model.odata.v4.Context/methods/isAncestorOf) API also helps to inspect the parent/child relationship \(note that [`v4.ODataListBinding#getRootBinding`](https://ui5.sap.com/#api/sap.ui.model.odata.v4.ODataListBinding/methods/getRootBinding) is unrelated\).

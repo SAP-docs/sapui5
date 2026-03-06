@@ -117,13 +117,7 @@ You can use `ValueListForValidation` annotations under property level annotation
 
 
 
-<a name="loio080886d8d4af4ac6a68a476beab17da3__section_dbd_xcp_fdc"/>
-
-## Additional Features in SAP Fiori Elements for OData V2
-
-
-
-### Edit Mode
+### 
 
 Entering a new value that is not defined in the value help is ensured with the `TextInEditModeSource = ValueListNoValidation` configuration by default.
 
@@ -145,7 +139,9 @@ If any of these conditions are not met, only the ID is displayed in the field.
 
 
 
-### Display Mode
+<a name="loio080886d8d4af4ac6a68a476beab17da3__section_dbd_xcp_fdc"/>
+
+## Display Mode
 
 You can display both the text and ID of a `SmartField` that has a value list. To do so, specify `sap:text` directed to the navigation property of the value help from which the application fetches the description.
 
@@ -205,20 +201,4 @@ The functionality is not supported for the following record types:
 
 
 If text arrangement is defined with `textSeparate`, only the ID is displayed.
-
-
-
-<a name="loio080886d8d4af4ac6a68a476beab17da3__section_gsy_rfp_fdc"/>
-
-## Additional Features in SAP Fiori Elements for OData V4
-
-
-
-### Display Mode
-
-For `DataField` record types that are bound to value help and rendered as a link using `SemanticObject` definition or the quick view, the value shows the descriptive text and the ID by default.
-
-For `DataFieldWithNavigationPath` record types, when the value is bound to the value help, the field shows the descriptive text and the ID by default.
-
-This behavior is applicable for tables, object page headers, and object page form sections. You can change it according to your requirements by using the `TextArrangement` configuration, such as `TextFirst`, `TextLast`, or `TextOnly`. For more information, see [Further Features of the Field](further-features-of-the-field-f49a0f7.md).
 

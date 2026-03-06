@@ -35,3 +35,6 @@ With SAP Fiori elements, the following navigation options are available and can 
 
 For information about navigation options for the overview page, see [Configuring Card Navigation](configuring-card-navigation-530f9e6.md).
 
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Configuring Navigation](configuring-navigation-1a6c395.md).
+

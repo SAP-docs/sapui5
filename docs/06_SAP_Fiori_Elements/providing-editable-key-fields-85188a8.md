@@ -5,9 +5,6 @@
 Users cannot edit key fields in draft applications. You can introduce an additional key field that is editable.
 
 > ### Note:  
-> This topic is only applicable to SAP Fiori elements for OData V2.
-
-> ### Note:  
 > This topic is relevant only for applications using existing databases. If you build on a new data model, you can always use an artificial key \(typically, a GUID\) and model the fields with a semantic meaning only as non-key fields.
 > 
 > However, for existing databases that already use semantically important fields in the key and you need to be able to change them \(maybe only provide them by the user upon creation\), changing the model in such a way would lead to a data conversion with potentially high impact for customers with huge amounts of data.

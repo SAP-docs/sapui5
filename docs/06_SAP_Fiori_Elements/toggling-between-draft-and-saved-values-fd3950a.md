@@ -4,7 +4,7 @@
 
 You can toggle between draft and saved values.
 
-In SAP Fiori elements for OData V2 and SAP Fiori elements for OData V4, the draft-enabled applications have an additional entry, *All \(Hiding Drafts\)*, in the *Editing Status* filter field in the list report.
+Draft-enabled applications have an additional entry, *All \(Hiding Drafts\)*, in the *Editing Status* filter field in the list report.
 
 The following table shows the system behavior for the list report and object page:
 
@@ -70,8 +70,10 @@ In the following screenshot, the object page displays the *Saved Version*:
 
 ![](images/Object_Page_Saved_Version_is_Shown_4d6823f.png)
 
+
+
 > ### Note:  
-> In SAP Fiori elements for OData V2 apps with the classic header, the header toolbar shows the *Display Saved Version*/*Return to Draft* button instead of the menu button next to the title.
+> For information about SAP Fiori elements for OData V2, see [Toggling Between Draft and Saved Values](toggling-between-draft-and-saved-values-11f948a.md).
 
 **Related Information**  
 

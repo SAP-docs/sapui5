@@ -12,9 +12,11 @@ Create mode is available as follows:
 
 -   Create dialog: a dialog opens where the user can enter values and trigger object creation. For more information, see [Enabling Object Creation Using the Dialog on the Object Page](enabling-object-creation-using-the-dialog-on-the-object-page-7fee938.md).
 
-    > ### Note:  
-    > On the object page, the create dialog is only supported by SAP Fiori elements for OData V4.
-
 -   `External`: clicking the *Create* button triggers navigation to an external SAP Fiori launchpad-based application which manages object creation. For more information, see [Create Mode as an External App](create-mode-as-an-external-app-5c2bc2e.md).
 
+
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Create Mode on the Object Page](create-mode-on-the-object-page-4794afa.md).
 

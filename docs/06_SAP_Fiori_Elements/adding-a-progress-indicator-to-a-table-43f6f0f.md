@@ -120,3 +120,8 @@ The path references the property \(in this case, `Path="StockAvailability`"\) th
 
 ```
 
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Adding a Progress Indicator to a Table](adding-a-progress-indicator-to-a-table-800e954.md).
+

@@ -93,49 +93,6 @@ You can set all cards to refresh automatically for a given interval. The minimum
 
 
 
-<a name="loio8ed3f76b5f62419eb0408c0dba4b2e47__section_a3r_xc3_z4b"/>
-
-## Additional Features in SAP Fiori Elements for OData V2
-
-The following additional card types are available:
-
-
-<table>
-<tr>
-<th valign="top">
-
-Card Type
-
-</th>
-<th valign="top">
-
-Description
-
-</th>
-</tr>
-<tr>
-<td valign="top">
-
-Stack
-
-</td>
-<td valign="top">
-
-Aggregates a set of cards of the same type, which are based on a common topic or action. When clicked, stack cards can display up to 20 cards in an object stream.
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Quick View
-
-</td>
-<td valign="top">
-
-Displays detailed information about a single record, in greater depth than would be displayed in a table or list.
-
-</td>
-</tr>
-</table>
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Types of Cards](types-of-cards-1ece53c.md).
 

@@ -6,15 +6,10 @@ Define custom actions by using the extensions in the `manifest.json` file. You c
 
 
 
-> ### Note:  
-> -   This topic is only applicable to SAP Fiori elements for OData V2.
-> 
-> -   You can also define custom actions in SAP Fiori elements for OData V4. For more information, see [Adding Custom Actions Using Extension Points](adding-custom-actions-using-extension-points-7619517.md).
-
 
 
 > ### Note:  
-> To correctly integrate your app extension coding with SAP Fiori elements, use only the `extensionAPI` of SAP Fiori elements. For more information, see [Using the extensionAPI](using-the-extensionapi-bd2994b.md).
+> To correctly integrate your app extension coding with SAP Fiori elements, use only the `extensionAPI` of SAP Fiori elements. For more information, see [Using the extensionAPI](using-the-extensionapi-a5a4ec6.md).
 
 Use the `getSelectedContexts()` API in the `extensionAPI` class to get the selection context. For buttons in the chart toolbar, pass the event ID as a parameter.
 

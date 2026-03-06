@@ -84,11 +84,12 @@ The `UI.Chart Title` property is used for the title. The `UI.Chart Description` 
 >     MeasureAttributes : [
 >         {
 >             $Type : 'UI.ChartMeasureAttributeType',
+>             Role : #Axis1,
+>             Measure: Sold,
 >             DataPoint : '@UI.DataPoint'
 >         }
 >     ]
 > }
-> 
 > ```
 
 
@@ -135,9 +136,9 @@ The `UI.Chart Title` property is used for the title. The `UI.Chart Description` 
 > }
 > ```
 
-For semanting coloring, only the `Criticality` annotation is supported.
+For semantic coloring, only the `Criticality` annotation is supported.
 
-The following annotations are mandatory and must be used in the harvey micro chart:
+The following annotations are mandatory and must be used in the Harvey micro chart:
 
 -   `UI.Chart` → `ChartType`: `"Pie"`
 
@@ -149,4 +150,9 @@ The following annotations are mandatory and must be used in the harvey micro cha
 
 -   In case semantic coloring is required, use `UI.DataPoint` → `Criticality`
 
+
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Harvey Micro Chart](harvey-micro-chart-6c4835d.md).
 

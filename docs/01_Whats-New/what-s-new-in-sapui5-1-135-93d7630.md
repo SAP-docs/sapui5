@@ -162,7 +162,7 @@ SAP Fiori Elements
 
 The following changes and new features are available for SAP Fiori elements for OData V4:
 
--   You can now use an extension point to add custom content to the header of the list report. For more information, see [Extension Point for List Report Header](../06_SAP_Fiori_Elements/extension-point-for-list-report-header-1ab83e6.md).
+-   You can now use an extension point to add custom content to the header of the list report. For more information, see [Extension Point for List Report Page Header](../06_SAP_Fiori_Elements/extension-point-for-list-report-page-header-1ab83e6.md).
 
 -   We've enhanced the performance of the mass edit dialog, reducing the opening time for large selections. For more information, see [Enabling Editing Using a Dialog \(Mass Edit\)](../06_SAP_Fiori_Elements/enabling-editing-using-a-dialog-mass-edit-965ef5b.md).
 
@@ -509,6 +509,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.142](what-s-new-in-sapui5-1-142-92ed100.md "With this release SAPUI5 is upgraded from version 1.141 to 1.142.")
 
 [What's New in SAPUI5 1.141](what-s-new-in-sapui5-1-141-a7ed66d.md "With this release SAPUI5 is upgraded from version 1.140 to 1.141.")
 

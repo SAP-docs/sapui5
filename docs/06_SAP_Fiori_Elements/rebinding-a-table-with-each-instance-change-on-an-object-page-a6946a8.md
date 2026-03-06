@@ -8,9 +8,6 @@ You can rebind a table on each instance change in an object page.
 
 ## Context
 
-> ### Note:  
-> This topic is only applicable to SAP Fiori elements for OData V2.
-
 A table in an object page rebinds itself only the first time when the table initializes. When you switch your object page instances, the table only refreshes but does not rebind.
 
 Follow the below steps to rebind a table on each instance change in an object page:

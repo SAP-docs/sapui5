@@ -590,7 +590,7 @@ The following changes and new features are available for SAP Fiori elements for 
 
 -   You can now enable scrollable containers in the object page header, with improved facet order in the desktop screens. For more information, see [Header Facets](../06_SAP_Fiori_Elements/header-facets-17dbd5b.md).
 
--   We now support custom message strips in the list report and the analytical list page tables. For more information, see [Adding a Custom Message Strip to List Report, Analytical List Page and Object Page Tables](../06_SAP_Fiori_Elements/adding-a-custom-message-strip-to-list-report-analytical-list-page-and-object-page-tables-0fdbefb.md).
+-   We now support custom message strips in the list report and the analytical list page tables. For more information, see [Adding a Custom Message Strip to List Report Page, Analytical List Page and Object Page](../06_SAP_Fiori_Elements/adding-a-custom-message-strip-to-list-report-page-analytical-list-page-and-object-page-0fdbefb.md).
 
 -   The variant name now gets stored and restored from the `iAppState` when it is in a clean state. For more information, see [Store/Restore the Application State](../06_SAP_Fiori_Elements/store-restore-the-application-state-46bf248.md).
 
@@ -772,6 +772,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.142](what-s-new-in-sapui5-1-142-92ed100.md "With this release SAPUI5 is upgraded from version 1.141 to 1.142.")
 
 [What's New in SAPUI5 1.141](what-s-new-in-sapui5-1-141-a7ed66d.md "With this release SAPUI5 is upgraded from version 1.140 to 1.141.")
 

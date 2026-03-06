@@ -226,8 +226,13 @@ Create mode is available as follows:
 
 -   **Create page** \(default\): The application navigates to an object page where the user can enter values and create a new object. When using **Create page**, the application navigates to an object page and displays a dialog containing the immutable properties of the new object \(if applicable\). For more information about overriding the title of the dialog, see [Localization of UI Texts](localization-of-ui-texts-b8cb649.md).
 
--   **Create dialog**: A dialog opens where the user can enter values and trigger object creation. For more information, see [Enabling Object Creation Using the Dialog in the List Report](enabling-object-creation-using-the-dialog-in-the-list-report-ceb9284.md).
+-   **Create dialog**: A dialog opens where the user can enter values and trigger object creation. For more information, see [Enabling Object Creation Using the Dialog on the List Report](enabling-object-creation-using-the-dialog-on-the-list-report-ceb9284.md).
 
 -   **`External`**: Clicking the *Create* button triggers navigation to an external SAP Fiori launchpad-based application which manages object creation. For more information, see [Create Mode as an External App](create-mode-as-an-external-app-5c2bc2e.md).
 
+
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Actions in the List Report Page](actions-in-the-list-report-page-43ff607.md).
 

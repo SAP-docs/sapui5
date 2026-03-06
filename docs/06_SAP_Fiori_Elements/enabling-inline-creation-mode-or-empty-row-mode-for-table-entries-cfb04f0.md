@@ -123,7 +123,7 @@ The behavior of the available modes is as follows:
 > ### Note:  
 > -   You can make the object page tables insertable or not insertable using the `InsertRestrictions` annotation. For more information, see [Adding Actions to Tables](adding-actions-to-tables-b623e0b.md).
 > 
-> -   If you've defined an ID for the reference facet of your table, use this ID instead of the generated one, for example, to\_ProductText::com.sap.vocabularies.UI.v1.LineItem. For more information, see [Defining and Adapting Sections](defining-and-adapting-sections-facfea0.md).
+> -   If you've defined an ID for the reference facet of your table, use this ID instead of the generated one, for example, to\_ProductText::com.sap.vocabularies.UI.v1.LineItem. For more information, see [Defining and Configuring Sections](defining-and-configuring-sections-facfea0.md).
 > 
 > -   For apps based on SAP NetWeaver 7.51 SP00 or lower, the following restriction applies: table filters in inline creation mode may not work properly, and the filtered data may not match the filter parameters. This only applies to apps that use draft handling.
 > 
@@ -412,4 +412,9 @@ When using the grid table, you can display newly created objects at the bottom o
 >     }
 > }
 > ```
+
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Enabling Inline Creation Mode or Empty Row Mode for Table Entries](enabling-inline-creation-mode-or-empty-row-mode-for-table-entries-276cbe5.md).
 

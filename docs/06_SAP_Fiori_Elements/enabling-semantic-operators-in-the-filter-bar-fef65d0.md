@@ -133,11 +133,11 @@ The following types of settings exist, either at the property level or at the de
 
     In the code sample above, the date ranges mentioned in `selectedValues`\(`DAYS,WEEK,MONTH,DATERANGE`\) are applicable for all of the date fields, and the date ranges control is rendered.
 
-    Settings that are maintained under the `fields` level take precendence over the setting maintained at the `dateSettings` level. For example, setting maintained at `DateProperty1` takes precendence over `selectedValues` defined a level above.
+    Settings that are maintained under the `fields` level take precedence over the setting maintained at the `dateSettings` level. For example, setting maintained at `DateProperty1` takes precedence over `selectedValues` defined a level above.
 
 -   The date picker control is rendered for a date field if `selectedValues` does not exist under `dateSettings`, the property-specific setting is not maintained under `fields`, and the `useDateRange` property is not set at the filter bar level.
 
--   The `customDateRangeImplementation` property references a JavaScript class that you use to modify the value list of the date range. You can either remove standard data range values or add custom values.
+-   The `customDateRangeImplementation` property references a JavaScript class that you use to modify the value list of the date range. You can either remove standard date range values or add custom values.
 
 -   The `SelectedValues` property is a set of standard date range values that you want to include or exclude. The `exclude` property is set to `true` by default. This means that all values given as `selectedValues` from the list of date range filters are excluded. If the `exclude` property is set to `false`, the application shows only selected values in the list of date range filters.
 
@@ -156,7 +156,9 @@ The following types of settings exist, either at the property level or at the de
     > 
     > -   If you define the semantic date range feature by providing specific fields, you cannot render the fields from the navigation property of the leading entity set as a semantic date range in the filter bar.
     > 
-    > -   Filter fields with `sap:filter-restriction= "single-value"` or `"multi-value"` are rendered as date pickers in both the list report and the analytical list page.
+    > -   `sap:filter-restriction="single-value"` renders the dynamic date range field on the list report page and analytical list page.
+    > 
+    > -   `sap:filter-restriction="multi-value"` renders the date picker with multi-selection on the list report page and analytical list page.
 
 -   You can also set a default value for a semantic date range. The default value can be used together with `customdateRangeImplementation`, `filter`, or `selectedValues`. It can also be added without any filters. The default value should be part of the list of values for the field. For example, if you exclude `TOMORROW` as a value for the field `CreatedDate`, do not add `TOMORROW` as a `defaultValue`.
 
@@ -272,6 +274,8 @@ If the category `FIXED` is excluded, then keys such as `TODAY,THISWEEK,THISYEAR,
 > }]
 > // this will remove all the keys under the category that "contains" FIXED
 > ```
+
+Depending on the use of the date range filter, the default tile type also varies. For more information about creating tiles for the semantic date range configuration, see [Extending the Bookmark Function to Save Static Tiles to the SAP Fiori Launchpad](extending-the-bookmark-function-to-save-static-tiles-to-the-sap-fiori-launchpad-7e34ea9.md).
 
 
 
@@ -440,6 +444,26 @@ Here's a list of fully supported operators:
 
     -   `"DATETOYEAR"`
 
+    -   `"NEXTXDAYSINCLUDED"`
+
+    -   `"LASTXDAYSINCLUDED"`
+
+    -   `"LASTXWEEKSINCLUDED"`
+
+    -   `"NEXTXWEEKSINCLUDED"`
+
+    -   `"LASTXMONTHSINCLUDED"`
+
+    -   `"NEXTXMONTHSINCLUDED"`
+
+    -   `"LASTXQUARTERSINCLUDED"`
+
+    -   `"NEXTXQUARTERSINCLUDED"`
+
+    -   `"LASTXYEARSINCLUDED"`
+
+    -   `"NEXTXYEARSINCLUDED"`
+
     -   `"Empty"`
 
 
@@ -488,14 +512,17 @@ DATE
 <td valign="top">
 
 ```
+
 "@com.sap.vocabularies.UI.v1.SelectionFields": {
-   "filterFields": {
-      "SalesOrderDate": {
-         "settings": {
-            "defaultValues" : [ {"operator": "DATE",   "values": ["2018-12-28"]}]             }
-      }
-   }
+    "filterFields": {
+        "SalesOrderDate": {
+            "settings": {
+                "defaultValues": [{"operator": "DATE", "values": ["2018-12-28"]}]
+            }
+        }
+    }
 }
+
 ```
 
 
@@ -516,16 +543,17 @@ FROM
 <td valign="top">
 
 ```
-"@com.sap.vocabularies.UI.v1.SelectionFields": {
-   "filterFields": {
-      "SalesOrderDate": {
-         "settings": {
-            "defaultValues" : [ {"operator": "FROM",   "values": ["2018-11-28"]}]
 
-         }
-      }
-   }
+"@com.sap.vocabularies.UI.v1.SelectionFields": {
+    "filterFields": {
+        "SalesOrderDate": {
+            "settings": {
+                "defaultValues": [{"operator": "FROM", "values": ["2018-12-28"]}]
+            }
+        }
+    }
 }
+
 ```
 
 
@@ -547,14 +575,13 @@ TO
 
 ```
 "@com.sap.vocabularies.UI.v1.SelectionFields": {
-   "filterFields": {
-      "SalesOrderDate": {
-         "settings": {
-            "defaultValues" : [ {"operator": "TO",   "values": ["2019-11-02"]}]
-
-         }
-      }
-   }
+    "filterFields": {
+        "SalesOrderDate": {
+            "settings": {
+                "defaultValues": [{"operator": "TO", "values": ["2018-12-28"]}]
+            }
+        }
+    }
 }
 ```
 
@@ -576,16 +603,15 @@ DATERANGE
 <td valign="top">
 
 ```
+
 "@com.sap.vocabularies.UI.v1.SelectionFields": {
-
-   "filterFields": {
-      "SalesOrderDate": {
-         "settings": {
-            "defaultValues" : [ {"operator": "DATERANGE",   "values": ["2019-11-02","2022-01-01"]}]
-
-         }
-      }
-   }
+    "filterFields": {
+        "SalesOrderDate": {
+            "settings": {
+                "defaultValues": [{"operator": "DATERANGE", "values": ["2019-11-02", "2022-01-01"]}]
+            }
+        }
+    }
 }
 ```
 
@@ -608,15 +634,13 @@ TODAYFROMTO
 
 ```
 "@com.sap.vocabularies.UI.v1.SelectionFields": {
-
-   "filterFields": {
-      "SalesOrderDate": {
-         "settings": {
-            "defaultValues" : [ {"operator": "TODAYFROMTO", "values":[5,6]}]
-
-         }
-      }
-   }
+    "filterFields": {
+        "SalesOrderDate": {
+            "settings": {
+                "defaultValues": [{"operator": "TODAYFROMTO", "values": [5, 6]}]
+            }
+        }
+    }
 }
 ```
 
@@ -641,15 +665,13 @@ LastXDays / LastXWeeks / LastXMonths / LastXQuarters / LastXYears
 
 ```
 "@com.sap.vocabularies.UI.v1.SelectionFields": {
- 
-   "filterFields": {
-      "SalesOrderDate": {
-         "settings": {
-            "defaultValues" : [ {"operator": "LASTDAYS", "values":[6]}]
-         }
-
-      }
-   }
+    "filterFields": {
+        "SalesOrderDate": {
+            "settings": {
+                "defaultValues": [{"operator": "LASTDAYS", "values": [6]}]
+            }
+        }
+    }
 }
 ```
 
@@ -671,17 +693,17 @@ NextXDays / NextXWeeks / NextXMonths / NextXQuarters / NextXYears
 <td valign="top">
 
 ```
+
 "@com.sap.vocabularies.UI.v1.SelectionFields": {
-
-   "filterFields": {
-      "SalesOrderDate": {
-         "settings": {
-            "defaultValues" : [ {"operator": "NEXTDAYS", "values":[6]}]
-         }
-      }
-   }
-
+    "filterFields": {
+        "SalesOrderDate": {
+            "settings": {
+                "defaultValues": [{"operator": "NEXTDAYS", "values": [6]}]
+            }
+        }
+    }
 }
+
 ```
 
 
@@ -690,6 +712,316 @@ NextXDays / NextXWeeks / NextXMonths / NextXQuarters / NextXYears
 <td valign="top">
 
  
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+LastXDaysIncluded
+
+</td>
+<td valign="top">
+
+```
+
+"@com.sap.vocabularies.UI.v1.SelectionFields": {
+   "filterFields": {
+      "SalesOrderDate": {
+         "settings": {
+            "defaultValues" : [ {"operator": "LASTXDAYSINCLUDED", "values":[6]}]
+         }
+      }
+   }
+}
+
+```
+
+
+
+</td>
+<td valign="top">
+
+The range contains the last X days including the current one.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+NextXDaysIncluded
+
+</td>
+<td valign="top">
+
+```
+
+"@com.sap.vocabularies.UI.v1.SelectionFields": {
+   "filterFields": {
+      "SalesOrderDate": {
+         "settings": {
+            "defaultValues" : [ {"operator": "NEXTXDAYSINCLUDED", "values":[6]}]
+         }
+      }
+   }
+}
+
+```
+
+
+
+</td>
+<td valign="top">
+
+The range contains the next X days including the current one.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+LastXWeeksIncluded
+
+</td>
+<td valign="top">
+
+```
+
+"@com.sap.vocabularies.UI.v1.SelectionFields": {
+   "filterFields": {
+      "SalesOrderDate": {
+         "settings": {
+            "defaultValues" : [ {"operator": "LASTXWEEKSINCLUDED", "values":[6]}]
+         }
+      }
+   }
+}
+
+```
+
+
+
+</td>
+<td valign="top">
+
+The range contains the last X weeks including the current one.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+NextXWeeksIncluded
+
+</td>
+<td valign="top">
+
+```
+
+"@com.sap.vocabularies.UI.v1.SelectionFields": {
+   "filterFields": {
+      "SalesOrderDate": {
+         "settings": {
+            "defaultValues" : [ {"operator": "NEXTXWEEKSINCLUDED", "values":[6]}]
+         }
+      }
+   }
+}
+
+```
+
+
+
+</td>
+<td valign="top">
+
+The range contains the next X weeks including the current one.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+LastXMonthsIncluded
+
+</td>
+<td valign="top">
+
+```
+
+"@com.sap.vocabularies.UI.v1.SelectionFields": {
+   "filterFields": {
+      "SalesOrderDate": {
+         "settings": {
+            "defaultValues" : [ {"operator": "LASTXMONTHSINCLUDED", "values":[6]}]
+         }
+      }
+   }
+}
+
+```
+
+
+
+</td>
+<td valign="top">
+
+The range contains the last X months including the current one.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+NextXMonthsIncluded
+
+</td>
+<td valign="top">
+
+```
+
+"@com.sap.vocabularies.UI.v1.SelectionFields": {
+   "filterFields": {
+      "SalesOrderDate": {
+         "settings": {
+            "defaultValues" : [ {"operator": "NEXTXMONTHSINCLUDED", "values":[6]}]
+         }
+      }
+   }
+}
+
+```
+
+
+
+</td>
+<td valign="top">
+
+The range contains the next X months including the current one.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+LastXQuartersIncluded
+
+</td>
+<td valign="top">
+
+```
+
+"@com.sap.vocabularies.UI.v1.SelectionFields": {
+   "filterFields": {
+      "SalesOrderDate": {
+         "settings": {
+            "defaultValues" : [ {"operator": "LASTXQUARTERSINCLUDED", "values":[6]}]
+         }
+      }
+   }
+}
+
+```
+
+
+
+</td>
+<td valign="top">
+
+The range contains the last X quarters including the current one.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+NextXQuartersIncluded
+
+</td>
+<td valign="top">
+
+```
+
+"@com.sap.vocabularies.UI.v1.SelectionFields": {
+   "filterFields": {
+      "SalesOrderDate": {
+         "settings": {
+            "defaultValues" : [ {"operator": "NEXTXQUARTERSINCLUDED", "values":[6]}]
+         }
+      }
+   }
+}
+
+```
+
+
+
+</td>
+<td valign="top">
+
+The range contains the next X quarters including the current one.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+LastXYearsIncluded
+
+</td>
+<td valign="top">
+
+```
+
+"@com.sap.vocabularies.UI.v1.SelectionFields": {
+   "filterFields": {
+      "SalesOrderDate": {
+         "settings": {
+            "defaultValues" : [ {"operator": "LASTXYEARSINCLUDED", "values":[6]}]
+         }
+      }
+   }
+}
+
+```
+
+
+
+</td>
+<td valign="top">
+
+The range contains the last X years including the current one.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+NextXYearsIncluded
+
+</td>
+<td valign="top">
+
+```
+
+"@com.sap.vocabularies.UI.v1.SelectionFields": {
+   "filterFields": {
+      "SalesOrderDate": {
+         "settings": {
+            "defaultValues" : [ {"operator": "NEXTXYEARSINCLUDED", "values":[6]}]
+         }
+      }
+   }
+}
+
+```
+
+
+
+</td>
+<td valign="top">
+
+The range contains the next X years including the current one.
 
 </td>
 </tr>
@@ -997,6 +1329,4 @@ You can also use these additional semantic date range operators as default value
 ## More Information
 
 For more information about configuring filter bars in a list report, see [Adapting the Filter Bar](adapting-the-filter-bar-609c39a.md).
-
-Depending on the use of the date range filter, the default tile type also varies. For more information about creating tiles for the semantic date range configuration, see [Extending the Bookmark Function to Save Static Tiles to the SAP Fiori Launchpad](extending-the-bookmark-function-to-save-static-tiles-to-the-sap-fiori-launchpad-7e34ea9.md).
 

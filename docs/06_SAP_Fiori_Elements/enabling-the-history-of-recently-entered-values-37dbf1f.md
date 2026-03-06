@@ -20,75 +20,11 @@ To enable the history of recently entered values, you must enable the `INPUTFIEL
 
 
 
-<a name="loio37dbf1f30127420d9c585bc1ad80086b__section_ztn_mph_tzb"/>
-
-## Additional Features in SAP Fiori Elements for OData V2
-
-In the `manifest.json` file, you can specify whether the history must be enabled for each field:
-
-> ### Sample Code:  
-> `manifest.json`
-> 
-> ```
-> "sap.ui.generic.app": {
->     "pages": {
->         "ListReport|RootEntity": {
->             "component": {
->                 "settings": {
->                     "filterSettings": {
->                         "historySettings": {
->                             "fields": {
->                                 "<fieldname>": {
->                                     "historyEnabled": ("enabled" | "disabled" | "auto")
->                                 }
->                             }
->                         }
->                     }
->                 }
->             }
->         }
->     }
-> }
-> 
-> ```
-
-Here, `<fieldname>` refers to the property name of the field in the OData service.
-
-You can also specify the same behavior for all the fields, or as a default for the fields that are not explicitly mentioned:
-
-> ### Sample Code:  
-> ```
-> "sap.ui.generic.app": {
->     "pages": {
->         "ListReport|RootEntity": {
->             "component": {
->                 "settings": {
->                     "filterSettings": {
->                         "historySettings": {
->                             "historyEnabled": (
->                                 "enabled" |
->                                 "disabled" |
->                                 "auto"
->                             )
->                         }
->                     }
->                 }
->             }
->         }
->     }
-> }
-> 
-> ```
-
-The `historyEnabled` setting has three possible values: `enabled`, `disabled`, or `auto`. The default setting is `auto`, which means that the behavior is determined by the control type used.
-
-
-
 <a name="loio37dbf1f30127420d9c585bc1ad80086b__section_ypz_j2y_51c"/>
 
-## Additional Features in SAP Fiori Elements for OData V4
+## Procedure
 
-The history of recently entered values is enabled for SAP Fiori elements for OData V4 by default. However, you can disable this setting for each field by configuring the `historyEnabled` setting in the `manifest.json` file.
+The history of recently entered values is enabled by default. However, you can disable this setting for each field by configuring the `historyEnabled` setting in the `manifest.json` file.
 
 > ### Sample Code:  
 > `manifest.json`
@@ -106,6 +42,11 @@ The history of recently entered values is enabled for SAP Fiori elements for ODa
 > ```
 
 Here, `<propertyPath>` refers to the property path in the OData service.
+
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Enabling the History of Recently Entered Values](enabling-the-history-of-recently-entered-values-8c28a30.md).
 
 **Related Information**  
 

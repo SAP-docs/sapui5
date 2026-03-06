@@ -89,6 +89,9 @@ A subsection groups together a set of blocks \(under a common title\), while a s
 
 The grouping enables the control to automatically create an internal menu \(anchor bar\) that shows the titles of the sections and subsections as separate anchors. The user can select them to scroll to the respective section or subsection content.
 
+> ### Note:  
+> To avoid critical accessibility issues, always set a `title` on sections and subsections, especially when a section contains multiple subsections. Without descriptive titles, page navigation cannot be operated correctly, and the overall page structure becomes unclear for users of assistive technologies. This can also lead to issues with focus and visual contrast.
+
 Here are some examples of how sections are initialized in both views:
 
 XML view:

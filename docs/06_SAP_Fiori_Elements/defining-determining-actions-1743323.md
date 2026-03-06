@@ -101,6 +101,11 @@ With the last record type, the `DataFieldForAction` complex type is used and con
 
 Footer actions must not be available in display mode, so ensure that you add the appropriate path-based value to the `UI.Hidden` property of the action button.
 
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Defining Determining Actions](defining-determining-actions-ee6c827.md).
+
 **Related Information**  
 
 

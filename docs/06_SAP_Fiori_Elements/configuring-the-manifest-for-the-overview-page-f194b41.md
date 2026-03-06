@@ -70,9 +70,9 @@ It defines static information about the application such as its name and the loc
 
 ### Configuring the Overview Page Layout
 
-The following card layouts are available for overview pages:
+The following layouts are available for the overview pages:
 
--   Fixed card layout - Set the `containerLayout` parameter to `fixed` to enable this layout. In this card layout, the cards have a fixed width. You can configure them to load with specific size requirements by defining a default size within each card definition. The grid supports up to four columns, determining how many cards can be displayed side by side.
+-   Fixed card layout - Set the `containerLayout` parameter to `fixed` to enable this layout. In this layout, the cards have a fixed width. You can configure them to load with specific size requirements by defining a default size within each card definition. The grid supports up to four columns, determining how many cards can be displayed side by side.
 
     > ### Note:  
     > The fixed card layout has been deprecated as of SAPUI5 1.142.
@@ -80,7 +80,7 @@ The following card layouts are available for overview pages:
 -   Resizable card layout - Set the `containerLayout` parameter to `resizable` to enable this layout. End users can adjust the size of cards by expanding or contracting them both horizontally and vertically within the grid-based layout.
 
 
-When switching from fixed card layout to resizable card layout in an app, the following changes made in the fixed card layout are not retained:
+When switching from fixed card layout to resizable card layout in an application, the following changes made in the fixed card layout are not retained:
 
 -   Card arrangements modified by end users using drag and drop.
 
@@ -88,4 +88,9 @@ When switching from fixed card layout to resizable card layout in an app, the fo
 
 
 
+
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Configuring the Manifest for the Overview Page](configuring-the-manifest-for-the-overview-page-8431b54.md).
 

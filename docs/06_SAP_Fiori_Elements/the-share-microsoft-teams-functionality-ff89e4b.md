@@ -69,14 +69,9 @@ End users can share the header facets of an object page using the *Share: Micros
 End users can share the header actions of an object page using the *Share: Microsoft Teams* › *As Card* option. The card only supports annotation-based actions that aren't overridden by manifest settings. It displays only the first two supported actions, which the recipient can initiate within the Microsoft Teams card. If the shared actions are bound actions, then the page context is passed to the action.
 
 > ### Note:  
-> -   Application developers must note the following:
+> -   SAP Fiori Elements doesn't support the sharing of buttons based on the `DataFieldForIntentBasedNavigation` annotation.
 > 
->     -   SAP Fiori Elements doesn't support the sharing of buttons based on the `DataFieldForIntentBasedNavigation` annotation.
-> 
->     -   SAP Fiori Elements supports confirmation-based actions that use the `Common.IsActionCritical` annotation. However, when this action is triggered within the Microsoft Teams card, the action displays only the default text from the `i18n` key, `"C_OPERATIONS_ACTION_CONFIRM_MESSAGE"`, and not the text overridden by the application for this key.
-> 
-> 
-> -   SAP Fiori Elements doesn't support the sharing of buttons based on `DataFieldForIntentBasedNavigation` annotation.
+> -   SAP Fiori Elements supports confirmation-based actions that use the `Common.IsActionCritical` annotation. However, when this action is triggered within the Microsoft Teams card, the action displays only the default text from the `i18n` key, `"C_OPERATIONS_ACTION_CONFIRM_MESSAGE"`, and not the text overridden by the application for this key.
 > 
 > -   Action parameters are shown as dropdown fields in the Microsoft Teams card.
 > 
@@ -107,4 +102,9 @@ End users can share the header actions of an object page using the *Share: Micro
 > -   The *Share: Microsoft Teams* functionality uses application states to shorten long URLs. These application state records are cleaned up if they aren't accessed for a long time. For more information, see [Cleanup of Expired Application State](https://help.sap.com/docs/ABAP_PLATFORM_NEW/a7b390faab1140c087b8926571e942b7/6107ee41f89a43c9af0aa279fe039cca.html).
 > 
 > -   End users who want to use the *Share: Microsoft Teams* feature in incognito mode will receive an error of type ***Authentication Information HTTP Status 401- Unauthorized***. To resolve this, application developers must inform end users that they must allow third-party cookies for the incognito session.
+
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [The Share: Microsoft Teams Functionality](the-share-microsoft-teams-functionality-8d382b1.md).
 

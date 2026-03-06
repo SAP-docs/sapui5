@@ -568,3 +568,8 @@ You must set the following keys for each target:
 > 
 > -   In the flexible column layout, you can neither display a tree table nor an analytical table in the list report with a draft-enabled service.
 
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Enabling the Flexible Column Layout](enabling-the-flexible-column-layout-75631b7.md).
+

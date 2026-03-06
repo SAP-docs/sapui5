@@ -8,9 +8,6 @@ To add custom filter fields in a table toolbar, follow the steps described below
 
 ## Context
 
-> ### Note:  
-> This topic is only applicable to SAP Fiori elements for OData V2.
-
 Using an extension in the object page table, you can define filter fields such as select, combo box, date picker, and text field. You can prevent the overflow of the control from the table toolbar by setting the value of the `OverflowToolbarLayoutData` property to `NeverOverflow`.
 
 > ### Note:  
@@ -131,5 +128,5 @@ The following screenshot shows a table with custom filter fields in its toolbar:
 **Related Information**  
 
 
-[Generic Action Buttons in Tables on the Object Page: Additional Considerations](generic-action-buttons-in-tables-on-the-object-page-additional-considerations-d27ae99.md "You can use annotations to enable generic actions in tables on the object page.")
+[Generic Action Buttons in Tables on the Object Page: Additional Considerations](generic-action-buttons-in-tables-on-the-object-page-additional-considerations-510b6af.md "You can use annotations to enable generic actions in tables on the object page.")
 

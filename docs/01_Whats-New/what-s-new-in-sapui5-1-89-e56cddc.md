@@ -609,7 +609,7 @@ The following changes and new features are available for SAP Fiori elements for 
 
 -   Application developers can now set a default value for semantic date range filter fields on the filter bar. For more information, see [Enabling Semantic Operators in the Filter Bar](../06_SAP_Fiori_Elements/enabling-semantic-operators-in-the-filter-bar-fef65d0.md).
 
--   Key users can now create delivery variants. For more information, see [Adapting the UI](../06_SAP_Fiori_Elements/adapting-the-ui-59bfd31.md).
+-   Key users can now create delivery variants. For more information, see [Extending Delivered Apps With Key User Adaptation](../06_SAP_Fiori_Elements/extending-delivered-apps-with-key-user-adaptation-59bfd31.md).
 
 -   The *Share* functionality is now automatically hidden for new drafts. For more information, see [The Share Functionality](../06_SAP_Fiori_Elements/the-share-functionality-022bf0d.md).
 -   Adaptation of filter bars on overview pages is now enabled by default. For more information, see [Key User Capabilities](../06_SAP_Fiori_Elements/key-user-capabilities-4966938.md).
@@ -687,6 +687,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.142](what-s-new-in-sapui5-1-142-92ed100.md "With this release SAPUI5 is upgraded from version 1.141 to 1.142.")
 
 [What's New in SAPUI5 1.141](what-s-new-in-sapui5-1-141-a7ed66d.md "With this release SAPUI5 is upgraded from version 1.140 to 1.141.")
 

@@ -260,7 +260,7 @@ These applications work as follows:
     > 
     > ```
 
--   Subobject page
+-   Sub-object page
 
     The *Apply* button is hidden.
 
@@ -281,6 +281,11 @@ The `editFlow` API is the main controller extension for draft handling in SAP Fi
 
 
 For information about the `editFlow` API, see the [API Reference](https://ui5.sap.com/#/api/sap.fe.core.controllerextensions.EditFlow). 
+
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Draft Handling](draft-handling-b0eb3cc.md).
 
 **Related Information**  
 

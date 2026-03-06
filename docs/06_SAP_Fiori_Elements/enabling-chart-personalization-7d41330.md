@@ -116,4 +116,12 @@ The following fields are excluded from the `"Filter"` option under chart persona
 
 -   Properties annotated as measures, that is, annotated with `Analytics.AggregatedProperty`, or those marked with `Aggregation.CustomAggregate`. For more information, see [Configuring Charts](configuring-charts-653ed0f.md).
 
+    > ### Note:  
+    > You cannot use seconds when you filter by chart.
+
+
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Enabling Chart Personalization](enabling-chart-personalization-6b87767.md).
 

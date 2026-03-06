@@ -862,7 +862,7 @@ Control
 
 -   **Path Support for Insert Restriction** 
 
-    We now provide dynamic value support for `Capabilities.InsertRestriction/Insert` by path evaluation in List Reports and Object Pages. For more information, see [Defining and Adapting Sections](../06_SAP_Fiori_Elements/defining-and-adapting-sections-facfea0.md).
+    We now provide dynamic value support for `Capabilities.InsertRestriction/Insert` by path evaluation in List Reports and Object Pages. For more information, see [Defining and Configuring Sections](../06_SAP_Fiori_Elements/defining-and-configuring-sections-facfea0.md).
 
 -   **Multiselect with Input Parameters**
 
@@ -870,7 +870,7 @@ Control
 
 -   **Date Range Type for Smart Filter Bar as Default Setting in Overview Page**
 
-    In Overview Pages, the *Smart Filter Bar* with a `useDateRangeType` setting is now set to `True` by default. For more information, see [Configuring the Global Filter](../06_SAP_Fiori_Elements/configuring-the-global-filter-73d9693.md).
+    In Overview Pages, the *Smart Filter Bar* with a `useDateRangeType` setting is now set to `True` by default. For more information, see [Configuring the Global Filter on the Overview Page](../06_SAP_Fiori_Elements/configuring-the-global-filter-on-the-overview-page-73d9693.md).
 
 -   **Enhanced Extension Wizard for Creating SAP Fiori Elements Based Apps in List Report and Analytical List Pages**
 
@@ -906,6 +906,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.142](what-s-new-in-sapui5-1-142-92ed100.md "With this release SAPUI5 is upgraded from version 1.141 to 1.142.")
 
 [What's New in SAPUI5 1.141](what-s-new-in-sapui5-1-141-a7ed66d.md "With this release SAPUI5 is upgraded from version 1.140 to 1.141.")
 

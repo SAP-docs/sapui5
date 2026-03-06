@@ -1,13 +1,8 @@
 <!-- loiob40e5ae5cdd647c490bd03b9d5f98d56 -->
 
-# Configuring an EntitySet with Input Parameters
+# Configuring an `EntitySet` with Input Parameters
 
 Some entity sets require input parameters. You can configure these parameters using the `com.sap.vocabularies.UI.v1.SelectionVariant` annotation term by setting the `Parameters` section.
-
-
-
-> ### Note:  
-> This topic is only applicable to SAP Fiori elements for OData V2.
 
 
 

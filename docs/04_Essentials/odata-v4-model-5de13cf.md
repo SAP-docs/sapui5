@@ -9,7 +9,7 @@ The `sap.ui.model.odata.v4.ODataModel` is the model implementation for consuming
 > 
 > The interface for applications has been changed for an easier and more efficient use of the model. For a summary of these changes, see [Changes Compared to OData V2 Model](changes-compared-to-odata-v2-model-abd4d7c.md).
 
-The OData V4 model supports the following:
+The OData V4 model supports the following features:
 
 -   Read access
 

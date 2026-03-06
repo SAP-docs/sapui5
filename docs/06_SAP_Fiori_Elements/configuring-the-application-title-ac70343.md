@@ -46,3 +46,8 @@ Additionally, you can also configure the application title of the overview page 
 -   For information about adapting object page titles and subtitles, see [Configuring the Object Page Header Title and Description](configuring-the-object-page-header-title-and-description-333f850.md).
 
 
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Configuring the Application Title](configuring-the-application-title-1670226.md).
+

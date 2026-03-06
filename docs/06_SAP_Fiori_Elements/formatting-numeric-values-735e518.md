@@ -79,3 +79,8 @@ In the following example, using the `com.sap.vocabularies.UI.v1.DataPoint ValueF
 > 
 > ```
 
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Formatting Numeric Values](formatting-numeric-values-355401b.md).
+

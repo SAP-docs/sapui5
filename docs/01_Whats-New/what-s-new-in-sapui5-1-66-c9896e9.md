@@ -661,7 +661,7 @@ SAP Fiori 3 user experience is now enabled for all SAP Fiori elements-based appl
 
 **Object Page**
 
-The `InsertRestriction` property can now be passed as a property for the navigation leading to the sub-entity. For more information, see [Defining and Adapting Sections](../06_SAP_Fiori_Elements/defining-and-adapting-sections-facfea0.md).
+The `InsertRestriction` property can now be passed as a property for the navigation leading to the sub-entity. For more information, see [Defining and Configuring Sections](../06_SAP_Fiori_Elements/defining-and-configuring-sections-facfea0.md).
 
 <sub>Changed•SAP Fiori Elements•Info Only•1.66</sub>
 
@@ -722,6 +722,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.142](what-s-new-in-sapui5-1-142-92ed100.md "With this release SAPUI5 is upgraded from version 1.141 to 1.142.")
 
 [What's New in SAPUI5 1.141](what-s-new-in-sapui5-1-141-a7ed66d.md "With this release SAPUI5 is upgraded from version 1.140 to 1.141.")
 

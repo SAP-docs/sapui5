@@ -20,7 +20,7 @@ For more information, see the V2 and V4 specific sections.
 
 
 
-### Annotation: SelectionPresentationVariant with Qualifier="DefaultVariant"
+### Annotation: `SelectionPresentationVariant` with `Qualifier="DefaultVariant"`
 
 **Configuration Sample:**
 
@@ -74,7 +74,7 @@ For more information, see the V2 and V4 specific sections.
 
 
 
-### Annotation: SelectionVariant
+### Annotation: `SelectionVariant`
 
 > ### Sample Code:  
 > XML Annotation
@@ -145,7 +145,7 @@ For more information, see the V2 and V4 specific sections.
 
 
 
-### Annotation: PresentationVariant
+### Annotation: `PresentationVariant`
 
 > ### Sample Code:  
 > XML Annotation for SAP Fiori elements for OData V2
@@ -236,7 +236,7 @@ For more information, see the V2 and V4 specific sections.
 
 
 
-### Annotation: UI.Chart
+### Annotation: `UI.Chart` 
 
 > ### Sample Code:  
 > XML Annotation
@@ -303,7 +303,7 @@ For more information, see the V2 and V4 specific sections.
 
 
 
-### Annotation: LineItem
+### Annotation: `LineItem` 
 
 > ### Sample Code:  
 > XML Annotation
@@ -499,7 +499,7 @@ The `UI.Chart` annotation is applicable for the following:
 > 
 > -   In SAP Fiori elements for OData V4, the information provided in the section isn't applicable to the analytical list page \(ALP\) flavor. For more information about the configuration in ALP, see [Configuring the Manifest for the Analytical List Page](configuring-the-manifest-for-the-analytical-list-page-2a9df06.md).
 > 
->     However, SAP Fiori elements for OData V4 supports rendering of tables using the `PresentationVariant` or `SelectionPresentationVariant` annotation in an object page facet. For more information, see [Defining and Adapting Sections](defining-and-adapting-sections-facfea0.md).
+>     However, SAP Fiori elements for OData V4 supports rendering of tables using the `PresentationVariant` or `SelectionPresentationVariant` annotation in an object page facet. For more information, see [Defining and Configuring Sections](defining-and-configuring-sections-facfea0.md).
 
 You can control the default visualization by using a setting in the `manifest.json` file. This setting allows you to define `UI.SelectionPresentationVariant` \(with a qualifier\). When `UI.SelectionPresentationVariant` is defined, you must use the associated annotations such as `UI.SelectionVariant` \(for filter bar defaults\) and `UI.PresentationVariant` \(for default visualization\).
 
@@ -511,7 +511,7 @@ Defining the manifest setting is optional. If the setting isn't defined, SAP Fio
 
 -   If `UI.PresentationVariant` **not** is found, SAP Fiori elements checks for a default `UI.LineItem` or `UI.Chart` for the visualization.
 
--   Finally, if neither `UI.PresentationVariant` nor the default `UI.LineItem` or `UI.Chart` is found, the SAP Fiori elements renders an empty table or chart. However, the end users can still use the personalization of the control to render the required table or chart.
+-   Finally, if neither `UI.PresentationVariant` nor the default `UI.LineItem` or `UI.Chart` is found, SAP Fiori elements renders an empty table or chart. However, the end users can still use the personalization of the control to render the required table or chart.
 
 
 > ### Note:  
@@ -621,6 +621,9 @@ For more information about the `UI.SelectionPresentationVariant`, see the versio
 ## Requesting Additional Properties
 
 You can request additional properties for tables and charts even if these properties are not displayed by using the `com.sap.vocabularies.UI.v1.PresentationVariant` annotation term and the `RequestAtLeast` property.
+
+> ### Caution:  
+> Including 1:n properties in the `RequestAtLeast` property will result in performance issues and will prevent the export of tables to a spreadsheet.
 
 > ### Sample Code:  
 > XML Annotation
@@ -895,10 +898,15 @@ Make the following settings in the `manifest.json` to specify the `SelectionPres
 > ### Note:  
 > In this case, the `"defaultTemplateAnnotationPath"` must be a reference to the `SelectionPresentationVariant` and **not** to the `PresentationVariant` or `SelectionVariant`.
 
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Configuring Default Settings \(Visualizations, Sort Order, Filter Values\)](configuring-default-settings-visualizations-sort-order-filter-values-22e32b7.md).
+
 **Related Information**  
 
 
-[Configuring Tables](configuring-tables-f4eb70f.md "You can use the annotations and entries in the manifest.json to control various aspects of tables.")
+[Configuring Tables](configuring-tables-f4eb70f.md "You can use the annotations and entries in the manifest.json file to control various aspects of tables.")
 
 [Configuring Charts](configuring-charts-653ed0f.md "You can add a chart facet to a content section within the list report and object page.")
 

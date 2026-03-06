@@ -529,3 +529,8 @@ You can highlight form actions maintained with the `DataFieldForAction` and `Dat
 
 You can trigger an action that is connected to a field value on a form. For more information, see [Adding Actions to Tables](adding-actions-to-tables-b623e0b.md).
 
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Adding Action Buttons to Forms in Sections](adding-action-buttons-to-forms-in-sections-14338ee.md).
+

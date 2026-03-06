@@ -4,9 +4,6 @@
 
 You can define the loading behavior of subsections in an object page in the manifest settings.
 
-> ### Note:  
-> This topic is only applicable to SAP Fiori elements for OData V2.
-
 To define the loading behavior, identify the `id` of the subsection, and add the following settings under the respective object page or subobject page property:
 
 > ### Sample Code:  

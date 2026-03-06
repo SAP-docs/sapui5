@@ -121,3 +121,8 @@ The following sample code shows a dynamic annotation:
 > 
 > ```
 
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Selecting Transports for Business Configuration Content](selecting-transports-for-business-configuration-content-5de8312.md).
+

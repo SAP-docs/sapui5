@@ -93,7 +93,7 @@ Additionally, we set the formatting option `showMeasure` to `false`. This hides 
 </mvc:View>
 ```
 
-As you can see above, we use a special binding syntax for the `number` property of the `ObjectListItem`. This binding syntax makes use of so-called "Calculated Fields", which allows the binding of multiple properties from different models to a single property of a control. The properties bound from different models are called "parts". In the example above, the property of the control is `number` and the bound properties \("parts"\) retrieved from two different models are `invoice>ExtendedPrice` and `view>/currency`.
+As you can see above, we use a special binding syntax for the `number` property of the `ObjectListItem`. This binding syntax makes use of [Composite Binding](../04_Essentials/composite-binding-a2fe8e7.md), which allows the binding of multiple properties from different models to a single property of a control. The properties bound from different models are called "parts". In the example above, the property of the control is `number` and the bound properties \("parts"\) retrieved from two different models are `invoice>ExtendedPrice` and `view>/currency`.
 
 
 
@@ -104,7 +104,7 @@ Use data types instead of custom formatters whenever possible.
 **Related Information**  
 
 
-[Composite Binding](../04_Essentials/composite-binding-a2fe8e7.md "Calculated fields enable the binding of multiple properties in different models to a single property of a control.")
+[Composite Binding](../04_Essentials/composite-binding-a2fe8e7.md "Composite bindings let you bind multiple model properties to one control property. These properties can come from the same model or from different models.")
 
 [Formatting, Parsing, and Validating Data](../04_Essentials/formatting-parsing-and-validating-data-07e4b92.md "Data that is presented on the UI often has to be converted so that is human readable and fits to the locale of the user. On the other hand, data entered by the user has to be parsed and validated to be understood by the data source. For this purpose, you use formatters and data types.")
 

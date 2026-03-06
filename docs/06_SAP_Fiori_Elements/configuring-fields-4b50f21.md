@@ -4,9 +4,6 @@
 
 A field can be represented in several ways.
 
-> ### Note:  
-> This topic is only applicable to SAP Fiori elements for OData V4.
-
 A field can react to many different annotations and render additional artifacts or information, such as showing a value help to allow users to choose a value, or showing semantic coloring to help indicate the criticality of the value it displays. A field can be rendered in many different forms, and its rendering can be controlled by using annotations. As for input fields, application developers can control the field editability, field help representations, and field validations ‒ to name only a few options. The subsequent topics provide detailed information about field configuration.
 
 

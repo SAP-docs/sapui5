@@ -164,7 +164,7 @@ The following changes and new features are available for SAP Fiori elements for 
 
 -   In object pages, you can now use the manifest setting at the application level to configure tables in create mode. For more information, see [Enabling Inline Creation Mode or Empty Row Mode for Table Entries](../06_SAP_Fiori_Elements/enabling-inline-creation-mode-or-empty-row-mode-for-table-entries-cfb04f0.md).
 
--   We now support the mass edit feature for grid tables in list report pages. For more information, see [Enabling Editing Using a Dialog \(Mass Edit\) in the List Report](../06_SAP_Fiori_Elements/enabling-editing-using-a-dialog-mass-edit-in-the-list-report-7cc4f04.md).
+-   We now support the mass edit feature for grid tables in list report pages. For more information, see [Enabling Editing Using a Dialog \(Mass Edit\) in the List Report](../06_SAP_Fiori_Elements/enabling-editing-using-a-dialog-mass-edit-on-the-list-report-page-7cc4f04.md).
 
 
 <sub>Changed•SAP Fiori Elements•Info Only•1.127</sub>
@@ -208,7 +208,7 @@ SAP Fiori Elements
 
 The following changes and new features are available for SAP Fiori elements for OData V4:
 
--   We’ve now enabled the date picker with a minimum allowed date and a maximum allowed date. For more information, see [Configuring Date Fields with a Valid Date Range](../06_SAP_Fiori_Elements/configuring-object-page-features-d26d3dd.md).
+-   We’ve now enabled the date picker with a minimum allowed date and a maximum allowed date. For more information, see [Configuring Date Fields with a Valid Date Range](../06_SAP_Fiori_Elements/configuring-features-of-the-object-page-d26d3dd.md).
 
 -   You can now use the *Share: Microsoft Teams* \> *As Card* option to share the header facets and actions of an object page. For more information, see [The *Share* Functionality](../06_SAP_Fiori_Elements/the-share-functionality-022bf0d.md).
 
@@ -554,6 +554,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.142](what-s-new-in-sapui5-1-142-92ed100.md "With this release SAPUI5 is upgraded from version 1.141 to 1.142.")
 
 [What's New in SAPUI5 1.141](what-s-new-in-sapui5-1-141-a7ed66d.md "With this release SAPUI5 is upgraded from version 1.140 to 1.141.")
 

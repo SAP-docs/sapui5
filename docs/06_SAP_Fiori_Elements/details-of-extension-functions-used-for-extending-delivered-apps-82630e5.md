@@ -4,9 +4,6 @@
 
 In this document, you can find the details of all the extension functions that can be used for extending delivered apps using adaptation extensions.
 
-> ### Note:  
-> This topic is only applicable to SAP Fiori elements for OData V2.
-
 **Extension functions of list report, object page and overview page**
 
 
@@ -290,5 +287,5 @@ The method that returns is also defined in the extension controller.
 **Related Information**  
 
 
-[Extending Delivered Apps Using Adaptation Extensions](extending-delivered-apps-using-adaptation-extensions-52fc48b.md "You can extend delivered apps based on SAP Fiori elements by using the Adaptation Editor in SAP Business Application Studio. It allows you to create adaptation projects on top of delivered apps.")
+[Extending Delivered Apps Using Adaptation Extensions](extending-delivered-apps-using-adaptation-extensions-4221538.md "You can extend delivered apps based on SAP Fiori elements by using the Adaptation Editor in SAP Business Application Studio. It allows you to create adaptation projects on top of delivered apps.")
 

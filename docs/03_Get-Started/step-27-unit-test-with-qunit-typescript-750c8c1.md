@@ -111,17 +111,17 @@ The page will be referenced in the test suite that we will create next.
 <!DOCTYPE html>
 <html>
 <head>
-     <meta charset="utf-8">
-     <script
-		  src="../resources/sap/ui/test/starter/runTest.js"
-		  data-sap-ui-resource-roots='{
-			      "test-resources.ui5.walkthrough": "./"
-		  }' 
-	></script>
+    <meta charset="utf-8">
+    <script
+        src="../resources/sap/ui/test/starter/runTest.js"
+        data-sap-ui-resource-roots='{
+            "test-resources.ui5.walkthrough": "./"
+        }'
+    ></script>
 </head>
 <body class="sapUiBody">
-     <div id="qunit"></div>
-     <div id="qunit-fixture"></div>
+    <div id="qunit"></div>
+    <div id="qunit-fixture"></div>
 </body>
 </html>
 ```
@@ -142,33 +142,30 @@ The previously created generic `Test.qunit.html` file is referenced as the test 
 
 For more information, see [Concept and Basic Setup](../04_Essentials/concept-and-basic-setup-22f50c0.md).
 
-> ### Note:  
-> There are currently no types available for the test suite configuration. Please refer to [Configuration Options](../04_Essentials/configuration-options-738ed02.md) to see all options.
-
 ```ts
-
+import type {SuiteConfiguration} from "sap/ui/test/starter/config";
 export default {
-        name: "QUnit test suite for UI5 TypeScript Walkthrough",
-        defaults: {
-		      page: "ui5://test-resources/ui5/walkthrough/Test.qunit.html?testsuite={suite}&test={name}",
-		      qunit: {
-			        version: 2
-		      },
-		      ui5: {
-			        theme: "sap_horizon"
-		      },
-		      loader: {
-			        paths: {
-				          "ui5/walkthrough": "../"
-			       }
-		      }
+    name: "QUnit test suite for UI5 TypeScript Walkthrough",
+    defaults: {
+        page: "ui5://test-resources/ui5/walkthrough/Test.qunit.html?testsuite={suite}&test={name}",
+        qunit: {
+            version: 2
         },
-        tests: {
-               "unit/unitTests": {
-                       title: "UI5 TypeScript Walkthrough - Unit Tests"
-               }
+        ui5: {
+            theme: "sap_horizon"
+        },
+        loader: {
+            paths: {
+                "ui5/walkthrough": "../"
+            }
         }
-};
+    },
+    tests: {
+        "unit/unitTests": {
+            title: "UI5 TypeScript Walkthrough - Unit Tests"
+        }
+    }
+} satisfies SuiteConfiguration;
 ```
 
 
@@ -183,14 +180,14 @@ We also create a corresponding `testsuite.qunit.html` in the same folder. This i
 <!DOCTYPE html>
 <html>
 <head>
-	 <meta charset="utf-8">
-	 <script
-		   src="../resources/sap/ui/test/starter/createSuite.js"
-		   data-sap-ui-testsuite="test-resources/ui5/walkthrough/testsuite.qunit"
-		   data-sap-ui-resource-roots='{
-			       "test-resources.ui5.walkthrough": "./"
-		   }'
-	></script>
+    <meta charset="utf-8">
+    <script
+        src="../resources/sap/ui/test/starter/createSuite.js"
+        data-sap-ui-testsuite="test-resources/ui5/walkthrough/testsuite.qunit"
+        data-sap-ui-resource-roots='{
+            "test-resources.ui5.walkthrough": "./"
+        }'
+    </script>
 </head>
 <body>
 </body>

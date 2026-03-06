@@ -6,11 +6,6 @@ Define custom actions for tables by configuring the annotation and `manifest.jso
 
 
 
-> ### Note:  
-> This topic is only applicable to SAP Fiori elements for OData V2.
-
-
-
 ## `OnBeforeRebindTableExtension`
 
 Use `onBeforeRebindTableExtension` to define app-specific logic before the table is rendered. This allows you to bind additional parameters from custom filters to the table query.

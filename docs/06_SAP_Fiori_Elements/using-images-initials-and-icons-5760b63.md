@@ -12,5 +12,37 @@ The system follows this logic for choosing a display option for an object:
 ![](images/Avatar_e9e8ed2.jpg)
 
 > ### Note:  
-> In the object page's header, the header image is an avatar control. By default, the avatar is rendered as a square. If the avatar's source, initials, or icon isn't set or found, a fallback placeholder is displayed. The type of placeholder depends on the shape of the avatar. If the avatar is circular, a person icon is shown. If the avatar is a square, a product icon is shown.
+> In the header of an object page, the header image is an avatar control. By default, the avatar is rendered as a square. If the avatar's source, initials, or icon isn't set or found, a fallback placeholder is displayed. The type of placeholder depends on the shape of the avatar. If the avatar is circular, a person icon is shown. If the avatar is a square, a product icon is shown.
+
+You can set the `imageFitType` of the avatar in the header of an object page to determine how an image fits in the avatar's container. The default value is `Cover` which sets the image to be scaled to cover the container. You can also set the `imageFitType` to `Contain` which sets the image to be scaled so that the width and height can fit in the container, as shown in the following code sample:
+
+> ### Sample Code:  
+> `manifest.json`
+> 
+> ```
+> "sap.ui5": {
+>     "routing": {
+>         "targets": {
+>             "SalesOrderManageObjectPage": {
+>                 "options": {
+>                     "settings": {
+>                         "content": {
+>                             "header": {
+>                                 "avatar": {
+>                                     "imageFitType": "Contain"
+>                                 }
+>                             }
+>                         }
+>                     }
+>                 }
+>             }
+>         }
+>     }
+> }
+> ```
+
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Using Images, Initials, and Icons](using-images-initials-and-icons-79fb5fd.md).
 

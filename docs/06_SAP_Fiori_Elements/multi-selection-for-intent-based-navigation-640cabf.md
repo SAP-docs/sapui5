@@ -5,9 +5,6 @@
 By default, multi-selection for intent-based navigation is enabled.
 
 > ### Note:  
-> This topic is only applicable to SAP Fiori elements for OData V4.
-
-> ### Note:  
 > The records that do not have a unique key field cannot be identified. For example, if the following contexts are to be passed during navigation:
 > 
 > 

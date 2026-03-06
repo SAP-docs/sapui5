@@ -468,23 +468,6 @@ You can configure the navigation \(from the header and content area\) within an 
 
 
 
-<a name="loio9f95bdc13b6f410db22069ad8bb946c8__section_fjq_2pc_mfc"/>
-
-## Header Counter
-
-You can configure the counter on the header by configuring `defaultCountMode` in the `manifest.json` file.
-
-> ### Sample Code:  
-> `manifest.json`
-> 
-> ```
->  "Card_Model_Name": {
->                 "settings": {
->                     "defaultCountMode": "None"
->                 }
->             }
-> ```
-
 > ### Note:  
-> The `defaultCountMode` is only supported in SAP Fiori elements for OData V2.
+> For information about SAP Fiori elements for OData V2, see [Configuring the List Card Header Area](configuring-the-list-card-header-area-72b5323.md).
 

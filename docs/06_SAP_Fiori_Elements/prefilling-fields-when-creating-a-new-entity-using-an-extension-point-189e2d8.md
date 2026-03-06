@@ -4,16 +4,13 @@
 
 End users can create a new entity and prefill fields with specific values.
 
-> ### Note:  
-> This topic is only applicable to SAP Fiori elements for OData V2.
-
 App developers can implement this feature in three different ways:
 
 -   Passing values entered by the end user into the filter bar.
 
 -   Using values from `DefaultValuesFunction`.
 
--   Using cross-app navigation. For more information, see [Prefilling Fields When Creating a New Entity](prefilling-fields-when-creating-a-new-entity-11ff444.md).
+-   Using cross-app navigation. For more information, see [Prefilling Fields When Creating a New Entity](prefilling-fields-when-creating-a-new-entity-20d1421.md).
 
 
 
@@ -130,5 +127,5 @@ The following sample code extracts the filter values for `ProductCategory` and `
 > 
 > ```
 
-For more information, see [Prefilling Fields Using the `DefaultValuesFunction`](prefilling-fields-using-the-defaultvaluesfunction-5ada91c.md).
+For more information, see [Prefilling Fields Using the `DefaultValuesFunction`](prefilling-fields-using-the-defaultvaluesfunction-6613e42.md).
 

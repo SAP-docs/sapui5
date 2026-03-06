@@ -6,9 +6,6 @@ You can extend and customize specific features of the analytical list page.
 
 
 
-> ### Note:  
-> This topic is only applicable to SAP Fiori elements for OData V2.
-
 
 
 We recommend that you use [SAP Fiori tools](https://help.sap.com/viewer/product/SAP_FIORI_tools/Latest/en-US), which is a set of extensions for SAP Business Application Studio and Visual Studio Code, to adapt the analytical list page.

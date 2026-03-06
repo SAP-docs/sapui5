@@ -32,3 +32,18 @@ The AI-assisted smart summarization generates an efficient summary of business i
 
 For more information, see [Working with the AI-Assisted Smart Summarization](https://help.sap.com/docs/SAP_S4HANA_CLOUD/4fc8d03390c342da8a60f8ee387bca1a/6c1bc21f01c840cba336404fb249cf95.html).
 
+
+
+## AI-Assisted Error Explanation
+
+The AI-assisted error explanation helps users understand issues they encounter when working on an object page in an SAP Fiori elements application, and provides recommendations how to resolve these issues.
+
+![](images/AI-Assisted_Issue_Explanation_Understanding_and_Resolving_the_Issue_Dialog_44c3d62.jpg)
+
+For more information, see [Working with the AI-Assisted Error Explanation](https://help.sap.com/docs/SAP_S4HANA_CLOUD/4fc8d03390c342da8a60f8ee387bca1a/d494f798f7e8492ea9b0eca9359acc16.html).
+
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Generative AI Features](generative-ai-features-3ac93d8.md).
+

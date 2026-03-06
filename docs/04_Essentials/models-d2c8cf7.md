@@ -6,7 +6,8 @@ A model in the Model View Controller concept holds the data and provides methods
 
 
 
-![UI5 provides the following models: JSON, XML, Resource (all client-side); OData V2 and OData V4 (both server-side).](images/SAPUI5_Models_a99f157.png)
+![UI5 provides the following models: JSON, XML, Resource (all client-side); OData V4, and OData V2 (both
+							server-side).](images/SAPUI5_Models_a99f157.png)
 
 SAPUI5 provides the following predefined models. For an overview of the binding modes supported by them, see [One-time Binding, One-way Binding, and Two-way Binding](data-binding-68b9644.md#loio68b9644a253741e8a4b9e4279a35c247__section_BindingModes).
 
@@ -15,9 +16,9 @@ SAPUI5 provides the following predefined models. For an overview of the binding 
     > ### Note:  
     > The OData model currently supports the following OData versions:
     > 
-    > -   OData V2
-    > 
     > -   OData V4
+    > 
+    > -   OData V2
 
 -   **JSON model**: Can be used to bind controls to JavaScript object data, which is usually serialized in the JSON format. The JSON model is a client-side model and, therefore, intended for small data sets, which are completely available on the client. The JSON model supports two-way \(default\), one-way and one-time binding modes.
 
@@ -28,7 +29,7 @@ SAPUI5 provides the following predefined models. For an overview of the binding 
 
 The JSON model, XML model, and the resource model are **client-side models**, meaning that the model data is loaded completely and is available on the client. Operations such as sorting and filtering are executed on the client without further server requests.
 
-The OData \(V2 or V4\) model is a **server-side model** and only loads the data requested by the user interface from the server.
+The OData \(V4 or V2\) model is a **server-side model** and only loads the data requested by the user interface from the server.
 
 You can not only define one model for your applications, but define different areas in your application with different models and assign single controls to a model. You can also define nested models, for example, a JSON model defined for the application and an OData model for a table control contained in the application.
 

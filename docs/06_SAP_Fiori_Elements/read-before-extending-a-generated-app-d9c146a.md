@@ -111,3 +111,8 @@ This model contains the following property:
 
 -   `editMode`: Contains either `Editable` or `Display`.
 
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Read Before Extending a Generated App](read-before-extending-a-generated-app-a5d985e.md).
+

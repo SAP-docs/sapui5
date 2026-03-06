@@ -12,7 +12,7 @@ Configure the ALP to include the following use cases seamlessly on one page:
 
 -   Related KPIs on the header area as KPI tags. These KPI tags also allow progressive disclosure and navigation through KPI cards.
 
--   Filter datasets used for the main content area with different filter modes. For example, visual filters provide an intuitive way of choosing filter values from an associated measure value.
+-   Filter datasets used for the main content area with different filter modes. For example, visual filters provide an intuitive way of choosing filter values from an associated measure value. Note that visual filters are supported with restrictions.
 
 -   Seamless navigation to applications from the content area and the KPI card area.
 
@@ -27,11 +27,8 @@ For more information about the analytical list page, see [Building an App](build
 
 
 
-<a name="loio3d33684b08ca4490b26a844b6ce19b83__section_qnb_bwc_1qb"/>
-
-## Restrictions for SAP Fiori Elements for OData V4
-
-Visual filters are supported with restrictions.
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Analytical List Page](analytical-list-page-ff056b4.md).
 
 **Related Information**  
 

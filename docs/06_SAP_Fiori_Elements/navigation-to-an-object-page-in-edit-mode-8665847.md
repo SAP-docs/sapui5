@@ -74,3 +74,8 @@ You can set `openInEditMode` to `true` in the `manifest.json` file to configure 
 > ### Note:  
 > When `openInEditMode` is set to `true`, the *Open in New Tab* option is not shown in the table's context menu.
 
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Navigation to an Object Page in Edit Mode](navigation-to-an-object-page-in-edit-mode-7952b13.md).
+

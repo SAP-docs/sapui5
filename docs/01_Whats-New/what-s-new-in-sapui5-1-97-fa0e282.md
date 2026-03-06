@@ -669,7 +669,7 @@ The following changes and new features are available for SAP Fiori elements for 
 
 -   A new keyboard shortcut is now available for the *Create With Filters* action in list reports. For more information, see [Keyboard Shortcuts](../06_SAP_Fiori_Elements/keyboard-shortcuts-0cd318c.md).
 
--   We have enhanced the customization of delivered apps, using an adaptation project, with a new option to define and set a custom selection presentation variant as the default. For more information, see [Extending the Delivered Apps Manifest Using an Adaptation Project](../06_SAP_Fiori_Elements/extending-the-delivered-apps-manifest-using-an-adaptation-project-a2b24a6.md) and [Extending Delivered Apps Using Adaptation Extensions](../06_SAP_Fiori_Elements/extending-delivered-apps-using-adaptation-extensions-52fc48b.md).
+-   We have enhanced the customization of delivered apps, using an adaptation project, with a new option to define and set a custom selection presentation variant as the default. For more information, see [Extending Delivered Apps Using Adaptation Projects](../06_SAP_Fiori_Elements/extending-delivered-apps-using-adaptation-projects-a2b24a6.md) and [Extending Delivered Apps Using Adaptation Extensions](../06_SAP_Fiori_Elements/extending-delivered-apps-using-adaptation-extensions-52fc48b.md).
 
 -   For analytical list pages, you can now add colors to the legends based on the dimension values. For more information, see [Configuring the Chart-Only View as the Default Option](../06_SAP_Fiori_Elements/configuring-the-chart-only-view-as-the-default-option-8e6e885.md).
 
@@ -791,6 +791,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.142](what-s-new-in-sapui5-1-142-92ed100.md "With this release SAPUI5 is upgraded from version 1.141 to 1.142.")
 
 [What's New in SAPUI5 1.141](what-s-new-in-sapui5-1-141-a7ed66d.md "With this release SAPUI5 is upgraded from version 1.140 to 1.141.")
 

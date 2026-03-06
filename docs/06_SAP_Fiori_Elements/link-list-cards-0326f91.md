@@ -35,7 +35,7 @@ Description: Configuring this property places the card title on top of the link 
 >     "cards": {
 >         "card005_RecentContacts": {
 >             "model": "purchaseOrder",
->             "template": "sap.ovp.cards.linklist",
+>             "template": "sap.ovp.cards.v4.linklist",
 >             "settings": {
 >                 "title": "Recent Contacts",
 >                 "entitySet": "SalesShare",
@@ -66,7 +66,7 @@ Description: Configuring this property places the card subtitle below the title 
 >     "cards": {
 >         "card005_RecentContacts": {
 >             "model": "purchaseOrder",
->             "template": "sap.ovp.cards.linklist",
+>             "template": "sap.ovp.cards.v4.linklist",
 >             "settings": {
 >                 "title": "Recent Contacts",
 >                 "targetUri": "https://en.abc.org/wiki/abc_2", // Link list card header link URI
@@ -95,7 +95,7 @@ Property: `staticContent`
 >     "cards": {
 >         "card005_RecentContacts": {
 >             "model": "purchaseOrder",
->             "template": "sap.ovp.cards.linklist",
+>             "template": "sap.ovp.cards.v4.linklist",
 >             "settings": {
 >                 "title": "Recent Contacts",
 >                 "targetUri": "https://en.wikipedia.org/wiki/Mangalyaan_2",
@@ -214,7 +214,7 @@ The following sample code shows how to configure a link list card with a standar
 > ```
 > "card20": {
 >     "model": "salesOrder",
->     "template": "sap.ovp.cards.linklist",
+>     "template": "sap.ovp.cards.v4.linklist",
 >     "settings": {
 >         "title": "Dynamic Linklist Card",
 >         "targetUri": "https://en.abc.org/wiki/A_2",
@@ -258,7 +258,7 @@ The following sample code shows how to configure a link list card with a carouse
 > ```
 > "card_20": {
 >     "model": "HEPM_OVP_TECH_VAL",
->     "template": "sap.ovp.cards.linklist",
+>     "template": "sap.ovp.cards.v4.linklist",
 >     "settings": {
 >         "title": "{{card20_title}}",
 >         "entitySet": "Hepmra_C_OFT_Employee",
@@ -268,6 +268,8 @@ The following sample code shows how to configure a link list card with a carouse
 >     }
 > ```
 
+
+
 > ### Note:  
-> In SAP Fiori elements for OData V4, add `sap.ovp.cards.v4.linklist` as the `template`. All other settings in the `manifest.json` file remain the same as in SAP Fiori elements for OData V2.
+> For information about SAP Fiori elements for OData V2, see [Link List Cards](link-list-cards-132d863.md).
 

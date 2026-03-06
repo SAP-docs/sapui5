@@ -8,11 +8,7 @@ You can define multiple views of a table and display them in single table mode. 
 
 <a name="loio664a79a0b06c400583ef8405789b7916__section_p4n_k5m_dsb"/>
 
-## Additional Features in SAP Fiori Elements for OData V2
-
-
-
-### Defining Multiple Views
+## Defining Multiple Views
 
 To define multiple views using single table mode, perform the following steps:
 
@@ -154,7 +150,9 @@ If the number of tabs are less than or equal to three, the views are displayed i
 
 
 
-### Show Counts for Each View
+<a name="loio664a79a0b06c400583ef8405789b7916__section_p25_nxz_ghc"/>
+
+## Show Counts for Each View
 
 You can show the counts of entries of each view by setting `showCounts` to `true`.
 
@@ -194,12 +192,4 @@ You can show the counts of entries of each view by setting `showCounts` to `true
 **Segmented button with count**
 
 ![](images/Segmented_button_with_count_47f5d6a.png "Segmented button with count")
-
-
-
-<a name="loio664a79a0b06c400583ef8405789b7916__section_j4q_l5m_dsb"/>
-
-## Additional Features in SAP Fiori Elements for OData V4
-
-For more information, see [Defining Multiple Views on a List Report Table - Single Table Mode](defining-multiple-views-on-a-list-report-table-single-table-mode-0d390fe.md).
 

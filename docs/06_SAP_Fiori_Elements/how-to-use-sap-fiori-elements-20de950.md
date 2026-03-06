@@ -27,3 +27,6 @@ Creating an app with SAP Fiori elements generally consists of the following step
     For more information, see [Extending SAP Fiori Elements-Based Apps](extending-sap-fiori-elements-based-apps-358cf25.md).
 
 
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [How To Use SAP Fiori Elements](how-to-use-sap-fiori-elements-867a38c.md).
+

@@ -8,7 +8,10 @@ To define the line items of a table, use `com.sap.vocabularies.UI.v1.LineItem` a
   
 **List Report: LineItem of Root EntitySet**
 
-![](images/ListReport_LineItem_69a7c44.png "List Report: LineItem of Root EntitySet")
+![](images/ListReport_LineItem_69a7c44.png "List Report:
+            LineItem
+          of Root
+            EntitySet")
 
 
 
@@ -107,4 +110,9 @@ To define the line items of a table, use `com.sap.vocabularies.UI.v1.LineItem` a
 For information about adding actions for line items, see [Adding Actions to Tables](adding-actions-to-tables-b623e0b.md).
 
 For information about responsiveness options in tables, see [Responsiveness Options: Example](responsiveness-options-example-69efbe7.md).
+
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Defining Line Items](defining-line-items-c007f4a.md).
 

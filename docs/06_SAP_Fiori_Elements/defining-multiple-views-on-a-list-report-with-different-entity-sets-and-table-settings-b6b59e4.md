@@ -370,8 +370,13 @@ The following sample code shows different personalization settings per table \(w
 
 The filters are applied to every table if the corresponding properties exist in the entity type of the table. Otherwise, they are ignored. This behavior also applies for filters coming from a navigation property. If the navigation and target properties also exist for the non-main entity, the filter is applied.
 
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Defining Multiple Views on a List Report Page with Different Entity Sets and Table Settings](defining-multiple-views-on-a-list-report-page-with-different-entity-sets-and-table-settin-6698b80.md).
+
 **Related Information**  
 
 
-[Example: Enable Internal Navigation to Different Detail Page](example-enable-internal-navigation-to-different-detail-page-75002b3.md "You can enable internal navigation to a different detail page (i.e. using different entity sets) for a list report or an object page.")
+[Example: Enable Internal Navigation to Different Detail Page](example-enable-internal-navigation-to-different-detail-page-75002b3.md "You can enable internal navigation to a different detail page (that is, using different entity sets) for a list report or an object page.")
 

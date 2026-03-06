@@ -18,7 +18,7 @@ You can control the `Insert` capability for the related entities, that is the en
 
 ### Option 1: Using `NavigationRestrictions`
 
-The system gives priority to the `Org.OData.Capabilities.V1.NavigationRestrictions` of the parent entity set if it is defined, and the `InsertRestrictions` provided directly at the table entity set level \(Option 2 below\) is ignored. Depending on the value of the `Insertable` property of `InsertRestrictions`, the related \(table\) entity set is made insertable or not insertable.
+The system gives priority to the `Org.OData.Capabilities.V1.NavigationRestrictions`<code><code></code></code> of the parent entity set if it is defined, and the `InsertRestrictions` provided directly at the table entity set level \(Option 2 below\) is ignored. Depending on the value of the `Insertable` property of `InsertRestrictions`, the related \(table\) entity set is made insertable or not insertable.
 
 -   If `Insertable` is set as `true`, the related entity set is insertable.
 
@@ -159,9 +159,9 @@ The *Delete* button is shown by default if `DeleteRestrictions` isn't provided.
 > ### Note:  
 > The *Delete* action can't be performed for any of the selected records if the deletion of one of the selected records fails in the back end. So the *Delete* action either works for all records or for none.
 
-The system gives priority to the `Org.OData.Capabilities.V1.NavigationRestrictions` of the parent entity set. Depending on the value of the `Deletable` property of `DeleteRestrictions`, the related *Delete* button is shown or not.
+The system gives priority to the `Org.OData.Capabilities.V1.NavigationRestrictions` of the parent entity set. The *Delete* button is shown depending on the value of the `Deletable` property of `DeleteRestrictions`.
 
--   If `NavigationRestrictions` has the setting `Deletable=false`, the *Delete* button for the child entity table is never visible.
+-   If `NavigationRestrictions` has the setting `Deletable=false`, the *Delete* button for the child entity table is always hidden.
 
 -   If `NavigationRestrictions` has the setting `Deletable=true` or a path, the visibility of the *Delete* button for the child entity table depends on the value of `UI.DeleteHidden` of the child entity \(that is, the table entity\).
 
@@ -1036,4 +1036,9 @@ You can also trigger an action that is connected to a field value on a form.
 
 > ### Note:  
 > In applications where links are annotated with `DataFieldWithAction`, the context menu does not show the *Open in New Tab* and *Open in New Window* options when an end user right-clicks on them.
+
+
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Adding Actions to Tables](adding-actions-to-tables-c909f6b.md).
 

@@ -525,7 +525,7 @@ The following changes and new features are available for SAP Fiori elements for 
 
 -   You can now use the `Table` building block to add bound and unbound actions, and to group actions as menu buttons. You can also send and remove messages related to the table. For more information, see [Building Blocks](../06_SAP_Fiori_Elements/building-blocks-24c1304.md).
 
--   You can now hide the icon tab bar for multiple views. For more information, see [Multiple Views in the List Report](../06_SAP_Fiori_Elements/multiple-views-in-the-list-report-a37df40.md).
+-   You can now hide the icon tab bar for multiple views. For more information, see [Multiple Views on the List Report Page](../06_SAP_Fiori_Elements/multiple-views-on-the-list-report-page-a37df40.md).
 
 -   SAP Fiori elements for OData V4 now provides the possibility for applications to configure the 412 warning messages \("Precondition Failed" messages\) for standard actions and application-specified actions that deal with a single context. For more information, see [Using Messages](../06_SAP_Fiori_Elements/using-messages-239b192.md) and [Confirmation Popups](../06_SAP_Fiori_Elements/confirmation-popups-9a53662.md).
 
@@ -552,6 +552,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.142](what-s-new-in-sapui5-1-142-92ed100.md "With this release SAPUI5 is upgraded from version 1.141 to 1.142.")
 
 [What's New in SAPUI5 1.141](what-s-new-in-sapui5-1-141-a7ed66d.md "With this release SAPUI5 is upgraded from version 1.140 to 1.141.")
 

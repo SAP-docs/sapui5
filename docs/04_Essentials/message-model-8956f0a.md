@@ -4,7 +4,7 @@
 
 The message model contains all messages and is used to bind to the messages to display them.
 
-The message model is retrieved from the message manager by calling the `getMessageModel()` method. You can use it directly in the application, or you can use it as a reference implementation.
+The message model is retrieved from the `sap/ui/core/Messaging` module by calling the `getMessageModel()` method. You can use it directly in the application, or you can use it as a reference implementation.
 
 
 

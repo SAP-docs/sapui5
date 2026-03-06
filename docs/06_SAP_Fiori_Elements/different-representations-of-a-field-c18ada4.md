@@ -4,9 +4,6 @@
 
 You can control how the field is represented by using annotations or metadata.
 
-> ### Note:  
-> This topic is only applicable to SAP Fiori elements for OData V4.
-
 
 
 <a name="loioc18ada4bc56e427a9a2df2d1898f28a5__section_q1y_fvf_k4b"/>
@@ -738,7 +735,7 @@ You can render a field as a micro chart to show additional information like crit
 
 ![](images/Representation_as_a_Micro_Chart_9ed960f.png)
 
-For more information, see [Micro Chart Facet](micro-chart-facet-e219fd0.md) and [Adding a Micro Chart to a Table](adding-a-micro-chart-to-a-table-b8312a4.md).
+For more information, see [Micro Chart Facet in the Object Page Header](micro-chart-facet-in-the-object-page-header-e219fd0.md) and [Adding a Micro Chart to a Table](adding-a-micro-chart-to-a-table-b8312a4.md).
 
 
 
@@ -949,6 +946,33 @@ This feature only provides casual visual protection against shoulder surfing and
 Therefore, sensitive or high-security data must never be delivered from the back end in an unmasked or unencrypted state. In addition to using the `Common.Masked` annotation, we strongly recommend masking sensitive values in the back end before sending them to the client.
 
 For more security-related information, see [Security Configuration](security-configuration-ba0484b.md).
+
+
+
+<a name="loioc18ada4bc56e427a9a2df2d1898f28a5__represent_avatar"/>
+
+## Representation as an Avatar
+
+Fields of type `Edm.String` can be displayed as an avatar using the `UI.IsImageUrl` annotation. For more information and live examples, see the SAP Fiori development portal at [Building Blocks - Field - Avatar](https://ui5.sap.com/test-resources/sap/fe/core/fpmExplorer/index.html#/buildingBlocks/field/fieldAvatar).
+
+You can set the `imageFitType` of the avatar for a field to determine how an image fits in the avatar's container using the `formatOptions` of the field. The default value is `Cover` which sets the image to be scaled to cover the container. You can also set the `imageFitType` to `Contain` which sets the image to be scaled so that the width and height can fit in the container, as shown in the following code sample:
+
+> ### Sample Code:  
+> `manifest.json`
+> 
+> ```
+> "controlConfiguration": {
+>     "@com.sap.vocabularies.UI.v1.FieldGroup#myFieldGroup": {
+>         "fields": {
+>             "DataField::myImage_content": {
+>                 "formatOptions": {
+>                     "imageFitType": "Contain"
+>                 }
+>             }
+>         }
+>     }
+> }
+> ```
 
 **Related Information**  
 

@@ -62,7 +62,9 @@ The property containing the criticality can have the following values \(derived 
 
 -   3 - Positive \(green\)
 
--   > ### Note:  
+-   5 - Information \(blue\): For items which need the user's attention
+
+    > ### Note:  
     > -   By default, SAP Fiori elements assumes that the `DataField` is also marked with "CriticalityRepresentationType/WithIcon" and sets the icon of the `ObjectStatus` appropriately \(for example, for fields marked with "com.sap.vocabularies.UI.v1.CriticalityType/Negative", SAP Fiori elements sets the 'sap-icon://status-negative'\).
     > 
     > -   If the field is marked with "CriticalityRepresentationType/WithoutIcon", then the `ObjectStatus` is rendered without the icon.
@@ -74,9 +76,6 @@ The texts are not static, so you can change them to suit your needs by defining 
 
 
 
-<a name="loio16411809012845a993198bc94c8a99a5__section_ut3_p5b_jpb"/>
-
-## Additional Features in SAP Fiori Elements for OData V4
-
-SAP Fiori elements for OData V4 also supports an additional criticality type for items that need the user's: attention: 5 - Information \(blue\).
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [Status Colors and Icons](status-colors-and-icons-39bf753.md).
 

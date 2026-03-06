@@ -4,9 +4,6 @@
 
 You can add semantically connected fields to a table.
 
-> ### Note:  
-> This topic is only applicable to SAP Fiori elements for OData V4.
-
 Connected fields allow you to represent two semantically related fields in a single table column while keeping each individual field editable. The following screenshot shows the `BeginDate` and `EndDate` properties represented as the *Business Trip Dates* column:
 
   
@@ -57,7 +54,7 @@ You can add semantically connected fields as shown in the following sample code:
 > 
 > ```
 > annotate view Travel with {
->     @UI.connectedField : [
+>     @UI.connectedFields : [
 >         {
 >            name: 'Dates',
 >            qualifier: 'TripDates',

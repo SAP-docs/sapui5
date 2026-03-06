@@ -4,9 +4,6 @@
 
 You need to identify an anchor element using the browser's developer tools to correctly position the custom elements.
 
-> ### Note:  
-> This topic is only applicable to SAP Fiori elements for OData V4.
-
 To open the browser's developer tools, choose [CTRL\] + [SHIFT\] + [I\]  on Windows, and [CMD\] + [OPT\] + [I\]  on macOS.
 
 

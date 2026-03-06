@@ -48,5 +48,5 @@ Check the related links for detailed information about these floorplans and to f
 
 [SAP Fiori tools: Generate an Application](https://help.sap.com/viewer/17d50220bcd848aa854c9c182d65b699/Latest/en-US/db44d45051794d778f1dd50def0fa267.html)
 
-[Developing Apps with SAP Fiori Elements](../06_SAP_Fiori_Elements/developing-apps-with-sap-fiori-elements-03265b0.md "Develop apps using SAP Fiori elements and benefit from a template- and metadata-driven approach.")
+[Developing Apps with SAP Fiori Elements](../06_SAP_Fiori_Elements/developing-apps-with-sap-fiori-elements-03265b0.md "Develop apps using SAP Fiori elements and benefit from a metadata-driven approach.")
 

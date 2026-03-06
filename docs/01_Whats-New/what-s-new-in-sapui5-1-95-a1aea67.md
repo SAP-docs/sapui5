@@ -391,7 +391,7 @@ The following changes and new features are available for SAP Fiori elements for 
 
 -   The confirmation popup to discard drafts is now enabled by default for draft applications. For more information, see [Confirmation Popups](../06_SAP_Fiori_Elements/confirmation-popups-9a53662.md).
 
--   The creation of an object using a dialog is now supported in multi-view applications. For more information, see [Enabling Object Creation Using the Dialog in the List Report](../06_SAP_Fiori_Elements/enabling-object-creation-using-the-dialog-in-the-list-report-ceb9284.md).
+-   The creation of an object using a dialog is now supported in multi-view applications. For more information, see [Enabling Object Creation Using the Dialog on the List Report](../06_SAP_Fiori_Elements/enabling-object-creation-using-the-dialog-on-the-list-report-ceb9284.md).
 
 -   You can now enable the history of recently entered values for any field in the smart filter bar. For more information, see [Enabling the History of Recently Entered Values](../06_SAP_Fiori_Elements/enabling-the-history-of-recently-entered-values-37dbf1f.md).
 
@@ -401,7 +401,7 @@ The following changes and new features are available for SAP Fiori elements for 
 
 -   You now have an option to mark the navigated row when `onListNavigationExtension` is used. For more information, see [Example: Enable Internal Navigation to Different Detail Page](../06_SAP_Fiori_Elements/example-enable-internal-navigation-to-different-detail-page-75002b3.md).
 
--   You can now order the legends as per the dimension configuration within analytical charts for an overview page. For more information, see [Configuring Charts](../06_SAP_Fiori_Elements/configuring-charts-c7c5a82.md).
+-   You can now order the legends as per the dimension configuration within analytical charts for an overview page. For more information, see [Configuring Charts on the Overview Page](../06_SAP_Fiori_Elements/configuring-charts-on-the-overview-page-c7c5a82.md).
 
 
 <sub>Changed•SAP Fiori Elements•Info Only•1.95</sub>
@@ -449,7 +449,7 @@ The following changes and new features are available for SAP Fiori elements for 
 
 -   Application developers can now also add charts when using the list report in multi-view mode. For more information, see the following topics:
 
-    -   [Multiple Views in the List Report](../06_SAP_Fiori_Elements/multiple-views-in-the-list-report-a37df40.md)
+    -   [Multiple Views on the List Report Page](../06_SAP_Fiori_Elements/multiple-views-on-the-list-report-page-a37df40.md)
 
     -   [Defining Multiple Views on a List Report Table - Multiple Table Mode](../06_SAP_Fiori_Elements/defining-multiple-views-on-a-list-report-table-multiple-table-mode-37aeed7.md)
 
@@ -479,6 +479,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in SAPUI5 1.142](what-s-new-in-sapui5-1-142-92ed100.md "With this release SAPUI5 is upgraded from version 1.141 to 1.142.")
 
 [What's New in SAPUI5 1.141](what-s-new-in-sapui5-1-141-a7ed66d.md "With this release SAPUI5 is upgraded from version 1.140 to 1.141.")
 
